@@ -170,7 +170,7 @@ public class BaseAtyponMetadataUtil {
               if (seg_date.substring(0, 4).equals(auYear)) {
                 log.debug3("Seg date check: seg_date = " + seg_date.substring(0, 4) + ", auYear = " + auYear);
 
-                if ((seg_pubtitle != null) && (seg_tdb_title != null) && seg_tdb_title.contains(seg_pubtitle)) {
+                if ((seg_pubtitle != null) && (seg_tdb_title != null) && seg_tdb_title.toLowerCase().contains(seg_pubtitle.toLowerCase())) {
                   log.debug3("Seg date check: seg_date = " + seg_date + ", seg_AU_YEAR = " + seg_AU_Year
                           + ", check title passed, seg_pubtitle = " + seg_pubtitle + ", seg_tdb_title = " + seg_tdb_title);
                   isInAu = true;

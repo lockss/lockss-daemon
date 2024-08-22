@@ -43,6 +43,7 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
+import org.lockss.plugin.clockss.hmp.HmpGlobalSchemaHelper;
 import org.lockss.util.Logger;
 
 public class EndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFactory{
@@ -75,35 +76,13 @@ public class EndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMetada
         @Override
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
-            String cuBase = FilenameUtils.getFullPath(cu.getUrl());
-            String pdfName = "";
-            log.debug3("CU Base is: " + cuBase);
-
-            String title = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.article_title);
-            String date = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.date);
+            String cuBase = cu.getUrl();
+            //xml and pdfs are in same directory, remove xml file name in cuBase
+            int lastDirectory = cuBase.lastIndexOf("/");
+            log.info("CU Base is: " + cuBase);
             String id = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.id);
-            //check if pdf is in REs or CMEs directory
-            if(title != null){
-                if(title.contains("Reference Edition")){
-                    log.debug3("reference edition found! ");
-                    pdfName = cuBase + "REs/";
-                } else {
-                    pdfName = cuBase + "CMEs/";
-                }
-            }
-            if(title != null){
-                if(title.contains("ESAP")){
-                    pdfName += "(1)%20ESAP/";
-                }else if(title.contains("Endocrine Case Management")){
-                    pdfName += "(2)%20MTP/";
-                }else if(title.contains("Endocrine Board Review")){
-                    pdfName += "(3)%20EBR/";
-                }else{
-                    pdfName += "(4)%20PedESAP/";
-                }
-            }
-            pdfName += date + "/" + id;
-            log.debug3("The pdf is: " + pdfName);
+            String pdfName = cuBase.substring(0, lastDirectory) + "/" + id;
+            log.info("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
             returnList.add(pdfName);
             return returnList;

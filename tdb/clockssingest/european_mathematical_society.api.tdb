@@ -91,7 +91,7 @@
 
   {
     title <
-      name = Annales de l’Institut Henri Poincaré D ;
+      name = Annales de l'Institut Henri Poincaré D ;
       issn = 2308-5827 ;
       eissn = 2308-5835
     >
@@ -104,8 +104,8 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Annales de l'Institut Henri Poincaré D Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Annales de l'Institut Henri Poincaré D Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Annales de l'Institut Henri Poincaré D Volume 5 ; 5 ; >
-    au < superseded ; exists ; 2019 ; 2019 ; Annales de l’Institut Henri Poincaré D Volume 6 [superseded] ; 6 ; >
-    au < superseded ; exists ; 2020 ; 2020 ; Annales de l’Institut Henri Poincaré D Volume 7 [superseded] ; 7 ; >
+    au < superseded ; exists ; 2019 ; 2019 ; Annales de l'Institut Henri Poincaré D Volume 6 [superseded] ; 6 ; >
+    au < superseded ; exists ; 2020 ; 2020 ; Annales de l'Institut Henri Poincaré D Volume 7 [superseded] ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Annales de l'Institut Henri Poincaré D Volume 8 ; 8 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Annales de l'Institut Henri Poincaré D Volume 9 ; 9 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Annales de l'Institut Henri Poincaré D Volume 10 ; 10 ; >
@@ -759,7 +759,7 @@
 
   {
     title <
-      name = Rendiconti Lincei ;
+      name = Rendiconti Lincei - Matematica e Applicazioni ;
       issn = 1120-6330 ;
       eissn = 1720-0768
     >
@@ -784,7 +784,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Rendiconti Lincei - Matematica e Applicazioni Volume 32 ; 32 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Rendiconti Lincei - Matematica e Applicazioni Volume 33 ; 33 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Rendiconti Lincei - Matematica e Applicazioni Volume 34 ; 34 ; >
-    au < expected ; exists ; 2024 ; 2024 ; Rendiconti Lincei - Matematica e Applicazioni Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Rendiconti Lincei - Matematica e Applicazioni Volume 35 ; 35 ; >
 
   }
 

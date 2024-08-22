@@ -959,7 +959,7 @@
       au < finished ; finished ; 2014-2015 ; International Journal of Auditing Technology Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016-2017 ; International Journal of Auditing Technology Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018-2022 ; International Journal of Auditing Technology Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2023-2024 ; International Journal of Auditing Technology Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2023-2024 ; International Journal of Auditing Technology Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2024-2025 ; International Journal of Auditing Technology Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -1300,7 +1300,7 @@
       au < deepCrawl ; exists ; 2023 ; International Journal of Bio-Inspired Computation Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
       au < deepCrawl ; exists ; 2023 ; International Journal of Bio-Inspired Computation Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2024 ; International Journal of Bio-Inspired Computation Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2024 ; International Journal of Bio-Inspired Computation Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2024 ; International Journal of Bio-Inspired Computation Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1955,7 +1955,7 @@
       au < finished ; finished ; 2021 ; International Journal of Business Performance and Supply Chain Modelling Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; International Journal of Business Performance and Supply Chain Modelling Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; International Journal of Business Performance and Supply Chain Modelling Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2024 ; International Journal of Business Performance and Supply Chain Modelling Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2024 ; International Journal of Business Performance and Supply Chain Modelling Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3886,7 +3886,7 @@
       au < finished ; finished ; 2021 ; International Journal of Entrepreneurship and Innovation Management Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; International Journal of Entrepreneurship and Innovation Management Volume 26 ; 26 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; International Journal of Entrepreneurship and Innovation Management Volume 27 ; 27 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2024 ; International Journal of Entrepreneurship and Innovation Management Volume 28 ; 28 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2024 ; International Journal of Entrepreneurship and Innovation Management Volume 28 ; 28 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3954,7 +3954,7 @@
       au < deepCrawl ; exists ; 2023 ; International Journal of Entrepreneurship and Small Business Volume 50 ; 50 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2024 ; International Journal of Entrepreneurship and Small Business Volume 51 ; 51 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2024 ; International Journal of Entrepreneurship and Small Business Volume 52 ; 52 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2024 ; International Journal of Entrepreneurship and Small Business Volume 53 ; 53 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2024 ; International Journal of Entrepreneurship and Small Business Volume 53 ; 53 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -10583,7 +10583,7 @@
       au < deepCrawl ; exists ; 2023 ; International Journal of Technology Management Volume 93 ; 93 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2024 ; International Journal of Technology Management Volume 94 ; 94 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2024 ; International Journal of Technology Management Volume 95 ; 95 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2024 ; International Journal of Technology Management Volume 96 ; 96 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2024 ; International Journal of Technology Management Volume 96 ; 96 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -10908,7 +10908,7 @@
       au < finished ; finished ; 2021 ; International Journal of Value Chain Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; International Journal of Value Chain Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; International Journal of Value Chain Management Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2024 ; International Journal of Value Chain Management Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2024 ; International Journal of Value Chain Management Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -12017,7 +12017,7 @@
       au < finished ; finished ; 2018-2019 ; International Journal of Higher Education and Sustainability Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020-2021 ; International Journal of Higher Education and Sustainability Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022-2023 ; International Journal of Higher Education and Sustainability Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2024-2025 ; International Journal of Higher Education and Sustainability Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2024-2025 ; International Journal of Higher Education and Sustainability Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
   }
 
@@ -12053,7 +12053,7 @@
       au < finished ; finished ; 2017 ; International Journal of Supply Chain and Inventory Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018-2020 ; International Journal of Supply Chain and Inventory Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2021-2023 ; International Journal of Supply Chain and Inventory Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2024-2026 ; International Journal of Supply Chain and Inventory Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2024-2026 ; International Journal of Supply Chain and Inventory Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
   }
 

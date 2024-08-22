@@ -4,7 +4,8 @@
     name = ASEAN Committee on Science and Technology (COST) ;
     info[contract] = 2015 ;
     info[tester] = 5 ;
-    info[poller] = 8
+    info[poller] = 8 ;
+    info[platform] = bepress
   >
   provider = bepress
   
@@ -24,8 +25,8 @@
     param[journal_abbr] = journal
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < manifest ; exists ; 2023 ; ASEAN Journal on Science and Technology for Development Journal Volume 1 ; 1 ; > #LXQUEUE-1881
-    au < manifest ; exists ; 2024 ; ASEAN Journal on Science and Technology for Development Journal Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2023 ; ASEAN Journal on Science and Technology for Development Journal Volume 1 ; 1 ; > #LXQUEUE-1881
+    au < crawling ; exists ; 2024 ; ASEAN Journal on Science and Technology for Development Journal Volume 2 ; 2 ; >
 
   }
 

@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>12</string>
+        <string>13</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -59,7 +59,7 @@ POSSIBILITY OF SUCH DAMAGE.
             </entry>
             <entry>
                 <string>Metadata</string>
-                <string>2</string>
+                <string>3</string>
             </entry>
         </map>
     </entry>
@@ -147,14 +147,5 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_login_page_checker</string>
         <string>org.lockss.plugin.oecd.OecdLoginPageChecker</string>
-    </entry>
-    <entry>
-        <string>text/html_metadata_extractor_factory_map</string>
-        <map>
-        <entry>
-            <string>*</string>
-            <string>org.lockss.plugin.oecd.OecdDatasetsMetadataExtractorFactory</string>
-        </entry>
-        </map>
     </entry>
 </map>

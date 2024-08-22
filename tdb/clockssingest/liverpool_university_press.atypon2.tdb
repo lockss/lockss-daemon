@@ -52,7 +52,7 @@
     au < doNotProcess ; exists ; 2020 ; Archives Volume 55 ; 55 ; >
     au < doNotProcess ; exists ; 2021 ; Archives Volume 56 ; 56 ; >
     au < deepCrawl ; exists ; 2022 ; Archives Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2023 ; Archives Volume 58 ; 58 ; >
+    au < frozen ; exists ; 2023 ; Archives Volume 58 ; 58 ; >
     au < expected ; exists ; 2024 ; Archives Volume 59 ; 59 ; >
 
   }
@@ -117,7 +117,7 @@
     au < doNotProcess ; exists ; 2021 ; Australian Journal of French Studies Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2022 ; Australian Journal of French Studies Volume 59 ; 59 ; >
     au < deepCrawl ; exists ; 2023 ; Australian Journal of French Studies Volume 60 ; 60 ; >
-    au < manifest ; exists ; 2024 ; Australian Journal of French Studies Volume 61 ; 61 ; >
+    au < crawling ; exists ; 2024 ; Australian Journal of French Studies Volume 61 ; 61 ; >
 
   }
 
@@ -138,7 +138,7 @@
     au < doNotProcess ; exists ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2022 ; Bulletin of Contemporary Hispanic Studies Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2023 ; Bulletin of Contemporary Hispanic Studies Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2024 ; Bulletin of Contemporary Hispanic Studies Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2024 ; Bulletin of Contemporary Hispanic Studies Volume 6 ; 6 ; >
 
   }
 
@@ -175,7 +175,7 @@
     au < doNotProcess ; exists ; 2021 ; British Journal of Canadian Studies Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2022 ; British Journal of Canadian Studies Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2023 ; British Journal of Canadian Studies Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2024 ; British Journal of Canadian Studies Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2024 ; British Journal of Canadian Studies Volume 36 ; 36 ; >
 
   }
 
@@ -241,7 +241,7 @@
     au < doNotProcess ; exists ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 ; >
     au < deepCrawl ; exists ; 2022 ; Bulletin of Hispanic Studies Volume 99 ; 99 ; >
     au < deepCrawl ; exists ; 2023 ; Bulletin of Hispanic Studies Volume 100 ; 100 ; >
-    au < manifest ; exists ; 2024 ; Bulletin of Hispanic Studies Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2024 ; Bulletin of Hispanic Studies Volume 101 ; 101 ; >
 
   }
 
@@ -282,7 +282,7 @@
     au < doNotProcess ; exists ; 2021 ; The Byron Journal Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2022 ; The Byron Journal Volume 50 ; 50 ; >
     au < deepCrawl ; exists ; 2023 ; The Byron Journal Volume 51 ; 51 ; >
-    au < manifest ; exists ; 2024 ; The Byron Journal Volume 52 ; 52 ; >
+    au < crawling ; exists ; 2024 ; The Byron Journal Volume 52 ; 52 ; >
 
   }
 
@@ -317,9 +317,6 @@
     au < doNotProcess ; exists ; 2019 ; Comma Volume 2019 ; 2019 ; >
     au < doNotProcess ; exists ; 2020 ; Comma Volume 2020 (2021) ; 2020 ; >
     au < frozen ; exists ; 2021 ; Comma Volume 2021 (2022) ; 2021 ; >
-    au < expected ; exists ; 2022 ; Comma Volume 2022 (2023) ; 2022 ; >
-    au < expected ; exists ; 2023 ; Comma Volume 2023 (2023) ; 2023 ; >
-    au < expected ; exists ; 2024 ; Comma Volume 2024 (2024) ; 2024 ; >
 
   }
 
@@ -360,7 +357,7 @@
     au < doNotProcess ; exists ; 2021 ; Catalan Review Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2022 ; Catalan Review Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2023 ; Catalan Review Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2024 ; Catalan Review Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2024 ; Catalan Review Volume 38 ; 38 ; >
 
   }
 
@@ -402,7 +399,7 @@
     au < doNotProcess ; exists ; 2021 ; Contemporary French Civilization Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2022 ; Contemporary French Civilization Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2023 ; Contemporary French Civilization Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2024 ; Contemporary French Civilization Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2024 ; Contemporary French Civilization Volume 49 ; 49 ; >
 
   }
 
@@ -421,7 +418,7 @@
     au < doNotProcess ; exists ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; Developing Academic Practice Volume 2022 ; 2022 ; >
     au < deepCrawl ; exists ; 2023 ; Developing Academic Practice Volume 2023 ; 2023 ; >
-    au < manifest ; exists ; 2024 ; Developing Academic Practice Volume 2024 ; 2024 ; >
+    au < crawling ; exists ; 2024 ; Developing Academic Practice Volume 2024 ; 2024 ; >
 
   }
 
@@ -523,7 +520,7 @@
     au < doNotProcess ; exists ; 2021 ; Essays in Romanticism Volume 28 ; 28 ; >
     au < deepCrawl ; exists ; 2022 ; Essays in Romanticism Volume 29 ; 29 ; >
     au < deepCrawl ; exists ; 2023 ; Essays in Romanticism Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2024 ; Essays in Romanticism Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2024 ; Essays in Romanticism Volume 31 ; 31 ; >
 
   }
 
@@ -555,7 +552,7 @@
     au < doNotProcess ; exists ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2023 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2024 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2024 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 16 ; 16 ; >
 
   }
 
@@ -596,7 +593,7 @@
     au < doNotProcess ; exists ; 2021 ; Extrapolation Volume 62 ; 62 ; >
     au < deepCrawl ; exists ; 2022 ; Extrapolation Volume 63 ; 63 ; >
     au < deepCrawl ; exists ; 2023 ; Extrapolation Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2024 ; Extrapolation Volume 65 ; 65 ; >
+    au < crawling ; exists ; 2024 ; Extrapolation Volume 65 ; 65 ; >
 
   }
 
@@ -625,7 +622,7 @@
     au < doNotProcess ; exists ; 2021 ; Francosphères Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2022 ; Francosphères Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2023 ; Francosphères Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2024 ; Francosphères Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2024 ; Francosphères Volume 13 ; 13 ; >
 
   }
 
@@ -723,7 +720,7 @@
     au < doNotProcess ; exists ; 2021 ; The Indexer: The International Journal of Indexing Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2022 ; The Indexer: The International Journal of Indexing Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2023 ; The Indexer: The International Journal of Indexing Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2024 ; The Indexer: The International Journal of Indexing Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2024 ; The Indexer: The International Journal of Indexing Volume 42 ; 42 ; >
 
   }
   {
@@ -762,7 +759,7 @@
     au < doNotProcess ; exists ; 2021 ; International Development Planning Review Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2022 ; International Development Planning Review Volume 44 ; 44 ; >
     au < deepCrawl ; exists ; 2023 ; International Development Planning Review Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2024 ; International Development Planning Review Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2024 ; International Development Planning Review Volume 46 ; 46 ; >
 
   }
 
@@ -780,8 +777,8 @@
 
     au < doNotProcess ; exists ; 2021 ; International Journal of English for Academic Purposes: Research and Practice Volume 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of English for Academic Purposes: Research and Practice Volume 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; International Journal of English for Academic Purposes: Research and Practice Volume 2023 ; 2023 ; >
-    au < expected ; exists ; 2024 ; International Journal of English for Academic Purposes: Research and Practice Volume 2024 ; 2024 ; >
+    au < manifest ; exists ; 2023 ; International Journal of English for Academic Purposes: Research and Practice Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2024 ; International Journal of English for Academic Purposes: Research and Practice Volume 4 ; 4 ; >
   }
 
   {
@@ -923,7 +920,7 @@
     au < frozen ; exists ; 2021 ; Journal of Jewish Studies Volume 72 ; 72 ; >
     au < frozen ; exists ; 2022 ; Journal of Jewish Studies Volume 73 ; 73 ; >
     au < frozen ; exists ; 2023 ; Journal of Jewish Studies Volume 74 ; 74 ; >
-    au < manifest ; exists ; 2024 ; Journal of Jewish Studies Volume 75 ; 75 ; >
+    au < crawling ; exists ; 2024 ; Journal of Jewish Studies Volume 75 ; 75 ; >
 
   }
 
@@ -957,7 +954,7 @@
     au < doNotProcess ; exists ; 2021 ; Journal of Literary & Cultural Disability Studies Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Literary & Cultural Disability Studies Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Literary & Cultural Disability Studies Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2024 ; Journal of Literary & Cultural Disability Studies Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2024 ; Journal of Literary & Cultural Disability Studies Volume 18 ; 18 ; >
 
   }
 
@@ -998,7 +995,7 @@
     au < doNotProcess ; exists ; 2021 ; Journal of Romance Studies Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Romance Studies Volume 22 ; 22 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Romance Studies Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2024 ; Journal of Romance Studies Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2024 ; Journal of Romance Studies Volume 24 ; 24 ; >
 
   }
 
@@ -1135,7 +1132,7 @@
     au < doNotProcess ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 121 ; 121 ; >
     au < deepCrawl ; exists ; 2022 ; Labour History: A Journal of Labour and Social History Volume 122 ; 122 ; >
     au < deepCrawl ; exists ; 2023 ; Labour History: A Journal of Labour and Social History Volume 123 ; 123 ; >
-    au < manifest ; exists ; 2024 ; Labour History: A Journal of Labour and Social History Volume 124 ; 124 ; >
+    au < crawling ; exists ; 2024 ; Labour History: A Journal of Labour and Social History Volume 124 ; 124 ; >
 
   }
 
@@ -1176,7 +1173,7 @@
     au < doNotProcess ; exists ; 2021 ; Labour History Review Volume 86 ; 86 ; >
     au < deepCrawl ; exists ; 2022 ; Labour History Review Volume 87 ; 87 ; >
     au < deepCrawl ; exists ; 2023 ; Labour History Review Volume 88 ; 88 ; >
-    au < manifest ; exists ; 2024 ; Labour History Review Volume 89 ; 89 ; >
+    au < crawling ; exists ; 2024 ; Labour History Review Volume 89 ; 89 ; >
 
   }
 
@@ -1360,7 +1357,7 @@
     au < doNotProcess ; exists ; 2021 ; Modern Believing Volume 62 ; 62 ; >
     au < deepCrawl ; exists ; 2022 ; Modern Believing Volume 63 ; 63 ; >
     au < deepCrawl ; exists ; 2023 ; Modern Believing Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2024 ; Modern Believing Volume 65 ; 65 ; >
+    au < crawling ; exists ; 2024 ; Modern Believing Volume 65 ; 65 ; >
 
   }
 
@@ -1444,7 +1441,7 @@
     au < doNotProcess ; exists ; 2021 ; Music, Sound, and the Moving Image Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2022 ; Music, Sound, and the Moving Image Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2023 ; Music, Sound, and the Moving Image Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2024 ; Music, Sound, and the Moving Image Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2024 ; Music, Sound, and the Moving Image Volume 18 ; 18 ; >
 
   }
 
@@ -1632,7 +1629,7 @@
     au < doNotProcess ; exists ; 2021 ; Romani Studies Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2022 ; Romani Studies Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2023 ; Romani Studies Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2024 ; Romani Studies Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2024 ; Romani Studies Volume 34 ; 34 ; >
 
   }
 
@@ -1696,7 +1693,7 @@
     au < doNotProcess ; exists ; 2021 ; Quebec Studies Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2022 ; Quebec Studies Volume 73 ; 73 ; >
     au < deepCrawl ; exists ; 2023 ; Quebec Studies Volume 74 ; 74 ; >
-    au < manifest ; exists ; 2024 ; Quebec Studies Volume 75 ; 75 ; >
+    au < crawling ; exists ; 2024 ; Quebec Studies Volume 75 ; 75 ; >
 
   }
 
@@ -1729,7 +1726,7 @@
     au < doNotProcess ; exists ; 2021 ; Science Fiction Film and Television Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2022 ; Science Fiction Film and Television Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2023 ; Science Fiction Film and Television Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2024 ; Science Fiction Film and Television Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2024 ; Science Fiction Film and Television Volume 17 ; 17 ; >
 
   }
 
@@ -1768,7 +1765,7 @@
     au < doNotProcess ; exists ; 2021 ; Sculpture Journal Volume 30 ; 30 ; >
     au < deepCrawl ; exists ; 2022 ; Sculpture Journal Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2023 ; Sculpture Journal Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2024 ; Sculpture Journal Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2024 ; Sculpture Journal Volume 33 ; 33 ; >
 
   }
 
@@ -1843,7 +1840,7 @@
     au < doNotProcess ; exists ; 2021 ; Theory & Struggle Volume 122 ; 122 ; >
     au < deepCrawl ; exists ; 2022 ; Theory & Struggle Volume 123 ; 123 ; >
     au < deepCrawl ; exists ; 2023 ; Theory & Struggle Volume 124 ; 124 ; >
-    au < manifest ; exists ; 2024 ; Theory & Struggle Volume 125 ; 125 ; >
+    au < crawling ; exists ; 2024 ; Theory & Struggle Volume 125 ; 125 ; >
 
 
   }
@@ -1979,7 +1976,7 @@
     au < doNotProcess ; exists ; 2021 ; Town Planning Review Volume 92 ; 92 ; >
     au < deepCrawl ; exists ; 2022 ; Town Planning Review Volume 93 ; 93 ; >
     au < deepCrawl ; exists ; 2023 ; Town Planning Review Volume 94 ; 94 ; >
-    au < manifest ; exists ; 2024 ; Town Planning Review Volume 95 ; 95 ; >
+    au < crawling ; exists ; 2024 ; Town Planning Review Volume 95 ; 95 ; >
 
 
   }
@@ -2030,7 +2027,7 @@
 
     au < deepCrawl ; exists ; 2022 ; Global Nineteenth-Century Studies Volume 1 ; 1 ; >
     au < deepCrawl ; exists ; 2023 ; Global Nineteenth-Century Studies Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2024 ; Global Nineteenth-Century Studies Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2024 ; Global Nineteenth-Century Studies Volume 3 ; 3 ; >
 
   }
   
@@ -2047,7 +2044,7 @@
 
     au < deepCrawl ; exists ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Romanian Studies Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2024 ; Journal of Romanian Studies Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2024 ; Journal of Romanian Studies Volume 6 ; 6 ; >
 
   }
   
@@ -2067,7 +2064,7 @@
     au < doNotProcess ; exists ; 2021 ; T. S. Eliot Studies Annual Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2022 ; T. S. Eliot Studies Annual Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2023 ; T. S. Eliot Studies Annual Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2024 ; T. S. Eliot Studies Annual Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2024 ; T. S. Eliot Studies Annual Volume 6 ; 6 ; >
 
   }
   
@@ -2098,7 +2095,7 @@
 
     au < frozen ; exists ; 2022 ; Journal of Beatles Studies Volume 2022 ; 2022 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Beatles Studies Volume 2023 ; 2023 ; >
-    au < manifest ; exists ; 2024 ; Journal of Beatles Studies Volume 2024 ; 2024 ; >
+    au < crawling ; exists ; 2024 ; Journal of Beatles Studies Volume 2024 ; 2024 ; >
 
   }
   
@@ -2113,7 +2110,7 @@
     param[journal_id] = revista
 
     au < deepCrawl ; exists ; 2023 ; Revista Iberoamericana Volume 89 ; 89 ; >
-    au < manifest ; exists ; 2024 ; Revista Iberoamericana Volume 90 ; 90 ; >
+    au < crawling ; exists ; 2024 ; Revista Iberoamericana Volume 90 ; 90 ; >
 
   }
   
@@ -2151,17 +2148,17 @@
 
     param[journal_id] = shandean
 
-    au < manifest ; exists ; 2013 ; The Shandean Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2014 ; The Shandean Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2015 ; The Shandean Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2016 ; The Shandean Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2017 ; The Shandean Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2018 ; The Shandean Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2019 ; The Shandean Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2020 ; The Shandean Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2021 ; The Shandean Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2022 ; The Shandean Volume 33 ; 33 ; >
-    au < exists ; exists ; 2023 ; The Shandean Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2013 ; The Shandean Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2014 ; The Shandean Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2015 ; The Shandean Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2016 ; The Shandean Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2017 ; The Shandean Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2018 ; The Shandean Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2019 ; The Shandean Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2020 ; The Shandean Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2021 ; The Shandean Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2022 ; The Shandean Volume 33 ; 33 ; >
+    au < expected ; exists ; 2023 ; The Shandean Volume 34 ; 34 ; >
     au < expected ; exists ; 2024 ; The Shandean Volume 35 ; 35 ; >
 
   }

@@ -49,7 +49,7 @@ public class MsHtmlHashFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "singleFigureContainer"),
     //supp data landing page
     HtmlNodeFilters.tagWithAttribute("div", "id", "SuppDataIndexList"),
-    
+    HtmlNodeFilters.tagWithText("title","Side-by-Side view "),
     //do not need the export-list citation download links for hash filter
   };
   protected static NodeFilter[] xfilters = new NodeFilter[] {

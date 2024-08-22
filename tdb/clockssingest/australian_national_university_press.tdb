@@ -222,7 +222,7 @@
     au < finished ; finished ; 2019 ; Human Ecology Review: Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Human Ecology Review: Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021-2022 ; Human Ecology Review: Volume 27 ; 27 ;  >
-    au < expected ; exists ; 2023 ; Human Ecology Review: Volume 28 ; 28 ;  >
+    au < manifest ; exists ; 2023 ; Human Ecology Review: Volume 28 ; 28 ;  >
     au < expected ; exists ; 2024 ; Human Ecology Review: Volume 29 ; 29 ;  >
 
   }
@@ -286,7 +286,7 @@
     au < finished ; frozen ; 2021 ; Made in China Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < notReady ; exists ; 2022 ; Made in China Volume 7 ; 7 ; > #manifest page checker finds a volume that does not exist.
     au < deepCrawl ; exists ; 2023 ; Made in China Volume 8 ; 8 ; >
-    au < expected ; exists ; 2024 ; Made in China Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2024 ; Made in China Volume 9 ; 9 ; >
 
   }
   

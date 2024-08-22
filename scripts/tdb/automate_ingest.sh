@@ -82,9 +82,9 @@ echo "###Ready Misc Ingest5" >> $t/tmp_Misc
 
 head -n20 $t/tmp_HW | grep -v ClockssHWDrupalPlugin > $t/tmp_All
 head -n20 $t/tmp_Sage >> $t/tmp_All
-head -n40 $t/tmp_Atypon >> $t/tmp_All
+head -n20 $t/tmp_Atypon >> $t/tmp_All
 head -n20 $t/tmp_EmeraldJ >> $t/tmp_All
-head -n200 $t/tmp_Misc | grep -v HWDrupalPlugin >> $t/tmp_All
+head -n80 $t/tmp_Misc | grep -v HWDrupalPlugin >> $t/tmp_All
 
 exit 0
 

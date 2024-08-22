@@ -78,6 +78,8 @@ public class OupScHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
             HtmlNodeFilters.tagWithAttribute("div", "id", "authorInfo_OUP_ArticleTop_Info_Widget"),
             HtmlNodeFilters.tagWithAttribute("div", "class", "name-role-wrap")),
         HtmlNodeFilters.tagWithAttribute("div", "class", "issue-browse__supplement-list-wrap"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "copyright-statement"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "license"),
         // HtmlNodeFilters.tagWithAttributeRegex("img", "class", "content-image"),
     };
     
