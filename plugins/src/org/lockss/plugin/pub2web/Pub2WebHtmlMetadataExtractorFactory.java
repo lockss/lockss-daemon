@@ -138,28 +138,27 @@ public class Pub2WebHtmlMetadataExtractorFactory implements FileMetadataExtracto
 
       String pubName = (tdbau == null) ? null : tdbau.getPublisherName();
 
-      if (!pubName.equalsIgnoreCase("Microbiology Society")) {
-        emitter.emitMetadata(cu, am);
-      } else {
-        if (tdbau != null) {
-          tdb_volume = tdbau.getVolume();
+      if (tdbau != null) {
+        tdb_volume = tdbau.getVolume();
 
-          log.debug3("Pub2web volume check in plugin: Get volume_name... " + tdb_volume);
+        log.debug3("Pub2web volume check in plugin: Get volume_name... " + tdb_volume);
 
+        log.debug3("Pub2web volume check: date In Au , citation_volume = " + citation_volume + ", tdb_volume = " + tdb_volume + ", pubName = " + pubName);
+
+        //check volume
+        if (pubName != null && pubName.equals("Microbiology Society") && citation_volume != null && tdb_volume != null && citation_volume.equalsIgnoreCase(tdb_volume)) {
           log.debug3("Pub2web volume check: date In Au , citation_volume = " + citation_volume + ", tdb_volume = " + tdb_volume + ", pubName = " + pubName);
-
-          //check volume
-          if (pubName != null && pubName.equals("Microbiology Society") && citation_volume != null && tdb_volume != null && citation_volume.equalsIgnoreCase(tdb_volume)) {
-            log.debug3("Pub2web volume check: date In Au , citation_volume = " + citation_volume + ", tdb_volume = " + tdb_volume + ", pubName = " + pubName);
-            emitter.emitMetadata(cu, am);
-          } else {
-            log.debug3("Pub2web volume check: failed, volume In Au , citation_volume = " + citation_volume + ", tdb_volume = " + tdb_volume + ", pubName = " + pubName);
-            emitter.emitMetadata(cu, am);
-          }
+          emitter.emitMetadata(cu, am);
         } else {
-          log.debug3("Pub2web tdbau is NULL");
+          log.debug3("Pub2web volume check: failed, volume In Au , citation_volume = " + citation_volume + ", tdb_volume = " + tdb_volume + ", pubName = " + pubName);
+          emitter.emitMetadata(cu, am);
         }
+      } else {
+        log.debug3("Pub2web tdbau is NULL");
+        //Emit metadata for all other publishers
+        emitter.emitMetadata(cu, am);
       }
+
     }
   }
 }
