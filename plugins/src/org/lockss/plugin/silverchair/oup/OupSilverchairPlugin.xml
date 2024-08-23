@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>43</string>
+    <string>44</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -289,6 +289,15 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>https?://oup\.silverchair-cdn\.com/(cassette\.axd|data|UI)/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff))(\?.*)?$</string>
       <string>https?://(fonts\.googleapis\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|fonts\.gstatic\.com)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?</string>
       <string>https://academic.oup.com/[^/]+/search-results\?q=&amp;f_IssueNo</string>
+      <!--In 2024, it was discovered that OUP changes the URL directory when content (such as figures, tables, and pdfs) is changed. We need 
+      ingest machines to find all the possible URLs from their peers.
+      Example below, same pdf with different permission statements and thus . Ingest4 collected one version of this pdf
+          @@@https://academic.oup.com/ejil/article-pdf/34/4/899/57061730/chad055.pdf      [[-4], [1, 2, 3, 5]]
+          @@@https://academic.oup.com/ejil/article-pdf/34/4/899/56670146/chad055.pdf      [[-1, -2, -3, -5], [4]]
+      -->
+      <string>"^%s%s/article-pdf/[0-9]+/[0-9]+/[0-9]+/[0-9]+/[a-z0-9]+\.pdf$", base_url, journal_id</string>
+      <string>"^%sview-large/([0-9]+|figure/[0-9]+/[a-z0-9_]+\.(tif|jpe?g))$", base_url</string>
+      <string>https?://oup\.silverchair-cdn\.com/oup/.*(JS|CSS|\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff|zip|docx))\?Expires=.+$</string>
     </list>
   </entry>
   <entry>
