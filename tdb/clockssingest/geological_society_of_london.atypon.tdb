@@ -26,7 +26,7 @@
       param[journal_id] = geoenergy
 
       au < frozen ; exists ; 2023 ; Geological Society of America Bulletin Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2024 ; Geological Society of America Bulletin Volume 2 ; 2 ; >
+      au < ready ; exists ; 2024 ; Geological Society of America Bulletin Volume 2 ; 2 ; >
   }
 
   {
@@ -108,7 +108,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Geochemistry: Exploration, Environment, Analysis Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 [superseded] ; 22 ; >
     au < deepCrawl ; exists ; 2023 ; Geochemistry: Exploration, Environment, Analysis Volume 23 [superseded] ; 23 ; >
-    au < manifest ; exists ; 2024 ; Geochemistry: Exploration, Environment, Analysis Volume 24 [superseded] ; 24 ; >
+    au < ready ; exists ; 2024 ; Geochemistry: Exploration, Environment, Analysis Volume 24 [superseded] ; 24 ; >
 
   }
 
@@ -183,7 +183,7 @@
     au < finished ; crawling ; 2024 ; Geological Society of London Memoirs Volume 57 ; 57 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Memoirs Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Memoirs Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2024 ; Geological Society of London Memoirs Volume 60 ; 60 ; >
+    au < ready ; exists ; 2024 ; Geological Society of London Memoirs Volume 60 ; 60 ; >
     au < expected ; exists ; 2024 ; Geological Society of London Memoirs Volume 61 ; 61 ; >
 
   }
@@ -966,7 +966,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Journal of the Geological Society of London Volume 178 ; 178 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of the Geological Society of London Volume 179 ; 179 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of the Geological Society of London Volume 180 ; 180 ; >
-    au < manifest ; exists ; 2024 ; Journal of the Geological Society of London Volume 181 ; 181 ; >
+    au < ready ; exists ; 2024 ; Journal of the Geological Society of London Volume 181 ; 181 ; >
 
   }
 
@@ -1011,7 +1011,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; Petroleum Geoscience Volume 27 ; 27 ; >
       au < deepCrawl ; exists ; 2022 ; Petroleum Geoscience Volume 28 ; 28 ; >
       au < deepCrawl ; exists ; 2023 ; Petroleum Geoscience Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2024 ; Petroleum Geoscience Volume 30 ; 30 ; >
+      au < ready ; exists ; 2024 ; Petroleum Geoscience Volume 30 ; 30 ; >
 
   }
 
@@ -1103,7 +1103,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 54 ; 54 ; >
     au < deepCrawl ; exists ; 2022 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 55 ; 55 ; >
     au < deepCrawl ; exists ; 2023 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 56 ; 56 ; >
-    au < manifest ; exists ; 2024 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 57 ; 57 ; >
+    au < ready ; exists ; 2024 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 57 ; 57 ; >
 
   }
 
@@ -1179,7 +1179,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Scottish Journal of Geology Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2022 ; Scottish Journal of Geology Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2023 ; Scottish Journal of Geology Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2024 ; Scottish Journal of Geology Volume 60 ; 60 ; >
+    au < ready ; exists ; 2024 ; Scottish Journal of Geology Volume 60 ; 60 ; >
 
   }
 
