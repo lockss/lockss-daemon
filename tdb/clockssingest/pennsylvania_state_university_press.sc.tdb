@@ -215,7 +215,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; The Good Society Volume 28 ; 28 ; 2019 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; The Good Society Volume 29 ; 29 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Good Society Volume 30 ; 30 ; 2021 ; >
-      au < ready ; exists ; 2022 ; The Good Society Volume 31 ; 31 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; The Good Society Volume 31 ; 31 ; 2022 ; >
 
   }
 
@@ -2180,7 +2180,7 @@
 
       au < finished ; manifest ; 2020 ; AMP: American Music Perspectives Volume 1 ; 1 ; 2020 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; AMP: American Music Perspectives Volume 2 ; 2 ; 2021 ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2022 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2022 ; >
       au < expected ; exists ; 2024 ; AMP: American Music Perspectives Volume 4 ; 4 ; 2024 ; >
 
   }
