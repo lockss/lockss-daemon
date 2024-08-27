@@ -36,6 +36,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import org.apache.commons.collections4.IteratorUtils;
@@ -47,7 +48,6 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
-import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
@@ -119,7 +119,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
             Document doc = Jsoup.parse(tocCU.getUnfilteredInputStream(), AuUtil.getCharsetOrDefault(tocCU.getProperties()), tocCU.getUrl());
             Elements articles = doc.select("div.article-summary,article.article,ul.articles>li,div.one-article-intoc,article.article_summary,div.article-sum,"
                 +"ul.it-list>li>div.it-right-zone,article.equal,div.grid-child:has(div>div.media-body),ul.row>li.issue__article,div.page-issue-galleys:has(div.h3:contains(Número completo)),"
-                +"div.galleys:has(h2:contains(Número completo))");
+                +"div.galleys:has(h2:contains(Número completo)),div.galleys:has(h2:contains(Full Issue))");
             ArrayList<String> rolesForFullText = new ArrayList<>();
             for (Element article : articles) {
                 ArticleFiles af = new ArticleFiles();
@@ -128,6 +128,14 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                     +"div.galleys_links>a[href*=article]:contains(PDF),div.btn-group>a[href*=article]:contains(PDF),a.indexGalleyLink:contains(PDF),div.btn-group>a[href*=article].pdf:contains(Article),"
                     +"div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF)),"
                     +"a[href*=issue/view].btn:contains(PDF),ul.galleys_links>li>a.pdf[href*=issue/view]");
+                /*if(PDFs.size() > 1){
+                    List<String> pdfURLs = new ArrayList<String>();
+                    for(int i = 0; i < PDFs.size(); i++){
+                        pdfURLs.add(PDFs.get(i).attr("href"));
+                        log.info("I am number " + i + " and I am " + pdfURLs.get(i));
+                    }
+                    af.setRole("multiPdfs", pdfURLs);
+                }*/
                 pdfUrl = au.makeCachedUrl(PDFs.attr("href"));
                 addToListOfRoles(pdfUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_PDF);
 
