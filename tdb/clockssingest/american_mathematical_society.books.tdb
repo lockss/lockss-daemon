@@ -567,10 +567,10 @@
     
     au < frozen ; exists ; 1993 ; Graduate Studies in Mathematics 1993 ; 1993 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1994 ; Graduate Studies in Mathematics 1994 ; 1994 ; https://www.ams.org/ ; >
-    au < notReady ; exists ; 1995 ; Graduate Studies in Mathematics 1995 ; 1995 ; https://www.ams.org/ ; > #no content link on http://www.ams.org/books/gsm/005/
+    au < doNotProcess ; exists ; 1995 ; Graduate Studies in Mathematics 1995 ; 1995 ; https://www.ams.org/ ; > #LXQUEUE-1948, no content link on http://www.ams.org/books/gsm/005/
     au < frozen ; exists ; 1996 ; Graduate Studies in Mathematics 1996 ; 1996 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1997 ; Graduate Studies in Mathematics 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < notReady ; exists ; 1998 ; Graduate Studies in Mathematics 1998 ; 1998 ; https://www.ams.org/ ; > #no content link on http://www.ams.org/books/gsm/019/
+    au < doNotProcess ; exists ; 1998 ; Graduate Studies in Mathematics 1998 ; 1998 ; https://www.ams.org/ ; > #LXQUEUE-1948, no content link on http://www.ams.org/books/gsm/019/
     au < frozen ; exists ; 1999 ; Graduate Studies in Mathematics 1999 ; 1999 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2000 ; Graduate Studies in Mathematics 2000 ; 2000 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2001 ; Graduate Studies in Mathematics 2001 ; 2001 ; https://www.ams.org/ ; >
@@ -617,7 +617,7 @@
     au < frozen ; exists ; 1999 ; Mathematical World 1999 ; 1999 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2000 ; Mathematical World 2000 ; 2000 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2002 ; Mathematical World 2002 ; 2002 ; https://www.ams.org/ ; >
-    au < notReady ; exists ; 2003 ; Mathematical World 2003 ; 2003 ; https://www.ams.org/ ; > #no content link on http://www.ams.org/books/mawrld/019/
+    au < doNotProcess ; exists ; 2003 ; Mathematical World 2003 ; 2003 ; https://www.ams.org/ ; > #LXQUEUE-1948, no content link on http://www.ams.org/books/mawrld/019/
     au < frozen ; exists ; 2004 ; Mathematical World 2004 ; 2004 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2005 ; Mathematical World 2005 ; 2005 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2006 ; Mathematical World 2006 ; 2006 ; https://www.ams.org/ ; >
