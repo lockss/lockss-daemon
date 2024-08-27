@@ -246,7 +246,7 @@ Args:
                                   value="${lib}/ziplet-2.4.1.jar"/>
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
-  <property name="log4j2.version" value="2.21.1" />
+  <property name="log4j2.version" value="2.23.1" />
   <property name="log4j2-api.jar" value="${lib}/log4j-api-${log4j2.version}.jar" />
   <property name="log4j2-core.jar" value="${lib}/log4j-core-${log4j2.version}.jar" />
   <property name="log4j2-1.2-compat.jar" value="${lib}/log4j-1.2-api-${log4j2.version}.jar" />
@@ -256,7 +256,7 @@ Args:
   <property name="commons.codec.jar" value="${lib}/commons-codec-1.17.1.jar" />
   <property name="commons.collections.jar" value="${lib}/commons-collections-3.2.2.jar" />
   <property name="commons.collections4.jar" value="${lib}/commons-collections4-4.4.jar" />
-  <property name="commons.compress.jar" value="${lib}/commons-compress-1.27.0.jar" />
+  <property name="commons.compress.jar" value="${lib}/commons-compress-1.27.1.jar" />
   <property name="commons.configuration.jar" value="${lib}/commons-configuration-1.10.jar" />
   <property name="commons.csv.jar" value="${lib}/commons-csv-1.11.0.jar" />
   <!-- commons-digester -->
@@ -393,8 +393,9 @@ Args:
   <property name="gson-fire.jar" value="${lib}/gson-fire-1.8.4.jar" />
   <property name="swagger-annotations.jar" value="${lib}/swagger-annotations-1.5.24.jar" />
   <property name="jsr305.jar" value="${lib}/jsr305-3.0.2.jar" />
-
-  <property name="json-path.jar" value="${lib}/json-path-2.8.0.jar" />
+  <!-- Json-Path depends on Json-Smart and SLF4J -->
+  <property name="json-path.jar" value="${lib}/json-path-2.9.0.jar" />
+  <property name="json-smart.jar" value="${lib}/json-smart-2.5.0.jar" />
 
   <property name="antlr.version" value="4.9.3" /><!-- 4.9.3 is the last Java 8 version before 4.10 -->
   <property name="antlr.runtime.jar" value="${lib}/antlr-runtime-${antlr.version}.jar" />
@@ -634,6 +635,7 @@ Args:
     <pathelement path="${gson-fire.jar}" />
     <pathelement path="${swagger-annotations.jar}" />
     <pathelement path="${jsr305.jar}" />
+    <!-- Json-Path depends on Json-Smart and SLF4J -->
     <pathelement path="${json-path.jar}" />
     <!-- Needed for TDB tools: -->
     <pathelement path="${antlr.runtime.jar}" />
