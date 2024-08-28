@@ -36,7 +36,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 import java.util.regex.Pattern;
 
 import org.apache.commons.collections4.IteratorUtils;
@@ -125,19 +124,31 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                 ArticleFiles af = new ArticleFiles();
 
                 Elements PDFs = article.select("div.article-summary-galleys>a[href*=article]:contains(PDF),ul.article__btn-group>li>a[href*=article]:contains(PDF),ul.galleys_links>li>a[href*=article]:contains(PDF),"
-                    +"div.galleys_links>a[href*=article]:contains(PDF),div.btn-group>a[href*=article]:contains(PDF),a.indexGalleyLink:contains(PDF),div.btn-group>a[href*=article].pdf:contains(Article),"
+                    +"div.galleys_links>a[href*=article]:contains(PDF),div.btn-group>a[href*=article].pdf,a.indexGalleyLink:contains(PDF),"
                     +"div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF)),"
                     +"a[href*=issue/view].btn:contains(PDF),ul.galleys_links>li>a.pdf[href*=issue/view]");
-                /*if(PDFs.size() > 1){
-                    List<String> pdfURLs = new ArrayList<String>();
-                    for(int i = 0; i < PDFs.size(); i++){
-                        pdfURLs.add(PDFs.get(i).attr("href"));
-                        log.info("I am number " + i + " and I am " + pdfURLs.get(i));
-                    }
-                    af.setRole("multiPdfs", pdfURLs);
-                }*/
                 pdfUrl = au.makeCachedUrl(PDFs.attr("href"));
                 addToListOfRoles(pdfUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+                /*
+                    August 2024 - We need to be able to emit metadata for articles in different languages. If there are multiple pdfs under a single article
+                    on the TOC page, they are likely the same pdf in different languages. 
+                    An example can be found here: https://ojs.aut.ac.nz/linksymposium/issue/view/3 
+
+                    There is an example that has different pdfs on the TOC page that are NOT the pdf in different languages. This was confirmed
+                    as being ok to emit metadata multiple times. https://ojs.aut.ac.nz/anzjsi/issue/view/1
+                */
+                if(PDFs.size() > 1){
+                    for(int i = 1; i < PDFs.size(); i++){
+                        ArticleFiles afTemp = new ArticleFiles();
+                        CachedUrl cuTemp = au.makeCachedUrl(PDFs.get(i).attr("href"));
+                        afTemp.setRole(ArticleFiles.ROLE_FULL_TEXT_PDF,cuTemp);
+                        afTemp.setFullTextCu(cuTemp);
+                        afTemp.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractsUrl);
+                        log.info("I am number " + i + " and I am " + PDFs.get(i));
+                        results.add(afTemp);
+                    }
+                }
 
                 Elements HTMLs = article.select("ul.galleys_links>li>a:contains(HTML),ul.article__btn-group>li>a:contains(HTML),div.btn-group>a:contains(HTML),"
                     +"div.galleys_links>a:contains(HTML),a.indexGalleyLink:contains(HTML)");
@@ -195,7 +206,6 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
     }
 
     public void addToListOfRoles(CachedUrl cu, ArticleFiles af, ArrayList<String> rolesForFullText, String role){
-        log.debug3("I am in the method.");
         if(cu.hasContent()){
             log.debug3("The cu has content");
             af.setRole(role,cu);
