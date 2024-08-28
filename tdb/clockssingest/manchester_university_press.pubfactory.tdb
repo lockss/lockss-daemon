@@ -97,12 +97,12 @@
         au < doNotProcess ; doNotProcess ; 1999 ; Gothic Studies Volume 1 ; 1 ; >
         au < ready ; exists ; 2000 ; Gothic Studies Volume 2 ; 2 ; >
         au < ready ; exists ; 2001 ; Gothic Studies Volume 3 ; 3 ; >
-        au < ready ; exists ; 2002 ; Gothic Studies Volume 4 ; 4 ; >
-        au < ready ; exists ; 2003 ; Gothic Studies Volume 5 ; 5 ; >
+        au < crawling ; exists ; 2002 ; Gothic Studies Volume 4 ; 4 ; >
+        au < crawling ; exists ; 2003 ; Gothic Studies Volume 5 ; 5 ; >
         au < ready ; exists ; 2004 ; Gothic Studies Volume 6 ; 6 ; >
         au < ready ; exists ; 2005 ; Gothic Studies Volume 7 ; 7 ; >
         au < ready ; exists ; 2006 ; Gothic Studies Volume 8 ; 8 ; >
-        au < ready ; exists ; 2007 ; Gothic Studies Volume 9 ; 9 ; >
+        au < crawling ; exists ; 2007 ; Gothic Studies Volume 9 ; 9 ; >
         au < ready ; exists ; 2008 ; Gothic Studies Volume 10 ; 10 ; >
         au < ready ; exists ; 2009 ; Gothic Studies Volume 11 ; 11 ; >
         au < ready ; exists ; 2010 ; Gothic Studies Volume 12 ; 12 ; >
@@ -140,7 +140,7 @@
       au < superseded ; exists ; 2021 ; Human Remains and Violence Volume 7 [superseded] ; 7 ; >
       au < frozen ; exists ; 2022 ; Human Remains and Violence Volume 8 ; 8 ; >
       au < frozen ; exists ; 2023 ; Human Remains and Violence Volume 9 ; 9 ; >
-      au < ready ; exists ; 2024 ; Human Remains and Violence Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2024 ; Human Remains and Violence Volume 10 ; 10 ; >
     }
 
     {
