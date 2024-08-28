@@ -360,19 +360,19 @@
     
     param[collection_id] = cbms
     
-    au < crawling ; exists ; 1970 ; CBMS Regional Conference Series in Mathematics 1970 ; 1970 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1970 ; CBMS Regional Conference Series in Mathematics 1970 ; 1970 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 1971 ; CBMS Regional Conference Series in Mathematics 1971 ; 1971 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 1972 ; CBMS Regional Conference Series in Mathematics 1972 ; 1972 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1972 ; CBMS Regional Conference Series in Mathematics 1972 ; 1972 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1973 ; CBMS Regional Conference Series in Mathematics 1973 ; 1973 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1974 ; CBMS Regional Conference Series in Mathematics 1974 ; 1974 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 1975 ; CBMS Regional Conference Series in Mathematics 1975 ; 1975 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1975 ; CBMS Regional Conference Series in Mathematics 1975 ; 1975 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1976 ; CBMS Regional Conference Series in Mathematics 1976 ; 1976 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1977 ; CBMS Regional Conference Series in Mathematics 1977 ; 1977 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 1978 ; CBMS Regional Conference Series in Mathematics 1978 ; 1978 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 1979 ; CBMS Regional Conference Series in Mathematics 1979 ; 1979 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1979 ; CBMS Regional Conference Series in Mathematics 1979 ; 1979 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 1980 ; CBMS Regional Conference Series in Mathematics 1980 ; 1980 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1981 ; CBMS Regional Conference Series in Mathematics 1981 ; 1981 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 1982 ; CBMS Regional Conference Series in Mathematics 1982 ; 1982 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1982 ; CBMS Regional Conference Series in Mathematics 1982 ; 1982 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1983 ; CBMS Regional Conference Series in Mathematics 1983 ; 1983 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1984 ; CBMS Regional Conference Series in Mathematics 1984 ; 1984 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1985 ; CBMS Regional Conference Series in Mathematics 1985 ; 1985 ; https://www.ams.org/ ; >
@@ -451,8 +451,8 @@
     
     au < ready ; exists ; 1905 ; Colloquium Publications 1905 ; 1905 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1910 ; Colloquium Publications 1910 ; 1910 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 1913 ; Colloquium Publications 1913 ; 1913 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 1914 ; Colloquium Publications 1914 ; 1914 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1913 ; Colloquium Publications 1913 ; 1913 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1914 ; Colloquium Publications 1914 ; 1914 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1918 ; Colloquium Publications 1918 ; 1918 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1927 ; Colloquium Publications 1927 ; 1927 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1929 ; Colloquium Publications 1929 ; 1929 ; https://www.ams.org/ ; >
@@ -755,10 +755,10 @@
     au < ready ; exists ; 1963 ; AMS Translations: Series 2 1963 ; 1963 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1964 ; AMS Translations: Series 2 1964 ; 1964 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1965 ; AMS Translations: Series 2 1965 ; 1965 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 1966 ; AMS Translations: Series 2 1966 ; 1966 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1966 ; AMS Translations: Series 2 1966 ; 1966 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1967 ; AMS Translations: Series 2 1967 ; 1967 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1968 ; AMS Translations: Series 2 1968 ; 1968 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 1969 ; AMS Translations: Series 2 1969 ; 1969 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1969 ; AMS Translations: Series 2 1969 ; 1969 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1970 ; AMS Translations: Series 2 1970 ; 1970 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1971 ; AMS Translations: Series 2 1971 ; 1971 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1972 ; AMS Translations: Series 2 1972 ; 1972 ; https://www.ams.org/ ; >
@@ -778,7 +778,7 @@
     au < ready ; exists ; 1986 ; AMS Translations: Series 2 1986 ; 1986 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1987 ; AMS Translations: Series 2 1987 ; 1987 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1988 ; AMS Translations: Series 2 1988 ; 1988 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 1989 ; AMS Translations: Series 2 1989 ; 1989 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1989 ; AMS Translations: Series 2 1989 ; 1989 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1990 ; AMS Translations: Series 2 1990 ; 1990 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1991 ; AMS Translations: Series 2 1991 ; 1991 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1992 ; AMS Translations: Series 2 1992 ; 1992 ; https://www.ams.org/ ; >
