@@ -66,7 +66,7 @@
       au < manifest ; exists ; 2018 ; Revista Colombiana de Ciencias Pecuarias Volume 2018 ; 2018 ; 41 ; >
       au < manifest ; exists ; 2019 ; Revista Colombiana de Ciencias Pecuarias Volume 2019 ; 2019 ; 42 ; >
       au < ready ; exists ; 2020 ; Revista Colombiana de Ciencias Pecuarias Volume 2020 ; 2020 ; 43 ; >
-      au < crawling ; exists ; 2021 ; Revista Colombiana de Ciencias Pecuarias Volume 2021 ; 2021 ; 44 ; >
+      au < frozen ; exists ; 2021 ; Revista Colombiana de Ciencias Pecuarias Volume 2021 ; 2021 ; 44 ; >
       au < crawling ; exists ; 2022 ; Revista Colombiana de Ciencias Pecuarias Volume 2022 ; 2022 ; 45 ; >
       au < frozen ; exists ; 2023 ; Revista Colombiana de Ciencias Pecuarias Volume 2023 ; 2023 ; 46 ; >
       au < crawling ; exists ; 2024 ; Revista Colombiana de Ciencias Pecuarias Volume 2024 ; 2024 ; 47 ; >
@@ -183,8 +183,8 @@
       au < manifest ; exists ; 2017 ; Contaduría Universidad de Antioquia Volume 2017 ; 2017 ; 36 ; >
       au < manifest ; exists ; 2018 ; Contaduría Universidad de Antioquia Volume 2018 ; 2018 ; 37 ; >
       au < manifest ; exists ; 2019 ; Contaduría Universidad de Antioquia Volume 2019 ; 2019 ; 38 ; >
-      au < crawling ; exists ; 2020 ; Contaduría Universidad de Antioquia Volume 2020 ; 2020 ; 39 ; >
-      au < crawling ; exists ; 2021 ; Contaduría Universidad de Antioquia Volume 2021 ; 2021 ; 40 ; >
+      au < frozen ; exists ; 2020 ; Contaduría Universidad de Antioquia Volume 2020 ; 2020 ; 39 ; >
+      au < frozen ; exists ; 2021 ; Contaduría Universidad de Antioquia Volume 2021 ; 2021 ; 40 ; >
       au < frozen ; exists ; 2022 ; Contaduría Universidad de Antioquia Volume 2022 ; 2022 ; 41 ; >
       au < testing ; exists ; 2023 ; Contaduría Universidad de Antioquia Volume 2023 ; 2023 ; 42 ; >
       au < crawling ; exists ; 2024 ; Contaduría Universidad de Antioquia Volume 2024 ; 2024 ; 43 ; >
@@ -327,7 +327,7 @@
       au < manifest ; exists ; 2017 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2017 ; 2017 ; 34 ; >
       au < manifest ; exists ; 2018 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2018 ; 2018 ; 35 ; >
       au < manifest ; exists ; 2019 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2019 ; 2019 ; 36 ; >
-      au < crawling ; exists ; 2020 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2020 ; 2020 ; 37 ; >
+      au < frozen ; exists ; 2020 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2020 ; 2020 ; 37 ; >
       au < ready ; exists ; 2021 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2021 ; 2021 ; 38 ; >
       au < crawling ; exists ; 2022 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2022 ; 2022 ; 39 ; >
       au < frozen ; exists ; 2023 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2023 ; 2023 ; 40 ; >
@@ -476,7 +476,7 @@
       au < manifest ; exists ; 2018 ; Vitae Volume 2018 ; 2018 ; 28 ; >
       au < manifest ; exists ; 2019 ; Vitae Volume 2019 ; 2019 ; 29 ; >
       au < ready ; exists ; 2020 ; Vitae Volume 2020 ; 2020 ; 30 ; >
-      au < crawling ; exists ; 2021 ; Vitae Volume 2021 ; 2021 ; 31 ; >
+      au < frozen ; exists ; 2021 ; Vitae Volume 2021 ; 2021 ; 31 ; >
       au < ready ; exists ; 2022 ; Vitae Volume 2022 ; 2022 ; 32 ; >
       au < frozen ; exists ; 2023 ; Vitae Volume 2023 ; 2023 ; 33 ; >
       au < crawling ; exists ; 2024 ; Vitae Volume 2024 ; 2024 ; 34 ; >
@@ -522,7 +522,7 @@
       au < manifest ; exists ; 2017 ; Estudios Políticos Volume 2017 ; 2017 ; 26 ; >
       au < manifest ; exists ; 2018 ; Estudios Políticos Volume 2018 ; 2018 ; 27 ; >
       au < manifest ; exists ; 2019 ; Estudios Políticos Volume 2019 ; 2019 ; 28 ; >
-      au < crawling ; exists ; 2020 ; Estudios Políticos Volume 2020 ; 2020 ; 29 ; >
+      au < frozen ; exists ; 2020 ; Estudios Políticos Volume 2020 ; 2020 ; 29 ; >
       au < ready ; exists ; 2021 ; Estudios Políticos Volume 2021 ; 2021 ; 30 ; >
       au < ready ; exists ; 2022 ; Estudios Políticos Volume 2022 ; 2022 ; 31 ; >
       au < testing ; exists ; 2023 ; Estudios Políticos Volume 2023 ; 2023 ; 32 ; >
@@ -608,7 +608,7 @@
       au < manifest ; exists ; 2018 ; Estudios De Literatura Colombiana Volume 2018 ; 2018 ; 22 ; >
       au < manifest ; exists ; 2019 ; Estudios De Literatura Colombiana Volume 2019 ; 2019 ; 23 ; >
       au < ready ; exists ; 2020 ; Estudios De Literatura Colombiana Volume 2020 ; 2020 ; 24 ; >
-      au < crawling ; exists ; 2021 ; Estudios De Literatura Colombiana Volume 2021 ; 2021 ; 25 ; >
+      au < frozen ; exists ; 2021 ; Estudios De Literatura Colombiana Volume 2021 ; 2021 ; 25 ; >
       au < crawling ; exists ; 2022 ; Estudios De Literatura Colombiana Volume 2022 ; 2022 ; 26 ; >
       au < frozen ; exists ; 2023 ; Estudios De Literatura Colombiana Volume 2023 ; 2023 ; 27 ; >
       au < crawling ; exists ; 2024 ; Estudios De Literatura Colombiana Volume 2024 ; 2024 ; 28 ; >
