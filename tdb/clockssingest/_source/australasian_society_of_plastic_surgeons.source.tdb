@@ -18,7 +18,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/ajops-released/
     #PRODUCTION
 
-    au < ready ; exists ; 2024 ; Australasian Society of Plastic Surgeons Content 2024_01 ; 2024_01 >
+    au < readySource ; crawling ; 2024 ; Australasian Society of Plastic Surgeons Content 2024_01 ; 2024_01 >
     }
   }
 
