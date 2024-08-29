@@ -84,7 +84,7 @@
         #AUs tested in test directory
         param[base_url] = https://clockss-test.lockss.org/sourcefiles/eastviewdb-released/
 
-        au < testing ; crawling ; 2024 ; East View Information Services Database Source Content 2024_01 ; 2024_01 >
+        au < testing ; exists ; 2024 ; East View Information Services Database Source Content 2024_01 ; 2024_01 >
       }
     }
 
