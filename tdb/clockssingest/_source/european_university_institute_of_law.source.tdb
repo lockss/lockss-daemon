@@ -24,15 +24,6 @@
     #No more AUs. Moved to https.
     }
     {
-    #####Testing
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/euilaw-released/
-
-    au < doNotProcess ; exists ; 2022 ; European University Institute of Law Source Content 2022_01 [testing] ; 2022_01 >
-    au < doNotProcess ; exists ; 2023 ; European University Institute of Law Source Content 2023_01 [testing] ; 2023_01 >
-    au < doNotProcess ; exists ; 2024 ; European University Institute of Law Source Content 2024_01 [testing] ; 2024_01 >
-
-    }
-    {
     #####Production: 
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/euilaw-released/
 
