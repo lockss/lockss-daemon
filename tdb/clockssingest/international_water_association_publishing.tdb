@@ -365,13 +365,13 @@
 
     param[journal_id] = wpt
 
-    au < frozen ; exists ; 2006 ; 2006 ; Water Practice and Technology Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; Water Practice and Technology Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Water Practice and Technology Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Water Practice and Technology Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2010 ; 2010 ; Water Practice and Technology Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2011 ; 2011 ; Water Practice and Technology Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2012 ; 2012 ; Water Practice and Technology Volume 7 ; 7 ; >
+    au < finished ; manifest ; 2006 ; 2006 ; Water Practice and Technology Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 2007 ; Water Practice and Technology Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; 2008 ; Water Practice and Technology Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009 ; 2009 ; Water Practice and Technology Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2010 ; 2010 ; Water Practice and Technology Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; 2011 ; Water Practice and Technology Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; 2012 ; Water Practice and Technology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Practice and Technology Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Practice and Technology Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Practice and Technology Volume 10 ; 10 ; >
@@ -382,7 +382,7 @@
     au < finished ; crawling ; 2020 ; 2020 ; Water Practice and Technology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2021 ; 2021 ; Water Practice and Technology Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2022 ; 2022 ; Water Practice and Technology Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2023 ; 2023 ; Water Practice and Technology Volume 18 ; 18 ; >
+    au < finished ; manifest ; 2023 ; 2023 ; Water Practice and Technology Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; Water Practice and Technology Volume 19 ; 19 ; >
 
   }
@@ -398,16 +398,16 @@
 
     param[journal_id] = wp
 
-    au < frozen ; exists ; 2003 ; 2003 ; Water Policy Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2004 ; 2004 ; Water Policy Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2005 ; 2005 ; Water Policy Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2006 ; 2006 ; Water Policy Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; Water Policy Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Water Policy Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Water Policy Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2010 ; 2010 ; Water Policy Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2011 ; 2011 ; Water Policy Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2012 ; 2012 ; Water Policy Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2003 ; 2003 ; Water Policy Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2004 ; 2004 ; Water Policy Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; 2005 ; Water Policy Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; 2006 ; Water Policy Volume 8 ; 8 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 2007 ; Water Policy Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; 2008 ; Water Policy Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009 ; 2009 ; Water Policy Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2010 ; 2010 ; Water Policy Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2011 ; 2011 ; Water Policy Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; 2012 ; Water Policy Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Policy Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Policy Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Policy Volume 17 ; 17 ; >
@@ -418,7 +418,7 @@
     au < finished ; crawling ; 2020 ; 2020 ; Water Policy Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2021 ; 2021 ; Water Policy Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2022 ; 2022 ; Water Policy Volume 24 ; 24 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2023 ; 2023 ; Water Policy Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2023 ; 2023 ; Water Policy Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2024 ; 2024 ; Water Policy Volume 26 ; 26 ; >
 
   }
@@ -441,7 +441,7 @@
     au < finished ; crawling ; 2020 ; 2020 ; Water Quality Research Journal Volume 55 ; 55 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2021 ; 2021 ; Water Quality Research Journal Volume 56 ; 56 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2022 ; 2022 ; Water Quality Research Journal Volume 57 ; 57 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2023 ; 2023 ; Water Quality Research Journal Volume 58 ; 58 ; >
+    au < finished ; manifest ; 2023 ; 2023 ; Water Quality Research Journal Volume 58 ; 58 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2024 ; 2024 ; Water Quality Research Journal Volume 59 ; 59 ; >
 
   }
@@ -494,19 +494,19 @@
     au < notReady ; exists ; 1997 ; 1997 ; Water Quality Research Journal of Canada Volume 32 ; 32 ; > #LXQUEUE-1926, no permission statement
     au < notReady ; exists ; 1998 ; 1998 ; Water Quality Research Journal of Canada Volume 33 ; 33 ; > #LXQUEUE-1926, no permission statement
     au < notReady ; exists ; 1999 ; 1999 ; Water Quality Research Journal of Canada Volume 34 ; 34 ; > #LXQUEUE-1926, no permission statement
-    au < frozen ; exists ; 2000 ; 2000 ; Water Quality Research Journal of Canada Volume 35 ; 35 ; >
-    au < frozen ; exists ; 2001 ; 2001 ; Water Quality Research Journal of Canada Volume 36 ; 36 ; >
-    au < frozen ; exists ; 2002 ; 2002 ; Water Quality Research Journal of Canada Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2003 ; 2003 ; Water Quality Research Journal of Canada Volume 38 ; 38 ; >
-    au < frozen ; exists ; 2004 ; 2004 ; Water Quality Research Journal of Canada Volume 39 ; 39 ; >
-    au < frozen ; exists ; 2005 ; 2005 ; Water Quality Research Journal of Canada Volume 40 ; 40 ; >
-    au < frozen ; exists ; 2006 ; 2006 ; Water Quality Research Journal of Canada Volume 41 ; 41 ; >
-    au < frozen ; exists ; 2007 ; 2007 ; Water Quality Research Journal of Canada Volume 42 ; 42 ; >
-    au < frozen ; exists ; 2008 ; 2008 ; Water Quality Research Journal of Canada Volume 43 ; 43 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Water Quality Research Journal of Canada Volume 44 ; 44 ; >
-    au < frozen ; exists ; 2010 ; 2010 ; Water Quality Research Journal of Canada Volume 45 ; 45 ; >
-    au < frozen ; exists ; 2011 ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 ; >
-    au < frozen ; exists ; 2012 ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 ; >
+    au < finished ; manifest ; 2000 ; 2000 ; Water Quality Research Journal of Canada Volume 35 ; 35 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2001 ; 2001 ; Water Quality Research Journal of Canada Volume 36 ; 36 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; 2002 ; Water Quality Research Journal of Canada Volume 37 ; 37 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; 2003 ; Water Quality Research Journal of Canada Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; 2004 ; Water Quality Research Journal of Canada Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2005 ; 2005 ; Water Quality Research Journal of Canada Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2006 ; 2006 ; Water Quality Research Journal of Canada Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 2007 ; Water Quality Research Journal of Canada Volume 42 ; 42 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; 2008 ; Water Quality Research Journal of Canada Volume 43 ; 43 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; 2009 ; Water Quality Research Journal of Canada Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; 2010 ; Water Quality Research Journal of Canada Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2011 ; 2011 ; Water Quality Research Journal of Canada Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2012 ; 2012 ; Water Quality Research Journal of Canada Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Water Quality Research Journal of Canada Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Water Quality Research Journal of Canada Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Water Quality Research Journal of Canada Volume 50 ; 50 ; >
@@ -526,17 +526,17 @@
 
     param[journal_id] = wst
 
-    au < frozen ; exists ; 1982 ; 1982 ; Water Science and Technology Volume 14 ; 14 ; >
-    au < frozen ; exists ; 1983 ; 1983 ; Water Science and Technology Volume 15 ; 15 ; >
-    au < frozen ; exists ; 1984 ; 1984 ; Water Science and Technology Volume 16 ; 16 ; >
-    au < frozen ; exists ; 1985 ; 1985 ; Water Science and Technology Volume 17 ; 17 ; >
-    au < frozen ; exists ; 1986 ; 1986 ; Water Science and Technology Volume 18 ; 18 ; >
-    au < frozen ; exists ; 1987 ; 1987 ; Water Science and Technology Volume 19 ; 19 ; >
-    au < frozen ; exists ; 1988 ; 1988 ; Water Science and Technology Volume 20 ; 20 ; >
-    au < frozen ; exists ; 1989 ; 1989 ; Water Science and Technology Volume 21 ; 21 ; >
-    au < frozen ; exists ; 1990 ; 1990 ; Water Science and Technology Volume 22 ; 22 ; >
-    au < frozen ; exists ; 1991 ; 1991 ; Water Science and Technology Volume 23-24 ; 23-24 ; >
-    au < frozen ; exists ; 1992 ; 1992 ; Water Science and Technology Volume 25-26 ; 25-26 ; >
+    au < finished ; manifest ; 1982 ; 1982 ; Water Science and Technology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1983 ; 1983 ; Water Science and Technology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1984 ; 1984 ; Water Science and Technology Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1985 ; 1985 ; Water Science and Technology Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1986 ; 1986 ; Water Science and Technology Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1987 ; 1987 ; Water Science and Technology Volume 19 ; 19 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1988 ; 1988 ; Water Science and Technology Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1989 ; 1989 ; Water Science and Technology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1990 ; 1990 ; Water Science and Technology Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1991 ; 1991 ; Water Science and Technology Volume 23-24 ; 23-24 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1992 ; 1992 ; Water Science and Technology Volume 25-26 ; 25-26 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1993 ; 1993 ; Water Science and Technology Volume 27-28 ; 27-28 ; >
     au < frozen ; exists ; 1994 ; 1994 ; Water Science and Technology Volume 29-30 ; 29-30 ; >
     au < frozen ; exists ; 1995 ; 1995 ; Water Science and Technology Volume 31-32 ; 31-32 ; >
