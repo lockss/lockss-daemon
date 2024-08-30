@@ -65,7 +65,7 @@
       au < manifest ; exists ; 2017 ; Revista Colombiana de Ciencias Pecuarias Volume 2017 ; 2017 ; 40 ; >
       au < manifest ; exists ; 2018 ; Revista Colombiana de Ciencias Pecuarias Volume 2018 ; 2018 ; 41 ; >
       au < manifest ; exists ; 2019 ; Revista Colombiana de Ciencias Pecuarias Volume 2019 ; 2019 ; 42 ; >
-      au < ready ; exists ; 2020 ; Revista Colombiana de Ciencias Pecuarias Volume 2020 ; 2020 ; 43 ; >
+      au < crawling ; exists ; 2020 ; Revista Colombiana de Ciencias Pecuarias Volume 2020 ; 2020 ; 43 ; >
       au < frozen ; exists ; 2021 ; Revista Colombiana de Ciencias Pecuarias Volume 2021 ; 2021 ; 44 ; >
       au < crawling ; exists ; 2022 ; Revista Colombiana de Ciencias Pecuarias Volume 2022 ; 2022 ; 45 ; >
       au < frozen ; exists ; 2023 ; Revista Colombiana de Ciencias Pecuarias Volume 2023 ; 2023 ; 46 ; >
@@ -239,9 +239,9 @@
       au < manifest ; exists ; 2017 ; Investigación y Educación En Enfermería Volume 2017 ; 2017 ; 35 ; >
       au < manifest ; exists ; 2018 ; Investigación y Educación En Enfermería Volume 2018 ; 2018 ; 36 ; >
       au < manifest ; exists ; 2019 ; Investigación y Educación En Enfermería Volume 2019 ; 2019 ; 37 ; >
-      au < ready ; exists ; 2020 ; Investigación y Educación En Enfermería Volume 2020 ; 2020 ; 38 ; >
+      au < crawling ; exists ; 2020 ; Investigación y Educación En Enfermería Volume 2020 ; 2020 ; 38 ; >
       au < ready ; exists ; 2021 ; Investigación y Educación En Enfermería Volume 2021 ; 2021 ; 39 ; >
-      au < ready ; exists ; 2022 ; Investigación y Educación En Enfermería Volume 2022 ; 2022 ; 40 ; >
+      au < crawling ; exists ; 2022 ; Investigación y Educación En Enfermería Volume 2022 ; 2022 ; 40 ; >
       au < testing ; exists ; 2023 ; Investigación y Educación En Enfermería Volume 2023 ; 2023 ; 41 ; >
       au < crawling ; exists ; 2024 ; Investigación y Educación En Enfermería Volume 2024 ; 2024 ; 42 ; >
 
@@ -273,7 +273,7 @@
       au < manifest ; exists ; 2018 ; Lingüística y Literatura Volume 2018 ; 2018 ; 61 ; >
       au < manifest ; exists ; 2019 ; Lingüística y Literatura Volume 2019 ; 2019 ; 62 ; >
       au < crawling ; exists ; 2020 ; Lingüística y Literatura Volume 2020 ; 2020 ; 63 ; >
-      au < ready ; exists ; 2021 ; Lingüística y Literatura Volume 2021 ; 2021 ; 64 ; >
+      au < crawling ; exists ; 2021 ; Lingüística y Literatura Volume 2021 ; 2021 ; 64 ; >
       au < crawling ; exists ; 2022 ; Lingüística y Literatura Volume 2022 ; 2022 ; 65 ; >
       au < frozen ; exists ; 2023 ; Lingüística y Literatura Volume 2023 ; 2023 ; 66 ; >
       au < crawling ; exists ; 2024 ; Lingüística y Literatura Volume 2024 ; 2024 ; 67 ; >
@@ -378,8 +378,8 @@
       au < manifest ; exists ; 2017 ; Iatreia Volume 2017 ; 2017 ; 30 ; >
       au < manifest ; exists ; 2018 ; Iatreia Volume 2018 ; 2018 ; 31 ; >
       au < manifest ; exists ; 2019 ; Iatreia Volume 2019 ; 2019 ; 32 ; >
-      au < ready ; exists ; 2020 ; Iatreia Volume 2020 ; 2020 ; 33 ; >
-      au < ready ; exists ; 2021 ; Iatreia Volume 2021 ; 2021 ; 34 ; >
+      au < crawling ; exists ; 2020 ; Iatreia Volume 2020 ; 2020 ; 33 ; >
+      au < crawling ; exists ; 2021 ; Iatreia Volume 2021 ; 2021 ; 34 ; >
       au < crawling ; exists ; 2022 ; Iatreia Volume 2022 ; 2022 ; 35 ; >
       au < testing ; exists ; 2023 ; Iatreia Volume 2023 ; 2023 ; 36 ; >
       au < crawling ; exists ; 2024 ; Iatreia Volume 2024 ; 2024 ; 37 ; >
@@ -524,7 +524,7 @@
       au < manifest ; exists ; 2019 ; Estudios Políticos Volume 2019 ; 2019 ; 28 ; >
       au < frozen ; exists ; 2020 ; Estudios Políticos Volume 2020 ; 2020 ; 29 ; >
       au < ready ; exists ; 2021 ; Estudios Políticos Volume 2021 ; 2021 ; 30 ; >
-      au < ready ; exists ; 2022 ; Estudios Políticos Volume 2022 ; 2022 ; 31 ; >
+      au < crawling ; exists ; 2022 ; Estudios Políticos Volume 2022 ; 2022 ; 31 ; >
       au < testing ; exists ; 2023 ; Estudios Políticos Volume 2023 ; 2023 ; 32 ; >
       au < crawling ; exists ; 2024 ; Estudios Políticos Volume 2024 ; 2024 ; 33 ; >
 
@@ -565,9 +565,9 @@
       au < manifest ; exists ; 2017 ; Íkala, Revista de Lenguaje y Cultura Volume 2017 ; 2017 ; 22 ; >
       au < manifest ; exists ; 2018 ; Íkala, Revista de Lenguaje y Cultura Volume 2018 ; 2018 ; 23 ; >
       au < manifest ; exists ; 2019 ; Íkala, Revista de Lenguaje y Cultura Volume 2019 ; 2019 ; 24 ; >
-      au < ready ; exists ; 2020 ; Íkala, Revista de Lenguaje y Cultura Volume 2020 ; 2020 ; 25 ; >
+      au < crawling ; exists ; 2020 ; Íkala, Revista de Lenguaje y Cultura Volume 2020 ; 2020 ; 25 ; >
       au < ready ; exists ; 2021 ; Íkala, Revista de Lenguaje y Cultura Volume 2021 ; 2021 ; 26 ; >
-      au < ready ; exists ; 2022 ; Íkala, Revista de Lenguaje y Cultura Volume 2022 ; 2022 ; 27 ; >
+      au < crawling ; exists ; 2022 ; Íkala, Revista de Lenguaje y Cultura Volume 2022 ; 2022 ; 27 ; >
       au < frozen ; exists ; 2023 ; Íkala, Revista de Lenguaje y Cultura Volume 2023 ; 2023 ; 28 ; >
       au < crawling ; exists ; 2024 ; Íkala, Revista de Lenguaje y Cultura Volume 2024 ; 2024 ; 29 ; >
 
