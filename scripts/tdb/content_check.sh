@@ -61,7 +61,7 @@ echo " "
 # Find duplicate auids in the gln title database
 echo "---------------------"
 echo "---------------------"
-scripts/tdb/tdbout -AXEa tdb/prod/ | sort > $tpath/allAUs
+scripts/tdb/tdbout -VXEa tdb/prod/ | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
@@ -71,7 +71,7 @@ diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
 # Find duplicate name/plugin pairs in the gln title database
 echo "---------------------"
-scripts/tdb/tdbout -AXE -c plugin,name tdb/prod/ | sort > $tpath/allAUs
+scripts/tdb/tdbout -VXE -c plugin,name tdb/prod/ | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
@@ -92,7 +92,7 @@ echo " "
 # Find duplicate auids in the clockss title database
 echo "---------------------"
 echo "---------------------"
-scripts/tdb/tdbout -AXEa tdb/clockssingest/ | sort > $tpath/allAUs
+scripts/tdb/tdbout -VXEBa tdb/clockssingest/ | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
@@ -102,7 +102,7 @@ diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
 # Find duplicate name/plugin pairs in the clockss title database
 echo "---------------------"
-scripts/tdb/tdbout -AXE -c plugin,name tdb/clockssingest/ | sort > $tpath/allAUs
+scripts/tdb/tdbout -VXEB -c plugin,name tdb/clockssingest/ | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
@@ -123,7 +123,7 @@ echo " "
 # Find duplicate auids in the usdocs title database
 echo "---------------------"
 echo "---------------------"
-scripts/tdb/tdbout -AXEa tdb/usdocspln/ | sort > $tpath/allAUs
+scripts/tdb/tdbout -VXEa tdb/usdocspln/ | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
@@ -131,9 +131,9 @@ echo "USDOCS. All AUids = $allAUs"
 echo "USDOCS. AUids without duplicates = $uniqAUs"
 diff $tpath/allAUs $tpath/dedupedAUs | grep "<" | sed s/..//
 #
-# Find duplicate name/plugin pairs in the gln title database
+# Find duplicate name/plugin pairs in the usdocs title database
 echo "---------------------"
-scripts/tdb/tdbout -AXE -c plugin,name tdb/usdocspln/ | sort > $tpath/allAUs
+scripts/tdb/tdbout -VXE -c plugin,name tdb/usdocspln/ | sort > $tpath/allAUs
 uniq $tpath/allAUs > $tpath/dedupedAUs
 allAUs=`cat $tpath/allAUs | wc -l`
 uniqAUs=`cat $tpath/dedupedAUs | wc -l`
