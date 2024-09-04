@@ -74,10 +74,10 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = forum
 
-      au < manifest ; exists ; 2005 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2005 ; 1 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2006 ; 2 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2007 ; 3 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2008 ; 4 ; 2008 ; >
+      au < ready ; exists ; 2005 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2005 ; 1 ; 2005 ; >
+      au < ready ; exists ; 2006 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2006 ; 2 ; 2006 ; >
+      au < ready ; exists ; 2007 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2007 ; 3 ; 2007 ; >
+      au < ready ; exists ; 2008 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2008 ; 4 ; 2008 ; >
       au < manifest ; exists ; 2009 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2009 ; 5 ; 2009 ; >
       au < manifest ; exists ; 2010 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2010 ; 6 ; 2010 ; >
       au < manifest ; exists ; 2011 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2011 ; 7 ; 2011 ; >
@@ -281,7 +281,7 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = ScottishStudies
 
-      au < manifest ; exists ; 2006 ; Scottish Studies Volume 2006 ; 34 ; 2006 ; >
+      au < ready ; exists ; 2006 ; Scottish Studies Volume 2006 ; 34 ; 2006 ; >
       au < manifest ; exists ; 2010 ; Scottish Studies Volume 2010 ; 35 ; 2010 ; >
       au < manifest ; exists ; 2013 ; Scottish Studies Volume 2013 ; 36 ; 2013 ; >
       au < manifest ; exists ; 2014 ; Scottish Studies Volume 2014 ; 37 ; 2014 ; >
