@@ -811,6 +811,38 @@ while (my $line = <>) {
   
   sleep(5);
 
+  } elsif ($plugin eq "ClockssOAPENBooksPlugin") {
+    $url = sprintf("%s%s",
+      $param{base_url}, $param{resource_id});
+    #Permission page is https://library.oapen.org/robots.txt
+    $book_handle_short = uri_unescape($param{resource_id});
+    #printf("book_handle_short: %s\n", $book_handle_short); #debug
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    #Test for link to chapter
+    #/bitstream/handle/20.500.12657/41485/9783835391154.pdf?  Seeking
+    #https://library.oapen.org/handle/20.500.12657/41485  handle
+    } elsif ($man_contents =~ m/\/bitstream\/$book_handle_short\/\d*.pdf\?/ || $man_contents =~ m/\/bitstream\/$book_handle_short\/external_content.pdf.jpg\?/ || $man_contents =~ m/\/bitstream\/$book_handle_short\/PUB[^>]*.pdf\?/) {
+        #Collect title
+        if ($man_contents =~ m/<title>\s*(\S.*\S)\s*<\/title>/si) {
+            $vol_title = $1;
+        }
+        $result = "Manifest";
+    } else {
+        $result = "--NO_CONT--";
+    }
+  
+  sleep(5);
+
   } elsif ($plugin eq "ClockssIUMJ2018Plugin") {
       ####start url
       #https://www.iumj.indiana.edu/IUMJ/toc.php?writeyear=2017
