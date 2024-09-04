@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>13</string>
+        <string>14</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -147,5 +147,11 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_login_page_checker</string>
         <string>org.lockss.plugin.oecd.OecdLoginPageChecker</string>
+    </entry>
+    <entry>
+        <string>plugin_aux_packages<string>
+        <list>
+            <string>org.lockss.plugin.clockss</string>
+        </list>
     </entry>
 </map>
