@@ -81,8 +81,8 @@
     au < doNotProcess ; exists ; 2020 ; Journal of the American Podiatric Medical Association Volume 110 ; 110 ; >
     au < doNotProcess ; exists ; 2021 ; Journal of the American Podiatric Medical Association Volume 111 ; 111 ; >
     au < finished ; manifest ; 2022 ; Journal of the American Podiatric Medical Association Volume 112 ; 112 ; reingest5.clockss.org:8082 >
-    au < notReady ; exists ; 2023 ; Journal of the American Podiatric Medical Association Volume 113 ; 113 ; > #
-    au < testing ; exists ; 2024 ; Journal of the American Podiatric Medical Association Volume 114 ; 114 ; >
+    au < ready ; exists ; 2023 ; Journal of the American Podiatric Medical Association Volume 113 ; 113 ; >
+    au < ready ; exists ; 2024 ; Journal of the American Podiatric Medical Association Volume 114 ; 114 ; >
 
   }
 }
