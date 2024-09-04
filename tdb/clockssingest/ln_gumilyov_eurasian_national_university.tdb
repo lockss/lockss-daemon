@@ -20,7 +20,7 @@
       param[base_url] = https://www.ephys.kz/
       param[journal_abbr] = journal
 
-      au < ready ; exists ; 2017 ; Eurasian Journal of Physics and Functional Materials Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2017 ; Eurasian Journal of Physics and Functional Materials Volume 1 ; 1 ; >
       au < frozen ; exists ; 2018 ; Eurasian Journal of Physics and Functional Materials Volume 2 ; 2 ; >
       au < frozen ; exists ; 2019 ; Eurasian Journal of Physics and Functional Materials Volume 3 ; 3 ; >
       au < frozen ; exists ; 2020 ; Eurasian Journal of Physics and Functional Materials Volume 4 ; 4 ; >
