@@ -21,11 +21,10 @@
     param[journal_abbr] = journal
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < deepCrawl ; exists ; 2020 ; Journal of the Saudi Heart Association Volume 1 ; 1 ; >
-    au < deepCrawl ; exists ; 2021 ; Journal of the Saudi Heart Association Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2022 ; Journal of the Saudi Heart Association Volume 3 ; 3 ; >
-    au < expected ; exists ; 2023 ; Journal of the Saudi Heart Association Volume 4 ; 4 ; >
-    au < expected ; exists ; 2024 ; Journal of the Saudi Heart Association Volume 5 ; 5 ; >
+    au < deepCrawl ; exists ; 2020 ; Journal of New Finance Volume 1 ; 1 ; >
+    au < deepCrawl ; exists ; 2021 ; Journal of New Finance Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2022 ; Journal of New Finance Volume 3 ; 3 ; >
+    au < expected ; exists ; 2024 ; Journal of New Finance Volume 4 ; 4 ; >
 
   }
 
