@@ -116,7 +116,7 @@
       au < doesNotExist ; doesNotExist ; 2021 ; 2021 ; University of Michigan Press Deep Blue Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; University of Michigan Press Deep Blue Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 2023 ; University of Michigan Press Deep Blue Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 2024 ; University of Michigan Press Deep Blue Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 2024 ; University of Michigan Press Deep Blue Volume 2024 ; 2024 ; >
 
       #For this particular collection API which generate record based on DateModified, not publication date.
       #It relies on a filter in the code to find the right publication date

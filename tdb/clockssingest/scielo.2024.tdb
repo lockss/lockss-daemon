@@ -65,7 +65,7 @@
     param[base_url] = https://www.scielo.br/
     param[journal_id] = rgenf
 
-    au < ready ; exists ; 2009 ; 30 ; Revista Gaúcha de Enfermagem Volume 30 ; 2009 ; >
+    au < crawling ; exists ; 2009 ; 30 ; Revista Gaúcha de Enfermagem Volume 30 ; 2009 ; >
     au < frozen ; exists ; 2010 ; 31 ; Revista Gaúcha de Enfermagem Volume 31 ; 2010 ; >
     au < ready ; exists ; 2011 ; 32 ; Revista Gaúcha de Enfermagem Volume 32 ; 2011 ; >
     au < ready ; exists ; 2012 ; 33 ; Revista Gaúcha de Enfermagem Volume 33 ; 2012 ; >
