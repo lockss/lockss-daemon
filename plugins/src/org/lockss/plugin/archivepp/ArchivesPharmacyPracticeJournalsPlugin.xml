@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -103,15 +103,19 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_substance_url_pattern</string>
         <list>
             <!--https://archivepp.com/lockss-manifest?volume=1 -->
-            <string>"%sstorage/models/article/", base_url</string>
+            <string>"%sstorage/(files|models)/article/", base_url</string>
         </list>
     </entry>
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1, "%slockss-manifest?volume=%s", base_url, volume_name</string>
-            <string>1, "%sissue/archiveapp-vol%s", base_url, volume_name</string>
-            <string>1, "article/", base_url</string>
+            <string>4,"^%s", base_url</string>
+            <string>2,"^%sarticle/search$", base_url</string>
+            <string>1, "^%slockss-manifest?volume=%s", base_url, volume_name</string>
+            <string>1, "^%sissue/archiveapp-vol%s", base_url, volume_name</string>
+            <!--volumes 12 and later have slightly different issue url pattern-->
+            <string>1, "^%sissue/vol-%s-issue", base_url, volume_name</string>
+            <string>1, "^%s(storage/(files|models)/)?article/.*(\.pdf)?", base_url</string>
         </list>
     </entry>
     <entry>
