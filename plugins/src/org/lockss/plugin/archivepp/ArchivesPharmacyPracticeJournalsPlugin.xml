@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>6</string>
+        <string>7</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -112,7 +112,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>4,"^%s", base_url</string>
             <string>2,"^%sarticle/search$", base_url</string>
             <string>1, "^%slockss-manifest?volume=%s", base_url, volume_name</string>
-            <string>1, "^%sissue/archiveapp-vol%s", base_url, volume_name</string>
+            <string>1, "^%sissue/archiveapp-vol%s-iss", base_url, volume_name</string>
             <!--volumes 12 and later have slightly different issue url pattern-->
             <string>1, "^%sissue/vol-%s-issue", base_url, volume_name</string>
             <string>1, "^%s(storage/(files|models)/)?article/.*(\.pdf)?", base_url</string>
