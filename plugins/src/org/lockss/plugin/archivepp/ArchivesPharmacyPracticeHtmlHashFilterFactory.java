@@ -23,6 +23,8 @@ public class ArchivesPharmacyPracticeHtmlHashFilterFactory implements FilterFact
             HtmlNodeFilters.comment(),
 
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "article_citation"),
+            //remove number of views/downloads
+            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "article_metrics"),
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "__cf_email__"),
             HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cdn-cgi/"),
             
