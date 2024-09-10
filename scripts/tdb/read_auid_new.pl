@@ -4434,23 +4434,24 @@ while (my $line = <>) {
   # End ClockssWroclawMedicalUniversityJournalsPlugin
 
   # Start Arkat Arkivoc.
-  #https://www.arkat-usa.org/arkivoc-journal #list of volumes
-  #https://www.arkat-usa.org/arkivoc-journal/browse-arkivoc/2022 #toc
+  #https://www.arkat-usa.org/arkivoc-journal #list of volumes *NOT FOUND
+  #https://www.arkat-usa.org/browse-arkivoc/browse-arkivoc/2022 #toc
   #https://www.arkat-usa.org/arkatusa/clockss/?year=2022 #metadata
+  #https://www.arkat-usa.org/browse-arkivoc/ #permission statement
   } elsif ($plugin eq "ClockssArkivoc2022Plugin" || $plugin eq "Arkivoc2022Plugin") {
-      $url_p = sprintf("%sarkivoc-journal/", $param{base_url});
+      $url_p = sprintf("%sbrowse-arkivoc/", $param{base_url});
       #printf("url_p is %s\n",$url_p);
       $man_url_p = uri_unescape($url_p);
       my $p_req = HTTP::Request->new(GET, $man_url_p);
       my $p_resp = $ua->request($p_req);
-      #printf("resp is %s\n",$p_resp->status_line);
+      #printf("resp is %s\n",$p_resp->status_line); #debug
       my $perm_contents = $p_resp->is_success ? $p_resp->content : "";
       ###
-      $url_s = sprintf("%sarkivoc-journal/browse-arkivoc/%s", $param{base_url}, $param{year});
+      $url_s = sprintf("%sbrowse-arkivoc/browse-arkivoc/%s", $param{base_url}, $param{year});
       $man_url_s = uri_unescape($url_s);
       my $s_req = HTTP::Request->new(GET, $man_url_s);
       my $s_resp = $ua->request($s_req);
-      #printf("resp is %s\n",$s_resp->status_line);
+      #printf("resp is %s\n",$s_resp->status_line); #debug
       my $start_contents = $s_resp->is_success ? $s_resp->content : "";
       ###
       $man_url = $man_url_s;
@@ -4461,10 +4462,12 @@ while (my $line = <>) {
         $result = "Redirected";
       } elsif (! defined($perm_contents)) {
         $result = "--NOT_DEF--";
-      } elsif ($perm_contents !~ m/$clockss_tag/ || $perm_contents !~ m/$lockss_tag/) {
+      #} elsif ($perm_contents !~ m/$clockss_tag/ || $perm_contents !~ m/$lockss_tag/) {
+      } elsif (($perm_contents !~ m/$clockss_tag/ && $plugin eq "ClockssArkivoc2022Plugin") || ($perm_contents !~ m/$lockss_tag/ && $plugin eq "Arkivoc2022Plugin")) {
+        #printf("%s", $start_contents); #debug
         $result = "--NO_TAG--";
       #} elsif ($start_contents !~ m/\/arkivoc-journal\/browse-arkivoc\/$param{year}\/%d\d/) {
-      } elsif ($start_contents !~ m/\/arkivoc-journal\/browse-arkivoc\/$param{year}\/\d*\//s) {
+      } elsif ($start_contents !~ m/\/browse-arkivoc\/browse-arkivoc\/$param{year}\/\d*\//s) {
         $result = "--NO_ART--";
       } else {
         $result = "Manifest";
