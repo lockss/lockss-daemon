@@ -45,16 +45,16 @@
       au < manifest ; exists ; 1997 ; Revista Colombiana de Ciencias Pecuarias Volume 1997 ; 1997 ; 20 ; >
       au < manifest ; exists ; 1998 ; Revista Colombiana de Ciencias Pecuarias Volume 1998 ; 1998 ; 21 ; >
       au < manifest ; exists ; 1999 ; Revista Colombiana de Ciencias Pecuarias Volume 1999 ; 1999 ; 22 ; >
-      au < ready ; exists ; 2000 ; Revista Colombiana de Ciencias Pecuarias Volume 2000 ; 2000 ; 23 ; >
+      au < crawling ; exists ; 2000 ; Revista Colombiana de Ciencias Pecuarias Volume 2000 ; 2000 ; 23 ; >
       au < ready ; exists ; 2001 ; Revista Colombiana de Ciencias Pecuarias Volume 2001 ; 2001 ; 24 ; >
       au < frozen ; exists ; 2002 ; Revista Colombiana de Ciencias Pecuarias Volume 2002 ; 2002 ; 25 ; >
-      au < ready ; exists ; 2003 ; Revista Colombiana de Ciencias Pecuarias Volume 2003 ; 2003 ; 26 ; >
+      au < crawling ; exists ; 2003 ; Revista Colombiana de Ciencias Pecuarias Volume 2003 ; 2003 ; 26 ; >
       au < frozen ; exists ; 2004 ; Revista Colombiana de Ciencias Pecuarias Volume 2004 ; 2004 ; 27 ; >
-      au < ready ; exists ; 2005 ; Revista Colombiana de Ciencias Pecuarias Volume 2005 ; 2005 ; 28 ; >
+      au < crawling ; exists ; 2005 ; Revista Colombiana de Ciencias Pecuarias Volume 2005 ; 2005 ; 28 ; >
       au < ready ; exists ; 2006 ; Revista Colombiana de Ciencias Pecuarias Volume 2006 ; 2006 ; 29 ; >
       au < frozen ; exists ; 2007 ; Revista Colombiana de Ciencias Pecuarias Volume 2007 ; 2007 ; 30 ; >
-      au < ready ; exists ; 2008 ; Revista Colombiana de Ciencias Pecuarias Volume 2008 ; 2008 ; 31 ; >
-      au < ready ; exists ; 2009 ; Revista Colombiana de Ciencias Pecuarias Volume 2009 ; 2009 ; 32 ; >
+      au < crawling ; exists ; 2008 ; Revista Colombiana de Ciencias Pecuarias Volume 2008 ; 2008 ; 31 ; >
+      au < crawling ; exists ; 2009 ; Revista Colombiana de Ciencias Pecuarias Volume 2009 ; 2009 ; 32 ; >
       au < manifest ; exists ; 2010 ; Revista Colombiana de Ciencias Pecuarias Volume 2010 ; 2010 ; 33 ; >
       au < manifest ; exists ; 2011 ; Revista Colombiana de Ciencias Pecuarias Volume 2011 ; 2011 ; 34 ; >
       au < manifest ; exists ; 2012 ; Revista Colombiana de Ciencias Pecuarias Volume 2012 ; 2012 ; 35 ; >
@@ -106,8 +106,8 @@
       au < manifest ; exists ; 1997 ; Revista Interamericana de Bibliotecología Volume 1997 ; 1997 ; 20 ; >
       au < manifest ; exists ; 1998 ; Revista Interamericana de Bibliotecología Volume 1998 ; 1998 ; 21 ; >
       au < manifest ; exists ; 1999 ; Revista Interamericana de Bibliotecología Volume 1999 ; 1999 ; 22 ; >
-      au < ready ; exists ; 2000 ; Revista Interamericana de Bibliotecología Volume 2000 ; 2000 ; 23 ; >
-      au < ready ; exists ; 2001 ; Revista Interamericana de Bibliotecología Volume 2001 ; 2001 ; 24 ; >
+      au < crawling ; exists ; 2000 ; Revista Interamericana de Bibliotecología Volume 2000 ; 2000 ; 23 ; >
+      au < crawling ; exists ; 2001 ; Revista Interamericana de Bibliotecología Volume 2001 ; 2001 ; 24 ; >
       au < frozen ; exists ; 2002 ; Revista Interamericana de Bibliotecología Volume 2002 ; 2002 ; 25 ; >
       au < frozen ; exists ; 2003 ; Revista Interamericana de Bibliotecología Volume 2003 ; 2003 ; 26 ; >
       au < frozen ; exists ; 2004 ; Revista Interamericana de Bibliotecología Volume 2004 ; 2004 ; 27 ; >
@@ -165,14 +165,14 @@
       au < manifest ; exists ; 1999 ; Contaduría Universidad de Antioquia Volume 1999 ; 1999 ; 18 ; >
       au < ready ; exists ; 2000 ; Contaduría Universidad de Antioquia Volume 2000 ; 2000 ; 19 ; >
       au < frozen ; exists ; 2001 ; Contaduría Universidad de Antioquia Volume 2001 ; 2001 ; 20 ; >
-      au < ready ; exists ; 2002 ; Contaduría Universidad de Antioquia Volume 2002 ; 2002 ; 21 ; >
+      au < crawling ; exists ; 2002 ; Contaduría Universidad de Antioquia Volume 2002 ; 2002 ; 21 ; >
       au < frozen ; exists ; 2003 ; Contaduría Universidad de Antioquia Volume 2003 ; 2003 ; 22 ; >
       au < ready ; exists ; 2004 ; Contaduría Universidad de Antioquia Volume 2004 ; 2004 ; 23 ; >
       au < ready ; exists ; 2005 ; Contaduría Universidad de Antioquia Volume 2005 ; 2005 ; 24 ; >
       au < frozen ; exists ; 2006 ; Contaduría Universidad de Antioquia Volume 2006 ; 2006 ; 25 ; >
       au < ready ; exists ; 2007 ; Contaduría Universidad de Antioquia Volume 2007 ; 2007 ; 26 ; >
-      au < ready ; exists ; 2008 ; Contaduría Universidad de Antioquia Volume 2008 ; 2008 ; 27 ; >
-      au < ready ; exists ; 2009 ; Contaduría Universidad de Antioquia Volume 2009 ; 2009 ; 28 ; >
+      au < crawling ; exists ; 2008 ; Contaduría Universidad de Antioquia Volume 2008 ; 2008 ; 27 ; >
+      au < crawling ; exists ; 2009 ; Contaduría Universidad de Antioquia Volume 2009 ; 2009 ; 28 ; >
       au < manifest ; exists ; 2010 ; Contaduría Universidad de Antioquia Volume 2010 ; 2010 ; 29 ; >
       au < manifest ; exists ; 2011 ; Contaduría Universidad de Antioquia Volume 2011 ; 2011 ; 30 ; >
       au < manifest ; exists ; 2012 ; Contaduría Universidad de Antioquia Volume 2012 ; 2012 ; 31 ; >
@@ -219,15 +219,15 @@
       au < manifest ; exists ; 1997 ; Investigación y Educación En Enfermería Volume 1997 ; 1997 ; 15 ; >
       au < manifest ; exists ; 1998 ; Investigación y Educación En Enfermería Volume 1998 ; 1998 ; 16 ; >
       au < manifest ; exists ; 1999 ; Investigación y Educación En Enfermería Volume 1999 ; 1999 ; 17 ; >
-      au < ready ; exists ; 2000 ; Investigación y Educación En Enfermería Volume 2000 ; 2000 ; 18 ; >
+      au < crawling ; exists ; 2000 ; Investigación y Educación En Enfermería Volume 2000 ; 2000 ; 18 ; >
       au < frozen ; exists ; 2001 ; Investigación y Educación En Enfermería Volume 2001 ; 2001 ; 19 ; >
       au < frozen ; exists ; 2002 ; Investigación y Educación En Enfermería Volume 2002 ; 2002 ; 20 ; >
       au < frozen ; exists ; 2003 ; Investigación y Educación En Enfermería Volume 2003 ; 2003 ; 21 ; >
-      au < ready ; exists ; 2004 ; Investigación y Educación En Enfermería Volume 2004 ; 2004 ; 22 ; >
+      au < crawling ; exists ; 2004 ; Investigación y Educación En Enfermería Volume 2004 ; 2004 ; 22 ; >
       au < ready ; exists ; 2005 ; Investigación y Educación En Enfermería Volume 2005 ; 2005 ; 23 ; >
       au < frozen ; exists ; 2006 ; Investigación y Educación En Enfermería Volume 2006 ; 2006 ; 24 ; >
-      au < ready ; exists ; 2007 ; Investigación y Educación En Enfermería Volume 2007 ; 2007 ; 25 ; >
-      au < ready ; exists ; 2008 ; Investigación y Educación En Enfermería Volume 2008 ; 2008 ; 26 ; >
+      au < crawling ; exists ; 2007 ; Investigación y Educación En Enfermería Volume 2007 ; 2007 ; 25 ; >
+      au < crawling ; exists ; 2008 ; Investigación y Educación En Enfermería Volume 2008 ; 2008 ; 26 ; >
       au < frozen ; exists ; 2009 ; Investigación y Educación En Enfermería Volume 2009 ; 2009 ; 27 ; >
       au < manifest ; exists ; 2010 ; Investigación y Educación En Enfermería Volume 2010 ; 2010 ; 28 ; >
       au < manifest ; exists ; 2011 ; Investigación y Educación En Enfermería Volume 2011 ; 2011 ; 29 ; >
@@ -314,9 +314,9 @@
       au < frozen ; exists ; 2004 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2004 ; 2004 ; 21 ; >
       au < ready ; exists ; 2005 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2005 ; 2005 ; 22 ; >
       au < frozen ; exists ; 2006 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2006 ; 2006 ; 23 ; >
-      au < ready ; exists ; 2007 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2007 ; 2007 ; 24 ; >
+      au < crawling ; exists ; 2007 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2007 ; 2007 ; 24 ; >
       au < ready ; exists ; 2008 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2008 ; 2008 ; 25 ; >
-      au < ready ; exists ; 2009 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2009 ; 2009 ; 26 ; >
+      au < crawling ; exists ; 2009 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2009 ; 2009 ; 26 ; >
       au < manifest ; exists ; 2010 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2010 ; 2010 ; 27 ; >
       au < manifest ; exists ; 2011 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2011 ; 2011 ; 28 ; >
       au < manifest ; exists ; 2012 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2012 ; 2012 ; 29 ; >
@@ -413,8 +413,8 @@
       au < ready ; exists ; 2003 ; Estudios de Filosofía Volume 2003 ; 2003 ; 14 ; >
       au < frozen ; exists ; 2004 ; Estudios de Filosofía Volume 2004 ; 2004 ; 15 ; >
       au < ready ; exists ; 2005 ; Estudios de Filosofía Volume 2005 ; 2005 ; 16 ; >
-      au < ready ; exists ; 2006 ; Estudios de Filosofía Volume 2006 ; 2006 ; 17 ; >
-      au < ready ; exists ; 2007 ; Estudios de Filosofía Volume 2007 ; 2007 ; 18 ; >
+      au < crawling ; exists ; 2006 ; Estudios de Filosofía Volume 2006 ; 2006 ; 17 ; >
+      au < crawling ; exists ; 2007 ; Estudios de Filosofía Volume 2007 ; 2007 ; 18 ; >
       au < frozen ; exists ; 2008 ; Estudios de Filosofía Volume 2008 ; 2008 ; 19 ; >
       au < ready ; exists ; 2009 ; Estudios de Filosofía Volume 2009 ; 2009 ; 20 ; >
       au < manifest ; exists ; 2010 ; Estudios de Filosofía Volume 2010 ; 2010 ; 21 ; >
@@ -457,7 +457,7 @@
       au < manifest ; exists ; 1999 ; Vitae Volume 1999 ; 1999 ; 9 ; >
       au < exists ; exists ; 2000 ; Vitae Volume 2000 ; 2000 ; 10 ; >
       au < frozen ; exists ; 2001 ; Vitae Volume 2001 ; 2001 ; 11 ; >
-      au < ready ; exists ; 2002 ; Vitae Volume 2002 ; 2002 ; 12 ; >
+      au < crawling ; exists ; 2002 ; Vitae Volume 2002 ; 2002 ; 12 ; >
       au < frozen ; exists ; 2003 ; Vitae Volume 2003 ; 2003 ; 13 ; >
       au < frozen ; exists ; 2004 ; Vitae Volume 2004 ; 2004 ; 14 ; >
       au < ready ; exists ; 2005 ; Vitae Volume 2005 ; 2005 ; 15 ; >
@@ -502,16 +502,16 @@
       au < manifest ; exists ; 1997 ; Estudios Políticos Volume 1997 ; 1997 ; 6 ; >
       au < manifest ; exists ; 1998 ; Estudios Políticos Volume 1998 ; 1998 ; 7 ; >
       au < manifest ; exists ; 1999 ; Estudios Políticos Volume 1999 ; 1999 ; 8 ; >
-      au < ready ; exists ; 2000 ; Estudios Políticos Volume 2000 ; 2000 ; 9 ; >
-      au < ready ; exists ; 2001 ; Estudios Políticos Volume 2001 ; 2001 ; 10 ; >
+      au < crawling ; exists ; 2000 ; Estudios Políticos Volume 2000 ; 2000 ; 9 ; >
+      au < crawling ; exists ; 2001 ; Estudios Políticos Volume 2001 ; 2001 ; 10 ; >
       au < frozen ; exists ; 2002 ; Estudios Políticos Volume 2002 ; 2002 ; 11 ; >
       au < frozen ; exists ; 2003 ; Estudios Políticos Volume 2003 ; 2003 ; 12 ; >
       au < frozen ; exists ; 2004 ; Estudios Políticos Volume 2004 ; 2004 ; 13 ; >
-      au < ready ; exists ; 2005 ; Estudios Políticos Volume 2005 ; 2005 ; 14 ; >
-      au < ready ; exists ; 2006 ; Estudios Políticos Volume 2006 ; 2006 ; 15 ; >
+      au < crawling ; exists ; 2005 ; Estudios Políticos Volume 2005 ; 2005 ; 14 ; >
+      au < crawling ; exists ; 2006 ; Estudios Políticos Volume 2006 ; 2006 ; 15 ; >
       au < ready ; exists ; 2007 ; Estudios Políticos Volume 2007 ; 2007 ; 16 ; >
       au < frozen ; exists ; 2008 ; Estudios Políticos Volume 2008 ; 2008 ; 17 ; >
-      au < ready ; exists ; 2009 ; Estudios Políticos Volume 2009 ; 2009 ; 18 ; >
+      au < crawling ; exists ; 2009 ; Estudios Políticos Volume 2009 ; 2009 ; 18 ; >
       au < manifest ; exists ; 2010 ; Estudios Políticos Volume 2010 ; 2010 ; 19 ; >
       au < manifest ; exists ; 2011 ; Estudios Políticos Volume 2011 ; 2011 ; 20 ; >
       au < manifest ; exists ; 2012 ; Estudios Políticos Volume 2012 ; 2012 ; 21 ; >
@@ -553,7 +553,7 @@
       au < frozen ; exists ; 2005 ; Íkala, Revista de Lenguaje y Cultura Volume 2005 ; 2005 ; 10 ; >
       au < frozen ; exists ; 2006 ; Íkala, Revista de Lenguaje y Cultura Volume 2006 ; 2006 ; 11 ; >
       au < frozen ; exists ; 2007 ; Íkala, Revista de Lenguaje y Cultura Volume 2007 ; 2007 ; 12 ; >
-      au < ready ; exists ; 2008 ; Íkala, Revista de Lenguaje y Cultura Volume 2008 ; 2008 ; 13 ; >
+      au < crawling ; exists ; 2008 ; Íkala, Revista de Lenguaje y Cultura Volume 2008 ; 2008 ; 13 ; >
       au < manifest ; exists ; 2009 ; Íkala, Revista de Lenguaje y Cultura Volume 2009 ; 2009 ; 14 ; >
       au < manifest ; exists ; 2010 ; Íkala, Revista de Lenguaje y Cultura Volume 2010 ; 2010 ; 15 ; >
       au < manifest ; exists ; 2011 ; Íkala, Revista de Lenguaje y Cultura Volume 2011 ; 2011 ; 16 ; >
@@ -592,7 +592,7 @@
       au < ready ; exists ; 2002 ; Estudios De Literatura Colombiana Volume 2002 ; 2002 ; 6 ; >
       au < frozen ; exists ; 2003 ; Estudios De Literatura Colombiana Volume 2003 ; 2003 ; 7 ; >
       au < frozen ; exists ; 2004 ; Estudios De Literatura Colombiana Volume 2004 ; 2004 ; 8 ; >
-      au < ready ; exists ; 2005 ; Estudios De Literatura Colombiana Volume 2005 ; 2005 ; 9 ; >
+      au < crawling ; exists ; 2005 ; Estudios De Literatura Colombiana Volume 2005 ; 2005 ; 9 ; >
       au < frozen ; exists ; 2006 ; Estudios De Literatura Colombiana Volume 2006 ; 2006 ; 10 ; >
       au < frozen ; exists ; 2007 ; Estudios De Literatura Colombiana Volume 2007 ; 2007 ; 11 ; >
       au < frozen ; exists ; 2008 ; Estudios De Literatura Colombiana Volume 2008 ; 2008 ; 12 ; >
