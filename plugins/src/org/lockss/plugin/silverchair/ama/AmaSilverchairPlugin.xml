@@ -11,15 +11,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
-  </entry>
-  <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.silverchair.SilverchairDirectoryAccessorPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -288,4 +280,10 @@
     <string>plugin_fetch_rate_limiter_source</string>
     <string>host:base_url</string>
   </entry>
+  <entry>
+    <string>plugin_aux_packages</string>
+      <list>
+          <string>org.lockss.plugin.silverchair</string>
+      </list>
+    </entry>
 </map>
