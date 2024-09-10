@@ -7214,12 +7214,39 @@
   {
     title <
       name = Journal of Economic and Administrative Sciences ;
-      issn = 1026-4116 ;
-      issnl = 1026-4116
+      issn = 2054-6238 ;
+      eissn = 2054-6246 ;
+      issnl = 2054-6238
     >
-
-    param[journal_issn] = 1026-4116
     comment[journal_id] = jeas
+    {
+    param[journal_issn] = 2054-6238
+
+    au < doNotProcess ; doNotProcess ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 ; >
+    au < doesNotExist ; doesNotExist ; 2011 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; Journal of Economic and Administrative Sciences Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; Journal of Economic and Administrative Sciences Volume 32 ; 32 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 ; >
+    au < manifest ; exists ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 ; >
+    }
+    {
+    param[journal_issn] = 1026-4116
 
     au < finished ; crawling ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 ; reingest1.clockss.org:8082 >
@@ -7229,7 +7256,7 @@
     au < finished ; crawling ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 ; reingest5.clockss.org:8082 >
-    au < doesNotExist ; doesNotExist ; 0 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 0 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 ; >
     au < finished ; crawling ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 ; >
@@ -7238,12 +7265,12 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 ; >
     au < finished ; crawling ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 ; >
-    au < deepCrawl ; exists ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 ; >
-    au < deepCrawl ; exists ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 ; >
-    au < deepCrawl ; exists ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 ; >
-
+    au < superseded ; exists ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 [superseded] ; 36 ; >
+    au < superseded ; exists ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 [superseded] ; 37 ; >
+    au < superseded ; exists ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 [superseded] ; 38 ; >
+    au < superseded ; exists ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 [superseded] ; 39 ; >
+    au < doNotProcess ; exists ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 ; >
+    }
   }
 
   {
