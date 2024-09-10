@@ -34,22 +34,14 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_status</string>
     <string>ready</string>
   </entry>
-  <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory! -->
+  <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory by using plugin_aux_packages -->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.silverchair.dup.DupSilverchairPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
-  </entry>
-  <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.silverchair.SilverchairDirectoryAccessorPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -269,5 +261,11 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>host:base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_aux_packages</string>
+      <list>
+          <string>org.lockss.plugin.silverchair</string>
+      </list>
   </entry>
 </map>
