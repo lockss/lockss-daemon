@@ -78,6 +78,7 @@ public class AmPsychPubHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFac
         },
         // toc - contents only
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tocContent"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "class", "toc__section"),
         // article page, references
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "literatumPublicationContentWidget"),
         // XXX possible alternative filter HtmlNodeFilters.tag("article")
@@ -93,7 +94,9 @@ public class AmPsychPubHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFac
         // https://focus.psychiatryonline.org/doi/full/10.1176/foc.7.4.foc475
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hlFld-Abstract"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "hlFld-Fulltext"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "table-of-content")
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "table-of-content"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "abstracts"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "id", "bodymatter"),
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
@@ -106,6 +109,7 @@ public class AmPsychPubHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFac
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(abstractKeywords|sectionJumpTo|response)"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "(relatedContent|cme)"),
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "tab-nav"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "info-panel"),
         // references page
         HtmlNodeFilters.tagWithAttribute("table", "class", "references"),
         
