@@ -7223,36 +7223,63 @@
   {
     title <
       name = Journal of Economic and Administrative Sciences ;
-      issn = 1026-4116 ;
-      issnl = 1026-4116
+      issn = 2054-6238 ;
+      eissn = 2054-6246 ;
+      issnl = 2054-6238
     >
-
-    param[journal_issn] = 1026-4116
     comment[journal_id] = jeas
+    {
+    param[journal_issn] = 2054-6238
 
-    au < released ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
-    au < released ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 >
-    au < released ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
-    au < released ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
-    au < released ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
-    au < released ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
-    au < released ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
-    au < released ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
-    au < doesNotExist ; 0 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 >
-    au < released ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 >
+    au < doNotProcess ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
+    au < doNotProcess ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 >
+    au < doNotProcess ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
+    au < doNotProcess ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
+    au < doNotProcess ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
+    au < doNotProcess ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
+    au < doNotProcess ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
+    au < doNotProcess ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
+    au < doesNotExist ; 2011 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 >
+    au < doNotProcess ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 >
     au < doNotProcess ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 >
     au < doNotProcess ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 >
     au < doNotProcess ; 2015 ; Journal of Economic and Administrative Sciences Volume 31 ; 31 >
     au < doNotProcess ; 2016 ; Journal of Economic and Administrative Sciences Volume 32 ; 32 >
     au < doNotProcess ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 >
-    au < released ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 >
-    au < released ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 >
-    au < released ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 >
-    au < released ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 >
-    au < released ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 >
-    au < manifest ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 >
-    au < manifest ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 >
+    au < exists ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 >
+    au < exists ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 >
+    au < exists ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 >
+    au < exists ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 >
+    au < exists ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 >
+    au < exists ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 >
+    au < exists ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 >
+    }
+    {
+    param[journal_issn] = 1026-4116
 
+    au < down ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
+    au < down ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 >
+    au < down ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
+    au < down ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
+    au < down ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
+    au < down ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
+    au < down ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
+    au < down ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
+    au < doNotProcess ; 2011 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 >
+    au < down ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 >
+    au < doNotProcess ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 >
+    au < doNotProcess ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 >
+    au < doNotProcess ; 2015 ; Journal of Economic and Administrative Sciences Volume 31 ; 31 >
+    au < doNotProcess ; 2016 ; Journal of Economic and Administrative Sciences Volume 32 ; 32 >
+    au < doNotProcess ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 >
+    au < superseded ; 2018 ; Journal of Economic and Administrative Sciences [superseded] Volume 34 ; 34 >
+    au < superseded ; 2019 ; Journal of Economic and Administrative Sciences [superseded] Volume 35 ; 35 >
+    au < superseded ; 2020 ; Journal of Economic and Administrative Sciences [superseded] Volume 36 ; 36 >
+    au < superseded ; 2021 ; Journal of Economic and Administrative Sciences [superseded] Volume 37 ; 37 >
+    au < superseded ; 2022 ; Journal of Economic and Administrative Sciences [superseded] Volume 38 ; 38 >
+    au < doNotProcess ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 >
+    au < doNotProcess ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 >
+    }
   }
 
   {
