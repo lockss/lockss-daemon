@@ -15,18 +15,9 @@
     plugin = org.lockss.plugin.clockss.endocrinesociety.ClockssEndocrineSocietySourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
     {
-    ###DEVELOPMENT###
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/endocrine-released/
-    ###PASSED TESTING
-
-    au < doNotProcess ; exists ; 2024 ; Endocrine Society Books Source Content 2024_01 [DEV] ; 2024_01 >
-    }
-
-    {
-    ###PRODUCTION###
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/endocrine-released/
 
-    au < expected ; exists ; 2024 ; Endocrine Society Books Source Content 2024_01 ; 2024_01 >
+    au < ready ; exists ; 2024 ; Endocrine Society Books Source Content 2024_01 ; 2024_01 >
     }
   }
 
