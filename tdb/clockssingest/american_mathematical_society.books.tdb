@@ -65,8 +65,8 @@
     au < finished ; finished ; 2017 ; Contemporary Mathematics 2017 ; 2017 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Contemporary Mathematics 2018 ; 2018 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; Contemporary Mathematics 2019 ; 2019 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2020 ; Contemporary Mathematics 2020 ; 2020 ; http://www.ams.org/ ; >
-    au < deepCrawl ; exists ; 2021 ; Contemporary Mathematics 2021 ; 2021 ; http://www.ams.org/ ; >
+    au < finished ; manifest ; 2020 ; Contemporary Mathematics 2020 ; 2020 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Contemporary Mathematics 2021 ; 2021 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; Contemporary Mathematics 2022 ; 2022 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Contemporary Mathematics 2023 ; 2023 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
 
@@ -216,8 +216,8 @@
     au < finished ; frozen ; 2017 ; Memoirs of the American Mathematical Society 2017 ; 2017 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; Memoirs of the American Mathematical Society 2018 ; 2018 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Memoirs of the American Mathematical Society 2019 ; 2019 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2020 ; Memoirs of the American Mathematical Society 2020 ; 2020 ; http://www.ams.org/ ; >
-    au < deepCrawl ; exists ; 2021 ; Memoirs of the American Mathematical Society 2021 ; 2021 ; http://www.ams.org/ ; >
+    au < finished ; manifest ; 2020 ; Memoirs of the American Mathematical Society 2020 ; 2020 ; http://www.ams.org/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2021 ; Memoirs of the American Mathematical Society 2021 ; 2021 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Memoirs of the American Mathematical Society 2022 ; 2022 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; Memoirs of the American Mathematical Society 2023 ; 2023 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
 
