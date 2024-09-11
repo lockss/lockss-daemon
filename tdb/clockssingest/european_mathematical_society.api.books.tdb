@@ -27,9 +27,9 @@
     >
       param[book_serial_id]= dms
 
-      au < ready ; exists ; 1998 ; 978-3-98547-043-3 ; 978-3-98547-543-8 ; Proceedings of the International Congress of Mathematicians 1998: Berlin, Germany, 18–27 August 1998 ; 245 ; >
-      au < ready ; exists ; 1998 ; 978-3-98547-044-0 ; 978-3-98547-544-5 ; Proceedings of the International Congress of Mathematicians 1998 Volume 1 ; 246 ; >
-      au < ready ; exists ; 1998 ; 978-3-98547-045-7 ; 978-3-98547-545-2 ; Proceedings of the International Congress of Mathematicians 1998 Volume 2 ; 247 ; >
+      au < crawling ; exists ; 1998 ; 978-3-98547-043-3 ; 978-3-98547-543-8 ; Proceedings of the International Congress of Mathematicians 1998: Berlin, Germany, 18–27 August 1998 ; 245 ; >
+      au < crawling ; exists ; 1998 ; 978-3-98547-044-0 ; 978-3-98547-544-5 ; Proceedings of the International Congress of Mathematicians 1998 Volume 1 ; 246 ; >
+      au < crawling ; exists ; 1998 ; 978-3-98547-045-7 ; 978-3-98547-545-2 ; Proceedings of the International Congress of Mathematicians 1998 Volume 2 ; 247 ; >
       au < frozen ; exists ; 1998 ; 978-3-98547-046-4 ; 978-3-98547-546-9 ; Proceedings of the International Congress of Mathematicians 1998 Volume 3 ; 248 ; >
       au < frozen ; exists ; 2001 ; 978-3-98547-042-6 ; 978-3-98547-542-1 ; Proceedings of the Conference on Quadratic Forms and Related Topics: Baton Rouge, Louisiana, USA, 26–30 March 2001 ; 249 ; >
       au < crawling ; exists ; 2003 ; 978-3-936609-21-9 ; 978-3-98547-547-6 ; A Collection of Manuscripts Written in Honour of Kazuya Kato on the Occasion of His Fiftieth Birthday ; 250 ; >
@@ -353,7 +353,7 @@
     >
       param[book_serial_id] = mems
 
-      au < ready ; exists ; 2022 ; 978-3-98547-020-4 ; 978-3-98547-520-9 ; Long-Time Dispersive Estimates for Perturbations of a Kink Solution of One-Dimensional Cubic Wave Equations ; 233 ; >
+      au < crawling ; exists ; 2022 ; 978-3-98547-020-4 ; 978-3-98547-520-9 ; Long-Time Dispersive Estimates for Perturbations of a Kink Solution of One-Dimensional Cubic Wave Equations ; 233 ; >
       au < crawling ; exists ; 2022 ; 978-3-98547-023-5 ; 978-3-98547-523-0 ; Cyclic Stratum of Frobenius Manifolds, Borel–Laplace (??, ??)-Multitransforms, and Integral Representations of Solutions of Quantum Differential Equations ; 241 ; >
       au < crawling ; exists ; 2023 ; 978-3-98547-025-9 ; 978-3-98547-525-4 ; Laplacians on Infinite Graphs ; 256 ; >
       au < crawling ; exists ; 2023 ; 978-3-98547-049-5 ; 978-3-98547-549-0 ; The Limiting Absorption Principle for Massless Dirac Operators, Properties of Spectral Shift Functions, and an Application to the Witten Index of Non-Fredholm Operators ; 259 ; >
