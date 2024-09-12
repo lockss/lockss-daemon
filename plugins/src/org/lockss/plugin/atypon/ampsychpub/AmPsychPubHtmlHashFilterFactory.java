@@ -97,6 +97,7 @@ public class AmPsychPubHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFac
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "table-of-content"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "abstracts"),
         HtmlNodeFilters.tagWithAttributeRegex("section", "id", "bodymatter"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citation-content"),
     };
     
     // handled by parent: script, sfxlink, stylesheet, pdfplus file sise
