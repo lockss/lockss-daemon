@@ -3413,7 +3413,8 @@ while (my $line = <>) {
     sleep(4);
 
   #European Mathematical Society Books
-  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyBooks2024Plugin") {
+  } elsif ($plugin eq "ClockssEuropeanMathematicalSocietyBooks2024Plugin" || 
+           $plugin eq "EuropeanMathematicalSocietyBooks2024Plugin") {
     $url = sprintf("%sbooks/%s/%s",
       $param{base_url}, $param{book_serial_id}, $param{book_id});
     $man_url = uri_unescape($url);
@@ -3425,7 +3426,9 @@ while (my $line = <>) {
       if ($req->url ne $resp->request->uri) {
               $vol_title = $resp->request->uri;
               $result = "Redirected";
-      } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/>Download [^<]*PDF</)) {
+      } elsif (defined($man_contents) && ($man_contents =~ m/>Download [^<]*PDF</) && 
+                                        (($man_contents =~ m/$clockss_tag/) && ($plugin eq "ClockssEuropeanMathematicalSocietyBooks2024Plugin") ||
+                                         ($man_contents =~ m/$lockss_tag/) && ($plugin eq "EuropeanMathematicalSocietyBooks2024Plugin")) ) {
         if ($man_contents =~ m/<h4>([^<]*)<\/h4>/si) {
           $vol_title = $1;
         }
