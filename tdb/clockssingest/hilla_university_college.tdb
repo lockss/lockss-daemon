@@ -23,8 +23,8 @@
     param[journal_abbr] = journal
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < ready ; exists ; 2023 ; Hilla University College Journal For Medical Science Volume 1 ; 1 ; https://hucmsj.hilla-unc.edu.iq/ ; >
-    au < ready ; exists ; 2024 ; Hilla University College Journal For Medical Science Volume 2 ; 2 ; https://hucmsj.hilla-unc.edu.iq/ ; >
+    au < crawling ; exists ; 2023 ; Hilla University College Journal For Medical Science Volume 1 ; 1 ; https://hucmsj.hilla-unc.edu.iq/ ; >
+    au < crawling ; exists ; 2024 ; Hilla University College Journal For Medical Science Volume 2 ; 2 ; https://hucmsj.hilla-unc.edu.iq/ ; >
 
   }
 
