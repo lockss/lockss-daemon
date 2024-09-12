@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_aux_packages</string>
@@ -125,8 +125,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <!-- https://pubs.lib.uiowa.edu/poroi/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2021-01-01&until=2021-12-31-->
-    <string>"%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
+      <list>
+        <!-- https://pubs.lib.uiowa.edu/poroi/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2021-01-01&until=2021-12-31-->
+        <string>"%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
+        <string>"%sauid=",base_url</string>
+      </list>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -142,7 +145,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2, "%s([^/]+/)?issue/[^/]+/info/", base_url</string>
       <string>1, "%s([^/]+/)?article/", base_url</string>
       <string>1, "%s(static|media/cover_images)/", base_url</string>
-      <string>1, "^https?://%s%s/api/oai/?verb=ListRecords&amp;resumptionToken=", base_url,journal_id</string>
+      <string>1, "%s%s/api/oai/?verb=ListRecords&amp;resumptionToken=", base_url,journal_id</string>
+      <string>1, "%sauid=", base_url</string>
     </list>
   </entry>
   <entry>
