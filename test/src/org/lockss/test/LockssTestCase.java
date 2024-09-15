@@ -189,6 +189,9 @@ public class LockssTestCase extends TestCase {
     mockDaemon = newMockLockssDaemon();
     super.setUp();
     disableThreadWatchdog();
+    RandomManager rmgr = new TestingRandomManager();
+    rmgr.initService(mockDaemon);
+    mockDaemon.setRandomManager(rmgr);
   }
 
   protected MockLockssDaemon newMockLockssDaemon() {
