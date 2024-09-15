@@ -1017,7 +1017,7 @@ public class SimpleHasher {
       Map<String, ParamsAndResult> requestMap) {
     for (int i = 0; i < MAX_RANDOM_SEARCH; i++) {
       String key =
-	org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(5);
+	org.lockss.util.RandomUtil.randomAlphabetic(5);
       if (!requestMap.containsKey(key)) {
 	result.setRequestId(key);
 	requestMap.put(key, new ParamsAndResult(params, result));

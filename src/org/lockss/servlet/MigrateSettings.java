@@ -1,6 +1,6 @@
 package org.lockss.servlet;
 
-import org.apache.commons.lang.RandomStringUtils;
+import org.lockss.util.RandomUtil;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -517,7 +517,7 @@ public class MigrateSettings extends LockssServlet {
 
   private void setupToggleGroup(Input toggleElem, Input... groupElems) {
     // Generate class name
-    String cssClass = "toggleGroup" + RandomStringUtils.randomAlphabetic(5);
+    String cssClass = "toggleGroup" + RandomUtil.randomAlphabetic(5);
 
     // Setup onChange on toggle element
     toggleElem.attribute("onchange",
