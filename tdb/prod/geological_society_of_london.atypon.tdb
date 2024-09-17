@@ -1373,7 +1373,10 @@
   {
 
     title <
-      name = Energy Geoscience Conference Series
+      name = Energy Geoscience Conference Series ;
+      issn = 2976-7806 ; 
+      eissn = 2976-7814 ;
+      issnl = 2976-7806
     >
 
     param[journal_id] = egc
