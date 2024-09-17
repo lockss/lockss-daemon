@@ -85,7 +85,7 @@
       au < manifest ; exists ; 2013 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2013 ; 9 ; 2013 ; >
       au < manifest ; exists ; 2014 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2014 ; 10 ; 2014 ; >
       au < manifest ; exists ; 2015 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2015 ; 11 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2016 ; 12 ; 2016 ; >
+      au < ready ; exists ; 2016 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2016 ; 12 ; 2016 ; >
       au < frozen ; exists ; 2017 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2017 ; 13 ; 2017 ; >
       au < frozen ; exists ; 2018 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2018 ; 14 ; 2018 ; >
       au < frozen ; exists ; 2019 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2019 ; 15 ; 2019 ; >
@@ -151,7 +151,7 @@
 
       au < manifest ; exists ; 2014 ; Journal of Lithic Studies Volume 2014 ; 1 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Journal of Lithic Studies Volume 2015 ; 2 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; Journal of Lithic Studies Volume 2016 ; 3 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Journal of Lithic Studies Volume 2016 ; 3 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Journal of Lithic Studies Volume 2017 ; 4 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Journal of Lithic Studies Volume 2018 ; 5 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Journal of Lithic Studies Volume 2019 ; 6 ; 2019 ; >
@@ -180,9 +180,9 @@
       au < manifest ; exists ; 2013 ; Leviathan Volume 2013 ; 3-4 ; 2013 ; >
       au < manifest ; exists ; 2014 ; Leviathan Volume 2014 ; 4-5 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Leviathan Volume 2015 ; 5 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; Leviathan Volume 2016 ; 6-7 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; Leviathan Volume 2017 ; 7-8 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; Leviathan Volume 2018 ; 8 ; 2018 ; >
+      au < ready ; exists ; 2016 ; Leviathan Volume 2016 ; 6-7 ; 2016 ; >
+      au < ready ; exists ; 2017 ; Leviathan Volume 2017 ; 7-8 ; 2017 ; >
+      au < ready ; exists ; 2018 ; Leviathan Volume 2018 ; 8 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Leviathan Volume 2019 ; 9-10 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Leviathan Volume 2020 ; 10 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Leviathan Volume 2021 ; 11-12 ; 2021 ; >
@@ -203,10 +203,10 @@
       param[journal_id] = lifespansstyles
 
       au < manifest ; exists ; 2015 ; Lifespans and Styles Volume 2015 ; 1 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; Lifespans and Styles Volume 2016 ; 2 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; Lifespans and Styles Volume 2017 ; 3 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; Lifespans and Styles Volume 2018 ; 4 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; Lifespans and Styles Volume 2019 ; 5 ; 2019 ; >
+      au < ready ; exists ; 2016 ; Lifespans and Styles Volume 2016 ; 2 ; 2016 ; >
+      au < ready ; exists ; 2017 ; Lifespans and Styles Volume 2017 ; 3 ; 2017 ; >
+      au < ready ; exists ; 2018 ; Lifespans and Styles Volume 2018 ; 4 ; 2018 ; >
+      au < ready ; exists ; 2019 ; Lifespans and Styles Volume 2019 ; 5 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Lifespans and Styles Volume 2020 ; 6 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Lifespans and Styles Volume 2021 ; 7 ; 2021 ; >
       au < expected ; exists ; 2024 ; Lifespans and Styles Volume 2024 ; 8 ; 2024 ; >
@@ -241,7 +241,7 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = pihph
 
-      au < manifest ; exists ; 2016 ; Papers in Historical Phonology Volume 2016 ; 1 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Papers in Historical Phonology Volume 2016 ; 1 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Papers in Historical Phonology Volume 2017 ; 2 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Papers in Historical Phonology Volume 2018 ; 3 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Papers in Historical Phonology Volume 2019 ; 4 ; 2019 ; >
@@ -379,7 +379,7 @@
       au < manifest ; exists ; 2013 ; Language and Psychoanalysis Volume 2013 ; 2 ; 2013 ; >
       au < manifest ; exists ; 2014 ; Language and Psychoanalysis Volume 2014 ; 3 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Language and Psychoanalysis Volume 2015 ; 4 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; Language and Psychoanalysis Volume 2016 ; 5 ; 2016 ; >
+      au < ready ; exists ; 2016 ; Language and Psychoanalysis Volume 2016 ; 5 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Language and Psychoanalysis Volume 2017 ; 6 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Language and Psychoanalysis Volume 2018 ; 7 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Language and Psychoanalysis Volume 2019 ; 8 ; 2019 ; >
@@ -432,7 +432,7 @@
       au < manifest ; exists ; 2014 ; The South Asianist Journal Volume 2014 ; 3 ; 2014 ; >
       au < manifest ; exists ; 2015 ; The South Asianist Journal Volume 2015 ; 4 ; 2015 ; >
       au < manifest ; exists ; 2016 ; The South Asianist Journal Volume 2016 ; 5 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; The South Asianist Journal Volume 2017 ; 6 ; 2017 ; >
+      au < ready ; exists ; 2017 ; The South Asianist Journal Volume 2017 ; 6 ; 2017 ; >
       au < frozen ; exists ; 2018 ; The South Asianist Journal Volume 2018 ; 7 ; 2018 ; >
       au < doesNotExist ; doesNotExist ; 2019 ; The South Asianist Journal Volume 2019 ; 8 ; 2019 ; >
       au < frozen ; exists ; 2020 ; The South Asianist Journal Volume 2020 ; 9 ; 2020 ; >
