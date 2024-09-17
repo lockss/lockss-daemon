@@ -71,7 +71,7 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = forum
 
-      au < releasing ; 2005 ; 1 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2005 ; 2005 >
+      au < released ; 2005 ; 1 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2005 ; 2005 >
       au < manifest ; 2006 ; 2 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2006 ; 2006 >
       au < manifest ; 2007 ; 3 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2007 ; 2007 >
       au < manifest ; 2008 ; 4 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2008 ; 2008 >
@@ -281,7 +281,7 @@
       au < manifest ; 2013 ; 41 ; Scottish Studies Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 42 ; Scottish Studies Volume 2014 ; 2014 >
       au < manifest ; 2018 ; 46 ; Scottish Studies Volume 2018 ; 2018 >
-      au < releasing ; 2022 ; 50 ; Scottish Studies Volume 2022 ; 2022 >
+      au < released ; 2022 ; 50 ; Scottish Studies Volume 2022 ; 2022 >
       au < manifest ; 2024 ; 52 ; Scottish Studies Volume 2024 ; 2024 >
 
   }
@@ -318,19 +318,19 @@
       param[journal_id] = concept
       #This title does not use a journal_id
 
-      au < releasing ; 2010 ; 1 ; Concept Volume 2010 ; 2010 >
-      au < releasing ; 2011 ; 2 ; Concept Volume 2011 ; 2011 >
-      au < releasing ; 2012 ; 3 ; Concept Volume 2012 ; 2012 >
-      au < releasing ; 2013 ; 4 ; Concept Volume 2013 ; 2013 >
-      au < releasing ; 2014 ; 5 ; Concept Volume 2014 ; 2014 >
-      au < releasing ; 2015 ; 6 ; Concept Volume 2015 ; 2015 >
-      au < releasing ; 2016 ; 7 ; Concept Volume 2016 ; 2016 >
-      au < releasing ; 2017 ; 8 ; Concept Volume 2017 ; 2017 >
-      au < releasing ; 2018 ; 9 ; Concept Volume 2018 ; 2018 >
-      au < releasing ; 2019 ; 10 ; Concept Volume 2019 ; 2019 >
-      au < releasing ; 2020 ; 11 ; Concept Volume 2020 ; 2020 >
-      au < releasing ; 2021 ; 12 ; Concept Volume 2021 ; 2021 >
-      au < releasing ; 2022 ; 13 ; Concept Volume 2022 ; 2022 >
+      au < released ; 2010 ; 1 ; Concept Volume 2010 ; 2010 >
+      au < released ; 2011 ; 2 ; Concept Volume 2011 ; 2011 >
+      au < released ; 2012 ; 3 ; Concept Volume 2012 ; 2012 >
+      au < released ; 2013 ; 4 ; Concept Volume 2013 ; 2013 >
+      au < released ; 2014 ; 5 ; Concept Volume 2014 ; 2014 >
+      au < released ; 2015 ; 6 ; Concept Volume 2015 ; 2015 >
+      au < released ; 2016 ; 7 ; Concept Volume 2016 ; 2016 >
+      au < released ; 2017 ; 8 ; Concept Volume 2017 ; 2017 >
+      au < released ; 2018 ; 9 ; Concept Volume 2018 ; 2018 >
+      au < released ; 2019 ; 10 ; Concept Volume 2019 ; 2019 >
+      au < released ; 2020 ; 11 ; Concept Volume 2020 ; 2020 >
+      au < released ; 2021 ; 12 ; Concept Volume 2021 ; 2021 >
+      au < released ; 2022 ; 13 ; Concept Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 14 ; Concept Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 15 ; Concept Volume 2024 ; 2024 >
 
@@ -426,7 +426,7 @@
       au < manifest ; 2015 ; 4 ; The South Asianist Journal Volume 2015 ; 2015 >
       au < manifest ; 2016 ; 5 ; The South Asianist Journal Volume 2016 ; 2016 >
       au < manifest ; 2017 ; 6 ; The South Asianist Journal Volume 2017 ; 2017 >
-      au < releasing ; 2018 ; 7 ; The South Asianist Journal Volume 2018 ; 2018 >
+      au < released ; 2018 ; 7 ; The South Asianist Journal Volume 2018 ; 2018 >
       au < doesNotExist ; 2019 ; 8 ; The South Asianist Journal Volume 2019 ; 2019 >
       au < manifest ; 2020 ; 9 ; The South Asianist Journal Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 10 ; The South Asianist Journal Volume 2021 ; 2021 >
