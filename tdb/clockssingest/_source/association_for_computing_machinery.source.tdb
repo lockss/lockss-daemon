@@ -56,8 +56,8 @@
          au < readySource ; finished ; 2023 ; Association for Computing Machinery Source Content 2023_03 ; 2023_03 >
          au < readySource ; crawling ; 2023 ; Association for Computing Machinery Source Content 2023_04 ; 2023_04 >
 
-         au < ready ; exists ; 2024 ; Association for Computing Machinery Source Content 2024_01 ; 2024_01 >
-         au < ready ; exists ; 2024 ; Association for Computing Machinery Source Content 2024_02 ; 2024_02 >
+         au < readySource ; crawling ; 2024 ; Association for Computing Machinery Source Content 2024_01 ; 2024_01 >
+         au < readySource ; crawling ; 2024 ; Association for Computing Machinery Source Content 2024_02 ; 2024_02 >
          au < doNotProcess ; exists ; 2024 ; Association for Computing Machinery Source Content 2024_03 ; 2024_03 >
          au < doNotProcess ; exists ; 2024 ; Association for Computing Machinery Source Content 2024_04 ; 2024_04 >
          #ACM delivers content in big batches, so AUs should never be added to clockss without review
