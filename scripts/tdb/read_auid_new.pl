@@ -3429,7 +3429,7 @@ while (my $line = <>) {
       } elsif (defined($man_contents) && ($man_contents =~ m/>Download [^<]*PDF</) && 
                                         (($man_contents =~ m/$clockss_tag/) && ($plugin eq "ClockssEuropeanMathematicalSocietyBooks2024Plugin") ||
                                          ($man_contents =~ m/$lockss_tag/) && ($plugin eq "EuropeanMathematicalSocietyBooks2024Plugin")) ) {
-        if ($man_contents =~ m/<h4>([^<]*)<\/h4>/si) {
+        if ($man_contents =~ m/<title>([^<]*)<\/title>/si) {
           $vol_title = $1;
         }
         $result = "Manifest"
