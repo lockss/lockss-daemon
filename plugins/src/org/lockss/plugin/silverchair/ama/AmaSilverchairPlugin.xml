@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -247,6 +247,14 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.silverchair.ScHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+      <string>text/plain_filter_factory</string>
+      <string>org.lockss.plugin.silverchair.SilverchairRisFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_filter_factory</string>
+    <string>org.lockss.plugin.silverchair.SilverchairRisFilterFactory</string>
   </entry>
 <!--  for http to https conversion support -->  
   <entry>
