@@ -181,8 +181,8 @@
       au < manifest ; exists ; 2014 ; Leviathan Volume 2014 ; 4-5 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Leviathan Volume 2015 ; 5 ; 2015 ; >
       au < ready ; exists ; 2016 ; Leviathan Volume 2016 ; 6-7 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Leviathan Volume 2017 ; 7-8 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Leviathan Volume 2018 ; 8 ; 2018 ; >
+      au < frozen ; exists ; 2017 ; Leviathan Volume 2017 ; 7-8 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Leviathan Volume 2018 ; 8 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Leviathan Volume 2019 ; 9-10 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Leviathan Volume 2020 ; 10 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Leviathan Volume 2021 ; 11-12 ; 2021 ; >
@@ -206,7 +206,7 @@
       au < crawling ; exists ; 2016 ; Lifespans and Styles Volume 2016 ; 2 ; 2016 ; >
       au < crawling ; exists ; 2017 ; Lifespans and Styles Volume 2017 ; 3 ; 2017 ; >
       au < crawling ; exists ; 2018 ; Lifespans and Styles Volume 2018 ; 4 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Lifespans and Styles Volume 2019 ; 5 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; Lifespans and Styles Volume 2019 ; 5 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Lifespans and Styles Volume 2020 ; 6 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Lifespans and Styles Volume 2021 ; 7 ; 2021 ; >
       au < expected ; exists ; 2024 ; Lifespans and Styles Volume 2024 ; 8 ; 2024 ; >
@@ -241,7 +241,7 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = pihph
 
-      au < crawling ; exists ; 2016 ; Papers in Historical Phonology Volume 2016 ; 1 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; Papers in Historical Phonology Volume 2016 ; 1 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Papers in Historical Phonology Volume 2017 ; 2 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Papers in Historical Phonology Volume 2018 ; 3 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Papers in Historical Phonology Volume 2019 ; 4 ; 2019 ; >
@@ -379,7 +379,7 @@
       au < manifest ; exists ; 2013 ; Language and Psychoanalysis Volume 2013 ; 2 ; 2013 ; >
       au < manifest ; exists ; 2014 ; Language and Psychoanalysis Volume 2014 ; 3 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Language and Psychoanalysis Volume 2015 ; 4 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Language and Psychoanalysis Volume 2016 ; 5 ; 2016 ; >
+      au < frozen ; exists ; 2016 ; Language and Psychoanalysis Volume 2016 ; 5 ; 2016 ; >
       au < frozen ; exists ; 2017 ; Language and Psychoanalysis Volume 2017 ; 6 ; 2017 ; >
       au < frozen ; exists ; 2018 ; Language and Psychoanalysis Volume 2018 ; 7 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Language and Psychoanalysis Volume 2019 ; 8 ; 2019 ; >
