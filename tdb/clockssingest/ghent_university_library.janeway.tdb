@@ -63,15 +63,15 @@
       au < exists ; exists ; 1987 ; 1987 ; 1987 ; Documenta Volume 1987 ; >
       au < exists ; exists ; 1988 ; 1988 ; 1988 ; Documenta Volume 1988 ; >
       au < exists ; exists ; 1989 ; 1989 ; 1989 ; Documenta Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Documenta Volume 1990 ; >
+      au < crawling ; exists ; 1990 ; 1990 ; 1990 ; Documenta Volume 1990 ; >
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; Documenta Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Documenta Volume 1992 ; >
+      au < crawling ; exists ; 1992 ; 1992 ; 1992 ; Documenta Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Documenta Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Documenta Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Documenta Volume 1995 ; >
+      au < crawling ; exists ; 1994 ; 1994 ; 1994 ; Documenta Volume 1994 ; >
+      au < crawling ; exists ; 1995 ; 1995 ; 1995 ; Documenta Volume 1995 ; >
       au < exists ; exists ; 1996 ; 1996 ; 1996 ; Documenta Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Documenta Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Documenta Volume 1998 ; >
+      au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Documenta Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Documenta Volume 1999 ; >
       au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Documenta Volume 2000 ; >
       au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Documenta Volume 2001 ; >
@@ -288,11 +288,11 @@
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Afrika Focus Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Afrika Focus Volume 1993 ; >
       au < exists ; exists ; 1994 ; 1994 ; 1994 ; Afrika Focus Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Afrika Focus Volume 1995 ; >
+      au < crawling ; exists ; 1995 ; 1995 ; 1995 ; Afrika Focus Volume 1995 ; >
       au < exists ; exists ; 1996 ; 1996 ; 1996 ; Afrika Focus Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Afrika Focus Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Afrika Focus Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Afrika Focus Volume 1999 ; >
+      au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Afrika Focus Volume 1998 ; >
+      au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Afrika Focus Volume 1999 ; >
       au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Afrika Focus Volume 2000 ; >
       au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Afrika Focus Volume 2001 ; >
 
@@ -335,12 +335,12 @@
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; Agora Magazine Volume 1991 ; >
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Agora Magazine Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Agora Magazine Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Agora Magazine Volume 1994 ; >
+      au < crawling ; exists ; 1994 ; 1994 ; 1994 ; Agora Magazine Volume 1994 ; >
       au < exists ; exists ; 1995 ; 1995 ; 1995 ; Agora Magazine Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Agora Magazine Volume 1996 ; >
+      au < crawling ; exists ; 1996 ; 1996 ; 1996 ; Agora Magazine Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Agora Magazine Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Agora Magazine Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Agora Magazine Volume 1999 ; >
+      au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Agora Magazine Volume 1998 ; >
+      au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Agora Magazine Volume 1999 ; >
       au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Agora Magazine Volume 2000 ; >
       au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Agora Magazine Volume 2001 ; >
       au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Agora Magazine Volume 2002 ; >
@@ -407,10 +407,10 @@
       #published 1996-2020
       param[journal_id] = broodenrozen
 
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Brood & Rozen Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Brood & Rozen Volume 1997 ; >
+      au < crawling ; exists ; 1996 ; 1996 ; 1996 ; Brood & Rozen Volume 1996 ; >
+      au < crawling ; exists ; 1997 ; 1997 ; 1997 ; Brood & Rozen Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Brood & Rozen Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Brood & Rozen Volume 1999 ; >
+      au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Brood & Rozen Volume 1999 ; >
       au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Brood & Rozen Volume 2000 ; >
       au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Brood & Rozen Volume 2001 ; >
       au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Brood & Rozen Volume 2002 ; >
@@ -455,7 +455,7 @@
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; De Uil van Minerva Volume 1991 ; >
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; De Uil van Minerva Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; De Uil van Minerva Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; De Uil van Minerva Volume 1994 ; >
+      au < crawling ; exists ; 1994 ; 1994 ; 1994 ; De Uil van Minerva Volume 1994 ; >
       au < exists ; exists ; 1995 ; 1995 ; 1995 ; De Uil van Minerva Volume 1995 ; >
       au < exists ; exists ; 1996 ; 1996 ; 1996 ; De Uil van Minerva Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; De Uil van Minerva Volume 1997 ; >
@@ -521,12 +521,12 @@
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; Ghendtsche Tydinghen Volume 1991 ; >
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Ghendtsche Tydinghen Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Ghendtsche Tydinghen Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Ghendtsche Tydinghen Volume 1994 ; >
+      au < crawling ; exists ; 1994 ; 1994 ; 1994 ; Ghendtsche Tydinghen Volume 1994 ; >
       au < exists ; exists ; 1995 ; 1995 ; 1995 ; Ghendtsche Tydinghen Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Ghendtsche Tydinghen Volume 1996 ; >
+      au < crawling ; exists ; 1996 ; 1996 ; 1996 ; Ghendtsche Tydinghen Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Ghendtsche Tydinghen Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Ghendtsche Tydinghen Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Ghendtsche Tydinghen Volume 1999 ; >
+      au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Ghendtsche Tydinghen Volume 1998 ; >
+      au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Ghendtsche Tydinghen Volume 1999 ; >
       au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Ghendtsche Tydinghen Volume 2000 ; >
       au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Ghendtsche Tydinghen Volume 2001 ; >
       au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Ghendtsche Tydinghen Volume 2002 ; >
@@ -642,8 +642,8 @@
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1993 ; >
       au < exists ; exists ; 1994 ; 1994 ; 1994 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1996 ; >
+      au < crawling ; exists ; 1995 ; 1995 ; 1995 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1995 ; >
+      au < crawling ; exists ; 1996 ; 1996 ; 1996 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1999 ; >
@@ -825,11 +825,11 @@
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Handelingen van het Genootschap voor Geschiedenis Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Handelingen van het Genootschap voor Geschiedenis Volume 1993 ; >
       au < exists ; exists ; 1994 ; 1994 ; 1994 ; Handelingen van het Genootschap voor Geschiedenis Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Handelingen van het Genootschap voor Geschiedenis Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Handelingen van het Genootschap voor Geschiedenis Volume 1996 ; >
+      au < crawling ; exists ; 1995 ; 1995 ; 1995 ; Handelingen van het Genootschap voor Geschiedenis Volume 1995 ; >
+      au < crawling ; exists ; 1996 ; 1996 ; 1996 ; Handelingen van het Genootschap voor Geschiedenis Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Handelingen van het Genootschap voor Geschiedenis Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Handelingen van het Genootschap voor Geschiedenis Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Handelingen van het Genootschap voor Geschiedenis Volume 1999 ; >
+      au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Handelingen van het Genootschap voor Geschiedenis Volume 1999 ; >
       au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Handelingen van het Genootschap voor Geschiedenis Volume 2000 ; >
       au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Handelingen van het Genootschap voor Geschiedenis Volume 2001 ; >
       au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Handelingen van het Genootschap voor Geschiedenis Volume 2002 ; >
@@ -996,11 +996,11 @@
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1991 ; >
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1994 ; >
+      au < crawling ; exists ; 1994 ; 1994 ; 1994 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1994 ; >
       au < exists ; exists ; 1995 ; 1995 ; 1995 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1995 ; >
       au < exists ; exists ; 1996 ; 1996 ; 1996 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1998 ; >
+      au < crawling ; exists ; 1997 ; 1997 ; 1997 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1997 ; >
+      au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1999 ; >
       au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2000 ; >
       au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2001 ; >
