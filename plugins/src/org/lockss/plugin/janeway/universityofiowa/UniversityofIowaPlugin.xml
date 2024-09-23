@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>down</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_aux_packages</string>
@@ -127,8 +127,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_start_url</string>
       <list>
         <!-- https://pubs.lib.uiowa.edu/poroi/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2021-01-01&until=2021-12-31-->
-        <string>"%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
-        <string>"%sauid=",base_url</string>
+        <string>"%slockss?year=%d&amp;optional_journal_id=%s", base_url, year, journal_id</string>
       </list>
   </entry>
   <entry>
@@ -146,7 +145,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1, "%s([^/]+/)?article/", base_url</string>
       <string>1, "%s(static|media/cover_images)/", base_url</string>
       <string>1, "%s%s/api/oai/?verb=ListRecords&amp;resumptionToken=", base_url,journal_id</string>
-      <string>1, "%sauid=", base_url</string>
+      <string>1, "%slockss?year=%d&amp;optional_journal_id=%s", base_url, year, journal_id</string>
     </list>
   </entry>
   <entry>

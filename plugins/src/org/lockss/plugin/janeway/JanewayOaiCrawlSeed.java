@@ -66,13 +66,16 @@ public class JanewayOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   protected int year;
   protected Pattern yearPattern = Pattern.compile("^([0-9]{4})-[0-9]{2}-[0-9]{2}");
   public static final String OAI_DC_METADATA_PREFIX = "oai_dc";
+
+  protected String optional_journal_id = null;
   private static Logger logger =
 	      Logger.getLogger(JanewayOaiCrawlSeed.class);
+
 
   public JanewayOaiCrawlSeed(CrawlerFacade cf) {
     super(cf);
     setMetadataPrefix(OAI_DC_METADATA_PREFIX);
-    String optional_journal_id = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
+    optional_journal_id = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
     logger.debug3(" optional_journal_id " + optional_journal_id);
     if (optional_journal_id != null) {
         setUrlPostfix(optional_journal_id + "/api/oai/");
@@ -99,11 +102,15 @@ public class JanewayOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 		  throws ConfigurationException, IOException {
       logger.debug3("auid: " + au.getAuId() + ", encoded auid:" + UrlUtil.encodeUrl(au.getAuId()));
 
-      String url = UrlUtil.encodeUrl(au.getAuId());
+      String storeUrl = null;
 
-      String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
-
-      logger.debug3("baseUrl = " + baseUrl + ", url = " + url + ", storeUrl = " + storeUrl);
+      if (optional_journal_id != null) {
+          storeUrl = String.format("%slockss?year=%d&optional_journal_id=%s",
+                  baseUrl, year, UrlUtil.encodeUrl(optional_journal_id));
+      } else {
+          storeUrl = String.format("%slockss?year=%d",
+                  baseUrl, year);
+      }
 
       String link;
       Boolean error = false;

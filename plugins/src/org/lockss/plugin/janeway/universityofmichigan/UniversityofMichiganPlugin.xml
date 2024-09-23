@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>down</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>12</string>
   </entry>
   <entry>
     <string>plugin_aux_packages</string>
@@ -143,6 +143,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1, "^https?://%s/([^/]+/)?article/", url_host(base_url)</string>
       <string>1, "^https?://%s/(static|media/cover_images)/", url_host(base_url)</string>
       <string>1, "^https?://%s/api/oai/?verb=ListRecords&amp;resumptionToken=", url_host(base_url)</string>
+      <string>1, "%sapi/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, year, year</string>
     </list>
   </entry>
   <entry>

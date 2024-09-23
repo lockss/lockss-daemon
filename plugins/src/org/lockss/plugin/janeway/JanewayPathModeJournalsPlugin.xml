@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -123,7 +123,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <!--
     https://openjournals.ugent.be/jeps/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2020-01-01&until=2020-12-31
     -->
-    <string>"%s%s/api/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
+    <string>"%slockss?year=%d&amp;optional_journal_id=%s", base_url, year, journal_id</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -140,7 +140,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2, "^https?://%s/([^/]+/)?issue/[^/]+/info/", url_host(base_url)</string>
       <string>1, "^https?://%s/([^/]+/)?article/", url_host(base_url)</string>
       <string>1, "^https?://%s/(static|media/cover_images)/", url_host(base_url)</string>
-      <string>1, "^https?://%s%s/api/oai/?verb=ListRecords&amp;resumptionToken=", base_url,journal_id</string>
+      <string>1, "%s%s/api/oai/?verb=ListRecords&amp;resumptionToken=", base_url,journal_id</string>
+      <string>1, "%slockss?year=%d&amp;optional_journal_id=%s", base_url, year, journal_id</string>
     </list>
   </entry>
   <entry>

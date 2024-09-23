@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>down</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -110,7 +110,8 @@
       <string>2, "%s([^/]+/)?issue/[^/]+/info/", base_url</string>
       <string>1, "%s([^/]+/)?article/", base_url</string>
       <string>1, "%s(static|media/cover_images)/", base_url</string>
-      <string>1, "^https?://%s%s/api/oai/?verb=ListRecords&amp;resumptionToken=", base_url,journal_id</string>
+      <string>1, "%s%s/api/oai/?verb=ListRecords&amp;resumptionToken=", base_url,journal_id</string>
+      <string>1, "%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
     </list>
   </entry>
   <entry>
