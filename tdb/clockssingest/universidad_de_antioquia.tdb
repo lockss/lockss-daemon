@@ -123,7 +123,7 @@
       au < manifest ; exists ; 2014 ; Revista Interamericana de Bibliotecología Volume 2014 ; 2014 ; 37 ; >
       au < manifest ; exists ; 2015 ; Revista Interamericana de Bibliotecología Volume 2015 ; 2015 ; 38 ; >
       au < manifest ; exists ; 2016 ; Revista Interamericana de Bibliotecología Volume 2016 ; 2016 ; 39 ; >
-      au < ready ; exists ; 2017 ; Revista Interamericana de Bibliotecología Volume 2017 ; 2017 ; 40 ; >
+      au < crawling ; exists ; 2017 ; Revista Interamericana de Bibliotecología Volume 2017 ; 2017 ; 40 ; >
       au < frozen ; exists ; 2018 ; Revista Interamericana de Bibliotecología Volume 2018 ; 2018 ; 41 ; >
       au < frozen ; exists ; 2019 ; Revista Interamericana de Bibliotecología Volume 2019 ; 2019 ; 42 ; >
       au < frozen ; exists ; 2020 ; Revista Interamericana de Bibliotecología Volume 2020 ; 2020 ; 43 ; >
@@ -180,8 +180,8 @@
       au < manifest ; exists ; 2014 ; Contaduría Universidad de Antioquia Volume 2014 ; 2014 ; 33 ; >
       au < manifest ; exists ; 2015 ; Contaduría Universidad de Antioquia Volume 2015 ; 2015 ; 34 ; >
       au < crawling ; exists ; 2016 ; Contaduría Universidad de Antioquia Volume 2016 ; 2016 ; 35 ; >
-      au < ready ; exists ; 2017 ; Contaduría Universidad de Antioquia Volume 2017 ; 2017 ; 36 ; >
-      au < ready ; exists ; 2018 ; Contaduría Universidad de Antioquia Volume 2018 ; 2018 ; 37 ; >
+      au < crawling ; exists ; 2017 ; Contaduría Universidad de Antioquia Volume 2017 ; 2017 ; 36 ; >
+      au < crawling ; exists ; 2018 ; Contaduría Universidad de Antioquia Volume 2018 ; 2018 ; 37 ; >
       au < crawling ; exists ; 2019 ; Contaduría Universidad de Antioquia Volume 2019 ; 2019 ; 38 ; >
       au < frozen ; exists ; 2020 ; Contaduría Universidad de Antioquia Volume 2020 ; 2020 ; 39 ; >
       au < frozen ; exists ; 2021 ; Contaduría Universidad de Antioquia Volume 2021 ; 2021 ; 40 ; >
@@ -237,7 +237,7 @@
       au < manifest ; exists ; 2015 ; Investigación y Educación En Enfermería Volume 2015 ; 2015 ; 33 ; >
       au < crawling ; exists ; 2016 ; Investigación y Educación En Enfermería Volume 2016 ; 2016 ; 34 ; >
       au < frozen ; exists ; 2017 ; Investigación y Educación En Enfermería Volume 2017 ; 2017 ; 35 ; >
-      au < ready ; exists ; 2018 ; Investigación y Educación En Enfermería Volume 2018 ; 2018 ; 36 ; >
+      au < crawling ; exists ; 2018 ; Investigación y Educación En Enfermería Volume 2018 ; 2018 ; 36 ; >
       au < frozen ; exists ; 2019 ; Investigación y Educación En Enfermería Volume 2019 ; 2019 ; 37 ; >
       au < frozen ; exists ; 2020 ; Investigación y Educación En Enfermería Volume 2020 ; 2020 ; 38 ; >
       au < frozen ; exists ; 2021 ; Investigación y Educación En Enfermería Volume 2021 ; 2021 ; 39 ; >
@@ -325,8 +325,8 @@
       au < manifest ; exists ; 2015 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2015 ; 2015 ; 32 ; >
       au < frozen ; exists ; 2016 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2016 ; 2016 ; 33 ; >
       au < frozen ; exists ; 2017 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2017 ; 2017 ; 34 ; >
-      au < ready ; exists ; 2018 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2018 ; 2018 ; 35 ; >
-      au < ready ; exists ; 2019 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2019 ; 2019 ; 36 ; >
+      au < crawling ; exists ; 2018 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2018 ; 2018 ; 35 ; >
+      au < crawling ; exists ; 2019 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2019 ; 2019 ; 36 ; >
       au < frozen ; exists ; 2020 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2020 ; 2020 ; 37 ; >
       au < frozen ; exists ; 2021 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2021 ; 2021 ; 38 ; >
       au < frozen ; exists ; 2022 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2022 ; 2022 ; 39 ; >
@@ -374,9 +374,9 @@
       au < manifest ; exists ; 2013 ; Iatreia Volume 2013 ; 2013 ; 26 ; >
       au < manifest ; exists ; 2014 ; Iatreia Volume 2014 ; 2014 ; 27 ; >
       au < manifest ; exists ; 2015 ; Iatreia Volume 2015 ; 2015 ; 28 ; >
-      au < ready ; exists ; 2016 ; Iatreia Volume 2016 ; 2016 ; 29 ; >
+      au < crawling ; exists ; 2016 ; Iatreia Volume 2016 ; 2016 ; 29 ; >
       au < frozen ; exists ; 2017 ; Iatreia Volume 2017 ; 2017 ; 30 ; >
-      au < ready ; exists ; 2018 ; Iatreia Volume 2018 ; 2018 ; 31 ; >
+      au < crawling ; exists ; 2018 ; Iatreia Volume 2018 ; 2018 ; 31 ; >
       au < crawling ; exists ; 2019 ; Iatreia Volume 2019 ; 2019 ; 32 ; >
       au < frozen ; exists ; 2020 ; Iatreia Volume 2020 ; 2020 ; 33 ; >
       au < frozen ; exists ; 2021 ; Iatreia Volume 2021 ; 2021 ; 34 ; >
@@ -425,7 +425,7 @@
       au < manifest ; exists ; 2015 ; Estudios de Filosofía Volume 2015 ; 2015 ; 26 ; >
       au < frozen ; exists ; 2016 ; Estudios de Filosofía Volume 2016 ; 2016 ; 27 ; >
       au < crawling ; exists ; 2017 ; Estudios de Filosofía Volume 2017 ; 2017 ; 28 ; >
-      au < ready ; exists ; 2018 ; Estudios de Filosofía Volume 2018 ; 2018 ; 29 ; >
+      au < crawling ; exists ; 2018 ; Estudios de Filosofía Volume 2018 ; 2018 ; 29 ; >
       au < crawling ; exists ; 2019 ; Estudios de Filosofía Volume 2019 ; 2019 ; 30 ; >
       au < frozen ; exists ; 2020 ; Estudios de Filosofía Volume 2020 ; 2020 ; 31 ; >
       au < frozen ; exists ; 2021 ; Estudios de Filosofía Volume 2021 ; 2021 ; 32 ; >
@@ -519,7 +519,7 @@
       au < manifest ; exists ; 2014 ; Estudios Políticos Volume 2014 ; 2014 ; 23 ; >
       au < manifest ; exists ; 2015 ; Estudios Políticos Volume 2015 ; 2015 ; 24 ; >
       au < crawling ; exists ; 2016 ; Estudios Políticos Volume 2016 ; 2016 ; 25 ; >
-      au < ready ; exists ; 2017 ; Estudios Políticos Volume 2017 ; 2017 ; 26 ; >
+      au < crawling ; exists ; 2017 ; Estudios Políticos Volume 2017 ; 2017 ; 26 ; >
       au < frozen ; exists ; 2018 ; Estudios Políticos Volume 2018 ; 2018 ; 27 ; >
       au < crawling ; exists ; 2019 ; Estudios Políticos Volume 2019 ; 2019 ; 28 ; >
       au < frozen ; exists ; 2020 ; Estudios Políticos Volume 2020 ; 2020 ; 29 ; >
@@ -562,9 +562,9 @@
       au < manifest ; exists ; 2014 ; Íkala, Revista de Lenguaje y Cultura Volume 2014 ; 2014 ; 19 ; >
       au < manifest ; exists ; 2015 ; Íkala, Revista de Lenguaje y Cultura Volume 2015 ; 2015 ; 20 ; >
       au < frozen ; exists ; 2016 ; Íkala, Revista de Lenguaje y Cultura Volume 2016 ; 2016 ; 21 ; >
-      au < ready ; exists ; 2017 ; Íkala, Revista de Lenguaje y Cultura Volume 2017 ; 2017 ; 22 ; >
+      au < crawling ; exists ; 2017 ; Íkala, Revista de Lenguaje y Cultura Volume 2017 ; 2017 ; 22 ; >
       au < frozen ; exists ; 2018 ; Íkala, Revista de Lenguaje y Cultura Volume 2018 ; 2018 ; 23 ; >
-      au < ready ; exists ; 2019 ; Íkala, Revista de Lenguaje y Cultura Volume 2019 ; 2019 ; 24 ; >
+      au < crawling ; exists ; 2019 ; Íkala, Revista de Lenguaje y Cultura Volume 2019 ; 2019 ; 24 ; >
       au < frozen ; exists ; 2020 ; Íkala, Revista de Lenguaje y Cultura Volume 2020 ; 2020 ; 25 ; >
       au < frozen ; exists ; 2021 ; Íkala, Revista de Lenguaje y Cultura Volume 2021 ; 2021 ; 26 ; >
       au < frozen ; exists ; 2022 ; Íkala, Revista de Lenguaje y Cultura Volume 2022 ; 2022 ; 27 ; >
@@ -606,7 +606,7 @@
       au < frozen ; exists ; 2016 ; Estudios De Literatura Colombiana Volume 2016 ; 2016 ; 20 ; >
       au < frozen ; exists ; 2017 ; Estudios De Literatura Colombiana Volume 2017 ; 2017 ; 21 ; >
       au < frozen ; exists ; 2018 ; Estudios De Literatura Colombiana Volume 2018 ; 2018 ; 22 ; >
-      au < ready ; exists ; 2019 ; Estudios De Literatura Colombiana Volume 2019 ; 2019 ; 23 ; >
+      au < crawling ; exists ; 2019 ; Estudios De Literatura Colombiana Volume 2019 ; 2019 ; 23 ; >
       au < frozen ; exists ; 2020 ; Estudios De Literatura Colombiana Volume 2020 ; 2020 ; 24 ; >
       au < frozen ; exists ; 2021 ; Estudios De Literatura Colombiana Volume 2021 ; 2021 ; 25 ; >
       au < frozen ; exists ; 2022 ; Estudios De Literatura Colombiana Volume 2022 ; 2022 ; 26 ; >
@@ -636,7 +636,7 @@
       au < manifest ; exists ; 2016 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2016 ; 2016 ; 9 ; >
       au < frozen ; exists ; 2017 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2017 ; 2017 ; 10 ; >
       au < frozen ; exists ; 2018 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2018 ; 2018 ; 11 ; >
-      au < ready ; exists ; 2019 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2019 ; 2019 ; 12 ; >
+      au < crawling ; exists ; 2019 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2019 ; 2019 ; 12 ; >
       au < frozen ; exists ; 2020 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2020 ; 2020 ; 13 ; >
       au < frozen ; exists ; 2021 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2021 ; 2021 ; 14 ; >
       au < frozen ; exists ; 2022 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2022 ; 2022 ; 15 ; >
@@ -660,7 +660,7 @@
       au < manifest ; exists ; 2014 ; Trashumante Volume 2014 ; 2014 ; 2 ; >
       au < manifest ; exists ; 2015 ; Trashumante Volume 2015 ; 2015 ; 3 ; >
       au < manifest ; exists ; 2016 ; Trashumante Volume 2016 ; 2016 ; 4 ; >
-      au < ready ; exists ; 2017 ; Trashumante Volume 2017 ; 2017 ; 5 ; >
+      au < crawling ; exists ; 2017 ; Trashumante Volume 2017 ; 2017 ; 5 ; >
       au < frozen ; exists ; 2018 ; Trashumante Volume 2018 ; 2018 ; 6 ; >
       au < frozen ; exists ; 2019 ; Trashumante Volume 2019 ; 2019 ; 7 ; >
       au < frozen ; exists ; 2020 ; Trashumante Volume 2020 ; 2020 ; 8 ; >
