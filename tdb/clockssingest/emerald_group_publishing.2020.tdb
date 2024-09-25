@@ -101,7 +101,7 @@
     comment[journal_id] = aaaj
 
     au < manifest ; exists ; 1988 ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 ; >
+    au < ready ; exists ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 ; >
     au < finished ; crawling ; 1990 ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1992 ; Accounting, Auditing & Accountability Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
@@ -357,7 +357,7 @@
     au < manifest ; exists ; 1986 ; Aircraft Engineering and Aerospace Technology Volume 58 ; 58 ; >
     au < manifest ; exists ; 1987 ; Aircraft Engineering and Aerospace Technology Volume 59 ; 59 ; >
     au < manifest ; exists ; 1988 ; Aircraft Engineering and Aerospace Technology Volume 60 ; 60 ; >
-    au < manifest ; exists ; 1989 ; Aircraft Engineering and Aerospace Technology Volume 61 ; 61 ; >
+    au < ready ; exists ; 1989 ; Aircraft Engineering and Aerospace Technology Volume 61 ; 61 ; >
     au < finished ; crawling ; 1990 ; Aircraft Engineering and Aerospace Technology Volume 62 ; 62 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1991 ; Aircraft Engineering and Aerospace Technology Volume 63 ; 63 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1992 ; Aircraft Engineering and Aerospace Technology Volume 64 ; 64 ; reingest5.clockss.org:8082 >
@@ -409,7 +409,7 @@
     au < manifest ; exists ; 1986 ; American Journal of Business Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; American Journal of Business Volume 2 ; 2 ; >
     au < manifest ; exists ; 1988 ; American Journal of Business Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1989 ; American Journal of Business Volume 4 ; 4 ; >
+    au < ready ; exists ; 1989 ; American Journal of Business Volume 4 ; 4 ; >
     au < finished ; crawling ; 1990 ; American Journal of Business Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1991 ; American Journal of Business Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1992 ; American Journal of Business Volume 7 ; 7 ; reingest4.clockss.org:8082 >
@@ -511,7 +511,7 @@
     au < manifest ; exists ; 1986 ; Anti-Corrosion Methods and Materials Volume 33 ; 33 ; >
     au < manifest ; exists ; 1987 ; Anti-Corrosion Methods and Materials Volume 34 ; 34 ; >
     au < manifest ; exists ; 1988 ; Anti-Corrosion Methods and Materials Volume 35 ; 35 ; >
-    au < manifest ; exists ; 1989 ; Anti-Corrosion Methods and Materials Volume 36 ; 36 ; >
+    au < ready ; exists ; 1989 ; Anti-Corrosion Methods and Materials Volume 36 ; 36 ; >
     au < finished ; crawling ; 1990 ; Anti-Corrosion Methods and Materials Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1991 ; Anti-Corrosion Methods and Materials Volume 38 ; 38 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1992 ; Anti-Corrosion Methods and Materials Volume 39 ; 39 ; reingest4.clockss.org:8082 >
@@ -624,7 +624,7 @@
     param[journal_issn] = 0954-7517
     comment[journal_id] = apijm
 
-    au < manifest ; exists ; 1989 ; Asia Pacific International Journal of Marketing Volume 1 ; 1 ; >
+    au < ready ; exists ; 1989 ; Asia Pacific International Journal of Marketing Volume 1 ; 1 ; >
     au < finished ; crawling ; 1990 ; Asia Pacific International Journal of Marketing Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1991 ; Asia Pacific International Journal of Marketing Volume 3 ; 3 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1992 ; Asia Pacific International Journal of Marketing Volume 4 ; 4 ; reingest4.clockss.org:8082 >
@@ -875,7 +875,7 @@
     au < manifest ; exists ; 1986 ; Aslib Proceedings: New Information Perspectives Volume 38 ; 38 ; >
     au < manifest ; exists ; 1987 ; Aslib Proceedings: New Information Perspectives Volume 39 ; 39 ; >
     au < manifest ; exists ; 1988 ; Aslib Proceedings: New Information Perspectives Volume 40 ; 40 ; >
-    au < manifest ; exists ; 1989 ; Aslib Proceedings: New Information Perspectives Volume 41 ; 41 ; >
+    au < ready ; exists ; 1989 ; Aslib Proceedings: New Information Perspectives Volume 41 ; 41 ; >
     au < finished ; crawling ; 1990 ; Aslib Proceedings: New Information Perspectives Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; Aslib Proceedings: New Information Perspectives Volume 43 ; 43 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1992 ; Aslib Proceedings: New Information Perspectives Volume 44 ; 44 ; reingest2.clockss.org:8085 >
@@ -922,7 +922,7 @@
     au < manifest ; exists ; 1986 ; Assembly Automation Volume 6 ; 6 ; >
     au < manifest ; exists ; 1987 ; Assembly Automation Volume 7 ; 7 ; >
     au < manifest ; exists ; 1988 ; Assembly Automation Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1989 ; Assembly Automation Volume 9 ; 9 ; >
+    au < ready ; exists ; 1989 ; Assembly Automation Volume 9 ; 9 ; >
     au < finished ; crawling ; 1990 ; Assembly Automation Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; Assembly Automation Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1992 ; Assembly Automation Volume 12 ; 12 ; reingest1.clockss.org:8082 >
@@ -1084,7 +1084,7 @@
     comment[journal_id] = bl
 
     au < manifest ; exists ; 1988 ; The Bottom Line: Managing Library Finances Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1989 ; The Bottom Line: Managing Library Finances Volume 2 ; 2 ; >
+    au < ready ; exists ; 1989 ; The Bottom Line: Managing Library Finances Volume 2 ; 2 ; >
     au < finished ; crawling ; 1990 ; The Bottom Line: Managing Library Finances Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; The Bottom Line: Managing Library Finances Volume 4 ; 4 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1992 ; The Bottom Line: Managing Library Finances Volume 5 ; 5 ; reingest1.clockss.org:8082 >
@@ -1224,7 +1224,7 @@
     au < manifest ; exists ; 1986 ; British Food Journal Volume 88 ; 88 ; >
     au < manifest ; exists ; 1987 ; British Food Journal Volume 89 ; 89 ; >
     au < manifest ; exists ; 1988 ; British Food Journal Volume 90 ; 90 ; >
-    au < manifest ; exists ; 1989 ; British Food Journal Volume 91 ; 91 ; >
+    au < ready ; exists ; 1989 ; British Food Journal Volume 91 ; 91 ; >
     au < frozen ; exists ; 1990 ; British Food Journal Volume 92 ; 92 ; >
     au < frozen ; exists ; 1991 ; British Food Journal Volume 93 ; 93 ; >
     au < frozen ; exists ; 1992 ; British Food Journal Volume 94 ; 94 ; >
@@ -1638,7 +1638,7 @@
     au < manifest ; exists ; 1986 ; Circuit World Volume 12 ; 12 ; >
     au < manifest ; exists ; 1987 ; Circuit World Volume 13 ; 13 ; >
     au < manifest ; exists ; 1988 ; Circuit World Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1989 ; Circuit World Volume 15 ; 15 ; >
+    au < ready ; exists ; 1989 ; Circuit World Volume 15 ; 15 ; >
     au < frozen ; exists ; 1990 ; Circuit World Volume 16 ; 16 ; >
     au < frozen ; exists ; 1991 ; Circuit World Volume 17 ; 17 ; >
     au < frozen ; exists ; 1992 ; Circuit World Volume 18 ; 18 ; >
@@ -1765,7 +1765,7 @@
     au < manifest ; exists ; 1985 ; Collection Building Volume 6 ; 6 ; >
     au < manifest ; exists ; 1986 ; Collection Building Volume 7 ; 7 ; >
     au < manifest ; exists ; 1988 ; Collection Building Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1989 ; Collection Building Volume 9 ; 9 ; >
+    au < ready ; exists ; 1989 ; Collection Building Volume 9 ; 9 ; >
     au < frozen ; exists ; 1990 ; Collection Building Volume 10 ; 10 ; >
     au < frozen ; exists ; 1992 ; Collection Building Volume 11 ; 11 ; >
     au < frozen ; exists ; 1993 ; Collection Building Volume 12 ; 12 ; >
@@ -1834,7 +1834,7 @@
     au < manifest ; exists ; 1986 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 5 ; 5 ; >
     au < manifest ; exists ; 1987 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 6 ; 6 ; >
     au < manifest ; exists ; 1988 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1989 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 8 ; 8 ; >
+    au < ready ; exists ; 1989 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 8 ; 8 ; >
     au < frozen ; exists ; 1990 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 9 ; 9 ; >
     au < frozen ; exists ; 1991 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 10 ; 10 ; >
     au < frozen ; exists ; 1992 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 11 ; 11 ; >
@@ -2313,7 +2313,7 @@
     au < manifest ; exists ; 1986 ; Education + Training Volume 28 ; 28 ; >
     au < manifest ; exists ; 1987 ; Education + Training Volume 29 ; 29 ; >
     au < manifest ; exists ; 1988 ; Education + Training Volume 30 ; 30 ; >
-    au < manifest ; exists ; 1989 ; Education + Training Volume 31 ; 31 ; >
+    au < ready ; exists ; 1989 ; Education + Training Volume 31 ; 31 ; >
     au < frozen ; exists ; 1990 ; Education + Training Volume 32 ; 32 ; >
     au < frozen ; exists ; 1991 ; Education + Training Volume 33 ; 33 ; >
     au < frozen ; exists ; 1992 ; Education + Training Volume 34 ; 34 ; >
@@ -2390,7 +2390,7 @@
     au < manifest ; exists ; 1986 ; The Electronic Library Volume 4 ; 4 ; >
     au < manifest ; exists ; 1987 ; The Electronic Library Volume 5 ; 5 ; >
     au < manifest ; exists ; 1988 ; The Electronic Library Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1989 ; The Electronic Library Volume 7 ; 7 ; >
+    au < ready ; exists ; 1989 ; The Electronic Library Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; The Electronic Library Volume 8 ; 8 ; >
     au < frozen ; exists ; 1991 ; The Electronic Library Volume 9 ; 9 ; >
     au < frozen ; exists ; 1992 ; The Electronic Library Volume 10 ; 10 ; >
@@ -2468,7 +2468,7 @@
     au < manifest ; exists ; 1986 ; Employee Relations: An International Journal Volume 8 ; 8 ; >
     au < manifest ; exists ; 1987 ; Employee Relations: An International Journal Volume 9 ; 9 ; >
     au < manifest ; exists ; 1988 ; Employee Relations: An International Journal Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1989 ; Employee Relations: An International Journal Volume 11 ; 11 ; >
+    au < ready ; exists ; 1989 ; Employee Relations: An International Journal Volume 11 ; 11 ; >
     au < frozen ; exists ; 1990 ; Employee Relations: An International Journal Volume 12 ; 12 ; >
     au < frozen ; exists ; 1991 ; Employee Relations: An International Journal Volume 13 ; 13 ; >
     au < frozen ; exists ; 1992 ; Employee Relations: An International Journal Volume 14 ; 14 ; >
@@ -2544,7 +2544,7 @@
     au < manifest ; exists ; 1986 ; Engineering Computations Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; Engineering Computations Volume 4 ; 4 ; >
     au < manifest ; exists ; 1988 ; Engineering Computations Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1989 ; Engineering Computations Volume 6 ; 6 ; >
+    au < ready ; exists ; 1989 ; Engineering Computations Volume 6 ; 6 ; >
     au < frozen ; exists ; 1990 ; Engineering Computations Volume 7 ; 7 ; >
     au < frozen ; exists ; 1991 ; Engineering Computations Volume 8 ; 8 ; >
     au < frozen ; exists ; 1992 ; Engineering Computations Volume 9 ; 9 ; >
@@ -2675,7 +2675,7 @@
     au < manifest ; exists ; 1986 ; Equal Opportunities International Volume 5 ; 5 ; >
     au < manifest ; exists ; 1987 ; Equal Opportunities International Volume 6 ; 6 ; >
     au < manifest ; exists ; 1988 ; Equal Opportunities International Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1989 ; Equal Opportunities International Volume 8 ; 8 ; >
+    au < ready ; exists ; 1989 ; Equal Opportunities International Volume 8 ; 8 ; >
     au < frozen ; exists ; 1990 ; Equal Opportunities International Volume 9 ; 9 ; >
     au < frozen ; exists ; 1991 ; Equal Opportunities International Volume 10 ; 10 ; >
     au < frozen ; exists ; 1992 ; Equal Opportunities International Volume 11 ; 11 ; >
@@ -2795,7 +2795,7 @@
     comment[journal_id] = ebr
     # online from 1989
 
-    au < manifest ; exists ; 1989 ; European Business Review Volume 89 ; 89 ; >
+    au < ready ; exists ; 1989 ; European Business Review Volume 89 ; 89 ; >
     au < frozen ; exists ; 1990 ; European Business Review Volume 90 ; 90 ; >
     au < frozen ; exists ; 1991 ; European Business Review Volume 91 ; 91 ; >
     au < frozen ; exists ; 1992 ; European Business Review Volume 92 ; 92 ; >
@@ -2908,7 +2908,7 @@
     au < manifest ; exists ; 1986 ; European Journal of Marketing Volume 20 ; 20 ; >
     au < manifest ; exists ; 1987 ; European Journal of Marketing Volume 21 ; 21 ; >
     au < manifest ; exists ; 1988 ; European Journal of Marketing Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1989 ; European Journal of Marketing Volume 23 ; 23 ; >
+    au < ready ; exists ; 1989 ; European Journal of Marketing Volume 23 ; 23 ; >
     au < frozen ; exists ; 1990 ; European Journal of Marketing Volume 24 ; 24 ; >
     au < frozen ; exists ; 1991 ; European Journal of Marketing Volume 25 ; 25 ; >
     au < frozen ; exists ; 1992 ; European Journal of Marketing Volume 26 ; 26 ; >
@@ -2987,7 +2987,7 @@
     au < manifest ; exists ; 1986 ; Facilities Volume 4 ; 4 ; >
     au < manifest ; exists ; 1987 ; Facilities Volume 5 ; 5 ; >
     au < manifest ; exists ; 1988 ; Facilities Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1989 ; Facilities Volume 7 ; 7 ; >
+    au < ready ; exists ; 1989 ; Facilities Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; Facilities Volume 8 ; 8 ; >
     au < frozen ; exists ; 1991 ; Facilities Volume 9 ; 9 ; >
     au < frozen ; exists ; 1992 ; Facilities Volume 10 ; 10 ; >
@@ -3371,7 +3371,7 @@
     # online from 1989
     #continued_by = 2514-9369
 
-    au < manifest ; exists ; 1989 ; Humanomics Volume 5 ; 5 ; >
+    au < ready ; exists ; 1989 ; Humanomics Volume 5 ; 5 ; >
     au < frozen ; exists ; 1990 ; Humanomics Volume 6 ; 6 ; >
     au < frozen ; exists ; 1991 ; Humanomics Volume 7 ; 7 ; >
     au < frozen ; exists ; 1992 ; Humanomics Volume 8 ; 8 ; >
@@ -3485,7 +3485,7 @@
     au < manifest ; exists ; 1986 ; Industrial and Commercial Training Volume 18 ; 18 ; >
     au < manifest ; exists ; 1987 ; Industrial and Commercial Training Volume 19 ; 19 ; >
     au < manifest ; exists ; 1988 ; Industrial and Commercial Training Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1989 ; Industrial and Commercial Training Volume 21 ; 21 ; >
+    au < ready ; exists ; 1989 ; Industrial and Commercial Training Volume 21 ; 21 ; >
     au < frozen ; exists ; 1990 ; Industrial and Commercial Training Volume 22 ; 22 ; >
     au < frozen ; exists ; 1991 ; Industrial and Commercial Training Volume 23 ; 23 ; >
     au < frozen ; exists ; 1992 ; Industrial and Commercial Training Volume 24 ; 24 ; >
@@ -3576,7 +3576,7 @@
     au < manifest ; exists ; 1986 ; Industrial Lubrication and Tribology Volume 38 ; 38 ; >
     au < manifest ; exists ; 1987 ; Industrial Lubrication and Tribology Volume 39 ; 39 ; >
     au < manifest ; exists ; 1988 ; Industrial Lubrication and Tribology Volume 40 ; 40 ; >
-    au < manifest ; exists ; 1989 ; Industrial Lubrication and Tribology Volume 41 ; 41 ; >
+    au < ready ; exists ; 1989 ; Industrial Lubrication and Tribology Volume 41 ; 41 ; >
     au < frozen ; exists ; 1990 ; Industrial Lubrication and Tribology Volume 42 ; 42 ; >
     au < frozen ; exists ; 1991 ; Industrial Lubrication and Tribology Volume 43 ; 43 ; >
     au < frozen ; exists ; 1992 ; Industrial Lubrication and Tribology Volume 44 ; 44 ; >
@@ -3646,7 +3646,7 @@
     au < manifest ; exists ; 1986 ; Industrial Management & Data Systems Volume 86 ; 86 ; >
     au < manifest ; exists ; 1987 ; Industrial Management & Data Systems Volume 87 ; 87 ; >
     au < manifest ; exists ; 1988 ; Industrial Management & Data Systems Volume 88 ; 88 ; >
-    au < manifest ; exists ; 1989 ; Industrial Management & Data Systems Volume 89 ; 89 ; >
+    au < ready ; exists ; 1989 ; Industrial Management & Data Systems Volume 89 ; 89 ; >
     au < frozen ; exists ; 1990 ; Industrial Management & Data Systems Volume 90 ; 90 ; >
     au < frozen ; exists ; 1991 ; Industrial Management & Data Systems Volume 91 ; 91 ; >
     au < frozen ; exists ; 1992 ; Industrial Management & Data Systems Volume 92 ; 92 ; >
@@ -3711,7 +3711,7 @@
     au < manifest ; exists ; 1986 ; Industrial Robot: The international journal of industrial and service robotics Volume 13 ; 13 ; >
     au < manifest ; exists ; 1987 ; Industrial Robot: The international journal of industrial and service robotics Volume 14 ; 14 ; >
     au < manifest ; exists ; 1988 ; Industrial Robot: The international journal of industrial and service robotics Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1989 ; Industrial Robot: The international journal of industrial and service robotics Volume 16 ; 16 ; >
+    au < ready ; exists ; 1989 ; Industrial Robot: The international journal of industrial and service robotics Volume 16 ; 16 ; >
     au < frozen ; exists ; 1990 ; Industrial Robot: The international journal of industrial and service robotics Volume 17 ; 17 ; >
     au < frozen ; exists ; 1991 ; Industrial Robot: The international journal of industrial and service robotics Volume 18 ; 18 ; >
     au < doesNotExist ; doesNotExist ; 1992 ; Industrial Robot: The international journal of industrial and service robotics Volume 19 ; 19 ; >
@@ -3856,7 +3856,7 @@
     au < manifest ; exists ; 1985 ; Office Technology and People Volume 2 ; 2 ; >
     au < manifest ; exists ; 1987 ; Office Technology and People Volume 3 ; 3 ; >
     au < manifest ; exists ; 1988 ; Office Technology and People Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1989 ; Office Technology and People Volume 5 ; 5 ; >
+    au < ready ; exists ; 1989 ; Office Technology and People Volume 5 ; 5 ; >
 
   }
 
@@ -4129,7 +4129,7 @@
     au < manifest ; exists ; 1986 ; International Journal of Bank Marketing Volume 4 ; 4 ; >
     au < manifest ; exists ; 1987 ; International Journal of Bank Marketing Volume 5 ; 5 ; >
     au < manifest ; exists ; 1988 ; International Journal of Bank Marketing Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1989 ; International Journal of Bank Marketing Volume 7 ; 7 ; >
+    au < ready ; exists ; 1989 ; International Journal of Bank Marketing Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; International Journal of Bank Marketing Volume 8 ; 8 ; >
     au < frozen ; exists ; 1991 ; International Journal of Bank Marketing Volume 9 ; 9 ; >
     au < frozen ; exists ; 1992 ; International Journal of Bank Marketing Volume 10 ; 10 ; >
@@ -4231,7 +4231,7 @@
     param[journal_issn] = 0955-6222
     comment[journal_id] = ijcst
 
-    au < manifest ; exists ; 1989 ; International Journal of Clothing Science and Technology Volume 1 ; 1 ; >
+    au < ready ; exists ; 1989 ; International Journal of Clothing Science and Technology Volume 1 ; 1 ; >
     au < frozen ; exists ; 1990 ; International Journal of Clothing Science and Technology Volume 2 ; 2 ; >
     au < frozen ; exists ; 1991 ; International Journal of Clothing Science and Technology Volume 3 ; 3 ; >
     au < frozen ; exists ; 1992 ; International Journal of Clothing Science and Technology Volume 4 ; 4 ; >
@@ -4392,7 +4392,7 @@
     param[journal_issn] = 0959-6119
     comment[journal_id] = ijchm
 
-    au < manifest ; exists ; 1989 ; International Journal of Contemporary Hospitality Management Volume 1 ; 1 ; >
+    au < ready ; exists ; 1989 ; International Journal of Contemporary Hospitality Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 1990 ; International Journal of Contemporary Hospitality Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1991 ; International Journal of Contemporary Hospitality Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1992 ; International Journal of Contemporary Hospitality Management Volume 4 ; 4 ; >
@@ -4540,7 +4540,7 @@
 
     au < manifest ; exists ; 1987 ; International Journal of Educational Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1988 ; International Journal of Educational Management Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1989 ; International Journal of Educational Management Volume 3 ; 3 ; >
+    au < ready ; exists ; 1989 ; International Journal of Educational Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1990 ; International Journal of Educational Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1991 ; International Journal of Educational Management Volume 5 ; 5 ; >
     au < frozen ; exists ; 1992 ; International Journal of Educational Management Volume 6 ; 6 ; >
@@ -4782,7 +4782,7 @@
     comment[journal_id] = ijhcqa
 
     au < manifest ; exists ; 1988 ; International Journal of Health Care Quality Assurance Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1989 ; International Journal of Health Care Quality Assurance Volume 2 ; 2 ; >
+    au < ready ; exists ; 1989 ; International Journal of Health Care Quality Assurance Volume 2 ; 2 ; >
     au < frozen ; exists ; 1990 ; International Journal of Health Care Quality Assurance Volume 3 ; 3 ; >
     au < frozen ; exists ; 1991 ; International Journal of Health Care Quality Assurance Volume 4 ; 4 ; >
     au < frozen ; exists ; 1992 ; International Journal of Health Care Quality Assurance Volume 5 ; 5 ; >
@@ -5201,7 +5201,7 @@
     au < manifest ; exists ; 1986 ; International Journal of Manpower Volume 7 ; 7 ; >
     au < manifest ; exists ; 1987 ; International Journal of Manpower Volume 8 ; 8 ; >
     au < manifest ; exists ; 1988 ; International Journal of Manpower Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1989 ; International Journal of Manpower Volume 10 ; 10 ; >
+    au < ready ; exists ; 1989 ; International Journal of Manpower Volume 10 ; 10 ; >
     au < frozen ; exists ; 1990 ; International Journal of Manpower Volume 11 ; 11 ; >
     au < frozen ; exists ; 1991 ; International Journal of Manpower Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; International Journal of Manpower Volume 13 ; 13 ; >
@@ -5366,7 +5366,7 @@
     au < manifest ; exists ; 1986 ; International Journal of Operations & Production Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 1987 ; International Journal of Operations & Production Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1988 ; International Journal of Operations & Production Management Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1989 ; International Journal of Operations & Production Management Volume 9 ; 9 ; >
+    au < ready ; exists ; 1989 ; International Journal of Operations & Production Management Volume 9 ; 9 ; >
     au < frozen ; exists ; 1990 ; International Journal of Operations & Production Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 1991 ; International Journal of Operations & Production Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 1992 ; International Journal of Operations & Production Management Volume 12 ; 12 ; >
@@ -5575,7 +5575,7 @@
     au < manifest ; exists ; 1986 ; International Journal of Physical Distribution & Materials Management Volume 16 ; 16 ; >
     au < manifest ; exists ; 1987 ; International Journal of Physical Distribution & Materials Management Volume 17 ; 17 ; >
     au < manifest ; exists ; 1988 ; International Journal of Physical Distribution & Materials Management Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1989 ; International Journal of Physical Distribution & Materials Management Volume 19 ; 19 ; >
+    au < ready ; exists ; 1989 ; International Journal of Physical Distribution & Materials Management Volume 19 ; 19 ; >
 
   }
 
@@ -5711,7 +5711,7 @@
     comment[journal_id] = ijpsm
 
     au < manifest ; exists ; 1988 ; International Journal of Public Sector Management Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1989 ; International Journal of Public Sector Management Volume 2 ; 2 ; >
+    au < ready ; exists ; 1989 ; International Journal of Public Sector Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1990 ; International Journal of Public Sector Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1991 ; International Journal of Public Sector Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1992 ; International Journal of Public Sector Management Volume 5 ; 5 ; >
@@ -5766,7 +5766,7 @@
     au < manifest ; exists ; 1986 ; International Journal of Quality & Reliability Management Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; International Journal of Quality & Reliability Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 1988 ; International Journal of Quality & Reliability Management Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1989 ; International Journal of Quality & Reliability Management Volume 6 ; 6 ; >
+    au < ready ; exists ; 1989 ; International Journal of Quality & Reliability Management Volume 6 ; 6 ; >
     au < frozen ; exists ; 1990 ; International Journal of Quality & Reliability Management Volume 7 ; 7 ; >
     au < frozen ; exists ; 1991 ; International Journal of Quality & Reliability Management Volume 8 ; 8 ; >
     au < frozen ; exists ; 1992 ; International Journal of Quality & Reliability Management Volume 9 ; 9 ; >
@@ -5961,7 +5961,7 @@
     au < manifest ; exists ; 1986 ; International Journal of Social Economics Volume 13 ; 13 ; >
     au < manifest ; exists ; 1987 ; International Journal of Social Economics Volume 14 ; 14 ; >
     au < manifest ; exists ; 1988 ; International Journal of Social Economics Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1989 ; International Journal of Social Economics Volume 16 ; 16 ; >
+    au < ready ; exists ; 1989 ; International Journal of Social Economics Volume 16 ; 16 ; >
     au < frozen ; exists ; 1990 ; International Journal of Social Economics Volume 17 ; 17 ; >
     au < frozen ; exists ; 1991 ; International Journal of Social Economics Volume 18 ; 18 ; >
     au < frozen ; exists ; 1992 ; International Journal of Social Economics Volume 19 ; 19 ; >
@@ -6018,8 +6018,8 @@
     au < manifest ; exists ; 1985 ; International Journal of Sociology and Social Policy Volume 5 ; 5 ; >
     au < manifest ; exists ; 1986 ; International Journal of Sociology and Social Policy Volume 6 ; 6 ; >
     au < manifest ; exists ; 1987 ; International Journal of Sociology and Social Policy Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1989 ; International Journal of Sociology and Social Policy Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1989 ; International Journal of Sociology and Social Policy Volume 9 ; 9 ; >
+    au < ready ; exists ; 1989 ; International Journal of Sociology and Social Policy Volume 8 ; 8 ; >
+    au < ready ; exists ; 1989 ; International Journal of Sociology and Social Policy Volume 9 ; 9 ; >
     au < frozen ; exists ; 1990 ; International Journal of Sociology and Social Policy Volume 10 ; 10 ; >
     au < frozen ; exists ; 1991 ; International Journal of Sociology and Social Policy Volume 11 ; 11 ; >
     au < frozen ; exists ; 1992 ; International Journal of Sociology and Social Policy Volume 12 ; 12 ; >
@@ -6205,7 +6205,7 @@
     comment[journal_id] = ijwm
     comment[continued_by] = 1751-1062
 
-    au < manifest ; exists ; 1989 ; International Journal of Wine Marketing Volume 1 ; 1 ; >
+    au < ready ; exists ; 1989 ; International Journal of Wine Marketing Volume 1 ; 1 ; >
     au < frozen ; exists ; 1990 ; International Journal of Wine Marketing Volume 2 ; 2 ; >
     au < frozen ; exists ; 1991 ; International Journal of Wine Marketing Volume 3 ; 3 ; >
     au < frozen ; exists ; 1992 ; International Journal of Wine Marketing Volume 4 ; 4 ; >
@@ -6288,7 +6288,7 @@
     au < manifest ; exists ; 1986 ; International Marketing Review Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; International Marketing Review Volume 4 ; 4 ; >
     au < manifest ; exists ; 1988 ; International Marketing Review Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1989 ; International Marketing Review Volume 6 ; 6 ; >
+    au < ready ; exists ; 1989 ; International Marketing Review Volume 6 ; 6 ; >
     au < frozen ; exists ; 1990 ; International Marketing Review Volume 7 ; 7 ; >
     au < frozen ; exists ; 1991 ; International Marketing Review Volume 8 ; 8 ; >
     au < frozen ; exists ; 1992 ; International Marketing Review Volume 9 ; 9 ; >
@@ -6724,7 +6724,7 @@
     au < manifest ; exists ; 1986 ; Journal of Business & Industrial Marketing Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Journal of Business & Industrial Marketing Volume 2 ; 2 ; >
     au < manifest ; exists ; 1988 ; Journal of Business & Industrial Marketing Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1989 ; Journal of Business & Industrial Marketing Volume 4 ; 4 ; >
+    au < ready ; exists ; 1989 ; Journal of Business & Industrial Marketing Volume 4 ; 4 ; >
     au < frozen ; exists ; 1990 ; Journal of Business & Industrial Marketing Volume 5 ; 5 ; >
     au < frozen ; exists ; 1991 ; Journal of Business & Industrial Marketing Volume 6 ; 6 ; >
     au < frozen ; exists ; 1992 ; Journal of Business & Industrial Marketing Volume 7 ; 7 ; >
@@ -6782,7 +6782,7 @@
     au < manifest ; exists ; 1987 ; Journal of Business Strategy Volume 7 ; 7 ; >
     au < manifest ; exists ; 1987 ; Journal of Business Strategy Volume 8 ; 8 ; >
     au < manifest ; exists ; 1988 ; Journal of Business Strategy Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1989 ; Journal of Business Strategy Volume 10 ; 10 ; >
+    au < ready ; exists ; 1989 ; Journal of Business Strategy Volume 10 ; 10 ; >
     au < frozen ; exists ; 1990 ; Journal of Business Strategy Volume 11 ; 11 ; >
     au < frozen ; exists ; 1991 ; Journal of Business Strategy Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; Journal of Business Strategy Volume 13 ; 13 ; >
@@ -6985,7 +6985,7 @@
     au < manifest ; exists ; 1986 ; Journal of Consumer Marketing Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; Journal of Consumer Marketing Volume 4 ; 4 ; >
     au < manifest ; exists ; 1988 ; Journal of Consumer Marketing Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1989 ; Journal of Consumer Marketing Volume 6 ; 6 ; >
+    au < ready ; exists ; 1989 ; Journal of Consumer Marketing Volume 6 ; 6 ; >
     au < frozen ; exists ; 1990 ; Journal of Consumer Marketing Volume 7 ; 7 ; >
     au < frozen ; exists ; 1991 ; Journal of Consumer Marketing Volume 8 ; 8 ; >
     au < frozen ; exists ; 1992 ; Journal of Consumer Marketing Volume 9 ; 9 ; >
@@ -7172,7 +7172,7 @@
     au < manifest ; exists ; 1986 ; Journal of Documentation Volume 42 ; 42 ; >
     au < manifest ; exists ; 1987 ; Journal of Documentation Volume 43 ; 43 ; >
     au < manifest ; exists ; 1988 ; Journal of Documentation Volume 44 ; 44 ; >
-    au < manifest ; exists ; 1989 ; Journal of Documentation Volume 45 ; 45 ; >
+    au < ready ; exists ; 1989 ; Journal of Documentation Volume 45 ; 45 ; >
     au < frozen ; exists ; 1990 ; Journal of Documentation Volume 46 ; 46 ; >
     au < frozen ; exists ; 1991 ; Journal of Documentation Volume 47 ; 47 ; >
     au < frozen ; exists ; 1992 ; Journal of Documentation Volume 48 ; 48 ; >
@@ -7239,11 +7239,11 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 ; >
+    au < ready ; exists ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 ; >
     au < manifest ; exists ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 ; >
+    au < ready ; exists ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 ; >
+    au < ready ; exists ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 ; >
+    au < ready ; exists ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 ; >
     }
     {
     param[journal_issn] = 1026-4116
@@ -7299,7 +7299,7 @@
     au < manifest ; exists ; 1986 ; Journal of Economic Studies Volume 13 ; 13 ; >
     au < manifest ; exists ; 1987 ; Journal of Economic Studies Volume 14 ; 14 ; >
     au < manifest ; exists ; 1988 ; Journal of Economic Studies Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1989 ; Journal of Economic Studies Volume 16 ; 16 ; >
+    au < ready ; exists ; 1989 ; Journal of Economic Studies Volume 16 ; 16 ; >
     au < frozen ; exists ; 1990 ; Journal of Economic Studies Volume 17 ; 17 ; >
     au < frozen ; exists ; 1991 ; Journal of Economic Studies Volume 18 ; 18 ; >
     au < frozen ; exists ; 1992 ; Journal of Economic Studies Volume 19 ; 19 ; >
@@ -7375,7 +7375,7 @@
     au < manifest ; exists ; 1986 ; Journal of Educational Administration Volume 24 ; 24 ; >
     au < manifest ; exists ; 1987 ; Journal of Educational Administration Volume 25 ; 25 ; >
     au < manifest ; exists ; 1988 ; Journal of Educational Administration Volume 26 ; 26 ; >
-    au < manifest ; exists ; 1989 ; Journal of Educational Administration Volume 27 ; 27 ; >
+    au < ready ; exists ; 1989 ; Journal of Educational Administration Volume 27 ; 27 ; >
     au < frozen ; exists ; 1990 ; Journal of Educational Administration Volume 28 ; 28 ; >
     au < frozen ; exists ; 1991 ; Journal of Educational Administration Volume 29 ; 29 ; >
     au < frozen ; exists ; 1992 ; Journal of Educational Administration Volume 30 ; 30 ; >
@@ -7566,7 +7566,7 @@
     au < manifest ; exists ; 1986 ; Journal of European Industrial Training Volume 10 ; 10 ; >
     au < manifest ; exists ; 1987 ; Journal of European Industrial Training Volume 11 ; 11 ; >
     au < manifest ; exists ; 1988 ; Journal of European Industrial Training Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1989 ; Journal of European Industrial Training Volume 13 ; 13 ; >
+    au < ready ; exists ; 1989 ; Journal of European Industrial Training Volume 13 ; 13 ; >
     au < frozen ; exists ; 1990 ; Journal of European Industrial Training Volume 14 ; 14 ; >
     au < frozen ; exists ; 1991 ; Journal of European Industrial Training Volume 15 ; 15 ; >
     au < frozen ; exists ; 1992 ; Journal of European Industrial Training Volume 16 ; 16 ; >
@@ -8506,7 +8506,7 @@
     au < manifest ; exists ; 1986 ; Journal of Management Development Volume 5 ; 5 ; >
     au < manifest ; exists ; 1987 ; Journal of Management Development Volume 6 ; 6 ; >
     au < manifest ; exists ; 1988 ; Journal of Management Development Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1989 ; Journal of Management Development Volume 8 ; 8 ; >
+    au < ready ; exists ; 1989 ; Journal of Management Development Volume 8 ; 8 ; >
     au < frozen ; exists ; 1990 ; Journal of Management Development Volume 9 ; 9 ; >
     au < frozen ; exists ; 1991 ; Journal of Management Development Volume 10 ; 10 ; >
     au < frozen ; exists ; 1992 ; Journal of Management Development Volume 11 ; 11 ; >
@@ -8645,7 +8645,7 @@
     au < manifest ; exists ; 1986 ; Journal of Managerial Psychology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Journal of Managerial Psychology Volume 2 ; 2 ; >
     au < manifest ; exists ; 1988 ; Journal of Managerial Psychology Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1989 ; Journal of Managerial Psychology Volume 4 ; 4 ; >
+    au < ready ; exists ; 1989 ; Journal of Managerial Psychology Volume 4 ; 4 ; >
     au < frozen ; exists ; 1990 ; Journal of Managerial Psychology Volume 5 ; 5 ; >
     au < frozen ; exists ; 1991 ; Journal of Managerial Psychology Volume 6 ; 6 ; >
     au < frozen ; exists ; 1992 ; Journal of Managerial Psychology Volume 7 ; 7 ; >
@@ -8859,7 +8859,7 @@
     comment[journal_id] = jocm
 
     au < manifest ; exists ; 1988 ; Journal of Organizational Change Management Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1989 ; Journal of Organizational Change Management Volume 2 ; 2 ; >
+    au < ready ; exists ; 1989 ; Journal of Organizational Change Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1990 ; Journal of Organizational Change Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1991 ; Journal of Organizational Change Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1992 ; Journal of Organizational Change Management Volume 5 ; 5 ; >
@@ -9081,7 +9081,7 @@
     au < manifest ; exists ; 1986 ; Journal of Valuation Volume 4 ; 4 ; >
     au < manifest ; exists ; 1987 ; Journal of Valuation Volume 5 ; 5 ; >
     au < manifest ; exists ; 1988 ; Journal of Valuation Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1989 ; Journal of Valuation Volume 7 ; 7 ; >
+    au < ready ; exists ; 1989 ; Journal of Valuation Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; Journal of Valuation Volume 8 ; 8 ; >
 
   }
@@ -9359,7 +9359,7 @@
 
     au < manifest ; exists ; 1987 ; Journal of Services Marketing Volume 1 ; 1 ; >
     au < manifest ; exists ; 1988 ; Journal of Services Marketing Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1989 ; Journal of Services Marketing Volume 3 ; 3 ; >
+    au < ready ; exists ; 1989 ; Journal of Services Marketing Volume 3 ; 3 ; >
     au < frozen ; exists ; 1990 ; Journal of Services Marketing Volume 4 ; 4 ; >
     au < frozen ; exists ; 1991 ; Journal of Services Marketing Volume 5 ; 5 ; >
     au < frozen ; exists ; 1992 ; Journal of Services Marketing Volume 6 ; 6 ; >
@@ -9575,7 +9575,7 @@
     comment[journal_id] = ect
     #continued_by = 1366-5626
 
-    au < manifest ; exists ; 1989 ; Employee Counselling Today Volume 1 ; 1 ; >
+    au < ready ; exists ; 1989 ; Employee Counselling Today Volume 1 ; 1 ; >
     au < frozen ; exists ; 1990 ; Employee Counselling Today Volume 2 ; 2 ; >
     au < frozen ; exists ; 1991 ; Employee Counselling Today Volume 3 ; 3 ; >
     au < frozen ; exists ; 1992 ; Employee Counselling Today Volume 4 ; 4 ; >
@@ -9657,7 +9657,7 @@
     au < manifest ; exists ; 1986 ; Kybernetes Volume 15 ; 15 ; >
     au < manifest ; exists ; 1987 ; Kybernetes Volume 16 ; 16 ; >
     au < manifest ; exists ; 1988 ; Kybernetes Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1989 ; Kybernetes Volume 18 ; 18 ; >
+    au < ready ; exists ; 1989 ; Kybernetes Volume 18 ; 18 ; >
     au < frozen ; exists ; 1990 ; Kybernetes Volume 19 ; 19 ; >
     au < frozen ; exists ; 1991 ; Kybernetes Volume 20 ; 20 ; >
     au < frozen ; exists ; 1992 ; Kybernetes Volume 21 ; 21 ; >
@@ -9716,7 +9716,7 @@
     au < manifest ; exists ; 1986 ; Leadership & Organization Development Journal Volume 7 ; 7 ; >
     au < manifest ; exists ; 1987 ; Leadership & Organization Development Journal Volume 8 ; 8 ; >
     au < manifest ; exists ; 1988 ; Leadership & Organization Development Journal Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1989 ; Leadership & Organization Development Journal Volume 10 ; 10 ; >
+    au < ready ; exists ; 1989 ; Leadership & Organization Development Journal Volume 10 ; 10 ; >
     au < frozen ; exists ; 1990 ; Leadership & Organization Development Journal Volume 11 ; 11 ; >
     au < frozen ; exists ; 1991 ; Leadership & Organization Development Journal Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; Leadership & Organization Development Journal Volume 13 ; 13 ; >
@@ -9912,7 +9912,7 @@
     au < manifest ; exists ; 1986 ; Library Hi Tech Volume 4 ; 4 ; >
     au < manifest ; exists ; 1987 ; Library Hi Tech Volume 5 ; 5 ; >
     au < manifest ; exists ; 1988 ; Library Hi Tech Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1989 ; Library Hi Tech Volume 7 ; 7 ; >
+    au < ready ; exists ; 1989 ; Library Hi Tech Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; Library Hi Tech Volume 8 ; 8 ; >
     au < frozen ; exists ; 1991 ; Library Hi Tech Volume 9 ; 9 ; >
     au < frozen ; exists ; 1992 ; Library Hi Tech Volume 10 ; 10 ; >
@@ -10010,7 +10010,7 @@
     au < manifest ; exists ; 1986 ; Library Management Volume 7 ; 7 ; >
     au < manifest ; exists ; 1987 ; Library Management Volume 8 ; 8 ; >
     au < manifest ; exists ; 1988 ; Library Management Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1989 ; Library Management Volume 10 ; 10 ; >
+    au < ready ; exists ; 1989 ; Library Management Volume 10 ; 10 ; >
     au < frozen ; exists ; 1990 ; Library Management Volume 11 ; 11 ; >
     au < frozen ; exists ; 1991 ; Library Management Volume 12 ; 12 ; >
     au < frozen ; exists ; 1992 ; Library Management Volume 13 ; 13 ; >
@@ -10098,7 +10098,7 @@
     au < manifest ; exists ; 1986 ; Library Review Volume 35 ; 35 ; >
     au < manifest ; exists ; 1987 ; Library Review Volume 36 ; 36 ; >
     au < manifest ; exists ; 1988 ; Library Review Volume 37 ; 37 ; >
-    au < manifest ; exists ; 1989 ; Library Review Volume 38 ; 38 ; >
+    au < ready ; exists ; 1989 ; Library Review Volume 38 ; 38 ; >
     au < frozen ; exists ; 1990 ; Library Review Volume 39 ; 39 ; >
     au < frozen ; exists ; 1991 ; Library Review Volume 40 ; 40 ; >
     au < frozen ; exists ; 1992 ; Library Review Volume 41 ; 41 ; >
@@ -10162,7 +10162,7 @@
     #continued_by = 0957-6053
 
     au < manifest ; exists ; 1988 ; Logistics World Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1989 ; Logistics World Volume 2 ; 2 ; >
+    au < ready ; exists ; 1989 ; Logistics World Volume 2 ; 2 ; >
 
   }
 
@@ -10179,7 +10179,7 @@
     #continues = 0953-2137
     comment[continued_by] = 1741-0398
 
-    au < manifest ; exists ; 1989 ; Logistics Information Management Volume 2 issue 4 ; 2 ; >
+    au < ready ; exists ; 1989 ; Logistics Information Management Volume 2 issue 4 ; 2 ; >
     au < frozen ; exists ; 1990 ; Logistics Information Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1991 ; Logistics Information Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1992 ; Logistics Information Management Volume 5 ; 5 ; >
@@ -10230,7 +10230,7 @@
     au < manifest ; exists ; 1986 ; Management Decision Volume 24 ; 24 ; >
     au < manifest ; exists ; 1987 ; Management Decision Volume 25 ; 25 ; >
     au < manifest ; exists ; 1988 ; Management Decision Volume 26 ; 26 ; >
-    au < manifest ; exists ; 1989 ; Management Decision Volume 27 ; 27 ; >
+    au < ready ; exists ; 1989 ; Management Decision Volume 27 ; 27 ; >
     au < frozen ; exists ; 1990 ; Management Decision Volume 28 ; 28 ; >
     au < frozen ; exists ; 1991 ; Management Decision Volume 29 ; 29 ; >
     au < frozen ; exists ; 1992 ; Management Decision Volume 30 ; 30 ; >
@@ -10350,7 +10350,7 @@
     au < manifest ; exists ; 1986 ; Management Research News Volume 9 ; 9 ; >
     au < manifest ; exists ; 1987 ; Management Research News Volume 10 ; 10 ; >
     au < manifest ; exists ; 1988 ; Management Research News Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1989 ; Management Research News Volume 12 ; 12 ; >
+    au < ready ; exists ; 1989 ; Management Research News Volume 12 ; 12 ; >
     au < frozen ; exists ; 1990 ; Management Research News Volume 13 ; 13 ; >
     au < frozen ; exists ; 1991 ; Management Research News Volume 14 ; 14 ; >
     au < frozen ; exists ; 1992 ; Management Research News Volume 15 ; 15 ; >
@@ -10453,7 +10453,7 @@
     au < manifest ; exists ; 1986 ; Managerial Auditing Journal Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Managerial Auditing Journal Volume 2 ; 2 ; >
     au < manifest ; exists ; 1988 ; Managerial Auditing Journal Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1989 ; Managerial Auditing Journal Volume 4 ; 4 ; >
+    au < ready ; exists ; 1989 ; Managerial Auditing Journal Volume 4 ; 4 ; >
     au < frozen ; exists ; 1990 ; Managerial Auditing Journal Volume 5 ; 5 ; >
     au < frozen ; exists ; 1991 ; Managerial Auditing Journal Volume 6 ; 6 ; >
     au < frozen ; exists ; 1992 ; Managerial Auditing Journal Volume 7 ; 7 ; >
@@ -10517,7 +10517,7 @@
     au < manifest ; exists ; 1986 ; Managerial Finance Volume 12 ; 12 ; >
     au < manifest ; exists ; 1987 ; Managerial Finance Volume 13 ; 13 ; >
     au < manifest ; exists ; 1988 ; Managerial Finance Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1989 ; Managerial Finance Volume 15 ; 15 ; >
+    au < ready ; exists ; 1989 ; Managerial Finance Volume 15 ; 15 ; >
     au < frozen ; exists ; 1990 ; Managerial Finance Volume 16 ; 16 ; >
     au < frozen ; exists ; 1991 ; Managerial Finance Volume 17 ; 17 ; >
     au < frozen ; exists ; 1992 ; Managerial Finance Volume 18 ; 18 ; >
@@ -10598,7 +10598,7 @@
     au < manifest ; exists ; 1986 ; Managerial Law Volume 28 ; 28 ; >
     au < manifest ; exists ; 1987 ; Managerial Law Volume 29 ; 29 ; >
     au < manifest ; exists ; 1988 ; Managerial Law Volume 30 ; 30 ; >
-    au < manifest ; exists ; 1989 ; Managerial Law Volume 31 ; 31 ; >
+    au < ready ; exists ; 1989 ; Managerial Law Volume 31 ; 31 ; >
     au < frozen ; exists ; 1990 ; Managerial Law Volume 32 ; 32 ; >
     au < frozen ; exists ; 1991 ; Managerial Law Volume 33 ; 33 ; >
     au < frozen ; exists ; 1992 ; Managerial Law Volume 34 ; 34 ; >
@@ -10675,7 +10675,7 @@
     au < manifest ; exists ; 1986 ; Marketing Intelligence & Planning Volume 4 ; 4 ; >
     au < manifest ; exists ; 1987 ; Marketing Intelligence & Planning Volume 5 ; 5 ; >
     au < manifest ; exists ; 1988 ; Marketing Intelligence & Planning Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1989 ; Marketing Intelligence & Planning Volume 7 ; 7 ; >
+    au < ready ; exists ; 1989 ; Marketing Intelligence & Planning Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; Marketing Intelligence & Planning Volume 8 ; 8 ; >
     au < frozen ; exists ; 1991 ; Marketing Intelligence & Planning Volume 9 ; 9 ; >
     au < frozen ; exists ; 1992 ; Marketing Intelligence & Planning Volume 10 ; 10 ; >
@@ -10919,7 +10919,7 @@
     au < manifest ; exists ; 1986 ; Microelectronics International Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; Microelectronics International Volume 4 ; 4 ; >
     au < manifest ; exists ; 1988 ; Microelectronics International Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1989 ; Microelectronics International Volume 6 ; 6 ; >
+    au < ready ; exists ; 1989 ; Microelectronics International Volume 6 ; 6 ; >
     au < frozen ; exists ; 1990 ; Microelectronics International Volume 7 ; 7 ; >
     au < frozen ; exists ; 1991 ; Microelectronics International Volume 8 ; 8 ; >
     au < frozen ; exists ; 1992 ; Microelectronics International Volume 9 ; 9 ; >
@@ -11176,7 +11176,7 @@
     au < manifest ; exists ; 1986 ; New Library World Volume 87 ; 87 ; >
     au < manifest ; exists ; 1987 ; New Library World Volume 88 ; 88 ; >
     au < manifest ; exists ; 1988 ; New Library World Volume 89 ; 89 ; >
-    au < manifest ; exists ; 1989 ; New Library World Volume 90 ; 90 ; >
+    au < ready ; exists ; 1989 ; New Library World Volume 90 ; 90 ; >
     au < frozen ; exists ; 1990 ; New Library World Volume 91 ; 91 ; >
     au < frozen ; exists ; 1991 ; New Library World Volume 92 ; 92 ; >
     au < frozen ; exists ; 1992 ; New Library World Volume 93 ; 93 ; >
@@ -11260,7 +11260,7 @@
     au < manifest ; exists ; 1986 ; Nutrition & Food Science Volume 86 ; 86 ; >
     au < manifest ; exists ; 1987 ; Nutrition & Food Science Volume 87 ; 87 ; >
     au < manifest ; exists ; 1988 ; Nutrition & Food Science Volume 88 ; 88 ; >
-    au < manifest ; exists ; 1989 ; Nutrition & Food Science Volume 89 ; 89 ; >
+    au < ready ; exists ; 1989 ; Nutrition & Food Science Volume 89 ; 89 ; >
     au < frozen ; exists ; 1990 ; Nutrition & Food Science Volume 90 ; 90 ; >
     au < frozen ; exists ; 1991 ; Nutrition & Food Science Volume 91 ; 91 ; >
     au < frozen ; exists ; 1992 ; Nutrition & Food Science Volume 92 ; 92 ; >
@@ -11314,7 +11314,7 @@
     au < manifest ; exists ; 1986 ; OCLC Micro Volume 2 ; 2 ; >
     au < manifest ; exists ; 1987 ; OCLC Micro Volume 3 ; 3 ; >
     au < manifest ; exists ; 1988 ; OCLC Micro Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1989 ; OCLC Micro Volume 5 ; 5 ; >
+    au < ready ; exists ; 1989 ; OCLC Micro Volume 5 ; 5 ; >
     au < frozen ; exists ; 1990 ; OCLC Micro Volume 6 ; 6 ; >
     au < frozen ; exists ; 1991 ; OCLC Micro Volume 7 ; 7 ; >
     au < frozen ; exists ; 1992 ; OCLC Micro Volume 8 ; 8 ; >
@@ -11445,7 +11445,7 @@
     au < manifest ; exists ; 1986 ; Online Review Volume 10 ; 10 ; >
     au < manifest ; exists ; 1987 ; Online Review Volume 11 ; 11 ; >
     au < manifest ; exists ; 1988 ; Online Review Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1989 ; Online Review Volume 13 ; 13 ; >
+    au < ready ; exists ; 1989 ; Online Review Volume 13 ; 13 ; >
     au < frozen ; exists ; 1990 ; Online Review Volume 14 ; 14 ; >
     au < frozen ; exists ; 1991 ; Online Review Volume 15 ; 15 ; >
     au < frozen ; exists ; 1992 ; Online Review Volume 16 ; 16 ; >
@@ -11638,7 +11638,7 @@
     au < manifest ; exists ; 1986 ; Personnel Review Volume 15 ; 15 ; >
     au < manifest ; exists ; 1987 ; Personnel Review Volume 16 ; 16 ; >
     au < manifest ; exists ; 1988 ; Personnel Review Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1989 ; Personnel Review Volume 18 ; 18 ; >
+    au < ready ; exists ; 1989 ; Personnel Review Volume 18 ; 18 ; >
     au < frozen ; exists ; 1990 ; Personnel Review Volume 19 ; 19 ; >
     au < frozen ; exists ; 1991 ; Personnel Review Volume 20 ; 20 ; >
     au < frozen ; exists ; 1992 ; Personnel Review Volume 21 ; 21 ; >
@@ -11705,7 +11705,7 @@
     au < manifest ; exists ; 1986 ; Pigment & Resin Technology Volume 15 ; 15 ; >
     au < manifest ; exists ; 1987 ; Pigment & Resin Technology Volume 16 ; 16 ; >
     au < manifest ; exists ; 1988 ; Pigment & Resin Technology Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1989 ; Pigment & Resin Technology Volume 18 ; 18 ; >
+    au < ready ; exists ; 1989 ; Pigment & Resin Technology Volume 18 ; 18 ; >
     au < frozen ; exists ; 1990 ; Pigment & Resin Technology Volume 19 ; 19 ; >
     au < frozen ; exists ; 1991 ; Pigment & Resin Technology Volume 20 ; 20 ; >
     au < frozen ; exists ; 1992 ; Pigment & Resin Technology Volume 21 ; 21 ; >
@@ -11854,7 +11854,7 @@
     au < manifest ; exists ; 1986 ; Program: Electronic Library and Information Systems Volume 20 ; 20 ; >
     au < manifest ; exists ; 1987 ; Program: Electronic Library and Information Systems Volume 21 ; 21 ; >
     au < manifest ; exists ; 1988 ; Program: Electronic Library and Information Systems Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1989 ; Program: Electronic Library and Information Systems Volume 23 ; 23 ; >
+    au < ready ; exists ; 1989 ; Program: Electronic Library and Information Systems Volume 23 ; 23 ; >
     au < frozen ; exists ; 1990 ; Program: Electronic Library and Information Systems Volume 24 ; 24 ; >
     au < frozen ; exists ; 1991 ; Program: Electronic Library and Information Systems Volume 25 ; 25 ; >
     au < frozen ; exists ; 1992 ; Program: Electronic Library and Information Systems Volume 26 ; 26 ; >
@@ -11923,7 +11923,7 @@
     au < manifest ; exists ; 1986 ; Property Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 1987 ; Property Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 1988 ; Property Management Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1989 ; Property Management Volume 7 ; 7 ; >
+    au < ready ; exists ; 1989 ; Property Management Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; Property Management Volume 8 ; 8 ; >
     au < frozen ; exists ; 1991 ; Property Management Volume 9 ; 9 ; >
     au < frozen ; exists ; 1992 ; Property Management Volume 10 ; 10 ; >
@@ -12271,9 +12271,9 @@
     param[journal_issn] = 0956-5698
     comment[journal_id] = rmj
 
-    au < manifest ; exists ; 1989 ; Records Management Journal Volume 1 ; 1 ; >
+    au < ready ; exists ; 1989 ; Records Management Journal Volume 1 ; 1 ; >
     au < frozen ; exists ; 1990 ; Records Management Journal Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1991 ; Records Management Journal Volume 3 ; 3 ; >
+    au < ready ; exists ; 1991 ; Records Management Journal Volume 3 ; 3 ; >
     au < frozen ; exists ; 1994 ; Records Management Journal Volume 4 ; 4 ; >
     au < finished ; manifest ; 1995 ; Records Management Journal Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Records Management Journal Volume 6 ; 6 ; reingest5.clockss.org:8082 >
@@ -12371,9 +12371,9 @@
     au < manifest ; exists ; 1986 ; Reference Services Review Volume 14 ; 14 ; >
     au < manifest ; exists ; 1987 ; Reference Services Review Volume 15 ; 15 ; >
     au < manifest ; exists ; 1988 ; Reference Services Review Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1989 ; Reference Services Review Volume 17 ; 17 ; >
+    au < ready ; exists ; 1989 ; Reference Services Review Volume 17 ; 17 ; >
     au < frozen ; exists ; 1990 ; Reference Services Review Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1991 ; Reference Services Review Volume 19 ; 19 ; >
+    au < ready ; exists ; 1991 ; Reference Services Review Volume 19 ; 19 ; >
     au < frozen ; exists ; 1992 ; Reference Services Review Volume 20 ; 20 ; >
     au < frozen ; exists ; 1993 ; Reference Services Review Volume 21 ; 21 ; >
     au < finished ; manifest ; 1994 ; Reference Services Review Volume 22 ; 22 ; reingest4.clockss.org:8082 >
@@ -12533,9 +12533,9 @@
     au < manifest ; exists ; 1986 ; Sensor Review Volume 6 ; 6 ; >
     au < manifest ; exists ; 1987 ; Sensor Review Volume 7 ; 7 ; >
     au < manifest ; exists ; 1988 ; Sensor Review Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1989 ; Sensor Review Volume 9 ; 9 ; >
+    au < ready ; exists ; 1989 ; Sensor Review Volume 9 ; 9 ; >
     au < frozen ; exists ; 1990 ; Sensor Review Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1991 ; Sensor Review Volume 11 ; 11 ; >
+    au < ready ; exists ; 1991 ; Sensor Review Volume 11 ; 11 ; >
     au < frozen ; exists ; 1992 ; Sensor Review Volume 12 ; 12 ; >
     au < frozen ; exists ; 1993 ; Sensor Review Volume 13 ; 13 ; >
     au < finished ; manifest ; 1994 ; Sensor Review Volume 14 ; 14 ; reingest4.clockss.org:8082 >
@@ -12728,9 +12728,9 @@
     param[journal_issn] = 0954-0911
     comment[journal_id] = ssmt
 
-    au < manifest ; exists ; 1989 ; Soldering & Surface Mount Technology Volume 1 ; 1 ; >
+    au < ready ; exists ; 1989 ; Soldering & Surface Mount Technology Volume 1 ; 1 ; >
     au < frozen ; exists ; 1990 ; Soldering & Surface Mount Technology Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1991 ; Soldering & Surface Mount Technology Volume 3 ; 3 ; >
+    au < ready ; exists ; 1991 ; Soldering & Surface Mount Technology Volume 3 ; 3 ; >
     au < frozen ; exists ; 1992 ; Soldering & Surface Mount Technology Volume 4 ; 4 ; >
     au < frozen ; exists ; 1993 ; Soldering & Surface Mount Technology Volume 5 ; 5 ; >
     au < frozen ; exists ; 1994 ; Soldering & Surface Mount Technology Volume 6 ; 6 ; >
@@ -12978,9 +12978,9 @@
     au < manifest ; exists ; 1986 ; Planning Review Volume 14 ; 14 ; >
     au < manifest ; exists ; 1987 ; Planning Review Volume 15 ; 15 ; >
     au < manifest ; exists ; 1988 ; Planning Review Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1989 ; Planning Review Volume 17 ; 17 ; >
+    au < ready ; exists ; 1989 ; Planning Review Volume 17 ; 17 ; >
     au < frozen ; exists ; 1990 ; Planning Review Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1991 ; Planning Review Volume 19 ; 19 ; >
+    au < ready ; exists ; 1991 ; Planning Review Volume 19 ; 19 ; >
     au < frozen ; exists ; 1992 ; Planning Review Volume 20 ; 20 ; >
     au < frozen ; exists ; 1993 ; Planning Review Volume 21 ; 21 ; >
     au < finished ; manifest ; 1994 ; Planning Review Volume 22 ; 22 ; reingest5.clockss.org:8082 >
@@ -13051,9 +13051,9 @@
     au < manifest ; exists ; 1986 ; Structural Survey Volume 4 ; 4 ; >
     au < manifest ; exists ; 1987 ; Structural Survey Volume 5 ; 5 ; >
     au < manifest ; exists ; 1988 ; Structural Survey Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1989 ; Structural Survey Volume 7 ; 7 ; >
+    au < ready ; exists ; 1989 ; Structural Survey Volume 7 ; 7 ; >
     au < frozen ; exists ; 1990 ; Structural Survey Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1991 ; Structural Survey Volume 9 ; 9 ; >
+    au < ready ; exists ; 1991 ; Structural Survey Volume 9 ; 9 ; >
     au < frozen ; exists ; 1992 ; Structural Survey Volume 10 ; 10 ; >
     au < frozen ; exists ; 1993 ; Structural Survey Volume 11 ; 11 ; >
     au < finished ; manifest ; 1994 ; Structural Survey Volume 12 ; 12 ; reingest2.clockss.org:8085 >
@@ -13126,7 +13126,7 @@
     au < manifest ; exists ; 1985 ; Studies in Economics and Finance Volume 9 ; 9 ; >
     au < manifest ; exists ; 1986 ; Studies in Economics and Finance Volume 10 ; 10 ; >
     au < manifest ; exists ; 1987 ; Studies in Economics and Finance Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1989 ; Studies in Economics and Finance Volume 12 ; 12 ; >
+    au < ready ; exists ; 1989 ; Studies in Economics and Finance Volume 12 ; 12 ; >
     au < frozen ; exists ; 1990 ; Studies in Economics and Finance Volume 13 ; 13 ; >
     au < frozen ; exists ; 1993 ; Studies in Economics and Finance Volume 14 ; 14 ; >
     au < frozen ; exists ; 1994 ; Studies in Economics and Finance Volume 15 ; 15 ; >
@@ -13484,9 +13484,9 @@
     comment[journal_id] = tqmm
     comment[continued_by] = 1754-2731
 
-    au < manifest ; exists ; 1988-1989 ; The TQM Magazine Volume 1 ; 1 ; >
+    au < ready ; exists ; 1988-1989 ; The TQM Magazine Volume 1 ; 1 ; >
     au < frozen ; exists ; 1990 ; The TQM Magazine Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1991 ; The TQM Magazine Volume 3 ; 3 ; >
+    au < ready ; exists ; 1991 ; The TQM Magazine Volume 3 ; 3 ; >
     au < frozen ; exists ; 1992 ; The TQM Magazine Volume 4 ; 4 ; >
     au < frozen ; exists ; 1993 ; The TQM Magazine Volume 5 ; 5 ; >
     au < frozen ; exists ; 1994 ; The TQM Magazine Volume 6 ; 6 ; >
@@ -13604,9 +13604,9 @@
     au < manifest ; exists ; 1986 ; VINE Volume 16 ; 16 ; >
     au < manifest ; exists ; 1987 ; VINE Volume 17 ; 17 ; >
     au < manifest ; exists ; 1988 ; VINE Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1989 ; VINE Volume 19 ; 19 ; >
+    au < ready ; exists ; 1989 ; VINE Volume 19 ; 19 ; >
     au < frozen ; exists ; 1990 ; VINE Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1991 ; VINE Volume 21 ; 21 ; >
+    au < ready ; exists ; 1991 ; VINE Volume 21 ; 21 ; >
     au < frozen ; exists ; 1992 ; VINE Volume 22 ; 22 ; >
     au < frozen ; exists ; 1993 ; VINE Volume 23 ; 23 ; >
     au < frozen ; exists ; 1994 ; VINE Volume 24 ; 24 ; >
@@ -13649,7 +13649,7 @@
     au < manifest ; exists ; 1985-1986 ; Women in Management Review Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Women in Management Review Volume 2 ; 2 ; >
     au < manifest ; exists ; 1988 ; Women in Management Review Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1989 ; Women in Management Review Volume 4 ; 4 ; >
+    au < ready ; exists ; 1989 ; Women in Management Review Volume 4 ; 4 ; >
     au < frozen ; exists ; 1990 ; Women in Management Review Volume 5 ; 5 ; >
     au < frozen ; exists ; 1991 ; Women in Management Review Volume 6 ; 6 ; >
     au < frozen ; exists ; 1992 ; Women in Management Review Volume 7 ; 7 ; >
@@ -13720,9 +13720,9 @@
     au < manifest ; exists ; 1986 ; Work Study Volume 35 ; 35 ; >
     au < manifest ; exists ; 1987 ; Work Study Volume 36 ; 36 ; >
     au < manifest ; exists ; 1988 ; Work Study Volume 37 ; 37 ; >
-    au < manifest ; exists ; 1989 ; Work Study Volume 38 ; 38 ; >
+    au < ready ; exists ; 1989 ; Work Study Volume 38 ; 38 ; >
     au < frozen ; exists ; 1990 ; Work Study Volume 39 ; 39 ; >
-    au < manifest ; exists ; 1991 ; Work Study Volume 40 ; 40 ; >
+    au < ready ; exists ; 1991 ; Work Study Volume 40 ; 40 ; >
     au < frozen ; exists ; 1992 ; Work Study Volume 41 ; 41 ; >
     au < frozen ; exists ; 1993 ; Work Study Volume 42 ; 42 ; >
     au < finished ; manifest ; 1994 ; Work Study Volume 43 ; 43 ; reingest1.clockss.org:8082 >
