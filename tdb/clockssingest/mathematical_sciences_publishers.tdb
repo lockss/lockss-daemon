@@ -487,8 +487,8 @@
 
     param[journal_id] = ent
 
-    au < ready ; exists ; 2022 ; Essential Number Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ ; >
-    au < ready ; exists ; 2023 ; Essential Number Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2022 ; Essential Number Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2023 ; Essential Number Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ ; >
     au < expected ; exists ; 2024 ; Essential Number Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ ; >
 
   }
@@ -537,8 +537,8 @@
 
     param[journal_id] = mt
 
-    au < ready ; exists ; 2022 ; Model Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ ; >
-    au < ready ; exists ; 2023 ; Model Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2022 ; Model Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2023 ; Model Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ ; >
     au < expected ; exists ; 2024 ; Model Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ ; >
 
   }
