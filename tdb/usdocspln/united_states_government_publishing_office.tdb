@@ -452,7 +452,7 @@
     au < released ; 1957 ; Congressional Committee Prints 1957 ; 1957 ; https://www.govinfo.gov/ >
     au < released ; 1958 ; Congressional Committee Prints 1958 ; 1958 ; https://www.govinfo.gov/ >
     au < released ; 1960 ; Congressional Committee Prints 1960 ; 1960 ; https://www.govinfo.gov/ >
-    au < releasing ; 1963 ; Congressional Committee Prints 1963 ; 1963 ; https://www.govinfo.gov/ >
+    au < released ; 1963 ; Congressional Committee Prints 1963 ; 1963 ; https://www.govinfo.gov/ >
     au < released ; 1964 ; Congressional Committee Prints 1964 ; 1964 ; https://www.govinfo.gov/ >
     au < released ; 1967 ; Congressional Committee Prints 1967 ; 1967 ; https://www.govinfo.gov/ >
     au < released ; 1969 ; Congressional Committee Prints 1969 ; 1969 ; https://www.govinfo.gov/ >
@@ -474,15 +474,15 @@
     au < released ; 2022 ; Congressional Committee Prints 2022 ; 2022 ; https://www.govinfo.gov/ >
 
     au < manifest ; 1941 ; Congressional Committee Prints 1941 ; 1941 ; https://www.govinfo.gov/ >
-    au < releasing ; 1951 ; Congressional Committee Prints 1951 ; 1951 ; https://www.govinfo.gov/ >
-    au < releasing ; 1959 ; Congressional Committee Prints 1959 ; 1959 ; https://www.govinfo.gov/ >
-    au < releasing ; 1961 ; Congressional Committee Prints 1961 ; 1961 ; https://www.govinfo.gov/ >
-    au < releasing ; 1962 ; Congressional Committee Prints 1962 ; 1962 ; https://www.govinfo.gov/ >
-    au < releasing ; 1965 ; Congressional Committee Prints 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < releasing ; 1966 ; Congressional Committee Prints 1966 ; 1966 ; https://www.govinfo.gov/ >
-    au < releasing ; 1970 ; Congressional Committee Prints 1970 ; 1970 ; https://www.govinfo.gov/ >
-    au < releasing ; 1981 ; Congressional Committee Prints 1981 ; 1981 ; https://www.govinfo.gov/ >
-    au < releasing ; 1982 ; Congressional Committee Prints 1982 ; 1982 ; https://www.govinfo.gov/ >
+    au < released ; 1951 ; Congressional Committee Prints 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < released ; 1959 ; Congressional Committee Prints 1959 ; 1959 ; https://www.govinfo.gov/ >
+    au < released ; 1961 ; Congressional Committee Prints 1961 ; 1961 ; https://www.govinfo.gov/ >
+    au < released ; 1962 ; Congressional Committee Prints 1962 ; 1962 ; https://www.govinfo.gov/ >
+    au < released ; 1965 ; Congressional Committee Prints 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < released ; 1966 ; Congressional Committee Prints 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < released ; 1970 ; Congressional Committee Prints 1970 ; 1970 ; https://www.govinfo.gov/ >
+    au < released ; 1981 ; Congressional Committee Prints 1981 ; 1981 ; https://www.govinfo.gov/ >
+    au < released ; 1982 ; Congressional Committee Prints 1982 ; 1982 ; https://www.govinfo.gov/ >
     au < released ; 2016 ; Congressional Committee Prints 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Congressional Committee Prints 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Congressional Committee Prints 2018 ; 2018 ; https://www.govinfo.gov/ >
@@ -789,7 +789,7 @@
     au < released ; 2015 ; Congressional Record (Bound) 2015 ; 2015 ; https://www.govinfo.gov/ >
     au < released ; 2016 ; Congressional Record (Bound) 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Congressional Record (Bound) 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < releasing ; 2018 ; Congressional Record (Bound) 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; Congressional Record (Bound) 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Record (Bound) 2020 ; 2020 ; https://www.govinfo.gov/ >
 
     au < released ; 2006 ; CRECB 2006 ; 2006 ; https://www.govinfo.gov/ >
@@ -1331,11 +1331,11 @@
 
     param[collection_id] = SMAN
 
-    au < releasing ; 1995 ; SMAN 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < releasing ; 1999 ; SMAN 1999 ; 1999 ; https://www.govinfo.gov/ >
-    au < releasing ; 2001 ; SMAN 2001 ; 2001 ; https://www.govinfo.gov/ >
-    au < releasing ; 2011 ; SMAN 2011 ; 2011 ; https://www.govinfo.gov/ >
-    au < releasing ; 2013 ; SMAN 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < released ; 1995 ; SMAN 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < released ; 1999 ; SMAN 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < released ; 2001 ; SMAN 2001 ; 2001 ; https://www.govinfo.gov/ >
+    au < released ; 2011 ; SMAN 2011 ; 2011 ; https://www.govinfo.gov/ >
+    au < released ; 2013 ; SMAN 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2014 ; Senate Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Senate Manual 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Senate Manual 2022 ; 2022 ; https://www.govinfo.gov/ >
@@ -1460,64 +1460,64 @@
     au < released ; 1895 ; U.S. Congressional Serial Set 1895 ; 1895 ; https://www.govinfo.gov/ >
     au < released ; 1896 ; U.S. Congressional Serial Set 1896 ; 1896 ; https://www.govinfo.gov/ >
     au < released ; 1897 ; U.S. Congressional Serial Set 1897 ; 1897 ; https://www.govinfo.gov/ >
-    au < releasing ; 1898 ; U.S. Congressional Serial Set 1898 ; 1898 ; https://www.govinfo.gov/ >
+    au < released ; 1898 ; U.S. Congressional Serial Set 1898 ; 1898 ; https://www.govinfo.gov/ >
     au < released ; 1899 ; U.S. Congressional Serial Set 1899 ; 1899 ; https://www.govinfo.gov/ >
     au < released ; 1900 ; U.S. Congressional Serial Set 1900 ; 1900 ; https://www.govinfo.gov/ >
-    au < releasing ; 1901 ; U.S. Congressional Serial Set 1901 ; 1901 ; https://www.govinfo.gov/ >
-    au < releasing ; 1902 ; U.S. Congressional Serial Set 1902 ; 1902 ; https://www.govinfo.gov/ >
-    au < releasing ; 1903 ; U.S. Congressional Serial Set 1903 ; 1903 ; https://www.govinfo.gov/ >
-    au < releasing ; 1904 ; U.S. Congressional Serial Set 1904 ; 1904 ; https://www.govinfo.gov/ >
-    au < releasing ; 1905 ; U.S. Congressional Serial Set 1905 ; 1905 ; https://www.govinfo.gov/ >
-    au < releasing ; 1906 ; U.S. Congressional Serial Set 1906 ; 1906 ; https://www.govinfo.gov/ >
+    au < released ; 1901 ; U.S. Congressional Serial Set 1901 ; 1901 ; https://www.govinfo.gov/ >
+    au < released ; 1902 ; U.S. Congressional Serial Set 1902 ; 1902 ; https://www.govinfo.gov/ >
+    au < released ; 1903 ; U.S. Congressional Serial Set 1903 ; 1903 ; https://www.govinfo.gov/ >
+    au < released ; 1904 ; U.S. Congressional Serial Set 1904 ; 1904 ; https://www.govinfo.gov/ >
+    au < released ; 1905 ; U.S. Congressional Serial Set 1905 ; 1905 ; https://www.govinfo.gov/ >
+    au < released ; 1906 ; U.S. Congressional Serial Set 1906 ; 1906 ; https://www.govinfo.gov/ >
     au < released ; 1907 ; U.S. Congressional Serial Set 1907 ; 1907 ; https://www.govinfo.gov/ >
     au < released ; 1908 ; U.S. Congressional Serial Set 1908 ; 1908 ; https://www.govinfo.gov/ >
-    au < releasing ; 1909 ; U.S. Congressional Serial Set 1909 ; 1909 ; https://www.govinfo.gov/ >
+    au < released ; 1909 ; U.S. Congressional Serial Set 1909 ; 1909 ; https://www.govinfo.gov/ >
     au < released ; 1910 ; U.S. Congressional Serial Set 1910 ; 1910 ; https://www.govinfo.gov/ >
-    au < releasing ; 1911 ; U.S. Congressional Serial Set 1911 ; 1911 ; https://www.govinfo.gov/ >
-    au < releasing ; 1912 ; U.S. Congressional Serial Set 1912 ; 1912 ; https://www.govinfo.gov/ >
-    au < releasing ; 1913 ; U.S. Congressional Serial Set 1913 ; 1913 ; https://www.govinfo.gov/ >
-    au < releasing ; 1914 ; U.S. Congressional Serial Set 1914 ; 1914 ; https://www.govinfo.gov/ >
-    au < releasing ; 1915 ; U.S. Congressional Serial Set 1915 ; 1915 ; https://www.govinfo.gov/ >
+    au < released ; 1911 ; U.S. Congressional Serial Set 1911 ; 1911 ; https://www.govinfo.gov/ >
+    au < released ; 1912 ; U.S. Congressional Serial Set 1912 ; 1912 ; https://www.govinfo.gov/ >
+    au < released ; 1913 ; U.S. Congressional Serial Set 1913 ; 1913 ; https://www.govinfo.gov/ >
+    au < released ; 1914 ; U.S. Congressional Serial Set 1914 ; 1914 ; https://www.govinfo.gov/ >
+    au < released ; 1915 ; U.S. Congressional Serial Set 1915 ; 1915 ; https://www.govinfo.gov/ >
     au < released ; 1916 ; U.S. Congressional Serial Set 1916 ; 1916 ; https://www.govinfo.gov/ >
-    au < releasing ; 1917 ; U.S. Congressional Serial Set 1917 ; 1917 ; https://www.govinfo.gov/ >
+    au < released ; 1917 ; U.S. Congressional Serial Set 1917 ; 1917 ; https://www.govinfo.gov/ >
     au < manifest ; 1918 ; U.S. Congressional Serial Set 1918 ; 1918 ; https://www.govinfo.gov/ >
-    au < releasing ; 1919 ; U.S. Congressional Serial Set 1919 ; 1919 ; https://www.govinfo.gov/ >
-    au < releasing ; 1920 ; U.S. Congressional Serial Set 1920 ; 1920 ; https://www.govinfo.gov/ >
+    au < released ; 1919 ; U.S. Congressional Serial Set 1919 ; 1919 ; https://www.govinfo.gov/ >
+    au < released ; 1920 ; U.S. Congressional Serial Set 1920 ; 1920 ; https://www.govinfo.gov/ >
     au < released ; 1921 ; U.S. Congressional Serial Set 1921 ; 1921 ; https://www.govinfo.gov/ >
-    au < releasing ; 1922 ; U.S. Congressional Serial Set 1922 ; 1922 ; https://www.govinfo.gov/ >
-    au < releasing ; 1923 ; U.S. Congressional Serial Set 1923 ; 1923 ; https://www.govinfo.gov/ >
-    au < releasing ; 1924 ; U.S. Congressional Serial Set 1924 ; 1924 ; https://www.govinfo.gov/ >
-    au < releasing ; 1931 ; U.S. Congressional Serial Set 1931 ; 1931 ; https://www.govinfo.gov/ >
-    au < releasing ; 1933 ; U.S. Congressional Serial Set 1933 ; 1933 ; https://www.govinfo.gov/ >
-    au < releasing ; 1934 ; U.S. Congressional Serial Set 1934 ; 1934 ; https://www.govinfo.gov/ >
-    au < releasing ; 1935 ; U.S. Congressional Serial Set 1935 ; 1935 ; https://www.govinfo.gov/ >
-    au < releasing ; 1936 ; U.S. Congressional Serial Set 1936 ; 1936 ; https://www.govinfo.gov/ >
-    au < releasing ; 1937 ; U.S. Congressional Serial Set 1937 ; 1937 ; https://www.govinfo.gov/ >
-    au < releasing ; 1938 ; U.S. Congressional Serial Set 1938 ; 1938 ; https://www.govinfo.gov/ >
-    au < releasing ; 1939 ; U.S. Congressional Serial Set 1939 ; 1939 ; https://www.govinfo.gov/ >
+    au < released ; 1922 ; U.S. Congressional Serial Set 1922 ; 1922 ; https://www.govinfo.gov/ >
+    au < released ; 1923 ; U.S. Congressional Serial Set 1923 ; 1923 ; https://www.govinfo.gov/ >
+    au < released ; 1924 ; U.S. Congressional Serial Set 1924 ; 1924 ; https://www.govinfo.gov/ >
+    au < released ; 1931 ; U.S. Congressional Serial Set 1931 ; 1931 ; https://www.govinfo.gov/ >
+    au < released ; 1933 ; U.S. Congressional Serial Set 1933 ; 1933 ; https://www.govinfo.gov/ >
+    au < released ; 1934 ; U.S. Congressional Serial Set 1934 ; 1934 ; https://www.govinfo.gov/ >
+    au < released ; 1935 ; U.S. Congressional Serial Set 1935 ; 1935 ; https://www.govinfo.gov/ >
+    au < released ; 1936 ; U.S. Congressional Serial Set 1936 ; 1936 ; https://www.govinfo.gov/ >
+    au < released ; 1937 ; U.S. Congressional Serial Set 1937 ; 1937 ; https://www.govinfo.gov/ >
+    au < released ; 1938 ; U.S. Congressional Serial Set 1938 ; 1938 ; https://www.govinfo.gov/ >
+    au < released ; 1939 ; U.S. Congressional Serial Set 1939 ; 1939 ; https://www.govinfo.gov/ >
     au < manifest ; 1942 ; U.S. Congressional Serial Set 1942 ; 1942 ; https://www.govinfo.gov/ >
-    au < releasing ; 1943 ; U.S. Congressional Serial Set 1943 ; 1943 ; https://www.govinfo.gov/ >
-    au < releasing ; 1944 ; U.S. Congressional Serial Set 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < released ; 1943 ; U.S. Congressional Serial Set 1943 ; 1943 ; https://www.govinfo.gov/ >
+    au < released ; 1944 ; U.S. Congressional Serial Set 1944 ; 1944 ; https://www.govinfo.gov/ >
     au < released ; 1945 ; U.S. Congressional Serial Set 1945 ; 1945 ; https://www.govinfo.gov/ >
-    au < releasing ; 1946 ; U.S. Congressional Serial Set 1946 ; 1946 ; https://www.govinfo.gov/ >
-    au < releasing ; 1947 ; U.S. Congressional Serial Set 1947 ; 1947 ; https://www.govinfo.gov/ >
+    au < released ; 1946 ; U.S. Congressional Serial Set 1946 ; 1946 ; https://www.govinfo.gov/ >
+    au < released ; 1947 ; U.S. Congressional Serial Set 1947 ; 1947 ; https://www.govinfo.gov/ >
     au < released ; 1948 ; U.S. Congressional Serial Set 1948 ; 1948 ; https://www.govinfo.gov/ >
-    au < releasing ; 1949 ; U.S. Congressional Serial Set 1949 ; 1949 ; https://www.govinfo.gov/ >
-    au < releasing ; 1950 ; U.S. Congressional Serial Set 1950 ; 1950 ; https://www.govinfo.gov/ >
+    au < released ; 1949 ; U.S. Congressional Serial Set 1949 ; 1949 ; https://www.govinfo.gov/ >
+    au < released ; 1950 ; U.S. Congressional Serial Set 1950 ; 1950 ; https://www.govinfo.gov/ >
     au < released ; 1953 ; U.S. Congressional Serial Set 1953 ; 1953 ; https://www.govinfo.gov/ >
     au < released ; 1954 ; U.S. Congressional Serial Set 1954 ; 1954 ; https://www.govinfo.gov/ >
-    au < releasing ; 1955 ; U.S. Congressional Serial Set 1955 ; 1955 ; https://www.govinfo.gov/ >
+    au < released ; 1955 ; U.S. Congressional Serial Set 1955 ; 1955 ; https://www.govinfo.gov/ >
     au < released ; 1956 ; U.S. Congressional Serial Set 1956 ; 1956 ; https://www.govinfo.gov/ >
-    au < releasing ; 1957 ; U.S. Congressional Serial Set 1957 ; 1957 ; https://www.govinfo.gov/ >
-    au < releasing ; 1958 ; U.S. Congressional Serial Set 1958 ; 1958 ; https://www.govinfo.gov/ >
+    au < released ; 1957 ; U.S. Congressional Serial Set 1957 ; 1957 ; https://www.govinfo.gov/ >
+    au < released ; 1958 ; U.S. Congressional Serial Set 1958 ; 1958 ; https://www.govinfo.gov/ >
     au < released ; 1959 ; U.S. Congressional Serial Set 1959 ; 1959 ; https://www.govinfo.gov/ >
-    au < releasing ; 1960 ; U.S. Congressional Serial Set 1960 ; 1960 ; https://www.govinfo.gov/ >
-    au < releasing ; 1961 ; U.S. Congressional Serial Set 1961 ; 1961 ; https://www.govinfo.gov/ >
-    au < releasing ; 1962 ; U.S. Congressional Serial Set 1962 ; 1962 ; https://www.govinfo.gov/ >
-    au < releasing ; 1963 ; U.S. Congressional Serial Set 1963 ; 1963 ; https://www.govinfo.gov/ >
-    au < releasing ; 1964 ; U.S. Congressional Serial Set 1964 ; 1964 ; https://www.govinfo.gov/ >
-    au < releasing ; 1965 ; U.S. Congressional Serial Set 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < releasing ; 1966 ; U.S. Congressional Serial Set 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < released ; 1960 ; U.S. Congressional Serial Set 1960 ; 1960 ; https://www.govinfo.gov/ >
+    au < released ; 1961 ; U.S. Congressional Serial Set 1961 ; 1961 ; https://www.govinfo.gov/ >
+    au < released ; 1962 ; U.S. Congressional Serial Set 1962 ; 1962 ; https://www.govinfo.gov/ >
+    au < released ; 1963 ; U.S. Congressional Serial Set 1963 ; 1963 ; https://www.govinfo.gov/ >
+    au < released ; 1964 ; U.S. Congressional Serial Set 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < released ; 1965 ; U.S. Congressional Serial Set 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < released ; 1966 ; U.S. Congressional Serial Set 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < manifest ; 1967 ; U.S. Congressional Serial Set 1967 ; 1967 ; https://www.govinfo.gov/ >
     au < manifest ; 1968 ; U.S. Congressional Serial Set 1968 ; 1968 ; https://www.govinfo.gov/ >
     au < manifest ; 1969 ; U.S. Congressional Serial Set 1969 ; 1969 ; https://www.govinfo.gov/ >
