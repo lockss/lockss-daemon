@@ -1820,7 +1820,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; Arthropod Management Tests Volume 46 ; 46 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Arthropod Management Tests Volume 47 ; 47 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Arthropod Management Tests Volume 48 ; 48 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2024 ; 2024 ; Arthropod Management Tests Volume 49 ; 49 ; >
+    au < ready ; exists ; 2024 ; 2024 ; Arthropod Management Tests Volume 49 ; 49 ; >
 
   }
 
@@ -2281,7 +2281,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; Bioinformatics Volume 37 ; 37 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; 2022 ; Bioinformatics Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Bioinformatics Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2024 ; 2024 ; Bioinformatics Volume 40 ; 40 ; >
+    au < ready ; exists ; 2024 ; 2024 ; Bioinformatics Volume 40 ; 40 ; >
 
   }
 
@@ -2443,7 +2443,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; Biology of Reproduction Volume 104-105 ; 104-105 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Biology of Reproduction Volume 106-107 ; 106-107 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Biology of Reproduction Volume 108-109 ; 108-109 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2024 ; 2024 ; Biology of Reproduction Volume 110-111 ; 110-111 ; >
+    au < ready ; exists ; 2024 ; 2024 ; Biology of Reproduction Volume 110-111 ; 110-111 ; >
 
   }
 
@@ -3925,7 +3925,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; Clinical Kidney Journal Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical Kidney Journal Volume 15 ; 15 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Clinical Kidney Journal Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2024 ; 2024 ; Clinical Kidney Journal Volume 17 ; 17 ; >
+    au < ready ; exists ; 2024 ; 2024 ; Clinical Kidney Journal Volume 17 ; 17 ; >
 
   }
 
@@ -4707,7 +4707,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; EP Europace Volume 23 ; 23 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; EP Europace Volume 24 ; 24 ; >
     au < finished ; manifest ; 2023 ; 2023 ; EP Europace Volume 25 ; 25 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2024 ; 2024 ; EP Europace Volume 26 ; 26 ; >
+    au < ready ; exists ; 2024 ; 2024 ; EP Europace Volume 26 ; 26 ; >
 
   }
 
@@ -7076,7 +7076,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; G3: Genes, Genomes, Genetics Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < ingNotReady ; exists ; 2022 ; 2022 ; G3: Genes, Genomes, Genetics Volume 12 ; 12 ; > #403 Forbidden, https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/g3journal/PAP/10.1093_g3journal_jkac206/1/jkac206_supplementary_data.pdf?Expires=1664967694&Signature=CG95KvRwykfA7ST2aFmPcSBMaYRm~4V8~uY19ebraBjAbgs3SRiKQqx92tXN0lBBKYvqTGHMWBHd5hRGSWG~n9m3kbLB-eNesOhBoSn08NDl966Gz05ILqMaPN4-25e1aajKRTSxPTXSkc3Svuw8HiVpb2Qv4a9ml0oFQnRoDMQENm4kgI03kMfmGN58h5FBtoTF07fvpn0OxISnl5LjNdqLFzHLI8NqWwlNFEWa1olioMkM2EVbAllzchybpb-HL8XqCsnnFHFHpIotHpE1XDhFGMjPW9GTi~le2fjLoMdrMG34R5Fr0H4poReLIjf0tUxwXMpXF2NUiQlf9ahsVA__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
     au < finished ; manifest ; 2023 ; 2023 ; G3: Genes, Genomes, Genetics Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2024 ; 2024 ; G3: Genes, Genomes, Genetics Volume 14 ; 14 ; >
+    au < ready ; exists ; 2024 ; 2024 ; G3: Genes, Genomes, Genetics Volume 14 ; 14 ; >
 
   }
 
