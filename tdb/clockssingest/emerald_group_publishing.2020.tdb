@@ -101,7 +101,7 @@
     comment[journal_id] = aaaj
 
     au < manifest ; exists ; 1988 ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 ; >
     au < finished ; crawling ; 1990 ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1992 ; Accounting, Auditing & Accountability Journal Volume 5 ; 5 ; reingest3.clockss.org:8083 >
@@ -357,7 +357,7 @@
     au < manifest ; exists ; 1986 ; Aircraft Engineering and Aerospace Technology Volume 58 ; 58 ; >
     au < manifest ; exists ; 1987 ; Aircraft Engineering and Aerospace Technology Volume 59 ; 59 ; >
     au < manifest ; exists ; 1988 ; Aircraft Engineering and Aerospace Technology Volume 60 ; 60 ; >
-    au < crawling ; exists ; 1989 ; Aircraft Engineering and Aerospace Technology Volume 61 ; 61 ; >
+    au < frozen ; exists ; 1989 ; Aircraft Engineering and Aerospace Technology Volume 61 ; 61 ; >
     au < finished ; crawling ; 1990 ; Aircraft Engineering and Aerospace Technology Volume 62 ; 62 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1991 ; Aircraft Engineering and Aerospace Technology Volume 63 ; 63 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1992 ; Aircraft Engineering and Aerospace Technology Volume 64 ; 64 ; reingest5.clockss.org:8082 >
@@ -875,7 +875,7 @@
     au < manifest ; exists ; 1986 ; Aslib Proceedings: New Information Perspectives Volume 38 ; 38 ; >
     au < manifest ; exists ; 1987 ; Aslib Proceedings: New Information Perspectives Volume 39 ; 39 ; >
     au < manifest ; exists ; 1988 ; Aslib Proceedings: New Information Perspectives Volume 40 ; 40 ; >
-    au < crawling ; exists ; 1989 ; Aslib Proceedings: New Information Perspectives Volume 41 ; 41 ; >
+    au < frozen ; exists ; 1989 ; Aslib Proceedings: New Information Perspectives Volume 41 ; 41 ; >
     au < finished ; crawling ; 1990 ; Aslib Proceedings: New Information Perspectives Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; Aslib Proceedings: New Information Perspectives Volume 43 ; 43 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1992 ; Aslib Proceedings: New Information Perspectives Volume 44 ; 44 ; reingest2.clockss.org:8085 >
@@ -2544,7 +2544,7 @@
     au < manifest ; exists ; 1986 ; Engineering Computations Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; Engineering Computations Volume 4 ; 4 ; >
     au < manifest ; exists ; 1988 ; Engineering Computations Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1989 ; Engineering Computations Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1989 ; Engineering Computations Volume 6 ; 6 ; >
     au < frozen ; exists ; 1990 ; Engineering Computations Volume 7 ; 7 ; >
     au < frozen ; exists ; 1991 ; Engineering Computations Volume 8 ; 8 ; >
     au < frozen ; exists ; 1992 ; Engineering Computations Volume 9 ; 9 ; >
@@ -3371,7 +3371,7 @@
     # online from 1989
     #continued_by = 2514-9369
 
-    au < crawling ; exists ; 1989 ; Humanomics Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1989 ; Humanomics Volume 5 ; 5 ; >
     au < frozen ; exists ; 1990 ; Humanomics Volume 6 ; 6 ; >
     au < frozen ; exists ; 1991 ; Humanomics Volume 7 ; 7 ; >
     au < frozen ; exists ; 1992 ; Humanomics Volume 8 ; 8 ; >
@@ -4392,7 +4392,7 @@
     param[journal_issn] = 0959-6119
     comment[journal_id] = ijchm
 
-    au < crawling ; exists ; 1989 ; International Journal of Contemporary Hospitality Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1989 ; International Journal of Contemporary Hospitality Management Volume 1 ; 1 ; >
     au < frozen ; exists ; 1990 ; International Journal of Contemporary Hospitality Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1991 ; International Journal of Contemporary Hospitality Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1992 ; International Journal of Contemporary Hospitality Management Volume 4 ; 4 ; >
@@ -4540,7 +4540,7 @@
 
     au < manifest ; exists ; 1987 ; International Journal of Educational Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1988 ; International Journal of Educational Management Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1989 ; International Journal of Educational Management Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1989 ; International Journal of Educational Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1990 ; International Journal of Educational Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1991 ; International Journal of Educational Management Volume 5 ; 5 ; >
     au < frozen ; exists ; 1992 ; International Journal of Educational Management Volume 6 ; 6 ; >
@@ -4782,7 +4782,7 @@
     comment[journal_id] = ijhcqa
 
     au < manifest ; exists ; 1988 ; International Journal of Health Care Quality Assurance Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1989 ; International Journal of Health Care Quality Assurance Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1989 ; International Journal of Health Care Quality Assurance Volume 2 ; 2 ; >
     au < frozen ; exists ; 1990 ; International Journal of Health Care Quality Assurance Volume 3 ; 3 ; >
     au < frozen ; exists ; 1991 ; International Journal of Health Care Quality Assurance Volume 4 ; 4 ; >
     au < frozen ; exists ; 1992 ; International Journal of Health Care Quality Assurance Volume 5 ; 5 ; >
@@ -7566,7 +7566,7 @@
     au < manifest ; exists ; 1986 ; Journal of European Industrial Training Volume 10 ; 10 ; >
     au < manifest ; exists ; 1987 ; Journal of European Industrial Training Volume 11 ; 11 ; >
     au < manifest ; exists ; 1988 ; Journal of European Industrial Training Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1989 ; Journal of European Industrial Training Volume 13 ; 13 ; >
+    au < frozen ; exists ; 1989 ; Journal of European Industrial Training Volume 13 ; 13 ; >
     au < frozen ; exists ; 1990 ; Journal of European Industrial Training Volume 14 ; 14 ; >
     au < frozen ; exists ; 1991 ; Journal of European Industrial Training Volume 15 ; 15 ; >
     au < frozen ; exists ; 1992 ; Journal of European Industrial Training Volume 16 ; 16 ; >
@@ -9359,7 +9359,7 @@
 
     au < manifest ; exists ; 1987 ; Journal of Services Marketing Volume 1 ; 1 ; >
     au < manifest ; exists ; 1988 ; Journal of Services Marketing Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1989 ; Journal of Services Marketing Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1989 ; Journal of Services Marketing Volume 3 ; 3 ; >
     au < frozen ; exists ; 1990 ; Journal of Services Marketing Volume 4 ; 4 ; >
     au < frozen ; exists ; 1991 ; Journal of Services Marketing Volume 5 ; 5 ; >
     au < frozen ; exists ; 1992 ; Journal of Services Marketing Volume 6 ; 6 ; >
@@ -10162,7 +10162,7 @@
     #continued_by = 0957-6053
 
     au < manifest ; exists ; 1988 ; Logistics World Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1989 ; Logistics World Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1989 ; Logistics World Volume 2 ; 2 ; >
 
   }
 
@@ -10350,7 +10350,7 @@
     au < manifest ; exists ; 1986 ; Management Research News Volume 9 ; 9 ; >
     au < manifest ; exists ; 1987 ; Management Research News Volume 10 ; 10 ; >
     au < manifest ; exists ; 1988 ; Management Research News Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1989 ; Management Research News Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1989 ; Management Research News Volume 12 ; 12 ; >
     au < frozen ; exists ; 1990 ; Management Research News Volume 13 ; 13 ; >
     au < frozen ; exists ; 1991 ; Management Research News Volume 14 ; 14 ; >
     au < frozen ; exists ; 1992 ; Management Research News Volume 15 ; 15 ; >
@@ -11260,7 +11260,7 @@
     au < manifest ; exists ; 1986 ; Nutrition & Food Science Volume 86 ; 86 ; >
     au < manifest ; exists ; 1987 ; Nutrition & Food Science Volume 87 ; 87 ; >
     au < manifest ; exists ; 1988 ; Nutrition & Food Science Volume 88 ; 88 ; >
-    au < crawling ; exists ; 1989 ; Nutrition & Food Science Volume 89 ; 89 ; >
+    au < frozen ; exists ; 1989 ; Nutrition & Food Science Volume 89 ; 89 ; >
     au < frozen ; exists ; 1990 ; Nutrition & Food Science Volume 90 ; 90 ; >
     au < frozen ; exists ; 1991 ; Nutrition & Food Science Volume 91 ; 91 ; >
     au < frozen ; exists ; 1992 ; Nutrition & Food Science Volume 92 ; 92 ; >
@@ -11854,7 +11854,7 @@
     au < manifest ; exists ; 1986 ; Program: Electronic Library and Information Systems Volume 20 ; 20 ; >
     au < manifest ; exists ; 1987 ; Program: Electronic Library and Information Systems Volume 21 ; 21 ; >
     au < manifest ; exists ; 1988 ; Program: Electronic Library and Information Systems Volume 22 ; 22 ; >
-    au < crawling ; exists ; 1989 ; Program: Electronic Library and Information Systems Volume 23 ; 23 ; >
+    au < frozen ; exists ; 1989 ; Program: Electronic Library and Information Systems Volume 23 ; 23 ; >
     au < frozen ; exists ; 1990 ; Program: Electronic Library and Information Systems Volume 24 ; 24 ; >
     au < frozen ; exists ; 1991 ; Program: Electronic Library and Information Systems Volume 25 ; 25 ; >
     au < frozen ; exists ; 1992 ; Program: Electronic Library and Information Systems Volume 26 ; 26 ; >
@@ -12371,7 +12371,7 @@
     au < manifest ; exists ; 1986 ; Reference Services Review Volume 14 ; 14 ; >
     au < manifest ; exists ; 1987 ; Reference Services Review Volume 15 ; 15 ; >
     au < manifest ; exists ; 1988 ; Reference Services Review Volume 16 ; 16 ; >
-    au < crawling ; exists ; 1989 ; Reference Services Review Volume 17 ; 17 ; >
+    au < frozen ; exists ; 1989 ; Reference Services Review Volume 17 ; 17 ; >
     au < frozen ; exists ; 1990 ; Reference Services Review Volume 18 ; 18 ; >
     au < ready ; exists ; 1991 ; Reference Services Review Volume 19 ; 19 ; >
     au < frozen ; exists ; 1992 ; Reference Services Review Volume 20 ; 20 ; >
@@ -12533,7 +12533,7 @@
     au < manifest ; exists ; 1986 ; Sensor Review Volume 6 ; 6 ; >
     au < manifest ; exists ; 1987 ; Sensor Review Volume 7 ; 7 ; >
     au < manifest ; exists ; 1988 ; Sensor Review Volume 8 ; 8 ; >
-    au < crawling ; exists ; 1989 ; Sensor Review Volume 9 ; 9 ; >
+    au < frozen ; exists ; 1989 ; Sensor Review Volume 9 ; 9 ; >
     au < frozen ; exists ; 1990 ; Sensor Review Volume 10 ; 10 ; >
     au < ready ; exists ; 1991 ; Sensor Review Volume 11 ; 11 ; >
     au < frozen ; exists ; 1992 ; Sensor Review Volume 12 ; 12 ; >
@@ -13604,7 +13604,7 @@
     au < manifest ; exists ; 1986 ; VINE Volume 16 ; 16 ; >
     au < manifest ; exists ; 1987 ; VINE Volume 17 ; 17 ; >
     au < manifest ; exists ; 1988 ; VINE Volume 18 ; 18 ; >
-    au < crawling ; exists ; 1989 ; VINE Volume 19 ; 19 ; >
+    au < frozen ; exists ; 1989 ; VINE Volume 19 ; 19 ; >
     au < frozen ; exists ; 1990 ; VINE Volume 20 ; 20 ; >
     au < ready ; exists ; 1991 ; VINE Volume 21 ; 21 ; >
     au < frozen ; exists ; 1992 ; VINE Volume 22 ; 22 ; >
