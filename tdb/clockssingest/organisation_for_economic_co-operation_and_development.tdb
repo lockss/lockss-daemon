@@ -187,7 +187,7 @@
 
     au < finished ; manifest ; 2004 ; Journal of Business Cycle Measurement and Analysis Volume 2004 ; 2004 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2005 ; Journal of Business Cycle Measurement and Analysis Volume 2005 ; 2005 ; reingest3.clockss.org:8083 >
-    au < superseded ; exists ; 2006 ; Journal of Business Cycle Measurement and Analysis Volume 2006 ; 2006 ;  > # No 2006 volume
+    au < superseded ; exists ; 2006 ; Journal of Business Cycle Measurement and Analysis Volume 2006 [superseded] ; 2006 ;  > # No 2006 volume
     au < finished ; manifest ; 2007 ; Journal of Business Cycle Measurement and Analysis Volume 2007 ; 2007 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2008 ; Journal of Business Cycle Measurement and Analysis Volume 2008 ; 2008 ;  >
     au < manifest ; exists ; 2009 ; Journal of Business Cycle Measurement and Analysis Volume 2009 ; 2009 ;  >
@@ -282,7 +282,7 @@
     param[journal_dir] = nuclear-law-bulletin
     param[journal_issn] = 16097378
 
-    au < superseded ; exists ; 1998 ; Nuclear Law Bulletin Volume 1997 ; 1997 ;  > # There is a 1997 item, published in 1998.
+    au < superseded ; exists ; 1998 ; Nuclear Law Bulletin Volume 1997 [superseded] ; 1997 ;  > # There is a 1997 item, published in 1998.
     au < finished ; manifest ; 1999 ; Nuclear Law Bulletin Volume 1998 ; 1998 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2000 ; Nuclear Law Bulletin Volume 1999 ; 1999 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Nuclear Law Bulletin Volume 2000 ; 2000 ; reingest5.clockss.org:8082 >
@@ -325,8 +325,8 @@
     param[journal_issn] = 16097491
 
     au < finished ; manifest ; 1998 ; OECD Economic Studies Volume 1997 ; 1997 ; reingest3.clockss.org:8083 >
-    au < superseded ; exists ; 1999 ; OECD Economic Studies Volume 1998 ; 1998 ;  > #does not exist
-    au < superseded ; exists ; 2000 ; OECD Economic Studies Volume 1999 ; 1999 ;  > #does not exist
+    au < superseded ; exists ; 1999 ; OECD Economic Studies Volume 1998 [superseded] ; 1998 ;  > #does not exist
+    au < superseded ; exists ; 2000 ; OECD Economic Studies Volume 1999 [superseded] ; 1999 ;  > #does not exist
     au < finished ; manifest ; 2001 ; OECD Economic Studies Volume 2000 ; 2000 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; OECD Economic Studies Volume 2001 ; 2001 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; OECD Economic Studies Volume 2002 ; 2002 ; reingest1.clockss.org:8082 >
@@ -589,8 +589,8 @@
     au < finished ; manifest ; 2013 ; OECD Observer Volume 2013 ; 2013 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2014 ; OECD Observer Volume 2014 ; 2014 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; OECD Observer Volume 2015 ; 2015 ; reingest4.clockss.org:8082 >
-    au < superseded ; exists ; 2016 ; OECD Observer Volume 2016 ; 2016 ;  > #Collected as a book. See LXPLUG-2523
-    au < superseded ; exists ; 2017 ; OECD Observer Volume 2017 ; 2017 ;  > #Collected as a book. See LXPLUG-2523
+    au < superseded ; exists ; 2016 ; OECD Observer Volume 2016 [superseded] ; 2016 ;  > #Collected as a book. See LXPLUG-2523
+    au < superseded ; exists ; 2017 ; OECD Observer Volume 2017 [superseded] ; 2017 ;  > #Collected as a book. See LXPLUG-2523
 
   }
 
@@ -726,8 +726,8 @@
     param[journal_issn] = 16843444
 
     au < finished ; manifest ; 1997 ; Revue économique de l'OCDE Volume 1997 ; 1997 ; reingest5.clockss.org:8082 >
-    au < superseded ; exists ; 1998 ; Revue économique de l'OCDE Volume 1998 ; 1998 ;  >
-    au < superseded ; exists ; 1999 ; Revue économique de l'OCDE Volume 1999 ; 1999 ;  >
+    au < superseded ; exists ; 1998 ; Revue économique de l'OCDE Volume 1998 [superseded] ; 1998 ;  >
+    au < superseded ; exists ; 1999 ; Revue économique de l'OCDE Volume 1999 [superseded] ; 1999 ;  >
     au < finished ; manifest ; 2000 ; Revue économique de l'OCDE Volume 2000 ; 2000 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Revue économique de l'OCDE Volume 2001 ; 2001 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2002 ; Revue économique de l'OCDE Volume 2002 ; 2002 ; reingest3.clockss.org:8083 >
