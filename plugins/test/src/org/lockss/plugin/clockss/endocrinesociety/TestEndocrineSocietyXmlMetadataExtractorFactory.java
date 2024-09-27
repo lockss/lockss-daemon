@@ -81,7 +81,7 @@ public class TestEndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMe
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
 
-        assertEquals("ESAP 2018, Endocrine Self-Assessment Program Questions, Answers, and Discussions", md.get(MetadataField.FIELD_ARTICLE_TITLE));
+        assertEquals("ESAP 2018, Endocrine Self-Assessment Program Questions, Answers, and Discussions", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
         assertEquals("9781879225411", md.get(MetadataField.FIELD_ISBN));
         assertEquals("2018", md.get(MetadataField.FIELD_DATE));
     }
