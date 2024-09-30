@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -174,6 +174,16 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_url_mime_type_map</string>
         <list>
             <string>.*\.json$,application/json</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <!--
+            Handle the following error:
+            File size (55884) differs from Content-Length header (55880): https://ems.press/books/etb/258
+            -->
+            <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheException$WarningOnly</string>
         </list>
     </entry>
 </map>
