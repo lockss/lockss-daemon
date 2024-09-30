@@ -48,6 +48,7 @@ import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 
 public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
@@ -81,7 +82,6 @@ public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtra
         tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
         tagMap.put("citation_language", MetadataField.FIELD_LANGUAGE);
         tagMap.put("citation_abstract", MetadataField.FIELD_ABSTRACT);
-        tagMap.put("citation_article_type", MetadataField.FIELD_ARTICLE_TYPE);
         tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
         tagMap.put("citation_keywords", MetadataField.FIELD_KEYWORDS);
     }
@@ -90,8 +90,15 @@ public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtra
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
       throws IOException {
         ArticleMetadata am = super.extract(target, cu);
-        //Trying to fix up both issn metatags so that one will be mapped to FIELD_ISSN and the other to FIELD_EISSN
-        //get issn from au, compare with issn from metadata
+        /*
+        Trying to fix up both issn metatags so that one will be mapped to FIELD_ISSN and the other to FIELD_EISSN
+        get issn from au, compare with issn from metadata.
+
+        And while we're here...
+        for AABC and RGENF journals, the citation_article_type in the metadata 
+        are odd types like research-article, editorial or letter which we don't have MetadataFields for. 
+        As long as there's an issn, assign the article_type as journal_article to pass metadata indexing check.
+        */
         ArchivalUnit au = cu.getArchivalUnit();
         TitleConfig tc = au.getTitleConfig();
         if(tc != null){
@@ -101,6 +108,8 @@ public class SciELO2024HtmlMetadataExtractorFactory implements FileMetadataExtra
                 String eissn = tdbAu.getEissn();
                 if(issn != null){
                     am.putRaw("correct_issn", issn);
+                    am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+                    am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
                 }
                 if(eissn != null){
                     am.putRaw("correct_eissn", eissn);
