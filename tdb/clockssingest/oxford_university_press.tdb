@@ -10929,7 +10929,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Economic Geography Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Journal of Economic Geography Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Economic Geography Volume 18 ; 18 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Economic Geography Volume 19 ; 19 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Journal of Economic Geography Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Economic Geography Volume 20 ; 20 ; >
     au < finished ; manifest ; 2021 ; 2021 ; Journal of Economic Geography Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Economic Geography Volume 22 ; 22 ; >
@@ -10979,7 +10979,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Environmental Law Volume 28 ; 28 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Journal of Environmental Law Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Environmental Law Volume 30 ; 30 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Environmental Law Volume 31 ; 31 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Journal of Environmental Law Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; 2020 ; Journal of Environmental Law Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Journal of Environmental Law Volume 33 ; 33 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Environmental Law Volume 34 ; 34 ; >
@@ -11008,7 +11008,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of European Competition Law & Practice Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Journal of European Competition Law & Practice Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of European Competition Law & Practice Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of European Competition Law & Practice Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Journal of European Competition Law & Practice Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of European Competition Law & Practice Volume 11 ; 11 ; >
     au < finished ; manifest ; 2021 ; 2021 ; Journal of European Competition Law & Practice Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of European Competition Law & Practice Volume 13 ; 13 ; >
@@ -11133,7 +11133,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Financial Econometrics Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; 2017 ; Journal of Financial Econometrics Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Financial Econometrics Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Financial Econometrics Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Journal of Financial Econometrics Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Journal of Financial Econometrics Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Journal of Financial Econometrics Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Financial Econometrics Volume 20 ; 20 ; >
@@ -11157,7 +11157,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Financial Regulation Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Journal of Financial Regulation Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Financial Regulation Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Financial Regulation Volume 5 ; 5 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Journal of Financial Regulation Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Financial Regulation Volume 6 ; 6 ; >
     au < finished ; manifest ; 2021 ; 2021 ; Journal of Financial Regulation Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Financial Regulation Volume 8 ; 8 ; >
@@ -11217,7 +11217,7 @@
     param[journal_id] = jge
 
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Geophysics and Engineering Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Journal of Geophysics and Engineering Volume 16 ; 16 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Journal of Geophysics and Engineering Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Geophysics and Engineering Volume 17 ; 17 ; >
     au < finished ; manifest ; 2021 ; 2021 ; Journal of Geophysics and Engineering Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Geophysics and Engineering Volume 19 ; 19 ; >
@@ -16095,7 +16095,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Occupational Medicine Volume 66 ; 66 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Occupational Medicine Volume 67 ; 67 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; Occupational Medicine Volume 68 ; 68 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Occupational Medicine Volume 69 ; 69 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Occupational Medicine Volume 69 ; 69 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; 2020 ; Occupational Medicine Volume 70 ; 70 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Occupational Medicine Volume 71 ; 71 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Occupational Medicine Volume 72 ; 72 ; >
@@ -16162,7 +16162,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Open Forum Infectious Diseases Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; 2017 ; Open Forum Infectious Diseases Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Open Forum Infectious Diseases Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Open Forum Infectious Diseases Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Open Forum Infectious Diseases Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2020 ; 2020 ; Open Forum Infectious Diseases Volume 7 ; 7 ; >
     au < finished ; manifest ; 2021 ; 2021 ; Open Forum Infectious Diseases Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Open Forum Infectious Diseases Volume 9 ; 9 ; >
@@ -16256,7 +16256,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Oxford Art Journal Volume 39 ; 39 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Oxford Art Journal Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Oxford Art Journal Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Oxford Art Journal Volume 42 ; 42 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Oxford Art Journal Volume 42 ; 42 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Oxford Art Journal Volume 43 ; 43 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; 2021 ; Oxford Art Journal Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Oxford Art Journal Volume 45 ; 45 ; >
@@ -16353,7 +16353,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Oxford Economic Papers Volume 68 ; 68 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Oxford Economic Papers Volume 69 ; 69 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; 2018 ; Oxford Economic Papers Volume 70 ; 70 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Oxford Economic Papers Volume 71 ; 71 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Oxford Economic Papers Volume 71 ; 71 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Oxford Economic Papers Volume 72 ; 72 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; 2021 ; Oxford Economic Papers Volume 73 ; 73 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Oxford Economic Papers Volume 74 ; 74 ; >
@@ -16380,7 +16380,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Oxford Journal of Law and Religion Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Oxford Journal of Law and Religion Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Oxford Journal of Law and Religion Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Oxford Journal of Law and Religion Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Oxford Journal of Law and Religion Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Oxford Journal of Law and Religion Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Oxford Journal of Law and Religion Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Oxford Journal of Law and Religion Volume 11 ; 11 ; >
@@ -16438,7 +16438,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Oxford Journal of Legal Studies Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Oxford Journal of Legal Studies Volume 37 ; 37 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Oxford Journal of Legal Studies Volume 38 ; 38 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Oxford Journal of Legal Studies Volume 39 ; 39 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Oxford Journal of Legal Studies Volume 39 ; 39 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; 2020 ; Oxford Journal of Legal Studies Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Oxford Journal of Legal Studies Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Oxford Journal of Legal Studies Volume 42 ; 42 ; >
@@ -16516,7 +16516,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Oxford Review of Economic Policy Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Oxford Review of Economic Policy Volume 33 ; 33 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; 2018 ; Oxford Review of Economic Policy Volume 34 ; 34 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Oxford Review of Economic Policy Volume 35 ; 35 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Oxford Review of Economic Policy Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; 2020 ; Oxford Review of Economic Policy Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; 2021 ; Oxford Review of Economic Policy Volume 37 ; 37 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Oxford Review of Economic Policy Volume 38 ; 38 ; >
@@ -16559,7 +16559,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Paediatrics & Child Health Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Paediatrics & Child Health Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; 2018 ; Paediatrics & Child Health Volume 23 ; 23 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Paediatrics & Child Health Volume 24 ; 24 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Paediatrics & Child Health Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Paediatrics & Child Health Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; 2021 ; Paediatrics & Child Health Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Paediatrics & Child Health Volume 27 ; 27 ; >
@@ -16597,7 +16597,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Pain Medicine Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; 2017 ; Pain Medicine Volume 18 ; 18 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; Pain Medicine Volume 19 ; 19 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Pain Medicine Volume 20 ; 20 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Pain Medicine Volume 20 ; 20 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Pain Medicine Volume 21 ; 21 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Pain Medicine Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Pain Medicine Volume 23 ; 23 ; >
@@ -16687,7 +16687,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Parliamentary Affairs Volume 69 ; 69 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Parliamentary Affairs Volume 70 ; 70 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Parliamentary Affairs Volume 71 ; 71 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Parliamentary Affairs Volume 72 ; 72 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Parliamentary Affairs Volume 72 ; 72 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Parliamentary Affairs Volume 73 ; 73 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Parliamentary Affairs Volume 74 ; 74 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Parliamentary Affairs Volume 75 ; 75 ; >
@@ -16774,7 +16774,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Past & Present Volume 230-233 ; 230-233 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; 2017 ; Past & Present Volume 234-237 ; 234-237 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Past & Present Volume 238-241 ; 238-241 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Past & Present Volume 242-245 ; 242-245 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Past & Present Volume 242-245 ; 242-245 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; 2020 ; Past & Present Volume 246-249 ; 246-249 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; 2021 ; Past & Present Volume 250-253 ; 250-253 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Past & Present Volume 254-257 ; 254-257 ; >
@@ -16866,7 +16866,7 @@
     param[journal_id] = ppmg
 
     au < finished ; finished ; 2018 ; 2018 ; Perspectives on Public Management and Governance Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Perspectives on Public Management and Governance Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Perspectives on Public Management and Governance Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; 2020 ; Perspectives on Public Management and Governance Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Perspectives on Public Management and Governance Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Perspectives on Public Management and Governance Volume 5 ; 5 ; >
@@ -16926,7 +16926,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Philosophia Mathematica Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Philosophia Mathematica Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Philosophia Mathematica Volume 26 ; 26 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Philosophia Mathematica Volume 27 ; 27 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Philosophia Mathematica Volume 27 ; 27 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Philosophia Mathematica Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; 2021 ; Philosophia Mathematica Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Philosophia Mathematica Volume 30 ; 30 ; >
@@ -16985,7 +16985,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Physical Therapy Volume 96 ; 96 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; Physical Therapy Volume 97 ; 97 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; 2018 ; Physical Therapy Volume 98 ; 98 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Physical Therapy Volume 99 ; 99 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Physical Therapy Volume 99 ; 99 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Physical Therapy Volume 100 ; 100 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; 2021 ; Physical Therapy Volume 101 ; 101 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Physical Therapy Volume 102 ; 102 ; >
@@ -17170,7 +17170,7 @@
     au < finished ; crawling ; 2016 ; 2016 ; Policing: A Journal of Policy and Practice Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; 2017 ; Policing: A Journal of Policy and Practice Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; 2018 ; Policing: A Journal of Policy and Practice Volume 12 ; 12 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2019 ; 2019 ; Policing: A Journal of Policy and Practice Volume 13 ; 13 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Policing: A Journal of Policy and Practice Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Policing: A Journal of Policy and Practice Volume 14 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; 2021 ; Policing: A Journal of Policy and Practice Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Policing: A Journal of Policy and Practice Volume 16 ; 16 ; >
