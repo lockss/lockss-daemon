@@ -262,7 +262,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
    * runaway crawls by catching recursive URLS */
   public static final String PARAM_EXCLUDE_URL_PATTERN =
     PREFIX + "globallyExcludedUrlPattern";
-  static final String DEFAULT_EXCLUDE_URL_PATTERN = null;
+  public static final String DEFAULT_EXCLUDE_URL_PATTERN = null;
 
   /** List of regexps matching hosts from which collection is permitted
    * without explicit permission on the host.  Intended for distribution

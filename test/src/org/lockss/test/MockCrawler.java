@@ -29,12 +29,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.*;
+import java.util.regex.*;
 
+import org.lockss.config.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.Crawler;
 import org.lockss.plugin.*;
-import org.lockss.util.Deadline;
-import org.lockss.util.PatternMap;
+import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
 public class MockCrawler extends NullCrawler {
@@ -328,6 +329,18 @@ public class MockCrawler extends NullCrawler {
     @Override
     public boolean isAllowedPluginPermittedHost(String host) {
       return allowedPluginPermittedHost.contains(host);
+    }
+
+    @Override
+    public boolean checkGloballyExcludedUrl(ArchivalUnit au, String url) {
+      String pat = CurrentConfig.getParam(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
+                                          CrawlManagerImpl.DEFAULT_EXCLUDE_URL_PATTERN);
+      if (StringUtil.isNullString(pat)) {
+        return false;
+      }
+      Pattern p = Pattern.compile(pat, Pattern.CASE_INSENSITIVE);
+      Matcher m = p.matcher(pat);
+      return m.matches();
     }
 
     @Override

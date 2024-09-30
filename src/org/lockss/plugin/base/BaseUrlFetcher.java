@@ -786,8 +786,11 @@ public class BaseUrlFetcher implements UrlFetcher {
       // would have to include login page URLs in crawl spec
       checkRedirectAction(newUrlString);
       if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC)) {
-        if (!au.shouldBeCached(newUrlString)) {
-          String msg = "Redirected to excluded URL: " + newUrlString;
+        if (!au.shouldBeCached(newUrlString) ||
+            crawlFacade.checkGloballyExcludedUrl(au, newUrlString)) {
+          String msg = "Redirected to " +
+            (crawlFacade.checkGloballyExcludedUrl(au, newUrlString) ? "globally " : "") +
+            "excluded URL: " + newUrlString;
           log.warning(msg + " redirected from: " + origUrl);
           throw new CacheException.RedirectOutsideCrawlSpecException(msg);
         }

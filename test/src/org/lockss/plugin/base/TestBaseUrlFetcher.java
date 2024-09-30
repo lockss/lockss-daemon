@@ -776,12 +776,13 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   // Should follow redirection to URL in crawl spec
   public void testRedirectInSpec() throws Exception {
     String redTo = "http://somewhere.else/foo";
-    MockConnectionBaseUrlFetcher muf =
-      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
     MockPermissionMap map = new MockPermissionMap();
     map.putStatus(TEST_URL, PermissionStatus.PERMISSION_OK);
     map.putStatus(redTo, PermissionStatus.PERMISSION_OK);
     mcf.setPermissionMap(map);
+
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
     muf.addConnection(makeConn(301, "Moved to Spain", redTo));
     muf.addConnection(makeConn(200, "Ok", null, "bar"));
     muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
@@ -814,6 +815,31 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     }
   }
 
+  // Should not follow redirection to globally excluded URL
+  public void testRedirectGloballyExcluded() throws Exception {
+    String redTo = "http://somewhere.else/foo";
+    MockPermissionMap map = new MockPermissionMap();
+    map.putStatus(TEST_URL, PermissionStatus.PERMISSION_OK);
+    map.putStatus(redTo, PermissionStatus.PERMISSION_OK);
+    mcf.setPermissionMap(map);
+
+    ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_EXCLUDE_URL_PATTERN,
+                                  ".*somewhere.*");
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muf.addConnection(makeConn(200, "Ok", null, "bar"));
+    muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+    mau.addUrlToBeCached(redTo);
+    try {
+      InputStream is = muf.getUncachedInputStream();
+      fail("Should have thrown RedirectOutsideCrawlSpecException");
+    } catch (CacheException.RedirectOutsideCrawlSpecException e) {
+      assertEquals("Redirected to globally excluded URL: " + redTo, e.getMessage());
+      Properties p = muf.getUncachedProperties();
+      assertEquals(redTo, p.getProperty("location"));
+    }
+  }
   public void testRedirectNormalize() throws Exception {
     String redToUnNorm = "http://Somewhere.ELSE/foo#removeme";
     String redTo = "http://somewhere.else/foo";
