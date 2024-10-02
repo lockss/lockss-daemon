@@ -56,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Poll</string>
-        <string>2</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Metadata</string>
@@ -121,5 +121,18 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.rocksbackpages.RocksBackpagesArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.rocksbackpages.RocksBackpagesArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.rocksbackpages.RocksBackpagesHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>
