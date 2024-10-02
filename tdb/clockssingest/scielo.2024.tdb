@@ -1,7 +1,7 @@
 {
 
   publisher <
-    name = SciELO ;
+    name = Anais da Academia Brasileira de Ciências ;
     info[contract] = 2024 ;
     info[back] = 2000 ;
     info[min_year] = 2000 ;
@@ -52,6 +52,22 @@
     au < expected ; exists ; 2024 ; 96 ; Anais da Academia Brasileira de Ciências Volume 96 ; 2024 ; >
 
   }
+}
+
+{
+
+  publisher <
+    name = Fundacao de Apoio Da Universidade Federal Do Rgs-Faurgs ;
+    info[contract] = 2024 ;
+    info[back] = 2009 ;
+    info[min_year] = 2009 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+  
+  rights = openaccess
+  plugin = org.lockss.plugin.scielo.ClockssSciELO2024Plugin
+  implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
 
   {
 
