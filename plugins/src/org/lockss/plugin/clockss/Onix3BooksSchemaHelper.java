@@ -301,6 +301,8 @@ implements SourceXmlSchemaHelper {
   /* Under an item node, the interesting bits live at these relative locations */
   protected static String ONIX_idtype_isbn13 =
       "ProductIdentifier[ProductIDType='15'] | productidentifier[b221='15']";
+  protected static String ONIX_idtype_isbn10 =
+      "ProductIdentifier[ProductIDType='2'] | productidentifier[b221='2']";
   private static String ONIX_idtype_lccn =
       "ProductIdentifier[ProductIDType='13'] | productidentifier[b221='13']";
   public static String ONIX_idtype_doi =
@@ -352,6 +354,7 @@ implements SourceXmlSchemaHelper {
   static {
     ONIX_articleMap.put(ONIX_RR, XmlDomMetadataExtractor.TEXT_VALUE);
     ONIX_articleMap.put(ONIX_idtype_isbn13, ONIX_ID_VALUE); 
+    ONIX_articleMap.put(ONIX_idtype_isbn10, ONIX_ID_VALUE); 
     ONIX_articleMap.put(ONIX_idtype_lccn, ONIX_ID_VALUE); 
     ONIX_articleMap.put(ONIX_idtype_doi, ONIX_ID_VALUE); 
     ONIX_articleMap.put(ONIX_idtype_proprietary, ONIX_ID_VALUE); 
@@ -383,6 +386,7 @@ implements SourceXmlSchemaHelper {
   static {
     // do NOT cook publisher_name; get from TDB file for consistency
     cookMap.put(ONIX_idtype_isbn13, MetadataField.FIELD_ISBN);
+    cookMap.put(ONIX_idtype_isbn10, MetadataField.FIELD_ISBN);
     cookMap.put(ONIX_idtype_doi, MetadataField.FIELD_DOI);
     cookMap.put(ONIX_product_title, MetadataField.FIELD_PUBLICATION_TITLE);
     cookMap.put(ONIX_chapter_title, MetadataField.FIELD_ARTICLE_TITLE);
