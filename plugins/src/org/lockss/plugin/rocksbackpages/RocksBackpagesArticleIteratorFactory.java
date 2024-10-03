@@ -54,7 +54,7 @@ public class RocksBackpagesArticleIteratorFactory implements ArticleIteratorFact
     private static final String ROOT_TEMPLATE = "\"%s\", base_url";
     private static final String PATTERN_TEMPLATE = "\"%sLibrary/Article/\", base_url";
 
-    private static final Pattern HTML_PATTERN = Pattern.compile("Library/Article/([a-zA-z-]+)$",Pattern.CASE_INSENSITIVE);
+    private static final Pattern HTML_PATTERN = Pattern.compile("Library/Article/([a-zA-z0-9-]+)$",Pattern.CASE_INSENSITIVE);
 
     private static final String HTML_REPLACEMENT = "Library/Article/$1";
   

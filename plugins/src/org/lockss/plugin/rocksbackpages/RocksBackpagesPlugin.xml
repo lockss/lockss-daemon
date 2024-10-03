@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -112,6 +112,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,"^https?://(%s|(fonts|ajax)\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%sLibrary/Article/", base_url</string>
       <string>1,"^%sLibrary/SearchLinkRedirect\?folder=", base_url</string>
@@ -134,5 +135,21 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.rocksbackpages.RocksBackpagesHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.rocksbackpages.RocksBackpagesHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.rocksbackpages.RocksBackpagesCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>.+\.mathjax\.org</string>
+      <string>.+\.cloudfront\.net</string>
+    </list>
   </entry>
 </map>
