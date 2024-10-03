@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = Rock's Backpages 
+  >
+  
+  plugin = org.lockss.plugin.rocksbackpages.RocksBackpagesPlugin
+  param[base_url] = https://www.rocksbackpages.com/
+  implicit < status ; year ; name ; param[year] >
+  
+  {
+
+    title <
+      name = RocksBackpages:RollingStone
+    >
+    param[journal_id] = rolling-stone
+
+    au < manifest ; 1967 ; RocksBackpages:RollingStone:1967 ; 1967 >
+    au < manifest ; 1968 ; RocksBackpages:RollingStone:1968 ; 1968 >
+
+  }
+
+  {
+
+    title <
+      name = RocksBackpages:TheVillageVoice
+    >
+    param[journal_id] = village-voice-the
+
+    au < manifest ; 2012 ; RocksBackpages:TheVillageVoice:2012 ; 2012 >
+
+  }
+
+}
