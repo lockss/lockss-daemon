@@ -50,6 +50,19 @@ import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
+/*
+ * There is very little metadata in article pages so we
+ * have to use JSoup to comb through the article to find
+ * some. So far, the metadata found is the following: 
+    <h1 class="article"> Where’s the Money from Monterey Pop?</h1>
+
+    <p class="article-details">
+        <span class="writer">Michael Lydon</span>,
+        <span class="publication">Rolling Stone</span>,
+        <span class="date">9 November 1967</span>
+    </p>
+ */
+
 public class RocksBackpagesHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory{
     static Logger log = Logger.getLogger(RocksBackpagesHtmlMetadataExtractorFactory.class);
 
@@ -66,7 +79,6 @@ public class RocksBackpagesHtmlMetadataExtractorFactory implements FileMetadataE
                 ArticleMetadata am = super.extract(target, cu);
                 am.cook(tagMap);
                 getAdditionalMetadata(cu, am);
-
                 return am;
             }
 
@@ -74,23 +86,34 @@ public class RocksBackpagesHtmlMetadataExtractorFactory implements FileMetadataE
                 InputStream in = cu.getUnfilteredInputStream();
                 if (in != null) {
                     try {
+                        String title = null;
                         String publication = null;
                         String author = null;
-                        publication = getPublication(in, cu.getEncoding(), cu.getUrl());
-                        //author = getAuthor(in, cu.getEncoding(), cu.getUrl());
+                        String date = null;
+
+                        Elements h1_element_title;
+                        Elements span_element_publication;
+                        Elements span_element_author;
+                        Elements span_element_date;
+                        String url = cu.getUrl();
+                        try {
+                            Document doc = Jsoup.parse(in, cu.getEncoding(), url);
+                            h1_element_title = doc.select("h1[class=\"article\"]");
+                            span_element_publication = doc.select("span[class=\"publication\"]"); 
+                            span_element_author = doc.select("span[class=\"writer\"]");
+                            span_element_date = doc.select("span[class=\"date\"]");
+                            title = checkElement(h1_element_title);
+                            publication = checkElement(span_element_publication);
+                            author = checkElement(span_element_author);
+                            date = checkElement(span_element_date);
+                        } catch (IOException e) {
+                            log.debug3("Rocks Backpages: Error getting Metadata", e);
+                        }
                         in.close();
-                        if (publication != null && publication != "") {
-                            log.info("Rocks Backpages: Volume--------getAdditionalMetadata: publication-------");
-                            am.put(MetadataField.FIELD_PUBLICATION_TITLE, publication);
-                        } else {
-                            log.info("Rocks Backpages: Volume--------getAdditionalMetadata: publication Failed-------");
-                        }
-                        if (author != null && author != "") {
-                            log.info("Rocks Backpages: Author--------getAdditionalMetadata: author-------");
-                            am.put(MetadataField.FIELD_AUTHOR, author);
-                        } else {
-                            log.info("Rocks Backpages: Author--------getAdditionalMetadata: author Failed-------");
-                        }
+                        am = fillMetadata(title, MetadataField.FIELD_ARTICLE_TITLE, am);
+                        am = fillMetadata(publication, MetadataField.FIELD_PUBLICATION_TITLE, am);
+                        am = fillMetadata(author, MetadataField.FIELD_AUTHOR, am);
+                        am = fillMetadata(date, MetadataField.FIELD_DATE, am);
                         return;
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -99,55 +122,28 @@ public class RocksBackpagesHtmlMetadataExtractorFactory implements FileMetadataE
                 return;
             }
 
-            protected String getPublication(InputStream in, String encoding, String url) {
-                Elements span_element;
-                try {
-                    Document doc = Jsoup.parse(in, encoding, url);
-
-                    span_element = doc.select("span[class=\"publication\"]"); //<span class="publication">Rolling Stone</span>,
-                    log.info("Rocks Backpages Publication");
-                    String publication = null;
-                    if ( span_element != null){
-                        publication = span_element.text().trim();
-                        log.info("Rocks Backpages: publication: = " + span_element + ", url = " + url);
-                        if (publication != null) {
-                            log.info("Rocks Backpages: Publication cleaned: = " + publication + ", url = " + url);
-                            return publication.trim();
-                        } else {
-                            log.info("Rocks Backpages: Volume is null" + ", url = " + url);
-                        }
-                        return null;
+            protected String checkElement(Elements element) {
+                String cleanedUpElement = null;
+                if ( element != null){
+                    cleanedUpElement = element.text().trim();
+                    log.debug3("Rock's Backpages: Element is " + element);
+                    if (cleanedUpElement != null) {
+                        log.debug3("Rock's Backpages: Element cleaned is " + cleanedUpElement);
+                    } else {
+                        log.debug3("Rock's Backpages: Element is null");
                     }
-                } catch (IOException e) {
-                    log.info("Rocks Backpages: Publication Error getPublication", e);
-                    return null;
                 }
-                return null;
+                return cleanedUpElement;
             }
 
-            protected String getAuthor(InputStream in, String encoding, String url) {
-                Elements span_element;
-                try {
-                    Document doc = Jsoup.parse(in, encoding, url);
-                    span_element = doc.select("span[class=\"writer\"]"); //<span class="writer">Michael Lydon</span>,
-                    log.info("Rocks Backpages Author");
-                    String author = null;
-                    if ( span_element != null){
-                        author = span_element.text().trim();
-                        log.info("Rocks Backpages: author: = " + span_element + ", url = " + url);
-                        if (author != null) {
-                            log.info("Rocks Backpages: Author cleaned: = " + author + ", url = " + url);
-                            return author.trim();
-                        } else {
-                            log.info("Rocks Backpages: Author is null" + ", url = " + url);
-                        }
-                        return null;
-                    }
-                } catch (IOException e) {
-                    log.info("Rocks Backpages: Author Error getAuthor", e);
-                    return null;
+            protected ArticleMetadata fillMetadata(String metadata, MetadataField mf, ArticleMetadata am){
+                if (metadata != null && metadata != "") {
+                    log.debug3("Rock's Backpages: --------getAdditionalMetadata: " + metadata + "-------");
+                    am.put(mf, metadata);
+                } else {
+                    log.debug3("Rock's Backpages: --------getAdditionalMetadata: " + metadata + " Failed-------");
                 }
-                return null;
+                return am;
             }
     }
 }
