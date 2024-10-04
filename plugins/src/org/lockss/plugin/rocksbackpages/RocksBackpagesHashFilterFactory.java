@@ -58,6 +58,7 @@ public class RocksBackpagesHashFilterFactory implements FilterFactory {
             HtmlNodeFilters.tag("script"),
             HtmlNodeFilters.tag("aside"),
             HtmlNodeFilters.tagWithAttributeRegex("div","id","sidebar"),
+            HtmlNodeFilters.tagWithAttributeRegex("span","class","citations"),
             HtmlNodeFilters.comment()
         };
         return new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
