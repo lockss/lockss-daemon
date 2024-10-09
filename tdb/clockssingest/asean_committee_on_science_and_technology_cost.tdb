@@ -26,7 +26,7 @@
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
     au < frozen ; exists ; 2023 ; ASEAN Journal on Science and Technology for Development Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2023 ; ASEAN Journal on Science and Technology for Development Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2023 ; ASEAN Journal on Science and Technology for Development Volume 2 ; 2 ; >
     au < manifest ; exists ; 2023 ; ASEAN Journal on Science and Technology for Development Volume 3  ; 3 ; >
     au < manifest ; exists ; 2023 ; ASEAN Journal on Science and Technology for Development Volume 4  ; 4  ; >
     au < manifest ; exists ; 2023 ; ASEAN Journal on Science and Technology for Development Volume 5  ; 5  ; >
