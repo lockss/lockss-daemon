@@ -446,12 +446,18 @@
 
     param[collection_id] = CPRT
 
-
+    au < manifest ; 1923 ; Congressional Committee Prints 1923 ; 1923 ; https://www.govinfo.gov/ >
+    au < manifest ; 1941 ; Congressional Committee Prints 1941 ; 1941 ; https://www.govinfo.gov/ >
+    au < manifest ; 1950 ; Congressional Committee Prints 1950 ; 1950 ; https://www.govinfo.gov/ >
+    au < released ; 1951 ; Congressional Committee Prints 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < manifest ; 1953 ; Congressional Committee Prints 1953 ; 1953 ; https://www.govinfo.gov/ >
     au < released ; 1955 ; Congressional Committee Prints 1955 ; 1955 ; https://www.govinfo.gov/ >
     au < released ; 1956 ; Congressional Committee Prints 1956 ; 1956 ; https://www.govinfo.gov/ >
     au < released ; 1957 ; Congressional Committee Prints 1957 ; 1957 ; https://www.govinfo.gov/ >
     au < released ; 1958 ; Congressional Committee Prints 1958 ; 1958 ; https://www.govinfo.gov/ >
+    au < released ; 1959 ; Congressional Committee Prints 1959 ; 1959 ; https://www.govinfo.gov/ >
     au < released ; 1960 ; Congressional Committee Prints 1960 ; 1960 ; https://www.govinfo.gov/ >
+    au < released ; 1961 ; Congressional Committee Prints 1961 ; 1961 ; https://www.govinfo.gov/ >
     au < released ; 1963 ; Congressional Committee Prints 1963 ; 1963 ; https://www.govinfo.gov/ >
     au < released ; 1964 ; Congressional Committee Prints 1964 ; 1964 ; https://www.govinfo.gov/ >
     au < released ; 1967 ; Congressional Committee Prints 1967 ; 1967 ; https://www.govinfo.gov/ >
@@ -468,26 +474,24 @@
     au < released ; 1990 ; Congressional Committee Prints 1990 ; 1990 ; https://www.govinfo.gov/ >
     au < released ; 1992 ; Congressional Committee Prints 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < released ; 1993 ; Congressional Committee Prints 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < released ; 2016 ; Congressional Committee Prints 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; Congressional Committee Prints 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; Congressional Committee Prints 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Committee Prints 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Committee Prints 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Congressional Committee Prints 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Committee Prints 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Congressional Committee Prints 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < manifest ; 2024 ; Congressional Committee Prints 2024 ; 2024 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 1941 ; Congressional Committee Prints 1941 ; 1941 ; https://www.govinfo.gov/ >
-    au < released ; 1951 ; Congressional Committee Prints 1951 ; 1951 ; https://www.govinfo.gov/ >
-    au < released ; 1959 ; Congressional Committee Prints 1959 ; 1959 ; https://www.govinfo.gov/ >
-    au < released ; 1961 ; Congressional Committee Prints 1961 ; 1961 ; https://www.govinfo.gov/ >
+    au < manifest ; 1954 ; Congressional Committee Prints 1954 ; 1954 ; https://www.govinfo.gov/ >
+    au < manifest ; 1987 ; Congressional Committee Prints 1987 ; 1987 ; https://www.govinfo.gov/ >
     au < released ; 1962 ; Congressional Committee Prints 1962 ; 1962 ; https://www.govinfo.gov/ >
     au < released ; 1965 ; Congressional Committee Prints 1965 ; 1965 ; https://www.govinfo.gov/ >
     au < released ; 1966 ; Congressional Committee Prints 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < released ; 1970 ; Congressional Committee Prints 1970 ; 1970 ; https://www.govinfo.gov/ >
     au < released ; 1981 ; Congressional Committee Prints 1981 ; 1981 ; https://www.govinfo.gov/ >
     au < released ; 1982 ; Congressional Committee Prints 1982 ; 1982 ; https://www.govinfo.gov/ >
-    au < released ; 2016 ; Congressional Committee Prints 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < released ; 2017 ; Congressional Committee Prints 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < released ; 2018 ; Congressional Committee Prints 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; Congressional Committee Prints 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; Congressional Committee Prints 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
