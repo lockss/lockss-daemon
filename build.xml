@@ -258,13 +258,13 @@ Args:
   <property name="commons.collections4.jar" value="${lib}/commons-collections4-4.4.jar" />
   <property name="commons.compress.jar" value="${lib}/commons-compress-1.27.1.jar" />
   <property name="commons.configuration.jar" value="${lib}/commons-configuration-1.10.jar" />
-  <property name="commons.csv.jar" value="${lib}/commons-csv-1.11.0.jar" />
+  <property name="commons.csv.jar" value="${lib}/commons-csv-1.12.0.jar" />
   <!-- commons-digester -->
   <!-- commons-fileupload -->
-  <property name="commons.io.jar" value="${lib}/commons-io-2.16.1.jar" />
+  <property name="commons.io.jar" value="${lib}/commons-io-2.17.0.jar" />
   <property name="commons.jxpath.jar" value="${lib}/commons-jxpath-1.3.jar" />
   <property name="commons.lang.jar" value="${lib}/commons-lang-2.6.jar" />
-  <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.16.0.jar" />
+  <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.17.0.jar" />
   <property name="commons.logging.jar" value="${lib}/commons-logging-1.2.jar" />
   <property name="commons.primitives.jar" value="${lib}/commons-primitives-1.0.jar" />
   <property name="commons.text.jar" value="${lib}/commons-text-1.12.0.jar" />
@@ -472,8 +472,7 @@ Args:
   <property name="commons-fileupload-commons-fileupload.jar"
   	value="${lib}/commons-fileupload-commons-fileupload.jar" />
   <property name="esapi-2.0GA.jar" value="${lib}/esapi-2.0GA.jar" />
-  <property name="joda-time-joda-time.jar"
-  	value="${lib}/joda-time-joda-time.jar" />
+  <property name="joda-time.jar" value="${lib}/joda-time-2.13.0.jar" />
   <property name="oiosaml.java-21188-PATCHED.jar"
   	value="${lib}/oiosaml.java-21188-PATCHED.jar" />
   <property name="opensaml-2.5.1.jar" value="${lib}/opensaml-2.5.1.jar" />
@@ -653,7 +652,7 @@ Args:
     <pathelement path="${commons-digester-commons-digester.jar}" />
     <pathelement path="${commons-fileupload-commons-fileupload.jar}" />
     <pathelement path="${esapi-2.0GA.jar}" />
-    <pathelement path="${joda-time-joda-time.jar}" />
+    <pathelement path="${joda-time.jar}" />
     <pathelement path="${oiosaml.java-21188-PATCHED.jar}" />
     <pathelement path="${opensaml-2.5.1.jar}" />
     <pathelement path="${openws-1.4.2.jar}" />
