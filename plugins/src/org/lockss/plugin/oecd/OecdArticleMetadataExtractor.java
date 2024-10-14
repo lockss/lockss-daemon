@@ -62,10 +62,20 @@ public class OecdArticleMetadataExtractor extends BaseArticleMetadataExtractor {
   protected String getPdfUrlFromHtml(CachedUrl cu) throws IOException {
     String PDF_PATTERN;
     String srcUrl = cu.getUrl();
-    if ((srcUrl.contains("volume") && srcUrl.contains("issue")) || IS_BOOK ) {
+    /*
+     * Need to check for article landing page patterns like the following: 
+     * https://www.oecd-ilibrary.org/science-and-technology/sti-review_sti_rev-v1998-1-en
+     * https://www.oecd-ilibrary.org/development/dossiers-du-cad-2000_journal_dev-v1-3-fr
+     * https://www.oecd-ilibrary.org/development/the-dac-journal-2000_journal_dev-v1-2-en
+     * https://www.oecd-ilibrary.org/nuclear-energy/bulletin-de-droit-nucleaire-volume-2017-numero-1_72dc4ad9-fr
+     */
+    if ((srcUrl.contains("volume") && (srcUrl.contains("issue")||srcUrl.contains("numero"))) || IS_BOOK || srcUrl.contains("journal") 
+    || srcUrl.matches(".*-v(19|20)[0-9]{2}-.*")) {
+      log.debug3("The source url is " + srcUrl + " and I am an issue");
       PDF_PATTERN = PDF_ISSUE_PATTERN;
     } else {
       PDF_PATTERN = PDF_ARTICLE_PATTERN;
+      log.debug3("The source url is " + srcUrl + " and I am an article");
     }
     List<String> pdf_urls = new ArrayList<>();;
     HtmlParserLinkExtractor OecdLinkExtractor =  new HtmlParserLinkExtractor();

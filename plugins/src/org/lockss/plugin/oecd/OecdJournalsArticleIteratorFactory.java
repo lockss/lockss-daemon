@@ -78,7 +78,7 @@ public class OecdJournalsArticleIteratorFactory implements ArticleIteratorFactor
     //one off aricle pattern we need to include- 
     //https://www.oecd-ilibrary.org/education/politiques-et-gestion-de-l-enseignement-superieur-volume-20-numero-2/enseignement-superieur-et-developpement-regional_hemp-v20-art8-fr
     LANDING_ARTICLE_PATTERN = Pattern.compile(
-        String.format("/(%s/([^/]+/)?([^/]+)_(([^-]+-[^-]+)-([^/]+(-en)?)|[^-]+-en))$", topic));
+        String.format("/(%s/([^/]+/)?([^/]+)_(([^-]+-[^-]+)-([^/]+(-en)?)|[^-]+-(fr|en)))$", topic));
 
     LANDING_ISSUE_PATTERN = Pattern.compile(
         String.format("/(%s/([^/]+)/(volume[^/]+)/((issue-[^-]+-)?([^/]+)))$", topic));
