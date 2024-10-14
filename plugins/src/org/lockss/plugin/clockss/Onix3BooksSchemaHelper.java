@@ -302,7 +302,7 @@ implements SourceXmlSchemaHelper {
   protected static String ONIX_idtype_isbn13 =
       "ProductIdentifier[ProductIDType='15'] | productidentifier[b221='15']";
   protected static String ONIX_idtype_isbn10 =
-      "ProductIdentifier[ProductIDType='2'] | productidentifier[b221='2']";
+      "ProductIdentifier[ProductIDType='02'] | productidentifier[b221='02']";
   private static String ONIX_idtype_lccn =
       "ProductIdentifier[ProductIDType='13'] | productidentifier[b221='13']";
   public static String ONIX_idtype_doi =
