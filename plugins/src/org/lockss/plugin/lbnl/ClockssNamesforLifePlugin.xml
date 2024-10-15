@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -99,7 +99,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://static\.namesforlife\.com/"</string>
       <string>1,"^https?://api\.namesforlife\.com/script/"</string>
       <string>1,"^https?://doi\.org/10\.1601/"</string>
-      <string>1,"^https?://%s/", url_host(base_url)</string>
+      <string>1,"^https?://%s/(?!(intellectual-property|contact|guide\/?)).*", url_host(base_url)</string>
       <!--<string>1,"^%ssitemap.*", base_url</string>-->
       <!--<string>1,"^%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?", base_url</string>-->
       <!--<string>1,"^%s(data|css|script|images)", base_url</string>-->
