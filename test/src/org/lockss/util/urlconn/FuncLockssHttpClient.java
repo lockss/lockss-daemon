@@ -582,7 +582,12 @@ public class FuncLockssHttpClient extends LockssTestCase {
 				  localurl(port), connectionPool);
     conn.setLocalAddress(IPAddr.getByName(local));
     aborter = abortIn(TIMEOUT_SHOULDNT, conn);
-    conn.execute();
+    try {
+      conn.execute();
+    }
+    catch (java.net.BindException be) {
+      throw new java.net.BindException(String.format("%s: %s (%s)", be.getMessage(), local, lh));
+    }
     aborter.cancel();
     InetSocketAddress client = th.getClient(0);
     log.debug("Connection from client: " + client.getAddress());
