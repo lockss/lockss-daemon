@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -112,7 +112,6 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https://www\.googletagmanager\.com/gtag/js\?id="</string>
       <string>1,"^https?://(%s|(fonts|ajax)\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%sLibrary/Article/", base_url</string>
@@ -153,7 +152,6 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>(fonts|ajax)\.googleapis\.com</string>
       <string>.+\.mathjax\.org</string>
       <string>.+\.cloudfront\.net</string>
-      <string>.+\.googletagmanager\.com</string>
     </list>
   </entry>
 </map>
