@@ -410,6 +410,7 @@
     
     param[collection_id] = car
     
+    au < exists ; exists ; 2004 ; Carus Mathematical Monographs 2004 ; 2004 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2005 ; Carus Mathematical Monographs 2005 ; 2005 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2010 ; Carus Mathematical Monographs 2010 ; 2010 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2016 ; Carus Mathematical Monographs 2016 ; 2016 ; https://www.ams.org/ ; >
@@ -428,6 +429,9 @@
     
     param[collection_id] = crmm
     
+    au < exists ; exists ; 2008 ; CRM Monograph series 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2009 ; CRM Monograph series 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2010 ; CRM Monograph series 2010 ; 2010 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2012 ; CRM Monograph series 2012 ; 2012 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2013 ; CRM Monograph series 2013 ; 2013 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2014 ; CRM Monograph series 2014 ; 2014 ; https://www.ams.org/ ; >
@@ -447,6 +451,8 @@
     
     param[collection_id] = dol
     
+    au < exists ; exists ; 2010 ; Dolciani Mathematical Expositions – Electronic 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2011 ; Dolciani Mathematical Expositions – Electronic 2011 ; 2011 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2012 ; Dolciani Mathematical Expositions – Electronic 2012 ; 2012 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2013 ; Dolciani Mathematical Expositions – Electronic 2013 ; 2013 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2015 ; Dolciani Mathematical Expositions – Electronic 2015 ; 2015 ; https://www.ams.org/ ; >
@@ -466,6 +472,8 @@
     
     param[collection_id] = hmath
     
+    au < exists ; exists ; 2010 ; History of Math 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2011 ; History of Math 2011 ; 2011 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2012 ; History of Math 2012 ; 2012 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2014 ; History of Math 2014 ; 2014 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2016 ; History of Math 2016 ; 2016 ; https://www.ams.org/ ; >
@@ -484,6 +492,10 @@
     
     param[collection_id] = pcms
     
+    au < exists ; exists ; 2007 ; IAS/Park City Mathematics Series 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2009 ; IAS/Park City Mathematics Series 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2010 ; IAS/Park City Mathematics Series 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2011 ; IAS/Park City Mathematics Series 2011 ; 2011 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2013 ; IAS/Park City Mathematics Series 2013 ; 2013 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2014 ; IAS/Park City Mathematics Series 2014 ; 2014 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2016 ; IAS/Park City Mathematics Series 2016 ; 2016 ; https://www.ams.org/ ; >
@@ -505,6 +517,9 @@
     
     param[collection_id] = prb
     
+    au < exists ; exists ; 2008 ; Problem Books 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2009 ; Problem Books 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2011 ; Problem Books 2011 ; 2011 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2012 ; Problem Books 2012 ; 2012 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2015 ; Problem Books 2015 ; 2015 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2016 ; Problem Books 2016 ; 2016 ; https://www.ams.org/ ; >
@@ -540,6 +555,19 @@
     
     param[collection_id] = spec
     
+    au < exists ; exists ; 1998 ; Spectrum 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2000 ; Spectrum 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2001 ; Spectrum 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2002 ; Spectrum 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2003 ; Spectrum 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2004 ; Spectrum 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2005 ; Spectrum 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2006 ; Spectrum 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2007 ; Spectrum 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2008 ; Spectrum 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2009 ; Spectrum 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2010 ; Spectrum 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2011 ; Spectrum 2011 ; 2011 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2012 ; Spectrum 2012 ; 2012 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2013 ; Spectrum 2013 ; 2013 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2014 ; Spectrum 2014 ; 2014 ; https://www.ams.org/ ; >
@@ -563,6 +591,9 @@
     
     param[collection_id] = dimacs
     
+    au < exists ; exists ; 2008 ; Dimacs Workshop Series-Electronic 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2009 ; Dimacs Workshop Series-Electronic 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2010 ; Dimacs Workshop Series-Electronic 2010 ; 2010 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2011 ; Dimacs Workshop Series-Electronic 2011 ; 2011 ; https://www.ams.org/ ; >
 
     }
@@ -576,6 +607,18 @@
     
     param[collection_id] = crmp
     
+    au < exists ; exists ; 2000 ; CRM Proceedings and Lecture Notes 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2001 ; CRM Proceedings and Lecture Notes 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2002 ; CRM Proceedings and Lecture Notes 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2003 ; CRM Proceedings and Lecture Notes 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2004 ; CRM Proceedings and Lecture Notes 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2005 ; CRM Proceedings and Lecture Notes 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2006 ; CRM Proceedings and Lecture Notes 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2007 ; CRM Proceedings and Lecture Notes 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2008 ; CRM Proceedings and Lecture Notes 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2009 ; CRM Proceedings and Lecture Notes 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2010 ; CRM Proceedings and Lecture Notes 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2011 ; CRM Proceedings and Lecture Notes 2011 ; 2011 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2012 ; CRM Proceedings and Lecture Notes 2012 ; 2012 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2013 ; CRM Proceedings and Lecture Notes 2013 ; 2013 ; https://www.ams.org/ ; >
 
@@ -590,6 +633,12 @@
     
     param[collection_id] = amsip
     
+    au < exists ; exists ; 2006 ; AMS/IP Studies in Advanced Math Series 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2007 ; AMS/IP Studies in Advanced Math Series 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2008 ; AMS/IP Studies in Advanced Math Series 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2009 ; AMS/IP Studies in Advanced Math Series 2009 ; 2009 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2010 ; AMS/IP Studies in Advanced Math Series 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2011 ; AMS/IP Studies in Advanced Math Series 2011 ; 2011 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2012 ; AMS/IP Studies in Advanced Math Series 2012 ; 2012 ; https://www.ams.org/ ; >
 
     }
@@ -604,6 +653,8 @@
     param[collection_id] = advsov
     
     au < exists ; exists ; 1990 ; Advances in Soviet Mathematics 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1991 ; Advances in Soviet Mathematics 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1992 ; Advances in Soviet Mathematics 1992 ; 1992 ; https://www.ams.org/ ; >
 
     }
    
