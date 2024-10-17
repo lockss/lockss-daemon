@@ -1,5 +1,9 @@
 #!/usr/bin/perl -w
 # This script scrapes the ams website to create a complete list of all the available AUs
+#tdbout -EXMZFCMTYLc param[collection_id] tdb/clockssingest/american_mathematical_society.books.tdb | sort -u | ./scripts/tdb/check_ams_manifest_pages.pl | sort -u > ../SageEdits/ams_site_list
+#tdbout -EXMZFCMTYLBc param[collection_id],param[year_string] tdb/clockssingest/american_mathematical_society.books.tdb | sort -u | sed s'/^/https:\/\/www.ams.org\//' | sed s'/,/\/year\//' > ../SageEdits/ams_tdb_list
+#comm -23 ../SageEdits/ams_site_list ../SageEdits/ams_tdb_list
+#*************************************
 
 use URI::Escape;
 use Getopt::Long;
@@ -22,11 +26,6 @@ my $ua = LWP::UserAgent->new( cookie_jar => $cjar, agent => "LOCKSS cache", ssl_
 $ua->proxy('http', 'http://proxy.lockss.org:3128/');
 $ua->no_proxy('localhost', '127.0.0.1');
 
-#tdbout -EXMZFCMTYLc param[collection_id] tdb/clockssingest/american_mathematical_society.books.tdb | sort -u | ./scripts/tdb/check_ams_manifest_pages.pl | sort -u > ../SageEdits/ams_site_list
-#tdbout -EXMZFCMTYLBc param[collection_id],param[year_string] tdb/clockssingest/american_mathematical_society.books.tdb | sort -u | sed s'/^/https:\/\/www.ams.org\//' | sed s'/,/\/year\//' > ../SageEdits/ams_tdb_list
-#comm -23 ../SageEdits/ams_site_list ../SageEdits/ams_tdb_list
-#*************************************
-
 my @collection_list=();
 
 while (my $line = <>) {
@@ -48,9 +47,9 @@ foreach my $collection (@collection_list) {
     if ($req2->url ne $resp2->request->uri) {
       printf("Redirected from %s\n", $url2);
     #} elsif (defined($man_contents2) && ($man_contents2 =~ m#href=\"/${collection}/[^>]*(\d+)\">#)){
-    } elsif (defined($man_contents2) && ($man_contents2 =~ m%/${collection}/[^>]*(\d+)%)){
+    } elsif (defined($man_contents2) && ($man_contents2 =~ m%/(${collection}/[^>]*(\d+))%)){
     #} elsif (defined($man_contents2) && ($man_contents2 =~ m/a/)){
-      #printf("Not redirected and has a match.\n");
+      #printf("Not redirected and has a match.\n"); #debug
       #printf("%s\n", $man_contents2); #debug
       #https://www.govinfo.gov/sitemap/CRPT_2001_sitemap.xml
       foreach my $line2 (split(/\n/m, $man_contents2)) {
