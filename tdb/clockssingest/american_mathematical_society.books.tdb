@@ -257,6 +257,11 @@
     au < manifest ; exists ; 1997 ; Anneli Lax New Mathematical Library 1997 ; 1997 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1998 ; Anneli Lax New Mathematical Library 1998 ; 1998 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2000 ; Anneli Lax New Mathematical Library 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2001 ; Anneli Lax New Mathematical Library 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2002 ; Anneli Lax New Mathematical Library 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2003 ; Anneli Lax New Mathematical Library 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2006 ; Anneli Lax New Mathematical Library 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2009 ; Anneli Lax New Mathematical Library 2009 ; 2009 ; https://www.ams.org/ ; >
 
     au < manifest ; exists ; 2024 ; Anneli Lax New Mathematical Library 2024 ; 2024 ; https://www.ams.org/ ; >
 
@@ -278,6 +283,7 @@
     au < zapped ; finished ; 1990-1999 ; Proceedings of Symposia in Pure Mathematics 1990-1999 ; 1990-1999 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2000-2009 ; Proceedings of Symposia in Pure Mathematics 2000-2009 ; 2000-2009 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010-2019 ; Proceedings of Symposia in Pure Mathematics 2010-2019 ; 2010-2019 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < exists ; exists ; 2020-2029 ; Proceedings of Symposia in Pure Mathematics 2020-2029 ; 2020-2029 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
 
     }
    
@@ -391,6 +397,114 @@
 
     }
 
+    {
+  
+    title < 
+      name = Carus Mathematical Monographs ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = car
+    
+    au < exists ; exists ; 2005 ; Carus Mathematical Monographs 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2010 ; Carus Mathematical Monographs 2010 ; 2010 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2016 ; Carus Mathematical Monographs 2016 ; 2016 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2018 ; Carus Mathematical Monographs 2018 ; 2018 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2020 ; Carus Mathematical Monographs 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2021 ; Carus Mathematical Monographs 2021 ; 2021 ; https://www.ams.org/ ; >
+
+    }
+   
+    {
+  
+    title < 
+      name = CRM Monograph series ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = crmm
+    
+    au < exists ; exists ; 2012 ; CRM Monograph series 2012 ; 2012 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2013 ; CRM Monograph series 2013 ; 2013 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2014 ; CRM Monograph series 2014 ; 2014 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2015 ; CRM Monograph series 2015 ; 2015 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2018 ; CRM Monograph series 2018 ; 2018 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2022 ; CRM Monograph series 2022 ; 2022 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2023 ; CRM Monograph series 2023 ; 2023 ; https://www.ams.org/ ; >
+
+    }
+   
+    {
+  
+    title < 
+      name = Dolciani Mathematical Expositions – Electronic ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = dol
+    
+    au < exists ; exists ; 2012 ; Dolciani Mathematical Expositions – Electronic 2012 ; 2012 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2013 ; Dolciani Mathematical Expositions – Electronic 2013 ; 2013 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2015 ; Dolciani Mathematical Expositions – Electronic 2015 ; 2015 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2019 ; Dolciani Mathematical Expositions – Electronic 2019 ; 2019 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2020 ; Dolciani Mathematical Expositions – Electronic 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2021 ; Dolciani Mathematical Expositions – Electronic 2021 ; 2021 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2023 ; Dolciani Mathematical Expositions – Electronic 2023 ; 2023 ; https://www.ams.org/ ; >
+
+    }
+   
+    {
+  
+    title < 
+      name = History of Math ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = hmath
+    
+    au < exists ; exists ; 2012 ; History of Math 2012 ; 2012 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2014 ; History of Math 2014 ; 2014 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2016 ; History of Math 2016 ; 2016 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2020 ; History of Math 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2021 ; History of Math 2021 ; 2021 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2023 ; History of Math 2023 ; 2023 ; https://www.ams.org/ ; >
+
+    }
+   
+    {
+  
+    title < 
+      name = IAS/Park City Mathematics Series ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = pcms
+    
+    au < exists ; exists ; 2013 ; IAS/Park City Mathematics Series 2013 ; 2013 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2014 ; IAS/Park City Mathematics Series 2014 ; 2014 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2016 ; IAS/Park City Mathematics Series 2016 ; 2016 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2017 ; IAS/Park City Mathematics Series 2017 ; 2017 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2018 ; IAS/Park City Mathematics Series 2018 ; 2018 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2019 ; IAS/Park City Mathematics Series 2019 ; 2019 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2020 ; IAS/Park City Mathematics Series 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2021 ; IAS/Park City Mathematics Series 2021 ; 2021 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2023 ; IAS/Park City Mathematics Series 2023 ; 2023 ; https://www.ams.org/ ; >
+
+    }
+   
+    {
+  
+    title < 
+      name = Problem Books ;
+      type = bookSeries
+    >
+    
+    param[collection_id] = prb
+    
+    au < exists ; exists ; 2020 ; Problem Books 2020 ; 2020 ; https://www.ams.org/ ; >
+
+    }
+   
     {
   
     title < 
@@ -667,6 +781,7 @@
     au < finished ; manifest ; 2009 ; Mathematical World 2009 ; 2009 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Mathematical World 2013 ; 2013 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Mathematical World 2018 ; 2018 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < exists ; exists ; 2023 ; Mathematical World 2023 ; 2023 ; https://www.ams.org/ ; >
 
     }
 
@@ -750,6 +865,7 @@
     au < finished ; manifest ; 2019 ; University Lecture Series 2019 ; 2019 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; University Lecture Series 2020 ; 2020 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; University Lecture Series 2021 ; 2021 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < exists ; exists ; 2023 ; University Lecture Series 2023 ; 2023 ; https://www.ams.org/ ; >
     }
 
     {
