@@ -132,9 +132,10 @@
     au < finished ; frozen ; 2019 ; Mathematical Surveys and Monographs 2019 ; 2019 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; frozen ; 2020 ; Mathematical Surveys and Monographs 2020 ; 2020 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Mathematical Surveys and Monographs 2021 ; 2021 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
-    au < doNotProcess ; exists ; 2022 ; Mathematical Surveys and Monographs 2022 ; 2022 ; https://www.ams.org/ ; >
-    au < doNotProcess ; exists ; 2023 ; Mathematical Surveys and Monographs 2023 ; 2023 ; https://www.ams.org/ ; >
-#Not in contract. Move doNotProcess to manifest when contract is approved.
+    au < exists ; exists ; 2022 ; Mathematical Surveys and Monographs 2022 ; 2022 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 2023 ; Mathematical Surveys and Monographs 2023 ; 2023 ; https://www.ams.org/ ; >
+
+#Not in original contract. Move doNotProcess to manifest when contract is approved.
     }
 
     {
