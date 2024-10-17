@@ -285,10 +285,10 @@ We are pleased to announce that %s additional archival %s now available for pres
   s = s + '\n\n'
 
   if len(publishersNonAlliance) > 0:
-    s = s + 'The ' + enumerateCommaAnd(publishersNonAlliance) + ' archival units are available for preservation in all LOCKSS boxes.'
+    s = s + 'The following archival units are available for preservation in all LOCKSS boxes: ' + enumerateCommaAnd(publishersNonAlliance) + '.\n\n'
   if len(publishersAlliance) > 0:
     if len(publishersNonAlliance) > 0: s = s + ' '
-    s = s + 'The ' + enumerateCommaAnd(publishersAlliance) + ' archival units are available for preservation by all LOCKSS Alliance members.'
+    s = s + 'The following archival units are available for preservation by all LOCKSS Alliance members: ' + enumerateCommaAnd(publishersAlliance) + '.'
 
   s = s + '''
 

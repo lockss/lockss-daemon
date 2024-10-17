@@ -20,7 +20,7 @@ echo "****List of the Atypon publishers****"
 echo "****Generating list of the released AUs****"
 echo -e "Publisher\tJournal\tISSN\tEISSN\tVolume\tYear" > ../SageEdits/ReleasedToday.tsv ; scripts/tdb/tdbout -G -t publisher,title,issn,eissn,name,year tdb/prod/ >> ../SageEdits/ReleasedToday.tsv
 echo "****Generating release email"
-./scripts/tdb/tdbout -t publisher,title,name,status,plugin tdb/prod/ > ../SageEdits/ForEmail.txt ; cat ../SageEdits/ForEmail.txt | ./scripts/tdb/releaseemail.py --gln > ../SageEdits/ReleaseEmail.txt
+./scripts/tdb/tdbout -t publisher,title,name,status,plugin tdb/prod/ | sort > ../SageEdits/ForEmail.txt ; cat ../SageEdits/ForEmail.txt | ./scripts/tdb/releaseemail.py --gln > ../SageEdits/ReleaseEmail.txt
  
 exit 0
 
