@@ -80,7 +80,7 @@ public class PollManager
   static final String PREFIX = Configuration.PREFIX + "poll.";
 
   /** If true, polls will be conducted in a way that allows polling
-   * with LOCKSS 2.x nodes, and precents polling with 1.x that are not
+   * with LOCKSS 2.x nodes, and prevents polling with 1.x that are not
    * in this mode.  If false, will not poll with 2.x nodes. */
   public static final String PARAM_V2_COMPAT = PREFIX + "2.0Compatible";
   public static final boolean DEFAULT_V2_COMPAT = false;

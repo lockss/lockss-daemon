@@ -4,7 +4,8 @@
     name = Beryl Institute ;
     info[contract] = 2013 ;
     info[tester] = 5 ;
-    info[poller] = 8
+    info[poller] = 8 ;
+    info[platform] = bepress
   >
   provider = bepress
   
@@ -32,7 +33,7 @@
     au < finished ; finished ; 2021 ; Patient Experience Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Patient Experience Journal Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2023 ; Patient Experience Journal Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2024 ; Patient Experience Journal Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2024 ; Patient Experience Journal Volume 11 ; 11 ; >
 
   }
 

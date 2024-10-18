@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -57,6 +57,11 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_name</string>
     <string>"OAPEN Books Plugin (CLOCKSS), Base URL %s, Resource ID %s", base_url, resource_id</string>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <!--https://library.oapen.org/robots.txt-->
+    <string>"%srobots.txt", base_url</string>
   </entry>
   <entry>
     <string>clockss_override</string>

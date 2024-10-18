@@ -243,7 +243,8 @@ public class BaseScHtmlHashFilterFactory implements FilterFactory {
     Reader reader = FilterUtil.getReader(filtered, encoding);
 
     // Remove all inner tag content
-    Reader noTagFilter = new HtmlTagFilter(new StringFilter(reader, "<", " <"), new TagPair("<", ">"));
+    // we need to filter out nbsp; characters in OUP
+    Reader noTagFilter = new HtmlTagFilter(new StringFilter(new StringFilter(reader,"\u00a0",""), "<", " <"), new TagPair("<", ">"));
 
     // Remove white space
     Reader whiteSpaceFilter = new WhiteSpaceFilter(noTagFilter);

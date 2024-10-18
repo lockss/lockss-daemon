@@ -22,6 +22,8 @@ public class ArchivesPharmacyPracticeHtmlCrawlFilterFactory implements FilterFac
             HtmlNodeFilters.tag("header"),
             HtmlNodeFilters.tag("footer"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "article_citation"),
+            HtmlNodeFilters.tagWithAttribute("div", "id", "related_articles"),
+            HtmlNodeFilters.tagWithAttribute("div", "id", "most_viewed_articles"),
         };
 
         return new HtmlFilterInputStream(in,

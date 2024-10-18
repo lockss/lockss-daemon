@@ -17,19 +17,19 @@
     plugin = org.lockss.plugin.clockss.innovativemedicalresearchpress.ClockssInnovativeMedicalResearchPressSourcePlugin
     implicit < status ; status2 ; year ; name ; param[year] >
     {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/imrpress-released/
+
+    au < readySource ; finished ; 2023 ; IMR Press Source Content 2023 ; 2023 >
+    au < readySource ; crawling ; 2024 ; IMR Press Source Content 2024 ; 2024 >
+
+    }
+    {
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/imrpress-released/
 
     au < zapped ; finished ; 2020 ; IMR Press Source Content 2020 ; 2020 >
     au < readySource ; frozen ; 2021 ; IMR Press Source Content 2021 ; 2021 > #LXPLUG-2334
     au < readySource ; finished ; 2022 ; IMR Press Source Content 2022 ; 2022 >
     #No more AUs. Moving to https.
-    }
-    {
-    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/imrpress-released/
-
-    au < readySource ; finished ; 2023 ; IMR Press Source Content 2023 ; 2023 >
-    au < readySource ; crawling ; 2024 ; IMR Press Source Content 2024 ; 2024 >
-
     }
   }
 

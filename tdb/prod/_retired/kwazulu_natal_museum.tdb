@@ -15,7 +15,7 @@
     {
     
       plugin = org.lockss.plugin.ojs2.OJS2Plugin
-      implicit < status ; year ; name ; param[year] >
+      implicit < status ; year ; name ; volume ; param[year] >
 
       {
 
@@ -24,11 +24,11 @@
         param[base_url] = http://africaninvertebrates.org/ojs/
         param[journal_id] = AI
  
-        au < doNotProcess ; 2011 ; African Invertebrates Volume 2011 ; 2011 >
-        au < down ; 2012 ; African Invertebrates Volume 2012 ; 2012 >
-        au < down ; 2013 ; African Invertebrates Volume 2013 ; 2013 >
-        au < down ; 2014 ; African Invertebrates Volume 2014 ; 2014 >
-        au < doNotProcess ; 2015 ; African Invertebrates Volume 2015 ; 2015 >
+        au < doNotProcess ; 2011 ; African Invertebrates Volume 52 ; 52 ; 2011 >
+        au < down ; 2012 ; African Invertebrates Volume 53 ; 53 ; 2012 >
+        au < down ; 2013 ; African Invertebrates Volume 54 ; 54 ; 2013 >
+        au < down ; 2014 ; African Invertebrates Volume 55 ; 55 ; 2014 >
+        au < doNotProcess ; 2015 ; African Invertebrates Volume 56 ; 56 ; 2015 >
 
       }
       
@@ -40,11 +40,11 @@
         param[journal_id] = AI
         #move to Pensoft
 
-        au < down ; 2011 ; African Invertebrates Volume 2011 ; 2011 >
-        au < doNotProcess ; 2012 ; African Invertebrates Volume 2012 ; 2012 >
-        au < doNotProcess ; 2013 ; African Invertebrates Volume 2013 ; 2013 >
-        au < doNotProcess ; 2014 ; African Invertebrates Volume 2014 ; 2014 >
-        au < down ; 2015 ; African Invertebrates Volume 2015 ; 2015 >
+        au < down ; 2011 ; African Invertebrates Volume 52 ; 52 ; 2011 >
+        au < doNotProcess ; 2012 ; African Invertebrates Volume 53 ; 53 ; 2012 >
+        au < doNotProcess ; 2013 ; African Invertebrates Volume 54 ; 54 ; 2013 >
+        au < doNotProcess ; 2014 ; African Invertebrates Volume 55 ; 55 ; 2014 >
+        au < down ; 2015 ; African Invertebrates Volume 56 ; 56 ; 2015 >
 
       }
 
@@ -55,16 +55,16 @@
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = afin
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < status ; year ; name ; volume ; param[volume_name] >
     
-      au < down ; 2008 ; African Invertebrates Volume 49 ; 49 >
-      au < down ; 2009 ; African Invertebrates Volume 50 ; 50 >
-      au < down ; 2010 ; African Invertebrates Volume 51 ; 51 >
-      au < down ; 2011 ; African Invertebrates Volume 52 ; 52 >
-      au < down ; 2012 ; African Invertebrates Volume 53 ; 53 >
-      au < down ; 2013 ; African Invertebrates Volume 54 ; 54 >
-      au < down ; 2014 ; African Invertebrates Volume 55 ; 55 >
-      au < down ; 2015 ; African Invertebrates Volume 56 ; 56 >
+      au < down ; 2008 ; African Invertebrates Volume 49 ; 49 ; 49 >
+      au < down ; 2009 ; African Invertebrates Volume 50 ; 50 ; 50 >
+      au < down ; 2010 ; African Invertebrates Volume 51 ; 51 ; 51 >
+      au < down ; 2011 ; African Invertebrates Volume 52 ; 52 ; 52 >
+      au < down ; 2012 ; African Invertebrates Volume 53 ; 53 ; 53 >
+      au < down ; 2013 ; African Invertebrates Volume 54 ; 54 ; 54 >
+      au < down ; 2014 ; African Invertebrates Volume 55 ; 55 ; 55 >
+      au < down ; 2015 ; African Invertebrates Volume 56 ; 56 ; 56 >
 
     }
 

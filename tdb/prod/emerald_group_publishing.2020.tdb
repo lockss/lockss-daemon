@@ -1894,7 +1894,7 @@
     au < manifest ; 2000 ; Competitiveness Review: An International Business Journal Volume 10 ; 10 >
     au < manifest ; 2001 ; Competitiveness Review: An International Business Journal Volume 11 ; 11 >
     au < released ; 2002 ; Competitiveness Review: An International Business Journal Volume 12 ; 12 >
-    au < manifest ; 2003 ; Competitiveness Review: An International Business Journal Volume 13 ; 13 >
+    au < released ; 2003 ; Competitiveness Review: An International Business Journal Volume 13 ; 13 >
     au < released ; 2004 ; Competitiveness Review: An International Business Journal Volume 14 ; 14 >
     au < released ; 2005 ; Competitiveness Review: An International Business Journal Volume 15 ; 15 >
     au < released ; 2006 ; Competitiveness Review: An International Business Journal Volume 16 ; 16 >
@@ -7223,36 +7223,63 @@
   {
     title <
       name = Journal of Economic and Administrative Sciences ;
-      issn = 1026-4116 ;
-      issnl = 1026-4116
+      issn = 2054-6238 ;
+      eissn = 2054-6246 ;
+      issnl = 2054-6238
     >
-
-    param[journal_issn] = 1026-4116
     comment[journal_id] = jeas
+    {
+    param[journal_issn] = 2054-6238
 
-    au < released ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
-    au < released ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 >
-    au < released ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
-    au < released ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
-    au < released ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
-    au < released ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
-    au < released ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
-    au < released ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
-    au < doesNotExist ; 0 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 >
-    au < released ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 >
+    au < doNotProcess ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
+    au < doNotProcess ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 >
+    au < doNotProcess ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
+    au < doNotProcess ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
+    au < doNotProcess ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
+    au < doNotProcess ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
+    au < doNotProcess ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
+    au < doNotProcess ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
+    au < doesNotExist ; 2011 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 >
+    au < doNotProcess ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 >
     au < doNotProcess ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 >
     au < doNotProcess ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 >
     au < doNotProcess ; 2015 ; Journal of Economic and Administrative Sciences Volume 31 ; 31 >
     au < doNotProcess ; 2016 ; Journal of Economic and Administrative Sciences Volume 32 ; 32 >
     au < doNotProcess ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 >
-    au < released ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 >
-    au < released ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 >
-    au < released ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 >
-    au < released ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 >
-    au < released ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 >
+    au < manifest ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 >
+    au < manifest ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 >
+    au < manifest ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 >
+    au < manifest ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 >
+    au < manifest ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 >
     au < manifest ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 >
     au < manifest ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 >
+    }
+    {
+    param[journal_issn] = 1026-4116
 
+    au < down ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
+    au < down ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 >
+    au < down ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
+    au < down ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
+    au < down ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
+    au < down ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
+    au < down ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
+    au < down ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
+    au < doNotProcess ; 2011 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 >
+    au < down ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 >
+    au < doNotProcess ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 >
+    au < doNotProcess ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 >
+    au < doNotProcess ; 2015 ; Journal of Economic and Administrative Sciences Volume 31 ; 31 >
+    au < doNotProcess ; 2016 ; Journal of Economic and Administrative Sciences Volume 32 ; 32 >
+    au < doNotProcess ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 >
+    au < superseded ; 2018 ; Journal of Economic and Administrative Sciences [superseded] Volume 34 ; 34 >
+    au < superseded ; 2019 ; Journal of Economic and Administrative Sciences [superseded] Volume 35 ; 35 >
+    au < superseded ; 2020 ; Journal of Economic and Administrative Sciences [superseded] Volume 36 ; 36 >
+    au < superseded ; 2021 ; Journal of Economic and Administrative Sciences [superseded] Volume 37 ; 37 >
+    au < superseded ; 2022 ; Journal of Economic and Administrative Sciences [superseded] Volume 38 ; 38 >
+    au < doNotProcess ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 >
+    au < doNotProcess ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 >
+    }
   }
 
   {
@@ -11722,7 +11749,7 @@
     au < released ; 2018 ; Pigment & Resin Technology Volume 47 ; 47 >
     au < released ; 2019 ; Pigment & Resin Technology Volume 48 ; 48 >
     au < released ; 2020 ; Pigment & Resin Technology Volume 49 ; 49 >
-    au < manifest ; 2021 ; Pigment & Resin Technology Volume 50 ; 50 >
+    au < released ; 2021 ; Pigment & Resin Technology Volume 50 ; 50 >
     au < released ; 2022 ; Pigment & Resin Technology Volume 51 ; 51 >
     au < released ; 2023 ; Pigment & Resin Technology Volume 52 ; 52 >
     au < manifest ; 2024 ; Pigment & Resin Technology Volume 53 ; 53 >
@@ -14437,7 +14464,7 @@
     au < released ; 2016 ; Journal of Entrepreneurship in Emerging Economies Volume 8 ; 8 >
     au < released ; 2017 ; Journal of Entrepreneurship in Emerging Economies Volume 9 ; 9 >
     au < released ; 2018 ; Journal of Entrepreneurship in Emerging Economies Volume 10 ; 10 >
-    au < manifest ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 >
+    au < released ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 >
     au < released ; 2020 ; Journal of Entrepreneurship in Emerging Economies Volume 12 ; 12 >
     au < released ; 2021 ; Journal of Entrepreneurship in Emerging Economies Volume 13 ; 13 >
     au < released ; 2022 ; Journal of Entrepreneurship in Emerging Economies Volume 14 ; 14 >
@@ -14512,7 +14539,7 @@
     au < released ; 2021 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 12 ; 12 >
     au < released ; 2022 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 13 ; 13 >
     au < released ; 2023 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 14 ; 14 >
-    au < expected ; 2024 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 15 ; 15 >
+    au < manifest ; 2024 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 15 ; 15 >
 
   }
 
@@ -15012,7 +15039,7 @@
     au < released ; 2021 ; Asian Association of Open Universities Journal Volume 16 ; 16 >
     au < released ; 2022 ; Asian Association of Open Universities Journal Volume 17 ; 17 >
     au < released ; 2023 ; Asian Association of Open Universities Journal Volume 18 ; 18 >
-    au < expected ; 2024 ; Asian Association of Open Universities Journal Volume 19 ; 19 >
+    au < manifest ; 2024 ; Asian Association of Open Universities Journal Volume 19 ; 19 >
 
   }
 
@@ -15385,7 +15412,7 @@
     au < released ; 2021 ; Journal of Capital Markets Studies Volume 5 ; 5 >
     au < released ; 2022 ; Journal of Capital Markets Studies Volume 6 ; 6 >
     au < released ; 2023 ; Journal of Capital Markets Studies Volume 7 ; 7 >
-    au < expected ; 2024 ; Journal of Capital Markets Studies Volume 8 ; 8 >
+    au < manifest ; 2024 ; Journal of Capital Markets Studies Volume 8 ; 8 >
 
   }
 
@@ -15424,7 +15451,7 @@
     au < released ; 2021 ; Journal of Defense Analytics & Logistics Volume 5 ; 5 >
     au < released ; 2022 ; Journal of Defense Analytics & Logistics Volume 6 ; 6 >
     au < released ; 2023 ; Journal of Defense Analytics & Logistics Volume 7 ; 7 >
-    au < expected ; 2024 ; Journal of Defense Analytics & Logistics Volume 8 ; 8 >
+    au < manifest ; 2024 ; Journal of Defense Analytics & Logistics Volume 8 ; 8 >
 
   }
 
@@ -15438,25 +15465,26 @@
     >
 
     param[journal_issn] = 1229-988X
+    #No pdfs till V28
 
-    au < manifest ; 2002 ; Journal of Derivatives and Quantitative Studies Volume 10 ; 10 >
-    au < manifest ; 2003 ; Journal of Derivatives and Quantitative Studies Volume 11 ; 11 >
-    au < manifest ; 2004 ; Journal of Derivatives and Quantitative Studies Volume 12 ; 12 >
-    au < manifest ; 2005 ; Journal of Derivatives and Quantitative Studies Volume 13 ; 13 >
-    au < manifest ; 2006 ; Journal of Derivatives and Quantitative Studies Volume 14 ; 14 >
-    au < manifest ; 2007 ; Journal of Derivatives and Quantitative Studies Volume 15 ; 15 >
-    au < manifest ; 2008 ; Journal of Derivatives and Quantitative Studies Volume 16 ; 16 >
-    au < manifest ; 2009 ; Journal of Derivatives and Quantitative Studies Volume 17 ; 17 >
-    au < manifest ; 2010 ; Journal of Derivatives and Quantitative Studies Volume 18 ; 18 >
-    au < manifest ; 2011 ; Journal of Derivatives and Quantitative Studies Volume 19 ; 19 >
-    au < manifest ; 2012 ; Journal of Derivatives and Quantitative Studies Volume 20 ; 20 >
-    au < manifest ; 2013 ; Journal of Derivatives and Quantitative Studies Volume 21 ; 21 >
-    au < manifest ; 2014 ; Journal of Derivatives and Quantitative Studies Volume 22 ; 22 >
-    au < manifest ; 2015 ; Journal of Derivatives and Quantitative Studies Volume 23 ; 23 >
-    au < manifest ; 2016 ; Journal of Derivatives and Quantitative Studies Volume 24 ; 24 >
-    au < manifest ; 2017 ; Journal of Derivatives and Quantitative Studies Volume 25 ; 25 >
-    au < manifest ; 2018 ; Journal of Derivatives and Quantitative Studies Volume 26 ; 26 >
-    au < manifest ; 2019 ; Journal of Derivatives and Quantitative Studies Volume 27 ; 27 >
+    au < doNotProcess ; 2002 ; Journal of Derivatives and Quantitative Studies Volume 10 ; 10 >
+    au < doNotProcess ; 2003 ; Journal of Derivatives and Quantitative Studies Volume 11 ; 11 >
+    au < doNotProcess ; 2004 ; Journal of Derivatives and Quantitative Studies Volume 12 ; 12 >
+    au < doNotProcess ; 2005 ; Journal of Derivatives and Quantitative Studies Volume 13 ; 13 >
+    au < doNotProcess ; 2006 ; Journal of Derivatives and Quantitative Studies Volume 14 ; 14 >
+    au < doNotProcess ; 2007 ; Journal of Derivatives and Quantitative Studies Volume 15 ; 15 >
+    au < doNotProcess ; 2008 ; Journal of Derivatives and Quantitative Studies Volume 16 ; 16 >
+    au < doNotProcess ; 2009 ; Journal of Derivatives and Quantitative Studies Volume 17 ; 17 >
+    au < doNotProcess ; 2010 ; Journal of Derivatives and Quantitative Studies Volume 18 ; 18 >
+    au < doNotProcess ; 2011 ; Journal of Derivatives and Quantitative Studies Volume 19 ; 19 >
+    au < doNotProcess ; 2012 ; Journal of Derivatives and Quantitative Studies Volume 20 ; 20 >
+    au < doNotProcess ; 2013 ; Journal of Derivatives and Quantitative Studies Volume 21 ; 21 >
+    au < doNotProcess ; 2014 ; Journal of Derivatives and Quantitative Studies Volume 22 ; 22 >
+    au < doNotProcess ; 2015 ; Journal of Derivatives and Quantitative Studies Volume 23 ; 23 >
+    au < doNotProcess ; 2016 ; Journal of Derivatives and Quantitative Studies Volume 24 ; 24 >
+    au < doNotProcess ; 2017 ; Journal of Derivatives and Quantitative Studies Volume 25 ; 25 >
+    au < doNotProcess ; 2018 ; Journal of Derivatives and Quantitative Studies Volume 26 ; 26 >
+    au < doNotProcess ; 2019 ; Journal of Derivatives and Quantitative Studies Volume 27 ; 27 >
     au < released ; 2020 ; Journal of Derivatives and Quantitative Studies Volume 28 ; 28 >
     au < released ; 2021 ; Journal of Derivatives and Quantitative Studies Volume 29 ; 29 >
     au < released ; 2022 ; Journal of Derivatives and Quantitative Studies Volume 30 ; 30 >
@@ -15595,7 +15623,7 @@
     au < released ; 2021 ; Journal of Intelligent Manufacturing and Special Equipment Volume 2 ; 2 >
     au < released ; 2022 ; Journal of Intelligent Manufacturing and Special Equipment Volume 3 ; 3 >
     au < released ; 2023 ; Journal of Intelligent Manufacturing and Special Equipment Volume 4 ; 4 >
-    au < expected ; 2024 ; Journal of Intelligent Manufacturing and Special Equipment Volume 5 ; 5 >
+    au < manifest ; 2024 ; Journal of Intelligent Manufacturing and Special Equipment Volume 5 ; 5 >
 
   }
 
@@ -15811,7 +15839,7 @@
     au < released ; 2021 ; New England Journal of Entrepreneurship Volume 24 ; 24 >
     au < released ; 2022 ; New England Journal of Entrepreneurship Volume 25 ; 25 >
     au < released ; 2023 ; New England Journal of Entrepreneurship Volume 26 ; 26 >
-    au < expected ; 2024 ; New England Journal of Entrepreneurship Volume 27 ; 27 >
+    au < manifest ; 2024 ; New England Journal of Entrepreneurship Volume 27 ; 27 >
 
   }
 

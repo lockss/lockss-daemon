@@ -46,8 +46,8 @@ public class TestEndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMe
     private static final Logger log = Logger.getLogger(TestEndocrineSocietyXmlMetadataExtractorFactory.class);
 
     private static String BaseUrl = "http://source.host.org/sourcefiles/endocrinesociety-released/";
-    private static String Directory = "2024_01/Endocrine%20Society";
-    private static String pdfUrl1 = BaseUrl + Directory + "/CMEs/(1)%20ESAP/2018/9781879225411.pdf";
+    private static String Directory = "2024_01/";
+    private static String pdfUrl1 = BaseUrl + Directory + "9781879225411.pdf";
 
     public void testExtractArticleXmlSchema() throws Exception {
 
@@ -55,7 +55,7 @@ public class TestEndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMe
         String journalXml = getResourceContent(fname);
         assertNotNull(journalXml);
 
-        String xml_url = BaseUrl + Directory + "/" + fname;
+        String xml_url = BaseUrl + Directory + fname;
         CIProperties xmlHeader = new CIProperties();
         xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 
@@ -81,7 +81,7 @@ public class TestEndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMe
         ArticleMetadata md = mdlist.get(0);
         assertNotNull(md);
 
-        assertEquals("ESAP 2018, Endocrine Self-Assessment Program Questions, Answers, and Discussions", md.get(MetadataField.FIELD_ARTICLE_TITLE));
+        assertEquals("ESAP 2018, Endocrine Self-Assessment Program Questions, Answers, and Discussions", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
         assertEquals("9781879225411", md.get(MetadataField.FIELD_ISBN));
         assertEquals("2018", md.get(MetadataField.FIELD_DATE));
     }

@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>28</string>
+    <string>29</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -143,6 +143,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- these file extensions are used in GovInfoSitemapsHttpResponseHandler for 504 Non-fatal exceptions
            if you add to them here, the pattern there should be updated as well
        -->
+       <string>2,"^%s.*/apple-touch-icon-[^/]+\.png$",base_url</string>
       <string>1,"^https?://(%s|[^.]+\.bootstrapcdn\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
       <!-- https://fonts.googleapis.com/css?family=Lato:700%7CRoboto:400,700 -->
       <string>1,"^https?://fonts\.googleapis\.com/css\?"</string>

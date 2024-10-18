@@ -193,6 +193,8 @@ public interface Crawler {
 
     public boolean isAllowedPluginPermittedHost(String host);
 
+    public boolean checkGloballyExcludedUrl(ArchivalUnit au, String url);
+
     public void updateCdnStems(String url);
 
     public CrawlUrl addChild(CrawlUrl curl, String url);

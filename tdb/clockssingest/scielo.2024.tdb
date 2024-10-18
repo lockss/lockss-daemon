@@ -9,7 +9,6 @@
     info[poller] = 8
   >
   
-  provider = Anais da Academia Brasileira de Ciências
   rights = openaccess
   plugin = org.lockss.plugin.scielo.ClockssSciELO2024Plugin
   implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
@@ -22,19 +21,20 @@
       eissn = 1678-2690
     >
 
+    provider = Anais da Academia Brasileira de Ciências
     param[base_url] = https://www.scielo.br/
     param[journal_id] = aabc
 
     au < frozen ; exists ; 2000 ; 72 ; Anais da Academia Brasileira de Ciências Volume 72 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 73 ; Anais da Academia Brasileira de Ciências Volume 73 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 74 ; Anais da Academia Brasileira de Ciências Volume 74 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 75 ; Anais da Academia Brasileira de Ciências Volume 75 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 76 ; Anais da Academia Brasileira de Ciências Volume 76 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 77 ; Anais da Academia Brasileira de Ciências Volume 77 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 78 ; Anais da Academia Brasileira de Ciências Volume 78 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 79 ; Anais da Academia Brasileira de Ciências Volume 79 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 80 ; Anais da Academia Brasileira de Ciências Volume 80 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 81 ; Anais da Academia Brasileira de Ciências Volume 81 ; 2009 ; >
+    au < frozen ; exists ; 2001 ; 73 ; Anais da Academia Brasileira de Ciências Volume 73 ; 2001 ; >
+    au < frozen ; exists ; 2002 ; 74 ; Anais da Academia Brasileira de Ciências Volume 74 ; 2002 ; >
+    au < frozen ; exists ; 2003 ; 75 ; Anais da Academia Brasileira de Ciências Volume 75 ; 2003 ; >
+    au < frozen ; exists ; 2004 ; 76 ; Anais da Academia Brasileira de Ciências Volume 76 ; 2004 ; >
+    au < frozen ; exists ; 2005 ; 77 ; Anais da Academia Brasileira de Ciências Volume 77 ; 2005 ; >
+    au < frozen ; exists ; 2006 ; 78 ; Anais da Academia Brasileira de Ciências Volume 78 ; 2006 ; >
+    au < frozen ; exists ; 2007 ; 79 ; Anais da Academia Brasileira de Ciências Volume 79 ; 2007 ; >
+    au < frozen ; exists ; 2008 ; 80 ; Anais da Academia Brasileira de Ciências Volume 80 ; 2008 ; >
+    au < frozen ; exists ; 2009 ; 81 ; Anais da Academia Brasileira de Ciências Volume 81 ; 2009 ; >
     au < frozen ; exists ; 2010 ; 82 ; Anais da Academia Brasileira de Ciências Volume 82 ; 2010 ; >
     au < frozen ; exists ; 2011 ; 83 ; Anais da Academia Brasileira de Ciências Volume 83 ; 2011 ; >
     au < frozen ; exists ; 2012 ; 84 ; Anais da Academia Brasileira de Ciências Volume 84 ; 2012 ; >
@@ -50,6 +50,37 @@
     au < frozen ; exists ; 2022 ; 94 ; Anais da Academia Brasileira de Ciências Volume 94 ; 2022 ; >
     au < frozen ; exists ; 2023 ; 95 ; Anais da Academia Brasileira de Ciências Volume 95 ; 2023 ; >
     au < expected ; exists ; 2024 ; 96 ; Anais da Academia Brasileira de Ciências Volume 96 ; 2024 ; >
+
+  }
+
+  {
+
+    title <
+      name = Revista Gaúcha de Enfermagem ;
+      issn = 0102-6933 ;
+      eissn = 1983-1447
+    >
+
+    provider = Fundacao de Apoio Da Universidade Federal Do Rgs-Faurgs
+    param[base_url] = https://www.scielo.br/
+    param[journal_id] = rgenf
+
+    au < frozen ; exists ; 2009 ; 30 ; Revista Gaúcha de Enfermagem Volume 30 ; 2009 ; >
+    au < frozen ; exists ; 2010 ; 31 ; Revista Gaúcha de Enfermagem Volume 31 ; 2010 ; >
+    au < frozen ; exists ; 2011 ; 32 ; Revista Gaúcha de Enfermagem Volume 32 ; 2011 ; >
+    au < frozen ; exists ; 2012 ; 33 ; Revista Gaúcha de Enfermagem Volume 33 ; 2012 ; >
+    au < frozen ; exists ; 2013 ; 34 ; Revista Gaúcha de Enfermagem Volume 34 ; 2013 ; >
+    au < frozen ; exists ; 2014 ; 35 ; Revista Gaúcha de Enfermagem Volume 35 ; 2014 ; >
+    au < frozen ; exists ; 2015 ; 36 ; Revista Gaúcha de Enfermagem Volume 36 ; 2015 ; >
+    au < frozen ; exists ; 2016 ; 37 ; Revista Gaúcha de Enfermagem Volume 37 ; 2016 ; >
+    au < frozen ; exists ; 2017 ; 38 ; Revista Gaúcha de Enfermagem Volume 38 ; 2017 ; >
+    au < frozen ; exists ; 2018 ; 39 ; Revista Gaúcha de Enfermagem Volume 39 ; 2018 ; >
+    au < frozen ; exists ; 2019 ; 40 ; Revista Gaúcha de Enfermagem Volume 40 ; 2019 ; >
+    au < frozen ; exists ; 2020 ; 41 ; Revista Gaúcha de Enfermagem Volume 41 ; 2020 ; >
+    au < frozen ; exists ; 2021 ; 42 ; Revista Gaúcha de Enfermagem Volume 42 ; 2021 ; >
+    au < frozen ; exists ; 2022 ; 43 ; Revista Gaúcha de Enfermagem Volume 43 ; 2022 ; >
+    au < frozen ; exists ; 2023 ; 44 ; Revista Gaúcha de Enfermagem Volume 44 ; 2023 ; >
+    au < crawling ; exists ; 2024 ; 45 ; Revista Gaúcha de Enfermagem Volume 45 ; 2024 ; >
 
   }
 

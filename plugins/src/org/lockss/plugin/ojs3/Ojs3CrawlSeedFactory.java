@@ -37,6 +37,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 import org.lockss.crawler.*;
 import org.lockss.daemon.ConfigParamDescr;
@@ -63,6 +64,7 @@ import org.lockss.util.UrlUtil;
 public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
 
   private static final Logger log = Logger.getLogger(Ojs3CrawlSeedFactory.class);
+  private static final String APS_JN_JRNL = "://revistas.udea.edu.co/";
 
   public static class AddStemCrawlSeed extends BaseCrawlSeed {
 
@@ -93,14 +95,36 @@ public class Ojs3CrawlSeedFactory implements CrawlSeedFactory {
     @Override
     public Collection<String> doGetPermissionUrls() throws ConfigurationException,
         PluginException, IOException {
-      return Ojs3StartStemHelper.addStartStem(au, super.doGetPermissionUrls());
+          Collection<String> pUrls = Ojs3StartStemHelper.addStartStem(au, super.doGetPermissionUrls());
+          if(baseUrl.contains(APS_JN_JRNL)){
+            Collection<String> uUrls = new ArrayList<String>(pUrls.size() * 2);
+            for (Iterator<String> iter = pUrls.iterator(); iter.hasNext();) {
+              String url = iter.next();
+              uUrls.add(UrlUtil.replaceScheme(url, "http", "https"));
+              log.debug3("The permission url getting changed is " + url);
+              log.debug3("It is now  " + UrlUtil.replaceScheme(url, "http", "https"));
+            }
+            return uUrls;
+          }
+          return pUrls;
     }    
 
 	@Override
     public Collection<String> doGetStartUrls() throws ConfigurationException,
         PluginException, IOException {
-      return addLocale(Ojs3StartStemHelper.addStartStem(au, super.doGetStartUrls()));
-    }
+        Collection<String> sUrls = addLocale(Ojs3StartStemHelper.addStartStem(au, super.doGetStartUrls()));
+        if(baseUrl.contains(APS_JN_JRNL)){
+          Collection<String> uUrls = new ArrayList<String>(sUrls.size() * 2);
+          for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
+            String url = iter.next();
+            uUrls.add(UrlUtil.replaceScheme(url, "http", "https"));
+            log.debug3("The start url getting changed is " + url);
+            log.debug3("It is now  " + UrlUtil.replaceScheme(url, "http", "https"));
+          }
+          return uUrls;
+        }
+        return sUrls;
+      }
 
     private Collection<String> addLocale(Collection<String> urls) throws MalformedURLException {
       if (primaryLocale == null) {

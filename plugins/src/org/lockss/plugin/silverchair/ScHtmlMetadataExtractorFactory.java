@@ -41,9 +41,10 @@ import org.lockss.extractor.*;
 import org.lockss.extractor.MetadataField.Cardinality;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
+import org.lockss.util.Logger;
 
 public class ScHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-
+  private static final Logger log = Logger.getLogger(ScHtmlMetadataExtractorFactory.class);
   protected static final String KEY_PUBLICATION_ABBREV = "publication.abbrev";
   
   protected static final MetadataField FIELD_PUBLICATION_ABBREV = new MetadataField(KEY_PUBLICATION_ABBREV, Cardinality.Single);

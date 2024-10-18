@@ -38,6 +38,7 @@ import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.*;
+import org.lockss.plugin.clockss.BaseFileArticleMetadataExtractor;
 import org.lockss.util.Logger;
 
 import java.util.Arrays;
@@ -117,6 +118,6 @@ public class OecdDatasetsArticleIteratorFactory implements ArticleIteratorFactor
   @Override
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    return new BaseFileArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 }

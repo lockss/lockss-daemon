@@ -77,7 +77,7 @@ public class ARLXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
       String url = cu.getUrl();
       if ((url!=null) && url.contains("onix3")) {
         if (ArlOnixHelper == null) {
-          ArlOnixHelper = new Onix3BooksSchemaHelper();
+          ArlOnixHelper = new ARLOnix3BooksSchemaHelper();
         }
         return ArlOnixHelper;
 
@@ -126,6 +126,7 @@ public class ARLXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
       // for books, if there was an article title (Chapter) then this is a book
       // chapter, not a whole book
       if (schemaHelper == ArlOnixHelper) {
+        thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
         String chapter_title = thisAM.get(MetadataField.FIELD_ARTICLE_TITLE);
         if (chapter_title != null){
           thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKCHAPTER);

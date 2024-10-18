@@ -33,7 +33,6 @@ import java.io.*;
 import org.apache.commons.io.IOUtils;
 
 import java.util.*;
-import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -65,16 +64,16 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     "https://www.foo.com/index.php/test/article/view/8110";
   private final String EXPECTED_ARTICLE_METADATA_URL_1 =
     "https://www.foo.com/index.php/test/article/view/8110";
-  private final String EXPECTED_PDF_LAND = 
+  private final String EXPECTED_PDF_1 = 
 		    "https://www.foo.com/index.php/test/article/view/8110/8601";
-  private final String EXPECTED_PDF = 
-		    "https://www.foo.com/index.php/test/article/download/8110/8601";
+  private final String EXPECTED_HTML_1 = 
+		    "https://www.foo.com/index.php/test/article/view/8110/8514";
 
   String [] expectedUrls1 = { EXPECTED_ABS_URL_1,
                               EXPECTED_ARTICLE_METADATA_URL_1,
-                              EXPECTED_PDF,
-                              EXPECTED_PDF_LAND,
-                              EXPECTED_PDF};
+                              EXPECTED_PDF_1,
+                              EXPECTED_PDF_1,
+                              EXPECTED_HTML_1};
 
 
   public void setUp() throws Exception {
@@ -118,18 +117,21 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
 
   
   // Simulated content URLs stored in the UrlCacher object.
-  public void storeTestContent(String url) throws Exception {
+  public void storeTestContent(String url, String htmlString) throws Exception {
     log.debug3("storeTestContent() url: " + url);
     InputStream input = null;
     CIProperties props = null;
     // issue table of content
-    if (url.endsWith("8601") && url.contains("download")) { 
+    if (url.contains("478")) { 
+      input = getTestTocInputStream(htmlString);
+      props = getHtmlProperties();
+    }else if (url.endsWith("8601") && url.contains("download")) { 
         // pdf
         input = new StringInputStream("");
         props = getPdfProperties();
-    } else if (url.endsWith("8110")) {
+    } else if (url.endsWith("8110") || url.endsWith("8514")) {
       // abs - for metadata/
-      input = new StringInputStream(abstractMetadata);
+      input = new StringInputStream("<html></html>");
       props = getHtmlProperties();
     } else {
     	// default blank html
@@ -141,9 +143,9 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     uc.storeContent();
   }  
   
-  public void testCreateArticleFiles() throws Exception {
+  public void testCreateArticleFiles(String htmlString) throws Exception {
 
-    simCrawlBasic();
+    simCrawlBasic(htmlString);
     // access Ojs3ArticleItrerator
     Iterator<ArticleFiles> it = au.getArticleIterator();
     // ensure you have found articles - this would not otherwise not fail before completion
@@ -151,22 +153,22 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     int count = 0;
     while (it.hasNext()) {
       ArticleFiles af1 = it.next();
-      log.debug("article file af1: " + af1.toString());
+      log.info("article file af1: " + af1.toString());
       count+=1;
       // assert article 1
       String[] actualUrls1 = { af1.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
                                af1.getRoleUrl(ArticleFiles.ROLE_ARTICLE_METADATA),
                                af1.getFullTextUrl(),
-                               af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE),
-                               af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) };
+                               af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
+                               af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_HTML) };
 
       for (int i = 0;i< actualUrls1.length; i++) {
-        log.debug("expected url1: " + expectedUrls1[i]);
-        log.debug("  actual url1: " + actualUrls1[i]);
+        log.info("expected url1: " + expectedUrls1[i]);
+        log.info("  actual url1: " + actualUrls1[i]);
 
         // "scholarworks.iu.edu" has speical case, which only has html page, no other aspects of article
         if (!BASE_URL.contains("scholarworks.iu.edu")) {
-          //assertEquals(expectedUrls1[i], actualUrls1[i]);
+          assertEquals(expectedUrls1[i], actualUrls1[i]);
         }
       }
       
@@ -174,10 +176,23 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     assertEquals(count,1);
   }
 
+  public void testDifferentHtmlStructures(){
+    try {
+      testCreateArticleFiles("test_toc.html");
+      testCreateArticleFiles("test_toc_2.html");
+      testCreateArticleFiles("test_toc_3.html");
+    } catch (Exception e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+  }
   /*
+   * The following tests are from the older version of the OJS3 Article Iterator Factory.
+   * 
+   * 
    * Test of the Article Iterator pattern matching when only issue level content exists
    *
-   *   */
+   *   
   public void testIssueUrlsWithPrefixes() throws Exception {
     Iterator<ArticleFiles> artIter = getArticleIteratorAfterSimCrawl(au, "issue");
     Pattern pat = getPattern((SubTreeArticleIterator) artIter);
@@ -197,7 +212,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
   /*
    * Test of the Article Iterator pattern matching when "typical" single level article content exists
    *
-   *   */
+   *   
   public void testArticleSingleUrlsWithPrefixes() throws Exception {
     Iterator<ArticleFiles> artIter = getArticleIteratorAfterSimCrawl(au, "article/123");
     Pattern pat = getPattern((SubTreeArticleIterator) artIter);
@@ -215,7 +230,7 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
   /*
    * Test of the Article Iterator pattern matching when only double level article content exists
    *
-   *   */
+   *   
   public void testArticleDoubleUrlsWithPrefixes() throws Exception {
     Iterator<ArticleFiles> artIter = getArticleIteratorAfterSimCrawl(au, "article/123/456");
     Pattern pat = getPattern((SubTreeArticleIterator) artIter);
@@ -251,9 +266,9 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     }
     // return an articleIterator for the crawl content
     return au.getArticleIterator();
-  }
+  }*/
 
-  private void simCrawlBasic() throws Exception {
+  private void simCrawlBasic(String htmlString) throws Exception {
     ArrayList<String> articleUrls = new ArrayList<>();
     articleUrls.add(String.format("%sindex.php/%s/issue/view/478",
         BASE_URL, JOURNAL_ID)); // table of contents
@@ -277,8 +292,8 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
 
     // Store test cases - articleUrls
     for (String url : articleUrls) {
-      log.debug3("testCreateArticleFiles() url: " + url);
-      storeTestContent(url);
+      log.info("testCreateArticleFiles() url: " + url);
+      storeTestContent(url, htmlString);
     }
   }
   private void deleteFromCrawl(ArrayList<Pattern> removalPatterns) throws IOException {
@@ -361,6 +376,14 @@ public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
     pdfProps.put("Via", "1.1 lockss.org:8888 (squid/2.7.STABLE7)");
     pdfProps.put("Connection", "close");
     return pdfProps;
+  }
+
+  // Read the test TOC file test_toc_junit.html from current directory
+  // Prepare input stream for UrlCacher storeContent() method
+  private InputStream getTestTocInputStream(String htmlDoc) throws IOException {
+    InputStream htmlIn = getResourceAsStream(htmlDoc);
+    String absHtml = StringUtil.fromInputStream(htmlIn);
+    return IOUtils.toInputStream(absHtml);
   }
 
 }

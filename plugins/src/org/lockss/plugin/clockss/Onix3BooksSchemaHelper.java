@@ -267,6 +267,12 @@ implements SourceXmlSchemaHelper {
         return null;
       } 
       if (dFormat.equals("00") && (dDate.length() > 7)) {
+
+        // Date like 2023-04-26 or 04/26/2023
+        if (dDate.length() == 10) {
+          return dDate;
+        }
+
         // do a length check in case the date format is mis-labeled
         // make it W3C format instead of YYYYMMDD
         StringBuilder dBuilder = new StringBuilder();

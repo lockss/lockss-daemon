@@ -69,7 +69,8 @@ public class UrlFetcherOaiClient implements OAIClient{
     int totalRetries = -1;
     while (true) {
         try {
-          uf.getWatchdog().pokeWDog();
+          //uf.getWatchdog().pokeWDog();
+          uf.pokeWatchdog();
           content = uf.getUncachedInputStream();
           if(content == null) {
         	  throw new HttpException("UrlFetcher returned null for an OAI response");

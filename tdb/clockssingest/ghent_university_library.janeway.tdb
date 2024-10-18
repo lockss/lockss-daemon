@@ -3,7 +3,7 @@
   publisher <
     name = Ghent University Library ;
     info[contract] = 2021 ;
-    info[back] = 2000 ;
+    info[back] = 1990 ;
     info[tester] = 8 ;
     info[poller] = 2 ;
     info[platform] = Janeway/OAI x2. See LXPLUG-2091
@@ -63,15 +63,15 @@
       au < exists ; exists ; 1987 ; 1987 ; 1987 ; Documenta Volume 1987 ; >
       au < exists ; exists ; 1988 ; 1988 ; 1988 ; Documenta Volume 1988 ; >
       au < exists ; exists ; 1989 ; 1989 ; 1989 ; Documenta Volume 1989 ; >
-      au < exists ; exists ; 1990 ; 1990 ; 1990 ; Documenta Volume 1990 ; >
+      au < crawling ; exists ; 1990 ; 1990 ; 1990 ; Documenta Volume 1990 ; >
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; Documenta Volume 1991 ; >
-      au < exists ; exists ; 1992 ; 1992 ; 1992 ; Documenta Volume 1992 ; >
+      au < crawling ; exists ; 1992 ; 1992 ; 1992 ; Documenta Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Documenta Volume 1993 ; >
-      au < exists ; exists ; 1994 ; 1994 ; 1994 ; Documenta Volume 1994 ; >
-      au < exists ; exists ; 1995 ; 1995 ; 1995 ; Documenta Volume 1995 ; >
+      au < crawling ; exists ; 1994 ; 1994 ; 1994 ; Documenta Volume 1994 ; >
+      au < crawling ; exists ; 1995 ; 1995 ; 1995 ; Documenta Volume 1995 ; >
       au < exists ; exists ; 1996 ; 1996 ; 1996 ; Documenta Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Documenta Volume 1997 ; >
-      au < exists ; exists ; 1998 ; 1998 ; 1998 ; Documenta Volume 1998 ; >
+      au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Documenta Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Documenta Volume 1999 ; >
       au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Documenta Volume 2000 ; >
       au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Documenta Volume 2001 ; >
@@ -204,7 +204,7 @@
       #param[base_url] = https://openjournals.ugent.be/
       param[journal_id] = vdt
 
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Vlaams Diergeneeskundig Tijdschrift Volume 2012 ; >
@@ -239,16 +239,16 @@
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2009 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2012 ; >
@@ -288,19 +288,19 @@
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Afrika Focus Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Afrika Focus Volume 1993 ; >
       au < exists ; exists ; 1994 ; 1994 ; 1994 ; Afrika Focus Volume 1994 ; >
-      au < exists ; exists ; 1995 ; 1995 ; 1995 ; Afrika Focus Volume 1995 ; >
+      au < crawling ; exists ; 1995 ; 1995 ; 1995 ; Afrika Focus Volume 1995 ; >
       au < exists ; exists ; 1996 ; 1996 ; 1996 ; Afrika Focus Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Afrika Focus Volume 1997 ; >
-      au < exists ; exists ; 1998 ; 1998 ; 1998 ; Afrika Focus Volume 1998 ; >
-      au < exists ; exists ; 1999 ; 1999 ; 1999 ; Afrika Focus Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Afrika Focus Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Afrika Focus Volume 2001 ; >
+      au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Afrika Focus Volume 1998 ; >
+      au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Afrika Focus Volume 1999 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Afrika Focus Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Afrika Focus Volume 2001 ; >
 
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Afrika Focus Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Afrika Focus Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Afrika Focus Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Afrika Focus Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Afrika Focus Volume 2009 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Afrika Focus Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Afrika Focus Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Afrika Focus Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Afrika Focus Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Afrika Focus Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Afrika Focus Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Afrika Focus Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Afrika Focus Volume 2012 ; >
@@ -335,22 +335,22 @@
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; Agora Magazine Volume 1991 ; >
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Agora Magazine Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Agora Magazine Volume 1993 ; >
-      au < exists ; exists ; 1994 ; 1994 ; 1994 ; Agora Magazine Volume 1994 ; >
+      au < crawling ; exists ; 1994 ; 1994 ; 1994 ; Agora Magazine Volume 1994 ; >
       au < exists ; exists ; 1995 ; 1995 ; 1995 ; Agora Magazine Volume 1995 ; >
-      au < exists ; exists ; 1996 ; 1996 ; 1996 ; Agora Magazine Volume 1996 ; >
+      au < crawling ; exists ; 1996 ; 1996 ; 1996 ; Agora Magazine Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Agora Magazine Volume 1997 ; >
-      au < exists ; exists ; 1998 ; 1998 ; 1998 ; Agora Magazine Volume 1998 ; >
-      au < exists ; exists ; 1999 ; 1999 ; 1999 ; Agora Magazine Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Agora Magazine Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Agora Magazine Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Agora Magazine Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Agora Magazine Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Agora Magazine Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Agora Magazine Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Agora Magazine Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Agora Magazine Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Agora Magazine Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Agora Magazine Volume 2009 ; >
+      au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Agora Magazine Volume 1998 ; >
+      au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Agora Magazine Volume 1999 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Agora Magazine Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Agora Magazine Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Agora Magazine Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Agora Magazine Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Agora Magazine Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Agora Magazine Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Agora Magazine Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Agora Magazine Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Agora Magazine Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Agora Magazine Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Agora Magazine Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Agora Magazine Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Agora Magazine Volume 2012 ; >
@@ -389,10 +389,10 @@
       au < exists ; exists ; 1989 ; 1989 ; 1989 ; Amsab Tijdingen Volume 1989 ; >
       au < exists ; exists ; 1990 ; 1990 ; 1990 ; Amsab Tijdingen Volume 1990 ; >
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; Amsab Tijdingen Volume 1991 ; >
-      au < manifest ; exists ; 1992 ; 1992 ; 1992 ; Amsab Tijdingen Volume 1992 ; >
-      au < manifest ; exists ; 1993 ; 1993 ; 1993 ; Amsab Tijdingen Volume 1993 ; >
-      au < manifest ; exists ; 1994 ; 1994 ; 1994 ; Amsab Tijdingen Volume 1994 ; >
-      au < manifest ; exists ; 1995 ; 1995 ; 1995 ; Amsab Tijdingen Volume 1995 ; >
+      au < exists ; exists ; 1992 ; 1992 ; 1992 ; Amsab Tijdingen Volume 1992 ; >
+      au < exists ; exists ; 1993 ; 1993 ; 1993 ; Amsab Tijdingen Volume 1993 ; >
+      au < exists ; exists ; 1994 ; 1994 ; 1994 ; Amsab Tijdingen Volume 1994 ; >
+      au < exists ; exists ; 1995 ; 1995 ; 1995 ; Amsab Tijdingen Volume 1995 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Amsab Tijdingen Volume 2019 ; >
 
   }
@@ -407,20 +407,20 @@
       #published 1996-2020
       param[journal_id] = broodenrozen
 
-      au < exists ; exists ; 1996 ; 1996 ; 1996 ; Brood & Rozen Volume 1996 ; >
-      au < exists ; exists ; 1997 ; 1997 ; 1997 ; Brood & Rozen Volume 1997 ; >
+      au < crawling ; exists ; 1996 ; 1996 ; 1996 ; Brood & Rozen Volume 1996 ; >
+      au < crawling ; exists ; 1997 ; 1997 ; 1997 ; Brood & Rozen Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Brood & Rozen Volume 1998 ; >
-      au < exists ; exists ; 1999 ; 1999 ; 1999 ; Brood & Rozen Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Brood & Rozen Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Brood & Rozen Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Brood & Rozen Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Brood & Rozen Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Brood & Rozen Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Brood & Rozen Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Brood & Rozen Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Brood & Rozen Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Brood & Rozen Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Brood & Rozen Volume 2009 ; >
+      au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Brood & Rozen Volume 1999 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Brood & Rozen Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Brood & Rozen Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Brood & Rozen Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Brood & Rozen Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Brood & Rozen Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Brood & Rozen Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Brood & Rozen Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Brood & Rozen Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Brood & Rozen Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Brood & Rozen Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Brood & Rozen Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Brood & Rozen Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Brood & Rozen Volume 2012 ; >
@@ -455,20 +455,20 @@
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; De Uil van Minerva Volume 1991 ; >
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; De Uil van Minerva Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; De Uil van Minerva Volume 1993 ; >
-      au < exists ; exists ; 1994 ; 1994 ; 1994 ; De Uil van Minerva Volume 1994 ; >
+      au < crawling ; exists ; 1994 ; 1994 ; 1994 ; De Uil van Minerva Volume 1994 ; >
       au < exists ; exists ; 1995 ; 1995 ; 1995 ; De Uil van Minerva Volume 1995 ; >
       au < exists ; exists ; 1996 ; 1996 ; 1996 ; De Uil van Minerva Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; De Uil van Minerva Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; De Uil van Minerva Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; De Uil van Minerva Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; De Uil van Minerva Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; De Uil van Minerva Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; De Uil van Minerva Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; De Uil van Minerva Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; De Uil van Minerva Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; De Uil van Minerva Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; De Uil van Minerva Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; De Uil van Minerva Volume 2007 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; De Uil van Minerva Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; De Uil van Minerva Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; De Uil van Minerva Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; De Uil van Minerva Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; De Uil van Minerva Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; De Uil van Minerva Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; De Uil van Minerva Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; De Uil van Minerva Volume 2007 ; >
 
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; De Uil van Minerva Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; De Uil van Minerva Volume 2011 ; >
@@ -521,22 +521,22 @@
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; Ghendtsche Tydinghen Volume 1991 ; >
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Ghendtsche Tydinghen Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Ghendtsche Tydinghen Volume 1993 ; >
-      au < exists ; exists ; 1994 ; 1994 ; 1994 ; Ghendtsche Tydinghen Volume 1994 ; >
+      au < crawling ; exists ; 1994 ; 1994 ; 1994 ; Ghendtsche Tydinghen Volume 1994 ; >
       au < exists ; exists ; 1995 ; 1995 ; 1995 ; Ghendtsche Tydinghen Volume 1995 ; >
-      au < exists ; exists ; 1996 ; 1996 ; 1996 ; Ghendtsche Tydinghen Volume 1996 ; >
+      au < crawling ; exists ; 1996 ; 1996 ; 1996 ; Ghendtsche Tydinghen Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Ghendtsche Tydinghen Volume 1997 ; >
-      au < exists ; exists ; 1998 ; 1998 ; 1998 ; Ghendtsche Tydinghen Volume 1998 ; >
-      au < exists ; exists ; 1999 ; 1999 ; 1999 ; Ghendtsche Tydinghen Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Ghendtsche Tydinghen Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Ghendtsche Tydinghen Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Ghendtsche Tydinghen Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Ghendtsche Tydinghen Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Ghendtsche Tydinghen Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Ghendtsche Tydinghen Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Ghendtsche Tydinghen Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Ghendtsche Tydinghen Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Ghendtsche Tydinghen Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Ghendtsche Tydinghen Volume 2009 ; >
+      au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Ghendtsche Tydinghen Volume 1998 ; >
+      au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Ghendtsche Tydinghen Volume 1999 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Ghendtsche Tydinghen Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Ghendtsche Tydinghen Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Ghendtsche Tydinghen Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Ghendtsche Tydinghen Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Ghendtsche Tydinghen Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Ghendtsche Tydinghen Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Ghendtsche Tydinghen Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Ghendtsche Tydinghen Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Ghendtsche Tydinghen Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Ghendtsche Tydinghen Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Ghendtsche Tydinghen Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Ghendtsche Tydinghen Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Ghendtsche Tydinghen Volume 2012 ; >
@@ -642,21 +642,21 @@
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1993 ; >
       au < exists ; exists ; 1994 ; 1994 ; 1994 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1994 ; >
-      au < exists ; exists ; 1995 ; 1995 ; 1995 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1995 ; >
-      au < exists ; exists ; 1996 ; 1996 ; 1996 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1996 ; >
+      au < crawling ; exists ; 1995 ; 1995 ; 1995 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1995 ; >
+      au < crawling ; exists ; 1996 ; 1996 ; 1996 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2009 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2012 ; >
@@ -736,16 +736,16 @@
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2009 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2012 ; >
@@ -825,21 +825,21 @@
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Handelingen van het Genootschap voor Geschiedenis Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Handelingen van het Genootschap voor Geschiedenis Volume 1993 ; >
       au < exists ; exists ; 1994 ; 1994 ; 1994 ; Handelingen van het Genootschap voor Geschiedenis Volume 1994 ; >
-      au < exists ; exists ; 1995 ; 1995 ; 1995 ; Handelingen van het Genootschap voor Geschiedenis Volume 1995 ; >
-      au < exists ; exists ; 1996 ; 1996 ; 1996 ; Handelingen van het Genootschap voor Geschiedenis Volume 1996 ; >
+      au < crawling ; exists ; 1995 ; 1995 ; 1995 ; Handelingen van het Genootschap voor Geschiedenis Volume 1995 ; >
+      au < crawling ; exists ; 1996 ; 1996 ; 1996 ; Handelingen van het Genootschap voor Geschiedenis Volume 1996 ; >
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Handelingen van het Genootschap voor Geschiedenis Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Handelingen van het Genootschap voor Geschiedenis Volume 1998 ; >
-      au < exists ; exists ; 1999 ; 1999 ; 1999 ; Handelingen van het Genootschap voor Geschiedenis Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Handelingen van het Genootschap voor Geschiedenis Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Handelingen van het Genootschap voor Geschiedenis Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Handelingen van het Genootschap voor Geschiedenis Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Handelingen van het Genootschap voor Geschiedenis Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Handelingen van het Genootschap voor Geschiedenis Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Handelingen van het Genootschap voor Geschiedenis Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Handelingen van het Genootschap voor Geschiedenis Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Handelingen van het Genootschap voor Geschiedenis Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Handelingen van het Genootschap voor Geschiedenis Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Handelingen van het Genootschap voor Geschiedenis Volume 2009 ; >
+      au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Handelingen van het Genootschap voor Geschiedenis Volume 1999 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Handelingen van het Genootschap voor Geschiedenis Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Handelingen van het Genootschap voor Geschiedenis Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Handelingen van het Genootschap voor Geschiedenis Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Handelingen van het Genootschap voor Geschiedenis Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Handelingen van het Genootschap voor Geschiedenis Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Handelingen van het Genootschap voor Geschiedenis Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Handelingen van het Genootschap voor Geschiedenis Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Handelingen van het Genootschap voor Geschiedenis Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Handelingen van het Genootschap voor Geschiedenis Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Handelingen van het Genootschap voor Geschiedenis Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Handelingen van het Genootschap voor Geschiedenis Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen van het Genootschap voor Geschiedenis Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen van het Genootschap voor Geschiedenis Volume 2012 ; >
@@ -895,11 +895,11 @@
       #published 2006-present
       param[journal_id] = ewopinpractice
 
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; EWOP in Practice Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; EWOP in Practice Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; EWOP in Practice Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; EWOP in Practice Volume 2009 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; EWOP in Practice Volume 2010 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; EWOP in Practice Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; EWOP in Practice Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; EWOP in Practice Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; EWOP in Practice Volume 2009 ; >
+      au < doesNotExist ; exists ; 2010 ; 2010 ; 2010 ; EWOP in Practice Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; EWOP in Practice Volume 2011 ; >
       au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; 2012 ; EWOP in Practice Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; EWOP in Practice Volume 2013 ; >
@@ -996,23 +996,23 @@
       au < exists ; exists ; 1991 ; 1991 ; 1991 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1991 ; >
       au < exists ; exists ; 1992 ; 1992 ; 1992 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1992 ; >
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1993 ; >
-      au < exists ; exists ; 1994 ; 1994 ; 1994 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1994 ; >
+      au < crawling ; exists ; 1994 ; 1994 ; 1994 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1994 ; >
       au < exists ; exists ; 1995 ; 1995 ; 1995 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1995 ; >
       au < exists ; exists ; 1996 ; 1996 ; 1996 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1996 ; >
-      au < exists ; exists ; 1997 ; 1997 ; 1997 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1997 ; >
-      au < exists ; exists ; 1998 ; 1998 ; 1998 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1998 ; >
+      au < crawling ; exists ; 1997 ; 1997 ; 1997 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1997 ; >
+      au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2009 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2010 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2009 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2013 ; >
@@ -1058,18 +1058,18 @@
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Sociologos Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Sociologos Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Sociologos Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Sociologos Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Sociologos Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Sociologos Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Sociologos Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Sociologos Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Sociologos Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Sociologos Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Sociologos Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Sociologos Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Sociologos Volume 2009 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Sociologos Volume 2010 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Sociologos Volume 2011 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Sociologos Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Sociologos Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Sociologos Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Sociologos Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Sociologos Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Sociologos Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Sociologos Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Sociologos Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Sociologos Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Sociologos Volume 2009 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Sociologos Volume 2010 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Sociologos Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Sociologos Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Sociologos Volume 2013 ; >
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Sociologos Volume 2014 ; >
@@ -1091,13 +1091,13 @@
       #published 2005-2019
       param[journal_id] = sociologie
 
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Sociologie Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Sociologie Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Sociologie Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Sociologie Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Sociologie Volume 2009 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Sociologie Volume 2010 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Sociologie Volume 2011 ; >
+      au < doesNotExist ; exists ; 2005 ; 2005 ; 2005 ; Sociologie Volume 2005 ; >
+      au < doesNotExist ; exists ; 2006 ; 2006 ; 2006 ; Sociologie Volume 2006 ; >
+      au < doesNotExist ; exists ; 2007 ; 2007 ; 2007 ; Sociologie Volume 2007 ; >
+      au < doesNotExist ; exists ; 2008 ; 2008 ; 2008 ; Sociologie Volume 2008 ; >
+      au < doesNotExist ; exists ; 2009 ; 2009 ; 2009 ; Sociologie Volume 2009 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Sociologie Volume 2010 ; >
+      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Sociologie Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Sociologie Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Sociologie Volume 2013 ; >
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Sociologie Volume 2014 ; >
@@ -1119,15 +1119,15 @@
       #published 2003-2014
       param[journal_id] = renm
 
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Ruimte & Maatschappij Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Ruimte & Maatschappij Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Ruimte & Maatschappij Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Ruimte & Maatschappij Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Ruimte & Maatschappij Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Ruimte & Maatschappij Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Ruimte & Maatschappij Volume 2009 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Ruimte & Maatschappij Volume 2010 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Ruimte & Maatschappij Volume 2011 ; >
+      au < doesNotExist ; exists ; 2003 ; 2003 ; 2003 ; Ruimte & Maatschappij Volume 2003 ; >
+      au < doesNotExist ; exists ; 2004 ; 2004 ; 2004 ; Ruimte & Maatschappij Volume 2004 ; >
+      au < doesNotExist ; exists ; 2005 ; 2005 ; 2005 ; Ruimte & Maatschappij Volume 2005 ; >
+      au < doesNotExist ; exists ; 2006 ; 2006 ; 2006 ; Ruimte & Maatschappij Volume 2006 ; >
+      au < doesNotExist ; exists ; 2007 ; 2007 ; 2007 ; Ruimte & Maatschappij Volume 2007 ; >
+      au < doesNotExist ; exists ; 2008 ; 2008 ; 2008 ; Ruimte & Maatschappij Volume 2008 ; >
+      au < doesNotExist ; exists ; 2009 ; 2009 ; 2009 ; Ruimte & Maatschappij Volume 2009 ; >
+      au < doesNotExist ; exists ; 2010 ; 2010 ; 2010 ; Ruimte & Maatschappij Volume 2010 ; >
+      au < doesNotExist ; exists ; 2011 ; 2011 ; 2011 ; Ruimte & Maatschappij Volume 2011 ; >
       au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; 2012 ; Ruimte & Maatschappij Volume 2012 ; >
       au < doesNotExist ; doesNotExist ; 2013 ; 2013 ; 2013 ; Ruimte & Maatschappij Volume 2013 ; >
       au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; 2014 ; Ruimte & Maatschappij Volume 2014 ; >
@@ -1143,8 +1143,8 @@
       #published 2010-2024
       param[journal_id] = nise
 
-      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; NISE Essays Volume 2010 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; NISE Essays Volume 2011 ; >
+      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; NISE Essays Volume 2010 ; >
+      au < doesNotExist ; exists ; 2011 ; 2011 ; 2011 ; NISE Essays Volume 2011 ; >
       au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; 2012 ; NISE Essays Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; NISE Essays Volume 2013 ; >
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; NISE Essays Volume 2014 ; >
@@ -1257,9 +1257,9 @@
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Oostvlaamse Zanten Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Oostvlaamse Zanten Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Oostvlaamse Zanten Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Oostvlaamse Zanten Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Oostvlaamse Zanten Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Oostvlaamse Zanten Volume 2002 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Oostvlaamse Zanten Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Oostvlaamse Zanten Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Oostvlaamse Zanten Volume 2002 ; >
 
   }
 
@@ -1341,16 +1341,16 @@
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Res Publica Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Res Publica Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Res Publica Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Res Publica Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Res Publica Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Res Publica Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Res Publica Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Res Publica Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Res Publica Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Res Publica Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Res Publica Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Res Publica Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Res Publica Volume 2009 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Res Publica Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Res Publica Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Res Publica Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Res Publica Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Res Publica Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Res Publica Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Res Publica Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Res Publica Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Res Publica Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Res Publica Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Res Publica Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Res Publica Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Res Publica Volume 2012 ; >
@@ -1403,12 +1403,12 @@
       au < exists ; exists ; 1993 ; 1993 ; 1993 ; Silva Gandavensis Volume 1993 ; >
       au < exists ; exists ; 1994 ; 1994 ; 1994 ; Silva Gandavensis Volume 1994 ; >
       au < exists ; exists ; 1995 ; 1995 ; 1995 ; Silva Gandavensis Volume 1995 ; >
-      au < manifest ; exists ; 1996 ; 1996 ; 1996 ; Silva Gandavensis Volume 1996 ; >
-      au < manifest ; exists ; 1997 ; 1997 ; 1997 ; Silva Gandavensis Volume 1997 ; >
-      au < manifest ; exists ; 1998 ; 1998 ; 1998 ; Silva Gandavensis Volume 1998 ; >
-      au < manifest ; exists ; 1999 ; 1999 ; 1999 ; Silva Gandavensis Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Silva Gandavensis Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Silva Gandavensis Volume 2001 ; >
+      au < exists ; exists ; 1996 ; 1996 ; 1996 ; Silva Gandavensis Volume 1996 ; >
+      au < exists ; exists ; 1997 ; 1997 ; 1997 ; Silva Gandavensis Volume 1997 ; >
+      au < exists ; exists ; 1998 ; 1998 ; 1998 ; Silva Gandavensis Volume 1998 ; >
+      au < exists ; exists ; 1999 ; 1999 ; 1999 ; Silva Gandavensis Volume 1999 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Silva Gandavensis Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Silva Gandavensis Volume 2001 ; >
 
   }
 
@@ -1428,9 +1428,9 @@
       au < exists ; exists ; 1986 ; 1986 ; 1986 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1986 ; >
       au < exists ; exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1987 ; >
       au < exists ; exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1988 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1989 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1990 ; >
-      au < manifest ; exists ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1991 ; >
+      au < exists ; exists ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1989 ; >
+      au < exists ; exists ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1990 ; >
+      au < exists ; exists ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1991 ; >
 
   }
 
@@ -1452,16 +1452,16 @@
       au < exists ; exists ; 1997 ; 1997 ; 1997 ; Tijdschrift voor industriële cultuur Volume 1997 ; >
       au < exists ; exists ; 1998 ; 1998 ; 1998 ; Tijdschrift voor industriële cultuur Volume 1998 ; >
       au < exists ; exists ; 1999 ; 1999 ; 1999 ; Tijdschrift voor industriële cultuur Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Tijdschrift voor industriële cultuur Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Tijdschrift voor industriële cultuur Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Tijdschrift voor industriële cultuur Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Tijdschrift voor industriële cultuur Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Tijdschrift voor industriële cultuur Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Tijdschrift voor industriële cultuur Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Tijdschrift voor industriële cultuur Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Tijdschrift voor industriële cultuur Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Tijdschrift voor industriële cultuur Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Tijdschrift voor industriële cultuur Volume 2009 ; >
+      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Tijdschrift voor industriële cultuur Volume 2000 ; >
+      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Tijdschrift voor industriële cultuur Volume 2001 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Tijdschrift voor industriële cultuur Volume 2002 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Tijdschrift voor industriële cultuur Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Tijdschrift voor industriële cultuur Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Tijdschrift voor industriële cultuur Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Tijdschrift voor industriële cultuur Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Tijdschrift voor industriële cultuur Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Tijdschrift voor industriële cultuur Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Tijdschrift voor industriële cultuur Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Tijdschrift voor industriële cultuur Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Tijdschrift voor industriële cultuur Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Tijdschrift voor industriële cultuur Volume 2012 ; >
@@ -1479,13 +1479,13 @@
       #published 2003-2018
       param[journal_id] = vmd
 
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2009 ; >
+      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2003 ; >
+      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2004 ; >
+      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2005 ; >
+      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2006 ; >
+      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2007 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2008 ; >
+      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2009 ; >
       au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2010 ; >
       au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2011 ; >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2012 ; >
@@ -1560,7 +1560,7 @@
       au < doesNotExist ; doesNotExist ; 2021 ; 2021 ; 2021 ; Radices Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Radices Volume 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Radices Volume 2023 ; >
-      au < expected ; exists ; 2024 ; 2024 ; 2024 ; Radices Volume 2024 ; >
+      au < crawling ; exists ; 2024 ; 2024 ; 2024 ; Radices Volume 2024 ; >
 
   }
 

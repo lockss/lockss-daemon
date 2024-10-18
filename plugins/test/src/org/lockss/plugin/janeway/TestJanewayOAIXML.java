@@ -105,6 +105,7 @@ public class TestJanewayOAIXML extends LockssTestCase {
     }
 
     //This is to test the bad xml on purpose, the test will fail on purpose
+    //also try laboratory_phonology_bad_example.xml
     /*
     public void test2016XmlValidation() {
 

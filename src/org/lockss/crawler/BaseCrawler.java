@@ -901,6 +901,11 @@ public abstract class BaseCrawler implements Crawler {
     }
 
     @Override
+    public boolean checkGloballyExcludedUrl(ArchivalUnit au, String url) {
+      return crawler.checkGloballyExcludedUrl(au, url);
+    }
+
+    @Override
     public void updateCdnStems(String url) {
       crawler.updateCdnStems(url);
     }

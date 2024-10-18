@@ -1,4 +1,3 @@
-### Please alphabetize by provider/publisher.
 
 {
   publisher <
@@ -12,6 +11,10 @@
   implicit < status ; status2 ; year ; name ; param[item] >
   nondefparam[user_pass] = clockss_jasper_U_P
   param[base_url] = https://archive.org/
+
+#############################################
+### Please alphabetize by provider/publisher.
+#############################################
 
   {
 
@@ -172,13 +175,25 @@
   {
 
     title <
+      name = Raigal ;
+      eissn = 2469-1216
+    >
+    provider = Instituto Académico Pedagógico de Ciencias Sociales de la UNVM
+
+    au < expected ; exists ; 2024 ; Raigal ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
       name = Public Governance, Administration and Finances Law Review ;
       issn = 2498-6275 ;
       eissn = 2786-0736
     >
     provider = Ludovika University Press
 
-    au < ready ; exists ; 2024 ; Public Governance, Administration and Finances Law Review ; public_governance_administration_and_finances_law_review_2786-0736 >
+    au < readySource ; crawling ; 2024 ; Public Governance, Administration and Finances Law Review ; public_governance_administration_and_finances_law_review_2786-0736 >
 
   }
 
@@ -269,5 +284,16 @@
 
   }
 
+  {
+
+    title <
+      name = Acta Palaeobotanica ;
+      eissn = 2082-0259
+    >
+    provider = W. Szafer Institute of Botany, Polish Academy of Sciences
+
+    au < expected ; exists ; 2024 ; Acta Palaeobotanica ; UNKNOWN >
+
+  }
 
 }

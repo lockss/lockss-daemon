@@ -1393,6 +1393,8 @@ public class AuMetadataRecorder {
    *         <code>false</code> otherwise.
    */
   boolean validateMdItemTypeHierarchy(String parentType, String childType) {
+    log.info("the child type is " + childType);
+    log.info("the parent type is " + childType);
     if (MetadataField.ARTICLE_TYPE_JOURNALARTICLE.equals(childType)) {
       return MetadataField.PUBLICATION_TYPE_JOURNAL.equals(parentType);
     } else if (MetadataField.ARTICLE_TYPE_BOOKCHAPTER.equals(childType)) {
@@ -1401,8 +1403,7 @@ public class AuMetadataRecorder {
     } else if (MetadataField.ARTICLE_TYPE_BOOKVOLUME.equals(childType)) {
       return MetadataField.PUBLICATION_TYPE_BOOK.equals(parentType)
 	  || MetadataField.PUBLICATION_TYPE_BOOKSERIES.equals(parentType);
-    } else if (MetadataField.ARTICLE_TYPE_PROCEEDINGSARTICLE.
-	equals(childType)) {
+    } else if (MetadataField.ARTICLE_TYPE_PROCEEDINGSARTICLE.equals(childType)) {
       return MetadataField.PUBLICATION_TYPE_PROCEEDINGS.equals(parentType);
     } else if (MetadataField.ARTICLE_TYPE_FILE.equals(childType)) {
       return MetadataField.PUBLICATION_TYPE_FILE.equals(parentType);

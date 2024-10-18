@@ -84,10 +84,11 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
         spec.setPattern(ALL_TOC_PATTERN);
         sb.setSpec(spec);
         sb.addAspect(Arrays.asList(SHOW_TOC_PATTERN, PLAIN_TOC_PATTERN), Arrays.asList(SHOW_TOC_REPLACEMENT, PLAIN_TOC_REPLACEMENT), ROLE_TOC);
-
+        
         /*Parse the TOC to find all articles */
         Iterator<ArticleFiles> tocIterator = sb.getSubTreeArticleIterator();
         for(ArticleFiles tocAF : IteratorUtils.asIterable(tocIterator)){
+            log.debug3("I found a plain TOC " + tocAF.getFullTextUrl());
             CachedUrl tocCU = tocAF.getFullTextCu();
             parseToc(tocCU, articles, au);
         }
@@ -116,42 +117,68 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
         try{
             Document doc = Jsoup.parse(tocCU.getUnfilteredInputStream(), AuUtil.getCharsetOrDefault(tocCU.getProperties()), tocCU.getUrl());
             Elements articles = doc.select("div.article-summary,article.article,ul.articles>li,div.one-article-intoc,article.article_summary,div.article-sum,"
-                +"ul.it-list>li>div.it-right-zone,article.equal,div.grid-child:has(div>div.media-body)");
+                +"ul.it-list>li>div.it-right-zone,article.equal,div.grid-child:has(div>div.media-body),ul.row>li.issue__article,div.page-issue-galleys:has(div.h3:contains(Número completo)),"
+                +"div.galleys:has(h2:contains(Número completo)),div.galleys:has(h2:contains(Full Issue))");
             ArrayList<String> rolesForFullText = new ArrayList<>();
             for (Element article : articles) {
                 ArticleFiles af = new ArticleFiles();
 
-                Elements PDFs = article.select("div.article-summary-galleys>a,ul.article__btn-group>li>a:contains(PDF),ul.galleys_links>li>a:contains(PDF),div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),"
-                    +"div.galleys_links>a:contains(PDF),div.btn-group>a:contains(PDF),a.indexGalleyLink:contains(PDF),div.btn-group>a.pdf:contains(Article),"
-                    +"ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF))");
+                Elements PDFs = article.select("div.article-summary-galleys>a[href*=article]:contains(PDF),ul.article__btn-group>li>a[href*=article]:contains(PDF),ul.galleys_links>li>a[href*=article]:contains(PDF),"
+                    +"div.galleys_links>a[href*=article]:contains(PDF),div.btn-group>a[href*=article].pdf,a.indexGalleyLink:contains(PDF),"
+                    +"div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF)),"
+                    +"a[href*=issue/view].btn:contains(PDF),ul.galleys_links>li>a.pdf[href*=issue/view]");
                 pdfUrl = au.makeCachedUrl(PDFs.attr("href"));
-                addToListOfRoles(pdfUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_PDF);
 
                 Elements HTMLs = article.select("ul.galleys_links>li>a:contains(HTML),ul.article__btn-group>li>a:contains(HTML),div.btn-group>a:contains(HTML),"
                     +"div.galleys_links>a:contains(HTML),a.indexGalleyLink:contains(HTML)");
                 htmlUrl = au.makeCachedUrl(HTMLs.attr("href"));
-                addToListOfRoles(htmlUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_HTML);
 
                 Elements XMLs = article.select("ul.galleys_links>li>a:contains(XML),div.btn-group>a.file:contains(XML),"
-                    +"div.galleys_links>a:contains(XML)");
+                    +"div.galleys_links>a:contains(XML),div.article-summary-galleys>a:contains(XML)");
                 xmlUrl = au.makeCachedUrl(XMLs.attr("href"));
-                addToListOfRoles(xmlUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_XML);
 
                 Elements EPUBs = article.select("ul.galleys_links>li>a.file:contains(epub)");
                 epubUrl = au.makeCachedUrl(EPUBs.attr("href"));
-                addToListOfRoles(epubUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_EPUB);
 
-                Elements abstracts = article.select("div.article-summary-title>a,h4.article__title>a,h3.title>a[href*=article],h4.issue-article-title>a[href*=article],h3.media-heading>a[href*=article],"+
-                "a.summary_title,span.article-title>a[href*=article],div.obj_article_summary>div.title>a[href*=article],a:has(span.text>h6.article-title),"
-                +"ul.actions>li>a:contains(View Article),div.obj_article_summary>h4.title>a[href*=article]");
+                Elements abstracts = article.select("div.article-summary-title>a[href*=article],h4.article__title>a[href*=article],div.obj_article_summary>h3.title>a[href*=article],h3.media-heading>a[href*=article],"+
+                    "a.summary_title,span.article-title>a[href*=article],div.obj_article_summary>div.title>a[href*=article],a:has(span.text>h6.article-title),"
+                    +"ul.actions>li>a:contains(View Article),div.obj_article_summary>h4.title>a[href*=article],div.obj_article_summary>div.card-body>h3.card-title>a[href*=article],"+
+                    "div.card-body>h4.issue-article-title>a");
                 abstractsUrl = au.makeCachedUrl(abstracts.attr("href"));
+
+                /*
+                    August 2024 - We need to be able to emit metadata for articles in different languages. If there are multiple pdfs under a single article
+                    on the TOC page, they are likely the same pdf in different languages. 
+                    An example can be found here: https://ojs.aut.ac.nz/linksymposium/issue/view/3 
+
+                    There is an example that has different pdfs on the TOC page that are NOT the pdf in different languages. This was confirmed
+                    as being ok to emit metadata multiple times. https://ojs.aut.ac.nz/anzjsi/issue/view/1
+                */
+                if(PDFs.size() > 1){
+                    for(int i = 1; i < PDFs.size(); i++){
+                        ArticleFiles afTemp = new ArticleFiles();
+                        CachedUrl cuTemp = au.makeCachedUrl(PDFs.get(i).attr("href"));
+                        afTemp.setRole(ArticleFiles.ROLE_FULL_TEXT_PDF,cuTemp);
+                        afTemp.setFullTextCu(cuTemp);
+                        if ((abstractsUrl != null) && abstractsUrl.hasContent()) {
+                            afTemp.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractsUrl);
+                        }
+                        //log additional pdf urls
+                        log.info("I am number " + i + " and I am " + PDFs.get(i));
+                        results.add(afTemp);
+                    }
+                }
+
+                addToListOfRoles(pdfUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_PDF);
+                addToListOfRoles(htmlUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_HTML);
+                addToListOfRoles(xmlUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_XML);
+                addToListOfRoles(epubUrl, af, rolesForFullText, ArticleFiles.ROLE_FULL_TEXT_EPUB);
                 addToListOfRoles(abstractsUrl, af, rolesForFullText, ArticleFiles.ROLE_ABSTRACT);
 
                 if (rolesForFullText.size() > 0) {
                     for (String role : rolesForFullText) {
                         log.debug3("The role is " + role);
                         CachedUrl foundCu = af.getRoleCu(role);
-
                         if (foundCu != null) {
                             log.debug2(String.format("Full text CU set to: %s", foundCu.getUrl()));
                             af.setFullTextCu(foundCu);
@@ -163,6 +190,10 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                     log.debug3("There is no full text. The abstract CU is " + abstractsUrl.toString());
                 }
 
+                if ((abstractsUrl != null) && abstractsUrl.hasContent()) {
+                    log.info("I'm setting up the metadata role.");
+                    af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractsUrl);
+                }
                 results.add(af);
             }
         }catch(IOException ioe){
@@ -171,6 +202,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
             AuUtil.safeRelease(pdfUrl);
             AuUtil.safeRelease(htmlUrl);
             AuUtil.safeRelease(xmlUrl);
+            AuUtil.safeRelease(epubUrl);
             AuUtil.safeRelease(abstractsUrl);
         }
         
@@ -178,6 +210,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
 
     public void addToListOfRoles(CachedUrl cu, ArticleFiles af, ArrayList<String> rolesForFullText, String role){
         if(cu.hasContent()){
+            log.debug3("The cu has content");
             af.setRole(role,cu);
             log.debug3("The  URL is " + cu.toString() + " and the role is " + role);
             rolesForFullText.add(role);

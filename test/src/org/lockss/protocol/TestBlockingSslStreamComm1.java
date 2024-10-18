@@ -80,10 +80,6 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     shutdownOutputSupported = false;
     setupKeyStore();
     MockLockssDaemon daemon = getMockLockssDaemon();
-    RandomManager rmgr = new TestingRandomManager();
-    rmgr.initService(daemon);
-    daemon.setRandomManager(rmgr);
-    
     keystoreMgr = daemon.getKeystoreManager();
     keystoreMgr.startService();
   }

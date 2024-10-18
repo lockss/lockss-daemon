@@ -719,7 +719,7 @@ public class TestBlockHasher extends LockssTestCase {
   }
   
   String randomString(int len) {
-    return org.apache.commons.lang3.RandomStringUtils.randomAlphabetic(len);
+    return RandomUtil.randomAlphabetic(len);
   }
 
   public void testOneContentLocalHashIncompleteRead()

@@ -1,0 +1,35 @@
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+<responseDate>2024-07-31T09:36:02Z</responseDate>
+<request verb="ListRecords" metadataPrefix="oai_dc">https://www.journal-labphon.org/api/oai/</request>
+<ListRecords>
+<record>
+<header>
+<identifier>oai:labphon:id:10185</identifier>
+<datestamp>2024-05-16T23:00:00Z</datestamp>
+</header>
+<metadata>
+<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+<dc:articleTitle>Russian assimilatory palatalization is incomplete neutralization</dc:articleTitle>
+<dc:title>Russian assimilatory palatalization is incomplete neutralization</dc:title>
+<dc:creator>Oh, Sejin</dc:creator>
+<dc:creator>Shaw, Jason</dc:creator>
+<dc:creator>Durvasula, Karthik</dc:creator>
+<dc:creator>Kochetov, Alexei</dc:creator>
+<dc:description>Incomplete neutralization refers to phonetic traces of underlying contrasts in phonologically neutralizing contexts. The present study examines one such context: Russian assimilatory palatalization in C+j sequences. Russian contrasts plain and palatalized consonants, (e.g., /p/ vs. /pj/ with the &ldquo;plain&rdquo; consonants having a secondary articulation, involving retraction of the tongue dorsum (velarization/uvularization)). However, in the C+j sequences (e.g., /pjot/ &lsquo;drink (3ps pres)&rsquo;) the contrast between palatalized and plain consonants is neutralized, due to the palatalization of the plain consonants: /pjot/ 🡪 [pʲjot] (assimilatory palatalization). The purpose of the study is to explore whether the neutralization is complete. To do so, we conducted an electromagnetic articulography (EMA) experiment examining temporal coordination and the spatial position of the tongue body in underlyingly palatalized consonants and those derived from assimilatory palatalization. Articulatory results from four native speakers of Russian revealed that gestures in both conditions are coordinated as complex segments (i.e., they are palatalized consonants); however, there are differences across conditions consistent with the residual presence of a tongue dorsum retraction gesture in the &ldquo;plain&rdquo; obstruents. We conclude that neutralization of the plain-palatal contrast in Russian is incomplete&mdash;consonants in the assimilatory palatalization condition exhibit inter-gestural coordination characteristic of palatalized consonants along with residual evidence of an underlying tongue dorsum retraction (velarization/uvularization) gesture.</dc:description>
+<dc:date>2024-05-16T23:00:00Z</dc:date>
+<dc:type>info:eu-repo/semantics/article</dc:type>
+<dc:volume>15</dc:volume>
+<dc:issue>1</dc:issue>
+<dc:publisher>Open Library of Humanities</dc:publisher>
+<dc:journalTitle>Laboratory Phonology</dc:journalTitle>
+<dc:doi>10.16995/labphon.10185</dc:doi>
+<dc:identifier>https://doi.org/10.16995/labphon.10185</dc:identifier>
+<dc:fullTextUrl>https://www.journal-labphon.org/article/id/10185/</dc:fullTextUrl>
+<dc:source>1868-6354</dc:source>
+<dc:rights>https://creativecommons.org/licenses/by/4.0</dc:rights>
+<dc:format.extent>1</dc:format.extent>
+</oai_dc:dc>
+</metadata>
+</record>
+</ListRecords>
+</OAI-PMH>

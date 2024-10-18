@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>down</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -13,19 +13,17 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
     <string>Janeway</string>
   </entry>
   <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.janeway.JanewayDirectoryAccessorPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_parent_version</string>
-    <string>1</string>
+    <string>plugin_aux_packages</string>
+    <list>
+      <string>org.lockss.plugin.janeway</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -96,7 +94,7 @@
   <entry>
     <string>au_start_url</string>
     <!--https://www.iastatedigitalpress.com/aglawdigest/api/oai?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31-->
-    <string>"%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
+    <string>"%slockss?year=%d&amp;optional_journal_id=%s", base_url, year, journal_id</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -112,7 +110,9 @@
       <string>2, "%s([^/]+/)?issue/[^/]+/info/", base_url</string>
       <string>1, "%s([^/]+/)?article/", base_url</string>
       <string>1, "%s(static|media/cover_images)/", base_url</string>
-      <string>1, "^https?://%s%s/api/oai/?verb=ListRecords&amp;resumptionToken=", base_url,journal_id</string>
+      <string>1, "%s%s/api/oai/?verb=ListRecords&amp;resumptionToken=", base_url,journal_id</string>
+      <string>1, "%s%s/api/oai?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31", base_url, journal_id, year, year</string>
+      <string>1, "%slockss?year=%d&amp;optional_journal_id=%s", base_url, year, journal_id</string>
     </list>
   </entry>
   <entry>

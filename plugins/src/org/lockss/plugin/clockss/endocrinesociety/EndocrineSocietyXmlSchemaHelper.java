@@ -48,7 +48,7 @@ public class EndocrineSocietyXmlSchemaHelper implements SourceXmlSchemaHelper {
 
     private static final String articleNode = "/metadatas/metadata";
 
-    protected static final String article_title = "title";
+    protected static final String book_title = "title";
     protected static final String publisher = "publisher";
     protected static final String isbn = "pisbn";
     protected static final String eisbn = "eisbn";
@@ -58,7 +58,7 @@ public class EndocrineSocietyXmlSchemaHelper implements SourceXmlSchemaHelper {
     static private final Map<String,XPathValue>
     articleMap = new HashMap<String,XPathValue>();
     static {
-        articleMap.put(article_title, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(book_title, XmlDomMetadataExtractor.TEXT_VALUE);
         articleMap.put(isbn, XmlDomMetadataExtractor.TEXT_VALUE);
         articleMap.put(eisbn, XmlDomMetadataExtractor.TEXT_VALUE);
         articleMap.put(date, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -74,7 +74,7 @@ public class EndocrineSocietyXmlSchemaHelper implements SourceXmlSchemaHelper {
 
     protected static final MultiValueMap cookMap = new MultiValueMap();
     static {
-        cookMap.put(article_title, MetadataField.FIELD_ARTICLE_TITLE);
+        cookMap.put(book_title, MetadataField.FIELD_PUBLICATION_TITLE);
         cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
         cookMap.put(isbn, MetadataField.FIELD_ISBN);
         cookMap.put(eisbn, MetadataField.FIELD_EISBN);

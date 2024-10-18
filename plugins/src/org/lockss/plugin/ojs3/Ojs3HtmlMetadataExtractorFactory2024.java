@@ -32,6 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.ojs3;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
@@ -42,6 +43,7 @@ import org.lockss.extractor.FileMetadataExtractorFactory;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.ojs3.Ojs3HtmlMetadataExtractorFactory.Ojs3HtmlMetadataExtractor;
 import org.lockss.util.Logger;
@@ -89,5 +91,6 @@ public class Ojs3HtmlMetadataExtractorFactory2024 implements FileMetadataExtract
                 emitter.emitMetadata(cu, am);
             }
         }
+
     }
 }

@@ -5,9 +5,9 @@
     info[tester] = 5 ;
     info[poller] = 6
   >
-
-    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
-    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+  provider = bepress
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
   {
 
@@ -50,7 +50,7 @@
       au < finished ; crawling ; 2021 ; Journal of Electrochemistry Volume 27 ; 27 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2022 ; Journal of Electrochemistry Volume 28 ; 28 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Journal of Electrochemistry Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2024 ; Journal of Electrochemistry Volume 30 ; 30 ; >
+      au < crawling ; exists ; 2024 ; Journal of Electrochemistry Volume 30 ; 30 ; >
 
   }
 

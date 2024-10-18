@@ -141,8 +141,12 @@ public class PagesJatsXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
             thisAM.put(MetadataField.FIELD_DATE, thisAM.getRaw(JatsPublishingSchemaHelper.JATS_edate));
           }
         }
+
+        log.debug3("Set article and journal type");
+
+        thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+        thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
       }
     }
-    
   }
 }
