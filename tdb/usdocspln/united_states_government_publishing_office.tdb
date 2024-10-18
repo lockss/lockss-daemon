@@ -446,11 +446,11 @@
 
     param[collection_id] = CPRT
 
-    au < manifest ; 1923 ; Congressional Committee Prints 1923 ; 1923 ; https://www.govinfo.gov/ >
+    au < ready ; 1923 ; Congressional Committee Prints 1923 ; 1923 ; https://www.govinfo.gov/ >
     au < manifest ; 1941 ; Congressional Committee Prints 1941 ; 1941 ; https://www.govinfo.gov/ >
-    au < manifest ; 1950 ; Congressional Committee Prints 1950 ; 1950 ; https://www.govinfo.gov/ >
+    au < ready ; 1950 ; Congressional Committee Prints 1950 ; 1950 ; https://www.govinfo.gov/ >
     au < released ; 1951 ; Congressional Committee Prints 1951 ; 1951 ; https://www.govinfo.gov/ >
-    au < manifest ; 1953 ; Congressional Committee Prints 1953 ; 1953 ; https://www.govinfo.gov/ >
+    au < ready ; 1953 ; Congressional Committee Prints 1953 ; 1953 ; https://www.govinfo.gov/ >
     au < released ; 1955 ; Congressional Committee Prints 1955 ; 1955 ; https://www.govinfo.gov/ >
     au < released ; 1956 ; Congressional Committee Prints 1956 ; 1956 ; https://www.govinfo.gov/ >
     au < released ; 1957 ; Congressional Committee Prints 1957 ; 1957 ; https://www.govinfo.gov/ >
@@ -484,8 +484,8 @@
     au < released ; 2023 ; Congressional Committee Prints 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < manifest ; 2024 ; Congressional Committee Prints 2024 ; 2024 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 1954 ; Congressional Committee Prints 1954 ; 1954 ; https://www.govinfo.gov/ >
-    au < manifest ; 1987 ; Congressional Committee Prints 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < ready ; 1954 ; Congressional Committee Prints 1954 ; 1954 ; https://www.govinfo.gov/ >
+    au < ready ; 1987 ; Congressional Committee Prints 1987 ; 1987 ; https://www.govinfo.gov/ >
     au < released ; 1962 ; Congressional Committee Prints 1962 ; 1962 ; https://www.govinfo.gov/ >
     au < released ; 1965 ; Congressional Committee Prints 1965 ; 1965 ; https://www.govinfo.gov/ >
     au < released ; 1966 ; Congressional Committee Prints 1966 ; 1966 ; https://www.govinfo.gov/ >
@@ -1623,26 +1623,26 @@
     au < ready ; 1855 ; STATUTE 1855 ; 1855 ; https://www.govinfo.gov/ >
     au < released ; 1859 ; STATUTE 1859 ; 1859 ; https://www.govinfo.gov/ >
     au < ready ; 1863 ; STATUTE 1863 ; 1863 ; https://www.govinfo.gov/ >
-    au < manifest ; 1865 ; STATUTE 1865 ; 1865 ; https://www.govinfo.gov/ >
-    au < manifest ; 1867 ; STATUTE 1867 ; 1867 ; https://www.govinfo.gov/ >
-    au < manifest ; 1868 ; STATUTE 1868 ; 1868 ; https://www.govinfo.gov/ >
-    au < manifest ; 1871 ; STATUTE 1871 ; 1871 ; https://www.govinfo.gov/ >
-    au < manifest ; 1873 ; STATUTE 1873 ; 1873 ; https://www.govinfo.gov/ >
+    au < ready ; 1865 ; STATUTE 1865 ; 1865 ; https://www.govinfo.gov/ >
+    au < ready ; 1867 ; STATUTE 1867 ; 1867 ; https://www.govinfo.gov/ >
+    au < ready ; 1868 ; STATUTE 1868 ; 1868 ; https://www.govinfo.gov/ >
+    au < ready ; 1871 ; STATUTE 1871 ; 1871 ; https://www.govinfo.gov/ >
+    au < ready ; 1873 ; STATUTE 1873 ; 1873 ; https://www.govinfo.gov/ >
     au < manifest ; 1874 ; STATUTE 1874 ; 1874 ; https://www.govinfo.gov/ >
-    au < manifest ; 1877 ; STATUTE 1877 ; 1877 ; https://www.govinfo.gov/ >
-    au < manifest ; 1879 ; STATUTE 1879 ; 1879 ; https://www.govinfo.gov/ >
-    au < manifest ; 1881 ; STATUTE 1881 ; 1881 ; https://www.govinfo.gov/ >
-    au < manifest ; 1883 ; STATUTE 1883 ; 1883 ; https://www.govinfo.gov/ >
-    au < manifest ; 1885 ; STATUTE 1885 ; 1885 ; https://www.govinfo.gov/ >
+    au < ready ; 1877 ; STATUTE 1877 ; 1877 ; https://www.govinfo.gov/ >
+    au < ready ; 1879 ; STATUTE 1879 ; 1879 ; https://www.govinfo.gov/ >
+    au < ready ; 1881 ; STATUTE 1881 ; 1881 ; https://www.govinfo.gov/ >
+    au < ready ; 1883 ; STATUTE 1883 ; 1883 ; https://www.govinfo.gov/ >
+    au < ready ; 1885 ; STATUTE 1885 ; 1885 ; https://www.govinfo.gov/ >
     au < released ; 1887 ; STATUTE 1887 ; 1887 ; https://www.govinfo.gov/ >
-    au < manifest ; 1889 ; STATUTE 1889 ; 1889 ; https://www.govinfo.gov/ >
-    au < manifest ; 1891 ; STATUTE 1891 ; 1891 ; https://www.govinfo.gov/ >
-    au < manifest ; 1893 ; STATUTE 1893 ; 1893 ; https://www.govinfo.gov/ >
-    au < manifest ; 1895 ; STATUTE 1895 ; 1895 ; https://www.govinfo.gov/ >
-    au < manifest ; 1897 ; STATUTE 1897 ; 1897 ; https://www.govinfo.gov/ >
-    au < manifest ; 1899 ; STATUTE 1899 ; 1899 ; https://www.govinfo.gov/ >
-    au < manifest ; 1901 ; STATUTE 1901 ; 1901 ; https://www.govinfo.gov/ >
-    au < manifest ; 1903 ; STATUTE 1903 ; 1903 ; https://www.govinfo.gov/ >
+    au < ready ; 1889 ; STATUTE 1889 ; 1889 ; https://www.govinfo.gov/ >
+    au < ready ; 1891 ; STATUTE 1891 ; 1891 ; https://www.govinfo.gov/ >
+    au < ready ; 1893 ; STATUTE 1893 ; 1893 ; https://www.govinfo.gov/ >
+    au < ready ; 1895 ; STATUTE 1895 ; 1895 ; https://www.govinfo.gov/ >
+    au < ready ; 1897 ; STATUTE 1897 ; 1897 ; https://www.govinfo.gov/ >
+    au < ready ; 1899 ; STATUTE 1899 ; 1899 ; https://www.govinfo.gov/ >
+    au < ready ; 1901 ; STATUTE 1901 ; 1901 ; https://www.govinfo.gov/ >
+    au < ready ; 1903 ; STATUTE 1903 ; 1903 ; https://www.govinfo.gov/ >
     au < released ; 1905 ; STATUTE 1905 ; 1905 ; https://www.govinfo.gov/ >
     au < manifest ; 1907 ; STATUTE 1907 ; 1907 ; https://www.govinfo.gov/ >
     au < released ; 1909 ; STATUTE 1909 ; 1909 ; https://www.govinfo.gov/ >
