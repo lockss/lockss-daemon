@@ -14,6 +14,7 @@
     comment[type] = bookSeries
     implicit < status ; status2 ; year ; name ; param[year_string] ; param[base_url] ; hidden[proxy] >
     #Before 2014, the AUs were split between ingest1 and ingest2 and only collected on 1 ingest machine
+    #Exclude Notices of the AMS per LXPUB-25
 
     {
   
@@ -808,7 +809,7 @@
     {
   
     title < 
-      name = AMS Current Lecture Notes ;
+      name = Fields Institute Communications ;
       type = bookSeries
     >
     
@@ -839,7 +840,7 @@
     {
   
     title < 
-      name = AMS Fields Institute Monographs ;
+      name = Fields Institute Monographs ;
       type = bookSeries
     >
     
@@ -867,7 +868,7 @@
     {
   
     title < 
-      name = AMS Graduate Studies in Mathematics ;
+      name = Graduate Studies in Mathematics ;
       type = bookSeries
     >
     
@@ -911,7 +912,7 @@
     {
   
     title < 
-      name = AMS Graduate Studies in Mathematics ;
+      name = Mathematical World ;
       type = bookSeries
     >
     
@@ -941,7 +942,7 @@
     {
   
     title < 
-      name = AMS Graduate Studies in Mathematics ;
+      name = The Student Mathematical Library ;
       type = bookSeries
     >
     
