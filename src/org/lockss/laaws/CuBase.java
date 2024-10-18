@@ -82,7 +82,7 @@ public class CuBase extends Worker {
     CachedUrl[] v1Versions = cu.getCuVersions();
     for (CachedUrl cuVer : v1Versions) {
       String v1Url = cuVer.getUrl();
-      CIProperties verProps = cu.getProperties();
+      CIProperties verProps = cuVer.getProperties();
       String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
       String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
       if (UrlUtil.isDirectoryRedirection(v1Url, nodeUrl)) {
