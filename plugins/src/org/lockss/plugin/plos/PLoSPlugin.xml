@@ -1,7 +1,38 @@
+<!--
+
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>testing</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -41,41 +72,6 @@
     <string>"Public Library of Science Journals Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>1,"^%s[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)(\?v=.*)?$", base_url</string>
-      <string>1, "https://www.plos.org/lockss-manifest/plosbiology/vol_%d", year</string>
-      <string>4,"^%s", base_url</string>
-      <string>1, "%slockss.txt", base_url</string>
-      <string>1,"^https?://%s/article/browse/issue/info.+issue\.%s\.", url_host(base_url), journal_id</string>
-      <string>1,"^https?://%s/article/info", url_host(base_url), journal_id</string>
-      <string>1,"^https?://%s/article/fetchObject.action\?uri=info.+/image\.%s\.", url_host(base_url), journal_id</string>
-      
-      <!-- .+/journal\.%s\.[0-9]+$
-      http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0000019
-      http://www.plosbiology.org/article/info%3Adoi%2F10.1371%2Fjournal.pbio.0000017
-      http://www.plosbiology.org/article/fetchObject.action?uri=info%3Adoi%2F10.1371%2Fimage.pbio.v01.i01.g001&representation=PNG_M
-      http://www.plosbiology.org/article/browse/issue/info%3Adoi%2F10.1371%2Fissue.pbio.v01.i01
-      http://www.plosbiology.org/article/info:doi/10.1371/journal.pbio
-       -->
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>"https://www.plos.org/lockss-manifest/plosbiology/vol_%d", year</string>
-  </entry>
-  <entry>
-    <string>au_permission_url</string>
-    <list>
-      <string>"https://www.plos.org/lockss-manifest/plosbiology/vol_%d", year</string>
-      <!-- string>"%slockss.txt", base_url</string -->
-    </list>
-  </entry>
-  <entry>
-    <string>plugin_per_host_permission_path</string>
-    <string>/lockss.txt</string>
-  </entry>
-  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>
@@ -107,6 +103,24 @@
     </list>
   </entry>
   <entry>
+      <!-- 
+        https://journals.plos.org/plosbiology/lockss-manifest/vol_2003/August?cursor=*&pageNumber=0
+        https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0000011
+        https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0000011&type=printable
+      -->
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://(%s|(fonts|ajax)\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%s%s/lockss-manifest/vol_%d/[a-zA-Z]+\?cursor=\*&amp;pageNumber=[0-9]$", base_url, journal_id, year</string>
+      <string>1,"^%s%s/article(/file)?\?id=[0-9\.^/]+/journal\.[a-z0-9\.^/]+(&amp;type=(printable|manuscript))?$", base_url, journal_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"https://journals.plos.org/%s/lockss-manifest/vol_%d", journal_id, year</string>
+  </entry>
+  <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <!-- string>"%sjournals/%s/v%03d/[^_/]+\.(html|pdf)$", base_url, journal_id, year</string -->
@@ -135,7 +149,7 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.plos.PLoSUrlNormalizer</string>
-  </entry -->
+  </entry 
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.plos.PLoSArticleIteratorFactory</string>
@@ -152,23 +166,17 @@
         <string>org.lockss.plugin.plos.PLoSHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>
+  </entry>-->
   <entry>
     <string>au_feature_urls</string>
     <map>
       <entry>
         <string>au_title</string>
-        <string>"%sjournals/%s", base_url, journal_id</string>
+        <string>"%s%s", base_url, journal_id</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>"%sjournals/%s/v%03d/", base_url, journal_id, year</string>
-      </entry>
-      <entry>
-        <string>au_issue</string>
-        <list>
-          <string>"%sjournals/%s/toc/%s%d.%s.html", base_url, journal_id, journal_id, year, issue</string>
-        </list>
+        <string>"%s%s/lockss-manifest/vol_%d", base_url, journal_id, year</string>
       </entry>
     </map>
   </entry>
