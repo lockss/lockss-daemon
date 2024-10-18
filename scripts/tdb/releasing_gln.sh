@@ -18,7 +18,7 @@ echo "****Find AUs from the same publisher but different plugins (optional)****"
 echo "****List of the Atypon publishers****"
 ./scripts/tdb/tdbout -G -t publisher -Q 'plugin ~ "typon"' tdb/prod/ | sort -u ; tdbout -G -t publisher -Q 'plugin ~ "TaylorAndFrancisPlugin"' tdb/prod/taylor_and_francis.tdb | uniq ; tdbout -G -t publisher -Q 'plugin ~ "EdinburghUniversityPressP"' tdb/prod/edinburgh_university_press.tdb | uniq
 echo "****Generating list of the released AUs****"
-echo -e "Publisher\tJournal\tISSN\tEISSN\tVolume\tYear" > ../SageEdits/ReleasedToday.tsv ; scripts/tdb/tdbout -G -t publisher,title,issn,eissn,name,year tdb/prod/ >> ../SageEdits/ReleasedToday.tsv
+echo -e "Publisher\tJournal\tISSN\tEISSN\tVolume\tYear" > ../SageEdits/ReleasedToday.tsv ; scripts/tdb/tdbout -G -t publisher,title,issn,eissn,name,year tdb/prod/ | sort >> ../SageEdits/ReleasedToday.tsv
 echo "****Generating release email"
 ./scripts/tdb/tdbout -t publisher,title,name,status,plugin tdb/prod/ | sort > ../SageEdits/ForEmail.txt ; cat ../SageEdits/ForEmail.txt | ./scripts/tdb/releaseemail.py --gln > ../SageEdits/ReleaseEmail.txt
  
