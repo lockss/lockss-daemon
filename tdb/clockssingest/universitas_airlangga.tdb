@@ -1639,7 +1639,7 @@
       au < finished ; frozen ; 2021 ; Surabaya Physical Medicine and Rehabilitation Journal  Volume 3 ; 3 ; 2021 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; Surabaya Physical Medicine and Rehabilitation Journal  Volume 4 ; 4 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Surabaya Physical Medicine and Rehabilitation Journal  Volume 5 ; 5 ; 2023 ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2024 ; Surabaya Physical Medicine and Rehabilitation Journal  Volume 6 ; 6 ; 2024 ; >
+      au < ready ; exists ; 2024 ; Surabaya Physical Medicine and Rehabilitation Journal  Volume 6 ; 6 ; 2024 ; >
 
   }
 
@@ -2076,13 +2076,13 @@
 
       param[journal_id] = JoAS
 
-      au < manifest ; exists ; 2017 ; Journal of Aquaculture Science Volume 1-2 ; 1-2 ; 2017 ; > 
+      au < ready ; exists ; 2017 ; Journal of Aquaculture Science Volume 1-2 ; 1-2 ; 2017 ; > 
       au < doNotProcess ; doNotProcess ; 2018 ; Journal of Aquaculture Science Volume 3 ; 3 ; 2018 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2019 ; Journal of Aquaculture Science Volume 4 ; 4 ; 2019 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of Aquaculture Science Volume 5 ; 5 ; 2020 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Aquaculture Science Volume 6 ; 6 ; 2021 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2022 ; Journal of Aquaculture Science Volume 7 ; 7 ; 2022 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2023 ; Journal of Aquaculture Science Volume 8 ; 8 ; 2023 ; >
+      au < ready ; exists ; 2023 ; Journal of Aquaculture Science Volume 8 ; 8 ; 2023 ; >
       au < manifest ; exists ; 2024 ; Journal of Aquaculture Science Volume 9 ; 9 ; 2024 ; >
 
   }
