@@ -19,7 +19,7 @@ public class MdpiBooksSourcePluginArticleIteratorFactory implements ArticleItera
     protected static Logger log = Logger.getLogger(MdpiBooksSourcePluginArticleIteratorFactory.class);
 
     protected static final String ROOT_TEMPLATE = "\"%s%s/\",base_url,directory";
-    private static final String PATTERN_TEMPLATE = "\"%s%s/BOOKS/([^/]+)\\.pdf\",base_url,directory";
+    private static final String PATTERN_TEMPLATE = "\"%s%s/([^/]+)\\.pdf\",base_url,directory";
 
 
     protected static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+)\\.pdf$");
