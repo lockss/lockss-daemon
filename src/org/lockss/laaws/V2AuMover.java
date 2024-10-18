@@ -43,6 +43,7 @@ import org.lockss.laaws.api.rs.StreamingArtifactsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
 import org.lockss.laaws.model.rs.AuidPageInfo;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;
 import org.lockss.protocol.IdentityManager;
@@ -482,6 +483,7 @@ public class V2AuMover {
   RepositoryManager repoMgr;
   private final CrawlManager crawlMgr;
   private final PollManager pollMgr;
+  private final MetadataManager mdMgr;
   MigrationManager migrationMgr;
 
   //////////////////////////////////////////////////////////////////////
@@ -495,6 +497,7 @@ public class V2AuMover {
     repoMgr = theDaemon.getRepositoryManager();
     crawlMgr = theDaemon.getCrawlManager();
     pollMgr = theDaemon.getPollManager();
+    mdMgr = theDaemon.getMetadataManager();
     migrationMgr = theDaemon.getMigrationManager();
     Configuration config = ConfigManager.getCurrentConfig();
     setInitialConfig(config);
@@ -974,6 +977,9 @@ public class V2AuMover {
       case InProgress:
         crawlMgr.abortAuCrawls(au);
         pollMgr.cancelAuPolls(au);
+        if (mdMgr != null) {
+          mdMgr.abortAuIndexing(au);
+        }
         break;
       case Finished:
         // Optionally delete the AU from the system

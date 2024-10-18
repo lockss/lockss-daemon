@@ -570,6 +570,15 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Cancels any reindexing task for the specified AU.
+   *
+   * @return true if a task was canceled,
+   */
+  public boolean abortAuIndexing(ArchivalUnit au) {
+    return cancelAuTask(au.getAuId());
+  }
+
+  /**
    * Cancels the reindexing task for the specified AU.
    * 
    * @param auId
