@@ -1217,6 +1217,9 @@ public class PluginManager
   }
 
   public ArchivalUnit getAuFromId(String auId) {
+    if (auId == null) {
+      return null;
+    }
     ArchivalUnit au = auMap.get(auId);
     if (log.isDebug3()) log.debug3("getAu(" + auId + ") = " + au);
     return au;
