@@ -64,10 +64,6 @@ POSSIBILITY OF SUCH DAMAGE.
     </map>
   </entry>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.67.0</string>
-  </entry>
-  <entry>
     <string>au_name</string>
     <string>"Public Library of Science Journals Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
@@ -107,36 +103,39 @@ POSSIBILITY OF SUCH DAMAGE.
         https://journals.plos.org/plosbiology/lockss-manifest/vol_2003/August?cursor=*&pageNumber=0
         https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0000011
         https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0000011&type=printable
+        https://journals.plos.org/plosbiology/article/figure/image?size=medium&id=10.1371/journal.pbio.0000007.g001		
+        https://journals.plos.org/plosbiology/article/figure/powerpoint?id=10.1371/journal.pbio.0000007.g001
       -->
     <string>au_crawlrules</string>
     <list>
       <string>1,"^https?://(%s|(fonts|ajax)\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%s%s/lockss-manifest/vol_%d/[a-zA-Z]+\?cursor=\*&amp;pageNumber=[0-9]$", base_url, journal_id, year</string>
-      <string>1,"^%s%s/article(/file)?\?id=[0-9\.^/]+/journal\.[a-z0-9\.^/]+(&amp;type=(printable|manuscript))?$", base_url, journal_id</string>
+      <string>1,"^%s%s/article(/file)?\?(type=supplementary&amp;)?id=[0-9\.]+/journal\.[a-z0-9\.]+(&amp;type=(printable|manuscript))?$", base_url, journal_id</string>
+      <string>1,"^%s%s/article/figure/(image|powerpoint)\?(download&amp;)?(size=(medium|large|original|inline)&amp;)?id=[0-9\.]+/journal\.[a-z0-9\.]+$", base_url, journal_id</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"https://journals.plos.org/%s/lockss-manifest/vol_%d", journal_id, year</string>
+    <string>"%s%s/lockss-manifest/vol_%d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <!-- string>"%sjournals/%s/v%03d/[^_/]+\.(html|pdf)$", base_url, journal_id, year</string -->
+      <string>"^%s%s/article(/file)?\?id=[0-9\.^/]+/journal\.[a-z0-9\.^/]+?$", base_url, journal_id</string>
     </list>
-  </entry>
-  <!-- entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.plos.PLoSHtmlLinkExtractorFactory</string>
-  </entry -->
-  <!-- entry>
-    <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.plos.PLoSHtmlHashFilterFactory</string>
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.plos.PLoSHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.plos.PLoSHtmlHashFilterFactory</string>
+  </entry>
+  <!-- entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.plos.PLoSHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>application/pdf_filter_factory</string>
@@ -149,7 +148,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.plos.PLoSUrlNormalizer</string>
-  </entry 
+  </entry -->
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.plos.PLoSArticleIteratorFactory</string>
@@ -162,11 +161,11 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
-        <string>*;DublinCore</string>
+        <string>*</string>
         <string>org.lockss.plugin.plos.PLoSHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
-  </entry>-->
+  </entry>
   <entry>
     <string>au_feature_urls</string>
     <map>
@@ -179,6 +178,12 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>"%s%s/lockss-manifest/vol_%d", base_url, journal_id, year</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_permitted_host_pattern</string>
+    <list>
+      <string>(fonts|ajax)\.googleapis\.com</string>
+    </list>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

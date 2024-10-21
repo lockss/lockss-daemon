@@ -1,4 +1,4 @@
-/*
+<!--
 
 Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
@@ -28,33 +28,43 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
-*/
-
-package org.lockss.plugin.plos;
-
-import java.io.*;
-
-import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
-import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.*;
-import org.lockss.plugin.*;
-
-public class PLoSHtmlCrawlFilterFactory implements FilterFactory {
-  @Override
-  public InputStream createFilteredInputStream(ArchivalUnit au,
-                                               InputStream in,
-                                               String encoding)
-      throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        HtmlNodeFilters.tag("header"),
-        HtmlNodeFilters.tag("footer"),
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-articles-container"),
-        HtmlNodeFilters.tagWithAttribute("ol", "class", "references"),
-    };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-  }
-
-}
+-->
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>development</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.plos.ClockssPLoSPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Public Library of Science Journals Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.plos.PLoSPlugin</string>
+  </entry>
+   <entry>
+    <string>plugin_parent_version</string>
+    <string>1</string>
+  </entry> 
+  <entry>
+    <string>au_name</string>
+    <string>"Public Library of Science Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+     <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+     </entry>
+    </map>
+  </entry>
+</map>

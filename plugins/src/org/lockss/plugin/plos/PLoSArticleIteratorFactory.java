@@ -47,19 +47,20 @@ public class PLoSArticleIteratorFactory
   private static final Logger log = Logger.getLogger(PLoSArticleIteratorFactory.class);
   
   protected static final String ROOT_TEMPLATE = "\"%s%s/\", base_url, journal_id";
-  protected static final String PATTERN_TEMPLATE = "\"^%s%s/\", base_url, journal_id";
+  protected static final String PATTERN_TEMPLATE = "\"%s%s/\", base_url, journal_id";
   
   // various aspects of an article
   
   // these kinds of urls are not used as part of the AI
-  
+  //https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0000011
+  //https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0000011&type=printable
   protected static final Pattern HTML_PATTERN = Pattern.compile(
-      "/(v[0-9]+)/([^_/]+)[.]html$", Pattern.CASE_INSENSITIVE);
+      "/article\\?id=([0-9\\.]+/journal[a-z0-9\\.]+)$", Pattern.CASE_INSENSITIVE);
   
   // how to change from one form (aspect) of article to another
-  protected static final String HTML_REPLACEMENT = "/$1/$2.html";
-  protected static final String SUMM_REPLACEMENT = "/summary/$1/$2.html";
-  protected static final String PDF_REPLACEMENT  = "/$1/$2.pdf";
+  protected static final String HTML_REPLACEMENT = "/article?id=$1";
+  protected static final String PDF_REPLACEMENT  = "/article/file?id=$1&type=printable";
+  protected static final String XML_REPLACEMENT  = "/article/file?id=$1&type=manuscript";
   
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
                                                       MetadataTarget target)
@@ -69,22 +70,18 @@ public class PLoSArticleIteratorFactory
     builder.setSpec(target,
         ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
-    // set up html page to be an aspect that will trigger an ArticleFiles
-    // NOTE - for the moment this also means full is considered a FULL_TEXT_CU 
-    // until this is deprecated
-    // Note: Often the html page is also the fulltext html
     builder.addAspect(
         HTML_PATTERN, HTML_REPLACEMENT,
         ArticleFiles.ROLE_ARTICLE_METADATA,
         ArticleFiles.ROLE_FULL_TEXT_HTML);
     
     builder.addAspect(
-        SUMM_REPLACEMENT,
-        ArticleFiles.ROLE_ABSTRACT);
-    
-    builder.addAspect(
         PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    builder.addAspect(
+        XML_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_XML);
     
     return builder.getSubTreeArticleIterator();
   }

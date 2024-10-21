@@ -36,7 +36,7 @@ import java.io.*;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
-
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
@@ -55,12 +55,12 @@ public class PLoSHtmlMetadataExtractorFactory implements FileMetadataExtractorFa
   }
   
   public static class PLoSHtmlMetadataExtractor 
-    implements FileMetadataExtractor {
+    extends SimpleHtmlMetaTagMetadataExtractor {
     
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_PUBLICATION_TITLE); 
       tagMap.put("citation_publisher", MetadataField.FIELD_PUBLISHER);
       tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
@@ -68,26 +68,17 @@ public class PLoSHtmlMetadataExtractorFactory implements FileMetadataExtractorFa
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
       tagMap.put("citation_doi", MetadataField.FIELD_DOI);
-      tagMap.put("citation_fulltext_html_url", MetadataField.FIELD_ACCESS_URL);
+      //tagMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
       tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
+      tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
+      tagMap.put("citation_article_type", MetadataField.FIELD_ARTICLE_TYPE);
     }
-    
     @Override
-    public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
-        throws IOException {
-      ArticleMetadata am = 
-        new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
-      am.cook(tagMap);
-      String url = am.get(MetadataField.FIELD_ACCESS_URL);
-      if (url != null && !url.isEmpty()) {
-        CachedUrl val = cu.getArchivalUnit().makeCachedUrl(url);
-        if (!val.hasContent()) {
-          am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
-        }
-      } else {
-        am.replace(MetadataField.FIELD_ACCESS_URL, cu.getUrl());
+    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
+      throws IOException {
+        ArticleMetadata am = super.extract(target, cu);
+        am.cook(tagMap);
+        return am;
       }
-      emitter.emitMetadata(cu, am);
-    }
   }
 }
