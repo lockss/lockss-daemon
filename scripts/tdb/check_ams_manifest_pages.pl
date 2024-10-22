@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 # This script scrapes the ams website to create a complete list of all the available AUs
-#tdbout -EXMZFCMTYLc param[collection_id] tdb/clockssingest/american_mathematical_society.books.tdb | sort -u | ./scripts/tdb/check_ams_manifest_pages.pl | sort -u > ../SageEdits/ams_site_list
+#tdbout -EXMZFCMTYLBc param[collection_id] tdb/clockssingest/american_mathematical_society.books.tdb | sort -u | ./scripts/tdb/check_ams_manifest_pages.pl | sort -u > ../SageEdits/ams_site_list
 #tdbout -EXMZFCMTYLBc param[collection_id],param[year_string] tdb/clockssingest/american_mathematical_society.books.tdb | sort -u | sed s'/^/https:\/\/www.ams.org\//' | sed s'/,/\/year\//' > ../SageEdits/ams_tdb_list
 #comm -23 ../SageEdits/ams_site_list ../SageEdits/ams_tdb_list
 #*************************************

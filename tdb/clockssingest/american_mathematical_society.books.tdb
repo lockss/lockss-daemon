@@ -411,6 +411,7 @@
     
     param[collection_id] = car
     
+    au < manifest ; exists ; 2002 ; Carus Mathematical Monographs 2002 ; 2002 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2004 ; Carus Mathematical Monographs 2004 ; 2004 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2005 ; Carus Mathematical Monographs 2005 ; 2005 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2010 ; Carus Mathematical Monographs 2010 ; 2010 ; https://www.ams.org/ ; >
@@ -430,6 +431,11 @@
     
     param[collection_id] = crmm
     
+    au < manifest ; exists ; 2000 ; CRM Monograph series 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; CRM Monograph series 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; CRM Monograph series 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; CRM Monograph series 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; CRM Monograph series 2005 ; 2005 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; CRM Monograph series 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; CRM Monograph series 2009 ; 2009 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2010 ; CRM Monograph series 2010 ; 2010 ; https://www.ams.org/ ; >
@@ -452,6 +458,14 @@
     
     param[collection_id] = dol
     
+    au < manifest ; exists ; 2000 ; Dolciani Mathematical Expositions – Electronic 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; Dolciani Mathematical Expositions – Electronic 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; Dolciani Mathematical Expositions – Electronic 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; Dolciani Mathematical Expositions – Electronic 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; Dolciani Mathematical Expositions – Electronic 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2007 ; Dolciani Mathematical Expositions – Electronic 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2008 ; Dolciani Mathematical Expositions – Electronic 2008 ; 2008 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2009 ; Dolciani Mathematical Expositions – Electronic 2009 ; 2009 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2010 ; Dolciani Mathematical Expositions – Electronic 2010 ; 2010 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2011 ; Dolciani Mathematical Expositions – Electronic 2011 ; 2011 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2012 ; Dolciani Mathematical Expositions – Electronic 2012 ; 2012 ; https://www.ams.org/ ; >
@@ -473,6 +487,14 @@
     
     param[collection_id] = hmath
     
+    au < manifest ; exists ; 2000 ; History of Math 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; History of Math 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; History of Math 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; History of Math 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; History of Math 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; History of Math 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2007 ; History of Math 2007 ; 2007 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2009 ; History of Math 2009 ; 2009 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2010 ; History of Math 2010 ; 2010 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2011 ; History of Math 2011 ; 2011 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2012 ; History of Math 2012 ; 2012 ; https://www.ams.org/ ; >
@@ -493,6 +515,10 @@
     
     param[collection_id] = pcms
     
+    au < manifest ; exists ; 2000 ; IAS/Park City Mathematics Series 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; IAS/Park City Mathematics Series 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; IAS/Park City Mathematics Series 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; IAS/Park City Mathematics Series 2006 ; 2006 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2007 ; IAS/Park City Mathematics Series 2007 ; 2007 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; IAS/Park City Mathematics Series 2009 ; 2009 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2010 ; IAS/Park City Mathematics Series 2010 ; 2010 ; https://www.ams.org/ ; >
@@ -518,6 +544,15 @@
     
     param[collection_id] = prb
     
+    au < manifest ; exists ; 1980 ; Problem Books 1980 ; 1980 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 1985 ; Problem Books 1985 ; 1985 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2000 ; Problem Books 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; Problem Books 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; Problem Books 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; Problem Books 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; Problem Books 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; Problem Books 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; Problem Books 2006 ; 2006 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; Problem Books 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; Problem Books 2009 ; 2009 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2011 ; Problem Books 2011 ; 2011 ; https://www.ams.org/ ; >
@@ -556,6 +591,15 @@
     
     param[collection_id] = spec
     
+    au < exists ; exists ; 1985 ; Spectrum 1985 ; 1985 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1990 ; Spectrum 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1991 ; Spectrum 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1992 ; Spectrum 1992 ; 1992 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1993 ; Spectrum 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1994 ; Spectrum 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1995 ; Spectrum 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1996 ; Spectrum 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < exists ; exists ; 1997 ; Spectrum 1997 ; 1997 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1998 ; Spectrum 1998 ; 1998 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2000 ; Spectrum 2000 ; 2000 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2001 ; Spectrum 2001 ; 2001 ; https://www.ams.org/ ; >
@@ -592,6 +636,13 @@
     
     param[collection_id] = dimacs
     
+    au < manifest ; exists ; 2000 ; Dimacs Workshop Series-Electronic 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; Dimacs Workshop Series-Electronic 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; Dimacs Workshop Series-Electronic 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; Dimacs Workshop Series-Electronic 2003 ; 2003 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2004 ; Dimacs Workshop Series-Electronic 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2005 ; Dimacs Workshop Series-Electronic 2005 ; 2005 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2006 ; Dimacs Workshop Series-Electronic 2006 ; 2006 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; Dimacs Workshop Series-Electronic 2008 ; 2008 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2009 ; Dimacs Workshop Series-Electronic 2009 ; 2009 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2010 ; Dimacs Workshop Series-Electronic 2010 ; 2010 ; https://www.ams.org/ ; >
@@ -634,6 +685,10 @@
     
     param[collection_id] = amsip
     
+    au < manifest ; exists ; 2000 ; AMS/IP Studies in Advanced Math Series 2000 ; 2000 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2001 ; AMS/IP Studies in Advanced Math Series 2001 ; 2001 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2002 ; AMS/IP Studies in Advanced Math Series 2002 ; 2002 ; https://www.ams.org/ ; >
+    au < manifest ; exists ; 2003 ; AMS/IP Studies in Advanced Math Series 2003 ; 2003 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2006 ; AMS/IP Studies in Advanced Math Series 2006 ; 2006 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2007 ; AMS/IP Studies in Advanced Math Series 2007 ; 2007 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2008 ; AMS/IP Studies in Advanced Math Series 2008 ; 2008 ; https://www.ams.org/ ; >
