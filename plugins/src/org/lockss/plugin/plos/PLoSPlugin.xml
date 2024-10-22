@@ -105,14 +105,16 @@ POSSIBILITY OF SUCH DAMAGE.
         https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.0000011&type=printable
         https://journals.plos.org/plosbiology/article/figure/image?size=medium&id=10.1371/journal.pbio.0000007.g001		
         https://journals.plos.org/plosbiology/article/figure/powerpoint?id=10.1371/journal.pbio.0000007.g001
+        https://journals.plos.org/complexsystems/article/citation?id=10.1371/journal.pcsy.0000002
       -->
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|(fonts|ajax)\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|(fonts|ajax)\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(\?[^/]+)?$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%s%s/lockss-manifest/vol_%d/[a-zA-Z]+\?cursor=\*&amp;pageNumber=[0-9]$", base_url, journal_id, year</string>
-      <string>1,"^%s%s/article(/file)?\?(type=supplementary&amp;)?id=[0-9\.]+/journal\.[a-z0-9\.]+(&amp;type=(printable|manuscript))?$", base_url, journal_id</string>
+      <string>1,"^%s%s/article(/file)?\?(type=(supplementary|thumbnail)&amp;)?id=[0-9\.]+/journal\.[a-z0-9\.]+(&amp;type=(printable|manuscript))?$", base_url, journal_id</string>
       <string>1,"^%s%s/article/figure/(image|powerpoint)\?(download&amp;)?(size=(medium|large|original|inline)&amp;)?id=[0-9\.]+/journal\.[a-z0-9\.]+$", base_url, journal_id</string>
+      <string>1,"^%s%s/article/citation(/ris|/bibtex)?\?id=[0-9\.]+/journal\.[a-z0-9\.]+$", base_url, journal_id</string>
     </list>
   </entry>
   <entry>
@@ -122,7 +124,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%s/article(/file)?\?id=[0-9\.^/]+/journal\.[a-z0-9\.^/]+?$", base_url, journal_id</string>
+      <string>"^%s%s/article(/file)?\?id=[0-9\.^/]+/journal\.[a-z0-9\.^/]+(&amp;type=(printable))$", base_url, journal_id</string>
     </list>
   </entry>
   <entry>
