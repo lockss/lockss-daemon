@@ -462,6 +462,8 @@ public class MigrateContent extends LockssServlet {
         "Start Dry Run Migration" : "Start Migration";
     ServletUtil.layoutSubmitButton(this, tbl, KEY_ACTION, ACTION_START, lbl, false, false);
     Input abort = new Input(Input.Submit, KEY_ACTION, ACTION_ABORT);
+    abort.attribute("onclick",
+                    "return confirm(\"Do you really want to abort?\");");
     tbl.add(BUTTON_SPACE);
     tbl.add(abort);
     // Advanced migration options - only in debug mode
