@@ -50,6 +50,7 @@ import org.lockss.config.TdbTitle;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
+import org.lockss.laaws.MigrationManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.PluginManager;
@@ -100,6 +101,9 @@ public class SubscriptionStarter extends LockssRunnable {
 
   // The plugin manager.
   private PluginManager pluginManager = null;
+
+  // The migration manager.
+  private MigrationManager migrationMgr = null;
 
   // The current TdbPublisher when processing multiple TdbAus.
   private TdbPublisher currentTdbPublisher;
@@ -170,7 +174,13 @@ public class SubscriptionStarter extends LockssRunnable {
     LockssDaemon daemon = LockssDaemon.getLockssDaemon();
     dbManager = daemon.getDbManager();
     mdManager = daemon.getMetadataManager();
+    migrationMgr = daemon.getMigrationManager();
     pluginManager = daemon.getPluginManager();
+
+    if (migrationMgr.isInMigrationMode()) {
+      log.debug2("Not starting starter because in migration mode");
+      return;
+    }
 
     // Wait until the archival units have been started.
     if (!daemon.areAusStarted()) {
@@ -340,6 +350,11 @@ public class SubscriptionStarter extends LockssRunnable {
 	    + "Waiting until the next batch is allowed to proceed...");
 
 	configureAuRateLimiter.waitUntilEventOk();
+
+        if (migrationMgr.isInMigrationMode()) {
+          log.debug2("Existing starter because in migration mode");
+          return;
+        }
       } catch (InterruptedException ie) {
       }
 
