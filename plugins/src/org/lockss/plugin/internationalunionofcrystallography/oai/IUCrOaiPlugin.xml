@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -114,6 +114,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <!-- added http and https urls -->
     <list>
       <!-- journals.iucr.org needed for when the base_url is actually iucrdata.iucr.org -->
+      <!--
+      Oct/2024 noticed the following redirect
+      https://scripts.iucr.org/cgi-bin/paper?S2414314623005989
+      Redirected to excluded URL: https://journals.iucr.org/paper?S2414314623005989
+      -->
+      <string>1,"https://journals.iucr.org/paper\?"</string>
       <string>1,"^https?://(%s|%s|(iucrdata|journals|publcif|www)\.iucr\.org|(fonts|ajax)\.(googleapis|gstatic)\.com|code\.jquery\.com|crossmark-cdn\.crossref\.org)/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tiff?|ttf|woff2?)$", url_host(base_url), url_host(script_url)</string>
       <string>1,"^https?://%s/lockss\?", url_host(script_url)</string>
       <string>2,"^https?://(%s|%s|iucrdata\.iucr\.org)/.*buy=yes$", url_host(script_url), url_host(base_url)</string>
@@ -125,6 +131,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://(%s|%s|iucrdata\.iucr\.org)/cgi-bin/(sendsupfiles|sendsup|sendcif)\?(?!.+Qmime=cif)", url_host(script_url), url_host(base_url)</string>
       <!-- IUCr has asked us not to download &Qmime=cif which is what requires the following -->
       <!-- <string>1,"^http://publcif.iucr.org/cifmoldb/gui/cifjmol\.php\?cifid=[^/]+$"</string> -->
+      <string>1,"https://journals.iucr.org/paper\?"</string>
     </list>
   </entry>
   <entry>
@@ -256,6 +263,7 @@ POSSIBILITY OF SUCH DAMAGE.
           <string>(fonts|ajax)\.(googleapis|gstatic)\.com</string>
           <string>code\.jquery\.com</string>
           <string>crossmark-cdn\.crossref\.org</string>
+          <string>journals\.iucr\.org</string>
         </list>
     </entry>
 </map>
