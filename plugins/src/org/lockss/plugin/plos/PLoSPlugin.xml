@@ -106,10 +106,12 @@ POSSIBILITY OF SUCH DAMAGE.
         https://journals.plos.org/plosbiology/article/figure/image?size=medium&id=10.1371/journal.pbio.0000007.g001		
         https://journals.plos.org/plosbiology/article/figure/powerpoint?id=10.1371/journal.pbio.0000007.g001
         https://journals.plos.org/complexsystems/article/citation?id=10.1371/journal.pcsy.0000002
+        Note that some content redirects to link in storage.googleapis. 
+        https://storage.googleapis.com/plos-corpus-prod/10.1371/journal.pcsy.0000007/1/pcsy.0000007.xml
       -->
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|(fonts|ajax)\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff)(\?[^/]+)?$", url_host(base_url)</string>
+      <string>1,"^https?://(%s|(fonts|ajax|storage)\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*(bmp|css|eot|gif|ico|jpe?g|js|png|PNG_.|svg|tif?f|ttf|woff|xml)(\?[^/]+)?$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
       <string>1,"^%s%s/lockss-manifest/vol_%d/[a-zA-Z]+\?cursor=\*&amp;pageNumber=[0-9]$", base_url, journal_id, year</string>
       <string>1,"^%s%s/article(/file)?\?(type=(supplementary|thumbnail)&amp;)?id=[0-9\.]+/journal\.[a-z0-9\.]+(&amp;type=(printable|manuscript))?$", base_url, journal_id</string>
@@ -144,13 +146,13 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>org.lockss.plugin.plos.PLoSPdfFilterFactory</string>
   </entry>
   <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.plos.PLoSUrlConsumerFactory</string>
-  </entry>
-  <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.plos.PLoSUrlNormalizer</string>
   </entry -->
+  <entry>
+    <string>plugin_url_consumer_factory</string>
+    <string>org.lockss.plugin.plos.PLoSUrlConsumerFactory</string>
+  </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.plos.PLoSArticleIteratorFactory</string>
@@ -185,6 +187,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_permitted_host_pattern</string>
     <list>
       <string>(fonts|ajax)\.googleapis\.com</string>
+      <string>storage\.googleapis\.com</string>
     </list>
   </entry>
   <entry>
