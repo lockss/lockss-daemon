@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book SYSTEM "http://jats.nlm.nih.gov/extensions/bits/2.0/BITS-book2.dtd">
+<book xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="2.0" xml:lang="en">
+    <collection-meta collection-type="series">
+        <collection-id collection-id-type="publisher-id">11884</collection-id>
+        <title-group>
+            <title>Science for Sustainable Societies</title>
+            <alt-title>Science for Sustainable Societies</alt-title>
+        </title-group>
+        <contrib-group content-type="collaborators">
+            <contrib contrib-type="Editor-in-Chief">
+                <name name-style="western">
+                    <surname>Takeuchi</surname>
+                    <given-names>Kazuhiko</given-names>
+                </name>
+                <xref ref-type="aff" rid="Aff1">1</xref>
+            </contrib>
+            <aff id="Aff1">
+                <label>1</label>
+                <institution-wrap>
+                    <institution-id institution-id-type="GRID">grid.26999.3d</institution-id>
+                    <institution-id institution-id-type="ISNI">0000 0001 2151 536X</institution-id>
+                    <institution content-type="org-division">Institute for Future Initiatives</institution>
+                    <institution content-type="org-name">The University of Tokyo</institution>
+                </institution-wrap>
+                <addr-line content-type="city">Tokyo</addr-line>
+                <addr-line content-type="state">Tokyo</addr-line>
+                <country country="JP">Japan</country>
+            </aff>
+        </contrib-group>
+        <issn publication-format="print">2197-7348</issn>
+        <issn publication-format="electronic">2197-7356</issn>
+    </collection-meta>
+    <book-meta>
+        <book-id book-id-type="doi">10.1007/978-4-431-54895-9</book-id>
+        <book-id book-id-type="publisher-id">978-4-431-54895-9</book-id>
+        <book-id book-id-type="book-title-id">323378</book-id>
+        <book-title-group>
+            <book-title>Biofuels and Sustainability</book-title>
+            <subtitle>Holistic Perspectives for Policy-making</subtitle>
+        </book-title-group>
+        <contrib-group content-type="book editors">
+            <contrib contrib-type="editor">
+                <name name-style="western">
+                    <surname>Takeuchi</surname>
+                    <given-names>Kazuhiko</given-names>
+                </name>
+                <address>
+                    <email>takeuchi@ifi.u-tokyo.ac.jp</email>
+                </address>
+                <xref ref-type="aff" rid="Aff2">2</xref>
+            </contrib>
+            <contrib contrib-type="editor">
+                <name name-style="western">
+                    <surname>Shiroyama</surname>
+                    <given-names>Hideaki</given-names>
+                    <prefix>Prof.</prefix>
+                </name>
+                <address>
+                    <email>siroyama@j.u-tokyo.ac.jp</email>
+                </address>
+                <xref ref-type="aff" rid="Aff3">3</xref>
+            </contrib>
+            <contrib contrib-type="editor">
+                <name name-style="western">
+                    <surname>Saito</surname>
+                    <given-names>Osamu</given-names>
+                    <prefix>Ph.D.</prefix>
+                </name>
+                <address>
+                    <email>saito@unu.edu</email>
+                </address>
+                <xref ref-type="aff" rid="Aff4">4</xref>
+            </contrib>
+            <contrib contrib-type="editor">
+                <name name-style="western">
+                    <surname>Matsuura</surname>
+                    <given-names>Masahiro</given-names>
+                    <prefix>Dr.</prefix>
+                </name>
+                <address>
+                    <email>matsuura@pp.u-tokyo.ac.jp</email>
+                </address>
+                <xref ref-type="aff" rid="Aff5">5</xref>
+            </contrib>
+            <aff id="Aff2">
+                <label>2</label>
+                <institution-wrap>
+                    <institution-id institution-id-type="GRID">grid.26999.3d</institution-id>
+                    <institution-id institution-id-type="ISNI">0000 0001 2151 536X</institution-id>
+                    <institution content-type="org-division">Integrated Research System for Sustainability Science (IR3S), Institutes for Advanced Study (UTIAS)</institution>
+                    <institution content-type="org-name">The University of Tokyo</institution>
+                </institution-wrap>
+                <addr-line content-type="city">Tokyo</addr-line>
+                <country country="JP">Japan</country>
+            </aff>
+            <aff id="Aff3">
+                <label>3</label>
+                <institution-wrap>
+                    <institution-id institution-id-type="GRID">grid.26999.3d</institution-id>
+                    <institution-id institution-id-type="ISNI">0000 0001 2151 536X</institution-id>
+                    <institution content-type="org-division">Graduate School of Law and Politics</institution>
+                    <institution content-type="org-name">The University of Tokyo</institution>
+                </institution-wrap>
+                <addr-line content-type="city">Tokyo</addr-line>
+                <country country="JP">Japan</country>
+            </aff>
+            <aff id="Aff4">
+                <label>4</label>
+                <institution-wrap>
+                    <institution-id institution-id-type="GRID">grid.410557.2</institution-id>
+                    <institution-id institution-id-type="ISNI">0000 0001 1931 1704</institution-id>
+                    <institution content-type="org-name">United Nations University Institute for the Advanced Study of Sustainability (UNU-IAS)</institution>
+                </institution-wrap>
+                <addr-line content-type="city">Tokyo</addr-line>
+                <country country="JP">Japan</country>
+            </aff>
+            <aff id="Aff5">
+                <label>5</label>
+                <institution-wrap>
+                    <institution-id institution-id-type="GRID">grid.411764.1</institution-id>
+                    <institution-id institution-id-type="ISNI">0000 0001 2106 7990</institution-id>
+                    <institution content-type="org-division">Graduate School of Governance Studies</institution>
+                    <institution content-type="org-name">Meiji University</institution>
+                </institution-wrap>
+                <addr-line content-type="city">Tokyo</addr-line>
+                <country country="JP">Japan</country>
+            </aff>
+        </contrib-group>
+        <isbn content-type="ppub">978-4-431-54894-2</isbn>
+        <isbn content-type="epub">978-4-431-54895-9</isbn>
+        <publisher>
+            <publisher-name>Springer Japan</publisher-name>
+            <publisher-loc>Tokyo</publisher-loc>
+        </publisher>
+        <permissions>
+            <copyright-statement content-type="compact">© The Editor(s) (if applicable) and the Author(s) 2018</copyright-statement>
+            <copyright-statement content-type="comment">Corrected publication 2019</copyright-statement>
+            <copyright-year>2018</copyright-year>
+            <copyright-holder>The Editor(s) (if applicable) and the Author(s)</copyright-holder>
+            <license license-type="open-access" xlink:href="http://creativecommons.org/licenses/by-nc/2.5/">
+                <license-p>
+                    <bold>Open Access</bold>
+                    This book is licensed under the terms of the Creative Commons Attribution-NonCommercial 2.5 International License (http://creativecommons.org/licenses/by-nc/2.5/), which permits any noncommercial use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license and indicate if changes were made.
+                </license-p>
+                <license-p>The images or other third party material in this book are included in the book's Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the book's Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder.</license-p>
+            </license>
+        </permissions>
+        <custom-meta-group>
+            <custom-meta>
+                <meta-name>publisher-imprint-name</meta-name>
+                <meta-value>Springer</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-chapter-count</meta-name>
+                <meta-value>16</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>media-type</meta-name>
+                <meta-value>eBook</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>contains-esm</meta-name>
+                <meta-value>No</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>pdf-file-reference</meta-name>
+                <meta-value>BodyRef/PDF/978-4-431-54895-9_Book.pdf</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>output-medium</meta-name>
+                <meta-value>Online</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>pdf-type</meta-name>
+                <meta-value>Typeset</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>target-type</meta-name>
+                <meta-value>OnlinePDF</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-product-type</meta-name>
+                <meta-value>Contributed volume</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-primary</meta-name>
+                <meta-value>Environment</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-secondary</meta-name>
+                <meta-value>Sustainable Development</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-secondary</meta-name>
+                <meta-value>Energy Policy, Economics and Management</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-secondary</meta-name>
+                <meta-value>Ecosystems</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-secondary</meta-name>
+                <meta-value>Environmental Management</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-secondary</meta-name>
+                <meta-value>Renewable and Green Energy</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-secondary</meta-name>
+                <meta-value>Environmental Law/Policy/Ecojustice</meta-value>
+            </custom-meta>
+            <custom-meta>
+                <meta-name>book-subject-collection</meta-name>
+                <meta-value>Earth and Environmental Science</meta-value>
+            </custom-meta>
+        </custom-meta-group>
+    </book-meta>
+</book>

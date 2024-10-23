@@ -144,6 +144,73 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
 
     }
 
+    public void testExtractArticleXmlMetaSchema2024() throws Exception {
+
+        String fname = "springer_source_plugin_jats_journal_test_file_new_schema.xml";
+        String journalXml = getResourceContent(fname);
+        String xml_url = BaseUrl + Directory + "/" + fname;
+
+        FileMetadataExtractor me = new TestSpringerJatsXmlXPathMetadataExtractor.MyJatsPublishingSourceXmlMetadataExtractor();
+        FileMetadataListExtractor mle =
+                new FileMetadataListExtractor(me);
+        List<ArticleMetadata> mdlist = extractFromContent(xml_url, "text/xml", journalXml, mle);
+        assertNotEmpty(mdlist);
+        ArticleMetadata md = mdlist.get(0);
+        assertNotNull(md);
+
+        assertEquals("2012", md.get(MetadataField.FIELD_DATE));
+        assertEquals("Yue, Anbu", md.get(MetadataField.FIELD_AUTHOR));
+        assertEquals("64", md.get(MetadataField.FIELD_VOLUME));
+        assertEquals("2", md.get(MetadataField.FIELD_ISSUE));
+        assertEquals("1012-2443", md.get(MetadataField.FIELD_ISSN));
+        assertEquals("1573-7470", md.get(MetadataField.FIELD_EISSN));
+    }
+
+    public void testExtractArticleXmlSchema2024() throws Exception {
+
+        String fname = "springer_source_plugin_jats_journal_test_file_new_schema.xml.Meta";
+        String journalXml = getResourceContent(fname);
+        String xml_url = BaseUrl + Directory + "/" + fname;
+
+        FileMetadataExtractor me = new TestSpringerJatsXmlXPathMetadataExtractor.MyJatsPublishingSourceXmlMetadataExtractor();
+        FileMetadataListExtractor mle =
+                new FileMetadataListExtractor(me);
+        List<ArticleMetadata> mdlist = extractFromContent(xml_url, "text/xml", journalXml, mle);
+        assertNotEmpty(mdlist);
+        ArticleMetadata md = mdlist.get(0);
+        assertNotNull(md);
+
+        assertEquals("2012", md.get(MetadataField.FIELD_DATE));
+        assertEquals("Yue, Anbu", md.get(MetadataField.FIELD_AUTHOR));
+        assertEquals("64", md.get(MetadataField.FIELD_VOLUME));
+        assertEquals("2", md.get(MetadataField.FIELD_ISSUE));
+        assertEquals("1012-2443", md.get(MetadataField.FIELD_ISSN));
+        assertEquals("1573-7470", md.get(MetadataField.FIELD_EISSN));
+
+    }
+
+    public void testExtractBookXmlSchema2024() throws Exception {
+
+        String fname = "springer_source_plugin_bits_book_test_file_schema2024.xml";
+        String journalXml = getResourceContent(fname);
+        String xml_url = BaseUrl + Directory + "/" + fname;
+
+        FileMetadataExtractor me = new TestSpringerJatsXmlXPathMetadataExtractor.MyJatsPublishingSourceXmlMetadataExtractor();
+        FileMetadataListExtractor mle =
+                new FileMetadataListExtractor(me);
+        List<ArticleMetadata> mdlist = extractFromContent(xml_url, "text/xml", journalXml, mle);
+        assertNotEmpty(mdlist);
+        ArticleMetadata md = mdlist.get(0);
+        assertNotNull(md);
+
+        assertEquals("Biofuels and Sustainability", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+        assertEquals("10.1007/978-4-431-54895-9", md.get(MetadataField.FIELD_DOI));
+        assertEquals("978-4-431-54894-2", md.get(MetadataField.FIELD_ISBN));
+        assertEquals("978-4-431-54895-9", md.get(MetadataField.FIELD_EISBN));
+        assertEquals("Takeuchi, Kazuhiko", md.get(MetadataField.FIELD_AUTHOR));
+        assertEquals("2018", md.get(MetadataField.FIELD_DATE));
+    }
+
     // Set up a test version of a source extractor in order to define/control
     // a basic schema for testing
     private  class MyJatsPublishingSourceXmlMetadataExtractor extends SourceXmlMetadataExtractorFactory.SourceXmlMetadataExtractor {

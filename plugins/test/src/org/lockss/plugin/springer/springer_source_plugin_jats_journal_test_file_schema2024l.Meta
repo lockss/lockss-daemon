@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article SYSTEM "http://jats.nlm.nih.gov/archiving/1.2/JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="research-article" xml:lang="en">
+   <front>
+      <journal-meta>
+         <journal-id journal-id-type="publisher-id">10472</journal-id>
+         <journal-title-group>
+            <journal-title>Annals of Mathematics and Artificial Intelligence</journal-title>
+            <abbrev-journal-title abbrev-type="publisher">Ann Math Artif Intell</abbrev-journal-title>
+         </journal-title-group>
+         <issn pub-type="ppub">1012-2443</issn>
+         <issn pub-type="epub">1573-7470</issn>
+         <publisher>
+            <publisher-name>Springer Netherlands</publisher-name>
+            <publisher-loc>Dordrecht</publisher-loc>
+         </publisher>
+      </journal-meta>
+      <article-meta>
+         <article-id pub-id-type="publisher-id">s10472-012-9286-x</article-id>
+         <article-id pub-id-type="manuscript">9286</article-id>
+         <article-id pub-id-type="doi">10.1007/s10472-012-9286-x</article-id>
+         <article-categories>
+            <subj-group subj-group-type="heading">
+               <subject>Article</subject>
+            </subj-group>
+         </article-categories>
+         <title-group>
+            <article-title xml:lang="en">Imprecise probabilistic query answering using measures of ignorance and degree of satisfaction</article-title>
+         </title-group>
+         <contrib-group>
+            <contrib contrib-type="author">
+               <name name-style="western">
+                  <surname>Yue</surname>
+                  <given-names>Anbu</given-names>
+               </name>
+               <address>
+                  <email>a.yue@qub.ac.uk</email>
+               </address>
+               <xref ref-type="aff" rid="Aff1">1</xref>
+            </contrib>
+            <contrib contrib-type="author" corresp="yes">
+               <name name-style="western">
+                  <surname>Liu</surname>
+                  <given-names>Weiru</given-names>
+               </name>
+               <address>
+                  <email>w.liu@qub.ac.uk</email>
+               </address>
+               <xref ref-type="aff" rid="Aff1">1</xref>
+               <xref ref-type="corresp" rid="IDs104720129286x_cor1">a</xref>
+            </contrib>
+            <contrib contrib-type="author">
+               <name name-style="western">
+                  <surname>Hunter</surname>
+                  <given-names>Anthony</given-names>
+               </name>
+               <address>
+                  <email>a.hunter@cs.ucl.ac.uk</email>
+               </address>
+               <xref ref-type="aff" rid="Aff2">2</xref>
+            </contrib>
+            <aff id="Aff1">
+               <label>1</label>
+               <institution-wrap>
+                  <institution-id institution-id-type="GRID">grid.4777.3</institution-id>
+                  <institution-id institution-id-type="ISNI">0000000403747521</institution-id>
+                  <institution content-type="org-division">School of Electronics, Electrical Engineering and Computer Science</institution>
+                  <institution content-type="org-name">Queen’s University Belfast</institution>
+               </institution-wrap>
+               <addr-line content-type="postcode">BT7 1NN</addr-line>
+               <addr-line content-type="city">Belfast</addr-line>
+               <country country="GB">UK</country>
+            </aff>
+            <aff id="Aff2">
+               <label>2</label>
+               <institution-wrap>
+                  <institution-id institution-id-type="GRID">grid.83440.3b</institution-id>
+                  <institution-id institution-id-type="ISNI">0000000121901201</institution-id>
+                  <institution content-type="org-division">Department of Computer Science</institution>
+                  <institution content-type="org-name">University College London</institution>
+               </institution-wrap>
+               <addr-line content-type="street">Gower Street</addr-line>
+               <addr-line content-type="postcode">WC1E 6BT</addr-line>
+               <addr-line content-type="city">London</addr-line>
+               <country country="GB">UK</country>
+            </aff>
+         </contrib-group>
+         <author-notes>
+            <corresp id="IDs104720129286x_cor1">
+               <label>a</label>
+               <email>w.liu@qub.ac.uk</email>
+            </corresp>
+         </author-notes>
+         <pub-date date-type="pub" publication-format="electronic">
+            <day>27</day>
+            <month>3</month>
+            <year>2012</year>
+         </pub-date>
+         <pub-date date-type="pub" publication-format="print">
+            <month>3</month>
+            <year>2012</year>
+         </pub-date>
+         <volume>64</volume>
+         <issue seq="3">2</issue>
+         <issue-title>Special Issue: Scalable Uncertainty Management</issue-title>
+         <volume-issue-group>
+            <volume>64</volume>
+            <issue>2</issue>
+         </volume-issue-group>
+         <volume-issue-group>
+            <volume>64</volume>
+            <issue>3</issue>
+         </volume-issue-group>
+         <fpage>145</fpage>
+         <lpage>183</lpage>
+         <history>
+            <date date-type="registration">
+               <day>8</day>
+               <month>3</month>
+               <year>2012</year>
+            </date>
+            <date date-type="online">
+               <day>27</day>
+               <month>3</month>
+               <year>2012</year>
+            </date>
+         </history>
+         <permissions>
+            <copyright-statement content-type="compact">© Springer Science+Business Media B.V. 2012</copyright-statement>
+            <copyright-year>2012</copyright-year>
+            <copyright-holder>Springer Science+Business Media B.V.</copyright-holder>
+            <license license-type="open-access" xlink:href="https://creativecommons.org/licenses/by/2.0">
+               <license-p>
+                  <bold>Open Access</bold>
+                  This article is distributed under the terms of the Creative Commons Attribution 2.0 International License (
+                  <ext-link xlink:href="https://creativecommons.org/licenses/by/2.0" ext-link-type="uri">https://creativecommons.org/licenses/by/2.0</ext-link>
+                  ), which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.
+               </license-p>
+            </license>
+         </permissions>
+         <abstract xml:lang="en" id="Abs1">
+            <title>Abstract</title>
+            <p>In conditional probabilistic logic programming, given a query, the two most common forms for answering the query are either a probability interval or a precise probability obtained by using the maximum entropy principle. The former can be noninformative (e.g., interval [0, 1]) and the reliability of the latter is questionable when the priori knowledge is imprecise. To address this problem, in this paper, we propose some methods to quantitatively measure if a probability interval or a single probability is sufficient for answering a query. We first propose an approach to measuring the ignorance of a probabilistic logic program with respect to a query. The measure of ignorance (w.r.t. a query) reflects how reliable a precise probability for the query can be and a high value of ignorance suggests that a single probability is not suitable for the query. We then propose a method to measure the probability that the exact probability of a query falls in a given interval, e.g., a second order probability. We call it the degree of satisfaction. If the degree of satisfaction is high enough w.r.t. the query, then the given interval can be accepted as the answer to the query. We also prove our measures satisfy many properties and we use a case study to demonstrate the significance of the measures.</p>
+         </abstract>
+         <kwd-group xml:lang="en">
+            <title>Keywords</title>
+            <kwd>Probabilistic logic programming</kwd>
+            <kwd>Queries</kwd>
+            <kwd>Ignorance</kwd>
+            <kwd>Imprecise probability</kwd>
+         </kwd-group>
+         <kwd-group>
+            <title>Mathematics Subject Classifications (2010)</title>
+            <kwd>03B48</kwd>
+         </kwd-group>
+         <custom-meta-group>
+            <custom-meta>
+               <meta-name>volume-issue-count</meta-name>
+               <meta-value>4</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-article-count</meta-name>
+               <meta-value>8</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-toc-levels</meta-name>
+               <meta-value>0</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-pricelist-year</meta-name>
+               <meta-value>2012</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-copyright-holder</meta-name>
+               <meta-value>Springer Science+Business Media B.V.</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-copyright-year</meta-name>
+               <meta-value>2012</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>article-contains-esm</meta-name>
+               <meta-value>No</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>article-numbering-style</meta-name>
+               <meta-value>ContentOnly</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>article-registration-date-year</meta-name>
+               <meta-value>2012</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>article-registration-date-month</meta-name>
+               <meta-value>3</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>article-registration-date-day</meta-name>
+               <meta-value>8</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>article-toc-levels</meta-name>
+               <meta-value>0</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>toc-levels</meta-name>
+               <meta-value>0</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>volume-type</meta-name>
+               <meta-value>Regular</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>journal-product</meta-name>
+               <meta-value>NonStandardArchiveJournal</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>numbering-style</meta-name>
+               <meta-value>ContentOnly</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>article-grants-type</meta-name>
+               <meta-value>OpenChoice</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>metadata-grant</meta-name>
+               <meta-value>OpenAccess</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>abstract-grant</meta-name>
+               <meta-value>OpenAccess</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>bodypdf-grant</meta-name>
+               <meta-value>OpenAccess</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>bodyhtml-grant</meta-name>
+               <meta-value>OpenAccess</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>bibliography-grant</meta-name>
+               <meta-value>OpenAccess</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>esm-grant</meta-name>
+               <meta-value>OpenAccess</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>online-first</meta-name>
+               <meta-value>false</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>pdf-file-reference</meta-name>
+               <meta-value>BodyRef/PDF/10472_2012_Article_9286.pdf</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>pdf-type</meta-name>
+               <meta-value>Typeset</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>target-type</meta-name>
+               <meta-value>OnlinePDF</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>pdf-file-reference</meta-name>
+               <meta-value>BodyRef/PDF/10472_2012_9286_TEX.zip</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>target-type</meta-name>
+               <meta-value>TEX</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-online-date-year</meta-name>
+               <meta-value>2012</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-online-date-month</meta-name>
+               <meta-value>5</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-online-date-day</meta-name>
+               <meta-value>17</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-print-date-year</meta-name>
+               <meta-value>2012</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-print-date-month</meta-name>
+               <meta-value>5</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-print-date-day</meta-name>
+               <meta-value>16</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>issue-type</meta-name>
+               <meta-value>Combined</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>article-type</meta-name>
+               <meta-value>OriginalPaper</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>journal-subject-primary</meta-name>
+               <meta-value>Computer Science</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>journal-subject-secondary</meta-name>
+               <meta-value>Artificial Intelligence</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>journal-subject-secondary</meta-name>
+               <meta-value>Mathematics, general</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>journal-subject-secondary</meta-name>
+               <meta-value>Computer Science, general</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>journal-subject-secondary</meta-name>
+               <meta-value>Complex Systems</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>journal-subject-collection</meta-name>
+               <meta-value>Computer Science</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>open-access</meta-name>
+               <meta-value>true</meta-value>
+            </custom-meta>
+            <custom-meta>
+               <meta-name>body</meta-name>
+               <meta-value>absent</meta-value>
+            </custom-meta>
+         </custom-meta-group>
+      </article-meta>
+   </front>
+</article>
