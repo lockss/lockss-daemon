@@ -223,4 +223,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$</string>
     </list>
   </entry>
+  <!--<entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyCrawlSeedFactory</string>
+  </entry>-->
 </map>
