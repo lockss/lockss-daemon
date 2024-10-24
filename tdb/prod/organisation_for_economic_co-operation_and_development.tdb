@@ -460,14 +460,14 @@
     param[journal_issn] = 19952872
 
     au < manifest ; 2008 ; OECD Journal: Financial Market Trends Volume 2008 ; 2008 >
-    au < manifest ; 2009 ; OECD Journal: Financial Market Trends Volume 2009 ; 2009 >
-    au < manifest ; 2010 ; OECD Journal: Financial Market Trends Volume 2010 ; 2010 >
-    au < manifest ; 2011 ; OECD Journal: Financial Market Trends Volume 2011 ; 2011 >
-    au < manifest ; 2012 ; OECD Journal: Financial Market Trends Volume 2012 ; 2012 >
-    au < manifest ; 2013 ; OECD Journal: Financial Market Trends Volume 2013 ; 2013 >
-    au < manifest ; 2014 ; OECD Journal: Financial Market Trends Volume 2014 ; 2014 >
-    au < manifest ; 2015 ; OECD Journal: Financial Market Trends Volume 2015 ; 2015 >
-    au < manifest ; 2016 ; OECD Journal: Financial Market Trends Volume 2016 ; 2016 >
+    au < ready ; 2009 ; OECD Journal: Financial Market Trends Volume 2009 ; 2009 >
+    au < ready ; 2010 ; OECD Journal: Financial Market Trends Volume 2010 ; 2010 >
+    au < ready ; 2011 ; OECD Journal: Financial Market Trends Volume 2011 ; 2011 >
+    au < ready ; 2012 ; OECD Journal: Financial Market Trends Volume 2012 ; 2012 >
+    au < ready ; 2013 ; OECD Journal: Financial Market Trends Volume 2013 ; 2013 >
+    au < ready ; 2014 ; OECD Journal: Financial Market Trends Volume 2014 ; 2014 >
+    au < ready ; 2015 ; OECD Journal: Financial Market Trends Volume 2015 ; 2015 >
+    au < ready ; 2016 ; OECD Journal: Financial Market Trends Volume 2016 ; 2016 >
 
   }
 
@@ -485,8 +485,8 @@
     param[journal_issn] = 1995283x
 
     au < manifest ; 2008 ; OECD Journal: General Papers Volume 2008 ; 2008 >
-    au < manifest ; 2009 ; OECD Journal: General Papers Volume 2009 ; 2009 >
-    au < manifest ; 2010 ; OECD Journal: General Papers Volume 2010 ; 2010 >
+    au < ready ; 2009 ; OECD Journal: General Papers Volume 2009 ; 2009 >
+    au < ready ; 2010 ; OECD Journal: General Papers Volume 2010 ; 2010 >
 
   }
 
@@ -504,10 +504,10 @@
     param[journal_issn] = 19952899
 
     au < manifest ; 2009 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2008 ; 2008 >
-    au < manifest ; 2010 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2009 ; 2009 >
-    au < manifest ; 2011 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2010 ; 2010 >
-    au < manifest ; 2012 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2011 ; 2011 >
-    au < manifest ; 2013 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2012 ; 2012 >
+    au < ready ; 2010 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2009 ; 2009 >
+    au < ready ; 2011 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2010 ; 2010 >
+    au < ready ; 2012 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2011 ; 2011 >
+    au < ready ; 2013 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2012 ; 2012 >
     au < ready ; 2014 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2013 ; 2013 >
     au < ready ; 2015 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2014 ; 2014 >
     au < ready ; 2016 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 >
@@ -527,16 +527,16 @@
     param[journal_dir] = oecd-observer
     param[journal_issn] = 15615529
 
-    au < manifest ; 1962 ; OECD Observer Volume 1962 ; 1962 >
-    au < manifest ; 1963 ; OECD Observer Volume 1963 ; 1963 >
-    au < manifest ; 1964 ; OECD Observer Volume 1964 ; 1964 >
-    au < manifest ; 1965 ; OECD Observer Volume 1965 ; 1965 >
-    au < manifest ; 1966 ; OECD Observer Volume 1966 ; 1966 >
-    au < manifest ; 1967 ; OECD Observer Volume 1967 ; 1967 >
-    au < manifest ; 1968 ; OECD Observer Volume 1968 ; 1968 >
-    au < manifest ; 1969 ; OECD Observer Volume 1969 ; 1969 >
-    au < manifest ; 1970 ; OECD Observer Volume 1970 ; 1970 >
-    au < manifest ; 1971 ; OECD Observer Volume 1971 ; 1971 >
+    au < ready ; 1962 ; OECD Observer Volume 1962 ; 1962 >
+    au < ready ; 1963 ; OECD Observer Volume 1963 ; 1963 >
+    au < ready ; 1964 ; OECD Observer Volume 1964 ; 1964 >
+    au < ready ; 1965 ; OECD Observer Volume 1965 ; 1965 >
+    au < ready ; 1966 ; OECD Observer Volume 1966 ; 1966 >
+    au < ready ; 1967 ; OECD Observer Volume 1967 ; 1967 >
+    au < ready ; 1968 ; OECD Observer Volume 1968 ; 1968 >
+    au < ready ; 1969 ; OECD Observer Volume 1969 ; 1969 >
+    au < ready ; 1970 ; OECD Observer Volume 1970 ; 1970 >
+    au < ready ; 1971 ; OECD Observer Volume 1971 ; 1971 >
     au < ready ; 1972 ; OECD Observer Volume 1972 ; 1972 >
     au < ready ; 1973 ; OECD Observer Volume 1973 ; 1973 >
     au < ready ; 1974 ; OECD Observer Volume 1974 ; 1974 >
