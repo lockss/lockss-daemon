@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>development</string>
+    <string>testing</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -197,10 +197,5 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
-  </entry>
-  <entry>
-    <!-- manifest to issue -->
-    <string>au_refetch_depth</string>
-    <int>2</int>
   </entry>
 </map>
