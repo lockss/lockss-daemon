@@ -146,7 +146,7 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
 
     public void testExtractArticleXmlMetaSchema2024() throws Exception {
 
-        String fname = "springer_source_plugin_jats_journal_test_file_new_schema.xml";
+        String fname = "springer_source_plugin_jats_journal_test_file_schema2024.xml";
         String journalXml = getResourceContent(fname);
         String xml_url = BaseUrl + Directory + "/" + fname;
 
@@ -168,7 +168,7 @@ public class TestSpringerJatsXmlXPathMetadataExtractor extends SourceXmlMetadata
 
     public void testExtractArticleXmlSchema2024() throws Exception {
 
-        String fname = "springer_source_plugin_jats_journal_test_file_new_schema.xml.Meta";
+        String fname = "springer_source_plugin_jats_journal_test_file_schema2024.xml.Meta";
         String journalXml = getResourceContent(fname);
         String xml_url = BaseUrl + Directory + "/" + fname;
 
