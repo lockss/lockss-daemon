@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Al-Ayen Iraqi University ;
+    info[contract] = 2012 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = AUIQ Complementary Biological System ;
+        eissn = 3007-973X
+      >
+
+      comment[publisher] = Al-Ayen Iraqi University
+      param[base_url] = https://acbs.alayen.edu.iq/
+      param[journal_abbr] = journal
+
+      au < expected ; exists ; 2024 ; AUIQ Complementary Biological System Volume 1 ; 1 ; >
+
+  }
+
+}
