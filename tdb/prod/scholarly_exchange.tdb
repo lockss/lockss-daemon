@@ -505,11 +505,10 @@
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
     param[base_url] = https://www.syllabusjournal.org/
+    #URL no longer valid
 
-    au < released ; 2021 ; Syllabus Volume 10 ; 10 ; 2021 >
-    au < released ; 2022 ; Syllabus Volume 11 ; 11 ; 2022 >
-    au < expected ; 2023 ; Syllabus Volume 12 ; 12 ; 2023 >
-    au < expected ; 2024 ; Syllabus Volume 13 ; 13 ; 2024 >
+    au < down ; 2021 ; Syllabus Volume 10 ; 10 ; 2021 >
+    au < down ; 2022 ; Syllabus Volume 11 ; 11 ; 2022 >
 
     }
   }
