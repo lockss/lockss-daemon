@@ -42,7 +42,6 @@ import java.util.regex.Pattern;
 import org.lockss.crawler.BaseCrawlSeed;
 import org.lockss.crawler.CrawlSeed;
 import org.lockss.crawler.CrawlSeedFactory;
-import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
@@ -56,18 +55,15 @@ public class AmericanMathematicalSocietyCrawlSeedFactory implements CrawlSeedFac
 
     @Override
     public CrawlSeed createCrawlSeed(CrawlerFacade facade) {
-        String baseUrl = facade.getAu().getConfiguration().get(ConfigParamDescr.COLLECTION.getKey());
-        String vol = facade.getAu().getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
-        String year = facade.getAu().getConfiguration().get(ConfigParamDescr.YEAR.getKey());
-        String collectionID = facade.getAu().getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
-        //log.info("the collectionID is " + collectionID + " and the baseUrl is " + baseUrl + " and the vol is" + vol + " and the year is " + year);
+        String collectionID = facade.getAu().getConfiguration().get("collection_id");
+        log.debug3("the collectionID is " + collectionID);
         if (collectionID != null) {
-            if (!collectionID.equals("chel")) {
-                //log.info("I found a normal AMS AU.");
+          //the "special" books for AMS are the ones with collection ids of chel and simon
+          //add whatever new special books come up (ones that are categorized by volume instead of year)
+            if (!collectionID.equals("chel") && !collectionID.equals("simon")) {
                 return new BaseCrawlSeed(facade);
             }
             else {
-                //log.info("I found a special AMS AU.");
                 return new AMSSpecialBookCrawlSeed(facade);
             }
         }
@@ -87,11 +83,9 @@ public class AmericanMathematicalSocietyCrawlSeedFactory implements CrawlSeedFac
         Collection<String> uUrls = new ArrayList<String>(sUrls.size());
         for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
             String sUrl = iter.next();
-            log.info("The start URL is " + sUrl);
             Matcher urlMat = YEAR_PAT.matcher(sUrl); 
             if (urlMat.find()) {
               sUrl = urlMat.replaceFirst(SPECIAL_STR);
-              log.info("The start URL is now " + sUrl);
               if (log.isDebug2()) {
                 log.debug2(sUrl);
               }
