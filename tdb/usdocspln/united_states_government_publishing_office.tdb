@@ -448,9 +448,13 @@
 
     au < ready ; 1923 ; Congressional Committee Prints 1923 ; 1923 ; https://www.govinfo.gov/ >
     au < manifest ; 1941 ; Congressional Committee Prints 1941 ; 1941 ; https://www.govinfo.gov/ >
+    au < manifest ; 1944 ; Congressional Committee Prints 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < manifest ; 1949 ; Congressional Committee Prints 1949 ; 1949 ; https://www.govinfo.gov/ >
     au < ready ; 1950 ; Congressional Committee Prints 1950 ; 1950 ; https://www.govinfo.gov/ >
     au < released ; 1951 ; Congressional Committee Prints 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < manifest ; 1952 ; Congressional Committee Prints 1952 ; 1952 ; https://www.govinfo.gov/ >
     au < ready ; 1953 ; Congressional Committee Prints 1953 ; 1953 ; https://www.govinfo.gov/ >
+    au < ready ; 1954 ; Congressional Committee Prints 1954 ; 1954 ; https://www.govinfo.gov/ >
     au < released ; 1955 ; Congressional Committee Prints 1955 ; 1955 ; https://www.govinfo.gov/ >
     au < released ; 1956 ; Congressional Committee Prints 1956 ; 1956 ; https://www.govinfo.gov/ >
     au < released ; 1957 ; Congressional Committee Prints 1957 ; 1957 ; https://www.govinfo.gov/ >
@@ -458,8 +462,11 @@
     au < released ; 1959 ; Congressional Committee Prints 1959 ; 1959 ; https://www.govinfo.gov/ >
     au < released ; 1960 ; Congressional Committee Prints 1960 ; 1960 ; https://www.govinfo.gov/ >
     au < released ; 1961 ; Congressional Committee Prints 1961 ; 1961 ; https://www.govinfo.gov/ >
+    au < released ; 1962 ; Congressional Committee Prints 1962 ; 1962 ; https://www.govinfo.gov/ >
     au < released ; 1963 ; Congressional Committee Prints 1963 ; 1963 ; https://www.govinfo.gov/ >
     au < released ; 1964 ; Congressional Committee Prints 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < released ; 1965 ; Congressional Committee Prints 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < released ; 1966 ; Congressional Committee Prints 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < released ; 1967 ; Congressional Committee Prints 1967 ; 1967 ; https://www.govinfo.gov/ >
     au < released ; 1969 ; Congressional Committee Prints 1969 ; 1969 ; https://www.govinfo.gov/ >
     au < released ; 1971 ; Congressional Committee Prints 1971 ; 1971 ; https://www.govinfo.gov/ >
@@ -484,14 +491,11 @@
     au < released ; 2023 ; Congressional Committee Prints 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < manifest ; 2024 ; Congressional Committee Prints 2024 ; 2024 ; https://www.govinfo.gov/ >
 
-    au < ready ; 1954 ; Congressional Committee Prints 1954 ; 1954 ; https://www.govinfo.gov/ >
-    au < ready ; 1987 ; Congressional Committee Prints 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < released ; 1962 ; Congressional Committee Prints 1962 ; 1962 ; https://www.govinfo.gov/ >
-    au < released ; 1965 ; Congressional Committee Prints 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < released ; 1966 ; Congressional Committee Prints 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < released ; 1970 ; Congressional Committee Prints 1970 ; 1970 ; https://www.govinfo.gov/ >
     au < released ; 1981 ; Congressional Committee Prints 1981 ; 1981 ; https://www.govinfo.gov/ >
     au < released ; 1982 ; Congressional Committee Prints 1982 ; 1982 ; https://www.govinfo.gov/ >
+    au < manifest ; 1986 ; Congressional Committee Prints 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < ready ; 1987 ; Congressional Committee Prints 1987 ; 1987 ; https://www.govinfo.gov/ >
 
   }
 
@@ -614,11 +618,10 @@
     au < released ; 1991 ; Congressional Directory 1991 ; 1991 ; https://www.govinfo.gov/ >
     au < released ; 1993 ; Congressional Directory 1993 ; 1993 ; https://www.govinfo.gov/ >
     au < released ; 1995 ; Congressional Directory 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < released ; 2022 ; Congressional Directory 2022 ; 2022 ; https://www.govinfo.gov/ >
-
     au < released ; 2016 ; Congressional Directory 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Congressional Directory 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Directory 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < released ; 2022 ; Congressional Directory 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
 
