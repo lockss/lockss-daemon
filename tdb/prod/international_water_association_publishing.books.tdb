@@ -10,11 +10,11 @@
   {
   
     title <
-      name = International Water Association Publishing Books
+      name = International Water Association Publishing Books ;
+      type = bookSeries
     >
 
     {
-    type = bookSeries
     param[base_url] = https://iwaponline.com/
     plugin = org.lockss.plugin.silverchair.iwap.IwapSilverchairBooksPlugin
     implicit < status ; year ; isbn ; eisbn ; name ; param[resource_id] >
@@ -854,10 +854,10 @@
     title <
       name = Water Intelligence Online ;
       eissn = 1476-1777 ;
-      issnl = 1476-1777
+      issnl = 1476-1777 ;
+      type = bookSeries
     >
 
-    type = bookSeries
     {
     # Cannot reprocess. Probably part of book list above.
     }
