@@ -48,14 +48,14 @@
 
     param[journal_id] = bsj
 
-    au < ojs2.OJS2Plugin ; released ; 2008-2010 ; 2010 ; Bolivian Studies Journal Volume 15-17 ; 15-17 ; http://bsj.pitt.edu/ojs/ >
-    au < ojs2.OJS2Plugin ; released ; 2011 ; 2011 ; Blivian Studies Journal Volume 18 ; 18 ; http://bsj.pitt.edu/ojs/ >
-    au < ojs2.OJS2Plugin ; released ; 2012-2013 ; 2012 ; Bolivian Studies Journal Volume 19 ; 19 ; http://bsj.pitt.edu/ojs/ >
-    au < ojs2.OJS2Plugin ; released ; 2014 ; 2014 ; Bolivian Studies Journal Volume 20 ; 20 ; http://bsj.pitt.edu/ojs/ >
-    au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Bolivian Studies Journal Volume 21 ; 21 ; http://bsj.pitt.edu/ojs/ >
-    au < ojs2.OJS2Plugin ; released ; 2016 ; 2016 ; Bolivian Studies Journal Volume 22 ; 22 ; http://bsj.pitt.edu/ojs/ >
-    au < ojs2.OJS2Plugin ; released ; 2017-2018 ; 2018 ; Bolivian Studies Journal Volume 23-24 ; 23-24 ; http://bsj.pitt.edu/ojs/ >
-    au < ojs2.OJS2Plugin ; released ; 2019 ; 2019 ; Bolivian Studies Journal Volume 25 ; 25 ; https://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; down ; 2008-2010 ; 2010 ; Bolivian Studies Journal Volume 15-17 ; 15-17 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; down ; 2011 ; 2011 ; Blivian Studies Journal Volume 18 ; 18 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; down ; 2012-2013 ; 2012 ; Bolivian Studies Journal Volume 19 ; 19 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; down ; 2014 ; 2014 ; Bolivian Studies Journal Volume 20 ; 20 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; down ; 2015 ; 2015 ; Bolivian Studies Journal Volume 21 ; 21 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; down ; 2016 ; 2016 ; Bolivian Studies Journal Volume 22 ; 22 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; down ; 2017-2018 ; 2018 ; Bolivian Studies Journal Volume 23-24 ; 23-24 ; http://bsj.pitt.edu/ojs/ >
+    au < ojs2.OJS2Plugin ; down ; 2019 ; 2019 ; Bolivian Studies Journal Volume 25 ; 25 ; https://bsj.pitt.edu/ojs/ >
     au < ojs3.Ojs3Plugin ; doesNotExist ; 2020 ; 2020 ; Bolivian Studies Journal Volume 26 ; 26 ; https://bsj.pitt.edu/ojs/ >
     au < ojs3.Ojs3Plugin ; released ; 2021 ; 2021 ; Bolivian Studies Journal Volume 27 ; 27 ; https://bsj.pitt.edu/ojs/ >
     au < ojs3.Ojs3Plugin ; released ; 2022 ; 2022 ; Bolivian Studies Journal Volume 28 ; 28 ; https://bsj.pitt.edu/ojs/ >
@@ -490,10 +490,11 @@
 #      param[base_url] = http://jwhi.pitt.edu/ojs/
 
       param[journal_id] = jwhi
+      #Moved to OJS3
 
-      au < ojs2.OJS2Plugin ; released ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 ; http://jwhi.pitt.edu/ojs/ >
-      au < ojs2.OJS2Plugin ; released ; 2015 ; 2015 ; Journal of World-Historical Information Volume 2-3 ; 2-3 ; http://jwhi.pitt.edu/ojs/ >
-      au < ojs2.OJS2Plugin ; released ; 2016-2017 ; 2017 ; Journal of World-Historical Information Volume 3-4 ; 3-4 ; http://jwhi.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2013 ; 2013 ; Journal of World-Historical Information Volume 1 ; 1 ; http://jwhi.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2015 ; 2015 ; Journal of World-Historical Information Volume 2-3 ; 2-3 ; http://jwhi.pitt.edu/ojs/ >
+      au < ojs2.OJS2Plugin ; down ; 2016-2017 ; 2017 ; Journal of World-Historical Information Volume 3-4 ; 3-4 ; http://jwhi.pitt.edu/ojs/ >
 
   }
 
