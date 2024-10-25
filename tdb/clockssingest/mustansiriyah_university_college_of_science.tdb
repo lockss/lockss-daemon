@@ -24,13 +24,13 @@
       param[journal_id] = MJS
 
 
-      au < frozen ; exists ; 2016 ; Al-Mustansiriyah Journal of Science Volume 2016 ; 27 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Al-Mustansiriyah Journal of Science Volume 2017 ; 28 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Al-Mustansiriyah Journal of Science Volume 2018 ; 29 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Al-Mustansiriyah Journal of Science Volume 2019 ; 30 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Al-Mustansiriyah Journal of Science Volume 2020 ; 31 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; Al-Mustansiriyah Journal of Science Volume 2021 ; 32 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; Al-Mustansiriyah Journal of Science Volume 2022 ; 33 ; 2022 ; >
+      au < finished ; manifest ; 2016 ; Al-Mustansiriyah Journal of Science Volume 2016 ; 27 ; 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Al-Mustansiriyah Journal of Science Volume 2017 ; 28 ; 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Al-Mustansiriyah Journal of Science Volume 2018 ; 29 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Al-Mustansiriyah Journal of Science Volume 2019 ; 30 ; 2019 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; Al-Mustansiriyah Journal of Science Volume 2020 ; 31 ; 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; Al-Mustansiriyah Journal of Science Volume 2021 ; 32 ; 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; Al-Mustansiriyah Journal of Science Volume 2022 ; 33 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Al-Mustansiriyah Journal of Science Volume 2023 ; 34 ; 2023 ; >
       au < notReady ; exists ; 2024 ; Al-Mustansiriyah Journal of Science Volume 2024 ; 35 ; 2024 ; > #login found
 
