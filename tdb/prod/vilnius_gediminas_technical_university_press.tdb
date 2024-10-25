@@ -122,13 +122,13 @@
     param[journal_id] = mla
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
 
-    au < released ; 2009 ; 2009 ; Science - Future of Lithuania Volume 1 ; 1 >
-    au < released ; 2010 ; 2010 ; Science - Future of Lithuania Volume 2 ; 2 >
-    au < released ; 2011 ; 2011 ; Science - Future of Lithuania Volume 3 ; 3 >
-    au < released ; 2012 ; 2012 ; Science - Future of Lithuania Volume 4 ; 4 >
-    au < released ; 2013 ; 2013 ; Science - Future of Lithuania Volume 5 ; 5 >
-    au < released ; 2014 ; 2014 ; Science - Future of Lithuania Volume 6 ; 6 >
-    au < released ; 2015 ; 2015 ; Science - Future of Lithuania Volume 7 ; 7 >
+    au < down ; 2009 ; 2009 ; Science - Future of Lithuania Volume 1 ; 1 >
+    au < down ; 2010 ; 2010 ; Science - Future of Lithuania Volume 2 ; 2 >
+    au < down ; 2011 ; 2011 ; Science - Future of Lithuania Volume 3 ; 3 >
+    au < down ; 2012 ; 2012 ; Science - Future of Lithuania Volume 4 ; 4 >
+    au < down ; 2013 ; 2013 ; Science - Future of Lithuania Volume 5 ; 5 >
+    au < down ; 2014 ; 2014 ; Science - Future of Lithuania Volume 6 ; 6 >
+    au < down ; 2015 ; 2015 ; Science - Future of Lithuania Volume 7 ; 7 >
     au < superseded ; 2016 ; 2016 ; Science - Future of Lithuania Volume 8 [superseded] ; 8 > #no content crawl on delta machines
     }
   }
@@ -145,12 +145,12 @@
     param[journal_id] = est
     implicit < status ; year ; param[year] ; name ; volume >
 
-    au < released ; 2009 ; 2009 ; Evolution of Science and Technology Volume 1 ; 1 >
-    au < released ; 2010 ; 2010 ; Evolution of Science and Technology Volume 2 ; 2 >
-    au < released ; 2011 ; 2011 ; Evolution of Science and Technology Volume 3 ; 3 >
-    au < released ; 2012 ; 2012 ; Evolution of Science and Technology Volume 4 ; 4 >
-    au < released ; 2013 ; 2013 ; Evolution of Science and Technology Volume 5 ; 5 >
-    #stopped publishing
+    au < down ; 2009 ; 2009 ; Evolution of Science and Technology Volume 1 ; 1 >
+    au < down ; 2010 ; 2010 ; Evolution of Science and Technology Volume 2 ; 2 >
+    au < down ; 2011 ; 2011 ; Evolution of Science and Technology Volume 3 ; 3 >
+    au < down ; 2012 ; 2012 ; Evolution of Science and Technology Volume 4 ; 4 >
+    au < down ; 2013 ; 2013 ; Evolution of Science and Technology Volume 5 ; 5 >
+    #stopped publishing and site is gone
   }
 
   {
@@ -167,11 +167,11 @@
     param[journal_id] = bme
 
     au < down ; 2010 ; 2010 ; Business, Management and Education Volume 8 ; 8 > #content no longer available
-    au < down ; 2011 ; 2011 ; Business, Management and Education Volume 9 ; 9 > #content no longer available
-    au < down ; 2012 ; 2012 ; Business, Management and Education Volume 10 ; 10 > #content no longer available
-    au < released ; 2013 ; 2013 ; Business, Management and Education Volume 11 ; 11 >
-    au < released ; 2014 ; 2014 ; Business, Management and Education Volume 12 ; 12 >
-    au < released ; 2015 ; 2015 ; Business, Management and Education Volume 13 ; 13 >
+    au < superseded ; 2011 ; 2011 ; Business, Management and Education Volume 9 [superseded] ; 9 > #content no longer available
+    au < superseded ; 2012 ; 2012 ; Business, Management and Education Volume 10 [superseded] ; 10 > #content no longer available
+    au < superseded ; 2013 ; 2013 ; Business, Management and Education Volume 11 [superseded] ; 11 >
+    au < superseded ; 2014 ; 2014 ; Business, Management and Education Volume 12 [superseded] ; 12 >
+    au < superseded ; 2015 ; 2015 ; Business, Management and Education Volume 13 [superseded] ; 13 >
     au < superseded ; 2016 ; 2016 ; Business, Management and Education Volume 14 [superseded] ; 14 > #no content crawl on delta machines
     }
   }
