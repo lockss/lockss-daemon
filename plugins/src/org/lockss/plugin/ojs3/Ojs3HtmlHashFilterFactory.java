@@ -179,7 +179,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
                     return true;
                   }
                 } else if (nextChild instanceof Div) {
-                  log.info("two divs in a row!");
+                  log.debug3("two divs in a row!");
                   String d1id = ((Div) firstTag).getAttribute("id");
                   String d2id = ((Div) nextChild).getAttribute("id");
                   if (d1id != null &&

@@ -164,7 +164,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                             afTemp.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractsUrl);
                         }
                         //log additional pdf urls
-                        log.info("I am number " + i + " and I am " + PDFs.get(i));
+                        log.debug3("I am number " + i + " and I am " + PDFs.get(i));
                         results.add(afTemp);
                     }
                 }
@@ -191,7 +191,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                 }
 
                 if ((abstractsUrl != null) && abstractsUrl.hasContent()) {
-                    log.info("I'm setting up the metadata role.");
+                    log.debug3("I'm setting up the metadata role.");
                     af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractsUrl);
                 }
                 results.add(af);
