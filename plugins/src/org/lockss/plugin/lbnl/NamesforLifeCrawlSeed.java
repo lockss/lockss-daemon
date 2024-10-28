@@ -49,19 +49,19 @@ import org.lockss.util.urlconn.CacheException;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.*;
+import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
 
     private static final Logger log = Logger.getLogger(NamesforLifeCrawlSeed.class);
+    
     protected Crawler.CrawlerFacade facade;
 
     protected List<String> urlList;
 
     protected String baseUrl;
-    protected String apiSingleLocAPIUrl;
-
-    private List<String> levelOneUrlList = new ArrayList<>();
-
+    
     public NamesforLifeCrawlSeed(Crawler.CrawlerFacade facade) {
         super(facade);
         if (au == null) {
@@ -74,8 +74,6 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
     protected void initialize() throws ConfigurationException, PluginException, IOException {
         super.initialize();
         this.baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-        this.apiSingleLocAPIUrl = this.baseUrl + "sitemap-index.xml";
-
         this.urlList = null;
     }
 
@@ -88,6 +86,7 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
             throw new CacheException.UnexpectedNoRetryFailException("Found no start urls");
         }
 
+        Collections.sort(urlList);
         return urlList;
     }
 
@@ -105,23 +104,33 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
 
         urlList = new ArrayList<String>();
 
-        Collection<String> startUrls = au.getStartUrls();
+        // The three topic sitemaps:
+        //   sitemap-name-information-objects.xml
+        //   sitemap-taxon-information-objects.xml
+        //   sitemap-exemplar-information-objects.xml
+        Collection<String> startUrls = Arrays.asList(
+            baseUrl + "sitemap-name-information-objects.xml",
+            baseUrl + "sitemap-taxon-information-objects.xml",
+            baseUrl + "sitemap-exemplar-information-objects.xml"
+        );
 
         for (String startUrl : startUrls) {
             log.debug3("startUrl =  :"  + startUrl);
             processSingleStartUrl(startUrl);
         }
 
+        storeStartUrls();
+        
     }
 
 
-    private void processSingleStartUrl(String apiStartUrl) throws IOException {
+    private void processSingleStartUrl(String startUrl) throws IOException {
 
         NamesforLifeLocLinkExtractor ple = new NamesforLifeLocLinkExtractor();
 
-        UrlFetcher uf = makeApiUrlFetcher(ple, apiStartUrl, this.apiSingleLocAPIUrl);
-        log.debug2("Request URL: " + apiStartUrl);
-        facade.getCrawlerStatus().addPendingUrl(apiStartUrl);
+        UrlFetcher uf = makeApiUrlFetcher(ple, startUrl);
+        log.debug2("Request URL: " + startUrl);
+        facade.getCrawlerStatus().addPendingUrl(startUrl);
 
         // Make request
         UrlFetcher.FetchResult fr = null;
@@ -131,7 +140,7 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
         catch (CacheException ce) {
             if(ce.getCause() != null && ce.getCause().getMessage().contains("LOCKSS")) {
                 log.debug("OAI result errored due to LOCKSS audit proxy. Trying alternate start Url", ce);
-                urlList.add(apiStartUrl);
+                urlList.add(startUrl);
                 return;
             } else {
                 log.debug2("Stopping due to fatal CacheException", ce);
@@ -145,24 +154,21 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
             }
         }
         if (fr == UrlFetcher.FetchResult.FETCHED) {
-            facade.getCrawlerStatus().removePendingUrl(apiStartUrl);
-            facade.getCrawlerStatus().signalUrlFetched(apiStartUrl);
+            facade.getCrawlerStatus().removePendingUrl(startUrl);
+            facade.getCrawlerStatus().signalUrlFetched(startUrl);
         }
         else {
             log.debug2("Stopping due to fetch result " + fr);
             Map<String, String> errors = facade.getCrawlerStatus().getUrlsWithErrors();
-            if (errors.containsKey(apiStartUrl)) {
-                errors.put(apiStartUrl, errors.remove(apiStartUrl));
+            if (errors.containsKey(startUrl)) {
+                errors.put(startUrl, errors.remove(startUrl));
             }
             else {
-                facade.getCrawlerStatus().signalErrorForUrl(apiStartUrl, "Cannot fetch seed URL");
+                facade.getCrawlerStatus().signalErrorForUrl(startUrl, "Cannot fetch seed URL");
             }
             throw new CacheException("Cannot fetch seed URL");
         }
 
-
-        Collections.sort(urlList);
-        storeStartUrls(urlList, apiStartUrl);
     }
 
     /**
@@ -179,9 +185,8 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
      * @return A URL fetcher for the given query URL.
      * @since 1.67.5
      */
-    protected UrlFetcher makeApiUrlFetcher( final NamesforLifeLocLinkExtractor ple,
-                                            final String url,
-                                            final String apiSingleLocAPIUrl) {
+    protected UrlFetcher makeApiUrlFetcher(final NamesforLifeLocLinkExtractor ple,
+                                           final String url) {
         // Make a URL fetcher
         UrlFetcher uf = facade.makeUrlFetcher(url);
 
@@ -200,7 +205,7 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
                     @Override
                     public void consume() throws IOException {
                         // Apply link extractor to URL and output results into a list
-                        final Set<String> partial = new HashSet<String>();
+                        final ArrayList<String> partial = new ArrayList<>();
                         try {
                             String au_cset = AuUtil.getCharsetOrDefault(fud.headers);
                             String cset = CharsetUtil.guessCharsetFromStream(fud.input,au_cset);
@@ -214,14 +219,8 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
                                     new LinkExtractor.Callback() {
                                         @Override
                                         public void foundLink(String locUrl) {
-                                            //partial.add(apiSingleLocAPIUrl + locUrl);
-                                            //####Hard coded if statement to test code, too many records
-                                            if (locUrl.contains("10.1601")) {
-                                                    log.debug3("locUrl is added = " + locUrl);
-                                                    partial.add(locUrl);
-                                            } else {
-                                                partial.add(locUrl);
-                                            }
+                                            log.debug3("locUrl is added = " + locUrl);
+                                            partial.add(locUrl);
                                         }
                                     });
                         }
@@ -245,18 +244,93 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
         return uf;
     }
 
-    protected void storeStartUrls(Collection<String> urlList, String url) throws IOException {
+    protected void storeStartUrls() throws IOException {
+
+        class Thing {
+          String fullName;
+          String htmlId;
+          String abbr;
+          Thing(String fullName, String htmlId, String abbr) {
+            this.fullName = fullName;
+            this.htmlId = htmlId;
+            this.abbr = abbr;
+          }
+          Stream<String> filteredAndSorted() {
+            Pattern pat = Pattern.compile(baseUrl + "10\\.1601/" + abbr + "\\.(\\d+)", Pattern.CASE_INSENSITIVE);
+            return urlList.stream().filter(pat.asPredicate()).sorted((u, v) -> Integer.compare(Integer.valueOf(pat.matcher(u).group(1)),
+                                                                                               Integer.valueOf(pat.matcher(v).group(1))));
+          }
+        }
+
+        Thing names = new Thing("Name Information Objects", "names", "nm");
+        Thing taxa = new Thing("Taxon Information Objects", "taxa", "tx");
+        Thing exemplars = new Thing("Exemplar Information Objects", "exemplars", "ex");
+        List<Thing> things = Arrays.asList(names, taxa, exemplars);
+        
+        String storageUrl = baseUrl + "lockss-generated/start.html";
         StringBuilder sb = new StringBuilder();
         sb.append("<html>\n");
-        for (String u : urlList) {
-            log.debug3("SINGLE_LOC_API_URL is :"  + u);
-            sb.append("<a href=\"" + u + "\">" + u + "</a><br/>\n");
+        sb.append("  <head>\n");
+        sb.append("    <title>NamesforLife, LLC - A semantic services company</title>\n");
+        sb.append("    <style>");
+
+        sb.append("/* Inspired by https://www.w3schools.com/css/css_navbar_horizontal.asp */\n"
+            + "\n"
+            + "nav ul {\n"
+            + "  list-style-type: none;\n"
+            + "  margin: 0;\n"
+            + "  padding: 0;\n"
+            + "  overflow: hidden;\n"
+            + "  background-color: #333;\n"
+            + "}\n"
+            + "\n"
+            + "nav ul li {\n"
+            + "  float: left;\n"
+            + "}\n"
+            + "\n"
+            + "nav ul li a {\n"
+            + "  display: block;\n"
+            + "  color: white;\n"
+            + "  text-align: center;\n"
+            + "  padding: 14px 16px;\n"
+            + "  text-decoration: none;\n"
+            + "}\n"
+            + "\n"
+            + "/* Change the link color to #111 (black) on hover */\n"
+            + "li a:hover {\n"
+            + "  background-color: #111;\n"
+            + "}");
+        
+        sb.append("    </style>");
+        sb.append("  </head>\n");
+        sb.append("  <body>\n");
+        sb.append("    <p><img width=\"256\" height=\"64\" alt=\"NamesforLife logo\" src=\"https://www.namesforlife.com/images/namesforlife_logo_name_tagline_256x64.svg\" /></p>\n");
+        sb.append("    <h1>NamesforLife</h1>\n");
+        sb.append("    <nav>\n");
+        sb.append("      <ul>\n");
+        sb.append("        <li><a href=\"https://www.namesforlife.com/\">Home</a></li>\n");
+        for (Thing t : things) {
+          sb.append(String.format("        <li><a href=\"#%s\">%s</a></li>\n", t.htmlId, t.fullName));
         }
-        sb.append("</html>");
+        sb.append("      </ul>\n");
+        sb.append("    </nav>\n");
+
+        for (Thing t : things) {
+          sb.append(String.format("    <h2 id=\"#%s\">%s</h2>\n", t.htmlId, t.fullName));
+          sb.append("    <ul>");
+          t.filteredAndSorted().forEach(u -> {
+            sb.append(String.format("      <li><a href=\"%s\">%s</a></li>\n", u, u));
+          });
+          sb.append("    </ul>");
+        }
+        
+        sb.append("  </body>\n");
+        sb.append("</html>\n");
+
         CIProperties headers = new CIProperties();
         //Should use a constant here
         headers.setProperty("content-type", "text/html; charset=utf-8");
-        UrlData ud = new UrlData(new ByteArrayInputStream(sb.toString().getBytes(Constants.ENCODING_UTF_8)), headers, url);
+        UrlData ud = new UrlData(new ByteArrayInputStream(sb.toString().getBytes(Constants.ENCODING_UTF_8)), headers, storageUrl);
         UrlCacher cacher = facade.makeUrlCacher(ud);
         cacher.storeContent();
     }

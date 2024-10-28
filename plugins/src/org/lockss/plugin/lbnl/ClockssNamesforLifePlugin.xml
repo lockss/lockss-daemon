@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -83,12 +83,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <list>
-      <!--	https://www.namesforlife.com/sitemap-index.xml-->
-      <string>"%ssitemap-name-information-objects.xml", base_url</string>
-      <string>"%ssitemap-taxon-information-objects.xml", base_url</string>
-      <string>"%ssitemap-exemplar-information-objects.xml", base_url</string>
-    </list>
+    <string>"%slockss-generated/start.html"</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
