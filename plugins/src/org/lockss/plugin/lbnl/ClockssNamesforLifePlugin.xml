@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -83,7 +83,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%slockss-generated/start.html"</string>
+    <string>"%slockss-generated/start.html", base_url</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
