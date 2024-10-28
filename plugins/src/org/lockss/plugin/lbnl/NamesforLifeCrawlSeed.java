@@ -49,7 +49,7 @@ import org.lockss.util.urlconn.CacheException;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.*;
-import java.util.regex.Pattern;
+import java.util.regex.*;
 import java.util.stream.Stream;
 
 public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
@@ -255,10 +255,19 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
             this.htmlId = htmlId;
             this.abbr = abbr;
           }
-          Stream<String> filteredAndSorted() {
+          Stream<String> filteredAndSorted(Collection<String> coll) {
             Pattern pat = Pattern.compile(baseUrl + "10\\.1601/" + abbr + "\\.(\\d+)", Pattern.CASE_INSENSITIVE);
-            return urlList.stream().filter(pat.asPredicate()).sorted((u, v) -> Integer.compare(Integer.valueOf(pat.matcher(u).group(1)),
-                                                                                               Integer.valueOf(pat.matcher(v).group(1))));
+            class StrComparator implements Comparator<String> {
+              public int compare(String x, String y) {
+                Matcher m1 = pat.matcher(x);
+                Matcher m2 = pat.matcher(y);
+                if (m1.matches() && m2.matches()) {
+                  return Integer.compare(Integer.valueOf(m1.group(1)), Integer.valueOf(m2.group(1)));
+                }
+                throw new RuntimeException(String.format("Invalid comparison: <%s> vs. <%s>", x, y));
+              };
+            }
+            return coll.stream().filter(pat.asPredicate()).sorted(new StrComparator());
           }
         }
 
@@ -318,7 +327,7 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
         for (Thing t : things) {
           sb.append(String.format("    <h2 id=\"#%s\">%s</h2>\n", t.htmlId, t.fullName));
           sb.append("    <ul>");
-          t.filteredAndSorted().forEach(u -> {
+          t.filteredAndSorted(urlList).forEach(u -> {
             sb.append(String.format("      <li><a href=\"%s\">%s</a></li>\n", u, u));
           });
           sb.append("    </ul>");
