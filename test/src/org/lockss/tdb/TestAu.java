@@ -89,7 +89,7 @@ public class TestAu extends LockssTestCase {
                                                        NONDEFPARAM2_VALUE);
 
   public void testKeys() throws Exception {
-    assertEquals("edition", Au.DOI);
+    assertEquals("doi", Au.DOI);
     assertEquals("edition", Au.EDITION);
     assertEquals("eisbn", Au.EISBN);
     assertEquals("isbn", Au.ISBN);
