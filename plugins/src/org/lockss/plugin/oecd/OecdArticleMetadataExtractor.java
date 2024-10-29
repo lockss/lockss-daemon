@@ -32,8 +32,10 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.oecd;
 
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
@@ -154,6 +156,33 @@ public class OecdArticleMetadataExtractor extends BaseArticleMetadataExtractor {
       if (isCheckAccessUrl()) {
         checkAccessUrl(af, cu, am);
       }
+
+      ArchivalUnit au = cu.getArchivalUnit();
+
+      if (au != null) {
+
+        TdbAu tdbau = au.getTdbAu();
+
+        if (tdbau != null) {
+
+          String mDoi = tdbau.getAttr("doi");
+          String mGetEISBN = tdbau.getAttr("eisbn");
+          String mGetISBN = tdbau.getAttr("isbn");
+
+          log.debug3("after addTdbDefaults.......from emitMetadatam, mGetEISBN = " + mGetEISBN + ", mGetISBN = " + mGetISBN + ", doi-real doi = " + mDoi);
+
+          //Hope to set this value, but it might get overwritten by the parent level ISBN/EISBN logic
+          am.putIfBetter(MetadataField.FIELD_ISBN, mGetISBN);
+          am.putIfBetter(MetadataField.FIELD_EISBN, mGetEISBN);
+          am.putIfBetter(MetadataField.FIELD_DOI, mDoi);
+
+        } else {
+          log.debug3("Inside checking tdbau is null");
+        }
+      } else {
+        log.debug3("Inside checking au is null");
+      }
+
       parent.emitMetadata(af, am);
     }
 
