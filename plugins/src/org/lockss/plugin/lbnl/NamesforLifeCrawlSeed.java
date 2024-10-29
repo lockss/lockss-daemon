@@ -62,6 +62,8 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
 
     protected String baseUrl;
     
+    protected Collection<String> sitemaps;
+    
     public NamesforLifeCrawlSeed(Crawler.CrawlerFacade facade) {
         super(facade);
         if (au == null) {
@@ -108,13 +110,13 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
         //   sitemap-name-information-objects.xml
         //   sitemap-taxon-information-objects.xml
         //   sitemap-exemplar-information-objects.xml
-        Collection<String> startUrls = Arrays.asList(
+        sitemaps = Arrays.asList(
             baseUrl + "sitemap-name-information-objects.xml",
             baseUrl + "sitemap-taxon-information-objects.xml",
             baseUrl + "sitemap-exemplar-information-objects.xml"
         );
 
-        for (String startUrl : startUrls) {
+        for (String startUrl : sitemaps) {
             log.debug3("startUrl =  :"  + startUrl);
             processSingleStartUrl(startUrl);
         }
@@ -285,47 +287,49 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
 
         sb.append("/* Inspired by https://www.w3schools.com/css/css_navbar_horizontal.asp */\n"
             + "\n"
-            + "nav ul {\n"
+            + "ul.nav {\n"
             + "  list-style-type: none;\n"
             + "  margin: 0;\n"
             + "  padding: 0;\n"
             + "  overflow: hidden;\n"
-            + "  background-color: #333;\n"
+            + "  background-color: #d4edda;\n"
             + "}\n"
             + "\n"
-            + "nav ul li {\n"
+            + "li.nav {\n"
             + "  float: left;\n"
             + "}\n"
             + "\n"
-            + "nav ul li a {\n"
+            + "a.nav {\n"
             + "  display: block;\n"
-            + "  color: white;\n"
+            + "  color: #155724;\n"
             + "  text-align: center;\n"
             + "  padding: 14px 16px;\n"
             + "  text-decoration: none;\n"
             + "}\n"
             + "\n"
             + "/* Change the link color to #111 (black) on hover */\n"
-            + "li a:hover {\n"
-            + "  background-color: #111;\n"
+            + "a.nav:hover {\n"
+            + "  color: #eeeeee;\n"
+            + "  background-color: #111111;\n"
             + "}");
         
         sb.append("    </style>");
         sb.append("  </head>\n");
         sb.append("  <body>\n");
-        sb.append("    <p><img width=\"256\" height=\"64\" alt=\"NamesforLife logo\" src=\"https://www.namesforlife.com/images/namesforlife_logo_name_tagline_256x64.svg\" /></p>\n");
-        sb.append("    <h1>NamesforLife</h1>\n");
-        sb.append("    <nav>\n");
-        sb.append("      <ul>\n");
-        sb.append("        <li><a href=\"https://www.namesforlife.com/\">Home</a></li>\n");
+        sb.append("    <p><a href=\"https://www.namesforlife.com/\"><img width=\"256\" height=\"64\" alt=\"NamesforLife logo\" src=\"https://www.namesforlife.com/images/namesforlife_logo_name_tagline_256x64.svg\" /></a></p>\n");
+        sb.append("    <nav id=\"nav\">\n");
+        sb.append("      <ul class=\"nav\">\n");
+        sb.append("        <li class=\"nav\"><a class=\"nav\" href=\"https://www.namesforlife.com/\">Home</a></li>\n");
         for (Thing t : things) {
           sb.append(String.format("        <li><a href=\"#%s\">%s</a></li>\n", t.htmlId, t.fullName));
         }
         sb.append("      </ul>\n");
         sb.append("    </nav>\n");
+        sb.append("    <h1>NamesforLife</h1>\n");
+        sb.append("    <p>NamesforLife was a privately held U.S. company providing semantic services to the scientific and technical publishing industry. The company ceased operations effective December 31, 2022. The NamesforLife, LLC Intellectual Property Portfolio has been acquired by Lawrence Berkeley National Laboratory.</p>\n");
 
         for (Thing t : things) {
-          sb.append(String.format("    <h2 id=\"#%s\">%s</h2>\n", t.htmlId, t.fullName));
+          sb.append(String.format("    <h2 id=\"%s\">%s</h2>\n", t.htmlId, t.fullName));
           sb.append("    <ul>");
           t.filteredAndSorted(urlList).forEach(u -> {
             sb.append(String.format("      <li><a href=\"%s\">%s</a></li>\n", u, u));

@@ -203,4 +203,17 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_refetch_depth</string>
     <int>0</int>
   </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+      <entry>
+        <string>plugin_crawl_seed_factory</string>
+        <org.lockss.util.Default/>
+      </entry>
+    </map>
+  </entry>
 </map>
