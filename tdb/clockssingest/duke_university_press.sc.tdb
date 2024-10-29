@@ -24,29 +24,29 @@
 
       param[journal_id] = agricultural-history
 
-      au < frozen ; exists ; 2000 ; 2000 ; Agricultural History Volume 74 ; 74 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; Agricultural History Volume 75 ; 75 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; Agricultural History Volume 76 ; 76 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; Agricultural History Volume 77 ; 77 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; Agricultural History Volume 78 ; 78 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; Agricultural History Volume 79 ; 79 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; Agricultural History Volume 80 ; 80 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; Agricultural History Volume 81 ; 81 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; Agricultural History Volume 82 ; 82 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; Agricultural History Volume 83 ; 83 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; Agricultural History Volume 84 ; 84 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; Agricultural History Volume 85 ; 85 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; Agricultural History Volume 86 ; 86 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Agricultural History Volume 87 ; 87 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Agricultural History Volume 88 ; 88 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Agricultural History Volume 89 ; 89 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Agricultural History Volume 90 ; 90 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Agricultural History Volume 91 ; 91 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Agricultural History Volume 92 ; 92 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Agricultural History Volume 93 ; 93 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; Agricultural History Volume 94 ; 94 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; Agricultural History Volume 95 ; 95 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Agricultural History Volume 96 ; 96 ; >
+      au < finished ; manifest ; 2000 ; 2000 ; Agricultural History Volume 74 ; 74 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2001 ; 2001 ; Agricultural History Volume 75 ; 75 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2002 ; 2002 ; Agricultural History Volume 76 ; 76 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; Agricultural History Volume 77 ; 77 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; Agricultural History Volume 78 ; 78 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2005 ; 2005 ; Agricultural History Volume 79 ; 79 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2006 ; 2006 ; Agricultural History Volume 80 ; 80 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; Agricultural History Volume 81 ; 81 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Agricultural History Volume 82 ; 82 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2009 ; 2009 ; Agricultural History Volume 83 ; 83 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; 2010 ; Agricultural History Volume 84 ; 84 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; Agricultural History Volume 85 ; 85 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; Agricultural History Volume 86 ; 86 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; 2013 ; Agricultural History Volume 87 ; 87 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; 2014 ; Agricultural History Volume 88 ; 88 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; Agricultural History Volume 89 ; 89 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; Agricultural History Volume 90 ; 90 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; 2017 ; Agricultural History Volume 91 ; 91 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; Agricultural History Volume 92 ; 92 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Agricultural History Volume 93 ; 93 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; Agricultural History Volume 94 ; 94 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; Agricultural History Volume 95 ; 95 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 2022 ; Agricultural History Volume 96 ; 96 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Agricultural History Volume 97 ; 97 ; >
       au < crawling ; exists ; 2024 ; 2024 ; Agricultural History Volume 98 ; 98 ; >
 
@@ -65,11 +65,11 @@
 
       au < finished ; finished ; 2016 ; 2016 ; American Literary Scholarship 2016 ; 2014 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; American Literary Scholarship 2017 ; 2015 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; American Literary Scholarship 2021 ; 2019 ; > #403 Forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
-      au < frozen ; exists ; 2022 ; 2022 ; American Literary Scholarship 2022 ; 2020 ; > #403 Forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
+      au < finished ; manifest ; 2018 ; 2018 ; American Literary Scholarship 2018 ; 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; American Literary Scholarship 2019 ; 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; American Literary Scholarship 2020 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; American Literary Scholarship 2021 ; 2019 ; reingest2.clockss.org:8085 > #403 Forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
+      au < finished ; manifest ; 2022 ; 2022 ; American Literary Scholarship 2022 ; 2020 ; reingest3.clockss.org:8083 > #403 Forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
       au < expected ; exists ; 2023 ; 2023 ; American Literary Scholarship 2023 ; 2021 ; > #403 Forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
       au < expected ; exists ; 2024 ; 2024 ; American Literary Scholarship 2024 ; 2022 ; > #403 Forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
 
@@ -89,8 +89,8 @@
       au < finished ; finished ; 2017 ; 2017 ; American Literature Volume 89 ; 89 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; 2018 ; American Literature Volume 90 ; 90 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2019 ; 2019 ; American Literature Volume 91 ; 91 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; 2020 ; American Literature Volume 92 ; 92 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; American Literature Volume 93 ; 93 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; American Literature Volume 92 ; 92 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; American Literature Volume 93 ; 93 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; American Literature Volume 94 ; 94 ; > #403 forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
       au < deepCrawl ; exists ; 2023 ; 2023 ; American Literature Volume 95 ; 95 ; > #403 forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
       au < crawling ; exists ; 2024 ; 2024 ; American Literature Volume 96 ; 96 ; > #403 forbidden on https://dup.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
@@ -111,8 +111,8 @@
       au < finished ; finished ; 2017 ; 2017 ; American Speech Volume 92 ; 92 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 2018 ; American Speech Volume 93 ; 93 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2019 ; 2019 ; American Speech Volume 94 ; 94 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; American Speech Volume 95 ; 95 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; American Speech Volume 96 ; 96 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; American Speech Volume 95 ; 95 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; American Speech Volume 96 ; 96 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; American Speech Volume 97 ; 97 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; American Speech Volume 98 ; 98 ; >
       au < crawling ; exists ; 2024 ; 2024 ; American Speech Volume 99 ; 99 ; >
@@ -131,10 +131,10 @@
       param[journal_id] = boundary-2
 
       au < finished ; finished ; 2017 ; 2017 ; boundary 2 Volume 44 ; 44 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2018 ; 2018 ; boundary 2 Volume 45 ; 45 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; boundary 2 Volume 46 ; 46 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; boundary 2 Volume 47 ; 47 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; boundary 2 Volume 48 ; 48 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; boundary 2 Volume 45 ; 45 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; boundary 2 Volume 46 ; 46 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; boundary 2 Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; boundary 2 Volume 48 ; 48 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; boundary 2 Volume 49 ; 49 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; boundary 2 Volume 50 ; 50 ; >
       au < crawling ; exists ; 2024 ; 2024 ; boundary 2 Volume 51 ; 51 ; >
@@ -154,24 +154,24 @@
 
       au < finished ; finished ; 2001 ; 2001 ; Archives of Asian Art Volume 52 ; 52 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2003 ; 2003 ; Archives of Asian Art Volume 53 ; 53 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2004 ; 2004 ; Archives of Asian Art Volume 54 ; 54 ; >
+      au < finished ; manifest ; 2004 ; 2004 ; Archives of Asian Art Volume 54 ; 54 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2005 ; 2005 ; Archives of Asian Art Volume 55 ; 55 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2006 ; 2006 ; Archives of Asian Art Volume 56 ; 56 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2007 ; 2007 ; Archives of Asian Art Volume 57 ; 57 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2008 ; 2008 ; Archives of Asian Art Volume 58 ; 58 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2009 ; 2009 ; Archives of Asian Art Volume 59 ; 59 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; 2010 ; Archives of Asian Art Volume 60 ; 60 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2011 ; 2011 ; Archives of Asian Art Volume 61 ; 61 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; Archives of Asian Art Volume 61 ; 61 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2012 ; 2012 ; Archives of Asian Art Volume 62 ; 62 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; 2013 ; Archives of Asian Art Volume 63 ; 63 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; 2014 ; Archives of Asian Art Volume 64 ; 64 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2015 ; 2015 ; Archives of Asian Art Volume 65 ; 65 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 2016 ; Archives of Asian Art Volume 66 ; 66 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2017 ; 2017 ; Archives of Asian Art Volume 67 ; 67 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Archives of Asian Art Volume 67 ; 67 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 2018 ; Archives of Asian Art Volume 68 ; 68 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 2019 ; Archives of Asian Art Volume 69 ; 69 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; 2020 ; Archives of Asian Art Volume 70 ; 70 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; Archives of Asian Art Volume 71 ; 71 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Archives of Asian Art Volume 70 ; 70 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; Archives of Asian Art Volume 71 ; 71 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Archives of Asian Art Volume 72 ; 72 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Archives of Asian Art Volume 73 ; 73 ; >
       au < crawling ; exists ; 2024 ; 2024 ; Archives of Asian Art Volume 74 ; 74 ; >
@@ -212,11 +212,11 @@
 
       param[journal_id] = camera-obscura
 
-      au < frozen ; exists ; 2017 ; 2017 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 32 ; 32 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 32 ; 32 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 33 ; 33 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 2019 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 34 ; 34 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; 2020 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 36 ; 36 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 36 ; 36 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 37 ; 37 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 38 ; 38 ; >
       au < crawling ; exists ; 2024 ; 2024 ; Camera Obscura: Feminism, Culture, and Media Studies Volume 39 ; 39 ; >
@@ -248,8 +248,8 @@
       au < finished ; finished ; 2017 ; 2017 ; Common Knowledge Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 2018 ; Common Knowledge Volume 24 ; 24 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; 2019 ; Common Knowledge Volume 25 ; 25 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; 2020 ; Common Knowledge Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; Common Knowledge Volume 27 ; 27 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; Common Knowledge Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; Common Knowledge Volume 27 ; 27 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Common Knowledge Volume 28 ; 28 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Common Knowledge Volume 29 ; 29 ; >
       au < crawling ; exists ; 2024 ; 2024 ; Common Knowledge Volume 30 ; 30 ; >
@@ -269,7 +269,7 @@
 
       au < finished ; frozen ; 2017 ; 2017 ; Comparative Literature Volume 68 ; 68 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 2018 ; Comparative Literature Volume 69 ; 69 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; 2019 ; Comparative Literature Volume 70 ; 70 ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Comparative Literature Volume 70 ; 70 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; Comparative Literature Volume 71 ; 71 ; >
       au < frozen ; exists ; 2021 ; 2021 ; Comparative Literature Volume 72 ; 72 ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Comparative Literature Volume 73 ; 73 ; >
