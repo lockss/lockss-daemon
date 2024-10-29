@@ -499,8 +499,8 @@
     au < deepCrawl ; exists ; 2023 ; 10 ; IUCrJ Volume 10 (08/2023) ; 2023-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < notReady ; exists ; 2023 ; 10 ; IUCrJ Volume 10 (09/2023) ; 2023-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
     au < deepCrawl ; exists ; 2023 ; 10 ; IUCrJ Volume 10 (10/2023) ; 2023-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < notReady ; exists ; 2023 ; 10 ; IUCrJ Volume 10 (11/2023) ; 2023-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
-    au < notReady ; exists ; 2023 ; 10 ; IUCrJ Volume 10 (12/2023) ; 2023-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
+    au < ready ; exists ; 2023 ; 10 ; IUCrJ Volume 10 (11/2023) ; 2023-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
+    au < ready ; exists ; 2023 ; 10 ; IUCrJ Volume 10 (12/2023) ; 2023-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
 
     au < notReady ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (01/2024) ; 2024-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
     au < notReady ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (02/2024) ; 2024-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
