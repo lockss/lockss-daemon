@@ -54,7 +54,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.3.2]";
+  public static final String VERSION = "[TdbXml:0.3.3]";
   
   /**
    * <p>
@@ -527,12 +527,13 @@ public class TdbXml {
       }
       
       // Miscellaneous
-      appendOneAttr(sb, "provider", xmlEscaper.translate(au.getProvider()));
+      appendOneAttr(sb, "doi", au.getDoi());
       appendOneAttr(sb, "edition", au.getEdition());
       appendOneAttr(sb, "eisbn", au.getEisbn());
       appendOneAttr(sb, "isbn", au.getIsbn());
-      appendOneAttr(sb, "year", au.getYear());
+      appendOneAttr(sb, "provider", xmlEscaper.translate(au.getProvider()));
       appendOneAttr(sb, "volume", au.getVolume());
+      appendOneAttr(sb, "year", au.getYear());
       if ("openaccess".equals(au.getRights())) {
         appendOneAttr(sb, "rights", "openaccess");
       }

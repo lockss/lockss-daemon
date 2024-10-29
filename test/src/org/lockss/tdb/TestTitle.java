@@ -39,7 +39,7 @@ import org.lockss.test.LockssTestCase;
 public class TestTitle extends LockssTestCase {
 
   public static final String NAME_VALUE = "Title Name";
-  public static final String DOI_VALUE = "DOI Value";
+  public static final String DOI_VALUE = "Title DOI Value";
   public static final String EISSN_VALUE = "eISSN Value";
   public static final String ISSN_VALUE = "ISSN Value";
   public static final String ISSNL_VALUE = "ISSN-L Value";

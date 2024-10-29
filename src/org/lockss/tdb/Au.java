@@ -75,6 +75,7 @@ public class Au implements Serializable {
     this(tok);
     this.computedPlugin = other.computedPlugin;
     this.computedPublisher = other.computedPublisher;
+    this.doi = other.doi;
     this.eisbn = other.eisbn;
     this.implicit = other.implicit;
     this.isbn = other.isbn;
@@ -227,6 +228,13 @@ public class Au implements Serializable {
             attrsMap = new HashMap<String, String>();
           }
           return attrsMap.put(key.substring(ATTR_PREFIX.length(), key.length() - 1), value);
+        }
+      } break;
+      case 'd': {
+        if (DOI.equals(key)) {
+          String ret = doi;
+          doi = value;
+          return ret;
         }
       } break;
       case 'e': {
@@ -516,6 +524,36 @@ public class Au implements Serializable {
       }
     }
     return computedPublisher;
+  }
+  
+  /**
+   * <p>
+   * The AU's DOI (key).
+   * </p>
+   * 
+   * @since 1.78.4
+   */
+  protected static final String DOI = "doi";
+  
+  /**
+   * <p>
+   * The AU's DOI (field).
+   * </p>
+   * 
+   * @since 1.78.4
+   */
+  protected String doi = null;
+  
+  /**
+   * <p>
+   * Retrieves the AU's DOI.
+   * </p>
+   * 
+   * @return The AU's DOI.
+   * @since 1.78.4
+   */
+  public String getDoi() {
+    return doi;
   }
   
   /**
@@ -1343,6 +1381,7 @@ public class Au implements Serializable {
     // AU traits
     m.put("au:auid", (a) -> a.getAuid());
     m.put("au:auidplus", (a) -> a.getAuidPlus());
+    m.put("au:doi", (a) -> a.getDoi());
     m.put("au:edition", (a) -> a.getEdition());
     m.put("au:eisbn", (a) -> a.getEisbn());
     m.put("au:file", (a) -> a.getFile());
@@ -1374,7 +1413,7 @@ public class Au implements Serializable {
     // Convenient abbreviations
     m.put("auid", m.get("au:auid"));
     m.put("auidplus", m.get("au:auidplus"));
-    m.put("doi", m.get("title:doi"));
+    m.put("doi", m.get("au:doi"));
     m.put("edition", m.get("au:edition"));
     m.put("eisbn", m.get("au:eisbn"));
     m.put("eissn", m.get("title:eissn"));
