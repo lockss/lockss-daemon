@@ -1993,8 +1993,8 @@
       au < manifest ; 2013 ; 2  ; Perspectives on Medical Education Volume 2013 ; 2013 >
       au < released ; 2014 ; 3  ; Perspectives on Medical Education Volume 2014 ; 2014 >
       au < manifest ; 2015 ; 4  ; Perspectives on Medical Education Volume 2015 ; 2015 >
-      au < manifest ; 2016 ; 5  ; Perspectives on Medical Education Volume 2016 ; 2016 >
-      au < manifest ; 2017 ; 6  ; Perspectives on Medical Education Volume 2017 ; 2017 >
+      au < ready ; 2016 ; 5  ; Perspectives on Medical Education Volume 2016 ; 2016 >
+      au < ready ; 2017 ; 6  ; Perspectives on Medical Education Volume 2017 ; 2017 >
       au < ready ; 2018 ; 7  ; Perspectives on Medical Education Volume 2018 ; 2018 >
       au < manifest ; 2019 ; 8  ; Perspectives on Medical Education Volume 2019 ; 2019 >
       au < manifest ; 2020 ; 9  ; Perspectives on Medical Education Volume 2020 ; 2020 >
@@ -2016,7 +2016,7 @@
       param[base_url] = https://account.ubiquityproceedings.com/
       param[journal_id] = up-j-up
 
-      au < manifest ; 2018 ; 2018 ; Ubiquity Proceedings Volume 2018 ; 2018 >
+      au < ready ; 2018 ; 2018 ; Ubiquity Proceedings Volume 2018 ; 2018 >
       au < doesNotExist ; 2019 ; 0 ; Ubiquity Proceedings Volume 2019 ; 2019 >
       au < doesNotExist ; 2020 ; 0 ; Ubiquity Proceedings Volume 2020 ; 2020 >
       au < doesNotExist ; 2021 ; 0 ; Ubiquity Proceedings Volume 2021 ; 2021 >
@@ -2206,9 +2206,9 @@
       au < manifest ; 2013 ; 3  ; Scientific Study of Literature Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 4  ; Scientific Study of Literature Volume 2014 ; 2014 >
       au < manifest ; 2015 ; 5  ; Scientific Study of Literature Volume 2015 ; 2015 >
-      au < manifest ; 2016 ; 6  ; Scientific Study of Literature Volume 2016 ; 2016 >
+      au < ready ; 2016 ; 6  ; Scientific Study of Literature Volume 2016 ; 2016 >
       au < manifest ; 2017 ; 7  ; Scientific Study of Literature Volume 2017 ; 2017 >
-      au < manifest ; 2018 ; 8  ; Scientific Study of Literature Volume 2018 ; 2018 >
+      au < ready ; 2018 ; 8  ; Scientific Study of Literature Volume 2018 ; 2018 >
       au < manifest ; 2019 ; 9  ; Scientific Study of Literature Volume 2019 ; 2019 >
       au < manifest ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 >
@@ -2887,26 +2887,26 @@
       au < manifest ; 1998 ; 3 ; The Journal of Technology Studies Volume 1998 ; 1998 >
       au < manifest ; 1999 ; 4 ; The Journal of Technology Studies Volume 1999 ; 1999 >
       au < manifest ; 2000 ; 5 ; The Journal of Technology Studies Volume 2000 ; 2000 >
-      au < manifest ; 2001 ; 6 ; The Journal of Technology Studies Volume 2001 ; 2001 >
+      au < ready ; 2001 ; 6 ; The Journal of Technology Studies Volume 2001 ; 2001 >
       au < manifest ; 2002 ; 7 ; The Journal of Technology Studies Volume 2002 ; 2002 >
       au < manifest ; 2003 ; 8 ; The Journal of Technology Studies Volume 2003 ; 2003 >
       au < manifest ; 2004 ; 9 ; The Journal of Technology Studies Volume 2004 ; 2004 >
       au < ready ; 2005 ; 10 ; The Journal of Technology Studies Volume 2005 ; 2005 >
       au < manifest ; 2006 ; 11 ; The Journal of Technology Studies Volume 2006 ; 2006 >
-      au < manifest ; 2007 ; 12 ; The Journal of Technology Studies Volume 2007 ; 2007 >
+      au < ready ; 2007 ; 12 ; The Journal of Technology Studies Volume 2007 ; 2007 >
       au < manifest ; 2008 ; 13 ; The Journal of Technology Studies Volume 2008 ; 2008 >
       au < manifest ; 2009 ; 14 ; The Journal of Technology Studies Volume 2009 ; 2009 >
       au < ready ; 2010 ; 15 ; The Journal of Technology Studies Volume 2010 ; 2010 >
       au < manifest ; 2011 ; 16 ; The Journal of Technology Studies Volume 2011 ; 2011 >
-      au < manifest ; 2012 ; 17 ; The Journal of Technology Studies Volume 2012 ; 2012 >
+      au < ready ; 2012 ; 17 ; The Journal of Technology Studies Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 18 ; The Journal of Technology Studies Volume 2013 ; 2013 >
-      au < manifest ; 2014 ; 19 ; The Journal of Technology Studies Volume 2014 ; 2014 >
+      au < ready ; 2014 ; 19 ; The Journal of Technology Studies Volume 2014 ; 2014 >
       au < manifest ; 2015 ; 20 ; The Journal of Technology Studies Volume 2015 ; 2015 >
       au < manifest ; 2016 ; 21 ; The Journal of Technology Studies Volume 2016 ; 2016 >
-      au < manifest ; 2017 ; 22 ; The Journal of Technology Studies Volume 2017 ; 2017 >
+      au < ready ; 2017 ; 22 ; The Journal of Technology Studies Volume 2017 ; 2017 >
       au < manifest ; 2018 ; 23 ; The Journal of Technology Studies Volume 2018 ; 2018 >
       au < manifest ; 2019 ; 24 ; The Journal of Technology Studies Volume 2019 ; 2019 >
-      au < manifest ; 2020 ; 25 ; The Journal of Technology Studies Volume 2020 ; 2020 >
+      au < ready ; 2020 ; 25 ; The Journal of Technology Studies Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 26 ; The Journal of Technology Studies Volume 2021 ; 2021 >
       au < manifest ; 2022 ; 27 ; The Journal of Technology Studies Volume 2022 ; 2022 >
       au < exists ; 2023 ; 28 ; The Journal of Technology Studies Volume 2023 ; 2023 >
@@ -3011,7 +3011,7 @@
       au < released ; 2008 ; 4 ; The International Journal of Servant-Leadership Volume 2008 ; 2008 >
       au < manifest ; 2009 ; 5 ; The International Journal of Servant-Leadership Volume 2009 ; 2009 >
       au < released ; 2010 ; 6 ; The International Journal of Servant-Leadership Volume 2010 ; 2010 >
-      au < manifest ; 2011 ; 7 ; The International Journal of Servant-Leadership Volume 2011 ; 2011 >
+      au < ready ; 2011 ; 7 ; The International Journal of Servant-Leadership Volume 2011 ; 2011 >
       au < doesNotExist ; 2012 ; 8 ; The International Journal of Servant-Leadership Volume 2012 ; 2012 >
       au < manifest ; 2013 ; 9 ; The International Journal of Servant-Leadership Volume 2013 ; 2013 >
       au < manifest ; 2014 ; 10 ; The International Journal of Servant-Leadership Volume 2014 ; 2014 >
@@ -3333,12 +3333,12 @@
       param[base_url] =  https://account.cehh.press.lshtm.ac.uk/
       param[journal_id] = s-j-cehh
 
-      au < manifest ; 2004 ; 1 ; Community Ear & Hearing Health Volume 2004 ; 2004 >
-      au < manifest ; 2005 ; 2 ; Community Ear & Hearing Health Volume 2005 ; 2005 >
+      au < ready ; 2004 ; 1 ; Community Ear & Hearing Health Volume 2004 ; 2004 >
+      au < ready ; 2005 ; 2 ; Community Ear & Hearing Health Volume 2005 ; 2005 >
       au < ready ; 2006 ; 3 ; Community Ear & Hearing Health Volume 2006 ; 2006 >
       au < manifest ; 2007 ; 4 ; Community Ear & Hearing Health Volume 2007 ; 2007 >
       au < manifest ; 2008 ; 5 ; Community Ear & Hearing Health Volume 2008 ; 2008 >
-      au < manifest ; 2009 ; 6 ; Community Ear & Hearing Health Volume 2009 ; 2009 >
+      au < ready ; 2009 ; 6 ; Community Ear & Hearing Health Volume 2009 ; 2009 >
       au < released ; 2010 ; 7 ; Community Ear & Hearing Health Volume 2010 ; 2010 >
       au < released ; 2011 ; 8 ; Community Ear & Hearing Health Volume 2011 ; 2011 >
       au < released ; 2012 ; 9 ; Community Ear & Hearing Health Volume 2012 ; 2012 >
@@ -3396,12 +3396,12 @@
       au < manifest ; 2014 ; 16 ; Digithum Volume 2014 ; 2014 >
       au < manifest ; 2015 ; 17 ; Digithum Volume 2015 ; 2015 >
       au < manifest ; 2016 ; 18 ; Digithum Volume 2016 ; 2016 >
-      au < manifest ; 2017 ; 19-20 ; Digithum Volume 2017 ; 2017 >
+      au < ready ; 2017 ; 19-20 ; Digithum Volume 2017 ; 2017 >
       au < manifest ; 2018 ; 21-22 ; Digithum Volume 2018 ; 2018 >
       au < manifest ; 2019 ; 23-24 ; Digithum Volume 2019 ; 2019 >
       au < manifest ; 2020 ; 25-26 ; Digithum Volume 2020 ; 2020 >
       au < manifest ; 2021 ; 27-28 ; Digithum Volume 2021 ; 2021 >
-      au < manifest ; 2022 ; 29 ; Digithum Volume 2022 ; 2022 >
+      au < ready ; 2022 ; 29 ; Digithum Volume 2022 ; 2022 >
       au < manifest ; 2023 ; 31 ; Digithum Volume 2023 ; 2023 >
 
   }
