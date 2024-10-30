@@ -283,7 +283,7 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
         sb.append("<html>\n");
         sb.append("  <head>\n");
         sb.append("    <title>NamesforLife, LLC - A semantic services company</title>\n");
-        sb.append("    <style>");
+        sb.append("    <style>\n");
 
         sb.append("/* Inspired by https://www.w3schools.com/css/css_navbar_horizontal.asp */\n"
             + "\n"
@@ -295,11 +295,11 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
             + "  background-color: #d4edda;\n"
             + "}\n"
             + "\n"
-            + "li.nav {\n"
+            + "ul.nav li {\n"
             + "  float: left;\n"
             + "}\n"
             + "\n"
-            + "a.nav {\n"
+            + "ul.nav a {\n"
             + "  display: block;\n"
             + "  color: #155724;\n"
             + "  text-align: center;\n"
@@ -307,19 +307,18 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
             + "  text-decoration: none;\n"
             + "}\n"
             + "\n"
-            + "/* Change the link color to #111 (black) on hover */\n"
-            + "a.nav:hover {\n"
+            + "ul.nav a:hover {\n"
             + "  color: #eeeeee;\n"
             + "  background-color: #111111;\n"
-            + "}");
+            + "}\n");
         
-        sb.append("    </style>");
+        sb.append("    </style>\n");
         sb.append("  </head>\n");
         sb.append("  <body>\n");
         sb.append("    <p><a href=\"https://www.namesforlife.com/\"><img width=\"256\" height=\"64\" alt=\"NamesforLife logo\" src=\"https://www.namesforlife.com/images/namesforlife_logo_name_tagline_256x64.svg\" /></a></p>\n");
         sb.append("    <nav id=\"nav\">\n");
         sb.append("      <ul class=\"nav\">\n");
-        sb.append("        <li class=\"nav\"><a class=\"nav\" href=\"https://www.namesforlife.com/\">Home</a></li>\n");
+        sb.append("        <li><a href=\"https://www.namesforlife.com/\">Home</a></li>\n");
         for (Thing t : things) {
           sb.append(String.format("        <li><a href=\"#%s\">%s</a></li>\n", t.htmlId, t.fullName));
         }
@@ -330,11 +329,11 @@ public class NamesforLifeCrawlSeed extends BaseCrawlSeed {
 
         for (Thing t : things) {
           sb.append(String.format("    <h2 id=\"%s\">%s</h2>\n", t.htmlId, t.fullName));
-          sb.append("    <ul>");
+          sb.append("    <ul>\n");
           t.filteredAndSorted(urlList).forEach(u -> {
             sb.append(String.format("      <li><a href=\"%s\">%s</a></li>\n", u, u));
           });
-          sb.append("    </ul>");
+          sb.append("    </ul>\n");
         }
         
         sb.append("  </body>\n");
