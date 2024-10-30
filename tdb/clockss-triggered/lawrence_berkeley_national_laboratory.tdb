@@ -3,7 +3,7 @@
   publisher <
     name = Lawrence Berkeley National Laboratory ;
     info[contract] = 2023 ;
-    info[tester] = 1 ;
+    info[tester] = 5 ;
     info[platform] = Custom
   >
 
@@ -15,10 +15,9 @@
 
     plugin = org.lockss.plugin.lbnl.ClockssNamesforLifePlugin
     param[base_url] = https://www.namesforlife.com/
-    implicit < status ; status2 ; year ; name ; hidden[proxy] >
+    implicit < status ; year ; name >
 
-    # Thib is working on getting the frozen to finished
-    au < frozen ; crawling ; 2024 ; NamesforLife ; reingest1.clockss.org:8082 >
+    au < expected ; 2024 ; NamesforLife >
 
   }
 
