@@ -142,16 +142,16 @@
     au < deepCrawl ; exists ; 2023 ; 79 ; Acta Crystallographica Section E: Crystallographic Communications Volume 79 (11/2023) ; 2023-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < doesNotExist ; doesNotExist ; 2023 ; 79 ; Acta Crystallographica Section E: Crystallographic Communications Volume 79 (12/2023) ; 2023-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
-    au < notReady ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (01/2024) ; 2024-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
+    au < ready ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (01/2024) ; 2024-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < ready ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (02/2024) ; 2024-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < notReady ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (03/2024) ; 2024-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
-    au < notReady ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (04/2024) ; 2024-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
-    au < notReady ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (05/2024) ; 2024-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
-    au < notReady ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (06/2024) ; 2024-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
-    au < notReady ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (07/2024) ; 2024-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
-    au < manifest ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (08/2024) ; 2024-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (09/2024) ; 2024-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < manifest ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (10/2024) ; 2024-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < ready ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (03/2024) ; 2024-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < ready ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (04/2024) ; 2024-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < ready ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (05/2024) ; 2024-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < ready ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (06/2024) ; 2024-06 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < ready ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (07/2024) ; 2024-07 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (08/2024) ; 2024-08 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (09/2024) ; 2024-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < testing ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (10/2024) ; 2024-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (11/2024) ; 2024-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2024 ; 80 ; Acta Crystallographica Section E: Crystallographic Communications Volume 80 (12/2024) ; 2024-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
@@ -502,8 +502,8 @@
     au < crawling ; exists ; 2023 ; 10 ; IUCrJ Volume 10 (11/2023) ; 2023-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < crawling ; exists ; 2023 ; 10 ; IUCrJ Volume 10 (12/2023) ; 2023-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > 
 
-    au < notReady ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (01/2024) ; 2024-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
-    au < notReady ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (02/2024) ; 2024-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
+    au < ready ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (01/2024) ; 2024-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < ready ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (02/2024) ; 2024-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < notReady ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (03/2024) ; 2024-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
     au < notReady ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (04/2024) ; 2024-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
     au < notReady ; exists ; 2024 ; 11 ; IUCrJ Volume 11 (05/2024) ; 2024-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #LXPIPE-780
