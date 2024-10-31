@@ -103,7 +103,14 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_start_url</string>
         <!-- https://books.ed.ac.uk/edinburgh-diamond/catalog/book/ed-9781912669325 -->
         <list>
-            <string>"%s%s/catalog/book/[^/]+-%s", to_https(base_url), publisher_id, isbn</string>
+            <!--<string>"%s%s/catalog/book/[^/]+-%s", to_https(base_url), publisher_id, isbn</string>-->
+            <string>"%s%s/catalog/book/ed-%s", to_https(base_url), publisher_id, isbn</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_permission_url</string>
+        <list>
+            <string>"%s%s/catalog/book/ed-%s", to_https(base_url), publisher_id, isbn</string>
         </list>
     </entry>
     <entry>
@@ -164,7 +171,7 @@ POSSIBILITY OF SUCH DAMAGE.
             https://books.ed.ac.uk/plugins/generic/pdfJsViewer/pdf.js/build/pdf.js
             https://books.ed.ac.uk/plugins/generic/pdfJsViewer/pdf.js/web/viewer.js
        -->
-            <string>1, "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.js"</string>
+            <string>1,"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.js"</string>
             <string>1,"https://i.creativecommons.org/l/by/4.0/88x31.png"</string>
             <string>1,"%s(public/site|templates|public/presses)/images/", to_https(base_url)</string>
             <string>1,"%spublic/presses/*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$"", to_https(base_url)</string>
