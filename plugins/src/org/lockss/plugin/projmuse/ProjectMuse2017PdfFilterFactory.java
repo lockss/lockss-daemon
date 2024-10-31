@@ -203,18 +203,18 @@ public class ProjectMuse2017PdfFilterFactory extends ExtractingPdfFilterFactory 
 
   }
 
-  public static void main(String[] args) throws Exception {
-    /*
-    Reads in a pdf and applies the filters writing the contents to a new file <fileStr>.bin
-     */
+  /*public static void main(String[] args) throws Exception {
+    
+    //Reads in a pdf and applies the filters writing the contents to a new file <fileStr>.bin
+     
     String[] fileStrs = {
-        "/Users/crc10/Desktop/RicePDF.pdf",
-        "/Users/crc10/Desktop/StanfordPDF.pdf"
+        "FILE1.pdf",
+        "FILE2.pdf"
     };
     for (String fileStr : fileStrs) {
       FilterFactory fact = new ProjectMuse2017PdfFilterFactory();
       IOUtils.copy(fact.createFilteredInputStream(null, new FileInputStream(fileStr), null),
           new FileOutputStream(fileStr + ".bin"));
     }
-  }
+  }*/
 }
