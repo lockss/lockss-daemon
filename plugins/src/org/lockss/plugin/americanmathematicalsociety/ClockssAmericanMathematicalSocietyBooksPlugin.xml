@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -226,5 +226,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyPdfFilterFactory</string>
   </entry>
 </map>
