@@ -1440,7 +1440,10 @@
       param[base_url] = https://account.journalofmore.org/
       param[journal_id] = su-j-jmre
 
-      au < doNotProcess ; doNotProcess ; 2016 ; 4 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2016 ; 1 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2019 ; 2 ; Journal of Montessori Research & Education Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2021 ; 3 ; Journal of Montessori Research & Education Volume 2021 ; 2021 ; >
+      au < manifest ; exists ; 2023 ; 4 ; Journal of Montessori Research & Education Volume 2023 ; 2023 ; >
 
   }
 
