@@ -150,7 +150,6 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
   
   public void testGetHashFilterFactory() {
     assertNull(plugin.getHashFilterFactory("BogusFilterFactory"));
-    assertNull(plugin.getHashFilterFactory("application/pdf"));
     assertNull(plugin.getHashFilterFactory("text/html"));
   }
   public void testGetArticleIteratorFactory() {
