@@ -385,6 +385,66 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     }
   }
 
+  // Add increasingly long URLs until one fails, add a few more,
+  // ensure a CuIterator doesn't throuw, but returns all but the too
+  // long one
+  public void testIteratorHandlesError() throws Exception {
+    String base = "http://www.example.com";
+    String incr = "/aaaaaaaaaa";
+    // Collects the URLs we successfully add
+    List<String> urls = new ArrayList<>();
+    // Add the two the iterator will return even though we didn't add them
+    urls.add("lockssau:");
+    urls.add(base);
+    
+    StringBuilder sb = new StringBuilder();
+    sb.append(base);
+    
+    while (true) {
+      sb.append(incr);
+      String s = sb.toString();
+      try {
+        createLeaf(s, "test stream", null);
+        urls.add(s);
+      } catch (Exception e) {
+        log.debug("Expected failure to add occurred at " + s.length() + " chars");
+        break;
+      }
+    }
+    log.debug("Added " + urls.size() + " URLS");
+    String last = urls.get(urls.size() - 1);
+    last = last.replaceAll(".$", "b");  // Add a URL that sorts after
+                                        // the last one added
+    createLeaf(last, "last long", null);
+    log.debug2("last: " + last);
+    urls.add(last);
+    // Add a couple more at the top of the hierarchy
+    last = base + "/b";
+    createLeaf(last, "b", null);
+    urls.add(last);
+    last = base + "/c";
+    createLeaf(last, "c", null);
+    urls.add(last);
+
+    // Collects the URLs from the iterator
+    ArrayList<String> iterRes = new ArrayList<>();
+    try {
+      Iterator iter = mau.getAuCachedUrlSet().contentHashIterator();
+      while (iter.hasNext()) {
+        iterRes.add(((CachedUrlSetNode)iter.next()).getUrl());
+      }
+    } catch (Exception e) {
+      fail("Iterator threw after " + iterRes.size() + " of " + urls.size()
+           + " expected iterations");
+    }
+    // Compare elements manually - assertEquals(urls, iterRes) would
+    // log a 1.5M character message on failure
+    for (int ix = 0; ix < urls.size(); ix++) {
+      assertEquals("At ix " + ix, urls.get(ix), iterRes.get(ix));
+    }
+    assertEquals(urls.size(), iterRes.size());
+  }
+
   // ensure accesses have proper null (empty) bahavior on non-existent nodes
   public void testNonExistentNode() throws Exception {
     String url = "http://no.such.host/foopath";
