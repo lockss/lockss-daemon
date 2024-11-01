@@ -17,8 +17,7 @@
     param[base_url] = https://www.namesforlife.com/
     implicit < status ; status2 ; year ; name ; hidden[proxy] >
 
-    # Thib is working on getting the frozen to finished
-    au < frozen ; crawling ; 2024 ; NamesforLife ; reingest1.clockss.org:8082 >
+    au < finished ; crawling ; 2024 ; NamesforLife ; reingest1.clockss.org:8082 >
 
   }
 
