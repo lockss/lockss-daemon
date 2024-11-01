@@ -70,7 +70,7 @@
     au < finished ; manifest ; 2021 ; Contemporary Mathematics 2021 ; 2021 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; Contemporary Mathematics 2022 ; 2022 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Contemporary Mathematics 2023 ; 2023 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2024 ; Contemporary Mathematics 2024 ; 2024 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2024 ; Contemporary Mathematics 2024 ; 2024 ; https://www.ams.org/ ; >
 
     }
 
@@ -309,7 +309,7 @@
     au < finished ; frozen ; 1990-1999 ; Proceedings of Symposia in Applied Mathematics 1990-1999 ; 1990-1999 ; http://www.ams.org/ ; reingest2.clockss.org:8085 > #prod complete, but no successful crawl, and no polling
     au < finished ; frozen ; 2000-2009 ; Proceedings of Symposia in Applied Mathematics 2000-2009 ; 2000-2009 ; http://www.ams.org/ ; reingest1.clockss.org:8082 > #prod complete, but no successful crawl, and no polling
     au < finished ; frozen ; 2010-2019 ; Proceedings of Symposia in Applied Mathematics 2010-2019 ; 2010-2019 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2020-2029 ; Proceedings of Symposia in Applied Mathematics 2020-2029 ; 2020-2029 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2020-2029 ; Proceedings of Symposia in Applied Mathematics 2020-2029 ; 2020-2029 ; https://www.ams.org/ ; >
 
     }
     {
@@ -355,11 +355,11 @@
     au < manifest ; exists ; 1965 ; AMS Chelsea Publishing Volume 369 ; 369 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1974 ; AMS Chelsea Publishing Volume 370 ; 370 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1973 ; AMS Chelsea Publishing Volume 371 ; 371 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2011 ; AMS Chelsea Publishing Volume 372 ; 372 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2011 ; AMS Chelsea Publishing Volume 373 ; 373 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2011 ; AMS Chelsea Publishing Volume 372 ; 372 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2011 ; AMS Chelsea Publishing Volume 373 ; 373 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1978 ; AMS Chelsea Publishing Volume 374 ; 374 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2012 ; AMS Chelsea Publishing Volume 375 ; 375 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2015 ; AMS Chelsea Publishing Volume 376 ; 376 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2012 ; AMS Chelsea Publishing Volume 375 ; 375 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2015 ; AMS Chelsea Publishing Volume 376 ; 376 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1964 ; AMS Chelsea Publishing Volume 377 ; 377 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1968 ; AMS Chelsea Publishing Volume 378 ; 378 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1967 ; AMS Chelsea Publishing Volume 379 ; 379 ; https://www.ams.org/ ; >
@@ -398,7 +398,7 @@
     au < finished ; manifest ; 2020 ; AMS Non-Series Monographs 2020 ; 2020 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; AMS Non-Series Monographs 2021 ; 2021 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; AMS Non-Series Monographs 2022 ; 2022 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2023 ; AMS Non-Series Monographs 2023 ; 2023 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2023 ; AMS Non-Series Monographs 2023 ; 2023 ; https://www.ams.org/ ; >
 
     }
 
@@ -417,8 +417,8 @@
     au < manifest ; exists ; 2010 ; Carus Mathematical Monographs 2010 ; 2010 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2016 ; Carus Mathematical Monographs 2016 ; 2016 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2018 ; Carus Mathematical Monographs 2018 ; 2018 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2020 ; Carus Mathematical Monographs 2020 ; 2020 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2021 ; Carus Mathematical Monographs 2021 ; 2021 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2020 ; Carus Mathematical Monographs 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Carus Mathematical Monographs 2021 ; 2021 ; https://www.ams.org/ ; >
 
     }
    
@@ -473,7 +473,7 @@
     au < manifest ; exists ; 2015 ; Dolciani Mathematical Expositions – Electronic 2015 ; 2015 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2019 ; Dolciani Mathematical Expositions – Electronic 2019 ; 2019 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2020 ; Dolciani Mathematical Expositions – Electronic 2020 ; 2020 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2021 ; Dolciani Mathematical Expositions – Electronic 2021 ; 2021 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2021 ; Dolciani Mathematical Expositions – Electronic 2021 ; 2021 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2023 ; Dolciani Mathematical Expositions – Electronic 2023 ; 2023 ; https://www.ams.org/ ; >
 
     }
@@ -500,7 +500,7 @@
     au < manifest ; exists ; 2012 ; History of Math 2012 ; 2012 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2014 ; History of Math 2014 ; 2014 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2016 ; History of Math 2016 ; 2016 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2020 ; History of Math 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2020 ; History of Math 2020 ; 2020 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2021 ; History of Math 2021 ; 2021 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2023 ; History of Math 2023 ; 2023 ; https://www.ams.org/ ; >
 
@@ -529,7 +529,7 @@
     au < manifest ; exists ; 2017 ; IAS/Park City Mathematics Series 2017 ; 2017 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2018 ; IAS/Park City Mathematics Series 2018 ; 2018 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2019 ; IAS/Park City Mathematics Series 2019 ; 2019 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2020 ; IAS/Park City Mathematics Series 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2020 ; IAS/Park City Mathematics Series 2020 ; 2020 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2021 ; IAS/Park City Mathematics Series 2021 ; 2021 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2023 ; IAS/Park City Mathematics Series 2023 ; 2023 ; https://www.ams.org/ ; >
 
@@ -560,7 +560,7 @@
     au < ready ; exists ; 2015 ; Problem Books 2015 ; 2015 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2016 ; Problem Books 2016 ; 2016 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2018 ; Problem Books 2018 ; 2018 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2020 ; Problem Books 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2020 ; Problem Books 2020 ; 2020 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2024 ; Problem Books 2024 ; 2024 ; https://www.ams.org/ ; >
 
     }
@@ -575,8 +575,8 @@
     param[collection_id] = simon
     
     au < ready ; exists ; 2015 ; Simon Book Series 001 ; 001 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2015 ; Simon Book Series 002.1 ; 002.1 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2015 ; Simon Book Series 002.2 ; 002.2 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2015 ; Simon Book Series 002.1 ; 002.1 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2015 ; Simon Book Series 002.2 ; 002.2 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2015 ; Simon Book Series 003 ; 003 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2015 ; Simon Book Series 004 ; 004 ; https://www.ams.org/ ; >
 
@@ -990,7 +990,7 @@
     au < finished ; manifest ; 2009 ; Mathematical World 2009 ; 2009 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Mathematical World 2013 ; 2013 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Mathematical World 2018 ; 2018 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2023 ; Mathematical World 2023 ; 2023 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2023 ; Mathematical World 2023 ; 2023 ; https://www.ams.org/ ; >
 
     }
 
