@@ -824,22 +824,22 @@
       au < frozen ; exists ; 2000 ; 2000 ; Meridians Volume 1 (2000) ; 1 (2000) ; >
       au < frozen ; exists ; 2001 ; 2001 ; Meridians Volume 1-2 (2001) ; 1-2 (2001) ; >
       au < frozen ; exists ; 2002 ; 2002 ; Meridians Volume 2-3 (2002) ; 2-3 (2002) ; >
-      au < frozen ; exists ; 2003 ; 2003 ; Meridians Volume 3-4 (2003) ; 3-4 (2003) ; >
-      au < frozen ; exists ; 2004 ; 2004 ; Meridians Volume 4-5 (2004) ; 4-5 (2004) ; >
-      au < frozen ; exists ; 2005 ; 2005 ; Meridians Volume 5-6 (2005) ; 5-6 (2005) ; >
-      au < frozen ; exists ; 2006 ; 2006 ; Meridians Volume 6-7 (2006) ; 6-7 (2006) ; >
-      au < frozen ; exists ; 2007 ; 2007 ; Meridians Volume 7 (2007) ; 7 (2007) ; >
-      au < frozen ; exists ; 2008 ; 2008 ; Meridians Volume 8 (2008) ; 8 (2008) ; >
-      au < frozen ; exists ; 2009 ; 2009 ; Meridians Volume 9 (2009) ; 9 (2009) ; >
-      au < frozen ; exists ; 2010 ; 2010 ; Meridians Volume 10 (2010) ; 10 (2010) ; >
-      au < frozen ; exists ; 2011 ; 2011 ; Meridians Volume 11 (2011) ; 11 (2011) ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Meridians Volume 11 (2013) ; 11 (2013) ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Meridians Volume 12 (2014) ; 12 (2014) ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Meridians Volume 13 (2015) ; 13 (2015) ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Meridians Volume 13-15 (2016) ; 13-15 (2016) ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Meridians Volume 15 (2017) ; 15 (2017) ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Meridians Volume 16-17 (2018) ; 16-17 (2018) ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Meridians Volume 18 (2019) ; 18 (2019) ; >
+      au < finished ; manifest ; 2003 ; 2003 ; Meridians Volume 3-4 (2003) ; 3-4 (2003) ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2004 ; 2004 ; Meridians Volume 4-5 (2004) ; 4-5 (2004) ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; Meridians Volume 5-6 (2005) ; 5-6 (2005) ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; Meridians Volume 6-7 (2006) ; 6-7 (2006) ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; 2007 ; Meridians Volume 7 (2007) ; 7 (2007) ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2008 ; 2008 ; Meridians Volume 8 (2008) ; 8 (2008) ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Meridians Volume 9 (2009) ; 9 (2009) ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; Meridians Volume 10 (2010) ; 10 (2010) ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; 2011 ; Meridians Volume 11 (2011) ; 11 (2011) ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; Meridians Volume 11 (2013) ; 11 (2013) ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 2014 ; Meridians Volume 12 (2014) ; 12 (2014) ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; 2015 ; Meridians Volume 13 (2015) ; 13 (2015) ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; Meridians Volume 13-15 (2016) ; 13-15 (2016) ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; Meridians Volume 15 (2017) ; 15 (2017) ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Meridians Volume 16-17 (2018) ; 16-17 (2018) ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Meridians Volume 18 (2019) ; 18 (2019) ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Meridians Volume 19 (2020) ; 19 (2020) ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Meridians Volume 20 (2021) ; 20 (2021) ; >
       au < finished ; manifest ; 2022 ; 2022 ; Meridians Volume 21 (2022) ; 21 (2022) ; reingest1.clockss.org:8082 >
@@ -858,9 +858,9 @@
 
       param[journal_id] = the-minnesota-review
 
-      au < frozen ; exists ; 2017 ; 2017 ; The Minnesota Review Volume 2017 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; The Minnesota Review Volume 2018 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; The Minnesota Review Volume 2019 ; 2019 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; The Minnesota Review Volume 2017 ; 2017 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; The Minnesota Review Volume 2018 ; 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; The Minnesota Review Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; The Minnesota Review Volume 2020 ; 2020 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; The Minnesota Review Volume 2021 ; 2021 ; >
       au < finished ; manifest ; 2022 ; 2022 ; The Minnesota Review Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
@@ -879,10 +879,10 @@
 
       param[journal_id] = modern-language-quarterly
 
-      au < frozen ; exists ; 2017 ; 2017 ; MLQ: Modern Language Quarterly Volume 78 ; 78 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; MLQ: Modern Language Quarterly Volume 79 ; 79 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; MLQ: Modern Language Quarterly Volume 80 ; 80 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; MLQ: Modern Language Quarterly Volume 81 ; 81 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; MLQ: Modern Language Quarterly Volume 78 ; 78 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; MLQ: Modern Language Quarterly Volume 79 ; 79 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; MLQ: Modern Language Quarterly Volume 80 ; 80 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; MLQ: Modern Language Quarterly Volume 81 ; 81 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; 2021 ; MLQ: Modern Language Quarterly Volume 82 ; 82 ; >
       au < finished ; manifest ; 2022 ; 2022 ; MLQ: Modern Language Quarterly Volume 83 ; 83 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; MLQ: Modern Language Quarterly Volume 84 ; 84 ; >
@@ -900,9 +900,9 @@
 
       param[journal_id] = new-german-critique
 
-      au < frozen ; exists ; 2017 ; 2017  ; New German Critique Volume 44 ; 44 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; New German Critique Volume 45 ; 45 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; New German Critique Volume 46 ; 46 ; >
+      au < finished ; manifest ; 2017 ; 2017  ; New German Critique Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; New German Critique Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; 2019 ; New German Critique Volume 46 ; 46 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; New German Critique Volume 47 ; 47 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; New German Critique Volume 48 ; 48 ; >
       au < finished ; manifest ; 2022 ; 2022 ; New German Critique Volume 49 ; 49 ; reingest2.clockss.org:8085 >
@@ -921,10 +921,10 @@
 
       param[journal_id] = nka
 
-      au < frozen ; exists ; 2017 ; 2017 ; Nka: Journal of Contemporary African Art Volume 2017 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Nka: Journal of Contemporary African Art Volume 2018 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Nka: Journal of Contemporary African Art Volume 2019 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; Nka: Journal of Contemporary African Art Volume 2020 ; 2020 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Nka: Journal of Contemporary African Art Volume 2017 ; 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Nka: Journal of Contemporary African Art Volume 2018 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Nka: Journal of Contemporary African Art Volume 2019 ; 2019 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; 2020 ; Nka: Journal of Contemporary African Art Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Nka: Journal of Contemporary African Art Volume 2021 ; 2021 ; >
       au < finished ; manifest ; 2022 ; 2022 ; Nka: Journal of Contemporary African Art Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Nka: Journal of Contemporary African Art Volume 2023 ; 2023 ; >
@@ -942,10 +942,10 @@
 
       param[journal_id] = novel
 
-      au < frozen ; exists ; 2017 ; 2017 ; Novel: A Forum on Fiction Volume 50 ; 50 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Novel: A Forum on Fiction Volume 51 ; 51 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Novel: A Forum on Fiction Volume 52 ; 52 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; Novel: A Forum on Fiction Volume 53 ; 53 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Novel: A Forum on Fiction Volume 50 ; 50 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Novel: A Forum on Fiction Volume 51 ; 51 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Novel: A Forum on Fiction Volume 52 ; 52 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; Novel: A Forum on Fiction Volume 53 ; 53 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Novel: A Forum on Fiction Volume 54 ; 54 ; >
       au < finished ; manifest ; 2022 ; 2022 ; Novel: A Forum on Fiction Volume 55 ; 55 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Novel: A Forum on Fiction Volume 56 ; 56 ; >
@@ -963,9 +963,9 @@
 
       param[journal_id] = pedagogy
 
-      au < frozen ; exists ; 2017 ; 2017 ; Pedagogy Volume 17 ; 17 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Pedagogy Volume 18 ; 18 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Pedagogy Volume 19 ; 19 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Pedagogy Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; Pedagogy Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Pedagogy Volume 19 ; 19 ; reingest5.clockss.org:8082 >
 
     }
 
@@ -979,9 +979,9 @@
 
       param[journal_id] = the-philosophical-review
 
-      au < frozen ; exists ; 2017 ; 2017 ; Philosophical Review Volume 126 ; 126 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Philosophical Review Volume 127 ; 127 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Philosophical Review Volume 128 ; 128 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Philosophical Review Volume 126 ; 126 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; Philosophical Review Volume 127 ; 127 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Philosophical Review Volume 128 ; 128 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Philosophical Review Volume 129 ; 129 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Philosophical Review Volume 130 ; 130 ; >
       au < finished ; manifest ; 2022 ; 2022 ; Philosophical Review Volume 131 ; 131 ; reingest3.clockss.org:8083 >
@@ -1000,9 +1000,9 @@
 
       param[journal_id] = poetics-today
 
-      au < frozen ; exists ; 2017 ; 2017 ; Poetics Today Volume 38 ; 38 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Poetics Today Volume 39 ; 39 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Poetics Today Volume 40 ; 40 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Poetics Today Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Poetics Today Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; 2019 ; Poetics Today Volume 40 ; 40 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Poetics Today Volume 41 ; 41 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Poetics Today Volume 42 ; 42 ; >
       au < finished ; manifest ; 2022 ; 2022 ; Poetics Today Volume 43 ; 43 ; reingest4.clockss.org:8082 >
@@ -1021,9 +1021,9 @@
       param[journal_id] = positions
       #subtitle was "east asia cultures critique for 1999-2011 at least"
 
-      au < frozen ; exists ; 2017 ; 2017 ; positions: asia critique Volume 25 ; 25 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; positions: asia critique Volume 26 ; 26 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; positions: asia critique Volume 27 ; 27 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; positions: asia critique Volume 25 ; 25 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; positions: asia critique Volume 26 ; 26 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; positions: asia critique Volume 27 ; 27 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; positions: asia critique Volume 28 ; 28 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; positions: asia critique Volume 29 ; 29 ; >
       au < finished ; manifest ; 2022 ; 2022 ; positions: asia critique Volume 30 ; 30 ; reingest1.clockss.org:8082 >
@@ -1041,7 +1041,7 @@
 
       param[journal_id] = prism
 
-      au < frozen ; exists ; 2019 ; 2019 ; Prism: Theory and Modern Chinese Literature Volume 16 ; 16 ; >
+      au < finished ; manifest ; 2019 ; 2019 ; Prism: Theory and Modern Chinese Literature Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Prism: Theory and Modern Chinese Literature Volume 17 ; 17 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Prism: Theory and Modern Chinese Literature Volume 18 ; 18 ; >
       au < finished ; manifest ; 2022 ; 2022 ; Prism: Theory and Modern Chinese Literature Volume 19 ; 19 ; reingest5.clockss.org:8082 >
@@ -1058,9 +1058,9 @@
 
       param[journal_id] = pads
 
-      au < frozen ; exists ; 2017 ; 2017 ; Publication of the American Dialect Society Volume 101 ; 101 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Publication of the American Dialect Society Volume 102 ; 102 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Publication of the American Dialect Society Volume 103 ; 103 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Publication of the American Dialect Society Volume 101 ; 101 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; Publication of the American Dialect Society Volume 102 ; 102 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Publication of the American Dialect Society Volume 103 ; 103 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Publication of the American Dialect Society Volume 104 ; 104 ; >
       au < frozen ; exists ; 2021 ; 2021 ; Publication of the American Dialect Society Volume 105 ; 105 ; >
       au < frozen ; exists ; 2022 ; 2022 ; Publication of the American Dialect Society Volume 106 ; 106 ; >
