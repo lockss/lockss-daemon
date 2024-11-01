@@ -391,10 +391,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
 //           boolean activeLeaf = node.isLeaf() && !node.isDeleted() &&
 //               (!node.isContentInactive() || includeInactive);
 //           if (activeInternal || activeLeaf) {
-	    if (!node.isDeleted() && (!node.isContentInactive() ||
-				      (includeInactive || !node.isLeaf()))) {
-	      childL.add(repository.getNode(childUrl));
-	    }
+            try {
+              if (!node.isDeleted() && (!node.isContentInactive() ||
+                                        (includeInactive || !node.isLeaf()))) {
+                childL.add(repository.getNode(childUrl));
+              }
+            } catch (Exception e) {
+              logger.warning("Error in iterator, skipping node", e);
+            }
 	  } else {
 	    logger.warning("Child node not found; disappeared or is unnormalized: " + childUrl);
 	  }
