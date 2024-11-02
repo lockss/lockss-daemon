@@ -1062,9 +1062,9 @@
       au < finished ; manifest ; 2018 ; 2018 ; Publication of the American Dialect Society Volume 102 ; 102 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 2019 ; Publication of the American Dialect Society Volume 103 ; 103 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Publication of the American Dialect Society Volume 104 ; 104 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; Publication of the American Dialect Society Volume 105 ; 105 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Publication of the American Dialect Society Volume 106 ; 106 ; >
-      au < frozen ; exists ; 2023 ; 2023 ; Publication of the American Dialect Society Volume 107 ; 107 ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Publication of the American Dialect Society Volume 105 ; 105 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 2022 ; Publication of the American Dialect Society Volume 106 ; 106 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 2023 ; Publication of the American Dialect Society Volume 107 ; 107 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2024 ; 2024 ; Publication of the American Dialect Society Volume 108 ; 108 ; >
 
     }
@@ -1079,9 +1079,9 @@
 
       param[journal_id] = public-culture
 
-      au < frozen ; exists ; 2017 ; 2017 ; Public Culture Volume 29 ; 29 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Public Culture Volume 30 ; 30 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Public Culture Volume 31 ; 31 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Public Culture Volume 29 ; 29 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Public Culture Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; 2019 ; Public Culture Volume 31 ; 31 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Public Culture Volume 32 ; 32 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Public Culture Volume 33 ; 33 ; >
       au < finished ; manifest ; 2022 ; 2022 ; Public Culture Volume 34 ; 34 ; reingest1.clockss.org:8082 >
@@ -1100,25 +1100,25 @@
 
       param[journal_id] = qui-parle
 
-      au < frozen ; exists ; 2000 ; 2000 ; Qui Parle Volume 12 (2000) ; 12 (2000) ; >
-      au < frozen ; exists ; 2001 ; 2001 ; Qui Parle Volume 12-13 (2001) ; 12-13 (2001) ; >
-      au < frozen ; exists ; 2003 ; 2003 ; Qui Parle Volume 13-14 (2003) ; 13-14 (2003) ; >
-      au < frozen ; exists ; 2004 ; 2004 ; Qui Parle Volume 14-15 (2004) ; 14-15 (2004) ; >
-      au < frozen ; exists ; 2005 ; 2005 ; Qui Parle Volume 15 (2005) ; 15 (2005) ; >
-      au < frozen ; exists ; 2006 ; 2006 ; Qui Parle Volume 16 (2006) ; 16 (2006) ; >
-      au < frozen ; exists ; 2007 ; 2007 ; Qui Parle Volume 16 (2007) ; 16 (2007) ; >
-      au < frozen ; exists ; 2008 ; 2008 ; Qui Parle Volume 17 (2008) ; 17 (2008) ; >
-      au < frozen ; exists ; 2009 ; 2009 ; Qui Parle Volume 17-18 (2009) ; 17-18 (2009) ; >
-      au < frozen ; exists ; 2010 ; 2010 ; Qui Parle Volume 18-19 (2010) ; 18-19 (2010) ; >
-      au < frozen ; exists ; 2011 ; 2011 ; Qui Parle Volume 19-20 (2011) ; 19-20 (2011) ; >
-      au < frozen ; exists ; 2012 ; 2012 ; Qui Parle Volume 20-21 (2012) ; 20-21 (2012) ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Qui Parle Volume 21-22 (2013) ; 21-22 (2013) ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Qui Parle Volume 22-23 (2014) ; 22-23 (2014) ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Qui Parle Volume 23-24 (2015) ; 23-24 (2015) ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Qui Parle Volume 24-25 (2016) ; 24-25 (2016) ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Qui Parle Volume 26 (2017) ; 26 (2017) ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Qui Parle Volume 27 (2018) ; 27 (2018) ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Qui Parle Volume 28 (2019) ; 28 (2019) ; >
+      au < finished ; manifest ; 2000 ; 2000 ; Qui Parle Volume 12 (2000) ; 12 (2000) ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; 2001 ; Qui Parle Volume 12-13 (2001) ; 12-13 (2001) ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; Qui Parle Volume 13-14 (2003) ; 13-14 (2003) ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; Qui Parle Volume 14-15 (2004) ; 14-15 (2004) ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; Qui Parle Volume 15 (2005) ; 15 (2005) ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; 2006 ; Qui Parle Volume 16 (2006) ; 16 (2006) ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; 2007 ; Qui Parle Volume 16 (2007) ; 16 (2007) ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Qui Parle Volume 17 (2008) ; 17 (2008) ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Qui Parle Volume 17-18 (2009) ; 17-18 (2009) ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2010 ; 2010 ; Qui Parle Volume 18-19 (2010) ; 18-19 (2010) ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; Qui Parle Volume 19-20 (2011) ; 19-20 (2011) ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; 2012 ; Qui Parle Volume 20-21 (2012) ; 20-21 (2012) ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; Qui Parle Volume 21-22 (2013) ; 21-22 (2013) ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; 2014 ; Qui Parle Volume 22-23 (2014) ; 22-23 (2014) ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; 2015 ; Qui Parle Volume 23-24 (2015) ; 23-24 (2015) ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; Qui Parle Volume 24-25 (2016) ; 24-25 (2016) ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; Qui Parle Volume 26 (2017) ; 26 (2017) ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Qui Parle Volume 27 (2018) ; 27 (2018) ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; 2019 ; Qui Parle Volume 28 (2019) ; 28 (2019) ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Qui Parle Volume 29 (2020) ; 29 (2020) ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Qui Parle Volume 30 (2021) ; 30 (2021) ; >
       au < finished ; manifest ; 2022 ; 2022 ; Qui Parle Volume 31 (2022) ; 31 (2022) ; reingest2.clockss.org:8085 >
@@ -1137,9 +1137,9 @@
 
       param[journal_id] = radical-history-review
 
-      au < frozen ; exists ; 2017 ; 2017 ; Radical History Review Volume 2017 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Radical History Review Volume 2018 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Radical History Review Volume 2019 ; 2019 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Radical History Review Volume 2017 ; 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Radical History Review Volume 2018 ; 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Radical History Review Volume 2019 ; 2019 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Radical History Review Volume 2020 ; 2020 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Radical History Review Volume 2021 ; 2021 ; >
       au < finished ; manifest ; 2022 ; 2022 ; Radical History Review Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
@@ -1159,26 +1159,26 @@
 
       param[journal_id] = romanic-review
 
-      au < frozen ; exists ; 2000 ; 2000 ; Romanic Review Volume 91 ; 91 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; Romanic Review Volume 92 ; 92 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; Romanic Review Volume 93 ; 93 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; Romanic Review Volume 94 ; 94 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; Romanic Review Volume 95 ; 95 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; Romanic Review Volume 96 ; 96 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; Romanic Review Volume 97 ; 97 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; Romanic Review Volume 98 ; 98 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; Romanic Review Volume 99 ; 99 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; Romanic Review Volume 100 ; 100 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; Romanic Review Volume 101 ; 101 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; Romanic Review Volume 102 ; 102 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; Romanic Review Volume 103 ; 103 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; Romanic Review Volume 104 ; 104 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Romanic Review Volume 105 ; 105 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Romanic Review Volume 106 ; 106 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Romanic Review Volume 107 ; 107 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Romanic Review Volume 108 ; 108 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Romanic Review Volume 109 ; 109 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Romanic Review Volume 110 ; 110 ; >
+      au < finished ; manifest ; 2000 ; 2000 ; Romanic Review Volume 91 ; 91 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; 2001 ; Romanic Review Volume 92 ; 92 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; Romanic Review Volume 93 ; 93 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; Romanic Review Volume 94 ; 94 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; Romanic Review Volume 95 ; 95 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2005 ; 2005 ; Romanic Review Volume 96 ; 96 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2006 ; 2006 ; Romanic Review Volume 97 ; 97 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; Romanic Review Volume 98 ; 98 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; Romanic Review Volume 99 ; 99 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; Romanic Review Volume 100 ; 100 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; Romanic Review Volume 101 ; 101 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; Romanic Review Volume 102 ; 102 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; 2012 ; Romanic Review Volume 103 ; 103 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; 2013 ; Romanic Review Volume 104 ; 104 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; Romanic Review Volume 105 ; 105 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; Romanic Review Volume 106 ; 106 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; Romanic Review Volume 107 ; 107 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; Romanic Review Volume 108 ; 108 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Romanic Review Volume 109 ; 109 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; 2019 ; Romanic Review Volume 110 ; 110 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Romanic Review Volume 111 ; 111 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Romanic Review Volume 112 ; 112 ; >
       au < finished ; manifest ; 2022 ; 2022 ; Romanic Review Volume 113 ; 113 ; reingest3.clockss.org:8083 >
@@ -1197,8 +1197,8 @@
 
       param[journal_id] = small-axe
 
-      au < frozen ; exists ; 2017 ; 2017 ; Small Axe Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Small Axe Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; Small Axe Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; Small Axe Volume 22 ; 22 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; 2019 ; Small Axe Volume 23 ; 23 ; >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Small Axe Volume 24 ; 24 ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Small Axe Volume 25 ; 25 ; >
