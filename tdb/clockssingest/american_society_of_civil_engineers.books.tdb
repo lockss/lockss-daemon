@@ -2,8 +2,9 @@
 
   publisher <
     name = American Society of Civil Engineers ;
-    info[contract] = 2010 ;
-    info[back] = 1980 ;
+    info[contract] = 2023 ; #Forward dated contract year
+    #info[contract] = 2010 ; #Correct contract year
+    #info[back] = 1985 ; #Correct back content
     info[tester] = 4 ;
     info[platform] = Atypon
   >
