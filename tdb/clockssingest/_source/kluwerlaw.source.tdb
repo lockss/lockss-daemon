@@ -26,7 +26,7 @@
     plugin = org.lockss.plugin.clockss.kluwerlaw.ClockssKluwerLawJournalsZipSourcePlugin
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/kluwerlawjnls-released/
 
-    au < testing ; exists ; 2024 ; Kluwer Law Journals Content 2024_02 ; 2024_02 >
+    au < ready ; exists ; 2024 ; Kluwer Law Journals Content 2024_02 ; 2024_02 >
 
     }
 
