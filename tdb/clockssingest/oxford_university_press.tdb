@@ -21136,6 +21136,39 @@
   }
 
   {
+  
+    title <
+      name = The Journal of Immunology ;
+      issn = 0022-1767 ;
+      eissn = 1550-6606 ;
+      issnl = 0022-1767
+    >
+        #param[base_url] = http://www.jimmunol.org/
+        param[journal_id] = jimmunol
+        #Previously published by American Association of Immunologists
+
+        au < doNotProcess ; exists ; 2024 ; 2024 ; The Journal of Immunology Volume 213 ; 213 ; >
+        au < doNotProcess ; exists ; 2025 ; 2025 ; The Journal of Immunology Volume 214 ; 214 ; >
+
+  }
+
+  {
+  
+    title <
+      name = ImmunoHorizons ;
+      eissn = 2573-7732 ;
+      issnl = 2573-7732
+    >
+        #param[base_url] = http://www.immunohorizons.org/
+        param[journal_id] = immunohorizons
+        #Previously published by American Association of Immunologists
+
+        au < doNotProcess ; exists ; 2024 ; 2024 ; ImmunoHorizons Volume 8 ; 8 ; >
+        au < doNotProcess ; exists ; 2025 ; 2025 ; ImmunoHorizons Volume 9 ; 9 ; >
+
+  }
+
+  {
 
     title <
       name = Journal of Infectious Diseases ;
