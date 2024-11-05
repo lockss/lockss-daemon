@@ -487,7 +487,7 @@
     au < frozen ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (09/2022) ; 2022-09 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < frozen ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (10/2022) ; 2022-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < frozen ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (11/2022) ; 2022-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < notReady ; exists ; 2022 ; 9 ; IUCrJ Volume 9 (12/2022) ; 2022-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
+    au < doesNotExist ; doesNotExist ; 2022 ; 9 ; IUCrJ Volume 9 (12/2022) ; 2022-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; > #no content
 
     au < deepCrawl ; exists ; 2023 ; 10 ; IUCrJ Volume 10 (01/2023) ; 2023-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < deepCrawl ; exists ; 2023 ; 10 ; IUCrJ Volume 10 (02/2023) ; 2023-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
