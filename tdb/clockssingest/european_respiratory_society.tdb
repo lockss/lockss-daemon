@@ -22,6 +22,7 @@
     >
 
     #param[base_url] = http://breathe.ersjournals.com/
+    param[journal_id] = breathe
 
     au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2004-2005 ; Breathe Volume 1 ; 1 ; https://breathe.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2005-2006 ; Breathe Volume 2 ; 2 ; https://breathe.ersjournals.com/ ; >
@@ -43,6 +44,7 @@
     au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2022 ; Breathe Volume 18 ; 18 ; https://breathe.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2023 ; Breathe Volume 19 ; 19 ; https://breathe.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; superseded ; exists ; 2024 ; Breathe Volume 20 [superseded] ; 20 ; https://breathe.ersjournals.com/ ; >
+    au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 2024 ; Breathe Volume 20 ; 20 ; https://publications.ersnet.org/ ; >
 
   }
 
@@ -53,7 +55,7 @@
       issnl = 2312-0541
     >
     #param[base_url] = http://openres.ersjournals.com/
-
+    param[journal_id] = erjor
 
     au < ers.ClockssERSDrupalPlugin ; finished ; finished ; 2015 ; ERJ Open Research Volume 1 ; 1 ; http://openres.ersjournals.com/ ; reingest2.clockss.org:8085 >
     au < ers.ClockssERSDrupalPlugin ; finished ; crawling ; 2016 ; ERJ Open Research Volume 2 ; 2 ; http://openres.ersjournals.com/ ; reingest1.clockss.org:8082 >
@@ -65,6 +67,7 @@
     au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2022 ; ERJ Open Research Volume 8 ; 8 ; https://openres.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2023 ; ERJ Open Research Volume 9 ; 9 ; https://openres.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; superseded ; exists ; 2024 ; ERJ Open Research Volume 10 [superseded] ; 10 ; https://openres.ersjournals.com/ ; >
+    au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 2024 ; ERJ Open Research Volume 10 ; 10 ; https://publications.ersnet.org/ ; >
 
   }
 
@@ -77,6 +80,7 @@
 
     >
     #param[base_url] = http://erj.ersjournals.com/
+    param[journal_id] = erj
 
     {
 
@@ -148,6 +152,8 @@
       au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2023 ; European Respiratory Journal Volume 62 ; 62 ; https://erj.ersjournals.com/ ; >
       au < ers.ClockssERSDrupalPlugin ; superseded ; exists ; 2024 ; European Respiratory Journal Volume 63 [superseded] ; 63 ; https://erj.ersjournals.com/ ; >
       au < ers.ClockssERSDrupalPlugin ; superseded ; exists ; 2024 ; European Respiratory Journal Volume 64 [superseded] ; 64 ; https://erj.ersjournals.com/ ; >
+      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 2024 ; European Respiratory Journal Volume 63 [superseded] ; 63 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 2024 ; European Respiratory Journal Volume 64 [superseded] ; 64 ; https://publications.ersnet.org/ ; >
 
     }
 
@@ -161,6 +167,7 @@
       issnl = 0905-9180
     >
     #param[base_url] = http://err.ersjournals.com/
+    param[journal_id] = errev
 
 
     au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2005 ; European Respiratory Review Volume 14 ; 14 ; https://err.ersjournals.com/ ; >
@@ -183,6 +190,7 @@
     au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2022 ; European Respiratory Review Volume 31 ; 31 ; https://err.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; frozen ; exists ; 2023 ; European Respiratory Review Volume 32 ; 32 ; https://err.ersjournals.com/ ; >
     au < ers.ClockssERSDrupalPlugin ; superseded ; exists ; 2024 ; European Respiratory Review Volume 33 [superseded] ; 33 ; https://err.ersjournals.com/ ; >
+    au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 2024 ; European Respiratory Review Volume 33 ; 33 ; https://publications.ersnet.org/ ; >
 
   }
 
