@@ -3,8 +3,7 @@
   publisher <
     name = Mathematical Sciences Publishers ;
     info[contract] = 2012 ;
-    info[back] = 2010 ;
-    info[min_year] = 1997 ;
+    info[back] = 1997 ;
     info[tester] = 8 ;
     info[poller] = 2
   >
@@ -553,21 +552,49 @@
     >
 
     param[journal_id] = moscow
+    #Moved to Combinatorics and Number Theory 2996-2196
 
-    au < manifest ; exists ; 2011 ; Moscow Journal of Combinatorics and Number Theory Volume 1 ; 1 ; 2011 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2012 ; Moscow Journal of Combinatorics and Number Theory Volume 2 ; 2 ; 2012 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2013 ; Moscow Journal of Combinatorics and Number Theory Volume 3 ; 3 ; 2013 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2014 ; Moscow Journal of Combinatorics and Number Theory Volume 4 ; 4 ; 2014 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2015 ; Moscow Journal of Combinatorics and Number Theory Volume 5 ; 5 ; 2015 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2016 ; Moscow Journal of Combinatorics and Number Theory Volume 6 ; 6 ; 2016 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2017 ; Moscow Journal of Combinatorics and Number Theory Volume 7 ; 7 ; 2017 ; https://msp.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Moscow Journal of Combinatorics and Number Theory Volume 1 ; 1 ; 2011 ; https://msp.org/ ; >
+    au < doNotProcess ; exists ; 2012 ; Moscow Journal of Combinatorics and Number Theory Volume 2 ; 2 ; 2012 ; https://msp.org/ ; >
+    au < doNotProcess ; exists ; 2013 ; Moscow Journal of Combinatorics and Number Theory Volume 3 ; 3 ; 2013 ; https://msp.org/ ; >
+    au < doNotProcess ; exists ; 2014 ; Moscow Journal of Combinatorics and Number Theory Volume 4 ; 4 ; 2014 ; https://msp.org/ ; >
+    au < doNotProcess ; exists ; 2015 ; Moscow Journal of Combinatorics and Number Theory Volume 5 ; 5 ; 2015 ; https://msp.org/ ; >
+    au < doNotProcess ; exists ; 2016 ; Moscow Journal of Combinatorics and Number Theory Volume 6 ; 6 ; 2016 ; https://msp.org/ ; >
+    au < doNotProcess ; exists ; 2017 ; Moscow Journal of Combinatorics and Number Theory Volume 7 ; 7 ; 2017 ; https://msp.org/ ; >
     au < doesNotExist ; doesNotExist ; 2018 ; Moscow Journal of Combinatorics and Number Theory Volume 8 ; 8 ; 2018 ; https://msp.org/ ; >
-    au < frozen ; exists ; 2019 ; Moscow Journal of Combinatorics and Number Theory Volume 9 ; 9 ; 2019 ; https://msp.org/ ; >
-    au < frozen ; exists ; 2020 ; Moscow Journal of Combinatorics and Number Theory Volume 10 ; 10 ; 2020 ; https://msp.org/ ; >
-    au < frozen ; exists ; 2021 ; Moscow Journal of Combinatorics and Number Theory Volume 11 ; 11 ; 2021 ; https://msp.org/ ; >
-    au < frozen ; exists ; 2022 ; Moscow Journal of Combinatorics and Number Theory Volume 12 ; 12 ; 2022 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2023 ; Moscow Journal of Combinatorics and Number Theory Volume 13 ; 13 ; 2023 ; https://msp.org/ ; >
-    au < expected ; exists ; 2024 ; Moscow Journal of Combinatorics and Number Theory Volume 14 ; 14 ; 2024 ; https://msp.org/ ; >
+    au < superseded ; exists ; 2019 ; Moscow Journal of Combinatorics and Number Theory Volume 9 [superseded] ; 9 ; 2019 ; https://msp.org/ ; >
+    au < superseded ; exists ; 2020 ; Moscow Journal of Combinatorics and Number Theory Volume 10 [superseded] ; 10 ; 2020 ; https://msp.org/ ; >
+    au < superseded ; exists ; 2021 ; Moscow Journal of Combinatorics and Number Theory Volume 11 [superseded] ; 11 ; 2021 ; https://msp.org/ ; >
+    au < superseded ; exists ; 2022 ; Moscow Journal of Combinatorics and Number Theory Volume 12 [superseded] ; 12 ; 2022 ; https://msp.org/ ; >
+    au < doNotProcess ; exists ; 2023 ; Moscow Journal of Combinatorics and Number Theory Volume 13 ; 13 ; 2023 ; https://msp.org/ ; >
+
+  }
+
+
+  {
+
+    title <
+      name = Combinatorics and Number Theory ;
+        issn = 2996-2196 ;
+        eissn = 2996-220X
+    >
+
+    param[journal_id] = cnt
+
+    au < manifest ; exists ; 2011 ; Combinatorics and Number Theory Volume 1 ; 1 ; 2011 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2012 ; Combinatorics and Number Theory Volume 2 ; 2 ; 2012 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2013 ; Combinatorics and Number Theory Volume 3 ; 3 ; 2013 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2014 ; Combinatorics and Number Theory Volume 4 ; 4 ; 2014 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2015 ; Combinatorics and Number Theory Volume 5 ; 5 ; 2015 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2016 ; Combinatorics and Number Theory Volume 6 ; 6 ; 2016 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2017 ; Combinatorics and Number Theory Volume 7 ; 7 ; 2017 ; https://msp.org/ ; >
+    au < doesNotExist ; doesNotExist ; 2018 ; Combinatorics and Number Theory Volume 8 ; 8 ; 2018 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2019 ; Combinatorics and Number Theory Volume 9 ; 9 ; 2019 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2020 ; Combinatorics and Number Theory Volume 10 ; 10 ; 2020 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2021 ; Combinatorics and Number Theory Volume 11 ; 11 ; 2021 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2022 ; Combinatorics and Number Theory Volume 12 ; 12 ; 2022 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2023 ; Combinatorics and Number Theory Volume 13 ; 13 ; 2023 ; https://msp.org/ ; >
+    au < expected ; exists ; 2024 ; Combinatorics and Number Theory Volume 14 ; 14 ; 2024 ; https://msp.org/ ; >
 
   }
 
