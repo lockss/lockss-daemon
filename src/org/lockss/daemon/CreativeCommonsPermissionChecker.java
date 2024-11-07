@@ -203,16 +203,18 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
 	      if (candidateUrl == null) {
 	        break;
 	      }
+	      candidateUrl = candidateUrl.trim();
 	      if (log.isDebug2()) {
-		log.debug2("CC license URL: " + candidateUrl);
+          log.debug2("CC license URL: " + candidateUrl);
 	      }
-	      // Already checked that licensePat != null
+
 	      Matcher mat = licensePat.matcher(candidateUrl);
-	      if (log.isDebug2()) {
-		log.debug2("Match: " + mat.matches() + ": " + candidateUrl);
-	      }
 	      if (mat.find()) {
-		foundCcLicense = true;
+          log.debug2("Found: " + candidateUrl);
+          foundCcLicense = true;
+	      }
+	      else {
+          log.debug2("Not found: " + candidateUrl);
 	      }
 	    }
 	  }
