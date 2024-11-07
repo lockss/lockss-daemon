@@ -134,7 +134,7 @@
     au < finished ; frozen ; 2020 ; Mathematical Surveys and Monographs 2020 ; 2020 ; http://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Mathematical Surveys and Monographs 2021 ; 2021 ; http://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2022 ; Mathematical Surveys and Monographs 2022 ; 2022 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2023 ; Mathematical Surveys and Monographs 2023 ; 2023 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2023 ; Mathematical Surveys and Monographs 2023 ; 2023 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2024 ; Mathematical Surveys and Monographs 2024 ; 2024 ; https://www.ams.org/ ; >
 
 #Not in original contract. Move doNotProcess to manifest when contract is approved.
@@ -445,7 +445,7 @@
     au < manifest ; exists ; 2015 ; CRM Monograph series 2015 ; 2015 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2018 ; CRM Monograph series 2018 ; 2018 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2022 ; CRM Monograph series 2022 ; 2022 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2023 ; CRM Monograph series 2023 ; 2023 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2023 ; CRM Monograph series 2023 ; 2023 ; https://www.ams.org/ ; >
 
     }
    
@@ -530,7 +530,7 @@
     au < manifest ; exists ; 2018 ; IAS/Park City Mathematics Series 2018 ; 2018 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2019 ; IAS/Park City Mathematics Series 2019 ; 2019 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 2020 ; IAS/Park City Mathematics Series 2020 ; 2020 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2021 ; IAS/Park City Mathematics Series 2021 ; 2021 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2021 ; IAS/Park City Mathematics Series 2021 ; 2021 ; https://www.ams.org/ ; >
     au < exists ; exists ; 2023 ; IAS/Park City Mathematics Series 2023 ; 2023 ; https://www.ams.org/ ; >
 
     }
@@ -620,7 +620,7 @@
     au < manifest ; exists ; 2017 ; Spectrum 2017 ; 2017 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2018 ; Spectrum 2018 ; 2018 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2019 ; Spectrum 2019 ; 2019 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 2020 ; Spectrum 2020 ; 2020 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2020 ; Spectrum 2020 ; 2020 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2021 ; Spectrum 2021 ; 2021 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2022 ; Spectrum 2022 ; 2022 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2024 ; Spectrum 2024 ; 2024 ; https://www.ams.org/ ; >
@@ -1074,7 +1074,7 @@
     au < finished ; manifest ; 2019 ; University Lecture Series 2019 ; 2019 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; University Lecture Series 2020 ; 2020 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; University Lecture Series 2021 ; 2021 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; University Lecture Series 2023 ; 2023 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2023 ; University Lecture Series 2023 ; 2023 ; https://www.ams.org/ ; >
     }
 
     {
