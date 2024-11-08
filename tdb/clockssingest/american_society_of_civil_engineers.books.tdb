@@ -4,7 +4,7 @@
     name = American Society of Civil Engineers ;
     info[contract] = 2010 ; #Correct contract year
     info[back] = 1992 ; #Correct back content
-    info[tester] = 4 ;
+    info[tester] = 8 ;
     info[platform] = Atypon
   >
 
@@ -25,10 +25,6 @@
     au < exists ; exists ; 2019 ; 9780784415337 ; 9780784482278 ; 9780784482278 ; Adventures in Managing Water: RealWorld Engineering Experiences (9780784482278) ; >
     au < exists ; exists ; 2015 ; 9780784413982 ; 9780784479131 ; 9780784479131 ; Building Information Modeling : Applications and Practices (9780784479131) ; >
     au < exists ; exists ; 2022 ; 9780784416051 ; 9780784484173 ; 9780784484173 ; Anchorage Design for Petrochemical and Other Industrial Facilities (9780784484173) ; >
-    #au < doNotProcess ; exists ; 2015 ; 9780784413982 ; 9780784479131 ; 9780784413982 ; Building Information Modeling : Applications and Practices (9780784413982) ; >
-    #au < doNotProcess ; exists ; 2019 ; 9780784415337 ; 9780784482278 ; 9780784415337 ; Adventures in Managing Water: Real-World Engineering Experiences (9780784415337) ; >
-    #au < doNotProcess ; exists ; 2022 ; 9780784416051 ; 9780784484173 ; 9780784416051 ; Anchorage Design for Petrochemical and Other Industrial Facilities (9780784416051) ; >
-
     au < manifest ; exists ; 1992 ; 9780872628557 ; 9780784473665 ; 9780872628557 ; Design and Construction of Urban Stormwater Management Systems (9780872628557) ; >
     au < manifest ; exists ; 1992 ; 9780872628885 ; 9780784479438 ; 9780872628885 ; Structural Fire Protection (9780872628885) ; >
     au < manifest ; exists ; 1992 ; 9780872629004 ; 9780784478066 ; 9780872629004 ; Guidelines for the Design of Cable-Stayed Bridges (9780872629004) ; >
