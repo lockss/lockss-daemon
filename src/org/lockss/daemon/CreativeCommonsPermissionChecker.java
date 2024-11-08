@@ -141,7 +141,7 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
   protected boolean foundCcLicense = false;
 
   public boolean checkPermission(Crawler.CrawlerFacade crawlFacade,
-				 Reader inputReader, String permissionUrl) {
+                                 Reader inputReader, String permissionUrl) {
     foundCcLicense = false;
     log.debug3("Checking permission on " + permissionUrl);
     if (permissionUrl == null) {
@@ -156,8 +156,8 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
     if (crawlFacade != null) {
       au = crawlFacade.getAu();
       if (log.isDebug3()) {
-	log.debug3("crawlFacade: " + crawlFacade);
-	log.debug3("AU: " + au);
+        log.debug3("crawlFacade: " + crawlFacade);
+        log.debug3("AU: " + au);
       }
     }
     CustomHtmlLinkExtractor extractor = new CustomHtmlLinkExtractor();
@@ -165,10 +165,10 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
       // XXX ReaderInputStream needed until PermissionChecker changed to
       // take InputStream instead of Reader
       extractor.extractUrls(au, new ReaderInputStream(inputReader), null,
-			    permissionUrl, new MyLinkExtractorCallback());
+                            permissionUrl, new MyLinkExtractorCallback());
     } catch (IOException ex) {
       log.error("Exception trying to parse permission URL " + permissionUrl,
-		   ex);
+                ex);
       return false;
     }
     if (foundCcLicense) {
@@ -186,41 +186,39 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
     extends GoslingHtmlLinkExtractor {
 
     protected String extractLinkFromTag(StringBuffer link, ArchivalUnit au,
-					LinkExtractor.Callback cb) {
+                                        LinkExtractor.Callback cb) {
       switch (link.charAt(0)) {
         case 'l': //<link href="blah" rel="license">
         case 'L':
         case 'a': //<a href="blah" rel="license">
         case 'A':
-	  if (log.isDebug3()) {
-	    log.debug3("Looking for license in " + link);
-	  }
-	  if (beginsWithTag(link, LINKTAG) || beginsWithTag(link, ATAG)) {
-	    String relStr = getAttributeValue(REL, link);
-	    if (LICENSE.equalsIgnoreCase(relStr)) {
-	      // This tag has the rel="license" attribute
-	      String candidateUrl = getAttributeValue(HREF, link);
-	      if (candidateUrl == null) {
-	        break;
-	      }
-	      candidateUrl = candidateUrl.trim();
-	      if (log.isDebug2()) {
-          log.debug2("CC license URL: " + candidateUrl);
-	      }
-
-	      Matcher mat = licensePat.matcher(candidateUrl);
-	      if (mat.find()) {
-          log.debug2("Found: " + candidateUrl);
-          foundCcLicense = true;
-	      }
-	      else {
-          log.debug2("Not found: " + candidateUrl);
-	      }
-	    }
-	  }
-	  break;
+          if (log.isDebug3()) {
+            log.debug3("Looking for license in " + link);
+          }
+          if (beginsWithTag(link, LINKTAG) || beginsWithTag(link, ATAG)) {
+            String relStr = getAttributeValue(REL, link);
+            if (LICENSE.equalsIgnoreCase(relStr)) {
+              // This tag has the rel="license" attribute
+              String candidateUrl = getAttributeValue(HREF, link);
+              if (candidateUrl == null) {
+                break;
+              }
+              if (log.isDebug2()) {
+                log.debug2("CC license URL: " + candidateUrl);
+              }
+              // Already checked that licensePat != null
+              Matcher mat = licensePat.matcher(candidateUrl);
+              if (log.isDebug2()) {
+                log.debug2("Match: " + mat.matches() + ": " + candidateUrl);
+              }
+              if (mat.find()) {
+                foundCcLicense = true;
+              }
+            }
+          }
+          break;
         default:
-	  return null;
+          return null;
       }
       return null;
     }
