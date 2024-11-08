@@ -69,8 +69,7 @@
     au < released ; 2020 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 10 (2020) ; 10 ; 2020 >
     au < released ; 2021 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 10 (2021) ; 10 ; 2021 >
     au < released ; 2022 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 11 (2022) ; 11 ; 2022 >
-    au < expected ; 2023 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 12 (2023) ; 12 ; 2023 >
-    au < expected ; 2024 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 13 (2024) ; 13 ; 2024 >
+    au < expected ; 2024 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 12 (2024) ; 12 ; 2024 >
 
     }
   }
@@ -113,14 +112,14 @@
     attr[start_stem] = index.php/
     param[base_url] = https://www.ijic.info/
 
-    au < manifest ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
-    au < manifest ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
-    au < manifest ; 2019 ; International Journal of Infection Control Volume 15 ; 15 ; 2019 >
-    au < manifest ; 2020 ; International Journal of Infection Control Volume 16 ; 16 ; 2020 >
-    au < manifest ; 2021 ; International Journal of Infection Control Volume 17 ; 17 ; 2021 >
-    au < manifest ; 2022 ; International Journal of Infection Control Volume 18 ; 18 ; 2022 >
-    au < manifest ; 2023 ; International Journal of Infection Control Volume 19 ; 19 ; 2023 >
-    au < manifest ; 2024 ; International Journal of Infection Control Volume 20 ; 20 ; 2024 >
+    au < notReady ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
+    au < notReady ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
+    au < notReady ; 2019 ; International Journal of Infection Control Volume 15 ; 15 ; 2019 >
+    au < notReady ; 2020 ; International Journal of Infection Control Volume 16 ; 16 ; 2020 >
+    au < notReady ; 2021 ; International Journal of Infection Control Volume 17 ; 17 ; 2021 >
+    au < notReady ; 2022 ; International Journal of Infection Control Volume 18 ; 18 ; 2022 >
+    au < notReady ; 2023 ; International Journal of Infection Control Volume 19 ; 19 ; 2023 >
+    au < notReady ; 2024 ; International Journal of Infection Control Volume 20 ; 20 ; 2024 >
 
     }
   }
@@ -164,13 +163,13 @@
     attr[start_stem] = index.php/
     param[base_url] = https://www.ijtarp.org/
     
-    au < manifest ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
-    au < manifest ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
-    au < manifest ; 2020 ; International Journal of Transactional Analysis Research & Practice Volume 11 ; 11 ; 2020 >
-    au < manifest ; 2021 ; International Journal of Transactional Analysis Research & Practice Volume 12 ; 12 ; 2021 >
-    au < manifest ; 2022 ; International Journal of Transactional Analysis Research & Practice Volume 13 ; 13 ; 2022 >
-    au < manifest ; 2023 ; International Journal of Transactional Analysis Research & Practice Volume 14 ; 14 ; 2023 >
-    au < manifest ; 2024 ; International Journal of Transactional Analysis Research & Practice Volume 15 ; 15 ; 2024 >
+    au < notReady ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
+    au < notReady ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
+    au < notReady ; 2020 ; International Journal of Transactional Analysis Research & Practice Volume 11 ; 11 ; 2020 >
+    au < notReady ; 2021 ; International Journal of Transactional Analysis Research & Practice Volume 12 ; 12 ; 2021 >
+    au < notReady ; 2022 ; International Journal of Transactional Analysis Research & Practice Volume 13 ; 13 ; 2022 >
+    au < notReady ; 2023 ; International Journal of Transactional Analysis Research & Practice Volume 14 ; 14 ; 2023 >
+    au < notReady ; 2024 ; International Journal of Transactional Analysis Research & Practice Volume 15 ; 15 ; 2024 >
 
     }
   }
@@ -215,14 +214,14 @@
     attr[start_stem] = index.php/
     param[base_url] = https://www.intersticios.es/
 
-    au < manifest ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
-    au < manifest ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
-    au < manifest ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
-    au < manifest ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
-    au < manifest ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
-    au < manifest ; 2022 ; Intersticios Volume 16 ; 16 ; 2022 >
-    au < manifest ; 2023 ; Intersticios Volume 17 ; 17 ; 2023 >
-    au < manifest ; 2024 ; Intersticios Volume 18 ; 18 ; 2024 >
+    au < notReady ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
+    au < notReady ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
+    au < notReady ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
+    au < notReady ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
+    au < notReady ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
+    au < notReady ; 2022 ; Intersticios Volume 16 ; 16 ; 2022 >
+    au < notReady ; 2023 ; Intersticios Volume 17 ; 17 ; 2023 >
+    au < notReady ; 2024 ; Intersticios Volume 18 ; 18 ; 2024 >
 
     }
 
@@ -296,10 +295,10 @@
     attr[start_stem] = index.php/
     param[base_url] = https://www.journal-alm.org/
 
-    au < manifest ; 2017 ; Journal of Applied Leadership and Management Volume 5 ; 5 ; 2017 >
-    au < manifest ; 2018 ; Journal of Applied Leadership and Management Volume 6 ; 6 ; 2018 >
-    au < manifest ; 2019 ; Journal of Applied Leadership and Management Volume 7 ; 7 ; 2019 >
-    au < manifest ; 2020 ; Journal of Applied Leadership and Management Volume 8 ; 8 ; 2020 >
+    au < notReady ; 2017 ; Journal of Applied Leadership and Management Volume 5 ; 5 ; 2017 >
+    au < notReady ; 2018 ; Journal of Applied Leadership and Management Volume 6 ; 6 ; 2018 >
+    au < notReady ; 2019 ; Journal of Applied Leadership and Management Volume 7 ; 7 ; 2019 >
+    au < notReady ; 2020 ; Journal of Applied Leadership and Management Volume 8 ; 8 ; 2020 >
 
     }
   }
