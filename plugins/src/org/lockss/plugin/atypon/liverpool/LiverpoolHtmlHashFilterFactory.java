@@ -90,6 +90,7 @@ public class LiverpoolHtmlHashFilterFactory
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tocListWidget"),
         HtmlNodeFilters.tagWithAttributeRegex("section", "class", "book__information"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "book__tab"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "publication-body"),
             
         // abs, ref - contents only
         // http://online.liverpooluniversitypress.co.uk/doi/abs/10.3828/bjcs.2013.2
@@ -116,6 +117,7 @@ public class LiverpoolHtmlHashFilterFactory
     // <head> tag, <li> item has the text "Cited by", accessIcon, 
     NodeFilter[] excludeNodes = new NodeFilter[] { 
       // All exclude filters are in the parent
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "info-panel__article_tools"),
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);
