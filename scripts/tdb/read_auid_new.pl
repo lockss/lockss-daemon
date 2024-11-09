@@ -388,7 +388,7 @@ while (my $line = <>) {
 #GLN Highwire HW Origins
   } elsif (($plugin =~ m/^(?!Clockss).+OriginsPlugin/) || 
            ($plugin =~ m/^(?!Clockss).+ScolarisPlugin/)) {
-    $url = sprintf("%scontent/%s/lockss-manifest/vol_%s_manifest.html",
+    $url = sprintf("%slockss-manifest/%s_vol_%s_manifest.html",
         $param{base_url}, $param{journal_id}, $param{volume_name});
         #printf("********************\n");  #debug
         #printf("url=%s\n",$url);  #debug
@@ -409,6 +409,7 @@ while (my $line = <>) {
     } elsif ($man_contents !~ m/$lockss_tag/) {
         $result = "--NO_TAG--";
     } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+    #} elsif (($man_contents ~ m/main.*="$base_url_short[^"]*".*main>/s) || ($man_contents !~ m/<main.*="https?:\/\/.*".*main>/s)) { #"
         #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
         #or must be a relative url, in which case, the link would not start with https://.
         $result = "--BAD_ISS_URL--";
@@ -466,7 +467,7 @@ while (my $line = <>) {
 
 #CLOCKSS HighWire HW Origins
   } elsif (($plugin =~ m/^Clockss.+OriginsPlugin/) || ($plugin =~ m/^Clockss.+ScolarisPlugin/)) {
-    $url = sprintf("%scontent/%s/clockss-manifest/vol_%s_manifest.html",
+    $url = sprintf("%sclockss-manifest/%s_vol_%s_manifest.html",
         $param{base_url}, $param{journal_id}, $param{volume_name});
         #printf("********************\n");  #debug
         #printf("url=%s\n",$url);  #debug
@@ -486,7 +487,10 @@ while (my $line = <>) {
         $result = "--NOT_DEF--";
     } elsif ($man_contents !~ m/$clockss_tag/) {
         $result = "--NO_TAG--";
-    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+    #} elsif (($man_contents !~ m/main.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/main.*="https?:\/\/.*"/s)) { #"
+    #} elsif (($man_contents !~ m/<main.*="$base_url_short[^"]*".*main>/s) || ($man_contents !~ m/<main.*="https?:\/\/.*".*main>/s)) { #"
+    } elsif (($man_contents !~ m/<main.*="\/content\/$param{journal_id}\/$param{volume_name}\/.*main>/s)) { #"
+    #} elsif (($man_contents ~ m/main.*="$base_url_short[^"]*".*main>/s) || ($man_contents !~ m/<main.*="https?:\/\/.*".*main>/s)) { #"
         #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
         #or must be a relative url, in which case, the link would not start with https://.
         $result = "--BAD_ISS_URL--";
