@@ -87,7 +87,7 @@
       au < frozen ; exists ; 2021 ; Chemical Engineering Education Volume 2021 ; 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Chemical Engineering Education Volume 2022 ; 2022 ; 2022 ; >
       au < notReady ; exists ; 2023 ; Chemical Engineering Education Volume 2023 ; 2023 ; 2023 ; > #login found, https://journals.flvc.org/cee/article/view/132637/136584
-      au < testing ; exists ; 2024 ; Chemical Engineering Education Volume 2024 ; 2024 ; 2024 ; >
+      au < notReady ; exists ; 2024 ; Chemical Engineering Education Volume 2024 ; 2024 ; 2024 ; > #redirect to login page
 
   }
 
@@ -798,7 +798,7 @@
       au < frozen ; exists ; 2016 ; EDIS Volume 2016 ; 2016 ; 2016 ; >
       au < frozen ; exists ; 2017 ; EDIS Volume 2017 ; 2017 ; 2017 ; >
       au < frozen ; exists ; 2018 ; EDIS Volume 2018 ; 2018 ; 2018 ; >
-      au < testing ; exists ; 2019 ; EDIS Volume 2019 ; 2019 ; 2019 ; >
+      au < notReady ; exists ; 2019 ; EDIS Volume 2019 ; 2019 ; 2019 ; > #500 Internal Server Error
       au < frozen ; exists ; 2020 ; EDIS Volume 2020 ; 2020 ; 2020 ; >
       au < frozen ; exists ; 2021 ; EDIS Volume 2021 ; 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; EDIS Volume 2022 ; 2022 ; 2022 ; >

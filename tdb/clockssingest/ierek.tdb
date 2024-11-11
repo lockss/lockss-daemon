@@ -75,7 +75,7 @@
       param[journal_id] = Resourceedings
       param[base_url] = https://press.ierek.com/
 
-      au < manifest ; exists ; 2018 ; Resourceedings Volume 2018 ; 1 ; 2018 ; >
+      au < notReady ; exists ; 2018 ; Resourceedings Volume 2018 ; 1 ; 2018 ; > #500 Internal Server Error, blank page on Resourceedings/issue/view/18/10
       au < frozen ; exists ; 2019 ; Resourceedings Volume 2019 ; 2 ; 2019 ; >
 
   }
