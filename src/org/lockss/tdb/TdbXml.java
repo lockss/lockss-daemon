@@ -54,7 +54,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.3.3]";
+  public static final String VERSION = "[TdbXml:0.4.0]";
   
   /**
    * <p>
@@ -298,6 +298,15 @@ public class TdbXml {
     */
   protected TdbQueryBuilder tdbQueryBuilder;
 
+  /**
+   * <p>
+   * A set of publisher names encountered so far.
+   * </p>
+   * 
+   * @since 1.78.4
+   */
+  protected Set<String> publisherNames;
+  
    /**
     * <p>
     * Makes a new instance of this class.
@@ -307,6 +316,7 @@ public class TdbXml {
     */
   public TdbXml() {
     this.tdbQueryBuilder = new TdbQueryBuilder();
+    this.publisherNames = new HashSet<>();
   }
   
   /**
@@ -386,7 +396,7 @@ public class TdbXml {
     
     preamble(options, out);
     
-    Publisher currentPub = null;
+    String currentPub = null;
     String escapedPublisherName = null;
     String escapedPublisherNameNoDots = null;
     String escapedComputedPublisherName = null;
@@ -410,14 +420,15 @@ public class TdbXml {
       /*
        * Per-publisher stuff
        */
-      Publisher pub = au.getTitle().getPublisher();
-      if (pub != currentPub) {
+      String pub = au.getComputedPublisher();
+      if (!publisherNames.contains(pub)) {
+        publisherNames.add(pub);
         if (currentPub != null) {
           sb.append(" </property>\n");
           sb.append("\n");
         }
         currentPub = pub;
-        escapedPublisherName = xmlEscaper.translate(currentPub.getName());
+        escapedPublisherName = xmlEscaper.translate(currentPub);
         escapedPublisherNameNoDots = escapedPublisherName.replace(".", "");
         sb.append(" <property name=\"org.lockss.titleSet\">\n");
         sb.append("\n");
