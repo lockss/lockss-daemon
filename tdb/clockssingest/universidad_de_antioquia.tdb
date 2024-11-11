@@ -41,7 +41,7 @@
       au < finished ; manifest ; 1993 ; Revista Colombiana de Ciencias Pecuarias Volume 1993 ; 1993 ; 16 ; reingest2.clockss.org:8085 >
       au < exists ; exists ; 1994 ; Revista Colombiana de Ciencias Pecuarias Volume 1994 ; 1994 ; 17 ; >
       au < exists ; exists ; 1995 ; Revista Colombiana de Ciencias Pecuarias Volume 1995 ; 1995 ; 18 ; >
-      au < crawling ; exists ; 1996 ; Revista Colombiana de Ciencias Pecuarias Volume 1996 ; 1996 ; 19 ; >
+      au < frozen ; exists ; 1996 ; Revista Colombiana de Ciencias Pecuarias Volume 1996 ; 1996 ; 19 ; >
       au < finished ; manifest ; 1997 ; Revista Colombiana de Ciencias Pecuarias Volume 1997 ; 1997 ; 20 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 1998 ; Revista Colombiana de Ciencias Pecuarias Volume 1998 ; 1998 ; 21 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1999 ; Revista Colombiana de Ciencias Pecuarias Volume 1999 ; 1999 ; 22 ; reingest1.clockss.org:8082 >
@@ -56,7 +56,7 @@
       au < finished ; manifest ; 2008 ; Revista Colombiana de Ciencias Pecuarias Volume 2008 ; 2008 ; 31 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Revista Colombiana de Ciencias Pecuarias Volume 2009 ; 2009 ; 32 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; Revista Colombiana de Ciencias Pecuarias Volume 2010 ; 2010 ; 33 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2011 ; Revista Colombiana de Ciencias Pecuarias Volume 2011 ; 2011 ; 34 ; >
+      au < frozen ; exists ; 2011 ; Revista Colombiana de Ciencias Pecuarias Volume 2011 ; 2011 ; 34 ; >
       au < finished ; manifest ; 2012 ; Revista Colombiana de Ciencias Pecuarias Volume 2012 ; 2012 ; 35 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Revista Colombiana de Ciencias Pecuarias Volume 2013 ; 2013 ; 36 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2014 ; Revista Colombiana de Ciencias Pecuarias Volume 2014 ; 2014 ; 37 ; reingest1.clockss.org:8082 >
@@ -96,16 +96,16 @@
       au < manifest ; exists ; 1987 ; Revista Interamericana de Bibliotecología Volume 1987 ; 1987 ; 10 ; >
       au < manifest ; exists ; 1988 ; Revista Interamericana de Bibliotecología Volume 1988 ; 1988 ; 11 ; >
       au < manifest ; exists ; 1989 ; Revista Interamericana de Bibliotecología Volume 1989 ; 1989 ; 12 ; >
-      au < crawling ; exists ; 1990 ; Revista Interamericana de Bibliotecología Volume 1990 ; 1990 ; 13 ; >
-      au < crawling ; exists ; 1991 ; Revista Interamericana de Bibliotecología Volume 1991 ; 1991 ; 14 ; >
-      au < crawling ; exists ; 1992 ; Revista Interamericana de Bibliotecología Volume 1992 ; 1992 ; 15 ; >
-      au < crawling ; exists ; 1993 ; Revista Interamericana de Bibliotecología Volume 1993 ; 1993 ; 16 ; >
-      au < crawling ; exists ; 1994 ; Revista Interamericana de Bibliotecología Volume 1994 ; 1994 ; 17 ; >
-      au < crawling ; exists ; 1995 ; Revista Interamericana de Bibliotecología Volume 1995 ; 1995 ; 18 ; >
+      au < frozen ; exists ; 1990 ; Revista Interamericana de Bibliotecología Volume 1990 ; 1990 ; 13 ; >
+      au < frozen ; exists ; 1991 ; Revista Interamericana de Bibliotecología Volume 1991 ; 1991 ; 14 ; >
+      au < frozen ; exists ; 1992 ; Revista Interamericana de Bibliotecología Volume 1992 ; 1992 ; 15 ; >
+      au < frozen ; exists ; 1993 ; Revista Interamericana de Bibliotecología Volume 1993 ; 1993 ; 16 ; >
+      au < frozen ; exists ; 1994 ; Revista Interamericana de Bibliotecología Volume 1994 ; 1994 ; 17 ; >
+      au < frozen ; exists ; 1995 ; Revista Interamericana de Bibliotecología Volume 1995 ; 1995 ; 18 ; >
       au < finished ; manifest ; 1996 ; Revista Interamericana de Bibliotecología Volume 1996 ; 1996 ; 19 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 1997 ; Revista Interamericana de Bibliotecología Volume 1997 ; 1997 ; 20 ; >
-      au < crawling ; exists ; 1998 ; Revista Interamericana de Bibliotecología Volume 1998 ; 1998 ; 21 ; >
-      au < crawling ; exists ; 1999 ; Revista Interamericana de Bibliotecología Volume 1999 ; 1999 ; 22 ; >
+      au < frozen ; exists ; 1997 ; Revista Interamericana de Bibliotecología Volume 1997 ; 1997 ; 20 ; >
+      au < frozen ; exists ; 1998 ; Revista Interamericana de Bibliotecología Volume 1998 ; 1998 ; 21 ; >
+      au < frozen ; exists ; 1999 ; Revista Interamericana de Bibliotecología Volume 1999 ; 1999 ; 22 ; >
       au < finished ; manifest ; 2000 ; Revista Interamericana de Bibliotecología Volume 2000 ; 2000 ; 23 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2001 ; Revista Interamericana de Bibliotecología Volume 2001 ; 2001 ; 24 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2002 ; Revista Interamericana de Bibliotecología Volume 2002 ; 2002 ; 25 ; reingest2.clockss.org:8085 >
@@ -153,14 +153,14 @@
       au < manifest ; exists ; 1987 ; Contaduría Universidad de Antioquia Volume 1987 ; 1987 ; 6 ; >
       au < manifest ; exists ; 1988 ; Contaduría Universidad de Antioquia Volume 1988 ; 1988 ; 7 ; >
       au < manifest ; exists ; 1989 ; Contaduría Universidad de Antioquia Volume 1989 ; 1989 ; 8 ; >
-      au < crawling ; exists ; 1990 ; Contaduría Universidad de Antioquia Volume 1990 ; 1990 ; 9 ; >
+      au < frozen ; exists ; 1990 ; Contaduría Universidad de Antioquia Volume 1990 ; 1990 ; 9 ; >
       au < finished ; manifest ; 1991 ; Contaduría Universidad de Antioquia Volume 1991 ; 1991 ; 10 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 1992 ; Contaduría Universidad de Antioquia Volume 1992 ; 1992 ; 11 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 1993 ; Contaduría Universidad de Antioquia Volume 1993 ; 1993 ; 12 ; >
-      au < crawling ; exists ; 1994 ; Contaduría Universidad de Antioquia Volume 1994 ; 1994 ; 13 ; >
+      au < frozen ; exists ; 1993 ; Contaduría Universidad de Antioquia Volume 1993 ; 1993 ; 12 ; >
+      au < frozen ; exists ; 1994 ; Contaduría Universidad de Antioquia Volume 1994 ; 1994 ; 13 ; >
       au < finished ; manifest ; 1995 ; Contaduría Universidad de Antioquia Volume 1995 ; 1995 ; 14 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 1996 ; Contaduría Universidad de Antioquia Volume 1996 ; 1996 ; 15 ; >
-      au < crawling ; exists ; 1997 ; Contaduría Universidad de Antioquia Volume 1997 ; 1997 ; 16 ; >
+      au < frozen ; exists ; 1996 ; Contaduría Universidad de Antioquia Volume 1996 ; 1996 ; 15 ; >
+      au < frozen ; exists ; 1997 ; Contaduría Universidad de Antioquia Volume 1997 ; 1997 ; 16 ; >
       au < finished ; manifest ; 1998 ; Contaduría Universidad de Antioquia Volume 1998 ; 1998 ; 17 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1999 ; Contaduría Universidad de Antioquia Volume 1999 ; 1999 ; 18 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2000 ; Contaduría Universidad de Antioquia Volume 2000 ; 2000 ; 19 ; reingest3.clockss.org:8083 >
@@ -173,7 +173,7 @@
       au < finished ; manifest ; 2007 ; Contaduría Universidad de Antioquia Volume 2007 ; 2007 ; 26 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Contaduría Universidad de Antioquia Volume 2008 ; 2008 ; 27 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Contaduría Universidad de Antioquia Volume 2009 ; 2009 ; 28 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2010 ; Contaduría Universidad de Antioquia Volume 2010 ; 2010 ; 29 ; >
+      au < frozen ; exists ; 2010 ; Contaduría Universidad de Antioquia Volume 2010 ; 2010 ; 29 ; >
       au < finished ; manifest ; 2011 ; Contaduría Universidad de Antioquia Volume 2011 ; 2011 ; 30 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Contaduría Universidad de Antioquia Volume 2012 ; 2012 ; 31 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2013 ; Contaduría Universidad de Antioquia Volume 2013 ; 2013 ; 32 ; reingest3.clockss.org:8083 >
@@ -211,8 +211,8 @@
       au < manifest ; exists ; 1989 ; Investigación y Educación En Enfermería Volume 1989 ; 1989 ; 7 ; >
       au < finished ; manifest ; 1990 ; Investigación y Educación En Enfermería Volume 1990 ; 1990 ; 8 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; Investigación y Educación En Enfermería Volume 1991 ; 1991 ; 9 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 1992 ; Investigación y Educación En Enfermería Volume 1992 ; 1992 ; 10 ; >
-      au < crawling ; exists ; 1993 ; Investigación y Educación En Enfermería Volume 1993 ; 1993 ; 11 ; >
+      au < frozen ; exists ; 1992 ; Investigación y Educación En Enfermería Volume 1992 ; 1992 ; 10 ; >
+      au < frozen ; exists ; 1993 ; Investigación y Educación En Enfermería Volume 1993 ; 1993 ; 11 ; >
       au < finished ; manifest ; 1994 ; Investigación y Educación En Enfermería Volume 1994 ; 1994 ; 12 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1995 ; Investigación y Educación En Enfermería Volume 1995 ; 1995 ; 13 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1996 ; Investigación y Educación En Enfermería Volume 1996 ; 1996 ; 14 ; reingest2.clockss.org:8085 >
@@ -229,8 +229,8 @@
       au < finished ; manifest ; 2007 ; Investigación y Educación En Enfermería Volume 2007 ; 2007 ; 25 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Investigación y Educación En Enfermería Volume 2008 ; 2008 ; 26 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Investigación y Educación En Enfermería Volume 2009 ; 2009 ; 27 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2010 ; Investigación y Educación En Enfermería Volume 2010 ; 2010 ; 28 ; >
-      au < crawling ; exists ; 2011 ; Investigación y Educación En Enfermería Volume 2011 ; 2011 ; 29 ; >
+      au < frozen ; exists ; 2010 ; Investigación y Educación En Enfermería Volume 2010 ; 2010 ; 28 ; >
+      au < frozen ; exists ; 2011 ; Investigación y Educación En Enfermería Volume 2011 ; 2011 ; 29 ; >
       au < finished ; manifest ; 2012 ; Investigación y Educación En Enfermería Volume 2012 ; 2012 ; 30 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Investigación y Educación En Enfermería Volume 2013 ; 2013 ; 31 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Investigación y Educación En Enfermería Volume 2014 ; 2014 ; 32 ; reingest1.clockss.org:8082 >
@@ -301,9 +301,9 @@
       au < exists ; exists ; 1991 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1991 ; 1991 ; 8 ; >
       au < exists ; exists ; 1992 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1992 ; 1992 ; 9 ; >
       au < exists ; exists ; 1993 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1993 ; 1993 ; 10 ; >
-      au < crawling ; exists ; 1994 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1994 ; 1994 ; 11 ; >
+      au < frozen ; exists ; 1994 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1994 ; 1994 ; 11 ; >
       au < finished ; manifest ; 1995 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1995 ; 1995 ; 12 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 1996 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1996 ; 1996 ; 13 ; >
+      au < frozen ; exists ; 1996 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1996 ; 1996 ; 13 ; >
       au < finished ; manifest ; 1997 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1997 ; 1997 ; 14 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1998 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1998 ; 1998 ; 15 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 1999 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1999 ; 1999 ; 16 ; reingest3.clockss.org:8083 >
@@ -318,7 +318,7 @@
       au < finished ; manifest ; 2008 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2008 ; 2008 ; 25 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2009 ; 2009 ; 26 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2010 ; 2010 ; 27 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2011 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2011 ; 2011 ; 28 ; >
+      au < frozen ; exists ; 2011 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2011 ; 2011 ; 28 ; >
       au < finished ; manifest ; 2012 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2012 ; 2012 ; 29 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2013 ; 2013 ; 30 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 2014 ; 2014 ; 31 ; reingest2.clockss.org:8085 >
@@ -349,15 +349,15 @@
       au < manifest ; exists ; 1988 ; Iatreia Volume 1988 ; 1988 ; 1 ; >
       au < manifest ; exists ; 1989 ; Iatreia Volume 1989 ; 1989 ; 2 ; >
       au < finished ; manifest ; 1990 ; Iatreia Volume 1990 ; 1990 ; 3 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 1991 ; Iatreia Volume 1991 ; 1991 ; 4 ; >
+      au < frozen ; exists ; 1991 ; Iatreia Volume 1991 ; 1991 ; 4 ; >
       au < finished ; manifest ; 1992 ; Iatreia Volume 1992 ; 1992 ; 5 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1993 ; Iatreia Volume 1993 ; 1993 ; 6 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 1994 ; Iatreia Volume 1994 ; 1994 ; 7 ; >
-      au < crawling ; exists ; 1995 ; Iatreia Volume 1995 ; 1995 ; 8 ; >
+      au < frozen ; exists ; 1995 ; Iatreia Volume 1995 ; 1995 ; 8 ; >
       au < finished ; manifest ; 1996 ; Iatreia Volume 1996 ; 1996 ; 9 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 1997 ; Iatreia Volume 1997 ; 1997 ; 10 ; >
-      au < crawling ; exists ; 1998 ; Iatreia Volume 1998 ; 1998 ; 11 ; >
-      au < crawling ; exists ; 1999 ; Iatreia Volume 1999 ; 1999 ; 12 ; >
+      au < frozen ; exists ; 1997 ; Iatreia Volume 1997 ; 1997 ; 10 ; >
+      au < frozen ; exists ; 1998 ; Iatreia Volume 1998 ; 1998 ; 11 ; >
+      au < frozen ; exists ; 1999 ; Iatreia Volume 1999 ; 1999 ; 12 ; >
       au < finished ; manifest ; 2000 ; Iatreia Volume 2000 ; 2000 ; 13 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2001 ; Iatreia Volume 2001 ; 2001 ; 14 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2002 ; Iatreia Volume 2002 ; 2002 ; 15 ; reingest4.clockss.org:8082 >
@@ -368,7 +368,7 @@
       au < finished ; manifest ; 2007 ; Iatreia Volume 2007 ; 2007 ; 20 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2008 ; Iatreia Volume 2008 ; 2008 ; 21 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Iatreia Volume 2009 ; 2009 ; 22 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2010 ; Iatreia Volume 2010 ; 2010 ; 23 ; >
+      au < frozen ; exists ; 2010 ; Iatreia Volume 2010 ; 2010 ; 23 ; >
       au < finished ; manifest ; 2011 ; Iatreia Volume 2011 ; 2011 ; 24 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Iatreia Volume 2012 ; 2012 ; 25 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Iatreia Volume 2013 ; 2013 ; 26 ; reingest2.clockss.org:8085 >
@@ -397,14 +397,14 @@
       param[base_url] = https://revistas.udea.edu.co/
       param[journal_id] = estudios_de_filosofia
 
-      au < crawling ; exists ; 1990 ; Estudios de Filosofía Volume 1990 ; 1990 ; 1 ; >
+      au < frozen ; exists ; 1990 ; Estudios de Filosofía Volume 1990 ; 1990 ; 1 ; >
       au < finished ; manifest ; 1991 ; Estudios de Filosofía Volume 1991 ; 1991 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1992 ; Estudios de Filosofía Volume 1992 ; 1992 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 1993 ; Estudios de Filosofía Volume 1993 ; 1993 ; 4 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 1994 ; Estudios de Filosofía Volume 1994 ; 1994 ; 5 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 1995 ; Estudios de Filosofía Volume 1995 ; 1995 ; 6 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 1996 ; Estudios de Filosofía Volume 1996 ; 1996 ; 7 ; >
-      au < crawling ; exists ; 1997 ; Estudios de Filosofía Volume 1997 ; 1997 ; 8 ; >
+      au < frozen ; exists ; 1996 ; Estudios de Filosofía Volume 1996 ; 1996 ; 7 ; >
+      au < frozen ; exists ; 1997 ; Estudios de Filosofía Volume 1997 ; 1997 ; 8 ; >
       au < finished ; manifest ; 1998 ; Estudios de Filosofía Volume 1998 ; 1998 ; 9 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1999 ; Estudios de Filosofía Volume 1999 ; 1999 ; 10 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2000 ; Estudios de Filosofía Volume 2000 ; 2000 ; 11 ; reingest3.clockss.org:8083 >
@@ -449,12 +449,12 @@
       au < frozen ; exists ; 1991 ; Vitae Volume 1991 ; 1991 ; 1 ; >
       au < exists ; exists ; 1992 ; Vitae Volume 1992 ; 1992 ; 2 ; >
       au < exists ; exists ; 1993 ; Vitae Volume 1993 ; 1993 ; 3 ; >
-      au < crawling ; exists ; 1994 ; Vitae Volume 1994 ; 1994 ; 4 ; >
+      au < frozen ; exists ; 1994 ; Vitae Volume 1994 ; 1994 ; 4 ; >
       au < exists ; exists ; 1995 ; Vitae Volume 1995 ; 1995 ; 5 ; >
-      au < crawling ; exists ; 1996 ; Vitae Volume 1996 ; 1996 ; 6 ; >
+      au < frozen ; exists ; 1996 ; Vitae Volume 1996 ; 1996 ; 6 ; >
       au < frozen ; exists ; 1997 ; Vitae Volume 1997 ; 1997 ; 7 ; >
       au < frozen ; exists ; 1998 ; Vitae Volume 1998 ; 1998 ; 8 ; >
-      au < crawling ; exists ; 1999 ; Vitae Volume 1999 ; 1999 ; 9 ; >
+      au < frozen ; exists ; 1999 ; Vitae Volume 1999 ; 1999 ; 9 ; >
       au < exists ; exists ; 2000 ; Vitae Volume 2000 ; 2000 ; 10 ; >
       au < frozen ; exists ; 2001 ; Vitae Volume 2001 ; 2001 ; 11 ; >
       au < frozen ; exists ; 2002 ; Vitae Volume 2002 ; 2002 ; 12 ; >
@@ -495,12 +495,12 @@
       param[journal_id] = estudiospoliticos
 
       au < frozen ; exists ; 1992 ; Estudios Políticos Volume 1992 ; 1992 ; 1 ; >
-      au < crawling ; exists ; 1993 ; Estudios Políticos Volume 1993 ; 1993 ; 2 ; >
+      au < frozen ; exists ; 1993 ; Estudios Políticos Volume 1993 ; 1993 ; 2 ; >
       au < frozen ; exists ; 1994 ; Estudios Políticos Volume 1994 ; 1994 ; 3 ; >
       au < frozen ; exists ; 1995 ; Estudios Políticos Volume 1995 ; 1995 ; 4 ; >
-      au < crawling ; exists ; 1996 ; Estudios Políticos Volume 1996 ; 1996 ; 5 ; >
-      au < crawling ; exists ; 1997 ; Estudios Políticos Volume 1997 ; 1997 ; 6 ; >
-      au < crawling ; exists ; 1998 ; Estudios Políticos Volume 1998 ; 1998 ; 7 ; >
+      au < frozen ; exists ; 1996 ; Estudios Políticos Volume 1996 ; 1996 ; 5 ; >
+      au < frozen ; exists ; 1997 ; Estudios Políticos Volume 1997 ; 1997 ; 6 ; >
+      au < frozen ; exists ; 1998 ; Estudios Políticos Volume 1998 ; 1998 ; 7 ; >
       au < frozen ; exists ; 1999 ; Estudios Políticos Volume 1999 ; 1999 ; 8 ; >
       au < frozen ; exists ; 2000 ; Estudios Políticos Volume 2000 ; 2000 ; 9 ; >
       au < frozen ; exists ; 2001 ; Estudios Políticos Volume 2001 ; 2001 ; 10 ; >
@@ -541,9 +541,9 @@
       param[base_url] = https://revistas.udea.edu.co/
       param[journal_id] = ikala
 
-      au < crawling ; exists ; 1996 ; Íkala, Revista de Lenguaje y Cultura Volume 1996 ; 1996 ; 1 ; >
-      au < crawling ; exists ; 1997 ; Íkala, Revista de Lenguaje y Cultura Volume 1997 ; 1997 ; 2 ; >
-      au < crawling ; exists ; 1998 ; Íkala, Revista de Lenguaje y Cultura Volume 1998 ; 1998 ; 3 ; >
+      au < frozen ; exists ; 1996 ; Íkala, Revista de Lenguaje y Cultura Volume 1996 ; 1996 ; 1 ; >
+      au < frozen ; exists ; 1997 ; Íkala, Revista de Lenguaje y Cultura Volume 1997 ; 1997 ; 2 ; >
+      au < frozen ; exists ; 1998 ; Íkala, Revista de Lenguaje y Cultura Volume 1998 ; 1998 ; 3 ; >
       au < frozen ; exists ; 1999 ; Íkala, Revista de Lenguaje y Cultura Volume 1999 ; 1999 ; 4 ; >
       au < frozen ; exists ; 2000 ; Íkala, Revista de Lenguaje y Cultura Volume 2000 ; 2000 ; 5 ; >
       au < frozen ; exists ; 2001 ; Íkala, Revista de Lenguaje y Cultura Volume 2001 ; 2001 ; 6 ; >
@@ -556,7 +556,7 @@
       au < frozen ; exists ; 2008 ; Íkala, Revista de Lenguaje y Cultura Volume 2008 ; 2008 ; 13 ; >
       au < frozen ; exists ; 2009 ; Íkala, Revista de Lenguaje y Cultura Volume 2009 ; 2009 ; 14 ; >
       au < frozen ; exists ; 2010 ; Íkala, Revista de Lenguaje y Cultura Volume 2010 ; 2010 ; 15 ; >
-      au < crawling ; exists ; 2011 ; Íkala, Revista de Lenguaje y Cultura Volume 2011 ; 2011 ; 16 ; >
+      au < frozen ; exists ; 2011 ; Íkala, Revista de Lenguaje y Cultura Volume 2011 ; 2011 ; 16 ; >
       au < frozen ; exists ; 2012 ; Íkala, Revista de Lenguaje y Cultura Volume 2012 ; 2012 ; 17 ; >
       au < frozen ; exists ; 2013 ; Íkala, Revista de Lenguaje y Cultura Volume 2013 ; 2013 ; 18 ; >
       au < frozen ; exists ; 2014 ; Íkala, Revista de Lenguaje y Cultura Volume 2014 ; 2014 ; 19 ; >
@@ -585,7 +585,7 @@
       param[journal_id] = elc
 
       au < frozen ; exists ; 1997 ; Estudios De Literatura Colombiana Volume 1997 ; 1997 ; 1 ; >
-      au < crawling ; exists ; 1998 ; Estudios De Literatura Colombiana Volume 1998 ; 1998 ; 2 ; >
+      au < frozen ; exists ; 1998 ; Estudios De Literatura Colombiana Volume 1998 ; 1998 ; 2 ; >
       au < frozen ; exists ; 1999 ; Estudios De Literatura Colombiana Volume 1999 ; 1999 ; 3 ; >
       au < frozen ; exists ; 2000 ; Estudios De Literatura Colombiana Volume 2000 ; 2000 ; 4 ; >
       au < frozen ; exists ; 2001 ; Estudios De Literatura Colombiana Volume 2001 ; 2001 ; 5 ; >
@@ -626,7 +626,7 @@
       param[journal_id] = mutatismutandis
 
       au < frozen ; exists ; 2008 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2008 ; 2008 ; 1 ; >
-      au < crawling ; exists ; 2009 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2009 ; 2009 ; 2 ; >
+      au < frozen ; exists ; 2009 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2009 ; 2009 ; 2 ; >
       au < frozen ; exists ; 2010 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2010 ; 2010 ; 3 ; >
       au < frozen ; exists ; 2011 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2011 ; 2011 ; 4 ; >
       au < frozen ; exists ; 2012 ; Mutatis Mutandis. Revista Latinoamericana de Traducción Volume 2012 ; 2012 ; 5 ; >
