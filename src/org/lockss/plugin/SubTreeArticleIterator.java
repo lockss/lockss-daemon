@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2020, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -51,7 +50,7 @@ import org.lockss.extractor.*;
  */
 public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   
-  static Logger log = Logger.getLogger(SubTreeArticleIterator.class);
+  private static final Logger log = Logger.getLogger(SubTreeArticleIterator.class);
   
   /** Specification of the CachedUrls the iterator should return.  Setters
    * are chained. */
