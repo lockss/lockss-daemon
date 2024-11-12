@@ -69,7 +69,8 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
   static final String baseRepairList[] =
     {
         "/(springerlink-)?static/.*\\.(png|css|js|gif|ico)$",
-        "^https://static-content\\.springer\\.com/cover/",
+        "/(?:\\w+-)?static/.*\\.(png|css|js|gif|ico)$",
+        "^https://static-content\\.springer\\.com/cover/"
     };
   
   static final String journalRepairList[] =
@@ -224,7 +225,7 @@ public class TestSpringerLinkArchivalUnit extends LockssTestCase {
       assertEquals(true, m0.find());
     }
     
-    p0 = Pattern.compile(baseRepairList[1]);
+    p0 = Pattern.compile(baseRepairList[2]);
     for (String urlString : repairList1) {
       m0 = p0.matcher(urlString);      
       assertEquals(true, m0.find());

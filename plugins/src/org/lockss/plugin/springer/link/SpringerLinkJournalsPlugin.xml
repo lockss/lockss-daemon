@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>55</string>
+    <string>56</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -266,11 +266,13 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <!-- The css, images, js and sites files have a changing number in the url for journals -->    
   <!-- eg:(base_url)static/201602081740-1199/css/print.css -->  
-  <!-- don't count it in the poll, but do collect and share versions -->  
+  <!-- don't count it in the poll, but do collect and share versions -->
+  <!--https://link.springer.com/oscar-static/app-springerlink/css/core-article-633a14941d.css-->
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
     <list>
       <string>/(springerlink-)?static/.*\.(png|css|js|gif|ico)$</string>
+      <string>/(?:\w+-)?static/.*\.(png|css|js|gif|ico)$</string>
       <string>^https://static-content\.springer\.com/cover/</string>
     </list>
   </entry>
@@ -278,6 +280,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_url_poll_result_weight</string>
     <list>
       <string>"/(springerlink-)?static/.*\.(png|css|js|gif|ico)$", 0</string>
+      <string>"/(?:\w+-)?static/.*\.(png|css|js|gif|ico)$",0</string>
       <string>"/article/[^/]+/[^/.]+/fulltext.html$", 0</string>
       <string>"^https://static-content\.springer\.com/cover/", 0</string>
       <!--  no longer used because this is a CDN now -->
