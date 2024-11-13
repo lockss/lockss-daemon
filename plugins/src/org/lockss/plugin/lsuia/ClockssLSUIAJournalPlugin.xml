@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -106,6 +106,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"%s(en|uk)/journals/tom-%s-(\d+)-%d", base_url, volume_name, year</string>
       <string>1,"%s(en|uk)/journals/download", base_url</string>
       <string>1,"%s(en|uk)/(article|read)",base_url</string>
+      <string>1,"%s(images|assets|css|js|web/js)",base_url</string>
       <string>1,"%s/(images)",base_url</string>
     </list>
   </entry>

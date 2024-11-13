@@ -57,7 +57,6 @@ public class LSUIAHtmlFilterFactory implements FilterFactory {
      new TagNameFilter("noscript"),
      new TagNameFilter("script"),
      new TagNameFilter("style"),
-     new TagNameFilter("head"),
      new TagNameFilter("header"),
      new TagNameFilter("footer"),
      new TagNameFilter("aside"),
