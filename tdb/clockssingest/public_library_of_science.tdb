@@ -1,7 +1,7 @@
 {
   publisher <
     name = Public Library of Science ;
-    info[tester] = 4 
+    info[tester] = 8
   >
     provider = Public Library of Science
     plugin = org.lockss.plugin.plos.ClockssPLoSPlugin
@@ -17,7 +17,7 @@
 
       param[journal_id] = plosbiology
 
-      au < testing ; exists ; 2003 ; PLOS Biology Volume 2003 ; 2003 >
+      au < ready ; exists ; 2003 ; PLOS Biology Volume 2003 ; 2003 >
 
   }
 
@@ -30,7 +30,7 @@
 
       param[journal_id] = complexsystems
 
-      au < testing ; exists ; 2024 ; PLOS Complex Systems Volume 2024 ; 2024 >
+      au < ready ; exists ; 2024 ; PLOS Complex Systems Volume 2024 ; 2024 >
 
   }
 
