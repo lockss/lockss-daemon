@@ -18,6 +18,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/asha-released/
 
     au < expected ; exists ; 2024 ; American Speech-Language-Hearing Association Source Content 2024_02 ; 2024_02 >
+    au < expected ; exists ; 2025 ; American Speech-Language-Hearing Association Source Content 2025_01 ; 2025_01 >
 
     }
     {

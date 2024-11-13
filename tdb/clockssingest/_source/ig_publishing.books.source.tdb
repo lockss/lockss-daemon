@@ -16,19 +16,19 @@
     plugin = org.lockss.plugin.clockss.igpublishing.ClockssIGPublishingBookSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
     {
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/igroupnet-released/
+
+    au < readySource ; finished ; 2023 ; IG Publishing Books Source Content 2023 ; 2023 >
+    au < ready ; exists ; 2024 ; IG Publishing Books Source Content 2024 ; 2024 >
+
+    }
+    {
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/igroupnet-released/
 
     au < zapped ; finished ; 2020 ; IG Publishing Books Source Content 2020 ; 2020 >
     au < zapped ; finished ; 2021 ; IG Publishing Books Source Content 2021 ; 2021 >
     au < readySource ; finished ; 2022 ; IG Publishing Books Source Content 2022 ; 2022 >
     #No more AUs. Moving to https.
-    }
-    {
-    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/igroupnet-released/
-
-    au < readySource ; finished ; 2023 ; IG Publishing Books Source Content 2023 ; 2023 >
-    au < manifest ; exists ; 2024 ; IG Publishing Books Source Content 2024 ; 2024 >
-
     }
   }
 

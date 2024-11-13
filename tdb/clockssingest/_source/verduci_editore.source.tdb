@@ -18,7 +18,7 @@
     {
     param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/verduci-released/
 
-    #2018 not on Humbodlt
+    #2018 not on Humboldt
     au < zapped ; finished ; 2018 ; Verduci Editore Source Content 2018 ; 2018 >
     au < zapped ; finished ; 2019 ; Verduci Editore Source Content 2019 ; 2019 >
     au < zapped ; finished ; 2020 ; Verduci Editore Source Content 2020 ; 2020 >
@@ -31,6 +31,7 @@
 
     au < readySource ; crawling ; 2023 ; Verduci Editore Source Content 2023 ; 2023 >
     au < readySource ; crawling ; 2024 ; Verduci Editore Source Content 2024 ; 2024 >
+    au < expected ; exists ; 2025 ; Verduci Editore Source Content 2025 ; 2025 >
 
     }
   }

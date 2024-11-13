@@ -12,24 +12,25 @@
     title <
        name = Kluwer Law Source Content
     >
+
     {
-    #Journals PRODUCTION
-    plugin = org.lockss.plugin.clockss.kluwerlaw.ClockssKluwerLawJournalsSourcePlugin
+    #Journals ZIP SOURCE PLUGIN
+    plugin = org.lockss.plugin.clockss.kluwerlaw.ClockssKluwerLawJournalsZipSourcePlugin
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/kluwerlawjnls-released/
 
-    au < readySource ; crawling ; 2023 ; Kluwer Law Journals Content 2023_01 ; 2023_01 >
-    au < manifest ; exists ; 2024 ; Kluwer Law Journals Content 2024_01 ; 2024_01 >
-    au < manifest ; exists ; 2024 ; Kluwer Law Journals Content 2024_02 ; 2024_02 >
+    au < ready ; exists ; 2024 ; Kluwer Law Journals Content 2024_02 ; 2024_02 >
+    au < expected ; exists ; 2025 ; Kluwer Law Journals Content 2025_01 ; 2025_01 >
 
     }
 
     {
-    #Journals TEST & DEVELOPMENT
-    plugin = org.lockss.plugin.clockss.kluwerlaw.ClockssKluwerLawJournalsZipSourcePlugin
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/kluwerlawjnls-released/
+    #Journals SOURCE PLUGIN
+    plugin = org.lockss.plugin.clockss.kluwerlaw.ClockssKluwerLawJournalsSourcePlugin
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/kluwerlawjnls-released/
 
-    au < ready ; exists ; 2024 ; Kluwer Law Journals Content 2024_02 ; 2024_02 >
-
+    au < readySource ; crawling ; 2023 ; Kluwer Law Journals Content 2023_01 ; 2023_01 >
+    au < ready ; exists ; 2024 ; Kluwer Law Journals Content 2024_01 ; 2024_01 >
+    #No more AUs expected using this plugin
     }
 
     {
