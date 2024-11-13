@@ -78,10 +78,10 @@
       plugin = org.lockss.plugin.highwire.uwpress.UWPressDrupalPlugin
       param[base_url] = https://aa.uwpress.org/
 
-      au < released ; 2020 ; Arctic Anthropology Volume 56 ; 56 >
-      au < released ; 2021 ; Arctic Anthropology Volume 57 ; 57 >
-      au < released ; 2022 ; Arctic Anthropology Volume 58 ; 58 >
-      au < released ; 2023 ; Arctic Anthropology Volume 59 ; 59 >
+      au < released ; 2019-2020 ; Arctic Anthropology Volume 56 ; 56 >
+      au < released ; 2020 ; Arctic Anthropology Volume 57 ; 57 >
+      au < released ; 2022-2023 ; Arctic Anthropology Volume 58 ; 58 >
+      au < released ; 2023-2024 ; Arctic Anthropology Volume 59 ; 59 >
       au < expected ; 2024 ; Arctic Anthropology Volume 60 ; 60 >
 
       }
