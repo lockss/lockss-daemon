@@ -63,7 +63,8 @@ public class WoltersKluwerSourceDirArticleIteratorFactory
   // suffix has only ever been one digit, may be 0-9
   // 2014/CIRC20140304.0.zip!/20140304.0
   private static final String PATTERN_TEMPLATE = 
-      "\"%s%s/[^/]+\\.zip!(/[^/]+)?/[^/]+\\.([\\d]|xml)$\",base_url,directory";
+      //"\"%s%s/[^/]+\\.zip!(/[^/]+)?/[^/]+\\.([\\d]|xml)$\",base_url,directory";
+          "\"%s%s(.*\\.zip!)(/.+\\.xml)$\",base_url,directory";
   //      "\"%s%d/[^/]+\\.zip!/(.*)\\.[\\d]$\",base_url,year";
   
   public static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)\\.([\\d]|xml)$", Pattern.CASE_INSENSITIVE);
