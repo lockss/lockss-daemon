@@ -402,13 +402,13 @@
       param[journal_id] = mat
       #This title does not use a journal_id
 
-      au < crawling ; exists ; 2014 ; Medicine Anthropology Theory Volume 2014 ; 1 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Medicine Anthropology Theory Volume 2015 ; 2 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Medicine Anthropology Theory Volume 2016 ; 3 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Medicine Anthropology Theory Volume 2017 ; 4 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Medicine Anthropology Theory Volume 2018 ; 5 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Medicine Anthropology Theory Volume 2019 ; 6 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Medicine Anthropology Theory Volume 2020 ; 7 ; 2020 ; >
+      au < frozen ; exists ; 2014 ; Medicine Anthropology Theory Volume 2014 ; 1 ; 2014 ; >
+      au < frozen ; exists ; 2015 ; Medicine Anthropology Theory Volume 2015 ; 2 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Medicine Anthropology Theory Volume 2016 ; 3 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Medicine Anthropology Theory Volume 2017 ; 4 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Medicine Anthropology Theory Volume 2018 ; 5 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Medicine Anthropology Theory Volume 2019 ; 6 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Medicine Anthropology Theory Volume 2020 ; 7 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Medicine Anthropology Theory Volume 2021 ; 8 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Medicine Anthropology Theory Volume 2022 ; 9 ; 2022 ; >
       au < frozen ; exists ; 2023 ; Medicine Anthropology Theory Volume 2023 ; 10 ; 2023 ; >
