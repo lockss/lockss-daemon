@@ -47,6 +47,35 @@
   {
 
       title <
+        name = PLOS Climate ;
+        issn = 2767-3200 
+      >
+
+      param[journal_id] = climate
+
+      au < exists ; exists ; 2022 ; PLOS Climate Volume 2022 ; 2022 >
+      au < exists ; exists ; 2023 ; PLOS Climate Volume 2023 ; 2023 >
+      au < exists ; exists ; 2024 ; PLOS Climate Volume 2024 ; 2024 >
+
+  }
+
+#  {
+#
+#      title <
+#        name = PLOS Clinical Trials ;
+#        issn = 
+#      >
+#
+#      param[journal_id] = plosclinicaltrials
+#
+#      au < exists ; exists ; 2006 ; PLOS Clinical Trials Volume 2006 ; 2006 >
+#      au < exists ; exists ; 2007 ; PLOS Clinical Trials Volume 2007 ; 2007 >
+#
+#  }
+
+  {
+
+      title <
         name = PLOS Complex Systems ;
         issn = 2837-8830
       >
@@ -54,6 +83,270 @@
       param[journal_id] = complexsystems
 
       au < crawling ; exists ; 2024 ; PLOS Complex Systems Volume 2024 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = PLOS Computational Biology ;
+        issn = 1553-7358 
+      >
+
+      param[journal_id] = ploscompbiol
+
+      au < exists ; exists ; 2005 ; PLOS Computational Biology Volume 2005 ; 2005 >
+      au < exists ; exists ; 2006 ; PLOS Computational Biology Volume 2006 ; 2006 >
+      au < exists ; exists ; 2007 ; PLOS Computational Biology Volume 2007 ; 2007 >
+      au < exists ; exists ; 2008 ; PLOS Computational Biology Volume 2008 ; 2008 >
+      au < exists ; exists ; 2009 ; PLOS Computational Biology Volume 2009 ; 2009 >
+      au < exists ; exists ; 2010 ; PLOS Computational Biology Volume 2010 ; 2010 >
+      au < exists ; exists ; 2011 ; PLOS Computational Biology Volume 2011 ; 2011 >
+      au < exists ; exists ; 2012 ; PLOS Computational Biology Volume 2012 ; 2012 >
+      au < exists ; exists ; 2013 ; PLOS Computational Biology Volume 2013 ; 2013 >
+      au < exists ; exists ; 2014 ; PLOS Computational Biology Volume 2014 ; 2014 >
+      au < exists ; exists ; 2015 ; PLOS Computational Biology Volume 2015 ; 2015 >
+      au < exists ; exists ; 2016 ; PLOS Computational Biology Volume 2016 ; 2016 >
+      au < exists ; exists ; 2017 ; PLOS Computational Biology Volume 2017 ; 2017 >
+      au < exists ; exists ; 2018 ; PLOS Computational Biology Volume 2018 ; 2018 >
+      au < exists ; exists ; 2019 ; PLOS Computational Biology Volume 2019 ; 2019 >
+      au < exists ; exists ; 2020 ; PLOS Computational Biology Volume 2020 ; 2020 >
+      au < exists ; exists ; 2021 ; PLOS Computational Biology Volume 2021 ; 2021 >
+      au < exists ; exists ; 2022 ; PLOS Computational Biology Volume 2022 ; 2022 >
+      au < exists ; exists ; 2023 ; PLOS Computational Biology Volume 2023 ; 2023 >
+      au < exists ; exists ; 2024 ; PLOS Computational Biology Volume 2024 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = PLOS Digital Health ;
+        issn = 2767-3170 
+      >
+
+      param[journal_id] = digitalhealth
+
+      au < exists ; exists ; 2022 ; PLOS Digital Health Volume 2022 ; 2022 >
+      au < exists ; exists ; 2023 ; PLOS Digital Health Volume 2023 ; 2023 >
+      au < exists ; exists ; 2024 ; PLOS Digital Health Volume 2024 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = PLOS Genetics ;
+        issn = 1553-7404 
+      >
+
+      param[journal_id] = plosgenetics
+
+      au < exists ; exists ; 2005 ; PLOS Genetics Volume 2005 ; 2005 >
+      au < exists ; exists ; 2006 ; PLOS Genetics Volume 2006 ; 2006 >
+      au < exists ; exists ; 2007 ; PLOS Genetics Volume 2007 ; 2007 >
+      au < exists ; exists ; 2008 ; PLOS Genetics Volume 2008 ; 2008 >
+      au < exists ; exists ; 2009 ; PLOS Genetics Volume 2009 ; 2009 >
+      au < exists ; exists ; 2010 ; PLOS Genetics Volume 2010 ; 2010 >
+      au < exists ; exists ; 2011 ; PLOS Genetics Volume 2011 ; 2011 >
+      au < exists ; exists ; 2012 ; PLOS Genetics Volume 2012 ; 2012 >
+      au < exists ; exists ; 2013 ; PLOS Genetics Volume 2013 ; 2013 >
+      au < exists ; exists ; 2014 ; PLOS Genetics Volume 2014 ; 2014 >
+      au < exists ; exists ; 2015 ; PLOS Genetics Volume 2015 ; 2015 >
+      au < exists ; exists ; 2016 ; PLOS Genetics Volume 2016 ; 2016 >
+      au < exists ; exists ; 2017 ; PLOS Genetics Volume 2017 ; 2017 >
+      au < exists ; exists ; 2018 ; PLOS Genetics Volume 2018 ; 2018 >
+      au < exists ; exists ; 2019 ; PLOS Genetics Volume 2019 ; 2019 >
+      au < exists ; exists ; 2020 ; PLOS Genetics Volume 2020 ; 2020 >
+      au < exists ; exists ; 2021 ; PLOS Genetics Volume 2021 ; 2021 >
+      au < exists ; exists ; 2022 ; PLOS Genetics Volume 2022 ; 2022 >
+      au < exists ; exists ; 2023 ; PLOS Genetics Volume 2023 ; 2023 >
+      au < exists ; exists ; 2024 ; PLOS Genetics Volume 2024 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = PLOS Global Public Health ;
+        issn = 2767-3375 
+      >
+
+      param[journal_id] = globalpublichealth
+
+      au < exists ; exists ; 2021 ; PLOS Global Public Health Volume 2021 ; 2021 >
+      au < exists ; exists ; 2022 ; PLOS Global Public Health Volume 2022 ; 2022 >
+      au < exists ; exists ; 2023 ; PLOS Global Public Health Volume 2023 ; 2023 >
+      au < exists ; exists ; 2024 ; PLOS Global Public Health Volume 2024 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = PLOS Medicine ;
+        issn = 1549-1676 
+      >
+
+      param[journal_id] = plosmedicine
+
+      au < exists ; exists ; 2004 ; PLOS Medicine Volume 2004 ; 2004 >
+      au < exists ; exists ; 2005 ; PLOS Medicine Volume 2005 ; 2005 >
+      au < exists ; exists ; 2006 ; PLOS Medicine Volume 2006 ; 2006 >
+      au < exists ; exists ; 2007 ; PLOS Medicine Volume 2007 ; 2007 >
+      au < exists ; exists ; 2008 ; PLOS Medicine Volume 2008 ; 2008 >
+      au < exists ; exists ; 2009 ; PLOS Medicine Volume 2009 ; 2009 >
+      au < exists ; exists ; 2010 ; PLOS Medicine Volume 2010 ; 2010 >
+      au < exists ; exists ; 2011 ; PLOS Medicine Volume 2011 ; 2011 >
+      au < exists ; exists ; 2012 ; PLOS Medicine Volume 2012 ; 2012 >
+      au < exists ; exists ; 2013 ; PLOS Medicine Volume 2013 ; 2013 >
+      au < exists ; exists ; 2014 ; PLOS Medicine Volume 2014 ; 2014 >
+      au < exists ; exists ; 2015 ; PLOS Medicine Volume 2015 ; 2015 >
+      au < exists ; exists ; 2016 ; PLOS Medicine Volume 2016 ; 2016 >
+      au < exists ; exists ; 2017 ; PLOS Medicine Volume 2017 ; 2017 >
+      au < exists ; exists ; 2018 ; PLOS Medicine Volume 2018 ; 2018 >
+      au < exists ; exists ; 2019 ; PLOS Medicine Volume 2019 ; 2019 >
+      au < exists ; exists ; 2020 ; PLOS Medicine Volume 2020 ; 2020 >
+      au < exists ; exists ; 2021 ; PLOS Medicine Volume 2021 ; 2021 >
+      au < exists ; exists ; 2022 ; PLOS Medicine Volume 2022 ; 2022 >
+      au < exists ; exists ; 2023 ; PLOS Medicine Volume 2023 ; 2023 >
+      au < exists ; exists ; 2024 ; PLOS Medicine Volume 2024 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = PLOS Mental Health ;
+        issn = 2837-8156 
+      >
+
+      param[journal_id] = mentalhealth
+
+      au < exists ; exists ; 2024 ; PLOS Mental Health Volume 2024 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = PLOS Neglected Tropical Diseases ;
+        issn = 1935-2735 
+      >
+
+      param[journal_id] = plosntds
+
+      au < exists ; exists ; 2007 ; PLOS Neglected Tropical Diseases Volume 2007 ; 2007 >
+      au < exists ; exists ; 2008 ; PLOS Neglected Tropical Diseases Volume 2008 ; 2008 >
+      au < exists ; exists ; 2009 ; PLOS Neglected Tropical Diseases Volume 2009 ; 2009 >
+      au < exists ; exists ; 2010 ; PLOS Neglected Tropical Diseases Volume 2010 ; 2010 >
+      au < exists ; exists ; 2011 ; PLOS Neglected Tropical Diseases Volume 2011 ; 2011 >
+      au < exists ; exists ; 2012 ; PLOS Neglected Tropical Diseases Volume 2012 ; 2012 >
+      au < exists ; exists ; 2013 ; PLOS Neglected Tropical Diseases Volume 2013 ; 2013 >
+      au < exists ; exists ; 2014 ; PLOS Neglected Tropical Diseases Volume 2014 ; 2014 >
+      au < exists ; exists ; 2015 ; PLOS Neglected Tropical Diseases Volume 2015 ; 2015 >
+      au < exists ; exists ; 2016 ; PLOS Neglected Tropical Diseases Volume 2016 ; 2016 >
+      au < exists ; exists ; 2017 ; PLOS Neglected Tropical Diseases Volume 2017 ; 2017 >
+      au < exists ; exists ; 2018 ; PLOS Neglected Tropical Diseases Volume 2018 ; 2018 >
+      au < exists ; exists ; 2019 ; PLOS Neglected Tropical Diseases Volume 2019 ; 2019 >
+      au < exists ; exists ; 2020 ; PLOS Neglected Tropical Diseases Volume 2020 ; 2020 >
+      au < exists ; exists ; 2021 ; PLOS Neglected Tropical Diseases Volume 2021 ; 2021 >
+      au < exists ; exists ; 2022 ; PLOS Neglected Tropical Diseases Volume 2022 ; 2022 >
+      au < exists ; exists ; 2023 ; PLOS Neglected Tropical Diseases Volume 2023 ; 2023 >
+      au < exists ; exists ; 2024 ; PLOS Neglected Tropical Diseases Volume 2024 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = PLOS ONE ;
+        issn = 1932-6203 
+      >
+
+      param[journal_id] = plosone
+
+      au < exists ; exists ; 2006 ; PLOS ONE Volume 2006 ; 2006 >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume 2007 ; 2007 >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume 2008 ; 2008 >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume 2009 ; 2009 >
+      au < exists ; exists ; 2010 ; PLOS ONE Volume 2010 ; 2010 >
+      au < exists ; exists ; 2011 ; PLOS ONE Volume 2011 ; 2011 >
+      au < exists ; exists ; 2012 ; PLOS ONE Volume 2012 ; 2012 >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume 2013 ; 2013 >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume 2014 ; 2014 >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume 2015 ; 2015 >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume 2016 ; 2016 >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume 2017 ; 2017 >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume 2018 ; 2018 >
+      au < exists ; exists ; 2019 ; PLOS ONE Volume 2019 ; 2019 >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume 2020 ; 2020 >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume 2021 ; 2021 >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume 2022 ; 2022 >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume 2023 ; 2023 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume 2024 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = PLOS Pathogens ;
+        issn = 1553-7374 
+      >
+
+      param[journal_id] = plospathogens
+
+      au < exists ; exists ; 2005 ; PLOS Pathogens Volume 2005 ; 2005 >
+      au < exists ; exists ; 2006 ; PLOS Pathogens Volume 2006 ; 2006 >
+      au < exists ; exists ; 2007 ; PLOS Pathogens Volume 2007 ; 2007 >
+      au < exists ; exists ; 2008 ; PLOS Pathogens Volume 2008 ; 2008 >
+      au < exists ; exists ; 2009 ; PLOS Pathogens Volume 2009 ; 2009 >
+      au < exists ; exists ; 2010 ; PLOS Pathogens Volume 2010 ; 2010 >
+      au < exists ; exists ; 2011 ; PLOS Pathogens Volume 2011 ; 2011 >
+      au < exists ; exists ; 2012 ; PLOS Pathogens Volume 2012 ; 2012 >
+      au < exists ; exists ; 2013 ; PLOS Pathogens Volume 2013 ; 2013 >
+      au < exists ; exists ; 2014 ; PLOS Pathogens Volume 2014 ; 2014 >
+      au < exists ; exists ; 2015 ; PLOS Pathogens Volume 2015 ; 2015 >
+      au < exists ; exists ; 2016 ; PLOS Pathogens Volume 2016 ; 2016 >
+      au < exists ; exists ; 2017 ; PLOS Pathogens Volume 2017 ; 2017 >
+      au < exists ; exists ; 2018 ; PLOS Pathogens Volume 2018 ; 2018 >
+      au < exists ; exists ; 2019 ; PLOS Pathogens Volume 2019 ; 2019 >
+      au < exists ; exists ; 2020 ; PLOS Pathogens Volume 2020 ; 2020 >
+      au < exists ; exists ; 2021 ; PLOS Pathogens Volume 2021 ; 2021 >
+      au < exists ; exists ; 2022 ; PLOS Pathogens Volume 2022 ; 2022 >
+      au < exists ; exists ; 2023 ; PLOS Pathogens Volume 2023 ; 2023 >
+      au < exists ; exists ; 2024 ; PLOS Pathogens Volume 2024 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = PLOS Sustainability and Transformation ;
+        issn = 2767-3197 
+      >
+
+      param[journal_id] = sustainabilitytransformation
+
+      au < exists ; exists ; 2022 ; PLOS Sustainability and Transformation Volume 2022 ; 2022 >
+      au < exists ; exists ; 2023 ; PLOS Sustainability and Transformation Volume 2023 ; 2023 >
+      au < exists ; exists ; 2024 ; PLOS Sustainability and Transformation Volume 2024 ; 2024 >
+
+  }
+
+  {
+
+      title <
+        name = PLOS Water ;
+        issn = 2767-3219 
+      >
+
+      param[journal_id] = water
+
+      au < exists ; exists ; 2022 ; PLOS Water Volume 2022 ; 2022 >
+      au < exists ; exists ; 2023 ; PLOS Water Volume 2023 ; 2023 >
+      au < exists ; exists ; 2024 ; PLOS Water Volume 2024 ; 2024 >
 
   }
 
