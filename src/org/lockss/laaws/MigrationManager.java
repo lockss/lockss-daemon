@@ -211,6 +211,10 @@ public class MigrationManager extends BaseLockssDaemonManager
   }
 
   public void setIsDbMoved(boolean isDbMoved) throws IOException {
+    if (isDryRun()) {
+      log.debug("Not setting isDbMoved in dry run mode");
+      return;
+    }
     if (isMigrationInDebugMode()) {
       log.debug("Not setting isDbMoved because in debug mode");
       return;
