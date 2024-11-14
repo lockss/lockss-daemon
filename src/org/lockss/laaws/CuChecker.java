@@ -39,7 +39,6 @@ public class CuChecker extends CuBase {
                       v2Url + ", continuing.");
         }
       }
-      ctrs.add(CounterType.URLS_VERIFIED, mappedCus.keySet().size());
     } finally {
       for (CachedUrl cu : mappedCus.values()) {
         AuUtil.safeRelease(cu);
@@ -83,7 +82,9 @@ public class CuChecker extends CuBase {
           CachedUrl v1Version = localVersions.get(ver);
           Artifact v2Artifact = v2Artifacts.get(ver);
           compareCuToArtifact(v1Version, v2Artifact, ver + 1);
+          ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
         }
+        ctrs.incr(CounterType.URLS_VERIFIED);
       }
     }
     catch (Exception ex) {
