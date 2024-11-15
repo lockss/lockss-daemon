@@ -19,7 +19,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/igroupnet-released/
 
     au < readySource ; finished ; 2023 ; IG Publishing Books Source Content 2023 ; 2023 >
-    au < ready ; exists ; 2024 ; IG Publishing Books Source Content 2024 ; 2024 >
+    au < readySource ; crawling ; 2024 ; IG Publishing Books Source Content 2024 ; 2024 >
 
     }
     {
