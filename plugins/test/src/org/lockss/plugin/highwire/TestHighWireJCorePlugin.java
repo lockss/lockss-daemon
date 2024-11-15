@@ -392,7 +392,8 @@ public class TestHighWireJCorePlugin extends LockssTestCase {
   
   static final String HW_EXCLUDE_FROM_POLLS_REGEXP[] = 
     {
-        "^https?(?!.*/highwire/filestream/.*)(?!.*\\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$",
+        //2024 update - we want to now compare other pages besides the pdfs so removing the first regex
+        //"^https?(?!.*/highwire/filestream/.*)(?!.*\\.pdf)(?!.*/content/[^/]+/suppl/.*)|html$",
         "^https?(.+)/twi[ls]\\.",
         "^https?(.+)/findings\\.",
     };
@@ -412,9 +413,12 @@ public class TestHighWireJCorePlugin extends LockssTestCase {
     // make sure that's the regexp that will match to the expected url string
     // this also tests the regexp (which is the same) for the exclude from poll map
     // Add to pattern these urls? Has not been seen as problem, yet
+
+    //2024 update - regex was removed from excluded poll URLs so
+    //this test no longer applies
     
     List <String> excludeList = ListUtil.list(
-        ROOT_URL + "clockss-manifest/vol_114_manifest.html",
+        /*ROOT_URL + "clockss-manifest/vol_114_manifest.html",
         ROOT_URL + "content/114/1",
         ROOT_URL + "content/114/1/1",
         ROOT_URL + "content/114/1/1.e-letters",
@@ -460,7 +464,7 @@ public class TestHighWireJCorePlugin extends LockssTestCase {
         "http://egbdf.cloudfront.net/sites/default/files/cdn/css/http/css_C66gTr00v8C78pnyy16Gmr-Q8G3lCnOnByxK8F8i-nc_highwire.style.highwire.css.css",
         "http://egbdf.cloudfront.net/sites/default/files/favicon_1.ico",
         "http://egbdf.cloudfront.net/sites/default/files/highwire/foo/114/10/1451/F2/embed/mml-math-14.gif",
-        "http://egbdf.cloudfront.net/sites/default/files/js/js_-dUp1-d3TYhpxjvks0wAgzk3N1TNQRUoPuOh6OaYUig.js"
+        "http://egbdf.cloudfront.net/sites/default/files/js/js_-dUp1-d3TYhpxjvks0wAgzk3N1TNQRUoPuOh6OaYUig.js"*/
         );
     
     Pattern p0 = Pattern.compile(HW_EXCLUDE_FROM_POLLS_REGEXP[0]);
