@@ -1619,12 +1619,12 @@ public class V2AuMover {
     try {
       log.info("Checking V2 Repository Status");
       repoStatus = repoStatusApiClient.getStatus();
-      if (!repoStatus.getReady()) {
+      if (repoStatus == null || !repoStatus.getReady()) {
         throw new IOException("V2 Repository Service is not ready");
       }
       log.info("Checking V2 Configuration Status");
       cfgStatus = cfgStatusApiClient.getStatus();
-      if (!cfgStatus.getReady()) {
+      if (cfgStatus == null || !cfgStatus.getReady()) {
         throw new IOException("V2 Configuration Service is not ready");
       }
     } catch (Exception e) {
@@ -1637,7 +1637,8 @@ public class V2AuMover {
   }
 
   public String getRepoSvcVersion() {
-    return repoStatus.getLockssVersion();
+    return repoStatus != null ?
+      repoStatus.getLockssVersion() : "Unknown version";
   }
 
   public String getLocalVersion() {
