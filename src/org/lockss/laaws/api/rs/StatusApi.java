@@ -115,7 +115,7 @@ public class StatusApi {
     } else {
       basePath = null;
     }
-    log.critical("basePath: " + basePath);
+    log.debug2("basePath: " + basePath);
 
     Object localVarPostBody = null;
 
@@ -142,7 +142,7 @@ public class StatusApi {
     }
 
     String[] localVarAuthNames = new String[] {"basicAuth"};
-    log.critical("basePath2: " + basePath);
+    log.debug2("basePath2: " + basePath);
     return apiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams,
         localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams,
         localVarFormParams, localVarAuthNames, _callback);
