@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -109,6 +109,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_crawlrules</string>
         <list>
+            <string>1,"https://code.jquery.com/(ui/[^/]+/)?jquery[^/]+\.js"</string>
+            <string>1,"^%scdn-cgi/scripts/",base_url</string>
             <string>4,"^%s", base_url</string>
             <string>2,"^%sarticle/search$", base_url</string>
             <string>1, "^%slockss-manifest?volume=%s", base_url, volume_name</string>
@@ -116,6 +118,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <!--volumes 12 and later have slightly different issue url pattern-->
             <string>1, "^%sissue/vol-%s-issue", base_url, volume_name</string>
             <string>1, "^%s(storage/(files|models)/)?article/.*(\.pdf)?", base_url</string>
+            <string>1, "^%sassets", base_url</string>
         </list>
     </entry>
     <entry>
@@ -160,6 +163,12 @@ POSSIBILITY OF SUCH DAMAGE.
           <string>org.lockss.plugin.archivepp.ArchivesPharmacyPracticeRisMetadataExtractorFactory</string>
         </entry>
       </map>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>code\.jquery\.com</string>
+        </list>
     </entry>
       <entry>
           <string>au_def_pause_time</string>
