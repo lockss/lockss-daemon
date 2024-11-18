@@ -78,6 +78,7 @@
 
     title <
       name = Advances in Nutrition ;
+      issn = 2161-8313 ;
       eissn = 2156-5376 ;
       issnl = 2161-8313
     >
@@ -17164,6 +17165,21 @@
       au < manifest ; 2024 ; 2024 ; Plant Physiology Volume 194-196 ; 194-196 >
 
     }
+
+  {
+
+    title <
+      name = PNAS Nexus ;
+      eissn = 2752-6542
+    >
+
+    param[journal_id] = pnasnexus
+
+    au < exists ; 2022 ; 2022 ; PNAS Nexus Volume 1 ; 1 >
+    au < exists ; 2023 ; 2023 ; PNAS Nexus Volume 2 ; 2 >
+    au < exists ; 2024 ; 2024 ; PNAS Nexus Volume 3 ; 3 >
+
+  }
 
   {
 
