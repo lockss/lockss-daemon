@@ -446,15 +446,15 @@
 
     param[collection_id] = CPRT
 
-    au < releasing ; 1923 ; Congressional Committee Prints 1923 ; 1923 ; https://www.govinfo.gov/ >
+    au < released ; 1923 ; Congressional Committee Prints 1923 ; 1923 ; https://www.govinfo.gov/ >
     au < manifest ; 1941 ; Congressional Committee Prints 1941 ; 1941 ; https://www.govinfo.gov/ >
     au < manifest ; 1944 ; Congressional Committee Prints 1944 ; 1944 ; https://www.govinfo.gov/ >
-    au < releasing ; 1949 ; Congressional Committee Prints 1949 ; 1949 ; https://www.govinfo.gov/ >
-    au < releasing ; 1950 ; Congressional Committee Prints 1950 ; 1950 ; https://www.govinfo.gov/ >
+    au < released ; 1949 ; Congressional Committee Prints 1949 ; 1949 ; https://www.govinfo.gov/ >
+    au < released ; 1950 ; Congressional Committee Prints 1950 ; 1950 ; https://www.govinfo.gov/ >
     au < released ; 1951 ; Congressional Committee Prints 1951 ; 1951 ; https://www.govinfo.gov/ >
-    au < releasing ; 1952 ; Congressional Committee Prints 1952 ; 1952 ; https://www.govinfo.gov/ >
-    au < releasing ; 1953 ; Congressional Committee Prints 1953 ; 1953 ; https://www.govinfo.gov/ >
-    au < releasing ; 1954 ; Congressional Committee Prints 1954 ; 1954 ; https://www.govinfo.gov/ >
+    au < released ; 1952 ; Congressional Committee Prints 1952 ; 1952 ; https://www.govinfo.gov/ >
+    au < released ; 1953 ; Congressional Committee Prints 1953 ; 1953 ; https://www.govinfo.gov/ >
+    au < released ; 1954 ; Congressional Committee Prints 1954 ; 1954 ; https://www.govinfo.gov/ >
     au < released ; 1955 ; Congressional Committee Prints 1955 ; 1955 ; https://www.govinfo.gov/ >
     au < released ; 1956 ; Congressional Committee Prints 1956 ; 1956 ; https://www.govinfo.gov/ >
     au < released ; 1957 ; Congressional Committee Prints 1957 ; 1957 ; https://www.govinfo.gov/ >
@@ -494,8 +494,8 @@
     au < released ; 1970 ; Congressional Committee Prints 1970 ; 1970 ; https://www.govinfo.gov/ >
     au < released ; 1981 ; Congressional Committee Prints 1981 ; 1981 ; https://www.govinfo.gov/ >
     au < released ; 1982 ; Congressional Committee Prints 1982 ; 1982 ; https://www.govinfo.gov/ >
-    au < releasing ; 1986 ; Congressional Committee Prints 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < releasing ; 1987 ; Congressional Committee Prints 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < released ; 1986 ; Congressional Committee Prints 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < released ; 1987 ; Congressional Committee Prints 1987 ; 1987 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1487,7 +1487,7 @@
     au < released ; 1915 ; U.S. Congressional Serial Set 1915 ; 1915 ; https://www.govinfo.gov/ >
     au < released ; 1916 ; U.S. Congressional Serial Set 1916 ; 1916 ; https://www.govinfo.gov/ >
     au < released ; 1917 ; U.S. Congressional Serial Set 1917 ; 1917 ; https://www.govinfo.gov/ >
-    au < releasing ; 1918 ; U.S. Congressional Serial Set 1918 ; 1918 ; https://www.govinfo.gov/ >
+    au < released ; 1918 ; U.S. Congressional Serial Set 1918 ; 1918 ; https://www.govinfo.gov/ >
     au < released ; 1919 ; U.S. Congressional Serial Set 1919 ; 1919 ; https://www.govinfo.gov/ >
     au < released ; 1920 ; U.S. Congressional Serial Set 1920 ; 1920 ; https://www.govinfo.gov/ >
     au < released ; 1921 ; U.S. Congressional Serial Set 1921 ; 1921 ; https://www.govinfo.gov/ >
@@ -1502,7 +1502,7 @@
     au < released ; 1937 ; U.S. Congressional Serial Set 1937 ; 1937 ; https://www.govinfo.gov/ >
     au < released ; 1938 ; U.S. Congressional Serial Set 1938 ; 1938 ; https://www.govinfo.gov/ >
     au < released ; 1939 ; U.S. Congressional Serial Set 1939 ; 1939 ; https://www.govinfo.gov/ >
-    au < releasing ; 1942 ; U.S. Congressional Serial Set 1942 ; 1942 ; https://www.govinfo.gov/ >
+    au < released ; 1942 ; U.S. Congressional Serial Set 1942 ; 1942 ; https://www.govinfo.gov/ >
     au < released ; 1943 ; U.S. Congressional Serial Set 1943 ; 1943 ; https://www.govinfo.gov/ >
     au < released ; 1944 ; U.S. Congressional Serial Set 1944 ; 1944 ; https://www.govinfo.gov/ >
     au < released ; 1945 ; U.S. Congressional Serial Set 1945 ; 1945 ; https://www.govinfo.gov/ >
@@ -1525,29 +1525,29 @@
     au < released ; 1964 ; U.S. Congressional Serial Set 1964 ; 1964 ; https://www.govinfo.gov/ >
     au < released ; 1965 ; U.S. Congressional Serial Set 1965 ; 1965 ; https://www.govinfo.gov/ >
     au < released ; 1966 ; U.S. Congressional Serial Set 1966 ; 1966 ; https://www.govinfo.gov/ >
-    au < releasing ; 1967 ; U.S. Congressional Serial Set 1967 ; 1967 ; https://www.govinfo.gov/ >
-    au < releasing ; 1968 ; U.S. Congressional Serial Set 1968 ; 1968 ; https://www.govinfo.gov/ >
-    au < releasing ; 1969 ; U.S. Congressional Serial Set 1969 ; 1969 ; https://www.govinfo.gov/ >
-    au < releasing ; 1970 ; U.S. Congressional Serial Set 1970 ; 1970 ; https://www.govinfo.gov/ >
+    au < released ; 1967 ; U.S. Congressional Serial Set 1967 ; 1967 ; https://www.govinfo.gov/ >
+    au < released ; 1968 ; U.S. Congressional Serial Set 1968 ; 1968 ; https://www.govinfo.gov/ >
+    au < released ; 1969 ; U.S. Congressional Serial Set 1969 ; 1969 ; https://www.govinfo.gov/ >
+    au < released ; 1970 ; U.S. Congressional Serial Set 1970 ; 1970 ; https://www.govinfo.gov/ >
     au < released ; 1971 ; U.S. Congressional Serial Set 1971 ; 1971 ; https://www.govinfo.gov/ >
     au < released ; 1972 ; U.S. Congressional Serial Set 1972 ; 1972 ; https://www.govinfo.gov/ >
-    au < releasing ; 1973 ; U.S. Congressional Serial Set 1973 ; 1973 ; https://www.govinfo.gov/ >
+    au < released ; 1973 ; U.S. Congressional Serial Set 1973 ; 1973 ; https://www.govinfo.gov/ >
     au < released ; 1974 ; U.S. Congressional Serial Set 1974 ; 1974 ; https://www.govinfo.gov/ >
-    au < releasing ; 1975 ; U.S. Congressional Serial Set 1975 ; 1975 ; https://www.govinfo.gov/ >
-    au < releasing ; 1979 ; U.S. Congressional Serial Set 1979 ; 1979 ; https://www.govinfo.gov/ >
+    au < released ; 1975 ; U.S. Congressional Serial Set 1975 ; 1975 ; https://www.govinfo.gov/ >
+    au < released ; 1979 ; U.S. Congressional Serial Set 1979 ; 1979 ; https://www.govinfo.gov/ >
     au < manifest ; 1981 ; U.S. Congressional Serial Set 1981 ; 1981 ; https://www.govinfo.gov/ >
-    au < releasing ; 1982 ; U.S. Congressional Serial Set 1982 ; 1982 ; https://www.govinfo.gov/ >
-    au < releasing ; 1983 ; U.S. Congressional Serial Set 1983 ; 1983 ; https://www.govinfo.gov/ >
-    au < releasing ; 1984 ; U.S. Congressional Serial Set 1984 ; 1984 ; https://www.govinfo.gov/ >
+    au < released ; 1982 ; U.S. Congressional Serial Set 1982 ; 1982 ; https://www.govinfo.gov/ >
+    au < released ; 1983 ; U.S. Congressional Serial Set 1983 ; 1983 ; https://www.govinfo.gov/ >
+    au < released ; 1984 ; U.S. Congressional Serial Set 1984 ; 1984 ; https://www.govinfo.gov/ >
     au < manifest ; 1985 ; U.S. Congressional Serial Set 1985 ; 1985 ; https://www.govinfo.gov/ >
-    au < releasing ; 1986 ; U.S. Congressional Serial Set 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < releasing ; 1987 ; U.S. Congressional Serial Set 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < releasing ; 1988 ; U.S. Congressional Serial Set 1988 ; 1988 ; https://www.govinfo.gov/ >
-    au < releasing ; 1989 ; U.S. Congressional Serial Set 1989 ; 1989 ; https://www.govinfo.gov/ >
-    au < releasing ; 1990 ; U.S. Congressional Serial Set 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < releasing ; 1991 ; U.S. Congressional Serial Set 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < releasing ; 1992 ; U.S. Congressional Serial Set 1992 ; 1992 ; https://www.govinfo.gov/ >
-    au < releasing ; 1993 ; U.S. Congressional Serial Set 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < released ; 1986 ; U.S. Congressional Serial Set 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < released ; 1987 ; U.S. Congressional Serial Set 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < released ; 1988 ; U.S. Congressional Serial Set 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < released ; 1989 ; U.S. Congressional Serial Set 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < released ; 1990 ; U.S. Congressional Serial Set 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < released ; 1991 ; U.S. Congressional Serial Set 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < released ; 1992 ; U.S. Congressional Serial Set 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < released ; 1993 ; U.S. Congressional Serial Set 1993 ; 1993 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1572,7 +1572,7 @@
     au < released ; 2021 ; United States Code 2021 ; 2021 ; https://www.govinfo.gov/ >
 
     au < released ; 2022 ; USCODE 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < releasing ; 2023 ; USCODE 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; USCODE 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1621,65 +1621,65 @@
     param[collection_id] = STATUTE
 
 
-    au < releasing ; 1845 ; STATUTE 1845 ; 1845 ; https://www.govinfo.gov/ >
-    au < releasing ; 1851 ; STATUTE 1851 ; 1851 ; https://www.govinfo.gov/ >
-    au < releasing ; 1855 ; STATUTE 1855 ; 1855 ; https://www.govinfo.gov/ >
+    au < released ; 1845 ; STATUTE 1845 ; 1845 ; https://www.govinfo.gov/ >
+    au < released ; 1851 ; STATUTE 1851 ; 1851 ; https://www.govinfo.gov/ >
+    au < released ; 1855 ; STATUTE 1855 ; 1855 ; https://www.govinfo.gov/ >
     au < released ; 1859 ; STATUTE 1859 ; 1859 ; https://www.govinfo.gov/ >
-    au < releasing ; 1863 ; STATUTE 1863 ; 1863 ; https://www.govinfo.gov/ >
-    au < releasing ; 1865 ; STATUTE 1865 ; 1865 ; https://www.govinfo.gov/ >
-    au < releasing ; 1867 ; STATUTE 1867 ; 1867 ; https://www.govinfo.gov/ >
-    au < releasing ; 1868 ; STATUTE 1868 ; 1868 ; https://www.govinfo.gov/ >
-    au < releasing ; 1871 ; STATUTE 1871 ; 1871 ; https://www.govinfo.gov/ >
-    au < releasing ; 1873 ; STATUTE 1873 ; 1873 ; https://www.govinfo.gov/ >
-    au < releasing ; 1874 ; STATUTE 1874 ; 1874 ; https://www.govinfo.gov/ >
-    au < releasing ; 1877 ; STATUTE 1877 ; 1877 ; https://www.govinfo.gov/ >
-    au < releasing ; 1879 ; STATUTE 1879 ; 1879 ; https://www.govinfo.gov/ >
-    au < releasing ; 1881 ; STATUTE 1881 ; 1881 ; https://www.govinfo.gov/ >
-    au < releasing ; 1883 ; STATUTE 1883 ; 1883 ; https://www.govinfo.gov/ >
-    au < releasing ; 1885 ; STATUTE 1885 ; 1885 ; https://www.govinfo.gov/ >
+    au < released ; 1863 ; STATUTE 1863 ; 1863 ; https://www.govinfo.gov/ >
+    au < released ; 1865 ; STATUTE 1865 ; 1865 ; https://www.govinfo.gov/ >
+    au < released ; 1867 ; STATUTE 1867 ; 1867 ; https://www.govinfo.gov/ >
+    au < released ; 1868 ; STATUTE 1868 ; 1868 ; https://www.govinfo.gov/ >
+    au < released ; 1871 ; STATUTE 1871 ; 1871 ; https://www.govinfo.gov/ >
+    au < released ; 1873 ; STATUTE 1873 ; 1873 ; https://www.govinfo.gov/ >
+    au < released ; 1874 ; STATUTE 1874 ; 1874 ; https://www.govinfo.gov/ >
+    au < released ; 1877 ; STATUTE 1877 ; 1877 ; https://www.govinfo.gov/ >
+    au < released ; 1879 ; STATUTE 1879 ; 1879 ; https://www.govinfo.gov/ >
+    au < released ; 1881 ; STATUTE 1881 ; 1881 ; https://www.govinfo.gov/ >
+    au < released ; 1883 ; STATUTE 1883 ; 1883 ; https://www.govinfo.gov/ >
+    au < released ; 1885 ; STATUTE 1885 ; 1885 ; https://www.govinfo.gov/ >
     au < released ; 1887 ; STATUTE 1887 ; 1887 ; https://www.govinfo.gov/ >
-    au < releasing ; 1889 ; STATUTE 1889 ; 1889 ; https://www.govinfo.gov/ >
-    au < releasing ; 1891 ; STATUTE 1891 ; 1891 ; https://www.govinfo.gov/ >
-    au < releasing ; 1893 ; STATUTE 1893 ; 1893 ; https://www.govinfo.gov/ >
-    au < releasing ; 1895 ; STATUTE 1895 ; 1895 ; https://www.govinfo.gov/ >
-    au < releasing ; 1897 ; STATUTE 1897 ; 1897 ; https://www.govinfo.gov/ >
-    au < releasing ; 1899 ; STATUTE 1899 ; 1899 ; https://www.govinfo.gov/ >
-    au < releasing ; 1901 ; STATUTE 1901 ; 1901 ; https://www.govinfo.gov/ >
-    au < releasing ; 1903 ; STATUTE 1903 ; 1903 ; https://www.govinfo.gov/ >
+    au < released ; 1889 ; STATUTE 1889 ; 1889 ; https://www.govinfo.gov/ >
+    au < released ; 1891 ; STATUTE 1891 ; 1891 ; https://www.govinfo.gov/ >
+    au < released ; 1893 ; STATUTE 1893 ; 1893 ; https://www.govinfo.gov/ >
+    au < released ; 1895 ; STATUTE 1895 ; 1895 ; https://www.govinfo.gov/ >
+    au < released ; 1897 ; STATUTE 1897 ; 1897 ; https://www.govinfo.gov/ >
+    au < released ; 1899 ; STATUTE 1899 ; 1899 ; https://www.govinfo.gov/ >
+    au < released ; 1901 ; STATUTE 1901 ; 1901 ; https://www.govinfo.gov/ >
+    au < released ; 1903 ; STATUTE 1903 ; 1903 ; https://www.govinfo.gov/ >
     au < released ; 1905 ; STATUTE 1905 ; 1905 ; https://www.govinfo.gov/ >
-    au < releasing ; 1907 ; STATUTE 1907 ; 1907 ; https://www.govinfo.gov/ >
+    au < released ; 1907 ; STATUTE 1907 ; 1907 ; https://www.govinfo.gov/ >
     au < released ; 1909 ; STATUTE 1909 ; 1909 ; https://www.govinfo.gov/ >
-    au < releasing ; 1911 ; STATUTE 1911 ; 1911 ; https://www.govinfo.gov/ >
-    au < releasing ; 1913 ; STATUTE 1913 ; 1913 ; https://www.govinfo.gov/ >
-    au < releasing ; 1915 ; STATUTE 1915 ; 1915 ; https://www.govinfo.gov/ >
-    au < releasing ; 1917 ; STATUTE 1917 ; 1917 ; https://www.govinfo.gov/ >
-    au < releasing ; 1919 ; STATUTE 1919 ; 1919 ; https://www.govinfo.gov/ >
-    au < releasing ; 1921 ; STATUTE 1921 ; 1921 ; https://www.govinfo.gov/ >
-    au < releasing ; 1923 ; STATUTE 1923 ; 1923 ; https://www.govinfo.gov/ >
-    au < releasing ; 1925 ; STATUTE 1925 ; 1925 ; https://www.govinfo.gov/ >
+    au < released ; 1911 ; STATUTE 1911 ; 1911 ; https://www.govinfo.gov/ >
+    au < released ; 1913 ; STATUTE 1913 ; 1913 ; https://www.govinfo.gov/ >
+    au < released ; 1915 ; STATUTE 1915 ; 1915 ; https://www.govinfo.gov/ >
+    au < released ; 1917 ; STATUTE 1917 ; 1917 ; https://www.govinfo.gov/ >
+    au < released ; 1919 ; STATUTE 1919 ; 1919 ; https://www.govinfo.gov/ >
+    au < released ; 1921 ; STATUTE 1921 ; 1921 ; https://www.govinfo.gov/ >
+    au < released ; 1923 ; STATUTE 1923 ; 1923 ; https://www.govinfo.gov/ >
+    au < released ; 1925 ; STATUTE 1925 ; 1925 ; https://www.govinfo.gov/ >
     au < released ; 1926 ; STATUTE 1926 ; 1926 ; https://www.govinfo.gov/ >
-    au < releasing ; 1929 ; STATUTE 1929 ; 1929 ; https://www.govinfo.gov/ >
+    au < released ; 1929 ; STATUTE 1929 ; 1929 ; https://www.govinfo.gov/ >
     au < released ; 1931 ; STATUTE 1931 ; 1931 ; https://www.govinfo.gov/ >
     au < released ; 1933 ; STATUTE 1933 ; 1933 ; https://www.govinfo.gov/ >
-    au < releasing ; 1934 ; STATUTE 1934 ; 1934 ; https://www.govinfo.gov/ >
+    au < released ; 1934 ; STATUTE 1934 ; 1934 ; https://www.govinfo.gov/ >
     au < released ; 1936 ; STATUTE 1936 ; 1936 ; https://www.govinfo.gov/ >
-    au < releasing ; 1937 ; STATUTE 1937 ; 1937 ; https://www.govinfo.gov/ >
-    au < releasing ; 1938 ; STATUTE 1938 ; 1938 ; https://www.govinfo.gov/ >
-    au < releasing ; 1939 ; STATUTE 1939 ; 1939 ; https://www.govinfo.gov/ >
+    au < released ; 1937 ; STATUTE 1937 ; 1937 ; https://www.govinfo.gov/ >
+    au < released ; 1938 ; STATUTE 1938 ; 1938 ; https://www.govinfo.gov/ >
+    au < released ; 1939 ; STATUTE 1939 ; 1939 ; https://www.govinfo.gov/ >
     au < released ; 1941 ; STATUTE 1941 ; 1941 ; https://www.govinfo.gov/ >
     au < released ; 1942 ; STATUTE 1942 ; 1942 ; https://www.govinfo.gov/ >
-    au < releasing ; 1943 ; STATUTE 1943 ; 1943 ; https://www.govinfo.gov/ >
-    au < releasing ; 1944 ; STATUTE 1944 ; 1944 ; https://www.govinfo.gov/ >
-    au < releasing ; 1945 ; STATUTE 1945 ; 1945 ; https://www.govinfo.gov/ >
-    au < releasing ; 1946 ; STATUTE 1946 ; 1946 ; https://www.govinfo.gov/ >
-    au < releasing ; 1947 ; STATUTE 1947 ; 1947 ; https://www.govinfo.gov/ >
-    au < releasing ; 1948 ; STATUTE 1948 ; 1948 ; https://www.govinfo.gov/ >
-    au < releasing ; 1949 ; STATUTE 1949 ; 1949 ; https://www.govinfo.gov/ >
+    au < released ; 1943 ; STATUTE 1943 ; 1943 ; https://www.govinfo.gov/ >
+    au < released ; 1944 ; STATUTE 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < released ; 1945 ; STATUTE 1945 ; 1945 ; https://www.govinfo.gov/ >
+    au < released ; 1946 ; STATUTE 1946 ; 1946 ; https://www.govinfo.gov/ >
+    au < released ; 1947 ; STATUTE 1947 ; 1947 ; https://www.govinfo.gov/ >
+    au < released ; 1948 ; STATUTE 1948 ; 1948 ; https://www.govinfo.gov/ >
+    au < released ; 1949 ; STATUTE 1949 ; 1949 ; https://www.govinfo.gov/ >
 
     au < manifest ; 2016 ; STATUTE 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; STATUTE 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; STATUTE 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < releasing ; 2019 ; STATUTE 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < released ; 2019 ; STATUTE 2019 ; 2019 ; https://www.govinfo.gov/ >
 
     au < doNotProcess ; 2012 ; United States Statutes at Large 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; United States Statutes at Large 2013 ; 2013 ; https://www.govinfo.gov/ >
