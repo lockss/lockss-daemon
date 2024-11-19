@@ -81,6 +81,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/lockss\?vid=\d+$", url_host(base_url)</string>
       <string>1,"^https?://%s/issue/\d+(/image/.+)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/article/\d+(/(pdf|pdfimage|summary|(figure|image|inline)/.+))?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/css", url_host(base_url)</string>
     </list>
   </entry>
   <!-- Some volume numbers are now 4-digit years, but this works -->  
