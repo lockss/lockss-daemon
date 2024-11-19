@@ -85,7 +85,7 @@ public class HttpToHttpsUrlConsumer extends SimpleUrlConsumer {
    * @see AuUtil#isBaseUrlHttp(ArchivalUnit)
    */
   public boolean shouldStoreAtOrigUrl() {
-    log.info("inside shouldStore at Orig Url");
+    log.debug2("inside shouldStore at Orig Url");
     boolean should = AuUtil.isBaseUrlHttp(au)
            && fud.redirectUrls != null
            && fud.redirectUrls.size() == 1
@@ -93,7 +93,7 @@ public class HttpToHttpsUrlConsumer extends SimpleUrlConsumer {
            && UrlUtil.isHttpUrl(fud.origUrl)
            && UrlUtil.isHttpsUrl(fud.fetchUrl)
            && UrlUtil.stripProtocol(fud.origUrl).equals(UrlUtil.stripProtocol(fud.fetchUrl));
-    log.info("should store at Orig? : " + should);
+    log.debug2("should store at Orig? : " + should);
     return should;
   }
   
