@@ -32,14 +32,21 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.highwire;
 
+import java.io.IOException;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.html.HtmlCompoundTransform;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.filter.html.HtmlTransform;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.FilterFactory;
 import org.lockss.util.Logger;
@@ -68,7 +75,43 @@ public class HighWireJCoreHashFilterFactory implements FilterFactory{
             
             HtmlNodeFilters.comment()
         };
-        return new HtmlFilterInputStream(inputstream, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
+        HtmlTransform xform = new HtmlTransform() {
+            @Override
+            public NodeList transform(NodeList nodeList) throws IOException {
+                try {
+                    nodeList.visitAllNodesWith(new NodeVisitor() {
+                        @Override
+                        public void visitTag(Tag tag) {
+                            String name = tag.getTagName().toLowerCase();
+                            if ("a".equals(name)) {
+                                String val = tag.getAttribute("rel");
+                                if (val != null) {
+                                    tag.removeAttribute("rel");
+                                }
+                                return;
+                            }
+                            if ("div".equals(name)) {
+                                String val = tag.getAttribute("id");
+                                if (val != null) {
+                                    tag.removeAttribute("id");
+                                }
+                                return;
+                            }
+                        }
+                    });
+                    return nodeList;
+                }
+                catch (ParserException pe) {
+                    throw new IOException(pe);
+                }
+            }
+        };
+      // First filter with HtmlParser
+      InputStream filtered = new HtmlFilterInputStream(inputstream,
+      encoding, new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
+                                xform));
+        return filtered;
     }
     
 }
