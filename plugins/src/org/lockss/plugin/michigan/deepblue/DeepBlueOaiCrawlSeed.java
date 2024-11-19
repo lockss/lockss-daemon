@@ -40,6 +40,7 @@ import org.dspace.xoai.serviceprovider.model.Context;
 import org.dspace.xoai.serviceprovider.model.Context.KnownTransformer;
 import org.dspace.xoai.serviceprovider.parameters.ListRecordsParameters;
 import org.dspace.xoai.services.api.MetadataSearch;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
@@ -64,6 +65,8 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
   protected Pattern yearPattern = Pattern.compile("^([0-9]{4})");
   public static final String OAI_DC_METADATA_PREFIX = "oai_dc";
   public static final String XOAI_METADATA_PREFIX = "xoai";
+
+  protected String au_oai_set = null;
   private static Logger logger =
 	      Logger.getLogger(DeepBlueOaiCrawlSeed.class);
 
@@ -258,6 +261,8 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
     super(cf);
     setMetadataPrefix(XOAI_METADATA_PREFIX);
     setUrlPostfix("dspace-oai/request");
+
+    au_oai_set = au.getConfiguration().get("au_oai_set");
   }
 
   @Override
@@ -290,7 +295,7 @@ public class DeepBlueOaiCrawlSeed extends RecordFilteringOaiPmhCrawlSeed {
 
       String url = UrlUtil.encodeUrl(au.getAuId());
 
-      String storeUrl = baseUrl + "auid=" + UrlUtil.encodeUrl(au.getAuId());
+      String storeUrl = String.format("%slockss?au_oai_set=%s", baseUrl, au_oai_set);
 
       logger.debug3("baseUrl = " + baseUrl + ", url = " + url + ", storeUrl = " + storeUrl);
 

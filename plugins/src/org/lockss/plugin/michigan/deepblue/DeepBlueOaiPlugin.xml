@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -133,6 +133,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
       https://deepblue.lib.umich.edu/bitstream/handle/2027.42/41253/Vol%2031%20No%206%20Final.pdf?sequence=1&isAllowed=y -->
       <string>1,"^https?://%s/bitstream/handle/.*\.pdf", url_host(base_url)</string>
+      <string>1, "%sdspace-oai/request?verb=ListRecords&amp;set=%s&amp;metadataPrefix=xoai", base_url, au_oai_set</string>
+      <string>1, "%sauid=", base_url</string>
+      <string>1, "%slockss?au_oai_set=%s", base_url, au_oai_set</string>
     </list>
   </entry>
   <entry>
@@ -144,7 +147,8 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_start_url</string>
     <!-- https://deepblue.lib.umich.edu/dspace-oai/request?verb=ListRecords&set=col_2027.42_41251&metadataPrefix=xoai -->
-    <string>"%sdspace-oai/request?verb=ListRecords&amp;set=%s&amp;metadataPrefix=xoai", base_url, au_oai_set</string>
+    <!--<string>"%sdspace-oai/request?verb=ListRecords&amp;set=%s&amp;metadataPrefix=xoai", base_url, au_oai_set</string>-->
+    <string>"%slockss?au_oai_set=%s", base_url, au_oai_set</string>
   </entry>
   <entry>
     <string>plugin_crawl_seed_factory</string>
