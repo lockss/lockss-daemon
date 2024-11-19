@@ -222,6 +222,8 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_permitted_host_pattern</string>
         <list>
             <string>.+\.glencoesoftware\.com</string>
+            <string>fonts\.googleapis\.com</string>
+            <string>fonts\.gstatic\.com</string>
         </list>
     </entry>
 </map>
