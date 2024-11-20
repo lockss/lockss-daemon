@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -190,6 +190,10 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"/i/[^.?]+[.](gif|jpe?g|png)$", 0</string>
       <string>"/auid=.*$", 0</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.lbnl.NamesforLifeHtmlLinkRewriterFactory</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
