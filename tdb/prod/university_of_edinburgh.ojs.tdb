@@ -74,7 +74,7 @@
       au < released ; 2005 ; 1 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2005 ; 2005 >
       au < manifest ; 2006 ; 2 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2006 ; 2006 >
       au < manifest ; 2007 ; 3 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2007 ; 2007 >
-      au < ready ; 2008 ; 4 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2008 ; 2008 >
+      au < releasing ; 2008 ; 4 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2008 ; 2008 >
       au < manifest ; 2009 ; 5 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2009 ; 2009 >
       au < released ; 2010 ; 6 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2010 ; 2010 >
       au < released ; 2011 ; 7 ; FORUM: University of Edinburgh Postgraduate Journal of Culture & the Arts Volume 2011 ; 2011 >
@@ -128,7 +128,7 @@
     
     au < released ; 2019 ; 2019 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2019 ; 2019 >
     au < released ; 2020 ; 2020 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2020 ; 2020 >
-    au < ready ; 2021 ; 2021 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2021 ; 2021 >
+    au < releasing ; 2021 ; 2021 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2021 ; 2021 >
     au < released ; 2022 ; 2022 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2022 ; 2022 >
     au < released ; 2023 ; 2023 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2023 ; 2023 >
     au < expected ; 2024 ; 2024 ; IUPHAR/BPS Guide to Pharmacology CITE Volume 2024 ; 2024 >
@@ -145,16 +145,16 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = lithicstudies
 
-      au < ready ; 2014 ; 1 ; Journal of Lithic Studies Volume 2014 ; 2014 >
+      au < releasing ; 2014 ; 1 ; Journal of Lithic Studies Volume 2014 ; 2014 >
       au < released ; 2015 ; 2 ; Journal of Lithic Studies Volume 2015 ; 2015 >
       au < released ; 2016 ; 3 ; Journal of Lithic Studies Volume 2016 ; 2016 >
-      au < ready ; 2017 ; 4 ; Journal of Lithic Studies Volume 2017 ; 2017 >
+      au < releasing ; 2017 ; 4 ; Journal of Lithic Studies Volume 2017 ; 2017 >
       au < released ; 2018 ; 5 ; Journal of Lithic Studies Volume 2018 ; 2018 >
       au < released ; 2019 ; 6 ; Journal of Lithic Studies Volume 2019 ; 2019 >
-      au < ready ; 2020 ; 7 ; Journal of Lithic Studies Volume 2020 ; 2020 >
+      au < releasing ; 2020 ; 7 ; Journal of Lithic Studies Volume 2020 ; 2020 >
       au < released ; 2021 ; 8 ; Journal of Lithic Studies Volume 2021 ; 2021 >
       au < released ; 2022 ; 9 ; Journal of Lithic Studies Volume 2022 ; 2022 >
-      au < ready ; 2023 ; 10 ; Journal of Lithic Studies Volume 2023 ; 2023 >
+      au < releasing ; 2023 ; 10 ; Journal of Lithic Studies Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 11 ; Journal of Lithic Studies Volume 2024 ; 2024 >
 
   }
@@ -169,20 +169,20 @@
     param[base_url] = https://journals.ed.ac.uk/
     param[journal_id] = leviathan
     
-    au < ready ; 2010 ; 1 ; Leviathan Volume 2010 ; 2010 >
-    au < ready ; 2011 ; 1-2 ; Leviathan Volume 2011 ; 2011 >
-    au < ready ; 2012 ; 3 ; Leviathan Volume 2012 ; 2012 >
-    au < ready ; 2013 ; 3-4 ; Leviathan Volume 2013 ; 2013 >
-    au < ready ; 2014 ; 4-5 ; Leviathan Volume 2014 ; 2014 >
-    au < ready ; 2015 ; 5 ; Leviathan Volume 2015 ; 2015 >
-    au < ready ; 2016 ; 6-7 ; Leviathan Volume 2016 ; 2016 >
-    au < ready ; 2017 ; 7-8 ; Leviathan Volume 2017 ; 2017 >
-    au < ready ; 2018 ; 8 ; Leviathan Volume 2018 ; 2018 >
+    au < releasing ; 2010 ; 1 ; Leviathan Volume 2010 ; 2010 >
+    au < releasing ; 2011 ; 1-2 ; Leviathan Volume 2011 ; 2011 >
+    au < releasing ; 2012 ; 3 ; Leviathan Volume 2012 ; 2012 >
+    au < releasing ; 2013 ; 3-4 ; Leviathan Volume 2013 ; 2013 >
+    au < releasing ; 2014 ; 4-5 ; Leviathan Volume 2014 ; 2014 >
+    au < releasing ; 2015 ; 5 ; Leviathan Volume 2015 ; 2015 >
+    au < releasing ; 2016 ; 6-7 ; Leviathan Volume 2016 ; 2016 >
+    au < releasing ; 2017 ; 7-8 ; Leviathan Volume 2017 ; 2017 >
+    au < releasing ; 2018 ; 8 ; Leviathan Volume 2018 ; 2018 >
     au < released ; 2019 ; 9-10 ; Leviathan Volume 2019 ; 2019 >
-    au < ready ; 2020 ; 10 ; Leviathan Volume 2020 ; 2020 >
-    au < ready ; 2021 ; 11-12 ; Leviathan Volume 2021 ; 2021 >
-    au < ready ; 2022 ; 12-13 ; Leviathan Volume 2022 ; 2022 >
-    au < ready ; 2023 ; 13-14 ; Leviathan Volume 2023 ; 2023 >
+    au < releasing ; 2020 ; 10 ; Leviathan Volume 2020 ; 2020 >
+    au < releasing ; 2021 ; 11-12 ; Leviathan Volume 2021 ; 2021 >
+    au < releasing ; 2022 ; 12-13 ; Leviathan Volume 2022 ; 2022 >
+    au < releasing ; 2023 ; 13-14 ; Leviathan Volume 2023 ; 2023 >
     au < expected ; 2024 ; 14-15 ; Leviathan Volume 2024 ; 2024 >
 
   }
@@ -199,11 +199,11 @@
 
       au < released ; 2015 ; 1 ; Lifespans and Styles Volume 2015 ; 2015 >
       au < released ; 2016 ; 2 ; Lifespans and Styles Volume 2016 ; 2016 >
-      au < ready ; 2017 ; 3 ; Lifespans and Styles Volume 2017 ; 2017 >
+      au < releasing ; 2017 ; 3 ; Lifespans and Styles Volume 2017 ; 2017 >
       au < released ; 2018 ; 4 ; Lifespans and Styles Volume 2018 ; 2018 >
       au < released ; 2019 ; 5 ; Lifespans and Styles Volume 2019 ; 2019 >
       au < released ; 2020 ; 6 ; Lifespans and Styles Volume 2020 ; 2020 >
-      au < ready ; 2021 ; 7 ; Lifespans and Styles Volume 2021 ; 2021 >
+      au < releasing ; 2021 ; 7 ; Lifespans and Styles Volume 2021 ; 2021 >
       au < expected ; 2024 ; 8 ; Lifespans and Styles Volume 2024 ; 2024 >
 
   }
@@ -237,13 +237,13 @@
       param[journal_id] = pihph
 
       au < released ; 2016 ; 1 ; Papers in Historical Phonology Volume 2016 ; 2016 >
-      au < ready ; 2017 ; 2 ; Papers in Historical Phonology Volume 2017 ; 2017 >
+      au < releasing ; 2017 ; 2 ; Papers in Historical Phonology Volume 2017 ; 2017 >
       au < released ; 2018 ; 3 ; Papers in Historical Phonology Volume 2018 ; 2018 >
       au < released ; 2019 ; 4 ; Papers in Historical Phonology Volume 2019 ; 2019 >
       au < released ; 2020 ; 5 ; Papers in Historical Phonology Volume 2020 ; 2020 >
-      au < ready ; 2021 ; 6 ; Papers in Historical Phonology Volume 2021 ; 2021 >
+      au < releasing ; 2021 ; 6 ; Papers in Historical Phonology Volume 2021 ; 2021 >
       au < released ; 2022 ; 7 ; Papers in Historical Phonology Volume 2022 ; 2022 >
-      au < ready ; 2023 ; 8 ; Papers in Historical Phonology Volume 2023 ; 2023 >
+      au < releasing ; 2023 ; 8 ; Papers in Historical Phonology Volume 2023 ; 2023 >
       au < expected ; 2024 ; 9 ; Papers in Historical Phonology Volume 2024 ; 2024 >
 
   }
@@ -258,10 +258,10 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = rethink
 
-      au < ready ; 2018 ; 1 ; re:think - a journal of creative ethnography Volume 2018 ; 2018 >
-      au < ready ; 2019 ; 2 ; re:think - a journal of creative ethnography Volume 2019 ; 2019 >
-      au < ready ; 2021 ; 3 ; re:think - a journal of creative ethnography Volume 2021 ; 2021 >
-      au < ready ; 2023 ; 4 ; re:think - a journal of creative ethnography Volume 2023 ; 2023 >
+      au < releasing ; 2018 ; 1 ; re:think - a journal of creative ethnography Volume 2018 ; 2018 >
+      au < releasing ; 2019 ; 2 ; re:think - a journal of creative ethnography Volume 2019 ; 2019 >
+      au < releasing ; 2021 ; 3 ; re:think - a journal of creative ethnography Volume 2021 ; 2021 >
+      au < releasing ; 2023 ; 4 ; re:think - a journal of creative ethnography Volume 2023 ; 2023 >
       au < expected ; 2024 ; 5 ; re:think - a journal of creative ethnography Volume 2024 ; 2024 >
 
   }
@@ -276,11 +276,11 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = ScottishStudies
 
-      au < ready ; 2006 ; 34 ; Scottish Studies Volume 2006 ; 2006 >
-      au < ready ; 2010 ; 38 ; Scottish Studies Volume 2010 ; 2010 >
-      au < ready ; 2013 ; 41 ; Scottish Studies Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 42 ; Scottish Studies Volume 2014 ; 2014 >
-      au < ready ; 2018 ; 46 ; Scottish Studies Volume 2018 ; 2018 >
+      au < releasing ; 2006 ; 34 ; Scottish Studies Volume 2006 ; 2006 >
+      au < releasing ; 2010 ; 38 ; Scottish Studies Volume 2010 ; 2010 >
+      au < releasing ; 2013 ; 41 ; Scottish Studies Volume 2013 ; 2013 >
+      au < releasing ; 2014 ; 42 ; Scottish Studies Volume 2014 ; 2014 >
+      au < releasing ; 2018 ; 46 ; Scottish Studies Volume 2018 ; 2018 >
       au < released ; 2022 ; 50 ; Scottish Studies Volume 2022 ; 2022 >
       au < manifest ; 2024 ; 52 ; Scottish Studies Volume 2024 ; 2024 >
 
@@ -296,12 +296,12 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = social-science-protocols
 
-      au < ready ; 2018 ; 1 ; Social Science Protocols Volume 2018 ; 2018 >
-      au < ready ; 2019 ; 2 ; Social Science Protocols Volume 2019 ; 2019 >
-      au < ready ; 2020 ; 3 ; Social Science Protocols Volume 2020 ; 2020 >
-      au < ready ; 2021 ; 4 ; Social Science Protocols Volume 2021 ; 2021 >
-      au < ready ; 2022 ; 5 ; Social Science Protocols Volume 2022 ; 2022 >
-      au < ready ; 2023 ; 6 ; Social Science Protocols Volume 2023 ; 2023 >
+      au < releasing ; 2018 ; 1 ; Social Science Protocols Volume 2018 ; 2018 >
+      au < releasing ; 2019 ; 2 ; Social Science Protocols Volume 2019 ; 2019 >
+      au < releasing ; 2020 ; 3 ; Social Science Protocols Volume 2020 ; 2020 >
+      au < releasing ; 2021 ; 4 ; Social Science Protocols Volume 2021 ; 2021 >
+      au < releasing ; 2022 ; 5 ; Social Science Protocols Volume 2022 ; 2022 >
+      au < releasing ; 2023 ; 6 ; Social Science Protocols Volume 2023 ; 2023 >
       au < expected ; 2024 ; 7 ; Social Science Protocols Volume 2024 ; 2024 >
 
   }
@@ -331,7 +331,7 @@
       au < released ; 2020 ; 11 ; Concept Volume 2020 ; 2020 >
       au < released ; 2021 ; 12 ; Concept Volume 2021 ; 2021 >
       au < released ; 2022 ; 13 ; Concept Volume 2022 ; 2022 >
-      au < ready ; 2023 ; 14 ; Concept Volume 2023 ; 2023 >
+      au < releasing ; 2023 ; 14 ; Concept Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 15 ; Concept Volume 2024 ; 2024 >
 
   }
@@ -370,18 +370,18 @@
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = languageandpsychoanalysis
 
-      au < ready ; 2012 ; 1 ; Language and Psychoanalysis Volume 2012 ; 2012 >
-      au < ready ; 2013 ; 2 ; Language and Psychoanalysis Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 3 ; Language and Psychoanalysis Volume 2014 ; 2014 >
-      au < ready ; 2015 ; 4 ; Language and Psychoanalysis Volume 2015 ; 2015 >
-      au < ready ; 2016 ; 5 ; Language and Psychoanalysis Volume 2016 ; 2016 >
-      au < ready ; 2017 ; 6 ; Language and Psychoanalysis Volume 2017 ; 2017 >
-      au < ready ; 2018 ; 7 ; Language and Psychoanalysis Volume 2018 ; 2018 >
-      au < ready ; 2019 ; 8 ; Language and Psychoanalysis Volume 2019 ; 2019 >
-      au < ready ; 2020 ; 9 ; Language and Psychoanalysis Volume 2020 ; 2020 >
-      au < ready ; 2021 ; 10 ; Language and Psychoanalysis Volume 2021 ; 2021 >
-      au < ready ; 2022 ; 11 ; Language and Psychoanalysis Volume 2022 ; 2022 >
-      au < ready ; 2023 ; 12 ; Language and Psychoanalysis Volume 2023 ; 2023 >
+      au < releasing ; 2012 ; 1 ; Language and Psychoanalysis Volume 2012 ; 2012 >
+      au < releasing ; 2013 ; 2 ; Language and Psychoanalysis Volume 2013 ; 2013 >
+      au < releasing ; 2014 ; 3 ; Language and Psychoanalysis Volume 2014 ; 2014 >
+      au < releasing ; 2015 ; 4 ; Language and Psychoanalysis Volume 2015 ; 2015 >
+      au < releasing ; 2016 ; 5 ; Language and Psychoanalysis Volume 2016 ; 2016 >
+      au < releasing ; 2017 ; 6 ; Language and Psychoanalysis Volume 2017 ; 2017 >
+      au < releasing ; 2018 ; 7 ; Language and Psychoanalysis Volume 2018 ; 2018 >
+      au < releasing ; 2019 ; 8 ; Language and Psychoanalysis Volume 2019 ; 2019 >
+      au < releasing ; 2020 ; 9 ; Language and Psychoanalysis Volume 2020 ; 2020 >
+      au < releasing ; 2021 ; 10 ; Language and Psychoanalysis Volume 2021 ; 2021 >
+      au < releasing ; 2022 ; 11 ; Language and Psychoanalysis Volume 2022 ; 2022 >
+      au < releasing ; 2023 ; 12 ; Language and Psychoanalysis Volume 2023 ; 2023 >
       au < expected ; 2024 ; 13 ; Language and Psychoanalysis Volume 2024 ; 2024 >
 
   }
@@ -395,16 +395,16 @@
     param[base_url] = https://www.medanthrotheory.org/
     param[journal_id] = mat
     
-    au < ready ; 2014 ; 1 ; Medicine Anthropology Theory Volume 2014 ; 2014 >
-    au < ready ; 2015 ; 2 ; Medicine Anthropology Theory Volume 2015 ; 2015 >
-    au < ready ; 2016 ; 3 ; Medicine Anthropology Theory Volume 2016 ; 2016 >
-    au < ready ; 2017 ; 4 ; Medicine Anthropology Theory Volume 2017 ; 2017 >
-    au < ready ; 2018 ; 5 ; Medicine Anthropology Theory Volume 2018 ; 2018 >
-    au < ready ; 2019 ; 6 ; Medicine Anthropology Theory Volume 2019 ; 2019 >
-    au < ready ; 2020 ; 7 ; Medicine Anthropology Theory Volume 2020 ; 2020 >
-    au < ready ; 2021 ; 8 ; Medicine Anthropology Theory Volume 2021 ; 2021 >
-    au < ready ; 2022 ; 9 ; Medicine Anthropology Theory Volume 2022 ; 2022 >
-    au < ready ; 2023 ; 10 ; Medicine Anthropology Theory Volume 2023 ; 2023 >
+    au < releasing ; 2014 ; 1 ; Medicine Anthropology Theory Volume 2014 ; 2014 >
+    au < releasing ; 2015 ; 2 ; Medicine Anthropology Theory Volume 2015 ; 2015 >
+    au < releasing ; 2016 ; 3 ; Medicine Anthropology Theory Volume 2016 ; 2016 >
+    au < releasing ; 2017 ; 4 ; Medicine Anthropology Theory Volume 2017 ; 2017 >
+    au < releasing ; 2018 ; 5 ; Medicine Anthropology Theory Volume 2018 ; 2018 >
+    au < releasing ; 2019 ; 6 ; Medicine Anthropology Theory Volume 2019 ; 2019 >
+    au < releasing ; 2020 ; 7 ; Medicine Anthropology Theory Volume 2020 ; 2020 >
+    au < releasing ; 2021 ; 8 ; Medicine Anthropology Theory Volume 2021 ; 2021 >
+    au < releasing ; 2022 ; 9 ; Medicine Anthropology Theory Volume 2022 ; 2022 >
+    au < releasing ; 2023 ; 10 ; Medicine Anthropology Theory Volume 2023 ; 2023 >
     au < manifest ; 2024 ; 11 ; Medicine Anthropology Theory Volume 2024 ; 2024 >
 
   }
@@ -420,18 +420,18 @@
       param[journal_id] = southasianist
       #This title does not use a journal_id
 
-      au < ready ; 2012 ; 1 ; The South Asianist Journal Volume 2012 ; 2012 >
-      au < ready ; 2013 ; 2 ; The South Asianist Journal Volume 2013 ; 2013 >
-      au < ready ; 2014 ; 3 ; The South Asianist Journal Volume 2014 ; 2014 >
-      au < ready ; 2015 ; 4 ; The South Asianist Journal Volume 2015 ; 2015 >
-      au < ready ; 2016 ; 5 ; The South Asianist Journal Volume 2016 ; 2016 >
-      au < ready ; 2017 ; 6 ; The South Asianist Journal Volume 2017 ; 2017 >
+      au < releasing ; 2012 ; 1 ; The South Asianist Journal Volume 2012 ; 2012 >
+      au < releasing ; 2013 ; 2 ; The South Asianist Journal Volume 2013 ; 2013 >
+      au < releasing ; 2014 ; 3 ; The South Asianist Journal Volume 2014 ; 2014 >
+      au < releasing ; 2015 ; 4 ; The South Asianist Journal Volume 2015 ; 2015 >
+      au < releasing ; 2016 ; 5 ; The South Asianist Journal Volume 2016 ; 2016 >
+      au < releasing ; 2017 ; 6 ; The South Asianist Journal Volume 2017 ; 2017 >
       au < released ; 2018 ; 7 ; The South Asianist Journal Volume 2018 ; 2018 >
       au < doesNotExist ; 2019 ; 8 ; The South Asianist Journal Volume 2019 ; 2019 >
-      au < ready ; 2020 ; 9 ; The South Asianist Journal Volume 2020 ; 2020 >
-      au < ready ; 2021 ; 10 ; The South Asianist Journal Volume 2021 ; 2021 >
+      au < releasing ; 2020 ; 9 ; The South Asianist Journal Volume 2020 ; 2020 >
+      au < releasing ; 2021 ; 10 ; The South Asianist Journal Volume 2021 ; 2021 >
       au < doesNotExist ; 2022 ; 11 ; The South Asianist Journal Volume 2022 ; 2022 >
-      au < ready ; 2023 ; 12 ; The South Asianist Journal Volume 2023 ; 2023 >
+      au < releasing ; 2023 ; 12 ; The South Asianist Journal Volume 2023 ; 2023 >
       au < expected ; 2024 ; 13 ; The South Asianist Journal Volume 2024 ; 2024 >
 
   }
