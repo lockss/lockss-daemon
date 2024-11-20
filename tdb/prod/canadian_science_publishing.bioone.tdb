@@ -20,14 +20,14 @@
       param[journal_id] = canadian-journal-of-animal-science
       #error for accessing https://bioone.org/images/,"403 Forbidden"
       
-      au < releasing ; 2016 ; Canadian Journal of Animal Science Volume 96 ; 2016 >
-      au < releasing ; 2017 ; Canadian Journal of Animal Science Volume 97 ; 2017 >
-      au < releasing ; 2018 ; Canadian Journal of Animal Science Volume 98 ; 2018 >
+      au < released ; 2016 ; Canadian Journal of Animal Science Volume 96 ; 2016 >
+      au < released ; 2017 ; Canadian Journal of Animal Science Volume 97 ; 2017 >
+      au < released ; 2018 ; Canadian Journal of Animal Science Volume 98 ; 2018 >
       au < notReady ; 2019 ; Canadian Journal of Animal Science Volume 99 ; 2019 > #no substance
       au < notReady ; 2020 ; Canadian Journal of Animal Science Volume 100 ; 2020 > #403 Frobidden, https://bioone.org/journals/canadian-journal-of-animal-science/volume-100/issue-3/cjas-2018-0243/Study-on-CHADL-as-a-candidate-gene-for-comb-growth/10.1139/cjas-2018-0243.full
       au < released ; 2021 ; Canadian Journal of Animal Science Volume 101 ; 2021 >
       au < released ; 2022 ; Canadian Journal of Animal Science Volume 102 ; 2022 >
-      au < releasing ; 2023 ; Canadian Journal of Animal Science Volume 103 ; 2023 >
+      au < released ; 2023 ; Canadian Journal of Animal Science Volume 103 ; 2023 >
       au < manifest ; 2024 ; Canadian Journal of Animal Science Volume 104 ; 2024 >
 
   }
