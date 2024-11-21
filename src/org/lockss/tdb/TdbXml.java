@@ -450,13 +450,13 @@ public class TdbXml {
       Title title = au.getTitle();
       if (title != currentTitle) {
         currentTitle = title;
-        escapedTitleName = xmlEscaper.translate(au.getComputedTitle());
         titleIssn = title.getIssn();
         titleEissn = title.getEissn();
         titleIssnl = title.getIssnl();
         titleDoi = title.getDoi();
         titleType = title.getType();
       }
+      escapedTitleName = xmlEscaper.translate(au.getComputedTitle());
       
       /*
        * Per-AU stuff
