@@ -75,6 +75,7 @@ public class Au implements Serializable {
     this(tok);
     this.computedPlugin = other.computedPlugin;
     this.computedPublisher = other.computedPublisher;
+    this.computedTitle = other.computedTitle;
     this.doi = other.doi;
     this.eisbn = other.eisbn;
     this.implicit = other.implicit;
@@ -86,6 +87,7 @@ public class Au implements Serializable {
     this.proxy = other.proxy;
     this.publisherName = other.publisherName;
     this.rights = other.rights;
+    this.titleName = other.titleName;
     if (other.attrsMap != null) {
       this.attrsMap = new HashMap<String, String>(other.attrsMap);
     }
@@ -331,6 +333,13 @@ public class Au implements Serializable {
           return ret;
         }
       } break;
+      case 't': {
+        if (TITLE_NAME.equals(key)) {
+          String ret = titleName;
+          titleName = value;
+          return ret;
+        }
+      } break;
       case 'v': {
         if (VOLUME.equals(key)) {
           String ret = volume;
@@ -524,6 +533,35 @@ public class Au implements Serializable {
       }
     }
     return computedPublisher;
+  }
+  
+  /**
+   * <p>
+   * The AU's computed title (field).
+   * </p>
+   * 
+   * @since 1.78.4
+   */
+  protected String computedTitle = null;
+  
+  /**
+   * <p>
+   * Retrieves the AU's computed title.
+   * </p>
+   * 
+   * @return The AU's computed title.
+   * @since 1.78.4
+   */
+  public String getComputedTitle() {
+    if (computedTitle == null) {
+      if (titleName != null) {
+        computedTitle = titleName;
+      }
+      else {
+        computedTitle = getTitle().getName();
+      }
+    }
+    return computedTitle;
   }
   
   /**
@@ -1306,6 +1344,36 @@ public class Au implements Serializable {
 
   /**
    * <p>
+   * The AU's title name (key).
+   * </p>
+   * 
+   * @since 1.78.4
+   */
+  protected static final String TITLE_NAME = "titleName";
+  
+  /**
+   * <p>
+   * The AU's title name (field).
+   * </p>
+   * 
+   * @since 1.78.4
+   */
+  protected String titleName = null;
+  
+  /**
+   * <p>
+   * Retrieves the AU's title name.
+   * </p>
+   * 
+   * @return The AU's title name.
+   * @since 1.78.4
+   */
+  public String getTitleName() {
+    return titleName;
+  }
+  
+  /**
+   * <p>
    * The AU's volume (key).
    * </p>
    * 
@@ -1399,6 +1467,7 @@ public class Au implements Serializable {
     m.put("au:status", (a) -> a.getStatus());
     m.put("au:status1", (a) -> a.getStatus1());
     m.put("au:status2", (a) -> a.getStatus2());
+    m.put("au:titleName", (a) -> a.getTitleName());
     m.put("au:volume", (a) -> a.getVolume());
     m.put("au:year", (a) -> a.getYear());
     // Title traits
@@ -1435,7 +1504,8 @@ public class Au implements Serializable {
     m.put("status", m.get("au:status"));
     m.put("status1", m.get("au:status1"));
     m.put("status2", m.get("au:status2"));
-    m.put("title", m.get("title:name"));
+    m.put("title", (a) -> a.getComputedTitle());
+    m.put("titleName", m.get("au:titleName"));
     m.put("type", m.get("title:type"));
     m.put("volume", m.get("au:volume"));
     m.put("year", m.get("au:year"));
