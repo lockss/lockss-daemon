@@ -125,6 +125,20 @@
 
     {
     title <
+      name = Freedom Schools: A Journal of Democracy and Community ;
+      issn = 2995-1313 ;
+      eissn = 2995-1321
+
+    >
+
+      attr[journal_id] = 874
+
+      au < manifest ; 2024 ; Freedom Schools: A Journal of Democracy and Community Volume 1 [2024] ; 18834 >
+
+    }
+
+    {
+    title <
       name = Libraries & the Cultural Record ;
       issn = 0894-8631  ;
       eissn = 1534-7591  ;
@@ -394,6 +408,26 @@
 
     }
     
+    {
+    title <
+      name = The Textile Museum Journal ;
+      issn = 0083-7407 ;
+      eissn = 2475-8825
+
+    >
+
+      attr[journal_id] = 883
+
+      au < manifest ; 2017 ; The Textile Museum Journal Volume 44 [2017] ; 19159 >
+      au < manifest ; 2018 ; The Textile Museum Journal Volume 45 [2018] ; 19160 >
+      au < manifest ; 2019 ; The Textile Museum Journal Volume 46 [2019] ; 19161 >
+      au < manifest ; 2020 ; The Textile Museum Journal Volume 47 [2020] ; 19167 >
+      au < manifest ; 2021 ; The Textile Museum Journal Volume 48 [2021] ; 19168 >
+      au < manifest ; 2022 ; The Textile Museum Journal Volume 49 [2022] ; 19169 >
+      au < manifest ; 2023 ; The Textile Museum Journal Volume 50 [2023] ; 19171 >
+
+    }
+
     {
     title <
       name = The Velvet Light Trap ;
