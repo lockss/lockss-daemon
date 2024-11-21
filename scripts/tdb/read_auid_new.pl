@@ -799,7 +799,7 @@ while (my $line = <>) {
         $result = "Redirected";
     } elsif (! defined($man_contents)) {
         $result = "--NOT_DEF--";
-    } elsif ($man_contents !~ m/$oa_tag/si) {
+    } elsif ($man_contents !~ m/$oa_tag/si && $man_contents !~ m/$lockss_tag/si) {
         $result = "--NO_TAG--";
     #Test for link to chapter
     } elsif ($man_contents =~ m/$param{year}/) {
