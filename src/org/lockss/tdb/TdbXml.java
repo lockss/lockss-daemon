@@ -54,7 +54,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.4.0]";
+  public static final String VERSION = "[TdbXml:0.4.1]";
   
   /**
    * <p>
@@ -450,7 +450,7 @@ public class TdbXml {
       Title title = au.getTitle();
       if (title != currentTitle) {
         currentTitle = title;
-        escapedTitleName = xmlEscaper.translate(currentTitle.getName());
+        escapedTitleName = xmlEscaper.translate(au.getComputedTitle());
         titleIssn = title.getIssn();
         titleEissn = title.getEissn();
         titleIssnl = title.getIssnl();
