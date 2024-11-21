@@ -190,6 +190,22 @@
 
     {
     title <
+      name = Journal of Advancement Analytics ;
+      issn = 2693-4442 ;
+      eissn = 2693-4450
+
+    >
+
+      attr[journal_id] = 882
+
+      au < manifest ; 2021 ; Journal of Advancement Analytics Volume 1 [2021] ; 19195 >
+      au < manifest ; 2022 ; Journal of Advancement Analytics Volume 2 [2022] ; 19203 >
+      au < manifest ; 2023 ; Journal of Advancement Analytics Volume 3 [2023] ; 19204 >
+      au < manifest ; 2024 ; Journal of Advancement Analytics Volume 4 [2024] ; 19388 >
+
+    }
+    {
+    title <
       name = Journal of Latin American Geography ;
       issn = 1545-2476  ;
       eissn = 1548-5811  ;
