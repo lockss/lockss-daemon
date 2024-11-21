@@ -206,6 +206,22 @@
 
     {
     title <
+      name = Quebec Studies ;
+      issn = 0737-3759 ;
+      eissn = 2052-1731
+
+    >
+
+      attr[journal_id] = 866
+
+      au < manifest ; 2022 ; Quebec Studies Volume 74 [2022] ; 18740 >
+      au < manifest ; 2023 ; Quebec Studies Volume 76 [2023] ; 18742 >
+      au < manifest ; 2024 ; Quebec Studies Volume 77 [2024] ; 19081 >
+
+    }
+
+    {
+    title <
       name = Romani Studies ;
       issn = 1528-0748  ;
       eissn = 1757-2274  ;
