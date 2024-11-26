@@ -19,6 +19,8 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/jssidoi-released/
 
       au < readySource ; crawling ; 2024 ; Entrepreneurship and Sustainability Center Source Content 2024_01 ; 2024_01 >
+      au < expected ; exists ; 2025 ; Entrepreneurship and Sustainability Center Source Content 2025_01 ; 2025_01 >
+
     }
   }
 
