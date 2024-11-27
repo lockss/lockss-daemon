@@ -25,7 +25,7 @@ perl scripts/tdb/check_usdocs_manifest_pages.pl | sort | uniq > $tpath/list2a #l
 #NOT USCOURTS
 comm -13 $tpath/list1d $tpath/list2a | grep -v 'USCOURTS_' | sed 's/^/    au < manifest ; /' | sed 's/\([A-Z]*\),\([12][67890][0-9][0-9]\)/\2 ; \1 \2 ; \2 ; https:\/\/www.govinfo.gov\/ >/'
 #USCOURTS
-comm -13 $tpath/list1d $tpath/list2a | grep 'USCOURTS_' | grep -v 'USCOURTS_.*,200' | sed 's/^/    au < manifest ; /' | sed 's/\USCOURTS_\([a-zA-Z0-9]*\),\([12][67890][0-9][0-9]\)/\2 ; USCOURTS_\1 \2 ; USCOURTS ; \1 ; \2 >/'
+comm -13 $tpath/list1d $tpath/list2a | grep 'USCOURTS_' | grep -v 'USCOURTS_.*,200' | sed 's/^/    au < manifest ; /' | sed 's/\USCOURTS_\([a-zA-Z0-9]*\),\([12][67890][0-9][0-9]\)/\2 ; USCOURTS_\1 ; USCOURTS_\1 \2 ; USCOURTS ; \1 ; \2 >/'
 
 #output. AUs in the new tdb file, which are not on the website
 echo "**Extra AUs in the new tdb file."
