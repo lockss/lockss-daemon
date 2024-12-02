@@ -4304,7 +4304,7 @@
     au < released ; 2021 ; 2021 ; Current Legal Problems Volume 73 ; 73 >
     au < released ; 2022 ; 2022 ; Current Legal Problems Volume 74 ; 74 >
     au < released ; 2023 ; 2023 ; Current Legal Problems Volume 75 ; 75 >
-    au < expected ; 2024 ; 2024 ; Current Legal Problems Volume 76 ; 76 >
+    au < manifest ; 2024 ; 2024 ; Current Legal Problems Volume 76 ; 76 >
 
   }
 
@@ -17175,9 +17175,9 @@
 
     param[journal_id] = pnasnexus
 
-    au < exists ; 2022 ; 2022 ; PNAS Nexus Volume 1 ; 1 >
-    au < exists ; 2023 ; 2023 ; PNAS Nexus Volume 2 ; 2 >
-    au < exists ; 2024 ; 2024 ; PNAS Nexus Volume 3 ; 3 >
+    au < manifest ; 2022 ; 2022 ; PNAS Nexus Volume 1 ; 1 >
+    au < manifest ; 2023 ; 2023 ; PNAS Nexus Volume 2 ; 2 >
+    au < manifest ; 2024 ; 2024 ; PNAS Nexus Volume 3 ; 3 >
 
   }
 
