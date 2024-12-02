@@ -142,10 +142,10 @@
     param[journal_id] = jswbay 
     
     au < manifest ; exists ; 2019 ; Journal of Sustainable Water in the Built Environment Volume 5 ; 5 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2020 ; Journal of Sustainable Water in the Built Environment Volume 6 ; 6 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2021 ; Journal of Sustainable Water in the Built Environment Volume 7 ; 7 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2022 ; Journal of Sustainable Water in the Built Environment Volume 8 ; 8 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2023 ; Journal of Sustainable Water in the Built Environment Volume 9 ; 9 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2020 ; Journal of Sustainable Water in the Built Environment Volume 6 ; 6 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2021 ; Journal of Sustainable Water in the Built Environment Volume 7 ; 7 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2022 ; Journal of Sustainable Water in the Built Environment Volume 8 ; 8 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2023 ; Journal of Sustainable Water in the Built Environment Volume 9 ; 9 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1215,10 +1215,10 @@
     {
     param[journal_id] = isend6
 
-    au < exists ; exists ; 1979 ; Journal of Civil Engineering Education Volume 105 ; 105 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1980 ; Journal of Civil Engineering Education Volume 106 ; 106 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1981 ; Journal of Civil Engineering Education Volume 107 ; 107 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1982 ; Journal of Civil Engineering Education Volume 108 ; 108 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1979 ; Journal of Civil Engineering Education Volume 105 ; 105 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1980 ; Journal of Civil Engineering Education Volume 106 ; 106 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1981 ; Journal of Civil Engineering Education Volume 107 ; 107 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 1982 ; Journal of Civil Engineering Education Volume 108 ; 108 ; https://ascelibrary.org/ ; >
     }
     {
     param[journal_id] = jpiedn
