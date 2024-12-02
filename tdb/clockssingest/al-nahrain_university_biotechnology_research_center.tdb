@@ -4,7 +4,8 @@
     name = Al-Nahrain University, Biotechnology Research Center ;
     info[contract] = 2024 ;
     info[back] = 2007 ;
-    info[tester] = 8
+    info[tester] = 4
+    #info[tester] = 8 #Change back after plugin testing
   >
 
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
