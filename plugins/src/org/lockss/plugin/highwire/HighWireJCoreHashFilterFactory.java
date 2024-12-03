@@ -72,6 +72,7 @@ public class HighWireJCoreHashFilterFactory implements FilterFactory{
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-article-citation"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "id", "hw-article-author-popups-top-node"),
             HtmlNodeFilters.tagWithAttributeRegex("li", "class", "view-popup"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-languages-select"),
             
             HtmlNodeFilters.comment()
         };
