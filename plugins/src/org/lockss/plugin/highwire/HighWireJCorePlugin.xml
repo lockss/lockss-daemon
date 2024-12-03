@@ -87,8 +87,8 @@ POSSIBILITY OF SUCH DAMAGE.
         cma.CmaDrupalPlugin.xml
         elife.ClockssELifeDrupalPlugin.xml             (Deprecated)
         embo.EMBODrupalPlugin.xml                      (Deprecated)
-        ers.ERSDrupalPlugin.xml
-           (child)-> ClockssERSDrupalPlugin.xml
+        ers.ERSDrupalPlugin.xml                        (Deprecated)
+           (child)-> ClockssERSDrupalPlugin.xml        (Deprecated)
         fsf.FSFDrupalPlugin.xml
         ghsp.GhspDrupalPlugin.xml
         gensoc.GeneticsSocietyDrupalPlugin.xml         (Deprecated)
