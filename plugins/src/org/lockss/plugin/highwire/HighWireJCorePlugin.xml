@@ -46,69 +46,91 @@ POSSIBILITY OF SUCH DAMAGE.
         This is a list of HighWire Drupal Child plugins - be sure to update
         the child's plugin_parent_version number to match, then
         update the child's plugin_version number:
-        aaas.ClockssAAASDrupalPlugin.xml
-        aacc.AmAssocClinChemDrupalPlugin.xml
-        aacr.AmAssocCancerResearchDrupalPlugin.xml
-        aai.ClockssAAIDrupalPlugin.xml
-        aap.AAPDrupalPlugin.xml
-           (child)-> ClockssAAPDrupalPlugin.xml
+        aaas.ClockssAAASDrupalPlugin.xml               (Deprecated)
+        aacc.AmAssocClinChemDrupalPlugin.xml           (Deprecated)
+        aacr.AmAssocCancerResearchDrupalPlugin.xml     (Deprecated)
+        aai.ClockssAAIDrupalPlugin.xml                 (Deprecated)
+        aap.AAPDrupalPlugin.xml                        (Deprecated)
+           (child)-> ClockssAAPDrupalPlugin.xml        (Deprecated)
         aapl.AAPLDrupalPlugin.xml
            (child)-> ClockssAAPLDrupalPlugin.xml
-        aarespcare.AmAssocRespCareDrupalPlugin.xml
-        accardiol.AmCollegeCardiologyDrupalPlugin.xml
-        ada.ADADrupalPlugin.xml
-           (child)-> ClockssADADrupalPlugin.xml
-        adha.ClockssADHADrupalPlugin.xml
-        aha.AHADrupalPlugin.xml
-           (child)-> ClockssAHADrupalPlugin.xml
+        aarespcare.AmAssocRespCareDrupalPlugin.xml     
+        accardiol.AmCollegeCardiologyDrupalPlugin.xml  (Deprecated)
+        ada.ADADrupalPlugin.xml                        (Down)
+           (child)-> ClockssADADrupalPlugin.xml        (Down)
+        adha.ClockssADHADrupalPlugin.xml               
+        aha.AHADrupalPlugin.xml                        (Deprecated)
+           (child)-> ClockssAHADrupalPlugin.xml        (Deprecated)
+        ajs.AjsDrupalPlugin.xml
         annalsfamilymedicine.AnnalsFamilyMedicineDrupalPlugin.xml
            (child)-> ClockssAnnalsFamilyMedicineDrupalPlugin.xml
-        aps.APSDrupalPlugin.xml
-           (child)-> ClockssAPSDrupalPlugin.xml
-        apta.APTADrupalPlugin.xml                           (Deprecated)
-        arf.ARFDrupalPlugin.xml
+        aps.APSDrupalPlugin.xml                        (Deprecated)
+           (child)-> ClockssAPSDrupalPlugin.xml        (Deprecated)
+        apta.APTADrupalPlugin.xml                      (Deprecated)
+        arf.ARFDrupalPlugin.xml     
         asenvit.AmSocEnVitDrupalPlugin.xml
-        ash.ASHDrupalPlugin.xml
-        ashealthsys.AmSocHealthSysDrupalPlugin.xml
-        asm.ASMDrupalPlugin.xml
-        asn.AsnJournalsPlugin.xml
-        aspb.ASPBDrupalPlugin.xml
-           (child)-> ClockssASPBDrupalPlugin.xml
+        ash.ASHDrupalPlugin.xml                        (Deprecated)
+        ashealthsys.AmSocHealthSysDrupalPlugin.xml     (Deprecated)
+        asm.ASMDrupalPlugin.xml                        (Deprecated)
+        asn.AsnJournalsPlugin.xml     
+        asnr.AsnrDrupalPlugin.xml            
+           (child)-> ClockssAsnrDrupalPlugin.xml 
+        aspb.ASPBDrupalPlugin.xml                      (Deprecated)
+           (child)-> ClockssASPBDrupalPlugin.xml       (Deprecated)
         aspet.ASPETDrupalPlugin.xml
            (child)-> ClockssASPETDrupalPlugin.xml
-        besbjs.BESBJSDrupalPlugin.xml
-        biologists.BiologistsDrupalPlugin.xml
-           (child)-> ClockssBiologistsDrupalPlugin.xml
+        besbjs.BESBJSDrupalPlugin.xml                  (Deprecated)
+        biologists.BiologistsDrupalPlugin.xml          (Deprecated)
+           (child)-> ClockssBiologistsDrupalPlugin.xml (Deprecated)
         bmj.BMJDrupalPlugin.xml
         cfpc.CollegeFamilyPhysCanadaDrupalPlugin.xml
-        elife.ClockssELifeDrupalPlugin.xml                   (Deprecated)
-        embo.EMBODrupalPlugin.xml
+        cma.CmaDrupalPlugin.xml
+        elife.ClockssELifeDrupalPlugin.xml             (Deprecated)
+        embo.EMBODrupalPlugin.xml                      (Deprecated)
         ers.ERSDrupalPlugin.xml
            (child)-> ClockssERSDrupalPlugin.xml
         fsf.FSFDrupalPlugin.xml
-        gensoc.GeneticsSocietyDrupalPlugin.xml
-           (child)-> ClockssGeneticsSocietyDrupalPlugin.xml
-        gsl.GSLDrupalPlugin.xml
-           (child)-> ClockssGSLDrupalPlugin.xml
-        gsw.GSWDrupalPlugin.xml                              (soon to be Deprecated)
-           (child)-> ClockssGSWDrupalPlugin.xml
-        iwa.IWADrupalPlugin.xml
-           (child)-> ClockssIWADrupalPlugin.xml
-        jbjs.JBJSDrupalPlugin.xml                            (Deprecated)
+        ghsp.GhspDrupalPlugin.xml
+        gensoc.GeneticsSocietyDrupalPlugin.xml         (Deprecated)
+           (child)-> ClockssGeneticsSocietyDrupalPlugin.xml   (Deprecated)
+        gsl.GSLDrupalPlugin.xml                        (Deprecated)
+           (child)-> ClockssGSLDrupalPlugin.xml        (Deprecated)
+        gsw.GSWDrupalPlugin.xml                        (Deprecated)
+           (child)-> ClockssGSWDrupalPlugin.xml        (Deprecated)
+        iiar.IiarDrupalPlugin.xml 
+        isass.ClockssIsassDrupalPlugin.xml
+        iwa.IWADrupalPlugin.xml                        (Deprecated)
+           (child)-> ClockssIWADrupalPlugin.xml        (Deprecated)
+        jabfm.JabfmDrupalPlugin.xml
+        jbjs.JBJSDrupalPlugin.xml                      (Deprecated)
+        jr.jrDrupalPlugin.xml
         lsa.ClockssLifeScienceAllianceDrupalPlugin.xml
-        oup.OUPDrupalPlugin.xml	                             (Deprecated)
-           (child)-> ClockssOUPDrupalPlugin.xml
-        portlandpress.PortlandPressDrupalPlugin.xml
-           (child)-> ClockssPortlandPressDrupalPlugin.xml
+        nas.NasDrupalPlugin.xml                        (Deprecated)
+           (child)-> ClockssNasDrupalPlugin.xml        (Deprecated)
+        ncmj.NcmjDrupalPlugin.xml                      (Deprecated)
+        origins.HighWireOriginsPlugin.xml
+        oup.OUPDrupalPlugin.xml	                       (Deprecated)
+           (child)-> ClockssOUPDrupalPlugin.xml        (Deprecated)
+        pda.ClockssPDADrupalPlugin.xml
+        portlandpress.PortlandPressDrupalPlugin.xml    (Deprecated)
+           (child)-> ClockssPortlandPressDrupalPlugin.xml  (Deprecated)
         rcgp.RCGPDrupalPlugin.xml
-        rcpsych.RCPsychDrupalPlugin.xml
-        rsp.RSPDrupalPlugin.xml
-           (child)-> ClockssRSPDrupalPlugin.xml
-        rup.RUPDrupalPlugin.xml
-           (child)-> ClockssRUPDrupalPlugin.xml
+        rcp.RcpOriginsPlugin.xml                       (Deprecated)
+        rcpsych.RCPsychDrupalPlugin.xml                (Deprecated)
+        rsp.RSPDrupalPlugin.xml                        (Deprecated)
+           (child)-> ClockssRSPDrupalPlugin.xml        (Deprecated)
+        rup.RUPDrupalPlugin.xml                        (Deprecated)
+           (child)-> ClockssRUPDrupalPlugin.xml        (Deprecated)
+        scolaris.HighWireScolarisPlugin.xml
+        sepm.ClockssSepmBooksH20Plugin.xml             (Deprecated)
         sfn.SFNDrupalPlugin.xml
            (child)-> ClockssSFNDrupalPlugin.xml
-        ucpress.UCPressDrupalPlugin.xml
+        snmmi.SnmmiDrupalPlugin.xml 
+           (child)-> ClockssSnmmiDrupalPlugin.xml 
+        spc.SpringerPublishingCompanyScolarisPlugin.xml 
+        swc.SwcDrupalPlugin.xml
+        ucpress.UCPressDrupalPlugin.xml                (Deprecated)
+        uwpress.UWPressDrupalPlugin.xml
 
         Note: the LOCKSS child is the parent of the CLOCKSS child plugin, therefore
         update the CLOCKSS child plugin_version & plugin_parent_version with 
