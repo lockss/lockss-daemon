@@ -570,7 +570,6 @@
 
   }
 
-
   {
 
     title <
@@ -580,6 +579,7 @@
     >
 
     param[journal_id] = cnt
+    #formely the Moscow Journal of Combinatorics and Number Theory
 
     au < manifest ; exists ; 2011 ; Combinatorics and Number Theory Volume 1 ; 1 ; 2011 ; https://msp.org/ ; >
     au < manifest ; exists ; 2012 ; Combinatorics and Number Theory Volume 2 ; 2 ; 2012 ; https://msp.org/ ; >
@@ -588,13 +588,12 @@
     au < manifest ; exists ; 2015 ; Combinatorics and Number Theory Volume 5 ; 5 ; 2015 ; https://msp.org/ ; >
     au < manifest ; exists ; 2016 ; Combinatorics and Number Theory Volume 6 ; 6 ; 2016 ; https://msp.org/ ; >
     au < manifest ; exists ; 2017 ; Combinatorics and Number Theory Volume 7 ; 7 ; 2017 ; https://msp.org/ ; >
-    au < doesNotExist ; doesNotExist ; 2018 ; Combinatorics and Number Theory Volume 8 ; 8 ; 2018 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2019 ; Combinatorics and Number Theory Volume 9 ; 9 ; 2019 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2020 ; Combinatorics and Number Theory Volume 10 ; 10 ; 2020 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2021 ; Combinatorics and Number Theory Volume 11 ; 11 ; 2021 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2022 ; Combinatorics and Number Theory Volume 12 ; 12 ; 2022 ; https://msp.org/ ; >
-    au < manifest ; exists ; 2023 ; Combinatorics and Number Theory Volume 13 ; 13 ; 2023 ; https://msp.org/ ; >
-    au < expected ; exists ; 2024 ; Combinatorics and Number Theory Volume 14 ; 14 ; 2024 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2019 ; Combinatorics and Number Theory Volume 8 ; 8 ; 2019 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2020 ; Combinatorics and Number Theory Volume 9 ; 9 ; 2020 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2021 ; Combinatorics and Number Theory Volume 10 ; 10 ; 2021 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2022 ; Combinatorics and Number Theory Volume 11 ; 11 ; 2022 ; https://msp.org/ ; >
+    au < manifest ; exists ; 2023 ; Combinatorics and Number Theory Volume 12 ; 12 ; 2023 ; https://msp.org/ ; >
+    au < exists ; exists ; 2024 ; Combinatorics and Number Theory Volume 13 ; 13 ; 2024 ; https://msp.org/ ; >
 
   }
 
