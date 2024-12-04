@@ -342,7 +342,7 @@
       au < finished ; finished ; 2018 ; International Journal of Accounting and Finance Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Journal of Accounting and Finance Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; International Journal of Accounting and Finance Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; crawling ; 2021-2023 ; International Journal of Accounting and Finance Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2021-2023 ; International Journal of Accounting and Finance Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2024-2025 ; International Journal of Accounting and Finance Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -1211,7 +1211,7 @@
       au < finished ; finished ; 2018 ; International Journal of Big Data Intelligence Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; International Journal of Big Data Intelligence Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; International Journal of Big Data Intelligence Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; crawling ; 2021-2024 ; International Journal of Big Data Intelligence Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > # issue 3, 4 not online
+      au < finished ; crawling ; 2021-2024 ; International Journal of Big Data Intelligence Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 > # issue 3, 4 not online
 
     }
 
@@ -1454,7 +1454,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Biotechnology Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011-2013 ; International Journal of Biotechnology Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Biotechnology Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; >
-      au < deepCrawl ; crawling ; 2015-2023 ; International Journal of Biotechnology Volume 14 ; 14 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2015-2023 ; International Journal of Biotechnology Volume 14 ; 14 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
 
     }
 
@@ -2039,7 +2039,7 @@
       au < doNotProcess ; exists ; 2009 ; International Journal of Chinese Culture and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2010-2015 ; International Journal of Chinese Culture and Management Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2017 ; International Journal of Chinese Culture and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; crawling ; 2021-2024 ; International Journal of Chinese Culture and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2021-2024 ; International Journal of Chinese Culture and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
 
     }
 
@@ -6266,7 +6266,7 @@
       au < finished ; finished ; 2018 ; International Journal of Islamic Marketing and Branding Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Journal of Islamic Marketing and Branding Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; International Journal of Islamic Marketing and Branding Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; crawling ; 2021-2024 ; International Journal of Islamic Marketing and Branding Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2021-2024 ; International Journal of Islamic Marketing and Branding Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
 
     }
 
@@ -7492,7 +7492,7 @@
       au < finished ; finished ; 2018-2019 ; International Journal of Metadata, Semantics and Ontologies Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; International Journal of Metadata, Semantics and Ontologies Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2021 ; International Journal of Metadata, Semantics and Ontologies Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; crawling ; 2022-2023 ; International Journal of Metadata, Semantics and Ontologies Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2022-2023 ; International Journal of Metadata, Semantics and Ontologies Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2024-2025 ; International Journal of Metadata, Semantics and Ontologies Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
 
     }
@@ -7896,7 +7896,7 @@
       au < finished ; finished ; 2017-2018 ; International Journal of Nano and Biomaterials Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Journal of Nano and Biomaterials Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; International Journal of Nano and Biomaterials Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; crawling ; 2021-2025 ; International Journal of Nano and Biomaterials Volume 10 [partial] ; 10 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 > # issue 4 not online
+      au < finished ; crawling ; 2021-2025 ; International Journal of Nano and Biomaterials Volume 10 [partial] ; 10 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 > # issue 4 not online
 
     }
 
@@ -9695,7 +9695,7 @@
       au < doNotProcess ; doNotProcess ; 2008-2012 ; International Journal of Social and Humanistic Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2017 ; International Journal of Social and Humanistic Computing Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018-2020 ; International Journal of Social and Humanistic Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; crawling ; 2021-2026 ; International Journal of Social and Humanistic Computing Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > #issue 3, 4 not online
+      au < finished ; crawling ; 2021-2026 ; International Journal of Social and Humanistic Computing Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > #issue 3, 4 not online
 
     }
 
@@ -9793,7 +9793,7 @@
       param[journal_id] = ijseta
 
       au < finished ; finished ; 2015 ; International Journal of Software Engineering, Technology and Applications Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; crawling ; 2017-2024 ; International Journal of Software Engineering, Technology and Applications Volume 2 [partial] ; 2 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > #issue 3, 4 not online
+      au < finished ; crawling ; 2017-2024 ; International Journal of Software Engineering, Technology and Applications Volume 2 [partial] ; 2 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 > #issue 3, 4 not online
 
     }
 
