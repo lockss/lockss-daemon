@@ -34,6 +34,7 @@ package org.lockss.plugin.highwire;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 
 import org.htmlparser.NodeFilter;
 import org.htmlparser.Tag;
@@ -55,64 +56,83 @@ public class HighWireJCoreHashFilterFactory implements FilterFactory{
 
     private static final Logger log = Logger.getLogger(HighWireJCoreHashFilterFactory.class);
 
+    protected static NodeFilter[] BaseHighWireNodeFilters = new org.htmlparser.NodeFilter[]{
+        HtmlNodeFilters.tag("head"),
+        HtmlNodeFilters.tag("script"),
+        HtmlNodeFilters.tag("noscript"),
+        HtmlNodeFilters.tag("style"),
+        HtmlNodeFilters.tag("header"),
+        HtmlNodeFilters.tag("footer"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "advertisement"),
+        HtmlNodeFilters.tagWithAttributeRegex("div","class","panel-region-sidebar-right"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "social-media"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-article-citation"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "id", "hw-article-author-popups-top-node"),
+        HtmlNodeFilters.tagWithAttributeRegex("li", "class", "view-popup"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-languages-select"),
+        
+        HtmlNodeFilters.comment()
+    };
+
+    //There are a lot of changing id and rel attributes. Filter those out.
+    protected static HtmlTransform xform = new HtmlTransform() {
+        @Override
+        public NodeList transform(NodeList nodeList) throws IOException {
+            try {
+                nodeList.visitAllNodesWith(new NodeVisitor() {
+                    @Override
+                    public void visitTag(Tag tag) {
+                        String name = tag.getTagName().toLowerCase();
+                        if ("a".equals(name)) {
+                            if (tag.getAttribute("rel") != null) {
+                                tag.removeAttribute("rel");
+                            }
+                        }
+                        if ("div".equals(name)) {
+                            if (tag.getAttribute("id") != null) {
+                                tag.removeAttribute("id");
+                            }
+                        }
+                        if("input".equals(name)){
+                            if(tag.getAttribute("id") != null){
+                                tag.removeAttribute("id");
+                            }
+                            if(tag.getAttribute("value") != null){
+                                tag.removeAttribute("value");
+                            }
+                        }
+                    }
+                });
+                return nodeList;
+            }
+            catch (ParserException pe) {
+                throw new IOException(pe);
+            }
+        }
+    };
+
     @Override
     public InputStream createFilteredInputStream(ArchivalUnit au, InputStream inputstream, String encoding)
             throws PluginException {
-        NodeFilter[] filters = new org.htmlparser.NodeFilter[]{
-
-            HtmlNodeFilters.tag("head"),
-            HtmlNodeFilters.tag("script"),
-            HtmlNodeFilters.tag("noscript"),
-            HtmlNodeFilters.tag("style"),
-            HtmlNodeFilters.tag("header"),
-            HtmlNodeFilters.tag("footer"),
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "advertisement"),
-            HtmlNodeFilters.tagWithAttributeRegex("div","class","panel-region-sidebar-right"),
-            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "social-media"),
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-article-citation"),
-            HtmlNodeFilters.tagWithAttributeRegex("div", "id", "hw-article-author-popups-top-node"),
-            HtmlNodeFilters.tagWithAttributeRegex("li", "class", "view-popup"),
-            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pane-highwire-languages-select"),
-            
-            HtmlNodeFilters.comment()
-        };
-
-        HtmlTransform xform = new HtmlTransform() {
-            @Override
-            public NodeList transform(NodeList nodeList) throws IOException {
-                try {
-                    nodeList.visitAllNodesWith(new NodeVisitor() {
-                        @Override
-                        public void visitTag(Tag tag) {
-                            String name = tag.getTagName().toLowerCase();
-                            if ("a".equals(name)) {
-                                String val = tag.getAttribute("rel");
-                                if (val != null) {
-                                    tag.removeAttribute("rel");
-                                }
-                                return;
-                            }
-                            if ("div".equals(name)) {
-                                String val = tag.getAttribute("id");
-                                if (val != null) {
-                                    tag.removeAttribute("id");
-                                }
-                                return;
-                            }
-                        }
-                    });
-                    return nodeList;
-                }
-                catch (ParserException pe) {
-                    throw new IOException(pe);
-                }
-            }
-        };
       // First filter with HtmlParser
-      InputStream filtered = new HtmlFilterInputStream(inputstream,
-      encoding, new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)),
-                                xform));
-        return filtered;
+      return createFilteredInputStream(au, inputstream, encoding, null);
     }
     
+    protected InputStream createFilteredInputStream(final ArchivalUnit au, InputStream in, String encoding,
+     NodeFilter[] moreExcludeNodes) {
+    
+        NodeFilter[] excludeNodes = BaseHighWireNodeFilters;
+        if (moreExcludeNodes != null) {
+        excludeNodes  = Arrays.copyOf(BaseHighWireNodeFilters, BaseHighWireNodeFilters.length + moreExcludeNodes.length);
+        System.arraycopy(moreExcludeNodes, 0, excludeNodes, BaseHighWireNodeFilters.length, moreExcludeNodes.length);
+        }
+
+        /*
+        * KEEP: throw out everything but main content areas
+        * DROP: filter remaining content areas
+        */
+        HtmlCompoundTransform compoundTransform = new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)),xform);
+        InputStream filtered = new HtmlFilterInputStream(in, encoding, encoding, compoundTransform);
+        return filtered;
+    }
 }
