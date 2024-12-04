@@ -24,69 +24,69 @@
         #param[base_url] = http://www.jimmunol.org/
         param[journal_id] = jimmunol
 
-        au < testing ; exists ; 1916 ; 1916 ; The Journal of Immunology Volume 1 ; 1 ; >
-        au < testing ; exists ; 1917 ; 1917 ; The Journal of Immunology Volume 2 ; 2 ; >
-        au < testing ; exists ; 1918 ; 1918 ; The Journal of Immunology Volume 3 ; 3 ; >
-        au < testing ; exists ; 1919 ; 1919 ; The Journal of Immunology Volume 4 ; 4 ; >
-        au < testing ; exists ; 1920 ; 1920 ; The Journal of Immunology Volume 5 ; 5 ; >
+        au < ready ; exists ; 1916 ; 1916 ; The Journal of Immunology Volume 1 ; 1 ; >
+        au < ready ; exists ; 1917 ; 1917 ; The Journal of Immunology Volume 2 ; 2 ; >
+        au < ready ; exists ; 1918 ; 1918 ; The Journal of Immunology Volume 3 ; 3 ; >
+        au < ready ; exists ; 1919 ; 1919 ; The Journal of Immunology Volume 4 ; 4 ; >
+        au < ready ; exists ; 1920 ; 1920 ; The Journal of Immunology Volume 5 ; 5 ; >
         au < testing ; exists ; 1921 ; 1921 ; The Journal of Immunology Volume 6 ; 6 ; >
-        au < testing ; exists ; 1922 ; 1922 ; The Journal of Immunology Volume 7 ; 7 ; >
-        au < testing ; exists ; 1923 ; 1923 ; The Journal of Immunology Volume 8 ; 8 ; >
-        au < testing ; exists ; 1924 ; 1924 ; The Journal of Immunology Volume 9 ; 9 ; >
-        au < testing ; exists ; 1925 ; 1925 ; The Journal of Immunology Volume 10 ; 10 ; >
-        au < testing ; exists ; 1926 ; 1926 ; The Journal of Immunology Volume 11 ; 11 ; >
-        au < testing ; exists ; 1926 ; 1926 ; The Journal of Immunology Volume 12 ; 12 ; >
-        au < testing ; exists ; 1927 ; 1927 ; The Journal of Immunology Volume 13 ; 13 ; >
-        au < testing ; exists ; 1927 ; 1927 ; The Journal of Immunology Volume 14 ; 14 ; >
-        au < testing ; exists ; 1928 ; 1928 ; The Journal of Immunology Volume 15 ; 15 ; >
-        au < testing ; exists ; 1929 ; 1929 ; The Journal of Immunology Volume 16 ; 16 ; >
+        au < ready ; exists ; 1922 ; 1922 ; The Journal of Immunology Volume 7 ; 7 ; >
+        au < ready ; exists ; 1923 ; 1923 ; The Journal of Immunology Volume 8 ; 8 ; >
+        au < ready ; exists ; 1924 ; 1924 ; The Journal of Immunology Volume 9 ; 9 ; >
+        au < ready ; exists ; 1925 ; 1925 ; The Journal of Immunology Volume 10 ; 10 ; >
+        au < ready ; exists ; 1926 ; 1926 ; The Journal of Immunology Volume 11 ; 11 ; >
+        au < ready ; exists ; 1926 ; 1926 ; The Journal of Immunology Volume 12 ; 12 ; >
+        au < ready ; exists ; 1927 ; 1927 ; The Journal of Immunology Volume 13 ; 13 ; >
+        au < ready ; exists ; 1927 ; 1927 ; The Journal of Immunology Volume 14 ; 14 ; >
+        au < ready ; exists ; 1928 ; 1928 ; The Journal of Immunology Volume 15 ; 15 ; >
+        au < ready ; exists ; 1929 ; 1929 ; The Journal of Immunology Volume 16 ; 16 ; >
         au < testing ; exists ; 1929 ; 1929 ; The Journal of Immunology Volume 17 ; 17 ; >
-        au < testing ; exists ; 1930 ; 1930 ; The Journal of Immunology Volume 18 ; 18 ; >
-        au < testing ; exists ; 1930 ; 1930 ; The Journal of Immunology Volume 19 ; 19 ; >
-        au < testing ; exists ; 1931 ; 1931 ; The Journal of Immunology Volume 20 ; 20 ; >
-        au < testing ; exists ; 1931 ; 1931 ; The Journal of Immunology Volume 21 ; 21 ; >
-        au < testing ; exists ; 1932 ; 1932 ; The Journal of Immunology Volume 22 ; 22 ; >
-        au < testing ; exists ; 1932 ; 1932 ; The Journal of Immunology Volume 23 ; 23 ; >
+        au < ready ; exists ; 1930 ; 1930 ; The Journal of Immunology Volume 18 ; 18 ; >
+        au < ready ; exists ; 1930 ; 1930 ; The Journal of Immunology Volume 19 ; 19 ; >
+        au < ready ; exists ; 1931 ; 1931 ; The Journal of Immunology Volume 20 ; 20 ; >
+        au < ready ; exists ; 1931 ; 1931 ; The Journal of Immunology Volume 21 ; 21 ; >
+        au < ready ; exists ; 1932 ; 1932 ; The Journal of Immunology Volume 22 ; 22 ; >
+        au < ready ; exists ; 1932 ; 1932 ; The Journal of Immunology Volume 23 ; 23 ; >
         au < testing ; exists ; 1933 ; 1933 ; The Journal of Immunology Volume 24 ; 24 ; >
-        au < testing ; exists ; 1933 ; 1933 ; The Journal of Immunology Volume 25 ; 25 ; >
-        au < testing ; exists ; 1934 ; 1934 ; The Journal of Immunology Volume 26 ; 26 ; >
-        au < testing ; exists ; 1934 ; 1934 ; The Journal of Immunology Volume 27 ; 27 ; >
-        au < testing ; exists ; 1935 ; 1935 ; The Journal of Immunology Volume 28 ; 28 ; >
-        au < testing ; exists ; 1935 ; 1935 ; The Journal of Immunology Volume 29 ; 29 ; >
-        au < testing ; exists ; 1936 ; 1936 ; The Journal of Immunology Volume 30 ; 30 ; >
-        au < testing ; exists ; 1936 ; 1936 ; The Journal of Immunology Volume 31 ; 31 ; >
-        au < testing ; exists ; 1937 ; 1937 ; The Journal of Immunology Volume 32 ; 32 ; >
-        au < testing ; exists ; 1937 ; 1937 ; The Journal of Immunology Volume 33 ; 33 ; >
+        au < ready ; exists ; 1933 ; 1933 ; The Journal of Immunology Volume 25 ; 25 ; >
+        au < ready ; exists ; 1934 ; 1934 ; The Journal of Immunology Volume 26 ; 26 ; >
+        au < ready ; exists ; 1934 ; 1934 ; The Journal of Immunology Volume 27 ; 27 ; >
+        au < ready ; exists ; 1935 ; 1935 ; The Journal of Immunology Volume 28 ; 28 ; >
+        au < ready ; exists ; 1935 ; 1935 ; The Journal of Immunology Volume 29 ; 29 ; >
+        au < ready ; exists ; 1936 ; 1936 ; The Journal of Immunology Volume 30 ; 30 ; >
+        au < ready ; exists ; 1936 ; 1936 ; The Journal of Immunology Volume 31 ; 31 ; >
+        au < ready ; exists ; 1937 ; 1937 ; The Journal of Immunology Volume 32 ; 32 ; >
+        au < ready ; exists ; 1937 ; 1937 ; The Journal of Immunology Volume 33 ; 33 ; >
         au < testing ; exists ; 1938 ; 1938 ; The Journal of Immunology Volume 34 ; 34 ; >
-        au < testing ; exists ; 1938 ; 1938 ; The Journal of Immunology Volume 35 ; 35 ; >
-        au < testing ; exists ; 1939 ; 1939 ; The Journal of Immunology Volume 36 ; 36 ; >
-        au < testing ; exists ; 1939 ; 1939 ; The Journal of Immunology Volume 37 ; 37 ; >
-        au < testing ; exists ; 1940 ; 1940 ; The Journal of Immunology Volume 38 ; 38 ; >
-        au < testing ; exists ; 1940 ; 1940 ; The Journal of Immunology Volume 39 ; 39 ; >
-        au < testing ; exists ; 1941 ; 1941 ; The Journal of Immunology Volume 40 ; 40 ; >
-        au < testing ; exists ; 1941 ; 1941 ; The Journal of Immunology Volume 41 ; 41 ; >
-        au < testing ; exists ; 1941 ; 1941 ; The Journal of Immunology Volume 42 ; 42 ; >
-        au < testing ; exists ; 1942 ; 1942 ; The Journal of Immunology Volume 43 ; 43 ; >
-        au < testing ; exists ; 1942 ; 1942 ; The Journal of Immunology Volume 44 ; 44 ; >
-        au < testing ; exists ; 1942 ; 1942 ; The Journal of Immunology Volume 45 ; 45 ; >
-        au < testing ; exists ; 1943 ; 1943 ; The Journal of Immunology Volume 46 ; 46 ; >
-        au < testing ; exists ; 1943 ; 1943 ; The Journal of Immunology Volume 47 ; 47 ; >
-        au < testing ; exists ; 1944 ; 1944 ; The Journal of Immunology Volume 48 ; 48 ; >
-        au < testing ; exists ; 1944 ; 1944 ; The Journal of Immunology Volume 49 ; 49 ; >
-        au < testing ; exists ; 1945 ; 1945 ; The Journal of Immunology Volume 50 ; 50 ; >
-        au < testing ; exists ; 1945 ; 1945 ; The Journal of Immunology Volume 51 ; 51 ; >
-        au < testing ; exists ; 1946 ; 1946 ; The Journal of Immunology Volume 52 ; 52 ; >
-        au < testing ; exists ; 1946 ; 1946 ; The Journal of Immunology Volume 53 ; 53 ; >
-        au < testing ; exists ; 1946 ; 1946 ; The Journal of Immunology Volume 54 ; 54 ; >
-        au < testing ; exists ; 1947 ; 1947 ; The Journal of Immunology Volume 55 ; 55 ; >
-        au < testing ; exists ; 1947 ; 1947 ; The Journal of Immunology Volume 56 ; 56 ; >
-        au < testing ; exists ; 1947 ; 1947 ; The Journal of Immunology Volume 57 ; 57 ; >
-        au < testing ; exists ; 1948 ; 1948 ; The Journal of Immunology Volume 58 ; 58 ; >
-        au < testing ; exists ; 1948 ; 1948 ; The Journal of Immunology Volume 59 ; 59 ; >
+        au < ready ; exists ; 1938 ; 1938 ; The Journal of Immunology Volume 35 ; 35 ; >
+        au < ready ; exists ; 1939 ; 1939 ; The Journal of Immunology Volume 36 ; 36 ; >
+        au < ready ; exists ; 1939 ; 1939 ; The Journal of Immunology Volume 37 ; 37 ; >
+        au < ready ; exists ; 1940 ; 1940 ; The Journal of Immunology Volume 38 ; 38 ; >
+        au < ready ; exists ; 1940 ; 1940 ; The Journal of Immunology Volume 39 ; 39 ; >
+        au < ready ; exists ; 1941 ; 1941 ; The Journal of Immunology Volume 40 ; 40 ; >
+        au < ready ; exists ; 1941 ; 1941 ; The Journal of Immunology Volume 41 ; 41 ; >
+        au < ready ; exists ; 1941 ; 1941 ; The Journal of Immunology Volume 42 ; 42 ; >
+        au < ready ; exists ; 1942 ; 1942 ; The Journal of Immunology Volume 43 ; 43 ; >
+        au < ready ; exists ; 1942 ; 1942 ; The Journal of Immunology Volume 44 ; 44 ; >
+        au < ready ; exists ; 1942 ; 1942 ; The Journal of Immunology Volume 45 ; 45 ; >
+        au < ready ; exists ; 1943 ; 1943 ; The Journal of Immunology Volume 46 ; 46 ; >
+        au < ready ; exists ; 1943 ; 1943 ; The Journal of Immunology Volume 47 ; 47 ; >
+        au < ready ; exists ; 1944 ; 1944 ; The Journal of Immunology Volume 48 ; 48 ; >
+        au < ready ; exists ; 1944 ; 1944 ; The Journal of Immunology Volume 49 ; 49 ; >
+        au < ready ; exists ; 1945 ; 1945 ; The Journal of Immunology Volume 50 ; 50 ; >
+        au < ready ; exists ; 1945 ; 1945 ; The Journal of Immunology Volume 51 ; 51 ; >
+        au < ready ; exists ; 1946 ; 1946 ; The Journal of Immunology Volume 52 ; 52 ; >
+        au < ready ; exists ; 1946 ; 1946 ; The Journal of Immunology Volume 53 ; 53 ; >
+        au < ready ; exists ; 1946 ; 1946 ; The Journal of Immunology Volume 54 ; 54 ; >
+        au < ready ; exists ; 1947 ; 1947 ; The Journal of Immunology Volume 55 ; 55 ; >
+        au < ready ; exists ; 1947 ; 1947 ; The Journal of Immunology Volume 56 ; 56 ; >
+        au < ready ; exists ; 1947 ; 1947 ; The Journal of Immunology Volume 57 ; 57 ; >
+        au < ready ; exists ; 1948 ; 1948 ; The Journal of Immunology Volume 58 ; 58 ; >
+        au < ready ; exists ; 1948 ; 1948 ; The Journal of Immunology Volume 59 ; 59 ; >
         au < testing ; exists ; 1948 ; 1948 ; The Journal of Immunology Volume 60 ; 60 ; >
-        au < testing ; exists ; 1949 ; 1949 ; The Journal of Immunology Volume 61 ; 61 ; >
-        au < testing ; exists ; 1949 ; 1949 ; The Journal of Immunology Volume 62 ; 62 ; >
-        au < testing ; exists ; 1949 ; 1949 ; The Journal of Immunology Volume 63 ; 63 ; >
+        au < ready ; exists ; 1949 ; 1949 ; The Journal of Immunology Volume 61 ; 61 ; >
+        au < ready ; exists ; 1949 ; 1949 ; The Journal of Immunology Volume 62 ; 62 ; >
+        au < ready ; exists ; 1949 ; 1949 ; The Journal of Immunology Volume 63 ; 63 ; >
         au < frozen ; exists ; 1950 ; 1950 ; The Journal of Immunology Volume 64 ; 64 ; >
         au < frozen ; exists ; 1950 ; 1950 ; The Journal of Immunology Volume 65 ; 65 ; >
         au < frozen ; exists ; 1951 ; 1951 ; The Journal of Immunology Volume 66 ; 66 ; >
