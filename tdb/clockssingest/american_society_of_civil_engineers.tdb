@@ -1214,11 +1214,12 @@
     }
     {
     param[journal_id] = isend6
+    #in older tdb file.
 
-    au < manifest ; exists ; 1979 ; Journal of Civil Engineering Education Volume 105 ; 105 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1980 ; Journal of Civil Engineering Education Volume 106 ; 106 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1981 ; Journal of Civil Engineering Education Volume 107 ; 107 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 1982 ; Journal of Civil Engineering Education Volume 108 ; 108 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 1979 ; Journal of Civil Engineering Education Volume 105 ; 105 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 1980 ; Journal of Civil Engineering Education Volume 106 ; 106 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 1981 ; Journal of Civil Engineering Education Volume 107 ; 107 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 1982 ; Journal of Civil Engineering Education Volume 108 ; 108 ; https://ascelibrary.org/ ; >
     }
     {
     param[journal_id] = jpiedn
