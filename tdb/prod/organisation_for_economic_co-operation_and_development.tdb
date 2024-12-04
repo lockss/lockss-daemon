@@ -172,7 +172,7 @@
       eissn = 1729-3626 ;
       doi = 10.1787/17293626
     >
-
+    {
     param[topic] = economics
     param[journal_dir] = journal-of-business-cycle-measurement-and-analysis
     param[journal_issn] = 17293626
@@ -181,6 +181,12 @@
     au < released ; 2005 ; Journal of Business Cycle Measurement and Analysis Volume 2005 ; 2005 >
     au < doNotProcess ; 2006 ; Journal of Business Cycle Measurement and Analysis Volume 2006 ; 2006 >
     au < released ; 2007 ; Journal of Business Cycle Measurement and Analysis Volume 2007 ; 2007 >
+    }
+    {
+    param[topic] = economics
+    param[journal_dir] = oecd-journal-journal-of-business-cycle-measurement-and-analysis
+    param[journal_issn] = 19952899
+
     au < manifest ; 2008 ; Journal of Business Cycle Measurement and Analysis Volume 2008 ; 2008 >
     au < manifest ; 2009 ; Journal of Business Cycle Measurement and Analysis Volume 2009 ; 2009 >
     au < manifest ; 2010 ; Journal of Business Cycle Measurement and Analysis Volume 2010 ; 2010 >
@@ -189,7 +195,7 @@
     au < manifest ; 2013 ; Journal of Business Cycle Measurement and Analysis Volume 2013 ; 2013 >
     au < manifest ; 2014 ; Journal of Business Cycle Measurement and Analysis Volume 2014 ; 2014 >
     au < manifest ; 2015 ; Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 >
-
+    }
   }
 
   {
