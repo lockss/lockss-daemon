@@ -159,6 +159,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>org.lockss.plugin.highwire.bmj.BMJJCoreHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.highwire.bmj.BMJDrupalHashFilterFactory</string>
+  </entry>
+  <entry>
     <string>au_permitted_host_pattern</string>
     <list>
       <string>bmj\.com</string>
