@@ -186,14 +186,29 @@
     au < finished ; manifest ; 2005 ; Journal of Business Cycle Measurement and Analysis Volume 2005 ; 2005 ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2006 ; Journal of Business Cycle Measurement and Analysis Volume 2006 [superseded] ; 2006 ;  > # No 2006 volume
     au < finished ; manifest ; 2007 ; Journal of Business Cycle Measurement and Analysis Volume 2007 ; 2007 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2008 ; Journal of Business Cycle Measurement and Analysis Volume 2008 ; 2008 ;  >
-    au < manifest ; exists ; 2009 ; Journal of Business Cycle Measurement and Analysis Volume 2009 ; 2009 ;  >
-    au < manifest ; exists ; 2010 ; Journal of Business Cycle Measurement and Analysis Volume 2010 ; 2010 ;  >
-    au < manifest ; exists ; 2011 ; Journal of Business Cycle Measurement and Analysis Volume 2011 ; 2011 ;  >
-    au < manifest ; exists ; 2012 ; Journal of Business Cycle Measurement and Analysis Volume 2012 ; 2012 ;  >
-    au < manifest ; exists ; 2013 ; Journal of Business Cycle Measurement and Analysis Volume 2013 ; 2013 ;  >
-    au < manifest ; exists ; 2014 ; Journal of Business Cycle Measurement and Analysis Volume 2014 ; 2014 ;  >
-    au < manifest ; exists ; 2015 ; Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 ;  >
+
+  }
+
+  {
+
+    title <
+      name = OECD Journal: Journal of Business Cycle Measurement and Analysis ;
+      eissn = 1995-2899 ;
+      doi = 10.1787/19952899
+    >
+
+    param[topic] = economics
+    param[journal_dir] = oecd-journal-journal-of-business-cycle-measurement-and-analysis
+    param[journal_issn] = 19952899
+
+    au < manifest ; exists ; 2008 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2008 ; 2008 ;  >
+    au < manifest ; exists ; 2009 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2009 ; 2009 ;  >
+    au < manifest ; exists ; 2010 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2010 ; 2010 ;  >
+    au < manifest ; exists ; 2011 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2011 ; 2011 ;  >
+    au < manifest ; exists ; 2012 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2012 ; 2012 ;  >
+    au < manifest ; exists ; 2013 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2013 ; 2013 ;  >
+    au < manifest ; exists ; 2014 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2014 ; 2014 ;  >
+    au < manifest ; exists ; 2015 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2015 ; 2015 ;  >
 
   }
 
