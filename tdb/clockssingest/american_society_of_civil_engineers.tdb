@@ -1461,17 +1461,52 @@
     au < finished ; finished ; 2015 ; Journal of Transportation Engineering Volume 141 ; 141 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Journal of Transportation Engineering Volume 142 ; 142 ; http://ascelibrary.org/ ; >
     }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Transportation Engineering, Part A: Systems ;
+      issn = 2473-2907 ;
+      eissn = 2473-2893
+    >
+
     {
     param[journal_id] = jtepbs
 
-    au < frozen ; exists ; 2017 ; Journal of Transportation Engineering Volume 143 ; 143 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2018 ; Journal of Transportation Engineering Volume 144 ; 144 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2019 ; Journal of Transportation Engineering Volume 145 ; 145 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2020 ; Journal of Transportation Engineering Volume 146 ; 146 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2021 ; Journal of Transportation Engineering Volume 147 ; 147 ; https://ascelibrary.org/ ; >
-    au < deepCrawl ; exists ; 2022 ; Journal of Transportation Engineering Volume 148 ; 148 ; https://ascelibrary.org/ ; >
-    au < deepCrawl ; exists ; 2023 ; Journal of Transportation Engineering Volume 149 ; 149 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2024 ; Journal of Transportation Engineering Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2017 ; Journal of Transportation Engineering, Part A: Systems Volume 143 ; 143 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2018 ; Journal of Transportation Engineering, Part A: Systems Volume 144 ; 144 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2019 ; Journal of Transportation Engineering, Part A: Systems Volume 145 ; 145 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2020 ; Journal of Transportation Engineering, Part A: Systems Volume 146 ; 146 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2021 ; Journal of Transportation Engineering, Part A: Systems Volume 147 ; 147 ; https://ascelibrary.org/ ; >
+    au < deepCrawl ; exists ; 2022 ; Journal of Transportation Engineering, Part A: Systems Volume 148 ; 148 ; https://ascelibrary.org/ ; >
+    au < deepCrawl ; exists ; 2023 ; Journal of Transportation Engineering, Part A: Systems Volume 149 ; 149 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2024 ; Journal of Transportation Engineering, Part A: Systems Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+
+    }
+  }
+
+  {
+
+    title <
+      name = Journal of Transportation Engineering, Part B: Pavements ;
+      issn = 2473-2907 ;
+      eissn = 2473-2893
+    >
+
+    {
+    param[journal_id] = jpeodx
+
+    au < exists ; exists ; 2017 ; Journal of Transportation Engineering, Part B: Pavements Volume 143 ; 143 ; https://ascelibrary.org/ ; >
+    au < exists ; exists ; 2018 ; Journal of Transportation Engineering, Part B: Pavements Volume 144 ; 144 ; https://ascelibrary.org/ ; >
+    au < exists ; exists ; 2019 ; Journal of Transportation Engineering, Part B: Pavements Volume 145 ; 145 ; https://ascelibrary.org/ ; >
+    au < exists ; exists ; 2020 ; Journal of Transportation Engineering, Part B: Pavements Volume 146 ; 146 ; https://ascelibrary.org/ ; >
+    au < exists ; exists ; 2021 ; Journal of Transportation Engineering, Part B: Pavements Volume 147 ; 147 ; https://ascelibrary.org/ ; >
+    au < exists ; exists ; 2022 ; Journal of Transportation Engineering, Part B: Pavements Volume 148 ; 148 ; https://ascelibrary.org/ ; >
+    au < exists ; exists ; 2023 ; Journal of Transportation Engineering, Part B: Pavements Volume 149 ; 149 ; https://ascelibrary.org/ ; >
+    au < exists ; exists ; 2024 ; Journal of Transportation Engineering, Part B: Pavements Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+
     }
   }
 
