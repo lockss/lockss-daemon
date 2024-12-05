@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Ralph Waldo Emerson Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:562
+
+    {
+    title <
+      name = The Dial: A Journal of the Ralph Waldo Emerson Society ;
+      eissn = 3065-5447
+
+    >
+
+      attr[journal_id] = 881
+
+      au < manifest ; 2024 ; The Dial: A Journal of the Ralph Waldo Emerson Society Volume 1 [2024] ; 19412 >
+
+    }
+
+}

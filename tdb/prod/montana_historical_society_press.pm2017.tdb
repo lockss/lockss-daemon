@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Montana Historical Society Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:549
+
+    {
+    title <
+      name = Montana: The Magazine of Western History ;
+      issn = 0026-9891 ;
+      eissn = 2328-4293
+
+    >
+
+      attr[journal_id] = 872
+
+      au < manifest ; 2021 ; Montana: The Magazine of Western History Volume 71 [2021] ; 18743 >
+      au < manifest ; 2022 ; Montana: The Magazine of Western History Volume 72 [2022] ; 18744 >
+      au < manifest ; 2023 ; Montana: The Magazine of Western History Volume 73 [2023] ; 18745 >
+      au < manifest ; 2024 ; Montana: The Magazine of Western History Volume 74 [2024] ; 18895 >
+
+    }
+
+}

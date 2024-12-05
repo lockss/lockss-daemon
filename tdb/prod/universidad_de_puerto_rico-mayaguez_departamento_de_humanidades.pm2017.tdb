@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = Universidad de Puerto Rico-Mayagüez, Departamento de Humanidades
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:559
+
+    {
+    title <
+      name = Nuevos Horizontes ;
+      eissn = 3065-4777 
+
+    >
+
+      attr[journal_id] = 877
+
+      au < manifest ; 2024 ; Nuevos Horizontes Volume 1 [2024] ; 19377 >
+
+    }
+
+}

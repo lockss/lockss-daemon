@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = TRP: The University Press of SHSU
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:558
+
+    {
+    title <
+      name = The McNeese Review ;
+      issn = 0885-467X ;
+      eissn = 2997-3015
+
+    >
+
+      attr[journal_id] = 876
+
+      au < manifest ; 2022 ; The McNeese Review Volume 59 [2022] ; 19004 >
+      au < manifest ; 2023 ; The McNeese Review Volume 60 [2023] ; 18986 >
+      au < manifest ; 2024 ; The McNeese Review Volume 61 [2024] ; 18979 >
+
+    }
+
+}

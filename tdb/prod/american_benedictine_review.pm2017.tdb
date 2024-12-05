@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = American Benedictine Review
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:557
+
+    {
+    title <
+      name = American Benedictine Review ;
+      issn = 0002-7650  ;
+      eissn = 2996-8496
+
+    >
+
+      attr[journal_id] = 875
+
+      au < manifest ; 2019 ; American Benedictine Review Volume 70 [2019] ; 18946 >
+      au < manifest ; 2020 ; American Benedictine Review Volume 71 [2020] ; 18950 >
+      au < manifest ; 2021 ; American Benedictine Review Volume 72 [2021] ; 18947 >
+      au < manifest ; 2022 ; American Benedictine Review Volume 73 [2022] ; 18948 >
+      au < manifest ; 2023 ; American Benedictine Review Volume 74 [2023] ; 18949 >
+      au < manifest ; 2024 ; American Benedictine Review Volume 75 [2024] ; 18913 >
+
+    }
+
+}
