@@ -743,9 +743,9 @@
   {
 
     title <
-      name = Journal of Geotechnical and Geoenvironmental Engineering ;
-      issn = 1090-0241 ;
-      eissn = 1943-5606
+      name = Journal of Geotechnical Engineering ;
+      issn = 0733-9410 ;
+      eissn = 1944-8368
     >
     {
     param[journal_id] = jgendz
@@ -765,6 +765,16 @@
     au < frozen ; exists ; 1995 ; Journal of Geotechnical Engineering Volume 121 ; 121 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 1996 ; Journal of Geotechnical Engineering Volume 122 ; 122 ; https://ascelibrary.org/ ; >
     }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Geotechnical and Geoenvironmental Engineering ;
+      issn = 1090-0241 ;
+      eissn = 1943-5606
+    >
     {
     param[journal_id] = jggefk
 
@@ -1194,78 +1204,78 @@
   {
 
     title <
-      name = Journal of Civil Engineering Education ;
+      name = Journal of Professional Issues in Engineering ;
+      issn = 0733-9380 ;
+      eissn = 2331-0030
+    >
+
+    {
+    param[journal_id] = jpiedn
+
+    au < frozen ; exists ; 1983 ; Journal of Professional Issues in Engineering Volume 109 ; 109 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1984 ; Journal of Professional Issues in Engineering Volume 110 ; 110 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1985 ; Journal of Professional Issues in Engineering Volume 111 ; 111 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1986 ; Journal of Professional Issues in Engineering Volume 112 ; 112 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1987 ; Journal of Professional Issues in Engineering Volume 113 ; 113 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1988 ; Journal of Professional Issues in Engineering Volume 114 ; 114 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1989 ; Journal of Professional Issues in Engineering Volume 115 ; 115 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1990 ; Journal of Professional Issues in Engineering Volume 116 ; 116 ; https://ascelibrary.org/ ; >
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Professional Issues in Engineering Education and Practice ;
       issn = 1052-3928 ;
       eissn = 1943-5541
     >
 
     {
-    param[journal_id] = igisbd
-
-    au < exists ; exists ; 1970 ; Journal of Civil Engineering Education Volume 96 ; 96 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1971 ; Journal of Civil Engineering Education Volume 97 ; 97 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1972 ; Journal of Civil Engineering Education Volume 98 ; 98 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1973 ; Journal of Civil Engineering Education Volume 99 ; 99 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1974 ; Journal of Civil Engineering Education Volume 100 ; 100 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1975 ; Journal of Civil Engineering Education Volume 101 ; 101 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1976 ; Journal of Civil Engineering Education Volume 102 ; 102 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1977 ; Journal of Civil Engineering Education Volume 103 ; 103 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 1978 ; Journal of Civil Engineering Education Volume 104 ; 104 ; https://ascelibrary.org/ ; >
-    }
-    {
-    param[journal_id] = isend6
-    #in older tdb file.
-
-    au < doNotProcess ; exists ; 1979 ; Journal of Civil Engineering Education Volume 105 ; 105 ; https://ascelibrary.org/ ; >
-    au < doNotProcess ; exists ; 1980 ; Journal of Civil Engineering Education Volume 106 ; 106 ; https://ascelibrary.org/ ; >
-    au < doNotProcess ; exists ; 1981 ; Journal of Civil Engineering Education Volume 107 ; 107 ; https://ascelibrary.org/ ; >
-    au < doNotProcess ; exists ; 1982 ; Journal of Civil Engineering Education Volume 108 ; 108 ; https://ascelibrary.org/ ; >
-    }
-    {
-    param[journal_id] = jpiedn
-
-    au < frozen ; exists ; 1983 ; Journal of Civil Engineering Education Volume 109 ; 109 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1984 ; Journal of Civil Engineering Education Volume 110 ; 110 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1985 ; Journal of Civil Engineering Education Volume 111 ; 111 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1986 ; Journal of Civil Engineering Education Volume 112 ; 112 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1987 ; Journal of Civil Engineering Education Volume 113 ; 113 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1988 ; Journal of Civil Engineering Education Volume 114 ; 114 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1989 ; Journal of Civil Engineering Education Volume 115 ; 115 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1990 ; Journal of Civil Engineering Education Volume 116 ; 116 ; https://ascelibrary.org/ ; >
-    }
-    {
     param[journal_id] = jpepe3
 
-    au < frozen ; exists ; 1991 ; Journal of Civil Engineering Education Volume 117 ; 117 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1992 ; Journal of Civil Engineering Education Volume 118 ; 118 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1993 ; Journal of Civil Engineering Education Volume 119 ; 119 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1994 ; Journal of Civil Engineering Education Volume 120 ; 120 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1995 ; Journal of Civil Engineering Education Volume 121 ; 121 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1996 ; Journal of Civil Engineering Education Volume 122 ; 122 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1997 ; Journal of Civil Engineering Education Volume 123 ; 123 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1998 ; Journal of Civil Engineering Education Volume 124 ; 124 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 1999 ; Journal of Civil Engineering Education Volume 125 ; 125 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2000 ; Journal of Civil Engineering Education Volume 126 ; 126 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2001 ; Journal of Civil Engineering Education Volume 127 ; 127 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2002 ; Journal of Civil Engineering Education Volume 128 ; 128 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2003 ; Journal of Civil Engineering Education Volume 129 ; 129 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2004 ; Journal of Civil Engineering Education Volume 130 ; 130 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2005 ; Journal of Civil Engineering Education Volume 131 ; 131 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2006 ; Journal of Civil Engineering Education Volume 132 ; 132 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2007 ; Journal of Civil Engineering Education Volume 133 ; 133 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2008 ; Journal of Civil Engineering Education Volume 134 ; 134 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2009 ; Journal of Civil Engineering Education Volume 135 ; 135 ; https://ascelibrary.org/ ; >
-    au < doNotProcess ; exists ; 2010 ; Journal of Civil Engineering Education Volume 136 ; 136 ; https://ascelibrary.org/ ; >
-    au < doNotProcess ; exists ; 2011 ; Journal of Civil Engineering Education Volume 137 ; 137 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2012 ; Journal of Civil Engineering Education Volume 138 ; 138 ; http://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2013 ; Journal of Civil Engineering Education Volume 139 ; 139 ; http://ascelibrary.org/ ; >
-    au < finished ; finished ; 2014 ; Journal of Civil Engineering Education Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; Journal of Civil Engineering Education Volume 141 ; 141 ; http://ascelibrary.org/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Journal of Civil Engineering Education Volume 142 ; 142 ; http://ascelibrary.org/ ; >
-    au < finished ; finished ; 2017 ; Journal of Civil Engineering Education Volume 143 ; 143 ; https://ascelibrary.org/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Journal of Civil Engineering Education Volume 144 ; 144 ; https://ascelibrary.org/ ; >
-    au < frozen ; exists ; 2019 ; Journal of Civil Engineering Education Volume 145 ; 145 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1991 ; Journal of Professional Issues in Engineering Education and Practice Volume 117 ; 117 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1992 ; Journal of Professional Issues in Engineering Education and Practice Volume 118 ; 118 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1993 ; Journal of Professional Issues in Engineering Education and Practice Volume 119 ; 119 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1994 ; Journal of Professional Issues in Engineering Education and Practice Volume 120 ; 120 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1995 ; Journal of Professional Issues in Engineering Education and Practice Volume 121 ; 121 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1996 ; Journal of Professional Issues in Engineering Education and Practice Volume 122 ; 122 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1997 ; Journal of Professional Issues in Engineering Education and Practice Volume 123 ; 123 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1998 ; Journal of Professional Issues in Engineering Education and Practice Volume 124 ; 124 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 1999 ; Journal of Professional Issues in Engineering Education and Practice Volume 125 ; 125 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2000 ; Journal of Professional Issues in Engineering Education and Practice Volume 126 ; 126 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2001 ; Journal of Professional Issues in Engineering Education and Practice Volume 127 ; 127 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2002 ; Journal of Professional Issues in Engineering Education and Practice Volume 128 ; 128 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2003 ; Journal of Professional Issues in Engineering Education and Practice Volume 129 ; 129 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2004 ; Journal of Professional Issues in Engineering Education and Practice Volume 130 ; 130 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2005 ; Journal of Professional Issues in Engineering Education and Practice Volume 131 ; 131 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2006 ; Journal of Professional Issues in Engineering Education and Practice Volume 132 ; 132 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2007 ; Journal of Professional Issues in Engineering Education and Practice Volume 133 ; 133 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2008 ; Journal of Professional Issues in Engineering Education and Practice Volume 134 ; 134 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2009 ; Journal of Professional Issues in Engineering Education and Practice Volume 135 ; 135 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2010 ; Journal of Professional Issues in Engineering Education and Practice Volume 136 ; 136 ; https://ascelibrary.org/ ; >
+    au < doNotProcess ; exists ; 2011 ; Journal of Professional Issues in Engineering Education and Practice Volume 137 ; 137 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2012 ; Journal of Professional Issues in Engineering Education and Practice Education Volume 138 ; 138 ; http://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2013 ; Journal of Professional Issues in Engineering Education and Practice Volume 139 ; 139 ; http://ascelibrary.org/ ; >
+    au < finished ; finished ; 2014 ; Journal of Professional Issues in Engineering Education and Practice Volume 140 ; 140 ; http://ascelibrary.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Journal of Professional Issues in Engineering Education and Practice Volume 141 ; 141 ; http://ascelibrary.org/ ; reingest4.clockss.org:8082 >
+    au < frozen ; exists ; 2016 ; Journal of Professional Issues in Engineering Education and Practice Volume 142 ; 142 ; http://ascelibrary.org/ ; >
+    au < finished ; finished ; 2017 ; Journal of Professional Issues in Engineering Education and Practice Volume 143 ; 143 ; https://ascelibrary.org/ ; reingest5.clockss.org:8082 >
+    au < frozen ; exists ; 2018 ; Journal of Professional Issues in Engineering Education and Practice Volume 144 ; 144 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2019 ; Journal of Professional Issues in Engineering Education and Practice Volume 145 ; 145 ; https://ascelibrary.org/ ; >
     }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Civil Engineering Education ;
+      issn = 1052-3928 ;
+      eissn = 1943-5541
+    >
+
     {
     param[journal_id] = jceecd
 
@@ -1274,6 +1284,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Civil Engineering Education Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Civil Engineering Education Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Civil Engineering Education Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+
     }
   }
 
