@@ -194,8 +194,6 @@
       au < frozen ; exists ; 2020 ; Engineering Structures and Technologies Volume 2020 ; 12 ; 2020 ; https://journals.vgtu.lt/ ; >
       au < finished ; finished ; 2021 ; Engineering Structures and Technologies Volume 2021 ; 13 ; 2021 ; https://journals.vilniustech.lt/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Engineering Structures and Technologies Volume 2022 ; 14 ; 2022 ; https://journals.vilniustech.lt/ ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2023 ; Engineering Structures and Technologies Volume 2023 ; 15 ; 2023 ; https://journals.vilniustech.lt/ ; >
-      au < expected ; exists ; 2024 ; Engineering Structures and Technologies Volume 2024 ; 16 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
 
@@ -462,6 +460,20 @@
       au < deepCrawl ; exists ; 2022 ; Mathematical Modelling and Analysis Volume 2022 ; 27 ; 2022 ; https://journals.vilniustech.lt/ ; >
       au < deepCrawl ; exists ; 2023 ; Mathematical Modelling and Analysis Volume 2023 ; 28 ; 2023 ; https://journals.vilniustech.lt/ ; >
       au < crawling ; exists ; 2024 ; Mathematical Modelling and Analysis Volume 2024 ; 29 ; 2024 ; https://journals.vilniustech.lt/ ; >
+
+  }
+
+  {
+
+      title <
+        name = New Trends in Computer Sciences ;
+        eissn = 2783-6851
+      >
+
+      param[journal_id] = NTCS
+
+      au < manifest ; exists ; 2023 ; New Trends in Computer Sciences Volume 2023 ; 1 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < manifest ; exists ; 2024 ; New Trends in Computer Sciences Volume 2024 ; 2 ; 2024 ; https://journals.vilniustech.lt/ ; >
 
   }
 
