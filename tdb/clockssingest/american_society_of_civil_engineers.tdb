@@ -1509,14 +1509,14 @@
     {
     param[journal_id] = jpeodx
 
-    au < exists ; exists ; 2017 ; Journal of Transportation Engineering, Part B: Pavements Volume 143 ; 143 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2018 ; Journal of Transportation Engineering, Part B: Pavements Volume 144 ; 144 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2019 ; Journal of Transportation Engineering, Part B: Pavements Volume 145 ; 145 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2020 ; Journal of Transportation Engineering, Part B: Pavements Volume 146 ; 146 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2021 ; Journal of Transportation Engineering, Part B: Pavements Volume 147 ; 147 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2022 ; Journal of Transportation Engineering, Part B: Pavements Volume 148 ; 148 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2023 ; Journal of Transportation Engineering, Part B: Pavements Volume 149 ; 149 ; https://ascelibrary.org/ ; >
-    au < exists ; exists ; 2024 ; Journal of Transportation Engineering, Part B: Pavements Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2017 ; Journal of Transportation Engineering, Part B: Pavements Volume 143 ; 143 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2018 ; Journal of Transportation Engineering, Part B: Pavements Volume 144 ; 144 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2019 ; Journal of Transportation Engineering, Part B: Pavements Volume 145 ; 145 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2020 ; Journal of Transportation Engineering, Part B: Pavements Volume 146 ; 146 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2021 ; Journal of Transportation Engineering, Part B: Pavements Volume 147 ; 147 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2022 ; Journal of Transportation Engineering, Part B: Pavements Volume 148 ; 148 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2023 ; Journal of Transportation Engineering, Part B: Pavements Volume 149 ; 149 ; https://ascelibrary.org/ ; >
+    au < manifest ; exists ; 2024 ; Journal of Transportation Engineering, Part B: Pavements Volume 150 ; 150 ; https://ascelibrary.org/ ; >
 
     }
   }

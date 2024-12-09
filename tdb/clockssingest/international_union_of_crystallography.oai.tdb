@@ -645,7 +645,7 @@
     au < manifest ; exists ; 2024 ; 9 ; IUCrData Volume 9 (09/2024) ; 2024-09 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < manifest ; exists ; 2024 ; 9 ; IUCrData Volume 9 (10/2024) ; 2024-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < doesNotExist ; doesNotExist ; 2024 ; 9 ; IUCrData Volume 9 (11/2024) ; 2024-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2024 ; 9 ; IUCrData Volume 9 (12/2024) ; 2024-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2024 ; 9 ; IUCrData Volume 9 (12/2024) ; 2024-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
 
   }
 
