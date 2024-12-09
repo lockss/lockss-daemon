@@ -24,7 +24,7 @@
       param[base_url] = https://jobrc.org/
       param[journal_id] = jobrc
 
-      au < crawling ; exists ; 2007 ; Journal of Biotechnology Research Center Volume 1 ; 1 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; Journal of Biotechnology Research Center Volume 1 ; 1 ; 2007 ; >
       au < manifest ; exists ; 2008 ; Journal of Biotechnology Research Center Volume 2 ; 2 ; 2008 ; >
       au < manifest ; exists ; 2009 ; Journal of Biotechnology Research Center Volume 3 ; 3 ; 2009 ; >
       au < manifest ; exists ; 2010 ; Journal of Biotechnology Research Center Volume 4 ; 4 ; 2010 ; >
@@ -39,7 +39,7 @@
       au < manifest ; exists ; 2019 ; Journal of Biotechnology Research Center Volume 13 ; 13 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Journal of Biotechnology Research Center Volume 14 ; 14 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Journal of Biotechnology Research Center Volume 15 ; 15 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Journal of Biotechnology Research Center Volume 16 ; 16 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; Journal of Biotechnology Research Center Volume 16 ; 16 ; 2022 ; >
       au < manifest ; exists ; 2023 ; Journal of Biotechnology Research Center Volume 17 ; 17 ; 2023 ; >
       au < manifest ; exists ; 2024 ; Journal of Biotechnology Research Center Volume 18 ; 18 ; 2024 ; >
     }
