@@ -3035,7 +3035,7 @@
       comment[years] = Published 2024-present
       param[journal_code] = mr
 
-      au < exists ; 2024 ; RSC Mechanochemistry Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ >
+      au < manifest ; 2024 ; RSC Mechanochemistry Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ >
 
   }
 
@@ -3048,7 +3048,7 @@
       comment[years] = Published 2024-present
       param[journal_code] = pm
 
-      au < exists ; 2024 ; RSC Pharmaceutics Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ >
+      au < manifest ; 2024 ; RSC Pharmaceutics Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ >
 
   }
 
