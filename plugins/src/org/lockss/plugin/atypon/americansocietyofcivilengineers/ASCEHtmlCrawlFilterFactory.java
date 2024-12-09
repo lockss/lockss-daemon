@@ -75,6 +75,7 @@ public class ASCEHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
     HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "core-collateral"),
     HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "book-toc-side-content"),
     HtmlNodeFilters.tagWithAttributeRegex("section",  "id", "bibliography"),
+    HtmlNodeFilters.tagWithAttributeRegex("a",  "class", "extLink"),
     
   };
 
