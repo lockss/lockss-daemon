@@ -1892,13 +1892,13 @@
     au < manifest ; 1998 ; Competitiveness Review: An International Business Journal Volume 8 ; 8 >
     au < manifest ; 1999 ; Competitiveness Review: An International Business Journal Volume 9 ; 9 >
     au < manifest ; 2000 ; Competitiveness Review: An International Business Journal Volume 10 ; 10 >
-    au < manifest ; 2001 ; Competitiveness Review: An International Business Journal Volume 11 ; 11 >
+    au < ready ; 2001 ; Competitiveness Review: An International Business Journal Volume 11 ; 11 >
     au < released ; 2002 ; Competitiveness Review: An International Business Journal Volume 12 ; 12 >
     au < released ; 2003 ; Competitiveness Review: An International Business Journal Volume 13 ; 13 >
     au < released ; 2004 ; Competitiveness Review: An International Business Journal Volume 14 ; 14 >
     au < released ; 2005 ; Competitiveness Review: An International Business Journal Volume 15 ; 15 >
     au < released ; 2006 ; Competitiveness Review: An International Business Journal Volume 16 ; 16 >
-    au < manifest ; 2007 ; Competitiveness Review: An International Business Journal Volume 17 ; 17 >
+    au < ready ; 2007 ; Competitiveness Review: An International Business Journal Volume 17 ; 17 >
     au < released ; 2008 ; Competitiveness Review: An International Business Journal Volume 18 ; 18 >
     au < released ; 2009 ; Competitiveness Review: An International Business Journal Volume 19 ; 19 >
     au < released ; 2010 ; Competitiveness Review: An International Business Journal Volume 20 ; 20 >
@@ -7248,7 +7248,7 @@
     au < doNotProcess ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 >
     au < manifest ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 >
     au < manifest ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 >
-    au < manifest ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 >
+    au < ready ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 >
     au < manifest ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 >
     au < manifest ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 >
     au < released ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 >
@@ -9982,7 +9982,7 @@
     au < released ; 2006 ; Library Hi Tech News Volume 23 ; 23 >
     au < released ; 2007 ; Library Hi Tech News Volume 24 ; 24 >
     au < released ; 2008 ; Library Hi Tech News Volume 25 ; 25 >
-    au < manifest ; 2009 ; Library Hi Tech News Volume 26 ; 26 >
+    au < ready ; 2009 ; Library Hi Tech News Volume 26 ; 26 >
     au < released ; 2010 ; Library Hi Tech News Volume 27 ; 27 >
     au < released ; 2011 ; Library Hi Tech News Volume 28 ; 28 >
     au < released ; 2012 ; Library Hi Tech News Volume 29 ; 29 >
@@ -11430,7 +11430,7 @@
     au < released ; 2020 ; On The Horizon Volume 28 ; 28 >
     au < released ; 2021 ; On The Horizon Volume 29 ; 29 >
     au < released ; 2022 ; On The Horizon Volume 30 ; 30 >
-    au < manifest ; 2023 ; On The Horizon Volume 31 ; 31 >
+    au < ready ; 2023 ; On The Horizon Volume 31 ; 31 >
     au < manifest ; 2024 ; On The Horizon Volume 32 ; 32 >
 
   }
@@ -16175,8 +16175,8 @@
 
     param[journal_issn] = 2754-1312
 
-    au < manifest ; 2022 ; Drugs, Habits and Social Policy Volume 1 ; 1 >
-    au < manifest ; 2023 ; Drugs, Habits and Social Policy Volume 2 ; 2 >
+    au < ready ; 2022 ; Drugs, Habits and Social Policy Volume 1 ; 1 >
+    au < ready ; 2023 ; Drugs, Habits and Social Policy Volume 2 ; 2 >
     au < manifest ; 2024 ; Drugs, Habits and Social Policy Volume 3 ; 3 >
 
   }

@@ -91,7 +91,7 @@
       param[journal_id] = apde
 
      au < manifest ; 2008 ; Analysis & PDE Volume 1 ; 1 ; 2008 ; https://msp.org/ >
-     au < manifest ; 2009 ; Analysis & PDE Volume 2 ; 2 ; 2009 ; https://msp.org/ >
+     au < ready ; 2009 ; Analysis & PDE Volume 2 ; 2 ; 2009 ; https://msp.org/ >
      au < released ; 2010 ; Analysis & PDE Volume 3 ; 3 ; 2010 ; https://msp.org/ >
      au < released ; 2011 ; Analysis & PDE Volume 4 ; 4 ; 2011 ; http://msp.org/ >
      au < released ; 2012 ; Analysis & PDE Volume 5 ; 5 ; 2012 ; http://msp.org/ >
@@ -496,7 +496,7 @@
     au < manifest ; 2006 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 2 ; 2 ; 2006 ; https://msp.org/ >
     au < manifest ; 2007 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 3 ; 3 ; 2007 ; https://msp.org/ >
     au < manifest ; 2008 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 4 ; 4 ; 2008 ; https://msp.org/ >
-    au < manifest ; 2009 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 5 ; 5 ; 2009 ; https://msp.org/ >
+    au < ready ; 2009 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 5 ; 5 ; 2009 ; https://msp.org/ >
     au < released ; 2010 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 6 ; 6 ; 2010 ; https://msp.org/ >
     au < released ; 2011 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 7 ; 7 ; 2011 ; https://msp.org/ >
     au < doesNotExist ; 2012 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 8 ; 8 ; 2012 ; https://msp.org/ >
@@ -525,7 +525,7 @@
 
     param[journal_id] = mt
 
-    au < manifest ; 2022 ; Model Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ >
+    au < ready ; 2022 ; Model Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ >
     au < manifest ; 2023 ; Model Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ >
     au < expected ; 2024 ; Model Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ >
 
