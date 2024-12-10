@@ -28,10 +28,10 @@
         au < finished ; manifest ; 1917 ; 1917 ; The Journal of Immunology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
         au < finished ; manifest ; 1918 ; 1918 ; The Journal of Immunology Volume 3 ; 3 ; reingest3.clockss.org:8083 >
         au < finished ; manifest ; 1919 ; 1919 ; The Journal of Immunology Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-        au < frozen ; exists ; 1920 ; 1920 ; The Journal of Immunology Volume 5 ; 5 ; >
-        au < frozen ; exists ; 1921 ; 1921 ; The Journal of Immunology Volume 6 ; 6 ; >
+        au < finished ; manifest ; 1920 ; 1920 ; The Journal of Immunology Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+        au < finished ; manifest ; 1921 ; 1921 ; The Journal of Immunology Volume 6 ; 6 ; reingest2.clockss.org:8085 >
         au < finished ; manifest ; 1922 ; 1922 ; The Journal of Immunology Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-        au < frozen ; exists ; 1923 ; 1923 ; The Journal of Immunology Volume 8 ; 8 ; >
+        au < finished ; manifest ; 1923 ; 1923 ; The Journal of Immunology Volume 8 ; 8 ; reingest3.clockss.org:8083 >
         au < finished ; manifest ; 1924 ; 1924 ; The Journal of Immunology Volume 9 ; 9 ; reingest1.clockss.org:8082 >
         au < finished ; manifest ; 1925 ; 1925 ; The Journal of Immunology Volume 10 ; 10 ; reingest2.clockss.org:8085 >
         au < finished ; manifest ; 1926 ; 1926 ; The Journal of Immunology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
@@ -40,7 +40,7 @@
         au < finished ; manifest ; 1927 ; 1927 ; The Journal of Immunology Volume 14 ; 14 ; reingest1.clockss.org:8082 >
         au < finished ; manifest ; 1928 ; 1928 ; The Journal of Immunology Volume 15 ; 15 ; reingest2.clockss.org:8085 >
         au < finished ; manifest ; 1929 ; 1929 ; The Journal of Immunology Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-        au < frozen ; exists ; 1929 ; 1929 ; The Journal of Immunology Volume 17 ; 17 ; >
+        au < finished ; manifest ; 1929 ; 1929 ; The Journal of Immunology Volume 17 ; 17 ; reingest4.clockss.org:8082 >
         au < crawling ; exists ; 1930 ; 1930 ; The Journal of Immunology Volume 18 ; 18 ; >
         au < finished ; manifest ; 1930 ; 1930 ; The Journal of Immunology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
         au < crawling ; exists ; 1931 ; 1931 ; The Journal of Immunology Volume 20 ; 20 ; >
@@ -52,9 +52,9 @@
         au < finished ; manifest ; 1934 ; 1934 ; The Journal of Immunology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
         au < crawling ; exists ; 1934 ; 1934 ; The Journal of Immunology Volume 27 ; 27 ; >
         au < finished ; manifest ; 1935 ; 1935 ; The Journal of Immunology Volume 28 ; 28 ; reingest3.clockss.org:8083 >
-        au < frozen ; exists ; 1935 ; 1935 ; The Journal of Immunology Volume 29 ; 29 ; >
+        au < finished ; manifest ; 1935 ; 1935 ; The Journal of Immunology Volume 29 ; 29 ; reingest5.clockss.org:8082 >
         au < finished ; manifest ; 1936 ; 1936 ; The Journal of Immunology Volume 30 ; 30 ; reingest4.clockss.org:8082 >
-        au < frozen ; exists ; 1936 ; 1936 ; The Journal of Immunology Volume 31 ; 31 ; >
+        au < finished ; manifest ; 1936 ; 1936 ; The Journal of Immunology Volume 31 ; 31 ; reingest1.clockss.org:8082 >
         au < finished ; manifest ; 1937 ; 1937 ; The Journal of Immunology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
         au < finished ; manifest ; 1937 ; 1937 ; The Journal of Immunology Volume 33 ; 33 ; reingest5.clockss.org:8082 >
         au < crawling ; exists ; 1938 ; 1938 ; The Journal of Immunology Volume 34 ; 34 ; >
@@ -66,17 +66,17 @@
         au < finished ; manifest ; 1941 ; 1941 ; The Journal of Immunology Volume 40 ; 40 ; reingest5.clockss.org:8082 >
         au < finished ; manifest ; 1941 ; 1941 ; The Journal of Immunology Volume 41 ; 41 ; reingest1.clockss.org:8082 >
         au < finished ; manifest ; 1941 ; 1941 ; The Journal of Immunology Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-        au < frozen ; exists ; 1942 ; 1942 ; The Journal of Immunology Volume 43 ; 43 ; >
+        au < finished ; manifest ; 1942 ; 1942 ; The Journal of Immunology Volume 43 ; 43 ; reingest2.clockss.org:8085 >
         au < finished ; manifest ; 1942 ; 1942 ; The Journal of Immunology Volume 44 ; 44 ; reingest3.clockss.org:8083 >
         au < finished ; manifest ; 1942 ; 1942 ; The Journal of Immunology Volume 45 ; 45 ; reingest4.clockss.org:8082 >
         au < crawling ; exists ; 1943 ; 1943 ; The Journal of Immunology Volume 46 ; 46 ; >
         au < finished ; manifest ; 1943 ; 1943 ; The Journal of Immunology Volume 47 ; 47 ; reingest3.clockss.org:8083 >
-        au < frozen ; exists ; 1944 ; 1944 ; The Journal of Immunology Volume 48 ; 48 ; >
+        au < finished ; manifest ; 1944 ; 1944 ; The Journal of Immunology Volume 48 ; 48 ; reingest3.clockss.org:8083 >
         au < finished ; manifest ; 1944 ; 1944 ; The Journal of Immunology Volume 49 ; 49 ; reingest5.clockss.org:8082 >
         au < finished ; manifest ; 1945 ; 1945 ; The Journal of Immunology Volume 50 ; 50 ; reingest4.clockss.org:8082 >
         au < crawling ; exists ; 1945 ; 1945 ; The Journal of Immunology Volume 51 ; 51 ; >
         au < finished ; manifest ; 1946 ; 1946 ; The Journal of Immunology Volume 52 ; 52 ; reingest1.clockss.org:8082 >
-        au < frozen ; exists ; 1946 ; 1946 ; The Journal of Immunology Volume 53 ; 53 ; >
+        au < finished ; manifest ; 1946 ; 1946 ; The Journal of Immunology Volume 53 ; 53 ; reingest4.clockss.org:8082 >
         au < finished ; manifest ; 1946 ; 1946 ; The Journal of Immunology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
         au < finished ; manifest ; 1947 ; 1947 ; The Journal of Immunology Volume 55 ; 55 ; reingest3.clockss.org:8083 >
         au < finished ; manifest ; 1947 ; 1947 ; The Journal of Immunology Volume 56 ; 56 ; reingest4.clockss.org:8082 >
