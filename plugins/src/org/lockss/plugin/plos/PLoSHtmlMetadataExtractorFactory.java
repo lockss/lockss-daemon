@@ -77,6 +77,23 @@ public class PLoSHtmlMetadataExtractorFactory implements FileMetadataExtractorFa
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
       throws IOException {
         ArticleMetadata am = super.extract(target, cu);
+        /*
+        For PLOS, the citation_article_type in the metadata 
+        are odd types like Research Article, Editorial or Opinion which we don't have MetadataFields for. 
+        As long as there's an issn, assign the article_type as journal_article to pass metadata indexing check.
+        */
+        ArchivalUnit au = cu.getArchivalUnit();
+        TitleConfig tc = au.getTitleConfig();
+        if(tc != null){
+            TdbAu tdbAu = tc.getTdbAu();
+            if(tdbAu != null){
+                String issn = tdbAu.getIssn();
+                if(issn != null){
+                    am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+                    am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+                }
+            }
+        }
         am.cook(tagMap);
         return am;
       }
