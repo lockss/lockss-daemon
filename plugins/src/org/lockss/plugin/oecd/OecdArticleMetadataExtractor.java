@@ -70,9 +70,10 @@ public class OecdArticleMetadataExtractor extends BaseArticleMetadataExtractor {
      * https://www.oecd-ilibrary.org/development/dossiers-du-cad-2000_journal_dev-v1-3-fr
      * https://www.oecd-ilibrary.org/development/the-dac-journal-2000_journal_dev-v1-2-en
      * https://www.oecd-ilibrary.org/nuclear-energy/bulletin-de-droit-nucleaire-volume-2017-numero-1_72dc4ad9-fr
+     * https://www.oecd-ilibrary.org/economics/an-optimized-forecast-specification-for-economic-activity_jbcma-v2008-art2-en
      */
     if ((srcUrl.contains("volume") && (srcUrl.contains("issue")||srcUrl.contains("numero"))) || IS_BOOK || srcUrl.contains("journal") 
-    || srcUrl.matches(".*-v(19|20)[0-9]{2}-.*")) {
+    || srcUrl.matches(".*-v(19|20)[0-9]{2}-[^art].*")) {
       log.debug3("The source url is " + srcUrl + " and I am an issue");
       PDF_PATTERN = PDF_ISSUE_PATTERN;
     } else {
