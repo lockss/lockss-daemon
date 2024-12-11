@@ -15234,8 +15234,6 @@
     param[journal_issn] = 2516-4392
 
     au < finished ; manifest ; 2021 ; International Journal of Disruptive Innovation in Government Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < expected ; exists ; 2023 ; International Journal of Disruptive Innovation in Government Volume 2 ; 2 ; >
-    au < expected ; exists ; 2024 ; International Journal of Disruptive Innovation in Government Volume 3 ; 3 ; >
 
   }
 
@@ -15251,8 +15249,6 @@
 
     au < finished ; manifest ; 2019 ; International Journal of Excellence in Government Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; International Journal of Excellence in Government Volume 2 ; 2 ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2023 ; International Journal of Excellence in Government Volume 3 ; 3 ; >
-    au < expected ; exists ; 2024 ; International Journal of Excellence in Government Volume 4 ; 4 ; >
 
   }
 
@@ -15565,8 +15561,6 @@
     au < finished ; manifest ; 2019 ; Journal of Industry-University Collaboration Volume 1 ; 1 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Journal of Industry-University Collaboration Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Industry-University Collaboration Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2023 ; Journal of Industry-University Collaboration Volume 4 ; 4 ; >
-    au < expected ; exists ; 2024 ; Journal of Industry-University Collaboration Volume 5 ; 5 ; >
 
   }
 
@@ -15760,8 +15754,6 @@
     au < finished ; manifest ; 2019 ; Mental Illness Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Mental Illness Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Mental Illness Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-    au < expected ; exists ; 2023 ; Mental Illness Volume 14 ; 14 ; >
-    au < expected ; exists ; 2024 ; Mental Illness Volume 15 ; 15 ; >
 
   }
 
@@ -15991,19 +15983,27 @@
 
     title <
       name = Spanish Journal of Marketing - ESIC ;
-        eissn = 2444-9709
+      issn = 2444-9695 ;
+      eissn = 2444-9709
     >
 
+    {
     param[journal_issn] = 2444-9709
 
-    au < exists ; exists ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 ; >
-    au < exists ; exists ; 2019 ; Spanish Journal of Marketing - ESIC Volume 23 ; 23 ; >
     au < finished ; manifest ; 2020 ; Spanish Journal of Marketing - ESIC Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Spanish Journal of Marketing - ESIC Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Spanish Journal of Marketing - ESIC Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-    au < exists ; exists ; 2023 ; Spanish Journal of Marketing - ESIC Volume 27 ; 27 ; >
-    au < expected ; exists ; 2024 ; Spanish Journal of Marketing - ESIC Volume 28 ; 28 ; >
+    }
+    {
+    param[journal_issn] = 2444-9695
 
+    au < exists ; exists ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 ; >
+    au < exists ; exists ; 2019 ; Spanish Journal of Marketing - ESIC Volume 23 ; 23 ; >
+
+    au < exists ; exists ; 2023 ; Spanish Journal of Marketing - ESIC Volume 27 ; 27 ; >
+    au < exists ; exists ; 2024 ; Spanish Journal of Marketing - ESIC Volume 28 ; 28 ; >
+
+    }
   }
 
 
@@ -16071,8 +16071,6 @@
     au < finished ; manifest ; 2019 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-    au < expected ; exists ; 2023 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 19 ; 19 ; >
-    au < expected ; exists ; 2024 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 20 ; 20 ; >
 
   }
 
