@@ -91,9 +91,15 @@
     au < readySource ; crawling ; 2024 ; Taylor & Francis Source Content 2024_29 ; 2024_29 >
     au < readySource ; crawling ; 2024 ; Taylor & Francis Source Content 2024_30 ; 2024_30 >
     au < readySource ; crawling ; 2024 ; Taylor & Francis Source Content 2024_31 ; 2024_31 >
-    au < manifest ; exists ; 2024 ; Taylor & Francis Source Content 2024_32 ; 2024_32 >
-    au < manifest ; exists ; 2024 ; Taylor & Francis Source Content 2024_33 ; 2024_33 >
-    au < manifest ; exists ; 2024 ; Taylor & Francis Source Content 2024_34 ; 2024_34 >
+    au < testing ; exists ; 2024 ; Taylor & Francis Source Content 2024_32 ; 2024_32 >
+    au < testing ; exists ; 2024 ; Taylor & Francis Source Content 2024_33 ; 2024_33 >
+    au < testing ; exists ; 2024 ; Taylor & Francis Source Content 2024_34 ; 2024_34 >
+    au < expected ; exists ; 2024 ; Taylor & Francis Source Content 2024_35 ; 2024_35 >
+    au < expected ; exists ; 2024 ; Taylor & Francis Source Content 2024_36 ; 2024_36 >
+    au < expected ; exists ; 2024 ; Taylor & Francis Source Content 2024_37 ; 2024_37 >
+    au < expected ; exists ; 2024 ; Taylor & Francis Source Content 2024_38 ; 2024_38 >
+    au < expected ; exists ; 2024 ; Taylor & Francis Source Content 2024_39 ; 2024_39 >
+    au < expected ; exists ; 2024 ; Taylor & Francis Source Content 2024_40 ; 2024_40 >
 
     au < expected ; exists ; 2025 ; Taylor & Francis Source Content 2025_01 ; 2025_01 >
     au < expected ; exists ; 2025 ; Taylor & Francis Source Content 2025_02 ; 2025_02 >
