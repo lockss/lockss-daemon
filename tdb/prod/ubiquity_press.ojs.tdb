@@ -187,14 +187,12 @@
       comment[publisher] = Levy Library Press
       param[base_url] = https://account.journalofaltmetrics.org/
       param[journal_id] = ll-j-ja
+      # no longer publishing
 
       au < doNotProcess ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 >
       au < released ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 > #502 upstream error https://d39af2mgp1pqhg.cloudfront.net/widget-popup.js,"Unknown host: d39af2mgp1pqhg.cloudfront.net"
       au < released ; 2021 ; 4 ; Journal of Altmetrics Volume 2021 ; 2021 >
-      au < expected ; 2022 ; 5 ; Journal of Altmetrics Volume 2022 ; 2022 >
-      au < expected ; 2023 ; 6 ; Journal of Altmetrics Volume 2023 ; 2023 >
-      au < expected ; 2024 ; 7 ; Journal of Altmetrics Volume 2024 ; 2024 >
 
   }
 
@@ -1018,8 +1016,8 @@
 
       au < exists ; 2020 ; 1 ; Journal for the History of Knowledge Volume 2020 ; 2020 >
       au < exists ; 2021 ; 2 ; Journal for the History of Knowledge Volume 2021 ; 2021 >
-      au < expected ; 2022 ; 3 ; Journal for the History of Knowledge Volume 2022 ; 2022 >
-      au < expected ; 2023 ; 4 ; Journal for the History of Knowledge Volume 2023 ; 2023 >
+      au < exists ; 2022 ; 3 ; Journal for the History of Knowledge Volume 2022 ; 2022 >
+      au < exists ; 2023 ; 4 ; Journal for the History of Knowledge Volume 2023 ; 2023 >
       au < expected ; 2024 ; 5 ; Journal for the History of Knowledge Volume 2024 ; 2024 >
 
   }
@@ -1191,8 +1189,6 @@
       au < doNotProcess ; 2020 ; 14 ; Journal of Molecular Signaling Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 >
       au < released ; 2022 ; 16 ; Journal of Molecular Signaling Volume 2022 ; 2022 >
-      au < expected ; 2023 ; 17 ; Journal of Molecular Signaling Volume 2023 ; 2023 >
-      au < expected ; 2024 ; 18 ; Journal of Molecular Signaling Volume 2024 ; 2024 >
 
   }
 
@@ -1233,6 +1229,7 @@
       param[base_url] = https://account.openhealthdata.metajnl.com/
       param[journal_id] = up-j-ohd
       # continues Journal of Open Public Health Data
+      # no longer publishing
 
       au < doNotProcess ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 >
       au < doNotProcess ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 >
@@ -1242,8 +1239,6 @@
       au < doNotProcess ; 2020 ; 7 ; Open Health Data Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 8 ; Open Health Data Volume 2021 ; 2021 >
       au < released ; 2022 ; 9 ; Open Health Data Volume 2022 ; 2022 >
-      au < expected ; 2023 ; 10 ; Open Health Data Volume 2023 ; 2023 >
-      au < expected ; 2024 ; 11 ; Open Health Data Volume 2024 ; 2024 >
 
   }
 
@@ -1385,9 +1380,6 @@
       au < doNotProcess ; 2019 ; 6 ; Open Journal of Bioresources Volume 2019 ; 2019 >
       au < doNotProcess ; 2020 ; 7 ; Open Journal of Bioresources Volume 2020 ; 2020 >
       au < doNotProcess ; 2021 ; 8 ; Open Journal of Bioresources Volume 2021 ; 2021 >
-      au < expected ; 2022 ; 9 ; Open Journal of Bioresources Volume 2022 ; 2022 >
-      au < expected ; 2023 ; 10 ; Open Journal of Bioresources Volume 2023 ; 2023 >
-      au < expected ; 2024 ; 11 ; Open Journal of Bioresources Volume 2024 ; 2024 >
 
   }
 

@@ -1614,9 +1614,6 @@
     au < frozen ; exists ; 2020 ; Journal of Unmanned Vehicle Systems Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2021 ; Journal of Unmanned Vehicle Systems Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
     #As of 2022 journal changed name to Drone Systems and Applications 2564-4939
-    au < expected ; exists ; 2022 ; Journal of Unmanned Vehicle Systems Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
-    au < expected ; exists ; 2023 ; Journal of Unmanned Vehicle Systems Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
-    au < expected ; exists ; 2024 ; Journal of Unmanned Vehicle Systems Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
     }
     
     {
@@ -1871,39 +1868,11 @@
       >
      
     param[journal_id] = geomat
-#    au < exists ; exists ; 1993 ; Geomatica Volume 47 ; 47 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 1994 ; Geomatica Volume 48 ; 48 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 1995 ; Geomatica Volume 49 ; 49 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 1996 ; Geomatica Volume 50 ; 50 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 1997 ; Geomatica Volume 51 ; 51 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 1998 ; Geomatica Volume 52 ; 52 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 1999 ; Geomatica Volume 53 ; 53 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2000 ; Geomatica Volume 54 ; 54 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2001 ; Geomatica Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2002 ; Geomatica Volume 56 ; 56 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2003 ; Geomatica Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2004 ; Geomatica Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2005 ; Geomatica Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2006 ; Geomatica Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2007 ; Geomatica Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2008 ; Geomatica Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2009 ; Geomatica Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2010 ; Geomatica Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2011 ; Geomatica Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2012 ; Geomatica Volume 66 ; 66 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2013 ; Geomatica Volume 67 ; 67 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2014 ; Geomatica Volume 68 ; 68 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2015 ; Geomatica Volume 69 ; 69 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2016 ; Geomatica Volume 70 ; 70 ; https://cdnsciencepub.com/ ; >
-#    au < exists ; exists ; 2017 ; Geomatica Volume 71 ; 71 ; https://cdnsciencepub.com/ ; >
 
     au < frozen ; exists ; 2018 ; Geomatica Volume 72 ; 72 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2019 ; Geomatica Volume 73 ; 73 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2020 ; Geomatica Volume 74 ; 74 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2021 ; Geomatica Volume 75 ; 75 ; https://cdnsciencepub.com/ ; >
-    au < expected ; exists ; 2022 ; Geomatica Volume 76 ; 76 ; https://cdnsciencepub.com/ ; >
-    au < expected ; exists ; 2023 ; Geomatica Volume 77 ; 77 ; https://cdnsciencepub.com/ ; >
-    au < expected ; exists ; 2024 ; Geomatica Volume 78 ; 78 ; https://cdnsciencepub.com/ ; >
 
     }
     
@@ -1920,9 +1889,6 @@
     au < frozen ; exists ; 2019 ; Anthropocene Coasts Volume 2 ; 2 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2020 ; Anthropocene Coasts Volume 3 ; 3 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2021 ; Anthropocene Coasts Volume 4 ; 4 ; https://cdnsciencepub.com/ ; >
-    au < expected ; exists ; 2022 ; Anthropocene Coasts Volume 5 ; 5 ; https://cdnsciencepub.com/ ; >
-    au < expected ; exists ; 2023 ; Anthropocene Coasts Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
-    au < expected ; exists ; 2024 ; Anthropocene Coasts Volume 7 ; 7 ; https://cdnsciencepub.com/ ; >
 
     }
     
