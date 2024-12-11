@@ -51,6 +51,7 @@ public class PLoSHtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tag("footer"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-articles-container"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "amendment-correction"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "amendment-citation"),
         HtmlNodeFilters.tagWithAttribute("ol", "class", "references"),
     };
     return new HtmlFilterInputStream(in,
