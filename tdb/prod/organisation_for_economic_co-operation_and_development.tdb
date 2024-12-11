@@ -451,7 +451,7 @@
     param[journal_dir] = oecd-journal-financial-market-trends
     param[journal_issn] = 19952872
 
-    au < ready ; 2008 ; OECD Journal: Financial Market Trends Volume 2008 ; 2008 >
+    au < releasing ; 2008 ; OECD Journal: Financial Market Trends Volume 2008 ; 2008 >
     au < released ; 2009 ; OECD Journal: Financial Market Trends Volume 2009 ; 2009 >
     au < released ; 2010 ; OECD Journal: Financial Market Trends Volume 2010 ; 2010 >
     au < released ; 2011 ; OECD Journal: Financial Market Trends Volume 2011 ; 2011 >
@@ -476,7 +476,7 @@
     param[journal_dir] = oecd-journal-general-papers
     param[journal_issn] = 1995283x
 
-    au < ready ; 2008 ; OECD Journal: General Papers Volume 2008 ; 2008 >
+    au < releasing ; 2008 ; OECD Journal: General Papers Volume 2008 ; 2008 >
     au < released ; 2009 ; OECD Journal: General Papers Volume 2009 ; 2009 >
     au < released ; 2010 ; OECD Journal: General Papers Volume 2010 ; 2010 >
 
@@ -495,7 +495,7 @@
     param[journal_dir] = oecd-journal-journal-of-business-cycle-measurement-and-analysis
     param[journal_issn] = 19952899
 
-    au < ready ; 2009 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2008 ; 2008 >
+    au < releasing ; 2009 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2008 ; 2008 >
     au < released ; 2010 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2009 ; 2009 >
     au < released ; 2011 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2010 ; 2010 >
     au < released ; 2012 ; OECD Journal: Journal of Business Cycle Measurement and Analysis Volume 2011 ; 2011 >
