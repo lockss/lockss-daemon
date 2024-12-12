@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>160</string>
+    <string>161</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -203,6 +203,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- note downloadFigures should *not* be added in to this as we do not want the ppt download associated -->
       <string>1,"^https?://%s/action/(downloadPdfFig|showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", url_host(base_url)</string>
       <string>1,"^https?://%s/topic/eb-abstracts-", url_host(base_url)</string>
+      <!--Serve content related for aaas-->
+      <string>1,"^https?://%s/((cdn-cgi/scripts)|pb-assets|products|templates|wro)", url_host(base_url)</string>
     </list>
   </entry>
   <!--  tandf is serving pdf files of this form (tables) without mime-type -->
@@ -409,6 +411,15 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- www.emeraldinsight.com.global.prod.fastly.net for some js files -->
       <string>"%s\.global\.prod\.fastly\.net", url_host(base_url)</string>
       <string>"faseb-prod-cdn\.literatumonline\.com"</string>
+      <string>static\.cloudflareinsights\.com</string>
+      <string>securepubads\.g\.doubleclick\.net</string>
+      <string>weby\.aaas\.org</string>
+      <string>assets\.adobedtm\.com</string>
+      <string>cdn\.onesignal\.com</string>
+      <string>scholar\.google\.com</string>
+      <string>d1bxh8uas1mnw7\.cloudfront\.net</string>
+      <string>play\.cadmore\.media</string>
+      <string>js\.trendmd\.com</string>
     </list>
   </entry>
   <!--  versioning or variants for style support -->
