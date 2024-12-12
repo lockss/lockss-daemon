@@ -51,15 +51,19 @@ import org.lockss.util.Logger;
 public class BMJJCorePdfFilterFactory extends SimplePdfFilterFactory{
 
     private static final Logger log = Logger.getLogger(BMJJCorePdfFilterFactory.class);
-    public static Pattern DOWNLOADED_FROM_PATTERN = Pattern.compile("");
+    /*example: BMJ Open Ophthalmology: first published as 10.1136/bmjophth-2016-000021 on 26 September 2017. 
+               Downloaded from https://bmjophth.bmj.com on 14 November 2024 by guest. Protected by
+               copyright.*/
+    public static Pattern DOWNLOADED_FROM_PATTERN_START = Pattern.compile(": first published as ");
+    public static Pattern DOWNLOADED_FROM_PATTERN_END = Pattern.compile("copyright.");
 
     @Override
     public void transform(ArchivalUnit au, PdfDocument pdfDocument) throws PdfException {
         PdfUtil.normalizeTrailerId(pdfDocument);
-        BMJDownloadedFromStateMachine worker = new BMJDownloadedFromStateMachine(DOWNLOADED_FROM_PATTERN);
+        BMJDownloadedFromStateMachine worker = new BMJDownloadedFromStateMachine(DOWNLOADED_FROM_PATTERN_START);
         for (PdfPage pdfPage : pdfDocument.getPages()) {
           List<PdfTokenStream> pdfTokenStreams = pdfPage.getAllTokenStreams();
-          PdfTokenStream pdfTokenStream = pdfTokenStreams.get(pdfTokenStreams.size() - 1);
+          //PdfTokenStream pdfTokenStream = pdfTokenStreams.get(pdfTokenStreams.size() - 1);
           for (Iterator<PdfTokenStream> iter = pdfTokenStreams.iterator(); iter.hasNext();) {
             PdfTokenStream nextTokStream = iter.next();
             worker.process(nextTokStream);      
@@ -86,7 +90,9 @@ public class BMJJCorePdfFilterFactory extends SimplePdfFilterFactory{
     public void state0() throws PdfException {
         //We will be creating a backwards-going state machine. First find Q.
       if (isRestoreGraphicsState()) {
-        setEnd(getIndex());
+        if(s.length() == 0){
+          setEnd(getIndex());
+        }
         setState(1);
       }
     } 
@@ -103,25 +109,44 @@ public class BMJJCorePdfFilterFactory extends SimplePdfFilterFactory{
 
     @Override
     public void state2() throws PdfException {
-        //accumulates any Tj/TJ strings
+      // 'Tj', '\'' and '"'
+        if (isShowText()) {
+            s += getSingleOperand().getString();
+            log.debug3("The current string after Tj is " + s);
+        }
+        // 'TJ'
+        else if (isShowTextGlyphPositioning()) {
+          for (PdfToken token : getTokens().get(getIndex() - 1).getArray()) {
+            if (token.isString()) {
+              s += token.getString();
+              log.debug3("The current string after TL is " + s);
+            }
+          }
+        }
+        else{
+          if(isBeginTextObject()){
+            setState(3);
+          }
+      }
     }
 
     @Override
     public void state3() throws PdfException{
-        //then find BT
-        if (isBeginTextObject()) {
-            setBegin(getIndex());
-            setState(4);
-          }
-    }
-
-    @Override
-    public void state4() throws PdfException{
         //then find q
-        /*if (/*is equal to q ) {
-            setState(0);
-          }*/
-    }
-
+        if (isSaveGraphicsState() && DOWNLOADED_FROM_PATTERN_END.matcher(s).find() && !DOWNLOADED_FROM_PATTERN_START.matcher(s).find()) {
+          log.debug3("I found the end of the watermark. The string is " + s);
+          setState(0);
+        }
+        else if(isSaveGraphicsState() && DOWNLOADED_FROM_PATTERN_START.matcher(s).find()){
+          log.debug3("I found the start of the watermark. The string is " + s);
+          setBegin(getIndex());
+          setResult(true);
+          s="";
+          stop();
+        }else{
+          s = "";
+          setState(0);
+        }
+      }
   }  
 }
