@@ -501,8 +501,6 @@
       au < released ; 2020 ; 2020 ; BioDiscovery Volume 2020 ; 2020 ; https://biodiscovery.pensoft.net/ >
 
       au < released ; 2022 ; 2022 ; BioDiscovery Volume 2022 ; 2022 ; https://biodiscovery.pensoft.net/ >
-      au < expected ; 2023 ; 2023 ; BioDiscovery Volume 2023 ; 2023 ; https://biodiscovery.pensoft.net/ >
-      au < expected ; 2024 ; 2024 ; BioDiscovery Volume 2024 ; 2024 ; https://biodiscovery.pensoft.net/ >
 
   }
 
@@ -553,23 +551,6 @@
       au < manifest ; 2024 ; 2024 ; Check List Volume 2024 ; 2024 ; https://checklist.pensoft.net/ >
 
   }
-
-#  {
-#
-#      title <
-#        name = Clinical Psyhology in Europe ;
-#        eissn = 2625-3410
-#      >
-#
-#      param[au_oai_set] = cpe
-#
-#      au < manifest ; 2019 ; 2019 ; Clinical Psyhology in Europe Volume 2019 ; 2019 ; https://cpe.psychopen.eu/ >
-#      au < expected ; 2020 ; 2020 ; Clinical Psyhology in Europe Volume 2020 ; 2020 ; https://cpe.psychopen.eu/ >
-#
-#  }
-#
-
-
 
   {
 
@@ -1011,7 +992,7 @@
       au < released ; 2020 ; 2020 ; ARPHA Proceedings Volume 2020 ; 2020 ; https://ap.pensoft.net/ >
       au < released ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ >
       au < released ; 2022 ; 2022 ; ARPHA Proceedings Volume 2022 ; 2022 ; https://ap.pensoft.net/ >
-      au < expected ; 2023 ; 2023 ; ARPHA Proceedings Volume 2023 ; 2023 ; https://ap.pensoft.net/ >
+
       au < manifest ; 2024 ; 2024 ; ARPHA Proceedings Volume 2024 ; 2024 ; https://ap.pensoft.net/ >
 
   }

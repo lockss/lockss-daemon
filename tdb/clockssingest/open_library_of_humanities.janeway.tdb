@@ -32,7 +32,7 @@
     au < frozen ; crawling ; 2020 ; 10 ; The Comics Grid Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2021 ; 11 ; The Comics Grid Volume 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; 12 ; The Comics Grid Volume 2022 ; 2022 ; >
-    au < expected ; exists ; 2023 ; 13 ; The Comics Grid Volume 2023 ; 2023 ; >
+    au < exists ; exists ; 2023 ; 13 ; The Comics Grid Volume 2023 ; 2023 ; > # article link missing https://www.comicsgrid.com/plugins/clockss/?year=2023
     au < crawling ; exists ; 2024 ; 14 ; The Comics Grid Volume 2024 ; 2024 ; >
 
   }
