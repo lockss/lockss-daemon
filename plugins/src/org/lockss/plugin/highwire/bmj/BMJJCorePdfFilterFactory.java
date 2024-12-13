@@ -133,15 +133,14 @@ public class BMJJCorePdfFilterFactory extends SimplePdfFilterFactory{
     @Override
     public void state3() throws PdfException{
         //then find q
-        if (isSaveGraphicsState() && DOWNLOADED_FROM_PATTERN_END.matcher(s).find() && !DOWNLOADED_FROM_PATTERN_START.matcher(s).find()) {
+        if (isSaveGraphicsState() && DOWNLOADED_FROM_PATTERN_END.matcher(s).find() && !DOWNLOADED_FROM_PATTERN_START.matcher(s).find()){
           log.debug3("I found the end of the watermark. The string is " + s);
           setState(0);
-        }
-        else if(isSaveGraphicsState() && DOWNLOADED_FROM_PATTERN_START.matcher(s).find()){
+        }else if(isSaveGraphicsState() && DOWNLOADED_FROM_PATTERN_START.matcher(s).find()){
           log.debug3("I found the start of the watermark. The string is " + s);
           setBegin(getIndex());
           setResult(true);
-          s="";
+          s = "";
           stop();
         }else{
           s = "";

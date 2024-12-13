@@ -59,6 +59,7 @@ public class BMJJCoreHtmlCrawlFilterFactory extends HighWireJCoreHtmlCrawlFilter
     //
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "cited-by"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "additional-link"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "highwire-corrections"),
   };
   
   @Override

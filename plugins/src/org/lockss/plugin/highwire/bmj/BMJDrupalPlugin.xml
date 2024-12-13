@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>37</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -162,10 +162,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.highwire.bmj.BMJDrupalHashFilterFactory</string>
   </entry>
-  <!--<entry>
+  <entry>
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.highwire.bmj.BMJJCorePdfFilterFactory</string>
-  </entry>-->
+  </entry>
   <entry>
     <string>au_permitted_host_pattern</string>
     <list>
