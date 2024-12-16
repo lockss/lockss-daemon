@@ -208,6 +208,7 @@ public class MigrationManager extends BaseLockssDaemonManager
              String.valueOf(inMigrationMode));
     cfgMgr.modifyCacheConfigFile(mCfg,
         ConfigManager.CONFIG_FILE_MIGRATION, CONFIG_FILE_MIGRATION_HEADER);
+    this.isInMigrationMode = inMigrationMode;
   }
 
   public void setIsDbMoved(boolean isDbMoved) throws IOException {
