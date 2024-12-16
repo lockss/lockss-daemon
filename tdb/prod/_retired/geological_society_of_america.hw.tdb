@@ -221,29 +221,4 @@
 
   }
 
-  {
-
-    title <
-      name = Lithosphere ;
-      issn = 1941-8264 ;
-      eissn = 1947-4253 ;
-      issnl = 1947-4253
-    >
-
-    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-    param[base_url] = http://lithosphere.gsapubs.org/
-    implicit < status ; year ; name ; param[volume_name] >
-
-    au < down ; 2009 ; Lithosphere Volume 1 ; 1 >
-    au < down ; 2010 ; Lithosphere Volume 2 ; 2 >
-    au < down ; 2011 ; Lithosphere Volume 3 ; 3 >
-    au < down ; 2012 ; Lithosphere Volume 4 ; 4 >
-    au < down ; 2013 ; Lithosphere Volume 5 ; 5 >
-    au < down ; 2014 ; Lithosphere Volume 6 ; 6 >
-    au < superseded ; 2015 ; Lithosphere Volume 7 [superseded] ; 7 >
-    au < superseded ; 2016 ; Lithosphere Volume 8 [superseded] ; 8 >
-    au < doNotProcess ; 2017 ; Lithosphere Volume 9 ; 9 >
-
-  }
-
 }

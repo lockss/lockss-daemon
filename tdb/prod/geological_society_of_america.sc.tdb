@@ -232,35 +232,4 @@
 
   }
 
-  {
-
-    title <
-      name = Lithosphere ;
-      issn = 1941-8264 ;
-      eissn = 1947-4253 ;
-      issnl = 1947-4253
-    >
-    #param[base_url] = http://lithosphere.gsapubs.org/
-
-    param[journal_id] = lithosphere
-
-    au < doNotProcess ; 2009 ; 2009 ; Lithosphere Volume 1 ; 1 >
-    au < doNotProcess ; 2010 ; 2010 ; Lithosphere Volume 2 ; 2 >
-    au < doNotProcess ; 2011 ; 2011 ; Lithosphere Volume 3 ; 3 >
-    au < doNotProcess ; 2012 ; 2012 ; Lithosphere Volume 4 ; 4 >
-    au < doNotProcess ; 2013 ; 2013 ; Lithosphere Volume 5 ; 5 >
-    au < doNotProcess ; 2014 ; 2014 ; Lithosphere Volume 6 ; 6 >
-    au < released ; 2015 ; 2015 ; Lithosphere Volume 7 ; 7 >
-    au < released ; 2016 ; 2016 ; Lithosphere Volume 8 ; 8 >
-    au < released ; 2017 ; 2017 ; Lithosphere Volume 9 ; 9 >
-    au < released ; 2018 ; 2018 ; Lithosphere Volume 10 ; 10 >
-    au < released ; 2019 ; 2019 ; Lithosphere Volume 11 ; 11 >
-    au < released ; 2020 ; 2020 ; Lithosphere Volume 12 ; 12 >
-    au < released ; 2021 ; 2021 ; Lithosphere Volume 2021 ; 2021 >
-    au < released ; 2022 ; 2022 ; Lithosphere Volume 2022 ; 2022 >
-    au < manifest ; 2023 ; 2023 ; Lithosphere Volume 2023 ; 2023 >
-    au < manifest ; 2024 ; 2024 ; Lithosphere Volume 2024 ; 2024 >
-
-  }
-
 }
