@@ -759,7 +759,7 @@ public class V2AuMover {
     try {
       checkV2ServicesAvailable();
       openReportFiles(firstArgs); // must follow checkV2ServicesAvailable
-      if (!migrationMgr.isDryRun() &&
+      if (!isDryRun() &&
           !migrationMgr.isTargetInMigrationMode(hostName, cfgUiPort,
                                                 userName, userPass)) {
         currentStatus = "Failed - target is not in migration mode";
@@ -952,10 +952,14 @@ public class V2AuMover {
     enqueueFinishAll();
   }
 
+  public boolean isDryRun() {
+    return migrationMgr.isDryRun();
+  }
+
   private void setAuMigrationState(ArchivalUnit au,
                                    AuState.MigrationState state) {
     // Do nothing if dry run mode
-    if (migrationMgr.isDryRun()) {
+    if (isDryRun()) {
       return;
     }
 
@@ -983,7 +987,7 @@ public class V2AuMover {
         break;
       case Finished:
         // Optionally delete the AU from the system
-        if (!migrationMgr.isDryRun()) {
+        if (!isDryRun()) {
           try {
             if (migrationMgr.isDeleteMigratedAus()) {
               // Remove AU from LOCKSS
@@ -2351,7 +2355,7 @@ public class V2AuMover {
   public static final DateFormat TIMESTAMP_FMT =
                       new SimpleDateFormat("MM/dd/yy HH:mm:ss zzz");
 
-  public String nowTimestamp() {
+  public static String nowTimestamp() {
     return TIMESTAMP_FMT.format(new Date());
   }
 

@@ -108,6 +108,14 @@ public class PropUtil {
     return res;
   }
 
+  /** Load Properties from a String */
+  public static Properties fromString(String str) throws IOException {
+    Properties res = new Properties();
+    Reader rdr = new StringReader(str);
+    res.load(rdr);
+    return res;
+  }
+
   /** Store the Properties in the file */
   public static void toFile(File file, Properties props) throws IOException {
     OutputStream os = new BufferedOutputStream(new FileOutputStream(file));

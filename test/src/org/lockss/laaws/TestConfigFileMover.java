@@ -70,4 +70,29 @@ public class TestConfigFileMover extends LockssTestCase {
     Configuration exp = ConfigurationUtil.fromString(v2ContentServers);
     assertEquals(exp, c2);
   }
+
+  public void testAddV2DryRun() throws IOException {
+    String boilerplare1 = "\n\nAdded ";
+    String boilerplare2 = " to prevent crawling and polling during dry-run migration test.\nYou should remove these when done testing, before running real migration.";
+    String in = "a=b\nb=3\n";
+    assertMatchesRE(boilerplare1 + ".*" + boilerplare2 +
+                    "\norg.lockss.poll.v3.enableV3Poller=false" +
+                    "\norg.lockss.poll.v3.enableV3Voter=false" +
+                    "\norg.lockss.crawler.enabled=false" +
+                    "\n",
+                    ConfigFileMover.addV2DryRun(in));
+
+    in = "a=b\nb=3\n" +
+      "\norg.lockss.poll.v3.enableV3Poller=false" +
+      "\norg.lockss.crawler.enabled=false";
+    assertMatchesRE(boilerplare1 + ".*" + boilerplare2 +
+                    "\norg.lockss.poll.v3.enableV3Voter=false",
+                    ConfigFileMover.addV2DryRun(in));
+
+    in = "a=b\nb=3\n" +
+      "\norg.lockss.poll.v3.enableV3Voter=false" +
+      "\norg.lockss.poll.v3.enableV3Poller=false" +
+      "\norg.lockss.crawler.enabled=false";
+    assertEquals(in, ConfigFileMover.addV2DryRun(in));
+  }
 }

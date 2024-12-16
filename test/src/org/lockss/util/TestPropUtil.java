@@ -157,6 +157,12 @@ public class TestPropUtil extends LockssTestCase {
     assertEquals(props, p2);
   }
 
+  public void testFromString() throws IOException {
+    Properties exp = PropUtil.fromArgs("foo", "bar", "x.y", "z");
+    Properties props = PropUtil.fromString("foo=bar\nx.y=z\n");
+    assertEquals(exp, props);
+  }
+
   public void testDifferentKeys() {
     assertEquals(p1.keySet(), PropUtil.differentKeys(p1, null));
     assertEquals(p1.keySet(), PropUtil.differentKeys(null, p1));
