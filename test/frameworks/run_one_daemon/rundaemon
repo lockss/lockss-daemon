@@ -70,6 +70,17 @@ while true ; do
       export PATH
       echo JAVA_HOME="$JAVA_HOME"
       shift; continue;;
+    "-8" )
+      if [ -z "$JAVA_8_HOME" ] ; then
+	echo "-1.8 option requires JAVA_8_HOME to point to 1.8 install dir"
+	exit 1;
+      fi
+      JAVA_HOME="${JAVA_8_HOME}"
+      export JAVA_HOME
+      PATH="$JAVA_HOME/bin:$PATH"
+      export PATH
+      echo JAVA_HOME="$JAVA_HOME"
+      shift; continue;;
     -* )
       args="$args $1"
       shift; continue;;
