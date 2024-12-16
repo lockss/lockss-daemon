@@ -48,6 +48,7 @@ public class BMJDrupalHashFilterFactory extends HighWireJCoreHashFilterFactory {
                   
             NodeFilter[] moreExcludeFilters = new NodeFilter[] {
                 HtmlNodeFilters.tagWithAttributeRegex("label","for","search_rightsidebar_keywords"),
+                HtmlNodeFilters.tagWithAttributeRegex("span", "class", "institution-name"),
             };
             
             return createFilteredInputStream(au, inputstream, encoding, moreExcludeFilters);
