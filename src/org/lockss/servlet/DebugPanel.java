@@ -329,15 +329,25 @@ public class DebugPanel extends LockssServlet {
   private void doCrawl(boolean force, boolean deep) {
     ArchivalUnit au = getAu();
     if (au == null) return;
-    try {
-      startCrawl(au, force, deep);
-    } catch (CrawlManagerImpl.NotEligibleException.RateLimiter e) {
-      errMsg = "AU has crawled recently (" + e.getMessage()
-	+ ").  Click again to override.";
-      showForceCrawl = true;
-      return;
-    } catch (CrawlManagerImpl.NotEligibleException e) {
-      errMsg = "Can't enqueue crawl: " + e.getMessage();
+    AuState aus = AuUtil.getAuState(au);
+    switch (aus.getMigrationState()) {
+    case InProgress:
+      errMsg = "Can't start crawl: AU is being migrated to LOCKSS 2.0";
+      break;
+    case Finished:
+      errMsg = "Can't start crawl: AU has been migrated to LOCKSS 2.0";
+      break;
+    default:
+      try {
+        startCrawl(au, force, deep);
+      } catch (CrawlManagerImpl.NotEligibleException.RateLimiter e) {
+        errMsg = "AU has crawled recently (" + e.getMessage()
+          + ").  Click again to override.";
+        showForceCrawl = true;
+        return;
+      } catch (CrawlManagerImpl.NotEligibleException e) {
+        errMsg = "Can't enqueue crawl: " + e.getMessage();
+      }
     }
   }
 
@@ -582,6 +592,14 @@ public class DebugPanel extends LockssServlet {
 
   private void callV3ContentPoll(ArchivalUnit au)
       throws PollManager.NotEligibleException {
+    AuState aus = AuUtil.getAuState(au);
+    switch (aus.getMigrationState()) {
+    case InProgress:
+      throw new PollManager.NotEligibleException("AU is being migrated, cannot start poll");
+    case Finished:
+      throw new PollManager.NotEligibleException("AU has been migrated to LOCKSS 2.0, can't poll in LOCKSS 1.0");
+    default:
+    }
     log.debug("Enqueuing a V3 Content Poll on " + au.getName());
     PollSpec spec = new PollSpec(au.getAuCachedUrlSet(), Poll.V3_POLL);
     pollManager.enqueueHighPriorityPoll(au, spec);

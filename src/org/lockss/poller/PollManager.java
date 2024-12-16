@@ -2908,7 +2908,7 @@ public class PollManager
 
   /** Used to convey reason an AU is ineligible to be polled to clients for
    * logging/display */
-  public class NotEligibleException extends Exception {
+  public static class NotEligibleException extends Exception {
     public NotEligibleException(String msg) {
       super(msg);
     }
