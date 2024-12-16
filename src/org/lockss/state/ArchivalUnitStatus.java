@@ -190,6 +190,18 @@ public class ArchivalUnitStatus
     return source.getStatus();
   }
 
+  private static String getMigrationState(AuState aus) {
+    switch (aus.getMigrationState()) {
+    case InProgress:
+      return "In progress";
+    case Finished:
+      return "Finished";
+    case Aborted:
+      return "Aborted";
+    default:
+      return null;
+    }
+  }
 
   static class AuSummary implements StatusAccessor {
     static final String TABLE_TITLE = "Archival Units";
@@ -199,6 +211,7 @@ public class ArchivalUnitStatus
     static final String COL_PEERS = "Peers";
     static final String COL_AU_POLLS = "AuPolls";
     static final String COL_DAMAGED = "Damaged";
+    static final String COL_MIGRATION_STATE = "MigrationState";
     static final String COL_AU_LAST_POLL = "AuLastPoll";
     static final String COL_AU_LAST_CRAWL_ATTEMPT = "AuLastCrawlAttempt";
     static final String COL_AU_LAST_CRAWL_RESULT_MSG = "AuLastCrawlResultMsg";
@@ -210,7 +223,8 @@ public class ArchivalUnitStatus
     static final String DEFAULT_AU_SUMMARY_COLUMNS =
         String.format("-%s;%s",
                       COL_AU_SIZE,
-                      COL_DISK_USAGE);
+                      COL_DISK_USAGE,
+                      COL_MIGRATION_STATE);
 
     static final String FOOT_STATUS = "Flags may follow status: C means the AU is complete, D means that the AU is no longer available from the publisher, NS means the AU has no files containing substantial content.";
 
@@ -230,6 +244,8 @@ public class ArchivalUnitStatus
       new ColumnDescriptor(COL_DAMAGED, "Status",
                            ColumnDescriptor.TYPE_STRING,
 			   FOOT_STATUS),
+      new ColumnDescriptor(COL_MIGRATION_STATE, "Migration",
+                           ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(COL_AU_LAST_POLL, "Last Poll",
                            ColumnDescriptor.TYPE_DATE),
       new ColumnDescriptor(COL_AU_LAST_CRAWL_ATTEMPT, "Last Crawl Start",
@@ -440,6 +456,12 @@ public class ArchivalUnitStatus
 
       rowMap.put(COL_DAMAGED, stat);
 
+      if (inclCols.contains(COL_MIGRATION_STATE)) {
+        String migState = getMigrationState(auState);
+        if (migState != null) {
+          rowMap.put(COL_MIGRATION_STATE, migState);
+        }
+      }
       if (theDaemon.isDetectClockssSubscription()) {
 	rowMap.put(COL_SUBSCRIBED,
 		   AuUtil.getAuState(au).getClockssSubscriptionStatusString());
@@ -1055,6 +1077,13 @@ public class ArchivalUnitStatus
 					  ColumnDescriptor.TYPE_STRING,
 					  PluginStatus.makePlugRef(plugin.getPluginName(),
 								   plugin)));
+      String migState = getMigrationState(state);
+      if (migState != null) {
+        res.add(new StatusTable.SummaryInfo("Migration",
+					  ColumnDescriptor.TYPE_STRING,
+                                            migState));
+      }
+
       addStringIfNotNull(res, AuUtil.getTitleAttribute(au, "year"), "Year");
       addStringIfNotNull(res, state.getAccessType(), "Access Type");
       if (contentSize != -1) {
