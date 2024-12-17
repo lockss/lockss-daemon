@@ -163,6 +163,30 @@ public class DbManager extends BaseLockssDaemonManager
   static final boolean DEFAULT_DBMANAGER_ENABLED = true;
 
   /**
+   * Maximum number of retries for transient SQL exceptions during database initialization.
+   */
+  public static final String PARAM_INITIAL_MAX_RETRY_COUNT = PREFIX + "initialMaxRetryCount";
+  public static final int DEFAULT_INITIAL_MAX_RETRY_COUNT = 60;
+
+  /**
+   * Delay  between retries for transient SQL exceptions during database initialization.
+   */
+  public static final String PARAM_INITIAL_RETRY_DELAY = PREFIX + "initialRetryDelay";
+  public static final long DEFAULT_INITIAL_RETRY_DELAY = 30 * Constants.SECOND;
+
+  /**
+   * Maximum number of retries for transient SQL exceptions during database configuration validation.
+   */
+  public static final String PARAM_VALIDATION_MAX_RETRY_COUNT = PREFIX + "validationMaxRetryCount";
+  public static final int DEFAULT_VALIDATION_MAX_RETRY_COUNT = 10;
+
+  /**
+   * Delay  between retries for transient SQL exceptions during database configuration validation.
+   */
+  public static final String PARAM_VALIDATION_RETRY_DELAY = PREFIX + "validationRetryDelay";
+  public static final long DEFAULT_VALIDATION_RETRY_DELAY = 3 * Constants.SECOND;
+
+  /**
    * Maximum number of retries for transient SQL exceptions.
    */
   public static final String PARAM_MAX_RETRY_COUNT = PREFIX + "maxRetryCount";
