@@ -139,6 +139,18 @@
   {
 
     title <
+      name = Revista de Derecho (Coquimbo) ;
+      eissn = 0718-9753
+    >
+    provider = Facultad de Ciencias Jurídicas de la Universidad Católica del Norte, Facultades de Derecho de Antofagasta y Coquimbo
+
+    au < expected ; exists ; 2024 ; Revista de Derecho (Coquimbo) ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
       name = Finnish Society for Science Fiction and Fantasy Research ;
       eissn = 2342-2009
     >
@@ -151,7 +163,19 @@
   {
 
     title <
-      name = Krishna Vishwa Vidyapeeth, Karad ;
+      name = Cuadernos de teología - Universidad Católica del Norte ;
+      eissn = 0719-8175
+    >
+    provider = Institute of Religious Sciences and Philosophy of the Universidad Católica del Norte
+
+    au < expected ; exists ; 2024 ; Cuadernos de teología - Universidad Católica del Norte ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Krishna Institute of Medical Sciences University ;
       eissn = 2231-4261
     >
     provider = Krishna Vishwa Vidyapeeth, Karad

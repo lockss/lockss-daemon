@@ -260,34 +260,6 @@
 
 {
   publisher <
-    name = KIT Scientific Publishing ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
-
-  {
-
-      title <
-        name = Hydrogen Safety ;
-        eissn = 2943-5935
-      >
-
-      comment[publisher] = KIT Scientific Publishing
-#      param[base_url] = https://hysafejournal.org/
-
-      au < exists ; exists ; 2024 ; 1 ; Steiner Studies Volume 2024 ; 2024 ; https://hysafejournal.org/ ; >
-
-  }
-}
-
-{
-  publisher <
     name = Latin American Studies Association ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
