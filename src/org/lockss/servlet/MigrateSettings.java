@@ -344,7 +344,20 @@ public class MigrateSettings extends LockssServlet {
               }
               // Write migration configuration to file
               writeMigrationConfigFile(mCfg);
+
+              // If the DB datasource has changed (now points to V2),
+              // restart DbManager
+              Configuration cfg = ConfigManager.getCurrentConfig();
+              Configuration dsBefore =
+                cfg.getConfigTree(DbManager.DATASOURCE_ROOT);
               ConfigManager.getConfigManager().reloadAndWait();
+              cfg = ConfigManager.getCurrentConfig();
+              Configuration dsAfter =
+                cfg.getConfigTree(DbManager.DATASOURCE_ROOT);
+              if (!java.util.Objects.equals(dsBefore, dsAfter)) {
+                DbManager dbMgr = theDaemon.getDbManager();
+                dbMgr.restartService();
+              }
               redirectToMigrateContent();
             }
           }
