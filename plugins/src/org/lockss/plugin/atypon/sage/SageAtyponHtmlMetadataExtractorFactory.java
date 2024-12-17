@@ -66,9 +66,22 @@ public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetada
         return;
       }
 
+      String metaVolume = am.get(MetadataField.FIELD_VOLUME);
+
+      log.debug3("metaVolume in code=============" + metaVolume);
+
+
       String volume = getAdditionalMetadata(cu, am).trim();
-      if (volume != null && volume != "") {
-        log.debug3("Sage Check: Volume--------getAdditionalMetadata: volume-------");
+      log.debug3("volume in code=============" + volume);
+      if (volume == null) {
+        log.debug3("volume in code=============volume is nuuuuuulll");
+      } else {
+        log.debug3("volume in code=============volume is NOT nuuuuuulll, volume = " + volume + ", volume_len = " + volume.length());
+      }
+
+      //if (volume != null && volume !="") {
+      if (volume != null && !volume.equals("")) {
+        log.debug3("Sage Check: Volume--------getAdditionalMetadata: volume Successfully-------");
         am.put(MetadataField.FIELD_VOLUME, volume);
       } else {
         log.debug3("Sage Check: Volume--------getAdditionalMetadata: volume Failed-------");
@@ -118,6 +131,9 @@ public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetada
           String volume = null;
           volume = getVolumeNumber(in, cu.getEncoding(), cu.getUrl());
           in.close();
+
+          log.debug3("Sage Check: Volume--------volume returned------" + volume);
+
           return volume;
         } catch (IOException e) {
           e.printStackTrace();
@@ -152,6 +168,8 @@ public class SageAtyponHtmlMetadataExtractorFactory extends BaseAtyponHtmlMetada
 
           }
           return null;
+        } else {
+          log.debug3("Sage Check: Volume--------Get volume span is NULLLL-------");
         }
       } catch (IOException e) {
         log.debug3("Sage Check: Volume Error getVolumeNumber", e);
