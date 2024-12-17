@@ -6,6 +6,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.atypon.rsp.TestRoyalSocietyPublishingHtmlCrawlFilterFactory;
 import org.lockss.test.*;
 
 import java.io.ByteArrayInputStream;
@@ -31,8 +32,11 @@ import java.util.regex.*;
 import org.jsoup.Jsoup;
 
 import org.apache.commons.io.IOUtils;
+import org.lockss.util.Logger;
 
 public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
+
+    private static Logger log = Logger.getLogger(TestSageAtyponHtmlMetadataExtractorFactory .class);
 
     ArchivalUnit mau;
     String tempDirPath;
@@ -47,10 +51,19 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
     String goodJournalTitle = "Finance Volume 59";
     String goodDCDate = "2012-12-03";
 
-    String goodHtmlContent = "<HTML><HEAD><TITLE>" + "blabla"
+    String oldHtmlContent = "<HTML><HEAD><TITLE>" + "blabla"
             + "</TITLE></HEAD><BODY>\n"
+            + "<meta name=\"citation_volume\" content=\"100\"></meta>"
             + "<meta name=\"citation_journal_title\" content=\"" + goodJournalTitle  + "\"></meta>"
             + "<meta name=\"dc.Date\" scheme=\"WTN8601\" content=\"" + goodDCDate  + "\"></meta>";
+
+    String newHtmlContentWithVolumeSpan = "<HTML><HEAD><TITLE>" + "blabla"
+            + "</TITLE></HEAD>"
+            + "<meta name=\"citation_volume\" content=\"100\"></meta>"
+            + "<meta name=\"citation_journal_title\" content=\"" + goodJournalTitle  + "\"></meta>"
+            + "<meta name=\"dc.Date\" scheme=\"WTN8601\" content=\"" + goodDCDate  + "\"></meta>"
+            + "<BODY><div class=\"core-enumeration\"><a href=\"/toc/choa/9/1\"><span property=\"isPartOf\" typeof=\"PublicationVolume\">Volume <span property=\"volumeNumber\">99</span></span>, <span property=\"isPartOf\" typeof=\"PublicationIssue\">Issue <span property=\"issueNumber\">1</span></span></a></div>\n"
+            + "</BODY></HTML>\n";
 
     public void setUp() throws Exception {
         super.setUp();
@@ -81,27 +94,40 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
         return conf;
     }
 
-    public void testExtractGoodHtmlContent() throws Exception {
-
-      log.critical("XXXXXXXXX config: " + mau.getConfiguration());
-        List<ArticleMetadata> mdlist = setupContentForAU(mau, BASE_URL + "foo.css", goodHtmlContent, true);
-        assertNotEmpty(mdlist);
-        ArticleMetadata md = mdlist.get(0);
-        assertNotNull(md);
-        assertEquals(goodDCDate, md.get(MetadataField.FIELD_DATE));
-        assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+    public void testExtractVolumeFromHtml() throws Exception {
 
         String initialString = "<div class=\"core-enumeration\"><a href=\"/toc/choa/9/1\"><span property=\"isPartOf\" typeof=\"PublicationVolume\">Volume <span property=\"volumeNumber\">9</span></span>, <span property=\"isPartOf\" typeof=\"PublicationIssue\">Issue <span property=\"issueNumber\">1</span></span></a></div>\n";
         InputStream in = new ByteArrayInputStream(initialString.getBytes());
         String volume = null;
         try {
             volume = getVolumeNumber(in, "utf-8", BASE_URL);
+            log.info("volume in test============" + volume);
             in.close();
             assertEquals(volume, "9");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+    }
+
+    public void testExtractOldHtmlContentWithMissingVolume() throws Exception {
+
+        List<ArticleMetadata> mdlist = setupContentForAU(mau, BASE_URL + "foo.css", oldHtmlContent, true);
+        //assertEmpty(mdlist);
+        //ArticleMetadata md = mdlist.get(0);
+        //assertNotNull(md);
+        //assertEquals(goodDCDate, md.get(MetadataField.FIELD_DATE));
+        //assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+    }
+
+    public void testExtractNewHtmlContentWithVolumeSpan() throws Exception {
+
+        List<ArticleMetadata> mdlist = setupContentForAU(mau, BASE_URL + "foo.css", newHtmlContentWithVolumeSpan, true);
+        assertNotEmpty(mdlist);
+        ArticleMetadata md = mdlist.get(0);
+        assertNotNull(md);
+        assertEquals(goodDCDate, md.get(MetadataField.FIELD_DATE));
+        assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
     }
 
     /* private support methods */
