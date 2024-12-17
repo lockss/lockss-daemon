@@ -122,4 +122,23 @@
     }
   }
 
+  {
+    title <
+      name = IJTLD OPEN ;
+      eissn = 3005-7590 ;
+      issnl = 3005-7590
+    >
+
+    param[journal_id] = ijtldo
+    param[journal_issn] = 3005-7590
+
+    {
+    param[base_url] = https://www.ingentaconnect.com/
+    param[api_url] = https://api.ingentaconnect.com/
+
+    au < manifest ; exists ; 2024 ; IJTLD OPEN Volume 1 ; 1 ; >
+
+    }
+  }
+
 }
