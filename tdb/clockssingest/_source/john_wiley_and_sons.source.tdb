@@ -19,8 +19,8 @@
       {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileybooks-released/
 
-      au < readySource ; finished ; 2022 ; Wiley Books Source Content 2022_01 ; 2022_01 >
-      au < readySource ; finished ; 2022 ; Wiley Books Source Content 2022_02 ; 2022_02 >
+      au < zapped ; finished ; 2022 ; Wiley Books Source Content 2022_01 ; 2022_01 >
+      au < zapped ; finished ; 2022 ; Wiley Books Source Content 2022_02 ; 2022_02 >
       #No more AUs. Moving to https.
       }
       {
@@ -129,7 +129,7 @@
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/wileymrw-released/
 
-      au < readySource ; finished ; 2022 ; Wiley MRW Source Content 2022_01 ; 2022_01 >
+      au < zapped ; finished ; 2022 ; Wiley MRW Source Content 2022_01 ; 2022_01 >
       #No more AUs. Moving to https.
     }
     {
