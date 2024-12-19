@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -106,6 +106,10 @@ POSSIBILITY OF SUCH DAMAGE.
             -->
             <string>"^%sdownloadpdf/(view/)?journals/%s/%s/", base_url, journal_id, volume_name</string>
         </list>
+    </entry>
+    <entry>
+        <string>text/html_link_rewriter_factory</string>
+        <string>org.lockss.plugin.pubfactory.apma.APMAStringReplacementHtmlLinkRewriterFactory</string>
     </entry>
     <entry>
         <string>au_permitted_host_pattern</string>
