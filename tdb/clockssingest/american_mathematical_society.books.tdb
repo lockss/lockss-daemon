@@ -3,7 +3,6 @@
   publisher <
     name = American Mathematical Society Books ;
     info[contract] = 2012 ;
-    info[back] = 2012 ;
     #info[back] = 1900 ;
     info[tester] = 5 ;
     info[poller] = 3
@@ -138,6 +137,7 @@
     au < finished ; manifest ; 2023 ; Mathematical Surveys and Monographs 2023 ; 2023 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < notReady ; exists ; 2024 ; Mathematical Surveys and Monographs 2024 ; 2024 ; https://www.ams.org/ ; > #login found on 	http://www.ams.org/books/surv/287/surv287.pdf
 
+#Not in original contract. Move doNotProcess to manifest when contract is approved.
     }
 
     {
@@ -636,16 +636,6 @@
     
     param[collection_id] = dimacs
     
-    au < exists ; exists ; 1990 ; Dimacs Workshop Series-Electronic 1990 ; 1990 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1991 ; Dimacs Workshop Series-Electronic 1991 ; 1991 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1992 ; Dimacs Workshop Series-Electronic 1992 ; 1992 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1993 ; Dimacs Workshop Series-Electronic 1993 ; 1993 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1994 ; Dimacs Workshop Series-Electronic 1994 ; 1994 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1995 ; Dimacs Workshop Series-Electronic 1995 ; 1995 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1996 ; Dimacs Workshop Series-Electronic 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1997 ; Dimacs Workshop Series-Electronic 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1998 ; Dimacs Workshop Series-Electronic 1998 ; 1998 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1999 ; Dimacs Workshop Series-Electronic 1999 ; 1999 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2000 ; Dimacs Workshop Series-Electronic 2000 ; 2000 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2001 ; Dimacs Workshop Series-Electronic 2001 ; 2001 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2002 ; Dimacs Workshop Series-Electronic 2002 ; 2002 ; https://www.ams.org/ ; >
@@ -669,13 +659,6 @@
     
     param[collection_id] = crmp
     
-    au < exists ; exists ; 1993 ; CRM Proceedings and Lecture Notes 1993 ; 1993 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1994 ; CRM Proceedings and Lecture Notes 1994 ; 1994 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1995 ; CRM Proceedings and Lecture Notes 1995 ; 1995 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1996 ; CRM Proceedings and Lecture Notes 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1997 ; CRM Proceedings and Lecture Notes 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1998 ; CRM Proceedings and Lecture Notes 1998 ; 1998 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1999 ; CRM Proceedings and Lecture Notes 1999 ; 1999 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2000 ; CRM Proceedings and Lecture Notes 2000 ; 2000 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2001 ; CRM Proceedings and Lecture Notes 2001 ; 2001 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2002 ; CRM Proceedings and Lecture Notes 2002 ; 2002 ; https://www.ams.org/ ; >
@@ -702,10 +685,6 @@
     
     param[collection_id] = amsip
     
-    au < exists ; exists ; 1996 ; AMS/IP Studies in Advanced Math Series 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1997 ; AMS/IP Studies in Advanced Math Series 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1998 ; AMS/IP Studies in Advanced Math Series 1998 ; 1998 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1999 ; AMS/IP Studies in Advanced Math Series 1999 ; 1999 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2000 ; AMS/IP Studies in Advanced Math Series 2000 ; 2000 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2001 ; AMS/IP Studies in Advanced Math Series 2001 ; 2001 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 2002 ; AMS/IP Studies in Advanced Math Series 2002 ; 2002 ; https://www.ams.org/ ; >
@@ -732,8 +711,6 @@
     au < manifest ; exists ; 1990 ; Advances in Soviet Mathematics 1990 ; 1990 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1991 ; Advances in Soviet Mathematics 1991 ; 1991 ; https://www.ams.org/ ; >
     au < manifest ; exists ; 1992 ; Advances in Soviet Mathematics 1992 ; 1992 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1993 ; Advances in Soviet Mathematics 1993 ; 1993 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 1994 ; Advances in Soviet Mathematics 1994 ; 1994 ; https://www.ams.org/ ; >
 
     }
    
