@@ -67,6 +67,19 @@
   {
 
     title <
+      name = Revista Vasca de Administración Pública ;
+      issn = 2695-5407 ;
+      eissn = 2695-5407
+    >
+    provider = Basque Institute of Public Administration
+
+    au < expected ; exists ; 2024 ; Revista Vasca de Administración Pública ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
       name = Geriatrics, Gerontology and Aging ;
       issn = 2447-2115 ;
       eissn = 2447-2123
@@ -157,6 +170,18 @@
     provider = Finnish Society for Science Fiction and Fantasy Research - Fafnir
 
     au < readySource ; crawling ; 2022-2024 ; Finnish Society for Science Fiction and Fantasy Research ; Fafnir_2342-2009 >
+
+  }
+
+  {
+
+    title <
+      name = Groundings ;
+      eissn = 1755-2702
+    >
+    provider = Glasgow University Union
+
+    au < expected ; exists ; 2024 ; Groundings ; UNKNOWN >
 
   }
 
