@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>11</string>
+        <string>12</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -147,10 +147,8 @@ POSSIBILITY OF SUCH DAMAGE.
         </map>
     </entry>
     <entry>
-    <!--Between Dec 16-Dec 18, we need to crawl the content once every 24 hours to be able to collect 
-        everything we need.-->
         <string>au_def_new_content_crawl</string>
-        <long>86400000</long>
+        <long>1209600000</long>
     </entry>
     <entry>
         <string>au_login_page_checker</string>
