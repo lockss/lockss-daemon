@@ -36,10 +36,10 @@
       au < manifest ; exists ; 2017 ; PLOS Biology Volume 2017 ; 2017 >
       au < manifest ; exists ; 2018 ; PLOS Biology Volume 2018 ; 2018 >
       au < manifest ; exists ; 2019 ; PLOS Biology Volume 2019 ; 2019 >
-      au < manifest ; exists ; 2020 ; PLOS Biology Volume 2020 ; 2020 >
-      au < manifest ; exists ; 2021 ; PLOS Biology Volume 2021 ; 2021 >
-      au < manifest ; exists ; 2022 ; PLOS Biology Volume 2022 ; 2022 >
-      au < manifest ; exists ; 2023 ; PLOS Biology Volume 2023 ; 2023 >
+      au < ready ; exists ; 2020 ; PLOS Biology Volume 2020 ; 2020 >
+      au < ready ; exists ; 2021 ; PLOS Biology Volume 2021 ; 2021 >
+      au < ready ; exists ; 2022 ; PLOS Biology Volume 2022 ; 2022 >
+      au < ready ; exists ; 2023 ; PLOS Biology Volume 2023 ; 2023 >
       au < manifest ; exists ; 2024 ; PLOS Biology Volume 2024 ; 2024 >
 
   }
@@ -53,9 +53,9 @@
 
       param[journal_id] = climate
 
-      au < manifest ; exists ; 2022 ; PLOS Climate Volume 2022 ; 2022 >
-      au < manifest ; exists ; 2023 ; PLOS Climate Volume 2023 ; 2023 >
-      au < manifest ; exists ; 2024 ; PLOS Climate Volume 2024 ; 2024 >
+      au < ready ; exists ; 2022 ; PLOS Climate Volume 2022 ; 2022 >
+      au < ready ; exists ; 2023 ; PLOS Climate Volume 2023 ; 2023 >
+      au < ready ; exists ; 2024 ; PLOS Climate Volume 2024 ; 2024 >
 
   }
 
@@ -110,7 +110,7 @@
       au < manifest ; exists ; 2017 ; PLOS Computational Biology Volume 2017 ; 2017 >
       au < manifest ; exists ; 2018 ; PLOS Computational Biology Volume 2018 ; 2018 >
       au < manifest ; exists ; 2019 ; PLOS Computational Biology Volume 2019 ; 2019 >
-      au < manifest ; exists ; 2020 ; PLOS Computational Biology Volume 2020 ; 2020 >
+      au < ready ; exists ; 2020 ; PLOS Computational Biology Volume 2020 ; 2020 >
       au < manifest ; exists ; 2021 ; PLOS Computational Biology Volume 2021 ; 2021 >
       au < manifest ; exists ; 2022 ; PLOS Computational Biology Volume 2022 ; 2022 >
       au < manifest ; exists ; 2023 ; PLOS Computational Biology Volume 2023 ; 2023 >
@@ -223,7 +223,7 @@
 
       param[journal_id] = mentalhealth
 
-      au < manifest ; exists ; 2024 ; PLOS Mental Health Volume 2024 ; 2024 >
+      au < ready ; exists ; 2024 ; PLOS Mental Health Volume 2024 ; 2024 >
 
   }
 
