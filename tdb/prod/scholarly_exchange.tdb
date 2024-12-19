@@ -91,7 +91,7 @@
     provider = Scholarly Exchange
     implicit < status ; year ; name ; volume ; param[year] >
     param[journal_id] = IJIC
-    #moved to ojs3. Open Journal Systems 3.1.1.4 as of 8/31/2021
+    #moved to ojs3. Open Journal Systems 3.3.0.18 as of 12/19/2024
 
     {
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
@@ -112,14 +112,14 @@
     attr[start_stem] = index.php/
     param[base_url] = https://www.ijic.info/
 
-    au < notReady ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
-    au < notReady ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
-    au < notReady ; 2019 ; International Journal of Infection Control Volume 15 ; 15 ; 2019 >
-    au < notReady ; 2020 ; International Journal of Infection Control Volume 16 ; 16 ; 2020 >
-    au < notReady ; 2021 ; International Journal of Infection Control Volume 17 ; 17 ; 2021 >
-    au < notReady ; 2022 ; International Journal of Infection Control Volume 18 ; 18 ; 2022 >
-    au < notReady ; 2023 ; International Journal of Infection Control Volume 19 ; 19 ; 2023 >
-    au < notReady ; 2024 ; International Journal of Infection Control Volume 20 ; 20 ; 2024 >
+    au < manifest ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
+    au < manifest ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
+    au < manifest ; 2019 ; International Journal of Infection Control Volume 15 ; 15 ; 2019 >
+    au < manifest ; 2020 ; International Journal of Infection Control Volume 16 ; 16 ; 2020 >
+    au < manifest ; 2021 ; International Journal of Infection Control Volume 17 ; 17 ; 2021 >
+    au < manifest ; 2022 ; International Journal of Infection Control Volume 18 ; 18 ; 2022 >
+    au < manifest ; 2023 ; International Journal of Infection Control Volume 19 ; 19 ; 2023 >
+    au < manifest ; 2024 ; International Journal of Infection Control Volume 20 ; 20 ; 2024 >
 
     }
   }
@@ -141,7 +141,7 @@
     provider = Scholarly Exchange
     implicit < status ; year ; name ; volume ; param[year] >
     param[journal_id] = IJTAR
-    #moved to ojs3. Open Journal Systems 3.1.1.4 as of 8/31/2021
+    #moved to ojs3. Open Journal Systems 3.3.0.18 as of 12/19/2024
 
     {
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
@@ -163,13 +163,13 @@
     attr[start_stem] = index.php/
     param[base_url] = https://www.ijtarp.org/
     
-    au < notReady ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
-    au < notReady ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
-    au < notReady ; 2020 ; International Journal of Transactional Analysis Research & Practice Volume 11 ; 11 ; 2020 >
-    au < notReady ; 2021 ; International Journal of Transactional Analysis Research & Practice Volume 12 ; 12 ; 2021 >
-    au < notReady ; 2022 ; International Journal of Transactional Analysis Research & Practice Volume 13 ; 13 ; 2022 >
-    au < notReady ; 2023 ; International Journal of Transactional Analysis Research & Practice Volume 14 ; 14 ; 2023 >
-    au < notReady ; 2024 ; International Journal of Transactional Analysis Research & Practice Volume 15 ; 15 ; 2024 >
+    au < manifest ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
+    au < manifest ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
+    au < manifest ; 2020 ; International Journal of Transactional Analysis Research & Practice Volume 11 ; 11 ; 2020 >
+    au < manifest ; 2021 ; International Journal of Transactional Analysis Research & Practice Volume 12 ; 12 ; 2021 >
+    au < manifest ; 2022 ; International Journal of Transactional Analysis Research & Practice Volume 13 ; 13 ; 2022 >
+    au < manifest ; 2023 ; International Journal of Transactional Analysis Research & Practice Volume 14 ; 14 ; 2023 >
+    au < manifest ; 2024 ; International Journal of Transactional Analysis Research & Practice Volume 15 ; 15 ; 2024 >
 
     }
   }
@@ -214,14 +214,14 @@
     attr[start_stem] = index.php/
     param[base_url] = https://www.intersticios.es/
 
-    au < notReady ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
-    au < notReady ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
-    au < notReady ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
-    au < notReady ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
-    au < notReady ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
-    au < notReady ; 2022 ; Intersticios Volume 16 ; 16 ; 2022 >
-    au < notReady ; 2023 ; Intersticios Volume 17 ; 17 ; 2023 >
-    au < notReady ; 2024 ; Intersticios Volume 18 ; 18 ; 2024 >
+    au < manifest ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
+    au < manifest ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
+    au < manifest ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
+    au < manifest ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
+    au < manifest ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
+    au < manifest ; 2022 ; Intersticios Volume 16 ; 16 ; 2022 >
+    au < manifest ; 2023 ; Intersticios Volume 17 ; 17 ; 2023 >
+    au < manifest ; 2024 ; Intersticios Volume 18 ; 18 ; 2024 >
 
     }
 
@@ -295,10 +295,10 @@
     attr[start_stem] = index.php/
     param[base_url] = https://www.journal-alm.org/
 
-    au < notReady ; 2017 ; Journal of Applied Leadership and Management Volume 5 ; 5 ; 2017 >
-    au < notReady ; 2018 ; Journal of Applied Leadership and Management Volume 6 ; 6 ; 2018 >
-    au < notReady ; 2019 ; Journal of Applied Leadership and Management Volume 7 ; 7 ; 2019 >
-    au < notReady ; 2020 ; Journal of Applied Leadership and Management Volume 8 ; 8 ; 2020 >
+    au < manifest ; 2017 ; Journal of Applied Leadership and Management Volume 5 ; 5 ; 2017 >
+    au < manifest ; 2018 ; Journal of Applied Leadership and Management Volume 6 ; 6 ; 2018 >
+    au < manifest ; 2019 ; Journal of Applied Leadership and Management Volume 7 ; 7 ; 2019 >
+    au < manifest ; 2020 ; Journal of Applied Leadership and Management Volume 8 ; 8 ; 2020 >
 
     }
   }
