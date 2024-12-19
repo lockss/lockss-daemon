@@ -14,15 +14,6 @@
       name = Wolters Kluwer - Medknow Source Content
     >
 
-    {#TESTING
-    plugin = org.lockss.plugin.clockss.wolterskluwer.ClockssWoltersKluwerDirSourcePlugin
-    implicit < status ; status2 ; year ; name ; param[directory] >
-    param[base_url] =  https://clockss-test.lockss.org/sourcefiles/medknow-released/
-
-    au < doNotProcess ; exists ; 2024 ; Wolters Kluwer - Medknow Source Content 2024_01 ; 2024_01 >
-
-    }
-
     {#PRODUCTION
     plugin = org.lockss.plugin.clockss.wolterskluwer.ClockssWoltersKluwerDirSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
