@@ -29,6 +29,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
 
       au < testing ; exists ; 2024 ; Chinese University of Hong Kong Source Content 2024_02 ; 2024_02 >
+      au < expected ; exists ; 2025 ; Chinese University of Hong Kong Source Content 2025_02 ; 2025_02 >
 
     }
     {
