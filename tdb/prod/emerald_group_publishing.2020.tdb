@@ -14359,15 +14359,16 @@
 
   }
 
-
   {
 
     title <
       name = International Journal of Tourism Cities ;
-      eissn = 2056-5607
+      issn = 2056-5607 ;
+      eissn = 2056-5615
     >
 
     param[journal_issn] = 2056-5607
+    #move to T&F, 2025
 
     au < released ; 2015 ; International Journal of Tourism Cities Volume 1 ; 1 >
     au < released ; 2016 ; International Journal of Tourism Cities Volume 2 ; 2 >
@@ -14381,7 +14382,6 @@
     au < manifest ; 2024 ; International Journal of Tourism Cities Volume 10 ; 10 >
 
   }
-
 
   {
 
