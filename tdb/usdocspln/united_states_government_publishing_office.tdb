@@ -29,7 +29,6 @@
 
     param[collection_id] = GOVPUB
 
-    au < exists ; 1775 ; Account of the Receipts and Expenditures of the United States 1775 ; 1775 ; https://www.govinfo.gov/ > #no content in XML page
     au < released ; 1793 ; Account of the Receipts and Expenditures of the United States 1793 ; 1793 ; https://www.govinfo.gov/ >
     au < released ; 1797 ; Account of the Receipts and Expenditures of the United States 1797 ; 1797 ; https://www.govinfo.gov/ >
     au < released ; 1805 ; Account of the Receipts and Expenditures of the United States 1805 ; 1805 ; https://www.govinfo.gov/ >
@@ -182,13 +181,6 @@
     au < released ; 2023 ; Account of the Receipts and Expenditures of the United States 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < manifest ; 2024 ; Account of the Receipts and Expenditures of the United States 2024 ; 2024 ; https://www.govinfo.gov/ >
 
-    au < exists ; 2029 ; Account of the Receipts and Expenditures of the United States 2029 ; 2029 ; https://www.govinfo.gov/ > #empty
-    au < exists ; 2101 ; Account of the Receipts and Expenditures of the United States 2101 ; 2101 ; https://www.govinfo.gov/ > #empty
-    au < exists ; 2904 ; Account of the Receipts and Expenditures of the United States 2904 ; 2904 ; https://www.govinfo.gov/ > #empty
-    au < exists ; 6012 ; Account of the Receipts and Expenditures of the United States 6012 ; 6012 ; https://www.govinfo.gov/ > #empty
-    au < exists ; 7272 ; Account of the Receipts and Expenditures of the United States 7272 ; 7272 ; https://www.govinfo.gov/ > #empty
-    au < exists ; 8012 ; Account of the Receipts and Expenditures of the United States 8012 ; 8012 ; https://www.govinfo.gov/ > #empty
-    au < exists ; 9012 ; Account of the Receipts and Expenditures of the United States 9012 ; 9012 ; https://www.govinfo.gov/ > #empty
 
   }
 
@@ -377,7 +369,6 @@
     au < released ; 2021 ; Code of Federal Regulations 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Code of Federal Regulations 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Code of Federal Regulations 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < exists ; 7201 ; Code of Federal Regulations 7201 ; 7201 ; https://www.govinfo.gov/ >
 
   }
 
@@ -622,6 +613,7 @@
     au < released ; 2018 ; Congressional Directory 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Directory 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Directory 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < manifest ; 2024 ; Congressional Directory 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -633,7 +625,6 @@
 
     param[collection_id] = CDOC
 
-    au < exists ; 1913 ; CDOC 1913 ; 1913 ; https://www.govinfo.gov/ >
     au < released ; 1986 ; CDOC 1986 ; 1986 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; CDOC 2018 ; 2018 ; https://www.govinfo.gov/ >
 
@@ -644,9 +635,6 @@
     au < released ; 2023 ; CDOC 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < manifest ; 2024 ; CDOC 2024 ; 2024 ; https://www.govinfo.gov/ >
 
-    au < exists ; 2025 ; CDOC 2025 ; 2025 ; https://www.govinfo.gov/ > #bad date
-    au < exists ; 2027 ; Congressional Documents 2027 ; 2027 ; https://www.govinfo.gov/ > #bad date
-    au < exists ; 2047 ; Congressional Documents 2047 ; 2047 ; https://www.govinfo.gov/ > #bad date
 
   }
 
@@ -710,7 +698,6 @@
     au < doesNotExist ; 1988 ; Congressional Hearings 1988 ; 1988 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1989 ; Congressional Hearings 1989 ; 1989 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1990 ; Congressional Hearings 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < exists ; 1992 ; Congressional Hearings 1992 ; 1992 ; https://www.govinfo.gov/ > #empty xml file https://www.govinfo.gov/sitemap/CHRG_1992_sitemap.xml
     au < doNotProcess ; 1993 ; Congressional Hearings 1993 ; 1993 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 1994 ; Congressional Hearings 1994 ; 1994 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 1995 ; Congressional Hearings 1995 ; 1995 ; https://www.govinfo.gov/ >
@@ -825,7 +812,7 @@
 
 
     au < released ; 1917 ; Statute Compilations 1917 ; 1917 ; https://www.govinfo.gov/ >
-    au < released ; 1920 ; Statute Compilations 1920 ; 1920 ; https://www.govinfo.gov/ >
+    au < down ; 1920 ; Statute Compilations 1920 ; 1920 ; https://www.govinfo.gov/ >
     au < released ; 1921 ; Statute Compilations 1921 ; 1921 ; https://www.govinfo.gov/ >
     au < released ; 1922 ; Statute Compilations 1922 ; 1922 ; https://www.govinfo.gov/ >
     au < released ; 1923 ; Statute Compilations 1923 ; 1923 ; https://www.govinfo.gov/ >
@@ -842,7 +829,7 @@
     au < ready ; 1942 ; Statute Compilations 1942 ; 1942 ; https://www.govinfo.gov/ >
     au < released ; 1943 ; Statute Compilations 1943 ; 1943 ; https://www.govinfo.gov/ >
     au < released ; 1944 ; Statute Compilations 1944 ; 1944 ; https://www.govinfo.gov/ >
-    au < released ; 1945 ; Statute Compilations 1945 ; 1945 ; https://www.govinfo.gov/ >
+    au < down ; 1945 ; Statute Compilations 1945 ; 1945 ; https://www.govinfo.gov/ >
     au < released ; 1946 ; Statute Compilations 1946 ; 1946 ; https://www.govinfo.gov/ >
     au < released ; 1948 ; Statute Compilations 1948 ; 1948 ; https://www.govinfo.gov/ >
     au < released ; 1949 ; Statute Compilations 1949 ; 1949 ; https://www.govinfo.gov/ >
@@ -986,7 +973,6 @@
     au < released ; 2016 ; DCPD 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; DCPD 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < manifest ; 2024 ; DCPD 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < exists ; 2027 ; DCPD 2027 ; 2027 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1138,7 +1124,6 @@
     au < released ; 1990 ; Government Accountability Office Reports and Comptroller General Decisions 1990 ; 1990 ; https://www.govinfo.gov/ >
     au < released ; 1991 ; Government Accountability Office Reports and Comptroller General Decisions 1991 ; 1991 ; https://www.govinfo.gov/ >
     au < released ; 1992 ; Government Accountability Office Reports and Comptroller General Decisions 1992 ; 1992 ; https://www.govinfo.gov/ >
-    au < exists ; 2017 ; Government Accountability Office Reports and Comptroller General Decisions 2017 ; 2017 ; https://www.govinfo.gov/ >#EMPTY
 
   }
 
@@ -1247,8 +1232,6 @@
 
     param[collection_id] = PLAW
 
-    au < exists ; 1913 ; Public and Private Laws 1913 ; 1913 ; https://www.govinfo.gov/ >
-    au < exists ; 1946 ; Public and Private Laws 1946 ; 1946 ; https://www.govinfo.gov/ >#no substance
     au < released ; 2013 ; Public and Private Laws 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Public and Private Laws 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Public and Private Laws 2018 ; 2018 ; https://www.govinfo.gov/ >
@@ -1343,7 +1326,7 @@
     au < released ; 2001 ; Senate Manual 2001 ; 2001 ; https://www.govinfo.gov/ >
     au < released ; 2011 ; Senate Manual 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; Senate Manual 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < released ; 2014 ; Senate Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
+    au < down ; 2014 ; Senate Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Senate Manual 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Senate Manual 2022 ; 2022 ; https://www.govinfo.gov/ >
 
