@@ -393,7 +393,7 @@
   {
 
     title <
-      name = Journal of Medieval Religious Cultures ;
+      name = The Journal of Medieval Religious Cultures ;
       issn = 1947-6566 ;
       eissn = 2153-9650 ;
       issnl = 1947-6566
@@ -402,28 +402,28 @@
       param[journal_id] = jmrc
       comment[continues] = Mystics Quarterly 0742-5503
 
-      au < doNotProcess ; doNotProcess ; 2010 ; Journal of Medieval Religious Cultures Volume 36 ; 36 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Journal of Medieval Religious Cultures Volume 37 ; 37 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Journal of Medieval Religious Cultures Volume 38 ; 38 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; Journal of Medieval Religious Cultures Volume 39 ; 39 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; Journal of Medieval Religious Cultures Volume 40 ; 40 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Journal of Medieval Religious Cultures Volume 41 ; 41 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; Journal of Medieval Religious Cultures Volume 42 ; 42 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; Journal of Medieval Religious Cultures Volume 43 ; 43 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Journal of Medieval Religious Cultures Volume 44 ; 44 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; Journal of Medieval Religious Cultures Volume 45 ; 45 ; 2019 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Journal of Medieval Religious Cultures Volume 46 ; 46 ; 2020 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; Journal of Medieval Religious Cultures Volume 47 ; 47 ; 2021 ; >
-      au < finished ; manifest ; 2022 ; Journal of Medieval Religious Cultures Volume 48 ; 48 ; 2022 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2023 ; Journal of Medieval Religious Cultures Volume 49 ; 49 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Journal of Medieval Religious Cultures Volume 50 ; 50 ; 2024 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; The Journal of Medieval Religious Cultures Volume 36 ; 36 ; 2010 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; The Journal of Medieval Religious Cultures Volume 37 ; 37 ; 2011 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Medieval Religious Cultures Volume 38 ; 38 ; 2012 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; The Journal of Medieval Religious Cultures Volume 39 ; 39 ; 2013 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; The Journal of Medieval Religious Cultures Volume 40 ; 40 ; 2014 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; The Journal of Medieval Religious Cultures Volume 41 ; 41 ; 2015 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; The Journal of Medieval Religious Cultures Volume 42 ; 42 ; 2016 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; The Journal of Medieval Religious Cultures Volume 43 ; 43 ; 2017 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; The Journal of Medieval Religious Cultures Volume 44 ; 44 ; 2018 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; The Journal of Medieval Religious Cultures Volume 45 ; 45 ; 2019 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; The Journal of Medieval Religious Cultures Volume 46 ; 46 ; 2020 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; The Journal of Medieval Religious Cultures Volume 47 ; 47 ; 2021 ; >
+      au < finished ; manifest ; 2022 ; The Journal of Medieval Religious Cultures Volume 48 ; 48 ; 2022 ; reingest5.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2023 ; The Journal of Medieval Religious Cultures Volume 49 ; 49 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; The Journal of Medieval Religious Cultures Volume 50 ; 50 ; 2024 ; >
 
   }
 
   {
 
     title <
-      name = Journal of Modern Periodical Studies ;
+      name = The Journal of Modern Periodical Studies ;
       issn = 1947-6574 ;
       eissn = 2152-9272 ;
       issnl = 1947-6574
@@ -432,21 +432,21 @@
       param[journal_id] = jmps
       # volume numbers don't line up with years - how to handle already processed content?
 
-      au < doNotProcess ; doNotProcess ; 2010 ; Journal of Modern Periodical Studies Volume 1 ; 1 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; Journal of Modern Periodical Studies Volume 2 ; 2 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; Journal of Modern Periodical Studies Volume 3 ; 3 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013-2014 ; Journal of Modern Periodical Studies Volume 4 ; 4 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014-2015 ; Journal of Modern Periodical Studies Volume 4-5 ; 4-5 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; Journal of Modern Periodical Studies Volume 5-6 ; 5-6 ; 2015 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; Journal of Modern Periodical Studies Volume 6 ; 6 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; Journal of Modern Periodical Studies Volume 7 ; 7 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; Journal of Modern Periodical Studies Volume 8 ; 8 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; Journal of Modern Periodical Studies Volume 9 ; 9 ; 2019 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; Journal of Modern Periodical Studies Volume 11 ; 11 ; 2020 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; Journal of Modern Periodical Studies Volume 12 ; 12 ; 2021 ; >
-      au < finished ; manifest ; 2022 ; Journal of Modern Periodical Studies Volume 13 ; 13 ; 2022 ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2023 ; Journal of Modern Periodical Studies Volume 14 ; 14 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Journal of Modern Periodical Studies Volume 15 ; 15 ; 2024 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; The Journal of Modern Periodical Studies Volume 1 ; 1 ; 2010 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; The Journal of Modern Periodical Studies Volume 2 ; 2 ; 2011 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; The Journal of Modern Periodical Studies Volume 3 ; 3 ; 2012 ; >
+      au < doNotProcess ; doNotProcess ; 2013-2014 ; The Journal of Modern Periodical Studies Volume 4 ; 4 ; 2013 ; >
+      au < doNotProcess ; doNotProcess ; 2014-2015 ; The Journal of Modern Periodical Studies Volume 4-5 ; 4-5 ; 2014 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; The Journal of Modern Periodical Studies Volume 5-6 ; 5-6 ; 2015 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; The Journal of Modern Periodical Studies Volume 6 ; 6 ; 2016 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; The Journal of Modern Periodical Studies Volume 7 ; 7 ; 2017 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; The Journal of Modern Periodical Studies Volume 8 ; 8 ; 2018 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; The Journal of Modern Periodical Studies Volume 9 ; 9 ; 2019 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; The Journal of Modern Periodical Studies Volume 11 ; 11 ; 2020 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; The Journal of Modern Periodical Studies Volume 12 ; 12 ; 2021 ; >
+      au < finished ; manifest ; 2022 ; The Journal of Modern Periodical Studies Volume 13 ; 13 ; 2022 ; reingest1.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2023 ; The Journal of Modern Periodical Studies Volume 14 ; 14 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; The Journal of Modern Periodical Studies Volume 15 ; 15 ; 2024 ; >
 
   }
 
@@ -1739,23 +1739,23 @@
   {
 
       title <
-        name = The Journal of World Christianity ;
+        name = Journal of World Christianity ;
         issn = 2377-8784 ;
         eissn = 1943-1538
       >
 
       param[journal_id] = world-christianity
 
-      au < doNotProcess ; doNotProcess ; 2012 ; The Journal of World Christianity Volume 5 ; 5 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; The Journal of World Christianity Volume 6 ; 6 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; The Journal of World Christianity Volume 7 ; 7 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; The Journal of World Christianity Volume 8 ; 8 ; 2018 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; The Journal of World Christianity Volume 9 ; 9 ; 2019 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; The Journal of World Christianity Volume 10 ; 10 ; 2020 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; The Journal of World Christianity Volume 11 ; 11 ; 2021 ; >
-      au < finished ; manifest ; 2022 ; The Journal of World Christianity Volume 12 ; 12 ; 2022 ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2023 ; The Journal of World Christianity Volume 13 ; 13 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; The Journal of World Christianity Volume 14 ; 14 ; 2024 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; Journal of World Christianity Volume 5 ; 5 ; 2012 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; Journal of World Christianity Volume 6 ; 6 ; 2016 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; Journal of World Christianity Volume 7 ; 7 ; 2017 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; Journal of World Christianity Volume 8 ; 8 ; 2018 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; Journal of World Christianity Volume 9 ; 9 ; 2019 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Journal of World Christianity Volume 10 ; 10 ; 2020 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Journal of World Christianity Volume 11 ; 11 ; 2021 ; >
+      au < finished ; manifest ; 2022 ; Journal of World Christianity Volume 12 ; 12 ; 2022 ; reingest4.clockss.org:8082 >
+      au < deepCrawl ; exists ; 2023 ; Journal of World Christianity Volume 13 ; 13 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; Journal of World Christianity Volume 14 ; 14 ; 2024 ; >
 
   }
 
@@ -1999,7 +1999,6 @@
 
   }
 
-
   {
 
       title <
@@ -2079,7 +2078,6 @@
 
   }
 
-
   {
 
       title <
@@ -2130,6 +2128,19 @@
 
   }
 
+  {
+
+      title <
+        name = Nursing History Review ;
+        issn = 1062-8061 ;
+        eissn = 1938-1913
+      >
+
+      param[journal_id] = nursing-history-review
+
+      au < exists ; exists ; 2023 ; Nursing History Review Volume 31 ; 31 ; 2023 ; >
+      au < expected ; exists ; 2024 ; Nursing History Review Volume 32 ; 32 ; 2024 ; >
+  }
 
   {
 
