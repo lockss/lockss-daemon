@@ -1,0 +1,43 @@
+{
+  publisher <
+    name = Getty Publications
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:331
+
+    {
+    title <
+      name = Getty Research Journal ;
+      issn = 1944-8740 ;
+      eissn = 2329-1249
+
+    >
+
+      attr[journal_id] = 871
+
+      au < manifest ; 2009 ; Getty Research Journal Volume 1 [2009] ; 18682 >
+      au < manifest ; 2010 ; Getty Research Journal Volume 2 [2010] ; 18683 >
+      au < manifest ; 2011 ; Getty Research Journal Volume 3 [2011] ; 18684 >
+      au < manifest ; 2012 ; Getty Research Journal Volume 4 [2012] ; 18685 >
+      au < manifest ; 2013 ; Getty Research Journal Volume 5 [2013] ; 18686 >
+      au < manifest ; 2014 ; Getty Research Journal Volume 6 [2014] ; 18687 >
+      au < manifest ; 2015 ; Getty Research Journal Volume 7 [2015] ; 18688 >
+      au < manifest ; 2016 ; Getty Research Journal Volume 8 [2016] ; 18689 >
+      au < manifest ; 2017 ; Getty Research Journal Volume 9 [2017] ; 18690 >
+      au < manifest ; 2018 ; Getty Research Journal Volume 10 [2018] ; 18691 >
+      au < manifest ; 2019 ; Getty Research Journal Volume 11 [2019] ; 18692 >
+      au < manifest ; 2020 ; Getty Research Journal Volume 12 [2020] ; 18693 >
+      au < manifest ; 2021 ; Getty Research Journal Volume 14 [2021] ; 18695 >
+      au < manifest ; 2022 ; Getty Research Journal Volume 16 [2022] ; 18697 >
+      au < manifest ; 2023 ; Getty Research Journal Volume 18 [2023] ; 18712 >
+      au < manifest ; 2024 ; Getty Research Journal Volume 19 [2024] ; 18713 >
+      au < manifest ; 2021 ; Getty Research Journal Volume 13 [2021] ; 18694 >
+      au < manifest ; 2022 ; Getty Research Journal Volume 15 [2022] ; 18696 >
+      au < manifest ; 2023 ; Getty Research Journal Volume 17 [2023] ; 18698 >
+
+    }
+
+}
