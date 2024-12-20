@@ -144,7 +144,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_substance_url_pattern</string>
     <list>
       <!-- https://journals.ametsoc.org/downloadpdf/journals/eint/24/2/eiD200001.xml -->
-      <string>"^%sdownloadpdf/(view/)journals/%s/%s/", base_url, journal_id, volume_name</string>
+      <string>"^%sdownloadpdf/(view/)?journals/%s/%s/", base_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
