@@ -3,9 +3,10 @@
   publisher <
     name = Iowa State University Digital Press ;
     info[contract] = 2019 ;
+    info[back] = 2019 ;
     info[tester] = 8 ;
     info[poller] = 8 ;
-    info[platform] = Janeway. Clockss
+    info[platform] = Janeway. Apparently no content available after 2019
   >
   
     plugin = org.lockss.plugin.janeway.iowastatedp.ClockssIowaStateDPPlugin

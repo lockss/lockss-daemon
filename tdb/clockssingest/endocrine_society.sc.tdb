@@ -2,10 +2,11 @@
 
   publisher <
     name = Endocrine Society ;
-    info[contract] = 2012 ;
-    info[back] = 2008 ; #no manifest pages before 2008
+    info[contract] = 2009 ; #OUP contract year
+    #info[contract] = 2012 ; #original
+    info[back] = 2008 ;
     info[tester] = 8 ;
-    info[poller] = 3
+    info[platform] = SC. No manifest pages before 2008
   >
   #######**** When Endocrine Society moves to OUP, do not change publisher.
 

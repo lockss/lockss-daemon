@@ -3,6 +3,7 @@
   publisher <
     name = Journal of Evolution of Medical and Dental Sciences ;
     info[contract] = 2019 ;
+    info[back] = 2019 ;
     info[tester] = 5 ;
     info[poller] = 8 ;
     info[platform] = OJS3. Open Journal Systems 3.3.0.7
@@ -25,6 +26,7 @@
     >
 
       #published 2022 to present
+      #old website https://jemds.com/index.php
       param[base_url] = https://jemds.in/
 
       au < finished ; manifest ; 2022 ; Journal of Evolution of Medical and Dental Sciences Volume 2022 ; 11 ; 2022 ; reingest1.clockss.org:8082 >
