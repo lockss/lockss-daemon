@@ -2,6 +2,7 @@
   publisher <
     name = Australian National University Press ;
     info[contract] = 2014 ;
+    info[back] = 2003 ;
     info[tester] = 8 
  >
   plugin = org.lockss.plugin.anu.ClockssAnuBooksPlugin
