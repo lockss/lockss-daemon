@@ -18,8 +18,8 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/mdpibooks-released/  ## HTTPS-Books
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      #This content tested by plugin developer
       au < readySource ; crawling ; 2024 ; Multidisciplinary Digital Publishing Institute Books Source Content 2024_01 ; 2024_01 >
+      au < expected ; exists ; 2025 ; Multidisciplinary Digital Publishing Institute Books Source Content 2025_01 ; 2025_01 >
 
     }
 
@@ -38,7 +38,11 @@
       au < readySource ; crawling ; 2024 ; Multidisciplinary Digital Publishing Institute Source Content 2024_02 ; 2024_02 >
       au < readySource ; crawling ; 2024 ; Multidisciplinary Digital Publishing Institute Source Content 2024_03 ; 2024_03 >
       au < readySource ; crawling ; 2024 ; Multidisciplinary Digital Publishing Institute Source Content 2024_04 ; 2024_04 > 
-      au < expected ; exists ; 2024 ; Multidisciplinary Digital Publishing Institute Source Content 2024_05 ; 2024_05 > 
+
+      au < expected ; exists ; 2025 ; Multidisciplinary Digital Publishing Institute Source Content 2025_01 ; 2025_01 > 
+      au < expected ; exists ; 2025 ; Multidisciplinary Digital Publishing Institute Source Content 2025_02 ; 2025_02 > 
+      au < expected ; exists ; 2025 ; Multidisciplinary Digital Publishing Institute Source Content 2025_03 ; 2025_03 > 
+      au < expected ; exists ; 2025 ; Multidisciplinary Digital Publishing Institute Source Content 2025_04 ; 2025_04 > 
 
     }
 
