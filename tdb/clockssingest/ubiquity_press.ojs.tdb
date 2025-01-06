@@ -58,7 +58,7 @@
       param[base_url] = https://account.hysafejournal.org/
       param[journal_id] = kitl-j-hs
 
-      au < expected ; exists ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; >
 
   }
 
@@ -2002,9 +2002,9 @@
       param[base_url] = https://account.ijelt.dundee.ac.uk/ #login found, https://account.ijelt.dundee.ac.uk/index.php/up-j-ijelt/login?source=%2Findex.php%2Fup-j-ijelt%2Fuser%2Fprofile
       param[journal_id] = up-j-ijelt
 
-      au < exists ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; > #login found
-      au < exists ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; > #login found
-      au < exists ; exists ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 ; > #login found
+      au < manifest ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; > #login found
+      au < manifest ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; > #login found
+      au < manifest ; exists ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 ; > #login found
 
   }
 
@@ -2751,7 +2751,7 @@
 
       au < finished ; crawling ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 3 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 3 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2024 ; 2024 ; >
 
   }
 
@@ -3042,7 +3042,7 @@
       au < frozen ; exists ; 2021 ; 15 ; The International Journal of Servant-Leadership Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 16 ; The International Journal of Servant-Leadership Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 17 ; The International Journal of Servant-Leadership Volume 2023 ; 2023 ; >
-      au < expected ; exists ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 ; >
 
   }
 
