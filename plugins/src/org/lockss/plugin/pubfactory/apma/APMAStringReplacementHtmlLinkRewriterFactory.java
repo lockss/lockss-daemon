@@ -136,7 +136,7 @@ public class APMAStringReplacementHtmlLinkRewriterFactory implements LinkRewrite
           return false;
         }
       });
-      
+
       return lrf.createLinkRewriter(mimeType, au, updatedInputStream, encoding, url, xform);
     }
 
