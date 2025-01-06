@@ -1930,9 +1930,9 @@
       param[base_url] = https://account.ijelt.dundee.ac.uk/
       param[journal_id] = up-j-ijelt
 
-      au < expected ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 >
-      au < expected ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 >
-      au < expected ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 >
+      au < manifest ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 >
+      au < manifest ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 >
+      au < manifest ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 >
 
   }
 
@@ -2738,7 +2738,7 @@
 
       au < released ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 >
       au < released ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 >
-      au < expected ; 2024 ; 3 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2024 ; 2024 >
+      au < manifest ; 2024 ; 3 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2024 ; 2024 >
 
   }
 
@@ -3016,7 +3016,7 @@
       au < notReady ; 2021 ; 15 ; The International Journal of Servant-Leadership Volume 2021 ; 2021 >
       au < released ; 2022 ; 16 ; The International Journal of Servant-Leadership Volume 2022 ; 2022 >
       au < notReady ; 2023 ; 17 ; The International Journal of Servant-Leadership Volume 2023 ; 2023 >
-      au < expected ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 >
+      au < manifest ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 >
 
   }
 
