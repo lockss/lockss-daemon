@@ -287,8 +287,20 @@ public class CasaliniLibriMarcMetadataHelper implements FileMetadataExtractor {
           // End handle 2016 PDF
         } else {
           String fullPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".pdf");
-          log.debug3("Casalini-Metadata: 2020 MARC_pdf " + fullPathFile);
-          am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+
+          CachedUrl testCuPDF = cu.getArchivalUnit().makeCachedUrl(fullPathFile);
+
+          if (testCuPDF != null && testCuPDF.hasContent()) {
+            am.put(MetadataField.FIELD_ACCESS_URL, fullPathFile);
+            log.debug3("Casalini-Metadata: PDF testCuPDF has content =  " + testCuPDF);
+          } else {
+            String fullEpubPathFile = UrlUtil.minimallyEncodeUrl(cuBase + MARC_pdf + ".epub");
+
+            if (fullEpubPathFile != null) { //No need to check hasContent, since it will not work for epub content.
+              log.debug3("Casalini-Metadata: MARC_epub " + fullEpubPathFile);
+              am.put(MetadataField.FIELD_ACCESS_URL, fullEpubPathFile);
+            }
+          }
         }
 
         /*

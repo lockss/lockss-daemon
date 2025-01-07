@@ -80,7 +80,11 @@ public class CasaliniLibriBooksArticleIteratorFactory implements ArticleIterator
     @Override
     public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
             throws PluginException {
-        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA) {
+            @Override
+            protected boolean isCheckAccessUrl() {
+                return false;
+            }
+        };
     }
-
 }
