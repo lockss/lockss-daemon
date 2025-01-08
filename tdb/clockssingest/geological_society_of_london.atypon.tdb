@@ -18,6 +18,23 @@
   {
 
     title <
+      name = Earth Science, Systems and Society ;
+      eissn = 2634-730X ;
+      issnl = 2634-730X
+    >
+
+      param[journal_id] = esss
+      #Moved from source (Frontiers) to harvest (GSL)
+
+      au < doNotProcess ; exists ; 2021 ; Earth Science, Systems and Society Volume 1 ; 1 ; >
+      au < doNotProcess ; exists ; 2022 ; Earth Science, Systems and Society Volume 2 ; 2 ; >
+      au < doNotProcess ; exists ; 2023 ; Earth Science, Systems and Society Volume 3 ; 3 ; >
+      au < manifest ; exists ; 2024 ; Earth Science, Systems and Society Volume 4 ; 4 ; >
+  }
+
+  {
+
+    title <
       name = Geoenergy ;
       eissn = 2755-1725 ;
       issnl = 2755-1725
