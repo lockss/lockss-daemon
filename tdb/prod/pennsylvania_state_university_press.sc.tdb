@@ -184,7 +184,7 @@
       au < doNotProcess ; 2020 ; The F. Scott Fitzgerald Review Volume 18 ; 18 ; 2020 >
       au < released ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 19 ; 2021 >
       au < released ; 2022 ; The F. Scott Fitzgerald Review Volume 20 ; 20 ; 2022 >
-      au < manifest ; 2023 ; The F. Scott Fitzgerald Review Volume 21 ; 21 ; 2023 >
+      au < ready ; 2023 ; The F. Scott Fitzgerald Review Volume 21 ; 21 ; 2023 >
       au < expected ; 2024 ; The F. Scott Fitzgerald Review Volume 22 ; 22 ; 2024 >
 
   }
@@ -213,7 +213,7 @@
       au < doNotProcess ; 2019 ; The Good Society Volume 28 ; 28 ; 2019 >
       au < doNotProcess ; 2020 ; The Good Society Volume 29 ; 29 ; 2020 >
       au < doNotProcess ; 2021 ; The Good Society Volume 30 ; 30 ; 2021 >
-      au < manifest ; 2022 ; The Good Society Volume 31 ; 31 ; 2022 >
+      au < ready ; 2022 ; The Good Society Volume 31 ; 31 ; 2022 >
 
   }
 
@@ -317,7 +317,7 @@
       au < manifest ; 2007 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2007 >
       au < released ; 2007 ; The Journal of Ayn Rand Studies Volume 9 (2007) ; 9 ; 2007 >
       au < released ; 2008 ; The Journal of Ayn Rand Studies Volume 9 (2008) ; 9 ; 2008 >
-      au < manifest ; 2008 ; The Journal of Ayn Rand Studies Volume 10 (2008) ; 10 ; 2008 >
+      au < ready ; 2008 ; The Journal of Ayn Rand Studies Volume 10 (2008) ; 10 ; 2008 >
       au < released ; 2009 ; The Journal of Ayn Rand Studies Volume 10 (2009) ; 10 ; 2009 >
       au < doNotProcess ; 2011 ; The Journal of Ayn Rand Studies Volume 11 ; 11 ; 2011 >
       au < doNotProcess ; 2012 ; The Journal of Ayn Rand Studies Volume 12 ; 12 ; 2012 >
@@ -1065,7 +1065,7 @@
       au < manifest ; 2005 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 11 ; 11 ; 2005 >
       au < manifest ; 2006 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 12 ; 12 ; 2006 >
       au < manifest ; 2007 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 13 ; 13 ; 2007 >
-      au < manifest ; 2008 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 14 ; 14 ; 2008 >
+      au < ready ; 2008 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 14 ; 14 ; 2008 >
       au < manifest ; 2009 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 15 ; 15 ; 2009 >
       au < released ; 2010 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 16 ; 16 ; 2010 >
       au < released ; 2011 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 17 ; 17 ; 2011 >
@@ -1100,7 +1100,7 @@
       au < manifest ; 2005 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2 ; 2 ; 2005 >
       au < manifest ; 2006 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 3 ; 3 ; 2006 >
       au < manifest ; 2007 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 4 ; 4 ; 2007 >
-      au < manifest ; 2008 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 5 ; 5 ; 2008 >
+      au < ready ; 2008 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 5 ; 5 ; 2008 >
       au < released ; 2009 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 6 ; 6 ; 2009 >
       au < released ; 2010 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 7 ; 7 ; 2010 >
       au < released ; 2011 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 8 ; 8 ; 2011 >
@@ -1153,8 +1153,8 @@
 
       param[journal_id] = ecumenica
 
-      au < manifest ; 2008 ; Ecumenica: Performance and Religion Volume 1 ; 1 ; 2008 >
-      au < manifest ; 2009 ; Ecumenica: Performance and Religion Volume 2 ; 2 ; 2009 >
+      au < ready ; 2008 ; Ecumenica: Performance and Religion Volume 1 ; 1 ; 2008 >
+      au < ready ; 2009 ; Ecumenica: Performance and Religion Volume 2 ; 2 ; 2009 >
       au < released ; 2010 ; Ecumenica: Performance and Religion Volume 3 ; 3 ; 2010 >
       au < released ; 2011 ; Ecumenica: Performance and Religion Volume 4 ; 4 ; 2011 >
       au < released ; 2012 ; Ecumenica: Performance and Religion Volume 5 ; 5 ; 2012 >
@@ -1211,7 +1211,7 @@
 
       param[journal_id] = george-eliot
 
-      au < manifest ; 2009 ; George Eliot-George Henry Lewes Studies Volume 56-57 ; 56-57 ; 2009 >
+      au < ready ; 2009 ; George Eliot-George Henry Lewes Studies Volume 56-57 ; 56-57 ; 2009 >
       au < doNotProcess ; 2010 ; George Eliot-George Henry Lewes Studies Volume 2010 ; 2010 ; 2010 >
       au < doNotProcess ; 2011 ; George Eliot-George Henry Lewes Studies Volume 2011 ; 2011 ; 2011 >
       au < doNotProcess ; 2012 ; George Eliot-George Henry Lewes Studies Volume 2012 ; 2012 ; 2012 >
@@ -1252,7 +1252,7 @@
       au < manifest ; 2005 ; Gestalt Review Volume 9 ; 9 ; 2005 >
       au < manifest ; 2006 ; Gestalt Review Volume 10 ; 10 ; 2006 >
       au < manifest ; 2007 ; Gestalt Review Volume 11 ; 11 ; 2007 >
-      au < manifest ; 2008 ; Gestalt Review Volume 12 ; 12 ; 2008 >
+      au < ready ; 2008 ; Gestalt Review Volume 12 ; 12 ; 2008 >
       au < manifest ; 2009 ; Gestalt Review Volume 13 ; 13 ; 2009 >
       au < released ; 2010 ; Gestalt Review Volume 14 ; 14 ; 2010 >
       au < released ; 2011 ; Gestalt Review Volume 15 ; 15 ; 2011 >
@@ -1406,7 +1406,7 @@
 
       param[journal_id] = jnrpr
 
-      au < manifest ; 2009 ; Journal of Natural Resources Policy Research Volume 1 ; 1 ; 2009 >
+      au < ready ; 2009 ; Journal of Natural Resources Policy Research Volume 1 ; 1 ; 2009 >
       au < released ; 2010 ; Journal of Natural Resources Policy Research Volume 2 ; 2 ; 2010 >
       au < released ; 2011 ; Journal of Natural Resources Policy Research Volume 3 ; 3 ; 2011 >
       au < released ; 2012 ; Journal of Natural Resources Policy Research Volume 4 ; 4 ; 2012 >
@@ -1463,7 +1463,7 @@
       au < doNotProcess ; 2019 ; Journal of the Pennsylvania Academy of Science Volume 93 ; 93 ; 2019 >
       au < doNotProcess ; 2020 ; Journal of the Pennsylvania Academy of Science Volume 94 ; 94 ; 2020 >
       au < doNotProcess ; 2021 ; Journal of the Pennsylvania Academy of Science Volume 95 ; 95 ; 2021 >
-      au < manifest ; 2022 ; Journal of the Pennsylvania Academy of Science Volume 96 ; 96 ; 2022 >
+      au < ready ; 2022 ; Journal of the Pennsylvania Academy of Science Volume 96 ; 96 ; 2022 >
 
   }
 
@@ -1590,7 +1590,7 @@
       au < manifest ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 >
       au < manifest ; 2006 ; Resources for American Literary Study Volume 31 ; 31 ; 2006 >
       au < manifest ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 >
-      au < manifest ; 2008 ; Resources for American Literary Study Volume 33 ; 33 ; 2008 >
+      au < ready ; 2008 ; Resources for American Literary Study Volume 33 ; 33 ; 2008 >
       au < released ; 2009 ; Resources for American Literary Study Volume 34 ; 34 ; 2009 >
       au < released ; 2010 ; Resources for American Literary Study Volume 35 ; 35 ; 2010 >
       au < released ; 2011 ; Resources for American Literary Study Volume 36 ; 36 ; 2011 >
@@ -1600,7 +1600,7 @@
       au < doNotProcess ; 2018 ; Resources for American Literary Study Volume 40 ; 40 ; 2018 >
       au < doNotProcess ; 2019 ; Resources for American Literary Study Volume 41 ; 41 ; 2019 >
       au < doNotProcess ; 2020 ; Resources for American Literary Study Volume 42 ; 42 ; 2020 >
-      au < manifest ; 2021 ; Resources for American Literary Study Volume 43 ; 43 ; 2021 >
+      au < ready ; 2021 ; Resources for American Literary Study Volume 43 ; 43 ; 2021 >
       au < released ; 2022 ; Resources for American Literary Study Volume 44 ; 44 ; 2022 >
 
   }
@@ -1616,7 +1616,7 @@
 
       param[journal_id] = american-humor
 
-      au < manifest ; 2009 ; Studies in American Humor Volume 19 ; 19 ; 2009 >
+      au < ready ; 2009 ; Studies in American Humor Volume 19 ; 19 ; 2009 >
       au < manifest ; 2009 ; Studies in American Humor Volume 20 ; 20 ; 2009 >
       au < doNotProcess ; 2010 ; Studies in American Humor Volume 2010 ; 2010 ; 2010 >
       au < doNotProcess ; 2011 ; Studies in American Humor Volume 2011 ; 2011 ; 2011 >
@@ -1781,7 +1781,7 @@
       au < doNotProcess ; 2019 ; The Korean Language in America Volume 23 ; 23 ; 2019 >
       au < doNotProcess ; 2020 ; The Korean Language in America Volume 24 ; 24 ; 2020 >
       au < doNotProcess ; 2021 ; The Korean Language in America Volume 25 ; 25 ; 2021 >
-      au < manifest ; 2022 ; The Korean Language in America Volume 26 ; 26 ; 2022 >
+      au < ready ; 2022 ; The Korean Language in America Volume 26 ; 26 ; 2022 >
 
   }
 
