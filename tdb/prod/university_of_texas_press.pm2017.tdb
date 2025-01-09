@@ -198,9 +198,9 @@
 
       attr[journal_id] = 882
 
-      au < ready ; 2021 ; Journal of Advancement Analytics Volume 1 [2021] ; 19195 >
-      au < ready ; 2022 ; Journal of Advancement Analytics Volume 2 [2022] ; 19203 >
-      au < ready ; 2023 ; Journal of Advancement Analytics Volume 3 [2023] ; 19204 >
+      au < releasing ; 2021 ; Journal of Advancement Analytics Volume 1 [2021] ; 19195 >
+      au < releasing ; 2022 ; Journal of Advancement Analytics Volume 2 [2022] ; 19203 >
+      au < releasing ; 2023 ; Journal of Advancement Analytics Volume 3 [2023] ; 19204 >
       au < manifest ; 2024 ; Journal of Advancement Analytics Volume 4 [2024] ; 19388 >
 
     }
@@ -434,13 +434,13 @@
 
       attr[journal_id] = 883
 
-      au < ready ; 2017 ; The Textile Museum Journal Volume 44 [2017] ; 19159 >
-      au < ready ; 2018 ; The Textile Museum Journal Volume 45 [2018] ; 19160 >
-      au < ready ; 2019 ; The Textile Museum Journal Volume 46 [2019] ; 19161 >
-      au < ready ; 2020 ; The Textile Museum Journal Volume 47 [2020] ; 19167 >
-      au < ready ; 2021 ; The Textile Museum Journal Volume 48 [2021] ; 19168 >
-      au < ready ; 2022 ; The Textile Museum Journal Volume 49 [2022] ; 19169 >
-      au < ready ; 2023 ; The Textile Museum Journal Volume 50 [2023] ; 19171 >
+      au < releasing ; 2017 ; The Textile Museum Journal Volume 44 [2017] ; 19159 >
+      au < releasing ; 2018 ; The Textile Museum Journal Volume 45 [2018] ; 19160 >
+      au < releasing ; 2019 ; The Textile Museum Journal Volume 46 [2019] ; 19161 >
+      au < releasing ; 2020 ; The Textile Museum Journal Volume 47 [2020] ; 19167 >
+      au < releasing ; 2021 ; The Textile Museum Journal Volume 48 [2021] ; 19168 >
+      au < releasing ; 2022 ; The Textile Museum Journal Volume 49 [2022] ; 19169 >
+      au < releasing ; 2023 ; The Textile Museum Journal Volume 50 [2023] ; 19171 >
 
     }
 
