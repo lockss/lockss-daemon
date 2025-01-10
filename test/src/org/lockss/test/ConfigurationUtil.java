@@ -101,54 +101,11 @@ public class ConfigurationUtil {
     return mgr().readConfig(l);
   }
 
-  /** Create a Configuration with a single param set to the specified
-   * value.
+  /** Create and return a Configuration with an arbitrary number of
+   * params and values.
    */
-  public static Configuration fromArgs(String prop, String val) {
-    Properties props = new Properties();
-    props.put(prop, val);
-    return fromProps(props);
-  }
-
-  /** Create a Configuration with two params set to the specified
-   * values.
-   */
-  public static Configuration fromArgs(String prop1, String val1,
-				       String prop2, String val2) {
-    Properties props = new Properties();
-    props.put(prop1, val1);
-    props.put(prop2, val2);
-    return fromProps(props);
-  }
-
-  /** Create a Configuration with three params set to the specified
-   * values.
-   */
-  public static Configuration fromArgs(String prop1, String val1,
-                                       String prop2, String val2,
-                                       String prop3, String val3) {
-    // JAVA5: merge fromArgs variants into fromArgs(String...) ?
-    Properties props = new Properties();
-    props.put(prop1, val1);
-    props.put(prop2, val2);
-    props.put(prop3, val3);
-    return fromProps(props);
-  }
-
-  /** Create a Configuration with four params set to the specified
-   * values.
-   */
-  public static Configuration fromArgs(String prop1, String val1,
-                                       String prop2, String val2,
-                                       String prop3, String val3,
-                                       String prop4, String val4) {
-    // JAVA5: merge fromArgs variants into fromArgs(String...) ?
-    Properties props = new Properties();
-    props.put(prop1, val1);
-    props.put(prop2, val2);
-    props.put(prop3, val3);
-    props.put(prop4, val4);
-    return fromProps(props);
+  public static Configuration fromArgs(String... keysVals) {
+    return fromProps(PropUtil.fromArgs(keysVals));
   }
 
   /** Reset the current configuration so all params have their default
