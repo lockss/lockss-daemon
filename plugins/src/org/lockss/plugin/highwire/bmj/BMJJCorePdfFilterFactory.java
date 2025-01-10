@@ -36,7 +36,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import org.lockss.filter.pdf.SimplePdfFilterFactory;
+import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
 import org.lockss.pdf.PdfDocument;
 import org.lockss.pdf.PdfException;
 import org.lockss.pdf.PdfPage;
@@ -46,11 +46,9 @@ import org.lockss.pdf.PdfTokenStreamStateMachine;
 import org.lockss.pdf.PdfTokenStreamWorker;
 import org.lockss.pdf.PdfUtil;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FilterFactory;
-import org.lockss.plugin.projmuse.ProjectMuse2017PdfFilterFactory;
 import org.lockss.util.Logger;
 
-public class BMJJCorePdfFilterFactory extends SimplePdfFilterFactory{
+public class BMJJCorePdfFilterFactory extends ExtractingPdfFilterFactory{
 
     private static final Logger log = Logger.getLogger(BMJJCorePdfFilterFactory.class);
     /*example: BMJ Open Ophthalmology: first published as 10.1136/bmjophth-2016-000021 on 26 September 2017. 
@@ -165,4 +163,16 @@ public class BMJJCorePdfFilterFactory extends SimplePdfFilterFactory{
         }
       }
   } 
+  //Use for testing purposes. 
+  /*public static void main(String[] args) throws Exception{
+    String file1 = "pathOfFirstFile";
+    String file2 = "pathOfSecondFile";
+
+    List<String> listOfStringFiles = Arrays.asList(file1, file2);
+    for(String file : listOfStringFiles){
+      BMJJCorePdfFilterFactory fact = new BMJJCorePdfFilterFactory();
+      InputStream result = fact.createFilteredInputStream(null, new FileInputStream(file), null);
+      IOUtils.copy(result, new FileOutputStream(file + ".out"));
+    }
+  }*/
 }
