@@ -38,7 +38,7 @@ import java.text.*;
 import java.util.*;
 
 public class TestRocksBackpagesCrawlWindow extends LockssTestCase{
-    public void testCrawlWindowCA() throws ParseException {
+    public void testCrawlWindowLondon() throws ParseException {
     TimeZone.setDefault(TimeZoneUtil.getExactTimeZone("GMT"));
 
     RocksBackpagesCrawlWindow windowFactory = new RocksBackpagesCrawlWindow();
@@ -47,6 +47,38 @@ public class TestRocksBackpagesCrawlWindow extends LockssTestCase{
     sdf.setTimeZone(TimeZone.getTimeZone("Europe/London"));
 
     assertTrue(window.canCrawl(sdf.parse("2025-08-01 04:59:00.0")));
-    /*add more test cases */
+    assertFalse(window.canCrawl(sdf.parse("2025-08-01 06:01:00.0")));
+    assertTrue(window.canCrawl(sdf.parse("2025-09-01 02:59:00.0")));
+    assertFalse(window.canCrawl(sdf.parse("2025-10-01 01:59:00.0")));
+    assertTrue(window.canCrawl(sdf.parse("2025-08-01 02:00:00.0")));
+  }
+
+  public void testCrawlWindowNY() throws ParseException {
+    TimeZone.setDefault(TimeZoneUtil.getExactTimeZone("GMT"));
+
+    RocksBackpagesCrawlWindow windowFactory = new RocksBackpagesCrawlWindow();
+    CrawlWindow window = windowFactory.makeCrawlWindow();
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
+    sdf.setTimeZone(TimeZone.getTimeZone("America/New_York"));
+
+    assertFalse(window.canCrawl(sdf.parse("2025-08-01 04:59:00.0")));
+    assertFalse(window.canCrawl(sdf.parse("2025-08-01 06:01:00.0")));
+    assertTrue(window.canCrawl(sdf.parse("2025-09-01 22:59:00.0")));
+    assertTrue(window.canCrawl(sdf.parse("2025-10-01 21:59:00.0")));
+    assertTrue(window.canCrawl(sdf.parse("2025-08-01 00:00:00.0")));
+  }
+
+    public void testCrawlWindowCA() throws ParseException {
+    TimeZone.setDefault(TimeZoneUtil.getExactTimeZone("GMT"));
+
+    RocksBackpagesCrawlWindow windowFactory = new RocksBackpagesCrawlWindow();
+    CrawlWindow window = windowFactory.makeCrawlWindow();
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S z");
+
+    assertFalse(window.canCrawl(sdf.parse("2025-06-19 04:59:00.0 PDT")));
+    assertFalse(window.canCrawl(sdf.parse("2025-12-19 04:59:00.0 PST")));
+    assertTrue(window.canCrawl(sdf.parse("2025-06-19 19:00:00.0 PDT")));
+    assertTrue(window.canCrawl(sdf.parse("2025-12-19 20:00:00.0 PST")));
+    assertTrue(window.canCrawl(sdf.parse("2025-06-19 20:01:00.0 PDT")));
   }
 }
