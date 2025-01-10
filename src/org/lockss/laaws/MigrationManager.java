@@ -81,8 +81,7 @@ import org.lockss.config.*;
  *
  * <li><b>isMigrationInDebugMode</b> - Enables additional UI buttons,
  * allows combinations of actions and state that should normally be
- * prohibited, prevents permanent changes to V1 <i>a la</i> dry run
- * mode </li>
+ * prohibited, prevent AUs from being deleted. </li>
  */
 public class MigrationManager extends BaseLockssDaemonManager
   implements ConfigurableManager  {
@@ -161,15 +160,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   }
 
   public boolean isDeactivateMigratedAus() {
-    return !isMigrationInDebugMode && isInMigrationMode && !isDeleteMigratedAus;
-  }
-
-  public boolean isTargetPostgres() {
-    return DbManagerSql.isTypePostgresql(dsClassName);
-  }
-
-  public boolean isSkipDbCopy() {
-    return !isTargetPostgres();
+    return isInMigrationMode && !isDeleteMigratedAus;
   }
 
   public void setConfig(Configuration config, Configuration oldConfig,
