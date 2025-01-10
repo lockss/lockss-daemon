@@ -3,6 +3,7 @@ package org.lockss.laaws;
 import java.io.*;
 import java.net.*;
 import java.sql.*;
+import java.util.*;
 import org.apache.commons.httpclient.methods.multipart.*;
 import org.apache.commons.httpclient.params.*;
 import org.lockss.app.LockssDaemon;
@@ -48,6 +49,7 @@ public class DBMover extends Worker {
 
   LockssDaemon daemon;
   DbManager dbManager;
+  MigrationManager migrationMgr;
   RemoteApi rapi;
   DbSizeUpdater sizeUpdater;
 
@@ -55,6 +57,7 @@ public class DBMover extends Worker {
     super(auMover, task);
     daemon = LockssDaemon.getLockssDaemon();
     dbManager = daemon.getDbManager();
+    migrationMgr = auMover.getMigrationMgr();
     rapi = daemon.getRemoteApi();
   }
 
@@ -66,12 +69,6 @@ public class DBMover extends Worker {
         return;
       }
       if (initParams()) {
-        if (auMover.getMigrationMgr().isSkipDbCopy()) {
-          String msg = "Skipping DB copy to non-postgres target in debug mode";
-          log.info(msg);
-          auMover.logReport(msg);
-          return;
-        }
         if (dbManager.isTypeDerby()) {
           log.info("Migrating Derby DB Content");
           copyDerbyDb();
@@ -159,8 +156,15 @@ public class DBMover extends Worker {
         .toString();
       log.info("V2 restore url = " + restoreUrl);
 
+      // UrlUtil.handleLoginForm() doesn't handle POST, so this relies
+      // on a previous GET having used handleLoginForm() to provide
+      // credentials and establish a session.  That happens in
+      // MigrationManager.getConfigFromMigrationTarget().  The cookie
+      // is stored in the connection pool, so this *must* used the
+      // same pool
       LockssUrlConnection conn =
-        UrlUtil.openConnection(LockssUrlConnection.METHOD_POST, restoreUrl, null);
+        UrlUtil.openConnection(LockssUrlConnection.METHOD_POST, restoreUrl,
+                               migrationMgr.getConnectionPool());
       conn.setCredentials(v2user, v2pass);
       conn.setUserAgent("lockss");
       Part[] parts = {
@@ -178,9 +182,12 @@ public class DBMover extends Worker {
           StringUtil.timeIntervalToString(TimeBase.msSince(startTime));
         auMover.addFinishedOther(msg);
         auMover.logReport(msg);
-        auMover.getMigrationMgr().setIsDbMoved(true);
+        migrationMgr.setIsDbMoved(true);
       } else {
         log.error("Subscriptions import to V2 failed: " + statusCode);
+        Properties respProps = new Properties();
+        conn.storeResponseHeaderInto(respProps, "");
+        log.error("Response headers: " + respProps);
         log.error("Response: " +
           StringUtil.fromInputStream(conn.getResponseInputStream()));
         terminated = true;
@@ -246,7 +253,7 @@ public class DBMover extends Worker {
           StringUtil.timeIntervalToString(TimeBase.msSince(startTime));
         auMover.addFinishedOther(msg);
         auMover.logReport(msg);
-        auMover.getMigrationMgr().setIsDbMoved(true);
+        migrationMgr.setIsDbMoved(true);
       }
     }
   }

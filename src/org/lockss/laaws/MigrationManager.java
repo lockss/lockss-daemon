@@ -119,6 +119,7 @@ public class MigrationManager extends BaseLockssDaemonManager
 
   private V2AuMover mover;
   private Runner runner;
+  LockssUrlConnectionPool connectionPool;
   private String idleError;
   private long startTime = 0;
 
@@ -135,6 +136,8 @@ public class MigrationManager extends BaseLockssDaemonManager
     super.startService();
     cfgMgr = getDaemon().getConfigManager();
     pluginMgr = getDaemon().getPluginManager();
+    connectionPool = new LockssUrlConnectionPool();
+    connectionPool.setConnectTimeout(15000);
   }
 
   public void stopService() {
@@ -366,6 +369,8 @@ public class MigrationManager extends BaseLockssDaemonManager
    * @throws IOException Thrown if there were network errors, or if the server response was
    * not a 200.
    */
+  // DBMover.copyDerbyDb() relies on this having run and supplied
+  // credentials, before it runs.
   public Configuration getConfigFromMigrationTarget(String hostname, int cfgUiPort,
                                                     String userName, String userPass)
       throws IOException {
@@ -373,8 +378,6 @@ public class MigrationManager extends BaseLockssDaemonManager
         "/DaemonStatus?table=ConfigStatus&output=csv");
     log.debug("V2 config GET url: " + cfgStatUrl.toString());
 
-    LockssUrlConnectionPool connectionPool = new LockssUrlConnectionPool();
-    connectionPool.setConnectTimeout(15000);
 
     LockssUrlConnection conn = UrlUtil.openConnection(cfgStatUrl.toString(),
                                                       connectionPool);
