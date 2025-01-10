@@ -279,7 +279,7 @@ public class ConfigFileMover extends Worker {
           res.append(param);
           res.append("=false");
         }
-        res.append("\n");
+        res.append("\n### End of migrator-added params\n");
         return res.toString();
       }
     } catch (IOException e) {
