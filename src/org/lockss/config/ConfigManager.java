@@ -1584,7 +1584,7 @@ public class ConfigManager implements LockssManager {
 
   }
 
-  private void setMigrationParams(Configuration config) {
+  void setMigrationParams(Configuration config) {
     boolean isDryRun = config.getBoolean(
         MigrationManager.PARAM_DRY_RUN_ENABLED,
         MigrationManager.DEFAULT_DRY_RUN_ENABLED);
@@ -1593,12 +1593,26 @@ public class ConfigManager implements LockssManager {
         MigrationManager.PARAM_IS_IN_MIGRATION_MODE,
         MigrationManager.DEFAULT_IS_IN_MIGRATION_MODE);
 
+    boolean isDbMoved = config.getBoolean(
+        MigrationManager.PARAM_IS_DB_MOVED,
+        MigrationManager.DEFAULT_IS_DB_MOVED);
+
     if (isInMigrationMode && !isDryRun) {
       Configuration v2MigrationParams = config.getConfigTree("v2");
-      if (!v2MigrationParams.isEmpty()) {
-        // Replace V1 DB params with V2 DB params
-        config.removeConfigTree(DbManager.DATASOURCE_ROOT);
-        config.copyFrom(v2MigrationParams);
+      if (v2MigrationParams.isEmpty()) {
+        log.warning("In migration mode, V2 subtree is unexpectedly empty");
+      } else {
+        // Promote V2 params so they take effect.  Promote V2 DB
+        // datasource only if the DB has been migrated (isDbMoved).
+        if (isDbMoved) {
+          config.removeConfigTree(DbManager.DATASOURCE_ROOT);
+        }
+        for (Iterator iter = v2MigrationParams.keyIterator(); iter.hasNext();) {
+          String key = (String)iter.next();
+          if (isDbMoved || !key.startsWith(DbManager.DATASOURCE_ROOT)) {
+            config.put(key, v2MigrationParams.get(key));
+          }
+        }
       }
     }
   }

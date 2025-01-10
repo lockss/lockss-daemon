@@ -288,9 +288,27 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   public void restartService() {
+    Configuration cur = ConfigManager.getCurrentConfig();
+    if (cur.get(PARAM_DATASOURCE_CLASSNAME) == null) {
+      log.debug("Restarting, was default DB");
+    } else {
+      log.debug("Restarting, was "
+                + cur.get(PARAM_DATASOURCE_CLASSNAME)
+                + ", " + cur.get(PARAM_DATASOURCE_SERVERNAME)
+                + ":" + cur.get(PARAM_DATASOURCE_PORTNUMBER));
+    }
     stopService();
     resetConfig();
     startService();
+    Configuration now = ConfigManager.getCurrentConfig();
+    if (now.get(PARAM_DATASOURCE_CLASSNAME) == null) {
+      log.debug("Restarted with default DB");
+    } else {
+      log.debug("Restarted with "
+                + now.get(PARAM_DATASOURCE_CLASSNAME)
+                + ", " + now.get(PARAM_DATASOURCE_SERVERNAME)
+                + ":" + now.get(PARAM_DATASOURCE_PORTNUMBER));
+    }
   }
 
   /**
