@@ -163,6 +163,10 @@ public class MigrationManager extends BaseLockssDaemonManager
     return isInMigrationMode && !isDeleteMigratedAus;
   }
 
+  public boolean isSkipDbCopy() {
+    return false;
+  }
+
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PREFIX)) {
