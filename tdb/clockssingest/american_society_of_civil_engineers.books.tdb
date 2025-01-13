@@ -162,7 +162,7 @@
     au < finished ; manifest ; 2020 ; 9780784415504 ; 9780784482704 ; 9780784415504 ; Seismic Loads : Guide to the Seismic Load Provisions of ASCE 7-16 (9780784415504) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 9780784415528 ; 9780784482759 ; 9780784415528 ; Engineering Methods for Precipitation under a Changing Climate (9780784415528) ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; 9780784415535 ; 9780784482766 ; 9780784415535 ; Rain Loads : Guide to the Rain Load Provisions of ASCE 7-16 (9780784415535) ; >
-    au < manifest ; exists ; 2020 ; 9780784415542 ; 9780784482919 ; 9780784415542 ; Composite Special Moment Frames : Wide Flange Beam to Concrete-Filled Steel Column Connections (9780784415542) ; >
+    au < ingNotReady ; exists ; 2020 ; 9780784415542 ; 9780784482919 ; 9780784415542 ; Composite Special Moment Frames : Wide Flange Beam to Concrete-Filled Steel Column Connections (9780784415542) ; > #not good to test, but added on ingest1 to 3
     au < finished ; manifest ; 2020 ; 9780784415559 ; 9780784483046 ; 9780784415559 ; Aesthetic Design of Electric Transmission Structures (9780784415559) ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2020 ; 9780784415566 ; 9780784483084 ; 9780784415566 ; Guidelines for Electrical Transmission Line Structural Loading (9780784415566) ; >
     au < finished ; manifest ; 2020 ; 9780784415580 ; 9780784483008 ; 9780784415580 ; Structural Design of Air and Gas Ducts for Power Stations and Industrial Boiler Applications (9780784415580) ; reingest2.clockss.org:8085 >
@@ -189,7 +189,7 @@
     au < manifest ; exists ; 2022 ; 9780784415702 ; 9780784483329 ; 9780784415702 ; Investigation of Land Subsidence due to Fluid Withdrawal (9780784415702) ; >
     au < manifest ; exists ; 2022 ; 9780784415856 ; 9780784483664 ; 9780784415856 ; Renewable Energy Technologies and Water Infrastructure (9780784415856) ; >
     au < finished ; manifest ; 2022 ; 9780784415887 ; 9780784483749 ; 9780784415887 ; Objective Resilience : Policies and Strategies (9780784415887) ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2022 ; 9780784415894 ; 9780784483756 ; 9780784415894 ; Objective Resilience : Objective Processes (9780784415894) ; >
+    au < ingNotReady ; exists ; 2022 ; 9780784415894 ; 9780784483756 ; 9780784415894 ; Objective Resilience : Objective Processes (9780784415894) ; > #not good to test, but added on ingest1 to 3
     au < finished ; manifest ; 2022 ; 9780784415900 ; 9780784483763 ; 9780784415900 ; Objective Resilience : Technology (9780784415900) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; 9780784415917 ; 9780784483770 ; 9780784415917 ; Objective Resilience : Applications (9780784415917) ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2022 ; 9780784415948 ; 9780784483824 ; 9780784415948 ; Total Maximum Daily Load Development and Implementation : Models, Methods, and Resources (9780784415948) ; >
