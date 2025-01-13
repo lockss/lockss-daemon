@@ -390,7 +390,7 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
   // long one
   public void testIteratorHandlesError() throws Exception {
     String base = "http://www.example.com";
-    String incr = "/aaaaaaaaaaaaaaaaaaaaaa";
+    String incr = "/aaaaaaaaaa";
     // Collects the URLs we successfully add
     List<String> urls = new ArrayList<>();
     // Add the two the iterator will return even though we didn't add them
