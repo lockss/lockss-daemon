@@ -2977,7 +2977,9 @@ Test results in ${test.results}
       <arg value="--noout"/>
       <fileset dir="${basedir}" includes="test/frameworks/*.xml"/>
       <fileset dir="${basedir}" includes="src/**/*.xml"/>
-      <fileset dir="${basedir}" includes="*/src/**/*.xml"/>
+      <!-- Avoid plugin test files, both directly and symlinked below v2/ -->
+      <fileset dir="${basedir}" includes="*/src/**/*.xml"
+               excludes="v2/**/*.xml"/>
       <fileset dir="${basedir}" includes="*/*/src/**/*.xml"
 	       excludes="plugins/**/*.xml"/>
     </apply>
