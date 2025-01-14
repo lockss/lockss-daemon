@@ -280,6 +280,20 @@ public class BaseAtyponMetadataUtil {
                   + ", AU_journal_titleSiam = " + AU_journal_titleSiam + ", foundJournalTitleSiam ="  + foundJournalTitleSiam
                   + ", normAuTitleSiam =  " + normAuTitleSiam + ", normFoundTitleSiam = " + normFoundTitleSiam);
 
+
+          // Check VOLUME
+          String foundVolumeSiam = am.get(MetadataField.FIELD_VOLUME);
+          if (!StringUtils.isEmpty(foundVolumeSiam)) {
+            // Get the AU's volume name from the AU properties. This must be set
+            TypedEntryMap tfProps = au.getProperties();
+            String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
+            if (isInAu && !(StringUtils.isEmpty(foundVolumeSiam))) {
+              isInAu =  ( (AU_volume != null) && (AU_volume.equals(foundVolumeSiam)));
+              log.debug3("Siam Check: After Siam volume check, isInAu :" + isInAu + ", foundVolumeSiam = " + foundVolumeSiam + ", AU_volume =" + AU_volume);
+            }
+          }
+
           return isInAu;
         }
       }

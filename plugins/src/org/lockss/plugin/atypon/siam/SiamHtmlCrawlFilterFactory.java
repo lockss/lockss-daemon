@@ -58,6 +58,9 @@ public class SiamHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
       HtmlNodeFilters.tagWithAttribute("div", "id", "sessionHistory"),
       //  articles that were references for this article
       HtmlNodeFilters.tagWithAttribute("div",  "class", "abstractReferences"),
+      // Multiscale Modeling and Simulation Volume 20 article https://epubs.siam.org/doi/10.1137/22M1493707
+      // has "corrected" article which goes to different volume
+      //HtmlNodeFilters.tagWithAttribute("div",  "class", "relation--head"),
   };
 
   @Override

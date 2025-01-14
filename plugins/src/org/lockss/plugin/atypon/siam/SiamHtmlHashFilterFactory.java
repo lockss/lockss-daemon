@@ -63,6 +63,9 @@ public class SiamHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "mainAd"),  
         
         HtmlNodeFilters.tagWithAttribute("div","class", "skip"),
+        // Multiscale Modeling and Simulation Volume 20 article https://epubs.siam.org/doi/10.1137/22M1493707
+        // has "corrected" article which goes to different volume
+        //HtmlNodeFilters.tagWithAttribute("div",  "class", "relation--head"),
     };
 
     // super.createFilteredInputStream adds siamfilter to the baseAtyponFilters
