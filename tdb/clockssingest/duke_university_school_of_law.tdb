@@ -49,10 +49,10 @@
     au < manifest ; exists ; 2005 ; Alaska Law Review Volume 22 ; 22 ; https://scholarship.law.duke.edu/ ; >
     au < manifest ; exists ; 2006 ; Alaska Law Review Volume 23 ; 23 ; https://scholarship.law.duke.edu/ ; >
     au < manifest ; exists ; 2007 ; Alaska Law Review Volume 24 ; 24 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2008 ; Alaska Law Review Volume 25 ; 25 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2009 ; Alaska Law Review Volume 26 ; 26 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2010 ; Alaska Law Review Volume 27 ; 27 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2011 ; Alaska Law Review Volume 28 ; 28 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2008 ; Alaska Law Review Volume 25 ; 25 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2009 ; Alaska Law Review Volume 26 ; 26 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2010 ; Alaska Law Review Volume 27 ; 27 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2011 ; Alaska Law Review Volume 28 ; 28 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; finished ; 2012 ; Alaska Law Review Volume 29 ; 29 ; http://scholarship.law.duke.edu/ ; >
     au < finished ; finished ; 2013 ; Alaska Law Review Volume 30 ; 30 ; http://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Alaska Law Review Volume 31 ; 31 ; http://scholarship.law.duke.edu/ ; >
@@ -65,7 +65,7 @@
     au < deepCrawl ; exists ; 2021 ; Alaska Law Review Volume 38 ; 38 ; https://scholarship.law.duke.edu/ ; >
     au < deepCrawl ; exists ; 2022 ; Alaska Law Review Volume 39 ; 39 ; https://scholarship.law.duke.edu/ ; >
     au < deepCrawl ; exists ; 2023 ; Alaska Law Review Volume 40 ; 40 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2024 ; Alaska Law Review Volume 41 ; 41 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2024 ; Alaska Law Review Volume 41 ; 41 ; https://scholarship.law.duke.edu/ ; >
 
   }
 
@@ -95,10 +95,10 @@
     au < manifest ; exists ; 2005 ; Duke Environmental Law & Policy Forum Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; >
     au < manifest ; exists ; 2006 ; Duke Environmental Law & Policy Forum Volume 16 ; 16 ; https://scholarship.law.duke.edu/ ; >
     au < manifest ; exists ; 2007 ; Duke Environmental Law & Policy Forum Volume 17 ; 17 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2008 ; Duke Environmental Law & Policy Forum Volume 18 ; 18 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2009 ; Duke Environmental Law & Policy Forum Volume 19 ; 19 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2010 ; Duke Environmental Law & Policy Forum Volume 20 ; 20 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2011 ; Duke Environmental Law & Policy Forum Volume 21 ; 21 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2008 ; Duke Environmental Law & Policy Forum Volume 18 ; 18 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2009 ; Duke Environmental Law & Policy Forum Volume 19 ; 19 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2010 ; Duke Environmental Law & Policy Forum Volume 20 ; 20 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2011 ; Duke Environmental Law & Policy Forum Volume 21 ; 21 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; finished ; 2012 ; Duke Environmental Law & Policy Forum Volume 22 ; 22 ; http://scholarship.law.duke.edu/ ; >
     au < finished ; finished ; 2013 ; Duke Environmental Law & Policy Forum Volume 23 ; 23 ; http://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2014 ; Duke Environmental Law & Policy Forum Volume 24 ; 24 ; http://scholarship.law.duke.edu/ ; >
@@ -124,9 +124,9 @@
 
     param[journal_abbr] = dflsc
   
-    au < testing ; exists ; 2009 ; Duke Forum for Law & Social Change Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2010 ; Duke Forum for Law & Social Change Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2011 ; Duke Forum for Law & Social Change Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2009 ; Duke Forum for Law & Social Change Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2010 ; Duke Forum for Law & Social Change Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2011 ; Duke Forum for Law & Social Change Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; finished ; 2012 ; Duke Forum for Law & Social Change Volume 4 ; 4 ; http://scholarship.law.duke.edu/ ; >
     au < finished ; finished ; 2013 ; Duke Forum for Law & Social Change Volume 5 ; 5 ; http://scholarship.law.duke.edu/ ; >
     au < finished ; finished ; 2014 ; Duke Forum for Law & Social Change Volume 6 ; 6 ; http://scholarship.law.duke.edu/ ; >
@@ -162,8 +162,8 @@
     au < manifest ; exists ; 2005 ; Duke Journal of Comparative and International Law Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; >
     au < manifest ; exists ; 2006 ; Duke Journal of Comparative and International Law Volume 16 ; 16 ; https://scholarship.law.duke.edu/ ; >
     au < manifest ; exists ; 2007 ; Duke Journal of Comparative and International Law Volume 17 ; 17 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2008 ; Duke Journal of Comparative and International Law Volume 18 ; 18 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 2009 ; Duke Journal of Comparative and International Law Volume 19 ; 19 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2008 ; Duke Journal of Comparative and International Law Volume 18 ; 18 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2009 ; Duke Journal of Comparative and International Law Volume 19 ; 19 ; https://scholarship.law.duke.edu/ ; >
     au < testing ; exists ; 2010 ; Duke Journal of Comparative and International Law Volume 20 ; 20 ; https://scholarship.law.duke.edu/ ; >
     au < testing ; exists ; 2011 ; Duke Journal of Comparative and International Law Volume 21 ; 21 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; finished ; 2012 ; Duke Journal of Comparative and International Law Volume 22 ; 22 ; http://scholarship.law.duke.edu/ ; >
