@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -110,6 +110,25 @@ POSSIBILITY OF SUCH DAMAGE.
       <entry>
         <string>au_def_pause_time</string>
         <long>100</long>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+<!--  oddly, ris files are text/plain -->
+    <string>text/plain_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.atypon.americansocietyofcivilengineers.ASCERisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.atypon.americansocietyofcivilengineers.ASCERisMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>
