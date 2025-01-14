@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -74,6 +74,10 @@ import org.jsoup.select.Elements;
  *  doi: 87    
  * Raw Metadata (empty)
  */
+/**
+ * @deprecated See {@link HeterocyclesAltMetadataExtractorFactory}
+ */
+@Deprecated
 public class Heterocycles2023MetadataExtractorFactory
   implements FileMetadataExtractorFactory {
   
@@ -85,6 +89,10 @@ public class Heterocycles2023MetadataExtractorFactory
   }
 
   // Gets default metadata from tdb: date, journal.title, publisher, 
+  /**
+   * @deprecated See {@link Heterocycles2023MetadataExtractorFactory.HeterocyclesAltMetadataExtractor}
+   */
+  @Deprecated
   public static class Heterocycles2023MetadataExtractor
     implements FileMetadataExtractor {
 
