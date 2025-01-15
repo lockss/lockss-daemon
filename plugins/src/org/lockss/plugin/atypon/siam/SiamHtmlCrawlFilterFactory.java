@@ -60,7 +60,9 @@ public class SiamHtmlCrawlFilterFactory extends BaseAtyponHtmlCrawlFilterFactory
       HtmlNodeFilters.tagWithAttribute("div",  "class", "abstractReferences"),
       // Multiscale Modeling and Simulation Volume 20 article https://epubs.siam.org/doi/10.1137/22M1493707
       // has "corrected" article which goes to different volume
-      //HtmlNodeFilters.tagWithAttribute("div",  "class", "relation--head"),
+      HtmlNodeFilters.tagWithAttribute("div",  "class", "relation--head"),
+      //https://epubs.siam.org/doi/10.1137/15M1022045, citation article will leak to other volumes
+      HtmlNodeFilters.tagWithAttribute("div",  "class", "citation"),
   };
 
   @Override
