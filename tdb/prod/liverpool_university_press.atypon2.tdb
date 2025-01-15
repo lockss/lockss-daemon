@@ -73,6 +73,8 @@
     au < doNotProcess ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 >
     au < doNotProcess ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 >
     au < released ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 >
+    au < exists ; 2022 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 18 ; 18 >
+    au < exists ; 2023 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 19 ; 19 >
 
   }
 
@@ -311,8 +313,9 @@
     au < doNotProcess ; 2017 ; Comma Volume 2017 ; 2017 >
     au < doNotProcess ; 2018 ; Comma Volume 2018 ; 2018 >
     au < doNotProcess ; 2019 ; Comma Volume 2019 ; 2019 >
-    au < doNotProcess ; 2020 ; Comma Volume 2020 (2021) ; 2020 >
-    au < released ; 2021 ; Comma Volume 2021 (2022) ; 2021 >
+    au < doNotProcess ; 2020 ; Comma Volume 2020 ; 2020 >
+    au < released ; 2021 ; Comma Volume 2021 ; 2021 >
+    au < exists ; 2022 ; Comma Volume 2022 ; 2022 >
 
   }
 
@@ -813,10 +816,14 @@
     #V4 I1=2019, I2=2019, I3=2020
 
     au < doNotProcess ; 2015 ; Hunter Gatherer Research Volume 1 ; 1 >
-    au < doNotProcess ; 2016-2017 ; Hunter Gatherer Research Volume 2 ; 2 >
-    au < doNotProcess ; 2017-2019 ; Hunter Gatherer Research Volume 3 ; 3 >
-    au < doNotProcess ; 2019-2020 ; Hunter Gatherer Research Volume 4 ; 4 >
-    au < released ; 2021 ; Hunter Gatherer Research Volume 5 ; 5 >
+    au < doNotProcess ; 2016 ; Hunter Gatherer Research Volume 2 ; 2 >
+    au < doNotProcess ; 2017 ; Hunter Gatherer Research Volume 3 ; 3 >
+    au < doNotProcess ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 >
+    au < released ; 2019 ; Hunter Gatherer Research Volume 5 ; 5 >
+    au < exists ; 2020 ; Hunter Gatherer Research Volume 6 ; 6 >
+    au < exists ; 2021 ; Hunter Gatherer Research Volume 7 ; 7 >
+    au < exists ; 2022 ; Hunter Gatherer Research Volume 8 ; 8 >
+    au < exists ; 2023 ; Hunter Gatherer Research Volume 9 ; 9 >
 
   }
 
@@ -1022,6 +1029,9 @@
     param[journal_id] = jrns
     #journal_num = 115
 
+    au < exists ; 2019 ; Journal of Romanian Studies Volume 1 ; 1 >
+    au < exists ; 2020 ; Journal of Romanian Studies Volume 2 ; 2 >
+    au < exists ; 2021 ; Journal of Romanian Studies Volume 3 ; 3 >
     au < released ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 >
     au < released ; 2023 ; Journal of Romanian Studies Volume 5 ; 5 >
     au < manifest ; 2024 ; Journal of Romanian Studies Volume 6 ; 6 >
@@ -2111,6 +2121,94 @@
 
     param[journal_id] = revista
 
+    au < exists ; 1939 ; Revista Iberoamericana Volume 1 ; 1 >
+    au < exists ; 1940 ; Revista Iberoamericana Volume 2 ; 2 >
+    au < exists ; 1941 ; Revista Iberoamericana Volume 3 ; 3 >
+    au < exists ; 1941-1942 ; Revista Iberoamericana Volume 4 ; 4 >
+    au < exists ; 1942 ; Revista Iberoamericana Volume 5 ; 5 >
+    au < exists ; 1943 ; Revista Iberoamericana Volume 6 ; 6 >
+    au < exists ; 1943-1944 ; Revista Iberoamericana Volume 7 ; 7 >
+    au < exists ; 1944 ; Revista Iberoamericana Volume 8 ; 8 >
+    au < exists ; 1945 ; Revista Iberoamericana Volume 9 ; 9 >
+    au < exists ; 1945 ; Revista Iberoamericana Volume 10 ; 10 >
+    au < exists ; 1946 ; Revista Iberoamericana Volume 11 ; 11 >
+    au < exists ; 1947 ; Revista Iberoamericana Volume 12 ; 12 >
+    au < exists ; 1948 ; Revista Iberoamericana Volume 13 ; 13 >
+    au < exists ; 1948 ; Revista Iberoamericana Volume 14 ; 14 >
+    au < exists ; 1949-1950 ; Revista Iberoamericana Volume 15 ; 15 >
+    au < exists ; 1951 ; Revista Iberoamericana Volume 16 ; 16 >
+    au < exists ; 1951-1952 ; Revista Iberoamericana Volume 17 ; 17 >
+    au < exists ; 1952-1953 ; Revista Iberoamericana Volume 18 ; 18 >
+    au < exists ; 1953-1954 ; Revista Iberoamericana Volume 19 ; 19 >
+    au < exists ; 1955 ; Revista Iberoamericana Volume 20 ; 20 >
+    au < exists ; 1956 ; Revista Iberoamericana Volume 21 ; 21 >
+    au < exists ; 1957 ; Revista Iberoamericana Volume 22 ; 22 >
+    au < exists ; 1958 ; Revista Iberoamericana Volume 23 ; 23 >
+    au < exists ; 1959 ; Revista Iberoamericana Volume 24 ; 24 >
+    au < exists ; 1960 ; Revista Iberoamericana Volume 25 ; 25 >
+    au < exists ; 1961 ; Revista Iberoamericana Volume 26 ; 26 >
+    au < exists ; 1961 ; Revista Iberoamericana Volume 27 ; 27 >
+    au < exists ; 1962 ; Revista Iberoamericana Volume 28 ; 28 >
+    au < exists ; 1963 ; Revista Iberoamericana Volume 29 ; 29 >
+    au < exists ; 1964 ; Revista Iberoamericana Volume 30 ; 30 >
+    au < exists ; 1965 ; Revista Iberoamericana Volume 31 ; 31 >
+    au < exists ; 1966 ; Revista Iberoamericana Volume 32 ; 32 >
+    au < exists ; 1967 ; Revista Iberoamericana Volume 33 ; 33 >
+    au < exists ; 1968 ; Revista Iberoamericana Volume 34 ; 34 >
+    au < exists ; 1969 ; Revista Iberoamericana Volume 35 ; 35 >
+    au < exists ; 1970 ; Revista Iberoamericana Volume 36 ; 36 >
+    au < exists ; 1971 ; Revista Iberoamericana Volume 37 ; 37 >
+    au < exists ; 1972 ; Revista Iberoamericana Volume 38 ; 38 >
+    au < exists ; 1973 ; Revista Iberoamericana Volume 39 ; 39 >
+    au < exists ; 1974 ; Revista Iberoamericana Volume 40 ; 40 >
+    au < exists ; 1975 ; Revista Iberoamericana Volume 41 ; 41 >
+    au < exists ; 1976 ; Revista Iberoamericana Volume 42 ; 42 >
+    au < exists ; 1977 ; Revista Iberoamericana Volume 43 ; 43 >
+    au < exists ; 1978 ; Revista Iberoamericana Volume 44 ; 44 >
+    au < exists ; 1979 ; Revista Iberoamericana Volume 45 ; 45 >
+    au < exists ; 1980 ; Revista Iberoamericana Volume 46 ; 46 >
+    au < exists ; 1981 ; Revista Iberoamericana Volume 47 ; 47 >
+    au < exists ; 1982 ; Revista Iberoamericana Volume 48 ; 48 >
+    au < exists ; 1983 ; Revista Iberoamericana Volume 49 ; 49 >
+    au < exists ; 1984 ; Revista Iberoamericana Volume 50 ; 50 >
+    au < exists ; 1985 ; Revista Iberoamericana Volume 51 ; 51 >
+    au < exists ; 1986 ; Revista Iberoamericana Volume 52 ; 52 >
+    au < exists ; 1987 ; Revista Iberoamericana Volume 53 ; 53 >
+    au < exists ; 1988 ; Revista Iberoamericana Volume 54 ; 54 >
+    au < exists ; 1989 ; Revista Iberoamericana Volume 55 ; 55 >
+    au < exists ; 1990 ; Revista Iberoamericana Volume 56 ; 56 >
+    au < exists ; 1991 ; Revista Iberoamericana Volume 57 ; 57 >
+    au < exists ; 1992 ; Revista Iberoamericana Volume 58 ; 58 >
+    au < exists ; 1993 ; Revista Iberoamericana Volume 59 ; 59 >
+    au < exists ; 1994 ; Revista Iberoamericana Volume 60 ; 60 >
+    au < exists ; 1995 ; Revista Iberoamericana Volume 61 ; 61 >
+    au < exists ; 1996 ; Revista Iberoamericana Volume 62 ; 62 >
+    au < exists ; 1997 ; Revista Iberoamericana Volume 63 ; 63 >
+    au < exists ; 1998 ; Revista Iberoamericana Volume 64 ; 64 >
+    au < exists ; 1999 ; Revista Iberoamericana Volume 65 ; 65 >
+    au < exists ; 2000 ; Revista Iberoamericana Volume 66 ; 66 >
+    au < exists ; 2001 ; Revista Iberoamericana Volume 67 ; 67 >
+    au < exists ; 2002 ; Revista Iberoamericana Volume 68 ; 68 >
+    au < exists ; 2003 ; Revista Iberoamericana Volume 69 ; 69 >
+    au < exists ; 2004 ; Revista Iberoamericana Volume 70 ; 70 >
+    au < exists ; 2005 ; Revista Iberoamericana Volume 71 ; 71 >
+    au < exists ; 2006 ; Revista Iberoamericana Volume 72 ; 72 >
+    au < exists ; 2007 ; Revista Iberoamericana Volume 73 ; 73 >
+    au < exists ; 2008 ; Revista Iberoamericana Volume 74 ; 74 >
+    au < exists ; 2009 ; Revista Iberoamericana Volume 75 ; 75 >
+    au < exists ; 2010 ; Revista Iberoamericana Volume 76 ; 76 >
+    au < exists ; 2011 ; Revista Iberoamericana Volume 77 ; 77 >
+    au < exists ; 2012 ; Revista Iberoamericana Volume 78 ; 78 >
+    au < exists ; 2013 ; Revista Iberoamericana Volume 79 ; 79 >
+    au < exists ; 2014 ; Revista Iberoamericana Volume 80 ; 80 >
+    au < exists ; 2015 ; Revista Iberoamericana Volume 81 ; 81 >
+    au < exists ; 2016 ; Revista Iberoamericana Volume 82 ; 82 >
+    au < exists ; 2017 ; Revista Iberoamericana Volume 83 ; 83 >
+    au < exists ; 2018 ; Revista Iberoamericana Volume 84 ; 84 >
+    au < exists ; 2019 ; Revista Iberoamericana Volume 85 ; 85 >
+    au < exists ; 2020 ; Revista Iberoamericana Volume 86 ; 86 >
+    au < exists ; 2021 ; Revista Iberoamericana Volume 87 ; 87 >
+    au < exists ; 2022 ; Revista Iberoamericana Volume 88 ; 88 >
     au < released ; 2023 ; Revista Iberoamericana Volume 89 ; 89 >
     au < manifest ; 2024 ; Revista Iberoamericana Volume 90 ; 90 >
 
@@ -2126,6 +2224,37 @@
 
     param[journal_id] = blr
 
+    au < exists ; 1914-1916 ; The Bodleian Library Record Volume I ; I >
+    au < exists ; 1917-1919 ; The Bodleian Library Record Volume II ; II >
+    au < exists ; 1920-1922 ; The Bodleian Library Record Volume III ; III >
+    au < exists ; 1923-1925 ; The Bodleian Library Record Volume IV ; IV >
+    au < exists ; 1926-1928 ; The Bodleian Library Record Volume V ; V >
+    au < exists ; 1929-1931 ; The Bodleian Library Record Volume VI ; VI >
+    au < exists ; 1932-1934 ; The Bodleian Library Record Volume VII ; VII >
+    au < exists ; 1935-1937 ; The Bodleian Library Record Volume VIII ; VIII >
+    au < exists ; 1938-1941 ; The Bodleian Library Record Volume 1 ; 1 >
+    au < exists ; 1941-1949 ; The Bodleian Library Record Volume 2 ; 2 >
+    au < exists ; 1950-1951 ; The Bodleian Library Record Volume 3 ; 3 >
+    au < exists ; 1952-1953 ; The Bodleian Library Record Volume 4 ; 4 >
+    au < exists ; 1954-1956 ; The Bodleian Library Record Volume 5 ; 5 >
+    au < exists ; 1957-1961 ; The Bodleian Library Record Volume 6 ; 6 >
+    au < exists ; 1962-1967 ; The Bodleian Library Record Volume 7 ; 7 >
+    au < exists ; 1967-1972 ; The Bodleian Library Record Volume 8 ; 8 >
+    au < exists ; 1973-1978 ; The Bodleian Library Record Volume 9 ; 9 >
+    au < exists ; 1978-1982 ; The Bodleian Library Record Volume 10 ; 10 >
+    au < exists ; 1982-1985 ; The Bodleian Library Record Volume 11 ; 11 >
+    au < exists ; 1985-1988 ; The Bodleian Library Record Volume 12 ; 12 >
+    au < exists ; 1988-1991 ; The Bodleian Library Record Volume 13 ; 13 >
+    au < exists ; 1991-1994 ; The Bodleian Library Record Volume 14 ; 14 >
+    au < exists ; 1994-1996 ; The Bodleian Library Record Volume 15 ; 15 >
+    au < exists ; 1997-1999 ; The Bodleian Library Record Volume 16 ; 16 >
+    au < exists ; 2000-2002 ; The Bodleian Library Record Volume 17 ; 17 >
+    au < exists ; 2003-2005 ; The Bodleian Library Record Volume 18 ; 18 >
+    au < exists ; 2006 ; The Bodleian Library Record Volume 19 ; 19 >
+    au < exists ; 2007 ; The Bodleian Library Record Volume 20 ; 20 >
+    au < exists ; 2008 ; The Bodleian Library Record Volume 21 ; 21 >
+    au < exists ; 2009 ; The Bodleian Library Record Volume 22 ; 22 >
+    au < exists ; 2010 ; The Bodleian Library Record Volume 23 ; 23 >
     au < released ; 2011 ; The Bodleian Library Record Volume 24 ; 24 >
     au < released ; 2012 ; The Bodleian Library Record Volume 25 ; 25 >
     au < released ; 2013 ; The Bodleian Library Record Volume 26 ; 26 >
@@ -2160,6 +2289,7 @@
     au < released ; 2020 ; The Shandean Volume 31 ; 31 >
     au < released ; 2021 ; The Shandean Volume 32 ; 32 >
     au < released ; 2022 ; The Shandean Volume 33 ; 33 >
+    au < exists ; 2024 ; The Shandean Volume 34 ; 34 >
 
   }
   
