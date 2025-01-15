@@ -3663,7 +3663,7 @@
       au < finished ; finished ; 2020 ; International Journal of Emergency Management Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2021-2022 ; International Journal of Emergency Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; International Journal of Emergency Management Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2024 ; International Journal of Emergency Management Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2024 ; International Journal of Emergency Management Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4609,8 +4609,8 @@
       au < doNotProcess ; exists ; 1999 ; International Journal of Global Energy Issues Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2000 ; International Journal of Global Energy Issues Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2000 ; International Journal of Global Energy Issues Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2001 ; International Journal of Global Energy Issues Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2002 ; International Journal of Global Energy Issues Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2001 ; International Journal of Global Energy Issues Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2002 ; International Journal of Global Energy Issues Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2002 ; International Journal of Global Energy Issues Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2002 ; International Journal of Global Energy Issues Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2003 ; International Journal of Global Energy Issues Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
@@ -5763,7 +5763,7 @@
       au < finished ; finished ; 2021 ; International Journal of Innovative Computing and Applications Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2022 ; International Journal of Innovative Computing and Applications Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; International Journal of Innovative Computing and Applications Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2024 ; International Journal of Innovative Computing and Applications Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2024 ; International Journal of Innovative Computing and Applications Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7216,7 +7216,7 @@
       au < deepCrawl ; exists ; 2023 ; International Journal of Materials and Product Technology Volume 66 ; 66 ; https://www.inderscienceonline.com/ ; >
       au < deepCrawl ; exists ; 2023 ; International Journal of Materials and Product Technology Volume 67 ; 67 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2024 ; International Journal of Materials and Product Technology Volume 68 ; 68 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2024 ; International Journal of Materials and Product Technology Volume 69 ; 69 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2024 ; International Journal of Materials and Product Technology Volume 69 ; 69 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7301,7 +7301,7 @@
       au < finished ; finished ; 2021 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2022 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2024 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2024 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -11395,15 +11395,15 @@
       param[journal_id] = ier
 
       au < manifest ; exists ; 1999 ; Interdisciplinary Environmental Review Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; Interdisciplinary Environmental Review Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2001 ; Interdisciplinary Environmental Review Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2002 ; Interdisciplinary Environmental Review Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2003 ; Interdisciplinary Environmental Review Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2004 ; Interdisciplinary Environmental Review Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2005 ; Interdisciplinary Environmental Review Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2006 ; Interdisciplinary Environmental Review Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2007 ; Interdisciplinary Environmental Review Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2008-2009 ; Interdisciplinary Environmental Review Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; Interdisciplinary Environmental Review Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2001 ; Interdisciplinary Environmental Review Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2002 ; Interdisciplinary Environmental Review Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2003 ; Interdisciplinary Environmental Review Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2004 ; Interdisciplinary Environmental Review Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2005 ; Interdisciplinary Environmental Review Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2006 ; Interdisciplinary Environmental Review Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2007 ; Interdisciplinary Environmental Review Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2008-2009 ; Interdisciplinary Environmental Review Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Interdisciplinary Environmental Review Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Interdisciplinary Environmental Review Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Interdisciplinary Environmental Review Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
@@ -11492,10 +11492,10 @@
 
       param[journal_id] = jdr
 
-      au < manifest ; exists ; 2001 ; Journal of Design Research Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2002 ; Journal of Design Research Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2003 ; Journal of Design Research Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2004 ; Journal of Design Research Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2001 ; Journal of Design Research Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2002 ; Journal of Design Research Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2003 ; Journal of Design Research Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2004 ; Journal of Design Research Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2006-2007 ; Journal of Design Research Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2007 ; Journal of Design Research Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 2008 ; Journal of Design Research Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
