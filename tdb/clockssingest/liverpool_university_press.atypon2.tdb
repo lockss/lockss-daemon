@@ -2188,7 +2188,7 @@
     au < manifest ; exists ; 1949 ; French Studies Volume 3 ; 3 ; >
     au < manifest ; exists ; 1950 ; French Studies Volume 4 ; 4 ; >
     au < manifest ; exists ; 1951 ; French Studies Volume 5 ; 5 ; >
-    au < exists ; exists ; 1952 ; French Studies Volume 6 ; 6 ; >
+    au < exists ; exists ; 1952 ; French Studies Volume VI ; VI ; >
     au < manifest ; exists ; 1953 ; French Studies Volume 7 ; 7 ; >
     au < manifest ; exists ; 1954 ; French Studies Volume 8 ; 8 ; >
     au < manifest ; exists ; 1955 ; French Studies Volume 9 ; 9 ; >
@@ -2286,7 +2286,7 @@
     au < manifest ; exists ; 1990 ; French Studies Bulletin Volume 10 ; 10 ; >
     au < manifest ; exists ; 1991 ; French Studies Bulletin Volume 11 ; 11 ; >
     au < manifest ; exists ; 1992 ; French Studies Bulletin Volume 12 ; 12 ; >
-    au < exists ; exists ; 1993 ; French Studies Bulletin Volume 14 ; 14 ; >
+    au < exists ; exists ; 1993 ; French Studies Bulletin Volume 13 ; 13 ; >
     au < manifest ; exists ; 1994 ; French Studies Bulletin Volume 15 ; 15 ; >
     au < manifest ; exists ; 1995 ; French Studies Bulletin Volume 16 ; 16 ; >
     au < manifest ; exists ; 1996 ; French Studies Bulletin Volume 17 ; 17 ; >
@@ -2331,6 +2331,19 @@
 
     param[journal_id] = huguenot
 
+    au < exists ; exists ; 1885-1886 ; The Huguenot Society Journal Volume 1 ; 1 ; >
+    au < exists ; exists ; 1886-1888 ; The Huguenot Society Journal Volume 2 ; 2 ; >
+    au < exists ; exists ; 1888-1891 ; The Huguenot Society Journal Volume 3 ; 3 ; >
+    au < exists ; exists ; 1891-1893 ; The Huguenot Society Journal Volume 4 ; 4 ; >
+    au < exists ; exists ; 1894-1897 ; The Huguenot Society Journal Volume 5 ; 5 ; >
+    au < exists ; exists ; 1898-1901 ; The Huguenot Society Journal Volume 6 ; 6 ; >
+    au < exists ; exists ; 1902-1904 ; The Huguenot Society Journal Volume 7 ; 7 ; >
+    au < exists ; exists ; 1905-1908 ; The Huguenot Society Journal Volume 8 ; 8 ; >
+    au < exists ; exists ; 1909-1911 ; The Huguenot Society Journal Volume 9 ; 9 ; >
+    au < exists ; exists ; 1912-1914 ; The Huguenot Society Journal Volume 10 ; 10 ; >
+    au < exists ; exists ; 1915-1917 ; The Huguenot Society Journal Volume 11 ; 11 ; >
+    au < exists ; exists ; 1918-1923 ; The Huguenot Society Journal Volume 12 ; 12 ; >
+    au < exists ; exists ; 1924-1929 ; The Huguenot Society Journal Volume 13 ; 13 ; >
     au < manifest ; exists ; 1930-1933 ; The Huguenot Society Journal Volume 14 ; 14 ; >
     au < manifest ; exists ; 1934-1937 ; The Huguenot Society Journal Volume 15 ; 15 ; >
     au < manifest ; exists ; 1938-1941 ; The Huguenot Society Journal Volume 16 ; 16 ; >
@@ -2346,8 +2359,8 @@
     au < manifest ; exists ; 1994-1997 ; The Huguenot Society Journal Volume 26 ; 26 ; >
     au < manifest ; exists ; 1998-2002 ; The Huguenot Society Journal Volume 27 ; 27 ; >
     au < manifest ; exists ; 2003-2007 ; The Huguenot Society Journal Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2008-2013 ; The Huguenot Society Journal Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2014-2017 ; The Huguenot Society Journal Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2008-2012 ; The Huguenot Society Journal Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2013-2017 ; The Huguenot Society Journal Volume 30 ; 30 ; >
     au < manifest ; exists ; 2018 ; The Huguenot Society Journal Volume 31 ; 31 ; >
     au < manifest ; exists ; 2019 ; The Huguenot Society Journal Volume 32 ; 32 ; >
     au < manifest ; exists ; 2020 ; The Huguenot Society Journal Volume 33 ; 33 ; >
@@ -2417,11 +2430,11 @@
 
     param[journal_id] = churcharch
 
-    au < manifest ; exists ; 1921 ; Church Archaeology Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1922 ; Church Archaeology Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1922 ; Church Archaeology Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1923 ; Church Archaeology Volume 23 ; 23 ; >
-    au < manifest ; exists ; 1924 ; Church Archaeology Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2021 ; Church Archaeology Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2022 ; Church Archaeology Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2022 ; Church Archaeology Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2023 ; Church Archaeology Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2024 ; Church Archaeology Volume 24 ; 24 ; >
 
   }
 }
