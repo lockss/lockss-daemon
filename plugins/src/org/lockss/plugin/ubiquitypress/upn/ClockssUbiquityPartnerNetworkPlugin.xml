@@ -51,13 +51,13 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_parent_version</string>
     <string>17</string>
   </entry>
-  <entry>
+  <!--<entry>
     <string>au_permission_url</string>
     <list>
       <string>"%sabout/", to_http(base_url)</string>
       <string>"%sabout/", to_https(base_url)</string>
     </list>
-  </entry>
+  </entry>-->
   <entry>
     <string>plugin_name</string>
     <string>Ubiquity Partner Network Journals Plugin (CLOCKSS)</string>
