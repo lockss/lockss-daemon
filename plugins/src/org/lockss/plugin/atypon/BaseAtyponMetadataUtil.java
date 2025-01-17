@@ -101,21 +101,33 @@ public class BaseAtyponMetadataUtil {
     Boolean checkedISSN = false;
     String AU_ISSN = (tdbau == null) ? null : normalize_id(tdbau.getPrintIssn());
     String AU_EISSN = (tdbau == null) ? null : normalize_id(tdbau.getEissn());
+
+    log.debug3("AU_ISSN: " + AU_ISSN + ", AU_EISSN: " + AU_EISSN);
+
     // If the tdb lists both values for issn, then check with our found values
     // If we only list one value then don't use this check - what if the au
     // only had the EISSN and the article only listed the ISSN - false negative
     if ( !(StringUtils.isEmpty(AU_ISSN) || StringUtils.isEmpty(AU_EISSN)) ){
       String foundEISSN = normalize_id(am.get(MetadataField.FIELD_EISSN));
       String foundISSN = normalize_id(am.get(MetadataField.FIELD_ISSN));
+
+      log.debug3("Found EISSN: " + foundEISSN + ", Found ISSN: " + foundISSN);
+
       checkedISSN = true;
       // don't go crazy. If the EISSN is there and matches, just move on
       if (foundEISSN != null) {
         if (!(foundEISSN.equals(AU_EISSN) || foundEISSN.equals(AU_ISSN)) ) {
+          log.debug3("Exiting early due to failed ISSN check. AU_ISSN: " + AU_ISSN +
+                  ", AU_EISSN: " + AU_EISSN + ", foundEISSN: " + foundEISSN +
+                  ", foundISSN: " + foundISSN);
           return false;
         }
       } else if (foundISSN != null) {
         // there wasn't an EISSN, so let's check the ISSN
         if (!(foundISSN.equals(AU_ISSN) || foundISSN.equals(AU_EISSN)) ) {
+          log.debug3("Exiting early due to failed ISSN check. AU_ISSN: " + AU_ISSN +
+                  ", AU_EISSN: " + AU_EISSN + ", foundEISSN: " + foundEISSN +
+                  ", foundISSN: " + foundISSN);
           return false;
         }
       }
