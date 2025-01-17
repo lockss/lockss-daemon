@@ -298,7 +298,7 @@ Args:
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
   <property name="jsoup.jar" value="${lib}/jsoup-1.18.3.jar"/>
-  <property name="marc4j.jar" value="${lib}/marc4j-2.9.5.jar" />
+  <property name="marc4j.jar" value="${lib}/marc4j-2.9.6.jar" />
   <!-- Next 6 needed for Jonix -->
   <property name="jonix.version" value="2024-07" />
   <property name="jonix.jar" value="${lib}/jonix-${jonix.version}.jar" />
