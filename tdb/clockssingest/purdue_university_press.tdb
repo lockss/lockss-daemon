@@ -43,9 +43,9 @@
     au < manifest ; exists ; 2005 ; Against the Grain Volume 17 ; 17 ; https://docs.lib.purdue.edu/ ; >
     au < manifest ; exists ; 2006 ; Against the Grain Volume 18 ; 18 ; https://docs.lib.purdue.edu/ ; >
     au < manifest ; exists ; 2007 ; Against the Grain Volume 19 ; 19 ; https://docs.lib.purdue.edu/ ; >
-    au < testing ; exists ; 2008 ; Against the Grain Volume 20 ; 20 ; https://docs.lib.purdue.edu/ ; >
-    au < testing ; exists ; 2009 ; Against the Grain Volume 21 ; 21 ; https://docs.lib.purdue.edu/ ; >
-    au < testing ; exists ; 2010 ; Against the Grain Volume 22 ; 22 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2008 ; Against the Grain Volume 20 ; 20 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2009 ; Against the Grain Volume 21 ; 21 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2010 ; Against the Grain Volume 22 ; 22 ; https://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2011 ; Against the Grain Volume 23 ; 23 ; http://docs.lib.purdue.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Against the Grain Volume 24 ; 24 ; http://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2013 ; Against the Grain Volume 25 ; 25 ; http://docs.lib.purdue.edu/ ; reingest1.clockss.org:8082 >
@@ -140,10 +140,10 @@
     #move to Indiana University
 
     au < manifest ; exists ; 2006 ; Interdisciplinary Journal of Problem-Based Learning Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
-    au < testing ; exists ; 2008 ; Interdisciplinary Journal of Problem-Based Learning volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
-    au < testing ; exists ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
-    au < testing ; exists ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 4 ; 4 ; https://docs.lib.purdue.edu/ ; >
-    au < testing ; exists ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2008 ; Interdisciplinary Journal of Problem-Based Learning volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2009 ; Interdisciplinary Journal of Problem-Based Learning Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2010 ; Interdisciplinary Journal of Problem-Based Learning Volume 4 ; 4 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2011 ; Interdisciplinary Journal of Problem-Based Learning Volume 5 ; 5 ; https://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2012 ; Interdisciplinary Journal of Problem-Based Learning Volume 6 ; 6 ; http://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2013 ; Interdisciplinary Journal of Problem-Based Learning Volume 7 ; 7 ; http://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2014 ; Interdisciplinary Journal of Problem-Based Learning Volume 8 ; 8 ; http://docs.lib.purdue.edu/ ; >
@@ -189,7 +189,7 @@
     param[journal_abbr] = jate
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
     
-    au < testing ; exists ; 2011 ; Journal of Aviation Technology and Engineering Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2011 ; Journal of Aviation Technology and Engineering Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2012 ; Journal of Aviation Technology and Engineering Volume 2 ; 2 ; http://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2013 ; Journal of Aviation Technology and Engineering Volume 3 ; 3 ; http://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2014 ; Journal of Aviation Technology and Engineering Volume 4 ; 4 ; http://docs.lib.purdue.edu/ ; >
@@ -249,7 +249,7 @@
     param[journal_abbr] = jpeer
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < testing ; exists ; 2011 ; Journal of Pre-College Engineering Education Research Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2011 ; Journal of Pre-College Engineering Education Research Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2012 ; Journal of Pre-College Engineering Education Research Volume 2 ; 2 ; http://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 ; http://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2014 ; Journal of Pre-College Engineering Education Research Volume 4 ; 4 ; http://docs.lib.purdue.edu/ ; >
@@ -308,10 +308,10 @@
 
     au < manifest ; exists ; 2006 ; Journal of Southeast Asian American Education and Advancement Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
     au < manifest ; exists ; 2007 ; Journal of Southeast Asian American Education and Advancement Volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
-    au < testing ; exists ; 2008 ; Journal of Southeast Asian American Education and Advancement Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
-    au < testing ; exists ; 2009 ; Journal of Southeast Asian American Education and Advancement Volume 4 ; 4 ; https://docs.lib.purdue.edu/ ; >
-    au < testing ; exists ; 2010 ; Journal of Southeast Asian American Education and Advancement Volume 5 ; 5 ; https://docs.lib.purdue.edu/ ; >
-    au < testing ; exists ; 2011 ; Journal of Southeast Asian American Education and Advancement Volume 6 ; 6 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2008 ; Journal of Southeast Asian American Education and Advancement Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2009 ; Journal of Southeast Asian American Education and Advancement Volume 4 ; 4 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2010 ; Journal of Southeast Asian American Education and Advancement Volume 5 ; 5 ; https://docs.lib.purdue.edu/ ; >
+    au < ready ; exists ; 2011 ; Journal of Southeast Asian American Education and Advancement Volume 6 ; 6 ; https://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2012 ; Journal of Southeast Asian American Education and Advancement Volume 7 ; 7 ; http://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2013 ; Journal of Southeast Asian American Education and Advancement Volume 8 ; 8 ; http://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2014 ; Journal of Southeast Asian American Education and Advancement Volume 9 ; 9 ; http://docs.lib.purdue.edu/ ; >
