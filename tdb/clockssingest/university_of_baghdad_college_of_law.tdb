@@ -1,0 +1,42 @@
+{
+
+  publisher <
+    name = University of Baghdad, College of Law ;
+    info[contract] = 2025 ;
+    info[back] = 2015 ;
+    info[tester] = 8 ;
+    info[platform] = OJS3 3.4.0.8
+  >
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+
+    title <
+      name = Journal of Legal Sciences ;
+      issn = 2070-027X ;
+      eissn = 2663-581X
+    >
+
+      param[base_url] = https://jols.uobaghdad.edu.iq/
+      param[journal_id] = jols
+
+      au < manifest ; exists ; 2005 ; Journal of Legal Sciences Volume 2005 ; 20 ; 2005 ; >
+      au < manifest ; exists ; 2014 ; Journal of Legal Sciences Volume 2014 ; 29 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; Journal of Legal Sciences Volume 2015 ; 30 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; Journal of Legal Sciences Volume 2016 ; 31 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; Journal of Legal Sciences Volume 2017 ; 32 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; Journal of Legal Sciences Volume 2018 ; 33 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; Journal of Legal Sciences Volume 2019 ; 34 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; Journal of Legal Sciences Volume 2020 ; 35 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; Journal of Legal Sciences Volume 2021 ; 36 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; Journal of Legal Sciences Volume 2022 ; 37 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; Journal of Legal Sciences Volume 2023 ; 38 ; 2023 ; >
+      au < manifest ; exists ; 2024 ; Journal of Legal Sciences Volume 2024 ; 39 ; 2024 ; >
+      au < expected ; exists ; 2025 ; Journal of Legal Sciences Volume 2025 ; 40 ; 2025 ; >
+
+  }
+
+}
