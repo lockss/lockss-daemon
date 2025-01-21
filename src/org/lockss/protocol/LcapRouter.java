@@ -1,10 +1,6 @@
 /*
- * $Id$
- */
 
-/*
-
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2025 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -151,6 +147,10 @@ public class LcapRouter
         migrateTo = null;
       }
     }
+  }
+
+  public PeerIdentity getMigrateTo() {
+    return migrateTo;
   }
 
   /** Multicast a message to all peers.  Only supported for V1 messages

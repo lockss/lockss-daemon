@@ -404,7 +404,7 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   }
 
   /** Method suitable for unit tests. */
-  public int getSupportedProtocolRev() {
+  public static int getSupportedProtocolRev() {
     boolean isV2Compat =
       CurrentConfig.getBooleanParam(PollManager.PARAM_V2_COMPAT,
                                     PollManager.DEFAULT_V2_COMPAT);
