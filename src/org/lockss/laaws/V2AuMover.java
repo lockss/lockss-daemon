@@ -475,7 +475,7 @@ public class V2AuMover {
   /** Filled when request completely done and report written */
   private OneShotSemaphore doneSem = new OneShotSemaphore();
 
-  private boolean terminated = false;
+  private boolean failed = false;
   private boolean globalAbort = false;
 
   ConfigManager cfgManager;
@@ -795,7 +795,12 @@ public class V2AuMover {
         moveSystemSettings(args);
         break;
       case CopyDatabase:
-        moveDatabase(args);
+        try {
+          moveDatabase(args);
+        } catch (Exception e) {
+          log.error("Copy Database failed, aborting", e);
+          throw e;
+        }
         break;
       case CopyConfig:
         moveConfigFiles(args);
@@ -1097,7 +1102,7 @@ public class V2AuMover {
         String err = "Attempt to verify AU failed: " + auName +
           ": " + ex.getMessage();
         auStat.addError(err);
-        terminated = true;
+        setFailed(true);
       }
       break;
       case CopyOnly:
@@ -1139,7 +1144,7 @@ public class V2AuMover {
         String err = "Attempt to move AU failed: " + auName +
           ": " + ex.getMessage();
         auStat.addError(err);
-        terminated = true;
+        setFailed(true);
       }
       break;
     }
@@ -2163,7 +2168,11 @@ public class V2AuMover {
       return "Aborted";
     }
     if (hasBeenStarted) {
-      return "Done";
+      if (isFailed()) {
+        return "Failed";
+      } else {
+        return "Done";
+      }
     }
     return "Idle";
   }
@@ -2204,9 +2213,14 @@ public class V2AuMover {
 //   }
 
   public int getFinishedStatusCount() {
-    synchronized (finishedAus) {
-      return finishedAus.size();
+    int res = 0;
+    synchronized (finishedOthers) {
+      res += finishedOthers.size();
     }
+    synchronized (finishedAus) {
+      res += finishedAus.size();
+    }
+    return res;
   }
 
   public List<String> getFinishedStatusPage(int index, int size) {
@@ -2289,12 +2303,12 @@ public class V2AuMover {
     return running;
   }
 
-  public boolean isTerminated() {
-    return terminated;
+  public boolean isFailed() {
+    return failed;
   }
 
-  public void setTerminated(boolean isTerminated) {
-    this.terminated = isTerminated;
+  public void setFailed(boolean isFailed) {
+    this.failed = isFailed;
   }
 
   public boolean isAbort() {
