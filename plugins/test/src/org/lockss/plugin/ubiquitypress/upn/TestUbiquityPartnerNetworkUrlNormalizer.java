@@ -47,7 +47,10 @@ public class TestUbiquityPartnerNetworkUrlNormalizer extends LockssTestCase {
     private MockLockssDaemon theDaemon;
     DefinableArchivalUnit testAU; 
     static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
+    static final String BASE_URL_2_KEY = ConfigParamDescr.BASE_URL2.getKey();
     static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
+    static final String VOLUME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
+    static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
     static final String ROOT_URL = "http://www.xyz.com/"; //this is not a real url  
     
     static final String PLUGIN_ID = "org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin";
@@ -60,6 +63,9 @@ public class TestUbiquityPartnerNetworkUrlNormalizer extends LockssTestCase {
       Properties props = new Properties();
       props.setProperty(YEAR_KEY, "2014");
       props.setProperty(BASE_URL_KEY, ROOT_URL);
+      props.setProperty(BASE_URL_2_KEY,"http://www.account.xyz.com/");
+      props.setProperty(VOLUME_KEY,"50");
+      props.setProperty(JOURNAL_ID_KEY,"journal_id_example");
       Configuration config = ConfigurationUtil.fromProps(props);
 
       DefinablePlugin ap = new DefinablePlugin();
