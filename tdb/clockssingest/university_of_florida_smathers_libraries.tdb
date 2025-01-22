@@ -2,8 +2,7 @@
   publisher <
     name = University of Florida George A. Smathers Libraries ;
     info[contract] = 2023 ;
-    info[back] = 2015 ;
-    info[min_year] = 1888 ;
+    info[back] = 2010 ;
     info[tester] = 5 ;
     info[poller] = 6 ;
     info[platform] = OJS3
@@ -24,6 +23,7 @@
       >
 
       param[journal_id] = cee
+      #One year embargo. Current year issues need a login.
 
       au < manifest ; exists ; 1962 ; Chemical Engineering Education Volume 1962 ; 1962 ; 1962 ; >
       au < manifest ; exists ; 1963 ; Chemical Engineering Education Volume 1963 ; 1963 ; 1963 ; >
@@ -86,7 +86,7 @@
       au < frozen ; exists ; 2020 ; Chemical Engineering Education Volume 2020 ; 2020 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Chemical Engineering Education Volume 2021 ; 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Chemical Engineering Education Volume 2022 ; 2022 ; 2022 ; >
-      au < notReady ; exists ; 2023 ; Chemical Engineering Education Volume 2023 ; 2023 ; 2023 ; > #login found, https://journals.flvc.org/cee/article/view/132637/136584
+      au < exists ; exists ; 2023 ; Chemical Engineering Education Volume 2023 ; 2023 ; 2023 ; > #login found, https://journals.flvc.org/cee/article/view/132637/136584
       au < notReady ; exists ; 2024 ; Chemical Engineering Education Volume 2024 ; 2024 ; 2024 ; > #redirect to login page
 
   }
