@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Egyptian Petroleum Research Institute ;
+    info[contract] = 2008 ;
+    info[tester] = 5 
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+  
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+  
+  {
+
+    title <
+      name = Egyptian Journal of Petroleum ;
+      issn = 1110-0621 ;
+      eissn = 2090-2468
+    >
+
+    param[base_url] =  https://ejp.researchcommons.org/
+    param[journal_abbr] = journal
+
+    au < manifest ; exists ; 2024 ; Egyptian Journal of Petroleum Volume 33 ; 33 ; >
+    au < expected ; exists ; 2025 ; Egyptian Journal of Petroleum Volume 34 ; 34 ; >
+
+  }
+
+}
