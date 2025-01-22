@@ -266,7 +266,7 @@
       au < frozen ; exists ; 2020 ; Journal of Assessment in Higher Education Volume 1 ; 1 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Journal of Assessment in Higher Education Volume 2 ; 2 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Journal of Assessment in Higher Education Volume 3 ; 3 ; 2022 ; >
-      au < exists ; exists ; 2023 ; Journal of Assessment in Higher Education Volume 4 ; 4 ; 2023 ; >
+      au < doesNotExist ; doesNotExist ; 2023 ; Journal of Assessment in Higher Education Volume 4 ; 4 ; 2023 ; >
       au < expected ; exists ; 2024 ; Journal of Assessment in Higher Education Volume 5 ; 5 ; 2024 ; >
 
   }
@@ -355,8 +355,8 @@
       param[journal_id] = JVFS
 
       au < frozen ; exists ; 2020 ; Journal of Veterinary Forensic Sciences Volume 1 ; 1 ; 2020 ; >
-      au < exists ; exists ; 2021 ; Journal of Veterinary Forensic Sciences Volume 2 ; 2 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Journal of Veterinary Forensic Sciences Volume 3 ; 3 ; 2022 ; >
+      au < doesNotExist ; doesNotExist ; 2021 ; Journal of Veterinary Forensic Sciences Volume 2 ; 2 ; 2021 ; >
+      au < doesNotExist ; doesNotExist ; 2022 ; Journal of Veterinary Forensic Sciences Volume 3 ; 3 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; Journal of Veterinary Forensic Sciences Volume 4 ; 4 ; 2023 ; >
       au < expected ; exists ; 2024 ; Journal of Veterinary Forensic Sciences Volume 5 ; 5 ; 2024 ; >
 
@@ -374,7 +374,7 @@
 
       au < frozen ; exists ; 2021 ; New Florida Journal of Anthropology Volume 1 ; 1 ; 2021 ; >
       au < frozen ; exists ; 2022 ; New Florida Journal of Anthropology Volume 2 ; 2 ; 2022 ; >
-      au < exists ; exists ; 2023 ; New Florida Journal of Anthropology Volume 3 ; 3 ; 2023 ; >
+      au < doesNotExist ; doesNotExist ; 2023 ; New Florida Journal of Anthropology Volume 3 ; 3 ; 2023 ; >
       au < crawling ; exists ; 2024 ; New Florida Journal of Anthropology Volume 4 ; 4 ; 2024 ; >
 
   }
@@ -509,7 +509,7 @@
       au < manifest ; exists ; 2004 ; Tropical Lepidoptera Research Volume 15 ; 15 ; 2004 ; >
       au < manifest ; exists ; 2005 ; Tropical Lepidoptera Research Volume 16 ; 16 ; 2005 ; >
       au < manifest ; exists ; 2006 ; Tropical Lepidoptera Research Volume 17 ; 17 ; 2006 ; >
-      au < exists ; exists ; 2007 ; Tropical Lepidoptera Research Volume 18 ; 18 ; 2007 ; >
+      au < doesNotExist ; doesNotExist ; 2007 ; Tropical Lepidoptera Research Volume 18 ; 18 ; 2007 ; >
       au < manifest ; exists ; 2008 ; Tropical Lepidoptera Research Volume 19 ; 19 ; 2008 ; >
       au < manifest ; exists ; 2009 ; Tropical Lepidoptera Research Volume 20 ; 20 ; 2009 ; >
       au < manifest ; exists ; 2010 ; Tropical Lepidoptera Research Volume 21 ; 21 ; 2010 ; >
@@ -543,9 +543,9 @@
       au < manifest ; exists ; 1889 ; Proceedings of the Florida State Horticultural Society Volume 2 ; 2 ; 1889 ; >
       au < manifest ; exists ; 1890 ; Proceedings of the Florida State Horticultural Society Volume 3 ; 3 ; 1890 ; >
       au < manifest ; exists ; 1891 ; Proceedings of the Florida State Horticultural Society Volume 4 ; 4 ; 1891 ; >
-      au < exists ; exists ; 1892 ; Proceedings of the Florida State Horticultural Society Volume 5 ; 5 ; 1892 ; >
-      au < exists ; exists ; 1893 ; Proceedings of the Florida State Horticultural Society Volume 6 ; 6 ; 1893 ; >
-      au < exists ; exists ; 1894 ; Proceedings of the Florida State Horticultural Society Volume 7 ; 7 ; 1894 ; >
+      au < doesNotExist ; doesNotExist ; 1892 ; Proceedings of the Florida State Horticultural Society Volume 5 ; 5 ; 1892 ; >
+      au < doesNotExist ; doesNotExist ; 1893 ; Proceedings of the Florida State Horticultural Society Volume 6 ; 6 ; 1893 ; >
+      au < doesNotExist ; doesNotExist ; 1894 ; Proceedings of the Florida State Horticultural Society Volume 7 ; 7 ; 1894 ; >
       au < manifest ; exists ; 1895 ; Proceedings of the Florida State Horticultural Society Volume 8 ; 8 ; 1895 ; >
       au < manifest ; exists ; 1896 ; Proceedings of the Florida State Horticultural Society Volume 9 ; 9 ; 1896 ; >
       au < manifest ; exists ; 1897 ; Proceedings of the Florida State Horticultural Society Volume 10 ; 10 ; 1897 ; >
@@ -567,7 +567,7 @@
       au < manifest ; exists ; 1913 ; Proceedings of the Florida State Horticultural Society Volume 26 ; 26 ; 1913 ; >
       au < manifest ; exists ; 1914 ; Proceedings of the Florida State Horticultural Society Volume 27 ; 27 ; 1914 ; >
       au < manifest ; exists ; 1915 ; Proceedings of the Florida State Horticultural Society Volume 28 ; 28 ; 1915 ; >
-      au < exists ; exists ; 1916 ; Proceedings of the Florida State Horticultural Society Volume 29 ; 29 ; 1916 ; >
+      au < doesNotExist ; doesNotExist ; 1916 ; Proceedings of the Florida State Horticultural Society Volume 29 ; 29 ; 1916 ; >
       au < manifest ; exists ; 1917 ; Proceedings of the Florida State Horticultural Society Volume 30 ; 30 ; 1917 ; >
       au < manifest ; exists ; 1918 ; Proceedings of the Florida State Horticultural Society Volume 31 ; 31 ; 1918 ; >
       au < manifest ; exists ; 1919 ; Proceedings of the Florida State Horticultural Society Volume 32 ; 32 ; 1919 ; >
@@ -673,8 +673,8 @@
       au < frozen ; exists ; 2019 ; Proceedings of the Florida State Horticultural Society Volume 132 ; 132 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Proceedings of the Florida State Horticultural Society Volume 133 ; 133 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Proceedings of the Florida State Horticultural Society Volume 134 ; 134 ; 2021 ; >
-      au < exists ; exists ; 2022 ; Proceedings of the Florida State Horticultural Society Volume 135 ; 135 ; 2022 ; >
-      au < exists ; exists ; 2023 ; Proceedings of the Florida State Horticultural Society Volume 136 ; 136 ; 2023 ; >
+      au < doesNotExist ; doesNotExist ; 2022 ; Proceedings of the Florida State Horticultural Society Volume 135 ; 135 ; 2022 ; >
+      au < doesNotExist ; doesNotExist ; 2023 ; Proceedings of the Florida State Horticultural Society Volume 136 ; 136 ; 2023 ; >
       au < expected ; exists ; 2024 ; Proceedings of the Florida State Horticultural Society Volume 137 ; 137 ; 2024 ; >
 
   }
@@ -770,7 +770,7 @@
 
       au < manifest ; exists ; 1989 ; EDIS Volume 1989 ; 1989 ; 1989 ; >
       au < manifest ; exists ; 1990 ; EDIS Volume 1990 ; 1990 ; 1990 ; >
-      au < exists ; exists ; 1991 ; EDIS Volume 1991 ; 1991 ; 1991 ; >
+      au < doesNotExist ; doesNotExist ; 1991 ; EDIS Volume 1991 ; 1991 ; 1991 ; >
       au < manifest ; exists ; 1992 ; EDIS Volume 1992 ; 1992 ; 1992 ; >
       au < manifest ; exists ; 1993 ; EDIS Volume 1993 ; 1993 ; 1993 ; >
       au < manifest ; exists ; 1994 ; EDIS Volume 1994 ; 1994 ; 1994 ; >
