@@ -49,9 +49,11 @@ public class PLoSHtmlCrawlFilterFactory implements FilterFactory {
     NodeFilter[] filters = new NodeFilter[] {
         HtmlNodeFilters.tag("header"),
         HtmlNodeFilters.tag("footer"),
+        //need to remove links to different versions of articles
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-articles-container"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "amendment"),
         HtmlNodeFilters.tagWithAttribute("ol", "class", "references"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "https://journals.plos.org/.*/article\\?id=[0-9\\.]+/journal\\..*#.+[ref]"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
