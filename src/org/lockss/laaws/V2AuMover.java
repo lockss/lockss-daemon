@@ -1366,7 +1366,6 @@ public class V2AuMover {
     case FinishAu:
       log.debug2("Finishing AU: " + auName);
       removeActiveAu(au);
-      addFinishedAu(au, auStat);
       updateReport(auStat);
       if (auStat.isAbort()) {
         setAuMigrationState(au, AuState.MigrationState.Aborted);
@@ -1386,6 +1385,7 @@ public class V2AuMover {
         }
         auStat.endPhase();
       }
+      addFinishedAu(au, auStat);
       ausLatch.countDown();
       break;
     }
