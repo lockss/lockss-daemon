@@ -93,6 +93,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   static final String STATUS_ACTIVE_LIST = "active_list";
 //   static final String STATUS_FINISHED_LIST = "finished_list";
   static final String STATUS_FINISHED_PAGE = "finished_page";
+  static final String STATUS_FINISHED_INDEX = "finished_index";
   static final String STATUS_FINISHED_COUNT = "finished_count";
   static final String STATUS_START_TIME = "start_time";
   static final String STATUS_STATUS = "status_list";
@@ -312,6 +313,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   public Map getFinishedPage(int index, int size) {
     Map stat = new HashMap();
     if (runner != null && idleError == null) {
+      stat.put(STATUS_FINISHED_INDEX, index);
       stat.put(STATUS_FINISHED_PAGE, mover.getFinishedStatusPage(index, size));
     }
     return stat;
