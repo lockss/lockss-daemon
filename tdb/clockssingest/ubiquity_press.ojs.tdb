@@ -78,8 +78,6 @@
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     attr[start_stem] = index.php/
 
-    #implicit < status ; status2 ; year ; nondefparam[volume_name] ; name ; param[year] ; hidden[proxy] >
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
   {
 
       title <
@@ -90,7 +88,6 @@
       comment[publisher] = Helsinki University Press
       param[base_url] = https://account.estetikajournal.org/
       param[journal_id] = uh-j-eteja
-      #nondefparam[base_url2] = https://estetikajournal.org/
 
       au < finished ; crawling ; 2008 ; 45 ; Estetika: The European Journal of Aesthetics Volume 2008 ; 2008 ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2009 ; 46 ; Estetika: The European Journal of Aesthetics Volume 2009 ; 2009 ; reingest5.clockss.org:8082 >
@@ -106,7 +103,7 @@
       au < finished ; crawling ; 2019 ; 56 ; Estetika: The European Journal of Aesthetics Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; >
-      #au < doNotProcess ; doNotProcess ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; >
+      #au < expected ; exists ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; >
       au < finished ; crawling ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 [superseded] ; 2023 ; >
       au < superseded ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 [superseded] ; 2024 ; >
