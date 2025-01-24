@@ -63,17 +63,17 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_start_url</string>
     <list>
-      <string>"%sindex.php/%s/gateway/clockss?year=%d", to_http(base_url2), journal_id, year</string>
-      <string>"%sindex.php/%s/gateway/clockss?year=%d", to_https(base_url2), journal_id, year</string>
+      <string>"%sindex.php/%s/gateway/clockss?year=%d", to_http(base_url), journal_id, year</string>
+      <string>"%sindex.php/%s/gateway/clockss?year=%d", to_https(base_url), journal_id, year</string>
     </list>
   </entry>
   <entry>
     <string>au_permission_url</string>
     <list>
-      <string>"%sindex.php/%s/gateway/clockss?year=%d", to_http(base_url2), journal_id, year</string>
-      <string>"%sindex.php/%s/gateway/clockss?year=%d", to_https(base_url2), journal_id, year</string>
-      <string>"%sabout/", to_http(base_url)</string>
-      <string>"%sabout/", to_https(base_url)</string>
+      <string>"%sindex.php/%s/gateway/clockss?year=%d", to_http(base_url), journal_id, year</string>
+      <string>"%sindex.php/%s/gateway/clockss?year=%d", to_https(base_url), journal_id, year</string>
+      <string>"%sabout/", to_http(base_url2)</string>
+      <string>"%sabout/", to_https(base_url2)</string>
     </list>
   </entry>
   <entry>
@@ -82,23 +82,23 @@ POSSIBILITY OF SUCH DAMAGE.
 <!--      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.jquery\.com|(fonts|ajax)\.(gstatic|googleapis)\.com)/."</string> -->
 <!--  take out jquery temporarily to see what it is that this needed -->
       <string>1,"^https?://(maxcdn\.bootstrapcdn\.com|cdnjs\.cloudflare\.com|.+\.cloudfront\.net|cdn\.mathjax\.org|(fonts|ajax|storage)\.(gstatic|googleapis)\.com)/."</string>
-      <string>1,"^https?://%s/index.php/%s/issue/view/[0-9]+$", url_host(base_url2), journal_id</string>
-      <string>1,"^https?://%s%slockss/year/%d/?$", url_host(base_url2), url_path(base_url), year</string>
-      <string>1,"^https?://%s%s.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?(/)?$", url_host(base_url2), url_path(base_url2)</string>
+      <string>1,"^https?://%s/index.php/%s/issue/view/[0-9]+$", url_host(base_url), journal_id</string>
+      <string>1,"^https?://%s%slockss/year/%d/?$", url_host(base_url), url_path(base_url2), year</string>
+      <string>1,"^https?://%s%s.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?(/)?$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://journal-assets\.ubiquity\.press/.*/_next/static/.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)$"</string>
-      <string>1,"^https?://%s%s_next/image\?url=.*%s.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)&amp;w=[0-9]+&amp;q=[0-9]+$", url_host(base_url), url_path(base_url), journal_id</string>
-      <string>1,"^https?://%s%sindex.php/%s/.*/page/page/css\?name=(stylesheet|font)", url_host(base_url2), url_path(base_url2), journal_id</string>
-      <string>1,"^https?://%s%s(en/)?articles(/abstract)?/[^/?]+/[^/?]+/?(galley/[^/?]+/download)?/?$", url_host(base_url), url_path(base_url)</string>
-      <string>1,"^https?://%s%sarticles/[^/?]+/thumbs/", url_host(base_url), url_path(base_url)</string>
-      <string>1,"^https?://%s%s(en/)?[^/?]+/volume/(%s|0)/issue/[^/]+$", url_host(base_url), url_path(base_url), volume_name</string>
-      <string>1,"^https?://%s%s[^/?]+(/volume/[^/?]+)?/issue/[^/]+/", url_host(base_url2), url_path(base_url2)</string>
-      <string>1,"^https?://%s%sarticles/[^/?]+/files/[^/?]+\.(xml|pdf)$",url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%s_next/image\?url=.*%s.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)&amp;w=[0-9]+&amp;q=[0-9]+$", url_host(base_url2), url_path(base_url2), journal_id</string>
+      <string>1,"^https?://%s%sindex.php/%s/.*/page/page/css\?name=(stylesheet|font)", url_host(base_url), url_path(base_url), journal_id</string>
+      <string>1,"^https?://%s%s(en/)?articles(/abstract)?/[^/?]+/[^/?]+/?(galley/[^/?]+/download)?/?$", url_host(base_url2), url_path(base_url2)</string>
+      <string>1,"^https?://%s%sarticles/[^/?]+/thumbs/", url_host(base_url2), url_path(base_url2)</string>
+      <string>1,"^https?://%s%s(en/)?[^/?]+/volume/(%s|0)/issue/[^/]+$", url_host(base_url2), url_path(base_url2), volume_name</string>
+      <string>1,"^https?://%s%s[^/?]+(/volume/[^/?]+)?/issue/[^/]+/", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%sarticles/[^/?]+/files/[^/?]+\.(xml|pdf)$",url_host(base_url2), url_path(base_url2)</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
       <list>
-        <string>"^https?://%s%sarticles/[^/?]+/files/[^/?]+\.(xml|pdf)$",url_host(base_url), url_path(base_url)</string>
+        <string>"^https?://%s%sarticles/[^/?]+/files/[^/?]+\.(xml|pdf)$",url_host(base_url2), url_path(base_url2)</string>
       </list>
   </entry>
   <entry>
