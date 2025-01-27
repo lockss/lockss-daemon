@@ -73,8 +73,8 @@
     au < doNotProcess ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 >
     au < doNotProcess ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 >
     au < released ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 >
-    au < exists ; 2022 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 18 ; 18 >
-    au < exists ; 2023 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 19 ; 19 >
+    au < manifest ; 2022 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 18 ; 18 >
+    au < manifest ; 2023 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 19 ; 19 >
 
   }
 
@@ -315,7 +315,7 @@
     au < doNotProcess ; 2019 ; Comma Volume 2019 ; 2019 >
     au < doNotProcess ; 2020 ; Comma Volume 2020 ; 2020 >
     au < released ; 2021 ; Comma Volume 2021 ; 2021 >
-    au < exists ; 2022 ; Comma Volume 2022 ; 2022 >
+    au < manifest ; 2022 ; Comma Volume 2022 ; 2022 >
 
   }
 
@@ -820,10 +820,10 @@
     au < doNotProcess ; 2017 ; Hunter Gatherer Research Volume 3 ; 3 >
     au < doNotProcess ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 >
     au < released ; 2019 ; Hunter Gatherer Research Volume 5 ; 5 >
-    au < exists ; 2020 ; Hunter Gatherer Research Volume 6 ; 6 >
-    au < exists ; 2021 ; Hunter Gatherer Research Volume 7 ; 7 >
-    au < exists ; 2022 ; Hunter Gatherer Research Volume 8 ; 8 >
-    au < exists ; 2023 ; Hunter Gatherer Research Volume 9 ; 9 >
+    au < manifest ; 2020 ; Hunter Gatherer Research Volume 6 ; 6 >
+    au < manifest ; 2021 ; Hunter Gatherer Research Volume 7 ; 7 >
+    au < manifest ; 2022 ; Hunter Gatherer Research Volume 8 ; 8 >
+    au < manifest ; 2023 ; Hunter Gatherer Research Volume 9 ; 9 >
 
   }
 
@@ -1029,9 +1029,9 @@
     param[journal_id] = jrns
     #journal_num = 115
 
-    au < exists ; 2019 ; Journal of Romanian Studies Volume 1 ; 1 >
-    au < exists ; 2020 ; Journal of Romanian Studies Volume 2 ; 2 >
-    au < exists ; 2021 ; Journal of Romanian Studies Volume 3 ; 3 >
+    au < manifest ; 2019 ; Journal of Romanian Studies Volume 1 ; 1 >
+    au < manifest ; 2020 ; Journal of Romanian Studies Volume 2 ; 2 >
+    au < manifest ; 2021 ; Journal of Romanian Studies Volume 3 ; 3 >
     au < released ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 >
     au < released ; 2023 ; Journal of Romanian Studies Volume 5 ; 5 >
     au < manifest ; 2024 ; Journal of Romanian Studies Volume 6 ; 6 >
@@ -2121,94 +2121,94 @@
 
     param[journal_id] = revista
 
-    au < exists ; 1939 ; Revista Iberoamericana Volume 1 ; 1 >
-    au < exists ; 1940 ; Revista Iberoamericana Volume 2 ; 2 >
-    au < exists ; 1941 ; Revista Iberoamericana Volume 3 ; 3 >
-    au < exists ; 1941-1942 ; Revista Iberoamericana Volume 4 ; 4 >
-    au < exists ; 1942 ; Revista Iberoamericana Volume 5 ; 5 >
-    au < exists ; 1943 ; Revista Iberoamericana Volume 6 ; 6 >
-    au < exists ; 1943-1944 ; Revista Iberoamericana Volume 7 ; 7 >
-    au < exists ; 1944 ; Revista Iberoamericana Volume 8 ; 8 >
-    au < exists ; 1945 ; Revista Iberoamericana Volume 9 ; 9 >
-    au < exists ; 1945 ; Revista Iberoamericana Volume 10 ; 10 >
-    au < exists ; 1946 ; Revista Iberoamericana Volume 11 ; 11 >
-    au < exists ; 1947 ; Revista Iberoamericana Volume 12 ; 12 >
-    au < exists ; 1948 ; Revista Iberoamericana Volume 13 ; 13 >
-    au < exists ; 1948 ; Revista Iberoamericana Volume 14 ; 14 >
-    au < exists ; 1949-1950 ; Revista Iberoamericana Volume 15 ; 15 >
-    au < exists ; 1951 ; Revista Iberoamericana Volume 16 ; 16 >
-    au < exists ; 1951-1952 ; Revista Iberoamericana Volume 17 ; 17 >
-    au < exists ; 1952-1953 ; Revista Iberoamericana Volume 18 ; 18 >
-    au < exists ; 1953-1954 ; Revista Iberoamericana Volume 19 ; 19 >
-    au < exists ; 1955 ; Revista Iberoamericana Volume 20 ; 20 >
-    au < exists ; 1956 ; Revista Iberoamericana Volume 21 ; 21 >
-    au < exists ; 1957 ; Revista Iberoamericana Volume 22 ; 22 >
-    au < exists ; 1958 ; Revista Iberoamericana Volume 23 ; 23 >
-    au < exists ; 1959 ; Revista Iberoamericana Volume 24 ; 24 >
-    au < exists ; 1960 ; Revista Iberoamericana Volume 25 ; 25 >
-    au < exists ; 1961 ; Revista Iberoamericana Volume 26 ; 26 >
-    au < exists ; 1961 ; Revista Iberoamericana Volume 27 ; 27 >
-    au < exists ; 1962 ; Revista Iberoamericana Volume 28 ; 28 >
-    au < exists ; 1963 ; Revista Iberoamericana Volume 29 ; 29 >
-    au < exists ; 1964 ; Revista Iberoamericana Volume 30 ; 30 >
-    au < exists ; 1965 ; Revista Iberoamericana Volume 31 ; 31 >
-    au < exists ; 1966 ; Revista Iberoamericana Volume 32 ; 32 >
-    au < exists ; 1967 ; Revista Iberoamericana Volume 33 ; 33 >
-    au < exists ; 1968 ; Revista Iberoamericana Volume 34 ; 34 >
-    au < exists ; 1969 ; Revista Iberoamericana Volume 35 ; 35 >
-    au < exists ; 1970 ; Revista Iberoamericana Volume 36 ; 36 >
-    au < exists ; 1971 ; Revista Iberoamericana Volume 37 ; 37 >
-    au < exists ; 1972 ; Revista Iberoamericana Volume 38 ; 38 >
-    au < exists ; 1973 ; Revista Iberoamericana Volume 39 ; 39 >
-    au < exists ; 1974 ; Revista Iberoamericana Volume 40 ; 40 >
-    au < exists ; 1975 ; Revista Iberoamericana Volume 41 ; 41 >
-    au < exists ; 1976 ; Revista Iberoamericana Volume 42 ; 42 >
-    au < exists ; 1977 ; Revista Iberoamericana Volume 43 ; 43 >
-    au < exists ; 1978 ; Revista Iberoamericana Volume 44 ; 44 >
-    au < exists ; 1979 ; Revista Iberoamericana Volume 45 ; 45 >
-    au < exists ; 1980 ; Revista Iberoamericana Volume 46 ; 46 >
-    au < exists ; 1981 ; Revista Iberoamericana Volume 47 ; 47 >
-    au < exists ; 1982 ; Revista Iberoamericana Volume 48 ; 48 >
-    au < exists ; 1983 ; Revista Iberoamericana Volume 49 ; 49 >
-    au < exists ; 1984 ; Revista Iberoamericana Volume 50 ; 50 >
-    au < exists ; 1985 ; Revista Iberoamericana Volume 51 ; 51 >
-    au < exists ; 1986 ; Revista Iberoamericana Volume 52 ; 52 >
-    au < exists ; 1987 ; Revista Iberoamericana Volume 53 ; 53 >
-    au < exists ; 1988 ; Revista Iberoamericana Volume 54 ; 54 >
-    au < exists ; 1989 ; Revista Iberoamericana Volume 55 ; 55 >
-    au < exists ; 1990 ; Revista Iberoamericana Volume 56 ; 56 >
-    au < exists ; 1991 ; Revista Iberoamericana Volume 57 ; 57 >
-    au < exists ; 1992 ; Revista Iberoamericana Volume 58 ; 58 >
-    au < exists ; 1993 ; Revista Iberoamericana Volume 59 ; 59 >
-    au < exists ; 1994 ; Revista Iberoamericana Volume 60 ; 60 >
-    au < exists ; 1995 ; Revista Iberoamericana Volume 61 ; 61 >
-    au < exists ; 1996 ; Revista Iberoamericana Volume 62 ; 62 >
-    au < exists ; 1997 ; Revista Iberoamericana Volume 63 ; 63 >
-    au < exists ; 1998 ; Revista Iberoamericana Volume 64 ; 64 >
-    au < exists ; 1999 ; Revista Iberoamericana Volume 65 ; 65 >
-    au < exists ; 2000 ; Revista Iberoamericana Volume 66 ; 66 >
-    au < exists ; 2001 ; Revista Iberoamericana Volume 67 ; 67 >
-    au < exists ; 2002 ; Revista Iberoamericana Volume 68 ; 68 >
-    au < exists ; 2003 ; Revista Iberoamericana Volume 69 ; 69 >
-    au < exists ; 2004 ; Revista Iberoamericana Volume 70 ; 70 >
-    au < exists ; 2005 ; Revista Iberoamericana Volume 71 ; 71 >
-    au < exists ; 2006 ; Revista Iberoamericana Volume 72 ; 72 >
-    au < exists ; 2007 ; Revista Iberoamericana Volume 73 ; 73 >
-    au < exists ; 2008 ; Revista Iberoamericana Volume 74 ; 74 >
-    au < exists ; 2009 ; Revista Iberoamericana Volume 75 ; 75 >
-    au < exists ; 2010 ; Revista Iberoamericana Volume 76 ; 76 >
-    au < exists ; 2011 ; Revista Iberoamericana Volume 77 ; 77 >
-    au < exists ; 2012 ; Revista Iberoamericana Volume 78 ; 78 >
-    au < exists ; 2013 ; Revista Iberoamericana Volume 79 ; 79 >
-    au < exists ; 2014 ; Revista Iberoamericana Volume 80 ; 80 >
-    au < exists ; 2015 ; Revista Iberoamericana Volume 81 ; 81 >
-    au < exists ; 2016 ; Revista Iberoamericana Volume 82 ; 82 >
-    au < exists ; 2017 ; Revista Iberoamericana Volume 83 ; 83 >
-    au < exists ; 2018 ; Revista Iberoamericana Volume 84 ; 84 >
-    au < exists ; 2019 ; Revista Iberoamericana Volume 85 ; 85 >
-    au < exists ; 2020 ; Revista Iberoamericana Volume 86 ; 86 >
-    au < exists ; 2021 ; Revista Iberoamericana Volume 87 ; 87 >
-    au < exists ; 2022 ; Revista Iberoamericana Volume 88 ; 88 >
+    au < manifest ; 1939 ; Revista Iberoamericana Volume 1 ; 1 >
+    au < manifest ; 1940 ; Revista Iberoamericana Volume 2 ; 2 >
+    au < manifest ; 1941 ; Revista Iberoamericana Volume 3 ; 3 >
+    au < manifest ; 1941-1942 ; Revista Iberoamericana Volume 4 ; 4 >
+    au < manifest ; 1942 ; Revista Iberoamericana Volume 5 ; 5 >
+    au < manifest ; 1943 ; Revista Iberoamericana Volume 6 ; 6 >
+    au < manifest ; 1943-1944 ; Revista Iberoamericana Volume 7 ; 7 >
+    au < manifest ; 1944 ; Revista Iberoamericana Volume 8 ; 8 >
+    au < manifest ; 1945 ; Revista Iberoamericana Volume 9 ; 9 >
+    au < manifest ; 1945 ; Revista Iberoamericana Volume 10 ; 10 >
+    au < manifest ; 1946 ; Revista Iberoamericana Volume 11 ; 11 >
+    au < manifest ; 1947 ; Revista Iberoamericana Volume 12 ; 12 >
+    au < manifest ; 1948 ; Revista Iberoamericana Volume 13 ; 13 >
+    au < manifest ; 1948 ; Revista Iberoamericana Volume 14 ; 14 >
+    au < manifest ; 1949-1950 ; Revista Iberoamericana Volume 15 ; 15 >
+    au < manifest ; 1951 ; Revista Iberoamericana Volume 16 ; 16 >
+    au < manifest ; 1951-1952 ; Revista Iberoamericana Volume 17 ; 17 >
+    au < manifest ; 1952-1953 ; Revista Iberoamericana Volume 18 ; 18 >
+    au < manifest ; 1953-1954 ; Revista Iberoamericana Volume 19 ; 19 >
+    au < manifest ; 1955 ; Revista Iberoamericana Volume 20 ; 20 >
+    au < manifest ; 1956 ; Revista Iberoamericana Volume 21 ; 21 >
+    au < manifest ; 1957 ; Revista Iberoamericana Volume 22 ; 22 >
+    au < manifest ; 1958 ; Revista Iberoamericana Volume 23 ; 23 >
+    au < manifest ; 1959 ; Revista Iberoamericana Volume 24 ; 24 >
+    au < manifest ; 1960 ; Revista Iberoamericana Volume 25 ; 25 >
+    au < manifest ; 1961 ; Revista Iberoamericana Volume 26 ; 26 >
+    au < manifest ; 1961 ; Revista Iberoamericana Volume 27 ; 27 >
+    au < manifest ; 1962 ; Revista Iberoamericana Volume 28 ; 28 >
+    au < manifest ; 1963 ; Revista Iberoamericana Volume 29 ; 29 >
+    au < manifest ; 1964 ; Revista Iberoamericana Volume 30 ; 30 >
+    au < manifest ; 1965 ; Revista Iberoamericana Volume 31 ; 31 >
+    au < manifest ; 1966 ; Revista Iberoamericana Volume 32 ; 32 >
+    au < manifest ; 1967 ; Revista Iberoamericana Volume 33 ; 33 >
+    au < manifest ; 1968 ; Revista Iberoamericana Volume 34 ; 34 >
+    au < manifest ; 1969 ; Revista Iberoamericana Volume 35 ; 35 >
+    au < manifest ; 1970 ; Revista Iberoamericana Volume 36 ; 36 >
+    au < manifest ; 1971 ; Revista Iberoamericana Volume 37 ; 37 >
+    au < manifest ; 1972 ; Revista Iberoamericana Volume 38 ; 38 >
+    au < manifest ; 1973 ; Revista Iberoamericana Volume 39 ; 39 >
+    au < manifest ; 1974 ; Revista Iberoamericana Volume 40 ; 40 >
+    au < manifest ; 1975 ; Revista Iberoamericana Volume 41 ; 41 >
+    au < manifest ; 1976 ; Revista Iberoamericana Volume 42 ; 42 >
+    au < manifest ; 1977 ; Revista Iberoamericana Volume 43 ; 43 >
+    au < manifest ; 1978 ; Revista Iberoamericana Volume 44 ; 44 >
+    au < manifest ; 1979 ; Revista Iberoamericana Volume 45 ; 45 >
+    au < manifest ; 1980 ; Revista Iberoamericana Volume 46 ; 46 >
+    au < manifest ; 1981 ; Revista Iberoamericana Volume 47 ; 47 >
+    au < manifest ; 1982 ; Revista Iberoamericana Volume 48 ; 48 >
+    au < manifest ; 1983 ; Revista Iberoamericana Volume 49 ; 49 >
+    au < manifest ; 1984 ; Revista Iberoamericana Volume 50 ; 50 >
+    au < manifest ; 1985 ; Revista Iberoamericana Volume 51 ; 51 >
+    au < manifest ; 1986 ; Revista Iberoamericana Volume 52 ; 52 >
+    au < manifest ; 1987 ; Revista Iberoamericana Volume 53 ; 53 >
+    au < manifest ; 1988 ; Revista Iberoamericana Volume 54 ; 54 >
+    au < manifest ; 1989 ; Revista Iberoamericana Volume 55 ; 55 >
+    au < manifest ; 1990 ; Revista Iberoamericana Volume 56 ; 56 >
+    au < manifest ; 1991 ; Revista Iberoamericana Volume 57 ; 57 >
+    au < manifest ; 1992 ; Revista Iberoamericana Volume 58 ; 58 >
+    au < manifest ; 1993 ; Revista Iberoamericana Volume 59 ; 59 >
+    au < manifest ; 1994 ; Revista Iberoamericana Volume 60 ; 60 >
+    au < manifest ; 1995 ; Revista Iberoamericana Volume 61 ; 61 >
+    au < manifest ; 1996 ; Revista Iberoamericana Volume 62 ; 62 >
+    au < manifest ; 1997 ; Revista Iberoamericana Volume 63 ; 63 >
+    au < manifest ; 1998 ; Revista Iberoamericana Volume 64 ; 64 >
+    au < manifest ; 1999 ; Revista Iberoamericana Volume 65 ; 65 >
+    au < manifest ; 2000 ; Revista Iberoamericana Volume 66 ; 66 >
+    au < manifest ; 2001 ; Revista Iberoamericana Volume 67 ; 67 >
+    au < manifest ; 2002 ; Revista Iberoamericana Volume 68 ; 68 >
+    au < manifest ; 2003 ; Revista Iberoamericana Volume 69 ; 69 >
+    au < manifest ; 2004 ; Revista Iberoamericana Volume 70 ; 70 >
+    au < manifest ; 2005 ; Revista Iberoamericana Volume 71 ; 71 >
+    au < manifest ; 2006 ; Revista Iberoamericana Volume 72 ; 72 >
+    au < manifest ; 2007 ; Revista Iberoamericana Volume 73 ; 73 >
+    au < manifest ; 2008 ; Revista Iberoamericana Volume 74 ; 74 >
+    au < manifest ; 2009 ; Revista Iberoamericana Volume 75 ; 75 >
+    au < manifest ; 2010 ; Revista Iberoamericana Volume 76 ; 76 >
+    au < manifest ; 2011 ; Revista Iberoamericana Volume 77 ; 77 >
+    au < manifest ; 2012 ; Revista Iberoamericana Volume 78 ; 78 >
+    au < manifest ; 2013 ; Revista Iberoamericana Volume 79 ; 79 >
+    au < manifest ; 2014 ; Revista Iberoamericana Volume 80 ; 80 >
+    au < manifest ; 2015 ; Revista Iberoamericana Volume 81 ; 81 >
+    au < manifest ; 2016 ; Revista Iberoamericana Volume 82 ; 82 >
+    au < manifest ; 2017 ; Revista Iberoamericana Volume 83 ; 83 >
+    au < manifest ; 2018 ; Revista Iberoamericana Volume 84 ; 84 >
+    au < manifest ; 2019 ; Revista Iberoamericana Volume 85 ; 85 >
+    au < manifest ; 2020 ; Revista Iberoamericana Volume 86 ; 86 >
+    au < manifest ; 2021 ; Revista Iberoamericana Volume 87 ; 87 >
+    au < manifest ; 2022 ; Revista Iberoamericana Volume 88 ; 88 >
     au < released ; 2023 ; Revista Iberoamericana Volume 89 ; 89 >
     au < manifest ; 2024 ; Revista Iberoamericana Volume 90 ; 90 >
 
@@ -2224,37 +2224,37 @@
 
     param[journal_id] = blr
 
-    au < exists ; 1914-1916 ; The Bodleian Library Record Volume I ; I >
-    au < exists ; 1917-1919 ; The Bodleian Library Record Volume II ; II >
-    au < exists ; 1920-1922 ; The Bodleian Library Record Volume III ; III >
-    au < exists ; 1923-1925 ; The Bodleian Library Record Volume IV ; IV >
-    au < exists ; 1926-1928 ; The Bodleian Library Record Volume V ; V >
-    au < exists ; 1929-1931 ; The Bodleian Library Record Volume VI ; VI >
-    au < exists ; 1932-1934 ; The Bodleian Library Record Volume VII ; VII >
-    au < exists ; 1935-1937 ; The Bodleian Library Record Volume VIII ; VIII >
-    au < exists ; 1938-1941 ; The Bodleian Library Record Volume 1 ; 1 >
-    au < exists ; 1941-1949 ; The Bodleian Library Record Volume 2 ; 2 >
-    au < exists ; 1950-1951 ; The Bodleian Library Record Volume 3 ; 3 >
-    au < exists ; 1952-1953 ; The Bodleian Library Record Volume 4 ; 4 >
-    au < exists ; 1954-1956 ; The Bodleian Library Record Volume 5 ; 5 >
-    au < exists ; 1957-1961 ; The Bodleian Library Record Volume 6 ; 6 >
-    au < exists ; 1962-1967 ; The Bodleian Library Record Volume 7 ; 7 >
-    au < exists ; 1967-1972 ; The Bodleian Library Record Volume 8 ; 8 >
-    au < exists ; 1973-1978 ; The Bodleian Library Record Volume 9 ; 9 >
-    au < exists ; 1978-1982 ; The Bodleian Library Record Volume 10 ; 10 >
-    au < exists ; 1982-1985 ; The Bodleian Library Record Volume 11 ; 11 >
-    au < exists ; 1985-1988 ; The Bodleian Library Record Volume 12 ; 12 >
-    au < exists ; 1988-1991 ; The Bodleian Library Record Volume 13 ; 13 >
-    au < exists ; 1991-1994 ; The Bodleian Library Record Volume 14 ; 14 >
-    au < exists ; 1994-1996 ; The Bodleian Library Record Volume 15 ; 15 >
-    au < exists ; 1997-1999 ; The Bodleian Library Record Volume 16 ; 16 >
-    au < exists ; 2000-2002 ; The Bodleian Library Record Volume 17 ; 17 >
-    au < exists ; 2003-2005 ; The Bodleian Library Record Volume 18 ; 18 >
-    au < exists ; 2006 ; The Bodleian Library Record Volume 19 ; 19 >
-    au < exists ; 2007 ; The Bodleian Library Record Volume 20 ; 20 >
-    au < exists ; 2008 ; The Bodleian Library Record Volume 21 ; 21 >
-    au < exists ; 2009 ; The Bodleian Library Record Volume 22 ; 22 >
-    au < exists ; 2010 ; The Bodleian Library Record Volume 23 ; 23 >
+    au < manifest ; 1914-1916 ; The Bodleian Library Record Volume I ; I >
+    au < manifest ; 1917-1919 ; The Bodleian Library Record Volume II ; II >
+    au < manifest ; 1920-1922 ; The Bodleian Library Record Volume III ; III >
+    au < manifest ; 1923-1925 ; The Bodleian Library Record Volume IV ; IV >
+    au < manifest ; 1926-1928 ; The Bodleian Library Record Volume V ; V >
+    au < manifest ; 1929-1931 ; The Bodleian Library Record Volume VI ; VI >
+    au < manifest ; 1932-1934 ; The Bodleian Library Record Volume VII ; VII >
+    au < manifest ; 1935-1937 ; The Bodleian Library Record Volume VIII ; VIII >
+    au < manifest ; 1938-1941 ; The Bodleian Library Record Volume 1 ; 1 >
+    au < manifest ; 1941-1949 ; The Bodleian Library Record Volume 2 ; 2 >
+    au < manifest ; 1950-1951 ; The Bodleian Library Record Volume 3 ; 3 >
+    au < manifest ; 1952-1953 ; The Bodleian Library Record Volume 4 ; 4 >
+    au < manifest ; 1954-1956 ; The Bodleian Library Record Volume 5 ; 5 >
+    au < manifest ; 1957-1961 ; The Bodleian Library Record Volume 6 ; 6 >
+    au < manifest ; 1962-1967 ; The Bodleian Library Record Volume 7 ; 7 >
+    au < manifest ; 1967-1972 ; The Bodleian Library Record Volume 8 ; 8 >
+    au < manifest ; 1973-1978 ; The Bodleian Library Record Volume 9 ; 9 >
+    au < manifest ; 1978-1982 ; The Bodleian Library Record Volume 10 ; 10 >
+    au < manifest ; 1982-1985 ; The Bodleian Library Record Volume 11 ; 11 >
+    au < manifest ; 1985-1988 ; The Bodleian Library Record Volume 12 ; 12 >
+    au < manifest ; 1988-1991 ; The Bodleian Library Record Volume 13 ; 13 >
+    au < manifest ; 1991-1994 ; The Bodleian Library Record Volume 14 ; 14 >
+    au < manifest ; 1994-1996 ; The Bodleian Library Record Volume 15 ; 15 >
+    au < manifest ; 1997-1999 ; The Bodleian Library Record Volume 16 ; 16 >
+    au < manifest ; 2000-2002 ; The Bodleian Library Record Volume 17 ; 17 >
+    au < manifest ; 2003-2005 ; The Bodleian Library Record Volume 18 ; 18 >
+    au < manifest ; 2006 ; The Bodleian Library Record Volume 19 ; 19 >
+    au < manifest ; 2007 ; The Bodleian Library Record Volume 20 ; 20 >
+    au < manifest ; 2008 ; The Bodleian Library Record Volume 21 ; 21 >
+    au < manifest ; 2009 ; The Bodleian Library Record Volume 22 ; 22 >
+    au < manifest ; 2010 ; The Bodleian Library Record Volume 23 ; 23 >
     au < released ; 2011 ; The Bodleian Library Record Volume 24 ; 24 >
     au < released ; 2012 ; The Bodleian Library Record Volume 25 ; 25 >
     au < released ; 2013 ; The Bodleian Library Record Volume 26 ; 26 >
@@ -2289,7 +2289,7 @@
     au < released ; 2020 ; The Shandean Volume 31 ; 31 >
     au < released ; 2021 ; The Shandean Volume 32 ; 32 >
     au < released ; 2022 ; The Shandean Volume 33 ; 33 >
-    au < exists ; 2024 ; The Shandean Volume 34 ; 34 >
+    au < manifest ; 2024 ; The Shandean Volume 34 ; 34 >
 
   }
   
@@ -2303,84 +2303,84 @@
 
     param[journal_id] = fs
 
-    au < exists ; 1947 ; French Studies Volume 1 ; 1 >
-    au < exists ; 1948 ; French Studies Volume 2 ; 2 >
-    au < exists ; 1949 ; French Studies Volume 3 ; 3 >
-    au < exists ; 1950 ; French Studies Volume 4 ; 4 >
-    au < exists ; 1951 ; French Studies Volume 5 ; 5 >
-    au < exists ; 1952 ; French Studies Volume VI ; VI >
-    au < exists ; 1953 ; French Studies Volume 7 ; 7 >
-    au < exists ; 1954 ; French Studies Volume 8 ; 8 >
-    au < exists ; 1955 ; French Studies Volume 9 ; 9 >
-    au < exists ; 1956 ; French Studies Volume 10 ; 10 >
-    au < exists ; 1957 ; French Studies Volume 11 ; 11 >
-    au < exists ; 1958 ; French Studies Volume 12 ; 12 >
-    au < exists ; 1959 ; French Studies Volume 13 ; 13 >
-    au < exists ; 1960 ; French Studies Volume 14 ; 14 >
-    au < exists ; 1961 ; French Studies Volume 15 ; 15 >
-    au < exists ; 1962 ; French Studies Volume 16 ; 16 >
-    au < exists ; 1963 ; French Studies Volume 17 ; 17 >
-    au < exists ; 1964 ; French Studies Volume 18 ; 18 >
-    au < exists ; 1965 ; French Studies Volume 19 ; 19 >
-    au < exists ; 1966 ; French Studies Volume 20 ; 20 >
-    au < exists ; 1967 ; French Studies Volume 21 ; 21 >
-    au < exists ; 1968 ; French Studies Volume 22 ; 22 >
-    au < exists ; 1969 ; French Studies Volume 23 ; 23 >
-    au < exists ; 1970 ; French Studies Volume 24 ; 24 >
-    au < exists ; 1971 ; French Studies Volume 25 ; 25 >
-    au < exists ; 1972 ; French Studies Volume 26 ; 26 >
-    au < exists ; 1973 ; French Studies Volume 27 ; 27 >
-    au < exists ; 1974 ; French Studies Volume 28 ; 28 >
-    au < exists ; 1975 ; French Studies Volume 29 ; 29 >
-    au < exists ; 1976 ; French Studies Volume 30 ; 30 >
-    au < exists ; 1977 ; French Studies Volume 31 ; 31 >
-    au < exists ; 1978 ; French Studies Volume 32 ; 32 >
-    au < exists ; 1979 ; French Studies Volume 33 ; 33 >
-    au < exists ; 1980 ; French Studies Volume 34 ; 34 >
-    au < exists ; 1981 ; French Studies Volume 35 ; 35 >
-    au < exists ; 1982 ; French Studies Volume 36 ; 36 >
-    au < exists ; 1983 ; French Studies Volume 37 ; 37 >
-    au < exists ; 1984 ; French Studies Volume 38 ; 38 >
-    au < exists ; 1985 ; French Studies Volume 39 ; 39 >
-    au < exists ; 1986 ; French Studies Volume 40 ; 40 >
-    au < exists ; 1987 ; French Studies Volume 41 ; 41 >
-    au < exists ; 1988 ; French Studies Volume 42 ; 42 >
-    au < exists ; 1989 ; French Studies Volume 43 ; 43 >
-    au < exists ; 1990 ; French Studies Volume 44 ; 44 >
-    au < exists ; 1991 ; French Studies Volume 45 ; 45 >
-    au < exists ; 1992 ; French Studies Volume 46 ; 46 >
-    au < exists ; 1993 ; French Studies Volume 47 ; 47 >
-    au < exists ; 1994 ; French Studies Volume 48 ; 48 >
-    au < exists ; 1995 ; French Studies Volume 49 ; 49 >
-    au < exists ; 1996 ; French Studies Volume 50 ; 50 >
-    au < exists ; 1997 ; French Studies Volume 51 ; 51 >
-    au < exists ; 1998 ; French Studies Volume 52 ; 52 >
-    au < exists ; 1999 ; French Studies Volume 53 ; 53 >
-    au < exists ; 2000 ; French Studies Volume 54 ; 54 >
-    au < exists ; 2001 ; French Studies Volume 55 ; 55 >
-    au < exists ; 2002 ; French Studies Volume 56 ; 56 >
-    au < exists ; 2003 ; French Studies Volume 57 ; 57 >
-    au < exists ; 2004 ; French Studies Volume 58 ; 58 >
-    au < exists ; 2005 ; French Studies Volume 59 ; 59 >
-    au < exists ; 2006 ; French Studies Volume 60 ; 60 >
-    au < exists ; 2007 ; French Studies Volume 61 ; 61 >
-    au < exists ; 2008 ; French Studies Volume 62 ; 62 >
-    au < exists ; 2009 ; French Studies Volume 63 ; 63 >
-    au < exists ; 2010 ; French Studies Volume 64 ; 64 >
-    au < exists ; 2011 ; French Studies Volume 65 ; 65 >
-    au < exists ; 2012 ; French Studies Volume 66 ; 66 >
-    au < exists ; 2013 ; French Studies Volume 67 ; 67 >
-    au < exists ; 2014 ; French Studies Volume 68 ; 68 >
-    au < exists ; 2015 ; French Studies Volume 69 ; 69 >
-    au < exists ; 2016 ; French Studies Volume 70 ; 70 >
-    au < exists ; 2017 ; French Studies Volume 71 ; 71 >
-    au < exists ; 2018 ; French Studies Volume 72 ; 72 >
-    au < exists ; 2019 ; French Studies Volume 73 ; 73 >
-    au < exists ; 2020 ; French Studies Volume 74 ; 74 >
-    au < exists ; 2021 ; French Studies Volume 75 ; 75 >
-    au < exists ; 2022 ; French Studies Volume 76 ; 76 >
-    au < exists ; 2023 ; French Studies Volume 77 ; 77 >
-    au < exists ; 2024 ; French Studies Volume 78 ; 78 >
+    au < manifest ; 1947 ; French Studies Volume 1 ; 1 >
+    au < manifest ; 1948 ; French Studies Volume 2 ; 2 >
+    au < manifest ; 1949 ; French Studies Volume 3 ; 3 >
+    au < manifest ; 1950 ; French Studies Volume 4 ; 4 >
+    au < manifest ; 1951 ; French Studies Volume 5 ; 5 >
+    au < manifest ; 1952 ; French Studies Volume VI ; VI >
+    au < manifest ; 1953 ; French Studies Volume 7 ; 7 >
+    au < manifest ; 1954 ; French Studies Volume 8 ; 8 >
+    au < manifest ; 1955 ; French Studies Volume 9 ; 9 >
+    au < manifest ; 1956 ; French Studies Volume 10 ; 10 >
+    au < manifest ; 1957 ; French Studies Volume 11 ; 11 >
+    au < manifest ; 1958 ; French Studies Volume 12 ; 12 >
+    au < manifest ; 1959 ; French Studies Volume 13 ; 13 >
+    au < manifest ; 1960 ; French Studies Volume 14 ; 14 >
+    au < manifest ; 1961 ; French Studies Volume 15 ; 15 >
+    au < manifest ; 1962 ; French Studies Volume 16 ; 16 >
+    au < manifest ; 1963 ; French Studies Volume 17 ; 17 >
+    au < manifest ; 1964 ; French Studies Volume 18 ; 18 >
+    au < manifest ; 1965 ; French Studies Volume 19 ; 19 >
+    au < manifest ; 1966 ; French Studies Volume 20 ; 20 >
+    au < manifest ; 1967 ; French Studies Volume 21 ; 21 >
+    au < manifest ; 1968 ; French Studies Volume 22 ; 22 >
+    au < manifest ; 1969 ; French Studies Volume 23 ; 23 >
+    au < manifest ; 1970 ; French Studies Volume 24 ; 24 >
+    au < manifest ; 1971 ; French Studies Volume 25 ; 25 >
+    au < manifest ; 1972 ; French Studies Volume 26 ; 26 >
+    au < manifest ; 1973 ; French Studies Volume 27 ; 27 >
+    au < manifest ; 1974 ; French Studies Volume 28 ; 28 >
+    au < manifest ; 1975 ; French Studies Volume 29 ; 29 >
+    au < manifest ; 1976 ; French Studies Volume 30 ; 30 >
+    au < manifest ; 1977 ; French Studies Volume 31 ; 31 >
+    au < manifest ; 1978 ; French Studies Volume 32 ; 32 >
+    au < manifest ; 1979 ; French Studies Volume 33 ; 33 >
+    au < manifest ; 1980 ; French Studies Volume 34 ; 34 >
+    au < manifest ; 1981 ; French Studies Volume 35 ; 35 >
+    au < manifest ; 1982 ; French Studies Volume 36 ; 36 >
+    au < manifest ; 1983 ; French Studies Volume 37 ; 37 >
+    au < manifest ; 1984 ; French Studies Volume 38 ; 38 >
+    au < manifest ; 1985 ; French Studies Volume 39 ; 39 >
+    au < manifest ; 1986 ; French Studies Volume 40 ; 40 >
+    au < manifest ; 1987 ; French Studies Volume 41 ; 41 >
+    au < manifest ; 1988 ; French Studies Volume 42 ; 42 >
+    au < manifest ; 1989 ; French Studies Volume 43 ; 43 >
+    au < manifest ; 1990 ; French Studies Volume 44 ; 44 >
+    au < manifest ; 1991 ; French Studies Volume 45 ; 45 >
+    au < manifest ; 1992 ; French Studies Volume 46 ; 46 >
+    au < manifest ; 1993 ; French Studies Volume 47 ; 47 >
+    au < manifest ; 1994 ; French Studies Volume 48 ; 48 >
+    au < manifest ; 1995 ; French Studies Volume 49 ; 49 >
+    au < manifest ; 1996 ; French Studies Volume 50 ; 50 >
+    au < manifest ; 1997 ; French Studies Volume 51 ; 51 >
+    au < manifest ; 1998 ; French Studies Volume 52 ; 52 >
+    au < manifest ; 1999 ; French Studies Volume 53 ; 53 >
+    au < manifest ; 2000 ; French Studies Volume 54 ; 54 >
+    au < manifest ; 2001 ; French Studies Volume 55 ; 55 >
+    au < manifest ; 2002 ; French Studies Volume 56 ; 56 >
+    au < manifest ; 2003 ; French Studies Volume 57 ; 57 >
+    au < manifest ; 2004 ; French Studies Volume 58 ; 58 >
+    au < manifest ; 2005 ; French Studies Volume 59 ; 59 >
+    au < manifest ; 2006 ; French Studies Volume 60 ; 60 >
+    au < manifest ; 2007 ; French Studies Volume 61 ; 61 >
+    au < manifest ; 2008 ; French Studies Volume 62 ; 62 >
+    au < manifest ; 2009 ; French Studies Volume 63 ; 63 >
+    au < manifest ; 2010 ; French Studies Volume 64 ; 64 >
+    au < manifest ; 2011 ; French Studies Volume 65 ; 65 >
+    au < manifest ; 2012 ; French Studies Volume 66 ; 66 >
+    au < manifest ; 2013 ; French Studies Volume 67 ; 67 >
+    au < manifest ; 2014 ; French Studies Volume 68 ; 68 >
+    au < manifest ; 2015 ; French Studies Volume 69 ; 69 >
+    au < manifest ; 2016 ; French Studies Volume 70 ; 70 >
+    au < manifest ; 2017 ; French Studies Volume 71 ; 71 >
+    au < manifest ; 2018 ; French Studies Volume 72 ; 72 >
+    au < manifest ; 2019 ; French Studies Volume 73 ; 73 >
+    au < manifest ; 2020 ; French Studies Volume 74 ; 74 >
+    au < manifest ; 2021 ; French Studies Volume 75 ; 75 >
+    au < manifest ; 2022 ; French Studies Volume 76 ; 76 >
+    au < manifest ; 2023 ; French Studies Volume 77 ; 77 >
+    au < manifest ; 2024 ; French Studies Volume 78 ; 78 >
 
   }
 
@@ -2394,50 +2394,50 @@
 
     param[journal_id] = fsb
 
-    au < exists ; 1981 ; French Studies Bulletin Volume 1 ; 1 >
-    au < exists ; 1982 ; French Studies Bulletin Volume 2 ; 2 >
-    au < exists ; 1983 ; French Studies Bulletin Volume 3 ; 3 >
-    au < exists ; 1984 ; French Studies Bulletin Volume 4 ; 4 >
-    au < exists ; 1985 ; French Studies Bulletin Volume 5 ; 5 >
-    au < exists ; 1986 ; French Studies Bulletin Volume 6 ; 6 >
-    au < exists ; 1987 ; French Studies Bulletin Volume 7 ; 7 >
-    au < exists ; 1988 ; French Studies Bulletin Volume 8 ; 8 >
-    au < exists ; 1989 ; French Studies Bulletin Volume 9 ; 9 >
-    au < exists ; 1990 ; French Studies Bulletin Volume 10 ; 10 >
-    au < exists ; 1991 ; French Studies Bulletin Volume 11 ; 11 >
-    au < exists ; 1992 ; French Studies Bulletin Volume 12 ; 12 >
-    au < exists ; 1993 ; French Studies Bulletin Volume 13 ; 13 >
-    au < exists ; 1994 ; French Studies Bulletin Volume 15 ; 15 >
-    au < exists ; 1995 ; French Studies Bulletin Volume 16 ; 16 >
-    au < exists ; 1996 ; French Studies Bulletin Volume 17 ; 17 >
-    au < exists ; 1997 ; French Studies Bulletin Volume 18 ; 18 >
-    au < exists ; 1998 ; French Studies Bulletin Volume 19 ; 19 >
-    au < exists ; 1999 ; French Studies Bulletin Volume 20 ; 20 >
-    au < exists ; 2000 ; French Studies Bulletin Volume 21 ; 21 >
-    au < exists ; 2001 ; French Studies Bulletin Volume 22 ; 22 >
-    au < exists ; 2002 ; French Studies Bulletin Volume 23 ; 23 >
-    au < exists ; 2003 ; French Studies Bulletin Volume 24 ; 24 >
-    au < exists ; 2004 ; French Studies Bulletin Volume 25 ; 25 >
-    au < exists ; 2005 ; French Studies Bulletin Volume 26 ; 26 >
-    au < exists ; 2006 ; French Studies Bulletin Volume 27 ; 27 >
-    au < exists ; 2007 ; French Studies Bulletin Volume 28 ; 28 >
-    au < exists ; 2008 ; French Studies Bulletin Volume 29 ; 29 >
-    au < exists ; 2009 ; French Studies Bulletin Volume 30 ; 30 >
-    au < exists ; 2010 ; French Studies Bulletin Volume 31 ; 31 >
-    au < exists ; 2011 ; French Studies Bulletin Volume 32 ; 32 >
-    au < exists ; 2012 ; French Studies Bulletin Volume 33 ; 33 >
-    au < exists ; 2013 ; French Studies Bulletin Volume 34 ; 34 >
-    au < exists ; 2014 ; French Studies Bulletin Volume 35 ; 35 >
-    au < exists ; 2015 ; French Studies Bulletin Volume 36 ; 36 >
-    au < exists ; 2016 ; French Studies Bulletin Volume 37 ; 37 >
-    au < exists ; 2017 ; French Studies Bulletin Volume 38 ; 38 >
-    au < exists ; 2018 ; French Studies Bulletin Volume 39 ; 39 >
-    au < exists ; 2019 ; French Studies Bulletin Volume 40 ; 40 >
-    au < exists ; 2020 ; French Studies Bulletin Volume 41 ; 41 >
-    au < exists ; 2021 ; French Studies Bulletin Volume 42 ; 42 >
-    au < exists ; 2022 ; French Studies Bulletin Volume 43 ; 43 >
-    au < exists ; 2023 ; French Studies Bulletin Volume 44 ; 44 >
-    au < exists ; 2024 ; French Studies Bulletin Volume 45 ; 45 >
+    au < manifest ; 1981 ; French Studies Bulletin Volume 1 ; 1 >
+    au < manifest ; 1982 ; French Studies Bulletin Volume 2 ; 2 >
+    au < manifest ; 1983 ; French Studies Bulletin Volume 3 ; 3 >
+    au < manifest ; 1984 ; French Studies Bulletin Volume 4 ; 4 >
+    au < manifest ; 1985 ; French Studies Bulletin Volume 5 ; 5 >
+    au < manifest ; 1986 ; French Studies Bulletin Volume 6 ; 6 >
+    au < manifest ; 1987 ; French Studies Bulletin Volume 7 ; 7 >
+    au < manifest ; 1988 ; French Studies Bulletin Volume 8 ; 8 >
+    au < manifest ; 1989 ; French Studies Bulletin Volume 9 ; 9 >
+    au < manifest ; 1990 ; French Studies Bulletin Volume 10 ; 10 >
+    au < manifest ; 1991 ; French Studies Bulletin Volume 11 ; 11 >
+    au < manifest ; 1992 ; French Studies Bulletin Volume 12 ; 12 >
+    au < manifest ; 1993 ; French Studies Bulletin Volume 13 ; 13 >
+    au < manifest ; 1994 ; French Studies Bulletin Volume 15 ; 15 >
+    au < manifest ; 1995 ; French Studies Bulletin Volume 16 ; 16 >
+    au < manifest ; 1996 ; French Studies Bulletin Volume 17 ; 17 >
+    au < manifest ; 1997 ; French Studies Bulletin Volume 18 ; 18 >
+    au < manifest ; 1998 ; French Studies Bulletin Volume 19 ; 19 >
+    au < manifest ; 1999 ; French Studies Bulletin Volume 20 ; 20 >
+    au < manifest ; 2000 ; French Studies Bulletin Volume 21 ; 21 >
+    au < manifest ; 2001 ; French Studies Bulletin Volume 22 ; 22 >
+    au < manifest ; 2002 ; French Studies Bulletin Volume 23 ; 23 >
+    au < manifest ; 2003 ; French Studies Bulletin Volume 24 ; 24 >
+    au < manifest ; 2004 ; French Studies Bulletin Volume 25 ; 25 >
+    au < manifest ; 2005 ; French Studies Bulletin Volume 26 ; 26 >
+    au < manifest ; 2006 ; French Studies Bulletin Volume 27 ; 27 >
+    au < manifest ; 2007 ; French Studies Bulletin Volume 28 ; 28 >
+    au < manifest ; 2008 ; French Studies Bulletin Volume 29 ; 29 >
+    au < manifest ; 2009 ; French Studies Bulletin Volume 30 ; 30 >
+    au < manifest ; 2010 ; French Studies Bulletin Volume 31 ; 31 >
+    au < manifest ; 2011 ; French Studies Bulletin Volume 32 ; 32 >
+    au < manifest ; 2012 ; French Studies Bulletin Volume 33 ; 33 >
+    au < manifest ; 2013 ; French Studies Bulletin Volume 34 ; 34 >
+    au < manifest ; 2014 ; French Studies Bulletin Volume 35 ; 35 >
+    au < manifest ; 2015 ; French Studies Bulletin Volume 36 ; 36 >
+    au < manifest ; 2016 ; French Studies Bulletin Volume 37 ; 37 >
+    au < manifest ; 2017 ; French Studies Bulletin Volume 38 ; 38 >
+    au < manifest ; 2018 ; French Studies Bulletin Volume 39 ; 39 >
+    au < manifest ; 2019 ; French Studies Bulletin Volume 40 ; 40 >
+    au < manifest ; 2020 ; French Studies Bulletin Volume 41 ; 41 >
+    au < manifest ; 2021 ; French Studies Bulletin Volume 42 ; 42 >
+    au < manifest ; 2022 ; French Studies Bulletin Volume 43 ; 43 >
+    au < manifest ; 2023 ; French Studies Bulletin Volume 44 ; 44 >
+    au < manifest ; 2024 ; French Studies Bulletin Volume 45 ; 45 >
 
   }
 
@@ -2451,43 +2451,43 @@
 
     param[journal_id] = huguenot
 
-    au < exists ; 1885-1886 ; The Huguenot Society Journal Volume 1 ; 1 >
-    au < exists ; 1886-1888 ; The Huguenot Society Journal Volume 2 ; 2 >
-    au < exists ; 1888-1891 ; The Huguenot Society Journal Volume 3 ; 3 >
-    au < exists ; 1891-1893 ; The Huguenot Society Journal Volume 4 ; 4 >
-    au < exists ; 1894-1897 ; The Huguenot Society Journal Volume 5 ; 5 >
-    au < exists ; 1898-1901 ; The Huguenot Society Journal Volume 6 ; 6 >
-    au < exists ; 1902-1904 ; The Huguenot Society Journal Volume 7 ; 7 >
-    au < exists ; 1905-1908 ; The Huguenot Society Journal Volume 8 ; 8 >
-    au < exists ; 1909-1911 ; The Huguenot Society Journal Volume 9 ; 9 >
-    au < exists ; 1912-1914 ; The Huguenot Society Journal Volume 10 ; 10 >
-    au < exists ; 1915-1917 ; The Huguenot Society Journal Volume 11 ; 11 >
-    au < exists ; 1918-1923 ; The Huguenot Society Journal Volume 12 ; 12 >
-    au < exists ; 1924-1929 ; The Huguenot Society Journal Volume 13 ; 13 >
-    au < exists ; 1930-1933 ; The Huguenot Society Journal Volume 14 ; 14 >
-    au < exists ; 1934-1937 ; The Huguenot Society Journal Volume 15 ; 15 >
-    au < exists ; 1938-1941 ; The Huguenot Society Journal Volume 16 ; 16 >
-    au < exists ; 1942-1946 ; The Huguenot Society Journal Volume 17 ; 17 >
-    au < exists ; 1947-1952 ; The Huguenot Society Journal Volume 18 ; 18 >
-    au < exists ; 1953-1958 ; The Huguenot Society Journal Volume 19 ; 19 >
-    au < exists ; 1959-1964 ; The Huguenot Society Journal Volume 20 ; 20 >
-    au < exists ; 1965-1970 ; The Huguenot Society Journal Volume 21 ; 21 >
-    au < exists ; 1971-1976 ; The Huguenot Society Journal Volume 22 ; 22 >
-    au < exists ; 1977-1982 ; The Huguenot Society Journal Volume 23 ; 23 >
-    au < exists ; 1983-1988 ; The Huguenot Society Journal Volume 24 ; 24 >
-    au < exists ; 1989-1993 ; The Huguenot Society Journal Volume 25 ; 25 >
-    au < exists ; 1994-1997 ; The Huguenot Society Journal Volume 26 ; 26 >
-    au < exists ; 1998-2002 ; The Huguenot Society Journal Volume 27 ; 27 >
-    au < exists ; 2003-2007 ; The Huguenot Society Journal Volume 28 ; 28 >
-    au < exists ; 2008-2012 ; The Huguenot Society Journal Volume 29 ; 29 >
-    au < exists ; 2013-2017 ; The Huguenot Society Journal Volume 30 ; 30 >
-    au < exists ; 2018 ; The Huguenot Society Journal Volume 31 ; 31 >
-    au < exists ; 2019 ; The Huguenot Society Journal Volume 32 ; 32 >
-    au < exists ; 2020 ; The Huguenot Society Journal Volume 33 ; 33 >
-    au < exists ; 2021 ; The Huguenot Society Journal Volume 34 ; 34 >
-    au < exists ; 2022 ; The Huguenot Society Journal Volume 35 ; 35 >
-    au < exists ; 2023 ; The Huguenot Society Journal Volume 36 ; 36 >
-    au < exists ; 2024 ; The Huguenot Society Journal Volume 37 ; 37 >
+    au < manifest ; 1885-1886 ; The Huguenot Society Journal Volume 1 ; 1 >
+    au < manifest ; 1886-1888 ; The Huguenot Society Journal Volume 2 ; 2 >
+    au < manifest ; 1888-1891 ; The Huguenot Society Journal Volume 3 ; 3 >
+    au < manifest ; 1891-1893 ; The Huguenot Society Journal Volume 4 ; 4 >
+    au < manifest ; 1894-1897 ; The Huguenot Society Journal Volume 5 ; 5 >
+    au < manifest ; 1898-1901 ; The Huguenot Society Journal Volume 6 ; 6 >
+    au < manifest ; 1902-1904 ; The Huguenot Society Journal Volume 7 ; 7 >
+    au < manifest ; 1905-1908 ; The Huguenot Society Journal Volume 8 ; 8 >
+    au < manifest ; 1909-1911 ; The Huguenot Society Journal Volume 9 ; 9 >
+    au < manifest ; 1912-1914 ; The Huguenot Society Journal Volume 10 ; 10 >
+    au < manifest ; 1915-1917 ; The Huguenot Society Journal Volume 11 ; 11 >
+    au < manifest ; 1918-1923 ; The Huguenot Society Journal Volume 12 ; 12 >
+    au < manifest ; 1924-1929 ; The Huguenot Society Journal Volume 13 ; 13 >
+    au < manifest ; 1930-1933 ; The Huguenot Society Journal Volume 14 ; 14 >
+    au < manifest ; 1934-1937 ; The Huguenot Society Journal Volume 15 ; 15 >
+    au < manifest ; 1938-1941 ; The Huguenot Society Journal Volume 16 ; 16 >
+    au < manifest ; 1942-1946 ; The Huguenot Society Journal Volume 17 ; 17 >
+    au < manifest ; 1947-1952 ; The Huguenot Society Journal Volume 18 ; 18 >
+    au < manifest ; 1953-1958 ; The Huguenot Society Journal Volume 19 ; 19 >
+    au < manifest ; 1959-1964 ; The Huguenot Society Journal Volume 20 ; 20 >
+    au < manifest ; 1965-1970 ; The Huguenot Society Journal Volume 21 ; 21 >
+    au < manifest ; 1971-1976 ; The Huguenot Society Journal Volume 22 ; 22 >
+    au < manifest ; 1977-1982 ; The Huguenot Society Journal Volume 23 ; 23 >
+    au < manifest ; 1983-1988 ; The Huguenot Society Journal Volume 24 ; 24 >
+    au < manifest ; 1989-1993 ; The Huguenot Society Journal Volume 25 ; 25 >
+    au < manifest ; 1994-1997 ; The Huguenot Society Journal Volume 26 ; 26 >
+    au < manifest ; 1998-2002 ; The Huguenot Society Journal Volume 27 ; 27 >
+    au < manifest ; 2003-2007 ; The Huguenot Society Journal Volume 28 ; 28 >
+    au < manifest ; 2008-2012 ; The Huguenot Society Journal Volume 29 ; 29 >
+    au < manifest ; 2013-2017 ; The Huguenot Society Journal Volume 30 ; 30 >
+    au < manifest ; 2018 ; The Huguenot Society Journal Volume 31 ; 31 >
+    au < manifest ; 2019 ; The Huguenot Society Journal Volume 32 ; 32 >
+    au < manifest ; 2020 ; The Huguenot Society Journal Volume 33 ; 33 >
+    au < manifest ; 2021 ; The Huguenot Society Journal Volume 34 ; 34 >
+    au < manifest ; 2022 ; The Huguenot Society Journal Volume 35 ; 35 >
+    au < manifest ; 2023 ; The Huguenot Society Journal Volume 36 ; 36 >
+    au < manifest ; 2024 ; The Huguenot Society Journal Volume 37 ; 37 >
 
   }
 
@@ -2501,42 +2501,42 @@
 
     param[journal_id] = polin
 
-    au < exists ; 1986 ; Polin: Studies in Polish Jewry Volume 1 ; 1 >
-    au < exists ; 1987 ; Polin: Studies in Polish Jewry Volume 2 ; 2 >
-    au < exists ; 1988 ; Polin: Studies in Polish Jewry Volume 3 ; 3 >
-    au < exists ; 1989 ; Polin: Studies in Polish Jewry Volume 4 ; 4 >
-    au < exists ; 1990 ; Polin: Studies in Polish Jewry Volume 5 ; 5 >
-    au < exists ; 1991 ; Polin: Studies in Polish Jewry Volume 6 ; 6 >
-    au < exists ; 1992 ; Polin: Studies in Polish Jewry Volume 7 ; 7 >
-    au < exists ; 1994 ; Polin: Studies in Polish Jewry Volume 8 ; 8 >
-    au < exists ; 1996 ; Polin: Studies in Polish Jewry Volume 9 ; 9 >
-    au < exists ; 1997 ; Polin: Studies in Polish Jewry Volume 10 ; 10 >
-    au < exists ; 1998 ; Polin: Studies in Polish Jewry Volume 11 ; 11 >
-    au < exists ; 1999 ; Polin: Studies in Polish Jewry Volume 12 ; 12 >
-    au < exists ; 2000 ; Polin: Studies in Polish Jewry Volume 13 ; 13 >
-    au < exists ; 2001 ; Polin: Studies in Polish Jewry Volume 14 ; 14 >
-    au < exists ; 2002 ; Polin: Studies in Polish Jewry Volume 15 ; 15 >
-    au < exists ; 2003 ; Polin: Studies in Polish Jewry Volume 16 ; 16 >
-    au < exists ; 2004 ; Polin: Studies in Polish Jewry Volume 17 ; 17 >
-    au < exists ; 2005 ; Polin: Studies in Polish Jewry Volume 18 ; 18 >
-    au < exists ; 2007 ; Polin: Studies in Polish Jewry Volume 19 ; 19 >
-    au < exists ; 2008 ; Polin: Studies in Polish Jewry Volume 20 ; 20 >
-    au < exists ; 2009 ; Polin: Studies in Polish Jewry Volume 21 ; 21 >
-    au < exists ; 2010 ; Polin: Studies in Polish Jewry Volume 22 ; 22 >
-    au < exists ; 2011 ; Polin: Studies in Polish Jewry Volume 23 ; 23 >
-    au < exists ; 2012 ; Polin: Studies in Polish Jewry Volume 24 ; 24 >
-    au < exists ; 2013 ; Polin: Studies in Polish Jewry Volume 25 ; 25 >
-    au < exists ; 2014 ; Polin: Studies in Polish Jewry Volume 26 ; 26 >
-    au < exists ; 2015 ; Polin: Studies in Polish Jewry Volume 27 ; 27 >
-    au < exists ; 2016 ; Polin: Studies in Polish Jewry Volume 28 ; 28 >
-    au < exists ; 2017 ; Polin: Studies in Polish Jewry Volume 29 ; 29 >
-    au < exists ; 2018 ; Polin: Studies in Polish Jewry Volume 30 ; 30 >
-    au < exists ; 2019 ; Polin: Studies in Polish Jewry Volume 31 ; 31 >
-    au < exists ; 2020 ; Polin: Studies in Polish Jewry Volume 32 ; 32 >
-    au < exists ; 2021 ; Polin: Studies in Polish Jewry Volume 33 ; 33 >
-    au < exists ; 2022 ; Polin: Studies in Polish Jewry Volume 34 ; 34 >
-    au < exists ; 2023 ; Polin: Studies in Polish Jewry Volume 35 ; 35 >
-    au < exists ; 2024 ; Polin: Studies in Polish Jewry Volume 36 ; 36 >
+    au < manifest ; 1986 ; Polin: Studies in Polish Jewry Volume 1 ; 1 >
+    au < manifest ; 1987 ; Polin: Studies in Polish Jewry Volume 2 ; 2 >
+    au < manifest ; 1988 ; Polin: Studies in Polish Jewry Volume 3 ; 3 >
+    au < manifest ; 1989 ; Polin: Studies in Polish Jewry Volume 4 ; 4 >
+    au < manifest ; 1990 ; Polin: Studies in Polish Jewry Volume 5 ; 5 >
+    au < manifest ; 1991 ; Polin: Studies in Polish Jewry Volume 6 ; 6 >
+    au < manifest ; 1992 ; Polin: Studies in Polish Jewry Volume 7 ; 7 >
+    au < manifest ; 1994 ; Polin: Studies in Polish Jewry Volume 8 ; 8 >
+    au < manifest ; 1996 ; Polin: Studies in Polish Jewry Volume 9 ; 9 >
+    au < manifest ; 1997 ; Polin: Studies in Polish Jewry Volume 10 ; 10 >
+    au < manifest ; 1998 ; Polin: Studies in Polish Jewry Volume 11 ; 11 >
+    au < manifest ; 1999 ; Polin: Studies in Polish Jewry Volume 12 ; 12 >
+    au < manifest ; 2000 ; Polin: Studies in Polish Jewry Volume 13 ; 13 >
+    au < manifest ; 2001 ; Polin: Studies in Polish Jewry Volume 14 ; 14 >
+    au < manifest ; 2002 ; Polin: Studies in Polish Jewry Volume 15 ; 15 >
+    au < manifest ; 2003 ; Polin: Studies in Polish Jewry Volume 16 ; 16 >
+    au < manifest ; 2004 ; Polin: Studies in Polish Jewry Volume 17 ; 17 >
+    au < manifest ; 2005 ; Polin: Studies in Polish Jewry Volume 18 ; 18 >
+    au < manifest ; 2007 ; Polin: Studies in Polish Jewry Volume 19 ; 19 >
+    au < manifest ; 2008 ; Polin: Studies in Polish Jewry Volume 20 ; 20 >
+    au < manifest ; 2009 ; Polin: Studies in Polish Jewry Volume 21 ; 21 >
+    au < manifest ; 2010 ; Polin: Studies in Polish Jewry Volume 22 ; 22 >
+    au < manifest ; 2011 ; Polin: Studies in Polish Jewry Volume 23 ; 23 >
+    au < manifest ; 2012 ; Polin: Studies in Polish Jewry Volume 24 ; 24 >
+    au < manifest ; 2013 ; Polin: Studies in Polish Jewry Volume 25 ; 25 >
+    au < manifest ; 2014 ; Polin: Studies in Polish Jewry Volume 26 ; 26 >
+    au < manifest ; 2015 ; Polin: Studies in Polish Jewry Volume 27 ; 27 >
+    au < manifest ; 2016 ; Polin: Studies in Polish Jewry Volume 28 ; 28 >
+    au < manifest ; 2017 ; Polin: Studies in Polish Jewry Volume 29 ; 29 >
+    au < manifest ; 2018 ; Polin: Studies in Polish Jewry Volume 30 ; 30 >
+    au < manifest ; 2019 ; Polin: Studies in Polish Jewry Volume 31 ; 31 >
+    au < manifest ; 2020 ; Polin: Studies in Polish Jewry Volume 32 ; 32 >
+    au < manifest ; 2021 ; Polin: Studies in Polish Jewry Volume 33 ; 33 >
+    au < manifest ; 2022 ; Polin: Studies in Polish Jewry Volume 34 ; 34 >
+    au < manifest ; 2023 ; Polin: Studies in Polish Jewry Volume 35 ; 35 >
+    au < manifest ; 2024 ; Polin: Studies in Polish Jewry Volume 36 ; 36 >
 
   }
 
@@ -2550,11 +2550,11 @@
 
     param[journal_id] = churcharch
 
-    au < exists ; 2021 ; Church Archaeology Volume 20 ; 20 >
-    au < exists ; 2022 ; Church Archaeology Volume 21 ; 21 >
-    au < exists ; 2022 ; Church Archaeology Volume 22 ; 22 >
-    au < exists ; 2023 ; Church Archaeology Volume 23 ; 23 >
-    au < exists ; 2024 ; Church Archaeology Volume 24 ; 24 >
+    au < manifest ; 2021 ; Church Archaeology Volume 20 ; 20 >
+    au < manifest ; 2022 ; Church Archaeology Volume 21 ; 21 >
+    au < manifest ; 2022 ; Church Archaeology Volume 22 ; 22 >
+    au < manifest ; 2023 ; Church Archaeology Volume 23 ; 23 >
+    au < manifest ; 2024 ; Church Archaeology Volume 24 ; 24 >
 
   }
 }
