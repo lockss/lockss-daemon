@@ -61,7 +61,7 @@ class AuMigrationStatus extends React.Component {
     }
     return (
         <div className="stats-div">
-        {this.state.activeList.length} Active: <ul>{this.state.activeList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+        {this.state.activeList.length} Tasks Active: <ul>{this.state.activeList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
     )
   }
 
@@ -72,7 +72,7 @@ class AuMigrationStatus extends React.Component {
     }
     return (
         <div className="stats-div">
-        {this.state.finishedData.length} Finished:
+        {this.state.finishedData.length} Tasks Finished:
         <div className={"finished"} id={"finishedList"}>
         <ul>{this.state.finishedData.map((msg, index) => <li key={index}>{msg}</li>)}</ul>
         </div>
