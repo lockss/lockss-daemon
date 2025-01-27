@@ -144,7 +144,7 @@ public class V2AuMover {
    */
   public static final String PARAM_COPY_ITER_EXECUTOR_SPEC =
     EXEC_PREFIX + "copyIter.spec";
-  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "10;2";
+  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "2;4";
 
   /**
    * Verify CU iterators run in this Executor.  Controls the number of
