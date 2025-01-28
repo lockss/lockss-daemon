@@ -8,6 +8,40 @@
   {
   
     title <
+      name = Journal of Health and Pollution ;
+      issn = 2156-9614 ;
+      eissn = 1552-9924 ;
+      issnl = 0091-6765
+    >
+    
+    rights = openaccess
+
+    plugin = gov.gpo.access.permanent.plugin.environmentalhealthperspectives.EHP2022AtyponJournalPlugin 
+    param[base_url] = https://ehp.niehs.nih.gov/
+    implicit < status ; year ; name ; param[volume_name] >
+    #Published 1972-present
+
+    param[journal_id] = jhp
+
+    au < manifest ; 2011 ; Journal of Health and Pollution Volume 1 ; 1 >
+    au < manifest ; 2012 ; Journal of Health and Pollution Volume 2 ; 2 >
+    au < manifest ; 2013 ; Journal of Health and Pollution Volume 3 ; 3 >
+    au < manifest ; 2014 ; Journal of Health and Pollution Volume 4 ; 4 >
+    au < manifest ; 2015 ; Journal of Health and Pollution Volume 5 ; 5 >
+    au < manifest ; 2016 ; Journal of Health and Pollution Volume 6 ; 6 >
+    au < manifest ; 2017 ; Journal of Health and Pollution Volume 7 ; 7 >
+    au < manifest ; 2018 ; Journal of Health and Pollution Volume 8 ; 8 >
+    au < manifest ; 2019 ; Journal of Health and Pollution Volume 9 ; 9 >
+    au < manifest ; 2020 ; Journal of Health and Pollution Volume 10 ; 10 >
+    au < manifest ; 2021 ; Journal of Health and Pollution Volume 11 ; 11 >
+    au < manifest ; 2024 ; Journal of Health and Pollution Volume 12 ; 12 >
+    au < expected ; 2025 ; Journal of Health and Pollution Volume 13 ; 13 >
+    
+  }
+
+  {
+  
+    title <
       name = Environmental Health Perspectives ;
       issn = 0091-6765 ;
       eissn = 1552-9924 ;
@@ -156,6 +190,7 @@
     au < released ; 2022 ; Environmental Health Perspectives Volume 130 ; 130 >
     au < exists ; 2023 ; Environmental Health Perspectives Volume 131 ; 131 >
     au < exists ; 2024 ; Environmental Health Perspectives Volume 132 ; 132 >
+
     }
     {
     # Ancient plugin name has an underscore in it
