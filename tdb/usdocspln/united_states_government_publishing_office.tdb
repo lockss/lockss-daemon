@@ -179,7 +179,7 @@
     au < released ; 2021 ; Account of the Receipts and Expenditures of the United States 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Account of the Receipts and Expenditures of the United States 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Account of the Receipts and Expenditures of the United States 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; Account of the Receipts and Expenditures of the United States 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; Account of the Receipts and Expenditures of the United States 2024 ; 2024 ; https://www.govinfo.gov/ >
 
 
   }
@@ -306,7 +306,7 @@
     au < released ; 2022 ; Additional Government Publications 2022 ; 2022 ; https://www.govinfo.gov/ >
 
     au < released ; 2023 ; Additional Government Publications and Archives 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; Additional Government Publications and Archives 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; Additional Government Publications and Archives 2024 ; 2024 ; https://www.govinfo.gov/ >
   }
 
   {
@@ -328,7 +328,7 @@
     au < released ; 2021 ; Budget of the United States Government of the United States Government 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Budget of the United States Government of the United States Government 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Budget of the United States Government of the United States Government 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; Budget of the United States Government 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; Budget of the United States Government 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -357,7 +357,7 @@
     au < released ; 2012 ; Code of Federal Regulations 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; Code of Federal Regulations 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2015 ; Code of Federal Regulations 2015 ; 2015 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; Code of Federal Regulations 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; Code of Federal Regulations 2024 ; 2024 ; https://www.govinfo.gov/ >
 
     au < down ; 1807 ; Code of Federal Regulations 1807 ; 1807 ; https://www.govinfo.gov/ > #no substance
     au < released ; 2014 ; Code of Federal Regulations 2014 ; 2014 ; https://www.govinfo.gov/ >
@@ -404,7 +404,7 @@
     au < released ; 2021 ; Congressionally Mandated Reports 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressionally Mandated Reports 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Congressionally Mandated Reports 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; Congressionally Mandated Reports 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; Congressionally Mandated Reports 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -426,7 +426,7 @@
     au < released ; 2021 ; Congressional Calendars 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Calendars 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Congressional Calendars 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; Congressional Calendars 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; Congressional Calendars 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Congressional Calendars 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
@@ -440,8 +440,8 @@
     param[collection_id] = CPRT
 
     au < released ; 1923 ; Congressional Committee Prints 1923 ; 1923 ; https://www.govinfo.gov/ >
-    au < manifest ; 1941 ; Congressional Committee Prints 1941 ; 1941 ; https://www.govinfo.gov/ >
-    au < manifest ; 1944 ; Congressional Committee Prints 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < ready ; 1941 ; Congressional Committee Prints 1941 ; 1941 ; https://www.govinfo.gov/ >
+    au < ready ; 1944 ; Congressional Committee Prints 1944 ; 1944 ; https://www.govinfo.gov/ >
     au < released ; 1949 ; Congressional Committee Prints 1949 ; 1949 ; https://www.govinfo.gov/ >
     au < released ; 1950 ; Congressional Committee Prints 1950 ; 1950 ; https://www.govinfo.gov/ >
     au < released ; 1951 ; Congressional Committee Prints 1951 ; 1951 ; https://www.govinfo.gov/ >
@@ -482,7 +482,7 @@
     au < released ; 2021 ; Congressional Committee Prints 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Committee Prints 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Congressional Committee Prints 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; Congressional Committee Prints 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; Congressional Committee Prints 2024 ; 2024 ; https://www.govinfo.gov/ >
 
     au < released ; 1970 ; Congressional Committee Prints 1970 ; 1970 ; https://www.govinfo.gov/ >
     au < released ; 1981 ; Congressional Committee Prints 1981 ; 1981 ; https://www.govinfo.gov/ >
@@ -615,7 +615,7 @@
     au < released ; 2018 ; Congressional Directory 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Directory 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Directory 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; Congressional Directory 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; Congressional Directory 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -635,7 +635,7 @@
     au < released ; 2021 ; Congressional Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Documents 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; CDOC 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; CDOC 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; CDOC 2024 ; 2024 ; https://www.govinfo.gov/ >
 
 
   }
@@ -659,7 +659,7 @@
     au < released ; 2017 ; CHRG 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; CHRG 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; CHRG 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; CHRG 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; CHRG 2024 ; 2024 ; https://www.govinfo.gov/ >
 
     au < down ; 1933 ; Congressional Hearings 1933 ; 1933 ; https://www.govinfo.gov/ > #no substance
     au < down ; 1934 ; Congressional Hearings 1934 ; 1934 ; https://www.govinfo.gov/ > #no substance
@@ -751,7 +751,7 @@
     au < released ; 2021 ; Congressional Record 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Record 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; CREC 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; CREC 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; CREC 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; CREC 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
@@ -909,7 +909,7 @@
     au < released ; 2021 ; Statute Compilations 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Statute Compilations 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; COMPS 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; COMPS 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; COMPS 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -932,7 +932,7 @@
     au < released ; 2021 ; Congressional Record Index 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Record Index 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; CRI 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; CRI 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; CRI 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -954,7 +954,7 @@
     au < released ; 2017 ; CRPT 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; CRPT 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; CRPT 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; CRPT 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; CRPT 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -975,7 +975,7 @@
 
     au < released ; 2016 ; DCPD 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; DCPD 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; DCPD 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; DCPD 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -996,7 +996,7 @@
     au < released ; 2016 ; ECONI 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; ECONI 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; ECONI 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; ECONI 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; ECONI 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1018,7 +1018,7 @@
     au < released ; 2017 ; ERP 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; ERP 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; ERP 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; ERP 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; ERP 2024 ; 2024 ; https://www.govinfo.gov/ >
   }
 
   {
@@ -1111,7 +1111,7 @@
     au < released ; 2017 ; FR 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; FR 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; FR 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; FR 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; FR 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; FR 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
@@ -1147,7 +1147,7 @@
     au < released ; 2021 ; History of Bills 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; History of Bills 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; History of Bills 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; HOB 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; HOB 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1195,7 +1195,7 @@
     au < released ; 2016 ; LSA 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; LSA 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; LSA 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; LSA 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; LSA 2024 ; 2024 ; https://www.govinfo.gov/ >
 
     au < released ; 2019 ; List of CFR Sections Affected 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; List of CFR Sections Affected 2020 ; 2020 ; https://www.govinfo.gov/ >
@@ -1244,7 +1244,7 @@
     au < released ; 2021 ; Public and Private Laws 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Public and Private Laws 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Public and Private Laws 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; Public and Private Laws 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; Public and Private Laws 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
