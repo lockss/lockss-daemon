@@ -26,7 +26,7 @@
         au < released ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 [2020] ; 15651 >
         au < released ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 [2021] ; 17334 >
         au < released ; 2022 ; Ars Judaica: The Bar-Ilan Journal of Jewish Art Volume 18 [2022] ; 18617 >
-        au < manifest ; 2023 ; Ars Judaica: The Bar-Ilan Journal of Jewish Art Volume 19 [2023] ; 19180 >
+        au < testing ; 2023 ; Ars Judaica: The Bar-Ilan Journal of Jewish Art Volume 19 [2023] ; 19180 >
 
     }
 
@@ -144,7 +144,7 @@
       au < released ; 2022 ; Labour History: A Journal of Labour and Social History Volume 122 [May 2022] ; 17191 >
       au < released ; 2022 ; Labour History: A Journal of Labour and Social History Volume 123 [November 2022] ; 17651 >
       au < released ; 2023 ; Labour History: A Journal of Labour and Social History Volume 124 [2023] ; 17652 >
-      au < manifest ; 2023 ; Labour History: A Journal of Labour and Social History Volume 125 [2023] ; 18443 >
+      au < testing ; 2023 ; Labour History: A Journal of Labour and Social History Volume 125 [2023] ; 18443 >
       au < manifest ; 2024 ; Labour History: A Journal of Labour and Social History Volume 127 [2024] ; 19420 >
       au < manifest ; 2024 ; Labour History: A Journal of Labour and Social History Volume 126 [2024] ; 19015 >
 
@@ -215,10 +215,10 @@
 
       attr[journal_id] = 866
 
-      au < manifest ; 2022 ; Quebec Studies Volume 74 [2022] ; 18740 >
-      au < manifest ; 2023 ; Quebec Studies Volume 76 [2023] ; 18742 >
+      au < testing ; 2022 ; Quebec Studies Volume 74 [2022] ; 18740 >
+      au < testing ; 2023 ; Quebec Studies Volume 76 [2023] ; 18742 >
       au < manifest ; 2024 ; Quebec Studies Volume 77 [2024] ; 19081 >
-      au < manifest ; 2023 ; Quebec Studies Volume 75 [2023] ; 18741 >
+      au < testing ; 2023 ; Quebec Studies Volume 75 [2023] ; 18741 >
 
     }
 
