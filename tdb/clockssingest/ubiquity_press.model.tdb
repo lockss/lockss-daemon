@@ -10,7 +10,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -46,7 +46,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -78,10 +78,8 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
-    #implicit < status ; status2 ; year ; nondefparam[volume_name] ; name ; param[year] ; hidden[proxy] >
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
   {
 
       title <
@@ -197,53 +195,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
-
-  {
-
-      title <
-        name = Annals of Global Health ;
-        eissn = 2214-9996
-      >
-
-      comment[publisher] = Levy Library Press
-      param[base_url] = https://account.annalsofglobalhealth.org/
-      nondefparam[base_url2] = https://annalsofglobalhealth.org/
-      nondefparam[journal_id] = up-j-agh
-
-      au < doNotProcess ; doNotProcess ; 2014 ; 1 ; Annals of Global Health Volume 2014 ; 2014 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2 ; Annals of Global Health Volume 2015 ; 2015 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 3 ; Annals of Global Health Volume 2016 ; 2016 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 6 ; Annals of Global Health Volume 2019 ; 2019 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 8 ; Annals of Global Health Volume 2021 ; 2021 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 9 ; Annals of Global Health Volume 2022 ; 2022 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Annals of Global Health Volume 2023 ; 2023 ; 10 ; >
-      au < exists ; exists ; 2024 ; 11 ; Annals of Global Health Volume 2024 ; 2024 ; 11 ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Altmeterics ;
-        eissn = 2577-5685
-      >
-
-      comment[publisher] = Levy Library Press
-      param[base_url] = https://account.journalofaltmetrics.org/
-      nondefparam[base_url2] = https://journalofaltmetrics.org/
-      nondefparam[journal_id] = ll-j-ja
-      # no longer publishing
-
-      au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 3 ; Journal of Altmetrics Volume 2020 ; 2020 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 4 ; Journal of Altmetrics Volume 2021 ; 2021 ; 4 ; >
-
-  }
+    #attr[start_stem] = index.php/
 
   {
 
@@ -298,7 +250,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -340,7 +292,7 @@
     provider = London School of Economics and Political Science
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -477,7 +429,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -695,7 +647,33 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
+
+  {
+
+      title <
+        name = Annals of Global Health ;
+        eissn = 2214-9996
+      >
+
+      comment[publisher] = Ubiquity Press
+      param[base_url] = https://account.annalsofglobalhealth.org/
+      nondefparam[base_url2] = https://annalsofglobalhealth.org/
+      nondefparam[journal_id] = up-j-agh
+
+      au < doNotProcess ; doNotProcess ; 2014 ; 1 ; Annals of Global Health Volume 2014 ; 2014 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2 ; Annals of Global Health Volume 2015 ; 2015 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 3 ; Annals of Global Health Volume 2016 ; 2016 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 6 ; Annals of Global Health Volume 2019 ; 2019 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 8 ; Annals of Global Health Volume 2021 ; 2021 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 9 ; Annals of Global Health Volume 2022 ; 2022 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Annals of Global Health Volume 2023 ; 2023 ; 10 ; >
+      au < exists ; exists ; 2024 ; 11 ; Annals of Global Health Volume 2024 ; 2024 ; 11 ; >
+
+  }
 
   {
 
@@ -1251,31 +1229,6 @@
   {
 
       title <
-        name = Open Health Data ;
-        eissn = 2054-7102
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.openhealthdata.metajnl.com/
-      nondefparam[base_url2] = https://openhealthdata.metajnl.com/
-      nondefparam[journal_id] = up-j-ohd
-      # continues Journal of Open Public Health Data
-      # no longer publishing
-
-      au < doNotProcess ; doNotProcess ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 4 ; Open Health Data Volume 2016 ; 2016 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 6 ; Open Health Data Volume 2019 ; 2019 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 7 ; Open Health Data Volume 2020 ; 2020 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 8 ; Open Health Data Volume 2021 ; 2021 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 9 ; Open Health Data Volume 2022 ; 2022 ; 9 ; >
-
-  }
-
-  {
-
-      title <
         name = Silk Roads Archaeology and Heritage ;
         eissn = 2753-3697
       >
@@ -1572,75 +1525,6 @@
   {
 
       title <
-        name = Papers from the Institute of Archaeology ;
-        eissn = 2041-9015
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://student-journals.ucl.ac.uk/pia/
-      nondefparam[journal_id] = up-j-pia
-
-      au < doNotProcess ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; 1 ; >
-      au < doNotProcess ; exists ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; 2 ; >
-      au < doNotProcess ; exists ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; 3 ; >
-      au < doNotProcess ; exists ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; 4 ; >
-      au < doNotProcess ; exists ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; 5 ; >
-      au < doNotProcess ; exists ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; 6 ; >
-      au < doNotProcess ; exists ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; 7 ; >
-      au < doNotProcess ; exists ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; 8 ; >
-      au < doNotProcess ; exists ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; 9 ; >
-      au < doNotProcess ; exists ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; 18 ; >
-      au < doesNotExist ; doesNotExist ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; 19 ; > #M exists. No articles for that year.
-      au < doNotProcess ; doNotProcess ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; 20 ; >
-      au < doNotProcess ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; 21 ; >
-      au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; 22 ; >
-      au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; 23 ; >
-      au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; 24 ; >
-      au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; 25 ; >
-      au < doNotProcess ; exists ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; 26 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; 27 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 28 ; Papers from the Institute of Archaeology Volume 2017 ; 2017 ; 28 ; >
-      #moved to University College London https://account.student-journals.ucl.ac.uk/pia/issues/
-  }
-
-  {
-
-      title <
-        name = Present Pasts ;
-        eissn = 1759-2941
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.presentpasts.info/
-      nondefparam[base_url2] = https://presentpasts.info/
-      nondefparam[journal_id] = up-j-pp
-
-      au < doesNotExist ; doesNotExist ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; 1 ; > #Articles in 2010.
-      au < doNotProcess ; doNotProcess ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; 2 ; >
-      au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; 3 ; >
-      au < doesNotExist ; doesNotExist ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; 4 ; > #Articles in 2013.
-      au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; 5 ; >
-      au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; 6 ; >
-      au < doNotProcess ; exists ; 2015 ; 0 ; Present Pasts Volume 2015 ; 2015 ; 0 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 7 ; Present Pasts Volume 2016 ; 2016 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 8 ; Present Pasts Volume 2017 ; 2017 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 9 ; Present Pasts Volume 2019 ; 2019 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 10 ; Present Pasts Volume 2020 ; 2020 ; 10 ; >
-      #no new content since 2020. 20230906
-
-  }
-
-  {
-
-      title <
         name = Psychologica Belgica ;
         eissn = 2054-670X
       >
@@ -1733,29 +1617,6 @@
   {
 
       title <
-        name = Health Psychology Bulletin ;
-        eissn = 2398-5941
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.healthpsychologybulletin.com/
-      nondefparam[base_url2] = https://healthpsychologybulletin.com/
-      nondefparam[journal_id] = up-j-hpb
-
-      au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Health Psychology Bulletin Volume 2017 ; 2017 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 2 ; Health Psychology Bulletin Volume 2018 ; 2018 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 3 ; Health Psychology Bulletin Volume 2019 ; 2019 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 4 ; Health Psychology Bulletin Volume 2020 ; 2020 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 5 ; Health Psychology Bulletin Volume 2021 ; 2021 ; 5 ; >
-      au < exists ; exists ; 2022 ; 6 ; Health Psychology Bulletin Volume 2022 ; 2022 ; 6 ; >
-      au < exists ; exists ; 2023 ; 7 ; Health Psychology Bulletin Volume 2023 ; 2023 ; 7 ; >
-      au < expected ; exists ; 2024 ; 8 ; Health Psychology Bulletin Volume 2024 ; 2024 ; 8 ; >
-
-  }
-
-  {
-
-      title <
         name = Tremor and Other Hyperkinetic Movements ;
         eissn = 2160-8288
       >
@@ -1779,29 +1640,6 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 12 ; Tremor and Other Hyperkinetic Movements Volume 2022 ; 2022 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 13 ; Tremor and Other Hyperkinetic Movements Volume 2023 ; 2023 ; 13 ; >
       au < exists ; exists ; 2024 ; 14 ; Tremor and Other Hyperkinetic Movements Volume 2024 ; 2024 ; 14 ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Open Hardware ;
-        eissn = 2514-1708
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.openhardware.metajnl.com/
-      nondefparam[base_url2] = https://openhardware.metajnl.com/
-      nondefparam[journal_id] = up-j-joh
-
-      au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Journal of Open Hardware Volume 2017 ; 2017 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 2 ; Journal of Open Hardware Volume 2018 ; 2018 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 3 ; Journal of Open Hardware Volume 2019 ; 2019 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 4 ; Journal of Open Hardware Volume 2020 ; 2020 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 5 ; Journal of Open Hardware Volume 2021 ; 2021 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 6 ; Journal of Open Hardware Volume 2022 ; 2022 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Journal of Open Hardware Volume 2023 ; 2023 ; 7 ; >
-      au < expected ; exists ; 2024 ; 8 ; Journal of Open Hardware Volume 2024 ; 2024 ; 8 ; >
 
   }
 
@@ -1956,28 +1794,6 @@
   {
 
       title <
-        name = Worldwide Waste: Journal of Interdisciplinary Studies ;
-        eissn = 2399-7117
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.worldwidewastejournal.com/
-      nondefparam[base_url2] = https://worldwidewastejournal.com/
-      nondefparam[journal_id] = up-j-wwjis
-      #website gone, 2024
-
-      au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2019 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 3 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2020 ; 2020 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 4 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2021 ; 2021 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 5 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 ; 2022 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2023 ; 2023 ; 6 ; >
-
-  }
-
-  {
-
-      title <
         name = Transactions of the International Society for Music Information Retrieval ;
         eissn = 2514-3298
       >
@@ -2036,24 +1852,6 @@
   {
 
       title <
-        name = International Journal of Driving Science ;
-        eissn = 2397-1959
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.up-j-ijds.ubiquityjournal.website/
-      nondefparam[base_url2] = https://up-j-ijds.ubiquityjournal.website/
-      nondefparam[journal_id] = up-j-ijds
-      #LXPUB-876
-
-      au < doNotProcess ; doNotProcess ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 (OJS3) ; 2018 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 2 ; International Journal of Driving Science Volume 2021 (OJS3) ; 2021 ; 2 ; >
-
-  }
-
-  {
-
-      title <
         name = Perspectives on Medical Education ;
         eissn = 2212-277X
       >
@@ -2105,7 +1903,7 @@
 
 {
   publisher <
-    name = University of Birmingham ;
+    name = University of Birmingham Library Services ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
     info[tester] = 8 ;
@@ -2115,7 +1913,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -2124,7 +1922,7 @@
         eissn = 2204-2482
       >
 
-      comment[publisher] = University of Birmingham
+      comment[publisher] = University of Birmingham Library Services
       param[base_url] = https://account.jps.bham.ac.uk/
       nondefparam[base_url2] = https://jps.bham.ac.uk/
       nondefparam[journal_id] = up-j-jps
@@ -2156,7 +1954,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -2192,7 +1990,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -2285,7 +2083,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -2506,7 +2304,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -2536,47 +2334,6 @@
 
   }
 
-  {
-
-      title <
-        name = Serials: The Journal for the Serials Community ;
-        issn = 0953-0460 ;
-        eissn = 1475-3308
-      >
-
-      comment[publisher] = United Kingdom Serials Group
-      param[base_url] = https://account.serials.uksg.org/
-      nondefparam[base_url2] = https://serials.uksg.org/
-      nondefparam[journal_id] = up-j-s
-      #all processed through metapress
-
-      au < doNotProcess ; doNotProcess ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; 2 ; > #M exists. No articles for that year.
-      au < doNotProcess ; doNotProcess ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; 3 ; > #M exists. No articles for that year.
-      au < doNotProcess ; doNotProcess ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; 4 ; > #M exists. No articles for that year.
-      au < doNotProcess ; doNotProcess ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; 5 ; > #M exists. No articles for that year.
-      au < doNotProcess ; doNotProcess ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; 6 ; > #M exists. No articles for that year.
-      au < doNotProcess ; doNotProcess ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; 7 ; > #M exists. No articles for that year.
-      au < doNotProcess ; doNotProcess ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; 13 ; > #M exists. No articles for that year.
-      au < doNotProcess ; doNotProcess ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; 15 ; > #M exists. No articles for that year.
-      au < doNotProcess ; doNotProcess ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; 22 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; 23 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; 24 ; >
-
-  }
-
 }
 
 {
@@ -2591,7 +2348,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -2694,7 +2451,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -2737,7 +2494,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -2763,44 +2520,6 @@
 }
 {
   publisher <
-    name = Aperio ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
-    attr[start_stem] = index.php/
-    ###Moved to Janeway and new contract###
-
-  {
-
-      title <
-        name = Journal of Modern Philosophy ;
-        eissn = 2644-0652
-      >
-
-      comment[publisher] = Aperio
-      param[base_url] = https://account.jmphil.org/
-      nondefparam[base_url2] = https://jmphil.org/
-      nondefparam[journal_id] = uv1-j-jmp
-
-      au < doNotProcess ; doNotProcess ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; 2019 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; 2020 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; 2021 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 4 ; Journal of Modern Philosophy Volume 2022 ; 2022 ; 4 ; >
-      au < exists ; exists ; 2023 ; 5 ; Journal of Modern Philosophy Volume 2023 ; 2023 ; 5 ; >
-      au < exists ; exists ; 2024 ; 6 ; Journal of Modern Philosophy Volume 2024 ; 2024 ; 6 ; >
-
-  }
-
-}
-
-{
-  publisher <
     name = Virginia Tech Publishing ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
@@ -2811,7 +2530,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -2941,7 +2660,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -3009,7 +2728,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -3026,6 +2745,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; 3 ; >
+      au < exists ; exists ; 2023 ; 4 ; Journal of Critical Southern Studies Volume 2023 ; 2023 ; 4 ; >
 
   }
   {
@@ -3059,13 +2779,10 @@
     info[poller] = 8
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    #implicit < status ; status2 ; year ; nondefparam[volume_name] ; name ; param[year] ; param[base_url] ; hidden[proxy] >
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -3232,7 +2949,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -3280,7 +2997,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -3335,7 +3052,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -3386,7 +3103,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -3420,7 +3137,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
@@ -3463,7 +3180,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-    attr[start_stem] = index.php/
+    #attr[start_stem] = index.php/
 
   {
 
