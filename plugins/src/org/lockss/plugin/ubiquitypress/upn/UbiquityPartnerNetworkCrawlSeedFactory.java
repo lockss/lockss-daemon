@@ -32,11 +32,21 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ubiquitypress.upn;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.lockss.crawler.BaseCrawlSeed;
 import org.lockss.crawler.CrawlSeed;
 import org.lockss.crawler.CrawlSeedFactory;
 import org.lockss.daemon.Crawler.CrawlerFacade;
+import org.lockss.daemon.PluginException;
+import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.util.Logger;
+import org.lockss.util.UrlUtil;
 
 public class UbiquityPartnerNetworkCrawlSeedFactory implements CrawlSeedFactory {
 
@@ -47,12 +57,39 @@ public class UbiquityPartnerNetworkCrawlSeedFactory implements CrawlSeedFactory 
         return new UbiquityPartnerNetworkCrawlSeed(crawlFacade);
     }
 
-    public class UbiquityPartnerNetworkCrawlSeed extends BaseCrawlSeed {
-
-        public UbiquityPartnerNetworkCrawlSeed(CrawlerFacade crawlerFacade) {
-            super(crawlerFacade);
-        }
-        
-    }
+    public static class UbiquityPartnerNetworkCrawlSeed extends BaseCrawlSeed {
     
+            public static Set<String> deceasedAUs = new HashSet<>(Arrays.asList("org|lockss|plugin|ubiquitypress|upn|ClockssUbiquityPartnerNetworkPlugin&base_url~https%3A%2F%2Faccount%2Eestetikajournal%2Eorg%2F&year~2022"));
+            private String year;
+            private String baseUrl;
+    
+            public UbiquityPartnerNetworkCrawlSeed(CrawlerFacade crawlerFacade) {
+                super(crawlerFacade);
+            }
+    
+            /**
+            * Add any initialization here for lazy initialization
+            */
+            @Override
+            protected void initialize() throws ConfigurationException, PluginException, IOException {
+                baseUrl = au.getConfiguration().get("base_url2");
+                year = au.getConfiguration().get("year");
+                log.debug3("stored params: " + baseUrl + year);
+            }
+    
+            @Override
+            public Collection<String> doGetStartUrls() throws ConfigurationException,
+            PluginException, IOException {
+                if(deceasedAUs.contains(au.getAuId())){
+                    Collection<String> uUrls = new ArrayList<String>(2);
+                    String s = baseUrl + "lockss/year/" + year;
+                    uUrls.add(s);
+                    uUrls.add(UrlUtil.replaceScheme(s, "https", "http"));
+                    log.debug3("The start url getting changed is " + uUrls.toString());
+                    return uUrls;
+                }else{
+                    return super.doGetStartUrls();
+                }
+            }
+        }
 }
