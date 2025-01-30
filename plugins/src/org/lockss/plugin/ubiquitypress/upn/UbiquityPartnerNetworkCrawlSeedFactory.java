@@ -67,21 +67,13 @@ public class UbiquityPartnerNetworkCrawlSeedFactory implements CrawlSeedFactory 
                 super(crawlerFacade);
             }
     
-            /**
-            * Add any initialization here for lazy initialization
-            */
-            @Override
-            protected void initialize() throws ConfigurationException, PluginException, IOException {
-                baseUrl = au.getConfiguration().get("base_url2");
-                year = au.getConfiguration().get("year");
-                log.debug3("stored params: " + baseUrl + year);
-            }
-    
             @Override
             public Collection<String> doGetStartUrls() throws ConfigurationException,
             PluginException, IOException {
                 if(deceasedAUs.contains(au.getAuId())){
                     Collection<String> uUrls = new ArrayList<String>(2);
+                    baseUrl = au.getConfiguration().get("base_url2");
+                    year = au.getConfiguration().get("year");
                     String s = baseUrl + "lockss/year/" + year;
                     uUrls.add(s);
                     uUrls.add(UrlUtil.replaceScheme(s, "https", "http"));
