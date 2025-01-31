@@ -23,7 +23,7 @@
       param[base_url] = https://jols.uobaghdad.edu.iq/
       param[journal_id] = jols
 
-      au < ready ; exists ; 2005 ; Journal of Legal Sciences Volume 2005 ; 20 ; 2005 ; >
+      au < crawling ; exists ; 2005 ; Journal of Legal Sciences Volume 2005 ; 20 ; 2005 ; >
       au < manifest ; exists ; 2014 ; Journal of Legal Sciences Volume 2014 ; 29 ; 2014 ; >
       au < manifest ; exists ; 2015 ; Journal of Legal Sciences Volume 2015 ; 30 ; 2015 ; >
       au < manifest ; exists ; 2016 ; Journal of Legal Sciences Volume 2016 ; 31 ; 2016 ; >
