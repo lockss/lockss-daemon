@@ -27,14 +27,14 @@
       param[journal_id] = smw
 
       au < finished ; frozen ; 2001 ; 2001 ; Swiss Medical Weekly Volume 131 ; 131 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2002 ; 2002 ; Swiss Medical Weekly Volume 132 ; 132 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; Swiss Medical Weekly Volume 133 ; 133 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; Swiss Medical Weekly Volume 134 ; 134 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; Swiss Medical Weekly Volume 135 ; 135 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; Swiss Medical Weekly Volume 136 ; 136 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; Swiss Medical Weekly Volume 137 ; 137 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; Swiss Medical Weekly Volume 138 ; 138 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; Swiss Medical Weekly Volume 139 ; 139 ; >
+      au < testing ; exists ; 2002 ; 2002 ; Swiss Medical Weekly Volume 132 ; 132 ; >
+      au < testing ; exists ; 2003 ; 2003 ; Swiss Medical Weekly Volume 133 ; 133 ; >
+      au < testing ; exists ; 2004 ; 2004 ; Swiss Medical Weekly Volume 134 ; 134 ; >
+      au < testing ; exists ; 2005 ; 2005 ; Swiss Medical Weekly Volume 135 ; 135 ; >
+      au < testing ; exists ; 2006 ; 2006 ; Swiss Medical Weekly Volume 136 ; 136 ; >
+      au < testing ; exists ; 2007 ; 2007 ; Swiss Medical Weekly Volume 137 ; 137 ; >
+      au < testing ; exists ; 2008 ; 2008 ; Swiss Medical Weekly Volume 138 ; 138 ; >
+      au < testing ; exists ; 2009 ; 2009 ; Swiss Medical Weekly Volume 139 ; 139 ; >
       au < finished ; crawling ; 2010 ; 2010 ; Swiss Medical Weekly Volume 140 ; 140 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2011 ; 2011 ; Swiss Medical Weekly Volume 141 ; 141 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2012 ; 2012 ; Swiss Medical Weekly Volume 142 ; 142 ; reingest3.clockss.org:8083 >
