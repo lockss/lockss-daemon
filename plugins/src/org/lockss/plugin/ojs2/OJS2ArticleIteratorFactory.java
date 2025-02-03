@@ -257,6 +257,9 @@ public class OJS2ArticleIteratorFactory
       
       try {
         Lexer.STRICT_REMARKS = false; // Accept common variants of HTML comments
+
+        log.debug3("processToc url " + url + ", with encoding: " + encoding);
+
         InputStreamSource source = new InputStreamSource(in, encoding);
         Parser parser = new Parser(new Lexer(new Page(source)), new LoggerAdapter(url));
         NodeList nodeList = parser.extractAllNodesThatMatch(HtmlNodeFilters.tagWithAttribute("table", "class", "tocArticle"));
