@@ -88,8 +88,8 @@
       >
 
       comment[publisher] = Helsinki University Press
-      param[base_url] = https://account.estetikajournal.org/
-      nondefparam[base_url2] = https://estetikajournal.org/
+      param[base_url] = https://estetikajournal.org/
+      nondefparam[base_url2] = https://account.estetikajournal.org/
       nondefparam[journal_id] = uh-j-eteja
 
       au < superseded ; exists ; 2008 ; 45 ; Estetika: The European Journal of Aesthetics Volume 2008 [superseded] ; 2008 ; 45 ; >
@@ -119,8 +119,8 @@
       >
 
       comment[publisher] = Helsinki University Press
-      param[base_url] = https://account.journal-njmr.org/
-      nondefparam[base_url2] = https://journal-njmr.org/
+      param[base_url] = https://journal-njmr.org/
+      nondefparam[base_url2] = https://account.journal-njmr.org/
       nondefparam[journal_id] = uh-j-njmr
 
       au < finished ; finished ; 2011 ; 1 ; Nordic Journal of Migration Research Volume 2011 ; 2011 ; 1 ; >
@@ -147,8 +147,8 @@
       >
 
       comment[publisher] = Helsinki University Press
-      param[base_url] = https://account.journal-redescriptions.org/
-      nondefparam[base_url2] = https://journal-redescriptions.org/
+      param[base_url] = https://journal-redescriptions.org/
+      nondefparam[base_url2] = https://account.journal-redescriptions.org/
       nondefparam[journal_id] = uh-j-rptchft
 
       au < exists ; exists ; 1997 ; 1 ; Redescriptions Volume 1997 ; 1997 ; 1 ; >
