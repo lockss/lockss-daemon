@@ -246,8 +246,8 @@ public class TestLockssDaemon extends LockssTestCase {
     }
   }
   
-  public void testMinJavaVersion() throws Exception {
-    assertEquals(JavaVersion.JAVA_1_8, LockssDaemon.MIN_JAVA_VERSION);
+  public void testReqJavaVersion() throws Exception {
+    assertEquals(JavaVersion.JAVA_1_8, LockssDaemon.REQUIRED_JAVA_VERSION);
   }
   
   List events;

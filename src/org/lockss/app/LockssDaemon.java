@@ -67,7 +67,7 @@ public class LockssDaemon extends LockssApp {
 
   private static final String PREFIX = Configuration.PREFIX + "daemon.";
 
-  public static final JavaVersion MIN_JAVA_VERSION = JavaVersion.JAVA_1_8;
+  public static final JavaVersion REQUIRED_JAVA_VERSION = JavaVersion.JAVA_1_8;
 
   /**
    * LOCKSS is a trademark of Stanford University.  Stanford hereby grants you
@@ -1062,8 +1062,8 @@ public class LockssDaemon extends LockssApp {
    */
   public static void main(String[] args) {
     LockssDaemon daemon;
-    if (!SystemUtils.isJavaVersionAtLeast(MIN_JAVA_VERSION)) {
-      System.err.println("LOCKSS requires at least Java " + MIN_JAVA_VERSION +
+    if (!REQUIRED_JAVA_VERSION.toString().equals(SystemUtils.JAVA_SPECIFICATION_VERSION)) {
+      System.err.println("LOCKSS 1.x requires Java " + REQUIRED_JAVA_VERSION +
                          ", this is " + SystemUtils.JAVA_VERSION +
                          ", exiting.");
       System.exit(Constants.EXIT_CODE_JAVA_VERSION);
