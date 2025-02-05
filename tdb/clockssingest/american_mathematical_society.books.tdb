@@ -502,7 +502,7 @@
     au < finished ; manifest ; 2016 ; History of Math 2016 ; 2016 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; History of Math 2020 ; 2020 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; History of Math 2021 ; 2021 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2024 ; History of Math 2024 ; 2024 ; https://www.ams.org/ ; >
+    au < notReady ; exists ; 2024 ; History of Math 2024 ; 2024 ; https://www.ams.org/ ; > #login found on http://www.ams.org/books/hmath/046/hmath046.pdf
 
     }
    
@@ -623,7 +623,7 @@
     au < finished ; manifest ; 2020 ; Spectrum 2020 ; 2020 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Spectrum 2021 ; 2021 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Spectrum 2022 ; 2022 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2024 ; Spectrum 2024 ; 2024 ; https://www.ams.org/ ; >
+    au < notReady ; exists ; 2024 ; Spectrum 2024 ; 2024 ; https://www.ams.org/ ; > #login found on http://www.ams.org/books/spec/105/spec105.pdf
 
     }
    
@@ -823,7 +823,7 @@
     au < finished ; manifest ; 2019 ; Courant Lecture Notes 2019 ; 2019 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Courant Lecture Notes 2020 ; 2020 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; Courant Lecture Notes 2022 ; 2022 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2024 ; Courant Lecture Notes 2024 ; 2024 ; https://www.ams.org/ ; >
+    au < notReady ; exists ; 2024 ; Courant Lecture Notes 2024 ; 2024 ; https://www.ams.org/ ; > #login found on http://www.ams.org/books/cln/033/cln033.pdf
 
     }
 
@@ -983,7 +983,7 @@
     au < finished ; manifest ; 2021 ; Graduate Studies in Mathematics 2021 ; 2021 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Graduate Studies in Mathematics 2022 ; 2022 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Graduate Studies in Mathematics 2023 ; 2023 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2024 ; Graduate Studies in Mathematics 2024 ; 2024 ; https://www.ams.org/ ; >
+    au < notReady ; exists ; 2024 ; Graduate Studies in Mathematics 2024 ; 2024 ; https://www.ams.org/ ; > #login found on 		http://www.ams.org/books/gsm/250/gsm250.pdf
 
     }
 
@@ -1051,7 +1051,7 @@
     au < finished ; manifest ; 2021 ; The Student Mathematical Library 2021 ; 2021 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; The Student Mathematical Library 2022 ; 2022 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; The Student Mathematical Library 2023 ; 2023 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2024 ; The Student Mathematical Library 2024 ; 2024 ; https://www.ams.org/ ; >
+    au < notReady ; exists ; 2024 ; The Student Mathematical Library 2024 ; 2024 ; https://www.ams.org/ ; > # login found on http://www.ams.org/books/stml/108/stml108.pdf
 
     }
 
