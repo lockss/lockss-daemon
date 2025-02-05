@@ -272,10 +272,18 @@ public class OJS2ArticleIteratorFactory
         }
       }
       catch (UnsupportedEncodingException e) {
-        e.printStackTrace();
+        log.error(String.format(
+                "Error processing TOC in: %s ProcessToc URL: %s Encoding: %s",
+                au.getName(), url, encoding
+        ), e);
+        //e.printStackTrace();
       }
       catch (ParserException e) {
-        e.printStackTrace();
+        log.error(String.format(
+                "Error processing TOC in: %s ProcessToc URL: %s Encoding: %s",
+                au.getName(), url, encoding
+        ), e);
+        //e.printStackTrace();
       }
       
     }
