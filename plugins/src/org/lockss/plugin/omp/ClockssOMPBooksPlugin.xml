@@ -56,12 +56,12 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Open Monograph Press Books Plugin (CLOCKSS), Base URL %s, Publisher ID %s, ISBN %s", base_url, publisher_id, isbn</string>
+    <string>"Open Monograph Press Books Plugin (CLOCKSS), Base URL %s, Publisher ID %s, Resource ID %s", base_url, publisher_id, resource_id</string>
   </entry>
   <entry>
     <string>au_start_url</string>
     <list>
-      <string>"%s%s/catalog/book/ed-%s", to_https(base_url), publisher_id, isbn</string>
+      <string>"%s%s/catalog/book/%s", to_https(base_url), publisher_id, resource_id</string>
     </list>
   </entry>
   <entry>

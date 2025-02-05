@@ -64,9 +64,9 @@ POSSIBILITY OF SUCH DAMAGE.
                 <defaultOnly>false</defaultOnly>
             </org.lockss.daemon.ConfigParamDescr>
             <org.lockss.daemon.ConfigParamDescr>
-                <key>isbn</key>
-                <displayName>ISBN</displayName>
-                <description>ISBN</description>
+                <key>resource_id</key>
+                <displayName>Resource Identifier</displayName>
+                <description>Resource Identifier</description>
                 <type>1</type>
                 <size>40</size>
                 <definitional>true</definitional>
@@ -97,20 +97,13 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Open Monograph Press Books Plugin, Base URL %s, Publisher ID %s, ISBN %s", base_url, publisher_id, isbn</string>
+        <string>"Open Monograph Press Books Plugin, Base URL %s, Publisher ID %s, Resource ID %s", base_url, publisher_id, resource_id</string>
     </entry>
     <entry>
         <string>au_start_url</string>
         <!-- https://books.ed.ac.uk/edinburgh-diamond/catalog/book/ed-9781912669325 -->
         <list>
-            <!--<string>"%s%s/catalog/book/[^/]+-%s", to_https(base_url), publisher_id, isbn</string>-->
-            <string>"%s%s/catalog/book/ed-%s", to_https(base_url), publisher_id, isbn</string>
-        </list>
-    </entry>
-    <entry>
-        <string>au_permission_url</string>
-        <list>
-            <string>"%s%s/catalog/book/ed-%s", to_https(base_url), publisher_id, isbn</string>
+            <string>"%s%s/catalog/book/%s", base_url, publisher_id, resource_id</string>
         </list>
     </entry>
     <entry>
@@ -176,7 +169,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"%s(public/site|templates|public/presses)/images/", to_https(base_url)</string>
             <string>1,"%spublic/presses/*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$"", to_https(base_url)</string>
             <string>1,"%s(lib/pkp|plugins)/", to_https(base_url), publisher_id</string>
-            <string>1,"%s%s/catalog/(book|view|download)/[^/]+-%s", base_url, publisher_id,isbn</string>
+            <string>1,"%s%s/catalog/(book|view|download)/%s", base_url, publisher_id,resource_id</string>
             <string>1,"%s%s/\$\$\$call\$\$\$/page/page/css\?name=.*", base_url, publisher_id</string>
             <string>1,"%spublic/presses/[^/]+/.*", base_url</string>
             <string>1,"%splugins/generic/pdfJsViewer/.*\.js", base_url</string>
