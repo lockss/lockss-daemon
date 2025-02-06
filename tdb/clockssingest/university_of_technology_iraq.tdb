@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = University of Technology, Iraq ;
+    info[contract] = 2008 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Journal of Soft Computing and Computer Applications (JSCCA) ;
+        eissn = 3008-1084
+      >
+
+      comment[publisher] = University of Technology, Iraq
+      param[base_url] = https://jscca.uotechnology.edu.iq/
+      param[journal_abbr] = jscca
+
+      au < manifest ; exists ; 2024 ; Journal of Soft Computing and Computer Applications (JSCCA) Volume 1 ; 1 ; >
+      au < expected ; exists ; 2025 ; Journal of Soft Computing and Computer Applications (JSCCA) Volume 2 ; 2 ; >
+
+  }
+
+}
