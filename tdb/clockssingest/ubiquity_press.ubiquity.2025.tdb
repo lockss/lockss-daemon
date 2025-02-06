@@ -9,8 +9,7 @@
 
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
-    #attr[start_stem] = index.php/
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
 
   {
 
@@ -20,8 +19,8 @@
       >
 
       comment[publisher] = frommann-holzboog
-      param[base_url] = https://account.steiner-studies.org/
-      nondefparam[base_url2] = https://steiner-studies.org/
+      param[base_url] = https://steiner-studies.org/
+      nondefparam[base_url2] = https://account.steiner-studies.org/
       nondefparam[journal_id] = up-j-ssizsf
 
       au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 ; 1 ; >
@@ -45,7 +44,7 @@
 
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
     #attr[start_stem] = index.php/
 
   {
@@ -56,8 +55,8 @@
       >
 
       comment[publisher] = KIT Scientific Publishing
-      param[base_url] = https://account.hysafejournal.org/
-      nondefparam[base_url2] = https://hysafejournal.org/
+      param[base_url] = https://hysafejournal.org/
+      nondefparam[base_url2] = https://account.hysafejournal.org/
       nondefparam[journal_id] = kitl-j-hs
 
       au < exists ; exists ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; >
@@ -105,7 +104,7 @@
       au < superseded ; exists ; 2018 ; 55 ; Estetika: The European Journal of Aesthetics Volume 2018 [superseded] ; 2018 ; 55 ; >
       au < superseded ; exists ; 2019 ; 56 ; Estetika: The European Journal of Aesthetics Volume 2019 [superseded] ; 2019 ; 56 ; >
       au < superseded ; exists ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 [superseded] ; 2020 ; 57 ; >
-      au < finished ; exists ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; 58 ; >
+      au < finished ; exists ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; 58 ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 [superseded] ; 2022 ; 59 ; >
       au < exists ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; >
       au < exists ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; >
@@ -123,17 +122,17 @@
       nondefparam[base_url2] = https://account.journal-njmr.org/
       nondefparam[journal_id] = uh-j-njmr
 
-      au < finished ; finished ; 2011 ; 1 ; Nordic Journal of Migration Research Volume 2011 ; 2011 ; 1 ; >
-      au < finished ; finished ; 2012 ; 2 ; Nordic Journal of Migration Research Volume 2012 ; 2012 ; 2 ; >
-      au < finished ; finished ; 2013 ; 3 ; Nordic Journal of Migration Research Volume 2013 ; 2013 ; 3 ; >
-      au < finished ; finished ; 2014 ; 4 ; Nordic Journal of Migration Research Volume 2014 ; 2014 ; 4 ; >
-      au < finished ; finished ; 2015 ; 5 ; Nordic Journal of Migration Research Volume 2015 ; 2015 ; 5 ; >
-      au < finished ; finished ; 2016 ; 6 ; Nordic Journal of Migration Research Volume 2016 ; 2016 ; 6 ; >
-      au < finished ; finished ; 2017 ; 7 ; Nordic Journal of Migration Research Volume 2017 ; 2017 ; 7 ; >
-      au < finished ; finished ; 2018 ; 8 ; Nordic Journal of Migration Research Volume 2018 ; 2018 ; 8 ; >
-      au < finished ; finished ; 2019 ; 9 ; Nordic Journal of Migration Research Volume 2019 ; 2019 ; 9 ; >
-      au < finished ; finished ; 2020 ; 10 ; Nordic Journal of Migration Research Volume 2020 ; 2020 ; 10 ; >
-      au < finished ; crawling ; 2021 ; 11 ; Nordic Journal of Migration Research Volume 2021 ; 2021 ; 11 ; >
+      au < finished ; finished ; 2011 ; 1 ; Nordic Journal of Migration Research Volume 2011 ; 2011 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 2 ; Nordic Journal of Migration Research Volume 2012 ; 2012 ; 2 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 3 ; Nordic Journal of Migration Research Volume 2013 ; 2013 ; 3 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 4 ; Nordic Journal of Migration Research Volume 2014 ; 2014 ; 4 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; 5 ; Nordic Journal of Migration Research Volume 2015 ; 2015 ; 5 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; 6 ; Nordic Journal of Migration Research Volume 2016 ; 2016 ; 6 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 7 ; Nordic Journal of Migration Research Volume 2017 ; 2017 ; 7 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 8 ; Nordic Journal of Migration Research Volume 2018 ; 2018 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 9 ; Nordic Journal of Migration Research Volume 2019 ; 2019 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 10 ; Nordic Journal of Migration Research Volume 2020 ; 2020 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 11 ; Nordic Journal of Migration Research Volume 2021 ; 2021 ; 11 ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 12 ; Nordic Journal of Migration Research Volume 2022 [superseded] ; 2022 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 13 ; Nordic Journal of Migration Research Volume 2023 ; 2023 ; 13 ; >
       au < exists ; exists ; 2024 ; 14 ; Nordic Journal of Migration Research Volume 2024 ; 2024 ; 14 ; >
@@ -192,7 +191,7 @@
 
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
     #attr[start_stem] = index.php/
 
   {
@@ -203,19 +202,19 @@
       >
 
       comment[publisher] = Liverpool University Press
-      param[base_url] = https://account.modernlanguagesopen.org/
-      nondefparam[base_url2] = https://modernlanguagesopen.org/
+      param[base_url] = https://modernlanguagesopen.org/
+      nondefparam[base_url2] = https://account.modernlanguagesopen.org/
       nondefparam[journal_id] = up-j-mlo
 
-      au < doNotProcess ; doNotProcess ; 2014 ; 1 ; Modern Languages Open Volume 2014 ; 2014 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2 ; Modern Languages Open Volume 2015 ; 2015 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 6 ; Modern Languages Open Volume 2019 ; 2019 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 7 ; Modern Languages Open Volume 2020 ; 2020 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 9 ; Modern Languages Open Volume 2022 ; 2022 ; 9 ; >
+      au < finished ; finished ; 2014 ; 1 ; Modern Languages Open Volume 2014 ; 2014 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; 2 ; Modern Languages Open Volume 2015 ; 2015 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; 5 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; 6 ; Modern Languages Open Volume 2019 ; 2019 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 7 ; Modern Languages Open Volume 2020 ; 2020 ; 7 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; 8 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2022 ; 9 ; Modern Languages Open Volume 2022 [superseded] ; 2022 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; 10 ; >
       au < exists ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; >
 
@@ -233,7 +232,7 @@
 
     provider = London School of Economics and Political Science
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
     #attr[start_stem] = index.php/
 
   {
@@ -244,14 +243,14 @@
       >
 
       comment[publisher] = London School of Economics and Political Science
-      param[base_url] = https://account.jied.lse.ac.uk/
-      nondefparam[base_url2] = https://jied.lse.ac.uk/
+      param[base_url] = https://jied.lse.ac.uk/
+      nondefparam[base_url2] = https://account.jied.lse.ac.uk/
       nondefparam[journal_id] = lse-j-jied
 
-      au < doNotProcess ; doNotProcess ; 2019 ; 1 ; Journal of Illicit Economies and Development Volume 2019 ; 2019 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 2 ; Journal of Illicit Economies and Development Volume 2020 ; 2020 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 3 ; Journal of Illicit Economies and Development Volume 2021 ; 2021 ; 3 ; >
-      au < exists ; exists ; 2022 ; 4 ; Journal of Illicit Economies and Development Volume 2022 ; 2022 ; 4 ; >
+      au < finished ; finished ; 2019 ; 1 ; Journal of Illicit Economies and Development Volume 2019 ; 2019 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 2 ; Journal of Illicit Economies and Development Volume 2020 ; 2020 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2021 ; 3 ; Journal of Illicit Economies and Development Volume 2021 ; 2021 ; 3 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2022 ; 4 ; Journal of Illicit Economies and Development Volume 2022 ; 2022 ; 4 ; >
       au < exists ; exists ; 2023 ; 5 ; Journal of Illicit Economies and Development Volume 2023 ; 2023 ; 5 ; >
       au < exists ; exists ; 2024 ; 6 ; Journal of Illicit Economies and Development Volume 2024 ; 2024 ; 6 ; >
 
@@ -265,15 +264,15 @@
       >
 
       comment[publisher] = London School of Economics and Political Science
-      param[base_url] = https://account.journal.ilpnetwork.org/
-      nondefparam[base_url2] = https://journal.ilpnetwork.org/
+      param[base_url] = https://journal.ilpnetwork.org/
+      nondefparam[base_url2] = https://account.journal.ilpnetwork.org/
       nondefparam[journal_id] = lse-j-jltc
 
-      au < doNotProcess ; doNotProcess ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; 2 ; > #problem with volume url?
-      au < doNotProcess ; doNotProcess ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 ; 9 ; >
+      au < finished ; finished ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; 2 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; 5 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; 8 ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 [superseded] ; 2022 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Journal of Long-Term Care Volume 2023 ; 2023 ; 10 ; >
       au < exists ; exists ; 2024 ; 11 ; Journal of Long-Term Care Volume 2024 ; 2024 ; 11 ; >
 
@@ -287,13 +286,13 @@
       >
 
       comment[publisher] = London School of Economics and Political Science
-      param[base_url] = https://account.ppr.lse.ac.uk/
-      nondefparam[base_url2] = https://ppr.lse.ac.uk/
+      param[base_url] = https://ppr.lse.ac.uk/
+      nondefparam[base_url2] = https://account.ppr.lse.ac.uk/
       nondefparam[journal_id] = lse-j-lseppr
 
-      au < doNotProcess ; doNotProcess ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 3 ; LSE Public Policy Review Volume 2022 ; 2022 ; 3 ; >
+      au < finished ; finished ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; 2 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2022 ; 3 ; LSE Public Policy Review Volume 2022 [superseded] ; 2022 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; LSE Public Policy Review Volume 2023 ; 2023 ; 4 ; >
       au < exists ; exists ; 2024 ; 5 ; LSE Public Policy Review Volume 2024 ; 2024 ; 5 ; >
 
@@ -307,8 +306,8 @@
       >
 
       comment[publisher] = London School of Economics and Political Science
-      param[base_url] = https://account.philosophyofphysics.lse.ac.uk/
-      nondefparam[base_url2] = https://philosophyofphysics.lse.ac.uk/
+      param[base_url] = https://philosophyofphysics.lse.ac.uk/
+      nondefparam[base_url2] = https://account.philosophyofphysics.lse.ac.uk/
       nondefparam[journal_id] = lse-j-pp
 
       au < doNotProcess ; doNotProcess ; 2023 ; 1 ; Philosophy of Physics Volume 2023 ; 2023 ; 1 ; >
@@ -325,8 +324,8 @@
       >
 
       comment[publisher] = London School of Economics and Political Science
-      param[base_url] = https://account.economia.lse.ac.uk/
-      nondefparam[base_url2] = https://economia.lse.ac.uk/
+      param[base_url] = https://economia.lse.ac.uk/
+      nondefparam[base_url2] = https://account.economia.lse.ac.uk/
       nondefparam[journal_id] = lse-j-elaceaj
 
       au < doNotProcess ; doNotProcess ; 2000 ; 1 ; Economía Volume 2000 ; 2000 ; 1 ; >
@@ -380,8 +379,8 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = https://account.designsforlearning.nu/
-      nondefparam[base_url2] = https://designsforlearning.nu/
+      param[base_url] = https://designsforlearning.nu/
+      nondefparam[base_url2] = https://account.designsforlearning.nu/
       nondefparam[journal_id] = su-j-dl
 
       au < doNotProcess ; doNotProcess ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 ; 1 ; >
@@ -411,8 +410,8 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = https://account.njtcg.org/
-      nondefparam[base_url2] = https://njtcg.org/
+      param[base_url] = https://njtcg.org/
+      nondefparam[base_url2] = https://account.njtcg.org/
       nondefparam[journal_id] = su-j-njtcg
 
       au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Nordic Journal of Transitions, Careers and Guidance Volume 2020 ; 2020 ; 1 ; >
@@ -431,8 +430,8 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = https://account.rurallandscapesjournal.com/
-      nondefparam[base_url2] = https://rurallandscapesjournal.com/
+      param[base_url] = https://rurallandscapesjournal.com/
+      nondefparam[base_url2] = https://account.rurallandscapesjournal.com/
       nondefparam[journal_id] = su-j-rlseh
 
       au < doNotProcess ; doNotProcess ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; 1 ; >
@@ -459,8 +458,8 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = https://account.sjdr.se/
-      nondefparam[base_url2] = https://sjdr.se/
+      param[base_url] = https://sjdr.se/
+      nondefparam[base_url2] = https://account.sjdr.se/
       nondefparam[journal_id] = su-j-sjdr
 
       au < exists ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; 1 ; >
@@ -500,8 +499,8 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = https://account.sjwop.com/
-      nondefparam[base_url2] = https://sjwop.com/
+      param[base_url] = https://sjwop.com/
+      nondefparam[base_url2] = https://account.sjwop.com/
       nondefparam[journal_id] = su-j-sjwop
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; Scandinavian Journal of Work and Organizational Psychology Volume 2016 ; 2016 ; 1 ; >
@@ -524,8 +523,8 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = https://account.iberoamericana.se/
-      nondefparam[base_url2] = https://iberoamericana.se/
+      param[base_url] = https://iberoamericana.se/
+      nondefparam[base_url2] = https://account.iberoamericana.se/
       nondefparam[journal_id] = su-j-injlacs
 
       au < doNotProcess ; doNotProcess ; 2001 ; 31 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2001 ; 2001 ; 31 ; >
@@ -562,8 +561,8 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = https://account.franorfon.org/
-      nondefparam[base_url2] = https://franorfon.org/
+      param[base_url] = https://franorfon.org/
+      nondefparam[base_url2] = https://account.franorfon.org/
       nondefparam[journal_id] = su-j-njfsr
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2018 ; 2018 ; 1 ; >
@@ -584,8 +583,8 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = https://account.a.tellusjournals.se/
-      nondefparam[base_url2] = https://a.tellusjournals.se/
+      param[base_url] = https://a.tellusjournals.se/
+      nondefparam[base_url2] = https://account.a.tellusjournals.se/
       nondefparam[journal_id] = su-j-tadmo
       #2000-2016 processed under the publisher Co-action.
 
@@ -677,8 +676,8 @@
       >
 
       comment[publisher] = Stockholm University Press
-      param[base_url] = https://account.b.tellusjournals.se/
-      nondefparam[base_url2] = https://b.tellusjournals.se/
+      param[base_url] = https://b.tellusjournals.se/
+      nondefparam[base_url2] = https://account.b.tellusjournals.se/
       nondefparam[journal_id] = su-j-tbcpm
       #2000-2016 processed under the publisher Co-action.
 
@@ -749,8 +748,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.annalsofglobalhealth.org/
-      nondefparam[base_url2] = https://annalsofglobalhealth.org/
+      param[base_url] = https://annalsofglobalhealth.org/
+      nondefparam[base_url2] = https://account.annalsofglobalhealth.org/
       nondefparam[journal_id] = up-j-agh
 
       au < doNotProcess ; doNotProcess ; 2014 ; 1 ; Annals of Global Health Volume 2014 ; 2014 ; 1 ; >
@@ -775,8 +774,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.journal-buildingscities.org/
-      nondefparam[base_url2] = https://journal-buildingscities.org/
+      param[base_url] = https://journal-buildingscities.org/
+      nondefparam[base_url2] = https://account.journal-buildingscities.org/
       nondefparam[journal_id] = up-j-bc
 
       au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 ; 1 ; >
@@ -795,8 +794,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.current-journal.com/
-      nondefparam[base_url2] = https://current-journal.com/
+      param[base_url] = https://current-journal.com/
+      nondefparam[base_url2] = https://account.current-journal.com/
       nondefparam[journal_id] = up-j-ctjme
 
       au < doNotProcess ; doNotProcess ; 2003 ; 19 ; Current: Journal of Marine Education Volume 2003 ; 2003 ; 19 ; >
@@ -832,8 +831,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.revista-anglo-saxonica.org/
-      nondefparam[base_url2] = https://revista-anglo-saxonica.org/
+      param[base_url] = https://revista-anglo-saxonica.org/
+      nondefparam[base_url2] = https://account.revista-anglo-saxonica.org/
       nondefparam[journal_id] = up-j-as
       #2019 AUs are published on the 2020 manifest page. See https://account.revista-anglo-saxonica.org/lockss/year/2020/
 
@@ -854,8 +853,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.ajar.arena-architecture.eu/
-      nondefparam[base_url2] = https://ajar.arena-architecture.eu/
+      param[base_url] = https://ajar.arena-architecture.eu/
+      nondefparam[base_url2] = https://account.ajar.arena-architecture.eu/
       nondefparam[journal_id] = up-j-arenajar
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; 1 ; >
@@ -879,8 +878,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.archaeologybulletin.org/
-      nondefparam[base_url2] = https://archaeologybulletin.org/
+      param[base_url] = https://archaeologybulletin.org/
+      nondefparam[base_url2] = https://account.archaeologybulletin.org/
       nondefparam[journal_id] = up-j-bha
 
       au < exists ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; 1 ; >
@@ -928,8 +927,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.theoryandpractice.citizenscienceassociation.org/
-      nondefparam[base_url2] = https://theoryandpractice.citizenscienceassociation.org/
+      param[base_url] = https://theoryandpractice.citizenscienceassociation.org/
+      nondefparam[base_url2] = https://account.theoryandpractice.citizenscienceassociation.org/
       nondefparam[journal_id] = up-j-cstp
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; 1 ; >
@@ -952,8 +951,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.cpsyjournal.org/
-      nondefparam[base_url2] = https://cpsyjournal.org/
+      param[base_url] = https://cpsyjournal.org/
+      nondefparam[base_url2] = https://account.cpsyjournal.org/
       nondefparam[journal_id] = up-j-cp
 
       au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Computational Psychiatry Volume 2017 ; 2017 ; 1 ; >
@@ -975,8 +974,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.datascience.codata.org/
-      nondefparam[base_url2] = https://datascience.codata.org/
+      param[base_url] = https://datascience.codata.org/
+      nondefparam[base_url2] = https://account.datascience.codata.org/
       nondefparam[journal_id] = up-j-dsj
 
       au < doNotProcess ; doNotProcess ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; 1 ; > #M exists. No articles for that year.
@@ -1013,8 +1012,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.futurecitiesandenvironment.com/
-      nondefparam[base_url2] = https://futurecitiesandenvironment.com/
+      param[base_url] = https://futurecitiesandenvironment.com/
+      nondefparam[base_url2] = https://account.futurecitiesandenvironment.com/
       nondefparam[journal_id] = up-j-fce
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; 1 ; >
@@ -1035,8 +1034,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.glocality.eu/
-      nondefparam[base_url2] = https://glocality.eu/
+      param[base_url] = https://glocality.eu/
+      nondefparam[base_url2] = https://account.glocality.eu/
       nondefparam[journal_id] = up-j-g
 
       au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; 1 ; >
@@ -1059,8 +1058,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.ijic.org/
-      nondefparam[base_url2] = https://ijic.org/
+      param[base_url] = https://ijic.org/
+      nondefparam[base_url2] = https://account.ijic.org/
       nondefparam[journal_id] = up-j-ijic
 
       au < doNotProcess ; doNotProcess ; 2000 ; 1 ; International Journal of Integrated Care Volume 2000 ; 2000 ; 1 ; >
@@ -1099,8 +1098,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.rips-irsp.com/
-      nondefparam[base_url2] = https://rips-irsp.com/
+      param[base_url] = https://rips-irsp.com/
+      nondefparam[base_url2] = https://account.rips-irsp.com/
       nondefparam[journal_id] = up-j-irsp
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; 1 ; >
@@ -1123,8 +1122,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.jcircadianrhythms.com/
-      nondefparam[base_url2] = https://jcircadianrhythms.com/
+      param[base_url] = https://jcircadianrhythms.com/
+      nondefparam[base_url2] = https://account.jcircadianrhythms.com/
       nondefparam[journal_id] = up-j-jcr
 
       au < doNotProcess ; doNotProcess ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; 1 ; >
@@ -1160,8 +1159,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.jcms-journal.com/
-      nondefparam[base_url2] = https://jcms-journal.com/
+      param[base_url] = https://jcms-journal.com/
+      nondefparam[base_url2] = https://account.jcms-journal.com/
       nondefparam[journal_id] = up-j-jcms
 
       au < exists ; exists ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; 1 ; >
@@ -1195,8 +1194,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.jeps.efpsa.org/
-      nondefparam[base_url2] = https://jeps.efpsa.org/
+      param[base_url] = https://jeps.efpsa.org/
+      nondefparam[base_url2] = https://account.jeps.efpsa.org/
       nondefparam[journal_id] = up-j-jeps
       #nothing published 2011
 
@@ -1226,8 +1225,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.jime.open.ac.uk/
-      nondefparam[base_url2] = https://jime.open.ac.uk/
+      param[base_url] = https://jime.open.ac.uk/
+      nondefparam[base_url2] = https://account.jime.open.ac.uk/
       nondefparam[journal_id] = up-j-jime
       #nothing published in 2011
 
@@ -1268,8 +1267,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.jmolecularsignaling.com/
-      nondefparam[base_url2] = https://jmolecularsignaling.com/
+      param[base_url] = https://jmolecularsignaling.com/
+      nondefparam[base_url2] = https://account.jmolecularsignaling.com/
       nondefparam[journal_id] = up-j-jms
 
       au < doNotProcess ; doNotProcess ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; 1 ; >
@@ -1299,8 +1298,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.openarchaeologydata.metajnl.com/
-      nondefparam[base_url2] = https://openarchaeologydata.metajnl.com/
+      param[base_url] = https://openarchaeologydata.metajnl.com/
+      nondefparam[base_url2] = https://account.openarchaeologydata.metajnl.com/
       nondefparam[journal_id] = up-j-joad
 
       au < doNotProcess ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; 1 ; >
@@ -1326,8 +1325,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.silkroadsarchaeoheritage.org/
-      nondefparam[base_url2] = https://silkroadsarchaeoheritage.org/
+      param[base_url] = https://silkroadsarchaeoheritage.org/
+      nondefparam[base_url2] = https://account.silkroadsarchaeoheritage.org/
       nondefparam[journal_id] = up-j-srah
 
       au < exists ; exists ; 2023 ; 1 ; Silk Roads Archaeology and Heritage Volume 2023 ; 2023 ; 1 ; >
@@ -1343,8 +1342,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.openhumanitiesdata.metajnl.com/
-      nondefparam[base_url2] = https://openhumanitiesdata.metajnl.com/
+      param[base_url] = https://openhumanitiesdata.metajnl.com/
+      nondefparam[base_url2] = https://account.openhumanitiesdata.metajnl.com/
       nondefparam[journal_id] = up-j-johd
 
       au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; 1 ; >
@@ -1368,8 +1367,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.openpsychologydata.metajnl.com/
-      nondefparam[base_url2] = https://openpsychologydata.metajnl.com/
+      param[base_url] = https://openpsychologydata.metajnl.com/
+      nondefparam[base_url2] = https://account.openpsychologydata.metajnl.com/
       nondefparam[journal_id] = up-j-jopd
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; 1 ; >
@@ -1395,8 +1394,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.openresearchsoftware.metajnl.com/
-      nondefparam[base_url2] = https://openresearchsoftware.metajnl.com/
+      param[base_url] = https://openresearchsoftware.metajnl.com/
+      nondefparam[base_url2] = https://account.openresearchsoftware.metajnl.com/
       nondefparam[journal_id] = up-j-jors
 
       au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; 1 ; >
@@ -1423,8 +1422,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.jbsr.be/
-      nondefparam[base_url2] = https://jbsr.be/
+      param[base_url] = https://jbsr.be/
+      nondefparam[base_url2] = https://account.jbsr.be/
       nondefparam[journal_id] = up-j-jbsr
 
       au < doNotProcess ; doNotProcess ; 2015 ; 99 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2015 ; 2015 ; 99 ; >
@@ -1448,8 +1447,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.mahkuscript.com/
-      nondefparam[base_url2] = https://mahkuscript.com/
+      param[base_url] = https://mahkuscript.com/
+      nondefparam[base_url2] = https://account.mahkuscript.com/
       nondefparam[journal_id] = up-j-mhkujfar
 
       au < doNotProcess ; doNotProcess ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 1 (2016) ; 2016 ; 1 ; >
@@ -1468,8 +1467,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.openbioresources.metajnl.com/
-      nondefparam[base_url2] = https://openbioresources.metajnl.com/
+      param[base_url] = https://openbioresources.metajnl.com/
+      nondefparam[base_url2] = https://account.openbioresources.metajnl.com/
       nondefparam[journal_id] = up-j-ojb
 
       au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; 1 ; >
@@ -1491,8 +1490,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.journalofmore.org/
-      nondefparam[base_url2] = https://journalofmore.org/
+      param[base_url] = https://journalofmore.org/
+      nondefparam[base_url2] = https://account.journalofmore.org/
       nondefparam[journal_id] = su-j-jmre
 
       au < exists ; exists ; 2016 ; 1 ; Journal of Montessori Research & Education Volume 2016 ; 2016 ; 1 ; >
@@ -1510,8 +1509,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.continuityineducation.org/
-      nondefparam[base_url2] = https://continuityineducation.org/
+      param[base_url] = https://continuityineducation.org/
+      nondefparam[base_url2] = https://account.continuityineducation.org/
       nondefparam[journal_id] = up-j-ce
 
       au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Continuity in Education Volume 2020 ; 2020 ; 1 ; >
@@ -1530,8 +1529,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.thecommonsjournal.org/
-      nondefparam[base_url2] = https://thecommonsjournal.org/
+      param[base_url] = https://thecommonsjournal.org/
+      nondefparam[base_url2] = https://account.thecommonsjournal.org/
       nondefparam[journal_id] = up-j-ijc
 
       au < doNotProcess ; doNotProcess ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; 1 ; >
@@ -1563,8 +1562,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.globalheartjournal.com/
-      nondefparam[base_url2] = https://globalheartjournal.com/
+      param[base_url] = https://globalheartjournal.com/
+      nondefparam[base_url2] = https://account.globalheartjournal.com/
       nondefparam[journal_id] = up-j-gh
 
       au < doNotProcess ; doNotProcess ; 2006 ; 1 ; Global Heart Volume 2006 ; 2006 ; 1 ; >
@@ -1597,8 +1596,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.openquaternary.com/
-      nondefparam[base_url2] = https://openquaternary.com/
+      param[base_url] = https://openquaternary.com/
+      nondefparam[base_url2] = https://account.openquaternary.com/
       nondefparam[journal_id] = up-j-oq
 
       au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; 1 ; >
@@ -1621,8 +1620,8 @@
         eissn = 2054-670X
       >
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.psychologicabelgica.com/
-      nondefparam[base_url2] = https://psychologicabelgica.com/
+      param[base_url] = https://psychologicabelgica.com/
+      nondefparam[base_url2] = https://account.psychologicabelgica.com/
       nondefparam[journal_id] = up-j-pb
 
       au < doNotProcess ; doNotProcess ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; 1 ; >
@@ -1656,8 +1655,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.secularismandnonreligion.org/
-      nondefparam[base_url2] = https://secularismandnonreligion.org/
+      param[base_url] = https://secularismandnonreligion.org/
+      nondefparam[base_url2] = https://account.secularismandnonreligion.org/
       nondefparam[journal_id] = up-j-sn
 
       au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; 1 ; >
@@ -1684,8 +1683,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.utrechtjournal.org/
-      nondefparam[base_url2] = https://utrechtjournal.org/
+      param[base_url] = https://utrechtjournal.org/
+      nondefparam[base_url2] = https://account.utrechtjournal.org/
       nondefparam[journal_id] = up-j-ujiel
 
       au < doNotProcess ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; 1 ; >
@@ -1714,8 +1713,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.tremorjournal.org/
-      nondefparam[base_url2] = https://tremorjournal.org/
+      param[base_url] = https://tremorjournal.org/
+      nondefparam[base_url2] = https://account.tremorjournal.org/
       nondefparam[journal_id] = up-j-tohm
 
       au < doNotProcess ; doNotProcess ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; 1 ; >
@@ -1743,8 +1742,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.journalofcognition.org/
-      nondefparam[base_url2] = https://journalofcognition.org/
+      param[base_url] = https://journalofcognition.org/
+      nondefparam[base_url2] = https://account.journalofcognition.org/
       nondefparam[journal_id] = up-j-jc
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; 1 ; >
@@ -1765,8 +1764,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.journal.caa-international.org/
-      nondefparam[base_url2] = https://journal.caa-international.org/
+      param[base_url] = https://journal.caa-international.org/
+      nondefparam[base_url2] = https://account.journal.caa-international.org/
       nondefparam[journal_id] = up-j-jcaa
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; 1 ; >
@@ -1787,8 +1786,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.metaphysicsjournal.com/
-      nondefparam[base_url2] = https://metaphysicsjournal.com/
+      param[base_url] = https://metaphysicsjournal.com/
+      nondefparam[base_url2] = https://account.metaphysicsjournal.com/
       nondefparam[journal_id] = up-j-m
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; 1 ; >
@@ -1809,8 +1808,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.paahjournal.com/
-      nondefparam[base_url2] = https://paahjournal.com/
+      param[base_url] = https://paahjournal.com/
+      nondefparam[base_url2] = https://account.paahjournal.com/
       nondefparam[journal_id] = up-j-pah
 
       au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; 1 ; >
@@ -1832,8 +1831,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.tilburglawreview.com/
-      nondefparam[base_url2] = https://tilburglawreview.com/
+      param[base_url] = https://tilburglawreview.com/
+      nondefparam[base_url2] = https://account.tilburglawreview.com/
       nondefparam[journal_id] = up-j-tlr
       #name changed in 2008 to: Tilburg Law Review: Journal of International and Comparative Law.
 
@@ -1861,8 +1860,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.ssas-yearbook.com/
-      nondefparam[base_url2] = https://ssas-yearbook.com/
+      param[base_url] = https://ssas-yearbook.com/
+      nondefparam[base_url2] = https://account.ssas-yearbook.com/
       nondefparam[journal_id] = up-j-jsv
 
       au < doNotProcess ; doNotProcess ; 2010 ; 1 ; Yearbook of Swiss Administrative Science Volume 2010 ; 2010 ; 1 ; >
@@ -1891,8 +1890,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.transactions.ismir.net/
-      nondefparam[base_url2] = https://transactions.ismir.net/
+      param[base_url] = https://transactions.ismir.net/
+      nondefparam[base_url2] = https://account.transactions.ismir.net/
       nondefparam[journal_id] = up-j-tismir
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; 1 ; >
@@ -1930,8 +1929,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.swisspsychologyopen.com/
-      nondefparam[base_url2] = https://swisspsychologyopen.com/
+      param[base_url] = https://swisspsychologyopen.com/
+      nondefparam[base_url2] = https://account.swisspsychologyopen.com/
       nondefparam[journal_id] = up-j-sposps
 
       au < doNotProcess ; doNotProcess ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 ; 1 ; >
@@ -1949,8 +1948,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.pmejournal.org/
-      nondefparam[base_url2] = https://pmejournal.org/
+      param[base_url] = https://pmejournal.org/
+      nondefparam[base_url2] = https://account.pmejournal.org/
       nondefparam[journal_id] = up-j-pme
 
       au < doNotProcess ; doNotProcess ; 2012 ; 1 ; Perspectives on Medical Education Volume 2012 ; 2012 ; 1 ; >
@@ -1977,8 +1976,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.ubiquityproceedings.com/
-      nondefparam[base_url2] = https://ubiquityproceedings.com/
+      param[base_url] = https://ubiquityproceedings.com/
+      nondefparam[base_url2] = https://account.ubiquityproceedings.com/
       nondefparam[journal_id] = up-j-up
 
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Ubiquity Proceedings Volume 2018 ; 2018 ; 2018 ; >
@@ -2063,8 +2062,8 @@
       >
 
       comment[publisher] = University of Birmingham Library Services
-      param[base_url] = https://account.jps.bham.ac.uk/
-      nondefparam[base_url2] = https://jps.bham.ac.uk/
+      param[base_url] = https://jps.bham.ac.uk/
+      nondefparam[base_url2] = https://account.jps.bham.ac.uk/
       nondefparam[journal_id] = up-j-jps
 
       au < doNotProcess ; doNotProcess ; 2014 ; 1 ; Journal of Philosophy in Schools Volume 2014 ; 2014 ; 1 ; >
@@ -2104,8 +2103,8 @@
       >
 
       comment[publisher] = Utrecht University School of Law
-      param[base_url] = https://account.utrechtlawreview.org/
-      nondefparam[base_url2] = https://utrechtlawreview.org/
+      param[base_url] = https://utrechtlawreview.org/
+      nondefparam[base_url2] = https://account.utrechtlawreview.org/
       nondefparam[journal_id] = up-j-ulr
 
       au < doNotProcess ; doNotProcess ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; 1 ; >
@@ -2154,8 +2153,8 @@
       >
 
       comment[publisher] = United Kingdom Serials Group
-      param[base_url] = https://account.insights.uksg.org/
-      nondefparam[base_url2] = https://insights.uksg.org/
+      param[base_url] = https://insights.uksg.org/
+      nondefparam[base_url2] = https://account.insights.uksg.org/
       nondefparam[journal_id] = up-j-i
 
       au < doNotProcess ; doNotProcess ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; 1 ; >
@@ -2198,8 +2197,8 @@
       >
 
       comment[publisher] = White Rose University Press
-      param[base_url] = https://account.bioj-online.com/
-      nondefparam[base_url2] = https://bioj-online.com/
+      param[base_url] = https://bioj-online.com/
+      nondefparam[base_url2] = https://account.bioj-online.com/
       nondefparam[journal_id] = wr-j-bioj
 
       au < doNotProcess ; doNotProcess ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; 6 ; >
@@ -2228,8 +2227,8 @@
       >
 
       comment[publisher] = White Rose University Press
-      param[base_url] = https://account.euroslajournal.org/
-      nondefparam[base_url2] = https://euroslajournal.org/
+      param[base_url] = https://euroslajournal.org/
+      nondefparam[base_url2] = https://account.euroslajournal.org/
       nondefparam[journal_id] = wr-j-jesla
 
       au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; 1 ; >
@@ -2251,8 +2250,8 @@
       >
 
       comment[publisher] = White Rose University Press
-      param[base_url] = https://account.ujpir-journal.com/
-      nondefparam[base_url2] = https://ujpir-journal.com/
+      param[base_url] = https://ujpir-journal.com/
+      nondefparam[base_url2] = https://account.ujpir-journal.com/
       nondefparam[journal_id] = wr-j-ujpir
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; 1 ; >
@@ -2267,8 +2266,8 @@
       >
 
       comment[publisher] = White Rose University Press
-      param[base_url] = https://account.writingchinesejournal.org/
-      nondefparam[base_url2] = https://writingchinesejournal.org/
+      param[base_url] = https://writingchinesejournal.org/
+      nondefparam[base_url2] = https://account.writingchinesejournal.org/
       nondefparam[journal_id] = wr-j-wcajcsl
 
       au < doNotProcess ; doNotProcess ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 ; 1 ; >
@@ -2301,8 +2300,8 @@
       >
 
       comment[publisher] = Centre for Security Governance
-      param[base_url] = https://account.stabilityjournal.org/
-      nondefparam[base_url2] = https://stabilityjournal.org/
+      param[base_url] = https://stabilityjournal.org/
+      nondefparam[base_url2] = https://account.stabilityjournal.org/
       nondefparam[journal_id] = up-j-sijsd
 
       au < doNotProcess ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; >
@@ -2344,8 +2343,8 @@
       >
 
       comment[publisher] = Scandinavian Military Studies
-      param[base_url] = https://account.sjms.nu/
-      nondefparam[base_url2] = https://sjms.nu/
+      param[base_url] = https://sjms.nu/
+      nondefparam[base_url2] = https://account.sjms.nu/
       nondefparam[journal_id] = sms-j-sjms
 
       au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; 1 ; >
@@ -2381,8 +2380,8 @@
       >
 
       comment[publisher] = Virginia Tech Publishing
-      param[base_url] = https://account.jotsjournal.org/
-      nondefparam[base_url2] = https://jotsjournal.org/
+      param[base_url] = https://jotsjournal.org/
+      nondefparam[base_url2] = https://account.jotsjournal.org/
       nondefparam[journal_id] = vt-j-jts
 
       au < exists ; exists ; 1996 ; 1 ; The Journal of Technology Studies Volume 1996 ; 1996 ; 1 ; >
@@ -2425,8 +2424,8 @@
       >
 
       comment[publisher] = Virginia Tech Publishing
-      param[base_url] = https://account.seejournal.org/
-      nondefparam[base_url2] = https://seejournal.org/
+      param[base_url] = https://seejournal.org/
+      nondefparam[base_url2] = https://account.seejournal.org/
       nondefparam[journal_id] = vt-j-see
 
       au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; >
@@ -2445,8 +2444,8 @@
       >
 
       comment[publisher] = Virginia Tech Publishing
-      param[base_url] = https://account.jte-journal.org/
-      nondefparam[base_url2] = https://jte-journal.org/
+      param[base_url] = https://jte-journal.org/
+      nondefparam[base_url2] = https://account.jte-journal.org/
       nondefparam[journal_id] = vt-j-jte
 
       au < exists ; exists ; 1989 ; 1 ; Journal of Technology Education Volume 1989 ; 1989 ; 1 ; >
@@ -2511,8 +2510,8 @@
       >
 
       comment[publisher] = Gonzaga Library Publishing
-      param[base_url] = https://account.ijsl.press.gonzaga.edu/
-      nondefparam[base_url2] = https://ijsl.press.gonzaga.edu/
+      param[base_url] = https://ijsl.press.gonzaga.edu/
+      nondefparam[base_url2] = https://account.ijsl.press.gonzaga.edu/
       nondefparam[journal_id] = gl-j-ijsl
 
       au < doNotProcess ; doNotProcess ; 2005 ; 1 ; The International Journal of Servant-Leadership Volume 2005 ; 2005 ; 1 ; >
@@ -2546,8 +2545,8 @@
       >
 
       comment[publisher] = Gonzaga Library Publishing
-      param[base_url] = https://account.ibapa.org/
-      nondefparam[base_url2] = https://ibapa.org/
+      param[base_url] = https://ibapa.org/
+      nondefparam[base_url2] = https://account.ibapa.org/
       nondefparam[journal_id] = gl-j-ibpa
 
       au < doNotProcess ; doNotProcess ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 ; 1 ; >
@@ -2579,8 +2578,8 @@
       >
 
       comment[publisher] = De Montfort University Press
-      param[base_url] = https://account.jcss.demontfortuniversitypress.org/
-      nondefparam[base_url2] = https://jcss.demontfortuniversitypress.org/
+      param[base_url] = https://jcss.demontfortuniversitypress.org/
+      nondefparam[base_url2] = https://account.jcss.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-jcss
 
       au < doNotProcess ; doNotProcess ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; 1 ; >
@@ -2597,8 +2596,8 @@
       >
 
       comment[publisher] = De Montfort University Press
-      param[base_url] = https://account.gp.demontfortuniversitypress.org/
-      nondefparam[base_url2] = https://gp.demontfortuniversitypress.org/
+      param[base_url] = https://gp.demontfortuniversitypress.org/
+      nondefparam[base_url2] = https://account.gp.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-gpajepr
 
       au < doNotProcess ; doNotProcess ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; >
@@ -2633,8 +2632,8 @@
       >
 
       comment[publisher] = Houston Methodist DeBakey Heart & Vascular Center
-      param[base_url] = https://account.journal.houstonmethodist.org/
-      nondefparam[base_url2] = https://journal.houstonmethodist.org/
+      param[base_url] = https://journal.houstonmethodist.org/
+      nondefparam[base_url2] = https://account.journal.houstonmethodist.org/
       nondefparam[journal_id] = up-j-mdbcj
 
       au < doNotProcess ; doNotProcess ; 2004 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2004 ; 2004 ; 1 ; >
@@ -2684,8 +2683,8 @@
       >
 
       comment[publisher] = University of East Anglia
-      param[base_url] = https://account.newareastudies.com/
-      nondefparam[base_url2] = https://newareastudies.com/
+      param[base_url] = https://newareastudies.com/
+      nondefparam[base_url2] = https://account.newareastudies.com/
       nondefparam[journal_id] = up-j-nas
 
       au < doNotProcess ; doNotProcess ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; 1 ; >
@@ -2718,8 +2717,8 @@
       >
 
       comment[publisher] = International Society for the Empirical Study of Literature
-      param[base_url] = https://account.ssol-journal.com/
-      nondefparam[base_url2] = https://ssol-journal.com/
+      param[base_url] = https://ssol-journal.com/
+      nondefparam[base_url2] = https://account.ssol-journal.com/
       nondefparam[journal_id] = isesl-j-ssl
 
       au < doNotProcess ; doNotProcess ; 2011 ; 1 ; Scientific Study of Literature Volume 2011 ; 2011 ; 1 ; >
@@ -2761,8 +2760,8 @@
       >
 
       comment[publisher] = International Society for the Empirical Study of Literature
-      param[base_url] = https://account.journal.asqde.org/
-      nondefparam[base_url2] = https://journal.asqde.org/
+      param[base_url] = https://journal.asqde.org/
+      nondefparam[base_url2] = https://account.journal.asqde.org/
       nondefparam[journal_id] = asqde-j-jasqde
 
       au < exists ; exists ; 2005 ; 8 ; Journal of The American Society of Questioned Document Examiners Volume 2005 ; 2005 ; 8 ; >
