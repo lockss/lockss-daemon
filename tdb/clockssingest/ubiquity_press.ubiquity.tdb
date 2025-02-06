@@ -1,72 +1,6 @@
 
 {
   publisher <
-    name = Architectural Research European Network Association (ARENA) network ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
-
-  {
-      title <
-        name = ARENA Journal of Architectural Research ;
-        eissn = 2397-0820
-      >
-
-      comment[publisher] = Architectural Research European Network Association (ARENA) network
-#      param[base_url] = http://ajar.arena-architecture.eu/
-
-     au < finished ; finished ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; http://ajar.arena-architecture.eu/ ; reingest5.clockss.org:8082 >
-     au < finished ; finished ; 2017 ; 2 ; ARENA Journal of Architectural Research Volume 2017 ; 2017 ; http://ajar.arena-architecture.eu/ ; reingest3.clockss.org:8083 >
-     au < finished ; finished ; 2018 ; 3 ; ARENA Journal of Architectural Research Volume 2018 ; 2018 ; https://ajar.arena-architecture.eu/ ; reingest1.clockss.org:8082 >
-     au < finished ; finished ; 2019 ; 4 ; ARENA Journal of Architectural Research Volume 2019 ; 2019 ; https://ajar.arena-architecture.eu/ ; reingest4.clockss.org:8082 >
-     au < finished ; finished ; 2020 ; 5 ; ARENA Journal of Architectural Research Volume 2020 ; 2020 ; https://ajar.arena-architecture.eu/ ; reingest1.clockss.org:8082 >
-     au < finished ; crawling ; 2021 ; 6 ; ARENA Journal of Architectural Research Volume 2021 ; 2021 ; https://ajar.arena-architecture.eu/ ; reingest2.clockss.org:8085 >
-     au < superseded ; exists ; 2022 ; 7 ; ARENA Journal of Architectural Research Volume 2022 [superseded] ; 2022 ; https://ajar.arena-architecture.eu/ ; >
-     au < doNotProcess ; exists ; 2023 ; 8 ; ARENA Journal of Architectural Research Volume 2023 ; 2023 ; https://ajar.arena-architecture.eu/ ; >
-
-  }
-}
-
-{
-  publisher <
-    name = frommann-holzboog ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
-
-  {
-
-      title <
-        name = Steiner Studies ;
-        eissn = 2698-217X
-      >
-
-      comment[publisher] = frommann-holzboog
-#      param[base_url] = https://steiner-studies.org/
-
-      au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 ; https://steiner-studies.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 2 ; Steiner Studies Volume 2021 ; 2021 ; https://steiner-studies.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 3 ; Steiner Studies Volume 2022 ; 2022 ; https://steiner-studies.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Steiner Studies Volume 2023 ; 2023 ; https://steiner-studies.org/ ; >
-      au < exists ; exists ; 2024 ; 5 ; Steiner Studies Volume 2024 ; 2024 ; https://steiner-studies.org/ ; >
-
-  }
-}
-
-{
-  publisher <
     name = Gonzaga Library Publishing ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
@@ -77,7 +11,7 @@
 
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -88,25 +22,27 @@
 
       comment[publisher] = Gonzaga Library Publishing
 #      param[base_url] = https://jhs.press.gonzaga.edu/
+      nondefparam[base_url2] = https://account.jhs.press.gonzaga.edu/
+      nondefparam[journal_id] = gl-j-jhs
       #NOT PART OF ANY CONTRACT. If a contract is signed, move 2002-2016 to finished-manifest. 2019 to finished-crawling.
 
-     au < finished ; zapped ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
-     au < finished ; zapped ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
-     au < finished ; zapped ; 2004 ; 3 ; Journal of Hate Studies Volume 2004 ; 2004 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
-     au < finished ; zapped ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
-     au < finished ; zapped ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
-     au < finished ; zapped ; 2007 ; 6 ; Journal of Hate Studies Volume 2007 ; 2007 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
-     au < finished ; zapped ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
-     au < finished ; zapped ; 2010 ; 8 ; Journal of Hate Studies Volume 2010 ; 2010 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
-     au < finished ; zapped ; 2011 ; 9 ; Journal of Hate Studies Volume 2011 ; 2011 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
-     au < finished ; zapped ; 2012 ; 10 ; Journal of Hate Studies Volume 2012 ; 2012 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
-     au < finished ; zapped ; 2013 ; 11 ; Journal of Hate Studies Volume 2013 ; 2013 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
-     au < finished ; zapped ; 2014 ; 12 ; Journal of Hate Studies Volume 2014 ; 2014 ; https://jhs.press.gonzaga.edu/ ; reingest1.clockss.org:8082 >
-     au < finished ; zapped ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
-     au < finished ; down ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
-     au < doNotProcess ; exists ; 2020 ; 16 ; Journal of Hate Studies Volume 2020 ; 2020 ; https://jhs.press.gonzaga.edu/ ; >
-     au < doNotProcess ; exists ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; https://jhs.press.gonzaga.edu/ ; >
-     au < doNotProcess ; exists ; 2022 ; 18 ; Journal of Hate Studies Volume 2022 ; 2022 ; https://jhs.press.gonzaga.edu/ ; >
+     au < finished ; zapped ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; 1 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
+     au < finished ; zapped ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; 2 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
+     au < finished ; zapped ; 2004 ; 3 ; Journal of Hate Studies Volume 2004 ; 2004 ; 3 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+     au < finished ; zapped ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; 4 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
+     au < finished ; zapped ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; 5 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+     au < finished ; zapped ; 2007 ; 6 ; Journal of Hate Studies Volume 2007 ; 2007 ; 6 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
+     au < finished ; zapped ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; 7 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
+     au < finished ; zapped ; 2010 ; 8 ; Journal of Hate Studies Volume 2010 ; 2010 ; 8 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+     au < finished ; zapped ; 2011 ; 9 ; Journal of Hate Studies Volume 2011 ; 2011 ; 9 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
+     au < finished ; zapped ; 2012 ; 10 ; Journal of Hate Studies Volume 2012 ; 2012 ; 10 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
+     au < finished ; zapped ; 2013 ; 11 ; Journal of Hate Studies Volume 2013 ; 2013 ; 11 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
+     au < finished ; zapped ; 2014 ; 12 ; Journal of Hate Studies Volume 2014 ; 2014 ; 12 ; https://jhs.press.gonzaga.edu/ ; reingest1.clockss.org:8082 >
+     au < finished ; zapped ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; 13 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
+     au < finished ; down ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; 14 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+     au < doNotProcess ; exists ; 2020 ; 16 ; Journal of Hate Studies Volume 2020 ; 2020 ; 15 ; https://jhs.press.gonzaga.edu/ ; >
+     au < doNotProcess ; exists ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; 16 ; https://jhs.press.gonzaga.edu/ ; >
+     au < doNotProcess ; exists ; 2022 ; 18 ; Journal of Hate Studies Volume 2022 ; 2022 ; 17 ; https://jhs.press.gonzaga.edu/ ; >
 
   }
 }
@@ -122,7 +58,7 @@
 
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -133,9 +69,11 @@
 
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amscasereports.com/
+      nondefparam[base_url2] = https://account.www.amscasereports.com/
+      nondefparam[journal_id] = 
 
-     au < finished ; finished ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 1 ; 2018 ; https://www.amscasereports.com/ ; reingest2.clockss.org:8085 >
-     au < finished ; crawling ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2 ; 2021 ; https://www.amscasereports.com/ ; reingest3.clockss.org:8083 >
+     au < finished ; finished ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 1 ; 2018 ; 1 ; https://www.amscasereports.com/ ; reingest2.clockss.org:8085 >
+     au < finished ; crawling ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2 ; 2021 ; 2 ; https://www.amscasereports.com/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -148,8 +86,10 @@
 
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amsprotocols.com/
+      nondefparam[base_url2] = https://account.www.amsprotocols.com/
+      nondefparam[journal_id] = 
 
-     au < finished ; finished ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 1 ; 2018 ; https://www.amsprotocols.com/ ; reingest3.clockss.org:8083 >
+     au < finished ; finished ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 1 ; 2018 ; 1 ; https://www.amsprotocols.com/ ; reingest3.clockss.org:8083 >
       #no longer online
   }
 
@@ -162,27 +102,13 @@
 
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://ijops.com/
+      nondefparam[base_url2] = https://account.ijops.com/
+      nondefparam[journal_id] = 
 
-     au < finished ; finished ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ ; reingest2.clockss.org:8085 >
-     au < finished ; finished ; 2019 ; 2 ; International Journal of Orthoplastic Surgery Volume 2019 ; 2019 ; https://ijops.com/ ; reingest1.clockss.org:8082 >
-
-  }
-  {
-
-      title <
-        name = International Journal of Digital Health ;
-        eissn = 2634-4580
-      >
-
-      comment[publisher] = IJS Publishing Group
-#      param[base_url] = https://ijdigitalhealth.com/
-
-     au < doNotProcess ; exists ; 2021 ; 1 ; International Journal of Digital Health Volume 2021 ; 2021 ; https://ijdigitalhealth.com/ ; >
-     au < doNotProcess ; exists ; 2022 ; 2 ; International Journal of Digital Health Volume 2022 ; 2022 ; https://ijdigitalhealth.com/ ; >
-     au < doNotProcess ; exists ; 2023 ; 3 ; International Journal of Digital Health Volume 2023 ; 2023 ; https://ijdigitalhealth.com/ ; >
+     au < finished ; finished ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; 1 ; https://ijops.com/ ; reingest2.clockss.org:8085 >
+     au < finished ; finished ; 2019 ; 2 ; International Journal of Orthoplastic Surgery Volume 2019 ; 2019 ; 2 ; https://ijops.com/ ; reingest1.clockss.org:8082 >
 
   }
-
 }
 
 {
