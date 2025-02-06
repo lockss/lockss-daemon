@@ -47,6 +47,8 @@ import org.lockss.extractor.*;
 import org.lockss.filter.html.HtmlNodeFilters;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.xml.sax.InputSource;
+import org.apache.commons.lang3.tuple.Pair;
 
 
 /*
@@ -250,8 +252,38 @@ public class OJS2ArticleIteratorFactory
         AuUtil.safeRelease(showCu);
         return;
       }
-      processToc(tocCu.getUnfilteredInputStream(), tocCu.getEncoding(), tocCu.getUrl());
+
+
+      String encoding = null;
+      encoding = tocCu.getEncoding();
+
+      // No encoding info, try other method to guess it
+      if (encoding == null || encoding.equals("")) {
+        log.debug3("processToc url " + tocCu.getUrl() + ", without encoding: " + encoding);
+
+        XPathXmlMetadataParser xmlParser = new XPathXmlMetadataParser(false);
+
+        Pair<Reader, String> iReaderPair = null;
+
+        try {
+          iReaderPair = xmlParser.makeInputSourceReader(tocCu);
+          //InputSource iSource = new InputSource(iReaderPair.getLeft());
+          //iSource.setEncoding(iReaderPair.getRight());
+          processToc(tocCu.getUnfilteredInputStream(), iReaderPair.getRight(), tocCu.getUrl());
+        } catch (UnsupportedEncodingException e) {
+          log.error(String.format(
+                  "Error processing TOC in: %s ProcessToc URL: %s Encoding: %s",
+                  au.getName(), tocCu.getUrl(), encoding
+          ), e);
+        }
+
+
+      } else {
+        processToc(tocCu.getUnfilteredInputStream(), tocCu.getEncoding(), tocCu.getUrl());
+      }
     }
+
+
     
     protected void processToc(InputStream in, String encoding, String url) {
       
@@ -259,6 +291,7 @@ public class OJS2ArticleIteratorFactory
         Lexer.STRICT_REMARKS = false; // Accept common variants of HTML comments
 
         log.debug3("processToc url " + url + ", with encoding: " + encoding);
+
 
         InputStreamSource source = new InputStreamSource(in, encoding);
         Parser parser = new Parser(new Lexer(new Page(source)), new LoggerAdapter(url));
