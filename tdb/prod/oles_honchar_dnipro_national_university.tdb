@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Oles Honchar Dnipro National University ;
+    info[platform] = OJS3
+    
+  >
+    implicit < status ; year ; param[year] ; name ; volume >
+    plugin = org.lockss.plugin.ojs3.Ojs3Plugin
+    attr[start_stem] = index.php/
+
+  {
+
+    title <
+      name = Challenges and Issues of Modern Science ;
+      eissn = 3083-5704
+     >
+     
+     param[journal_id] = j
+     param[base_url] = https://cims.fti.dp.ua/
+     
+     au < manifest ; 2023 ; 2023 ; Challenges and Issues of Modern Science Volume 1 ; 1 >
+     au < manifest ; 2024 ; 2024 ; Challenges and Issues of Modern Science Volume 2 ; 2 >
+     au < expected ; 2025 ; 2025 ; Challenges and Issues of Modern Science Volume 3 ; 3 >
+
+  }
+
+}
