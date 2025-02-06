@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = University of Al-Nisour University College ;
+    info[contract] = 2008 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Al-Nisour Journal for Medical Sciences ;
+        eissn = 2664-0554
+      >
+
+      comment[publisher] = University of Al-Nisour University College
+      param[base_url] = https://journal.nuc.edu.iq/
+      param[journal_abbr] = home
+
+      au < manifest ; exists ; 2023 ; Al-Nisour Journal for Medical Sciences Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2024 ; Al-Nisour Journal for Medical Sciences Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2025 ; Al-Nisour Journal for Medical Sciences Volume 3 ; 3 ; >
+
+  }
+
+}
