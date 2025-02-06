@@ -1,0 +1,46 @@
+{
+  publisher <
+    name = Al-Mustaqbal University ;
+    info[contract] = 2008 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Al-Mustaqbal Journal of Sustainability in Engineering Sciences (AJSES) ;
+        eissn = 2959-5932
+      >
+
+      comment[publisher] = Al-Mustaqbal University
+      param[base_url] = https://ajses.uomus.edu.iq/
+      param[journal_abbr] = home
+
+      au < manifest ; exists ; 2023 ; Al-Mustaqbal Journal of Sustainability in Engineering Sciences (AJSES) Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2024 ; Al-Mustaqbal Journal of Sustainability in Engineering Sciences (AJSES) Volume 2 ; 2 ; >
+      au < expected ; exists ; 2025 ; Al-Mustaqbal Journal of Sustainability in Engineering Sciences (AJSES) Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+      title <
+        name = Al-Mustaqbal Journal of Pharmaceutical and Medical Sciences (MJPMS) ;
+        eissn = 3006-5909
+      >
+
+      comment[publisher] = Al-Mustaqbal University
+      param[base_url] = https://mjpms.uomus.edu.iq/
+      param[journal_abbr] = mjpms
+
+      au < manifest ; exists ; 2023 ; Al-Mustaqbal Journal of Pharmaceutical and Medical Sciences (MJPMS) Volume 1 ; 1 ; >
+      au < manifest ; exists ; 2024 ; Al-Mustaqbal Journal of Pharmaceutical and Medical Sciences (MJPMS) Volume 2 ; 2 ; >
+      au < expected ; exists ; 2025 ; Al-Mustaqbal Journal of Pharmaceutical and Medical Sciences (MJPMS) Volume 3 ; 3 ; >
+
+  }
+
+}
