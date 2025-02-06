@@ -10,7 +10,7 @@
   
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
-
+  # LXPUB-1156, moving to Elsevier in 2025
   {
 
     title <
