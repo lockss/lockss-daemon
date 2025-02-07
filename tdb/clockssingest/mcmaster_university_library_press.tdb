@@ -74,6 +74,7 @@
       au < crawling ; exists ; 2024 ; Early Theatre Volume 25 ; 25 ; 2022 ; >#subscription for a year. Wait till 2024
       au < manifest ; exists ; 2025 ; Early Theatre Volume 26 ; 26 ; 2023 ; >#subscription for a year. Wait till 2025
       au < manifest ; exists ; 2026 ; Early Theatre Volume 27 ; 27 ; 2024 ; >#subscription for a year. Wait till 2026
+      au < expected ; exists ; 2025 ; Early Theatre Volume 26 ; 26 ; 2022 ; >#subscription for a year. Wait till 2025
 
     }
 
@@ -142,6 +143,7 @@
       au < deepCrawl ; exists ; 2022 ; Global Labour Journal Volume 13 ; 13 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; Global Labour Journal Volume 14 ; 14 ; 2023 ; >
       au < crawling ; exists ; 2024 ; Global Labour Journal Volume 15 ; 15 ; 2024 ; >
+      au < expected ; exists ; 2025 ; Global Labour Journal Volume 16 ; 16 ; 2025 ; >
 
       }
 
@@ -180,6 +182,7 @@
       au < notReady ; exists ; 2022 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 10 ; 10 ; 2022 ; > #500 Error https://mulpress.mcmaster.ca/hro-ors/article/view/4691
       au < notReady ; exists ; 2023 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 11 ; 11 ; 2023 ; > #500 Error https://mulpress.mcmaster.ca/hro-ors/article/view/5341
       au < manifest ; exists ; 2024 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 12 ; 12 ; 2024 ; >
+      au < expected ; exists ; 2025 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 13 ; 13 ; 2025 ; >
 
       }
 
@@ -213,6 +216,7 @@
       au < deepCrawl ; exists ; 2022 ; International Journal for Students as Partners Volume 6 ; 6 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; International Journal for Students as Partners Volume 7 ; 7 ; 2023 ; >
       au < crawling ; exists ; 2024 ; International Journal for Students as Partners Volume 8 ; 8 ; 2024 ; >
+      au < expected ; exists ; 2025 ; International Journal for Students as Partners Volume 9 ; 9 ; 2025 ; >
 
       }
 
@@ -249,6 +253,7 @@
       au < deepCrawl ; exists ; 2022 ; Journal for the History of Analytical Philosophy Volume 12 ; 12 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; Journal for the History of Analytical Philosophy Volume 13 ; 13 ; 2023 ; >
       au < crawling ; exists ; 2024 ; Journal for the History of Analytical Philosophy Volume 14 ; 14 ; 2024 ; >
+      au < expected ; exists ; 2025 ; Journal for the History of Analytical Philosophy Volume 15 ; 15 ; 2025 ; >
 
     }
 #    {

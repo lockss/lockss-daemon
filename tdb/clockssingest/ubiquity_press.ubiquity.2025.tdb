@@ -33,6 +33,7 @@
       au < superseded ; exists ; 2022 ; 7 ; ARENA Journal of Architectural Research Volume 2022 [superseded] ; 2022 ; 7 ; https://ajar.arena-architecture.eu/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; ARENA Journal of Architectural Research Volume 2023 ; 2023 ; 8 ; https://ajar.arena-architecture.eu/ ; >
       au < exists ; exists ; 2024 ; 9 ; ARENA Journal of Architectural Research Volume 2024 ; 2024 ; 9 ; https://ajar.arena-architecture.eu/ ; >
+      au < expected ; expected ; 2025 ; 10 ; ARENA Journal of Architectural Research Volume 2025 ; 2025 ; 10 ; https://ajar.arena-architecture.eu/ ; >
 
   }
 
@@ -67,6 +68,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 3 ; Steiner Studies Volume 2022 ; 2022 ; 3 ; >
       au < exists ; exists ; 2023 ; 4 ; Steiner Studies Volume 2023 ; 2023 ; 4 ; >
       au < exists ; exists ; 2024 ; 5 ; Steiner Studies Volume 2024 ; 2024 ; 5 ; >
+      au < expected ; expected ; 2025 ; 6 ; Steiner Studies Volume 2025 ; 2025 ; 6 ; >
 
   }
 
@@ -99,6 +101,7 @@
       nondefparam[journal_id] = kitl-j-hs
 
       au < exists ; exists ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; >
+      au < expected ; expected ; 2025 ; 2 ; Hydrogen Safety Volume 2025 ; 2025 ; 2 ; >
 
   }
 
@@ -147,6 +150,7 @@
       au < superseded ; exists ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 [superseded] ; 2022 ; 59 ; >
       au < exists ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; >
       au < exists ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; >
+      au < expected ; expected ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; >
   }
 
   {
@@ -175,6 +179,7 @@
       au < superseded ; exists ; 2022 ; 12 ; Nordic Journal of Migration Research Volume 2022 [superseded] ; 2022 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 13 ; Nordic Journal of Migration Research Volume 2023 ; 2023 ; 13 ; >
       au < exists ; exists ; 2024 ; 14 ; Nordic Journal of Migration Research Volume 2024 ; 2024 ; 14 ; >
+      au < expected ; expected ; 2025 ; 15 ; Nordic Journal of Migration Research Volume 2025 ; 2025 ; 15 ; >
   }
 
   {
@@ -216,6 +221,7 @@
       au < superseded ; exists ; 2022 ; 25 ; Redescriptions Volume 2022 [superseded] ; 25 ; 2022 ;  >
       au < doNotProcess ; doNotProcess ; 2023 ; 26 ; Redescriptions Volume 2023 ; 2023 ; 26 ; >
       au < exists ; exists ; 2024 ; 27 ; Redescriptions Volume 2024 ; 2024 ; 27 ; >
+      au < expected ; expected ; 2025 ; 28 ; Redescriptions Volume 2025 ; 2025 ; 28 ; >
 
   }
 }
@@ -256,6 +262,7 @@
       au < superseded ; exists ; 2022 ; 9 ; Modern Languages Open Volume 2022 [superseded] ; 2022 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; 10 ; >
       au < exists ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; >
+      au < expected ; expected ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; >
 
   }
 
@@ -292,6 +299,7 @@
       au < crawling ; exists ; 2022 ; 4 ; Journal of Illicit Economies and Development Volume 2022 ; 2022 ; 4 ; >
       au < exists ; exists ; 2023 ; 5 ; Journal of Illicit Economies and Development Volume 2023 ; 2023 ; 5 ; >
       au < exists ; exists ; 2024 ; 6 ; Journal of Illicit Economies and Development Volume 2024 ; 2024 ; 6 ; >
+      au < expected ; expected ; 2025 ; 7 ; Journal of Illicit Economies and Development Volume 2025 ; 2025 ; 7 ; >
 
   }
 
@@ -314,6 +322,7 @@
       au < superseded ; exists ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 [superseded] ; 2022 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Journal of Long-Term Care Volume 2023 ; 2023 ; 10 ; >
       au < exists ; exists ; 2024 ; 11 ; Journal of Long-Term Care Volume 2024 ; 2024 ; 11 ; >
+      au < expected ; expected ; 2025 ; 12 ; Journal of Long-Term Care Volume 2025 ; 2025 ; 12 ; >
 
   }
 
@@ -334,6 +343,7 @@
       au < superseded ; exists ; 2022 ; 3 ; LSE Public Policy Review Volume 2022 [superseded] ; 2022 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; LSE Public Policy Review Volume 2023 ; 2023 ; 4 ; >
       au < exists ; exists ; 2024 ; 5 ; LSE Public Policy Review Volume 2024 ; 2024 ; 5 ; >
+      au < expected ; expected ; 2025 ; 6 ; LSE Public Policy Review Volume 2025 ; 2025 ; 6 ; >
 
   }
 
@@ -351,6 +361,7 @@
 
       au < doNotProcess ; doNotProcess ; 2023 ; 1 ; Philosophy of Physics Volume 2023 ; 2023 ; 1 ; >
       au < exists ; exists ; 2024 ; 2 ; Philosophy of Physics Volume 2024 ; 2024 ; 2 ; >
+      au < expected ; expected ; 2025 ; 3 ; Philosophy of Physics Volume 2025 ; 2025 ; 3 ; >
 
   }
 
@@ -392,6 +403,7 @@
       au < doesNotExist ; doesNotExist ; 2022 ; 23 ; Economía Volume 2022 ; 2022 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 24 ; Economía Volume 2023 ; 2023 ; 24 ; >
       au < exists ; exists ; 2024 ; 25 ; Economía Volume 2024 ; 2024 ; 25 ; >
+      au < expected ; expected ; 2025 ; 26 ; Economía Volume 2025 ; 2025 ; 26 ; >
 
   }
 
@@ -438,6 +450,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 14 ; Designs for Learning Volume 2022 ; 2022 ; 14 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 15 ; Designs for Learning Volume 2023 ; 2023 ; 15 ; >
       au < expected ; exists ; 2024 ; 16 ; Designs for Learning Volume 2024 ; 2024 ; 16 ; >
+      au < expected ; exists ; 2025 ; 17 ; Designs for Learning Volume 2025 ; 2025 ; 17 ; >
 
   }
 
@@ -458,6 +471,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Nordic Journal of Transitions, Careers and Guidance Volume 2023 ; 2023 ; 4 ; >
       au < exists ; exists ; 2024 ; 5 ; Nordic Journal of Transitions, Careers and Guidance Volume 2024 ; 2024 ; 5 ; >
+      au < expected ; expected ; 2025 ; 6 ; Nordic Journal of Transitions, Careers and Guidance Volume 2025 ; 2025 ; 6 ; >
 
   }
 
@@ -484,6 +498,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 9 ; Rural Landscapes: Society, Environment, History Volume 2022 ; 2022 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Rural Landscapes: Society, Environment, History Volume 2023 ; 2023 ; 10 ; >
       au < exists ; exists ; 2024 ; 11 ; Rural Landscapes: Society, Environment, History Volume 2024 ; 2024 ; 11 ; >
+      au < expected ; expected ; 2025 ; 12 ; Rural Landscapes: Society, Environment, History Volume 2025 ; 2025 ; 12 ; >
 
   }
 
@@ -527,6 +542,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 24 ; Scandinavian Journal of Disability Research Volume 24 ; 2022 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 25 ; Scandinavian Journal of Disability Research Volume 25 ; 2023 ; 25 ; >
       au < exists ; exists ; 2024 ; 26 ; Scandinavian Journal of Disability Research Volume 26 ; 2024 ; 26 ; >
+      au < expected ; expected ; 2025 ; 27 ; Scandinavian Journal of Disability Research Volume 27 ; 2025 ; 27 ; >
 
   }
 
@@ -551,6 +567,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 7 ; Scandinavian Journal of Work and Organizational Psychology Volume 2022 ; 2022 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; Scandinavian Journal of Work and Organizational Psychology Volume 2023 ; 2023 ; 8 ; >
       au < exists ; exists ; 2024 ; 9 ; Scandinavian Journal of Work and Organizational Psychology Volume 2024 ; 2024 ; 9 ; >
+      au < expected ; expected ; 2025 ; 10 ; Scandinavian Journal of Work and Organizational Psychology Volume 2025 ; 2025 ; 10 ; >
 
   }
 
@@ -590,6 +607,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 52 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 ; 2022 ; 52 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2023 ; 2023 ; 53 ; >
       au < exists ; exists ; 2024 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 54 ; >
+      au < expected ; expected ; 2025 ; 55 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 55 ; >
 
   }
   {
@@ -611,6 +629,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 5 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2022 ; 2022 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2023 ; 2023 ; 6 ; >
       au < exists ; exists ; 2024 ; 7 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2024 ; 2024 ; 7 ; >
+      au < expected ; expected ; 2025 ; 8 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2025 ; 2025 ; 8 ; >
 
   }
   {
@@ -703,6 +722,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; 74 ; > #Lists all volumes.
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2023 ; 2023 ; 75 ; >
       au < exists ; exists ; 2024 ; 76 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2024 ; 2024 ; 76 ; >
+      au < expected ; expected ; 2025 ; 77 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2025 ; 2025 ; 77 ; >
 
   }
 
@@ -762,6 +782,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 74 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; 74 ; > # Lists all volumes.
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 ; 75 ; >
       au < exists ; exists ; 2024 ; 76 ; Tellus B: Chemical and Physical Meteorology Volume 2024 ; 2024 ; 76 ; >
+      au < expected ; expected ; 2025 ; 77 ; Tellus B: Chemical and Physical Meteorology Volume 2025 ; 2025 ; 77 ; >
 
   }
 }
@@ -802,6 +823,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 9 ; Annals of Global Health Volume 2022 ; 2022 ; 9 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Annals of Global Health Volume 2023 ; 2023 ; 10 ; >
       au < exists ; exists ; 2024 ; 11 ; Annals of Global Health Volume 2024 ; 2024 ; 11 ; >
+      au < expected ; expected ; 2025 ; 12 ; Annals of Global Health Volume 2025 ; 2025 ; 12 ; >
 
   }
 
@@ -822,6 +844,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 3 ; Building and Cities Volume 2022 ; 2022 ; 3 ; > #403 forbidden cloudfront.net
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Building and Cities Volume 2023 ; 2023 ; 4 ; > #404 forbidden cloudfront.net
       au < exists ; exists ; 2024 ; 5 ; Building and Cities Volume 2024 ; 2024 ; 5 ; > #505 forbidden cloudfront.net
+      au < expected ; expected ; 2025 ; 6 ; Building and Cities Volume 2025 ; 2025 ; 6 ; > #606 forbidden cloudfront.net
 
   }
 
@@ -859,6 +882,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 38 ; Current: Journal of Marine Education Volume 2022 ; 2022 ; 38 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 39 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; 39 ; >
       au < exists ; exists ; 2024 ; 40 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 40 ; >
+      au < expected ; expected ; 2025 ; 41 ; Current: Journal of Marine Education Volume 2025 ; 2025 ; 41 ; >
 
   }
 
@@ -881,6 +905,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 20 ; Anglo Saxonica Volume 2022 ; 2022 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 21 ; Anglo Saxonica Volume 2023 ; 2023 ; 21 ; >
       au < exists ; exists ; 2024 ; 22 ; Anglo Saxonica Volume 2024 ; 2024 ; 22 ; >
+      au < expected ; expected ; 2025 ; 23 ; Anglo Saxonica Volume 2025 ; 2025 ; 23 ; >
 
   }
 
@@ -931,6 +956,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 32 ; Bulletin of the History of Archaeology Volume 2022 ; 2022 ; 32 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 33 ; Bulletin of the History of Archaeology Volume 2023 ; 2023 ; 33 ; >
       au < exists ; exists ; 2024 ; 34 ; Bulletin of the History of Archaeology Volume 2024 ; 2024 ; 34 ; >
+      au < expected ; expected ; 2025 ; 35 ; Bulletin of the History of Archaeology Volume 2025 ; 2025 ; 35 ; >
 
   }
 
@@ -955,6 +981,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 7 ; Citizen Science: Theory and Practice Volume 2022 ; 2022 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; Citizen Science: Theory and Practice Volume 2023 ; 2023 ; 8 ; >
       au < exists ; exists ; 2024 ; 9 ; Citizen Science: Theory and Practice Volume 2024 ; 2024 ; 9 ; >
+      au < expected ; expected ; 2025 ; 10 ; Citizen Science: Theory and Practice Volume 2025 ; 2025 ; 10 ; >
 
   }
 
@@ -978,6 +1005,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 6 ; Computational Psychiatry Volume 2022 ; 2022 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Computational Psychiatry Volume 2023 ; 2023 ; 7 ; >
       au < exists ; exists ; 2024 ; 8 ; Computational Psychiatry Volume 2024 ; 2024 ; 8 ; >
+      au < expected ; expected ; 2025 ; 9 ; Computational Psychiatry Volume 2025 ; 2025 ; 9 ; >
 
   }
 
@@ -1016,6 +1044,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 21 ; Data Science Journal Volume 2022 ; 2022 ; 21 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 ; 22 ; >
       au < exists ; exists ; 2024 ; 23 ; Data Science Journal Volume 2024 ; 2024 ; 23 ; >
+      au < expected ; expected ; 2025 ; 24 ; Data Science Journal Volume 2025 ; 2025 ; 24 ; >
 
   }
 
@@ -1038,6 +1067,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 5 ; Future Cities and Environment Volume 2022 ; 2022 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Future Cities and Environment Volume 2023 ; 2023 ; 6 ; >
       au < exists ; exists ; 2024 ; 7 ; Future Cities and Environment Volume 2024 ; 2024 ; 7 ; >
+      au < expected ; expected ; 2025 ; 8 ; Future Cities and Environment Volume 2025 ; 2025 ; 8 ; >
 
   }
 
@@ -1062,6 +1092,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2022 ; 2022 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 ; 8 ; >
       au < exists ; exists ; 2024 ; 9 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 9 ; >
+      au < expected ; expected ; 2025 ; 10 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 10 ; >
 
   }
 
@@ -1102,6 +1133,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 23 ; International Journal of Integrated Care Volume 2022 ; 2022 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 24 ; International Journal of Integrated Care Volume 2023 ; 2023 ; 24 ; >
       au < exists ; exists ; 2024 ; 25 ; International Journal of Integrated Care Volume 2024 ; 2024 ; 25 ; >
+      au < expected ; expected ; 2025 ; 26 ; International Journal of Integrated Care Volume 2025 ; 2025 ; 26 ; >
 
   }
 
@@ -1126,6 +1158,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 7 ; International Review of Social Psychology Volume 2022 ; 2022 ; 7 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; International Review of Social Psychology Volume 2023 ; 2023 ; 8 ; >
       au < exists ; exists ; 2024 ; 9 ; International Review of Social Psychology Volume 2024 ; 2024 ; 9 ; >
+      au < expected ; expected ; 2025 ; 10 ; International Review of Social Psychology Volume 2025 ; 2025 ; 10 ; >
 
   }
 
@@ -1163,6 +1196,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 ; 2022 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 21 ; Journal of Circadian Rhythms Volume 2023 ; 2023 ; 21 ; >
       au < exists ; exists ; 2024 ; 22 ; Journal of Circadian Rhythms Volume 2024 ; 2024 ; 22 ; >
+      au < expected ; expected ; 2025 ; 23 ; Journal of Circadian Rhythms Volume 2025 ; 2025 ; 23 ; >
 
   }
 
@@ -1198,6 +1232,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; >
       au < expected ; exists ; 2024 ; 22 ; Journal of Conservation and Museum Studies Volume 2024 ; 2024 ; 22 ; >
+      au < expected ; exists ; 2025 ; 23 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 23 ; >
 
   }
 
@@ -1229,6 +1264,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 13 ; Journal of European Psychology Students Volume 2022 ; 2022 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Journal of European Psychology Students Volume 2023 ; 2023 ; 14 ; >
       au < exists ; exists ; 2024 ; 15 ; Journal of European Psychology Students Volume 2024 ; 2024 ; 15 ; >
+      au < expected ; expected ; 2025 ; 16 ; Journal of European Psychology Students Volume 2025 ; 2025 ; 16 ; >
 
   }
 
@@ -1271,6 +1307,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 ; 2022 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Interactive Media in Education Volume 2023 ; 2023 ; 2023 ; >
       au < exists ; exists ; 2024 ; 2024 ; Journal of Interactive Media in Education Volume 2024 ; 2024 ; 2024 ; >
+      au < expected ; expected ; 2025 ; 2025 ; Journal of Interactive Media in Education Volume 2025 ; 2025 ; 2025 ; >
 
   }
 
@@ -1329,6 +1366,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 10 ; Journal of Open Archaeology Data Volume 2022 ; 2022 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Archaeology Data Volume 2023 ; 2023 ; 11 ; >
       au < exists ; exists ; 2024 ; 12 ; Journal of Open Archaeology Data Volume 2024 ; 2024 ; 12 ; >
+      au < expected ; expected ; 2025 ; 13 ; Journal of Open Archaeology Data Volume 2025 ; 2025 ; 13 ; >
 
   }
 
@@ -1346,6 +1384,7 @@
 
       au < exists ; exists ; 2023 ; 1 ; Silk Roads Archaeology and Heritage Volume 2023 ; 2023 ; 1 ; >
       au < expected ; exists ; 2024 ; 2 ; Silk Roads Archaeology and Heritage Volume 2024 ; 2024 ; 2 ; >
+      au < expected ; exists ; 2025 ; 3 ; Silk Roads Archaeology and Heritage Volume 2025 ; 2025 ; 3 ; >
 
   }
 
@@ -1371,6 +1410,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 8 ; Journal of Open Humanities Data Volume 2022 ; 2022 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Journal of Open Humanities Data Volume 2023 ; 2023 ; 9 ; >
       au < exists ; exists ; 2024 ; 10 ; Journal of Open Humanities Data Volume 2024 ; 2024 ; 10 ; >
+      au < expected ; expected ; 2025 ; 11 ; Journal of Open Humanities Data Volume 2025 ; 2025 ; 11 ; >
 
   }
 
@@ -1398,6 +1438,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 10 ; Journal of Open Psychology Data Volume 2022 ; 2022 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Psychology Data Volume 2023 ; 2023 ; 11 ; >
       au < exists ; exists ; 2024 ; 12 ; Journal of Open Psychology Data Volume 2024 ; 2024 ; 12 ; >
+      au < expected ; expected ; 2025 ; 13 ; Journal of Open Psychology Data Volume 2025 ; 2025 ; 13 ; >
 
   }
 
@@ -1425,6 +1466,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 10 ; Journal of Open Research Software Volume 2022 ; 2022 ; 10 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Research Software Volume 2023 ; 2023 ; 11 ; >
       au < exists ; exists ; 2024 ; 12 ; Journal of Open Research Software Volume 2024 ; 2024 ; 12 ; >
+      au < expected ; expected ; 2025 ; 13 ; Journal of Open Research Software Volume 2025 ; 2025 ; 13 ; >
 
   }
 
@@ -1451,6 +1493,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 ; 106 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; 107 ; >
       au < exists ; exists ; 2024 ; 108 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2024 ; 2024 ; 108 ; >
+      au < expected ; expected ; 2025 ; 109 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2025 ; 2025 ; 109 ; >
 
   }
 
@@ -1533,6 +1576,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 3 ; Continuity in Education Volume 2022 ; 2022 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Continuity in Education Volume 2023 ; 2023 ; 4 ; >
       au < exists ; exists ; 2024 ; 5 ; Continuity in Education Volume 2024 ; 2024 ; 5 ; >
+      au < expected ; expected ; 2025 ; 6 ; Continuity in Education Volume 2025 ; 2025 ; 6 ; >
 
   }
 
@@ -1566,6 +1610,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 16 ; International Journal of the Commons Volume 2022 ; 2022 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 17 ; International Journal of the Commons Volume 2023 ; 2023 ; 17 ; >
       au < exists ; exists ; 2024 ; 18 ; International Journal of the Commons Volume 2024 ; 2024 ; 18 ; >
+      au < expected ; expected ; 2025 ; 19 ; International Journal of the Commons Volume 2025 ; 2025 ; 19 ; >
 
   }
 
@@ -1600,6 +1645,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 17 ; Global Heart Volume 2022 ; 2022 ; 17 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ; 18 ; >
       au < exists ; exists ; 2024 ; 19 ; Global Heart Volume 2024 ; 2024 ; 19 ; >
+      au < expected ; expected ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; >
 
   }
 
@@ -1625,6 +1671,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 8 ; Open Quaternary Volume 2022 ; 2022 ; 8 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Open Quaternary Volume 2023 ; 2023 ; 9 ; >
       au < exists ; exists ; 2024 ; 10 ; Open Quaternary Volume 2024 ; 2024 ; 10 ; >
+      au < expected ; expected ; 2025 ; 11 ; Open Quaternary Volume 2025 ; 2025 ; 11 ; >
 
   }
 
@@ -1659,6 +1706,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 18 ; Psychologica Belgica Volume 2022 ; 2022 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 19 ; Psychologica Belgica Volume 2023 ; 2023 ; 19 ; >
       au < exists ; exists ; 2024 ; 20 ; Psychologica Belgica Volume 2024 ; 2024 ; 20 ; >
+      au < expected ; expected ; 2025 ; 21 ; Psychologica Belgica Volume 2025 ; 2025 ; 21 ; >
 
   }
 
@@ -1687,6 +1735,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 11 ; Secularism and Nonreligion Volume 2022 ; 2022 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Secularism and Nonreligion Volume 2023 ; 2023 ; 12 ; >
       au < exists ; exists ; 2024 ; 13 ; Secularism and Nonreligion Volume 2024 ; 2024 ; 13 ; >
+      au < expected ; expected ; 2025 ; 14 ; Secularism and Nonreligion Volume 2025 ; 2025 ; 14 ; >
 
   }
 
@@ -1717,6 +1766,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 13 ; Utrecht Journal of International and European Law Volume 2022 ; 2022 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Utrecht Journal of International and European Law Volume 2023 ; 2023 ; 14 ; >
       au < exists ; exists ; 2024 ; 15 ; Utrecht Journal of International and European Law Volume 2024 ; 2024 ; 15 ; >
+      au < expected ; expected ; 2025 ; 16 ; Utrecht Journal of International and European Law Volume 2025 ; 2025 ; 16 ; >
 
   }
 
@@ -1746,6 +1796,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 12 ; Tremor and Other Hyperkinetic Movements Volume 2022 ; 2022 ; 12 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 13 ; Tremor and Other Hyperkinetic Movements Volume 2023 ; 2023 ; 13 ; >
       au < exists ; exists ; 2024 ; 14 ; Tremor and Other Hyperkinetic Movements Volume 2024 ; 2024 ; 14 ; >
+      au < expected ; expected ; 2025 ; 15 ; Tremor and Other Hyperkinetic Movements Volume 2025 ; 2025 ; 15 ; >
 
   }
 
@@ -1768,6 +1819,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 5 ; Journal of Cognition Volume 2022 ; 2022 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Journal of Cognition Volume 2023 ; 2023 ; 6 ; >
       au < exists ; exists ; 2024 ; 7 ; Journal of Cognition Volume 2024 ; 2024 ; 7 ; >
+      au < expected ; expected ; 2025 ; 8 ; Journal of Cognition Volume 2025 ; 2025 ; 8 ; >
 
   }
 
@@ -1790,6 +1842,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 5 ; Journal of Computer Applications in Archaeology Volume 2022 ; 2022 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Journal of Computer Applications in Archaeology Volume 2023 ; 2023 ; 6 ; >
       au < exists ; exists ; 2024 ; 7 ; Journal of Computer Applications in Archaeology Volume 2024 ; 2024 ; 7 ; >
+      au < expected ; expected ; 2025 ; 8 ; Journal of Computer Applications in Archaeology Volume 2025 ; 2025 ; 8 ; >
 
   }
 
@@ -1812,6 +1865,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 5 ; Metaphysics Volume 2022 ; 2022 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Metaphysics Volume 2023 ; 2023 ; 6 ; >
       au < exists ; exists ; 2024 ; 7 ; Metaphysics Volume 2024 ; 2024 ; 7 ; >
+      au < expected ; expected ; 2025 ; 8 ; Metaphysics Volume 2025 ; 2025 ; 8 ; >
 
   }
 
@@ -1835,6 +1889,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 6 ; Physical Activity and Health Volume 2022 ; 2022 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Physical Activity and Health Volume 2023 ; 2023 ; 7 ; >
       au < exists ; exists ; 2024 ; 8 ; Physical Activity and Health Volume 2024 ; 2024 ; 8 ; >
+      au < expected ; expected ; 2025 ; 9 ; Physical Activity and Health Volume 2025 ; 2025 ; 9 ; >
 
   }
 
@@ -1864,6 +1919,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 27 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2022 ; 2022 ; 27 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 ; 28 ; >
       au < exists ; exists ; 2024 ; 29 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2024 ; 2024 ; 29 ; >
+      au < expected ; expected ; 2025 ; 30 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2025 ; 2025 ; 30 ; >
 
   }
 
@@ -1894,6 +1950,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 13 ; Yearbook of Swiss Administrative Science Volume 2022 ; 2022 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Yearbook of Swiss Administrative Science Volume 2023 ; 2023 ; 14 ; >
       au < exists ; exists ; 2024 ; 15 ; Yearbook of Swiss Administrative Science Volume 2024 ; 2024 ; 15 ; >
+      au < expected ; expected ; 2025 ; 16 ; Yearbook of Swiss Administrative Science Volume 2025 ; 2025 ; 16 ; >
 
   }
 
@@ -1916,6 +1973,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 5 ; Transactions of the International Society for Music Information Retrieval Volume 2022 ; 2022 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Transactions of the International Society for Music Information Retrieval Volume 2023 ; 2023 ; 6 ; >
       au < exists ; exists ; 2024 ; 7 ; Transactions of the International Society for Music Information Retrieval Volume 2024 ; 2024 ; 7 ; >
+      au < expected ; expected ; 2025 ; 8 ; Transactions of the International Society for Music Information Retrieval Volume 2025 ; 2025 ; 8 ; >
 
   }
 
@@ -1933,6 +1991,7 @@
       au < exists ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; 1 ; > #login found
       au < exists ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; 2 ; > #login found
       au < exists ; exists ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 ; 3 ; > #login found
+      au < expected ; expected ; 2025 ; 4 ; International Journal of Educational and Life Transitions Volume 2025 ; 2025 ; 4 ; > #login found
 
   }
 
@@ -1952,6 +2011,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 ; 2 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 3 ; Swiss Psychology Open Volume 2023 ; 2023 ; 3 ; >
       au < exists ; exists ; 2024 ; 4 ; Swiss Psychology Open Volume 2024 ; 2024 ; 4 ; >
+      au < expected ; expected ; 2025 ; 5 ; Swiss Psychology Open Volume 2025 ; 2025 ; 5 ; >
 
   }
 
@@ -1980,6 +2040,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 11 ; Perspectives on Medical Education Volume 2022 ; 2022 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Perspectives on Medical Education Volume 2023 ; 2023 ; 12 ; >
       au < exists ; exists ; 2024 ; 13 ; Perspectives on Medical Education Volume 2024 ; 2024 ; 13 ; >
+      au < expected ; expected ; 2025 ; 14 ; Perspectives on Medical Education Volume 2025 ; 2025 ; 14 ; >
 
   }
 
@@ -2002,6 +2063,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Ubiquity Proceedings Volume 2022 ; 2022 ; 2022 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Ubiquity Proceedings Volume 2023 ; 2023 ; 2023 ; >
       au < exists ; exists ; 2024 ; 2024 ; Ubiquity Proceedings Volume 2024 ; 2024 ; 2024 ; >
+      au < expected ; expected ; 2025 ; 2025 ; Ubiquity Proceedings Volume 2025 ; 2025 ; 2025 ; >
 
   }
 
@@ -2092,6 +2154,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 ; 2022 ; 9 ; > #no substance
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Journal of Philosophy in Schools Volume 2023 ; 2023 ; 10 ; > #no substance
       au < exists ; exists ; 2024 ; 11 ; Journal of Philosophy in Schools Volume 2024 ; 2024 ; 11 ; > #no substance
+      au < expected ; expected ; 2025 ; 12 ; Journal of Philosophy in Schools Volume 2025 ; 2025 ; 12 ; > #no substance
 
   }
 }
@@ -2142,6 +2205,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 18 ; Utrecht Law Review Volume 2022 ; 2022 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 19 ; Utrecht Law Review Volume 2023 ; 2023 ; 19 ; >
       au < exists ; exists ; 2024 ; 20 ; Utrecht Law Review Volume 2024 ; 2024 ; 20 ; >
+      au < expected ; expected ; 2025 ; 21 ; Utrecht Law Review Volume 2025 ; 2025 ; 21 ; >
 
   }
 
@@ -2185,6 +2249,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 11 ; Insights: the UKSG journal Volume 2022 ; 2022 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 12 ; >
       au < exists ; exists ; 2024 ; 13 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 13 ; >
+      au < expected ; expected ; 2025 ; 14 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 14 ; >
 
   }
 
@@ -2231,6 +2296,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 18 ; British and Irish Orthoptic Journal Volume 2022 ; 2022 ; 18 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 19 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 ; 19 ; >
       au < exists ; exists ; 2024 ; 20 ; British and Irish Orthoptic Journal Volume 2024 ; 2024 ; 20 ; >
+      au < expected ; expected ; 2025 ; 21 ; British and Irish Orthoptic Journal Volume 2025 ; 2025 ; 21 ; >
 
   }
 
@@ -2254,6 +2320,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 ; 2022 ; 6 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Journal of the European Second Language Association Volume 2023 ; 2023 ; 7 ; >
       au < exists ; exists ; 2024 ; 8 ; Journal of the European Second Language Association Volume 2024 ; 2024 ; 8 ; >
+      au < expected ; expected ; 2025 ; 9 ; Journal of the European Second Language Association Volume 2025 ; 2025 ; 9 ; >
 
   }
 
@@ -2288,6 +2355,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 ; 2 ; >
       au < exists ; exists ; 2024 ; 3 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2024 ; 2024 ; 3 ; >
+      au < expected ; expected ; 2025 ; 4 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2025 ; 2025 ; 4 ; >
 
   }
 
@@ -2332,6 +2400,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 11 ; Stability: International Journal of Security & Development Volume 2022 ; 2022 ; 11 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; 12 ; >
       au < expected ; exists ; 2024 ; 13 ; Stability: International Journal of Security & Development Volume 2024 ; 2024 ; 13 ; >
+      au < expected ; exists ; 2025 ; 14 ; Stability: International Journal of Security & Development Volume 2025 ; 2025 ; 14 ; >
 
   }
 }
@@ -2369,6 +2438,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 5 ; Scandinavian Military Studies Volume 2022 ; 2022 ; 5 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Scandinavian Military Studies Volume 2023 ; 2023 ; 6 ; >
       au < exists ; exists ; 2024 ; 7 ; Scandinavian Military Studies Volume 2024 ; 2024 ; 7 ; >
+      au < expected ; expected ; 2025 ; 8 ; Scandinavian Military Studies Volume 2025 ; 2025 ; 8 ; >
 
   }
 }
@@ -2428,6 +2498,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 27 ; The Journal of Technology Studies Volume 2022 ; 2022 ; 27 ; >
       au < exists ; exists ; 2023 ; 28 ; The Journal of Technology Studies Volume 2023 ; 2023 ; 28 ; >
       au < exists ; exists ; 2024 ; 29 ; The Journal of Technology Studies Volume 2024 ; 2024 ; 29 ; >
+      au < expected ; expected ; 2025 ; 30 ; The Journal of Technology Studies Volume 2025 ; 2025 ; 30 ; >
 
   }
 
@@ -2448,6 +2519,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; 4 ; >
       au < exists ; exists ; 2024 ; 5 ; Studies in Engineering Education Volume 2024 ; 2024 ; 5 ; >
+      au < expected ; expected ; 2025 ; 6 ; Studies in Engineering Education Volume 2025 ; 2025 ; 6 ; >
 
   }
 
@@ -2499,6 +2571,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 34 ; Journal of Technology Education Volume 2022 ; 2022 ; 34 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 35 ; Journal of Technology Education Volume 2023 ; 2023 ; 35 ; >
       au < exists ; exists ; 2024 ; 36 ; Journal of Technology Education Volume 2024 ; 2024 ; 36 ; >
+      au < expected ; expected ; 2025 ; 37 ; Journal of Technology Education Volume 2025 ; 2025 ; 37 ; >
 
   }
 
@@ -2549,6 +2622,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 16 ; The International Journal of Servant-Leadership Volume 2022 ; 2022 ; 16 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 17 ; The International Journal of Servant-Leadership Volume 2023 ; 2023 ; 17 ; >
       au < exists ; exists ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 ; 18 ; >
+      au < expected ; expected ; 2025 ; 19 ; The International Journal of Servant-Leadership Volume 2025 ; 2025 ; 19 ; >
 
   }
 
@@ -2567,6 +2641,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 ; 1 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 ; 2 ; >
       au < expected ; exists ; 2024 ; 3 ; Indigenous Business & Public Administration Volume 2024 ; 2024 ; 3 ; >
+      au < expected ; exists ; 2025 ; 4 ; Indigenous Business & Public Administration Volume 2025 ; 2025 ; 4 ; >
 
   }
 
@@ -2620,6 +2695,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 ; 13 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; 14 ; >
       au < exists ; exists ; 2024 ; 15 ; Gateway Papers Volume 2024 ; 2024 ; 15 ; >
+      au < expected ; expected ; 2025 ; 16 ; Gateway Papers Volume 2025 ; 2025 ; 16 ; >
 
   }
 
@@ -2672,6 +2748,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 ; 19 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2023 ; 2023 ; 20 ; >
       au < exists ; exists ; 2024 ; 21 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 21 ; >
+      au < expected ; expected ; 2025 ; 22 ; Methodist DeBakey Cardiovascular Journal Volume 2025 ; 2025 ; 22 ; >
 
   }
 
@@ -2707,6 +2784,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; 3 ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; 4 ; >
       au < exists ; exists ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; >
+      au < expected ; expected ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; >
 
   }
 }
@@ -2750,6 +2828,7 @@
       au < doesNotExist ; doesNotExist ; 2022 ; 0 ; Scientific Study of Literature Volume 2022 ; 2022 ; 0 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; >
       au < exists ; exists ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; >
+      au < expected ; expected ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; >
 
   }
 }
@@ -2799,8 +2878,8 @@
       au < exists ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2023 ; 2023 ; 26 ; >
       au < expected ; exists ; 2024 ; 27 ; Journal of The American Society of Questioned Document Examiners Volume 2024 ; 2024 ; 27 ; >
+      au < expected ; exists ; 2025 ; 28 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 28 ; >
 
   }
 
 }
-

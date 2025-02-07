@@ -156,6 +156,8 @@
       #Per publisher: process only 2024 and forward.
       au < crawling ; exists ; 2024 ; American Journal of Roentgenology Volume 222 ; 222 ; >
       au < crawling ; exists ; 2024 ; American Journal of Roentgenology Volume 223 ; 223 ; >
+      au < expected ; exists ; 2025 ; American Journal of Roentgenology Volume 224 ; 224 ; >
+      au < expected ; exists ; 2025 ; American Journal of Roentgenology Volume 225 ; 225 ; >
 
   }
 

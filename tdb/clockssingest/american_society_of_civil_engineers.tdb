@@ -26,6 +26,7 @@
     
     au < manifest ; exists ; 2023 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2024 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -48,6 +49,7 @@
     au < frozen ; exists ; 2022 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 8 ; 8 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2023 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 9 ; 9 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 10 ; 10 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -80,6 +82,7 @@
     au < frozen ; exists ; 2022 ; Civil Engineering Magazine Volume 92 ; 92 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2023 ; Civil Engineering Magazine Volume 93 ; 93 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Civil Engineering Magazine Volume 94 ; 94 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Civil Engineering Magazine Volume 95 ; 95 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -102,6 +105,7 @@
     au < frozen ; exists ; 2022 ; GEOSTRATA Magazine Volume 26 ; 26 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2023 ; GEOSTRATA Magazine Volume 27 ; 27 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; GEOSTRATA Magazine Volume 28 ; 28 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; GEOSTRATA Magazine Volume 29 ; 29 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -183,6 +187,7 @@
     au < deepCrawl ; exists ; 2022 ; International Journal of Geomechanics Volume 22 ; 22 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; International Journal of Geomechanics Volume 23 ; 23 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; International Journal of Geomechanics Volume 24 ; 24 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; International Journal of Geomechanics Volume 25 ; 25 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -226,6 +231,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Architectural Engineering Volume 28 ; 28 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Architectural Engineering Volume 29 ; 29 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Architectural Engineering Volume 30 ; 30 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Architectural Engineering Volume 31 ; 31 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -276,6 +282,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Aerospace Engineering Volume 35 ; 35 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Aerospace Engineering Volume 36 ; 36 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Aerospace Engineering Volume 37 ; 37 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Aerospace Engineering Volume 38 ; 38 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -323,6 +330,7 @@
       au < deepCrawl ; exists ; 2022 ; Journal of Bridge Engineering Volume 27 ; 27 ; https://ascelibrary.org/ ; >
       au < deepCrawl ; exists ; 2023 ; Journal of Bridge Engineering Volume 28 ; 28 ; https://ascelibrary.org/ ; >
       au < crawling ; exists ; 2024 ; Journal of Bridge Engineering Volume 29 ; 29 ; https://ascelibrary.org/ ; >
+      au < expected ; exists ; 2025 ; Journal of Bridge Engineering Volume 30 ; 30 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -364,6 +372,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Composites for Construction Volume 26 ; 26 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Composites for Construction Volume 27 ; 27 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Composites for Construction Volume 28 ; 28 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Composites for Construction Volume 29 ; 29 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -415,6 +424,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Performance of Constructed Facilities Volume 36 ; 36 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Performance of Constructed Facilities Volume 37 ; 37 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Performance of Constructed Facilities Volume 38 ; 38 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Performance of Constructed Facilities Volume 39 ; 39 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -470,6 +480,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Construction Engineering and Management Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Construction Engineering and Management Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Construction Engineering and Management Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Construction Engineering and Management Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -521,6 +532,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Computing in Civil Engineering Volume 36 ; 36 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Computing in Civil Engineering Volume 37 ; 37 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Computing in Civil Engineering Volume 38 ; 38 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Computing in Civil Engineering Volume 39 ; 39 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -572,6 +584,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Cold Regions Engineering Volume 36 ; 36 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Cold Regions Engineering Volume 37 ; 37 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Cold Regions Engineering Volume 38 ; 38 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Cold Regions Engineering Volume 39 ; 39 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -627,6 +640,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Environmental Engineering Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Environmental Engineering Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Environmental Engineering Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Environmental Engineering Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -682,6 +696,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Engineering Mechanics Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Engineering Mechanics Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Engineering Mechanics Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Engineering Mechanics Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -737,6 +752,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Energy Engineering Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Energy Engineering Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Energy Engineering Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Energy Engineering Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -806,6 +822,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Geotechnical and Geoenvironmental Engineering Volume 151 ; 151 ; https://ascelibrary.org/ ; >
     }
   }
 
@@ -851,6 +868,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 26 ; 26 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 27 ; 27 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 28 ; 28 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Hazardous, Toxic and Radioactive Waste Volume 29 ; 29 ; https://ascelibrary.org/ ; >
     }
   }
 
@@ -893,6 +911,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Hydrologic Engineering Volume 27 ; 27 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Hydrologic Engineering Volume 28 ; 28 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Hydrologic Engineering Volume 29 ; 29 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Hydrologic Engineering Volume 30 ; 30 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -948,6 +967,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Hydraulic Engineering Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Hydraulic Engineering Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Hydraulic Engineering Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Hydraulic Engineering Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1003,6 +1023,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Irrigation and Drainage Engineering Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Irrigation and Drainage Engineering Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Irrigation and Drainage Engineering Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Irrigation and Drainage Engineering Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1046,6 +1067,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Infrastructure Systems Volume 28 ; 28 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Infrastructure Systems Volume 29 ; 29 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Infrastructure Systems Volume 30 ; 30 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Infrastructure Systems Volume 31 ; 31 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1075,6 +1097,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 14 ; 14 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 15 ; 15 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 16 ; 16 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Legal Affairs and Dispute Resolution in Engineering and Construction Volume 17 ; 17 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1128,6 +1151,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Management in Engineering Volume 38 ; 38 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Management in Engineering Volume 39 ; 39 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Management in Engineering Volume 40 ; 40 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Management in Engineering Volume 41 ; 41 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1177,6 +1201,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Materials in Civil Engineering Volume 34 ; 34 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Materials in Civil Engineering Volume 35 ; 35 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Materials in Civil Engineering Volume 36 ; 36 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Materials in Civil Engineering Volume 37 ; 37 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1284,6 +1309,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Civil Engineering Education Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Civil Engineering Education Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Civil Engineering Education Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Civil Engineering Education Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
     }
   }
@@ -1313,6 +1339,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Pipeline Systems Engineering and Practice Volume 13 ; 13 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Pipeline Systems Engineering and Practice Volume 14 ; 14 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Pipeline Systems Engineering and Practice Volume 15 ; 15 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Pipeline Systems Engineering and Practice Volume 16 ; 16 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1368,6 +1395,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Structural Engineering Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Structural Engineering Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Structural Engineering Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Structural Engineering Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1423,6 +1451,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Surveying Engineering Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Surveying Engineering Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Surveying Engineering Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Surveying Engineering Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1494,6 +1523,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Transportation Engineering, Part A: Systems Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Transportation Engineering, Part A: Systems Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Transportation Engineering, Part A: Systems Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Transportation Engineering, Part A: Systems Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
     }
   }
@@ -1517,6 +1547,7 @@
     au < frozen ; exists ; 2022 ; Journal of Transportation Engineering, Part B: Pavements Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2023 ; Journal of Transportation Engineering, Part B: Pavements Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Transportation Engineering, Part B: Pavements Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Transportation Engineering, Part B: Pavements Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
     }
   }
@@ -1573,6 +1604,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Urban Planning and Development Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Urban Planning and Development Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Urban Planning and Development Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Urban Planning and Development Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1628,6 +1660,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Water Resources Planning and Management Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Water Resources Planning and Management Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Water Resources Planning and Management Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Water Resources Planning and Management Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1683,6 +1716,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 150 ; 150 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Journal of Waterway, Port, Coastal, and Ocean Engineering Volume 151 ; 151 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1747,6 +1781,7 @@
     au < deepCrawl ; exists ; 2022 ; Natural Hazards Review Volume 23 ; 23 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Natural Hazards Review Volume 24 ; 24 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Natural Hazards Review Volume 25 ; 25 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Natural Hazards Review Volume 26 ; 26 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1789,6 +1824,7 @@
     au < deepCrawl ; exists ; 2022 ; Practice Periodical on Structural Design & Construction Volume 27 ; 27 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Practice Periodical on Structural Design & Construction Volume 28 ; 28 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Practice Periodical on Structural Design & Construction Volume 29 ; 29 ; https://ascelibrary.org/ ; >
+    au < expected ; exists ; 2025 ; Practice Periodical on Structural Design & Construction Volume 30 ; 30 ; https://ascelibrary.org/ ; >
 
   }
 

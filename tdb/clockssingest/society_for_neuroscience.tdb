@@ -37,6 +37,7 @@
       au < sfn.ClockssSFNDrupalPlugin ; deepCrawl ; exists ; 2022 ; eNeuro Volume 9 ; 9 ; >
       au < sfn.ClockssSFNDrupalPlugin ; deepCrawl ; exists ; 2023 ; eNeuro Volume 10 ; 10 ; >
       au < sfn.ClockssSFNDrupalPlugin ; exists ; exists ; 2024 ; eNeuro Volume 11 ; 11 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; expected ; expected ; 2025 ; eNeuro Volume 12 ; 12 ; >
       }
   }
   
@@ -94,6 +95,7 @@
       au < sfn.ClockssSFNDrupalPlugin ; deepCrawl ; exists ; 2022 ; Journal of Neuroscience Volume 42 ; 42 ; >
       au < sfn.ClockssSFNDrupalPlugin ; deepCrawl ; exists ; 2023 ; Journal of Neuroscience Volume 43 ; 43 ; >
       au < sfn.ClockssSFNDrupalPlugin ; crawling ; exists ; 2024 ; Journal of Neuroscience Volume 44 ; 44 ; >
+      au < sfn.ClockssSFNDrupalPlugin ; expected ; exists ; 2025 ; Journal of Neuroscience Volume 45 ; 45 ; >
 
   }
 

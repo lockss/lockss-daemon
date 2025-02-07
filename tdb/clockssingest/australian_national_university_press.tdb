@@ -74,6 +74,7 @@
     au < finished ; finished ; 2022 ; Aboriginal History Journal Volume 45 ; 45 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2023 ; Aboriginal History Journal Volume 46 ; 46 ; >
     au < crawling ; exists ; 2024 ; Aboriginal History Journal Volume 47 ; 47 ; >
+    au < expected ; exists ; 2025 ; Aboriginal History Journal Volume 48 ; 48 ; >
 
   }
 
@@ -150,6 +151,7 @@
     au < finished ; frozen ; 2022 ; ANU Historical Journal II: Number 3 ; 3 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; ANU Historical Journal II: Number 4 ; 4 ; >
     au < expected ; exists ; 2024 ; ANU Historical Journal II: Number 5 ; 5 ; >
+    au < expected ; exists ; 2025 ; ANU Historical Journal II: Number 6 ; 6 ; >
 
   }
   
@@ -172,6 +174,7 @@
     au < deepCrawl ; exists ; 2022 ; Australian Journal of Biography and History: Number 6 ; 6 ; >
     au < deepCrawl ; exists ; 2023 ; Australian Journal of Biography and History: Number 7 ; 7 ; >
     au < manifest ; exists ; 2024 ; Australian Journal of Biography and History: Number 8 ; 8 ; >
+    au < expected ; exists ; 2025 ; Australian Journal of Biography and History: Number 9 ; 9 ; >
 
   }  
 
@@ -201,6 +204,7 @@
     au < deepCrawl ; exists ; 2022 ; East Asia Forum Quarterly Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2023 ; East Asia Forum Quarterly Volume 15 ; 15 ; >
     au < crawling ; exists ; 2024 ; East Asia Forum Quarterly Volume 16 ; 16 ; >
+    au < expected ; exists ; 2025 ; East Asia Forum Quarterly Volume 17 ; 17 ; >
 
   }
 
@@ -224,6 +228,7 @@
     au < deepCrawl ; exists ; 2021-2022 ; Human Ecology Review: Volume 27 ; 27 ;  >
     au < manifest ; exists ; 2023 ; Human Ecology Review: Volume 28 ; 28 ;  >
     au < expected ; exists ; 2024 ; Human Ecology Review: Volume 29 ; 29 ;  >
+    au < expected ; exists ; 2025 ; Human Ecology Review: Volume 30 ; 30 ;  >
 
   }
 
@@ -248,6 +253,7 @@
     au < deepCrawl ; exists ; 2022 ; International Review of Environmental History: Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2023 ; International Review of Environmental History: Volume 9 ; 9 ; >
     au < manifest ; exists ; 2024 ; International Review of Environmental History: Volume 10 ; 10 ; >
+    au < expected ; exists ; 2025 ; International Review of Environmental History: Volume 11 ; 11 ; >
 
   }
 
@@ -265,6 +271,7 @@
     au < notReady ; exists ; 2022 ; Lilith: A Feminist History Journal Volume 28 ; 28 ; > #manifest page checker finds a volume that does not exist.
     au < manifest ; exists ; 2023 ; Lilith: A Feminist History Journal Volume 29 ; 29 ; >
     au < manifest ; exists ; 2024 ; Lilith: A Feminist History Journal Volume 30 ; 30 ; >
+    au < expected ; exists ; 2025 ; Lilith: A Feminist History Journal Volume 31 ; 31 ; >
 
   }
 
@@ -287,6 +294,7 @@
     au < notReady ; exists ; 2022 ; Made in China Volume 7 ; 7 ; > #manifest page checker finds a volume that does not exist.
     au < deepCrawl ; exists ; 2023 ; Made in China Volume 8 ; 8 ; >
     au < crawling ; exists ; 2024 ; Made in China Volume 9 ; 9 ; >
+    au < expected ; exists ; 2025 ; Made in China Volume 10 ; 10 ; >
 
   }
   

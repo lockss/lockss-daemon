@@ -27,6 +27,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Festive Studies Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Festive Studies Volume 5 ; 5 ; >
     au < manifest ; exists ; 2024 ; 2024 ; Journal of Festive Studies Volume 6 ; 6 ; >
+    au < expected ; exists ; 2025 ; 2025 ; Journal of Festive Studies Volume 7 ; 7 ; >
 
   }
 
@@ -43,6 +44,7 @@
 
     au < deepCrawl ; exists ; 2023 ; 2023 ; The Proceedings of the H-Net Teaching Conference Volume 1 ; 1 ; >
     au < crawling ; exists ; 2024 ; 2024 ; The Proceedings of the H-Net Teaching Conference Volume 2 ; 2 ; >
+    au < expected ; exists ; 2025 ; 2025 ; The Proceedings of the H-Net Teaching Conference Volume 3 ; 3 ; >
 
   }
 }
