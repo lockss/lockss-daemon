@@ -4,7 +4,7 @@
     name = Thamar University, Faculty of Arts ;
     info[contract] = 2025 ;
     info[back] = 2015 ;
-    info[tester] = 8 ;
+    info[tester] = 4 ;
     info[platform] = OJS3 3.3.0.16
   >
 
@@ -24,7 +24,7 @@
       param[journal_id] = arts
 
       au < manifest ; exists ; 2019 ; Arts for Linguistic & Literary Studies Volume 2019 ; 1 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; Arts for Linguistic & Literary Studies Volume 2020 ; 2 ; 2020 ; >
+      au < testing ; exists ; 2020 ; Arts for Linguistic & Literary Studies Volume 2020 ; 2 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Arts for Linguistic & Literary Studies Volume 2021 ; 3 ; 2021 ; >
       au < manifest ; exists ; 2022 ; Arts for Linguistic & Literary Studies Volume 2022 ; 4 ; 2022 ; >
       au < manifest ; exists ; 2023 ; Arts for Linguistic & Literary Studies Volume 2023 ; 5 ; 2023 ; >
@@ -43,7 +43,7 @@
       param[base_url] = https://journal.tu.edu.ye/
       param[journal_id] = artsmain
 
-      au < manifest ; exists ; 2001 ; Journal of Arts Volume 2001 ; 1 ; 2001 ; >
+      au < testing ; exists ; 2001 ; Journal of Arts Volume 2001 ; 1 ; 2001 ; >
       au < manifest ; exists ; 2002 ; Journal of Arts Volume 2002 ; 1 ; 2002 ; >
       au < doesNotExist ; doesNotExist ; 2003 ; Journal of Arts Volume 2003 ; 1 ; 2003 ; >
       au < doesNotExist ; doesNotExist ; 2004 ; Journal of Arts Volume 2004 ; 1 ; 2004 ; >
@@ -64,7 +64,7 @@
       au < manifest ; exists ; 2019 ; Journal of Arts Volume 2019 ; 1 ; 2019 ; >
       au < manifest ; exists ; 2020 ; Journal of Arts Volume 2020 ; 1 ; 2020 ; >
       au < manifest ; exists ; 2021 ; Journal of Arts Volume 2021 ; 1 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; Journal of Arts Volume 2022 ; 2 ; 2022 ; >
+      au < testing ; exists ; 2022 ; Journal of Arts Volume 2022 ; 2 ; 2022 ; >
       au < manifest ; exists ; 2023 ; Journal of Arts Volume 2023 ; 3 ; 2023 ; >
       au < manifest ; exists ; 2024 ; Journal of Arts Volume 2024 ; 4 ; 2024 ; >
       au < expected ; exists ; 2025 ; Journal of Arts Volume 2025 ; 5 ; 2025 ; >

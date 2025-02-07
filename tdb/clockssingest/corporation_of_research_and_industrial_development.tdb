@@ -4,7 +4,7 @@
     name = Corporation of Research and Industrial Development ;
     info[contract] = 2025 ;
     info[back] = 2015 ;
-    info[tester] = 8 ;
+    info[tester] = 4 ;
     info[platform] = OJS3 3.2.1.2
   >
 
@@ -22,7 +22,7 @@
       param[base_url] = http://ijoir.gov.iq/ijoir/
       param[journal_id] = jou
 
-      au < manifest ; exists ; 2024 ; Iraqi Journal of Industrial Research Volume 2024 ; 11 ; 2024 ; >
+      au < testing ; exists ; 2024 ; Iraqi Journal of Industrial Research Volume 2024 ; 11 ; 2024 ; >
       au < expected ; exists ; 2025 ; Iraqi Journal of Industrial Research Volume 2025 ; 12 ; 2025 ; >
 
   }
