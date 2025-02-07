@@ -84,6 +84,7 @@
       au < released ; 2022 ; Journal of Nuclear Medicine Volume 63 ; 63 >
       au < released ; 2023 ; Journal of Nuclear Medicine Volume 64 ; 64 >
       au < manifest ; 2024 ; Journal of Nuclear Medicine Volume 65 ; 65 >
+      au < expected ; 2025 ; Journal of Nuclear Medicine Volume 66 ; 66 >
       }
       {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -214,6 +215,7 @@
       au < released ; 2022 ; Journal of Nuclear Medicine Technology Volume 50 ; 50 >
       au < released ; 2023 ; Journal of Nuclear Medicine Technology Volume 51 ; 51 >
       au < manifest ; 2024 ; Journal of Nuclear Medicine Technology Volume 52 ; 52 >
+      au < expected ; 2025 ; Journal of Nuclear Medicine Technology Volume 53 ; 53 >
     }
     {
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

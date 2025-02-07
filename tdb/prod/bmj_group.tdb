@@ -149,6 +149,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Annals of the Rheumatic Diseases Volume 81 ; 81 ; https://ard.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Annals of the Rheumatic Diseases Volume 82 ; 82 ; https://ard.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Annals of the Rheumatic Diseases Volume 83 ; 83 ; https://ard.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Annals of the Rheumatic Diseases Volume 84 ; 84 ; https://ard.bmj.com/ >
 
   }
 
@@ -272,6 +273,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Archives of Disease in Childhood Volume 107 ; 107 ; https://adc.bmj.com/ > 
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Archives of Disease in Childhood Volume 108 ; 108 ; https://adc.bmj.com/ > 
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Archives of Disease in Childhood Volume 109 ; 109 ; https://adc.bmj.com/ > 
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Archives of Disease in Childhood Volume 110 ; 110 ; https://adc.bmj.com/ > 
 
   }
 
@@ -307,6 +309,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Archives of Disease in Childhood - Education and Practice Volume 107 ; 107 ; https://ep.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Archives of Disease in Childhood - Education and Practice Volume 108 ; 108 ; https://ep.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Archives of Disease in Childhood - Education and Practice Volume 109 ; 109 ; https://ep.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Archives of Disease in Childhood - Education and Practice Volume 110 ; 110 ; https://ep.bmj.com/ >
 
   }
 
@@ -360,6 +363,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 107 ; 107 ; https://fn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 108 ; 108 ; https://fn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 109 ; 109 ; https://fn.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 110 ; 110 ; https://fn.bmj.com/ >
 
   }
 
@@ -567,6 +571,10 @@
       au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Volume 385 ; 385 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Volume 386 ; 386 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Volume 387 ; 387 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Volume 388 ; 388 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Volume 389 ; 389 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Volume 390 ; 390 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Volume 391 ; 391 ; https://www.bmj.com/ >
 
     }
 
@@ -591,6 +599,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Health & Care Informatics Volume 29 ; 29 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Health & Care Informatics Volume 30 ; 30 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Health & Care Informatics Volume 31 ; 31 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Health & Care Informatics Volume 32 ; 32 ; https://informatics.bmj.com/ >
 
   }
 
@@ -614,6 +623,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Innovations Volume 8 ; 8 ; https://innovations.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Innovations Volume 9 ; 9 ; https://innovations.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Innovations Volume 10 ; 10 ; https://innovations.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Innovations Volume 11 ; 11 ; https://innovations.bmj.com/ >
 
   }
   
@@ -639,6 +649,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Open Volume 12 ; 12 ; https://bmjopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Open Volume 13 ; 13 ; https://bmjopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Open Volume 14 ; 14 ; https://bmjopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Open Volume 15 ; 15 ; https://bmjopen.bmj.com/ >
 
   }
   
@@ -663,6 +674,7 @@
       au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Open Diabetes Research & Care Volume 10 ; 10 ; https://drc.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Open Diabetes Research & Care Volume 11 ; 11 ; https://drc.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Open Diabetes Research & Care Volume 12 ; 12 ; https://drc.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Open Diabetes Research & Care Volume 13 ; 13 ; https://drc.bmj.com/ >
 
   }
   
@@ -683,6 +695,7 @@
     au < bmj.BMJDrupalPlugin ; notReady ; 2022 ; BMJ Open Ophthalmology Volume 7 ; 7 ; https://bmjophth.bmj.com/ > #Access Denied ~ https://bmjophth.bmj.com/content/7/Suppl_1
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Open Ophthalmology Volume 8 ; 8 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Open Ophthalmology Volume 9 ; 9 ; https://bmjophth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Open Ophthalmology Volume 10 ; 10 ; https://bmjophth.bmj.com/ >
 
   }
   
@@ -705,6 +718,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Open Respiratory Research Volume 9 ; 9 ; https://bmjopenrespres.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Open Respiratory Research Volume 10 ; 10 ; https://bmjopenrespres.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Open Respiratory Research Volume 11 ; 11 ; https://bmjopenrespres.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Open Respiratory Research Volume 12 ; 12 ; https://bmjopenrespres.bmj.com/ >
 
   }
   
@@ -730,6 +744,7 @@
       au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Quality Improvement Reports Volume 11 ; 11 ; https://bmjopenquality.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Quality Improvement Reports Volume 12 ; 12 ; https://bmjopenquality.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Quality Improvement Reports Volume 13 ; 13 ; https://bmjopenquality.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Quality Improvement Reports Volume 14 ; 14 ; https://bmjopenquality.bmj.com/ >
 
     }
 
@@ -775,6 +790,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Supportive & Palliative Care Volume 12 ; 12 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Supportive & Palliative Care Volume 13 ; 13 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Supportive & Palliative Care Volume 14 ; 14 ; https://spcare.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Supportive & Palliative Care Volume 15 ; 15 ; https://spcare.bmj.com/ >
 
   }
 
@@ -898,6 +914,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; British Journal of Ophthalmology Volume 106 ; 106 ; https://bjo.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; British Journal of Ophthalmology Volume 107 ; 107 ; https://bjo.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; British Journal of Ophthalmology Volume 108 ; 108 ; https://bjo.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; British Journal of Ophthalmology Volume 109 ; 109 ; https://bjo.bmj.com/ >
 
   }
 
@@ -969,6 +986,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; British Journal of Sports Medicine Volume 56 ; 56 ; https://bjsm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; British Journal of Sports Medicine Volume 57 ; 57 ; https://bjsm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; British Journal of Sports Medicine Volume 58 ; 58 ; https://bjsm.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; British Journal of Sports Medicine Volume 59 ; 59 ; https://bjsm.bmj.com/ >
 
   }
 
@@ -1047,6 +1065,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Drug and Therapeutics Bulletin Volume 60 ; 60 ; https://dtb.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Drug and Therapeutics Bulletin Volume 61 ; 61 ; https://dtb.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Drug and Therapeutics Bulletin Volume 62 ; 62 ; https://dtb.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Drug and Therapeutics Bulletin Volume 63 ; 63 ; https://dtb.bmj.com/ >
 
   }
 
@@ -1100,6 +1119,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Emergency Medicine Journal Volume 39 ; 39 ; https://emj.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Emergency Medicine Journal Volume 40 ; 40 ; https://emj.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Emergency Medicine Journal Volume 41 ; 41 ; https://emj.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Emergency Medicine Journal Volume 42 ; 42 ; https://emj.bmj.com/ >
 
   }
 
@@ -1159,6 +1179,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; European Journal of Hospital Pharmacy: Science and Practice Volume 29 ; 29 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; European Journal of Hospital Pharmacy: Science and Practice Volume 30 ; 30 ; https://ejhp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; European Journal of Hospital Pharmacy: Science and Practice Volume 31 ; 31 ; https://ejhp.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; European Journal of Hospital Pharmacy: Science and Practice Volume 32 ; 32 ; https://ejhp.bmj.com/ >
 
   }
 
@@ -1185,6 +1206,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Frontline Gastroenterology Volume 13 ; 13 ; https://fg.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Frontline Gastroenterology Volume 14 ; 14 ; https://fg.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Frontline Gastroenterology Volume 15 ; 15 ; https://fg.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Frontline Gastroenterology Volume 16 ; 16 ; https://fg.bmj.com/ >
 
   }
 
@@ -1208,6 +1230,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; OpenHeart Volume 9 ; 9 ; https://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; OpenHeart Volume 10 ; 10 ; https://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; OpenHeart Volume 11 ; 11 ; https://openheart.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; OpenHeart Volume 12 ; 12 ; https://openheart.bmj.com/ >
 
   }
 
@@ -1301,6 +1324,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Evidence-Based Medicine Volume 27 ; 27 ; https://ebm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Evidence-Based Medicine Volume 28 ; 28 ; https://ebm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Evidence-Based Medicine Volume 29 ; 29 ; https://ebm.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Evidence-Based Medicine Volume 30 ; 30 ; https://ebm.bmj.com/ >
 
   }
 
@@ -1341,6 +1365,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Evidence-Based Mental Health Volume 25 ; 25 ; https://mentalhealth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Evidence-Based Mental Health Volume 26 ; 26 ; https://mentalhealth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Evidence-Based Mental Health Volume 27 ; 27 ; https://mentalhealth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Evidence-Based Mental Health Volume 28 ; 28 ; https://mentalhealth.bmj.com/ >
 
   }
 
@@ -1381,6 +1406,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Evidence-Based Nursing Volume 25 ; 25 ; https://ebn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Evidence-Based Nursing Volume 26 ; 26 ; https://ebn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Evidence-Based Nursing Volume 27 ; 27 ; https://ebn.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Evidence-Based Nursing Volume 28 ; 28 ; https://ebn.bmj.com/ >
 
   }
 
@@ -1467,6 +1493,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Gut Volume 71 ; 71 ; https://gut.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Gut Volume 72 ; 72 ; https://gut.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Gut Volume 73 ; 73 ; https://gut.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Gut Volume 74 ; 74 ; https://gut.bmj.com/ >
 
   }
 
@@ -1590,6 +1617,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Heart Volume 108 ; 108 ; https://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Heart Volume 109 ; 109 ; https://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Heart Volume 110 ; 110 ; https://heart.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Heart Volume 111 ; 111 ; https://heart.bmj.com/ >
 
   }
 
@@ -1643,6 +1671,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; released ; 2022 ; Injury Prevention Volume 28 ; 28 ; https://injuryprevention.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; Injury Prevention Volume 29 ; 29 ; https://injuryprevention.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Injury Prevention Volume 30 ; 30 ; https://injuryprevention.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Injury Prevention Volume 31 ; 31 ; https://injuryprevention.bmj.com/ >
 
     }
 
@@ -1735,6 +1764,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Journal of Clinical Pathology Volume 75 ; 75 ; https://jcp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Journal of Clinical Pathology Volume 76 ; 76 ; https://jcp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Journal of Clinical Pathology Volume 77 ; 77 ; https://jcp.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Journal of Clinical Pathology Volume 78 ; 78 ; https://jcp.bmj.com/ >
 
   }
 
@@ -1826,6 +1856,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Journal of Epidemiology & Community Health Volume 76 ; 76 ; https://jech.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Journal of Epidemiology & Community Health Volume 77 ; 77 ; https://jech.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Journal of Epidemiology & Community Health Volume 78 ; 78 ; https://jech.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Journal of Epidemiology & Community Health Volume 79 ; 79 ; https://jech.bmj.com/ >
 
   }
 
@@ -1886,6 +1917,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Sexual & Reproductive Health Volume 48 ; 48 ; https://srh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Sexual & Reproductive Health Volume 49 ; 49 ; https://srh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Sexual & Reproductive Health Volume 50 ; 50 ; https://srh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Sexual & Reproductive Health Volume 51 ; 51 ; https://srh.bmj.com/ >
 
   }
 
@@ -1948,6 +1980,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Journal of Medical Ethics Volume 48 ; 48 ; https://jme.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Journal of Medical Ethics Volume 49 ; 49 ; https://jme.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Journal of Medical Ethics Volume 50 ; 50 ; https://jme.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Journal of Medical Ethics Volume 51 ; 51 ; https://jme.bmj.com/ >
 
   }
 
@@ -2022,6 +2055,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Journal of Medical Genetics Volume 59 ; 59 ; https://jmg.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Journal of Medical Genetics Volume 60 ; 60 ; https://jmg.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Journal of Medical Genetics Volume 61 ; 61 ; https://jmg.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Journal of Medical Genetics Volume 62 ; 62 ; https://jmg.bmj.com/ >
 
   }
 
@@ -2051,6 +2085,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Journal of NeuroInterventional Surgery Volume 14 ; 14 ; https://jnis.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Journal of NeuroInterventional Surgery Volume 15 ; 15 ; https://jnis.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Journal of NeuroInterventional Surgery Volume 16 ; 16 ; https://jnis.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Journal of NeuroInterventional Surgery Volume 17 ; 17 ; https://jnis.bmj.com/ >
 
   }
 
@@ -2159,6 +2194,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 93 ; 93 ; https://jnnp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 94 ; 94 ; https://jnnp.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 95 ; 95 ; https://jnnp.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 96 ; 96 ; https://jnnp.bmj.com/ >
 
   }
 
@@ -2345,6 +2381,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; released ; 2022 ; Journal of the Royal Army Medical Corps Volume 168 ; 168 ; https://militaryhealth.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; Journal of the Royal Army Medical Corps Volume 169 ; 169 ; https://militaryhealth.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Journal of the Royal Army Medical Corps Volume 170 ; 170 ; https://militaryhealth.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Journal of the Royal Army Medical Corps Volume 171 ; 171 ; https://militaryhealth.bmj.com/ >
 
     }
     
@@ -2374,6 +2411,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; released ; 2022 ; Lupus Science & Medicine Volume 9 ; 9 ; https://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; Lupus Science & Medicine Volume 10 ; 10 ; https://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Lupus Science & Medicine Volume 11 ; 11 ; https://lupus.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Lupus Science & Medicine Volume 12 ; 12 ; https://lupus.bmj.com/ >
 
     }
     
@@ -2416,6 +2454,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Medical Humanities Volume 48 ; 48 ; https://mh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Medical Humanities Volume 49 ; 49 ; https://mh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Medical Humanities Volume 50 ; 50 ; https://mh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Medical Humanities Volume 51 ; 51 ; https://mh.bmj.com/ >
 
   }
 
@@ -2532,6 +2571,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Occupational and Environmental Medicine Volume 79 ; 79 ; https://oem.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Occupational and Environmental Medicine Volume 80 ; 80 ; https://oem.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Occupational and Environmental Medicine Volume 81 ; 81 ; https://oem.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Occupational and Environmental Medicine Volume 82 ; 82 ; https://oem.bmj.com/ >
 
   }
 
@@ -2679,6 +2719,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Practical Neurology Volume 22 ; 22 ; https://pn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Practical Neurology Volume 23 ; 23 ; https://pn.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Practical Neurology Volume 24 ; 24 ; https://pn.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Practical Neurology Volume 25 ; 25 ; https://pn.bmj.com/ >
 
   }
 
@@ -2756,6 +2797,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Quality & Safety Volume 31 ; 31 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Quality & Safety Volume 32 ; 32 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Quality & Safety Volume 33 ; 33 ; https://qualitysafety.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Quality & Safety Volume 34 ; 34 ; https://qualitysafety.bmj.com/ >
 
       }
   }
@@ -2779,6 +2821,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; RMD Open Volume 8 ; 8 ; https://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; RMD Open Volume 9 ; 9 ; https://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; RMD Open Volume 10 ; 10 ; https://rmdopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; RMD Open Volume 11 ; 11 ; https://rmdopen.bmj.com/ >
 
   }
 
@@ -2892,6 +2935,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Sexually Transmitted Infections Volume 98 ; 98 ; https://sti.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Sexually Transmitted Infections Volume 99 ; 99 ; https://sti.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Sexually Transmitted Infections Volume 100 ; 100 ; https://sti.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Sexually Transmitted Infections Volume 101 ; 101 ; https://sti.bmj.com/ >
 
   }
 
@@ -2984,6 +3028,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Thorax Volume 77 ; 77 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Thorax Volume 78 ; 78 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Thorax Volume 79 ; 79 ; https://thorax.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Thorax Volume 80 ; 80 ; https://thorax.bmj.com/ >
 
   }
 
@@ -3042,6 +3087,7 @@ comment[tc15] = recursive URL structure
       au < bmj.BMJDrupalPlugin ; released ; 2022 ; Tobacco Control Volume 31 ; 31 ; https://tobaccocontrol.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; Tobacco Control Volume 32 ; 32 ; https://tobaccocontrol.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Tobacco Control Volume 33 ; 33 ; https://tobaccocontrol.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Tobacco Control Volume 34 ; 34 ; https://tobaccocontrol.bmj.com/ >
 
     }
 
