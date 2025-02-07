@@ -35,8 +35,10 @@ package org.lockss.plugin.omp;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
@@ -145,6 +147,30 @@ public class OMPBooksMetadataExtractorFactory implements FileMetadataExtractorFa
         return;
       }
       am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
+
+      TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+
+      if (tdbau != null) {
+        log.debug3("tdbau is not null");
+        String tdbisbn = tdbau.getIsbn();
+        String tdbeisbn = tdbau.getEisbn();
+        if (tdbisbn != null) {
+          log.debug3("tdbisbn is not null, tdbisbn = " + tdbisbn);
+          am.put(MetadataField.FIELD_ISBN, tdbisbn);
+          am.putRaw("publication_isbn_tdb_source", tdbisbn);
+        } else {
+          if (tdbeisbn != null) {
+            log.debug3("tdbeisbn is not null, tdbeisbn = " + tdbeisbn);
+            am.put(MetadataField.FIELD_EISBN, tdbeisbn);
+            am.putRaw("publication_eisbn_tdb_source", tdbeisbn);
+          } else {
+            log.debug3("tdbeisbn is null");
+          }
+          log.debug3("tdbisbn is null");
+        }
+      } else {
+        log.debug3("tdb is null");
+      }
       emitter.emitMetadata(cu, am);
     }
   }
