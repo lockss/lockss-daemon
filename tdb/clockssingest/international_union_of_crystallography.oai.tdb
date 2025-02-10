@@ -680,7 +680,7 @@
     au < expected ; exists ; 2025 ; 17 ; IUCrData Volume 17 (08/2025) ; 2025-08 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2025 ; 18 ; IUCrData Volume 18 (018/2025) ; 2025-018 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2025 ; 19 ; IUCrData Volume 19 (10/2025) ; 2025-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; expected ; 2025 ; 20 ; IUCrData Volume 20 (11/2025) ; 2025-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < expected ; exists ; 2025 ; 20 ; IUCrData Volume 20 (11/2025) ; 2025-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2025 ; 21 ; IUCrData Volume 21 (12/2025) ; 2025-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
 
   }
