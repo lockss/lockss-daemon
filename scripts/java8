@@ -33,7 +33,7 @@ if ! command -v sdk > /dev/null ; then
   exit 1
 fi
 
-echo "Deprecated: use 'sdk env' to start Java 8 mode and 'sdk env clear' to end it." 2>&1
+echo "Deprecated: use 'sdk env' to start Java 8 mode and 'sdk env clear' to end it." 1>&2
 
 sdk use java 8
 export JAVA_HOME=`sdk home java 8`
