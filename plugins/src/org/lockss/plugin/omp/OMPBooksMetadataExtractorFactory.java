@@ -52,7 +52,7 @@ public class OMPBooksMetadataExtractorFactory implements FileMetadataExtractorFa
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
                                                            String contentType)
           throws PluginException {
-    return new Emerald2020MetadataExtractor();
+    return new OMPBooksMetadataExtractor();
   }
 
   /*
@@ -122,7 +122,7 @@ public class OMPBooksMetadataExtractorFactory implements FileMetadataExtractorFa
   <meta name="DC.Type" content="Text.Book"/>
    */
 
-  public static class Emerald2020MetadataExtractor
+  public static class OMPBooksMetadataExtractor
           implements FileMetadataExtractor {
     private static MultiMap tagMap = new MultiValueMap();
     static {
