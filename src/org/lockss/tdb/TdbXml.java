@@ -54,7 +54,7 @@ public class TdbXml {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbXml:0.4.1]";
+  public static final String VERSION = "[TdbXml:0.4.2]";
   
   /**
    * <p>
@@ -306,7 +306,7 @@ public class TdbXml {
    * @since 1.78.4
    */
   protected Set<String> publisherNames;
-  
+
    /**
     * <p>
     * Makes a new instance of this class.
@@ -393,6 +393,7 @@ public class TdbXml {
                             PrintStream out,
                             Tdb tdb) {
     Predicate<Au> auPredicate = tdbQueryBuilder.getAuPredicate(options);
+    publisherNames.clear();
     
     preamble(options, out);
     
