@@ -442,6 +442,9 @@ okio-2.8.0-sources.jar
 # Common when people experiment with Python scripting
 /.venv/
 
+# VSCode artifacts
+/.vscode/
+
 /v2/.surefire*
 /v2/TAGS
 /v2/target/
