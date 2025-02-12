@@ -36,10 +36,16 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.Logger;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.CacheResultHandler;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 public class InderscienceHttpResponseHandler implements CacheResultHandler{
     
     private static final Logger logger = Logger.getLogger(InderscienceHttpResponseHandler.class);
+    //2024: Inderscience has a lot of broken links that they are unlikely to fix. 
+    //For now, we are labeling them as non-fatal 500 errors. 
+    private static Pattern IMAGE_PATTERN = Pattern.compile("^https?://www.inderscienceonline.com/.*\\.(jpg|gif)");
+    private static Pattern QUOTE_PATTERN = Pattern.compile("^https?://www.inderscienceonline.com/.*/%22data:application/font-woff");
 
     @Override
     public CacheException handleResult(ArchivalUnit au,
@@ -48,9 +54,13 @@ public class InderscienceHttpResponseHandler implements CacheResultHandler{
         switch (responseCode) {
         case 500:
             logger.debug2("500: " + url);
-            if(url.matches("^https?://www.inderscienceonline.com/.*\\.(jpg|gif)")){
+            Matcher mat1 = IMAGE_PATTERN.matcher(url);
+            Matcher mat2 = QUOTE_PATTERN.matcher(url);
+            if(mat1.find() || mat2.find()){
                 logger.debug2("This link is a broken link exception (non-fatal):" + url);
                 return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
+            }else{
+                return new CacheException.RetrySameUrlException("500 Internal Server Error");
             }
         default: 
             logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
