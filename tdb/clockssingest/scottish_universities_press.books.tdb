@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Scottish Universities Press ;
+    info[contract] = 2024 ;
+    info[back] = 2010 ;
+    info[tester] = 5 ;
+    info[platform] = Open Monograph Press 3.4.0.7
+  >
+
+    plugin = org.lockss.plugin.omp.ClockssOMPBooksPlugin
+    param[base_url] = https://books.sup.ac.uk/
+    param[publisher_id] = sup
+
+    implicit < status ; status2 ; year ;  isbn ; eisbn ; param[resource_id] ; name ; hidden[proxy] >
+
+  {
+
+    title <
+      name = University of Edinburgh Books
+    >
+
+      au < manifest ; exists ; 2024 ; 9781917341004 ; 9781917341028 ; sup-9781917341028 ; Conversations with Tim Ingold: Anthropology, education and life ; >
+
+  }
+
+}
