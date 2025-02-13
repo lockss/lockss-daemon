@@ -708,44 +708,44 @@ while (my $line = <>) {
       }
       sleep(5);
 
-  } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
-      ####start url only
-      $url = sprintf("%slockss/year/%d/",
-          $param{base_url}, $param{year});
-      $man_url = uri_unescape($url);
-      my $req = HTTP::Request->new(GET, $man_url);
-      my $resp = $ua->request($req);
-      ####permission url only
-      $url_p = sprintf("%sabout",
-          $param{base_url});
-      $man_url_p = uri_unescape($url_p);
-      my $req_p = HTTP::Request->new(GET, $man_url_p);
-      my $resp_p = $ua->request($req_p);
-      if ($resp->is_success) {
-          my $man_contents_p = $resp_p->content;
-          if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-          } elsif (defined($man_contents_p) && ($man_contents_p =~ m/$clockss_tag/)) {
-              if ($man_contents_p =~ m/<title>\s*(.*)\s*<\/title>/si) {
-                  $vol_title = $1;
-              }
-              my $man_contents = $resp->content;
-              #printf("$man_contents");
-              #if (defined($man_contents) && ($man_contents =~ m/\/volume\//) && ($man_contents =~ m/\($param{year}\)/)) {
-              if (defined($man_contents) && (($man_contents =~ m/\/volume\//) || ($man_contents =~ m/\/articles\//)) && ($man_contents =~ m/$param{year}/)) {
-              #if (defined($man_contents)) {
-                  $result = "Manifest";
-              } else {
-                  $result = "--NO_CONT--";
-              }
-          } else {
-              $result = "--NO_TAG--";
-          }
-      } else {
-          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-      }
-      sleep(5);
+#  } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
+#      ####start url only
+#      $url = sprintf("%slockss/year/%d/",
+#          $param{base_url}, $param{year});
+#      $man_url = uri_unescape($url);
+#      my $req = HTTP::Request->new(GET, $man_url);
+#      my $resp = $ua->request($req);
+#      ####permission url only
+#      $url_p = sprintf("%sabout",
+#          $param{base_url});
+#      $man_url_p = uri_unescape($url_p);
+#      my $req_p = HTTP::Request->new(GET, $man_url_p);
+#      my $resp_p = $ua->request($req_p);
+#      if ($resp->is_success) {
+#          my $man_contents_p = $resp_p->content;
+#          if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#          } elsif (defined($man_contents_p) && ($man_contents_p =~ m/$clockss_tag/)) {
+#              if ($man_contents_p =~ m/<title>\s*(.*)\s*<\/title>/si) {
+#                  $vol_title = $1;
+#              }
+#              my $man_contents = $resp->content;
+#              #printf("$man_contents");
+#              #if (defined($man_contents) && ($man_contents =~ m/\/volume\//) && ($man_contents =~ m/\($param{year}\)/)) {
+#              if (defined($man_contents) && (($man_contents =~ m/\/volume\//) || ($man_contents =~ m/\/articles\//)) && ($man_contents =~ m/$param{year}/)) {
+#              #if (defined($man_contents)) {
+#                  $result = "Manifest";
+#              } else {
+#                  $result = "--NO_CONT--";
+#              }
+#          } else {
+#              $result = "--NO_TAG--";
+#          }
+#      } else {
+#          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#      }
+#      sleep(5);
 
   } elsif ($plugin eq "UbiquityPartnerNetworkBooksPlugin" ||
            $plugin eq "ClockssUbiquityPartnerNetworkBooksPlugin") {
@@ -1208,7 +1208,8 @@ while (my $line = <>) {
         sleep(4); 
 
 # thin child of ClockssOJS2 but with a different start_url and no permission_url
-  } elsif ($plugin eq "ClockssJidcOJS2Plugin" || $plugin eq "ClockssOjs3Plugin") {
+#  } elsif ($plugin eq "ClockssJidcOJS2Plugin" || $plugin eq "ClockssOjs3Plugin") {
+  } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
     #OJS3 allows an attr to define variants for location of manifest
     #print $param{base_url};
         if ($param{base_url} =~ m/scholarworks/) {
@@ -1217,6 +1218,9 @@ while (my $line = <>) {
         } elsif (uri_unescape($param{base_url}) =~ m/aut\.ac\.nz/) {
             $url = sprintf("%s%s/gateway/clockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
+        } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
+            $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
+            $param{base_url2}, $param{journal_id}, $param{year});
         } else {
           #default behavior
           $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
