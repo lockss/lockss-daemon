@@ -117,7 +117,7 @@
       au < manifest ; exists ; 2021 ; PLOS Computational Biology Volume 2021 ; 2021 >
       au < manifest ; exists ; 2022 ; PLOS Computational Biology Volume 2022 ; 2022 >
       au < ready ; exists ; 2023 ; PLOS Computational Biology Volume 2023 ; 2023 >
-      au < ready ; exists ; 2024 ; PLOS Computational Biology Volume 2024 ; 2024 >
+      au < crawling ; exists ; 2024 ; PLOS Computational Biology Volume 2024 ; 2024 >
       au < expected ; exists ; 2025 ; PLOS Computational Biology Volume 2025 ; 2025 >
 
   }
@@ -131,9 +131,9 @@
 
       param[journal_id] = digitalhealth
 
-      au < ready ; exists ; 2022 ; PLOS Digital Health Volume 2022 ; 2022 >
+      au < crawling ; exists ; 2022 ; PLOS Digital Health Volume 2022 ; 2022 >
       au < ready ; exists ; 2023 ; PLOS Digital Health Volume 2023 ; 2023 >
-      au < ready ; exists ; 2024 ; PLOS Digital Health Volume 2024 ; 2024 >
+      au < crawling ; exists ; 2024 ; PLOS Digital Health Volume 2024 ; 2024 >
       au < expected ; exists ; 2025 ; PLOS Digital Health Volume 2025 ; 2025 >
 
   }
@@ -163,10 +163,10 @@
       au < manifest ; exists ; 2018 ; PLOS Genetics Volume 2018 ; 2018 >
       au < manifest ; exists ; 2019 ; PLOS Genetics Volume 2019 ; 2019 >
       au < manifest ; exists ; 2020 ; PLOS Genetics Volume 2020 ; 2020 >
-      au < ready ; exists ; 2021 ; PLOS Genetics Volume 2021 ; 2021 >
+      au < crawling ; exists ; 2021 ; PLOS Genetics Volume 2021 ; 2021 >
       au < ready ; exists ; 2022 ; PLOS Genetics Volume 2022 ; 2022 >
       au < manifest ; exists ; 2023 ; PLOS Genetics Volume 2023 ; 2023 >
-      au < ready ; exists ; 2024 ; PLOS Genetics Volume 2024 ; 2024 >
+      au < crawling ; exists ; 2024 ; PLOS Genetics Volume 2024 ; 2024 >
       au < expected ; exists ; 2025 ; PLOS Genetics Volume 2025 ; 2025 >
 
   }
@@ -180,10 +180,10 @@
 
       param[journal_id] = globalpublichealth
 
-      au < ready ; exists ; 2021 ; PLOS Global Public Health Volume 2021 ; 2021 >
-      au < ready ; exists ; 2022 ; PLOS Global Public Health Volume 2022 ; 2022 >
+      au < crawling ; exists ; 2021 ; PLOS Global Public Health Volume 2021 ; 2021 >
+      au < crawling ; exists ; 2022 ; PLOS Global Public Health Volume 2022 ; 2022 >
       au < ready ; exists ; 2023 ; PLOS Global Public Health Volume 2023 ; 2023 >
-      au < ready ; exists ; 2024 ; PLOS Global Public Health Volume 2024 ; 2024 >
+      au < crawling ; exists ; 2024 ; PLOS Global Public Health Volume 2024 ; 2024 >
       au < expected ; exists ; 2025 ; PLOS Global Public Health Volume 2025 ; 2025 >
 
   }
@@ -215,9 +215,9 @@
       au < manifest ; exists ; 2019 ; PLOS Medicine Volume 2019 ; 2019 >
       au < manifest ; exists ; 2020 ; PLOS Medicine Volume 2020 ; 2020 >
       au < ready ; exists ; 2021 ; PLOS Medicine Volume 2021 ; 2021 >
-      au < ready ; exists ; 2022 ; PLOS Medicine Volume 2022 ; 2022 >
-      au < ready ; exists ; 2023 ; PLOS Medicine Volume 2023 ; 2023 >
-      au < ready ; exists ; 2024 ; PLOS Medicine Volume 2024 ; 2024 >
+      au < crawling ; exists ; 2022 ; PLOS Medicine Volume 2022 ; 2022 >
+      au < crawling ; exists ; 2023 ; PLOS Medicine Volume 2023 ; 2023 >
+      au < crawling ; exists ; 2024 ; PLOS Medicine Volume 2024 ; 2024 >
       au < expected ; exists ; 2025 ; PLOS Medicine Volume 2025 ; 2025 >
 
   }
@@ -258,7 +258,7 @@
       au < manifest ; exists ; 2017 ; PLOS Neglected Tropical Diseases Volume 2017 ; 2017 >
       au < manifest ; exists ; 2018 ; PLOS Neglected Tropical Diseases Volume 2018 ; 2018 >
       au < manifest ; exists ; 2019 ; PLOS Neglected Tropical Diseases Volume 2019 ; 2019 >
-      au < ready ; exists ; 2020 ; PLOS Neglected Tropical Diseases Volume 2020 ; 2020 >
+      au < crawling ; exists ; 2020 ; PLOS Neglected Tropical Diseases Volume 2020 ; 2020 >
       au < ready ; exists ; 2021 ; PLOS Neglected Tropical Diseases Volume 2021 ; 2021 >
       au < manifest ; exists ; 2022 ; PLOS Neglected Tropical Diseases Volume 2022 ; 2022 >
       au < manifest ; exists ; 2023 ; PLOS Neglected Tropical Diseases Volume 2023 ; 2023 >
