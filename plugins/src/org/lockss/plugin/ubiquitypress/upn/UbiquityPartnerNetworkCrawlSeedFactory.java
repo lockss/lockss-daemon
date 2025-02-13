@@ -59,7 +59,7 @@ public class UbiquityPartnerNetworkCrawlSeedFactory implements CrawlSeedFactory 
 
     public static class UbiquityPartnerNetworkCrawlSeed extends BaseCrawlSeed {
     
-            public static Set<String> deceasedAUs = new HashSet<>(Arrays.asList("org|lockss|plugin|ubiquitypress|upn|ClockssUbiquityPartnerNetworkPlugin&base_url~https%3A%2F%2Faccount%2Eestetikajournal%2Eorg%2F&year~2022"));
+            public static Set<String> deceasedAUs = new HashSet<>(Arrays.asList("org|lockss|plugin|ubiquitypress|upn|ClockssUbiquityPartnerNetworkPlugin&base_url~https%3A%2F%2Fijops%2Ecom%2F&year~2018"));
             private String year;
             private String baseUrl;
     
@@ -72,7 +72,7 @@ public class UbiquityPartnerNetworkCrawlSeedFactory implements CrawlSeedFactory 
             PluginException, IOException {
                 if(deceasedAUs.contains(au.getAuId())){
                     Collection<String> uUrls = new ArrayList<String>(2);
-                    baseUrl = au.getConfiguration().get("base_url2");
+                    baseUrl = au.getConfiguration().get("base_url");
                     year = au.getConfiguration().get("year");
                     String s = baseUrl + "lockss/year/" + year;
                     uUrls.add(s);
@@ -81,6 +81,22 @@ public class UbiquityPartnerNetworkCrawlSeedFactory implements CrawlSeedFactory 
                     return uUrls;
                 }else{
                     return super.doGetStartUrls();
+                }
+            }
+            @Override
+            public Collection<String> doGetPermissionUrls() throws ConfigurationException,
+            PluginException, IOException {
+                if(deceasedAUs.contains(au.getAuId())){
+                    Collection<String> uUrls = new ArrayList<String>(2);
+                    baseUrl = au.getConfiguration().get("base_url");
+                    year = au.getConfiguration().get("year");
+                    String s = baseUrl + "about";
+                    uUrls.add(s);
+                    uUrls.add(UrlUtil.replaceScheme(s, "https", "http"));
+                    log.debug3("The permission url getting changed is " + uUrls.toString());
+                    return uUrls;
+                }else{
+                    return super.doGetPermissionUrls();
                 }
             }
         }

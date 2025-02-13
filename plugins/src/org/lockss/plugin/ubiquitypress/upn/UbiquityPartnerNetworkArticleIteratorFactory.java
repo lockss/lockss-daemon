@@ -42,8 +42,8 @@ import org.lockss.plugin.*;
 public class UbiquityPartnerNetworkArticleIteratorFactory
     implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
   
-  private static final String ROOT_TEMPLATE = "\"%s\", base_url2";
-  private static final String PATTERN_TEMPLATE = "\"^%sarticles/([^/?]+)/([^/?]+)/?$\", base_url2";
+  private static final String ROOT_TEMPLATE = "\"%s\", base_url";
+  private static final String PATTERN_TEMPLATE = "\"^%sarticles/([^/?]+)/([^/?]+)/?$\", base_url";
   
   private static final Pattern LANDING_PATTERN = Pattern.compile("/articles/([^/?]+)/([^/?]+)/?$", Pattern.CASE_INSENSITIVE);
   private static final String LANDING_REPLACEMENT = "/articles/$1/$2";
