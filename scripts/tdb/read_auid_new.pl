@@ -1208,8 +1208,8 @@ while (my $line = <>) {
         sleep(4); 
 
 # thin child of ClockssOJS2 but with a different start_url and no permission_url
-#  } elsif ($plugin eq "ClockssJidcOJS2Plugin" || $plugin eq "ClockssOjs3Plugin") {
-  } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
+  } elsif ($plugin eq "ClockssJidcOJS2Plugin" || $plugin eq "ClockssOjs3Plugin") {
+#  } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
     #OJS3 allows an attr to define variants for location of manifest
     #print $param{base_url};
         if ($param{base_url} =~ m/scholarworks/) {
