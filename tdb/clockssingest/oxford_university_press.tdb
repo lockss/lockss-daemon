@@ -627,6 +627,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; American Journal of Clinical Pathology Volume 157-158 ; 157-158 ; >
     au < finished ; manifest ; 2023 ; 2023 ; American Journal of Clinical Pathology Volume 159-160 ; 159-160 ; reingest2.clockss.org:8085 >
     au < testing ; exists ; 2024 ; 2024 ; American Journal of Clinical Pathology Volume 161-162 ; 161-162 ; >
+    au < exists ; exists ; 2025 ; 2025 ; American Journal of Clinical Pathology Volume 163-164 ; 163-164 ; >
 
   }
 
@@ -738,13 +739,14 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; American Journal of Epidemiology Volume 181-182 ; 181-182 ; >
     au < finished ; crawling ; 2016 ; 2016 ; American Journal of Epidemiology Volume 183-184 ; 183-184 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; American Journal of Epidemiology Volume 185-186 ; 185-186 ; reingest3.clockss.org:8083 >
-    au < finished ; crawling ; 2018 ; 2018 ; American Journal of Epidemiology Volume 187-188 ; 187-188 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; 2019 ; American Journal of Epidemiology Volume 189-190 ; 189-190 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2020 ; 2020 ; American Journal of Epidemiology Volume 191-192 ; 191-192 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2021 ; 2021 ; American Journal of Epidemiology Volume 193-194 ; 193-194 ; >
-    au < deepCrawl ; exists ; 2022 ; 2022 ; American Journal of Epidemiology Volume 195-196 ; 195-196 ; >
-    au < finished ; manifest ; 2023 ; 2023 ; American Journal of Epidemiology Volume 197-198 ; 197-198 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2024 ; 2024 ; American Journal of Epidemiology Volume 199-200 ; 199-200 ; >
+    au < finished ; crawling ; 2018 ; 2018 ; American Journal of Epidemiology Volume 187 ; 187 ; reingest4.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 2019 ; American Journal of Epidemiology Volume 188 ; 188 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 2020 ; American Journal of Epidemiology Volume 189 ; 189 ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; American Journal of Epidemiology Volume 190 ; 190 ; >
+    au < deepCrawl ; exists ; 2022 ; 2022 ; American Journal of Epidemiology Volume 191 ; 191 ; >
+    au < finished ; manifest ; 2023 ; 2023 ; American Journal of Epidemiology Volume 192 ; 192 ; reingest5.clockss.org:8082 >
+    au < crawling ; exists ; 2024 ; 2024 ; American Journal of Epidemiology Volume 193 ; 193 ; >
+    au < exists ; exists ; 2025 ; 2025 ; American Journal of Epidemiology Volume 194 ; 194 ; >
 
   }
 
@@ -1318,6 +1320,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Annals of Botany Volume 129-130 ; 129-130 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Annals of Botany Volume 131-132 ; 131-132 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; Annals of Botany Volume 133-134 ; 133-134 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Annals of Botany Volume 135-136 ; 135-136 ; >
 
   }
 
@@ -2108,6 +2111,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; British Journal of Dermatology Volume 186-187 ; 186-187 ; >
     au < finished ; manifest ; 2023 ; 2023 ; British Journal of Dermatology Volume 188-189 ; 188-189 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; British Journal of Dermatology Volume 190-191 ; 190-191 ; >
+    au < exists ; exists ; 2025 ; 2025 ; British Journal of Dermatology Volume 192-193 ; 192-193 ; >
 
   }
 
@@ -2380,6 +2384,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Biological Journal of the Linnean Society Volume 135-137 ; 135-137 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Biological Journal of the Linnean Society Volume 138-140 ; 138-140 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2024 ; 2024 ; Biological Journal of the Linnean Society Volume 141-143 ; 141-143 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Biological Journal of the Linnean Society Volume 144-146 ; 144-146 ; >
 
   }
 
@@ -2473,6 +2478,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Biology of Reproduction Volume 106-107 ; 106-107 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Biology of Reproduction Volume 108-109 ; 108-109 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2024 ; 2024 ; Biology of Reproduction Volume 110-111 ; 110-111 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Biology of Reproduction Volume 112-113 ; 112-113 ; >
 
   }
 
@@ -2678,7 +2684,6 @@
     #this title was ONLY in the publisher listing
     #content available from 1856 volume 1 to 2009 volume 161
 
-
     au < finished ; frozen ; 2010 ; 2010 ; Botanical Journal of the Linnean Society Volume 162-164 ; 162-164 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2011 ; 2011 ; Botanical Journal of the Linnean Society Volume 165-167 ; 165-167 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; 2012 ; Botanical Journal of the Linnean Society Volume 168-170 ; 168-170 ; reingest1.clockss.org:8082 >
@@ -2694,6 +2699,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Botanical Journal of the Linnean Society Volume 198-200 ; 198-200 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Botanical Journal of the Linnean Society Volume 201-203 ; 201-203 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; Botanical Journal of the Linnean Society Volume 204-206 ; 204-206 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Botanical Journal of the Linnean Society Volume 207-209 ; 207-209 ; >
 
   }
 
@@ -3067,13 +3073,14 @@
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; British Medical Bulletin Volume 113-116 ; 113-116 ; >
     au < finished ; crawling ; 2016 ; 2016 ; British Medical Bulletin Volume 117-120 ; 117-120 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; 2017 ; British Medical Bulletin Volume 121-124 ; 121-124 ; reingest4.clockss.org:8082 >
-    au < finished ; crawling ; 2018 ; 2018 ; British Medical Bulletin Volume 125-127 ; 125-127 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2019 ; 2019 ; British Medical Bulletin Volume 128-130 ; 128-130 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2020 ; 2020 ; British Medical Bulletin Volume 131-133 ; 131-133 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2021 ; 2021 ; British Medical Bulletin Volume 134-136 ; 134-136 ; >
-    au < deepCrawl ; exists ; 2022 ; 2022 ; British Medical Bulletin Volume 137-139 ; 137-139 ; >
-    au < finished ; manifest ; 2023 ; 2023 ; British Medical Bulletin Volume 140-142 ; 140-142 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2024 ; 2024 ; British Medical Bulletin Volume 143-145 ; 143-145 ; >
+    au < finished ; crawling ; 2018 ; 2018 ; British Medical Bulletin Volume 125-128 ; 125-128 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2019 ; 2019 ; British Medical Bulletin Volume 129-132 ; 129-132 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 2020 ; British Medical Bulletin Volume 133-136 ; 133-136 ; reingest2.clockss.org:8085 >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; British Medical Bulletin Volume 137-140 ; 137-140 ; >
+    au < deepCrawl ; exists ; 2022 ; 2022 ; British Medical Bulletin Volume 141-144 ; 141-144 ; >
+    au < finished ; manifest ; 2023 ; 2023 ; British Medical Bulletin Volume 145-148 ; 145-148 ; reingest4.clockss.org:8082 >
+    au < crawling ; exists ; 2024 ; 2024 ; British Medical Bulletin Volume 149-152 ; 149-152 ; >
+    au < exists ; exists ; 2025 ; 2025 ; British Medical Bulletin Volume 153-145 ; 153-145 ; >
 
   }
 
