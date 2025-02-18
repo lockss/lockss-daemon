@@ -1827,7 +1827,7 @@
     au < manifest ; exists ; 1999 ; Studia Hibernica Volume 30 ; 30 ; >
     au < ready ; exists ; 2001 ; Studia Hibernica Volume 31 ; 31 ; >
     au < ready ; exists ; 2003 ; Studia Hibernica Volume 32 ; 32 ; >
-    au < ready ; exists ; 2005 ; Studia Hibernica Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2005 ; Studia Hibernica Volume 33 ; 33 ; >
     au < crawling ; exists ; 2007 ; Studia Hibernica Volume 34 ; 34 ; >
     au < crawling ; exists ; 2009 ; Studia Hibernica Volume 35 ; 35 ; >
     au < ready ; exists ; 2010 ; Studia Hibernica Volume 36 ; 36 ; >
@@ -2411,14 +2411,14 @@
     au < manifest ; exists ; 1999 ; French Studies Volume 53 ; 53 ; >
     au < crawling ; exists ; 2000 ; French Studies Volume 54 ; 54 ; >
     au < crawling ; exists ; 2001 ; French Studies Volume 55 ; 55 ; >
-    au < ready ; exists ; 2002 ; French Studies Volume 56 ; 56 ; >
+    au < crawling ; exists ; 2002 ; French Studies Volume 56 ; 56 ; >
     au < ready ; exists ; 2003 ; French Studies Volume 57 ; 57 ; >
     au < crawling ; exists ; 2004 ; French Studies Volume 58 ; 58 ; >
     au < ready ; exists ; 2005 ; French Studies Volume 59 ; 59 ; >
     au < ready ; exists ; 2006 ; French Studies Volume 60 ; 60 ; >
     au < crawling ; exists ; 2007 ; French Studies Volume 61 ; 61 ; >
     au < ready ; exists ; 2008 ; French Studies Volume 62 ; 62 ; >
-    au < ready ; exists ; 2009 ; French Studies Volume 63 ; 63 ; >
+    au < crawling ; exists ; 2009 ; French Studies Volume 63 ; 63 ; >
     au < ready ; exists ; 2010 ; French Studies Volume 64 ; 64 ; >
     au < crawling ; exists ; 2011 ; French Studies Volume 65 ; 65 ; >
     au < ready ; exists ; 2012 ; French Studies Volume 66 ; 66 ; >
@@ -2426,8 +2426,8 @@
     au < ready ; exists ; 2014 ; French Studies Volume 68 ; 68 ; >
     au < ready ; exists ; 2015 ; French Studies Volume 69 ; 69 ; >
     au < ready ; exists ; 2016 ; French Studies Volume 70 ; 70 ; >
-    au < ready ; exists ; 2017 ; French Studies Volume 71 ; 71 ; >
-    au < ready ; exists ; 2018 ; French Studies Volume 72 ; 72 ; >
+    au < crawling ; exists ; 2017 ; French Studies Volume 71 ; 71 ; >
+    au < crawling ; exists ; 2018 ; French Studies Volume 72 ; 72 ; >
     au < crawling ; exists ; 2019 ; French Studies Volume 73 ; 73 ; >
     au < ready ; exists ; 2020 ; French Studies Volume 74 ; 74 ; >
     au < crawling ; exists ; 2021 ; French Studies Volume 75 ; 75 ; >
@@ -2485,7 +2485,7 @@
     au < ready ; exists ; 2015 ; French Studies Bulletin Volume 36 ; 36 ; >
     au < ready ; exists ; 2016 ; French Studies Bulletin Volume 37 ; 37 ; >
     au < crawling ; exists ; 2017 ; French Studies Bulletin Volume 38 ; 38 ; >
-    au < ready ; exists ; 2018 ; French Studies Bulletin Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2018 ; French Studies Bulletin Volume 39 ; 39 ; >
     au < crawling ; exists ; 2019 ; French Studies Bulletin Volume 40 ; 40 ; >
     au < crawling ; exists ; 2020 ; French Studies Bulletin Volume 41 ; 41 ; >
     au < ready ; exists ; 2021 ; French Studies Bulletin Volume 42 ; 42 ; >
@@ -2533,7 +2533,7 @@
     au < manifest ; exists ; 1989-1993 ; The Huguenot Society Journal Volume 25 ; 25 ; >
     au < manifest ; exists ; 1994-1997 ; The Huguenot Society Journal Volume 26 ; 26 ; >
     au < crawling ; exists ; 1998-2002 ; The Huguenot Society Journal Volume 27 ; 27 ; >
-    au < ready ; exists ; 2003-2007 ; The Huguenot Society Journal Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2003-2007 ; The Huguenot Society Journal Volume 28 ; 28 ; >
     au < ready ; exists ; 2008-2012 ; The Huguenot Society Journal Volume 29 ; 29 ; >
     au < crawling ; exists ; 2013-2017 ; The Huguenot Society Journal Volume 30 ; 30 ; >
     au < ready ; exists ; 2018 ; The Huguenot Society Journal Volume 31 ; 31 ; >
@@ -2575,7 +2575,7 @@
     au < ready ; exists ; 2003 ; Polin: Studies in Polish Jewry Volume 16 ; 16 ; >
     au < crawling ; exists ; 2004 ; Polin: Studies in Polish Jewry Volume 17 ; 17 ; >
     au < crawling ; exists ; 2005 ; Polin: Studies in Polish Jewry Volume 18 ; 18 ; >
-    au < ready ; exists ; 2007 ; Polin: Studies in Polish Jewry Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2007 ; Polin: Studies in Polish Jewry Volume 19 ; 19 ; >
     au < crawling ; exists ; 2008 ; Polin: Studies in Polish Jewry Volume 20 ; 20 ; >
     au < ready ; exists ; 2009 ; Polin: Studies in Polish Jewry Volume 21 ; 21 ; >
     au < ready ; exists ; 2010 ; Polin: Studies in Polish Jewry Volume 22 ; 22 ; >
@@ -2588,7 +2588,7 @@
     au < crawling ; exists ; 2017 ; Polin: Studies in Polish Jewry Volume 29 ; 29 ; >
     au < ready ; exists ; 2018 ; Polin: Studies in Polish Jewry Volume 30 ; 30 ; >
     au < ready ; exists ; 2019 ; Polin: Studies in Polish Jewry Volume 31 ; 31 ; >
-    au < ready ; exists ; 2020 ; Polin: Studies in Polish Jewry Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2020 ; Polin: Studies in Polish Jewry Volume 32 ; 32 ; >
     au < crawling ; exists ; 2021 ; Polin: Studies in Polish Jewry Volume 33 ; 33 ; >
     au < finished ; manifest ; 2022 ; Polin: Studies in Polish Jewry Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; Polin: Studies in Polish Jewry Volume 35 ; 35 ; reingest3.clockss.org:8083 >
