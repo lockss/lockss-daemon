@@ -17,7 +17,7 @@
       param[journal_id] = blake
       implicit < status ; year ; name ; volume ; param[year] >
 
-      au < doNotProcess ; 2011 ; Blake An Illustrated Quarterly Volume 44-45 ; 44-45 ; 2011 >
+      au < doNotProcess ; 2011 ; Blake An Illustrated Quarterly Volume 45 ; 45 ; 2011 >
       au < doNotProcess ; 2012 ; Blake An Illustrated Quarterly Volume 45-46 ; 45-46 ; 2012 >
       au < doNotProcess ; 2013 ; Blake An Illustrated Quarterly Volume 46-47 ; 46-47 ; 2013 >
       au < doNotProcess ; 2014 ; Blake An Illustrated Quarterly Volume 47-48 ; 47-48 ; 2014 >
@@ -28,9 +28,10 @@
       au < doNotProcess ; 2019 ; Blake An Illustrated Quarterly Volume 52-53 ; 52-53 ; 2019 >
       au < released ; 2020 ; Blake An Illustrated Quarterly Volume 53-54 ; 53-54 ; 2020 >
       au < released ; 2021 ; Blake An Illustrated Quarterly Volume 54-55 ; 54-55 ; 2021 >
-      au < released ; 2022 ; Blake An Illustrated Quarterly Volume 56-57 ; 56-57 ; 2022 >
-      au < released ; 2023 ; Blake An Illustrated Quarterly Volume 58-59 ; 58-59 ; 2023 >
-      au < manifest ; 2024 ; Blake An Illustrated Quarterly Volume 60-61 ; 60-61 ; 2024 >
+      au < released ; 2022 ; Blake An Illustrated Quarterly Volume 55-56 ; 55-56 ; 2022 >
+      au < released ; 2023 ; Blake An Illustrated Quarterly Volume 56-57 ; 56-57 ; 2023 >
+      au < manifest ; 2024 ; Blake An Illustrated Quarterly Volume 57-58 ; 57-58 ; 2024 >
+      au < exists ; 2025 ; Blake An Illustrated Quarterly Volume 58-59 ; 58-59 ; 2025 >
 
       }
 
