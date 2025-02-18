@@ -349,7 +349,7 @@ Args:
   <property name="fontbox.jar" value="${lib}/fontbox-${pdfbox.version}.jar" />
   <property name="jempbox.jar" value="${lib}/jempbox-${pdfbox.version}.jar" />
   <property name="bouncycastle.variant" value="jdk18on" />
-  <property name="bouncycastle.version" value="1.78.1" />
+  <property name="bouncycastle.version" value="1.80" />
   <property name="bouncycastle-provider.jar" value="${lib}/bcprov-${bouncycastle.variant}-${bouncycastle.version}.jar" />
   <property name="bouncycastle-mail.jar" value="${lib}/bcmail-${bouncycastle.variant}-${bouncycastle.version}.jar" />
   <property name="icu4j.version" value="75.1" />
