@@ -33,7 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
     <!-- https transition enabled -->
   </entry>
   <entry>
@@ -46,7 +46,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
@@ -54,11 +54,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>British Institute of Radiology Journals Plugin (CLOCKSS)</string>
+    <string>British Institute of Radiology Journals Plugin (CLOCKSS, Legacy)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"British Institute of Radiology Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"British Institute of Radiology Journals Plugin (CLOCKSS, Legacy), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
    <string>au_start_url</string>
