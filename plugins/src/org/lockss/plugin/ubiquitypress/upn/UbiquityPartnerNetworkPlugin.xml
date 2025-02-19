@@ -60,6 +60,20 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
     </map>
   </entry>
+  <!--
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_volume</string>
+        <map>
+          <string>"%sindex.php/%s/gateway/clockss?year=%d", to_https(base_url2), journal_id, year</string>
+          <string>"%slockss/year/%d", to_https(base_url2), year</string>
+        </map>
+      </entry>
+    </map>
+  </entry>
+  -->
   <entry>
     <string>au_start_url</string>
     <list>
