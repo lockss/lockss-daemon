@@ -40,7 +40,7 @@
     param[journal_id] = ajrua6
     
     au < crawling ; exists ; 2015 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2016 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2016 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2017 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2018 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2019 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 5 ; 5 ; https://ascelibrary.org/ ; >
@@ -65,15 +65,15 @@
     au < crawling ; exists ; 2005 ; Civil Engineering Magazine Volume 75 ; 75 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2006 ; Civil Engineering Magazine Volume 76 ; 76 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2007 ; Civil Engineering Magazine Volume 77 ; 77 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2008 ; Civil Engineering Magazine Volume 78 ; 78 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2008 ; Civil Engineering Magazine Volume 78 ; 78 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2009 ; Civil Engineering Magazine Volume 79 ; 79 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2010 ; Civil Engineering Magazine Volume 80 ; 80 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2010 ; Civil Engineering Magazine Volume 80 ; 80 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2011 ; Civil Engineering Magazine Volume 81 ; 81 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2012 ; Civil Engineering Magazine Volume 82 ; 82 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2012 ; Civil Engineering Magazine Volume 82 ; 82 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2013 ; Civil Engineering Magazine Volume 83 ; 83 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2014 ; Civil Engineering Magazine Volume 84 ; 84 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2014 ; Civil Engineering Magazine Volume 84 ; 84 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2015 ; Civil Engineering Magazine Volume 85 ; 85 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2016 ; Civil Engineering Magazine Volume 86 ; 86 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2016 ; Civil Engineering Magazine Volume 86 ; 86 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2017 ; Civil Engineering Magazine Volume 87 ; 87 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2018 ; Civil Engineering Magazine Volume 88 ; 88 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2019 ; Civil Engineering Magazine Volume 89 ; 89 ; https://ascelibrary.org/ ; >
@@ -101,7 +101,7 @@
     au < crawling ; exists ; 2018 ; GEOSTRATA Magazine Volume 22 ; 22 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2019 ; GEOSTRATA Magazine Volume 23 ; 23 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2020 ; GEOSTRATA Magazine Volume 24 ; 24 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2021 ; GEOSTRATA Magazine Volume 25 ; 25 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2021 ; GEOSTRATA Magazine Volume 25 ; 25 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2022 ; GEOSTRATA Magazine Volume 26 ; 26 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2023 ; GEOSTRATA Magazine Volume 27 ; 27 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; GEOSTRATA Magazine Volume 28 ; 28 ; https://ascelibrary.org/ ; >
