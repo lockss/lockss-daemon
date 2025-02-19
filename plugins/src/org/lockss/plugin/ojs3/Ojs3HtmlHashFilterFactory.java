@@ -73,7 +73,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
       Pattern.compile("\\[citado \\d\\d?\\s?([a-z]+\\s?)+\\d\\d\\d\\d\\s?]", Pattern.CASE_INSENSITIVE);
   // Accessed May 18, 2022.
   public static final Pattern TURABIAN_CIT_PATTERN =
-      Pattern.compile("Accessed [a-z]+\\.? \\d\\d?, \\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("Accessed:? [a-z]+\\.? \\d\\d?, \\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
   //(Accessed: 20May2022)
   public static final Pattern HARVARD_CIT_PATTERN =
       Pattern.compile("\\(Accessed: \\d\\d?\\s?[a-z]+\\.?\\s?\\d\\d\\d\\d\\s?\\)", Pattern.CASE_INSENSITIVE);
