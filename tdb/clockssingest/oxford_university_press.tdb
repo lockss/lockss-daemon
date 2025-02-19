@@ -3805,6 +3805,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical & Experimental Immunology Volume 207-210 ; 207-210 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Clinical & Experimental Immunology Volume 211-214 ; 211-214 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; Clinical & Experimental Immunology Volume 215-218 ; 215-218 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Clinical & Experimental Immunology Volume 219-222 ; 219-222 ; >
 
   }
 
@@ -3917,8 +3918,7 @@
     au < doNotProcess ; exists ; 1989 ; 1989 ; Clinical Infectious Diseases Volume 11 ; 11 ; >
     au < doNotProcess ; exists ; 1990 ; 1990 ; Clinical Infectious Diseases Volume 12 ; 12 ; >
     au < doNotProcess ; exists ; 1991 ; 1991 ; Clinical Infectious Diseases Volume 13 ; 13 ; >
-    au < doNotProcess ; exists ; 1992 ; 1992 ; Clinical Infectious Diseases Volume 14 ; 14 ; >
-#    au < doNotProcess ; exists ; 1992-1993 ; Clinical Infectious Diseases Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Clinical Infectious Diseases Volume 14-15 ; 14-15 ; >
     au < doNotProcess ; exists ; 1993 ; 1993 ; Clinical Infectious Diseases Volume 16-17 ; 16-17 ; >
     au < doNotProcess ; exists ; 1994 ; 1994 ; Clinical Infectious Diseases Volume 18-19 ; 18-19 ; >
     au < doNotProcess ; exists ; 1995 ; 1995 ; Clinical Infectious Diseases Volume 20-21 ; 20-21 ; >
@@ -3951,6 +3951,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical Infectious Diseases Volume 74-75 ; 74-75 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Clinical Infectious Diseases Volume 76-77 ; 76-77 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; Clinical Infectious Diseases Volume 78-79 ; 78-79 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Clinical Infectious Diseases Volume 80-81 ; 80-81 ; >
 
   }
 
@@ -5826,6 +5827,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Journal of Cardio-Thoracic Surgery Volume 61-62 ; 61-62 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of Cardio-Thoracic Surgery Volume 63-64 ; 63-64 ; reingest2.clockss.org:8085 >
     au < testing ; exists ; 2024 ; 2024 ; European Journal of Cardio-Thoracic Surgery Volume 65-66 ; 65-66 ; >
+    au < exists ; exists ; 2025 ; 2025 ; European Journal of Cardio-Thoracic Surgery Volume 67-68 ; 67-68 ; >
 
   }
 
@@ -5881,6 +5883,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186-187 ; 186-187 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of Endocrinology Volume 188-189 ; 188-189 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; European Journal of Endocrinology Volume 190-191 ; 190-191 ; >
+    au < exists ; exists ; 2025 ; 2025 ; European Journal of Endocrinology Volume 192-193 ; 192-193 ; >
 
   }
 
@@ -7210,6 +7213,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Genetics Volume 220-222 ; 220-222 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Genetics Volume 223-225 ; 223-225 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2024 ; 2024 ; Genetics Volume 226-228 ; 226-228 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Genetics Volume 229-231 ; 229-231 ; >
 
   }
 
@@ -7343,6 +7347,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Geophysical Journal International Volume 228-231 ; 228-231 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Geophysical Journal International Volume 232-235 ; 232-235 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; Geophysical Journal International Volume 236-239 ; 236-239 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Geophysical Journal International Volume 240-243 ; 240-243 ; >
 
   }
 
@@ -7828,7 +7833,8 @@
     au < finished ; manifest ; 2021 ; 2021 ; History Workshop Journal Volume 91-92 ; 91-92 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; History Workshop Journal Volume 93-94 ; 93-94 ; >
     au < exists ; exists ; 2023 ; 2023 ; History Workshop Journal Volume 95-96 ; 95-96 ; >
-    au < expected ; exists ; 2024 ; 2024 ; History Workshop Journal Volume 97-98 ; 97-98 ; >
+    au < exists ; exists ; 2024 ; 2024 ; History Workshop Journal Volume 97-98 ; 97-98 ; >
+    au < expected ; exists ; 2025 ; 2025 ; History Workshop Journal Volume 99-100 ; 99-100 ; >
 
   }
 
@@ -10098,6 +10104,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Jerusalem Review of Legal Studies Volume 25-26 ; 25-26 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Jerusalem Review of Legal Studies Volume 27-28 ; 27-28 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; Jerusalem Review of Legal Studies Volume 29-30 ; 29-30 ; >
+    au < expected ; exists ; 2025 ; 2025 ; Jerusalem Review of Legal Studies Volume 31-32 ; 31-32 ; >
 
   }
 
@@ -10265,12 +10272,13 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of American History Volume 102-103 ; 102-103 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; 2017 ; Journal of American History Volume 103-104 ; 103-104 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of American History Volume 104-105 ; 104-105 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 2019 ; Journal of American History Volume 106-107 ; 106-107 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2020 ; 2020 ; Journal of American History Volume 108-109 ; 108-109 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2021 ; 2021 ; Journal of American History Volume 110-111 ; 110-111 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of American History Volume 112-113 ; 112-113 ; >
-    au < finished ; manifest ; 2023 ; 2023 ; Journal of American History Volume 114-115 ; 114-115 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2024 ; 2024 ; Journal of American History Volume 116-117 ; 116-117 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Journal of American History Volume 105-106 ; 105-106 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 2020 ; Journal of American History Volume 106-107 ; 106-107 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2021 ; 2021 ; Journal of American History Volume 107-108 ; 107-108 ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of American History Volume 108-109 ; 108-109 ; >
+    au < finished ; manifest ; 2023 ; 2023 ; Journal of American History Volume 109-110 ; 109-110 ; reingest1.clockss.org:8082 >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of American History Volume 110-111 ; 110-111 ; >
+    au < expected ; exists ; 2025 ; 2025 ; Journal of American History Volume 112-113 ; 112-113 ; >
 
   }
 
@@ -10842,12 +10850,13 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Consumer Research Volume 42-43 ; 42-43 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; 2017 ; Journal of Consumer Research Volume 43-44 ; 43-44 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Consumer Research Volume 44-45 ; 44-45 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 2019 ; Journal of Consumer Research Volume 46-47 ; 46-47 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2020 ; 2020 ; Journal of Consumer Research Volume 48-49 ; 48-49 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2021 ; 2021 ; Journal of Consumer Research Volume 50-51 ; 50-51 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2022 ; 2022 ; Journal of Consumer Research Volume 52-53 ; 52-53 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2023 ; 2023 ; Journal of Consumer Research Volume 54-55 ; 54-55 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2024 ; 2024 ; Journal of Consumer Research Volume 56-57 ; 56-57 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Journal of Consumer Research Volume 45-46 ; 45-46 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 2020 ; Journal of Consumer Research Volume 46-47 ; 46-47 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; 2021 ; Journal of Consumer Research Volume 47-48 ; 47-48 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2022 ; 2022 ; Journal of Consumer Research Volume 48-49 ; 48-49 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; 2023 ; Journal of Consumer Research Volume 49-50 ; 49-50 ; reingest5.clockss.org:8082 >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of Consumer Research Volume 50-51 ; 50-51 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Journal of Consumer Research Volume 51-52 ; 51-52 ; >
 
   }
 
@@ -13368,12 +13377,13 @@
     au < finished ; crawling ; 2016 ; 2016 ; Journal of Social History Volume 49-50 ; 49-50 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2017 ; 2017 ; Journal of Social History Volume 50-51 ; 50-51 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Social History Volume 51-52 ; 51-52 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 2019 ; Journal of Social History Volume 53-54 ; 53-54 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Social History Volume 55-56 ; 55-56 ; >
-    au < finished ; manifest ; 2021 ; 2021 ; Journal of Social History Volume 57-58 ; 57-58 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Social History Volume 59-60 ; 59-60 ; >
-    au < finished ; manifest ; 2023 ; 2023 ; Journal of Social History Volume 61-62 ; 61-62 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2024 ; 2024 ; Journal of Social History Volume 63-64 ; 63-64 ; >
+    au < finished ; manifest ; 2019 ; 2019 ; Journal of Social History Volume 52-53 ; 52-53 ; reingest2.clockss.org:8085 >
+    au < deepCrawl ; exists ; 2020 ; 2020 ; Journal of Social History Volume 53-54 ; 53-54 ; >
+    au < finished ; manifest ; 2021 ; 2021 ; Journal of Social History Volume 54-55 ; 54-55 ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Social History Volume 55-56 ; 55-56 ; >
+    au < finished ; manifest ; 2023 ; 2023 ; Journal of Social History Volume 56-57 ; 56-57 ; reingest5.clockss.org:8082 >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of Social History Volume 57-58 ; 57-58 ; >
+    au < expected ; exists ; 2025 ; 2025 ; Journal of Social History Volume 58-59 ; 58-59 ; >
 
   }
 
@@ -15274,6 +15284,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Monthly Notices of the Royal Astronomical Society Volume 510-519 ; 510-519 ; reingest1.clockss.org:8082 >
     au < testing ; exists ; 2023 ; 2023 ; Monthly Notices of the Royal Astronomical Society Volume 519-527 ; 519-527 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Monthly Notices of the Royal Astronomical Society Volume 528-536 ; 528-536 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Monthly Notices of the Royal Astronomical Society Volume 536-544 ; 536-544 ; >
 
   }
 
@@ -15307,7 +15318,8 @@
     au < finished ; manifest ; 2021 ; 2021 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 501-510 ; 501-510 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 511-520 ; 511-520 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 521-529 ; 521-529 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2024 ; 2024 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 530-538 ; 530-538 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 530-537 ; 530-537 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Monthly Notices of the Royal Astronomical Society: Letters Volume 538-545 ; 538-545 ; >
 
   }
 
@@ -17078,6 +17090,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Past & Present Volume 254-257 ; 254-257 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Past & Present Volume 258-261 ; 258-261 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; Past & Present Volume 262-265 ; 262-265 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Past & Present Volume 266-269 ; 266-269 ; >
 
   }
 
@@ -17447,7 +17460,8 @@
       au < finished ; manifest ; 2021 ; 2021 ; Plant Physiology Volume 185-187 ; 185-187 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; 2022 ; Plant Physiology Volume 188-190 ; 188-190 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Plant Physiology Volume 191-193 ; 191-193 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2024 ; 2024 ; Plant Physiology Volume 194-196 ; 194-196 ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Plant Physiology Volume 194-197 ; 194-197 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Plant Physiology Volume 197-199 ; 197-199 ; >
 
     }
 
@@ -18435,9 +18449,10 @@
     au < finished ; manifest ; 2019 ; 2019 ; Radiation Protection Dosimetry Volume 183-187 ; 183-187 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Radiation Protection Dosimetry Volume 188-192 ; 188-192 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; 2021 ; Radiation Protection Dosimetry Volume 193-197 ; 193-197 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; 2022 ; Radiation Protection Dosimetry Volume 198-202 ; 198-202 ; >
-    au < finished ; manifest ; 2023 ; 2023 ; Radiation Protection Dosimetry Volume 203-206 ; 203-206 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2024 ; 2024 ; Radiation Protection Dosimetry Volume 207-210 ; 207-210 ; >
+    au < deepCrawl ; exists ; 2022 ; 2022 ; Radiation Protection Dosimetry Volume 198 ; 198 ; >
+    au < finished ; manifest ; 2023 ; 2023 ; Radiation Protection Dosimetry Volume 199-200 ; 199-200 ; reingest3.clockss.org:8083 >
+    au < crawling ; exists ; 2024 ; 2024 ; Radiation Protection Dosimetry Volume 200-201 ; 200-201 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Radiation Protection Dosimetry Volume 201-202 ; 201-202 ; >
 
   }
 
@@ -18580,9 +18595,10 @@
     au < finished ; crawling ; 2018 ; 2018 ; Reports of Patent, Design and Trade Mark Cases Volume 135 ; 135 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; 2019 ; Reports of Patent, Design and Trade Mark Cases Volume 136 ; 136 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; 2021 ; Reports of Patent, Design and Trade Mark Cases Volume 136-137 ; 136-137 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; 2022 ; Reports of Patent, Design and Trade Mark Cases Volume 138-139 ; 138-139 ; >
-    au < finished ; manifest ; 2023 ; 2023 ; Reports of Patent, Design and Trade Mark Cases Volume 140-141 ; 140-141 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2024 ; 2024 ; Reports of Patent, Design and Trade Mark Cases Volume 142-143 ; 142-143 ; >
+    au < deepCrawl ; exists ; 2022 ; 2022 ; Reports of Patent, Design and Trade Mark Cases Volume 137-138 ; 137-138 ; >
+    au < finished ; manifest ; 2023 ; 2023 ; Reports of Patent, Design and Trade Mark Cases Volume 138-139 ; 138-139 ; reingest2.clockss.org:8085 >
+    au < crawling ; exists ; 2024 ; 2024 ; Reports of Patent, Design and Trade Mark Cases Volume 137-139 ; 137-139 ; >
+    au < expected ; exists ; 2025 ; 2025 ; Reports of Patent, Design and Trade Mark Cases Volume 140-141 ; 140-141 ; >
 
   }
 
@@ -21294,20 +21310,16 @@
 
     param[journal_id] = jb
 
-    au < doNotProcess ; exists ; 1922 ; 1922 ; The Journal of Biochemistry Volume 1 ; 1 ; >
-#    au < doNotProcess ; exists ; 1922-1923 ; The Journal of Biochemistry Volume 2 ; 2 ; >
-#    au < doNotProcess ; exists ; 1923-1924 ; The Journal of Biochemistry Volume 3 ; 3 ; >
-#    au < doNotProcess ; exists ; 1924-1925 ; The Journal of Biochemistry Volume 4 ; 4 ; >
-    au < doNotProcess ; exists ; 1925 ; 1925 ; The Journal of Biochemistry Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1922 ; 1922 ; The Journal of Biochemistry Volume 1-2 ; 1-2 ; >
+    au < doNotProcess ; exists ; 1923 ; 1923 ; The Journal of Biochemistry Volume 2-3 ; 2-3 ; >
+    au < doNotProcess ; exists ; 1924 ; 1924 ; The Journal of Biochemistry Volume 3-4 ; 3-4 ; >
+    au < doNotProcess ; exists ; 1925 ; 1925 ; The Journal of Biochemistry Volume 4-5 ; 4-5 ; >
     au < doNotProcess ; exists ; 1926 ; 1926 ; The Journal of Biochemistry Volume 6 ; 6 ; >
-    au < doNotProcess ; exists ; 1927 ; 1927 ; The Journal of Biochemistry Volume 7 ; 7 ; >
-#    au < doNotProcess ; exists ; 1927-1928 ; The Journal of Biochemistry Volume 8 ; 8 ; >
-    au < doNotProcess ; exists ; 1928 ; 1928 ; The Journal of Biochemistry Volume 9 ; 9 ; >
-#    au < doNotProcess ; exists ; 1928-1929 ; The Journal of Biochemistry Volume 10 ; 10 ; >
-#    au < doNotProcess ; exists ; 1929-1930 ; The Journal of Biochemistry Volume 11 ; 11 ; >
-    au < doNotProcess ; exists ; 1930 ; 1930 ; The Journal of Biochemistry Volume 12 ; 12 ; >
-#    au < doNotProcess ; exists ; 1930-1931 ; The Journal of Biochemistry Volume 13 ; 13 ; >
-#    au < doNotProcess ; exists ; 1931-1932 ; The Journal of Biochemistry Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 1927 ; 1927 ; The Journal of Biochemistry Volume 7-8 ; 7-8 ; >
+    au < doNotProcess ; exists ; 1928 ; 1928 ; The Journal of Biochemistry Volume 8-10 ; 8-10 ; >
+    au < doNotProcess ; exists ; 1929 ; 1929 ; The Journal of Biochemistry Volume 10-11 ; 10-11 ; >
+    au < doNotProcess ; exists ; 1930 ; 1930 ; The Journal of Biochemistry Volume 11-12 ; 11-12 ; >
+    au < doNotProcess ; exists ; 1931 ; 1931 ; The Journal of Biochemistry Volume 13-14 ; 13-14 ; >
     au < doNotProcess ; exists ; 1932 ; 1932 ; The Journal of Biochemistry Volume 15-16 ; 15-16 ; >
     au < doNotProcess ; exists ; 1933 ; 1933 ; The Journal of Biochemistry Volume 17-18 ; 17-18 ; >
     au < doNotProcess ; exists ; 1934 ; 1934 ; The Journal of Biochemistry Volume 19-20 ; 19-20 ; >
@@ -21395,6 +21407,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The Journal of Biochemistry Volume 171-172 ; 171-172 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The Journal of Biochemistry Volume 173-174 ; 173-174 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; The Journal of Biochemistry Volume 175-176 ; 175-176 ; >
+    au < exists ; exists ; 2025 ; 2025 ; The Journal of Biochemistry Volume 177-178 ; 177-178 ; >
 
   }
 #  {
@@ -21664,6 +21677,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The Journal of Infectious Diseases Volume 225-226 ; 225-226 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The Journal of Infectious Diseases Volume 227-228 ; 227-228 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; The Journal of Infectious Diseases Volume 229-230 ; 229-230 ; >
+    au < exists ; exists ; 2025 ; 2025 ; The Journal of Infectious Diseases Volume 231-232 ; 231-232 ; >
 
   }
 
@@ -23696,7 +23710,8 @@
     au < finished ; manifest ; 2021 ; 2021 ; Toxicological Sciences Volume 179-184 ; 179-184 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Toxicological Sciences Volume 185-190 ; 185-190 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Toxicological Sciences Volume 191-196 ; 191-196 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2024 ; 2024 ; Toxicological Sciences Volume 197-202 ; 197-202 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Toxicological Sciences Volume 197-203 ; 197-203 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Toxicological Sciences Volume 203-208 ; 203-208 ; >
 
   }
 
@@ -24324,7 +24339,8 @@
     au < finished ; finished ; 2021 ; 2021 ; Zoological Journal of the Linnean Society Volume 191-193 ; 191-193 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Zoological Journal of the Linnean Society Volume 194-196 ; 194-196 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Zoological Journal of the Linnean Society Volume 197-199 ; 197-199 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2024 ; 2024 ; Zoological Journal of the Linnean Society Volume 200-202 ; 200-202 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Zoological Journal of the Linnean Society Volume 200-203 ; 200-203 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Zoological Journal of the Linnean Society Volume 203-205 ; 203-205 ; >
 
   }
   
