@@ -164,32 +164,31 @@
     au < doNotProcess ; 1903 ; 1903 ; African Affairs Volume 2-3 ; 2-3 >
     au < doNotProcess ; 1904 ; 1904 ; African Affairs Volume 3-4 ; 3-4 >
     au < doNotProcess ; 1905 ; 1905 ; African Affairs Volume 4-5 ; 4-5 >
-    au < doNotProcess ; 1906 ; 1906 ; African Affairs Volume 5-6 ; 5-6 >
-    au < doNotProcess ; 1907 ; 1907 ; African Affairs Volume 6-7 ; 6-7 >
-    au < doNotProcess ; 1908 ; 1908 ; African Affairs Volume 7-8 ; 7-8 >
-    au < doNotProcess ; 1909 ; 1909 ; African Affairs Volume 8-9 ; 8-9 >
-    #adjust years and volumes. Year is the parameter. volume is not.
-    au < doNotProcess ; 1910 ; 1910 ; African Affairs Volume 9-10 ; 9-10 >
-    au < doNotProcess ; 1911 ; 1911 ; African Affairs Volume 10-11 ; 10-11 >
-    au < doNotProcess ; 1912 ; 1912 ; African Affairs Volume 11-12 ; 11-12 >
-#    au < doNotProcess ; 1912-1913 ; African Affairs Volume XII ; XII >
-#    au < doNotProcess ; 1913-1914 ; African Affairs Volume XIII ; XIII >
-#    au < doNotProcess ; 1914-1915 ; African Affairs Volume XIV ; XIV >
-#    au < doNotProcess ; 1915-1916 ; African Affairs Volume XV ; XV >
-#    au < doNotProcess ; 1916-1917 ; African Affairs Volume XVI ; XVI >
-#    au < doNotProcess ; 1917-1918 ; African Affairs Volume XVII ; XVII >
-#    au < doNotProcess ; 1918-1919 ; African Affairs Volume XVIII ; XVIII >
-#    au < doNotProcess ; 1919-1920 ; African Affairs Volume XIX ; XIX >
-#    au < doNotProcess ; 1920-1921 ; African Affairs Volume XX ; XX >
-#    au < doNotProcess ; 1921-1922 ; African Affairs Volume XXI ; XXI >
-#    au < doNotProcess ; 1922-1923 ; African Affairs Volume XXII ; XXII >
-#    au < doNotProcess ; 1923-1924 ; African Affairs Volume XXIII ; XXIII >
-#    au < doNotProcess ; 1924-1925 ; African Affairs Volume XXIV ; XXIV >
-#    au < doNotProcess ; 1925-1926 ; African Affairs Volume XXV ; XXV >
-#    au < doNotProcess ; 1926-1927 ; African Affairs Volume XXVI ; XXVI >
-#    au < doNotProcess ; 1927-1928 ; African Affairs Volume XXVII ; XXVII >
-#    au < doNotProcess ; 1928-1929 ; African Affairs Volume XXVIII ; XXVIII >
-#    au < doNotProcess ; 1929-1930 ; African Affairs Volume XXIX ; XXIX >
+    au < doNotProcess ; 1906 ; 1906 ; African Affairs Volume 5-VI ; 5-VI >
+    au < doNotProcess ; 1907 ; 1907 ; African Affairs Volume VI-VII ; VI-VII >
+    au < doNotProcess ; 1908 ; 1908 ; African Affairs Volume VII-VII ; VII-VII >
+    au < doNotProcess ; 1909 ; 1909 ; African Affairs Volume VII-IX ; VII-IX >
+    au < doNotProcess ; 1910 ; 1910 ; African Affairs Volume IX-X ; IX-X >
+    au < doNotProcess ; 1911 ; 1911 ; African Affairs Volume X-XI ; X-XI >
+    au < doNotProcess ; 1912 ; 1912 ; African Affairs Volume XI-XII ; XI-XII >
+    au < doNotProcess ; 1913 ; 1913 ; African Affairs Volume XII-XIII ; XII-XIII >
+    au < doNotProcess ; 1914 ; 1914 ; African Affairs Volume XIII-XIV ; XIII-XIV >
+    au < doNotProcess ; 1915 ; 1915 ; African Affairs Volume XIV-XV ; XIV-XV >
+    au < doNotProcess ; 1916 ; 1916 ; African Affairs Volume XV-XVI ; XV-XVI >
+    au < doNotProcess ; 1917 ; 1917 ; African Affairs Volume XVI-XVII ; XVI-XVII >
+    au < doNotProcess ; 1918 ; 1918 ; African Affairs Volume XVII-XVIII ; XVII-XVIII >
+    au < doNotProcess ; 1919 ; 1919 ; African Affairs Volume XVIII-XIX ; XVIII-XIX >
+    au < doNotProcess ; 1920 ; 1920 ; African Affairs Volume XIX-XX ; XIX-XX >
+    au < doNotProcess ; 1921 ; 1921 ; African Affairs Volume XX-XXI ; XX-XXI >
+    au < doNotProcess ; 1922 ; 1922 ; African Affairs Volume XXI-XXII ; XXI-XXII >
+    au < doNotProcess ; 1923 ; 1923 ; African Affairs Volume XXII-XXIII ; XXII-XXIII >
+    au < doNotProcess ; 1924 ; 1924 ; African Affairs Volume XXIII-XXIV ; XXIII-XXIV >
+    au < doNotProcess ; 1925 ; 1925 ; African Affairs Volume XXIV-XXV ; XXIV-XXV >
+    au < doNotProcess ; 1926 ; 1926 ; African Affairs Volume XXV-XXVI ; XXV-XXVI >
+    au < doNotProcess ; 1927 ; 1927 ; African Affairs Volume XXVI-XXVII ; XXVI-XXVII >
+    au < doNotProcess ; 1928 ; 1928 ; African Affairs Volume XXVII-XXVIII ; XXVII-XXVIII >
+    au < doNotProcess ; 1929 ; 1929 ; African Affairs Volume XXVIII-XXIX ; XXVIII-XXIX >
+    au < doNotProcess ; 1930 ; 1930 ; African Affairs Volume XXIX ; XXIX >
     au < doNotProcess ; 1931 ; 1931 ; African Affairs Volume XXX ; XXX >
     au < doNotProcess ; 1932 ; 1932 ; African Affairs Volume XXXI ; XXXI >
     au < doNotProcess ; 1933 ; 1933 ; African Affairs Volume XXXII ; XXXII >
@@ -560,16 +559,26 @@
 
     param[journal_id] = ajcn
     #move to Elsevier, 2023-01-02
-    #content available from 1952 volume 1 to 1999 volume 70
+    #content available from 1952 volume 1 to 1989 volume 50
 
-    au < doNotProcess ; 2000 ; 2000 ; The American Journal of Clinical Nutrition Volume 71-72 ; 71-72 >
-    au < doNotProcess ; 2001 ; 2001 ; The American Journal of Clinical Nutrition Volume 73-74 ; 73-74 >
-    au < doNotProcess ; 2002 ; 2002 ; The American Journal of Clinical Nutrition Volume 75-76 ; 75-76 >
-    au < doNotProcess ; 2003 ; 2003 ; The American Journal of Clinical Nutrition Volume 77-78 ; 77-78 >
-    au < doNotProcess ; 2004 ; 2004 ; The American Journal of Clinical Nutrition Volume 79-80 ; 79-80 >
-    au < doNotProcess ; 2005 ; 2005 ; The American Journal of Clinical Nutrition Volume 81-82 ; 81-82 >
-    au < doNotProcess ; 2006 ; 2006 ; The American Journal of Clinical Nutrition Volume 83-84 ; 83-84 >
-    au < doNotProcess ; 2007 ; 2007 ; The American Journal of Clinical Nutrition Volume 85-86 ; 85-86 >
+    au < exists ; 1990 ; 1990 ; The American Journal of Clinical Nutrition Volume 51-52 ; 51-52 >
+    au < exists ; 1991 ; 1991 ; The American Journal of Clinical Nutrition Volume 53-54 ; 53-54 >
+    au < exists ; 1992 ; 1992 ; The American Journal of Clinical Nutrition Volume 55-56 ; 55-56 >
+    au < exists ; 1993 ; 1993 ; The American Journal of Clinical Nutrition Volume 57-58 ; 57-58 >
+    au < exists ; 1994 ; 1994 ; The American Journal of Clinical Nutrition Volume 59-60 ; 59-60 >
+    au < exists ; 1995 ; 1995 ; The American Journal of Clinical Nutrition Volume 61-62 ; 61-62 >
+    au < exists ; 1996 ; 1996 ; The American Journal of Clinical Nutrition Volume 63-64 ; 63-64 >
+    au < exists ; 1997 ; 1997 ; The American Journal of Clinical Nutrition Volume 65-66 ; 65-66 >
+    au < exists ; 1998 ; 1998 ; The American Journal of Clinical Nutrition Volume 67-68 ; 67-68 >
+    au < exists ; 1999 ; 1999 ; The American Journal of Clinical Nutrition Volume 69-70 ; 69-70 >
+    au < exists ; 2000 ; 2000 ; The American Journal of Clinical Nutrition Volume 71-72 ; 71-72 >
+    au < exists ; 2001 ; 2001 ; The American Journal of Clinical Nutrition Volume 73-74 ; 73-74 >
+    au < exists ; 2002 ; 2002 ; The American Journal of Clinical Nutrition Volume 75-76 ; 75-76 >
+    au < exists ; 2003 ; 2003 ; The American Journal of Clinical Nutrition Volume 77-78 ; 77-78 >
+    au < exists ; 2004 ; 2004 ; The American Journal of Clinical Nutrition Volume 79-80 ; 79-80 >
+    au < exists ; 2005 ; 2005 ; The American Journal of Clinical Nutrition Volume 81-82 ; 81-82 >
+    au < exists ; 2006 ; 2006 ; The American Journal of Clinical Nutrition Volume 83-84 ; 83-84 >
+    au < exists ; 2007 ; 2007 ; The American Journal of Clinical Nutrition Volume 85-86 ; 85-86 >
     au < manifest ; 2008 ; 2008 ; The American Journal of Clinical Nutrition Volume 87-88 ; 87-88 >
     au < released ; 2009 ; 2009 ; The American Journal of Clinical Nutrition Volume 89-90 ; 89-90 >
     au < released ; 2010 ; 2010 ; The American Journal of Clinical Nutrition Volume 91-92 ; 91-92 >
@@ -988,44 +997,47 @@
     >
 
     param[journal_id] = analysis
-#    au < doNotProcess ; 1933-1934 ; Analysis Volume 1 ; 1 >
-#    au < doNotProcess ; 1934-1935 ; Analysis Volume 2 ; 2 >
-#    au < doNotProcess ; 1935-1936 ; Analysis Volume 3 ; 3 >
-#    au < doNotProcess ; 1936-1937 ; Analysis Volume 4 ; 4 >
-#    au < doNotProcess ; 1937-1938 ; Analysis Volume 5 ; 5 >
-#    au < doNotProcess ; 1938-1939 ; Analysis Volume 6 ; 6 >
 
+    au < doNotProcess ; 1933 ; 1933 ; Analysis Volume 1 ; 1 >
+    au < doNotProcess ; 1934 ; 1934 ; Analysis Volume 1-2 ; 1-2 >
+    au < doNotProcess ; 1935 ; 1935 ; Analysis Volume 2-3 ; 2-3 >
+    au < doNotProcess ; 1936 ; 1936 ; Analysis Volume 3-4 ; 3-4 >
+    au < doNotProcess ; 1937 ; 1937 ; Analysis Volume 4-5 ; 4-5 >
+    au < doNotProcess ; 1938 ; 1938 ; Analysis Volume 5-6 ; 5-6 >
+    au < doNotProcess ; 1939 ; 1939 ; Analysis Volume 6 ; 6 >
     au < doNotProcess ; 1940 ; 1940 ; Analysis Volume 7 ; 7 >
-#    au < doNotProcess ; 1947-1948 ; Analysis Volume 8 ; 8 >
-#    au < doNotProcess ; 1948-1949 ; Analysis Volume 9 ; 9 >
-#    au < doNotProcess ; 1949-1950 ; Analysis Volume 10 ; 10 >
-#    au < doNotProcess ; 1950-1951 ; Analysis Volume 11 ; 11 >
-#    au < doNotProcess ; 1951-1952 ; Analysis Volume 12 ; 12 >
-#    au < doNotProcess ; 1952-1953 ; Analysis Volume 13 ; 13 >
-#    au < doNotProcess ; 1953-1954 ; Analysis Volume 14 ; 14 >
-#    au < doNotProcess ; 1954-1955 ; Analysis Volume 15 ; 15 >
-#    au < doNotProcess ; 1955-1956 ; Analysis Volume 16 ; 16 >
-#    au < doNotProcess ; 1956-1957 ; Analysis Volume 17 ; 17 >
-#    au < doNotProcess ; 1957-1958 ; Analysis Volume 18 ; 18 >
-#    au < doNotProcess ; 1958-1959 ; Analysis Volume 19 ; 19 >
-#    au < doNotProcess ; 1959-1960 ; Analysis Volume 20 ; 20 >
-#    au < doNotProcess ; 1960-1961 ; Analysis Volume 21 ; 21 >
-#    au < doNotProcess ; 1961-1962 ; Analysis Volume 22 ; 22 >
-#    au < doNotProcess ; 1962-1963 ; Analysis Volume 23 ; 23 >
-#    au < doNotProcess ; 1963-1964 ; Analysis Volume 24 ; 24 >
-#    au < doNotProcess ; 1964-1965 ; Analysis Volume 25 ; 25 >
-#    au < doNotProcess ; 1965-1966 ; Analysis Volume 26 ; 26 >
-#    au < doNotProcess ; 1966-1967 ; Analysis Volume 27 ; 27 >
-#    au < doNotProcess ; 1967-1968 ; Analysis Volume 28 ; 28 >
-#    au < doNotProcess ; 1968-1969 ; Analysis Volume 29 ; 29 >
-#    au < doNotProcess ; 1969-1970 ; Analysis Volume 30 ; 30 >
-#    au < doNotProcess ; 1970-1971 ; Analysis Volume 31 ; 31 >
-#    au < doNotProcess ; 1971-1972 ; Analysis Volume 32 ; 32 >
-#    au < doNotProcess ; 1972-1973 ; Analysis Volume 33 ; 33 >
-#    au < doNotProcess ; 1973-1974 ; Analysis Volume 34 ; 34 >
-#    au < doNotProcess ; 1974-1975 ; Analysis Volume 35 ; 35 >
-#    au < doNotProcess ; 1975-1976 ; Analysis Volume 36 ; 36 >
-#    au < doNotProcess ; 1976-1977 ; Analysis Volume 37 ; 37 >
+
+    au < doNotProcess ; 1947 ; 1947 ; Analysis Volume 8 ; 8 >
+    au < doNotProcess ; 1948 ; 1948 ; Analysis Volume 8-9 ; 8-9 >
+    au < doNotProcess ; 1949 ; 1949 ; Analysis Volume 9-10 ; 9-10 >
+    au < doNotProcess ; 1950 ; 1950 ; Analysis Volume 10-11 ; 10-11 >
+    au < doNotProcess ; 1951 ; 1951 ; Analysis Volume 11-12 ; 11-12 >
+    au < doNotProcess ; 1952 ; 1952 ; Analysis Volume 12-13 ; 12-13 >
+    au < doNotProcess ; 1953 ; 1953 ; Analysis Volume 13-14 ; 13-14 >
+    au < doNotProcess ; 1954 ; 1954 ; Analysis Volume 14-15 ; 14-15 >
+    au < doNotProcess ; 1955 ; 1955 ; Analysis Volume 15-16 ; 15-16 >
+    au < doNotProcess ; 1956 ; 1956 ; Analysis Volume 16-17 ; 16-17 >
+    au < doNotProcess ; 1957 ; 1957 ; Analysis Volume 17-18 ; 17-18 >
+    au < doNotProcess ; 1958 ; 1958 ; Analysis Volume 18-19 ; 18-19 >
+    au < doNotProcess ; 1959 ; 1959 ; Analysis Volume 19-20 ; 19-20 >
+    au < doNotProcess ; 1960 ; 1960 ; Analysis Volume 20-21 ; 20-21 >
+    au < doNotProcess ; 1961 ; 1961 ; Analysis Volume 21-22 ; 21-22 >
+    au < doNotProcess ; 1962 ; 1962 ; Analysis Volume 22-23 ; 22-23 >
+    au < doNotProcess ; 1963 ; 1963 ; Analysis Volume 23-24 ; 23-24 >
+    au < doNotProcess ; 1964 ; 1964 ; Analysis Volume 24-25 ; 24-25 >
+    au < doNotProcess ; 1965 ; 1965 ; Analysis Volume 25-26 ; 25-26 >
+    au < doNotProcess ; 1966 ; 1966 ; Analysis Volume 26-27 ; 26-27 >
+    au < doNotProcess ; 1967 ; 1967 ; Analysis Volume 27-28 ; 27-28 >
+    au < doNotProcess ; 1968 ; 1968 ; Analysis Volume 28-29 ; 28-29 >
+    au < doNotProcess ; 1969 ; 1969 ; Analysis Volume 29-30 ; 29-30 >
+    au < doNotProcess ; 1970 ; 1970 ; Analysis Volume 30-31 ; 30-31 >
+    au < doNotProcess ; 1971 ; 1971 ; Analysis Volume 31-32 ; 31-32 >
+    au < doNotProcess ; 1972 ; 1972 ; Analysis Volume 32-33 ; 32-33 >
+    au < doNotProcess ; 1973 ; 1973 ; Analysis Volume 33-34 ; 33-34 >
+    au < doNotProcess ; 1974 ; 1974 ; Analysis Volume 34-35 ; 34-35 >
+    au < doNotProcess ; 1975 ; 1975 ; Analysis Volume 35-36 ; 35-36 >
+    au < doNotProcess ; 1976 ; 1976 ; Analysis Volume 36-37 ; 36-37 >
+    au < doNotProcess ; 1977 ; 1977 ; Analysis Volume 37 ; 37 >
     au < doNotProcess ; 1978 ; 1978 ; Analysis Volume 38 ; 38 >
     au < doNotProcess ; 1979 ; 1979 ; Analysis Volume 39 ; 39 >
     au < doNotProcess ; 1980 ; 1980 ; Analysis Volume 40 ; 40 >
@@ -1038,24 +1050,24 @@
     au < doNotProcess ; 1987 ; 1987 ; Analysis Volume 47 ; 47 >
     au < doNotProcess ; 1988 ; 1988 ; Analysis Volume 48 ; 48 >
     au < doNotProcess ; 1989 ; 1989 ; Analysis Volume 49 ; 49 >
-    au < doNotProcess ; 1990 ; 1990 ; Analysis Volume 50 ; 50 >
-    au < doNotProcess ; 1991 ; 1991 ; Analysis Volume 51 ; 51 >
-    au < doNotProcess ; 1992 ; 1992 ; Analysis Volume 52 ; 52 >
-    au < doNotProcess ; 1993 ; 1993 ; Analysis Volume 53 ; 53 >
-    au < doNotProcess ; 1994 ; 1994 ; Analysis Volume 54 ; 54 >
-    au < doNotProcess ; 1995 ; 1995 ; Analysis Volume 55 ; 55 >
-    au < doNotProcess ; 1996 ; 1996 ; Analysis Volume 56 ; 56 >
-    au < doNotProcess ; 1997 ; 1997 ; Analysis Volume 57 ; 57 >
-    au < doNotProcess ; 1998 ; 1998 ; Analysis Volume 58 ; 58 >
-    au < doNotProcess ; 1999 ; 1999 ; Analysis Volume 59 ; 59 >
-    au < doNotProcess ; 2000 ; 2000 ; Analysis Volume 60 ; 60 >
-    au < doNotProcess ; 2001 ; 2001 ; Analysis Volume 61 ; 61 >
-    au < doNotProcess ; 2002 ; 2002 ; Analysis Volume 62 ; 62 >
-    au < doNotProcess ; 2003 ; 2003 ; Analysis Volume 63 ; 63 >
-    au < doNotProcess ; 2004 ; 2004 ; Analysis Volume 64 ; 64 >
-    au < doNotProcess ; 2005 ; 2005 ; Analysis Volume 65 ; 65 >
-    au < doNotProcess ; 2006 ; 2006 ; Analysis Volume 66 ; 66 >
-    au < doNotProcess ; 2007 ; 2007 ; Analysis Volume 67 ; 67 >
+    au < exists ; 1990 ; 1990 ; Analysis Volume 50 ; 50 >
+    au < exists ; 1991 ; 1991 ; Analysis Volume 51 ; 51 >
+    au < exists ; 1992 ; 1992 ; Analysis Volume 52 ; 52 >
+    au < exists ; 1993 ; 1993 ; Analysis Volume 53 ; 53 >
+    au < exists ; 1994 ; 1994 ; Analysis Volume 54 ; 54 >
+    au < exists ; 1995 ; 1995 ; Analysis Volume 55 ; 55 >
+    au < exists ; 1996 ; 1996 ; Analysis Volume 56 ; 56 >
+    au < exists ; 1997 ; 1997 ; Analysis Volume 57 ; 57 >
+    au < exists ; 1998 ; 1998 ; Analysis Volume 58 ; 58 >
+    au < exists ; 1999 ; 1999 ; Analysis Volume 59 ; 59 >
+    au < exists ; 2000 ; 2000 ; Analysis Volume 60 ; 60 >
+    au < exists ; 2001 ; 2001 ; Analysis Volume 61 ; 61 >
+    au < exists ; 2002 ; 2002 ; Analysis Volume 62 ; 62 >
+    au < exists ; 2003 ; 2003 ; Analysis Volume 63 ; 63 >
+    au < exists ; 2004 ; 2004 ; Analysis Volume 64 ; 64 >
+    au < exists ; 2005 ; 2005 ; Analysis Volume 65 ; 65 >
+    au < exists ; 2006 ; 2006 ; Analysis Volume 66 ; 66 >
+    au < exists ; 2007 ; 2007 ; Analysis Volume 67 ; 67 >
     au < released ; 2008 ; 2008 ; Analysis Volume 68 ; 68 >
     au < doNotProcess ; 2009 ; 2009 ; Analysis Volume 69 ; 69 >
     au < doNotProcess ; 2010 ; 2010 ; Analysis Volume 70 ; 70 >
@@ -1116,8 +1128,19 @@
     >
 
     param[journal_id] = jas
-    #content available from 1962 volume 21 to 2000 volume 77
+    #content available from 1962 volume 21 to 1989 volume 66
 
+    au < exists ; 1990 ; 1990 ; Journal of Animal Science Volume 67 ; 67 >
+    au < exists ; 1991 ; 1991 ; Journal of Animal Science Volume 68 ; 68 >
+    au < exists ; 1992 ; 1992 ; Journal of Animal Science Volume 69 ; 69 >
+    au < exists ; 1993 ; 1993 ; Journal of Animal Science Volume 70 ; 70 >
+    au < exists ; 1994 ; 1994 ; Journal of Animal Science Volume 71 ; 71 >
+    au < exists ; 1995 ; 1995 ; Journal of Animal Science Volume 72 ; 72 >
+    au < exists ; 1996 ; 1996 ; Journal of Animal Science Volume 73 ; 73 >
+    au < exists ; 1997 ; 1997 ; Journal of Animal Science Volume 74 ; 74 >
+    au < exists ; 1998 ; 1998 ; Journal of Animal Science Volume 75 ; 75 >
+    au < exists ; 1999 ; 1999 ; Journal of Animal Science Volume 76 ; 76 >
+    au < exists ; 2000 ; 2000 ; Journal of Animal Science Volume 77 ; 77 >
     au < doNotProcess ; 2001 ; 2001 ; Journal of Animal Science Volume 78 ; 78 >
     au < doNotProcess ; 2002 ; 2002 ; Journal of Animal Science Volume 79 ; 79 >
     au < doNotProcess ; 2003 ; 2003 ; Journal of Animal Science Volume 80 ; 80 >
@@ -1178,12 +1201,12 @@
     >
 
     param[journal_id] = aob
-#    au < doNotProcess ; 1887-1888 ; Annals of Botany Volume os-1 ; os-1 >
-#    au < doNotProcess ; 1888-1889 ; Annals of Botany Volume os-2 ; os-2 >
 
-    au < doNotProcess ; 1889 ; 1889 ; Annals of Botany Volume os-3 ; os-3 >
-    au < doNotProcess ; 1890 ; 1890 ; Annals of Botany Volume os-4 ; os-4 >
-#    au < doNotProcess ; 1890-1891 ; Annals of Botany Volume os-5 ; os-5 >
+    au < doNotProcess ; 1887 ; 1887 ; Annals of Botany Volume os-1 ; os-1 >
+    au < doNotProcess ; 1888 ; 1888 ; Annals of Botany Volume os-1-os-2 ; os-1-os-2 >
+    au < doNotProcess ; 1889 ; 1889 ; Annals of Botany Volume os-2-os-4 ; os-2-os-4 >
+    au < doNotProcess ; 1890 ; 1890 ; Annals of Botany Volume os-4-os-5 ; os-4-os-5 >
+    au < doNotProcess ; 1891 ; 1891 ; Annals of Botany Volume os-5 ; os-5 >
     au < doNotProcess ; 1892 ; 1892 ; Annals of Botany Volume os-6 ; os-6 >
     au < doNotProcess ; 1893 ; 1893 ; Annals of Botany Volume os-7 ; os-7 >
     au < doNotProcess ; 1894 ; 1894 ; Annals of Botany Volume os-8 ; os-8 >
@@ -1450,8 +1473,26 @@
     >
 
     param[journal_id] = jaoac
-    #content available from 1915 Volume 1 to 2007 Volume 90
+    #content available from 1915 Volume 1 to 1989 Volume 72
 
+    au < exists ; 1990 ; 1990 ; Journal of AOAC INTERNATIONAL Volume 73 ; 73 >
+    au < exists ; 1991 ; 1991 ; Journal of AOAC INTERNATIONAL Volume 74 ; 74 >
+    au < exists ; 1992 ; 1992 ; Journal of AOAC INTERNATIONAL Volume 75 ; 75 >
+    au < exists ; 1993 ; 1993 ; Journal of AOAC INTERNATIONAL Volume 76 ; 76 >
+    au < exists ; 1994 ; 1994 ; Journal of AOAC INTERNATIONAL Volume 77 ; 77 >
+    au < exists ; 1995 ; 1995 ; Journal of AOAC INTERNATIONAL Volume 78 ; 78 >
+    au < exists ; 1996 ; 1996 ; Journal of AOAC INTERNATIONAL Volume 79 ; 79 >
+    au < exists ; 1997 ; 1997 ; Journal of AOAC INTERNATIONAL Volume 80 ; 80 >
+    au < exists ; 1998 ; 1998 ; Journal of AOAC INTERNATIONAL Volume 81 ; 81 >
+    au < exists ; 1999 ; 1999 ; Journal of AOAC INTERNATIONAL Volume 82 ; 82 >
+    au < exists ; 2000 ; 2000 ; Journal of AOAC INTERNATIONAL Volume 83 ; 83 >
+    au < exists ; 2001 ; 2001 ; Journal of AOAC INTERNATIONAL Volume 84 ; 84 >
+    au < exists ; 2002 ; 2002 ; Journal of AOAC INTERNATIONAL Volume 85 ; 85 >
+    au < exists ; 2003 ; 2003 ; Journal of AOAC INTERNATIONAL Volume 86 ; 86 >
+    au < exists ; 2004 ; 2004 ; Journal of AOAC INTERNATIONAL Volume 87 ; 87 >
+    au < exists ; 2005 ; 2005 ; Journal of AOAC INTERNATIONAL Volume 88 ; 88 >
+    au < exists ; 2006 ; 2006 ; Journal of AOAC INTERNATIONAL Volume 89 ; 89 >
+    au < exists ; 2007 ; 2007 ; Journal of AOAC INTERNATIONAL Volume 90 ; 90 >
     au < released ; 2008 ; 2008 ; Journal of AOAC INTERNATIONAL Volume 91 ; 91 >
     au < released ; 2009 ; 2009 ; Journal of AOAC INTERNATIONAL Volume 92 ; 92 >
     au < released ; 2010 ; 2010 ; Journal of AOAC INTERNATIONAL Volume 93 ; 93 >
@@ -1999,27 +2040,34 @@
 
     param[journal_id] = bja
     #move to Elsevier in 2018
-#    au < doNotProcess ; 1923-1924 ; British Journal of Anaesthesia Volume 1 ; 1 >
-#    au < doNotProcess ; 1924-1925 ; British Journal of Anaesthesia Volume 2 ; 2 >
-#    au < doNotProcess ; 1925-1926 ; British Journal of Anaesthesia Volume 3 ; 3 >
-#    au < doNotProcess ; 1926-1927 ; British Journal of Anaesthesia Volume 4 ; 4 >
-#    au < doNotProcess ; 1927-1928 ; British Journal of Anaesthesia Volume 5 ; 5 >
-#    au < doNotProcess ; 1928-1929 ; British Journal of Anaesthesia Volume 6 ; 6 >
-#    au < doNotProcess ; 1929-1930 ; British Journal of Anaesthesia Volume 7 ; 7 >
-#    au < doNotProcess ; 1930-1931 ; British Journal of Anaesthesia Volume 8 ; 8 >
-#    au < doNotProcess ; 1931-1932 ; British Journal of Anaesthesia Volume 9 ; 9 >
-#    au < doNotProcess ; 1932-1933 ; British Journal of Anaesthesia Volume 10 ; 10 >
-#    au < doNotProcess ; 1933-1934 ; British Journal of Anaesthesia Volume 11 ; 11 >
-#    au < doNotProcess ; 1934-1935 ; British Journal of Anaesthesia Volume 12 ; 12 >
-#    au < doNotProcess ; 1935-1936 ; British Journal of Anaesthesia Volume 13 ; 13 >
-#    au < doNotProcess ; 1936-1937 ; British Journal of Anaesthesia Volume 14 ; 14 >
-#    au < doNotProcess ; 1937-1938 ; British Journal of Anaesthesia Volume 15 ; 15 >
-#    au < doNotProcess ; 1938-1939 ; British Journal of Anaesthesia Volume 16 ; 16 >
-#    au < doNotProcess ; 1939-1941 ; British Journal of Anaesthesia Volume 17 ; 17 >
-#    au < doNotProcess ; 1941-1942 ; British Journal of Anaesthesia Volume 18 ; 18 >
-#    au < doNotProcess ; 1942-1945 ; British Journal of Anaesthesia Volume 19 ; 19 >
-#    au < doNotProcess ; 1946-1947 ; British Journal of Anaesthesia Volume 20 ; 20 >
-#    au < doNotProcess ; 1948-1949 ; British Journal of Anaesthesia Volume 21 ; 21 >
+
+    au < doNotProcess ; 1923 ; 1923 ; British Journal of Anaesthesia Volume 1 ; 1 >
+    au < doNotProcess ; 1924 ; 1924 ; British Journal of Anaesthesia Volume 1-2 ; 1-2 >
+    au < doNotProcess ; 1925 ; 1925 ; British Journal of Anaesthesia Volume 2-3 ; 2-3 >
+    au < doNotProcess ; 1926 ; 1926 ; British Journal of Anaesthesia Volume 3-4 ; 3-4 >
+    au < doNotProcess ; 1927 ; 1927 ; British Journal of Anaesthesia Volume 4-5 ; 4-5 >
+    au < doNotProcess ; 1928 ; 1928 ; British Journal of Anaesthesia Volume 5-6 ; 5-6 >
+    au < doNotProcess ; 1929 ; 1929 ; British Journal of Anaesthesia Volume 6-7 ; 6-7 >
+    au < doNotProcess ; 1930 ; 1930 ; British Journal of Anaesthesia Volume 7-8 ; 7-8 >
+    au < doNotProcess ; 1931 ; 1931 ; British Journal of Anaesthesia Volume 8-9 ; 8-9 >
+    au < doNotProcess ; 1932 ; 1932 ; British Journal of Anaesthesia Volume 9-10 ; 9-10 >
+    au < doNotProcess ; 1933 ; 1933 ; British Journal of Anaesthesia Volume 10-11 ; 10-11 >
+    au < doNotProcess ; 1934 ; 1934 ; British Journal of Anaesthesia Volume 11-12 ; 11-12 >
+    au < doNotProcess ; 1935 ; 1935 ; British Journal of Anaesthesia Volume 12-13 ; 12-13 >
+    au < doNotProcess ; 1936 ; 1936 ; British Journal of Anaesthesia Volume 13-14 ; 13-14 >
+    au < doNotProcess ; 1937 ; 1937 ; British Journal of Anaesthesia Volume 14-15 ; 14-15 >
+    au < doNotProcess ; 1938 ; 1938 ; British Journal of Anaesthesia Volume 15-16 ; 15-16 >
+    au < doNotProcess ; 1939 ; 1939 ; British Journal of Anaesthesia Volume 16-17 ; 16-17 >
+    au < doNotProcess ; 1940 ; 1940 ; British Journal of Anaesthesia Volume 17 issue 2 ; 17 issue 2 >
+    au < doNotProcess ; 1941 ; 1941 ; British Journal of Anaesthesia Volume 17 issue 3-4 ; 17 issue 3-4 >
+    au < doNotProcess ; 1942 ; 1942 ; British Journal of Anaesthesia Volume 18 issue 1-2 ; 18 issue 1-2 >
+    au < doNotProcess ; 1943 ; 1943 ; British Journal of Anaesthesia Volume 18 issue 3-4 ; 18 issue 3-4 >
+    au < doNotProcess ; 1944 ; 1944 ; British Journal of Anaesthesia Volume 19 issue 1-2 ; 18 issue 1-2 >
+    au < doNotProcess ; 1945 ; 1945 ; British Journal of Anaesthesia Volume 19 issue 3-4 ; 18 issue 3-4 >
+    au < doNotProcess ; 1946 ; 1946 ; British Journal of Anaesthesia Volume 20 issue 1-2 ; 20 issue 1-2 >
+    au < doNotProcess ; 1947 ; 1947 ; British Journal of Anaesthesia Volume 20 issue 3-4 ; 20 issue 3-4 >
+    au < doNotProcess ; 1948 ; 1948 ; British Journal of Anaesthesia Volume 21 issue 1-2 ; 21 issue 1-2 >
+    au < doNotProcess ; 1949 ; 1949 ; British Journal of Anaesthesia Volume 21 issue 3-4 ; 21 issue 3-4 >
 
     au < doNotProcess ; 1950 ; 1950 ; British Journal of Anaesthesia Volume 22 ; 22 >
     au < doNotProcess ; 1951 ; 1951 ; British Journal of Anaesthesia Volume 23 ; 23 >
@@ -2104,6 +2152,38 @@
     param[journal_id] = bjd
     #move from Wiley, 2023
 
+    au < exists ; 1990 ; 1990 ; British Journal of Dermatology Volume 122-123 ; 122-123 >
+    au < exists ; 1991 ; 1991 ; British Journal of Dermatology Volume 124-125 ; 124-125 >
+    au < exists ; 1992 ; 1992 ; British Journal of Dermatology Volume 126-127 ; 126-127 >
+    au < exists ; 1993 ; 1993 ; British Journal of Dermatology Volume 128-129 ; 128-129 >
+    au < exists ; 1994 ; 1994 ; British Journal of Dermatology Volume 130-131 ; 130-131 >
+    au < exists ; 1995 ; 1995 ; British Journal of Dermatology Volume 132-133 ; 132-133 >
+    au < exists ; 1996 ; 1996 ; British Journal of Dermatology Volume 134-135 ; 134-135 >
+    au < exists ; 1997 ; 1997 ; British Journal of Dermatology Volume 136-137 ; 136-137 >
+    au < exists ; 1998 ; 1998 ; British Journal of Dermatology Volume 138-139 ; 138-139 >
+    au < exists ; 1999 ; 1999 ; British Journal of Dermatology Volume 140-141 ; 140-141 >
+    au < exists ; 2000 ; 2000 ; British Journal of Dermatology Volume 142-143 ; 142-143 >
+    au < exists ; 2001 ; 2001 ; British Journal of Dermatology Volume 144-145 ; 144-145 >
+    au < exists ; 2002 ; 2002 ; British Journal of Dermatology Volume 146-147 ; 146-147 >
+    au < exists ; 2003 ; 2003 ; British Journal of Dermatology Volume 148-149 ; 148-149 >
+    au < exists ; 2004 ; 2004 ; British Journal of Dermatology Volume 150-151 ; 150-151 >
+    au < exists ; 2005 ; 2005 ; British Journal of Dermatology Volume 152-153 ; 152-153 >
+    au < exists ; 2006 ; 2006 ; British Journal of Dermatology Volume 154-155 ; 154-155 >
+    au < exists ; 2007 ; 2007 ; British Journal of Dermatology Volume 156-157 ; 156-157 >
+    au < exists ; 2008 ; 2008 ; British Journal of Dermatology Volume 158-159 ; 158-159 >
+    au < exists ; 2009 ; 2009 ; British Journal of Dermatology Volume 160-161 ; 160-161 >
+    au < exists ; 2010 ; 2010 ; British Journal of Dermatology Volume 162-163 ; 162-163 >
+    au < exists ; 2011 ; 2011 ; British Journal of Dermatology Volume 164-165 ; 164-165 >
+    au < exists ; 2012 ; 2012 ; British Journal of Dermatology Volume 166-167 ; 166-167 >
+    au < exists ; 2013 ; 2013 ; British Journal of Dermatology Volume 168-169 ; 168-169 >
+    au < exists ; 2014 ; 2014 ; British Journal of Dermatology Volume 170-171 ; 170-171 >
+    au < exists ; 2015 ; 2015 ; British Journal of Dermatology Volume 172-173 ; 172-173 >
+    au < exists ; 2016 ; 2016 ; British Journal of Dermatology Volume 174-175 ; 174-175 >
+    au < exists ; 2017 ; 2017 ; British Journal of Dermatology Volume 176-177 ; 176-177 >
+    au < exists ; 2018 ; 2018 ; British Journal of Dermatology Volume 178-179 ; 178-179 >
+    au < exists ; 2019 ; 2019 ; British Journal of Dermatology Volume 180-181 ; 180-181 >
+    au < exists ; 2020 ; 2020 ; British Journal of Dermatology Volume 182-183 ; 182-183 >
+    au < exists ; 2021 ; 2021 ; British Journal of Dermatology Volume 184-185 ; 184-185 >
     au < released ; 2022 ; 2022 ; British Journal of Dermatology Volume 186-187 ; 186-187 >
     au < released ; 2023 ; 2023 ; British Journal of Dermatology Volume 188-189 ; 188-189 >
     au < manifest ; 2024 ; 2024 ; British Journal of Dermatology Volume 190-191 ; 190-191 >
@@ -2489,22 +2569,30 @@
     >
 
     param[journal_id] = biomet
-#    au < doNotProcess ; 1901-1902 ; Biometrika Volume 1 ; 1 >
-#    au < doNotProcess ; 1902-1903 ; Biometrika Volume 2 ; 2 >
 
+    au < doNotProcess ; 1901 ; 1901 ; Biometrika Volume 1 ; 1 >
+    au < doNotProcess ; 1902 ; 1902 ; Biometrika Volume 1-2 ; 1-2 >
+    au < doNotProcess ; 1903 ; 1903 ; Biometrika Volume 2 ; 2 >
     au < doNotProcess ; 1904 ; 1904 ; Biometrika Volume 3 ; 3 >
-#    au < doNotProcess ; 1905-1906 ; Biometrika Volume 4 ; 4 >
+    au < doNotProcess ; 1905 ; 1905 ; Biometrika Volume 4 ; 4 >
+    au < doNotProcess ; 1906 ; 1906 ; Biometrika Volume 4-5 ; 4-5 >
     au < doNotProcess ; 1907 ; 1907 ; Biometrika Volume 5 ; 5 >
-#    au < doNotProcess ; 1908-1909 ; Biometrika Volume 6 ; 6 >
-#    au < doNotProcess ; 1909-1910 ; Biometrika Volume 7 ; 7 >
-#    au < doNotProcess ; 1911-1912 ; Biometrika Volume 8 ; 8 >
+    au < doNotProcess ; 1908 ; 1908 ; Biometrika Volume 6 ; 6 >
+    au < doNotProcess ; 1909 ; 1909 ; Biometrika Volume 6-7 ; 6-7 >
+    au < doNotProcess ; 1910 ; 1910 ; Biometrika Volume 7 ; 7 >
+    au < doNotProcess ; 1911 ; 1911 ; Biometrika Volume 8 issue 1-2 ; 8 issue 1-2 >
+    au < doNotProcess ; 1912 ; 1912 ; Biometrika Volume 8 issue 3-4 ; 8 issue 3-4 >
     au < doNotProcess ; 1913 ; 1913 ; Biometrika Volume 9 ; 9 >
-#    au < doNotProcess ; 1914-1915 ; Biometrika Volume 10 ; 10 >
-#    au < doNotProcess ; 1915-1917 ; Biometrika Volume 11 ; 11 >
-#    au < doNotProcess ; 1918-1919 ; Biometrika Volume 12 ; 12 >
-#    au < doNotProcess ; 1920-1921 ; Biometrika Volume 13 ; 13 >
-#    au < doNotProcess ; 1922-1923 ; Biometrika Volume 14 ; 14 >
-    au < doNotProcess ; 1923 ; 1923 ; Biometrika Volume 15 ; 15 >
+    au < doNotProcess ; 1914 ; 1914 ; Biometrika Volume 10 ; 10 >
+    au < doNotProcess ; 1915 ; 1915 ; Biometrika Volume 10-11 ; 10-11 >
+    au < doNotProcess ; 1916 ; 1916 ; Biometrika Volume 11 issue 3 ; 11 issue 3 >
+    au < doNotProcess ; 1917 ; 1917 ; Biometrika Volume 11 issue 4 ; 11 issue 4 >
+    au < doNotProcess ; 1918 ; 1918 ; Biometrika Volume 12 issue 1-2 ; 12 issue 1-2 >
+    au < doNotProcess ; 1919 ; 1919 ; Biometrika Volume 12 issue 3-4 ; 12 issue 3-4 >
+    au < doNotProcess ; 1920 ; 1920 ; Biometrika Volume 13 issue 1 ; 13 issue 1 >
+    au < doNotProcess ; 1921 ; 1921 ; Biometrika Volume 13 issue 2-4 ; 13 issue 2-4 >
+    au < doNotProcess ; 1922 ; 1922 ; Biometrika Volume 14 issue 1-2 ; 14 issue 1-2 >
+    au < doNotProcess ; 1923 ; 1923 ; Biometrika Volume 14-15 ; 14-15 >
     au < doNotProcess ; 1924 ; 1924 ; Biometrika Volume 16 ; 16 >
     au < doNotProcess ; 1925 ; 1925 ; Biometrika Volume 17 ; 17 >
     au < doNotProcess ; 1926 ; 1926 ; Biometrika Volume 18 ; 18 >
@@ -24233,9 +24321,8 @@
     au < doNotProcess ; 1996 ; 1996 ; Yearbook of European Law Volume 16 ; 16 >
     au < doNotProcess ; 1997 ; 1997 ; Yearbook of European Law Volume 17 ; 17 >
     au < doNotProcess ; 1998 ; 1998 ; Yearbook of European Law Volume 18 ; 18 >
-#    au < doNotProcess ; 1999-2000 ; Yearbook of European Law Volume 19 ; 19 >
-    au < doNotProcess ; 2001 ; 2001 ; Yearbook of European Law Volume 20 ; 20 >
-    au < doNotProcess ; 2002 ; 2002 ; Yearbook of European Law Volume 21 ; 21 >
+    au < doNotProcess ; 1999 ; 1999 ; Yearbook of European Law Volume 19 ; 19 >
+    au < doNotProcess ; 2001 ; 2001 ; Yearbook of European Law Volume 20-21 ; 20-21 >
     au < doNotProcess ; 2003 ; 2003 ; Yearbook of European Law Volume 22 ; 22 >
     au < doNotProcess ; 2004 ; 2004 ; Yearbook of European Law Volume 23 ; 23 >
     au < doNotProcess ; 2005 ; 2005 ; Yearbook of European Law Volume 24 ; 24 >
@@ -24254,10 +24341,10 @@
     au < released ; 2018 ; 2018 ; Yearbook of European Law Volume 37 ; 37 >
     au < exists ; 2019 ; 2019 ; Yearbook of European Law Volume 38 ; 38 >
     au < exists ; 2021 ; 2021 ; Yearbook of European Law Volume 39 (2020) ; 39 >
-    au < expected ; 2022 ; 2022 ; Yearbook of European Law Volume 40 (2021) ; 40 >
-    au < expected ; 2023 ; 2023 ; Yearbook of European Law Volume 41 (2022) ; 41 >
-    au < expected ; 2024 ; 2024 ; Yearbook of European Law Volume 42 (2022) ; 42 >
-    au < expected ; 2025 ; 2025 ; Yearbook of European Law Volume 43 (2022) ; 43 >
+    au < exists ; 2022 ; 2022 ; Yearbook of European Law Volume 40 (2021) ; 40 >
+    au < exists ; 2023 ; 2023 ; Yearbook of European Law Volume 41 (2022) ; 41 >
+    au < exists ; 2024 ; 2024 ; Yearbook of European Law Volume 42 (2023) ; 42 >
+    au < expected ; 2025 ; 2025 ; Yearbook of European Law Volume 43 (2024) ; 43 >
 
   }
 
@@ -24309,9 +24396,29 @@
     >
 
     param[journal_id] = zoolinnean
-    #content available from 1856 volume 1 to 2009 volume 157
+    #content available from 1856 volume 1 to 1989 volume 97
     #this title was ONLY in the publisher listing
 
+    au < exists ; 1990 ; 1990 ; Zoological Journal of the Linnean Society Volume 98-100 ; 98-100 >
+    au < exists ; 1991 ; 1991 ; Zoological Journal of the Linnean Society Volume 101-103 ; 101-103 >
+    au < exists ; 1992 ; 1992 ; Zoological Journal of the Linnean Society Volume 104-106 ; 104-106 >
+    au < exists ; 1993 ; 1993 ; Zoological Journal of the Linnean Society Volume 107-109 ; 107-109 >
+    au < exists ; 1994 ; 1994 ; Zoological Journal of the Linnean Society Volume 110-112 ; 110-112 >
+    au < exists ; 1995 ; 1995 ; Zoological Journal of the Linnean Society Volume 113-115 ; 113-115 >
+    au < exists ; 1996 ; 1996 ; Zoological Journal of the Linnean Society Volume 116-118 ; 116-118 >
+    au < exists ; 1997 ; 1997 ; Zoological Journal of the Linnean Society Volume 119-121 ; 119-121 >
+    au < exists ; 1998 ; 1998 ; Zoological Journal of the Linnean Society Volume 122-124 ; 122-124 >
+    au < exists ; 1999 ; 1999 ; Zoological Journal of the Linnean Society Volume 125-127 ; 125-127 >
+    au < exists ; 2000 ; 2000 ; Zoological Journal of the Linnean Society Volume 128-130 ; 128-130 >
+    au < exists ; 2001 ; 2001 ; Zoological Journal of the Linnean Society Volume 131-133 ; 131-133 >
+    au < exists ; 2002 ; 2002 ; Zoological Journal of the Linnean Society Volume 134-136 ; 134-136 >
+    au < exists ; 2003 ; 2003 ; Zoological Journal of the Linnean Society Volume 137-139 ; 137-139 >
+    au < exists ; 2004 ; 2004 ; Zoological Journal of the Linnean Society Volume 140-142 ; 140-142 >
+    au < exists ; 2005 ; 2005 ; Zoological Journal of the Linnean Society Volume 143-145 ; 143-145 >
+    au < exists ; 2006 ; 2006 ; Zoological Journal of the Linnean Society Volume 146-148 ; 146-148 >
+    au < exists ; 2007 ; 2007 ; Zoological Journal of the Linnean Society Volume 149-151 ; 149-151 >
+    au < exists ; 2008 ; 2008 ; Zoological Journal of the Linnean Society Volume 152-154 ; 152-154 >
+    au < exists ; 2009 ; 2009 ; Zoological Journal of the Linnean Society Volume 155-157 ; 155-157 >
     au < released ; 2010 ; 2010 ; Zoological Journal of the Linnean Society Volume 158-160 ; 158-160 >
     au < released ; 2011 ; 2011 ; Zoological Journal of the Linnean Society Volume 161-163 ; 161-163 >
     au < released ; 2012 ; 2012 ; Zoological Journal of the Linnean Society Volume 164-166 ; 164-166 >
