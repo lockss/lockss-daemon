@@ -28,11 +28,11 @@
     #Published 1949-2021
     #journal_num = 56
 
-    au < manifest ; exists ; 2000 ; Archives Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2001 ; Archives Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2002 ; Archives Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2003 ; Archives Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2004 ; Archives Volume 29 ; 29 ; >
+    au < ready ; exists ; 2000 ; Archives Volume 25 ; 25 ; >
+    au < ready ; exists ; 2001 ; Archives Volume 26 ; 26 ; >
+    au < ready ; exists ; 2002 ; Archives Volume 27 ; 27 ; >
+    au < ready ; exists ; 2003 ; Archives Volume 28 ; 28 ; >
+    au < ready ; exists ; 2004 ; Archives Volume 29 ; 29 ; >
     au < manifest ; exists ; 2005 ; Archives Volume 30 ; 30 ; >
     au < manifest ; exists ; 2005 ; Archives Volume 31 ; 31 ; >
     au < manifest ; exists ; 2007 ; Archives Volume 32 ; 32 ; >
@@ -96,11 +96,11 @@
     #Published 1964-present
     #journal_num = 52
 
-    au < manifest ; exists ; 2000 ; Australian Journal of French Studies Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2001 ; Australian Journal of French Studies Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2002 ; Australian Journal of French Studies Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2003 ; Australian Journal of French Studies Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 ; >
+    au < ready ; exists ; 2000 ; Australian Journal of French Studies Volume 37 ; 37 ; >
+    au < ready ; exists ; 2001 ; Australian Journal of French Studies Volume 38 ; 38 ; >
+    au < ready ; exists ; 2002 ; Australian Journal of French Studies Volume 39 ; 39 ; >
+    au < ready ; exists ; 2003 ; Australian Journal of French Studies Volume 40 ; 40 ; >
+    au < ready ; exists ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 ; >
     au < manifest ; exists ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 ; >
     au < manifest ; exists ; 2006 ; Australian Journal of French Studies Volume 43 ; 43 ; >
     au < manifest ; exists ; 2007 ; Australian Journal of French Studies Volume 44 ; 44 ; >
@@ -160,8 +160,8 @@
     #Published 2003-present
     #journal_num = 72
 
-    au < manifest ; exists ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 ; >
+    au < ready ; exists ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 ; >
+    au < ready ; exists ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 ; >
     au < manifest ; exists ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 ; >
     au < manifest ; exists ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 ; >
     au < manifest ; exists ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 ; >
@@ -223,10 +223,10 @@
     au < doNotProcess ; exists ; 1997 ; Bulletin of Hispanic Studies Volume 74 ; 74 ; >
     au < finished ; manifest ; 1998 ; Bulletin of Hispanic Studies Volume 75 ; 75 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; exists ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 ; >
-    au < manifest ; exists ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 ; >
-    au < manifest ; exists ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 ; >
-    au < manifest ; exists ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 ; >
-    au < manifest ; exists ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 ; >
+    au < ready ; exists ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 ; >
+    au < ready ; exists ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 ; >
+    au < ready ; exists ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 ; >
+    au < ready ; exists ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 ; >
     au < finished ; manifest ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 ; >
     au < manifest ; exists ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 ; >
@@ -269,7 +269,7 @@
     au < exists ; exists ; 2001 ; The Byron Journal Volume 29 ; 29 ; >
     au < crawling ; exists ; 2002 ; The Byron Journal Volume 30 ; 30 ; >
     au < exists ; exists ; 2003 ; The Byron Journal Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2004 ; The Byron Journal Volume 32 ; 32 ; >
+    au < ready ; exists ; 2004 ; The Byron Journal Volume 32 ; 32 ; >
     au < manifest ; exists ; 2005 ; The Byron Journal Volume 33 ; 33 ; >
     au < manifest ; exists ; 2006 ; The Byron Journal Volume 34 ; 34 ; >
     au < manifest ; exists ; 2007 ; The Byron Journal Volume 35 ; 35 ; >
@@ -307,7 +307,7 @@
     #Published 2004-present
     #journal_num = 46
 
-    au < manifest ; exists ; 2004 ; Comma Volume 2004 ; 2004 ; >
+    au < ready ; exists ; 2004 ; Comma Volume 2004 ; 2004 ; >
     au < manifest ; exists ; 2005 ; Comma Volume 2005 ; 2005 ; >
     au < manifest ; exists ; 2006 ; Comma Volume 2006 ; 2006 ; >
     au < finished ; manifest ; 2007 ; Comma Volume 2007 ; 2007 ; reingest2.clockss.org:8085 >
@@ -342,10 +342,10 @@
     #Published 1986-present
     #journal_num = 67
 
-    au < manifest ; exists ; 2000 ; Catalan Review Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2001 ; Catalan Review Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2002 ; Catalan Review Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2003 ; Catalan Review Volume 17 ; 17 ; >
+    au < ready ; exists ; 2000 ; Catalan Review Volume 14 ; 14 ; >
+    au < ready ; exists ; 2001 ; Catalan Review Volume 15 ; 15 ; >
+    au < ready ; exists ; 2002 ; Catalan Review Volume 16 ; 16 ; >
+    au < ready ; exists ; 2003 ; Catalan Review Volume 17 ; 17 ; >
     au < exists ; exists ; 2004 ; Catalan Review Volume 18 ; 18 ; >
     au < manifest ; exists ; 2005 ; Catalan Review Volume 19 ; 19 ; >
     au < manifest ; exists ; 2006 ; Catalan Review Volume 20 ; 20 ; >
@@ -384,11 +384,11 @@
     #Published 1976-present
     #journal_num = 45
 
-    au < manifest ; exists ; 2000 ; Contemporary French Civilization Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2001 ; Contemporary French Civilization Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2002 ; Contemporary French Civilization Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2003 ; Contemporary French Civilization Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2004 ; Contemporary French Civilization Volume 28 ; 28 ; >
+    au < ready ; exists ; 2000 ; Contemporary French Civilization Volume 24 ; 24 ; >
+    au < ready ; exists ; 2001 ; Contemporary French Civilization Volume 25 ; 25 ; >
+    au < ready ; exists ; 2002 ; Contemporary French Civilization Volume 26 ; 26 ; >
+    au < ready ; exists ; 2003 ; Contemporary French Civilization Volume 27 ; 27 ; >
+    au < ready ; exists ; 2004 ; Contemporary French Civilization Volume 28 ; 28 ; >
     au < finished ; manifest ; 2005 ; Contemporary French Civilization Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2006 ; Contemporary French Civilization Volume 30 ; 30 ; >
     au < manifest ; exists ; 2007 ; Contemporary French Civilization Volume 31 ; 31 ; >
@@ -460,11 +460,11 @@
     au < doNotProcess ; exists ; 1997 ; Eighteenth-Century Ireland Volume 12 ; 12 ; >
     au < doNotProcess ; exists ; 1998 ; Eighteenth-Century Ireland Volume 13 ; 13 ; >
     au < doNotProcess ; exists ; 1999 ; Eighteenth-Century Ireland Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2000 ; Eighteenth-Century Ireland Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2001 ; Eighteenth-Century Ireland Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2002 ; Eighteenth-Century Ireland Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2003 ; Eighteenth-Century Ireland Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2004 ; Eighteenth-Century Ireland Volume 19 ; 19 ; >
+    au < ready ; exists ; 2000 ; Eighteenth-Century Ireland Volume 15 ; 15 ; >
+    au < ready ; exists ; 2001 ; Eighteenth-Century Ireland Volume 16 ; 16 ; >
+    au < ready ; exists ; 2002 ; Eighteenth-Century Ireland Volume 17 ; 17 ; >
+    au < ready ; exists ; 2003 ; Eighteenth-Century Ireland Volume 18 ; 18 ; >
+    au < ready ; exists ; 2004 ; Eighteenth-Century Ireland Volume 19 ; 19 ; >
     au < manifest ; exists ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 ; >
@@ -510,11 +510,11 @@
     au < doNotProcess ; exists ; 1997 ; Essays in Romanticism Volume 5 ; 5 ; >
     au < doNotProcess ; exists ; 1998 ; Essays in Romanticism Volume 6 ; 6 ; >
     au < finished ; manifest ; 1999 ; Essays in Romanticism Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2000 ; Essays in Romanticism Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2001 ; Essays in Romanticism Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2002 ; Essays in Romanticism Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2003 ; Essays in Romanticism Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2004 ; Essays in Romanticism Volume 12 ; 12 ; >
+    au < ready ; exists ; 2000 ; Essays in Romanticism Volume 8 ; 8 ; >
+    au < ready ; exists ; 2001 ; Essays in Romanticism Volume 9 ; 9 ; >
+    au < ready ; exists ; 2002 ; Essays in Romanticism Volume 10 ; 10 ; >
+    au < ready ; exists ; 2003 ; Essays in Romanticism Volume 11 ; 11 ; >
+    au < ready ; exists ; 2004 ; Essays in Romanticism Volume 12 ; 12 ; >
     au < manifest ; exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 ; >
     au < manifest ; exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 ; >
     au < manifest ; exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 ; >
@@ -584,11 +584,11 @@
     #Published 1959-present
     #journal_num = 71
 
-    au < manifest ; exists ; 2000 ; Extrapolation Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2001 ; Extrapolation Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2002 ; Extrapolation Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2003 ; Extrapolation Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2004 ; Extrapolation Volume 45 ; 45 ; >
+    au < ready ; exists ; 2000 ; Extrapolation Volume 41 ; 41 ; >
+    au < ready ; exists ; 2001 ; Extrapolation Volume 42 ; 42 ; >
+    au < ready ; exists ; 2002 ; Extrapolation Volume 43 ; 43 ; >
+    au < ready ; exists ; 2003 ; Extrapolation Volume 44 ; 44 ; >
+    au < ready ; exists ; 2004 ; Extrapolation Volume 45 ; 45 ; >
     au < manifest ; exists ; 2005 ; Extrapolation Volume 46 ; 46 ; >
     au < manifest ; exists ; 2006 ; Extrapolation Volume 47 ; 47 ; >
     au < manifest ; exists ; 2007 ; Extrapolation Volume 48 ; 48 ; >
@@ -664,14 +664,14 @@
     au < doNotProcess ; exists ; 1998 ; Historical Studies in Industrial Relations Volume 6 ; 6 ; >
     au < doNotProcess ; exists ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 ; >
     au < doNotProcess ; exists ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2001 ; Historical Studies in Industrial Relations Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2001 ; Historical Studies in Industrial Relations Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2002 ; Historical Studies in Industrial Relations Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2002 ; Historical Studies in Industrial Relations Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2003 ; Historical Studies in Industrial Relations Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2003 ; Historical Studies in Industrial Relations Volume 16 ; 16 ; >
+    au < ready ; exists ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 ; >
+    au < ready ; exists ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 ; >
+    au < ready ; exists ; 2001 ; Historical Studies in Industrial Relations Volume 11 ; 11 ; >
+    au < ready ; exists ; 2001 ; Historical Studies in Industrial Relations Volume 12 ; 12 ; >
+    au < ready ; exists ; 2002 ; Historical Studies in Industrial Relations Volume 13 ; 13 ; >
+    au < ready ; exists ; 2002 ; Historical Studies in Industrial Relations Volume 14 ; 14 ; >
+    au < ready ; exists ; 2003 ; Historical Studies in Industrial Relations Volume 15 ; 15 ; >
+    au < ready ; exists ; 2003 ; Historical Studies in Industrial Relations Volume 16 ; 16 ; >
     au < manifest ; exists ; 2004 ; Historical Studies in Industrial Relations Volume 17 ; 17 ; >
     au < manifest ; exists ; 2004 ; Historical Studies in Industrial Relations Volume 18 ; 18 ; >
     au < manifest ; exists ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 ; >
@@ -718,8 +718,8 @@
     au < doNotProcess ; exists ; 1994 ; The Indexer: The International Journal of Indexing Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 1996 ; The Indexer: The International Journal of Indexing Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 1998 ; The Indexer: The International Journal of Indexing Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2000 ; The Indexer: The International Journal of Indexing Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2002 ; The Indexer: The International Journal of Indexing Volume 23 ; 23 ; >
+    au < ready ; exists ; 2000 ; The Indexer: The International Journal of Indexing Volume 22 ; 22 ; >
+    au < ready ; exists ; 2002 ; The Indexer: The International Journal of Indexing Volume 23 ; 23 ; >
     au < manifest ; exists ; 2004 ; The Indexer: The International Journal of Indexing Volume 24 ; 24 ; >
     au < manifest ; exists ; 2006 ; The Indexer: The International Journal of Indexing Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Indexer: The International Journal of Indexing Volume 26 ; 26 ; >
@@ -756,8 +756,8 @@
     comment[continues] = 0142-7849
     #journal_num = 65
 
-    au < manifest ; exists ; 2002 ; International Development Planning Review Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2003 ; International Development Planning Review Volume 25 ; 25 ; >
+    au < ready ; exists ; 2002 ; International Development Planning Review Volume 24 ; 24 ; >
+    au < ready ; exists ; 2003 ; International Development Planning Review Volume 25 ; 25 ; >
     au < manifest ; exists ; 2004 ; International Development Planning Review Volume 26 ; 26 ; >
     au < manifest ; exists ; 2005 ; International Development Planning Review Volume 27 ; 27 ; >
     au < manifest ; exists ; 2006 ; International Development Planning Review Volume 28 ; 28 ; >
@@ -845,8 +845,8 @@
     #issn 1476-4253
     #Published 2002-2012
 
-    au < manifest ; exists ; 2002 ; Before Farming Volume 2002 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; Before Farming Volume 2003 ; 2003 ; >
+    au < ready ; exists ; 2002 ; Before Farming Volume 2002 ; 2002 ; >
+    au < ready ; exists ; 2003 ; Before Farming Volume 2003 ; 2003 ; >
     au < manifest ; exists ; 2004 ; Before Farming Volume 2004 ; 2004 ; >
     au < manifest ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 ; >
     au < manifest ; exists ; 2006 ; Before Farming Volume 2006 ; 2006 ; >
@@ -999,9 +999,9 @@
     #Published 2001-present
     #journal_num = 50
 
-    au < manifest ; exists ; 2001 ; Journal of Romance Studies Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2002 ; Journal of Romance Studies Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2003 ; Journal of Romance Studies Volume 3 ; 3 ; >
+    au < ready ; exists ; 2001 ; Journal of Romance Studies Volume 1 ; 1 ; >
+    au < ready ; exists ; 2002 ; Journal of Romance Studies Volume 2 ; 2 ; >
+    au < ready ; exists ; 2003 ; Journal of Romance Studies Volume 3 ; 3 ; >
     au < manifest ; exists ; 2004 ; Journal of Romance Studies Volume 4 ; 4 ; >
     au < manifest ; exists ; 2005 ; Journal of Romance Studies Volume 5 ; 5 ; >
     au < manifest ; exists ; 2006 ; Journal of Romance Studies Volume 6 ; 6 ; >
@@ -1114,14 +1114,14 @@
     au < doNotProcess ; exists ; 1998 ; Labour History: A Journal of Labour and Social History Volume 75 ; 75 ; >
     au < doNotProcess ; exists ; 1999 ; Labour History: A Journal of Labour and Social History Volume 76 ; 76 ; >
     au < doNotProcess ; exists ; 1999 ; Labour History: A Journal of Labour and Social History Volume 77 ; 77 ; >
-    au < manifest ; exists ; 2000 ; Labour History: A Journal of Labour and Social History Volume 78 ; 78 ; >
-    au < manifest ; exists ; 2000 ; Labour History: A Journal of Labour and Social History Volume 79 ; 79 ; >
-    au < manifest ; exists ; 2001 ; Labour History: A Journal of Labour and Social History Volume 80 ; 80 ; >
-    au < manifest ; exists ; 2001 ; Labour History: A Journal of Labour and Social History Volume 81 ; 81 ; >
-    au < manifest ; exists ; 2002 ; Labour History: A Journal of Labour and Social History Volume 82 ; 82 ; >
-    au < manifest ; exists ; 2002 ; Labour History: A Journal of Labour and Social History Volume 83 ; 83 ; >
-    au < manifest ; exists ; 2003 ; Labour History: A Journal of Labour and Social History Volume 84 ; 84 ; >
-    au < manifest ; exists ; 2003 ; Labour History: A Journal of Labour and Social History Volume 85 ; 85 ; >
+    au < ready ; exists ; 2000 ; Labour History: A Journal of Labour and Social History Volume 78 ; 78 ; >
+    au < ready ; exists ; 2000 ; Labour History: A Journal of Labour and Social History Volume 79 ; 79 ; >
+    au < ready ; exists ; 2001 ; Labour History: A Journal of Labour and Social History Volume 80 ; 80 ; >
+    au < ready ; exists ; 2001 ; Labour History: A Journal of Labour and Social History Volume 81 ; 81 ; >
+    au < ready ; exists ; 2002 ; Labour History: A Journal of Labour and Social History Volume 82 ; 82 ; >
+    au < ready ; exists ; 2002 ; Labour History: A Journal of Labour and Social History Volume 83 ; 83 ; >
+    au < ready ; exists ; 2003 ; Labour History: A Journal of Labour and Social History Volume 84 ; 84 ; >
+    au < ready ; exists ; 2003 ; Labour History: A Journal of Labour and Social History Volume 85 ; 85 ; >
     au < manifest ; exists ; 2004 ; Labour History: A Journal of Labour and Social History Volume 86 ; 86 ; >
     au < manifest ; exists ; 2004 ; Labour History: A Journal of Labour and Social History Volume 87 ; 87 ; >
     au < manifest ; exists ; 2005 ; Labour History: A Journal of Labour and Social History Volume 88 ; 88 ; >
@@ -1178,10 +1178,10 @@
     #Published 1960-present
     #journal_num = 75
 
-    au < manifest ; exists ; 2000 ; Labour History Review Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2001 ; Labour History Review Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2002 ; Labour History Review Volume 67 ; 67 ; >
-    au < manifest ; exists ; 2003 ; Labour History Review Volume 68 ; 68 ; >
+    au < ready ; exists ; 2000 ; Labour History Review Volume 65 ; 65 ; >
+    au < ready ; exists ; 2001 ; Labour History Review Volume 66 ; 66 ; >
+    au < ready ; exists ; 2002 ; Labour History Review Volume 67 ; 67 ; >
+    au < ready ; exists ; 2003 ; Labour History Review Volume 68 ; 68 ; >
     au < manifest ; exists ; 2004 ; Labour History Review Volume 69 ; 69 ; >
     au < manifest ; exists ; 2005 ; Labour History Review Volume 70 ; 70 ; >
     au < manifest ; exists ; 2006 ; Labour History Review Volume 71 ; 71 ; >
@@ -1363,10 +1363,10 @@
     #Published 1994-present
     #journal_num = 68
 
-    au < manifest ; exists ; 2000 ; Modern Believing Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2001 ; Modern Believing Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2002 ; Modern Believing Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2003 ; Modern Believing Volume 44 ; 44 ; >
+    au < ready ; exists ; 2000 ; Modern Believing Volume 41 ; 41 ; >
+    au < ready ; exists ; 2001 ; Modern Believing Volume 42 ; 42 ; >
+    au < ready ; exists ; 2002 ; Modern Believing Volume 43 ; 43 ; >
+    au < ready ; exists ; 2003 ; Modern Believing Volume 44 ; 44 ; >
     au < manifest ; exists ; 2004 ; Modern Believing Volume 45 ; 45 ; >
     au < manifest ; exists ; 2005 ; Modern Believing Volume 46 ; 46 ; >
     au < manifest ; exists ; 2006 ; Modern Believing Volume 47 ; 47 ; >
@@ -1638,10 +1638,10 @@
     param[journal_id] = rost
     #journal_num = 76
 
-    au < manifest ; exists ; 2000 ; Romani Studies Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2001 ; Romani Studies Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2002 ; Romani Studies Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2003 ; Romani Studies Volume 13 ; 13 ; >
+    au < ready ; exists ; 2000 ; Romani Studies Volume 10 ; 10 ; >
+    au < ready ; exists ; 2001 ; Romani Studies Volume 11 ; 11 ; >
+    au < ready ; exists ; 2002 ; Romani Studies Volume 12 ; 12 ; >
+    au < ready ; exists ; 2003 ; Romani Studies Volume 13 ; 13 ; >
     au < manifest ; exists ; 2004 ; Romani Studies Volume 14 ; 14 ; >
     au < manifest ; exists ; 2005 ; Romani Studies Volume 15 ; 15 ; >
     au < manifest ; exists ; 2006 ; Romani Studies Volume 16 ; 16 ; >
@@ -1680,14 +1680,14 @@
     #Published 1983-present
     #journal_num = 51
 
-    au < manifest ; exists ; 2000 ; Quebec Studies Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2000 ; Quebec Studies Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2001 ; Quebec Studies Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2001 ; Quebec Studies Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2002 ; Quebec Studies Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2002 ; Quebec Studies Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2003 ; Quebec Studies Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2003 ; Quebec Studies Volume 36 ; 36 ; >
+    au < ready ; exists ; 2000 ; Quebec Studies Volume 29 ; 29 ; >
+    au < ready ; exists ; 2000 ; Quebec Studies Volume 30 ; 30 ; >
+    au < ready ; exists ; 2001 ; Quebec Studies Volume 31 ; 31 ; >
+    au < ready ; exists ; 2001 ; Quebec Studies Volume 32 ; 32 ; >
+    au < ready ; exists ; 2002 ; Quebec Studies Volume 33 ; 33 ; >
+    au < ready ; exists ; 2002 ; Quebec Studies Volume 34 ; 34 ; >
+    au < ready ; exists ; 2003 ; Quebec Studies Volume 35 ; 35 ; >
+    au < ready ; exists ; 2003 ; Quebec Studies Volume 36 ; 36 ; >
     au < manifest ; exists ; 2004 ; Quebec Studies Volume 37 ; 37 ; >
     au < manifest ; exists ; 2004 ; Quebec Studies Volume 38 ; 38 ; >
     au < manifest ; exists ; 2005 ; Quebec Studies Volume 39 ; 39 ; >
@@ -1917,7 +1917,7 @@
     au < doNotProcess ; exists ; 1998 ; Third World Planning Review Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 1999 ; Third World Planning Review Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; Third World Planning Review Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2001 ; Third World Planning Review Volume 23 ; 23 ; >
+    au < ready ; exists ; 2001 ; Third World Planning Review Volume 23 ; 23 ; >
 
   }
 
@@ -2003,10 +2003,10 @@
     au < doNotProcess ; exists ; 1997 ; Town Planning Review Volume 68 ; 68 ; >
     au < doNotProcess ; exists ; 1998 ; Town Planning Review Volume 69 ; 69 ; >
     au < doNotProcess ; exists ; 1999 ; Town Planning Review Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2000 ; Town Planning Review Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2001 ; Town Planning Review Volume 72 ; 72 ; >
-    au < manifest ; exists ; 2002 ; Town Planning Review Volume 73 ; 73 ; >
-    au < manifest ; exists ; 2003 ; Town Planning Review Volume 74 ; 74 ; >
+    au < ready ; exists ; 2000 ; Town Planning Review Volume 71 ; 71 ; >
+    au < ready ; exists ; 2001 ; Town Planning Review Volume 72 ; 72 ; >
+    au < ready ; exists ; 2002 ; Town Planning Review Volume 73 ; 73 ; >
+    au < ready ; exists ; 2003 ; Town Planning Review Volume 74 ; 74 ; >
     au < manifest ; exists ; 2004 ; Town Planning Review Volume 75 ; 75 ; >
     au < manifest ; exists ; 2005 ; Town Planning Review Volume 76 ; 76 ; >
     au < manifest ; exists ; 2006 ; Town Planning Review Volume 77 ; 77 ; >
@@ -2235,10 +2235,10 @@
     au < manifest ; exists ; 1997 ; Revista Iberoamericana Volume 63 ; 63 ; >
     au < manifest ; exists ; 1998 ; Revista Iberoamericana Volume 64 ; 64 ; >
     au < manifest ; exists ; 1999 ; Revista Iberoamericana Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2000 ; Revista Iberoamericana Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2001 ; Revista Iberoamericana Volume 67 ; 67 ; >
-    au < manifest ; exists ; 2002 ; Revista Iberoamericana Volume 68 ; 68 ; >
-    au < manifest ; exists ; 2003 ; Revista Iberoamericana Volume 69 ; 69 ; >
+    au < ready ; exists ; 2000 ; Revista Iberoamericana Volume 66 ; 66 ; >
+    au < ready ; exists ; 2001 ; Revista Iberoamericana Volume 67 ; 67 ; >
+    au < ready ; exists ; 2002 ; Revista Iberoamericana Volume 68 ; 68 ; >
+    au < ready ; exists ; 2003 ; Revista Iberoamericana Volume 69 ; 69 ; >
     au < manifest ; exists ; 2004 ; Revista Iberoamericana Volume 70 ; 70 ; >
     au < manifest ; exists ; 2005 ; Revista Iberoamericana Volume 71 ; 71 ; >
     au < manifest ; exists ; 2006 ; Revista Iberoamericana Volume 72 ; 72 ; >

@@ -24,8 +24,8 @@
 
     param[journal_id] = aomjah
     
-    au < manifest ; exists ; 2023 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < manifest ; exists ; 2024 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < ready ; exists ; 2023 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < ready ; exists ; 2024 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2025 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
 
   }
