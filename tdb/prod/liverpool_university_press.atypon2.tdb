@@ -74,8 +74,8 @@
     au < doNotProcess ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 >
     au < doNotProcess ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 >
     au < released ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 >
-    au < manifest ; 2022 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 18 ; 18 >
-    au < manifest ; 2023 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 19 ; 19 >
+    au < ready ; 2022 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 18 ; 18 >
+    au < ready ; 2023 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 19 ; 19 >
 
   }
 
@@ -321,7 +321,7 @@
     au < doNotProcess ; 2019 ; Comma Volume 2019 ; 2019 >
     au < doNotProcess ; 2020 ; Comma Volume 2020 ; 2020 >
     au < released ; 2021 ; Comma Volume 2021 ; 2021 >
-    au < manifest ; 2022 ; Comma Volume 2022 ; 2022 >
+    au < ready ; 2022 ; Comma Volume 2022 ; 2022 >
 
   }
 
@@ -839,10 +839,10 @@
     au < doNotProcess ; 2017 ; Hunter Gatherer Research Volume 3 ; 3 >
     au < doNotProcess ; 2018 ; Hunter Gatherer Research Volume 4 ; 4 >
     au < released ; 2019 ; Hunter Gatherer Research Volume 5 ; 5 >
-    au < manifest ; 2020 ; Hunter Gatherer Research Volume 6 ; 6 >
-    au < manifest ; 2021 ; Hunter Gatherer Research Volume 7 ; 7 >
-    au < manifest ; 2022 ; Hunter Gatherer Research Volume 8 ; 8 >
-    au < manifest ; 2023 ; Hunter Gatherer Research Volume 9 ; 9 >
+    au < ready ; 2020 ; Hunter Gatherer Research Volume 6 ; 6 >
+    au < ready ; 2021 ; Hunter Gatherer Research Volume 7 ; 7 >
+    au < ready ; 2022 ; Hunter Gatherer Research Volume 8 ; 8 >
+    au < ready ; 2023 ; Hunter Gatherer Research Volume 9 ; 9 >
 
   }
 
@@ -1051,9 +1051,9 @@
     param[journal_id] = jrns
     #journal_num = 115
 
-    au < manifest ; 2019 ; Journal of Romanian Studies Volume 1 ; 1 >
-    au < manifest ; 2020 ; Journal of Romanian Studies Volume 2 ; 2 >
-    au < manifest ; 2021 ; Journal of Romanian Studies Volume 3 ; 3 >
+    au < ready ; 2019 ; Journal of Romanian Studies Volume 1 ; 1 >
+    au < ready ; 2020 ; Journal of Romanian Studies Volume 2 ; 2 >
+    au < ready ; 2021 ; Journal of Romanian Studies Volume 3 ; 3 >
     au < released ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 >
     au < released ; 2023 ; Journal of Romanian Studies Volume 5 ; 5 >
     au < manifest ; 2024 ; Journal of Romanian Studies Volume 6 ; 6 >
@@ -1864,7 +1864,7 @@
     au < manifest ; 2005 ; Studia Hibernica Volume 33 ; 33 >
     au < manifest ; 2007 ; Studia Hibernica Volume 34 ; 34 >
     au < manifest ; 2009 ; Studia Hibernica Volume 35 ; 35 >
-    au < manifest ; 2010 ; Studia Hibernica Volume 36 ; 36 >
+    au < ready ; 2010 ; Studia Hibernica Volume 36 ; 36 >
     au < doNotProcess ; 2011 ; Studia Hibernica Volume 37 ; 37 >
     au < doNotProcess ; 2012 ; Studia Hibernica Volume 38 ; 38 >
     au < doNotProcess ; 2013 ; Studia Hibernica Volume 39 ; 39 >
@@ -2235,19 +2235,19 @@
     au < manifest ; 2007 ; Revista Iberoamericana Volume 73 ; 73 >
     au < manifest ; 2008 ; Revista Iberoamericana Volume 74 ; 74 >
     au < manifest ; 2009 ; Revista Iberoamericana Volume 75 ; 75 >
-    au < manifest ; 2010 ; Revista Iberoamericana Volume 76 ; 76 >
-    au < manifest ; 2011 ; Revista Iberoamericana Volume 77 ; 77 >
-    au < manifest ; 2012 ; Revista Iberoamericana Volume 78 ; 78 >
-    au < manifest ; 2013 ; Revista Iberoamericana Volume 79 ; 79 >
-    au < manifest ; 2014 ; Revista Iberoamericana Volume 80 ; 80 >
-    au < manifest ; 2015 ; Revista Iberoamericana Volume 81 ; 81 >
-    au < manifest ; 2016 ; Revista Iberoamericana Volume 82 ; 82 >
-    au < manifest ; 2017 ; Revista Iberoamericana Volume 83 ; 83 >
-    au < manifest ; 2018 ; Revista Iberoamericana Volume 84 ; 84 >
-    au < manifest ; 2019 ; Revista Iberoamericana Volume 85 ; 85 >
-    au < manifest ; 2020 ; Revista Iberoamericana Volume 86 ; 86 >
-    au < manifest ; 2021 ; Revista Iberoamericana Volume 87 ; 87 >
-    au < manifest ; 2022 ; Revista Iberoamericana Volume 88 ; 88 >
+    au < ready ; 2010 ; Revista Iberoamericana Volume 76 ; 76 >
+    au < ready ; 2011 ; Revista Iberoamericana Volume 77 ; 77 >
+    au < ready ; 2012 ; Revista Iberoamericana Volume 78 ; 78 >
+    au < ready ; 2013 ; Revista Iberoamericana Volume 79 ; 79 >
+    au < ready ; 2014 ; Revista Iberoamericana Volume 80 ; 80 >
+    au < ready ; 2015 ; Revista Iberoamericana Volume 81 ; 81 >
+    au < ready ; 2016 ; Revista Iberoamericana Volume 82 ; 82 >
+    au < ready ; 2017 ; Revista Iberoamericana Volume 83 ; 83 >
+    au < ready ; 2018 ; Revista Iberoamericana Volume 84 ; 84 >
+    au < ready ; 2019 ; Revista Iberoamericana Volume 85 ; 85 >
+    au < ready ; 2020 ; Revista Iberoamericana Volume 86 ; 86 >
+    au < ready ; 2021 ; Revista Iberoamericana Volume 87 ; 87 >
+    au < ready ; 2022 ; Revista Iberoamericana Volume 88 ; 88 >
     au < released ; 2023 ; Revista Iberoamericana Volume 89 ; 89 >
     au < manifest ; 2024 ; Revista Iberoamericana Volume 90 ; 90 >
     au < expected ; 2025 ; Revista Iberoamericana Volume 91 ; 91 >
@@ -2294,7 +2294,7 @@
     au < manifest ; 2007 ; The Bodleian Library Record Volume 20 ; 20 >
     au < manifest ; 2008 ; The Bodleian Library Record Volume 21 ; 21 >
     au < manifest ; 2009 ; The Bodleian Library Record Volume 22 ; 22 >
-    au < manifest ; 2010 ; The Bodleian Library Record Volume 23 ; 23 >
+    au < ready ; 2010 ; The Bodleian Library Record Volume 23 ; 23 >
     au < released ; 2011 ; The Bodleian Library Record Volume 24 ; 24 >
     au < released ; 2012 ; The Bodleian Library Record Volume 25 ; 25 >
     au < released ; 2013 ; The Bodleian Library Record Volume 26 ; 26 >
@@ -2321,9 +2321,9 @@
 
     au < released ; 2013 ; The Shandean Volume 24 ; 24 >
     au < released ; 2014 ; The Shandean Volume 25 ; 25 >
-    au < manifest ; 2015 ; The Shandean Volume 26 ; 26 >
+    au < ready ; 2015 ; The Shandean Volume 26 ; 26 >
     au < released ; 2016 ; The Shandean Volume 27 ; 27 >
-    au < manifest ; 2017 ; The Shandean Volume 28 ; 28 >
+    au < ready ; 2017 ; The Shandean Volume 28 ; 28 >
     au < released ; 2018 ; The Shandean Volume 29 ; 29 >
     au < released ; 2019 ; The Shandean Volume 30 ; 30 >
     au < released ; 2020 ; The Shandean Volume 31 ; 31 >
@@ -2407,20 +2407,20 @@
     au < manifest ; 2007 ; French Studies Volume 61 ; 61 >
     au < manifest ; 2008 ; French Studies Volume 62 ; 62 >
     au < manifest ; 2009 ; French Studies Volume 63 ; 63 >
-    au < manifest ; 2010 ; French Studies Volume 64 ; 64 >
-    au < manifest ; 2011 ; French Studies Volume 65 ; 65 >
-    au < manifest ; 2012 ; French Studies Volume 66 ; 66 >
-    au < manifest ; 2013 ; French Studies Volume 67 ; 67 >
-    au < manifest ; 2014 ; French Studies Volume 68 ; 68 >
-    au < manifest ; 2015 ; French Studies Volume 69 ; 69 >
-    au < manifest ; 2016 ; French Studies Volume 70 ; 70 >
-    au < manifest ; 2017 ; French Studies Volume 71 ; 71 >
-    au < manifest ; 2018 ; French Studies Volume 72 ; 72 >
-    au < manifest ; 2019 ; French Studies Volume 73 ; 73 >
-    au < manifest ; 2020 ; French Studies Volume 74 ; 74 >
-    au < manifest ; 2021 ; French Studies Volume 75 ; 75 >
-    au < manifest ; 2022 ; French Studies Volume 76 ; 76 >
-    au < manifest ; 2023 ; French Studies Volume 77 ; 77 >
+    au < ready ; 2010 ; French Studies Volume 64 ; 64 >
+    au < ready ; 2011 ; French Studies Volume 65 ; 65 >
+    au < ready ; 2012 ; French Studies Volume 66 ; 66 >
+    au < ready ; 2013 ; French Studies Volume 67 ; 67 >
+    au < ready ; 2014 ; French Studies Volume 68 ; 68 >
+    au < ready ; 2015 ; French Studies Volume 69 ; 69 >
+    au < ready ; 2016 ; French Studies Volume 70 ; 70 >
+    au < ready ; 2017 ; French Studies Volume 71 ; 71 >
+    au < ready ; 2018 ; French Studies Volume 72 ; 72 >
+    au < ready ; 2019 ; French Studies Volume 73 ; 73 >
+    au < ready ; 2020 ; French Studies Volume 74 ; 74 >
+    au < ready ; 2021 ; French Studies Volume 75 ; 75 >
+    au < ready ; 2022 ; French Studies Volume 76 ; 76 >
+    au < ready ; 2023 ; French Studies Volume 77 ; 77 >
     au < manifest ; 2024 ; French Studies Volume 78 ; 78 >
     au < manifest ; 2025 ; French Studies Volume 79 ; 79 >
 
@@ -2465,20 +2465,20 @@
     au < manifest ; 2007 ; French Studies Bulletin Volume 28 ; 28 >
     au < manifest ; 2008 ; French Studies Bulletin Volume 29 ; 29 >
     au < manifest ; 2009 ; French Studies Bulletin Volume 30 ; 30 >
-    au < manifest ; 2010 ; French Studies Bulletin Volume 31 ; 31 >
-    au < manifest ; 2011 ; French Studies Bulletin Volume 32 ; 32 >
-    au < manifest ; 2012 ; French Studies Bulletin Volume 33 ; 33 >
-    au < manifest ; 2013 ; French Studies Bulletin Volume 34 ; 34 >
-    au < manifest ; 2014 ; French Studies Bulletin Volume 35 ; 35 >
-    au < manifest ; 2015 ; French Studies Bulletin Volume 36 ; 36 >
-    au < manifest ; 2016 ; French Studies Bulletin Volume 37 ; 37 >
-    au < manifest ; 2017 ; French Studies Bulletin Volume 38 ; 38 >
-    au < manifest ; 2018 ; French Studies Bulletin Volume 39 ; 39 >
-    au < manifest ; 2019 ; French Studies Bulletin Volume 40 ; 40 >
-    au < manifest ; 2020 ; French Studies Bulletin Volume 41 ; 41 >
-    au < manifest ; 2021 ; French Studies Bulletin Volume 42 ; 42 >
-    au < manifest ; 2022 ; French Studies Bulletin Volume 43 ; 43 >
-    au < manifest ; 2023 ; French Studies Bulletin Volume 44 ; 44 >
+    au < ready ; 2010 ; French Studies Bulletin Volume 31 ; 31 >
+    au < ready ; 2011 ; French Studies Bulletin Volume 32 ; 32 >
+    au < ready ; 2012 ; French Studies Bulletin Volume 33 ; 33 >
+    au < ready ; 2013 ; French Studies Bulletin Volume 34 ; 34 >
+    au < ready ; 2014 ; French Studies Bulletin Volume 35 ; 35 >
+    au < ready ; 2015 ; French Studies Bulletin Volume 36 ; 36 >
+    au < ready ; 2016 ; French Studies Bulletin Volume 37 ; 37 >
+    au < ready ; 2017 ; French Studies Bulletin Volume 38 ; 38 >
+    au < ready ; 2018 ; French Studies Bulletin Volume 39 ; 39 >
+    au < ready ; 2019 ; French Studies Bulletin Volume 40 ; 40 >
+    au < ready ; 2020 ; French Studies Bulletin Volume 41 ; 41 >
+    au < ready ; 2021 ; French Studies Bulletin Volume 42 ; 42 >
+    au < ready ; 2022 ; French Studies Bulletin Volume 43 ; 43 >
+    au < ready ; 2023 ; French Studies Bulletin Volume 44 ; 44 >
     au < manifest ; 2024 ; French Studies Bulletin Volume 45 ; 45 >
     au < manifest ; 2025 ; French Studies Bulletin Volume 46 ; 46 >
 
@@ -2523,13 +2523,13 @@
     au < manifest ; 1998-2002 ; The Huguenot Society Journal Volume 27 ; 27 >
     au < manifest ; 2003-2007 ; The Huguenot Society Journal Volume 28 ; 28 >
     au < manifest ; 2008-2012 ; The Huguenot Society Journal Volume 29 ; 29 >
-    au < manifest ; 2013-2017 ; The Huguenot Society Journal Volume 30 ; 30 >
-    au < manifest ; 2018 ; The Huguenot Society Journal Volume 31 ; 31 >
-    au < manifest ; 2019 ; The Huguenot Society Journal Volume 32 ; 32 >
-    au < manifest ; 2020 ; The Huguenot Society Journal Volume 33 ; 33 >
-    au < manifest ; 2021 ; The Huguenot Society Journal Volume 34 ; 34 >
-    au < manifest ; 2022 ; The Huguenot Society Journal Volume 35 ; 35 >
-    au < manifest ; 2023 ; The Huguenot Society Journal Volume 36 ; 36 >
+    au < ready ; 2013-2017 ; The Huguenot Society Journal Volume 30 ; 30 >
+    au < ready ; 2018 ; The Huguenot Society Journal Volume 31 ; 31 >
+    au < ready ; 2019 ; The Huguenot Society Journal Volume 32 ; 32 >
+    au < ready ; 2020 ; The Huguenot Society Journal Volume 33 ; 33 >
+    au < ready ; 2021 ; The Huguenot Society Journal Volume 34 ; 34 >
+    au < ready ; 2022 ; The Huguenot Society Journal Volume 35 ; 35 >
+    au < ready ; 2023 ; The Huguenot Society Journal Volume 36 ; 36 >
     au < manifest ; 2024 ; The Huguenot Society Journal Volume 37 ; 37 >
     au < expected ; 2025 ; The Huguenot Society Journal Volume 38 ; 38 >
 
@@ -2566,20 +2566,20 @@
     au < manifest ; 2007 ; Polin: Studies in Polish Jewry Volume 19 ; 19 >
     au < manifest ; 2008 ; Polin: Studies in Polish Jewry Volume 20 ; 20 >
     au < manifest ; 2009 ; Polin: Studies in Polish Jewry Volume 21 ; 21 >
-    au < manifest ; 2010 ; Polin: Studies in Polish Jewry Volume 22 ; 22 >
-    au < manifest ; 2011 ; Polin: Studies in Polish Jewry Volume 23 ; 23 >
-    au < manifest ; 2012 ; Polin: Studies in Polish Jewry Volume 24 ; 24 >
-    au < manifest ; 2013 ; Polin: Studies in Polish Jewry Volume 25 ; 25 >
-    au < manifest ; 2014 ; Polin: Studies in Polish Jewry Volume 26 ; 26 >
-    au < manifest ; 2015 ; Polin: Studies in Polish Jewry Volume 27 ; 27 >
-    au < manifest ; 2016 ; Polin: Studies in Polish Jewry Volume 28 ; 28 >
-    au < manifest ; 2017 ; Polin: Studies in Polish Jewry Volume 29 ; 29 >
-    au < manifest ; 2018 ; Polin: Studies in Polish Jewry Volume 30 ; 30 >
-    au < manifest ; 2019 ; Polin: Studies in Polish Jewry Volume 31 ; 31 >
-    au < manifest ; 2020 ; Polin: Studies in Polish Jewry Volume 32 ; 32 >
-    au < manifest ; 2021 ; Polin: Studies in Polish Jewry Volume 33 ; 33 >
-    au < manifest ; 2022 ; Polin: Studies in Polish Jewry Volume 34 ; 34 >
-    au < manifest ; 2023 ; Polin: Studies in Polish Jewry Volume 35 ; 35 >
+    au < ready ; 2010 ; Polin: Studies in Polish Jewry Volume 22 ; 22 >
+    au < ready ; 2011 ; Polin: Studies in Polish Jewry Volume 23 ; 23 >
+    au < ready ; 2012 ; Polin: Studies in Polish Jewry Volume 24 ; 24 >
+    au < ready ; 2013 ; Polin: Studies in Polish Jewry Volume 25 ; 25 >
+    au < ready ; 2014 ; Polin: Studies in Polish Jewry Volume 26 ; 26 >
+    au < ready ; 2015 ; Polin: Studies in Polish Jewry Volume 27 ; 27 >
+    au < ready ; 2016 ; Polin: Studies in Polish Jewry Volume 28 ; 28 >
+    au < ready ; 2017 ; Polin: Studies in Polish Jewry Volume 29 ; 29 >
+    au < ready ; 2018 ; Polin: Studies in Polish Jewry Volume 30 ; 30 >
+    au < ready ; 2019 ; Polin: Studies in Polish Jewry Volume 31 ; 31 >
+    au < ready ; 2020 ; Polin: Studies in Polish Jewry Volume 32 ; 32 >
+    au < ready ; 2021 ; Polin: Studies in Polish Jewry Volume 33 ; 33 >
+    au < ready ; 2022 ; Polin: Studies in Polish Jewry Volume 34 ; 34 >
+    au < ready ; 2023 ; Polin: Studies in Polish Jewry Volume 35 ; 35 >
     au < manifest ; 2024 ; Polin: Studies in Polish Jewry Volume 36 ; 36 >
     au < manifest ; 2025 ; Polin: Studies in Polish Jewry Volume 37 ; 37 >
 
@@ -2595,10 +2595,10 @@
 
     param[journal_id] = churcharch
 
-    au < manifest ; 2021 ; Church Archaeology Volume 20 ; 20 >
-    au < manifest ; 2022 ; Church Archaeology Volume 21 ; 21 >
-    au < manifest ; 2022 ; Church Archaeology Volume 22 ; 22 >
-    au < manifest ; 2023 ; Church Archaeology Volume 23 ; 23 >
+    au < ready ; 2021 ; Church Archaeology Volume 20 ; 20 >
+    au < ready ; 2022 ; Church Archaeology Volume 21 ; 21 >
+    au < ready ; 2022 ; Church Archaeology Volume 22 ; 22 >
+    au < ready ; 2023 ; Church Archaeology Volume 23 ; 23 >
     au < manifest ; 2024 ; Church Archaeology Volume 24 ; 24 >
     au < expected ; 2025 ; Church Archaeology Volume 25 ; 25 >
 
