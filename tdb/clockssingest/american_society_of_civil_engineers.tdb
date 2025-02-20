@@ -64,7 +64,7 @@
     
     au < crawling ; exists ; 2005 ; Civil Engineering Magazine Volume 75 ; 75 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2006 ; Civil Engineering Magazine Volume 76 ; 76 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2007 ; Civil Engineering Magazine Volume 77 ; 77 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2007 ; Civil Engineering Magazine Volume 77 ; 77 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2008 ; Civil Engineering Magazine Volume 78 ; 78 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2009 ; Civil Engineering Magazine Volume 79 ; 79 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2010 ; Civil Engineering Magazine Volume 80 ; 80 ; https://ascelibrary.org/ ; >
@@ -76,9 +76,9 @@
     au < crawling ; exists ; 2016 ; Civil Engineering Magazine Volume 86 ; 86 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2017 ; Civil Engineering Magazine Volume 87 ; 87 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2018 ; Civil Engineering Magazine Volume 88 ; 88 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2019 ; Civil Engineering Magazine Volume 89 ; 89 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2019 ; Civil Engineering Magazine Volume 89 ; 89 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2020 ; Civil Engineering Magazine Volume 90 ; 90 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2021 ; Civil Engineering Magazine Volume 91 ; 91 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2021 ; Civil Engineering Magazine Volume 91 ; 91 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2022 ; Civil Engineering Magazine Volume 92 ; 92 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2023 ; Civil Engineering Magazine Volume 93 ; 93 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Civil Engineering Magazine Volume 94 ; 94 ; https://ascelibrary.org/ ; >
@@ -99,7 +99,7 @@
     au < crawling ; exists ; 2016 ; GEOSTRATA Magazine Volume 20 ; 20 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2017 ; GEOSTRATA Magazine Volume 21 ; 21 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2018 ; GEOSTRATA Magazine Volume 22 ; 22 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2019 ; GEOSTRATA Magazine Volume 23 ; 23 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2019 ; GEOSTRATA Magazine Volume 23 ; 23 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2020 ; GEOSTRATA Magazine Volume 24 ; 24 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2021 ; GEOSTRATA Magazine Volume 25 ; 25 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2022 ; GEOSTRATA Magazine Volume 26 ; 26 ; https://ascelibrary.org/ ; >
@@ -145,7 +145,7 @@
 
     param[journal_id] = jswbay 
     
-    au < ready ; exists ; 2019 ; Journal of Sustainable Water in the Built Environment Volume 5 ; 5 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2019 ; Journal of Sustainable Water in the Built Environment Volume 5 ; 5 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2020 ; Journal of Sustainable Water in the Built Environment Volume 6 ; 6 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2021 ; Journal of Sustainable Water in the Built Environment Volume 7 ; 7 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2022 ; Journal of Sustainable Water in the Built Environment Volume 8 ; 8 ; https://ascelibrary.org/ ; >
