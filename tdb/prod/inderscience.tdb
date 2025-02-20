@@ -932,6 +932,7 @@
       au < released ; 2017-2018 ; International Journal of Artificial Intelligence and Soft Computing Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2019-2022 ; International Journal of Artificial Intelligence and Soft Computing Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2023-2024 ; International Journal of Artificial Intelligence and Soft Computing Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025-2026 ; International Journal of Artificial Intelligence and Soft Computing Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -961,7 +962,6 @@
       au < released ; 2021 ; International Journal of Arts and Technology Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Arts and Technology Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024-2025 ; International Journal of Arts and Technology Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Arts and Technology Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -980,8 +980,7 @@
       au < released ; 2014-2015 ; International Journal of Auditing Technology Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; International Journal of Auditing Technology Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
       au < released ; 2018-2022 ; International Journal of Auditing Technology Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2024-2025 ; International Journal of Auditing Technology Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Auditing Technology Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2024-2025 ; International Journal of Auditing Technology Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
 
     }
 
@@ -1167,7 +1166,6 @@
       au < released ; 2021 ; International Journal of Banking, Accounting and Finance Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Banking, Accounting and Finance Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024-2025 ; International Journal of Banking, Accounting and Finance Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Banking, Accounting and Finance Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -1188,7 +1186,7 @@
       au < released ; 2013-2014 ; International Journal of Behavioural Accounting and Finance Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2015 ; International Journal of Behavioural Accounting and Finance Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2022 ; International Journal of Behavioural Accounting and Finance Volume 6 ; 6 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2023-2024 ; International Journal of Behavioural Accounting and Finance Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2023-2024 ; International Journal of Behavioural Accounting and Finance Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ > #issue 4 not online
 
     }
 
@@ -1212,6 +1210,7 @@
       au < released ; 2019-2021 ; International Journal of Behavioural and Healthcare Research Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Behavioural and Healthcare Research Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
       au < released ; 2023-2024 ; International Journal of Behavioural and Healthcare Research Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025-2026 ; International Journal of Behavioural and Healthcare Research Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -1251,8 +1250,6 @@
       au < released ; 2020 ; International Journal of Big Data Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Big Data Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2023 ; International Journal of Big Data Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2024 ; International Journal of Big Data Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025 ; International Journal of Big Data Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -1521,7 +1518,7 @@
       param[journal_id] = ijbda
 
       au < released ; 2019-2020 ; International Journal of Business and Data Analytics Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2022-2024 ; International Journal of Business and Data Analytics Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < manifest ; 2022-2023 ; International Journal of Business and Data Analytics Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -1662,6 +1659,9 @@
       au < released ; 2016 ; International Journal of Business Competition and Growth Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2017-2019 ; International Journal of Business Competition and Growth Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2020-2021 ; International Journal of Business Competition and Growth Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2022-2023 ; International Journal of Business Competition and Growth Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2024 ; International Journal of Business Competition and Growth Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025 ; International Journal of Business Competition and Growth Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2073,7 +2073,8 @@
       au < released ; 2017 ; International Journal of Business Process Integration and Management Volume 8 ; 8 ; http://www.inderscienceonline.com/ >
       au < released ; 2018-2019 ; International Journal of Business Process Integration and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
       au < released ; 2020-2021 ; International Journal of Business Process Integration and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
-      au < released ; 2022-2024 ; International Journal of Business Process Integration and Management Volume 11 [partial] ; 11 ; https://www.inderscienceonline.com/ > #issue 4 not online
+      au < released ; 2022-2024 ; International Journal of Business Process Integration and Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2025-2026 ; International Journal of Business Process Integration and Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2093,6 +2094,7 @@
       au < released ; 2010-2015 ; International Journal of Chinese Culture and Management Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
       au < released ; 2017 ; International Journal of Chinese Culture and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2021-2024 ; International Journal of Chinese Culture and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025-2028 ; International Journal of Chinese Culture and Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2309,7 +2311,6 @@
       au < released ; 2021 ; International Journal of Computational Biology and Drug Design Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Computational Biology and Drug Design Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024-2025 ; International Journal of Computational Biology and Drug Design Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Computational Biology and Drug Design Volume 17 ; 17 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2424,7 +2425,6 @@
       au < released ; 2021 ; International Journal of Computational Materials Science and Surface Engineering Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Computational Materials Science and Surface Engineering Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024-2025 ; International Journal of Computational Materials Science and Surface Engineering Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Computational Materials Science and Surface Engineering Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2518,8 +2518,8 @@
       au < released ; 2019 ; International Journal of Computational Systems Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
       au < released ; 2020-2021 ; International Journal of Computational Systems Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Computational Systems Engineering Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2024-2025 ; International Journal of Computational Systems Engineering Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2025-2026 ; International Journal of Computational Systems Engineering Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2024 ; International Journal of Computational Systems Engineering Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2025 ; International Journal of Computational Systems Engineering Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2657,11 +2657,7 @@
       au < released ; 2023 ; International Journal of Computer Applications in Technology Volume 72 ; 72 ; https://www.inderscienceonline.com/ >
       au < released ; 2023 ; International Journal of Computer Applications in Technology Volume 73 ; 73 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024 ; International Journal of Computer Applications in Technology Volume 74 ; 74 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2024 ; International Journal of Computer Applications in Technology Volume 75 ; 75 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2024 ; International Journal of Computer Applications in Technology Volume 76 ; 76 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025 ; International Journal of Computer Applications in Technology Volume 77 ; 77 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025 ; International Journal of Computer Applications in Technology Volume 78 ; 78 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025 ; International Journal of Computer Applications in Technology Volume 79 ; 79 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025 ; International Journal of Computer Applications in Technology Volume 75 ; 75 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2845,7 +2841,6 @@
       au < released ; 2021 ; International Journal of Critical Accounting Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Critical Accounting Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024-2025 ; International Journal of Critical Accounting Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Critical Accounting Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2869,7 +2864,8 @@
       au < released ; 2017 ; International Journal of Critical Computer-Based Systems Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < released ; 2018 ; International Journal of Critical Computer-Based Systems Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
       au < released ; 2019 ; International Journal of Critical Computer-Based Systems Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
-      au < released ; 2020-2023 ; International Journal of Critical Computer-Based Systems Volume 10 ; 10 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < released ; 2020-2023 ; International Journal of Critical Computer-Based Systems Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2024-2025 ; International Journal of Critical Computer-Based Systems Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2918,7 +2914,9 @@
       >
 
       param[journal_id] = ijcultm
-      #no content exists
+
+      au < exists ; 2022-2024 ; International Journal of Cultural Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025-2027 ; International Journal of Cultural Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -2951,7 +2949,7 @@
 
       param[journal_id] = ijccps
 
-      au < manifest ; 2021-2024 ; International Journal of Cybernetics and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2021-2023 ; International Journal of Cybernetics and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -3105,8 +3103,6 @@
       au < released ; 2020 ; International Journal of Decision Sciences, Risk and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
       au < released ; 2021-2022 ; International Journal of Decision Sciences, Risk and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2023 ; International Journal of Decision Sciences, Risk and Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2024 ; International Journal of Decision Sciences, Risk and Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025 ; International Journal of Decision Sciences, Risk and Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -3255,7 +3251,7 @@
       au < released ; 2020 ; International Journal of Dynamical Systems and Differential Equations Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
       au < released ; 2021 ; International Journal of Dynamical Systems and Differential Equations Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Dynamical Systems and Differential Equations Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
-      au < released ; 2023-2024 ; International Journal of Dynamical Systems and Differential Equations Volume 13 [partial] ; 13 ; https://www.inderscienceonline.com/ > #issue 4, 5, 6 not online
+      au < released ; 2023 ; International Journal of Dynamical Systems and Differential Equations Volume 13 [partial] ; 13 ; https://www.inderscienceonline.com/ > #issue 4, 5, 6 not online
 
     }
 
@@ -3313,7 +3309,7 @@
       au < released ; 2018-2020 ; International Journal of Economics and Accounting Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
       au < released ; 2021 ; International Journal of Economics and Accounting Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Economics and Accounting Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
-      au < released ; 2023 ; International Journal of Economics and Accounting Volume 12 [partial] ; 12 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
+      au < released ; 2023-2024 ; International Journal of Economics and Accounting Volume 12 [partial] ; 12 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -3437,8 +3433,7 @@
       au < released ; 2020 ; International Journal of Electronic Banking Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2021-2022 ; International Journal of Electronic Banking Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2023-2024 ; International Journal of Electronic Banking Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2024-2025 ; International Journal of Electronic Banking Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Electronic Banking Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2025-2026 ; International Journal of Electronic Banking Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -3501,6 +3496,7 @@
       au < released ; 2019-2020 ; International Journal of Electronic Customer Relationship Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < released ; 2021-2022 ; International Journal of Electronic Customer Relationship Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2023-2024 ; International Journal of Electronic Customer Relationship Management Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025-2026 ; International Journal of Electronic Customer Relationship Management Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -3601,9 +3597,9 @@
       au < released ; 2018 ; International Journal of Electronic Healthcare Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
       au < released ; 2019-2021 ; International Journal of Electronic Healthcare Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Electronic Healthcare Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2023-2024 ; International Journal of Electronic Healthcare Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2024-2025 ; International Journal of Electronic Healthcare Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Electronic Healthcare Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2023 ; International Journal of Electronic Healthcare Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2024 ; International Journal of Electronic Healthcare Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025 ; International Journal of Electronic Healthcare Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -3678,8 +3674,9 @@
       >
 
       param[journal_id] = ijetrade
-      # title is not yet published on 9/20/2013
 
+      au < exists ; 2023-2024 ; International Journal of Electronic Trade Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025-2026 ; International Journal of Electronic Trade Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -3792,8 +3789,8 @@
       au < released ; 2020 ; International Journal of Energy Technology and Policy Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
       au < released ; 2021 ; International Journal of Energy Technology and Policy Volume 17 ; 17 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Energy Technology and Policy Volume 18 ; 18 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2024-2025 ; International Journal of Energy Technology and Policy Volume 19 ; 19 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2025-2026 ; International Journal of Energy Technology and Policy Volume 20 ; 20 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2024 ; International Journal of Energy Technology and Policy Volume 19 ; 19 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2025 ; International Journal of Energy Technology and Policy Volume 20 ; 20 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -3904,7 +3901,8 @@
 
       param[journal_id] = ijenttm
 
-      au < released ; 2020-2023 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < released ; 2020-2022 ; International Journal of Entertainment Technology and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2025-2027 ; International Journal of Entertainment Technology and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4073,6 +4071,7 @@
       au < released ; 2016-2017 ; International Journal of Environment and Health Volume 8 ; 8 ; http://www.inderscienceonline.com/ >
       au < released ; 2018-2019 ; International Journal of Environment and Health Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
       au < released ; 2020-2021 ; International Journal of Environment and Health Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2023-2026 ; International Journal of Environment and Health Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4268,9 +4267,9 @@
       au < released ; 2008-2018 ; International Journal of Environment, Workplace and Employment Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2019 ; International Journal of Environment, Workplace and Employment Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
       au < released ; 2020-2022 ; International Journal of Environment, Workplace and Employment Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2023-2024 ; International Journal of Environment, Workplace and Employment Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2024-2025 ; International Journal of Environment, Workplace and Employment Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Environment, Workplace and Employment Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2023 ; International Journal of Environment, Workplace and Employment Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2024 ; International Journal of Environment, Workplace and Employment Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025 ; International Journal of Environment, Workplace and Employment Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4297,6 +4296,7 @@
       au < released ; 2019-2020 ; International Journal of Environmental Engineering Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
       au < released ; 2021-2022 ; International Journal of Environmental Engineering Volume 11 ; 11 ; https://www.inderscienceonline.com/ > # issue4 not online
       au < manifest ; 2023-2024 ; International Journal of Environmental Engineering Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2025-2026 ; International Journal of Environmental Engineering Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4313,6 +4313,7 @@
 
       au < released ; 2010-2015 ; International Journal of Environmental Policy and Decision Making Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2019 ; International Journal of Environmental Policy and Decision Making Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
+      au < exists ; 2021-2022 ; International Journal of Environmental Policy and Decision Making Volume 3 [partial] ; 3 ; http://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -4455,6 +4456,7 @@
       au < released ; 2014-2015 ; International Journal of Experimental Design and Process Optimisation Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2016-2017 ; International Journal of Experimental Design and Process Optimisation Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2019-2021 ; International Journal of Experimental Design and Process Optimisation Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2022-2024 ; International Journal of Experimental Design and Process Optimisation Volume 7 [partial] ; 7 ; https://www.inderscienceonline.com/ > #issue 4 not online
 
     }
 
@@ -4486,7 +4488,8 @@
 
       au < released ; 2013-2014 ; International Journal of Financial Engineering and Risk Management Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2018 ; International Journal of Financial Engineering and Risk Management Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
-      au < released ; 2019-2020 ; International Journal of Financial Engineering and Risk Management Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ > #issue 4 not online
+      au < released ; 2019-2024 ; International Journal of Financial Engineering and Risk Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025-2028 ; International Journal of Financial Engineering and Risk Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4509,9 +4512,8 @@
       au < released ; 2017-2018 ; International Journal of Financial Markets and Derivatives Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
       au < released ; 2019-2020 ; International Journal of Financial Markets and Derivatives Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < released ; 2021-2022 ; International Journal of Financial Markets and Derivatives Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2023-2024 ; International Journal of Financial Markets and Derivatives Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2023 ; International Journal of Financial Markets and Derivatives Volume 9 ; 9 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024-2025 ; International Journal of Financial Markets and Derivatives Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Financial Markets and Derivatives Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -4637,8 +4639,6 @@
       au < released ; 2019-2020 ; International Journal of Foresight and Innovation Policy Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
       au < released ; 2021 ; International Journal of Foresight and Innovation Policy Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Foresight and Innovation Policy Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2024-2025 ; International Journal of Foresight and Innovation Policy Volume 17 ; 17 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Foresight and Innovation Policy Volume 18 ; 18 ; https://www.inderscienceonline.com/ >
 
     }
 
