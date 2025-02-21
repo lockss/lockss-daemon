@@ -67,12 +67,11 @@ public class UbiquityPartnerNetworkFeatureUrlHelperFactory implements FeatureUrl
           }
           // return the non-ojs URL for deceased AUs
           if(deceasedAUs.contains(au.getAuId())){
-            Collection<String> uUrls = new ArrayList<String>(2);
+            Collection<String> uUrls = new ArrayList<String>(1);
             baseUrl = au.getConfiguration().get("base_url");
             year = au.getConfiguration().get("year");
             String s = baseUrl + "lockss/year/" + year;
             uUrls.add(s);
-            uUrls.add(UrlUtil.replaceScheme(s, "https", "http"));
             log.debug3("The start url getting changed is " + uUrls.toString());
             return uUrls;
           }else{
