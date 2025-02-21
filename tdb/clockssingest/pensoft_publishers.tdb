@@ -520,9 +520,8 @@
       au < finished ; crawling ; 2018 ; 2018 ; BioDiscovery Volume 2018 ; 2018 ; https://biodiscovery.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2019 ; 2019 ; BioDiscovery Volume 2019 ; 2019 ; https://biodiscovery.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; BioDiscovery Volume 2020 ; 2020 ; https://biodiscovery.pensoft.net/ ; >
-
       au < deepCrawl ; exists ; 2022 ; 2022 ; BioDiscovery Volume 2022 ; 2022 ; https://biodiscovery.pensoft.net/ ; >
-
+      #Discontinued, Pensoft will continue to host.
   }
 
 
@@ -912,6 +911,7 @@
       au < finished ; frozen ; 2019 ; 2019 ; Rethinking Ecology Volume 2019 ; 2019 ; https://rethinkingecology.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2020 ; 2020 ; Rethinking Ecology Volume 2020 ; 2020 ; https://rethinkingecology.pensoft.net/ ; >
       au < deepCrawl ; exists ; 2021 ; 2021 ; Rethinking Ecology Volume 2021 ; 2021 ; https://rethinkingecology.pensoft.net/ ; >
+      #Discontinued, Pensoft will continue to host.
 
   }
 
