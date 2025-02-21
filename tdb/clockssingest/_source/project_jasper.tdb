@@ -115,6 +115,17 @@
   {
 
     title <
+      name = Geopauta ;
+      eissn = 2594-5033
+    >
+    provider = Edições UESB
+
+    au < expected ; exists ; 2025 ; Geopauta ; UNKNOWN >
+  }
+
+  {
+
+    title <
       name = EuroAmerican Journal of Applied Linguistics and Languages ;
       eissn = 2376-905X
     >
