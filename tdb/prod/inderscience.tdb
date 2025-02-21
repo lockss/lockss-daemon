@@ -8545,6 +8545,7 @@
       au < released ; 2014-2015 ; International Journal of Petroleum Engineering Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2016 ; International Journal of Petroleum Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
       au < released ; 2017-2020 ; International Journal of Petroleum Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2022-2026 ; International Journal of Petroleum Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -8809,8 +8810,14 @@
       au < released ; 2021 ; International Journal of Process Management and Benchmarking Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Process Management and Benchmarking Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < released ; 2023 ; International Journal of Process Management and Benchmarking Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2024 ; International Journal of Process Management and Benchmarking Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2025 ; International Journal of Process Management and Benchmarking Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2023 ; International Journal of Process Management and Benchmarking Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2023 ; International Journal of Process Management and Benchmarking Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2024 ; International Journal of Process Management and Benchmarking Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2024 ; International Journal of Process Management and Benchmarking Volume 17 ; 17 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2024 ; International Journal of Process Management and Benchmarking Volume 18 ; 18 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2025 ; International Journal of Process Management and Benchmarking Volume 19 ; 19 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025 ; International Journal of Process Management and Benchmarking Volume 20 ; 20 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025 ; International Journal of Process Management and Benchmarking Volume 21 ; 21 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -8947,8 +8954,8 @@
       >
 
       param[journal_id] = ijpsq
-      # title is not yet published on 9/26/2013
 
+      au < exists ; 2023 ; International Journal of Product Sound Quality Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9096,6 +9103,7 @@
       au < released ; 2019-2020 ; International Journal of Public Policy Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
       au < released ; 2021-2022 ; International Journal of Public Policy Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2023-2024 ; International Journal of Public Policy Volume 17 ; 17 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025-2026 ; International Journal of Public Policy Volume 18 ; 18 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9335,8 +9343,6 @@
       au < released ; 2021 ; International Journal of Renewable Energy Technology Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Renewable Energy Technology Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
       au < released ; 2023 ; International Journal of Renewable Energy Technology Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2024 ; International Journal of Renewable Energy Technology Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025 ; International Journal of Renewable Energy Technology Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9364,8 +9370,8 @@
       au < released ; 2019-2020 ; International Journal of Revenue Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
       au < released ; 2021 ; International Journal of Revenue Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Revenue Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2024-2025 ; International Journal of Revenue Management Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Revenue Management Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
+      au < manifest ; 2024 ; International Journal of Revenue Management Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
+      au < expected ; 2025 ; International Journal of Revenue Management Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9406,8 +9412,6 @@
       au < released ; 2021 ; International Journal of Risk Assessment and Management Volume 24 ; 24 ; https://www.inderscienceonline.com/ >
       au < released ; 2022 ; International Journal of Risk Assessment and Management Volume 25 ; 25 ; https://www.inderscienceonline.com/ >
       au < released ; 2023 ; International Journal of Risk Assessment and Management Volume 26 ; 26 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2024 ; International Journal of Risk Assessment and Management Volume 27 ; 27 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025 ; International Journal of Risk Assessment and Management Volume 28 ; 28 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9630,6 +9634,7 @@
       au < released ; 2016 ; International Journal of Services and Standards Volume 11 ; 11 ; http://www.inderscienceonline.com/ >
       au < released ; 2017-2018 ; International Journal of Services and Standards Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < released ; 2019-2023 ; International Journal of Services and Standards Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2024-2025 ; International Journal of Services and Standards Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9657,7 +9662,6 @@
       au < released ; 2021 ; International Journal of Services Operations and Informatics Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Services Operations and Informatics Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024-2025 ; International Journal of Services Operations and Informatics Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Services Operations and Informatics Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9722,7 +9726,6 @@
       au < released ; 2021 ; International Journal of Services Technology and Management Volume 27 ; 27 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Services Technology and Management Volume 28 ; 28 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024-2025 ; International Journal of Services Technology and Management Volume 29 ; 29 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Services Technology and Management Volume 30 ; 30 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9810,6 +9813,7 @@
       au < released ; 2017 ; International Journal of Signal and Imaging Systems Engineering Volume 10 ; 10 ; https://www.inderscienceonline.com/ >
       au < released ; 2018-2019 ; International Journal of Signal and Imaging Systems Engineering Volume 11 ; 11 ; https://www.inderscienceonline.com/ >
       au < released ; 2020-2023 ; International Journal of Signal and Imaging Systems Engineering Volume 12 ; 12 ; https://www.inderscienceonline.com/ >
+      au < exists ; 2024-2025 ; International Journal of Signal and Imaging Systems Engineering Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9873,7 +9877,6 @@
       au < released ; 2021 ; International Journal of Six Sigma and Competitive Advantage Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Six Sigma and Competitive Advantage Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024-2025 ; International Journal of Six Sigma and Competitive Advantage Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Six Sigma and Competitive Advantage Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9891,7 +9894,7 @@
       au < doNotProcess ; 2008-2012 ; International Journal of Social and Humanistic Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2017 ; International Journal of Social and Humanistic Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2018-2020 ; International Journal of Social and Humanistic Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
-      au < released ; 2021-2026 ; International Journal of Social and Humanistic Computing Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ > #issue3, 4 not online
+      au < released ; 2021-2024 ; International Journal of Social and Humanistic Computing Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ > #issue 4 not online
 
     }
 
@@ -9974,7 +9977,6 @@
       au < released ; 2021 ; International Journal of Society Systems Science Volume 13 ; 13 ; https://www.inderscienceonline.com/ >
       au < released ; 2022-2023 ; International Journal of Society Systems Science Volume 14 ; 14 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024-2025 ; International Journal of Society Systems Science Volume 15 ; 15 ; https://www.inderscienceonline.com/ >
-      au < expected ; 2025-2026 ; International Journal of Society Systems Science Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -10034,6 +10036,7 @@
       au < released ; 2016-2017 ; International Journal of Space Science and Engineering Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2018-2019 ; International Journal of Space Science and Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
       au < released ; 2020-2023 ; International Journal of Space Science and Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ > #issue4 not online
+      au < exists ; 2024-2025 ; International Journal of Space Science and Engineering Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
 
     }
 
