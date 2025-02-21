@@ -60,20 +60,10 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
     </map>
   </entry>
-  <!--
   <entry>
-    <string>au_feature_urls</string>
-    <map>
-      <entry>
-        <string>au_volume</string>
-        <list>
-          <string>"%sindex.php/%s/gateway/clockss?year=%d", to_https(base_url2), journal_id, year</string>
-          <string>"%slockss/year/%d", to_https(base_url), year</string>
-        </list>
-      </entry>
-    </map>
+    <string>plugin_access_url_factory</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkFeatureUrlHelperFactory</string>
   </entry>
-  -->
   <entry>
     <string>au_start_url</string>
     <list>
@@ -97,6 +87,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <!--  take out jquery temporarily to see what it is that this needed -->
       <string>1,"^https?://(maxcdn\.bootstrapcdn\.com|cdnjs\.cloudflare\.com|.+\.cloudfront\.net|cdn\.mathjax\.org|(fonts|ajax|storage)\.(gstatic|googleapis)\.com)/."</string>
       <string>1,"^https?://%s/index.php/%s/issue/view/[0-9]+$", url_host(base_url2), journal_id</string>
+      <string>1,"^https?://%s/index.php/%s/.*/css\?name=(stylesheet|font)$", url_host(base_url2), journal_id</string>
       <string>1,"^https?://%s%slockss/year/%d/?$", url_host(base_url), url_path(base_url), year</string>
       <string>1,"^https?://%s%s.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?(/)?$", url_host(base_url2), url_path(base_url2)</string>
       <string>1,"^https?://journal-assets\.ubiquity\.press/.*/_next/static/.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)$"</string>
