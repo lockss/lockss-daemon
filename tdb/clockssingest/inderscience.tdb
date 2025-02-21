@@ -274,7 +274,7 @@
       param[journal_id] = gber
 
       au < doNotProcess ; exists ; 1999 ; Global Business and Economics Review Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; Global Business and Economics Review Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; Global Business and Economics Review Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; Global Business and Economics Review Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; Global Business and Economics Review Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; Global Business and Economics Review Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -1471,7 +1471,7 @@
       param[journal_id] = ijbt
 
       au < doNotProcess ; exists ; 1999 ; International Journal of Biotechnology Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Biotechnology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Biotechnology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Biotechnology Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Biotechnology Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; International Journal of Biotechnology Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -2025,7 +2025,7 @@
       param[journal_id] = ijbpm
 
       au < doNotProcess ; exists ; 1998-1999 ; International Journal of Business Performance Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Business Performance Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Business Performance Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Business Performance Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Business Performance Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; International Journal of Business Performance Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -2596,7 +2596,7 @@
       param[journal_id] = ijcat
 
       au < doNotProcess ; exists ; 1999 ; International Journal of Computer Applications in Technology Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Computer Applications in Technology Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Computer Applications in Technology Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Computer Applications in Technology Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Computer Applications in Technology Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; International Journal of Computer Applications in Technology Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
@@ -2727,7 +2727,7 @@
         au < doNotProcess ; exists ; 1997 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
         au < doNotProcess ; exists ; 1998 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
         au < doNotProcess ; exists ; 1999 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
-        au < manifest ; exists ; 2000 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+        au < testing ; exists ; 2000 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
         au < manifest ; exists ; 2001 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
         au < manifest ; exists ; 2002 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
         au < manifest ; exists ; 2003 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
@@ -4100,8 +4100,8 @@
       au < doNotProcess ; exists ; 1998 ; International Journal of Environment and Pollution Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1999 ; International Journal of Environment and Pollution Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1999 ; International Journal of Environment and Pollution Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Environment and Pollution Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Environment and Pollution Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Environment and Pollution Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Environment and Pollution Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Environment and Pollution Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Environment and Pollution Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Environment and Pollution Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
@@ -4723,8 +4723,8 @@
       au < doNotProcess ; exists ; 1998 ; International Journal of Global Energy Issues Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1998 ; International Journal of Global Energy Issues Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1999 ; International Journal of Global Energy Issues Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Global Energy Issues Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Global Energy Issues Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Global Energy Issues Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Global Energy Issues Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2001 ; International Journal of Global Energy Issues Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Global Energy Issues Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Global Energy Issues Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
@@ -5025,7 +5025,7 @@
       param[journal_id] = ijhtm
 
       au < doNotProcess ; exists ; 1999 ; International Journal of Healthcare Technology and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Healthcare Technology and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Healthcare Technology and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Healthcare Technology and Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Healthcare Technology and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; International Journal of Healthcare Technology and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -5055,7 +5055,7 @@
 
       param[journal_id] = ijhvs
 
-      au < manifest ; exists ; 2000 ; International Journal of Heavy Vehicle Systems Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Heavy Vehicle Systems Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Heavy Vehicle Systems Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Heavy Vehicle Systems Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; International Journal of Heavy Vehicle Systems Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
@@ -6958,7 +6958,7 @@
 
       param[journal_id] = ijmdm
 
-      au < manifest ; exists ; 2000 ; International Journal of Management and Decision Making Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Management and Decision Making Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Management and Decision Making Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Management and Decision Making Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; International Journal of Management and Decision Making Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -7230,8 +7230,8 @@
 
       param[journal_id] = ijmtm
 
-      au < manifest ; exists ; 2000 ; International Journal of Manufacturing Technology and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Manufacturing Technology and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Manufacturing Technology and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Manufacturing Technology and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Manufacturing Technology and Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Manufacturing Technology and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; International Journal of Manufacturing Technology and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -7340,7 +7340,7 @@
       au < doNotProcess ; exists ; 1997 ; International Journal of Materials and Product Technology Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1998 ; International Journal of Materials and Product Technology Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1999 ; International Journal of Materials and Product Technology Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Materials and Product Technology Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Materials and Product Technology Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Materials and Product Technology Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Materials and Product Technology Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; International Journal of Materials and Product Technology Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
@@ -9398,7 +9398,7 @@
 
       param[journal_id] = ijram
 
-      au < manifest ; exists ; 2000 ; International Journal of Risk Assessment and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Risk Assessment and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Risk Assessment and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Risk Assessment and Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; International Journal of Risk Assessment and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -9709,7 +9709,7 @@
 
       param[journal_id] = ijstm
 
-      au < manifest ; exists ; 2000 ; International Journal of Services Technology and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Services Technology and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Services Technology and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Services Technology and Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; International Journal of Services Technology and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -10291,7 +10291,7 @@
 
       au < doNotProcess ; exists ; 1998 ; International Journal of Sustainable Development Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1999 ; International Journal of Sustainable Development Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Sustainable Development Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Sustainable Development Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Sustainable Development Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Sustainable Development Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2003 ; International Journal of Sustainable Development Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -10731,8 +10731,8 @@
       au < doNotProcess ; exists ; 1998 ; International Journal of Technology Management Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1999 ; International Journal of Technology Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1999 ; International Journal of Technology Management Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Technology Management Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Technology Management Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Technology Management Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Technology Management Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Technology Management Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Technology Management Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2002 ; International Journal of Technology Management Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
@@ -11192,8 +11192,8 @@
       au < doNotProcess ; exists ; 1998 ; International Journal of Vehicle Design Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1999 ; International Journal of Vehicle Design Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1999 ; International Journal of Vehicle Design Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Vehicle Design Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2000 ; International Journal of Vehicle Design Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Vehicle Design Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ; 2000 ; International Journal of Vehicle Design Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Vehicle Design Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Vehicle Design Volume 26 ; 26 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2001 ; International Journal of Vehicle Design Volume 27 ; 27 ; https://www.inderscienceonline.com/ ; >
