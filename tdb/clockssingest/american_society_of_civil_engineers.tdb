@@ -24,7 +24,7 @@
 
     param[journal_id] = aomjah
     
-    au < ready ; exists ; 2023 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2023 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2024 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2025 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
 
@@ -41,7 +41,7 @@
     
     au < crawling ; exists ; 2015 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2016 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2017 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2017 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2018 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2019 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 5 ; 5 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2020 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 6 ; 6 ; https://ascelibrary.org/ ; >
@@ -123,7 +123,7 @@
     au < ready ; exists ; 2008 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 3 ; 3 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2010 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 4 ; 4 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2011 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 5 ; 5 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2012 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 6 ; 6 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2012 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 6 ; 6 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2013 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 7 ; 7 ; https://ascelibrary.org/ ; >
     au < ready ; exists ; 2014 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 8 ; 8 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2015 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 9 ; 9 ; https://ascelibrary.org/ ; >

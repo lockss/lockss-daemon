@@ -134,7 +134,7 @@
      au < finished ; frozen ; 2021 ; Analysis & PDE Volume 14 ; 14 ; 2021 ; https://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; manifest ; 2022 ; Analysis & PDE Volume 15 ; 15 ; 2022 ; https://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; manifest ; 2023 ; Analysis & PDE Volume 16 ; 16 ; 2023 ; https://msp.org/ ; reingest2.clockss.org:8085 >
-     au < ready ; exists ; 2024 ; Analysis & PDE Volume 17 ; 17 ; 2024 ; https://msp.org/ ; >
+     au < crawling ; exists ; 2024 ; Analysis & PDE Volume 17 ; 17 ; 2024 ; https://msp.org/ ; >
      au < expected ; exists ; 2025 ; Analysis & PDE Volume 18 ; 18 ; 2025 ; https://msp.org/ ; >
 
   }
@@ -167,7 +167,7 @@
      au < finished ; frozen ; 2021 ; Communications in Applied Mathematics and Computational Science Volume 16 ; 16 ; 2021 ; https://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; manifest ; 2022 ; Communications in Applied Mathematics and Computational Science Volume 17 ; 17 ; 2022 ; https://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; manifest ; 2023 ; Communications in Applied Mathematics and Computational Science Volume 18 ; 18 ; 2023 ; https://msp.org/ ; reingest2.clockss.org:8085 >
-     au < ready ; exists ; 2024 ; Communications in Applied Mathematics and Computational Science Volume 19 ; 19 ; 2024 ; https://msp.org/ ; >
+     au < crawling ; exists ; 2024 ; Communications in Applied Mathematics and Computational Science Volume 19 ; 19 ; 2024 ; https://msp.org/ ; >
      au < expected ; exists ; 2025 ; Communications in Applied Mathematics and Computational Science Volume 20 ; 20 ; 2025 ; https://msp.org/ ; >
 
   }
@@ -298,7 +298,7 @@
      au < finished ; frozen ; 2021 ; Journal of Mechanics of Materials and Structures Volume 16 ; 16 ; 2021 ; https://msp.org/ ; reingest5.clockss.org:8082 >
      au < finished ; manifest ; 2022 ; Journal of Mechanics of Materials and Structures Volume 17 ; 17 ; 2022 ; https://msp.org/ ; reingest3.clockss.org:8083 >
      au < finished ; manifest ; 2023 ; Journal of Mechanics of Materials and Structures Volume 18 ; 18 ; 2023 ; https://msp.org/ ; reingest4.clockss.org:8082 >
-     au < ready ; exists ; 2024 ; Journal of Mechanics of Materials and Structures Volume 19 ; 19 ; 2024 ; https://msp.org/ ; >
+     au < crawling ; exists ; 2024 ; Journal of Mechanics of Materials and Structures Volume 19 ; 19 ; 2024 ; https://msp.org/ ; >
      au < expected ; exists ; 2025 ; Journal of Mechanics of Materials and Structures Volume 20 ; 20 ; 2025 ; https://msp.org/ ; >
 
    }
@@ -497,7 +497,7 @@
 
     au < finished ; manifest ; 2022 ; Essential Number Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Essential Number Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2024 ; Essential Number Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2024 ; Essential Number Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ ; >
     au < expected ; exists ; 2025 ; Essential Number Theory Volume 4 ; 4 ; 2025 ; https://msp.org/ ; >
 
   }
@@ -549,7 +549,7 @@
 
     au < finished ; manifest ; 2022 ; Model Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; Model Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2024 ; Model Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2024 ; Model Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ ; >
     au < expected ; exists ; 2025 ; Model Theory Volume 4 ; 4 ; 2025 ; https://msp.org/ ; >
 
   }
@@ -605,7 +605,7 @@
     au < finished ; manifest ; 2021 ; Combinatorics and Number Theory Volume 10 ; 10 ; 2021 ; https://msp.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; Combinatorics and Number Theory Volume 11 ; 11 ; 2022 ; https://msp.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; Combinatorics and Number Theory Volume 12 ; 12 ; 2023 ; https://msp.org/ ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2024 ; Combinatorics and Number Theory Volume 13 ; 13 ; 2024 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2024 ; Combinatorics and Number Theory Volume 13 ; 13 ; 2024 ; https://msp.org/ ; >
     au < expected ; exists ; 2025 ; Combinatorics and Number Theory Volume 14 ; 14 ; 2025 ; https://msp.org/ ; >
 
   }
@@ -683,7 +683,7 @@
     au < finished ; manifest ; 2021 ; Tunisian Journal of Mathematics Volume 3 ; 3 ; 2021 ; https://msp.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Tunisian Journal of Mathematics Volume 4 ; 4 ; 2022 ; https://msp.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; Tunisian Journal of Mathematics Volume 5 ; 5 ; 2023 ; https://msp.org/ ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2024 ; Tunisian Journal of Mathematics Volume 6 ; 6 ; 2024 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2024 ; Tunisian Journal of Mathematics Volume 6 ; 6 ; 2024 ; https://msp.org/ ; >
     au < expected ; exists ; 2025 ; Tunisian Journal of Mathematics Volume 7 ; 7 ; 2025 ; https://msp.org/ ; >
 
   }

@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -46,7 +46,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
+import java.time.format.*;
 import java.util.*;
 
 /**
@@ -328,16 +328,14 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
   }
 
   protected List<String> getOnlyNeedFetchedUrls(List<Map.Entry<String, String>> urlsAndTimes) {
-    boolean storeIt;
+    boolean refetchIt;
     // lets check if this url is already stored
     CachedUrlSet cachedUrls = au.getAuCachedUrlSet();
     List<String> needFetched = new ArrayList<>();
-    String url;
-    String crawlTime;
     for (Map.Entry<String, String> urlAndTime : urlsAndTimes) {
-      url = urlAndTime.getKey();
-      crawlTime = urlAndTime.getValue();
-      storeIt = true;
+      String url = urlAndTime.getKey();
+      String crawlTime = urlAndTime.getValue();
+      refetchIt = true;
       if (cachedUrls.containsUrl(url)) {
         CachedUrl cu = au.makeCachedUrl(url);
         // hasContent() check accesses disk, so we need to close the cu afterwards!
@@ -346,13 +344,20 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
             // lets check if the WASAPI content has been updated since the last time this url was collected
             ZonedDateTime crawlTimeDT = ZonedDateTime.parse(crawlTime, DateTimeFormatter.ISO_DATE_TIME);
             String lastModified = cu.getProperties().getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
-            // Thu, 26 Aug 2021 18:21:55 GMT
-            ZonedDateTime lastModifiedDT = ZonedDateTime.parse(lastModified, DateTimeFormatter.RFC_1123_DATE_TIME);
-
-            if (crawlTimeDT.isBefore(lastModifiedDT)) {
+            ZonedDateTime lastModifiedDT = null;
+            if (lastModified != null && lastModified.length() > 0) {
+              try {
+                // Thu, 26 Aug 2021 18:21:55 GMT
+                lastModifiedDT = ZonedDateTime.parse(lastModified, DateTimeFormatter.RFC_1123_DATE_TIME);
+              }
+              catch (DateTimeParseException dtpe) {
+                log.debug2(String.format("Invalid last modified value for %s: %s", cu.getUrl(), lastModified), dtpe);
+              }
+            }
+            if (lastModifiedDT != null && crawlTimeDT.isBefore(lastModifiedDT)) {
               // the content on WASAPI is older than the stored content, no need to refetch
               log.debug2("Archive It file is older than stored content. Skipping.");
-              storeIt = false;
+              refetchIt = false;
             }
             if (log.isDebug3()) {
               log.debug3("warc file found in CachedUrls: " + url);
@@ -365,7 +370,7 @@ public class ArchiveItApiCrawlSeed extends BaseCrawlSeed {
           cu.release();
         }
       }
-      if (storeIt) {
+      if (refetchIt) {
         needFetched.add(url);
       }
     }
