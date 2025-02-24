@@ -32,7 +32,7 @@
     au < ready ; exists ; 2001 ; Archives Volume 26 ; 26 ; >
     au < ready ; exists ; 2002 ; Archives Volume 27 ; 27 ; >
     au < ready ; exists ; 2003 ; Archives Volume 28 ; 28 ; >
-    au < ready ; exists ; 2004 ; Archives Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2004 ; Archives Volume 29 ; 29 ; >
     au < manifest ; exists ; 2005 ; Archives Volume 30 ; 30 ; >
     au < manifest ; exists ; 2005 ; Archives Volume 31 ; 31 ; >
     au < manifest ; exists ; 2007 ; Archives Volume 32 ; 32 ; >
@@ -100,7 +100,7 @@
     au < ready ; exists ; 2001 ; Australian Journal of French Studies Volume 38 ; 38 ; >
     au < ready ; exists ; 2002 ; Australian Journal of French Studies Volume 39 ; 39 ; >
     au < ready ; exists ; 2003 ; Australian Journal of French Studies Volume 40 ; 40 ; >
-    au < ready ; exists ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 ; >
     au < manifest ; exists ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 ; >
     au < manifest ; exists ; 2006 ; Australian Journal of French Studies Volume 43 ; 43 ; >
     au < manifest ; exists ; 2007 ; Australian Journal of French Studies Volume 44 ; 44 ; >
@@ -464,7 +464,7 @@
     au < ready ; exists ; 2001 ; Eighteenth-Century Ireland Volume 16 ; 16 ; >
     au < ready ; exists ; 2002 ; Eighteenth-Century Ireland Volume 17 ; 17 ; >
     au < ready ; exists ; 2003 ; Eighteenth-Century Ireland Volume 18 ; 18 ; >
-    au < ready ; exists ; 2004 ; Eighteenth-Century Ireland Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2004 ; Eighteenth-Century Ireland Volume 19 ; 19 ; >
     au < manifest ; exists ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 ; >
     au < manifest ; exists ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 ; >
     au < manifest ; exists ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 ; >
@@ -585,7 +585,7 @@
     #journal_num = 71
 
     au < ready ; exists ; 2000 ; Extrapolation Volume 41 ; 41 ; >
-    au < ready ; exists ; 2001 ; Extrapolation Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2001 ; Extrapolation Volume 42 ; 42 ; >
     au < crawling ; exists ; 2002 ; Extrapolation Volume 43 ; 43 ; >
     au < ready ; exists ; 2003 ; Extrapolation Volume 44 ; 44 ; >
     au < ready ; exists ; 2004 ; Extrapolation Volume 45 ; 45 ; >
@@ -665,9 +665,9 @@
     au < doNotProcess ; exists ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 ; >
     au < doNotProcess ; exists ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 ; >
     au < ready ; exists ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 ; >
-    au < ready ; exists ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 ; >
     au < crawling ; exists ; 2001 ; Historical Studies in Industrial Relations Volume 11 ; 11 ; >
-    au < ready ; exists ; 2001 ; Historical Studies in Industrial Relations Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2001 ; Historical Studies in Industrial Relations Volume 12 ; 12 ; >
     au < ready ; exists ; 2002 ; Historical Studies in Industrial Relations Volume 13 ; 13 ; >
     au < crawling ; exists ; 2002 ; Historical Studies in Industrial Relations Volume 14 ; 14 ; >
     au < ready ; exists ; 2003 ; Historical Studies in Industrial Relations Volume 15 ; 15 ; >
@@ -1116,7 +1116,7 @@
     au < doNotProcess ; exists ; 1999 ; Labour History: A Journal of Labour and Social History Volume 77 ; 77 ; >
     au < ready ; exists ; 2000 ; Labour History: A Journal of Labour and Social History Volume 78 ; 78 ; >
     au < ready ; exists ; 2000 ; Labour History: A Journal of Labour and Social History Volume 79 ; 79 ; >
-    au < ready ; exists ; 2001 ; Labour History: A Journal of Labour and Social History Volume 80 ; 80 ; >
+    au < crawling ; exists ; 2001 ; Labour History: A Journal of Labour and Social History Volume 80 ; 80 ; >
     au < crawling ; exists ; 2001 ; Labour History: A Journal of Labour and Social History Volume 81 ; 81 ; >
     au < ready ; exists ; 2002 ; Labour History: A Journal of Labour and Social History Volume 82 ; 82 ; >
     au < ready ; exists ; 2002 ; Labour History: A Journal of Labour and Social History Volume 83 ; 83 ; >
@@ -1638,10 +1638,10 @@
     param[journal_id] = rost
     #journal_num = 76
 
-    au < ready ; exists ; 2000 ; Romani Studies Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2000 ; Romani Studies Volume 10 ; 10 ; >
     au < ready ; exists ; 2001 ; Romani Studies Volume 11 ; 11 ; >
     au < ready ; exists ; 2002 ; Romani Studies Volume 12 ; 12 ; >
-    au < ready ; exists ; 2003 ; Romani Studies Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2003 ; Romani Studies Volume 13 ; 13 ; >
     au < manifest ; exists ; 2004 ; Romani Studies Volume 14 ; 14 ; >
     au < manifest ; exists ; 2005 ; Romani Studies Volume 15 ; 15 ; >
     au < manifest ; exists ; 2006 ; Romani Studies Volume 16 ; 16 ; >
@@ -1681,13 +1681,13 @@
     #journal_num = 51
 
     au < ready ; exists ; 2000 ; Quebec Studies Volume 29 ; 29 ; >
-    au < ready ; exists ; 2000 ; Quebec Studies Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2000 ; Quebec Studies Volume 30 ; 30 ; >
     au < ready ; exists ; 2001 ; Quebec Studies Volume 31 ; 31 ; >
     au < ready ; exists ; 2001 ; Quebec Studies Volume 32 ; 32 ; >
     au < ready ; exists ; 2002 ; Quebec Studies Volume 33 ; 33 ; >
     au < ready ; exists ; 2002 ; Quebec Studies Volume 34 ; 34 ; >
     au < ready ; exists ; 2003 ; Quebec Studies Volume 35 ; 35 ; >
-    au < ready ; exists ; 2003 ; Quebec Studies Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2003 ; Quebec Studies Volume 36 ; 36 ; >
     au < manifest ; exists ; 2004 ; Quebec Studies Volume 37 ; 37 ; >
     au < manifest ; exists ; 2004 ; Quebec Studies Volume 38 ; 38 ; >
     au < manifest ; exists ; 2005 ; Quebec Studies Volume 39 ; 39 ; >
@@ -2414,7 +2414,7 @@
     au < crawling ; exists ; 2002 ; French Studies Volume 56 ; 56 ; >
     au < crawling ; exists ; 2003 ; French Studies Volume 57 ; 57 ; >
     au < crawling ; exists ; 2004 ; French Studies Volume 58 ; 58 ; >
-    au < ready ; exists ; 2005 ; French Studies Volume 59 ; 59 ; >
+    au < crawling ; exists ; 2005 ; French Studies Volume 59 ; 59 ; >
     au < ready ; exists ; 2006 ; French Studies Volume 60 ; 60 ; >
     au < crawling ; exists ; 2007 ; French Studies Volume 61 ; 61 ; >
     au < ready ; exists ; 2008 ; French Studies Volume 62 ; 62 ; >
@@ -2467,7 +2467,7 @@
     au < manifest ; exists ; 1997 ; French Studies Bulletin Volume 18 ; 18 ; >
     au < manifest ; exists ; 1998 ; French Studies Bulletin Volume 19 ; 19 ; >
     au < manifest ; exists ; 1999 ; French Studies Bulletin Volume 20 ; 20 ; >
-    au < ready ; exists ; 2000 ; French Studies Bulletin Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2000 ; French Studies Bulletin Volume 21 ; 21 ; >
     au < ready ; exists ; 2001 ; French Studies Bulletin Volume 22 ; 22 ; >
     au < crawling ; exists ; 2002 ; French Studies Bulletin Volume 23 ; 23 ; >
     au < crawling ; exists ; 2003 ; French Studies Bulletin Volume 24 ; 24 ; >
@@ -2477,7 +2477,7 @@
     au < ready ; exists ; 2007 ; French Studies Bulletin Volume 28 ; 28 ; >
     au < ready ; exists ; 2008 ; French Studies Bulletin Volume 29 ; 29 ; >
     au < crawling ; exists ; 2009 ; French Studies Bulletin Volume 30 ; 30 ; >
-    au < ready ; exists ; 2010 ; French Studies Bulletin Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2010 ; French Studies Bulletin Volume 31 ; 31 ; >
     au < crawling ; exists ; 2011 ; French Studies Bulletin Volume 32 ; 32 ; >
     au < crawling ; exists ; 2012 ; French Studies Bulletin Volume 33 ; 33 ; >
     au < crawling ; exists ; 2013 ; French Studies Bulletin Volume 34 ; 34 ; >
@@ -2536,7 +2536,7 @@
     au < crawling ; exists ; 2003-2007 ; The Huguenot Society Journal Volume 28 ; 28 ; >
     au < crawling ; exists ; 2008-2012 ; The Huguenot Society Journal Volume 29 ; 29 ; >
     au < crawling ; exists ; 2013-2017 ; The Huguenot Society Journal Volume 30 ; 30 ; >
-    au < ready ; exists ; 2018 ; The Huguenot Society Journal Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2018 ; The Huguenot Society Journal Volume 31 ; 31 ; >
     au < ready ; exists ; 2019 ; The Huguenot Society Journal Volume 32 ; 32 ; >
     au < ready ; exists ; 2020 ; The Huguenot Society Journal Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; The Huguenot Society Journal Volume 34 ; 34 ; >
@@ -2571,7 +2571,7 @@
     au < manifest ; exists ; 1999 ; Polin: Studies in Polish Jewry Volume 12 ; 12 ; >
     au < crawling ; exists ; 2000 ; Polin: Studies in Polish Jewry Volume 13 ; 13 ; >
     au < crawling ; exists ; 2001 ; Polin: Studies in Polish Jewry Volume 14 ; 14 ; >
-    au < ready ; exists ; 2002 ; Polin: Studies in Polish Jewry Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2002 ; Polin: Studies in Polish Jewry Volume 15 ; 15 ; >
     au < crawling ; exists ; 2003 ; Polin: Studies in Polish Jewry Volume 16 ; 16 ; >
     au < crawling ; exists ; 2004 ; Polin: Studies in Polish Jewry Volume 17 ; 17 ; >
     au < crawling ; exists ; 2005 ; Polin: Studies in Polish Jewry Volume 18 ; 18 ; >
@@ -2587,7 +2587,7 @@
     au < crawling ; exists ; 2016 ; Polin: Studies in Polish Jewry Volume 28 ; 28 ; >
     au < crawling ; exists ; 2017 ; Polin: Studies in Polish Jewry Volume 29 ; 29 ; >
     au < ready ; exists ; 2018 ; Polin: Studies in Polish Jewry Volume 30 ; 30 ; >
-    au < ready ; exists ; 2019 ; Polin: Studies in Polish Jewry Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2019 ; Polin: Studies in Polish Jewry Volume 31 ; 31 ; >
     au < crawling ; exists ; 2020 ; Polin: Studies in Polish Jewry Volume 32 ; 32 ; >
     au < crawling ; exists ; 2021 ; Polin: Studies in Polish Jewry Volume 33 ; 33 ; >
     au < finished ; manifest ; 2022 ; Polin: Studies in Polish Jewry Volume 34 ; 34 ; reingest2.clockss.org:8085 >

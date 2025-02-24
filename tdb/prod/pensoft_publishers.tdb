@@ -284,7 +284,9 @@
     au < released ; 2020 ; 54-63 ; NeoBiota Volume 2020 ; 2020 ; https://neobiota.pensoft.net/ >
     au < released ; 2021 ; 64-73 ; NeoBiota Volume 2021 ; 2021 ; https://neobiota.pensoft.net/ >
     au < released ; 2022 ; 71-77 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ >
-    au < released ; 2022 ; 80-88 ; NeoBiota Volume 2023 ; 2023 ; https://neobiota.pensoft.net/ >
+    au < released ; 2023 ; 80-89 ; NeoBiota Volume 2023 ; 2023 ; https://neobiota.pensoft.net/ >
+    au < exists ; 2024 ; 90-96 ; NeoBiota Volume 2024 ; 2024 ; https://neobiota.pensoft.net/ >
+    au < exists ; 2025 ; 97-103 ; NeoBiota Volume 2025 ; 2025 ; https://neobiota.pensoft.net/ >
 
    }
 
@@ -341,7 +343,8 @@
     au < released ; 2021 ; 171-205 ; PhytoKeys Volume 2021 ; 2021 ; https://phytokeys.pensoft.net/ >
     au < released ; 2022 ; 188-216 ; PhytoKeys Volume 2022 ; 2022 ; https://phytokeys.pensoft.net/ >
     au < released ; 2023 ; 217-236 ; PhytoKeys Volume 2023 ; 2023 ; https://phytokeys.pensoft.net/ >
-    au < manifest ; 2024 ; 237-256 ; PhytoKeys Volume 2024 ; 2024 ; https://phytokeys.pensoft.net/ >
+    au < manifest ; 2024 ; 237-250 ; PhytoKeys Volume 2024 ; 2024 ; https://phytokeys.pensoft.net/ >
+    au < exists ; 2025 ; 251-264 ; PhytoKeys Volume 2025 ; 2025 ; https://phytokeys.pensoft.net/ >
 
    }
 
@@ -985,6 +988,10 @@
       au < released ; 2020 ; 2020 ; Viticulture Data Journal Volume 2020 ; 2020 ; https://vdj.pensoft.net/ >
       au < released ; 2021 ; 2021 ; Viticulture Data Journal Volume 2021 ; 2021 ; https://vdj.pensoft.net/ >
 
+      au < exists ; 2023 ; 2023 ; Viticulture Data Journal Volume 2023 ; 2023 ; https://vdj.pensoft.net/ >
+      au < exists ; 2024 ; 2024 ; Viticulture Data Journal Volume 2024 ; 2024 ; https://vdj.pensoft.net/ >
+      au < expected ; 2025 ; 2025 ; Viticulture Data Journal Volume 2025 ; 2025 ; https://vdj.pensoft.net/ >
+
   }
 
 
@@ -1441,6 +1448,10 @@
       param[au_oai_set] = biosystecol
 
       au < released ; 2021 ; 2021 ; Biosystematics and Ecology Volume 2021 ; 2021 ; https://biosystecol.oeaw.ac.at/ >
+
+      au < exists ; 2023 ; 2023 ; Biosystematics and Ecology Volume 2023 ; 2023 ; https://biosystecol.oeaw.ac.at/ >
+      au < exists ; 2024 ; 2024 ; Biosystematics and Ecology Volume 2024 ; 2024 ; https://biosystecol.oeaw.ac.at/ >
+      au < expected ; 2025 ; 2025 ; Biosystematics and Ecology Volume 2025 ; 2025 ; https://biosystecol.oeaw.ac.at/ >
 
   }
 
