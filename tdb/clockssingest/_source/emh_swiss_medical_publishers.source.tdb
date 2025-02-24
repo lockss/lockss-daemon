@@ -6,6 +6,7 @@
     info[platform] = Source
   >
   hidden[proxy] = DIRECT
+  #Contract cancelled
 
   {
     title <
@@ -30,7 +31,6 @@
 
       au < readySource ; finished ; 2023 ; EMH Swiss Medical Publishers Source Content 2023 ; 2023 >
       au < readySource ; crawling ; 2024 ; EMH Swiss Medical Publishers Source Content 2024 ; 2024 >
-      au < expected ; exists ; 2025 ; EMH Swiss Medical Publishers Source Content 2025 ; 2025 >
 
     }
 
