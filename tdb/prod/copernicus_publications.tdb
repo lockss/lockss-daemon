@@ -215,7 +215,7 @@
       au < released ; 2021 ; 2021 ; AGILE: GIScience Series Volume 2 ; 2 >
       au < released ; 2022 ; 2022 ; AGILE: GIScience Series Volume 3 ; 3 >
       au < released ; 2023 ; 2023 ; AGILE: GIScience Series Volume 4 ; 4 >
-      au < manifest ; 2024 ; 2024 ; AGILE: GIScience Series Volume 5 ; 5 >
+      au < ready ; 2024 ; 2024 ; AGILE: GIScience Series Volume 5 ; 5 >
       au < expected ; 2025 ; 2025 ; AGILE: GIScience Series Volume 6 ; 6 >
 
   }
@@ -342,7 +342,7 @@
       au < released ; 2021 ; 2021 ; Atmospheric Chemistry and Physics Volume 21 ; 21 >
       au < released ; 2022 ; 2022 ; Atmospheric Chemistry and Physics Volume 22 ; 22 >
       au < released ; 2023 ; 2023 ; Atmospheric Chemistry and Physics Volume 23 ; 23 >
-      au < manifest ; 2024 ; 2024 ; Atmospheric Chemistry and Physics Volume 24 ; 24 >
+      au < ready ; 2024 ; 2024 ; Atmospheric Chemistry and Physics Volume 24 ; 24 >
       au < manifest ; 2025 ; 2025 ; Atmospheric Chemistry and Physics Volume 25 ; 25 >
 
    }
@@ -374,7 +374,7 @@
       au < released ; 2021 ; 2021 ; Atmospheric Measurement Techniques Volume 14 ; 14 >
       au < released ; 2022 ; 2022 ; Atmospheric Measurement Techniques Volume 15 ; 15 >
       au < released ; 2023 ; 2023 ; Atmospheric Measurement Techniques Volume 16 ; 16 >
-      au < manifest ; 2024 ; 2024 ; Atmospheric Measurement Techniques Volume 17 ; 17 >
+      au < ready ; 2024 ; 2024 ; Atmospheric Measurement Techniques Volume 17 ; 17 >
       au < manifest ; 2025 ; 2025 ; Atmospheric Measurement Techniques Volume 18 ; 18 >
 
    }
@@ -540,7 +540,7 @@
       au < released ; 2021 ; 2021 ; Earth System Dynamics Volume 12 ; 12 >
       au < released ; 2022 ; 2022 ; Earth System Dynamics Volume 13 ; 13 >
       au < released ; 2023 ; 2023 ; Earth System Dynamics Volume 14 ; 14 >
-      au < manifest ; 2024 ; 2024 ; Earth System Dynamics Volume 15 ; 15 >
+      au < ready ; 2024 ; 2024 ; Earth System Dynamics Volume 15 ; 15 >
       au < manifest ; 2025 ; 2025 ; Earth System Dynamics Volume 16 ; 16 >
 
    }
@@ -656,7 +656,7 @@
       au < released ; 2021 ; 2021 ; E&G Quaternary Science Journal Volume 70 ; 70 >
       au < released ; 2022 ; 2022 ; E&G Quaternary Science Journal Volume 71 ; 71 >
       au < released ; 2023 ; 2023 ; E&G Quaternary Science Journal Volume 72 ; 72 >
-      au < manifest ; 2024 ; 2024 ; E&G Quaternary Science Journal Volume 73 ; 73 >
+      au < ready ; 2024 ; 2024 ; E&G Quaternary Science Journal Volume 73 ; 73 >
       au < manifest ; 2025 ; 2025 ; E&G Quaternary Science Journal Volume 74 ; 74 >
 
   }
@@ -1036,7 +1036,7 @@
       au < released ; 2021 ; 2021 ; Journal of Micropalaeontology Volume 40 ; 40 >
       au < released ; 2022 ; 2022 ; Journal of Micropalaeontology Volume 41 ; 41 >
       au < released ; 2023 ; 2023 ; Journal of Micropalaeontology Volume 42 ; 42 >
-      au < manifest ; 2024 ; 2024 ; Journal of Micropalaeontology Volume 43 ; 43 >
+      au < ready ; 2024 ; 2024 ; Journal of Micropalaeontology Volume 43 ; 43 >
       au < manifest ; 2025 ; 2025 ; Journal of Micropalaeontology Volume 44 ; 44 >
 
   }
@@ -1396,7 +1396,7 @@
       param[base_url] = https://sp.copernicus.org/
       param[home_url] = https://www.state-of-the-planet.net/
 
-      au < manifest ; 2023 ; 2023 ; State of the Planet Volume 1 ; 1-osr7 >
+      au < ready ; 2023 ; 2023 ; State of the Planet Volume 1 ; 1-osr7 >
       au < manifest ; 2024 ; 2024 ; State of the Planet Volume 2 ; 2-oae2023 >
       au < manifest ; 2024 ; 2024 ; State of the Planet Volume 3 ; 3-slre1 >
       au < manifest ; 2024 ; 2024 ; State of the Planet Volume 4 ; 4-osr8 >
