@@ -13,15 +13,15 @@
       eissn = 1943-3654 ;
       issnl = 0020-1324
     >
+      #move to liebertpub, 2025
 
     {
       #Moved to https
       param[base_url] = https://rc.rcjournal.com/
-      
-      au < aarespcare.AmAssocRespCareDrupalPlugin ; released ; 2022 ; Respiratory Care Volume 67 ; 67 >
-      au < aarespcare.AmAssocRespCareDrupalPlugin ; released ; 2023 ; Respiratory Care Volume 68 ; 68 >
-      au < aarespcare.AmAssocRespCareDrupalPlugin ; manifest ; 2024 ; Respiratory Care Volume 69 ; 69 >
-      au < aarespcare.AmAssocRespCareDrupalPlugin ; expected ; 2025 ; Respiratory Care Volume 70 ; 70 >
+
+      au < aarespcare.AmAssocRespCareDrupalPlugin ; down ; 2022 ; Respiratory Care Volume 67 ; 67 >
+      au < aarespcare.AmAssocRespCareDrupalPlugin ; down ; 2023 ; Respiratory Care Volume 68 ; 68 >
+      au < aarespcare.AmAssocRespCareDrupalPlugin ; doNotProcess ; 2024 ; Respiratory Care Volume 69 ; 69 >
 
     }
 
@@ -42,12 +42,12 @@
       au < HighWirePressH20Plugin ; down ; 2013 ; Respiratory Care Volume 58 ; 58 >
       au < HighWirePressH20Plugin ; down ; 2014 ; Respiratory Care Volume 59 ; 59 >
       au < HighWirePressH20Plugin ; down ; 2015 ; Respiratory Care Volume 60 ; 60 >
-      au < aarespcare.AmAssocRespCareDrupalPlugin ; released ; 2016 ; Respiratory Care Volume 61 ; 61 >
-      au < aarespcare.AmAssocRespCareDrupalPlugin ; released ; 2017 ; Respiratory Care Volume 62 ; 62 >
-      au < aarespcare.AmAssocRespCareDrupalPlugin ; released ; 2018 ; Respiratory Care Volume 63 ; 63 >
-      au < aarespcare.AmAssocRespCareDrupalPlugin ; released ; 2019 ; Respiratory Care Volume 64 ; 64 >
-      au < aarespcare.AmAssocRespCareDrupalPlugin ; released ; 2020 ; Respiratory Care Volume 65 ; 65 >
-      au < aarespcare.AmAssocRespCareDrupalPlugin ; released ; 2021 ; Respiratory Care Volume 66 ; 66 >
+      au < aarespcare.AmAssocRespCareDrupalPlugin ; down ; 2016 ; Respiratory Care Volume 61 ; 61 >
+      au < aarespcare.AmAssocRespCareDrupalPlugin ; down ; 2017 ; Respiratory Care Volume 62 ; 62 >
+      au < aarespcare.AmAssocRespCareDrupalPlugin ; down ; 2018 ; Respiratory Care Volume 63 ; 63 >
+      au < aarespcare.AmAssocRespCareDrupalPlugin ; down ; 2019 ; Respiratory Care Volume 64 ; 64 >
+      au < aarespcare.AmAssocRespCareDrupalPlugin ; down ; 2020 ; Respiratory Care Volume 65 ; 65 >
+      au < aarespcare.AmAssocRespCareDrupalPlugin ; down ; 2021 ; Respiratory Care Volume 66 ; 66 >
 
     }
 

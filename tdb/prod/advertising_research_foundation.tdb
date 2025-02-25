@@ -15,39 +15,39 @@
       eissn = 1740-1909 ;
       issnl = 0021-8499
     >
+    #move to T&F, 2025
     {
     param[base_url] = http://www.journalofadvertisingresearch.com/
 
-    au < released ; 2000 ; Journal of Advertising Research Volume 40 ; 40 >
-    au < released ; 2001 ; Journal of Advertising Research Volume 41 ; 41 >
-    au < released ; 2002 ; Journal of Advertising Research Volume 42 ; 42 >
-    au < released ; 2003 ; Journal of Advertising Research Volume 43 ; 43 >
-    au < released ; 2004 ; Journal of Advertising Research Volume 44 ; 44 >
-    au < released ; 2005 ; Journal of Advertising Research Volume 45 ; 45 >
-    au < released ; 2006 ; Journal of Advertising Research Volume 46 ; 46 >
-    au < released ; 2007 ; Journal of Advertising Research Volume 47 ; 47 >
-    au < released ; 2008 ; Journal of Advertising Research Volume 48 ; 48 >
-    au < released ; 2009 ; Journal of Advertising Research Volume 49 ; 49 >
-    au < released ; 2010 ; Journal of Advertising Research Volume 50 ; 50 >
-    au < released ; 2011 ; Journal of Advertising Research Volume 51 ; 51 >
-    au < released ; 2012 ; Journal of Advertising Research Volume 52 ; 52 >
-    au < released ; 2013 ; Journal of Advertising Research Volume 53 ; 53 >
-    au < released ; 2014 ; Journal of Advertising Research Volume 54 ; 54 >
-    au < released ; 2015 ; Journal of Advertising Research Volume 55 ; 55 >
-    au < released ; 2016 ; Journal of Advertising Research Volume 56 ; 56 >
-    au < released ; 2017 ; Journal of Advertising Research Volume 57 ; 57 >
-    au < released ; 2018 ; Journal of Advertising Research Volume 58 ; 58 >
-    au < released ; 2019 ; Journal of Advertising Research Volume 59 ; 59 >
-    au < released ; 2020 ; Journal of Advertising Research Volume 60 ; 60 >
-    au < released ; 2021 ; Journal of Advertising Research Volume 61 ; 61 >
+    au < down ; 2000 ; Journal of Advertising Research Volume 40 ; 40 >
+    au < down ; 2001 ; Journal of Advertising Research Volume 41 ; 41 >
+    au < down ; 2002 ; Journal of Advertising Research Volume 42 ; 42 >
+    au < down ; 2003 ; Journal of Advertising Research Volume 43 ; 43 >
+    au < down ; 2004 ; Journal of Advertising Research Volume 44 ; 44 >
+    au < down ; 2005 ; Journal of Advertising Research Volume 45 ; 45 >
+    au < down ; 2006 ; Journal of Advertising Research Volume 46 ; 46 >
+    au < down ; 2007 ; Journal of Advertising Research Volume 47 ; 47 >
+    au < down ; 2008 ; Journal of Advertising Research Volume 48 ; 48 >
+    au < down ; 2009 ; Journal of Advertising Research Volume 49 ; 49 >
+    au < down ; 2010 ; Journal of Advertising Research Volume 50 ; 50 >
+    au < down ; 2011 ; Journal of Advertising Research Volume 51 ; 51 >
+    au < down ; 2012 ; Journal of Advertising Research Volume 52 ; 52 >
+    au < down ; 2013 ; Journal of Advertising Research Volume 53 ; 53 >
+    au < down ; 2014 ; Journal of Advertising Research Volume 54 ; 54 >
+    au < down ; 2015 ; Journal of Advertising Research Volume 55 ; 55 >
+    au < down ; 2016 ; Journal of Advertising Research Volume 56 ; 56 >
+    au < down ; 2017 ; Journal of Advertising Research Volume 57 ; 57 >
+    au < down ; 2018 ; Journal of Advertising Research Volume 58 ; 58 >
+    au < down ; 2019 ; Journal of Advertising Research Volume 59 ; 59 >
+    au < down ; 2020 ; Journal of Advertising Research Volume 60 ; 60 >
+    au < down ; 2021 ; Journal of Advertising Research Volume 61 ; 61 >
     }
     {
     param[base_url] = https://www.journalofadvertisingresearch.com/
 
-    au < released ; 2022 ; Journal of Advertising Research Volume 62 ; 62 >
-    au < released ; 2023 ; Journal of Advertising Research Volume 63 ; 63 > #BadProbeLink-503 Service Unavailable
-    au < released ; 2024 ; Journal of Advertising Research Volume 64 ; 64 > #BadProbeLink-503 Service Unavailable, https://www.journalofadvertisingresearch.com/content/64/1/103
-    au < expected ; 2025 ; Journal of Advertising Research Volume 65 ; 65 > #BadProbeLink-503 Service Unavailable, https://www.journalofadvertisingresearch.com/content/65/1/103
+    au < down ; 2022 ; Journal of Advertising Research Volume 62 ; 62 >
+    au < down ; 2023 ; Journal of Advertising Research Volume 63 ; 63 >
+    au < down ; 2024 ; Journal of Advertising Research Volume 64 ; 64 >
     }
   }
 
