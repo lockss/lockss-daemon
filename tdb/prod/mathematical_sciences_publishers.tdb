@@ -21,13 +21,13 @@
     
       param[journal_id] = agt
     
-     au < ready ; 2001 ; Algebraic & Geometric Topology Volume 1 ; 1 ; 2001 ; https://msp.org/ >
-     au < ready ; 2002 ; Algebraic & Geometric Topology Volume 2 ; 2 ; 2002 ; https://msp.org/ >
-     au < ready ; 2003 ; Algebraic & Geometric Topology Volume 3 ; 3 ; 2003 ; https://msp.org/ >
+     au < releasing ; 2001 ; Algebraic & Geometric Topology Volume 1 ; 1 ; 2001 ; https://msp.org/ >
+     au < releasing ; 2002 ; Algebraic & Geometric Topology Volume 2 ; 2 ; 2002 ; https://msp.org/ >
+     au < releasing ; 2003 ; Algebraic & Geometric Topology Volume 3 ; 3 ; 2003 ; https://msp.org/ >
      au < released ; 2004 ; Algebraic & Geometric Topology Volume 4 ; 4 ; 2004 ; https://msp.org/ >
      au < released ; 2005 ; Algebraic & Geometric Topology Volume 5 ; 5 ; 2005 ; https://msp.org/ >
      au < released ; 2006 ; Algebraic & Geometric Topology Volume 6 ; 6 ; 2006 ; https://msp.org/ >
-     au < ready ; 2007 ; Algebraic & Geometric Topology Volume 7 ; 7 ; 2007 ; https://msp.org/ >
+     au < releasing ; 2007 ; Algebraic & Geometric Topology Volume 7 ; 7 ; 2007 ; https://msp.org/ >
      au < manifest ; 2008 ; Algebraic & Geometric Topology Volume 8 ; 8 ; 2008 ; https://msp.org/ >
      au < released ; 2009 ; Algebraic & Geometric Topology Volume 9 ; 9 ; 2009 ; https://msp.org/ >
      au < released ; 2010 ; Algebraic & Geometric Topology Volume 10 ; 10 ; 2010 ; https://msp.org/ >
@@ -44,7 +44,7 @@
      au < released ; 2021 ; Algebraic & Geometric Topology Volume 21 ; 21 ; 2021 ; https://msp.org/ >
      au < released ; 2022 ; Algebraic & Geometric Topology Volume 22 ; 22 ; 2022 ; https://msp.org/ >
      au < released ; 2023 ; Algebraic & Geometric Topology Volume 23 ; 23 ; 2023 ; https://msp.org/ >
-     au < ready ; 2024 ; Algebraic & Geometric Topology Volume 24 ; 24 ; 2024 ; https://msp.org/ >
+     au < releasing ; 2024 ; Algebraic & Geometric Topology Volume 24 ; 24 ; 2024 ; https://msp.org/ >
      au < expected ; 2025 ; Algebraic & Geometric Topology Volume 25 ; 25 ; 2025 ; https://msp.org/ >
 
   }
@@ -61,8 +61,8 @@
     
 
      au < released ; 2007 ; Algebra & Number Theory Volume 1 ; 1 ; 2007 ; https://msp.org/ >
-     au < ready ; 2008 ; Algebra & Number Theory Volume 2 ; 2 ; 2008 ; https://msp.org/ >
-     au < ready ; 2009 ; Algebra & Number Theory Volume 3 ; 3 ; 2009 ; https://msp.org/ >
+     au < releasing ; 2008 ; Algebra & Number Theory Volume 2 ; 2 ; 2008 ; https://msp.org/ >
+     au < releasing ; 2009 ; Algebra & Number Theory Volume 3 ; 3 ; 2009 ; https://msp.org/ >
      au < released ; 2010 ; Algebra & Number Theory Volume 4 ; 4 ; 2010 ; https://msp.org/ >
      au < released ; 2011 ; Algebra & Number Theory Volume 5 ; 5 ; 2011 ; http://msp.org/ >
      au < released ; 2012 ; Algebra & Number Theory Volume 6 ; 6 ; 2012 ; http://msp.org/ >
@@ -124,9 +124,9 @@
       param[journal_id] = camcos
  
      au < released ; 2006 ; Communications in Applied Mathematics and Computational Science Volume 1 ; 1 ; 2006 ; https://msp.org/ >
-     au < ready ; 2007 ; Communications in Applied Mathematics and Computational Science Volume 2 ; 2 ; 2007 ; https://msp.org/ >
-     au < ready ; 2008 ; Communications in Applied Mathematics and Computational Science Volume 3 ; 3 ; 2008 ; https://msp.org/ >
-     au < ready ; 2009 ; Communications in Applied Mathematics and Computational Science Volume 4 ; 4 ; 2009 ; https://msp.org/ >
+     au < releasing ; 2007 ; Communications in Applied Mathematics and Computational Science Volume 2 ; 2 ; 2007 ; https://msp.org/ >
+     au < releasing ; 2008 ; Communications in Applied Mathematics and Computational Science Volume 3 ; 3 ; 2008 ; https://msp.org/ >
+     au < releasing ; 2009 ; Communications in Applied Mathematics and Computational Science Volume 4 ; 4 ; 2009 ; https://msp.org/ >
      au < released ; 2010 ; Communications in Applied Mathematics and Computational Science Volume 5 ; 5 ; 2010 ; https://msp.org/ >
      au < released ; 2011 ; Communications in Applied Mathematics and Computational Science Volume 6 ; 6 ; 2011 ; http://msp.org/ >
      au < released ; 2012 ; Communications in Applied Mathematics and Computational Science Volume 7 ; 7 ; 2012 ; http://msp.org/ >
@@ -141,7 +141,7 @@
      au < released ; 2021 ; Communications in Applied Mathematics and Computational Science Volume 16 ; 16 ; 2021 ; https://msp.org/ >
      au < released ; 2022 ; Communications in Applied Mathematics and Computational Science Volume 17 ; 17 ; 2022 ; https://msp.org/ >
      au < released ; 2023 ; Communications in Applied Mathematics and Computational Science Volume 18 ; 18 ; 2023 ; https://msp.org/ >
-     au < ready ; 2024 ; Communications in Applied Mathematics and Computational Science Volume 19 ; 19 ; 2024 ; https://msp.org/ >
+     au < releasing ; 2024 ; Communications in Applied Mathematics and Computational Science Volume 19 ; 19 ; 2024 ; https://msp.org/ >
      au < expected ; 2025 ; Communications in Applied Mathematics and Computational Science Volume 20 ; 20 ; 2025 ; https://msp.org/ >
 
   }
@@ -185,13 +185,13 @@
      au < manifest ; 1997 ; Geometric Topology Volume 1 ; 1 ; 1997 ; https://msp.org/ >
      au < manifest ; 1998 ; Geometric Topology Volume 2 ; 2 ; 1998 ; https://msp.org/ >
      au < manifest ; 1999 ; Geometric Topology Volume 3 ; 3 ; 1999 ; https://msp.org/ >
-     au < ready ; 2000 ; Geometric Topology Volume 4 ; 4 ; 2000 ; https://msp.org/ >
+     au < releasing ; 2000 ; Geometric Topology Volume 4 ; 4 ; 2000 ; https://msp.org/ >
      au < released ; 2001 ; Geometric Topology Volume 5 ; 5 ; 2001 ; https://msp.org/ >
-     au < ready ; 2002 ; Geometric Topology Volume 6 ; 6 ; 2002 ; https://msp.org/ >
+     au < releasing ; 2002 ; Geometric Topology Volume 6 ; 6 ; 2002 ; https://msp.org/ >
      au < released ; 2003 ; Geometric Topology Volume 7 ; 7 ; 2003 ; https://msp.org/ >
-     au < ready ; 2004 ; Geometric Topology Volume 8 ; 8 ; 2004 ; https://msp.org/ >
+     au < releasing ; 2004 ; Geometric Topology Volume 8 ; 8 ; 2004 ; https://msp.org/ >
      au < manifest ; 2005 ; Geometric Topology Volume 9 ; 9 ; 2005 ; https://msp.org/ >
-     au < ready ; 2006 ; Geometric Topology Volume 10 ; 10 ; 2006 ; https://msp.org/ >
+     au < releasing ; 2006 ; Geometric Topology Volume 10 ; 10 ; 2006 ; https://msp.org/ >
      au < released ; 2007 ; Geometric Topology Volume 11 ; 11 ; 2007 ; https://msp.org/ >
      au < released ; 2008 ; Geometric Topology Volume 12 ; 12 ; 2008 ; https://msp.org/ >
      au < released ; 2009 ; Geometric Topology Volume 13 ; 13 ; 2009 ; https://msp.org/ >
@@ -254,10 +254,10 @@
     
       param[journal_id] = jomms
  
-     au < ready ; 2006 ; Journal of Mechanics of Materials and Structures Volume 1 ; 1 ; 2006 ; https://msp.org/ >
+     au < releasing ; 2006 ; Journal of Mechanics of Materials and Structures Volume 1 ; 1 ; 2006 ; https://msp.org/ >
      au < released ; 2007 ; Journal of Mechanics of Materials and Structures Volume 2 ; 2 ; 2007 ; https://msp.org/ >
-     au < ready ; 2008 ; Journal of Mechanics of Materials and Structures Volume 3 ; 3 ; 2008 ; https://msp.org/ >
-     au < ready ; 2009 ; Journal of Mechanics of Materials and Structures Volume 4 ; 4 ; 2009 ; https://msp.org/ >
+     au < releasing ; 2008 ; Journal of Mechanics of Materials and Structures Volume 3 ; 3 ; 2008 ; https://msp.org/ >
+     au < releasing ; 2009 ; Journal of Mechanics of Materials and Structures Volume 4 ; 4 ; 2009 ; https://msp.org/ >
      au < released ; 2010 ; Journal of Mechanics of Materials and Structures Volume 5 ; 5 ; 2010 ; https://msp.org/ >
      au < released ; 2011 ; Journal of Mechanics of Materials and Structures Volume 6 ; 6 ; 2011 ; http://msp.org/ >
      au < released ; 2012 ; Journal of Mechanics of Materials and Structures Volume 7 ; 7 ; 2012 ; http://msp.org/ >
@@ -504,8 +504,8 @@
 
     au < manifest ; 2005 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 1 ; 1 ; 2005 ; https://msp.org/ >
     au < released ; 2006 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 2 ; 2 ; 2006 ; https://msp.org/ >
-    au < ready ; 2007 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 3 ; 3 ; 2007 ; https://msp.org/ >
-    au < ready ; 2008 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 4 ; 4 ; 2008 ; https://msp.org/ >
+    au < releasing ; 2007 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 3 ; 3 ; 2007 ; https://msp.org/ >
+    au < releasing ; 2008 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 4 ; 4 ; 2008 ; https://msp.org/ >
     au < released ; 2009 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 5 ; 5 ; 2009 ; https://msp.org/ >
     au < released ; 2010 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 6 ; 6 ; 2010 ; https://msp.org/ >
     au < released ; 2011 ; Innovations in Incidence Geometry: Algebraic, Topological and Combinatorial Volume 7 ; 7 ; 2011 ; https://msp.org/ >
@@ -538,7 +538,7 @@
 
     au < released ; 2022 ; Model Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ >
     au < released ; 2023 ; Model Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ >
-    au < ready ; 2024 ; Model Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ >
+    au < releasing ; 2024 ; Model Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ >
     au < expected ; 2025 ; Model Theory Volume 4 ; 4 ; 2025 ; https://msp.org/ >
 
   }
@@ -590,7 +590,7 @@
     au < manifest ; 2016 ; Combinatorics and Number Theory Volume 6 ; 6 ; 2016 ; https://msp.org/ >
     au < manifest ; 2017 ; Combinatorics and Number Theory Volume 7 ; 7 ; 2017 ; https://msp.org/ >
     au < released ; 2019 ; Combinatorics and Number Theory Volume 8 ; 8 ; 2019 ; https://msp.org/ >
-    au < ready ; 2020 ; Combinatorics and Number Theory Volume 9 ; 9 ; 2020 ; https://msp.org/ >
+    au < releasing ; 2020 ; Combinatorics and Number Theory Volume 9 ; 9 ; 2020 ; https://msp.org/ >
     au < released ; 2021 ; Combinatorics and Number Theory Volume 10 ; 10 ; 2021 ; https://msp.org/ >
     au < released ; 2022 ; Combinatorics and Number Theory Volume 11 ; 11 ; 2022 ; https://msp.org/ >
     au < released ; 2023 ; Combinatorics and Number Theory Volume 12 ; 12 ; 2023 ; https://msp.org/ >

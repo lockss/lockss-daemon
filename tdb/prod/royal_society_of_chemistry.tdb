@@ -659,7 +659,7 @@
       au < released ; 2023 ; Faraday Discussions Volume 246 ; 246 ; 2023 ; https://pubs.rsc.org/ >
       au < released ; 2023 ; Faraday Discussions Volume 247 ; 247 ; 2023 ; https://pubs.rsc.org/ >
 
-      au < ready ; 2024 ; Faraday Discussions Volume 248 ; 248 ; 2024 ; https://pubs.rsc.org/ >
+      au < releasing ; 2024 ; Faraday Discussions Volume 248 ; 248 ; 2024 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Faraday Discussions Volume 249 ; 249 ; 2024 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Faraday Discussions Volume 250 ; 250 ; 2024 ; https://pubs.rsc.org/ >
       au < manifest ; 2024 ; Faraday Discussions Volume 251 ; 251 ; 2024 ; https://pubs.rsc.org/ >
@@ -1080,7 +1080,7 @@
       au < released ; 2021 ; Natural Product Reports Volume 38 ; 38 ; 2021 ; https://pubs.rsc.org/ >
       au < released ; 2022 ; Natural Product Reports Volume 39 ; 39 ; 2022 ; https://pubs.rsc.org/ >
       au < released ; 2023 ; Natural Product Reports Volume 40 ; 40 ; 2023 ; https://pubs.rsc.org/ >
-      au < ready ; 2024 ; Natural Product Reports Volume 41 ; 41 ; 2024 ; https://pubs.rsc.org/ >
+      au < releasing ; 2024 ; Natural Product Reports Volume 41 ; 41 ; 2024 ; https://pubs.rsc.org/ >
       au < manifest ; 2025 ; Natural Product Reports Volume 42 ; 42 ; 2025 ; https://pubs.rsc.org/ >
 
     }
@@ -1868,7 +1868,7 @@
       au < released ; 2021 ; Inorganic Chemistry Frontiers Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ >
       au < released ; 2022 ; Inorganic Chemistry Frontiers Volume 9 ; 9 ; 2022 ; https://pubs.rsc.org/ >
       au < released ; 2023 ; Inorganic Chemistry Frontiers Volume 10 ; 10 ; 2023 ; https://pubs.rsc.org/ >
-      au < ready ; 2024 ; Inorganic Chemistry Frontiers Volume 11 ; 11 ; 2024 ; https://pubs.rsc.org/ >
+      au < releasing ; 2024 ; Inorganic Chemistry Frontiers Volume 11 ; 11 ; 2024 ; https://pubs.rsc.org/ >
       au < manifest ; 2025 ; Inorganic Chemistry Frontiers Volume 12 ; 12 ; 2025 ; https://pubs.rsc.org/ >
 
   }
@@ -2806,7 +2806,7 @@
       au < released ; 2021 ; Polymer Chemistry Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ >
       au < released ; 2022 ; Polymer Chemistry Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ >
       au < released ; 2023 ; Polymer Chemistry Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ >
-      au < ready ; 2024 ; Polymer Chemistry Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ >
+      au < releasing ; 2024 ; Polymer Chemistry Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ >
       au < manifest ; 2025 ; Polymer Chemistry Volume 16 ; 16 ; 2025 ; https://pubs.rsc.org/ >
 
   }
@@ -3352,7 +3352,7 @@
       au < released ; 2021 ; Nanoscale Advances Volume 3 ; 3 ; 2021 ; https://pubs.rsc.org/ >
       au < released ; 2022 ; Nanoscale Advances Volume 4 ; 4 ; 2022 ; https://pubs.rsc.org/ >
       au < released ; 2023 ; Nanoscale Advances Volume 5 ; 5 ; 2023 ; https://pubs.rsc.org/ >
-      au < ready ; 2024 ; Nanoscale Advances Volume 6 ; 6 ; 2024 ; https://pubs.rsc.org/ >
+      au < releasing ; 2024 ; Nanoscale Advances Volume 6 ; 6 ; 2024 ; https://pubs.rsc.org/ >
       au < manifest ; 2025 ; Nanoscale Advances Volume 7 ; 7 ; 2025 ; https://pubs.rsc.org/ >
 
   }
@@ -3571,7 +3571,7 @@
       param[journal_code] = su
 
       au < released ; 2023 ; RSC Sustainability Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ >
-      au < ready ; 2024 ; RSC Sustainability Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ >
+      au < releasing ; 2024 ; RSC Sustainability Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ >
       au < manifest ; 2025 ; RSC Sustainability Volume 3 ; 3 ; 2025 ; https://pubs.rsc.org/ >
 
   }
