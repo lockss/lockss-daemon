@@ -308,6 +308,18 @@
   {
 
     title <
+      name = Revista Pares ;
+      eissn = 2718-8582
+    >
+    provider = Red Académica Pares
+
+    au < expected ; exists ; 2025 ; Revista Pares ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
       name = Análisis Filosófico ;
       issn = 0326-1301 ;
       eissn = 1851-9636
