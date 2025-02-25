@@ -285,7 +285,7 @@
     au < deepCrawl ; exists ; 2020 ; 54-63 ; NeoBiota Volume 2020 ; 2020 ; https://neobiota.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2021 ; 64-70 ; NeoBiota Volume 2021 ; 2021 ; https://neobiota.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2022 ; 71-79 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ ; >
-    au < frozen ; exists ; 2023 ; 80-89 ; NeoBiota Volume 2023 ; 2023 ; https://neobiota.pensoft.net/ ; >
+    au < finished ; manifest ; 2023 ; 80-89 ; NeoBiota Volume 2023 ; 2023 ; https://neobiota.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < exists ; exists ; 2024 ; 90-96 ; NeoBiota Volume 2024 ; 2024 ; https://neobiota.pensoft.net/ ; >
     au < exists ; exists ; 2025 ; 97-103 ; NeoBiota Volume 2025 ; 2025 ; https://neobiota.pensoft.net/ ; >
 
@@ -620,7 +620,7 @@
       param[au_oai_set] = fmj
 
       #Changed from 2603-4301 Food Modelling Journal (FMJ)
-      au < frozen ; exists ; 2022 ; 2022 ; Food and Ecological Systems Modelling Journal Volume 2022 ; 2022 ; https://fesmj.pensoft.net/ ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Food and Ecological Systems Modelling Journal Volume 2022 ; 2022 ; https://fesmj.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Food and Ecological Systems Modelling Journal Volume 2023 ; 2023 ; https://fesmj.pensoft.net/ ; >
       au < crawling ; exists ; 2024 ; 2024 ; Food and Ecological Systems Modelling Journal Volume 2024 ; 2024 ; https://fesmj.pensoft.net/ ; >
       au < expected ; exists ; 2025 ; 2025 ; Food and Ecological Systems Modelling Journal Volume 2025 ; 2025 ; https://fesmj.pensoft.net/ ; >
@@ -889,7 +889,7 @@
       au < finished ; crawling ; 2018 ; 2018 ; Research results in Pharmacology Volume 2018 ; 2018 ; https://rrpharmacology.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; 2019 ; Research results in Pharmacology Volume 2019 ; 2019 ; https://rrpharmacology.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 2020 ; Research results in Pharmacology Volume 2020 ; 2020 ; https://rrpharmacology.pensoft.net/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2021 ; 2021 ; Research results in Pharmacology Volume 2021 ; 2021 ; https://rrpharmacology.pensoft.net/ ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Research results in Pharmacology Volume 2021 ; 2021 ; https://rrpharmacology.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Research results in Pharmacology Volume 2022 ; 2022 ; https://rrpharmacology.ru/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Research results in Pharmacology Volume 2023 ; 2023 ; https://rrpharmacology.ru/ ; >
       #Moved to OJS https://rrpharmacology.ru/
@@ -1150,8 +1150,8 @@
       au < superseded ; exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 [superseded] ; 2021 ; http://journal.bgcardio.org/ ; >
       au < superseded ; exists ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 [superseded] ; 2022 ; http://journal.bgcardio.org/ ; >
 
-      au < frozen ; exists ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; https://journal.bgcardio.org/ ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 ; 2022 ; https://journal.bgcardio.org/ ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Bulgarian Cardiology Volume 2021 ; 2021 ; https://journal.bgcardio.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 ; 2022 ; https://journal.bgcardio.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Bulgarian Cardiology Volume 2023 ; 2023 ; https://journal.bgcardio.org/ ; >
       au < crawling ; exists ; 2024 ; 2024 ; Bulgarian Cardiology Volume 2024 ; 2024 ; https://journal.bgcardio.org/ ; >
       au < expected ; exists ; 2025 ; 2025 ; Bulgarian Cardiology Volume 2025 ; 2025 ; https://journal.bgcardio.org/ ; >
@@ -1189,8 +1189,8 @@
       #Moved to https://www.aup-online.com/
 
       au < finished ; crawling ; 2020 ; 2020 ; Journal of European Landscapes Volume 2020 ; 2020 ; https://journalofeuropeanlandscapes.eu/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Journal of European Landscapes Volume 2022 ; 2022 ; https://journalofeuropeanlandscapes.eu/ ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Journal of European Landscapes Volume 2021 ; 2021 ; https://journalofeuropeanlandscapes.eu/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 2022 ; Journal of European Landscapes Volume 2022 ; 2022 ; https://journalofeuropeanlandscapes.eu/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1414,7 +1414,7 @@
 
       param[au_oai_set] = biosystecol
 
-      au < frozen ; exists ; 2021 ; 2021 ; Biosystematics and Ecology Volume 2021 ; 2021 ; https://biosystecol.oeaw.ac.at/ ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Biosystematics and Ecology Volume 2021 ; 2021 ; https://biosystecol.oeaw.ac.at/ ; reingest5.clockss.org:8082 >
 
       au < exists ; exists ; 2023 ; 2023 ; Biosystematics and Ecology Volume 2023 ; 2023 ; https://biosystecol.oeaw.ac.at/ ; >
       au < exists ; exists ; 2024 ; 2024 ; Biosystematics and Ecology Volume 2024 ; 2024 ; https://biosystecol.oeaw.ac.at/ ; >
@@ -1432,9 +1432,9 @@
 
       param[au_oai_set] = brics-econ
 
-      au < frozen ; exists ; 2020 ; 2020 ; BRICS Journal of Economics Volume 2020 ; 2020 ; https://brics-econ.arphahub.com/ ; >
-      au < frozen ; exists ; 2021 ; 2021 ; BRICS Journal of Economics Volume 2021 ; 2021 ; https://brics-econ.arphahub.com/ ; >
-      au < frozen ; exists ; 2022 ; 2022 ; BRICS Journal of Economics Volume 2022 ; 2022 ; https://brics-econ.arphahub.com/ ; >
+      au < finished ; manifest ; 2020 ; 2020 ; BRICS Journal of Economics Volume 2020 ; 2020 ; https://brics-econ.arphahub.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; BRICS Journal of Economics Volume 2021 ; 2021 ; https://brics-econ.arphahub.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 2022 ; BRICS Journal of Economics Volume 2022 ; 2022 ; https://brics-econ.arphahub.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; BRICS Journal of Economics Volume 2023 ; 2023 ; https://brics-econ.arphahub.com/ ; >
       au < crawling ; exists ; 2024 ; 2024 ; BRICS Journal of Economics Volume 2024 ; 2024 ; https://brics-econ.arphahub.com/ ; >
       au < expected ; exists ; 2025 ; 2025 ; BRICS Journal of Economics Volume 2025 ; 2025 ; https://brics-econ.arphahub.com/ ; >
@@ -1451,7 +1451,7 @@
 
       param[au_oai_set] = contributions-to-entomology
 
-      au < frozen ; exists ; 2022 ; 2022 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2022 ; 2022 ; https://contributions-to-entomology.arphahub.com/ ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2022 ; 2022 ; https://contributions-to-entomology.arphahub.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2023 ; 2023 ; https://contributions-to-entomology.arphahub.com/ ; >
       au < crawling ; exists ; 2024 ; 2024 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2024 ; 2024 ; https://contributions-to-entomology.arphahub.com/ ; >
       au < expected ; exists ; 2025 ; 2025 ; Contributions to Entomology (Beiträge zur Entomologie) Volume 2025 ; 2025 ; https://contributions-to-entomology.arphahub.com/ ; >
@@ -1484,15 +1484,15 @@
       au < doNotProcess ; exists ; 2011 ; 2011 ; Fossil Record Volume 2011 ; 2011 ; https://fr.pensoft.net/ ; >
       au < superseded ; exists ; 2012 ; 2012 ; Fossil Record Volume 2012 [superseded] ; 2012 ; https://fr.pensoft.net/ ; >
       au < superseded ; exists ; 2013 ; 2013 ; Fossil Record Volume 2013 [superseded] ; 2013 ; https://fr.pensoft.net/ ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Fossil Record Volume 2014 ; 2014 ; https://fr.pensoft.net/ ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Fossil Record Volume 2015 ; 2015 ; https://fr.pensoft.net/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Fossil Record Volume 2016 ; 2016 ; https://fr.pensoft.net/ ; >
+      au < finished ; manifest ; 2014 ; 2014 ; Fossil Record Volume 2014 ; 2014 ; https://fr.pensoft.net/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; Fossil Record Volume 2015 ; 2015 ; https://fr.pensoft.net/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; Fossil Record Volume 2016 ; 2016 ; https://fr.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < superseded ; exists ; 2017 ; 2017 ; Fossil Record Volume 2017 [superseded] ; 2017 ; https://fr.pensoft.net/ ; >
       au < superseded ; exists ; 2018 ; 2018 ; Fossil Record Volume 2018 [superseded] ; 2018 ; https://fr.pensoft.net/ ; >
       au < superseded ; exists ; 2019 ; 2019 ; Fossil Record Volume 2019 [superseded] ; 2019 ; https://fr.pensoft.net/ ; >
       au < superseded ; exists ; 2020 ; 2020 ; Fossil Record Volume 2020 [superseded] ; 2020 ; https://fr.pensoft.net/ ; >
       au < superseded ; exists ; 2021 ; 2021 ; Fossil Record Volume 2021 [superseded] ; 2021 ; https://fr.pensoft.net/ ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Fossil Record Volume 2022 ; 2022 ; https://fr.pensoft.net/ ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Fossil Record Volume 2022 ; 2022 ; https://fr.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Fossil Record Volume 2023 ; 2023 ; https://fr.pensoft.net/ ; >
       au < crawling ; exists ; 2024 ; 2024 ; Fossil Record Volume 2024 ; 2024 ; https://fr.pensoft.net/ ; >
       au < expected ; exists ; 2025 ; 2025 ; Fossil Record Volume 2025 ; 2025 ; https://fr.pensoft.net/ ; >
@@ -1509,8 +1509,8 @@
 
       param[au_oai_set] = geologica-saxonica
 
-      au < frozen ; exists ; 2021 ; 2021 ; Geologica Saxonica Volume 2021 ; 2021 ; https://geologica-saxonica.arphahub.com/ ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Geologica Saxonica Volume 2022 ; 2022 ; https://geologica-saxonica.arphahub.com/ ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Geologica Saxonica Volume 2021 ; 2021 ; https://geologica-saxonica.arphahub.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 2022 ; Geologica Saxonica Volume 2022 ; 2022 ; https://geologica-saxonica.arphahub.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Geologica Saxonica Volume 2023 ; 2023 ; https://geologica-saxonica.arphahub.com/ ; >
       au < crawling ; exists ; 2024 ; 2024 ; Geologica Saxonica Volume 2024 ; 2024 ; https://geologica-saxonica.arphahub.com/ ; >
       au < expected ; exists ; 2025 ; 2025 ; Geologica Saxonica Volume 2025 ; 2025 ; https://geologica-saxonica.arphahub.com/ ; >
@@ -1526,9 +1526,9 @@
 
       param[au_oai_set] = icf
 
-      au < frozen ; exists ; 2021 ; 2021 ; Interventional Cardiology Forum Volume 2021 ; 2021 ; https://interventionalcardioforum.net/ ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Interventional Cardiology Forum Volume 2022 ; 2022 ; https://interventionalcardioforum.net/ ; >
-      au < frozen ; exists ; 2023 ; 2023 ; Interventional Cardiology Forum Volume 2023 ; 2023 ; https://interventionalcardioforum.net/ ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Interventional Cardiology Forum Volume 2021 ; 2021 ; https://interventionalcardioforum.net/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 2022 ; Interventional Cardiology Forum Volume 2022 ; 2022 ; https://interventionalcardioforum.net/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 2023 ; Interventional Cardiology Forum Volume 2023 ; 2023 ; https://interventionalcardioforum.net/ ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2024 ; 2024 ; Interventional Cardiology Forum Volume 2024 ; 2024 ; https://interventionalcardioforum.net/ ; >
       au < expected ; exists ; 2025 ; 2025 ; Interventional Cardiology Forum Volume 2025 ; 2025 ; https://interventionalcardioforum.net/ ; >
 
@@ -1543,8 +1543,8 @@
 
       param[au_oai_set] = languagesandmodalities
 
-      au < frozen ; exists ; 2021 ; 2021 ; Languages and Modalities (LaMo) Volume 2021 ; 2021 ; https://languagesandmodalities.ru/ ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Languages and Modalities (LaMo) Volume 2022 ; 2022 ; https://languagesandmodalities.ru/ ; >
+      au < finished ; manifest ; 2021 ; 2021 ; Languages and Modalities (LaMo) Volume 2021 ; 2021 ; https://languagesandmodalities.ru/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 2022 ; Languages and Modalities (LaMo) Volume 2022 ; 2022 ; https://languagesandmodalities.ru/ ; reingest4.clockss.org:8082 >
       #No longer online
   }
 
@@ -1558,16 +1558,16 @@
 
       param[au_oai_set] = plecevo
 
-      au < frozen ; exists ; 2013 ; 2013 ; Plant Ecology and Evolution Volume 2013 ; 2013 ; https://plecevo.eu/ ; >
-      au < frozen ; exists ; 2014 ; 2014 ; Plant Ecology and Evolution Volume 2014 ; 2014 ; https://plecevo.eu/ ; >
-      au < frozen ; exists ; 2015 ; 2015 ; Plant Ecology and Evolution Volume 2015 ; 2015 ; https://plecevo.eu/ ; >
-      au < frozen ; exists ; 2016 ; 2016 ; Plant Ecology and Evolution Volume 2016 ; 2016 ; https://plecevo.eu/ ; >
-      au < frozen ; exists ; 2017 ; 2017 ; Plant Ecology and Evolution Volume 2017 ; 2017 ; https://plecevo.eu/ ; >
-      au < frozen ; exists ; 2018 ; 2018 ; Plant Ecology and Evolution Volume 2018 ; 2018 ; https://plecevo.eu/ ; >
-      au < frozen ; exists ; 2019 ; 2019 ; Plant Ecology and Evolution Volume 2019 ; 2019 ; https://plecevo.eu/ ; >
-      au < frozen ; exists ; 2020 ; 2020 ; Plant Ecology and Evolution Volume 2020 ; 2020 ; https://plecevo.eu/ ; >
-      au < frozen ; exists ; 2021 ; 2021 ; Plant Ecology and Evolution Volume 2021 ; 2021 ; https://plecevo.eu/ ; >
-      au < frozen ; exists ; 2022 ; 2022 ; Plant Ecology and Evolution Volume 2022 ; 2022 ; https://plecevo.eu/ ; >
+      au < finished ; manifest ; 2013 ; 2013 ; Plant Ecology and Evolution Volume 2013 ; 2013 ; https://plecevo.eu/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; Plant Ecology and Evolution Volume 2014 ; 2014 ; https://plecevo.eu/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; Plant Ecology and Evolution Volume 2015 ; 2015 ; https://plecevo.eu/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; Plant Ecology and Evolution Volume 2016 ; 2016 ; https://plecevo.eu/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; Plant Ecology and Evolution Volume 2017 ; 2017 ; https://plecevo.eu/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; Plant Ecology and Evolution Volume 2018 ; 2018 ; https://plecevo.eu/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; Plant Ecology and Evolution Volume 2019 ; 2019 ; https://plecevo.eu/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; 2020 ; Plant Ecology and Evolution Volume 2020 ; 2020 ; https://plecevo.eu/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; Plant Ecology and Evolution Volume 2021 ; 2021 ; https://plecevo.eu/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 2022 ; Plant Ecology and Evolution Volume 2022 ; 2022 ; https://plecevo.eu/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Plant Ecology and Evolution Volume 2023 ; 2023 ; https://plecevo.eu/ ; >
       au < crawling ; exists ; 2024 ; 2024 ; Plant Ecology and Evolution Volume 2024 ; 2024 ; https://plecevo.eu/ ; >
       au < manifest ; exists ; 2025 ; 2025 ; Plant Ecology and Evolution Volume 2025 ; 2025 ; https://plecevo.eu/ ; >
@@ -1584,7 +1584,7 @@
 
       param[au_oai_set] = tuhinga
 
-      au < frozen ; exists ; 2022 ; 2022 ; Tuhinga Volume 2022 ; 2022 ; https://tuhinga.arphahub.com/ ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Tuhinga Volume 2022 ; 2022 ; https://tuhinga.arphahub.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ ; >
       au < crawling ; exists ; 2024 ; 2024 ; Tuhinga Volume 2024 ; 2024 ; https://tuhinga.arphahub.com/ ; >
       au < expected ; exists ; 2025 ; 2025 ; Tuhinga Volume 2025 ; 2025 ; https://tuhinga.arphahub.com/ ; >

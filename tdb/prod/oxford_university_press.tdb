@@ -559,41 +559,23 @@
 
     param[journal_id] = ajcn
     #move to Elsevier, 2023-01-02
-    #content available from 1952 volume 1 to 1989 volume 50
+    #content available from 1952 volume 1 to 2008 volume 88
 
-    au < exists ; 1990 ; 1990 ; The American Journal of Clinical Nutrition Volume 51-52 ; 51-52 >
-    au < exists ; 1991 ; 1991 ; The American Journal of Clinical Nutrition Volume 53-54 ; 53-54 >
-    au < exists ; 1992 ; 1992 ; The American Journal of Clinical Nutrition Volume 55-56 ; 55-56 >
-    au < exists ; 1993 ; 1993 ; The American Journal of Clinical Nutrition Volume 57-58 ; 57-58 >
-    au < exists ; 1994 ; 1994 ; The American Journal of Clinical Nutrition Volume 59-60 ; 59-60 >
-    au < exists ; 1995 ; 1995 ; The American Journal of Clinical Nutrition Volume 61-62 ; 61-62 >
-    au < exists ; 1996 ; 1996 ; The American Journal of Clinical Nutrition Volume 63-64 ; 63-64 >
-    au < exists ; 1997 ; 1997 ; The American Journal of Clinical Nutrition Volume 65-66 ; 65-66 >
-    au < exists ; 1998 ; 1998 ; The American Journal of Clinical Nutrition Volume 67-68 ; 67-68 >
-    au < exists ; 1999 ; 1999 ; The American Journal of Clinical Nutrition Volume 69-70 ; 69-70 >
-    au < exists ; 2000 ; 2000 ; The American Journal of Clinical Nutrition Volume 71-72 ; 71-72 >
-    au < exists ; 2001 ; 2001 ; The American Journal of Clinical Nutrition Volume 73-74 ; 73-74 >
-    au < exists ; 2002 ; 2002 ; The American Journal of Clinical Nutrition Volume 75-76 ; 75-76 >
-    au < exists ; 2003 ; 2003 ; The American Journal of Clinical Nutrition Volume 77-78 ; 77-78 >
-    au < exists ; 2004 ; 2004 ; The American Journal of Clinical Nutrition Volume 79-80 ; 79-80 >
-    au < exists ; 2005 ; 2005 ; The American Journal of Clinical Nutrition Volume 81-82 ; 81-82 >
-    au < exists ; 2006 ; 2006 ; The American Journal of Clinical Nutrition Volume 83-84 ; 83-84 >
-    au < exists ; 2007 ; 2007 ; The American Journal of Clinical Nutrition Volume 85-86 ; 85-86 >
-    au < manifest ; 2008 ; 2008 ; The American Journal of Clinical Nutrition Volume 87-88 ; 87-88 >
-    au < released ; 2009 ; 2009 ; The American Journal of Clinical Nutrition Volume 89-90 ; 89-90 >
-    au < released ; 2010 ; 2010 ; The American Journal of Clinical Nutrition Volume 91-92 ; 91-92 >
-    au < released ; 2011 ; 2011 ; The American Journal of Clinical Nutrition Volume 93-94 ; 93-94 >
-    au < released ; 2012 ; 2012 ; The American Journal of Clinical Nutrition Volume 95-96 ; 95-96 >
-    au < released ; 2013 ; 2013 ; The American Journal of Clinical Nutrition Volume 97-98 ; 97-98 >
-    au < released ; 2014 ; 2014 ; The American Journal of Clinical Nutrition Volume 99-100 ; 99-100 >
-    au < released ; 2015 ; 2015 ; The American Journal of Clinical Nutrition Volume 101-102 ; 101-102 >
-    au < released ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 103-104 ; 103-104 >
-    au < released ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 >
-    au < released ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 >
-    au < released ; 2019 ; 2019 ; The American Journal of Clinical Nutrition Volume 109-110 ; 109-110 >
-    au < released ; 2020 ; 2020 ; The American Journal of Clinical Nutrition Volume 111-112 ; 111-112 >
-    au < released ; 2021 ; 2021 ; The American Journal of Clinical Nutrition Volume 113-114 ; 113-114 >
-    au < released ; 2022 ; 2022 ; The American Journal of Clinical Nutrition Volume 115-116 ; 115-116 >
+    au < doNotProcess ; 2008 ; 2008 ; The American Journal of Clinical Nutrition Volume 87-88 ; 87-88 >
+    au < down ; 2009 ; 2009 ; The American Journal of Clinical Nutrition Volume 89-90 ; 89-90 >
+    au < down ; 2010 ; 2010 ; The American Journal of Clinical Nutrition Volume 91-92 ; 91-92 >
+    au < down ; 2011 ; 2011 ; The American Journal of Clinical Nutrition Volume 93-94 ; 93-94 >
+    au < down ; 2012 ; 2012 ; The American Journal of Clinical Nutrition Volume 95-96 ; 95-96 >
+    au < down ; 2013 ; 2013 ; The American Journal of Clinical Nutrition Volume 97-98 ; 97-98 >
+    au < down ; 2014 ; 2014 ; The American Journal of Clinical Nutrition Volume 99-100 ; 99-100 >
+    au < down ; 2015 ; 2015 ; The American Journal of Clinical Nutrition Volume 101-102 ; 101-102 >
+    au < down ; 2016 ; 2016 ; The American Journal of Clinical Nutrition Volume 103-104 ; 103-104 >
+    au < down ; 2017 ; 2017 ; The American Journal of Clinical Nutrition Volume 105-106 ; 105-106 >
+    au < down ; 2018 ; 2018 ; The American Journal of Clinical Nutrition Volume 107-108 ; 107-108 >
+    au < down ; 2019 ; 2019 ; The American Journal of Clinical Nutrition Volume 109-110 ; 109-110 >
+    au < down ; 2020 ; 2020 ; The American Journal of Clinical Nutrition Volume 111-112 ; 111-112 >
+    au < down ; 2021 ; 2021 ; The American Journal of Clinical Nutrition Volume 113-114 ; 113-114 >
+    au < down ; 2022 ; 2022 ; The American Journal of Clinical Nutrition Volume 115-116 ; 115-116 >
 
   }
 

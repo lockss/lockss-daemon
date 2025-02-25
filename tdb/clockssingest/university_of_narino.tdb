@@ -4,7 +4,7 @@
     name = University of Nariño ;
     info[contract] = 2025 ;
     info[back] = 2015 ;
-    info[tester] = 4 ;
+    info[tester] = 8 ;
     info[platform] = Open Journal Systems 3.2.1.4
   >
 
@@ -29,7 +29,7 @@
     au < manifest ; exists ; 1971 ; 1971 ; Revista de Ciencias Agrícolas Volume 3 ; 3 ; >
     au < manifest ; exists ; 1972 ; 1972 ; Revista de Ciencias Agrícolas Volume 4 ; 4 ; >
     au < manifest ; exists ; 1973 ; 1973 ; Revista de Ciencias Agrícolas Volume 5 ; 5 ; >
-    au < testing ; exists ; 1974 ; 1974 ; Revista de Ciencias Agrícolas Volume 6 ; 6 ; >
+    au < ready ; exists ; 1974 ; 1974 ; Revista de Ciencias Agrícolas Volume 6 ; 6 ; >
     au < manifest ; exists ; 1977 ; 1977 ; Revista de Ciencias Agrícolas Volume 7 ; 7 ; >
     au < manifest ; exists ; 1978 ; 1978 ; Revista de Ciencias Agrícolas Volume 8 ; 8 ; >
     au < manifest ; exists ; 1985 ; 1985 ; Revista de Ciencias Agrícolas Volume 9 ; 9 ; >
@@ -53,7 +53,7 @@
     au < manifest ; exists ; 2009 ; 2009 ; Revista de Ciencias Agrícolas Volume 26 ; 26 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Revista de Ciencias Agrícolas Volume 27 ; 27 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Revista de Ciencias Agrícolas Volume 28 ; 28 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Revista de Ciencias Agrícolas Volume 29 ; 29 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Revista de Ciencias Agrícolas Volume 29 ; 29 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Revista de Ciencias Agrícolas Volume 30 ; 30 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Revista de Ciencias Agrícolas Volume 31 ; 31 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Revista de Ciencias Agrícolas Volume 32 ; 32 ; >
@@ -84,7 +84,7 @@
     attr[start_stem] = index.php/
 
     au < manifest ; exists ; 2000 ; 2000 ; Tendencias Volume 1 ; 1 ; >
-    au < testing ; exists ; 2001 ; 2001 ; Tendencias Volume 2 ; 2 ; >
+    au < ready ; exists ; 2001 ; 2001 ; Tendencias Volume 2 ; 2 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Tendencias Volume 3 ; 3 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Tendencias Volume 4 ; 4 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Tendencias Volume 5 ; 5 ; >
@@ -93,7 +93,7 @@
     au < manifest ; exists ; 2007 ; 2007 ; Tendencias Volume 8 ; 8 ; >
     au < manifest ; exists ; 2008 ; 2008 ; Tendencias Volume 9 ; 9 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Tendencias Volume 10 ; 10 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Tendencias Volume 11 ; 11 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Tendencias Volume 11 ; 11 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Tendencias Volume 12 ; 12 ; >
     au < manifest ; exists ; 2012 ; 2012 ; Tendencias Volume 13 ; 13 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Tendencias Volume 14 ; 14 ; >
