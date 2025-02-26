@@ -288,7 +288,7 @@ implements FileMetadataExtractorFactory {
       // See https://journals.sagepub.com/action/downloadCitation?doi=10.1177%2F22808000231214359&format=ris&include=cit
 
       String risStartPage = am.getRaw("SP");
-      if (risStartPage != null) {
+      if (risStartPage != null && !risStartPage.contains("-")) {
 
         try {
           String startPageValue = "1"; // Default to "1"
