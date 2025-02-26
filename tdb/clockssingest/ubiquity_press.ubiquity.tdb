@@ -1,51 +1,51 @@
 
-{
-  publisher <
-    name = Gonzaga Library Publishing ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8 ;
-    info[platform] = Ubiquity
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; param[base_url] ; hidden[proxy] >
-
-  {
-
-      title <
-        name = Journal of Hate Studies ;
-        eissn = 2169-7442
-      >
-
-      comment[publisher] = Gonzaga Library Publishing
-#      param[base_url] = https://jhs.press.gonzaga.edu/
-      nondefparam[base_url2] = https://account.jhs.press.gonzaga.edu/
-      nondefparam[journal_id] = gl-j-jhs
-      #NOT PART OF ANY CONTRACT. If a contract is signed, move 2002-2016 to finished-manifest. 2019 to finished-crawling.
-
-     au < finished ; zapped ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; 1 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
-     au < finished ; zapped ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; 2 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
-     au < finished ; zapped ; 2004 ; 3 ; Journal of Hate Studies Volume 2004 ; 2004 ; 3 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
-     au < finished ; zapped ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; 4 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
-     au < finished ; zapped ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; 5 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
-     au < finished ; zapped ; 2007 ; 6 ; Journal of Hate Studies Volume 2007 ; 2007 ; 6 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
-     au < finished ; zapped ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; 7 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
-     au < finished ; zapped ; 2010 ; 8 ; Journal of Hate Studies Volume 2010 ; 2010 ; 8 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
-     au < finished ; zapped ; 2011 ; 9 ; Journal of Hate Studies Volume 2011 ; 2011 ; 9 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
-     au < finished ; zapped ; 2012 ; 10 ; Journal of Hate Studies Volume 2012 ; 2012 ; 10 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
-     au < finished ; zapped ; 2013 ; 11 ; Journal of Hate Studies Volume 2013 ; 2013 ; 11 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
-     au < finished ; zapped ; 2014 ; 12 ; Journal of Hate Studies Volume 2014 ; 2014 ; 12 ; https://jhs.press.gonzaga.edu/ ; reingest1.clockss.org:8082 >
-     au < finished ; zapped ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; 13 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
-     au < finished ; down ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; 14 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
-     au < doNotProcess ; exists ; 2020 ; 16 ; Journal of Hate Studies Volume 2020 ; 2020 ; 15 ; https://jhs.press.gonzaga.edu/ ; >
-     au < doNotProcess ; exists ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; 16 ; https://jhs.press.gonzaga.edu/ ; >
-     au < doNotProcess ; exists ; 2022 ; 18 ; Journal of Hate Studies Volume 2022 ; 2022 ; 17 ; https://jhs.press.gonzaga.edu/ ; >
-
-  }
-}
+#{
+#  publisher <
+#    name = Gonzaga Library Publishing ;
+#    info[contract] = 2011 ;
+#    info[back] = 2000 ;
+#    info[tester] = 8 ;
+#    info[poller] = 8 ;
+#    info[platform] = Ubiquity
+#  >
+#
+#    provider = Ubiquity Press
+#    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+#    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; param[base_url] ; hidden[proxy] >
+#
+#  {
+#
+#      title <
+#        name = Journal of Hate Studies ;
+#        eissn = 2169-7442
+#      >
+#
+#      comment[publisher] = Gonzaga Library Publishing
+##      param[base_url] = https://jhs.press.gonzaga.edu/
+#      nondefparam[base_url2] = https://account.jhs.press.gonzaga.edu/
+#      nondefparam[journal_id] = gl-j-jhs
+#      #NOT PART OF ANY CONTRACT. If a contract is signed, move 2002-2016 to finished-manifest. 2019 to finished-crawling.
+#
+#     au < finished ; zapped ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; 1 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
+#     au < finished ; zapped ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; 2 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
+#     au < finished ; zapped ; 2004 ; 3 ; Journal of Hate Studies Volume 2004 ; 2004 ; 3 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+#     au < finished ; zapped ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; 4 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
+#     au < finished ; zapped ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; 5 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+#     au < finished ; zapped ; 2007 ; 6 ; Journal of Hate Studies Volume 2007 ; 2007 ; 6 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
+#     au < finished ; zapped ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; 7 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
+#     au < finished ; zapped ; 2010 ; 8 ; Journal of Hate Studies Volume 2010 ; 2010 ; 8 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+#     au < finished ; zapped ; 2011 ; 9 ; Journal of Hate Studies Volume 2011 ; 2011 ; 9 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
+#     au < finished ; zapped ; 2012 ; 10 ; Journal of Hate Studies Volume 2012 ; 2012 ; 10 ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
+#     au < finished ; zapped ; 2013 ; 11 ; Journal of Hate Studies Volume 2013 ; 2013 ; 11 ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
+#     au < finished ; zapped ; 2014 ; 12 ; Journal of Hate Studies Volume 2014 ; 2014 ; 12 ; https://jhs.press.gonzaga.edu/ ; reingest1.clockss.org:8082 >
+#     au < finished ; zapped ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; 13 ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
+#     au < finished ; down ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; 14 ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+#     au < doNotProcess ; exists ; 2020 ; 16 ; Journal of Hate Studies Volume 2020 ; 2020 ; 15 ; https://jhs.press.gonzaga.edu/ ; >
+#     au < doNotProcess ; exists ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; 16 ; https://jhs.press.gonzaga.edu/ ; >
+#     au < doNotProcess ; exists ; 2022 ; 18 ; Journal of Hate Studies Volume 2022 ; 2022 ; 17 ; https://jhs.press.gonzaga.edu/ ; >
+#
+#  }
+#}
 
 {
   publisher <
@@ -74,6 +74,7 @@
 
      au < finished ; finished ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 1 ; 2018 ; 1 ; https://www.amscasereports.com/ ; reingest2.clockss.org:8085 >
      au < finished ; crawling ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2 ; 2021 ; 2 ; https://www.amscasereports.com/ ; reingest3.clockss.org:8083 >
+     #no longer online
 
   }
 
@@ -90,7 +91,7 @@
       nondefparam[journal_id] = 
 
      au < finished ; finished ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 1 ; 2018 ; 1 ; https://www.amsprotocols.com/ ; reingest3.clockss.org:8083 >
-      #no longer online
+     #no longer online
   }
 
   {
@@ -107,6 +108,7 @@
 
      au < finished ; finished ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; 1 ; https://ijops.com/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2019 ; 2 ; International Journal of Orthoplastic Surgery Volume 2019 ; 2019 ; 2 ; https://ijops.com/ ; reingest1.clockss.org:8082 >
+     #no longer online
 
   }
 }
@@ -141,7 +143,7 @@
      au < finished ; finished ; 2019 ; 3 ; Latin American Research Review Volume 2019 ; 2019 ; https://larrlasa.org/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2020 ; 4 ; Latin American Research Review Volume 2020 ; 2020 ; https://larrlasa.org/ ; reingest3.clockss.org:8083 >
      au < frozen ; exists ; 2021 ; 5 ; Latin American Research Review Volume 2021 ; 2021 ; https://larrlasa.org/ ; >
-      #Moved to Cambridge U Press https://www.cambridge.org/core/journals/latin-american-research-review
+     #Moved to Cambridge U Press https://www.cambridge.org/core/journals/latin-american-research-review
   }
 
 }
@@ -312,7 +314,7 @@
      au < finished ; finished ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; 1 ; https://jhlr.org/ ; reingest3.clockss.org:8083 >
      au < finished ; finished ; 2017 ; 2 ; Journal of Home Language Research Volume 2017 ; 2017 ; 2 ; https://jhlr.org/ ; reingest3.clockss.org:8083 >
      au < finished ; finished ; 2018 ; 3 ; Journal of Home Language Research Volume 2018 ; 2018 ; 3 ; https://jhlr.org/ ; reingest4.clockss.org:8082 >
-
+     #Triggered
   }
 }
 {
@@ -352,23 +354,23 @@
      au < finished ; finished ; 2020 ; 11 ; Ancient Asia Volume 2020 ; 2020 ; https://www.ancient-asia-journal.com/ ; reingest3.clockss.org:8083 >
      au < finished ; crawling ; 2021 ; 12 ; Ancient Asia Volume 2021 ; 2021 ; https://www.ancient-asia-journal.com/ ; reingest5.clockss.org:8082 >
      au < superseded ; exists ; 2022 ; 13 ; Ancient Asia Volume 2022 [superseded] ; 2022 ; https://www.ancient-asia-journal.com/ ; >
-
+     #Moved
   }
 
   {
 
       title <
-        name = Building and Cities ;
+        name = Buildings and Cities ;
         eissn = 2632-6655
       >
 
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://journal-buildingscities.org/
 
-     au < superseded ; exists ; 2020 ; 1 ; Building and Cities Volume 2020 [superseded] ; 2020 ; https://journal-buildingscities.org/ ; >
-     au < doNotProcess ; exists ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 ; https://journal-buildingscities.org/ ; > #403 forbidden cloudfront.net
-     au < superseded ; exists ; 2022 ; 3 ; Building and Cities Volume 2022 [superseded] ; 2022 ; https://journal-buildingscities.org/ ; > #403 forbidden cloudfront.net
-     au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Building and Cities Volume 2023 ; 2023 ; https://journal-buildingscities.org/ ; > #404 forbidden cloudfront.net
+     au < superseded ; exists ; 2020 ; 1 ; Buildings and Cities Volume 2020 [superseded] ; 2020 ; https://journal-buildingscities.org/ ; >
+     au < doNotProcess ; exists ; 2021 ; 2 ; Buildings and Cities Volume 2021 ; 2021 ; https://journal-buildingscities.org/ ; > #403 forbidden cloudfront.net
+     au < superseded ; exists ; 2022 ; 3 ; Buildings and Cities Volume 2022 [superseded] ; 2022 ; https://journal-buildingscities.org/ ; > #403 forbidden cloudfront.net
+     au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Buildings and Cities Volume 2023 ; 2023 ; https://journal-buildingscities.org/ ; > #404 forbidden cloudfront.net
 
   }
 
@@ -714,7 +716,7 @@
      au < superseded ; exists ; 2021 ; 2 ; Journal for the History of Knowledge Volume 2021 [superseded] ; 2021 ; https://journalhistoryknowledge.org/ ; >
      au < doNotProcess ; doNotProcess ; 2022 ; 3 ; Journal for the History of Knowledge Volume 2022 ; 2022 ; https://journalhistoryknowledge.org/ ; >
      au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Journal for the History of Knowledge Volume 2023 ; 2023 ; https://journalhistoryknowledge.org/ ; >
-
+     #Moved
   }
 
   {
@@ -1473,7 +1475,7 @@
      au < finished ; crawling ; 2021 ; 5 ; Health Psychology Bulletin Volume 2021 ; 2021 ; https://www.healthpsychologybulletin.com/ ; reingest3.clockss.org:8083 >
      au < superseded ; exists ; 2022 ; 6 ; Health Psychology Bulletin Volume 2022 [superseded] ; 2022 ; https://www.healthpsychologybulletin.com/ ; >
      au < doNotProcess ; exists ; 2023 ; 7 ; Health Psychology Bulletin Volume 2023 ; 2023 ; https://www.healthpsychologybulletin.com/ ; >
-
+     #Moved
   }
 
   {
@@ -1990,7 +1992,7 @@
      au < finished ; finished ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
      au < finished ; finished ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
      au < doNotProcess ; exists ; 2021 ; 17 ; Journal of Deliberative Democracy Volume 2021 ; 2021 ; https://delibdemjournal.org/ ; >
-
+     #Moved
   }
 
   {
@@ -2190,7 +2192,7 @@
      au < finished ; crawling ; 2018 ; 33 ; Incontri. Rivista europea di studi italiani Volume 2018 ; 2018 ; https://www.rivista-incontri.nl/ ; reingest5.clockss.org:8082 >
      au < finished ; crawling ; 2019 ; 34 ; Incontri. Rivista europea di studi italiani Volume 2019 ; 2019 ; https://www.rivista-incontri.nl/ ; reingest1.clockss.org:8082 >
      au < finished ; finished ; 2020 ; 35 ; Incontri. Rivista europea di studi italiani Volume 2020 ; 2020 ; https://www.rivista-incontri.nl/ ; reingest4.clockss.org:8082 >
-      #Moved to OJS / Werkgroep Italië Studies
+     #Moved to OJS / Werkgroep Italië Studies
   }
 
   {
@@ -2284,7 +2286,6 @@
 
       comment[publisher] = Utrecht University Library
 #      param[base_url] = https://www.liberquarterly.eu/
-      #Moved to 
 
      au < doNotProcess ; exists ; 1999 ; 1 ; LIBER Quarterly Volume 1999 ; 1999 ; https://www.liberquarterly.eu/ ; >
      au < finished ; finished ; 2000 ; 2 ; LIBER Quarterly Volume 2000 ; 2000 ; https://www.liberquarterly.eu/ ; reingest5.clockss.org:8082 >
@@ -2309,7 +2310,7 @@
      au < finished ; finished ; 2019 ; 21 ; LIBER Quarterly Volume 2019 ; 2019 ; https://www.liberquarterly.eu/ ; reingest3.clockss.org:8083 >
      au < finished ; finished ; 2020 ; 22 ; LIBER Quarterly Volume 2020 ; 2020 ; https://www.liberquarterly.eu/ ; reingest3.clockss.org:8083 >
      au < doNotProcess ; exists ; 2021 ; 23 ; LIBER Quarterly Volume 2021 ; 2021 ; https://www.liberquarterly.eu/ ; >
-
+     #Moved
   }
 
   {
