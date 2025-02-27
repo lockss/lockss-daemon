@@ -1340,7 +1340,7 @@ while (my $line = <>) {
         }
         sleep(4);
 
-  } elsif ($plugin eq "PensoftOaiPlugin" || $plugin eq "ClockssPensoftOaiPlugin" ) {
+  } elsif ($plugin eq "PensoftOaiPlugin" || $plugin eq "ClockssPensoftOaiPlugin") {
     #no lockss permission statement on start page. Permission statement is on the base_url
     $perm_url = uri_unescape($param{base_url});
     #start_url for all OAI queries https://bdj.pensoft.net/oai.php?verb=ListRecords&identifier=bdj&metadataPrefix=oai_dc
@@ -1532,10 +1532,11 @@ while (my $line = <>) {
     #printf("URL: %s\n", $perm_url); #debug
     $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
-    #$url = sprintf("%s%s/api/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31",
-      #$param{base_url}, $param{journal_id}, $param{year}, $param{year});
-    $url = sprintf("%slockss?year=%d&amp;optional_journal_id=%s",
-      $param{base_url}, $param{year}, $param{journal_id});
+    $url = sprintf("%s%s/api/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31",
+      $param{base_url}, $param{journal_id}, $param{year}, $param{year});
+
+    #$url = sprintf("%slockss?year=%d&amp;optional_journal_id=%s",
+    #  $param{base_url}, $param{year}, $param{journal_id});
     $man_url = uri_unescape($url);
     my $req_p = HTTP::Request->new(GET, $perm_url);
     my $resp_p = $ua->request($req_p);
