@@ -20,6 +20,10 @@
     param[journal_id] = hlthaff
     implicit < status ; year ; name ; param[volume_name] >
     
+    au < doNotProcess ; 2010 ; Health Affairs Volume 29 ; 29 >
+    au < doNotProcess ; 2011 ; Health Affairs Volume 30 ; 30 >
+    au < doNotProcess ; 2012 ; Health Affairs Volume 31 ; 31 >
+    au < doNotProcess ; 2013 ; Health Affairs Volume 32 ; 32 >
     au < released ; 2014 ; Health Affairs Volume 33 ; 33 >
     au < released ; 2015 ; Health Affairs Volume 34 ; 34 >
     au < notReady ; 2016 ; Health Affairs Volume 35 ; 35 > #500 error https://www.healthaffairs.org/cms/10.1377/hlthaff.2016.0552/asset/images/medium/figureex1.gif * 7
