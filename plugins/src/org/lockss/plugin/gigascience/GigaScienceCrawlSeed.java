@@ -8,7 +8,6 @@ import org.lockss.daemon.PluginException;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.SimpleUrlConsumer;
-import org.lockss.state.AuState;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
@@ -195,13 +194,13 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
                                     new LinkExtractor.Callback() {
                                         @Override
                                         public void foundLink(String doiUrl) {
-                                            log.debug3("doiUrl is added = " + doiUrl);
-                                            log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + DATASET);
-                                            log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + SAMPLE);
-                                            log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + FILE);
-                                            partial.add(apiSingleDoiAPIUrl + doiUrl + DATASET);
-                                            partial.add(apiSingleDoiAPIUrl + doiUrl + SAMPLE);
-                                            partial.add(apiSingleDoiAPIUrl + doiUrl + FILE);
+                                            //log.debug3("doiUrl is added = " + doiUrl);
+                                            //log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + DATASET);
+                                            //log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + SAMPLE);
+                                            log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl);
+                                            partial.add(apiSingleDoiAPIUrl + doiUrl);
+                                            //partial.add(apiSingleDoiAPIUrl + doiUrl + SAMPLE);
+                                            //partial.add(apiSingleDoiAPIUrl + doiUrl + FILE);
                                         }
                                     });
                         }
