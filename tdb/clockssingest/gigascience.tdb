@@ -31,8 +31,8 @@
     {
     param[base_url] = https://gigadb.org/
 
-    au < manifest ; exists ; 2024 ; GigaDB 2024 ; 2024 ; >
-    au < manifest ; exists ; 2025 ; GigaDB 2025 ; 2025 ; >
+    au < testing ; exists ; 2024 ; GigaDB 2024 ; 2024 ; >
+    au < testing ; exists ; 2025 ; GigaDB 2025 ; 2025 ; >
     }
   }
 
