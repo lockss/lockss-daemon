@@ -76,8 +76,6 @@ public class BaseAtyponRisMetadataExtractorFactory
 implements FileMetadataExtractorFactory {
   private static final Logger log = Logger.getLogger(BaseAtyponRisMetadataExtractorFactory.class);
 
-  private static final int PAGE_THRESHOLD = 100000;
-
   public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
       String contentType)
           throws PluginException {
@@ -288,20 +286,12 @@ implements FileMetadataExtractorFactory {
       // See https://journals.sagepub.com/action/downloadCitation?doi=10.1177%2F22808000231214359&format=ris&include=cit
 
       String risStartPage = am.getRaw("SP");
-      if (risStartPage != null && !risStartPage.contains("-")) {
-
-        try {
+      if (risStartPage != null) {
           String startPageValue = "1"; // Default to "1"
-          if (risStartPage.length() <= 6) { // "100000" has 6 digits
-            int number = Integer.parseInt(risStartPage);
-            if (number <= PAGE_THRESHOLD) {
+          if (risStartPage.length() <= 15) { 
               startPageValue = risStartPage;
-            }
           }
           am.replace(MetadataField.FIELD_START_PAGE, startPageValue);
-        } catch (NumberFormatException e) {
-          log.debug3("Extremely long startpage: " + risStartPage + ", sent by URL = " + cu.getUrl());
-        }
       }
     }
   }
