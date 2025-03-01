@@ -1532,7 +1532,7 @@ if __name__ == '__main__':
     try:
         unittest.main( defaultTest = 'v3Tests',
                        argv = sys.argv[ 0 : 1 ] + [ '-q' ] + sys.argv[ 1 : ] )
-    except ( KeyboardInterrupt, SystemExit ), exception:
+    except ( KeyboardInterrupt, SystemExit ) as exception:
         for framework in frameworkList:
             if framework.isRunning:
                 log.info( 'Stopping framework' )
@@ -1545,6 +1545,6 @@ if __name__ == '__main__':
                 for framework in frameworkList:
                     framework.clean()
             raise
-    except Exception, exception:
+    except Exception as exception:
         log.error( exception )
         raise
