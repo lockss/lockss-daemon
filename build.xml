@@ -2839,7 +2839,7 @@ Test results in ${test.results}
       <fail message="The test suite must be specified with -Dsuite=&lt;suite name&gt;" />
      </else>
    </if>
-    <exec executable="python" dir="${framework.stf}"
+    <exec executable="python2" dir="${framework.stf}"
            failonerror="true">
       <arg value="testsuite.py"/>
       <arg value="${suite}"/>
