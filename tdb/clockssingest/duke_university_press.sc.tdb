@@ -49,7 +49,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Agricultural History Volume 96 ; 96 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Agricultural History Volume 97 ; 97 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2024 ; 2024 ; Agricultural History Volume 98 ; 98 ; >
-      au < expected ; exists ; 2025 ; 2025 ; Agricultural History Volume 99 ; 99 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; Agricultural History Volume 99 ; 99 ; >
 
   }
 
@@ -142,7 +142,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; boundary 2 Volume 49 ; 49 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; boundary 2 Volume 50 ; 50 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2024 ; 2024 ; boundary 2 Volume 51 ; 51 ; >
-      au < expected ; exists ; 2025 ; 2025 ; boundary 2 Volume 52 ; 52 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; boundary 2 Volume 52 ; 52 ; >
 
   }
 
@@ -501,7 +501,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Ethnohistory Volume 69 ; 69 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; 2023 ; Ethnohistory Volume 70 ; 70 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2024 ; 2024 ; Ethnohistory Volume 71 ; 71 ; >
-      au < expected ; exists ; 2025 ; 2025 ; Ethnohistory Volume 72 ; 72 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; Ethnohistory Volume 72 ; 72 ; >
   }
 
   {
