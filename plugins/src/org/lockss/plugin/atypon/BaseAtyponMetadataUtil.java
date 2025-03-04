@@ -407,17 +407,30 @@ public class BaseAtyponMetadataUtil {
     String foundEISBN = normalize_id(am.get(MetadataField.FIELD_EISBN));
     String foundISBN = normalize_id(am.get(MetadataField.FIELD_ISBN));
 
-    // If we got nothing, just return, we can't validate
-    if (StringUtils.isEmpty(foundEISBN) &&
-        StringUtils.isEmpty(foundISBN)) {
-      //TODO: add in additional title check if ISBN metadata isn't available?
-      return true; //return true, we have no way of knowing
-    }
-
     // Get the AU's volume name from the AU properties. This must be set
     TypedEntryMap tfProps = au.getProperties();
     String AU_EISBN = tfProps.getString(BOOK_EISBN_PARAM);
     String AU_ISBN = (tdbau == null) ? null : normalize_id(tdbau.getPrintIsbn());
+
+    String pubNamePA = (tdbau == null) ? null : tdbau.getPublisherName();
+    log.debug3("Publisher Specific Checks for publisher = " + pubNamePA);
+
+    if (StringUtils.isEmpty(foundEISBN) &&
+        StringUtils.isEmpty(foundISBN)) {
+        //if publisher is ASCE Books then check if the doi has the correct eisbn from the tdb file embedded in it
+        //if not, return false
+        if(pubNamePA != null && pubNamePA.equalsIgnoreCase("American Society of Civil Engineers")){
+          if(am.get(MetadataField.FIELD_DOI).contains(AU_EISBN)){
+            log.debug3("the doi is " + am.get(MetadataField.FIELD_DOI) + " and metadata will be emitted");
+            return true;
+          }
+          else{
+            log.debug3("the doi is " + am.get(MetadataField.FIELD_DOI) + " and metadata will not be emitted");
+            return false;
+          }
+        }
+      return true; //return true, we have no way of knowing
+    }
 
     // this is a param...it can't be null, but be safe
     if (AU_EISBN == null) {
@@ -429,9 +442,6 @@ public class BaseAtyponMetadataUtil {
     if (tdbau == null) {
       log.debug3("Publisher Specific Checks for publisher PA tdbau is null");
     }
-    
-    String pubNamePA = (tdbau == null) ? null : tdbau.getPublisherName();
-    log.debug3("Publisher Specific Checks for publisher = " + pubNamePA);
 
     if (isInAu && (pubNamePA != null)) {
       Boolean isPABooks = pubNamePA.equalsIgnoreCase("Practical Action Publishing");
