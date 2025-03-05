@@ -11,7 +11,7 @@
   >
 
     provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; publisherName ; param[base_url] ; hidden[proxy] >
     plugin = needs.plugin
     #attr[start_stem] = index.php/
 
@@ -23,31 +23,31 @@
       >
 
       comment[publisher] = American Society of Questioned Document Examiners
-      param[base_url] = https://journal.asqde.org/
+      #param[base_url] = https://journal.asqde.org/
       nondefparam[base_url2] = https://account.journal.asqde.org/
       nondefparam[journal_id] = asqde-j-jasqde
 
-      au < exists ; exists ; 2005 ; 8 ; Journal of The American Society of Questioned Document Examiners Volume 2005 ; 2005 ; 8 ; >
-      au < exists ; exists ; 2006 ; 9 ; Journal of The American Society of Questioned Document Examiners Volume 2006 ; 2006 ; 9 ; >
-      au < exists ; exists ; 2007 ; 10 ; Journal of The American Society of Questioned Document Examiners Volume 2007 ; 2007 ; 10 ; >
-      au < exists ; exists ; 2008 ; 11 ; Journal of The American Society of Questioned Document Examiners Volume 2008 ; 2008 ; 11 ; >
-      au < exists ; exists ; 2009 ; 12 ; Journal of The American Society of Questioned Document Examiners Volume 2009 ; 2009 ; 12 ; >
-      au < exists ; exists ; 2010 ; 13 ; Journal of The American Society of Questioned Document Examiners Volume 2010 ; 2010 ; 13 ; >
-      au < exists ; exists ; 2011 ; 14 ; Journal of The American Society of Questioned Document Examiners Volume 2011 ; 2011 ; 14 ; >
-      au < exists ; exists ; 2012 ; 15 ; Journal of The American Society of Questioned Document Examiners Volume 2012 ; 2012 ; 15 ; >
-      au < exists ; exists ; 2013 ; 16 ; Journal of The American Society of Questioned Document Examiners Volume 2013 ; 2013 ; 16 ; >
-      au < exists ; exists ; 2014 ; 17 ; Journal of The American Society of Questioned Document Examiners Volume 2014 ; 2014 ; 17 ; >
-      au < exists ; exists ; 2015 ; 18 ; Journal of The American Society of Questioned Document Examiners Volume 2015 ; 2015 ; 18 ; >
-      au < exists ; exists ; 2016 ; 19 ; Journal of The American Society of Questioned Document Examiners Volume 2016 ; 2016 ; 19 ; >
-      au < exists ; exists ; 2017 ; 20 ; Journal of The American Society of Questioned Document Examiners Volume 2017 ; 2017 ; 20 ; >
-      au < exists ; exists ; 2018 ; 21 ; Journal of The American Society of Questioned Document Examiners Volume 2018 ; 2018 ; 21 ; >
-      au < exists ; exists ; 2019 ; 22 ; Journal of The American Society of Questioned Document Examiners Volume 2019 ; 2019 ; 22 ; >
-      au < exists ; exists ; 2020 ; 23 ; Journal of The American Society of Questioned Document Examiners Volume 2020 ; 2020 ; 23 ; >
-      au < exists ; exists ; 2021 ; 24 ; Journal of The American Society of Questioned Document Examiners Volume 2021 ; 2021 ; 24 ; >
-      au < exists ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; >
-      au < doesNotExist ; doesNotExist ; 2023 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2023 ; 2023 ; 26 ; >
-      au < expected ; exists ; 2024 ; 27 ; Journal of The American Society of Questioned Document Examiners Volume 2024 ; 2024 ; 27 ; >
-      au < expected ; exists ; 2025 ; 28 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 28 ; >
+      au < exists ; exists ; 2005 ; 8 ; Journal of The American Society of Questioned Document Examiners Volume 2005 ; 2005 ; 8 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2006 ; 9 ; Journal of The American Society of Questioned Document Examiners Volume 2006 ; 2006 ; 9 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2007 ; 10 ; Journal of The American Society of Questioned Document Examiners Volume 2007 ; 2007 ; 10 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2008 ; 11 ; Journal of The American Society of Questioned Document Examiners Volume 2008 ; 2008 ; 11 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2009 ; 12 ; Journal of The American Society of Questioned Document Examiners Volume 2009 ; 2009 ; 12 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2010 ; 13 ; Journal of The American Society of Questioned Document Examiners Volume 2010 ; 2010 ; 13 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2011 ; 14 ; Journal of The American Society of Questioned Document Examiners Volume 2011 ; 2011 ; 14 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2012 ; 15 ; Journal of The American Society of Questioned Document Examiners Volume 2012 ; 2012 ; 15 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2013 ; 16 ; Journal of The American Society of Questioned Document Examiners Volume 2013 ; 2013 ; 16 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2014 ; 17 ; Journal of The American Society of Questioned Document Examiners Volume 2014 ; 2014 ; 17 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2015 ; 18 ; Journal of The American Society of Questioned Document Examiners Volume 2015 ; 2015 ; 18 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2016 ; 19 ; Journal of The American Society of Questioned Document Examiners Volume 2016 ; 2016 ; 19 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2017 ; 20 ; Journal of The American Society of Questioned Document Examiners Volume 2017 ; 2017 ; 20 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2018 ; 21 ; Journal of The American Society of Questioned Document Examiners Volume 2018 ; 2018 ; 21 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2019 ; 22 ; Journal of The American Society of Questioned Document Examiners Volume 2019 ; 2019 ; 22 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2020 ; 23 ; Journal of The American Society of Questioned Document Examiners Volume 2020 ; 2020 ; 23 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2021 ; 24 ; Journal of The American Society of Questioned Document Examiners Volume 2021 ; 2021 ; 24 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < exists ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < doesNotExist ; doesNotExist ; 2023 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2023 ; 2023 ; 26 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < expected ; exists ; 2024 ; 27 ; Journal of The American Society of Questioned Document Examiners Volume 2024 ; 2024 ; 27 ; ASQDE ; https://journal.asqde.org/ ; >
+      au < expected ; exists ; 2025 ; 28 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 28 ; ASQDE ; https://journal.asqde.org/ ; >
 
   }
 
