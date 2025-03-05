@@ -675,7 +675,7 @@
   {
 
       title <
-        name = Building and Cities ;
+        name = Buildings and Cities ;
         eissn = 2632-6655
       >
 
@@ -683,11 +683,11 @@
       param[base_url] = https://account.journal-buildingscities.org/
       param[journal_id] = up-j-bc
 
-      au < finished ; crawling ; 2020 ; 1 ; Building and Cities Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2021 ; 2 ; Building and Cities Volume 2021 ; 2021 ; reingest4.clockss.org:8082 > #403 forbidden cloudfront.net
-      au < finished ; crawling ; 2022 ; 3 ; Building and Cities Volume 2022 ; 2022 ; reingest5.clockss.org:8082 > #403 forbidden cloudfront.net
-      au < frozen ; exists ; 2023 ; 4 ; Building and Cities Volume 2023 ; 2023 ; > #404 forbidden cloudfront.net
-      au < superseded ; exists ; 2024 ; 5 ; Building and Cities Volume 2024 [superseded] ; 2024 ; > #505 forbidden cloudfront.net
+      au < finished ; crawling ; 2020 ; 1 ; Buildings and Cities Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2021 ; 2 ; Buildings and Cities Volume 2021 ; 2021 ; reingest4.clockss.org:8082 > #403 forbidden cloudfront.net
+      au < finished ; crawling ; 2022 ; 3 ; Buildings and Cities Volume 2022 ; 2022 ; reingest5.clockss.org:8082 > #403 forbidden cloudfront.net
+      au < frozen ; exists ; 2023 ; 4 ; Buildings and Cities Volume 2023 ; 2023 ; > #404 forbidden cloudfront.net
+      au < superseded ; exists ; 2024 ; 5 ; Buildings and Cities Volume 2024 [superseded] ; 2024 ; > #505 forbidden cloudfront.net
 
   }
 
