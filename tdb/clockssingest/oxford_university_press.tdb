@@ -353,7 +353,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; Age and Ageing Volume 50 ; 50 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; 2022 ; Age and Ageing Volume 51 ; 51 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Age and Ageing Volume 52 ; 52 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2024 ; 2024 ; Age and Ageing Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Age and Ageing Volume 53 ; 53 ; >
     au < expected ; exists ; 2025 ; 2025 ; Age and Ageing Volume 54 ; 54 ; >
 
   }
@@ -616,7 +616,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; American Journal of Clinical Pathology Volume 155-156 ; 155-156 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; American Journal of Clinical Pathology Volume 157-158 ; 157-158 ; >
     au < finished ; manifest ; 2023 ; 2023 ; American Journal of Clinical Pathology Volume 159-160 ; 159-160 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2024 ; 2024 ; American Journal of Clinical Pathology Volume 161-162 ; 161-162 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; American Journal of Clinical Pathology Volume 161-162 ; 161-162 ; >
     au < exists ; exists ; 2025 ; 2025 ; American Journal of Clinical Pathology Volume 163-164 ; 163-164 ; >
 
   }
@@ -3575,7 +3575,7 @@
     au < deepCrawl ; exists ; 2021 ; 2021 ; Cerebral Cortex Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Cerebral Cortex Volume 32 ; 32 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Cerebral Cortex Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2024 ; 2024 ; Cerebral Cortex Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Cerebral Cortex Volume 34 ; 34 ; >
     au < expected ; exists ; 2025 ; 2025 ; Cerebral Cortex Volume 35 ; 35 ; >
 
   }
@@ -5958,7 +5958,7 @@
     au < finished ; finished ; 2021 ; 2021 ; European Journal of Cardio-Thoracic Surgery Volume 59-60 ; 59-60 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Journal of Cardio-Thoracic Surgery Volume 61-62 ; 61-62 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of Cardio-Thoracic Surgery Volume 63-64 ; 63-64 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2024 ; 2024 ; European Journal of Cardio-Thoracic Surgery Volume 65-66 ; 65-66 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; European Journal of Cardio-Thoracic Surgery Volume 65-66 ; 65-66 ; >
     au < exists ; exists ; 2025 ; 2025 ; European Journal of Cardio-Thoracic Surgery Volume 67-68 ; 67-68 ; >
 
   }
@@ -16344,7 +16344,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; Notes and Queries Volume 68 ; 68 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Notes and Queries Volume 69 ; 69 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Notes and Queries Volume 70 ; 70 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2024 ; 2024 ; Notes and Queries Volume 71 ; 71 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Notes and Queries Volume 71 ; 71 ; >
     au < expected ; exists ; 2025 ; 2025 ; Notes and Queries Volume 72 ; 72 ; >
 
   }
