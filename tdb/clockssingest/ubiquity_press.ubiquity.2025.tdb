@@ -107,7 +107,7 @@
      au < finished ; finished ; 2020 ; 18 ; ERLACS Volume 2020 ; 2020 ; 18 ; CEDLA ; https://www.erlacs.org/ ; reingest2.clockss.org:8085 >
      au < finished ; crawling ; 2021 ; 19 ; ERLACS Volume 2021 ; 2021 ; 19 ; CEDLA ; https://www.erlacs.org/ ; reingest1.clockss.org:8082 >
      au < superseded ; exists ; 2022 ; 20 ; ERLACS Volume 2022 [superseded] ; 20 ; 2022 ; CEDLA ; https://www.erlacs.org/ ; >
-     au < expected ; exists ; 2023 ; 21 ; ERLACS Volume 2023 ; 21 ; 2023 ; CEDLA ; https://www.erlacs.org/ ; >
+     au < expected ; exists ; 2023 ; 21 ; ERLACS Volume 2023 ; 21 ; 2023 ; CEDLA ; https://erlacs.org/ ; >
 
   }
 
@@ -275,9 +275,9 @@
       au < finished ; finished ; 2020 ; 7 ; Modern Languages Open Volume 2020 ; 2020 ; 7 ; Liverpool University Press ; https://www.modernlanguagesopen.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; 8 ; Liverpool University Press ; https://www.modernlanguagesopen.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 9 ; Modern Languages Open Volume 2022 [superseded] ; 2022 ; 9 ; Liverpool University Press ; https://www.modernlanguagesopen.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; 10 ; Liverpool University Press ; https://www.modernlanguagesopen.org/ ; >
-      au < manifest ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ; https://www.modernlanguagesopen.org/ ; >
-      au < manifest ; exists ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ; https://www.modernlanguagesopen.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; 10 ; Liverpool University Press ; https://modernlanguagesopen.org/ ; >
+      au < exists ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ; https://modernlanguagesopen.org/ ; >
+      au < exists ; exists ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ; https://modernlanguagesopen.org/ ; >
 
   }
 
@@ -666,9 +666,9 @@
       au < finished ; finished ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; 7 ; Ubiquity Press ; https://www.annalsofglobalhealth.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 8 ; Annals of Global Health Volume 2021 ; 2021 ; 8 ; Ubiquity Press ;  https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 9 ; Annals of Global Health Volume 2022 [superseded] ; 2022 ; 9 ; Ubiquity Press ; https://www.annalsofglobalhealth.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Annals of Global Health Volume 2023 ; 2023 ; 10 ; Ubiquity Press ; https://www.annalsofglobalhealth.org/ ; >
-      au < exists ; exists ; 2024 ; 11 ; Annals of Global Health Volume 2024 ; 2024 ; 11 ; Ubiquity Press ; https://www.annalsofglobalhealth.org/ ; >
-      au < expected ; exists ; 2025 ; 12 ; Annals of Global Health Volume 2025 ; 2025 ; 12 ; Ubiquity Press ; https://www.annalsofglobalhealth.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Annals of Global Health Volume 2023 ; 2023 ; 10 ; Ubiquity Press ; https://annalsofglobalhealth.org/ ; >
+      au < exists ; exists ; 2024 ; 11 ; Annals of Global Health Volume 2024 ; 2024 ; 11 ; Ubiquity Press ; https://annalsofglobalhealth.org/ ; >
+      au < expected ; exists ; 2025 ; 12 ; Annals of Global Health Volume 2025 ; 2025 ; 12 ; Ubiquity Press ; https://annalsofglobalhealth.org/ ; >
 
   }
 
@@ -705,29 +705,29 @@
       nondefparam[base_url2] = https://account.current-journal.com/
       nondefparam[journal_id] = up-j-ctjme
 
-      au < doNotProcess ; doNotProcess ; 2003 ; 19 ; Current: Journal of Marine Education Volume 2003 ; 2003 ; 19 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doesNotExist ; doesNotExist ; 2004 ; 20 ; Current: Journal of Marine Education Volume 2004 ; 2004 ; 20 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 21 ; Current: Journal of Marine Education Volume 2005 ; 2005 ; 21 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 22 ; Current: Journal of Marine Education Volume 2006 ; 2006 ; 22 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 23 ; Current: Journal of Marine Education Volume 2007 ; 2007 ; 23 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 24 ; Current: Journal of Marine Education Volume 2008 ; 2008 ; 24 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 25 ; Current: Journal of Marine Education Volume 2009 ; 2009 ; 25 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 26 ; Current: Journal of Marine Education Volume 2010 ; 2010 ; 26 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 27 ; Current: Journal of Marine Education Volume 2011 ; 2011 ; 27 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 28 ; Current: Journal of Marine Education Volume 2012 ; 2012 ; 28 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doesNotExist ; doesNotExist ; 2013 ; 29 ; Current: Journal of Marine Education Volume 2013 ; 2013 ; 29 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 30 ; Current: Journal of Marine Education Volume 2014 ; 2014 ; 30 ; Ubiquity Press ; https://www.current-journal.com/ ; > 
-      au < doNotProcess ; doNotProcess ; 2015 ; 31 ; Current: Journal of Marine Education Volume 2015 ; 2015 ; 31 ; Ubiquity Press ; https://www.current-journal.com/ ; > 
-      au < doNotProcess ; doNotProcess ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; 32 ; Ubiquity Press ; https://www.current-journal.com/ ; > 
-      au < doNotProcess ; doNotProcess ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; 33 ; Ubiquity Press ; https://www.current-journal.com/ ; > 
+      au < doNotProcess ; doNotProcess ; 2003 ; 19 ; Current: Journal of Marine Education Volume 2003 ; 2003 ; 19 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < doesNotExist ; doesNotExist ; 2004 ; 20 ; Current: Journal of Marine Education Volume 2004 ; 2004 ; 20 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 21 ; Current: Journal of Marine Education Volume 2005 ; 2005 ; 21 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 22 ; Current: Journal of Marine Education Volume 2006 ; 2006 ; 22 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 23 ; Current: Journal of Marine Education Volume 2007 ; 2007 ; 23 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 24 ; Current: Journal of Marine Education Volume 2008 ; 2008 ; 24 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 25 ; Current: Journal of Marine Education Volume 2009 ; 2009 ; 25 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 26 ; Current: Journal of Marine Education Volume 2010 ; 2010 ; 26 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 27 ; Current: Journal of Marine Education Volume 2011 ; 2011 ; 27 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 28 ; Current: Journal of Marine Education Volume 2012 ; 2012 ; 28 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < doesNotExist ; doesNotExist ; 2013 ; 29 ; Current: Journal of Marine Education Volume 2013 ; 2013 ; 29 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 30 ; Current: Journal of Marine Education Volume 2014 ; 2014 ; 30 ; Ubiquity Press ; https://current-journal.com/ ; > 
+      au < doNotProcess ; doNotProcess ; 2015 ; 31 ; Current: Journal of Marine Education Volume 2015 ; 2015 ; 31 ; Ubiquity Press ; https://current-journal.com/ ; > 
+      au < doNotProcess ; doNotProcess ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; 32 ; Ubiquity Press ; https://current-journal.com/ ; > 
+      au < doNotProcess ; doNotProcess ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; 33 ; Ubiquity Press ; https://current-journal.com/ ; > 
       au < finished ; finished ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; 34 ; Ubiquity Press ; https://www.current-journal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; 35 ; Ubiquity Press ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; 36 ; Ubiquity Press ; https://www.current-journal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; 37 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; 37 ; Ubiquity Press ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 38 ; Current: Journal of Marine Education Volume 2022 [superseded] ; 2022 ; 38 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 39 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; 39 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < exists ; exists ; 2024 ; 40 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 40 ; Ubiquity Press ; https://www.current-journal.com/ ; >
-      au < expected ; exists ; 2025 ; 41 ; Current: Journal of Marine Education Volume 2025 ; 2025 ; 41 ; Ubiquity Press ; https://www.current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 39 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; 39 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < exists ; exists ; 2024 ; 40 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 40 ; Ubiquity Press ; https://current-journal.com/ ; >
+      au < expected ; exists ; 2025 ; 41 ; Current: Journal of Marine Education Volume 2025 ; 2025 ; 41 ; Ubiquity Press ; https://current-journal.com/ ; >
 
   }
 
@@ -800,10 +800,146 @@
       au < finished ; finished ; 2020 ; 30 ; Bulletin of the History of Archaeology Volume 2020 ; 2020 ; 30 ; Ubiquity Press ; https://www.archaeologybulletin.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; 31 ; Bulletin of the History of Archaeology Volume 2021 ; 2021 ; 31 ; Ubiquity Press ; https://www.archaeologybulletin.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 32 ; Bulletin of the History of Archaeology Volume 2022 [superseded] ; 2022 ; 32 ; Ubiquity Press ; https://www.archaeologybulletin.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 33 ; Bulletin of the History of Archaeology Volume 2023 ; 2023 ; 33 ; Ubiquity Press ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 33 ; Bulletin of the History of Archaeology Volume 2023 ; 2023 ; 33 ; Ubiquity Press ; https://archaeologybulletin.org/ ; >
       au < exists ; exists ; 2024 ; 34 ; Bulletin of the History of Archaeology Volume 2024 ; 2024 ; 34 ; Ubiquity Press ; https://archaeologybulletin.org/ ; >
       au < expected ; exists ; 2025 ; 35 ; Bulletin of the History of Archaeology Volume 2025 ; 2025 ; 35 ; Ubiquity Press ; https://archaeologybulletin.org/ ; >
 
+
+  }
+
+  {
+
+      title <
+        name = Citizen Science: Theory and Practice ;
+        eissn = 2057-4991
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://theoryandpractice.citizenscienceassociation.org/
+      nondefparam[base_url2] = https://account.theoryandpractice.citizenscienceassociation.org/
+      nondefparam[journal_id] = up-j-cstp
+
+      au < finished ; finished ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; 1 ; Ubiquity Press ; http://theoryandpractice.citizenscienceassociation.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 2 ; Citizen Science: Theory and Practice Volume 2017 ; 2017 ; 2 ; Ubiquity Press ; http://theoryandpractice.citizenscienceassociation.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 3 ; Citizen Science: Theory and Practice Volume 2018 ; 2018 ; 3 ; Ubiquity Press ; https://theoryandpractice.citizenscienceassociation.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 4 ; Citizen Science: Theory and Practice Volume 2019 ; 2019 ; 4 ; Ubiquity Press ; https://theoryandpractice.citizenscienceassociation.org/ ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; exists ; 2020 ; 5 ; Citizen Science: Theory and Practice Volume 2020 ; 2020 ; 5 ; Ubiquity Press ; https://theoryandpractice.citizenscienceassociation.org/ ; > #403 Forbidden cloudfront.net
+      au < finished ; crawling ; 2021 ; 6 ; Citizen Science: Theory and Practice Volume 2021 ; 2021 ; 6 ; Ubiquity Press ; https://theoryandpractice.citizenscienceassociation.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 7 ; Citizen Science: Theory and Practice Volume 2022 [superseded] ; 2022 ; 7 ; Ubiquity Press ; https://theoryandpractice.citizenscienceassociation.org/ ; >
+      au < doNotProcess ; exists ; 2023 ; 8 ; Citizen Science: Theory and Practice Volume 2023 ; 2023 ; Ubiquity Press ; 8 ; https://theoryandpractice.citizenscienceassociation.org/ ; >
+      au < exists ; exists ; 2024 ; 9 ; Citizen Science: Theory and Practice Volume 2024 ; 2024 ; 9 ; Ubiquity Press ; https://theoryandpractice.citizenscienceassociation.org/ ; >
+      au < expected ; exists ; 2025 ; 10 ; Citizen Science: Theory and Practice Volume 2025 ; 2025 ; 10 ; Ubiquity Press ; https://theoryandpractice.citizenscienceassociation.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Computational Psychiatry ;
+        eissn = 2379-6227
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://cpsyjournal.org/
+      nondefparam[base_url2] = https://account.cpsyjournal.org/
+      nondefparam[journal_id] = up-j-cp
+
+      au < frozen ; exists ; 2017 ; 1 ; Computational Psychiatry Volume 2017 ; 2017 ; 1 ; Ubiquity Press ; https://cpsyjournal.org/ ; >
+      au < frozen ; exists ; 2018 ; 2 ; Computational Psychiatry Volume 2018 ; 2018 ; 2 ; Ubiquity Press ; https://cpsyjournal.org/ ; >
+      au < frozen ; exists ; 2019 ; 3 ; Computational Psychiatry Volume 2019 ; 2019 ; 3 ; Ubiquity Press ; https://cpsyjournal.org/ ; >
+      au < finished ; finished ; 2020 ; 4 ; Computational Psychiatry Volume 2020 ; 2020 ; 4 ; Ubiquity Press ; https://cpsyjournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2021 ; 5 ; Computational Psychiatry Volume 2021 ; 2021 ; 5 ; Ubiquity Press ; https://cpsyjournal.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 6 ; Computational Psychiatry Volume 2022 [superseded] ; 2022 ; 6 ; Ubiquity Press ; https://cpsyjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Computational Psychiatry Volume 2023 ; 2023 ; 7 ; Ubiquity Press ; https://cpsyjournal.org/ ; >
+      au < exists ; exists ; 2024 ; 8 ; Computational Psychiatry Volume 2024 ; 2024 ; 8 ; Ubiquity Press ; https://cpsyjournal.org/ ; >
+      au < expected ; exists ; 2025 ; 9 ; Computational Psychiatry Volume 2025 ; 2025 ; 9 ; Ubiquity Press ; https://cpsyjournal.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Data Science Journal ;
+        eissn = 1683-1470
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://datascience.codata.org/
+      nondefparam[base_url2] = https://account.datascience.codata.org/
+      nondefparam[journal_id] = up-j-dsj
+
+      au < doesNotExist ; doesNotExist ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; 1 ; Ubiquity Press ; https://datascience.codata.org/ ; > #M exists. No articles for that year.
+      au < finished ; finished ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 ; 2 ; Ubiquity Press ; https://datascience.codata.org/ ; reingest4.clockss.org:8082 >
+      au < doesNotExist ; doesNotExist ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 ; 3 ; Ubiquity Press ; https://datascience.codata.org/ ; > #M exists. No articles for that year.
+      au < finished ; finished ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 ; 4 ; Ubiquity Press ; https://datascience.codata.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 ; 5 ; Ubiquity Press ; https://datascience.codata.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 ; 6 ; Ubiquity Press ; https://datascience.codata.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2008 ; 7 ; Data Science Journal Volume 2008 ; 2008 ; 7 ; Ubiquity Press ; https://datascience.codata.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; 8 ; Data Science Journal Volume 2009 ; 2009 ; 8 ; Ubiquity Press ; https://datascience.codata.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 9 ; Data Science Journal Volume 2010 ; 2010 ; 9 ; Ubiquity Press ; http://datascience.codata.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; 10 ; Data Science Journal Volume 2011 ; 2011 ; 10 ; Ubiquity Press ; http://datascience.codata.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; 11 ; Ubiquity Press ; http://datascience.codata.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; 12 ; Ubiquity Press ; http://datascience.codata.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; 13 ; Ubiquity Press ; http://datascience.codata.org/ ; >
+      au < finished ; finished ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; 14 ; Ubiquity Press ; http://datascience.codata.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; 15 ; Ubiquity Press ; http://datascience.codata.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 16 ; Data Science Journal Volume 2017 ; 2017 ; 16 ; Ubiquity Press ; http://datascience.codata.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 17 ; Data Science Journal Volume 2018 ; 2018 ; 17 ; Ubiquity Press ; https://datascience.codata.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; 18 ; Data Science Journal Volume 2019 ; 2019 ; 18 ; Ubiquity Press ; https://datascience.codata.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 19 ; Data Science Journal Volume 2020 ; 2020 ; 19 ; Ubiquity Press ; https://datascience.codata.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2021 ; 20 ; Data Science Journal Volume 2021 ; 2021 ; 20 ; Ubiquity Press ; https://datascience.codata.org/ ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 21 ; Data Science Journal Volume 2022 [superseded] ; 2022 ; 21 ; Ubiquity Press ; https://datascience.codata.org/ ; >
+      au < doNotProcess ; exists ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 ; 22 ; Ubiquity Press ; https://datascience.codata.org/ ; >
+      au < exists ; exists ; 2024 ; 23 ; Data Science Journal Volume 2024 ; 2024 ; 23 ; Ubiquity Press ; https://datascience.codata.org/ ; >
+      au < expected ; exists ; 2025 ; 24 ; Data Science Journal Volume 2025 ; 2025 ; 24 ; Ubiquity Press ; https://datascience.codata.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Future Cities and Environment ;
+        eissn = 2363-9075
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://futurecitiesandenvironment.com/
+      nondefparam[base_url2] = https://account.futurecitiesandenvironment.com/
+      nondefparam[journal_id] = up-j-fce
+
+      au < finished ; finished ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; 1 ; Ubiquity Press ; https://futurecitiesandenvironment.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 2 ; Future Cities and Environment Volume 2019 ; 2019 ; 2 ; Ubiquity Press ; https://futurecitiesandenvironment.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 3 ; Future Cities and Environment Volume 2020 ; 2020 ; 3 ; Ubiquity Press ; https://futurecitiesandenvironment.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 4 ; Future Cities and Environment Volume 2021 ; 2021 ; 4 ; Ubiquity Press ; https://futurecitiesandenvironment.com/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2022 ; 5 ; Future Cities and Environment Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ; https://futurecitiesandenvironment.com/ ; >
+      au < doNotProcess ; exists ; 2023 ; 6 ; Future Cities and Environment Volume 2023 ; 2023 ; 6 ; Ubiquity Press ; https://futurecitiesandenvironment.com/ ; >
+      au < exists ; exists ; 2024 ; 7 ; Future Cities and Environment Volume 2024 ; 2024 ; 7 ; Ubiquity Press ; https://futurecitiesandenvironment.com/ ; >
+      au < expected ; exists ; 2025 ; 8 ; Future Cities and Environment Volume 2025 ; 2025 ; 8 ; Ubiquity Press ; https://futurecitiesandenvironment.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Glocality: Undergraduate Academic Journal ;
+        eissn = 2059-2949
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://glocality.eu/
+      nondefparam[base_url2] = https://account.glocality.eu/
+      nondefparam[journal_id] = up-j-g
+
+      au < finished ; finished ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; 1 ; Ubiquity Press ; http://www.glocality.eu/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; 2 ; Ubiquity Press ; http://www.glocality.eu/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2017 ; 2017 ; 3 ; Ubiquity Press ; http://www.glocality.eu/ ; reingest3.clockss.org:8083 >
+      au < doesNotExist ; doesNotExist ; 2019 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2019 ; 2019 ; 4 ; Ubiquity Press ; https://glocality.eu/ ; >
+      au < finished ; finished ; 2020 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2020 ; 2020 ; 5 ; Ubiquity Press ; https://www.glocality.eu/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 6 ; Glocality: Undergraduate Academic Journal Volume 2021 ; 2021 ; 6 ; Ubiquity Press ; https://www.glocality.eu/ ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2022 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2022 [superseded] ; 2022 ; 7 ; Ubiquity Press ; https://www.glocality.eu/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 ; 8 ; Ubiquity Press ; https://glocality.eu/ ; >
+      au < exists ; exists ; 2024 ; 9 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 9 ; Ubiquity Press ; http://glocality.eu/ ; >
+      au < expected ; exists ; 2025 ; 10 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 10 ; Ubiquity Press ; http://glocality.eu/ ; >
 
   }
 
@@ -822,142 +958,6 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-
-  {
-
-      title <
-        name = Citizen Science: Theory and Practice ;
-        eissn = 2057-4991
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://theoryandpractice.citizenscienceassociation.org/
-      nondefparam[base_url2] = https://account.theoryandpractice.citizenscienceassociation.org/
-      nondefparam[journal_id] = up-j-cstp
-
-      au < doNotProcess ; doNotProcess ; 2016 ; 1 ; Citizen Science: Theory and Practice Volume 2016 ; 2016 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2 ; Citizen Science: Theory and Practice Volume 2017 ; 2017 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 3 ; Citizen Science: Theory and Practice Volume 2018 ; 2018 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 4 ; Citizen Science: Theory and Practice Volume 2019 ; 2019 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 5 ; Citizen Science: Theory and Practice Volume 2020 ; 2020 ; 5 ; > #403 Forbidden cloudfront.net
-      au < doNotProcess ; doNotProcess ; 2021 ; 6 ; Citizen Science: Theory and Practice Volume 2021 ; 2021 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 7 ; Citizen Science: Theory and Practice Volume 2022 ; 2022 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 8 ; Citizen Science: Theory and Practice Volume 2023 ; 2023 ; 8 ; >
-      au < exists ; exists ; 2024 ; 9 ; Citizen Science: Theory and Practice Volume 2024 ; 2024 ; 9 ; >
-      au < expected ; exists ; 2025 ; 10 ; Citizen Science: Theory and Practice Volume 2025 ; 2025 ; 10 ; >
-
-  }
-
-  {
-
-      title <
-        name = Computational Psychiatry ;
-        eissn = 2379-6227
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://cpsyjournal.org/
-      nondefparam[base_url2] = https://account.cpsyjournal.org/
-      nondefparam[journal_id] = up-j-cp
-
-      au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Computational Psychiatry Volume 2017 ; 2017 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 2 ; Computational Psychiatry Volume 2018 ; 2018 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 3 ; Computational Psychiatry Volume 2019 ; 2019 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 4 ; Computational Psychiatry Volume 2020 ; 2020 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 5 ; Computational Psychiatry Volume 2021 ; 2021 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 6 ; Computational Psychiatry Volume 2022 ; 2022 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Computational Psychiatry Volume 2023 ; 2023 ; 7 ; >
-      au < exists ; exists ; 2024 ; 8 ; Computational Psychiatry Volume 2024 ; 2024 ; 8 ; >
-      au < expected ; exists ; 2025 ; 9 ; Computational Psychiatry Volume 2025 ; 2025 ; 9 ; >
-
-  }
-
-  {
-
-      title <
-        name = Data Science Journal ;
-        eissn = 1683-1470
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://datascience.codata.org/
-      nondefparam[base_url2] = https://account.datascience.codata.org/
-      nondefparam[journal_id] = up-j-dsj
-
-      au < doNotProcess ; doNotProcess ; 2002 ; 1 ; Data Science Journal Volume 2002 ; 2002 ; 1 ; > #M exists. No articles for that year.
-      au < doNotProcess ; doNotProcess ; 2003 ; 2 ; Data Science Journal Volume 2003 ; 2003 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 3 ; Data Science Journal Volume 2004 ; 2004 ; 3 ; > #M exists. No articles for that year.
-      au < doNotProcess ; doNotProcess ; 2005 ; 4 ; Data Science Journal Volume 2005 ; 2005 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 5 ; Data Science Journal Volume 2006 ; 2006 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 6 ; Data Science Journal Volume 2007 ; 2007 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 7 ; Data Science Journal Volume 2008 ; 2008 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 8 ; Data Science Journal Volume 2009 ; 2009 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 9 ; Data Science Journal Volume 2010 ; 2010 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 10 ; Data Science Journal Volume 2011 ; 2011 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 11 ; Data Science Journal Volume 2012 ; 2012 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 12 ; Data Science Journal Volume 2013 ; 2013 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 13 ; Data Science Journal Volume 2014 ; 2014 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 14 ; Data Science Journal Volume 2015 ; 2015 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 15 ; Data Science Journal Volume 2016 ; 2016 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 16 ; Data Science Journal Volume 2017 ; 2017 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 17 ; Data Science Journal Volume 2018 ; 2018 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 18 ; Data Science Journal Volume 2019 ; 2019 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 19 ; Data Science Journal Volume 2020 ; 2020 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 20 ; Data Science Journal Volume 2021 ; 2021 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 21 ; Data Science Journal Volume 2022 ; 2022 ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 ; 22 ; >
-      au < exists ; exists ; 2024 ; 23 ; Data Science Journal Volume 2024 ; 2024 ; 23 ; >
-      au < expected ; exists ; 2025 ; 24 ; Data Science Journal Volume 2025 ; 2025 ; 24 ; >
-
-  }
-
-  {
-
-      title <
-        name = Future Cities and Environment ;
-        eissn = 2363-9075
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://futurecitiesandenvironment.com/
-      nondefparam[base_url2] = https://account.futurecitiesandenvironment.com/
-      nondefparam[journal_id] = up-j-fce
-
-      au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Future Cities and Environment Volume 2018 ; 2018 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Future Cities and Environment Volume 2019 ; 2019 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 3 ; Future Cities and Environment Volume 2020 ; 2020 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 4 ; Future Cities and Environment Volume 2021 ; 2021 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 5 ; Future Cities and Environment Volume 2022 ; 2022 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Future Cities and Environment Volume 2023 ; 2023 ; 6 ; >
-      au < exists ; exists ; 2024 ; 7 ; Future Cities and Environment Volume 2024 ; 2024 ; 7 ; >
-      au < expected ; exists ; 2025 ; 8 ; Future Cities and Environment Volume 2025 ; 2025 ; 8 ; >
-
-  }
-
-  {
-
-      title <
-        name = Glocality: Undergraduate Academic Journal ;
-        eissn = 2059-2949
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://glocality.eu/
-      nondefparam[base_url2] = https://account.glocality.eu/
-      nondefparam[journal_id] = up-j-g
-
-      au < doNotProcess ; doNotProcess ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2017 ; 2017 ; 3 ; >
-      au < doesNotExist ; doesNotExist ; 2019 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2019 ; 2019 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2020 ; 2020 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 6 ; Glocality: Undergraduate Academic Journal Volume 2021 ; 2021 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2022 ; 2022 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 ; 8 ; >
-      au < exists ; exists ; 2024 ; 9 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 9 ; >
-      au < expected ; exists ; 2025 ; 10 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 10 ; >
-
-  }
 
   {
 
