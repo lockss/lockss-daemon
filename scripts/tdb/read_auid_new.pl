@@ -1238,6 +1238,7 @@ while (my $line = <>) {
                 if ($man_contents =~ m/<title>([^<>]*)<\/title>/si) {
                     $vol_title = $1;
                     $vol_title =~ s/\s*\n\s*/ /g;
+                    $vol_title =~ s/\s*\t\s*/ /g;
                     if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
                         $vol_title = "\"" . $vol_title . "\"";
                     }
