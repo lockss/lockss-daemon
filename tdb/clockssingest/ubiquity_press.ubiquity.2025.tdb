@@ -943,9 +943,266 @@
 
   }
 
+  {
+
+      title <
+        name = International Journal of Integrated Care ;
+        eissn = 1568-4156
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://ijic.org/
+      nondefparam[base_url2] = https://account.ijic.org/
+      nondefparam[journal_id] = up-j-ijic
+
+      au < finished ; finished ; 2000 ; 1 ; International Journal of Integrated Care Volume 2000 ; 2000 ; 1 ; Ubiquity Press ; https://www.ijic.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2001 ; 2 ; International Journal of Integrated Care Volume 2001 ; 2001 ; 2 ; Ubiquity Press ; https://www.ijic.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2002 ; 3 ; International Journal of Integrated Care Volume 2002 ; 2002 ; 3 ; Ubiquity Press ; https://www.ijic.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2003 ; 4 ; International Journal of Integrated Care Volume 2003 ; 2003 ; 4 ; Ubiquity Press ; https://www.ijic.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; 5 ; International Journal of Integrated Care Volume 2004 ; 2004 ; 5 ; Ubiquity Press ; https://www.ijic.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; 6 ; International Journal of Integrated Care Volume 2005 ; 2005 ; 6 ; Ubiquity Press ; https://www.ijic.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 7 ; International Journal of Integrated Care Volume 2006 ; 2006 ; 7 ; Ubiquity Press ; https://www.ijic.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2007 ; 8 ; International Journal of Integrated Care Volume 2007 ; 2007 ; 8 ; Ubiquity Press ; https://www.ijic.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2008 ; 9 ; International Journal of Integrated Care Volume 2008 ; 2008 ; 9 ; Ubiquity Press ; https://www.ijic.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 10 ; International Journal of Integrated Care Volume 2009 ; 2009 ; 10 ; Ubiquity Press ; https://www.ijic.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 11 ; International Journal of Integrated Care Volume 2010 ; 2010 ; 11 ; Ubiquity Press ; http://www.ijic.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; 12 ; International Journal of Integrated Care Volume 2011 ; 2011 ; 12 ; Ubiquity Press ; http://www.ijic.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2012 ; 13 ; International Journal of Integrated Care Volume 2012 ; 2012 ; 13 ; Ubiquity Press ; http://www.ijic.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; 14 ; International Journal of Integrated Care Volume 2013 ; 2013 ; 14 ; Ubiquity Press ; http://www.ijic.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 15 ; International Journal of Integrated Care Volume 2014 ; 2014 ; 15 ; Ubiquity Press ; http://www.ijic.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 16 ; International Journal of Integrated Care Volume 2015 ; 2015 ; 16 ; Ubiquity Press ; http://www.ijic.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; 17 ; Ubiquity Press ; http://www.ijic.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; 18 ; Ubiquity Press ; http://www.ijic.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 19 ; International Journal of Integrated Care Volume 2018 ; 2018 ; 19 ; Ubiquity Press ; https://www.ijic.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2019 ; 20 ; International Journal of Integrated Care Volume 2019 ; 2019 ; 20 ; Ubiquity Press ; https://www.ijic.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2020 ; 21 ; International Journal of Integrated Care Volume 2020 ; 2020 ; 21 ; Ubiquity Press ; https://www.ijic.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; 22 ; International Journal of Integrated Care Volume 2021 ; 2021 ; 22 ; Ubiquity Press ; https://www.ijic.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 23 ; International Journal of Integrated Care Volume 2022 [superseded] ; 2022 ; 23 ; Ubiquity Press ; https://www.ijic.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 24 ; International Journal of Integrated Care Volume 2023 ; 2023 ; 24 ; Ubiquity Press ; https://.ijic.org/ ; >
+      au < exists ; exists ; 2024 ; 25 ; International Journal of Integrated Care Volume 2024 ; 2024 ; 25 ; Ubiquity Press ; https://www.ijic.org/ ; >
+      au < expected ; exists ; 2025 ; 26 ; International Journal of Integrated Care Volume 2025 ; 2025 ; 26 ; Ubiquity Press ; https://www.ijic.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = International Review of Social Psychology ;
+        eissn = 2397-8570
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://rips-irsp.com/
+      nondefparam[base_url2] = https://account.rips-irsp.com/
+      nondefparam[journal_id] = up-j-irsp
+
+      au < finished ; finished ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; 1 ; Ubiquity Press ; http://www.rips-irsp.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; 2 ; Ubiquity Press ; http://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; 3 ; Ubiquity Press ; https://www.rips-irsp.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; 4 ; Ubiquity Press ; https://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; 5 ; Ubiquity Press ; https://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 6 ; International Review of Social Psychology Volume 2021 ; 2021 ; 6 ; Ubiquity Press ; https://www.rips-irsp.com/ ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2022 ; 7 ; International Review of Social Psychology Volume 2022 [superseded] ; 2022 ; 7 ; Ubiquity Press ; https://www.rips-irsp.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 8 ; International Review of Social Psychology Volume 2023 ; 2023 ; 8 ; Ubiquity Press ; https://rips-irsp.com/ ; >
+      au < exists ; exists ; 2024 ; 9 ; International Review of Social Psychology Volume 2024 ; 2024 ; 9 ; Ubiquity Press ; https://rips-irsp.com/ ; >
+      au < expected ; exists ; 2025 ; 10 ; International Review of Social Psychology Volume 2025 ; 2025 ; 10 ; Ubiquity Press ; https://rips-irsp.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Circadian Rhythms ;
+        eissn = 1740-3391
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://jcircadianrhythms.com/
+      nondefparam[base_url2] = https://account.jcircadianrhythms.com/
+      nondefparam[journal_id] = up-j-jcr
+
+      au < finished ; finished ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; 1 ; Ubiquity Press ; https://www.jcircadianrhythms.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; 2 ; Ubiquity Press ; https://www.jcircadianrhythms.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; 3 ; Ubiquity Press ; https://www.jcircadianrhythms.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 4 ; Journal of Circadian Rhythms Volume 2006 ; 2006 ; 4 ; Ubiquity Press ; https://www.jcircadianrhythms.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; 5 ; Ubiquity Press ; https://www.jcircadianrhythms.com/ ; reingest1.clockss.org:8082 >
+      au < exists ; exists ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; 6 ; Ubiquity Press ; https://jcircadianrhythms.com/ ; >
+      au < exists ; exists ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; 7 ; Ubiquity Press ; https://jcircadianrhythms.com/ ; >
+      au < exists ; exists ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; 8 ; Ubiquity Press ; https://jcircadianrhythms.com/ ; >
+      au < exists ; exists ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; 9 ; Ubiquity Press ; https://jcircadianrhythms.com/ ; >
+      au < exists ; exists ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; 10 ; Ubiquity Press ; https://jcircadianrhythms.com/ ; >
+      au < exists ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; 11 ; Ubiquity Press ; https://jcircadianrhythms.com/ ; >
+      au < exists ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; 12 ; Ubiquity Press ; https://jcircadianrhythms.com/ ; >
+      au < finished ; finished ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; 13 ; Ubiquity Press ; http://www.jcircadianrhythms.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; 14 ; Ubiquity Press ; http://www.jcircadianrhythms.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; 15 ; Ubiquity Press ; http://www.jcircadianrhythms.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 16 ; Journal of Circadian Rhythms Volume 2018 ; 2018 ; 16 ; Ubiquity Press ; https://www.jcircadianrhythms.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; 17 ; Journal of Circadian Rhythms Volume 2019 ; 2019 ; 17 ; Ubiquity Press ; https://www.jcircadianrhythms.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2020 ; 18 ; Journal of Circadian Rhythms Volume 2020 ; 2020 ; 18 ; Ubiquity Press ; https://www.jcircadianrhythms.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 ; 19 ; Ubiquity Press ; https://www.jcircadianrhythms.com/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 [superseded] ; 2022 ; 20 ; Ubiquity Press ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 21 ; Journal of Circadian Rhythms Volume 2023 ; 2023 ; 21 ; Ubiquity Press ; https://jcircadianrhythms.com/ ; >
+      au < exists ; exists ; 2024 ; 22 ; Journal of Circadian Rhythms Volume 2024 ; 2024 ; 22 ; Ubiquity Press ; https://jcircadianrhythms.com/ ; >
+      au < expected ; exists ; 2025 ; 23 ; Journal of Circadian Rhythms Volume 2025 ; 2025 ; 23 ; Ubiquity Press ; https://jcircadianrhythms.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Conservation and Museum Studies ;
+        eissn = 1364-0429
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://jcms-journal.com/
+      nondefparam[base_url2] = https://account.jcms-journal.com/
+      nondefparam[journal_id] = up-j-jcms
+
+      au < exists ; exists ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; 1 ; Ubiquity Press ; https://jcms-journal.com/ ; >
+      au < exists ; exists ; 1997 ; 2-3 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; 2-3 ; Ubiquity Press ; https://jcms-journal.com/ ; >
+      au < exists ; exists ; 1998 ; 4-5 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; 4-5 ; Ubiquity Press ; https://jcms-journal.com/ ; >
+      au < exists ; exists ; 1999 ; 6 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; 6 ; Ubiquity Press ; https://jcms-journal.com/ ; >
+      au < finished ; finished ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; 7 ; Ubiquity Press ; https://www.jcms-journal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; 8 ; Ubiquity Press ; https://www.jcms-journal.com/ ; reingest3.clockss.org:8083 >
+      au < exists ; exists ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ; https://jcms-journal.com/ ; >
+      au < exists ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ; https://jcms-journal.com/ ; >
+      au < exists ; exists ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ; https://jcms-journal.com/ ; >
+      au < exists ; exists ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ; https://jcms-journal.com/ ; >
+      au < finished ; finished ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; 13 ; Ubiquity Press ; http://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 14 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; 14 ; Ubiquity Press ; http://www.jcms-journal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; 15 ; Ubiquity Press ; https://www.jcms-journal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 16 ; Journal of Conservation and Museum Studies Volume 2018 ; 2018 ; 16 ; Ubiquity Press ; https://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 ; 17 ; Ubiquity Press ; https://www.jcms-journal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; 18 ; Ubiquity Press ; https://www.jcms-journal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 ; 19 ; Ubiquity Press ; https://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 [superseded] ; 2022 ; 20 ; Ubiquity Press ; https://www.jcms-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ; https://jcms-journal.com/ ; >
+      au < expected ; exists ; 2024 ; 22 ; Journal of Conservation and Museum Studies Volume 2024 ; 2024 ; 22 ; Ubiquity Press ; https://jcms-journal.com/ ; >
+      au < expected ; exists ; 2025 ; 23 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 23 ; Ubiquity Press ; https://jcms-journal.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of European Psychology Students ;
+        eissn = 2222-6931
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://jeps.efpsa.org/
+      nondefparam[base_url2] = https://account.jeps.efpsa.org/
+      nondefparam[journal_id] = up-j-jeps
+      #nothing published 2011
+
+      au < finished ; finished ; 2009 ; 1 ; Journal of European Psychology Students Volume 2009 ; 2009 ; 1 ; Ubiquity Press ; https://jeps.efpsa.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 2 ; Journal of European Psychology Students Volume 2010 ; 2010 ; 2 ; Ubiquity Press ; http://jeps.efpsa.org/ ; reingest1.clockss.org:8082 >
+      au < exists ; exists ; 2012 ; 3 ; Journal of European Psychology Students Volume 2012 ; 2012 ; 3 ; Ubiquity Press ; https://jeps.efpsa.org/ ; >
+      au < exists ; exists ; 2013 ; 4 ; Journal of European Psychology Students Volume 2013 ; 2013 ; 4 ; Ubiquity Press ; https://jeps.efpsa.org/ ; >
+      au < exists ; exists ; 2014 ; 5 ; Journal of European Psychology Students Volume 2014 ; 2014 ; 5 ; Ubiquity Press ; https://jeps.efpsa.org/ ; >
+      au < finished ; finished ; 2015 ; 6 ; Journal of European Psychology Students Volume 2015 ; 2015 ; 6 ; Ubiquity Press ; http://jeps.efpsa.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 7 ; Journal of European Psychology Students Volume 2016 ; 2016 ; 7 ; Ubiquity Press ; http://jeps.efpsa.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 8 ; Journal of European Psychology Students Volume 2017 ; 2017 ; 8 ; Ubiquity Press ; http://jeps.efpsa.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 9 ; Journal of European Psychology Students Volume 2018 ; 2018 ; 9 ; Ubiquity Press ; https://jeps.efpsa.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 10 ; Journal of European Psychology Students Volume 2019 ; 2019 ; 10 ; Ubiquity Press ; https://jeps.efpsa.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 11 ; Journal of European Psychology Students Volume 2020 ; 2020 ; 11 ; Ubiquity Press ; https://jeps.efpsa.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2021 ; 12 ; Journal of European Psychology Students Volume 2021 ; 2021 ; 12 ; Ubiquity Press ; https://jeps.efpsa.org/ ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 13 ; Journal of European Psychology Students Volume 2022 [superseded] ; 2022 ; 13 ; Ubiquity Press ; https://jeps.efpsa.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Journal of European Psychology Students Volume 2023 ; 2023 ; 14 ; Ubiquity Press ; https://jeps.efpsa.org/ ; >
+      au < exists ; exists ; 2024 ; 15 ; Journal of European Psychology Students Volume 2024 ; 2024 ; 15 ; Ubiquity Press ; https://jeps.efpsa.org/ ; >
+      au < expected ; exists ; 2025 ; 16 ; Journal of European Psychology Students Volume 2025 ; 2025 ; 16 ; Ubiquity Press ; https://jeps.efpsa.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Interactive Media in Education ;
+        eissn = 1365-893X
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://jime.open.ac.uk/
+      nondefparam[base_url2] = https://account.jime.open.ac.uk/
+      nondefparam[journal_id] = up-j-jime
+      #nothing published in 2011
+
+      #WWW-
+      au < superseded ; exists ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 [superseded] ; 2010 ; 2010 ; Ubiquity Press ; http://www-jime.open.ac.uk/ ; >
+      au < superseded ; exists ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 [superseded] ; 2012 ; 2012 ; Ubiquity Press ; http://www-jime.open.ac.uk/ ; >
+      au < superseded ; exists ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 [superseded] ; 2013 ; 2013 ; Ubiquity Press ; http://www-jime.open.ac.uk/ ; >
+      au < superseded ; exists ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 [superseded] ; 2014 ; 2014 ; Ubiquity Press ; http://www-jime.open.ac.uk/ ; >
+      au < superseded ; exists ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 [superseded] ; 2015 ; 2015 ; Ubiquity Press ; http://www-jime.open.ac.uk/ ; >
+      au < finished ; finished ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; 2016 ; Ubiquity Press ; http://www-jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 [superseded] ; 2017 ; 2017 ; Ubiquity Press ; http://www-jime.open.ac.uk/ ; >
+      
+      #non-WWW-
+      au < exists ; exists ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; 1998 ; Ubiquity Press ; https://jime.open.ac.uk/ ; >
+      au < exists ; exists ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; 1999 ; Ubiquity Press ; https://jime.open.ac.uk/ ; >
+      au < finished ; finished ; 2000 ; 2000 ; Journal of Interactive Media in Education Volume 2000 ; 2000 ; 2000 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2001 ; 2001 ; Journal of Interactive Media in Education Volume 2001 ; 2001 ; 2001 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2002 ; 2002 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; 2002 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2003 ; 2003 ; Journal of Interactive Media in Education Volume 2003 ; 2003 ; 2003 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; 2004 ; Journal of Interactive Media in Education Volume 2004 ; 2004 ; 2004 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2005 ; 2005 ; Journal of Interactive Media in Education Volume 2005 ; 2005 ; 2005 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2006 ; 2006 ; Journal of Interactive Media in Education Volume 2006 ; 2006 ; 2006 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; 2007 ; Journal of Interactive Media in Education Volume 2007 ; 2007 ; 2007 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; 2008 ; Journal of Interactive Media in Education Volume 2008 ; 2008 ; 2008 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 2009 ; Journal of Interactive Media in Education Volume 2009 ; 2009 ; 2009 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; 2010 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; 2012 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; 2013 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; 2014 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; 2015 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; 2016 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; 2017 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; 2018 ; Ubiquity Press ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 >
+      au < frozen ; exists ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; 2019 ; Ubiquity Press ; https://jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; 2020 ; Ubiquity Press ; https://jime.open.ac.uk/ ; >
+      au < frozen ; exists ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; 2021 ; Ubiquity Press ; https://jime.open.ac.uk/ ; >
+      au < superseded ; exists ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 [superseded] ; 2022 ; 2022 ; Ubiquity Press ; https://jime.open.ac.uk/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Interactive Media in Education Volume 2023 ; 2023 ; 2023 ; Ubiquity Press ; https://jime.open.ac.uk/ ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Interactive Media in Education Volume 2024 ; 2024 ; 2024 ; Ubiquity Press ; https://jime.open.ac.uk/ ; >
+      au < expected ; exists ; 2025 ; 2025 ; Journal of Interactive Media in Education Volume 2025 ; 2025 ; 2025 ; Ubiquity Press ; https://jime.open.ac.uk/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Molecular Signaling ;
+        eissn = 1750-2187
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://jmolecularsignaling.com/
+      nondefparam[base_url2] = https://account.jmolecularsignaling.com/
+      nondefparam[journal_id] = up-j-jms
+
+      au < finished ; finished ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; 1 ; Ubiquity Press ; https://www.jmolecularsignaling.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; 2 ; Ubiquity Press ; https://www.jmolecularsignaling.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; 3 ; Ubiquity Press ; https://www.jmolecularsignaling.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; 4 ; Ubiquity Press ; https://www.jmolecularsignaling.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; 5 ; Ubiquity Press ; http://www.jmolecularsignaling.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; 6 ; Ubiquity Press ; http://www.jmolecularsignaling.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; 7 ; Ubiquity Press ; http://www.jmolecularsignaling.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; 8 ; Ubiquity Press ; http://www.jmolecularsignaling.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; 9 ; Ubiquity Press ; http://www.jmolecularsignaling.com/ ; >
+      au < finished ; finished ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; 10 ; Ubiquity Press ; http://www.jmolecularsignaling.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; 11 ; Ubiquity Press ; http://www.jmolecularsignaling.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; 12 ; Ubiquity Press ; http://www.jmolecularsignaling.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; 13 ; Ubiquity Press ; https://www.jmolecularsignaling.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 14 ; Journal of Molecular Signaling Volume 2020 ; 2020 ; 14 ; Ubiquity Press ; https://www.jmolecularsignaling.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; 15 ; Ubiquity Press ; https://www.jmolecularsignaling.com/ ; reingest1.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2022 ; 16 ; Journal of Molecular Signaling Volume 2022 ; 2022 ; 16 ; Ubiquity Press ; https://jmolecularsignaling.com/ ; >
+
+  }
+
 
 
 }
+
 {
   publisher <
     name = Ubiquity Press ;
@@ -958,252 +1215,6 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
     plugin = needs.plugin
-
-  {
-
-      title <
-        name = International Journal of Integrated Care ;
-        eissn = 1568-4156
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://ijic.org/
-      nondefparam[base_url2] = https://account.ijic.org/
-      nondefparam[journal_id] = up-j-ijic
-
-      au < doNotProcess ; doNotProcess ; 2000 ; 1 ; International Journal of Integrated Care Volume 2000 ; 2000 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; 2 ; International Journal of Integrated Care Volume 2001 ; 2001 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 3 ; International Journal of Integrated Care Volume 2002 ; 2002 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; 4 ; International Journal of Integrated Care Volume 2003 ; 2003 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 5 ; International Journal of Integrated Care Volume 2004 ; 2004 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 6 ; International Journal of Integrated Care Volume 2005 ; 2005 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 7 ; International Journal of Integrated Care Volume 2006 ; 2006 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 8 ; International Journal of Integrated Care Volume 2007 ; 2007 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 9 ; International Journal of Integrated Care Volume 2008 ; 2008 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 10 ; International Journal of Integrated Care Volume 2009 ; 2009 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 11 ; International Journal of Integrated Care Volume 2010 ; 2010 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 12 ; International Journal of Integrated Care Volume 2011 ; 2011 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 13 ; International Journal of Integrated Care Volume 2012 ; 2012 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 14 ; International Journal of Integrated Care Volume 2013 ; 2013 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 15 ; International Journal of Integrated Care Volume 2014 ; 2014 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 16 ; International Journal of Integrated Care Volume 2015 ; 2015 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 17 ; International Journal of Integrated Care Volume 2016 ; 2016 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 18 ; International Journal of Integrated Care Volume 2017 ; 2017 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 19 ; International Journal of Integrated Care Volume 2018 ; 2018 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 20 ; International Journal of Integrated Care Volume 2019 ; 2019 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 21 ; International Journal of Integrated Care Volume 2020 ; 2020 ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 22 ; International Journal of Integrated Care Volume 2021 ; 2021 ; 22 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 23 ; International Journal of Integrated Care Volume 2022 ; 2022 ; 23 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 24 ; International Journal of Integrated Care Volume 2023 ; 2023 ; 24 ; >
-      au < exists ; exists ; 2024 ; 25 ; International Journal of Integrated Care Volume 2024 ; 2024 ; 25 ; >
-      au < expected ; exists ; 2025 ; 26 ; International Journal of Integrated Care Volume 2025 ; 2025 ; 26 ; >
-
-  }
-
-  {
-
-      title <
-        name = International Review of Social Psychology ;
-        eissn = 2397-8570
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://rips-irsp.com/
-      nondefparam[base_url2] = https://account.rips-irsp.com/
-      nondefparam[journal_id] = up-j-irsp
-
-      au < doNotProcess ; doNotProcess ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 6 ; International Review of Social Psychology Volume 2021 ; 2021 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 7 ; International Review of Social Psychology Volume 2022 ; 2022 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 8 ; International Review of Social Psychology Volume 2023 ; 2023 ; 8 ; >
-      au < exists ; exists ; 2024 ; 9 ; International Review of Social Psychology Volume 2024 ; 2024 ; 9 ; >
-      au < expected ; exists ; 2025 ; 10 ; International Review of Social Psychology Volume 2025 ; 2025 ; 10 ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Circadian Rhythms ;
-        eissn = 1740-3391
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://jcircadianrhythms.com/
-      nondefparam[base_url2] = https://account.jcircadianrhythms.com/
-      nondefparam[journal_id] = up-j-jcr
-
-      au < doNotProcess ; doNotProcess ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 4 ; Journal of Circadian Rhythms Volume 2006 ; 2006 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; 5 ; >
-      au < doNotProcess ; exists ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; 6 ; >
-      au < doNotProcess ; exists ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; 7 ; >
-      au < doNotProcess ; exists ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; 8 ; >
-      au < doNotProcess ; exists ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; 9 ; >
-      au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; 10 ; >
-      au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; 11 ; >
-      au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 16 ; Journal of Circadian Rhythms Volume 2018 ; 2018 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 17 ; Journal of Circadian Rhythms Volume 2019 ; 2019 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 18 ; Journal of Circadian Rhythms Volume 2020 ; 2020 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 ; 2022 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 21 ; Journal of Circadian Rhythms Volume 2023 ; 2023 ; 21 ; >
-      au < exists ; exists ; 2024 ; 22 ; Journal of Circadian Rhythms Volume 2024 ; 2024 ; 22 ; >
-      au < expected ; exists ; 2025 ; 23 ; Journal of Circadian Rhythms Volume 2025 ; 2025 ; 23 ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Conservation and Museum Studies ;
-        eissn = 1364-0429
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://jcms-journal.com/
-      nondefparam[base_url2] = https://account.jcms-journal.com/
-      nondefparam[journal_id] = up-j-jcms
-
-      au < exists ; exists ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; 1 ; >
-      au < exists ; exists ; 1997 ; 2-3 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; 2-3 ; >
-      au < exists ; exists ; 1998 ; 4-5 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; 4-5 ; >
-      au < exists ; exists ; 1999 ; 6 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; 8 ; >
-      au < doNotProcess ; exists ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; >
-      au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; >
-      au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; >
-      au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 14 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 16 ; Journal of Conservation and Museum Studies Volume 2018 ; 2018 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; >
-      au < expected ; exists ; 2024 ; 22 ; Journal of Conservation and Museum Studies Volume 2024 ; 2024 ; 22 ; >
-      au < expected ; exists ; 2025 ; 23 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 23 ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of European Psychology Students ;
-        eissn = 2222-6931
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://jeps.efpsa.org/
-      nondefparam[base_url2] = https://account.jeps.efpsa.org/
-      nondefparam[journal_id] = up-j-jeps
-      #nothing published 2011
-
-      au < doNotProcess ; doNotProcess ; 2009 ; 1 ; Journal of European Psychology Students Volume 2009 ; 2009 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 2 ; Journal of European Psychology Students Volume 2010 ; 2010 ; 2 ; >
-      au < doNotProcess ; exists ; 2012 ; 3 ; Journal of European Psychology Students Volume 2012 ; 2012 ; 3 ; >
-      au < doNotProcess ; exists ; 2013 ; 4 ; Journal of European Psychology Students Volume 2013 ; 2013 ; 4 ; >
-      au < doNotProcess ; exists ; 2014 ; 5 ; Journal of European Psychology Students Volume 2014 ; 2014 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 6 ; Journal of European Psychology Students Volume 2015 ; 2015 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 7 ; Journal of European Psychology Students Volume 2016 ; 2016 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 8 ; Journal of European Psychology Students Volume 2017 ; 2017 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 9 ; Journal of European Psychology Students Volume 2018 ; 2018 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 10 ; Journal of European Psychology Students Volume 2019 ; 2019 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 11 ; Journal of European Psychology Students Volume 2020 ; 2020 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 12 ; Journal of European Psychology Students Volume 2021 ; 2021 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 13 ; Journal of European Psychology Students Volume 2022 ; 2022 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Journal of European Psychology Students Volume 2023 ; 2023 ; 14 ; >
-      au < exists ; exists ; 2024 ; 15 ; Journal of European Psychology Students Volume 2024 ; 2024 ; 15 ; >
-      au < expected ; exists ; 2025 ; 16 ; Journal of European Psychology Students Volume 2025 ; 2025 ; 16 ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Interactive Media in Education ;
-        eissn = 1365-893X
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://jime.open.ac.uk/
-      nondefparam[base_url2] = https://account.jime.open.ac.uk/
-      nondefparam[journal_id] = up-j-jime
-      #nothing published in 2011
-
-      au < exists ; exists ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; 1998 ; >
-      au < exists ; exists ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; 1999 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Journal of Interactive Media in Education Volume 2000 ; 2000 ; 2000 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Journal of Interactive Media in Education Volume 2001 ; 2001 ; 2001 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; 2002 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Interactive Media in Education Volume 2003 ; 2003 ; 2003 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Interactive Media in Education Volume 2004 ; 2004 ; 2004 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Journal of Interactive Media in Education Volume 2005 ; 2005 ; 2005 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Journal of Interactive Media in Education Volume 2006 ; 2006 ; 2006 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Journal of Interactive Media in Education Volume 2007 ; 2007 ; 2007 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Interactive Media in Education Volume 2008 ; 2008 ; 2008 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Interactive Media in Education Volume 2009 ; 2009 ; 2009 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; 2015 ; >
-      au < doNotProcess ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; 2016 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; 2017 ; > #no www
-      au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Interactive Media in Education Volume 2018 ; 2018 ; 2018 ; > #no www
-      au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Interactive Media in Education Volume 2019 ; 2019 ; 2019 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Interactive Media in Education Volume 2020 ; 2020 ; 2020 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Interactive Media in Education Volume 2021 ; 2021 ; 2021 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 ; 2022 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Interactive Media in Education Volume 2023 ; 2023 ; 2023 ; >
-      au < exists ; exists ; 2024 ; 2024 ; Journal of Interactive Media in Education Volume 2024 ; 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 2025 ; Journal of Interactive Media in Education Volume 2025 ; 2025 ; 2025 ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Molecular Signaling ;
-        eissn = 1750-2187
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://jmolecularsignaling.com/
-      nondefparam[base_url2] = https://account.jmolecularsignaling.com/
-      nondefparam[journal_id] = up-j-jms
-
-      au < doNotProcess ; doNotProcess ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 14 ; Journal of Molecular Signaling Volume 2020 ; 2020 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 16 ; Journal of Molecular Signaling Volume 2022 ; 2022 ; 16 ; >
-
-  }
 
   {
 
