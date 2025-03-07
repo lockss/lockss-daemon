@@ -35,11 +35,10 @@ import org.lockss.plugin.*;
 
 import java.io.IOException;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Arrays;
 import java.util.ArrayList;
-import org.lockss.util.UrlUtil;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
 import org.lockss.util.Logger;
 import org.lockss.daemon.PluginException;
 
@@ -54,7 +53,6 @@ public class UbiquityPartnerNetworkFeatureUrlHelperFactory implements FeatureUrl
 
     private static class UbiquityPartnerNetworkFeatureUrlHelper extends BaseFeatureUrlHelper{
 
-        public static Set<String> deceasedAUs = new HashSet<>(Arrays.asList("org|lockss|plugin|ubiquitypress|upn|ClockssUbiquityPartnerNetworkPlugin&base_url~https%3A%2F%2Fijops%2Ecom%2F&year~2018"));
         private String year;
         private String baseUrl;
 
@@ -62,21 +60,39 @@ public class UbiquityPartnerNetworkFeatureUrlHelperFactory implements FeatureUrl
         public Collection<String> getAccessUrls(ArchivalUnit au)
             throws IOException, PluginException {
     
-          if (au == null) {
-            return null;
-          }
-          // return the non-ojs URL for deceased AUs
-          if(deceasedAUs.contains(au.getAuId())){
-            Collection<String> uUrls = new ArrayList<String>(1);
-            baseUrl = au.getConfiguration().get("base_url");
-            year = au.getConfiguration().get("year");
-            String s = baseUrl + "lockss/year/" + year;
-            uUrls.add(s);
-            log.debug3("The start url getting changed is " + uUrls.toString());
-            return uUrls;
-          }else{
+            if (au == null) {
+              return null;
+            }
+            String auid = au.getAuId();
+            String fname = "deceasedAUs.dat";
+            InputStream is = null;
+    
+            is = getClass().getResourceAsStream(fname);
+            if (is == null) {
+              throw new ExceptionInInitializerError("UPN Network Deceased AUs data file not found.");
+            }
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+
+            String nextline = null;
+
+            while ((nextline = reader.readLine()) != null) {
+              nextline = nextline.trim();
+              log.debug3("The next line in the deceased AUs file is " + nextline.toString());
+              //check every line in data file to see if au is a deceased au
+              if(nextline.contains(auid)){
+                Collection<String> uUrls = new ArrayList<String>(1);
+                baseUrl = au.getConfiguration().get("base_url");
+                year = au.getConfiguration().get("year");
+                String s = baseUrl + "lockss/year/" + year;
+                uUrls.add(s);
+                log.debug3("The start url is " + s);
+                reader.close();
+                return uUrls;
+              }
+            }
+            reader.close();
             return super.getAccessUrls(au);
-          }
         }
     }
 }
