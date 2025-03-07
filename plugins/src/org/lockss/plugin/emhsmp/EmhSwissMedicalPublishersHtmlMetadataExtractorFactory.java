@@ -1,4 +1,4 @@
-package org.lockss.plugin.emhswiss;
+package org.lockss.plugin.emhsmp;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
@@ -8,7 +8,7 @@ import org.lockss.plugin.CachedUrl;
 
 import java.io.IOException;
 
-public class EmhSwissMedicalTriggeredPluginHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
+public class EmhSwissMedicalPublishersHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
 
     @Override
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,

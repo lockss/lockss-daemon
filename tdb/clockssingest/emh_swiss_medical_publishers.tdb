@@ -1,13 +1,13 @@
 {
   publisher <
-    name = EMH Swiss Publishers Ltd Triggered Content;
+    name = EMH Swiss Medical Publishers;
     info[contract] = 2018 ;
     info[tester] = S
   >
 
   {
 
-    plugin = org.lockss.plugin.emhswiss.ClockssEmhSwissMedicalTriggeredPlugin
+    plugin = org.lockss.plugin.emhsmp.ClockssEmhSwissMedicalPublishersTriggeredPlugin
     param[base_url] = https://emhsmp2025.clockss.org/
     param[publisher_id] = emhsmp
 
@@ -19,20 +19,20 @@
           name = Cardiovascular Medicine ;
            issn = 1664-2031 ;
            eissn = 1664-204X ;
-           issn_l = 1664-2031
+           issnl = 1664-2031
         >
 
         param[journal_id] = cvm
 
-        au < manifest ; exists ; 2016 ; Cardiovascular Medicine Volume 019 ; 019 >
-        au < manifest ; exists ; 2017 ; Cardiovascular Medicine Volume 020 ; 020 >
-        au < manifest ; exists ; 2018 ; Cardiovascular Medicine Volume 021 ; 021 >
-        au < manifest ; exists ; 2019 ; Cardiovascular Medicine Volume 022 ; 022 >
-        au < manifest ; exists ; 2020 ; Cardiovascular Medicine Volume 023 ; 023 >
-        au < manifest ; exists ; 2021 ; Cardiovascular Medicine Volume 024 ; 024 >
-        au < manifest ; exists ; 2022 ; Cardiovascular Medicine Volume 025 ; 025 >
-        au < manifest ; exists ; 2023 ; Cardiovascular Medicine Volume 026 ; 026 >
-        au < manifest ; exists ; 2024 ; Cardiovascular Medicine Volume 027 ; 027 >
+        au < testing ; exists ; 2016 ; Cardiovascular Medicine Volume 019 ; 019 >
+        au < testing ; exists ; 2017 ; Cardiovascular Medicine Volume 020 ; 020 >
+        au < testing ; exists ; 2018 ; Cardiovascular Medicine Volume 021 ; 021 >
+        au < testing ; exists ; 2019 ; Cardiovascular Medicine Volume 022 ; 022 >
+        au < testing ; exists ; 2020 ; Cardiovascular Medicine Volume 023 ; 023 >
+        au < testing ; exists ; 2021 ; Cardiovascular Medicine Volume 024 ; 024 >
+        au < testing ; exists ; 2022 ; Cardiovascular Medicine Volume 025 ; 025 >
+        au < testing ; exists ; 2023 ; Cardiovascular Medicine Volume 026 ; 026 >
+        au < testing ; exists ; 2024 ; Cardiovascular Medicine Volume 027 ; 027 >
 
     }
 
@@ -42,17 +42,17 @@
             name = Primary and Hospital Care Deutsche Ausgabe ;
             issn = 2297-7171 ;
             eissn = 2297-7163 ;
-            issn_l = 2297-7155
+            issnl = 2297-7155
         >
         param[journal_id] = phcde
 
-        au < manifest ; exists ; 2018 ; Primary and Hospital Care Deutsche Ausgabe Volume 018 ; 018 >
-        au < manifest ; exists ; 2019 ; Primary and Hospital Care Deutsche Ausgabe Volume 019 ; 019 >
-        au < manifest ; exists ; 2020 ; Primary and Hospital Care Deutsche Ausgabe Volume 020 ; 020 >
-        au < manifest ; exists ; 2021 ; Primary and Hospital Care Deutsche Ausgabe Volume 021 ; 021 >
-        au < manifest ; exists ; 2022 ; Primary and Hospital Care Deutsche Ausgabe Volume 022 ; 022 >
-        au < manifest ; exists ; 2023 ; Primary and Hospital Care Deutsche Ausgabe Volume 023 ; 023 >
-        au < manifest ; exists ; 2024 ; Primary and Hospital Care Deutsche Ausgabe Volume 024 ; 024 >
+        au < testing ; exists ; 2018 ; Primary and Hospital Care Deutsche Ausgabe Volume 018 ; 018 >
+        au < testing ; exists ; 2019 ; Primary and Hospital Care Deutsche Ausgabe Volume 019 ; 019 >
+        au < testing ; exists ; 2020 ; Primary and Hospital Care Deutsche Ausgabe Volume 020 ; 020 >
+        au < testing ; exists ; 2021 ; Primary and Hospital Care Deutsche Ausgabe Volume 021 ; 021 >
+        au < testing ; exists ; 2022 ; Primary and Hospital Care Deutsche Ausgabe Volume 022 ; 022 >
+        au < testing ; exists ; 2023 ; Primary and Hospital Care Deutsche Ausgabe Volume 023 ; 023 >
+        au < testing ; exists ; 2024 ; Primary and Hospital Care Deutsche Ausgabe Volume 024 ; 024 >
 
     }
 
@@ -63,19 +63,19 @@
             name = Primary and Hospital Care Édition Française ;
             issn = 2297-7171 ;
             eissn = 2297-721X ;
-            issn_l = 2297-7171
+            issnl = 2297-7171
         >
 
         param[journal_id] = phcfr
 
 
-        au < manifest ; exists ; 2018 ; Primary and Hospital Care Édition Française Volume 018 ; 018 >
-        au < manifest ; exists ; 2019 ; Primary and Hospital Care Édition Française Volume 019 ; 019 >
-        au < manifest ; exists ; 2020 ; Primary and Hospital Care Édition Française Volume 020 ; 020 >
-        au < manifest ; exists ; 2021 ; Primary and Hospital Care Édition Française Volume 021 ; 021 >
-        au < manifest ; exists ; 2022 ; Primary and Hospital Care Édition Française Volume 022 ; 022 >
-        au < manifest ; exists ; 2023 ; Primary and Hospital Care Édition Française Volume 023 ; 023 >
-        au < manifest ; exists ; 2024 ; Primary and Hospital Care Édition Française Volume 024 ; 024 >
+        au < testing ; exists ; 2018 ; Primary and Hospital Care Édition Française Volume 018 ; 018 >
+        au < testing ; exists ; 2019 ; Primary and Hospital Care Édition Française Volume 019 ; 019 >
+        au < testing ; exists ; 2020 ; Primary and Hospital Care Édition Française Volume 020 ; 020 >
+        au < testing ; exists ; 2021 ; Primary and Hospital Care Édition Française Volume 021 ; 021 >
+        au < testing ; exists ; 2022 ; Primary and Hospital Care Édition Française Volume 022 ; 022 >
+        au < testing ; exists ; 2023 ; Primary and Hospital Care Édition Française Volume 023 ; 023 >
+        au < testing ; exists ; 2024 ; Primary and Hospital Care Édition Française Volume 024 ; 024 >
 
     }
 
@@ -85,20 +85,20 @@
            name = Swiss Archives of Neurology, Psychiatry and Psychotherapy ;
            issn = 2297-6981 ;
            eissn = 2297-7007 ;
-           issn_l = 2297-6981
+           issnl = 2297-6981
         >
 
         param[journal_id] = sanp
 
-        au < manifest ; exists ; 2016 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 167 ; 167 >
-        au < manifest ; exists ; 2017 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 168 ; 168 >
-        au < manifest ; exists ; 2018 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 169 ; 169 >
-        au < manifest ; exists ; 2019 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 170 ; 170 >
-        au < manifest ; exists ; 2020 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 171 ; 171 >
-        au < manifest ; exists ; 2021 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 172 ; 172 >
-        au < manifest ; exists ; 2022 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 173 ; 173 >
-        au < manifest ; exists ; 2023 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 174 ; 174 >
-        au < manifest ; exists ; 2024 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 175 ; 175 >
+        au < testing ; exists ; 2016 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 167 ; 167 >
+        au < testing ; exists ; 2017 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 168 ; 168 >
+        au < testing ; exists ; 2018 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 169 ; 169 >
+        au < testing ; exists ; 2019 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 170 ; 170 >
+        au < testing ; exists ; 2020 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 171 ; 171 >
+        au < testing ; exists ; 2021 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 172 ; 172 >
+        au < testing ; exists ; 2022 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 173 ; 173 >
+        au < testing ; exists ; 2023 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 174 ; 174 >
+        au < testing ; exists ; 2024 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 175 ; 175 >
     }
 
     {
@@ -106,20 +106,20 @@
             name = Swiss Medical Forum Édition Française ;
             issn = 1661-6138 ;
             eissn = 1661-6146 ;
-            issn_l = 1661-6138
+            issnl = 1661-6138
         >
 
         param[journal_id] = smffr
 
-        au < manifest ; exists ; 2016 ; Swiss Medical Forum Édition Française Volume 001 ; 001 >
-        au < manifest ; exists ; 2017 ; Swiss Medical Forum Édition Française Volume 004 ; 004 >
-        au < manifest ; exists ; 2018 ; Swiss Medical Forum Édition Française Volume 018 ; 018 >
-        au < manifest ; exists ; 2019 ; Swiss Medical Forum Édition Française Volume 019 ; 019 >
-        au < manifest ; exists ; 2020 ; Swiss Medical Forum Édition Française Volume 020 ; 020 >
-        au < manifest ; exists ; 2021 ; Swiss Medical Forum Édition Française Volume 021 ; 021 >
-        au < manifest ; exists ; 2022 ; Swiss Medical Forum Édition Française Volume 022 ; 022 >
-        au < manifest ; exists ; 2023 ; Swiss Medical Forum Édition Française Volume 023 ; 023 >
-        au < manifest ; exists ; 2024 ; Swiss Medical Forum Édition Française Volume 024 ; 024 >
+        au < testing ; exists ; 2016 ; Swiss Medical Forum Édition Française Volume 001 ; 001 >
+        au < testing ; exists ; 2017 ; Swiss Medical Forum Édition Française Volume 004 ; 004 >
+        au < testing ; exists ; 2018 ; Swiss Medical Forum Édition Française Volume 018 ; 018 >
+        au < testing ; exists ; 2019 ; Swiss Medical Forum Édition Française Volume 019 ; 019 >
+        au < testing ; exists ; 2020 ; Swiss Medical Forum Édition Française Volume 020 ; 020 >
+        au < testing ; exists ; 2021 ; Swiss Medical Forum Édition Française Volume 021 ; 021 >
+        au < testing ; exists ; 2022 ; Swiss Medical Forum Édition Française Volume 022 ; 022 >
+        au < testing ; exists ; 2023 ; Swiss Medical Forum Édition Française Volume 023 ; 023 >
+        au < testing ; exists ; 2024 ; Swiss Medical Forum Édition Française Volume 024 ; 024 >
     }
   }
 }
