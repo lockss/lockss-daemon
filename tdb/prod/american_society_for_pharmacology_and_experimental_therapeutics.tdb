@@ -62,15 +62,15 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Drug Metabolism and Disposition Volume 41 ; 41 ; http://dmd.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Drug Metabolism and Disposition Volume 42 ; 42 ; http://dmd.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Drug Metabolism and Disposition Volume 43 ; 43 ; http://dmd.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2016 ; Drug Metabolism and Disposition Volume 44 ; 44 ; http://dmd.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2017 ; Drug Metabolism and Disposition Volume 45 ; 45 ; http://dmd.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2018 ; Drug Metabolism and Disposition Volume 46 ; 46 ; http://dmd.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Drug Metabolism and Disposition Volume 47 ; 47 ; http://dmd.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2020 ; Drug Metabolism and Disposition Volume 48 ; 48 ; https://dmd.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Drug Metabolism and Disposition Volume 49 ; 49 ; https://dmd.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2022 ; Drug Metabolism and Disposition Volume 50 ; 50 ; https://dmd.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2023 ; Drug Metabolism and Disposition Volume 51 ; 51 ; https://dmd.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Drug Metabolism and Disposition Volume 52 ; 52 ; https://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2016 ; Drug Metabolism and Disposition Volume 44 ; 44 ; http://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2017 ; Drug Metabolism and Disposition Volume 45 ; 45 ; http://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2018 ; Drug Metabolism and Disposition Volume 46 ; 46 ; http://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2019 ; Drug Metabolism and Disposition Volume 47 ; 47 ; http://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2020 ; Drug Metabolism and Disposition Volume 48 ; 48 ; https://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2021 ; Drug Metabolism and Disposition Volume 49 ; 49 ; https://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2022 ; Drug Metabolism and Disposition Volume 50 ; 50 ; https://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2023 ; Drug Metabolism and Disposition Volume 51 ; 51 ; https://dmd.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; doNotProcess ; 2024 ; Drug Metabolism and Disposition Volume 52 ; 52 ; https://dmd.aspetjournals.org/ >
 
   }
 
@@ -447,43 +447,43 @@
     au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Pharmacology and Experimental Therapeutics Volume 352 ; 352 ; http://jpet.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Pharmacology and Experimental Therapeutics Volume 353 ; 353 ; http://jpet.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Journal of Pharmacology and Experimental Therapeutics Volume 354 ; 354 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2015 ; Journal of Pharmacology and Experimental Therapeutics Volume 355 ; 355 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 356 ; 356 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 357 ; 357 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 358 ; 358 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 359 ; 359 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 360 ; 360 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 361 ; 361 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 362 ; 362 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 363 ; 363 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 364 ; 364 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 365 ; 365 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 366 ; 366 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 367 ; 367 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 368 ; 368 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 369 ; 369 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 370 ; 370 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 371 ; 371 ; http://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 372 ; 372 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 373 ; 373 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 374 ; 374 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 375 ; 375 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 376 ; 376 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 377 ; 377 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 378 ; 378 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 379 ; 379 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 380 ; 380 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 381 ; 381 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 382 ; 382 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 383 ; 383 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 384 ; 384 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 385 ; 385 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 386 ; 386 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 387 ; 387 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 388 ; 388 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 389 ; 389 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 390 ; 390 ; https://jpet.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 391 ; 391 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2015 ; Journal of Pharmacology and Experimental Therapeutics Volume 355 ; 355 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 356 ; 356 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 357 ; 357 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 358 ; 358 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2016 ; Journal of Pharmacology and Experimental Therapeutics Volume 359 ; 359 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 360 ; 360 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 361 ; 361 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 362 ; 362 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2017 ; Journal of Pharmacology and Experimental Therapeutics Volume 363 ; 363 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 364 ; 364 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 365 ; 365 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 366 ; 366 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2018 ; Journal of Pharmacology and Experimental Therapeutics Volume 367 ; 367 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 368 ; 368 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 369 ; 369 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 370 ; 370 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2019 ; Journal of Pharmacology and Experimental Therapeutics Volume 371 ; 371 ; http://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 372 ; 372 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 373 ; 373 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 374 ; 374 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2020 ; Journal of Pharmacology and Experimental Therapeutics Volume 375 ; 375 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 376 ; 376 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 377 ; 377 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 378 ; 378 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2021 ; Journal of Pharmacology and Experimental Therapeutics Volume 379 ; 379 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 380 ; 380 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 381 ; 381 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 382 ; 382 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2022 ; Journal of Pharmacology and Experimental Therapeutics Volume 383 ; 383 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 384 ; 384 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 385 ; 385 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 386 ; 386 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2023 ; Journal of Pharmacology and Experimental Therapeutics Volume 387 ; 387 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; doNotProcess ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 388 ; 388 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; doNotProcess ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 389 ; 389 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; doNotProcess ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 390 ; 390 ; https://jpet.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; doNotProcess ; 2024 ; Journal of Pharmacology and Experimental Therapeutics Volume 391 ; 391 ; https://jpet.aspetjournals.org/ >
 
     }
   }
@@ -622,24 +622,24 @@
     au < HighWirePressH20Plugin ; down ; 2014 ; Molecular Pharmacology Volume 86 ; 86 ; http://molpharm.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Molecular Pharmacology Volume 87 ; 87 ; http://molpharm.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Molecular Pharmacology Volume 88 ; 88 ; http://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2016 ; Molecular Pharmacology Volume 89 ; 89 ; http://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2016 ; Molecular Pharmacology Volume 90 ; 90 ; http://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2017 ; Molecular Pharmacology Volume 91 ; 91 ; http://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2017 ; Molecular Pharmacology Volume 92 ; 92 ; http://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2018 ; Molecular Pharmacology Volume 93 ; 93 ; http://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2018 ; Molecular Pharmacology Volume 94 ; 94 ; http://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Molecular Pharmacology Volume 95 ; 95 ; http://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Molecular Pharmacology Volume 96 ; 96 ; http://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2020 ; Molecular Pharmacology Volume 97 ; 97 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2020 ; Molecular Pharmacology Volume 98 ; 98 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Molecular Pharmacology Volume 99 ; 99 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Molecular Pharmacology Volume 100 ; 100 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2022 ; Molecular Pharmacology Volume 101 ; 101 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2022 ; Molecular Pharmacology Volume 102 ; 102 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2023 ; Molecular Pharmacology Volume 103 ; 103 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2023 ; Molecular Pharmacology Volume 104 ; 104 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Molecular Pharmacology Volume 105 ; 105 ; https://molpharm.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Molecular Pharmacology Volume 106 ; 106 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2016 ; Molecular Pharmacology Volume 89 ; 89 ; http://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2016 ; Molecular Pharmacology Volume 90 ; 90 ; http://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2017 ; Molecular Pharmacology Volume 91 ; 91 ; http://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2017 ; Molecular Pharmacology Volume 92 ; 92 ; http://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2018 ; Molecular Pharmacology Volume 93 ; 93 ; http://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2018 ; Molecular Pharmacology Volume 94 ; 94 ; http://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2019 ; Molecular Pharmacology Volume 95 ; 95 ; http://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2019 ; Molecular Pharmacology Volume 96 ; 96 ; http://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2020 ; Molecular Pharmacology Volume 97 ; 97 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2020 ; Molecular Pharmacology Volume 98 ; 98 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2021 ; Molecular Pharmacology Volume 99 ; 99 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2021 ; Molecular Pharmacology Volume 100 ; 100 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2022 ; Molecular Pharmacology Volume 101 ; 101 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2022 ; Molecular Pharmacology Volume 102 ; 102 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2023 ; Molecular Pharmacology Volume 103 ; 103 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2023 ; Molecular Pharmacology Volume 104 ; 104 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; doNotProcess ; 2024 ; Molecular Pharmacology Volume 105 ; 105 ; https://molpharm.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; doNotProcess ; 2024 ; Molecular Pharmacology Volume 106 ; 106 ; https://molpharm.aspetjournals.org/ >
 
     }
   }
@@ -722,15 +722,15 @@
     au < HighWirePressH20Plugin ; down ; 2013 ; Pharmacological Reviews Volume 65 ; 65 ; http://pharmrev.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 2014 ; Pharmacological Reviews Volume 66 ; 66 ; http://pharmrev.aspetjournals.org/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; Pharmacological Reviews Volume 67 ; 67 ; http://pharmrev.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2016 ; Pharmacological Reviews Volume 68 ; 68 ; http://pharmrev.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2017 ; Pharmacological Reviews Volume 69 ; 69 ; http://pharmrev.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2018 ; Pharmacological Reviews Volume 70 ; 70 ; http://pharmrev.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2019 ; Pharmacological Reviews Volume 71 ; 71 ; http://pharmrev.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2020 ; Pharmacological Reviews Volume 72 ; 72 ; https://pharmrev.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2021 ; Pharmacological Reviews Volume 73 ; 73 ; https://pharmrev.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2022 ; Pharmacological Reviews Volume 74 ; 74 ; https://pharmrev.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; released ; 2023 ; Pharmacological Reviews Volume 75 ; 75 ; https://pharmrev.aspetjournals.org/ >
-    au < aspet.ASPETDrupalPlugin ; manifest ; 2024 ; Pharmacological Reviews Volume 76 ; 76 ; https://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2016 ; Pharmacological Reviews Volume 68 ; 68 ; http://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2017 ; Pharmacological Reviews Volume 69 ; 69 ; http://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2018 ; Pharmacological Reviews Volume 70 ; 70 ; http://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2019 ; Pharmacological Reviews Volume 71 ; 71 ; http://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2020 ; Pharmacological Reviews Volume 72 ; 72 ; https://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2021 ; Pharmacological Reviews Volume 73 ; 73 ; https://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2022 ; Pharmacological Reviews Volume 74 ; 74 ; https://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; down ; 2023 ; Pharmacological Reviews Volume 75 ; 75 ; https://pharmrev.aspetjournals.org/ >
+    au < aspet.ASPETDrupalPlugin ; doNotProcess ; 2024 ; Pharmacological Reviews Volume 76 ; 76 ; https://pharmrev.aspetjournals.org/ >
 
   }
 
