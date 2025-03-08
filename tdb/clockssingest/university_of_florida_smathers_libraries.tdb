@@ -88,7 +88,7 @@
       au < finished ; manifest ; 2022 ; Chemical Engineering Education Volume 2022 ; 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; Chemical Engineering Education Volume 2023 ; 2023 ; 2023 ; > #login found, https://journals.flvc.org/cee/article/view/132637/136584
       au < notReady ; exists ; 2024 ; Chemical Engineering Education Volume 2024 ; 2024 ; 2024 ; > #redirect to login page
-      au < expected ; exists ; 2025 ; Chemical Engineering Education Volume 2025 ; 2025 ; 2025 ; > #redirect to login page
+      au < manifest ; exists ; 2025 ; Chemical Engineering Education Volume 2025 ; 2025 ; 2025 ; > #redirect to login page
 
   }
 
@@ -491,7 +491,7 @@
       au < finished ; manifest ; 2021 ; Studies in African Linguistics Volume 52 ; 52 ; 2021 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Studies in African Linguistics Volume 53 ; 53 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Studies in African Linguistics Volume 54 ; 54 ; 2023 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2024 ; Studies in African Linguistics Volume 55 ; 55 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; Studies in African Linguistics Volume 55 ; 55 ; 2024 ; >
       au < expected ; exists ; 2025 ; Studies in African Linguistics Volume 56 ; 56 ; 2025 ; >
 
   }
@@ -821,7 +821,7 @@
       au < finished ; manifest ; 2022 ; EDIS Volume 2022 ; 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; EDIS Volume 2023 ; 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2024 ; EDIS Volume 2024 ; 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; EDIS Volume 2025 ; 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; EDIS Volume 2025 ; 2025 ; 2025 ; >
 
   }
 
