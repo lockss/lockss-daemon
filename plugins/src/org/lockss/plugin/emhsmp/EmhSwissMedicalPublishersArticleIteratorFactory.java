@@ -48,9 +48,10 @@ public class EmhSwissMedicalPublishersArticleIteratorFactory implements ArticleI
     protected static final String ROOT_TEMPLATE = "\"%s%s/%s/%s\", base_url, publisher_id, journal_id, volume_name";
     protected static final String PATTERN_TEMPLATE = "/([^/]+)(?:/(article_pdf|metadata_jats)/([^/]+)\\.(xml|pdf)|/index\\.html)$";
 
-    public static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)/metadata_jats/([^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);
-    public static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+)/article_pdf/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-    public static final Pattern HTML_PATTERN = Pattern.compile("/([^/]+)/index\\.html$", Pattern.CASE_INSENSITIVE);
+    public static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+)/(article_pdf)/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+
+    //public static final Pattern XML_PATTERN = Pattern.compile("/([^/]+)/(metadata_jats)/([^/]+)\.xml$", Pattern.CASE_INSENSITIVE);
+    //public static final Pattern HTML_PATTERN = Pattern.compile("/([^/]+)/index\\.html$", Pattern.CASE_INSENSITIVE);
 
     public static final String XML_REPLACEMENT = "/$1/metadata_jats/$2.xml";
     private static final String PDF_REPLACEMENT = "/$1/article_pdf/$2.pdf";
@@ -68,21 +69,25 @@ public class EmhSwissMedicalPublishersArticleIteratorFactory implements ArticleI
                 PATTERN_TEMPLATE,
                 Pattern.CASE_INSENSITIVE);
 
-        builder.addAspect(HTML_PATTERN,
+        builder.addAspect(
+                PDF_PATTERN,
+                PDF_REPLACEMENT,
+                ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+        builder.addAspect(
+                //HTML_PATTERN,
                 HTML_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_HTML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
-        builder.addAspect(PDF_PATTERN,
-                PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-        builder.addAspect(XML_PATTERN,
+        builder.addAspect(
+                //XML_PATTERN,
                 XML_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_XML);
         
 
-        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML);
+        //builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML);
 
         /*
          builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML);
