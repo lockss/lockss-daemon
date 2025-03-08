@@ -18,24 +18,6 @@ public class EmhSwissMedicalPublishersArticleIteratorFactory implements ArticleI
 
     protected static Logger log = Logger.getLogger(EmhSwissMedicalPublishersArticleIteratorFactory.class);
 
-    /*
-    emhsmp/cvm/019/01/00378/article_pdf/cvm-2016-00378.pdf
-    emhsmp/cvm/019/01/00378/index.html
-    emhsmp/cvm/019/01/00378/metadata_jats/cvm-2016-00378.xml
-
-
-    protected static final String ROOT_TEMPLATE = "\"%s%s/%s/%s\",base_url,publisher_id,journal_id, volume_name";
-    protected static final String PATTERN_TEMPLATE = "/(?:([^/]+/[^/]+/(?:article_pdf|metadata_jats)/[^/]+)\\.(xml|pdf)|([^/]+/[^/]+)/index\\.html)$";
-
-    public static final Pattern XML_PATTERN = Pattern.compile("/([^/]+/[^/]+/metadata_jats/[^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);
-    public static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+/[^/]+/article_pdf/[^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
-    public static final Pattern HTML_PATTERN = Pattern.compile("/([^/]+/[^/]+)/index\\.html$", Pattern.CASE_INSENSITIVE);
-
-    public static final String XML_REPLACEMENT = "/$1.xml";
-    private static final String PDF_REPLACEMENT = "/$1.pdf";
-    public static final String HTML_REPLACEMENT = "/$1/index.html";
-
-     */
 
     /*
         Expected new aspect pattern
@@ -75,30 +57,15 @@ public class EmhSwissMedicalPublishersArticleIteratorFactory implements ArticleI
                 ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         builder.addAspect(
-                //HTML_PATTERN,
                 HTML_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_HTML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
 
         builder.addAspect(
-                //XML_PATTERN,
                 XML_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_XML);
-        
 
-        //builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML);
-
-        /*
-         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML);
-                ArticleFiles.ROLE_FULL_TEXT_PDF,
-                ArticleFiles.ROLE_FULL_TEXT_XML));
-
-        builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, Arrays.asList(
-                ArticleFiles.ROLE_FULL_TEXT_HTML,
-                ArticleFiles.ROLE_FULL_TEXT_PDF,
-                ArticleFiles.ROLE_FULL_TEXT_XML));
-        */
 
         return builder.getSubTreeArticleIterator();
     }
