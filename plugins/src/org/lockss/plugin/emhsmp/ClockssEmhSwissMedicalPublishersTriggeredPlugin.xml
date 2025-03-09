@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -101,11 +101,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>EMH Swiss Medical Publishers Triggered Plugin (CLOCKSS)</string>
+        <string>EMH Swiss Medical Publishers Triggered Content Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"EMH Swiss Medical Publishers Triggered Content (CLOCKSS), Base URL %s, Publisher ID %s, Journal ID %s, Volume %s", base_url, publisher_id, journal_id, volume_name</string>
+        <string>"EMH Swiss Medical Publishers Triggered Content Plugin (CLOCKSS), Base URL %s, Publisher ID %s, Journal ID %s, Volume %s", base_url, publisher_id, journal_id, volume_name</string>
     </entry>
     <entry>
         <string>au_start_url</string>
@@ -122,13 +122,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1, "https://fonts\.googleapis\.com/css.*"</string>
-            <string>1, "%sindex.html", base_url</string>
-            <string>1, "%s%s/index.html", base_url, publisher_id</string>
-            <string>1, "%s%s/%s/index.html", base_url, publisher_id, journal_id</string>
-            <string>1, "%s%s/%s/%s/index.html", base_url, publisher_id, journal_id, volume_name</string>
-            <string>1, "%s%s/%s/%s", base_url, publisher_id, journal_id, volume_name</string>
-            <string>1, "%sassets/",base_url</string>
+            <string>1, "^https://(fonts\.googleapis\.com|fonts\.gstatic\.com)/"</string>
+            <string>1, "^%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)$", base_url</string>
+            <string>1, "^%s%s/%s/%s/", base_url, publisher_id, journal_id, volume_name</string>
+            <string>1, "^%s%s/%s/index.html", base_url, publisher_id, journal_id</string>
+            <string>1, "^%s%s/index.html", base_url, publisher_id</string>
+            <string>1, "^%sindex.html", base_url</string>
         </list>
     </entry>
 
@@ -152,8 +151,22 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_permitted_host_pattern</string>
         <list>
-            <string>html5up\.net</string>
             <string>fonts\.googleapis\.com</string>
+            <string>fonts\.gstatic\.com</string>
         </list>
+    </entry>
+    <!-- Allowed because crawling from an internal server -->
+    <entry>
+      <string>au_def_pause_time</string>
+      <long>100</long>
+    </entry>
+    <entry>
+      <string>clockss_override</string>
+      <map>
+        <entry>
+          <string>au_def_pause_time</string>
+          <long>100</long>
+        </entry>
+      </map>
     </entry>
 </map>    
