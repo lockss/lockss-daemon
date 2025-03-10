@@ -3,7 +3,9 @@
   publisher <
     name = EMH Swiss Medical Publishers;
     info[contract] = 2018 ;
-    info[tester] = S
+    info[back] = 2016 ;
+    info[tester] = 1 ;
+    info[platform] = Custom
   >
 
     plugin = org.lockss.plugin.emhsmp.ClockssEmhSwissMedicalPublishersTriggeredPlugin
