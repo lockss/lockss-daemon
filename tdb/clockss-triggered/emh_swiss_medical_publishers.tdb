@@ -1,0 +1,151 @@
+{
+
+  publisher <
+    name = EMH Swiss Medical Publishers;
+    info[contract] = 2018 ;
+    info[back] = 2016 ;
+    info[tester] = 1 ;
+    info[platform] = Custom
+  >
+
+    plugin = org.lockss.plugin.emhsmp.ClockssEmhSwissMedicalPublishersTriggeredPlugin
+    param[base_url] = https://emhsmp2025.clockss.org/
+    param[publisher_id] = emhsmp
+
+    implicit < status ; year ; volume ; name ;  param[volume_name] >
+
+    {
+    
+        title <
+          name = Cardiovascular Medicine ;
+           issn = 1664-2031 ;
+           eissn = 1664-204X ;
+           issnl = 1664-2031
+        >
+
+        param[journal_id] = cvm
+
+        au < exists ; 2016 ; 19 ; Cardiovascular Medicine Volume 19 ; 019 >
+        au < exists ; 2017 ; 20 ; Cardiovascular Medicine Volume 20 ; 020 >
+        au < exists ; 2018 ; 21 ; Cardiovascular Medicine Volume 21 ; 021 >
+        au < exists ; 2019 ; 22 ; Cardiovascular Medicine Volume 22 ; 022 >
+        au < exists ; 2020 ; 23 ; Cardiovascular Medicine Volume 23 ; 023 >
+        au < exists ; 2021 ; 24 ; Cardiovascular Medicine Volume 24 ; 024 >
+        au < exists ; 2022 ; 25 ; Cardiovascular Medicine Volume 25 ; 025 >
+        au < exists ; 2023 ; 26 ; Cardiovascular Medicine Volume 26 ; 026 >
+        au < exists ; 2024 ; 27 ; Cardiovascular Medicine Volume 27 ; 027 >
+
+    }
+
+    {
+    
+        title <
+            name = Primary and Hospital Care Deutsche Ausgabe ;
+            issn = 2297-7155 ;
+            eissn = 2297-7163 ;
+            issnl = 2297-7155
+        >
+        
+        param[journal_id] = phcde
+
+        au < exists ; 2018 ; 18 ; Primary and Hospital Care Deutsche Ausgabe Volume 18 ; 018 >
+        au < exists ; 2019 ; 19 ; Primary and Hospital Care Deutsche Ausgabe Volume 19 ; 019 >
+        au < exists ; 2020 ; 20 ; Primary and Hospital Care Deutsche Ausgabe Volume 20 ; 020 >
+        au < exists ; 2021 ; 21 ; Primary and Hospital Care Deutsche Ausgabe Volume 21 ; 021 >
+        au < exists ; 2022 ; 22 ; Primary and Hospital Care Deutsche Ausgabe Volume 22 ; 022 >
+        au < exists ; 2023 ; 23 ; Primary and Hospital Care Deutsche Ausgabe Volume 23 ; 023 >
+        au < exists ; 2024 ; 24 ; Primary and Hospital Care Deutsche Ausgabe Volume 24 ; 024 >
+
+    }
+
+    {
+
+        title <
+            name = Primary and Hospital Care Édition Française ;
+            issn = 2297-7171 ;
+            eissn = 2297-721X ;
+            issnl = 2297-7171
+        >
+
+        param[journal_id] = phcfr
+
+        au < exists ; 2018 ; 18 ; Primary and Hospital Care Édition Française Volume 18 ; 018 >
+        au < exists ; 2019 ; 19 ; Primary and Hospital Care Édition Française Volume 19 ; 019 >
+        au < exists ; 2020 ; 20 ; Primary and Hospital Care Édition Française Volume 20 ; 020 >
+        au < exists ; 2021 ; 21 ; Primary and Hospital Care Édition Française Volume 21 ; 021 >
+        au < exists ; 2022 ; 22 ; Primary and Hospital Care Édition Française Volume 22 ; 022 >
+        au < exists ; 2023 ; 23 ; Primary and Hospital Care Édition Française Volume 23 ; 023 >
+        au < exists ; 2024 ; 24 ; Primary and Hospital Care Édition Française Volume 24 ; 024 >
+
+    }
+
+    {
+    
+        title <
+           name = Swiss Archives of Neurology, Psychiatry and Psychotherapy ;
+           issn = 2297-6981 ;
+           eissn = 2297-7007 ;
+           issnl = 2297-6981
+        >
+
+        param[journal_id] = sanp
+
+        au < exists ; 2016 ; 167 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 167 ; 167 >
+        au < exists ; 2017 ; 168 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 168 ; 168 >
+        au < exists ; 2018 ; 169 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 169 ; 169 >
+        au < exists ; 2019 ; 170 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 170 ; 170 >
+        au < exists ; 2020 ; 171 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 171 ; 171 >
+        au < exists ; 2021 ; 172 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 172 ; 172 >
+        au < exists ; 2022 ; 173 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 173 ; 173 >
+        au < exists ; 2023 ; 174 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 174 ; 174 >
+        au < exists ; 2024 ; 175 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 175 ; 175 >
+        
+    }
+
+    {
+    
+        title <
+            name = Swiss Medical Forum Deutsche Ausgabe ;
+            issn = 1424-3784 ;
+            eissn = 1424-4020 ;
+            issnl = 1424-3784
+        >
+
+        param[journal_id] = smfde
+
+        au < exists ; 2016 ; 1 ; Swiss Medical Forum Deutsche Ausgabe Volume 1 ; 001 >
+        au < exists ; 2017 ; 4 ; Swiss Medical Forum Deutsche Ausgabe Volume 4 ; 004 >
+        au < exists ; 2018 ; 18 ; Swiss Medical Forum Deutsche Ausgabe Volume 18 ; 018 >
+        au < exists ; 2019 ; 19 ; Swiss Medical Forum Deutsche Ausgabe Volume 19 ; 019 >
+        au < exists ; 2020 ; 20 ; Swiss Medical Forum Deutsche Ausgabe Volume 20 ; 020 >
+        au < exists ; 2021 ; 21 ; Swiss Medical Forum Deutsche Ausgabe Volume 21 ; 021 >
+        au < exists ; 2022 ; 22 ; Swiss Medical Forum Deutsche Ausgabe Volume 22 ; 022 >
+        au < exists ; 2023 ; 23 ; Swiss Medical Forum Deutsche Ausgabe Volume 23 ; 023 >
+        au < exists ; 2024 ; 24 ; Swiss Medical Forum Deutsche Ausgabe Volume 24 ; 024 >
+        
+    }
+
+    {
+    
+        title <
+            name = Swiss Medical Forum Édition Française ;
+            issn = 1661-6138 ;
+            eissn = 1661-6146 ;
+            issnl = 1661-6138
+        >
+
+        param[journal_id] = smffr
+
+        au < exists ; 2016 ; 1 ; Swiss Medical Forum Édition Française Volume 1 ; 001 >
+        au < exists ; 2017 ; 4 ; Swiss Medical Forum Édition Française Volume 4 ; 004 >
+        au < exists ; 2018 ; 18 ; Swiss Medical Forum Édition Française Volume 18 ; 018 >
+        au < exists ; 2019 ; 19 ; Swiss Medical Forum Édition Française Volume 19 ; 019 >
+        au < exists ; 2020 ; 20 ; Swiss Medical Forum Édition Française Volume 20 ; 020 >
+        au < exists ; 2021 ; 21 ; Swiss Medical Forum Édition Française Volume 21 ; 021 >
+        au < exists ; 2022 ; 22 ; Swiss Medical Forum Édition Française Volume 22 ; 022 >
+        au < exists ; 2023 ; 23 ; Swiss Medical Forum Édition Française Volume 23 ; 023 >
+        au < exists ; 2024 ; 24 ; Swiss Medical Forum Édition Française Volume 24 ; 024 >
+        
+    }
+
+}

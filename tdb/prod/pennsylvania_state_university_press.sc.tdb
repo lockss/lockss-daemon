@@ -76,7 +76,7 @@
       au < released ; 2022 ; Comparative Literature Studies Volume 59 ; 59 ; 2022 >
       au < released ; 2023 ; Comparative Literature Studies Volume 60 ; 60 ; 2023 >
       au < manifest ; 2024 ; Comparative Literature Studies Volume 61 ; 61 ; 2024 >
-      au < expected ; 2025 ; Comparative Literature Studies Volume 62 ; 62 ; 2025 >
+      au < manifest ; 2025 ; Comparative Literature Studies Volume 62 ; 62 ; 2025 >
 
   }
 
@@ -160,7 +160,7 @@
       au < released ; 2022 ; The Eugene O'Neill Review Volume 43 ; 43 ; 2022 >
       au < released ; 2023 ; The Eugene O'Neill Review Volume 44 ; 44 ; 2023 >
       au < manifest ; 2024 ; The Eugene O'Neill Review Volume 45 ; 45 ; 2024 >
-      au < expected ; 2025 ; The Eugene O'Neill Review Volume 46 ; 46 ; 2025 >
+      au < manifest ; 2025 ; The Eugene O'Neill Review Volume 46 ; 46 ; 2025 >
 
   }
 
@@ -2192,9 +2192,9 @@
 
       param[journal_id] = nursing-history-review
 
-      au < exists ; 2023 ; Nursing History Review Volume 31 ; 31 ; 2023 >
-      au < expected ; 2024 ; Nursing History Review Volume 32 ; 32 ; 2024 >
-      au < expected ; 2025 ; Nursing History Review Volume 33 ; 33 ; 2025 >
+      au < manifest ; 2023 ; Nursing History Review Volume 31 ; 31 ; 2023 >
+      au < manifest ; 2024 ; Nursing History Review Volume 32 ; 32 ; 2024 >
+      au < manifest ; 2025 ; Nursing History Review Volume 33 ; 33 ; 2025 >
   }
 
   {
@@ -2385,7 +2385,7 @@
       au < released ; 2021 ; Restoration and Eighteenth-Century Theatre Research Volume 33 ; 33 ; 2021 >
       au < released ; 2022 ; Restoration and Eighteenth-Century Theatre Research Volume 34 ; 34 ; 2022 >
       au < released ; 2023 ; Restoration and Eighteenth-Century Theatre Research Volume 35 ; 35 ; 2023 >
-      au < expected ; 2024 ; Restoration and Eighteenth-Century Theatre Research Volume 36 ; 36 ; 2024 >
+      au < manifest ; 2024 ; Restoration and Eighteenth-Century Theatre Research Volume 36 ; 36 ; 2024 >
       au < expected ; 2025 ; Restoration and Eighteenth-Century Theatre Research Volume 37 ; 37 ; 2025 >
 
   }
