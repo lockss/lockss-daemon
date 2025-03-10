@@ -598,7 +598,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Health & Care Informatics Volume 29 ; 29 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Health & Care Informatics Volume 30 ; 30 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Health & Care Informatics Volume 31 ; 31 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Health & Care Informatics Volume 32 ; 32 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Health & Care Informatics Volume 32 ; 32 ; https://informatics.bmj.com/ >
 
   }
 
@@ -694,7 +694,7 @@
     au < bmj.BMJDrupalPlugin ; notReady ; 2022 ; BMJ Open Ophthalmology Volume 7 ; 7 ; https://bmjophth.bmj.com/ > #Access Denied ~ https://bmjophth.bmj.com/content/7/Suppl_1
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Open Ophthalmology Volume 8 ; 8 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; BMJ Open Ophthalmology Volume 9 ; 9 ; https://bmjophth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Open Ophthalmology Volume 10 ; 10 ; https://bmjophth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Open Ophthalmology Volume 10 ; 10 ; https://bmjophth.bmj.com/ >
 
   }
   
@@ -2570,7 +2570,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Occupational and Environmental Medicine Volume 79 ; 79 ; https://oem.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Occupational and Environmental Medicine Volume 80 ; 80 ; https://oem.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2024 ; Occupational and Environmental Medicine Volume 81 ; 81 ; https://oem.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Occupational and Environmental Medicine Volume 82 ; 82 ; https://oem.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; Occupational and Environmental Medicine Volume 82 ; 82 ; https://oem.bmj.com/ >
 
   }
 
