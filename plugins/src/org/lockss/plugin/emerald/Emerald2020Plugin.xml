@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -116,6 +116,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^%sinsight/proxy/img\?link=", base_url</string>
       <string>1,"^%sinsight/publication/issn/%s/vol/%s/iss/", base_url, journal_issn, volume_name</string>
       <string>1,"^%sinsight/content/doi/", base_url</string>
+      <string>1,"%sinsight/publication/issn/%s", base_url, journal_issn</string>
     </list>
   </entry>
   <!--https://www.emerald.com/insight/content/doi/10.1108/SR-01-2020-0013/full/pdf?title=two-step-calibration-method-for-three-axis-magnetic-sensor-error-based-on-particle-swarm-optimization-->

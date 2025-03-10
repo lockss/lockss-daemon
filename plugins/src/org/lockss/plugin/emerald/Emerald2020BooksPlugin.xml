@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -117,6 +117,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^%sinsight/proxy/img\?link=", base_url</string>
       <!-- the book_uri can have "(",")", space or other special character-->
       <string>1,"^%sinsight/content/doi/", base_url</string>
+      <string>1,"%sinsight/publication/doi/%s", base_url, book_uri</string>
     </list>
   </entry>
   <!-- Each book chapter has its own pdf, and its own book_uri-->
