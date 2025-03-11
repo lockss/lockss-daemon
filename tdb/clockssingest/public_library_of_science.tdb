@@ -35,12 +35,12 @@
       au < manifest ; exists ; 2016 ; PLOS Biology Volume 2016 ; 2016 >
       au < manifest ; exists ; 2017 ; PLOS Biology Volume 2017 ; 2017 >
       au < manifest ; exists ; 2018 ; PLOS Biology Volume 2018 ; 2018 >
-      au < manifest ; exists ; 2019 ; PLOS Biology Volume 2019 ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS Biology Volume 2019 ; 2019 >
       au < crawling ; exists ; 2020 ; PLOS Biology Volume 2020 ; 2020 >
       au < crawling ; exists ; 2021 ; PLOS Biology Volume 2021 ; 2021 >
       au < crawling ; exists ; 2022 ; PLOS Biology Volume 2022 ; 2022 >
       au < crawling ; exists ; 2023 ; PLOS Biology Volume 2023 ; 2023 >
-      au < manifest ; exists ; 2024 ; PLOS Biology Volume 2024 ; 2024 >
+      au < ready ; exists ; 2024 ; PLOS Biology Volume 2024 ; 2024 >
       au < manifest ; exists ; 2025 ; PLOS Biology Volume 2025 ; 2025 >
 
   }
@@ -112,7 +112,7 @@
       au < manifest ; exists ; 2016 ; PLOS Computational Biology Volume 2016 ; 2016 >
       au < manifest ; exists ; 2017 ; PLOS Computational Biology Volume 2017 ; 2017 >
       au < manifest ; exists ; 2018 ; PLOS Computational Biology Volume 2018 ; 2018 >
-      au < manifest ; exists ; 2019 ; PLOS Computational Biology Volume 2019 ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS Computational Biology Volume 2019 ; 2019 >
       au < crawling ; exists ; 2020 ; PLOS Computational Biology Volume 2020 ; 2020 >
       au < crawling ; exists ; 2021 ; PLOS Computational Biology Volume 2021 ; 2021 >
       au < manifest ; exists ; 2022 ; PLOS Computational Biology Volume 2022 ; 2022 >
@@ -161,7 +161,7 @@
       au < manifest ; exists ; 2016 ; PLOS Genetics Volume 2016 ; 2016 >
       au < manifest ; exists ; 2017 ; PLOS Genetics Volume 2017 ; 2017 >
       au < manifest ; exists ; 2018 ; PLOS Genetics Volume 2018 ; 2018 >
-      au < manifest ; exists ; 2019 ; PLOS Genetics Volume 2019 ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS Genetics Volume 2019 ; 2019 >
       au < crawling ; exists ; 2020 ; PLOS Genetics Volume 2020 ; 2020 >
       au < crawling ; exists ; 2021 ; PLOS Genetics Volume 2021 ; 2021 >
       au < crawling ; exists ; 2022 ; PLOS Genetics Volume 2022 ; 2022 >
@@ -213,7 +213,7 @@
       au < manifest ; exists ; 2017 ; PLOS Medicine Volume 2017 ; 2017 >
       au < manifest ; exists ; 2018 ; PLOS Medicine Volume 2018 ; 2018 >
       au < manifest ; exists ; 2019 ; PLOS Medicine Volume 2019 ; 2019 >
-      au < manifest ; exists ; 2020 ; PLOS Medicine Volume 2020 ; 2020 >
+      au < ready ; exists ; 2020 ; PLOS Medicine Volume 2020 ; 2020 >
       au < crawling ; exists ; 2021 ; PLOS Medicine Volume 2021 ; 2021 >
       au < crawling ; exists ; 2022 ; PLOS Medicine Volume 2022 ; 2022 >
       au < crawling ; exists ; 2023 ; PLOS Medicine Volume 2023 ; 2023 >
@@ -261,8 +261,8 @@
       au < crawling ; exists ; 2020 ; PLOS Neglected Tropical Diseases Volume 2020 ; 2020 >
       au < crawling ; exists ; 2021 ; PLOS Neglected Tropical Diseases Volume 2021 ; 2021 >
       au < crawling ; exists ; 2022 ; PLOS Neglected Tropical Diseases Volume 2022 ; 2022 >
-      au < manifest ; exists ; 2023 ; PLOS Neglected Tropical Diseases Volume 2023 ; 2023 >
-      au < manifest ; exists ; 2024 ; PLOS Neglected Tropical Diseases Volume 2024 ; 2024 >
+      au < ready ; exists ; 2023 ; PLOS Neglected Tropical Diseases Volume 2023 ; 2023 >
+      au < ready ; exists ; 2024 ; PLOS Neglected Tropical Diseases Volume 2024 ; 2024 >
       au < manifest ; exists ; 2025 ; PLOS Neglected Tropical Diseases Volume 2025 ; 2025 >
 
   }

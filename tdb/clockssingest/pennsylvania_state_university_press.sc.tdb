@@ -2194,8 +2194,8 @@
 
       param[journal_id] = nursing-history-review
 
-      au < manifest ; exists ; 2023 ; Nursing History Review Volume 31 ; 31 ; 2023 ; >
-      au < manifest ; exists ; 2024 ; Nursing History Review Volume 32 ; 32 ; 2024 ; >
+      au < ready ; exists ; 2023 ; Nursing History Review Volume 31 ; 31 ; 2023 ; >
+      au < ready ; exists ; 2024 ; Nursing History Review Volume 32 ; 32 ; 2024 ; >
       au < manifest ; exists ; 2025 ; Nursing History Review Volume 33 ; 33 ; 2025 ; >
   }
 
