@@ -1405,89 +1405,89 @@
 #    }
 #  }
 #
-  {
-
-      title <
-        name = Secularism and Nonreligion ;
-        eissn = 2053-6712
-      >
-
-      comment[publisher] = Ubiquity Press
-    {
-      #no longer at this address.
-#      param[base_url] = http://www.secularismandnonreligion.org/
-
-      au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; https://www.secularismandnonreligion.org/ ; >
-      au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; https://www.secularismandnonreligion.org/ ; >
-      au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://www.secularismandnonreligion.org/ ; >
-      au < finished ; finished ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; http://www.secularismandnonreligion.org/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 [superseded] ; 2016 ; http://www.secularismandnonreligion.org/ ; >
-      au < doNotProcess ; exists ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://www.secularismandnonreligion.org/ ; >
-    }
-
-    {
-      #moved to https and lost www.
-#      param[base_url] = https://secularismandnonreligion.org/
-
-      au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; https://secularismandnonreligion.org/ ; >
-      au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; https://secularismandnonreligion.org/ ; >
-      au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://secularismandnonreligion.org/ ; >
-      au < doNotProcess ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; https://secularismandnonreligion.org/ ; >
-      au < finished ; finished ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; https://secularismandnonreligion.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://secularismandnonreligion.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; https://secularismandnonreligion.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 8 ; Secularism and Nonreligion Volume 2019 ; 2019 ; https://secularismandnonreligion.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 9 ; Secularism and Nonreligion Volume 2020 ; 2020 ; https://secularismandnonreligion.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2021 ; 10 ; Secularism and Nonreligion Volume 2021 ; 2021 ; https://secularismandnonreligion.org/ ; reingest3.clockss.org:8083 >
-      au < superseded ; exists ; 2022 ; 11 ; Secularism and Nonreligion Volume 2022 [superseded] ; 2022 ; https://secularismandnonreligion.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Secularism and Nonreligion Volume 2023 ; 2023 ; https://secularismandnonreligion.org/ ; >
-
-    }
-  }
-
-  {
-
-      title <
-        name = Utrecht Journal of International and European Law ;
-        eissn = 2053-5341
-      >
-
-      comment[publisher] = Ubiquity Press
-    {
-      #no longer at this url
-#      param[base_url] = http://www.utrechtjournal.org/
-
-      au < finished ; finished ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; http://www.utrechtjournal.org/ ; reingest4.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; https://www.utrechtjournal.org/ ; >
-      au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; https://www.utrechtjournal.org/ ; >
-      au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://www.utrechtjournal.org/ ; >
-      au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://www.utrechtjournal.org/ ; >
-      au < finished ; finished ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; http://www.utrechtjournal.org/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 [superseded] ; 2016 ; http://www.utrechtjournal.org/ ; >
-      au < doNotProcess ; exists ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://www.utrechtjournal.org/ ; >
-    }
-    {
-      #moved to https and lost www.
-#      param[base_url] = https://utrechtjournal.org/
-
-      au < doNotProcess ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; https://utrechtjournal.org/ ; >
-      au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; https://utrechtjournal.org/ ; >
-      au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; https://utrechtjournal.org/ ; >
-      au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://utrechtjournal.org/ ; >
-      au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://utrechtjournal.org/ ; >
-      au < doNotProcess ; exists ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; https://utrechtjournal.org/ ; >
-      au < finished ; finished ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 9 ; Utrecht Journal of International and European Law Volume 2018 ; 2018 ; https://utrechtjournal.org/ ; reingest1.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2019 ; 10 ; Utrecht Journal of International and European Law Volume 2019 ; 2019 ; https://utrechtjournal.org/ ; >
-      au < finished ; finished ; 2020 ; 11 ; Utrecht Journal of International and European Law Volume 2020 ; 2020 ; https://utrechtjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 12 ; Utrecht Journal of International and European Law Volume 2021 ; 2021 ; https://utrechtjournal.org/ ; reingest2.clockss.org:8085 >
-      au < superseded ; exists ; 2022 ; 13 ; Utrecht Journal of International and European Law Volume 2022 [superseded] ; 2022 ; https://utrechtjournal.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Utrecht Journal of International and European Law Volume 2023 ; 2023 ; https://utrechtjournal.org/ ; >
-
-    }
-  }
-
+#  {
+#
+#      title <
+#        name = Secularism and Nonreligion ;
+#        eissn = 2053-6712
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+#    {
+#      #no longer at this address.
+##      param[base_url] = http://www.secularismandnonreligion.org/
+#
+#      au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; https://www.secularismandnonreligion.org/ ; >
+#      au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; https://www.secularismandnonreligion.org/ ; >
+#      au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://www.secularismandnonreligion.org/ ; >
+#      au < finished ; finished ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; http://www.secularismandnonreligion.org/ ; reingest5.clockss.org:8082 >
+#      au < superseded ; exists ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 [superseded] ; 2016 ; http://www.secularismandnonreligion.org/ ; >
+#      au < doNotProcess ; exists ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://www.secularismandnonreligion.org/ ; >
+#    }
+#
+#    {
+#      #moved to https and lost www.
+##      param[base_url] = https://secularismandnonreligion.org/
+#
+#      au < doNotProcess ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; https://secularismandnonreligion.org/ ; >
+#      au < doNotProcess ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; https://secularismandnonreligion.org/ ; >
+#      au < doNotProcess ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; https://secularismandnonreligion.org/ ; >
+#      au < doNotProcess ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; https://secularismandnonreligion.org/ ; >
+#      au < finished ; finished ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; https://secularismandnonreligion.org/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; https://secularismandnonreligion.org/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; https://secularismandnonreligion.org/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2019 ; 8 ; Secularism and Nonreligion Volume 2019 ; 2019 ; https://secularismandnonreligion.org/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2020 ; 9 ; Secularism and Nonreligion Volume 2020 ; 2020 ; https://secularismandnonreligion.org/ ; reingest3.clockss.org:8083 >
+#      au < finished ; crawling ; 2021 ; 10 ; Secularism and Nonreligion Volume 2021 ; 2021 ; https://secularismandnonreligion.org/ ; reingest3.clockss.org:8083 >
+#      au < superseded ; exists ; 2022 ; 11 ; Secularism and Nonreligion Volume 2022 [superseded] ; 2022 ; https://secularismandnonreligion.org/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Secularism and Nonreligion Volume 2023 ; 2023 ; https://secularismandnonreligion.org/ ; >
+#
+#    }
+#  }
+#
+#  {
+#
+#      title <
+#        name = Utrecht Journal of International and European Law ;
+#        eissn = 2053-5341
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+#    {
+#      #no longer at this url
+##      param[base_url] = http://www.utrechtjournal.org/
+#
+#      au < finished ; finished ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; http://www.utrechtjournal.org/ ; reingest4.clockss.org:8082 >
+#      au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; https://www.utrechtjournal.org/ ; >
+#      au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; https://www.utrechtjournal.org/ ; >
+#      au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://www.utrechtjournal.org/ ; >
+#      au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://www.utrechtjournal.org/ ; >
+#      au < finished ; finished ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; http://www.utrechtjournal.org/ ; reingest5.clockss.org:8082 >
+#      au < superseded ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 [superseded] ; 2016 ; http://www.utrechtjournal.org/ ; >
+#      au < doNotProcess ; exists ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://www.utrechtjournal.org/ ; >
+#    }
+#    {
+#      #moved to https and lost www.
+##      param[base_url] = https://utrechtjournal.org/
+#
+#      au < doNotProcess ; exists ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; https://utrechtjournal.org/ ; >
+#      au < doNotProcess ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; https://utrechtjournal.org/ ; >
+#      au < doNotProcess ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; https://utrechtjournal.org/ ; >
+#      au < doNotProcess ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; https://utrechtjournal.org/ ; >
+#      au < doNotProcess ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; https://utrechtjournal.org/ ; >
+#      au < doNotProcess ; exists ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; https://utrechtjournal.org/ ; >
+#      au < finished ; finished ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 9 ; Utrecht Journal of International and European Law Volume 2018 ; 2018 ; https://utrechtjournal.org/ ; reingest1.clockss.org:8082 >
+#      au < doesNotExist ; doesNotExist ; 2019 ; 10 ; Utrecht Journal of International and European Law Volume 2019 ; 2019 ; https://utrechtjournal.org/ ; >
+#      au < finished ; finished ; 2020 ; 11 ; Utrecht Journal of International and European Law Volume 2020 ; 2020 ; https://utrechtjournal.org/ ; reingest1.clockss.org:8082 >
+#      au < finished ; crawling ; 2021 ; 12 ; Utrecht Journal of International and European Law Volume 2021 ; 2021 ; https://utrechtjournal.org/ ; reingest2.clockss.org:8085 >
+#      au < superseded ; exists ; 2022 ; 13 ; Utrecht Journal of International and European Law Volume 2022 [superseded] ; 2022 ; https://utrechtjournal.org/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Utrecht Journal of International and European Law Volume 2023 ; 2023 ; https://utrechtjournal.org/ ; >
+#
+#    }
+#  }
+#
   {
 
       title <
@@ -1508,32 +1508,32 @@
      #Moved
   }
 
-  {
-
-      title <
-        name = Tremor and Other Hyperkinetic Movements ;
-        eissn = 2160-8288
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://tremorjournal.org/
-
-      au < finished ; finished ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; https://tremorjournal.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 ; https://tremorjournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2021 ; 11 ; Tremor and Other Hyperkinetic Movements Volume 2021 ; 2021 ; https://tremorjournal.org/ ; reingest1.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 12 ; Tremor and Other Hyperkinetic Movements Volume 2022 [superseded] ; 2022 ; https://tremorjournal.org/ ; >
-      au < doNotProcess ; exists ; 2023 ; 13 ; Tremor and Other Hyperkinetic Movements Volume 2023 ; 2023 ; https://tremorjournal.org/ ; >
-
-  }
-
+#  {
+#
+#      title <
+#        name = Tremor and Other Hyperkinetic Movements ;
+#        eissn = 2160-8288
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://tremorjournal.org/
+#
+#      au < finished ; finished ; 2011 ; 1 ; Tremor and Other Hyperkinetic Movements Volume 2011 ; 2011 ; https://tremorjournal.org/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2012 ; 2 ; Tremor and Other Hyperkinetic Movements Volume 2012 ; 2012 ; https://tremorjournal.org/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2013 ; 3 ; Tremor and Other Hyperkinetic Movements Volume 2013 ; 2013 ; https://tremorjournal.org/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2014 ; 4 ; Tremor and Other Hyperkinetic Movements Volume 2014 ; 2014 ; https://tremorjournal.org/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2015 ; 5 ; Tremor and Other Hyperkinetic Movements Volume 2015 ; 2015 ; https://tremorjournal.org/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2016 ; 6 ; Tremor and Other Hyperkinetic Movements Volume 2016 ; 2016 ; https://tremorjournal.org/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2017 ; 7 ; Tremor and Other Hyperkinetic Movements Volume 2017 ; 2017 ; https://tremorjournal.org/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 8 ; Tremor and Other Hyperkinetic Movements Volume 2018 ; 2018 ; https://tremorjournal.org/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2019 ; 9 ; Tremor and Other Hyperkinetic Movements Volume 2019 ; 2019 ; https://tremorjournal.org/ ; reingest2.clockss.org:8085 >
+#      au < finished ; crawling ; 2020 ; 10 ; Tremor and Other Hyperkinetic Movements Volume 2020 ; 2020 ; https://tremorjournal.org/ ; reingest3.clockss.org:8083 >
+#      au < finished ; crawling ; 2021 ; 11 ; Tremor and Other Hyperkinetic Movements Volume 2021 ; 2021 ; https://tremorjournal.org/ ; reingest1.clockss.org:8082 >
+#      au < superseded ; exists ; 2022 ; 12 ; Tremor and Other Hyperkinetic Movements Volume 2022 [superseded] ; 2022 ; https://tremorjournal.org/ ; >
+#      au < doNotProcess ; exists ; 2023 ; 13 ; Tremor and Other Hyperkinetic Movements Volume 2023 ; 2023 ; https://tremorjournal.org/ ; >
+#
+#  }
+#
   {
 
       title <
@@ -1620,44 +1620,44 @@
 
   }
 
-  {
-
-      title <
-        name = Journal of Cognition ;
-        eissn = 2514-4820
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://www.journalofcognition.org/
-
-      au < finished ; finished ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; https://www.journalofcognition.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; https://www.journalofcognition.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 4 ; Journal of Cognition Volume 2021 ; 2021 ; https://www.journalofcognition.org/ ; reingest2.clockss.org:8085 >
-      au < superseded ; exists ; 2022 ; 5 ; Journal of Cognition Volume 2022 [superseded] ; 2022 ; https://www.journalofcognition.org/ ; >
-      au < doNotProcess ; exists ; 2023 ; 6 ; Journal of Cognition Volume 2023 ; 2023 ; https://www.journalofcognition.org/ ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Computer Applications in Archaeology ;
-        eissn = 2514-8362
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://journal.caa-international.org/
-
-      au < finished ; finished ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; https://journal.caa-international.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2019 ; 2 ; Journal of Computer Applications in Archaeology Volume 2019 ; 2019 ; https://journal.caa-international.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 3 ; Journal of Computer Applications in Archaeology Volume 2020 ; 2020 ; https://journal.caa-international.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 4 ; Journal of Computer Applications in Archaeology Volume 2021 ; 2021 ; https://journal.caa-international.org/ ; reingest3.clockss.org:8083 >
-      au < superseded ; exists ; 2022 ; 5 ; Journal of Computer Applications in Archaeology Volume 2022 [superseded] ; 2022 ; https://journal.caa-international.org/ ; >
-      au < doNotProcess ; exists ; 2023 ; 6 ; Journal of Computer Applications in Archaeology Volume 2023 ; 2023 ; https://journal.caa-international.org/ ; >
-
-  }
-
+#  {
+#
+#      title <
+#        name = Journal of Cognition ;
+#        eissn = 2514-4820
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://www.journalofcognition.org/
+#
+#      au < finished ; finished ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; https://www.journalofcognition.org/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; https://www.journalofcognition.org/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; https://www.journalofcognition.org/ ; reingest4.clockss.org:8082 >
+#      au < finished ; crawling ; 2021 ; 4 ; Journal of Cognition Volume 2021 ; 2021 ; https://www.journalofcognition.org/ ; reingest2.clockss.org:8085 >
+#      au < superseded ; exists ; 2022 ; 5 ; Journal of Cognition Volume 2022 [superseded] ; 2022 ; https://www.journalofcognition.org/ ; >
+#      au < doNotProcess ; exists ; 2023 ; 6 ; Journal of Cognition Volume 2023 ; 2023 ; https://www.journalofcognition.org/ ; >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Journal of Computer Applications in Archaeology ;
+#        eissn = 2514-8362
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://journal.caa-international.org/
+#
+#      au < finished ; finished ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; https://journal.caa-international.org/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2019 ; 2 ; Journal of Computer Applications in Archaeology Volume 2019 ; 2019 ; https://journal.caa-international.org/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2020 ; 3 ; Journal of Computer Applications in Archaeology Volume 2020 ; 2020 ; https://journal.caa-international.org/ ; reingest1.clockss.org:8082 >
+#      au < finished ; crawling ; 2021 ; 4 ; Journal of Computer Applications in Archaeology Volume 2021 ; 2021 ; https://journal.caa-international.org/ ; reingest3.clockss.org:8083 >
+#      au < superseded ; exists ; 2022 ; 5 ; Journal of Computer Applications in Archaeology Volume 2022 [superseded] ; 2022 ; https://journal.caa-international.org/ ; >
+#      au < doNotProcess ; exists ; 2023 ; 6 ; Journal of Computer Applications in Archaeology Volume 2023 ; 2023 ; https://journal.caa-international.org/ ; >
+#
+#  }
+#
   {
 
       title <
@@ -1676,71 +1676,71 @@
 
   }
 
-  {
-
-      title <
-        name = Metaphysics ;
-        eissn = 2515-8279
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://metaphysicsjournal.com/
-
-      au < finished ; finished ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; https://metaphysicsjournal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 2 ; Metaphysics Volume 2019 ; 2019 ; https://metaphysicsjournal.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2020 ; 3 ; Metaphysics Volume 2020 ; 2020 ; https://metaphysicsjournal.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2021 ; 4 ; Metaphysics Volume 2021 ; 2021 ; https://metaphysicsjournal.com/ ; reingest3.clockss.org:8083 >
-      au < superseded ; exists ; 2022 ; 5 ; Metaphysics Volume 2022 [superseded] ; 2022 ; https://metaphysicsjournal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Metaphysics Volume 2023 ; 2023 ; https://metaphysicsjournal.com/ ; >
-
-  }
-
-  {
-
-      title <
-        name = Physical Activity and Health ;
-        eissn = 2515-2270
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://paahjournal.com/
-
-      au < finished ; finished ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; https://paahjournal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 2 ; Physical Activity and Health Volume 2018 ; 2018 ; https://paahjournal.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2019 ; 3 ; Physical Activity and Health Volume 2019 ; 2019 ; https://paahjournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 4 ; Physical Activity and Health Volume 2020 ; 2020 ; https://paahjournal.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 5 ; Physical Activity and Health Volume 2021 ; 2021 ; https://paahjournal.com/ ; reingest2.clockss.org:8085 >
-      au < superseded ; exists ; 2022 ; 6 ; Physical Activity and Health Volume 2022 [superseded] ; 2022 ; https://paahjournal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Physical Activity and Health Volume 2023 ; 2023 ; https://paahjournal.com/ ; >
-
-  }
-
-  {
-
-      title <
-        name = Tilburg Law Review: Journal of International and Comparative Law ;
-        eissn = 2211-2545
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://tilburglawreview.com/
-      #name changed in 2008 to: Tilburg Law Review: Journal of International and Comparative Law. 
-
-      au < finished ; finished ; 2012 ; 17 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2012 ; 2012 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2013 ; 18 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2013 ; 2013 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2014 ; 19 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2014 ; 2014 ; https://tilburglawreview.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 20 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2015 ; 2015 ; https://tilburglawreview.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 21 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2016 ; 2016 ; https://tilburglawreview.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 22 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2017 ; 2017 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2018 ; 23 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2018 ; 2018 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2019 ; 24 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 ; https://tilburglawreview.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 25 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2021 ; 26 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2021 ; 2021 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
-      au < doNotProcess ; doNotProcess ; 2022 ; 27 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2022 ; 2022 ; https://tilburglawreview.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 ; https://tilburglawreview.com/ ; >
-
-  }
-
+#  {
+#
+#      title <
+#        name = Metaphysics ;
+#        eissn = 2515-8279
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://metaphysicsjournal.com/
+#
+#      au < finished ; finished ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; https://metaphysicsjournal.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2019 ; 2 ; Metaphysics Volume 2019 ; 2019 ; https://metaphysicsjournal.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2020 ; 3 ; Metaphysics Volume 2020 ; 2020 ; https://metaphysicsjournal.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; crawling ; 2021 ; 4 ; Metaphysics Volume 2021 ; 2021 ; https://metaphysicsjournal.com/ ; reingest3.clockss.org:8083 >
+#      au < superseded ; exists ; 2022 ; 5 ; Metaphysics Volume 2022 [superseded] ; 2022 ; https://metaphysicsjournal.com/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Metaphysics Volume 2023 ; 2023 ; https://metaphysicsjournal.com/ ; >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Physical Activity and Health ;
+#        eissn = 2515-2270
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://paahjournal.com/
+#
+#      au < finished ; finished ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; https://paahjournal.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 2 ; Physical Activity and Health Volume 2018 ; 2018 ; https://paahjournal.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2019 ; 3 ; Physical Activity and Health Volume 2019 ; 2019 ; https://paahjournal.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2020 ; 4 ; Physical Activity and Health Volume 2020 ; 2020 ; https://paahjournal.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; crawling ; 2021 ; 5 ; Physical Activity and Health Volume 2021 ; 2021 ; https://paahjournal.com/ ; reingest2.clockss.org:8085 >
+#      au < superseded ; exists ; 2022 ; 6 ; Physical Activity and Health Volume 2022 [superseded] ; 2022 ; https://paahjournal.com/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Physical Activity and Health Volume 2023 ; 2023 ; https://paahjournal.com/ ; >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Tilburg Law Review: Journal of International and Comparative Law ;
+#        eissn = 2211-2545
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://tilburglawreview.com/
+#      #name changed in 2008 to: Tilburg Law Review: Journal of International and Comparative Law. 
+#
+#      au < finished ; finished ; 2012 ; 17 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2012 ; 2012 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2013 ; 18 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2013 ; 2013 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2014 ; 19 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2014 ; 2014 ; https://tilburglawreview.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2015 ; 20 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2015 ; 2015 ; https://tilburglawreview.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2016 ; 21 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2016 ; 2016 ; https://tilburglawreview.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2017 ; 22 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2017 ; 2017 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; crawling ; 2018 ; 23 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2018 ; 2018 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2019 ; 24 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 ; https://tilburglawreview.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2020 ; 25 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2021 ; 26 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2021 ; 2021 ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
+#      au < doNotProcess ; doNotProcess ; 2022 ; 27 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2022 ; 2022 ; https://tilburglawreview.com/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 ; https://tilburglawreview.com/ ; >
+#
+#  }
+#
   {
 
       title <
