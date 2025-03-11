@@ -46,8 +46,13 @@ public class ASCEUrlNormalizer extends BaseAtyponUrlNormalizer{
     public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
       String newUrl = super.normalizeUrl(url, au);
       int pos = url.indexOf(org.lockss.plugin.ArchiveMemberSpec.URL_SEPARATOR);
-      newUrl = StringUtil.replaceString(newUrl.substring(0,pos), "(", "%28");
-      newUrl = StringUtil.replaceString(newUrl.substring(0,pos), ")", "%29");
+      if(pos > 0){
+        newUrl = StringUtil.replaceString(newUrl.substring(0,pos), "(", "%28");
+        newUrl = StringUtil.replaceString(newUrl.substring(0,pos), ")", "%29");
+      }else{
+        newUrl = StringUtil.replaceString(newUrl, "(", "%28");
+        newUrl = StringUtil.replaceString(newUrl, ")", "%29");
+      }
       return newUrl;
     }
 }

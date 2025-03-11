@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -71,7 +71,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <!--  also for https conversion -->
   <entry>
     <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer</string>
+    <string>org.lockss.plugin.atypon.americansocietyofcivilengineers.ASCEUrlNormalizer</string>
   </entry>
   <entry>
     <string>plugin_url_fetcher_factory</string>
