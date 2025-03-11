@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -112,6 +112,15 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>"%s%s/%s/%s/index.html", base_url, publisher_id, journal_id, volume_name</string>
         </list>
+    </entry>
+    <entry>
+        <string>au_feature_urls</string>
+        <map>
+            <entry>
+                <string>au_volume</string>
+                <string>"%s%s/%s/%03d/index.html", base_url, publisher_id, journal_id, volume</string>
+            </entry>
+        </map>
     </entry>
     <entry>
         <string>au_substance_url_pattern</string>
