@@ -928,31 +928,31 @@
 #      au < doNotProcess ; doNotProcess ; 2023 ; 17 ; Journal of Molecular Signaling Volume 2023 ; 2023 ; https://jmolecularsignaling.com/ ; >
 #
 #  }
-
-  {
-
-      title <
-        name = Journal of Open Archaeology Data ;
-        eissn = 2049-1565
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://openarchaeologydata.metajnl.com/
-
-      au < doNotProcess ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; https://openarchaeologydata.metajnl.com/ ; >
-      au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; https://openarchaeologydata.metajnl.com/ ; >
-      au < doNotProcess ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; https://openarchaeologydata.metajnl.com/ ; >
-      au < finished ; finished ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; http://openarchaeologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; http://openarchaeologydata.metajnl.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2018 ; 6 ; Journal of Open Archaeology Data Volume 2018 ; 2018 ; https://openarchaeologydata.metajnl.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 7 ; Journal of Open Archaeology Data Volume 2019 ; 2019 ; https://openarchaeologydata.metajnl.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 8 ; Journal of Open Archaeology Data Volume 2020 ; 2020 ; https://openarchaeologydata.metajnl.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 9 ; Journal of Open Archaeology Data Volume 2021 ; 2021 ; https://openarchaeologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 10 ; Journal of Open Archaeology Data Volume 2022 [superseded] ; 2022 ; https://openarchaeologydata.metajnl.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Archaeology Data Volume 2023 ; 2023 ; https://openarchaeologydata.metajnl.com/ ; >
-
-  }
-
+#
+#  {
+#
+#      title <
+#        name = Journal of Open Archaeology Data ;
+#        eissn = 2049-1565
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = http://openarchaeologydata.metajnl.com/
+#
+#      au < doNotProcess ; exists ; 2012 ; 1 ; Journal of Open Archaeology Data Volume 2012 ; 2012 ; https://openarchaeologydata.metajnl.com/ ; >
+#      au < doNotProcess ; exists ; 2013 ; 2 ; Journal of Open Archaeology Data Volume 2013 ; 2013 ; https://openarchaeologydata.metajnl.com/ ; >
+#      au < doNotProcess ; exists ; 2014 ; 3 ; Journal of Open Archaeology Data Volume 2014 ; 2014 ; https://openarchaeologydata.metajnl.com/ ; >
+#      au < finished ; finished ; 2015 ; 4 ; Journal of Open Archaeology Data Volume 2015 ; 2015 ; http://openarchaeologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2016 ; 5 ; Journal of Open Archaeology Data Volume 2016 ; 2016 ; http://openarchaeologydata.metajnl.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2018 ; 6 ; Journal of Open Archaeology Data Volume 2018 ; 2018 ; https://openarchaeologydata.metajnl.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2019 ; 7 ; Journal of Open Archaeology Data Volume 2019 ; 2019 ; https://openarchaeologydata.metajnl.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2020 ; 8 ; Journal of Open Archaeology Data Volume 2020 ; 2020 ; https://openarchaeologydata.metajnl.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; crawling ; 2021 ; 9 ; Journal of Open Archaeology Data Volume 2021 ; 2021 ; https://openarchaeologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
+#      au < superseded ; exists ; 2022 ; 10 ; Journal of Open Archaeology Data Volume 2022 [superseded] ; 2022 ; https://openarchaeologydata.metajnl.com/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Archaeology Data Volume 2023 ; 2023 ; https://openarchaeologydata.metajnl.com/ ; >
+#
+#  }
+#
   {
 
       title <
@@ -991,76 +991,76 @@
 
   }
 
-  {
-
-      title <
-        name = Journal of Open Humanities Data ;
-        eissn = 2059-481X
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://openhumanitiesdata.metajnl.com/
-
-      au < finished ; finished ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; http://openhumanitiesdata.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; http://openhumanitiesdata.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 3 ; Journal of Open Humanities Data Volume 2017 ; 2017 ; http://openhumanitiesdata.metajnl.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 4 ; Journal of Open Humanities Data Volume 2018 ; 2018 ; https://openhumanitiesdata.metajnl.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 5 ; Journal of Open Humanities Data Volume 2019 ; 2019 ; https://openhumanitiesdata.metajnl.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2020 ; 6 ; Journal of Open Humanities Data Volume 2020 ; 2020 ; https://openhumanitiesdata.metajnl.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 7 ; Journal of Open Humanities Data Volume 2021 ; 2021 ; https://openhumanitiesdata.metajnl.com/ ; reingest3.clockss.org:8083 >
-      au < superseded ; exists ; 2022 ; 8 ; Journal of Open Humanities Data Volume 2022 [superseded] ; 2022 ; https://openhumanitiesdata.metajnl.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Journal of Open Humanities Data Volume 2023 ; 2023 ; https://openhumanitiesdata.metajnl.com/ ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Open Psychology Data ;
-        eissn = 2050-9863
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://openpsychologydata.metajnl.com/
-
-      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; https://openpsychologydata.metajnl.com/ ; >
-      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; https://openpsychologydata.metajnl.com/ ; >
-      au < finished ; finished ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; http://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; http://openpsychologydata.metajnl.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; http://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 6 ; Journal of Open Psychology Data Volume 2018 ; 2018 ; https://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 7 ; Journal of Open Psychology Data Volume 2019 ; 2019 ; https://openpsychologydata.metajnl.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2020 ; 8 ; Journal of Open Psychology Data Volume 2020 ; 2020 ; https://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 9 ; Journal of Open Psychology Data Volume 2021 ; 2021 ; https://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 10 ; Journal of Open Psychology Data Volume 2022 [superseded] ; 2022 ; https://openpsychologydata.metajnl.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Psychology Data Volume 2023 ; 2023 ; https://openpsychologydata.metajnl.com/ ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Open Research Software ;
-        eissn = 2049-9647
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://openresearchsoftware.metajnl.com/
-
-      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; https://openresearchsoftware.metajnl.com/ ; >
-      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; https://openresearchsoftware.metajnl.com/ ; >
-      au < finished ; finished ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; http://openresearchsoftware.metajnl.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; http://openresearchsoftware.metajnl.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 5 ; Journal of Open Research Software Volume 2017 ; 2017 ; http://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 6 ; Journal of Open Research Software Volume 2018 ; 2018 ; https://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 7 ; Journal of Open Research Software Volume 2019 ; 2019 ; https://openresearchsoftware.metajnl.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 8 ; Journal of Open Research Software Volume 2020 ; 2020 ; https://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 9 ; Journal of Open Research Software Volume 2021 ; 2021 ; https://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 10 ; Journal of Open Research Software Volume 2022 [superseded] ; 2022 ; https://openresearchsoftware.metajnl.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Research Software Volume 2023 ; 2023 ; https://openresearchsoftware.metajnl.com/ ; >
-
-  }
-
+#  {
+#
+#      title <
+#        name = Journal of Open Humanities Data ;
+#        eissn = 2059-481X
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = http://openhumanitiesdata.metajnl.com/
+#
+#      au < finished ; finished ; 2015 ; 1 ; Journal of Open Humanities Data Volume 2015 ; 2015 ; http://openhumanitiesdata.metajnl.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2016 ; 2 ; Journal of Open Humanities Data Volume 2016 ; 2016 ; http://openhumanitiesdata.metajnl.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2017 ; 3 ; Journal of Open Humanities Data Volume 2017 ; 2017 ; http://openhumanitiesdata.metajnl.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 4 ; Journal of Open Humanities Data Volume 2018 ; 2018 ; https://openhumanitiesdata.metajnl.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2019 ; 5 ; Journal of Open Humanities Data Volume 2019 ; 2019 ; https://openhumanitiesdata.metajnl.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2020 ; 6 ; Journal of Open Humanities Data Volume 2020 ; 2020 ; https://openhumanitiesdata.metajnl.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; crawling ; 2021 ; 7 ; Journal of Open Humanities Data Volume 2021 ; 2021 ; https://openhumanitiesdata.metajnl.com/ ; reingest3.clockss.org:8083 >
+#      au < superseded ; exists ; 2022 ; 8 ; Journal of Open Humanities Data Volume 2022 [superseded] ; 2022 ; https://openhumanitiesdata.metajnl.com/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Journal of Open Humanities Data Volume 2023 ; 2023 ; https://openhumanitiesdata.metajnl.com/ ; >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Journal of Open Psychology Data ;
+#        eissn = 2050-9863
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = http://openpsychologydata.metajnl.com/
+#
+#      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Psychology Data Volume 2013 ; 2013 ; https://openpsychologydata.metajnl.com/ ; >
+#      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Psychology Data Volume 2014 ; 2014 ; https://openpsychologydata.metajnl.com/ ; >
+#      au < finished ; finished ; 2015 ; 3 ; Journal of Open Psychology Data Volume 2015 ; 2015 ; http://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2016 ; 4 ; Journal of Open Psychology Data Volume 2016 ; 2016 ; http://openpsychologydata.metajnl.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2017 ; 5 ; Journal of Open Psychology Data Volume 2017 ; 2017 ; http://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 6 ; Journal of Open Psychology Data Volume 2018 ; 2018 ; https://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2019 ; 7 ; Journal of Open Psychology Data Volume 2019 ; 2019 ; https://openpsychologydata.metajnl.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2020 ; 8 ; Journal of Open Psychology Data Volume 2020 ; 2020 ; https://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; crawling ; 2021 ; 9 ; Journal of Open Psychology Data Volume 2021 ; 2021 ; https://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
+#      au < superseded ; exists ; 2022 ; 10 ; Journal of Open Psychology Data Volume 2022 [superseded] ; 2022 ; https://openpsychologydata.metajnl.com/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Psychology Data Volume 2023 ; 2023 ; https://openpsychologydata.metajnl.com/ ; >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Journal of Open Research Software ;
+#        eissn = 2049-9647
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = http://openresearchsoftware.metajnl.com/
+#
+#      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Research Software Volume 2013 ; 2013 ; https://openresearchsoftware.metajnl.com/ ; >
+#      au < doNotProcess ; exists ; 2014 ; 2 ; Journal of Open Research Software Volume 2014 ; 2014 ; https://openresearchsoftware.metajnl.com/ ; >
+#      au < finished ; finished ; 2015 ; 3 ; Journal of Open Research Software Volume 2015 ; 2015 ; http://openresearchsoftware.metajnl.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2016 ; 4 ; Journal of Open Research Software Volume 2016 ; 2016 ; http://openresearchsoftware.metajnl.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2017 ; 5 ; Journal of Open Research Software Volume 2017 ; 2017 ; http://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 6 ; Journal of Open Research Software Volume 2018 ; 2018 ; https://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2019 ; 7 ; Journal of Open Research Software Volume 2019 ; 2019 ; https://openresearchsoftware.metajnl.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2020 ; 8 ; Journal of Open Research Software Volume 2020 ; 2020 ; https://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; crawling ; 2021 ; 9 ; Journal of Open Research Software Volume 2021 ; 2021 ; https://openresearchsoftware.metajnl.com/ ; reingest1.clockss.org:8082 >
+#      au < superseded ; exists ; 2022 ; 10 ; Journal of Open Research Software Volume 2022 [superseded] ; 2022 ; https://openresearchsoftware.metajnl.com/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Research Software Volume 2023 ; 2023 ; https://openresearchsoftware.metajnl.com/ ; >
+#
+#  }
+#
   {
 
       title <
@@ -1081,133 +1081,131 @@
 
   }
 
-  {
-
-      title <
-        name = Journal of the Belgian Society of Radiology (JBSR) ;
-        eissn = 2514-8281
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://www.jbsr.be/
-
-      au < finished ; finished ; 2015 ; 99 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2015 ; 2015 ; http://www.jbsr.be/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2016 ; 100 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2016 ; 2016 ; http://www.jbsr.be/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; http://www.jbsr.be/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 102 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2018 ; 2018 ; https://www.jbsr.be/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 ; https://www.jbsr.be/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; https://www.jbsr.be/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 ; https://www.jbsr.be/ ; reingest1.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 [superseded] ; 2022 ; https://www.jbsr.be/ ; >
-      au < doNotProcess ; exists ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; https://www.jbsr.be/ ; >
-
-  }
-
-  {
-
-      title <
-        name = MaHKUscript: Journal of Fine Art Research ;
-        eissn = 2397-0863
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://www.mahkuscript.com/
-
-      au < finished ; finished ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 1 (2016) ; 2016 ; http://www.mahkuscript.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 2 (2017) ; 2017 ; https://www.mahkuscript.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2 ; 2018 ; https://www.mahkuscript.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 3 ; 2019 ; https://www.mahkuscript.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2020 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 4 ; 2020 ; https://www.mahkuscript.com/ ; reingest1.clockss.org:8082 >
-
-  }
-
-  {
-
-      title <
-        name = Open Journal of Bioresources ;
-        eissn = 2056-5542
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://openbioresources.metajnl.com/
-
-      au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; https://openbioresources.metajnl.com/ ; >
-      au < finished ; finished ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; http://openbioresources.metajnl.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; http://openbioresources.metajnl.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 4 ; Open Journal of Bioresources Volume 2017 ; 2017 ; http://openbioresources.metajnl.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2018 ; 5 ; Open Journal of Bioresources Volume 2018 ; 2018 ; https://openbioresources.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 6 ; Open Journal of Bioresources Volume 2019 ; 2019 ; https://openbioresources.metajnl.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 7 ; Open Journal of Bioresources Volume 2020 ; 2020 ; https://openbioresources.metajnl.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 8 ; Open Journal of Bioresources Volume 2021 ; 2021 ; https://openbioresources.metajnl.com/ ; reingest1.clockss.org:8082 >
-      au < doNotProcess ; doNotProcess ; 2022 ; 9 ; Open Journal of Bioresources Volume 2022 ; 2022 ; https://openbioresources.metajnl.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Open Journal of Bioresources Volume 2023 ; 2023 ; https://openbioresources.metajnl.com/ ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Montessori Research & Education ;
-        eissn = 2002-3375
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://journalofmore.org/
-
-      au < superseded ; finished ; 2016 ; 1 ; Journal of Montessori Research & Education Volume 2016 [superseded] ; 2016 ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
-      au < exists ; exists ; 2019 ; 2 ; Journal of Montessori Research & Education Volume 2019 ; 2019 ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
-      au < exists ; exists ; 2021 ; 3 ; Journal of Montessori Research & Education Volume 2021 ; 2021 ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
-      au < exists ; exists ; 2023 ; 4 ; Journal of Montessori Research & Education Volume 2023 ; 2023 ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
-
-  }
-
-  {
-
-      title <
-        name = Continuity in Education ;
-        eissn = 2631-9179
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://continuityineducation.org/
-
-      au < finished ; finished ; 2020 ; 1 ; Continuity in Education Volume 2020 ; 2020 ; https://continuityineducation.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2021 ; 2 ; Continuity in Education Volume 2021 ; 2021 ; https://continuityineducation.org/ ; reingest3.clockss.org:8083 >
-      au < superseded ; exists ; 2022 ; 3 ; Continuity in Education Volume 2022 [superseded] ; 2022 ; https://continuityineducation.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Continuity in Education Volume 2023 ; 2023 ; https://continuityineducation.org/ ; >
-
-  }
-
-  {
-
-      title <
-        name = International Journal of the Commons ;
-        eissn = 1875-0281
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://www.thecommonsjournal.org/
-
-      au < finished ; finished ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; https://www.thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; https://www.thecommonsjournal.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; https://www.thecommonsjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; https://www.thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; https://www.thecommonsjournal.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; https://www.thecommonsjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 15 ; International Journal of the Commons Volume 2021 ; 2021 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 16 ; International Journal of the Commons Volume 2022 [superseded] ; 2022 ; https://www.thecommonsjournal.org/ ; >
-      au < doNotProcess ; exists ; 2023 ; 17 ; International Journal of the Commons Volume 2023 ; 2023 ; https://www.thecommonsjournal.org/ ; >
-
-  }
-
+#  {
+#
+#      title <
+#        name = Journal of the Belgian Society of Radiology (JBSR) ;
+#        eissn = 2514-8281
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = http://www.jbsr.be/
+#
+#      au < finished ; finished ; 2015 ; 99 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2015 ; 2015 ; http://www.jbsr.be/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2016 ; 100 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2016 ; 2016 ; http://www.jbsr.be/ ; reingest4.clockss.org:8082 >
+#      au < finished ; crawling ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; http://www.jbsr.be/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 102 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2018 ; 2018 ; https://www.jbsr.be/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 ; https://www.jbsr.be/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; https://www.jbsr.be/ ; reingest2.clockss.org:8085 >
+#      au < finished ; crawling ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 ; https://www.jbsr.be/ ; reingest1.clockss.org:8082 >
+#      au < superseded ; exists ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 [superseded] ; 2022 ; https://www.jbsr.be/ ; >
+#      au < doNotProcess ; exists ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; https://www.jbsr.be/ ; >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = MaHKUscript: Journal of Fine Art Research ;
+#        eissn = 2397-0863
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = http://www.mahkuscript.com/
+#
+#      au < finished ; finished ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 1 (2016) ; 2016 ; http://www.mahkuscript.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2017 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 2 (2017) ; 2017 ; https://www.mahkuscript.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2 ; 2018 ; https://www.mahkuscript.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2019 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 3 ; 2019 ; https://www.mahkuscript.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2020 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 4 ; 2020 ; https://www.mahkuscript.com/ ; reingest1.clockss.org:8082 >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Open Journal of Bioresources ;
+#        eissn = 2056-5542
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = http://openbioresources.metajnl.com/
+#
+#      au < doNotProcess ; exists ; 2014 ; 1 ; Open Journal of Bioresources Volume 2014 ; 2014 ; https://openbioresources.metajnl.com/ ; >
+#      au < finished ; finished ; 2015 ; 2 ; Open Journal of Bioresources Volume 2015 ; 2015 ; http://openbioresources.metajnl.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2016 ; 3 ; Open Journal of Bioresources Volume 2016 ; 2016 ; http://openbioresources.metajnl.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2017 ; 4 ; Open Journal of Bioresources Volume 2017 ; 2017 ; http://openbioresources.metajnl.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2018 ; 5 ; Open Journal of Bioresources Volume 2018 ; 2018 ; https://openbioresources.metajnl.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2019 ; 6 ; Open Journal of Bioresources Volume 2019 ; 2019 ; https://openbioresources.metajnl.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2020 ; 7 ; Open Journal of Bioresources Volume 2020 ; 2020 ; https://openbioresources.metajnl.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; crawling ; 2021 ; 8 ; Open Journal of Bioresources Volume 2021 ; 2021 ; https://openbioresources.metajnl.com/ ; reingest1.clockss.org:8082 >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Journal of Montessori Research & Education ;
+#        eissn = 2002-3375
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://journalofmore.org/
+#
+#      au < superseded ; finished ; 2016 ; 1 ; Journal of Montessori Research & Education Volume 2016 [superseded] ; 2016 ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
+#      au < exists ; exists ; 2019 ; 2 ; Journal of Montessori Research & Education Volume 2019 ; 2019 ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
+#      au < exists ; exists ; 2021 ; 3 ; Journal of Montessori Research & Education Volume 2021 ; 2021 ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
+#      au < exists ; exists ; 2023 ; 4 ; Journal of Montessori Research & Education Volume 2023 ; 2023 ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Continuity in Education ;
+#        eissn = 2631-9179
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://continuityineducation.org/
+#
+#      au < finished ; finished ; 2020 ; 1 ; Continuity in Education Volume 2020 ; 2020 ; https://continuityineducation.org/ ; reingest2.clockss.org:8085 >
+#      au < finished ; crawling ; 2021 ; 2 ; Continuity in Education Volume 2021 ; 2021 ; https://continuityineducation.org/ ; reingest3.clockss.org:8083 >
+#      au < superseded ; exists ; 2022 ; 3 ; Continuity in Education Volume 2022 [superseded] ; 2022 ; https://continuityineducation.org/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Continuity in Education Volume 2023 ; 2023 ; https://continuityineducation.org/ ; >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = International Journal of the Commons ;
+#        eissn = 1875-0281
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://www.thecommonsjournal.org/
+#
+#      au < finished ; finished ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; https://www.thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; https://www.thecommonsjournal.org/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; https://www.thecommonsjournal.org/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; https://www.thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; https://www.thecommonsjournal.org/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; https://www.thecommonsjournal.org/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
+#      au < finished ; crawling ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; https://www.thecommonsjournal.org/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; https://www.thecommonsjournal.org/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
+#      au < finished ; crawling ; 2021 ; 15 ; International Journal of the Commons Volume 2021 ; 2021 ; https://www.thecommonsjournal.org/ ; reingest1.clockss.org:8082 >
+#      au < superseded ; exists ; 2022 ; 16 ; International Journal of the Commons Volume 2022 [superseded] ; 2022 ; https://www.thecommonsjournal.org/ ; >
+#      au < doNotProcess ; exists ; 2023 ; 17 ; International Journal of the Commons Volume 2023 ; 2023 ; https://www.thecommonsjournal.org/ ; >
+#
+#  }
+#
   {
 
       title <
