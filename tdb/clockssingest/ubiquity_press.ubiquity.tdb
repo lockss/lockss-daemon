@@ -1206,59 +1206,59 @@
 #
 #  }
 #
-  {
-
-      title <
-        name = Global Heart ;
-        eissn = 2211-8179
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] =  https://globalheartjournal.com/
-
-      au < finished ; finished ; 2006 ; 1 ; Global Heart Volume 2006 ; 2006 ;  https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2007 ; 2 ; Global Heart Volume 2007 ; 2007 ;  https://globalheartjournal.com/ ; >
-      au < finished ; finished ; 2008 ; 3 ; Global Heart Volume 2008 ; 2008 ;  https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2009 ; 4 ; Global Heart Volume 2009 ; 2009 ;  https://globalheartjournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2010 ; 5 ; Global Heart Volume 2010 ; 2010 ;  https://globalheartjournal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2011 ; 6 ; Global Heart Volume 2011 ; 2011 ;  https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2012 ; 7 ; Global Heart Volume 2012 ; 2012 ;  https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2013 ; 8 ; Global Heart Volume 2013 ; 2013 ;  https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2014 ; 9 ; Global Heart Volume 2014 ; 2014 ;  https://globalheartjournal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 10 ; Global Heart Volume 2015 ; 2015 ;  https://globalheartjournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 11 ; Global Heart Volume 2016 ; 2016 ;  https://globalheartjournal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 12 ; Global Heart Volume 2017 ; 2017 ;  https://globalheartjournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 13 ; Global Heart Volume 2018 ; 2018 ;  https://globalheartjournal.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2019 ; 14 ; Global Heart Volume 2019 ; 2019 ;  https://globalheartjournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 15 ; Global Heart Volume 2020 ; 2020 ;  https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2021 ; 16 ; Global Heart Volume 2021 ; 2021 ;  https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
-      au < superseded ; exists ; 2022 ; 17 ; Global Heart Volume 2022 [superseded] ; 2022 ;  https://globalheartjournal.com/ ; >
-      au < doNotProcess ; exists ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ;  https://globalheartjournal.com/ ; >
-
-  }
-
-  {
-
-      title <
-        name = Open Quaternary ;
-        eissn = 2055-298X
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://www.openquaternary.com/
-
-      au < finished ; finished ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; http://www.openquaternary.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; http://www.openquaternary.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; http://www.openquaternary.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 4 ; Open Quaternary Volume 2018 ; 2018 ; https://www.openquaternary.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 ; https://www.openquaternary.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; https://www.openquaternary.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; https://www.openquaternary.com/ ; reingest1.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 8 ; Open Quaternary Volume 2022 [superseded] ; 2022 ; https://www.openquaternary.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Open Quaternary Volume 2023 ; 2023 ; https://openquaternary.com/ ; >
-
-  }
-
+#  {
+#
+#      title <
+#        name = Global Heart ;
+#        eissn = 2211-8179
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] =  https://globalheartjournal.com/
+#
+#      au < finished ; finished ; 2006 ; 1 ; Global Heart Volume 2006 ; 2006 ;  https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
+#      au < doesNotExist ; doesNotExist ; 2007 ; 2 ; Global Heart Volume 2007 ; 2007 ;  https://globalheartjournal.com/ ; >
+#      au < finished ; finished ; 2008 ; 3 ; Global Heart Volume 2008 ; 2008 ;  https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2009 ; 4 ; Global Heart Volume 2009 ; 2009 ;  https://globalheartjournal.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2010 ; 5 ; Global Heart Volume 2010 ; 2010 ;  https://globalheartjournal.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2011 ; 6 ; Global Heart Volume 2011 ; 2011 ;  https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2012 ; 7 ; Global Heart Volume 2012 ; 2012 ;  https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2013 ; 8 ; Global Heart Volume 2013 ; 2013 ;  https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2014 ; 9 ; Global Heart Volume 2014 ; 2014 ;  https://globalheartjournal.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2015 ; 10 ; Global Heart Volume 2015 ; 2015 ;  https://globalheartjournal.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2016 ; 11 ; Global Heart Volume 2016 ; 2016 ;  https://globalheartjournal.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2017 ; 12 ; Global Heart Volume 2017 ; 2017 ;  https://globalheartjournal.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 13 ; Global Heart Volume 2018 ; 2018 ;  https://globalheartjournal.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2019 ; 14 ; Global Heart Volume 2019 ; 2019 ;  https://globalheartjournal.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2020 ; 15 ; Global Heart Volume 2020 ; 2020 ;  https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; crawling ; 2021 ; 16 ; Global Heart Volume 2021 ; 2021 ;  https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
+#      au < superseded ; exists ; 2022 ; 17 ; Global Heart Volume 2022 [superseded] ; 2022 ;  https://globalheartjournal.com/ ; >
+#      au < doNotProcess ; exists ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ;  https://globalheartjournal.com/ ; >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Open Quaternary ;
+#        eissn = 2055-298X
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = http://www.openquaternary.com/
+#
+#      au < finished ; finished ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; http://www.openquaternary.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; http://www.openquaternary.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; http://www.openquaternary.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 4 ; Open Quaternary Volume 2018 ; 2018 ; https://www.openquaternary.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 ; https://www.openquaternary.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; https://www.openquaternary.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; crawling ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; https://www.openquaternary.com/ ; reingest1.clockss.org:8082 >
+#      au < superseded ; exists ; 2022 ; 8 ; Open Quaternary Volume 2022 [superseded] ; 2022 ; https://www.openquaternary.com/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Open Quaternary Volume 2023 ; 2023 ; https://openquaternary.com/ ; >
+#
+#  }
+#
   {
 
       title <
@@ -1353,58 +1353,58 @@
     }
   }
 
-  {
-
-      title <
-        name = Psychologica Belgica ;
-        eissn = 2054-670X
-      >
-      comment[publisher] = Ubiquity Press
-    {
-      #no longer at this url
-#      param[base_url] = http://www.psychologicabelgica.com/
-
-      au < doNotProcess ; exists ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; https://www.psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; https://www.psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; https://www.psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; https://www.psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; https://www.psychologicabelgica.com/ ; >
-      au < finished ; finished ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; http://www.psychologicabelgica.com/ ; reingest2.clockss.org:8085 >
-      au < doNotProcess ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; https://www.psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; https://www.psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; https://www.psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; https://www.psychologicabelgica.com/ ; >
-      au < finished ; finished ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; http://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 [superseded] ; 2016 ; http://www.psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; https://www.psychologicabelgica.com/ ; >
-    }
-    { 
-      #moved to https
-#      param[base_url] = https://www.psychologicabelgica.com/
-
-      au < finished ; finished ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; https://www.psychologicabelgica.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; https://www.psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; https://psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; https://psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; https://psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; https://psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; https://psychologicabelgica.com/ ; >
-      au < doNotProcess ; exists ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; https://psychologicabelgica.com/ ; >
-      au < finished ; finished ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; https://www.psychologicabelgica.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 14 ; Psychologica Belgica Volume 2018 ; 2018 ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 15 ; Psychologica Belgica Volume 2019 ; 2019 ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 ; https://www.psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 17 ; Psychologica Belgica Volume 2021 ; 2021 ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 18 ; Psychologica Belgica Volume 2022 [superseded] ; 2022 ; https://www.psychologicabelgica.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 19 ; Psychologica Belgica Volume 2023 ; 2023 ; https://psychologicabelgica.com/ ; >
-
-    }
-  }
-
+#  {
+#
+#      title <
+#        name = Psychologica Belgica ;
+#        eissn = 2054-670X
+#      >
+#      comment[publisher] = Ubiquity Press
+#    {
+#      #no longer at this url
+##      param[base_url] = http://www.psychologicabelgica.com/
+#
+#      au < doNotProcess ; exists ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; https://www.psychologicabelgica.com/ ; >
+#      au < doNotProcess ; exists ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; https://www.psychologicabelgica.com/ ; >
+#      au < doNotProcess ; exists ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; https://www.psychologicabelgica.com/ ; >
+#      au < doNotProcess ; exists ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; https://www.psychologicabelgica.com/ ; >
+#      au < doNotProcess ; exists ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; https://www.psychologicabelgica.com/ ; >
+#      au < finished ; finished ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; http://www.psychologicabelgica.com/ ; reingest2.clockss.org:8085 >
+#      au < exists ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; https://www.psychologicabelgica.com/ ; >
+#      au < exists ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; https://www.psychologicabelgica.com/ ; >
+#      au < exists ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; https://www.psychologicabelgica.com/ ; >
+#      au < exists ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; https://www.psychologicabelgica.com/ ; >
+#      au < finished ; finished ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; http://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
+#      au < superseded ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 [superseded] ; 2016 ; http://www.psychologicabelgica.com/ ; >
+#      au < doNotProcess ; exists ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; https://www.psychologicabelgica.com/ ; >
+#    }
+#    { 
+#      #moved to https
+##      param[base_url] = https://www.psychologicabelgica.com/
+#
+#      au < finished ; finished ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; https://www.psychologicabelgica.com/ ; reingest3.clockss.org:8083 >
+#      au < finished ; finished ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; https://www.psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; finished ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+#      au < doNotProcess ; exists ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; https://psychologicabelgica.com/ ; >
+#      au < doNotProcess ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; https://psychologicabelgica.com/ ; >
+#      au < doNotProcess ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; https://psychologicabelgica.com/ ; >
+#      au < doNotProcess ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; https://psychologicabelgica.com/ ; >
+#      au < doNotProcess ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; https://psychologicabelgica.com/ ; >
+#      au < doNotProcess ; exists ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; https://psychologicabelgica.com/ ; >
+#      au < finished ; finished ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; https://www.psychologicabelgica.com/ ; reingest2.clockss.org:8085 >
+#      au < finished ; finished ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2018 ; 14 ; Psychologica Belgica Volume 2018 ; 2018 ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+#      au < finished ; finished ; 2019 ; 15 ; Psychologica Belgica Volume 2019 ; 2019 ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
+#      au < finished ; finished ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 ; https://www.psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
+#      au < finished ; crawling ; 2021 ; 17 ; Psychologica Belgica Volume 2021 ; 2021 ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+#      au < superseded ; exists ; 2022 ; 18 ; Psychologica Belgica Volume 2022 [superseded] ; 2022 ; https://www.psychologicabelgica.com/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 19 ; Psychologica Belgica Volume 2023 ; 2023 ; https://psychologicabelgica.com/ ; >
+#
+#    }
+#  }
+#
   {
 
       title <
