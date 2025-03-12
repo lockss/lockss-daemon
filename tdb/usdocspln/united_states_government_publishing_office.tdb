@@ -1589,6 +1589,17 @@
   }
 
   {
+    title <
+      name = United States Reports
+    >
+
+    param[collection_id] = USREPORTS
+
+    au < doNotProcess ; 2019 ; United States Reports 2019 ; 2019 ; https://www.govinfo.gov/ >
+
+  }
+
+  {
 
     title <
       name = United States Government Manual
