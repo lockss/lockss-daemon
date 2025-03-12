@@ -755,7 +755,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; Reception: Texts, Readers, Audiences, History Volume 13 ; 13 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Reception: Texts, Readers, Audiences, History Volume 14 ; 14 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Reception: Texts, Readers, Audiences, History Volume 15 ; 15 ; 2023 ; >
-      au < manifest ; exists ; 2024 ; Reception: Texts, Readers, Audiences, History Volume 16 ; 16 ; 2024 ; >
+      au < testing ; exists ; 2024 ; Reception: Texts, Readers, Audiences, History Volume 16 ; 16 ; 2024 ; >
       au < expected ; exists ; 2025 ; Reception: Texts, Readers, Audiences, History Volume 17 ; 17 ; 2025 ; >
 
   }
@@ -2194,8 +2194,8 @@
 
       param[journal_id] = nursing-history-review
 
-      au < ready ; exists ; 2023 ; Nursing History Review Volume 31 ; 31 ; 2023 ; >
-      au < ready ; exists ; 2024 ; Nursing History Review Volume 32 ; 32 ; 2024 ; >
+      au < testing ; exists ; 2023 ; Nursing History Review Volume 31 ; 31 ; 2023 ; >
+      au < testing ; exists ; 2024 ; Nursing History Review Volume 32 ; 32 ; 2024 ; >
       au < manifest ; exists ; 2025 ; Nursing History Review Volume 33 ; 33 ; 2025 ; >
   }
 
@@ -2366,7 +2366,7 @@
       au < finished ; manifest ; 2021 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 20 ; 20 ; 2021 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 21 ; 21 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 22 ; 22 ; 2023 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2024 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 23 ; 23 ; 2024 ; >
+      au < testing ; exists ; 2024 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 23 ; 23 ; 2024 ; >
       au < expected ; exists ; 2025 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 24 ; 24 ; 2025 ; >
 
   }
@@ -2387,7 +2387,7 @@
       au < finished ; manifest ; 2021 ; Restoration and Eighteenth-Century Theatre Research Volume 33 ; 33 ; 2021 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; Restoration and Eighteenth-Century Theatre Research Volume 34 ; 34 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Restoration and Eighteenth-Century Theatre Research Volume 35 ; 35 ; 2023 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2024 ; Restoration and Eighteenth-Century Theatre Research Volume 36 ; 36 ; 2024 ; >
+      au < testing ; exists ; 2024 ; Restoration and Eighteenth-Century Theatre Research Volume 36 ; 36 ; 2024 ; >
       au < expected ; exists ; 2025 ; Restoration and Eighteenth-Century Theatre Research Volume 37 ; 37 ; 2025 ; >
 
   }
