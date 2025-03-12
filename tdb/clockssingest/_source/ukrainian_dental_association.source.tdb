@@ -22,7 +22,6 @@
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/ukrainian-dental-association-released/
 
     au < zapped ; finished ; 2023 ; Ukrainian Dental Association WARC Content 2023 ; 2023 >
-    au < expected ; exists ; 2025 ; Ukrainian Dental Association WARC Content 2025 ; 2025 >
 
     }
 
