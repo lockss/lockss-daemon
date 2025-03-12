@@ -5974,9 +5974,9 @@
 
     au < finished ; manifest ; 1990 ; International Journal of Retail & Distribution Management Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; International Journal of Retail & Distribution Management Volume 19 ; 19 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 1992 ; International Journal of Retail & Distribution Management Volume 20 ; 20 ; >
-    au < frozen ; exists ; 1993 ; International Journal of Retail & Distribution Management Volume 21 ; 21 ; >
-    au < frozen ; exists ; 1994 ; International Journal of Retail & Distribution Management Volume 22 ; 22 ; >
+    au < finished ; manifest ; 1992 ; International Journal of Retail & Distribution Management Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1993 ; International Journal of Retail & Distribution Management Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; International Journal of Retail & Distribution Management Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; International Journal of Retail & Distribution Management Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1996 ; International Journal of Retail & Distribution Management Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1997 ; International Journal of Retail & Distribution Management Volume 25 ; 25 ; reingest4.clockss.org:8082 >
@@ -6022,11 +6022,11 @@
     param[journal_issn] = 0956-4233
     comment[journal_id] = ijsim
 
-    au < frozen ; exists ; 1990 ; International Journal of Service Industry Management Volume 1 ; 1 ; >
-    au < frozen ; exists ; 1991 ; International Journal of Service Industry Management Volume 2 ; 2 ; >
-    au < frozen ; exists ; 1992 ; International Journal of Service Industry Management Volume 3 ; 3 ; >
-    au < frozen ; exists ; 1993 ; International Journal of Service Industry Management Volume 4 ; 4 ; >
-    au < frozen ; exists ; 1994 ; International Journal of Service Industry Management Volume 5 ; 5 ; >
+    au < finished ; manifest ; 1990 ; International Journal of Service Industry Management Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; International Journal of Service Industry Management Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; International Journal of Service Industry Management Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1993 ; International Journal of Service Industry Management Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; International Journal of Service Industry Management Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1995 ; International Journal of Service Industry Management Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1996 ; International Journal of Service Industry Management Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1997 ; International Journal of Service Industry Management Volume 8 ; 8 ; reingest5.clockss.org:8082 >
@@ -6070,12 +6070,12 @@
     au < manifest ; exists ; 1986 ; International Journal of Social Economics Volume 13 ; 13 ; >
     au < manifest ; exists ; 1987 ; International Journal of Social Economics Volume 14 ; 14 ; >
     au < manifest ; exists ; 1988 ; International Journal of Social Economics Volume 15 ; 15 ; >
-    au < frozen ; exists ; 1989 ; International Journal of Social Economics Volume 16 ; 16 ; >
-    au < frozen ; exists ; 1990 ; International Journal of Social Economics Volume 17 ; 17 ; >
-    au < frozen ; exists ; 1991 ; International Journal of Social Economics Volume 18 ; 18 ; >
-    au < frozen ; exists ; 1992 ; International Journal of Social Economics Volume 19 ; 19 ; >
-    au < frozen ; exists ; 1993 ; International Journal of Social Economics Volume 20 ; 20 ; >
-    au < frozen ; exists ; 1994 ; International Journal of Social Economics Volume 21 ; 21 ; >
+    au < finished ; manifest ; 1989 ; International Journal of Social Economics Volume 16 ; 16 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; International Journal of Social Economics Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; International Journal of Social Economics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1992 ; International Journal of Social Economics Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; International Journal of Social Economics Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; International Journal of Social Economics Volume 21 ; 21 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; International Journal of Social Economics Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; International Journal of Social Economics Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1997 ; International Journal of Social Economics Volume 24 ; 24 ; reingest3.clockss.org:8083 >
@@ -6101,7 +6101,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Journal of Social Economics Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Journal of Social Economics Volume 45 ; 45 ; >
     au < finished ; crawling ; 2019 ; International Journal of Social Economics Volume 46 ; 46 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; International Journal of Social Economics Volume 47 ; 47 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_IJSE-05-2019-0310/urn:emeraldgroup.com:asset:id:binary:IJSE-05-2019-0310_mmc1.doc
+    au < finished ; manifest ; 2020 ; International Journal of Social Economics Volume 47 ; 47 ; reingest1.clockss.org:8082 > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_IJSE-05-2019-0310/urn:emeraldgroup.com:asset:id:binary:IJSE-05-2019-0310_mmc1.doc
     au < deepCrawl ; exists ; 2021 ; International Journal of Social Economics Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Social Economics Volume 49 ; 49 ; >
     au < deepCrawl ; exists ; 2023 ; International Journal of Social Economics Volume 50 ; 50 ; >
@@ -6128,12 +6128,12 @@
     au < manifest ; exists ; 1985 ; International Journal of Sociology and Social Policy Volume 5 ; 5 ; >
     au < manifest ; exists ; 1986 ; International Journal of Sociology and Social Policy Volume 6 ; 6 ; >
     au < manifest ; exists ; 1987 ; International Journal of Sociology and Social Policy Volume 7 ; 7 ; >
-    au < frozen ; exists ; 1989 ; International Journal of Sociology and Social Policy Volume 8 ; 8 ; >
-    au < frozen ; exists ; 1989 ; International Journal of Sociology and Social Policy Volume 9 ; 9 ; >
-    au < frozen ; exists ; 1990 ; International Journal of Sociology and Social Policy Volume 10 ; 10 ; >
-    au < frozen ; exists ; 1991 ; International Journal of Sociology and Social Policy Volume 11 ; 11 ; >
-    au < frozen ; exists ; 1992 ; International Journal of Sociology and Social Policy Volume 12 ; 12 ; >
-    au < frozen ; exists ; 1993 ; International Journal of Sociology and Social Policy Volume 13 ; 13 ; >
+    au < finished ; manifest ; 1989 ; International Journal of Sociology and Social Policy Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1989 ; International Journal of Sociology and Social Policy Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1990 ; International Journal of Sociology and Social Policy Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; International Journal of Sociology and Social Policy Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; International Journal of Sociology and Social Policy Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; International Journal of Sociology and Social Policy Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1994 ; International Journal of Sociology and Social Policy Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; International Journal of Sociology and Social Policy Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; International Journal of Sociology and Social Policy Volume 16 ; 16 ; reingest2.clockss.org:8085 >
@@ -6320,12 +6320,12 @@
     comment[journal_id] = ijwm
     comment[continued_by] = 1751-1062
 
-    au < frozen ; exists ; 1989 ; International Journal of Wine Marketing Volume 1 ; 1 ; >
-    au < frozen ; exists ; 1990 ; International Journal of Wine Marketing Volume 2 ; 2 ; >
-    au < frozen ; exists ; 1991 ; International Journal of Wine Marketing Volume 3 ; 3 ; >
-    au < frozen ; exists ; 1992 ; International Journal of Wine Marketing Volume 4 ; 4 ; >
-    au < frozen ; exists ; 1993 ; International Journal of Wine Marketing Volume 5 ; 5 ; >
-    au < frozen ; exists ; 1994 ; International Journal of Wine Marketing Volume 6 ; 6 ; >
+    au < finished ; manifest ; 1989 ; International Journal of Wine Marketing Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; International Journal of Wine Marketing Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; International Journal of Wine Marketing Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; International Journal of Wine Marketing Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1993 ; International Journal of Wine Marketing Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; International Journal of Wine Marketing Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; International Journal of Wine Marketing Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; International Journal of Wine Marketing Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1997 ; International Journal of Wine Marketing Volume 9 ; 9 ; reingest1.clockss.org:8082 >
@@ -6404,11 +6404,11 @@
     au < manifest ; exists ; 1986 ; International Marketing Review Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; International Marketing Review Volume 4 ; 4 ; >
     au < manifest ; exists ; 1988 ; International Marketing Review Volume 5 ; 5 ; >
-    au < frozen ; exists ; 1989 ; International Marketing Review Volume 6 ; 6 ; >
-    au < frozen ; exists ; 1990 ; International Marketing Review Volume 7 ; 7 ; >
-    au < frozen ; exists ; 1991 ; International Marketing Review Volume 8 ; 8 ; >
-    au < frozen ; exists ; 1992 ; International Marketing Review Volume 9 ; 9 ; >
-    au < frozen ; exists ; 1993 ; International Marketing Review Volume 10 ; 10 ; >
+    au < finished ; manifest ; 1989 ; International Marketing Review Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; International Marketing Review Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1991 ; International Marketing Review Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; International Marketing Review Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; International Marketing Review Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1994 ; International Marketing Review Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; International Marketing Review Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; International Marketing Review Volume 13 ; 13 ; reingest1.clockss.org:8082 >
@@ -6454,9 +6454,9 @@
     param[journal_issn] = 1066-2243
     comment[journal_id] = intr
 
-    au < frozen ; exists ; 1991 ; Internet Research Volume 1 ; 1 ; >
-    au < frozen ; exists ; 1992 ; Internet Research Volume 2 ; 2 ; >
-    au < frozen ; exists ; 1993 ; Internet Research Volume 3 ; 3 ; >
+    au < finished ; manifest ; 1991 ; Internet Research Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1992 ; Internet Research Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; Internet Research Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < notReady ; exists ; 1994 ; Internet Research Volume 4 ; 4 ; > #no substance
     au < finished ; crawling ; 1995 ; Internet Research Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1996 ; Internet Research Volume 6 ; 6 ; reingest4.clockss.org:8082 >
@@ -6852,12 +6852,12 @@
     au < manifest ; exists ; 1986 ; Journal of Business & Industrial Marketing Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Journal of Business & Industrial Marketing Volume 2 ; 2 ; >
     au < manifest ; exists ; 1988 ; Journal of Business & Industrial Marketing Volume 3 ; 3 ; >
-    au < frozen ; exists ; 1989 ; Journal of Business & Industrial Marketing Volume 4 ; 4 ; >
-    au < frozen ; exists ; 1990 ; Journal of Business & Industrial Marketing Volume 5 ; 5 ; >
-    au < frozen ; exists ; 1991 ; Journal of Business & Industrial Marketing Volume 6 ; 6 ; >
-    au < frozen ; exists ; 1992 ; Journal of Business & Industrial Marketing Volume 7 ; 7 ; >
-    au < frozen ; exists ; 1993 ; Journal of Business & Industrial Marketing Volume 8 ; 8 ; >
-    au < frozen ; exists ; 1994 ; Journal of Business & Industrial Marketing Volume 9 ; 9 ; >
+    au < finished ; manifest ; 1989 ; Journal of Business & Industrial Marketing Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; Journal of Business & Industrial Marketing Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1991 ; Journal of Business & Industrial Marketing Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; Journal of Business & Industrial Marketing Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; Journal of Business & Industrial Marketing Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; Journal of Business & Industrial Marketing Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; Journal of Business & Industrial Marketing Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; Journal of Business & Industrial Marketing Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1997 ; Journal of Business & Industrial Marketing Volume 12 ; 12 ; reingest3.clockss.org:8083 >
@@ -6911,12 +6911,12 @@
     au < manifest ; exists ; 1987 ; Journal of Business Strategy Volume 7 ; 7 ; >
     au < manifest ; exists ; 1987 ; Journal of Business Strategy Volume 8 ; 8 ; >
     au < manifest ; exists ; 1988 ; Journal of Business Strategy Volume 9 ; 9 ; >
-    au < frozen ; exists ; 1989 ; Journal of Business Strategy Volume 10 ; 10 ; >
-    au < frozen ; exists ; 1990 ; Journal of Business Strategy Volume 11 ; 11 ; >
-    au < frozen ; exists ; 1991 ; Journal of Business Strategy Volume 12 ; 12 ; >
-    au < frozen ; exists ; 1992 ; Journal of Business Strategy Volume 13 ; 13 ; >
-    au < frozen ; exists ; 1993 ; Journal of Business Strategy Volume 14 ; 14 ; >
-    au < frozen ; exists ; 1994 ; Journal of Business Strategy Volume 15 ; 15 ; >
+    au < finished ; manifest ; 1989 ; Journal of Business Strategy Volume 10 ; 10 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1990 ; Journal of Business Strategy Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1991 ; Journal of Business Strategy Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; Journal of Business Strategy Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; Journal of Business Strategy Volume 14 ; 14 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; Journal of Business Strategy Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1995 ; Journal of Business Strategy Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1996 ; Journal of Business Strategy Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1997 ; Journal of Business Strategy Volume 18 ; 18 ; reingest5.clockss.org:8082 >
@@ -7118,12 +7118,12 @@
     au < manifest ; exists ; 1986 ; Journal of Consumer Marketing Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; Journal of Consumer Marketing Volume 4 ; 4 ; >
     au < manifest ; exists ; 1988 ; Journal of Consumer Marketing Volume 5 ; 5 ; >
-    au < frozen ; exists ; 1989 ; Journal of Consumer Marketing Volume 6 ; 6 ; >
-    au < frozen ; exists ; 1990 ; Journal of Consumer Marketing Volume 7 ; 7 ; >
-    au < frozen ; exists ; 1991 ; Journal of Consumer Marketing Volume 8 ; 8 ; >
-    au < frozen ; exists ; 1992 ; Journal of Consumer Marketing Volume 9 ; 9 ; >
-    au < frozen ; exists ; 1993 ; Journal of Consumer Marketing Volume 10 ; 10 ; >
-    au < frozen ; exists ; 1994 ; Journal of Consumer Marketing Volume 11 ; 11 ; >
+    au < finished ; manifest ; 1989 ; Journal of Consumer Marketing Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; Journal of Consumer Marketing Volume 7 ; 7 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; Journal of Consumer Marketing Volume 8 ; 8 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; Journal of Consumer Marketing Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1993 ; Journal of Consumer Marketing Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; Journal of Consumer Marketing Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; Journal of Consumer Marketing Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1996 ; Journal of Consumer Marketing Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1997 ; Journal of Consumer Marketing Volume 14 ; 14 ; reingest5.clockss.org:8082 >
@@ -7309,11 +7309,11 @@
     au < manifest ; exists ; 1986 ; Journal of Documentation Volume 42 ; 42 ; >
     au < manifest ; exists ; 1987 ; Journal of Documentation Volume 43 ; 43 ; >
     au < manifest ; exists ; 1988 ; Journal of Documentation Volume 44 ; 44 ; >
-    au < frozen ; exists ; 1989 ; Journal of Documentation Volume 45 ; 45 ; >
-    au < frozen ; exists ; 1990 ; Journal of Documentation Volume 46 ; 46 ; >
-    au < frozen ; exists ; 1991 ; Journal of Documentation Volume 47 ; 47 ; >
-    au < frozen ; exists ; 1992 ; Journal of Documentation Volume 48 ; 48 ; >
-    au < frozen ; exists ; 1993 ; Journal of Documentation Volume 49 ; 49 ; >
+    au < finished ; manifest ; 1989 ; Journal of Documentation Volume 45 ; 45 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; Journal of Documentation Volume 46 ; 46 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; Journal of Documentation Volume 47 ; 47 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1992 ; Journal of Documentation Volume 48 ; 48 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; Journal of Documentation Volume 49 ; 49 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1994 ; Journal of Documentation Volume 50 ; 50 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; Journal of Documentation Volume 51 ; 51 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; Journal of Documentation Volume 52 ; 52 ; reingest2.clockss.org:8085 >
@@ -7377,10 +7377,10 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 ; >
-    au < frozen ; exists ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 ; >
+    au < finished ; manifest ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < manifest ; exists ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 ; >
-    au < frozen ; exists ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 ; >
+    au < finished ; manifest ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 ; >
     au < doNotProcess ; exists ; 2025 ; Journal of Economic and Administrative Sciences Volume 41 ; 41 ; >
     }
@@ -7438,11 +7438,11 @@
     au < manifest ; exists ; 1986 ; Journal of Economic Studies Volume 13 ; 13 ; >
     au < manifest ; exists ; 1987 ; Journal of Economic Studies Volume 14 ; 14 ; >
     au < manifest ; exists ; 1988 ; Journal of Economic Studies Volume 15 ; 15 ; >
-    au < frozen ; exists ; 1989 ; Journal of Economic Studies Volume 16 ; 16 ; >
-    au < frozen ; exists ; 1990 ; Journal of Economic Studies Volume 17 ; 17 ; >
-    au < frozen ; exists ; 1991 ; Journal of Economic Studies Volume 18 ; 18 ; >
-    au < frozen ; exists ; 1992 ; Journal of Economic Studies Volume 19 ; 19 ; >
-    au < frozen ; exists ; 1993 ; Journal of Economic Studies Volume 20 ; 20 ; >
+    au < finished ; manifest ; 1989 ; Journal of Economic Studies Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; Journal of Economic Studies Volume 17 ; 17 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; Journal of Economic Studies Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; Journal of Economic Studies Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1993 ; Journal of Economic Studies Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1994 ; Journal of Economic Studies Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1995 ; Journal of Economic Studies Volume 22 ; 22 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; Journal of Economic Studies Volume 23 ; 23 ; reingest5.clockss.org:8082 >
@@ -7515,12 +7515,12 @@
     au < manifest ; exists ; 1986 ; Journal of Educational Administration Volume 24 ; 24 ; >
     au < manifest ; exists ; 1987 ; Journal of Educational Administration Volume 25 ; 25 ; >
     au < manifest ; exists ; 1988 ; Journal of Educational Administration Volume 26 ; 26 ; >
-    au < frozen ; exists ; 1989 ; Journal of Educational Administration Volume 27 ; 27 ; >
-    au < frozen ; exists ; 1990 ; Journal of Educational Administration Volume 28 ; 28 ; >
-    au < frozen ; exists ; 1991 ; Journal of Educational Administration Volume 29 ; 29 ; >
-    au < frozen ; exists ; 1992 ; Journal of Educational Administration Volume 30 ; 30 ; >
-    au < frozen ; exists ; 1993 ; Journal of Educational Administration Volume 31 ; 31 ; >
-    au < frozen ; exists ; 1994 ; Journal of Educational Administration Volume 32 ; 32 ; >
+    au < finished ; manifest ; 1989 ; Journal of Educational Administration Volume 27 ; 27 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; Journal of Educational Administration Volume 28 ; 28 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; Journal of Educational Administration Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1992 ; Journal of Educational Administration Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; Journal of Educational Administration Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; Journal of Educational Administration Volume 32 ; 32 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; Journal of Educational Administration Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1996 ; Journal of Educational Administration Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1997 ; Journal of Educational Administration Volume 35 ; 35 ; reingest4.clockss.org:8082 >
@@ -7711,12 +7711,12 @@
     au < manifest ; exists ; 1986 ; Journal of European Industrial Training Volume 10 ; 10 ; >
     au < manifest ; exists ; 1987 ; Journal of European Industrial Training Volume 11 ; 11 ; >
     au < manifest ; exists ; 1988 ; Journal of European Industrial Training Volume 12 ; 12 ; >
-    au < frozen ; exists ; 1989 ; Journal of European Industrial Training Volume 13 ; 13 ; >
-    au < frozen ; exists ; 1990 ; Journal of European Industrial Training Volume 14 ; 14 ; >
-    au < frozen ; exists ; 1991 ; Journal of European Industrial Training Volume 15 ; 15 ; >
-    au < frozen ; exists ; 1992 ; Journal of European Industrial Training Volume 16 ; 16 ; >
-    au < frozen ; exists ; 1993 ; Journal of European Industrial Training Volume 17 ; 17 ; >
-    au < frozen ; exists ; 1994 ; Journal of European Industrial Training Volume 18 ; 18 ; >
+    au < finished ; manifest ; 1989 ; Journal of European Industrial Training Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; Journal of European Industrial Training Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1991 ; Journal of European Industrial Training Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; Journal of European Industrial Training Volume 16 ; 16 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; Journal of European Industrial Training Volume 17 ; 17 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; Journal of European Industrial Training Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1995 ; Journal of European Industrial Training Volume 19 ; 19 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1996 ; Journal of European Industrial Training Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1997 ; Journal of European Industrial Training Volume 21 ; 21 ; reingest5.clockss.org:8082 >
@@ -7868,7 +7868,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Fashion Marketing and Management Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Fashion Marketing and Management Volume 22 ; 22 ; >
     au < finished ; crawling ; 2019 ; Journal of Fashion Marketing and Management Volume 23 ; 23 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; Journal of Fashion Marketing and Management Volume 24 ; 24 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFMM-10-2018-0138/full/html
+    au < finished ; manifest ; 2020 ; Journal of Fashion Marketing and Management Volume 24 ; 24 ; reingest3.clockss.org:8083 > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFMM-10-2018-0138/full/html
     au < deepCrawl ; exists ; 2021 ; Journal of Fashion Marketing and Management Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Fashion Marketing and Management Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Fashion Marketing and Management Volume 27 ; 27 ; >
@@ -7888,7 +7888,7 @@
     param[journal_issn] = 1359-0790
     comment[journal_id] = jfc
 
-    au < frozen ; exists ; 1994 ; Journal of Financial Crime Volume 1 ; 1 ; >
+    au < finished ; manifest ; 1994 ; Journal of Financial Crime Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1995 ; Journal of Financial Crime Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1996 ; Journal of Financial Crime Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1997 ; Journal of Financial Crime Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -7945,7 +7945,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Financial Economic Policy Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Financial Economic Policy Volume 10 ; 10 ; >
     au < finished ; crawling ; 2019 ; Journal of Financial Economic Policy Volume 11 ; 11 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; Journal of Financial Economic Policy Volume 12 ; 12 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFEP-02-2019-0036/full/html
+    au < finished ; manifest ; 2020 ; Journal of Financial Economic Policy Volume 12 ; 12 ; reingest5.clockss.org:8082 > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFEP-02-2019-0036/full/html
     au < deepCrawl ; exists ; 2021 ; Journal of Financial Economic Policy Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Financial Economic Policy Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Financial Economic Policy Volume 15 ; 15 ; >
@@ -8001,8 +8001,8 @@
     param[journal_issn] = 1358-1988
     comment[journal_id] = jfrc
 
-    au < frozen ; exists ; 1993 ; Journal of Financial Regulation and Compliance Volume 1 ; 1 ; >
-    au < frozen ; exists ; 1994 ; Journal of Financial Regulation and Compliance Volume 2 ; 2 ; >
+    au < finished ; manifest ; 1993 ; Journal of Financial Regulation and Compliance Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; Journal of Financial Regulation and Compliance Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1995 ; Journal of Financial Regulation and Compliance Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1996 ; Journal of Financial Regulation and Compliance Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1997 ; Journal of Financial Regulation and Compliance Volume 5 ; 5 ; reingest4.clockss.org:8082 >
@@ -8674,11 +8674,11 @@
     au < manifest ; exists ; 1986 ; Journal of Management Development Volume 5 ; 5 ; >
     au < manifest ; exists ; 1987 ; Journal of Management Development Volume 6 ; 6 ; >
     au < manifest ; exists ; 1988 ; Journal of Management Development Volume 7 ; 7 ; >
-    au < frozen ; exists ; 1989 ; Journal of Management Development Volume 8 ; 8 ; >
-    au < frozen ; exists ; 1990 ; Journal of Management Development Volume 9 ; 9 ; >
-    au < frozen ; exists ; 1991 ; Journal of Management Development Volume 10 ; 10 ; >
-    au < frozen ; exists ; 1992 ; Journal of Management Development Volume 11 ; 11 ; >
-    au < frozen ; exists ; 1993 ; Journal of Management Development Volume 12 ; 12 ; >
+    au < finished ; manifest ; 1989 ; Journal of Management Development Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; Journal of Management Development Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; Journal of Management Development Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; Journal of Management Development Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1993 ; Journal of Management Development Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1994 ; Journal of Management Development Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1995 ; Journal of Management Development Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Journal of Management Development Volume 15 ; 15 ; reingest5.clockss.org:8082 >
@@ -8785,11 +8785,11 @@
     au < manifest ; exists ; 1986 ; Journal of Management in Medicine Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Journal of Management in Medicine Volume 2 ; 2 ; >
     au < manifest ; exists ; 1988 ; Journal of Management in Medicine Volume 3 ; 3 ; >
-    au < frozen ; exists ; 1990 ; Journal of Management in Medicine Volume 4 ; 4 ; >
-    au < frozen ; exists ; 1991 ; Journal of Management in Medicine Volume 5 ; 5 ; >
-    au < frozen ; exists ; 1992 ; Journal of Management in Medicine Volume 6 ; 6 ; >
-    au < frozen ; exists ; 1993 ; Journal of Management in Medicine Volume 7 ; 7 ; >
-    au < frozen ; exists ; 1994 ; Journal of Management in Medicine Volume 8 ; 8 ; >
+    au < finished ; manifest ; 1990 ; Journal of Management in Medicine Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; Journal of Management in Medicine Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; Journal of Management in Medicine Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1993 ; Journal of Management in Medicine Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1994 ; Journal of Management in Medicine Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; Journal of Management in Medicine Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; Journal of Management in Medicine Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1997 ; Journal of Management in Medicine Volume 11 ; 11 ; reingest3.clockss.org:8083 >
@@ -8815,11 +8815,11 @@
     au < manifest ; exists ; 1986 ; Journal of Managerial Psychology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Journal of Managerial Psychology Volume 2 ; 2 ; >
     au < manifest ; exists ; 1988 ; Journal of Managerial Psychology Volume 3 ; 3 ; >
-    au < frozen ; exists ; 1989 ; Journal of Managerial Psychology Volume 4 ; 4 ; >
-    au < frozen ; exists ; 1990 ; Journal of Managerial Psychology Volume 5 ; 5 ; >
-    au < frozen ; exists ; 1991 ; Journal of Managerial Psychology Volume 6 ; 6 ; >
-    au < frozen ; exists ; 1992 ; Journal of Managerial Psychology Volume 7 ; 7 ; >
-    au < frozen ; exists ; 1993 ; Journal of Managerial Psychology Volume 8 ; 8 ; >
+    au < finished ; manifest ; 1989 ; Journal of Managerial Psychology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; Journal of Managerial Psychology Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; Journal of Managerial Psychology Volume 6 ; 6 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1992 ; Journal of Managerial Psychology Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; Journal of Managerial Psychology Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1994 ; Journal of Managerial Psychology Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1995 ; Journal of Managerial Psychology Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; Journal of Managerial Psychology Volume 11 ; 11 ; reingest4.clockss.org:8082 >
@@ -11551,7 +11551,7 @@
     #continued_by = 2059-5816
 
     au < finished ; finished ; 1993 ; OCLC Systems & Services Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 1994 ; OCLC Systems & Services Volume 10 ; 10 ; >
+    au < finished ; manifest ; 1994 ; OCLC Systems & Services Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1995 ; OCLC Systems & Services Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; OCLC Systems & Services Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; OCLC Systems & Services Volume 13 ; 13 ; reingest2.clockss.org:8085 >
@@ -14228,14 +14228,14 @@
     #frozen, no metadata
 
     au < finished ; manifest ; 2015 ; Annals in Social Responsibility Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2016 ; Annals in Social Responsibility Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2017 ; Annals in Social Responsibility Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2018 ; Annals in Social Responsibility Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2019 ; Annals in Social Responsibility Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2020 ; Annals in Social Responsibility Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2021 ; Annals in Social Responsibility Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2022 ; Annals in Social Responsibility Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2023 ; Annals in Social Responsibility Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2016 ; Annals in Social Responsibility Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Annals in Social Responsibility Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Annals in Social Responsibility Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Annals in Social Responsibility Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Annals in Social Responsibility Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Annals in Social Responsibility Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; Annals in Social Responsibility Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2023 ; Annals in Social Responsibility Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; Annals in Social Responsibility Volume 10 ; 10 ; >
     au < doNotProcess ; exists ; 2025 ; Annals in Social Responsibility Volume 11 ; 11 ; >
 
@@ -14564,7 +14564,7 @@
     au < finished ; manifest ; 2011 ; International Journal of Organization Theory & Behavior Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; International Journal of Organization Theory & Behavior Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; International Journal of Organization Theory & Behavior Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2014 ; International Journal of Organization Theory & Behavior Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2014 ; International Journal of Organization Theory & Behavior Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; International Journal of Organization Theory & Behavior Volume 18 ; 18 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2016 ; International Journal of Organization Theory & Behavior Volume 19 ; 19 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2017 ; International Journal of Organization Theory & Behavior Volume 20 ; 20 ; reingest4.clockss.org:8082 >
@@ -14606,9 +14606,9 @@
     au < finished ; manifest ; 2012-2013 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2013-2014 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2014-2015 ; International Journal of Sports Marketing and Sponsorship Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 ; >
-    au < frozen ; exists ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 ; >
-    au < frozen ; exists ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 ; >
+    au < finished ; manifest ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; International Journal of Sports Marketing and Sponsorship Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; International Journal of Sports Marketing and Sponsorship Volume 21 ; 21 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; International Journal of Sports Marketing and Sponsorship Volume 22 ; 22 ; reingest3.clockss.org:8083 >
@@ -15307,13 +15307,13 @@
 
     param[journal_issn] = 2414-6994
 
-    au < frozen ; exists ; 2005 ; Asian Association of Open Universities Journal Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2006 ; Asian Association of Open Universities Journal Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2008 ; Asian Association of Open Universities Journal Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2009 ; Asian Association of Open Universities Journal Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2010 ; Asian Association of Open Universities Journal Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2011 ; Asian Association of Open Universities Journal Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2012 ; Asian Association of Open Universities Journal Volume 7 ; 7 ; >
+    au < finished ; manifest ; 2005 ; Asian Association of Open Universities Journal Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Asian Association of Open Universities Journal Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Asian Association of Open Universities Journal Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Asian Association of Open Universities Journal Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2010 ; Asian Association of Open Universities Journal Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Asian Association of Open Universities Journal Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Asian Association of Open Universities Journal Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Asian Association of Open Universities Journal Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2014 ; Asian Association of Open Universities Journal Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; Asian Association of Open Universities Journal Volume 10 ; 10 ; reingest4.clockss.org:8082 >
@@ -15389,7 +15389,7 @@
     au < finished ; manifest ; 2020 ; China Political Economy Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; China Political Economy Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; China Political Economy Volume 5 ; 5 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2023 ; China Political Economy Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2023 ; China Political Economy Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2024 ; China Political Economy Volume 7 ; 7 ; >
     au < doNotProcess ; exists ; 2025 ; China Political Economy Volume 8 ; 8 ; >
 
@@ -16075,10 +16075,10 @@
 
     param[journal_issn] = 2036-7465
 
-    au < frozen ; exists ; 2009 ; Mental Illness Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2010 ; Mental Illness Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2011 ; Mental Illness Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2012 ; Mental Illness Volume 4 ; 4 ; >
+    au < finished ; manifest ; 2009 ; Mental Illness Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Mental Illness Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Mental Illness Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Mental Illness Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2013 ; Mental Illness Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2014 ; Mental Illness Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; Mental Illness Volume 7 ; 7 ; reingest2.clockss.org:8085 >
@@ -16121,22 +16121,22 @@
 
     param[journal_issn] = 2574-8904
 
-    au < frozen ; exists ; 1998 ; New England Journal of Entrepreneurship Volume 1 ; 1 ; >
-    au < frozen ; exists ; 1999 ; New England Journal of Entrepreneurship Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2000 ; New England Journal of Entrepreneurship Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2001 ; New England Journal of Entrepreneurship Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2002 ; New England Journal of Entrepreneurship Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2003 ; New England Journal of Entrepreneurship Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2004 ; New England Journal of Entrepreneurship Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2005 ; New England Journal of Entrepreneurship Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2006 ; New England Journal of Entrepreneurship Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2007 ; New England Journal of Entrepreneurship Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2008 ; New England Journal of Entrepreneurship Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2009 ; New England Journal of Entrepreneurship Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2010 ; New England Journal of Entrepreneurship Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2011 ; New England Journal of Entrepreneurship Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2012 ; New England Journal of Entrepreneurship Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2013 ; New England Journal of Entrepreneurship Volume 16 ; 16 ; >
+    au < finished ; manifest ; 1998 ; New England Journal of Entrepreneurship Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1999 ; New England Journal of Entrepreneurship Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2000 ; New England Journal of Entrepreneurship Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; New England Journal of Entrepreneurship Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2002 ; New England Journal of Entrepreneurship Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; New England Journal of Entrepreneurship Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; New England Journal of Entrepreneurship Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; New England Journal of Entrepreneurship Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2006 ; New England Journal of Entrepreneurship Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; New England Journal of Entrepreneurship Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; New England Journal of Entrepreneurship Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; New England Journal of Entrepreneurship Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2010 ; New England Journal of Entrepreneurship Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; New England Journal of Entrepreneurship Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; New England Journal of Entrepreneurship Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; New England Journal of Entrepreneurship Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2014 ; New England Journal of Entrepreneurship Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2015 ; New England Journal of Entrepreneurship Volume 18 ; 18 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; New England Journal of Entrepreneurship Volume 19 ; 19 ; reingest5.clockss.org:8082 >
@@ -16400,15 +16400,15 @@
 
     param[journal_issn] = 2077-5504
 
-    au < frozen ; exists ; 2004 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2005 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2006 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 3 ; 3 ; >
-    au < frozen ; exists ; 2007 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2008 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2009 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2010 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2011 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2012 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2004 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2012 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2013 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2014 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2015 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 12 ; 12 ; reingest3.clockss.org:8083 >
@@ -16471,8 +16471,8 @@
 
     param[journal_issn] = 2752-6666
 
-    au < frozen ; exists ; 2022 ; Consumer Behavior in Tourism and Hospitality Volume 17 ; 17 ; >
-    au < frozen ; exists ; 2023 ; Consumer Behavior in Tourism and Hospitality Volume 18 ; 18 ; >
+    au < finished ; manifest ; 2022 ; Consumer Behavior in Tourism and Hospitality Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Consumer Behavior in Tourism and Hospitality Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; Consumer Behavior in Tourism and Hospitality Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2025 ; Consumer Behavior in Tourism and Hospitality Volume 20 ; 20 ; >
 
@@ -16488,8 +16488,8 @@
 
     param[journal_issn] = 2752-6739
 
-    au < frozen ; exists ; 2022 ; Drugs, Habits and Social Policy Volume 23 ; 23 ; >
-    au < frozen ; exists ; 2023 ; Drugs, Habits and Social Policy Volume 24 ; 24 ; >
+    au < finished ; manifest ; 2022 ; Drugs, Habits and Social Policy Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Drugs, Habits and Social Policy Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; Drugs, Habits and Social Policy Volume 25 ; 25 ; >
     au < doNotProcess ; exists ; 2025 ; Drugs, Habits and Social Policy Volume 26 ; 26 ; >
 
@@ -16505,8 +16505,8 @@
 
     param[journal_issn] = 2754-1312
 
-    au < frozen ; exists ; 2022 ; Drugs, Habits and Social Policy Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2023 ; Drugs, Habits and Social Policy Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2022 ; Drugs, Habits and Social Policy Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Drugs, Habits and Social Policy Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2024 ; Drugs, Habits and Social Policy Volume 3 ; 3 ; >
     au < doNotProcess ; exists ; 2025 ; Drugs, Habits and Social Policy Volume 4 ; 4 ; >
 
