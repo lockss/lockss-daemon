@@ -78,21 +78,14 @@
       title <
          name = East View Information Services Database Source Content
       >
-      plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewDatabaseDirSourcePlugin
-      implicit < status ; status2 ; year ; name ; param[directory] >
+        plugin = org.lockss.plugin.clockss.eastview.ClockssEastviewDatabaseDirSourcePlugin
+        implicit < status ; status2 ; year ; name ; param[directory] >
 
-      {
-        #AUs tested in test directory
-        param[base_url] = https://clockss-test.lockss.org/sourcefiles/eastviewdb-released/
-
-        au < doNotProcess ; exists ; 2024 ; East View Information Services Database Source Content 2024_01 ; 2024_01 >
-      }
-      {
         #AUs in production
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewdb-released/
 
         au < manifest ; exists ; 2025 ; East View Information Services Database Source Content 2025_01 ; 2025_01 >
-      }
+
     }
 
   {
