@@ -21,10 +21,10 @@
       param[base_url] = https://jms.esraa.edu.iq/
       param[journal_abbr] = journal
 
-      au < testing ; exists ; 2020 ; Al-Esraa University College Journal for Medical Sciences Volume 2 ; 2 ; >
-      au < testing ; exists ; 2022 ; Al-Esraa University College Journal for Medical Sciences Volume 3 ; 3 ; >
-      au < testing ; exists ; 2023 ; Al-Esraa University College Journal for Medical Sciences Volume 4 ; 4 ; >
-      au < testing ; exists ; 2024 ; Al-Esraa University College Journal for Medical Sciences Volume 5 ; 5 ; >
+      au < ready ; exists ; 2020 ; Al-Esraa University College Journal for Medical Sciences Volume 2 ; 2 ; >
+      au < ready ; exists ; 2022 ; Al-Esraa University College Journal for Medical Sciences Volume 3 ; 3 ; >
+      au < ready ; exists ; 2023 ; Al-Esraa University College Journal for Medical Sciences Volume 4 ; 4 ; >
+      au < ready ; exists ; 2024 ; Al-Esraa University College Journal for Medical Sciences Volume 5 ; 5 ; >
       au < expected ; exists ; 2025 ; Al-Esraa University College Journal for Medical Sciences Volume 6 ; 6 ; >
 
   }
@@ -41,11 +41,11 @@
       param[base_url] = https://jes.esraa.edu.iq/
       param[journal_abbr] = journal
 
-      au < testing ; exists ; 2020 ; Al-Esraa University College Journal for Engineering Sciences Volume 2 ; 2 ; >
-      au < testing ; exists ; 2021 ; Al-Esraa University College Journal for Engineering Sciences Volume 3 ; 3 ; >
-      au < testing ; exists ; 2022 ; Al-Esraa University College Journal for Engineering Sciences Volume 4 ; 4 ; >
-      au < testing ; exists ; 2023 ; Al-Esraa University College Journal for Engineering Sciences Volume 5 ; 5 ; >
-      au < testing ; exists ; 2024 ; Al-Esraa University College Journal for Engineering Sciences Volume 6 ; 6 ; >
+      au < ready ; exists ; 2020 ; Al-Esraa University College Journal for Engineering Sciences Volume 2 ; 2 ; >
+      au < ready ; exists ; 2021 ; Al-Esraa University College Journal for Engineering Sciences Volume 3 ; 3 ; >
+      au < ready ; exists ; 2022 ; Al-Esraa University College Journal for Engineering Sciences Volume 4 ; 4 ; >
+      au < ready ; exists ; 2023 ; Al-Esraa University College Journal for Engineering Sciences Volume 5 ; 5 ; >
+      au < ready ; exists ; 2024 ; Al-Esraa University College Journal for Engineering Sciences Volume 6 ; 6 ; >
       au < expected ; exists ; 2025 ; Al-Esraa University College Journal for Engineering Sciences Volume 7 ; 7 ; >
 
   }
