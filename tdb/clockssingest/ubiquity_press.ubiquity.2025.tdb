@@ -2019,21 +2019,46 @@
 
   }
 
-}
+  {
 
+      title <
+        name = Serials: The Journal for the Serials Community ;
+        issn = 0953-0460 ;
+        eissn = 1475-3308
+      >
 
-{
-  publisher <
-    name = United Kingdom Serials Group ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
+      comment[publisher] = United Kingdom Serials Group
+      #param[base_url] = http://serials.uksg.org/
+      nondefparam[base_url2] = https://account.serials.uksg.org/
+      nondefparam[journal_id] = up-j-s
+      #previously processed through metapress
 
-    provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
+      au < doNotProcess ; doNotProcess ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; 1 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; 2 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < doNotProcess ; doNotProcess ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; 3 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < doNotProcess ; doNotProcess ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; 4 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < doNotProcess ; doNotProcess ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; 5 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < doNotProcess ; doNotProcess ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; 6 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < doNotProcess ; doNotProcess ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; 7 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; > #M exists. No articles for that year.
+      au < doNotProcess ; doNotProcess ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; 8 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; 9 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; 10 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; 11 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; >
+      au < doNotProcess ; doNotProcess ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; 12 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; >
+      au < finished ; finished ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; 13 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 > #M exists. No articles for that year.
+      au < finished ; finished ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; 14 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; 15 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 > #M exists. No articles for that year.
+      au < finished ; finished ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; 16 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; 17 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; 18 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; 19 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; 20 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; 21 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; 22 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; 23 ; United Kingdom Serials Group ; http://serials.uksg.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; 24 ; United Kingdom Serials Group ; http://serials.uksg.org/ ; reingest1.clockss.org:8082 >
+
+  }
 
   {
 
@@ -2043,41 +2068,25 @@
       >
 
       comment[publisher] = United Kingdom Serials Group
-      param[base_url] = https://insights.uksg.org/
+      #param[base_url] = https://insights.uksg.org/
       nondefparam[base_url2] = https://account.insights.uksg.org/
       nondefparam[journal_id] = up-j-i
 
-      au < doNotProcess ; doNotProcess ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 7 ; Insights: the UKSG journal Volume 2018 ; 2018 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 10 ; Insights: the UKSG journal Volume 2021 ; 2021 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 11 ; Insights: the UKSG journal Volume 2022 ; 2022 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 12 ; >
-      au < exists ; exists ; 2024 ; 13 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 13 ; >
-      au < expected ; exists ; 2025 ; 14 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 14 ; >
+      au < finished ; finished ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; 1 ; United Kingdom Serials Group ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; 2 ; United Kingdom Serials Group ; http://insights.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; 3 ; United Kingdom Serials Group ; http://insights.uksg.org/ ; >
+      au < finished ; finished ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; 4 ; United Kingdom Serials Group ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; 5 ; United Kingdom Serials Group ; http://insights.uksg.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; 6 ; United Kingdom Serials Group ; http://insights.uksg.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 7 ; Insights: the UKSG journal Volume 2018 ; 2018 ; 7 ; United Kingdom Serials Group ; https://insights.uksg.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; 8 ; United Kingdom Serials Group ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 ; 9 ; United Kingdom Serials Group ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 10 ; Insights: the UKSG journal Volume 2021 ; 2021 ; 10 ; United Kingdom Serials Group ; https://insights.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 11 ; Insights: the UKSG journal Volume 2022 [superseded] ; 2022 ; 11 ; United Kingdom Serials Group ; https://insights.uksg.org/ ; >
+      au < exists ; exists ; 2024 ; 13 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 13 ; United Kingdom Serials Group ; https://insights.uksg.org/ ; >
+      au < expected ; exists ; 2025 ; 14 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 14 ; United Kingdom Serials Group ; https://insights.uksg.org/ ; >
 
   }
-
-}
-
-{
-  publisher <
-    name = White Rose University Press ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
 
   {
 
@@ -2087,26 +2096,26 @@
       >
 
       comment[publisher] = White Rose University Press
-      param[base_url] = https://bioj-online.com/
+      #param[base_url] = https://bioj-online.com/
       nondefparam[base_url2] = https://account.bioj-online.com/
       nondefparam[journal_id] = wr-j-bioj
 
-      au < doNotProcess ; doNotProcess ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 9 ; British and Irish Orthoptic Journal Volume 2012 ; 2012 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 10 ; British and Irish Orthoptic Journal Volume 2013 ; 2013 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 15 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 16 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 17 ; British and Irish Orthoptic Journal Volume 2021 ; 2021 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 18 ; British and Irish Orthoptic Journal Volume 2022 ; 2022 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 19 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 ; 19 ; >
-      au < exists ; exists ; 2024 ; 20 ; British and Irish Orthoptic Journal Volume 2024 ; 2024 ; 20 ; >
-      au < expected ; exists ; 2025 ; 21 ; British and Irish Orthoptic Journal Volume 2025 ; 2025 ; 21 ; >
+      au < finished ; finished ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; 6 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; 7 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; 8 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2012 ; 9 ; British and Irish Orthoptic Journal Volume 2012 ; 2012 ; 9 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2013 ; 10 ; British and Irish Orthoptic Journal Volume 2013 ; 2013 ; 10 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; 11 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; 12 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; 13 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; 14 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 15 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; 15 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2020 ; 16 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; 16 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2021 ; 17 ; British and Irish Orthoptic Journal Volume 2021 ; 2021 ; 17 ; White Rose University Press ; https://www.bioj-online.com/ ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 18 ; British and Irish Orthoptic Journal Volume 2022 [superseded] ; 2022 ; 18 ; White Rose University Press ; https://www.bioj-online.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 19 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 ; 19 ; White Rose University Press ; https://bioj-online.com/ ; >
+      au < exists ; exists ; 2024 ; 20 ; British and Irish Orthoptic Journal Volume 2024 ; 2024 ; 20 ; White Rose University Press ; https://bioj-online.com/ ; >
+      au < expected ; exists ; 2025 ; 21 ; British and Irish Orthoptic Journal Volume 2025 ; 2025 ; 21 ; White Rose University Press ; https://bioj-online.com/ ; >
 
   }
 
@@ -2118,19 +2127,19 @@
       >
 
       comment[publisher] = White Rose University Press
-      param[base_url] = https://euroslajournal.org/
+      #param[base_url] = https://euroslajournal.org/
       nondefparam[base_url2] = https://account.euroslajournal.org/
       nondefparam[journal_id] = wr-j-jesla
 
-      au < doNotProcess ; doNotProcess ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 5 ; Journal of the European Second Language Association Volume 2021 ; 2021 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 ; 2022 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Journal of the European Second Language Association Volume 2023 ; 2023 ; 7 ; >
-      au < exists ; exists ; 2024 ; 8 ; Journal of the European Second Language Association Volume 2024 ; 2024 ; 8 ; >
-      au < expected ; exists ; 2025 ; 9 ; Journal of the European Second Language Association Volume 2025 ; 2025 ; 9 ; >
+      au < finished ; finished ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; 1 ; White Rose University Press ; https://www.euroslajournal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; 2 ; White Rose University Press ; https://www.euroslajournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; 3 ; White Rose University Press ; https://www.euroslajournal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; 4 ; White Rose University Press ; https://www.euroslajournal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2021 ; 5 ; Journal of the European Second Language Association Volume 2021 ; 2021 ; 5 ; White Rose University Press ; https://www.euroslajournal.org/ ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 [superseded] ; 2022 ; 6 ; White Rose University Press ; https://www.euroslajournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Journal of the European Second Language Association Volume 2023 ; 2023 ; 7 ; White Rose University Press ; https://euroslajournal.org/ ; >
+      au < exists ; exists ; 2024 ; 8 ; Journal of the European Second Language Association Volume 2024 ; 2024 ; 8 ; White Rose University Press ; https://euroslajournal.org/ ; >
+      au < expected ; exists ; 2025 ; 9 ; Journal of the European Second Language Association Volume 2025 ; 2025 ; 9 ; White Rose University Press ; https://euroslajournal.org/ ; >
 
   }
 
@@ -2142,14 +2151,15 @@
       >
 
       comment[publisher] = White Rose University Press
-      param[base_url] = https://ujpir-journal.com/
+      #param[base_url] = https://ujpir-journal.com/
       nondefparam[base_url2] = https://account.ujpir-journal.com/
       nondefparam[journal_id] = wr-j-ujpir
 
-      au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; 2 ; >
+      au < finished ; crawling ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; 1 ; White Rose University Press ; https://www.ujpir-journal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; 2 ; White Rose University Press ; https://www.ujpir-journal.com/ ; reingest4.clockss.org:8082 >
 
   }
+
   {
 
       title <
@@ -2158,31 +2168,16 @@
       >
 
       comment[publisher] = White Rose University Press
-      param[base_url] = https://writingchinesejournal.org/
+      #param[base_url] = https://writingchinesejournal.org/
       nondefparam[base_url2] = https://account.writingchinesejournal.org/
       nondefparam[journal_id] = wr-j-wcajcsl
 
-      au < doNotProcess ; doNotProcess ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 ; 2 ; >
-      au < exists ; exists ; 2024 ; 3 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2024 ; 2024 ; 3 ; >
-      au < expected ; exists ; 2025 ; 4 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2025 ; 2025 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 ; 1 ; White Rose University Press ; https://writingchinesejournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 ; 2 ; White Rose University Press ; https://writingchinesejournal.org/ ; >
+      au < exists ; exists ; 2024 ; 3 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2024 ; 2024 ; 3 ; White Rose University Press ; https://writingchinesejournal.org/ ; >
+      au < expected ; exists ; 2025 ; 4 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2025 ; 2025 ; 4 ; White Rose University Press ; https://writingchinesejournal.org/ ; >
 
   }
-
-}
-
-{
-  publisher <
-    name = Centre for Security Governance ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
 
   {
 
@@ -2191,41 +2186,27 @@
         eissn = 2165-2627
       >
 
-      comment[publisher] = Centre for Security Governance
-      param[base_url] = https://stabilityjournal.org/
+      comment[publisher] = University of Bradford, Department of Peace Studies and International Development 
+      #param[base_url] = https://stabilityjournal.org/
       nondefparam[base_url2] = https://account.stabilityjournal.org/
       nondefparam[journal_id] = up-j-sijsd
 
-      au < doNotProcess ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; >
-      au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; >
-      au < doNotProcess ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; 9 ; >
-      au < doesNotExist ; doesNotExist ; 2021 ; 10 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 11 ; Stability: International Journal of Security & Development Volume 2022 ; 2022 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; 12 ; >
-      au < expected ; exists ; 2024 ; 13 ; Stability: International Journal of Security & Development Volume 2024 ; 2024 ; 13 ; >
-      au < expected ; exists ; 2025 ; 14 ; Stability: International Journal of Security & Development Volume 2025 ; 2025 ; 14 ; >
+      au < exists ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; University of Bradford, Department of Peace Studies and International Development ; https://stabilityjournal.org/ ; >
+      au < exists ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; University of Bradford, Department of Peace Studies and International Development ; https://stabilityjournal.org/ ; >
+      au < exists ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; 3 ; University of Bradford, Department of Peace Studies and International Development ; https://stabilityjournal.org/ ; >
+      au < finished ; finished ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; 4 ; University of Bradford, Department of Peace Studies and International Development ; http://www.stabilityjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; 5 ; University of Bradford, Department of Peace Studies and International Development ; http://www.stabilityjournal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; 6 ; University of Bradford, Department of Peace Studies and International Development ; http://www.stabilityjournal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; 7 ; University of Bradford, Department of Peace Studies and International Development ; https://www.stabilityjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; 8 ; University of Bradford, Department of Peace Studies and International Development ; https://www.stabilityjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; 9 ; University of Bradford, Department of Peace Studies and International Development ; https://www.stabilityjournal.org/ ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2021 ; 10 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; 10 ; University of Bradford, Department of Peace Studies and International Development ; https://www.stabilityjournal.org/ ; >
+      au < superseded ; exists ; 2022 ; 11 ; Stability: International Journal of Security & Development Volume 2022 [superseded] ; 2022 ; 11 ; University of Bradford, Department of Peace Studies and International Development ; https://www.stabilityjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; 12 ; University of Bradford, Department of Peace Studies and International Development ; https://www.stabilityjournal.org/ ; >
+      au < expected ; exists ; 2024 ; 13 ; Stability: International Journal of Security & Development Volume 2024 ; 2024 ; 13 ; University of Bradford, Department of Peace Studies and International Development ; https://stabilityjournal.org/ ; >
+      au < expected ; exists ; 2025 ; 14 ; Stability: International Journal of Security & Development Volume 2025 ; 2025 ; 14 ; University of Bradford, Department of Peace Studies and International Development ; https://stabilityjournal.org/ ; >
 
   }
-}
-
-{
-  publisher <
-    name = Scandinavian Military Studies ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
 
   {
 
@@ -2235,34 +2216,20 @@
       >
 
       comment[publisher] = Scandinavian Military Studies
-      param[base_url] = https://sjms.nu/
+      #param[base_url] = https://sjms.nu/
       nondefparam[base_url2] = https://account.sjms.nu/
       nondefparam[journal_id] = sms-j-sjms
 
-      au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 3 ; Scandinavian Military Studies Volume 2020 ; 2020 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 4 ; Scandinavian Military Studies Volume 2021 ; 2021 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 5 ; Scandinavian Military Studies Volume 2022 ; 2022 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Scandinavian Military Studies Volume 2023 ; 2023 ; 6 ; >
-      au < exists ; exists ; 2024 ; 7 ; Scandinavian Military Studies Volume 2024 ; 2024 ; 7 ; >
-      au < expected ; exists ; 2025 ; 8 ; Scandinavian Military Studies Volume 2025 ; 2025 ; 8 ; >
+      au < finished ; finished ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; 1 ; Scandinavian Military Studies ; https://sjms.nu/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; 2 ; Scandinavian Military Studies ; https://sjms.nu/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 3 ; Scandinavian Military Studies Volume 2020 ; 2020 ; 3 ; Scandinavian Military Studies ; https://sjms.nu/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2021 ; 4 ; Scandinavian Military Studies Volume 2021 ; 2021 ; 4 ; Scandinavian Military Studies ; https://sjms.nu/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 5 ; Scandinavian Military Studies Volume 2022 [superseded] ; 2022 ; 5 ; Scandinavian Military Studies ; https://sjms.nu/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Scandinavian Military Studies Volume 2023 ; 2023 ; 6 ; Scandinavian Military Studies ; https://sjms.nu/ ; >
+      au < exists ; exists ; 2024 ; 7 ; Scandinavian Military Studies Volume 2024 ; 2024 ; 7 ; Scandinavian Military Studies ; https://sjms.nu/ ; >
+      au < expected ; exists ; 2025 ; 8 ; Scandinavian Military Studies Volume 2025 ; 2025 ; 8 ; Scandinavian Military Studies ; https://sjms.nu/ ; >
 
   }
-}
-
-{
-  publisher <
-    name = Virginia Tech Publishing ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
 
   {
 
@@ -2272,40 +2239,40 @@
       >
 
       comment[publisher] = Virginia Tech Publishing
-      param[base_url] = https://jotsjournal.org/
+      #param[base_url] = https://jotsjournal.org/
       nondefparam[base_url2] = https://account.jotsjournal.org/
       nondefparam[journal_id] = vt-j-jts
 
-      au < exists ; exists ; 1996 ; 1 ; The Journal of Technology Studies Volume 1996 ; 1996 ; 1 ; >
-      au < exists ; exists ; 1997 ; 2 ; The Journal of Technology Studies Volume 1997 ; 1997 ; 2 ; >
-      au < exists ; exists ; 1998 ; 3 ; The Journal of Technology Studies Volume 1998 ; 1998 ; 3 ; >
-      au < exists ; exists ; 1999 ; 4 ; The Journal of Technology Studies Volume 1999 ; 1999 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; 5 ; The Journal of Technology Studies Volume 2000 ; 2000 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; 6 ; The Journal of Technology Studies Volume 2001 ; 2001 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 7 ; The Journal of Technology Studies Volume 2002 ; 2002 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; 8 ; The Journal of Technology Studies Volume 2003 ; 2003 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 9 ; The Journal of Technology Studies Volume 2004 ; 2004 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 10 ; The Journal of Technology Studies Volume 2005 ; 2005 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 11 ; The Journal of Technology Studies Volume 2006 ; 2006 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 12 ; The Journal of Technology Studies Volume 2007 ; 2007 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 13 ; The Journal of Technology Studies Volume 2008 ; 2008 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 14 ; The Journal of Technology Studies Volume 2009 ; 2009 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 15 ; The Journal of Technology Studies Volume 2010 ; 2010 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 16 ; The Journal of Technology Studies Volume 2011 ; 2011 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 17 ; The Journal of Technology Studies Volume 2012 ; 2012 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 18 ; The Journal of Technology Studies Volume 2013 ; 2013 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 19 ; The Journal of Technology Studies Volume 2014 ; 2014 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 20 ; The Journal of Technology Studies Volume 2015 ; 2015 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 21 ; The Journal of Technology Studies Volume 2016 ; 2016 ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 22 ; The Journal of Technology Studies Volume 2017 ; 2017 ; 22 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 23 ; The Journal of Technology Studies Volume 2018 ; 2018 ; 23 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 24 ; The Journal of Technology Studies Volume 2019 ; 2019 ; 24 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 25 ; The Journal of Technology Studies Volume 2020 ; 2020 ; 25 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 26 ; The Journal of Technology Studies Volume 2021 ; 2021 ; 26 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 27 ; The Journal of Technology Studies Volume 2022 ; 2022 ; 27 ; >
-      au < exists ; exists ; 2023 ; 28 ; The Journal of Technology Studies Volume 2023 ; 2023 ; 28 ; >
-      au < exists ; exists ; 2024 ; 29 ; The Journal of Technology Studies Volume 2024 ; 2024 ; 29 ; >
-      au < expected ; exists ; 2025 ; 30 ; The Journal of Technology Studies Volume 2025 ; 2025 ; 30 ; >
+      au < exists ; exists ; 1996 ; 1 ; The Journal of Technology Studies Volume 1996 ; 1996 ; 1 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < exists ; exists ; 1997 ; 2 ; The Journal of Technology Studies Volume 1997 ; 1997 ; 2 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < exists ; exists ; 1998 ; 3 ; The Journal of Technology Studies Volume 1998 ; 1998 ; 3 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < exists ; exists ; 1999 ; 4 ; The Journal of Technology Studies Volume 1999 ; 1999 ; 4 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; 5 ; The Journal of Technology Studies Volume 2000 ; 2000 ; 5 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; 6 ; The Journal of Technology Studies Volume 2001 ; 2001 ; 6 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; 7 ; The Journal of Technology Studies Volume 2002 ; 2002 ; 7 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; 8 ; The Journal of Technology Studies Volume 2003 ; 2003 ; 8 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 9 ; The Journal of Technology Studies Volume 2004 ; 2004 ; 9 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 10 ; The Journal of Technology Studies Volume 2005 ; 2005 ; 10 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 11 ; The Journal of Technology Studies Volume 2006 ; 2006 ; 11 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 12 ; The Journal of Technology Studies Volume 2007 ; 2007 ; 12 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 13 ; The Journal of Technology Studies Volume 2008 ; 2008 ; 13 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 14 ; The Journal of Technology Studies Volume 2009 ; 2009 ; 14 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 15 ; The Journal of Technology Studies Volume 2010 ; 2010 ; 15 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 16 ; The Journal of Technology Studies Volume 2011 ; 2011 ; 16 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 17 ; The Journal of Technology Studies Volume 2012 ; 2012 ; 17 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 18 ; The Journal of Technology Studies Volume 2013 ; 2013 ; 18 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 19 ; The Journal of Technology Studies Volume 2014 ; 2014 ; 19 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 20 ; The Journal of Technology Studies Volume 2015 ; 2015 ; 20 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 21 ; The Journal of Technology Studies Volume 2016 ; 2016 ; 21 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 22 ; The Journal of Technology Studies Volume 2017 ; 2017 ; 22 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 23 ; The Journal of Technology Studies Volume 2018 ; 2018 ; 23 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 24 ; The Journal of Technology Studies Volume 2019 ; 2019 ; 24 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 25 ; The Journal of Technology Studies Volume 2020 ; 2020 ; 25 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 26 ; The Journal of Technology Studies Volume 2021 ; 2021 ; 26 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 27 ; The Journal of Technology Studies Volume 2022 ; 2022 ; 27 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < exists ; exists ; 2023 ; 28 ; The Journal of Technology Studies Volume 2023 ; 2023 ; 28 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < exists ; exists ; 2024 ; 29 ; The Journal of Technology Studies Volume 2024 ; 2024 ; 29 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
+      au < expected ; exists ; 2025 ; 30 ; The Journal of Technology Studies Volume 2025 ; 2025 ; 30 ; Virginia Tech Publishing ; https://jotsjournal.org/ ; >
 
   }
 
@@ -2317,16 +2284,16 @@
       >
 
       comment[publisher] = Virginia Tech Publishing
-      param[base_url] = https://seejournal.org/
+      #param[base_url] = https://seejournal.org/
       nondefparam[base_url2] = https://account.seejournal.org/
       nondefparam[journal_id] = vt-j-see
 
-      au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; 4 ; >
-      au < exists ; exists ; 2024 ; 5 ; Studies in Engineering Education Volume 2024 ; 2024 ; 5 ; >
-      au < expected ; exists ; 2025 ; 6 ; Studies in Engineering Education Volume 2025 ; 2025 ; 6 ; >
+      au < frozen ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; Virginia Tech Publishing ; https://www.seejournal.org/ ; >
+      au < frozen ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; Virginia Tech Publishing ; https://www.seejournal.org/ ; >
+      au < superseded ; exists ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 [superseded] ; 2022 ; 3 ; Virginia Tech Publishing ; https://www.seejournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; 4 ; Virginia Tech Publishing ; https://www.seejournal.org/ ; >
+      au < exists ; exists ; 2024 ; 5 ; Studies in Engineering Education Volume 2024 ; 2024 ; 5 ; Virginia Tech Publishing ; https://seejournal.org/ ; >
+      au < expected ; exists ; 2025 ; 6 ; Studies in Engineering Education Volume 2025 ; 2025 ; 6 ; Virginia Tech Publishing ; https://seejournal.org/ ; >
 
   }
 
@@ -2338,64 +2305,49 @@
       >
 
       comment[publisher] = Virginia Tech Publishing
-      param[base_url] = https://jte-journal.org/
+      #param[base_url] = https://jte-journal.org/
       nondefparam[base_url2] = https://account.jte-journal.org/
       nondefparam[journal_id] = vt-j-jte
 
-      au < exists ; exists ; 1989 ; 1 ; Journal of Technology Education Volume 1989 ; 1989 ; 1 ; >
-      au < exists ; exists ; 1990 ; 2 ; Journal of Technology Education Volume 1990 ; 1990 ; 2 ; >
-      au < exists ; exists ; 1991 ; 3 ; Journal of Technology Education Volume 1991 ; 1991 ; 3 ; >
-      au < exists ; exists ; 1992 ; 4 ; Journal of Technology Education Volume 1992 ; 1992 ; 4 ; >
-      au < exists ; exists ; 1993 ; 5 ; Journal of Technology Education Volume 1993 ; 1993 ; 5 ; >
-      au < exists ; exists ; 1994 ; 6 ; Journal of Technology Education Volume 1994 ; 1994 ; 6 ; >
-      au < exists ; exists ; 1995 ; 7 ; Journal of Technology Education Volume 1995 ; 1995 ; 7 ; >
-      au < exists ; exists ; 1996 ; 8 ; Journal of Technology Education Volume 1996 ; 1996 ; 8 ; >
-      au < exists ; exists ; 1997 ; 9 ; Journal of Technology Education Volume 1997 ; 1997 ; 9 ; >
-      au < exists ; exists ; 1998 ; 10 ; Journal of Technology Education Volume 1998 ; 1998 ; 10 ; >
-      au < exists ; exists ; 1999 ; 11 ; Journal of Technology Education Volume 1999 ; 1999 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; 12 ; Journal of Technology Education Volume 2000 ; 2000 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; 13 ; Journal of Technology Education Volume 2001 ; 2001 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 14 ; Journal of Technology Education Volume 2002 ; 2002 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; 15 ; Journal of Technology Education Volume 2003 ; 2003 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 16 ; Journal of Technology Education Volume 2004 ; 2004 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 17 ; Journal of Technology Education Volume 2005 ; 2005 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 18 ; Journal of Technology Education Volume 2006 ; 2006 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 19 ; Journal of Technology Education Volume 2007 ; 2007 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 20 ; Journal of Technology Education Volume 2008 ; 2008 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 21 ; Journal of Technology Education Volume 2009 ; 2009 ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 22 ; Journal of Technology Education Volume 2010 ; 2010 ; 22 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 23 ; Journal of Technology Education Volume 2011 ; 2011 ; 23 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 24 ; Journal of Technology Education Volume 2012 ; 2012 ; 24 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 25 ; Journal of Technology Education Volume 2013 ; 2013 ; 25 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 26 ; Journal of Technology Education Volume 2014 ; 2014 ; 26 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 27 ; Journal of Technology Education Volume 2015 ; 2015 ; 27 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 28 ; Journal of Technology Education Volume 2016 ; 2016 ; 28 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 29 ; Journal of Technology Education Volume 2017 ; 2017 ; 29 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 30 ; Journal of Technology Education Volume 2018 ; 2018 ; 30 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 31 ; Journal of Technology Education Volume 2019 ; 2019 ; 31 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 32 ; Journal of Technology Education Volume 2020 ; 2020 ; 32 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 33 ; Journal of Technology Education Volume 2021 ; 2021 ; 33 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 34 ; Journal of Technology Education Volume 2022 ; 2022 ; 34 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 35 ; Journal of Technology Education Volume 2023 ; 2023 ; 35 ; >
-      au < exists ; exists ; 2024 ; 36 ; Journal of Technology Education Volume 2024 ; 2024 ; 36 ; >
-      au < expected ; exists ; 2025 ; 37 ; Journal of Technology Education Volume 2025 ; 2025 ; 37 ; >
+      au < exists ; exists ; 1989 ; 1 ; Journal of Technology Education Volume 1989 ; 1989 ; 1 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < exists ; exists ; 1990 ; 2 ; Journal of Technology Education Volume 1990 ; 1990 ; 2 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < exists ; exists ; 1991 ; 3 ; Journal of Technology Education Volume 1991 ; 1991 ; 3 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < exists ; exists ; 1992 ; 4 ; Journal of Technology Education Volume 1992 ; 1992 ; 4 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < exists ; exists ; 1993 ; 5 ; Journal of Technology Education Volume 1993 ; 1993 ; 5 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < exists ; exists ; 1994 ; 6 ; Journal of Technology Education Volume 1994 ; 1994 ; 6 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < exists ; exists ; 1995 ; 7 ; Journal of Technology Education Volume 1995 ; 1995 ; 7 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < exists ; exists ; 1996 ; 8 ; Journal of Technology Education Volume 1996 ; 1996 ; 8 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < exists ; exists ; 1997 ; 9 ; Journal of Technology Education Volume 1997 ; 1997 ; 9 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < exists ; exists ; 1998 ; 10 ; Journal of Technology Education Volume 1998 ; 1998 ; 10 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < exists ; exists ; 1999 ; 11 ; Journal of Technology Education Volume 1999 ; 1999 ; 11 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; 12 ; Journal of Technology Education Volume 2000 ; 2000 ; 12 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; 13 ; Journal of Technology Education Volume 2001 ; 2001 ; 13 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; 14 ; Journal of Technology Education Volume 2002 ; 2002 ; 14 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; 15 ; Journal of Technology Education Volume 2003 ; 2003 ; 15 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 16 ; Journal of Technology Education Volume 2004 ; 2004 ; 16 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 17 ; Journal of Technology Education Volume 2005 ; 2005 ; 17 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 18 ; Journal of Technology Education Volume 2006 ; 2006 ; 18 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 19 ; Journal of Technology Education Volume 2007 ; 2007 ; 19 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 20 ; Journal of Technology Education Volume 2008 ; 2008 ; 20 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 21 ; Journal of Technology Education Volume 2009 ; 2009 ; 21 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 22 ; Journal of Technology Education Volume 2010 ; 2010 ; 22 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 23 ; Journal of Technology Education Volume 2011 ; 2011 ; 23 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 24 ; Journal of Technology Education Volume 2012 ; 2012 ; 24 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 25 ; Journal of Technology Education Volume 2013 ; 2013 ; 25 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 26 ; Journal of Technology Education Volume 2014 ; 2014 ; 26 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 27 ; Journal of Technology Education Volume 2015 ; 2015 ; 27 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 28 ; Journal of Technology Education Volume 2016 ; 2016 ; 28 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 29 ; Journal of Technology Education Volume 2017 ; 2017 ; 29 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 30 ; Journal of Technology Education Volume 2018 ; 2018 ; 30 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 31 ; Journal of Technology Education Volume 2019 ; 2019 ; 31 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 32 ; Journal of Technology Education Volume 2020 ; 2020 ; 32 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 33 ; Journal of Technology Education Volume 2021 ; 2021 ; 33 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 34 ; Journal of Technology Education Volume 2022 ; 2022 ; 34 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 35 ; Journal of Technology Education Volume 2023 ; 2023 ; 35 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < exists ; exists ; 2024 ; 36 ; Journal of Technology Education Volume 2024 ; 2024 ; 36 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
+      au < expected ; exists ; 2025 ; 37 ; Journal of Technology Education Volume 2025 ; 2025 ; 37 ; Virginia Tech Publishing ; https://jte-journal.org/ ; >
 
   }
-
-}
-{
-  publisher <
-    name = Gonzaga Library Publishing ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-#    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
 
   {
 
@@ -2405,31 +2357,29 @@
       >
 
       comment[publisher] = Gonzaga Library Publishing
-      param[base_url] = https://ijsl.press.gonzaga.edu/
+      #param[base_url] = https://ijsl.press.gonzaga.edu/
       nondefparam[base_url2] = https://account.ijsl.press.gonzaga.edu/
       nondefparam[journal_id] = gl-j-ijsl
 
-      au < doNotProcess ; doNotProcess ; 2005 ; 1 ; The International Journal of Servant-Leadership Volume 2005 ; 2005 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 2 ; The International Journal of Servant-Leadership Volume 2006 ; 2006 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 3 ; The International Journal of Servant-Leadership Volume 2007 ; 2007 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 4 ; The International Journal of Servant-Leadership Volume 2008 ; 2008 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 5 ; The International Journal of Servant-Leadership Volume 2009 ; 2009 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 6 ; The International Journal of Servant-Leadership Volume 2010 ; 2010 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 7 ; The International Journal of Servant-Leadership Volume 2011 ; 2011 ; 7 ; >
-      au < doesNotExist ; doesNotExist ; 2012 ; 8 ; The International Journal of Servant-Leadership Volume 2012 ; 2012 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 9 ; The International Journal of Servant-Leadership Volume 2013 ; 2013 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 10 ; The International Journal of Servant-Leadership Volume 2014 ; 2014 ; 10 ; >
-      au < doesNotExist ; doesNotExist ; 2015 ; 0 ; The International Journal of Servant-Leadership Volume 2015 ; 2015 ; 0 ; >
-      au < doesNotExist ; doesNotExist ; 2016 ; 0 ; The International Journal of Servant-Leadership Volume 2016 ; 2016 ; 0 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 11 ; The International Journal of Servant-Leadership Volume 2017 ; 2017 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 12 ; The International Journal of Servant-Leadership Volume 2018 ; 2018 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 13 ; The International Journal of Servant-Leadership Volume 2019 ; 2019 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 14 ; The International Journal of Servant-Leadership Volume 2020 ; 2020 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 15 ; The International Journal of Servant-Leadership Volume 2021 ; 2021 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 16 ; The International Journal of Servant-Leadership Volume 2022 ; 2022 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 17 ; The International Journal of Servant-Leadership Volume 2023 ; 2023 ; 17 ; >
-      au < manifest ; exists ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 ; 18 ; >
-      au < expected ; exists ; 2025 ; 19 ; The International Journal of Servant-Leadership Volume 2025 ; 2025 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 1 ; The International Journal of Servant-Leadership Volume 2005 ; 2005 ; 1 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 2 ; The International Journal of Servant-Leadership Volume 2006 ; 2006 ; 2 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 3 ; The International Journal of Servant-Leadership Volume 2007 ; 2007 ; 3 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 4 ; The International Journal of Servant-Leadership Volume 2008 ; 2008 ; 4 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 5 ; The International Journal of Servant-Leadership Volume 2009 ; 2009 ; 5 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 6 ; The International Journal of Servant-Leadership Volume 2010 ; 2010 ; 6 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 7 ; The International Journal of Servant-Leadership Volume 2011 ; 2011 ; 7 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doesNotExist ; doesNotExist ; 2012 ; 8 ; The International Journal of Servant-Leadership Volume 2012 ; 2012 ; 8 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 9 ; The International Journal of Servant-Leadership Volume 2013 ; 2013 ; 9 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 10 ; The International Journal of Servant-Leadership Volume 2014 ; 2014 ; 10 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 11 ; The International Journal of Servant-Leadership Volume 2017 ; 2017 ; 11 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 12 ; The International Journal of Servant-Leadership Volume 2018 ; 2018 ; 12 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 13 ; The International Journal of Servant-Leadership Volume 2019 ; 2019 ; 13 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 14 ; The International Journal of Servant-Leadership Volume 2020 ; 2020 ; 14 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 15 ; The International Journal of Servant-Leadership Volume 2021 ; 2021 ; 15 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 16 ; The International Journal of Servant-Leadership Volume 2022 ; 2022 ; 16 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 17 ; The International Journal of Servant-Leadership Volume 2023 ; 2023 ; 17 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < manifest ; exists ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 ; 18 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
+      au < expected ; exists ; 2025 ; 19 ; The International Journal of Servant-Leadership Volume 2025 ; 2025 ; 19 ; Gonzaga Library Publishing ; https://ijsl.press.gonzaga.edu/ ; >
 
   }
 
@@ -2441,14 +2391,14 @@
       >
 
       comment[publisher] = Gonzaga Library Publishing
-      param[base_url] = https://ibapa.org/
+      #param[base_url] = https://ibapa.org/
       nondefparam[base_url2] = https://account.ibapa.org/
       nondefparam[journal_id] = gl-j-ibpa
 
-      au < superseded ; exists ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 [superseded] ; 2022 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 ; 2 ; >
-      au < expected ; exists ; 2024 ; 3 ; Indigenous Business & Public Administration Volume 2024 ; 2024 ; 3 ; >
-      au < expected ; exists ; 2025 ; 4 ; Indigenous Business & Public Administration Volume 2025 ; 2025 ; 4 ; >
+      au < superseded ; exists ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 [superseded] ; 2022 ; 1 ; Gonzaga Library Publishing ; https://ibapa.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 ; 2 ; Gonzaga Library Publishing ; https://ibapa.org/ ; >
+      au < expected ; exists ; 2024 ; 3 ; Indigenous Business & Public Administration Volume 2024 ; 2024 ; 3 ; Gonzaga Library Publishing ; https://ibapa.org/ ; >
+      au < expected ; exists ; 2025 ; 4 ; Indigenous Business & Public Administration Volume 2025 ; 2025 ; 4 ; Gonzaga Library Publishing ; https://ibapa.org/ ; >
 
   }
 
@@ -2460,43 +2410,29 @@
       >
 
       comment[publisher] = Gonzaga Library Publishing
-      param[base_url] = https://jhs.press.gonzaga.edu/
+      #param[base_url] = https://jhs.press.gonzaga.edu/
       nondefparam[base_url2] = https://account.jhs.press.gonzaga.edu/
       nondefparam[journal_id] = gl-j-jhs
 
-     au < finished ; manifest ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; 1 ; reingest2.clockss.org:8085 >
-     au < finished ; manifest ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; 2 ; reingest4.clockss.org:8082 >
-     au < finished ; manifest ; 2004 ; 3 ; Journal of Hate Studies Volume 2004 ; 2004 ; 3 ; reingest3.clockss.org:8083 >
-     au < finished ; manifest ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; 4 ; reingest2.clockss.org:8085 >
-     au < finished ; manifest ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; 5 ; reingest3.clockss.org:8083 >
-     au < finished ; manifest ; 2007 ; 6 ; Journal of Hate Studies Volume 2007 ; 2007 ; 6 ; reingest4.clockss.org:8082 >
-     au < finished ; manifest ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; 7 ; reingest5.clockss.org:8082 >
-     au < finished ; manifest ; 2010 ; 8 ; Journal of Hate Studies Volume 2010 ; 2010 ; 8 ; reingest3.clockss.org:8083 >
-     au < finished ; manifest ; 2011 ; 9 ; Journal of Hate Studies Volume 2011 ; 2011 ; 9 ; reingest5.clockss.org:8082 >
-     au < finished ; manifest ; 2012 ; 10 ; Journal of Hate Studies Volume 2012 ; 2012 ; 10 ; reingest2.clockss.org:8085 >
-     au < finished ; manifest ; 2013 ; 11 ; Journal of Hate Studies Volume 2013 ; 2013 ; 11 ; reingest5.clockss.org:8082 >
-     au < finished ; manifest ; 2014 ; 12 ; Journal of Hate Studies Volume 2014 ; 2014 ; 12 ; reingest1.clockss.org:8082 >
-     au < finished ; manifest ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; 13 ; reingest4.clockss.org:8082 >
-     au < finished ; crawling ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; 14-15 ; reingest3.clockss.org:8083 >
-     au < exists ; exists ; 2020 ; 16 ; Journal of Hate Studies Volume 2020 ; 2020 ; 16 ; >
-     au < exists ; exists ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; 17 ; >
-     au < exists ; exists ; 2023 ; 18 ; Journal of Hate Studies Volume 2023 ; 2023 ; 18 ; >
+     au < finished ; manifest ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; 1 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
+     au < finished ; manifest ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; 2 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
+     au < finished ; manifest ; 2004 ; 3 ; Journal of Hate Studies Volume 2004 ; 2004 ; 3 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+     au < finished ; manifest ; 2005 ; 4 ; Journal of Hate Studies Volume 2005 ; 2005 ; 4 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
+     au < finished ; manifest ; 2006 ; 5 ; Journal of Hate Studies Volume 2006 ; 2006 ; 5 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+     au < finished ; manifest ; 2007 ; 6 ; Journal of Hate Studies Volume 2007 ; 2007 ; 6 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
+     au < finished ; manifest ; 2009 ; 7 ; Journal of Hate Studies Volume 2009 ; 2009 ; 7 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
+     au < finished ; manifest ; 2010 ; 8 ; Journal of Hate Studies Volume 2010 ; 2010 ; 8 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+     au < finished ; manifest ; 2011 ; 9 ; Journal of Hate Studies Volume 2011 ; 2011 ; 9 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
+     au < finished ; manifest ; 2012 ; 10 ; Journal of Hate Studies Volume 2012 ; 2012 ; 10 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
+     au < finished ; manifest ; 2013 ; 11 ; Journal of Hate Studies Volume 2013 ; 2013 ; 11 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest5.clockss.org:8082 >
+     au < finished ; manifest ; 2014 ; 12 ; Journal of Hate Studies Volume 2014 ; 2014 ; 12 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest1.clockss.org:8082 >
+     au < finished ; manifest ; 2016 ; 13 ; Journal of Hate Studies Volume 2016 ; 2016 ; 13 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
+     au < finished ; crawling ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; 14-15 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest3.clockss.org:8083 >
+     au < exists ; exists ; 2020 ; 16 ; Journal of Hate Studies Volume 2020 ; 2020 ; 16 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; >
+     au < exists ; exists ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; 17 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; >
+     au < exists ; exists ; 2023 ; 18 ; Journal of Hate Studies Volume 2023 ; 2023 ; 18 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; >
 
   }
-
-}
-{
-  publisher <
-    name = De Montfort University Press ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
 
   {
 
@@ -2506,16 +2442,17 @@
       >
 
       comment[publisher] = De Montfort University Press
-      param[base_url] = https://jcss.demontfortuniversitypress.org/
+      #param[base_url] = https://jcss.demontfortuniversitypress.org/
       nondefparam[base_url2] = https://account.jcss.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-jcss
 
-      au < doNotProcess ; doNotProcess ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; 3 ; >
-      au < manifest ; exists ; 2023 ; 4 ; Journal of Critical Southern Studies Volume 2023 ; 2023 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; 1 ; De Montfort University Press ; https://jcss.demontfortuniversitypress.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; 2 ; De Montfort University Press ; https://jcss.demontfortuniversitypress.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; 3 ; De Montfort University Press ; https://jcss.demontfortuniversitypress.org/ ; >
+      au < manifest ; exists ; 2023 ; 4 ; Journal of Critical Southern Studies Volume 2023 ; 2023 ; 4 ; De Montfort University Press ; https://jcss.demontfortuniversitypress.org/ ; >
 
   }
+
   {
 
       title <
@@ -2524,33 +2461,18 @@
       >
 
       comment[publisher] = De Montfort University Press
-      param[base_url] = https://gp.demontfortuniversitypress.org/
+      #param[base_url] = https://gp.demontfortuniversitypress.org/
       nondefparam[base_url2] = https://account.gp.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-gpajepr
 
-      au < doNotProcess ; doNotProcess ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; 14 ; >
-      au < manifest ; exists ; 2024 ; 15 ; Gateway Papers Volume 2024 ; 2024 ; 15 ; >
-      au < manifest ; exists ; 2025 ; 16 ; Gateway Papers Volume 2025 ; 2025 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; De Montfort University Press ; https://gp.demontfortuniversitypress.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 ; 12 ; De Montfort University Press ; https://gp.demontfortuniversitypress.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 ; 13 ; De Montfort University Press ; https://gp.demontfortuniversitypress.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; 14 ; De Montfort University Press ; https://gp.demontfortuniversitypress.org/ ; >
+      au < manifest ; exists ; 2024 ; 15 ; Gateway Papers Volume 2024 ; 2024 ; 15 ; De Montfort University Press ; https://gp.demontfortuniversitypress.org/ ; >
+      au < manifest ; exists ; 2025 ; 16 ; Gateway Papers Volume 2025 ; 2025 ; 16 ; De Montfort University Press ; https://gp.demontfortuniversitypress.org/ ; >
 
   }
-
-}
-
-{
-  publisher <
-    name = Houston Methodist DeBakey Heart & Vascular Center ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
 
   {
 
@@ -2560,48 +2482,34 @@
       >
 
       comment[publisher] = Houston Methodist DeBakey Heart & Vascular Center
-      param[base_url] = https://journal.houstonmethodist.org/
+      #param[base_url] = https://journal.houstonmethodist.org/
       nondefparam[base_url2] = https://account.journal.houstonmethodist.org/
       nondefparam[journal_id] = up-j-mdbcj
 
-      au < doNotProcess ; doNotProcess ; 2004 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2004 ; 2004 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 2 ; Methodist DeBakey Cardiovascular Journal Volume 2005 ; 2005 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2006 ; 2006 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 4 ; Methodist DeBakey Cardiovascular Journal Volume 2007 ; 2007 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 5 ; Methodist DeBakey Cardiovascular Journal Volume 2008 ; 2008 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 6 ; Methodist DeBakey Cardiovascular Journal Volume 2009 ; 2009 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 7 ; Methodist DeBakey Cardiovascular Journal Volume 2010 ; 2010 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 8 ; Methodist DeBakey Cardiovascular Journal Volume 2011 ; 2011 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 9 ; Methodist DeBakey Cardiovascular Journal Volume 2012 ; 2012 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 10 ; Methodist DeBakey Cardiovascular Journal Volume 2013 ; 2013 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 11 ; Methodist DeBakey Cardiovascular Journal Volume 2014 ; 2014 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 12 ; Methodist DeBakey Cardiovascular Journal Volume 2015 ; 2015 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 13 ; Methodist DeBakey Cardiovascular Journal Volume 2016 ; 2016 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 14 ; Methodist DeBakey Cardiovascular Journal Volume 2017 ; 2017 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 15 ; Methodist DeBakey Cardiovascular Journal Volume 2018 ; 2018 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 16 ; Methodist DeBakey Cardiovascular Journal Volume 2019 ; 2019 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 17 ; Methodist DeBakey Cardiovascular Journal Volume 2020 ; 2020 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 18 ; Methodist DeBakey Cardiovascular Journal Volume 2021 ; 2021 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2023 ; 2023 ; 20 ; >
-      au < exists ; exists ; 2024 ; 21 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 21 ; >
-      au < expected ; exists ; 2025 ; 22 ; Methodist DeBakey Cardiovascular Journal Volume 2025 ; 2025 ; 22 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2004 ; 2004 ; 1 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 2 ; Methodist DeBakey Cardiovascular Journal Volume 2005 ; 2005 ; 2 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2006 ; 2006 ; 3 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 4 ; Methodist DeBakey Cardiovascular Journal Volume 2007 ; 2007 ; 4 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 5 ; Methodist DeBakey Cardiovascular Journal Volume 2008 ; 2008 ; 5 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 6 ; Methodist DeBakey Cardiovascular Journal Volume 2009 ; 2009 ; 6 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 7 ; Methodist DeBakey Cardiovascular Journal Volume 2010 ; 2010 ; 7 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 8 ; Methodist DeBakey Cardiovascular Journal Volume 2011 ; 2011 ; 8 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 9 ; Methodist DeBakey Cardiovascular Journal Volume 2012 ; 2012 ; 9 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 10 ; Methodist DeBakey Cardiovascular Journal Volume 2013 ; 2013 ; 10 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 11 ; Methodist DeBakey Cardiovascular Journal Volume 2014 ; 2014 ; 11 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 12 ; Methodist DeBakey Cardiovascular Journal Volume 2015 ; 2015 ; 12 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 13 ; Methodist DeBakey Cardiovascular Journal Volume 2016 ; 2016 ; 13 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 14 ; Methodist DeBakey Cardiovascular Journal Volume 2017 ; 2017 ; 14 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 15 ; Methodist DeBakey Cardiovascular Journal Volume 2018 ; 2018 ; 15 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 16 ; Methodist DeBakey Cardiovascular Journal Volume 2019 ; 2019 ; 16 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 17 ; Methodist DeBakey Cardiovascular Journal Volume 2020 ; 2020 ; 17 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 18 ; Methodist DeBakey Cardiovascular Journal Volume 2021 ; 2021 ; 18 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 ; 19 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2023 ; 2023 ; 20 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < exists ; exists ; 2024 ; 21 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 21 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
+      au < expected ; exists ; 2025 ; 22 ; Methodist DeBakey Cardiovascular Journal Volume 2025 ; 2025 ; 22 ; Houston Methodist DeBakey Heart & Vascular Center ; https://journal.houstonmethodist.org/ ; >
 
   }
-
-}
-{
-  publisher <
-    name = University of East Anglia ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
 
   {
 
@@ -2611,31 +2519,18 @@
       >
 
       comment[publisher] = University of East Anglia
-      param[base_url] = https://newareastudies.com/
+      #param[base_url] = https://newareastudies.com/
       nondefparam[base_url2] = https://account.newareastudies.com/
       nondefparam[journal_id] = up-j-nas
 
-      au < doNotProcess ; doNotProcess ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; 3 ; >
-      au < doesNotExist ; doesNotExist ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; 4 ; >
-      au < exists ; exists ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; >
-      au < expected ; exists ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; 1 ; University of East Anglia ; https://newareastudies.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; 2 ; University of East Anglia ; https://newareastudies.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; 3 ; University of East Anglia ; https://newareastudies.com/ ; >
+      au < doesNotExist ; doesNotExist ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; 4 ; University of East Anglia ; https://newareastudies.com/ ; >
+      au < exists ; exists ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; University of East Anglia ; https://newareastudies.com/ ; >
+      au < expected ; exists ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; University of East Anglia ; https://newareastudies.com/ ; >
 
   }
-}
-{
-  publisher <
-    name = International Society for the Empirical Study of Literature ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = needs.plugin
 
   {
 
@@ -2645,165 +2540,25 @@
       >
 
       comment[publisher] = International Society for the Empirical Study of Literature
-      param[base_url] = https://ssol-journal.com/
+      #param[base_url] = https://ssol-journal.com/
       nondefparam[base_url2] = https://account.ssol-journal.com/
       nondefparam[journal_id] = isesl-j-ssl
 
-      au < doNotProcess ; doNotProcess ; 2011 ; 1 ; Scientific Study of Literature Volume 2011 ; 2011 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2 ; Scientific Study of Literature Volume 2012 ; 2012 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 3 ; Scientific Study of Literature Volume 2013 ; 2013 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 4 ; Scientific Study of Literature Volume 2014 ; 2014 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 5 ; Scientific Study of Literature Volume 2015 ; 2015 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 6 ; Scientific Study of Literature Volume 2016 ; 2016 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 7 ; Scientific Study of Literature Volume 2017 ; 2017 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 8 ; Scientific Study of Literature Volume 2018 ; 2018 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 9 ; Scientific Study of Literature Volume 2019 ; 2019 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; >
-      au < doesNotExist ; doesNotExist ; 2022 ; 0 ; Scientific Study of Literature Volume 2022 ; 2022 ; 0 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; >
-      au < exists ; exists ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; >
-      au < expected ; exists ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; >
-
-  }
-}
-
-{
-  publisher <
-    name = London School of Economics and Political Science ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = London School of Economics and Political Science ######################### NOT UBIQUITY
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-
-  {
-
-      title <
-        name = Journal of Illicit Economies and Development ;
-        eissn = 2516-7227
-      >
-
-      comment[publisher] = London School of Economics and Political Science
-      param[base_url] = https://jied.lse.ac.uk/
-      nondefparam[base_url2] = https://account.jied.lse.ac.uk/
-      nondefparam[journal_id] = lse-j-jied
-
-      au < finished ; finished ; 2019 ; 1 ; Journal of Illicit Economies and Development Volume 2019 ; 2019 ; 1 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 2 ; Journal of Illicit Economies and Development Volume 2020 ; 2020 ; 2 ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2021 ; 3 ; Journal of Illicit Economies and Development Volume 2021 ; 2021 ; 3 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2022 ; 4 ; Journal of Illicit Economies and Development Volume 2022 ; 2022 ; 4 ; >
-      au < exists ; exists ; 2023 ; 5 ; Journal of Illicit Economies and Development Volume 2023 ; 2023 ; 5 ; >
-      au < exists ; exists ; 2024 ; 6 ; Journal of Illicit Economies and Development Volume 2024 ; 2024 ; 6 ; >
-      au < expected ; exists ; 2025 ; 7 ; Journal of Illicit Economies and Development Volume 2025 ; 2025 ; 7 ; >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Long-Term Care ;
-        eissn = 2516-9122
-      >
-
-      comment[publisher] = London School of Economics and Political Science
-      param[base_url] = https://journal.ilpnetwork.org/
-      nondefparam[base_url2] = https://account.journal.ilpnetwork.org/
-      nondefparam[journal_id] = lse-j-jltc
-
-      au < finished ; finished ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; 2 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; 5 ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; 6 ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; 8 ; reingest4.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 [superseded] ; 2022 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Journal of Long-Term Care Volume 2023 ; 2023 ; 10 ; >
-      au < manifest ; exists ; 2024 ; 11 ; Journal of Long-Term Care Volume 2024 ; 2024 ; 11 ; >
-      au < manifest ; exists ; 2025 ; 12 ; Journal of Long-Term Care Volume 2025 ; 2025 ; 12 ; >
-
-  }
-
-  {
-
-      title <
-        name = LSE Public Policy Review ;
-        eissn = 2633-4046
-      >
-
-      comment[publisher] = London School of Economics and Political Science
-      param[base_url] = https://ppr.lse.ac.uk/
-      nondefparam[base_url2] = https://account.ppr.lse.ac.uk/
-      nondefparam[journal_id] = lse-j-lseppr
-
-      au < finished ; finished ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; 1 ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; 2 ; reingest2.clockss.org:8085 >
-      au < superseded ; exists ; 2022 ; 3 ; LSE Public Policy Review Volume 2022 [superseded] ; 2022 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 4 ; LSE Public Policy Review Volume 2023 ; 2023 ; 4 ; >
-      au < manifest ; exists ; 2024 ; 5 ; LSE Public Policy Review Volume 2024 ; 2024 ; 5 ; >
-      au < expected ; exists ; 2025 ; 6 ; LSE Public Policy Review Volume 2025 ; 2025 ; 6 ; >
-
-  }
-
-  {
-
-      title <
-        name = Philosophy of Physics ;
-        eissn = 2753-5908
-      >
-
-      comment[publisher] = London School of Economics and Political Science
-      param[base_url] = https://philosophyofphysics.lse.ac.uk/
-      nondefparam[base_url2] = https://account.philosophyofphysics.lse.ac.uk/
-      nondefparam[journal_id] = lse-j-pp
-
-      au < doNotProcess ; doNotProcess ; 2023 ; 1 ; Philosophy of Physics Volume 2023 ; 2023 ; 1 ; >
-      au < manifest ; exists ; 2024 ; 2 ; Philosophy of Physics Volume 2024 ; 2024 ; 2 ; >
-      au < manifest ; exists ; 2025 ; 3 ; Philosophy of Physics Volume 2025 ; 2025 ; 3 ; >
-
-  }
-
-  {
-
-      title <
-        name = Economía ;
-        issn = 1533-6239 ;
-        eissn = 1529-7470
-      >
-
-      comment[publisher] = London School of Economics and Political Science
-      param[base_url] = https://economia.lse.ac.uk/
-      nondefparam[base_url2] = https://account.economia.lse.ac.uk/
-      nondefparam[journal_id] = lse-j-elaceaj
-
-      au < doNotProcess ; doNotProcess ; 2000 ; 1 ; Economía Volume 2000 ; 2000 ; 1 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; 2 ; Economía Volume 2001 ; 2001 ; 2 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 3 ; Economía Volume 2002 ; 2002 ; 3 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; 4 ; Economía Volume 2003 ; 2003 ; 4 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 5 ; Economía Volume 2004 ; 2004 ; 5 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 6 ; Economía Volume 2005 ; 2005 ; 6 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 7 ; Economía Volume 2006 ; 2006 ; 7 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 8 ; Economía Volume 2007 ; 2007 ; 8 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 9 ; Economía Volume 2008 ; 2008 ; 9 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 10 ; Economía Volume 2009 ; 2009 ; 10 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 11 ; Economía Volume 2010 ; 2010 ; 11 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 12 ; Economía Volume 2011 ; 2011 ; 12 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 13 ; Economía Volume 2012 ; 2012 ; 13 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 14 ; Economía Volume 2013 ; 2013 ; 14 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 15 ; Economía Volume 2014 ; 2014 ; 15 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 16 ; Economía Volume 2015 ; 2015 ; 16 ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 17 ; Economía Volume 2016 ; 2016 ; 17 ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 18 ; Economía Volume 2017 ; 2017 ; 18 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 19 ; Economía Volume 2018 ; 2018 ; 19 ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 20 ; Economía Volume 2019 ; 2019 ; 20 ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 21 ; Economía Volume 2020 ; 2020 ; 21 ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 22 ; Economía Volume 2021 ; 2021 ; 22 ; >
-      au < doesNotExist ; doesNotExist ; 2022 ; 23 ; Economía Volume 2022 ; 2022 ; 23 ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 24 ; Economía Volume 2023 ; 2023 ; 24 ; >
-      au < manifest ; exists ; 2024 ; 25 ; Economía Volume 2024 ; 2024 ; 25 ; >
-      au < expected ; exists ; 2025 ; 26 ; Economía Volume 2025 ; 2025 ; 26 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 1 ; Scientific Study of Literature Volume 2011 ; 2011 ; 1 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2 ; Scientific Study of Literature Volume 2012 ; 2012 ; 2 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 3 ; Scientific Study of Literature Volume 2013 ; 2013 ; 3 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 4 ; Scientific Study of Literature Volume 2014 ; 2014 ; 4 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 5 ; Scientific Study of Literature Volume 2015 ; 2015 ; 5 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 6 ; Scientific Study of Literature Volume 2016 ; 2016 ; 6 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 7 ; Scientific Study of Literature Volume 2017 ; 2017 ; 7 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 8 ; Scientific Study of Literature Volume 2018 ; 2018 ; 8 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 9 ; Scientific Study of Literature Volume 2019 ; 2019 ; 9 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; 10 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doesNotExist ; doesNotExist ; 2022 ; 0 ; Scientific Study of Literature Volume 2022 ; 2022 ; 0 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < exists ; exists ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+      au < expected ; exists ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
 
   }
 

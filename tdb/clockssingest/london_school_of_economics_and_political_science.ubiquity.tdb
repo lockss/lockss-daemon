@@ -1,0 +1,145 @@
+
+#tdbout -EXt auidplus tdb/clockssingest/ubiquity_press.ubiquity.2025.tdb | grep Clockss | sed s'/@@@NONDEF@@@/\&/'
+
+
+{
+  publisher <
+    name = London School of Economics and Political Science ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = London School of Economics and Political Science ######################### NOT UBIQUITY
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; hidden[proxy] >
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+
+  {
+
+      title <
+        name = Journal of Illicit Economies and Development ;
+        eissn = 2516-7227
+      >
+
+      comment[publisher] = London School of Economics and Political Science
+      param[base_url] = https://jied.lse.ac.uk/
+      nondefparam[base_url2] = https://account.jied.lse.ac.uk/
+      nondefparam[journal_id] = lse-j-jied
+
+      au < finished ; finished ; 2019 ; 1 ; Journal of Illicit Economies and Development Volume 2019 ; 2019 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 2 ; Journal of Illicit Economies and Development Volume 2020 ; 2020 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2021 ; 3 ; Journal of Illicit Economies and Development Volume 2021 ; 2021 ; 3 ; reingest3.clockss.org:8083 >
+      au < crawling ; exists ; 2022 ; 4 ; Journal of Illicit Economies and Development Volume 2022 ; 2022 ; 4 ; >
+      au < exists ; exists ; 2023 ; 5 ; Journal of Illicit Economies and Development Volume 2023 ; 2023 ; 5 ; >
+      au < exists ; exists ; 2024 ; 6 ; Journal of Illicit Economies and Development Volume 2024 ; 2024 ; 6 ; >
+      au < expected ; exists ; 2025 ; 7 ; Journal of Illicit Economies and Development Volume 2025 ; 2025 ; 7 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Long-Term Care ;
+        eissn = 2516-9122
+      >
+
+      comment[publisher] = London School of Economics and Political Science
+      param[base_url] = https://journal.ilpnetwork.org/
+      nondefparam[base_url2] = https://account.journal.ilpnetwork.org/
+      nondefparam[journal_id] = lse-j-jltc
+
+      au < finished ; finished ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; 2 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; 5 ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; 6 ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; 8 ; reingest4.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 [superseded] ; 2022 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Journal of Long-Term Care Volume 2023 ; 2023 ; 10 ; >
+      au < manifest ; exists ; 2024 ; 11 ; Journal of Long-Term Care Volume 2024 ; 2024 ; 11 ; >
+      au < manifest ; exists ; 2025 ; 12 ; Journal of Long-Term Care Volume 2025 ; 2025 ; 12 ; >
+
+  }
+
+  {
+
+      title <
+        name = LSE Public Policy Review ;
+        eissn = 2633-4046
+      >
+
+      comment[publisher] = London School of Economics and Political Science
+      param[base_url] = https://ppr.lse.ac.uk/
+      nondefparam[base_url2] = https://account.ppr.lse.ac.uk/
+      nondefparam[journal_id] = lse-j-lseppr
+
+      au < finished ; finished ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; 2 ; LSE Public Policy Review Volume 2021 ; 2021 ; 2 ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2022 ; 3 ; LSE Public Policy Review Volume 2022 [superseded] ; 2022 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 4 ; LSE Public Policy Review Volume 2023 ; 2023 ; 4 ; >
+      au < manifest ; exists ; 2024 ; 5 ; LSE Public Policy Review Volume 2024 ; 2024 ; 5 ; >
+      au < expected ; exists ; 2025 ; 6 ; LSE Public Policy Review Volume 2025 ; 2025 ; 6 ; >
+
+  }
+
+  {
+
+      title <
+        name = Philosophy of Physics ;
+        eissn = 2753-5908
+      >
+
+      comment[publisher] = London School of Economics and Political Science
+      param[base_url] = https://philosophyofphysics.lse.ac.uk/
+      nondefparam[base_url2] = https://account.philosophyofphysics.lse.ac.uk/
+      nondefparam[journal_id] = lse-j-pp
+
+      au < doNotProcess ; doNotProcess ; 2023 ; 1 ; Philosophy of Physics Volume 2023 ; 2023 ; 1 ; >
+      au < manifest ; exists ; 2024 ; 2 ; Philosophy of Physics Volume 2024 ; 2024 ; 2 ; >
+      au < manifest ; exists ; 2025 ; 3 ; Philosophy of Physics Volume 2025 ; 2025 ; 3 ; >
+
+  }
+
+  {
+
+      title <
+        name = Economía ;
+        issn = 1533-6239 ;
+        eissn = 1529-7470
+      >
+
+      comment[publisher] = London School of Economics and Political Science
+      param[base_url] = https://economia.lse.ac.uk/
+      nondefparam[base_url2] = https://account.economia.lse.ac.uk/
+      nondefparam[journal_id] = lse-j-elaceaj
+
+      au < doNotProcess ; doNotProcess ; 2000 ; 1 ; Economía Volume 2000 ; 2000 ; 1 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; 2 ; Economía Volume 2001 ; 2001 ; 2 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; 3 ; Economía Volume 2002 ; 2002 ; 3 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; 4 ; Economía Volume 2003 ; 2003 ; 4 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 5 ; Economía Volume 2004 ; 2004 ; 5 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 6 ; Economía Volume 2005 ; 2005 ; 6 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 7 ; Economía Volume 2006 ; 2006 ; 7 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 8 ; Economía Volume 2007 ; 2007 ; 8 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 9 ; Economía Volume 2008 ; 2008 ; 9 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 10 ; Economía Volume 2009 ; 2009 ; 10 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 11 ; Economía Volume 2010 ; 2010 ; 11 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 12 ; Economía Volume 2011 ; 2011 ; 12 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 13 ; Economía Volume 2012 ; 2012 ; 13 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 14 ; Economía Volume 2013 ; 2013 ; 14 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 15 ; Economía Volume 2014 ; 2014 ; 15 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 16 ; Economía Volume 2015 ; 2015 ; 16 ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 17 ; Economía Volume 2016 ; 2016 ; 17 ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 18 ; Economía Volume 2017 ; 2017 ; 18 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 19 ; Economía Volume 2018 ; 2018 ; 19 ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 20 ; Economía Volume 2019 ; 2019 ; 20 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 21 ; Economía Volume 2020 ; 2020 ; 21 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 22 ; Economía Volume 2021 ; 2021 ; 22 ; >
+      au < doesNotExist ; doesNotExist ; 2022 ; 23 ; Economía Volume 2022 ; 2022 ; 23 ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 24 ; Economía Volume 2023 ; 2023 ; 24 ; >
+      au < manifest ; exists ; 2024 ; 25 ; Economía Volume 2024 ; 2024 ; 25 ; >
+      au < expected ; exists ; 2025 ; 26 ; Economía Volume 2025 ; 2025 ; 26 ; >
+
+  }
+
+}
+
