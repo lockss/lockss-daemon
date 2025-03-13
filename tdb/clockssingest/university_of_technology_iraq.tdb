@@ -20,7 +20,7 @@
       param[base_url] = https://jscca.uotechnology.edu.iq/
       param[journal_abbr] = jscca
 
-      au < ready ; exists ; 2024 ; Journal of Soft Computing and Computer Applications (JSCCA) Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2024 ; Journal of Soft Computing and Computer Applications (JSCCA) Volume 1 ; 1 ; >
       au < expected ; exists ; 2025 ; Journal of Soft Computing and Computer Applications (JSCCA) Volume 2 ; 2 ; >
 
   }

@@ -23,7 +23,7 @@
     param[base_url] =  https://ejp.researchcommons.org/
     param[journal_abbr] = journal
 
-    au < ready ; exists ; 2024 ; Egyptian Journal of Petroleum Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2024 ; Egyptian Journal of Petroleum Volume 33 ; 33 ; >
     au < expected ; exists ; 2025 ; Egyptian Journal of Petroleum Volume 34 ; 34 ; >
 
   }
