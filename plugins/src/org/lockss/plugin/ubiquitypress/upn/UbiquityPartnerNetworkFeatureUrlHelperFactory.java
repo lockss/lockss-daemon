@@ -92,7 +92,7 @@ public class UbiquityPartnerNetworkFeatureUrlHelperFactory implements FeatureUrl
               }
             }
             reader.close();
-            return super.getAccessUrls(au);
+            return au.getStartUrls();
         }
     }
 }
