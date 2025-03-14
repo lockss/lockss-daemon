@@ -377,25 +377,6 @@
 
   }
 
-
-}
-
-
-{
-  publisher <
-    name = Ubiquity Press ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
-
-
-
   {
 
       title <
@@ -408,50 +389,51 @@
       #no longer available at this url.
 #      param[base_url] = http://www.pia-journal.co.uk/
 
-      au < finished ; finished ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; http://www.pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; https://www.pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; https://www.pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; https://www.pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; https://www.pia-journal.co.uk/ ; >
-      au < finished ; finished ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; http://www.pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 [superseded] ; 2016 ; http://www.pia-journal.co.uk/ ; >
+      au < finished ; finished ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; 21 ; Ubiquity Press ; http://www.pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; 22 ; Ubiquity Press ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; 23 ; Ubiquity Press ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; 24 ; Ubiquity Press ; https://www.pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; 25 ; Ubiquity Press ; https://www.pia-journal.co.uk/ ; >
+      au < finished ; finished ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; 26 ; Ubiquity Press ; http://www.pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 [superseded] ; 2016 ; 27 ; Ubiquity Press ; http://www.pia-journal.co.uk/ ; >
     }
     {
       #journal moved to https and removed www.
 #      param[base_url] = https://pia-journal.co.uk/
 
-      au < doNotProcess ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; https://pia-journal.co.uk/ ; >
-      au < finished ; finished ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; https://pia-journal.co.uk/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; https://pia-journal.co.uk/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; https://pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; https://pia-journal.co.uk/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; https://pia-journal.co.uk/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; https://pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; https://pia-journal.co.uk/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; https://pia-journal.co.uk/ ; reingest2.clockss.org:8085 >
-      au < doesNotExist ; doesNotExist ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; https://pia-journal.co.uk/ ; > #M exists. No articles for that year.
-      au < finished ; finished ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; https://pia-journal.co.uk/ ; reingest3.clockss.org:8083 >
-      au < doNotProcess ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; https://pia-journal.co.uk/ ; >
-      au < doNotProcess ; exists ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; https://pia-journal.co.uk/ ; >
-      au < finished ; finished ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; https://pia-journal.co.uk/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 28 ; Papers from the Institute of Archaeology Volume 2017 ; 2017 ; https://pia-journal.co.uk/ ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; exists ; 1990 ; 1 ; Papers from the Institute of Archaeology Volume 1990 ; 1990 ; 1 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1991 ; 2 ; Papers from the Institute of Archaeology Volume 1991 ; 1991 ; 2 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1992 ; 3 ; Papers from the Institute of Archaeology Volume 1992 ; 1992 ; 3 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1993 ; 4 ; Papers from the Institute of Archaeology Volume 1993 ; 1993 ; 4 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1994 ; 5 ; Papers from the Institute of Archaeology Volume 1994 ; 1994 ; 5 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1995 ; 6 ; Papers from the Institute of Archaeology Volume 1995 ; 1995 ; 6 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1996 ; 7 ; Papers from the Institute of Archaeology Volume 1996 ; 1996 ; 7 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1997 ; 8 ; Papers from the Institute of Archaeology Volume 1997 ; 1997 ; 8 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1998 ; 9 ; Papers from the Institute of Archaeology Volume 1998 ; 1998 ; 9 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 1999 ; 10 ; Papers from the Institute of Archaeology Volume 1999 ; 1999 ; 10 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < finished ; finished ; 2000 ; 11 ; Papers from the Institute of Archaeology Volume 2000 ; 2000 ; 11 ; Ubiquity Press ; https://pia-journal.co.uk/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2001 ; 12 ; Papers from the Institute of Archaeology Volume 2001 ; 2001 ; 12 ; Ubiquity Press ; https://pia-journal.co.uk/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2002 ; 13 ; Papers from the Institute of Archaeology Volume 2002 ; 2002 ; 13 ; Ubiquity Press ; https://pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2003 ; 14 ; Papers from the Institute of Archaeology Volume 2003 ; 2003 ; 14 ; Ubiquity Press ; https://pia-journal.co.uk/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2004 ; 15 ; Papers from the Institute of Archaeology Volume 2004 ; 2004 ; 15 ; Ubiquity Press ; https://pia-journal.co.uk/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; 16 ; Papers from the Institute of Archaeology Volume 2005 ; 2005 ; 16 ; Ubiquity Press ; https://pia-journal.co.uk/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 17 ; Papers from the Institute of Archaeology Volume 2006 ; 2006 ; 17 ; Ubiquity Press ; https://pia-journal.co.uk/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; 18 ; Papers from the Institute of Archaeology Volume 2007 ; 2007 ; 18 ; Ubiquity Press ; https://pia-journal.co.uk/ ; reingest2.clockss.org:8085 >
+      au < doesNotExist ; doesNotExist ; 2008 ; 19 ; Papers from the Institute of Archaeology Volume 2008 ; 2008 ; 19 ; Ubiquity Press ; https://pia-journal.co.uk/ ; > #M exists. No articles for that year.
+      au < finished ; finished ; 2009 ; 20 ; Papers from the Institute of Archaeology Volume 2009 ; 2009 ; 20 ; Ubiquity Press ; https://pia-journal.co.uk/ ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; exists ; 2010 ; 21 ; Papers from the Institute of Archaeology Volume 2010 ; 2010 ; 21 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2011 ; 22 ; Papers from the Institute of Archaeology Volume 2011 ; 2011 ; 22 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2012 ; 23 ; Papers from the Institute of Archaeology Volume 2012 ; 2012 ; 23 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2013 ; 24 ; Papers from the Institute of Archaeology Volume 2013 ; 2013 ; 24 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2014 ; 25 ; Papers from the Institute of Archaeology Volume 2014 ; 2014 ; 25 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < doNotProcess ; exists ; 2015 ; 26 ; Papers from the Institute of Archaeology Volume 2015 ; 2015 ; 26 ; Ubiquity Press ; https://pia-journal.co.uk/ ; >
+      au < finished ; finished ; 2016 ; 27 ; Papers from the Institute of Archaeology Volume 2016 ; 2016 ; 27 ; Ubiquity Press ; https://pia-journal.co.uk/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 28 ; Papers from the Institute of Archaeology Volume 2017 ; 2017 ; 28 ; Ubiquity Press ; https://pia-journal.co.uk/ ; reingest3.clockss.org:8083 >
       #moved to University College London https://student-journals.ucl.ac.uk/pia/issues/
     }
-  }
 
+  }
+  
   {
 
       title <
@@ -464,30 +446,31 @@
       #no longer at this url.
 #      param[base_url] = http://www.presentpasts.info/  #www. don't use this
 
-      au < superseded ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 [superseded] ; 2010 ; http://www.presentpasts.info/ ; >
-      au < finished ; finished ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; http://www.presentpasts.info/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 [superseded] ; 2016 ; http://www.presentpasts.info/ ; >
+      au < superseded ; exists ; 2010 ; 2 ; Present Pasts Volume 2010 [superseded] ; 2010 ; 2 ; Ubiquity Press ; http://www.presentpasts.info/ ; >
+      au < finished ; finished ; 2015 ; 7 ; Present Pasts Volume 2015 ; 2015 ; 7 ; Ubiquity Press ; http://www.presentpasts.info/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2016 ; 8 ; Present Pasts Volume 2016 [superseded] ; 2016 ; 8 ; Ubiquity Press ; http://www.presentpasts.info/ ; >
     }
 
     {
       #Moved to https and removed www.
 #      param[base_url] = https://presentpasts.info/  #no www. use this
 
-      au < doesNotExist ; doesNotExist ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; https://presentpasts.info/ ; > #Articles in 2010.
-      au < finished ; finished ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; https://presentpasts.info/ ; reingest5.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; https://presentpasts.info/ ; >
-      au < doesNotExist ; doesNotExist ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; https://presentpasts.info/ ; > #Articles in 2013.
-      au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; https://presentpasts.info/ ; >
-      au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; https://presentpasts.info/ ; >
-      au < doNotProcess ; exists ; 2015 ; 0 ; Present Pasts Volume 2015 ; 2015 ; https://presentpasts.info/ ; >
-      au < finished ; finished ; 2016 ; 7 ; Present Pasts Volume 2016 ; 2016 ; https://presentpasts.info/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 8 ; Present Pasts Volume 2017 ; 2017 ; https://presentpasts.info/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 9 ; Present Pasts Volume 2019 ; 2019 ; https://presentpasts.info/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 10 ; Present Pasts Volume 2020 ; 2020 ; https://presentpasts.info/ ; reingest3.clockss.org:8083 >
-      au < doNotProcess ; doNotProcess ; 2022 ; 11 ; Present Pasts Volume 2022 ; 2022 ; https://presentpasts.info/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Present Pasts Volume 2023 ; 2023 ; https://presentpasts.info/ ; >
+      au < doesNotExist ; doesNotExist ; 2009 ; 1 ; Present Pasts Volume 2009 ; 2009 ; 1 ; Ubiquity Press ; https://presentpasts.info/ ; > #Articles in 2010.
+      au < finished ; finished ; 2010 ; 2 ; Present Pasts Volume 2010 ; 2010 ; 2 ; Ubiquity Press ; https://presentpasts.info/ ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2011 ; 3 ; Present Pasts Volume 2011 ; 2011 ; 3 ; Ubiquity Press ; https://presentpasts.info/ ; >
+      au < doesNotExist ; doesNotExist ; 2012 ; 4 ; Present Pasts Volume 2012 ; 2012 ; 4 ; Ubiquity Press ; https://presentpasts.info/ ; > #Articles in 2013.
+      au < doNotProcess ; exists ; 2013 ; 5 ; Present Pasts Volume 2013 ; 2013 ; 5 ; Ubiquity Press ; https://presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2014 ; 6 ; Present Pasts Volume 2014 ; 2014 ; 6 ; Ubiquity Press ; https://presentpasts.info/ ; >
+      au < doNotProcess ; exists ; 2015 ; 0 ; Present Pasts Volume 2015 ; 2015 ; 0 ; Ubiquity Press ; https://presentpasts.info/ ; >
+      au < finished ; finished ; 2016 ; 7 ; Present Pasts Volume 2016 ; 2016 ; 7 ; Ubiquity Press ; https://presentpasts.info/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 8 ; Present Pasts Volume 2017 ; 2017 ; 8 ; Ubiquity Press ; https://presentpasts.info/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 9 ; Present Pasts Volume 2019 ; 2019 ; 9 ; Ubiquity Press ; https://presentpasts.info/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 10 ; Present Pasts Volume 2020 ; 2020 ; 10 ; Ubiquity Press ; https://presentpasts.info/ ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2022 ; 11 ; Present Pasts Volume 2022 ; 2022 ; 11 ; Ubiquity Press ; https://presentpasts.info/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Present Pasts Volume 2023 ; 2023 ; 12 ; Ubiquity Press ; https://presentpasts.info/ ; >
 
     }
+
   }
 
   {
@@ -500,13 +483,13 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.healthpsychologybulletin.com/
 
-      au < finished ; finished ; 2017 ; 1 ; Health Psychology Bulletin Volume 2017 ; 2017 ; https://www.healthpsychologybulletin.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 2 ; Health Psychology Bulletin Volume 2018 ; 2018 ; https://www.healthpsychologybulletin.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 3 ; Health Psychology Bulletin Volume 2019 ; 2019 ; https://www.healthpsychologybulletin.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2020 ; 4 ; Health Psychology Bulletin Volume 2020 ; 2020 ; https://www.healthpsychologybulletin.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2021 ; 5 ; Health Psychology Bulletin Volume 2021 ; 2021 ; https://www.healthpsychologybulletin.com/ ; reingest3.clockss.org:8083 >
-      au < superseded ; exists ; 2022 ; 6 ; Health Psychology Bulletin Volume 2022 [superseded] ; 2022 ; https://www.healthpsychologybulletin.com/ ; >
-      au < doNotProcess ; exists ; 2023 ; 7 ; Health Psychology Bulletin Volume 2023 ; 2023 ; https://www.healthpsychologybulletin.com/ ; >
+      au < finished ; finished ; 2017 ; 1 ; Health Psychology Bulletin Volume 2017 ; 2017 ; 1 ; Ubiquity Press ; https://www.healthpsychologybulletin.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2 ; Health Psychology Bulletin Volume 2018 ; 2018 ; 2 ; Ubiquity Press ; https://www.healthpsychologybulletin.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 3 ; Health Psychology Bulletin Volume 2019 ; 2019 ; 3 ; Ubiquity Press ; https://www.healthpsychologybulletin.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2020 ; 4 ; Health Psychology Bulletin Volume 2020 ; 2020 ; 4 ; Ubiquity Press ; https://www.healthpsychologybulletin.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; crawling ; 2021 ; 5 ; Health Psychology Bulletin Volume 2021 ; 2021 ; 5 ; Ubiquity Press ; https://www.healthpsychologybulletin.com/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2022 ; 6 ; Health Psychology Bulletin Volume 2022 [superseded] ; 2022 ; 6 ; Ubiquity Press ; https://www.healthpsychologybulletin.com/ ; >
+      au < doNotProcess ; exists ; 2023 ; 7 ; Health Psychology Bulletin Volume 2023 ; 2023 ; 7 ; Ubiquity Press ; https://www.healthpsychologybulletin.com/ ; >
      #Moved
   }
 
@@ -520,13 +503,13 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://openhardware.metajnl.com/
 
-      au < finished ; finished ; 2017 ; 1 ; Journal of Open Hardware Volume 2017 ; 2017 ; https://openhardware.metajnl.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 2 ; Journal of Open Hardware Volume 2018 ; 2018 ; https://openhardware.metajnl.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2019 ; 3 ; Journal of Open Hardware Volume 2019 ; 2019 ; https://openhardware.metajnl.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2020 ; 4 ; Journal of Open Hardware Volume 2020 ; 2020 ; https://openhardware.metajnl.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2021 ; 5 ; Journal of Open Hardware Volume 2021 ; 2021 ; https://openhardware.metajnl.com/ ; reingest2.clockss.org:8085 >
-      au < superseded ; exists ; 2022 ; 6 ; Journal of Open Hardware Volume 2022 [superseded] ; 2022 ; https://openhardware.metajnl.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Journal of Open Hardware Volume 2023 ; 2023 ; https://openhardware.metajnl.com/ ; >
+      au < finished ; finished ; 2017 ; 1 ; Journal of Open Hardware Volume 2017 ; 2017 ; 1 ; Ubiquity Press ; https://openhardware.metajnl.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2 ; Journal of Open Hardware Volume 2018 ; 2018 ; 2 ; Ubiquity Press ; https://openhardware.metajnl.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 3 ; Journal of Open Hardware Volume 2019 ; 2019 ; 3 ; Ubiquity Press ; https://openhardware.metajnl.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2020 ; 4 ; Journal of Open Hardware Volume 2020 ; 2020 ; 4 ; Ubiquity Press ; https://openhardware.metajnl.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; crawling ; 2021 ; 5 ; Journal of Open Hardware Volume 2021 ; 2021 ; 5 ; Ubiquity Press ; https://openhardware.metajnl.com/ ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2022 ; 6 ; Journal of Open Hardware Volume 2022 [superseded] ; 2022 ; 6 ; Ubiquity Press ; https://openhardware.metajnl.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Journal of Open Hardware Volume 2023 ; 2023 ; 7 ; Ubiquity Press ; https://openhardware.metajnl.com/ ; >
 
   }
 
@@ -540,19 +523,19 @@
 #      param[base_url] = https://culturalscience.org/
       #Moved to Sciendo platform
 
-      au < finished ; finished ; 2008 ; 1 ; Cultural Science Journal Volume 2008 ; 2008 ; https://culturalscience.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2009 ; 2 ; Cultural Science Journal Volume 2009 ; 2009 ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2010 ; 3 ; Cultural Science Journal Volume 2010 ; 2010 ; https://culturalscience.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2011 ; 4 ; Cultural Science Journal Volume 2011 ; 2011 ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2012 ; 5 ; Cultural Science Journal Volume 2012 ; 2012 ; https://culturalscience.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2013 ; 6 ; Cultural Science Journal Volume 2013 ; 2013 ; https://culturalscience.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2014 ; 7 ; Cultural Science Journal Volume 2014 ; 2014 ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2015 ; 8 ; Cultural Science Journal Volume 2015 ; 2015 ; https://culturalscience.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2016 ; 9 ; Cultural Science Journal Volume 2016 ; 2016 ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 0 ; Cultural Science Journal Volume 2017 ; 2017 ; https://culturalscience.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 10 ; Cultural Science Journal Volume 2018 ; 2018 ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2019 ; 11 ; Cultural Science Journal Volume 2019 ; 2019 ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 12 ; Cultural Science Journal Volume 2020 ; 2020 ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; 1 ; Cultural Science Journal Volume 2008 ; 2008 ; 1 ; Ubiquity Press ; https://culturalscience.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 2 ; Cultural Science Journal Volume 2009 ; 2009 ; 2 ; Ubiquity Press ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; 3 ; Cultural Science Journal Volume 2010 ; 2010 ; 3 ; Ubiquity Press ; https://culturalscience.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2011 ; 4 ; Cultural Science Journal Volume 2011 ; 2011 ; 4 ; Ubiquity Press ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 5 ; Cultural Science Journal Volume 2012 ; 2012 ; 5 ; Ubiquity Press ; https://culturalscience.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 6 ; Cultural Science Journal Volume 2013 ; 2013 ; 6 ; Ubiquity Press ; https://culturalscience.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 7 ; Cultural Science Journal Volume 2014 ; 2014 ; 7 ; Ubiquity Press ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; 8 ; Cultural Science Journal Volume 2015 ; 2015 ; 8 ; Ubiquity Press ; https://culturalscience.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2016 ; 9 ; Cultural Science Journal Volume 2016 ; 2016 ; 9 ; Ubiquity Press ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 0 ; Cultural Science Journal Volume 2017 ; 2017 ; 0 ; Ubiquity Press ; https://culturalscience.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 10 ; Cultural Science Journal Volume 2018 ; 2018 ; 10 ; Ubiquity Press ; https://culturalscience.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 11 ; Cultural Science Journal Volume 2019 ; 2019 ; 11 ; Ubiquity Press ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 12 ; Cultural Science Journal Volume 2020 ; 2020 ; 12 ; Ubiquity Press ; https://culturalscience.org/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -567,13 +550,13 @@
 #      param[base_url] = https://egems.academyhealth.org/
 #     Moved to Elsevier 2019. https://academyhealth.org/publications/2017-04/egems-journal-electronic-health-data-and-methods
 
-      au < finished ; finished ; 2013 ; 1 ; eGEMs Volume 2013 ; 2013 ; https://egems.academyhealth.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2014 ; 2 ; eGEMs Volume 2014 ; 2014 ; https://egems.academyhealth.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2015 ; 3 ; eGEMs Volume 2015 ; 2015 ; https://egems.academyhealth.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2016 ; 4 ; eGEMs Volume 2016 ; 2016 ; https://egems.academyhealth.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 5 ; eGEMs Volume 2017 ; 2017 ; https://egems.academyhealth.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; https://egems.academyhealth.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; https://egems.academyhealth.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 1 ; eGEMs Volume 2013 ; 2013 ; 1 ; Ubiquity Press ; https://egems.academyhealth.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 2 ; eGEMs Volume 2014 ; 2014 ; 2 ; Ubiquity Press ; https://egems.academyhealth.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; 3 ; eGEMs Volume 2015 ; 2015 ; 3 ; Ubiquity Press ; https://egems.academyhealth.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2016 ; 4 ; eGEMs Volume 2016 ; 2016 ; 4 ; Ubiquity Press ; https://egems.academyhealth.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 5 ; eGEMs Volume 2017 ; 2017 ; 5 ; Ubiquity Press ; https://egems.academyhealth.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 6 ; eGEMs Volume 2018 ; 2018 ; 6 ; Ubiquity Press ; https://egems.academyhealth.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 7 ; eGEMs Volume 2019 ; 2019 ; 7 ; Ubiquity Press ; https://egems.academyhealth.org/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -588,11 +571,11 @@
 #      param[base_url] = https://www.ejmcm.com/
       #moved to eJournalPlus
 
-      au < finished ; finished ; 2014 ; 1 ; European Journal of Molecular and Clinical Medicine Volume 2014 ; 2014 ; https://www.ejmcm.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2015 ; 2 ; European Journal of Molecular and Clinical Medicine Volume 2015 ; 2015 ; https://www.ejmcm.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2016 ; 3 ; European Journal of Molecular and Clinical Medicine Volume 2016 ; 2016 ; https://www.ejmcm.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2017 ; 4 ; European Journal of Molecular and Clinical Medicine Volume 2017 ; 2017 ; https://www.ejmcm.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 5 ; European Journal of Molecular and Clinical Medicine Volume 2018 ; 2018 ; https://www.ejmcm.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 1 ; European Journal of Molecular and Clinical Medicine Volume 2014 ; 2014 ; 1 ; Ubiquity Press ; https://www.ejmcm.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2015 ; 2 ; European Journal of Molecular and Clinical Medicine Volume 2015 ; 2015 ; 2 ; Ubiquity Press ; https://www.ejmcm.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2016 ; 3 ; European Journal of Molecular and Clinical Medicine Volume 2016 ; 2016 ; 3 ; Ubiquity Press ; https://www.ejmcm.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 4 ; European Journal of Molecular and Clinical Medicine Volume 2017 ; 2017 ; 4 ; Ubiquity Press ; https://www.ejmcm.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 5 ; European Journal of Molecular and Clinical Medicine Volume 2018 ; 2018 ; 5 ; Ubiquity Press ; https://www.ejmcm.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -607,10 +590,10 @@
 #      param[base_url] = https://kula.uvic.ca/
       #Moved to OJS https://kula.uvic.ca/index.php/kula
 
-      au < finished ; finished ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; https://kula.uvic.ca/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; https://kula.uvic.ca/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2019 ; 3 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2019 ; 2019 ; https://kula.uvic.ca/ ; reingest2.clockss.org:8085 >
-      au < superseded ; exists ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 [superseded] ; 2020 ; https://kula.uvic.ca/ ; >
+      au < finished ; finished ; 2017 ; 1 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2017 ; 2017 ; 1 ; Ubiquity Press ; https://kula.uvic.ca/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 2 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2018 ; 2018 ; 2 ; Ubiquity Press ; https://kula.uvic.ca/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 3 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2019 ; 2019 ; 3 ; Ubiquity Press ; https://kula.uvic.ca/ ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2020 ; 4 ; KULA: knowledge creation, dissemination, and preservation studies Volume 2020 [superseded] ; 2020 ; 4 ; Ubiquity Press ; https://kula.uvic.ca/ ; >
 
   }
 
@@ -624,7 +607,7 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.ijds.eu/
 
-      au < superseded ; finished ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; https://www.ijds.eu/ ; reingest1.clockss.org:8082 >
+      au < superseded ; finished ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 ; 1 ; Ubiquity Press ; https://www.ijds.eu/ ; reingest1.clockss.org:8082 >
 
   }
 
@@ -638,30 +621,14 @@
       comment[publisher] = Ubiquity Press
 #      param[base_url] = https://www.worldwidewastejournal.com/
 
-      au < finished ; finished ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; https://www.worldwidewastejournal.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2019 ; 2 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2019 ; https://www.worldwidewastejournal.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2020 ; 3 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2020 ; 2020 ; https://www.worldwidewastejournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 4 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2021 ; 2021 ; https://www.worldwidewastejournal.com/ ; reingest3.clockss.org:8083 >
-      au < superseded ; exists ; 2022 ; 5 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 [superseded] ; 2022 ; https://www.worldwidewastejournal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2023 ; 2023 ; https://worldwidewastejournal.com/ ; >
+      au < finished ; finished ; 2018 ; 1 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2018 ; 2018 ; 1 ; Ubiquity Press ; https://www.worldwidewastejournal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 2 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2019 ; 2019 ; 2 ; Ubiquity Press ; https://www.worldwidewastejournal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2020 ; 3 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2020 ; 2020 ; 3 ; Ubiquity Press ; https://www.worldwidewastejournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 4 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2021 ; 2021 ; 4 ; Ubiquity Press ; https://www.worldwidewastejournal.com/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2022 ; 5 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ; https://www.worldwidewastejournal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2023 ; 2023 ; 6 ; Ubiquity Press ; https://worldwidewastejournal.com/ ; >
 
   }
-
-}
-
-
-{
-  publisher <
-    name = University of New South Wales ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -673,27 +640,13 @@
       comment[publisher] = University of New South Wales
 #      param[base_url] = https://jglobalbiosecurity.com/
 
-      au < finished ; finished ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; https://jglobalbiosecurity.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; https://jglobalbiosecurity.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 ; https://jglobalbiosecurity.com/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 4 ; Global Biosecurity Volume 2022 [superseded] ; 2022 ; https://jglobalbiosecurity.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 5 ; Global Biosecurity Volume 2023 ; 2023 ; https://jglobalbiosecurity.com/ ; >
+      au < finished ; finished ; 2019 ; 1 ; Global Biosecurity Volume 2019 ; 2019 ; 1 ; University of New South Wales ; https://jglobalbiosecurity.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 2 ; Global Biosecurity Volume 2020 ; 2020 ; 2 ; University of New South Wales ; https://jglobalbiosecurity.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2021 ; 3 ; Global Biosecurity Volume 2021 ; 2021 ; 3 ; University of New South Wales ; https://jglobalbiosecurity.com/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 4 ; Global Biosecurity Volume 2022 [superseded] ; 2022 ; 4 ; University of New South Wales ; https://jglobalbiosecurity.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 5 ; Global Biosecurity Volume 2023 ; 2023 ; 5 ; University of New South Wales ; https://jglobalbiosecurity.com/ ; >
 
   }
-}
-
-{
-  publisher <
-    name = University of Westminster Press ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
   {
 
@@ -705,25 +658,25 @@
       comment[publisher] = University of Westminster Press
 #      param[base_url] = http://www.entsportslawjournal.com/
 
-      au < finished ; finished ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; https://www.entsportslawjournal.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; https://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2005 ; 3 ; Entertainment and Sports Law Journal Volume 2005 ; 2005 ; https://www.entsportslawjournal.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2006 ; 4 ; Entertainment and Sports Law Journal Volume 2006 ; 2006 ; https://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2007 ; 5 ; Entertainment and Sports Law Journal Volume 2007 ; 2007 ; https://www.entsportslawjournal.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2008 ; 6 ; Entertainment and Sports Law Journal Volume 2008 ; 2008 ; https://www.entsportslawjournal.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2009 ; 7 ; Entertainment and Sports Law Journal Volume 2009 ; 2009 ; https://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2010 ; 8 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; http://www.entsportslawjournal.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2011 ; 9 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; http://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2012 ; 10 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; http://www.entsportslawjournal.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2013 ; 11 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; http://www.entsportslawjournal.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2014 ; 12 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; http://www.entsportslawjournal.com/ ; >
-      au < finished ; finished ; 2015 ; 13 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; http://www.entsportslawjournal.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 14 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; http://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 15 ; Entertainment and Sports Law Journal Volume 2017 ; 2017 ; http://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 16 ; Entertainment and Sports Law Journal Volume 2018 ; 2018 ; https://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; https://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; https://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2021 ; 19 ; Entertainment and Sports Law Journal Volume 2021 ; 2021 ; https://www.entsportslawjournal.com/ ; >
+      au < finished ; finished ; 2002 ; 1 ; Entertainment and Sports Law Journal Volume 2002 ; 2002 ; 1 ; University of Westminster Press ; https://www.entsportslawjournal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2003 ; 2 ; Entertainment and Sports Law Journal Volume 2003 ; 2003 ; 2 ; University of Westminster Press ; https://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; 3 ; Entertainment and Sports Law Journal Volume 2005 ; 2005 ; 3 ; University of Westminster Press ; https://www.entsportslawjournal.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 4 ; Entertainment and Sports Law Journal Volume 2006 ; 2006 ; 4 ; University of Westminster Press ; https://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2007 ; 5 ; Entertainment and Sports Law Journal Volume 2007 ; 2007 ; 5 ; University of Westminster Press ; https://www.entsportslawjournal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2008 ; 6 ; Entertainment and Sports Law Journal Volume 2008 ; 2008 ; 6 ; University of Westminster Press ; https://www.entsportslawjournal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2009 ; 7 ; Entertainment and Sports Law Journal Volume 2009 ; 2009 ; 7 ; University of Westminster Press ; https://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 8 ; Entertainment and Sports Law Journal Volume 2010 ; 2010 ; 8 ; University of Westminster Press ; http://www.entsportslawjournal.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; 9 ; Entertainment and Sports Law Journal Volume 2011 ; 2011 ; 9 ; University of Westminster Press ; http://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 10 ; Entertainment and Sports Law Journal Volume 2012 ; 2012 ; 10 ; University of Westminster Press ; http://www.entsportslawjournal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2013 ; 11 ; Entertainment and Sports Law Journal Volume 2013 ; 2013 ; 11 ; University of Westminster Press ; http://www.entsportslawjournal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2014 ; 12 ; Entertainment and Sports Law Journal Volume 2014 ; 2014 ; 12 ; University of Westminster Press ; http://www.entsportslawjournal.com/ ; >
+      au < finished ; finished ; 2015 ; 13 ; Entertainment and Sports Law Journal Volume 2015 ; 2015 ; 13 ; University of Westminster Press ; http://www.entsportslawjournal.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 14 ; Entertainment and Sports Law Journal Volume 2016 ; 2016 ; 14 ; University of Westminster Press ; http://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 15 ; Entertainment and Sports Law Journal Volume 2017 ; 2017 ; 15 ; University of Westminster Press ; http://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 16 ; Entertainment and Sports Law Journal Volume 2018 ; 2018 ; 16 ; University of Westminster Press ; https://www.entsportslawjournal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 17 ; Entertainment and Sports Law Journal Volume 2019 ; 2019 ; 17 ; University of Westminster Press ; https://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 18 ; Entertainment and Sports Law Journal Volume 2020 ; 2020 ; 18 ; University of Westminster Press ; https://www.entsportslawjournal.com/ ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2021 ; 19 ; Entertainment and Sports Law Journal Volume 2021 ; 2021 ; 19 ; University of Westminster Press ; https://www.entsportslawjournal.com/ ; >
 
   }
 
@@ -737,25 +690,42 @@
       comment[publisher] = University of Westminster Press
 #      param[base_url] = https://delibdemjournal.org/
 
-      au < finished ; finished ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; https://delibdemjournal.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; https://delibdemjournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2007 ; 3 ; Journal of Deliberative Democracy Volume 2007 ; 2007 ; https://delibdemjournal.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2008 ; 4 ; Journal of Deliberative Democracy Volume 2008 ; 2008 ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2009 ; 5 ; Journal of Deliberative Democracy Volume 2009 ; 2009 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2010 ; 6 ; Journal of Deliberative Democracy Volume 2010 ; 2010 ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2011 ; 7 ; Journal of Deliberative Democracy Volume 2011 ; 2011 ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2012 ; 8 ; Journal of Deliberative Democracy Volume 2012 ; 2012 ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2013 ; 9 ; Journal of Deliberative Democracy Volume 2013 ; 2013 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
-      au < superseded ; exists ; 2015 ; 11 ; Journal of Deliberative Democracy Volume 2015 [superseded] ; 2015 ; https://delibdemjournal.org/ ; >
-      au < finished ; finished ; 2016 ; 12 ; Journal of Deliberative Democracy Volume 2016 ; 2016 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 13 ; Journal of Deliberative Democracy Volume 2017 ; 2017 ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; https://delibdemjournal.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
-      au < doNotProcess ; exists ; 2021 ; 17 ; Journal of Deliberative Democracy Volume 2021 ; 2021 ; https://delibdemjournal.org/ ; >
+      au < finished ; finished ; 2005 ; 1 ; Journal of Deliberative Democracy Volume 2005 ; 2005 ; 1 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 2 ; Journal of Deliberative Democracy Volume 2006 ; 2006 ; 2 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2007 ; 3 ; Journal of Deliberative Democracy Volume 2007 ; 2007 ; 3 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; 4 ; Journal of Deliberative Democracy Volume 2008 ; 2008 ; 4 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 5 ; Journal of Deliberative Democracy Volume 2009 ; 2009 ; 5 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2010 ; 6 ; Journal of Deliberative Democracy Volume 2010 ; 2010 ; 6 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2011 ; 7 ; Journal of Deliberative Democracy Volume 2011 ; 2011 ; 7 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2012 ; 8 ; Journal of Deliberative Democracy Volume 2012 ; 2012 ; 8 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 9 ; Journal of Deliberative Democracy Volume 2013 ; 2013 ; 9 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; 10 ; Journal of Deliberative Democracy Volume 2014 ; 2014 ; 10 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2015 ; 11 ; Journal of Deliberative Democracy Volume 2015 [superseded] ; 2015 ; 11 ; University of Westminster Press ; https://delibdemjournal.org/ ; >
+      au < finished ; finished ; 2016 ; 12 ; Journal of Deliberative Democracy Volume 2016 ; 2016 ; 12 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 13 ; Journal of Deliberative Democracy Volume 2017 ; 2017 ; 13 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 14 ; Journal of Deliberative Democracy Volume 2018 ; 2018 ; 14 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; 15 ; Journal of Deliberative Democracy Volume 2019 ; 2019 ; 15 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2020 ; 16 ; Journal of Deliberative Democracy Volume 2020 ; 2020 ; 16 ; University of Westminster Press ; https://delibdemjournal.org/ ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2021 ; 17 ; Journal of Deliberative Democracy Volume 2021 ; 2021 ; 17 ; University of Westminster Press ; https://delibdemjournal.org/ ; >
      #Moved
   }
+
+
+}
+
+
+{
+  publisher <
+    name = University of Westminster Press ;
+    info[contract] = 2011 ;
+    info[back] = 2000 ;
+    info[tester] = 8 ;
+    info[poller] = 8
+  >
+
+    provider = Ubiquity Press
+    plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
   {
 
