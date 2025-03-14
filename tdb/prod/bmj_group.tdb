@@ -621,7 +621,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Innovations Volume 7 ; 7 ; https://innovations.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Innovations Volume 8 ; 8 ; https://innovations.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Innovations Volume 9 ; 9 ; https://innovations.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2024 ; BMJ Innovations Volume 10 ; 10 ; https://innovations.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2024 ; BMJ Innovations Volume 10 ; 10 ; https://innovations.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Innovations Volume 11 ; 11 ; https://innovations.bmj.com/ >
 
   }
@@ -1615,7 +1615,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; Heart Volume 107 ; 107 ; https://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Heart Volume 108 ; 108 ; https://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Heart Volume 109 ; 109 ; https://heart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2024 ; Heart Volume 110 ; 110 ; https://heart.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2024 ; Heart Volume 110 ; 110 ; https://heart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; Heart Volume 111 ; 111 ; https://heart.bmj.com/ >
 
   }
@@ -1978,7 +1978,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; Journal of Medical Ethics Volume 47 ; 47 ; https://jme.bmj.com/ > #login, https://jme.bmj.com/content/47/6/430
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Journal of Medical Ethics Volume 48 ; 48 ; https://jme.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Journal of Medical Ethics Volume 49 ; 49 ; https://jme.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2024 ; Journal of Medical Ethics Volume 50 ; 50 ; https://jme.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2024 ; Journal of Medical Ethics Volume 50 ; 50 ; https://jme.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; Journal of Medical Ethics Volume 51 ; 51 ; https://jme.bmj.com/ >
 
   }
