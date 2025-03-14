@@ -322,7 +322,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Comma Volume 2016 ; 2016 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Comma Volume 2017 ; 2017 ; >
     au < ready ; exists ; 2018 ; Comma Volume 2018 ; 2018 ; >
-    au < ready ; exists ; 2019 ; Comma Volume 2019 ; 2019 ; >
+    au < crawling ; exists ; 2019 ; Comma Volume 2019 ; 2019 ; >
     au < ready ; exists ; 2020 ; Comma Volume 2020 ; 2020 ; >
     au < finished ; manifest ; 2021 ; Comma Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 2022 ; Comma Volume 2022 ; 2022 ; >
@@ -481,7 +481,7 @@
     au < ready ; exists ; 2017 ; Eighteenth-Century Ireland Volume 32 ; 32 ; >
     au < ready ; exists ; 2018 ; Eighteenth-Century Ireland Volume 33 ; 33 ; >
     au < ready ; exists ; 2019 ; Eighteenth-Century Ireland Volume 34 ; 34 ; >
-    au < ready ; exists ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2020 ; Eighteenth-Century Ireland Volume 35 ; 35 ; >
     au < ready ; exists ; 2021 ; Eighteenth-Century Ireland Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2023 ; Eighteenth-Century Ireland Volume 38 ; 38 ; >
@@ -1686,7 +1686,7 @@
     au < crawling ; exists ; 2001 ; Quebec Studies Volume 32 ; 32 ; >
     au < ready ; exists ; 2002 ; Quebec Studies Volume 33 ; 33 ; >
     au < ready ; exists ; 2002 ; Quebec Studies Volume 34 ; 34 ; >
-    au < ready ; exists ; 2003 ; Quebec Studies Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2003 ; Quebec Studies Volume 35 ; 35 ; >
     au < crawling ; exists ; 2003 ; Quebec Studies Volume 36 ; 36 ; >
     au < manifest ; exists ; 2004 ; Quebec Studies Volume 37 ; 37 ; >
     au < manifest ; exists ; 2004 ; Quebec Studies Volume 38 ; 38 ; >
@@ -2253,10 +2253,10 @@
     au < ready ; exists ; 2015 ; Revista Iberoamericana Volume 81 ; 81 ; >
     au < ready ; exists ; 2016 ; Revista Iberoamericana Volume 82 ; 82 ; >
     au < ready ; exists ; 2017 ; Revista Iberoamericana Volume 83 ; 83 ; >
-    au < ready ; exists ; 2018 ; Revista Iberoamericana Volume 84 ; 84 ; >
+    au < crawling ; exists ; 2018 ; Revista Iberoamericana Volume 84 ; 84 ; >
     au < ready ; exists ; 2019 ; Revista Iberoamericana Volume 85 ; 85 ; >
     au < ready ; exists ; 2020 ; Revista Iberoamericana Volume 86 ; 86 ; >
-    au < ready ; exists ; 2021 ; Revista Iberoamericana Volume 87 ; 87 ; >
+    au < crawling ; exists ; 2021 ; Revista Iberoamericana Volume 87 ; 87 ; >
     au < ready ; exists ; 2022 ; Revista Iberoamericana Volume 88 ; 88 ; >
     au < deepCrawl ; exists ; 2023 ; Revista Iberoamericana Volume 89 ; 89 ; >
     au < crawling ; exists ; 2024 ; Revista Iberoamericana Volume 90 ; 90 ; >
@@ -2317,7 +2317,7 @@
     au < finished ; manifest ; 2020 ; The Bodleian Library Record Volume 33 ; 33 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; The Bodleian Library Record Volume 34 ; 34 ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2022 ; The Bodleian Library Record Volume 35 ; 35 ; >
-    au < ready ; exists ; 2023 ; The Bodleian Library Record Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2023 ; The Bodleian Library Record Volume 36 ; 36 ; >
 
   }
   
