@@ -81,6 +81,19 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
   <entry>
+      <string>au_feature_urls</string>
+      <map>
+          <entry>
+              <string>au_volume</string>
+              <string>"%slockss/year/%d", base_url, year</string>
+          </entry>
+          <entry>
+            <string>au_title</string>
+            <string>"%slockss/year/%d", base_url, year</string>
+          </entry>
+      </map>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
 <!--      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.jquery\.com|(fonts|ajax)\.(gstatic|googleapis)\.com)/."</string> -->
