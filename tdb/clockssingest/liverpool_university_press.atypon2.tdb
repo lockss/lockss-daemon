@@ -31,7 +31,7 @@
     au < ready ; exists ; 2000 ; Archives Volume 25 ; 25 ; >
     au < ready ; exists ; 2001 ; Archives Volume 26 ; 26 ; >
     au < crawling ; exists ; 2002 ; Archives Volume 27 ; 27 ; >
-    au < ready ; exists ; 2003 ; Archives Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2003 ; Archives Volume 28 ; 28 ; >
     au < crawling ; exists ; 2004 ; Archives Volume 29 ; 29 ; >
     au < manifest ; exists ; 2005 ; Archives Volume 30 ; 30 ; >
     au < manifest ; exists ; 2005 ; Archives Volume 31 ; 31 ; >
@@ -73,7 +73,7 @@
 
     au < ready ; exists ; 2015 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 11 ; 11 ; >
     au < ready ; exists ; 2016 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 12 ; 12 ; >
-    au < ready ; exists ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2017 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 13 ; 13 ; >
     au < ready ; exists ; 2018 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 14 ; 14 ; >
     au < ready ; exists ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 ; >
     au < ready ; exists ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 ; >
@@ -563,7 +563,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 ; >
     au < ready ; exists ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; >
-    au < ready ; exists ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2023 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 15 ; 15 ; >
     au < crawling ; exists ; 2024 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 16 ; 16 ; >
@@ -734,7 +734,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; The Indexer: The International Journal of Indexing Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; The Indexer: The International Journal of Indexing Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; The Indexer: The International Journal of Indexing Volume 37 ; 37 ; >
-    au < ready ; exists ; 2020 ; The Indexer: The International Journal of Indexing Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2020 ; The Indexer: The International Journal of Indexing Volume 38 ; 38 ; >
     au < ready ; exists ; 2021 ; The Indexer: The International Journal of Indexing Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2022 ; The Indexer: The International Journal of Indexing Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2023 ; The Indexer: The International Journal of Indexing Volume 41 ; 41 ; >
@@ -1153,7 +1153,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Labour History: A Journal of Labour and Social History Volume 114 ; 114 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Labour History: A Journal of Labour and Social History Volume 115 ; 115 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Labour History: A Journal of Labour and Social History Volume 116 ; 116 ; >
-    au < ready ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 ; >
+    au < crawling ; exists ; 2019 ; Labour History: A Journal of Labour and Social History Volume 117 ; 117 ; >
     au < ready ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 118 ; 118 ; >
     au < ready ; exists ; 2020 ; Labour History: A Journal of Labour and Social History Volume 119 ; 119 ; >
     au < ready ; exists ; 2021 ; Labour History: A Journal of Labour and Social History Volume 120 ; 120 ; >

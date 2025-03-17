@@ -1963,7 +1963,7 @@
       au < testing ; exists ; 2005-2006 ; International Journal of Business Intelligence and Data Mining Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Business Intelligence and Data Mining Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Business Intelligence and Data Mining Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2009 ; International Journal of Business Intelligence and Data Mining Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Business Intelligence and Data Mining Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Business Intelligence and Data Mining Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Business Intelligence and Data Mining Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Business Intelligence and Data Mining Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
@@ -2734,7 +2734,7 @@
         au < crawling ; exists ; 2004 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
         au < crawling ; exists ; 2005 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
         au < crawling ; exists ; 2006 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
-        au < ready ; exists ; 2007 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
+        au < crawling ; exists ; 2007 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
         au < ready ; exists ; 2008 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
         au < ready ; exists ; 2009 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
         au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Continuing Engineering Education and Life-Long Learning Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
@@ -3994,7 +3994,7 @@
       comment[doNotProcess] = wait for daemon 1.63 because of Unable to sync new encoding within range of +/- 100 chars
 
       au < crawling ; exists ; 2004 ; International Journal of Entrepreneurship and Small Business Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2005 ; International Journal of Entrepreneurship and Small Business Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2005 ; International Journal of Entrepreneurship and Small Business Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2006 ; International Journal of Entrepreneurship and Small Business Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Entrepreneurship and Small Business Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Entrepreneurship and Small Business Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -4120,7 +4120,7 @@
       au < ready ; exists ; 2007 ; International Journal of Environment and Pollution Volume 30 ; 30 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Environment and Pollution Volume 31 ; 31 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Environment and Pollution Volume 32 ; 32 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008 ; International Journal of Environment and Pollution Volume 33 ; 33 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008 ; International Journal of Environment and Pollution Volume 33 ; 33 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Environment and Pollution Volume 34 ; 34 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Environment and Pollution Volume 35 ; 35 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Environment and Pollution Volume 36 ; 36 ; https://www.inderscienceonline.com/ ; >
@@ -5031,7 +5031,7 @@
       au < crawling ; exists ; 2003 ; International Journal of Healthcare Technology and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < testing ; exists ; 2004-2005 ; International Journal of Healthcare Technology and Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2006 ; International Journal of Healthcare Technology and Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2007 ; International Journal of Healthcare Technology and Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; International Journal of Healthcare Technology and Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Healthcare Technology and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Healthcare Technology and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Healthcare Technology and Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
@@ -6920,8 +6920,8 @@
       au < ready ; exists ; 2006 ; International Journal of Machining and Machinability of Materials Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Machining and Machinability of Materials Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Machining and Machinability of Materials Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008 ; International Journal of Machining and Machinability of Materials Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2009 ; International Journal of Machining and Machinability of Materials Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008 ; International Journal of Machining and Machinability of Materials Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Machining and Machinability of Materials Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Machining and Machinability of Materials Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Machining and Machinability of Materials Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Machining and Machinability of Materials Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
@@ -7231,7 +7231,7 @@
       param[journal_id] = ijmtm
 
       au < crawling ; exists ; 2000 ; International Journal of Manufacturing Technology and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2000 ; International Journal of Manufacturing Technology and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2000 ; International Journal of Manufacturing Technology and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2001 ; International Journal of Manufacturing Technology and Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2002 ; International Journal of Manufacturing Technology and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2003 ; International Journal of Manufacturing Technology and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -7413,7 +7413,7 @@
 
       au < testing ; exists ; 2007-2008 ; International Journal of Materials and Structural Integrity Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Materials and Structural Integrity Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2009 ; International Journal of Materials and Structural Integrity Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Materials and Structural Integrity Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010-2013 ; International Journal of Materials and Structural Integrity Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Materials and Structural Integrity Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Materials and Structural Integrity Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -10082,7 +10082,7 @@
       au < crawling ; exists ; 2007 ; International Journal of Sport Management and Marketing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Sport Management and Marketing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Sport Management and Marketing Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2009 ; International Journal of Sport Management and Marketing Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Sport Management and Marketing Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Sport Management and Marketing Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sport Management and Marketing Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sport Management and Marketing Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
@@ -10300,7 +10300,7 @@
       au < crawling ; exists ; 2006 ; International Journal of Sustainable Development Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Sustainable Development Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Sustainable Development Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2009 ; International Journal of Sustainable Development Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Sustainable Development Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Sustainable Development Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Sustainable Development Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Sustainable Development Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
@@ -11718,7 +11718,7 @@
       param[journal_id] = jgba
 
       au < testing ; exists ; 2007-2008 ; Journal for Global Business Advancement Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2009 ; Journal for Global Business Advancement Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; Journal for Global Business Advancement Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; Journal for Global Business Advancement Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Journal for Global Business Advancement Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Journal for Global Business Advancement Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -11891,7 +11891,7 @@
       au < crawling ; exists ; 2004 ; Progress in Industrial Ecology, An International Journal Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2005 ; Progress in Industrial Ecology, An International Journal Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2006 ; Progress in Industrial Ecology, An International Journal Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2007 ; Progress in Industrial Ecology, An International Journal Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; Progress in Industrial Ecology, An International Journal Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; Progress in Industrial Ecology, An International Journal Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; Progress in Industrial Ecology, An International Journal Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; Progress in Industrial Ecology, An International Journal Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
