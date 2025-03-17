@@ -1328,6 +1328,30 @@
   {
 
       title <
+        name = JBR-BTR ;
+        issn = 0302-7430 ;
+        eissn = 1780-2393
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://jbsr.be/
+      nondefparam[base_url2] = https://account.jbsr.be/
+      nondefparam[journal_id] = up-j-jbsr
+      #volume 1-98 this title. As of volume 99, name changed to Journal of the Belgian Society of Radiology 2514-8281
+
+      au < exists ; exists ; 2008 ; 92 ; JBR-BTR Volume 2008 ; 2008 ; 92 ; Ubiquity Press ; http://jbsr.be/ ; >
+      au < exists ; exists ; 2009 ; 93 ; JBR-BTR Volume 2009 ; 2009 ; 93 ; Ubiquity Press ; http://jbsr.be/ ; >
+      au < finished ; crawling ; 2010 ; 94 ; JBR-BTR Volume 2010 ; 2010 ; 94 ; Ubiquity Press ; http://www.jbsr.be/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2011 ; 95 ; JBR-BTR Volume 2011 ; 2011 ; 95 ; Ubiquity Press ; http://www.jbsr.be/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2012 ; 96 ; JBR-BTR Volume 2012 ; 2012 ; 96 ; Ubiquity Press ; http://www.jbsr.be/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2013 ; 97 ; JBR-BTR Volume 2013 ; 2013 ; 97 ; Ubiquity Press ; http://www.jbsr.be/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2014 ; 98 ; JBR-BTR Volume 2014 ; 2014 ; 98 ; Ubiquity Press ; http://www.jbsr.be/ ; >
+
+  }
+
+  {
+
+      title <
         name = Journal of the Belgian Society of Radiology (JBSR) ;
         eissn = 2514-8281
       >
@@ -1368,7 +1392,7 @@
       au < finished ; finished ; 2018 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2 ; 2018 ; 2 ; Ubiquity Press ; https://www.mahkuscript.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 3 ; 2019 ; 3 ; Ubiquity Press ; https://www.mahkuscript.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 4 ; 2020 ; 4 ; Ubiquity Press ; https://www.mahkuscript.com/ ; reingest1.clockss.org:8082 >
-
+      #Closed. All processed here. Available at https://mahkuscript.com/
   }
 
   {
@@ -2057,7 +2081,7 @@
       au < finished ; finished ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; 22 ; United Kingdom Serials Group ; https://serials.uksg.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; 23 ; United Kingdom Serials Group ; http://serials.uksg.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; 24 ; United Kingdom Serials Group ; http://serials.uksg.org/ ; reingest1.clockss.org:8082 >
-
+      #Closed. Available at https://serials.uksg.org/
   }
 
   {
@@ -2559,6 +2583,32 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
       au < exists ; exists ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
       au < expected ; exists ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ; https://ssol-journal.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Historical Network Research ;
+        eissn = 2535-8863
+      >
+
+      comment[publisher] = Université du Luxembourg
+      #param[base_url] = https://jhnr.net/
+      nondefparam[base_url2] = https://account.jhnr.net/
+      nondefparam[journal_id] = ul-j-jhnr
+
+      au < exists ; exists ; 2017 ; 1 ; Journal of Historical Network Research Volume 2017 ; 2017 ; 1 ; Université du Luxembourg ; https://jhnr.net/ ; >
+      au < exists ; exists ; 2018 ; 2 ; Journal of Historical Network Research Volume 2018 ; 2018 ; 2 ; Université du Luxembourg ; https://jhnr.net/ ; >
+      au < exists ; exists ; 2019 ; 3 ; Journal of Historical Network Research Volume 2019 ; 2019 ; 3 ; Université du Luxembourg ; https://jhnr.net/ ; >
+      au < exists ; exists ; 2020 ; 4 ; Journal of Historical Network Research Volume 2020 ; 2020 ; 4 ; Université du Luxembourg ; https://jhnr.net/ ; >
+      au < exists ; exists ; 2021 ; 5 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5 ; Université du Luxembourg ; https://jhnr.net/ ; >
+      au < exists ; exists ; 2021 ; 6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 6 ; Université du Luxembourg ; https://jhnr.net/ ; >
+      au < exists ; exists ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ; https://jhnr.net/ ; >
+      au < exists ; exists ; 2023 ; 8 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8 ; Université du Luxembourg ; https://jhnr.net/ ; >
+      au < exists ; exists ; 2023 ; 9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 9 ; Université du Luxembourg ; https://jhnr.net/ ; >
+      au < exists ; exists ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ; https://jhnr.net/ ; >
+      au < expected ; exists ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ; https://jhnr.net/ ; >
 
   }
 
