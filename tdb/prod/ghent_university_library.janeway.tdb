@@ -565,7 +565,7 @@
       au < manifest ; 2014 ; 2014 ; 2014 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2014 >
       au < released ; 2015 ; 2015 ; 2015 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2015 >
       au < released ; 2016 ; 2016 ; 2016 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2016 >
-      au < manifest ; 2017 ; 2017 ; 2017 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2017 >
+      au < doNotProcess ; 2017 ; 2017 ; 2017 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2017 > #No substance
       au < released ; 2018 ; 2018 ; 2018 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2018 >
       au < released ; 2019 ; 2019 ; 2019 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2019 >
 
@@ -804,9 +804,9 @@
       au < ready ; 2007 ; 2007 ; 2007 ; EWOP in Practice Volume 2007 >
       au < manifest ; 2008 ; 2008 ; 2008 ; EWOP in Practice Volume 2008 >
       au < manifest ; 2009 ; 2009 ; 2009 ; EWOP in Practice Volume 2009 >
-      au < manifest ; 2010 ; 2010 ; 2010 ; EWOP in Practice Volume 2010 >
+      au < doNotProcess ; 2010 ; 2010 ; 2010 ; EWOP in Practice Volume 2010 > #No substance
       au < ready ; 2011 ; 2011 ; 2011 ; EWOP in Practice Volume 2011 >
-      au < manifest ; 2012 ; 2012 ; 2012 ; EWOP in Practice Volume 2012 >
+      au < doNotProcess ; 2012 ; 2012 ; 2012 ; EWOP in Practice Volume 2012 > #No substance
       au < ready ; 2013 ; 2013 ; 2013 ; EWOP in Practice Volume 2013 >
       au < ready ; 2014 ; 2014 ; 2014 ; EWOP in Practice Volume 2014 >
       au < ready ; 2015 ; 2015 ; 2015 ; EWOP in Practice Volume 2015 >
@@ -980,7 +980,7 @@
       au < ready ; 2014 ; 2014 ; 2014 ; Sociologos Volume 2014 >
       au < ready ; 2015 ; 2015 ; 2015 ; Sociologos Volume 2015 >
       au < ready ; 2016 ; 2016 ; 2016 ; Sociologos Volume 2016 >
-      au < manifest ; 2017 ; 2017 ; 2017 ; Sociologos Volume 2017 >
+      au < doNotProcess ; 2017 ; 2017 ; 2017 ; Sociologos Volume 2017 > #No substance
       au < ready ; 2018 ; 2018 ; 2018 ; Sociologos Volume 2018 >
       au < ready ; 2019 ; 2019 ; 2019 ; Sociologos Volume 2019 >
 
@@ -1031,11 +1031,11 @@
       au < manifest ; 2007 ; 2007 ; 2007 ; Ruimte & Maatschappij Volume 2007 >
       au < manifest ; 2008 ; 2008 ; 2008 ; Ruimte & Maatschappij Volume 2008 >
       au < manifest ; 2009 ; 2009 ; 2009 ; Ruimte & Maatschappij Volume 2009 >
-      au < manifest ; 2010 ; 2010 ; 2010 ; Ruimte & Maatschappij Volume 2010 >
-      au < manifest ; 2011 ; 2011 ; 2011 ; Ruimte & Maatschappij Volume 2011 >
-      au < manifest ; 2012 ; 2012 ; 2012 ; Ruimte & Maatschappij Volume 2012 >
-      au < manifest ; 2013 ; 2013 ; 2013 ; Ruimte & Maatschappij Volume 2013 >
-      au < manifest ; 2014 ; 2014 ; 2014 ; Ruimte & Maatschappij Volume 2014 >
+      au < doNotProcess ; 2010 ; 2010 ; 2010 ; Ruimte & Maatschappij Volume 2010 > #No substance
+      au < doNotProcess ; 2011 ; 2011 ; 2011 ; Ruimte & Maatschappij Volume 2011 > #No substance
+      au < doNotProcess ; 2012 ; 2012 ; 2012 ; Ruimte & Maatschappij Volume 2012 > #No substance
+      au < doNotProcess ; 2013 ; 2013 ; 2013 ; Ruimte & Maatschappij Volume 2013 > #No substance
+      au < doNotProcess ; 2014 ; 2014 ; 2014 ; Ruimte & Maatschappij Volume 2014 > #No substance
 
   }
 
@@ -1049,18 +1049,18 @@
       param[journal_id] = nise
 
       au < ready ; 2010 ; 2010 ; 2010 ; NISE Essays Volume 2010 >
-      au < manifest ; 2011 ; 2011 ; 2011 ; NISE Essays Volume 2011 >
-      au < manifest ; 2012 ; 2012 ; 2012 ; NISE Essays Volume 2012 >
+      au < doNotProcess ; 2011 ; 2011 ; 2011 ; NISE Essays Volume 2011 > #No substance
+      au < doNotProcess ; 2012 ; 2012 ; 2012 ; NISE Essays Volume 2012 > #No substance
       au < ready ; 2013 ; 2013 ; 2013 ; NISE Essays Volume 2013 >
       au < ready ; 2014 ; 2014 ; 2014 ; NISE Essays Volume 2014 >
-      au < manifest ; 2015 ; 2015 ; 2015 ; NISE Essays Volume 2015 >
-      au < manifest ; 2016 ; 2016 ; 2016 ; NISE Essays Volume 2016 >
-      au < manifest ; 2017 ; 2017 ; 2017 ; NISE Essays Volume 2017 >
+      au < doNotProcess ; 2015 ; 2015 ; 2015 ; NISE Essays Volume 2015 > #No substance
+      au < doNotProcess ; 2016 ; 2016 ; 2016 ; NISE Essays Volume 2016 > #No substance
+      au < doNotProcess ; 2017 ; 2017 ; 2017 ; NISE Essays Volume 2017 > #No substance
       au < ready ; 2018 ; 2018 ; 2018 ; NISE Essays Volume 2018 >
       au < ready ; 2019 ; 2019 ; 2019 ; NISE Essays Volume 2019 >
       au < released ; 2020 ; 2020 ; 2020 ; NISE Essays Volume 2020 >
       au < ready ; 2021 ; 2021 ; 2021 ; NISE Essays Volume 2021 >
-      au < manifest ; 2022 ; 2022 ; 2022 ; NISE Essays Volume 2022 >
+      au < doNotProcess ; 2022 ; 2022 ; 2022 ; NISE Essays Volume 2022 > #No substance
       au < ready ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 >
       au < manifest ; 2024 ; 2024 ; 2024 ; NISE Essays Volume 2024 >
       au < manifest ; 2025 ; 2025 ; 2025 ; NISE Essays Volume 2025 >
@@ -1214,7 +1214,7 @@
       #published 2021-present
       param[journal_id] = radices
 
-      au < manifest ; 2021 ; 2021 ; 2021 ; Radices Volume 2021 >
+      au < doNotProcess ; 2021 ; 2021 ; 2021 ; Radices Volume 2021 > #No substance
       au < released ; 2022 ; 2022 ; 2022 ; Radices Volume 2022 >
       au < ready ; 2023 ; 2023 ; 2023 ; Radices Volume 2023 >
       au < ready ; 2024 ; 2024 ; 2024 ; Radices Volume 2024 >
