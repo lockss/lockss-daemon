@@ -25,15 +25,15 @@
 
         param[journal_id] = cvm
 
-        au < finished ; crawling ; 2016 ; 19 ; Cardiovascular Medicine Volume 19 ; 019 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2017 ; 20 ; Cardiovascular Medicine Volume 20 ; 020 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2018 ; 21 ; Cardiovascular Medicine Volume 21 ; 021 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2019 ; 22 ; Cardiovascular Medicine Volume 22 ; 022 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2020 ; 23 ; Cardiovascular Medicine Volume 23 ; 023 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2021 ; 24 ; Cardiovascular Medicine Volume 24 ; 024 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2022 ; 25 ; Cardiovascular Medicine Volume 25 ; 025 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2023 ; 26 ; Cardiovascular Medicine Volume 26 ; 026 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2024 ; 27 ; Cardiovascular Medicine Volume 27 ; 027 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2016 ; 19 ; Cardiovascular Medicine Volume 19 ; 019 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2017 ; 20 ; Cardiovascular Medicine Volume 20 ; 020 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2018 ; 21 ; Cardiovascular Medicine Volume 21 ; 021 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2019 ; 22 ; Cardiovascular Medicine Volume 22 ; 022 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2020 ; 23 ; Cardiovascular Medicine Volume 23 ; 023 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2021 ; 24 ; Cardiovascular Medicine Volume 24 ; 024 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2022 ; 25 ; Cardiovascular Medicine Volume 25 ; 025 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2023 ; 26 ; Cardiovascular Medicine Volume 26 ; 026 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2024 ; 27 ; Cardiovascular Medicine Volume 27 ; 027 ; reingest5.clockss.org:8082 >
 
     }
 
@@ -48,13 +48,13 @@
         
         param[journal_id] = phcde
 
-        au < finished ; crawling ; 2018 ; 18 ; Primary and Hospital Care Deutsche Ausgabe Volume 18 ; 018 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2019 ; 19 ; Primary and Hospital Care Deutsche Ausgabe Volume 19 ; 019 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2020 ; 20 ; Primary and Hospital Care Deutsche Ausgabe Volume 20 ; 020 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2021 ; 21 ; Primary and Hospital Care Deutsche Ausgabe Volume 21 ; 021 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2022 ; 22 ; Primary and Hospital Care Deutsche Ausgabe Volume 22 ; 022 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2023 ; 23 ; Primary and Hospital Care Deutsche Ausgabe Volume 23 ; 023 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2024 ; 24 ; Primary and Hospital Care Deutsche Ausgabe Volume 24 ; 024 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2018 ; 18 ; Primary and Hospital Care Deutsche Ausgabe Volume 18 ; 018 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2019 ; 19 ; Primary and Hospital Care Deutsche Ausgabe Volume 19 ; 019 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2020 ; 20 ; Primary and Hospital Care Deutsche Ausgabe Volume 20 ; 020 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2021 ; 21 ; Primary and Hospital Care Deutsche Ausgabe Volume 21 ; 021 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2022 ; 22 ; Primary and Hospital Care Deutsche Ausgabe Volume 22 ; 022 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2023 ; 23 ; Primary and Hospital Care Deutsche Ausgabe Volume 23 ; 023 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2024 ; 24 ; Primary and Hospital Care Deutsche Ausgabe Volume 24 ; 024 ; reingest1.clockss.org:8082 >
 
     }
 
@@ -69,13 +69,13 @@
 
         param[journal_id] = phcfr
 
-        au < finished ; crawling ; 2018 ; 18 ; Primary and Hospital Care Édition Française Volume 18 ; 018 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2019 ; 19 ; Primary and Hospital Care Édition Française Volume 19 ; 019 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2020 ; 20 ; Primary and Hospital Care Édition Française Volume 20 ; 020 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2021 ; 21 ; Primary and Hospital Care Édition Française Volume 21 ; 021 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2022 ; 22 ; Primary and Hospital Care Édition Française Volume 22 ; 022 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2023 ; 23 ; Primary and Hospital Care Édition Française Volume 23 ; 023 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2024 ; 24 ; Primary and Hospital Care Édition Française Volume 24 ; 024 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2018 ; 18 ; Primary and Hospital Care Édition Française Volume 18 ; 018 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2019 ; 19 ; Primary and Hospital Care Édition Française Volume 19 ; 019 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2020 ; 20 ; Primary and Hospital Care Édition Française Volume 20 ; 020 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2021 ; 21 ; Primary and Hospital Care Édition Française Volume 21 ; 021 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2022 ; 22 ; Primary and Hospital Care Édition Française Volume 22 ; 022 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2023 ; 23 ; Primary and Hospital Care Édition Française Volume 23 ; 023 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2024 ; 24 ; Primary and Hospital Care Édition Française Volume 24 ; 024 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -90,15 +90,15 @@
 
         param[journal_id] = sanp
 
-        au < finished ; crawling ; 2016 ; 167 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 167 ; 167 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2017 ; 168 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 168 ; 168 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2018 ; 169 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 169 ; 169 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2019 ; 170 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 170 ; 170 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2020 ; 171 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 171 ; 171 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2021 ; 172 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 172 ; 172 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2022 ; 173 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 173 ; 173 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2023 ; 174 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 174 ; 174 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2024 ; 175 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 175 ; 175 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2016 ; 167 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 167 ; 167 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2017 ; 168 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 168 ; 168 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2018 ; 169 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 169 ; 169 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2019 ; 170 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 170 ; 170 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2020 ; 171 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 171 ; 171 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2021 ; 172 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 172 ; 172 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2022 ; 173 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 173 ; 173 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2023 ; 174 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 174 ; 174 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2024 ; 175 ; Swiss Archives of Neurology, Psychiatry and Psychotherapy Volume 175 ; 175 ; reingest3.clockss.org:8083 >
         
     }
 
@@ -113,15 +113,15 @@
 
         param[journal_id] = smfde
 
-        au < finished ; crawling ; 2016 ; 1 ; Swiss Medical Forum Deutsche Ausgabe Volume 1 ; 001 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2017 ; 4 ; Swiss Medical Forum Deutsche Ausgabe Volume 4 ; 004 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2018 ; 18 ; Swiss Medical Forum Deutsche Ausgabe Volume 18 ; 018 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2019 ; 19 ; Swiss Medical Forum Deutsche Ausgabe Volume 19 ; 019 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2020 ; 20 ; Swiss Medical Forum Deutsche Ausgabe Volume 20 ; 020 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2021 ; 21 ; Swiss Medical Forum Deutsche Ausgabe Volume 21 ; 021 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2022 ; 22 ; Swiss Medical Forum Deutsche Ausgabe Volume 22 ; 022 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2023 ; 23 ; Swiss Medical Forum Deutsche Ausgabe Volume 23 ; 023 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2024 ; 24 ; Swiss Medical Forum Deutsche Ausgabe Volume 24 ; 024 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2016 ; 1 ; Swiss Medical Forum Deutsche Ausgabe Volume 1 ; 001 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2017 ; 4 ; Swiss Medical Forum Deutsche Ausgabe Volume 4 ; 004 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2018 ; 18 ; Swiss Medical Forum Deutsche Ausgabe Volume 18 ; 018 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2019 ; 19 ; Swiss Medical Forum Deutsche Ausgabe Volume 19 ; 019 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2020 ; 20 ; Swiss Medical Forum Deutsche Ausgabe Volume 20 ; 020 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2021 ; 21 ; Swiss Medical Forum Deutsche Ausgabe Volume 21 ; 021 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2022 ; 22 ; Swiss Medical Forum Deutsche Ausgabe Volume 22 ; 022 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2023 ; 23 ; Swiss Medical Forum Deutsche Ausgabe Volume 23 ; 023 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2024 ; 24 ; Swiss Medical Forum Deutsche Ausgabe Volume 24 ; 024 ; reingest3.clockss.org:8083 >
         
     }
 
@@ -136,15 +136,15 @@
 
         param[journal_id] = smffr
 
-        au < finished ; crawling ; 2016 ; 1 ; Swiss Medical Forum Édition Française Volume 1 ; 001 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2017 ; 4 ; Swiss Medical Forum Édition Française Volume 4 ; 004 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2018 ; 18 ; Swiss Medical Forum Édition Française Volume 18 ; 018 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2019 ; 19 ; Swiss Medical Forum Édition Française Volume 19 ; 019 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2020 ; 20 ; Swiss Medical Forum Édition Française Volume 20 ; 020 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2021 ; 21 ; Swiss Medical Forum Édition Française Volume 21 ; 021 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2022 ; 22 ; Swiss Medical Forum Édition Française Volume 22 ; 022 ; reingest5.clockss.org:8082 >
-        au < finished ; crawling ; 2023 ; 23 ; Swiss Medical Forum Édition Française Volume 23 ; 023 ; reingest1.clockss.org:8082 >
-        au < finished ; crawling ; 2024 ; 24 ; Swiss Medical Forum Édition Française Volume 24 ; 024 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2016 ; 1 ; Swiss Medical Forum Édition Française Volume 1 ; 001 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2017 ; 4 ; Swiss Medical Forum Édition Française Volume 4 ; 004 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2018 ; 18 ; Swiss Medical Forum Édition Française Volume 18 ; 018 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2019 ; 19 ; Swiss Medical Forum Édition Française Volume 19 ; 019 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2020 ; 20 ; Swiss Medical Forum Édition Française Volume 20 ; 020 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2021 ; 21 ; Swiss Medical Forum Édition Française Volume 21 ; 021 ; reingest3.clockss.org:8083 >
+        au < finished ; frozen ; 2022 ; 22 ; Swiss Medical Forum Édition Française Volume 22 ; 022 ; reingest5.clockss.org:8082 >
+        au < finished ; frozen ; 2023 ; 23 ; Swiss Medical Forum Édition Française Volume 23 ; 023 ; reingest1.clockss.org:8082 >
+        au < finished ; frozen ; 2024 ; 24 ; Swiss Medical Forum Édition Française Volume 24 ; 024 ; reingest3.clockss.org:8083 >
         
     }
 

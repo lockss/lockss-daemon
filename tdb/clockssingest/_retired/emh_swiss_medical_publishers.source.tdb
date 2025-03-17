@@ -1,6 +1,6 @@
 {
   publisher <
-    name = EMH Swiss Publishers Ltd ;
+    name = EMH Swiss Medical Publishers ;
     info[contract] = 2018 ;
     info[tester] = S ;
     info[platform] = Source
@@ -10,7 +10,7 @@
 
   {
     title <
-       name = EMH Swiss Publishers Ltd Source Content
+       name = EMH Swiss Medical Publishers Source Content
     >
 
     plugin = org.lockss.plugin.clockss.emhswiss.ClockssEmhSwissMedicalSourcePlugin
