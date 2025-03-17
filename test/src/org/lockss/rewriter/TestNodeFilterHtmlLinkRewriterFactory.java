@@ -993,6 +993,15 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     }      
 
 
+  static final String data_uri_orig =
+    "<html><head>\n" +
+    "<img src=\"data:image/png;base64,iVBORw0KGgoA\">\n" +
+    "</head></html>\n";
+
+    public void testNoRewriteDataUri() throws Exception {
+      testRewriting("Abs", data_uri_orig, ISO, data_uri_orig, false);
+    }
+
     void setupProtos(String cproto, String lproto) {
       this.cproto = cproto;
       this.lproto = lproto;

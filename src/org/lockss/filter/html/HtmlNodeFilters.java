@@ -718,7 +718,7 @@ public class HtmlNodeFilters {
 	  if (attribute != null && attribute.getValue() != null) {
 	    // Rewrite this attribute
 	    String url = attribute.getValue();
- 	    if (isFilterMatch(url, pat)) {
+ 	    if (isFilterMatch(url, pat) && !DataUri.isDataUri(url)) {
 	      if (log.isDebug3()) {
 		log.debug3("Attribute " + attribute.getName() + " old " + url +
 			   " target " + targetPat.getPattern() +
