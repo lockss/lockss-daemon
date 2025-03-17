@@ -567,7 +567,7 @@
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Volume 382 ; 382 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Volume 383 ; 383 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; testing ; 2024 ; BMJ Volume 384 ; 384 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; testing ; 2024 ; BMJ Volume 385 ; 385 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; ready ; 2024 ; BMJ Volume 385 ; 385 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; testing ; 2024 ; BMJ Volume 386 ; 386 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; testing ; 2024 ; BMJ Volume 387 ; 387 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 388 ; 388 ; https://www.bmj.com/ >
@@ -1228,7 +1228,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; OpenHeart Volume 8 ; 8 ; https://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; OpenHeart Volume 9 ; 9 ; https://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; OpenHeart Volume 10 ; 10 ; https://openheart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2024 ; OpenHeart Volume 11 ; 11 ; https://openheart.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2024 ; OpenHeart Volume 11 ; 11 ; https://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2025 ; OpenHeart Volume 12 ; 12 ; https://openheart.bmj.com/ >
 
   }
@@ -1363,7 +1363,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; down ; 2021 ; Evidence-Based Mental Health Volume 24 ; 24 ; https://ebmh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Evidence-Based Mental Health Volume 25 ; 25 ; https://mentalhealth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Evidence-Based Mental Health Volume 26 ; 26 ; https://mentalhealth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2024 ; Evidence-Based Mental Health Volume 27 ; 27 ; https://mentalhealth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2024 ; Evidence-Based Mental Health Volume 27 ; 27 ; https://mentalhealth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Evidence-Based Mental Health Volume 28 ; 28 ; https://mentalhealth.bmj.com/ >
 
   }
@@ -2409,7 +2409,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; released ; 2021 ; Lupus Science & Medicine Volume 8 ; 8 ; https://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2022 ; Lupus Science & Medicine Volume 9 ; 9 ; https://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; Lupus Science & Medicine Volume 10 ; 10 ; https://lupus.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; testing ; 2024 ; Lupus Science & Medicine Volume 11 ; 11 ; https://lupus.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; ready ; 2024 ; Lupus Science & Medicine Volume 11 ; 11 ; https://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Lupus Science & Medicine Volume 12 ; 12 ; https://lupus.bmj.com/ >
 
     }
@@ -2452,7 +2452,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; Medical Humanities Volume 47 ; 47 ; https://mh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Medical Humanities Volume 48 ; 48 ; https://mh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Medical Humanities Volume 49 ; 49 ; https://mh.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2024 ; Medical Humanities Volume 50 ; 50 ; https://mh.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2024 ; Medical Humanities Volume 50 ; 50 ; https://mh.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; Medical Humanities Volume 51 ; 51 ; https://mh.bmj.com/ >
 
   }
@@ -2569,7 +2569,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; Occupational and Environmental Medicine Volume 78 ; 78 ; https://oem.bmj.com/ > #login, https://oem.bmj.com/content/79/2/e2.full.pdf
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Occupational and Environmental Medicine Volume 79 ; 79 ; https://oem.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Occupational and Environmental Medicine Volume 80 ; 80 ; https://oem.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2024 ; Occupational and Environmental Medicine Volume 81 ; 81 ; https://oem.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2024 ; Occupational and Environmental Medicine Volume 81 ; 81 ; https://oem.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; Occupational and Environmental Medicine Volume 82 ; 82 ; https://oem.bmj.com/ >
 
   }
