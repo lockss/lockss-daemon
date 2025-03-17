@@ -2165,8 +2165,8 @@
     au < manifest ; exists ; 2017 ; 2017 ; British Journal of Dermatology Volume 176-177 ; 176-177 ; >
     au < manifest ; exists ; 2018 ; 2018 ; British Journal of Dermatology Volume 178-179 ; 178-179 ; >
     au < manifest ; exists ; 2019 ; 2019 ; British Journal of Dermatology Volume 180-181 ; 180-181 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; British Journal of Dermatology Volume 182-183 ; 182-183 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; British Journal of Dermatology Volume 184-185 ; 184-185 ; >
+    au < testing ; exists ; 2020 ; 2020 ; British Journal of Dermatology Volume 182-183 ; 182-183 ; >
+    au < testing ; exists ; 2021 ; 2021 ; British Journal of Dermatology Volume 184-185 ; 184-185 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; British Journal of Dermatology Volume 186-187 ; 186-187 ; >
     au < finished ; manifest ; 2023 ; 2023 ; British Journal of Dermatology Volume 188-189 ; 188-189 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; British Journal of Dermatology Volume 190-191 ; 190-191 ; >
@@ -6042,8 +6042,8 @@
     au < manifest ; exists ; 2017 ; 2017 ; European Journal of Endocrinology Volume 176-177 ; 176-177 ; >
     au < manifest ; exists ; 2018 ; 2018 ; European Journal of Endocrinology Volume 178-179 ; 178-179 ; >
     au < manifest ; exists ; 2019 ; 2019 ; European Journal of Endocrinology Volume 180-181 ; 180-181 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; European Journal of Endocrinology Volume 182-183 ; 182-183 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; European Journal of Endocrinology Volume 184-185 ; 184-185 ; >
+    au < testing ; exists ; 2020 ; 2020 ; European Journal of Endocrinology Volume 182-183 ; 182-183 ; >
+    au < testing ; exists ; 2021 ; 2021 ; European Journal of Endocrinology Volume 184-185 ; 184-185 ; >
     au < finished ; manifest ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186-187 ; 186-187 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of Endocrinology Volume 188-189 ; 188-189 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 2024 ; European Journal of Endocrinology Volume 190-191 ; 190-191 ; >
@@ -6447,8 +6447,8 @@
     au < manifest ; exists ; 2017 ; 2017 ; Evolution Volume 71 ; 71 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Evolution Volume 72 ; 72 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Evolution Volume 73 ; 73 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Evolution Volume 74 ; 74 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Evolution Volume 75 ; 75 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Evolution Volume 74 ; 74 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Evolution Volume 75 ; 75 ; >
     au < finished ; manifest ; 2022 ; 2022 ; Evolution Volume 76 ; 76 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Evolution Volume 77 ; 77 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2024 ; 2024 ; Evolution Volume 78 ; 78 ; >
@@ -12300,8 +12300,8 @@
     au < manifest ; exists ; 2017 ; 2017 ; Journal of Leukocyte Biology Volume 107 ; 107 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Leukocyte Biology Volume 108 ; 108 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Leukocyte Biology Volume 109 ; 109 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of Leukocyte Biology Volume 110 ; 110 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of Leukocyte Biology Volume 111 ; 111 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Journal of Leukocyte Biology Volume 110 ; 110 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Journal of Leukocyte Biology Volume 111 ; 111 ; >
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Leukocyte Biology Volume 112 ; 112 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Leukocyte Biology Volume 113 ; 113 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2024 ; 2024 ; Journal of Leukocyte Biology Volume 114 ; 114 ; >
@@ -17722,7 +17722,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; Policing: A Journal of Policy and Practice Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Policing: A Journal of Policy and Practice Volume 16 ; 16 ; >
     au < exists ; exists ; 2023 ; 2023 ; Policing: A Journal of Policy and Practice Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Policing: A Journal of Policy and Practice Volume 18 ; 18 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Policing: A Journal of Policy and Practice Volume 18 ; 18 ; >
     au < expected ; exists ; 2025 ; 2025 ; Policing: A Journal of Policy and Practice Volume 19 ; 19 ; >
 
   }
