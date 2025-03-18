@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>3</string>
+        <string>4</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -175,6 +175,18 @@ POSSIBILITY OF SUCH DAMAGE.
         <entry>
           <string>au_def_pause_time</string>
           <long>100</long>
+        </entry>
+      </map>
+    </entry>
+    <entry>
+      <string>triggered_override</string>
+      <map>
+        <entry>
+          <string>plugin_rewrite_html_meta_urls</string>
+          <list>
+            <string>citation_public_url</string>
+            <string>citation_pdf_url</string>
+          </list>
         </entry>
       </map>
     </entry>
