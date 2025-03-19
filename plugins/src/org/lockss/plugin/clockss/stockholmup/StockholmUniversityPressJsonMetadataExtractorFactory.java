@@ -121,6 +121,7 @@ public class StockholmUniversityPressJsonMetadataExtractorFactory implements Fil
     }
 
 
+
     static String zipAuthors(String familiesRaw, String givensRaw) {
       // Remove the enclosing square brackets if present
       String familiesStr = stripBrackets(familiesRaw);
@@ -159,7 +160,6 @@ public class StockholmUniversityPressJsonMetadataExtractorFactory implements Fil
           processKeys(pathPrefix + entry.getKey(), entry.getValue(), map, suffix);
         }
       } else if (jsonNode.isArray()) {
-        //This does not include the cases of array of array, so need to handle some node separately
         ArrayNode arrayNode = (ArrayNode) jsonNode;
 
         for (int i = 0; i < arrayNode.size(); i++) {
@@ -204,7 +204,7 @@ public class StockholmUniversityPressJsonMetadataExtractorFactory implements Fil
           String key = entry.getKey();
           String value = entry.getValue();
 
-          //am.putRaw(key, value);
+          am.putRaw(key, value);
 
           if (entry.getKey().startsWith("message.issn-type") && entry.getValue().equals("electronic")) {
             String issnValueKey = entry.getKey().replace(".type", ".value");
@@ -213,7 +213,7 @@ public class StockholmUniversityPressJsonMetadataExtractorFactory implements Fil
           }
 
 
-          // date is an array, not a string.
+          // Assuming rootNode is your JSON tree.
           JsonNode messageNode = rootNode.get("message");
           String dateStr = "";
 
@@ -236,7 +236,7 @@ public class StockholmUniversityPressJsonMetadataExtractorFactory implements Fil
             am.put(MetadataField.FIELD_DATE, dateStr);
           }
         }
-        
+
         String authorsList = zipAuthors(am.getRaw("message.author.given"), am.getRaw("message.author.family"));
         am.put(MetadataField.FIELD_AUTHOR, authorsList);
 
