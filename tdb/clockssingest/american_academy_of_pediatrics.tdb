@@ -445,10 +445,7 @@
 
       param[journal_id] = pediatricsopenscience
 
-      au < expected ; exists ; 2024 ; 2024 ; Pediatrics Open Science Volume 1 ; 1 ; >
-      au < expected ; exists ; 2024 ; 2024 ; Pediatrics Open Science Volume 2 ; 2 ; >
-      au < expected ; exists ; 2025 ; 2025 ; Pediatrics Open Science Volume 3 ; 3 ; >
-      au < expected ; exists ; 2025 ; 2025 ; Pediatrics Open Science Volume 4 ; 4 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; Pediatrics Open Science Volume 1 ; 1 ; >
 
   }
 
