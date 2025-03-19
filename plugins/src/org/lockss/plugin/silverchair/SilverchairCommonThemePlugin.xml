@@ -149,7 +149,7 @@
             https://rupress.org/jem/article/215/1/5/42501/Shared-cancer-neoantigens-Making-private-matters
             https://rupress.org/jem/article/215/1/91/42480/Maternal-IgG-immune-complexes-induce-food-allergen
             -->
-            <string>1,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)/%s/", base_url, journal_id, volume_name</string>
+            <string>1,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)/%s/20", base_url, journal_id, volume_name</string>
             <!--
             https://pubs.geoscienceworld.org/gsabulletin/article-pdf/132/1-2/3/4907520/3.pdf
             Redirected to excluded URL:
