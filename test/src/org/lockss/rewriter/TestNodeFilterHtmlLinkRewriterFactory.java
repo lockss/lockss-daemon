@@ -45,6 +45,7 @@ import org.lockss.plugin.*;
 import org.lockss.servlet.*;
 import org.lockss.filter.html.*;
 import org.lockss.filter.html.HtmlNodeFilters.*;
+import org.apache.commons.io.FileUtils;
 
 public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   static Logger log = Logger.getLogger("TestNodeFilterHtmlLinkRewriterFactory");
@@ -992,13 +993,10 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
       testRewriting("Pre post", add_xform_orig, ISO, add_xform_xformed, true);
     }      
 
-
-  static final String data_uri_orig =
-    "<html><head>\n" +
-    "<img src=\"data:image/png;base64,iVBORw0KGgoA\">\n" +
-    "</head></html>\n";
+  static String data_uri_orig;
 
     public void testNoRewriteDataUri() throws Exception {
+      data_uri_orig = "<html><head>\n" + FileUtils.readFileToString(new File("/tmp/img.txt")) + "</head></html>\n";
       testRewriting("Abs", data_uri_orig, ISO, data_uri_orig, false);
     }
 
