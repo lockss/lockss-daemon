@@ -90,17 +90,36 @@ public class StockholmUniversityPressJsonMetadataExtractorFactory implements Fil
       return value;
     }
 
-    // Function to extract date from "[2021, 4, 23]" format
-    public static String extractDateParts(String rawDateParts) {
-      // Remove brackets and whitespace, then split by comma
-      String[] parts = rawDateParts.replaceAll("[\\[\\]\\s]", "").split(",");
-
-      // Ensure we have at least a year (avoid errors on malformed data)
-      if (parts.length >= 3) {
-        return String.join("-", parts);  // Returns "YYYY-MM-DD"
+    private static String extractDatePartsFromNode(JsonNode datePartsNode) {
+      if (datePartsNode == null || !datePartsNode.isArray() || datePartsNode.size() == 0) {
+        return "";
       }
-      return ""; // Return empty string if data is invalid
+
+      JsonNode innerArray = datePartsNode.get(0);
+      if (innerArray == null || !innerArray.isArray() || innerArray.size() == 0) {
+        return "";
+      }
+
+      int year = innerArray.get(0).asInt();
+
+      int month = 1;
+
+      if (innerArray.size() > 1 && !innerArray.get(1).isNull()) {
+        month = innerArray.get(1).asInt(1);
+      }
+
+      int day = 0;
+      if (innerArray.size() > 2 && !innerArray.get(2).isNull()) {
+        day = innerArray.get(2).asInt(0);
+      }
+
+      if (day > 0) {
+        return String.format("%04d-%02d-%02d", year, month, day);
+      } else {
+        return String.format("%04d-%02d", year, month);
+      }
     }
+
 
     static String zipAuthors(String familiesRaw, String givensRaw) {
       // Remove the enclosing square brackets if present
@@ -140,6 +159,7 @@ public class StockholmUniversityPressJsonMetadataExtractorFactory implements Fil
           processKeys(pathPrefix + entry.getKey(), entry.getValue(), map, suffix);
         }
       } else if (jsonNode.isArray()) {
+        //This does not include the cases of array of array, so need to handle some node separately
         ArrayNode arrayNode = (ArrayNode) jsonNode;
 
         for (int i = 0; i < arrayNode.size(); i++) {
@@ -169,8 +189,6 @@ public class StockholmUniversityPressJsonMetadataExtractorFactory implements Fil
         am = new ArticleMetadata();
 
         String eissn = null;
-        String authorFamilyNames = null;
-        String authorGiveNames = null;
 
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode rootNode = null;
@@ -186,11 +204,7 @@ public class StockholmUniversityPressJsonMetadataExtractorFactory implements Fil
           String key = entry.getKey();
           String value = entry.getValue();
 
-          if (entry.getKey().startsWith("message.issn-type") && entry.getValue().equals("electronic")) {
-            String issnValueKey = entry.getKey().replace(".type", ".value");
-            eissn = map.get(issnValueKey);
-            am.put(MetadataField.FIELD_EISSN, eissn);
-          }
+          //am.putRaw(key, value);
 
           if (entry.getKey().startsWith("message.issn-type") && entry.getValue().equals("electronic")) {
             String issnValueKey = entry.getKey().replace(".type", ".value");
@@ -198,18 +212,32 @@ public class StockholmUniversityPressJsonMetadataExtractorFactory implements Fil
             am.put(MetadataField.FIELD_EISSN, eissn);
           }
 
-          if (entry.getKey().equals("message.published-online.date-parts") || entry.getKey().equals("message.published-print.date-parts")) {
-            String dateParts = extractDateParts(value);
-            if (!dateParts.isEmpty()) {
-              am.put(MetadataField.FIELD_DATE, dateParts);
+
+          // date is an array, not a string.
+          JsonNode messageNode = rootNode.get("message");
+          String dateStr = "";
+
+          // First, try to get published-online date-parts.
+          if (messageNode.has("published-online")) {
+            JsonNode publishedOnline = messageNode.get("published-online");
+            if (publishedOnline.has("date-parts")) {
+              dateStr = extractDatePartsFromNode(publishedOnline.get("date-parts"));
             }
           }
 
-          am.putRaw(key, value);
+          if (dateStr.isEmpty() && messageNode.has("published-print")) {
+            JsonNode publishedPrint = messageNode.get("published-print");
+            if (publishedPrint.has("date-parts")) {
+              dateStr = extractDatePartsFromNode(publishedPrint.get("date-parts"));
+            }
+          }
+
+          if (!dateStr.isEmpty()) {
+            am.put(MetadataField.FIELD_DATE, dateStr);
+          }
         }
         
         String authorsList = zipAuthors(am.getRaw("message.author.given"), am.getRaw("message.author.family"));
-
         am.put(MetadataField.FIELD_AUTHOR, authorsList);
 
         am.cook(jsonPathToMetadataField);
