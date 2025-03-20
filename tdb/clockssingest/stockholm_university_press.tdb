@@ -16,14 +16,16 @@
   {
 
     title <
-      name = Stockholm University Press Content
+      name = Journal of Home Language Research ;
+      eissn = 2537-7043 ;
+      issnl = 2537-7043
     >
 
     param[journal_id] = jhlr
 
-      au < testing ; exists ; 2021 ; 4 ; Stockholm University Volume 4 ; 4 >
-      au < testing ; exists ; 2022 ; 5 ; Stockholm University Volume 5 ; 5 >
-      au < testing ; exists ; 2023 ; 6 ; Stockholm University Volume 6 ; 6 >
+      au < testing ; exists ; 2021 ; 4 ; Journal of Home Language Research Volume 4 ; 4 >
+      au < testing ; exists ; 2022 ; 5 ; Journal of Home Language Research Volume 5 ; 5 >
+      au < testing ; exists ; 2023 ; 6 ; Journal of Home Language Research Volume 6 ; 6 >
 
   }
 
