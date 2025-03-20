@@ -30,7 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>development</string>
+        <string>testing</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -128,23 +128,23 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1, "^%sindex.html", base_url</string>
         </list>
     </entry>
-   <!--<entry>
+   <entry>
        <string>plugin_article_iterator_factory</string>
-       <string>org.lockss.plugin.emhsmp.EmhSwissMedicalPublishersArticleIteratorFactory</string>
+       <string>org.lockss.plugin.stockholmup.ClockssStockholmUniversityPressArticleIteratorFactory</string>
    </entry>
    <entry>
        <string>plugin_article_metadata_extractor_factory</string>
-       <string>org.lockss.plugin.emhsmp.EmhSwissMedicalPublishersArticleIteratorFactory</string>
+       <string>org.lockss.plugin.stockholmup.ClockssStockholmUniversityPressArticleIteratorFactory</string>
    </entry>
    <entry>
        <string>text/html_metadata_extractor_factory_map</string>
        <map>
            <entry>
                <string>*</string>
-               <string>org.lockss.plugin.emhsmp.EmhSwissMedicalPublishersHtmlMetadataExtractorFactory</string>
+               <string>org.lockss.plugin.stockholmup.ClockssStockholmUniversityPressMetadataExtractorFactory</string>
            </entry>
        </map>
-   </entry>-->
+   </entry>
     <entry>
         <string>au_permitted_host_pattern</string>
         <list>
