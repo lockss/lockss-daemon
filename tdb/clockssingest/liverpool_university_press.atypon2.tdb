@@ -2097,7 +2097,7 @@
     #journal_num = 115
 
     au < ready ; exists ; 2019 ; Journal of Romanian Studies Volume 1 ; 1 ; >
-    au < ready ; exists ; 2020 ; Journal of Romanian Studies Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2020 ; Journal of Romanian Studies Volume 2 ; 2 ; >
     au < ready ; exists ; 2021 ; Journal of Romanian Studies Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Romanian Studies Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Romanian Studies Volume 5 ; 5 ; >
