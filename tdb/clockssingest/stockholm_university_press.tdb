@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Stockholm University Press ;
+    info[contract] = 2019 ;
+    info[tester] = 4 ;
+    info[platform] = Custom
+  >
+
+    plugin = org.lockss.plugin.stockholmup.ClockssStockholmUniversityPressPlugin
+    param[base_url] = https://stockholmup2025.clockss.org/
+    param[publisher_id] = stockholmup
+
+    implicit < status ; status2 ; year ; volume ; name ;  param[volume_name] >
+
+  {
+
+    title <
+      name = Stockholm University Press Content
+    >
+
+    param[journal_id] = jhlr
+
+      au < testing ; exists ; 2021 ; 4 ; Stockholm University Volume 4 ; 4 >
+      au < testing ; exists ; 2022 ; 5 ; Stockholm University Volume 5 ; 5 >
+      au < testing ; exists ; 2023 ; 6 ; Stockholm University Volume 6 ; 6 >
+
+  }
+
+}
