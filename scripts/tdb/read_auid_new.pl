@@ -708,6 +708,7 @@ while (my $line = <>) {
       }
       sleep(5);
 
+#Needs: tdbout -EXt auidplus tdb/clockssingest/ubiquity_press.ubiquity.2025.tdb | grep Clockss | sed s'/@@@NONDEF@@@/\&/'
 #  } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
 #      ####start url only
 #      $url = sprintf("%slockss/year/%d/",
