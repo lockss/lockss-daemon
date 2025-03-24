@@ -1642,7 +1642,7 @@
       au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Tetradio Volume 2022 ; >
       au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Tetradio Volume 2023 ; >
       au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Tetradio Volume 2024 ; >
-      au < expected ; exists ; 2025 ; 2025 ; 2025 ; Tetradio Volume 2025 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tetradio Volume 2025 ; >
 
   }
 
@@ -1656,12 +1656,12 @@
       #published 2020-2025
       param[journal_id] = ts
 
-      au < exists ; exists ; 2020 ; 2020 ; 2020 ; Tijdschrift Sociologie Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; 2021 ; Tijdschrift Sociologie Volume 2021 ; >
-      au < exists ; exists ; 2022 ; 2022 ; 2022 ; Tijdschrift Sociologie Volume 2022 ; >
-      au < exists ; exists ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 ; >
-      au < exists ; exists ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 ; >
-      au < expected ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Tijdschrift Sociologie Volume 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Tijdschrift Sociologie Volume 2021 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Tijdschrift Sociologie Volume 2022 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 ; >
 
   }
 
@@ -1675,60 +1675,60 @@
       #published 1972-2025
       param[journal_id] = tvc
 
-      au < exists ; exists ; 1972 ; 1972 ; 1972 ; Tijdschrift voor Communicatiewetenschap Volume 1972 ; >
-      au < exists ; exists ; 1973 ; 1973 ; 1973 ; Tijdschrift voor Communicatiewetenschap Volume 1973 ; >
-      au < exists ; exists ; 1974 ; 1974 ; 1974 ; Tijdschrift voor Communicatiewetenschap Volume 1974 ; >
-      au < exists ; exists ; 1975 ; 1975 ; 1975 ; Tijdschrift voor Communicatiewetenschap Volume 1975 ; >
-      au < exists ; exists ; 1976 ; 1976 ; 1976 ; Tijdschrift voor Communicatiewetenschap Volume 1976 ; >
-      au < exists ; exists ; 1977 ; 1977 ; 1977 ; Tijdschrift voor Communicatiewetenschap Volume 1977 ; >
-      au < exists ; exists ; 1978 ; 1978 ; 1978 ; Tijdschrift voor Communicatiewetenschap Volume 1978 ; >
-      au < exists ; exists ; 1979 ; 1979 ; 1979 ; Tijdschrift voor Communicatiewetenschap Volume 1979 ; >
-      au < exists ; exists ; 1980 ; 1980 ; 1980 ; Tijdschrift voor Communicatiewetenschap Volume 1980 ; >
-      au < exists ; exists ; 1981 ; 1981 ; 1981 ; Tijdschrift voor Communicatiewetenschap Volume 1981 ; >
-      au < exists ; exists ; 1982 ; 1982 ; 1982 ; Tijdschrift voor Communicatiewetenschap Volume 1982 ; >
-      au < exists ; exists ; 1983 ; 1983 ; 1983 ; Tijdschrift voor Communicatiewetenschap Volume 1983 ; >
-      au < exists ; exists ; 1984 ; 1984 ; 1984 ; Tijdschrift voor Communicatiewetenschap Volume 1984 ; >
-      au < exists ; exists ; 1985 ; 1985 ; 1985 ; Tijdschrift voor Communicatiewetenschap Volume 1985 ; >
-      au < exists ; exists ; 1986 ; 1986 ; 1986 ; Tijdschrift voor Communicatiewetenschap Volume 1986 ; >
-      au < exists ; exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Communicatiewetenschap Volume 1987 ; >
-      au < exists ; exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Communicatiewetenschap Volume 1988 ; >
-      au < exists ; exists ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Communicatiewetenschap Volume 1989 ; >
-      au < exists ; exists ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Communicatiewetenschap Volume 1990 ; >
-      au < exists ; exists ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Communicatiewetenschap Volume 1991 ; >
-      au < exists ; exists ; 1992 ; 1992 ; 1992 ; Tijdschrift voor Communicatiewetenschap Volume 1992 ; >
-      au < exists ; exists ; 1993 ; 1993 ; 1993 ; Tijdschrift voor Communicatiewetenschap Volume 1993 ; >
-      au < exists ; exists ; 1994 ; 1994 ; 1994 ; Tijdschrift voor Communicatiewetenschap Volume 1994 ; >
-      au < exists ; exists ; 1995 ; 1995 ; 1995 ; Tijdschrift voor Communicatiewetenschap Volume 1995 ; >
-      au < exists ; exists ; 1996 ; 1996 ; 1996 ; Tijdschrift voor Communicatiewetenschap Volume 1996 ; >
-      au < exists ; exists ; 1997 ; 1997 ; 1997 ; Tijdschrift voor Communicatiewetenschap Volume 1997 ; >
-      au < exists ; exists ; 1998 ; 1998 ; 1998 ; Tijdschrift voor Communicatiewetenschap Volume 1998 ; >
-      au < exists ; exists ; 1999 ; 1999 ; 1999 ; Tijdschrift voor Communicatiewetenschap Volume 1999 ; >
-      au < exists ; exists ; 2000 ; 2000 ; 2000 ; Tijdschrift voor Communicatiewetenschap Volume 2000 ; >
-      au < exists ; exists ; 2001 ; 2001 ; 2001 ; Tijdschrift voor Communicatiewetenschap Volume 2001 ; >
-      au < exists ; exists ; 2002 ; 2002 ; 2002 ; Tijdschrift voor Communicatiewetenschap Volume 2002 ; >
-      au < exists ; exists ; 2003 ; 2003 ; 2003 ; Tijdschrift voor Communicatiewetenschap Volume 2003 ; >
-      au < exists ; exists ; 2004 ; 2004 ; 2004 ; Tijdschrift voor Communicatiewetenschap Volume 2004 ; >
-      au < exists ; exists ; 2005 ; 2005 ; 2005 ; Tijdschrift voor Communicatiewetenschap Volume 2005 ; >
-      au < exists ; exists ; 2006 ; 2006 ; 2006 ; Tijdschrift voor Communicatiewetenschap Volume 2006 ; >
-      au < exists ; exists ; 2007 ; 2007 ; 2007 ; Tijdschrift voor Communicatiewetenschap Volume 2007 ; >
-      au < exists ; exists ; 2008 ; 2008 ; 2008 ; Tijdschrift voor Communicatiewetenschap Volume 2008 ; >
-      au < exists ; exists ; 2009 ; 2009 ; 2009 ; Tijdschrift voor Communicatiewetenschap Volume 2009 ; >
-      au < exists ; exists ; 2010 ; 2010 ; 2010 ; Tijdschrift voor Communicatiewetenschap Volume 2010 ; >
-      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Tijdschrift voor Communicatiewetenschap Volume 2011 ; >
-      au < exists ; exists ; 2012 ; 2012 ; 2012 ; Tijdschrift voor Communicatiewetenschap Volume 2012 ; >
-      au < exists ; exists ; 2013 ; 2013 ; 2013 ; Tijdschrift voor Communicatiewetenschap Volume 2013 ; >
-      au < exists ; exists ; 2014 ; 2014 ; 2014 ; Tijdschrift voor Communicatiewetenschap Volume 2014 ; >
-      au < exists ; exists ; 2015 ; 2015 ; 2015 ; Tijdschrift voor Communicatiewetenschap Volume 2015 ; >
-      au < exists ; exists ; 2016 ; 2016 ; 2016 ; Tijdschrift voor Communicatiewetenschap Volume 2016 ; >
-      au < exists ; exists ; 2017 ; 2017 ; 2017 ; Tijdschrift voor Communicatiewetenschap Volume 2017 ; >
-      au < exists ; exists ; 2018 ; 2018 ; 2018 ; Tijdschrift voor Communicatiewetenschap Volume 2018 ; >
-      au < exists ; exists ; 2019 ; 2019 ; 2019 ; Tijdschrift voor Communicatiewetenschap Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; 2020 ; Tijdschrift voor Communicatiewetenschap Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; 2021 ; Tijdschrift voor Communicatiewetenschap Volume 2021 ; >
-      au < exists ; exists ; 2022 ; 2022 ; 2022 ; Tijdschrift voor Communicatiewetenschap Volume 2022 ; >
-      au < exists ; exists ; 2023 ; 2023 ; 2023 ; Tijdschrift voor Communicatiewetenschap Volume 2023 ; >
-      au < exists ; exists ; 2024 ; 2024 ; 2024 ; Tijdschrift voor Communicatiewetenschap Volume 2024 ; >
-      au < expected ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift voor Communicatiewetenschap Volume 2025 ; >
+      au < manifest ; exists ; 1972 ; 1972 ; 1972 ; Tijdschrift voor Communicatiewetenschap Volume 1972 ; >
+      au < manifest ; exists ; 1973 ; 1973 ; 1973 ; Tijdschrift voor Communicatiewetenschap Volume 1973 ; >
+      au < manifest ; exists ; 1974 ; 1974 ; 1974 ; Tijdschrift voor Communicatiewetenschap Volume 1974 ; >
+      au < manifest ; exists ; 1975 ; 1975 ; 1975 ; Tijdschrift voor Communicatiewetenschap Volume 1975 ; >
+      au < manifest ; exists ; 1976 ; 1976 ; 1976 ; Tijdschrift voor Communicatiewetenschap Volume 1976 ; >
+      au < manifest ; exists ; 1977 ; 1977 ; 1977 ; Tijdschrift voor Communicatiewetenschap Volume 1977 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; 1978 ; Tijdschrift voor Communicatiewetenschap Volume 1978 ; >
+      au < manifest ; exists ; 1979 ; 1979 ; 1979 ; Tijdschrift voor Communicatiewetenschap Volume 1979 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; 1980 ; Tijdschrift voor Communicatiewetenschap Volume 1980 ; >
+      au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Tijdschrift voor Communicatiewetenschap Volume 1981 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Tijdschrift voor Communicatiewetenschap Volume 1982 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; 1983 ; Tijdschrift voor Communicatiewetenschap Volume 1983 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Tijdschrift voor Communicatiewetenschap Volume 1984 ; >
+      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Tijdschrift voor Communicatiewetenschap Volume 1985 ; >
+      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Tijdschrift voor Communicatiewetenschap Volume 1986 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Communicatiewetenschap Volume 1987 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Communicatiewetenschap Volume 1988 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Communicatiewetenschap Volume 1989 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Communicatiewetenschap Volume 1990 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Communicatiewetenschap Volume 1991 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; 1992 ; Tijdschrift voor Communicatiewetenschap Volume 1992 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; 1993 ; Tijdschrift voor Communicatiewetenschap Volume 1993 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; 1994 ; Tijdschrift voor Communicatiewetenschap Volume 1994 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; 1995 ; Tijdschrift voor Communicatiewetenschap Volume 1995 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; 1996 ; Tijdschrift voor Communicatiewetenschap Volume 1996 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; 1997 ; Tijdschrift voor Communicatiewetenschap Volume 1997 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; 1998 ; Tijdschrift voor Communicatiewetenschap Volume 1998 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; 1999 ; Tijdschrift voor Communicatiewetenschap Volume 1999 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Tijdschrift voor Communicatiewetenschap Volume 2000 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Tijdschrift voor Communicatiewetenschap Volume 2001 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Tijdschrift voor Communicatiewetenschap Volume 2002 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Tijdschrift voor Communicatiewetenschap Volume 2003 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Tijdschrift voor Communicatiewetenschap Volume 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Tijdschrift voor Communicatiewetenschap Volume 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Tijdschrift voor Communicatiewetenschap Volume 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Tijdschrift voor Communicatiewetenschap Volume 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Tijdschrift voor Communicatiewetenschap Volume 2008 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Tijdschrift voor Communicatiewetenschap Volume 2009 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Tijdschrift voor Communicatiewetenschap Volume 2010 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Tijdschrift voor Communicatiewetenschap Volume 2011 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Tijdschrift voor Communicatiewetenschap Volume 2012 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Tijdschrift voor Communicatiewetenschap Volume 2013 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Tijdschrift voor Communicatiewetenschap Volume 2014 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Tijdschrift voor Communicatiewetenschap Volume 2015 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Tijdschrift voor Communicatiewetenschap Volume 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Tijdschrift voor Communicatiewetenschap Volume 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Tijdschrift voor Communicatiewetenschap Volume 2018 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Tijdschrift voor Communicatiewetenschap Volume 2019 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Tijdschrift voor Communicatiewetenschap Volume 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Tijdschrift voor Communicatiewetenschap Volume 2021 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Tijdschrift voor Communicatiewetenschap Volume 2022 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Tijdschrift voor Communicatiewetenschap Volume 2023 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Tijdschrift voor Communicatiewetenschap Volume 2024 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift voor Communicatiewetenschap Volume 2025 ; >
 
   }
 
@@ -1742,63 +1742,63 @@
       #published 1969-2025
       param[journal_id] = communicatie
 
-      au < exists ; exists ; 1969 ; 1969 ; 1969 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1969 ; >
-      au < exists ; exists ; 1970 ; 1970 ; 1970 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1970 ; >
-      au < exists ; exists ; 1971 ; 1971 ; 1971 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1971 ; >
-      au < exists ; exists ; 1972 ; 1972 ; 1972 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1972 ; >
-      au < exists ; exists ; 1973 ; 1973 ; 1973 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1973 ; >
-      au < exists ; exists ; 1974 ; 1974 ; 1974 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1974 ; >
-      au < exists ; exists ; 1975 ; 1975 ; 1975 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1975 ; >
-      au < exists ; exists ; 1976 ; 1976 ; 1976 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1976 ; >
-      au < exists ; exists ; 1977 ; 1977 ; 1977 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1977 ; >
-      au < exists ; exists ; 1978 ; 1978 ; 1978 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1978 ; >
-      au < exists ; exists ; 1979 ; 1979 ; 1979 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1979 ; >
-      au < exists ; exists ; 1980 ; 1980 ; 1980 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1980 ; >
-      au < exists ; exists ; 1981 ; 1981 ; 1981 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1981 ; >
-      au < exists ; exists ; 1982 ; 1982 ; 1982 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1982 ; >
-      au < exists ; exists ; 1983 ; 1983 ; 1983 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1983 ; >
-      au < exists ; exists ; 1984 ; 1984 ; 1984 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1984 ; >
-      au < exists ; exists ; 1985 ; 1985 ; 1985 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1985 ; >
-      au < exists ; exists ; 1986 ; 1986 ; 1986 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1986 ; >
-      au < exists ; exists ; 1987 ; 1987 ; 1987 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1987 ; >
-      au < exists ; exists ; 1988 ; 1988 ; 1988 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1988 ; >
-      au < exists ; exists ; 1989 ; 1989 ; 1989 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1989 ; >
-      au < exists ; exists ; 1990 ; 1990 ; 1990 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1990 ; >
-      au < exists ; exists ; 1991 ; 1991 ; 1991 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1991 ; >
-      au < exists ; exists ; 1992 ; 1992 ; 1992 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1992 ; >
-      au < exists ; exists ; 1993 ; 1993 ; 1993 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1993 ; >
-      au < exists ; exists ; 1994 ; 1994 ; 1994 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1994 ; >
-      au < exists ; exists ; 1995 ; 1995 ; 1995 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1995 ; >
-      au < exists ; exists ; 1996 ; 1996 ; 1996 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1996 ; >
-      au < exists ; exists ; 1997 ; 1997 ; 1997 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1997 ; >
-      au < exists ; exists ; 1998 ; 1998 ; 1998 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1998 ; >
-      au < exists ; exists ; 1999 ; 1999 ; 1999 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1999 ; >
-      au < exists ; exists ; 2000 ; 2000 ; 2000 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2000 ; >
-      au < exists ; exists ; 2001 ; 2001 ; 2001 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2001 ; >
-      au < exists ; exists ; 2002 ; 2002 ; 2002 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2002 ; >
-      au < exists ; exists ; 2003 ; 2003 ; 2003 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2003 ; >
-      au < exists ; exists ; 2004 ; 2004 ; 2004 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2004 ; >
-      au < exists ; exists ; 2005 ; 2005 ; 2005 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2005 ; >
-      au < exists ; exists ; 2006 ; 2006 ; 2006 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2006 ; >
-      au < exists ; exists ; 2007 ; 2007 ; 2007 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2007 ; >
-      au < exists ; exists ; 2008 ; 2008 ; 2008 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2008 ; >
-      au < exists ; exists ; 2009 ; 2009 ; 2009 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2009 ; >
-      au < exists ; exists ; 2010 ; 2010 ; 2010 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2010 ; >
-      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2011 ; >
-      au < exists ; exists ; 2012 ; 2012 ; 2012 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2012 ; >
-      au < exists ; exists ; 2013 ; 2013 ; 2013 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2013 ; >
-      au < exists ; exists ; 2014 ; 2014 ; 2014 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2014 ; >
-      au < exists ; exists ; 2015 ; 2015 ; 2015 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2015 ; >
-      au < exists ; exists ; 2016 ; 2016 ; 2016 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2016 ; >
-      au < exists ; exists ; 2017 ; 2017 ; 2017 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2017 ; >
-      au < exists ; exists ; 2018 ; 2018 ; 2018 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2018 ; >
-      au < exists ; exists ; 2019 ; 2019 ; 2019 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2019 ; >
-      au < exists ; exists ; 2020 ; 2020 ; 2020 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2020 ; >
-      au < exists ; exists ; 2021 ; 2021 ; 2021 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2021 ; >
-      au < exists ; exists ; 2022 ; 2022 ; 2022 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2022 ; >
-      au < exists ; exists ; 2023 ; 2023 ; 2023 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2023 ; >
-      au < exists ; exists ; 2024 ; 2024 ; 2024 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2024 ; >
-      au < expected ; exists ; 2025 ; 2025 ; 2025 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2025 ; >
+      au < manifest ; exists ; 1969 ; 1969 ; 1969 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1969 ; >
+      au < manifest ; exists ; 1970 ; 1970 ; 1970 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1970 ; >
+      au < manifest ; exists ; 1971 ; 1971 ; 1971 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1971 ; >
+      au < manifest ; exists ; 1972 ; 1972 ; 1972 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1972 ; >
+      au < manifest ; exists ; 1973 ; 1973 ; 1973 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1973 ; >
+      au < manifest ; exists ; 1974 ; 1974 ; 1974 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1974 ; >
+      au < manifest ; exists ; 1975 ; 1975 ; 1975 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1975 ; >
+      au < manifest ; exists ; 1976 ; 1976 ; 1976 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1976 ; >
+      au < manifest ; exists ; 1977 ; 1977 ; 1977 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1977 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; 1978 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1978 ; >
+      au < manifest ; exists ; 1979 ; 1979 ; 1979 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1979 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; 1980 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1980 ; >
+      au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1981 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1982 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; 1983 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1983 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1984 ; >
+      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1985 ; >
+      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1986 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1987 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1988 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1989 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; 1990 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1990 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; 1991 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1991 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; 1992 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1992 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; 1993 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1993 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; 1994 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1994 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; 1995 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1995 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; 1996 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1996 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; 1997 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1997 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; 1998 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1998 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; 1999 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1999 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2000 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2001 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2002 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2003 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2008 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2009 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2010 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2011 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2012 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2013 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2014 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2015 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2018 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2019 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2021 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2022 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2023 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2024 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2025 ; >
 
   }
 
