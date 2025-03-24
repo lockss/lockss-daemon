@@ -65,7 +65,9 @@ public class AnuHtmlMetadataExtractorFactory
   static Logger log = Logger.getLogger(AnuHtmlMetadataExtractorFactory.class);
 
   static final String CHP_TITLE = "h1.Chapter-Title";
+  static final String ART_TITLE = "h1.Article-Title";
   static final String CHP_AUTHOR = "p.Chapter-Author";
+  static final String ART_AUTHOR = "p.Article-Author";
   static final String REV_TITLE = "h1.Review-Title";
   static final String REV_AUTHOR = "p.Review-Author";
 
@@ -91,10 +93,13 @@ public class AnuHtmlMetadataExtractorFactory
     // Map HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
     static {
+      tagMap.put(ART_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put(CHP_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put(REV_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put(ART_AUTHOR, MetadataField.FIELD_AUTHOR);
       tagMap.put(CHP_AUTHOR, MetadataField.FIELD_AUTHOR);
       tagMap.put(REV_AUTHOR, MetadataField.FIELD_AUTHOR);
-      tagMap.put(REV_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
+      
     }
 
     @Override
