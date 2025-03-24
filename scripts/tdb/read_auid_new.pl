@@ -708,11 +708,11 @@ while (my $line = <>) {
       }
       sleep(5);
 
-#Needs: tdbout -EXt auidplus tdb/clockssingest/ubiquity_press.ubiquity.2025.tdb | grep Clockss | sed s'/@@@NONDEF@@@/\&/'
+# See instead the OJS3 MPC
 #  } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
 #      ####start url only
 #      $url = sprintf("%slockss/year/%d/",
-#          $param{base_url}, $param{year});
+#          $param{base_url2}, $param{year});
 #      $man_url = uri_unescape($url);
 #      my $req = HTTP::Request->new(GET, $man_url);
 #      my $resp = $ua->request($req);
@@ -747,7 +747,7 @@ while (my $line = <>) {
 #          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
 #      }
 #      sleep(5);
-
+#
   } elsif ($plugin eq "UbiquityPartnerNetworkBooksPlugin" ||
            $plugin eq "ClockssUbiquityPartnerNetworkBooksPlugin") {
     $url = sprintf("%ssite/books/%s/",
@@ -1209,8 +1209,9 @@ while (my $line = <>) {
         sleep(4); 
 
 # thin child of ClockssOJS2 but with a different start_url and no permission_url
-  } elsif ($plugin eq "ClockssJidcOJS2Plugin" || $plugin eq "ClockssOjs3Plugin") {
-#  } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
+  } elsif ($plugin eq "ClockssJidcOJS2Plugin" || 
+           $plugin eq "ClockssOjs3Plugin" || 
+           $plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
     #OJS3 allows an attr to define variants for location of manifest
     #print $param{base_url};
         if ($param{base_url} =~ m/scholarworks/) {
