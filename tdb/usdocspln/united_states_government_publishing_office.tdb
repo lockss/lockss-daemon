@@ -308,6 +308,8 @@
 
     au < released ; 2023 ; Additional Government Publications and Archives 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Additional Government Publications and Archives 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; GPO 2025 ; 2025 ; https://www.govinfo.gov/ >
+
   }
 
   {
@@ -1201,14 +1203,14 @@
     au < released ; 2016 ; LSA 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; LSA 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; LSA 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; LSA 2024 ; 2024 ; https://www.govinfo.gov/ >
 
     au < released ; 2019 ; List of CFR Sections Affected 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; List of CFR Sections Affected 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; List of CFR Sections Affected 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; List of CFR Sections Affected 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; List of CFR Sections Affected 2023 ; 2023 ; https://www.govinfo.gov/ >
-
+    au < released ; 2024 ; LSA 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; LSA 2025 ; 2025 ; https://www.govinfo.gov/ >
   }
 
   {
@@ -1340,6 +1342,7 @@
     au < down ; 2014 ; Senate Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Senate Manual 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Senate Manual 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < manifest ; 2024 ; SMAN 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
