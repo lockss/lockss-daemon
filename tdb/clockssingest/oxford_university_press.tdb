@@ -2162,7 +2162,7 @@
     au < manifest ; exists ; 2014 ; 2014 ; British Journal of Dermatology Volume 170-171 ; 170-171 ; >
     au < manifest ; exists ; 2015 ; 2015 ; British Journal of Dermatology Volume 172-173 ; 172-173 ; >
     au < testing ; exists ; 2016 ; 2016 ; British Journal of Dermatology Volume 174-175 ; 174-175 ; >
-    au < ready ; exists ; 2017 ; 2017 ; British Journal of Dermatology Volume 176-177 ; 176-177 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; British Journal of Dermatology Volume 176-177 ; 176-177 ; >
     au < ready ; exists ; 2018 ; 2018 ; British Journal of Dermatology Volume 178-179 ; 178-179 ; >
     au < testing ; exists ; 2019 ; 2019 ; British Journal of Dermatology Volume 180-181 ; 180-181 ; >
     au < crawling ; exists ; 2020 ; 2020 ; British Journal of Dermatology Volume 182-183 ; 182-183 ; >
@@ -6039,9 +6039,9 @@
     au < manifest ; exists ; 2014 ; 2014 ; European Journal of Endocrinology Volume 170-171 ; 170-171 ; >
     au < manifest ; exists ; 2015 ; 2015 ; European Journal of Endocrinology Volume 172-173 ; 172-173 ; >
     au < testing ; exists ; 2016 ; 2016 ; European Journal of Endocrinology Volume 174-175 ; 174-175 ; >
-    au < ready ; exists ; 2017 ; 2017 ; European Journal of Endocrinology Volume 176-177 ; 176-177 ; >
-    au < ready ; exists ; 2018 ; 2018 ; European Journal of Endocrinology Volume 178-179 ; 178-179 ; >
-    au < ready ; exists ; 2019 ; 2019 ; European Journal of Endocrinology Volume 180-181 ; 180-181 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; European Journal of Endocrinology Volume 176-177 ; 176-177 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; European Journal of Endocrinology Volume 178-179 ; 178-179 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; European Journal of Endocrinology Volume 180-181 ; 180-181 ; >
     au < crawling ; exists ; 2020 ; 2020 ; European Journal of Endocrinology Volume 182-183 ; 182-183 ; >
     au < crawling ; exists ; 2021 ; 2021 ; European Journal of Endocrinology Volume 184-185 ; 184-185 ; >
     au < finished ; manifest ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186-187 ; 186-187 ; reingest2.clockss.org:8085 >
@@ -6444,9 +6444,9 @@
     au < manifest ; exists ; 2014 ; 2014 ; Evolution Volume 68 ; 68 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Evolution Volume 69 ; 69 ; >
     au < testing ; exists ; 2016 ; 2016 ; Evolution Volume 70 ; 70 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Evolution Volume 71 ; 71 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Evolution Volume 72 ; 72 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Evolution Volume 73 ; 73 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Evolution Volume 71 ; 71 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Evolution Volume 72 ; 72 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Evolution Volume 73 ; 73 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Evolution Volume 74 ; 74 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Evolution Volume 75 ; 75 ; >
     au < finished ; manifest ; 2022 ; 2022 ; Evolution Volume 76 ; 76 ; reingest3.clockss.org:8083 >
@@ -12298,8 +12298,8 @@
     au < manifest ; exists ; 2015 ; 2015 ; Journal of Leukocyte Biology Volume 105 ; 105 ; >
     au < testing ; exists ; 2016 ; 2016 ; Journal of Leukocyte Biology Volume 106 ; 106 ; >
     au < testing ; exists ; 2017 ; 2017 ; Journal of Leukocyte Biology Volume 107 ; 107 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Journal of Leukocyte Biology Volume 108 ; 108 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of Leukocyte Biology Volume 109 ; 109 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Journal of Leukocyte Biology Volume 108 ; 108 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Leukocyte Biology Volume 109 ; 109 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Journal of Leukocyte Biology Volume 110 ; 110 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Leukocyte Biology Volume 111 ; 111 ; >
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Leukocyte Biology Volume 112 ; 112 ; reingest3.clockss.org:8083 >
