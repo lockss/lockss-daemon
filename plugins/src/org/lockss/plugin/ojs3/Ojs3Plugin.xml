@@ -140,7 +140,7 @@ POSSIBILITY OF SUCH DAMAGE.
         -->
       <string>1,"^(%s|%s)html/", to_http(base_url),to_https(base_url)</string>
       <string>2,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=https?[%%]25", to_http(base_url), to_https(base_url)</string>
-      <string>1,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/", to_http(base_url), to_https(base_url)</string>
+      <string>1,"^https?://%s/plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=.*", base_url_host</string>
     </list>
   </entry>
   <!--  The default. The start_stem attribute is inserted as needed by the crawl seed-->
