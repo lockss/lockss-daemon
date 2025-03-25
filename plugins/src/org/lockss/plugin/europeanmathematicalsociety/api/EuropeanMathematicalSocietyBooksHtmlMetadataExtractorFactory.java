@@ -40,6 +40,12 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
 import java.io.IOException;
+import java.io.InputStream;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 /*
   https://ems.press/books/elm/232
@@ -95,7 +101,85 @@ public class EuropeanMathematicalSocietyBooksHtmlMetadataExtractorFactory implem
       am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
 
       am.cook(tagMap);
+
+      String htmlSourceDoi = null;
+
+      htmlSourceDoi = getDoiFromHtmlSource(cu, am);
+        if (htmlSourceDoi != null) {
+          am.put(MetadataField.FIELD_DOI, htmlSourceDoi);
+        }
       return am;
+    }
+
+    private String getDoiFromHtmlSource(CachedUrl cu, ArticleMetadata am)
+    {
+
+      InputStream in = cu.getUnfilteredInputStream();
+      if (in != null) {
+        try {
+          String doi = null;
+          doi = getDoi(in, cu.getEncoding(), cu.getUrl());
+          in.close();
+
+          log.debug3("Html Doi:" + doi);
+
+          return doi;
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+      }
+      return null;
+    }
+
+
+    /*
+    https://ems.press/books/elm/232
+
+    <aside class="jsx-1279956873 jsx-1604905398 metadata-box">
+            <h2 class="jsx-1279956873 jsx-1604905398">Dates</h2>
+            <dl class="jsx-1279956873 jsx-1604905398">
+            <dt class="jsx-1279956873 jsx-1604905398">Published</dt>
+            <dd class="jsx-1279956873 jsx-1604905398">19 April 2022</dd>
+            </dl>
+            <h2 class="jsx-1279956873 jsx-1604905398">Identifiers</h2>
+            <dl class="jsx-1279956873 jsx-1604905398">
+            <dt class="jsx-1279956873 jsx-1604905398">DOI</dt>
+            <dd class="jsx-1279956873 jsx-1604905398"><a href="https://doi.org/10.4171/elm/34" class="jsx-1279956873 jsx-1604905398">10.4171/ELM/34</a></dd>
+            <dt class="jsx-1279956873 jsx-1604905398">ISBN print</dt>
+            <dd class="jsx-1279956873 jsx-1604905398">978-3-98547-014-3</dd>
+            <dt class="jsx-1279956873 jsx-1604905398">ISBN digital</dt>
+            <dd class="jsx-1279956873 jsx-1604905398">978-3-98547-514-8</dd>
+            </dl>
+            <h2 class="jsx-1279956873 jsx-1604905398">Print</h2>
+            <p class="jsx-1279956873 jsx-1604905398">Softcover, 230 pages, 17cm x 24cm</p>
+            <p class="jsx-1279956873 jsx-1604905398 copyright">© EMS Press</p>
+    </aside>
+
+   */
+    protected String getDoi(InputStream in, String encoding, String url) {
+
+      String doi = null;
+      try {
+        Document doc = Jsoup.parse(in, encoding, url);
+
+        Elements dts = doc.select("dt");
+        for (Element dt : dts) {
+          if (dt.text().equalsIgnoreCase("DOI")) {
+            Element dd = dt.nextElementSibling();
+            if (dd != null) {
+              Element a = dd.selectFirst("a");
+              if (a != null) {
+                doi = a.text().trim();
+                log.debug3("Extracted DOI: " + doi);
+              }
+            }
+          }
+        }
+        return doi;
+      } catch (IOException e) {
+        log.debug3("No doi extracted from html source", e);
+        return null;
+      }
     }
   }
 }
