@@ -1223,6 +1223,7 @@ while (my $line = <>) {
         } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
             $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
             $param{base_url2}, $param{journal_id}, $param{year});
+            $auid_long =~ s/&base_url2~http.*//;
         } else {
           #default behavior
           $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
