@@ -52,6 +52,8 @@ public class ResilienceAllianceMetadataExtractorFactory implements FileMetadataE
             tagMap.put("citation_author", MetadataField.FIELD_AUTHOR);
             tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
             tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
+            //Add this one on purpose, since it is spelled wrong by the publisher
+            tagMap.put("citaton_title", MetadataField.FIELD_ARTICLE_TITLE);
             tagMap.put("citation_journal_title", MetadataField. FIELD_PUBLICATION_TITLE);
             tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
             tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
