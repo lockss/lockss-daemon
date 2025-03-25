@@ -8,6 +8,7 @@
   #before 2019 AUs were released with other plugin
   #this tdb file is 2019+; as well as some previous AUs that weren't released previously. To update use script scripts/tdb/check_usdocs_manifest_pages.sh
   #Release all content in this tdb file, then release back content starting 6/1/2019.
+  #Keepers report is alphabetical order of name of volume
   
   #STATUSES. These statuses are asperational. The file is not necessarily accurate.
   # notReady. AU has a complete manifest page, tested and could not pass.
@@ -308,7 +309,7 @@
 
     au < released ; 2023 ; Additional Government Publications and Archives 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Additional Government Publications and Archives 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; GPO 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; Additional Government Publications and Archives 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -325,12 +326,11 @@
     au < released ; 2016 ; Budget of the United States Government 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Budget of the United States Government 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Budget of the United States Government 2018 ; 2018 ; https://www.govinfo.gov/ >
-
-    au < released ; 2019 ; Budget of the United States Government of the United States Government 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < released ; 2020 ; Budget of the United States Government of the United States Government 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < released ; 2021 ; Budget of the United States Government of the United States Government 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < released ; 2022 ; Budget of the United States Government of the United States Government 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; Budget of the United States Government of the United States Government 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2019 ; Budget of the United States Government 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < released ; 2020 ; Budget of the United States Government 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < released ; 2021 ; Budget of the United States Government 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < released ; 2022 ; Budget of the United States Government 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Budget of the United States Government 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Budget of the United States Government 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
@@ -354,16 +354,13 @@
 
     param[collection_id] = CFR
 
-
+    au < down ; 1807 ; Code of Federal Regulations 1807 ; 1807 ; https://www.govinfo.gov/ > #no substance
     au < released ; 2010 ; Code of Federal Regulations 2010 ; 2010 ; https://www.govinfo.gov/ >
     au < released ; 2011 ; Code of Federal Regulations 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < released ; 2012 ; Code of Federal Regulations 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; Code of Federal Regulations 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < released ; 2015 ; Code of Federal Regulations 2015 ; 2015 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; Code of Federal Regulations 2024 ; 2024 ; https://www.govinfo.gov/ >
-
-    au < down ; 1807 ; Code of Federal Regulations 1807 ; 1807 ; https://www.govinfo.gov/ > #no substance
     au < released ; 2014 ; Code of Federal Regulations 2014 ; 2014 ; https://www.govinfo.gov/ >
+    au < released ; 2015 ; Code of Federal Regulations 2015 ; 2015 ; https://www.govinfo.gov/ >
     au < released ; 2016 ; Code of Federal Regulations 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Code of Federal Regulations 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Code of Federal Regulations 2018 ; 2018 ; https://www.govinfo.gov/ >
@@ -372,6 +369,7 @@
     au < released ; 2021 ; Code of Federal Regulations 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Code of Federal Regulations 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Code of Federal Regulations 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Code of Federal Regulations 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -632,16 +630,16 @@
 
     param[collection_id] = CDOC
 
-    au < released ; 1986 ; CDOC 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < released ; 2018 ; CDOC 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < released ; 1986 ; Congressional Documents 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; Congressional Documents 2018 ; 2018 ; https://www.govinfo.gov/ >
 
     au < released ; 2019 ; Congressional Documents 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Documents 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Congressional Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Documents 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; CDOC 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; CDOC 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; CDOC 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Congressional Documents 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Congressional Documents 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; Congressional Documents 2025 ; 2025 ; https://www.govinfo.gov/ >
 
 
   }
@@ -654,12 +652,12 @@
 
     param[collection_id] = CHRG
 
-    au < released ; 1936 ; CHRG 1936 ; 1936 ; https://www.govinfo.gov/ >
-    au < released ; 1949 ; CHRG 1949 ; 1949 ; https://www.govinfo.gov/ >
-    au < released ; 1950 ; CHRG 1950 ; 1950 ; https://www.govinfo.gov/ >
-    au < released ; 1952 ; CHRG 1952 ; 1952 ; https://www.govinfo.gov/ >
-    au < released ; 1957 ; CHRG 1957 ; 1957 ; https://www.govinfo.gov/ >
-    au < released ; 1991 ; CHRG 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < released ; 1936 ; Congressional Hearings 1936 ; 1936 ; https://www.govinfo.gov/ >
+    au < released ; 1949 ; Congressional Hearings 1949 ; 1949 ; https://www.govinfo.gov/ >
+    au < released ; 1950 ; Congressional Hearings 1950 ; 1950 ; https://www.govinfo.gov/ >
+    au < released ; 1952 ; Congressional Hearings 1952 ; 1952 ; https://www.govinfo.gov/ >
+    au < released ; 1957 ; Congressional Hearings 1957 ; 1957 ; https://www.govinfo.gov/ >
+    au < released ; 1991 ; Congressional Hearings 1991 ; 1991 ; https://www.govinfo.gov/ >
 
     au < down ; 1933 ; Congressional Hearings 1933 ; 1933 ; https://www.govinfo.gov/ > #no substance
     au < down ; 1934 ; Congressional Hearings 1934 ; 1934 ; https://www.govinfo.gov/ > #no substance
@@ -746,16 +744,16 @@
     param[collection_id] = CREC
 
 
-    au < manifest ; 1994 ; CREC 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < released ; 2013 ; CREC 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < released ; 2017 ; CREC 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < manifest ; 1994 ; Congressional Record 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < released ; 2013 ; Congressional Record 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; Congressional Record 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Record 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Record 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Congressional Record 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Record 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; CREC 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; CREC 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; CREC 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Congressional Record 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Congressional Record 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; Congressional Record 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -793,7 +791,7 @@
     au < released ; 2018 ; Congressional Record (Bound) 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Record (Bound) 2020 ; 2020 ; https://www.govinfo.gov/ >
 
-    au < released ; 2006 ; CRECB 2006 ; 2006 ; https://www.govinfo.gov/ >
+    au < released ; 2006 ; Congressional Record (Bound) 2006 ; 2006 ; https://www.govinfo.gov/ >
     }
   }
 
@@ -911,9 +909,9 @@
     au < released ; 2020 ; Statute Compilations 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Statute Compilations 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Statute Compilations 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; COMPS 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; COMPS 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; COMPS 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Statute Compilations 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Statute Compilations 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; Statute Compilations 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -933,9 +931,9 @@
     au < released ; 2020 ; Congressional Record Index 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Congressional Record Index 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Record Index 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; CRI 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; CRI 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; CRI 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Congressional Record Index 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Congressional Record Index 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; Congressional Record Index 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -948,17 +946,17 @@
     param[collection_id] = CRPT
 
 
+
+    au < released ; 2016 ; Congressional Reports 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; Congressional Reports 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; Congressional Reports 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Reports 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Reports 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Congressional Reports 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Reports 2022 ; 2022 ; https://www.govinfo.gov/ >
-
-    au < released ; 2016 ; CRPT 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < released ; 2017 ; CRPT 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < released ; 2018 ; CRPT 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; CRPT 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; CRPT 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; CRPT 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Congressional Reports 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Congressional Reports 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; Congressional Reports 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -970,17 +968,15 @@
 
     param[collection_id] = DCPD
 
-
+    au < released ; 2016 ; Daily Compilation of Presidential Documents 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Daily Compilation of Presidential Documents 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Daily Compilation of Presidential Documents 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Daily Compilation of Presidential Documents 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Daily Compilation of Presidential Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Daily Compilation of Presidential Documents 2022 ; 2022 ; https://www.govinfo.gov/ >
-
-    au < released ; 2016 ; DCPD 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; DCPD 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; DCPD 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; DCPD 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Daily Compilation of Presidential Documents 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Daily Compilation of Presidential Documents 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; Daily Compilation of Presidential Documents 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1013,18 +1009,16 @@
 
     param[collection_id] = ERP
 
-
+    au < released ; 2016 ; Economic Report of the President 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; Economic Report of the President 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; Economic Report of the President 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Economic Report of the President 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Economic Report of the President 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Economic Report of the President 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Economic Report of the President 2022 ; 2022 ; https://www.govinfo.gov/ >
-
-    au < released ; 2016 ; ERP 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < released ; 2017 ; ERP 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < released ; 2018 ; ERP 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; ERP 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; ERP 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; ERP 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Economic Report of the President 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Economic Report of the President 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; Economic Report of the President 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1109,17 +1103,17 @@
     au < released ; 1991 ; Federal Register 1991 ; 1991 ; https://www.govinfo.gov/ >
     au < released ; 1992 ; Federal Register 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < released ; 1993 ; Federal Register 1993 ; 1993 ; https://www.govinfo.gov/ >
+
+    au < released ; 2016 ; Federal Register 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; Federal Register 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; Federal Register 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Federal Register 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Federal Register 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Federal Register 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Federal Register 2022 ; 2022 ; https://www.govinfo.gov/ >
-
-    au < released ; 2016 ; FR 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < released ; 2017 ; FR 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < released ; 2018 ; FR 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; FR 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; FR 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; FR 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Federal Register 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Federal Register 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; Federal Register 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1146,16 +1140,16 @@
 
     param[collection_id] = HOB
 
-    au < released ; 2016 ; HOB 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < released ; 2017 ; HOB 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < released ; 2018 ; HOB 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < released ; 2016 ; History of Bills 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; History of Bills 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; History of Bills 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; History of Bills 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; History of Bills 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; History of Bills 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; History of Bills 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; History of Bills 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; HOB 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; HOB 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; History of Bills 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; History of Bills 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1177,8 +1171,8 @@
     au < doesNotExist ; 2018 ; House Rules and Manual 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; House Rules and Manual 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; House Rules and Manual 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < released ; 2013 ; HMAN 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; HMAN 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2013 ; House Rules and Manual 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; House Rules and Manual 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1200,17 +1194,17 @@
 
     param[collection_id] = LSA
 
-    au < released ; 2016 ; LSA 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < released ; 2017 ; LSA 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < released ; 2018 ; LSA 2018 ; 2018 ; https://www.govinfo.gov/ >
 
+    au < released ; 2016 ; List of CFR Sections Affected 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; List of CFR Sections Affected 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; List of CFR Sections Affected 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; List of CFR Sections Affected 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; List of CFR Sections Affected 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; List of CFR Sections Affected 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; List of CFR Sections Affected 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; List of CFR Sections Affected 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < released ; 2024 ; LSA 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; LSA 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; List of CFR Sections Affected 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; List of CFR Sections Affected 2025 ; 2025 ; https://www.govinfo.gov/ >
   }
 
   {
@@ -1431,10 +1425,6 @@
     au < released ; 1941 ; U.S. Congressional Serial Set 1941 ; 1941 ; https://www.govinfo.gov/ >
     au < released ; 1951 ; U.S. Congressional Serial Set 1951 ; 1951 ; https://www.govinfo.gov/ >
     au < released ; 1952 ; U.S. Congressional Serial Set 1952 ; 1952 ; https://www.govinfo.gov/ >
-    au < released ; 1976 ; U.S. Congressional Serial Set 1976 ; 1976 ; https://www.govinfo.gov/ >
-    au < released ; 1977 ; U.S. Congressional Serial Set 1977 ; 1977 ; https://www.govinfo.gov/ >
-    au < released ; 1978 ; U.S. Congressional Serial Set 1978 ; 1978 ; https://www.govinfo.gov/ >
-    au < released ; 1980 ; U.S. Congressional Serial Set 1980 ; 1980 ; https://www.govinfo.gov/ >
 
 
     au < released ; 1817 ; U.S. Congressional Serial Set 1817 ; 1817 ; https://www.govinfo.gov/ >
@@ -1531,7 +1521,11 @@
     au < released ; 1973 ; U.S. Congressional Serial Set 1973 ; 1973 ; https://www.govinfo.gov/ >
     au < released ; 1974 ; U.S. Congressional Serial Set 1974 ; 1974 ; https://www.govinfo.gov/ >
     au < released ; 1975 ; U.S. Congressional Serial Set 1975 ; 1975 ; https://www.govinfo.gov/ >
+    au < released ; 1976 ; U.S. Congressional Serial Set 1976 ; 1976 ; https://www.govinfo.gov/ >
+    au < released ; 1977 ; U.S. Congressional Serial Set 1977 ; 1977 ; https://www.govinfo.gov/ >
+    au < released ; 1978 ; U.S. Congressional Serial Set 1978 ; 1978 ; https://www.govinfo.gov/ >
     au < released ; 1979 ; U.S. Congressional Serial Set 1979 ; 1979 ; https://www.govinfo.gov/ >
+    au < released ; 1980 ; U.S. Congressional Serial Set 1980 ; 1980 ; https://www.govinfo.gov/ >
     au < released ; 1981 ; U.S. Congressional Serial Set 1981 ; 1981 ; https://www.govinfo.gov/ >
     au < released ; 1982 ; U.S. Congressional Serial Set 1982 ; 1982 ; https://www.govinfo.gov/ >
     au < released ; 1983 ; U.S. Congressional Serial Set 1983 ; 1983 ; https://www.govinfo.gov/ >
@@ -1556,7 +1550,7 @@
     #Published 1994-2017
     param[collection_id] = USCODE
 
-    au < released ; 2011 ; USCODE 2011 ; 2011 ; https://www.govinfo.gov/ >
+    au < released ; 2011 ; United States Code 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2012 ; United States Code 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2013 ; United States Code 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2014 ; United States Code 2014 ; 2014 ; https://www.govinfo.gov/ >
@@ -1567,9 +1561,8 @@
     au < released ; 2019 ; United States Code 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; United States Code 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; United States Code 2021 ; 2021 ; https://www.govinfo.gov/ >
-
-    au < released ; 2022 ; USCODE 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < released ; 2023 ; USCODE 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2022 ; United States Code 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; United States Code 2023 ; 2023 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1630,69 +1623,68 @@
     param[collection_id] = STATUTE
 
 
-    au < released ; 1845 ; STATUTE 1845 ; 1845 ; https://www.govinfo.gov/ >
-    au < released ; 1851 ; STATUTE 1851 ; 1851 ; https://www.govinfo.gov/ >
-    au < released ; 1855 ; STATUTE 1855 ; 1855 ; https://www.govinfo.gov/ >
-    au < released ; 1859 ; STATUTE 1859 ; 1859 ; https://www.govinfo.gov/ >
-    au < released ; 1863 ; STATUTE 1863 ; 1863 ; https://www.govinfo.gov/ >
-    au < released ; 1865 ; STATUTE 1865 ; 1865 ; https://www.govinfo.gov/ >
-    au < released ; 1867 ; STATUTE 1867 ; 1867 ; https://www.govinfo.gov/ >
-    au < released ; 1868 ; STATUTE 1868 ; 1868 ; https://www.govinfo.gov/ >
-    au < released ; 1871 ; STATUTE 1871 ; 1871 ; https://www.govinfo.gov/ >
-    au < released ; 1873 ; STATUTE 1873 ; 1873 ; https://www.govinfo.gov/ >
-    au < released ; 1874 ; STATUTE 1874 ; 1874 ; https://www.govinfo.gov/ >
-    au < released ; 1877 ; STATUTE 1877 ; 1877 ; https://www.govinfo.gov/ >
-    au < released ; 1879 ; STATUTE 1879 ; 1879 ; https://www.govinfo.gov/ >
-    au < released ; 1881 ; STATUTE 1881 ; 1881 ; https://www.govinfo.gov/ >
-    au < released ; 1883 ; STATUTE 1883 ; 1883 ; https://www.govinfo.gov/ >
-    au < released ; 1885 ; STATUTE 1885 ; 1885 ; https://www.govinfo.gov/ >
-    au < released ; 1887 ; STATUTE 1887 ; 1887 ; https://www.govinfo.gov/ >
-    au < released ; 1889 ; STATUTE 1889 ; 1889 ; https://www.govinfo.gov/ >
-    au < released ; 1891 ; STATUTE 1891 ; 1891 ; https://www.govinfo.gov/ >
-    au < released ; 1893 ; STATUTE 1893 ; 1893 ; https://www.govinfo.gov/ >
-    au < released ; 1895 ; STATUTE 1895 ; 1895 ; https://www.govinfo.gov/ >
-    au < released ; 1897 ; STATUTE 1897 ; 1897 ; https://www.govinfo.gov/ >
-    au < released ; 1899 ; STATUTE 1899 ; 1899 ; https://www.govinfo.gov/ >
-    au < released ; 1901 ; STATUTE 1901 ; 1901 ; https://www.govinfo.gov/ >
-    au < released ; 1903 ; STATUTE 1903 ; 1903 ; https://www.govinfo.gov/ >
-    au < released ; 1905 ; STATUTE 1905 ; 1905 ; https://www.govinfo.gov/ >
-    au < released ; 1907 ; STATUTE 1907 ; 1907 ; https://www.govinfo.gov/ >
-    au < released ; 1909 ; STATUTE 1909 ; 1909 ; https://www.govinfo.gov/ >
-    au < released ; 1911 ; STATUTE 1911 ; 1911 ; https://www.govinfo.gov/ >
-    au < released ; 1913 ; STATUTE 1913 ; 1913 ; https://www.govinfo.gov/ >
-    au < released ; 1915 ; STATUTE 1915 ; 1915 ; https://www.govinfo.gov/ >
-    au < released ; 1917 ; STATUTE 1917 ; 1917 ; https://www.govinfo.gov/ >
-    au < released ; 1919 ; STATUTE 1919 ; 1919 ; https://www.govinfo.gov/ >
-    au < released ; 1921 ; STATUTE 1921 ; 1921 ; https://www.govinfo.gov/ >
-    au < released ; 1923 ; STATUTE 1923 ; 1923 ; https://www.govinfo.gov/ >
-    au < released ; 1925 ; STATUTE 1925 ; 1925 ; https://www.govinfo.gov/ >
-    au < released ; 1926 ; STATUTE 1926 ; 1926 ; https://www.govinfo.gov/ >
-    au < released ; 1929 ; STATUTE 1929 ; 1929 ; https://www.govinfo.gov/ >
-    au < released ; 1931 ; STATUTE 1931 ; 1931 ; https://www.govinfo.gov/ >
-    au < released ; 1933 ; STATUTE 1933 ; 1933 ; https://www.govinfo.gov/ >
-    au < released ; 1934 ; STATUTE 1934 ; 1934 ; https://www.govinfo.gov/ >
-    au < released ; 1936 ; STATUTE 1936 ; 1936 ; https://www.govinfo.gov/ >
-    au < released ; 1937 ; STATUTE 1937 ; 1937 ; https://www.govinfo.gov/ >
-    au < released ; 1938 ; STATUTE 1938 ; 1938 ; https://www.govinfo.gov/ >
-    au < released ; 1939 ; STATUTE 1939 ; 1939 ; https://www.govinfo.gov/ >
-    au < released ; 1941 ; STATUTE 1941 ; 1941 ; https://www.govinfo.gov/ >
-    au < released ; 1942 ; STATUTE 1942 ; 1942 ; https://www.govinfo.gov/ >
-    au < released ; 1943 ; STATUTE 1943 ; 1943 ; https://www.govinfo.gov/ >
-    au < released ; 1944 ; STATUTE 1944 ; 1944 ; https://www.govinfo.gov/ >
-    au < released ; 1945 ; STATUTE 1945 ; 1945 ; https://www.govinfo.gov/ >
-    au < released ; 1946 ; STATUTE 1946 ; 1946 ; https://www.govinfo.gov/ >
-    au < released ; 1947 ; STATUTE 1947 ; 1947 ; https://www.govinfo.gov/ >
-    au < released ; 1948 ; STATUTE 1948 ; 1948 ; https://www.govinfo.gov/ >
-    au < released ; 1949 ; STATUTE 1949 ; 1949 ; https://www.govinfo.gov/ >
-
-    au < released ; 2017 ; STATUTE 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < released ; 2018 ; STATUTE 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < released ; 2019 ; STATUTE 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < released ; 1845 ; United States Statutes at Large 1845 ; 1845 ; https://www.govinfo.gov/ >
+    au < released ; 1851 ; United States Statutes at Large 1851 ; 1851 ; https://www.govinfo.gov/ >
+    au < released ; 1855 ; United States Statutes at Large 1855 ; 1855 ; https://www.govinfo.gov/ >
+    au < released ; 1859 ; United States Statutes at Large 1859 ; 1859 ; https://www.govinfo.gov/ >
+    au < released ; 1863 ; United States Statutes at Large 1863 ; 1863 ; https://www.govinfo.gov/ >
+    au < released ; 1865 ; United States Statutes at Large 1865 ; 1865 ; https://www.govinfo.gov/ >
+    au < released ; 1867 ; United States Statutes at Large 1867 ; 1867 ; https://www.govinfo.gov/ >
+    au < released ; 1868 ; United States Statutes at Large 1868 ; 1868 ; https://www.govinfo.gov/ >
+    au < released ; 1871 ; United States Statutes at Large 1871 ; 1871 ; https://www.govinfo.gov/ >
+    au < released ; 1873 ; United States Statutes at Large 1873 ; 1873 ; https://www.govinfo.gov/ >
+    au < released ; 1874 ; United States Statutes at Large 1874 ; 1874 ; https://www.govinfo.gov/ >
+    au < released ; 1877 ; United States Statutes at Large 1877 ; 1877 ; https://www.govinfo.gov/ >
+    au < released ; 1879 ; United States Statutes at Large 1879 ; 1879 ; https://www.govinfo.gov/ >
+    au < released ; 1881 ; United States Statutes at Large 1881 ; 1881 ; https://www.govinfo.gov/ >
+    au < released ; 1883 ; United States Statutes at Large 1883 ; 1883 ; https://www.govinfo.gov/ >
+    au < released ; 1885 ; United States Statutes at Large 1885 ; 1885 ; https://www.govinfo.gov/ >
+    au < released ; 1887 ; United States Statutes at Large 1887 ; 1887 ; https://www.govinfo.gov/ >
+    au < released ; 1889 ; United States Statutes at Large 1889 ; 1889 ; https://www.govinfo.gov/ >
+    au < released ; 1891 ; United States Statutes at Large 1891 ; 1891 ; https://www.govinfo.gov/ >
+    au < released ; 1893 ; United States Statutes at Large 1893 ; 1893 ; https://www.govinfo.gov/ >
+    au < released ; 1895 ; United States Statutes at Large 1895 ; 1895 ; https://www.govinfo.gov/ >
+    au < released ; 1897 ; United States Statutes at Large 1897 ; 1897 ; https://www.govinfo.gov/ >
+    au < released ; 1899 ; United States Statutes at Large 1899 ; 1899 ; https://www.govinfo.gov/ >
+    au < released ; 1901 ; United States Statutes at Large 1901 ; 1901 ; https://www.govinfo.gov/ >
+    au < released ; 1903 ; United States Statutes at Large 1903 ; 1903 ; https://www.govinfo.gov/ >
+    au < released ; 1905 ; United States Statutes at Large 1905 ; 1905 ; https://www.govinfo.gov/ >
+    au < released ; 1907 ; United States Statutes at Large 1907 ; 1907 ; https://www.govinfo.gov/ >
+    au < released ; 1909 ; United States Statutes at Large 1909 ; 1909 ; https://www.govinfo.gov/ >
+    au < released ; 1911 ; United States Statutes at Large 1911 ; 1911 ; https://www.govinfo.gov/ >
+    au < released ; 1913 ; United States Statutes at Large 1913 ; 1913 ; https://www.govinfo.gov/ >
+    au < released ; 1915 ; United States Statutes at Large 1915 ; 1915 ; https://www.govinfo.gov/ >
+    au < released ; 1917 ; United States Statutes at Large 1917 ; 1917 ; https://www.govinfo.gov/ >
+    au < released ; 1919 ; United States Statutes at Large 1919 ; 1919 ; https://www.govinfo.gov/ >
+    au < released ; 1921 ; United States Statutes at Large 1921 ; 1921 ; https://www.govinfo.gov/ >
+    au < released ; 1923 ; United States Statutes at Large 1923 ; 1923 ; https://www.govinfo.gov/ >
+    au < released ; 1925 ; United States Statutes at Large 1925 ; 1925 ; https://www.govinfo.gov/ >
+    au < released ; 1926 ; United States Statutes at Large 1926 ; 1926 ; https://www.govinfo.gov/ >
+    au < released ; 1929 ; United States Statutes at Large 1929 ; 1929 ; https://www.govinfo.gov/ >
+    au < released ; 1931 ; United States Statutes at Large 1931 ; 1931 ; https://www.govinfo.gov/ >
+    au < released ; 1933 ; United States Statutes at Large 1933 ; 1933 ; https://www.govinfo.gov/ >
+    au < released ; 1934 ; United States Statutes at Large 1934 ; 1934 ; https://www.govinfo.gov/ >
+    au < released ; 1936 ; United States Statutes at Large 1936 ; 1936 ; https://www.govinfo.gov/ >
+    au < released ; 1937 ; United States Statutes at Large 1937 ; 1937 ; https://www.govinfo.gov/ >
+    au < released ; 1938 ; United States Statutes at Large 1938 ; 1938 ; https://www.govinfo.gov/ >
+    au < released ; 1939 ; United States Statutes at Large 1939 ; 1939 ; https://www.govinfo.gov/ >
+    au < released ; 1941 ; United States Statutes at Large 1941 ; 1941 ; https://www.govinfo.gov/ >
+    au < released ; 1942 ; United States Statutes at Large 1942 ; 1942 ; https://www.govinfo.gov/ >
+    au < released ; 1943 ; United States Statutes at Large 1943 ; 1943 ; https://www.govinfo.gov/ >
+    au < released ; 1944 ; United States Statutes at Large 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < released ; 1945 ; United States Statutes at Large 1945 ; 1945 ; https://www.govinfo.gov/ >
+    au < released ; 1946 ; United States Statutes at Large 1946 ; 1946 ; https://www.govinfo.gov/ >
+    au < released ; 1947 ; United States Statutes at Large 1947 ; 1947 ; https://www.govinfo.gov/ >
+    au < released ; 1948 ; United States Statutes at Large 1948 ; 1948 ; https://www.govinfo.gov/ >
+    au < released ; 1949 ; United States Statutes at Large 1949 ; 1949 ; https://www.govinfo.gov/ >
 
     au < doNotProcess ; 2012 ; United States Statutes at Large 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; United States Statutes at Large 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2014 ; United States Statutes at Large 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < released ; 2015 ; United States Statutes at Large 2015 ; 2015 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; United States Statutes at Large 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; United States Statutes at Large 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < released ; 2019 ; United States Statutes at Large 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; United States Statutes at Large 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < manifest ; 2021 ; United States Statutes at Large 2021 ; 2021 ; https://www.govinfo.gov/ >
 
