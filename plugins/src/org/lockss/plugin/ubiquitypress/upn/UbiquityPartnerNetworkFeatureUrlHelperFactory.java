@@ -75,24 +75,27 @@ public class UbiquityPartnerNetworkFeatureUrlHelperFactory implements FeatureUrl
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 
             String nextline = null;
-
-            while ((nextline = reader.readLine()) != null) {
+            Collection<String> uUrls = new ArrayList<String>(1);
+            while ((nextline = reader.readLine()) != null && uUrls.isEmpty()) {
               nextline = nextline.trim();
-              log.debug3("The next line in the deceased AUs file is " + nextline.toString());
               //check every line in data file to see if au is a deceased au
               if(nextline.contains(auid)){
-                Collection<String> uUrls = new ArrayList<String>(1);
+                log.debug3("The AUID is in the deceased AUs file and it's " + nextline.toString());
                 baseUrl = au.getConfiguration().get("base_url");
                 year = au.getConfiguration().get("year");
                 String s = baseUrl + "lockss/year/" + year;
                 uUrls.add(s);
                 log.debug3("The start url is " + s);
-                reader.close();
-                return uUrls;
+                break;
               }
             }
             reader.close();
-            return au.getStartUrls();
+            if(uUrls.isEmpty()){
+              log.debug3("uUrls is empty and the start urls are " + au.getStartUrls());
+              return au.getStartUrls();
+            }
+            log.debug3("uUrls is NOT empty and the start urls are " + uUrls);
+            return uUrls;
         }
     }
 }
