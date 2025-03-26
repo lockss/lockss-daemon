@@ -78,82 +78,6 @@
 
   }
 
-  {
-  
-    title <
-      name = Agenda - A Journal of Policy Analysis and Reform ;
-      issn = 1322-1833 ;
-      eissn = 1447-4735
-    >
-    
-    {
-    
-    param[journal_id] = agenda-journal-policy-analysis-and-reform
-
-    au < finished ; finished ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 1995 ; Agenda - A Journal of Policy Analysis and Reform Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 1996 ; Agenda - A Journal of Policy Analysis and Reform Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 1997 ; Agenda - A Journal of Policy Analysis and Reform Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < finished ; finished ; 1998 ; Agenda - A Journal of Policy Analysis and Reform Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < finished ; finished ; 1999 ; Agenda - A Journal of Policy Analysis and Reform Volume 6 ; 6 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2000 ; Agenda - A Journal of Policy Analysis and Reform Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2001 ; Agenda - A Journal of Policy Analysis and Reform Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2002 ; Agenda - A Journal of Policy Analysis and Reform Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < finished ; finished ; 2003 ; Agenda - A Journal of Policy Analysis and Reform Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-    au < finished ; finished ; 2004 ; Agenda - A Journal of Policy Analysis and Reform Volume 11 ; 11 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2005 ; Agenda - A Journal of Policy Analysis and Reform Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-    #mark as superseded once a clean copy is possible using updated plugin
-    au < superseded ; exists ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 [superseded] ; 13 ; > #one PDF is bad on all ingest machines - may not be collectible with journal id change
-    au < finished ; finished ; 2007 ; Agenda - A Journal of Policy Analysis and Reform Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2008 ; Agenda - A Journal of Policy Analysis and Reform Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < finished ; finished ; 2009 ; Agenda - A Journal of Policy Analysis and Reform Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-    au < finished ; finished ; 2010 ; Agenda - A Journal of Policy Analysis and Reform Volume 17 ; 17 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2011 ; Agenda - A Journal of Policy Analysis and Reform Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2012 ; Agenda - A Journal of Policy Analysis and Reform Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2013 ; Agenda - A Journal of Policy Analysis and Reform Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-    au < finished ; finished ; 2014 ; Agenda - A Journal of Policy Analysis and Reform Volume 21 ; 21 ; reingest4.clockss.org:8082 >
-    au < finished ; finished ; 2015 ; Agenda - A Journal of Policy Analysis and Reform Volume 22 ; 22 ; reingest5.clockss.org:8082 >
-    au < finished ; finished ; 2016 ; Agenda - A Journal of Policy Analysis and Reform Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-    au < finished ; finished ; 2017 ; Agenda - A Journal of Policy Analysis and Reform Volume 24 ; 24 ; reingest2.clockss.org:8085 >
-    au < finished ; finished ; 2018 ; Agenda - A Journal of Policy Analysis and Reform Volume 25 ; 25 ; reingest2.clockss.org:8085 >
-    #this version of the journal_id has ceased; see below for continuation
-    }
-     
-    { 
-    
-    #April 2019 - journal id changed as did location of start url
-    #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
-
-    
-    param[journal_id] = agenda
-    
-      #2006 needed recollection in new layout
-      au < crawling ; down ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-      au < finished ; frozen ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; reingest3.clockss.org:8083 >
-      au < finished ; frozen ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; reingest4.clockss.org:8082 >
-
-    }
-  }
-  
-  {
-  
-    title <
-      name = ANU Historical Journal II ;
-      issn = 2652-015X ;
-      eissn = 2652-0281
-    >
-    
-    param[journal_id] = anu-historical-journal
-
-    au < finished ; frozen ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; reingest5.clockss.org:8082 >
-    au < finished ; frozen ; 2022 ; ANU Historical Journal II: Number 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2023 ; ANU Historical Journal II: Number 4 ; 4 ; >
-    au < expected ; exists ; 2024 ; ANU Historical Journal II: Number 5 ; 5 ; >
-    au < expected ; exists ; 2025 ; ANU Historical Journal II: Number 6 ; 6 ; >
-
-  }
   
     {
   
@@ -226,9 +150,8 @@
     au < finished ; finished ; 2019 ; Human Ecology Review: Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Human Ecology Review: Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021-2022 ; Human Ecology Review: Volume 27 ; 27 ;  >
-    au < manifest ; exists ; 2023 ; Human Ecology Review: Volume 28 ; 28 ;  >
-    au < expected ; exists ; 2024 ; Human Ecology Review: Volume 29 ; 29 ;  >
-    au < expected ; exists ; 2025 ; Human Ecology Review: Volume 30 ; 30 ;  >
+    au < manifest ; exists ; 2024 ; Human Ecology Review: Volume 28 ; 28 ;  >
+    au < expected ; exists ; 2025 ; Human Ecology Review: Volume 29 ; 29 ;  >
 
   }
 
@@ -268,10 +191,9 @@
 
     au < finished ; finished ; 2020 ; Lilith: A Feminist History Journal Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Lilith: A Feminist History Journal Volume 27 ; 27 ; reingest3.clockss.org:8083 >
-    au < notReady ; exists ; 2022 ; Lilith: A Feminist History Journal Volume 28 ; 28 ; > #manifest page checker finds a volume that does not exist.
+    au < exists ; exists ; 2022 ; Lilith: A Feminist History Journal Volume 28 ; 28 ; > #manifest page checker finds a volume that does not exist.
     au < manifest ; exists ; 2023 ; Lilith: A Feminist History Journal Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2024 ; Lilith: A Feminist History Journal Volume 30 ; 30 ; >
-    au < expected ; exists ; 2025 ; Lilith: A Feminist History Journal Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2025 ; Lilith: A Feminist History Journal Volume 30 ; 30 ; >
 
   }
 
@@ -302,6 +224,81 @@
 ## CEASED ######################
 ################################
 
+  {
+  
+    title <
+      name = Agenda - A Journal of Policy Analysis and Reform ;
+      issn = 1322-1833 ;
+      eissn = 1447-4735
+    >
+    
+    {
+    
+    param[journal_id] = agenda-journal-policy-analysis-and-reform
+
+    au < finished ; finished ; 1994 ; Agenda - A Journal of Policy Analysis and Reform Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 1995 ; Agenda - A Journal of Policy Analysis and Reform Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 1996 ; Agenda - A Journal of Policy Analysis and Reform Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 1997 ; Agenda - A Journal of Policy Analysis and Reform Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 1998 ; Agenda - A Journal of Policy Analysis and Reform Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 1999 ; Agenda - A Journal of Policy Analysis and Reform Volume 6 ; 6 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2000 ; Agenda - A Journal of Policy Analysis and Reform Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2001 ; Agenda - A Journal of Policy Analysis and Reform Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2002 ; Agenda - A Journal of Policy Analysis and Reform Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2003 ; Agenda - A Journal of Policy Analysis and Reform Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2004 ; Agenda - A Journal of Policy Analysis and Reform Volume 11 ; 11 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2005 ; Agenda - A Journal of Policy Analysis and Reform Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    #mark as superseded once a clean copy is possible using updated plugin
+    au < superseded ; exists ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 [superseded] ; 13 ; > #one PDF is bad on all ingest machines - may not be collectible with journal id change
+    au < finished ; finished ; 2007 ; Agenda - A Journal of Policy Analysis and Reform Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2008 ; Agenda - A Journal of Policy Analysis and Reform Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2009 ; Agenda - A Journal of Policy Analysis and Reform Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2010 ; Agenda - A Journal of Policy Analysis and Reform Volume 17 ; 17 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2011 ; Agenda - A Journal of Policy Analysis and Reform Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2012 ; Agenda - A Journal of Policy Analysis and Reform Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2013 ; Agenda - A Journal of Policy Analysis and Reform Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < finished ; finished ; 2014 ; Agenda - A Journal of Policy Analysis and Reform Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+    au < finished ; finished ; 2015 ; Agenda - A Journal of Policy Analysis and Reform Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2016 ; Agenda - A Journal of Policy Analysis and Reform Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < finished ; finished ; 2017 ; Agenda - A Journal of Policy Analysis and Reform Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < finished ; finished ; 2018 ; Agenda - A Journal of Policy Analysis and Reform Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    #this version of the journal_id has ceased; see below for continuation
+    }
+     
+    { 
+    
+    #April 2019 - journal id changed as did location of start url
+    #6/14/19 change to layout - plugin has been modified to handle backwards incompatible with finished content
+
+    
+    param[journal_id] = agenda
+    
+      #2006 needed recollection in new layout
+      au < crawling ; down ; 2006 ; Agenda - A Journal of Policy Analysis and Reform Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2019 ; Agenda - A Journal of Policy Analysis and Reform Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+      au < finished ; frozen ; 2020 ; Agenda - A Journal of Policy Analysis and Reform Volume 27 ; 27 ; reingest3.clockss.org:8083 >
+      au < finished ; frozen ; 2021 ; Agenda - A Journal of Policy Analysis and Reform Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+      #No content since 2021. ceased publishing
+    }
+  }
+
+  {
+  
+    title <
+      name = ANU Historical Journal II ;
+      issn = 2652-015X ;
+      eissn = 2652-0281
+    >
+    
+    param[journal_id] = anu-historical-journal
+
+    au < finished ; frozen ; 2019 ; ANU Historical Journal II: Number 1 ; 1 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2020 ; ANU Historical Journal II: Number 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; frozen ; 2022 ; ANU Historical Journal II: Number 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2023 ; ANU Historical Journal II: Number 4 ; 4 ; >
+    #No material since 2023
+  }
+  
   {
   
     title <
@@ -375,6 +372,8 @@
     #ceased
 
   }
+
+
 ################################
 ## Student Journals ############
 ################################
