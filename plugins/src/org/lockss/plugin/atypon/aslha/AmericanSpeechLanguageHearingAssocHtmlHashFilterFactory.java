@@ -112,7 +112,9 @@ public class AmericanSpeechLanguageHearingAssocHtmlHashFilterFactory extends Bas
       // Remove from doi/full page
       HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "tab__content"),
       // Remove from doi/full page
-      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "eCommercePurchaseAccessWidget")
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "eCommercePurchaseAccessWidget"),
+      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citations"),
+      HtmlNodeFilters.tagWithAttributeRegex("section", "id", "cited-by")
     };
     return super.createFilteredInputStream(au, in, encoding, 
                                            includeNodes, excludeNodes);

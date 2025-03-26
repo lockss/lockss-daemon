@@ -81,7 +81,11 @@ public class AmericanSpeechLanguageHearingAssocHtmlCrawlFilterFactory extends Ba
           // Remove from doi/full page
           HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "tab__content"),
           // Remove from doi/full page
-          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "eCommercePurchaseAccessWidget")
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "eCommercePurchaseAccessWidget"),
+          // Remove from doi page
+          HtmlNodeFilters.tagWithAttributeRegex("div", "class", "citations"),
+          HtmlNodeFilters.tagWithAttributeRegex("section", "id", "cited-by")
+          //
 
   };
   
