@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = Alnoor University ;
+    info[contract] = 2008 ;
+    info[back] = 2008 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = BioMed Visions Journal ;
+      eissn = 3078-6738 ;
+      issnl = 3078-6738
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    #param[base_url] = https://bmvj.alnoor.edu.iq/
+    param[journal_abbr] = home
+    implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
+
+    au < manifest ; exists ; 2024 ; BioMed Visions Journal Volume 1 ; 1 ; https://bmvj.alnoor.edu.iq/ ; >
+    au < expected ; exists ; 2025 ; BioMed Visions Journal Volume 2 ; 2 ; https://bmvj.alnoor.edu.iq/ ; >
+
+  }
+
+}
