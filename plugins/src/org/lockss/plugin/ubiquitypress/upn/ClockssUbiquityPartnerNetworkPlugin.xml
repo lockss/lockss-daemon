@@ -67,6 +67,19 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"%sabout/", to_https(base_url)</string>
     </list>
   </entry>
+    <entry>
+      <string>au_feature_urls</string>
+      <map>
+          <entry>
+              <string>au_title</string>
+              <string>"%slockss/year/%d", base_url, year</string>
+          </entry>
+          <entry>
+              <string>au_volume</string>
+              <string>"%sindex.php/%s/gateway/clockss?year=%d", base_url2, journal_id, year</string>
+          </entry>
+      </map>
+  </entry>
   <entry>
     <string>plugin_name</string>
     <string>Ubiquity Partner Network Journals Plugin (CLOCKSS)</string>
