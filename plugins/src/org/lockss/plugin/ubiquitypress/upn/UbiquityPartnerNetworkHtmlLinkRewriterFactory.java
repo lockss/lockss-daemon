@@ -36,13 +36,16 @@ import java.io.*;
 
 import org.htmlparser.*;
 import org.htmlparser.tags.LinkTag;
+import org.htmlparser.tags.ScriptTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.rewriter.*;
 import org.lockss.servlet.ServletUtil.LinkTransform;
+import org.lockss.util.Logger;
 
 public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewriterFactory {
 
+  static Logger log = Logger.getLogger(UbiquityPartnerNetworkHtmlLinkRewriterFactory.class);
   @Override
   public InputStream createLinkRewriter(String mimeType, 
                                         ArchivalUnit au,
@@ -91,6 +94,16 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
           String href = link.getLink();
           if (href != null) {
             link.setLink(href.trim());
+          }
+        }
+        if(node instanceof ScriptTag){
+          ScriptTag script = (ScriptTag)node;
+          String s = script.toPlainTextString();
+          log.debug3("the text BEFORE replacement is " + s);
+          if(s.contains("href\\\":\\\"")){
+            //FIX ME
+            //s = s.replaceAll("href","");
+            log.debug3("the text AFTER replacement is " + s);
           }
         }
         return false;
