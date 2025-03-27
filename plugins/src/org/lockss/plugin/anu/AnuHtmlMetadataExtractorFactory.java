@@ -70,6 +70,8 @@ public class AnuHtmlMetadataExtractorFactory
   static final String ART_AUTHOR = "p.Article-Author";
   static final String REV_TITLE = "h1.Review-Title";
   static final String REV_AUTHOR = "p.Review-Author";
+  static final String PRE_TITLE = "h1.Preface-Title";
+  static final String PRE_AUTHOR = "p.Preface-Author";
 
   //h1 class="Chapter-Title"
   //p class="Chapter-Author"
@@ -96,6 +98,8 @@ public class AnuHtmlMetadataExtractorFactory
       tagMap.put(ART_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put(CHP_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put(REV_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put(PRE_TITLE, MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put(PRE_AUTHOR, MetadataField.FIELD_AUTHOR);
       tagMap.put(ART_AUTHOR, MetadataField.FIELD_AUTHOR);
       tagMap.put(CHP_AUTHOR, MetadataField.FIELD_AUTHOR);
       tagMap.put(REV_AUTHOR, MetadataField.FIELD_AUTHOR);

@@ -57,7 +57,7 @@ implements ArticleIteratorFactory,
   // so it is hardcoded for now
   protected static final String ROOT_TEMPLATE = "https://press-files.anu.edu.au/downloads/";
   // pattern can include either the pdf or html aspects
-  protected static final String INCLUDE_PATTERN = "^https://press-files.anu.edu.au/downloads/press/[^/]+/(pdf|html)/";
+  protected static final String INCLUDE_PATTERN = "^https://press-files.anu.edu.au/downloads/press/[^/]+/(pdf|html|epub)/";
   // exclude a number of urls,
   // pdfs that are informational/generic to the journal,
   // https://press-files.anu.edu.au/downloads/press/p74151/pdf/contributors26.pdf
@@ -67,7 +67,7 @@ implements ArticleIteratorFactory,
   // https://press-files.anu.edu.au/downloads/press/n8444/html/part01.xhtml
   protected static final String EXCLUDE_PATTERN =
       "^https://press-files.anu.edu.au/downloads/press/[^/]+"+
-      "/(pdf|html)/"+
+      "/(pdf|html|epub)/"+
       "(" +
           "(\\d\\d?_)?" + /* 2_prelim_hr1_1998.pdf ugly, but this is the only way i can think of */
           "(" + /* match any of these strings that are html and/or pdf pages that are not articles or article like */
@@ -77,7 +77,7 @@ implements ArticleIteratorFactory,
           ")" +
           "(_...?\\d?\\d?_\\d)?" + /* again, ugly, but what else is there? */
           "\\d?\\d?\\d?" + /* sometimes there is up to 3 digits e.g. part01, contributors26 */
-          "\\.(x?html|pdf)" +
+          "\\.(x?html|pdf|epub)" +
         "|css|jpg|ttc|otf|png|jpg" +
       ")$";
 
@@ -89,10 +89,15 @@ implements ArticleIteratorFactory,
       "([^/]+)/html/([^/.]+)\\.x?html",
       Pattern.CASE_INSENSITIVE);
 
+  protected static final Pattern EPUB_PATTERN = Pattern.compile(
+        "([^/]+)/epub/([^/.]+)\\.epub",
+        Pattern.CASE_INSENSITIVE);
+
   private static final String PDF_REPLACEMENT = "$1/pdf/$2.pdf";
   private static final String XHTML_REPLACEMENT = "$1/html/$2.xhtml";
   // haven't seen this, but it is probable to exist, so include it for now.
   private static final String HTML_REPLACEMENT = "$1/html/$2.html";
+  private static final String EPUB_REPLACEMENT = "$1/epub/$2.epub";
 
   // https://press-files.anu.edu.au/downloads/press/p332783/pdf/chp01.pdf
   // https://press-files.anu.edu.au/downloads/press/n8684/html/03_black.xhtml
@@ -120,6 +125,11 @@ implements ArticleIteratorFactory,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
     builder.addAspect(
+        EPUB_PATTERN,
+        EPUB_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_EPUB);
+
+    builder.addAspect(
         HTML_PATTERN,
         Arrays.asList(
           XHTML_REPLACEMENT,
@@ -131,7 +141,8 @@ implements ArticleIteratorFactory,
 
     builder.setFullTextFromRoles(
         ArticleFiles.ROLE_FULL_TEXT_HTML,
-        ArticleFiles.ROLE_FULL_TEXT_PDF);
+        ArticleFiles.ROLE_FULL_TEXT_PDF,
+        ArticleFiles.ROLE_FULL_TEXT_EPUB);
     
     return builder.getSubTreeArticleIterator();
   }
