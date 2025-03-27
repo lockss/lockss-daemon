@@ -6,6 +6,8 @@ date
 echo "-----------------------------"
 echo "-----------------------------"
 tpath="~/$LOGNAME/tmp"
+fcpath=""
+fgpath=""
 mkdir -p $tpath
 numdiffAUs=20
 opt_tdb_file=""
@@ -38,8 +40,8 @@ if [[ $opt_tdb_file == "" ]]
 then
   echo "springer_science_business_media.tdb" > $tpath/pairs
   echo "taylor_and_francis.tdb" > $tpath/pairs
-  ls tdb/clockssingest | grep .tdb > $tpath/ci
-  ls tdb/prod | grep .tdb > $tpath/gln
+  ls tdb/clockssingest tdb/clockssingest/_retired | sort -u | grep .tdb > $tpath/ci
+  ls tdb/prod tdb/prod/_retired | sort -u | grep .tdb > $tpath/gln
   diff $tpath/ci $tpath/gln | grep "> " | sed 's/..//' > $tpath/notgln
   diff $tpath/gln $tpath/notgln | grep "< " | sed 's/..//' >> $tpath/pairs
   diff $tpath/gln $tpath/notgln | grep "< " | wc -l
@@ -54,13 +56,25 @@ echo $file
 # Do the files exist?
 [ -f tdb/prod/$file ] && exists_gln=1 || exists_gln=0
 [ -f tdb/clockssingest/$file ] && exists_cks=1 || exists_cks=0
-if [[ $exists_gln == 0 ]]
+[ -f tdb/prod/_retired/$file ] && exists_gln_retired=1 || exists_gln_retired=0
+[ -f tdb/clockssingest/_retired/$file ] && exists_cks_retired=1 || exists_cks_retired=0
+if [[ $exists_gln == 0 && $exists_gln_retired == 0 ]]
 then
-  echo "GLN file does not exist"
+  echo "GLN file does not exist at all"
 fi
-if [[ $exists_cks == 0 ]]
+if [[ $exists_gln == 1 && $exists_gln_retired == 1 ]]
 then
-  echo "CLOCKSS file does not exist"
+echo "GLN file is in both the main directory and the retired directory"
+$exists_gln_retired=0
+fi
+if [[ $exists_cks == 0 && $exists_cks_retired == 0 ]]
+then
+  echo "CLOCKSS file does not exist at all"
+fi
+if [[ $exists_cks == 1 && $exists_cks_retired == 1 ]]
+then
+  echo "CLOCKSS file is in both the main directory and the retired directory"
+  $exists_cks_retired=0
 fi
 # Ignore this file?
       #$file == "purdue_university_press.tdb" || 
@@ -68,6 +82,7 @@ if [[ $file == "american_medical_association.tdb" ||
       $file == "centro_de_filosofia_da_universidade_de_lisboa.tdb" || 
       $file == "iop_publishing.tdb" || 
       $file == "american_association_of_immunologists.tdb" ||
+      $file == "american_roentgen_ray_society.tdb" ||
       $file == "american_physiological_society.atypon.tdb" ]]
 then
   echo "Ignore files"
@@ -75,11 +90,16 @@ then
   exists_gln=0
 fi
 # If the files exist, compare the titles.
-if [[ $exists_cks == 1  &&  $exists_gln == 1 ]]
+if [[ ($exists_cks == 1 && $exists_gln == 1) || ($exists_cks_retired == 1 && $exists_gln_retired == 1) ]]
 then
-  scripts/tdb/tdbout -j tdb/prod/$file | sort | uniq | grep -vf scripts/tdb/gvc_gln.txt > $tpath/glnt.txt
-  scripts/tdb/tdbout -j tdb/clockssingest/$file | sort | uniq | grep -vf scripts/tdb/gvc_clockss.txt > $tpath/clocksst.txt
+  [ $exists_cks == 1 ] && fcpath="tdb/clockssingest" || fcpath="tdb/clockssingest/_retired"
+  [ $exists_gln == 1 ] && fgpath="tdb/prod" || fgpath="tdb/prod/_retired"
+  scripts/tdb/tdbout -j $fgpath/$file | sort | uniq | grep -vf scripts/tdb/gvc_gln.txt > $tpath/glnt.txt
+  scripts/tdb/tdbout -j $fcpath/$file | sort | uniq | grep -vf scripts/tdb/gvc_clockss.txt > $tpath/clocksst.txt
   rm $tpath/diff.txt
+  echo $fgpath/$file
+  echo $fcpath/$file
+  echo "---"
   if ! diff $tpath/glnt.txt $tpath/clocksst.txt > $tpath/diff.txt
     #echo Diff Lines: $diff_lines
   then 
@@ -98,14 +118,14 @@ then
     if [[ $file == "hindawi_publishing_corporation.tdb" ]]
     then
       ###all statuses except superseded, down, and zapped -EXMWTNYRCLZIF and not -DSB
-      #scripts/tdb/tdbout -EXMWTNYRCLZIF -c auid,name,year tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
-      #scripts/tdb/tdbout -EXMWTNYRCLZIF -c auid,name,year tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/clocksst.txt
+      #scripts/tdb/tdbout -EXMWTNYRCLZIF -c auid,name,year $fgpath/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
+      #scripts/tdb/tdbout -EXMWTNYRCLZIF -c auid,name,year $fcpath/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/clocksst.txt
       #same statuses, but adjust http->https for only the first url in the list.
-      scripts/tdb/tdbout -c auid,name,year tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
-      scripts/tdb/tdbout -c auid,name,year tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sed -e 's/ \[Article Count Mismatch\]//' | sort | uniq > $tpath/clocksst.txt
+      scripts/tdb/tdbout -c auid,name,year $fgpath/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
+      scripts/tdb/tdbout -c auid,name,year $fcpath/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//' | sed -e 's/ \[superseded\]//' | sed -e 's/ \[Article Count Mismatch\]//' | sort | uniq > $tpath/clocksst.txt
     else
-      scripts/tdb/tdbout -c auid,name,year tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//g' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
-      scripts/tdb/tdbout -c auid,name,year tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//g' | sed -e 's/ \[superseded\]//' | sed -e 's/ \[Article Count Mismatch\]//' | sort | uniq > $tpath/clocksst.txt
+      scripts/tdb/tdbout -c auid,name,year $fgpath/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//g' | sed -e 's/ \[superseded\]//' | sort | uniq > $tpath/glnt.txt
+      scripts/tdb/tdbout -c auid,name,year $fcpath/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/^[^&]*&//' | sed -e 's/http\|https//g' | sed -e 's/ \[superseded\]//' | sed -e 's/ \[Article Count Mismatch\]//' | sort | uniq > $tpath/clocksst.txt
     fi
     if ! diff -i $tpath/glnt.txt $tpath/clocksst.txt > $tpath/diff.txt
     then
@@ -132,15 +152,15 @@ then
       maxnumAUsA=$numdiffAUs
       echo "No AU differences"
 #      # Find AUs in the gln marked expected, exists, ready, released, superseded (these will be eleminated from the list)
-#      scripts/tdb/tdbout -EXYRS -c auid,name tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt > $tpath/done_gln_exyrs.txt
+#      scripts/tdb/tdbout -EXYRS -c auid,name $fgpath/$file | grep -vf scripts/tdb/gvc_gln.txt > $tpath/done_gln_exyrs.txt
 #      # Find AUs in the gln marked down
-#      scripts/tdb/tdbout -D -c auid,name tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/HighWirePressPlugin/HighWirePressH20Plugin/' | sed -e 's/HighWireStrVolPlugin/HighWirePressH20Plugin/' > $tpath/done_gln_d.txt
+#      scripts/tdb/tdbout -D -c auid,name $fgpath/$file | grep -vf scripts/tdb/gvc_gln.txt | sed -e 's/HighWirePressPlugin/HighWirePressH20Plugin/' | sed -e 's/HighWireStrVolPlugin/HighWirePressH20Plugin/' > $tpath/done_gln_d.txt
 #      # Find AUs in the gln marked doNotProcess
-#      scripts/tdb/tdbout -c auid,name -Q 'status is "doNotProcess"' tdb/prod/$file | grep -vf scripts/tdb/gvc_gln.txt > $tpath/done_gln_dnp.txt
+#      scripts/tdb/tdbout -c auid,name -Q 'status is "doNotProcess"' $fgpath/$file | grep -vf scripts/tdb/gvc_gln.txt > $tpath/done_gln_dnp.txt
 #      # Merge all AUs to eliminate from list and sort
 #      cat $tpath/done_gln_exyrs.txt $tpath/done_gln_d.txt $tpath/done_gln_dnp.txt | sort > $tpath/done_gln.txt
 #      # Find AUs in clockss marked finished, filter for odd cases, filter plugin name, and sort.
-#      scripts/tdb/tdbout -F -c auid,name tdb/clockssingest/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/Clockss//' | sed -e 's/BerkeleyElectronicPressPlugin/BePressPlugin/' | sort > $tpath/done_cks.txt
+#      scripts/tdb/tdbout -F -c auid,name $fcpath/$file | grep -vf scripts/tdb/gvc_clockss.txt | sed -e 's/Clockss//' | sed -e 's/BerkeleyElectronicPressPlugin/BePressPlugin/' | sort > $tpath/done_cks.txt
 #      if ! diff $tpath/done_cks.txt $tpath/done_gln.txt > $tpath/done_diff.txt
 #      then
 #        echo "***AU status diffs: mark ready in GLN***"
