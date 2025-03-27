@@ -8724,10 +8724,11 @@
 
     param[journal_id] = 10.1055/s-00039252
     comment[years] = 2019-2021
+    #Moved to Elsevier
 
-    au < released ; 2019 ; 2019 ; Revista Argentina de Radiología Volume 83 ; 83 >
-    au < released ; 2020 ; 2020 ; Revista Argentina de Radiología Volume 84 ; 84 >
-    au < released ; 2021 ; 2021 ; Revista Argentina de Radiología Volume 85 ; 85 >
+    au < down ; 2019 ; 2019 ; Revista Argentina de Radiología Volume 83 ; 83 >
+    au < down ; 2020 ; 2020 ; Revista Argentina de Radiología Volume 84 ; 84 >
+    au < down ; 2021 ; 2021 ; Revista Argentina de Radiología Volume 85 ; 85 >
 
   }
 
