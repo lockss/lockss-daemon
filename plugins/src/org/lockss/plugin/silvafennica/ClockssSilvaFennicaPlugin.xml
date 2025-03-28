@@ -38,14 +38,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -53,7 +53,7 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -133,14 +133,15 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s(%s|/)(css|img|js|large_tables|supp_files|raw)/", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%sarticle/[0-9]+$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%spdf/article[0-9]+\.pdf$", url_host(base_url), url_path(base_url)</string>
-      <string>1,"^https?://%s%sexport/[0-9]+$", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%spdf/[0-9]+$", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%sexport/(refer/)?[0-9]+$", url_host(base_url), url_path(base_url)</string>
     </list>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
       <string>"^https?://%s%sarticle/[0-9]+$", url_host(base_url), url_path(base_url)</string>
-      <string>"^https?://%s%spdf/article[0-9]+\.pdf$", url_host(base_url), url_path(base_url)</string>
+      <string>"^https?://%s%spdf/[0-9]+$", url_host(base_url), url_path(base_url)</string>
     </list>
   </entry>
   <entry>

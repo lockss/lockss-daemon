@@ -51,18 +51,24 @@ public class FS2ArticleIteratorFactory implements ArticleIteratorFactory, Articl
   
   protected static Logger log = Logger.getLogger(FS2ArticleIteratorFactory.class);
   
-  // https://www.silvafennica.fi/pdf/article1313.pdf
-  // https://www.silvafennica.fi/article/1588
-  // https://www.silvafennica.fi/export/1588
+  /*  https://www.silvafennica.fi/pdf/article1313.pdf
+      https://www.silvafennica.fi/article/1588
+      https://www.silvafennica.fi/export/1588
+  
+   UPDATES TO URL STRUCUTRES, 2025
+    https://www.silvafennica.fi/export/refer/23077
+    https://www.silvafennica.fi/pdf/1689
+    https://www.silvafennica.fi/article/1689
+  */
   private static final String ROOT_TEMPLATE = "\"%s\", base_url";
   private static final String PATTERN_TEMPLATE = "\"^%sarticle/[0-9]+$\", base_url";
   
   private static final Pattern HTML_PATTERN = Pattern.compile("/article/([0-9]+)$", Pattern.CASE_INSENSITIVE);
   private static final String HTML_REPLACEMENT = "/article/$1";
   //private static final Pattern PDF_PATTERN = Pattern.compile("/pdf/article/([0-9]+)[.]pdf$", Pattern.CASE_INSENSITIVE);
-  private static final String PDF_REPLACEMENT = "/pdf/article$1.pdf";
+  private static final String PDF_REPLACEMENT = "/pdf/$1";
   //private static final Pattern ENW_PATTERN = Pattern.compile("/export/([0-9]+)$", Pattern.CASE_INSENSITIVE);
-  private static final String ENW_REPLACEMENT = "/export/$1";
+  private static final String ENW_REPLACEMENT = "/export/refer/$1";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target)
