@@ -83,6 +83,8 @@ if [[ $file == "american_medical_association.tdb" ||
       $file == "iop_publishing.tdb" || 
       $file == "american_association_of_immunologists.tdb" ||
       $file == "american_roentgen_ray_society.tdb" ||
+      $file == "association_of_jewish_libraries.tdb" ||
+      $file == "cenid.tdb" ||
       $file == "american_physiological_society.atypon.tdb" ]]
 then
   echo "Ignore files"

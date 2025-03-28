@@ -59,11 +59,11 @@
       au < doNotProcess ; 2013 ; Journal of Clinical Oncology Volume 31 ; 31 ; https://ascopubs.org/ >
       au < doNotProcess ; 2014 ; Journal of Clinical Oncology Volume 32 ; 32 ; https://ascopubs.org/ >
       au < doNotProcess ; 2015 ; Journal of Clinical Oncology Volume 33 ; 33 ; https://ascopubs.org/ >
-      au < released ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 ; http://ascopubs.org/ >
-      au < released ; 2017 ; Journal of Clinical Oncology Volume 35 ; 35 ; http://ascopubs.org/ >
-      au < released ; 2018 ; Journal of Clinical Oncology Volume 36 ; 36 ; https://ascopubs.org/ >
-      au < released ; 2019 ; Journal of Clinical Oncology Volume 37 ; 37 ; https://ascopubs.org/ >
-      au < released ; 2020 ; Journal of Clinical Oncology Volume 38 ; 38 ; https://ascopubs.org/ >
+      au < down ; 2016 ; Journal of Clinical Oncology Volume 34 ; 34 ; http://ascopubs.org/ >
+      au < down ; 2017 ; Journal of Clinical Oncology Volume 35 ; 35 ; http://ascopubs.org/ >
+      au < down ; 2018 ; Journal of Clinical Oncology Volume 36 ; 36 ; https://ascopubs.org/ >
+      au < down ; 2019 ; Journal of Clinical Oncology Volume 37 ; 37 ; https://ascopubs.org/ >
+      au < down ; 2020 ; Journal of Clinical Oncology Volume 38 ; 38 ; https://ascopubs.org/ >
 
   }
 
@@ -91,11 +91,11 @@
 
       param[journal_id] = jgo
 
-      au < released ; 2015 ; Journal of Global Oncology Volume 1 ; 1 ; http://ascopubs.org/ >
-      au < released ; 2016 ; Journal of Global Oncology Volume 2 ; 2 ; http://ascopubs.org/ >
-      au < released ; 2017 ; Journal of Global Oncology Volume 3 ; 3 ; http://ascopubs.org/ >
-      au < released ; 2018 ; Journal of Global Oncology Volume 4 ; 4 ; https://ascopubs.org/ >
-      au < released ; 2019 ; Journal of Global Oncology Volume 5 ; 5 ; https://ascopubs.org/ >
+      au < down ; 2015 ; Journal of Global Oncology Volume 1 ; 1 ; http://ascopubs.org/ >
+      au < down ; 2016 ; Journal of Global Oncology Volume 2 ; 2 ; http://ascopubs.org/ >
+      au < down ; 2017 ; Journal of Global Oncology Volume 3 ; 3 ; http://ascopubs.org/ >
+      au < down ; 2018 ; Journal of Global Oncology Volume 4 ; 4 ; https://ascopubs.org/ >
+      au < down ; 2019 ; Journal of Global Oncology Volume 5 ; 5 ; https://ascopubs.org/ >
 
   }
 
@@ -111,7 +111,7 @@
       param[journal_id] = op
       #title changed as of 2020
 
-      au < released ; 2020 ; JCO Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ >
+      au < down ; 2020 ; JCO Oncology Practice Volume 16 ; 16 ; https://ascopubs.org/ >
 
   }
 
@@ -137,10 +137,10 @@
       au < doNotProcess ; 2013 ; Journal of Oncology Practice Volume 9 ; 9 ; https://ascopubs.org/ >
       au < doNotProcess ; 2014 ; Journal of Oncology Practice Volume 10 ; 10 ; https://ascopubs.org/ >
       au < doNotProcess ; 2015 ; Journal of Oncology Practice Volume 11 ; 11 ; https://ascopubs.org/ >
-      au < released ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 ; http://ascopubs.org/ >
-      au < released ; 2017 ; Journal of Oncology Practice Volume 13 ; 13 ; http://ascopubs.org/ >
-      au < released ; 2018 ; Journal of Oncology Practice Volume 14 ; 14 ; https://ascopubs.org/ >
-      au < released ; 2019 ; Journal of Oncology Practice Volume 15 ; 15 ; https://ascopubs.org/ >
+      au < down ; 2016 ; Journal of Oncology Practice Volume 12 ; 12 ; http://ascopubs.org/ >
+      au < down ; 2017 ; Journal of Oncology Practice Volume 13 ; 13 ; http://ascopubs.org/ >
+      au < down ; 2018 ; Journal of Oncology Practice Volume 14 ; 14 ; https://ascopubs.org/ >
+      au < down ; 2019 ; Journal of Oncology Practice Volume 15 ; 15 ; https://ascopubs.org/ >
       #title changed as of 2020
   }
 
@@ -153,10 +153,10 @@
 
       param[journal_id] = cci
 
-      au < released ; 2017 ; JCO Clinical Cancer Informatics Volume 1 ; 1 ; http://ascopubs.org/ >
-      au < released ; 2018 ; JCO Clinical Cancer Informatics Volume 2 ; 2 ; https://ascopubs.org/ >
-      au < released ; 2019 ; JCO Clinical Cancer Informatics Volume 3 ; 3 ; https://ascopubs.org/ >
-      au < released ; 2020 ; JCO Clinical Cancer Informatics Volume 4 ; 4 ; https://ascopubs.org/ >
+      au < down ; 2017 ; JCO Clinical Cancer Informatics Volume 1 ; 1 ; http://ascopubs.org/ >
+      au < down ; 2018 ; JCO Clinical Cancer Informatics Volume 2 ; 2 ; https://ascopubs.org/ >
+      au < down ; 2019 ; JCO Clinical Cancer Informatics Volume 3 ; 3 ; https://ascopubs.org/ >
+      au < down ; 2020 ; JCO Clinical Cancer Informatics Volume 4 ; 4 ; https://ascopubs.org/ >
 
   }
 
@@ -169,10 +169,10 @@
 
       param[journal_id] = po
 
-      au < released ; 2017 ; JCO Precision Oncology Volume 1 ; 1 ; http://ascopubs.org/ >
-      au < released ; 2018 ; JCO Precision Oncology Volume 2 ; 2 ; https://ascopubs.org/ >
-      au < released ; 2019 ; JCO Precision Oncology Volume 3 ; 3 ; https://ascopubs.org/ >
-      au < released ; 2020 ; JCO Precision Oncology Volume 4 ; 4 ; https://ascopubs.org/ >
+      au < down ; 2017 ; JCO Precision Oncology Volume 1 ; 1 ; http://ascopubs.org/ >
+      au < down ; 2018 ; JCO Precision Oncology Volume 2 ; 2 ; https://ascopubs.org/ >
+      au < down ; 2019 ; JCO Precision Oncology Volume 3 ; 3 ; https://ascopubs.org/ >
+      au < down ; 2020 ; JCO Precision Oncology Volume 4 ; 4 ; https://ascopubs.org/ >
 
   }
 
