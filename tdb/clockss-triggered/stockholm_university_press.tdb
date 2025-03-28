@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = Stockholm University Press
+  >
+
+  plugin = org.lockss.plugin.stockholmup.ClockssStockholmUniversityPressPlugin
+  implicit < status ; year ; volume ; name ;  param[volume_name] >
+  param[base_url] = https://stockholmup2025.clockss.org/
+  param[publisher_id] = stockholmup
+
+  {
+
+    title <
+      name = Journal of Home Language Research ;
+      eissn = 2537-7043 ;
+      issnl = 2537-7043
+    >
+
+    #
+    # NOTE: Volumes 1-3 are in ubiquity_press.tdb
+    #
+
+    param[journal_id] = jhlr
+
+    au < exists ; 2021 ; 4 ; Journal of Home Language Research Volume 4 ; 4 >
+    au < exists ; 2022 ; 5 ; Journal of Home Language Research Volume 5 ; 5 >
+    au < exists ; 2023 ; 6 ; Journal of Home Language Research Volume 6 ; 6 >
+
+  }
+
+}

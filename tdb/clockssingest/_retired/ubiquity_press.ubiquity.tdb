@@ -180,13 +180,18 @@
         eissn = 2537-7043
       >
 
+      #
+      # NOTE: Volumes 4-6 are in stockholm_university_press.tdb
+      #
+      
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://jhlr.org/
 
-      au < finished ; finished ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; 1 ; Stockholm University Press ; https://jhlr.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2017 ; 2 ; Journal of Home Language Research Volume 2017 ; 2017 ; 2 ; Stockholm University Press ; https://jhlr.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2018 ; 3 ; Journal of Home Language Research Volume 2018 ; 2018 ; 3 ; Stockholm University Press ; https://jhlr.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 1 ; Journal of Home Language Research Volume 1 ; 2016 ; 1 ; Stockholm University Press ; https://jhlr.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2017 ; 2 ; Journal of Home Language Research Volume 2 ; 2017 ; 2 ; Stockholm University Press ; https://jhlr.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2018 ; 3 ; Journal of Home Language Research Volume 3 ; 2018 ; 3 ; Stockholm University Press ; https://jhlr.org/ ; reingest4.clockss.org:8082 >
       #Triggered
+      
   }
 
   {
