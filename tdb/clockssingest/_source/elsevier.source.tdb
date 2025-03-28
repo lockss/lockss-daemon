@@ -290,10 +290,10 @@
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_14 ; 2025_14 >
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_15 ; 2025_15 >
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_16 ; 2025_16 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_17 ; 2025_17 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_18 ; 2025_18 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_19 ; 2025_19 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_20 ; 2025_20 >
+        au < ready ; exists ; 2025 ; Elsevier Source Content 2025_17 ; 2025_17 >
+        au < ready ; exists ; 2025 ; Elsevier Source Content 2025_18 ; 2025_18 >
+        au < ready ; exists ; 2025 ; Elsevier Source Content 2025_19 ; 2025_19 >
+        au < ready ; exists ; 2025 ; Elsevier Source Content 2025_20 ; 2025_20 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_21 ; 2025_21 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_22 ; 2025_22 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_23 ; 2025_23 >
