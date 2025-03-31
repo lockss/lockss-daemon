@@ -45,7 +45,7 @@ import org.htmlparser.visitors.NodeVisitor;
 //import org.htmlparser.Node;
 //import org.htmlparser.tags.Span;
 //import org.htmlparser.tags.ParagraphTag;
-//import org.htmlparser.util.NodeList;
+import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.HtmlTagFilter.TagPair;
@@ -83,6 +83,10 @@ public class FS2HtmlHashFilterFactory implements FilterFactory {
               }
             };
             MyVisitor visitor = new MyVisitor();
+            NodeList nodelist = node.getChildren();
+            if(nodelist == null){
+              return false;
+            }
             try {
               node.getChildren().visitAllNodesWith(visitor);
               return (!visitor.nested && visitor.accepted);
