@@ -617,12 +617,17 @@ public class ServeContent extends LockssServlet {
         if (au != null) {
           try {
             normUrl = UrlUtil.normalizeUrl(url, au);
-          } catch (PluginBehaviorException e) {
+          } catch (MalformedURLException | PluginBehaviorException e) {
             log.warning("Couldn't site-normalize URL: " + url, e);
             normUrl = UrlUtil.normalizeUrl(url);
           }
         } else {
-          normUrl = UrlUtil.normalizeUrl(url);
+          try {
+            normUrl = UrlUtil.normalizeUrl(url);
+          } catch (Exception e) {
+            log.warning("Couldn't normalize URL: " + url, e);
+            normUrl = url;
+          }
         }
         if (normUrl != url) {
           log.debug2("Normalized " + url + " to " + normUrl);
