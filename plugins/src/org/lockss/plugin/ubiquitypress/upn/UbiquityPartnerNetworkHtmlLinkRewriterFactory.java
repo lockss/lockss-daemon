@@ -33,7 +33,10 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.ubiquitypress.upn;
 
 import java.io.*;
-
+import java.net.MalformedURLException;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import org.lockss.util.UrlUtil;
 import org.htmlparser.*;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.ScriptTag;
@@ -42,10 +45,15 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.rewriter.*;
 import org.lockss.servlet.ServletUtil.LinkTransform;
 import org.lockss.util.Logger;
+import org.lockss.rewriter.NodeFilterHtmlLinkRewriterFactory.HtmlBaseProcessor;
+import org.lockss.util.*;
 
 public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewriterFactory {
 
   static Logger log = Logger.getLogger(UbiquityPartnerNetworkHtmlLinkRewriterFactory.class);
+  //{\"href\":\"/api/1.8.4/spritesheet#user\"}
+  static Pattern jsonHref = Pattern.compile("(\\\\\"href\\\\\":\\s*\\\\\")(.*?)(\\\\\")");
+
   @Override
   public InputStream createLinkRewriter(String mimeType, 
                                         ArchivalUnit au,
@@ -86,7 +94,12 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
     (EN)
 </a>
      */
-    fact.addPreXform(new NodeFilter() {
+
+    class JSONRewritingFilter implements NodeFilter{
+      String baseUrl;
+      public void setBaseUrl(String newBase) {
+        baseUrl = newBase;
+      }
       @Override
       public boolean accept(Node node) {
         if (node instanceof LinkTag) {
@@ -99,16 +112,41 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
         if(node instanceof ScriptTag){
           ScriptTag script = (ScriptTag)node;
           String s = script.toPlainTextString();
+          //script.removeAttribute("src");
           log.debug3("the text BEFORE replacement is " + s);
-          if(s.contains("href\\\":\\\"")){
-            //FIX ME
-            //s = s.replaceAll("href","");
-            log.debug3("the text AFTER replacement is " + s);
+          if(s.startsWith("self.__next") || s.startsWith("(self.__next")){
+            Matcher mat = jsonHref.matcher(s);
+            StringBuffer sb = new StringBuffer();
+            while(mat.find()){
+              String hrefVal = mat.group(2);
+              log.debug3("the second matching group is " + hrefVal);
+              String newUrl;
+              try{
+                newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, hrefVal)));
+              }catch (MalformedURLException e){
+                  log.warning("Couldn't resolve: the base url is " + baseUrl + " and the second group is " +  hrefVal);
+                  newUrl = hrefVal;
+              };
+              log.debug3("new url is " + newUrl);
+              String rep = "$1" + Matcher.quoteReplacement(newUrl) + "$3";
+              mat.appendReplacement(sb, rep);
+              log.debug3(rep);
+            }
+            mat.appendTail(sb);
+            script.setScriptCode(sb.toString());
+            log.debug3("the text AFTER replacement is " + sb.toString());
           }
         }
         return false;
       }
-    });
+    }
+
+    JSONRewritingFilter jsonFilt = new JSONRewritingFilter();
+    jsonFilt.setBaseUrl(url);
+    HtmlBaseProcessor baseProc = new HtmlBaseProcessor(url);
+    baseProc.setXforms(ListUtil.list(jsonFilt));
+    fact.addPreXform(baseProc);
+    fact.addPreXform(jsonFilt);
     
     /*
      * Images in Utrecht University Library's Studium
