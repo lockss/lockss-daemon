@@ -34,10 +34,12 @@ package org.lockss.plugin.ubiquitypress.upn;
 
 import java.io.*;
 import java.net.MalformedURLException;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import org.lockss.util.UrlUtil;
 import org.htmlparser.*;
+import org.htmlparser.filters.*;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.ScriptTag;
 import org.lockss.daemon.PluginException;
@@ -53,6 +55,14 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
   static Logger log = Logger.getLogger(UbiquityPartnerNetworkHtmlLinkRewriterFactory.class);
   //{\"href\":\"/api/1.8.4/spritesheet#user\"}
   static Pattern jsonHref = Pattern.compile("(\\\\\"href\\\\\":\\s*\\\\\")(.*?)(\\\\\")");
+
+  // Matches protocol pattern (e.g. "http://")
+  static final String protocolPat = "[^:/?#]+://+";
+  
+  // Matches protocol prefix of a URL (e.g. "http://") OR ref ("#...")
+  // Used negated to find relative URLs, excluding those that are just a
+  // #ref
+  static final String protocolOrRefPrefixPat = "^(" + protocolPat + "|#)";
 
   @Override
   public InputStream createLinkRewriter(String mimeType, 
@@ -97,9 +107,29 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
 
     class JSONRewritingFilter implements NodeFilter{
       String baseUrl;
-      public void setBaseUrl(String newBase) {
-        baseUrl = newBase;
+      Pattern filter;
+      boolean negateFilter = false;
+
+      JSONRewritingFilter(String filter, boolean ignoreCase) {
+        this.filter = Pattern.compile(filter,
+                                      ignoreCase ? Pattern.CASE_INSENSITIVE : 0);
       }
+
+      public JSONRewritingFilter setBaseUrl(String newBase) {
+        baseUrl = newBase;
+        return this;
+      }
+
+      public JSONRewritingFilter setNegateFilter(boolean val) {
+        negateFilter = val;
+        return this;
+      }
+
+      protected boolean isFilterMatch(String str) {
+        boolean isMatch = filter.matcher(str).find();
+        return negateFilter ? !isMatch : isMatch;
+      }
+
       @Override
       public boolean accept(Node node) {
         if (node instanceof LinkTag) {
@@ -112,41 +142,83 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
         if(node instanceof ScriptTag){
           ScriptTag script = (ScriptTag)node;
           String s = script.toPlainTextString();
-          //script.removeAttribute("src");
-          log.debug3("the text BEFORE replacement is " + s);
-          if(s.startsWith("self.__next") || s.startsWith("(self.__next")){
-            Matcher mat = jsonHref.matcher(s);
-            StringBuffer sb = new StringBuffer();
-            while(mat.find()){
-              String hrefVal = mat.group(2);
-              log.debug3("the second matching group is " + hrefVal);
-              String newUrl;
-              try{
-                newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, hrefVal)));
-              }catch (MalformedURLException e){
-                  log.warning("Couldn't resolve: the base url is " + baseUrl + " and the second group is " +  hrefVal);
-                  newUrl = hrefVal;
-              };
-              log.debug3("new url is " + newUrl);
-              String rep = "$1" + Matcher.quoteReplacement(newUrl) + "$3";
-              mat.appendReplacement(sb, rep);
-              log.debug3(rep);
+          if (!StringUtil.isNullString(s)) {
+            //script.removeAttribute("src");
+            log.debug3("the text BEFORE replacement is " + s);
+            if(s.startsWith("self.__next") || s.startsWith("(self.__next")){
+              Matcher mat = jsonHref.matcher(s);
+              StringBuffer sb = new StringBuffer();
+              while(mat.find()){
+                String hrefVal = mat.group(2);
+                log.debug3("hrefVal: " + hrefVal + ", filt: " + filter.pattern() + ", match: " + isFilterMatch(hrefVal));
+                if (isFilterMatch(hrefVal)) {
+                  log.debug3("the second matching group is " + hrefVal);
+                  String newUrl;
+                  try{
+                    newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, hrefVal)));
+                  }catch (MalformedURLException e){
+                    log.warning("Couldn't resolve: the base url is " + baseUrl + " and the second group is " +  hrefVal);
+                    newUrl = hrefVal;
+                  };
+                  log.debug3("new url is " + newUrl);
+                  String rep = "$1" + Matcher.quoteReplacement(newUrl) + "$3";
+                  mat.appendReplacement(sb, rep);
+                  log.debug3(rep);
+                } else {
+                  mat.appendReplacement(sb, Matcher.quoteReplacement(mat.group(0)));
+                }
+              }
+              mat.appendTail(sb);
+              script.setScriptCode(sb.toString());
+              log.debug3("the text AFTER replacement is " + sb.toString());
             }
-            mat.appendTail(sb);
-            script.setScriptCode(sb.toString());
-            log.debug3("the text AFTER replacement is " + sb.toString());
           }
         }
         return false;
       }
     }
 
-    JSONRewritingFilter jsonFilt = new JSONRewritingFilter();
-    jsonFilt.setBaseUrl(url);
+    // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
+    Collection<String> urlStems = au.getUrlStems();
+    log.debug3("Stems: " + urlStems);
+    List<JSONRewritingFilter> xforms = new ArrayList<>();
     HtmlBaseProcessor baseProc = new HtmlBaseProcessor(url);
-    baseProc.setXforms(ListUtil.list(jsonFilt));
+
+    String defUrlStem = null;
+    for (String urlStem : urlStems) {
+      if (defUrlStem == null) {
+        defUrlStem = urlStem;
+      }
+      xforms.add(new JSONRewritingFilter("^" + urlStem, true)
+                 .setBaseUrl(url));
+    }
+    if (defUrlStem == null) {
+      throw new PluginException("No default URL stem for " + url);
+    }
+
+    // Transform protocol-relative link URLs.  These are essentially abs
+    // links with no scheme.
+    for (String urlStem : urlStems) {
+      int colon = urlStem.indexOf("://");
+      if (colon < 0) continue;
+      String proto = urlStem.substring(0, colon);
+      String hostPort = urlStem.substring(colon + 3);
+      xforms.add(new JSONRewritingFilter("^//" + hostPort, true)
+                 .setBaseUrl(url));
+    }
+
+    // Rewrite relative links
+    xforms.add(new JSONRewritingFilter(protocolOrRefPrefixPat, true)
+               .setBaseUrl(url)
+               .setNegateFilter(true));
+
+    baseProc.setXforms(ListUtil.list(xforms));
+    log.debug3("Xforms: " + xforms);
+
     fact.addPreXform(baseProc);
-    fact.addPreXform(jsonFilt);
+    for (NodeFilter filt : xforms) {
+      fact.addPreXform(filt);
+    }
     
     /*
      * Images in Utrecht University Library's Studium
