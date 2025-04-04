@@ -69,15 +69,16 @@ public class AmericanSpeechLanguageHearingAssocHtmlMetadataExtractorFactory exte
 
       log.debug3("additionalVolume in code=============" + additionalVolume);
       if (additionalVolume == null) {
-        log.debug3("additionalVolume in code=============volume is nuuuuuulll");
+        log.debug3("additionalVolume in code=============volume is null");
       } else {
-        log.debug3("additionalVolume in code=============volume is NOT nuuuuuulll, additionalVolume = " + additionalVolume + ", volume_len = " + additionalVolume.length());
+        log.debug3("additionalVolume in code=============volume is NOT null, additionalVolume = " + additionalVolume + ", volume_len = " + additionalVolume.length());
       }
 
       //if (volume != null && volume !="") {
       if (additionalVolume != null && !additionalVolume.equals("")) {
         log.debug3("AmericanSpeechLanguageHearingAssoc Check: Volume--------getAdditionalMetadata: volume Successfully-------");
         am.put(MetadataField.FIELD_VOLUME, additionalVolume);
+        am.putRaw("html_source_volume", additionalVolume);
       } else {
         log.debug3("AmericanSpeechLanguageHearingAssoc Check: Volume--------getAdditionalMetadata: volume Failed-------");
       }
