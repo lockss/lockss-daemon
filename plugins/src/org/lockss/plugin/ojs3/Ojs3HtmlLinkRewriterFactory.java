@@ -58,8 +58,6 @@ public class Ojs3HtmlLinkRewriterFactory extends NodeFilterHtmlLinkRewriterFacto
                     ScriptTag script = (ScriptTag)node;
                     String scriptContent = script.toPlainTextString();
                     if(scriptContent.contains("/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html")){
-                        //Node parent = node.getParent();
-                        //parent.getChildren().remove(node);
                         return true;
                     }
                 }else if(node instanceof Iframe){
@@ -67,9 +65,11 @@ public class Ojs3HtmlLinkRewriterFactory extends NodeFilterHtmlLinkRewriterFacto
                     Node parent = iframe.getParent();
                     if(parent instanceof Div){
                         Div parentDiv = (Div)parent;
-                        if("pdfCanvasContainer".equals(parentDiv.getAttribute("id")) && pdfhref != null){
-                            iframe.setAttribute("src",pdfhref);
-                            //return true;
+                        log.debug3("iframe src is " + iframe.getAttribute("src"));
+                        if(iframe.getAttribute("src").equals("")){
+                            if("pdfCanvasContainer".equals(parentDiv.getAttribute("id")) && pdfhref != null){
+                                iframe.setAttribute("src",pdfhref);
+                            }
                         }
                     }
                 }
