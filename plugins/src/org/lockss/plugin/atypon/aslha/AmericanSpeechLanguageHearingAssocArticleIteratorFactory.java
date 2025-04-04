@@ -62,13 +62,17 @@ public class AmericanSpeechLanguageHearingAssocArticleIteratorFactory extends Ba
   // https://pubs.asha.org/doi/full/10.1044/0161-1461%282007/001%29
   // https://pubs.asha.org/doi/pdf/10.1044/0161-1461%282007/001%29
 
+  //https://pubs.asha.org/doi/full/10.1044/2024_JSLHR-24-00091
+  //https://pubs.asha.org/doi/full/10.1044/2024_JSLHR-24-00190
+  //https://pubs.asha.org/doi/full/10.1044/2024_JSLHR-24-00228
+
   private static final String ROOT_TEMPLATE = "\"%sdoi/\", base_url";
 
-  private static final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z()/]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern EPDF_PATTERN = Pattern.compile("/doi/epdf/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z()/]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z()/]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&/]+)(?:/([-.0-9a-zA-Z_()%]+))?", Pattern.CASE_INSENSITIVE);
+  private static final Pattern EPDF_PATTERN = Pattern.compile("/doi/epdf/([.0-9]+)/([^?&/]+)(?:/([-.0-9a-zA-Z_()%]+))?", Pattern.CASE_INSENSITIVE);
+  private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?&/]+)(?:/([-.0-9a-zA-Z_()%]+))?", Pattern.CASE_INSENSITIVE);
 
-  private static final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z()/]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&/]+)(?:/([-.0-9a-zA-Z_()%]+))?", Pattern.CASE_INSENSITIVE);
   private static final String ABSTRACT_REPLACEMENT = "/doi/abs/$1/$2/$3";
   private static final String HTML_REPLACEMENT = "/doi/full/$1/$2/$3";
 
