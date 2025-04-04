@@ -41,14 +41,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -87,5 +87,14 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.atypon.aslha.AmericanSpeechLanguageHearingAssocArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.atypon.aslha.AmericanSpeechLanguageHearingAssocHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>
