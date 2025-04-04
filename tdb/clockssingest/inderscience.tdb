@@ -403,7 +403,7 @@
 
       param[journal_id] = ijahuc
 
-      au < ready ; exists ; 2005-2006 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2005-2006 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -2029,7 +2029,7 @@
       au < crawling ; exists ; 2001 ; International Journal of Business Performance Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2002 ; International Journal of Business Performance Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2003 ; International Journal of Business Performance Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2004 ; International Journal of Business Performance Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2004 ; International Journal of Business Performance Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2005 ; International Journal of Business Performance Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2006 ; International Journal of Business Performance Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Business Performance Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
@@ -2916,7 +2916,7 @@
 
       param[journal_id] = ijcultm
 
-      au < ready ; exists ; 2022-2024 ; International Journal of Cultural Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2022-2024 ; International Journal of Cultural Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2025-2027 ; International Journal of Cultural Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -3528,7 +3528,7 @@
       param[journal_id] = ijef
 
       au < ready ; exists ; 2006-2007 ; International Journal of Electronic Finance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008 ; International Journal of Electronic Finance Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008 ; International Journal of Electronic Finance Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Electronic Finance Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Electronic Finance Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Electronic Finance Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -3555,7 +3555,7 @@
 
       param[journal_id] = ijeg
 
-      au < ready ; exists ; 2007-2008 ; International Journal of Electronic Governance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007-2008 ; International Journal of Electronic Governance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Electronic Governance Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Electronic Governance Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Electronic Governance Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -4780,7 +4780,7 @@
       au < ready ; exists ; 2006 ; International Journal of Global Environmental Issues Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Global Environmental Issues Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Global Environmental Issues Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2009 ; International Journal of Global Environmental Issues Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Global Environmental Issues Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Global Environmental Issues Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Global Environmental Issues Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Global Environmental Issues Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
@@ -5208,7 +5208,7 @@
       au < ready ; exists ; 2005 ; International Journal of Human Resources Development and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2006 ; International Journal of Human Resources Development and Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Human Resources Development and Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008 ; International Journal of Human Resources Development and Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008 ; International Journal of Human Resources Development and Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Human Resources Development and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Human Resources Development and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Human Resources Development and Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
@@ -5646,7 +5646,7 @@
 
       param[journal_id] = ijiq
 
-      au < ready ; exists ; 2007 ; International Journal of Information Quality Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; International Journal of Information Quality Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2008-2011 ; International Journal of Information Quality Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Information Quality Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015-2016 ; International Journal of Information Quality Volume 4 [partial] ; 4 ; http://www.inderscienceonline.com/ ; > #issue 3 & 4 not online yet
@@ -8087,7 +8087,7 @@
 
       param[journal_id] = ijnm
 
-      au < ready ; exists ; 2006-2007 ; International Journal of Nanomanufacturing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2006-2007 ; International Journal of Nanomanufacturing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Nanomanufacturing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Nanomanufacturing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Nanomanufacturing Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -8805,7 +8805,7 @@
       param[journal_id] = ijpmb
 
       au < ready ; exists ; 2005-2006 ; International Journal of Process Management and Benchmarking Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2007-2008 ; International Journal of Process Management and Benchmarking Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007-2008 ; International Journal of Process Management and Benchmarking Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2009-2013 ; International Journal of Process Management and Benchmarking Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014 ; International Journal of Process Management and Benchmarking Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015 ; International Journal of Process Management and Benchmarking Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
@@ -8978,7 +8978,7 @@
 
       param[journal_id] = ijpqm
 
-      au < ready ; exists ; 2006 ; International Journal of Productivity and Quality Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2006 ; International Journal of Productivity and Quality Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Productivity and Quality Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Productivity and Quality Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Productivity and Quality Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -9263,7 +9263,7 @@
 
       comment[vol5] = notReady multiple charsets on page. http://inderscience.metapress.com/content/e43jr3v2t0m6724t/fulltext.html
 
-      au < ready ; exists ; 2009 ; International Journal of Reasoning-based Intelligent Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Reasoning-based Intelligent Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Reasoning-based Intelligent Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Reasoning-based Intelligent Systems Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Reasoning-based Intelligent Systems Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -10079,7 +10079,7 @@
 
       param[journal_id] = ijsmm
 
-      au < ready ; exists ; 2005-2006 ; International Journal of Sport Management and Marketing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2005-2006 ; International Journal of Sport Management and Marketing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Sport Management and Marketing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Sport Management and Marketing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Sport Management and Marketing Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -11213,7 +11213,7 @@
       au < crawling ; exists ; 2006 ; International Journal of Vehicle Design Volume 40 ; 40 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2006 ; International Journal of Vehicle Design Volume 41 ; 41 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2006 ; International Journal of Vehicle Design Volume 42 ; 42 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2007 ; International Journal of Vehicle Design Volume 43 ; 43 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; International Journal of Vehicle Design Volume 43 ; 43 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Vehicle Design Volume 44 ; 44 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Vehicle Design Volume 45 ; 45 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Vehicle Design Volume 46 ; 46 ; https://www.inderscienceonline.com/ ; >
