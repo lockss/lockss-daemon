@@ -3220,7 +3220,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; British Yearbook of International Law Volume 75 ; 75 ; >
     au < manifest ; exists ; 2006 ; 2006 ; British Yearbook of International Law Volume 76 ; 76 ; >
     au < manifest ; exists ; 2007 ; 2007 ; British Yearbook of International Law Volume 77 ; 77 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; British Yearbook of International Law Volume 78 ; 78 ; >
+    au < testing ; exists ; 2008 ; 2008 ; British Yearbook of International Law Volume 78 ; 78 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; British Yearbook of International Law Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; British Yearbook of International Law Volume 80 ; 80 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; British Yearbook of International Law Volume 81 ; 81 ; >
@@ -5246,7 +5246,7 @@
 #    param[journal_id] = edrv
 #    #This journal is included in the Endocrine Society tdb file.
 #
-#    au < manifest ; exists ; 2008 ; 2008 ; Endocrine Reviews Volume 29 ; 29 ; >
+#    au < testing ; exists ; 2008 ; 2008 ; Endocrine Reviews Volume 29 ; 29 ; >
 #    au < exists ; exists ; 2009 ; 2009 ; Endocrine Reviews Volume 30 ; 30 ; >
 #    au < exists ; exists ; 2010 ; 2010 ; Endocrine Reviews Volume 31 ; 31 ; >
 #    au < exists ; exists ; 2011 ; 2011 ; Endocrine Reviews Volume 32 ; 32 ; >
@@ -9704,7 +9704,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; International Journal of Pharmacy Practice Volume 13 ; 13 ; >
     au < manifest ; exists ; 2006 ; 2006 ; International Journal of Pharmacy Practice Volume 14 ; 14 ; >
     au < manifest ; exists ; 2007 ; 2007 ; International Journal of Pharmacy Practice Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; International Journal of Pharmacy Practice Volume 16 ; 16 ; >
+    au < testing ; exists ; 2008 ; 2008 ; International Journal of Pharmacy Practice Volume 16 ; 16 ; >
     au < exists ; exists ; 2009 ; 2009 ; International Journal of Pharmacy Practice Volume 17 ; 17 ; >
     au < finished ; crawling ; 2010 ; 2010 ; International Journal of Pharmacy Practice Volume 18 ; 18 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; International Journal of Pharmacy Practice Volume 19 ; 19 ; reingest3.clockss.org:8083 >
@@ -13032,7 +13032,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; Journal of Pharmacy and Pharmacology Volume 57 ; 57 ; >
     au < manifest ; exists ; 2006 ; 2006 ; Journal of Pharmacy and Pharmacology Volume 58 ; 58 ; >
     au < manifest ; exists ; 2007 ; 2007 ; Journal of Pharmacy and Pharmacology Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Journal of Pharmacy and Pharmacology Volume 60 ; 60 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Journal of Pharmacy and Pharmacology Volume 60 ; 60 ; >
     au < crawling ; exists ; 2009 ; 2009 ; Journal of Pharmacy and Pharmacology Volume 61 ; 61 ; >
     au < finished ; crawling ; 2010 ; 2010 ; Journal of Pharmacy and Pharmacology Volume 62 ; 62 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 2011 ; Journal of Pharmacy and Pharmacology Volume 63 ; 63 ; reingest1.clockss.org:8082 >
@@ -14794,7 +14794,7 @@
 #    au < manifest ; exists ; 2005 ; 2005 ; Mammalian Species Volume Issue 762-787 ; Issue 762-787 ; >
 #    au < manifest ; exists ; 2006 ; 2006 ; Mammalian Species Volume Issue 788-803 ; Issue 788-803 ; >
 #    au < manifest ; exists ; 2007 ; 2007 ; Mammalian Species Volume Issue 804-807 ; Issue 804-807 ; >
-#    au < manifest ; exists ; 2008 ; 2008 ; Mammalian Species Volume Issue 808-823 ; Issue 808-823 ; >
+#    au < testing ; exists ; 2008 ; 2008 ; Mammalian Species Volume Issue 808-823 ; Issue 808-823 ; >
 #    au < exists ; exists ; 2009 ; 2009 ; Mammalian Species Volume Issue 824-847 ; Issue 824-847 ; >
 
 
@@ -15460,7 +15460,7 @@
 #    au < manifest ; exists ; 2005 ; 2005 ; Molecular Endocrinology Volume 19 ; 19 ; >
 #    au < manifest ; exists ; 2006 ; 2006 ; Molecular Endocrinology Volume 20 ; 20 ; >
 #    au < manifest ; exists ; 2007 ; 2007 ; Molecular Endocrinology Volume 21 ; 21 ; >
-#    au < manifest ; exists ; 2008 ; 2008 ; Molecular Endocrinology Volume 22 ; 22 ; >
+#    au < testing ; exists ; 2008 ; 2008 ; Molecular Endocrinology Volume 22 ; 22 ; >
 #    au < exists ; exists ; 2009 ; 2009 ; Molecular Endocrinology Volume 23 ; 23 ; >
 #    au < exists ; exists ; 2010 ; 2010 ; Molecular Endocrinology Volume 24 ; 24 ; >
 #    au < exists ; exists ; 2011 ; 2011 ; Molecular Endocrinology Volume 25 ; 25 ; >
@@ -17891,7 +17891,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; Poultry Science Volume 84 ; 84 ; >
     au < manifest ; exists ; 2006 ; 2006 ; Poultry Science Volume 85 ; 85 ; >
     au < manifest ; exists ; 2007 ; 2007 ; Poultry Science Volume 86 ; 86 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Poultry Science Volume 87 ; 87 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Poultry Science Volume 87 ; 87 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Poultry Science Volume 88 ; 88 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Poultry Science Volume 89 ; 89 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Poultry Science Volume 90 ; 90 ; >
@@ -18126,7 +18126,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; Progress of Theoretical Physics Supplement Volume 157-160 ; 157-160 ; >
     au < manifest ; exists ; 2006 ; 2006 ; Progress of Theoretical Physics Supplement Volume 161-165 ; 161-165 ; >
     au < manifest ; exists ; 2007 ; 2007 ; Progress of Theoretical Physics Supplement Volume 166-171 ; 166-171 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Progress of Theoretical Physics Supplement Volume 172-176 ; 172-176 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Progress of Theoretical Physics Supplement Volume 172-176 ; 172-176 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Progress of Theoretical Physics Supplement Volume 177-182 ; 177-182 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Progress of Theoretical Physics Supplement Volume 183-186 ; 183-186 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Progress of Theoretical Physics Supplement Volume 187-191 ; 187-191 ; >
@@ -21513,7 +21513,7 @@
     au < manifest ; exists ; 2005 ; 2005 ; The Journal of Applied Poultry Research Volume 14 ; 14 ; >
     au < manifest ; exists ; 2006 ; 2006 ; The Journal of Applied Poultry Research Volume 15 ; 15 ; >
     au < manifest ; exists ; 2007 ; 2007 ; The Journal of Applied Poultry Research Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; The Journal of Applied Poultry Research Volume 17 ; 17 ; >
+    au < testing ; exists ; 2008 ; 2008 ; The Journal of Applied Poultry Research Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; The Journal of Applied Poultry Research Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of Applied Poultry Research Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Journal of Applied Poultry Research Volume 20 ; 20 ; >
@@ -22407,7 +22407,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; The Leo Baeck Institute Year Book Volume 65 ; 65 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; 2022 ; The Leo Baeck Institute Year Book Volume 66 ; 66 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; The Leo Baeck Institute Year Book Volume 67 ; 67 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2024 ; 2024 ; The Leo Baeck Institute Year Book Volume 68 ; 68 ; >
+    au < testing ; exists ; 2024 ; 2024 ; The Leo Baeck Institute Year Book Volume 68 ; 68 ; >
     au < expected ; exists ; 2025 ; 2025 ; The Leo Baeck Institute Year Book Volume 69 ; 69 ; >
 
   }

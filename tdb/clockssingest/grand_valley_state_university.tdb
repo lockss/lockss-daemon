@@ -109,22 +109,22 @@
     param[journal_abbr] = tfr
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < manifest ; exists ; 2009 ; The Foundation Review Volume 1 ; 1 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2010 ; The Foundation Review Volume 2 ; 2 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2011 ; The Foundation Review Volume 3 ; 3 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2012 ; The Foundation Review Volume 4 ; 4 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2013 ; The Foundation Review Volume 5 ; 5 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2014 ; The Foundation Review Volume 6 ; 6 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2015 ; The Foundation Review Volume 7 ; 7 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2016 ; The Foundation Review Volume 8 ; 8 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2017 ; The Foundation Review Volume 9 ; 9 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2018 ; The Foundation Review Volume 10 ; 10 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2019 ; The Foundation Review Volume 11 ; 11 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2020 ; The Foundation Review Volume 12 ; 12 ; https://scholarworks.gvsu.edu/ ; > 
-    au < manifest ; exists ; 2021 ; The Foundation Review Volume 13 ; 13 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2022 ; The Foundation Review Volume 14 ; 14 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2023 ; The Foundation Review Volume 15 ; 15 ; https://scholarworks.gvsu.edu/ ; >
-    au < manifest ; exists ; 2024 ; The Foundation Review Volume 16 ; 16 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2009 ; The Foundation Review Volume 1 ; 1 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2010 ; The Foundation Review Volume 2 ; 2 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2011 ; The Foundation Review Volume 3 ; 3 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2012 ; The Foundation Review Volume 4 ; 4 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2013 ; The Foundation Review Volume 5 ; 5 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2014 ; The Foundation Review Volume 6 ; 6 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2015 ; The Foundation Review Volume 7 ; 7 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2016 ; The Foundation Review Volume 8 ; 8 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2017 ; The Foundation Review Volume 9 ; 9 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2018 ; The Foundation Review Volume 10 ; 10 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2019 ; The Foundation Review Volume 11 ; 11 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2020 ; The Foundation Review Volume 12 ; 12 ; https://scholarworks.gvsu.edu/ ; > 
+    au < testing ; exists ; 2021 ; The Foundation Review Volume 13 ; 13 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2022 ; The Foundation Review Volume 14 ; 14 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2023 ; The Foundation Review Volume 15 ; 15 ; https://scholarworks.gvsu.edu/ ; >
+    au < testing ; exists ; 2024 ; The Foundation Review Volume 16 ; 16 ; https://scholarworks.gvsu.edu/ ; >
     au < expected ; exists ; 2025 ; The Foundation Review Volume 17 ; 17 ; https://scholarworks.gvsu.edu/ ; >
 
   }

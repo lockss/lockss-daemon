@@ -79,8 +79,8 @@
 
       au < notReady ; exists ; 2018 ; Resourceedings Volume 2018 ; 1 ; 2018 ; > #500 Internal Server Error, 404 Not Found, blank page on Resourceedings/issue/view/18/10
       au < frozen ; exists ; 2019 ; Resourceedings Volume 2019 ; 2 ; 2019 ; >
-      au < manifest ; exists ; 2023 ; Resourceedings Volume 2023 ; 3 ; 2023 ; >
-      au < manifest ; exists ; 2024 ; Resourceedings Volume 2024 ; 4 ; 2024 ; >
+      au < testing ; exists ; 2023 ; Resourceedings Volume 2023 ; 3 ; 2023 ; >
+      au < testing ; exists ; 2024 ; Resourceedings Volume 2024 ; 4 ; 2024 ; >
 
   }
 
