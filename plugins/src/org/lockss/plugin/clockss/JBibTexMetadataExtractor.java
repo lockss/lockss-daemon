@@ -15,6 +15,8 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Map;
 
+
+// Publisher Bibtex may not be consistent, also some KEY may not be defined by the Jbibtex library
 /*
 @article{Sandoval2024Recent,
 	journal={healthbook TIMES Oncology Hematology},
@@ -109,66 +111,40 @@ public class JBibTexMetadataExtractor implements FileMetadataExtractor {
         return am;
     }
 
+    {}
+
     private void extractMetadataFromBibEntry(BibTeXEntry bibEntry, ArticleMetadata am) {
-        // ARTICLE TITLE
-        Value title = bibEntry.getField(BibTeXEntry.KEY_TITLE);
-        if (title instanceof StringValue) {
-            String stitle = ((StringValue) title).toUserString();
-            log.debug3("Title: " + stitle);
-            am.put(MetadataField.FIELD_ARTICLE_TITLE, stitle);
+
+        log.debug3("BibTeX Entry Fields:");
+        for (Map.Entry<Key, Value> field : bibEntry.getFields().entrySet()) {
+            log.debug3("  Key = " + field.getKey().getValue() + " ; Value = " + field.getValue().toUserString());
+            am.putRaw(field.getKey().getValue(),field.getValue().toUserString());
         }
 
-        // AUTHOR
-        Value author = bibEntry.getField(BibTeXEntry.KEY_AUTHOR);
-        if (author instanceof StringValue) {
-            String sauthor = ((StringValue) author).toUserString();
-            log.debug3("Author: " + sauthor);
-            am.put(MetadataField.FIELD_AUTHOR, sauthor);
-        }
 
-        // DATE (YEAR)
-        Value year = bibEntry.getField(BibTeXEntry.KEY_YEAR);
-        if (year instanceof StringValue) {
-            String syear = ((StringValue) year).toUserString();
-            log.debug3("Date: " + syear);
-            am.put(MetadataField.FIELD_DATE, syear);
-        }
+        putField(bibEntry.getField(BibTeXEntry.KEY_TITLE), MetadataField.FIELD_ARTICLE_TITLE, "Title");
+        putField(bibEntry.getField(BibTeXEntry.KEY_AUTHOR), MetadataField.FIELD_AUTHOR, "Author");
 
-        // PUBLICATION TITLE
         Value journal = bibEntry.getField(BibTeXEntry.KEY_JOURNAL);
-        if (journal instanceof StringValue) {
-            String sjournal = ((StringValue) journal).toUserString();
+        if (journal != null) {
+            String sjournal = journal.toUserString();
             log.debug3("Publication Title (journal): " + sjournal);
             am.put(MetadataField.FIELD_PUBLICATION_TITLE, sjournal);
         } else {
             Value booktitle = bibEntry.getField(new Key("booktitle"));
-            if (booktitle instanceof StringValue) {
-                String sbooktitle = ((StringValue) booktitle).toUserString();
+            if (booktitle != null) {
+                String sbooktitle = booktitle.toUserString();
                 log.debug3("Publication Title (book): " + sbooktitle);
                 am.put(MetadataField.FIELD_PUBLICATION_TITLE, sbooktitle);
             }
         }
 
-        // VOLUME
-        Value volume = bibEntry.getField(BibTeXEntry.KEY_VOLUME);
-        if (volume instanceof StringValue) {
-            String svolume = ((StringValue) volume).toUserString();
-            log.debug3("Volume: " + svolume);
-            am.put(MetadataField.FIELD_VOLUME, svolume);
-        }
+        putField(bibEntry.getField(BibTeXEntry.KEY_VOLUME), MetadataField.FIELD_VOLUME, "Volume");
+        putField(bibEntry.getField(BibTeXEntry.KEY_NUMBER), MetadataField.FIELD_ISSUE, "Issue");
 
-        // ISSUE
-        Value number = bibEntry.getField(BibTeXEntry.KEY_NUMBER);
-        if (number instanceof StringValue) {
-            String snumber = ((StringValue) number).toUserString();
-            log.debug3("Issue: " + snumber);
-            am.put(MetadataField.FIELD_ISSUE, snumber);
-        }
-
-        // START & END PAGES
         Value pages = bibEntry.getField(BibTeXEntry.KEY_PAGES);
-        if (pages instanceof StringValue) {
-            String spages = ((StringValue) pages).toUserString();
+        if (pages != null) {
+            String spages = pages.toUserString();
             String[] pageParts = spages.split("--|–|-");
             if (pageParts.length > 0) {
                 String sstart = pageParts[0].trim();
@@ -182,36 +158,60 @@ public class JBibTexMetadataExtractor implements FileMetadataExtractor {
             }
         }
 
-        // DOI
-        Value doi = bibEntry.getField(new Key("doi"));
-        if (doi instanceof StringValue) {
-            String sdoi = ((StringValue) doi).toUserString();
-            log.debug3("DOI: " + sdoi);
-            am.put(MetadataField.FIELD_DOI, sdoi);
+        putField(bibEntry.getField(new Key("doi")), MetadataField.FIELD_DOI, "DOI");
+        putField(bibEntry.getField(new Key("issn")), MetadataField.FIELD_ISSN, "ISSN");
+        putField(bibEntry.getField(new Key("isbn")), MetadataField.FIELD_ISBN, "ISBN");
+        putField(bibEntry.getField(BibTeXEntry.KEY_URL), MetadataField.FIELD_ACCESS_URL, "Access URL");
+
+        Value dateVal = bibEntry.getField(new Key("date"));
+        log.debug3("Raw date value: " + (dateVal != null ? dateVal.toUserString() : "null"));
+
+        if (dateVal != null) {
+            String sdate = dateVal.toUserString().trim();
+            log.debug3("Raw date value not null, using BibTeX 'date' field: " + sdate);
+            am.put(MetadataField.FIELD_DATE, sdate);
+        } else {
+
+            Value yearVal = bibEntry.getField(BibTeXEntry.KEY_YEAR);
+            Value monthVal = bibEntry.getField(new Key("month"));
+            Value dayVal = bibEntry.getField(new Key("day"));
+
+            String year = (yearVal != null) ? yearVal.toUserString().trim() : "";
+            String month = (monthVal != null) ? monthVal.toUserString().trim() : "";
+            String day = (dayVal != null) ? dayVal.toUserString().trim() : "";
+
+            log.debug3("Raw year value: " + (yearVal != null ? yearVal.toUserString() : "null"));
+            log.debug3("Raw month value: " + (monthVal != null ? monthVal.toUserString() : "null"));
+            log.debug3("Raw day value: " + (dayVal != null ? dayVal.toUserString() : "null"));
+
+
+            String pubDate = null;
+
+            try {
+                if (!month.isEmpty() && !day.isEmpty() && !year.isEmpty()) {
+                    int m = Integer.parseInt(month);
+                    int d = Integer.parseInt(day);
+                    pubDate = String.format("%02d-%02d-%s", m, d, year);
+                } else if (!year.isEmpty()) {
+                    pubDate = year;
+                }
+
+                if (pubDate != null) {
+                    log.debug3("Formatted Publication Date: " + pubDate);
+                    am.put(MetadataField.FIELD_DATE, pubDate);
+                }
+            } catch (NumberFormatException e) {
+                log.debug3("Invalid numeric date in BibTeX entry: " + e.getMessage());
+            }
         }
 
-        // ISSN
-        Value issn = bibEntry.getField(new Key("issn"));
-        if (issn instanceof StringValue) {
-            String sissn = ((StringValue) issn).toUserString();
-            log.debug3("ISSN: " + sissn);
-            am.put(MetadataField.FIELD_ISSN, sissn);
-        }
+    }
 
-        // ISBN
-        Value isbn = bibEntry.getField(new Key("isbn"));
-        if (isbn instanceof StringValue) {
-            String sisbn = ((StringValue) isbn).toUserString();
-            log.debug3("ISBN: " + sisbn);
-            am.put(MetadataField.FIELD_ISBN, sisbn);
-        }
-
-        // ACCESS URL
-        Value url = bibEntry.getField(BibTeXEntry.KEY_URL);
-        if (url instanceof StringValue) {
-            String surl = ((StringValue) url).toUserString();
-            log.debug3("Access URL: " + surl);
-            am.put(MetadataField.FIELD_ACCESS_URL, surl);
+    private void putField(Value value, MetadataField field, String label) {
+        if (value != null) {
+            String sval = value.toUserString();
+            log.debug3(label + ": " + sval);
+            am.put(field, sval);
         }
     }
 }
