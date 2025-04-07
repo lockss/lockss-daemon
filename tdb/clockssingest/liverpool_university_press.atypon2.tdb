@@ -363,7 +363,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Catalan Review Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Catalan Review Volume 33 ; 33 ; >
     au < ready ; exists ; 2020 ; Catalan Review Volume 34 ; 34 ; >
-    au < ready ; exists ; 2021 ; Catalan Review Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2021 ; Catalan Review Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2022 ; Catalan Review Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2023 ; Catalan Review Volume 37 ; 37 ; >
     au < crawling ; exists ; 2024 ; Catalan Review Volume 38 ; 38 ; >
@@ -795,7 +795,7 @@
     #Published 2021-present
     #journal_num = 94
 
-    au < ready ; exists ; 2021 ; International Journal of English for Academic Purposes: Research and Practice Volume 2021 ; 2021 ; >
+    au < crawling ; exists ; 2021 ; International Journal of English for Academic Purposes: Research and Practice Volume 2021 ; 2021 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of English for Academic Purposes: Research and Practice Volume 2022 ; 2022 ; >
     au < manifest ; exists ; 2023 ; International Journal of English for Academic Purposes: Research and Practice Volume 3 ; 3 ; >
     au < manifest ; exists ; 2024 ; International Journal of English for Academic Purposes: Research and Practice Volume 4 ; 4 ; >
@@ -1658,7 +1658,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Romani Studies Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Romani Studies Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Romani Studies Volume 29 ; 29 ; >
-    au < ready ; exists ; 2020 ; Romani Studies Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2020 ; Romani Studies Volume 30 ; 30 ; >
     au < ready ; exists ; 2021 ; Romani Studies Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2022 ; Romani Studies Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2023 ; Romani Studies Volume 33 ; 33 ; >
