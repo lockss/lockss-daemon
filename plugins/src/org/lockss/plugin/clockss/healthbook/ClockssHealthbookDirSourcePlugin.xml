@@ -65,7 +65,12 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>15</string>
+        <string>16</string>
+    </entry>
+    <entry>
+        <!--  for support of jbibtex-->
+        <string>required_daemon_version</string>
+        <string>1.76.0</string>
     </entry>
     <entry>
         <string>au_name</string>

@@ -15,6 +15,6 @@ public class SourceBibtexMetadataExtractorFactory implements FileMetadataExtract
 
     log.debug3("Inside Source Metadata extractor factory for BibTeX files");
 
-    return new BibtexMetadataExtractor();
+    return new JBibTexMetadataExtractor();
   }
 }
