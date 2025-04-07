@@ -1798,7 +1798,7 @@
     au < finished ; manifest ; 2022 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 15 ; 15 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2025 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 17 ; 17 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2025 ; International Journal of Grid and High Performance Computing (IJGHPC) Volume 17 ; 17 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4214,7 +4214,7 @@
     au < deepCrawl ; exists ; 2022 ; Journal of Electronic Commerce in Organizations (JECO) Volume 20 ; 20 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2023 ; Journal of Electronic Commerce in Organizations (JECO) Volume 21 ; 21 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; Journal of Electronic Commerce in Organizations (JECO) Volume 22 ; 22 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2025 ; Journal of Electronic Commerce in Organizations (JECO) Volume 23 ; 23 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2025 ; Journal of Electronic Commerce in Organizations (JECO) Volume 23 ; 23 ; https://www.igi-global.com/ ; >
 
   }
 
