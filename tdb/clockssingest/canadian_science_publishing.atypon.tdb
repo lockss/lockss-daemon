@@ -1622,12 +1622,12 @@
     au < frozen ; exists ; 2014 ; Journal of Unmanned Vehicle Systems Volume 2, Issues 1-3 ; 02 ; http://www.nrcresearchpress.com/ ; >
     au < finished ; finished ; 2014 ; Journal of Unmanned Vehicle Systems Volume 2, Issue 4 ; 2 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2015 ; Journal of Unmanned Vehicle Systems Volume 3 ; 3 ; http://www.nrcresearchpress.com/ ; >
-    au < frozen ; exists ; 2016 ; Journal of Unmanned Vehicle Systems Volume 4 ; 4 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2017 ; Journal of Unmanned Vehicle Systems Volume 5 ; 5 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2018 ; Journal of Unmanned Vehicle Systems Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
+    au < finished ; manifest ; 2016 ; Journal of Unmanned Vehicle Systems Volume 4 ; 4 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; Journal of Unmanned Vehicle Systems Volume 5 ; 5 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Journal of Unmanned Vehicle Systems Volume 6 ; 6 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2019 ; Journal of Unmanned Vehicle Systems Volume 7 ; 7 ; https://www.nrcresearchpress.com/ ; >
-    au < frozen ; exists ; 2020 ; Journal of Unmanned Vehicle Systems Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2021 ; Journal of Unmanned Vehicle Systems Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
+    au < finished ; manifest ; 2020 ; Journal of Unmanned Vehicle Systems Volume 8 ; 8 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Journal of Unmanned Vehicle Systems Volume 9 ; 9 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
     #As of 2022 journal changed name to Drone Systems and Applications 2564-4939
     }
     
@@ -1849,26 +1849,26 @@
     au < manifest ; exists ; 1996 ; Transactions of the Canadian Society for Mechanical Engineering Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1997 ; Transactions of the Canadian Society for Mechanical Engineering Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1998 ; Transactions of the Canadian Society for Mechanical Engineering Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 1999 ; Transactions of the Canadian Society for Mechanical Engineering Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2000 ; Transactions of the Canadian Society for Mechanical Engineering Volume 24 ; 24 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2001 ; Transactions of the Canadian Society for Mechanical Engineering Volume 25 ; 25 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2002 ; Transactions of the Canadian Society for Mechanical Engineering Volume 26 ; 26 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2003 ; Transactions of the Canadian Society for Mechanical Engineering Volume 27 ; 27 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2004 ; Transactions of the Canadian Society for Mechanical Engineering Volume 28 ; 28 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2005 ; Transactions of the Canadian Society for Mechanical Engineering Volume 29 ; 29 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2006 ; Transactions of the Canadian Society for Mechanical Engineering Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2007 ; Transactions of the Canadian Society for Mechanical Engineering Volume 31 ; 31 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2008 ; Transactions of the Canadian Society for Mechanical Engineering Volume 32 ; 32 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2009 ; Transactions of the Canadian Society for Mechanical Engineering Volume 33 ; 33 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2010 ; Transactions of the Canadian Society for Mechanical Engineering Volume 34 ; 34 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2011 ; Transactions of the Canadian Society for Mechanical Engineering Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
+    au < finished ; manifest ; 1999 ; Transactions of the Canadian Society for Mechanical Engineering Volume 23 ; 23 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2000 ; Transactions of the Canadian Society for Mechanical Engineering Volume 24 ; 24 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2001 ; Transactions of the Canadian Society for Mechanical Engineering Volume 25 ; 25 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; Transactions of the Canadian Society for Mechanical Engineering Volume 26 ; 26 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; Transactions of the Canadian Society for Mechanical Engineering Volume 27 ; 27 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; Transactions of the Canadian Society for Mechanical Engineering Volume 28 ; 28 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2005 ; Transactions of the Canadian Society for Mechanical Engineering Volume 29 ; 29 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Transactions of the Canadian Society for Mechanical Engineering Volume 30 ; 30 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Transactions of the Canadian Society for Mechanical Engineering Volume 31 ; 31 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Transactions of the Canadian Society for Mechanical Engineering Volume 32 ; 32 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; Transactions of the Canadian Society for Mechanical Engineering Volume 33 ; 33 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Transactions of the Canadian Society for Mechanical Engineering Volume 34 ; 34 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Transactions of the Canadian Society for Mechanical Engineering Volume 35 ; 35 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2012 ; Transactions of the Canadian Society for Mechanical Engineering Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2003 ; Transactions of the Canadian Society for Mechanical Engineering Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2004 ; Transactions of the Canadian Society for Mechanical Engineering Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2015 ; Transactions of the Canadian Society for Mechanical Engineering Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2016 ; Transactions of the Canadian Society for Mechanical Engineering Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2017 ; Transactions of the Canadian Society for Mechanical Engineering Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2018 ; Transactions of the Canadian Society for Mechanical Engineering Volume 42 ; 42 ; https://cdnsciencepub.com/ ; >
+    au < finished ; manifest ; 2018 ; Transactions of the Canadian Society for Mechanical Engineering Volume 42 ; 42 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2019 ; Transactions of the Canadian Society for Mechanical Engineering Volume 43 ; 43 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2020 ; Transactions of the Canadian Society for Mechanical Engineering Volume 44 ; 44 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2021 ; Transactions of the Canadian Society for Mechanical Engineering Volume 45 ; 45 ; https://cdnsciencepub.com/ ; >
