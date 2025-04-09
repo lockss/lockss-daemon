@@ -4,7 +4,7 @@
     name = Wasit University, College of Education for Pure Sciences ;
     info[contract] = 2025 ;
     info[back] = 2020 ;
-    info[tester] = 4 ;
+    info[tester] = 8 ;
     info[platform] = OJS3
   >
 
@@ -24,8 +24,8 @@
     #param[base_url] = https://wjps.uowasit.edu.iq/
     param[journal_id] = wjps
 
-    au < testing ; exists ; 2023 ; 2023 ; Wasit Journal for Pure Sciences Volume 2 ; 2 ; https://wjps.uowasit.edu.iq/ ; >
-    au < testing ; exists ; 2024 ; 2024 ; Wasit Journal for Pure Sciences Volume 3 ; 3 ; https://wjps.uowasit.edu.iq/ ; >
+    au < ready ; exists ; 2023 ; 2023 ; Wasit Journal for Pure Sciences Volume 2 ; 2 ; https://wjps.uowasit.edu.iq/ ; >
+    au < ready ; exists ; 2024 ; 2024 ; Wasit Journal for Pure Sciences Volume 3 ; 3 ; https://wjps.uowasit.edu.iq/ ; >
     au < manifest ; exists ; 2025 ; 2025 ; Wasit Journal for Pure Sciences Volume 4 ; 4 ; https://wjps.uowasit.edu.iq/ ; >
 
   }
