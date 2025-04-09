@@ -1404,7 +1404,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Information Policy Volume 2021 ; 2021 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Journal of Information Policy Volume 12 ; 12 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Journal of Information Policy Volume 13 ; 13 ; 2023 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2024 ; Journal of Information Policy Volume 14 ; 14 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; Journal of Information Policy Volume 14 ; 14 ; 2024 ; >
       au < expected ; exists ; 2025 ; Journal of Information Policy Volume 15 ; 15 ; 2025 ; >
 
   }
@@ -1758,7 +1758,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2021 ; 2021 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 6 ; 6 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 7 ; 7 ; 2023 ; >
-      au < ready ; exists ; 2024 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 8 ; 8 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 8 ; 8 ; 2024 ; >
       au < expected ; exists ; 2025 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 9 ; 9 ; 2025 ; >
 
   }

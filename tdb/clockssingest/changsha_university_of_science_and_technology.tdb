@@ -22,7 +22,7 @@
       param[base_url] = https://zwgl1980.csust.edu.cn/
       param[journal_abbr] = journal
 
-      au < ready ; exists ; 2024 ; Journal of China & Foreign Highway Volume 44 ; 44 ; >
+      au < crawling ; exists ; 2024 ; Journal of China & Foreign Highway Volume 44 ; 44 ; >
       au < manifest ; exists ; 2025 ; Journal of China & Foreign Highway Volume 45 ; 45 ; >
 
   }
