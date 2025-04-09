@@ -311,6 +311,30 @@ public class BaseAtyponMetadataUtil {
       }
     }
 
+    // Atypon Aslha check
+    String pubNameAslha = (tdbau == null) ? null : tdbau.getPublisherName();
+    log.debug3("Aslha Check: Publisher Specific Checks for Aslha = " + pubNameAslha);
+
+    if (isInAu && (pubNameAslha != null)) {
+      Boolean isAslha = pubNameAslha.equalsIgnoreCase("American Speech-Language-Hearing Association");
+      String foundVolumeAlsha = am.get(MetadataField.FIELD_VOLUME);
+      if (isAslha) {
+        log.debug3("Aslha Check:  Publisher Specific Checks for Aslha");
+
+        if (!StringUtils.isEmpty(foundVolumeAlsha)) {
+          // Get the AU's volume name from the AU properties. This must be set
+          TypedEntryMap tfProps = au.getProperties();
+          String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
+          if (isInAu && !(StringUtils.isEmpty(foundVolumeAlsha))) {
+            isInAu =  ( (AU_volume != null) && (AU_volume.equals( foundVolumeAlsha)));
+            log.debug3("Aslha Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeAlsha + ", AU_volume=" + AU_volume + ", isInAu = " + isInAu);
+          }
+        }
+      }
+      return isInAu;
+    }
+
     // END PUBLISHER SPECIFIC CHECKS //
 
     // Use the journalTitle and volume name from the ArticleMetadata
