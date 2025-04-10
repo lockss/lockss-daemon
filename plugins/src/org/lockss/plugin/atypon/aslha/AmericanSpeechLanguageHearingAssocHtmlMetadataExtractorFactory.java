@@ -3,6 +3,7 @@ package org.lockss.plugin.atypon.aslha;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
@@ -53,6 +54,15 @@ public class AmericanSpeechLanguageHearingAssocHtmlMetadataExtractorFactory exte
         return;
       }
 
+      ArchivalUnit au = cu.getArchivalUnit();
+      String journal_id = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
+
+      if (journal_id == null) {
+        return;
+      }
+
+      log.debug3("journal_id=============" + journal_id);
+
       String additionalVolume = null;
 
       try {
@@ -85,8 +95,24 @@ public class AmericanSpeechLanguageHearingAssocHtmlMetadataExtractorFactory exte
 
       // Only emit if this item is likely to be from this AU
       // protect against counting overcrawled articles
-      ArchivalUnit au = cu.getArchivalUnit();
       log.debug3("AmericanSpeechLanguageHearingAssoc Check: ---------AmericanSpeechLanguageHearingAssocAtyponHtmlMetadataExtractor start checking-------");
+
+      //Do a journal_id check before volume check, for "ajslp" and "aja" and "persp"
+
+      if (journal_id.equals("ajslp") || journal_id.equals("aja") || journal_id.equals("persp")) {
+
+        if ((cu.getUrl().contains(journal_id))
+                || (cu.getUrl().contains(journal_id.toUpperCase()))) {
+          log.debug3("AmericanSpeechLanguageHearingAssoc check journal_id in url, journal_id = " + journal_id + ", url = " + cu.getUrl());
+        } else {
+          log.debug3("AmericanSpeechLanguageHearingAssoc check journal_id in url failed, journal_id = " + journal_id + ", url = " + cu.getUrl());
+          return;
+        }
+      } else {
+        log.debug3("AmericanSpeechLanguageHearingAssoc check journal_id in url, not target journal_id, pass on, journal_id = " + journal_id + ", url = " + cu.getUrl());
+      }
+
+
       if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
         log.debug3("AmericanSpeechLanguageHearingAssoc Check: ---------AmericanSpeechLanguageHearingAssocAtyponHtmlMetadataExtractor failed-------");
         return;
