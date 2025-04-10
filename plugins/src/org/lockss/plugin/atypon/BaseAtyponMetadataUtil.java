@@ -318,20 +318,29 @@ public class BaseAtyponMetadataUtil {
     if (isInAu && (pubNameAslha != null)) {
       Boolean isAslha = pubNameAslha.equalsIgnoreCase("American Speech-Language-Hearing Association");
       String foundVolumeAlsha = am.get(MetadataField.FIELD_VOLUME);
+      String AU_volume = null;
       if (isAslha) {
         log.debug3("Aslha Check:  Publisher Specific Checks for Aslha");
+        log.debug3("Aslha Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeAlsha + ", AU_volume=" + AU_volume + ", isInAu = " + isInAu);
 
         if (!StringUtils.isEmpty(foundVolumeAlsha)) {
           // Get the AU's volume name from the AU properties. This must be set
           TypedEntryMap tfProps = au.getProperties();
-          String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+          AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
 
           if (isInAu && !(StringUtils.isEmpty(foundVolumeAlsha))) {
             isInAu =  ( (AU_volume != null) && (AU_volume.equals( foundVolumeAlsha)));
             log.debug3("Aslha Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeAlsha + ", AU_volume=" + AU_volume + ", isInAu = " + isInAu);
+          } else {
+            isInAu = false;
+            log.debug3("Aslha Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeAlsha + ", AU_volume=" + AU_volume + ", return isInAu = " + isInAu);
           }
+        } else {
+          isInAu = false;
+          log.debug3("Aslha Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeAlsha + ", AU_volume=" + AU_volume + ", return_2 isInAu = " + isInAu);
         }
       }
+      log.debug3("Aslha Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeAlsha + ", AU_volume=" + AU_volume + ", final return isInAu = " + isInAu);
       return isInAu;
     }
 
