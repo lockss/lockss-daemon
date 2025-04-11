@@ -9453,6 +9453,38 @@
   {
 
     title <
+      name = International Journal of Food Science & Technology ;
+      issn = 0950-5423 ;
+      eissn = 1365-2621 ;
+      issnl = 0950-5423
+    >
+
+    param[journal_id] = ijfst
+
+    au < exists ; exists ; 2008 ; 2008 ; International Journal of Food Science & Technology Volume 43 ; 43 ; >
+    au < exists ; exists ; 2009 ; 2009 ; International Journal of Food Science & Technology Volume 44 ; 44 ; >
+    au < exists ; exists ; 2010 ; 2010 ; International Journal of Food Science & Technology Volume 45 ; 45 ; >
+    au < exists ; exists ; 2011 ; 2011 ; International Journal of Food Science & Technology Volume 46 ; 46 ; >
+    au < exists ; exists ; 2012 ; 2012 ; International Journal of Food Science & Technology Volume 47 ; 47 ; >
+    au < exists ; exists ; 2013 ; 2013 ; International Journal of Food Science & Technology Volume 48 ; 48 ; >
+    au < exists ; exists ; 2014 ; 2014 ; International Journal of Food Science & Technology Volume 49 ; 49 ; >
+    au < exists ; exists ; 2015 ; 2015 ; International Journal of Food Science & Technology Volume 50 ; 50 ; >
+    au < exists ; exists ; 2016 ; 2016 ; International Journal of Food Science & Technology Volume 51 ; 51 ; >
+    au < exists ; exists ; 2017 ; 2017 ; International Journal of Food Science & Technology Volume 52 ; 52 ; >
+    au < exists ; exists ; 2018 ; 2018 ; International Journal of Food Science & Technology Volume 53 ; 53 ; >
+    au < exists ; exists ; 2019 ; 2019 ; International Journal of Food Science & Technology Volume 54 ; 54 ; >
+    au < exists ; exists ; 2020 ; 2020 ; International Journal of Food Science & Technology Volume 55 ; 55 ; >
+    au < exists ; exists ; 2021 ; 2021 ; International Journal of Food Science & Technology Volume 56 ; 56 ; >
+    au < exists ; exists ; 2022 ; 2022 ; International Journal of Food Science & Technology Volume 57 ; 57 ; >
+    au < exists ; exists ; 2023 ; 2023 ; International Journal of Food Science & Technology Volume 58 ; 58 ; >
+    au < exists ; exists ; 2024 ; 2024 ; International Journal of Food Science & Technology Volume 59 ; 59 ; >
+    au < exists ; exists ; 2025 ; 2025 ; International Journal of Food Science & Technology Volume 60 ; 60 ; >
+
+  }
+
+  {
+
+    title <
       name = International Journal of Law and Information Technology ;
       issn = 0967-0769 ;
       eissn = 1464-3693 ;
@@ -15365,7 +15397,7 @@
     >
 
     param[journal_id] = mrcr
-    #Content had been processed under T&F from 2017 volume 1 to 2021 volume 5
+    #Content had been processed in T&F from 2017 volume 1 to 2021 volume 5
 
     au < finished ; manifest ; 2022 ; 2022 ; Modern Rheumatology Case Reports Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Modern Rheumatology Case Reports Volume 7 ; 7 ; reingest3.clockss.org:8083 >
@@ -21752,6 +21784,7 @@
         #param[base_url] = http://www.jimmunol.org/
         param[journal_id] = jimmunol
         #Previously published by American Association of Immunologists
+        #volume 212 and prior had been processed in ClockssAAISilverchairPlugin
 
         au < crawling ; exists ; 2024 ; 2024 ; The Journal of Immunology Volume 213 ; 213 ; >
         au < manifest ; exists ; 2025 ; 2025 ; The Journal of Immunology Volume 214 ; 214 ; >
@@ -21768,6 +21801,7 @@
         #param[base_url] = http://www.immunohorizons.org/
         param[journal_id] = immunohorizons
         #Previously published by American Association of Immunologists
+        #volume 7 and prior had been processed in ClockssAAISilverchairPlugin
 
         au < crawling ; exists ; 2024 ; 2024 ; ImmunoHorizons Volume 8 ; 8 ; >
         au < manifest ; exists ; 2025 ; 2025 ; ImmunoHorizons Volume 9 ; 9 ; >
