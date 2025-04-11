@@ -566,7 +566,7 @@
       au < doNotProcess ; 2020 ; 5 ; Glossa: a journal of general linguistics Volume 2020 ; 2020 >
       au < released ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 >
       au < released ; 2022 ; 7 ; Glossa: a journal of general linguistics Volume 2022 ; 2022 >
-      au < exists ; 2023 ; 8 ; Glossa: a journal of general linguistics Volume 2023 ; 2023 >
+      au < notReady ; 2023 ; 8 ; Glossa: a journal of general linguistics Volume 2023 ; 2023 > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5823/galley/23046/download/
       au < manifest ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 >
       au < expected ; 2025 ; 10 ; Glossa: a journal of general linguistics Volume 2025 ; 2025 >
 
@@ -714,16 +714,16 @@
       comment[publisher] = Open Library of Humanities, previously Ubiquity Press
       param[base_url] = https://www.journal-labphon.org/
 
-      au < doNotProcess ; 2016 ; 1 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 >
-      au < doNotProcess ; 2017 ; 2 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 >
-      au < doNotProcess ; 2018 ; 3 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 >
-      au < doNotProcess ; 2019 ; 4 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2019 ; 2019 >
-      au < doNotProcess ; 2020 ; 5 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2020 ; 2020 >
-      au < released ; 2021 ; 6 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 ; 2021 >
-      au < released ; 2022 ; 7 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2022 ; 2022 >
-      au < released ; 2023 ; 8 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2023 ; 2023 >
-      au < notReady ; 2024 ; 9 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2024 ; 2024 > #no link
-      au < expected ; 2025 ; 10 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2025 ; 2025 >
+      au < doNotProcess ; 2016 ; 7 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2016 ; 2016 >
+      au < doNotProcess ; 2017 ; 8 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2017 ; 2017 >
+      au < doNotProcess ; 2018 ; 9 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2018 ; 2018 >
+      au < doNotProcess ; 2019 ; 10 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2019 ; 2019 >
+      au < doNotProcess ; 2020 ; 11 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2020 ; 2020 >
+      au < released ; 2021 ; 12 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 ; 2021 >
+      au < released ; 2022 ; 13 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2022 ; 2022 >
+      au < released ; 2023 ; 14 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2023 ; 2023 >
+      au < notReady ; 2024 ; 15 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2024 ; 2024 > #no link, https://www.journal-labphon.org/plugins/clockss
+      au < exists ; 2025 ; 16 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2025 ; 2025 >
 
   }
 
