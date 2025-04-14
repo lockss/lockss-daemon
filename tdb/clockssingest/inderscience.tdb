@@ -2123,7 +2123,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Cloud Computing Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; International Journal of Cloud Computing Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2024 ; International Journal of Cloud Computing Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2025 ; International Journal of Cloud Computing Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2025 ; International Journal of Cloud Computing Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6193,7 +6193,7 @@
       au < finished ; crawling ; 2021-2022 ; International Journal of Intelligent Systems Technologies and Applications Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; International Journal of Intelligent Systems Technologies and Applications Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2024 ; International Journal of Intelligent Systems Technologies and Applications Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2025 ; International Journal of Intelligent Systems Technologies and Applications Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2025 ; International Journal of Intelligent Systems Technologies and Applications Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7485,7 +7485,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2024 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2025 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2025 ; International Journal of Mathematical Modelling and Numerical Optimisation Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -10418,7 +10418,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Sustainable Society Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; International Journal of Sustainable Society Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2024 ; International Journal of Sustainable Society Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2025 ; International Journal of Sustainable Society Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2025 ; International Journal of Sustainable Society Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
 
     }
 
