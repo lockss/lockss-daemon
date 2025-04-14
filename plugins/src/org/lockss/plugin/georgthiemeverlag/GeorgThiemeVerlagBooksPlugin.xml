@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -54,7 +54,7 @@
     <!--  spawned from the journals plugin on October 26, 2016  -->
       <!-- Do not collect these images, they were not served consistently and images of content -->
       <string>2,"^https?://%s/media/[^?]+/lookinside/[^?]+\.jpg$", url_host(base_url)</string>
-      <string>1,"https://cdn\.cookielaw\.org/consent/[^/]/OtAutoBlock\.js", url_host(base_url)</string>
+      <string>1,"https://cdn\.cookielaw\.org/consent/[^/]+/OtAutoBlock\.js"</string>
       <!-- all fonts, images, resources, css, js, etc. -->
       <string>1,"^https?://%s/[^?]+[.](bmp|gif|ico|jpe?g|png|tif?f|(css|js|eot|svg|ttf|woff.?)([?].*)?)$", url_host(base_url)</string>
       <string>1,"^%smedia/.*/supmat/", base_url</string>
