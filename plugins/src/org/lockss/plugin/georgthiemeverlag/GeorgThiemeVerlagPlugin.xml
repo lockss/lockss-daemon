@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>45</string>
+    <string>46</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -217,5 +217,9 @@
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlLinkRewriterFactory</string>
   </entry>
 </map>

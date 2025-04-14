@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>17</string>
+    <string>18</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -61,7 +61,8 @@
       <string>4,"^%s.*/10[.][0-9a-z]{4,6}/", base_url</string>
       <string>2,"^%s.*/10[.][0-9a-z]{4,6}/www[.]", base_url</string>
       <string>2,"^%s(?:[^/]+/)?(?:rss/thieme|ebooks/(?:book|issues|sample|recommend|topten|linkout))", base_url</string>
-      <string>1,"^%s(?:[^/]+/)?ebooks/(?:book|abstract|html|pdf|ris)/10[.][0-9a-z]{4,6}/[^/?&amp;.]+(?:[.]pdf|/BIB)?(\?articleLanguage=.*)?$", base_url</string>
+      <!-- while we are not collecting the lookinside images, let's collect the landing pages for ServeContent purposes -->
+      <string>1,"^%s(?:[^/]+/)?ebooks/(?:book|abstract|html|pdf|ris|lookinside)/10[.][0-9a-z]{4,6}/[^/?&amp;.]+(?:[.]pdf|/BIB)?(\?articleLanguage=.*)?$", base_url</string>
     </list>
   </entry>
   <entry>
@@ -189,5 +190,9 @@
   <entry>
     <string>au_url_poll_result_weight</string>
     <string>"(/js/.+|messages)[.]js$", 0</string>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.georgthiemeverlag.GeorgThiemeVerlagHtmlLinkRewriterFactory</string>
   </entry>
 </map>
