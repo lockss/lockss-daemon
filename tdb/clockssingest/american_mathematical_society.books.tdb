@@ -592,15 +592,15 @@
     param[collection_id] = spec
     
     au < manifest ; exists ; 1985 ; Spectrum 1985 ; 1985 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1990 ; Spectrum 1990 ; 1990 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1991 ; Spectrum 1991 ; 1991 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1992 ; Spectrum 1992 ; 1992 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1993 ; Spectrum 1993 ; 1993 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1994 ; Spectrum 1994 ; 1994 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1995 ; Spectrum 1995 ; 1995 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1996 ; Spectrum 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1997 ; Spectrum 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1998 ; Spectrum 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1990 ; Spectrum 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1991 ; Spectrum 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1992 ; Spectrum 1992 ; 1992 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1993 ; Spectrum 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1994 ; Spectrum 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1995 ; Spectrum 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1996 ; Spectrum 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1997 ; Spectrum 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1998 ; Spectrum 1998 ; 1998 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2000 ; Spectrum 2000 ; 2000 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Spectrum 2001 ; 2001 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2002 ; Spectrum 2002 ; 2002 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
@@ -636,16 +636,16 @@
     
     param[collection_id] = dimacs
     
-    au < manifest ; exists ; 1990 ; Dimacs Workshop Series-Electronic 1990 ; 1990 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1991 ; Dimacs Workshop Series-Electronic 1991 ; 1991 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1992 ; Dimacs Workshop Series-Electronic 1992 ; 1992 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1993 ; Dimacs Workshop Series-Electronic 1993 ; 1993 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1994 ; Dimacs Workshop Series-Electronic 1994 ; 1994 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1995 ; Dimacs Workshop Series-Electronic 1995 ; 1995 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1996 ; Dimacs Workshop Series-Electronic 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1997 ; Dimacs Workshop Series-Electronic 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1998 ; Dimacs Workshop Series-Electronic 1998 ; 1998 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1999 ; Dimacs Workshop Series-Electronic 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1990 ; Dimacs Workshop Series-Electronic 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1991 ; Dimacs Workshop Series-Electronic 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1992 ; Dimacs Workshop Series-Electronic 1992 ; 1992 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1993 ; Dimacs Workshop Series-Electronic 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1994 ; Dimacs Workshop Series-Electronic 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1995 ; Dimacs Workshop Series-Electronic 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1996 ; Dimacs Workshop Series-Electronic 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1997 ; Dimacs Workshop Series-Electronic 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1998 ; Dimacs Workshop Series-Electronic 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1999 ; Dimacs Workshop Series-Electronic 1999 ; 1999 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2000 ; Dimacs Workshop Series-Electronic 2000 ; 2000 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Dimacs Workshop Series-Electronic 2001 ; 2001 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; Dimacs Workshop Series-Electronic 2002 ; 2002 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
@@ -669,13 +669,13 @@
     
     param[collection_id] = crmp
     
-    au < manifest ; exists ; 1993 ; CRM Proceedings and Lecture Notes 1993 ; 1993 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1994 ; CRM Proceedings and Lecture Notes 1994 ; 1994 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1995 ; CRM Proceedings and Lecture Notes 1995 ; 1995 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1996 ; CRM Proceedings and Lecture Notes 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1997 ; CRM Proceedings and Lecture Notes 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1998 ; CRM Proceedings and Lecture Notes 1998 ; 1998 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1999 ; CRM Proceedings and Lecture Notes 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1993 ; CRM Proceedings and Lecture Notes 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1994 ; CRM Proceedings and Lecture Notes 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1995 ; CRM Proceedings and Lecture Notes 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1996 ; CRM Proceedings and Lecture Notes 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1997 ; CRM Proceedings and Lecture Notes 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1998 ; CRM Proceedings and Lecture Notes 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1999 ; CRM Proceedings and Lecture Notes 1999 ; 1999 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2000 ; CRM Proceedings and Lecture Notes 2000 ; 2000 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2001 ; CRM Proceedings and Lecture Notes 2001 ; 2001 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2002 ; CRM Proceedings and Lecture Notes 2002 ; 2002 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
@@ -702,10 +702,10 @@
     
     param[collection_id] = amsip
     
-    au < manifest ; exists ; 1996 ; AMS/IP Studies in Advanced Math Series 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1997 ; AMS/IP Studies in Advanced Math Series 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1998 ; AMS/IP Studies in Advanced Math Series 1998 ; 1998 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1999 ; AMS/IP Studies in Advanced Math Series 1999 ; 1999 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1996 ; AMS/IP Studies in Advanced Math Series 1996 ; 1996 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1997 ; AMS/IP Studies in Advanced Math Series 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1998 ; AMS/IP Studies in Advanced Math Series 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1999 ; AMS/IP Studies in Advanced Math Series 1999 ; 1999 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2000 ; AMS/IP Studies in Advanced Math Series 2000 ; 2000 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2001 ; AMS/IP Studies in Advanced Math Series 2001 ; 2001 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; AMS/IP Studies in Advanced Math Series 2002 ; 2002 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
@@ -729,11 +729,11 @@
     
     param[collection_id] = advsov
     
-    au < manifest ; exists ; 1990 ; Advances in Soviet Mathematics 1990 ; 1990 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1991 ; Advances in Soviet Mathematics 1991 ; 1991 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1992 ; Advances in Soviet Mathematics 1992 ; 1992 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1993 ; Advances in Soviet Mathematics 1993 ; 1993 ; https://www.ams.org/ ; >
-    au < manifest ; exists ; 1994 ; Advances in Soviet Mathematics 1994 ; 1994 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1990 ; Advances in Soviet Mathematics 1990 ; 1990 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1991 ; Advances in Soviet Mathematics 1991 ; 1991 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1992 ; Advances in Soviet Mathematics 1992 ; 1992 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1993 ; Advances in Soviet Mathematics 1993 ; 1993 ; https://www.ams.org/ ; >
+    au < testing ; exists ; 1994 ; Advances in Soviet Mathematics 1994 ; 1994 ; https://www.ams.org/ ; >
 
     }
    
