@@ -36,12 +36,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.FilenameUtils;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.CrossRefSchemaHelper;
+import org.lockss.plugin.clockss.JatsPublishingSchemaHelper;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
@@ -93,6 +96,19 @@ public class EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory extend
             List<String> returnList = new ArrayList<String>();
             returnList.add(pdfName);
             return returnList;
+        }
+
+        @Override
+        protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
+        CachedUrl cu, ArticleMetadata thisAM) {
+            log.debug3("in EandS postCookProcess");
+            //Metadata currently lists "WEB-FORM" as publisher so we will be using tdb info
+            if (("WEB-FORM").equals(thisAM.get(MetadataField.FIELD_PUBLISHER))) {
+                TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+                if(tdbau != null && tdbau.getPublisherName() != null){
+                    thisAM.replace(MetadataField.FIELD_PUBLISHER, tdbau.getPublisherName());
+                }
+            }
         }
     }
 }
