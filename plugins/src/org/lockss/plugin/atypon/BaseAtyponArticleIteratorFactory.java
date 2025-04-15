@@ -74,25 +74,25 @@ ArticleMetadataExtractorFactory {
 
   // various aspects of an article
   // DOI's can have "/"s in the suffix
-  private static final Pattern PDF_PATTERN_2 = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern PDF_PATTERN_2 = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z_%]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
 
-  private static final Pattern EPDF_PATTERN_2 = Pattern.compile("/doi/epdf/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern EPDF_PATTERN_2 = Pattern.compile("/doi/epdf/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z_%]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern EPDF_PATTERN = Pattern.compile("/doi/epdf/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
 
-  private static final Pattern ABSTRACT_PATTERN_2 = Pattern.compile("/doi/abs/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern ABSTRACT_PATTERN_2 = Pattern.compile("/doi/abs/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z_%]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
 
-  private static final Pattern HTML_PATTERN_2 = Pattern.compile("/doi/full/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern HTML_PATTERN_2 = Pattern.compile("/doi/full/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z_%]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
 
-  private static final Pattern PDFPLUS_PATTERN_2 = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern PDFPLUS_PATTERN_2 = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z_%]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
 
-  private static final Pattern EPDFPLUS_PATTERN_2 = Pattern.compile("/doi/epdfplus/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern EPDFPLUS_PATTERN_2 = Pattern.compile("/doi/epdfplus/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z_%]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern EPDFPLUS_PATTERN = Pattern.compile("/doi/epdfplus/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
 
-  private static final Pattern DOI_PATTERN_2 = Pattern.compile("/doi/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern DOI_PATTERN_2 = Pattern.compile("/doi/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z_%]+)$", Pattern.CASE_INSENSITIVE);
   private static final Pattern DOI_PATTERN = Pattern.compile("/doi/doi/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
 
   // how to change from one form (aspect) of article to another
