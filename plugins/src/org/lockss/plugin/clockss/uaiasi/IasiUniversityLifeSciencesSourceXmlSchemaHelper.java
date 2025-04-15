@@ -100,6 +100,7 @@ implements SourceXmlSchemaHelper {
   protected static final String articleNode = "//records/record";
 
   protected static final String article_title = articleNode + "/titles/title";
+  protected static final String journal_title = articleNode + "/titles/secondary-title";
 
   protected static final String author = articleNode + "/contributors/authors/author";
   private static final String art_pubdate = articleNode + "/dates/pub-dates/date";
@@ -117,6 +118,7 @@ implements SourceXmlSchemaHelper {
     // article specific stuff
     articleMap.put(art_pubdate, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(article_title, XmlDomMetadataExtractor.TEXT_VALUE);
+    articleMap.put(journal_title, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(author, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(issue, XmlDomMetadataExtractor.TEXT_VALUE);
     articleMap.put(volume, XmlDomMetadataExtractor.TEXT_VALUE);
@@ -132,6 +134,7 @@ implements SourceXmlSchemaHelper {
   protected static final MultiValueMap cookMap = new MultiValueMap();
   static {
     cookMap.put(article_title, MetadataField.FIELD_ARTICLE_TITLE);
+    cookMap.put(journal_title, MetadataField.FIELD_JOURNAL_TITLE);
     cookMap.put(author, MetadataField.FIELD_AUTHOR);
     cookMap.put(art_pubdate, MetadataField.FIELD_DATE);
     cookMap.put(issn, MetadataField.FIELD_ISSN);
