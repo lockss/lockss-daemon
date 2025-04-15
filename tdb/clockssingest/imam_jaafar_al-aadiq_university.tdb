@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = Imam Ja'afar Al-Sadiq University;
+    info[contract] = 2025 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Imam Ja'afar Al-Sadiq University Journal of Legal Studies ;
+        eissn = 2707-1189
+      >
+
+      comment[publisher] = Imam Ja'afar Al-Sadiq University
+      param[base_url] = https://ijsu.researchcommons.org/
+      param[journal_abbr] = ijsu
+
+      au < exists ; exists ; 2021 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 0 ; 0 ; >
+      au < exists ; exists ; 2021 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 1 ; 1 ; >
+      au < exists ; exists ; 2022 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 2 ; 2 ; >
+      au < exists ; exists ; 2023 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 3 ; 3 ; >
+      au < exists ; exists ; 2024 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 4 ; 4 ; >
+      au < expected ; exists ; 2025 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 5 ; 5 ; >
+
+  }
+
+}

@@ -44,10 +44,11 @@
     param[base_url] = https://btstu.researchcommons.org/
     param[journal_abbr] = journal
 
-    au < exists ; exists ; 2019 ; Technical Science and Innovation Volume 2018 ; 2018 ; >
-    au < exists ; exists ; 2020 ; Technical Science and Innovation Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2018 ; Technical Science and Innovation Volume 2018 ; 2018 ; >
+    au < exists ; exists ; 2019 ; Technical Science and Innovation Volume 2019 ; 2019 ; >
     au < exists ; exists ; 2020 ; Technical Science and Innovation Volume 2020 ; 2020 ; >
     au < exists ; exists ; 2021 ; Technical Science and Innovation Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2022 ; Technical Science and Innovation Volume 2022 ; 2022 ; >
     au < exists ; exists ; 2023 ; Technical Science and Innovation Volume 2023 ; 2023 ; >
     au < exists ; exists ; 2024 ; Technical Science and Innovation Volume 2024 ; 2024 ; >
     au < expected ; exists ; 2025 ; Technical Science and Innovation Volume 2025 ; 2025 ; >

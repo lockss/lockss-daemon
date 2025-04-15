@@ -1,0 +1,50 @@
+{
+
+  publisher <
+    name = Yanbu Industrial College ;
+    info[contract] = 2025 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+
+  {
+
+    title <
+      name = Yanbu Journal of Engineering and Science ;
+      eissn = 1658-5321
+    >
+
+    param[base_url] = https://yjes.researchcommons.org/
+    param[journal_abbr] = yjes
+
+    au < exists ; exists ; 2010 ; Yanbu Journal of Engineering and Science Volume 1 ; 1 ; >
+    au < exists ; exists ; 2011 ; Yanbu Journal of Engineering and Science Volume 2 ; 2 ; >
+    au < exists ; exists ; 2011 ; Yanbu Journal of Engineering and Science Volume 3 ; 3 ; >
+    au < exists ; exists ; 2012 ; Yanbu Journal of Engineering and Science Volume 4 ; 4 ; >
+    au < exists ; exists ; 2012 ; Yanbu Journal of Engineering and Science Volume 5 ; 5 ; >
+    au < exists ; exists ; 2013 ; Yanbu Journal of Engineering and Science Volume 6 ; 6 ; >
+    au < exists ; exists ; 2013 ; Yanbu Journal of Engineering and Science Volume 7 ; 7 ; >
+    au < exists ; exists ; 2014 ; Yanbu Journal of Engineering and Science Volume 8 ; 8 ; >
+    au < exists ; exists ; 2014 ; Yanbu Journal of Engineering and Science Volume 9 ; 9 ; >
+    au < exists ; exists ; 2015 ; Yanbu Journal of Engineering and Science Volume 10 ; 10 ; >
+    au < exists ; exists ; 2015 ; Yanbu Journal of Engineering and Science Volume 11 ; 11 ; >
+    au < exists ; exists ; 2016 ; Yanbu Journal of Engineering and Science Volume 12 ; 12 ; >
+    au < exists ; exists ; 2016 ; Yanbu Journal of Engineering and Science Volume 13 ; 13 ; >
+    au < exists ; exists ; 2017 ; Yanbu Journal of Engineering and Science Volume 14 ; 14 ; >
+    au < exists ; exists ; 2017 ; Yanbu Journal of Engineering and Science Volume 15 ; 15 ; >
+    au < exists ; exists ; 2018 ; Yanbu Journal of Engineering and Science Volume 16 ; 16 ; >
+    au < exists ; exists ; 2019 ; Yanbu Journal of Engineering and Science Volume 17 ; 17 ; >
+    au < exists ; exists ; 2021 ; Yanbu Journal of Engineering and Science Volume 18 ; 18 ; >
+    au < exists ; exists ; 2022 ; Yanbu Journal of Engineering and Science Volume 19 ; 19 ; >
+    au < exists ; exists ; 2023 ; Yanbu Journal of Engineering and Science Volume 20 ; 20 ; >
+    au < exists ; exists ; 2024 ; Yanbu Journal of Engineering and Science Volume 21 ; 21 ; >
+    au < expected ; exists ; 2025 ; Yanbu Journal of Engineering and Science Volume 22 ; 22 ; >
+
+  }
+
+}

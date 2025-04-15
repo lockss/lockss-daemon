@@ -25,4 +25,20 @@
 
   }
 
+  {
+
+      title <
+        name = AUIQ Technical Engineering Science ;
+        eissn = 3078-3437
+      >
+
+      comment[publisher] = Al-Ayen Iraqi University
+      param[base_url] = https://ates.alayen.edu.iq/
+      param[journal_abbr] = home
+
+      au < exists ; exists ; 2024 ; AUIQ Technical Engineering Science Volume 1 ; 1 ; >
+      au < expected ; exists ; 2025 ; AUIQ Technical Engineering Science Volume 2 ; 2 ; >
+
+  }
+
 }

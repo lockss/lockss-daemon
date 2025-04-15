@@ -1,0 +1,37 @@
+{
+
+  publisher <
+    name = Tashkent Institute of Chemical Technology ;
+    info[contract] = 2025 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+
+  {
+
+    title <
+      name = Chemistry and Chemical Engineering ;
+      issn = 1992-9498 ;
+      eissn = 2181-1121
+    >
+
+    param[base_url] = https://cce.researchcommons.org/
+    param[journal_abbr] = journal
+
+    au < exists ; exists ; 2018 ; Chemistry and Chemical Engineering Volume 2018 ; 2018 ; >
+    au < exists ; exists ; 2019 ; Chemistry and Chemical Engineering Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2020 ; Chemistry and Chemical Engineering Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2021 ; Chemistry and Chemical Engineering Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2022 ; Chemistry and Chemical Engineering Volume 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; Chemistry and Chemical Engineering Volume 2023 ; 2023 ; >
+    au < exists ; exists ; 2024 ; Chemistry and Chemical Engineering Volume 2024 ; 2024 ; >
+    au < exists ; exists ; 2025 ; Chemistry and Chemical Engineering Volume 2025 ; 2025 ; >
+
+  }
+
+}

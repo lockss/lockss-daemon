@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = Al-Iraqia university;
+    info[contract] = 2025 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Iraqi Journal for Computer Science and Mathematics ;
+        eissn = 2788-7421
+      >
+
+      comment[publisher] = College of education, Al-Iraqia university
+      param[base_url] = https://ijcsm.researchcommons.org/
+      param[journal_abbr] = ijcsm
+
+      au < exists ; exists ; 2024 ; Iraqi Journal for Computer Science and Mathematics Volume 1 ; 1 ; >
+      au < exists ; exists ; 2021 ; Iraqi Journal for Computer Science and Mathematics Volume 2 ; 2 ; >
+      au < exists ; exists ; 2022 ; Iraqi Journal for Computer Science and Mathematics Volume 3 ; 3 ; >
+      au < exists ; exists ; 2023 ; Iraqi Journal for Computer Science and Mathematics Volume 4 ; 4 ; >
+      au < exists ; exists ; 2024 ; Iraqi Journal for Computer Science and Mathematics Volume 5 ; 5 ; >
+      au < exists ; exists ; 2025 ; Iraqi Journal for Computer Science and Mathematics Volume 6 ; 6 ; >
+
+  }
+
+}
