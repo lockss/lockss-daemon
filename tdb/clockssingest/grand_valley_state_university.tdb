@@ -110,7 +110,7 @@
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
     au < crawling ; exists ; 2009 ; The Foundation Review Volume 1 ; 1 ; https://scholarworks.gvsu.edu/ ; >
-    au < ready ; exists ; 2010 ; The Foundation Review Volume 2 ; 2 ; https://scholarworks.gvsu.edu/ ; >
+    au < crawling ; exists ; 2010 ; The Foundation Review Volume 2 ; 2 ; https://scholarworks.gvsu.edu/ ; >
     au < crawling ; exists ; 2011 ; The Foundation Review Volume 3 ; 3 ; https://scholarworks.gvsu.edu/ ; >
     au < crawling ; exists ; 2012 ; The Foundation Review Volume 4 ; 4 ; https://scholarworks.gvsu.edu/ ; >
     au < crawling ; exists ; 2013 ; The Foundation Review Volume 5 ; 5 ; https://scholarworks.gvsu.edu/ ; >
