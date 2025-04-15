@@ -114,7 +114,7 @@ public class NPERXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorF
 
       thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
       thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
-
+      thisAM.put(MetadataField.FIELD_JOURNAL_TITLE, "Nonpartisan Education Review");
     }
     
   }
