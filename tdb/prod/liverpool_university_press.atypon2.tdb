@@ -26,8 +26,8 @@
 
     au < manifest ; 2000 ; Archives Volume 25 ; 25 >
     au < manifest ; 2001 ; Archives Volume 26 ; 26 >
-    au < releasing ; 2002 ; Archives Volume 27 ; 27 >
-    au < releasing ; 2003 ; Archives Volume 28 ; 28 >
+    au < released ; 2002 ; Archives Volume 27 ; 27 >
+    au < released ; 2003 ; Archives Volume 28 ; 28 >
     au < manifest ; 2004 ; Archives Volume 29 ; 29 >
     au < manifest ; 2005 ; Archives Volume 30 ; 30 >
     au < doNotProcess ; 2005 ; Archives Volume 31 ; 31 >
@@ -94,8 +94,8 @@
 
     au < released ; 2000 ; Australian Journal of French Studies Volume 37 ; 37 >
     au < manifest ; 2001 ; Australian Journal of French Studies Volume 38 ; 38 >
-    au < releasing ; 2002 ; Australian Journal of French Studies Volume 39 ; 39 >
-    au < releasing ; 2003 ; Australian Journal of French Studies Volume 40 ; 40 >
+    au < released ; 2002 ; Australian Journal of French Studies Volume 39 ; 39 >
+    au < released ; 2003 ; Australian Journal of French Studies Volume 40 ; 40 >
     au < doNotProcess ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 >
     au < doNotProcess ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 >
     au < doNotProcess ; 2006 ; Australian Journal of French Studies Volume 43 ; 43 >
@@ -176,7 +176,7 @@
     au < doNotProcess ; 2021 ; British Journal of Canadian Studies Volume 33 ; 33 >
     au < released ; 2022 ; British Journal of Canadian Studies Volume 34 ; 34 >
     au < released ; 2023 ; British Journal of Canadian Studies Volume 35 ; 35 >
-    au < releasing ; 2024 ; British Journal of Canadian Studies Volume 36 ; 36 >
+    au < released ; 2024 ; British Journal of Canadian Studies Volume 36 ; 36 >
     au < manifest ; 2025 ; British Journal of Canadian Studies Volume 37 ; 37 >
 
   }
@@ -220,7 +220,7 @@
     au < doNotProcess ; 1998 ; Bulletin of Hispanic Studies Volume 75 ; 75 >
     au < doNotProcess ; 1999 ; Bulletin of Hispanic Studies Volume 76 ; 76 >
     au < manifest ; 2000 ; Bulletin of Hispanic Studies Volume 77 ; 77 >
-    au < releasing ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
+    au < released ; 2001 ; Bulletin of Hispanic Studies Volume 78 ; 78 >
     au < doNotProcess ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 >
     au < doNotProcess ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 >
     au < doNotProcess ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 >
@@ -339,7 +339,7 @@
     #journal_num = 67
 
     au < manifest ; 2000 ; Catalan Review Volume 14 ; 14 >
-    au < releasing ; 2001 ; Catalan Review Volume 15 ; 15 >
+    au < released ; 2001 ; Catalan Review Volume 15 ; 15 >
     au < manifest ; 2002 ; Catalan Review Volume 16 ; 16 >
     au < manifest ; 2003 ; Catalan Review Volume 17 ; 17 >
     au < doesNotExist ; 2004 ; Catalan Review Volume 18 ; 18 >
@@ -380,7 +380,7 @@
     #Published 1976-present
     #journal_num = 45
 
-    au < releasing ; 2000 ; Contemporary French Civilization Volume 24 ; 24 >
+    au < released ; 2000 ; Contemporary French Civilization Volume 24 ; 24 >
     au < manifest ; 2001 ; Contemporary French Civilization Volume 25 ; 25 >
     au < released ; 2002 ; Contemporary French Civilization Volume 26 ; 26 >
     au < manifest ; 2003 ; Contemporary French Civilization Volume 27 ; 27 >
@@ -425,7 +425,7 @@
     au < doNotProcess ; 2021 ; Developing Academic Practice Volume 2021 ; 2021 >
     au < released ; 2022 ; Developing Academic Practice Volume 2022 ; 2022 >
     au < released ; 2023 ; Developing Academic Practice Volume 2023 ; 2023 >
-    au < releasing ; 2024 ; Developing Academic Practice Volume 2024 ; 2024 >
+    au < released ; 2024 ; Developing Academic Practice Volume 2024 ; 2024 >
     au < manifest ; 2025 ; Developing Academic Practice Volume 2025 ; 2025 >
 
   }
@@ -460,8 +460,8 @@
     au < released ; 2000 ; Eighteenth-Century Ireland Volume 15 ; 15 >
     au < released ; 2001 ; Eighteenth-Century Ireland Volume 16 ; 16 >
     au < released ; 2002 ; Eighteenth-Century Ireland Volume 17 ; 17 >
-    au < releasing ; 2003 ; Eighteenth-Century Ireland Volume 18 ; 18 >
-    au < releasing ; 2004 ; Eighteenth-Century Ireland Volume 19 ; 19 >
+    au < released ; 2003 ; Eighteenth-Century Ireland Volume 18 ; 18 >
+    au < released ; 2004 ; Eighteenth-Century Ireland Volume 19 ; 19 >
     au < manifest ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 >
     au < manifest ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 >
     au < manifest ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 >
@@ -507,11 +507,11 @@
     au < manifest ; 1997 ; Essays in Romanticism Volume 5 ; 5 >
     au < manifest ; 1998 ; Essays in Romanticism Volume 6 ; 6 >
     au < doNotProcess ; 1999 ; Essays in Romanticism Volume 7 ; 7 >
-    au < releasing ; 2000 ; Essays in Romanticism Volume 8 ; 8 >
+    au < released ; 2000 ; Essays in Romanticism Volume 8 ; 8 >
     au < manifest ; 2001 ; Essays in Romanticism Volume 9 ; 9 >
     au < manifest ; 2002 ; Essays in Romanticism Volume 10 ; 10 >
-    au < releasing ; 2003 ; Essays in Romanticism Volume 11 ; 11 >
-    au < releasing ; 2004 ; Essays in Romanticism Volume 12 ; 12 >
+    au < released ; 2003 ; Essays in Romanticism Volume 11 ; 11 >
+    au < released ; 2004 ; Essays in Romanticism Volume 12 ; 12 >
     au < manifest ; 2005 ; Essays in Romanticism Volume 13 ; 13 >
     au < manifest ; 2006 ; Essays in Romanticism Volume 14 ; 14 >
     au < doNotProcess ; 2007 ; Essays in Romanticism Volume 15 ; 15 >
@@ -585,7 +585,7 @@
     au < released ; 2001 ; Extrapolation Volume 42 ; 42 >
     au < manifest ; 2002 ; Extrapolation Volume 43 ; 43 >
     au < manifest ; 2003 ; Extrapolation Volume 44 ; 44 >
-    au < releasing ; 2004 ; Extrapolation Volume 45 ; 45 >
+    au < released ; 2004 ; Extrapolation Volume 45 ; 45 >
     au < manifest ; 2005 ; Extrapolation Volume 46 ; 46 >
     au < manifest ; 2006 ; Extrapolation Volume 47 ; 47 >
     au < manifest ; 2007 ; Extrapolation Volume 48 ; 48 >
@@ -682,7 +682,7 @@
     au < manifest ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 >
     au < manifest ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 >
     au < manifest ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 >
-    au < releasing ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 >
+    au < released ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 >
     au < manifest ; 2001 ; Historical Studies in Industrial Relations Volume 11 ; 11 >
     au < manifest ; 2001 ; Historical Studies in Industrial Relations Volume 12 ; 12 >
     au < manifest ; 2002 ; Historical Studies in Industrial Relations Volume 13 ; 13 >
@@ -796,7 +796,7 @@
     au < doNotProcess ; 2021 ; International Development Planning Review Volume 43 ; 43 >
     au < released ; 2022 ; International Development Planning Review Volume 44 ; 44 >
     au < released ; 2023 ; International Development Planning Review Volume 45 ; 45 >
-    au < releasing ; 2024 ; International Development Planning Review Volume 46 ; 46 >
+    au < released ; 2024 ; International Development Planning Review Volume 46 ; 46 >
     au < manifest ; 2025 ; International Development Planning Review Volume 47 ; 47 >
 
   }
@@ -1151,9 +1151,9 @@
     au < manifest ; 2000 ; Labour History: A Journal of Labour and Social History Volume 78 ; 78 >
     au < released ; 2000 ; Labour History: A Journal of Labour and Social History Volume 79 ; 79 >
     au < released ; 2001 ; Labour History: A Journal of Labour and Social History Volume 80 ; 80 >
-    au < releasing ; 2001 ; Labour History: A Journal of Labour and Social History Volume 81 ; 81 >
+    au < released ; 2001 ; Labour History: A Journal of Labour and Social History Volume 81 ; 81 >
     au < manifest ; 2002 ; Labour History: A Journal of Labour and Social History Volume 82 ; 82 >
-    au < releasing ; 2002 ; Labour History: A Journal of Labour and Social History Volume 83 ; 83 >
+    au < released ; 2002 ; Labour History: A Journal of Labour and Social History Volume 83 ; 83 >
     au < manifest ; 2003 ; Labour History: A Journal of Labour and Social History Volume 84 ; 84 >
     au < released ; 2003 ; Labour History: A Journal of Labour and Social History Volume 85 ; 85 >
     au < manifest ; 2004 ; Labour History: A Journal of Labour and Social History Volume 86 ; 86 >
@@ -1214,7 +1214,7 @@
 
     au < manifest ; 2000 ; Labour History Review Volume 65 ; 65 >
     au < manifest ; 2001 ; Labour History Review Volume 66 ; 66 >
-    au < releasing ; 2002 ; Labour History Review Volume 67 ; 67 >
+    au < released ; 2002 ; Labour History Review Volume 67 ; 67 >
     au < manifest ; 2003 ; Labour History Review Volume 68 ; 68 >
     au < manifest ; 2004 ; Labour History Review Volume 69 ; 69 >
     au < doNotProcess ; 2005 ; Labour History Review Volume 70 ; 70 >
@@ -1673,7 +1673,7 @@
     #journal_num = 76
 
     au < released ; 2000 ; Romani Studies Volume 10 ; 10 >
-    au < releasing ; 2001 ; Romani Studies Volume 11 ; 11 >
+    au < released ; 2001 ; Romani Studies Volume 11 ; 11 >
     au < doNotProcess ; 2002 ; Romani Studies Volume 12 ; 12 >
     au < doNotProcess ; 2003 ; Romani Studies Volume 13 ; 13 >
     au < doNotProcess ; 2004 ; Romani Studies Volume 14 ; 14 >
@@ -1714,13 +1714,13 @@
     #Published 1983-present
     #journal_num = 51
 
-    au < releasing ; 2000 ; Quebec Studies Volume 29 ; 29 >
-    au < releasing ; 2000 ; Quebec Studies Volume 30 ; 30 >
-    au < releasing ; 2001 ; Quebec Studies Volume 31 ; 31 >
+    au < released ; 2000 ; Quebec Studies Volume 29 ; 29 >
+    au < released ; 2000 ; Quebec Studies Volume 30 ; 30 >
+    au < released ; 2001 ; Quebec Studies Volume 31 ; 31 >
     au < manifest ; 2001 ; Quebec Studies Volume 32 ; 32 >
     au < manifest ; 2002 ; Quebec Studies Volume 33 ; 33 >
     au < manifest ; 2002 ; Quebec Studies Volume 34 ; 34 >
-    au < releasing ; 2003 ; Quebec Studies Volume 35 ; 35 >
+    au < released ; 2003 ; Quebec Studies Volume 35 ; 35 >
     au < manifest ; 2003 ; Quebec Studies Volume 36 ; 36 >
     au < manifest ; 2004 ; Quebec Studies Volume 37 ; 37 >
     au < manifest ; 2004 ; Quebec Studies Volume 38 ; 38 >
@@ -1859,7 +1859,7 @@
     au < manifest ; 1994 ; Studia Hibernica Volume 28 ; 28 >
     au < manifest ; 1997 ; Studia Hibernica Volume 29 ; 29 >
     au < manifest ; 1999 ; Studia Hibernica Volume 30 ; 30 >
-    au < releasing ; 2001 ; Studia Hibernica Volume 31 ; 31 >
+    au < released ; 2001 ; Studia Hibernica Volume 31 ; 31 >
     au < released ; 2003 ; Studia Hibernica Volume 32 ; 32 >
     au < released ; 2005 ; Studia Hibernica Volume 33 ; 33 >
     au < released ; 2007 ; Studia Hibernica Volume 34 ; 34 >
@@ -2228,7 +2228,7 @@
     au < manifest ; 2000 ; Revista Iberoamericana Volume 66 ; 66 >
     au < released ; 2001 ; Revista Iberoamericana Volume 67 ; 67 >
     au < released ; 2002 ; Revista Iberoamericana Volume 68 ; 68 >
-    au < releasing ; 2003 ; Revista Iberoamericana Volume 69 ; 69 >
+    au < released ; 2003 ; Revista Iberoamericana Volume 69 ; 69 >
     au < manifest ; 2004 ; Revista Iberoamericana Volume 70 ; 70 >
     au < manifest ; 2005 ; Revista Iberoamericana Volume 71 ; 71 >
     au < manifest ; 2006 ; Revista Iberoamericana Volume 72 ; 72 >
@@ -2289,7 +2289,7 @@
     au < manifest ; 1994-1996 ; The Bodleian Library Record Volume 15 ; 15 >
     au < manifest ; 1997-1999 ; The Bodleian Library Record Volume 16 ; 16 >
     au < manifest ; 2000-2002 ; The Bodleian Library Record Volume 17 ; 17 >
-    au < releasing ; 2003-2005 ; The Bodleian Library Record Volume 18 ; 18 >
+    au < released ; 2003-2005 ; The Bodleian Library Record Volume 18 ; 18 >
     au < manifest ; 2006 ; The Bodleian Library Record Volume 19 ; 19 >
     au < manifest ; 2007 ; The Bodleian Library Record Volume 20 ; 20 >
     au < manifest ; 2008 ; The Bodleian Library Record Volume 21 ; 21 >
@@ -2399,10 +2399,10 @@
     au < manifest ; 1999 ; French Studies Volume 53 ; 53 >
     au < released ; 2000 ; French Studies Volume 54 ; 54 >
     au < released ; 2001 ; French Studies Volume 55 ; 55 >
-    au < releasing ; 2002 ; French Studies Volume 56 ; 56 >
+    au < released ; 2002 ; French Studies Volume 56 ; 56 >
     au < released ; 2003 ; French Studies Volume 57 ; 57 >
     au < released ; 2004 ; French Studies Volume 58 ; 58 >
-    au < releasing ; 2005 ; French Studies Volume 59 ; 59 >
+    au < released ; 2005 ; French Studies Volume 59 ; 59 >
     au < released ; 2006 ; French Studies Volume 60 ; 60 >
     au < released ; 2007 ; French Studies Volume 61 ; 61 >
     au < manifest ; 2008 ; French Studies Volume 62 ; 62 >
@@ -2455,16 +2455,16 @@
     au < manifest ; 1997 ; French Studies Bulletin Volume 18 ; 18 >
     au < manifest ; 1998 ; French Studies Bulletin Volume 19 ; 19 >
     au < manifest ; 1999 ; French Studies Bulletin Volume 20 ; 20 >
-    au < releasing ; 2000 ; French Studies Bulletin Volume 21 ; 21 >
+    au < released ; 2000 ; French Studies Bulletin Volume 21 ; 21 >
     au < released ; 2001 ; French Studies Bulletin Volume 22 ; 22 >
     au < manifest ; 2002 ; French Studies Bulletin Volume 23 ; 23 >
     au < manifest ; 2003 ; French Studies Bulletin Volume 24 ; 24 >
     au < released ; 2004 ; French Studies Bulletin Volume 25 ; 25 >
-    au < releasing ; 2005 ; French Studies Bulletin Volume 26 ; 26 >
+    au < released ; 2005 ; French Studies Bulletin Volume 26 ; 26 >
     au < released ; 2006 ; French Studies Bulletin Volume 27 ; 27 >
     au < manifest ; 2007 ; French Studies Bulletin Volume 28 ; 28 >
-    au < releasing ; 2008 ; French Studies Bulletin Volume 29 ; 29 >
-    au < releasing ; 2009 ; French Studies Bulletin Volume 30 ; 30 >
+    au < released ; 2008 ; French Studies Bulletin Volume 29 ; 29 >
+    au < released ; 2009 ; French Studies Bulletin Volume 30 ; 30 >
     au < released ; 2010 ; French Studies Bulletin Volume 31 ; 31 >
     au < released ; 2011 ; French Studies Bulletin Volume 32 ; 32 >
     au < released ; 2012 ; French Studies Bulletin Volume 33 ; 33 >
@@ -2560,7 +2560,7 @@
     au < released ; 2000 ; Polin: Studies in Polish Jewry Volume 13 ; 13 >
     au < released ; 2001 ; Polin: Studies in Polish Jewry Volume 14 ; 14 >
     au < released ; 2002 ; Polin: Studies in Polish Jewry Volume 15 ; 15 >
-    au < releasing ; 2003 ; Polin: Studies in Polish Jewry Volume 16 ; 16 >
+    au < released ; 2003 ; Polin: Studies in Polish Jewry Volume 16 ; 16 >
     au < released ; 2004 ; Polin: Studies in Polish Jewry Volume 17 ; 17 >
     au < released ; 2005 ; Polin: Studies in Polish Jewry Volume 18 ; 18 >
     au < released ; 2007 ; Polin: Studies in Polish Jewry Volume 19 ; 19 >
@@ -2599,7 +2599,7 @@
     au < released ; 2022 ; Church Archaeology Volume 21 ; 21 >
     au < released ; 2022 ; Church Archaeology Volume 22 ; 22 >
     au < released ; 2023 ; Church Archaeology Volume 23 ; 23 >
-    au < releasing ; 2024 ; Church Archaeology Volume 24 ; 24 >
+    au < released ; 2024 ; Church Archaeology Volume 24 ; 24 >
     au < expected ; 2025 ; Church Archaeology Volume 25 ; 25 >
 
   }
