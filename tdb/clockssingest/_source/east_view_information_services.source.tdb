@@ -84,7 +84,7 @@
         #AUs in production
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewdb-released/
 
-        au < readySource ; crawling ; 2025 ; East View Information Services Database Source Content 2025_01 ; 2025_01 >
+        au < readySource ; down ; 2025 ; East View Information Services Database Source Content 2025_01 ; 2025_01 >
 
     }
 
