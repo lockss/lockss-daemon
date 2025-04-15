@@ -174,6 +174,9 @@
     au < released ; 1947 ; Account of the Receipts and Expenditures of the United States 1947 ; 1947 ; https://www.govinfo.gov/ >
     au < released ; 1948 ; Account of the Receipts and Expenditures of the United States 1948 ; 1948 ; https://www.govinfo.gov/ >
     au < released ; 1949 ; Account of the Receipts and Expenditures of the United States 1949 ; 1949 ; https://www.govinfo.gov/ >
+    au < manifest ; 1950 ; Account of the Receipts and Expenditures of the United States 1950 ; 1950 ; https://www.govinfo.gov/ >
+    au < manifest ; 1951 ; Account of the Receipts and Expenditures of the United States 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < manifest ; 1952 ; Account of the Receipts and Expenditures of the United States 1952 ; 1952 ; https://www.govinfo.gov/ >
 
     au < released ; 2019 ; Account of the Receipts and Expenditures of the United States 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Account of the Receipts and Expenditures of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
@@ -181,8 +184,7 @@
     au < released ; 2022 ; Account of the Receipts and Expenditures of the United States 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Account of the Receipts and Expenditures of the United States 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Account of the Receipts and Expenditures of the United States 2024 ; 2024 ; https://www.govinfo.gov/ >
-    au < manifest ; 2025 ; GOVPUB 2025 ; 2025 ; https://www.govinfo.gov/ >
-
+    au < manifest ; 2025 ; Account of the Receipts and Expenditures of the United States 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -193,45 +195,6 @@
     >
 
     param[collection_id] = GPO
-
-    au < released ; 1941 ; Additional Government Publications and Archives 1941 ; 1941 ; https://www.govinfo.gov/ >
-    au < released ; 1942 ; Additional Government Publications and Archives 1942 ; 1942 ; https://www.govinfo.gov/ >
-    au < released ; 1943 ; Additional Government Publications and Archives 1943 ; 1943 ; https://www.govinfo.gov/ >
-    au < released ; 1944 ; Additional Government Publications and Archives 1944 ; 1944 ; https://www.govinfo.gov/ >
-    au < released ; 1945 ; Additional Government Publications and Archives 1945 ; 1945 ; https://www.govinfo.gov/ >
-    au < released ; 1946 ; Additional Government Publications and Archives 1946 ; 1946 ; https://www.govinfo.gov/ >
-    au < released ; 1947 ; Additional Government Publications and Archives 1947 ; 1947 ; https://www.govinfo.gov/ >
-    au < released ; 1948 ; Additional Government Publications and Archives 1948 ; 1948 ; https://www.govinfo.gov/ >
-    au < released ; 1950 ; Additional Government Publications and Archives 1950 ; 1950 ; https://www.govinfo.gov/ >
-    au < released ; 1951 ; Additional Government Publications and Archives 1951 ; 1951 ; https://www.govinfo.gov/ >
-    au < released ; 1953 ; Additional Government Publications and Archives 1953 ; 1953 ; https://www.govinfo.gov/ >
-    au < released ; 1954 ; Additional Government Publications and Archives 1954 ; 1954 ; https://www.govinfo.gov/ >
-    au < released ; 1955 ; Additional Government Publications and Archives 1955 ; 1955 ; https://www.govinfo.gov/ >
-    au < released ; 1956 ; Additional Government Publications and Archives 1956 ; 1956 ; https://www.govinfo.gov/ >
-    au < released ; 1957 ; Additional Government Publications and Archives 1957 ; 1957 ; https://www.govinfo.gov/ >
-    au < released ; 1958 ; Additional Government Publications and Archives 1958 ; 1958 ; https://www.govinfo.gov/ >
-    au < released ; 1959 ; Additional Government Publications and Archives 1959 ; 1959 ; https://www.govinfo.gov/ >
-    au < released ; 1961 ; Additional Government Publications and Archives 1961 ; 1961 ; https://www.govinfo.gov/ >
-    au < released ; 1962 ; Additional Government Publications and Archives 1962 ; 1962 ; https://www.govinfo.gov/ >
-    au < released ; 1965 ; Additional Government Publications and Archives 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < released ; 1966 ; Additional Government Publications and Archives 1966 ; 1966 ; https://www.govinfo.gov/ >
-    au < released ; 1967 ; Additional Government Publications and Archives 1967 ; 1967 ; https://www.govinfo.gov/ >
-    au < released ; 1968 ; Additional Government Publications and Archives 1968 ; 1968 ; https://www.govinfo.gov/ >
-    au < released ; 1969 ; Additional Government Publications and Archives 1969 ; 1969 ; https://www.govinfo.gov/ >
-    au < released ; 1972 ; Additional Government Publications and Archives 1972 ; 1972 ; https://www.govinfo.gov/ >
-    au < released ; 1974 ; Additional Government Publications and Archives 1974 ; 1974 ; https://www.govinfo.gov/ >
-    au < released ; 1976 ; Additional Government Publications and Archives 1976 ; 1976 ; https://www.govinfo.gov/ >
-    au < released ; 1979 ; Additional Government Publications and Archives 1979 ; 1979 ; https://www.govinfo.gov/ >
-    au < released ; 1980 ; Additional Government Publications and Archives 1980 ; 1980 ; https://www.govinfo.gov/ >
-    au < released ; 1982 ; Additional Government Publications and Archives 1982 ; 1982 ; https://www.govinfo.gov/ >
-    au < released ; 1983 ; Additional Government Publications and Archives 1983 ; 1983 ; https://www.govinfo.gov/ >
-    au < released ; 1984 ; Additional Government Publications and Archives 1984 ; 1984 ; https://www.govinfo.gov/ >
-    au < released ; 1988 ; Additional Government Publications and Archives 1988 ; 1988 ; https://www.govinfo.gov/ >
-    au < released ; 1995 ; Additional Government Publications and Archives 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < released ; 2012 ; Additional Government Publications and Archives 2012 ; 2012 ; https://www.govinfo.gov/ >
-    au < released ; 2013 ; Additional Government Publications and Archives 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < released ; 2017 ; Additional Government Publications and Archives 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < released ; 2018 ; Additional Government Publications and Archives 2018 ; 2018 ; https://www.govinfo.gov/ >
 
     au < released ; 1873 ; Additional Government Publications 1873 ; 1873 ; https://www.govinfo.gov/ >
     au < released ; 1874 ; Additional Government Publications 1874 ; 1874 ; https://www.govinfo.gov/ >
@@ -296,17 +259,55 @@
     au < released ; 1933 ; Additional Government Publications 1933 ; 1933 ; https://www.govinfo.gov/ >
     au < released ; 1934 ; Additional Government Publications 1934 ; 1934 ; https://www.govinfo.gov/ >
     au < released ; 1935 ; Additional Government Publications 1935 ; 1935 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1936 ; Additional Government Publications 1936 ; 1936 ; https://www.govinfo.gov/ >
+    au < manifest ; 1936 ; Additional Government Publications 1936 ; 1936 ; https://www.govinfo.gov/ >
     au < released ; 1937 ; Additional Government Publications 1937 ; 1937 ; https://www.govinfo.gov/ >
     au < released ; 1938 ; Additional Government Publications 1938 ; 1938 ; https://www.govinfo.gov/ >
     au < released ; 1939 ; Additional Government Publications 1939 ; 1939 ; https://www.govinfo.gov/ >
     au < released ; 1940 ; Additional Government Publications 1940 ; 1940 ; https://www.govinfo.gov/ >
-
-    au < released ; 2019 ; Additional Government Publications 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < released ; 2020 ; Additional Government Publications 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < released ; 2021 ; Additional Government Publications 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < released ; 2022 ; Additional Government Publications 2022 ; 2022 ; https://www.govinfo.gov/ >
-
+    au < released ; 1941 ; Additional Government Publications and Archives 1941 ; 1941 ; https://www.govinfo.gov/ >
+    au < released ; 1942 ; Additional Government Publications and Archives 1942 ; 1942 ; https://www.govinfo.gov/ >
+    au < released ; 1943 ; Additional Government Publications and Archives 1943 ; 1943 ; https://www.govinfo.gov/ >
+    au < released ; 1944 ; Additional Government Publications and Archives 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < released ; 1945 ; Additional Government Publications and Archives 1945 ; 1945 ; https://www.govinfo.gov/ >
+    au < released ; 1946 ; Additional Government Publications and Archives 1946 ; 1946 ; https://www.govinfo.gov/ >
+    au < released ; 1947 ; Additional Government Publications and Archives 1947 ; 1947 ; https://www.govinfo.gov/ >
+    au < released ; 1948 ; Additional Government Publications and Archives 1948 ; 1948 ; https://www.govinfo.gov/ >
+    au < manifest ; 1949 ; Additional Government Publications and Archives 1949 ; 1949 ; https://www.govinfo.gov/ >
+    au < released ; 1950 ; Additional Government Publications and Archives 1950 ; 1950 ; https://www.govinfo.gov/ >
+    au < released ; 1951 ; Additional Government Publications and Archives 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < manifest ; 1952 ; Additional Government Publications and Archives 1952 ; 1952 ; https://www.govinfo.gov/ >
+    au < released ; 1953 ; Additional Government Publications and Archives 1953 ; 1953 ; https://www.govinfo.gov/ >
+    au < released ; 1954 ; Additional Government Publications and Archives 1954 ; 1954 ; https://www.govinfo.gov/ >
+    au < released ; 1955 ; Additional Government Publications and Archives 1955 ; 1955 ; https://www.govinfo.gov/ >
+    au < released ; 1956 ; Additional Government Publications and Archives 1956 ; 1956 ; https://www.govinfo.gov/ >
+    au < released ; 1957 ; Additional Government Publications and Archives 1957 ; 1957 ; https://www.govinfo.gov/ >
+    au < released ; 1958 ; Additional Government Publications and Archives 1958 ; 1958 ; https://www.govinfo.gov/ >
+    au < released ; 1959 ; Additional Government Publications and Archives 1959 ; 1959 ; https://www.govinfo.gov/ >
+    au < released ; 1961 ; Additional Government Publications and Archives 1961 ; 1961 ; https://www.govinfo.gov/ >
+    au < released ; 1962 ; Additional Government Publications and Archives 1962 ; 1962 ; https://www.govinfo.gov/ >
+    au < released ; 1965 ; Additional Government Publications and Archives 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < released ; 1966 ; Additional Government Publications and Archives 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < released ; 1967 ; Additional Government Publications and Archives 1967 ; 1967 ; https://www.govinfo.gov/ >
+    au < released ; 1968 ; Additional Government Publications and Archives 1968 ; 1968 ; https://www.govinfo.gov/ >
+    au < released ; 1969 ; Additional Government Publications and Archives 1969 ; 1969 ; https://www.govinfo.gov/ >
+    au < released ; 1972 ; Additional Government Publications and Archives 1972 ; 1972 ; https://www.govinfo.gov/ >
+    au < released ; 1974 ; Additional Government Publications and Archives 1974 ; 1974 ; https://www.govinfo.gov/ >
+    au < released ; 1976 ; Additional Government Publications and Archives 1976 ; 1976 ; https://www.govinfo.gov/ >
+    au < released ; 1979 ; Additional Government Publications and Archives 1979 ; 1979 ; https://www.govinfo.gov/ >
+    au < released ; 1980 ; Additional Government Publications and Archives 1980 ; 1980 ; https://www.govinfo.gov/ >
+    au < released ; 1982 ; Additional Government Publications and Archives 1982 ; 1982 ; https://www.govinfo.gov/ >
+    au < released ; 1983 ; Additional Government Publications and Archives 1983 ; 1983 ; https://www.govinfo.gov/ >
+    au < released ; 1984 ; Additional Government Publications and Archives 1984 ; 1984 ; https://www.govinfo.gov/ >
+    au < released ; 1988 ; Additional Government Publications and Archives 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < released ; 1995 ; Additional Government Publications and Archives 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < released ; 2012 ; Additional Government Publications and Archives 2012 ; 2012 ; https://www.govinfo.gov/ >
+    au < released ; 2013 ; Additional Government Publications and Archives 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; Additional Government Publications and Archives 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; Additional Government Publications and Archives 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < released ; 2019 ; Additional Government Publications and Archives 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < released ; 2020 ; Additional Government Publications and Archives 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < released ; 2021 ; Additional Government Publications and Archives 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < released ; 2022 ; Additional Government Publications and Archives 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Additional Government Publications and Archives 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Additional Government Publications and Archives 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Additional Government Publications and Archives 2025 ; 2025 ; https://www.govinfo.gov/ >

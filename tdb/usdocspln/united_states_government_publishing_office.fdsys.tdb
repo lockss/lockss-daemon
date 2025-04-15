@@ -169,9 +169,9 @@
     au < superseded ; 1947 ; Account of the Receipts and Expenditures of the United States 1947 [superseded] ; https://www.gpo.gov/ ; 1947 >
     au < superseded ; 1948 ; Account of the Receipts and Expenditures of the United States 1948 [superseded] ; https://www.gpo.gov/ ; 1948 >
     au < superseded ; 1949 ; Account of the Receipts and Expenditures of the United States 1949 [superseded] ; https://www.gpo.gov/ ; 1949 >
-    au < down ; 1950 ; Account of the Receipts and Expenditures of the United States 1950 ; https://www.gpo.gov/ ; 1950 >
-    au < down ; 1951 ; Account of the Receipts and Expenditures of the United States 1951 ; https://www.gpo.gov/ ; 1951 >
-    au < down ; 1952 ; Account of the Receipts and Expenditures of the United States 1952 ; https://www.gpo.gov/ ; 1952 >
+    au < superseded ; 1950 ; Account of the Receipts and Expenditures of the United States 1950 [superseded] ; https://www.gpo.gov/ ; 1950 >
+    au < superseded ; 1951 ; Account of the Receipts and Expenditures of the United States 1951 [superseded] ; https://www.gpo.gov/ ; 1951 >
+    au < superseded ; 1952 ; Account of the Receipts and Expenditures of the United States 1952 [superseded] ; https://www.gpo.gov/ ; 1952 >
     au < down ; 1953 ; Account of the Receipts and Expenditures of the United States 1953 ; https://www.gpo.gov/ ; 1953 >
     au < down ; 1954 ; Account of the Receipts and Expenditures of the United States 1954 ; https://www.gpo.gov/ ; 1954 >
     au < down ; 1955 ; Account of the Receipts and Expenditures of the United States 1955 ; https://www.gpo.gov/ ; 1955 >
@@ -251,7 +251,7 @@
     #see for example https://www.gpo.gov/smap/fdsys/sitemap_1961/1961_GPO_sitemap.xml
 
     au < superseded ; 1907 ; Additional Government Publications 1907 [re-released] ; http://www.gpo.gov/ ; 1907 >
-    au < down ; 1936 ; Additional Government Publications 1936 ; http://www.gpo.gov/ ; 1936 >
+    au < superseded ; 1936 ; Additional Government Publications 1936 [superseded] ; http://www.gpo.gov/ ; 1936 >
     au < superseded ; 1941 ; Additional Government Publications 1941 [superseded] ; https://www.gpo.gov/ ; 1941 >
     au < superseded ; 1942 ; Additional Government Publications 1942 [superseded] ; https://www.gpo.gov/ ; 1942 >
     au < superseded ; 1943 ; Additional Government Publications 1943 [superseded] ; https://www.gpo.gov/ ; 1943 >
@@ -260,10 +260,10 @@
     au < superseded ; 1946 ; Additional Government Publications 1946 [superseded] ; https://www.gpo.gov/ ; 1946 >
     au < superseded ; 1947 ; Additional Government Publications 1947 [superseded] ; https://www.gpo.gov/ ; 1947 >
     au < superseded ; 1948 ; Additional Government Publications 1948 [superseded] ; https://www.gpo.gov/ ; 1948 >
-    au < down ; 1949 ; Additional Government Publications 1949 ; https://www.gpo.gov/ ; 1949 >
+    au < superseded ; 1949 ; Additional Government Publications 1949 [superseded] ; https://www.gpo.gov/ ; 1949 >
     au < superseded ; 1950 ; Additional Government Publications 1950 [superseded] ; https://www.gpo.gov/ ; 1950 >
     au < superseded ; 1951 ; Additional Government Publications 1951 [superseded] ; https://www.gpo.gov/ ; 1951 >
-    au < down ; 1952 ; Additional Government Publications 1952 ; https://www.gpo.gov/ ; 1952 >
+    au < superseded ; 1952 ; Additional Government Publications 1952 [superseded] ; https://www.gpo.gov/ ; 1952 >
     au < superseded ; 1953 ; Additional Government Publications 1953 [superseded] ; https://www.gpo.gov/ ; 1953 >
     au < superseded ; 1954 ; Additional Government Publications 1954 [superseded] ; https://www.gpo.gov/ ; 1954 >
     au < superseded ; 1955 ; Additional Government Publications 1955 [superseded] ; https://www.gpo.gov/ ; 1955 >
@@ -602,7 +602,7 @@
     #au < exists ; 1796 ; Congressional Documents 1796 ; https://www.gpo.gov/ ; 1796 > #empty
     au < down ; 1862 ; Congressional Documents 1862 ; http://www.gpo.gov/ ; 1862 >
     au < superseded ; 1913 ; Congressional Documents 1913 [superseded] ; https://www.gpo.gov/ ; 1913 >
-    au < down ; 1936 ; Congressional Documents 1936 ; http://www.gpo.gov/ ; 1936 >
+    au < superseded ; 1936 ; Congressional Documents 1936 [superseded] ; http://www.gpo.gov/ ; 1936 >
     au < down ; 1960 ; Congressional Documents 1960 ; http://www.gpo.gov/ ; 1960 >
     au < down ; 1976 ; Congressional Documents 1976 ; https://www.gpo.gov/ ; 1976 >
     au < down ; 1979 ; Congressional Documents 1979 ; https://www.gpo.gov/ ; 1979 >
