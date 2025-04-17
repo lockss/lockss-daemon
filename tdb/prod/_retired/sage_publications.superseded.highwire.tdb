@@ -18,6 +18,7 @@
         attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
         implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
+        au < superseded ; 2006 ; Aramaic Studies Volume 3 [superseded] ; 3 ; http://ars.sagepub.com/ >
         au < superseded ; 2006 ; Business Communication Quarterly Volume 69 [superseded] ; 69 ; http://bcq.sagepub.com/ >
         au < superseded ; 2006 ; Business Information Review Volume 23 [superseded] ; 23 ; http://bir.sagepub.com/ >
         au < superseded ; 2006 ; British Journalism Review Volume 17 [superseded] ; 17 ; http://bjr.sagepub.com/ >
