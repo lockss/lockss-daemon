@@ -1250,7 +1250,7 @@
       au < released ; 2022 ; 2022 ; Journal of the American Musicological Society Volume 75 ; 75 >
       au < released ; 2023 ; 2023 ; Journal of the American Musicological Society Volume 76 ; 76 >
       au < manifest ; 2024 ; 2024 ; Journal of the American Musicological Society Volume 77 ; 77 >
-      au < expected ; 2025 ; 2025 ; Journal of the American Musicological Society Volume 78 ; 78 >
+      au < manifest ; 2025 ; 2025 ; Journal of the American Musicological Society Volume 78 ; 78 >
 
     }
 
@@ -1443,43 +1443,43 @@
 
       param[journal_id] = jrpc
 
-      au < exists ; 2002 ; 2002 ; Journal of Religion and Popular Culture Volume 1 ; 1 >
-      au < exists ; 2002 ; 2002 ; Journal of Religion and Popular Culture Volume 2 ; 2 >
-      au < exists ; 2003 ; 2003 ; Journal of Religion and Popular Culture Volume 3 ; 3 >
-      au < exists ; 2003 ; 2003 ; Journal of Religion and Popular Culture Volume 4 ; 4 >
-      au < exists ; 2003 ; 2003 ; Journal of Religion and Popular Culture Volume 5 ; 5 >
-      au < exists ; 2004 ; 2004 ; Journal of Religion and Popular Culture Volume 6 ; 6 >
-      au < exists ; 2004 ; 2004 ; Journal of Religion and Popular Culture Volume 7 ; 7 >
-      au < exists ; 2004 ; 2004 ; Journal of Religion and Popular Culture Volume 8 ; 8 >
-      au < exists ; 2005 ; 2005 ; Journal of Religion and Popular Culture Volume 9 ; 9 >
-      au < exists ; 2005 ; 2005 ; Journal of Religion and Popular Culture Volume 10 ; 10 >
-      au < exists ; 2005 ; 2005 ; Journal of Religion and Popular Culture Volume 11 ; 11 >
-      au < exists ; 2006 ; 2006 ; Journal of Religion and Popular Culture Volume 12 ; 12 >
-      au < exists ; 2006 ; 2006 ; Journal of Religion and Popular Culture Volume 13 ; 13 >
-      au < exists ; 2006 ; 2006 ; Journal of Religion and Popular Culture Volume 14 ; 14 >
-      au < exists ; 2007 ; 2007 ; Journal of Religion and Popular Culture Volume 15 ; 15 >
-      au < exists ; 2007 ; 2007 ; Journal of Religion and Popular Culture Volume 16 ; 16 >
-      au < exists ; 2007 ; 2007 ; Journal of Religion and Popular Culture Volume 17 ; 17 >
-      au < exists ; 2008 ; 2008 ; Journal of Religion and Popular Culture Volume 18 ; 18 >
-      au < exists ; 2008 ; 2008 ; Journal of Religion and Popular Culture Volume 19 ; 19 >
-      au < exists ; 2008 ; 2008 ; Journal of Religion and Popular Culture Volume 20 ; 20 >
-      au < exists ; 2009 ; 2009 ; Journal of Religion and Popular Culture Volume 21 ; 21 >
-      au < exists ; 2010 ; 2010 ; Journal of Religion and Popular Culture Volume 22 ; 22 >
-      au < exists ; 2011 ; 2011 ; Journal of Religion and Popular Culture Volume 23 ; 23 >
-      au < exists ; 2012 ; 2012 ; Journal of Religion and Popular Culture Volume 24 ; 24 >
-      au < exists ; 2013 ; 2013 ; Journal of Religion and Popular Culture Volume 25 ; 25 >
-      au < exists ; 2014 ; 2014 ; Journal of Religion and Popular Culture Volume 26 ; 26 >
-      au < exists ; 2015 ; 2015 ; Journal of Religion and Popular Culture Volume 27 ; 27 >
-      au < exists ; 2016 ; 2016 ; Journal of Religion and Popular Culture Volume 28 ; 28 >
-      au < exists ; 2017 ; 2017 ; Journal of Religion and Popular Culture Volume 29 ; 29 >
-      au < exists ; 2018 ; 2018 ; Journal of Religion and Popular Culture Volume 30 ; 30 >
-      au < exists ; 2019 ; 2019 ; Journal of Religion and Popular Culture Volume 31 ; 31 >
-      au < exists ; 2020 ; 2020 ; Journal of Religion and Popular Culture Volume 32 ; 32 >
-      au < exists ; 2021 ; 2021 ; Journal of Religion and Popular Culture Volume 33 ; 33 >
-      au < exists ; 2022 ; 2022 ; Journal of Religion and Popular Culture Volume 34 ; 34 >
-      au < exists ; 2023 ; 2023 ; Journal of Religion and Popular Culture Volume 35 ; 35 >
-      au < exists ; 2024 ; 2024 ; Journal of Religion and Popular Culture Volume 36 ; 36 >
-      au < exists ; 2025 ; 2025 ; Journal of Religion and Popular Culture Volume 37 ; 37 >
+      au < manifest ; 2002 ; 2002 ; Journal of Religion and Popular Culture Volume 1 ; 1 >
+      au < manifest ; 2002 ; 2002 ; Journal of Religion and Popular Culture Volume 2 ; 2 >
+      au < manifest ; 2003 ; 2003 ; Journal of Religion and Popular Culture Volume 3 ; 3 >
+      au < manifest ; 2003 ; 2003 ; Journal of Religion and Popular Culture Volume 4 ; 4 >
+      au < manifest ; 2003 ; 2003 ; Journal of Religion and Popular Culture Volume 5 ; 5 >
+      au < manifest ; 2004 ; 2004 ; Journal of Religion and Popular Culture Volume 6 ; 6 >
+      au < manifest ; 2004 ; 2004 ; Journal of Religion and Popular Culture Volume 7 ; 7 >
+      au < manifest ; 2004 ; 2004 ; Journal of Religion and Popular Culture Volume 8 ; 8 >
+      au < manifest ; 2005 ; 2005 ; Journal of Religion and Popular Culture Volume 9 ; 9 >
+      au < manifest ; 2005 ; 2005 ; Journal of Religion and Popular Culture Volume 10 ; 10 >
+      au < manifest ; 2005 ; 2005 ; Journal of Religion and Popular Culture Volume 11 ; 11 >
+      au < manifest ; 2006 ; 2006 ; Journal of Religion and Popular Culture Volume 12 ; 12 >
+      au < manifest ; 2006 ; 2006 ; Journal of Religion and Popular Culture Volume 13 ; 13 >
+      au < manifest ; 2006 ; 2006 ; Journal of Religion and Popular Culture Volume 14 ; 14 >
+      au < manifest ; 2007 ; 2007 ; Journal of Religion and Popular Culture Volume 15 ; 15 >
+      au < manifest ; 2007 ; 2007 ; Journal of Religion and Popular Culture Volume 16 ; 16 >
+      au < manifest ; 2007 ; 2007 ; Journal of Religion and Popular Culture Volume 17 ; 17 >
+      au < manifest ; 2008 ; 2008 ; Journal of Religion and Popular Culture Volume 18 ; 18 >
+      au < manifest ; 2008 ; 2008 ; Journal of Religion and Popular Culture Volume 19 ; 19 >
+      au < manifest ; 2008 ; 2008 ; Journal of Religion and Popular Culture Volume 20 ; 20 >
+      au < manifest ; 2009 ; 2009 ; Journal of Religion and Popular Culture Volume 21 ; 21 >
+      au < manifest ; 2010 ; 2010 ; Journal of Religion and Popular Culture Volume 22 ; 22 >
+      au < manifest ; 2011 ; 2011 ; Journal of Religion and Popular Culture Volume 23 ; 23 >
+      au < manifest ; 2012 ; 2012 ; Journal of Religion and Popular Culture Volume 24 ; 24 >
+      au < manifest ; 2013 ; 2013 ; Journal of Religion and Popular Culture Volume 25 ; 25 >
+      au < manifest ; 2014 ; 2014 ; Journal of Religion and Popular Culture Volume 26 ; 26 >
+      au < manifest ; 2015 ; 2015 ; Journal of Religion and Popular Culture Volume 27 ; 27 >
+      au < manifest ; 2016 ; 2016 ; Journal of Religion and Popular Culture Volume 28 ; 28 >
+      au < manifest ; 2017 ; 2017 ; Journal of Religion and Popular Culture Volume 29 ; 29 >
+      au < manifest ; 2018 ; 2018 ; Journal of Religion and Popular Culture Volume 30 ; 30 >
+      au < manifest ; 2019 ; 2019 ; Journal of Religion and Popular Culture Volume 31 ; 31 >
+      au < manifest ; 2020 ; 2020 ; Journal of Religion and Popular Culture Volume 32 ; 32 >
+      au < manifest ; 2021 ; 2021 ; Journal of Religion and Popular Culture Volume 33 ; 33 >
+      au < manifest ; 2022 ; 2022 ; Journal of Religion and Popular Culture Volume 34 ; 34 >
+      au < manifest ; 2023 ; 2023 ; Journal of Religion and Popular Culture Volume 35 ; 35 >
+      au < manifest ; 2024 ; 2024 ; Journal of Religion and Popular Culture Volume 36 ; 36 >
+      au < manifest ; 2025 ; 2025 ; Journal of Religion and Popular Culture Volume 37 ; 37 >
 
   }
 
@@ -2411,36 +2411,36 @@
 
       param[journal_id] = sfs
 
-      au < exists ; 1973 ; 1973 ; Science Fiction Studies Volume 1 ; 1 >
+      au < manifest ; 1973 ; 1973 ; Science Fiction Studies Volume 1 ; 1 >
       
-      au < exists ; 1994 ; 1994 ; Science Fiction Studies Volume 21 ; 21 >
-      au < exists ; 1995 ; 1995 ; Science Fiction Studies Volume 22 ; 22 >
-      au < exists ; 1996 ; 1996 ; Science Fiction Studies Volume 23 ; 23 >
-      au < exists ; 1997 ; 1997 ; Science Fiction Studies Volume 24 ; 24 >
-      au < exists ; 1998 ; 1998 ; Science Fiction Studies Volume 25 ; 25 >
-      au < exists ; 1999 ; 1999 ; Science Fiction Studies Volume 26 ; 26 >
-      au < exists ; 2000 ; 2000 ; Science Fiction Studies Volume 27 ; 27 >
-      au < exists ; 2001 ; 2001 ; Science Fiction Studies Volume 28 ; 28 >
-      au < exists ; 2002 ; 2002 ; Science Fiction Studies Volume 29 ; 29 >
-      au < exists ; 2003 ; 2003 ; Science Fiction Studies Volume 30 ; 30 >
-      au < exists ; 2004 ; 2004 ; Science Fiction Studies Volume 31 ; 31 >
-      au < exists ; 2005 ; 2005 ; Science Fiction Studies Volume 32 ; 32 >
-      au < exists ; 2006 ; 2006 ; Science Fiction Studies Volume 33 ; 33 >
-      au < exists ; 2007 ; 2007 ; Science Fiction Studies Volume 34 ; 34 >
-      au < exists ; 2008 ; 2008 ; Science Fiction Studies Volume 35 ; 35 >
-      au < exists ; 2009 ; 2009 ; Science Fiction Studies Volume 36 ; 36 >
-      au < exists ; 2010 ; 2010 ; Science Fiction Studies Volume 37 ; 37 >
-      au < exists ; 2011 ; 2011 ; Science Fiction Studies Volume 38 ; 38 >
-      au < exists ; 2012 ; 2012 ; Science Fiction Studies Volume 39 ; 39 >
-      au < exists ; 2013 ; 2013 ; Science Fiction Studies Volume 40 ; 40 >
-      au < exists ; 2014 ; 2014 ; Science Fiction Studies Volume 41 ; 41 >
-      au < exists ; 2015 ; 2015 ; Science Fiction Studies Volume 42 ; 42 >
-      au < exists ; 2016 ; 2016 ; Science Fiction Studies Volume 43 ; 43 >
-      au < exists ; 2017 ; 2017 ; Science Fiction Studies Volume 44 ; 44 >
-      au < exists ; 2018 ; 2018 ; Science Fiction Studies Volume 45 ; 45 >
-      au < exists ; 2019 ; 2019 ; Science Fiction Studies Volume 46 ; 46 >
-      au < exists ; 2020 ; 2020 ; Science Fiction Studies Volume 47 ; 47 >
-      au < exists ; 2021 ; 2021 ; Science Fiction Studies Volume 48 ; 48 >
+      au < manifest ; 1994 ; 1994 ; Science Fiction Studies Volume 21 ; 21 >
+      au < manifest ; 1995 ; 1995 ; Science Fiction Studies Volume 22 ; 22 >
+      au < manifest ; 1996 ; 1996 ; Science Fiction Studies Volume 23 ; 23 >
+      au < manifest ; 1997 ; 1997 ; Science Fiction Studies Volume 24 ; 24 >
+      au < manifest ; 1998 ; 1998 ; Science Fiction Studies Volume 25 ; 25 >
+      au < manifest ; 1999 ; 1999 ; Science Fiction Studies Volume 26 ; 26 >
+      au < manifest ; 2000 ; 2000 ; Science Fiction Studies Volume 27 ; 27 >
+      au < manifest ; 2001 ; 2001 ; Science Fiction Studies Volume 28 ; 28 >
+      au < manifest ; 2002 ; 2002 ; Science Fiction Studies Volume 29 ; 29 >
+      au < manifest ; 2003 ; 2003 ; Science Fiction Studies Volume 30 ; 30 >
+      au < manifest ; 2004 ; 2004 ; Science Fiction Studies Volume 31 ; 31 >
+      au < manifest ; 2005 ; 2005 ; Science Fiction Studies Volume 32 ; 32 >
+      au < manifest ; 2006 ; 2006 ; Science Fiction Studies Volume 33 ; 33 >
+      au < manifest ; 2007 ; 2007 ; Science Fiction Studies Volume 34 ; 34 >
+      au < manifest ; 2008 ; 2008 ; Science Fiction Studies Volume 35 ; 35 >
+      au < manifest ; 2009 ; 2009 ; Science Fiction Studies Volume 36 ; 36 >
+      au < manifest ; 2010 ; 2010 ; Science Fiction Studies Volume 37 ; 37 >
+      au < manifest ; 2011 ; 2011 ; Science Fiction Studies Volume 38 ; 38 >
+      au < manifest ; 2012 ; 2012 ; Science Fiction Studies Volume 39 ; 39 >
+      au < manifest ; 2013 ; 2013 ; Science Fiction Studies Volume 40 ; 40 >
+      au < manifest ; 2014 ; 2014 ; Science Fiction Studies Volume 41 ; 41 >
+      au < manifest ; 2015 ; 2015 ; Science Fiction Studies Volume 42 ; 42 >
+      au < manifest ; 2016 ; 2016 ; Science Fiction Studies Volume 43 ; 43 >
+      au < manifest ; 2017 ; 2017 ; Science Fiction Studies Volume 44 ; 44 >
+      au < manifest ; 2018 ; 2018 ; Science Fiction Studies Volume 45 ; 45 >
+      au < manifest ; 2019 ; 2019 ; Science Fiction Studies Volume 46 ; 46 >
+      au < manifest ; 2020 ; 2020 ; Science Fiction Studies Volume 47 ; 47 >
+      au < manifest ; 2021 ; 2021 ; Science Fiction Studies Volume 48 ; 48 >
       au < exists ; 2012 ; 2012 ; Science Fiction Studies Volume 49 ; 49 >
       au < exists ; 2013 ; 2013 ; Science Fiction Studies Volume 50 ; 50 >
       au < exists ; 2014 ; 2014 ; Science Fiction Studies Volume 51 ; 51 >
@@ -2724,31 +2724,31 @@
 
       param[journal_id] = jjs
 
-      au < exists ; 2001 ; 2001 ; The Journal of Japanese Studies Volume 27 ; 27 >
-      au < exists ; 2002 ; 2002 ; The Journal of Japanese Studies Volume 28 ; 28 >
-      au < exists ; 2003 ; 2003 ; The Journal of Japanese Studies Volume 29 ; 29 >
-      au < exists ; 2004 ; 2004 ; The Journal of Japanese Studies Volume 30 ; 30 >
-      au < exists ; 2005 ; 2005 ; The Journal of Japanese Studies Volume 31 ; 31 >
-      au < exists ; 2006 ; 2006 ; The Journal of Japanese Studies Volume 32 ; 32 >
-      au < exists ; 2007 ; 2007 ; The Journal of Japanese Studies Volume 33 ; 33 >
+      au < manifest ; 2001 ; 2001 ; The Journal of Japanese Studies Volume 27 ; 27 >
+      au < manifest ; 2002 ; 2002 ; The Journal of Japanese Studies Volume 28 ; 28 >
+      au < manifest ; 2003 ; 2003 ; The Journal of Japanese Studies Volume 29 ; 29 >
+      au < manifest ; 2004 ; 2004 ; The Journal of Japanese Studies Volume 30 ; 30 >
+      au < manifest ; 2005 ; 2005 ; The Journal of Japanese Studies Volume 31 ; 31 >
+      au < manifest ; 2006 ; 2006 ; The Journal of Japanese Studies Volume 32 ; 32 >
+      au < manifest ; 2007 ; 2007 ; The Journal of Japanese Studies Volume 33 ; 33 >
       au < exists ; 2008 ; 2008 ; The Journal of Japanese Studies Volume 34 ; 34 >
-      au < exists ; 2009 ; 2009 ; The Journal of Japanese Studies Volume 35 ; 35 >
-      au < exists ; 2010 ; 2010 ; The Journal of Japanese Studies Volume 36 ; 36 >
-      au < exists ; 2011 ; 2011 ; The Journal of Japanese Studies Volume 37 ; 37 >
-      au < exists ; 2012 ; 2012 ; The Journal of Japanese Studies Volume 38 ; 38 >
-      au < exists ; 2013 ; 2013 ; The Journal of Japanese Studies Volume 39 ; 39 >
-      au < exists ; 2014 ; 2014 ; The Journal of Japanese Studies Volume 40 ; 40 >
-      au < exists ; 2015 ; 2015 ; The Journal of Japanese Studies Volume 41 ; 41 >
-      au < exists ; 2016 ; 2016 ; The Journal of Japanese Studies Volume 42 ; 42 >
-      au < exists ; 2017 ; 2017 ; The Journal of Japanese Studies Volume 43 ; 43 >
-      au < exists ; 2018 ; 2018 ; The Journal of Japanese Studies Volume 44 ; 44 >
-      au < exists ; 2019 ; 2019 ; The Journal of Japanese Studies Volume 45 ; 45 >
-      au < exists ; 2020 ; 2020 ; The Journal of Japanese Studies Volume 46 ; 46 >
-      au < exists ; 2021 ; 2021 ; The Journal of Japanese Studies Volume 47 ; 47 >
-      au < exists ; 2022 ; 2022 ; The Journal of Japanese Studies Volume 48 ; 48 >
-      au < exists ; 2023 ; 2023 ; The Journal of Japanese Studies Volume 49 ; 49 >
-      au < exists ; 2024 ; 2024 ; The Journal of Japanese Studies Volume 50 ; 50 >
-      au < exists ; 2025 ; 2025 ; The Journal of Japanese Studies Volume 51 ; 51 >
+      au < manifest ; 2009 ; 2009 ; The Journal of Japanese Studies Volume 35 ; 35 >
+      au < manifest ; 2010 ; 2010 ; The Journal of Japanese Studies Volume 36 ; 36 >
+      au < manifest ; 2011 ; 2011 ; The Journal of Japanese Studies Volume 37 ; 37 >
+      au < manifest ; 2012 ; 2012 ; The Journal of Japanese Studies Volume 38 ; 38 >
+      au < manifest ; 2013 ; 2013 ; The Journal of Japanese Studies Volume 39 ; 39 >
+      au < manifest ; 2014 ; 2014 ; The Journal of Japanese Studies Volume 40 ; 40 >
+      au < manifest ; 2015 ; 2015 ; The Journal of Japanese Studies Volume 41 ; 41 >
+      au < manifest ; 2016 ; 2016 ; The Journal of Japanese Studies Volume 42 ; 42 >
+      au < manifest ; 2017 ; 2017 ; The Journal of Japanese Studies Volume 43 ; 43 >
+      au < manifest ; 2018 ; 2018 ; The Journal of Japanese Studies Volume 44 ; 44 >
+      au < manifest ; 2019 ; 2019 ; The Journal of Japanese Studies Volume 45 ; 45 >
+      au < manifest ; 2020 ; 2020 ; The Journal of Japanese Studies Volume 46 ; 46 >
+      au < manifest ; 2021 ; 2021 ; The Journal of Japanese Studies Volume 47 ; 47 >
+      au < manifest ; 2022 ; 2022 ; The Journal of Japanese Studies Volume 48 ; 48 >
+      au < manifest ; 2023 ; 2023 ; The Journal of Japanese Studies Volume 49 ; 49 >
+      au < manifest ; 2024 ; 2024 ; The Journal of Japanese Studies Volume 50 ; 50 >
+      au < manifest ; 2025 ; 2025 ; The Journal of Japanese Studies Volume 51 ; 51 >
 
     }
 }
