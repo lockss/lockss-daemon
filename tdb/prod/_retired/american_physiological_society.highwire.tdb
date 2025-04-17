@@ -5,7 +5,7 @@
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
-  implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
+  #implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
   comment[doNotProcess] = Moving to a new HW Drupal platform on 7/17/2013.
   comment[titles0] = Moved to drupal: ajpheart, ajpendo, ajpcell, ajprenal, ajpregu, ajplung and ajpgi
   comment[titles1] = Moved to drupal also: jn, physrev
@@ -21,6 +21,7 @@
       issnl = 1043-4046
     >
 
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     comment[current_plugin] = HighWirePressH20Plugin
     param[base_url] = http://advan.physiology.org/
 
@@ -90,6 +91,7 @@
       issnl = 0002-9513
     >
 
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     comment[current_plugin] = HighWirePressH20Plugin
     param[base_url] = http://ajplegacy.physiology.org/
     
@@ -341,11 +343,15 @@
 
     {
 
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
+
       au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Cell Physiology Volume 290 [superseded] ; 290 >
 
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     
       au < HighWirePressH20Plugin ; down ; 1977 ; American Journal of Physiology - Cell Physiology Volume 232 ; 232 >
       au < HighWirePressH20Plugin ; down ; 1977 ; American Journal of Physiology - Cell Physiology Volume 233 ; 233 >
@@ -450,14 +456,15 @@
     {
 
       #plugin = org.lockss.plugin.highwire.HighWirePlugin
-      #implicit < status ; year ; name ; param[volume] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
 
       au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Endocrinology And Metabolism Volume 290 [superseded] ; 290 >
 
     }
 
     {
-    
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Endocrinology and Metabolism Volume 288 ; 288 >
@@ -469,6 +476,8 @@
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aps.APSDrupalPlugin ; doNotProcess ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 232 ; 232 >
       au < aps.APSDrupalPlugin ; doNotProcess ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 233 ; 233 >
@@ -572,7 +581,7 @@
     {
 
       #plugin = org.lockss.plugin.highwire.HighWirePlugin
-      #implicit < status ; year ; name ; param[volume] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
 
       au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 290 [superseded] ; 290 >
 
@@ -580,6 +589,7 @@
 
     {
 
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 288 ; 288 >
@@ -591,6 +601,8 @@
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aps.APSDrupalPlugin ; doNotProcess ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 232 ; 232 >
       au < aps.APSDrupalPlugin ; doNotProcess ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 233 ; 233 >
@@ -694,7 +706,7 @@
     {
 
       #plugin = org.lockss.plugin.highwire.HighWirePlugin
-      #implicit < status ; year ; name ; param[volume] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
 
       au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 290 [superseded] ; 290 >
 
@@ -702,6 +714,7 @@
 
     {
 
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 288 ; 288 >
@@ -713,6 +726,8 @@
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; down ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 232 ; 232 >
       au < HighWirePressH20Plugin ; down ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 233 ; 233 >
@@ -816,7 +831,7 @@
     {
 
       #plugin = org.lockss.plugin.highwire.HighWirePlugin
-      #implicit < status ; year ; name ; param[volume] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
 
       au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 290 [superseded] ; 290 >
 
@@ -824,6 +839,7 @@
 
     {
 
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 288 ; 288 >
@@ -835,6 +851,8 @@
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aps.APSDrupalPlugin ; doNotProcess ; 1989 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 257 ; 257 >
       au < aps.APSDrupalPlugin ; doNotProcess ; 1990 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 258 ; 258 >
@@ -913,7 +931,7 @@
     {
 
       #plugin = org.lockss.plugin.highwire.HighWirePlugin
-      #implicit < status ; year ; name ; param[volume] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
 
       au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 290 [superseded] ; 290 >
 
@@ -921,6 +939,7 @@
 
     {
 
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 288 ; 288 >
@@ -932,6 +951,8 @@
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aps.APSDrupalPlugin ; doNotProcess ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 232 ; 232 >
       au < aps.APSDrupalPlugin ; doNotProcess ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 233 ; 233 >
@@ -1034,13 +1055,15 @@
     {
 
       #plugin = org.lockss.plugin.highwire.HighWirePlugin
-      #implicit < status ; year ; name ; param[volume] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
 
       au < HighWirePlugin ; superseded ; 2006 ; American Journal of Physiology - Renal Physiology Volume 290 [superseded] ; 290 >
 
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Renal Physiology Volume 288 ; 288 >
       au < HighWireStrVolPlugin ; down ; 2005 ; American Journal of Physiology - Renal Physiology Volume 289 ; 289 >
@@ -1051,6 +1074,8 @@
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aps.APSDrupalPlugin ; doNotProcess ; 1977 ; American Journal of Physiology - Renal Physiology Volume 232 ; 232 >
       au < aps.APSDrupalPlugin ; doNotProcess ; 1977 ; American Journal of Physiology - Renal Physiology Volume 233 ; 233 >
@@ -1154,7 +1179,7 @@
     {
 
       #plugin = org.lockss.plugin.highwire.HighWirePlugin
-      #implicit < status ; year ; name ; param[volume] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
 
       au < HighWirePlugin ; superseded ; 2006 ; Journal of Applied Physiology Volume 100 [superseded] ; 100 >
 
@@ -1162,6 +1187,7 @@
 
     {
     
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Applied Physiology Volume 98 ; 98 >
@@ -1173,6 +1199,8 @@
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < HighWirePressH20Plugin ; down ; 1948-1949 ; Journal of Applied Physiology Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; down ; 1949-1950 ; Journal of Applied Physiology Volume 2 ; 2 >
@@ -1317,7 +1345,7 @@
     {
 
       #plugin = org.lockss.plugin.highwire.HighWirePlugin
-      #implicit < status ; year ; name ; param[volume] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
 
       au < HighWirePlugin ; superseded ; 2006 ; Journal of Neurophysiology Volume 95 [superseded] ; 95 >
 
@@ -1325,6 +1353,7 @@
 
     {
 
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; Journal of Neurophysiology Volume 93 ; 93 >
@@ -1336,6 +1365,8 @@
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aps.APSDrupalPlugin ; doNotProcess ; 1938 ; Journal of Neurophysiology Volume 1 ; 1 >
       au < aps.APSDrupalPlugin ; doNotProcess ; 1939 ; Journal of Neurophysiology Volume 2 ; 2 >
@@ -1475,7 +1506,7 @@
     {
 
       #plugin = org.lockss.plugin.highwire.HighWirePlugin
-      #implicit < status ; year ; name ; param[volume] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
 
       au < HighWirePlugin ; superseded ; 2006 ; Physiological Genomics Volume 25 [superseded] ; 25 >
 
@@ -1483,6 +1514,7 @@
 
     {
 
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2004-2005 ; Physiological Genomics Volume 20 ; 20 >
@@ -1499,6 +1531,8 @@
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aps.APSDrupalPlugin ; doNotProcess ; 1999 ; Physiological Genomics Volume 1 ; 1 >
       au < aps.APSDrupalPlugin ; doNotProcess ; 2000 ; Physiological Genomics Volume 2 ; 2 >
@@ -1564,6 +1598,7 @@
       issnl = 0031-9333
     >
 
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
     comment[current_plugin] = aps.APSDrupalPlugin
     param[base_url] = http://physrev.physiology.org/
 
@@ -1696,7 +1731,7 @@
     {
 
       #plugin = org.lockss.plugin.highwire.HighWirePlugin
-      #implicit < status ; year ; name ; param[volume] >
+      implicit < pluginSuffix ; status ; year ; name ; param[volume] >
 
       au < HighWirePlugin ; superseded ; 2006 ; Physiology Volume 21 [superseded] ; 21 >
 
@@ -1704,6 +1739,7 @@
 
     {
 
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
       attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
 
       au < HighWireStrVolPlugin ; down ; 2005 ; Physiology Volume 20 ; 20 >
@@ -1713,6 +1749,8 @@
     }
 
     {
+
+      implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
       au < aps.APSDrupalPlugin ; doNotProcess ; 1986 ; Physiology Volume 1 ; 1 >
       au < aps.APSDrupalPlugin ; doNotProcess ; 1987 ; Physiology Volume 2 ; 2 >
