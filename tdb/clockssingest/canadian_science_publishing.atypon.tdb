@@ -1518,13 +1518,13 @@
       au < finished ; manifest ; 2008 ; Genome Volume 51 ; 51 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; Genome Volume 52 ; 52 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Genome Volume 53 ; 53 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2011 ; Genome Volume 54 ; 54 ; https://cdnsciencepub.com/ ; >
+      au < finished ; manifest ; 2011 ; Genome Volume 54 ; 54 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2012 ; Genome Volume 55 ; 55 ; http://www.nrcresearchpress.com/ ; >
-      au < frozen ; exists ; 2013 ; Genome Volume 56 ; 56 ; https://cdnsciencepub.com/ ; >
+      au < finished ; manifest ; 2013 ; Genome Volume 56 ; 56 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2014 ; Genome Volume 57 ; 57 ; http://www.nrcresearchpress.com/ ; >
       au < frozen ; exists ; 2015 ; Genome Volume 58 ; 58 ; http://www.nrcresearchpress.com/ ; >
-      au < frozen ; exists ; 2016 ; Genome Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
-      au < frozen ; exists ; 2017 ; Genome Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
+      au < finished ; manifest ; 2016 ; Genome Volume 59 ; 59 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Genome Volume 60 ; 60 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2018 ; Genome Volume 61 ; 61 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Genome Volume 62 ; 62 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2020 ; Genome Volume 63 ; 63 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
@@ -1599,8 +1599,8 @@
     au < finished ; manifest ; 2004 ; Journal of Environmental Engineering and Science Volume 3 ; 3 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Journal of Environmental Engineering and Science Volume 4 ; 4 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; Journal of Environmental Engineering and Science Volume 5 ; 5 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2007 ; Journal of Environmental Engineering and Science Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2008 ; Journal of Environmental Engineering and Science Volume 7 ; 7 ; https://cdnsciencepub.com/ ; >
+    au < finished ; manifest ; 2007 ; Journal of Environmental Engineering and Science Volume 6 ; 6 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Journal of Environmental Engineering and Science Volume 7 ; 7 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
 
     }
     
@@ -1862,16 +1862,16 @@
     au < finished ; manifest ; 2009 ; Transactions of the Canadian Society for Mechanical Engineering Volume 33 ; 33 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; Transactions of the Canadian Society for Mechanical Engineering Volume 34 ; 34 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Transactions of the Canadian Society for Mechanical Engineering Volume 35 ; 35 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2012 ; Transactions of the Canadian Society for Mechanical Engineering Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2003 ; Transactions of the Canadian Society for Mechanical Engineering Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2004 ; Transactions of the Canadian Society for Mechanical Engineering Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2015 ; Transactions of the Canadian Society for Mechanical Engineering Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2016 ; Transactions of the Canadian Society for Mechanical Engineering Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2017 ; Transactions of the Canadian Society for Mechanical Engineering Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
+    au < finished ; manifest ; 2012 ; Transactions of the Canadian Society for Mechanical Engineering Volume 36 ; 36 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2003 ; Transactions of the Canadian Society for Mechanical Engineering Volume 37 ; 37 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; Transactions of the Canadian Society for Mechanical Engineering Volume 38 ; 38 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; Transactions of the Canadian Society for Mechanical Engineering Volume 39 ; 39 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Transactions of the Canadian Society for Mechanical Engineering Volume 40 ; 40 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2017 ; Transactions of the Canadian Society for Mechanical Engineering Volume 41 ; 41 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2018 ; Transactions of the Canadian Society for Mechanical Engineering Volume 42 ; 42 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Transactions of the Canadian Society for Mechanical Engineering Volume 43 ; 43 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2020 ; Transactions of the Canadian Society for Mechanical Engineering Volume 44 ; 44 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2021 ; Transactions of the Canadian Society for Mechanical Engineering Volume 45 ; 45 ; https://cdnsciencepub.com/ ; >
+    au < finished ; manifest ; 2019 ; Transactions of the Canadian Society for Mechanical Engineering Volume 43 ; 43 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Transactions of the Canadian Society for Mechanical Engineering Volume 44 ; 44 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Transactions of the Canadian Society for Mechanical Engineering Volume 45 ; 45 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Transactions of the Canadian Society for Mechanical Engineering Volume 46 ; 46 ; https://cdnsciencepub.com/ ; >
     au < deepCrawl ; exists ; 2023 ; Transactions of the Canadian Society for Mechanical Engineering Volume 47 ; 47 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2024 ; Transactions of the Canadian Society for Mechanical Engineering Volume 48 ; 48 ; https://cdnsciencepub.com/ ; >
@@ -1890,7 +1890,7 @@
     param[journal_id] = geomat
 
     au < finished ; manifest ; 2018 ; Geomatica Volume 72 ; 72 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Geomatica Volume 73 ; 73 ; https://cdnsciencepub.com/ ; >
+    au < finished ; manifest ; 2019 ; Geomatica Volume 73 ; 73 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Geomatica Volume 74 ; 74 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Geomatica Volume 75 ; 75 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
 
