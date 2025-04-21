@@ -172,13 +172,13 @@
     au < superseded ; 1950 ; Account of the Receipts and Expenditures of the United States 1950 [superseded] ; https://www.gpo.gov/ ; 1950 >
     au < superseded ; 1951 ; Account of the Receipts and Expenditures of the United States 1951 [superseded] ; https://www.gpo.gov/ ; 1951 >
     au < superseded ; 1952 ; Account of the Receipts and Expenditures of the United States 1952 [superseded] ; https://www.gpo.gov/ ; 1952 >
-    au < down ; 1953 ; Account of the Receipts and Expenditures of the United States 1953 ; https://www.gpo.gov/ ; 1953 >
-    au < down ; 1954 ; Account of the Receipts and Expenditures of the United States 1954 ; https://www.gpo.gov/ ; 1954 >
-    au < down ; 1955 ; Account of the Receipts and Expenditures of the United States 1955 ; https://www.gpo.gov/ ; 1955 >
-    au < down ; 1956 ; Account of the Receipts and Expenditures of the United States 1956 ; https://www.gpo.gov/ ; 1956 >
-    au < down ; 1957 ; Account of the Receipts and Expenditures of the United States 1957 ; https://www.gpo.gov/ ; 1957 >
-    au < down ; 1958 ; Account of the Receipts and Expenditures of the United States 1958 ; https://www.gpo.gov/ ; 1958 >
-    au < down ; 1959 ; Account of the Receipts and Expenditures of the United States 1959 ; https://www.gpo.gov/ ; 1959 >
+    au < superseded ; 1953 ; Account of the Receipts and Expenditures of the United States 1953 [superseded] ; https://www.gpo.gov/ ; 1953 >
+    au < superseded ; 1954 ; Account of the Receipts and Expenditures of the United States 1954 [superseded] ; https://www.gpo.gov/ ; 1954 >
+    au < superseded ; 1955 ; Account of the Receipts and Expenditures of the United States 1955 [superseded] ; https://www.gpo.gov/ ; 1955 >
+    au < superseded ; 1956 ; Account of the Receipts and Expenditures of the United States 1956 [superseded] ; https://www.gpo.gov/ ; 1956 >
+    au < superseded ; 1957 ; Account of the Receipts and Expenditures of the United States 1957 [superseded] ; https://www.gpo.gov/ ; 1957 >
+    au < superseded ; 1958 ; Account of the Receipts and Expenditures of the United States 1958 [superseded] ; https://www.gpo.gov/ ; 1958 >
+    au < superseded ; 1959 ; Account of the Receipts and Expenditures of the United States 1959 [superseded] ; https://www.gpo.gov/ ; 1959 >
     au < down ; 1960 ; Account of the Receipts and Expenditures of the United States 1960 ; https://www.gpo.gov/ ; 1960 >
     au < down ; 1961 ; Account of the Receipts and Expenditures of the United States 1961 ; https://www.gpo.gov/ ; 1961 >
     au < down ; 1962 ; Account of the Receipts and Expenditures of the United States 1962 ; https://www.gpo.gov/ ; 1962 >
@@ -377,8 +377,8 @@
     comment[0] = ceased publication in 1999
     param[collection_id] = CZIC
 
-    au < down ; 1951 ; Coastal Zone Information Center 1951 ; http://www.gpo.gov/ ; 1951 >
-    au < down ; 1959 ; Coastal Zone Information Center 1959 ; http://www.gpo.gov/ ; 1959 >
+    au < superseded ; 1951 ; Coastal Zone Information Center 1951 [superseded] ; http://www.gpo.gov/ ; 1951 >
+    au < superseded ; 1959 ; Coastal Zone Information Center 1959 [superseded] ; http://www.gpo.gov/ ; 1959 >
     au < down ; 1962 ; Coastal Zone Information Center 1962 ; http://www.gpo.gov/ ; 1962 >
     au < down ; 1963 ; Coastal Zone Information Center 1963 ; http://www.gpo.gov/ ; 1963 >
     au < down ; 1964 ; Coastal Zone Information Center 1964 ; http://www.gpo.gov/ ; 1964 >
@@ -600,7 +600,7 @@
     param[collection_id] = CDOC
 
     #au < exists ; 1796 ; Congressional Documents 1796 ; https://www.gpo.gov/ ; 1796 > #empty
-    au < down ; 1862 ; Congressional Documents 1862 ; http://www.gpo.gov/ ; 1862 >
+    au < superseded ; 1862 ; Congressional Documents 1862 [superseded] ; http://www.gpo.gov/ ; 1862 >
     au < superseded ; 1913 ; Congressional Documents 1913 [superseded] ; https://www.gpo.gov/ ; 1913 >
     au < superseded ; 1936 ; Congressional Documents 1936 [superseded] ; http://www.gpo.gov/ ; 1936 >
     au < down ; 1960 ; Congressional Documents 1960 ; http://www.gpo.gov/ ; 1960 >
@@ -1386,15 +1386,15 @@
     comment[0] = published from 1951 to 2002 and 2003 to 2008
     param[collection_id] = STATUTE
 
-    au < down ; 1951 ; United States Statutes at Large 1951 ; http://www.gpo.gov/ ; 1951 >
-    au < down ; 1952 ; United States Statutes at Large 1952 ; http://www.gpo.gov/ ; 1952 >
-    au < down ; 1953 ; United States Statutes at Large 1953 ; http://www.gpo.gov/ ; 1953 >
-    au < down ; 1954 ; United States Statutes at Large 1954 ; http://www.gpo.gov/ ; 1954 >
-    au < down ; 1955 ; United States Statutes at Large 1955 ; http://www.gpo.gov/ ; 1955 >
-    au < down ; 1956 ; United States Statutes at Large 1956 ; http://www.gpo.gov/ ; 1956 >
-    au < down ; 1957 ; United States Statutes at Large 1957 ; http://www.gpo.gov/ ; 1957 >
-    au < down ; 1958 ; United States Statutes at Large 1958 ; http://www.gpo.gov/ ; 1958 >
-    au < down ; 1959 ; United States Statutes at Large 1959 ; http://www.gpo.gov/ ; 1959 >
+    au < superseded ; 1951 ; United States Statutes at Large 1951 [superseded] ; http://www.gpo.gov/ ; 1951 >
+    au < superseded ; 1952 ; United States Statutes at Large 1952 [superseded] ; http://www.gpo.gov/ ; 1952 >
+    au < superseded ; 1953 ; United States Statutes at Large 1953 [superseded] ; http://www.gpo.gov/ ; 1953 >
+    au < superseded ; 1954 ; United States Statutes at Large 1954 [superseded] ; http://www.gpo.gov/ ; 1954 >
+    au < superseded ; 1955 ; United States Statutes at Large 1955 [superseded] ; http://www.gpo.gov/ ; 1955 >
+    au < superseded ; 1956 ; United States Statutes at Large 1956 [superseded] ; http://www.gpo.gov/ ; 1956 >
+    au < superseded ; 1957 ; United States Statutes at Large 1957 [superseded] ; http://www.gpo.gov/ ; 1957 >
+    au < superseded ; 1958 ; United States Statutes at Large 1958 [superseded] ; http://www.gpo.gov/ ; 1958 >
+    au < superseded ; 1959 ; United States Statutes at Large 1959 [superseded] ; http://www.gpo.gov/ ; 1959 >
     au < down ; 1960 ; United States Statutes at Large 1960 ; http://www.gpo.gov/ ; 1960 >
     au < down ; 1961 ; United States Statutes at Large 1961 ; http://www.gpo.gov/ ; 1961 >
     au < down ; 1962 ; United States Statutes at Large 1962 ; http://www.gpo.gov/ ; 1962 >

@@ -178,6 +178,14 @@
     au < manifest ; 1951 ; Account of the Receipts and Expenditures of the United States 1951 ; 1951 ; https://www.govinfo.gov/ >
     au < manifest ; 1952 ; Account of the Receipts and Expenditures of the United States 1952 ; 1952 ; https://www.govinfo.gov/ >
 
+    au < manifest ; 1953 ; GOVPUB 1953 ; 1953 ; https://www.govinfo.gov/ >
+    au < manifest ; 1954 ; GOVPUB 1954 ; 1954 ; https://www.govinfo.gov/ >
+    au < manifest ; 1955 ; GOVPUB 1955 ; 1955 ; https://www.govinfo.gov/ >
+    au < manifest ; 1956 ; GOVPUB 1956 ; 1956 ; https://www.govinfo.gov/ >
+    au < manifest ; 1957 ; GOVPUB 1957 ; 1957 ; https://www.govinfo.gov/ >
+    au < manifest ; 1958 ; GOVPUB 1958 ; 1958 ; https://www.govinfo.gov/ >
+    au < manifest ; 1959 ; GOVPUB 1959 ; 1959 ; https://www.govinfo.gov/ >
+ 
     au < released ; 2019 ; Account of the Receipts and Expenditures of the United States 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Account of the Receipts and Expenditures of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Account of the Receipts and Expenditures of the United States 2021 ; 2021 ; https://www.govinfo.gov/ >
@@ -345,6 +353,9 @@
     comment[0] = ceased publication in 1999
     param[collection_id] = CZIC
     # stopped publication in 1999. See https://www.govinfo.gov/sitemap/CZIC_sitemap_index.xml
+
+    au < manifest ; 1951 ; Coastal Zone Information Center 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < manifest ; 1959 ; Coastal Zone Information Center 1959 ; 1959 ; https://www.govinfo.gov/ >
 
   }
 
@@ -632,9 +643,11 @@
 
     param[collection_id] = CDOC
 
-    au < released ; 1986 ; Congressional Documents 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < released ; 2018 ; Congressional Documents 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < manifest ; 1862 ; Congressional Documents 1862 ; 1862 ; https://www.govinfo.gov/ >
 
+    au < released ; 1986 ; Congressional Documents 1986 ; 1986 ; https://www.govinfo.gov/ >
+
+    au < released ; 2018 ; Congressional Documents 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Documents 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Documents 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; Congressional Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
@@ -1680,6 +1693,16 @@
     au < released ; 1948 ; United States Statutes at Large 1948 ; 1948 ; https://www.govinfo.gov/ >
     au < released ; 1949 ; United States Statutes at Large 1949 ; 1949 ; https://www.govinfo.gov/ >
 
+    au < manifest ; 1951 ; STATUTE 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < manifest ; 1952 ; STATUTE 1952 ; 1952 ; https://www.govinfo.gov/ >
+    au < manifest ; 1953 ; STATUTE 1953 ; 1953 ; https://www.govinfo.gov/ >
+    au < manifest ; 1954 ; STATUTE 1954 ; 1954 ; https://www.govinfo.gov/ >
+    au < manifest ; 1955 ; STATUTE 1955 ; 1955 ; https://www.govinfo.gov/ >
+    au < manifest ; 1956 ; STATUTE 1956 ; 1956 ; https://www.govinfo.gov/ >
+    au < manifest ; 1957 ; STATUTE 1957 ; 1957 ; https://www.govinfo.gov/ >
+    au < manifest ; 1958 ; STATUTE 1958 ; 1958 ; https://www.govinfo.gov/ >
+    au < manifest ; 1959 ; STATUTE 1959 ; 1959 ; https://www.govinfo.gov/ >
+ 
     au < doNotProcess ; 2012 ; United States Statutes at Large 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; United States Statutes at Large 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2014 ; United States Statutes at Large 2014 ; 2014 ; https://www.govinfo.gov/ >
