@@ -33,9 +33,9 @@
     au < crawling ; exists ; 2002 ; Archives Volume 27 ; 27 ; >
     au < crawling ; exists ; 2003 ; Archives Volume 28 ; 28 ; >
     au < crawling ; exists ; 2004 ; Archives Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2005 ; Archives Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2005 ; Archives Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2007 ; Archives Volume 32 ; 32 ; >
+    au < ready ; exists ; 2005 ; Archives Volume 30 ; 30 ; >
+    au < ready ; exists ; 2005 ; Archives Volume 31 ; 31 ; >
+    au < ready ; exists ; 2007 ; Archives Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Archives Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Archives Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Archives Volume 35 ; 35 ; >
@@ -101,9 +101,9 @@
     au < crawling ; exists ; 2002 ; Australian Journal of French Studies Volume 39 ; 39 ; >
     au < crawling ; exists ; 2003 ; Australian Journal of French Studies Volume 40 ; 40 ; >
     au < crawling ; exists ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2006 ; Australian Journal of French Studies Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2007 ; Australian Journal of French Studies Volume 44 ; 44 ; >
+    au < ready ; exists ; 2005 ; Australian Journal of French Studies Volume 42 ; 42 ; >
+    au < ready ; exists ; 2006 ; Australian Journal of French Studies Volume 43 ; 43 ; >
+    au < ready ; exists ; 2007 ; Australian Journal of French Studies Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Australian Journal of French Studies Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Australian Journal of French Studies Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Australian Journal of French Studies Volume 47 ; 47 ; >
@@ -162,9 +162,9 @@
 
     au < ready ; exists ; 2003 ; British Journal of Canadian Studies Volume 16 ; 16 ; >
     au < crawling ; exists ; 2004 ; British Journal of Canadian Studies Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 ; >
+    au < ready ; exists ; 2005 ; British Journal of Canadian Studies Volume 18 ; 18 ; >
+    au < ready ; exists ; 2006 ; British Journal of Canadian Studies Volume 19 ; 19 ; >
+    au < ready ; exists ; 2007 ; British Journal of Canadian Studies Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; British Journal of Canadian Studies Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; British Journal of Canadian Studies Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; British Journal of Canadian Studies Volume 23 ; 23 ; >
@@ -228,9 +228,9 @@
     au < crawling ; exists ; 2002 ; Bulletin of Hispanic Studies Volume 79 ; 79 ; >
     au < crawling ; exists ; 2003 ; Bulletin of Hispanic Studies Volume 80 ; 80 ; >
     au < finished ; manifest ; 2004 ; Bulletin of Hispanic Studies Volume 81 ; 81 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 ; >
-    au < manifest ; exists ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 ; >
-    au < manifest ; exists ; 2007 ; Bulletin of Hispanic Studies Volume 84 ; 84 ; >
+    au < ready ; exists ; 2005 ; Bulletin of Hispanic Studies Volume 82 ; 82 ; >
+    au < ready ; exists ; 2006 ; Bulletin of Hispanic Studies Volume 83 ; 83 ; >
+    au < ready ; exists ; 2007 ; Bulletin of Hispanic Studies Volume 84 ; 84 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Bulletin of Hispanic Studies Volume 85 ; 85 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Bulletin of Hispanic Studies Volume 86 ; 86 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Bulletin of Hispanic Studies Volume 87 ; 87 ; >
@@ -270,9 +270,9 @@
     au < crawling ; exists ; 2002 ; The Byron Journal Volume 30 ; 30 ; >
     au < exists ; exists ; 2003 ; The Byron Journal Volume 31 ; 31 ; >
     au < crawling ; exists ; 2004 ; The Byron Journal Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2005 ; The Byron Journal Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2006 ; The Byron Journal Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2007 ; The Byron Journal Volume 35 ; 35 ; >
+    au < ready ; exists ; 2005 ; The Byron Journal Volume 33 ; 33 ; >
+    au < ready ; exists ; 2006 ; The Byron Journal Volume 34 ; 34 ; >
+    au < ready ; exists ; 2007 ; The Byron Journal Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Byron Journal Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Byron Journal Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; The Byron Journal Volume 38 ; 38 ; >
@@ -308,8 +308,8 @@
     #journal_num = 46
 
     au < crawling ; exists ; 2004 ; Comma Volume 2004 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; Comma Volume 2005 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; Comma Volume 2006 ; 2006 ; >
+    au < ready ; exists ; 2005 ; Comma Volume 2005 ; 2005 ; >
+    au < ready ; exists ; 2006 ; Comma Volume 2006 ; 2006 ; >
     au < finished ; manifest ; 2007 ; Comma Volume 2007 ; 2007 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2008 ; Comma Volume 2008 ; 2008 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Comma Volume 2009 ; 2009 ; >
@@ -347,9 +347,9 @@
     au < crawling ; exists ; 2002 ; Catalan Review Volume 16 ; 16 ; >
     au < crawling ; exists ; 2003 ; Catalan Review Volume 17 ; 17 ; >
     au < exists ; exists ; 2004 ; Catalan Review Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2005 ; Catalan Review Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2006 ; Catalan Review Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2007 ; Catalan Review Volume 21 ; 21 ; >
+    au < ready ; exists ; 2005 ; Catalan Review Volume 19 ; 19 ; >
+    au < ready ; exists ; 2006 ; Catalan Review Volume 20 ; 20 ; >
+    au < ready ; exists ; 2007 ; Catalan Review Volume 21 ; 21 ; >
     au < finished ; manifest ; 2008 ; Catalan Review Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2009 ; Catalan Review Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Catalan Review Volume 24 ; 24 ; >
@@ -390,8 +390,8 @@
     au < ready ; exists ; 2003 ; Contemporary French Civilization Volume 27 ; 27 ; >
     au < crawling ; exists ; 2004 ; Contemporary French Civilization Volume 28 ; 28 ; >
     au < finished ; manifest ; 2005 ; Contemporary French Civilization Volume 29 ; 29 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2006 ; Contemporary French Civilization Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2007 ; Contemporary French Civilization Volume 31 ; 31 ; >
+    au < ready ; exists ; 2006 ; Contemporary French Civilization Volume 30 ; 30 ; >
+    au < ready ; exists ; 2007 ; Contemporary French Civilization Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Contemporary French Civilization Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Contemporary French Civilization Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Contemporary French Civilization Volume 34 ; 34 ; >
@@ -465,10 +465,10 @@
     au < crawling ; exists ; 2002 ; Eighteenth-Century Ireland Volume 17 ; 17 ; >
     au < crawling ; exists ; 2003 ; Eighteenth-Century Ireland Volume 18 ; 18 ; >
     au < crawling ; exists ; 2004 ; Eighteenth-Century Ireland Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 ; >
+    au < ready ; exists ; 2005 ; Eighteenth-Century Ireland Volume 20 ; 20 ; >
+    au < ready ; exists ; 2006 ; Eighteenth-Century Ireland Volume 21 ; 21 ; >
+    au < ready ; exists ; 2007 ; Eighteenth-Century Ireland Volume 22 ; 22 ; >
+    au < ready ; exists ; 2008 ; Eighteenth-Century Ireland Volume 23 ; 23 ; >
     au < crawling ; exists ; 2009 ; Eighteenth-Century Ireland Volume 24 ; 24 ; >
     au < crawling ; exists ; 2010 ; Eighteenth-Century Ireland Volume 25 ; 25 ; >
     au < crawling ; exists ; 2011 ; Eighteenth-Century Ireland Volume 26 ; 26 ; >
@@ -515,9 +515,9 @@
     au < ready ; exists ; 2002 ; Essays in Romanticism Volume 10 ; 10 ; >
     au < crawling ; exists ; 2003 ; Essays in Romanticism Volume 11 ; 11 ; >
     au < crawling ; exists ; 2004 ; Essays in Romanticism Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 ; >
+    au < ready ; exists ; 2005 ; Essays in Romanticism Volume 13 ; 13 ; >
+    au < ready ; exists ; 2006 ; Essays in Romanticism Volume 14 ; 14 ; >
+    au < ready ; exists ; 2007 ; Essays in Romanticism Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Essays in Romanticism Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Essays in Romanticism Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Essays in Romanticism Volume 18 ; 18 ; >
@@ -589,9 +589,9 @@
     au < crawling ; exists ; 2002 ; Extrapolation Volume 43 ; 43 ; >
     au < crawling ; exists ; 2003 ; Extrapolation Volume 44 ; 44 ; >
     au < crawling ; exists ; 2004 ; Extrapolation Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2005 ; Extrapolation Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2006 ; Extrapolation Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2007 ; Extrapolation Volume 48 ; 48 ; >
+    au < ready ; exists ; 2005 ; Extrapolation Volume 46 ; 46 ; >
+    au < ready ; exists ; 2006 ; Extrapolation Volume 47 ; 47 ; >
+    au < ready ; exists ; 2007 ; Extrapolation Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Extrapolation Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Extrapolation Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Extrapolation Volume 51 ; 51 ; >
@@ -672,13 +672,13 @@
     au < crawling ; exists ; 2002 ; Historical Studies in Industrial Relations Volume 14 ; 14 ; >
     au < crawling ; exists ; 2003 ; Historical Studies in Industrial Relations Volume 15 ; 15 ; >
     au < ready ; exists ; 2003 ; Historical Studies in Industrial Relations Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2004 ; Historical Studies in Industrial Relations Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2004 ; Historical Studies in Industrial Relations Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 ; >
+    au < ready ; exists ; 2004 ; Historical Studies in Industrial Relations Volume 17 ; 17 ; >
+    au < ready ; exists ; 2004 ; Historical Studies in Industrial Relations Volume 18 ; 18 ; >
+    au < ready ; exists ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 ; >
+    au < ready ; exists ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 ; >
+    au < ready ; exists ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 ; >
+    au < ready ; exists ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 ; >
+    au < ready ; exists ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Historical Studies in Industrial Relations Volume 25-26 ; 25-26 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Historical Studies in Industrial Relations Volume 27-28 ; 27-28 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Historical Studies in Industrial Relations Volume 29-30 ; 29-30 ; >
@@ -720,8 +720,8 @@
     au < doNotProcess ; exists ; 1998 ; The Indexer: The International Journal of Indexing Volume 21 ; 21 ; >
     au < crawling ; exists ; 2000 ; The Indexer: The International Journal of Indexing Volume 22 ; 22 ; >
     au < crawling ; exists ; 2002 ; The Indexer: The International Journal of Indexing Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2004 ; The Indexer: The International Journal of Indexing Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2006 ; The Indexer: The International Journal of Indexing Volume 25 ; 25 ; >
+    au < ready ; exists ; 2004 ; The Indexer: The International Journal of Indexing Volume 24 ; 24 ; >
+    au < ready ; exists ; 2006 ; The Indexer: The International Journal of Indexing Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Indexer: The International Journal of Indexing Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; The Indexer: The International Journal of Indexing Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; The Indexer: The International Journal of Indexing Volume 28 ; 28 ; >
@@ -758,10 +758,10 @@
 
     au < crawling ; exists ; 2002 ; International Development Planning Review Volume 24 ; 24 ; >
     au < crawling ; exists ; 2003 ; International Development Planning Review Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2004 ; International Development Planning Review Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2005 ; International Development Planning Review Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2006 ; International Development Planning Review Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2007 ; International Development Planning Review Volume 29 ; 29 ; >
+    au < ready ; exists ; 2004 ; International Development Planning Review Volume 26 ; 26 ; >
+    au < ready ; exists ; 2005 ; International Development Planning Review Volume 27 ; 27 ; >
+    au < ready ; exists ; 2006 ; International Development Planning Review Volume 28 ; 28 ; >
+    au < ready ; exists ; 2007 ; International Development Planning Review Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Development Planning Review Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Development Planning Review Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Development Planning Review Volume 32 ; 32 ; >
@@ -847,10 +847,10 @@
 
     au < ready ; exists ; 2002 ; Before Farming Volume 2002 ; 2002 ; >
     au < crawling ; exists ; 2003 ; Before Farming Volume 2003 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; Before Farming Volume 2004 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; Before Farming Volume 2006 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 ; >
+    au < ready ; exists ; 2004 ; Before Farming Volume 2004 ; 2004 ; >
+    au < ready ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 ; >
+    au < ready ; exists ; 2006 ; Before Farming Volume 2006 ; 2006 ; >
+    au < ready ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Before Farming Volume 2008 ; 2008 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Before Farming Volume 2009 ; 2009 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Before Farming Volume 2010 ; 2010 ; >
@@ -963,7 +963,7 @@
     #Published 2007-present
     #journal_num = 61
 
-    au < manifest ; exists ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 ; >
+    au < ready ; exists ; 2007 ; Journal of Literary & Cultural Disability Studies Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Literary & Cultural Disability Studies Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Literary & Cultural Disability Studies Volume 4 ; 4 ; >
@@ -1002,10 +1002,10 @@
     au < crawling ; exists ; 2001 ; Journal of Romance Studies Volume 1 ; 1 ; >
     au < ready ; exists ; 2002 ; Journal of Romance Studies Volume 2 ; 2 ; >
     au < crawling ; exists ; 2003 ; Journal of Romance Studies Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2004 ; Journal of Romance Studies Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2005 ; Journal of Romance Studies Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2006 ; Journal of Romance Studies Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2007 ; Journal of Romance Studies Volume 7 ; 7 ; >
+    au < ready ; exists ; 2004 ; Journal of Romance Studies Volume 4 ; 4 ; >
+    au < ready ; exists ; 2005 ; Journal of Romance Studies Volume 5 ; 5 ; >
+    au < ready ; exists ; 2006 ; Journal of Romance Studies Volume 6 ; 6 ; >
+    au < ready ; exists ; 2007 ; Journal of Romance Studies Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Journal of Romance Studies Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Journal of Romance Studies Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Journal of Romance Studies Volume 10 ; 10 ; >
@@ -1122,14 +1122,14 @@
     au < crawling ; exists ; 2002 ; Labour History: A Journal of Labour and Social History Volume 83 ; 83 ; >
     au < ready ; exists ; 2003 ; Labour History: A Journal of Labour and Social History Volume 84 ; 84 ; >
     au < crawling ; exists ; 2003 ; Labour History: A Journal of Labour and Social History Volume 85 ; 85 ; >
-    au < manifest ; exists ; 2004 ; Labour History: A Journal of Labour and Social History Volume 86 ; 86 ; >
-    au < manifest ; exists ; 2004 ; Labour History: A Journal of Labour and Social History Volume 87 ; 87 ; >
-    au < manifest ; exists ; 2005 ; Labour History: A Journal of Labour and Social History Volume 88 ; 88 ; >
-    au < manifest ; exists ; 2005 ; Labour History: A Journal of Labour and Social History Volume 89 ; 89 ; >
-    au < manifest ; exists ; 2006 ; Labour History: A Journal of Labour and Social History Volume 90 ; 90 ; >
-    au < manifest ; exists ; 2006 ; Labour History: A Journal of Labour and Social History Volume 91 ; 91 ; >
-    au < manifest ; exists ; 2007 ; Labour History: A Journal of Labour and Social History Volume 92 ; 92 ; >
-    au < manifest ; exists ; 2007 ; Labour History: A Journal of Labour and Social History Volume 93 ; 93 ; >
+    au < ready ; exists ; 2004 ; Labour History: A Journal of Labour and Social History Volume 86 ; 86 ; >
+    au < ready ; exists ; 2004 ; Labour History: A Journal of Labour and Social History Volume 87 ; 87 ; >
+    au < ready ; exists ; 2005 ; Labour History: A Journal of Labour and Social History Volume 88 ; 88 ; >
+    au < ready ; exists ; 2005 ; Labour History: A Journal of Labour and Social History Volume 89 ; 89 ; >
+    au < ready ; exists ; 2006 ; Labour History: A Journal of Labour and Social History Volume 90 ; 90 ; >
+    au < ready ; exists ; 2006 ; Labour History: A Journal of Labour and Social History Volume 91 ; 91 ; >
+    au < ready ; exists ; 2007 ; Labour History: A Journal of Labour and Social History Volume 92 ; 92 ; >
+    au < ready ; exists ; 2007 ; Labour History: A Journal of Labour and Social History Volume 93 ; 93 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Labour History: A Journal of Labour and Social History Volume 94 ; 94 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Labour History: A Journal of Labour and Social History Volume 95 ; 95 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Labour History: A Journal of Labour and Social History Volume 96 ; 96 ; >
@@ -1182,10 +1182,10 @@
     au < crawling ; exists ; 2001 ; Labour History Review Volume 66 ; 66 ; >
     au < crawling ; exists ; 2002 ; Labour History Review Volume 67 ; 67 ; >
     au < ready ; exists ; 2003 ; Labour History Review Volume 68 ; 68 ; >
-    au < manifest ; exists ; 2004 ; Labour History Review Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2005 ; Labour History Review Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2006 ; Labour History Review Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2007 ; Labour History Review Volume 72 ; 72 ; >
+    au < ready ; exists ; 2004 ; Labour History Review Volume 69 ; 69 ; >
+    au < ready ; exists ; 2005 ; Labour History Review Volume 70 ; 70 ; >
+    au < ready ; exists ; 2006 ; Labour History Review Volume 71 ; 71 ; >
+    au < ready ; exists ; 2007 ; Labour History Review Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Labour History Review Volume 73 ; 73 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Labour History Review Volume 74 ; 74 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Labour History Review Volume 75 ; 75 ; >
@@ -1367,10 +1367,10 @@
     au < crawling ; exists ; 2001 ; Modern Believing Volume 42 ; 42 ; >
     au < crawling ; exists ; 2002 ; Modern Believing Volume 43 ; 43 ; >
     au < crawling ; exists ; 2003 ; Modern Believing Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2004 ; Modern Believing Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2005 ; Modern Believing Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2006 ; Modern Believing Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2007 ; Modern Believing Volume 48 ; 48 ; >
+    au < ready ; exists ; 2004 ; Modern Believing Volume 45 ; 45 ; >
+    au < ready ; exists ; 2005 ; Modern Believing Volume 46 ; 46 ; >
+    au < ready ; exists ; 2006 ; Modern Believing Volume 47 ; 47 ; >
+    au < ready ; exists ; 2007 ; Modern Believing Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Modern Believing Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Modern Believing Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Modern Believing Volume 51 ; 51 ; >
@@ -1455,7 +1455,7 @@
     #Published 2007-present
     #journal_num = 47
 
-    au < manifest ; exists ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 ; >
+    au < ready ; exists ; 2007 ; Music, Sound, and the Moving Image Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Music, Sound, and the Moving Image Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Music, Sound, and the Moving Image Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Music, Sound, and the Moving Image Volume 4 ; 4 ; >
@@ -1642,10 +1642,10 @@
     au < crawling ; exists ; 2001 ; Romani Studies Volume 11 ; 11 ; >
     au < crawling ; exists ; 2002 ; Romani Studies Volume 12 ; 12 ; >
     au < crawling ; exists ; 2003 ; Romani Studies Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2004 ; Romani Studies Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2005 ; Romani Studies Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2006 ; Romani Studies Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2007 ; Romani Studies Volume 17 ; 17 ; >
+    au < ready ; exists ; 2004 ; Romani Studies Volume 14 ; 14 ; >
+    au < ready ; exists ; 2005 ; Romani Studies Volume 15 ; 15 ; >
+    au < ready ; exists ; 2006 ; Romani Studies Volume 16 ; 16 ; >
+    au < ready ; exists ; 2007 ; Romani Studies Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Romani Studies Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Romani Studies Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Romani Studies Volume 20 ; 20 ; >
@@ -1688,14 +1688,14 @@
     au < ready ; exists ; 2002 ; Quebec Studies Volume 34 ; 34 ; >
     au < crawling ; exists ; 2003 ; Quebec Studies Volume 35 ; 35 ; >
     au < crawling ; exists ; 2003 ; Quebec Studies Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2004 ; Quebec Studies Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2004 ; Quebec Studies Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2005 ; Quebec Studies Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2005 ; Quebec Studies Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2006 ; Quebec Studies Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2006 ; Quebec Studies Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2007 ; Quebec Studies Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2007 ; Quebec Studies Volume 44 ; 44 ; >
+    au < ready ; exists ; 2004 ; Quebec Studies Volume 37 ; 37 ; >
+    au < ready ; exists ; 2004 ; Quebec Studies Volume 38 ; 38 ; >
+    au < ready ; exists ; 2005 ; Quebec Studies Volume 39 ; 39 ; >
+    au < ready ; exists ; 2005 ; Quebec Studies Volume 40 ; 40 ; >
+    au < ready ; exists ; 2006 ; Quebec Studies Volume 41 ; 41 ; >
+    au < ready ; exists ; 2006 ; Quebec Studies Volume 42 ; 42 ; >
+    au < ready ; exists ; 2007 ; Quebec Studies Volume 43 ; 43 ; >
+    au < ready ; exists ; 2007 ; Quebec Studies Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Quebec Studies Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Quebec Studies Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Quebec Studies Volume 47 ; 47 ; >
@@ -1781,10 +1781,10 @@
 
     au < exists ; exists ; 2004 ; Sculpture Journal Volume 11 ; 11 ; >
     au < exists ; exists ; 2004 ; Sculpture Journal Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2005 ; Sculpture Journal Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2005 ; Sculpture Journal Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2006 ; Sculpture Journal Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2007 ; Sculpture Journal Volume 16 ; 16 ; >
+    au < ready ; exists ; 2005 ; Sculpture Journal Volume 13 ; 13 ; >
+    au < ready ; exists ; 2005 ; Sculpture Journal Volume 14 ; 14 ; >
+    au < ready ; exists ; 2006 ; Sculpture Journal Volume 15 ; 15 ; >
+    au < ready ; exists ; 2007 ; Sculpture Journal Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Sculpture Journal Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Sculpture Journal Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Sculpture Journal Volume 19 ; 19 ; >
@@ -2007,10 +2007,10 @@
     au < ready ; exists ; 2001 ; Town Planning Review Volume 72 ; 72 ; >
     au < crawling ; exists ; 2002 ; Town Planning Review Volume 73 ; 73 ; >
     au < crawling ; exists ; 2003 ; Town Planning Review Volume 74 ; 74 ; >
-    au < manifest ; exists ; 2004 ; Town Planning Review Volume 75 ; 75 ; >
-    au < manifest ; exists ; 2005 ; Town Planning Review Volume 76 ; 76 ; >
-    au < manifest ; exists ; 2006 ; Town Planning Review Volume 77 ; 77 ; >
-    au < manifest ; exists ; 2007 ; Town Planning Review Volume 78 ; 78 ; >
+    au < ready ; exists ; 2004 ; Town Planning Review Volume 75 ; 75 ; >
+    au < ready ; exists ; 2005 ; Town Planning Review Volume 76 ; 76 ; >
+    au < ready ; exists ; 2006 ; Town Planning Review Volume 77 ; 77 ; >
+    au < ready ; exists ; 2007 ; Town Planning Review Volume 78 ; 78 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Town Planning Review Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Town Planning Review Volume 80 ; 80 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Town Planning Review Volume 81 ; 81 ; >
@@ -2045,7 +2045,7 @@
     param[journal_id] = transactions
     #journal_num = 57
 
-    au < manifest ; exists ; 2007 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 156 ; 156 ; >
+    au < ready ; exists ; 2007 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 156 ; 156 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 157 ; 157 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 158 ; 158 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Transactions of the Historic Society of Lancashire and Cheshire Volume 159 ; 159 ; >
@@ -2239,12 +2239,12 @@
     au < crawling ; exists ; 2001 ; Revista Iberoamericana Volume 67 ; 67 ; >
     au < crawling ; exists ; 2002 ; Revista Iberoamericana Volume 68 ; 68 ; >
     au < crawling ; exists ; 2003 ; Revista Iberoamericana Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2004 ; Revista Iberoamericana Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2005 ; Revista Iberoamericana Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2006 ; Revista Iberoamericana Volume 72 ; 72 ; >
-    au < manifest ; exists ; 2007 ; Revista Iberoamericana Volume 73 ; 73 ; >
-    au < manifest ; exists ; 2008 ; Revista Iberoamericana Volume 74 ; 74 ; >
-    au < manifest ; exists ; 2009 ; Revista Iberoamericana Volume 75 ; 75 ; >
+    au < ready ; exists ; 2004 ; Revista Iberoamericana Volume 70 ; 70 ; >
+    au < ready ; exists ; 2005 ; Revista Iberoamericana Volume 71 ; 71 ; >
+    au < ready ; exists ; 2006 ; Revista Iberoamericana Volume 72 ; 72 ; >
+    au < ready ; exists ; 2007 ; Revista Iberoamericana Volume 73 ; 73 ; >
+    au < ready ; exists ; 2008 ; Revista Iberoamericana Volume 74 ; 74 ; >
+    au < ready ; exists ; 2009 ; Revista Iberoamericana Volume 75 ; 75 ; >
     au < crawling ; exists ; 2010 ; Revista Iberoamericana Volume 76 ; 76 ; >
     au < ready ; exists ; 2011 ; Revista Iberoamericana Volume 77 ; 77 ; >
     au < ready ; exists ; 2012 ; Revista Iberoamericana Volume 78 ; 78 ; >
@@ -2300,9 +2300,9 @@
     au < manifest ; exists ; 1997-1999 ; The Bodleian Library Record Volume 16 ; 16 ; >
     au < ready ; exists ; 2000-2002 ; The Bodleian Library Record Volume 17 ; 17 ; >
     au < crawling ; exists ; 2003-2005 ; The Bodleian Library Record Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2006 ; The Bodleian Library Record Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2007 ; The Bodleian Library Record Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2008 ; The Bodleian Library Record Volume 21 ; 21 ; >
+    au < ready ; exists ; 2006 ; The Bodleian Library Record Volume 19 ; 19 ; >
+    au < ready ; exists ; 2007 ; The Bodleian Library Record Volume 20 ; 20 ; >
+    au < ready ; exists ; 2008 ; The Bodleian Library Record Volume 21 ; 21 ; >
     au < ready ; exists ; 2009 ; The Bodleian Library Record Volume 22 ; 22 ; >
     au < ready ; exists ; 2010 ; The Bodleian Library Record Volume 23 ; 23 ; >
     au < finished ; manifest ; 2011 ; The Bodleian Library Record Volume 24 ; 24 ; reingest3.clockss.org:8083 >
