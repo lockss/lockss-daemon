@@ -11,6 +11,7 @@
   implicit < status ; status2 ; year ; volume ; name ;  param[volume_name] ; hidden[proxy] >
   param[base_url] = https://stockholmup2025.clockss.org/
   param[publisher_id] = stockholmup
+  provider = Ubiquity Press
 
   {
 
