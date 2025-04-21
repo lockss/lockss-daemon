@@ -18,22 +18,22 @@
     implicit < status ; year ; name ; param[volume_name] >
     #Moved to PubFactory
   
-    au < released ; 2003 ; Journal of the National Comprehensive Cancer Network Volume 1 ; 1 >
-    au < released ; 2004 ; Journal of the National Comprehensive Cancer Network Volume 2 ; 2 >
-    au < released ; 2005 ; Journal of the National Comprehensive Cancer Network Volume 3 ; 3 >
-    au < released ; 2006 ; Journal of the National Comprehensive Cancer Network Volume 4 ; 4 >
-    au < released ; 2007 ; Journal of the National Comprehensive Cancer Network Volume 5 ; 5 >
-    au < released ; 2008 ; Journal of the National Comprehensive Cancer Network Volume 6 ; 6 >
-    au < released ; 2009 ; Journal of the National Comprehensive Cancer Network Volume 7 ; 7 >
-    au < released ; 2010 ; Journal of the National Comprehensive Cancer Network Volume 8 ; 8 >
-    au < released ; 2011 ; Journal of the National Comprehensive Cancer Network Volume 9 ; 9 >
-    au < released ; 2012 ; Journal of the National Comprehensive Cancer Network Volume 10 ; 10 >
-    au < released ; 2013 ; Journal of the National Comprehensive Cancer Network Volume 11 ; 11 >
-    au < released ; 2014 ; Journal of the National Comprehensive Cancer Network Volume 12 ; 12 >
-    au < released ; 2015 ; Journal of the National Comprehensive Cancer Network Volume 13 ; 13 >
-    au < released ; 2016 ; Journal of the National Comprehensive Cancer Network Volume 14 ; 14 >
-    au < released ; 2017 ; Journal of the National Comprehensive Cancer Network Volume 15 ; 15 >
-    au < released ; 2018 ; Journal of the National Comprehensive Cancer Network Volume 16 ; 16 >
+    au < down ; 2003 ; Journal of the National Comprehensive Cancer Network Volume 1 ; 1 >
+    au < down ; 2004 ; Journal of the National Comprehensive Cancer Network Volume 2 ; 2 >
+    au < down ; 2005 ; Journal of the National Comprehensive Cancer Network Volume 3 ; 3 >
+    au < down ; 2006 ; Journal of the National Comprehensive Cancer Network Volume 4 ; 4 >
+    au < down ; 2007 ; Journal of the National Comprehensive Cancer Network Volume 5 ; 5 >
+    au < down ; 2008 ; Journal of the National Comprehensive Cancer Network Volume 6 ; 6 >
+    au < down ; 2009 ; Journal of the National Comprehensive Cancer Network Volume 7 ; 7 >
+    au < down ; 2010 ; Journal of the National Comprehensive Cancer Network Volume 8 ; 8 >
+    au < down ; 2011 ; Journal of the National Comprehensive Cancer Network Volume 9 ; 9 >
+    au < down ; 2012 ; Journal of the National Comprehensive Cancer Network Volume 10 ; 10 >
+    au < down ; 2013 ; Journal of the National Comprehensive Cancer Network Volume 11 ; 11 >
+    au < down ; 2014 ; Journal of the National Comprehensive Cancer Network Volume 12 ; 12 >
+    au < down ; 2015 ; Journal of the National Comprehensive Cancer Network Volume 13 ; 13 >
+    au < down ; 2016 ; Journal of the National Comprehensive Cancer Network Volume 14 ; 14 >
+    au < down ; 2017 ; Journal of the National Comprehensive Cancer Network Volume 15 ; 15 >
+    au < down ; 2018 ; Journal of the National Comprehensive Cancer Network Volume 16 ; 16 >
     au < doNotProcess ; 2019 ; Journal of the National Comprehensive Cancer Network Volume 17 ; 17 >
 
   }
