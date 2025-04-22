@@ -35,7 +35,7 @@
     au < doNotProcess ; 2021 ; Bioanalysis Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Bioanalysis Volume 14 ; 14 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Bioanalysis Volume 15 ; 15 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Bioanalysis Volume 16 ; 16 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Bioanalysis Volume 16 ; 16 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Bioanalysis Volume 17 ; 17 ; https://www.tandfonline.com/ >
 
   }
@@ -106,8 +106,8 @@
     au < doNotProcess ; 2022 ; BioTechniques Volume 73 ; 73 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; BioTechniques Volume 74 ; 74 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; BioTechniques Volume 75 ; 75 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; BioTechniques Volume 76 ; 76 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; BioTechniques Volume 77 ; 77 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; BioTechniques Volume 76 ; 76 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; BioTechniques Volume 77 ; 77 ; https://www.tandfonline.com/ >
     au < expected ; 2025 ; BioTechniques Volume 78 ; 78 ; https://www.tandfonline.com/ >
     au < expected ; 2025 ; BioTechniques Volume 79 ; 79 ; https://www.tandfonline.com/ >
 
@@ -157,7 +157,7 @@
     au < doNotProcess ; 2021 ; Future Medicinal Chemistry Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Future Medicinal Chemistry Volume 14 ; 14 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Future Medicinal Chemistry Volume 15 ; 15 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Future Medicinal Chemistry Volume 16 ; 16 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Future Medicinal Chemistry Volume 16 ; 16 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Future Medicinal Chemistry Volume 17 ; 17 ; https://www.tandfonline.com/ >
 
   }
@@ -180,7 +180,7 @@
     au < doNotProcess ; 2021 ; Future Science OA Volume 7 ; 7 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Future Science OA Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Future Science OA Volume 9 ; 9 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Future Science OA Volume 10 ; 10 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Future Science OA Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Future Science OA Volume 11 ; 11 ; https://www.tandfonline.com/ >
 
   }
@@ -228,7 +228,7 @@
     au < doNotProcess ; 2021 ; Pharmaceutical Patent Analyst Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Pharmaceutical Patent Analyst Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Pharmaceutical Patent Analyst Volume 12 ; 12 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Pharmaceutical Patent Analyst Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Pharmaceutical Patent Analyst Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < expected ; 2025 ; Pharmaceutical Patent Analyst Volume 14 ; 14 ; https://www.tandfonline.com/ >
 
   }
@@ -257,7 +257,7 @@
     au < doNotProcess ; 2021 ; Therapeutic Delivery Volume 12 ; 12 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Therapeutic Delivery Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Therapeutic Delivery Volume 14 ; 14 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Therapeutic Delivery Volume 15 ; 15 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Therapeutic Delivery Volume 15 ; 15 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Therapeutic Delivery Volume 16 ; 16 ; https://www.tandfonline.com/ >
 
   }
@@ -311,7 +311,7 @@
     au < doNotProcess ; 2021 ; Biomarkers in Medicine Volume 15 ; 15 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Biomarkers in Medicine Volume 16 ; 16 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Biomarkers in Medicine Volume 17 ; 17 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Biomarkers in Medicine Volume 18 ; 18 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Biomarkers in Medicine Volume 18 ; 18 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Biomarkers in Medicine Volume 19 ; 19 ; https://www.tandfonline.com/ >
 
   }
@@ -381,7 +381,7 @@
     au < doNotProcess ; 2021 ; CNS Oncology Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; CNS Oncology Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; CNS Oncology Volume 12 ; 12 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; CNS Oncology Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; CNS Oncology Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < expected ; 2025 ; CNS Oncology Volume 14 ; 14 ; https://www.tandfonline.com/ >
 
   }
@@ -408,7 +408,7 @@
     au < doNotProcess ; 2021 ; Colorectal Cancer Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Colorectal Cancer Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Colorectal Cancer Volume 12 ; 12 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Colorectal Cancer Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Colorectal Cancer Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Colorectal Cancer Volume 14 ; 14 ; https://www.tandfonline.com/ >
 
   }
@@ -438,7 +438,7 @@
     au < doNotProcess ; 2021 ; Epigenomics Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Epigenomics Volume 14 ; 14 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Epigenomics Volume 15 ; 15 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Epigenomics Volume 16 ; 16 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Epigenomics Volume 16 ; 16 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Epigenomics Volume 17 ; 17 ; https://www.tandfonline.com/ >
 
   }
@@ -472,7 +472,7 @@
     au < doNotProcess ; 2021 ; Future Cardiology Volume 17 ; 17 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Future Cardiology Volume 18 ; 18 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Future Cardiology Volume 19 ; 19 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Future Cardiology Volume 20 ; 20 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Future Cardiology Volume 20 ; 20 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Future Cardiology Volume 21 ; 21 ; https://www.tandfonline.com/ >
 
   }
@@ -505,7 +505,7 @@
     au < doNotProcess ; 2021 ; Future Microbiology Volume 16 ; 16 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Future Microbiology Volume 17 ; 17 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Future Microbiology Volume 18 ; 18 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Future Microbiology Volume 19 ; 19 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Future Microbiology Volume 19 ; 19 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Future Microbiology Volume 20 ; 20 ; https://www.tandfonline.com/ >
 
   }
@@ -538,7 +538,7 @@
     au < doNotProcess ; 2021 ; Future Neurology Volume 16 ; 16 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Future Neurology Volume 17 ; 17 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Future Neurology Volume 18 ; 18 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Future Neurology Volume 19 ; 19 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Future Neurology Volume 19 ; 19 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Future Neurology Volume 20 ; 20 ; https://www.tandfonline.com/ >
 
   }
@@ -572,7 +572,7 @@
     au < doNotProcess ; 2021 ; Future Oncology Volume 17 ; 17 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Future Oncology Volume 18 ; 18 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Future Oncology Volume 19 ; 19 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Future Oncology Volume 20 ; 20 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Future Oncology Volume 20 ; 20 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Future Oncology Volume 21 ; 21 ; https://www.tandfonline.com/ >
 
   }
@@ -590,7 +590,7 @@
     au < doNotProcess ; 2021 ; Future Rare Diseases Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Future Rare Diseases Volume 2 ; 2 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Future Rare Diseases Volume 3 ; 3 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Future Rare Diseases Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Future Rare Diseases Volume 4 ; 4 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Future Rare Diseases Volume 5 ; 5 ; https://www.tandfonline.com/ >
 
   }
@@ -623,7 +623,7 @@
     au < doNotProcess ; 2021 ; Future Virology Volume 16 ; 16 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Future Virology Volume 17 ; 17 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Future Virology Volume 18 ; 18 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Future Virology Volume 19 ; 19 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Future Virology Volume 19 ; 19 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Future Virology Volume 20 ; 20 ; https://www.tandfonline.com/ >
 
   }
@@ -680,7 +680,7 @@
     au < doNotProcess ; 2021 ; Hepatic Oncology Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Hepatic Oncology Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Hepatic Oncology Volume 10 ; 10 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Hepatic Oncology Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Hepatic Oncology Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < expected ; 2025 ; Hepatic Oncology Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
   }
@@ -710,7 +710,7 @@
     au < doNotProcess ; 2021 ; Immunotherapy Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Immunotherapy Volume 14 ; 14 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Immunotherapy Volume 15 ; 15 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Immunotherapy Volume 16 ; 16 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Immunotherapy Volume 16 ; 16 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Immunotherapy Volume 17 ; 17 ; https://www.tandfonline.com/ >
 
   }
@@ -822,7 +822,7 @@
     au < doNotProcess ; 2021 ; Lung Cancer Management Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Lung Cancer Management Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Lung Cancer Management Volume 12 ; 12 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Lung Cancer Management Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Lung Cancer Management Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Lung Cancer Management Volume 14 ; 14 ; https://www.tandfonline.com/ >
 
   }
@@ -847,7 +847,7 @@
     au < doNotProcess ; 2021 ; Melanoma Management Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Melanoma Management Volume 9 ; 9 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Melanoma Management Volume 10 ; 10 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Melanoma Management Volume 11 ; 11 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Melanoma Management Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Melanoma Management Volume 12 ; 12 ; https://www.tandfonline.com/ >
 
   }
@@ -880,7 +880,7 @@
     au < doNotProcess ; 2021 ; Nanomedicine Volume 16 ; 16 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Nanomedicine Volume 17 ; 17 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Nanomedicine Volume 18 ; 18 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Nanomedicine Volume 19 ; 19 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Nanomedicine Volume 19 ; 19 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Nanomedicine Volume 20 ; 20 ; https://www.tandfonline.com/ >
 
   }
@@ -908,7 +908,7 @@
     au < doNotProcess ; 2021 ; Neurodegenerative Disease Management Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Neurodegenerative Disease Management Volume 12 ; 12 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Neurodegenerative Disease Management Volume 13 ; 13 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Neurodegenerative Disease Management Volume 14 ; 14 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Neurodegenerative Disease Management Volume 14 ; 14 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Neurodegenerative Disease Management Volume 15 ; 15 ; https://www.tandfonline.com/ >
 
   }
@@ -936,7 +936,7 @@
     au < doNotProcess ; 2021 ; Pain Management Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Pain Management Volume 12 ; 12 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Pain Management Volume 13 ; 13 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Pain Management Volume 14 ; 14 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Pain Management Volume 14 ; 14 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Pain Management Volume 15 ; 15 ; https://www.tandfonline.com/ >
 
   }
@@ -988,7 +988,7 @@
     au < doNotProcess ; 2021 ; Personalized Medicine Volume 18 ; 18 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Personalized Medicine Volume 19 ; 19 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Personalized Medicine Volume 20 ; 20 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Personalized Medicine Volume 21 ; 21 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Personalized Medicine Volume 21 ; 21 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Personalized Medicine Volume 22 ; 22 ; https://www.tandfonline.com/ >
 
   }
@@ -1027,7 +1027,7 @@
     au < doNotProcess ; 2021 ; Pharmacogenomics Volume 22 ; 22 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Pharmacogenomics Volume 23 ; 23 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Pharmacogenomics Volume 24 ; 24 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Pharmacogenomics Volume 25 ; 25 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Pharmacogenomics Volume 25 ; 25 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Pharmacogenomics Volume 26 ; 26 ; https://www.tandfonline.com/ >
 
   }
@@ -1058,7 +1058,7 @@
     au < manifest ; 2021 ; Pharmacogenomics and Personalized Medicine Volume 14 ; 2021 ; https://www.tandfonline.com/ >
     au < manifest ; 2022 ; Pharmacogenomics and Personalized Medicine Volume 15 ; 2022 ; https://www.tandfonline.com/ >
     au < manifest ; 2023 ; Pharmacogenomics and Personalized Medicine Volume 16 ; 2023 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Pharmacogenomics and Personalized Medicine Volume 17 ; 2024 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Pharmacogenomics and Personalized Medicine Volume 17 ; 2024 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Pharmacogenomics and Personalized Medicine Volume 18 ; 2025 ; https://www.tandfonline.com/ >
 
   }
@@ -1091,7 +1091,7 @@
     au < doNotProcess ; 2021 ; Regenerative Medicine Volume 16 ; 16 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Regenerative Medicine Volume 17 ; 17 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Regenerative Medicine Volume 18 ; 18 ; https://www.tandfonline.com/ >
-    au < manifest ; 2024 ; Regenerative Medicine Volume 19 ; 19 ; https://www.tandfonline.com/ >
+    au < testing ; 2024 ; Regenerative Medicine Volume 19 ; 19 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Regenerative Medicine Volume 20 ; 20 ; https://www.tandfonline.com/ >
 
   }
