@@ -329,14 +329,14 @@
     au < crawling ; exists ; 1984 ; AMS Chelsea Publishing Volume 343 ; 343 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1964 ; AMS Chelsea Publishing Volume 344 ; 344 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2002 ; AMS Chelsea Publishing Volume 345 ; 345 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 1976 ; AMS Chelsea Publishing Volume 346 ; 346 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1976 ; AMS Chelsea Publishing Volume 346 ; 346 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2004 ; AMS Chelsea Publishing Volume 347 ; 347 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2004 ; AMS Chelsea Publishing Volume 348 ; 348 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 1976 ; AMS Chelsea Publishing Volume 349 ; 349 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1976 ; AMS Chelsea Publishing Volume 349 ; 349 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 1988 ; AMS Chelsea Publishing Volume 350 ; 350 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2005 ; AMS Chelsea Publishing Volume 351 ; 351 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 1967 ; AMS Chelsea Publishing Volume 352 ; 352 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1969 ; AMS Chelsea Publishing Volume 353 ; 353 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1969 ; AMS Chelsea Publishing Volume 353 ; 353 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 1961 ; AMS Chelsea Publishing Volume 354 ; 354 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 1971 ; AMS Chelsea Publishing Volume 355 ; 355 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 1962 ; AMS Chelsea Publishing Volume 356 ; 356 ; https://www.ams.org/ ; >
@@ -703,7 +703,7 @@
     param[collection_id] = amsip
     
     au < crawling ; exists ; 1996 ; AMS/IP Studies in Advanced Math Series 1996 ; 1996 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 1997 ; AMS/IP Studies in Advanced Math Series 1997 ; 1997 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1997 ; AMS/IP Studies in Advanced Math Series 1997 ; 1997 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 1998 ; AMS/IP Studies in Advanced Math Series 1998 ; 1998 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 1999 ; AMS/IP Studies in Advanced Math Series 1999 ; 1999 ; https://www.ams.org/ ; >
     au < finished ; manifest ; 2000 ; AMS/IP Studies in Advanced Math Series 2000 ; 2000 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
