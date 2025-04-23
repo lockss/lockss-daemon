@@ -13,9 +13,13 @@ import org.lockss.plugin.HttpHttpsUrlHelper;
 import org.lockss.plugin.atypon.BaseAtyponHtmlMetadataExtractorFactory;
 import org.lockss.plugin.atypon.BaseAtyponMetadataUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.TypedEntryMap;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -57,6 +61,10 @@ public class AmericanSpeechLanguageHearingAssocHtmlMetadataExtractorFactory exte
       ArchivalUnit au = cu.getArchivalUnit();
       String journal_id = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
 
+      // Get the AU's volume name from the AU properties. This must be set
+      TypedEntryMap tfProps = au.getProperties();
+      String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
       if (journal_id == null) {
         return;
       }
@@ -97,21 +105,31 @@ public class AmericanSpeechLanguageHearingAssocHtmlMetadataExtractorFactory exte
       // protect against counting overcrawled articles
       log.debug3("AmericanSpeechLanguageHearingAssoc Check: ---------AmericanSpeechLanguageHearingAssocAtyponHtmlMetadataExtractor start checking-------");
 
-      //Do a journal_id check before volume check, for "ajslp" and "aja" and "persp"
+      Set<String> skipVolumes = new HashSet<>(Arrays.asList("22", "21", "20", "19"));
+      String cu_url = cu.getUrl();
+      String lowerUrl = cu_url.toLowerCase();
 
-      if (journal_id.equals("ajslp") || journal_id.equals("aja") || journal_id.equals("persp")) {
-
-        if ((cu.getUrl().contains(journal_id))
-                || (cu.getUrl().contains(journal_id.toUpperCase()))) {
-          log.debug3("AmericanSpeechLanguageHearingAssoc check journal_id in url, journal_id = " + journal_id + ", url = " + cu.getUrl());
+      if (journal_id.equals("persp")) {
+        if (lowerUrl.contains(journal_id)) {
+          log.debug3("Check passed - persp in URL: journal_id = " + journal_id + ", url = " + cu_url);
         } else {
-          log.debug3("AmericanSpeechLanguageHearingAssoc check journal_id in url failed, journal_id = " + journal_id + ", url = " + cu.getUrl());
+          log.debug3("Check failed - persp NOT in URL: journal_id = " + journal_id + ", url = " + cu_url);
           return;
         }
-      } else {
-        log.debug3("AmericanSpeechLanguageHearingAssoc check journal_id in url, not target journal_id, pass on, journal_id = " + journal_id + ", url = " + cu.getUrl());
       }
 
+      if (journal_id.equals("ajslp") || journal_id.equals("aja")) {
+        if (skipVolumes.contains(AU_volume)) {
+          log.debug3("Skipping URL check for ajslp/aja volume: journal_id = " + journal_id + ", volume = " + AU_volume);
+        } else {
+          if (lowerUrl.contains(journal_id)) {
+            log.debug3("Check passed - ajslp/aja in URL: journal_id = " + journal_id + ", url = " + cu_url + ", volume = " + AU_volume);
+          } else {
+            log.debug3("Check failed - ajslp/aja NOT in URL: journal_id = " + journal_id + ", url = " + cu_url + ", volume = " + AU_volume);
+            return;
+          }
+        }
+      }
 
       if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
         log.debug3("AmericanSpeechLanguageHearingAssoc Check: ---------AmericanSpeechLanguageHearingAssocAtyponHtmlMetadataExtractor failed-------");
