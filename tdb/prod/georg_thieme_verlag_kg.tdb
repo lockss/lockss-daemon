@@ -9289,7 +9289,9 @@
     >
 
     param[journal_id] = 10.1055/s-00044881
-    comment[years] = 2009-current
+    comment[years] = 2009-2023
+    #move to ScientificScholar
+
 
     au < released ; 2009 ; 2009 ; Journal of Laboratory Physicians Volume 1 ; 1 >
     au < released ; 2010 ; 2010 ; Journal of Laboratory Physicians Volume 2 ; 2 >
@@ -9306,8 +9308,6 @@
     au < released ; 2021 ; 2021 ; Journal of Laboratory Physicians Volume 13 ; 13 >
     au < released ; 2022 ; 2022 ; Journal of Laboratory Physicians Volume 14 ; 14 >
     au < released ; 2023 ; 2023 ; Journal of Laboratory Physicians Volume 15 ; 15 >
-    au < expected ; 2024 ; 2024 ; Journal of Laboratory Physicians Volume 16 ; 16 >
-    au < expected ; 2025 ; 2025 ; Journal of Laboratory Physicians Volume 17 ; 17 >
 
   }
 
