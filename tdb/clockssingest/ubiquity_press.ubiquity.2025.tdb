@@ -6,7 +6,7 @@
     name = Ubiquity Press ;
     info[contract] = 2011 ;
     info[back] = 2000 ;
-    info[tester] = 8 ;
+    info[tester] = 4 ;
     info[poller] = 8
   >
 
@@ -177,7 +177,7 @@
       au < superseded ; exists ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 [superseded] ; 2020 ; 57 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < frozen ; exists ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; 58 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 [superseded] ; 2022 ; 59 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
-      au < manifest ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
+      au < testing ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < manifest ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < manifest ; exists ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
   }
@@ -2343,7 +2343,7 @@
       au < manifest ; exists ; 1996 ; 8 ; Journal of Technology Education Volume 1996 ; 1996 ; 8 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < manifest ; exists ; 1997 ; 9 ; Journal of Technology Education Volume 1997 ; 1997 ; 9 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < manifest ; exists ; 1998 ; 10 ; Journal of Technology Education Volume 1998 ; 1998 ; 10 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < manifest ; exists ; 1999 ; 11 ; Journal of Technology Education Volume 1999 ; 1999 ; 11 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < testing ; exists ; 1999 ; 11 ; Journal of Technology Education Volume 1999 ; 1999 ; 11 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2000 ; 12 ; Journal of Technology Education Volume 2000 ; 2000 ; 12 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2001 ; 13 ; Journal of Technology Education Volume 2001 ; 2001 ; 13 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2002 ; 14 ; Journal of Technology Education Volume 2002 ; 2002 ; 14 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
@@ -2473,7 +2473,7 @@
       au < doNotProcess ; doNotProcess ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; 1 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
       au < doNotProcess ; doNotProcess ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; 2 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
       au < doNotProcess ; doNotProcess ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; 3 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
-      au < manifest ; exists ; 2023 ; 4 ; Journal of Critical Southern Studies Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
+      au < testing ; exists ; 2023 ; 4 ; Journal of Critical Southern Studies Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
 
   }
 
