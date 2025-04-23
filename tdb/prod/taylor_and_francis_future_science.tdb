@@ -35,7 +35,7 @@
     au < doNotProcess ; 2021 ; Bioanalysis Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Bioanalysis Volume 14 ; 14 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Bioanalysis Volume 15 ; 15 ; https://www.tandfonline.com/ >
-    au < testing ; 2024 ; Bioanalysis Volume 16 ; 16 ; https://www.tandfonline.com/ >
+    au < ready ; 2024 ; Bioanalysis Volume 16 ; 16 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Bioanalysis Volume 17 ; 17 ; https://www.tandfonline.com/ >
 
   }
@@ -106,8 +106,8 @@
     au < doNotProcess ; 2022 ; BioTechniques Volume 73 ; 73 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; BioTechniques Volume 74 ; 74 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; BioTechniques Volume 75 ; 75 ; https://www.tandfonline.com/ >
-    au < testing ; 2024 ; BioTechniques Volume 76 ; 76 ; https://www.tandfonline.com/ >
-    au < testing ; 2024 ; BioTechniques Volume 77 ; 77 ; https://www.tandfonline.com/ >
+    au < ready ; 2024 ; BioTechniques Volume 76 ; 76 ; https://www.tandfonline.com/ >
+    au < ready ; 2024 ; BioTechniques Volume 77 ; 77 ; https://www.tandfonline.com/ >
     au < expected ; 2025 ; BioTechniques Volume 78 ; 78 ; https://www.tandfonline.com/ >
     au < expected ; 2025 ; BioTechniques Volume 79 ; 79 ; https://www.tandfonline.com/ >
 
@@ -228,7 +228,7 @@
     au < doNotProcess ; 2021 ; Pharmaceutical Patent Analyst Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Pharmaceutical Patent Analyst Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Pharmaceutical Patent Analyst Volume 12 ; 12 ; https://www.tandfonline.com/ >
-    au < testing ; 2024 ; Pharmaceutical Patent Analyst Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < ready ; 2024 ; Pharmaceutical Patent Analyst Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < expected ; 2025 ; Pharmaceutical Patent Analyst Volume 14 ; 14 ; https://www.tandfonline.com/ >
 
   }
@@ -257,7 +257,7 @@
     au < doNotProcess ; 2021 ; Therapeutic Delivery Volume 12 ; 12 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; Therapeutic Delivery Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; Therapeutic Delivery Volume 14 ; 14 ; https://www.tandfonline.com/ >
-    au < testing ; 2024 ; Therapeutic Delivery Volume 15 ; 15 ; https://www.tandfonline.com/ >
+    au < ready ; 2024 ; Therapeutic Delivery Volume 15 ; 15 ; https://www.tandfonline.com/ >
     au < manifest ; 2025 ; Therapeutic Delivery Volume 16 ; 16 ; https://www.tandfonline.com/ >
 
   }
@@ -381,7 +381,7 @@
     au < doNotProcess ; 2021 ; CNS Oncology Volume 10 ; 10 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2022 ; CNS Oncology Volume 11 ; 11 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2023 ; CNS Oncology Volume 12 ; 12 ; https://www.tandfonline.com/ >
-    au < testing ; 2024 ; CNS Oncology Volume 13 ; 13 ; https://www.tandfonline.com/ >
+    au < ready ; 2024 ; CNS Oncology Volume 13 ; 13 ; https://www.tandfonline.com/ >
     au < expected ; 2025 ; CNS Oncology Volume 14 ; 14 ; https://www.tandfonline.com/ >
 
   }
