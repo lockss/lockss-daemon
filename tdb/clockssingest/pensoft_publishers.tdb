@@ -1632,7 +1632,7 @@
       param[au_oai_set] = bsms
 
       au < exists ; exists ; 2023 ; 2023 ; Bulgarian Society of Medical Sciences Journal Volume 2023 ; 2023 ; https://bsms.arphahub.com/ ; >
-      au < ready ; exists ; 2024 ; 2024 ; Bulgarian Society of Medical Sciences Journal Volume 2024 ; 2024 ; https://bsms.arphahub.com/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Bulgarian Society of Medical Sciences Journal Volume 2024 ; 2024 ; https://bsms.arphahub.com/ ; >
       au < manifest ; exists ; 2025 ; 2025 ; Bulgarian Society of Medical Sciences Journal Volume 2025 ; 2025 ; https://bsms.arphahub.com/ ; >
 
   }
@@ -1790,7 +1790,7 @@
 
       param[au_oai_set] = papahou
 
-      au < ready ; exists ; 2024 ; 2024 ; Papahou: Records of the Auckland Museum Volume 2024 ; 2024 ; https://papahou.arphahub.com/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Papahou: Records of the Auckland Museum Volume 2024 ; 2024 ; https://papahou.arphahub.com/ ; >
       au < exists ; exists ; 2025 ; 2025 ; Papahou: Records of the Auckland Museum Volume 2025 ; 2025 ; https://papahou.arphahub.com/ ; >
 
   }
