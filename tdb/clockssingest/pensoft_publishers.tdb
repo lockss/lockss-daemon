@@ -1762,7 +1762,7 @@
 
       param[au_oai_set] = jbcr
 
-      au < ready ; exists ; 2024 ; 2024 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2024 ; 2024 ; https://jbcr.arphahub.com/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2024 ; 2024 ; https://jbcr.arphahub.com/ ; >
       au < manifest ; exists ; 2025 ; 2025 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2025 ; 2025 ; https://jbcr.arphahub.com/ ; >
 
   }
