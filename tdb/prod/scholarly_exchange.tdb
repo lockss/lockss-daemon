@@ -69,8 +69,6 @@
     au < released ; 2020 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 10 (2020) ; 10 ; 2020 >
     au < released ; 2021 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 10 (2021) ; 10 ; 2021 >
     au < released ; 2022 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 11 (2022) ; 11 ; 2022 >
-    au < expected ; 2024 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 12 (2024) ; 12 ; 2024 >
-    au < expected ; 2025 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 13 (2025) ; 13 ; 2025 >
 
     }
   }
@@ -111,7 +109,7 @@
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
-    param[base_url] = https://www.ijic.info/
+    param[base_url] = https://ijic.info/
 
     au < manifest ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
     au < manifest ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
@@ -163,7 +161,7 @@
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
-    param[base_url] = https://www.ijtarp.org/
+    param[base_url] = https://ijtarp.org/
     
     au < manifest ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
     au < manifest ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
@@ -215,7 +213,7 @@
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
-    param[base_url] = https://www.intersticios.es/
+    param[base_url] = https://intersticios.es/
 
     au < manifest ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
     au < manifest ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
@@ -297,12 +295,14 @@
     {
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
-    param[base_url] = https://www.journal-alm.org/
+    param[base_url] = https://journal-alm.org/
 
     au < manifest ; 2017 ; Journal of Applied Leadership and Management Volume 5 ; 5 ; 2017 >
     au < manifest ; 2018 ; Journal of Applied Leadership and Management Volume 6 ; 6 ; 2018 >
     au < manifest ; 2019 ; Journal of Applied Leadership and Management Volume 7 ; 7 ; 2019 >
     au < manifest ; 2020 ; Journal of Applied Leadership and Management Volume 8 ; 8 ; 2020 >
+    au < exists ; 2021 ; Journal of Applied Leadership and Management Volume 9 ; 9 ; 2021 >
+    au < exists ; 2022 ; Journal of Applied Leadership and Management Volume 10 ; 10 ; 2022 >
 
     }
   }
