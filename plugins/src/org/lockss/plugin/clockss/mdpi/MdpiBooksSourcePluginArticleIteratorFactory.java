@@ -28,6 +28,8 @@ public class MdpiBooksSourcePluginArticleIteratorFactory implements ArticleItera
     protected static final Pattern XML_PATTERN = Pattern.compile("/([^/]+\\.onix.xml)$");
     protected static final String XML_REPLACEMENT = "/$1.onix.xml";
 
+    protected static final String XML_REPLACEMENT2 = "/$1.xml";
+
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -45,6 +47,11 @@ public class MdpiBooksSourcePluginArticleIteratorFactory implements ArticleItera
 
         builder.addAspect(PDF_PATTERN,
                 XML_REPLACEMENT,
+                ArticleFiles.ROLE_FULL_TEXT_XML,
+                ArticleFiles.ROLE_ARTICLE_METADATA);
+
+        builder.addAspect(PDF_PATTERN,
+                XML_REPLACEMENT2,
                 ArticleFiles.ROLE_FULL_TEXT_XML,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
