@@ -76,6 +76,18 @@ public class AmaScHtmlHashFilterFactory extends BaseScHtmlHashFilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "(badges|movable-ad|sidebar)"),
         HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "toolbar"),
         HtmlNodeFilters.tagWithAttributeRegex("a", "class", "(download-ppt|related)"),
+        /*
+        https://jamanetwork.com/journals/jamanetworkopen/issue/8/2
+        The raw html source has two "--", not sure it is a typo or intended, so added both just in case
+        it is found and fixed later
+         */
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "article--linked-articles"),
+        HtmlNodeFilters.tagWithAttributeRegex("li", "class", "linked-article--article"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "class", "linked-article--title"),
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "article-linked-articles"),
+        HtmlNodeFilters.tagWithAttributeRegex("li", "class", "linked-article-article"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "class", "linked-article-title"),
+
     };
     
     return createFilteredInputStream(au, in, encoding, includeFilters, moreExcludeFilters);
