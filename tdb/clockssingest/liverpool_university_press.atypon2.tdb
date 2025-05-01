@@ -28,7 +28,7 @@
     #Published 1949-2021
     #journal_num = 56
 
-    au < ready ; exists ; 2000 ; Archives Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2000 ; Archives Volume 25 ; 25 ; >
     au < ready ; exists ; 2001 ; Archives Volume 26 ; 26 ; >
     au < crawling ; exists ; 2002 ; Archives Volume 27 ; 27 ; >
     au < crawling ; exists ; 2003 ; Archives Volume 28 ; 28 ; >
@@ -387,7 +387,7 @@
     au < crawling ; exists ; 2000 ; Contemporary French Civilization Volume 24 ; 24 ; >
     au < ready ; exists ; 2001 ; Contemporary French Civilization Volume 25 ; 25 ; >
     au < crawling ; exists ; 2002 ; Contemporary French Civilization Volume 26 ; 26 ; >
-    au < ready ; exists ; 2003 ; Contemporary French Civilization Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2003 ; Contemporary French Civilization Volume 27 ; 27 ; >
     au < crawling ; exists ; 2004 ; Contemporary French Civilization Volume 28 ; 28 ; >
     au < finished ; manifest ; 2005 ; Contemporary French Civilization Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2006 ; Contemporary French Civilization Volume 30 ; 30 ; >
@@ -1685,7 +1685,7 @@
     au < crawling ; exists ; 2001 ; Quebec Studies Volume 31 ; 31 ; >
     au < crawling ; exists ; 2001 ; Quebec Studies Volume 32 ; 32 ; >
     au < crawling ; exists ; 2002 ; Quebec Studies Volume 33 ; 33 ; >
-    au < ready ; exists ; 2002 ; Quebec Studies Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2002 ; Quebec Studies Volume 34 ; 34 ; >
     au < crawling ; exists ; 2003 ; Quebec Studies Volume 35 ; 35 ; >
     au < crawling ; exists ; 2003 ; Quebec Studies Volume 36 ; 36 ; >
     au < ready ; exists ; 2004 ; Quebec Studies Volume 37 ; 37 ; >
@@ -1840,7 +1840,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Studia Hibernica Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Studia Hibernica Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Studia Hibernica Volume 45 ; 45 ; >
-    au < ready ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2020 ; Studia Hibernica Volume 46 ; 46 ; >
     au < crawling ; exists ; 2021 ; Studia Hibernica Volume 47 ; 47 ; >
     au < deepCrawl ; exists ; 2022 ; Studia Hibernica Volume 48 ; 48 ; >
     au < deepCrawl ; exists ; 2023 ; Studia Hibernica Volume 49 ; 49 ; >
@@ -2004,7 +2004,7 @@
     au < doNotProcess ; exists ; 1998 ; Town Planning Review Volume 69 ; 69 ; >
     au < doNotProcess ; exists ; 1999 ; Town Planning Review Volume 70 ; 70 ; >
     au < crawling ; exists ; 2000 ; Town Planning Review Volume 71 ; 71 ; >
-    au < ready ; exists ; 2001 ; Town Planning Review Volume 72 ; 72 ; >
+    au < crawling ; exists ; 2001 ; Town Planning Review Volume 72 ; 72 ; >
     au < crawling ; exists ; 2002 ; Town Planning Review Volume 73 ; 73 ; >
     au < crawling ; exists ; 2003 ; Town Planning Review Volume 74 ; 74 ; >
     au < ready ; exists ; 2004 ; Town Planning Review Volume 75 ; 75 ; >
