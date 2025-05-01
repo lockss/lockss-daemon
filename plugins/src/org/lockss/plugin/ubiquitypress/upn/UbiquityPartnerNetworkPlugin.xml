@@ -111,7 +111,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s%sarticles/[^/?]+/thumbs/", url_host(base_url2), url_path(base_url)</string>
       <string>1,"^https?://%s%s(en/)?[^/?]+/volume/(%s|0)/issue/[^/]+$", url_host(base_url), url_path(base_url), volume_name</string>
       <string>1,"^https?://%s%s[^/?]+(/volume/[^/?]+)?/issue/[^/]+/", url_host(base_url2), url_path(base_url2)</string>
-      <string>1,"^https?://%s%sarticles/[^/?]+/files/[^/?]+\.(xml|pdf)$",url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%sarticles/[^/?]+/files/[^?]+\.(xml|pdf|html)$",url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s/about/?",url_host(base_url)</string>
       <string>1,"^https?://%s/lockss/year/%d",url_host(base_url), year</string>
     </list>
@@ -119,7 +119,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
       <list>
-        <string>"^https?://%s%sarticles/[^/?]+/files/[^/?]+\.(xml|pdf)$",url_host(base_url), url_path(base_url)</string>
+        <string>"^https?://%s%sarticles/[^/?]+/files/[^?]+\.(xml|pdf|html)$",url_host(base_url), url_path(base_url)</string>
       </list>
   </entry>
   <entry>
