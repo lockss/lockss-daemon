@@ -146,6 +146,23 @@ public class TestGovInfoSitemapsHttpResponseHandler extends LockssTestCase {
     }
   }
 
+  public void testIOException() throws Exception {
+    String url = "https://www.govinfo.gov/apple-touch-icon-72.png";
+    HttpResultMap resMap = (HttpResultMap)plugin.getCacheResultMap();
+    DefinableArchivalUnit GIau = makeGiAu();
+    CacheException ce;
+    MockLockssUrlConnection conn = new MockLockssUrlConnection();
+    conn.setURL(url);
+    // The messages we're looking for
+    ce = resMap.mapException(GIau, conn, new IOException("chunked stream ended unexpectedly"), url);
+    assertClass(CacheException.RetryableNetworkException.class, ce);
+    ce = resMap.mapException(GIau, conn, new MyIOException("Premature end of Content-Length delimited message body"), url);
+    assertClass(CacheException.RetryableNetworkException.class, ce);
+    // Not the message we're looking for (s.b. mapped to default mapping
+    ce = resMap.mapException(GIau, conn, new IOException("wayward moon"), url);
+    assertClass(CacheException.UnknownExceptionException.class, ce);
+  }
+
   // as the pattern is currently the same for 404 and 504, this test is redundant
   public void testShouldReturnNotFatal504() throws Exception {
     testUrls(NON_FATAL_URLS, 504, true);
@@ -153,6 +170,12 @@ public class TestGovInfoSitemapsHttpResponseHandler extends LockssTestCase {
 
   public void testShoulBeFatal504() throws Exception {
     testUrls(FATAL_URLS, 504, false);
+  }
+
+  static class MyIOException extends IOException {
+    MyIOException(String msg) {
+      super(msg);
+    }
   }
 }
 

@@ -86,14 +86,17 @@ public class GovInfoSitemapsHttpResponseHandler implements CacheResultHandler {
                                      Exception exc)
       throws PluginException {
     logger.debug2(String.format("URL: %s, exception: %s", url, exc));
-    Class<? extends Exception> cla = exc.getClass();
-    if (cla == IOException.class) {
-      if ("chunked stream ended unexpectedly".equals(exc.getMessage())) {
+    if (exc instanceof IOException) {
+      switch (exc.getMessage()) {
+      case "chunked stream ended unexpectedly":
+      case "Premature end of Content-Length delimited message body":
         return new CacheException.RetryableNetworkException();
+      default:
+        // This wants to invoke default mapping, when there is a way to do that
+        return new CacheException.UnknownExceptionException("Unmapped exception: " + exc, exc);
       }
-      return new CacheException.UnknownExceptionException("Unmapped exception: " + exc, exc);
     }
-    throw new UnsupportedOperationException("Unexpected exception: " + exc);
+    throw new PluginException("Invoked for unexpected exception: " + exc);
   }
   
 }
