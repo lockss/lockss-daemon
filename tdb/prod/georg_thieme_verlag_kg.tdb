@@ -1066,7 +1066,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000097
-    comment[years] = 2001-current
+    comment[years] = 2001-2023
     comment[continues] = 1432-2919 
 
    au < doNotProcess ; 2001 ; 2001 ; Deutsche Zeitschrift für Onkologie Volume 33 ; 33 >
@@ -1092,8 +1092,6 @@
    au < released ; 2021 ; 2021 ; Deutsche Zeitschrift für Onkologie Volume 53 ; 53 >
    au < released ; 2022 ; 2022 ; Deutsche Zeitschrift für Onkologie Volume 54 ; 54 >
    au < released ; 2023 ; 2023 ; Deutsche Zeitschrift für Onkologie Volume 55 ; 55 >
-   au < expected ; 2024 ; 2024 ; Deutsche Zeitschrift für Onkologie Volume 56 ; 56 >
-   au < expected ; 2025 ; 2025 ; Deutsche Zeitschrift für Onkologie Volume 57 ; 57 >
 
   }
 
@@ -3110,7 +3108,7 @@
 
     >
     param[journal_id] = 10.1055/s-00033285
-    #years = 2017
+    #years = 2017-2023
 
    au < released ; 2017 ; 2017 ; Journal of Academic Ophtalmology Volume 9 ; 9 >
    au < released ; 2018 ; 2018 ; Journal of Academic Ophtalmology Volume 10 ; 10 >
@@ -3119,8 +3117,6 @@
    au < released ; 2021 ; 2021 ; Journal of Academic Ophtalmology Volume 13 ; 13 >
    au < released ; 2022 ; 2022 ; Journal of Academic Ophtalmology Volume 14 ; 14 >
    au < released ; 2023 ; 2023 ; Journal of Academic Ophtalmology Volume 15 ; 15 >
-   au < expected ; 2024 ; 2024 ; Journal of Academic Ophtalmology Volume 16 ; 16 >
-   au < expected ; 2025 ; 2025 ; Journal of Academic Ophtalmology Volume 17 ; 17 >
 
   }
 
@@ -3209,7 +3205,7 @@
     >
 
     param[journal_id] = 10.1055/s-00031417 
-    #years = 2016-current
+    #years = 2016-2023
 
     au < released ; 2016 ; 2016 ; Journal of Hand and Microsurgery Volume 8 ; 8 >
     au < released ; 2017 ; 2017 ; Journal of Hand and Microsurgery Volume 9 ; 9 >
@@ -3219,8 +3215,6 @@
     au < released ; 2021 ; 2021 ; Journal of Hand and Microsurgery Volume 13 ; 13 >
     au < released ; 2022 ; 2022 ; Journal of Hand and Microsurgery Volume 14 ; 14 >
     au < released ; 2023 ; 2023 ; Journal of Hand and Microsurgery Volume 15 ; 15 >
-    au < expected ; 2024 ; 2024 ; Journal of Hand and Microsurgery Volume 16 ; 16 >
-    au < expected ; 2025 ; 2025 ; Journal of Hand and Microsurgery Volume 17 ; 17 >
 
   }
 
@@ -5693,7 +5687,7 @@
     >
 
     param[journal_id] = 10.1055/s-00030576
-    comment[years] = 2016-current
+    comment[years] = 2016-2023
     # move from Scielo, May 2016
 
    au < released ; 2016 ; 2016 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 38 ; 38 >
@@ -5704,8 +5698,6 @@
    au < released ; 2021 ; 2021 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 43 ; 43 >
    au < released ; 2022 ; 2022 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 44 ; 44 >
    au < released ; 2023 ; 2023 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 45 ; 45 >
-   au < expected ; 2024 ; 2024 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 46 ; 46 >
-   au < expected ; 2025 ; 2025 ; Revista Brasileira de Ginecologia e Obstetrícia Volume 47 ; 47 >
 
   }
 
@@ -7249,7 +7241,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000154
-    comment[years] = 2003-current
+    comment[years] = 2003-2023
 
     au < doNotProcess ; 2003 ; 2003 ; veterinär spiegel Volume 13 ; 13 >
     au < doNotProcess ; 2004 ; 2004 ; veterinär spiegel Volume 14 ; 14 >
@@ -7272,8 +7264,6 @@
     au < released ; 2021 ; 2021 ; veterinär spiegel Volume 31 ; 31 >
     au < released ; 2022 ; 2022 ; veterinär spiegel Volume 32 ; 32 >
     au < released ; 2023 ; 2023 ; veterinär spiegel Volume 33 ; 33 >
-    au < expected ; 2024 ; 2024 ; veterinär spiegel Volume 34 ; 34 >
-    au < expected ; 2025 ; 2025 ; veterinär spiegel Volume 35 ; 35 >
 
   }
 
