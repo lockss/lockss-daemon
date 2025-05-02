@@ -111,13 +111,13 @@
     attr[start_stem] = index.php/
     param[base_url] = https://ijic.info/
 
-    au < manifest ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
-    au < manifest ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
-    au < manifest ; 2019 ; International Journal of Infection Control Volume 15 ; 15 ; 2019 >
-    au < manifest ; 2020 ; International Journal of Infection Control Volume 16 ; 16 ; 2020 >
-    au < manifest ; 2021 ; International Journal of Infection Control Volume 17 ; 17 ; 2021 >
-    au < manifest ; 2022 ; International Journal of Infection Control Volume 18 ; 18 ; 2022 >
-    au < manifest ; 2023 ; International Journal of Infection Control Volume 19 ; 19 ; 2023 >
+    au < testing ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
+    au < testing ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
+    au < testing ; 2019 ; International Journal of Infection Control Volume 15 ; 15 ; 2019 >
+    au < testing ; 2020 ; International Journal of Infection Control Volume 16 ; 16 ; 2020 >
+    au < testing ; 2021 ; International Journal of Infection Control Volume 17 ; 17 ; 2021 >
+    au < testing ; 2022 ; International Journal of Infection Control Volume 18 ; 18 ; 2022 >
+    au < testing ; 2023 ; International Journal of Infection Control Volume 19 ; 19 ; 2023 >
     au < testing ; 2024 ; International Journal of Infection Control Volume 20 ; 20 ; 2024 >
     au < manifest ; 2025 ; International Journal of Infection Control Volume 21 ; 21 ; 2025 >
 
@@ -163,12 +163,12 @@
     attr[start_stem] = index.php/
     param[base_url] = https://ijtarp.org/
     
-    au < manifest ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
-    au < manifest ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
-    au < manifest ; 2020 ; International Journal of Transactional Analysis Research & Practice Volume 11 ; 11 ; 2020 >
-    au < manifest ; 2021 ; International Journal of Transactional Analysis Research & Practice Volume 12 ; 12 ; 2021 >
-    au < manifest ; 2022 ; International Journal of Transactional Analysis Research & Practice Volume 13 ; 13 ; 2022 >
-    au < manifest ; 2023 ; International Journal of Transactional Analysis Research & Practice Volume 14 ; 14 ; 2023 >
+    au < testing ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
+    au < testing ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
+    au < testing ; 2020 ; International Journal of Transactional Analysis Research & Practice Volume 11 ; 11 ; 2020 >
+    au < testing ; 2021 ; International Journal of Transactional Analysis Research & Practice Volume 12 ; 12 ; 2021 >
+    au < testing ; 2022 ; International Journal of Transactional Analysis Research & Practice Volume 13 ; 13 ; 2022 >
+    au < testing ; 2023 ; International Journal of Transactional Analysis Research & Practice Volume 14 ; 14 ; 2023 >
     au < testing ; 2024 ; International Journal of Transactional Analysis Research & Practice Volume 15 ; 15 ; 2024 >
     au < expected ; 2025 ; International Journal of Transactional Analysis Research & Practice Volume 16 ; 16 ; 2025 >
 
@@ -215,13 +215,13 @@
     attr[start_stem] = index.php/
     param[base_url] = https://intersticios.es/
 
-    au < manifest ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
-    au < manifest ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
-    au < manifest ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
-    au < manifest ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
-    au < manifest ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
-    au < manifest ; 2022 ; Intersticios Volume 16 ; 16 ; 2022 >
-    au < manifest ; 2023 ; Intersticios Volume 17 ; 17 ; 2023 >
+    au < testing ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
+    au < testing ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
+    au < testing ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
+    au < testing ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
+    au < testing ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
+    au < testing ; 2022 ; Intersticios Volume 16 ; 16 ; 2022 >
+    au < testing ; 2023 ; Intersticios Volume 17 ; 17 ; 2023 >
     au < testing ; 2024 ; Intersticios Volume 18 ; 18 ; 2024 >
     au < expected ; 2025 ; Intersticios Volume 19 ; 19 ; 2025 >
 
@@ -465,8 +465,8 @@
     au < released ; 2020 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 12 ; 12 ; 2020 >
     au < released ; 2021 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 13 ; 13 ; 2021 >
     au < released ; 2022 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 14 ; 14 ; 2022 >
-    au < manifest ; 2023 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 15 ; 15 ; 2023 >
-    au < manifest ; 2024 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 16 ; 16 ; 2024 >
+    au < notReady ; 2023 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 15 ; 15 ; 2023 > #LXPLUG-2566
+    au < testing ; 2024 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 16 ; 16 ; 2024 >
     au < manifest ; 2025 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 17 ; 17 ; 2025 >
 
     }
