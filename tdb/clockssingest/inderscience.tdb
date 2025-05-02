@@ -540,7 +540,7 @@
 
       param[journal_id] = ijamc
 
-      au < ready ; exists ; 2005-2007 ; International Journal of Advanced Media and Communication Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2005-2007 ; International Journal of Advanced Media and Communication Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Advanced Media and Communication Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Advanced Media and Communication Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Advanced Media and Communication Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -3588,7 +3588,7 @@
 
       au < crawling ; exists ; 2004-2005 ; International Journal of Electronic Healthcare Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2006 ; International Journal of Electronic Healthcare Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2007 ; International Journal of Electronic Healthcare Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; International Journal of Electronic Healthcare Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Electronic Healthcare Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Electronic Healthcare Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Electronic Healthcare Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -5205,7 +5205,7 @@
       au < crawling ; exists ; 2002 ; International Journal of Human Resources Development and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2003 ; International Journal of Human Resources Development and Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2004 ; International Journal of Human Resources Development and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2005 ; International Journal of Human Resources Development and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2005 ; International Journal of Human Resources Development and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2006 ; International Journal of Human Resources Development and Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Human Resources Development and Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Human Resources Development and Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
@@ -5881,7 +5881,7 @@
       au < finished ; finished ; 2020 ; International Journal of Innovation in Education Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2021-2022 ; International Journal of Innovation in Education Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; International Journal of Innovation in Education Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2024 ; International Journal of Innovation in Education Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2024 ; International Journal of Innovation in Education Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Innovation in Education Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -6961,7 +6961,7 @@
 
       au < crawling ; exists ; 2000 ; International Journal of Management and Decision Making Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2001 ; International Journal of Management and Decision Making Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2002 ; International Journal of Management and Decision Making Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2002 ; International Journal of Management and Decision Making Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2003 ; International Journal of Management and Decision Making Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2004 ; International Journal of Management and Decision Making Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2005 ; International Journal of Management and Decision Making Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -7199,7 +7199,7 @@
 
       au < crawling ; exists ; 2006 ; International Journal of Manufacturing Research Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2007 ; International Journal of Manufacturing Research Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008 ; International Journal of Manufacturing Research Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008 ; International Journal of Manufacturing Research Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Manufacturing Research Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Manufacturing Research Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Manufacturing Research Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -7698,7 +7698,7 @@
       param[journal_id] = ijmmp
 
       au < crawling ; exists ; 2005-2006 ; International Journal of Microstructure and Materials Properties Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2007 ; International Journal of Microstructure and Materials Properties Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; International Journal of Microstructure and Materials Properties Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Microstructure and Materials Properties Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2009 ; International Journal of Microstructure and Materials Properties Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Microstructure and Materials Properties Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -7916,7 +7916,7 @@
       param[journal_id] = ijmic
 
       au < crawling ; exists ; 2006 ; International Journal of Modelling, Identification and Control Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2007 ; International Journal of Modelling, Identification and Control Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; International Journal of Modelling, Identification and Control Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Modelling, Identification and Control Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Modelling, Identification and Control Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Modelling, Identification and Control Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -10888,7 +10888,7 @@
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Technology Transfer and Commercialisation Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Technology Transfer and Commercialisation Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Technology Transfer and Commercialisation Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2013 ; International Journal of Technology Transfer and Commercialisation Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2013 ; International Journal of Technology Transfer and Commercialisation Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015 ; International Journal of Technology Transfer and Commercialisation Volume 13 ; 13 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; International Journal of Technology Transfer and Commercialisation Volume 14 ; 14 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; International Journal of Technology Transfer and Commercialisation Volume 15 ; 15 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
