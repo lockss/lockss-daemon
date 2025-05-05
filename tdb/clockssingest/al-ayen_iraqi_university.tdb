@@ -37,7 +37,7 @@
       param[journal_abbr] = home
 
       au < crawling ; exists ; 2024 ; AUIQ Technical Engineering Science Volume 1 ; 1 ; >
-      au < expected ; exists ; 2025 ; AUIQ Technical Engineering Science Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2025 ; AUIQ Technical Engineering Science Volume 2 ; 2 ; >
 
   }
 
