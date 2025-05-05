@@ -58,18 +58,18 @@
     au < manifest ; 1998 ; BioTechniques Volume 25 ; 25 ; https://www.tandfonline.com/ >
     au < manifest ; 1999 ; BioTechniques Volume 26 ; 26 ; https://www.tandfonline.com/ >
     au < manifest ; 1999 ; BioTechniques Volume 27 ; 27 ; https://www.tandfonline.com/ >
-    au < testing ; 2000 ; BioTechniques Volume 28 ; 28 ; https://www.tandfonline.com/ >
-    au < testing ; 2000 ; BioTechniques Volume 29 ; 29 ; https://www.tandfonline.com/ >
-    au < testing ; 2001 ; BioTechniques Volume 30 ; 30 ; https://www.tandfonline.com/ >
-    au < testing ; 2001 ; BioTechniques Volume 31 ; 31 ; https://www.tandfonline.com/ >
-    au < testing ; 2002 ; BioTechniques Volume 32 ; 32 ; https://www.tandfonline.com/ >
-    au < testing ; 2002 ; BioTechniques Volume 33 ; 33 ; https://www.tandfonline.com/ >
-    au < testing ; 2003 ; BioTechniques Volume 34 ; 34 ; https://www.tandfonline.com/ >
-    au < testing ; 2003 ; BioTechniques Volume 35 ; 35 ; https://www.tandfonline.com/ >
-    au < testing ; 2004 ; BioTechniques Volume 36 ; 36 ; https://www.tandfonline.com/ >
-    au < testing ; 2004 ; BioTechniques Volume 37 ; 37 ; https://www.tandfonline.com/ >
-    au < testing ; 2005 ; BioTechniques Volume 38 ; 38 ; https://www.tandfonline.com/ >
-    au < testing ; 2005 ; BioTechniques Volume 39 ; 39 ; https://www.tandfonline.com/ >
+    au < ready ; 2000 ; BioTechniques Volume 28 ; 28 ; https://www.tandfonline.com/ >
+    au < ready ; 2000 ; BioTechniques Volume 29 ; 29 ; https://www.tandfonline.com/ >
+    au < ready ; 2001 ; BioTechniques Volume 30 ; 30 ; https://www.tandfonline.com/ >
+    au < ready ; 2001 ; BioTechniques Volume 31 ; 31 ; https://www.tandfonline.com/ >
+    au < ready ; 2002 ; BioTechniques Volume 32 ; 32 ; https://www.tandfonline.com/ >
+    au < ready ; 2002 ; BioTechniques Volume 33 ; 33 ; https://www.tandfonline.com/ >
+    au < ready ; 2003 ; BioTechniques Volume 34 ; 34 ; https://www.tandfonline.com/ >
+    au < ready ; 2003 ; BioTechniques Volume 35 ; 35 ; https://www.tandfonline.com/ >
+    au < ready ; 2004 ; BioTechniques Volume 36 ; 36 ; https://www.tandfonline.com/ >
+    au < ready ; 2004 ; BioTechniques Volume 37 ; 37 ; https://www.tandfonline.com/ >
+    au < ready ; 2005 ; BioTechniques Volume 38 ; 38 ; https://www.tandfonline.com/ >
+    au < ready ; 2005 ; BioTechniques Volume 39 ; 39 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2006 ; BioTechniques Volume 40 ; 40 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2006 ; BioTechniques Volume 41 ; 41 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2007 ; BioTechniques Volume 42 ; 42 ; https://www.tandfonline.com/ >
@@ -453,7 +453,7 @@
     
     param[journal_id] = ifca20
 
-    au < testing ; 2005 ; Future Cardiology Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < ready ; 2005 ; Future Cardiology Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2006 ; Future Cardiology Volume 2 ; 2 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2007 ; Future Cardiology Volume 3 ; 3 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2008 ; Future Cardiology Volume 4 ; 4 ; https://www.tandfonline.com/ >
@@ -553,10 +553,10 @@
     
     param[journal_id] = ifon20
 
-    au < testing ; 2005 ; Future Oncology Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < ready ; 2005 ; Future Oncology Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2006 ; Future Oncology Volume 2 ; 2 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2007 ; Future Oncology Volume 3 ; 3 ; https://www.tandfonline.com/ >
-    au < testing ; 2008 ; Future Oncology Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < ready ; 2008 ; Future Oncology Volume 4 ; 4 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2009 ; Future Oncology Volume 5 ; 5 ; https://www.tandfonline.com/ >
     au < released ; 2010 ; Future Oncology Volume 6 ; 6 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2011 ; Future Oncology Volume 7 ; 7 ; https://www.tandfonline.com/ >
@@ -865,7 +865,7 @@
     au < doNotProcess ; 2006 ; Nanomedicine Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2007 ; Nanomedicine Volume 2 ; 2 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2008 ; Nanomedicine Volume 3 ; 3 ; https://www.tandfonline.com/ >
-    au < testing ; 2009 ; Nanomedicine Volume 4 ; 4 ; https://www.tandfonline.com/ >
+    au < ready ; 2009 ; Nanomedicine Volume 4 ; 4 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2010 ; Nanomedicine Volume 5 ; 5 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2011 ; Nanomedicine Volume 6 ; 6 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2012 ; Nanomedicine Volume 7 ; 7 ; https://www.tandfonline.com/ >
@@ -969,7 +969,7 @@
     param[journal_id] = ipme20
 
     au < doNotProcess ; 2004 ; Personalized Medicine Volume 1 ; 1 ; https://www.tandfonline.com/ >
-    au < testing ; 2005 ; Personalized Medicine Volume 2 ; 2 ; https://www.tandfonline.com/ >
+    au < ready ; 2005 ; Personalized Medicine Volume 2 ; 2 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2006 ; Personalized Medicine Volume 3 ; 3 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2007 ; Personalized Medicine Volume 4 ; 4 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2008 ; Personalized Medicine Volume 5 ; 5 ; https://www.tandfonline.com/ >
@@ -1008,7 +1008,7 @@
     au < doNotProcess ; 2002 ; Pharmacogenomics Volume 3 ; 3 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2003 ; Pharmacogenomics Volume 4 ; 4 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2004 ; Pharmacogenomics Volume 5 ; 5 ; https://www.tandfonline.com/ >
-    au < testing ; 2005 ; Pharmacogenomics Volume 6 ; 6 ; https://www.tandfonline.com/ >
+    au < ready ; 2005 ; Pharmacogenomics Volume 6 ; 6 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2006 ; Pharmacogenomics Volume 7 ; 7 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2007 ; Pharmacogenomics Volume 8 ; 8 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2008 ; Pharmacogenomics Volume 9 ; 9 ; https://www.tandfonline.com/ >
@@ -1073,7 +1073,7 @@
     
     param[journal_id] = irme20
 
-    au < testing ; 2006 ; Regenerative Medicine Volume 1 ; 1 ; https://www.tandfonline.com/ >
+    au < ready ; 2006 ; Regenerative Medicine Volume 1 ; 1 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2007 ; Regenerative Medicine Volume 2 ; 2 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2008 ; Regenerative Medicine Volume 3 ; 3 ; https://www.tandfonline.com/ >
     au < doNotProcess ; 2009 ; Regenerative Medicine Volume 4 ; 4 ; https://www.tandfonline.com/ >
