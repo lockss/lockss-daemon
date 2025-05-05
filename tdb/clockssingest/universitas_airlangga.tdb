@@ -983,6 +983,20 @@
 
   {
       title <
+        name = Jurnal Agro Veteriner ;
+        issn = 2303-1697 ;
+        eissn = 3031-9811
+      >
+
+      param[journal_id] = agrovet
+
+      au < manifest ; exists ; 2024 ; Jurnal Agro Veteriner Volume 8 ; 8 ; 2024 ; >
+      au < expected ; exists ; 2025 ; Jurnal Agro Veteriner Volume 9 ; 9 ; 2025 ; >
+
+  }
+
+  {
+      title <
         name = Journal of Aquaculture and Fish Health ;
         issn = 2301-7309 ;
         eissn = 2528-0864
