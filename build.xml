@@ -268,7 +268,7 @@ Args:
   <property name="commons.lang3.jar" value="${lib}/commons-lang3-3.17.0.jar" />
   <property name="commons.logging.jar" value="${lib}/commons-logging-1.2.jar" />
   <property name="commons.primitives.jar" value="${lib}/commons-primitives-1.0.jar" />
-  <property name="commons.text.jar" value="${lib}/commons-text-1.13.0.jar" />
+  <property name="commons.text.jar" value="${lib}/commons-text-1.13.1.jar" />
   <property name="commons.validator.jar" value="${lib}/commons-validator-1.9.0.jar" />
 
   <property name="commons.httpclient.jar"
