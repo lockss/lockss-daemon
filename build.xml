@@ -300,7 +300,7 @@ Args:
   <property name="jsoup.jar" value="${lib}/jsoup-1.18.3.jar"/>
   <property name="marc4j.jar" value="${lib}/marc4j-2.9.6.jar" />
   <!-- Next 6 needed for Jonix -->
-  <property name="jonix.version" value="2024-07" />
+  <property name="jonix.version" value="2025-04" />
   <property name="jonix.jar" value="${lib}/jonix-${jonix.version}.jar" />
   <property name="jonix-common.jar" value="${lib}/jonix-common-${jonix.version}.jar" />
   <property name="jonix-xml.jar" value="${lib}/jonix-xml-${jonix.version}.jar" />
