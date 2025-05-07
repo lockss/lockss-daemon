@@ -3026,7 +3026,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; Thorax Volume 76 ; 76 ; https://thorax.bmj.com/ > #login,https://thorax.bmj.com/content/76/4/350.full.pdf
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Thorax Volume 77 ; 77 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Thorax Volume 78 ; 78 ; https://thorax.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; testing ; 2024 ; Thorax Volume 79 ; 79 ; https://thorax.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2024 ; Thorax Volume 79 ; 79 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; Thorax Volume 80 ; 80 ; https://thorax.bmj.com/ >
 
   }
