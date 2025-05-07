@@ -209,7 +209,7 @@
 
       au < ready ; exists ; 2007 ; European Journal of Industrial Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; European Journal of Industrial Engineering Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2009 ; European Journal of Industrial Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; European Journal of Industrial Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; European Journal of Industrial Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Industrial Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Industrial Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -1358,7 +1358,7 @@
 
       param[journal_id] = ijbet
 
-      au < ready ; exists ; 2007-2008 ; International Journal of Biomedical Engineering and Technology Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007-2008 ; International Journal of Biomedical Engineering and Technology Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Biomedical Engineering and Technology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Biomedical Engineering and Technology Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Biomedical Engineering and Technology Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -1565,7 +1565,7 @@
 
       param[journal_id] = ijbg
 
-      au < ready ; exists ; 2007 ; International Journal of Business and Globalisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; International Journal of Business and Globalisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Business and Globalisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Business and Globalisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Business and Globalisation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -2600,7 +2600,7 @@
       au < ready ; exists ; 2001 ; International Journal of Computer Applications in Technology Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2002 ; International Journal of Computer Applications in Technology Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2003 ; International Journal of Computer Applications in Technology Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2003 ; International Journal of Computer Applications in Technology Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2003 ; International Journal of Computer Applications in Technology Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2003 ; International Journal of Computer Applications in Technology Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2004 ; International Journal of Computer Applications in Technology Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2004 ; International Journal of Computer Applications in Technology Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
@@ -4924,7 +4924,7 @@
       param[journal_id] = ijge
 
       au < ready ; exists ; 2006-2007 ; International Journal of Green Economics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008 ; International Journal of Green Economics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008 ; International Journal of Green Economics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Green Economics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Green Economics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Green Economics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -5063,7 +5063,7 @@
       au < crawling ; exists ; 2005 ; International Journal of Heavy Vehicle Systems Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006 ; International Journal of Heavy Vehicle Systems Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Heavy Vehicle Systems Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008 ; International Journal of Heavy Vehicle Systems Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008 ; International Journal of Heavy Vehicle Systems Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Heavy Vehicle Systems Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Heavy Vehicle Systems Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Heavy Vehicle Systems Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
@@ -6356,7 +6356,7 @@
 
       param[journal_id] = ijitst
 
-      au < ready ; exists ; 2007-2009 ; International Journal of Internet Technology and Secured Transactions Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007-2009 ; International Journal of Internet Technology and Secured Transactions Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Internet Technology and Secured Transactions Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Internet Technology and Secured Transactions Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Internet Technology and Secured Transactions Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -10293,7 +10293,7 @@
       au < doNotProcess ; exists ; 1998 ; International Journal of Sustainable Development Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; exists ; 1999 ; International Journal of Sustainable Development Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2000 ; International Journal of Sustainable Development Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2001 ; International Journal of Sustainable Development Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2001 ; International Journal of Sustainable Development Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2002 ; International Journal of Sustainable Development Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2003 ; International Journal of Sustainable Development Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2004 ; International Journal of Sustainable Development Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
@@ -10916,7 +10916,7 @@
       au < crawling ; exists ; 2001 ; International Journal of Technology, Policy and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2002 ; International Journal of Technology, Policy and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2003 ; International Journal of Technology, Policy and Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2004 ; International Journal of Technology, Policy and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2004 ; International Journal of Technology, Policy and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2005 ; International Journal of Technology, Policy and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006 ; International Journal of Technology, Policy and Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Technology, Policy and Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
@@ -10994,7 +10994,7 @@
       au < finished ; finished ; 2017-2018 ; International Journal of Tourism Anthropology Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Journal of Tourism Anthropology Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020-2021 ; International Journal of Tourism Anthropology Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2022-2024 ; International Journal of Tourism Anthropology Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2022-2024 ; International Journal of Tourism Anthropology Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2025-2027 ; International Journal of Tourism Anthropology Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -11684,7 +11684,7 @@
       au < crawling ; exists ; 2000 ; Interdisciplinary Environmental Review Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2001 ; Interdisciplinary Environmental Review Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2002 ; Interdisciplinary Environmental Review Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2003 ; Interdisciplinary Environmental Review Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2003 ; Interdisciplinary Environmental Review Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2004 ; Interdisciplinary Environmental Review Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2005 ; Interdisciplinary Environmental Review Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006 ; Interdisciplinary Environmental Review Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
@@ -11851,9 +11851,9 @@
       param[journal_id] = pcfd
 
       au < crawling ; exists ; 2001 ; Progress in Computational Fluid Dynamics, An International Journal Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2002 ; Progress in Computational Fluid Dynamics, An International Journal Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2002 ; Progress in Computational Fluid Dynamics, An International Journal Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2003 ; Progress in Computational Fluid Dynamics, An International Journal Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2004 ; Progress in Computational Fluid Dynamics, An International Journal Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2004 ; Progress in Computational Fluid Dynamics, An International Journal Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2005 ; Progress in Computational Fluid Dynamics, An International Journal Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006 ; Progress in Computational Fluid Dynamics, An International Journal Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; Progress in Computational Fluid Dynamics, An International Journal Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
