@@ -25,6 +25,7 @@
 
     param[journal_id] = abbs
 
+    au < exists ; exists ; 2003 ; 2003 ; Acta Biochimica et Biophysica Sinica Volume 35 ; 35 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 ; >
     au < manifest ; exists ; 2006 ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 ; >
@@ -117,11 +118,12 @@
 
     param[journal_id] = asj
 
-    au < doNotProcess ; exists ; 1995 ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 ; >
-    au < doNotProcess ; exists ; 1996 ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 ; >
-    au < doNotProcess ; exists ; 1997 ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 ; >
-    au < doNotProcess ; exists ; 1998 ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 ; >
-    au < doNotProcess ; exists ; 1999 ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 ; >
+    au < exists ; exists ; 1996 ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 ; >
     au < manifest ; exists ; 2000 ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 ; >
     au < manifest ; exists ; 2001 ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 ; >
