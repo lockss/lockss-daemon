@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>24</string>
+    <string>25</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -192,6 +192,12 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.pensoft.oai.PensoftOaiUrlConsumerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>400=org.lockss.plugin.pensoft.oai.PensoftOaiHttpResponseHandler</string>
+    </list>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>
