@@ -300,7 +300,7 @@ public class ServeContent extends LockssServlet {
   /** Request a Content-Disposition in the response (inline,
    * attachment, or none).  Overrides existing Content-Disposition in
    * CU headers if any */
-  static final String REQ_PARAM_REQ_DISPOSITION = "requested-disposition";
+  static final String REQ_PARAM_REQ_DISPOSITION = "requested_disposition";
 
   // future param
   public static final String DEFAULT_404_CANDIDATES_MSG =
