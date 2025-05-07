@@ -296,6 +296,12 @@ public class ServeContent extends LockssServlet {
   static final String PARAM_PROCESS_FORMS = PREFIX + "handleFormPost";
   static final boolean DEFAULT_PROCESS_FORMS = false;
 
+  // Query parameters (most are inline in code)
+  /** Request a Content-Disposition in the response (inline,
+   * attachment, or none).  Overrides existing Content-Disposition in
+   * CU headers if any */
+  static final String REQ_PARAM_REQ_DISPOSITION = "requested-disposition";
+
   // future param
   public static final String DEFAULT_404_CANDIDATES_MSG =
     "Possibly related content may be found "
@@ -1302,15 +1308,33 @@ public class ServeContent extends LockssServlet {
     }
     resp.setContentType(ctype);
 
-    // If no Content-Disposition, set as inline content with name
     String cdisp = props.getProperty("Content-Disposition");
-    if (cdisp == null) {
-      String fname =
-        ObjectUtils.defaultIfNull(ServletUtil.getContentOriginalFilename(cu, true),
-                                  "UnnamedContent");
-      cdisp = "inline; filename=" + fname;
+    String reqDisp = getParameter(REQ_PARAM_REQ_DISPOSITION);
+    if (!StringUtil.isNullString(reqDisp)) {
+      switch (reqDisp) {
+      case "inline":
+        cdisp = makeContentDisposition("inline");
+        break;
+      case "attachment":
+        cdisp = makeContentDisposition("attachment");
+        break;
+      case "none":
+        cdisp = null;
+        break;
+      default:
+        log.warning("Uknown " + REQ_PARAM_REQ_DISPOSITION + ": " + reqDisp +
+                    " for URL: " + url);
+        cdisp = makeContentDisposition("inline");
+      }
+    } else {
+      // If no Content-Disposition, set as inline content with name
+      if (cdisp == null) {
+        cdisp = makeContentDisposition("inline");
+      }
     }
-    resp.setHeader("Content-Disposition", cdisp);
+    if (cdisp != null) {
+      resp.setHeader("Content-Disposition", cdisp);
+    }
 
     if (cuLastModified != null) {
       resp.setHeader(HttpFields.__LastModified, cuLastModified);
@@ -1331,6 +1355,13 @@ public class ServeContent extends LockssServlet {
     CharsetUtil.InputStreamAndCharset isc = CharsetUtil.getCharsetStream(cu);
     handleRewriteInputStream(isc.getInStream(), mimeType,
 			     isc.getCharset(), cu.getContentSize());
+  }
+
+  String makeContentDisposition(String disp) {
+    String fname =
+      ObjectUtils.defaultIfNull(ServletUtil.getContentOriginalFilename(cu, true),
+                                "UnnamedContent");
+    return disp + "; filename=" + fname;
   }
 
   /**
