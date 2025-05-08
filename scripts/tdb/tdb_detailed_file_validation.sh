@@ -40,11 +40,8 @@ for FILENAME in "$@"; do
 
     # Test 2: Run tdbout, sort and uniq the list, and compare with a second sorted run
     echo "****Finding duplicate AUids in $FILENAME..."
-    LIST1=$(./scripts/tdb/tdbout -VXEa "$FILENAME" | sort | uniq)
-    LIST2=$(./scripts/tdb/tdbout -VXEa "$FILENAME" | sort)
-    
-    # Compare the two lists to find duplicates
-    DUPLICATES=$(comm -13 <(echo "$LIST1") <(echo "$LIST2"))
+    # Find the lines that are not uniq
+    DUPLICATES=$(./scripts/tdb/tdbout -VXEa "$FILENAME" | uniq -d)
     
     if [ -z "$DUPLICATES" ]; then
         echo "**No duplicate AUids found"
@@ -55,11 +52,8 @@ for FILENAME in "$@"; do
 
     # Test 3: Run tdbout, sort and uniq the list, and compare with a second sorted run
     echo "****Finding duplicate name/plugin pairs in $FILENAME..."
-    LIST1=$(./scripts/tdb/tdbout -VXE -c plugin,name "$FILENAME" | sort | uniq)
-    LIST2=$(./scripts/tdb/tdbout -VXE -c plugin,name "$FILENAME" | sort)
-    
-    # Compare the two lists to find duplicates
-    DUPLICATES=$(comm -13 <(echo "$LIST1") <(echo "$LIST2"))
+    # Find the lines that are not uniq
+    DUPLICATES=$(./scripts/tdb/tdbout -VXE -c plugin,name "$FILENAME" | uniq -d)
     
     if [ -z "$DUPLICATES" ]; then
         echo "**No duplicate name/plugin pairs found"
