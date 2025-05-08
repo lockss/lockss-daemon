@@ -1616,31 +1616,31 @@
       au < manifest ; exists ; 1996 ; 1996 ; 1996 ; Tetradio Volume 1996 ; >
       au < manifest ; exists ; 1997 ; 1997 ; 1997 ; Tetradio Volume 1997 ; >
       au < manifest ; exists ; 1998 ; 1998 ; 1998 ; Tetradio Volume 1998 ; >
-      au < manifest ; exists ; 1999 ; 1999 ; 1999 ; Tetradio Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Tetradio Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Tetradio Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Tetradio Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Tetradio Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Tetradio Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Tetradio Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Tetradio Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Tetradio Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Tetradio Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Tetradio Volume 2009 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Tetradio Volume 2010 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Tetradio Volume 2011 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Tetradio Volume 2012 ; >
-      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Tetradio Volume 2013 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Tetradio Volume 2014 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Tetradio Volume 2015 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Tetradio Volume 2016 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Tetradio Volume 2017 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Tetradio Volume 2018 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Tetradio Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Tetradio Volume 2020 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Tetradio Volume 2021 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Tetradio Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Tetradio Volume 2023 ; >
+      au < ready ; exists ; 1999 ; 1999 ; 1999 ; Tetradio Volume 1999 ; >
+      au < ready ; exists ; 2000 ; 2000 ; 2000 ; Tetradio Volume 2000 ; >
+      au < ready ; exists ; 2001 ; 2001 ; 2001 ; Tetradio Volume 2001 ; >
+      au < ready ; exists ; 2002 ; 2002 ; 2002 ; Tetradio Volume 2002 ; >
+      au < ready ; exists ; 2003 ; 2003 ; 2003 ; Tetradio Volume 2003 ; >
+      au < ready ; exists ; 2004 ; 2004 ; 2004 ; Tetradio Volume 2004 ; >
+      au < ready ; exists ; 2005 ; 2005 ; 2005 ; Tetradio Volume 2005 ; >
+      au < ready ; exists ; 2006 ; 2006 ; 2006 ; Tetradio Volume 2006 ; >
+      au < ready ; exists ; 2007 ; 2007 ; 2007 ; Tetradio Volume 2007 ; >
+      au < ready ; exists ; 2008 ; 2008 ; 2008 ; Tetradio Volume 2008 ; >
+      au < ready ; exists ; 2009 ; 2009 ; 2009 ; Tetradio Volume 2009 ; >
+      au < ready ; exists ; 2010 ; 2010 ; 2010 ; Tetradio Volume 2010 ; >
+      au < ready ; exists ; 2011 ; 2011 ; 2011 ; Tetradio Volume 2011 ; >
+      au < ready ; exists ; 2012 ; 2012 ; 2012 ; Tetradio Volume 2012 ; >
+      au < ready ; exists ; 2013 ; 2013 ; 2013 ; Tetradio Volume 2013 ; >
+      au < ready ; exists ; 2014 ; 2014 ; 2014 ; Tetradio Volume 2014 ; >
+      au < ready ; exists ; 2015 ; 2015 ; 2015 ; Tetradio Volume 2015 ; >
+      au < ready ; exists ; 2016 ; 2016 ; 2016 ; Tetradio Volume 2016 ; >
+      au < ready ; exists ; 2017 ; 2017 ; 2017 ; Tetradio Volume 2017 ; >
+      au < ready ; exists ; 2018 ; 2018 ; 2018 ; Tetradio Volume 2018 ; >
+      au < ready ; exists ; 2019 ; 2019 ; 2019 ; Tetradio Volume 2019 ; >
+      au < ready ; exists ; 2020 ; 2020 ; 2020 ; Tetradio Volume 2020 ; >
+      au < ready ; exists ; 2021 ; 2021 ; 2021 ; Tetradio Volume 2021 ; >
+      au < ready ; exists ; 2022 ; 2022 ; 2022 ; Tetradio Volume 2022 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; Tetradio Volume 2023 ; >
       au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Tetradio Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tetradio Volume 2025 ; >
 
@@ -1656,11 +1656,11 @@
       #published 2020-2025
       param[journal_id] = ts
 
-      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Tijdschrift Sociologie Volume 2020 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Tijdschrift Sociologie Volume 2021 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Tijdschrift Sociologie Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 ; >
-      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 ; >
+      au < ready ; exists ; 2020 ; 2020 ; 2020 ; Tijdschrift Sociologie Volume 2020 ; >
+      au < ready ; exists ; 2021 ; 2021 ; 2021 ; Tijdschrift Sociologie Volume 2021 ; >
+      au < ready ; exists ; 2022 ; 2022 ; 2022 ; Tijdschrift Sociologie Volume 2022 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 ; >
+      au < ready ; exists ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 ; >
 
   }
@@ -1702,12 +1702,12 @@
       au < manifest ; exists ; 1996 ; 1996 ; 1996 ; Tijdschrift voor Communicatiewetenschap Volume 1996 ; >
       au < manifest ; exists ; 1997 ; 1997 ; 1997 ; Tijdschrift voor Communicatiewetenschap Volume 1997 ; >
       au < manifest ; exists ; 1998 ; 1998 ; 1998 ; Tijdschrift voor Communicatiewetenschap Volume 1998 ; >
-      au < manifest ; exists ; 1999 ; 1999 ; 1999 ; Tijdschrift voor Communicatiewetenschap Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Tijdschrift voor Communicatiewetenschap Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Tijdschrift voor Communicatiewetenschap Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Tijdschrift voor Communicatiewetenschap Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Tijdschrift voor Communicatiewetenschap Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Tijdschrift voor Communicatiewetenschap Volume 2004 ; >
+      au < ready ; exists ; 1999 ; 1999 ; 1999 ; Tijdschrift voor Communicatiewetenschap Volume 1999 ; >
+      au < ready ; exists ; 2000 ; 2000 ; 2000 ; Tijdschrift voor Communicatiewetenschap Volume 2000 ; >
+      au < ready ; exists ; 2001 ; 2001 ; 2001 ; Tijdschrift voor Communicatiewetenschap Volume 2001 ; >
+      au < ready ; exists ; 2002 ; 2002 ; 2002 ; Tijdschrift voor Communicatiewetenschap Volume 2002 ; >
+      au < ready ; exists ; 2003 ; 2003 ; 2003 ; Tijdschrift voor Communicatiewetenschap Volume 2003 ; >
+      au < ready ; exists ; 2004 ; 2004 ; 2004 ; Tijdschrift voor Communicatiewetenschap Volume 2004 ; >
       au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Tijdschrift voor Communicatiewetenschap Volume 2005 ; >
       au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Tijdschrift voor Communicatiewetenschap Volume 2006 ; >
       au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Tijdschrift voor Communicatiewetenschap Volume 2007 ; >
@@ -1771,9 +1771,9 @@
       au < manifest ; exists ; 1995 ; 1995 ; 1995 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1995 ; >
       au < manifest ; exists ; 1996 ; 1996 ; 1996 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1996 ; >
       au < manifest ; exists ; 1997 ; 1997 ; 1997 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1997 ; >
-      au < manifest ; exists ; 1998 ; 1998 ; 1998 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1998 ; >
-      au < manifest ; exists ; 1999 ; 1999 ; 1999 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1999 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2000 ; >
+      au < ready ; exists ; 1998 ; 1998 ; 1998 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1998 ; >
+      au < ready ; exists ; 1999 ; 1999 ; 1999 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1999 ; >
+      au < ready ; exists ; 2000 ; 2000 ; 2000 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2000 ; >
       au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2001 ; >
       au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2002 ; >
       au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2003 ; >
