@@ -39,25 +39,25 @@
       au < down ; 1997 ; Journal of Soil and Water Conservation Volume 52 ; 52 >
       au < down ; 1998 ; Journal of Soil and Water Conservation Volume 53 ; 53 >
       au < down ; 1999 ; Journal of Soil and Water Conservation Volume 54 ; 54 >
-      au < down ; 2000 ; Journal of Soil and Water Conservation Volume 55 ; 55 >
-      au < down ; 2001 ; Journal of Soil and Water Conservation Volume 56 ; 56 >
-      au < down ; 2002 ; Journal of Soil and Water Conservation Volume 57 ; 57 >
-      au < down ; 2003 ; Journal of Soil and Water Conservation Volume 58 ; 58 >
-      au < down ; 2004 ; Journal of Soil and Water Conservation Volume 59 ; 59 >
-      au < down ; 2005 ; Journal of Soil and Water Conservation Volume 60 ; 60 >
-      au < down ; 2006 ; Journal of Soil and Water Conservation Volume 61 ; 61 >
-      au < down ; 2007 ; Journal of Soil and Water Conservation Volume 62 ; 62 >
-      au < down ; 2008 ; Journal of Soil and Water Conservation Volume 63 ; 63 >
-      au < down ; 2009 ; Journal of Soil and Water Conservation Volume 64 ; 64 >
-      au < down ; 2010 ; Journal of Soil and Water Conservation Volume 65 ; 65 >
-      au < down ; 2011 ; Journal of Soil and Water Conservation Volume 66 ; 66 >
-      au < down ; 2012 ; Journal of Soil and Water Conservation Volume 67 ; 67 >
-      au < down ; 2013 ; Journal of Soil and Water Conservation Volume 68 ; 68 >
-      au < down ; 2014 ; Journal of Soil and Water Conservation Volume 69 ; 69 >
-      au < down ; 2015 ; Journal of Soil and Water Conservation Volume 70 ; 70 >
-      au < down ; 2016 ; Journal of Soil and Water Conservation Volume 71 ; 71 >
-      au < down ; 2017 ; Journal of Soil and Water Conservation Volume 72 ; 72 >
-      au < down ; 2018 ; Journal of Soil and Water Conservation Volume 73 ; 73 >
+      au < superseded ; 2000 ; Journal of Soil and Water Conservation Volume 55 [superseded] ; 55 >
+      au < superseded ; 2001 ; Journal of Soil and Water Conservation Volume 56 [superseded] ; 56 >
+      au < superseded ; 2002 ; Journal of Soil and Water Conservation Volume 57 [superseded] ; 57 >
+      au < superseded ; 2003 ; Journal of Soil and Water Conservation Volume 58 [superseded] ; 58 >
+      au < superseded ; 2004 ; Journal of Soil and Water Conservation Volume 59 [superseded] ; 59 >
+      au < superseded ; 2005 ; Journal of Soil and Water Conservation Volume 60 [superseded] ; 60 >
+      au < superseded ; 2006 ; Journal of Soil and Water Conservation Volume 61 [superseded] ; 61 >
+      au < superseded ; 2007 ; Journal of Soil and Water Conservation Volume 62 [superseded] ; 62 >
+      au < superseded ; 2008 ; Journal of Soil and Water Conservation Volume 63 [superseded] ; 63 >
+      au < superseded ; 2009 ; Journal of Soil and Water Conservation Volume 64 [superseded] ; 64 >
+      au < superseded ; 2010 ; Journal of Soil and Water Conservation Volume 65 [superseded] ; 65 >
+      au < superseded ; 2011 ; Journal of Soil and Water Conservation Volume 66 [superseded] ; 66 >
+      au < superseded ; 2012 ; Journal of Soil and Water Conservation Volume 67 [superseded] ; 67 >
+      au < superseded ; 2013 ; Journal of Soil and Water Conservation Volume 68 [superseded] ; 68 >
+      au < superseded ; 2014 ; Journal of Soil and Water Conservation Volume 69 [superseded] ; 69 >
+      au < superseded ; 2015 ; Journal of Soil and Water Conservation Volume 70 [superseded] ; 70 >
+      au < superseded ; 2016 ; Journal of Soil and Water Conservation Volume 71 [superseded] ; 71 >
+      au < superseded ; 2017 ; Journal of Soil and Water Conservation Volume 72 [superseded] ; 72 >
+      au < superseded ; 2018 ; Journal of Soil and Water Conservation Volume 73 [superseded] ; 73 >
 
     }
 
@@ -68,11 +68,11 @@
       implicit < status ; year ; name ; param[volume_name] >
       #move to T&F, 2025
 
-      au < down ; 2019 ; Journal of Soil and Water Conservation Volume 74 ; 74 >
-      au < down ; 2020 ; Journal of Soil and Water Conservation Volume 75 ; 75 >
-      au < down ; 2021 ; Journal of Soil and Water Conservation Volume 76 ; 76 >
-      au < down ; 2022 ; Journal of Soil and Water Conservation Volume 77 ; 77 >
-      au < down ; 2023 ; Journal of Soil and Water Conservation Volume 78 ; 78 >
+      au < superseded ; 2019 ; Journal of Soil and Water Conservation Volume 74 [superseded] ; 74 >
+      au < superseded ; 2020 ; Journal of Soil and Water Conservation Volume 75 [superseded] ; 75 >
+      au < superseded ; 2021 ; Journal of Soil and Water Conservation Volume 76 [superseded] ; 76 >
+      au < superseded ; 2022 ; Journal of Soil and Water Conservation Volume 77 [superseded] ; 77 >
+      au < superseded ; 2023 ; Journal of Soil and Water Conservation Volume 78 [superseded] ; 78 >
       au < doNotProcess ; 2024 ; Journal of Soil and Water Conservation Volume 79 ; 79 >
 
     }
