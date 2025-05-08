@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = Erbil Polytechnic University ;
+    info[contract] = 2025 ;
+    info[tester] = 5 ;
+    info[poller] = 8
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+
+  {
+
+    title <
+      name = Polytechnic Journal ;
+      issn = 2313-5727 ;
+      eissn = 2707-7799
+    >
+
+    param[base_url] = https://polytechnic-journal.epu.edu.iq/
+    param[journal_abbr] = home
+
+    au < exists ; exists ; 2017 ; Polytechnic Journal Volume 7 ; 7 ; >
+    au < exists ; exists ; 2018 ; Polytechnic Journal Volume 8 ; 8 ; >
+    au < exists ; exists ; 2019 ; Polytechnic Journal Volume 9 ; 9 ; >
+    au < exists ; exists ; 2020 ; Polytechnic Journal Volume 10 ; 10 ; >
+    au < exists ; exists ; 2021 ; Polytechnic Journal Volume 11 ; 11 ; >
+    au < exists ; exists ; 2022 ; Polytechnic Journal Volume 12 ; 12 ; >
+    au < exists ; exists ; 2023 ; Polytechnic Journal Volume 13 ; 13 ; >
+    au < exists ; exists ; 2024 ; Polytechnic Journal Volume 14 ; 14 ; >
+    au < exists ; exists ; 2025 ; Polytechnic Journal Volume 15 ; 15 ; >
+
+  }
+
+}
