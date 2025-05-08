@@ -4369,6 +4369,15 @@ while (my $line = <>) {
       sleep(4);
   # End of Giga Science
 
+  # Plugins for small publishers. It's not worth it to write a complete manifest page checker
+  } elsif ($plugin eq "ClockssSciELO2024Plugin") {
+        $url = sprintf("%s", $param{base_url});
+        $man_url = uri_unescape($url);
+        $result = "Manifest";
+        $vol_title = "Small Publisher--No MPC";
+      sleep(4);
+  # End of small publishers
+
   # begin Resilience Alliance
   } elsif ($plugin eq "ClockssResilienceAlliancePlugin") {
          $url = sprintf("%sissue/",
