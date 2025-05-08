@@ -1,0 +1,64 @@
+{
+
+  publisher <
+    name = TALENTA Publisher Universitas Sumatera Utara ;
+    info[contract] = 2025 ;
+    info[back] = 2013 ;
+    info[tester] = 8 ;
+    info[platform] = OJS3
+  >
+
+  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+  plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+  attr[start_stem] = index.php/
+
+
+  {
+ 
+    title <
+      name = Indonesian Journal of Agricultural Research ;
+      issn = 2622-7681 ;
+      eissn = 2615-5842 ;
+      issnl = 2622-7681
+    >
+    
+    param[base_url] = https://talenta.usu.ac.id/ 
+    param[journal_id] = injar
+    #Example manifest page: https://talenta.usu.ac.id/index.php/injar/gateway/clockss?year=2022  500 error
+
+    au < exists ; exists ; 2018 ; 2018 ; Indonesian Journal of Agricultural Research Volume 1 ; 1 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Indonesian Journal of Agricultural Research Volume 2 ; 2 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Indonesian Journal of Agricultural Research Volume 3 ; 3 ; >
+    au < exists ; frozen ; 2021 ; 2021 ; Indonesian Journal of Agricultural Research Volume 4 ; 4 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Indonesian Journal of Agricultural Research Volume 5 ; 5 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Indonesian Journal of Agricultural Research Volume 6 ; 6 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Indonesian Journal of Agricultural Research Volume 7 ; 7 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Indonesian Journal of Agricultural Research Volume 8 ; 8 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Indonesian Journal of Agricultural Research Volume 9 ; 9 ; >
+    au < expected ; exists ; 2025 ; 2025 ; Indonesian Journal of Agricultural Research Volume 10 ; 10 ; >
+
+  }
+  {
+ 
+    title <
+      name = Scripta Score Scientific Medical Journal ;
+      issn = 2088-8686 ;
+      eissn = 2686-0864 ;
+      issnl = 2088-8686
+    >
+    
+    param[base_url] = https://talenta.usu.ac.id/ 
+    param[journal_id] = SCRIPTA
+
+    au < exists ; exists ; 2019 ; 2019 ; Scripta Score Scientific Medical Journal Volume 1 ; 1 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Scripta Score Scientific Medical Journal Volume 2 ; 2 ; >
+    au < exists ; frozen ; 2021 ; 2021 ; Scripta Score Scientific Medical Journal Volume 3 ; 3 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Scripta Score Scientific Medical Journal Volume 4 ; 4 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Scripta Score Scientific Medical Journal Volume 5 ; 5 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Scripta Score Scientific Medical Journal Volume 6 ; 6 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Scripta Score Scientific Medical Journal Volume 7 ; 7 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Scripta Score Scientific Medical Journal Volume 8 ; 8 ; >
+    au < expected ; exists ; 2025 ; 2025 ; Scripta Score Scientific Medical Journal Volume 9 ; 9 ; >
+
+  }
+}
