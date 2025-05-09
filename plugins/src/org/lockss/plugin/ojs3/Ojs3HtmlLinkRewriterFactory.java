@@ -45,7 +45,7 @@ public class Ojs3HtmlLinkRewriterFactory extends NodeFilterHtmlLinkRewriterFacto
 
     public Ojs3HtmlLinkRewriterFactory() {
         super();
-        addPreXform(new NodeFilter(){
+        addPostXform(new NodeFilter(){
             String pdfhref;
             @Override
             public boolean accept(Node node) {
@@ -53,24 +53,24 @@ public class Ojs3HtmlLinkRewriterFactory extends NodeFilterHtmlLinkRewriterFacto
                   LinkTag link = (LinkTag)node;
                   if("download".equals(link.getAttribute("class"))){
                     pdfhref = link.getAttribute("href");
+                    //add request_disposition=attachment to download button
+                    link.setAttribute("href",pdfhref+"&requested_disposition=attachment");
                   }
-                }else if(node instanceof ScriptTag){
+                }/*else if(node instanceof ScriptTag){
                     ScriptTag script = (ScriptTag)node;
                     String scriptContent = script.toPlainTextString();
                     if(scriptContent.contains("/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html")){
                         return true;
-                    }
-                }else if(node instanceof Iframe){
+                    }*/
+                else if(node instanceof Iframe){
                     Iframe iframe = (Iframe)node;
                     Node parent = iframe.getParent();
                     if(parent instanceof Div){
                         Div parentDiv = (Div)parent;
-                        log.debug3("iframe src is " + iframe.getAttribute("src"));
-                        if(iframe.getAttribute("src").equals("")){
                             if("pdfCanvasContainer".equals(parentDiv.getAttribute("id")) && pdfhref != null){
-                                iframe.setAttribute("src",pdfhref);
+                                //add request_disposition=inline to display pdf in browser's default browser
+                                iframe.setAttribute("src",pdfhref+"&requested_disposition=inline");
                             }
-                        }
                     }
                 }
                 return false;

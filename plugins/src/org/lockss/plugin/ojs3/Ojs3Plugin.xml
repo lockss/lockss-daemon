@@ -310,10 +310,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"/pdfJsViewer/pdf.js/web/viewer.html.*[?]file=.+$", 0</string>
     </list>
   </entry>
-  <!--
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.ojs3.Ojs3HtmlLinkRewriterFactory</string>
   </entry>
-  -->
 </map>
