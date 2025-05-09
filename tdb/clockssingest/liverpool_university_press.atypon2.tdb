@@ -1514,6 +1514,7 @@
     param[journal_id] = quaker
     #Published 2008-present
     #journal_num = 78
+    #move to Open Library of Humanities
 
     au < doNotProcess ; doNotProcess ; 2007-2008 ; Quaker Studies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2008-2009 ; Quaker Studies Volume 13 ; 13 ; >
@@ -1527,13 +1528,11 @@
     au < doNotProcess ; doNotProcess ; 2016-2017 ; Quaker Studies Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2017-2018 ; Quaker Studies Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2018-2019 ; Quaker Studies Volume 23 ; 23 ; >
-    au < exists ; exists ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; >
-    au < exists ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; >
-    au < deepCrawl ; exists ; 2021-2022 ; Quaker Studies Volume 26 ; 26 ; >
-    au < deepCrawl ; exists ; 2022-2023 ; Quaker Studies Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2023-2024 ; Quaker Studies Volume 28 ; 28 ; >
-    au < expected ; exists ; 2024-2025 ; Quaker Studies Volume 29 ; 29 ; >
-    au < expected ; exists ; 2025-2026 ; Quaker Studies Volume 30 ; 30 ; >
+    au < doNotProcess ; exists ; 2019-2020 ; Quaker Studies Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 2020-2021 ; Quaker Studies Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2021-2022 ; Quaker Studies Volume 26 ; 26 ; >
+    au < frozen ; exists ; 2022-2023 ; Quaker Studies Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2023-2024 ; Quaker Studies Volume 28 ; 28 ; >
 
   }
 

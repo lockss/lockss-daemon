@@ -22,6 +22,7 @@
     #param[base_url] = https://bulletin.nuu.uz/journal/
     param[journal_abbr] = journal
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
+    #website no longer available
 
     au < finished ; crawling ; 2018 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 1 ; 1 ; https://bulletin.nuu.uz/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 2 ; 2 ; https://bulletin.nuu.uz/ ; reingest2.clockss.org:8085 >
@@ -29,8 +30,6 @@
     au < finished ; crawling ; 2021 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 4 ; 4 ; https://bulletin.nuu.uz/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2022 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 5 ; 5 ; https://bulletin.nuu.uz/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2023 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 6 ; 6 ; https://bulletin.nuu.uz/ ; >
-    au < expected ; exists ; 2024 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 7 ; 7 ; https://bulletin.nuu.uz/ ; >
-    au < expected ; exists ; 2025 ; Bulletin of National University of Uzbekistan: Mathematics and Natural Sciences Volume 8 ; 8 ; https://bulletin.nuu.uz/ ; >
 
   }
 
