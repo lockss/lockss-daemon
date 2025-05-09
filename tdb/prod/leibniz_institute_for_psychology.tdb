@@ -155,13 +155,12 @@
       #param[base_url] = https://ps.psychopen.eu/
 
       param[journal_id] = ps
+      #move to Sage
 
-      au < ojs3.Ojs3Plugin ; released ; 2020 ; Personality Science Volume 1 ; 1 ; 2020 ; https://ps.psychopen.eu/ > #no substance urls
-      au < ojs3.Ojs3Plugin ; released ; 2021 ; Personality Science Volume 2 ; 2 ; 2021 ; https://ps.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; released ; 2022 ; Personality Science Volume 3 ; 3 ; 2022 ; https://ps.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; released ; 2023 ; Personality Science Volume 4 ; 4 ; 2023 ; https://ps.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; expected ; 2024 ; Personality Science Volume 5 ; 5 ; 2024 ; https://ps.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; expected ; 2025 ; Personality Science Volume 6 ; 6 ; 2025 ; https://ps.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; down ; 2020 ; Personality Science Volume 1 ; 1 ; 2020 ; https://ps.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; down ; 2021 ; Personality Science Volume 2 ; 2 ; 2021 ; https://ps.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; down ; 2022 ; Personality Science Volume 3 ; 3 ; 2022 ; https://ps.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; down ; 2023 ; Personality Science Volume 4 ; 4 ; 2023 ; https://ps.psychopen.eu/ >
 
   }
 

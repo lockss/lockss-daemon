@@ -261,13 +261,17 @@
       param[journal_id] = digest
       #Still in publication 2021
 
-      au < finished ; finished ; 2019 ; 2019 ; Digest: A Journal of Foodways and Culture Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 2020 ; Digest: A Journal of Foodways and Culture Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-      au < deepCrawl ; exists ; 2021 ; 2021 ; Digest: A Journal of Foodways and Culture Volume 9 ; 9 ; >
-      au < deepCrawl ; exists ; 2022 ; 2022 ; Digest: A Journal of Foodways and Culture Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2023 ; 2023 ; Digest: A Journal of Foodways and Culture Volume 11 ; 11 ; >
-      au < expected ; exists ; 2024 ; 2024 ; Digest: A Journal of Foodways and Culture Volume 12 ; 12 ; >
-      au < expected ; exists ; 2025 ; 2025 ; Digest: A Journal of Foodways and Culture Volume 13 ; 13 ; >
+      au < exists ; exists ; 2012 ; 2012 ; Digest: A Journal of Foodways and Culture Volume 1 ; 1 ; >
+      au < exists ; exists ; 2013 ; 2013 ; Digest: A Journal of Foodways and Culture Volume 2 ; 2 ; >
+      au < exists ; exists ; 2014 ; 2014 ; Digest: A Journal of Foodways and Culture Volume 2-3 ; 2-3 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Digest: A Journal of Foodways and Culture Volume 4 ; 4 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Digest: A Journal of Foodways and Culture Volume 5 ; 5 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Digest: A Journal of Foodways and Culture Volume 6 ; 6 ; >
+      au < finished ; finished ; 2019 ; 2019 ; Digest: A Journal of Foodways and Culture Volume 7 No 1; 7 ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 2020 ; Digest: A Journal of Foodways and Culture Volume 7 No 2; 7 ; reingest3.clockss.org:8083 >
+      au < deepCrawl ; exists ; 2021 ; 2021 ; Digest: A Journal of Foodways and Culture Volume 8 ; 8 ; >
+      au < deepCrawl ; exists ; 2022 ; 2022 ; Digest: A Journal of Foodways and Culture Volume 9 ; 9 ; >
+      au < frozen ; exists ; 2023 ; 2023 ; Digest: A Journal of Foodways and Culture Volume 10 ; 10 ; >
 
   }
 
@@ -698,8 +702,6 @@
       au < deepCrawl ; exists ; 2021 ; 2021 ; Museum Anthropology Review Volume 15 ; 15 ; >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Museum Anthropology Review Volume 16 ; 16 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Museum Anthropology Review Volume 17 ; 17 ; >
-      au < expected ; exists ; 2024 ; 2024 ; Museum Anthropology Review Volume 18 ; 18 ; >
-      au < expected ; exists ; 2025 ; 2025 ; Museum Anthropology Review Volume 19 ; 19 ; >
 
   }
 

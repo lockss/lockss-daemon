@@ -8732,7 +8732,7 @@
     >
 
     param[journal_id] = 10.1055/s-00044025
-    comment[years] = 2005-current
+    comment[years] = 2005-2023
 
     au < doesNotExist ; 2005 ; 2005 ; Annals of the National Academy of Medical Sciences (India) Volume 41 ; 41 >
     au < doesNotExist ; 2006 ; 2006 ; Annals of the National Academy of Medical Sciences (India) Volume 42 ; 42 >
@@ -8753,8 +8753,6 @@
     au < released ; 2021 ; 2021 ; Annals of the National Academy of Medical Sciences (India) Volume 57 ; 57 >
     au < released ; 2022 ; 2022 ; Annals of the National Academy of Medical Sciences (India) Volume 58 ; 58 >
     au < released ; 2023 ; 2023 ; Annals of the National Academy of Medical Sciences (India) Volume 59 ; 59 >
-    au < expected ; 2024 ; 2024 ; Annals of the National Academy of Medical Sciences (India) Volume 60 ; 60 >
-    au < expected ; 2025 ; 2025 ; Annals of the National Academy of Medical Sciences (India) Volume 61 ; 61 >
 
   }
 
