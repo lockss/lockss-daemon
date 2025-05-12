@@ -29,11 +29,11 @@
     au < released ; 2018 ; Molecular Vision Volume 24 ; 24 >
     au < released ; 2019 ; Molecular Vision Volume 25 ; 25 >
     au < released ; 2020 ; Molecular Vision Volume 26 ; 26 >
-    au < expected ; 2021 ; Molecular Vision Volume 27 ; 27 >
-    au < expected ; 2022 ; Molecular Vision Volume 28 ; 28 >
-    au < expected ; 2023 ; Molecular Vision Volume 29 ; 29 >
-    au < expected ; 2024 ; Molecular Vision Volume 30 ; 30 >
-    au < expected ; 2025 ; Molecular Vision Volume 31 ; 31 >
+    au < manifest ; 2021 ; Molecular Vision Volume 27 ; 27 >
+    au < manifest ; 2022 ; Molecular Vision Volume 28 ; 28 >
+    au < manifest ; 2023 ; Molecular Vision Volume 29 ; 29 >
+    au < manifest ; 2024 ; Molecular Vision Volume 30 ; 30 >
+    au < manifest ; 2025 ; Molecular Vision Volume 31 ; 31 >
     }
     {
     plugin = org.molvis.plugin.MolVisPlugin
