@@ -1,10 +1,11 @@
 #!/bin/sh
 
-TITLE_DBS=""
-PROPS=""
 PLN=prod
-HEAP_ARG=-Xmx5120m
+TITLE_DBS=""
+AUX_CLASSPATH=""
+PROPS=""
 DAEMON_ARGS=""
+HEAP_ARG=-Xmx1g
 
 while true ; do
   case "$1" in
@@ -48,31 +49,9 @@ while true ; do
     "-aj" | "-aspectj" | "-rewoven" )
       ASPECTJ=1
       shift; continue;;
-    "-1.7" )
-      if [ -z "$JAVA_17_HOME" ] ; then
-	echo "-1.7 option requires JAVA_17_HOME to point to 1.7 install dir"
-	exit 1;
-      fi
-      JAVA_HOME="${JAVA_17_HOME}"
-      export JAVA_HOME
-      PATH="$JAVA_HOME/bin:$PATH"
-      export PATH
-      echo JAVA_HOME="$JAVA_HOME"
-      shift; continue;;
-    "-1.8" )
-      if [ -z "$JAVA_18_HOME" ] ; then
-	echo "-1.8 option requires JAVA_18_HOME to point to 1.8 install dir"
-	exit 1;
-      fi
-      JAVA_HOME="${JAVA_18_HOME}"
-      export JAVA_HOME
-      PATH="$JAVA_HOME/bin:$PATH"
-      export PATH
-      echo JAVA_HOME="$JAVA_HOME"
-      shift; continue;;
     "-8" )
       if [ -z "$JAVA_8_HOME" ] ; then
-	echo "-1.8 option requires JAVA_8_HOME to point to 1.8 install dir"
+	echo "-8 option requires JAVA_8_HOME to point to Java 8 install dir"
 	exit 1;
       fi
       JAVA_HOME="${JAVA_8_HOME}"
@@ -107,7 +86,6 @@ PROP_ARGS=`echo " " $PROP_URL_LIST | sed 's/ [ ]*/ -p /g'`
 
 # local copy of lockss jars allows recompile while we're running
 mkdir -p lib
-
 if [ -z "$ASPECTJ" ]; then
     cp "${PROJECT_DIR}/lib/lockss.jar" lib
 else
