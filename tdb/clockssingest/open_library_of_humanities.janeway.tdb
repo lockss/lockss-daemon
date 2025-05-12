@@ -35,7 +35,7 @@
     au < deepCrawl ; exists ; 2022 ; 12 ; The Comics Grid Volume 2022 ; 2022 ; >
     au < exists ; exists ; 2023 ; 13 ; The Comics Grid Volume 2023 ; 2023 ; > # article link missing https://www.comicsgrid.com/plugins/clockss/?year=2023
     au < crawling ; exists ; 2024 ; 14 ; The Comics Grid Volume 2024 ; 2024 ; >
-    au < exists ; exists ; 2025 ; 15 ; The Comics Grid Volume 2025 ; 2025 ; >
+    au < manifest ; exists ; 2025 ; 15 ; The Comics Grid Volume 2025 ; 2025 ; >
 
   }
 
@@ -48,20 +48,20 @@
 
       param[base_url] = https://orbit.openlibhums.org/
 
-      au < exists ; exists ; 2012 ; 1 ; Orbit: A Journal of American Literature Volume 2012 ; 2012 ; >
-      au < exists ; exists ; 2013 ; 2 ; Orbit: A Journal of American Literature Volume 2013 ; 2013 ; >
-      au < exists ; exists ; 2014 ; 3 ; Orbit: A Journal of American Literature Volume 2014 ; 2014 ; >
-      au < exists ; exists ; 2015 ; 4 ; Orbit: A Journal of American Literature Volume 2015 ; 2015 ; >
-      au < exists ; exists ; 2016 ; 5 ; Orbit: A Journal of American Literature Volume 2016 ; 2016 ; >
-      au < exists ; exists ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 ; >
-      au < exists ; exists ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2012 ; 1 ; Orbit: A Journal of American Literature Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; 2 ; Orbit: A Journal of American Literature Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; 3 ; Orbit: A Journal of American Literature Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; 4 ; Orbit: A Journal of American Literature Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; 5 ; Orbit: A Journal of American Literature Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 ; >
       au < frozen ; crawling ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
       au < frozen ; crawling ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021 ; 10 ; Orbit: A Journal of American Literature Volume 2021 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 11 ; Orbit: A Journal of American Literature Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 12 ; Orbit: A Journal of American Literature Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 13 ; Orbit: A Journal of American Literature Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 14 ; Orbit: A Journal of American Literature Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 14 ; Orbit: A Journal of American Literature Volume 2025 ; 2025 ; >
 
   }
 
@@ -100,7 +100,7 @@
       au < doNotProcess ; exists ; 2003 ; 52-53 ; Pynchon Notes Issue 52-53 ; 2003 ; >
       au < doNotProcess ; exists ; 2008 ; 54-55 ; Pynchon Notes Issue 54-55 ; 2008 ; >
 
-      au < exists ; exists ; 2011 ; 56-57 ; Pynchon Notes Issue 56-57 ; 2011 ; >
+      au < manifest ; exists ; 2011 ; 56-57 ; Pynchon Notes Issue 56-57 ; 2011 ; >
 
   }
 
@@ -120,7 +120,7 @@
          au < deepCrawl ; exists ; 2022 ; 10 ; C21 Literature: journal of 21st-century writings Volume 2022 ; 2022 ; >
          au < deepCrawl ; exists ; 2023 ; 11 ; C21 Literature: journal of 21st-century writings Volume 2023 ; 2023 ; >
          au < crawling ; exists ; 2024 ; 12 ; C21 Literature: journal of 21st-century writings Volume 2024 ; 2024 ; >
-         au < expected ; exists ; 2025 ; 13 ; C21 Literature: journal of 21st-century writings Volume 2025 ; 2025 ; >
+         au < manifest ; exists ; 2025 ; 13 ; C21 Literature: journal of 21st-century writings Volume 2025 ; 2025 ; >
 
   }
 
@@ -152,8 +152,8 @@
         au < frozen ; exists ; 2021 ; 31-32 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 31-32 ; 2021 ; >
         au < deepCrawl ; exists ; 2022 ; 33 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 33 ; 2022 ; >
         au < deepCrawl ; exists ; 2023 ; 34-35 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 34-35 ; 2023 ; >
-        au < exists ; exists ; 2024 ; 36 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 36 ; 2024 ; >
-        au < expected ; exists ; 2025 ; 37 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 37 ; 2025 ; >
+        au < manifest ; exists ; 2024 ; 36 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 36 ; 2024 ; >
+        au < manifest ; exists ; 2025 ; 37 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 37 ; 2025 ; >
   }
 
   {
@@ -213,8 +213,8 @@
         au < doNotProcess ; doNotProcess ; 2014 ; 5 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2014 ; 2014 ; >
         au < doNotProcess ; doNotProcess ; 2015 ; 6 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2015 ; 2015 ; >
         au < doNotProcess ; doNotProcess ; 2016 ; 7 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2016 ; 2016 ; >
-        au < exists ; exists ; 2017 ; 8 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2017 ; 2017 ; >
-        au < exists ; exists ; 2018 ; 9 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2018 ; 2018 ; >
+        au < manifest ; exists ; 2017 ; 8 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2017 ; 2017 ; >
+        au < manifest ; exists ; 2018 ; 9 ; Dandelion: Postgraduate Arts Journal and Research Network Volume 2018 ; 2018 ; >
         #Nothing after 2018
   }
 
@@ -229,8 +229,8 @@
 
         param[base_url] = https://ijwwe.uwp.co.uk/
 
-        au < exists ; exists ; 2017 ; 4 ; International Journal of Welsh Writing in English Volume 2017 ; 2017 ; >
-        au < exists ; exists ; 2018 ; 5 ; International Journal of Welsh Writing in English Volume 2018 ; 2018 ; >
+        au < manifest ; exists ; 2017 ; 4 ; International Journal of Welsh Writing in English Volume 2017 ; 2017 ; >
+        au < manifest ; exists ; 2018 ; 5 ; International Journal of Welsh Writing in English Volume 2018 ; 2018 ; >
         au < frozen ; crawling ; 2019 ; 6 ; International Journal of Welsh Writing in English Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
         au < frozen ; crawling ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
         au < deepCrawl ; exists ; 2021 ; 8 ; International Journal of Welsh Writing in English Volume 2021 ; 2021 ; >
@@ -284,7 +284,7 @@
       au < deepCrawl ; exists ; 2022 ; 8 ; Open Library of Humanities Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 9 ; Open Library of Humanities Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 10 ; Open Library of Humanities Volume 2024 ; 2024 ; >
-      au < exists ; exists ; 2025 ; 11 ; Open Library of Humanities Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 11 ; Open Library of Humanities Volume 2025 ; 2025 ; >
 
   }
 
@@ -310,7 +310,7 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 10 ; Studies in the Maternal Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 ; >
       au < frozen ; exists ; 2020 ; 12-13 ; Studies in the Maternal Volume 2020 ; 2020 ; >
-      au < exists ; exists ; 2024 ; 14 ; Studies in the Maternal Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; 14 ; Studies in the Maternal Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 15 ; Studies in the Maternal Volume 2025 ; 2025 ; >
 
   }
@@ -327,37 +327,41 @@
 #     for the conference, articles are from the previous year.
 #     nothing published in 1995.
 
-      au < exists ; exists ; 1993 ; 1993 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; ># 1991 articles
-      au < exists ; exists ; 1995 ; 1995 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; ># 1992 and 1994 articles
-      au < exists ; exists ; 1997 ; 1997 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; ># 1996 articles
-      au < exists ; exists ; 1998 ; 1998 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; >
-      au < exists ; exists ; 1999 ; 1999 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Theoretical Roman Archaeology Conference Volume 2000 ; 2000 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Theoretical Roman Archaeology Conference Volume 2001 ; 2001 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Theoretical Roman Archaeology Conference Volume 2002 ; 2002 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Theoretical Roman Archaeology Conference Volume 2003 ; 2003 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Theoretical Roman Archaeology Conference Volume 2004 ; 2004 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Theoretical Roman Archaeology Conference Volume 2005 ; 2005 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Theoretical Roman Archaeology Conference Volume 2006 ; 2006 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Theoretical Roman Archaeology Conference Volume 2007 ; 2007 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Theoretical Roman Archaeology Conference Volume 2008 ; 2008 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Theoretical Roman Archaeology Conference Volume 2009 ; 2009 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Theoretical Roman Archaeology Conference Volume 2010 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Theoretical Roman Archaeology Conference Volume 2011 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Theoretical Roman Archaeology Conference Volume 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Theoretical Roman Archaeology Conference Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Theoretical Roman Archaeology Conference Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 1 ; 2018 ; >
-      au < frozen ; crawling ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2 ; 2019 ; reingest1.clockss.org:8082 >
-      au < frozen ; crawling ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 3 ; 2020 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 4 ; 2021 ; >
-      au < deepCrawl ; exists ; 2022 ; 32 ; Theoretical Roman Archaeology Journal Volume 5 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 33 ; Theoretical Roman Archaeology Journal Volume 6 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; 34 ; Theoretical Roman Archaeology Journal Volume 7 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 35 ; Theoretical Roman Archaeology Journal Volume 8 ; 2025 ; >
+      au < exists ; exists ; 1991 ; 1 ; Theoretical Roman Archaeology Conference Volume 1991 ; 1991 ; >
+      au < exists ; exists ; 1992 ; 2 ; Theoretical Roman Archaeology Conference Volume 1992 ; 1992 ; >
+      au < exists ; exists ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; ># 1991 articles
+      au < exists ; exists ; 1994 ; 4 ; Theoretical Roman Archaeology Conference Volume 1994 ; 1994 ; >
+      au < exists ; exists ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; ># 1992 and 1994 articles
+      au < exists ; exists ; 1996 ; 6 ; Theoretical Roman Archaeology Conference Volume 1996 ; 1996 ; >
+      au < exists ; exists ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; ># 1996 articles
+      au < exists ; exists ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; >
+      au < exists ; exists ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; 10 ; Theoretical Roman Archaeology Conference Volume 2000 ; 2000 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; 11 ; Theoretical Roman Archaeology Conference Volume 2001 ; 2001 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; 12 ; Theoretical Roman Archaeology Conference Volume 2002 ; 2002 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; 13 ; Theoretical Roman Archaeology Conference Volume 2003 ; 2003 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 14 ; Theoretical Roman Archaeology Conference Volume 2004 ; 2004 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 15 ; Theoretical Roman Archaeology Conference Volume 2005 ; 2005 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 16 ; Theoretical Roman Archaeology Conference Volume 2006 ; 2006 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 17 ; Theoretical Roman Archaeology Conference Volume 2007 ; 2007 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 18 ; Theoretical Roman Archaeology Conference Volume 2008 ; 2008 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 19 ; Theoretical Roman Archaeology Conference Volume 2009 ; 2009 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 20 ; Theoretical Roman Archaeology Conference Volume 2010 ; 2010 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 21 ; Theoretical Roman Archaeology Conference Volume 2011 ; 2011 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 22 ; Theoretical Roman Archaeology Conference Volume 2012 ; 2012 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 23 ; Theoretical Roman Archaeology Conference Volume 2013 ; 2013 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 24 ; Theoretical Roman Archaeology Conference Volume 2014 ; 2014 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 25 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 ; >
+      au < exists ; exists ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; >
+      au < exists ; exists ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; >
+      au < frozen ; crawling ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
+      au < frozen ; crawling ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 2021 ; 2021 ; >
+      au < deepCrawl ; exists ; 2022 ; 32 ; Theoretical Roman Archaeology Journal Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; 33 ; Theoretical Roman Archaeology Journal Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; 34 ; Theoretical Roman Archaeology Journal Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; 35 ; Theoretical Roman Archaeology Journal Volume 2025 ; 2025 ; >
 
   }
 
@@ -377,7 +381,7 @@
       au < deepCrawl ; exists ; 2022 ; 10 ; ZFF: Zeitschrift für Fantastikforschung Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 11 ; ZFF: Zeitschrift für Fantastikforschung Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 12 ; ZFF: Zeitschrift für Fantastikforschung Volume 2024 ; 2024 ; >
-      au < exists ; exists ; 2025 ; 13 ; ZFF: Zeitschrift für Fantastikforschung Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 13 ; ZFF: Zeitschrift für Fantastikforschung Volume 2025 ; 2025 ; >
 
   }
 
@@ -402,7 +406,7 @@
       au < deepCrawl ; exists ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 7 ; The Parish Review Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 8 ; The Parish Review Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 9 ; The Parish Review Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 9 ; The Parish Review Volume 2025 ; 2025 ; >
 
   }
 
@@ -456,7 +460,7 @@
       au < deepCrawl ; exists ; 2022 ; 7 ; Glossa: a journal of general linguistics Volume 2022 ; 2022 ; > 
       au < notReady ; exists ; 2023 ; 8 ; Glossa: a journal of general linguistics Volume 2023 ; 2023 ; > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5823/galley/23046/download/
       au < crawling ; exists ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 10 ; Glossa: a journal of general linguistics Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 10 ; Glossa: a journal of general linguistics Volume 2025 ; 2025 ; >
 
   }
 
@@ -477,7 +481,7 @@
       au < frozen ; exists ; 2022 ; 5 ; Open Screens Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 6 ; Open Screens Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 7 ; Open Screens Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 8 ; Open Screens Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 8 ; Open Screens Volume 2025 ; 2025 ; >
 
   }
 
@@ -519,7 +523,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; Body, Space & Technology Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Body, Space & Technology Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 2024 ; Body, Space & Technology Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 2025 ; Body, Space & Technology Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; Body, Space & Technology Volume 2025 ; 2025 ; >
 
   }
 
@@ -555,7 +559,7 @@
       au < deepCrawl ; exists ; 2022 ; 18 ; Digital Medievalist Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 19 ; Digital Medievalist Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 20 ; Digital Medievalist Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 21 ; Digital Medievalist Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 21 ; Digital Medievalist Volume 2025 ; 2025 ; >
 
   }
 
@@ -585,7 +589,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; Digital Studies / Le champ numérique Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Digital Studies / Le champ numérique Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 2024 ; Digital Studies / Le champ numérique Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 2025 ; Digital Studies / Le champ numérique Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; Digital Studies / Le champ numérique Volume 2025 ; 2025 ; >
 
   }
 
@@ -602,7 +606,7 @@
       au < deepCrawl ; exists ; 2022 ; 8 ; Genealogy+Critique Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 9 ; Genealogy+Critique Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 10 ; Genealogy+Critique Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 11 ; Genealogy+Critique Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 11 ; Genealogy+Critique Volume 2025 ; 2025 ; >
 
   }
 
@@ -669,7 +673,7 @@
       au < frozen ; exists ; 2022 ; 10 ; Architectural Histories Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 11 ; Architectural Histories Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 12 ; Architectural Histories Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 13 ; Architectural Histories Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 13 ; Architectural Histories Volume 2025 ; 2025 ; >
 
   }
 
@@ -694,7 +698,7 @@
       au < frozen ; exists ; 2022 ; 8 ; Journal of Portuguese Linguistics Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 9 ; Journal of Portuguese Linguistics Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 10 ; Journal of Portuguese Linguistics Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 11 ; Journal of Portuguese Linguistics Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 11 ; Journal of Portuguese Linguistics Volume 2025 ; 2025 ; >
 
   }
 
@@ -716,8 +720,8 @@
       au < frozen ; exists ; 2021 ; 12 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 13 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 14 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2023 ; 2023 ; >
-      au < exists ; exists ; 2024 ; 15 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2024 ; 2024 ; > #no link, https://www.journal-labphon.org/plugins/clockss
-      au < exists ; exists ; 2025 ; 16 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2024 ; 15 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2024 ; 2024 ; > #no link, https://www.journal-labphon.org/plugins/clockss
+      au < manifest ; exists ; 2025 ; 16 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2025 ; 2025 ; >
 
   }
 
@@ -737,10 +741,10 @@
       au < frozen ; exists ; 2008 ; 2 ; Lifewriting Annual Volume 2008 ; 2007 ; >
       au < frozen ; exists ; 2012 ; 3 ; Lifewriting Annual Volume 2012 ; 2012 ; >
       au < frozen ; exists ; 2015 ; 4 ; Lifewriting Annual Volume 2015 ; 2014 ; >
-      au < exists ; exists ; 2022 ; 5 ; Lifewriting Annual Volume 2022 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; 5 ; Lifewriting Annual Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 6 ; Lifewriting Annual Volume 2023 ; 2023 ; >
       au < expected ; exists ; 2024 ; 7 ; Lifewriting Annual Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 8 ; Lifewriting Annual Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 8 ; Lifewriting Annual Volume 2025 ; 2025 ; >
 
   }
 
