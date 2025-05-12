@@ -162,14 +162,15 @@
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
     attr[start_stem] = index.php/
     param[base_url] = https://ijtarp.org/
+    #404 error
     
-    au < ready ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
-    au < ready ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
-    au < ready ; 2020 ; International Journal of Transactional Analysis Research & Practice Volume 11 ; 11 ; 2020 >
-    au < ready ; 2021 ; International Journal of Transactional Analysis Research & Practice Volume 12 ; 12 ; 2021 >
-    au < ready ; 2022 ; International Journal of Transactional Analysis Research & Practice Volume 13 ; 13 ; 2022 >
-    au < ready ; 2023 ; International Journal of Transactional Analysis Research & Practice Volume 14 ; 14 ; 2023 >
-    au < testing ; 2024 ; International Journal of Transactional Analysis Research & Practice Volume 15 ; 15 ; 2024 >
+    au < notReady ; 2018 ; International Journal of Transactional Analysis Research & Practice Volume 9 ; 9 ; 2018 >
+    au < notReady ; 2019 ; International Journal of Transactional Analysis Research & Practice Volume 10 ; 10 ; 2019 >
+    au < notReady ; 2020 ; International Journal of Transactional Analysis Research & Practice Volume 11 ; 11 ; 2020 >
+    au < notReady ; 2021 ; International Journal of Transactional Analysis Research & Practice Volume 12 ; 12 ; 2021 >
+    au < notReady ; 2022 ; International Journal of Transactional Analysis Research & Practice Volume 13 ; 13 ; 2022 >
+    au < notReady ; 2023 ; International Journal of Transactional Analysis Research & Practice Volume 14 ; 14 ; 2023 >
+    au < notReady ; 2024 ; International Journal of Transactional Analysis Research & Practice Volume 15 ; 15 ; 2024 >
     au < expected ; 2025 ; International Journal of Transactional Analysis Research & Practice Volume 16 ; 16 ; 2025 >
 
     }
