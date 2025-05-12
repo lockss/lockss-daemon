@@ -22,10 +22,10 @@
       param[journal_abbr] = home
       provider = bepress
 
-      au < exists ; exists ; 2022 ; Baghdad Science Journal Volume 19 ; 19 ; >
-      au < exists ; exists ; 2023 ; Baghdad Science Journal Volume 20 ; 20 ; >
-      au < exists ; exists ; 2024 ; Baghdad Science Journal Volume 21 ; 21 ; >
-      au < expected ; exists ; 2025 ; Baghdad Science Journal Volume 22 ; 22 ; >
+      au < manifest ; exists ; 2022 ; Baghdad Science Journal Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2023 ; Baghdad Science Journal Volume 20 ; 20 ; >
+      au < manifest ; exists ; 2024 ; Baghdad Science Journal Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2025 ; Baghdad Science Journal Volume 22 ; 22 ; >
     }
     {
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >

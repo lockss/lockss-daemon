@@ -1186,7 +1186,7 @@
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; NISE Essays Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; NISE Essays Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; NISE Essays Volume 2021 ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; 2022 ; NISE Essays Volume 2022 ; > #No substance
+      au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; 2022 ; NISE Essays Volume 2022 ; > #No content
       au < frozen ; exists ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 ; >
       au < crawling ; exists ; 2024 ; 2024 ; 2024 ; NISE Essays Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; NISE Essays Volume 2025 ; >
@@ -1285,7 +1285,7 @@
       au < manifest ; exists ; 1993 ; 1993 ; 1993 ; Oostvlaamse Zanten Volume 1993 ; >
       au < manifest ; exists ; 1994 ; 1994 ; 1994 ; Oostvlaamse Zanten Volume 1994 ; >
       au < manifest ; exists ; 1995 ; 1995 ; 1995 ; Oostvlaamse Zanten Volume 1995 ; >
-      au < manifest ; exists ; 1996 ; 1996 ; 1996 ; Oostvlaamse Zanten Volume 1996 ; >
+      au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; 1996 ; Oostvlaamse Zanten Volume 1996 ; > #No content
       au < crawling ; exists ; 1997 ; 1997 ; 1997 ; Oostvlaamse Zanten Volume 1997 ; >
       au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Oostvlaamse Zanten Volume 1998 ; >
       au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Oostvlaamse Zanten Volume 1999 ; >
@@ -1318,7 +1318,7 @@
 
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Relaties en Nieuwe Gezinnen Volume 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Relaties en Nieuwe Gezinnen Volume 2023 ; >
-      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Relaties en Nieuwe Gezinnen Volume 2024 ; >
+      au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; 2024 ; Relaties en Nieuwe Gezinnen Volume 2024 ; > #No content
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Relaties en Nieuwe Gezinnen Volume 2025 ; >
 
   }
@@ -1641,7 +1641,7 @@
       au < crawling ; exists ; 2021 ; 2021 ; 2021 ; Tetradio Volume 2021 ; >
       au < crawling ; exists ; 2022 ; 2022 ; 2022 ; Tetradio Volume 2022 ; >
       au < crawling ; exists ; 2023 ; 2023 ; 2023 ; Tetradio Volume 2023 ; >
-      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Tetradio Volume 2024 ; >
+      au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; 2024 ; Tetradio Volume 2024 ; > #No content
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tetradio Volume 2025 ; >
 
   }
@@ -1673,6 +1673,7 @@
       >
 
       #published 1972-2025
+      #See https://openjournals.ugent.be/tvc/issues/
       param[journal_id] = tvc
 
       au < manifest ; exists ; 1972 ; 1972 ; 1972 ; Tijdschrift voor Communicatiewetenschap Volume 1972 ; >
@@ -1708,27 +1709,6 @@
       au < crawling ; exists ; 2002 ; 2002 ; 2002 ; Tijdschrift voor Communicatiewetenschap Volume 2002 ; >
       au < crawling ; exists ; 2003 ; 2003 ; 2003 ; Tijdschrift voor Communicatiewetenschap Volume 2003 ; >
       au < crawling ; exists ; 2004 ; 2004 ; 2004 ; Tijdschrift voor Communicatiewetenschap Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Tijdschrift voor Communicatiewetenschap Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Tijdschrift voor Communicatiewetenschap Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Tijdschrift voor Communicatiewetenschap Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Tijdschrift voor Communicatiewetenschap Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Tijdschrift voor Communicatiewetenschap Volume 2009 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Tijdschrift voor Communicatiewetenschap Volume 2010 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Tijdschrift voor Communicatiewetenschap Volume 2011 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Tijdschrift voor Communicatiewetenschap Volume 2012 ; >
-      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Tijdschrift voor Communicatiewetenschap Volume 2013 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Tijdschrift voor Communicatiewetenschap Volume 2014 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Tijdschrift voor Communicatiewetenschap Volume 2015 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Tijdschrift voor Communicatiewetenschap Volume 2016 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Tijdschrift voor Communicatiewetenschap Volume 2017 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Tijdschrift voor Communicatiewetenschap Volume 2018 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Tijdschrift voor Communicatiewetenschap Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Tijdschrift voor Communicatiewetenschap Volume 2020 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Tijdschrift voor Communicatiewetenschap Volume 2021 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Tijdschrift voor Communicatiewetenschap Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Tijdschrift voor Communicatiewetenschap Volume 2023 ; >
-      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Tijdschrift voor Communicatiewetenschap Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift voor Communicatiewetenschap Volume 2025 ; >
 
   }
 
@@ -1739,7 +1719,8 @@
         eissn = 0771-7342
       >
 
-      #published 1969-2025
+      #published 1969-2000
+      #See https://openjournals.ugent.be/communicatie/issues/
       param[journal_id] = communicatie
 
       au < manifest ; exists ; 1969 ; 1969 ; 1969 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1969 ; >
@@ -1774,31 +1755,6 @@
       au < crawling ; exists ; 1998 ; 1998 ; 1998 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1998 ; >
       au < crawling ; exists ; 1999 ; 1999 ; 1999 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1999 ; >
       au < crawling ; exists ; 2000 ; 2000 ; 2000 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2000 ; >
-      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2003 ; >
-      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2004 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2005 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2006 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2007 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2008 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2009 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2010 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2011 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2012 ; >
-      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2013 ; >
-      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2014 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2015 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2016 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2017 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2018 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2019 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2020 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2021 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2022 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2023 ; >
-      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2025 ; >
 
   }
 
