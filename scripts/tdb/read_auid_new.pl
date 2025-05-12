@@ -2678,7 +2678,7 @@ while (my $line = <>) {
     sleep(4);
 
 #  } elsif ($plugin eq "ClockssIOPSciencePlugin") {
-#    $url = sprintf("%s%s/%s",
+#    $url = sprintf("%svolume/%s/%s",
 #      $param{base_url}, $param{journal_issn}, $param{volume_name});
 #    $man_url = uri_unescape($url);
 #    my $req = HTTP::Request->new(GET, $man_url);
@@ -4370,12 +4370,12 @@ while (my $line = <>) {
   # End of Giga Science
 
   # Plugins for small publishers. It's not worth it to write a complete manifest page checker
-  } elsif ($plugin eq "ClockssArchivesPharmacyPracticeJournalsPlugin") ||
+  } elsif (($plugin eq "ClockssArchivesPharmacyPracticeJournalsPlugin") ||
           ($plugin eq "ClockssAperioJournalsPlugin") ||
           ($plugin eq "ClockssDeepBlueOaiPlugin") ||
           ($plugin eq "ClockssEuropeanJournalBusinessScienceTechnologyPlugin") ||
-          ($plugin eq "ClockssGhentUniversityLibraryDomainModeJournalsPlugin") 
-          ($plugin eq "GhentUniversityLibraryDomainModeJournalsPlugin") 
+          ($plugin eq "ClockssGhentUniversityLibraryDomainModeJournalsPlugin") ||
+          ($plugin eq "GhentUniversityLibraryDomainModeJournalsPlugin") ||
           ($plugin eq "ClockssSciELO2024Plugin") ||
           ($plugin eq "ClockssUniversityofMichiganPlugin") ||
           ($plugin eq "BMCRPlugin") ||
@@ -4383,7 +4383,7 @@ while (my $line = <>) {
           ($plugin eq "JRS2022Plugin") ||
           ($plugin eq "EJCJS2022Plugin") ||
           ($plugin eq "TESLEJ2022Plugin") ||
-          ($plugin eq "InformationResearchPlugin") {
+          ($plugin eq "InformationResearchPlugin")) {
         $url = sprintf("%s", $param{base_url});
         $man_url = uri_unescape($url);
         $result = "Manifest";
