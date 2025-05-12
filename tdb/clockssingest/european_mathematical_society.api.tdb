@@ -274,32 +274,33 @@
 
     param[journal_serial_number] = 9
     param[journal_id] = mag
+    #2015 and before, there are no article pdfs. Only an issue pdf which does not constitute substance.
 
-    au < manifest ; exists ; 1991 ; 1991 ; European Mathematical Society Magazine Volume 1991 ; 1991 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; European Mathematical Society Magazine Volume 1992 ; 1992 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; European Mathematical Society Magazine Volume 1993 ; 1993 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; European Mathematical Society Magazine Volume 1994 ; 1994 ; >
-    au < manifest ; exists ; 1995 ; 1995 ; European Mathematical Society Magazine Volume 1995 ; 1995 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; European Mathematical Society Magazine Volume 1996 ; 1996 ; >
-    au < manifest ; exists ; 1997 ; 1997 ; European Mathematical Society Magazine Volume 1997 ; 1997 ; >
-    au < manifest ; exists ; 1998 ; 1998 ; European Mathematical Society Magazine Volume 1998 ; 1998 ; >
-    au < manifest ; exists ; 1999 ; 1999 ; European Mathematical Society Magazine Volume 1999 ; 1999 ; >
-    au < manifest ; exists ; 2000 ; 2000 ; European Mathematical Society Magazine Volume 2000 ; 2000 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; European Mathematical Society Magazine Volume 2001 ; 2001 ; >
-    au < manifest ; exists ; 2002 ; 2002 ; European Mathematical Society Magazine Volume 2002 ; 2002 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; European Mathematical Society Magazine Volume 2003 ; 2003 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; European Mathematical Society Magazine Volume 2004 ; 2004 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; European Mathematical Society Magazine Volume 2005 ; 2005 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; European Mathematical Society Magazine Volume 2006 ; 2006 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; European Mathematical Society Magazine Volume 2007 ; 2007 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; European Mathematical Society Magazine Volume 2008 ; 2008 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; European Mathematical Society Magazine Volume 2009 ; 2009 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; European Mathematical Society Magazine Volume 2010 ; 2010 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; European Mathematical Society Magazine Volume 2011 ; 2011 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; European Mathematical Society Magazine Volume 2012 ; 2012 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; European Mathematical Society Magazine Volume 2013 ; 2013 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; European Mathematical Society Magazine Volume 2014 ; 2014 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; European Mathematical Society Magazine Volume 2015 ; 2015 ; >
+    au < notReady ; exists ; 1991 ; 1991 ; European Mathematical Society Magazine Volume 1991 ; 1991 ; >
+    au < notReady ; exists ; 1992 ; 1992 ; European Mathematical Society Magazine Volume 1992 ; 1992 ; >
+    au < notReady ; exists ; 1993 ; 1993 ; European Mathematical Society Magazine Volume 1993 ; 1993 ; >
+    au < notReady ; exists ; 1994 ; 1994 ; European Mathematical Society Magazine Volume 1994 ; 1994 ; >
+    au < notReady ; exists ; 1995 ; 1995 ; European Mathematical Society Magazine Volume 1995 ; 1995 ; >
+    au < notReady ; exists ; 1996 ; 1996 ; European Mathematical Society Magazine Volume 1996 ; 1996 ; >
+    au < notReady ; exists ; 1997 ; 1997 ; European Mathematical Society Magazine Volume 1997 ; 1997 ; >
+    au < notReady ; exists ; 1998 ; 1998 ; European Mathematical Society Magazine Volume 1998 ; 1998 ; >
+    au < notReady ; exists ; 1999 ; 1999 ; European Mathematical Society Magazine Volume 1999 ; 1999 ; >
+    au < notReady ; exists ; 2000 ; 2000 ; European Mathematical Society Magazine Volume 2000 ; 2000 ; >
+    au < notReady ; exists ; 2001 ; 2001 ; European Mathematical Society Magazine Volume 2001 ; 2001 ; >
+    au < notReady ; exists ; 2002 ; 2002 ; European Mathematical Society Magazine Volume 2002 ; 2002 ; >
+    au < notReady ; exists ; 2003 ; 2003 ; European Mathematical Society Magazine Volume 2003 ; 2003 ; >
+    au < notReady ; exists ; 2004 ; 2004 ; European Mathematical Society Magazine Volume 2004 ; 2004 ; >
+    au < notReady ; exists ; 2005 ; 2005 ; European Mathematical Society Magazine Volume 2005 ; 2005 ; >
+    au < notReady ; exists ; 2006 ; 2006 ; European Mathematical Society Magazine Volume 2006 ; 2006 ; >
+    au < notReady ; exists ; 2007 ; 2007 ; European Mathematical Society Magazine Volume 2007 ; 2007 ; >
+    au < notReady ; exists ; 2008 ; 2008 ; European Mathematical Society Magazine Volume 2008 ; 2008 ; >
+    au < notReady ; exists ; 2009 ; 2009 ; European Mathematical Society Magazine Volume 2009 ; 2009 ; >
+    au < notReady ; exists ; 2010 ; 2010 ; European Mathematical Society Magazine Volume 2010 ; 2010 ; >
+    au < notReady ; exists ; 2011 ; 2011 ; European Mathematical Society Magazine Volume 2011 ; 2011 ; >
+    au < notReady ; exists ; 2012 ; 2012 ; European Mathematical Society Magazine Volume 2012 ; 2012 ; >
+    au < notReady ; exists ; 2013 ; 2013 ; European Mathematical Society Magazine Volume 2013 ; 2013 ; >
+    au < notReady ; exists ; 2014 ; 2014 ; European Mathematical Society Magazine Volume 2014 ; 2014 ; >
+    au < notReady ; exists ; 2015 ; 2015 ; European Mathematical Society Magazine Volume 2015 ; 2015 ; >
     au < frozen ; exists ; 2016 ; 2016 ; European Mathematical Society Magazine Volume 2016 ; 2016 ; >
     au < frozen ; exists ; 2017 ; 2017 ; European Mathematical Society Magazine Volume 2017 ; 2017 ; >
     au < frozen ; exists ; 2018 ; 2018 ; European Mathematical Society Magazine Volume 2018 ; 2018 ; >
