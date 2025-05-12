@@ -111,14 +111,14 @@
     attr[start_stem] = index.php/
     param[base_url] = https://ijic.info/
 
-    au < ready ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
-    au < ready ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
-    au < ready ; 2019 ; International Journal of Infection Control Volume 15 ; 15 ; 2019 >
-    au < ready ; 2020 ; International Journal of Infection Control Volume 16 ; 16 ; 2020 >
-    au < ready ; 2021 ; International Journal of Infection Control Volume 17 ; 17 ; 2021 >
-    au < ready ; 2022 ; International Journal of Infection Control Volume 18 ; 18 ; 2022 >
-    au < ready ; 2023 ; International Journal of Infection Control Volume 19 ; 19 ; 2023 >
-    au < testing ; 2024 ; International Journal of Infection Control Volume 20 ; 20 ; 2024 >
+    au < notReady ; 2017 ; International Journal of Infection Control Volume 13 ; 13 ; 2017 >
+    au < notReady ; 2018 ; International Journal of Infection Control Volume 14 ; 14 ; 2018 >
+    au < notReady ; 2019 ; International Journal of Infection Control Volume 15 ; 15 ; 2019 >
+    au < notReady ; 2020 ; International Journal of Infection Control Volume 16 ; 16 ; 2020 >
+    au < notReady ; 2021 ; International Journal of Infection Control Volume 17 ; 17 ; 2021 >
+    au < notReady ; 2022 ; International Journal of Infection Control Volume 18 ; 18 ; 2022 >
+    au < notReady ; 2023 ; International Journal of Infection Control Volume 19 ; 19 ; 2023 >
+    au < notReady ; 2024 ; International Journal of Infection Control Volume 20 ; 20 ; 2024 >
     au < manifest ; 2025 ; International Journal of Infection Control Volume 21 ; 21 ; 2025 >
 
     }
@@ -216,14 +216,14 @@
     attr[start_stem] = index.php/
     param[base_url] = https://intersticios.es/
 
-    au < ready ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
-    au < ready ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
-    au < ready ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
-    au < ready ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
-    au < ready ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
-    au < ready ; 2022 ; Intersticios Volume 16 ; 16 ; 2022 >
-    au < ready ; 2023 ; Intersticios Volume 17 ; 17 ; 2023 >
-    au < testing ; 2024 ; Intersticios Volume 18 ; 18 ; 2024 >
+    au < notReady ; 2017 ; Intersticios Volume 11 ; 11 ; 2017 >
+    au < notReady ; 2018 ; Intersticios Volume 12 ; 12 ; 2018 >
+    au < notReady ; 2019 ; Intersticios Volume 13 ; 13 ; 2019 >
+    au < notReady ; 2020 ; Intersticios Volume 14 ; 14 ; 2020 >
+    au < notReady ; 2021 ; Intersticios Volume 15 ; 15 ; 2021 >
+    au < notReady ; 2022 ; Intersticios Volume 16 ; 16 ; 2022 >
+    au < notReady ; 2023 ; Intersticios Volume 17 ; 17 ; 2023 >
+    au < notReady ; 2024 ; Intersticios Volume 18 ; 18 ; 2024 >
     au < expected ; 2025 ; Intersticios Volume 19 ; 19 ; 2025 >
 
     }
