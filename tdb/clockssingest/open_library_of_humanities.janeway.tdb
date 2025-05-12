@@ -284,7 +284,7 @@
       au < deepCrawl ; exists ; 2022 ; 8 ; Open Library of Humanities Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 9 ; Open Library of Humanities Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 10 ; Open Library of Humanities Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 11 ; Open Library of Humanities Volume 2025 ; 2025 ; >
+      au < exists ; exists ; 2025 ; 11 ; Open Library of Humanities Volume 2025 ; 2025 ; >
 
   }
 
@@ -327,41 +327,37 @@
 #     for the conference, articles are from the previous year.
 #     nothing published in 1995.
 
-      au < exists ; exists ; 1991 ; 1 ; Theoretical Roman Archaeology Conference Volume 1991 ; 1991 ; >
-      au < exists ; exists ; 1992 ; 2 ; Theoretical Roman Archaeology Conference Volume 1992 ; 1992 ; >
-      au < exists ; exists ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; ># 1991 articles
-      au < exists ; exists ; 1994 ; 4 ; Theoretical Roman Archaeology Conference Volume 1994 ; 1994 ; >
-      au < exists ; exists ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; ># 1992 and 1994 articles
-      au < exists ; exists ; 1996 ; 6 ; Theoretical Roman Archaeology Conference Volume 1996 ; 1996 ; >
-      au < exists ; exists ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; ># 1996 articles
-      au < exists ; exists ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; >
-      au < exists ; exists ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; >
-      au < doNotProcess ; doNotProcess ; 2000 ; 10 ; Theoretical Roman Archaeology Conference Volume 2000 ; 2000 ; >
-      au < doNotProcess ; doNotProcess ; 2001 ; 11 ; Theoretical Roman Archaeology Conference Volume 2001 ; 2001 ; >
-      au < doNotProcess ; doNotProcess ; 2002 ; 12 ; Theoretical Roman Archaeology Conference Volume 2002 ; 2002 ; >
-      au < doNotProcess ; doNotProcess ; 2003 ; 13 ; Theoretical Roman Archaeology Conference Volume 2003 ; 2003 ; >
-      au < doNotProcess ; doNotProcess ; 2004 ; 14 ; Theoretical Roman Archaeology Conference Volume 2004 ; 2004 ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 15 ; Theoretical Roman Archaeology Conference Volume 2005 ; 2005 ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 16 ; Theoretical Roman Archaeology Conference Volume 2006 ; 2006 ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 17 ; Theoretical Roman Archaeology Conference Volume 2007 ; 2007 ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 18 ; Theoretical Roman Archaeology Conference Volume 2008 ; 2008 ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 19 ; Theoretical Roman Archaeology Conference Volume 2009 ; 2009 ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 20 ; Theoretical Roman Archaeology Conference Volume 2010 ; 2010 ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 21 ; Theoretical Roman Archaeology Conference Volume 2011 ; 2011 ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 22 ; Theoretical Roman Archaeology Conference Volume 2012 ; 2012 ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 23 ; Theoretical Roman Archaeology Conference Volume 2013 ; 2013 ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 24 ; Theoretical Roman Archaeology Conference Volume 2014 ; 2014 ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 25 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 ; >
-      au < exists ; exists ; 2016 ; 26 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; >
-      au < exists ; exists ; 2017 ; 27 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 2018 ; 2018 ; >
-      au < frozen ; crawling ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
-      au < frozen ; crawling ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
-      au < deepCrawl ; exists ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 2021 ; 2021 ; >
-      au < deepCrawl ; exists ; 2022 ; 32 ; Theoretical Roman Archaeology Journal Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 33 ; Theoretical Roman Archaeology Journal Volume 2023 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; 34 ; Theoretical Roman Archaeology Journal Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 35 ; Theoretical Roman Archaeology Journal Volume 2025 ; 2025 ; >
+      au < exists ; exists ; 1993 ; 1993 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; ># 1991 articles
+      au < exists ; exists ; 1995 ; 1995 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; ># 1992 and 1994 articles
+      au < exists ; exists ; 1997 ; 1997 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; ># 1996 articles
+      au < exists ; exists ; 1998 ; 1998 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; >
+      au < exists ; exists ; 1999 ; 1999 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; >
+      au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Theoretical Roman Archaeology Conference Volume 2000 ; 2000 ; >
+      au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Theoretical Roman Archaeology Conference Volume 2001 ; 2001 ; >
+      au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Theoretical Roman Archaeology Conference Volume 2002 ; 2002 ; >
+      au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Theoretical Roman Archaeology Conference Volume 2003 ; 2003 ; >
+      au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Theoretical Roman Archaeology Conference Volume 2004 ; 2004 ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Theoretical Roman Archaeology Conference Volume 2005 ; 2005 ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Theoretical Roman Archaeology Conference Volume 2006 ; 2006 ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Theoretical Roman Archaeology Conference Volume 2007 ; 2007 ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Theoretical Roman Archaeology Conference Volume 2008 ; 2008 ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Theoretical Roman Archaeology Conference Volume 2009 ; 2009 ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Theoretical Roman Archaeology Conference Volume 2010 ; 2010 ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Theoretical Roman Archaeology Conference Volume 2011 ; 2011 ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Theoretical Roman Archaeology Conference Volume 2012 ; 2012 ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Theoretical Roman Archaeology Conference Volume 2013 ; 2013 ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Theoretical Roman Archaeology Conference Volume 2014 ; 2014 ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Theoretical Roman Archaeology Conference Volume 2015 ; 2015 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Theoretical Roman Archaeology Journal Volume 2016 ; 2016 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Theoretical Roman Archaeology Journal Volume 2017 ; 2017 ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 28 ; Theoretical Roman Archaeology Journal Volume 1 ; 2018 ; >
+      au < frozen ; crawling ; 2019 ; 29 ; Theoretical Roman Archaeology Journal Volume 2 ; 2019 ; reingest1.clockss.org:8082 >
+      au < frozen ; crawling ; 2020 ; 30 ; Theoretical Roman Archaeology Journal Volume 3 ; 2020 ; reingest2.clockss.org:8085 >
+      au < deepCrawl ; exists ; 2021 ; 31 ; Theoretical Roman Archaeology Journal Volume 4 ; 2021 ; >
+      au < deepCrawl ; exists ; 2022 ; 32 ; Theoretical Roman Archaeology Journal Volume 5 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; 33 ; Theoretical Roman Archaeology Journal Volume 6 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; 34 ; Theoretical Roman Archaeology Journal Volume 7 ; 2024 ; >
+      au < expected ; exists ; 2025 ; 35 ; Theoretical Roman Archaeology Journal Volume 8 ; 2025 ; >
 
   }
 
@@ -381,7 +377,7 @@
       au < deepCrawl ; exists ; 2022 ; 10 ; ZFF: Zeitschrift für Fantastikforschung Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 11 ; ZFF: Zeitschrift für Fantastikforschung Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; 12 ; ZFF: Zeitschrift für Fantastikforschung Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 13 ; ZFF: Zeitschrift für Fantastikforschung Volume 2025 ; 2025 ; >
+      au < exists ; exists ; 2025 ; 13 ; ZFF: Zeitschrift für Fantastikforschung Volume 2025 ; 2025 ; >
 
   }
 
