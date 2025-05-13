@@ -24,7 +24,7 @@
     implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[resource_id]; hidden[proxy] >
 
 
-    au < manifest ; exists ; 1999 ; 9781900222150 ; 9781780402864 ; Wastewater Treatment Systems ; ebooks/book/146/Wastewater-Treatment-Systems-Modelling-Diagnosis ; >
+    au < ready ; exists ; 1999 ; 9781900222150 ; 9781780402864 ; Wastewater Treatment Systems ; ebooks/book/146/Wastewater-Treatment-Systems-Modelling-Diagnosis ; >
     au < frozen ; exists ; 2000 ; 9781900222242 ; 9781780402369 ; Activated Sludge Models ; ebooks/book/96/Activated-Sludge-Models-ASM1-ASM2-ASM2d-and-ASM3 ; >
     au < frozen ; exists ; 2000 ; 9781900222099 ; 9781780403038 ; Environmental Technologies to Treat Sulfur Pollution ; ebooks/book/160/Environmental-Technologies-to-Treat-Sulfur ; >
     au < frozen ; exists ; 2000 ; 9781900222105 ; 9781780402222 ; Land Ocean Interaction ; ebooks/book/78/Land-Ocean-Interaction-Measuring-and-Modelling ; >
