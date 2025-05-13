@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -32,19 +32,19 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.plos.PLoSPlugin</string>
+    <string>org.lockss.plugin.plos.PLoSMonthlyPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Public Library of Science Journals Plugin</string>
+    <string>Public Library of Science Journals by Month Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>1</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -55,17 +55,17 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Substance</string>
-        <string>2</string>
+        <string>1</string>
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>3</string>
+        <string>1</string>
       </entry>
     </map>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Public Library of Science Journals Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Public Library of Science Journals by Month Plugin, Base URL %s, Journal ID %s, Year %d, Month %s", base_url, journal_id, year, month</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -96,6 +96,15 @@ POSSIBILITY OF SUCH DAMAGE.
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>month</key>
+        <displayName>Month</displayName>
+        <description>Month in long form (e.g., january)</description>
+        <type>1</type>
+        <size>10</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
     </list>
   </entry>
   <entry>
@@ -113,7 +122,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>1,"^https?://(%s|(fonts|ajax|storage)\.googleapis\.com|cdn[.]mathjax[.]org|[^.]+\.cloudfront\.net)/[^?]*(bmp|css|eot|gif|ico|jpe?g|js|png|PNG_.|svg|tif?f|ttf|woff|xml)(\?[^/]+)?$", url_host(base_url)</string>
       <string>4,"^%s", base_url</string>
-      <string>1,"^%s%s/lockss-manifest/vol_%d/[a-zA-Z]+\?cursor=\*&amp;pageNumber=[0-9]$", base_url, journal_id, year</string>
+      <string>1,"^%s%s/lockss-manifest/vol_%d/%s\?cursor=\*&amp;pageNumber=[0-9]$", base_url, journal_id, year, month</string>
       <string>1,"^%s%s/article(/file)?\?(type=(supplementary|thumbnail)&amp;)?id=[0-9\.]+/journal\.[a-z0-9\.]+(&amp;type=(printable|manuscript))?$", base_url, journal_id</string>
       <string>1,"^%s%s/article/figure/(image|powerpoint)\?(download&amp;)?(size=(medium|large|original|inline)&amp;)?id=[0-9\.]+/journal\.[a-z0-9\.]+$", base_url, journal_id</string>
       <string>1,"^%s%s/article/citation(/ris|/bibtex)?\?id=[0-9\.]+/journal\.[a-z0-9\.]+$", base_url, journal_id</string>
@@ -121,7 +130,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%s%s/lockss-manifest/vol_%d", base_url, journal_id, year</string>
+    <string>"%s%s/lockss-manifest/vol_%d/%s?cursor=*&amp;pageNumber=0", base_url, journal_id, year, month</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
@@ -137,18 +146,6 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.plos.PLoSHtmlHashFilterFactory</string>
   </entry>
-  <!-- entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.plos.PLoSHtmlLinkExtractorFactory</string>
-  </entry>
-  <entry>
-    <string>application/pdf_filter_factory</string>
-    <string>org.lockss.plugin.plos.PLoSPdfFilterFactory</string>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.plos.PLoSUrlNormalizer</string>
-  </entry -->
   <entry>
     <string>plugin_url_consumer_factory</string>
     <string>org.lockss.plugin.plos.PLoSUrlConsumerFactory</string>
@@ -167,19 +164,6 @@ POSSIBILITY OF SUCH DAMAGE.
       <entry>
         <string>*</string>
         <string>org.lockss.plugin.plos.PLoSHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>
-  <entry>
-    <string>au_feature_urls</string>
-    <map>
-      <entry>
-        <string>au_title</string>
-        <string>"%s%s", base_url, journal_id</string>
-      </entry>
-      <entry>
-        <string>au_volume</string>
-        <string>"%s%s/lockss-manifest/vol_%d", base_url, journal_id, year</string>
       </entry>
     </map>
   </entry>
