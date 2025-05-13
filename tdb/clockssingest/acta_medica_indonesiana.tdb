@@ -4,7 +4,7 @@
     name = Acta Medica Indonesiana ;
     info[contract] = 2025 ;
     info[back] = 2015 ;
-    info[tester] = 8 ;
+    info[tester] = 4 ;
     info[platform] = OJS3
   >
 
@@ -33,9 +33,9 @@
     au < exists ; exists ; 2019 ; 2019 ; Acta Medica Indonesiana Volume 51 ; 51 ; >
     au < exists ; exists ; 2020 ; 2020 ; Acta Medica Indonesiana Volume 52 ; 52 ; >
     au < exists ; exists ; 2021 ; 2021 ; Acta Medica Indonesiana Volume 53 ; 53 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Acta Medica Indonesiana Volume 54 ; 54 ; >
+    au < testing ; exists ; 2022 ; 2022 ; Acta Medica Indonesiana Volume 54 ; 54 ; >
     au < manifest ; exists ; 2023 ; 2023 ; Acta Medica Indonesiana Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Acta Medica Indonesiana Volume 58 ; 58 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Acta Medica Indonesiana Volume 58 ; 58 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Acta Medica Indonesiana Volume 59 ; 59 ; >
 
   }
