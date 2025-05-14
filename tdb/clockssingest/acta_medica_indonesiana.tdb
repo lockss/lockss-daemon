@@ -24,15 +24,15 @@
     param[base_url] = https://actamedindones.org/
     param[journal_id] = ijim
 
-    au < exists ; exists ; 2013 ; 2013 ; Acta Medica Indonesiana Volume 45 ; 45 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Acta Medica Indonesiana Volume 46 ; 46 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Acta Medica Indonesiana Volume 47 ; 47 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Acta Medica Indonesiana Volume 48 ; 48 ; >
-    au < exists ; exists ; 2017 ; 2017 ; Acta Medica Indonesiana Volume 49 ; 49 ; >
-    au < exists ; exists ; 2018 ; 2018 ; Acta Medica Indonesiana Volume 50 ; 50 ; >
-    au < exists ; exists ; 2019 ; 2019 ; Acta Medica Indonesiana Volume 51 ; 51 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Acta Medica Indonesiana Volume 52 ; 52 ; >
-    au < exists ; exists ; 2021 ; 2021 ; Acta Medica Indonesiana Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Acta Medica Indonesiana Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Acta Medica Indonesiana Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Acta Medica Indonesiana Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Acta Medica Indonesiana Volume 48 ; 48 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Acta Medica Indonesiana Volume 49 ; 49 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Acta Medica Indonesiana Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Acta Medica Indonesiana Volume 51 ; 51 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Acta Medica Indonesiana Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Acta Medica Indonesiana Volume 53 ; 53 ; >
     au < testing ; exists ; 2022 ; 2022 ; Acta Medica Indonesiana Volume 54 ; 54 ; >
     au < manifest ; exists ; 2023 ; 2023 ; Acta Medica Indonesiana Volume 55 ; 55 ; >
     au < testing ; exists ; 2024 ; 2024 ; Acta Medica Indonesiana Volume 58 ; 58 ; >
