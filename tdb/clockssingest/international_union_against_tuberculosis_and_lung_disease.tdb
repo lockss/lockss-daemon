@@ -139,7 +139,7 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < ready ; exists ; 2024 ; IJTLD OPEN Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2024 ; IJTLD OPEN Volume 1 ; 1 ; >
     au < manifest ; exists ; 2025 ; IJTLD OPEN Volume 2 ; 2 ; >
 
     }

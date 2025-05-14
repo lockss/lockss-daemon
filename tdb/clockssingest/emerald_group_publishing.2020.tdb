@@ -16339,11 +16339,11 @@
     {
     param[journal_issn] = 2444-9695
 
-    au < ready ; exists ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 ; >
-    au < ready ; exists ; 2019 ; Spanish Journal of Marketing - ESIC Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2019 ; Spanish Journal of Marketing - ESIC Volume 23 ; 23 ; >
 
-    au < ready ; exists ; 2023 ; Spanish Journal of Marketing - ESIC Volume 27 ; 27 ; >
-    au < ready ; exists ; 2024 ; Spanish Journal of Marketing - ESIC Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2023 ; Spanish Journal of Marketing - ESIC Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2024 ; Spanish Journal of Marketing - ESIC Volume 28 ; 28 ; >
     au < doNotProcess ; exists ; 2025 ; Spanish Journal of Marketing - ESIC Volume 29 ; 29 ; >
 
     }
