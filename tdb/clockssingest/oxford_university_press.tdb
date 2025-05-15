@@ -25,7 +25,7 @@
 
     param[journal_id] = abbs
 
-    au < exists ; exists ; 2003 ; 2003 ; Acta Biochimica et Biophysica Sinica Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Acta Biochimica et Biophysica Sinica Volume 35 ; 35 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 ; >
     au < manifest ; exists ; 2006 ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 ; >
@@ -118,7 +118,7 @@
 
     param[journal_id] = asj
 
-    au < exists ; exists ; 1996 ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; Aesthetic Surgery Journal Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; Aesthetic Surgery Journal Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 ; >
@@ -1036,24 +1036,24 @@
     au < doNotProcess ; exists ; 1987 ; 1987 ; Analysis Volume 47 ; 47 ; >
     au < doNotProcess ; exists ; 1988 ; 1988 ; Analysis Volume 48 ; 48 ; >
     au < doNotProcess ; exists ; 1989 ; 1989 ; Analysis Volume 49 ; 49 ; >
-    au < exists ; exists ; 1990 ; 1990 ; Analysis Volume 50 ; 50 ; >
-    au < exists ; exists ; 1991 ; 1991 ; Analysis Volume 51 ; 51 ; >
-    au < exists ; exists ; 1992 ; 1992 ; Analysis Volume 52 ; 52 ; >
-    au < exists ; exists ; 1993 ; 1993 ; Analysis Volume 53 ; 53 ; >
-    au < exists ; exists ; 1994 ; 1994 ; Analysis Volume 54 ; 54 ; >
-    au < exists ; exists ; 1995 ; 1995 ; Analysis Volume 55 ; 55 ; >
-    au < exists ; exists ; 1996 ; 1996 ; Analysis Volume 56 ; 56 ; >
-    au < exists ; exists ; 1997 ; 1997 ; Analysis Volume 57 ; 57 ; >
-    au < exists ; exists ; 1998 ; 1998 ; Analysis Volume 58 ; 58 ; >
-    au < exists ; exists ; 1999 ; 1999 ; Analysis Volume 59 ; 59 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Analysis Volume 60 ; 60 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Analysis Volume 61 ; 61 ; >
-    au < exists ; exists ; 2002 ; 2002 ; Analysis Volume 62 ; 62 ; >
-    au < exists ; exists ; 2003 ; 2003 ; Analysis Volume 63 ; 63 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Analysis Volume 64 ; 64 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Analysis Volume 65 ; 65 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Analysis Volume 66 ; 66 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Analysis Volume 67 ; 67 ; >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Analysis Volume 50 ; 50 ; >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Analysis Volume 51 ; 51 ; >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Analysis Volume 52 ; 52 ; >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Analysis Volume 53 ; 53 ; >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Analysis Volume 54 ; 54 ; >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Analysis Volume 55 ; 55 ; >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Analysis Volume 56 ; 56 ; >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Analysis Volume 57 ; 57 ; >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Analysis Volume 58 ; 58 ; >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Analysis Volume 59 ; 59 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Analysis Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Analysis Volume 61 ; 61 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Analysis Volume 62 ; 62 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Analysis Volume 63 ; 63 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Analysis Volume 64 ; 64 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Analysis Volume 65 ; 65 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Analysis Volume 66 ; 66 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Analysis Volume 67 ; 67 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Analysis Volume 68 ; 68 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Analysis Volume 69 ; 69 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Analysis Volume 70 ; 70 ; >
@@ -1116,24 +1116,24 @@
     param[journal_id] = jas
     #content available from 1962 volume 21 to 1989 volume 66
 
-    au < exists ; exists ; 1990 ; 1990 ; Journal of Animal Science Volume 67 ; 67 ; >
-    au < exists ; exists ; 1991 ; 1991 ; Journal of Animal Science Volume 68 ; 68 ; >
-    au < exists ; exists ; 1992 ; 1992 ; Journal of Animal Science Volume 69 ; 69 ; >
-    au < exists ; exists ; 1993 ; 1993 ; Journal of Animal Science Volume 70 ; 70 ; >
-    au < exists ; exists ; 1994 ; 1994 ; Journal of Animal Science Volume 71 ; 71 ; >
-    au < exists ; exists ; 1995 ; 1995 ; Journal of Animal Science Volume 72 ; 72 ; >
-    au < exists ; exists ; 1996 ; 1996 ; Journal of Animal Science Volume 73 ; 73 ; >
-    au < exists ; exists ; 1997 ; 1997 ; Journal of Animal Science Volume 74 ; 74 ; >
-    au < exists ; exists ; 1998 ; 1998 ; Journal of Animal Science Volume 75 ; 75 ; >
-    au < exists ; exists ; 1999 ; 1999 ; Journal of Animal Science Volume 76 ; 76 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Journal of Animal Science Volume 77 ; 77 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Journal of Animal Science Volume 78 ; 78 ; >
-    au < exists ; exists ; 2002 ; 2002 ; Journal of Animal Science Volume 79 ; 79 ; >
-    au < exists ; exists ; 2003 ; 2003 ; Journal of Animal Science Volume 80 ; 80 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Journal of Animal Science Volume 81 ; 81 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Journal of Animal Science Volume 82 ; 82 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Journal of Animal Science Volume 83 ; 83 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Journal of Animal Science Volume 84 ; 84 ; >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Journal of Animal Science Volume 67 ; 67 ; >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Journal of Animal Science Volume 68 ; 68 ; >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Journal of Animal Science Volume 69 ; 69 ; >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Journal of Animal Science Volume 70 ; 70 ; >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Journal of Animal Science Volume 71 ; 71 ; >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Journal of Animal Science Volume 72 ; 72 ; >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Journal of Animal Science Volume 73 ; 73 ; >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Journal of Animal Science Volume 74 ; 74 ; >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Journal of Animal Science Volume 75 ; 75 ; >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Journal of Animal Science Volume 76 ; 76 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Journal of Animal Science Volume 77 ; 77 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Journal of Animal Science Volume 78 ; 78 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Journal of Animal Science Volume 79 ; 79 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Journal of Animal Science Volume 80 ; 80 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Journal of Animal Science Volume 81 ; 81 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of Animal Science Volume 82 ; 82 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Animal Science Volume 83 ; 83 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Animal Science Volume 84 ; 84 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Journal of Animal Science Volume 85 ; 85 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2009 ; 2009 ; Journal of Animal Science Volume 86 ; 86 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; 2010 ; Journal of Animal Science Volume 87 ; 87 ; reingest5.clockss.org:8082 >
@@ -1345,7 +1345,7 @@
     au < manifest ; exists ; 2009 ; 2009 ; Annals of the International Communication Association Volume 33 ; 33 ; >
     au < manifest ; exists ; 2010 ; 2010 ; Annals of the International Communication Association Volume 34 ; 34 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Annals of the International Communication Association Volume 35 ; 35 ; >
-    au < exists ; exists ; 2012 ; 2012 ; Annals of the International Communication Association Volume 36 ; 36 ; >
+    au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; Annals of the International Communication Association Volume 36 ; 36 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Annals of the International Communication Association Volume 37 ; 37 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Annals of the International Communication Association Volume 38 ; 38 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Annals of the International Communication Association Volume 39 ; 39 ; >
@@ -1492,24 +1492,24 @@
     param[journal_id] = jaoac
     #content available from 1915 Volume 1 to 1989 Volume 72
 
-    au < exists ; exists ; 1990 ; 1990 ; Journal of AOAC INTERNATIONAL Volume 73 ; 73 ; >
-    au < exists ; exists ; 1991 ; 1991 ; Journal of AOAC INTERNATIONAL Volume 74 ; 74 ; >
-    au < exists ; exists ; 1992 ; 1992 ; Journal of AOAC INTERNATIONAL Volume 75 ; 75 ; >
-    au < exists ; exists ; 1993 ; 1993 ; Journal of AOAC INTERNATIONAL Volume 76 ; 76 ; >
-    au < exists ; exists ; 1994 ; 1994 ; Journal of AOAC INTERNATIONAL Volume 77 ; 77 ; >
-    au < exists ; exists ; 1995 ; 1995 ; Journal of AOAC INTERNATIONAL Volume 78 ; 78 ; >
-    au < exists ; exists ; 1996 ; 1996 ; Journal of AOAC INTERNATIONAL Volume 79 ; 79 ; >
-    au < exists ; exists ; 1997 ; 1997 ; Journal of AOAC INTERNATIONAL Volume 80 ; 80 ; >
-    au < exists ; exists ; 1998 ; 1998 ; Journal of AOAC INTERNATIONAL Volume 81 ; 81 ; >
-    au < exists ; exists ; 1999 ; 1999 ; Journal of AOAC INTERNATIONAL Volume 82 ; 82 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Journal of AOAC INTERNATIONAL Volume 83 ; 83 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Journal of AOAC INTERNATIONAL Volume 84 ; 84 ; >
-    au < exists ; exists ; 2002 ; 2002 ; Journal of AOAC INTERNATIONAL Volume 85 ; 85 ; >
-    au < exists ; exists ; 2003 ; 2003 ; Journal of AOAC INTERNATIONAL Volume 86 ; 86 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Journal of AOAC INTERNATIONAL Volume 87 ; 87 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Journal of AOAC INTERNATIONAL Volume 88 ; 88 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Journal of AOAC INTERNATIONAL Volume 89 ; 89 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Journal of AOAC INTERNATIONAL Volume 90 ; 90 ; >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Journal of AOAC INTERNATIONAL Volume 73 ; 73 ; >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Journal of AOAC INTERNATIONAL Volume 74 ; 74 ; >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Journal of AOAC INTERNATIONAL Volume 75 ; 75 ; >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Journal of AOAC INTERNATIONAL Volume 76 ; 76 ; >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Journal of AOAC INTERNATIONAL Volume 77 ; 77 ; >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Journal of AOAC INTERNATIONAL Volume 78 ; 78 ; >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Journal of AOAC INTERNATIONAL Volume 79 ; 79 ; >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Journal of AOAC INTERNATIONAL Volume 80 ; 80 ; >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Journal of AOAC INTERNATIONAL Volume 81 ; 81 ; >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Journal of AOAC INTERNATIONAL Volume 82 ; 82 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Journal of AOAC INTERNATIONAL Volume 83 ; 83 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Journal of AOAC INTERNATIONAL Volume 84 ; 84 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Journal of AOAC INTERNATIONAL Volume 85 ; 85 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Journal of AOAC INTERNATIONAL Volume 86 ; 86 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Journal of AOAC INTERNATIONAL Volume 87 ; 87 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of AOAC INTERNATIONAL Volume 88 ; 88 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of AOAC INTERNATIONAL Volume 89 ; 89 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of AOAC INTERNATIONAL Volume 90 ; 90 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Journal of AOAC INTERNATIONAL Volume 91 ; 91 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Journal of AOAC INTERNATIONAL Volume 92 ; 92 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Journal of AOAC INTERNATIONAL Volume 93 ; 93 ; reingest3.clockss.org:8083 >
@@ -1680,11 +1680,11 @@
     param[journal_id] = amrx
     #stop publishing at the end of 2017
 
-    au < exists ; exists ; 2003 ; 2003 ; Applied Mathematics Research eXpress Volume 2003 ; 2003 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Applied Mathematics Research eXpress Volume 2004 ; 2004 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Applied Mathematics Research eXpress Volume 2005 ; 2005 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Applied Mathematics Research eXpress Volume 2006 ; 2006 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Applied Mathematics Research eXpress Volume 2007 ; 2007 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Applied Mathematics Research eXpress Volume 2003 ; 2003 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Applied Mathematics Research eXpress Volume 2004 ; 2004 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Applied Mathematics Research eXpress Volume 2005 ; 2005 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Applied Mathematics Research eXpress Volume 2006 ; 2006 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Applied Mathematics Research eXpress Volume 2007 ; 2007 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Applied Mathematics Research eXpress Volume 2008 ; 2008 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Applied Mathematics Research eXpress Volume 2009 ; 2009 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Applied Mathematics Research eXpress Volume 2010 ; 2010 ; >
@@ -2057,13 +2057,13 @@
     param[journal_id] = bjaed
     #move to Elsevier in 2018
 
-    au < exists ; exists ; 2001 ; 2001 ; BJA Education Volume 1 ; 1 ; >
-    au < exists ; exists ; 2002 ; 2002 ; BJA Education Volume 2 ; 2 ; >
-    au < exists ; exists ; 2003 ; 2003 ; BJA Education Volume 3 ; 3 ; >
-    au < exists ; exists ; 2004 ; 2004 ; BJA Education Volume 4 ; 4 ; >
-    au < exists ; exists ; 2005 ; 2005 ; BJA Education Volume 5 ; 5 ; >
-    au < exists ; exists ; 2006 ; 2006 ; BJA Education Volume 6 ; 6 ; >
-    au < exists ; exists ; 2007 ; 2007 ; BJA Education Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; BJA Education Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; BJA Education Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; BJA Education Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; BJA Education Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; BJA Education Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; BJA Education Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; BJA Education Volume 7 ; 7 ; >
     au < finished ; manifest ; 2008 ; 2008 ; BJA Education Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2009 ; 2009 ; BJA Education Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2010 ; 2010 ; BJA Education Volume 10 ; 10 ; reingest2.clockss.org:8085 >
@@ -2201,24 +2201,24 @@
     param[journal_id] = bjd
     #move from Wiley, 2023
 
-    au < exists ; exists ; 1990 ; 1990 ; British Journal of Dermatology Volume 122-123 ; 122-123 ; >
-    au < exists ; exists ; 1991 ; 1991 ; British Journal of Dermatology Volume 124-125 ; 124-125 ; >
-    au < exists ; exists ; 1992 ; 1992 ; British Journal of Dermatology Volume 126-127 ; 126-127 ; >
-    au < exists ; exists ; 1993 ; 1993 ; British Journal of Dermatology Volume 128-129 ; 128-129 ; >
-    au < exists ; exists ; 1994 ; 1994 ; British Journal of Dermatology Volume 130-131 ; 130-131 ; >
-    au < exists ; exists ; 1995 ; 1995 ; British Journal of Dermatology Volume 132-133 ; 132-133 ; >
-    au < exists ; exists ; 1996 ; 1996 ; British Journal of Dermatology Volume 134-135 ; 134-135 ; >
-    au < exists ; exists ; 1997 ; 1997 ; British Journal of Dermatology Volume 136-137 ; 136-137 ; >
-    au < exists ; exists ; 1998 ; 1998 ; British Journal of Dermatology Volume 138-139 ; 138-139 ; >
-    au < exists ; exists ; 1999 ; 1999 ; British Journal of Dermatology Volume 140-141 ; 140-141 ; >
-    au < exists ; exists ; 2000 ; 2000 ; British Journal of Dermatology Volume 142-143 ; 142-143 ; >
-    au < exists ; exists ; 2001 ; 2001 ; British Journal of Dermatology Volume 144-145 ; 144-145 ; >
-    au < exists ; exists ; 2002 ; 2002 ; British Journal of Dermatology Volume 146-147 ; 146-147 ; >
-    au < exists ; exists ; 2003 ; 2003 ; British Journal of Dermatology Volume 148-149 ; 148-149 ; >
-    au < exists ; exists ; 2004 ; 2004 ; British Journal of Dermatology Volume 150-151 ; 150-151 ; >
-    au < exists ; exists ; 2005 ; 2005 ; British Journal of Dermatology Volume 152-153 ; 152-153 ; >
-    au < exists ; exists ; 2006 ; 2006 ; British Journal of Dermatology Volume 154-155 ; 154-155 ; >
-    au < exists ; exists ; 2007 ; 2007 ; British Journal of Dermatology Volume 156-157 ; 156-157 ; >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; British Journal of Dermatology Volume 122-123 ; 122-123 ; >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; British Journal of Dermatology Volume 124-125 ; 124-125 ; >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; British Journal of Dermatology Volume 126-127 ; 126-127 ; >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; British Journal of Dermatology Volume 128-129 ; 128-129 ; >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; British Journal of Dermatology Volume 130-131 ; 130-131 ; >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; British Journal of Dermatology Volume 132-133 ; 132-133 ; >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; British Journal of Dermatology Volume 134-135 ; 134-135 ; >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; British Journal of Dermatology Volume 136-137 ; 136-137 ; >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; British Journal of Dermatology Volume 138-139 ; 138-139 ; >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; British Journal of Dermatology Volume 140-141 ; 140-141 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; British Journal of Dermatology Volume 142-143 ; 142-143 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; British Journal of Dermatology Volume 144-145 ; 144-145 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; British Journal of Dermatology Volume 146-147 ; 146-147 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; British Journal of Dermatology Volume 148-149 ; 148-149 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; British Journal of Dermatology Volume 150-151 ; 150-151 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; British Journal of Dermatology Volume 152-153 ; 152-153 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; British Journal of Dermatology Volume 154-155 ; 154-155 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; British Journal of Dermatology Volume 156-157 ; 156-157 ; >
     au < crawling ; exists ; 2008 ; 2008 ; British Journal of Dermatology Volume 158-159 ; 158-159 ; >
     au < crawling ; exists ; 2009 ; 2009 ; British Journal of Dermatology Volume 160-161 ; 160-161 ; >
     au < crawling ; exists ; 2010 ; 2010 ; British Journal of Dermatology Volume 162-163 ; 162-163 ; >
@@ -2874,24 +2874,24 @@
     #this title was ONLY in the publisher listing
     #content available from 1856 volume 1 to 1989 volume 101
 
-    au < exists ; exists ; 1990 ; 1990 ; Botanical Journal of the Linnean Society Volume 102-104 ; 102-104 ; >
-    au < exists ; exists ; 1991 ; 1991 ; Botanical Journal of the Linnean Society Volume 105-107 ; 105-107 ; >
-    au < exists ; exists ; 1992 ; 1992 ; Botanical Journal of the Linnean Society Volume 108-110 ; 108-110 ; >
-    au < exists ; exists ; 1993 ; 1993 ; Botanical Journal of the Linnean Society Volume 111-113 ; 111-113 ; >
-    au < exists ; exists ; 1994 ; 1994 ; Botanical Journal of the Linnean Society Volume 114-116 ; 114-116 ; >
-    au < exists ; exists ; 1995 ; 1995 ; Botanical Journal of the Linnean Society Volume 117-119 ; 117-119 ; >
-    au < exists ; exists ; 1996 ; 1996 ; Botanical Journal of the Linnean Society Volume 120-122 ; 120-122 ; >
-    au < exists ; exists ; 1997 ; 1997 ; Botanical Journal of the Linnean Society Volume 123-125 ; 123-125 ; >
-    au < exists ; exists ; 1998 ; 1998 ; Botanical Journal of the Linnean Society Volume 126-128 ; 126-128 ; >
-    au < exists ; exists ; 1999 ; 1999 ; Botanical Journal of the Linnean Society Volume 129-131 ; 129-131 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Botanical Journal of the Linnean Society Volume 132-134 ; 132-134 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Botanical Journal of the Linnean Society Volume 135-137 ; 135-137 ; >
-    au < exists ; exists ; 2002 ; 2002 ; Botanical Journal of the Linnean Society Volume 138-140 ; 138-140 ; >
-    au < exists ; exists ; 2003 ; 2003 ; Botanical Journal of the Linnean Society Volume 141-143 ; 141-143 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Botanical Journal of the Linnean Society Volume 144-146 ; 144-146 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Botanical Journal of the Linnean Society Volume 147-149 ; 147-149 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Botanical Journal of the Linnean Society Volume 150-152 ; 150-152 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Botanical Journal of the Linnean Society Volume 153-155 ; 153-155 ; >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Botanical Journal of the Linnean Society Volume 102-104 ; 102-104 ; >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Botanical Journal of the Linnean Society Volume 105-107 ; 105-107 ; >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Botanical Journal of the Linnean Society Volume 108-110 ; 108-110 ; >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Botanical Journal of the Linnean Society Volume 111-113 ; 111-113 ; >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Botanical Journal of the Linnean Society Volume 114-116 ; 114-116 ; >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Botanical Journal of the Linnean Society Volume 117-119 ; 117-119 ; >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Botanical Journal of the Linnean Society Volume 120-122 ; 120-122 ; >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Botanical Journal of the Linnean Society Volume 123-125 ; 123-125 ; >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Botanical Journal of the Linnean Society Volume 126-128 ; 126-128 ; >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Botanical Journal of the Linnean Society Volume 129-131 ; 129-131 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Botanical Journal of the Linnean Society Volume 132-134 ; 132-134 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Botanical Journal of the Linnean Society Volume 135-137 ; 135-137 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Botanical Journal of the Linnean Society Volume 138-140 ; 138-140 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Botanical Journal of the Linnean Society Volume 141-143 ; 141-143 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Botanical Journal of the Linnean Society Volume 144-146 ; 144-146 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Botanical Journal of the Linnean Society Volume 147-149 ; 147-149 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Botanical Journal of the Linnean Society Volume 150-152 ; 150-152 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Botanical Journal of the Linnean Society Volume 153-155 ; 153-155 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Botanical Journal of the Linnean Society Volume 156-158 ; 156-158 ; >
     au < crawling ; exists ; 2009 ; 2009 ; Botanical Journal of the Linnean Society Volume 159-161 ; 159-161 ; >
     au < finished ; frozen ; 2010 ; 2010 ; Botanical Journal of the Linnean Society Volume 162-164 ; 162-164 ; reingest5.clockss.org:8082 >
@@ -4071,24 +4071,24 @@
     #content available from 1976 Volume 1 to 1989 Volume 14
     #move from Wiley, 2023
 
-    au < exists ; exists ; 1990 ; 1990 ; Clinical and Experimental Dermatology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 1991 ; 1991 ; Clinical and Experimental Dermatology Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 1992 ; 1992 ; Clinical and Experimental Dermatology Volume 17 ; 17 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 1993 ; 1993 ; Clinical and Experimental Dermatology Volume 18 ; 18 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 1994 ; 1994 ; Clinical and Experimental Dermatology Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-    au < exists ; exists ; 1995 ; 1995 ; Clinical and Experimental Dermatology Volume 20 ; 20 ; reingest1.clockss.org:8082 >
-    au < exists ; exists ; 1996 ; 1996 ; Clinical and Experimental Dermatology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 1997 ; 1997 ; Clinical and Experimental Dermatology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 1998 ; 1998 ; Clinical and Experimental Dermatology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
-    au < exists ; exists ; 1999 ; 1999 ; Clinical and Experimental Dermatology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < exists ; exists ; 2000 ; 2000 ; Clinical and Experimental Dermatology Volume 25 ; 25 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 2001 ; 2001 ; Clinical and Experimental Dermatology Volume 26 ; 26 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 2002 ; 2002 ; Clinical and Experimental Dermatology Volume 27 ; 27 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 2003 ; 2003 ; Clinical and Experimental Dermatology Volume 28 ; 28 ; reingest4.clockss.org:8082 >
-    au < exists ; exists ; 2004 ; 2004 ; Clinical and Experimental Dermatology Volume 29 ; 29 ; reingest2.clockss.org:8085 >
-    au < exists ; exists ; 2005 ; 2005 ; Clinical and Experimental Dermatology Volume 30 ; 30 ; reingest1.clockss.org:8082 >
-    au < exists ; exists ; 2006 ; 2006 ; Clinical and Experimental Dermatology Volume 31 ; 31 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 2007 ; 2007 ; Clinical and Experimental Dermatology Volume 32 ; 32 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Clinical and Experimental Dermatology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Clinical and Experimental Dermatology Volume 16 ; 16 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Clinical and Experimental Dermatology Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Clinical and Experimental Dermatology Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Clinical and Experimental Dermatology Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Clinical and Experimental Dermatology Volume 20 ; 20 ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Clinical and Experimental Dermatology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Clinical and Experimental Dermatology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Clinical and Experimental Dermatology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Clinical and Experimental Dermatology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Clinical and Experimental Dermatology Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Clinical and Experimental Dermatology Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Clinical and Experimental Dermatology Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Clinical and Experimental Dermatology Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Clinical and Experimental Dermatology Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Clinical and Experimental Dermatology Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Clinical and Experimental Dermatology Volume 31 ; 31 ; reingest3.clockss.org:8083 >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Clinical and Experimental Dermatology Volume 32 ; 32 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; 2008 ; Clinical and Experimental Dermatology Volume 33 ; 33 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; Clinical and Experimental Dermatology Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; 2010 ; Clinical and Experimental Dermatology Volume 35 ; 35 ; reingest3.clockss.org:8083 >
@@ -5515,7 +5515,7 @@
 #    #This journal is included in the Endocrine Society tdb file.
 #
 #    au < testing ; exists ; 2008 ; 2008 ; Endocrine Reviews Volume 29 ; 29 ; >
-#    au < exists ; exists ; 2009 ; 2009 ; Endocrine Reviews Volume 30 ; 30 ; >
+#    au < doNotProcess ; exists ; 2009 ; 2009 ; Endocrine Reviews Volume 30 ; 30 ; >
 #    au < exists ; exists ; 2010 ; 2010 ; Endocrine Reviews Volume 31 ; 31 ; >
 #    au < exists ; exists ; 2011 ; 2011 ; Endocrine Reviews Volume 32 ; 32 ; >
 #    au < exists ; exists ; 2012 ; 2012 ; Endocrine Reviews Volume 33 ; 33 ; >
@@ -6312,24 +6312,24 @@
     param[journal_id] = ejendo
     #move from Bioscientifica, 2023-01-01
 
-    au < exists ; exists ; 1990 ; 1990 ; European Journal of Endocrinology Volume 122-123 ; 122-123 ; >
-    au < exists ; exists ; 1991 ; 1991 ; European Journal of Endocrinology Volume 124-125 ; 124-125 ; >
-    au < exists ; exists ; 1992 ; 1992 ; European Journal of Endocrinology Volume 126-127 ; 126-127 ; >
-    au < exists ; exists ; 1993 ; 1993 ; European Journal of Endocrinology Volume 128-129 ; 128-129 ; >
-    au < exists ; exists ; 1994 ; 1994 ; European Journal of Endocrinology Volume 130-131 ; 130-131 ; >
-    au < exists ; exists ; 1995 ; 1995 ; European Journal of Endocrinology Volume 132-133 ; 132-133 ; >
-    au < exists ; exists ; 1996 ; 1996 ; European Journal of Endocrinology Volume 134-135 ; 134-135 ; >
-    au < exists ; exists ; 1997 ; 1997 ; European Journal of Endocrinology Volume 136-137 ; 136-137 ; >
-    au < exists ; exists ; 1998 ; 1998 ; European Journal of Endocrinology Volume 138-139 ; 138-139 ; >
-    au < exists ; exists ; 1999 ; 1999 ; European Journal of Endocrinology Volume 140-141 ; 140-141 ; >
-    au < exists ; exists ; 2000 ; 2000 ; European Journal of Endocrinology Volume 142-143 ; 142-143 ; >
-    au < exists ; exists ; 2001 ; 2001 ; European Journal of Endocrinology Volume 144-145 ; 144-145 ; >
-    au < exists ; exists ; 2002 ; 2002 ; European Journal of Endocrinology Volume 146-147 ; 146-147 ; >
-    au < exists ; exists ; 2003 ; 2003 ; European Journal of Endocrinology Volume 148-149 ; 148-149 ; >
-    au < exists ; exists ; 2004 ; 2004 ; European Journal of Endocrinology Volume 150-151 ; 150-151 ; >
-    au < exists ; exists ; 2005 ; 2005 ; European Journal of Endocrinology Volume 152-153 ; 152-153 ; >
-    au < exists ; exists ; 2006 ; 2006 ; European Journal of Endocrinology Volume 154-155 ; 154-155 ; >
-    au < exists ; exists ; 2007 ; 2007 ; European Journal of Endocrinology Volume 156-157 ; 156-157 ; >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; European Journal of Endocrinology Volume 122-123 ; 122-123 ; >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; European Journal of Endocrinology Volume 124-125 ; 124-125 ; >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; European Journal of Endocrinology Volume 126-127 ; 126-127 ; >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; European Journal of Endocrinology Volume 128-129 ; 128-129 ; >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; European Journal of Endocrinology Volume 130-131 ; 130-131 ; >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; European Journal of Endocrinology Volume 132-133 ; 132-133 ; >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; European Journal of Endocrinology Volume 134-135 ; 134-135 ; >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; European Journal of Endocrinology Volume 136-137 ; 136-137 ; >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; European Journal of Endocrinology Volume 138-139 ; 138-139 ; >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; European Journal of Endocrinology Volume 140-141 ; 140-141 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; European Journal of Endocrinology Volume 142-143 ; 142-143 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; European Journal of Endocrinology Volume 144-145 ; 144-145 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; European Journal of Endocrinology Volume 146-147 ; 146-147 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; European Journal of Endocrinology Volume 148-149 ; 148-149 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; European Journal of Endocrinology Volume 150-151 ; 150-151 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; European Journal of Endocrinology Volume 152-153 ; 152-153 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; European Journal of Endocrinology Volume 154-155 ; 154-155 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; European Journal of Endocrinology Volume 156-157 ; 156-157 ; >
     au < crawling ; exists ; 2008 ; 2008 ; European Journal of Endocrinology Volume 158-159 ; 158-159 ; >
     au < crawling ; exists ; 2009 ; 2009 ; European Journal of Endocrinology Volume 160-161 ; 160-161 ; >
     au < crawling ; exists ; 2010 ; 2010 ; European Journal of Endocrinology Volume 162-163 ; 162-163 ; >
@@ -6717,24 +6717,24 @@
     param[journal_id] = evolut
     #move from Wiley by 2023-01-01
 
-    au < exists ; exists ; 1990 ; 1990 ; Evolution Volume 44 ; 44 ; >
-    au < exists ; exists ; 1991 ; 1991 ; Evolution Volume 45 ; 45 ; >
-    au < exists ; exists ; 1992 ; 1992 ; Evolution Volume 46 ; 46 ; >
-    au < exists ; exists ; 1993 ; 1993 ; Evolution Volume 47 ; 47 ; >
-    au < exists ; exists ; 1994 ; 1994 ; Evolution Volume 48 ; 48 ; >
-    au < exists ; exists ; 1995 ; 1995 ; Evolution Volume 49 ; 49 ; >
-    au < exists ; exists ; 1996 ; 1996 ; Evolution Volume 50 ; 50 ; >
-    au < exists ; exists ; 1997 ; 1997 ; Evolution Volume 51 ; 51 ; >
-    au < exists ; exists ; 1998 ; 1998 ; Evolution Volume 52 ; 52 ; >
-    au < exists ; exists ; 1999 ; 1999 ; Evolution Volume 53 ; 53 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Evolution Volume 54 ; 54 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Evolution Volume 55 ; 55 ; >
-    au < exists ; exists ; 2002 ; 2002 ; Evolution Volume 56 ; 56 ; >
-    au < exists ; exists ; 2003 ; 2003 ; Evolution Volume 57 ; 57 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Evolution Volume 58 ; 58 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Evolution Volume 59 ; 59 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Evolution Volume 60 ; 60 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Evolution Volume 61 ; 61 ; >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Evolution Volume 44 ; 44 ; >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Evolution Volume 45 ; 45 ; >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Evolution Volume 46 ; 46 ; >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Evolution Volume 47 ; 47 ; >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Evolution Volume 48 ; 48 ; >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Evolution Volume 49 ; 49 ; >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Evolution Volume 50 ; 50 ; >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Evolution Volume 51 ; 51 ; >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Evolution Volume 52 ; 52 ; >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Evolution Volume 53 ; 53 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Evolution Volume 54 ; 54 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Evolution Volume 55 ; 55 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Evolution Volume 56 ; 56 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Evolution Volume 57 ; 57 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Evolution Volume 58 ; 58 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Evolution Volume 59 ; 59 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Evolution Volume 60 ; 60 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Evolution Volume 61 ; 61 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Evolution Volume 62 ; 62 ; >
     au < crawling ; exists ; 2009 ; 2009 ; Evolution Volume 63 ; 63 ; >
     au < crawling ; exists ; 2010 ; 2010 ; Evolution Volume 64 ; 64 ; >
@@ -6912,7 +6912,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; FEMS Microbiology Letters Volume 368 ; 368 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; FEMS Microbiology Letters Volume 369 ; 369 ; >
     au < exists ; exists ; 2023 ; 2023 ; FEMS Microbiology Letters Volume 370 ; 370 ; >
-    au < expected ; exists ; 2024 ; 2024 ; FEMS Microbiology Letters Volume 371 ; 371 ; >
+    au < exists ; exists ; 2025 ; 2024 ; FEMS Microbiology Letters Volume 371 ; 371 ; >
     au < expected ; exists ; 2025 ; 2025 ; FEMS Microbiology Letters Volume 372 ; 372 ; >
 
   }
@@ -10627,7 +10627,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; JNCI Monographs Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; JNCI Monographs Volume 2015 ; 2015 ; >
     au < finished ; crawling ; 2017 ; 2017 ; JNCI Monographs Volume 2017 ; 2017 ; reingest3.clockss.org:8083 >
-    au < exists ; exists ; 2018 ; 2018 ; JNCI Monographs Volume 2018 ; 2018 ; >
+    au < doesNotExist ; doesNotExist ; 2018 ; 2018 ; JNCI Monographs Volume 2018 ; 2018 ; >
     au < finished ; manifest ; 2019 ; 2019 ; JNCI Monographs Volume 2019 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; 2020 ; JNCI Monographs Volume 2020 ; 2020 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; 2021 ; JNCI Monographs Volume 2021 ; 2021 ; reingest1.clockss.org:8082 >
@@ -12798,14 +12798,14 @@
     param[journal_id] = jleukbio
     #move from Wiley on 2023
 
-    au < exists ; exists ; 2000 ; 2000 ; Journal of Leukocyte Biology Volume 90 ; 90 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Journal of Leukocyte Biology Volume 91 ; 91 ; >
-    au < exists ; exists ; 2002 ; 2002 ; Journal of Leukocyte Biology Volume 92 ; 92 ; >
-    au < exists ; exists ; 2003 ; 2003 ; Journal of Leukocyte Biology Volume 93 ; 93 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Journal of Leukocyte Biology Volume 94 ; 94 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Journal of Leukocyte Biology Volume 95 ; 95 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Journal of Leukocyte Biology Volume 96 ; 96 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Journal of Leukocyte Biology Volume 97 ; 97 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Journal of Leukocyte Biology Volume 90 ; 90 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Journal of Leukocyte Biology Volume 91 ; 91 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Journal of Leukocyte Biology Volume 92 ; 92 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Journal of Leukocyte Biology Volume 93 ; 93 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Journal of Leukocyte Biology Volume 94 ; 94 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of Leukocyte Biology Volume 95 ; 95 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Leukocyte Biology Volume 96 ; 96 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Leukocyte Biology Volume 97 ; 97 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Journal of Leukocyte Biology Volume 98 ; 98 ; >
     au < crawling ; exists ; 2009 ; 2009 ; Journal of Leukocyte Biology Volume 99 ; 99 ; >
     au < crawling ; exists ; 2010 ; 2010 ; Journal of Leukocyte Biology Volume 100 ; 100 ; >
@@ -14050,10 +14050,10 @@
     param[journal_id] = jsm
     #move from Elsevier on 2023
 
-    au < exists ; exists ; 2004 ; 2004 ; The Journal of Sexual Medicine Volume 1 ; 1 ; >
-    au < exists ; exists ; 2005 ; 2005 ; The Journal of Sexual Medicine Volume 2 ; 2 ; >
-    au < exists ; exists ; 2006 ; 2006 ; The Journal of Sexual Medicine Volume 3 ; 3 ; >
-    au < exists ; exists ; 2007 ; 2007 ; The Journal of Sexual Medicine Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; The Journal of Sexual Medicine Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; The Journal of Sexual Medicine Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; The Journal of Sexual Medicine Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; The Journal of Sexual Medicine Volume 4 ; 4 ; >
     au < finished ; manifest ; 2008 ; 2008 ; The Journal of Sexual Medicine Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; 2009 ; The Journal of Sexual Medicine Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; 2010 ; The Journal of Sexual Medicine Volume 7 ; 7 ; reingest5.clockss.org:8082 >
@@ -15374,7 +15374,7 @@
 #    au < manifest ; exists ; 2006 ; 2006 ; Mammalian Species Volume Issue 788-803 ; Issue 788-803 ; >
 #    au < manifest ; exists ; 2007 ; 2007 ; Mammalian Species Volume Issue 804-807 ; Issue 804-807 ; >
 #    au < testing ; exists ; 2008 ; 2008 ; Mammalian Species Volume Issue 808-823 ; Issue 808-823 ; >
-#    au < exists ; exists ; 2009 ; 2009 ; Mammalian Species Volume Issue 824-847 ; Issue 824-847 ; >
+#    au < doNotProcess ; exists ; 2009 ; 2009 ; Mammalian Species Volume Issue 824-847 ; Issue 824-847 ; >
 
 
     au < finished ; crawling ; 2010 ; 2010 ; Mammalian Species Volume 42 ; 42 ; reingest4.clockss.org:8082 >
@@ -16040,7 +16040,7 @@
 #    au < manifest ; exists ; 2006 ; 2006 ; Molecular Endocrinology Volume 20 ; 20 ; >
 #    au < manifest ; exists ; 2007 ; 2007 ; Molecular Endocrinology Volume 21 ; 21 ; >
 #    au < testing ; exists ; 2008 ; 2008 ; Molecular Endocrinology Volume 22 ; 22 ; >
-#    au < exists ; exists ; 2009 ; 2009 ; Molecular Endocrinology Volume 23 ; 23 ; >
+#    au < doNotProcess ; exists ; 2009 ; 2009 ; Molecular Endocrinology Volume 23 ; 23 ; >
 #    au < exists ; exists ; 2010 ; 2010 ; Molecular Endocrinology Volume 24 ; 24 ; >
 #    au < exists ; exists ; 2011 ; 2011 ; Molecular Endocrinology Volume 25 ; 25 ; >
 #    au < exists ; exists ; 2012 ; 2012 ; Molecular Endocrinology Volume 26 ; 26 ; >
@@ -25292,24 +25292,24 @@
     #content available from 1856 volume 1 to 1989 volume 97
     #this title was ONLY in the publisher listing
 
-    au < exists ; exists ; 1990 ; 1990 ; Zoological Journal of the Linnean Society Volume 98-100 ; 98-100 ; >
-    au < exists ; exists ; 1991 ; 1991 ; Zoological Journal of the Linnean Society Volume 101-103 ; 101-103 ; >
-    au < exists ; exists ; 1992 ; 1992 ; Zoological Journal of the Linnean Society Volume 104-106 ; 104-106 ; >
-    au < exists ; exists ; 1993 ; 1993 ; Zoological Journal of the Linnean Society Volume 107-109 ; 107-109 ; >
-    au < exists ; exists ; 1994 ; 1994 ; Zoological Journal of the Linnean Society Volume 110-112 ; 110-112 ; >
-    au < exists ; exists ; 1995 ; 1995 ; Zoological Journal of the Linnean Society Volume 113-115 ; 113-115 ; >
-    au < exists ; exists ; 1996 ; 1996 ; Zoological Journal of the Linnean Society Volume 116-118 ; 116-118 ; >
-    au < exists ; exists ; 1997 ; 1997 ; Zoological Journal of the Linnean Society Volume 119-121 ; 119-121 ; >
-    au < exists ; exists ; 1998 ; 1998 ; Zoological Journal of the Linnean Society Volume 122-124 ; 122-124 ; >
-    au < exists ; exists ; 1999 ; 1999 ; Zoological Journal of the Linnean Society Volume 125-127 ; 125-127 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Zoological Journal of the Linnean Society Volume 128-130 ; 128-130 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Zoological Journal of the Linnean Society Volume 131-133 ; 131-133 ; >
-    au < exists ; exists ; 2002 ; 2002 ; Zoological Journal of the Linnean Society Volume 134-136 ; 134-136 ; >
-    au < exists ; exists ; 2003 ; 2003 ; Zoological Journal of the Linnean Society Volume 137-139 ; 137-139 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Zoological Journal of the Linnean Society Volume 140-142 ; 140-142 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Zoological Journal of the Linnean Society Volume 143-145 ; 143-145 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Zoological Journal of the Linnean Society Volume 146-148 ; 146-148 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Zoological Journal of the Linnean Society Volume 149-151 ; 149-151 ; >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Zoological Journal of the Linnean Society Volume 98-100 ; 98-100 ; >
+    au < doNotProcess ; exists ; 1991 ; 1991 ; Zoological Journal of the Linnean Society Volume 101-103 ; 101-103 ; >
+    au < doNotProcess ; exists ; 1992 ; 1992 ; Zoological Journal of the Linnean Society Volume 104-106 ; 104-106 ; >
+    au < doNotProcess ; exists ; 1993 ; 1993 ; Zoological Journal of the Linnean Society Volume 107-109 ; 107-109 ; >
+    au < doNotProcess ; exists ; 1994 ; 1994 ; Zoological Journal of the Linnean Society Volume 110-112 ; 110-112 ; >
+    au < doNotProcess ; exists ; 1995 ; 1995 ; Zoological Journal of the Linnean Society Volume 113-115 ; 113-115 ; >
+    au < doNotProcess ; exists ; 1996 ; 1996 ; Zoological Journal of the Linnean Society Volume 116-118 ; 116-118 ; >
+    au < doNotProcess ; exists ; 1997 ; 1997 ; Zoological Journal of the Linnean Society Volume 119-121 ; 119-121 ; >
+    au < doNotProcess ; exists ; 1998 ; 1998 ; Zoological Journal of the Linnean Society Volume 122-124 ; 122-124 ; >
+    au < doNotProcess ; exists ; 1999 ; 1999 ; Zoological Journal of the Linnean Society Volume 125-127 ; 125-127 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Zoological Journal of the Linnean Society Volume 128-130 ; 128-130 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Zoological Journal of the Linnean Society Volume 131-133 ; 131-133 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Zoological Journal of the Linnean Society Volume 134-136 ; 134-136 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Zoological Journal of the Linnean Society Volume 137-139 ; 137-139 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Zoological Journal of the Linnean Society Volume 140-142 ; 140-142 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Zoological Journal of the Linnean Society Volume 143-145 ; 143-145 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Zoological Journal of the Linnean Society Volume 146-148 ; 146-148 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Zoological Journal of the Linnean Society Volume 149-151 ; 149-151 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Zoological Journal of the Linnean Society Volume 152-154 ; 152-154 ; >
     au < crawling ; exists ; 2009 ; 2009 ; Zoological Journal of the Linnean Society Volume 155-157 ; 155-157 ; >
     au < finished ; manifest ; 2010 ; 2010 ; Zoological Journal of the Linnean Society Volume 158-160 ; 158-160 ; reingest1.clockss.org:8082 >
