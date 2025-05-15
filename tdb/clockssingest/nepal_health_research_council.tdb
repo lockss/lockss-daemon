@@ -21,7 +21,7 @@
       issn = 1727-5482 ;
       eissn = 1999-6217 
     >
-       #Certificate problem with HTTPS. Moving to HTTP. 
+       #Certificate problem with HTTPS. Moving to HTTP. Manifest page redirects. Moving back to HTTPS.
       
       {
       param[base_url] = http://www.jnhrc.com.np/  ## HTTP ##
@@ -37,7 +37,7 @@
       au < frozen ; exists ; 2008 ; Journal of Nepal Health Research Council Volume 2008 ; 1 ; 2008 ; >
       au < frozen ; exists ; 2009 ; Journal of Nepal Health Research Council Volume 2009 ; 1 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Journal of Nepal Health Research Council Volume 2010 ; 1 ; 2010 ; >
-      au < manifest ; exists ; 2011 ; Journal of Nepal Health Research Council Volume 2011 ; 1 ; 2011 ; >
+      au < doNotProcess ; exists ; 2011 ; Journal of Nepal Health Research Council Volume 2011 ; 1 ; 2011 ; >
       au < frozen ; exists ; 2012 ; Journal of Nepal Health Research Council Volume 2012 ; 1 ; 2012 ; >
       au < frozen ; exists ; 2013 ; Journal of Nepal Health Research Council Volume 2013 ; 1 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Journal of Nepal Health Research Council Volume 2014 ; 1 ; 2014 ; >
@@ -50,8 +50,8 @@
       au < frozen ; exists ; 2021 ; Journal of Nepal Health Research Council Volume 2021 ; 4 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Journal of Nepal Health Research Council Volume 2022 ; 5 ; 2022 ; >
       au < frozen ; exists ; 2023 ; Journal of Nepal Health Research Council Volume 2023 ; 6 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Journal of Nepal Health Research Council Volume 2024 ; 7 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Journal of Nepal Health Research Council Volume 2025 ; 8 ; 2025 ; >
+      au < superseded ; exists ; 2024 ; Journal of Nepal Health Research Council Volume 2024 [superseded] ; 7 ; 2024 ; >
+      au < doNotProcess ; exists ; 2025 ; Journal of Nepal Health Research Council Volume 2025 ; 8 ; 2025 ; >
       }
       {
       param[base_url] = https://www.jnhrc.com.np/  ## HTTPS ##
@@ -67,7 +67,7 @@
       au < doNotProcess ; exists ; 2008 ; Journal of Nepal Health Research Council Volume 2008 ; 1 ; 2008 ; >
       au < doNotProcess ; exists ; 2009 ; Journal of Nepal Health Research Council Volume 2009 ; 1 ; 2009 ; >
       au < doNotProcess ; exists ; 2010 ; Journal of Nepal Health Research Council Volume 2010 ; 1 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; Journal of Nepal Health Research Council Volume 2011 ; 1 ; 2011 ; >
+      au < manifest ; exists ; 2011 ; Journal of Nepal Health Research Council Volume 2011 ; 1 ; 2011 ; >
       au < doNotProcess ; exists ; 2012 ; Journal of Nepal Health Research Council Volume 2012 ; 1 ; 2012 ; >
       au < doNotProcess ; exists ; 2013 ; Journal of Nepal Health Research Council Volume 2013 ; 1 ; 2013 ; >
       au < doNotProcess ; exists ; 2014 ; Journal of Nepal Health Research Council Volume 2014 ; 1 ; 2014 ; >
@@ -80,7 +80,8 @@
       au < doNotProcess ; exists ; 2021 ; Journal of Nepal Health Research Council Volume 2021 ; 4 ; 2021 ; >
       au < superseded ; exists ; 2022 ; Journal of Nepal Health Research Council Volume 2022 [superseded] ; 5 ; 2022 ; >
       au < superseded ; exists ; 2023 ; Journal of Nepal Health Research Council Volume 2023 [superseded] ; 6 ; 2023 ; >
-      au < doNotProcess ; exists ; 2024 ; Journal of Nepal Health Research Council Volume 2024 ; 7 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; Journal of Nepal Health Research Council Volume 2024 ; 7 ; 2024 ; >
+      au < expected ; exists ; 2025 ; Journal of Nepal Health Research Council Volume 2025 ; 8 ; 2025 ; >
       }
   }
 
