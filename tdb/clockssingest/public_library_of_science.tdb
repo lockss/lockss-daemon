@@ -372,10 +372,10 @@
     name = Public Library of Science ;
     info[contract] = 2019 ;
     info[back] = 1980 ;
-    info[tester] = 8
+    info[tester] = 4
   >
     provider = Public Library of Science
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.plos.ClockssPLoSMonthlyPlugin
     param[base_url] = https://journals.plos.org/
     implicit < status ; status2 ; year ; name ; param[month] ; param[year] >
 
@@ -388,44 +388,57 @@
 
       param[journal_id] = plosone
 
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Jan 2023 ; Jan ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Feb 2023 ; Feb ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Mar 2023 ; Mar ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Apr 2023 ; Apr ; 2023 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume Jan 2019 ; January ; 2019 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume Feb 2019 ; February ; 2019 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume Mar 2019 ; March ; 2019 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume Apr 2019 ; April ; 2019 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume May 2019 ; May ; 2019 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume Jun 2019 ; June ; 2019 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume Jul 2019 ; July ; 2019 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume Aug 2019 ; August ; 2019 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume Sep 2019 ; September ; 2019 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume Oct 2019 ; October ; 2019 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume Nov 2019 ; November ; 2019 >
+      au < testing ; exists ; 2019 ; PLOS ONE Volume Dec 2019 ; December ; 2019 >
+
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Jan 2023 ; January ; 2023 >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Feb 2023 ; February ; 2023 >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Mar 2023 ; March ; 2023 >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Apr 2023 ; April ; 2023 >
       au < exists ; exists ; 2023 ; PLOS ONE Volume May 2023 ; May ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Jun 2023 ; Jun ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Jul 2023 ; Jul ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Aug 2023 ; Aug ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Sep 2023 ; Sep ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Oct 2023 ; Oct ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Nov 2023 ; Nov ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Dec 2023 ; Dec ; 2023 >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Jun 2023 ; June ; 2023 >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Jul 2023 ; July ; 2023 >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Aug 2023 ; August ; 2023 >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Sep 2023 ; September ; 2023 >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Oct 2023 ; October ; 2023 >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Nov 2023 ; November ; 2023 >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Dec 2023 ; December ; 2023 >
 
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Jan 2024 ; Jan ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Feb 2024 ; Feb ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Mar 2024 ; Mar ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Apr 2024 ; Apr ; 2024 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Jan 2024 ; January ; 2024 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Feb 2024 ; February ; 2024 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Mar 2024 ; March ; 2024 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Apr 2024 ; April ; 2024 >
       au < exists ; exists ; 2024 ; PLOS ONE Volume May 2024 ; May ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Jun 2024 ; Jun ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Jul 2024 ; Jul ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Aug 2024 ; Aug ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Sep 2024 ; Sep ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Oct 2024 ; Oct ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Nov 2024 ; Nov ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Dec 2024 ; Dec ; 2024 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Jun 2024 ; June ; 2024 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Jul 2024 ; July ; 2024 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Aug 2024 ; August ; 2024 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Sep 2024 ; September ; 2024 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Oct 2024 ; October ; 2024 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Nov 2024 ; November ; 2024 >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Dec 2024 ; December ; 2024 >
 
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Jan 2025 ; Jan ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Feb 2025 ; Feb ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Mar 2025 ; Mar ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Apr 2025 ; Apr ; 2025 >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Jan 2025 ; January ; 2025 >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Feb 2025 ; February ; 2025 >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Mar 2025 ; March ; 2025 >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Apr 2025 ; April ; 2025 >
       au < exists ; exists ; 2025 ; PLOS ONE Volume May 2025 ; May ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Jun 2025 ; Jun ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Jul 2025 ; Jul ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Aug 2025 ; Aug ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Sep 2025 ; Sep ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Oct 2025 ; Oct ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Nov 2025 ; Nov ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Dec 2025 ; Dec ; 2025 >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Jun 2025 ; June ; 2025 >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Jul 2025 ; July ; 2025 >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Aug 2025 ; August ; 2025 >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Sep 2025 ; September ; 2025 >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Oct 2025 ; October ; 2025 >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Nov 2025 ; November ; 2025 >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Dec 2025 ; December ; 2025 >
 
   }
 
