@@ -58,9 +58,7 @@
     au < released ; 2020 ; Alambique Volume 8 ; 8 ; https://digitalcommons.usf.edu/ >
     au < released ; 2021 ; Alambique Volume 9 ; 9 ; https://digitalcommons.usf.edu/ >
     au < released ; 2022 ; Alambique Volume 10 ; 10 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2023 ; Alambique Volume 11 ; 11 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2024 ; Alambique Volume 12 ; 12 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2025 ; Alambique Volume 13 ; 13 ; https://digitalcommons.usf.edu/ >
+    au < expected ; 2025 ; Alambique Volume 11 ; 11 ; https://digitalcommons.usf.edu/ >
 
   }
 
@@ -132,10 +130,8 @@
     au < down ; 2019 ; Journal of Ecological Anthropology Volume 21 ; 21 ; https://scholarcommons.usf.edu/ >
     au < down ; 2020 ; Journal of Ecological Anthropology Volume 22 ; 22 ; https://scholarcommons.usf.edu/ >
     au < released ; 2021 ; Journal of Ecological Anthropology Volume 23 ; 23 ; https://digitalcommons.usf.edu/ >
-    au < released ; 2022 ; Journal of Ecological Anthropology Volume 24 ; 24 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2023 ; Journal of Ecological Anthropology Volume 25 ; 25 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2024 ; Journal of Ecological Anthropology Volume 26 ; 26 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2025 ; Journal of Ecological Anthropology Volume 27 ; 27 ; https://digitalcommons.usf.edu/ >
+    au < released ; 2022-2023 ; Journal of Ecological Anthropology Volume 24 ; 24 ; https://digitalcommons.usf.edu/ >
+    au < expected ; 2025 ; Journal of Ecological Anthropology Volume 25 ; 25 ; https://digitalcommons.usf.edu/ >
 
   }
 
@@ -168,13 +164,8 @@
     au < down ; 2017 ; Journal of Public Transportation Volume 20 ; 20 ; http://scholarcommons.usf.edu/ >
     au < down ; 2018 ; Journal of Public Transportation Volume 21 ; 21 ; https://scholarcommons.usf.edu/ >
     au < down ; 2019 ; Journal of Public Transportation Volume 22 ; 22 ; https://scholarcommons.usf.edu/ >
-    au < down ; 2020 ; Journal of Public Transportation Volume 23 ; 23 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2021 ; Journal of Public Transportation Volume 24 ; 24 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2022 ; Journal of Public Transportation Volume 25 ; 25 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2023 ; Journal of Public Transportation Volume 26 ; 26 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2024 ; Journal of Public Transportation Volume 27 ; 27 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2025 ; Journal of Public Transportation Volume 28 ; 28 ; https://digitalcommons.usf.edu/ >
-
+    au < down ; 2021 ; Journal of Public Transportation Volume 23 ; 23 ; https://scholarcommons.usf.edu/ >
+    #Moved to Elsevier
   }
 
   {
@@ -229,11 +220,6 @@
     au < down ; 2018 ; Revista Surco Sur Volume 8 ; 8 ; https://scholarcommons.usf.edu/ >
     au < down ; 2019 ; Revista Surco Sur Volume 9 ; 9 ; https://scholarcommons.usf.edu/ >
     au < down ; 2020 ; Revista Surco Sur Volume 10 ; 10 ; https://scholarcommons.usf.edu/ >
-    au < expected ; 2021 ; Revista Surco Sur Volume 11 ; 11 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2022 ; Revista Surco Sur Volume 12 ; 12 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2023 ; Revista Surco Sur Volume 13 ; 13 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2024 ; Revista Surco Sur Volume 14 ; 14 ; https://digitalcommons.usf.edu/ >
-    au < expected ; 2025 ; Revista Surco Sur Volume 15 ; 15 ; https://digitalcommons.usf.edu/ >
-
+    #Ceased publication after Volume 10, Issue 13 (2020)
   }
 }
