@@ -31,7 +31,7 @@
     au < released ; 2022 ; 10 ; The Comics Grid Volume 2022 ; 2022 >
     au < exists ; 2023 ; 11 ; The Comics Grid Volume 2023 ; 2023 > # article link missing https://www.comicsgrid.com/plugins/clockss/?year=2023
     au < manifest ; 2024 ; 12 ; The Comics Grid Volume 2024 ; 2024 >
-    au < expected ; 2025 ; 13 ; The Comics Grid Volume 2025 ; 2025 >
+    au < manifest ; 2025 ; 13 ; The Comics Grid Volume 2025 ; 2025 >
 
   }
 
@@ -58,7 +58,7 @@
       au < released ; 2022 ; 11 ; Orbit: A Journal of American Literature Volume 2022 ; 2022 >
       au < released ; 2023 ; 12 ; Orbit: A Journal of American Literature Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 13 ; Orbit: A Journal of American Literature Volume 2024 ; 2024 >
-      au < expected ; 2025 ; 14 ; Orbit: A Journal of American Literature Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 14 ; Orbit: A Journal of American Literature Volume 2025 ; 2025 >
 
   }
 
@@ -97,7 +97,7 @@
       au < manifest ; 2003 ; 52-53 ; Pynchon Notes Issue 52-53 ; 2003 >
       au < manifest ; 2008 ; 54-55 ; Pynchon Notes Issue 54-55 ; 2008 >
 
-      au < exists ; 2011 ; 56-57 ; Pynchon Notes Issue 56-57 ; 2011 >
+      au < manifest ; 2011 ; 56-57 ; Pynchon Notes Issue 56-57 ; 2011 >
 
   }
 
@@ -119,7 +119,7 @@
        au < released ; 2022 ; 10 ; C21 Literature: journal of 21st-century writings Volume 2022 ; 2022 >
        au < released ; 2023 ; 11 ; C21 Literature: journal of 21st-century writings Volume 2023 ; 2023 >
        au < manifest ; 2024 ; 12 ; C21 Literature: journal of 21st-century writings Volume 2024 ; 2024 >
-       au < expected ; 2025 ; 13 ; C21 Literature: journal of 21st-century writings Volume 2025 ; 2025 >
+       au < manifest ; 2025 ; 13 ; C21 Literature: journal of 21st-century writings Volume 2025 ; 2025 >
 
   }
 
@@ -151,8 +151,8 @@
       au < released ; 2021 ; 31-32 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 31-32 ; 2021 >
       au < released ; 2022 ; 33 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 33 ; 2022 >
       au < released ; 2023 ; 34-35 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 34-35 ; 2023 >
-      au < expected ; 2024 ; 36 ; 20: Interdisciplinary Studies in the Long Nineteenth Century Issue 36 ; 2024 >
-      au < expected ; 2025 ; 37 ; 21: Interdisciplinary Studies in the Long Nineteenth Century Issue 37 ; 2025 >
+      au < manifest ; 2024 ; 36 ; 20: Interdisciplinary Studies in the Long Nineteenth Century Issue 36 ; 2024 >
+      au < manifest ; 2025 ; 37 ; 21: Interdisciplinary Studies in the Long Nineteenth Century Issue 37 ; 2025 >
 
   }
 
@@ -289,7 +289,7 @@
       au < released ; 2022 ; 8 ; Open Library of Humanities Volume 2022 ; 2022 >
       au < released ; 2023 ; 9 ; Open Library of Humanities Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 10 ; Open Library of Humanities Volume 2024 ; 2024 >
-      au < expected ; 2025 ; 11 ; Open Library of Humanities Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 11 ; Open Library of Humanities Volume 2025 ; 2025 >
 
   }
 
@@ -314,7 +314,7 @@
       au < doNotProcess ; 2018 ; 10 ; Studies in the Maternal Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 11 ; Studies in the Maternal Volume 2019 ; 2019 >
       au < released ; 2020 ; 12-13 ; Studies in the Maternal Volume 2020 ; 2020 >
-      au < exists ; 2024 ; 14 ; Studies in the Maternal Volume 2024 ; 2024 >
+      au < manifest ; 2024 ; 14 ; Studies in the Maternal Volume 2024 ; 2024 >
       au < expected ; 2025 ; 15 ; Studies in the Maternal Volume 2025 ; 2025 >
 
   }
@@ -361,7 +361,7 @@
       au < released ; 2022 ; 32 ; Theoretical Roman Archaeology Journal Volume 5 ; 2022 >
       au < released ; 2023 ; 33 ; Theoretical Roman Archaeology Journal Volume 6 ; 2023 >
       au < manifest ; 2024 ; 34 ; Theoretical Roman Archaeology Journal Volume 7 ; 2024 >
-      au < expected ; 2025 ; 35 ; Theoretical Roman Archaeology Journal Volume 8 ; 2025 >
+      au < manifest ; 2025 ; 35 ; Theoretical Roman Archaeology Journal Volume 8 ; 2025 >
 
   }
 
@@ -381,7 +381,7 @@
       au < released ; 2022 ; 10 ; ZFF: Zeitschrift für Fantastikforschung Volume 2022 ; 2022 >
       au < released ; 2023 ; 11 ; ZFF: Zeitschrift für Fantastikforschung Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 12 ; ZFF: Zeitschrift für Fantastikforschung Volume 2024 ; 2024 >
-      au < exists ; 2025 ; 13 ; ZFF: Zeitschrift für Fantastikforschung Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 13 ; ZFF: Zeitschrift für Fantastikforschung Volume 2025 ; 2025 >
 
   }
 
@@ -406,7 +406,7 @@
       au < released ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 >
       au < released ; 2023 ; 7 ; The Parish Review Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 8 ; The Parish Review Volume 2024 ; 2024 >
-      au < expected ; 2025 ; 9 ; The Parish Review Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 9 ; The Parish Review Volume 2025 ; 2025 >
 
   }
 
@@ -478,7 +478,7 @@
       au < released ; 2022 ; 2022 ; Body, Space & Technology Volume 2022 ; 2022 >
       au < released ; 2023 ; 2023 ; Body, Space & Technology Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 2024 ; Body, Space & Technology Volume 2024 ; 2024 >
-      au < expected ; 2025 ; 2025 ; Body, Space & Technology Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 2025 ; Body, Space & Technology Volume 2025 ; 2025 >
 
   }
 
@@ -514,7 +514,7 @@
       au < released ; 2022 ; 18 ; Digital Medievalist Volume 2022 ; 2022 >
       au < released ; 2023 ; 19 ; Digital Medievalist Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 20 ; Digital Medievalist Volume 2024 ; 2024 >
-      au < expected ; 2025 ; 21 ; Digital Medievalist Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 21 ; Digital Medievalist Volume 2025 ; 2025 >
 
   }
 
@@ -543,7 +543,7 @@
       au < released ; 2022 ; 2022 ; Digital Studies / Le champ numérique Volume 2022 ; 2022 >
       au < released ; 2023 ; 2023 ; Digital Studies / Le champ numérique Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 2024 ; Digital Studies / Le champ numérique Volume 2024 ; 2024 >
-      au < expected ; 2025 ; 2025 ; Digital Studies / Le champ numérique Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 2025 ; Digital Studies / Le champ numérique Volume 2025 ; 2025 >
 
   }
 
@@ -566,7 +566,7 @@
       au < released ; 2022 ; 7 ; Glossa: a journal of general linguistics Volume 2022 ; 2022 >
       au < notReady ; 2023 ; 8 ; Glossa: a journal of general linguistics Volume 2023 ; 2023 > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5823/galley/23046/download/
       au < manifest ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 >
-      au < expected ; 2025 ; 10 ; Glossa: a journal of general linguistics Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 10 ; Glossa: a journal of general linguistics Volume 2025 ; 2025 >
 
   }
 
@@ -613,7 +613,7 @@
       au < released ; 2022 ; 8 ; Genealogy+Critique Volume 8 ; 2022 >
       au < released ; 2023 ; 9 ; Genealogy+Critique Volume 9 ; 2023 >
       au < manifest ; 2024 ; 10 ; Genealogy+Critique Volume 10 ; 2024 >
-      au < exists ; 2025 ; 11 ; Genealogy+Critique Volume 11 ; 2025 >
+      au < manifest ; 2025 ; 11 ; Genealogy+Critique Volume 11 ; 2025 >
 
   }
 
@@ -654,7 +654,7 @@
       au < released ; 2022 ; 5 ; Open Screens Volume 2022 ; 2022 >
       au < released ; 2023 ; 6 ; Open Screens Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 7 ; Open Screens Volume 2024 ; 2024 >
-      au < expected ; 2025 ; 8 ; Open Screens Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 8 ; Open Screens Volume 2025 ; 2025 >
 
   }
 
@@ -680,7 +680,7 @@
       au < released ; 2022 ; 10 ; Architectural Histories Volume 2022 ; 2022 >
       au < released ; 2023 ; 11 ; Architectural Histories Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 12 ; Architectural Histories Volume 2024 ; 2024 >
-      au < expected ; 2025 ; 13 ; Architectural Histories Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 13 ; Architectural Histories Volume 2025 ; 2025 >
 
   }
 
@@ -705,7 +705,7 @@
       au < released ; 2022 ; 8 ; Journal of Portuguese Linguistics Volume 2022 ; 2022 >
       au < released ; 2023 ; 9 ; Journal of Portuguese Linguistics Volume 2023 ; 2023 >
       au < manifest ; 2024 ; 10 ; Journal of Portuguese Linguistics Volume 2024 ; 2024 >
-      au < expected ; 2025 ; 11 ; Journal of Portuguese Linguistics Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 11 ; Journal of Portuguese Linguistics Volume 2025 ; 2025 >
 
   }
 
@@ -728,7 +728,7 @@
       au < released ; 2022 ; 13 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2022 ; 2022 >
       au < released ; 2023 ; 14 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2023 ; 2023 >
       au < notReady ; 2024 ; 15 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2024 ; 2024 > #no link, https://www.journal-labphon.org/plugins/clockss
-      au < exists ; 2025 ; 16 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 16 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2025 ; 2025 >
 
   }
 
@@ -751,7 +751,7 @@
       au < notReady ; 2022 ; 5 ; Lifewriting Annual Volume 2022 ; 2022 >
       au < released ; 2023 ; 6 ; Lifewriting Annual Volume 2023 ; 2023 >
       au < expected ; 2024 ; 7 ; Lifewriting Annual Volume 2024 ; 2024 >
-      au < expected ; 2025 ; 8 ; Lifewriting Annual Volume 2025 ; 2025 >
+      au < manifest ; 2025 ; 8 ; Lifewriting Annual Volume 2025 ; 2025 >
 
   }
 
