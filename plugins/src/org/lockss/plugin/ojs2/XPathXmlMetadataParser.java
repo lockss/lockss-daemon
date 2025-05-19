@@ -33,7 +33,6 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ojs2;
 
-import edu.fcla.plugin.arkivoc.XmlFilteringInputStream;
 import org.apache.commons.io.input.BOMInputStream;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
