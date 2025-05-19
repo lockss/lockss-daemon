@@ -566,10 +566,10 @@
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Volume 381 ; 381 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Volume 382 ; 382 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Volume 383 ; 383 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; releasing ; 2024 ; BMJ Volume 384 ; 384 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Volume 384 ; 384 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Volume 385 ; 385 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; testing ; 2024 ; BMJ Volume 386 ; 386 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; releasing ; 2024 ; BMJ Volume 387 ; 387 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Volume 387 ; 387 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 388 ; 388 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 389 ; 389 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Volume 390 ; 390 ; https://www.bmj.com/ >
@@ -3026,7 +3026,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; Thorax Volume 76 ; 76 ; https://thorax.bmj.com/ > #login,https://thorax.bmj.com/content/76/4/350.full.pdf
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Thorax Volume 77 ; 77 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Thorax Volume 78 ; 78 ; https://thorax.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; releasing ; 2024 ; Thorax Volume 79 ; 79 ; https://thorax.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; released ; 2024 ; Thorax Volume 79 ; 79 ; https://thorax.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; Thorax Volume 80 ; 80 ; https://thorax.bmj.com/ >
 
   }
