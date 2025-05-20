@@ -32,10 +32,14 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ojs2;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.Reader;
+import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
+import org.apache.commons.io.input.ReaderInputStream;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.CompositeTag;
@@ -45,7 +49,8 @@ import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.util.ReaderInputStream;
+import org.lockss.util.Constants;
+import org.lockss.util.IOUtil;
 
 public class OJS2HtmlFilterFactory implements FilterFactory {
   
@@ -159,14 +164,23 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
   /* the shared portion of the filtering
    * pick up the extra nodes from the child if there are any
    */
-  protected InputStream doFiltering(InputStream in, String encoding, NodeFilter[] moreNodes) {
+  protected InputStream doFiltering(InputStream in, String encoding, NodeFilter[] moreNodes) throws FilteringException {
     NodeFilter[] filters = baseFilters;
     if (moreNodes != null) {
       filters = addTo(moreNodes);
     }
-    
-    HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    HtmlFilterInputStream filteredStream = null;
+    try {
+          if(encoding  == null || encoding.equals("")){
+            encoding = Constants.DEFAULT_ENCODING;
+          }
+      StringFilter sf = new StringFilter(new InputStreamReader(in, encoding), "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=\" />");
+      filteredStream = new HtmlFilterInputStream(ReaderInputStream.builder().setReader(sf).setCharset(encoding).get(),
+                                   encoding,
+                                   HtmlNodeFilterTransform.exclude(new OrFilter(baseFilters)));
+    } catch (IOException e) {
+      throw new FilteringException(e);
+    }
     filteredStream.registerTag(new bTag());
     Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
     Reader httpFilter = new StringFilter(filteredReader, "http:", "https:");

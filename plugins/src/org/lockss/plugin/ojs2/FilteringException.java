@@ -1,6 +1,6 @@
-<!--
+/*
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -28,49 +28,15 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
--->
-<map>
-  <!-- ClockssOJS2Plugin.xml inherited from OJS2Plugin.xml. -->  
-  <entry>
-    <string>plugin_status</string>
-    <string>ready</string>
-  </entry>
-  <!-- https transition enabled -->  
-  <entry>
-    <string>plugin_identifier</string>
-    <string>org.lockss.plugin.ojs2.ClockssOJS2Plugin</string>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Open Journal Systems Plugin (OJS 2.x for CLOCKSS)</string>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>85</string>
-  </entry>
-  <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.ojs2.OJS2Plugin</string>
-  </entry>
-  <entry>
-    <string>plugin_parent_version</string>
-    <string>85</string>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>"Open Journal Systems Plugin (OJS 2.x for CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
-  </entry>
-  <entry>
-    <string>au_permission_url</string>
-    <string>"%sindex.php/%s/about/editorialPolicies", base_url, journal_id</string>
-  </entry>
-  <entry>
-    <string>clockss_override</string>
-    <map>
-      <entry>
-        <string>au_def_pause_time</string>
-        <long>100</long>
-      </entry>
-    </map>
-  </entry>
-</map>
+*/
+
+package org.lockss.plugin.ojs2;
+
+import org.lockss.daemon.PluginException;
+
+public class FilteringException extends PluginException {
+      public FilteringException() { super(); }
+      public FilteringException(String msg, Throwable cause) { super(msg, cause); }
+      public FilteringException(String msg) { super(msg); }
+      public FilteringException(Throwable cause) { super(cause); }
+  }

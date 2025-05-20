@@ -32,11 +32,15 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ojs2;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
+import org.apache.commons.io.input.ReaderInputStream;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
+import org.lockss.filter.StringFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
@@ -82,9 +86,15 @@ public class OJS2HtmlCrawlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/user/setLocale")
         
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
+    try {
+      StringFilter sf = new StringFilter(new InputStreamReader(in, encoding), "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=\" />");   
+      return new HtmlFilterInputStream(ReaderInputStream.builder().setReader(sf).setCharset(encoding).get(),
+                                   encoding,
+                                   HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    } catch (IOException e) {
+      throw new FilteringException(e);
+    }
   }
   
 }
