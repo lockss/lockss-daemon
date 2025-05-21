@@ -91,6 +91,7 @@ public class OJS2HtmlFilterFactory implements FilterFactory {
     // HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"), sidebar filter below removes this tag
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "commentsOnArticle"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "citation-block"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "citation"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "sidebar", true),
     HtmlNodeFilters.tagWithAttribute("div", "id", "alm"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "separator"),
