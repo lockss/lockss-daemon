@@ -32,16 +32,12 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.projmuse;
 
-import org.apache.commons.io.IOUtils;
 import org.lockss.filter.pdf.ExtractingPdfFilterFactory;
 import org.lockss.filter.pdf.PdfTransform;
 import org.lockss.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.FilterFactory;
 import org.lockss.util.Logger;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.*;
 import java.util.regex.Pattern;
@@ -71,6 +67,8 @@ public class ProjectMuse2017PdfFilterFactory extends ExtractingPdfFilterFactory 
     pdfDocument.unsetMetadata();
     pdfDocument.unsetModificationDate();
     pdfDocument.unsetProducer();
+    pdfDocument.unsetAuthor();
+    pdfDocument.unsetTitle();
     PdfUtil.normalizeTrailerId(pdfDocument);
 
     PdfPage pdfPage = pdfDocument.getPage(0);
@@ -133,7 +131,7 @@ public class ProjectMuse2017PdfFilterFactory extends ExtractingPdfFilterFactory 
     }
   
   }
-/* 
+  /* 
   public static void main(String[] args) throws Exception {
     
     //Reads in a pdf and applies the filters writing the contents to a new file <fileStr>.bin
