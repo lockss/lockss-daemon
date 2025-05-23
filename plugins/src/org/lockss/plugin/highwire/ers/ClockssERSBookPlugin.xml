@@ -34,7 +34,7 @@
     </entry>
     <entry>
         <string>au_start_url</string>
-        <string>"%slockss-manifest/books_manifest.html", base_url</string>
+        <string>"%sclockss-manifest/books/handbook_%s_manifest.html", base_url, book_eisbn</string>
     </entry>
     <entry>
         <string>au_name</string>
@@ -66,8 +66,9 @@
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"^%slockss-manifest/", base_url</string>
-            <string>1,"^%s(lookup|content|sites|misc)/", base_url</string>
+            <!--https://publications.ersnet.org/content/book/handbook/978-1-84984-122-1/chapter/introduction-->
+            <string>1,"%sclockss-manifest/books/handbook_%s_manifest.html", base_url, book_eisbn</string>
+            <string>1,"^%scontent/book/handbook/%s/chapter/[^/]$", base_url, book_eisbn</string>
         </list>
     </entry>
     <entry>
