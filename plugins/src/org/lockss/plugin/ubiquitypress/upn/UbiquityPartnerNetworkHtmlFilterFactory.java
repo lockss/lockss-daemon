@@ -32,23 +32,40 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ubiquitypress.upn;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 import org.htmlparser.NodeFilter;
+import org.htmlparser.Tag;
 import org.htmlparser.filters.*;
 import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.ImageTag;
+import org.htmlparser.util.NodeList;
+import org.htmlparser.util.ParserException;
+import org.htmlparser.visitors.NodeVisitor;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.StringFilter;
 import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
 public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
   
+  private static final Logger log = Logger.getLogger(UbiquityPartnerNetworkHtmlFilterFactory.class);
+
+  protected static Pattern PNG_WITH_TIMESTAMP =
+      Pattern.compile("\\.png\\?t=\\d{13}$",
+                      Pattern.CASE_INSENSITIVE);
+    protected static Pattern JPG_WITH_TIMESTAMP =
+      Pattern.compile("\\.jpg%3Ft%3D\\d{13}&w=",
+                      Pattern.CASE_INSENSITIVE);
+
   /**
    * A B(old) tag.  Registered with PrototypicalNodeFactory to cause B
    * to be a CompositeTag.  See code samples in org.htmlparser.tags.
@@ -133,6 +150,42 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
     //Stats
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "stat-"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "article-stats"),
+   // HtmlNodeFilters.tagWithAttribute("section", "aria-label","Brand navigation"),
+  };
+
+  //some tags reference image tags that have timestamps so let's remove those
+    protected final HtmlTransform xForm_removeTimestamp = new HtmlTransform() {
+    @Override
+    public NodeList transform(NodeList nodeList) throws IOException {
+      try {
+        nodeList.visitAllNodesWith(new NodeVisitor() {
+          @Override
+          public void visitTag(Tag tag) {
+            if (tag instanceof ImageTag && tag.getAttribute("src") != null) {
+              log.debug3("the source of image tag is " + tag.getAttribute("src"));
+              String url = tag.getAttribute("src");
+              String newUrl = PNG_WITH_TIMESTAMP.matcher(url).replaceFirst(".png");
+              tag.setAttribute("src", newUrl);
+              log.debug3("the NEW source of image tag is " + tag.getAttribute("src"));
+            }else if (tag instanceof ImageTag && tag.getAttribute("srcSet") != null){
+              log.debug3("the sourceSet of image tag is " + tag.getAttribute("srcSet"));
+              String url = tag.getAttribute("srcSet");
+              String newUrl = JPG_WITH_TIMESTAMP.matcher(url).replaceAll(".jpg?&w=");
+              tag.setAttribute("srcSet", newUrl);
+              log.debug3("the NEW sourceSet of image tag is " + tag.getAttribute("srcSet"));
+            }
+            //while we're here, let's remove ids and aria-labelledby since this is causing some hashing issues
+            tag.removeAttribute("id");
+            tag.removeAttribute("aria-labelledby");
+          }
+        });
+      } catch (ParserException pe) {
+        IOException ioe = new IOException();
+        ioe.initCause(pe);
+        throw ioe;
+      }
+      return nodeList;
+    }
   };
   
   @Override
@@ -163,7 +216,7 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
     }
     
     HtmlFilterInputStream filteredStream = new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+        new HtmlCompoundTransform(HtmlNodeFilterTransform.exclude(new OrFilter(filters)), xForm_removeTimestamp));
     filteredStream.registerTag(new bTag());
     Reader filteredReader = FilterUtil.getReader(filteredStream, encoding);
     Reader httpFilter = new StringFilter(filteredReader, "http:", "https:");
