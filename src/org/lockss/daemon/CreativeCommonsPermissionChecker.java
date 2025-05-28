@@ -35,6 +35,7 @@ package org.lockss.daemon;
 import java.io.*;
 import java.util.regex.*;
 
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -200,7 +201,7 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
             if (relStr == null) {
               relStr = "";
             }
-            for (String relStrWord : relStr.split(" ")) {
+            for (String relStrWord : StringUtils.split(relStr)) {
               if (LICENSE.equalsIgnoreCase(relStrWord)) {
                 // This tag has the rel="license" attribute
                 String candidateUrl = getAttributeValue(HREF, link);
