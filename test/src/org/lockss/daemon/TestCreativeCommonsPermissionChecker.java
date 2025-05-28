@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -49,8 +49,8 @@ public class TestCreativeCommonsPermissionChecker
     "some text%smore text\n" +
     "</body>\n</html>\n";
 
-  private static final String VALID_URL_STEM = "http://creativecommons.org/licenses";
-  private static final String VALID_URL_STEM_S = "https://creativecommons.org/licenses";
+  private static final String VALID_URL_HTTP = "http://creativecommons.org/licenses";
+  private static final String VALID_URL_HTTPS = "https://creativecommons.org/licenses";
 
   private String TEST_URL = "http://www.example.com/";
 
@@ -60,11 +60,11 @@ public class TestCreativeCommonsPermissionChecker
 
   // return a CC license URL for the specified license terms and version
   private static String lu(String lic, String ver) {
-    return VALID_URL_STEM + "/" + lic + "/" + ver + "/";
+    return VALID_URL_HTTP + "/" + lic + "/" + ver + "/";
   }
 
   private static String lus(String lic, String ver) {
-    return VALID_URL_STEM_S + "/" + lic + "/" + ver + "/";
+    return VALID_URL_HTTPS + "/" + lic + "/" + ver + "/";
   }
 
   // return a CC license tag element
@@ -115,11 +115,21 @@ public class TestCreativeCommonsPermissionChecker
     }
   }
 
-  public void testCase() {
+  public void testUpperCase() {
     assertPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"license\" />");
     assertPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"license\" />".toUpperCase());
     assertPerm("<a href=\"" + lus("by", "4.0") + "\" rel=\"license\" />");
     assertPerm("<a href=\"" + lus("by", "4.0") + "\" rel=\"license\" />".toUpperCase());
+  }
+
+  public void testMultipleWords() {
+    assertNoPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"\" />");
+    assertPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"license\" />");
+    assertNoPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"foo\" />");
+    assertPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"foo license\" />");
+    assertPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"license baz\" />");
+    assertPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"foo license baz\" />");
+    assertNoPerm("<a href=\"" + lu("by", "4.0") + "\" rel=\"foo bar baz\" />");
   }
 
   public void testWhitespace() {
@@ -169,7 +179,8 @@ public class TestCreativeCommonsPermissionChecker
   }
   
   protected enum Tag { A, LINK }
-  protected enum Attrs { NONE, HREF, REL_X, REL_LICENSE, HREF_REL_X, HREF_REL_LICENSE, REL_X_HREF, REL_LICENSE_HREF }
+  protected enum Attrs { NONE, HREF, REL, HREF_REL, REL_HREF }
+  protected enum Rel { EMPTY, BAD, LICENSE, BAD_LICENSE, LICENSE_BAD, BAD_LICENSE_BAD, BAD_BAD_BAD }
   protected enum Proto { HTTP, HTTPS }
   protected enum Host { NO_WWW, WWW }
   protected enum License { CC_1_0, CC_2_0, CC_2_1, CC_2_5, CC_3_0, CC_4_0, CC0_1_0, CERT_1_0, PDM_1_0 }
@@ -179,29 +190,31 @@ public class TestCreativeCommonsPermissionChecker
   public void testCombinatorics() throws Exception {
     for (Tag tag : Tag.values()) {
       for (Attrs attrs : Attrs.values()) {
-        for (Proto proto : Proto.values()) {
-          for (Host host : Host.values()) {
-            for (License lic : License.values()) {
-              for (Variant vart : Variant.values()) {
-                for (Ending end : Ending.values()) {
-                  // Build template
-                  StringBuilder sb = new StringBuilder();
-                  sb.append("<html><head>");
-                  if (tag == Tag.LINK) {
-                    createLink(sb, tag, attrs, proto, host, lic, vart, end);
+        for (Rel rel : Rel.values()) {
+          for (Proto proto : Proto.values()) {
+            for (Host host : Host.values()) {
+              for (License lic : License.values()) {
+                for (Variant vart : Variant.values()) {
+                  for (Ending end : Ending.values()) {
+                    // Build template
+                    StringBuilder sb = new StringBuilder();
+                    sb.append("<html><head>");
+                    if (tag == Tag.LINK) {
+                      createLink(sb, tag, attrs, rel, proto, host, lic, vart, end);
+                    }
+                    sb.append("</head><body>");
+                    if (tag == Tag.A) {
+                      createLink(sb, tag, attrs, rel, proto, host, lic, vart, end);
+                    }
+                    sb.append("</body></html>");
+                    // Invoke permission checker
+                    String html = sb.toString();
+                    boolean expected = isValid(attrs, rel, lic, vart);
+                    boolean actual = new CreativeCommonsPermissionChecker().checkPermission(mcf, new StringReader(html), TEST_URL);
+                    assertEquals(String.format("Expected %s but was %s: %s", expected, actual, html),
+                                 expected,
+                                 actual);
                   }
-                  sb.append("</head><body>");
-                  if (tag == Tag.A) {
-                    createLink(sb, tag, attrs, proto, host, lic, vart, end);
-                  }
-                  sb.append("</body></html>");
-                  // Invoke permission checker
-                  String html = sb.toString();
-                  boolean expected = isValid(attrs, lic, vart);
-                  boolean actual = new CreativeCommonsPermissionChecker().checkPermission(mcf, new StringReader(html), TEST_URL);
-                  assertEquals(String.format("Expected %s but was %s: %s", expected, actual, html),
-                               expected,
-                               actual);
                 }
               }
             }
@@ -211,9 +224,24 @@ public class TestCreativeCommonsPermissionChecker
     }
   }
   
+  private static void makeRel(StringBuilder sb,
+                              Rel rel) {
+    switch (rel) {
+      case EMPTY: break;
+      case BAD: sb.append("foo"); break;
+      case LICENSE: sb.append("license"); break;
+      case BAD_LICENSE: sb.append("foo license"); break;
+      case LICENSE_BAD: sb.append("license baz"); break;
+      case BAD_LICENSE_BAD: sb.append("foo license baz"); break;
+      case BAD_BAD_BAD: sb.append("foo bar baz"); break;
+      default: throw new ShouldNotHappenException(rel.toString());
+    }
+  }
+  
   private static void createLink(StringBuilder sb,
                                  Tag tag,
                                  Attrs attrs,
+                                 Rel rel, 
                                  Proto proto,
                                  Host host,
                                  License lic,
@@ -222,12 +250,11 @@ public class TestCreativeCommonsPermissionChecker
     sb.append("<");
     sb.append(tag == Tag.A ? "a" : "link");
     switch (attrs) {
-      case REL_X: case REL_X_HREF: sb.append(" rel=\"nothing\""); break;
-      case REL_LICENSE: case REL_LICENSE_HREF: sb.append(" rel=\"license\""); break;
+      case REL: case REL_HREF: sb.append(" rel=\""); makeRel(sb,  rel); sb.append("\""); break;
       default: break; // Intentionally left blank
     }
     switch (attrs) {
-      case HREF: case HREF_REL_X: case HREF_REL_LICENSE: case REL_X_HREF: case REL_LICENSE_HREF:
+      case HREF: case HREF_REL: case REL_HREF:
         sb.append(" href=\"");
         sb.append(proto == Proto.HTTP ? "http://" : "https://");
         sb.append(host == Host.WWW ? "www." : "");
@@ -284,37 +311,40 @@ public class TestCreativeCommonsPermissionChecker
         break;
     }
     switch (attrs) {
-      case HREF_REL_X: sb.append(" rel=\"nothing\""); break;
-      case HREF_REL_LICENSE: sb.append(" rel=\"license\""); break;
+      case HREF_REL: sb.append(" rel=\""); makeRel(sb,  rel); sb.append("\""); break;
       default: break; // Intentionally left blank
     }
     sb.append(tag == Tag.A ? ">LINK TEXT</a>" : " />");
   }
   
-  private static boolean isValid(Attrs attrs, License lic, Variant vart) {
+  private static boolean isValid(Attrs attrs, Rel rel, License lic, Variant vart) {
     switch (attrs) {
-      case HREF_REL_LICENSE: case REL_LICENSE_HREF:
-        switch (lic) {
-          case CC0_1_0: case CERT_1_0: case PDM_1_0: return true;
-          case CC_1_0:
-            switch (vart) {
-              case DEVNATIONS: return false; // 2.0 only
-              case BY_NC_ND: case NC_ND: return true; // We accept this spelling
-              default: return true;
+      case REL_HREF: case HREF_REL:
+        switch (rel) {
+          case LICENSE: case BAD_LICENSE: case LICENSE_BAD: case BAD_LICENSE_BAD: 
+            switch (lic) {
+              case CC0_1_0: case CERT_1_0: case PDM_1_0: return true;
+              case CC_1_0:
+                switch (vart) {
+                  case DEVNATIONS: return false; // 2.0 only
+                  case BY_NC_ND: case NC_ND: return true; // We accept this spelling
+                  default: return true;
+                }
+              case CC_2_0:
+                switch (vart) {
+                  case BY: case BY_NC: case BY_NC_ND: case BY_NC_SA: case BY_ND: case BY_SA: return true;
+                  case DEVNATIONS: return true; // 2.0 only
+                  case NC: case NC_SA: case ND: case ND_NC: case SA: return true; // Japan only
+                  case NC_ND: return true; // We accept this spelling
+                  default: return false;
+                }
+              default:
+                switch (vart) {
+                  case BY: case BY_NC: case BY_NC_ND: case BY_NC_SA: case BY_ND: case BY_SA: return true;
+                  default: return false;
+                }
             }
-          case CC_2_0:
-            switch (vart) {
-              case BY: case BY_NC: case BY_NC_ND: case BY_NC_SA: case BY_ND: case BY_SA: return true;
-              case DEVNATIONS: return true; // 2.0 only
-              case NC: case NC_SA: case ND: case ND_NC: case SA: return true; // Japan only
-              case NC_ND: return true; // We accept this spelling
-              default: return false;
-            }
-          default:
-            switch (vart) {
-              case BY: case BY_NC: case BY_NC_ND: case BY_NC_SA: case BY_ND: case BY_SA: return true;
-              default: return false;
-            }
+          default: return false;
         }
       default: return false;
     }

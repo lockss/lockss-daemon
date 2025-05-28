@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -197,21 +197,26 @@ public class CreativeCommonsPermissionChecker extends BasePermissionChecker {
           }
           if (beginsWithTag(link, LINKTAG) || beginsWithTag(link, ATAG)) {
             String relStr = getAttributeValue(REL, link);
-            if (LICENSE.equalsIgnoreCase(relStr)) {
-              // This tag has the rel="license" attribute
-              String candidateUrl = getAttributeValue(HREF, link);
-              if (candidateUrl == null) {
-                break;
-              }
-              candidateUrl = candidateUrl.trim();
-              log.debug2("Candidate license URL: " + candidateUrl);
-              Matcher mat = licensePat.matcher(candidateUrl);
-              if (mat.find()) {
-                log.debug2("CC license found: " + candidateUrl);
-                foundCcLicense = true;
-              }
-              else {
-                log.debug2("CC license not found: " + candidateUrl);
+            if (relStr == null) {
+              relStr = "";
+            }
+            for (String relStrWord : relStr.split(" ")) {
+              if (LICENSE.equalsIgnoreCase(relStrWord)) {
+                // This tag has the rel="license" attribute
+                String candidateUrl = getAttributeValue(HREF, link);
+                if (candidateUrl == null) {
+                  break;
+                }
+                candidateUrl = candidateUrl.trim();
+                log.debug2("Candidate license URL: " + candidateUrl);
+                Matcher mat = licensePat.matcher(candidateUrl);
+                if (mat.find()) {
+                  log.debug2("CC license found: " + candidateUrl);
+                  foundCcLicense = true;
+                }
+                else {
+                  log.debug2("CC license not found: " + candidateUrl);
+                }
               }
             }
           }
