@@ -63,7 +63,7 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
       Pattern.compile("\\.png\\?t=\\d{13}$",
                       Pattern.CASE_INSENSITIVE);
     protected static Pattern JPG_WITH_TIMESTAMP =
-      Pattern.compile("\\.jpg%3Ft%3D\\d{13}&w=",
+      Pattern.compile("\\.jpg%3Ft%3D\\d{13}&amp;w=",
                       Pattern.CASE_INSENSITIVE);
 
   /**
@@ -161,18 +161,31 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
         nodeList.visitAllNodesWith(new NodeVisitor() {
           @Override
           public void visitTag(Tag tag) {
-            if (tag instanceof ImageTag && tag.getAttribute("src") != null) {
-              log.debug3("the source of image tag is " + tag.getAttribute("src"));
-              String url = tag.getAttribute("src");
-              String newUrl = PNG_WITH_TIMESTAMP.matcher(url).replaceFirst(".png");
-              tag.setAttribute("src", newUrl);
-              log.debug3("the NEW source of image tag is " + tag.getAttribute("src"));
-            }else if (tag instanceof ImageTag && tag.getAttribute("srcSet") != null){
-              log.debug3("the sourceSet of image tag is " + tag.getAttribute("srcSet"));
-              String url = tag.getAttribute("srcSet");
-              String newUrl = JPG_WITH_TIMESTAMP.matcher(url).replaceAll(".jpg?&w=");
-              tag.setAttribute("srcSet", newUrl);
-              log.debug3("the NEW sourceSet of image tag is " + tag.getAttribute("srcSet"));
+            if (tag instanceof ImageTag){
+              if(tag.getAttribute("src") != null){
+                String srcurl = tag.getAttribute("src");
+                log.debug3("the source of image tag is " + tag.getAttribute("src"));
+                if(PNG_WITH_TIMESTAMP.matcher(srcurl).find()){
+                  String newUrl = PNG_WITH_TIMESTAMP.matcher(srcurl).replaceFirst(".png");
+                  tag.setAttribute("src", newUrl);
+                }else if(JPG_WITH_TIMESTAMP.matcher(srcurl).find()){
+                  String newUrl = JPG_WITH_TIMESTAMP.matcher(srcurl).replaceFirst(".jpg?&w=");
+                  tag.setAttribute("src", newUrl);
+                }
+                log.debug3("the NEW source of image tag is " + tag.getAttribute("src"));
+              }
+              if(tag.getAttribute("srcSet") != null){
+                log.debug3("the sourceSet of image tag is " + tag.getAttribute("srcSet"));
+                String srcSetUrl = tag.getAttribute("srcSet");
+                if(PNG_WITH_TIMESTAMP.matcher(srcSetUrl).find()){
+                  String newUrl = PNG_WITH_TIMESTAMP.matcher(srcSetUrl).replaceAll(".png");
+                  tag.setAttribute("srcSet", newUrl);
+                }else if(JPG_WITH_TIMESTAMP.matcher(srcSetUrl).find()){
+                  String newUrl = JPG_WITH_TIMESTAMP.matcher(srcSetUrl).replaceAll(".jpg?&w=");
+                  tag.setAttribute("srcSet", newUrl);
+                }
+                log.debug3("the NEW sourceSet of image tag is " + tag.getAttribute("srcSet"));
+              }
             }
             //while we're here, let's remove ids and aria-labelledby since this is causing some hashing issues
             tag.removeAttribute("id");
