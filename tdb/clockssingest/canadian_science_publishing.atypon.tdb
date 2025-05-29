@@ -741,17 +741,17 @@
     au < finished ; manifest ; 2008 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 65 ; 65 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 66 ; 66 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 67 ; 67 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2011 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 68 ; 68 ; https://cdnsciencepub.com/ ; >
+    au < finished ; manifest ; 2011 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 68 ; 68 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2012 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 69 ; 69 ; http://www.nrcresearchpress.com/ ; >
     au < frozen ; exists ; 2013 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 70 ; 70 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2014 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 71 ; 71 ; https://cdnsciencepub.com/ ; > #500 Error. Atypon fixing?
-    au < frozen ; exists ; 2015 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 72 ; 72 ; https://cdnsciencepub.com/ ; > #500 Error. Atypon fixing?
-    au < frozen ; exists ; 2016 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 73 ; 73 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2017 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 74 ; 74 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2018 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 75 ; 75 ; https://cdnsciencepub.com/ ; >
+    au < finished ; manifest ; 2014 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 71 ; 71 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 > #500 Error. Atypon fixing?
+    au < finished ; manifest ; 2015 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 72 ; 72 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 > #500 Error. Atypon fixing?
+    au < finished ; manifest ; 2016 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 73 ; 73 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 74 ; 74 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 75 ; 75 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2019 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 76 ; 76 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2020 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 77 ; 77 ; https://cdnsciencepub.com/ ; >
-    au < frozen ; exists ; 2021 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 78 ; 78 ; https://cdnsciencepub.com/ ; >
+    au < finished ; manifest ; 2020 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 77 ; 77 ; https://cdnsciencepub.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2021 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 78 ; 78 ; https://cdnsciencepub.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 79 ; 79 ; https://cdnsciencepub.com/ ; >
     au < deepCrawl ; exists ; 2023 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 80 ; 80 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 2024 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 81 ; 81 ; https://cdnsciencepub.com/ ; >
