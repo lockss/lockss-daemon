@@ -5748,7 +5748,7 @@
     au < deepCrawl ; exists ; 2007 ; International Journal of Prisoner Health Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2008 ; International Journal of Prisoner Health Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2009 ; International Journal of Prisoner Health Volume 5 ; 5 ; >
-    au < doesNotExist ; doesNotExist ; 2010 ; International Journal of Prisoner Health Volume 6 ; 6 ; >
+    au < doesNotExist ; doesNotExist ; 0 ; International Journal of Prisoner Health Volume 6 ; 6 ; >
     au < finished ; crawling ; 2011 ; International Journal of Prisoner Health Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2012 ; International Journal of Prisoner Health Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Prisoner Health Volume 9 ; 9 ; >
@@ -16332,16 +16332,23 @@
     {
     param[journal_issn] = 2444-9709
 
+    au < doNotProcess ; doNotProcess ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; Spanish Journal of Marketing - ESIC Volume 23 ; 23 ; >
     au < finished ; manifest ; 2020 ; Spanish Journal of Marketing - ESIC Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Spanish Journal of Marketing - ESIC Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Spanish Journal of Marketing - ESIC Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    au < doNotProcess ; doNotProcess ; 2023 ; Spanish Journal of Marketing - ESIC Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2024 ; Spanish Journal of Marketing - ESIC Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2025 ; Spanish Journal of Marketing - ESIC Volume 29 ; 29 ; >
     }
     {
     param[journal_issn] = 2444-9695
 
     au < crawling ; exists ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 ; >
     au < crawling ; exists ; 2019 ; Spanish Journal of Marketing - ESIC Volume 23 ; 23 ; >
-
+    au < doNotProcess ; doNotProcess ; 2020 ; Spanish Journal of Marketing - ESIC Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; Spanish Journal of Marketing - ESIC Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 2022 ; Spanish Journal of Marketing - ESIC Volume 26 ; 26 ; >
     au < crawling ; exists ; 2023 ; Spanish Journal of Marketing - ESIC Volume 27 ; 27 ; >
     au < crawling ; exists ; 2024 ; Spanish Journal of Marketing - ESIC Volume 28 ; 28 ; >
     au < doNotProcess ; exists ; 2025 ; Spanish Journal of Marketing - ESIC Volume 29 ; 29 ; >
