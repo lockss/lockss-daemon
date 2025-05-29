@@ -3742,7 +3742,7 @@
       au < ready ; exists ; 2004-2005 ; International Journal of Emergency Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006 ; International Journal of Emergency Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Emergency Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008 ; International Journal of Emergency Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008 ; International Journal of Emergency Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Emergency Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Emergency Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Emergency Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
@@ -4270,7 +4270,7 @@
       au < finished ; finished ; 2019 ; International Journal of Environment, Workplace and Employment Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020-2022 ; International Journal of Environment, Workplace and Employment Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2023 ; International Journal of Environment, Workplace and Employment Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2024 ; International Journal of Environment, Workplace and Employment Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2024 ; International Journal of Environment, Workplace and Employment Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2025 ; International Journal of Environment, Workplace and Employment Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -6811,7 +6811,7 @@
 
       param[journal_id] = ijlsm
 
-      au < ready ; exists ; 2004-2005 ; International Journal of Logistics Systems and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2004-2005 ; International Journal of Logistics Systems and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006 ; International Journal of Logistics Systems and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Logistics Systems and Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Logistics Systems and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -7835,7 +7835,7 @@
 
       param[journal_id] = ijmlo
 
-      au < ready ; exists ; 2007 ; International Journal of Mobile Learning and Organisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; International Journal of Mobile Learning and Organisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Mobile Learning and Organisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Mobile Learning and Organisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Mobile Learning and Organisation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -8152,7 +8152,7 @@
       au < ready ; exists ; 2004 ; International Journal of Nanotechnology Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2005 ; International Journal of Nanotechnology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006 ; International Journal of Nanotechnology Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2007 ; International Journal of Nanotechnology Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; International Journal of Nanotechnology Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Nanotechnology Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Nanotechnology Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Nanotechnology Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
@@ -8341,7 +8341,7 @@
 
       au < crawling ; exists ; 2004-2005 ; International Journal of Nuclear Knowledge Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006-2007 ; International Journal of Nuclear Knowledge Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008-2009 ; International Journal of Nuclear Knowledge Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008-2009 ; International Journal of Nuclear Knowledge Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Nuclear Knowledge Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Nuclear Knowledge Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Nuclear Knowledge Management Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
@@ -9095,7 +9095,7 @@
      {
       param[journal_id] = ijpp
 
-      au < ready ; exists ; 2005-2006 ; International Journal of Public Policy Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2005-2006 ; International Journal of Public Policy Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Public Policy Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Public Policy Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Public Policy Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -9456,7 +9456,7 @@
 
       au < crawling ; exists ; 2006 ; International Journal of Security and Networks Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Security and Networks Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008 ; International Journal of Security and Networks Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008 ; International Journal of Security and Networks Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Security and Networks Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Security and Networks Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Security and Networks Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -9663,7 +9663,7 @@
       param[journal_id] = ijsoi
 
       au < crawling ; exists ; 2006 ; International Journal of Services Operations and Informatics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2007 ; International Journal of Services Operations and Informatics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; International Journal of Services Operations and Informatics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Services Operations and Informatics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Services Operations and Informatics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Services Operations and Informatics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -9721,7 +9721,7 @@
       au < ready ; exists ; 2008 ; International Journal of Services Technology and Management Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Services Technology and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Services Technology and Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2009 ; International Journal of Services Technology and Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Services Technology and Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Services Technology and Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Services Technology and Management Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Services Technology and Management Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
@@ -11218,7 +11218,7 @@
       au < crawling ; exists ; 2007 ; International Journal of Vehicle Design Volume 45 ; 45 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2008 ; International Journal of Vehicle Design Volume 46 ; 46 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Vehicle Design Volume 47 ; 47 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008 ; International Journal of Vehicle Design Volume 48 ; 48 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008 ; International Journal of Vehicle Design Volume 48 ; 48 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Vehicle Design Volume 49 ; 49 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Vehicle Design Volume 50 ; 50 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Vehicle Design Volume 51 ; 51 ; https://www.inderscienceonline.com/ ; >
@@ -12538,7 +12538,7 @@
 
       au < finished ; finished ; 2016-2017 ; International Journal of Financial Innovation in Banking Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018-2019 ; International Journal of Financial Innovation in Banking Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2021-2022 ; International Journal of Financial Innovation in Banking Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < crawling ; exists ; 2021-2022 ; International Journal of Financial Innovation in Banking Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
   }
 
