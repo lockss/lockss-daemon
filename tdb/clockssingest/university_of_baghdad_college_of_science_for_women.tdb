@@ -2,10 +2,12 @@
 
   publisher <
     name = University of Baghdad, College of Science for Women ;
-    info[contract] = 2021 ;
+    info[contract] = 2008 ;
     info[back] = 2004 ;
-    info[tester] = 8
+    info[tester] = 5 ;
+    info[platform] = bepress
   >
+#provider is set below.
 
   {
   
