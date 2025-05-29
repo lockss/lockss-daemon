@@ -110,7 +110,7 @@
     au < finished ; manifest ; 2022 ; 1 ; Caucasiana Volume 2022 ; 2022 ; https://caucasiana.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2 ; Caucasiana Volume 2023 ; 2023 ; https://caucasiana.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2024 ; 3 ; Caucasiana Volume 2024 ; 2024 ; https://caucasiana.pensoft.net/ ; >
-    au < expected ; exists ; 2025 ; 4 ; Caucasiana Volume 2025 ; 2025 ; https://caucasiana.pensoft.net/ ; >
+    au < manifest ; exists ; 2025 ; 4 ; Caucasiana Volume 2025 ; 2025 ; https://caucasiana.pensoft.net/ ; >
 
    }
   
