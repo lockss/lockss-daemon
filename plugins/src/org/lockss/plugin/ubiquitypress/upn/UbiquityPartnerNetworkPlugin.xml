@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>21</string>
+    <string>22</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -76,8 +76,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>"%sindex.php/%s/gateway/lockss?year=%d", to_http(base_url2), journal_id, year</string>
       <string>"%sindex.php/%s/gateway/lockss?year=%d", to_https(base_url2), journal_id, year</string>
-      <string>"%sabout/", to_http(base_url)</string>
-      <string>"%sabout/", to_https(base_url)</string>
+      <string>"%sabout", to_http(base_url)</string>
+      <string>"%sabout", to_https(base_url)</string>
     </list>
   </entry>
   <entry>
