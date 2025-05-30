@@ -1631,23 +1631,22 @@
       nondefparam[base_url2] = https://account.utrechtjournal.org/
       nondefparam[journal_id] = up-j-ujiel
 
-      au < finished ; finished ; 2010 ; 1 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; 1 ; Ubiquity Press ;  ; http://www.utrechtjournal.org/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2011 ; 2 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; 2 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
-      au < manifest ; exists ; 2012 ; 3 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; 3 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
-      au < manifest ; exists ; 2013 ; 4 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; 4 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
-      au < manifest ; exists ; 2014 ; 5 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; 5 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
-      au < finished ; finished ; 2015 ; 6 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; 6 ; Ubiquity Press ;  ; http://www.utrechtjournal.org/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 [superseded] ; 2016 ; 7 ; Ubiquity Press ;  ; http://www.utrechtjournal.org/ ; >
-      au < finished ; finished ; 2016 ; 7 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; 7 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 8 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; 8 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 9 ; Utrecht Journal of International and European Law Volume 2018 ; 2018 ; 9 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; reingest1.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2019 ; 10 ; Utrecht Journal of International and European Law Volume 2019 ; 2019 ; 10 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
-      au < finished ; finished ; 2020 ; 11 ; Utrecht Journal of International and European Law Volume 2020 ; 2020 ; 11 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 12 ; Utrecht Journal of International and European Law Volume 2021 ; 2021 ; 12 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; reingest2.clockss.org:8085 >
-      au < superseded ; exists ; 2022 ; 13 ; Utrecht Journal of International and European Law Volume 2022 [superseded] ; 2022 ; 13 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Utrecht Journal of International and European Law Volume 2023 ; 2023 ; 14 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
-      au < manifest ; exists ; 2024 ; 15 ; Utrecht Journal of International and European Law Volume 2024 ; 2024 ; 15 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
-      au < expected ; exists ; 2025 ; 16 ; Utrecht Journal of International and European Law Volume 2025 ; 2025 ; 16 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
+      au < finished ; finished ; 2010 ; 26 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; 26 ; Ubiquity Press ;  ; http://www.utrechtjournal.org/ ; reingest4.clockss.org:8082 >
+      au < manifest ; exists ; 2011 ; 27 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; 27 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
+      au < manifest ; exists ; 2012 ; 28 ; Utrecht Journal of International and European Law Volume 2012 ; 2012 ; 28 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
+      au < manifest ; exists ; 2013 ; 29 ; Utrecht Journal of International and European Law Volume 2013 ; 2013 ; 29 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
+      au < manifest ; exists ; 2014 ; 30 ; Utrecht Journal of International and European Law Volume 2014 ; 2014 ; 30 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
+      au < finished ; finished ; 2015 ; 31 ; Utrecht Journal of International and European Law Volume 2015 ; 2015 ; 31 ; Ubiquity Press ;  ; http://www.utrechtjournal.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2016 ; 32 ; Utrecht Journal of International and European Law Volume 2016 [superseded] ; 2016 ; 32 ; Ubiquity Press ;  ; http://www.utrechtjournal.org/ ; >
+      au < finished ; finished ; 2016 ; 32 ; Utrecht Journal of International and European Law Volume 2016 ; 2016 ; 32 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 33 ; Utrecht Journal of International and European Law Volume 2017 ; 2017 ; 33 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 34 ; Utrecht Journal of International and European Law Volume 2018 ; 2018 ; 34 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 35 ; Utrecht Journal of International and European Law Volume 2020 ; 2020 ; 35 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 36 ; Utrecht Journal of International and European Law Volume 2021 ; 2021 ; 36 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2022 ; 37 ; Utrecht Journal of International and European Law Volume 2022 [superseded] ; 2022 ; 37 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 38 ; Utrecht Journal of International and European Law Volume 2023 ; 2023 ; 38 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
+      au < manifest ; exists ; 2024 ; 39 ; Utrecht Journal of International and European Law Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
+      au < expected ; exists ; 2025 ; 40 ; Utrecht Journal of International and European Law Volume 2025 ; 2025 ; 40 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
 
   }
 
@@ -2096,19 +2095,20 @@
       nondefparam[base_url2] = https://account.insights.uksg.org/
       nondefparam[journal_id] = up-j-i
 
-      au < finished ; finished ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; 1 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; 2 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; 3 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; >
-      au < finished ; finished ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; 4 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; 5 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; 6 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 7 ; Insights: the UKSG journal Volume 2018 ; 2018 ; 7 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; 8 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 ; 9 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 10 ; Insights: the UKSG journal Volume 2021 ; 2021 ; 10 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 11 ; Insights: the UKSG journal Volume 2022 [superseded] ; 2022 ; 11 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
-      au < manifest ; exists ; 2024 ; 13 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 13 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
-      au < manifest ; exists ; 2025 ; 14 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 14 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
+      au < finished ; finished ; 2012 ; 25 ; Insights: the UKSG journal Volume 2012 ; 2012 ; 25 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2013 ; 26 ; Insights: the UKSG journal Volume 2013 ; 2013 ; 26 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2014 ; 27 ; Insights: the UKSG journal Volume 2014 ; 2014 ; 27 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; >
+      au < finished ; finished ; 2015 ; 28 ; Insights: the UKSG journal Volume 2015 ; 2015 ; 28 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2016 ; 29 ; Insights: the UKSG journal Volume 2016 ; 2016 ; 29 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 30 ; Insights: the UKSG journal Volume 2017 ; 2017 ; 30 ; United Kingdom Serials Group ;  ; http://insights.uksg.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 31 ; Insights: the UKSG journal Volume 2018 ; 2018 ; 31 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2019 ; 32 ; Insights: the UKSG journal Volume 2019 ; 2019 ; 32 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 33 ; Insights: the UKSG journal Volume 2020 ; 2020 ; 33 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 34 ; Insights: the UKSG journal Volume 2021 ; 2021 ; 34 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 35 ; Insights: the UKSG journal Volume 2022 [superseded] ; 2022 ; 35 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
+      au < exists ; exists ; 2023 ; 36 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 36 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
+      au < manifest ; exists ; 2024 ; 37 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 37 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
+      au < manifest ; exists ; 2025 ; 38 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 38 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
 
   }
 
