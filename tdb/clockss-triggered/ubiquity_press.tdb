@@ -95,9 +95,9 @@
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://jhlr.org/
 
-      au < exists ; 2016 ; 1 ; Journal of Home Language Research Volume 1 ; 2016 ; https://jhlr.org/ >
-      au < exists ; 2017 ; 2 ; Journal of Home Language Research Volume 2 ; 2017 ; https://jhlr.org/ >
-      au < exists ; 2018 ; 3 ; Journal of Home Language Research Volume 3 ; 2018 ; https://jhlr.org/ >
+      au < released ; 2016 ; 1 ; Journal of Home Language Research Volume 1 ; 2016 ; https://jhlr.org/ >
+      au < released ; 2017 ; 2 ; Journal of Home Language Research Volume 2 ; 2017 ; https://jhlr.org/ >
+      au < released ; 2018 ; 3 ; Journal of Home Language Research Volume 3 ; 2018 ; https://jhlr.org/ >
       
   }
 
