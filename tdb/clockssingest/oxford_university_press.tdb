@@ -3415,6 +3415,7 @@
     >
 
     param[journal_id] = bcsj
+    #content available from 1926 Volume 1 to 2007 Volume 80
 
     au < manifest ; exists ; 2008 ; 2008 ; Bulletin of the Chemical Society of Japan Volume 81 ; 81 ; >
     au < manifest ; exists ; 2009 ; 2009 ; Bulletin of the Chemical Society of Japan Volume 82 ; 82 ; >
@@ -3434,6 +3435,39 @@
     au < testing ; exists ; 2023 ; 2023 ; Bulletin of the Chemical Society of Japan Volume 96 ; 96 ; >
     au < ready ; exists ; 2024 ; 2024 ; Bulletin of the Chemical Society of Japan Volume 97 ; 97 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Bulletin of the Chemical Society of Japan Volume 98 ; 98 ; >
+
+  }
+
+  {
+
+    title <
+      name = Bulletin of the Institute of Classical Studies ;
+      issn = 0076-0730 ;
+      eissn = 2041-5370 ;
+      issnl = 0076-0730
+    >
+
+    param[journal_id] = bics
+    #content available from 1954 Volume 1 to 2007 Volume 50
+
+    au < exists ; exists ; 2008 ; 2008 ; Bulletin of the Institute of Classical Studies Volume 51 ; 51 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Bulletin of the Institute of Classical Studies Volume 52 ; 52 ; >
+    au < exists ; exists ; 2010 ; 2010 ; Bulletin of the Institute of Classical Studies Volume 53 ; 53 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Bulletin of the Institute of Classical Studies Volume 54 ; 54 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Bulletin of the Institute of Classical Studies Volume 55 ; 55 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Bulletin of the Institute of Classical Studies Volume 56 ; 56 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Bulletin of the Institute of Classical Studies Volume 57 ; 57 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Bulletin of the Institute of Classical Studies Volume 58 ; 58 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Bulletin of the Institute of Classical Studies Volume 59 ; 59 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Bulletin of the Institute of Classical Studies Volume 60 ; 60 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Bulletin of the Institute of Classical Studies Volume 61 ; 61 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Bulletin of the Institute of Classical Studies Volume 62 ; 62 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Bulletin of the Institute of Classical Studies Volume 63 ; 63 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Bulletin of the Institute of Classical Studies Volume 64 ; 64 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Bulletin of the Institute of Classical Studies Volume 65 ; 65 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Bulletin of the Institute of Classical Studies Volume 66 ; 66 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Bulletin of the Institute of Classical Studies Volume 67 ; 67 ; >
+    au < expected ; exists ; 2025 ; 2025 ; Bulletin of the Institute of Classical Studies Volume 68 ; 68 ; >
 
   }
 
