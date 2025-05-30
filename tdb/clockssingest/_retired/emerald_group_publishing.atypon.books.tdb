@@ -1024,7 +1024,7 @@
    au < finished ; finished ; 2014 ; 9781785600913 ; 9781785600906 ; 9781785600906 ; Advances in Mergers & Acquisitions Volume 14 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2016 ; 9781786353948 ; 9781786353931 ; 9781786353931 ; Advances in Mergers & Acquisitions Volume 15 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9781787146938 ; 9781787146921 ; 9781787146921 ; Advances in Mergers & Acquisitions Volume 16 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
-   au < finished ; finished ; 2018 ; 9781787561366 ; 9781787561359 ; 9781787561359 ; Advances in Mergers & Acquisitions Volume 17 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2018 ; 9781787561366 ; 9781787561359 ; 9781787561359 ; Advances in Mergers and Acquisitions Volume 17 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
 
  }
 
@@ -1055,8 +1055,8 @@
   #param[journal_issn] = 2514-4650
   #series = apbbef
 
-   au < finished ; finished ; 2017 ; 9781787434103 ; 9781787434097 ; 9781787434097 ; Advances in Pacific Basin Business Economics and Finance Volume 5 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; finished ; 2018 ; 9781787564466 ; 9781787564459 ; 9781787564459 ; Advances in Pacific Basin Business Economics and Finance Volume 6 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2017 ; 9781787434103 ; 9781787434097 ; 9781787434097 ; Advances in Pacific Basin Business, Economics and Finance Volume 5 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2018 ; 9781787564466 ; 9781787564459 ; 9781787564459 ; Advances in Pacific Basin Business, Economics and Finance Volume 6 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
 
  }
 
@@ -1134,15 +1134,22 @@
 
  }
 
- {
-  title <
-   name = Advances in Race and Ethnicity in Education ;
-   issn = 2051-2317 ;
-   type = bookSeries
-  >
-  #param[journal_issn] = 2051-2317
-  #series = aree
-
+# {
+#  title <
+#   name = Advances in Race and Ethnicity in Education ;
+#   issn = 2051-2317 ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] = 2051-2317
+#  #series = aree
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
+      
    au < finished ; finished ; 2013 ; 9781781906217 ; 9781781906224 ; 9781781906224 ; Black Male Teachers Volume 1 ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 9781783507832 ; 9781784412838 ; 9781784412838 ; African American Male Students in PreK-12 Schools: Informing Research, Policy, and Practice Volume 2 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < finished ; finished ; 2016 ; 9781785601194 ; 9781785601187 ; 9781785601187 ; Gifted Children of Color Around the World: Diverse Needs, Exemplary Practices, and Directions for the Future Volume 3 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
@@ -1152,15 +1159,22 @@
 
  }
 
- {
-  title <
-   name = Advances in Research Ethics and Integrity ;
-   issn = 2398-6018 ;
-   type = bookSeries
-  >
-  #param[journal_issn] = 2398-6018
-  #series = arei
-
+# {
+#  title <
+#   name = Advances in Research Ethics and Integrity ;
+#   issn = 2398-6018 ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] = 2398-6018
+#  #series = arei
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
+      
    au < finished ; finished ; 2017 ; 9781787141315 ; 9781787141308 ; 9781787141308 ; Finding Common Ground: Consensus in Research Ethics Across the Social Sciences Volume 1 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9781787144866 ; 9781787144859 ; 9781787144859 ; The Ethics of Online Research Volume 2 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2018 ; 9781787146082 ; 9781787146075 ; 9781787146075 ; Virtue Ethics in the Conduct and Governance of Social Science Research Volume 3 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -1241,14 +1255,21 @@
 
  }
 
- {
-  title <
-   name = Advances in Special Education Technology ;
-   issn = 2056-7693 ;
-   type = bookSeries
-  >
-  #param[journal_issn] = 2056-7693
-  #series = aset
+# {
+#  title <
+#   name = Advances in Special Education Technology ;
+#   issn = 2056-7693 ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] = 2056-7693
+#  #series = aset
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
 
    au < finished ; finished ; 2015 ; 9781784416423 ; 9781784416416 ; 9781784416416 ; Efficacy of Assistive Technology Interventions Volume 1 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2015 ; 9781785602894 ; 9781785602887 ; 9781785602887 ; Accessible Instructional Design Volume 2 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -1450,14 +1471,21 @@
 
  }
 
- {
-  title <
-   name = Business and Society 360 ;
-   issn = 2514-1759 ;
-   type = bookSeries
-  >
-  #param[journal_issn] = 2514-1759
-  #series = bas
+# {
+#  title <
+#   name = Business and Society 360 ;
+#   issn = 2514-1759 ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] = 2514-1759
+#  #series = bas
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
 
    au < finished ; finished ; 2017 ; 9781787144088 ; 9781787144071 ; 9781787144071 ; Stakeholder Management Volume 1 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2018 ; 9781787542600 ; 9781787542594 ; 9781787542594 ; Corporate Social Responsibility Volume 2 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -1523,13 +1551,20 @@
 
  }
 
- {
-  title <
-   name = Concise Guides to the United Nations Sustainable Development Goals ;
-   type = bookSeries
-  >
-  #param[journal_issn] =
-  #series = sdg
+# {
+#  title <
+#   name = Concise Guides to the United Nations Sustainable Development Goals ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] =
+#  #series = sdg
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
 
    au < finished ; finished ; 2018 ; 9781787696280 ; 9781787696259 ; 9781787696259 ; SDG1 – No Poverty: Making the Dream a Reality ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2018 ; 9781787694262 ; 9781787694231 ; 9781787694231 ; SDG4 – Quality Education: Inclusivity, Equity and Lifelong Learning For All ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -1554,7 +1589,7 @@
    au < finished ; finished ; 2016 ; 9781785608216 ; 9781785608209 ; 9781785608209 ; New Perspectives on Research, Policy & Practice in Public Entrepreneurship Volume 6 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2017 ; 9781787142817 ; 9781787142800 ; 9781787142800 ; Entrepreneurship Education Volume 7 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2018 ; 9781787563766 ; 9781787563759 ; 9781787563759 ; Entrepreneurship and the Sustainable Development Goals Volume 8 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-   au < finished ; finished ; 2018 ; 9781787563728 ; 9781787563711 ; 9781787563711 ; Creating Entrepreneurial Space: Talking Through Multi-Voices Volume 9A , Reflections on Emerging Debates ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; finished ; 2018 ; 9781787563728 ; 9781787563711 ; 9781787563711 ; Creating Entrepreneurial Space: Talking Through Multi-Voices, Reflections on Emerging Debates Volume 9A ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
 
  }
 
@@ -1828,7 +1863,7 @@
    au < finished ; finished ; 2016 ; 9781786353849 ; 9781786353832 ; 9781786353832 ; Accountability and Social Responsibility: International Perspectives Volume 9 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2016 ; 9781786356260 ; 9781786356253 ; 9781786356253 ; Corporate Responsibility and Stakeholding Volume 10 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9781787144125 ; 9781787144118 ; 9781787144118 ; Corporate Social Responsibility and Corporate Governance Volume 11 ; http://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-   au < superseded ; exists ; 2017 ; 9781787144125 ; 9781787144118 ; 9781787144118 ; Volume 11 - Corporate Social Responsibility and Corporate Governance: Concepts, Perspectives and Emerging Trends in Ibero-America [superseded] ; https://www.emeraldinsight.com/ ; > #same volume preserved in different series.
+   au < superseded ; exists ; 2017 ; 9781787144125 ; 9781787144118 ; 9781787144118 ; Corporate Social Responsibility and Corporate Governance: Concepts, Perspectives and Emerging Trends in Ibero-America Volume 11 [superseded] ; https://www.emeraldinsight.com/ ; > #same volume preserved in different series.
    au < finished ; finished ; 2017 ; 9781787146952 ; 9781787146945 ; 9781787146945 ; Modern Organisational Governance Volume 12 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2018 ; 9781787561625 ; 9781787561618 ; 9781787561618 ; Redefining Corporate Social Responsibility Volume 13 ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2018 ; 9781787563803 ; 9781787563797 ; 9781787563797 ; Stakeholders, Governance and Responsibility Volume 14 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -2226,23 +2261,30 @@
   # notReady: 9780080456041 9780857245670 hashing issues outside our control.
   #series = hit
 
-   au < finished ; frozen ; 2001 ; 9780080435954 ; 9781615832460 ; 9781615832460 ; Handbook of Transport Systems and Traffic Control Volume 3 (9781615832460) ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
-   au < finished ; frozen ; 2003 ; 9780080441030 ; 9781786359698 ; 9781786359698 ; Handbook of Transport and the Environment Volume 4 (9781786359698) ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
-   au < finished ; frozen ; 2004 ; 9780080441085 ; 9781615832538 ; 9781615832538 ; Handbook of Transport Geography and Spatial Systems Volume 5 (9781615832538) ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
-   au < doNotProcess ; exists ; 2005 ; 9780080441153 ; 9780080456041 ; 9780080456041 ; Handbook of Transport Strategy, Policy and Institutions Volume 6 (9780080456041) ; https://www.emeraldinsight.com/ ; >
-   au < doNotProcess ; exists ; 2007 ; 9780080453767 ; 9780857245670 ; 9780857245670 ; Handbook of Transport Modelling: 2nd Edition Volume 1 (9780857245670) ; https://www.emeraldinsight.com/ ; >
-   au < finished ; finished ; 2008 ; 9780080435930 ; 9780857245632 ; 9780080435930 ; Handbook of Logistics and Supply-Chain Management Volume 2 (9780857245632) ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+   au < finished ; frozen ; 2001 ; 9780080435954 ; 9781615832460 ; 9781615832460 ; Handbook of Transport Systems and Traffic Control (9781615832460) ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
+   au < finished ; frozen ; 2003 ; 9780080441030 ; 9781786359698 ; 9781786359698 ; Handbook of Transport and the Environment (9781786359698) ; http://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; frozen ; 2004 ; 9780080441085 ; 9781615832538 ; 9781615832538 ; Handbook of Transport Geography and Spatial Systems (9781615832538) ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
+   au < doNotProcess ; exists ; 2005 ; 9780080441153 ; 9780080456041 ; 9780080456041 ; Handbook of Transport Strategy, Policy and Institutions (9780080456041) ; https://www.emeraldinsight.com/ ; >
+   au < doNotProcess ; exists ; 2007 ; 9780080453767 ; 9780857245670 ; 9780857245670 ; Handbook of Transport Modelling: 2nd Edition (9780857245670) ; https://www.emeraldinsight.com/ ; >
+   au < finished ; finished ; 2008 ; 9780080435930 ; 9780857245632 ; 9780080435930 ; Handbook of Logistics and Supply-Chain Management (9780857245632) ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
 
  }
 
- {
-  title <
-   name = Innovations in Higher Education Teaching and Learning ;
-   issn = 2055-3641 ;
-   type = bookSeries
-  >
-  #param[journal_issn] = 2055-3641
-  #series = ihetl
+# {
+#  title <
+#   name = Innovations in Higher Education Teaching and Learning ;
+#   issn = 2055-3641 ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] = 2055-3641
+#  #series = ihetl
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
 
    au < finished ; finished ; 2014 ; 9781784412357 ; 9781784412340 ; 9781784412340 ; Inquiry-based Learning for Faculty and Institutional Development: A Conceptual and Practical Resource for Educators Volume 1 ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2014 ; 9781784412371 ; 9781784412364 ; 9781784412364 ; Inquiry-Based Learning for the Arts, Humanities, and Social Sciences: A Conceptual and Practical Resource for Educators Volume 2 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -2323,6 +2365,7 @@
   #param[journal_issn] = 1479-3679
   #series = ipes
 
+
    au < finished ; finished ; 2002 ; 9780762308217 ; 9781849501224 ; 9781849501224 ; New Paradigms and Recurring Paradoxes in Education for Citizenship: An International Comparison Volume 5 ; http://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2005 ; 9780762311750 ; 9781849503259 ; 9781849503259 ; Global Trends in Educational Policy Volume 6 ; http://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2006 ; 9780762313082 ; 9781849504096 ; 9781849504096 ; The Impact of Comparative Education Research on Institutional Theory Volume 7 ; http://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
@@ -2357,14 +2400,21 @@
 
  }
 
- {
-  title <
-   name = International Perspectives on Equality, Diversity and Inclusion ;
-   issn = 2051-2333 ;
-   type = bookSeries
-  >
-  #param[journal_issn] = 2051-2333
-  #series = ipedi
+# {
+#  title <
+#   name = International Perspectives on Equality, Diversity and Inclusion ;
+#   issn = 2051-2333 ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] = 2051-2333
+#  #series = ipedi
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
 
    au < finished ; finished ; 2014 ; 9781783506774 ; 9781783506781 ; 9781783506781 ; Practical and Theoretical Implications of Successfully Doing Difference in Organizations Volume 1 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2015 ; 9781784416904 ; 9781784416898 ; 9781784416898 ; Gender, Careers and Inequalities in Medicine and Medical Education: International Perspectives Volume 2 ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -2531,14 +2581,21 @@
 
  }
 
- {
-  title <
-   name = New Horizons in Managerial and Organizational Cognition ;
-   issn = 2397-5210 ;
-   type = bookSeries
-  >
-  #param[journal_issn] = 2397-5210
-  #series = nhmoc
+# {
+#  title <
+#   name = New Horizons in Managerial and Organizational Cognition ;
+#   issn = 2397-5210 ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] = 2397-5210
+#  #series = nhmoc
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
 
    au < finished ; finished ; 2016 ; 9781786351708 ; 9781786351692 ; 9781786351692 ; Uncertainty and Strategic Decision Making Volume 1 ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9781787436770 ; 9781787436763 ; 9781787436763 ; Methodological Challenges and Advances in Managerial and Organizational Cognition Volume 2 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -2650,15 +2707,22 @@
 
  }
 
- {
-  title <
-   name = Public Policy and Governance ;
-   issn = 2053-7697 ;
-   type = bookSeries
-  >
-  #param[journal_issn] = 2053-7697
-  #series = ppg
-  #continues = 0732-1317
+# {
+#  title <
+#   name = Public Policy and Governance ;
+#   issn = 2053-7697 ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] = 2053-7697
+#  #series = ppg
+#  #continues = 0732-1317
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
 
    au < finished ; finished ; 2015 ; 9781784418847 ; 9781784418830 ; 9781784418830 ; Asian Leadership in Policy and Governance Volume 24 ; https://www.emeraldinsight.com/ ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 2016 ; 9781786350565 ; 9781786350558 ; 9781786350558 ; Governing for the Future: Designing Democratic Institutions for a Better Tomorrow Volume 25 ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -3873,14 +3937,21 @@
 
  }
 
- {
-  title <
-   name = Studies in Information ;
-   issn = 2055-5377 ;
-   type = bookSeries
-  >
-  #param[journal_issn] = 2055-5377
-  #series = si
+# {
+#  title <
+#   name = Studies in Information ;
+#   issn = 2055-5377 ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] = 2055-5377
+#  #series = si
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
 
    au < finished ; finished ; 2015 ; 9781784412555 ; 9781784412548 ; 9781784412548 ; Genre Theory in Information Studies Volume 11 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2017 ; 9781787145320 ; 9781787145313 ; 9781787145313 ; The Organization of Knowledge: Caught between Global Structures and Local Meaning Volume 12 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -3945,7 +4016,7 @@
    au < finished ; finished ; 2018 ; 9781787437647 ; 9781787437630 ; 9781787437630 ; Special Issue: Cultural Expert Witnessing Volume 74 ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
    au < finished ; finished ; 2018 ; 9781787560314 ; 9781787560307 ; 9781787560307 ; Special Issue: Law and the Imagining of Difference Volume 75 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2018 ; 9781787562080 ; 9781787562073 ; 9781787562073 ; Studies in Law, Politics, and Society Volume 76 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
-   au < finished ; finished ; 2018 ; 9781787692701 ; 9781787692695 ; 9781787692695 ; After Imprisonment Volume 77 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
+   au < finished ; finished ; 2018 ; 9781787692701 ; 9781787692695 ; 9781787692695 ; After Imprisonment: Special Issue Volume 77 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
    au < frozen ; exists ; 2019 ; 9781787695160 ; 9781787695153 ; 9781787695153 ; Cultural Expertise and Socio-Legal Studies Volume 78 ; https://www.emeraldinsight.com/ ; >
 
  }
@@ -4085,14 +4156,21 @@
 
  }
 
- {
-  title <
-   name = Studies in the Development of Accounting Thought ;
-   issn = 1479-3504 ;
-   type = bookSeries
-  >
-  #param[journal_issn] = 1479-3504
-  #series = sdat
+# {
+#  title <
+#   name = Studies in the Development of Accounting Thought ;
+#   issn = 1479-3504 ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] = 1479-3504
+#  #series = sdat
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
 
    au < finished ; finished ; 2016 ; 9781786353900 ; 9781786353894 ; 9781786353894 ; A. C. Littleton's Final Thoughts on Accounting: A Collection of Unpublished Essays Volume 20 ; https://www.emeraldinsight.com/ ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 2017 ; 9781787148420 ; 9781787148413 ; 9781787148413 ; Understanding Mattessich and Ijiri: A Study of Accounting Thought Volume 21 ; https://www.emeraldinsight.com/ ; reingest5.clockss.org:8082 >
@@ -4118,13 +4196,20 @@
 
  }
 
- {
-  title <
-   name = The Theory and Practice of Financial Stability ;
-   type = bookSeries
-  >
-  #param[journal_issn] =
-  #series = tpfs
+# {
+#  title <
+#   name = The Theory and Practice of Financial Stability ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] =
+#  #series = tpfs
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
 
    au < finished ; finished ; 2018 ; 9781787568341 ; 9781787568334 ; 9781787568334 ; Understanding Financial Stability Volume 1 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2018 ; 9781787696822 ; 9781787696815 ; 9781787696815 ; The Banking Sector Under Financial Stability Volume 2 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
@@ -4134,14 +4219,21 @@
 
  }
 
- {
-  title <
-   name = Theory and Method in Higher Education Research ;
-   issn = 2056-3752 ;
-   type = bookSeries
-  >
-  #param[journal_issn] = 2056-3752
-  #series = tmher
+# {
+#  title <
+#   name = Theory and Method in Higher Education Research ;
+#   issn = 2056-3752 ;
+#   type = bookSeries
+#  >
+#  #param[journal_issn] = 2056-3752
+#  #series = tmher
+#
+  {
+  
+    title < 
+      name = Emerald Group Publishing Books ;
+      type = bookSeries
+    >
 
    au < finished ; finished ; 2015 ; 9781785602870 ; 9781785602863 ; 9781785602863 ; Theory and Method in Higher Education Research Volume 1 ; https://www.emeraldinsight.com/ ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2016 ; 9781786358950 ; 9781786358943 ; 9781786358943 ; Theory and Method in Higher Education Research Volume 2 ; https://www.emeraldinsight.com/ ; reingest3.clockss.org:8083 >
