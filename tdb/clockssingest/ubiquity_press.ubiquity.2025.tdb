@@ -46,7 +46,7 @@
       au < manifest ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2023 ; 2023 ; 26 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < expected ; exists ; 2024 ; 27 ; Journal of The American Society of Questioned Document Examiners Volume 2024 ; 2024 ; 27 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < expected ; exists ; 2025 ; 28 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 28 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < manifest ; exists ; 2025 ; 28 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 28 ; ASQDE ;  ; https://journal.asqde.org/ ; >
 
   }
 
@@ -939,7 +939,7 @@
       au < superseded ; exists ; 2022 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2022 [superseded] ; 2022 ; 7 ; Ubiquity Press ;  ; https://www.glocality.eu/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 ; 8 ; Ubiquity Press ;  ; https://glocality.eu/ ; >
       au < manifest ; exists ; 2024 ; 9 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 9 ; Ubiquity Press ;  ; http://glocality.eu/ ; >
-      au < expected ; exists ; 2025 ; 10 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 10 ; Ubiquity Press ;  ; http://glocality.eu/ ; >
+      au < manifest ; exists ; 2025 ; 10 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 10 ; Ubiquity Press ;  ; http://glocality.eu/ ; >
 
   }
 
@@ -2106,7 +2106,7 @@
       au < finished ; finished ; 2020 ; 33 ; Insights: the UKSG journal Volume 2020 ; 2020 ; 33 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 34 ; Insights: the UKSG journal Volume 2021 ; 2021 ; 34 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 35 ; Insights: the UKSG journal Volume 2022 [superseded] ; 2022 ; 35 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
-      au < exists ; exists ; 2023 ; 36 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 36 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
+      au < manifest ; exists ; 2023 ; 36 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 36 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
       au < manifest ; exists ; 2024 ; 37 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 37 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
       au < manifest ; exists ; 2025 ; 38 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 38 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
 
