@@ -29,7 +29,7 @@
         au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; 3 ; Journal of Modern Philosophy Volume 3 ; >
         au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; 4 ; Journal of Modern Philosophy Volume 4 ; >
         au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; 5 ; Journal of Modern Philosophy Volume 5 ; >
-        au < crawling ; exists ; 2024 ; 2024 ; 6 ; Journal of Modern Philosophy Volume 6 ; >
+        au < deepCrawl ; exists ; 2024 ; 2024 ; 6 ; Journal of Modern Philosophy Volume 6 ; >
         au < manifest ; exists ; 2025 ; 2025 ; 7 ; Journal of Modern Philosophy Volume 7 ; >
 
     }
@@ -150,7 +150,7 @@
         au < frozen ; exists ; 2021 ; 2021 ; 4 ; International Journal of First Aid Education Volume 4 ; >
         au < frozen ; exists ; 2022 ; 2022 ; 5 ; International Journal of First Aid Education Volume 5 ; >
         au < frozen ; exists ; 2023 ; 2023 ; 6 ; International Journal of First Aid Education Volume 6 ; >
-        au < crawling ; exists ; 2024 ; 2024 ; 7 ; International Journal of First Aid Education Volume 7 ; >
+        au < deepCrawl ; exists ; 2024 ; 2024 ; 7 ; International Journal of First Aid Education Volume 7 ; >
         au < manifest ; exists ; 2025 ; 2025 ; 8 ; International Journal of First Aid Education Volume 8 ; >
 
   }
@@ -182,7 +182,7 @@
         au < frozen ; exists ; 2021 ; 2021 ; 21 ; Language Documentation and Description Volume 21 ; >
         au < frozen ; exists ; 2022 ; 2022 ; 22 ; Language Documentation and Description Volume 22 ; >
         au < frozen ; exists ; 2023 ; 2023 ; 23 ; Language Documentation and Description Volume 23 ; >
-        au < crawling ; exists ; 2024 ; 2024 ; 24 ; Language Documentation and Description Volume 24 ; >
+        au < deepCrawl ; exists ; 2024 ; 2024 ; 24 ; Language Documentation and Description Volume 24 ; >
         au < manifest ; exists ; 2025 ; 2025 ; 25 ; Language Documentation and Description Volume 25 ; >
     }
   }
