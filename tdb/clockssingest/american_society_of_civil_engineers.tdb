@@ -24,8 +24,8 @@
 
     param[journal_id] = aomjah
     
-    au < crawling ; exists ; 2023 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2024 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2023 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2024 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
     au < manifest ; exists ; 2025 ; ASCE OPEN: Multidisciplinary Journal of Civil Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
 
   }
@@ -39,13 +39,13 @@
 
     param[journal_id] = ajrua6
     
-    au < crawling ; exists ; 2015 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2016 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2017 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2018 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2019 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 5 ; 5 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2020 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 6 ; 6 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2021 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 7 ; 7 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2015 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2016 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2017 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 3 ; 3 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2018 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 4 ; 4 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2019 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 5 ; 5 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2020 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 6 ; 6 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2021 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 7 ; 7 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2022 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 8 ; 8 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2023 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 9 ; 9 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 10 ; 10 ; https://ascelibrary.org/ ; >
@@ -62,23 +62,23 @@
 
     param[journal_id] = ciegag
     
-    au < crawling ; exists ; 2005 ; Civil Engineering Magazine Volume 75 ; 75 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2006 ; Civil Engineering Magazine Volume 76 ; 76 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2007 ; Civil Engineering Magazine Volume 77 ; 77 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2008 ; Civil Engineering Magazine Volume 78 ; 78 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2009 ; Civil Engineering Magazine Volume 79 ; 79 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2010 ; Civil Engineering Magazine Volume 80 ; 80 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2011 ; Civil Engineering Magazine Volume 81 ; 81 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2012 ; Civil Engineering Magazine Volume 82 ; 82 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2013 ; Civil Engineering Magazine Volume 83 ; 83 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2014 ; Civil Engineering Magazine Volume 84 ; 84 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2015 ; Civil Engineering Magazine Volume 85 ; 85 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2016 ; Civil Engineering Magazine Volume 86 ; 86 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2017 ; Civil Engineering Magazine Volume 87 ; 87 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2018 ; Civil Engineering Magazine Volume 88 ; 88 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2019 ; Civil Engineering Magazine Volume 89 ; 89 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2020 ; Civil Engineering Magazine Volume 90 ; 90 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2021 ; Civil Engineering Magazine Volume 91 ; 91 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2005 ; Civil Engineering Magazine Volume 75 ; 75 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2006 ; Civil Engineering Magazine Volume 76 ; 76 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2007 ; Civil Engineering Magazine Volume 77 ; 77 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2008 ; Civil Engineering Magazine Volume 78 ; 78 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2009 ; Civil Engineering Magazine Volume 79 ; 79 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2010 ; Civil Engineering Magazine Volume 80 ; 80 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2011 ; Civil Engineering Magazine Volume 81 ; 81 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2012 ; Civil Engineering Magazine Volume 82 ; 82 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2013 ; Civil Engineering Magazine Volume 83 ; 83 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2014 ; Civil Engineering Magazine Volume 84 ; 84 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2015 ; Civil Engineering Magazine Volume 85 ; 85 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2016 ; Civil Engineering Magazine Volume 86 ; 86 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2017 ; Civil Engineering Magazine Volume 87 ; 87 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2018 ; Civil Engineering Magazine Volume 88 ; 88 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2019 ; Civil Engineering Magazine Volume 89 ; 89 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2020 ; Civil Engineering Magazine Volume 90 ; 90 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2021 ; Civil Engineering Magazine Volume 91 ; 91 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2022 ; Civil Engineering Magazine Volume 92 ; 92 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2023 ; Civil Engineering Magazine Volume 93 ; 93 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Civil Engineering Magazine Volume 94 ; 94 ; https://ascelibrary.org/ ; >
@@ -96,12 +96,12 @@
 
     param[journal_id] = geosek 
     
-    au < crawling ; exists ; 2016 ; GEOSTRATA Magazine Volume 20 ; 20 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2017 ; GEOSTRATA Magazine Volume 21 ; 21 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2018 ; GEOSTRATA Magazine Volume 22 ; 22 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2019 ; GEOSTRATA Magazine Volume 23 ; 23 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2020 ; GEOSTRATA Magazine Volume 24 ; 24 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2021 ; GEOSTRATA Magazine Volume 25 ; 25 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2016 ; GEOSTRATA Magazine Volume 20 ; 20 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2017 ; GEOSTRATA Magazine Volume 21 ; 21 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2018 ; GEOSTRATA Magazine Volume 22 ; 22 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2019 ; GEOSTRATA Magazine Volume 23 ; 23 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2020 ; GEOSTRATA Magazine Volume 24 ; 24 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2021 ; GEOSTRATA Magazine Volume 25 ; 25 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2022 ; GEOSTRATA Magazine Volume 26 ; 26 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2023 ; GEOSTRATA Magazine Volume 27 ; 27 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; GEOSTRATA Magazine Volume 28 ; 28 ; https://ascelibrary.org/ ; >
@@ -118,21 +118,21 @@
 
     param[journal_id] = jhtrcq 
     
-    au < crawling ; exists ; 2006 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 1 ; 1 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2007 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 2 ; 2 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2008 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 3 ; 3 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2010 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 4 ; 4 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2011 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 5 ; 5 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2012 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 6 ; 6 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2013 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 7 ; 7 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2014 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 8 ; 8 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2015 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 9 ; 9 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2016 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 10 ; 10 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2017 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 11 ; 11 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2018 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 12 ; 12 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2019 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 13 ; 13 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2020 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 14 ; 14 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2021 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 15 ; 15 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2006 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 1 ; 1 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2007 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 2 ; 2 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2008 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 3 ; 3 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2010 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 4 ; 4 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2011 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 5 ; 5 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2012 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 6 ; 6 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2013 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 7 ; 7 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2014 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 8 ; 8 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2015 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 9 ; 9 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2016 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 10 ; 10 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2017 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 11 ; 11 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2018 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 12 ; 12 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2019 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 13 ; 13 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2020 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 14 ; 14 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2021 ; Journal of Highway and Transportation Research and Development (English Edition) Volume 15 ; 15 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -145,9 +145,9 @@
 
     param[journal_id] = jswbay 
     
-    au < crawling ; exists ; 2019 ; Journal of Sustainable Water in the Built Environment Volume 5 ; 5 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2020 ; Journal of Sustainable Water in the Built Environment Volume 6 ; 6 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2021 ; Journal of Sustainable Water in the Built Environment Volume 7 ; 7 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2019 ; Journal of Sustainable Water in the Built Environment Volume 5 ; 5 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2020 ; Journal of Sustainable Water in the Built Environment Volume 6 ; 6 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2021 ; Journal of Sustainable Water in the Built Environment Volume 7 ; 7 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2022 ; Journal of Sustainable Water in the Built Environment Volume 8 ; 8 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2023 ; Journal of Sustainable Water in the Built Environment Volume 9 ; 9 ; https://ascelibrary.org/ ; >
 
@@ -1538,11 +1538,11 @@
     {
     param[journal_id] = jpeodx
 
-    au < crawling ; exists ; 2017 ; Journal of Transportation Engineering, Part B: Pavements Volume 143 ; 143 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2018 ; Journal of Transportation Engineering, Part B: Pavements Volume 144 ; 144 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2019 ; Journal of Transportation Engineering, Part B: Pavements Volume 145 ; 145 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2020 ; Journal of Transportation Engineering, Part B: Pavements Volume 146 ; 146 ; https://ascelibrary.org/ ; >
-    au < crawling ; exists ; 2021 ; Journal of Transportation Engineering, Part B: Pavements Volume 147 ; 147 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2017 ; Journal of Transportation Engineering, Part B: Pavements Volume 143 ; 143 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2018 ; Journal of Transportation Engineering, Part B: Pavements Volume 144 ; 144 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2019 ; Journal of Transportation Engineering, Part B: Pavements Volume 145 ; 145 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2020 ; Journal of Transportation Engineering, Part B: Pavements Volume 146 ; 146 ; https://ascelibrary.org/ ; >
+    au < frozen ; exists ; 2021 ; Journal of Transportation Engineering, Part B: Pavements Volume 147 ; 147 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2022 ; Journal of Transportation Engineering, Part B: Pavements Volume 148 ; 148 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 2023 ; Journal of Transportation Engineering, Part B: Pavements Volume 149 ; 149 ; https://ascelibrary.org/ ; >
     au < crawling ; exists ; 2024 ; Journal of Transportation Engineering, Part B: Pavements Volume 150 ; 150 ; https://ascelibrary.org/ ; >

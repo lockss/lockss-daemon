@@ -37,7 +37,7 @@
     au < finished ; frozen ; 2021 ; JAMA Cardiology Volume 6 ; 2021 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; JAMA Cardiology Volume 7 ; 2022 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; JAMA Cardiology Volume 8 ; 2023 ; https://jamanetwork.com/ ; >
-    au < crawling ; exists ; 2024 ; JAMA Cardiology Volume 9 ; 2024 ; https://jamanetwork.com/ ; >
+    au < frozen ; exists ; 2024 ; JAMA Cardiology Volume 9 ; 2024 ; https://jamanetwork.com/ ; >
     au < manifest ; exists ; 2025 ; JAMA Cardiology Volume 10 ; 2025 ; https://jamanetwork.com/ ; >
 
   }
@@ -399,7 +399,7 @@
     au < finished ; frozen ; 2021 ; JAMA: The Journal of the American Medical Association Volume 325-326 ; 2021 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; JAMA: The Journal of the American Medical Association Volume 327-328 ; 2022 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2023 ; JAMA: The Journal of the American Medical Association Volume 329-330 ; 2023 ; https://jamanetwork.com/ ; >
-    au < crawling ; exists ; 2024 ; JAMA: The Journal of the American Medical Association Volume 331-332 ; 2024 ; https://jamanetwork.com/ ; >
+    au < frozen ; exists ; 2024 ; JAMA: The Journal of the American Medical Association Volume 331-332 ; 2024 ; https://jamanetwork.com/ ; >
     au < manifest ; exists ; 2025 ; JAMA: The Journal of the American Medical Association Volume 333-334 ; 2025 ; https://jamanetwork.com/ ; >
 
   }
