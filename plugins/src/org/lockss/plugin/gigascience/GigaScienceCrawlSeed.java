@@ -195,12 +195,13 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
                                         @Override
                                         public void foundLink(String doiUrl) {
                                             log.debug3("doiUrl is added = " + doiUrl);
-                                            log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + DATASET);
-                                            log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + SAMPLE);
-                                            log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl);
                                             partial.add(apiSingleDoiAPIUrl + doiUrl);
-                                            partial.add(apiSingleDoiAPIUrl + doiUrl + SAMPLE);
-                                            partial.add(apiSingleDoiAPIUrl + doiUrl + FILE);
+                                            //log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + DATASET);
+                                            //log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + SAMPLE);
+                                            //log.debug3("URL is" + apiSingleDoiAPIUrl + doiUrl + FILE);
+                                            //partial.add(apiSingleDoiAPIUrl + doiUrl + DATASET);
+                                            //partial.add(apiSingleDoiAPIUrl + doiUrl + SAMPLE);
+                                            //partial.add(apiSingleDoiAPIUrl + doiUrl + FILE);
                                         }
                                     });
                         }
