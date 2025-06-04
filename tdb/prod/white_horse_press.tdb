@@ -36,7 +36,7 @@
     au < released ; 2021 ; Global Environment Volume 14 ; 14 >
     au < released ; 2022 ; Global Environment Volume 15 ; 15 >
     au < released ; 2023 ; Global Environment Volume 16 ; 16 >
-    au < testing ; 2024 ; Global Environment Volume 17 ; 17 >
+    au < ready ; 2024 ; Global Environment Volume 17 ; 17 >
     au < manifest ; 2025 ; Global Environment Volume 18 ; 18 >
 
   }
@@ -65,7 +65,7 @@
     au < released ; 2021 ; Nomadic Peoples Volume 25 ; 25 >
     au < released ; 2022 ; Nomadic Peoples Volume 26 ; 26 >
     au < released ; 2023 ; Nomadic Peoples Volume 27 ; 27 >
-    au < testing ; 2024 ; Nomadic Peoples Volume 28 ; 28 >
+    au < ready ; 2024 ; Nomadic Peoples Volume 28 ; 28 >
     au < manifest ; 2025 ; Nomadic Peoples Volume 29 ; 29 >
 
   }
@@ -104,7 +104,7 @@
     au < released ; 2021 ; Environment and History Volume 27 ; 27 >
     au < released ; 2022 ; Environment and History Volume 28 ; 28 >
     au < released ; 2023 ; Environment and History Volume 29 ; 29 >
-    au < testing ; 2024 ; Environment and History Volume 30 ; 30 >
+    au < ready ; 2024 ; Environment and History Volume 30 ; 30 >
     au < manifest ; 2025 ; Environment and History Volume 31 ; 31 >
 
   }
@@ -341,7 +341,7 @@
      au < doNotProcess ; 2021 ; 2021 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2021 ; 4 >
      au < released ; 2022 ; 2022 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2022 ; 5 >
      au < released ; 2023 ; 2023 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2023 ; 6 >
-     au < testing ; 2024 ; 2024 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2024 ; 7 >
+     au < ready ; 2024 ; 2024 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2024 ; 7 >
      au < manifest ; 2025 ; 2025 ; Worldwide Waste: Journal of Interdisciplinary Studies Volume 2025 ; 8 >
   }
 
@@ -355,7 +355,7 @@
      param[journal_id] = CCH
      param[base_url] = https://www.whp-journals.co.uk/
      
-     au < testing ; 2024 ; 2024 ; Climates and Cultures in History Volume 2024 ; 1 >
+     au < ready ; 2024 ; 2024 ; Climates and Cultures in History Volume 2024 ; 1 >
      au < expected ; 2025 ; 2025 ; Climates and Cultures in History Volume 2025 ; 2 >
   }
 
@@ -369,7 +369,7 @@
      param[journal_id] = PP
      param[base_url] = https://www.whp-journals.co.uk/
      
-     au < testing ; 2024 ; 2024 ; Plant Perspectives Volume 2024 ; 1 >
+     au < ready ; 2024 ; 2024 ; Plant Perspectives Volume 2024 ; 1 >
      au < manifest ; 2025 ; 2025 ; Plant Perspectives Volume 2025 ; 2 >
   }
 
