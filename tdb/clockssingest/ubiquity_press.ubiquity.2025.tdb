@@ -262,7 +262,7 @@
       >
 
       comment[publisher] = Liverpool University Press
-      #param[base_url] = https://www.modernlanguagesopen.org/
+      #param[base_url] = https://modernlanguagesopen.org/
       nondefparam[base_url2] = https://account.modernlanguagesopen.org/
       nondefparam[journal_id] = up-j-mlo
 
@@ -2312,8 +2312,11 @@
       nondefparam[base_url2] = https://account.seejournal.org/
       nondefparam[journal_id] = vt-j-see
 
-      au < frozen ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ ; >
-      au < frozen ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ ; >
+      au < superseded ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 [superseded] ; 2020 ; 1 ; Virginia Tech Publishing ; removed www ; https://www.seejournal.org/ ; >
+      au < superseded ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 [superseded] ; 2021 ; 2 ; Virginia Tech Publishing ; removed www ; https://www.seejournal.org/ ; >
+
+      au < manifest ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
+      au < manifest ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
       au < superseded ; exists ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 [superseded] ; 2022 ; 3 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; 4 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ ; >
       au < manifest ; exists ; 2024 ; 5 ; Studies in Engineering Education Volume 2024 ; 2024 ; 5 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
