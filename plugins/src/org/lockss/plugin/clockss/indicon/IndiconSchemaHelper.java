@@ -38,6 +38,7 @@ import java.util.Map;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
+import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
 
@@ -46,14 +47,8 @@ public class IndiconSchemaHelper implements SourceXmlSchemaHelper{
     private static final Logger log = Logger.getLogger(IndiconSchemaHelper.class);
 
     // this is global for all articles in the file
-    private static final String journal_xpath = "/manifest/journal";
-
-    private static final String jmeta = "journal_metadata";
-    private static final String article = "/manifest/journal/issue/articles/article";
-
-    private static String publisher = journal_xpath + "/publisher";
-    private static String filepath = article + "/files/file/path";
-    private static String issn = "/manifest/journal/journal_metadata/issn";
+    private static final String publisher = "/manifest/journal/publisher";
+    private static final String path = "path";
 
     /*
      *  The following 3 variables are needed to use the XPathXmlMetadataParser
@@ -65,15 +60,18 @@ public class IndiconSchemaHelper implements SourceXmlSchemaHelper{
 
     static {
         articleMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE);
-        articleMap.put(issn, XmlDomMetadataExtractor.TEXT_VALUE);
     }
 
     /* 2.  Top level per-article node */
-    static private final String articleNode = article;
+    static private final String articleNode = "/manifest/journal/issue/articles/article";
 
     /* 3. Global metadata is the publisher_xpath - work around if it gets troublesome */
 
-
+    static private final Map<String, XPathValue> 
+        globalMap = new HashMap<String,XPathValue>();
+        static {
+            globalMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE); 
+        }
     /*
      * The emitter will need a map to know how to cook raw values
      */
@@ -82,7 +80,6 @@ public class IndiconSchemaHelper implements SourceXmlSchemaHelper{
     static {
         // normal journal article schema
         cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
-        cookMap.put(issn, MetadataField.FIELD_ISSN);
     }
 
     /**
@@ -90,8 +87,7 @@ public class IndiconSchemaHelper implements SourceXmlSchemaHelper{
      */
     @Override
     public Map<String, XmlDomMetadataExtractor.XPathValue> getGlobalMetaMap() {
-        //no globalMap, so returning null
-        return null;
+        return globalMap;
     }
 
     /**
@@ -142,6 +138,6 @@ public class IndiconSchemaHelper implements SourceXmlSchemaHelper{
 
     @Override
     public String getFilenameXPathKey() {
-        return filepath;
+        return path;
     }
 }

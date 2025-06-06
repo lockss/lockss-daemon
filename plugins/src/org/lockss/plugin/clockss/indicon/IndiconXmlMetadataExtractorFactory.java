@@ -32,7 +32,11 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.clockss.indicon;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
@@ -62,6 +66,17 @@ public class IndiconXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
                 log.info("setting up schema helper");
             }
             return schemaHelper;
+        }
+
+        @Override
+        protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu, ArticleMetadata oneAM) {   
+            String filenameValue = oneAM.getRaw(helper.getFilenameXPathKey());
+            String url = cu.getUrl();
+            log.debug3("file name is " + filenameValue);
+            List<String> returnList = new ArrayList<String>();
+            String pdfString = url + filenameValue;
+            returnList.add(pdfString);
+            return returnList;
         }
     }
     
