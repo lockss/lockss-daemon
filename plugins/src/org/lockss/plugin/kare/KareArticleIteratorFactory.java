@@ -44,77 +44,82 @@ import java.util.Iterator;
 import java.util.regex.Pattern;
 
 /**
- * Kare's abstract page has links to Full-Text pdf and also
- * contains a handful of metatdata types.
- *
- *  article
- *  https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&un=AGRI-42800
- *  abstract
- *  https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&un=AGRI-42800&look4=
- *  pdf
- *  https://jag.journalagent.com/z4/download_fulltext.asp?pdir=agri&plng=eng&un=AGRI-42800
- *  citation
- *  https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=AGRI-42800&format=RIS
+ Kare's abstract page has links to Full-Text pdf and also
+ contains a handful of metatdata types.
+
+ Article:
+ https://agridergisi.com/jvi.aspx?un=AGRI-42800&volume=34&issue=1
+
+ Abstract:
+ https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&un=AGRI-42800&look4=
+
+ PDF:
+ https://jag.journalagent.com/z4/download_fulltext.asp?pdir=agri&plng=eng&un=AGRI-42800
+
+ Citation:
+ https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=AGRI-42800&format=BibTeX
+ https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=AGRI-42800&format=EndNote
+ https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=AGRI-42800&format=Medlars
+ https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=AGRI-42800&format=Procite
+ https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=AGRI-42800&format=RIS
  */
+
 public class KareArticleIteratorFactory
         implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
     private static final Logger log = Logger.getLogger(KareArticleIteratorFactory.class);
-    private static String PATTERN_TEMPLATE = "\"^(%sjvi.aspx\\?pdir=%s&plng=eng&un=|https://jag.journalagent.com/.+(download_fulltext|gencitation))\", base_url, journal_id";
 
-    private static final Pattern ABSTRACT_PATTERN = Pattern.compile("https://agridergisi\\.com/jvi\\.aspx\\?pdir=agri&plng=eng&un=([^&]+)$", Pattern.CASE_INSENSITIVE);
+    private static final String ROOT_TEMPLATE = "\"%s\", web_url";
 
-    private static final Pattern PDF_PATTERN = Pattern.compile("https://jag\\.journalagent\\.com/z4/download_fulltext\\.asp\\?pdir=agri&plng=eng&un=([^&]+)$", Pattern.CASE_INSENSITIVE);
-    private static final String ABSTRACT_REPLACEMENT = "https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&un=$1";
-    private static final String PDF_REPLACEMENT = "https://jag.journalagent.com/z4/download_fulltext.asp?pdir=agri&plng=eng&un=$1";
-    private static final String CITATION_RIS_REPLACEMENT = "https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=$1&format=RIS";
-    private static final String CITATION_BIBTEX_REPLACEMENT = "https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=$1&format=BibTeX";
-    private static final String CITATION_ENDNOTE_REPLACEMENT = "https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=$1&format=EndNote";
-    private static final String CITATION_PROCITE_REPLACEMENT = "https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=$1&format=Procite";
-    private static final String CITATION_MEDLARS_REPLACEMENT = "https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=$1&format=Medlars";
-    private static final String CITATION_REFMANAGER_REPLACEMENT = "https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=$1&format=referenceManager";
+    private static final String PATTERN_TEMPLATE =
+            "\"%sz4/(download_fulltext|gencitation)\\.asp\\?\", web_url";
+
+    // PDF Pattern and Replacement
+    private static final Pattern PDF_PATTERN = Pattern.compile(
+            "z4/download_fulltext\\.asp\\?pdir=([^&]+)&plng=eng&un=([^&]+)", Pattern.CASE_INSENSITIVE);
+
+    private static final String PDF_REPLACEMENT =
+            "z4/download_fulltext.asp?pdir=$1&plng=eng&un=$2";
+
+    // Citation Pattern and Replacement
+    private static final Pattern CITATION_PATTERN = Pattern.compile(
+            "z4/gencitation\\.asp\\?pdir=([^&]+)&article=([^&]+)&format=(RIS|BibTeX|EndNote|Medlars|Procite)",
+            Pattern.CASE_INSENSITIVE);
+
+    private static final String CITATION_REPLACEMENT_RIS =
+            "z4/gencitation.asp?pdir=$1&article=$2&format=RIS";
 
 
     @Override
-    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target)
+            throws PluginException {
         SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
         builder.setSpec(new SubTreeArticleIterator.Spec()
                 .setTarget(target)
+                .setRootTemplate(ROOT_TEMPLATE)
                 .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
 
-        // set up pdf to be an aspect that will trigger an ArticleFiles
+        // Add PDF aspect
         builder.addAspect(PDF_PATTERN,
                 PDF_REPLACEMENT,
                 ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-        builder.addAspect(ABSTRACT_PATTERN,
-                ABSTRACT_REPLACEMENT,
-                ArticleFiles.ROLE_ABSTRACT);
+        // Add citation aspect
+        builder.addAspect(CITATION_PATTERN,
+                CITATION_REPLACEMENT_RIS,
+                ArticleFiles.ROLE_CITATION,
+                ArticleFiles.ROLE_ARTICLE_METADATA);
 
-        /* the various citation files */
-        builder.addAspect(CITATION_RIS_REPLACEMENT,
-                ArticleFiles.ROLE_CITATION_RIS);
-
-        builder.addAspect(CITATION_BIBTEX_REPLACEMENT,
-                ArticleFiles.ROLE_CITATION_BIBTEX);
-
-        builder.addAspect(CITATION_ENDNOTE_REPLACEMENT,
-                ArticleFiles.ROLE_CITATION_ENDNOTE);
-
+        // Set full text
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
-
-        builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA,
-                ArticleFiles.ROLE_CITATION_RIS);
 
         return builder.getSubTreeArticleIterator();
     }
 
-
     @Override
     public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
             throws PluginException {
-        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_CITATION);
     }
-
 }

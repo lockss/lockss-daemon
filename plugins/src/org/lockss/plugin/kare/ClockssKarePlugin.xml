@@ -54,6 +54,15 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>plugin_config_props</string>
         <list>
             <org.lockss.daemon.ConfigParamDescr>
+                <key>web_url</key>
+                <displayName>Web URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
                 <key>base_url</key>
                 <displayName>Base URL</displayName>
                 <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
@@ -114,18 +123,27 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_crawlrules</string>
         <list>
             <!-- static files hosted on baseur and the content url -->
-            <string>1,"^(%s|https://jag.journalagent.com/).*\.(bmp|css|pdf|jpg|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)", base_url</string>
+            <string>1,"^%s.*\.(bmp|css|pdf|jpg|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)", base_url</string>
+            <string>1,"^%s.*\.(bmp|css|pdf|jpg|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)", web_url</string>
             <string>1,"^https://(ajax|fonts)\.(googleapis|gstatic)\.com/"</string>
+            <string>1,"^https://maxcdn.bootstrapcdn.com/(font-awesome|bootstrap)/"</string>
+            <string>1,"^https://use\.fontawesome\.com/releases/"</string>
+            <string>1,"https://fonts.gstatic.com/s/robotocondensed/"</string>
+            <string>1,"%sassets/", base_url</string>
+            <string>1,"https://code\.jquery\.com/jquery.*\.js"</string>
+            <string>1,"https://netdna\.bootstrapcdn\.com/bootstrap/[^/]+/js/"</string>
+            <string>1,"https://bootflat\.github\.io/bootflat/js/"</string>
             <!-- https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&volume=34&issue=1 -->
             <string>1,"%sjvi.aspx\?pdir=%s&amp;plng=eng&amp;volume=%s", base_url, journal_id, volume</string>
             <!-- https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&un=AGRI-42800 -->
             <string>1,"%sjvi.aspx\?pdir=%s&amp;plng=eng&amp;un=[^&amp;]+", base_url, journal_id</string>
             <!-- https://jag.journalagent.com/z4/download_fulltext.asp?pdir=agri&plng=eng&un=AGRI-37132 -->
-            <string>1,"https://jag.journalagent.com/.*download_fulltext.asp\?pdir=%s&amp;plng=eng&amp;un=", journal_id</string>
+            <string>1,"%s.*download_fulltext.asp\?pdir=%s&amp;plng=eng&amp;un=", web_url, journal_id</string>
             <!-- pdf redirects to https://jag.journalagent.com/agri/pdfs/AGRI-27048-EXPERIMENTAL_AND_CLINICAL_STUDIES-SENCAN.pdf -->
-            <string>1,"https://jag.journalagent.com/%s/pdfs/", journal_id</string>
+            <string>1,"%s%s/pdfs/", web_url,journal_id</string>
             <!-- https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=AGRI-20270&format=RIS -->
-            <string>1,"https://jag.journalagent.com/.*gencitation.asp\?pdir=%s&amp;article=.*&amp;format=(RIS|EndNote|BibTeX|Medlars|Procite|referenceManager)", journal_id</string>
+            <string>1,"%s.*gencitation.asp\?pdir=%s&amp;article=.*&amp;format=(RIS|EndNote|BibTeX|Medlars|Procite|referenceManager)", web_url,journal_id</string>
+            <string>1,"%sjvi.aspx\?un=[^/]+&amp;volume=%s&amp;issue=", base_url,volume</string>
         </list>
     </entry>
     <entry>
@@ -149,7 +167,7 @@ POSSIBILITY OF SUCH DAMAGE.
         redirect pdf
         https://jag.journalagent.com/agri/pdfs/AGRI-01033-CLINICAL_CONCEPTS_AND_COMMENTARY-AKANSEL.pdf
         -->
-        <string>"^https://jag.journalagent.com/(.*download_fulltext\.asp\?pdir=%s|%s/pdfs/.+\.pdf)", journal_id, journal_id</string>
+        <string>"%s(.*download_fulltext\.asp\?pdir=%s|%s/pdfs/.+\.pdf)", web_url, journal_id, journal_id</string>
     </entry>
     <entry>
         <string>text/html_crawl_filter_factory</string>
@@ -206,12 +224,16 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_permitted_host_pattern</string>
         <list>
-            <!-- https://jag.journalagent.com/robots.txt -->
-            <!--https://jag.journalagent.com/z4/download_fulltext.asp?pdir=agri&plng=eng&un=AGRI-42800 -->
-            <string>jag\.journalagent\.com</string>
             <string>(fonts|ajax)\.googleapis\.com</string>
             <string>.+\.gstatic\.com</string>
             <string>s7\.addthis\.com</string>
+            <string>maxcdn\.bootstrapcdn\.com</string>
+            <string>use\.fontawesome\.com</string>
+            <string>code\.jquery\.com</string>
+            <string>netdna\.bootstrapcdn\.com</string>
+            <string>bootflat\.github\.io</string>
+            <string>fonts\.gstatic\.com/</string>
+            <string>jag\.journalagent\.com</string>
         </list>
     </entry>
     <entry>

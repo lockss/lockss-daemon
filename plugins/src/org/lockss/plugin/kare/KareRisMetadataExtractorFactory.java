@@ -32,6 +32,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.kare;
 
+import org.lockss.config.TdbAu;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
@@ -79,8 +81,26 @@ public class KareRisMetadataExtractorFactory
         public void extract(MetadataTarget target, CachedUrl cu, FileMetadataExtractor.Emitter emitter)
                 throws IOException, PluginException {
 
+            String tdbVolume = null;
+            String risVolume = null;
+
             // this extracts from the ris file and cooks the data according to the map
             ArticleMetadata am = extract(target, cu);
+            TdbAu tdbau = cu.getArchivalUnit().getTdbAu();
+
+            if (tdbau != null) {
+                tdbVolume = tdbau.getVolume();
+            }
+
+            risVolume = am.getRaw("VL");
+
+            log.debug3("Getting risVolume = " + risVolume + ", tdbVolume = " + tdbVolume);
+
+            // check for volume
+            if(tdbVolume != null && risVolume != null && (!tdbVolume.equals(risVolume))) {
+                log.debug3("No metadata because of none maching volume, risVolume = " + risVolume + ", tdbVolume = " + tdbVolume);
+                return; // do not emit, just return - no volume
+            }
 
             // check for existence of doi, if doesnt exist, we are looking at some cover page, toc, etc, ignore it.
             String doi = am.get(MetadataField.FIELD_DOI);

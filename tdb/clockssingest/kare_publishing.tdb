@@ -1,0 +1,30 @@
+{
+  publisher <
+    name = Kare Publishing ;
+    info[contract] = 2020
+    #info[tester] = 5 ;
+    #info[poller] = 6
+  >
+  provider = Kare Publishing
+  plugin = org.lockss.plugin.kare.ClockssKarePlugin
+  implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+        title <
+          name = Agri Journal ;
+          issn = 1300-0012 ;
+          eissn = 2458-9446
+        >
+
+        param[base_url] = https://agridergisi.com/
+        param[web_url] = https://jag.journalagent.com/
+        param[journal_id] = agri
+
+        au < testing ; exists ; 2020 ; Agri Journal Volume 32 ; 32 ; >
+        au < testing ; exists ; 2021 ; Agri Journal Volume 33 ; 33 ; >
+        au < testing ; exists ; 2022 ; Agri Journal Volume 34 ; 34 ; >
+        au < testing ; exists ; 2023 ; Agri Journal Volume 35 ; 35 ; >
+        au < testing ; exists ; 2024 ; Agri Journal Volume 36 ; 36 ; >
+        au < testing ; exists ; 2025 ; Agri Journal Volume 37 ; 37 ; >
+  }
+ }
