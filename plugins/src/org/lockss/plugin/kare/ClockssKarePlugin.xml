@@ -183,11 +183,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.kare.KareArticleIteratorFactory2</string>
+        <string>org.lockss.plugin.kare.KareArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.kare.KareArticleIteratorFactory2</string>
+        <string>org.lockss.plugin.kare.KareArticleIteratorFactory</string>
     </entry>
     <entry>
         <string>text/html_metadata_extractor_factory_map</string>
