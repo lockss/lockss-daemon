@@ -97,7 +97,7 @@
     #journal_num = 52
 
     au < frozen ; exists ; 2000 ; Australian Journal of French Studies Volume 37 ; 37 ; >
-    au < ready ; exists ; 2001 ; Australian Journal of French Studies Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2001 ; Australian Journal of French Studies Volume 38 ; 38 ; >
     au < frozen ; exists ; 2002 ; Australian Journal of French Studies Volume 39 ; 39 ; >
     au < frozen ; exists ; 2003 ; Australian Journal of French Studies Volume 40 ; 40 ; >
     au < frozen ; exists ; 2004 ; Australian Journal of French Studies Volume 41 ; 41 ; >
@@ -635,7 +635,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Francosphères Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Francosphères Volume 8 ; 8 ; >
     au < frozen ; exists ; 2020 ; Francosphères Volume 9 ; 9 ; >
-    au < ready ; exists ; 2021 ; Francosphères Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2021 ; Francosphères Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2022 ; Francosphères Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2023 ; Francosphères Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2024 ; Francosphères Volume 13 ; 13 ; >
@@ -850,7 +850,7 @@
     au < frozen ; exists ; 2004 ; Before Farming Volume 2004 ; 2004 ; >
     au < ready ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 ; >
     au < frozen ; exists ; 2006 ; Before Farming Volume 2006 ; 2006 ; >
-    au < ready ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 ; >
+    au < crawling ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Before Farming Volume 2008 ; 2008 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Before Farming Volume 2009 ; 2009 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Before Farming Volume 2010 ; 2010 ; >
@@ -2424,7 +2424,7 @@
     au < frozen ; exists ; 2013 ; French Studies Volume 67 ; 67 ; >
     au < frozen ; exists ; 2014 ; French Studies Volume 68 ; 68 ; >
     au < frozen ; exists ; 2015 ; French Studies Volume 69 ; 69 ; >
-    au < ready ; exists ; 2016 ; French Studies Volume 70 ; 70 ; >
+    au < crawling ; exists ; 2016 ; French Studies Volume 70 ; 70 ; >
     au < frozen ; exists ; 2017 ; French Studies Volume 71 ; 71 ; >
     au < frozen ; exists ; 2018 ; French Studies Volume 72 ; 72 ; >
     au < frozen ; exists ; 2019 ; French Studies Volume 73 ; 73 ; >
