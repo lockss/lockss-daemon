@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -95,7 +95,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <map>
             <entry>
                 <string>Metadata</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
             <entry>
                 <string>Poll</string>
@@ -174,41 +174,27 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.kare.KareHtmlCrawlFilterFactory</string>
     </entry>
     <entry>
-        <string>plugin_article_iterator_factory</string>
-        <string>org.lockss.plugin.kare.KareArticleIteratorFactory</string>
-    </entry>
-    <entry>
-        <string>plugin_article_metadata_extractor_factory</string>
-        <string>org.lockss.plugin.kare.KareArticleIteratorFactory</string>
-    </entry>
-    <entry>
         <string>plugin_url_consumer_factory</string>
         <string>org.lockss.plugin.kare.KareUrlConsumerFactory</string>
     </entry>
     <entry>
-        <string>text/plain_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*;RIS</string>
-                <string>org.lockss.plugin.kare.KareRisMetadataExtractorFactory</string>
-            </entry>
-        </map>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.kare.KareHtmlHashFilterFactory</string>
     </entry>
     <entry>
-        <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*;RIS</string>
-                <string>org.lockss.plugin.kare.KareRisMetadataExtractorFactory</string>
-            </entry>
-        </map>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.kare.KareArticleIteratorFactory2</string>
     </entry>
     <entry>
-        <string>application/octet-stream_metadata_extractor_factory_map</string>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.kare.KareArticleIteratorFactory2</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
         <map>
             <entry>
-                <string>*;RIS</string>
-                <string>org.lockss.plugin.kare.KareRisMetadataExtractorFactory</string>
+                <string>*</string>
+                <string>org.lockss.plugin.kare.KareHtmlMetadataExtractorFactory</string>
             </entry>
         </map>
     </entry>
