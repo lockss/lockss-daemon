@@ -1353,8 +1353,8 @@
     au < manifest ; exists ; 2017 ; 2017 ; Annals of the International Communication Association Volume 41 ; 41 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Annals of the International Communication Association Volume 42 ; 42 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Annals of the International Communication Association Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Annals of the International Communication Association Volume 44 ; 44 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Annals of the International Communication Association Volume 45 ; 45 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Annals of the International Communication Association Volume 44 ; 44 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Annals of the International Communication Association Volume 45 ; 45 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Annals of the International Communication Association Volume 46 ; 46 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Annals of the International Communication Association Volume 47 ; 47 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Annals of the International Communication Association Volume 48 ; 48 ; >
@@ -1892,8 +1892,8 @@
     au < manifest ; exists ; 2017 ; 2017 ; Art History Volume 40 ; 40 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Art History Volume 41 ; 41 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Art History Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Art History Volume 43 ; 43 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Art History Volume 44 ; 44 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Art History Volume 43 ; 43 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Art History Volume 44 ; 44 ; >
     au < ready ; exists ; 2022 ; 2022 ; Art History Volume 45 ; 45 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Art History Volume 46 ; 46 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Art History Volume 47 ; 47 ; >
@@ -2630,7 +2630,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Biometrics Volume 73 ; 73 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Biometrics Volume 74 ; 74 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Biometrics Volume 75 ; 75 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Biometrics Volume 76 ; 76 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Biometrics Volume 76 ; 76 ; >
     au < testing ; exists ; 2021 ; 2021 ; Biometrics Volume 77 ; 77 ; >
     au < ready ; exists ; 2022 ; 2022 ; Biometrics Volume 78 ; 78 ; >
     au < testing ; exists ; 2023 ; 2023 ; Biometrics Volume 79 ; 79 ; >
@@ -2853,7 +2853,7 @@
     param[journal_id] = bjro
 
     au < manifest ; exists ; 2019 ; 2019 ; BJR|Open Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; BJR|Open Volume 2 ; 2 ; >
+    au < testing ; exists ; 2020 ; 2020 ; BJR|Open Volume 2 ; 2 ; >
     au < testing ; exists ; 2021 ; 2021 ; BJR|Open Volume 3 ; 3 ; >
     au < crawling ; exists ; 2022 ; 2022 ; BJR|Open Volume 4 ; 4 ; >
     au < crawling ; exists ; 2023 ; 2023 ; BJR|Open Volume 5 ; 5 ; >
@@ -3176,7 +3176,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; The British Journal of Radiology Volume 90 ; 90 ; >
     au < manifest ; exists ; 2018 ; 2018 ; The British Journal of Radiology Volume 91 ; 91 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The British Journal of Radiology Volume 92 ; 92 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; The British Journal of Radiology Volume 93 ; 93 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The British Journal of Radiology Volume 93 ; 93 ; >
     au < testing ; exists ; 2021 ; 2021 ; The British Journal of Radiology Volume 94 ; 94 ; >
     au < testing ; exists ; 2022 ; 2022 ; The British Journal of Radiology Volume 95 ; 95 ; >
     au < crawling ; exists ; 2023 ; 2023 ; The British Journal of Radiology Volume 96 ; 96 ; >
@@ -3200,7 +3200,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; BJR|Case Reports Volume 3 ; 3 ; >
     au < manifest ; exists ; 2018 ; 2018 ; BJR|Case Reports Volume 4 ; 4 ; >
     au < manifest ; exists ; 2019 ; 2019 ; BJR|Case Reports Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; BJR|Case Reports Volume 6 ; 6 ; >
+    au < testing ; exists ; 2020 ; 2020 ; BJR|Case Reports Volume 6 ; 6 ; >
     au < testing ; exists ; 2021 ; 2021 ; BJR|Case Reports Volume 7 ; 7 ; >
     au < ready ; exists ; 2022 ; 2022 ; BJR|Case Reports Volume 8 ; 8 ; >
     au < crawling ; exists ; 2023 ; 2023 ; BJR|Case Reports Volume 9 ; 9 ; >
@@ -3429,7 +3429,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Bulletin of the Chemical Society of Japan Volume 90 ; 90 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Bulletin of the Chemical Society of Japan Volume 91 ; 91 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Bulletin of the Chemical Society of Japan Volume 92 ; 92 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Bulletin of the Chemical Society of Japan Volume 93 ; 93 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Bulletin of the Chemical Society of Japan Volume 93 ; 93 ; >
     au < testing ; exists ; 2021 ; 2021 ; Bulletin of the Chemical Society of Japan Volume 94 ; 94 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Bulletin of the Chemical Society of Japan Volume 95 ; 95 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Bulletin of the Chemical Society of Japan Volume 96 ; 96 ; >
@@ -3462,7 +3462,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Bulletin of the Institute of Classical Studies Volume 60 ; 60 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Bulletin of the Institute of Classical Studies Volume 61 ; 61 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Bulletin of the Institute of Classical Studies Volume 62 ; 62 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Bulletin of the Institute of Classical Studies Volume 63 ; 63 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Bulletin of the Institute of Classical Studies Volume 63 ; 63 ; >
     au < testing ; exists ; 2021 ; 2021 ; Bulletin of the Institute of Classical Studies Volume 64 ; 64 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Bulletin of the Institute of Classical Studies Volume 65 ; 65 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Bulletin of the Institute of Classical Studies Volume 66 ; 66 ; >
@@ -3907,7 +3907,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Chemistry Letters Volume 46 ; 46 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Chemistry Letters Volume 47 ; 47 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Chemistry Letters Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Chemistry Letters Volume 49 ; 49 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Chemistry Letters Volume 49 ; 49 ; >
     au < testing ; exists ; 2021 ; 2021 ; Chemistry Letters Volume 50 ; 50 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Chemistry Letters Volume 51 ; 51 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Chemistry Letters Volume 52 ; 52 ; >
@@ -4889,7 +4889,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Dentomaxillofacial Radiology Volume 47 ; 47 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Dentomaxillofacial Radiology Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Dentomaxillofacial Radiology Volume 49 ; 49 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Dentomaxillofacial Radiology Volume 49 ; 49 ; >
     au < testing ; exists ; 2021 ; 2021 ; Dentomaxillofacial Radiology Volume 50 ; 50 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Dentomaxillofacial Radiology Volume 51 ; 51 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Dentomaxillofacial Radiology Volume 52 ; 52 ; >
@@ -5876,7 +5876,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Environmental Toxicology and Chemistry Volume 36 ; 36 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Environmental Toxicology and Chemistry Volume 37 ; 37 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Environmental Toxicology and Chemistry Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Environmental Toxicology and Chemistry Volume 39 ; 39 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Environmental Toxicology and Chemistry Volume 39 ; 39 ; >
     au < testing ; exists ; 2021 ; 2021 ; Environmental Toxicology and Chemistry Volume 40 ; 40 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Environmental Toxicology and Chemistry Volume 41 ; 41 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Environmental Toxicology and Chemistry Volume 42 ; 42 ; >
@@ -7119,7 +7119,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Fisheries Volume 42 ; 42 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Fisheries Volume 43 ; 43 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Fisheries Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Fisheries Volume 45 ; 45 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Fisheries Volume 45 ; 45 ; >
     au < testing ; exists ; 2021 ; 2021 ; Fisheries Volume 46 ; 46 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Fisheries Volume 47 ; 47 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Fisheries Volume 48 ; 48 ; >
@@ -7166,7 +7166,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Food Science and Technology Volume 31 ; 31 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Food Science and Technology Volume 32 ; 32 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Food Science and Technology Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Food Science and Technology Volume 34 ; 34 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Food Science and Technology Volume 34 ; 34 ; >
     au < testing ; exists ; 2021 ; 2021 ; Food Science and Technology Volume 35 ; 35 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Food Science and Technology Volume 36 ; 36 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Food Science and Technology Volume 37 ; 37 ; >
@@ -7873,7 +7873,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Genomics, Proteomics and Bioinformatics Volume 15 ; 15 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Genomics, Proteomics and Bioinformatics Volume 16 ; 16 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Genomics, Proteomics and Bioinformatics Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Genomics, Proteomics and Bioinformatics Volume 18 ; 18 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Genomics, Proteomics and Bioinformatics Volume 18 ; 18 ; >
     au < testing ; exists ; 2021 ; 2021 ; Genomics, Proteomics and Bioinformatics Volume 19 ; 19 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Genomics, Proteomics and Bioinformatics Volume 20 ; 20 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Genomics, Proteomics and Bioinformatics Volume 21 ; 21 ; >
@@ -9530,7 +9530,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Integrated Environmental Assessment and Management Volume 13 ; 13 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Integrated Environmental Assessment and Management Volume 14 ; 14 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Integrated Environmental Assessment and Management Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Integrated Environmental Assessment and Management Volume 16 ; 16 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Integrated Environmental Assessment and Management Volume 16 ; 16 ; >
     au < testing ; exists ; 2021 ; 2021 ; Integrated Environmental Assessment and Management Volume 17 ; 17 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Integrated Environmental Assessment and Management Volume 18 ; 18 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Integrated Environmental Assessment and Management Volume 19 ; 19 ; >
@@ -9927,9 +9927,9 @@
     au < manifest ; exists ; 2017 ; 2017 ; International Journal of Food Science & Technology Volume 52 ; 52 ; >
     au < manifest ; exists ; 2018 ; 2018 ; International Journal of Food Science & Technology Volume 53 ; 53 ; >
     au < manifest ; exists ; 2019 ; 2019 ; International Journal of Food Science & Technology Volume 54 ; 54 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; International Journal of Food Science & Technology Volume 55 ; 55 ; >
+    au < testing ; exists ; 2020 ; 2020 ; International Journal of Food Science & Technology Volume 55 ; 55 ; >
     au < testing ; exists ; 2021 ; 2021 ; International Journal of Food Science & Technology Volume 56 ; 56 ; >
-    au < testing ; exists ; 2022 ; 2022 ; International Journal of Food Science & Technology Volume 57 ; 57 ; >
+    au < ready ; exists ; 2022 ; 2022 ; International Journal of Food Science & Technology Volume 57 ; 57 ; >
     au < crawling ; exists ; 2023 ; 2023 ; International Journal of Food Science & Technology Volume 58 ; 58 ; >
     au < crawling ; exists ; 2024 ; 2024 ; International Journal of Food Science & Technology Volume 59 ; 59 ; >
     au < manifest ; exists ; 2025 ; 2025 ; International Journal of Food Science & Technology Volume 60 ; 60 ; >
@@ -11153,7 +11153,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Journal of Aquatic Animal Health Volume 29 ; 29 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Aquatic Animal Health Volume 30 ; 30 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Aquatic Animal Health Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of Aquatic Animal Health Volume 32 ; 32 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Journal of Aquatic Animal Health Volume 32 ; 32 ; >
     au < testing ; exists ; 2021 ; 2021 ; Journal of Aquatic Animal Health Volume 33 ; 33 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Aquatic Animal Health Volume 34 ; 34 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Journal of Aquatic Animal Health Volume 35 ; 35 ; >
@@ -11965,7 +11965,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Journal of Evolutionary Biology Volume 30 ; 30 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Evolutionary Biology Volume 31 ; 31 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Evolutionary Biology Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of Evolutionary Biology Volume 33 ; 33 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Journal of Evolutionary Biology Volume 33 ; 33 ; >
     au < testing ; exists ; 2021 ; 2021 ; Journal of Evolutionary Biology Volume 34 ; 34 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Journal of Evolutionary Biology Volume 35 ; 35 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Journal of Evolutionary Biology Volume 36 ; 36 ; >
@@ -13305,7 +13305,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Journal of Occupational Health Volume 59 ; 59 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Occupational Health Volume 60 ; 60 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Occupational Health Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of Occupational Health Volume 62 ; 62 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Journal of Occupational Health Volume 62 ; 62 ; >
     au < testing ; exists ; 2021 ; 2021 ; Journal of Occupational Health Volume 63 ; 63 ; >
     au < ready ; exists ; 2022 ; 2022 ; Journal of Occupational Health Volume 64 ; 64 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Journal of Occupational Health Volume 65 ; 65 ; >
@@ -15241,7 +15241,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 9 ; 9 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 10 ; 10 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 12 ; 12 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 12 ; 12 ; >
     au < testing ; exists ; 2021 ; 2021 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 13 ; 13 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 14 ; 14 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 15 ; 15 ; >
@@ -16795,7 +16795,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; North American Journal of Aquaculture Volume 79 ; 79 ; >
     au < manifest ; exists ; 2018 ; 2018 ; North American Journal of Aquaculture Volume 80 ; 80 ; >
     au < manifest ; exists ; 2019 ; 2019 ; North American Journal of Aquaculture Volume 81 ; 81 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; North American Journal of Aquaculture Volume 82 ; 82 ; >
+    au < testing ; exists ; 2020 ; 2020 ; North American Journal of Aquaculture Volume 82 ; 82 ; >
     au < testing ; exists ; 2021 ; 2021 ; North American Journal of Aquaculture Volume 83 ; 83 ; >
     au < crawling ; exists ; 2022 ; 2022 ; North American Journal of Aquaculture Volume 84 ; 84 ; >
     au < crawling ; exists ; 2023 ; 2023 ; North American Journal of Aquaculture Volume 85 ; 85 ; >
@@ -16827,9 +16827,9 @@
     au < manifest ; exists ; 2017 ; 2017 ; North American Journal of Fisheries Management Volume 37 ; 37 ; >
     au < manifest ; exists ; 2018 ; 2018 ; North American Journal of Fisheries Management Volume 38 ; 38 ; >
     au < manifest ; exists ; 2019 ; 2019 ; North American Journal of Fisheries Management Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; North American Journal of Fisheries Management Volume 40 ; 40 ; >
+    au < testing ; exists ; 2020 ; 2020 ; North American Journal of Fisheries Management Volume 40 ; 40 ; >
     au < testing ; exists ; 2021 ; 2021 ; North American Journal of Fisheries Management Volume 41 ; 41 ; >
-    au < testing ; exists ; 2022 ; 2022 ; North American Journal of Fisheries Management Volume 42 ; 42 ; >
+    au < ready ; exists ; 2022 ; 2022 ; North American Journal of Fisheries Management Volume 42 ; 42 ; >
     au < crawling ; exists ; 2023 ; 2023 ; North American Journal of Fisheries Management Volume 43 ; 43 ; >
     au < crawling ; exists ; 2024 ; 2024 ; North American Journal of Fisheries Management Volume 44 ; 44 ; >
     au < manifest ; exists ; 2025 ; 2025 ; North American Journal of Fisheries Management Volume 45 ; 45 ; >
@@ -20023,7 +20023,7 @@
     au < manifest ; exists ; 2017 ; 2017 ; Significance Volume 14 ; 14 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Significance Volume 15 ; 15 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Significance Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Significance Volume 17 ; 17 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Significance Volume 17 ; 17 ; >
     au < testing ; exists ; 2021 ; 2021 ; Significance Volume 18 ; 18 ; >
     au < finished ; manifest ; 2022 ; 2022 ; Significance Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; Significance Volume 20 ; 20 ; reingest2.clockss.org:8085 >
@@ -22094,9 +22094,9 @@
     au < manifest ; exists ; 2017 ; 2017 ; The ISME Journal Volume 11 ; 11 ; >
     au < manifest ; exists ; 2018 ; 2018 ; The ISME Journal Volume 12 ; 12 ; >
     au < manifest ; exists ; 2019 ; 2019 ; The ISME Journal Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; The ISME Journal Volume 14 ; 14 ; >
+    au < testing ; exists ; 2020 ; 2020 ; The ISME Journal Volume 14 ; 14 ; >
     au < testing ; exists ; 2021 ; 2021 ; The ISME Journal Volume 15 ; 15 ; >
-    au < testing ; exists ; 2022 ; 2022 ; The ISME Journal Volume 16 ; 16 ; >
+    au < ready ; exists ; 2022 ; 2022 ; The ISME Journal Volume 16 ; 16 ; >
     au < crawling ; exists ; 2023 ; 2023 ; The ISME Journal Volume 17 ; 17 ; >
     au < crawling ; exists ; 2024 ; 2024 ; The ISME Journal Volume 18 ; 18 ; >
     au < manifest ; exists ; 2025 ; 2025 ; The ISME Journal Volume 19 ; 19 ; >
@@ -24708,9 +24708,9 @@
     au < manifest ; exists ; 2017 ; 2017 ; Transactions of the American Fisheries Society Volume 146 ; 146 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Transactions of the American Fisheries Society Volume 147 ; 147 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Transactions of the American Fisheries Society Volume 148 ; 148 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Transactions of the American Fisheries Society Volume 149 ; 149 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Transactions of the American Fisheries Society Volume 149 ; 149 ; >
     au < testing ; exists ; 2021 ; 2021 ; Transactions of the American Fisheries Society Volume 150 ; 150 ; >
-    au < testing ; exists ; 2022 ; 2022 ; Transactions of the American Fisheries Society Volume 151 ; 151 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Transactions of the American Fisheries Society Volume 151 ; 151 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Transactions of the American Fisheries Society Volume 152 ; 152 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Transactions of the American Fisheries Society Volume 153 ; 153 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Transactions of the American Fisheries Society Volume 154 ; 154 ; >
