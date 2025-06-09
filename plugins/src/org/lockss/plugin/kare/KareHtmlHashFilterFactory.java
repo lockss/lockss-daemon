@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -39,14 +39,13 @@ import org.htmlparser.filters.*;
 import org.lockss.filter.FilterUtil;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.emerald.Emerald2020HtmlFilterFactory;
 import org.lockss.util.Logger;
 import org.lockss.util.ReaderInputStream;
 
 public class KareHtmlHashFilterFactory implements FilterFactory {
 
   protected static Logger log =
-          Logger.getLogger(Emerald2020HtmlFilterFactory.class);
+          Logger.getLogger(KareHtmlHashFilterFactory.class);
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
