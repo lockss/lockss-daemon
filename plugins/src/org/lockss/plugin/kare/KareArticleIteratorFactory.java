@@ -67,32 +67,21 @@ import java.util.regex.Pattern;
 public class KareArticleIteratorFactory
         implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    private static final Logger log = Logger.getLogger(KareArticleIteratorFactory.class);
+    private static final Logger log = Logger.getLogger(KareArticleIteratorFactory2.class);
 
-    private static final String ROOT_TEMPLATE = "\"%s\", web_url";
+
+    private static final String ROOT_TEMPLATE = "\"%s\", base_url";
 
     private static final String PATTERN_TEMPLATE =
-            "\"%sz4/(download_fulltext|gencitation)\\.asp\\?\", web_url";
+            "\"%sjvi\\.aspx\\?pdir=%s&plng=eng&un=[^&]+&look4=\", base_url, journal_id";
 
-    // PDF Pattern and Replacement
-    private static final Pattern PDF_PATTERN = Pattern.compile(
-            "z4/download_fulltext\\.asp\\?pdir=([^&]+)&plng=eng&un=([^&]+)", Pattern.CASE_INSENSITIVE);
+    private static final Pattern ABSTRACT_PATTERN = Pattern.compile(
+            "jvi\\.aspx\\?pdir=([^&]+)&plng=eng&un=([^&]+)&look4=", Pattern.CASE_INSENSITIVE);
 
-    private static final String PDF_REPLACEMENT =
-            "z4/download_fulltext.asp?pdir=$1&plng=eng&un=$2";
-
-    // Citation Pattern and Replacement
-    private static final Pattern CITATION_PATTERN = Pattern.compile(
-            "z4/gencitation\\.asp\\?pdir=([^&]+)&article=([^&]+)&format=(RIS|BibTeX|EndNote|Medlars|Procite)",
-            Pattern.CASE_INSENSITIVE);
-
-    private static final String CITATION_REPLACEMENT_RIS =
-            "z4/gencitation.asp?pdir=$1&article=$2&format=RIS";
-
+    private static final String ABSTRACT_REPLACEMENT = "jvi.aspx?pdir=$1&plng=eng&un=$2&look4=";
 
     @Override
-    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target)
-            throws PluginException {
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
         SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
         builder.setSpec(new SubTreeArticleIterator.Spec()
@@ -100,26 +89,18 @@ public class KareArticleIteratorFactory
                 .setRootTemplate(ROOT_TEMPLATE)
                 .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
 
-        // Add PDF aspect
-        builder.addAspect(PDF_PATTERN,
-                PDF_REPLACEMENT,
-                ArticleFiles.ROLE_FULL_TEXT_PDF);
-
-        // Add citation aspect
-        builder.addAspect(CITATION_PATTERN,
-                CITATION_REPLACEMENT_RIS,
-                ArticleFiles.ROLE_CITATION,
+        builder.addAspect(ABSTRACT_PATTERN,
+                ABSTRACT_REPLACEMENT,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
-        // Set full text
-        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         return builder.getSubTreeArticleIterator();
     }
 
+
     @Override
     public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
             throws PluginException {
-        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_CITATION);
+        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
     }
 }
