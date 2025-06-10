@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -155,8 +155,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>.+\.cloudfront\.net</string>
     </list>
   </entry>
-  <!--<entry>
+  <entry>
     <string>au_crawlwindow</string>
     <string>org.lockss.plugin.rocksbackpages.RocksBackpagesCrawlWindow</string>
-  </entry>-->
+  </entry>
 </map>
