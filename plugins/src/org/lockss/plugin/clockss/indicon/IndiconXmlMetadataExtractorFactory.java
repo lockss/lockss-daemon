@@ -38,6 +38,7 @@ import java.util.List;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
@@ -63,7 +64,7 @@ public class IndiconXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
         // Once you have it, just keep returning the same one. It won't change.
             if (schemaHelper == null) {
                 schemaHelper = new IndiconSchemaHelper();
-                log.info("setting up schema helper");
+                log.debug3("setting up schema helper");
             }
             return schemaHelper;
         }
@@ -80,6 +81,14 @@ public class IndiconXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
             returnList.add(pdfString);
             return returnList;
         }
+
+        @Override
+        protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, CachedUrl cu, ArticleMetadata thisAM) {
+            //2025 - plugin developers started hardcoding article and publication type 
+            thisAM.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+            thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_JOURNAL);
+        }
     }
+
     
 }
