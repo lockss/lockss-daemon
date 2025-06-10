@@ -36,19 +36,78 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.collections.map.MultiValueMap;
+import org.apache.commons.lang.StringUtils;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.XmlDomMetadataExtractor;
+import org.lockss.extractor.XmlDomMetadataExtractor.NodeValue;
 import org.lockss.extractor.XmlDomMetadataExtractor.XPathValue;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
 import org.lockss.util.Logger;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 public class IndiconSchemaHelper implements SourceXmlSchemaHelper{
 
     private static final Logger log = Logger.getLogger(IndiconSchemaHelper.class);
 
+    private static final String AUTHOR_SEPARATOR = ",";
+
+    static private final NodeValue INDICON_AUTHOR_VALUE = new NodeValue() {
+        @Override
+        public String getValue(Node node) {
+            log.debug3("getValue of indicon author");
+            NodeList elementChildren = node.getChildNodes();
+            if (elementChildren == null) return null;
+            
+            String lastname = null;
+            String firstname = null;
+
+            // look at each child 
+            for (int j = 0; j < elementChildren.getLength(); j++) {
+                Node checkNode = elementChildren.item(j);
+                String nodeName = checkNode.getNodeName();
+                if ("lastname".equals(nodeName)) {
+                    lastname = checkNode.getTextContent();
+                } else if ("firstname".equals(nodeName) ) {
+                    firstname = checkNode.getTextContent();
+                }
+            }
+            StringBuilder valbuilder = new StringBuilder();
+            //isBlank checks for null, empty & whitespace only
+            if (!StringUtils.isBlank(lastname)) {
+                valbuilder.append(lastname);
+                if (!StringUtils.isBlank(firstname)) {
+                valbuilder.append(AUTHOR_SEPARATOR + " " + firstname);
+                }
+            } else {
+                log.debug3("no author found");
+                return null;
+            }
+            log.debug3("author found: " + valbuilder.toString());
+            return valbuilder.toString();
+        }
+    };
+
+    static private final NodeValue INDICON_TITLE_VALUE = new NodeValue() {
+        @Override
+        public String getValue(Node node) {
+            String cleanTitle = node.getTextContent().trim().replaceAll("\\s+", " ");
+            log.debug3("cleaned title: " + cleanTitle);
+            return cleanTitle;
+        }
+    };
+
     // this is global for all articles in the file
     private static final String publisher = "/manifest/journal/publisher";
-    private static final String path = "path";
+    private static final String path = "/manifest/journal/issue/articles/article/files/file/path";
+    private static final String journal_title = "/manifest/journal/journal_metadata/journal_title";
+    private static final String issn = "/manifest/journal/journal_metadata/issn";
+    private static final String volume = "/manifest/journal/issue/volume";
+    private static final String issue = "/manifest/journal/issue/number";
+    private static final String date_published = "/manifest/journal/issue/date_published";
+    private static final String title = "/manifest/journal/issue/articles/article/title";
+    private static final String doi = "/manifest/journal/issue/articles/article/doi";
+    private static final String authors = "/manifest/journal/issue/articles/article/authors/author";
 
     /*
      *  The following 3 variables are needed to use the XPathXmlMetadataParser
@@ -60,6 +119,15 @@ public class IndiconSchemaHelper implements SourceXmlSchemaHelper{
 
     static {
         articleMap.put(publisher, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(path, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(journal_title, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(issn, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(volume, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(issue, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(date_published, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(title, INDICON_TITLE_VALUE);
+        articleMap.put(doi, XmlDomMetadataExtractor.TEXT_VALUE);
+        articleMap.put(authors, INDICON_AUTHOR_VALUE);
     }
 
     /* 2.  Top level per-article node */
@@ -80,6 +148,14 @@ public class IndiconSchemaHelper implements SourceXmlSchemaHelper{
     static {
         // normal journal article schema
         cookMap.put(publisher, MetadataField.FIELD_PUBLISHER);
+        cookMap.put(path, MetadataField.FIELD_ACCESS_URL);
+        cookMap.put(journal_title, MetadataField.FIELD_PUBLICATION_TITLE);
+        cookMap.put(issn, MetadataField.FIELD_ISSN);
+        cookMap.put(volume, MetadataField.FIELD_VOLUME);
+        cookMap.put(date_published, MetadataField.FIELD_DATE);
+        cookMap.put(title, MetadataField.FIELD_ARTICLE_TITLE);
+        cookMap.put(doi, MetadataField.FIELD_DOI);
+        cookMap.put(authors, MetadataField.FIELD_AUTHOR);
     }
 
     /**

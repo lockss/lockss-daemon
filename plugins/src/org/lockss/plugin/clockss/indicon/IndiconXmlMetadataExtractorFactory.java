@@ -74,7 +74,9 @@ public class IndiconXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
             String url = cu.getUrl();
             log.debug3("file name is " + filenameValue);
             List<String> returnList = new ArrayList<String>();
-            String pdfString = url + filenameValue;
+            int lastDirectory = url.lastIndexOf('/');
+            String pdfString = url.substring(0,lastDirectory+1) + filenameValue;
+            log.debug3("pdf url is " + pdfString);
             returnList.add(pdfString);
             return returnList;
         }
