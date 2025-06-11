@@ -76,7 +76,11 @@ public class TestPLoSHtmlCrawlFilterFactory extends LockssTestCase{
                     "</a>"+
             "</p>"+
         "</div>"+
-    "</div>";
+    "</div>"+
+    "<div xmlns:plos=\"http://plos.org\" class=\"articleinfo\"><p><strong>Citation: </strong>Lee DJ, Kumarasamy N, Resch SC, Sivaramakrishnan GN, Mayer KH, Tripathy S, et al.  (2019) Rapid, point-of-care diagnosis of tuberculosis with novel Truenat assay: Cost-effectiveness analysis for I public sector. PLoS ONE 14(7):\n" + //
+                "           e0218890.\n" + //
+                "        \n" + //
+                "        https://doi.org/10.1371/journal.pone.0218890</p>";
   
   private static final String relatedArticles =
   "<div class=\"related-articles-container\">"+
