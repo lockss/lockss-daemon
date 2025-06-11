@@ -34,6 +34,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>plugin_status</string>
         <string>ready</string>
     </entry>
+      <!-- NOTE: this plugin uses shared code (validation, response handler) from parent directory by using plugin_aux_packages -->
     <entry>
         <string>plugin_identifier</string>
         <string>org.lockss.plugin.highwire.spc.SpringerPublishingCompanyScolarisPlugin</string>
@@ -57,5 +58,11 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_name</string>
         <string>"Springer Publishing Company Journals Plugin, Base URL %s, Journal %s, Volume %s", base_url, journal_id, volume_name</string>
+    </entry>
+    <entry>
+    <string>plugin_aux_packages</string>
+      <list>
+          <string>org.lockss.plugin.highwire</string>
+      </list>
     </entry>
 </map>
