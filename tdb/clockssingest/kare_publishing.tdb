@@ -20,11 +20,11 @@
         param[web_url] = https://jag.journalagent.com/
         param[journal_id] = agri
 
-        au < testing ; exists ; 2020 ; Agri Journal Volume 32 ; 32 ; >
-        au < testing ; exists ; 2021 ; Agri Journal Volume 33 ; 33 ; >
-        au < testing ; exists ; 2022 ; Agri Journal Volume 34 ; 34 ; >
-        au < testing ; exists ; 2023 ; Agri Journal Volume 35 ; 35 ; >
-        au < testing ; exists ; 2024 ; Agri Journal Volume 36 ; 36 ; >
-        au < testing ; exists ; 2025 ; Agri Journal Volume 37 ; 37 ; >
+        au < ready ; exists ; 2020 ; Agri Journal Volume 32 ; 32 ; >
+        au < exists ; exists ; 2021 ; Agri Journal Volume 33 ; 33 ; >
+        au < ready ; exists ; 2022 ; Agri Journal Volume 34 ; 34 ; >
+        au < ready ; exists ; 2023 ; Agri Journal Volume 35 ; 35 ; >
+        au < exists ; exists ; 2024 ; Agri Journal Volume 36 ; 36 ; >
+        au < exists ; exists ; 2025 ; Agri Journal Volume 37 ; 37 ; >
   }
  }
