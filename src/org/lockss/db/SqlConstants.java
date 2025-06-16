@@ -105,6 +105,9 @@ public class SqlConstants {
   /** Name of the version table. */
   public static final String VERSION_TABLE = "version";
 
+  /** Subsystem column. */
+  public static final String SUBSYSTEM_COLUMN = "subsystem";
+
   /** Name of the obsolete COUNTER publication year aggregate table. */
   public static final String OBSOLETE_PUBYEAR_AGGREGATES_TABLE =
       "counter_pubyear_aggregates";

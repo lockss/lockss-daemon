@@ -668,6 +668,14 @@ public class DbManagerSql {
       + " where " + SYSTEM_COLUMN + " = '" + DATABASE_VERSION_TABLE_SYSTEM
       + "' order by " + VERSION_COLUMN + " asc";
 
+  // Query to get the database versions sorted in ascending order.
+  private static final String GET_SORTED_DATABASE_VERSIONS_OF_SUBSYSTEM_QUERY = "select "
+      + VERSION_COLUMN
+      + " from " + VERSION_TABLE
+      + " where " + SYSTEM_COLUMN + " = '" + DATABASE_VERSION_TABLE_SYSTEM
+      + "' and " + SUBSYSTEM_COLUMN + " = ?"
+      + " order by " + VERSION_COLUMN + " asc";
+
   // SQL statement that creates a database in PostgreSQL.
   private static final String CREATE_DATABASE_QUERY_PG =
       "create database \"--databaseName--\" with template template0";
@@ -3162,6 +3170,58 @@ public class DbManagerSql {
     } catch (RuntimeException re) {
       log.error("Cannot get the database version", re);
       log.error("SQL = '" + GET_SORTED_DATABASE_VERSIONS_QUERY + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseResultSet(resultSet);
+      JdbcBridge.safeCloseStatement(stmt);
+    }
+
+    log.debug2(DEBUG_HEADER + "version = " + version);
+    return version;
+  }
+
+  /**
+   * Provides the highest-numbered database update version from the database.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param subsystem
+   *          A String with the name of the versioned subsystem.
+   * @return an int with the database update version.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  public int getHighestNumberedDatabaseVersion(Connection conn,
+                                               String subsystem) throws SQLException {
+    final String DEBUG_HEADER = "getHighestNumberedDatabaseVersion(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "subsystem = " + subsystem);
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    int version = 0;
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      stmt = prepareStatement(conn, GET_SORTED_DATABASE_VERSIONS_OF_SUBSYSTEM_QUERY);
+      stmt.setString(1, subsystem);
+      resultSet = executeQuery(stmt);
+
+      while (resultSet.next()) {
+        version = resultSet.getShort(VERSION_COLUMN);
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "version = " + version);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot get the database version", sqle);
+      log.error("SQL = '" + GET_SORTED_DATABASE_VERSIONS_OF_SUBSYSTEM_QUERY + "'.");
+      log.error("subsystem = " + subsystem);
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot get the database version", re);
+      log.error("SQL = '" + GET_SORTED_DATABASE_VERSIONS_OF_SUBSYSTEM_QUERY + "'.");
+      log.error("subsystem = " + subsystem);
       throw re;
     } finally {
       JdbcBridge.safeCloseResultSet(resultSet);
@@ -9082,5 +9142,63 @@ public class DbManagerSql {
     addMetadataItemType(conn, MD_ITEM_TYPE_FILE);
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Provides an indication of whether a table exists.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param tableName
+   *          A String with name of the table to be checked.
+   * @return <code>true</code> if the named table exists, <code>false</code>
+   *         otherwise.
+   * @throws SQLException
+   *           if any problem occurred accessing the database.
+   */
+  boolean columnExists(Connection conn, String tableName, String columnName)
+      throws SQLException {
+    final String DEBUG_HEADER = "columnExists(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "tableName = '" + tableName + "'");
+      log.debug2(DEBUG_HEADER + "columnName = '" + columnName + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    boolean result = false;
+    ResultSet resultSet = null;
+
+    try {
+      // Get the database schema table data.
+      if (isTypeDerby()) {
+        resultSet = JdbcBridge.getColumns(conn, null, dataSourceUser,
+            tableName.toUpperCase(), columnName.toUpperCase());
+      } else if (isTypePostgresql()) {
+        resultSet = JdbcBridge.getColumns(conn, null, dataSourceUser,
+            tableName.toLowerCase(), columnName.toLowerCase());
+      } else if (isTypeMysql()) {
+        resultSet = JdbcBridge.getColumns(conn, null, dataSourceUser,
+            tableName, columnName);
+      }
+
+      // Determine whether the table exists.
+      result = resultSet.next();
+    } catch (SQLException sqle) {
+      log.error("Cannot determine whether column '" + columnName
+          + "' in table '" + tableName + "' exists", sqle);
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot determine whether column '" + columnName
+          + "' in table '" + tableName + "' exists", re);
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseResultSet(resultSet);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
   }
 }

@@ -142,7 +142,7 @@ public class DBMover extends Worker {
     v2pass = config.get(MigrateContent.PARAM_PASSWORD);
 
     // Database connection parameters
-    Configuration v2config = config.getConfigTree("v2");
+    Configuration v2config = config.getConfigTree(V2_PREFIX);
     v2dbuser = v2config.get(DbManager.PARAM_DATASOURCE_USER);
     v2dbpassword = v2config.get(DbManager.PARAM_DATASOURCE_PASSWORD);
     v2dbhost = v2config.get(DbManager.PARAM_DATASOURCE_SERVERNAME);

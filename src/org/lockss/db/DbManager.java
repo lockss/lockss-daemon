@@ -28,7 +28,11 @@
 package org.lockss.db;
 
 import static org.lockss.db.SqlConstants.*;
+import static org.lockss.db.SqlConstants.SUBSYSTEM_COLUMN;
+import static org.lockss.laaws.MigrationConstants.V2_DOT;
+
 import java.io.File;
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.sql.Connection;
@@ -46,6 +50,9 @@ import org.apache.derby.drda.NetworkServerControl;
 import org.apache.derby.jdbc.ClientDataSource;
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.laaws.MigrationManager;
+import org.lockss.laaws.V2AuMover;
+import org.lockss.servlet.MigrateContent;
 import org.lockss.util.*;
 
 /**
@@ -124,6 +131,11 @@ public class DbManager extends BaseLockssDaemonManager
   public static final String PARAM_DATASOURCE_DATABASENAME = DATASOURCE_ROOT
       + ".databaseName";
   public static final String DEFAULT_DATASOURCE_DATABASENAME = "db/DbManager";
+
+//  public static final String PARAM_DATASOURCE_TARGET_VERSION = DATASOURCE_ROOT
+//      + ".targetDbVersion";
+
+  public static final int DEFAULT_DATASOURCE_TARGET_VERSION = 28;
 
   /**
    * Port number of the database. Changes require daemon restart.
@@ -204,6 +216,23 @@ public class DbManager extends BaseLockssDaemonManager
   public static final String PARAM_FETCH_SIZE = PREFIX + "fetchSize";
   public static final int DEFAULT_FETCH_SIZE = 5000;
 
+  /**
+   * V2 MetadataDbManager target version (read-only)
+   */
+  public static final String PARAM_V2_DATASOURCE_TARGET_VERSION =
+      "org.lockss.metadataDbManager.datasource.targetDbVersion";
+
+  public static final int DEFAULT_V2_DATASOURCE_TARGET_VERSION = 28;
+
+  // The interval in milliseconds between consecutive checks while waiting for a
+  // database to be set up externally.
+  private static final long waitForExternalSetupInterval = 15 * Constants.SECOND;
+
+  // The interval message used while waiting for a database to be set up
+  // externally.
+  private static final String waitForExternalSetupMessage =
+      "Sleeping for 15 seconds...";
+
   // Derby SQL state of exception thrown on successful database shutdown.
   private static final String SHUTDOWN_SUCCESS_STATE_CODE = "08006";
 
@@ -239,7 +268,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 28;
+  private int targetDatabaseVersion = DEFAULT_DATASOURCE_TARGET_VERSION;
 
   // The database version updates that are performed asynchronously.
   private int[] asynchronousUpdates = new int[] {10, 15, 17, 20, 22};
@@ -334,12 +363,41 @@ public class DbManager extends BaseLockssDaemonManager
     }
 
     try {
-      // Set up the database infrastructure.
-      setUpInfrastructure();
+      MigrationManager migrationMgr = LockssDaemon.getLockssDaemon().getMigrationManager();
+      boolean waitForExternalSetup = migrationMgr.isInMigrationMode();
 
-      // Update the existing database if necessary.
-      updateDatabaseIfNeeded(targetDatabaseVersion);
+      if (waitForExternalSetup) {
+        // Set up the database infrastructure for an externally initialized database
+        setupExternalInfrastructure();
 
+        // Wait for external database setup
+        try {
+          Connection conn =
+              dbManagerSql.getConnection(dataSource, maxRetryCount, retryDelay, false, true);
+
+          waitForVersionTable(conn);
+          waitForVersionSubsystemColumn(conn);
+
+          Configuration cfg = ConfigManager.getCurrentConfig();
+          String subsystem = cfg.get(V2_DOT + DbManager.PARAM_DATASOURCE_DATABASENAME);
+          int targetDbVersion = getExternalTargetDatabaseVersion();
+
+          waitForDatabaseVersion(conn, subsystem, targetDbVersion);
+        } catch (SQLException e) {
+          log.error(e.getMessage() + " - DbManager not ready with external database", e);
+          dataSource = null;
+          dbManagerSql.setDataSource(dataSource);
+          return;
+        }
+      } else {
+        // Set up the database infrastructure.
+        setUpInfrastructure();
+
+        // Update the existing database if necessary.
+        updateDatabaseIfNeeded(targetDatabaseVersion);
+      }
+
+      // Set this DbManager as ready
       ready = true;
     } catch (DbException dbe) {
       log.error(dbe.getMessage() + " - DbManager not ready", dbe);
@@ -350,6 +408,152 @@ public class DbManager extends BaseLockssDaemonManager
 
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "DbManager ready? = " + ready);
+  }
+
+  /**
+   * Uses the migration configuration to fetch the target database version
+   * of the MetadataDbManager from the Configuration Service of a LOCKSS 2.x
+   * instance. Assumes version 28 if the Configuration Service is running but
+   * the parameter is not present.
+   *
+   * @return The target database version.
+   */
+  private int getExternalTargetDatabaseVersion() {
+    final String DEBUG_HEADER = "getExternalTargetDatabaseVersion(): ";
+    Configuration cfg = ConfigManager.getCurrentConfig();
+    MigrationManager migrationMgr = LockssDaemon.getLockssDaemon().getMigrationManager();
+
+    // Fetch current targetDbVersion
+    while (true) {
+      try {
+        Configuration v2cfg = migrationMgr.getConfigFromMigrationTarget(
+            cfg.get(MigrateContent.PARAM_HOSTNAME),
+            cfg.getInt(V2AuMover.PARAM_CFG_UI_PORT, V2AuMover.DEFAULT_CFG_UI_PORT),
+            cfg.get(MigrateContent.PARAM_USERNAME),
+            cfg.get(MigrateContent.PARAM_PASSWORD));
+
+        return v2cfg.getInt(PARAM_V2_DATASOURCE_TARGET_VERSION, DEFAULT_V2_DATASOURCE_TARGET_VERSION);
+      } catch (IOException e) {
+        // Retry until Configuration Service is ready
+        if (log.isDebug()) log.debug(DEBUG_HEADER +
+            "Could not fetch V2 configuration from " + cfg.get(MigrateContent.PARAM_HOSTNAME) + ". "
+            + waitForExternalSetupMessage);
+
+        try {
+          Thread.sleep(waitForExternalSetupInterval);
+        } catch (InterruptedException ie)
+        {
+          // Expected.
+        }
+      }
+    }
+  }
+
+  /**
+   * Waits until the version table of a database exists.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  private void waitForVersionTable(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "waitForVersionTable(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Wait until the database version table exists.
+    while (!dbManagerSql.tableExists(conn, VERSION_TABLE)) {
+      if (log.isDebug()) log.debug(DEBUG_HEADER + "Table '" + VERSION_TABLE
+          + "' does not exist. " + waitForExternalSetupMessage);
+
+      try {
+        Thread.sleep(waitForExternalSetupInterval);
+      } catch (InterruptedException ie)
+      {
+        // Expected.
+      }
+    }
+
+    if (log.isDebug3())
+      log.debug3(DEBUG_HEADER + VERSION_TABLE + " table exists.");
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Waits until the subsystem column of the version table exists.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  private void waitForVersionSubsystemColumn(Connection conn)
+      throws SQLException {
+    final String DEBUG_HEADER = "waitForVersionSubsystemColumn(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Wait until the subsystem column of the version table exists.
+    while (!dbManagerSql.columnExists(conn, VERSION_TABLE, SUBSYSTEM_COLUMN)) {
+      if (log.isDebug()) log.debug(DEBUG_HEADER + SUBSYSTEM_COLUMN
+          + " column in " + VERSION_TABLE + " table does not exist. "
+          + waitForExternalSetupMessage);
+
+      try {
+        Thread.sleep(waitForExternalSetupInterval);
+      } catch (InterruptedException ie)
+      {
+        // Expected.
+      }
+    }
+
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + SUBSYSTEM_COLUMN
+        + " column in " + VERSION_TABLE + " table exists.");
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Waits until the database has been updated to the target version.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @param subsystem
+   *          A String with the subsystem name to e used in the version table.
+   * @param targetDbVersion
+   *          An int with the database version that is the target of the update.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  private int waitForDatabaseVersion(Connection conn, String subsystem,
+                                     int targetDbVersion) throws SQLException {
+
+    final String DEBUG_HEADER = "waitForDatabaseVersion(): ";
+
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "subsystem = " + subsystem);
+      log.debug2(DEBUG_HEADER + "targetDbVersion = " + targetDbVersion);
+    }
+
+    int currentDbVersion =
+        dbManagerSql.getHighestNumberedDatabaseVersion(conn, subsystem);
+
+    while (currentDbVersion < targetDbVersion) {
+      if (log.isDebug()) log.debug(DEBUG_HEADER + "targetDbVersion = "
+          + targetDbVersion + " > currentDbVersion = " + currentDbVersion + ". "
+          + waitForExternalSetupMessage);
+
+      try {
+        Thread.sleep(waitForExternalSetupInterval);
+      } catch (InterruptedException ie) {
+        // Expected.
+      }
+
+      currentDbVersion =
+          dbManagerSql.getHighestNumberedDatabaseVersion(conn, subsystem);
+    }
+
+    return currentDbVersion;
   }
 
   /**
@@ -1090,6 +1294,33 @@ public class DbManager extends BaseLockssDaemonManager
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
 
+  private void setupExternalInfrastructure() throws DbException {
+    final String DEBUG_HEADER = "setupExternalInfrastructure(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    // Get the datasource configuration.
+    dataSourceConfig = getDataSourceConfig();
+
+    // Check whether authentication is required and it is not available.
+    if (StringUtil.isNullString(dataSourceUser)
+        || (dbManagerSql.isTypeDerby()
+        && !"org.apache.derby.jdbc.EmbeddedDataSource".equals(dataSourceClassName)
+        && !"org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource".equals(dataSourceClassName)
+        && StringUtil.isNullString(dataSourcePassword))) {
+      // Yes: Report the problem.
+      throw new DbException("Missing required authentication");
+    }
+
+    // No: Create the datasource.
+    dataSource = createDataSource(dataSourceConfig.get("className"));
+    dbManagerSql.setDataSource(dataSource);
+
+    // Initialize the datasource properties.
+    initializeDataSourceProperties(dataSourceConfig, dataSource);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
   /**
    * Provides the datasource configuration.
    * 
@@ -1628,7 +1859,7 @@ public class DbManager extends BaseLockssDaemonManager
   /**
    * Updates the database to a given version, if necessary.
    * 
-   * @param targetDbCersion
+   * @param targetDbVersion
    *          An int with the database version that is the target of the update.
    * 
    * @throws DbException
