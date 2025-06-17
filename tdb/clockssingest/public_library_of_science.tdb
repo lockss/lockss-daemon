@@ -372,7 +372,7 @@
     name = Public Library of Science ;
     info[contract] = 2019 ;
     info[back] = 1980 ;
-    info[tester] = 4
+    info[tester] = 8
   >
     provider = Public Library of Science
     plugin = org.lockss.plugin.plos.ClockssPLoSMonthlyPlugin
@@ -388,18 +388,18 @@
 
       param[journal_id] = plosone
 
-      au < testing ; exists ; 2019 ; PLOS ONE Volume Jan 2019 ; January ; 2019 >
-      au < testing ; exists ; 2019 ; PLOS ONE Volume Feb 2019 ; February ; 2019 >
-      au < testing ; exists ; 2019 ; PLOS ONE Volume Mar 2019 ; March ; 2019 >
-      au < testing ; exists ; 2019 ; PLOS ONE Volume Apr 2019 ; April ; 2019 >
-      au < testing ; exists ; 2019 ; PLOS ONE Volume May 2019 ; May ; 2019 >
-      au < testing ; exists ; 2019 ; PLOS ONE Volume Jun 2019 ; June ; 2019 >
-      au < testing ; exists ; 2019 ; PLOS ONE Volume Jul 2019 ; July ; 2019 >
-      au < testing ; exists ; 2019 ; PLOS ONE Volume Aug 2019 ; August ; 2019 >
-      au < testing ; exists ; 2019 ; PLOS ONE Volume Sep 2019 ; September ; 2019 >
-      au < testing ; exists ; 2019 ; PLOS ONE Volume Oct 2019 ; October ; 2019 >
-      au < testing ; exists ; 2019 ; PLOS ONE Volume Nov 2019 ; November ; 2019 >
-      au < testing ; exists ; 2019 ; PLOS ONE Volume Dec 2019 ; December ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume Jan 2019 ; January ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume Feb 2019 ; February ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume Mar 2019 ; March ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume Apr 2019 ; April ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume May 2019 ; May ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume Jun 2019 ; June ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume Jul 2019 ; July ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume Aug 2019 ; August ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume Sep 2019 ; September ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume Oct 2019 ; October ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume Nov 2019 ; November ; 2019 >
+      au < ready ; exists ; 2019 ; PLOS ONE Volume Dec 2019 ; December ; 2019 >
 
       au < exists ; exists ; 2023 ; PLOS ONE Volume Jan 2023 ; January ; 2023 >
       au < exists ; exists ; 2023 ; PLOS ONE Volume Feb 2023 ; February ; 2023 >
