@@ -25,7 +25,7 @@
     >
 
     param[journal_abbr] = journal
-    #host is gone
+    #host is gone. Moved to MDPI
 
     au < doNotProcess ; exists ; 1990 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 16 ; 16 ; >
     au < doNotProcess ; exists ; 1991 ; International Journal of Orofacial Myology and Myofunctional Therapy (IJOM) Volume 17 ; 17 ; >
