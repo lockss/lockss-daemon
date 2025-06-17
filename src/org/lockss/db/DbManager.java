@@ -382,6 +382,15 @@ public class DbManager extends BaseLockssDaemonManager
           String subsystem = cfg.get(V2_DOT + DbManager.PARAM_DATASOURCE_DATABASENAME);
           int targetDbVersion = getExternalTargetDatabaseVersion();
 
+          // If present, strip the prefix from the DB name to get the subsystem name. This
+          // is fragile. A better solution would be to get the subsystem name from V2 but
+          // this was fast and easy and should work fine:
+          String DBNAME_PREFIX = "Lockss";
+          if (subsystem.startsWith(DBNAME_PREFIX)) {
+            log.debug("Stripping '" + DBNAME_PREFIX + "' prefix from DB name for subsystem");
+            subsystem = subsystem.substring(DBNAME_PREFIX.length());
+          }
+
           waitForDatabaseVersion(conn, subsystem, targetDbVersion);
         } catch (SQLException e) {
           log.error(e.getMessage() + " - DbManager not ready with external database", e);
