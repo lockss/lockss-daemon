@@ -60,6 +60,8 @@ import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
+import static org.lockss.laaws.MigrationConstants.V2_PREFIX;
+
 /** ConfigManager loads and periodically reloads the LOCKSS configuration
  * parameters, and provides services for updating locally changeable
  * configuration.
@@ -1598,7 +1600,7 @@ public class ConfigManager implements LockssManager {
         MigrationManager.DEFAULT_IS_DB_MOVED);
 
     if (isInMigrationMode && !isDryRun) {
-      Configuration v2MigrationParams = config.getConfigTree("v2");
+      Configuration v2MigrationParams = config.getConfigTree(V2_PREFIX);
       if (v2MigrationParams.isEmpty()) {
         log.warning("In migration mode, V2 subtree is unexpectedly empty");
       } else {
