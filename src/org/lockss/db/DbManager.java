@@ -372,8 +372,7 @@ public class DbManager extends BaseLockssDaemonManager
 
         // Wait for external database setup
         try {
-          Connection conn =
-              dbManagerSql.getConnection(dataSource, maxRetryCount, retryDelay, false, true);
+          Connection conn = getExternalDatabaseConnection();
 
           waitForVersionTable(conn);
           waitForVersionSubsystemColumn(conn);
@@ -417,6 +416,26 @@ public class DbManager extends BaseLockssDaemonManager
 
     if (log.isDebug2())
       log.debug2(DEBUG_HEADER + "DbManager ready? = " + ready);
+  }
+
+  private Connection getExternalDatabaseConnection() {
+    final String DEBUG_HEADER = "getExternalDatabaseConnection(): ";
+
+    while (true) {
+      try {
+        return dbManagerSql.getConnection(dataSource, maxRetryCount, retryDelay, false, true);
+      } catch (SQLException e) {
+        if (log.isDebug()) log.debug(DEBUG_HEADER +
+            "Waiting for database connection. " + waitForExternalSetupMessage);
+
+        try {
+          Thread.sleep(waitForExternalSetupInterval);
+        } catch (InterruptedException ie)
+        {
+          // Expected.
+        }
+      }
+    }
   }
 
   /**
