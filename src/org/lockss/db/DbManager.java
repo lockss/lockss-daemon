@@ -1331,10 +1331,7 @@ public class DbManager extends BaseLockssDaemonManager
 
     // Check whether authentication is required and it is not available.
     if (StringUtil.isNullString(dataSourceUser)
-        || (dbManagerSql.isTypeDerby()
-        && !"org.apache.derby.jdbc.EmbeddedDataSource".equals(dataSourceClassName)
-        && !"org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource".equals(dataSourceClassName)
-        && StringUtil.isNullString(dataSourcePassword))) {
+        || StringUtil.isNullString(dataSourcePassword)){
       // Yes: Report the problem.
       throw new DbException("Missing required authentication");
     }
