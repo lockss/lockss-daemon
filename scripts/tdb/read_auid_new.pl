@@ -489,9 +489,10 @@ while (my $line = <>) {
         $result = "--NOT_DEF--";
     } elsif ($man_contents !~ m/$clockss_tag/) {
         $result = "--NO_TAG--";
+    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
     #} elsif (($man_contents !~ m/main.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/main.*="https?:\/\/.*"/s)) { #"
     #} elsif (($man_contents !~ m/<main.*="$base_url_short[^"]*".*main>/s) || ($man_contents !~ m/<main.*="https?:\/\/.*".*main>/s)) { #"
-    } elsif (($man_contents !~ m/<main.*="\/content\/$param{journal_id}\/$param{volume_name}\/.*main>/s)) { #"
+    #} elsif (($man_contents !~ m/<main.*="\/content\/$param{journal_id}\/$param{volume_name}\/.*main>/s)) { #"
     #} elsif (($man_contents ~ m/main.*="$base_url_short[^"]*".*main>/s) || ($man_contents !~ m/<main.*="https?:\/\/.*".*main>/s)) { #"
         #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
         #or must be a relative url, in which case, the link would not start with https://.
