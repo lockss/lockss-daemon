@@ -6,13 +6,13 @@
     info[platform] = Source
   >
   hidden[proxy] = DIRECT
+  plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesSourcePlugin
+  implicit < status ; status2 ; year ; name ; param[year] >
 
   {
     title <
        name = eLife Sciences Preprint Source Content
     >
-    plugin = needs.plugin
-    implicit < status ; status2 ; year ; name ; param[directory] >
 
       #TESTING
       param[base_url] = https://clockss-test.lockss.org/sourcefiles/elifepreprint-released/
@@ -26,8 +26,6 @@
     title <
        name = eLife Sciences Source Content
     >
-    plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesSourcePlugin
-    implicit < status ; status2 ; year ; name ; param[year] >
 
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elife-released/
