@@ -2465,7 +2465,23 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 ; 13 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; 14 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
       au < manifest ; exists ; 2024 ; 15 ; Gateway Papers Volume 2024 ; 2024 ; 15 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
-      au < manifest ; exists ; 2025 ; 16 ; Gateway Papers Volume 2025 ; 2025 ; 16 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
+      #Title changed to Studies in Empowering Education (2977-4748) 2025 and forward
+  }
+
+  {
+
+      title <
+        name = Studies in Empowering Education ;
+        eissn = 2977-4748
+      >
+
+      comment[publisher] = De Montfort University Press
+      #param[base_url] = https://gp.demontfortuniversitypress.org/
+      nondefparam[base_url2] = https://account.gp.demontfortuniversitypress.org/
+      nondefparam[journal_id] = dmu-j-gpajepr
+      #Previously Gateway Papers (2044-852X) 2010 to 2024
+
+      au < manifest ; exists ; 2025 ; 16 ; Studies in Empowering Education Volume 2025 ; 2025 ; 16 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
 
   }
 
