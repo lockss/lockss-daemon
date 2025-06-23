@@ -130,7 +130,7 @@ Args:
   <property name="tmpdir" value="${java.io.tmpdir}" />
 
   <!-- Default heap for junit if none specified in jvmargs -->
-  <property name="junit.default.args" value="-Xmx256m" />
+  <property name="junit.default.args" value="-Xmx1g" />
 
   <property environment="env"/>
   <!--  Ignore system classpath, to ensure consistent builds -->
