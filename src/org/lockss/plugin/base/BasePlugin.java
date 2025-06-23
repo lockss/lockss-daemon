@@ -406,12 +406,10 @@ public abstract class BasePlugin
     return au;
   }
 
+  // If any of the plugin's nondef params don't have values, look them
+  // up from the TDB.  This allows existing AUs to conform to later
+  // changes made to a plugin
   Configuration addNonDefParams(Configuration auConfig, String auid) {
-    TitleConfig tc = getTitleConfigFromAuId(auid);
-    if (tc == null) {
-      log.warning("No tdb entry, not adding nondef params to " + auid);
-      return auConfig;
-    }
     List<ConfigParamDescr> nondef = new ArrayList<>();
     for (ConfigParamDescr descr : getLocalAuConfigDescrs()) {
       if (!descr.isDefinitional() && !auConfig.containsKey(descr.getKey())) {
@@ -419,6 +417,11 @@ public abstract class BasePlugin
       }
     }
     if (nondef.isEmpty()) {
+      return auConfig;
+    }
+    TitleConfig tc = getTitleConfigFromAuId(auid);
+    if (tc == null) {
+      log.error("No tdb entry, not adding nondef params to " + auid);
       return auConfig;
     }
     // Don't modify passed in auConfig
