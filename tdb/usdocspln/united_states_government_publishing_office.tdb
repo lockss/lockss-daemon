@@ -174,17 +174,17 @@
     au < released ; 1947 ; Account of the Receipts and Expenditures of the United States 1947 ; 1947 ; https://www.govinfo.gov/ >
     au < released ; 1948 ; Account of the Receipts and Expenditures of the United States 1948 ; 1948 ; https://www.govinfo.gov/ >
     au < released ; 1949 ; Account of the Receipts and Expenditures of the United States 1949 ; 1949 ; https://www.govinfo.gov/ >
-    au < ready ; 1950 ; Account of the Receipts and Expenditures of the United States 1950 ; 1950 ; https://www.govinfo.gov/ >
-    au < ready ; 1951 ; Account of the Receipts and Expenditures of the United States 1951 ; 1951 ; https://www.govinfo.gov/ >
-    au < ready ; 1952 ; Account of the Receipts and Expenditures of the United States 1952 ; 1952 ; https://www.govinfo.gov/ >
+    au < releasing ; 1950 ; Account of the Receipts and Expenditures of the United States 1950 ; 1950 ; https://www.govinfo.gov/ >
+    au < releasing ; 1951 ; Account of the Receipts and Expenditures of the United States 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < releasing ; 1952 ; Account of the Receipts and Expenditures of the United States 1952 ; 1952 ; https://www.govinfo.gov/ >
 
-    au < ready ; 1953 ; GOVPUB 1953 ; 1953 ; https://www.govinfo.gov/ >
-    au < ready ; 1954 ; GOVPUB 1954 ; 1954 ; https://www.govinfo.gov/ >
-    au < ready ; 1955 ; GOVPUB 1955 ; 1955 ; https://www.govinfo.gov/ >
-    au < ready ; 1956 ; GOVPUB 1956 ; 1956 ; https://www.govinfo.gov/ >
-    au < ready ; 1957 ; GOVPUB 1957 ; 1957 ; https://www.govinfo.gov/ >
-    au < ready ; 1958 ; GOVPUB 1958 ; 1958 ; https://www.govinfo.gov/ >
-    au < ready ; 1959 ; GOVPUB 1959 ; 1959 ; https://www.govinfo.gov/ >
+    au < releasing ; 1953 ; GOVPUB 1953 ; 1953 ; https://www.govinfo.gov/ >
+    au < releasing ; 1954 ; GOVPUB 1954 ; 1954 ; https://www.govinfo.gov/ >
+    au < releasing ; 1955 ; GOVPUB 1955 ; 1955 ; https://www.govinfo.gov/ >
+    au < releasing ; 1956 ; GOVPUB 1956 ; 1956 ; https://www.govinfo.gov/ >
+    au < releasing ; 1957 ; GOVPUB 1957 ; 1957 ; https://www.govinfo.gov/ >
+    au < releasing ; 1958 ; GOVPUB 1958 ; 1958 ; https://www.govinfo.gov/ >
+    au < releasing ; 1959 ; GOVPUB 1959 ; 1959 ; https://www.govinfo.gov/ >
 
     au < manifest ; 1960 ; GOVPUB 1960 ; 1960 ; https://www.govinfo.gov/ >
     au < manifest ; 1961 ; GOVPUB 1961 ; 1961 ; https://www.govinfo.gov/ >
@@ -245,29 +245,29 @@
 
     param[collection_id] = GPO
 
-    au < ready ; 1960 ; GPO 1960 ; 1960 ; https://www.govinfo.gov/ >
-    au < ready ; 1963 ; GPO 1963 ; 1963 ; https://www.govinfo.gov/ >
-    au < ready ; 1964 ; GPO 1964 ; 1964 ; https://www.govinfo.gov/ >
-    au < ready ; 1970 ; GPO 1970 ; 1970 ; https://www.govinfo.gov/ >
-    au < ready ; 1971 ; GPO 1971 ; 1971 ; https://www.govinfo.gov/ >
-    au < ready ; 1973 ; GPO 1973 ; 1973 ; https://www.govinfo.gov/ >
-    au < ready ; 1975 ; GPO 1975 ; 1975 ; https://www.govinfo.gov/ >
-    au < ready ; 1977 ; GPO 1977 ; 1977 ; https://www.govinfo.gov/ >
-    au < ready ; 1978 ; GPO 1978 ; 1978 ; https://www.govinfo.gov/ >
-    au < ready ; 1981 ; GPO 1981 ; 1981 ; https://www.govinfo.gov/ >
-    au < ready ; 1985 ; GPO 1985 ; 1985 ; https://www.govinfo.gov/ >
-    au < ready ; 1986 ; GPO 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < ready ; 1987 ; GPO 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < ready ; 1989 ; GPO 1989 ; 1989 ; https://www.govinfo.gov/ >
-    au < ready ; 1990 ; GPO 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < ready ; 1991 ; GPO 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < ready ; 1992 ; GPO 1992 ; 1992 ; https://www.govinfo.gov/ >
-    au < ready ; 1993 ; GPO 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < ready ; 1994 ; GPO 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < ready ; 1996 ; GPO 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < ready ; 1997 ; GPO 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < ready ; 1998 ; GPO 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < ready ; 1999 ; GPO 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < releasing ; 1960 ; GPO 1960 ; 1960 ; https://www.govinfo.gov/ >
+    au < releasing ; 1963 ; GPO 1963 ; 1963 ; https://www.govinfo.gov/ >
+    au < releasing ; 1964 ; GPO 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < releasing ; 1970 ; GPO 1970 ; 1970 ; https://www.govinfo.gov/ >
+    au < releasing ; 1971 ; GPO 1971 ; 1971 ; https://www.govinfo.gov/ >
+    au < releasing ; 1973 ; GPO 1973 ; 1973 ; https://www.govinfo.gov/ >
+    au < releasing ; 1975 ; GPO 1975 ; 1975 ; https://www.govinfo.gov/ >
+    au < releasing ; 1977 ; GPO 1977 ; 1977 ; https://www.govinfo.gov/ >
+    au < releasing ; 1978 ; GPO 1978 ; 1978 ; https://www.govinfo.gov/ >
+    au < releasing ; 1981 ; GPO 1981 ; 1981 ; https://www.govinfo.gov/ >
+    au < releasing ; 1985 ; GPO 1985 ; 1985 ; https://www.govinfo.gov/ >
+    au < releasing ; 1986 ; GPO 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < releasing ; 1987 ; GPO 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < releasing ; 1989 ; GPO 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < releasing ; 1990 ; GPO 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < releasing ; 1991 ; GPO 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < releasing ; 1992 ; GPO 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < releasing ; 1993 ; GPO 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < releasing ; 1994 ; GPO 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < releasing ; 1996 ; GPO 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < releasing ; 1997 ; GPO 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < releasing ; 1998 ; GPO 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < releasing ; 1999 ; GPO 1999 ; 1999 ; https://www.govinfo.gov/ >
 
 
     au < released ; 1873 ; Additional Government Publications 1873 ; 1873 ; https://www.govinfo.gov/ >
@@ -333,7 +333,7 @@
     au < released ; 1933 ; Additional Government Publications 1933 ; 1933 ; https://www.govinfo.gov/ >
     au < released ; 1934 ; Additional Government Publications 1934 ; 1934 ; https://www.govinfo.gov/ >
     au < released ; 1935 ; Additional Government Publications 1935 ; 1935 ; https://www.govinfo.gov/ >
-    au < ready ; 1936 ; Additional Government Publications 1936 ; 1936 ; https://www.govinfo.gov/ >
+    au < releasing ; 1936 ; Additional Government Publications 1936 ; 1936 ; https://www.govinfo.gov/ >
     au < released ; 1937 ; Additional Government Publications 1937 ; 1937 ; https://www.govinfo.gov/ >
     au < released ; 1938 ; Additional Government Publications 1938 ; 1938 ; https://www.govinfo.gov/ >
     au < released ; 1939 ; Additional Government Publications 1939 ; 1939 ; https://www.govinfo.gov/ >
@@ -346,10 +346,10 @@
     au < released ; 1946 ; Additional Government Publications and Archives 1946 ; 1946 ; https://www.govinfo.gov/ >
     au < released ; 1947 ; Additional Government Publications and Archives 1947 ; 1947 ; https://www.govinfo.gov/ >
     au < released ; 1948 ; Additional Government Publications and Archives 1948 ; 1948 ; https://www.govinfo.gov/ >
-    au < ready ; 1949 ; Additional Government Publications and Archives 1949 ; 1949 ; https://www.govinfo.gov/ >
+    au < releasing ; 1949 ; Additional Government Publications and Archives 1949 ; 1949 ; https://www.govinfo.gov/ >
     au < released ; 1950 ; Additional Government Publications and Archives 1950 ; 1950 ; https://www.govinfo.gov/ >
     au < released ; 1951 ; Additional Government Publications and Archives 1951 ; 1951 ; https://www.govinfo.gov/ >
-    au < ready ; 1952 ; Additional Government Publications and Archives 1952 ; 1952 ; https://www.govinfo.gov/ >
+    au < releasing ; 1952 ; Additional Government Publications and Archives 1952 ; 1952 ; https://www.govinfo.gov/ >
     au < released ; 1953 ; Additional Government Publications and Archives 1953 ; 1953 ; https://www.govinfo.gov/ >
     au < released ; 1954 ; Additional Government Publications and Archives 1954 ; 1954 ; https://www.govinfo.gov/ >
     au < released ; 1955 ; Additional Government Publications and Archives 1955 ; 1955 ; https://www.govinfo.gov/ >
@@ -397,14 +397,14 @@
     param[collection_id] = BUDGET
 
 
-    au < ready ; 1995 ; Budget of the United States Government 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < ready ; 1996 ; Budget of the United States Government 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < ready ; 1997 ; Budget of the United States Government 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < ready ; 1998 ; Budget of the United States Government 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < releasing ; 1995 ; Budget of the United States Government 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < releasing ; 1996 ; Budget of the United States Government 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < releasing ; 1997 ; Budget of the United States Government 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < releasing ; 1998 ; Budget of the United States Government 1998 ; 1998 ; https://www.govinfo.gov/ >
     au < manifest ; 1999 ; Budget of the United States Government 1999 ; 1999 ; https://www.govinfo.gov/ >
  
     au < released ; 2014 ; Budget of the United States Government 2014 ; 2014 ; https://www.govinfo.gov/ >
-    au < ready ; 2015 ; Budget of the United States Government 2015 ; 2015 ; https://www.govinfo.gov/ >
+    au < releasing ; 2015 ; Budget of the United States Government 2015 ; 2015 ; https://www.govinfo.gov/ >
     au < released ; 2016 ; Budget of the United States Government 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Budget of the United States Government 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Budget of the United States Government 2018 ; 2018 ; https://www.govinfo.gov/ >
@@ -427,45 +427,45 @@
     param[collection_id] = CZIC
     # stopped publication in 1999. See https://www.govinfo.gov/sitemap/CZIC_sitemap_index.xml
 
-    au < ready ; 1951 ; Coastal Zone Information Center 1951 ; 1951 ; https://www.govinfo.gov/ >
-    au < ready ; 1959 ; Coastal Zone Information Center 1959 ; 1959 ; https://www.govinfo.gov/ >
-    au < ready ; 1962 ; CZIC 1962 ; 1962 ; https://www.govinfo.gov/ >
-    au < ready ; 1963 ; CZIC 1963 ; 1963 ; https://www.govinfo.gov/ >
-    au < ready ; 1964 ; CZIC 1964 ; 1964 ; https://www.govinfo.gov/ >
-    au < ready ; 1965 ; CZIC 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < ready ; 1966 ; CZIC 1966 ; 1966 ; https://www.govinfo.gov/ >
-    au < ready ; 1967 ; CZIC 1967 ; 1967 ; https://www.govinfo.gov/ >
-    au < ready ; 1968 ; CZIC 1968 ; 1968 ; https://www.govinfo.gov/ >
-    au < ready ; 1969 ; CZIC 1969 ; 1969 ; https://www.govinfo.gov/ >
-    au < ready ; 1970 ; CZIC 1970 ; 1970 ; https://www.govinfo.gov/ >
-    au < ready ; 1971 ; CZIC 1971 ; 1971 ; https://www.govinfo.gov/ >
-    au < ready ; 1972 ; CZIC 1972 ; 1972 ; https://www.govinfo.gov/ >
-    au < ready ; 1973 ; CZIC 1973 ; 1973 ; https://www.govinfo.gov/ >
-    au < ready ; 1974 ; CZIC 1974 ; 1974 ; https://www.govinfo.gov/ >
-    au < ready ; 1975 ; CZIC 1975 ; 1975 ; https://www.govinfo.gov/ >
-    au < ready ; 1976 ; CZIC 1976 ; 1976 ; https://www.govinfo.gov/ >
-    au < ready ; 1977 ; CZIC 1977 ; 1977 ; https://www.govinfo.gov/ >
-    au < ready ; 1978 ; CZIC 1978 ; 1978 ; https://www.govinfo.gov/ >
-    au < ready ; 1979 ; CZIC 1979 ; 1979 ; https://www.govinfo.gov/ >
-    au < ready ; 1980 ; CZIC 1980 ; 1980 ; https://www.govinfo.gov/ >
-    au < ready ; 1981 ; CZIC 1981 ; 1981 ; https://www.govinfo.gov/ >
-    au < ready ; 1982 ; CZIC 1982 ; 1982 ; https://www.govinfo.gov/ >
-    au < ready ; 1983 ; CZIC 1983 ; 1983 ; https://www.govinfo.gov/ >
-    au < ready ; 1984 ; CZIC 1984 ; 1984 ; https://www.govinfo.gov/ >
-    au < ready ; 1985 ; CZIC 1985 ; 1985 ; https://www.govinfo.gov/ >
-    au < ready ; 1986 ; CZIC 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < ready ; 1987 ; CZIC 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < ready ; 1988 ; CZIC 1988 ; 1988 ; https://www.govinfo.gov/ >
-    au < ready ; 1989 ; CZIC 1989 ; 1989 ; https://www.govinfo.gov/ >
-    au < ready ; 1990 ; CZIC 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < ready ; 1991 ; CZIC 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < ready ; 1992 ; CZIC 1992 ; 1992 ; https://www.govinfo.gov/ >
-    au < ready ; 1993 ; CZIC 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < ready ; 1994 ; CZIC 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < ready ; 1995 ; CZIC 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < ready ; 1996 ; CZIC 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < ready ; 1997 ; CZIC 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < ready ; 1998 ; CZIC 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < releasing ; 1951 ; Coastal Zone Information Center 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < releasing ; 1959 ; Coastal Zone Information Center 1959 ; 1959 ; https://www.govinfo.gov/ >
+    au < releasing ; 1962 ; CZIC 1962 ; 1962 ; https://www.govinfo.gov/ >
+    au < releasing ; 1963 ; CZIC 1963 ; 1963 ; https://www.govinfo.gov/ >
+    au < releasing ; 1964 ; CZIC 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < releasing ; 1965 ; CZIC 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < releasing ; 1966 ; CZIC 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < releasing ; 1967 ; CZIC 1967 ; 1967 ; https://www.govinfo.gov/ >
+    au < releasing ; 1968 ; CZIC 1968 ; 1968 ; https://www.govinfo.gov/ >
+    au < releasing ; 1969 ; CZIC 1969 ; 1969 ; https://www.govinfo.gov/ >
+    au < releasing ; 1970 ; CZIC 1970 ; 1970 ; https://www.govinfo.gov/ >
+    au < releasing ; 1971 ; CZIC 1971 ; 1971 ; https://www.govinfo.gov/ >
+    au < releasing ; 1972 ; CZIC 1972 ; 1972 ; https://www.govinfo.gov/ >
+    au < releasing ; 1973 ; CZIC 1973 ; 1973 ; https://www.govinfo.gov/ >
+    au < releasing ; 1974 ; CZIC 1974 ; 1974 ; https://www.govinfo.gov/ >
+    au < releasing ; 1975 ; CZIC 1975 ; 1975 ; https://www.govinfo.gov/ >
+    au < releasing ; 1976 ; CZIC 1976 ; 1976 ; https://www.govinfo.gov/ >
+    au < releasing ; 1977 ; CZIC 1977 ; 1977 ; https://www.govinfo.gov/ >
+    au < releasing ; 1978 ; CZIC 1978 ; 1978 ; https://www.govinfo.gov/ >
+    au < releasing ; 1979 ; CZIC 1979 ; 1979 ; https://www.govinfo.gov/ >
+    au < releasing ; 1980 ; CZIC 1980 ; 1980 ; https://www.govinfo.gov/ >
+    au < releasing ; 1981 ; CZIC 1981 ; 1981 ; https://www.govinfo.gov/ >
+    au < releasing ; 1982 ; CZIC 1982 ; 1982 ; https://www.govinfo.gov/ >
+    au < releasing ; 1983 ; CZIC 1983 ; 1983 ; https://www.govinfo.gov/ >
+    au < releasing ; 1984 ; CZIC 1984 ; 1984 ; https://www.govinfo.gov/ >
+    au < releasing ; 1985 ; CZIC 1985 ; 1985 ; https://www.govinfo.gov/ >
+    au < releasing ; 1986 ; CZIC 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < releasing ; 1987 ; CZIC 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < releasing ; 1988 ; CZIC 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < releasing ; 1989 ; CZIC 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < releasing ; 1990 ; CZIC 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < releasing ; 1991 ; CZIC 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < releasing ; 1992 ; CZIC 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < releasing ; 1993 ; CZIC 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < releasing ; 1994 ; CZIC 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < releasing ; 1995 ; CZIC 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < releasing ; 1996 ; CZIC 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < releasing ; 1997 ; CZIC 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < releasing ; 1998 ; CZIC 1998 ; 1998 ; https://www.govinfo.gov/ >
     au < manifest ; 1999 ; CZIC 1999 ; 1999 ; https://www.govinfo.gov/ >
  
   }
@@ -1565,7 +1565,7 @@
     au < down ; 2014 ; Senate Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Senate Manual 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Senate Manual 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < ready ; 2024 ; SMAN 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < releasing ; 2024 ; SMAN 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1974,7 +1974,7 @@
     au < released ; 2018 ; United States Statutes at Large 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; United States Statutes at Large 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; United States Statutes at Large 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < ready ; 2021 ; United States Statutes at Large 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < releasing ; 2021 ; United States Statutes at Large 2021 ; 2021 ; https://www.govinfo.gov/ >
 
   }
 
