@@ -17,7 +17,7 @@
       #TESTING
       param[base_url] = https://clockss-test.lockss.org/sourcefiles/elifepreprint-released/
 
-      au < expected ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025 ; 2025 >
+      au < manifest ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025 ; 2025 >
 
   }
 
