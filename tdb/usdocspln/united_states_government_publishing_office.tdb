@@ -185,6 +185,47 @@
     au < ready ; 1957 ; GOVPUB 1957 ; 1957 ; https://www.govinfo.gov/ >
     au < ready ; 1958 ; GOVPUB 1958 ; 1958 ; https://www.govinfo.gov/ >
     au < ready ; 1959 ; GOVPUB 1959 ; 1959 ; https://www.govinfo.gov/ >
+
+    au < manifest ; 1960 ; GOVPUB 1960 ; 1960 ; https://www.govinfo.gov/ >
+    au < manifest ; 1961 ; GOVPUB 1961 ; 1961 ; https://www.govinfo.gov/ >
+    au < manifest ; 1962 ; GOVPUB 1962 ; 1962 ; https://www.govinfo.gov/ >
+    au < manifest ; 1963 ; GOVPUB 1963 ; 1963 ; https://www.govinfo.gov/ >
+    au < manifest ; 1964 ; GOVPUB 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < manifest ; 1965 ; GOVPUB 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < manifest ; 1966 ; GOVPUB 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < manifest ; 1967 ; GOVPUB 1967 ; 1967 ; https://www.govinfo.gov/ >
+    au < manifest ; 1968 ; GOVPUB 1968 ; 1968 ; https://www.govinfo.gov/ >
+    au < manifest ; 1969 ; GOVPUB 1969 ; 1969 ; https://www.govinfo.gov/ >
+    au < manifest ; 1970 ; GOVPUB 1970 ; 1970 ; https://www.govinfo.gov/ >
+    au < manifest ; 1971 ; GOVPUB 1971 ; 1971 ; https://www.govinfo.gov/ >
+    au < manifest ; 1972 ; GOVPUB 1972 ; 1972 ; https://www.govinfo.gov/ >
+    au < manifest ; 1973 ; GOVPUB 1973 ; 1973 ; https://www.govinfo.gov/ >
+    au < manifest ; 1974 ; GOVPUB 1974 ; 1974 ; https://www.govinfo.gov/ >
+    au < manifest ; 1975 ; GOVPUB 1975 ; 1975 ; https://www.govinfo.gov/ >
+    au < manifest ; 1976 ; GOVPUB 1976 ; 1976 ; https://www.govinfo.gov/ >
+    au < manifest ; 1977 ; GOVPUB 1977 ; 1977 ; https://www.govinfo.gov/ >
+    au < manifest ; 1978 ; GOVPUB 1978 ; 1978 ; https://www.govinfo.gov/ >
+    au < manifest ; 1979 ; GOVPUB 1979 ; 1979 ; https://www.govinfo.gov/ >
+    au < manifest ; 1980 ; GOVPUB 1980 ; 1980 ; https://www.govinfo.gov/ >
+    au < manifest ; 1981 ; GOVPUB 1981 ; 1981 ; https://www.govinfo.gov/ >
+    au < manifest ; 1982 ; GOVPUB 1982 ; 1982 ; https://www.govinfo.gov/ >
+    au < manifest ; 1983 ; GOVPUB 1983 ; 1983 ; https://www.govinfo.gov/ >
+    au < manifest ; 1984 ; GOVPUB 1984 ; 1984 ; https://www.govinfo.gov/ >
+    au < manifest ; 1985 ; GOVPUB 1985 ; 1985 ; https://www.govinfo.gov/ >
+    au < manifest ; 1986 ; GOVPUB 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < manifest ; 1987 ; GOVPUB 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < manifest ; 1988 ; GOVPUB 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < manifest ; 1989 ; GOVPUB 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < manifest ; 1990 ; GOVPUB 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < manifest ; 1991 ; GOVPUB 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < manifest ; 1992 ; GOVPUB 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < manifest ; 1993 ; GOVPUB 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < manifest ; 1994 ; GOVPUB 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < manifest ; 1995 ; GOVPUB 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < manifest ; 1996 ; GOVPUB 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < manifest ; 1997 ; GOVPUB 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < manifest ; 1998 ; GOVPUB 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < manifest ; 1999 ; GOVPUB 1999 ; 1999 ; https://www.govinfo.gov/ >
  
     au < released ; 2019 ; Account of the Receipts and Expenditures of the United States 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Account of the Receipts and Expenditures of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
@@ -204,29 +245,29 @@
 
     param[collection_id] = GPO
 
-    au < manifest ; 1960 ; GPO 1960 ; 1960 ; https://www.govinfo.gov/ >
-    au < manifest ; 1963 ; GPO 1963 ; 1963 ; https://www.govinfo.gov/ >
-    au < manifest ; 1964 ; GPO 1964 ; 1964 ; https://www.govinfo.gov/ >
-    au < manifest ; 1970 ; GPO 1970 ; 1970 ; https://www.govinfo.gov/ >
-    au < manifest ; 1971 ; GPO 1971 ; 1971 ; https://www.govinfo.gov/ >
-    au < manifest ; 1973 ; GPO 1973 ; 1973 ; https://www.govinfo.gov/ >
-    au < manifest ; 1975 ; GPO 1975 ; 1975 ; https://www.govinfo.gov/ >
-    au < manifest ; 1977 ; GPO 1977 ; 1977 ; https://www.govinfo.gov/ >
-    au < manifest ; 1978 ; GPO 1978 ; 1978 ; https://www.govinfo.gov/ >
-    au < manifest ; 1981 ; GPO 1981 ; 1981 ; https://www.govinfo.gov/ >
-    au < manifest ; 1985 ; GPO 1985 ; 1985 ; https://www.govinfo.gov/ >
-    au < manifest ; 1986 ; GPO 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < manifest ; 1987 ; GPO 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < manifest ; 1989 ; GPO 1989 ; 1989 ; https://www.govinfo.gov/ >
-    au < manifest ; 1990 ; GPO 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < manifest ; 1991 ; GPO 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < manifest ; 1992 ; GPO 1992 ; 1992 ; https://www.govinfo.gov/ >
-    au < manifest ; 1993 ; GPO 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < manifest ; 1994 ; GPO 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; GPO 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; GPO 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; GPO 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; GPO 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 1960 ; GPO 1960 ; 1960 ; https://www.govinfo.gov/ >
+    au < ready ; 1963 ; GPO 1963 ; 1963 ; https://www.govinfo.gov/ >
+    au < ready ; 1964 ; GPO 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < ready ; 1970 ; GPO 1970 ; 1970 ; https://www.govinfo.gov/ >
+    au < ready ; 1971 ; GPO 1971 ; 1971 ; https://www.govinfo.gov/ >
+    au < ready ; 1973 ; GPO 1973 ; 1973 ; https://www.govinfo.gov/ >
+    au < ready ; 1975 ; GPO 1975 ; 1975 ; https://www.govinfo.gov/ >
+    au < ready ; 1977 ; GPO 1977 ; 1977 ; https://www.govinfo.gov/ >
+    au < ready ; 1978 ; GPO 1978 ; 1978 ; https://www.govinfo.gov/ >
+    au < ready ; 1981 ; GPO 1981 ; 1981 ; https://www.govinfo.gov/ >
+    au < ready ; 1985 ; GPO 1985 ; 1985 ; https://www.govinfo.gov/ >
+    au < ready ; 1986 ; GPO 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < ready ; 1987 ; GPO 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < ready ; 1989 ; GPO 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < ready ; 1990 ; GPO 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < ready ; 1991 ; GPO 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < ready ; 1992 ; GPO 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < ready ; 1993 ; GPO 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < ready ; 1994 ; GPO 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < ready ; 1996 ; GPO 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; GPO 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; GPO 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; GPO 1999 ; 1999 ; https://www.govinfo.gov/ >
 
 
     au < released ; 1873 ; Additional Government Publications 1873 ; 1873 ; https://www.govinfo.gov/ >
@@ -356,10 +397,10 @@
     param[collection_id] = BUDGET
 
 
-    au < manifest ; 1995 ; Budget of the United States Government 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; Budget of the United States Government 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; Budget of the United States Government 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; Budget of the United States Government 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1995 ; Budget of the United States Government 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < ready ; 1996 ; Budget of the United States Government 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; Budget of the United States Government 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; Budget of the United States Government 1998 ; 1998 ; https://www.govinfo.gov/ >
     au < manifest ; 1999 ; Budget of the United States Government 1999 ; 1999 ; https://www.govinfo.gov/ >
  
     au < released ; 2014 ; Budget of the United States Government 2014 ; 2014 ; https://www.govinfo.gov/ >
@@ -373,7 +414,8 @@
     au < released ; 2022 ; Budget of the United States Government 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Budget of the United States Government 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Budget of the United States Government 2024 ; 2024 ; https://www.govinfo.gov/ >
-
+    au < manifest ; 2025 ; BUDGET 2025 ; 2025 ; https://www.govinfo.gov/ >
+ 
   }
 
   {
@@ -412,18 +454,18 @@
     au < ready ; 1984 ; CZIC 1984 ; 1984 ; https://www.govinfo.gov/ >
     au < ready ; 1985 ; CZIC 1985 ; 1985 ; https://www.govinfo.gov/ >
     au < ready ; 1986 ; CZIC 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < manifest ; 1987 ; CZIC 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < manifest ; 1988 ; CZIC 1988 ; 1988 ; https://www.govinfo.gov/ >
-    au < manifest ; 1989 ; CZIC 1989 ; 1989 ; https://www.govinfo.gov/ >
-    au < manifest ; 1990 ; CZIC 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < manifest ; 1991 ; CZIC 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < manifest ; 1992 ; CZIC 1992 ; 1992 ; https://www.govinfo.gov/ >
-    au < manifest ; 1993 ; CZIC 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < manifest ; 1994 ; CZIC 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < manifest ; 1995 ; CZIC 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; CZIC 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; CZIC 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; CZIC 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1987 ; CZIC 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < ready ; 1988 ; CZIC 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < ready ; 1989 ; CZIC 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < ready ; 1990 ; CZIC 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < ready ; 1991 ; CZIC 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < ready ; 1992 ; CZIC 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < ready ; 1993 ; CZIC 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < ready ; 1994 ; CZIC 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < ready ; 1995 ; CZIC 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < ready ; 1996 ; CZIC 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; CZIC 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; CZIC 1998 ; 1998 ; https://www.govinfo.gov/ >
     au < manifest ; 1999 ; CZIC 1999 ; 1999 ; https://www.govinfo.gov/ >
  
   }
@@ -437,6 +479,10 @@
     param[collection_id] = CFR
 
     au < down ; 1807 ; Code of Federal Regulations 1807 ; 1807 ; https://www.govinfo.gov/ > #no substance
+    au < manifest ; 1996 ; CFR 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < manifest ; 1997 ; CFR 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < manifest ; 1998 ; CFR 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < manifest ; 1999 ; CFR 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < released ; 2010 ; Code of Federal Regulations 2010 ; 2010 ; https://www.govinfo.gov/ >
     au < released ; 2011 ; Code of Federal Regulations 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < released ; 2012 ; Code of Federal Regulations 2012 ; 2012 ; https://www.govinfo.gov/ >
@@ -452,6 +498,7 @@
     au < released ; 2022 ; Code of Federal Regulations 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; Code of Federal Regulations 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Code of Federal Regulations 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; CFR 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -759,6 +806,8 @@
 
     param[collection_id] = CHRG
 
+    au < down ; 1933 ; Congressional Hearings 1933 ; 1933 ; https://www.govinfo.gov/ > #no substance
+    au < down ; 1934 ; Congressional Hearings 1934 ; 1934 ; https://www.govinfo.gov/ > #no substance
     au < released ; 1936 ; Congressional Hearings 1936 ; 1936 ; https://www.govinfo.gov/ >
     au < released ; 1949 ; Congressional Hearings 1949 ; 1949 ; https://www.govinfo.gov/ >
     au < released ; 1950 ; Congressional Hearings 1950 ; 1950 ; https://www.govinfo.gov/ >
@@ -766,9 +815,7 @@
     au < released ; 1957 ; Congressional Hearings 1957 ; 1957 ; https://www.govinfo.gov/ >
     au < released ; 1991 ; Congressional Hearings 1991 ; 1991 ; https://www.govinfo.gov/ >
 
-    au < down ; 1933 ; Congressional Hearings 1933 ; 1933 ; https://www.govinfo.gov/ > #no substance
-    au < down ; 1934 ; Congressional Hearings 1934 ; 1934 ; https://www.govinfo.gov/ > #no substance
-    au < released ; 1945 ; CHRG 1945 ; 1945 ; https://www.govinfo.gov/ >
+    au < released ; 1945 ; Congressional Hearings 1945 ; 1945 ; https://www.govinfo.gov/ >
     au < released ; 1946 ; Congressional Hearings 1946 ; 1946 ; https://www.govinfo.gov/ >
     au < released ; 1955 ; Congressional Hearings 1955 ; 1955 ; https://www.govinfo.gov/ >
     au < released ; 1956 ; Congressional Hearings 1956 ; 1956 ; https://www.govinfo.gov/ >
@@ -780,13 +827,13 @@
     au < released ; 1963 ; Congressional Hearings 1963 ; 1963 ; https://www.govinfo.gov/ >
     au < released ; 1964 ; Congressional Hearings 1964 ; 1964 ; https://www.govinfo.gov/ >
     au < released ; 1965 ; Congressional Hearings 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1966 ; Congressional Hearings 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < manifest ; 1966 ; Congressional Hearings 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < released ; 1967 ; Congressional Hearings 1967 ; 1967 ; https://www.govinfo.gov/ >
     au < released ; 1968 ; Congressional Hearings 1968 ; 1968 ; https://www.govinfo.gov/ >
     au < released ; 1969 ; Congressional Hearings 1969 ; 1969 ; https://www.govinfo.gov/ >
     au < released ; 1970 ; Congressional Hearings 1970 ; 1970 ; https://www.govinfo.gov/ >
     au < released ; 1971 ; Congressional Hearings 1971 ; 1971 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1972 ; Congressional Hearings 1972 ; 1972 ; https://www.govinfo.gov/ >
+    au < manifest ; 1972 ; Congressional Hearings 1972 ; 1972 ; https://www.govinfo.gov/ >
     au < released ; 1973 ; Congressional Hearings 1973 ; 1973 ; https://www.govinfo.gov/ >
     au < released ; 1974 ; Congressional Hearings 1974 ; 1974 ; https://www.govinfo.gov/ >
     au < released ; 1975 ; Congressional Hearings 1975 ; 1975 ; https://www.govinfo.gov/ >
@@ -800,18 +847,18 @@
     au < doesNotExist ; 1983 ; Congressional Hearings 1983 ; 1983 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1984 ; Congressional Hearings 1984 ; 1984 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1985 ; Congressional Hearings 1985 ; 1985 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1986 ; Congressional Hearings 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1987 ; Congressional Hearings 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < manifest ; 1986 ; Congressional Hearings 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < manifest ; 1987 ; Congressional Hearings 1987 ; 1987 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1988 ; Congressional Hearings 1988 ; 1988 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1989 ; Congressional Hearings 1989 ; 1989 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1990 ; Congressional Hearings 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1993 ; Congressional Hearings 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1994 ; Congressional Hearings 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1995 ; Congressional Hearings 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1996 ; Congressional Hearings 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1997 ; Congressional Hearings 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1998 ; Congressional Hearings 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 1999 ; Congressional Hearings 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < manifest ; 1993 ; Congressional Hearings 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < manifest ; 1994 ; Congressional Hearings 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < manifest ; 1995 ; Congressional Hearings 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < manifest ; 1996 ; Congressional Hearings 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < manifest ; 1997 ; Congressional Hearings 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < manifest ; 1998 ; Congressional Hearings 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < manifest ; 1999 ; Congressional Hearings 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2000 ; Congressional Hearings 2000 ; 2000 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2001 ; Congressional Hearings 2001 ; 2001 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2002 ; Congressional Hearings 2002 ; 2002 ; https://www.govinfo.gov/ >
@@ -838,7 +885,6 @@
     au < released ; 2023 ; Congressional Hearings 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Congressional Hearings 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Congressional Hearings 2025 ; 2025 ; https://www.govinfo.gov/ >
-
 
   }
 
@@ -880,10 +926,12 @@
     param[collection_id] = CRECB
 
 
+    au < manifest ; 1999 ; CRECB 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < released ; 2002 ; Congressional Record (Bound) 2002 ; 2002 ; https://www.govinfo.gov/ >
     au < released ; 2003 ; Congressional Record (Bound) 2003 ; 2003 ; https://www.govinfo.gov/ >
     au < released ; 2004 ; Congressional Record (Bound) 2004 ; 2004 ; https://www.govinfo.gov/ >
     au < released ; 2005 ; Congressional Record (Bound) 2005 ; 2005 ; https://www.govinfo.gov/ > #continuously fails testing on old platform.
+    au < released ; 2006 ; Congressional Record (Bound) 2006 ; 2006 ; https://www.govinfo.gov/ >
     au < released ; 2007 ; Congressional Record (Bound) 2007 ; 2007 ; https://www.govinfo.gov/ >
     au < released ; 2008 ; Congressional Record (Bound) 2008 ; 2008 ; https://www.govinfo.gov/ >
     au < released ; 2009 ; Congressional Record (Bound) 2009 ; 2009 ; https://www.govinfo.gov/ >
@@ -898,7 +946,6 @@
     au < released ; 2018 ; Congressional Record (Bound) 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Record (Bound) 2020 ; 2020 ; https://www.govinfo.gov/ >
 
-    au < released ; 2006 ; Congressional Record (Bound) 2006 ; 2006 ; https://www.govinfo.gov/ >
     }
   }
 
@@ -1030,6 +1077,23 @@
 
     param[collection_id] = CRI
 
+    au < manifest ; 1983 ; CRI 1983 ; 1983 ; https://www.govinfo.gov/ >
+    au < manifest ; 1984 ; CRI 1984 ; 1984 ; https://www.govinfo.gov/ >
+    au < manifest ; 1985 ; CRI 1985 ; 1985 ; https://www.govinfo.gov/ >
+    au < manifest ; 1986 ; CRI 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < manifest ; 1987 ; CRI 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < manifest ; 1988 ; CRI 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < manifest ; 1989 ; CRI 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < manifest ; 1990 ; CRI 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < manifest ; 1991 ; CRI 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < manifest ; 1992 ; CRI 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < manifest ; 1993 ; CRI 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < manifest ; 1994 ; CRI 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < manifest ; 1995 ; CRI 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < manifest ; 1996 ; CRI 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < manifest ; 1997 ; CRI 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < manifest ; 1999 ; CRI 1999 ; 1999 ; https://www.govinfo.gov/ >
+ 
     au < released ; 1998 ; Congressional Record Index 1998 ; 1998 ; https://www.govinfo.gov/ > #no substance
     au < released ; 2016 ; Congressional Record Index 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Congressional Record Index 2017 ; 2017 ; https://www.govinfo.gov/ >
@@ -1294,7 +1358,9 @@
     param[collection_id] = HMAN
 
 
+    au < manifest ; 1995 ; House Rules and Manual 1995 ; 1995 ; https://www.govinfo.gov/ >
     au < released ; 1997 ; House Rules and Manual 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < manifest ; 1999 ; House Rules and Manual 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < released ; 2003 ; House Rules and Manual 2003 ; 2003 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 2014 ; House Rules and Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2015 ; House Rules and Manual 2015 ; 2015 ; https://www.govinfo.gov/ >
@@ -1305,6 +1371,7 @@
     au < released ; 2021 ; House Rules and Manual 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; House Rules and Manual 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; House Rules and Manual 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < manifest ; 2025 ; House Rules and Manual 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1384,6 +1451,12 @@
 
     param[collection_id] = PLAW
 
+    au < manifest ; 1995 ; Public and Private Laws 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < manifest ; 1996 ; Public and Private Laws 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < manifest ; 1997 ; Public and Private Laws 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < manifest ; 1998 ; Public and Private Laws 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < manifest ; 1999 ; Public and Private Laws 1999 ; 1999 ; https://www.govinfo.gov/ >
+ 
     au < released ; 2013 ; Public and Private Laws 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Public and Private Laws 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Public and Private Laws 2018 ; 2018 ; https://www.govinfo.gov/ >
@@ -1706,12 +1779,12 @@
     #Published 1994-2017
     param[collection_id] = USCODE
 
-    au < manifest ; 1994 ; USCODE 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < manifest ; 1995 ; USCODE 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; USCODE 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; USCODE 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; USCODE 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; USCODE 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < manifest ; 1994 ; United States Code 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < manifest ; 1995 ; United States Code 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < manifest ; 1996 ; United States Code 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < manifest ; 1997 ; United States Code 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < manifest ; 1998 ; United States Code 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < manifest ; 1999 ; United States Code 1999 ; 1999 ; https://www.govinfo.gov/ >
 
     au < released ; 2011 ; United States Code 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2012 ; United States Code 2012 ; 2012 ; https://www.govinfo.gov/ >
@@ -1726,7 +1799,8 @@
     au < released ; 2021 ; United States Code 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; United States Code 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; United States Code 2023 ; 2023 ; https://www.govinfo.gov/ >
-
+    au < manifest ; 2024 ; USCODE 2024 ; 2024 ; https://www.govinfo.gov/ >
+ 
   }
 
   {
