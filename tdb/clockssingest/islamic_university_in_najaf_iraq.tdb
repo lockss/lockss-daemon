@@ -1,0 +1,56 @@
+{
+  publisher <
+    name = Islamic University in Najaf, Iraq ;
+    info[contract] = 2025 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = NJF Biomedicine Journal ;
+        eissn = 3080-874X
+      >
+
+      param[base_url] = https://bio.iunajafjournals.com/
+      param[journal_abbr] = journal
+
+      au < exists ; exists ; 2024 ; NJF Biomedicine Journal Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2025 ; NJF Biomedicine Journal Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = NJF Intelligent Engineering Journal ;
+        eissn = 3080-7549
+      >
+
+      param[base_url] = https://iej.iunajafjournals.com/
+      param[journal_abbr] = journal
+
+      au < exists ; exists ; 2024 ; NJF Intelligent Engineering Journal Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2025 ; NJF Intelligent Engineering Journal Volume 2 ; 2 ;  >
+
+  }
+
+  {
+
+      title <
+        name = NJF Islamic University Journal ;
+        eissn = 3080-7530
+      >
+
+      param[base_url] = https://iuj.iunajafjournals.com/
+      param[journal_abbr] = journal
+
+      au < exists ; exists ; 2024 ; NJF Islamic University Journal Volume 1 ; 1 ;  >
+      au < expected ; exists ; 2025 ; NJF Islamic University Journal Volume 2 ; 2 ;  >
+
+  }
+}

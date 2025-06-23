@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Al-Noor University ;
+    info[contract] = 2025 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = The Nexus of Sustainability and Energy Technology Journal ;
+        eissn = 3080-1915
+      >
+
+      param[base_url] = https://tnosaetj.alnoor.edu.iq/
+      param[journal_abbr] = home
+
+      au < exists ; exists ; 2025 ; The Nexus of Sustainability and Energy Technology Journal Volume 1 ; 1 ; >
+
+  }
+
+}
