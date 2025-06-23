@@ -1354,7 +1354,7 @@
     au < manifest ; exists ; 2018 ; 2018 ; Annals of the International Communication Association Volume 42 ; 42 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Annals of the International Communication Association Volume 43 ; 43 ; >
     au < testing ; exists ; 2020 ; 2020 ; Annals of the International Communication Association Volume 44 ; 44 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Annals of the International Communication Association Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Annals of the International Communication Association Volume 45 ; 45 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Annals of the International Communication Association Volume 46 ; 46 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Annals of the International Communication Association Volume 47 ; 47 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Annals of the International Communication Association Volume 48 ; 48 ; >
@@ -1893,8 +1893,8 @@
     au < manifest ; exists ; 2018 ; 2018 ; Art History Volume 41 ; 41 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Art History Volume 42 ; 42 ; >
     au < testing ; exists ; 2020 ; 2020 ; Art History Volume 43 ; 43 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Art History Volume 44 ; 44 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Art History Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Art History Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Art History Volume 45 ; 45 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Art History Volume 46 ; 46 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Art History Volume 47 ; 47 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Art History Volume 48 ; 48 ; >
@@ -2632,7 +2632,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; Biometrics Volume 75 ; 75 ; >
     au < testing ; exists ; 2020 ; 2020 ; Biometrics Volume 76 ; 76 ; >
     au < testing ; exists ; 2021 ; 2021 ; Biometrics Volume 77 ; 77 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Biometrics Volume 78 ; 78 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Biometrics Volume 78 ; 78 ; >
     au < testing ; exists ; 2023 ; 2023 ; Biometrics Volume 79 ; 79 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Biometrics Volume 80 ; 80 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Biometrics Volume 81 ; 81 ; >
@@ -3202,7 +3202,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; BJR|Case Reports Volume 5 ; 5 ; >
     au < testing ; exists ; 2020 ; 2020 ; BJR|Case Reports Volume 6 ; 6 ; >
     au < testing ; exists ; 2021 ; 2021 ; BJR|Case Reports Volume 7 ; 7 ; >
-    au < ready ; exists ; 2022 ; 2022 ; BJR|Case Reports Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; BJR|Case Reports Volume 8 ; 8 ; >
     au < frozen ; exists ; 2023 ; 2023 ; BJR|Case Reports Volume 9 ; 9 ; >
     au < frozen ; exists ; 2024 ; 2024 ; BJR|Case Reports Volume 10 ; 10 ; >
     au < manifest ; exists ; 2025 ; 2025 ; BJR|Case Reports Volume 11 ; 11 ; >
@@ -13307,7 +13307,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Occupational Health Volume 61 ; 61 ; >
     au < testing ; exists ; 2020 ; 2020 ; Journal of Occupational Health Volume 62 ; 62 ; >
     au < testing ; exists ; 2021 ; 2021 ; Journal of Occupational Health Volume 63 ; 63 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Journal of Occupational Health Volume 64 ; 64 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Journal of Occupational Health Volume 64 ; 64 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Journal of Occupational Health Volume 65 ; 65 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Journal of Occupational Health Volume 66 ; 66 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Journal of Occupational Health Volume 67 ; 67 ; >
@@ -16829,7 +16829,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; North American Journal of Fisheries Management Volume 39 ; 39 ; >
     au < testing ; exists ; 2020 ; 2020 ; North American Journal of Fisheries Management Volume 40 ; 40 ; >
     au < testing ; exists ; 2021 ; 2021 ; North American Journal of Fisheries Management Volume 41 ; 41 ; >
-    au < ready ; exists ; 2022 ; 2022 ; North American Journal of Fisheries Management Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; North American Journal of Fisheries Management Volume 42 ; 42 ; >
     au < frozen ; exists ; 2023 ; 2023 ; North American Journal of Fisheries Management Volume 43 ; 43 ; >
     au < frozen ; exists ; 2024 ; 2024 ; North American Journal of Fisheries Management Volume 44 ; 44 ; >
     au < manifest ; exists ; 2025 ; 2025 ; North American Journal of Fisheries Management Volume 45 ; 45 ; >
@@ -22096,7 +22096,7 @@
     au < manifest ; exists ; 2019 ; 2019 ; The ISME Journal Volume 13 ; 13 ; >
     au < testing ; exists ; 2020 ; 2020 ; The ISME Journal Volume 14 ; 14 ; >
     au < testing ; exists ; 2021 ; 2021 ; The ISME Journal Volume 15 ; 15 ; >
-    au < ready ; exists ; 2022 ; 2022 ; The ISME Journal Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; The ISME Journal Volume 16 ; 16 ; >
     au < crawling ; exists ; 2023 ; 2023 ; The ISME Journal Volume 17 ; 17 ; >
     au < crawling ; exists ; 2024 ; 2024 ; The ISME Journal Volume 18 ; 18 ; >
     au < manifest ; exists ; 2025 ; 2025 ; The ISME Journal Volume 19 ; 19 ; >
