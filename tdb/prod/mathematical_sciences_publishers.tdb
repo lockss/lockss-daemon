@@ -581,14 +581,15 @@
 
     param[journal_id] = cnt
     #formely the Moscow Journal of Combinatorics and Number Theory
+    #Volumes 1-7 manifest pages do not point to content
 
-    au < manifest ; 2011 ; Combinatorics and Number Theory Volume 1 ; 1 ; 2011 ; https://msp.org/ >
-    au < manifest ; 2012 ; Combinatorics and Number Theory Volume 2 ; 2 ; 2012 ; https://msp.org/ >
-    au < manifest ; 2013 ; Combinatorics and Number Theory Volume 3 ; 3 ; 2013 ; https://msp.org/ >
-    au < manifest ; 2014 ; Combinatorics and Number Theory Volume 4 ; 4 ; 2014 ; https://msp.org/ >
-    au < manifest ; 2015 ; Combinatorics and Number Theory Volume 5 ; 5 ; 2015 ; https://msp.org/ >
-    au < manifest ; 2016 ; Combinatorics and Number Theory Volume 6 ; 6 ; 2016 ; https://msp.org/ >
-    au < manifest ; 2017 ; Combinatorics and Number Theory Volume 7 ; 7 ; 2017 ; https://msp.org/ >
+    au < doNotProcess ; 2011 ; Combinatorics and Number Theory Volume 1 ; 1 ; 2011 ; https://msp.org/ >
+    au < doNotProcess ; 2012 ; Combinatorics and Number Theory Volume 2 ; 2 ; 2012 ; https://msp.org/ >
+    au < doNotProcess ; 2013 ; Combinatorics and Number Theory Volume 3 ; 3 ; 2013 ; https://msp.org/ >
+    au < doNotProcess ; 2014 ; Combinatorics and Number Theory Volume 4 ; 4 ; 2014 ; https://msp.org/ >
+    au < doNotProcess ; 2015 ; Combinatorics and Number Theory Volume 5 ; 5 ; 2015 ; https://msp.org/ >
+    au < doNotProcess ; 2016 ; Combinatorics and Number Theory Volume 6 ; 6 ; 2016 ; https://msp.org/ >
+    au < doNotProcess ; 2017 ; Combinatorics and Number Theory Volume 7 ; 7 ; 2017 ; https://msp.org/ >
     au < released ; 2019 ; Combinatorics and Number Theory Volume 8 ; 8 ; 2019 ; https://msp.org/ >
     au < released ; 2020 ; Combinatorics and Number Theory Volume 9 ; 9 ; 2020 ; https://msp.org/ >
     au < released ; 2021 ; Combinatorics and Number Theory Volume 10 ; 10 ; 2021 ; https://msp.org/ >
