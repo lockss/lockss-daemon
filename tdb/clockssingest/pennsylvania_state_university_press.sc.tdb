@@ -755,7 +755,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; Reception: Texts, Readers, Audiences, History Volume 13 ; 13 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Reception: Texts, Readers, Audiences, History Volume 14 ; 14 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Reception: Texts, Readers, Audiences, History Volume 15 ; 15 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Reception: Texts, Readers, Audiences, History Volume 16 ; 16 ; 2024 ; >
+      au < frozen ; exists ; 2024 ; Reception: Texts, Readers, Audiences, History Volume 16 ; 16 ; 2024 ; >
       au < expected ; exists ; 2025 ; Reception: Texts, Readers, Audiences, History Volume 17 ; 17 ; 2025 ; >
 
   }
@@ -1404,7 +1404,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Information Policy Volume 2021 ; 2021 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Journal of Information Policy Volume 12 ; 12 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Journal of Information Policy Volume 13 ; 13 ; 2023 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2024 ; Journal of Information Policy Volume 14 ; 14 ; 2024 ; >
+      au < frozen ; exists ; 2024 ; Journal of Information Policy Volume 14 ; 14 ; 2024 ; >
       au < expected ; exists ; 2025 ; Journal of Information Policy Volume 15 ; 15 ; 2025 ; >
 
   }
@@ -1476,7 +1476,7 @@
       au < finished ; manifest ; 2021 ; Journal of Posthuman Studies Volume 5 ; 5 ; 2021 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Journal of Posthuman Studies Volume 6 ; 6 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Journal of Posthuman Studies Volume 7 ; 7 ; 2023 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2024 ; Journal of Posthuman Studies Volume 8 ; 8 ; 2024 ; >
+      au < frozen ; exists ; 2024 ; Journal of Posthuman Studies Volume 8 ; 8 ; 2024 ; >
       au < expected ; exists ; 2025 ; Journal of Posthuman Studies Volume 9 ; 9 ; 2025 ; >
 
   }
@@ -1758,7 +1758,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2021 ; 2021 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 6 ; 6 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 7 ; 7 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 8 ; 8 ; 2024 ; >
+      au < frozen ; exists ; 2024 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 8 ; 8 ; 2024 ; >
       au < expected ; exists ; 2025 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 9 ; 9 ; 2025 ; >
 
   }
@@ -1849,7 +1849,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; The Langston Hughes Review Volume 27 ; 27 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Langston Hughes Review Volume 28 ; 28 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; The Langston Hughes Review Volume 29 ; 29 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; The Langston Hughes Review Volume 30 ; 30 ; 2024 ; >
+      au < frozen ; exists ; 2024 ; The Langston Hughes Review Volume 30 ; 30 ; 2024 ; >
       au < expected ; exists ; 2025 ; The Langston Hughes Review Volume 31 ; 31 ; 2025 ; >
 
   }
@@ -2194,8 +2194,8 @@
 
       param[journal_id] = nursing-history-review
 
-      au < crawling ; exists ; 2023 ; Nursing History Review Volume 31 ; 31 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Nursing History Review Volume 32 ; 32 ; 2024 ; >
+      au < frozen ; exists ; 2023 ; Nursing History Review Volume 31 ; 31 ; 2023 ; >
+      au < frozen ; exists ; 2024 ; Nursing History Review Volume 32 ; 32 ; 2024 ; >
       au < manifest ; exists ; 2025 ; Nursing History Review Volume 33 ; 33 ; 2025 ; >
   }
 
@@ -2366,7 +2366,7 @@
       au < finished ; manifest ; 2021 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 20 ; 20 ; 2021 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 21 ; 21 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 22 ; 22 ; 2023 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2024 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 23 ; 23 ; 2024 ; >
+      au < frozen ; exists ; 2024 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 23 ; 23 ; 2024 ; >
       au < expected ; exists ; 2025 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 24 ; 24 ; 2025 ; >
 
   }
@@ -2387,7 +2387,7 @@
       au < finished ; manifest ; 2021 ; Restoration and Eighteenth-Century Theatre Research Volume 33 ; 33 ; 2021 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; Restoration and Eighteenth-Century Theatre Research Volume 34 ; 34 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Restoration and Eighteenth-Century Theatre Research Volume 35 ; 35 ; 2023 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2024 ; Restoration and Eighteenth-Century Theatre Research Volume 36 ; 36 ; 2024 ; >
+      au < frozen ; exists ; 2024 ; Restoration and Eighteenth-Century Theatre Research Volume 36 ; 36 ; 2024 ; >
       au < expected ; exists ; 2025 ; Restoration and Eighteenth-Century Theatre Research Volume 37 ; 37 ; 2025 ; >
 
   }

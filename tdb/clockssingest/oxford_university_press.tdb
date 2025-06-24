@@ -20042,9 +20042,9 @@
     param[journal_id] = skinhd
 
     au < ready ; exists ; 2021 ; 2021 ; Skin Health and Disease Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2022 ; 2022 ; Skin Health and Disease Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Skin Health and Disease Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2024 ; 2024 ; Skin Health and Disease Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2022 ; 2022 ; Skin Health and Disease Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Skin Health and Disease Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; Skin Health and Disease Volume 4 ; 4 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Skin Health and Disease Volume 5 ; 5 ; >
 
   }
@@ -22097,8 +22097,8 @@
     au < crawling ; exists ; 2020 ; 2020 ; The ISME Journal Volume 14 ; 14 ; >
     au < testing ; exists ; 2021 ; 2021 ; The ISME Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2022 ; 2022 ; The ISME Journal Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; The ISME Journal Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2024 ; 2024 ; The ISME Journal Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; The ISME Journal Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; The ISME Journal Volume 18 ; 18 ; >
     au < manifest ; exists ; 2025 ; 2025 ; The ISME Journal Volume 19 ; 19 ; >
 
   }
@@ -22493,7 +22493,7 @@
         #Previously published by American Association of Immunologists
         #volume 212 and prior had been processed in ClockssAAISilverchairPlugin
 
-        au < crawling ; exists ; 2024 ; 2024 ; The Journal of Immunology Volume 213 ; 213 ; >
+        au < frozen ; exists ; 2024 ; 2024 ; The Journal of Immunology Volume 213 ; 213 ; >
         au < manifest ; exists ; 2025 ; 2025 ; The Journal of Immunology Volume 214 ; 214 ; >
 
   }
@@ -22510,7 +22510,7 @@
         #Previously published by American Association of Immunologists
         #volume 7 and prior had been processed in ClockssAAISilverchairPlugin
 
-        au < crawling ; exists ; 2024 ; 2024 ; ImmunoHorizons Volume 8 ; 8 ; >
+        au < frozen ; exists ; 2024 ; 2024 ; ImmunoHorizons Volume 8 ; 8 ; >
         au < manifest ; exists ; 2025 ; 2025 ; ImmunoHorizons Volume 9 ; 9 ; >
 
   }
@@ -23150,7 +23150,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; The Leo Baeck Institute Year Book Volume 65 ; 65 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; 2022 ; The Leo Baeck Institute Year Book Volume 66 ; 66 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; The Leo Baeck Institute Year Book Volume 67 ; 67 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 2024 ; 2024 ; The Leo Baeck Institute Year Book Volume 68 ; 68 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; The Leo Baeck Institute Year Book Volume 68 ; 68 ; >
     au < expected ; exists ; 2025 ; 2025 ; The Leo Baeck Institute Year Book Volume 69 ; 69 ; >
 
   }
@@ -24507,7 +24507,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; The Year's Work in Critical and Cultural Theory Volume 28 ; 28 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; 2022 ; The Year's Work in Critical and Cultural Theory Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; The Year's Work in Critical and Cultural Theory Volume 30 ; 30 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2024 ; 2024 ; The Year's Work in Critical and Cultural Theory Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; The Year's Work in Critical and Cultural Theory Volume 31 ; 31 ; >
     au < expected ; exists ; 2025 ; 2025 ; The Year's Work in Critical and Cultural Theory Volume 32 ; 32 ; >
 
   }
@@ -24711,8 +24711,8 @@
     au < crawling ; exists ; 2020 ; 2020 ; Transactions of the American Fisheries Society Volume 149 ; 149 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Transactions of the American Fisheries Society Volume 150 ; 150 ; >
     au < ready ; exists ; 2022 ; 2022 ; Transactions of the American Fisheries Society Volume 151 ; 151 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Transactions of the American Fisheries Society Volume 152 ; 152 ; >
-    au < crawling ; exists ; 2024 ; 2024 ; Transactions of the American Fisheries Society Volume 153 ; 153 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Transactions of the American Fisheries Society Volume 152 ; 152 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; Transactions of the American Fisheries Society Volume 153 ; 153 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Transactions of the American Fisheries Society Volume 154 ; 154 ; >
 
   }
@@ -25344,8 +25344,8 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Zoological Journal of the Linnean Society Volume 143-145 ; 143-145 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Zoological Journal of the Linnean Society Volume 146-148 ; 146-148 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zoological Journal of the Linnean Society Volume 149-151 ; 149-151 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; Zoological Journal of the Linnean Society Volume 152-154 ; 152-154 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; Zoological Journal of the Linnean Society Volume 155-157 ; 155-157 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Zoological Journal of the Linnean Society Volume 152-154 ; 152-154 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Zoological Journal of the Linnean Society Volume 155-157 ; 155-157 ; >
     au < finished ; manifest ; 2010 ; 2010 ; Zoological Journal of the Linnean Society Volume 158-160 ; 158-160 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Zoological Journal of the Linnean Society Volume 161-163 ; 161-163 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; 2012 ; Zoological Journal of the Linnean Society Volume 164-166 ; 164-166 ; reingest2.clockss.org:8085 >
