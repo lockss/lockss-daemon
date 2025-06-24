@@ -87,6 +87,8 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
 
         urlList = new ArrayList<String>();
 
+        String storeUrl = String.format("%slockss-generated/",this.baseUrl);
+
         String apiStartUrl =  String.format("%sapi/list?%s%s%s&%s%s%s",
                             this.baseUrl,
                             KEY_FROM_DATE,
@@ -142,7 +144,7 @@ public class GigaScienceCrawlSeed extends BaseCrawlSeed {
         }
 
         Collections.sort(urlList);
-        storeStartUrls(urlList, apiStartUrl);
+        storeStartUrls(urlList, storeUrl);
     }
 
     /**

@@ -95,8 +95,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_start_url</string>
         <list>
-            <string>"%sapi/", to_http(base_url)</string>
-            <string>"%sapi/", to_https(base_url)</string>
+            <!--<string>"%sapi/", to_http(base_url)</string>
+            <string>"%sapi/", to_https(base_url)</string>-->
+            <string>"%slockss-generated/", to_http(base_url)</string>
+            <string>"%slockss-generated/", to_https(base_url)</string>
         </list>
     </entry>
     <entry>
@@ -117,6 +119,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_crawlrules</string>
         <list>
             <string>1,"^https?://%s/api/", base_url_host</string>
+            <string>1,"^https?://%s/lockss-generated/api/", base_url_host</string>
         </list>
     </entry>
     <entry>
