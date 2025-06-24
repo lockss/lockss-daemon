@@ -68,16 +68,16 @@
       au < manifest ; 1997 ; 1997 ; 1997 ; Documenta Volume 1997 >
       au < manifest ; 1998 ; 1998 ; 1998 ; Documenta Volume 1998 >
       au < manifest ; 1999 ; 1999 ; 1999 ; Documenta Volume 1999 >
-      au < manifest ; 2000 ; 2000 ; 2000 ; Documenta Volume 2000 >
-      au < manifest ; 2001 ; 2001 ; 2001 ; Documenta Volume 2001 >
-      au < manifest ; 2002 ; 2002 ; 2002 ; Documenta Volume 2002 >
-      au < manifest ; 2003 ; 2003 ; 2003 ; Documenta Volume 2003 >
-      au < manifest ; 2004 ; 2004 ; 2004 ; Documenta Volume 2004 >
-      au < manifest ; 2005 ; 2005 ; 2005 ; Documenta Volume 2005 >
-      au < manifest ; 2006 ; 2006 ; 2006 ; Documenta Volume 2006 >
-      au < manifest ; 2007 ; 2007 ; 2007 ; Documenta Volume 2007 >
-      au < manifest ; 2008 ; 2008 ; 2008 ; Documenta Volume 2008 >
-      au < manifest ; 2009 ; 2009 ; 2009 ; Documenta Volume 2009 >
+      au < ready ; 2000 ; 2000 ; 2000 ; Documenta Volume 2000 >
+      au < ready ; 2001 ; 2001 ; 2001 ; Documenta Volume 2001 >
+      au < ready ; 2002 ; 2002 ; 2002 ; Documenta Volume 2002 >
+      au < ready ; 2003 ; 2003 ; 2003 ; Documenta Volume 2003 >
+      au < ready ; 2004 ; 2004 ; 2004 ; Documenta Volume 2004 >
+      au < ready ; 2005 ; 2005 ; 2005 ; Documenta Volume 2005 >
+      au < ready ; 2006 ; 2006 ; 2006 ; Documenta Volume 2006 >
+      au < ready ; 2007 ; 2007 ; 2007 ; Documenta Volume 2007 >
+      au < ready ; 2008 ; 2008 ; 2008 ; Documenta Volume 2008 >
+      au < ready ; 2009 ; 2009 ; 2009 ; Documenta Volume 2009 >
       au < released ; 2010 ; 2010 ; 2010 ; Documenta Volume 2010 >
       au < released ; 2011 ; 2011 ; 2011 ; Documenta Volume 2011 >
       au < released ; 2012 ; 2012 ; 2012 ; Documenta Volume 2012 >
@@ -108,7 +108,7 @@
       au < released ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 >
       au < released ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 >
       au < released ; 2023 ; 2023 ; 2023 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2023 >
-      au < manifest ; 2024 ; 2024 ; 2024 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2024 >
+      au < ready ; 2024 ; 2024 ; 2024 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2024 >
       au < manifest ; 2025 ; 2025 ; 2025 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2025 >
 
   }
@@ -129,7 +129,7 @@
       au < released ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 >
       au < released ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 >
       au < released ; 2023 ; 2023 ; 2023 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2023 >
-      au < manifest ; 2024 ; 2024 ; 2024 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2024 >
+      au < ready ; 2024 ; 2024 ; 2024 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2024 >
       au < manifest ; 2025 ; 2025 ; 2025 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2025 >
 
   }
@@ -317,7 +317,7 @@
       au < released ; 2002 ; 2002 ; 2002 ; Brood & Rozen Volume 2002 >
       au < released ; 2003 ; 2003 ; 2003 ; Brood & Rozen Volume 2003 >
       au < released ; 2004 ; 2004 ; 2004 ; Brood & Rozen Volume 2004 >
-      au < manifest ; 2005 ; 2005 ; 2005 ; Brood & Rozen Volume 2005 >
+      au < ready ; 2005 ; 2005 ; 2005 ; Brood & Rozen Volume 2005 >
       au < released ; 2006 ; 2006 ; 2006 ; Brood & Rozen Volume 2006 >
       au < released ; 2007 ; 2007 ; 2007 ; Brood & Rozen Volume 2007 >
       au < released ; 2008 ; 2008 ; 2008 ; Brood & Rozen Volume 2008 >
@@ -431,7 +431,7 @@
       au < manifest ; 1998 ; 1998 ; 1998 ; Ghendtsche Tydinghen Volume 1998 >
       au < manifest ; 1999 ; 1999 ; 1999 ; Ghendtsche Tydinghen Volume 1999 >
       au < released ; 2000 ; 2000 ; 2000 ; Ghendtsche Tydinghen Volume 2000 >
-      au < manifest ; 2001 ; 2001 ; 2001 ; Ghendtsche Tydinghen Volume 2001 >
+      au < ready ; 2001 ; 2001 ; 2001 ; Ghendtsche Tydinghen Volume 2001 >
       au < released ; 2002 ; 2002 ; 2002 ; Ghendtsche Tydinghen Volume 2002 >
       au < released ; 2003 ; 2003 ; 2003 ; Ghendtsche Tydinghen Volume 2003 >
       au < released ; 2004 ; 2004 ; 2004 ; Ghendtsche Tydinghen Volume 2004 >
@@ -549,7 +549,7 @@
       au < manifest ; 1998 ; 1998 ; 1998 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1998 >
       au < manifest ; 1999 ; 1999 ; 1999 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1999 >
       au < released ; 2000 ; 2000 ; 2000 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2000 >
-      au < manifest ; 2001 ; 2001 ; 2001 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2001 >
+      au < ready ; 2001 ; 2001 ; 2001 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2001 >
       au < released ; 2002 ; 2002 ; 2002 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2002 >
       au < released ; 2003 ; 2003 ; 2003 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2003 >
       au < released ; 2004 ; 2004 ; 2004 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2004 >
@@ -803,7 +803,7 @@
       au < released ; 2006 ; 2006 ; 2006 ; EWOP in Practice Volume 2006 >
       au < released ; 2007 ; 2007 ; 2007 ; EWOP in Practice Volume 2007 >
       au < released ; 2008 ; 2008 ; 2008 ; EWOP in Practice Volume 2008 >
-      au < manifest ; 2009 ; 2009 ; 2009 ; EWOP in Practice Volume 2009 >
+      au < ready ; 2009 ; 2009 ; 2009 ; EWOP in Practice Volume 2009 >
       au < doNotProcess ; 2010 ; 2010 ; 2010 ; EWOP in Practice Volume 2010 > #No substance
       au < released ; 2011 ; 2011 ; 2011 ; EWOP in Practice Volume 2011 >
       au < doNotProcess ; 2012 ; 2012 ; 2012 ; EWOP in Practice Volume 2012 > #No substance
@@ -909,14 +909,14 @@
       au < manifest ; 1999 ; 1999 ; 1999 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1999 >
       au < released ; 2000 ; 2000 ; 2000 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2000 >
       au < released ; 2001 ; 2001 ; 2001 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2001 >
-      au < manifest ; 2002 ; 2002 ; 2002 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2002 >
+      au < ready ; 2002 ; 2002 ; 2002 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2002 >
       au < released ; 2003 ; 2003 ; 2003 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2003 >
       au < released ; 2004 ; 2004 ; 2004 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2004 >
       au < released ; 2005 ; 2005 ; 2005 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2005 >
       au < released ; 2006 ; 2006 ; 2006 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2006 >
       au < released ; 2007 ; 2007 ; 2007 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2007 >
       au < released ; 2008 ; 2008 ; 2008 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2008 >
-      au < manifest ; 2009 ; 2009 ; 2009 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2009 >
+      au < ready ; 2009 ; 2009 ; 2009 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2009 >
       au < released ; 2010 ; 2010 ; 2010 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2010 >
       au < released ; 2011 ; 2011 ; 2011 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2011 >
       au < released ; 2012 ; 2012 ; 2012 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2012 >
@@ -1443,7 +1443,7 @@
       au < released ; 2005 ; 2005 ; 2005 ; Tijdschrift voor industriële cultuur Volume 2005 >
       au < released ; 2006 ; 2006 ; 2006 ; Tijdschrift voor industriële cultuur Volume 2006 >
       au < released ; 2007 ; 2007 ; 2007 ; Tijdschrift voor industriële cultuur Volume 2007 >
-      au < manifest ; 2008 ; 2008 ; 2008 ; Tijdschrift voor industriële cultuur Volume 2008 >
+      au < ready ; 2008 ; 2008 ; 2008 ; Tijdschrift voor industriële cultuur Volume 2008 >
       au < released ; 2009 ; 2009 ; 2009 ; Tijdschrift voor industriële cultuur Volume 2009 >
       au < released ; 2010 ; 2010 ; 2010 ; Tijdschrift voor industriële cultuur Volume 2010 >
       au < released ; 2011 ; 2011 ; 2011 ; Tijdschrift voor industriële cultuur Volume 2011 >
@@ -1466,7 +1466,7 @@
       au < released ; 2004 ; 2004 ; 2004 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2004 >
       au < released ; 2005 ; 2005 ; 2005 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2005 >
       au < released ; 2006 ; 2006 ; 2006 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2006 >
-      au < manifest ; 2007 ; 2007 ; 2007 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2007 >
+      au < ready ; 2007 ; 2007 ; 2007 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2007 >
       au < released ; 2008 ; 2008 ; 2008 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2008 >
       au < released ; 2009 ; 2009 ; 2009 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2009 >
       au < released ; 2010 ; 2010 ; 2010 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2010 >
@@ -1492,7 +1492,7 @@
       #published 2009-present
       param[journal_id] = vdt
 
-      au < manifest ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 >
+      au < ready ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 >
       au < released ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 >
       au < released ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 >
       au < released ; 2012 ; 2012 ; 2012 ; Vlaams Diergeneeskundig Tijdschrift Volume 2012 >
@@ -1535,7 +1535,7 @@
       au < released ; 2005 ; 2005 ; 2005 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2005 >
       au < released ; 2006 ; 2006 ; 2006 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2006 >
       au < released ; 2007 ; 2007 ; 2007 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2007 >
-      au < manifest ; 2008 ; 2008 ; 2008 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2008 >
+      au < ready ; 2008 ; 2008 ; 2008 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2008 >
       au < released ; 2009 ; 2009 ; 2009 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2009 >
       au < released ; 2010 ; 2010 ; 2010 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2010 >
       au < released ; 2011 ; 2011 ; 2011 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2011 >
