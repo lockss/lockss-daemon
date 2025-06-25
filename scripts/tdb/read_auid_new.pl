@@ -4463,7 +4463,9 @@ while (my $line = <>) {
   } elsif ($plugin eq "ClockssInterResearchPlugin") {
          #****
          $s_url = sprintf("%sjournals/%s/%s-home/",
+         #$s_url = sprintf("%sjournals/%s",
              $param{base_url}, $param{journal_id}, $param{journal_id});
+             #$param{base_url}, $param{journal_id});
          $start_url = uri_unescape($s_url);
          my $s_req = HTTP::Request->new(GET, $start_url);
          my $s_resp = $ua->request($s_req);
@@ -4506,6 +4508,8 @@ while (my $line = <>) {
          }
          sleep(4);
   # End of Inter-Research Science Publisher
+
+
   # Start ClockssWroclawMedicalUniversityJournalsPlugin.
   } elsif ($plugin eq "ClockssWroclawMedicalUniversityJournalsPlugin") {
     $url = sprintf("%sen/archive/",
