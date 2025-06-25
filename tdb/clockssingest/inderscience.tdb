@@ -341,7 +341,7 @@
 
       param[journal_id] = ijaf
 
-      au < ready ; exists ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Accounting and Finance Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Accounting and Finance Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
@@ -561,7 +561,7 @@
 
       param[journal_id] = ijaom
 
-      au < ready ; exists ; 2009 ; International Journal of Advanced Operations Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Advanced Operations Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Advanced Operations Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Advanced Operations Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Advanced Operations Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -1962,7 +1962,7 @@
 
       au < crawling ; exists ; 2005-2006 ; International Journal of Business Intelligence and Data Mining Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Business Intelligence and Data Mining Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2008 ; International Journal of Business Intelligence and Data Mining Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2008 ; International Journal of Business Intelligence and Data Mining Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2009 ; International Journal of Business Intelligence and Data Mining Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Business Intelligence and Data Mining Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Business Intelligence and Data Mining Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -3450,7 +3450,7 @@
       param[journal_id] = ijeb
 
       au < crawling ; exists ; 2003 ; International Journal of Electronic Business Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2004 ; International Journal of Electronic Business Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2004 ; International Journal of Electronic Business Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2005 ; International Journal of Electronic Business Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006 ; International Journal of Electronic Business Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Electronic Business Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -4113,7 +4113,7 @@
       au < crawling ; exists ; 2005 ; International Journal of Environment and Pollution Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2005 ; International Journal of Environment and Pollution Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2005 ; International Journal of Environment and Pollution Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2006 ; International Journal of Environment and Pollution Volume 26 ; 26 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2006 ; International Journal of Environment and Pollution Volume 26 ; 26 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006 ; International Journal of Environment and Pollution Volume 27 ; 27 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006 ; International Journal of Environment and Pollution Volume 28 ; 28 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Environment and Pollution Volume 29 ; 29 ; https://www.inderscienceonline.com/ ; >
@@ -4810,7 +4810,7 @@
 
       param[journal_id] = ijgw
 
-      au < ready ; exists ; 2009 ; International Journal of Global Warming Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Global Warming Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Global Warming Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Global Warming Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Global Warming Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
@@ -7198,9 +7198,9 @@
       param[journal_id] = ijmr
 
       au < crawling ; exists ; 2006 ; International Journal of Manufacturing Research Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2007 ; International Journal of Manufacturing Research Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007 ; International Journal of Manufacturing Research Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Manufacturing Research Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2009 ; International Journal of Manufacturing Research Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Manufacturing Research Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Manufacturing Research Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Manufacturing Research Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Manufacturing Research Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
@@ -7234,7 +7234,7 @@
       au < crawling ; exists ; 2000 ; International Journal of Manufacturing Technology and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2000 ; International Journal of Manufacturing Technology and Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2001 ; International Journal of Manufacturing Technology and Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2002 ; International Journal of Manufacturing Technology and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2002 ; International Journal of Manufacturing Technology and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2003 ; International Journal of Manufacturing Technology and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2004 ; International Journal of Manufacturing Technology and Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2005 ; International Journal of Manufacturing Technology and Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
@@ -9219,7 +9219,7 @@
       param[journal_id] = ijrfita
 
       au < crawling ; exists ; 2006-2007 ; International Journal of Radio Frequency Identification Technology and Applications Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2009 ; International Journal of Radio Frequency Identification Technology and Applications Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Radio Frequency Identification Technology and Applications Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Radio Frequency Identification Technology and Applications Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2015 ; International Journal of Radio Frequency Identification Technology and Applications Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2018 ; International Journal of Radio Frequency Identification Technology and Applications Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > #issue 2, 3, 4 not online
@@ -10584,7 +10584,7 @@
 
       param[journal_id] = ijte
 
-      au < ready ; exists ; 2007-2008 ; International Journal of Technoentrepreneurship Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2007-2008 ; International Journal of Technoentrepreneurship Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Technoentrepreneurship Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015-2017 ; International Journal of Technoentrepreneurship Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2020-2023 ; International Journal of Technoentrepreneurship Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
@@ -10879,7 +10879,7 @@
 
       au < crawling ; exists ; 2002 ; International Journal of Technology Transfer and Commercialisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2003 ; International Journal of Technology Transfer and Commercialisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2004 ; International Journal of Technology Transfer and Commercialisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2004 ; International Journal of Technology Transfer and Commercialisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2005 ; International Journal of Technology Transfer and Commercialisation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2006 ; International Journal of Technology Transfer and Commercialisation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2007 ; International Journal of Technology Transfer and Commercialisation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -11438,7 +11438,7 @@
       param[journal_id] = ijw
 
       au < crawling ; exists ; 2000-2001 ; International Journal of Water Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2002-2004 ; International Journal of Water Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2002-2004 ; International Journal of Water Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2005-2007 ; International Journal of Water Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Water Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Water Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
