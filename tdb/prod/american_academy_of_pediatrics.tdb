@@ -133,7 +133,7 @@
       au < doNotProcess ; 2013 ; 2013 ; AAP News Volume 34 ; 34 >
       au < doNotProcess ; 2014 ; 2014 ; AAP News Volume 35 ; 35 >
       au < doNotProcess ; 2015 ; 2015 ; AAP News Volume 36 ; 36 >
-      au < exists ; 2016 ; 2016 ; AAP News Volume 37 ; 37 >
+      au < doNotProcess ; 2016 ; 2016 ; AAP News Volume 37 ; 37 >
       #different platform.
     }
 
@@ -462,10 +462,7 @@
 
       param[journal_id] = pediatricsopenscience
 
-      au < expected ; 2024 ; 2024 ; Pediatrics Open Science Volume 1 ; 1 >
-      au < expected ; 2024 ; 2024 ; Pediatrics Open Science Volume 2 ; 2 >
-      au < expected ; 2025 ; 2025 ; Pediatrics Open Science Volume 3 ; 3 >
-      au < expected ; 2025 ; 2025 ; Pediatrics Open Science Volume 4 ; 4 >
+      au < manifest ; 2025 ; 2025 ; Pediatrics Open Science Volume 1 ; 1 >
 
   }
 
