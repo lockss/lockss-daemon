@@ -16,7 +16,7 @@
     implicit < status ; status2 ; year ; name ; param[directory] >
 
     {
-      param[base_url] = https://clockss-test.lockss.org/sourcefiles/indicon-released/
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/indicon-released/
 
       au < ready ; exists ; 2025 ; Indicon S.r.l. Journals Source Content 2025_01 ; 2025_01 >
     }

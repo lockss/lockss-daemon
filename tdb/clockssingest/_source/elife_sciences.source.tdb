@@ -14,10 +14,9 @@
        name = eLife Sciences Preprint Source Content
     >
 
-      #TESTING
-      param[base_url] = https://clockss-test.lockss.org/sourcefiles/elifepreprint-released/
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/elifepreprint-released/
 
-      au < manifest ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025 ; 2025 >
+      au < ready ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025 ; 2025 >
 
   }
 
