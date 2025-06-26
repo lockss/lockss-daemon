@@ -43,7 +43,7 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/easeproc-released/
 
-      au < readySource ; crawling ; 2025 ; Editura ASE Proceedings Source Content 2025_01 ; 2025_01 >
+      au < ready ; exists ; 2025 ; Editura ASE Proceedings Source Content 2025_01 ; 2025_01 >
 
     }
   }
