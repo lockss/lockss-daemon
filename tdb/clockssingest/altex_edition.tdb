@@ -1,0 +1,72 @@
+{
+
+  publisher <
+    name = Altex Edition ;
+    info[contract] = 2025 ;
+    info[back] = 2015 ;
+    info[tester] = 8 ;
+    info[platform] = OJS3
+  >
+
+  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+
+  {
+ 
+    title <
+      name = ALTEX - Alternatives to Animal Experimentation ;
+      issn = 1868-596X ;
+      eissn = 1868-8551 ;
+      issnl = 1868-596X
+    >
+    
+    param[base_url] = https://www.altex.org/
+    param[journal_id] = altex 
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+    au < manifest ; exists ; 1984 ; 1984 ; ALTEX - Alternatives to Animal Experimentation Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; ALTEX - Alternatives to Animal Experimentation Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; ALTEX - Alternatives to Animal Experimentation Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; ALTEX - Alternatives to Animal Experimentation Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; ALTEX - Alternatives to Animal Experimentation Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1989 ; 1989 ; ALTEX - Alternatives to Animal Experimentation Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1990 ; 1990 ; ALTEX - Alternatives to Animal Experimentation Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1991 ; 1991 ; ALTEX - Alternatives to Animal Experimentation Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; ALTEX - Alternatives to Animal Experimentation Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1993 ; 1993 ; ALTEX - Alternatives to Animal Experimentation Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1994 ; 1994 ; ALTEX - Alternatives to Animal Experimentation Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1995 ; 1995 ; ALTEX - Alternatives to Animal Experimentation Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; ALTEX - Alternatives to Animal Experimentation Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1997 ; 1997 ; ALTEX - Alternatives to Animal Experimentation Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1998 ; 1998 ; ALTEX - Alternatives to Animal Experimentation Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1999 ; 1999 ; ALTEX - Alternatives to Animal Experimentation Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; ALTEX - Alternatives to Animal Experimentation Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; ALTEX - Alternatives to Animal Experimentation Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; ALTEX - Alternatives to Animal Experimentation Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; ALTEX - Alternatives to Animal Experimentation Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; ALTEX - Alternatives to Animal Experimentation Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; ALTEX - Alternatives to Animal Experimentation Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; ALTEX - Alternatives to Animal Experimentation Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; ALTEX - Alternatives to Animal Experimentation Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; ALTEX - Alternatives to Animal Experimentation Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; ALTEX - Alternatives to Animal Experimentation Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; ALTEX - Alternatives to Animal Experimentation Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; ALTEX - Alternatives to Animal Experimentation Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; ALTEX - Alternatives to Animal Experimentation Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; ALTEX - Alternatives to Animal Experimentation Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; ALTEX - Alternatives to Animal Experimentation Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; ALTEX - Alternatives to Animal Experimentation Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; ALTEX - Alternatives to Animal Experimentation Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; ALTEX - Alternatives to Animal Experimentation Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; ALTEX - Alternatives to Animal Experimentation Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; ALTEX - Alternatives to Animal Experimentation Volume 36 ; 36 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; ALTEX - Alternatives to Animal Experimentation Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; ALTEX - Alternatives to Animal Experimentation Volume 38 ; 38 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; ALTEX - Alternatives to Animal Experimentation Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2023 ; 2023 ; ALTEX - Alternatives to Animal Experimentation Volume 40 ; 40 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; ALTEX - Alternatives to Animal Experimentation Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; ALTEX - Alternatives to Animal Experimentation Volume 42 ; 42 ; >
+
+  }
+}
