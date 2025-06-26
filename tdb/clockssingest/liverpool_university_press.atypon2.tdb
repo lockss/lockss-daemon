@@ -675,7 +675,7 @@
     au < frozen ; exists ; 2004 ; Historical Studies in Industrial Relations Volume 17 ; 17 ; >
     au < frozen ; exists ; 2004 ; Historical Studies in Industrial Relations Volume 18 ; 18 ; >
     au < crawling ; exists ; 2005 ; Historical Studies in Industrial Relations Volume 19 ; 19 ; >
-    au < ready ; exists ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2005 ; Historical Studies in Industrial Relations Volume 20 ; 20 ; >
     au < frozen ; exists ; 2006 ; Historical Studies in Industrial Relations Volume 21 ; 21 ; >
     au < crawling ; exists ; 2006 ; Historical Studies in Industrial Relations Volume 22 ; 22 ; >
     au < crawling ; exists ; 2007 ; Historical Studies in Industrial Relations Volume 23-24 ; 23-24 ; >
@@ -761,7 +761,7 @@
     au < crawling ; exists ; 2004 ; International Development Planning Review Volume 26 ; 26 ; >
     au < crawling ; exists ; 2005 ; International Development Planning Review Volume 27 ; 27 ; >
     au < crawling ; exists ; 2006 ; International Development Planning Review Volume 28 ; 28 ; >
-    au < ready ; exists ; 2007 ; International Development Planning Review Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2007 ; International Development Planning Review Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; International Development Planning Review Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; International Development Planning Review Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; International Development Planning Review Volume 32 ; 32 ; >
@@ -848,7 +848,7 @@
     au < ready ; exists ; 2002 ; Before Farming Volume 2002 ; 2002 ; >
     au < frozen ; exists ; 2003 ; Before Farming Volume 2003 ; 2003 ; >
     au < frozen ; exists ; 2004 ; Before Farming Volume 2004 ; 2004 ; >
-    au < ready ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 ; >
+    au < crawling ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 ; >
     au < frozen ; exists ; 2006 ; Before Farming Volume 2006 ; 2006 ; >
     au < crawling ; exists ; 2007 ; Before Farming Volume 2007 ; 2007 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Before Farming Volume 2008 ; 2008 ; >
@@ -1185,7 +1185,7 @@
     au < frozen ; exists ; 2004 ; Labour History Review Volume 69 ; 69 ; >
     au < crawling ; exists ; 2005 ; Labour History Review Volume 70 ; 70 ; >
     au < crawling ; exists ; 2006 ; Labour History Review Volume 71 ; 71 ; >
-    au < ready ; exists ; 2007 ; Labour History Review Volume 72 ; 72 ; >
+    au < crawling ; exists ; 2007 ; Labour History Review Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Labour History Review Volume 73 ; 73 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Labour History Review Volume 74 ; 74 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Labour History Review Volume 75 ; 75 ; >
@@ -2009,7 +2009,7 @@
     au < ready ; exists ; 2004 ; Town Planning Review Volume 75 ; 75 ; >
     au < frozen ; exists ; 2005 ; Town Planning Review Volume 76 ; 76 ; >
     au < ready ; exists ; 2006 ; Town Planning Review Volume 77 ; 77 ; >
-    au < ready ; exists ; 2007 ; Town Planning Review Volume 78 ; 78 ; >
+    au < crawling ; exists ; 2007 ; Town Planning Review Volume 78 ; 78 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Town Planning Review Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Town Planning Review Volume 80 ; 80 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Town Planning Review Volume 81 ; 81 ; >
@@ -2579,7 +2579,7 @@
     au < frozen ; exists ; 2009 ; Polin: Studies in Polish Jewry Volume 21 ; 21 ; >
     au < frozen ; exists ; 2010 ; Polin: Studies in Polish Jewry Volume 22 ; 22 ; >
     au < frozen ; exists ; 2011 ; Polin: Studies in Polish Jewry Volume 23 ; 23 ; >
-    au < ready ; exists ; 2012 ; Polin: Studies in Polish Jewry Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2012 ; Polin: Studies in Polish Jewry Volume 24 ; 24 ; >
     au < frozen ; exists ; 2013 ; Polin: Studies in Polish Jewry Volume 25 ; 25 ; >
     au < frozen ; exists ; 2014 ; Polin: Studies in Polish Jewry Volume 26 ; 26 ; >
     au < frozen ; exists ; 2015 ; Polin: Studies in Polish Jewry Volume 27 ; 27 ; >
@@ -2606,7 +2606,7 @@
 
     param[journal_id] = churcharch
 
-    au < ready ; exists ; 2021 ; Church Archaeology Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2021 ; Church Archaeology Volume 20 ; 20 ; >
     au < frozen ; exists ; 2022 ; Church Archaeology Volume 21 ; 21 ; >
     au < frozen ; exists ; 2022 ; Church Archaeology Volume 22 ; 22 ; >
     au < frozen ; exists ; 2023 ; Church Archaeology Volume 23 ; 23 ; >
