@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>169</string>
+    <string>170</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -148,7 +148,10 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"^https?://%s/imgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/.*/googleAnalyticsPlugin\.js$", url_host(base_url)</string>
       <string>2,"^https?://%s/.*/www\.tandf\.co\.uk/", url_host(base_url)</string>
-      <string>1,"https://ehp\.niehs\.nih\.gov/toc/ehp/accepted-manuscripts"</string>
+      <string>1,"https://static.cloudflareinsights.com/.*\.js"</string>
+      <string>1,"https://widgets.figshare.com/static/"</string>
+      <string>1,"https://api.b2c.com/api/.*\.js"</string>
+      <string>1,"https://js.trendmd.com/trendmd.min\.js"</string>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
       <string>1,"^https?://((fonts|ajax)\.googleapis\.com)/"</string>
       <string>1,"^https?://(cdn\.nejm\.org)/."</string>
@@ -206,6 +209,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/topic/eb-abstracts-", url_host(base_url)</string>
       <!--Serve content related for aaas-->
       <string>1,"^https?://%s/((cdn-cgi/scripts)|pb-assets|products|templates|wro)", url_host(base_url)</string>
+      <string>1,"(?:%s).*\\.(css|js)(\\?.*)?", base_url</string>
     </list>
   </entry>
   <!--  tandf is serving pdf files of this form (tables) without mime-type -->
@@ -420,6 +424,9 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>scholar\.google\.com</string>
       <string>d1bxh8uas1mnw7\.cloudfront\.net</string>
       <string>play\.cadmore\.media</string>
+      <string>js\.trendmd\.com</string>
+      <string>widgets\.figshare\.com</string>
+      <string>api\.b2c\.com</string>
       <string>js\.trendmd\.com</string>
     </list>
   </entry>
