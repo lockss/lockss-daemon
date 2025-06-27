@@ -1809,4 +1809,45 @@
 
   }
 
+  {
+
+      title <
+        name = Bulletin of Insectology ;
+        issn = 2283-0332 ;
+        eissn = 1721-8861
+      >
+
+      param[au_oai_set] = bulletinofinsectology
+
+      au < manifest ; exists ; 2025 ; 78 ; Bulletin of Insectology Volume 2025 ; 2025 ; https://bulletinofinsectology.org/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Individual-based Ecology (IBE) ;
+        eissn = 3033-0947
+      >
+
+      param[au_oai_set] = ibe
+
+      au < manifest ; exists ; 2025 ; 1 ; Individual-based Ecology (IBE) Volume 2025 ; 2025 ; https://ibe.pensoft.net/ ; >
+
+  }
+
+  {
+
+      title <
+        name = SKINdeep ;
+        issn = 3061-0281 ;
+        eissn = 3061-029X
+      >
+
+      param[au_oai_set] = skinonline
+
+      au < manifest ; exists ; 2025 ; 1 ; SKINdeep Volume 2025 ; 2025 ; https://skindeep.skinonline.org/ ; >
+
+  }
+
 }
