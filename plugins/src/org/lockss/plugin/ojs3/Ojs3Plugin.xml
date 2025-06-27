@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>53</string>
+    <string>54</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -111,9 +111,10 @@ POSSIBILITY OF SUCH DAMAGE.
       https://www.ride.org.mx/index.php/RIDE/user/setLocale/es_ES?source=%2Findex.php%2FRIDE%2Fgateway%2Flockss%3Fyear%3D2020
       -->
       <string>1,"^https?://%s%s(index\.php/)?(%s/)?user/setLocale/[^?]{5}[?]source=%%2F(index[.]php%%2F)?(%s%%2F)?gateway%%2Fc?lockss%%3Fyear%%3D%d", url_host(base_url), url_path(base_url), journal_id, journal_id, year</string>
+      <string>1,"%s%s/gateway/plugin/WebFeedGatewayPlugin/", base_url, journal_id</string>
       <string>1,"https://docs.lib.purdue.edu/cgi/viewcontent.cgi\?article="</string>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?|webp)([?]((itok|v)=)?[^&amp;]+)?$", base_url_host</string>
-      <string>1,"^https?://%s/.*/css([?]name=((child-)?stylesheet|bootstrap|ojsplus))?$", base_url_host</string>
+      <string>1,"^https?://%s/.*/css([?]name=((child-)?stylesheet|bootstrap(Theme-%s)?|ojsplus))?$", base_url_host,journal_id</string>
       <string>1,"^https?://(cdnjs\.cloudflare|(ajax|fonts)\.(googleapis|gstatic))\.com/"</string>
         <!--  index.php or journals/index.php are an optional attr so allow but do not require -->
         <!-- Some publisher using "ojs" instead of journal_id in start_url -->
@@ -269,7 +270,6 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>plugin_cache_result_list</string>
         <list>
             <string>401=org.lockss.plugin.ojs3.Ojs3HttpResponseHandler</string>
-            <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheSuccess</string>
         </list>
     </entry>
   <!--  tell the default base.MimeTypeContentValidator what url patters to validate by mime type -->
