@@ -23,18 +23,18 @@
       param[base_url] = https://jols.uobaghdad.edu.iq/
       param[journal_id] = jols
 
-      au < crawling ; exists ; 2005 ; Journal of Legal Sciences Volume 2005 ; 20 ; 2005 ; >
+      au < frozen ; exists ; 2005 ; Journal of Legal Sciences Volume 2005 ; 20 ; 2005 ; >
       au < manifest ; exists ; 2014 ; Journal of Legal Sciences Volume 2014 ; 29 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; Journal of Legal Sciences Volume 2015 ; 30 ; 2015 ; >
-      au < crawling ; exists ; 2016 ; Journal of Legal Sciences Volume 2016 ; 31 ; 2016 ; >
-      au < crawling ; exists ; 2017 ; Journal of Legal Sciences Volume 2017 ; 32 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Journal of Legal Sciences Volume 2018 ; 33 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Journal of Legal Sciences Volume 2019 ; 34 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Journal of Legal Sciences Volume 2020 ; 35 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Journal of Legal Sciences Volume 2021 ; 36 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Journal of Legal Sciences Volume 2022 ; 37 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Journal of Legal Sciences Volume 2023 ; 38 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Journal of Legal Sciences Volume 2024 ; 39 ; 2024 ; >
+      au < frozen ; exists ; 2015 ; Journal of Legal Sciences Volume 2015 ; 30 ; 2015 ; >
+      au < frozen ; exists ; 2016 ; Journal of Legal Sciences Volume 2016 ; 31 ; 2016 ; >
+      au < frozen ; exists ; 2017 ; Journal of Legal Sciences Volume 2017 ; 32 ; 2017 ; >
+      au < frozen ; exists ; 2018 ; Journal of Legal Sciences Volume 2018 ; 33 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Journal of Legal Sciences Volume 2019 ; 34 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Journal of Legal Sciences Volume 2020 ; 35 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Journal of Legal Sciences Volume 2021 ; 36 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Journal of Legal Sciences Volume 2022 ; 37 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; Journal of Legal Sciences Volume 2023 ; 38 ; 2023 ; >
+      au < frozen ; exists ; 2024 ; Journal of Legal Sciences Volume 2024 ; 39 ; 2024 ; >
       au < manifest ; exists ; 2025 ; Journal of Legal Sciences Volume 2025 ; 40 ; 2025 ; >
 
   }

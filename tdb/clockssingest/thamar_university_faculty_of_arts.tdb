@@ -23,12 +23,12 @@
       param[base_url] = https://journal.tu.edu.ye/
       param[journal_id] = arts
 
-      au < crawling ; exists ; 2019 ; Arts for Linguistic & Literary Studies Volume 2019 ; 1 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Arts for Linguistic & Literary Studies Volume 2020 ; 2 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Arts for Linguistic & Literary Studies Volume 2021 ; 3 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Arts for Linguistic & Literary Studies Volume 2022 ; 4 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Arts for Linguistic & Literary Studies Volume 2023 ; 5 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Arts for Linguistic & Literary Studies Volume 2024 ; 6 ; 2024 ; >
+      au < frozen ; exists ; 2019 ; Arts for Linguistic & Literary Studies Volume 2019 ; 1 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Arts for Linguistic & Literary Studies Volume 2020 ; 2 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Arts for Linguistic & Literary Studies Volume 2021 ; 3 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Arts for Linguistic & Literary Studies Volume 2022 ; 4 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; Arts for Linguistic & Literary Studies Volume 2023 ; 5 ; 2023 ; >
+      au < frozen ; exists ; 2024 ; Arts for Linguistic & Literary Studies Volume 2024 ; 6 ; 2024 ; >
       au < manifest ; exists ; 2025 ; Arts for Linguistic & Literary Studies Volume 2025 ; 7 ; 2025 ; >
 
   }
@@ -43,7 +43,7 @@
       param[base_url] = https://journal.tu.edu.ye/
       param[journal_id] = artsmain
 
-      au < crawling ; exists ; 2001 ; Journal of Arts Volume 2001 ; 1 ; 2001 ; >
+      au < frozen ; exists ; 2001 ; Journal of Arts Volume 2001 ; 1 ; 2001 ; >
       au < manifest ; exists ; 2002 ; Journal of Arts Volume 2002 ; 1 ; 2002 ; >
       au < doesNotExist ; doesNotExist ; 2003 ; Journal of Arts Volume 2003 ; 1 ; 2003 ; >
       au < doesNotExist ; doesNotExist ; 2004 ; Journal of Arts Volume 2004 ; 1 ; 2004 ; >
@@ -60,13 +60,13 @@
       au < doesNotExist ; doesNotExist ; 2015 ; Journal of Arts Volume 2015 ; 1 ; 2015 ; >
       au < doesNotExist ; doesNotExist ; 2016 ; Journal of Arts Volume 2016 ; 1 ; 2016 ; >
       au < doesNotExist ; doesNotExist ; 2017 ; Journal of Arts Volume 2017 ; 1 ; 2017 ; >
-      au < crawling ; exists ; 2018 ; Journal of Arts Volume 2018 ; 1 ; 2018 ; >
-      au < crawling ; exists ; 2019 ; Journal of Arts Volume 2019 ; 1 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; Journal of Arts Volume 2020 ; 1 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; Journal of Arts Volume 2021 ; 1 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; Journal of Arts Volume 2022 ; 2 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Journal of Arts Volume 2023 ; 3 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Journal of Arts Volume 2024 ; 4 ; 2024 ; >
+      au < frozen ; exists ; 2018 ; Journal of Arts Volume 2018 ; 1 ; 2018 ; >
+      au < frozen ; exists ; 2019 ; Journal of Arts Volume 2019 ; 1 ; 2019 ; >
+      au < frozen ; exists ; 2020 ; Journal of Arts Volume 2020 ; 1 ; 2020 ; >
+      au < frozen ; exists ; 2021 ; Journal of Arts Volume 2021 ; 1 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; Journal of Arts Volume 2022 ; 2 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; Journal of Arts Volume 2023 ; 3 ; 2023 ; >
+      au < frozen ; exists ; 2024 ; Journal of Arts Volume 2024 ; 4 ; 2024 ; >
       au < manifest ; exists ; 2025 ; Journal of Arts Volume 2025 ; 5 ; 2025 ; >
 
   }

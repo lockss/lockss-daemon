@@ -24,8 +24,8 @@
     #param[base_url] = https://wjps.uowasit.edu.iq/
     param[journal_id] = wjps
 
-    au < crawling ; exists ; 2023 ; 2023 ; Wasit Journal for Pure Sciences Volume 2 ; 2 ; https://wjps.uowasit.edu.iq/ ; >
-    au < crawling ; exists ; 2024 ; 2024 ; Wasit Journal for Pure Sciences Volume 3 ; 3 ; https://wjps.uowasit.edu.iq/ ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Wasit Journal for Pure Sciences Volume 2 ; 2 ; https://wjps.uowasit.edu.iq/ ; >
+    au < frozen ; exists ; 2024 ; 2024 ; Wasit Journal for Pure Sciences Volume 3 ; 3 ; https://wjps.uowasit.edu.iq/ ; >
     au < manifest ; exists ; 2025 ; 2025 ; Wasit Journal for Pure Sciences Volume 4 ; 4 ; https://wjps.uowasit.edu.iq/ ; >
 
   }
