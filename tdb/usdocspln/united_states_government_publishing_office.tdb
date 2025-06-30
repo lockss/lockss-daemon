@@ -226,6 +226,7 @@
     au < manifest ; 1997 ; Account of the Receipts and Expenditures of the United States 1997 ; 1997 ; https://www.govinfo.gov/ >
     au < ready ; 1998 ; Account of the Receipts and Expenditures of the United States 1998 ; 1998 ; https://www.govinfo.gov/ >
     au < ready ; 1999 ; Account of the Receipts and Expenditures of the United States 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < manifest ; 2000 ; Account of the Receipts and Expenditures of the United States 2000 ; 2000 ; https://www.govinfo.gov/ >
  
     au < released ; 2019 ; Account of the Receipts and Expenditures of the United States 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Account of the Receipts and Expenditures of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
@@ -1131,6 +1132,12 @@
 
 
 
+    au < manifest ; 1995 ; CRPT 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < manifest ; 1996 ; CRPT 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < manifest ; 1997 ; CRPT 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < manifest ; 1998 ; CRPT 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < manifest ; 1999 ; CRPT 1999 ; 1999 ; https://www.govinfo.gov/ >
+
     au < released ; 2016 ; Congressional Reports 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Congressional Reports 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Congressional Reports 2018 ; 2018 ; https://www.govinfo.gov/ >
@@ -1172,6 +1179,12 @@
 
     param[collection_id] = ECONI
 
+    au < manifest ; 1995 ; ECONI 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < manifest ; 1996 ; ECONI 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < manifest ; 1997 ; ECONI 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < manifest ; 1998 ; ECONI 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < manifest ; 1999 ; ECONI 1999 ; 1999 ; https://www.govinfo.gov/ >
+
     au < released ; 2013 ; Economic Indicators 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2016 ; Economic Indicators 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Economic Indicators 2018 ; 2018 ; https://www.govinfo.gov/ >
@@ -1192,6 +1205,11 @@
     >
 
     param[collection_id] = ERP
+
+    au < manifest ; 1996 ; ERP 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < manifest ; 1997 ; ERP 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < manifest ; 1998 ; ERP 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < manifest ; 1999 ; ERP 1999 ; 1999 ; https://www.govinfo.gov/ >
 
     au < released ; 2016 ; Economic Report of the President 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Economic Report of the President 2017 ; 2017 ; https://www.govinfo.gov/ >
@@ -1300,6 +1318,13 @@
     au < released ; 1992 ; Federal Register 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < released ; 1993 ; Federal Register 1993 ; 1993 ; https://www.govinfo.gov/ >
 
+    au < manifest ; 1994 ; FR 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < manifest ; 1995 ; FR 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < manifest ; 1996 ; FR 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < manifest ; 1997 ; FR 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < manifest ; 1998 ; FR 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < manifest ; 1999 ; FR 1999 ; 1999 ; https://www.govinfo.gov/ >
+ 
     au < released ; 2016 ; Federal Register 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Federal Register 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Federal Register 2018 ; 2018 ; https://www.govinfo.gov/ >
