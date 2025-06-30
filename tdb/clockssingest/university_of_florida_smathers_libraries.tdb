@@ -102,7 +102,7 @@
       param[journal_id] = EMIC
 
       au < finished ; manifest ; 2023 ; EMIC Volume 1 ; 1 ; 2023 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2024 ; EMIC Volume 2 ; 2 ; 2024 ; >
+      au < deepCrawl ; exists ; 2024 ; EMIC Volume 2 ; 2 ; 2024 ; >
       au < manifest ; exists ; 2025 ; EMIC Volume 3 ; 3 ; 2025 ; >
 
   }
@@ -251,7 +251,7 @@
       au < finished ; manifest ; 2021 ; The International FLAIRS Conference Proceedings Volume 34 ; 34 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; The International FLAIRS Conference Proceedings Volume 35 ; 35 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; The International FLAIRS Conference Proceedings Volume 36 ; 36 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; The International FLAIRS Conference Proceedings Volume 37 ; 37 ; 2024 ; >
+      au < deepCrawl ; exists ; 2024 ; The International FLAIRS Conference Proceedings Volume 37 ; 37 ; 2024 ; >
       au < manifest ; exists ; 2025 ; The International FLAIRS Conference Proceedings Volume 38 ; 38 ; 2025 ; >
 
   }
@@ -285,7 +285,7 @@
       au < finished ; manifest ; 2021 ; The Journal of Civic Information Volume 3 ; 3 ; 2021 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; The Journal of Civic Information Volume 4 ; 4 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; The Journal of Civic Information Volume 5 ; 5 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; The Journal of Civic Information Volume 6 ; 6 ; 2024 ; >
+      au < deepCrawl ; exists ; 2024 ; The Journal of Civic Information Volume 6 ; 6 ; 2024 ; >
       au < manifest ; exists ; 2025 ; The Journal of Civic Information Volume 7 ; 7 ; 2025 ; >
 
   }
@@ -306,7 +306,7 @@
       au < finished ; manifest ; 2021 ; The Journal of Public Interest Communications Volume 5 ; 5 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; The Journal of Public Interest Communications Volume 6 ; 6 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; The Journal of Public Interest Communications Volume 7 ; 7 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; The Journal of Public Interest Communications Volume 8 ; 8 ; 2024 ; >
+      au < deepCrawl ; exists ; 2024 ; The Journal of Public Interest Communications Volume 8 ; 8 ; 2024 ; >
       au < manifest ; exists ; 2025 ; The Journal of Public Interest Communications Volume 9 ; 9 ; 2025 ; >
 
   }
@@ -324,7 +324,7 @@
       au < finished ; manifest ; 2021 ; Journal of the Florida Mosquito Control Association Volume 68 ; 68 ; 2021 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Journal of the Florida Mosquito Control Association Volume 69 ; 69 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Journal of the Florida Mosquito Control Association Volume 70 ; 70 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Journal of the Florida Mosquito Control Association Volume 71 ; 71 ; 2024 ; >
+      au < deepCrawl ; exists ; 2024 ; Journal of the Florida Mosquito Control Association Volume 71 ; 71 ; 2024 ; >
       au < manifest ; exists ; 2025 ; Journal of the Florida Mosquito Control Association Volume 72 ; 72 ; 2025 ; >
 
   }
@@ -344,7 +344,7 @@
       au < finished ; manifest ; 2021 ; UF Journal of Undergraduate Research Volume 23 ; 23 ; 2021 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; UF Journal of Undergraduate Research Volume 24 ; 24 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; UF Journal of Undergraduate Research Volume 25 ; 25 ; 2023 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2024 ; UF Journal of Undergraduate Research Volume 26 ; 26 ; 2024 ; >
+      au < deepCrawl ; exists ; 2024 ; UF Journal of Undergraduate Research Volume 26 ; 26 ; 2024 ; >
       au < expected ; exists ; 2025 ; UF Journal of Undergraduate Research Volume 27 ; 27 ; 2025 ; >
 
   }
@@ -378,7 +378,7 @@
       au < finished ; manifest ; 2021 ; New Florida Journal of Anthropology Volume 1 ; 1 ; 2021 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; New Florida Journal of Anthropology Volume 2 ; 2 ; 2022 ; reingest1.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2023 ; New Florida Journal of Anthropology Volume 3 ; 3 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; New Florida Journal of Anthropology Volume 4 ; 4 ; 2024 ; >
+      au < deepCrawl ; exists ; 2024 ; New Florida Journal of Anthropology Volume 4 ; 4 ; 2024 ; >
       au < manifest ; exists ; 2025 ; New Florida Journal of Anthropology Volume 5 ; 5 ; 2025 ; >
 
   }
@@ -394,7 +394,7 @@
 
       au < finished ; manifest ; 2022 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 1 ; 1 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 2 ; 2 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 3 ; 3 ; 2024 ; >
+      au < deepCrawl ; exists ; 2024 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 3 ; 3 ; 2024 ; >
       au < expected ; exists ; 2025 ; Selected Proceedings of the Classics Graduate Student Symposia Volume 4 ; 4 ; 2025 ; >
 
   }
@@ -415,7 +415,7 @@
       au < finished ; manifest ; 2021 ; SOURCE Magazine Volume 4 ; 4 ; 2021 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; SOURCE Magazine Volume 5 ; 5 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; SOURCE Magazine Volume 6 ; 6 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; SOURCE Magazine Volume 7 ; 7 ; 2024 ; >
+      au < deepCrawl ; exists ; 2024 ; SOURCE Magazine Volume 7 ; 7 ; 2024 ; >
       au < manifest ; exists ; 2025 ; SOURCE Magazine Volume 8 ; 8 ; 2025 ; >
 
   }
@@ -533,7 +533,7 @@
       au < finished ; manifest ; 2021 ; Tropical Lepidoptera Research Volume 32 ; 32 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; Tropical Lepidoptera Research Volume 33 ; 33 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Tropical Lepidoptera Research Volume 34 ; 34 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Tropical Lepidoptera Research Volume 35 ; 35 ; 2024 ; >
+      au < deepCrawl ; exists ; 2024 ; Tropical Lepidoptera Research Volume 35 ; 35 ; 2024 ; >
       au < manifest ; exists ; 2025 ; Tropical Lepidoptera Research Volume 36 ; 36 ; 2025 ; >
 
   }
@@ -811,7 +811,7 @@
       au < finished ; manifest ; 2021 ; EDIS Volume 2021 ; 2021 ; 2021 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; EDIS Volume 2022 ; 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; EDIS Volume 2023 ; 2023 ; 2023 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2024 ; EDIS Volume 2024 ; 2024 ; 2024 ; >
+      au < deepCrawl ; exists ; 2024 ; EDIS Volume 2024 ; 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; EDIS Volume 2025 ; 2025 ; 2025 ; >
 
   }
