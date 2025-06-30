@@ -8,7 +8,7 @@
     provider = Public Library of Science
     plugin = org.lockss.plugin.plos.ClockssPLoSPlugin
     param[base_url] = https://journals.plos.org/
-    implicit < status ; status2 ; year ; name ; param[year] >
+    implicit < status ; status2 ; year ; name ; param[year] ; hidden[proxy] >
 
   {
 
@@ -19,29 +19,29 @@
 
       param[journal_id] = plosbiology
 
-      au < crawling ; exists ; 2003 ; PLOS Biology Volume 2003 ; 2003 >
-      au < manifest ; exists ; 2004 ; PLOS Biology Volume 2004 ; 2004 >
-      au < manifest ; exists ; 2005 ; PLOS Biology Volume 2005 ; 2005 >
-      au < manifest ; exists ; 2006 ; PLOS Biology Volume 2006 ; 2006 >
-      au < manifest ; exists ; 2007 ; PLOS Biology Volume 2007 ; 2007 >
-      au < manifest ; exists ; 2008 ; PLOS Biology Volume 2008 ; 2008 >
-      au < manifest ; exists ; 2009 ; PLOS Biology Volume 2009 ; 2009 >
-      au < manifest ; exists ; 2010 ; PLOS Biology Volume 2010 ; 2010 >
-      au < manifest ; exists ; 2011 ; PLOS Biology Volume 2011 ; 2011 >
-      au < manifest ; exists ; 2012 ; PLOS Biology Volume 2012 ; 2012 >
-      au < manifest ; exists ; 2013 ; PLOS Biology Volume 2013 ; 2013 >
-      au < manifest ; exists ; 2014 ; PLOS Biology Volume 2014 ; 2014 >
-      au < manifest ; exists ; 2015 ; PLOS Biology Volume 2015 ; 2015 >
-      au < manifest ; exists ; 2016 ; PLOS Biology Volume 2016 ; 2016 >
-      au < manifest ; exists ; 2017 ; PLOS Biology Volume 2017 ; 2017 >
-      au < manifest ; exists ; 2018 ; PLOS Biology Volume 2018 ; 2018 >
-      au < crawling ; exists ; 2019 ; PLOS Biology Volume 2019 ; 2019 >
-      au < crawling ; exists ; 2020 ; PLOS Biology Volume 2020 ; 2020 >
-      au < crawling ; exists ; 2021 ; PLOS Biology Volume 2021 ; 2021 >
-      au < crawling ; exists ; 2022 ; PLOS Biology Volume 2022 ; 2022 >
-      au < crawling ; exists ; 2023 ; PLOS Biology Volume 2023 ; 2023 >
-      au < crawling ; exists ; 2024 ; PLOS Biology Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Biology Volume 2025 ; 2025 >
+      au < crawling ; exists ; 2003 ; PLOS Biology Volume 2003 ; 2003 ; >
+      au < manifest ; exists ; 2004 ; PLOS Biology Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; PLOS Biology Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; PLOS Biology Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; PLOS Biology Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; PLOS Biology Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; PLOS Biology Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; PLOS Biology Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; PLOS Biology Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; PLOS Biology Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; PLOS Biology Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; PLOS Biology Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; PLOS Biology Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; PLOS Biology Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; PLOS Biology Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; PLOS Biology Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; PLOS Biology Volume 2019 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; PLOS Biology Volume 2020 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; PLOS Biology Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; PLOS Biology Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; PLOS Biology Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; PLOS Biology Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Biology Volume 2025 ; 2025 ; >
 
   }
 
@@ -54,10 +54,10 @@
 
       param[journal_id] = climate
 
-      au < crawling ; exists ; 2022 ; PLOS Climate Volume 2022 ; 2022 >
-      au < crawling ; exists ; 2023 ; PLOS Climate Volume 2023 ; 2023 >
-      au < crawling ; exists ; 2024 ; PLOS Climate Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Climate Volume 2025 ; 2025 >
+      au < crawling ; exists ; 2022 ; PLOS Climate Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; PLOS Climate Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; PLOS Climate Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Climate Volume 2025 ; 2025 ; >
 
   }
 
@@ -70,8 +70,8 @@
 #
 #      param[journal_id] = plosclinicaltrials
 #
-#      au < exists ; exists ; 2006 ; PLOS Clinical Trials Volume 2006 ; 2006 >
-#      au < exists ; exists ; 2007 ; PLOS Clinical Trials Volume 2007 ; 2007 >
+#      au < exists ; exists ; 2006 ; PLOS Clinical Trials Volume 2006 ; 2006 ; >
+#      au < exists ; exists ; 2007 ; PLOS Clinical Trials Volume 2007 ; 2007 ; >
 #
 #  }
 
@@ -84,8 +84,8 @@
 
       param[journal_id] = complexsystems
 
-      au < crawling ; exists ; 2024 ; PLOS Complex Systems Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Complex Systems Volume 2025 ; 2025 >
+      au < crawling ; exists ; 2024 ; PLOS Complex Systems Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Complex Systems Volume 2025 ; 2025 ; >
 
   }
 
@@ -98,27 +98,27 @@
 
       param[journal_id] = ploscompbiol
 
-      au < manifest ; exists ; 2005 ; PLOS Computational Biology Volume 2005 ; 2005 >
-      au < manifest ; exists ; 2006 ; PLOS Computational Biology Volume 2006 ; 2006 >
-      au < manifest ; exists ; 2007 ; PLOS Computational Biology Volume 2007 ; 2007 >
-      au < manifest ; exists ; 2008 ; PLOS Computational Biology Volume 2008 ; 2008 >
-      au < manifest ; exists ; 2009 ; PLOS Computational Biology Volume 2009 ; 2009 >
-      au < manifest ; exists ; 2010 ; PLOS Computational Biology Volume 2010 ; 2010 >
-      au < manifest ; exists ; 2011 ; PLOS Computational Biology Volume 2011 ; 2011 >
-      au < manifest ; exists ; 2012 ; PLOS Computational Biology Volume 2012 ; 2012 >
-      au < manifest ; exists ; 2013 ; PLOS Computational Biology Volume 2013 ; 2013 >
-      au < manifest ; exists ; 2014 ; PLOS Computational Biology Volume 2014 ; 2014 >
-      au < manifest ; exists ; 2015 ; PLOS Computational Biology Volume 2015 ; 2015 >
-      au < manifest ; exists ; 2016 ; PLOS Computational Biology Volume 2016 ; 2016 >
-      au < manifest ; exists ; 2017 ; PLOS Computational Biology Volume 2017 ; 2017 >
-      au < manifest ; exists ; 2018 ; PLOS Computational Biology Volume 2018 ; 2018 >
-      au < crawling ; exists ; 2019 ; PLOS Computational Biology Volume 2019 ; 2019 >
-      au < crawling ; exists ; 2020 ; PLOS Computational Biology Volume 2020 ; 2020 >
-      au < crawling ; exists ; 2021 ; PLOS Computational Biology Volume 2021 ; 2021 >
-      au < crawling ; exists ; 2022 ; PLOS Computational Biology Volume 2022 ; 2022 >
-      au < crawling ; exists ; 2023 ; PLOS Computational Biology Volume 2023 ; 2023 >
-      au < crawling ; exists ; 2024 ; PLOS Computational Biology Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Computational Biology Volume 2025 ; 2025 >
+      au < manifest ; exists ; 2005 ; PLOS Computational Biology Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; PLOS Computational Biology Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; PLOS Computational Biology Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; PLOS Computational Biology Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; PLOS Computational Biology Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; PLOS Computational Biology Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; PLOS Computational Biology Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; PLOS Computational Biology Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; PLOS Computational Biology Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; PLOS Computational Biology Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; PLOS Computational Biology Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; PLOS Computational Biology Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; PLOS Computational Biology Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; PLOS Computational Biology Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; PLOS Computational Biology Volume 2019 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; PLOS Computational Biology Volume 2020 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; PLOS Computational Biology Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; PLOS Computational Biology Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; PLOS Computational Biology Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; PLOS Computational Biology Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Computational Biology Volume 2025 ; 2025 ; >
 
   }
 
@@ -131,10 +131,10 @@
 
       param[journal_id] = digitalhealth
 
-      au < crawling ; exists ; 2022 ; PLOS Digital Health Volume 2022 ; 2022 >
-      au < crawling ; exists ; 2023 ; PLOS Digital Health Volume 2023 ; 2023 >
-      au < crawling ; exists ; 2024 ; PLOS Digital Health Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Digital Health Volume 2025 ; 2025 >
+      au < crawling ; exists ; 2022 ; PLOS Digital Health Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; PLOS Digital Health Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; PLOS Digital Health Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Digital Health Volume 2025 ; 2025 ; >
 
   }
 
@@ -147,27 +147,27 @@
 
       param[journal_id] = plosgenetics
 
-      au < manifest ; exists ; 2005 ; PLOS Genetics Volume 2005 ; 2005 >
-      au < manifest ; exists ; 2006 ; PLOS Genetics Volume 2006 ; 2006 >
-      au < manifest ; exists ; 2007 ; PLOS Genetics Volume 2007 ; 2007 >
-      au < manifest ; exists ; 2008 ; PLOS Genetics Volume 2008 ; 2008 >
-      au < manifest ; exists ; 2009 ; PLOS Genetics Volume 2009 ; 2009 >
-      au < manifest ; exists ; 2010 ; PLOS Genetics Volume 2010 ; 2010 >
-      au < manifest ; exists ; 2011 ; PLOS Genetics Volume 2011 ; 2011 >
-      au < manifest ; exists ; 2012 ; PLOS Genetics Volume 2012 ; 2012 >
-      au < manifest ; exists ; 2013 ; PLOS Genetics Volume 2013 ; 2013 >
-      au < manifest ; exists ; 2014 ; PLOS Genetics Volume 2014 ; 2014 >
-      au < manifest ; exists ; 2015 ; PLOS Genetics Volume 2015 ; 2015 >
-      au < manifest ; exists ; 2016 ; PLOS Genetics Volume 2016 ; 2016 >
-      au < manifest ; exists ; 2017 ; PLOS Genetics Volume 2017 ; 2017 >
-      au < manifest ; exists ; 2018 ; PLOS Genetics Volume 2018 ; 2018 >
-      au < crawling ; exists ; 2019 ; PLOS Genetics Volume 2019 ; 2019 >
-      au < crawling ; exists ; 2020 ; PLOS Genetics Volume 2020 ; 2020 >
-      au < crawling ; exists ; 2021 ; PLOS Genetics Volume 2021 ; 2021 >
-      au < crawling ; exists ; 2022 ; PLOS Genetics Volume 2022 ; 2022 >
-      au < crawling ; exists ; 2023 ; PLOS Genetics Volume 2023 ; 2023 >
-      au < crawling ; exists ; 2024 ; PLOS Genetics Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Genetics Volume 2025 ; 2025 >
+      au < manifest ; exists ; 2005 ; PLOS Genetics Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; PLOS Genetics Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; PLOS Genetics Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; PLOS Genetics Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; PLOS Genetics Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; PLOS Genetics Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; PLOS Genetics Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; PLOS Genetics Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; PLOS Genetics Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; PLOS Genetics Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; PLOS Genetics Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; PLOS Genetics Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; PLOS Genetics Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; PLOS Genetics Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; PLOS Genetics Volume 2019 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; PLOS Genetics Volume 2020 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; PLOS Genetics Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; PLOS Genetics Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; PLOS Genetics Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; PLOS Genetics Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Genetics Volume 2025 ; 2025 ; >
 
   }
 
@@ -180,11 +180,11 @@
 
       param[journal_id] = globalpublichealth
 
-      au < crawling ; exists ; 2021 ; PLOS Global Public Health Volume 2021 ; 2021 >
-      au < crawling ; exists ; 2022 ; PLOS Global Public Health Volume 2022 ; 2022 >
-      au < crawling ; exists ; 2023 ; PLOS Global Public Health Volume 2023 ; 2023 >
-      au < crawling ; exists ; 2024 ; PLOS Global Public Health Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Global Public Health Volume 2025 ; 2025 >
+      au < crawling ; exists ; 2021 ; PLOS Global Public Health Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; PLOS Global Public Health Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; PLOS Global Public Health Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; PLOS Global Public Health Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Global Public Health Volume 2025 ; 2025 ; >
 
   }
 
@@ -197,28 +197,28 @@
 
       param[journal_id] = plosmedicine
 
-      au < manifest ; exists ; 2004 ; PLOS Medicine Volume 2004 ; 2004 >
-      au < manifest ; exists ; 2005 ; PLOS Medicine Volume 2005 ; 2005 >
-      au < manifest ; exists ; 2006 ; PLOS Medicine Volume 2006 ; 2006 >
-      au < manifest ; exists ; 2007 ; PLOS Medicine Volume 2007 ; 2007 >
-      au < manifest ; exists ; 2008 ; PLOS Medicine Volume 2008 ; 2008 >
-      au < manifest ; exists ; 2009 ; PLOS Medicine Volume 2009 ; 2009 >
-      au < manifest ; exists ; 2010 ; PLOS Medicine Volume 2010 ; 2010 >
-      au < manifest ; exists ; 2011 ; PLOS Medicine Volume 2011 ; 2011 >
-      au < manifest ; exists ; 2012 ; PLOS Medicine Volume 2012 ; 2012 >
-      au < manifest ; exists ; 2013 ; PLOS Medicine Volume 2013 ; 2013 >
-      au < manifest ; exists ; 2014 ; PLOS Medicine Volume 2014 ; 2014 >
-      au < manifest ; exists ; 2015 ; PLOS Medicine Volume 2015 ; 2015 >
-      au < manifest ; exists ; 2016 ; PLOS Medicine Volume 2016 ; 2016 >
-      au < manifest ; exists ; 2017 ; PLOS Medicine Volume 2017 ; 2017 >
-      au < manifest ; exists ; 2018 ; PLOS Medicine Volume 2018 ; 2018 >
-      au < crawling ; exists ; 2019 ; PLOS Medicine Volume 2019 ; 2019 >
-      au < crawling ; exists ; 2020 ; PLOS Medicine Volume 2020 ; 2020 >
-      au < crawling ; exists ; 2021 ; PLOS Medicine Volume 2021 ; 2021 >
-      au < crawling ; exists ; 2022 ; PLOS Medicine Volume 2022 ; 2022 >
-      au < crawling ; exists ; 2023 ; PLOS Medicine Volume 2023 ; 2023 >
-      au < crawling ; exists ; 2024 ; PLOS Medicine Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Medicine Volume 2025 ; 2025 >
+      au < manifest ; exists ; 2004 ; PLOS Medicine Volume 2004 ; 2004 ; >
+      au < manifest ; exists ; 2005 ; PLOS Medicine Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; PLOS Medicine Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; PLOS Medicine Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; PLOS Medicine Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; PLOS Medicine Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; PLOS Medicine Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; PLOS Medicine Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; PLOS Medicine Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; PLOS Medicine Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; PLOS Medicine Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; PLOS Medicine Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; PLOS Medicine Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; PLOS Medicine Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; PLOS Medicine Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; PLOS Medicine Volume 2019 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; PLOS Medicine Volume 2020 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; PLOS Medicine Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; PLOS Medicine Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; PLOS Medicine Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; PLOS Medicine Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Medicine Volume 2025 ; 2025 ; >
 
   }
 
@@ -231,8 +231,8 @@
 
       param[journal_id] = mentalhealth
 
-      au < crawling ; exists ; 2024 ; PLOS Mental Health Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Mental Health Volume 2025 ; 2025 >
+      au < crawling ; exists ; 2024 ; PLOS Mental Health Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Mental Health Volume 2025 ; 2025 ; >
 
   }
 
@@ -245,59 +245,59 @@
 
       param[journal_id] = plosntds
 
-      au < manifest ; exists ; 2007 ; PLOS Neglected Tropical Diseases Volume 2007 ; 2007 >
-      au < manifest ; exists ; 2008 ; PLOS Neglected Tropical Diseases Volume 2008 ; 2008 >
-      au < manifest ; exists ; 2009 ; PLOS Neglected Tropical Diseases Volume 2009 ; 2009 >
-      au < manifest ; exists ; 2010 ; PLOS Neglected Tropical Diseases Volume 2010 ; 2010 >
-      au < manifest ; exists ; 2011 ; PLOS Neglected Tropical Diseases Volume 2011 ; 2011 >
-      au < manifest ; exists ; 2012 ; PLOS Neglected Tropical Diseases Volume 2012 ; 2012 >
-      au < manifest ; exists ; 2013 ; PLOS Neglected Tropical Diseases Volume 2013 ; 2013 >
-      au < manifest ; exists ; 2014 ; PLOS Neglected Tropical Diseases Volume 2014 ; 2014 >
-      au < manifest ; exists ; 2015 ; PLOS Neglected Tropical Diseases Volume 2015 ; 2015 >
-      au < manifest ; exists ; 2016 ; PLOS Neglected Tropical Diseases Volume 2016 ; 2016 >
-      au < manifest ; exists ; 2017 ; PLOS Neglected Tropical Diseases Volume 2017 ; 2017 >
-      au < manifest ; exists ; 2018 ; PLOS Neglected Tropical Diseases Volume 2018 ; 2018 >
-      au < crawling ; exists ; 2019 ; PLOS Neglected Tropical Diseases Volume 2019 ; 2019 >
-      au < crawling ; exists ; 2020 ; PLOS Neglected Tropical Diseases Volume 2020 ; 2020 >
-      au < crawling ; exists ; 2021 ; PLOS Neglected Tropical Diseases Volume 2021 ; 2021 >
-      au < crawling ; exists ; 2022 ; PLOS Neglected Tropical Diseases Volume 2022 ; 2022 >
-      au < crawling ; exists ; 2023 ; PLOS Neglected Tropical Diseases Volume 2023 ; 2023 >
-      au < crawling ; exists ; 2024 ; PLOS Neglected Tropical Diseases Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Neglected Tropical Diseases Volume 2025 ; 2025 >
+      au < manifest ; exists ; 2007 ; PLOS Neglected Tropical Diseases Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; PLOS Neglected Tropical Diseases Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; PLOS Neglected Tropical Diseases Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; PLOS Neglected Tropical Diseases Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; PLOS Neglected Tropical Diseases Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; PLOS Neglected Tropical Diseases Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; PLOS Neglected Tropical Diseases Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; PLOS Neglected Tropical Diseases Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; PLOS Neglected Tropical Diseases Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; PLOS Neglected Tropical Diseases Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; PLOS Neglected Tropical Diseases Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; PLOS Neglected Tropical Diseases Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2019 ; PLOS Neglected Tropical Diseases Volume 2019 ; 2019 ; >
+      au < crawling ; exists ; 2020 ; PLOS Neglected Tropical Diseases Volume 2020 ; 2020 ; >
+      au < crawling ; exists ; 2021 ; PLOS Neglected Tropical Diseases Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; PLOS Neglected Tropical Diseases Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; PLOS Neglected Tropical Diseases Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; PLOS Neglected Tropical Diseases Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Neglected Tropical Diseases Volume 2025 ; 2025 ; >
 
   }
 
-  {
-
-      title <
-        name = PLOS ONE ;
-        issn = 1932-6203 
-      >
-
-      param[journal_id] = plosone
-
-      au < manifest ; exists ; 2006 ; PLOS ONE Volume 2006 ; 2006 >
-      au < manifest ; exists ; 2007 ; PLOS ONE Volume 2007 ; 2007 >
-      au < manifest ; exists ; 2008 ; PLOS ONE Volume 2008 ; 2008 >
-      au < manifest ; exists ; 2009 ; PLOS ONE Volume 2009 ; 2009 >
-      au < manifest ; exists ; 2010 ; PLOS ONE Volume 2010 ; 2010 >
-      au < manifest ; exists ; 2011 ; PLOS ONE Volume 2011 ; 2011 >
-      au < manifest ; exists ; 2012 ; PLOS ONE Volume 2012 ; 2012 >
-      au < manifest ; exists ; 2013 ; PLOS ONE Volume 2013 ; 2013 >
-      au < manifest ; exists ; 2014 ; PLOS ONE Volume 2014 ; 2014 >
-      au < manifest ; exists ; 2015 ; PLOS ONE Volume 2015 ; 2015 >
-      au < manifest ; exists ; 2016 ; PLOS ONE Volume 2016 ; 2016 >
-      au < manifest ; exists ; 2017 ; PLOS ONE Volume 2017 ; 2017 >
-      au < manifest ; exists ; 2018 ; PLOS ONE Volume 2018 ; 2018 >
-      au < manifest ; exists ; 2019 ; PLOS ONE Volume 2019 ; 2019 >
-      au < manifest ; exists ; 2020 ; PLOS ONE Volume 2020 ; 2020 >
-      au < manifest ; exists ; 2021 ; PLOS ONE Volume 2021 ; 2021 >
-      au < manifest ; exists ; 2022 ; PLOS ONE Volume 2022 ; 2022 >
-      au < manifest ; exists ; 2023 ; PLOS ONE Volume 2023 ; 2023 >
-      au < manifest ; exists ; 2024 ; PLOS ONE Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS ONE Volume 2025 ; 2025 >
-
-  }
+#  {
+#
+#      title <
+#        name = PLOS ONE ;
+#        issn = 1932-6203 
+#      >
+#
+#      param[journal_id] = plosone
+#
+#      au < manifest ; exists ; 2006 ; PLOS ONE Volume 2006 ; 2006 ; >
+#      au < manifest ; exists ; 2007 ; PLOS ONE Volume 2007 ; 2007 ; >
+#      au < manifest ; exists ; 2008 ; PLOS ONE Volume 2008 ; 2008 ; >
+#      au < manifest ; exists ; 2009 ; PLOS ONE Volume 2009 ; 2009 ; >
+#      au < manifest ; exists ; 2010 ; PLOS ONE Volume 2010 ; 2010 ; >
+#      au < manifest ; exists ; 2011 ; PLOS ONE Volume 2011 ; 2011 ; >
+#      au < manifest ; exists ; 2012 ; PLOS ONE Volume 2012 ; 2012 ; >
+#      au < manifest ; exists ; 2013 ; PLOS ONE Volume 2013 ; 2013 ; >
+#      au < manifest ; exists ; 2014 ; PLOS ONE Volume 2014 ; 2014 ; >
+#      au < manifest ; exists ; 2015 ; PLOS ONE Volume 2015 ; 2015 ; >
+#      au < manifest ; exists ; 2016 ; PLOS ONE Volume 2016 ; 2016 ; >
+#      au < manifest ; exists ; 2017 ; PLOS ONE Volume 2017 ; 2017 ; >
+#      au < manifest ; exists ; 2018 ; PLOS ONE Volume 2018 ; 2018 ; >
+#      au < manifest ; exists ; 2019 ; PLOS ONE Volume 2019 ; 2019 ; >
+#      au < manifest ; exists ; 2020 ; PLOS ONE Volume 2020 ; 2020 ; >
+#      au < manifest ; exists ; 2021 ; PLOS ONE Volume 2021 ; 2021 ; >
+#      au < manifest ; exists ; 2022 ; PLOS ONE Volume 2022 ; 2022 ; >
+#      au < manifest ; exists ; 2023 ; PLOS ONE Volume 2023 ; 2023 ; >
+#      au < manifest ; exists ; 2024 ; PLOS ONE Volume 2024 ; 2024 ; >
+#      au < manifest ; exists ; 2025 ; PLOS ONE Volume 2025 ; 2025 ; >
+#
+#  }
 
   {
 
@@ -308,27 +308,27 @@
 
       param[journal_id] = plospathogens
 
-      au < manifest ; exists ; 2005 ; PLOS Pathogens Volume 2005 ; 2005 >
-      au < manifest ; exists ; 2006 ; PLOS Pathogens Volume 2006 ; 2006 >
-      au < manifest ; exists ; 2007 ; PLOS Pathogens Volume 2007 ; 2007 >
-      au < manifest ; exists ; 2008 ; PLOS Pathogens Volume 2008 ; 2008 >
-      au < manifest ; exists ; 2009 ; PLOS Pathogens Volume 2009 ; 2009 >
-      au < manifest ; exists ; 2010 ; PLOS Pathogens Volume 2010 ; 2010 >
-      au < manifest ; exists ; 2011 ; PLOS Pathogens Volume 2011 ; 2011 >
-      au < manifest ; exists ; 2012 ; PLOS Pathogens Volume 2012 ; 2012 >
-      au < manifest ; exists ; 2013 ; PLOS Pathogens Volume 2013 ; 2013 >
-      au < manifest ; exists ; 2014 ; PLOS Pathogens Volume 2014 ; 2014 >
-      au < manifest ; exists ; 2015 ; PLOS Pathogens Volume 2015 ; 2015 >
-      au < manifest ; exists ; 2016 ; PLOS Pathogens Volume 2016 ; 2016 >
-      au < manifest ; exists ; 2017 ; PLOS Pathogens Volume 2017 ; 2017 >
-      au < manifest ; exists ; 2018 ; PLOS Pathogens Volume 2018 ; 2018 >
-      au < manifest ; exists ; 2019 ; PLOS Pathogens Volume 2019 ; 2019 >
-      au < manifest ; exists ; 2020 ; PLOS Pathogens Volume 2020 ; 2020 >
-      au < manifest ; exists ; 2021 ; PLOS Pathogens Volume 2021 ; 2021 >
-      au < crawling ; exists ; 2022 ; PLOS Pathogens Volume 2022 ; 2022 >
-      au < crawling ; exists ; 2023 ; PLOS Pathogens Volume 2023 ; 2023 >
-      au < crawling ; exists ; 2024 ; PLOS Pathogens Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Pathogens Volume 2025 ; 2025 >
+      au < manifest ; exists ; 2005 ; PLOS Pathogens Volume 2005 ; 2005 ; >
+      au < manifest ; exists ; 2006 ; PLOS Pathogens Volume 2006 ; 2006 ; >
+      au < manifest ; exists ; 2007 ; PLOS Pathogens Volume 2007 ; 2007 ; >
+      au < manifest ; exists ; 2008 ; PLOS Pathogens Volume 2008 ; 2008 ; >
+      au < manifest ; exists ; 2009 ; PLOS Pathogens Volume 2009 ; 2009 ; >
+      au < manifest ; exists ; 2010 ; PLOS Pathogens Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2011 ; PLOS Pathogens Volume 2011 ; 2011 ; >
+      au < manifest ; exists ; 2012 ; PLOS Pathogens Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2013 ; PLOS Pathogens Volume 2013 ; 2013 ; >
+      au < manifest ; exists ; 2014 ; PLOS Pathogens Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; PLOS Pathogens Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; PLOS Pathogens Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; PLOS Pathogens Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; PLOS Pathogens Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; PLOS Pathogens Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; PLOS Pathogens Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2021 ; PLOS Pathogens Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2022 ; PLOS Pathogens Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; PLOS Pathogens Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; PLOS Pathogens Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Pathogens Volume 2025 ; 2025 ; >
 
   }
 
@@ -341,10 +341,10 @@
 
       param[journal_id] = sustainabilitytransformation
 
-      au < crawling ; exists ; 2022 ; PLOS Sustainability and Transformation Volume 2022 ; 2022 >
-      au < crawling ; exists ; 2023 ; PLOS Sustainability and Transformation Volume 2023 ; 2023 >
-      au < crawling ; exists ; 2024 ; PLOS Sustainability and Transformation Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Sustainability and Transformation Volume 2025 ; 2025 >
+      au < crawling ; exists ; 2022 ; PLOS Sustainability and Transformation Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; PLOS Sustainability and Transformation Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; PLOS Sustainability and Transformation Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Sustainability and Transformation Volume 2025 ; 2025 ; >
 
   }
 
@@ -357,10 +357,10 @@
 
       param[journal_id] = water
 
-      au < manifest ; exists ; 2022 ; PLOS Water Volume 2022 ; 2022 >
-      au < crawling ; exists ; 2023 ; PLOS Water Volume 2023 ; 2023 >
-      au < crawling ; exists ; 2024 ; PLOS Water Volume 2024 ; 2024 >
-      au < manifest ; exists ; 2025 ; PLOS Water Volume 2025 ; 2025 >
+      au < manifest ; exists ; 2022 ; PLOS Water Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2023 ; PLOS Water Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; PLOS Water Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; PLOS Water Volume 2025 ; 2025 ; >
 
   }
 
@@ -377,7 +377,7 @@
     provider = Public Library of Science
     plugin = org.lockss.plugin.plos.ClockssPLoSMonthlyPlugin
     param[base_url] = https://journals.plos.org/
-    implicit < status ; status2 ; year ; name ; param[month] ; param[year] >
+    implicit < status ; status2 ; year ; name ; param[year] ; param[month] ; hidden[proxy] >
 
   {
 
@@ -386,59 +386,112 @@
         issn = 1932-6203 
       >
 
+      #Published 2006 to present
       param[journal_id] = plosone
 
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume Jan 2019 ; January ; 2019 >
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume Feb 2019 ; February ; 2019 >
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume Mar 2019 ; March ; 2019 >
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume Apr 2019 ; April ; 2019 >
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume May 2019 ; May ; 2019 >
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume Jun 2019 ; June ; 2019 >
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume Jul 2019 ; July ; 2019 >
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume Aug 2019 ; August ; 2019 >
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume Sep 2019 ; September ; 2019 >
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume Oct 2019 ; October ; 2019 >
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume Nov 2019 ; November ; 2019 >
-      au < crawling ; exists ; 2019 ; PLOS ONE Volume Dec 2019 ; December ; 2019 >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume Jan 2018 ; 2018 ; January ; >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume Feb 2018 ; 2018 ; February ; >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume Mar 2018 ; 2018 ; March ; >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume Apr 2018 ; 2018 ; April ; >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume May 2018 ; 2018 ; May ; >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume Jun 2018 ; 2018 ; June ; >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume Jul 2018 ; 2018 ; July ; >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume Aug 2018 ; 2018 ; August ; >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume Sep 2018 ; 2018 ; September ; >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume Oct 2018 ; 2018 ; October ; >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume Nov 2018 ; 2018 ; November ; >
+      au < exists ; exists ; 2018 ; PLOS ONE Volume Dec 2018 ; 2018 ; December ; >
 
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Jan 2023 ; January ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Feb 2023 ; February ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Mar 2023 ; March ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Apr 2023 ; April ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume May 2023 ; May ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Jun 2023 ; June ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Jul 2023 ; July ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Aug 2023 ; August ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Sep 2023 ; September ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Oct 2023 ; October ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Nov 2023 ; November ; 2023 >
-      au < exists ; exists ; 2023 ; PLOS ONE Volume Dec 2023 ; December ; 2023 >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume Jan 2019 ; 2019 ; January ; >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume Feb 2019 ; 2019 ; February ; >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume Mar 2019 ; 2019 ; March ; >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume Apr 2019 ; 2019 ; April ; >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume May 2019 ; 2019 ; May ; >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume Jun 2019 ; 2019 ; June ; >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume Jul 2019 ; 2019 ; July ; >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume Aug 2019 ; 2019 ; August ; >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume Sep 2019 ; 2019 ; September ; >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume Oct 2019 ; 2019 ; October ; >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume Nov 2019 ; 2019 ; November ; >
+      au < crawling ; exists ; 2019 ; PLOS ONE Volume Dec 2019 ; 2019 ; December ; >
 
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Jan 2024 ; January ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Feb 2024 ; February ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Mar 2024 ; March ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Apr 2024 ; April ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume May 2024 ; May ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Jun 2024 ; June ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Jul 2024 ; July ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Aug 2024 ; August ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Sep 2024 ; September ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Oct 2024 ; October ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Nov 2024 ; November ; 2024 >
-      au < exists ; exists ; 2024 ; PLOS ONE Volume Dec 2024 ; December ; 2024 >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume Jan 2020 ; 2020 ; January ; >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume Feb 2020 ; 2020 ; February ; >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume Mar 2020 ; 2020 ; March ; >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume Apr 2020 ; 2020 ; April ; >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume May 2020 ; 2020 ; May ; >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume Jun 2020 ; 2020 ; June ; >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume Jul 2020 ; 2020 ; July ; >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume Aug 2020 ; 2020 ; August ; >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume Sep 2020 ; 2020 ; September ; >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume Oct 2020 ; 2020 ; October ; >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume Nov 2020 ; 2020 ; November ; >
+      au < exists ; exists ; 2020 ; PLOS ONE Volume Dec 2020 ; 2020 ; December ; >
 
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Jan 2025 ; January ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Feb 2025 ; February ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Mar 2025 ; March ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Apr 2025 ; April ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume May 2025 ; May ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Jun 2025 ; June ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Jul 2025 ; July ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Aug 2025 ; August ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Sep 2025 ; September ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Oct 2025 ; October ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Nov 2025 ; November ; 2025 >
-      au < exists ; exists ; 2025 ; PLOS ONE Volume Dec 2025 ; December ; 2025 >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume Jan 2021 ; 2021 ; January ; >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume Feb 2021 ; 2021 ; February ; >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume Mar 2021 ; 2021 ; March ; >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume Apr 2021 ; 2021 ; April ; >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume May 2021 ; 2021 ; May ; >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume Jun 2021 ; 2021 ; June ; >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume Jul 2021 ; 2021 ; July ; >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume Aug 2021 ; 2021 ; August ; >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume Sep 2021 ; 2021 ; September ; >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume Oct 2021 ; 2021 ; October ; >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume Nov 2021 ; 2021 ; November ; >
+      au < exists ; exists ; 2021 ; PLOS ONE Volume Dec 2021 ; 2021 ; December ; >
+
+      au < exists ; exists ; 2022 ; PLOS ONE Volume Jan 2022 ; 2022 ; January ; >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume Feb 2022 ; 2022 ; February ; >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume Mar 2022 ; 2022 ; March ; >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume Apr 2022 ; 2022 ; April ; >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume May 2022 ; 2022 ; May ; >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume Jun 2022 ; 2022 ; June ; >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume Jul 2022 ; 2022 ; July ; >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume Aug 2022 ; 2022 ; August ; >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume Sep 2022 ; 2022 ; September ; >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume Oct 2022 ; 2022 ; October ; >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume Nov 2022 ; 2022 ; November ; >
+      au < exists ; exists ; 2022 ; PLOS ONE Volume Dec 2022 ; 2022 ; December ; >
+
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Jan 2023 ; 2023 ; January ; >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Feb 2023 ; 2023 ; February ; >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Mar 2023 ; 2023 ; March ; >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Apr 2023 ; 2023 ; April ; >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume May 2023 ; 2023 ; May ; >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Jun 2023 ; 2023 ; June ; >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Jul 2023 ; 2023 ; July ; >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Aug 2023 ; 2023 ; August ; >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Sep 2023 ; 2023 ; September ; >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Oct 2023 ; 2023 ; October ; >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Nov 2023 ; 2023 ; November ; >
+      au < exists ; exists ; 2023 ; PLOS ONE Volume Dec 2023 ; 2023 ; December ; >
+
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Jan 2024 ; 2024 ; January ; >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Feb 2024 ; 2024 ; February ; >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Mar 2024 ; 2024 ; March ; >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Apr 2024 ; 2024 ; April ; >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume May 2024 ; 2024 ; May ; >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Jun 2024 ; 2024 ; June ; >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Jul 2024 ; 2024 ; July ; >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Aug 2024 ; 2024 ; August ; >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Sep 2024 ; 2024 ; September ; >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Oct 2024 ; 2024 ; October ; >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Nov 2024 ; 2024 ; November ; >
+      au < exists ; exists ; 2024 ; PLOS ONE Volume Dec 2024 ; 2024 ; December ; >
+
+      au < manifest ; exists ; 2025 ; PLOS ONE Volume Jan 2025 ; 2025 ; January ; >
+      au < manifest ; exists ; 2025 ; PLOS ONE Volume Feb 2025 ; 2025 ; February ; >
+      au < manifest ; exists ; 2025 ; PLOS ONE Volume Mar 2025 ; 2025 ; March ; >
+      au < manifest ; exists ; 2025 ; PLOS ONE Volume Apr 2025 ; 2025 ; April ; >
+      au < manifest ; exists ; 2025 ; PLOS ONE Volume May 2025 ; 2025 ; May ; >
+      au < manifest ; exists ; 2025 ; PLOS ONE Volume Jun 2025 ; 2025 ; June ; >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Jul 2025 ; 2025 ; July ; >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Aug 2025 ; 2025 ; August ; >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Sep 2025 ; 2025 ; September ; >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Oct 2025 ; 2025 ; October ; >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Nov 2025 ; 2025 ; November ; >
+      au < exists ; exists ; 2025 ; PLOS ONE Volume Dec 2025 ; 2025 ; December ; >
 
   }
 

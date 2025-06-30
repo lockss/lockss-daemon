@@ -832,6 +832,34 @@ while (my $line = <>) {
     #Test for link to chapter
     } elsif ($man_contents =~ m/$param{year}/) {
         #Collect title
+        $vol_title = $param{journal_id} . " " . $param{year};
+        $result = "Manifest";
+    } else {
+        $result = "--NO_CONT--";
+    }
+  
+  sleep(5);
+
+  } elsif (($plugin eq "ClockssPLoSMonthlyPlugin")) {
+    $url = sprintf("%s%s/lockss-manifest/vol_%s",
+      $param{base_url}, $param{journal_id}, $param{year});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$oa_tag/si && $man_contents !~ m/$clockss_tag/si) {
+        $result = "--NO_TAG--";
+    #Test for link to chapter
+    } elsif ($man_contents =~ m/$param{month}/) {
+        #Collect title
+        $vol_title = $param{journal_id} . " " . $param{year} . " " . $param{month};
         $result = "Manifest";
     } else {
         $result = "--NO_CONT--";
