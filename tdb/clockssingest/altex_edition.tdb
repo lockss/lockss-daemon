@@ -4,7 +4,7 @@
     name = Altex Edition ;
     info[contract] = 2025 ;
     info[back] = 2015 ;
-    info[tester] = 4 ;
+    info[tester] = 8 ;
     info[platform] = OJS3
   >
 
@@ -35,7 +35,7 @@
     au < manifest ; exists ; 1991 ; 1991 ; ALTEX - Alternatives to Animal Experimentation Volume 8 ; 8 ; >
     au < manifest ; exists ; 1992 ; 1992 ; ALTEX - Alternatives to Animal Experimentation Volume 9 ; 9 ; >
     au < manifest ; exists ; 1993 ; 1993 ; ALTEX - Alternatives to Animal Experimentation Volume 10 ; 10 ; >
-    au < testing ; exists ; 1994 ; 1994 ; ALTEX - Alternatives to Animal Experimentation Volume 11 ; 11 ; >
+    au < ready ; exists ; 1994 ; 1994 ; ALTEX - Alternatives to Animal Experimentation Volume 11 ; 11 ; >
     au < manifest ; exists ; 1995 ; 1995 ; ALTEX - Alternatives to Animal Experimentation Volume 12 ; 12 ; >
     au < manifest ; exists ; 1996 ; 1996 ; ALTEX - Alternatives to Animal Experimentation Volume 13 ; 13 ; >
     au < manifest ; exists ; 1997 ; 1997 ; ALTEX - Alternatives to Animal Experimentation Volume 14 ; 14 ; >
@@ -65,7 +65,7 @@
     au < manifest ; exists ; 2021 ; 2021 ; ALTEX - Alternatives to Animal Experimentation Volume 38 ; 38 ; >
     au < manifest ; exists ; 2022 ; 2022 ; ALTEX - Alternatives to Animal Experimentation Volume 39 ; 39 ; >
     au < manifest ; exists ; 2023 ; 2023 ; ALTEX - Alternatives to Animal Experimentation Volume 40 ; 40 ; >
-    au < testing ; exists ; 2024 ; 2024 ; ALTEX - Alternatives to Animal Experimentation Volume 41 ; 41 ; >
+    au < ready ; exists ; 2024 ; 2024 ; ALTEX - Alternatives to Animal Experimentation Volume 41 ; 41 ; >
     au < manifest ; exists ; 2025 ; 2025 ; ALTEX - Alternatives to Animal Experimentation Volume 42 ; 42 ; >
 
   }
