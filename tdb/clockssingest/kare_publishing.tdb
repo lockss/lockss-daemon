@@ -21,32 +21,33 @@
         param[base_url] = https://agridergisi.com/
         param[web_url] = https://jag.journalagent.com/
         param[journal_id] = agri
+        #Preserve 2020 and forward per publisher request
 
-        au < exists ; exists ; 2000 ; Agri Journal Volume 12 ; 12 ; >
-        au < exists ; exists ; 2001 ; Agri Journal Volume 13 ; 13 ; >
-        au < exists ; exists ; 2002 ; Agri Journal Volume 14 ; 14 ; >
-        au < exists ; exists ; 2003 ; Agri Journal Volume 15 ; 15 ; >
-        au < exists ; exists ; 2004 ; Agri Journal Volume 16 ; 16 ; >
-        au < exists ; exists ; 2005 ; Agri Journal Volume 17 ; 17 ; >
-        au < exists ; exists ; 2006 ; Agri Journal Volume 18 ; 18 ; >
-        au < exists ; exists ; 2007 ; Agri Journal Volume 19 ; 19 ; >
-        au < exists ; exists ; 2008 ; Agri Journal Volume 20 ; 20 ; >
-        au < exists ; exists ; 2009 ; Agri Journal Volume 21 ; 21 ; >
-        au < exists ; exists ; 2010 ; Agri Journal Volume 22 ; 22 ; >
-        au < exists ; exists ; 2011 ; Agri Journal Volume 23 ; 23 ; >
-        au < exists ; exists ; 2012 ; Agri Journal Volume 24 ; 24 ; >
-        au < exists ; exists ; 2013 ; Agri Journal Volume 25 ; 25 ; >
-        au < exists ; exists ; 2014 ; Agri Journal Volume 26 ; 26 ; >
-        au < exists ; exists ; 2015 ; Agri Journal Volume 27 ; 27 ; >
-        au < exists ; exists ; 2016 ; Agri Journal Volume 28 ; 28 ; >
-        au < exists ; exists ; 2017 ; Agri Journal Volume 29 ; 29 ; >
-        au < exists ; exists ; 2018 ; Agri Journal Volume 30 ; 30 ; >
-        au < exists ; exists ; 2019 ; Agri Journal Volume 31 ; 31 ; >
+        #au < exists ; exists ; 2000 ; Agri Journal Volume 12 ; 12 ; >
+        #au < exists ; exists ; 2001 ; Agri Journal Volume 13 ; 13 ; >
+        #au < exists ; exists ; 2002 ; Agri Journal Volume 14 ; 14 ; >
+        #au < exists ; exists ; 2003 ; Agri Journal Volume 15 ; 15 ; >
+        #au < exists ; exists ; 2004 ; Agri Journal Volume 16 ; 16 ; >
+        #au < exists ; exists ; 2005 ; Agri Journal Volume 17 ; 17 ; >
+        #au < exists ; exists ; 2006 ; Agri Journal Volume 18 ; 18 ; >
+        #au < exists ; exists ; 2007 ; Agri Journal Volume 19 ; 19 ; >
+        #au < exists ; exists ; 2008 ; Agri Journal Volume 20 ; 20 ; >
+        #au < exists ; exists ; 2009 ; Agri Journal Volume 21 ; 21 ; >
+        #au < exists ; exists ; 2010 ; Agri Journal Volume 22 ; 22 ; >
+        #au < exists ; exists ; 2011 ; Agri Journal Volume 23 ; 23 ; >
+        #au < exists ; exists ; 2012 ; Agri Journal Volume 24 ; 24 ; >
+        #au < exists ; exists ; 2013 ; Agri Journal Volume 25 ; 25 ; >
+        #au < exists ; exists ; 2014 ; Agri Journal Volume 26 ; 26 ; >
+        #au < exists ; exists ; 2015 ; Agri Journal Volume 27 ; 27 ; >
+        #au < exists ; exists ; 2016 ; Agri Journal Volume 28 ; 28 ; >
+        #au < exists ; exists ; 2017 ; Agri Journal Volume 29 ; 29 ; >
+        #au < exists ; exists ; 2018 ; Agri Journal Volume 30 ; 30 ; >
+        #au < exists ; exists ; 2019 ; Agri Journal Volume 31 ; 31 ; >
         au < crawling ; exists ; 2020 ; Agri Journal Volume 32 ; 32 ; >
-        au < exists ; exists ; 2021 ; Agri Journal Volume 33 ; 33 ; >
+        au < manifest ; exists ; 2021 ; Agri Journal Volume 33 ; 33 ; >
         au < crawling ; exists ; 2022 ; Agri Journal Volume 34 ; 34 ; >
         au < crawling ; exists ; 2023 ; Agri Journal Volume 35 ; 35 ; >
-        au < exists ; exists ; 2024 ; Agri Journal Volume 36 ; 36 ; >
+        au < manifest ; exists ; 2024 ; Agri Journal Volume 36 ; 36 ; >
         au < expected ; exists ; 2025 ; Agri Journal Volume 37 ; 37 ; >
   }
  }

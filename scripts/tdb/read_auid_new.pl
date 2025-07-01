@@ -4415,6 +4415,7 @@ while (my $line = <>) {
           ($plugin eq "MolecularVisionPlugin") ||
           ($plugin eq "JRS2022Plugin") ||
           ($plugin eq "EJCJS2022Plugin") ||
+          ($plugin eq "ClockssKarePlugin") ||
           ($plugin eq "TESLEJ2022Plugin") ||
           ($plugin eq "InformationResearchPlugin") ||
           ($plugin eq "ClockssOjs3Plugin" && $param{base_url} =~ "talenta")) {
