@@ -280,7 +280,7 @@
     au < finished ; finished ; 2021 ; Contention Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Contention Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2023 ; Contention Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2024 ; Contention Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2024 ; Contention Volume 12 ; 12 ; >
     au < expected ; exists ; 2025 ; Contention Volume 13 ; 13 ; >
 
   }
@@ -442,7 +442,7 @@
     au < finished ; manifest ; 2021 ; Environment and Society Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Environment and Society Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2023 ; Environment and Society Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2024 ; Environment and Society Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2024 ; Environment and Society Volume 15 ; 15 ; >
     au < expected ; exists ; 2025 ; Environment and Society Volume 16 ; 16 ; >
 
   }
@@ -597,7 +597,7 @@
     au < finished ; finished ; 2021 ; French Politics, Culture & Society Volume 39 ; 39 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; French Politics, Culture & Society Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2023 ; French Politics, Culture & Society Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2024 ; French Politics, Culture & Society Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2024 ; French Politics, Culture & Society Volume 42 ; 42 ; >
     au < expected ; exists ; 2025 ; French Politics, Culture & Society Volume 43 ; 43 ; >
 
   }
@@ -735,7 +735,7 @@
     au < finished ; manifest ; 2020 ; International Journal of Social Quality Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; International Journal of Social Quality Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; International Journal of Social Quality Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; International Journal of Social Quality Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2023 ; International Journal of Social Quality Volume 13 ; 13 ; >
 
   }
 
@@ -965,8 +965,8 @@
     au < finished ; manifest ; 2020 ; Museum Worlds: Advances in Research Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Museum Worlds: Advances in Research Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Museum Worlds: Advances in Research Volume 10 ; 10 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; Museum Worlds: Advances in Research Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2024 ; Museum Worlds: Advances in Research Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2023 ; Museum Worlds: Advances in Research Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2024 ; Museum Worlds: Advances in Research Volume 12 ; 12 ; >
     au < expected ; exists ; 2025 ; Museum Worlds: Advances in Research Volume 13 ; 13 ; >
 
   }
@@ -1098,7 +1098,7 @@
     au < finished ; finished ; 2021 ; Regions & Cohesion Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Regions & Cohesion Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2023 ; Regions & Cohesion Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2024 ; Regions & Cohesion Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2024 ; Regions & Cohesion Volume 14 ; 14 ; >
     au < expected ; exists ; 2025 ; Regions & Cohesion Volume 15 ; 15 ; >
 
   }
@@ -1128,7 +1128,7 @@
     au < finished ; crawling ; 2020 ; Religion and Society: Advances in Research Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Religion and Society: Advances in Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Religion and Society: Advances in Research Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; Religion and Society: Advances in Research Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2023 ; Religion and Society: Advances in Research Volume 14 ; 14 ; >
 
   }
 
@@ -1267,7 +1267,7 @@
     au < finished ; finished ; 2021 ; Social Analysis Volume 65 ; 65 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Social Analysis Volume 66 ; 66 ; >
     au < deepCrawl ; exists ; 2023 ; Social Analysis Volume 67 ; 67 ; >
-    au < crawling ; exists ; 2024 ; Social Analysis Volume 68 ; 68 ; >
+    au < frozen ; exists ; 2024 ; Social Analysis Volume 68 ; 68 ; >
     au < expected ; exists ; 2025 ; Social Analysis Volume 69 ; 69 ; >
 
   }
@@ -1339,8 +1339,8 @@
     au < finished ; finished ; 2020 ; Transfers Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Transfers Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Transfers Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2023 ; Transfers Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2024 ; Transfers Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2023 ; Transfers Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2024 ; Transfers Volume 14 ; 14 ; >
     au < expected ; exists ; 2025 ; Transfers Volume 15 ; 15 ; >
 
   }
