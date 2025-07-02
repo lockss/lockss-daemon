@@ -292,7 +292,7 @@
       au < finished ; manifest ; 2022 ; Mozaik Humaniora Volume 22 ; 22 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Mozaik Humaniora Volume 23 ; 23 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Mozaik Humaniora Volume 24 ; 24 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Mozaik Humaniora Volume 25 ; 25 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Mozaik Humaniora Volume 25 ; 25 ; 2025 ; >
 
   }
 
@@ -385,7 +385,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Administrasi Kesehatan Indonesia Volume 10 ; 10 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Administrasi Kesehatan Indonesia Volume 11 ; 11 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Administrasi Kesehatan Indonesia Volume 12 ; 12 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Jurnal Administrasi Kesehatan Indonesia Volume 13 ; 13 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Jurnal Administrasi Kesehatan Indonesia Volume 13 ; 13 ; 2025 ; >
 
   }
 
@@ -478,7 +478,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Ekonomi dan Bisnis Islam Volume 8 ; 8 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Ekonomi dan Bisnis Islam Volume 9 ; 9 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Ekonomi dan Bisnis Islam Volume 10 ; 10 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Jurnal Ekonomi dan Bisnis Islam Volume 11 ; 11 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Jurnal Ekonomi dan Bisnis Islam Volume 11 ; 11 ; 2025 ; >
 
   }
 
@@ -530,7 +530,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Kimia Riset Volume 7 ; 7 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Kimia Riset Volume 8 ; 8 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Kimia Riset Volume 9 ; 9 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Jurnal Kimia Riset Volume 10 ; 10 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Jurnal Kimia Riset Volume 10 ; 10 ; 2025 ; >
 
   }
 
@@ -798,7 +798,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Hubungan Internasional Volume 15 ; 15 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Hubungan Internasional Volume 16 ; 16 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Hubungan Internasional Volume 17 ; 17 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Jurnal Hubungan Internasional Volume 18 ; 18 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Jurnal Hubungan Internasional Volume 18 ; 18 ; 2025 ; >
 
   }
 
@@ -959,7 +959,7 @@
       param[journal_id] = agrovet
 
       au < frozen ; exists ; 2024 ; Jurnal Agro Veteriner Volume 8 ; 8 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Jurnal Agro Veteriner Volume 9 ; 9 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Jurnal Agro Veteriner Volume 9 ; 9 ; 2025 ; >
 
   }
 
@@ -1005,7 +1005,7 @@
       au < finished ; manifest ; 2022 ; Journal of Governance and Administrative Reform Volume 3 ; 3 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Journal of Governance and Administrative Reform Volume 4 ; 4 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Journal of Governance and Administrative Reform Volume 5 ; 5 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Journal of Governance and Administrative Reform Volume 6 ; 6 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Journal of Governance and Administrative Reform Volume 6 ; 6 ; 2025 ; >
 
   }
 
@@ -1283,7 +1283,7 @@
       au < finished ; manifest ; 2022 ; Journal of Halal Product and Research Volume 5 ; 5 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Journal of Halal Product and Research Volume 6 ; 6 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Journal of Halal Product and Research Volume 7 ; 7 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Journal of Halal Product and Research Volume 8 ; 8 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Journal of Halal Product and Research Volume 8 ; 8 ; 2025 ; >
 
   }
 
@@ -1557,7 +1557,7 @@
       au < finished ; manifest ; 2022 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 11 ; 11 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 12 ; 12 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 13 ; 13 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 14 ; 14 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Lakon : Jurnal Kajian Sastra dan Budaya Volume 14 ; 14 ; 2025 ; >
 
   }
 
@@ -1878,7 +1878,7 @@
       au < finished ; manifest ; 2022 ; Media Gizi Kesmas Volume 11 ; 11 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Media Gizi Kesmas Volume 12 ; 12 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Media Gizi Kesmas Volume 13 ; 13 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Media Gizi Kesmas Volume 14 ; 14 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Media Gizi Kesmas Volume 14 ; 14 ; 2025 ; >
 
   }
 
@@ -1896,7 +1896,7 @@
       au < finished ; manifest ; 2022 ; Indonesian Andrology and Biomedical Journal Volume 3 ; 3 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Indonesian Andrology and Biomedical Journal Volume 4 ; 4 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Indonesian Andrology and Biomedical Journal Volume 5 ; 5 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Indonesian Andrology and Biomedical Journal Volume 6 ; 6 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Indonesian Andrology and Biomedical Journal Volume 6 ; 6 ; 2025 ; >
 
   }
 
@@ -2123,7 +2123,7 @@
       au < finished ; manifest ; 2022 ; Berkala Ilmiah Kimia Farmasi Volume 9 ; 9 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Berkala Ilmiah Kimia Farmasi Volume 10 ; 10 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Berkala Ilmiah Kimia Farmasi Volume 11 ; 11 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Berkala Ilmiah Kimia Farmasi Volume 12 ; 12 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Berkala Ilmiah Kimia Farmasi Volume 12 ; 12 ; 2025 ; >
 
   }
 
@@ -2159,7 +2159,7 @@
       au < finished ; manifest ; 2022 ; Jejaring Administrasi Publik (JAP) Volume 14 ; 14 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jejaring Administrasi Publik (JAP) Volume 15 ; 15 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jejaring Administrasi Publik (JAP) Volume 16 ; 16 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Jejaring Administrasi Publik (JAP) Volume 17 ; 17 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Jejaring Administrasi Publik (JAP) Volume 17 ; 17 ; 2025 ; >
 
   }
 
