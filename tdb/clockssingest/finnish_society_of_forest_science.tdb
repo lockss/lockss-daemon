@@ -34,7 +34,7 @@
     au < finished ; manifest ; 2021 ; Silva Fennica Volume 55 ; 55 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Silva Fennica Volume 56 ; 56 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Silva Fennica Volume 57 ; 57 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2024 ; Silva Fennica Volume 58 ; 58 ; >
+    au < deepCrawl ; exists ; 2024 ; Silva Fennica Volume 58 ; 58 ; >
     au < manifest ; exists ; 2025 ; Silva Fennica Volume 59 ; 59 ; >
 
   }
@@ -72,7 +72,7 @@
     au < finished ; manifest ; 2021 ; Dissertationes Forestales Volume 2021 ; 2021 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Dissertationes Forestales Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; Dissertationes Forestales Volume 2023 ; 2023 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2024 ; Dissertationes Forestales Volume 2024 ; 2024 ; >
+    au < deepCrawl ; exists ; 2024 ; Dissertationes Forestales Volume 2024 ; 2024 ; >
     au < manifest ; exists ; 2025 ; Dissertationes Forestales Volume 2025 ; 2025 ; >
 
   }
@@ -120,7 +120,7 @@
     au < finished ; manifest ; 2021 ; Metsätieteen aikakauskirja vuosikerta 2021 ; 2021 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Metsätieteen aikakauskirja vuosikerta 2022 ; 2022 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Metsätieteen aikakauskirja vuosikerta 2023 ; 2023 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2024 ; Metsätieteen aikakauskirja vuosikerta 2024 ; 2024 ; >
+    au < deepCrawl ; exists ; 2024 ; Metsätieteen aikakauskirja vuosikerta 2024 ; 2024 ; >
     au < manifest ; exists ; 2025 ; Metsätieteen aikakauskirja vuosikerta 2025 ; 2025 ; >
   }
 }
