@@ -243,7 +243,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Bulletin of Hispanic Studies Volume 94 ; 94 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Bulletin of Hispanic Studies Volume 95 ; 95 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Bulletin of Hispanic Studies Volume 96 ; 96 ; >
-    au < ready ; exists ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 ; >
+    au < crawling ; exists ; 2020 ; Bulletin of Hispanic Studies Volume 97 ; 97 ; >
     au < frozen ; exists ; 2021 ; Bulletin of Hispanic Studies Volume 98 ; 98 ; >
     au < deepCrawl ; exists ; 2022 ; Bulletin of Hispanic Studies Volume 99 ; 99 ; >
     au < deepCrawl ; exists ; 2023 ; Bulletin of Hispanic Studies Volume 100 ; 100 ; >
@@ -270,7 +270,7 @@
     au < crawling ; exists ; 2002 ; The Byron Journal Volume 30 ; 30 ; >
     au < exists ; exists ; 2003 ; The Byron Journal Volume 31 ; 31 ; >
     au < frozen ; exists ; 2004 ; The Byron Journal Volume 32 ; 32 ; >
-    au < ready ; exists ; 2005 ; The Byron Journal Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2005 ; The Byron Journal Volume 33 ; 33 ; >
     au < crawling ; exists ; 2006 ; The Byron Journal Volume 34 ; 34 ; >
     au < frozen ; exists ; 2007 ; The Byron Journal Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; The Byron Journal Volume 36 ; 36 ; >
@@ -309,7 +309,7 @@
 
     au < frozen ; exists ; 2004 ; Comma Volume 2004 ; 2004 ; >
     au < crawling ; exists ; 2005 ; Comma Volume 2005 ; 2005 ; >
-    au < ready ; exists ; 2006 ; Comma Volume 2006 ; 2006 ; >
+    au < crawling ; exists ; 2006 ; Comma Volume 2006 ; 2006 ; >
     au < finished ; manifest ; 2007 ; Comma Volume 2007 ; 2007 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2008 ; Comma Volume 2008 ; 2008 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Comma Volume 2009 ; 2009 ; >
@@ -562,7 +562,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 11 ; 11 ; >
-    au < ready ; exists ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2020 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 12 ; 12 ; >
     au < frozen ; exists ; 2021 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2023 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 15 ; 15 ; >
@@ -774,7 +774,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; International Development Planning Review Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; International Development Planning Review Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; International Development Planning Review Volume 41 ; 41 ; >
-    au < ready ; exists ; 2020 ; International Development Planning Review Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2020 ; International Development Planning Review Volume 42 ; 42 ; >
     au < frozen ; exists ; 2021 ; International Development Planning Review Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2022 ; International Development Planning Review Volume 44 ; 44 ; >
     au < deepCrawl ; exists ; 2023 ; International Development Planning Review Volume 45 ; 45 ; >
@@ -845,7 +845,7 @@
     #issn 1476-4253
     #Published 2002-2012
 
-    au < ready ; exists ; 2002 ; Before Farming Volume 2002 ; 2002 ; >
+    au < crawling ; exists ; 2002 ; Before Farming Volume 2002 ; 2002 ; >
     au < frozen ; exists ; 2003 ; Before Farming Volume 2003 ; 2003 ; >
     au < frozen ; exists ; 2004 ; Before Farming Volume 2004 ; 2004 ; >
     au < crawling ; exists ; 2005 ; Before Farming Volume 2005 ; 2005 ; >
@@ -1687,7 +1687,7 @@
     au < frozen ; exists ; 2002 ; Quebec Studies Volume 34 ; 34 ; >
     au < frozen ; exists ; 2003 ; Quebec Studies Volume 35 ; 35 ; >
     au < frozen ; exists ; 2003 ; Quebec Studies Volume 36 ; 36 ; >
-    au < ready ; exists ; 2004 ; Quebec Studies Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2004 ; Quebec Studies Volume 37 ; 37 ; >
     au < crawling ; exists ; 2004 ; Quebec Studies Volume 38 ; 38 ; >
     au < ready ; exists ; 2005 ; Quebec Studies Volume 39 ; 39 ; >
     au < crawling ; exists ; 2005 ; Quebec Studies Volume 40 ; 40 ; >
@@ -1781,7 +1781,7 @@
     au < exists ; exists ; 2004 ; Sculpture Journal Volume 11 ; 11 ; >
     au < exists ; exists ; 2004 ; Sculpture Journal Volume 12 ; 12 ; >
     au < ready ; exists ; 2005 ; Sculpture Journal Volume 13 ; 13 ; >
-    au < ready ; exists ; 2005 ; Sculpture Journal Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2005 ; Sculpture Journal Volume 14 ; 14 ; >
     au < crawling ; exists ; 2006 ; Sculpture Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2007 ; Sculpture Journal Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Sculpture Journal Volume 17 ; 17 ; >
