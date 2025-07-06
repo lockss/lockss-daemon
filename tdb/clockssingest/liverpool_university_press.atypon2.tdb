@@ -35,7 +35,7 @@
     au < frozen ; exists ; 2004 ; Archives Volume 29 ; 29 ; >
     au < frozen ; exists ; 2005 ; Archives Volume 30 ; 30 ; >
     au < frozen ; exists ; 2005 ; Archives Volume 31 ; 31 ; >
-    au < ready ; exists ; 2007 ; Archives Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2007 ; Archives Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; Archives Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Archives Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Archives Volume 35 ; 35 ; >
@@ -78,7 +78,7 @@
     au < frozen ; exists ; 2019 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 15 ; 15 ; >
     au < frozen ; exists ; 2020 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 16 ; 16 ; >
     au < finished ; manifest ; 2021 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 17 ; 17 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2022 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2022 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 18 ; 18 ; >
     au < frozen ; exists ; 2023 ; Ars Judaica The Bar Ilan Journal of Jewish Art Volume 19 ; 19 ; >
 
   }
@@ -138,7 +138,7 @@
     #journal_num = 77
 
     au < crawling ; exists ; 2019 ; Bulletin of Contemporary Hispanic Studies Volume 1 ; 1 ; >
-    au < ready ; exists ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2020 ; Bulletin of Contemporary Hispanic Studies Volume 2 ; 2 ; >
     au < frozen ; exists ; 2021 ; Bulletin of Contemporary Hispanic Studies Volume 3 ; 3 ; >
     au < deepCrawl ; exists ; 2022 ; Bulletin of Contemporary Hispanic Studies Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2023 ; Bulletin of Contemporary Hispanic Studies Volume 5 ; 5 ; >
@@ -1689,7 +1689,7 @@
     au < frozen ; exists ; 2003 ; Quebec Studies Volume 36 ; 36 ; >
     au < crawling ; exists ; 2004 ; Quebec Studies Volume 37 ; 37 ; >
     au < crawling ; exists ; 2004 ; Quebec Studies Volume 38 ; 38 ; >
-    au < ready ; exists ; 2005 ; Quebec Studies Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2005 ; Quebec Studies Volume 39 ; 39 ; >
     au < crawling ; exists ; 2005 ; Quebec Studies Volume 40 ; 40 ; >
     au < crawling ; exists ; 2006 ; Quebec Studies Volume 41 ; 41 ; >
     au < crawling ; exists ; 2006 ; Quebec Studies Volume 42 ; 42 ; >
@@ -1780,7 +1780,7 @@
 
     au < exists ; exists ; 2004 ; Sculpture Journal Volume 11 ; 11 ; >
     au < exists ; exists ; 2004 ; Sculpture Journal Volume 12 ; 12 ; >
-    au < ready ; exists ; 2005 ; Sculpture Journal Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2005 ; Sculpture Journal Volume 13 ; 13 ; >
     au < crawling ; exists ; 2005 ; Sculpture Journal Volume 14 ; 14 ; >
     au < crawling ; exists ; 2006 ; Sculpture Journal Volume 15 ; 15 ; >
     au < crawling ; exists ; 2007 ; Sculpture Journal Volume 16 ; 16 ; >
@@ -2245,7 +2245,7 @@
     au < frozen ; exists ; 2008 ; Revista Iberoamericana Volume 74 ; 74 ; >
     au < crawling ; exists ; 2009 ; Revista Iberoamericana Volume 75 ; 75 ; >
     au < crawling ; exists ; 2010 ; Revista Iberoamericana Volume 76 ; 76 ; >
-    au < ready ; exists ; 2011 ; Revista Iberoamericana Volume 77 ; 77 ; >
+    au < crawling ; exists ; 2011 ; Revista Iberoamericana Volume 77 ; 77 ; >
     au < frozen ; exists ; 2012 ; Revista Iberoamericana Volume 78 ; 78 ; >
     au < frozen ; exists ; 2013 ; Revista Iberoamericana Volume 79 ; 79 ; >
     au < crawling ; exists ; 2014 ; Revista Iberoamericana Volume 80 ; 80 ; >
