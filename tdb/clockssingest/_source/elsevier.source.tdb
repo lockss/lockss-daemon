@@ -313,7 +313,7 @@
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_37 ; 2025_37 >
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_38 ; 2025_38 >
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_39 ; 2025_39 >
-        au < expected ; exists ; 2025 ; Elsevier Source Content 2025_40 ; 2025_40 >
+        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_40 ; 2025_40 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_41 ; 2025_41 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_42 ; 2025_42 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_43 ; 2025_43 >
