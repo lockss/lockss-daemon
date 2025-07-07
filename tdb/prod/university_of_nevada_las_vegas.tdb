@@ -17,12 +17,12 @@
     param[base_url] = https://digitalscholarship.unlv.edu/
     param[journal_abbr] = apin
     implicit < status ; year ; name ; param[volume] >
-      #move to University of Hawai'i Press, 2018
+    #move to University of Hawai'i Press, 2018
 
 
-      au < released ; 2016 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
-      au < released ; 2017 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
-      au < released ; 2018 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 >
+      au < down ; 2016 ; Asian/Pacific Island Nursing Journal Volume 1 ; 1 >
+      au < down ; 2017 ; Asian/Pacific Island Nursing Journal Volume 2 ; 2 >
+      au < down ; 2018 ; Asian/Pacific Island Nursing Journal Volume 3 ; 3 >
 
   }
 
@@ -38,15 +38,15 @@
     param[journal_abbr] = jpme
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
 
-    au < exists ; 2006 ; Journal of Praxis in Multicultural Education Volume 1 ; 1 ; https://digitalscholarship.unlv.edu/ >
-    au < exists ; 2007 ; Journal of Praxis in Multicultural Education Volume 2 ; 2 ; https://digitalscholarship.unlv.edu/ >
-    au < exists ; 2008 ; Journal of Praxis in Multicultural Education Volume 3 ; 3 ; https://digitalscholarship.unlv.edu/ >
-    au < exists ; 2009 ; Journal of Praxis in Multicultural Education Volume 4 ; 4 ; https://digitalscholarship.unlv.edu/ >
-    au < exists ; 2010 ; Journal of Praxis in Multicultural Education Volume 5 ; 5 ; https://digitalscholarship.unlv.edu/ >
-    au < exists ; 2011 ; Journal of Praxis in Multicultural Education Volume 6 ; 6 ; https://digitalscholarship.unlv.edu/ >
-    au < released ; 2012 ; Journal of Praxis in Multicultural Education Volume 7 ; 7 ; http://digitalscholarship.unlv.edu/ >
-    au < released ; 2013-2014 ; Journal of Praxis in Multicultural Education Volume 8 ; 8 ; http://digitalscholarship.unlv.edu/ >
-    au < released ; 2014 ; Journal of Praxis in Multicultural Education Volume 9 ; 9 ; http://digitalscholarship.unlv.edu/ >
+    au < doNotProcess ; 2010 ; Journal of Praxis in Multicultural Education Volume 1 ; 1 ; https://digitalscholarship.unlv.edu/ >
+    au < doNotProcess ; 2010 ; Journal of Praxis in Multicultural Education Volume 2 ; 2 ; https://digitalscholarship.unlv.edu/ >
+    au < doNotProcess ; 2008 ; Journal of Praxis in Multicultural Education Volume 3 ; 3 ; https://digitalscholarship.unlv.edu/ >
+    au < doNotProcess ; 2010 ; Journal of Praxis in Multicultural Education Volume 4 ; 4 ; https://digitalscholarship.unlv.edu/ >
+    au < doNotProcess ; 2010 ; Journal of Praxis in Multicultural Education Volume 5 ; 5 ; https://digitalscholarship.unlv.edu/ >
+    au < doNotProcess ; 2011 ; Journal of Praxis in Multicultural Education Volume 6 ; 6 ; https://digitalscholarship.unlv.edu/ >
+    au < down ; 2012 ; Journal of Praxis in Multicultural Education Volume 7 ; 7 ; http://digitalscholarship.unlv.edu/ >
+    au < down ; 2013-2014 ; Journal of Praxis in Multicultural Education Volume 8 ; 8 ; http://digitalscholarship.unlv.edu/ >
+    au < down ; 2014 ; Journal of Praxis in Multicultural Education Volume 9 ; 9 ; http://digitalscholarship.unlv.edu/ >
 
   }
 
@@ -62,15 +62,15 @@
     param[journal_abbr] = jrtc
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 >
-    au < released ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 >
-    au < released ; 2019 ; Journal of Research in Technical Careers Volume 3 ; 3 >
-    au < released ; 2020 ; Journal of Research in Technical Careers Volume 4 ; 4 >
-    au < released ; 2021 ; Journal of Research in Technical Careers Volume 5 ; 5 >
-    au < released ; 2022 ; Journal of Research in Technical Careers Volume 6 ; 6 >
-    au < released ; 2023 ; Journal of Research in Technical Careers Volume 7 ; 7 >
-    au < manifest ; 2024 ; Journal of Research in Technical Careers Volume 8 ; 8 >
-    au < manifest ; 2025 ; Journal of Research in Technical Careers Volume 9 ; 9 >
+    au < down ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 >
+    au < down ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 >
+    au < down ; 2019 ; Journal of Research in Technical Careers Volume 3 ; 3 >
+    au < down ; 2020 ; Journal of Research in Technical Careers Volume 4 ; 4 >
+    au < down ; 2021 ; Journal of Research in Technical Careers Volume 5 ; 5 >
+    au < down ; 2022 ; Journal of Research in Technical Careers Volume 6 ; 6 >
+    au < down ; 2023 ; Journal of Research in Technical Careers Volume 7 ; 7 >
+    au < doNotProcess ; 2024 ; Journal of Research in Technical Careers Volume 8 ; 8 >
+    au < doNotProcess ; 2025 ; Journal of Research in Technical Careers Volume 9 ; 9 >
 
   }
 
@@ -86,11 +86,10 @@
     param[journal_abbr] = spectra
     implicit < status ; year ; name ; param[volume] >
 
-    au < released ; 2021 ; Spectra Undergraduate Research Journal Volume 1 ; 1 >
-    au < released ; 2022 ; Spectra Undergraduate Research Journal Volume 2 ; 2 >
-    au < released ; 2023 ; Spectra Undergraduate Research Journal Volume 3 ; 3 >
-    au < manifest ; 2024 ; Spectra Undergraduate Research Journal Volume 4 ; 4 >
-    au < expected ; 2025 ; Spectra Undergraduate Research Journal Volume 5 ; 5 >
+    au < down ; 2021 ; Spectra Undergraduate Research Journal Volume 1 ; 1 >
+    au < down ; 2022 ; Spectra Undergraduate Research Journal Volume 2 ; 2 >
+    au < down ; 2023 ; Spectra Undergraduate Research Journal Volume 3 ; 3 >
+    au < doNotProcess ; 2024 ; Spectra Undergraduate Research Journal Volume 4 ; 4 >
 
   }
 
