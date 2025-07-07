@@ -30,7 +30,7 @@
       au < finished ; manifest ; 2022 ; Arabian Journal of Scientific Research Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Arabian Journal of Scientific Research Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < exists ; exists ; 2024 ; Arabian Journal of Scientific Research Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2025 ; Arabian Journal of Scientific Research Volume 2025 ; 2025 ; >
+      au < testing ; exists ; 2025 ; Arabian Journal of Scientific Research Volume 2025 ; 2025 ; >
   }
 
   {
@@ -58,7 +58,7 @@
     au < finished ; manifest ; 2022 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2024 ; 2024 ; >
-    au < manifest ; exists ; 2025 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2025 ; 2025 ; >
+    au < testing ; exists ; 2025 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2025 ; 2025 ; >
 
   }
 
@@ -78,7 +78,7 @@
     au < finished ; manifest ; 2022 ; Journal of Information Studies & Technology Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; Journal of Information Studies & Technology Volume 2023 ; 2023 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; Journal of Information Studies & Technology Volume 2024 ; 2024 ; >
-    au < manifest ; exists ; 2025 ; Journal of Information Studies & Technology Volume 2025 ; 2025 ; >
+    au < testing ; exists ; 2025 ; Journal of Information Studies & Technology Volume 2025 ; 2025 ; >
 
   }
   
@@ -118,7 +118,7 @@
     au < finished ; manifest ; 2022 ; Qatar Medical Journal Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Qatar Medical Journal Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; Qatar Medical Journal Volume 2024 ; 2024 ; >
-    au < manifest ; exists ; 2025 ; Qatar Medical Journal Volume 2025 ; 2025 ; >
+    au < testing ; exists ; 2025 ; Qatar Medical Journal Volume 2025 ; 2025 ; >
 
   }
 
@@ -187,7 +187,7 @@
       au < finished ; manifest ; 2022 ; Avicenna Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Avicenna Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Avicenna Volume 2024 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; Avicenna Volume 2025 ; 2025 ; >
+      au < testing ; exists ; 2025 ; Avicenna Volume 2025 ; 2025 ; >
 
 
     }
