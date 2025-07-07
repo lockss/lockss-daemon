@@ -21,7 +21,7 @@
       param[journal_abbr] = journal
 
       au < deepCrawl ; exists ; 2024 ; AUIQ Complementary Biological System Volume 1 ; 1 ; >
-      au < testing ; exists ; 2025 ; AUIQ Complementary Biological System Volume 2 ; 2 ; >
+      au < ready ; exists ; 2025 ; AUIQ Complementary Biological System Volume 2 ; 2 ; >
 
   }
 
@@ -37,7 +37,7 @@
       param[journal_abbr] = home
 
       au < frozen ; exists ; 2024 ; AUIQ Technical Engineering Science Volume 1 ; 1 ; >
-      au < testing ; exists ; 2025 ; AUIQ Technical Engineering Science Volume 2 ; 2 ; >
+      au < ready ; exists ; 2025 ; AUIQ Technical Engineering Science Volume 2 ; 2 ; >
 
   }
 
