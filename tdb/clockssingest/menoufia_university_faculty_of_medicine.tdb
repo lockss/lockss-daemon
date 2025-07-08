@@ -25,7 +25,7 @@
 
     au < frozen ; exists ; 2023 ; Menoufia Medical Journal Volume 36 ; 36 ; https://www.menoufia-med-j.com/ ; > #login needed on https://www.menoufia-med-j.com/cgi/viewcontent.cgi?article=1098&context=journal
     au < deepCrawl ; exists ; 2024 ; Menoufia Medical Journal Volume 37 ; 37 ; https://www.menoufia-med-j.com/ ; > #login needed on https://www.menoufia-med-j.com/cgi/viewcontent.cgi?article=1098&context=journal
-    au < ready ; exists ; 2025 ; Menoufia Medical Journal Volume 38 ; 38 ; https://www.menoufia-med-j.com/ ; > #login needed on https://www.menoufia-med-j.com/cgi/viewcontent.cgi?article=1098&context=journal
+    au < crawling ; exists ; 2025 ; Menoufia Medical Journal Volume 38 ; 38 ; https://www.menoufia-med-j.com/ ; > #login needed on https://www.menoufia-med-j.com/cgi/viewcontent.cgi?article=1098&context=journal
 
   }
 

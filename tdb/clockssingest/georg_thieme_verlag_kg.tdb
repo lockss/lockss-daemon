@@ -61,7 +61,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 58 ; 58 ; >
     au < crawling ; exists ; 2024 ; 2024 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 59 ; 59 ; >
-    au < ready ; exists ; 2025 ; 2025 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 60 ; 60 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; AINS - Anästhesiologie, Intensivmedizin, Notfallmedizin, Schmerztherapie Volume 60 ; 60 ; >
 
   }
 
@@ -716,7 +716,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Asian Journal of Neurosurgery Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Asian Journal of Neurosurgery Volume 18 ; 18 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Asian Journal of Neurosurgery Volume 19 ; 19 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Asian Journal of Neurosurgery Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Asian Journal of Neurosurgery Volume 20 ; 20 ; >
 
    }
 
@@ -746,7 +746,7 @@
      au < deepCrawl ; exists ; 2022 ; 2022 ; Avicenna Journal of Medicine Volume 12 ; 12 ; >
      au < deepCrawl ; exists ; 2023 ; 2023 ; Avicenna Journal of Medicine Volume 13 ; 13 ; >
      au < crawling ; exists ; 2024 ; 2024 ; Avicenna Journal of Medicine Volume 14 ; 14 ; >
-     au < ready ; exists ; 2025 ; 2025 ; Avicenna Journal of Medicine Volume 15 ; 15 ; >
+     au < crawling ; exists ; 2025 ; 2025 ; Avicenna Journal of Medicine Volume 15 ; 15 ; >
 
    }
 
@@ -774,7 +774,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Drug Research Volume 72 ; 72 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Drug Research Volume 73 ; 73 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Drug Research Volume 74 ; 74 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Drug Research Volume 75 ; 75 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Drug Research Volume 75 ; 75 ; >
 
    }
 
@@ -839,7 +839,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; B&G Bewegungstherapie und Gesundheitssport Volume 38 ; 38 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; B&G Bewegungstherapie und Gesundheitssport Volume 39 ; 39 ; >
       au < crawling ; exists ; 2024 ; 2024 ; B&G Bewegungstherapie und Gesundheitssport Volume 40 ; 40 ; >
-      au < ready ; exists ; 2025 ; 2025 ; B&G Bewegungstherapie und Gesundheitssport Volume 41 ; 41 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; B&G Bewegungstherapie und Gesundheitssport Volume 41 ; 41 ; >
 
   }
 
@@ -878,7 +878,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; Balint Journal Volume 23 ; 23 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Balint Journal Volume 24 ; 24 ; >
       au < crawling ; exists ; 2024 ; 2024 ; Balint Journal Volume 25 ; 25 ; >
-      au < ready ; exists ; 2025 ; 2025 ; Balint Journal Volume 26 ; 26 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Balint Journal Volume 26 ; 26 ; >
 
   }
 
@@ -945,7 +945,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinics in Colon and Rectal Surgery Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Clinics in Colon and Rectal Surgery Volume 36 ; 36 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Clinics in Colon and Rectal Surgery Volume 37 ; 37 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Clinics in Colon and Rectal Surgery Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Clinics in Colon and Rectal Surgery Volume 38 ; 38 ; >
 
   }
 
@@ -1119,7 +1119,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; Die Wirbelsäule Volume 6 ; 6 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Die Wirbelsäule Volume 7 ; 7 ; >
    au < crawling ; exists ; 2024 ; 2024 ; Die Wirbelsäule Volume 8 ; 8 ; >
-   au < ready ; exists ; 2025 ; 2025 ; Die Wirbelsäule Volume 9 ; 9 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; Die Wirbelsäule Volume 9 ; 9 ; >
 
   }
 
@@ -1142,7 +1142,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; Digestive Disease Interventions Volume 6 ; 6 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Digestive Disease Interventions Volume 7 ; 7 ; >
    au < crawling ; exists ; 2024 ; 2024 ; Digestive Disease Interventions Volume 8 ; 8 ; >
-   au < ready ; exists ; 2025 ; 2025 ; Digestive Disease Interventions Volume 9 ; 9 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; Digestive Disease Interventions Volume 9 ; 9 ; >
 
   }
 
@@ -1419,7 +1419,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; DMW - Deutsche Medizinische Wochenschrift Volume 148 ; 148 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; DMW - Deutsche Medizinische Wochenschrift Volume 149 ; 149 ; >
    au < crawling ; exists ; 2024 ; 2024 ; DMW - Deutsche Medizinische Wochenschrift Volume 150 ; 150 ; >
-   au < ready ; exists ; 2025 ; 2025 ; DMW - Deutsche Medizinische Wochenschrift Volume 151 ; 151 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; DMW - Deutsche Medizinische Wochenschrift Volume 151 ; 151 ; >
 
   }
 
@@ -1491,7 +1491,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; Endo-Praxis Volume 38 ; 38 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Endo-Praxis Volume 39 ; 39 ; >
    au < crawling ; exists ; 2024 ; 2024 ; Endo-Praxis Volume 40 ; 40 ; >
-   au < ready ; exists ; 2025 ; 2025 ; Endo-Praxis Volume 41 ; 41 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; Endo-Praxis Volume 41 ; 41 ; >
 
   }
 
@@ -1564,7 +1564,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; Endoscopy Volume 54 ; 54 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Endoscopy Volume 55 ; 55 ; >
    au < crawling ; exists ; 2024 ; 2024 ; Endoscopy Volume 56 ; 56 ; >
-   au < ready ; exists ; 2025 ; 2025 ; Endoscopy Volume 57 ; 57 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; Endoscopy Volume 57 ; 57 ; >
 
   }
 
@@ -2031,7 +2031,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 29 ; 29 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 30 ; 30 ; >
    au < crawling ; exists ; 2024 ; 2024 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 31 ; 31 ; >
-   au < ready ; exists ; 2025 ; 2025 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 32 ; 32 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; Flugmedizin - Tropenmedizin - Reisemedizin - FTR Volume 32 ; 32 ; >
 
   }
 
@@ -2124,7 +2124,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; Frauenheilkunde up2date Volume 16 ; 16 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Frauenheilkunde up2date Volume 17 ; 17 ; >
    au < crawling ; exists ; 2024 ; 2024 ; Frauenheilkunde up2date Volume 18 ; 18 ; >
-   au < ready ; exists ; 2025 ; 2025 ; Frauenheilkunde up2date Volume 19 ; 19 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; Frauenheilkunde up2date Volume 19 ; 19 ; >
 
    }
 
@@ -2220,7 +2220,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; Geburtshilfe und Frauenheilkunde Volume 82 ; 82 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Geburtshilfe und Frauenheilkunde Volume 83 ; 83 ; >
    au < crawling ; exists ; 2024 ; 2024 ; Geburtshilfe und Frauenheilkunde Volume 84 ; 84 ; >
-   au < ready ; exists ; 2025 ; 2025 ; Geburtshilfe und Frauenheilkunde Volume 85 ; 85 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; Geburtshilfe und Frauenheilkunde Volume 85 ; 85 ; >
 
   }
 
@@ -2387,7 +2387,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 54 ; 54 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 55 ; 55 ; >
    au < crawling ; exists ; 2024 ; 2024 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 56 ; 56 ; >
-   au < ready ; exists ; 2025 ; 2025 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 57 ; 57 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; Handchirurgie - Mikrochirurgie - Plastische Chirurgie Volume 57 ; 57 ; >
 
   }
 
@@ -2657,7 +2657,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; Indian Journal of Neurosurgery Volume 11 ; 11 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Indian Journal of Neurosurgery Volume 12 ; 12 ; >
    au < crawling ; exists ; 2024 ; 2024 ; Indian Journal of Neurosurgery Volume 13 ; 13 ; >
-   au < ready ; exists ; 2025 ; 2025 ; Indian Journal of Neurosurgery Volume 14 ; 14 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; Indian Journal of Neurosurgery Volume 14 ; 14 ; >
 
   }
 
@@ -2730,7 +2730,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Indian Journal of Radiology and Imaging Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Indian Journal of Radiology and Imaging Volume 33 ; 33 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Indian Journal of Radiology and Imaging Volume 34 ; 34 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Indian Journal of Radiology and Imaging Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Indian Journal of Radiology and Imaging Volume 35 ; 35 ; >
 
   }
 
@@ -2770,7 +2770,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; Informationen aus Orthodontie & Kieferorthopädie Volume 54 ; 54 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Informationen aus Orthodontie & Kieferorthopädie Volume 55 ; 55 ; >
    au < crawling ; exists ; 2024 ; 2024 ; Informationen aus Orthodontie & Kieferorthopädie Volume 56 ; 56 ; >
-   au < ready ; exists ; 2025 ; 2025 ; Informationen aus Orthodontie & Kieferorthopädie Volume 57 ; 57 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; Informationen aus Orthodontie & Kieferorthopädie Volume 57 ; 57 ; >
 
   }
 
@@ -2890,7 +2890,7 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; International Archives of Otorhinolaryngology Volume 26 ; 26 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; International Archives of Otorhinolaryngology Volume 27 ; 27 ; >
    au < crawling ; exists ; 2024 ; 2024 ; International Archives of Otorhinolaryngology Volume 28 ; 28 ; >
-   au < ready ; exists ; 2025 ; 2025 ; International Archives of Otorhinolaryngology Volume 29 ; 29 ; >
+   au < crawling ; exists ; 2025 ; 2025 ; International Archives of Otorhinolaryngology Volume 29 ; 29 ; >
 
   }
 
@@ -3066,7 +3066,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal Club AINS Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Journal Club AINS Volume 12 ; 12 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Journal Club AINS Volume 13 ; 13 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal Club AINS Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal Club AINS Volume 14 ; 14 ; >
 
   }
 
@@ -3198,7 +3198,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Clinical Interventional Radiology Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Clinical Interventional Radiology Volume 7 ; 7 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Journal of Clinical Interventional Radiology Volume 8 ; 8 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Clinical Interventional Radiology Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Clinical Interventional Radiology Volume 9 ; 9 ; >
 
   }
 
@@ -3281,7 +3281,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Knee Surgery Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Knee Surgery Volume 36 ; 36 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Journal of Knee Surgery Volume 37 ; 37 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Knee Surgery Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Knee Surgery Volume 38 ; 38 ; >
 
   }
 
