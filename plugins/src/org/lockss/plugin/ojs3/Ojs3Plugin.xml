@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>54</string>
+    <string>55</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -106,6 +106,9 @@ POSSIBILITY OF SUCH DAMAGE.
       <!--In 2024, reference links in Medicine Anthropology Theory were all 403s. We are excluding them here in the crawl rules.
           Example: https://www.medanthrotheory.org/article/download/4555/4584%3Fminimal=1.html -->
       <string>2,"^https?://www\.medanthrotheory\.org/article/download/.+minimal=1.html"</string>
+      <!--In 2025, some improperly relevant urls were found, such as https://www.mjhid.org/mjhid/article/download/2018.017/ayodeleolaniyi8@gmail.com.
+          Add crawl rule to exclude these urls. -->
+      <string>2,"^(%s|%s)(ojs/)?(journals/)?(index\.php/)?(%s/)?(index\.php/)?(%s/)?(article|issue)/(download(SuppFile)?|view(Article|File|(Download|PDF)Interstitial|RST)?)/.*(https?//|www\.|\.com|\.net|\.org|\.edu|\.gov)",to_http(base_url),to_https(base_url), journal_id, journal_id</string>
       <!--
       http://revistas.udea.edu.co/index.php/lecturasdeeconomia/user/setLocale/es_ES?source=%2Fndex.php%2Flecturasdeeconomia%2Fgateway%2Fclockss%3Fyear%3D2022
       https://www.ride.org.mx/index.php/RIDE/user/setLocale/es_ES?source=%2Findex.php%2FRIDE%2Fgateway%2Flockss%3Fyear%3D2020
