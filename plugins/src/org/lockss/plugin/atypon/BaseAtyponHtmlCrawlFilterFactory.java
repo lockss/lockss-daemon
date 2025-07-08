@@ -236,6 +236,16 @@ public class BaseAtyponHtmlCrawlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "js--citations-truncated"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "relatedTab"),
 
+    // https://www.acpjournals.org/doi/10.7326/0003-4819-141-12-200412210-00006
+    HtmlNodeFilters.tagWithAttributeRegex("a", "class", "content-navigation__btn--next"),
+    HtmlNodeFilters.tagWithAttributeRegex("a", "class", "content-navigation__btn--pre"),
+
+    // https://www.lyellcollection.org/doi/full/10.1144/SP495-2020-123
+    HtmlNodeFilters.tagWithAttributeRegex("a", "class", "content-navigation__next"),
+    HtmlNodeFilters.tagWithAttributeRegex("a", "class", "content-navigation__prev"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "extra-links"),
+
+
           // Not all Atypon plugins necessarily need this but MANY do and it is
     // an insidious source of over crawling
     // 12/13/17 - adding limitation to be "match" not "find" since a book title

@@ -317,6 +317,9 @@ public class BaseAtyponMetadataUtil {
 
     if (isInAu && (pubNameAslha != null)) {
       Boolean isAslha = pubNameAslha.equalsIgnoreCase("American Speech-Language-Hearing Association");
+
+      log.debug3("Aslha Check: Publisher Specific Checks for Aslha === " + isAslha );
+
       String foundVolumeAlsha = am.get(MetadataField.FIELD_VOLUME);
       String AU_volume = null;
       if (isAslha) {
@@ -330,19 +333,143 @@ public class BaseAtyponMetadataUtil {
 
           if (isInAu && !(StringUtils.isEmpty(foundVolumeAlsha))) {
             isInAu =  ( (AU_volume != null) && (AU_volume.equals( foundVolumeAlsha)));
-            log.debug3("Aslha Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeAlsha + ", AU_volume=" + AU_volume + ", isInAu = " + isInAu);
+            log.debug3("Aslha Check after volume check, expected true, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeAlsha + ", AU_volume=" + AU_volume + ", isInAu = " + isInAu);
           } else {
             isInAu = false;
             log.debug3("Aslha Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeAlsha + ", AU_volume=" + AU_volume + ", return isInAu = " + isInAu);
           }
         } else {
-          isInAu = false;
           log.debug3("Aslha Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeAlsha + ", AU_volume=" + AU_volume + ", return_2 isInAu = " + isInAu);
         }
       }
       log.debug3("Aslha Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeAlsha + ", AU_volume=" + AU_volume + ", final return isInAu = " + isInAu);
+
+      // Atypon ARRS check
+      String pubNameARRS = (tdbau == null) ? null : tdbau.getPublisherName();
+      log.debug3("ARRS Check: Publisher Specific Checks for ARRS = " + pubNameARRS);
+
+      if (isInAu && (pubNameARRS != null)) {
+        Boolean isARRS = pubNameARRS.equalsIgnoreCase("American Roentgen Ray Society");
+        String foundVolumeARRS = am.get(MetadataField.FIELD_VOLUME);
+        String AU_volumeARRS = null;
+        if (isARRS) {
+          log.debug3("ARRS Check:  Publisher Specific Checks for ARRS");
+          log.debug3("ARRS Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeARRS + ", AU_volumeARRS=" + AU_volumeARRS + ", isInAu = " + isInAu);
+
+          if (!StringUtils.isEmpty(foundVolumeARRS)) {
+            // Get the AU's volume name from the AU properties. This must be set
+            TypedEntryMap tfProps = au.getProperties();
+            AU_volumeARRS = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
+            if (isInAu && !(StringUtils.isEmpty(foundVolumeARRS))) {
+              isInAu =  ( (AU_volumeARRS != null) && (AU_volumeARRS.equals( foundVolumeARRS)));
+              log.debug3("ARRS Check after volume check, expected true, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeARRS + ", AU_volumeARRS=" + AU_volumeARRS + ", isInAu = " + isInAu);
+            } else {
+              isInAu = false;
+              log.debug3("ARRS Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeARRS + ", AU_volumeARRS=" + AU_volumeARRS + ", return isInAu = " + isInAu);
+            }
+          } else {
+            log.debug3("ARRS Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeARRS + ", AU_volumeARRS=" + AU_volumeARRS + ", return_2 isInAu = " + isInAu);
+          }
+        }
+        log.debug3("ARRS Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeARRS + ", AU_volumeARRS=" + AU_volumeARRS + ", final return isInAu = " + isInAu);
+      }
+
+      // Atypon UChicagoPress check
+      String pubNameUChicagoPress = (tdbau == null) ? null : tdbau.getPublisherName();
+      log.debug3("UChicagoPress Check: Publisher Specific Checks for UChicagoPress = " + pubNameUChicagoPress);
+
+      if (isInAu && (pubNameUChicagoPress != null)) {
+        Boolean isUChicagoPress = pubNameUChicagoPress.equalsIgnoreCase("Archaeological Institute of America");
+        String foundVolumeUChicagoPress = am.get(MetadataField.FIELD_VOLUME);
+        String AU_volumeUChicagoPress = null;
+        if (isUChicagoPress) {
+          log.debug3("UChicagoPress Check:  Publisher Specific Checks for UChicagoPress");
+          log.debug3("UChicagoPress Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeUChicagoPress + ", AU_volumeUChicagoPress=" + AU_volumeUChicagoPress + ", isInAu = " + isInAu);
+
+          if (!StringUtils.isEmpty(foundVolumeUChicagoPress)) {
+            // Get the AU's volume name from the AU properties. This must be set
+            TypedEntryMap tfProps = au.getProperties();
+            AU_volumeUChicagoPress = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
+            if (isInAu && !(StringUtils.isEmpty(foundVolumeUChicagoPress))) {
+              isInAu =  ( (AU_volumeUChicagoPress != null) && (AU_volumeUChicagoPress.equals( foundVolumeUChicagoPress)));
+              log.debug3("UChicagoPress Check after volume check-1, expected true, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeUChicagoPress + ", AU_volumeUChicagoPress=" + AU_volumeUChicagoPress + ", isInAu = " + isInAu);
+            } else {
+              log.debug3("UChicagoPress Check after volume check-2, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeUChicagoPress + ", AU_volumeUChicagoPress=" + AU_volumeUChicagoPress + ", return isInAu = " + isInAu);
+            }
+          } else {
+            log.debug3("UChicagoPress Check after volume check-3, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeUChicagoPress + ", AU_volumeUChicagoPress=" + AU_volumeUChicagoPress + ", return_2 isInAu = " + isInAu);
+          }
+        }
+        log.debug3("UChicagoPress Check after volume check-4, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeUChicagoPress + ", AU_volumeUChicagoPress=" + AU_volumeUChicagoPress + ", final return isInAu = " + isInAu);
+      }
+
+      // Atypon Geological Society of London check
+      String pubNameGSLondon = (tdbau == null) ? null : tdbau.getPublisherName();
+      log.debug3("GSLondon Check: Publisher Specific Checks for GSLondon = " + pubNameGSLondon);
+
+      if (isInAu && (pubNameGSLondon != null)) {
+        Boolean isGSLondon = pubNameGSLondon.equalsIgnoreCase("Geological Society of London");
+        String foundVolumeGSLondon = am.get(MetadataField.FIELD_VOLUME);
+        String AU_volumeGSLondon = null;
+        if (isGSLondon) {
+          log.debug3("GSLondon Check:  Publisher Specific Checks for GSLondon");
+          log.debug3("GSLondon Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeGSLondon + ", AU_volumeGSLondon=" + AU_volumeGSLondon + ", isInAu = " + isInAu);
+
+          if (!StringUtils.isEmpty(foundVolumeGSLondon)) {
+            // Get the AU's volume name from the AU properties. This must be set
+            TypedEntryMap tfProps = au.getProperties();
+            AU_volumeGSLondon = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
+            if (isInAu && !(StringUtils.isEmpty(foundVolumeGSLondon))) {
+              isInAu =  ( (AU_volumeGSLondon != null) && (AU_volumeGSLondon.equals( foundVolumeGSLondon)));
+              log.debug3("GSLondon Check after volume check-1, expected true, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeGSLondon + ", AU_volumeGSLondon=" + AU_volumeGSLondon + ", isInAu = " + isInAu);
+            } else {
+              log.debug3("GSLondon Check after volume check-2, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeGSLondon + ", AU_volumeGSLondon=" + AU_volumeGSLondon + ", return isInAu = " + isInAu);
+            }
+          } else {
+            log.debug3("GSLondon Check after volume check-3, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeGSLondon + ", AU_volumeGSLondon=" + AU_volumeGSLondon + ", return_2 isInAu = " + isInAu);
+          }
+        }
+        log.debug3("GSLondon Check after volume check-4, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeGSLondon + ", AU_volumeGSLondon=" + AU_volumeGSLondon + ", final return isInAu = " + isInAu);
+      }
+
+
+      // Atypon American College of Physicians check
+      String pubNameACP = (tdbau == null) ? null : tdbau.getPublisherName();
+      log.debug3("ACP Check: Publisher Specific Checks for ACP = " + pubNameACP);
+
+      if (isInAu && (pubNameACP != null)) {
+        Boolean isACP = pubNameACP.equalsIgnoreCase("American College of Physicians");
+        String foundVolumeACP = am.get(MetadataField.FIELD_VOLUME);
+        String AU_volumeACP = null;
+        if (isACP) {
+          log.debug3("ACP Check:  Publisher Specific Checks for ACP");
+          log.debug3("ACP Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeACP + ", AU_volumeACP=" + AU_volumeACP + ", isInAu = " + isInAu);
+
+          if (!StringUtils.isEmpty(foundVolumeACP)) {
+            // Get the AU's volume name from the AU properties. This must be set
+            TypedEntryMap tfProps = au.getProperties();
+            AU_volumeACP = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
+            if (isInAu && !(StringUtils.isEmpty(foundVolumeACP))) {
+              isInAu =  ( (AU_volumeACP != null) && (AU_volumeACP.equals( foundVolumeACP)));
+              log.debug3("ACP Check after volume check-1, expected true, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeACP + ", AU_volumeACP=" + AU_volumeACP + ", isInAu = " + isInAu);
+            } else {
+              log.debug3("ACP Check after volume check-2, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeACP + ", AU_volumeACP=" + AU_volumeACP + ", return isInAu = " + isInAu);
+            }
+          } else {
+            log.debug3("ACP Check after volume check-3, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeACP + ", AU_volumeACP=" + AU_volumeACP + ", return_2 isInAu = " + isInAu);
+          }
+        }
+        log.debug3("ACP Check after volume check-4, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeACP + ", AU_volumeACP=" + AU_volumeACP + ", final return isInAu = " + isInAu);
+      }
+
+
       return isInAu;
     }
+
 
     // END PUBLISHER SPECIFIC CHECKS //
 
