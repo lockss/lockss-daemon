@@ -58,10 +58,11 @@
     >
 
     plugin = org.lockss.plugin.bepress.BePressPlugin
-    param[base_url] = https://digitalscholarship.unlv.edu/
     param[journal_abbr] = jrtc
     implicit < status ; year ; name ; param[volume] >
 
+    {
+    param[base_url] = https://digitalscholarship.unlv.edu/
     au < down ; 2017 ; Journal of Research in Technical Careers Volume 1 ; 1 >
     au < down ; 2018 ; Journal of Research in Technical Careers Volume 2 ; 2 >
     au < down ; 2019 ; Journal of Research in Technical Careers Volume 3 ; 3 >
@@ -69,9 +70,12 @@
     au < down ; 2021 ; Journal of Research in Technical Careers Volume 5 ; 5 >
     au < down ; 2022 ; Journal of Research in Technical Careers Volume 6 ; 6 >
     au < down ; 2023 ; Journal of Research in Technical Careers Volume 7 ; 7 >
-    au < doNotProcess ; 2024 ; Journal of Research in Technical Careers Volume 8 ; 8 >
-    au < doNotProcess ; 2025 ; Journal of Research in Technical Careers Volume 9 ; 9 >
-
+    }
+    {
+    param[base_url] = https://oasis.library.unlv.edu/
+    au < exists ; 2024 ; Journal of Research in Technical Careers Volume 8 ; 8 >
+    au < exists ; 2025 ; Journal of Research in Technical Careers Volume 9 ; 9 >
+    }
   }
 
   {
@@ -82,15 +86,20 @@
     >
     
     plugin = org.lockss.plugin.bepress.BePressPlugin 
-    param[base_url] = https://digitalscholarship.unlv.edu/
     param[journal_abbr] = spectra
     implicit < status ; year ; name ; param[volume] >
 
+    {
+    param[base_url] = https://digitalscholarship.unlv.edu/
     au < down ; 2021 ; Spectra Undergraduate Research Journal Volume 1 ; 1 >
     au < down ; 2022 ; Spectra Undergraduate Research Journal Volume 2 ; 2 >
     au < down ; 2023 ; Spectra Undergraduate Research Journal Volume 3 ; 3 >
-    au < doNotProcess ; 2024 ; Spectra Undergraduate Research Journal Volume 4 ; 4 >
-
+    }
+    {
+    param[base_url] = https://oasis.library.unlv.edu/
+    au < exists ; 2023-2024 ; Spectra Undergraduate Research Journal Volume 3 ; 3 >
+    au < exists ; 2025 ; Spectra Undergraduate Research Journal Volume 4 ; 4 >
+    }
   }
 
 }
