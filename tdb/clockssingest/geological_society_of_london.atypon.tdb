@@ -44,7 +44,7 @@
       param[journal_id] = geoenergy
 
       au < frozen ; exists ; 2023 ; Geological Society of America Bulletin Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2024 ; Geological Society of America Bulletin Volume 2 ; 2 ; >
+      au < deepCrawl ; exists ; 2024 ; Geological Society of America Bulletin Volume 2 ; 2 ; >
       au < manifest ; exists ; 2025 ; Geological Society of America Bulletin Volume 3 ; 3 ; >
   }
 
@@ -127,7 +127,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Geochemistry: Exploration, Environment, Analysis Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2022 ; Geochemistry: Exploration, Environment, Analysis Volume 22 [superseded] ; 22 ; >
     au < deepCrawl ; exists ; 2023 ; Geochemistry: Exploration, Environment, Analysis Volume 23 [superseded] ; 23 ; >
-    au < crawling ; exists ; 2024 ; Geochemistry: Exploration, Environment, Analysis Volume 24 [superseded] ; 24 ; >
+    au < deepCrawl ; exists ; 2024 ; Geochemistry: Exploration, Environment, Analysis Volume 24 [superseded] ; 24 ; >
     au < manifest ; exists ; 2025 ; Geochemistry: Exploration, Environment, Analysis Volume 25 [superseded] ; 25 ; >
 
   }
@@ -203,8 +203,8 @@
     au < finished ; crawling ; 2024 ; Geological Society of London Memoirs Volume 57 ; 57 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Memoirs Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Memoirs Volume 59 ; 59 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Memoirs Volume 60 ; 60 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Memoirs Volume 61 ; 61 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Memoirs Volume 60 ; 60 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Memoirs Volume 61 ; 61 ; >
     au < expected ; exists ; 2025 ; Geological Society of London Memoirs Volume 62 ; 62 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2025 ; Geological Society of London Memoirs Volume 63 ; 63 ; >
     au < expected ; exists ; 2025 ; Geological Society of London Memoirs Volume 64 ; 64 ; >
@@ -741,13 +741,13 @@
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 516 ; 516 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 517 ; 517 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; Geological Society of London Special Publications Volume 518 ; 518 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 519 ; 519 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 519 ; 519 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 520 ; 520 ; >
     au < deepCrawl ; exists ; 2022 ; Geological Society of London Special Publications Volume 521 ; 521 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 522 ; 522 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 523 ; 523 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 524 ; 524 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 525 ; 525 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 525 ; 525 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 526 ; 526 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 527 ; 527 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 528 ; 528 ; >
@@ -756,20 +756,20 @@
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 531 ; 531 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 532 ; 532 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 533 ; 533 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 534 ; 534 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 534 ; 534 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 535 ; 535 ; >
     au < deepCrawl ; exists ; 2023 ; Geological Society of London Special Publications Volume 536 ; 536 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 537 ; 537 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 538 ; 538 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 539 ; 539 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 540 ; 540 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 541 ; 541 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 542 ; 542 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 543 ; 543 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 537 ; 537 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 538 ; 538 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 539 ; 539 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 540 ; 540 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 541 ; 541 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 542 ; 542 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 543 ; 543 ; >
     au < crawling ; exists ; 2025 ; Geological Society of London Special Publications Volume 544 ; 544 ; >
     au < crawling ; exists ; 2025 ; Geological Society of London Special Publications Volume 545 ; 545 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 546 ; 546 ; >
-    au < crawling ; exists ; 2024 ; Geological Society of London Special Publications Volume 547 ; 547 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 546 ; 546 ; >
+    au < deepCrawl ; exists ; 2024 ; Geological Society of London Special Publications Volume 547 ; 547 ; >
     au < crawling ; exists ; 2025 ; Geological Society of London Special Publications Volume 548 ; 548 ; >
     au < crawling ; exists ; 2025 ; Geological Society of London Special Publications Volume 549 ; 549 ; >
     au < crawling ; exists ; 2025 ; Geological Society of London Special Publications Volume 550 ; 550 ; >
@@ -997,7 +997,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Journal of the Geological Society of London Volume 178 ; 178 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of the Geological Society of London Volume 179 ; 179 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of the Geological Society of London Volume 180 ; 180 ; >
-    au < crawling ; exists ; 2024 ; Journal of the Geological Society of London Volume 181 ; 181 ; >
+    au < deepCrawl ; exists ; 2024 ; Journal of the Geological Society of London Volume 181 ; 181 ; >
     au < manifest ; exists ; 2025 ; Journal of the Geological Society of London Volume 182 ; 182 ; >
 
   }
@@ -1043,7 +1043,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; Petroleum Geoscience Volume 27 ; 27 ; >
       au < deepCrawl ; exists ; 2022 ; Petroleum Geoscience Volume 28 ; 28 ; >
       au < deepCrawl ; exists ; 2023 ; Petroleum Geoscience Volume 29 ; 29 ; >
-      au < crawling ; exists ; 2024 ; Petroleum Geoscience Volume 30 ; 30 ; >
+      au < deepCrawl ; exists ; 2024 ; Petroleum Geoscience Volume 30 ; 30 ; >
       au < manifest ; exists ; 2025 ; Petroleum Geoscience Volume 31 ; 31 ; >
 
   }
@@ -1136,7 +1136,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 54 ; 54 ; >
     au < deepCrawl ; exists ; 2022 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 55 ; 55 ; >
     au < deepCrawl ; exists ; 2023 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2024 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 57 ; 57 ; >
+    au < deepCrawl ; exists ; 2024 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 57 ; 57 ; >
     au < manifest ; exists ; 2025 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 58 ; 58 ; >
 
   }
@@ -1213,7 +1213,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; Scottish Journal of Geology Volume 57 ; 57 ; >
     au < deepCrawl ; exists ; 2022 ; Scottish Journal of Geology Volume 58 ; 58 ; >
     au < deepCrawl ; exists ; 2023 ; Scottish Journal of Geology Volume 59 ; 59 ; >
-    au < crawling ; exists ; 2024 ; Scottish Journal of Geology Volume 60 ; 60 ; >
+    au < deepCrawl ; exists ; 2024 ; Scottish Journal of Geology Volume 60 ; 60 ; >
     au < manifest ; exists ; 2025 ; Scottish Journal of Geology Volume 61 ; 61 ; >
 
   }
