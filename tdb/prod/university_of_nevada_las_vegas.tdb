@@ -73,8 +73,8 @@
     }
     {
     param[base_url] = https://oasis.library.unlv.edu/
-    au < exists ; 2024 ; Journal of Research in Technical Careers Volume 8 ; 8 >
-    au < exists ; 2025 ; Journal of Research in Technical Careers Volume 9 ; 9 >
+    au < manifest ; 2024 ; Journal of Research in Technical Careers Volume 8 ; 8 >
+    au < manifest ; 2025 ; Journal of Research in Technical Careers Volume 9 ; 9 >
     }
   }
 
@@ -93,12 +93,12 @@
     param[base_url] = https://digitalscholarship.unlv.edu/
     au < down ; 2021 ; Spectra Undergraduate Research Journal Volume 1 ; 1 >
     au < down ; 2022 ; Spectra Undergraduate Research Journal Volume 2 ; 2 >
-    au < down ; 2023 ; Spectra Undergraduate Research Journal Volume 3 ; 3 >
+    au < superseded ; 2023 ; Spectra Undergraduate Research Journal Volume 3 [superseded] ; 3 >
     }
     {
     param[base_url] = https://oasis.library.unlv.edu/
-    au < exists ; 2023-2024 ; Spectra Undergraduate Research Journal Volume 3 ; 3 >
-    au < exists ; 2025 ; Spectra Undergraduate Research Journal Volume 4 ; 4 >
+    au < manifest ; 2023-2024 ; Spectra Undergraduate Research Journal Volume 3 ; 3 >
+    au < manifest ; 2025 ; Spectra Undergraduate Research Journal Volume 4 ; 4 >
     }
   }
 
