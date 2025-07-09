@@ -40,7 +40,7 @@
     au < finished ; crawling ; 2022 ; 2022 ; Biology Open Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Biology Open Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Biology Open Volume 13 ; 13 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Biology Open Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Biology Open Volume 14 ; 14 ; >
 
   }
 
@@ -530,7 +530,7 @@
     au < finished ; crawling ; 2022 ; 2022 ; Journal of Cell Science Volume 135 ; 135 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Cell Science Volume 136 ; 136 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Cell Science Volume 137 ; 137 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Cell Science Volume 138 ; 138 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Cell Science Volume 138 ; 138 ; >
 
   }
 
