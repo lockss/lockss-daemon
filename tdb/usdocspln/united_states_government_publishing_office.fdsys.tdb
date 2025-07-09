@@ -890,16 +890,16 @@
     au < down ; 2005 ; Economic Indicators 2005 ; http://www.gpo.gov/ ; 2005 >
     au < down ; 2006 ; Economic Indicators 2006 ; http://www.gpo.gov/ ; 2006 >
     au < down ; 2007 ; Economic Indicators 2007 ; http://www.gpo.gov/ ; 2007 >
-    au < down ; 2008 ; Economic Indicators 2008 ; http://www.gpo.gov/ ; 2008 >
-    au < down ; 2009 ; Economic Indicators 2009 ; http://www.gpo.gov/ ; 2009 >
-    au < down ; 2010 ; Economic Indicators 2010 ; http://www.gpo.gov/ ; 2010 >
-    au < down ; 2011 ; Economic Indicators 2011 ; http://www.gpo.gov/ ; 2011 >
-    au < down ; 2012 ; Economic Indicators 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < superseded ; 2008 ; Economic Indicators 2008 [superseded] ; http://www.gpo.gov/ ; 2008 >
+    au < superseded ; 2009 ; Economic Indicators 2009 [superseded] ; http://www.gpo.gov/ ; 2009 >
+    au < superseded ; 2010 ; Economic Indicators 2010 [superseded] ; http://www.gpo.gov/ ; 2010 >
+    au < superseded ; 2011 ; Economic Indicators 2011 [superseded] ; http://www.gpo.gov/ ; 2011 >
+    au < superseded ; 2012 ; Economic Indicators 2012 [superseded] ; http://www.gpo.gov/ ; 2012 >
     au < superseded ; 2013 ; Economic Indicators 2013 [superseded] ; http://www.gpo.gov/ ; 2013 >
-    au < down ; 2014 ; Economic Indicators 2014 ; http://www.gpo.gov/ ; 2014 >
-    au < down ; 2015 ; Economic Indicators 2015 ; https://www.gpo.gov/ ; 2015 >
+    au < superseded ; 2014 ; Economic Indicators 2014 [superseded] ; http://www.gpo.gov/ ; 2014 >
+    au < superseded ; 2015 ; Economic Indicators 2015 [superseded] ; https://www.gpo.gov/ ; 2015 >
     au < superseded ; 2016 ; Economic Indicators 2016 [superseded] ; https://www.gpo.gov/ ; 2016 >
-    au < down ; 2017 ; Economic Indicators 2017 ; https://www.gpo.gov/ ; 2017 >
+    au < superseded ; 2017 ; Economic Indicators 2017 [superseded] ; https://www.gpo.gov/ ; 2017 >
     au < superseded ; 2018 ; Economic Indicators 2018 [superseded] ; https://www.gpo.gov/ ; 2018 >
 
   }
@@ -1153,13 +1153,13 @@
     au < superseded ; 1995 ; Privacy Act Issuances 1995 [superseded] ; http://www.gpo.gov/ ; 1995 >
     au < superseded ; 1997 ; Privacy Act Issuances 1997 [superseded] ; http://www.gpo.gov/ ; 1997 >
     au < superseded ; 1999 ; Privacy Act Issuances 1999 [superseded] ; http://www.gpo.gov/ ; 1999 >
-    au < down ; 2001 ; Privacy Act Issuances 2001 ; http://www.gpo.gov/ ; 2001 >
-    au < down ; 2003 ; Privacy Act Issuances 2003 ; http://www.gpo.gov/ ; 2003 >
-    au < down ; 2005 ; Privacy Act Issuances 2005 ; http://www.gpo.gov/ ; 2005 >
+    au < superseded ; 2001 ; Privacy Act Issuances 2001 [superseded] ; http://www.gpo.gov/ ; 2001 >
+    au < superseded ; 2003 ; Privacy Act Issuances 2003 [superseded] ; http://www.gpo.gov/ ; 2003 >
+    au < superseded ; 2005 ; Privacy Act Issuances 2005 [superseded] ; http://www.gpo.gov/ ; 2005 >
     au < doNotProcess ; 2007 ; Privacy Act Issuances 2007 ; https://www.gpo.gov/ ; 2007 >
     au < doNotProcess ; 2009 ; Privacy Act Issuances 2009 ; https://www.gpo.gov/ ; 2009 >
     au < doNotProcess ; 2011 ; Privacy Act Issuances 2011 ; https://www.gpo.gov/ ; 2011 >
-    au < down ; 2013 ; Privacy Act Issuances 2013 ; https://www.gpo.gov/ ; 2013 >
+    au < superseded ; 2013 ; Privacy Act Issuances 2013 [superseded] ; https://www.gpo.gov/ ; 2013 >
     au < doNotProcess ; 2015 ; Privacy Act Issuances 2015 ; https://www.gpo.gov/ ; 2015 >
     au < doNotProcess ; 2017 ; Privacy Act Issuances 2017 ; https://www.gpo.gov/ ; 2017 >
 
@@ -1240,10 +1240,10 @@
     param[collection_id] = SMAN
 
     au < superseded ; 1996 ; Senate Manual 1996 [superseded] ; http://www.gpo.gov/ ; 1996 >
-    au < down ; 2000 ; Senate Manual 2000 ; http://www.gpo.gov/ ; 2000 >
-    au < down ; 2002 ; Senate Manual 2002 ; http://www.gpo.gov/ ; 2002 >
-    au < down ; 2008 ; Senate Manual 2008 ; http://www.gpo.gov/ ; 2008 >
-    au < down ; 2012 ; Senate Manual 2012 ; http://www.gpo.gov/ ; 2012 >
+    au < superseded ; 2000 ; Senate Manual 2000 [superseded] ; http://www.gpo.gov/ ; 2000 >
+    au < superseded ; 2002 ; Senate Manual 2002 [superseded] ; http://www.gpo.gov/ ; 2002 >
+    au < superseded ; 2008 ; Senate Manual 2008 [superseded] ; http://www.gpo.gov/ ; 2008 >
+    au < superseded ; 2012 ; Senate Manual 2012 [superseded] ; http://www.gpo.gov/ ; 2012 >
 
   }
 
@@ -1405,7 +1405,7 @@
     au < superseded ; 1967 ; United States Statutes at Large 1967 [superseded] ; http://www.gpo.gov/ ; 1967 >
     au < superseded ; 1968 ; United States Statutes at Large 1968 [superseded] ; http://www.gpo.gov/ ; 1968 >
     au < superseded ; 1969 ; United States Statutes at Large 1969 [superseded] ; http://www.gpo.gov/ ; 1969 >
-    au < down ; 1970-1971 ; United States Statutes at Large 1970-1971 ; http://www.gpo.gov/ ; 1971 >
+    au < superseded ; 1970-1971 ; United States Statutes at Large 1970-1971 [superseded] ; http://www.gpo.gov/ ; 1971 >
     au < superseded ; 1972 ; United States Statutes at Large 1972 [superseded] ; http://www.gpo.gov/ ; 1972 >
     au < superseded ; 1973 ; United States Statutes at Large 1973 [superseded] ; http://www.gpo.gov/ ; 1973 >
     au < superseded ; 1974 ; United States Statutes at Large 1974 [superseded] ; http://www.gpo.gov/ ; 1974 >
@@ -1434,19 +1434,19 @@
     au < superseded ; 1997 ; United States Statutes at Large 1997 [superseded] ; http://www.gpo.gov/ ; 1997 >
     au < superseded ; 1998 ; United States Statutes at Large 1998 [superseded] ; http://www.gpo.gov/ ; 1998 >
     au < superseded ; 1999 ; United States Statutes at Large 1999 [superseded] ; http://www.gpo.gov/ ; 1999 >
-    au < down ; 2000 ; United States Statutes at Large 2000 ; http://www.gpo.gov/ ; 2000 >
-    au < down ; 2001 ; United States Statutes at Large 2001 ; http://www.gpo.gov/ ; 2001 >
-    au < down ; 2002 ; United States Statutes at Large 2002 ; http://www.gpo.gov/ ; 2002 >
-    au < down ; 2003 ; United States Statutes at Large 2003 ; http://www.gpo.gov/ ; 2003 >
-    au < down ; 2004 ; United States Statutes at Large 2004 ; http://www.gpo.gov/ ; 2004 >
-    au < down ; 2005 ; United States Statutes at Large 2005 ; http://www.gpo.gov/ ; 2005 >
-    au < down ; 2006 ; United States Statutes at Large 2006 ; http://www.gpo.gov/ ; 2006 >
-    au < down ; 2007 ; United States Statutes at Large 2007 ; http://www.gpo.gov/ ; 2007 >
-    au < down ; 2008 ; United States Statutes at Large 2008 ; http://www.gpo.gov/ ; 2008 >
-    au < down ; 2009 ; United States Statutes at Large 2009 ; https://www.gpo.gov/ ; 2009 >
-    au < down ; 2010 ; United States Statutes at Large 2010 ; https://www.gpo.gov/ ; 2010 >
+    au < superseded ; 2000 ; United States Statutes at Large 2000 [superseded] ; http://www.gpo.gov/ ; 2000 >
+    au < superseded ; 2001 ; United States Statutes at Large 2001 [superseded] ; http://www.gpo.gov/ ; 2001 >
+    au < superseded ; 2002 ; United States Statutes at Large 2002 [superseded] ; http://www.gpo.gov/ ; 2002 >
+    au < superseded ; 2003 ; United States Statutes at Large 2003 [superseded] ; http://www.gpo.gov/ ; 2003 >
+    au < superseded ; 2004 ; United States Statutes at Large 2004 [superseded] ; http://www.gpo.gov/ ; 2004 >
+    au < superseded ; 2005 ; United States Statutes at Large 2005 [superseded] ; http://www.gpo.gov/ ; 2005 >
+    au < superseded ; 2006 ; United States Statutes at Large 2006 [superseded] ; http://www.gpo.gov/ ; 2006 >
+    au < superseded ; 2007 ; United States Statutes at Large 2007 [superseded] ; http://www.gpo.gov/ ; 2007 >
+    au < superseded ; 2008 ; United States Statutes at Large 2008 [superseded] ; http://www.gpo.gov/ ; 2008 >
+    au < superseded ; 2009 ; United States Statutes at Large 2009 [superseded] ; https://www.gpo.gov/ ; 2009 >
+    au < superseded ; 2010 ; United States Statutes at Large 2010 [superseded] ; https://www.gpo.gov/ ; 2010 >
     au < doesNotExist ; 2011 ; United States Statutes at Large 2011 ; https://www.gpo.gov/ ; 2011 >
-    au < down ; 2012 ; United States Statutes at Large 2012 ; https://www.gpo.gov/ ; 2012 >
+    au < superseded ; 2012 ; United States Statutes at Large 2012 [superseded] ; https://www.gpo.gov/ ; 2012 >
 
   }
 
