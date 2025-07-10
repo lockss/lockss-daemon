@@ -2,12 +2,12 @@
 
   publisher <
     name = University of Baghdad, College of Physical Education and Sports Sciences for Women ;
-    info[contract] = 2008 ;
-    info[back] = 2004 ;
+    info[contract] = 2023 ;
+    info[back] = 2005 ;
     info[tester] = 5 ;
     info[platform] = bepress
   >
-#provider is set below.
+      provider = University of Baghdad, College of Physical Education and Sports Sciences for Women
 
   {
 
@@ -22,7 +22,6 @@
       param[base_url] = https://jcopew.uobaghdad.edu.iq/
       param[journal_abbr] = journal
       #published 2005-present
-      provider = bepress
 
       au < exists ; exists ; 2005 ; Modern Sport Volume 2005 ; 4 ; >
       au < exists ; exists ; 2006 ; Modern Sport Volume 2006 ; 5 ; >
@@ -53,7 +52,6 @@
       param[base_url] = https://jcopew.uobaghdad.edu.iq/
       param[journal_id] = sport
       #published 2005-present
-      provider = University of Baghdad, College of Physical Education and Sports Sciences for Women
 
       au < doNotProcess ; exists ; 2005 ; Modern Sport Volume 2005 ; 4 ; 2005 ; >
       au < doNotProcess ; exists ; 2006 ; Modern Sport Volume 2006 ; 5 ; 2006 ; >
