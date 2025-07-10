@@ -2942,9 +2942,6 @@
     info[poller] = 8
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin

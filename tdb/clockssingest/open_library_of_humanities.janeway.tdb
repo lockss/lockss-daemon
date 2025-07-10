@@ -506,7 +506,6 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.bstjournal.com/
-      #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
       #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
 
@@ -548,7 +547,6 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://journal.digitalmedievalist.org/
-      #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
       #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
       au < doNotProcess ; doNotProcess ; 2005 ; 1 ; Digital Medievalist Volume 2005 ; 2005 ; >
@@ -584,7 +582,6 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.digitalstudies.org/
-      #plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
       #implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
 
       au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Digital Studies / Le champ numérique Volume 2011 ; 2011 ; >
