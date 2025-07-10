@@ -450,8 +450,6 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.bstjournal.com/
-      #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
 
       au < doNotProcess ; 2000 ; 2000 ; Body, Space & Technology Volume 2000 ; 2000 >
       au < doNotProcess ; 2001 ; 2001 ; Body, Space & Technology Volume 2001 ; 2001 >
@@ -491,8 +489,6 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://journal.digitalmedievalist.org/
-      #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-      #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
       au < doNotProcess ; 2005 ; 1 ; Digital Medievalist Volume 2005 ; 2005 >
       au < doNotProcess ; 2006 ; 2 ; Digital Medievalist Volume 2006 ; 2006 >
@@ -527,7 +523,6 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.digitalstudies.org/
-      #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
       au < doNotProcess ; 2011 ; 2011 ; Digital Studies / Le champ numérique Volume 2011 ; 2011 >
       au < doNotProcess ; 2012 ; 2012 ; Digital Studies / Le champ numérique Volume 2012 ; 2012 >
@@ -579,8 +574,6 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://jer.openlibhums.org/
-      #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
 
       au < doNotProcess ; 2018 ; 1 ; Journal of Embodied Research Volume 2018 ; 2018 >
       au < doNotProcess ; 2019 ; 2 ; Journal of Embodied Research Volume 2019 ; 2019 >

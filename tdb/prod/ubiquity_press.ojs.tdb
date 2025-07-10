@@ -142,10 +142,6 @@
     name = Levy Library Press
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -631,10 +627,6 @@
   publisher <
     name = Ubiquity Press
   >
-
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
@@ -2011,10 +2003,6 @@
     name = United Kingdom Serials Group
   >
 
-    #provider = United Kingdom Serials Group
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -2092,10 +2080,6 @@
     name = University of Birmingham
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -2131,10 +2115,6 @@
   publisher <
     name = University of East Anglia
   >
-
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
@@ -2203,10 +2183,6 @@
     name = University of New South Wales
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -2236,10 +2212,6 @@
   publisher <
     name = University of Westminster Press
   >
-
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
@@ -2357,10 +2329,6 @@
   publisher <
     name = Utrecht University Library
   >
-
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
@@ -2639,10 +2607,6 @@
     name = White Rose University Press
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -2774,10 +2738,6 @@
     name = Scandinavian Military Studies
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -2808,10 +2768,6 @@
     name = Aperio
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -2841,10 +2797,6 @@
   publisher <
     name = Virginia Tech Publishing
   >
-
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
@@ -3031,10 +2983,6 @@
     name = De Montfort University Press
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -3080,10 +3028,6 @@
     name = Houston Methodist DeBakey Heart & Vascular Center
   >
 
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
     plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -3128,10 +3072,6 @@
   publisher <
     name = Stockholm University Press
   >
-
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
@@ -3293,10 +3233,6 @@
   publisher <
     name = London School of Hygiene & Tropical Medicine
   >
-
-    #provider = Ubiquity Press
-    #plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    #implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
     provider = Ubiquity Press
     implicit < status ; year ; volume ; name ; param[year] >
