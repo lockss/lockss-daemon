@@ -88,7 +88,7 @@
       au < finished ; manifest ; 2022 ; Chemical Engineering Education Volume 2022 ; 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2023 ; Chemical Engineering Education Volume 2023 ; 2023 ; 2023 ; >
       au < notReady ; exists ; 2024 ; Chemical Engineering Education Volume 2024 ; 2024 ; 2024 ; > #LXQUEUE-1952, 1 year Embargos, redirect to login page, https://journals.flvc.org/cee/login?source=%2Fcee%2Farticle%2Fview%2F135642
-      au < manifest ; exists ; 2025 ; Chemical Engineering Education Volume 2025 ; 2025 ; 2025 ; >
+      au < testing ; exists ; 2025 ; Chemical Engineering Education Volume 2025 ; 2025 ; 2025 ; >
 
   }
 
@@ -103,7 +103,7 @@
 
       au < finished ; manifest ; 2023 ; EMIC Volume 1 ; 1 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; EMIC Volume 2 ; 2 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; EMIC Volume 3 ; 3 ; 2025 ; >
+      au < testing ; exists ; 2025 ; EMIC Volume 3 ; 3 ; 2025 ; >
 
   }
 
@@ -252,7 +252,7 @@
       au < finished ; manifest ; 2022 ; The International FLAIRS Conference Proceedings Volume 35 ; 35 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; The International FLAIRS Conference Proceedings Volume 36 ; 36 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; The International FLAIRS Conference Proceedings Volume 37 ; 37 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; The International FLAIRS Conference Proceedings Volume 38 ; 38 ; 2025 ; >
+      au < testing ; exists ; 2025 ; The International FLAIRS Conference Proceedings Volume 38 ; 38 ; 2025 ; >
 
   }
 
@@ -286,7 +286,7 @@
       au < finished ; manifest ; 2022 ; The Journal of Civic Information Volume 4 ; 4 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; The Journal of Civic Information Volume 5 ; 5 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; The Journal of Civic Information Volume 6 ; 6 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; The Journal of Civic Information Volume 7 ; 7 ; 2025 ; >
+      au < testing ; exists ; 2025 ; The Journal of Civic Information Volume 7 ; 7 ; 2025 ; >
 
   }
 
@@ -307,7 +307,7 @@
       au < finished ; manifest ; 2022 ; The Journal of Public Interest Communications Volume 6 ; 6 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; The Journal of Public Interest Communications Volume 7 ; 7 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; The Journal of Public Interest Communications Volume 8 ; 8 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; The Journal of Public Interest Communications Volume 9 ; 9 ; 2025 ; >
+      au < testing ; exists ; 2025 ; The Journal of Public Interest Communications Volume 9 ; 9 ; 2025 ; >
 
   }
 
@@ -325,7 +325,7 @@
       au < finished ; manifest ; 2022 ; Journal of the Florida Mosquito Control Association Volume 69 ; 69 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Journal of the Florida Mosquito Control Association Volume 70 ; 70 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Journal of the Florida Mosquito Control Association Volume 71 ; 71 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; Journal of the Florida Mosquito Control Association Volume 72 ; 72 ; 2025 ; >
+      au < testing ; exists ; 2025 ; Journal of the Florida Mosquito Control Association Volume 72 ; 72 ; 2025 ; >
 
   }
 
@@ -379,7 +379,7 @@
       au < finished ; manifest ; 2022 ; New Florida Journal of Anthropology Volume 2 ; 2 ; 2022 ; reingest1.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2023 ; New Florida Journal of Anthropology Volume 3 ; 3 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; New Florida Journal of Anthropology Volume 4 ; 4 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; New Florida Journal of Anthropology Volume 5 ; 5 ; 2025 ; >
+      au < testing ; exists ; 2025 ; New Florida Journal of Anthropology Volume 5 ; 5 ; 2025 ; >
 
   }
 
@@ -416,7 +416,7 @@
       au < finished ; manifest ; 2022 ; SOURCE Magazine Volume 5 ; 5 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; SOURCE Magazine Volume 6 ; 6 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; SOURCE Magazine Volume 7 ; 7 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; SOURCE Magazine Volume 8 ; 8 ; 2025 ; >
+      au < testing ; exists ; 2025 ; SOURCE Magazine Volume 8 ; 8 ; 2025 ; >
 
   }
 
@@ -534,7 +534,7 @@
       au < finished ; manifest ; 2022 ; Tropical Lepidoptera Research Volume 33 ; 33 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Tropical Lepidoptera Research Volume 34 ; 34 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Tropical Lepidoptera Research Volume 35 ; 35 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; Tropical Lepidoptera Research Volume 36 ; 36 ; 2025 ; >
+      au < testing ; exists ; 2025 ; Tropical Lepidoptera Research Volume 36 ; 36 ; 2025 ; >
 
   }
 
@@ -704,7 +704,7 @@
       au < finished ; manifest ; 2022 ; Yorùbá Studies Review Volume 6 ; 6 ; 2022 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Yorùbá Studies Review Volume 7 ; 7 ; 2023 ; >
       au < frozen ; exists ; 2024 ; Yorùbá Studies Review Volume 8 ; 8 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; Yorùbá Studies Review Volume 9 ; 9 ; 2025 ; >
+      au < testing ; exists ; 2025 ; Yorùbá Studies Review Volume 9 ; 9 ; 2025 ; >
 
   }
 
@@ -812,7 +812,7 @@
       au < finished ; manifest ; 2022 ; EDIS Volume 2022 ; 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; EDIS Volume 2023 ; 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; EDIS Volume 2024 ; 2024 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; EDIS Volume 2025 ; 2025 ; 2025 ; >
+      au < testing ; exists ; 2025 ; EDIS Volume 2025 ; 2025 ; 2025 ; >
 
   }
 
