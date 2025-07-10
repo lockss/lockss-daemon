@@ -1,5 +1,5 @@
 
-#tdbout -EXt auidplus tdb/clockssingest/ubiquity_press.ubiquity.2025.tdb | grep Clockss | sed s'/@@@NONDEF@@@/\&/'
+#tdbout -EXt auidplus tdb/clockssingest/london_school_of_economics_and_political_science.ubiquity.tdb | grep Clockss | sed s'/@@@NONDEF@@@/\&/'
 
 
 {
