@@ -436,7 +436,7 @@ public class BaseAtyponMetadataUtil {
       }
 
 
-      // Atypon American College of Physicians check
+      // Atypon National Academy of Sciences check
       String pubNameACP = (tdbau == null) ? null : tdbau.getPublisherName();
       log.debug3("ACP Check: Publisher Specific Checks for ACP = " + pubNameACP);
 
@@ -464,6 +464,35 @@ public class BaseAtyponMetadataUtil {
           }
         }
         log.debug3("ACP Check after volume check-4, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeACP + ", AU_volumeACP=" + AU_volumeACP + ", final return isInAu = " + isInAu);
+      }
+
+      String pubNameNAS = (tdbau == null) ? null : tdbau.getPublisherName();
+      log.debug3("NAS Check: Publisher Specific Checks for NAS = " + pubNameNAS);
+
+      if (isInAu && (pubNameNAS != null)) {
+        Boolean isNAS = pubNameNAS.equalsIgnoreCase("American College of Physicians");
+        String foundVolumeNAS = am.get(MetadataField.FIELD_VOLUME);
+        String AU_volumeNAS = null;
+        if (isNAS) {
+          log.debug3("NAS Check:  Publisher Specific Checks for NAS");
+          log.debug3("NAS Check after volume check, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeNAS + ", AU_volumeNAS=" + AU_volumeNAS + ", isInAu = " + isInAu);
+
+          if (!StringUtils.isEmpty(foundVolumeNAS)) {
+            // Get the AU's volume name from the AU properties. This must be set
+            TypedEntryMap tfProps = au.getProperties();
+            AU_volumeNAS = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+
+            if (isInAu && !(StringUtils.isEmpty(foundVolumeNAS))) {
+              isInAu =  ( (AU_volumeNAS != null) && (AU_volumeNAS.equals( foundVolumeNAS)));
+              log.debug3("NAS Check after volume check-1, expected true, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeNAS + ", AU_volumeNAS=" + AU_volumeNAS + ", isInAu = " + isInAu);
+            } else {
+              log.debug3("NAS Check after volume check-2, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeNAS + ", AU_volumeNAS=" + AU_volumeNAS + ", return isInAu = " + isInAu);
+            }
+          } else {
+            log.debug3("NAS Check after volume check-3, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeNAS + ", AU_volumeNAS=" + AU_volumeNAS + ", return_2 isInAu = " + isInAu);
+          }
+        }
+        log.debug3("NAS Check after volume check-4, isInAu :" + isInAu + ", foundVolume = " +  foundVolumeNAS + ", AU_volumeNAS=" + AU_volumeNAS + ", final return isInAu = " + isInAu);
       }
 
 
