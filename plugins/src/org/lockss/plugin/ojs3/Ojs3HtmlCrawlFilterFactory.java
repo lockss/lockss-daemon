@@ -75,6 +75,7 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 		HtmlNodeFilters.tagWithAttributeRegex("div", "id", "customblock"),
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pkp_block"),
 		HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "most_read"),
+		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-linked-art"),
 	};
  
   @Override

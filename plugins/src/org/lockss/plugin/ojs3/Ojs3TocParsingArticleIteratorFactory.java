@@ -127,24 +127,24 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                     +"div.galleys_links>a[href*=article]:contains(PDF),div.btn-group>a[href*=article].pdf,a.indexGalleyLink:contains(PDF),"
                     +"div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF)),"
                     +"a[href*=issue/view].btn:contains(PDF),ul.galleys_links>li>a.pdf[href*=issue/view],a[href*=article]:has(span:contains(pdf))");
-                pdfUrl = au.makeCachedUrl(PDFs.attr("href"));
+                pdfUrl = au.makeCachedUrl(PDFs.attr("href").trim());
 
                 Elements HTMLs = article.select("ul.galleys_links>li>a:contains(HTML),ul.article__btn-group>li>a:contains(HTML),div.btn-group>a:contains(HTML),"
                     +"div.galleys_links>a:contains(HTML),a.indexGalleyLink:contains(HTML),h3.altex-issue-article-title>a");
-                htmlUrl = au.makeCachedUrl(HTMLs.attr("href"));
+                htmlUrl = au.makeCachedUrl(HTMLs.attr("href").trim());
 
                 Elements XMLs = article.select("ul.galleys_links>li>a:contains(XML),div.btn-group>a.file:contains(XML),"
                     +"div.galleys_links>a:contains(XML),div.article-summary-galleys>a:contains(XML)");
-                xmlUrl = au.makeCachedUrl(XMLs.attr("href"));
+                xmlUrl = au.makeCachedUrl(XMLs.attr("href").trim());
 
                 Elements EPUBs = article.select("ul.galleys_links>li>a.file:contains(epub)");
-                epubUrl = au.makeCachedUrl(EPUBs.attr("href"));
+                epubUrl = au.makeCachedUrl(EPUBs.attr("href".trim()));
 
                 Elements abstracts = article.select("div.article-summary-title>a[href*=article],h4.article__title>a[href*=article],div.obj_article_summary>h3.title>a[href*=article],h3.media-heading>a[href*=article],"+
                     "a.summary_title,span.article-title>a[href*=article],div.obj_article_summary>div.title>a[href*=article],a:has(span.text>h6.article-title),"
                     +"ul.actions>li>a:contains(View Article),div.obj_article_summary>h4.title>a[href*=article],div.obj_article_summary>div.card-body>h3.card-title>a[href*=article],"+
                     "div.card-body>h4.issue-article-title>a");
-                abstractsUrl = au.makeCachedUrl(abstracts.attr("href"));
+                abstractsUrl = au.makeCachedUrl(abstracts.attr("href").trim());
 
                 /*
                     August 2024 - We need to be able to emit metadata for articles in different languages. If there are multiple pdfs under a single article
