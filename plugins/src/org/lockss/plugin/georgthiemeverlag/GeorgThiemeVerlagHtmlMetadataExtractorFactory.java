@@ -173,11 +173,16 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
   	  if (StringUtils.isEmpty(foundVolume)) {
   		  return isInAu; //return true, we have no way of knowing
   	  }
-
+	  //in tdb, the volume paramter is technically the year of publication
+	  String foundDate = am.get(MetadataField.FIELD_DATE);
   	  // Get the AU's volume name from the AU properties. This must be set
-  	  //TypedEntryMap tfProps = au.getProperties();
+  	  TypedEntryMap tfProps = au.getProperties();
   	  // Can we get the attr volume?
-  	  //String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+  	  String AU_volume = tfProps.getString(ConfigParamDescr.VOLUME_NAME.getKey());
+	  if (isInAu && !(StringUtils.isEmpty(foundDate))) {
+            isInAu =  ( (AU_volume != null) && (foundDate.contains(AU_volume)));
+            log.debug3("After volume check, isInAu :" + isInAu + ", foundDate = " + foundDate + ", AU_volume =" + AU_volume);
+        }
   	  return isInAu;
     }
 
