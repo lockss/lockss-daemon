@@ -1,0 +1,83 @@
+#Permission for all content provided at: http://clockss-ingest.lockss.org/clockss.txt
+#Permission for all content provided at: http://clockss-ingest.lockss.org/lockss.txt
+
+{ 
+
+  publisher <
+    name = Lived Places Publishing ;
+    info[contract] = 2024 ;
+    info[back] = 2015 ;
+    info[tester] = 8 ;
+    comment[platform] = Fulcrum
+  >
+
+  provider = Lived Places Publishing
+  plugin = org.lockss.plugin.michigan.ClockssUMichFulcrumBooksPlugin
+  param[base_url] = https://www.fulcrum.org/
+  implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >
+
+  {
+  
+    title <
+      name = Lived Places Publishing Books ;
+      type = bookSeries
+    >
+
+    au < manifest ; exists ; 2022 ; 9781915271570 ; 9781915271587 ; concern/monographs/0c483n452 ; Gifting Resilience: A Pandemic Study of Black Female Resistance ; >
+    au < manifest ; exists ; 2022 ; 9781915271150 ; 9781915271174 ; concern/monographs/bc386n50p ; Imposed Identities and British Further Education: The Experiences of Learners Classified as "Low Ability" ; >
+    au < manifest ; exists ; 2022 ; 9781915271006 ; 9781915271020 ; concern/monographs/gt54kr17v ; Special Educational Needs and Disability (SEND) in UK Schools: A Parent's Perspective ; >
+    au < manifest ; exists ; 2022 ; 9781915271037 ; 9781915271044 ; concern/monographs/fq977x865 ; Supporting Patients Living with Dementia During a Pandemic: Digital Theatre and Educational Spaces ; >
+    au < manifest ; exists ; 2022 ; 9781915271181 ; 9781915271204 ; concern/monographs/5x21tj44w ; To Be a Marma: A Passionately Lived Identity on the Borderlands Between Bangladesh and Myanmar ; >
+    au < manifest ; exists ; 2023 ;  ; 9781915271556 ; concern/monographs/sj139505c ; (Re)constructing Memory, Place, and Identity in Twentieth Century Houston: A Memoir on Family and Being Mexican American in Space City USA ; >
+    au < manifest ; exists ; 2023 ; 9781915271273 ; 9781915271280 ; concern/monographs/j96024238 ; A Life Lived Well as a Non-binary and Autistic Mental Health Advocate: Finding a Place of Hope ; >
+    au < manifest ; exists ; 2023 ; 9781916704169 ; 9781916704183 ; concern/monographs/1c18dj770 ; A Multiracial Experience: One Man's Search for Race, Identity, and Family ; >
+    au < manifest ; exists ; 2023 ;  ; 9781915271105 ; concern/monographs/9g54xm68c ; At War With Politics: A Journey from Traditional Political Science to Black Politics ; >
+    au < manifest ; exists ; 2023 ;  ; 9781915734396 ; concern/monographs/12579w334 ; Creative Resistance: The Social Justice Practices of Monirah, Halleh, and Diala ; >
+    au < manifest ; exists ; 2023 ; 9781915271242 ; 9781915271266 ; concern/monographs/hd76s3242 ; From Sleepless in Seattle to I Seoul You: Korean Gay Men and Cross-cultural Encounters in Transnational Times ; >
+    au < manifest ; exists ; 2023 ; 9781915271426 ; 9781915271440 ; concern/monographs/n870zt61f ; Improving the Experience of Health Care for People Living with Sensory Disability: Knowing What is Going On ; >
+    au < manifest ; exists ; 2023 ;  ; 9781915271235 ; concern/monographs/b2773z926 ; Music and Black Community in Segregated North Carolina: "It's All Right..." ; >
+    au < manifest ; exists ; 2023 ; 9781915271815 ; 9781915271822 ; concern/monographs/r207ts62r ; No Place for Autism? Exploring the Solitary Forager Hypothesis of Autism in Light of Place Identity ; >
+    au < manifest ; exists ; 2023 ;  ; 9781915271624 ; concern/monographs/nv935593m ; Parents as Advocates: Supporting K-12 Students and their Families Across Identities ; >
+    au < manifest ; exists ; 2023 ; 9781915271488 ; 9781915271501 ; concern/monographs/4q77fv66s ; Queer Asian Identities in Contemporary Aotearoa New Zealand: One Foot Out of the Closet ; >
+    au < manifest ; exists ; 2023 ; 9781915734051 ; 9781915734068 ; concern/monographs/05741v73g ; Social Spaces for Older Queer Adults: A Guide for Social Work Educators, Students, and Practitioners ; >
+    au < manifest ; exists ; 2023 ; 9781915271723 ; 9781915271747 ; concern/monographs/5999n6773 ; Spies in British Controlled Singapore: Policing the Japanese, 1921-1941 ; >
+    au < manifest ; exists ; 2023 ;  ; 9781915271464 ; concern/monographs/qr46r4071 ; Stories of Black Female Identity in the Making: Queering the Love in Blackness ; >
+    au < manifest ; exists ; 2023 ; 9781915734204 ; 9781915734211 ; concern/monographs/bv73c334j ; Straddling White and Black Worlds: How Interpersonal Interactions with Young Black People Forever Altered a White Man's Understanding of Race ; >
+    au < manifest ; exists ; 2023 ; 9781915271785 ; 9781915271808 ; concern/monographs/2801pk48w ; Stuck Outside: The Limits of Progressive Criminal Legal System Reform in an Inequitable Society ; >
+    au < manifest ; exists ; 2023 ; 9781915271754 ; 9781915271761 ; concern/monographs/6w924f890 ; Students, Teachers, Families, and a Socially Just Education: Rewriting the Grammar of Schooling to Unsettle Identities ; >
+    au < manifest ; exists ; 2023 ;  ; 9781915271860 ; concern/monographs/j098zf135 ; Tse Tsan Tai (1872–1938): An Australian-Cantonese Opinion Maker in British Hong Kong ; >
+    au < manifest ; exists ; 2024 ; 9781916985308 ; 9781916985315 ; concern/monographs/3b591c506 ; A Family's Endless Journey Between Oaxaca, México, and California: Fragmented Spaces, Fragmented Identities ; >
+    au < manifest ; exists ; 2024 ; 9781916985360 ; 9781916985384 ; concern/monographs/v405sd55v ; A Neurodivergent Blogger: Posts Highlighting Lived Experience of Self-Determination, Pride, and Empowerment ; >
+    au < manifest ; exists ; 2024 ; 9781916704701 ; 9781916704718 ; concern/monographs/5x21tj43m ; A West African Entrepreneur's Challenging Path to Financial Freedom: For Future and Family ; >
+    au < manifest ; exists ; 2024 ; 9781916704138 ; 9781916704152 ; concern/monographs/73666764x ; Advocating for Queer and BIPOC Survivors of Rape at Public Universities: The \#ChangeRapeCulture Movement ; >
+    au < manifest ; exists ; 2024 ;  ; 9781915734600 ; concern/monographs/v979v615m ; Aging In and Out of Place: Lived Experiences of Forced Migration Across the Life Course ; >
+    au < manifest ; exists ; 2024 ; 9781915734266 ; 9781915734280 ; concern/monographs/nc580q84d ; An Ethiopian Family's Journey of Entrepreneurship in the US: A Story of Determination, Resourcefulness, and Faith ; >
+    au < manifest ; exists ; 2024 ;  ; 9781915734631 ; concern/monographs/1v53k1480 ; Black Family Enterprise and Community in Segregated North Omaha: The Pratt Street House ; >
+    au < manifest ; exists ; 2024 ;  ; 9781916704114 ; concern/monographs/kh04ds83r ; Can Social Entrepreneurship Work in the Rust Belt? A Mom, a Dream, and a Declining Downtown ; >
+    au < manifest ; exists ; 2024 ;  ; 9781915271679 ; concern/monographs/k643b4371 ; Discovering My Southern Legacy: Slave Culture and the American South ; >
+    au < manifest ; exists ; 2024 ;  ; 9781915271075 ; concern/monographs/ht24wn370 ; Displacement, (De)segregation, and Dispossession: Race-class Frontiers in the Transition to High School ; >
+    au < manifest ; exists ; 2024 ;  ; 9781915734372 ; concern/monographs/fn107218x ; Dual Sensory Impairment and the Older Person: An Invisible Epidemic? ; >
+    au < manifest ; exists ; 2024 ; 9781916704190 ; 9781916704213 ; concern/monographs/hx11xj13n ; Fashioning Femininities, Making Masculinities: Gender, Performance, and Lived Experience in Java, Indonesia ; >
+    au < manifest ; exists ; 2024 ; 9781916704435 ; 9781916704459 ; concern/monographs/pr76f655t ; Getting out of South Carolina's Juvenile Justice System: Education for Young Incarcerated Offenders ; >
+    au < manifest ; exists ; 2024 ; 9781915271365 ; 9781915271372 ; concern/monographs/k0698b28k ; Growing Up Undiagnosed: Surviving Childhood in New York City as an Undiagnosed Autistic ; >
+    au < manifest ; exists ; 2024 ; 9781916704466 ; 9781916704473 ; concern/monographs/v979v612s ; Holistic Language Instruction: Addressing Literacy in Standard and Non-Standard Populations ; >
+    au < manifest ; exists ; 2024 ; 9781915734532 ; 9781915734549 ; concern/monographs/b5644v38n ; In Our Words: Stories from the Intersection of LGBTQIA+ Identity and Disability ; >
+    au < manifest ; exists ; 2024 ; 9781916704855 ; 9781916704879 ; concern/monographs/x633f445g ; Irish University Students with Mental Health Difficulties: Experiences, Challenges and Supports ; >
+    au < manifest ; exists ; 2024 ; 9781915734778 ; 9781915734792 ; concern/monographs/qz20sw48c ; Latinidad, Identity Formation, and the Mass Media Landscape: Constructing Pocho Villa ; >
+    au < manifest ; exists ; 2024 ; 9781916704404 ; 9781916704428 ; concern/monographs/5425kd65k ; Lived Experiences, Challenges, and Learnings about Dyspraxia: Toward Greater Inclusion ; >
+    au < manifest ; exists ; 2024 ; 9781916985063 ; 9781916985087 ; concern/monographs/kh04ds841 ; Love Is Praxis: Lived Experience-to-Classroom Lessons Through the Voices of Disabled Students, Practitioners, Mothers, and Siblings ; >
+    au < manifest ; exists ; 2024 ; 9781915734891 ; 9781915734907 ; concern/monographs/gm80hz369 ; Motherland: The Lived Experiences of New Mothers Attending Community Groups in Developing a Sense of Self and Belonging ; >
+    au < manifest ; exists ; 2024 ; 9781915734235 ; 9781915734259 ; concern/monographs/v405sd564 ; My Name Is: Is Your Name a Gift or a Burden? ; >
+    au < manifest ; exists ; 2024 ; 9781916985032 ; 9781916985049 ; concern/monographs/n296x2182 ; Punk Rock Women Alive and Well in South Philly: Friends Are the Family You Choose ; >
+    au < manifest ; exists ; 2024 ; 9781916985933 ; 9781916985940 ; concern/monographs/hh63t004t ; Stories of Solidarity and Struggle: A Life in the Worldwide Movement for Human Rights ; >
+    au < manifest ; exists ; 2024 ;  ; 9781915734877 ; concern/monographs/02871002n ; The Baby Room: A Person-Centred Approach to Communities of Practice and Belonging in Formal Daycare ; >
+    au < manifest ; exists ; 2024 ;  ; 9781915734303 ; concern/monographs/sn00b151h ; The Darkest Parts of My Blackness: A Journey of Remorse, Reform, Reconciliation, and (R)evolution ; >
+    au < manifest ; exists ; 2024 ; 9781915734716 ; 9781915734730 ; concern/monographs/6682x7013 ; The Experiences of Being an Autistic Foster Care Giver Working with UK Social Services: "I thought there was something wrong with her..." ; >
+    au < manifest ; exists ; 2024 ; 9781916704077 ; 9781916704084 ; concern/monographs/0v8383662 ; The Reparations Project: A Story of Friendship and Repair Work by Linked Descendants of Enslavement ; >
+    au < manifest ; exists ; 2024 ; 9781915734440 ; 9781915734457 ; concern/monographs/gm80hz37k ; The Resilient Teacher: Creating Positive Change through Inclusive Classrooms ; >
+    au < manifest ; exists ; 2024 ; 9781915734143 ; 9781915734167 ; concern/monographs/z029p7921 ; Tiun Chhang-Miâ (Minnie Mackay, 1860?–1925): Life in Taiwan's Contested Colonial Space ; >
+    au < manifest ; exists ; 2024 ; 9781916704978 ; 9781916704985 ; concern/monographs/jh343w54n ; University for a Good Woman: Reflections on Gender, Class and Labor in American Higher Education ; >
+    au < manifest ; exists ; 2024 ; 9781916704251 ; 9781916704275 ; concern/monographs/9306t240v ; Untapped Talent: A Practical Guide for Hiring and Retaining Neurodivergent Staff ; >
+
+  }
+}

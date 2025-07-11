@@ -7,35 +7,60 @@ from urllib.parse import urlparse
 import argparse
 
 def resolve_doi_to_info(doi):
+    """Resolve DOI and fetch the Fulcrum URL."""
+    # Construct the CrossRef DOI URL to fetch metadata.
     base_url = 'https://api.crossref.org/works/'
-    url = f'{base_url}{doi}'
+    doi_url = f'{base_url}{doi}'
 
     try:
-        response = requests.get(url)
-        response.raise_for_status()  # Raise an HTTPError for bad responses (4xx or 5xx)
+        # Get DOI metadata
+        response = requests.get(doi_url)
+        response.raise_for_status()  # Raise an error for bad responses
         data = response.json()
 
-#        # Extract the URL from the primary resource
-        url = data['message'].get('resource', {}).get('primary', {}).get('URL', None)
-        path = extract_path_from_url(url)
+        # Extract the necessary information from the response
+        primary_url = data['message'].get('URL', None)
 
-        info = {
+        # Fetch Fulcrum URL based on DOI
+        fulcrum_url = fetch_fulcrum_url(doi)
+
+        return {
             'doi': doi,
-            'url': path
+            'url': primary_url,  # Primary URL from CrossRef
+            'fulcrum_url': fulcrum_url  # The Fulcrum URL fetched
         }
-
-        return info
 
     except requests.exceptions.RequestException as e:
         print(f"Error resolving DOI {doi}: {e}")
         return None
 
-def extract_path_from_url(url):
-    parsed_url = urlparse(url)
-    path = parsed_url.path
-    # Remove the leading forward slash
-    path_without_slash = path[1:] if path.startswith('/') else path
-    return path_without_slash
+def fetch_fulcrum_url(doi):
+    """Fetch the Fulcrum URL for the given DOI."""
+    # Construct the DOI URL
+    base_url = 'https://doi.org/'
+    doi_url = f'{base_url}{doi}'
+
+    # Send a GET request to the DOI page
+    response = requests.get(doi_url)
+
+    # Check if the request was successful
+    if response.status_code == 200:
+        # Parse the HTML content
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extract all links
+        links = soup.find_all('a', href=True)
+
+        # Check each link to find the first one that matches the desired prefix
+        for link in links:
+            href = link['href']
+            if href.startswith("https://www.fulcrum.org/"):
+                return href  # Return the first matching URL
+
+    else:
+        print(f"Failed to fetch the DOI page. Status code: {response.status_code}")
+
+    return None  # Return None if no matching URL is found
 
 def resolve_csv_to_info(file_path):
     doi_column = 'title_id'
@@ -45,25 +70,21 @@ def resolve_csv_to_info(file_path):
     eisbn_column = 'online_identifier'
 
     dois_info = []
+    
     with open(file_path, 'r') as file:
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
             doi = row.get(doi_column, '').strip()
             if doi:
-                #info = fetch_fulcrum_url(doi)
                 info = resolve_doi_to_info(doi)
                 if info:
                     info['csv_doi'] = doi
-                    #year = row.get(year_column, '').strip()
-                    #title = row.get(title_column, '').strip()
-                    #isbn = row.get(isbn_column, '').strip()
-                    #eisbn = row.get(eisbn_column, '').strip()
                     info['csv_publication_year'] = row.get(year_column, '').strip()
                     info['csv_title'] = row.get(title_column, '').strip()
                     info['csv_isbn'] = row.get(isbn_column, '').strip()
                     info['csv_eisbn'] = row.get(eisbn_column, '').strip()
                     dois_info.append(info)
-                    time.sleep(0.1)  # Sleep for 1 second between requests
+                    time.sleep(0.1)  # Sleep for 0.1 seconds between requests
 
     return dois_info
 
@@ -72,23 +93,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Resolve DOIs to URLs and extract information from a CSV file.')
     parser.add_argument('input_csv', help='Path to the input CSV file')
     args = parser.parse_args()
-    
+
     # Call the resolve_csv_to_info function with the input file name
     input_csv_path = args.input_csv
-
-    # Example usage: provide the path to the file containing DOIs
-    #input_csv_path = '../SageEdits/BAR_dois_10.txt'
-    #input_csv_path = '../SageEdits/bar_pre2020_collection_2023-11-16.csv'
-    #doi_column_name = 'title_id'
-    #year_column_name = 'date_monograph_published_print'
-    #title_column_name = 'publication_title'
-    #isbn_column_name = 'print_identifier'
-    #eisbn_column_name = 'online_identifier'
-
-    #dois_info = resolve_csv_to_info(input_csv_path, doi_column_name, year_column_name, title_column_name, isbn_column_name, eisbn_column_name)
     dois_info = resolve_csv_to_info(input_csv_path)
 
     print("TDB FILE: status ; status2 ; year; isbn ; eisbn ; url_path ; title ; ")
     for info in dois_info:
-        #print(f"{info['csv_doi']} -> {info['url']} -> {info['csv_publication_year']} -> {info['csv_isbn']} -> {info['csv_eisbn']} -> {info['csv_title']}")
-        print(f"    au < exists ; exists ; {info['csv_publication_year']} ; {info['csv_isbn']} ; {info['csv_eisbn']} ; {info['url']} ; {info['csv_title']} ; >")
+        print(f"    au < exists ; exists ; {info['csv_publication_year']} ; {info['csv_isbn']} ; {info['csv_eisbn']} ; {info['fulcrum_url']} ; {info['csv_title']} ; >")
