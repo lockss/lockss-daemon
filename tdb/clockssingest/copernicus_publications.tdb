@@ -112,7 +112,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Advances in Radio Science 2021 Volume 20 ; 20 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; 2023 ; Advances in Radio Science 2022 Volume 21 ; 21 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Advances in Radio Science 2023 Volume 22 ; 22 ; >
-      au < ready ; exists ; 2025 ; 2025 ; Advances in Radio Science 2023 Volume 23 ; 23 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Advances in Radio Science 2023 Volume 23 ; 23 ; >
 
   }
 
@@ -201,7 +201,7 @@
 
       au < deepCrawl ; exists ; 2023 ; 2023 ; Aerosol Research Volume 1 ; 1 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Aerosol Research Volume 2 ; 2 ; >
-      au < ready ; exists ; 2025 ; 2025 ; Aerosol Research Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Aerosol Research Volume 3 ; 3 ; >
 
   }
 
@@ -557,7 +557,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; Earth System Dynamics Volume 13 ; 13 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Earth System Dynamics Volume 14 ; 14 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Earth System Dynamics Volume 15 ; 15 ; >
-      au < ready ; exists ; 2025 ; 2025 ; Earth System Dynamics Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Earth System Dynamics Volume 16 ; 16 ; >
 
   }
 
@@ -589,7 +589,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; Earth System Science Data Volume 14 ; 14 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Earth System Science Data Volume 15 ; 15 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Earth System Science Data Volume 16 ; 16 ; >
-      au < ready ; exists ; 2025 ; 2025 ; Earth System Science Data Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Earth System Science Data Volume 17 ; 17 ; >
 
   }
 
@@ -948,7 +948,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; History of Geo- and Space Sciences Volume 13 ; 13 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; History of Geo- and Space Sciences Volume 14 ; 14 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; History of Geo- and Space Sciences Volume 15 ; 15 ; >
-      au < ready ; exists ; 2025 ; 2025 ; History of Geo- and Space Sciences Volume 16 ; 16 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; History of Geo- and Space Sciences Volume 16 ; 16 ; >
 
   }
 
