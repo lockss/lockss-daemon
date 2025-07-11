@@ -1165,15 +1165,26 @@
     >
 
     param[journal_id] = abm
+    #content available from 1979 volume 1 to 2007 volume 34
 
-    au < finished ; crawling ; 2018 ; 2018 ; Annals of Behavioral Medicine Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2019 ; 2019 ; Annals of Behavioral Medicine Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2020 ; 2020 ; Annals of Behavioral Medicine Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2021 ; 2021 ; Annals of Behavioral Medicine Volume 4 ; 4 ; >
-    au < finished ; manifest ; 2022 ; 2022 ; Annals of Behavioral Medicine Volume 5 ; 5 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2023 ; 2023 ; Annals of Behavioral Medicine Volume 6 ; 6 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2024 ; 2024 ; Annals of Behavioral Medicine Volume 7 ; 7 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Annals of Behavioral Medicine Volume 8 ; 8 ; >
+    au < exists ; exists ; 2008 ; 2008 ; Annals of Behavioral Medicine Volume 35-36 ; 35-36 ; >
+    au < exists ; exists ; 2009 ; 2009 ; Annals of Behavioral Medicine Volume 37-38 ; 37-38 ; >
+    au < exists ; exists ; 2010 ; 2010 ; Annals of Behavioral Medicine Volume 39-40 ; 39-40 ; >
+    au < exists ; exists ; 2011 ; 2011 ; Annals of Behavioral Medicine Volume 41-42 ; 41-42 ; >
+    au < exists ; exists ; 2012 ; 2012 ; Annals of Behavioral Medicine Volume 43-44 ; 43-44 ; >
+    au < exists ; exists ; 2013 ; 2013 ; Annals of Behavioral Medicine Volume 45-46 ; 45-46 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Annals of Behavioral Medicine Volume 47-48 ; 47-48 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Annals of Behavioral Medicine Volume 49 ; 49 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Annals of Behavioral Medicine Volume 50 ; 50 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Annals of Behavioral Medicine Volume 51 ; 51 ; >
+    au < finished ; crawling ; 2018 ; 2018 ; Annals of Behavioral Medicine Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; 2019 ; Annals of Behavioral Medicine Volume 53 ; 53 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; 2020 ; Annals of Behavioral Medicine Volume 54 ; 54 ; reingest4.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2021 ; 2021 ; Annals of Behavioral Medicine Volume 55 ; 55 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; Annals of Behavioral Medicine Volume 56 ; 56 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; 2023 ; Annals of Behavioral Medicine Volume 57 ; 57 ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2024 ; 2024 ; Annals of Behavioral Medicine Volume 58 ; 58 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Annals of Behavioral Medicine Volume 59 ; 59 ; >
 
   }
 
