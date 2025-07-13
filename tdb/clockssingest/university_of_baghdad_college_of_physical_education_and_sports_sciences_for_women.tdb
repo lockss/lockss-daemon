@@ -23,13 +23,13 @@
       param[journal_abbr] = journal
       #published 2005-present
 
-      au < exists ; exists ; 2005 ; Modern Sport Volume 2005 ; 4 ; >
-      au < exists ; exists ; 2006 ; Modern Sport Volume 2006 ; 5 ; >
-      au < exists ; exists ; 2007 ; Modern Sport Volume 2007 ; 6 ; >
-      au < exists ; exists ; 2008 ; Modern Sport Volume 2008 ; 7 ; >
-      au < exists ; exists ; 2009 ; Modern Sport Volume 2009 ; 8 ; >
-      au < exists ; exists ; 2010 ; Modern Sport Volume 2010 ; 9 ; >
-      au < exists ; exists ; 2011 ; Modern Sport Volume 2011 ; 10 ; >
+      au < manifest ; exists ; 2005 ; Modern Sport Volume 2005 ; 4 ; >
+      au < manifest ; exists ; 2006 ; Modern Sport Volume 2006 ; 5 ; >
+      au < manifest ; exists ; 2007 ; Modern Sport Volume 2007 ; 6 ; >
+      au < manifest ; exists ; 2008 ; Modern Sport Volume 2008 ; 7 ; >
+      au < manifest ; exists ; 2009 ; Modern Sport Volume 2009 ; 8 ; >
+      au < manifest ; exists ; 2010 ; Modern Sport Volume 2010 ; 9 ; >
+      au < manifest ; exists ; 2011 ; Modern Sport Volume 2011 ; 10 ; >
       au < doNotProcess ; exists ; 2012 ; Modern Sport Volume 2012 ; 11 ; >
       au < doNotProcess ; exists ; 2013 ; Modern Sport Volume 2013 ; 12 ; >
       au < doNotProcess ; exists ; 2014 ; Modern Sport Volume 2014 ; 13 ; >
@@ -43,7 +43,7 @@
       au < doNotProcess ; exists ; 2022 ; Modern Sport Volume 2022 ; 21 ; >
       au < doNotProcess ; exists ; 2023 ; Modern Sport Volume 2023 ; 22 ; >
       au < doNotProcess ; exists ; 2024 ; Modern Sport Volume 2024 ; 23 ; >
-      au < exists ; exists ; 2025 ; Modern Sport Volume 2025 ; 24 ; >
+      au < manifest ; exists ; 2025 ; Modern Sport Volume 2025 ; 24 ; >
     }
     {
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
