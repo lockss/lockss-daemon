@@ -331,6 +331,11 @@ public class V2AuMover {
   private static final String STATUS_COPYING_USER_ACCOUNTS = "Copying user accounts";
   private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Finished copying system settings";
 
+  /** Minimum V2 version that has all the features needed by this
+   * version of the migrator */
+  private static final DaemonVersion MIN_V2_REPO_VERSION =
+    new DaemonVersion("2.0.90-beta2");
+
   public static final ThreadLocal<NumberFormat> TH_BIGINT_FMT =
     new ThreadLocal<NumberFormat>() {
       @Override protected NumberFormat initialValue() {
@@ -759,10 +764,17 @@ public class V2AuMover {
     try {
       checkV2ServicesAvailable();
       openReportFiles(firstArgs); // must follow checkV2ServicesAvailable
-      if (!isDryRun() &&
+      DaemonVersion v2RepoVer = new DaemonVersion(getRepoSvcVersion());
+      if (v2RepoVer.compareTo(MIN_V2_REPO_VERSION) < 0) {
+        currentStatus = "Failed - target is running version " + v2RepoVer +
+          ", version " + MIN_V2_REPO_VERSION + " or higher is required.";
+        failed = true;
+      }
+      else if (!isDryRun() &&
           !migrationMgr.isTargetInMigrationMode(hostName, cfgUiPort,
                                                 userName, userPass)) {
         currentStatus = "Failed - target is not in migration mode";
+        failed = true;
       } else {
         for (Args args : argsLst) {
           try {
