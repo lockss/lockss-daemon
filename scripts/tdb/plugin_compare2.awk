@@ -32,17 +32,20 @@ FNR > 1 {
 }
 
 END {
-    if (versionCount > 0) {
-        print "Version changed only";
-        for (i = 0; i < versionCount; i++) {
-            print versionChanged[i];
-        }
-    }
-    
     if (statusCount > 0) {
         print "Status changed";
         for (i = 0; i < statusCount; i++) {
             print statusChanged[i];
         }
+    print " ";
     }
+
+    if (versionCount > 0) {
+        print "Version changed only";
+        for (i = 0; i < versionCount; i++) {
+            print versionChanged[i];
+        }
+    print " ";
+    }
+
 }
