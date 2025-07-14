@@ -84,7 +84,7 @@
       au < finished ; crawling ; 2022 ; Afro-Asian Journal of Finance and Accounting Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Afro-Asian Journal of Finance and Accounting Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Afro-Asian Journal of Finance and Accounting Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; Afro-Asian Journal of Finance and Accounting Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; Afro-Asian Journal of Finance and Accounting Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -450,7 +450,7 @@
       au < deepCrawl ; exists ; 2024 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 45 ; 45 ; https://www.inderscienceonline.com/ ; >
       au < deepCrawl ; exists ; 2024 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 46 ; 46 ; https://www.inderscienceonline.com/ ; >
       au < deepCrawl ; exists ; 2024 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 47 ; 47 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 48 ; 48 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 48 ; 48 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 49 ; 49 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 50 ; 50 ; https://www.inderscienceonline.com/ ; >
 
@@ -525,7 +525,7 @@
       au < finished ; finished ; 2021-2022 ; International Journal of Advanced Mechatronic Systems Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2023 ; International Journal of Advanced Mechatronic Systems Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2024 ; International Journal of Advanced Mechatronic Systems Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Advanced Mechatronic Systems Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Advanced Mechatronic Systems Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -680,7 +680,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Agile Systems and Management Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; International Journal of Agile Systems and Management Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; International Journal of Agile Systems and Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Agile Systems and Management Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Agile Systems and Management Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1550,7 +1550,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Business and Emerging Markets Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; International Journal of Business and Emerging Markets Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2024 ; International Journal of Business and Emerging Markets Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Business and Emerging Markets Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Business and Emerging Markets Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2549,7 +2549,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Computational Vision and Robotics Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; International Journal of Computational Vision and Robotics Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2024 ; International Journal of Computational Vision and Robotics Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Computational Vision and Robotics Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Computational Vision and Robotics Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3054,7 +3054,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Data Mining, Modelling and Management Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; International Journal of Data Mining, Modelling and Management Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2024 ; International Journal of Data Mining, Modelling and Management Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Data Mining, Modelling and Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Data Mining, Modelling and Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5561,7 +5561,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Information and Computer Security Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; International Journal of Information and Computer Security Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2024 ; International Journal of Information and Computer Security Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Information and Computer Security Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Information and Computer Security Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -5801,7 +5801,7 @@
       au < finished ; manifest ; 2023 ; International Journal of Innovation and Learning Volume 34 ; 34 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2024 ; International Journal of Innovation and Learning Volume 35 ; 35 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2024 ; International Journal of Innovation and Learning Volume 36 ; 36 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Innovation and Learning Volume 37 ; 37 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Innovation and Learning Volume 37 ; 37 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Innovation and Learning Volume 38 ; 38 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -6078,7 +6078,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Intelligent Enterprise Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; International Journal of Intelligent Enterprise Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2024 ; International Journal of Intelligent Enterprise Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Intelligent Enterprise Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Intelligent Enterprise Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6489,7 +6489,7 @@
       au < finished ; finished ; 2021-2022 ; International Journal of Knowledge-Based Development Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; International Journal of Knowledge-Based Development Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2024 ; International Journal of Knowledge-Based Development Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Knowledge-Based Development Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Knowledge-Based Development Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8005,7 +8005,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Monetary Economics and Finance Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; International Journal of Monetary Economics and Finance Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2024 ; International Journal of Monetary Economics and Finance Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Monetary Economics and Finance Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Monetary Economics and Finance Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9618,7 +9618,7 @@
       au < crawling ; exists ; 2024 ; International Journal of Services and Operations Management Volume 48 ; 48 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2024 ; International Journal of Services and Operations Management Volume 49 ; 49 ; https://www.inderscienceonline.com/ ; >
       au < ready ; exists ; 2025 ; International Journal of Services and Operations Management Volume 50 ; 50 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Services and Operations Management Volume 51 ; 51 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Services and Operations Management Volume 51 ; 51 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Services and Operations Management Volume 52 ; 52 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9860,7 +9860,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Simulation and Process Modelling Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; International Journal of Simulation and Process Modelling Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2024 ; International Journal of Simulation and Process Modelling Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Simulation and Process Modelling Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Simulation and Process Modelling Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -10418,7 +10418,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Sustainable Society Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; International Journal of Sustainable Society Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2024 ; International Journal of Sustainable Society Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Sustainable Society Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Sustainable Society Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -11024,7 +11024,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Tourism Policy Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; International Journal of Tourism Policy Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2024 ; International Journal of Tourism Policy Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Tourism Policy Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Tourism Policy Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -11521,7 +11521,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Web Based Communities Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; International Journal of Web Based Communities Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2024 ; International Journal of Web Based Communities Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Web Based Communities Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Web Based Communities Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -11635,7 +11635,7 @@
       au < finished ; manifest ; 2022-2023 ; International Journal of Work Innovation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; International Journal of Work Innovation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2024 ; International Journal of Work Innovation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
-      au < ready ; exists ; 2025 ; International Journal of Work Innovation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of Work Innovation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -12237,7 +12237,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Sustainable Aviation Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; International Journal of Sustainable Aviation Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2024 ; International Journal of Sustainable Aviation Volume 10 ; 10 ; https://www.inderscienceonline.com/ ;  >
-      au < ready ; exists ; 2025 ; International Journal of Sustainable Aviation Volume 11 ; 11 ; https://www.inderscienceonline.com/ ;  >
+      au < crawling ; exists ; 2025 ; International Journal of Sustainable Aviation Volume 11 ; 11 ; https://www.inderscienceonline.com/ ;  >
 
   }
 

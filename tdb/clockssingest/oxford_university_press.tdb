@@ -356,7 +356,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Age and Ageing Volume 51 ; 51 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Age and Ageing Volume 52 ; 52 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2024 ; 2024 ; Age and Ageing Volume 53 ; 53 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Age and Ageing Volume 54 ; 54 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Age and Ageing Volume 54 ; 54 ; >
 
   }
 
@@ -619,7 +619,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; American Journal of Clinical Pathology Volume 157-158 ; 157-158 ; >
     au < finished ; manifest ; 2023 ; 2023 ; American Journal of Clinical Pathology Volume 159-160 ; 159-160 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2024 ; 2024 ; American Journal of Clinical Pathology Volume 161-162 ; 161-162 ; >
-    au < ready ; exists ; 2025 ; 2025 ; American Journal of Clinical Pathology Volume 163-164 ; 163-164 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; American Journal of Clinical Pathology Volume 163-164 ; 163-164 ; >
 
   }
 
@@ -738,7 +738,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; American Journal of Epidemiology Volume 191 ; 191 ; >
     au < finished ; manifest ; 2023 ; 2023 ; American Journal of Epidemiology Volume 192 ; 192 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2024 ; 2024 ; American Journal of Epidemiology Volume 193 ; 193 ; >
-    au < ready ; exists ; 2025 ; 2025 ; American Journal of Epidemiology Volume 194 ; 194 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; American Journal of Epidemiology Volume 194 ; 194 ; >
 
   }
 
@@ -790,7 +790,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; American Journal of Health-System Pharmacy Volume 79 ; 79 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; American Journal of Health-System Pharmacy Volume 80 ; 80 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; American Journal of Health-System Pharmacy Volume 81 ; 81 ; >
-    au < ready ; exists ; 2025 ; 2025 ; American Journal of Health-System Pharmacy Volume 82 ; 82 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; American Journal of Health-System Pharmacy Volume 82 ; 82 ; >
 
   }
 
@@ -842,7 +842,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; American Journal of Hypertension Volume 35 ; 35 ; >
     au < finished ; manifest ; 2023 ; 2023 ; American Journal of Hypertension Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; American Journal of Hypertension Volume 37 ; 37 ; >
-    au < ready ; exists ; 2025 ; 2025 ; American Journal of Hypertension Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; American Journal of Hypertension Volume 38 ; 38 ; >
 
   }
 
@@ -969,7 +969,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; American Literary History Volume 34 ; 34 ; >
     au < finished ; manifest ; 2023 ; 2023 ; American Literary History Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; American Literary History Volume 36 ; 36 ; >
-    au < ready ; exists ; 2025 ; 2025 ; American Literary History Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; American Literary History Volume 37 ; 37 ; >
 
   }
 
@@ -1184,7 +1184,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Annals of Behavioral Medicine Volume 56 ; 56 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Annals of Behavioral Medicine Volume 57 ; 57 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Annals of Behavioral Medicine Volume 58 ; 58 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Annals of Behavioral Medicine Volume 59 ; 59 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Annals of Behavioral Medicine Volume 59 ; 59 ; >
 
   }
 
