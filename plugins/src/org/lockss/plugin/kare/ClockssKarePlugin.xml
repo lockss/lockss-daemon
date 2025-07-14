@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -106,11 +106,6 @@ POSSIBILITY OF SUCH DAMAGE.
                 <string>1</string>
             </entry>
         </map>
-    </entry>
-    <entry>
-        <string>au_permission_url</string>
-        <!--https://agridergisi.com/Page.aspx?p=ethics_policies -->
-        <string>"%sPage.aspx?p=ethics_policies", base_url</string>
     </entry>
     <entry>
         <string>au_start_url</string>
