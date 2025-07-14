@@ -2181,4 +2181,17 @@ public class StringUtil {
     return (str == null) ? "" : str;
   }
   
+  public static final java.util.regex.Pattern AUID_PAT =
+      java.util.regex.Pattern.compile("[\\w|]+&\\w+~.+");
+
+  /**
+   * Return true if the string is plausibly an AUID
+   */
+  public static boolean maybeAuid(String auid) {
+    if (StringUtil.isNullString(auid)) return false;
+    if (!Character.isJavaIdentifierStart(auid.charAt(0))) return false;
+    java.util.regex.Matcher matcher = AUID_PAT.matcher(auid);
+    if (!matcher.matches()) return false;
+    return true;
+  }
 }
