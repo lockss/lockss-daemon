@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2021-2024 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2021-2025 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -283,9 +283,11 @@ public class V2AuMover {
 
   /**
    * If true, partial copies will be done for AUs some of whose
-   * content already exists in the V2 repo.  If false, AUs having any
-   * content in V2 will be skipped.
-   */
+   * content already exists in the V2 repo.  If false, AUs having
+   * <i>any</i> content in V2 will be skipped.  <b>Setting this false
+   * risks missing some files if migration is reatarted after being
+   * interrupted
+   y*/
   public static final String PARAM_CHECK_MISSING_CONTENT =
     PREFIX + "check.missing.content";
   public static final boolean DEFAULT_CHECK_MISSING_CONTENT = true;
@@ -702,6 +704,9 @@ public class V2AuMover {
     if (whichAus != null) {
       logReport("Moving: " + whichAus);
     }
+    if (args.skippedAuids != null && !args.skippedAuids.isEmpty()) {
+      logReport("AUIDs requested but not found, skipped: " + args.skippedAuids);
+    }
   }
 
   void initRequest(Args args) throws IllegalArgumentException {
@@ -823,6 +828,9 @@ public class V2AuMover {
         if (args.au != null) {
           // If an AU was supplied, copy it
           moveOneAu(args);
+        } else if (args.aus != null) {
+          // If a list of AUs was supplied, copy them
+          moveAus(args);
         } else if (args.plugins != null) {
           // If a plugin was supplied, copy its AUs
           movePluginAus(args);
@@ -835,7 +843,7 @@ public class V2AuMover {
       default:
         log.error("Unknown OpType: " + args.opType + ", ignored");
       }
-    } catch (IOException e) {
+      } catch (IOException e) {
       log.error("Unexpected exception", e);
       currentStatus = e.getMessage();
     }
@@ -932,6 +940,18 @@ public class V2AuMover {
       .filter(au -> !isSkipFinished(args, au))
       .forEach(au -> auMoveQueue.add(au));
 
+    moveQueuedAus();
+  }
+
+  /** Move all AUs specified by uploaded AUIDs file */
+  public void moveAus(Args args) throws IOException {
+    startTotalTimers();
+    for (ArchivalUnit au : args.aus) {
+      auMoveQueue.add(au);
+    }
+    initAuRequest(args, "AUIDs from file: " + args.auidsFilename);
+    // get the aus known to the v2 repo
+    getV2Aus();
     moveQueuedAus();
   }
 
@@ -1117,7 +1137,7 @@ public class V2AuMover {
         setFailed(true);
       }
       break;
-      case CopyOnly:
+    case CopyOnly:
     case CopyAndVerify:
       if (existsInV2(au)) {
         if (!checkMissingContent) {
@@ -1888,9 +1908,13 @@ public class V2AuMover {
     OpType opType;
     boolean isCompareContent;
     boolean isSkipFinished;
+    ArchivalUnit au;
     List<Pattern> selPatterns;
     Collection<Plugin> plugins;
-    ArchivalUnit au;
+    Collection<ArchivalUnit> aus;
+    Collection<String> auids;
+    Collection<String> skippedAuids;
+    String auidsFilename;
 
     public Args setHost(String host) {
       this.host = host;
@@ -1928,6 +1952,29 @@ public class V2AuMover {
     }
     public Args setAu(ArchivalUnit au) {
       this.au = au;
+      return this;
+    }
+
+    public Args setAus(Collection<ArchivalUnit> aus) {
+      this.aus = aus;
+      return this;
+    }
+
+    public Args setAuids(Collection<String> auids) {
+      this.auids = auids;
+      return this;
+    }
+
+    public Args setAuidsFilename(String auidsFilename) {
+      this.auidsFilename = auidsFilename;
+      return this;
+    }
+
+    public Args addSkippedAuid(String auid) {
+      if (skippedAuids == null) {
+        skippedAuids = new ArrayList<>();
+      }
+      skippedAuids.add(auid);
       return this;
     }
 
