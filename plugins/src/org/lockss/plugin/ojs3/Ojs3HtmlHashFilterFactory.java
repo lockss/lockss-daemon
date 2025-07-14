@@ -283,6 +283,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
       //
       HtmlNodeFilters.tagWithAttributeRegex("a", "href", "email-protection"),
       HtmlNodeFilters.tagWithAttributeRegex("li", "class", "most_read_article"),
+      HtmlNodeFilters.tagWithAttributeRegex("span", "class", "summary_stat"),
       /*
       want to remove this whole bit from this url https://revistas.udea.edu.co/index.php/lecturasdeeconomia/article/view/342002
       <div style="padding-left: 4%;">
@@ -306,6 +307,31 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
                 if (child instanceof Div) {
                   String childClass = ((Div) child).getAttribute("class");
                   if (childClass != null && childClass.contains("eye")) {
+                    return true;
+                  }
+                }
+              }
+            }
+            /*July 2025, we need to remove article views/pdf downloads from Ferrata Storti AUs.
+             * Ex: https://haematologica.org/article/view/11713
+             * <div class="item">
+                  <div class="sub_item">
+                      <div class="label">Online Views</div>
+                      <div class="value">1480</div>
+                  </div>
+                  <div class="sub_item">
+                      <div class="label">PDF Downloads</div>
+                      <div class="value">504</div>
+                  </div>
+              </div>
+             */
+            
+            else if("sub_item".equals(classattr)) {
+              Node[] children = ((Div) node).getChildrenAsNodeArray();
+              for (Node child: children) {
+                if (child instanceof Div) {
+                  String text = ((Div) child).getStringText();
+                  if("Online Views".equals(text) || "PDF Downloads".equals(text)){
                     return true;
                   }
                 }
