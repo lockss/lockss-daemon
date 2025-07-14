@@ -72,6 +72,19 @@
       
     }
 
+    {
+
+      plugin = org.lockss.plugin.archiveit.ArchiveItApiPlugin
+      param[base_url] = https://archive-it.org/
+      param[organization] = 730
+      nondefparam[user_pass] = ivypluspln_U_P
+      implicit < status ; name ; param[collection] >
+
+      au < exists ; South Asian Governmental Publications (Archive-It Collection 21850) ; 21850 >
+      au < exists ; Ideas of the Anthropocene (Archive-It Collection 22606) ; 22606 >
+
+    }
+
   }
 
 }
