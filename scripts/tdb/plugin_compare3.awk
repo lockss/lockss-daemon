@@ -4,9 +4,7 @@ BEGIN { FS = ","; OFS = "," }
 NR==FNR {
     if (FNR > 1) {
         previousLine[$1] = $0;  # Collecting all lines from the previous file
-        for (i=2; i<=NF; i++) {
-            previousItems[$1] = 1;  # Tracking unique plugin identifiers
-        }
+        previousItems[$1] = 1;   # Tracking unique plugin identifiers
     }
     next
 }
@@ -15,7 +13,7 @@ FNR > 1 {
     changedV = 0;
     changedS = 0;
 
-    # Check if the current lines key exists in previousItems for "New Plugins"
+    # Check if the current line's key exists in previousItems for "New Plugins"
     if (!($1 in previousItems)) {
         newPlugins[newCount++] = $0;  # Line item is new
     } else {
@@ -28,12 +26,14 @@ FNR > 1 {
             changedS++;
         }
         
-        # Categorize the changes
-        if (changedV > 0 && changedS == 0) {
-            versionChanged[versionCount++] = previousLine[$1] "\n" $0;
-        }
-        if (changedS > 0) {
-            statusChanged[statusCount++] = previousLine[$1] "\n" $0;
+        # Only output if there's a change in either version or status
+        if (changedV > 0 || changedS > 0) {
+            if (changedS > 0) {
+                statusChanged[statusCount++] = previousLine[$1] "\n" $0;
+            }
+            if (changedV > 0 && changedS == 0) {
+                versionChanged[versionCount++] = previousLine[$1] "\n" $0;
+            }
         }
     }
 }
