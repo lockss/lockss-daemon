@@ -11,6 +11,7 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; publisherName ; param[base_url] ; hidden[proxy] >
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
+    nondefparam[base_url2] = https://www.pynchon.net/
 
   {
 
