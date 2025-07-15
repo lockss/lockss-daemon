@@ -239,10 +239,10 @@ public class TestGeorgThiemeVerlagPlugin extends LockssTestCase {
     shouldCacheTest(ROOT_URL + "products/ejournals/abstract/10.1055/s-0029-1214947", true, au);
     shouldCacheTest(ROOT_URL + "products/ejournals/html/10.1055/s-0029-1214947", true, au);
     shouldCacheTest(ROOT_URL +
-        "products/ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342", true, au);
+        "products/ejournals/html/10.1055/s-0029-1214947?issue=10.1055/s-003-25342", false, au);
     shouldCacheTest(ROOT_URL + "products/ejournals/pdf/10.1055/s-0029-1214947.pdf", true, au);
     shouldCacheTest(ROOT_URL +
-        "products/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342", true, au);
+        "products/ejournals/pdf/10.1055/s-0029-1214947.pdf?issue=10.1055/s-003-25342", false, au);
     shouldCacheTest(ROOT_URL + "products/ejournals/ris/10.1055/s-0031-1296349/BIB", true, au);
     // css files
     shouldCacheTest(ROOT_URL + "css/img/themes/bg-pageHeader.jpg", true, au);
