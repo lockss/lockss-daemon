@@ -24,9 +24,9 @@
       param[journal_abbr] = home
       provider = bepress
 
-      au < frozen ; exists ; 2022 ; Baghdad Science Journal Volume 19 ; 19 ; >
-      au < frozen ; exists ; 2023 ; Baghdad Science Journal Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2024 ; Baghdad Science Journal Volume 21 ; 21 ; >
+      au < finished ; manifest ; 2022 ; Baghdad Science Journal Volume 19 ; 19 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; Baghdad Science Journal Volume 20 ; 20 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Baghdad Science Journal Volume 21 ; 21 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; Baghdad Science Journal Volume 22 ; 22 ; >
     }
     {
@@ -38,17 +38,17 @@
       param[journal_id] = BSJ
       provider = University of Baghdad, College of Science for Women
 
-      au < frozen ; exists ; 2004 ; Baghdad Science Journal Volume 1 ; 1 ; 2004 ; >
-      au < frozen ; exists ; 2005 ; Baghdad Science Journal Volume 2 ; 2 ; 2005 ; >
-      au < frozen ; exists ; 2006 ; Baghdad Science Journal Volume 3 ; 3 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Baghdad Science Journal Volume 4 ; 4 ; 2007 ; >
-      au < frozen ; exists ; 2008 ; Baghdad Science Journal Volume 5 ; 5 ; 2008 ; >
-      au < frozen ; exists ; 2009 ; Baghdad Science Journal Volume 6 ; 6 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; Baghdad Science Journal Volume 7 ; 7 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; Baghdad Science Journal Volume 8 ; 8 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; Baghdad Science Journal Volume 9 ; 9 ; 2012 ; >
-      au < frozen ; exists ; 2013 ; Baghdad Science Journal Volume 10 ; 10 ; 2013 ; >
-      au < frozen ; exists ; 2014 ; Baghdad Science Journal Volume 11 ; 11 ; 2014 ; >
+      au < finished ; manifest ; 2004 ; Baghdad Science Journal Volume 1 ; 1 ; 2004 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Baghdad Science Journal Volume 2 ; 2 ; 2005 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Baghdad Science Journal Volume 3 ; 3 ; 2006 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; Baghdad Science Journal Volume 4 ; 4 ; 2007 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; Baghdad Science Journal Volume 5 ; 5 ; 2008 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; Baghdad Science Journal Volume 6 ; 6 ; 2009 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; Baghdad Science Journal Volume 7 ; 7 ; 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Baghdad Science Journal Volume 8 ; 8 ; 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; Baghdad Science Journal Volume 9 ; 9 ; 2012 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; Baghdad Science Journal Volume 10 ; 10 ; 2013 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; Baghdad Science Journal Volume 11 ; 11 ; 2014 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; Baghdad Science Journal Volume 12 ; 12 ; 2015 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2016 ; Baghdad Science Journal Volume 13 ; 13 ; 2016 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017 ; Baghdad Science Journal Volume 14 ; 14 ; 2017 ; reingest3.clockss.org:8083 >
