@@ -694,7 +694,7 @@
       au < finished ; crawling ; 2022 ; Green Chemistry Volume 24 ; 24 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Green Chemistry Volume 25 ; 25 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Green Chemistry Volume 26 ; 26 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Green Chemistry Volume 27 ; 27 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Green Chemistry Volume 27 ; 27 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -881,7 +881,7 @@
       au < finished ; crawling ; 2022 ; Lab on a Chip Volume 22 ; 22 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Lab on a Chip Volume 23 ; 23 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Lab on a Chip Volume 24 ; 24 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Lab on a Chip Volume 25 ; 25 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Lab on a Chip Volume 25 ; 25 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1191,7 +1191,7 @@
       au < finished ; crawling ; 2022 ; Physical Chemistry Chemical Physics Volume 24 ; 24 ; 2022 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Physical Chemistry Chemical Physics Volume 25 ; 25 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Physical Chemistry Chemical Physics Volume 26 ; 26 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Physical Chemistry Chemical Physics Volume 27 ; 27 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Physical Chemistry Chemical Physics Volume 27 ; 27 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1495,7 +1495,7 @@
       au < finished ; crawling ; 2022 ; Catalysis Science & Technology Volume 12 ; 12 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Catalysis Science & Technology Volume 13 ; 13 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Catalysis Science & Technology Volume 14 ; 14 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Catalysis Science & Technology Volume 15 ; 15 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Catalysis Science & Technology Volume 15 ; 15 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1545,7 +1545,7 @@
       au < finished ; crawling ; 2022 ; Chemical Science Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Chemical Science Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Chemical Science Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Chemical Science Volume 16 ; 16 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Chemical Science Volume 16 ; 16 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1659,7 +1659,7 @@
       au < finished ; crawling ; 2022 ; Environmental Science: Processes & Impacts Volume 24 ; 24 ; 2022 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Environmental Science: Processes & Impacts Volume 25 ; 25 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Environmental Science: Processes & Impacts Volume 26 ; 26 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Environmental Science: Processes & Impacts Volume 27 ; 27 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Environmental Science: Processes & Impacts Volume 27 ; 27 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1796,7 +1796,7 @@
       au < finished ; crawling ; 2022 ; Food & Function Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; Food & Function Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Food & Function Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Food & Function Volume 16 ; 16 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Food & Function Volume 16 ; 16 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1993,7 +1993,7 @@
       au < finished ; crawling ; 2022 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 10 ; 10 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 11 ; 11 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 12 ; 12 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 13 ; 13 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 13 ; 13 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2641,7 +2641,7 @@
       au < finished ; crawling ; 2022 ; Materials Horizons Volume 9 ; 9 ; 2022 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Materials Horizons Volume 10 ; 10 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Materials Horizons Volume 11 ; 11 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Materials Horizons Volume 12 ; 12 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Materials Horizons Volume 12 ; 12 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2731,7 +2731,7 @@
       au < finished ; crawling ; 2022 ; Nanoscale Horizons Volume 7 ; 7 ; 2022 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Nanoscale Horizons Volume 8 ; 8 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Nanoscale Horizons Volume 9 ; 9 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Nanoscale Horizons Volume 10 ; 10 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Nanoscale Horizons Volume 10 ; 10 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3119,7 +3119,7 @@
       au < finished ; crawling ; 2022 ; Reaction Chemistry & Engineering Volume 7 ; 7 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Reaction Chemistry & Engineering Volume 8 ; 8 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Reaction Chemistry & Engineering Volume 9 ; 9 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Reaction Chemistry & Engineering Volume 10 ; 10 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Reaction Chemistry & Engineering Volume 10 ; 10 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3318,7 +3318,7 @@
       au < finished ; manifest ; 2022 ; Materials Chemistry Frontiers Volume 6 ; 6 ; 2022 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Materials Chemistry Frontiers Volume 7 ; 7 ; 2023 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Materials Chemistry Frontiers Volume 8 ; 8 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Materials Chemistry Frontiers Volume 9 ; 9 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Materials Chemistry Frontiers Volume 9 ; 9 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3360,7 +3360,7 @@
       au < finished ; manifest ; 2022 ; Nanoscale Advances Volume 4 ; 4 ; 2022 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Nanoscale Advances Volume 5 ; 5 ; 2023 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Nanoscale Advances Volume 6 ; 6 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Nanoscale Advances Volume 7 ; 7 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Nanoscale Advances Volume 7 ; 7 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3449,7 +3449,7 @@
       au < frozen ; exists ; 2022 ; Sensors & Diagnostics Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; >
       au < finished ; manifest ; 2023 ; Sensors & Diagnostics Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Sensors & Diagnostics Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Sensors & Diagnostics Volume 4 ; 4 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Sensors & Diagnostics Volume 4 ; 4 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
