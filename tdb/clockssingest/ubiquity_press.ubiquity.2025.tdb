@@ -2170,6 +2170,24 @@
   {
 
       title <
+        name = Journal of African Cultural Heritage Studies ;
+        eissn = 2398-5992
+      >
+
+      comment[publisher] = White Rose University Press
+      #param[base_url] = https://jachs.org/
+      nondefparam[base_url2] = https://account.jachs.org/
+      nondefparam[journal_id] = wr-j-jachs
+
+      au < manifest ; exists ; 2017 ; 1 ; Journal of African Cultural Heritage Studies Volume 2017 ; 2017 ; 1 ; White Rose University Press ;  ; https://jachs.org/ ; >
+      au < manifest ; exists ; 2019 ; 2 ; Journal of African Cultural Heritage Studies Volume 2019 ; 2019 ; 2 ; White Rose University Press ;  ; https://jachs.org/ ; >
+      au < manifest ; exists ; 2021 ; 3 ; Journal of African Cultural Heritage Studies Volume 2021 ; 2021 ; 3 ; White Rose University Press ;  ; https://jachs.org/ ; >
+
+  }
+
+  {
+
+      title <
         name = Undergraduate Journal of Politics and International Relations ;
         eissn = 2398-5992
       >
