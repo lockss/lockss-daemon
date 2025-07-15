@@ -44,8 +44,9 @@ public class GeorgThiemeVerlagUrlNormalizer implements UrlNormalizer {
     if (url.contains(".js?") ||
         url.contains(".css?") ||
         url.contains(".ico?") ||
-        url.contains(".gif?") ||
-        url.contains("?issue=")) {
+        url.contains(".gif?")) {
+        /* July 2025, we are excluding these ?issue= urls since they are overcrawled pages. */
+        //url.contains("?issue=")) {
       url = StringUtils.substringBeforeLast(url, "?");
     }
     return url;
