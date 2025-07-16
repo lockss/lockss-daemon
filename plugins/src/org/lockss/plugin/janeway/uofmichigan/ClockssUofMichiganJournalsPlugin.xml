@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -33,29 +33,27 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>down</string>
+    <string>development</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <!--This one used to be University of Michigan but it is used by University of Westminster. Rename it
-    so it will not confuse with new University of Michigan-->
-    <string>org.lockss.plugin.janeway.universityofmichigan.ClockssUniversityofMichiganPlugin</string>
+    <string>org.lockss.plugin.janeway.uofmichigan.ClockssUofMichiganJournalsPlugin</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>University of Westminster Journals Plugin (CLOCKSS)</string>
+    <string>University of Michigan Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
-    <string>org.lockss.plugin.janeway.universityofmichigan.UniversityofMichiganPlugin</string>
+    <string>org.lockss.plugin.janeway.uofmichigan.UofMichiganJournalsPlugin</string>
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>12</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -63,10 +61,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_permission_url</string>
-      <string>"%splugins/clockss/", base_url</string>
+    <!--https://journals.publishing.umich.edu/absinthe/plugins/clockss/-->
+    <string>"%s%s/plugins/clockss/", base_url, journal_id</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"University of Westminster Journals Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
+    <string>"University of Michigan Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
 </map>

@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -142,6 +142,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1, "^https?://%s/(static|media/cover_images)/", url_host(base_url)</string>
       <string>1, "%s%s/api/oai/?verb=ListRecords&amp;resumptionToken=", base_url,journal_id</string>
       <string>1, "%slockss?year=%d&amp;optional_journal_id=%s", base_url, year, journal_id</string>
+      <string>1, "%smedia/", base_url</string>
     </list>
   </entry>
   <entry>
