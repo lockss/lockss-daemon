@@ -13,8 +13,8 @@
 ########GLN
 echo "****Moving AUs to releasing status.****"
 ./scripts/tdb/tdbedit --from-status=ready,releasing --to-status=releasing --auids=../SageEdits/tmp tdb/prod/{,*/}*.tdb
-echo "****Find AUs from the same publisher but different plugins (optional)****"
-./scripts/tdb/tdbout -G -t publisher,plugin tdb/prod/ | awk -F"\t" 'BEGIN {OFS="\t"} {foo[$0]++} END {for (x in foo) {print x,foo[x]}}' | sort
+#echo "****Find AUs from the same publisher but different plugins (optional)****"
+#./scripts/tdb/tdbout -G -t publisher,plugin tdb/prod/ | awk -F"\t" 'BEGIN {OFS="\t"} {foo[$0]++} END {for (x in foo) {print x,foo[x]}}' | sort
 echo "****List of the Atypon publishers****"
 ./scripts/tdb/tdbout -G -t publisher -Q 'plugin ~ "typon"' tdb/prod/ | sort -u ; tdbout -G -t publisher -Q 'plugin ~ "TaylorAndFrancisPlugin"' tdb/prod/taylor_and_francis.tdb | uniq ; tdbout -G -t publisher -Q 'plugin ~ "EdinburghUniversityPressP"' tdb/prod/edinburgh_university_press.tdb | uniq
 echo "****Generating list of the released AUs****"
