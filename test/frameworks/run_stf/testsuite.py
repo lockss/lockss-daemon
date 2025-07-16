@@ -225,7 +225,7 @@ class V3TestCases( LockssTestCases ):
             client.waitAu( self.AU )
         log.info( "Waiting for simulated AU's to crawl" )
         for client in self.clients:
-	    log.info( 'Checking client %s for crawl' % client.port);
+            log.info( 'Checking client %s for crawl' % client.port);
             self.assert_( client.waitForSuccessfulCrawl( self.AU ), "AU's did not complete initial crawl" )
         log.info( "AU's completed initial crawl" )
 
@@ -329,7 +329,7 @@ class V3TestCases( LockssTestCases ):
                           'org.lockss.poll.v3.enablePoPPolls': 'true',
                           'org.lockss.poll.v3.allLocalPolls': 'false',
                           'org.lockss.poll.v3.allPoPPolls': 'false',
-			  'org.lockss.poll.v3.minTimeBetweenAnyPoll': '6s',
+                          'org.lockss.poll.v3.minTimeBetweenAnyPoll': '6s',
                           'org.lockss.poll.v3.recordPeerUrlLists' : 'false',
                           'org.lockss.poll.pollStarterInitialDelay': '30s'
             }
@@ -425,14 +425,14 @@ class PoRThenLocalV3TestCase( PollPolicyTestCases ):
 
     def __init__( self, methodName = 'runTest' ):
         V3TestCases.__init__( self, methodName )
-	self.local_configuration = {
+        self.local_configuration = {
             'org.lockss.poll.v3.enablePoPPolls': True,
             'org.lockss.poll.v3.enableLocalPolls': True,
             'org.lockss.poll.v3.modulus': 2,
             'org.lockss.poll.v3.toplevelPollInterval': 1000,
             'org.lockss.poll.v3.maxDelayBetweenPoRMultiplier': 5000,
             'org.lockss.poll.minPollAttemptInterval': 500
-	}
+        }
         self.simulated_AU_parameters = { 'numFiles': 3 }
         self.expectedSecondType = 'Local'
 
@@ -441,7 +441,7 @@ class PoRThenPoPV3TestCase( PollPolicyTestCases ):
 
     def __init__( self, methodName = 'runTest' ):
         V3TestCases.__init__( self, methodName )
-	self.local_configuration = {
+        self.local_configuration = {
             'org.lockss.poll.v3.enablePoPPolls': True,
             'org.lockss.poll.v3.enableLocalPolls': True,
             'org.lockss.poll.v3.modulus': 2,
@@ -449,7 +449,7 @@ class PoRThenPoPV3TestCase( PollPolicyTestCases ):
             'org.lockss.poll.v3.maxDelayBetweenPoRMultiplier': 5000,
             'org.lockss.poll.v3.repairerThreshold': 100,
             'org.lockss.poll.minPollAttemptInterval': 500
-	}
+        }
         self.simulated_AU_parameters = { 'numFiles': 3 }
         self.expectedSecondType = 'Proof of Possession'
 
@@ -475,10 +475,10 @@ class AuditDemo2( V3TestCases ):
 
     def __init__( self, methodName = 'runTest' ):
         V3TestCases.__init__( self, methodName )
-	self.local_configuration = {
+        self.local_configuration = {
             'org.lockss.poll.v3.repairFromCachePercent': 100,
-	    'org.lockss.plugin.simulated.SimulatedContentGenerator.openAccess': 'true'
-	}
+            'org.lockss.plugin.simulated.SimulatedContentGenerator.openAccess': 'true'
+        }
         self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 2 }
             
     def _damage_AU( self ):
@@ -1077,8 +1077,8 @@ class TotalLossRecoveryPoPV3TestCase( TotalLossRecoveryV3Tests ):
                                      'org.lockss.blockHasher.localHashAlgorithm': 'SHA-1',
                                      'org.lockss.poll.v3.allPoPPolls': True,
                                      'org.lockss.poll.v3.enablePoPVoting': True,
-            			     'org.lockss.poll.v3.toplevelPollInterval': 1000,
-            			     'org.lockss.poll.minPollAttemptInterval': 500,
+                                     'org.lockss.poll.v3.toplevelPollInterval': 1000,
+                                     'org.lockss.poll.minPollAttemptInterval': 500,
                                      'org.lockss.poll.v3.enablePoPPolls': True}
 
     def _verify_poll_results( self ):
@@ -1226,7 +1226,7 @@ class RepairFromPeerV3LocalTestCase( RepairFromPeerV3Tests ):
 
     def __init__( self, methodName = 'runTest' ):
         RepairFromPeerV3Tests.__init__( self, methodName )
-	self.local_configuration = {
+        self.local_configuration = {
             # 'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls': '20s',
             'org.lockss.poll.v3.enablePoPPolls': True,
             'org.lockss.poll.v3.enableLocalPolls': True,
@@ -1235,7 +1235,7 @@ class RepairFromPeerV3LocalTestCase( RepairFromPeerV3Tests ):
             'org.lockss.poll.v3.enableV3Poller': False,
             'org.lockss.poll.v3.repairFromCachePercent': 100,
             'org.lockss.poll.minPollAttemptInterval': 500
-	}
+        }
 
     def _damage_AU( self ):
         nodes = self.victim.randomDamageRandomNodes( self.AU, 15, 20 )
