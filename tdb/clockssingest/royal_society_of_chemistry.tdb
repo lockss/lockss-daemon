@@ -57,7 +57,7 @@
       au < finished ; crawling ; 2022 ; The Analyst Volume 147 ; 147 ; 2022 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; The Analyst Volume 148 ; 148 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; The Analyst Volume 149 ; 149 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; The Analyst Volume 150 ; 150 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; The Analyst Volume 150 ; 150 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -88,7 +88,7 @@
       au < finished ; crawling ; 2022 ; Analytical Methods Volume 14 ; 14 ; 2022 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Analytical Methods Volume 15 ; 15 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Analytical Methods Volume 16 ; 16 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Analytical Methods Volume 17 ; 17 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Analytical Methods Volume 17 ; 17 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -211,7 +211,7 @@
       au < finished ; crawling ; 2022 ; CBiomaterials Science Volume 10 ; 10 ; 2022 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; CBiomaterials Science Volume 11 ; 11 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; CBiomaterials Science Volume 12 ; 12 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; CBiomaterials Science Volume 13 ; 13 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; CBiomaterials Science Volume 13 ; 13 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -300,7 +300,7 @@
       au < finished ; crawling ; 2022 ; Chemical Society Reviews Volume 51 ; 51 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Chemical Society Reviews Volume 52 ; 52 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Chemical Society Reviews Volume 53 ; 53 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Chemical Society Reviews Volume 54 ; 54 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Chemical Society Reviews Volume 54 ; 54 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -339,7 +339,7 @@
       au < finished ; crawling ; 2022 ; Chemistry Education Research and Practice Volume 23 ; 23 ; 2022 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Chemistry Education Research and Practice Volume 24 ; 24 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Chemistry Education Research and Practice Volume 25 ; 25 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Chemistry Education Research and Practice Volume 26 ; 26 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Chemistry Education Research and Practice Volume 26 ; 26 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1226,7 +1226,7 @@
       au < finished ; crawling ; 2022 ; Soft Matter Volume 18 ; 18 ; 2022 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Soft Matter Volume 19 ; 19 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Soft Matter Volume 20 ; 20 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Soft Matter Volume 21 ; 21 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Soft Matter Volume 21 ; 21 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1841,7 +1841,7 @@
       au < finished ; crawling ; 2022 ; Inorganic Chemistry Frontiers Volume 9 ; 9 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Inorganic Chemistry Frontiers Volume 10 ; 10 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Inorganic Chemistry Frontiers Volume 11 ; 11 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Inorganic Chemistry Frontiers Volume 12 ; 12 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Inorganic Chemistry Frontiers Volume 12 ; 12 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1937,7 +1937,7 @@
       au < finished ; crawling ; 2022 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 10 ; 10 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 11 ; 11 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 12 ; 12 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 13 ; 13 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 13 ; 13 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -1965,7 +1965,7 @@
       au < finished ; crawling ; 2022 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 10 ; 10 ; 2022 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 11 ; 11 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 12 ; 12 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 13 ; 13 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 13 ; 13 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2686,7 +2686,7 @@
       au < finished ; crawling ; 2022 ; RSC Medicinal Chemistry Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; RSC Medicinal Chemistry Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; RSC Medicinal Chemistry Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; RSC Medicinal Chemistry Volume 16 ; 16 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; RSC Medicinal Chemistry Volume 16 ; 16 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -2757,7 +2757,7 @@
       au < finished ; crawling ; 2022 ; Organic Chemistry Frontiers Volume 9 ; 9 ; 2022 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; Organic Chemistry Frontiers Volume 10 ; 10 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Organic Chemistry Frontiers Volume 11 ; 11 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Organic Chemistry Frontiers Volume 12 ; 12 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Organic Chemistry Frontiers Volume 12 ; 12 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3340,7 +3340,7 @@
       au < finished ; manifest ; 2022 ; Molecular Omics Volume 18 ; 18 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Molecular Omics Volume 19 ; 19 ; 2023 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Molecular Omics Volume 20 ; 20 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Molecular Omics Volume 21 ; 21 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Molecular Omics Volume 21 ; 21 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3379,7 +3379,7 @@
       au < finished ; manifest ; 2022 ; RSC Chemical Biology Volume 3 ; 3 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; RSC Chemical Biology Volume 4 ; 4 ; 2023 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; RSC Chemical Biology Volume 5 ; 5 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; RSC Chemical Biology Volume 6 ; 6 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; RSC Chemical Biology Volume 6 ; 6 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3415,7 +3415,7 @@
       au < finished ; manifest ; 2022 ; Environmental Science: Atmospheres Volume 2 ; 2 ; 2022 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Environmental Science: Atmospheres Volume 3 ; 3 ; 2023 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Environmental Science: Atmospheres Volume 4 ; 4 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Environmental Science: Atmospheres Volume 5 ; 5 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Environmental Science: Atmospheres Volume 5 ; 5 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3432,7 +3432,7 @@
       au < finished ; manifest ; 2022 ; Digital Discovery Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Digital Discovery Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Digital Discovery Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Digital Discovery Volume 4 ; 4 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Digital Discovery Volume 4 ; 4 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3466,7 +3466,7 @@
       au < finished ; manifest ; 2022 ; Environmental Science: Advances Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Environmental Science: Advances Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Environmental Science: Advances Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Environmental Science: Advances Volume 4 ; 4 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Environmental Science: Advances Volume 4 ; 4 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3499,7 +3499,7 @@
 
       au < finished ; manifest ; 2023 ; EES Catalysis Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; EES Catalysis Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; EES Catalysis Volume 3 ; 3 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; EES Catalysis Volume 3 ; 3 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3532,7 +3532,7 @@
 
       au < finished ; manifest ; 2023 ; Industrial Chemistry & Materials Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Industrial Chemistry & Materials Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; Industrial Chemistry & Materials Volume 3 ; 3 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; Industrial Chemistry & Materials Volume 3 ; 3 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3547,7 +3547,7 @@
       param[journal_code] = lf
 
       au < deepCrawl ; exists ; 2024 ; RSC Applied Interfaces Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; RSC Applied Interfaces Volume 2 ; 2 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; RSC Applied Interfaces Volume 2 ; 2 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3563,7 +3563,7 @@
 
       au < finished ; manifest ; 2023 ; RSC Applied Polymers Volume 1 ; 1 ; 2023 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; RSC Applied Polymers Volume 2 ; 2 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; RSC Applied Polymers Volume 3 ; 3 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; RSC Applied Polymers Volume 3 ; 3 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3593,7 +3593,7 @@
       param[journal_code] = mr
 
       au < deepCrawl ; exists ; 2024 ; RSC Mechanochemistry Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; RSC Mechanochemistry Volume 2 ; 2 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; RSC Mechanochemistry Volume 2 ; 2 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
@@ -3607,7 +3607,7 @@
       param[journal_code] = pm
 
       au < deepCrawl ; exists ; 2024 ; RSC Pharmaceutics Volume 1 ; 1 ; 2024 ; https://pubs.rsc.org/ ; >
-      au < ready ; exists ; 2025 ; RSC Pharmaceutics Volume 2 ; 2 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < crawling ; exists ; 2025 ; RSC Pharmaceutics Volume 2 ; 2 ; 2025 ; https://pubs.rsc.org/ ; >
 
   }
 
