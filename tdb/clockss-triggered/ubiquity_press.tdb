@@ -22,8 +22,8 @@
       >
 
       comment[publisher] = Utrecht University Library
-      nondefparam[base_url2] = https://www.gewina-studium.nl/
-      nondefparam[journal_id] = 
+      nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+      nondefparam[journal_id] = nondefparam
       # ceased publication in 2019
       # triggered in early 2021
 
@@ -54,8 +54,8 @@
       >
 
       comment[publisher] = Utrecht University Library
-      nondefparam[base_url2] = https://www.tijdschriftstudies.nl/
-      nondefparam[journal_id] = 
+      nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+      nondefparam[journal_id] = nondefparam
       #ceased publication in 2017
 
       au < down ; 1997 ; 1 ; Tijdschrift voor Tijdschriftstudies Volume 1997 ; 1997 ; 1 ; Utrecht University Library ; https://www.tijdschriftstudies.nl/ >
@@ -92,8 +92,8 @@
       #
       
       comment[publisher] = Stockholm University Press
-      nondefparam[base_url2] = https://jhlr.org/
-      nondefparam[journal_id] = 
+      nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+      nondefparam[journal_id] = nondefparam
 #      param[base_url] = https://jhlr.org/
 
       au < released ; 2016 ; 1 ; Journal of Home Language Research Volume 1 ; 2016 ; 1 ; Stockholm University Press ; https://jhlr.org/ >
@@ -111,8 +111,8 @@
       >
 
       comment[publisher] = Stockholm University Press
-      nondefparam[base_url2] = https://www.karib.no/
-      nondefparam[journal_id] = 
+      nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+      nondefparam[journal_id] = nondefparam
       #ceased publication in 2021
 
       au < down ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 1 ; 2014 ; 1 ; Stockholm University Press ; https://www.karib.no/ >
@@ -132,8 +132,8 @@
       >
 
       comment[publisher] = IJS Publishing Group
-      nondefparam[base_url2] = https://www.amscasereports.com/
-      nondefparam[journal_id] = 
+      nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+      nondefparam[journal_id] = nondefparam
 #      param[base_url] = https://www.amscasereports.com/
 
       au < down ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 1 ; 2018 ; 1 ; IJS Publishing Group ; https://www.amscasereports.com/ >
@@ -149,13 +149,11 @@
       >
 
       comment[publisher] = IJS Publishing Group
-      nondefparam[base_url2] = https://www.amsprotocols.com/
-      nondefparam[journal_id] = 
+      nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+      nondefparam[journal_id] = nondefparam
 #      param[base_url] = https://www.amsprotocols.com/
 
       au < down ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 1 ; 2018 ; 1 ; IJS Publishing Group ; https://www.amsprotocols.com/ >
   }
 
 }
-
-

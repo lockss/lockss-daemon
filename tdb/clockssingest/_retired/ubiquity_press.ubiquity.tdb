@@ -1,5 +1,5 @@
-
 {
+
   publisher <
     name = Ubiquity Press ;
     info[contract] = 2011 ;
@@ -11,7 +11,10 @@
     provider = Ubiquity Press
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; publisherName ; param[base_url] ; hidden[proxy] >
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
-    nondefparam[base_url2] = https://www.pynchon.net/
+    
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
 
   {
 
@@ -22,7 +25,6 @@
 
       comment[publisher] = Aperio
 #      param[base_url] = https://jmphil.org/
-      #nondefparam[base_url2] = https://jmphil.org/
 
       au < finished ; finished ; 2019 ; 1 ; Journal of Modern Philosophy Volume 2019 ; 2019 ; 1 ; Aperio ; https://jmphil.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2020 ; 2 ; Journal of Modern Philosophy Volume 2020 ; 2020 ; 2 ; Aperio ; https://jmphil.org/ ; reingest1.clockss.org:8082 >
@@ -41,8 +43,6 @@
 
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amscasereports.com/
-      #nondefparam[base_url2] = https://account.www.amscasereports.com/
-      nondefparam[journal_id] = 
 
       au < finished ; finished ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 1 ; 2018 ; 1 ; IJS Publishing Group ; https://www.amscasereports.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2 ; 2021 ; 2 ; IJS Publishing Group ; https://www.amscasereports.com/ ; reingest3.clockss.org:8083 >
@@ -59,8 +59,6 @@
 
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amsprotocols.com/
-      #nondefparam[base_url2] = https://account.www.amsprotocols.com/
-      nondefparam[journal_id] = 
 
       au < finished ; finished ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 1 ; 2018 ; 1 ; IJS Publishing Group ; https://www.amsprotocols.com/ ; reingest3.clockss.org:8083 >
       #Triggered
@@ -75,8 +73,6 @@
 
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://ijops.com/
-      #nondefparam[base_url2] = https://account.ijops.com/
-      nondefparam[journal_id] = 
 
       au < finished ; finished ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; 1 ; IJS Publishing Group ; https://ijops.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; 2 ; International Journal of Orthoplastic Surgery Volume 2019 ; 2019 ; 2 ; IJS Publishing Group ; https://ijops.com/ ; reingest1.clockss.org:8082 >
@@ -95,7 +91,6 @@
       comment[publisher] = Latin American Studies Association
 #      param[base_url] = https://larrlasa.org/
       #Transfered away to Cambridge U Press https://www.cambridge.org/core/journals/latin-american-research-review
-      #nondefparam[base_url2] = https://account.larrlasa.org/
 
       au < finished ; finished ; 2017 ; 1 ; Latin American Research Review Volume 2017 ; 2017 ; 1 ; Latin American Studies Association ; https://larrlasa.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 2 ; Latin American Research Review Volume 2018 ; 2018 ; 2 ; Latin American Studies Association ; https://larrlasa.org/ ; reingest3.clockss.org:8083 >
@@ -114,7 +109,6 @@
 
       comment[publisher] = Levy Library Press
 #      param[base_url] = https://www.journalofaltmetrics.org/
-      #nondefparam[base_url2] = https://www.journalofaltmetrics.org/
 
       au < finished ; frozen ; 2018 ; 1 ; Journal of Altmetrics Volume 2018 ; 2018 ; 1 ; Levy Library Press ; https://www.journalofaltmetrics.org/ ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2019 ; 2 ; Journal of Altmetrics Volume 2019 ; 2019 ; 2 ; Levy Library Press ; https://www.journalofaltmetrics.org/ ; reingest4.clockss.org:8082 >
@@ -135,7 +129,6 @@
 
       comment[publisher] = Levy Library Press
 #      param[base_url] = https://www.scholarlyassessmentreports.org/
-      #nondefparam[base_url2] = https://www.scholarlyassessmentreports.org/
 
       au < finished ; finished ; 2019 ; 1 ; Scholarly Assessment Reports Volume 2019 ; 2019 ; 1 ; Levy Library Press ; https://www.scholarlyassessmentreports.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2020 ; 2 ; Scholarly Assessment Reports Volume 2020 ; 2020 ; 2 ; Levy Library Press ; https://www.scholarlyassessmentreports.org/ ; reingest1.clockss.org:8082 >
@@ -168,7 +161,6 @@
 
       comment[publisher] = Stockholm University Press
 #      param[base_url] = http://www.karib.no/
-      #nondefparam[base_url2] = https://www.karib.no/
 
       au < finished ; finished ; 2014 ; 1 ; Karib: Nordic Journal for Caribbean Studies Volume 1 ; 2014 ; 1 ; Stockholm University Press ; https://www.karib.no/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2 ; Karib: Nordic Journal for Caribbean Studies Volume 2 ; 2015 ; 2 ; Stockholm University Press ; https://www.karib.no/ ; reingest1.clockss.org:8082 >
@@ -192,7 +184,6 @@
       
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://jhlr.org/
-      #nondefparam[base_url2] = https://jhlr.org/
 
       au < finished ; finished ; 2016 ; 1 ; Journal of Home Language Research Volume 1 ; 2016 ; 1 ; Stockholm University Press ; https://jhlr.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; 2 ; Journal of Home Language Research Volume 2 ; 2017 ; 2 ; Stockholm University Press ; https://jhlr.org/ ; reingest3.clockss.org:8083 >
@@ -1050,8 +1041,6 @@
 
       comment[publisher] = Gonzaga Library Publishing
       #param[base_url] = https://jhs.press.gonzaga.edu/
-      #nondefparam[base_url2] = https://account.jhs.press.gonzaga.edu/
-      nondefparam[journal_id] = gl-j-jhs
 
      au < finished ; manifest ; 2002 ; 1 ; Journal of Hate Studies Volume 2002 ; 2002 ; 1 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest2.clockss.org:8085 >
      au < finished ; manifest ; 2003 ; 2 ; Journal of Hate Studies Volume 2003 ; 2003 ; 2 ; Gonzaga Library Publishing ; https://jhs.press.gonzaga.edu/ ; reingest4.clockss.org:8082 >
@@ -1071,4 +1060,3 @@
   }
 
 }
-
