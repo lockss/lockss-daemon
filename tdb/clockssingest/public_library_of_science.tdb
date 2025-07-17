@@ -34,7 +34,7 @@
       au < manifest ; exists ; 2015 ; PLOS Biology Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; PLOS Biology Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; PLOS Biology Volume 2017 ; 2017 ; >
-      au < ready ; exists ; 2018 ; PLOS Biology Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; PLOS Biology Volume 2018 ; 2018 ; >
       au < crawling ; exists ; 2019 ; PLOS Biology Volume 2019 ; 2019 ; >
       au < crawling ; exists ; 2020 ; PLOS Biology Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2021 ; PLOS Biology Volume 2021 ; 2021 ; >
@@ -160,7 +160,7 @@
       au < manifest ; exists ; 2015 ; PLOS Genetics Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; PLOS Genetics Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; PLOS Genetics Volume 2017 ; 2017 ; >
-      au < ready ; exists ; 2018 ; PLOS Genetics Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; PLOS Genetics Volume 2018 ; 2018 ; >
       au < crawling ; exists ; 2019 ; PLOS Genetics Volume 2019 ; 2019 ; >
       au < crawling ; exists ; 2020 ; PLOS Genetics Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2021 ; PLOS Genetics Volume 2021 ; 2021 ; >
@@ -211,7 +211,7 @@
       au < manifest ; exists ; 2015 ; PLOS Medicine Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; PLOS Medicine Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; PLOS Medicine Volume 2017 ; 2017 ; >
-      au < ready ; exists ; 2018 ; PLOS Medicine Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; PLOS Medicine Volume 2018 ; 2018 ; >
       au < crawling ; exists ; 2019 ; PLOS Medicine Volume 2019 ; 2019 ; >
       au < crawling ; exists ; 2020 ; PLOS Medicine Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2021 ; PLOS Medicine Volume 2021 ; 2021 ; >
@@ -324,7 +324,7 @@
       au < crawling ; exists ; 2018 ; PLOS Pathogens Volume 2018 ; 2018 ; >
       au < crawling ; exists ; 2019 ; PLOS Pathogens Volume 2019 ; 2019 ; >
       au < crawling ; exists ; 2020 ; PLOS Pathogens Volume 2020 ; 2020 ; >
-      au < ready ; exists ; 2021 ; PLOS Pathogens Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; PLOS Pathogens Volume 2021 ; 2021 ; >
       au < crawling ; exists ; 2022 ; PLOS Pathogens Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; PLOS Pathogens Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; PLOS Pathogens Volume 2024 ; 2024 ; >
@@ -357,7 +357,7 @@
 
       param[journal_id] = water
 
-      au < ready ; exists ; 2022 ; PLOS Water Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; PLOS Water Volume 2022 ; 2022 ; >
       au < crawling ; exists ; 2023 ; PLOS Water Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2024 ; PLOS Water Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; PLOS Water Volume 2025 ; 2025 ; >
