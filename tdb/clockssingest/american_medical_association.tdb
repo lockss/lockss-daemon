@@ -38,7 +38,7 @@
     au < finished ; manifest ; 2022 ; JAMA Cardiology Volume 7 ; 2022 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; JAMA Cardiology Volume 8 ; 2023 ; https://jamanetwork.com/ ; >
     au < frozen ; exists ; 2024 ; JAMA Cardiology Volume 9 ; 2024 ; https://jamanetwork.com/ ; >
-    au < testing ; exists ; 2025 ; JAMA Cardiology Volume 10 ; 2025 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2025 ; JAMA Cardiology Volume 10 ; 2025 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -67,7 +67,7 @@
     au < finished ; manifest ; 2022 ; JAMA Dermatology Volume 158 ; 2022 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2023 ; JAMA Dermatology Volume 159 ; 2023 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2024 ; JAMA Dermatology Volume 160 ; 2024 ; https://jamanetwork.com/ ; >
-    au < testing ; exists ; 2025 ; JAMA Dermatology Volume 161 ; 2025 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2025 ; JAMA Dermatology Volume 161 ; 2025 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -206,7 +206,7 @@
     au < finished ; manifest ; 2022 ; JAMA Neurology Volume 79 ; 2022 ; https://jamanetwork.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; JAMA Neurology Volume 80 ; 2023 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2024 ; JAMA Neurology Volume 81 ; 2024 ; https://jamanetwork.com/ ; >
-    au < manifest ; exists ; 2025 ; JAMA Neurology Volume 82 ; 2025 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2025 ; JAMA Neurology Volume 82 ; 2025 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -232,7 +232,7 @@
     au < finished ; manifest ; 2022 ; JAMA Oncology Volume 8 ; 2022 ; https://jamanetwork.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; JAMA Oncology Volume 9 ; 2023 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2024 ; JAMA Oncology Volume 10 ; 2024 ; https://jamanetwork.com/ ; >
-    au < manifest ; exists ; 2025 ; JAMA Oncology Volume 11 ; 2025 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2025 ; JAMA Oncology Volume 11 ; 2025 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -260,7 +260,7 @@
     au < finished ; manifest ; 2022 ; JAMA Ophthalmology Volume 140 ; 2022 ; https://jamanetwork.com/ ; reingest2.clockss.org:8085 > #403 forbidden, https://cdn.jamanetwork.com/ama/content_public/journal/ophth/938883/eoi210084f2_1646935168.68667.png?Expires=2147483647&Signature=e2NuQLOr0jumvoHClWfHv2YprbuatOYmFmVDTPXy9YgQavc0T55j59Yf3NtUnAVjyjYWFEupWIyzpYPlLKwZsetSk88oVCkom~JvoDHV4zCgMdognrXuuxjlQ4GunTDIz0FDSN5x3N5nD~-Q2AlY2vh8xUsqDcLFprQzyfxgr4JY2zYh~MDzaGG~fQfeegO2tbsq91prof3krbsZKnvyk2KrZA1fVON9KBAtNfURBqrNWETu0jGk3L9acgfCMkVTWnWDUHijlXomr5zpax5c5TOtUn0JP81k5cIm1eREpOqClNOk9BKi34SJ8Bny63gPRqtJy7Bz5EZ495fiofRL3w__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
     au < deepCrawl ; exists ; 2023 ; JAMA Ophthalmology Volume 141 ; 2023 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2024 ; JAMA Ophthalmology Volume 142 ; 2024 ; https://jamanetwork.com/ ; >
-    au < manifest ; exists ; 2025 ; JAMA Ophthalmology Volume 143 ; 2025 ; https://jamanetwork.com/ ; >
+    au < ready ; exists ; 2025 ; JAMA Ophthalmology Volume 143 ; 2025 ; https://jamanetwork.com/ ; >
 
   }
 
