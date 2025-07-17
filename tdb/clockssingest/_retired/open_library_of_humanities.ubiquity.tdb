@@ -11,8 +11,12 @@
 
     plugin = org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; param[base_url] ; hidden[proxy] >
+
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
+
     #Moved to Janeway
-    nondefparam[base_url2] = https://www.pynchon.net/
 
   {
 
