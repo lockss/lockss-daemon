@@ -292,25 +292,22 @@ public enum AuParamType {
     return res;
   }
 
-  /** Throws by parse() methods for invalid input.  This is replacing
-   * {@link ConfigParamDescr.InvalidFormatException} */
-  public static class InvalidFormatException
-    extends ConfigParamDescr.InvalidFormatException {
-
-    private Throwable nestedException;
+  /** Thrown by {@link AuParamType#parse(String)} methods for invalid input.
+   * This replaces the old {@code ConfigParamDescr.InvalidFormatException}. */
+  public static class InvalidFormatException extends Exception {
 
     public InvalidFormatException(String msg) {
       super(msg);
     }
 
-    public InvalidFormatException(String msg, Throwable e) {
-      super(msg + (e.getMessage() == null ? "" : (": " + e.getMessage())));
-      this.nestedException = e;
+    public InvalidFormatException(String msg, Throwable thr) {
+      super(msg, thr);
     }
 
-    public Throwable getNestedException() {
-      return nestedException;
+    public InvalidFormatException(Throwable thr) {
+      super(thr);
     }
+
   }
 
 }

@@ -36,8 +36,8 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.app.LockssApp;
-import org.lockss.daemon.ConfigParamDescr.InvalidFormatException;
 import org.lockss.config.*;
+import org.lockss.daemon.AuParamType.InvalidFormatException;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -419,15 +419,8 @@ public class TestConfigParamDescr extends LockssTestCase {
     }
   }
 
-  // Ensure that either exception can be caught.  Remove after 1.67 when
-  // ConfigParamDescr.InvalidFormatException is retired
   public void testException() throws Exception {
     ConfigParamDescr desc = ConfigParamDescr.YEAR;
-    try {
-      desc.getValueOfType("abcd");
-      fail("Should have thrown ConfigParamDescr.InvalidFormatException");
-    } catch (ConfigParamDescr.InvalidFormatException expected) {
-    }
     try {
       desc.getValueOfType("abcd");
       fail("Should have thrown AuParamType.InvalidFormatException");

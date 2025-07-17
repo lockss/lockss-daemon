@@ -36,6 +36,7 @@ import java.util.*;
 import org.apache.commons.lang3.builder.*;
 
 import org.lockss.app.LockssApp;
+import org.lockss.daemon.AuParamType.InvalidFormatException;
 import org.lockss.util.*;
 
 /**
@@ -672,26 +673,26 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     }
   }
 
-  /**
-   * @deprecated After 1.67 is released, plugins should be converted to use
-   * AuParamType.InvalidFormatException instead
-   */
-  public static class InvalidFormatException extends Exception {
-    private Throwable nestedException;
-
-    public InvalidFormatException(String msg) {
-      super(msg);
-    }
-
-    public InvalidFormatException(String msg, Throwable e) {
-      super(msg + (e.getMessage() == null ? "" : (": " + e.getMessage())));
-      this.nestedException = e;
-    }
-
-    public Throwable getNestedException() {
-      return nestedException;
-    }
-  }
+//  /**
+//   * @deprecated After 1.67 is released, plugins should be converted to use
+//   * AuParamType.InvalidFormatException instead
+//   */
+//  public static class InvalidFormatException extends Exception {
+//    private Throwable nestedException;
+//
+//    public InvalidFormatException(String msg) {
+//      super(msg);
+//    }
+//
+//    public InvalidFormatException(String msg, Throwable e) {
+//      super(msg + (e.getMessage() == null ? "" : (": " + e.getMessage())));
+//      this.nestedException = e;
+//    }
+//
+//    public Throwable getNestedException() {
+//      return nestedException;
+//    }
+//  }
 
   public String toDetailedString() {
     StringBuilder buffer = new StringBuilder(100);
