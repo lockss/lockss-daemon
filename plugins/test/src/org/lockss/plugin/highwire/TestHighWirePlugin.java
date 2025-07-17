@@ -1,7 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
-All rights reserved.
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -41,6 +40,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.daemon.AuParamType.InvalidFormatException;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.plugin.wrapper.*;
@@ -105,8 +105,8 @@ public class TestHighWirePlugin extends LockssTestCase {
       DefinableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
-      ConfigParamDescr.InvalidFormatException murle =
-        (ConfigParamDescr.InvalidFormatException)auie.getCause();
+      InvalidFormatException murle =
+        (InvalidFormatException)auie.getCause();
       assertNotNull(auie.getCause());
     }
   }
