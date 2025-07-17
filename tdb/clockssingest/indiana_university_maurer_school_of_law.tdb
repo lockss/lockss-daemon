@@ -62,9 +62,9 @@
     au < manifest ; exists ; 2006 ; Indiana Journal of Global Legal Studies Volume 13 ; 13 ; https://www.repository.law.indiana.edu/ ; >
     au < manifest ; exists ; 2007 ; Indiana Journal of Global Legal Studies Volume 14 ; 14 ; https://www.repository.law.indiana.edu/ ; >
     au < finished ; finished ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 ; 15 ; http://www.repository.law.indiana.edu/ ; >
-    au < crawling ; exists ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 ; https://www.repository.law.indiana.edu/ ; >
-    au < crawling ; exists ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 ; https://www.repository.law.indiana.edu/ ; >
-    au < crawling ; exists ; 2011 ; Indiana Journal of Global Legal Studies Volume 18 ; 18 ; https://www.repository.law.indiana.edu/ ; >
+    au < frozen ; exists ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 ; https://www.repository.law.indiana.edu/ ; >
+    au < frozen ; exists ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 ; https://www.repository.law.indiana.edu/ ; >
+    au < frozen ; exists ; 2011 ; Indiana Journal of Global Legal Studies Volume 18 ; 18 ; https://www.repository.law.indiana.edu/ ; >
     au < finished ; finished ; 2012 ; Indiana Journal of Global Legal Studies Volume 19 ; 19 ; https://www.repository.law.indiana.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Indiana Journal of Global Legal Studies Volume 20 ; 20 ; https://www.repository.law.indiana.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2014 ; Indiana Journal of Global Legal Studies Volume 21 ; 21 ; https://www.repository.law.indiana.edu/ ; reingest3.clockss.org:8083 >
@@ -188,10 +188,10 @@
     au < manifest ; exists ; 2004-2005 ; Indiana Law Journal Volume 80 ; 80 ; https://www.repository.law.indiana.edu/ ; >
     au < manifest ; exists ; 2005-2006 ; Indiana Law Journal Volume 81 ; 81 ; https://www.repository.law.indiana.edu/ ; >
     au < manifest ; exists ; 2006-2007 ; Indiana Law Journal Volume 82 ; 82 ; https://www.repository.law.indiana.edu/ ; >
-    au < crawling ; exists ; 2007-2008 ; Indiana Law Journal Volume 83 ; 83 ; https://www.repository.law.indiana.edu/ ; >
-    au < crawling ; exists ; 2008-2009 ; Indiana Law Journal Volume 84 ; 84 ; https://www.repository.law.indiana.edu/ ; >
-    au < crawling ; exists ; 2009-2010 ; Indiana Law Journal Volume 85 ; 85 ; https://www.repository.law.indiana.edu/ ; >
-    au < crawling ; exists ; 2010-2011 ; Indiana Law Journal Volume 86 ; 86 ; https://www.repository.law.indiana.edu/ ; >
+    au < frozen ; exists ; 2007-2008 ; Indiana Law Journal Volume 83 ; 83 ; https://www.repository.law.indiana.edu/ ; >
+    au < frozen ; exists ; 2008-2009 ; Indiana Law Journal Volume 84 ; 84 ; https://www.repository.law.indiana.edu/ ; >
+    au < frozen ; exists ; 2009-2010 ; Indiana Law Journal Volume 85 ; 85 ; https://www.repository.law.indiana.edu/ ; >
+    au < frozen ; exists ; 2010-2011 ; Indiana Law Journal Volume 86 ; 86 ; https://www.repository.law.indiana.edu/ ; >
     au < finished ; finished ; 2012 ; Indiana Law Journal Volume 87 ; 87 ; http://www.repository.law.indiana.edu/ ; >
     au < finished ; finished ; 2013 ; Indiana Law Journal Volume 88 ; 88 ; http://www.repository.law.indiana.edu/ ; >
     au < finished ; finished ; 2014 ; Indiana Law Journal Volume 89 ; 89 ; http://www.repository.law.indiana.edu/ ; >
@@ -219,7 +219,7 @@
 
     param[journal_abbr] = ipt
 
-    au < crawling ; exists ; 2010 ; IP Theory Volume 1 ; 1 ; https://www.repository.law.indiana.edu/ ; >
+    au < frozen ; exists ; 2010 ; IP Theory Volume 1 ; 1 ; https://www.repository.law.indiana.edu/ ; >
     au < finished ; finished ; 2011-2012 ; IP Theory Volume 2 ; 2 ; http://www.repository.law.indiana.edu/ ; >
     au < finished ; finished ; 2012-2013 ; IP Theory Volume 3 ; 3 ; http://www.repository.law.indiana.edu/ ; >
     au < finished ; finished ; 2013-2014 ; IP Theory Volume 4 ; 4 ; http://www.repository.law.indiana.edu/ ; >
