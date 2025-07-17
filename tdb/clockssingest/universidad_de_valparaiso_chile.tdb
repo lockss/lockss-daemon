@@ -1,0 +1,62 @@
+{
+
+  publisher <
+    name = Universidad de Valparaíso, Chile ;
+    info[contract] = 2025 ;
+    info[back] = 2000 ;
+    info[tester] = 5 ;
+    info[platform] = OJS3
+  >
+
+    #OJS3
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+    #attr[primary_locale] = es_ES
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+
+  {
+  
+    title < 
+      name = Panambí ;
+      eissn = 0719-630X 
+    >
+
+      #published 2015 to present
+      param[base_url] = https://revistas.uv.cl/
+      param[journal_id] = Panambi
+
+      au < exists ; exists ; 2015 ; Panambí Volume 2015 ; 1 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Panambí Volume 2016 ; 2 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Panambí Volume 2017 ; 3 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Panambí Volume 2018 ; 4 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Panambí Volume 2019 ; 5 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Panambí Volume 2020 ; 6 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Panambí Volume 2021 ; 7 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Panambí Volume 2022 ; 8 ; 2022 ; >
+      au < exists ; exists ; 2023 ; Panambí Volume 2023 ; 9 ; 2023 ; >
+      au < exists ; exists ; 2024 ; Panambí Volume 2024 ; 10 ; 2024 ; >
+      au < exists ; exists ; 2025 ; Panambí Volume 2025 ; 11 ; 2025 ; >
+
+  }
+
+  {
+  
+    title < 
+      name = Sur y Tiempo ;
+      eissn = 2452-574X 
+    >
+
+      #published 2015 to present
+      param[base_url] = https://revistas.uv.cl/
+      param[journal_id] = syt
+
+      au < exists ; exists ; 2020 ; Sur y Tiempo Volume 2020 ; 1 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Sur y Tiempo Volume 2021 ; 2 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Sur y Tiempo Volume 2022 ; 3 ; 2022 ; >
+      au < exists ; exists ; 2023 ; Sur y Tiempo Volume 2023 ; 4 ; 2023 ; >
+      au < exists ; exists ; 2024 ; Sur y Tiempo Volume 2024 ; 5 ; 2024 ; >
+      au < exists ; exists ; 2025 ; Sur y Tiempo Volume 2025 ; 6 ; 2025 ; >
+
+  }
+
+}
