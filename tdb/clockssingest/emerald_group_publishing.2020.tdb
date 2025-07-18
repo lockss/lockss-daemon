@@ -170,7 +170,7 @@
     au < finished ; manifest ; 2021 ; Advances in Dual Diagnosis Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Advances in Dual Diagnosis Volume 15 ; 15 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Advances in Dual Diagnosis Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2024 ; Advances in Dual Diagnosis Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2024 ; Advances in Dual Diagnosis Volume 17 ; 17 ; >
     au < doNotProcess ; exists ; 2025 ; Advances in Dual Diagnosis Volume 18 ; 18 ; >
 
   }
@@ -519,7 +519,7 @@
     au < manifest ; exists ; 1985 ; Anti-Corrosion Methods and Materials Volume 32 ; 32 ; >
     au < manifest ; exists ; 1986 ; Anti-Corrosion Methods and Materials Volume 33 ; 33 ; >
     au < manifest ; exists ; 1987 ; Anti-Corrosion Methods and Materials Volume 34 ; 34 ; >
-    au < crawling ; exists ; 1988 ; Anti-Corrosion Methods and Materials Volume 35 ; 35 ; >
+    au < frozen ; exists ; 1988 ; Anti-Corrosion Methods and Materials Volume 35 ; 35 ; >
     au < finished ; manifest ; 1989 ; Anti-Corrosion Methods and Materials Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 1990 ; Anti-Corrosion Methods and Materials Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 1991 ; Anti-Corrosion Methods and Materials Volume 38 ; 38 ; reingest3.clockss.org:8083 >
@@ -889,7 +889,7 @@
     au < manifest ; exists ; 1985 ; Aslib Proceedings: New Information Perspectives Volume 37 ; 37 ; >
     au < manifest ; exists ; 1986 ; Aslib Proceedings: New Information Perspectives Volume 38 ; 38 ; >
     au < manifest ; exists ; 1987 ; Aslib Proceedings: New Information Perspectives Volume 39 ; 39 ; >
-    au < crawling ; exists ; 1988 ; Aslib Proceedings: New Information Perspectives Volume 40 ; 40 ; >
+    au < frozen ; exists ; 1988 ; Aslib Proceedings: New Information Perspectives Volume 40 ; 40 ; >
     au < finished ; manifest ; 1989 ; Aslib Proceedings: New Information Perspectives Volume 41 ; 41 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1990 ; Aslib Proceedings: New Information Perspectives Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; Aslib Proceedings: New Information Perspectives Volume 43 ; 43 ; reingest1.clockss.org:8082 >
@@ -936,7 +936,7 @@
     au < manifest ; exists ; 1985 ; Assembly Automation Volume 5 ; 5 ; >
     au < manifest ; exists ; 1986 ; Assembly Automation Volume 6 ; 6 ; >
     au < manifest ; exists ; 1987 ; Assembly Automation Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1988 ; Assembly Automation Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1988 ; Assembly Automation Volume 8 ; 8 ; >
     au < finished ; manifest ; 1989 ; Assembly Automation Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 1990 ; Assembly Automation Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 1991 ; Assembly Automation Volume 11 ; 11 ; reingest5.clockss.org:8082 >
@@ -1791,7 +1791,7 @@
     au < manifest ; exists ; 1984 ; Collection Building Volume 5 ; 5 ; >
     au < manifest ; exists ; 1985 ; Collection Building Volume 6 ; 6 ; >
     au < manifest ; exists ; 1986 ; Collection Building Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1988 ; Collection Building Volume 8 ; 8 ; >
+    au < frozen ; exists ; 1988 ; Collection Building Volume 8 ; 8 ; >
     au < finished ; manifest ; 1989 ; Collection Building Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1990 ; Collection Building Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1992 ; Collection Building Volume 11 ; 11 ; reingest4.clockss.org:8082 >
@@ -2349,7 +2349,7 @@
     au < manifest ; exists ; 1985 ; Education + Training Volume 27 ; 27 ; >
     au < manifest ; exists ; 1986 ; Education + Training Volume 28 ; 28 ; >
     au < manifest ; exists ; 1987 ; Education + Training Volume 29 ; 29 ; >
-    au < crawling ; exists ; 1988 ; Education + Training Volume 30 ; 30 ; >
+    au < frozen ; exists ; 1988 ; Education + Training Volume 30 ; 30 ; >
     au < finished ; manifest ; 1989 ; Education + Training Volume 31 ; 31 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1990 ; Education + Training Volume 32 ; 32 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; Education + Training Volume 33 ; 33 ; reingest3.clockss.org:8083 >
@@ -2427,7 +2427,7 @@
     au < manifest ; exists ; 1985 ; The Electronic Library Volume 3 ; 3 ; >
     au < manifest ; exists ; 1986 ; The Electronic Library Volume 4 ; 4 ; >
     au < manifest ; exists ; 1987 ; The Electronic Library Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1988 ; The Electronic Library Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1988 ; The Electronic Library Volume 6 ; 6 ; >
     au < finished ; manifest ; 1989 ; The Electronic Library Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1990 ; The Electronic Library Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; The Electronic Library Volume 9 ; 9 ; reingest5.clockss.org:8082 >
@@ -2506,7 +2506,7 @@
     au < manifest ; exists ; 1985 ; Employee Relations: An International Journal Volume 7 ; 7 ; >
     au < manifest ; exists ; 1986 ; Employee Relations: An International Journal Volume 8 ; 8 ; >
     au < manifest ; exists ; 1987 ; Employee Relations: An International Journal Volume 9 ; 9 ; >
-    au < crawling ; exists ; 1988 ; Employee Relations: An International Journal Volume 10 ; 10 ; >
+    au < frozen ; exists ; 1988 ; Employee Relations: An International Journal Volume 10 ; 10 ; >
     au < finished ; manifest ; 1989 ; Employee Relations: An International Journal Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1990 ; Employee Relations: An International Journal Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; Employee Relations: An International Journal Volume 13 ; 13 ; reingest1.clockss.org:8082 >
@@ -3033,7 +3033,7 @@
     au < manifest ; exists ; 1985 ; Facilities Volume 3 ; 3 ; >
     au < manifest ; exists ; 1986 ; Facilities Volume 4 ; 4 ; >
     au < manifest ; exists ; 1987 ; Facilities Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1988 ; Facilities Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1988 ; Facilities Volume 6 ; 6 ; >
     au < finished ; manifest ; 1989 ; Facilities Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1990 ; Facilities Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; Facilities Volume 9 ; 9 ; reingest3.clockss.org:8083 >
@@ -3542,7 +3542,7 @@
     au < manifest ; exists ; 1985 ; Industrial and Commercial Training Volume 17 ; 17 ; >
     au < manifest ; exists ; 1986 ; Industrial and Commercial Training Volume 18 ; 18 ; >
     au < manifest ; exists ; 1987 ; Industrial and Commercial Training Volume 19 ; 19 ; >
-    au < crawling ; exists ; 1988 ; Industrial and Commercial Training Volume 20 ; 20 ; >
+    au < frozen ; exists ; 1988 ; Industrial and Commercial Training Volume 20 ; 20 ; >
     au < finished ; manifest ; 1989 ; Industrial and Commercial Training Volume 21 ; 21 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1990 ; Industrial and Commercial Training Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; Industrial and Commercial Training Volume 23 ; 23 ; reingest3.clockss.org:8083 >
@@ -3634,7 +3634,7 @@
     au < manifest ; exists ; 1985 ; Industrial Lubrication and Tribology Volume 37 ; 37 ; >
     au < manifest ; exists ; 1986 ; Industrial Lubrication and Tribology Volume 38 ; 38 ; >
     au < manifest ; exists ; 1987 ; Industrial Lubrication and Tribology Volume 39 ; 39 ; >
-    au < crawling ; exists ; 1988 ; Industrial Lubrication and Tribology Volume 40 ; 40 ; >
+    au < frozen ; exists ; 1988 ; Industrial Lubrication and Tribology Volume 40 ; 40 ; >
     au < finished ; manifest ; 1989 ; Industrial Lubrication and Tribology Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1990 ; Industrial Lubrication and Tribology Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1991 ; Industrial Lubrication and Tribology Volume 43 ; 43 ; reingest4.clockss.org:8082 >
@@ -3771,7 +3771,7 @@
     au < manifest ; exists ; 1985 ; Industrial Robot: The international journal of industrial and service robotics Volume 12 ; 12 ; >
     au < manifest ; exists ; 1986 ; Industrial Robot: The international journal of industrial and service robotics Volume 13 ; 13 ; >
     au < manifest ; exists ; 1987 ; Industrial Robot: The international journal of industrial and service robotics Volume 14 ; 14 ; >
-    au < crawling ; exists ; 1988 ; Industrial Robot: The international journal of industrial and service robotics Volume 15 ; 15 ; >
+    au < frozen ; exists ; 1988 ; Industrial Robot: The international journal of industrial and service robotics Volume 15 ; 15 ; >
     au < finished ; manifest ; 1989 ; Industrial Robot: The international journal of industrial and service robotics Volume 16 ; 16 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1990 ; Industrial Robot: The international journal of industrial and service robotics Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; Industrial Robot: The international journal of industrial and service robotics Volume 18 ; 18 ; reingest5.clockss.org:8082 >
@@ -3918,7 +3918,7 @@
     au < manifest ; exists ; 1982-1983 ; Office Technology and People Volume 1 ; 1 ; >
     au < manifest ; exists ; 1985 ; Office Technology and People Volume 2 ; 2 ; >
     au < manifest ; exists ; 1987 ; Office Technology and People Volume 3 ; 3 ; >
-    au < crawling ; exists ; 1988 ; Office Technology and People Volume 4 ; 4 ; >
+    au < frozen ; exists ; 1988 ; Office Technology and People Volume 4 ; 4 ; >
     au < finished ; manifest ; 1989 ; Office Technology and People Volume 5 ; 5 ; reingest4.clockss.org:8082 >
 
   }
@@ -4196,7 +4196,7 @@
     au < manifest ; exists ; 1985 ; International Journal of Bank Marketing Volume 3 ; 3 ; >
     au < manifest ; exists ; 1986 ; International Journal of Bank Marketing Volume 4 ; 4 ; >
     au < manifest ; exists ; 1987 ; International Journal of Bank Marketing Volume 5 ; 5 ; >
-    au < crawling ; exists ; 1988 ; International Journal of Bank Marketing Volume 6 ; 6 ; >
+    au < frozen ; exists ; 1988 ; International Journal of Bank Marketing Volume 6 ; 6 ; >
     au < finished ; manifest ; 1989 ; International Journal of Bank Marketing Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1990 ; International Journal of Bank Marketing Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; International Journal of Bank Marketing Volume 9 ; 9 ; reingest3.clockss.org:8083 >
@@ -4615,7 +4615,7 @@
     comment[journal_id] = ijem
 
     au < manifest ; exists ; 1987 ; International Journal of Educational Management Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1988 ; International Journal of Educational Management Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1988 ; International Journal of Educational Management Volume 2 ; 2 ; >
     au < finished ; manifest ; 1989 ; International Journal of Educational Management Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1990 ; International Journal of Educational Management Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1991 ; International Journal of Educational Management Volume 5 ; 5 ; reingest4.clockss.org:8082 >
@@ -4864,7 +4864,7 @@
     param[journal_issn] = 0952-6862
     comment[journal_id] = ijhcqa
 
-    au < crawling ; exists ; 1988 ; International Journal of Health Care Quality Assurance Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1988 ; International Journal of Health Care Quality Assurance Volume 1 ; 1 ; >
     au < finished ; manifest ; 1989 ; International Journal of Health Care Quality Assurance Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1990 ; International Journal of Health Care Quality Assurance Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; International Journal of Health Care Quality Assurance Volume 4 ; 4 ; reingest5.clockss.org:8082 >
@@ -5676,7 +5676,7 @@
     au < manifest ; exists ; 1985 ; International Journal of Physical Distribution & Materials Management Volume 15 ; 15 ; >
     au < manifest ; exists ; 1986 ; International Journal of Physical Distribution & Materials Management Volume 16 ; 16 ; >
     au < manifest ; exists ; 1987 ; International Journal of Physical Distribution & Materials Management Volume 17 ; 17 ; >
-    au < crawling ; exists ; 1988 ; International Journal of Physical Distribution & Materials Management Volume 18 ; 18 ; >
+    au < frozen ; exists ; 1988 ; International Journal of Physical Distribution & Materials Management Volume 18 ; 18 ; >
     au < finished ; manifest ; 1989 ; International Journal of Physical Distribution & Materials Management Volume 19 ; 19 ; reingest4.clockss.org:8082 >
 
   }
@@ -5813,7 +5813,7 @@
     param[journal_issn] = 0951-3558
     comment[journal_id] = ijpsm
 
-    au < crawling ; exists ; 1988 ; International Journal of Public Sector Management Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1988 ; International Journal of Public Sector Management Volume 1 ; 1 ; >
     au < finished ; manifest ; 1989 ; International Journal of Public Sector Management Volume 2 ; 2 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1990 ; International Journal of Public Sector Management Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; International Journal of Public Sector Management Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -6682,7 +6682,7 @@
     au < deepCrawl ; exists ; 2021 ; Journal of Agribusiness in Developing and Emerging Economies Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Agribusiness in Developing and Emerging Economies Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Agribusiness in Developing and Emerging Economies Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2024 ; Journal of Agribusiness in Developing and Emerging Economies Volume 14 ; 14 ; >
+    au < deepCrawl ; exists ; 2024 ; Journal of Agribusiness in Developing and Emerging Economies Volume 14 ; 14 ; >
     au < doNotProcess ; exists ; 2025 ; Journal of Agribusiness in Developing and Emerging Economies Volume 15 ; 15 ; >
 
   }
@@ -6751,7 +6751,7 @@
     au < deepCrawl ; exists ; 2021 ; Journal of Applied Research in Higher Education Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Applied Research in Higher Education Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Applied Research in Higher Education Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2024 ; Journal of Applied Research in Higher Education Volume 16 ; 16 ; >
+    au < deepCrawl ; exists ; 2024 ; Journal of Applied Research in Higher Education Volume 16 ; 16 ; >
     au < doNotProcess ; exists ; 2025 ; Journal of Applied Research in Higher Education Volume 17 ; 17 ; >
 
   }
@@ -6849,7 +6849,7 @@
 
     au < manifest ; exists ; 1986 ; Journal of Business & Industrial Marketing Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; Journal of Business & Industrial Marketing Volume 2 ; 2 ; >
-    au < crawling ; exists ; 1988 ; Journal of Business & Industrial Marketing Volume 3 ; 3 ; >
+    au < frozen ; exists ; 1988 ; Journal of Business & Industrial Marketing Volume 3 ; 3 ; >
     au < finished ; manifest ; 1989 ; Journal of Business & Industrial Marketing Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1990 ; Journal of Business & Industrial Marketing Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1991 ; Journal of Business & Industrial Marketing Volume 6 ; 6 ; reingest4.clockss.org:8082 >
@@ -6908,7 +6908,7 @@
     au < manifest ; exists ; 1986 ; Journal of Business Strategy Volume 6 ; 6 ; >
     au < manifest ; exists ; 1987 ; Journal of Business Strategy Volume 7 ; 7 ; >
     au < manifest ; exists ; 1987 ; Journal of Business Strategy Volume 8 ; 8 ; >
-    au < crawling ; exists ; 1988 ; Journal of Business Strategy Volume 9 ; 9 ; >
+    au < frozen ; exists ; 1988 ; Journal of Business Strategy Volume 9 ; 9 ; >
     au < finished ; manifest ; 1989 ; Journal of Business Strategy Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1990 ; Journal of Business Strategy Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1991 ; Journal of Business Strategy Volume 12 ; 12 ; reingest4.clockss.org:8082 >
@@ -7010,7 +7010,7 @@
     au < deepCrawl ; exists ; 2021 ; Journal of Chinese Economic and Foreign Trade Studies Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Chinese Economic and Foreign Trade Studies Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Chinese Economic and Foreign Trade Studies Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2024 ; Journal of Chinese Economic and Foreign Trade Studies Volume 17 ; 17 ; >
+    au < deepCrawl ; exists ; 2024 ; Journal of Chinese Economic and Foreign Trade Studies Volume 17 ; 17 ; >
     au < doNotProcess ; exists ; 2025 ; Journal of Chinese Economic and Foreign Trade Studies Volume 18 ; 18 ; >
 
   }
@@ -7655,7 +7655,7 @@
     au < deepCrawl ; exists ; 2021 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 17 ; 17 ; >
-    au < crawling ; exists ; 2024 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 18 ; 18 ; >
+    au < deepCrawl ; exists ; 2024 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 18 ; 18 ; >
     au < doNotProcess ; exists ; 2025 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 19 ; 19 ; >
 
   }
@@ -8196,7 +8196,7 @@
     au < deepCrawl ; exists ; 2021 ; Journal of Hospitality and Tourism Technology Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Hospitality and Tourism Technology Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Hospitality and Tourism Technology Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2024 ; Journal of Hospitality and Tourism Technology Volume 15 ; 15 ; >
+    au < deepCrawl ; exists ; 2024 ; Journal of Hospitality and Tourism Technology Volume 15 ; 15 ; >
     au < doNotProcess ; exists ; 2025 ; Journal of Hospitality and Tourism Technology Volume 16 ; 16 ; >
 
   }
@@ -9320,7 +9320,7 @@
     au < deepCrawl ; exists ; 2021 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2024 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 23 ; 23 ; >
+    au < deepCrawl ; exists ; 2024 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 23 ; 23 ; >
     au < doNotProcess ; exists ; 2025 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 24 ; 24 ; >
 
   }
@@ -10241,7 +10241,7 @@
     au < deepCrawl ; exists ; 2021 ; Library Management Volume 42 ; 42 ; >
     au < deepCrawl ; exists ; 2022 ; Library Management Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2023 ; Library Management Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2024 ; Library Management Volume 45 ; 45 ; >
+    au < deepCrawl ; exists ; 2024 ; Library Management Volume 45 ; 45 ; >
     au < doNotProcess ; exists ; 2025 ; Library Management Volume 46 ; 46 ; >
 
   }
@@ -12709,7 +12709,7 @@
     au < deepCrawl ; exists ; 2021 ; Review of Behavioral Finance Volume 13 ; 13 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2021-0013/urn:emeraldgroup.com:asset:id:binary:RBF-01-2021-0013_mmc001.docx
     au < deepCrawl ; exists ; 2022 ; Review of Behavioral Finance Volume 14 ; 14 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2022-0014/urn:emeraldgroup.com:asset:id:binary:RBF-01-2022-0014_mmc001.docx
     au < deepCrawl ; exists ; 2023 ; Review of Behavioral Finance Volume 15 ; 15 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2023-0015/urn:emeraldgroup.com:asset:id:binary:RBF-01-2023-0015_mmc001.docx
-    au < crawling ; exists ; 2024 ; Review of Behavioral Finance Volume 16 ; 16 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2024-0016/urn:emeraldgroup.com:asset:id:binary:RBF-01-2024-0016_mmc001.docx
+    au < deepCrawl ; exists ; 2024 ; Review of Behavioral Finance Volume 16 ; 16 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2024-0016/urn:emeraldgroup.com:asset:id:binary:RBF-01-2024-0016_mmc001.docx
     au < doNotProcess ; exists ; 2025 ; Review of Behavioral Finance Volume 17 ; 17 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2025-0017/urn:emeraldgroup.com:asset:id:binary:RBF-01-2025-0017_mmc001.docx
 
   }
@@ -13350,7 +13350,7 @@
     au < deepCrawl ; exists ; 2021 ; International Journal of Building Pathology and Adaptation Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2022 ; International Journal of Building Pathology and Adaptation Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2023 ; International Journal of Building Pathology and Adaptation Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2024 ; International Journal of Building Pathology and Adaptation Volume 42 ; 42 ; >
+    au < deepCrawl ; exists ; 2024 ; International Journal of Building Pathology and Adaptation Volume 42 ; 42 ; >
     au < doNotProcess ; exists ; 2025 ; International Journal of Building Pathology and Adaptation Volume 43 ; 43 ; >
 
   }
