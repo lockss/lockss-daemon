@@ -18,20 +18,20 @@
 
       param[journal_id] = bm
     
-      au < released ; 2010 ; Beneficial Microbes Volume 1 ; 1 ; http://www.wageningenacademic.com/ >
-      au < released ; 2011 ; Beneficial Microbes Volume 2 ; 2 ; http://www.wageningenacademic.com/ >
-      au < released ; 2012 ; Beneficial Microbes Volume 3 ; 3 ; http://www.wageningenacademic.com/ >
-      au < released ; 2013 ; Beneficial Microbes Volume 4 ; 4 ; http://www.wageningenacademic.com/ >
-      au < released ; 2014 ; Beneficial Microbes Volume 5 ; 5 ; http://www.wageningenacademic.com/ >
-      au < released ; 2015 ; Beneficial Microbes Volume 6 ; 6 ; http://www.wageningenacademic.com/ >
-      au < released ; 2016 ; Beneficial Microbes Volume 7 ; 7 ; http://www.wageningenacademic.com/ >
-      au < released ; 2017 ; Beneficial Microbes Volume 8 ; 8 ; https://www.wageningenacademic.com/ >
-      au < released ; 2018 ; Beneficial Microbes Volume 9 ; 9 ; https://www.wageningenacademic.com/ >
-      au < released ; 2019 ; Beneficial Microbes Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
-      au < released ; 2020 ; Beneficial Microbes Volume 11 ; 11 ; https://www.wageningenacademic.com/ >
-      au < released ; 2021 ; Beneficial Microbes Volume 12 ; 12 ; https://www.wageningenacademic.com/ >
-      au < released ; 2022 ; Beneficial Microbes Volume 13 ; 13 ; https://www.wageningenacademic.com/ >
-      au < released ; 2023 ; Beneficial Microbes Volume 14 ; 14 ; https://www.wageningenacademic.com/ >
+      au < down ; 2010 ; Beneficial Microbes Volume 1 ; 1 ; http://www.wageningenacademic.com/ >
+      au < down ; 2011 ; Beneficial Microbes Volume 2 ; 2 ; http://www.wageningenacademic.com/ >
+      au < down ; 2012 ; Beneficial Microbes Volume 3 ; 3 ; http://www.wageningenacademic.com/ >
+      au < down ; 2013 ; Beneficial Microbes Volume 4 ; 4 ; http://www.wageningenacademic.com/ >
+      au < down ; 2014 ; Beneficial Microbes Volume 5 ; 5 ; http://www.wageningenacademic.com/ >
+      au < down ; 2015 ; Beneficial Microbes Volume 6 ; 6 ; http://www.wageningenacademic.com/ >
+      au < down ; 2016 ; Beneficial Microbes Volume 7 ; 7 ; http://www.wageningenacademic.com/ >
+      au < down ; 2017 ; Beneficial Microbes Volume 8 ; 8 ; https://www.wageningenacademic.com/ >
+      au < down ; 2018 ; Beneficial Microbes Volume 9 ; 9 ; https://www.wageningenacademic.com/ >
+      au < down ; 2019 ; Beneficial Microbes Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
+      au < down ; 2020 ; Beneficial Microbes Volume 11 ; 11 ; https://www.wageningenacademic.com/ >
+      au < down ; 2021 ; Beneficial Microbes Volume 12 ; 12 ; https://www.wageningenacademic.com/ >
+      au < down ; 2022 ; Beneficial Microbes Volume 13 ; 13 ; https://www.wageningenacademic.com/ >
+      au < down ; 2023 ; Beneficial Microbes Volume 14 ; 14 ; https://www.wageningenacademic.com/ >
       au < doNotProcess ; 2024 ; Beneficial Microbes Volume 15 ; 15 ; https://www.wageningenacademic.com/ >
 
     }
@@ -46,18 +46,18 @@
 
       param[journal_id] = cep
 
-      au < released ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 ; http://www.wageningenacademic.com/ >
-      au < released ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 ; http://www.wageningenacademic.com/ >
-      au < released ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 ; http://www.wageningenacademic.com/ >
-      au < released ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 ; http://www.wageningenacademic.com/ >
-      au < released ; 2016 ; Comparative Exercise Physiology Volume 12 ; 12 ; http://www.wageningenacademic.com/ >
-      au < released ; 2017 ; Comparative Exercise Physiology Volume 13 ; 13 ; https://www.wageningenacademic.com/ >
-      au < released ; 2018 ; Comparative Exercise Physiology Volume 14 ; 14 ; https://www.wageningenacademic.com/ >
-      au < released ; 2019 ; Comparative Exercise Physiology Volume 15 ; 15 ; https://www.wageningenacademic.com/ >
-      au < released ; 2020 ; Comparative Exercise Physiology Volume 16 ; 16 ; https://www.wageningenacademic.com/ >
-      au < released ; 2021 ; Comparative Exercise Physiology Volume 17 ; 17 ; https://www.wageningenacademic.com/ >
-      au < released ; 2022 ; Comparative Exercise Physiology Volume 18 ; 18 ; https://www.wageningenacademic.com/ >
-      au < released ; 2023 ; Comparative Exercise Physiology Volume 19 ; 19 ; https://www.wageningenacademic.com/ >
+      au < down ; 2012 ; Comparative Exercise Physiology Volume 8 ; 8 ; http://www.wageningenacademic.com/ >
+      au < down ; 2013 ; Comparative Exercise Physiology Volume 9 ; 9 ; http://www.wageningenacademic.com/ >
+      au < down ; 2014 ; Comparative Exercise Physiology Volume 10 ; 10 ; http://www.wageningenacademic.com/ >
+      au < down ; 2015 ; Comparative Exercise Physiology Volume 11 ; 11 ; http://www.wageningenacademic.com/ >
+      au < down ; 2016 ; Comparative Exercise Physiology Volume 12 ; 12 ; http://www.wageningenacademic.com/ >
+      au < down ; 2017 ; Comparative Exercise Physiology Volume 13 ; 13 ; https://www.wageningenacademic.com/ >
+      au < down ; 2018 ; Comparative Exercise Physiology Volume 14 ; 14 ; https://www.wageningenacademic.com/ >
+      au < down ; 2019 ; Comparative Exercise Physiology Volume 15 ; 15 ; https://www.wageningenacademic.com/ >
+      au < down ; 2020 ; Comparative Exercise Physiology Volume 16 ; 16 ; https://www.wageningenacademic.com/ >
+      au < down ; 2021 ; Comparative Exercise Physiology Volume 17 ; 17 ; https://www.wageningenacademic.com/ >
+      au < down ; 2022 ; Comparative Exercise Physiology Volume 18 ; 18 ; https://www.wageningenacademic.com/ >
+      au < down ; 2023 ; Comparative Exercise Physiology Volume 19 ; 19 ; https://www.wageningenacademic.com/ >
       au < doNotProcess ; 2024 ; Comparative Exercise Physiology Volume 20 ; 20 ; https://www.wageningenacademic.com/ >
 
     }
@@ -72,9 +72,9 @@
       param[journal_id] = jaan
       #move to Brill
 
-      au < released ; 2020 ; Journal of Applied Animal Nutrition Volume 8 ; 8 ; https://www.wageningenacademic.com/ >
-      au < released ; 2021 ; Journal of Applied Animal Nutrition Volume 9 ; 9 ; https://www.wageningenacademic.com/ >
-      au < released ; 2022 ; Journal of Applied Animal Nutrition Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
+      au < down ; 2020 ; Journal of Applied Animal Nutrition Volume 8 ; 8 ; https://www.wageningenacademic.com/ >
+      au < down ; 2021 ; Journal of Applied Animal Nutrition Volume 9 ; 9 ; https://www.wageningenacademic.com/ >
+      au < down ; 2022 ; Journal of Applied Animal Nutrition Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
 
     }
 
@@ -87,15 +87,15 @@
 
       param[journal_id] = jiff
 
-      au < released ; 2015 ; Journal of Insects as Food and Feed Volume 1 ; 1 ; http://www.wageningenacademic.com/ >
-      au < released ; 2016 ; Journal of Insects as Food and Feed Volume 2 ; 2 ; http://www.wageningenacademic.com/ >
-      au < released ; 2017 ; Journal of Insects as Food and Feed Volume 3 ; 3 ; https://www.wageningenacademic.com/ >
-      au < released ; 2018 ; Journal of Insects as Food and Feed Volume 4 ; 4 ; https://www.wageningenacademic.com/ >
-      au < released ; 2019 ; Journal of Insects as Food and Feed Volume 5 ; 5 ; https://www.wageningenacademic.com/ >
-      au < released ; 2020 ; Journal of Insects as Food and Feed Volume 6 ; 6 ; https://www.wageningenacademic.com/ >
-      au < released ; 2021 ; Journal of Insects as Food and Feed Volume 7 ; 7 ; https://www.wageningenacademic.com/ >
-      au < released ; 2022 ; Journal of Insects as Food and Feed Volume 8 ; 8 ; https://www.wageningenacademic.com/ >
-      au < released ; 2023 ; Journal of Insects as Food and Feed Volume 9 ; 9 ; https://www.wageningenacademic.com/ >
+      au < down ; 2015 ; Journal of Insects as Food and Feed Volume 1 ; 1 ; http://www.wageningenacademic.com/ >
+      au < down ; 2016 ; Journal of Insects as Food and Feed Volume 2 ; 2 ; http://www.wageningenacademic.com/ >
+      au < down ; 2017 ; Journal of Insects as Food and Feed Volume 3 ; 3 ; https://www.wageningenacademic.com/ >
+      au < down ; 2018 ; Journal of Insects as Food and Feed Volume 4 ; 4 ; https://www.wageningenacademic.com/ >
+      au < down ; 2019 ; Journal of Insects as Food and Feed Volume 5 ; 5 ; https://www.wageningenacademic.com/ >
+      au < down ; 2020 ; Journal of Insects as Food and Feed Volume 6 ; 6 ; https://www.wageningenacademic.com/ >
+      au < down ; 2021 ; Journal of Insects as Food and Feed Volume 7 ; 7 ; https://www.wageningenacademic.com/ >
+      au < down ; 2022 ; Journal of Insects as Food and Feed Volume 8 ; 8 ; https://www.wageningenacademic.com/ >
+      au < down ; 2023 ; Journal of Insects as Food and Feed Volume 9 ; 9 ; https://www.wageningenacademic.com/ >
       au < doNotProcess ; 2024 ; Journal of Insects as Food and Feed Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
 
     }
@@ -110,22 +110,22 @@
 
       param[journal_id] = jcns
 
-      au < released ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 ; http://www.wageningenacademic.com/ >
-      au < released ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 ; http://www.wageningenacademic.com/ >
-      au < released ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 ; http://www.wageningenacademic.com/ >
-      au < released ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 ; http://www.wageningenacademic.com/ >
-      au < released ; 2005 ; Journal on Chain and Network Science Volume 5 ; 5 ; http://www.wageningenacademic.com/ >
-      au < released ; 2006 ; Journal on Chain and Network Science Volume 6 ; 6 ; http://www.wageningenacademic.com/ >
-      au < released ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 ; http://www.wageningenacademic.com/ >
-      au < released ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 ; http://www.wageningenacademic.com/ >
-      au < released ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 ; http://www.wageningenacademic.com/ >
-      au < released ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 ; http://www.wageningenacademic.com/ >
-      au < released ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 ; http://www.wageningenacademic.com/ >
-      au < released ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 ; http://www.wageningenacademic.com/ >
-      au < released ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 ; http://www.wageningenacademic.com/ >
-      au < released ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 ; http://www.wageningenacademic.com/ >
-      au < released ; 2015 ; Journal on Chain and Network Science Volume 15 ; 15 ; http://www.wageningenacademic.com/ >
-      au < released ; 2016 ; Journal on Chain and Network Science Volume 16 ; 16 ; http://www.wageningenacademic.com/ >
+      au < down ; 2001 ; Journal on Chain and Network Science Volume 1 ; 1 ; http://www.wageningenacademic.com/ >
+      au < down ; 2002 ; Journal on Chain and Network Science Volume 2 ; 2 ; http://www.wageningenacademic.com/ >
+      au < down ; 2003 ; Journal on Chain and Network Science Volume 3 ; 3 ; http://www.wageningenacademic.com/ >
+      au < down ; 2004 ; Journal on Chain and Network Science Volume 4 ; 4 ; http://www.wageningenacademic.com/ >
+      au < down ; 2005 ; Journal on Chain and Network Science Volume 5 ; 5 ; http://www.wageningenacademic.com/ >
+      au < down ; 2006 ; Journal on Chain and Network Science Volume 6 ; 6 ; http://www.wageningenacademic.com/ >
+      au < down ; 2007 ; Journal on Chain and Network Science Volume 7 ; 7 ; http://www.wageningenacademic.com/ >
+      au < down ; 2008 ; Journal on Chain and Network Science Volume 8 ; 8 ; http://www.wageningenacademic.com/ >
+      au < down ; 2009 ; Journal on Chain and Network Science Volume 9 ; 9 ; http://www.wageningenacademic.com/ >
+      au < down ; 2010 ; Journal on Chain and Network Science Volume 10 ; 10 ; http://www.wageningenacademic.com/ >
+      au < down ; 2011 ; Journal on Chain and Network Science Volume 11 ; 11 ; http://www.wageningenacademic.com/ >
+      au < down ; 2012 ; Journal on Chain and Network Science Volume 12 ; 12 ; http://www.wageningenacademic.com/ >
+      au < down ; 2013 ; Journal on Chain and Network Science Volume 13 ; 13 ; http://www.wageningenacademic.com/ >
+      au < down ; 2014 ; Journal on Chain and Network Science Volume 14 ; 14 ; http://www.wageningenacademic.com/ >
+      au < down ; 2015 ; Journal on Chain and Network Science Volume 15 ; 15 ; http://www.wageningenacademic.com/ >
+      au < down ; 2016 ; Journal on Chain and Network Science Volume 16 ; 16 ; http://www.wageningenacademic.com/ >
 
     }
 
@@ -140,13 +140,13 @@
       param[journal_id] = qas
       #Starting 1-1-2020, QAS will be published by Codon Publishing
 
-      au < released ; 2013 ; Quality Assurance and Safety of Crops & Foods Volume 5 ; 5 ; http://www.wageningenacademic.com/ >
-      au < released ; 2014 ; Quality Assurance and Safety of Crops & Foods Volume 6 ; 6 ; http://www.wageningenacademic.com/ >
-      au < released ; 2015 ; Quality Assurance and Safety of Crops & Foods Volume 7 ; 7 ; http://www.wageningenacademic.com/ >
-      au < released ; 2016 ; Quality Assurance and Safety of Crops & Foods Volume 8 ; 8 ; http://www.wageningenacademic.com/ >
-      au < released ; 2017 ; Quality Assurance and Safety of Crops & Foods Volume 9 ; 9 ; https://www.wageningenacademic.com/ >
-      au < released ; 2018 ; Quality Assurance and Safety of Crops & Foods Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
-      au < released ; 2019 ; Quality Assurance and Safety of Crops & Foods Volume 11 ; 11 ; https://www.wageningenacademic.com/ >
+      au < down ; 2013 ; Quality Assurance and Safety of Crops & Foods Volume 5 ; 5 ; http://www.wageningenacademic.com/ >
+      au < down ; 2014 ; Quality Assurance and Safety of Crops & Foods Volume 6 ; 6 ; http://www.wageningenacademic.com/ >
+      au < down ; 2015 ; Quality Assurance and Safety of Crops & Foods Volume 7 ; 7 ; http://www.wageningenacademic.com/ >
+      au < down ; 2016 ; Quality Assurance and Safety of Crops & Foods Volume 8 ; 8 ; http://www.wageningenacademic.com/ >
+      au < down ; 2017 ; Quality Assurance and Safety of Crops & Foods Volume 9 ; 9 ; https://www.wageningenacademic.com/ >
+      au < down ; 2018 ; Quality Assurance and Safety of Crops & Foods Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
+      au < down ; 2019 ; Quality Assurance and Safety of Crops & Foods Volume 11 ; 11 ; https://www.wageningenacademic.com/ >
 
     }
 
@@ -160,22 +160,22 @@
 
       param[journal_id] = wmj
 
-      au < released ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 ; http://www.wageningenacademic.com/ >
-      au < released ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; http://www.wageningenacademic.com/ >
-      au < released ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; http://www.wageningenacademic.com/ >
-      au < released ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; http://www.wageningenacademic.com/ >
-      au < released ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 ; http://www.wageningenacademic.com/ >
-      au < released ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 ; http://www.wageningenacademic.com/ >
-      au < released ; 2014 ; World Mycotoxin Journal Volume 7 ; 7 ; http://www.wageningenacademic.com/ >
-      au < released ; 2015 ; World Mycotoxin Journal Volume 8 ; 8 ; http://www.wageningenacademic.com/ >
-      au < released ; 2016 ; World Mycotoxin Journal Volume 9 ; 9 ; http://www.wageningenacademic.com/ >
-      au < released ; 2017 ; World Mycotoxin Journal Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
-      au < released ; 2018 ; World Mycotoxin Journal Volume 11 ; 11 ; https://www.wageningenacademic.com/ >
-      au < released ; 2019 ; World Mycotoxin Journal Volume 12 ; 12 ; https://www.wageningenacademic.com/ >
-      au < released ; 2020 ; World Mycotoxin Journal Volume 13 ; 13 ; https://www.wageningenacademic.com/ >
-      au < released ; 2021 ; World Mycotoxin Journal Volume 14 ; 14 ; https://www.wageningenacademic.com/ >
-      au < released ; 2022 ; World Mycotoxin Journal Volume 15 ; 15 ; https://www.wageningenacademic.com/ >
-      au < released ; 2023 ; World Mycotoxin Journal Volume 16 ; 16 ; https://www.wageningenacademic.com/ >
+      au < down ; 2008 ; World Mycotoxin Journal Volume 1 ; 1 ; http://www.wageningenacademic.com/ >
+      au < down ; 2009 ; World Mycotoxin Journal Volume 2 ; 2 ; http://www.wageningenacademic.com/ >
+      au < down ; 2010 ; World Mycotoxin Journal Volume 3 ; 3 ; http://www.wageningenacademic.com/ >
+      au < down ; 2011 ; World Mycotoxin Journal Volume 4 ; 4 ; http://www.wageningenacademic.com/ >
+      au < down ; 2012 ; World Mycotoxin Journal Volume 5 ; 5 ; http://www.wageningenacademic.com/ >
+      au < down ; 2013 ; World Mycotoxin Journal Volume 6 ; 6 ; http://www.wageningenacademic.com/ >
+      au < down ; 2014 ; World Mycotoxin Journal Volume 7 ; 7 ; http://www.wageningenacademic.com/ >
+      au < down ; 2015 ; World Mycotoxin Journal Volume 8 ; 8 ; http://www.wageningenacademic.com/ >
+      au < down ; 2016 ; World Mycotoxin Journal Volume 9 ; 9 ; http://www.wageningenacademic.com/ >
+      au < down ; 2017 ; World Mycotoxin Journal Volume 10 ; 10 ; https://www.wageningenacademic.com/ >
+      au < down ; 2018 ; World Mycotoxin Journal Volume 11 ; 11 ; https://www.wageningenacademic.com/ >
+      au < down ; 2019 ; World Mycotoxin Journal Volume 12 ; 12 ; https://www.wageningenacademic.com/ >
+      au < down ; 2020 ; World Mycotoxin Journal Volume 13 ; 13 ; https://www.wageningenacademic.com/ >
+      au < down ; 2021 ; World Mycotoxin Journal Volume 14 ; 14 ; https://www.wageningenacademic.com/ >
+      au < down ; 2022 ; World Mycotoxin Journal Volume 15 ; 15 ; https://www.wageningenacademic.com/ >
+      au < down ; 2023 ; World Mycotoxin Journal Volume 16 ; 16 ; https://www.wageningenacademic.com/ >
       au < doNotProcess ; 2024 ; World Mycotoxin Journal Volume 17 ; 17 ; https://www.wageningenacademic.com/ >
 
     }

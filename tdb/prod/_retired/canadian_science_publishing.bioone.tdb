@@ -20,15 +20,15 @@
       param[journal_id] = canadian-journal-of-animal-science
       #error for accessing https://bioone.org/images/,"403 Forbidden"
       
-      au < released ; 2016 ; Canadian Journal of Animal Science Volume 96 ; 2016 >
-      au < released ; 2017 ; Canadian Journal of Animal Science Volume 97 ; 2017 >
-      au < released ; 2018 ; Canadian Journal of Animal Science Volume 98 ; 2018 >
-      au < notReady ; 2019 ; Canadian Journal of Animal Science Volume 99 ; 2019 > #LXQUEUE-1991 no substance
-      au < released ; 2020 ; Canadian Journal of Animal Science Volume 100 ; 2020 >
-      au < released ; 2021 ; Canadian Journal of Animal Science Volume 101 ; 2021 >
-      au < released ; 2022 ; Canadian Journal of Animal Science Volume 102 ; 2022 >
-      au < released ; 2023 ; Canadian Journal of Animal Science Volume 103 ; 2023 >
-      au < notReady ; 2024 ; Canadian Journal of Animal Science Volume 104 ; 2024 > #LXQUEUE-1991 crawl no substance
+      au < down ; 2016 ; Canadian Journal of Animal Science Volume 96 ; 2016 >
+      au < down ; 2017 ; Canadian Journal of Animal Science Volume 97 ; 2017 >
+      au < down ; 2018 ; Canadian Journal of Animal Science Volume 98 ; 2018 >
+      au < doNotProcess ; 2019 ; Canadian Journal of Animal Science Volume 99 ; 2019 > #LXQUEUE-1991 no substance
+      au < down ; 2020 ; Canadian Journal of Animal Science Volume 100 ; 2020 >
+      au < down ; 2021 ; Canadian Journal of Animal Science Volume 101 ; 2021 >
+      au < down ; 2022 ; Canadian Journal of Animal Science Volume 102 ; 2022 >
+      au < down ; 2023 ; Canadian Journal of Animal Science Volume 103 ; 2023 >
+      au < doNotProcess ; 2024 ; Canadian Journal of Animal Science Volume 104 ; 2024 > #LXQUEUE-1991 crawl no substance
       au < doNotProcess ; 2025 ; Canadian Journal of Animal Science Volume 105 ; 2025 > #LXQUEUE-1991
 
   }
