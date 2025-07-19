@@ -50,9 +50,9 @@
    au < manifest ; exists ; 2007 ; 10.1190/SEGEAB.26 ; SEG Technical Program Expanded Abstracts Volume 2007 ; >
    au < manifest ; exists ; 2008 ; 10.1190/SEGEAB.27 ; SEG Technical Program Expanded Abstracts Volume 2008 ; >
    au < manifest ; exists ; 2009 ; 10.1190/SEGEAB.28 ; SEG Technical Program Expanded Abstracts Volume 2009 ; >
-   au < crawling ; exists ; 2010 ; 10.1190/SEGEAB.29 ; SEG Technical Program Expanded Abstracts Volume 2010 ; >
-   au < crawling ; exists ; 2011 ; 10.1190/SEGEAB.30 ; SEG Technical Program Expanded Abstracts Volume 2011 ; >
-   au < crawling ; exists ; 2012 ; 10.1190/segeab.31 ; SEG Technical Program Expanded Abstracts Volume 2012 ; >
+   au < frozen ; exists ; 2010 ; 10.1190/SEGEAB.29 ; SEG Technical Program Expanded Abstracts Volume 2010 ; >
+   au < frozen ; exists ; 2011 ; 10.1190/SEGEAB.30 ; SEG Technical Program Expanded Abstracts Volume 2011 ; >
+   au < frozen ; exists ; 2012 ; 10.1190/segeab.31 ; SEG Technical Program Expanded Abstracts Volume 2012 ; >
    au < frozen ; exists ; 2013 ; 10.1190/segeab.32 ; SEG Technical Program Expanded Abstracts Volume 2013 ; >
    au < frozen ; exists ; 2014 ; 10.1190/segeab.33 ; SEG Technical Program Expanded Abstracts Volume 2014 ; >
    au < frozen ; exists ; 2015 ; 10.1190/segeab.34 ; SEG Technical Program Expanded Abstracts Volume 2015 ; >
@@ -97,9 +97,9 @@
    au < manifest ; exists ; 2007 ; 10.1190/SAGEEP.20 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2007 ; >
    au < manifest ; exists ; 2008 ; 10.1190/SAGEEP.21 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2008 ; >
    au < manifest ; exists ; 2009 ; 10.1190/SAGEEP.22 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2009 ; >
-   au < crawling ; exists ; 2010 ; 10.1190/SAGEEP.23 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2010 ; >
-   au < crawling ; exists ; 2011 ; 10.1190/SAGEEP.24 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2011 ; >
-   au < crawling ; exists ; 2012 ; 10.1190/SAGEEP.25 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2012 ; >
+   au < frozen ; exists ; 2010 ; 10.1190/SAGEEP.23 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2010 ; >
+   au < frozen ; exists ; 2011 ; 10.1190/SAGEEP.24 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2011 ; >
+   au < frozen ; exists ; 2012 ; 10.1190/SAGEEP.25 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2012 ; >
    au < frozen ; exists ; 2013 ; 10.1190/sageep2013 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2013 ; >
    au < frozen ; exists ; 2014 ; 10.1190/SAGEEP.27 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2014 ; >
    au < frozen ; exists ; 2015 ; 10.1190/SAGEEP.28 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2015 ; >
@@ -125,7 +125,7 @@
    au < manifest ; exists ; 2005 ; 10.1190/SBGf2005 ; 9th International Congress of the Brazilian Geophysical Society & EXPOGEF 2005 ; >
    au < manifest ; exists ; 2007 ; 10.1190/SBGf2007 ; 10th International Congress of the Brazilian Geophysical Society & EXPOGEF 2007 ; >
    au < manifest ; exists ; 2009 ; 10.1190/SBGf2009 ; 11th International Congress of the Brazilian Geophysical Society & EXPOGEF 2009 ; >
-   au < crawling ; exists ; 2011 ; 10.1190/SBGf2011 ; 12th International Congress of the Brazilian Geophysical Society & EXPOGEF 2011 ; >
+   au < frozen ; exists ; 2011 ; 10.1190/SBGf2011 ; 12th International Congress of the Brazilian Geophysical Society & EXPOGEF 2011 ; >
    au < frozen ; exists ; 2013 ; 10.1190/SBGf2013 ; 13th International Congress of the Brazilian Geophysical Society & EXPOGEF 2013 ; >
    au < frozen ; exists ; 2015 ; 10.1190/SBGf2015 ; 14th International Congress of the Brazilian Geophysical Society & EXPOGEF 2015 ; >
    au < frozen ; exists ; 2017 ; 10.1190/SBGf2017 ; 15th International Congress of the Brazilian Geophysical Society & EXPOGEF 2017 ; >
@@ -133,7 +133,7 @@
    #SEGJ International Symposium https://library.seg.org/topic/gma-series/segj
    au < manifest ; exists ; 2006 ; 10.1190/segj082006 ; Proceedings of the 8th SEGJ International Symposium ; >
    au < manifest ; exists ; 2009 ; 10.1190/segj092009 ; Proceedings of the 9th SEGJ International Symposium ; >
-   au < crawling ; exists ; 2011 ; 10.1190/segj102011 ; Proceedings of the 10th SEGJ International Symposium ; >
+   au < frozen ; exists ; 2011 ; 10.1190/segj102011 ; Proceedings of the 10th SEGJ International Symposium ; >
    au < frozen ; exists ; 2013 ; 10.1190/segj112013 ; Proceedings of the 11th SEGJ International Symposium ; >
    au < frozen ; exists ; 2015 ; 10.1190/segj122015 ; Proceedings of the 12th SEGJ International Symposium ; >
    au < frozen ; exists ; 2018 ; 10.1190/SEGJ2018 ; Proceedings of the 13th SEGJ International Symposium ; >
@@ -154,8 +154,8 @@
 
    #International Geophysical Conference https://library.seg.org/topic/gma-series/igc
    au < manifest ; exists ; 2009 ; 10.1190/978-1-56080-284-6.10 ; International Geophysical Conference and Exposition 2009 ; >
-   au < crawling ; exists ; 2011 ; 10.1190/GMALCH.16 ; International Geophysical Conference 2011 ; >
-   au < crawling ; exists ; 2012 ; 10.1190/IST092012 ; International Geophysical Conference and Oil & Gas Exhibition 2012 ; >
+   au < frozen ; exists ; 2011 ; 10.1190/GMALCH.16 ; International Geophysical Conference 2011 ; >
+   au < frozen ; exists ; 2012 ; 10.1190/IST092012 ; International Geophysical Conference and Oil & Gas Exhibition 2012 ; >
    au < frozen ; exists ; 2014 ; 10.1190/IGCBeijing2014 ; Beijing 2014 International Geophysical Conference & Exposition ; >
    au < frozen ; exists ; 2016 ; 10.1190/IGCBeijing2016 ; SPG/SEG 2016 International Geophysical Conference ; >
    au < frozen ; exists ; 2017 ; 10.1190/IGC2017 ; International Geophysical Conference 2017 ; >
