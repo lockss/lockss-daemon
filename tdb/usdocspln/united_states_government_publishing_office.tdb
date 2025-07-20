@@ -226,7 +226,7 @@
     au < manifest ; 1997 ; Account of the Receipts and Expenditures of the United States 1997 ; 1997 ; https://www.govinfo.gov/ >
     au < released ; 1998 ; Account of the Receipts and Expenditures of the United States 1998 ; 1998 ; https://www.govinfo.gov/ >
     au < released ; 1999 ; Account of the Receipts and Expenditures of the United States 1999 ; 1999 ; https://www.govinfo.gov/ >
-    au < manifest ; 2000 ; Account of the Receipts and Expenditures of the United States 2000 ; 2000 ; https://www.govinfo.gov/ >
+    au < ready ; 2000 ; Account of the Receipts and Expenditures of the United States 2000 ; 2000 ; https://www.govinfo.gov/ >
  
     au < released ; 2019 ; Account of the Receipts and Expenditures of the United States 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Account of the Receipts and Expenditures of the United States 2020 ; 2020 ; https://www.govinfo.gov/ >
@@ -791,10 +791,10 @@
     au < released ; 1992 ; CDOC 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < released ; 1994 ; CDOC 1994 ; 1994 ; https://www.govinfo.gov/ >
     au < released ; 1995 ; CDOC 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; CDOC 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; CDOC 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; CDOC 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; CDOC 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 1996 ; CDOC 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; CDOC 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; CDOC 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; CDOC 1999 ; 1999 ; https://www.govinfo.gov/ >
  
     au < released ; 2018 ; Congressional Documents 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Documents 2019 ; 2019 ; https://www.govinfo.gov/ >
@@ -837,13 +837,13 @@
     au < released ; 1963 ; Congressional Hearings 1963 ; 1963 ; https://www.govinfo.gov/ >
     au < released ; 1964 ; Congressional Hearings 1964 ; 1964 ; https://www.govinfo.gov/ >
     au < released ; 1965 ; Congressional Hearings 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < manifest ; 1966 ; Congressional Hearings 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < ready ; 1966 ; Congressional Hearings 1966 ; 1966 ; https://www.govinfo.gov/ >
     au < released ; 1967 ; Congressional Hearings 1967 ; 1967 ; https://www.govinfo.gov/ >
     au < released ; 1968 ; Congressional Hearings 1968 ; 1968 ; https://www.govinfo.gov/ >
     au < released ; 1969 ; Congressional Hearings 1969 ; 1969 ; https://www.govinfo.gov/ >
     au < released ; 1970 ; Congressional Hearings 1970 ; 1970 ; https://www.govinfo.gov/ >
     au < released ; 1971 ; Congressional Hearings 1971 ; 1971 ; https://www.govinfo.gov/ >
-    au < manifest ; 1972 ; Congressional Hearings 1972 ; 1972 ; https://www.govinfo.gov/ >
+    au < ready ; 1972 ; Congressional Hearings 1972 ; 1972 ; https://www.govinfo.gov/ >
     au < released ; 1973 ; Congressional Hearings 1973 ; 1973 ; https://www.govinfo.gov/ >
     au < released ; 1974 ; Congressional Hearings 1974 ; 1974 ; https://www.govinfo.gov/ >
     au < released ; 1975 ; Congressional Hearings 1975 ; 1975 ; https://www.govinfo.gov/ >
@@ -857,18 +857,18 @@
     au < doesNotExist ; 1983 ; Congressional Hearings 1983 ; 1983 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1984 ; Congressional Hearings 1984 ; 1984 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1985 ; Congressional Hearings 1985 ; 1985 ; https://www.govinfo.gov/ >
-    au < manifest ; 1986 ; Congressional Hearings 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < manifest ; 1987 ; Congressional Hearings 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < ready ; 1986 ; Congressional Hearings 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < ready ; 1987 ; Congressional Hearings 1987 ; 1987 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1988 ; Congressional Hearings 1988 ; 1988 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1989 ; Congressional Hearings 1989 ; 1989 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 1990 ; Congressional Hearings 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < manifest ; 1993 ; Congressional Hearings 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < manifest ; 1994 ; Congressional Hearings 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < manifest ; 1995 ; Congressional Hearings 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; Congressional Hearings 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; Congressional Hearings 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; Congressional Hearings 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; Congressional Hearings 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 1993 ; Congressional Hearings 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < ready ; 1994 ; Congressional Hearings 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < ready ; 1995 ; Congressional Hearings 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < ready ; 1996 ; Congressional Hearings 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; Congressional Hearings 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; Congressional Hearings 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; Congressional Hearings 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2000 ; Congressional Hearings 2000 ; 2000 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2001 ; Congressional Hearings 2001 ; 2001 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2002 ; Congressional Hearings 2002 ; 2002 ; https://www.govinfo.gov/ >
@@ -907,11 +907,11 @@
     param[collection_id] = CREC
 
     au < manifest ; 1994 ; Congressional Record 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < manifest ; 1995 ; Congressional Record 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; Congressional Record 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; Congressional Record 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; Congressional Record 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; Congressional Record 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 1995 ; Congressional Record 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < ready ; 1996 ; Congressional Record 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; Congressional Record 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; Congressional Record 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; Congressional Record 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; Congressional Record 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Congressional Record 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Record 2019 ; 2019 ; https://www.govinfo.gov/ >
@@ -940,7 +940,7 @@
     param[collection_id] = CRECB
 
 
-    au < manifest ; 1999 ; CRECB 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; CRECB 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < released ; 2002 ; Congressional Record (Bound) 2002 ; 2002 ; https://www.govinfo.gov/ >
     au < released ; 2003 ; Congressional Record (Bound) 2003 ; 2003 ; https://www.govinfo.gov/ >
     au < released ; 2004 ; Congressional Record (Bound) 2004 ; 2004 ; https://www.govinfo.gov/ >
@@ -1091,12 +1091,12 @@
 
     param[collection_id] = CRI
 
-    au < manifest ; 1983 ; CRI 1983 ; 1983 ; https://www.govinfo.gov/ >
-    au < manifest ; 1984 ; CRI 1984 ; 1984 ; https://www.govinfo.gov/ >
-    au < manifest ; 1985 ; CRI 1985 ; 1985 ; https://www.govinfo.gov/ >
-    au < manifest ; 1986 ; CRI 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < manifest ; 1987 ; CRI 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < manifest ; 1988 ; CRI 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < ready ; 1983 ; CRI 1983 ; 1983 ; https://www.govinfo.gov/ >
+    au < ready ; 1984 ; CRI 1984 ; 1984 ; https://www.govinfo.gov/ >
+    au < ready ; 1985 ; CRI 1985 ; 1985 ; https://www.govinfo.gov/ >
+    au < ready ; 1986 ; CRI 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < ready ; 1987 ; CRI 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < ready ; 1988 ; CRI 1988 ; 1988 ; https://www.govinfo.gov/ >
     au < manifest ; 1989 ; CRI 1989 ; 1989 ; https://www.govinfo.gov/ >
     au < manifest ; 1990 ; CRI 1990 ; 1990 ; https://www.govinfo.gov/ >
     au < manifest ; 1991 ; CRI 1991 ; 1991 ; https://www.govinfo.gov/ >
