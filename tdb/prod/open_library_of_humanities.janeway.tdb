@@ -560,7 +560,7 @@
       au < released ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 >
       au < released ; 2022 ; 7 ; Glossa: a journal of general linguistics Volume 2022 ; 2022 >
       au < notReady ; 2023 ; 8 ; Glossa: a journal of general linguistics Volume 2023 ; 2023 > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5823/galley/23046/download/
-      au < manifest ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 >
+      au < ready ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 >
       au < manifest ; 2025 ; 10 ; Glossa: a journal of general linguistics Volume 2025 ; 2025 >
 
   }
@@ -737,7 +737,7 @@
       #All issues were published the day before the new year, except 2023.
       #Volumes are 2006, 2008, 2012, 2015, 2022, 2023.
 
-      au < manifest ; 2006 ; 1 ; Lifewriting Annual Volume 2006 ; 2005 >
+      au < ready ; 2006 ; 1 ; Lifewriting Annual Volume 2006 ; 2005 >
       au < released ; 2008 ; 2 ; Lifewriting Annual Volume 2008 ; 2007 >
       au < released ; 2012 ; 3 ; Lifewriting Annual Volume 2012 ; 2012 >
       au < released ; 2015 ; 4 ; Lifewriting Annual Volume 2015 ; 2014 >
