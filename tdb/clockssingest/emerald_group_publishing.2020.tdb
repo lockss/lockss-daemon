@@ -1932,16 +1932,16 @@
     au < finished ; manifest ; 2007 ; Competitiveness Review: An International Business Journal Volume 17 ; 17 ; reingest1.clockss.org:8082 > #500 error 
     au < finished ; manifest ; 2008 ; Competitiveness Review: An International Business Journal Volume 18 ; 18 ; reingest3.clockss.org:8083 > #500 error 
     au < finished ; manifest ; 2009 ; Competitiveness Review: An International Business Journal Volume 19 ; 19 ; reingest4.clockss.org:8082 > #500 error 
-    au < crawling ; exists ; 2010 ; Competitiveness Review: An International Business Journal Volume 20 ; 20 ; > #500 error 
-    au < crawling ; exists ; 2011 ; Competitiveness Review: An International Business Journal Volume 21 ; 21 ; > #500 error 
-    au < crawling ; exists ; 2012 ; Competitiveness Review: An International Business Journal Volume 22 ; 22 ; > #500 error 
-    au < crawling ; exists ; 2013 ; Competitiveness Review: An International Business Journal Volume 23 ; 23 ; > #500 error 
-    au < crawling ; exists ; 2014 ; Competitiveness Review: An International Business Journal Volume 24 ; 24 ; > #500 error 
+    au < frozen ; exists ; 2010 ; Competitiveness Review: An International Business Journal Volume 20 ; 20 ; > #500 error 
+    au < frozen ; exists ; 2011 ; Competitiveness Review: An International Business Journal Volume 21 ; 21 ; > #500 error 
+    au < frozen ; exists ; 2012 ; Competitiveness Review: An International Business Journal Volume 22 ; 22 ; > #500 error 
+    au < frozen ; exists ; 2013 ; Competitiveness Review: An International Business Journal Volume 23 ; 23 ; > #500 error 
+    au < frozen ; exists ; 2014 ; Competitiveness Review: An International Business Journal Volume 24 ; 24 ; > #500 error 
     au < doNotProcess ; doNotProcess ; 2015 ; Competitiveness Review: An International Business Journal Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Competitiveness Review: An International Business Journal Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Competitiveness Review: An International Business Journal Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Competitiveness Review: An International Business Journal Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2019 ; Competitiveness Review: An International Business Journal Volume 29 ; 29 ; > #500 error 
+    au < frozen ; exists ; 2019 ; Competitiveness Review: An International Business Journal Volume 29 ; 29 ; > #500 error 
     au < deepCrawl ; exists ; 2020 ; Competitiveness Review: An International Business Journal Volume 30 ; 30 ; >
     au < finished ; manifest ; 2021 ; Competitiveness Review: An International Business Journal Volume 31 ; 31 ; reingest5.clockss.org:8082 > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
     au < deepCrawl ; exists ; 2022 ; Competitiveness Review: An International Business Journal Volume 32 ; 32 ; > #500 error on https://www.emerald.com/insight/content/doi/10.1108/CR-05-2020-0078/full/html
