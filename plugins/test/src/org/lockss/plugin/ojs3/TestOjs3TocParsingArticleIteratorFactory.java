@@ -48,9 +48,9 @@ import org.lockss.util.*;
  * 
  */
 
-public class TestOjs3ArticleIteratorFactory extends ArticleIteratorTestCase {
+public class TestOjs3TocParsingArticleIteratorFactory extends ArticleIteratorTestCase {
   
-  static Logger log = Logger.getLogger(TestOjs3ArticleIteratorFactory.class);
+  static Logger log = Logger.getLogger(TestOjs3TocParsingArticleIteratorFactory.class);
 
   SimulatedArchivalUnit sau;
   private final String PLUGIN_NAME = "org.lockss.plugin.ojs3.Ojs3Plugin";
