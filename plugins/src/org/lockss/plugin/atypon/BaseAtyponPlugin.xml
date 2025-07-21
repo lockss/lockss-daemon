@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>174</string>
+    <string>175</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -416,7 +416,6 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- www.emeraldinsight.com.global.prod.fastly.net for some js files -->
       <string>"%s\.global\.prod\.fastly\.net", url_host(base_url)</string>
       <string>"faseb-prod-cdn\.literatumonline\.com"</string>
-      <string>static\.cloudflareinsights\.com</string>
       <string>securepubads\.g\.doubleclick\.net</string>
       <string>weby\.aaas\.org</string>
       <string>assets\.adobedtm\.com</string>
@@ -424,10 +423,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>scholar\.google\.com</string>
       <string>d1bxh8uas1mnw7\.cloudfront\.net</string>
       <string>play\.cadmore\.media</string>
-      <string>js\.trendmd\.com</string>
       <string>widgets\.figshare\.com</string>
-      <string>api\.b2c\.com</string>
-      <string>js\.trendmd\.com</string>
     </list>
   </entry>
   <!--  versioning or variants for style support -->
