@@ -64,15 +64,15 @@
       au < manifest ; exists ; 1988 ; 1988 ; 6 ; Documenta Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 7 ; Documenta Volume 1989 ; >
       au < frozen ; exists ; 1990 ; 1990 ; 8 ; Documenta Volume 1990 ; >
-      au < ready ; exists ; 1991 ; 1991 ; 9 ; Documenta Volume 1991 ; >
+      au < crawling ; exists ; 1991 ; 1991 ; 9 ; Documenta Volume 1991 ; >
       au < frozen ; exists ; 1992 ; 1992 ; 10 ; Documenta Volume 1992 ; >
-      au < ready ; exists ; 1993 ; 1993 ; 11 ; Documenta Volume 1993 ; >
+      au < crawling ; exists ; 1993 ; 1993 ; 11 ; Documenta Volume 1993 ; >
       au < frozen ; exists ; 1994 ; 1994 ; 12 ; Documenta Volume 1994 ; >
       au < frozen ; exists ; 1995 ; 1995 ; 13 ; Documenta Volume 1995 ; >
-      au < ready ; exists ; 1996 ; 1996 ; 14 ; Documenta Volume 1996 ; >
-      au < ready ; exists ; 1997 ; 1997 ; 15 ; Documenta Volume 1997 ; >
+      au < crawling ; exists ; 1996 ; 1996 ; 14 ; Documenta Volume 1996 ; >
+      au < crawling ; exists ; 1997 ; 1997 ; 15 ; Documenta Volume 1997 ; >
       au < frozen ; exists ; 1998 ; 1998 ; 16 ; Documenta Volume 1998 ; >
-      au < ready ; exists ; 1999 ; 1999 ; 17 ; Documenta Volume 1999 ; >
+      au < crawling ; exists ; 1999 ; 1999 ; 17 ; Documenta Volume 1999 ; >
       au < frozen ; exists ; 2000 ; 2000 ; 18 ; Documenta Volume 2000 ; >
       au < frozen ; exists ; 2001 ; 2001 ; 19 ; Documenta Volume 2001 ; >
       au < frozen ; exists ; 2002 ; 2002 ; 20 ; Documenta Volume 2002 ; >
@@ -94,10 +94,10 @@
       au < frozen ; exists ; 2018 ; 2018 ; 36 ; Documenta Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 37 ; Documenta Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 38 ; Documenta Volume 2020 ; >
-      au < ready ; exists ; 2021 ; 2021 ; 39 ; Documenta Volume 2021 ; >
-      au < ready ; exists ; 2022 ; 2022 ; 40 ; Documenta Volume 2022 ; >
-      au < ready ; exists ; 2023 ; 2023 ; 41 ; Documenta Volume 2023 ; >
-      au < ready ; exists ; 2024 ; 2024 ; 42 ; Documenta Volume 2024 ; >
+      au < crawling ; exists ; 2021 ; 2021 ; 39 ; Documenta Volume 2021 ; >
+      au < crawling ; exists ; 2022 ; 2022 ; 40 ; Documenta Volume 2022 ; >
+      au < crawling ; exists ; 2023 ; 2023 ; 41 ; Documenta Volume 2023 ; >
+      au < crawling ; exists ; 2024 ; 2024 ; 42 ; Documenta Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 43 ; Documenta Volume 2025 ; >
 
   }
