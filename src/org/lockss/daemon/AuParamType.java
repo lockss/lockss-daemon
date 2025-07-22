@@ -47,134 +47,138 @@ import static org.lockss.daemon.ConfigParamDescr.*;
 public enum AuParamType {
   String(TYPE_STRING) {
     public Object parse(String val) throws InvalidFormatException {
-      if (!StringUtil.isNullString(val)) {
-	return val;
-      } else {
-	throw new InvalidFormatException("Invalid String: " + val);
-      }
+      throwIfEmpty(val, "String");
+      return val;
     }
   },
   Int(TYPE_INT) {
     public Object parse(String val) throws InvalidFormatException {
+      throwIfEmpty(val, "Int");
       try {
-	return Integer.valueOf(val);
+        return Integer.valueOf(val);
       } catch (NumberFormatException nfe) {
-	throw new InvalidFormatException("Invalid Int: " + val);
+        throw new InvalidFormatException("Value of type Int must parse as a valid integer", nfe);
       }
     }
   },
   PosInt(TYPE_POS_INT) {
     public Object parse(String val) throws InvalidFormatException {
+      throwIfEmpty(val, "PosInt");
       try {
-	Object res = Integer.valueOf(val);
-	if (((Integer)res).intValue() >= 0) {
-	  return res;
-	} else {
-	  throw new InvalidFormatException("Invalid Positive Int: " + val);
-	}
+        Object res = Integer.valueOf(val);
+        if (((Integer)res).intValue() >= 0) {
+          return res;
+        } else {
+          throw new InvalidFormatException("Value of type PosInt must be non-negative: " + val);
+        }
       } catch (NumberFormatException nfe) {
-	throw new InvalidFormatException("Invalid Positive Int: " + val);
+        throw new InvalidFormatException("Value of type PosInt must parse as a valid integer", nfe);
       }
     }},
   Long(TYPE_LONG) {
     public Object parse(String val) throws InvalidFormatException {
+      throwIfEmpty(val, "Long");
       try {
-	return java.lang.Long.valueOf(val);
+        return java.lang.Long.valueOf(val);
       } catch (NumberFormatException nfe) {
-	throw new InvalidFormatException("Invalid Long: " + val);
+        throw new InvalidFormatException("Value of type Long must parse as a valid long integer", nfe);
       }
     }},
   TimeInterval(TYPE_TIME_INTERVAL) {
     public Object parse(String val) throws InvalidFormatException {
+      throwIfEmpty(val, "TimeInterval");
       try {
-	return StringUtil.parseTimeInterval(val);
+        return StringUtil.parseTimeInterval(val);
       } catch (NumberFormatException nfe) {
-	throw new InvalidFormatException("Invalid time interval: " + val);
+        throw new InvalidFormatException("Value of type TimeInterval must parse as a valid time interval", nfe);
       }
     }},
   Url(TYPE_URL) {
     public Object parse(String val) throws InvalidFormatException {
+      throwIfEmpty(val, "Url");
       try {
-	return new URL(val);
-      } catch (MalformedURLException ex) {
-	throw new InvalidFormatException("Invalid URL: " + val, ex);
+        return new URL(val);
+      } catch (MalformedURLException mue) {
+        throw new InvalidFormatException("Value of type Url must parse as a valid URL", mue);
       }
     }},
   Year(TYPE_YEAR) {
     public Object parse(String val) throws InvalidFormatException {
-      if (val.length() == 4 || "0".equals(val)) {
-	try {
-	  int i_val = Integer.parseInt(val);
-	  if (i_val >= 0) {
-	    return Integer.valueOf(val);
-	  }
-	} catch (NumberFormatException fe) {
-	  // Fall through to throw statement below
-	}
+      throwIfEmpty(val, "Year");
+      try {
+        Object res = Integer.valueOf(val);
+        int ival = ((Integer)res).intValue();
+        if ((1000 <= ival && ival <= 9999) || ival == 0) {
+          return res;
+        } else {
+          throw new InvalidFormatException("Value of type Year must be four digits, or set to 0: " + val);
+        }
+      } catch (NumberFormatException nfe) {
+        throw new InvalidFormatException("Value of type Year must parse as a valid integer", nfe);
       }
-      throw new InvalidFormatException("Invalid Year: " + val);
     }},
   Boolean(TYPE_BOOLEAN) {
     public Object parse(String val) throws InvalidFormatException {
-      if (val.equalsIgnoreCase("true") ||
-	  val.equalsIgnoreCase("yes") ||
-	  val.equalsIgnoreCase("on") ||
-	  val.equalsIgnoreCase("1")) {
-	return java.lang.Boolean.TRUE;
-      }
-      else if (val.equalsIgnoreCase("false") ||
-	       val.equalsIgnoreCase("no") ||
-	       val.equalsIgnoreCase("off") ||
-	       val.equalsIgnoreCase("0")) {
-	return java.lang.Boolean.FALSE;
-      } else {
-	throw new InvalidFormatException("Invalid Boolean: " + val);
+      throwIfEmpty(val, "Boolean");
+      switch (val.toLowerCase()) {
+        case "true": case "yes": case "on": case "1": {
+          return java.lang.Boolean.TRUE;
+        }
+        case "false": case "no": case "off": case "0": {
+          return java.lang.Boolean.FALSE;
+        }
+        default: {
+          throw new InvalidFormatException("Value of type Boolean must be a valid boolean string: " + val);
+        }
       }
     }},
   Range(TYPE_RANGE) {
     public Object parse(String val) throws InvalidFormatException {
-      Vector pair = StringUtil.breakAt(val, '-', 2, true, true);
+      throwIfEmpty(val, "Range");
+      Vector<String> pair = StringUtil.breakAt(val, '-', 2, true, true);
       // Turn range "S" into "S-S".
       if (pair.size() == 1 && val.indexOf("-") < 0) {
-	pair.add(pair.firstElement());
+        pair.add(pair.firstElement());
       }
       if (pair.size() != 2) {
-	throw new InvalidFormatException("Invalid Range: " + val);
+        throw new InvalidFormatException("Value of type Range must be two strings separated by a hyphen, or a single string: " + val);
       }
       String s_min = (String)pair.firstElement();
       String s_max = (String)pair.lastElement();
-      if ( !(s_min.compareTo(s_max) <= 0) ) {
-	throw new InvalidFormatException("Invalid Range: " + val);
+      if (s_min.compareTo(s_max) > 0) {
+        throw new InvalidFormatException("Value of type Range must denote a non-decreasing string range: " + val);
       }
       return pair;
     }},
   NumRange(TYPE_NUM_RANGE) {
     public Object parse(String val) throws InvalidFormatException {
-      Vector pair = StringUtil.breakAt(val,'-',2,true, true);
-
+      throwIfEmpty(val, "NumRange");
+      Vector<String> pair = StringUtil.breakAt(val, '-', 2, true, true);
       // Turn range "N" into "N-N".
       if (pair.size() == 1 && val.indexOf("-") < 0) {
-	pair.add(pair.firstElement());
+        pair.add(pair.firstElement());
       }
       if (pair.size() != 2) {
-	throw new InvalidFormatException("Invalid Range: " + val);
+        throw new InvalidFormatException("Value of type NumRange must be two integers separated by a hyphen, or a single integer: " + val);
       }
       String s_min = (String)pair.firstElement();
       String s_max = (String)pair.lastElement();
       try {
-	Long l_min = parseLongOrNull(s_min);
-	Long l_max = parseLongOrNull(s_max);
-	if (l_min.compareTo(l_max) <= 0) {
-	  pair.setElementAt(l_min, 0);
-	  pair.setElementAt(l_max, 1);
-	  return pair;
-	}
-      } catch (NumberFormatException ex1) {
-	if (s_min.compareTo(s_max) <= 0) {
-	  return pair;
-	}
+        Long l_min = parseLongOrNull(s_min);
+        Long l_max = parseLongOrNull(s_max);
+        if (l_min.compareTo(l_max) <= 0) {
+          Vector<Long> res = new Vector<>();
+          res.add(l_min);
+          res.add(l_max);
+          return res;
+        }
+        throw new InvalidFormatException("Value of type NumRange must denote a non-decreasing numeric range: " + val);
+      } catch (NumberFormatException nfe) {
+        if (s_min.compareTo(s_max) <= 0) {
+          return pair;
+        }
+        throw new InvalidFormatException("Value of type NumRange must denote a non-decreasing string range if not a valid non-decreasing numeric range: " + val);
       }
-      throw new InvalidFormatException("Invalid Numeric Range: " + val);
     }},
   Set(TYPE_SET) {
     public Object parse(String val) throws InvalidFormatException {
@@ -182,22 +186,16 @@ public enum AuParamType {
     }},
   UserPasswd(TYPE_USER_PASSWD) {
     public Object parse(String val) throws InvalidFormatException {
-      if (!StringUtil.isNullString(val)) {
-	List<String> lst = ListUtil.list(StringUtils.substringBefore(val, ':'),
-                                         StringUtils.substringAfter(val, ':'));
-	if (StringUtil.isNullString(lst.get(0)) ||
-            StringUtil.isNullString(lst.get(1))) {
-	  throw new InvalidFormatException("User:Passwd must consist of two" +
-					   "strings separated by a colon: " +
-					   val);
-	}
-	return lst;
-      } else {
-	throw new InvalidFormatException("Invalid String: " + val);
+      throwIfEmpty(val, "UserPasswd");
+      List<String> lst = Arrays.asList(StringUtils.substringBefore(val, ':'),
+                                       StringUtils.substringAfter(val, ':'));
+      if (StringUtil.isNullString(lst.get(0)) || StringUtil.isNullString(lst.get(1))) {
+        throw new InvalidFormatException("Value of type UserPasswd must consist of two non-empty strings separated by a colon: " + val);
       }
+      return lst;
     }};
 
-  private static Logger log = Logger.getLogger("AuParamType");
+  private static Logger log = Logger.getLogger(AuParamType.class);
 
   static AuParamType[] vals = new AuParamType[MAX_TYPE + 1];
   static {
@@ -222,7 +220,7 @@ public enum AuParamType {
     try {
       AuParamType ret = vals[n];
       if (ret != null) {
-	return ret;
+        return ret;
       }
       throw new IllegalArgumentException("No AuParamType with value " + n);
     } catch (ArrayIndexOutOfBoundsException e) {
@@ -251,12 +249,12 @@ public enum AuParamType {
 
   List<String> expandSetMacros(String setSpec) {
     List<String> raw = StringUtil.breakAt(setSpec,',', MAX_SET_SIZE,
-					  true, true);
+                                          true, true);
     // Avoid cost of pattern matches and list copy in the usual case of no
     // range macros
     for (String ele : raw) {
       if (ele.startsWith(SET_RANGE_OPEN) && ele.endsWith(SET_RANGE_CLOSE)) {
-	return expandSetMacros0(raw);
+        return expandSetMacros0(raw);
       }
     }
     return raw;
@@ -268,28 +266,34 @@ public enum AuParamType {
     for (String ele : raw) {
       Matcher m1 = SET_MACRO_RANGE_PAT.matcher(ele);
       if (m1.matches()) {
-	try {
-	  int beg = Integer.valueOf(m1.group(1));
-	  int end = Integer.valueOf(m1.group(2));
-	  for (int ix = beg; ix <= end; ix++) {
-	    if (size++ > MAX_SET_SIZE) {
-	      log.warning("Set value has more than " + MAX_SET_SIZE +
-			  " elements; only the first " + MAX_SET_SIZE +
-			  " will be used: " + raw);
-	      return res;
-	    }
-	    res.add(Integer.toString(ix));
-	  }
-	} catch (RuntimeException e) {
-	  log.warning("Suspicious Set range macro: " + ele + " not expanded",
-		      e);
-	  res.add(ele);
-	}
+        try {
+          int beg = Integer.valueOf(m1.group(1));
+          int end = Integer.valueOf(m1.group(2));
+          for (int ix = beg; ix <= end; ix++) {
+            if (size++ > MAX_SET_SIZE) {
+              log.warning("Set value has more than " + MAX_SET_SIZE +
+                          " elements; only the first " + MAX_SET_SIZE +
+                          " will be used: " + raw);
+              return res;
+            }
+            res.add(Integer.toString(ix));
+          }
+        } catch (RuntimeException e) {
+          log.warning("Suspicious Set range macro: " + ele + " not expanded",
+                      e);
+          res.add(ele);
+        }
       } else {
-	res.add(ele);
+        res.add(ele);
       }
     }
     return res;
+  }
+  
+  protected static void throwIfEmpty(String str, String type) throws InvalidFormatException {
+    if (StringUtil.isNullString(str)) {
+      throw new InvalidFormatException(java.lang.String.format("Value of type %s must be non-empty", type));
+    }
   }
 
   /** Thrown by {@link AuParamType#parse(String)} methods for invalid input.
