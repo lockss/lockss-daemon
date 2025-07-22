@@ -131,7 +131,7 @@
       au < manifest ; exists ; 2019 ; 125 ; Absinthe: World Literature in Translation Volume 2019 ; 2019 ; >
       au < manifest ; exists ; 2020 ; 126 ; Absinthe: World Literature in Translation Volume 2020 ; 2020 ; >
       au < manifest ; exists ; 2021 ; 127 ; Absinthe: World Literature in Translation Volume 2021 ; 2021 ; >
-      au < ready ; exists ; 2022 ; 128 ; Absinthe: World Literature in Translation Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; 128 ; Absinthe: World Literature in Translation Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 129 ; Absinthe: World Literature in Translation Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 130 ; Absinthe: World Literature in Translation Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 131 ; Absinthe: World Literature in Translation Volume 2025 ; 2025 ; >
@@ -150,7 +150,7 @@
       param[journal_id] = ars
 
       au < manifest ; exists ; 2022 ; 53 ; Ars Orientalis Volume 2022 ; 2022 ; >
-      au < ready ; exists ; 2023 ; 54 ; Ars Orientalis Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; 54 ; Ars Orientalis Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 55 ; Ars Orientalis Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 56 ; Ars Orientalis Volume 2025 ; 2025 ; >
 
@@ -168,7 +168,7 @@
       param[journal_id] = circus
 
       au < manifest ; exists ; 2022 ; 1 ; Circus: Arts, Life and Sciences Volume 2022 ; 2022 ; >
-      au < ready ; exists ; 2023 ; 2 ; Circus: Arts, Life and Sciences Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; 2 ; Circus: Arts, Life and Sciences Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 3 ; Circus: Arts, Life and Sciences Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 4 ; Circus: Arts, Life and Sciences Volume 2025 ; 2025 ; >
 
@@ -219,7 +219,7 @@
       au < manifest ; exists ; 2019 ; 1 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2019 ; 2019 ; >
       au < manifest ; exists ; 2020 ; 2 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2020 ; 2020 ; >
       au < manifest ; exists ; 2021 ; 3 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2021 ; 2021 ; >
-      au < ready ; exists ; 2022 ; 4 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; 4 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 5 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 6 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 7 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2025 ; 2025 ; >
@@ -284,7 +284,7 @@
       param[journal_id] = mij
 
       au < manifest ; exists ; 2021 ; 8 ; Media Industries Volume 2021 ; 2021 ; >
-      au < ready ; exists ; 2022 ; 9 ; Media Industries Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; 9 ; Media Industries Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 10 ; Media Industries Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 11 ; Media Industries Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 12 ; Media Industries Volume 2025 ; 2025 ; >
@@ -347,7 +347,7 @@
       param[journal_id] = mjm
 
       au < manifest ; exists ; 2023 ; 7 ; Michigan Journal of Medicine Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 8 ; Michigan Journal of Medicine Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 8 ; Michigan Journal of Medicine Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 9 ; Michigan Journal of Medicine Volume 2025 ; 2025 ; >
 
   }
