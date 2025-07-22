@@ -1563,6 +1563,7 @@ while (my $line = <>) {
   } elsif (($plugin eq "ClockssIowaStateDPPlugin") ||
            ($plugin eq "IowaStateDPPlugin") ||
            ($plugin eq "ClockssUniversityofIowaPlugin") ||
+           ($plugin eq "ClockssUofMichiganJournalsPlugin") ||
            ($plugin eq "UniversityofIowaPlugin") ||
            ($plugin eq "ClockssGhentUniversityLibraryPlugin") ||
            ($plugin eq "GhentUniversityLibraryPlugin")) {
