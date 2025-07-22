@@ -654,15 +654,15 @@
     au < finished ; finished ; 2020 ; ; 9781624106026 ; 9781624106026 ; AIAA Propulsion and Energy 2020 Forum ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2020 ; ; 9781624106088 ; 9781624106088 ; ASCEND 2020 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2021 ; ; 9781624106095 ; 9781624106095 ; AIAA Scitech 2021 Forum ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
-#    au < exists ; exists ; 2022 ; 9781624106644 ;  ; 9781624106644 ; 28th AIAA/CEAS Aeroacoustics 2022 Conference (9781624106644) ; https://arc.aiaa.org/ ; >
-#    au < exists ; exists ; 2022 ; 9781624102479 ;  ; 9781624102479 ; 26th AIAA Aerodynamic Decelerator Systems Technology Conference (9781624102479) ; https://arc.aiaa.org/ ; >
-#    au < exists ; exists ; 2021 ; 9781624106101 ;  ; 9781624106101 ; AIAA AVIATION 2021 FORUM (9781624106101) ; https://arc.aiaa.org/ ; >
-#    au < exists ; exists ; 2022 ; 9781624106354 ;  ; 9781624106354 ; AIAA AVIATION 2022 Forum (9781624106354) ; https://arc.aiaa.org/ ; >
-#    au < exists ; exists ; 2021 ; 9781624106118 ;  ; 9781624106118 ; AIAA Propulsion and Energy 2021 Forum (9781624106118) ; https://arc.aiaa.org/ ; >
-#    au < exists ; exists ; 2022 ; 9781624106316 ;  ; 9781624106316 ; AIAA SCITECH 2022 Forum (9781624106316) ; https://arc.aiaa.org/ ; >
-#    au < exists ; exists ; 2023 ; 9781624106996 ;  ; 9781624106996 ; AIAA SCITECH 2023 Forum (9781624106996) ; https://arc.aiaa.org/ ; >
-#    au < exists ; exists ; 2021 ; 9781624106125 ;  ; 9781624106125 ; ASCEND 2021 (9781624106125) ; https://arc.aiaa.org/ ; >
-#    au < exists ; exists ; 2022 ; 9781624106620 ;  ; 9781624106620 ; ASCEND 2022 (9781624106620) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2022 ; 9781624106644 ;  ; 9781624106644 ; 28th AIAA/CEAS Aeroacoustics 2022 Conference (9781624106644) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2022 ; 9781624102479 ;  ; 9781624102479 ; 26th AIAA Aerodynamic Decelerator Systems Technology Conference (9781624102479) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2021 ; 9781624106101 ;  ; 9781624106101 ; AIAA AVIATION 2021 FORUM (9781624106101) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2022 ; 9781624106354 ;  ; 9781624106354 ; AIAA AVIATION 2022 Forum (9781624106354) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2021 ; 9781624106118 ;  ; 9781624106118 ; AIAA Propulsion and Energy 2021 Forum (9781624106118) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2022 ; 9781624106316 ;  ; 9781624106316 ; AIAA SCITECH 2022 Forum (9781624106316) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2023 ; 9781624106996 ;  ; 9781624106996 ; AIAA SCITECH 2023 Forum (9781624106996) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2021 ; 9781624106125 ;  ; 9781624106125 ; ASCEND 2021 (9781624106125) ; https://arc.aiaa.org/ ; >
+    au < manifest ; exists ; 2022 ; 9781624106620 ;  ; 9781624106620 ; ASCEND 2022 (9781624106620) ; https://arc.aiaa.org/ ; >
 #    au < exists ; exists ; 2010 ; 9781600869617 ;  ; 9781600869617 ; 51st AIAA/ASME/ASCE/AHS/ASC Structures, Structural Dynamics, and Materials Conference (9781600869617) ; https://arc.aiaa.org/ ; > #Duplicate title
 
  }
@@ -802,7 +802,7 @@
     au < superseded ; exists ; 1996 ; 9781563471803 ; 9781624104671 ; 9781624104671 ; Space Biology and Medicine - Volume III Books 1 & 2 - Humans in Spaceflight (9781624104671) [superseded] ; https://arc.aiaa.org/ ; > #duplicate
     au < superseded ; exists ; 2004 ; 9781563476600 ; 9781624104862 ; 9781624104862 ; Space Biology and Medicine - Volume IV, Health, Performance, and Safety of Space Crews (9781624104862) [superseded] ; https://arc.aiaa.org/ ; > #duplicate
     au < superseded ; exists ; 2009 ; 9781563479960 ; 9781624104879 ; 9781624104879 ; Space Biology and Medicine - Volume V, U.S. and Russian Cooperation in Space Biology and Medicine (9781624104879) [superseded] ; https://arc.aiaa.org/ ; > #duplicate
-    au < superseded ; exists ; 2022 ; 9781624106361 ; 9781624106378; 9781624106378 ; Planetary Exploration with Ingenuity and Dragonfly (9781624106378) [superseded] ; https://arc.aiaa.org/ ; > #duplicate
+    au < crawling ; exists ; 2022 ; 9781624106361 ; 9781624106378; 9781624106378 ; Planetary Exploration with Ingenuity and Dragonfly (9781624106378) ; https://arc.aiaa.org/ ; > #duplicate
 
  }
 
