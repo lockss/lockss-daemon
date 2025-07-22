@@ -73,4 +73,11 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.highwire.ers.ERSScolarisCrawlSeedFactory</string>
   </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!-- Needed by the crawl seed's initialize() stratagem -->
+      <string>org.apache.commons.httpclient.CircularRedirectException=org.lockss.util.urlconn.CacheException$UnknownExceptionException</string>
+    </list>
+  </entry>
 </map>

@@ -29,9 +29,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
 */
+
 package org.lockss.plugin.highwire.ers;
+
 import java.io.IOException;
 import java.util.Collection;
+
+import org.apache.commons.httpclient.CircularRedirectException;
 
 import org.lockss.crawler.BaseCrawlSeed;
 import org.lockss.crawler.CrawlSeed;
@@ -65,18 +69,28 @@ public class ERSScolarisCrawlSeedFactory implements CrawlSeedFactory{
         super.initialize();
         Collection<String> startUrls = au.getStartUrls();
         String startUrl = startUrls.iterator().next();
-        log.debug3("Prefetching permission URL: " + startUrl);
+        log.debug2("Prefetching permission URL: " + startUrl);
         UrlFetcher uf = cf.makeUrlFetcher(startUrl);
-        try{
-            FetchResult fr = uf.fetch();
-            if(fr == FetchResult.NOT_FETCHED){
-                log.debug("Prefetching permission URL resulted in NOT_FETCHED: " + startUrl);
-                throw new CacheException.PermissionException();
-            }
-            log.debug3("Prefetching permission URL succeeded: " + startUrl);
-        }catch(CacheException ce){
-            log.debug("Prefetching permission URL failed: " + startUrl, ce);
-            throw ce;
+        uf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_FOLLOW);
+        FetchResult fr;
+        try {
+          fr = uf.fetch();
+          log.critical("Uh oh! " + fr);
+        }
+        catch (CacheException.UnknownExceptionException uee) {
+          log.critical("UEE", uee);
+          log.critical("UEE CAUSE", uee.getCause());
+          Throwable cause = uee.getCause();
+          if (cause == null || !(cause instanceof CircularRedirectException)) {
+            log.debug3("Rethrowing an UnknownExceptionException", uee);
+            throw uee;
+          }
+          // FIXME: add a check that it ended up in the right place, but alas, the error message has port 443 in it: Circular redirect to 'https://publications.ersnet.org:443/content/erjor/lockss-manifest/vol_10_manifest.html'
+          log.debug2("Prefetching permission URL succeeded: " + startUrl);
+        }
+        catch (CacheException ce) {
+          log.debug("Prefetching permission URL failed: " + startUrl, ce);
+          throw ce;
         }
 
     }
