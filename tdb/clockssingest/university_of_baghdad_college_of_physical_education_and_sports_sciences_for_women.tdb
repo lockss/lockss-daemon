@@ -7,8 +7,7 @@
     info[tester] = 5 ;
     info[platform] = bepress
   >
-      provider = University of Baghdad, College of Physical Education and Sports Sciences for Women
-
+  #provider below
   {
 
     title <
@@ -17,6 +16,7 @@
       eissn = 2708-3454
     >
     {
+      provider = bepress
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
       param[base_url] = https://jcopew.uobaghdad.edu.iq/
@@ -46,6 +46,7 @@
       au < manifest ; exists ; 2025 ; Modern Sport Volume 2025 ; 24 ; >
     }
     {
+      provider = University of Baghdad, College of Physical Education and Sports Sciences for Women
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
       attr[start_stem] = index.php/
