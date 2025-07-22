@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>development - Parent</string>
+        <string>ready - Parent</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -140,6 +140,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_crawlrules</string>
         <list>
+            <string>1,"%scontent/%s/lockss-manifest/vol_%s_manifest.html", base_url, journal_id, volume_name</string>
             <string>1,"^https?://%s/content/%s/%s", base_url_host, journal_id, volume_name</string>
             <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?(v|itok)=[^/]*)?$", base_url_host</string>
             <string>1,"https://cdnjs.cloudflare.com/"</string>
@@ -148,6 +149,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"https://fonts.gstatic.com/"</string>
             <string>1,"https?://(fonts|ajax).googleapis.com/"</string>
             <string>1,"https://themes.googleusercontent.com/"</string>
+            <string>1,"https?://idp\.sams-sigma\.com/"</string>
             <!--
             <string>1,"^https?://%s/content/%s(/[^/]+)?/suppl/", url_host(base_url), journal_id</string>
             <string>2,"^https?://%s/content/(by/(year|volume)|current|.*(/|\.)article-)", url_host(base_url)</string>
@@ -224,6 +226,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>.+\.glencoesoftware\.com</string>
             <string>fonts\.googleapis\.com</string>
             <string>fonts\.gstatic\.com</string>
+            <string>idp\.sams-sigma\.com</string>
         </list>
     </entry>
 </map>
