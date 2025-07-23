@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Emerald Publishing Books Plugin (CLOCKSS)</string>
+    <string>Emerald Publishing Books Plugin (CLOCKSS, Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -53,11 +53,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Emerald Publishing Books Plugin (CLOCKSS), Base URL %s, Path %s", base_url, book_uri</string>
+    <string>"Emerald Publishing Books Plugin (CLOCKSS, Legacy), Base URL %s, Path %s", base_url, book_uri</string>
   </entry>
   <entry>
     <string>clockss_override</string>

@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Emerald Publishing Books Plugin</string>
+    <string>Emerald Publishing Books Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -89,7 +89,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Emerald Publishing Books Plugin, Base URL %s, Path %s", base_url, book_uri</string>
+    <string>"Emerald Publishing Books Plugin (Legacy), Base URL %s, Path %s", base_url, book_uri</string>
   </entry>
   <entry>
     <string>au_start_url</string>
