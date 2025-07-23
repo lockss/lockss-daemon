@@ -30,7 +30,7 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/micronesica-released/
 
-    au < manifest ; exists ; 2025 ; Micronesica WARC Content 2025 ; 2025 >
+    au < ready ; exists ; 2025 ; Micronesica WARC Content 2025 ; 2025 >
 
     }
   }
