@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -51,7 +51,7 @@ public class TestUbiquityPartnerNetworkUrlNormalizer extends LockssTestCase {
     static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
     static final String VOLUME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
     static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
-    static final String ROOT_URL = "http://www.xyz.com/"; //this is not a real url  
+    static final String ROOT_URL = "http://www.xyz.com/";  
     
     static final String PLUGIN_ID = "org.lockss.plugin.ubiquitypress.upn.ClockssUbiquityPartnerNetworkPlugin";
 
@@ -97,6 +97,12 @@ public class TestUbiquityPartnerNetworkUrlNormalizer extends LockssTestCase {
           norm.normalizeUrl("http://www.xyz.com/foo.css", testAU) );
       assertEquals("http://www.xyz.com/foo.css",
           norm.normalizeUrl("http://www.xyz.com/foo.css?2099-12-31", testAU) );
+      assertEquals("http://www.xyz.com/foo.png",
+                   norm.normalizeUrl("http://www.xyz.com/foo.png?t=123", testAU) );
+      assertEquals("http://www.xyz.com/foo.jpg",
+                   norm.normalizeUrl("http://www.xyz.com/foo.jpg?t=123", testAU) );
+      assertEquals("http://www.xyz.com/foo.jpg?w=456",
+                   norm.normalizeUrl("http://www.xyz.com/foo.jpg?t=123&w=456", testAU) );
     }
   
 }

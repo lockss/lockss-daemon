@@ -151,6 +151,8 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "stat-"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "article-stats"),
    // HtmlNodeFilters.tagWithAttribute("section", "aria-label","Brand navigation"),
+    // Intermittent appearance of empty <div> right after the <body> tag, seen at e.g. https://jachs.org/articles/10.22599/jachs.102
+    HtmlNodeFilters.tagWithAttribute("div", "hidden"),
   };
 
   //some tags reference image tags that have timestamps so let's remove those

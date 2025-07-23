@@ -43,16 +43,22 @@ import org.lockss.util.Logger;
 // subclass the BaseUrlHttpHttpsUrlNormalizer - which redirects protocol to that of declared base_url
 // and then does whatever specific "additionalNormalization that is specified
 public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer {
-  static Logger log = Logger.getLogger(UbiquityPartnerNetworkUrlNormalizer.class);
+  
+  private static Logger log = Logger.getLogger(UbiquityPartnerNetworkUrlNormalizer.class);
+  
   protected static Pattern CSS_WITH_DATE =
-      Pattern.compile("\\.css\\?\\d{4}-\\d{1,2}-\\d{1,2}$",
+      Pattern.compile("\\.css(?:\\?|%3F)\\d{4}-\\d{1,2}-\\d{1,2}$",
                       Pattern.CASE_INSENSITIVE);
   protected static Pattern PNG_WITH_TIMESTAMP =
-      Pattern.compile("\\.png\\?t=\\d{13}$",
+      Pattern.compile("\\.png(?:\\?|%3F)t(?:=|%3D)\\d+$",
                       Pattern.CASE_INSENSITIVE);
   protected static Pattern JPG_WITH_TIMESTAMP =
-      Pattern.compile("\\.jpg%3Ft%3D\\d{13}&w=",
+      Pattern.compile("\\.jpg(?:\\?|%3F)t(?:=|%3D)\\d+$",
                       Pattern.CASE_INSENSITIVE);
+  protected static Pattern JPG_WITH_TIMESTAMP_AND_WIDTH =
+      Pattern.compile("\\.jpg(?:\\?|%3F)t(?:=|%3D)\\d+(?:&|%26)w=",
+                      Pattern.CASE_INSENSITIVE);
+
   @Override
    public String additionalNormalization(String url,ArchivalUnit au)
       throws PluginException {
@@ -79,10 +85,11 @@ public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNorm
      */
     url = CSS_WITH_DATE.matcher(url).replaceFirst(".css");
     /*
-     * Various .png and .jpg URLs have a timestamp, e.g. .png?t=1745443500000
+     * Various .png and .jpg URLs have a timestamp, e.g. .png?t=1745443500000 or .jpg?t=1745443500000 or .jpg?t=1745443500000&w=100
      */
     url = PNG_WITH_TIMESTAMP.matcher(url).replaceFirst(".png");
-    url = JPG_WITH_TIMESTAMP.matcher(url).replaceFirst(".jpg?&w=");
+    url = JPG_WITH_TIMESTAMP.matcher(url).replaceFirst(".jpg");
+    url = JPG_WITH_TIMESTAMP_AND_WIDTH.matcher(url).replaceFirst(".jpg?w=");
     return url;
   }
 }
