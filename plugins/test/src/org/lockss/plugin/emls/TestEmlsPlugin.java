@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.daemon.AuParamType.InvalidFormatException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.definable.*;
 
@@ -75,8 +76,8 @@ public class TestEmlsPlugin extends LockssTestCase {
       DefinableArchivalUnit au = makeAuFromProps(props);
       fail ("Didn't throw InstantiationException when given a bad url");
     } catch (ArchivalUnit.ConfigurationException auie) {
-      ConfigParamDescr.InvalidFormatException murle =
-        (ConfigParamDescr.InvalidFormatException)auie.getCause();
+      InvalidFormatException murle =
+        (InvalidFormatException)auie.getCause();
       assertNotNull(auie.getCause());
     }
   }
