@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -102,18 +102,20 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"%s.*discover\?filtertype=", base_url</string>
       <string>2,"%s(search-filter|register|recent-submissions|password-login|open-search)", base_url</string>
       <string>1,"%s%s", base_url,resource_id</string>
-      <string>1,"%s(bitstream)?/%s/.*", base_url,resource_id</string>
+      <!--since some of the the resource_id get redirected, can not use resource_id here-->
+      <string>1,"%shandle/[0-9.]+/[0-9]{5,}", base_url</string>
+      <string>1,"%s(bitstream)?/handle/[0-9.]+/[0-9]{5,}", base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%s%s", base_url, resource_id</string>
+      <string>"%s%s", base_url, resource_id</string>
   </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"%sbitstream/%s/.*\.pdf", base_url,resource_id</string>
-      <string>"%sbitstream/%s/.*\.epub", base_url,resource_id</string>
+      <string>"%sbitstream/.*\.pdf", base_url</string>
+      <string>"%sbitstream/.*\.epub", base_url</string>
     </list>
   </entry>
   <entry>
@@ -132,6 +134,10 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.oapen.OAPENBooksMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.oapen.OAPENBooksHtmlCrawlFilterFactory</string>
   </entry>
   <entry>
     <string>au_repair_from_peer_if_missing_url_pattern</string>

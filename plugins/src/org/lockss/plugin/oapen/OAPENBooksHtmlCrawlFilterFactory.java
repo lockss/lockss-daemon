@@ -1,4 +1,4 @@
-<!--
+/*
 
 Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
 
@@ -28,48 +28,34 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
--->
-<map>
-  <entry>
-    <string>plugin_status</string>
-    <string>ready</string>
-  </entry>
-  <entry>
-    <string>plugin_identifier</string>
-    <string>org.lockss.plugin.oapen.ClockssOAPENBooksPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>11</string>
-  </entry>
-  <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.oapen.OAPENBooksPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_parent_version</string>
-    <string>11</string>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>OAPEN Books Plugin (CLOCKSS)</string>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>"OAPEN Books Plugin (CLOCKSS), Base URL %s, Resource ID %s", base_url, resource_id</string>
-  </entry>
-  <entry>
-    <string>au_permission_url</string>
-    <!--https://library.oapen.org/robots.txt-->
-    <string>"%srobots.txt", base_url</string>
-  </entry>
-  <entry>
-    <string>clockss_override</string>
-    <map>
-      <entry>
-        <string>au_def_pause_time</string>
-        <long>100</long>
-      </entry>
-    </map>
-  </entry>
-</map>
+*/
+
+package org.lockss.plugin.oapen;
+
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
+import org.lockss.daemon.PluginException;
+import org.lockss.filter.html.HtmlFilterInputStream;
+import org.lockss.filter.html.HtmlNodeFilterTransform;
+import org.lockss.filter.html.HtmlNodeFilters;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.FilterFactory;
+
+import java.io.InputStream;
+
+public class OAPENBooksHtmlCrawlFilterFactory implements FilterFactory {
+
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding)
+      throws PluginException {
+    NodeFilter[] filters = new NodeFilter[] {
+        // On Issue TOC pages points to next/prev issue which could cross year and out of volume
+        HtmlNodeFilters.tagWithAttribute("div", "class", "item-page-field-wrapper"),
+    };
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+  }
+
+}
