@@ -295,7 +295,7 @@ public class SubstanceChecker {
   }
 
   public boolean isSubstanceUrl(String url) {
-    return substancePred.isSubstanceUrl(url);
+    return substancePred != null && substancePred.isSubstanceUrl(url);
   }
 
   public State hasSubstance() {
