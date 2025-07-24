@@ -93,6 +93,7 @@ public class GovInfoHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("a", "id", "email-share-search"),
         HtmlNodeFilters.tagWithAttribute("a", "class", "__cf_email__"),
         HtmlNodeFilters.tagWithAttribute("a", "data-cfemail"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "email-protection"),
         // A few things in this <div> started having random numeric suffixes in 'id' attributes, ostensibly to support toggling and similar dynamic behaviors
         HtmlNodeFilters.tagWithAttribute("div", "id", "contentdetaildocinContextview"),
 
