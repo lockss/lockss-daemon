@@ -457,6 +457,17 @@ public class ListObjects extends LockssServlet {
       subChecker = new SubstanceChecker(au);
     }
 
+    @Override
+    protected void doBody() {
+      if (AuUtil.hasSubstancePatterns(au)) {
+        super.doBody();
+      } else {
+        Plugin plug = au.getPlugin();
+        wrtr.println(String.format("# !!!!!!!!!! Plugin: %s (%s) does not define substance patterns\n",
+                                   plug.getPluginName(), plug.getPluginId()));
+      }
+    }
+
     CuIterator getIterator() {
       return au.getAuCachedUrlSet().getCuIterator();
     }
@@ -474,7 +485,7 @@ public class ListObjects extends LockssServlet {
     }
 
     void printHeader() {
-      wrtr.println("# Substance URLs* in " + au.getName());
+      wrtr.println("# Substance URLs in " + au.getName());
     }
 
     protected void processCu(CachedUrl cu) {
@@ -596,7 +607,7 @@ public class ListObjects extends LockssServlet {
     }
 
     void printHeader() {
-      wrtr.println("# Substance files* in " + au.getName());
+      wrtr.println("# Substance files in " + au.getName());
     }
 
     String unitName() {
