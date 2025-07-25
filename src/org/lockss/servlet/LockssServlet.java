@@ -918,7 +918,7 @@ public abstract class LockssServlet extends HttpServlet
 // FIXME: Move the following fragment elsewhere
 // It causes the doctype statement to appear in the middle,
 // after the <body> tag.
-    page.add("<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">");
+    page.add(DOCTYPE);
 //     page.addHeader("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">");
 //     page.addHeader("<meta http-equiv=\"content-type\" content=\"text/html;charset=ISO-8859-1\">");
     page.addHeader("<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\" />");
