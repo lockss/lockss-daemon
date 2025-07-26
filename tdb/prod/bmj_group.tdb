@@ -572,7 +572,7 @@
       au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Volume 387 ; 387 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 388 ; 388 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 389 ; 389 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Volume 390 ; 390 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 390 ; 390 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; expected ; 2025 ; BMJ Volume 391 ; 391 ; https://www.bmj.com/ >
 
     }
@@ -1229,7 +1229,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; OpenHeart Volume 9 ; 9 ; https://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; OpenHeart Volume 10 ; 10 ; https://openheart.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2024 ; OpenHeart Volume 11 ; 11 ; https://openheart.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; expected ; 2025 ; OpenHeart Volume 12 ; 12 ; https://openheart.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; OpenHeart Volume 12 ; 12 ; https://openheart.bmj.com/ >
 
   }
 
@@ -2410,7 +2410,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; released ; 2022 ; Lupus Science & Medicine Volume 9 ; 9 ; https://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; Lupus Science & Medicine Volume 10 ; 10 ; https://lupus.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2024 ; Lupus Science & Medicine Volume 11 ; 11 ; https://lupus.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; expected ; 2025 ; Lupus Science & Medicine Volume 12 ; 12 ; https://lupus.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; Lupus Science & Medicine Volume 12 ; 12 ; https://lupus.bmj.com/ >
 
     }
     
