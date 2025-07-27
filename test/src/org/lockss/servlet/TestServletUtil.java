@@ -195,4 +195,9 @@ public class TestServletUtil extends LockssTestCase {
     assertTrue(ServletUtil.isTabPopulated(4, 'N', tabLetterPopulationMap));
     assertFalse(ServletUtil.isTabPopulated(4, 'Q', tabLetterPopulationMap));
   }
+
+  public void testRemoveElementWithId() {
+    assertEquals("<script type=\"text/javascript\">\nremoveElementId(\"eye-dee\");\n</script>",
+                 ServletUtil.removeElementWithId("eye-dee").toString());
+  }
 }
