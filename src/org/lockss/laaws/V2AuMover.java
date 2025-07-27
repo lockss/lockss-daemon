@@ -1162,7 +1162,8 @@ public class V2AuMover {
             auStat.setIsBulk(true); // remember to finishBulk for this AU
           } catch (UnsupportedOperationException e) {
             // Expected if not running against a V2 repo configured to
-            // use the hybrid Volatile/Solr index
+            // use DispatchingArtifactIndex wrapping a Volatile &
+            // normal index
             log.debug2("startBulk() not supported, continuing.");
           }
         }

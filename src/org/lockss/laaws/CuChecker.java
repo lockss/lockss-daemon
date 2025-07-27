@@ -114,7 +114,8 @@ public class CuChecker extends CuBase {
       ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
     }
     if (!missingVers.isEmpty()) {
-      String err = "Error: Target is missing versions: " +
+      String err = "Error: Target is missing " +
+        StringUtil.numberOfUnits(missingVers.size(), "version") + ": " +
         StringUtil.separatedString(missingVers, ", ") + " of " + v2Url +
         " in: " + au.getName();
       log.error(err);
