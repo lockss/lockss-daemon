@@ -1997,10 +1997,7 @@ public class ServletUtil {
 
   public static Element removeElementWithId(String id) {
     Composite ele = new Composite();
-    ele.add("<script type=\"text/javascript\">\n");
-    ele.add("<!--\nremoveElementId(\"");
-    ele.add(id);
-    ele.add("\")\n//-->\n</script>");
+    ele.add(String.format("<script type=\"text/javascript\">\nremoveElementId(\"%s\");\n</script>", id));
     return ele;
   }
 
