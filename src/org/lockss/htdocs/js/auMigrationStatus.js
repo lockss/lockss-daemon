@@ -98,6 +98,7 @@ class AuMigrationStatus extends React.Component {
   componentDidMount() {
     this.__loadStatus();
     this.interval = setInterval(this.__loadStatus, this.state.delay);
+    this.disableSomeButtons();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -111,17 +112,22 @@ class AuMigrationStatus extends React.Component {
 
     // FIXME: Replace with a jQuery solution?
     if (prevState.running != this.state.running) {
-      for (const e of document.querySelectorAll("input[type='submit'],input[type='button']")) {
-        if (e.value == "Abort") {
-          this.disableIfRunning = false;
-        } else {
-          this.disableIfRunning = true;
-        }
-        if (this.state.running == this.disableIfRunning) {
-          e.setAttribute("disabled", "disabled");
-        } else {
-          e.removeAttribute("disabled");
-        }
+      this.disableSomeButtons();
+    }
+  }
+
+  disableSomeButtons() {
+    console.log("disableSomeButtons: " + this.state.running);
+    for (const e of document.querySelectorAll("input[type='submit'],input[type='button'],button[type='submit']")) {
+      if (e.value == "Abort") {
+        this.disableIfRunning = false;
+      } else {
+        this.disableIfRunning = true;
+      }
+      if (this.state.running == this.disableIfRunning) {
+        e.setAttribute("disabled", "disabled");
+      } else {
+        e.removeAttribute("disabled");
       }
     }
   }
