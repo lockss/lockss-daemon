@@ -4488,56 +4488,56 @@ while (my $line = <>) {
          sleep(4);
   # End of Liverpool University Press
 
-  # begin Inter-Research Science Publisher
-  #"%sjournals/%s/%s-home/", base_url, journal_id, journal_id
-  } elsif ($plugin eq "ClockssInterResearchPlugin") {
-         #****
-         $s_url = sprintf("%sjournals/%s/%s-home/",
-         #$s_url = sprintf("%sjournals/%s",
-             $param{base_url}, $param{journal_id}, $param{journal_id});
-             #$param{base_url}, $param{journal_id});
-         $start_url = uri_unescape($s_url);
-         my $s_req = HTTP::Request->new(GET, $start_url);
-         my $s_resp = $ua->request($s_req);
-         #****
-         #"%slockss", base_url
-         $p_url = sprintf("%slockss",
-             $param{base_url});
-         $perm_url = uri_unescape($p_url);
-         my $p_req = HTTP::Request->new(GET, $perm_url);
-         my $p_resp = $ua->request($p_req);
-         #****
-         $start_vol = $param{volume};
-         $start_vol =~ s/-.*//;
-         $end_vol = $param{volume};
-         $end_vol =~ s/.*-//;
-         $man_url = $start_url;
-         #printf("* %s * * %d *\n", $param{year}, $my_year); #debug
-         if (($s_resp->is_success) && ($p_resp->is_success)) {
-             my $start_contents = $s_resp->content;
-             my $perm_contents = $p_resp->content;
-             #if ($s_req->url ne $s_resp->request->uri) || ($p_req->url ne $p_resp->request->uri){
-             if ($s_req->url ne $s_resp->request->uri){
-               $vol_title = $s_resp->request->uri;
-               $result = "Redirected";
-             #} elsif (defined($start_contents) && defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/) && ($start_contents =~ m/\/$param{journal_id}\/v$start_vol/)) {
-             } elsif (defined($start_contents) && 
-                      defined($perm_contents) && 
-                      ($perm_contents =~ m/$clockss_tag/) && 
-                      ($start_contents =~ m/$param{year}:[^:"]*href=\"abstracts\/$param{journal_id}\/v$start_vol/s) && 
-                      (($start_contents =~ m/$param{year}:[^:]*href=\"abstracts\/$param{journal_id}\/v$end_vol[^"]*"[^:"]*\/td/s) ||
-                       ($start_contents =~ m/$param{year}:[^:]*href=\"abstracts\/$param{journal_id}\/v$end_vol[^"]*"[^:"]*"tooltiptext"[^:"]*\/td/s)) &&
-                      ($param{year} < $my_year)) {
-                 $vol_title= $param{journal_id} . " volume " . $param{volume} . " " . $param{year};
-                 $result = "Manifest";
-             } else {
-                 $result = "--"
-             }
-         } else {
-             $result = "--REQ_FAIL--" . $s_resp->code() . " " . $s_resp->message();
-         }
-         sleep(4);
-  # End of Inter-Research Science Publisher
+#  # begin Inter-Research Science Publisher
+#  #"%sjournals/%s/%s-home/", base_url, journal_id, journal_id
+#  } elsif ($plugin eq "ClockssInterResearchPlugin") {
+#         #****
+#         $s_url = sprintf("%sjournals/%s/%s-home/",
+#         #$s_url = sprintf("%sjournals/%s",
+#             $param{base_url}, $param{journal_id}, $param{journal_id});
+#             #$param{base_url}, $param{journal_id});
+#         $start_url = uri_unescape($s_url);
+#         my $s_req = HTTP::Request->new(GET, $start_url);
+#         my $s_resp = $ua->request($s_req);
+#         #****
+#         #"%slockss", base_url
+#         $p_url = sprintf("%slockss",
+#             $param{base_url});
+#         $perm_url = uri_unescape($p_url);
+#         my $p_req = HTTP::Request->new(GET, $perm_url);
+#         my $p_resp = $ua->request($p_req);
+#         #****
+#         $start_vol = $param{volume};
+#         $start_vol =~ s/-.*//;
+#         $end_vol = $param{volume};
+#         $end_vol =~ s/.*-//;
+#         $man_url = $start_url;
+#         #printf("* %s * * %d *\n", $param{year}, $my_year); #debug
+#         if (($s_resp->is_success) && ($p_resp->is_success)) {
+#             my $start_contents = $s_resp->content;
+#             my $perm_contents = $p_resp->content;
+#             #if ($s_req->url ne $s_resp->request->uri) || ($p_req->url ne $p_resp->request->uri){
+#             if ($s_req->url ne $s_resp->request->uri){
+#               $vol_title = $s_resp->request->uri;
+#               $result = "Redirected";
+#             #} elsif (defined($start_contents) && defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/) && ($start_contents =~ m/\/$param{journal_id}\/v$start_vol/)) {
+#             } elsif (defined($start_contents) && 
+#                      defined($perm_contents) && 
+#                      ($perm_contents =~ m/$clockss_tag/) && 
+#                      ($start_contents =~ m/$param{year}:[^:"]*href=\"abstracts\/$param{journal_id}\/v$start_vol/s) && 
+#                      (($start_contents =~ m/$param{year}:[^:]*href=\"abstracts\/$param{journal_id}\/v$end_vol[^"]*"[^:"]*\/td/s) ||
+#                       ($start_contents =~ m/$param{year}:[^:]*href=\"abstracts\/$param{journal_id}\/v$end_vol[^"]*"[^:"]*"tooltiptext"[^:"]*\/td/s)) &&
+#                      ($param{year} < $my_year)) {
+#                 $vol_title= $param{journal_id} . " volume " . $param{volume} . " " . $param{year};
+#                 $result = "Manifest";
+#             } else {
+#                 $result = "--"
+#             }
+#         } else {
+#             $result = "--REQ_FAIL--" . $s_resp->code() . " " . $s_resp->message();
+#         }
+#         sleep(4);
+#  # End of Inter-Research Science Publisher
 
 
   # Start ClockssWroclawMedicalUniversityJournalsPlugin.
