@@ -40,9 +40,9 @@
       au < manifest ; exists ; 2017 ; 20 ; Journal of The American Society of Questioned Document Examiners Volume 2017 ; 2017 ; 20 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < manifest ; exists ; 2018 ; 21 ; Journal of The American Society of Questioned Document Examiners Volume 2018 ; 2018 ; 21 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < manifest ; exists ; 2019 ; 22 ; Journal of The American Society of Questioned Document Examiners Volume 2019 ; 2019 ; 22 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < manifest ; exists ; 2020 ; 23 ; Journal of The American Society of Questioned Document Examiners Volume 2020 ; 2020 ; 23 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < manifest ; exists ; 2021 ; 24 ; Journal of The American Society of Questioned Document Examiners Volume 2021 ; 2021 ; 24 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < manifest ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < ready ; exists ; 2020 ; 23 ; Journal of The American Society of Questioned Document Examiners Volume 2020 ; 2020 ; 23 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < ready ; exists ; 2021 ; 24 ; Journal of The American Society of Questioned Document Examiners Volume 2021 ; 2021 ; 24 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < ready ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2023 ; 2023 ; 26 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < expected ; exists ; 2024 ; 27 ; Journal of The American Society of Questioned Document Examiners Volume 2024 ; 2024 ; 27 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < notReady ; exists ; 2025 ; 28 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 28 ; ASQDE ; No substance ; https://journal.asqde.org/ ; >
@@ -69,7 +69,7 @@
       au < finished ; crawling ; 2021 ; 6 ; ARENA Journal of Architectural Research Volume 2021 ; 2021 ; 6 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 7 ; ARENA Journal of Architectural Research Volume 2022 [superseded] ; 2022 ; 7 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; ARENA Journal of Architectural Research Volume 2023 ; 2023 ; 8 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
-      au < manifest ; exists ; 2024 ; 9 ; ARENA Journal of Architectural Research Volume 2024 ; 2024 ; 9 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
+      au < ready ; exists ; 2024 ; 9 ; ARENA Journal of Architectural Research Volume 2024 ; 2024 ; 9 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
       au < expected ; exists ; 2025 ; 10 ; ARENA Journal of Architectural Research Volume 2025 ; 2025 ; 10 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
 
   }
@@ -126,9 +126,9 @@
       au < doNotProcess ; doNotProcess ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 ; 1 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
       au < doNotProcess ; doNotProcess ; 2021 ; 2 ; Steiner Studies Volume 2021 ; 2021 ; 2 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 3 ; Steiner Studies Volume 2022 ; 2022 ; 3 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
-      au < manifest ; exists ; 2023 ; 4 ; Steiner Studies Volume 2023 ; 2023 ; 4 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
-      au < manifest ; exists ; 2024 ; 5 ; Steiner Studies Volume 2024 ; 2024 ; 5 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
-      au < manifest ; exists ; 2025 ; 6 ; Steiner Studies Volume 2025 ; 2025 ; 6 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
+      au < ready ; exists ; 2023 ; 4 ; Steiner Studies Volume 2023 ; 2023 ; 4 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
+      au < ready ; exists ; 2024 ; 5 ; Steiner Studies Volume 2024 ; 2024 ; 5 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
+      au < ready ; exists ; 2025 ; 6 ; Steiner Studies Volume 2025 ; 2025 ; 6 ; frommann-holzboog ;  ; https://steiner-studies.org/ ; >
 
   }
 
@@ -145,7 +145,7 @@
       nondefparam[journal_id] = kitl-j-hs
 
       au < manifest ; exists ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ ; >
-      au < manifest ; exists ; 2025 ; 2 ; Hydrogen Safety Volume 2025 ; 2025 ; 2 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ ; >
+      au < ready ; exists ; 2025 ; 2 ; Hydrogen Safety Volume 2025 ; 2025 ; 2 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ ; >
 
   }
 
@@ -177,8 +177,8 @@
       au < frozen ; down ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; 58 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 [superseded] ; 2022 ; 59 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < testing ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ; about redirects ; https://estetikajournal.org/ ; >
-      au < manifest ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ; about redirects ; https://estetikajournal.org/ ; >
-      au < manifest ; exists ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ; about redirects ; https://estetikajournal.org/ ; >
+      au < ready ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ; about redirects ; https://estetikajournal.org/ ; >
+      au < ready ; exists ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ; about redirects ; https://estetikajournal.org/ ; >
   }
 
   {
@@ -206,8 +206,8 @@
       au < finished ; crawling ; 2021 ; 11 ; Nordic Journal of Migration Research Volume 2021 ; 2021 ; 11 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 12 ; Nordic Journal of Migration Research Volume 2022 [superseded] ; 2022 ; 12 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 13 ; Nordic Journal of Migration Research Volume 2023 ; 2023 ; 13 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
-      au < manifest ; exists ; 2024 ; 14 ; Nordic Journal of Migration Research Volume 2024 ; 2024 ; 14 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
-      au < manifest ; exists ; 2025 ; 15 ; Nordic Journal of Migration Research Volume 2025 ; 2025 ; 15 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
+      au < ready ; exists ; 2024 ; 14 ; Nordic Journal of Migration Research Volume 2024 ; 2024 ; 14 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
+      au < ready ; exists ; 2025 ; 15 ; Nordic Journal of Migration Research Volume 2025 ; 2025 ; 15 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
   }
 
   {
@@ -248,8 +248,8 @@
       au < finished ; crawling ; 2021 ; 24 ; Redescriptions Volume 2021 ; 2021 ; 24 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 25 ; Redescriptions Volume 2022 [superseded] ; 2022 ; 25 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 26 ; Redescriptions Volume 2023 ; 2023 ; 26 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
-      au < manifest ; exists ; 2024 ; 27 ; Redescriptions Volume 2024 ; 2024 ; 27 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
-      au < manifest ; exists ; 2025 ; 28 ; Redescriptions Volume 2025 ; 2025 ; 28 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
+      au < ready ; exists ; 2024 ; 27 ; Redescriptions Volume 2024 ; 2024 ; 27 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
+      au < ready ; exists ; 2025 ; 28 ; Redescriptions Volume 2025 ; 2025 ; 28 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
 
   }
 
@@ -328,8 +328,8 @@
       au < frozen ; exists ; 2021 ; 2 ; Nordic Journal of Transitions, Careers and Guidance Volume 2021 ; 2021 ; 2 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
       au < superseded ; exists ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 [superseded] ; 2022 ; 3 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Nordic Journal of Transitions, Careers and Guidance Volume 2023 ; 2023 ; 4 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
-      au < manifest ; exists ; 2024 ; 5 ; Nordic Journal of Transitions, Careers and Guidance Volume 2024 ; 2024 ; 5 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
-      au < manifest ; exists ; 2025 ; 6 ; Nordic Journal of Transitions, Careers and Guidance Volume 2025 ; 2025 ; 6 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
+      au < ready ; exists ; 2024 ; 5 ; Nordic Journal of Transitions, Careers and Guidance Volume 2024 ; 2024 ; 5 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
+      au < ready ; exists ; 2025 ; 6 ; Nordic Journal of Transitions, Careers and Guidance Volume 2025 ; 2025 ; 6 ; Stockholm University Press ;  ; https://njtcg.org/ ; >
 
   }
 
@@ -355,8 +355,8 @@
       au < finished ; crawling ; 2021 ; 8 ; Rural Landscapes: Society, Environment, History Volume 2021 ; 2021 ; 8 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 9 ; Rural Landscapes: Society, Environment, History Volume 2022 [superseded] ; 2022 ; 9 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Rural Landscapes: Society, Environment, History Volume 2023 ; 2023 ; 10 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
-      au < manifest ; exists ; 2024 ; 11 ; Rural Landscapes: Society, Environment, History Volume 2024 ; 2024 ; 11 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
-      au < manifest ; exists ; 2025 ; 12 ; Rural Landscapes: Society, Environment, History Volume 2025 ; 2025 ; 12 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
+      au < ready ; exists ; 2024 ; 11 ; Rural Landscapes: Society, Environment, History Volume 2024 ; 2024 ; 11 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
+      au < ready ; exists ; 2025 ; 12 ; Rural Landscapes: Society, Environment, History Volume 2025 ; 2025 ; 12 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ ; >
 
   }
 
@@ -399,7 +399,7 @@
       au < finished ; crawling ; 2021 ; 23 ; Scandinavian Journal of Disability Research Volume 23 ; 2021 ; 23 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 24 ; Scandinavian Journal of Disability Research Volume 24 ; 2022 ; 24 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 25 ; Scandinavian Journal of Disability Research Volume 25 ; 2023 ; 25 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
-      au < manifest ; exists ; 2024 ; 26 ; Scandinavian Journal of Disability Research Volume 26 ; 2024 ; 26 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
+      au < ready ; exists ; 2024 ; 26 ; Scandinavian Journal of Disability Research Volume 26 ; 2024 ; 26 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
       au < notReady ; exists ; 2025 ; 27 ; Scandinavian Journal of Disability Research Volume 27 ; 2025 ; 27 ; Stockholm University Press ; 403. articles/1248/files/6824789c66a22.zip ; https://sjdr.se/ ; >
 
   }
@@ -424,8 +424,8 @@
       au < finished ; crawling ; 2021 ; 6 ; Scandinavian Journal of Work and Organizational Psychology Volume 2021 ; 2021 ; 6 ; Stockholm University Press ;  ; https://www.sjwop.com/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 7 ; Scandinavian Journal of Work and Organizational Psychology Volume 2022 [superseded] ; 2022 ; 7 ; Stockholm University Press ;  ; https://www.sjwop.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; Scandinavian Journal of Work and Organizational Psychology Volume 2023 ; 2023 ; 8 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
-      au < manifest ; exists ; 2024 ; 9 ; Scandinavian Journal of Work and Organizational Psychology Volume 2024 ; 2024 ; 9 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
-      au < manifest ; exists ; 2025 ; 10 ; Scandinavian Journal of Work and Organizational Psychology Volume 2025 ; 2025 ; 10 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
+      au < ready ; exists ; 2024 ; 9 ; Scandinavian Journal of Work and Organizational Psychology Volume 2024 ; 2024 ; 9 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
+      au < ready ; exists ; 2025 ; 10 ; Scandinavian Journal of Work and Organizational Psychology Volume 2025 ; 2025 ; 10 ; Stockholm University Press ;  ; https://sjwop.com/ ; >
 
   }
 
@@ -580,7 +580,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; 74 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; > #Lists all volumes.
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < notReady ; exists ; 2024 ; 76 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2024 ; 2024 ; 76 ; Stockholm University Press ; 403. articles/4083/files/6752f648ee5db.zip ; https://a.tellusjournals.se/ ; >
-      au < manifest ; exists ; 2025 ; 77 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
+      au < ready ; exists ; 2025 ; 77 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
 
   }
 
@@ -639,8 +639,8 @@
       au < frozen ; exists ; 2021 ; 73 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; 73 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 74 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; 74 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; > # Lists all volumes.
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 2024 ; 76 ; Tellus B: Chemical and Physical Meteorology Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < manifest ; exists ; 2025 ; 77 ; Tellus B: Chemical and Physical Meteorology Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
+      au < ready ; exists ; 2024 ; 76 ; Tellus B: Chemical and Physical Meteorology Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
+      au < ready ; exists ; 2025 ; 77 ; Tellus B: Chemical and Physical Meteorology Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
 
   }
 
