@@ -45,7 +45,7 @@
       au < manifest ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2023 ; 2023 ; 26 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < expected ; exists ; 2024 ; 27 ; Journal of The American Society of Questioned Document Examiners Volume 2024 ; 2024 ; 27 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < manifest ; exists ; 2025 ; 28 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 28 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < notReady ; exists ; 2025 ; 28 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 28 ; ASQDE ; No substance ; https://journal.asqde.org/ ; >
 
   }
 
@@ -275,8 +275,8 @@
       au < finished ; finished ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; 8 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 9 ; Modern Languages Open Volume 2022 [superseded] ; 2022 ; 9 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; 10 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ ; >
-      au < manifest ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ ; >
-      au < manifest ; exists ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ ; >
+      au < notReady ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
+      au < notReady ; exists ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
 
   }
 
@@ -400,7 +400,7 @@
       au < superseded ; exists ; 2022 ; 24 ; Scandinavian Journal of Disability Research Volume 24 ; 2022 ; 24 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 25 ; Scandinavian Journal of Disability Research Volume 25 ; 2023 ; 25 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
       au < manifest ; exists ; 2024 ; 26 ; Scandinavian Journal of Disability Research Volume 26 ; 2024 ; 26 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
-      au < manifest ; exists ; 2025 ; 27 ; Scandinavian Journal of Disability Research Volume 27 ; 2025 ; 27 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
+      au < notReady ; exists ; 2025 ; 27 ; Scandinavian Journal of Disability Research Volume 27 ; 2025 ; 27 ; Stockholm University Press ; 403. articles/1248/files/6824789c66a22.zip ; https://sjdr.se/ ; >
 
   }
 
@@ -464,8 +464,8 @@
       au < finished ; crawling ; 2021 ; 51 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2021 ; 2021 ; 51 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 52 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 [superseded] ; 2022 ; 52 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2023 ; 2023 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
-      au < manifest ; exists ; 2024 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 54 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
-      au < manifest ; exists ; 2025 ; 55 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 55 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
+      au < notReady ; exists ; 2024 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 54 ; Stockholm University Press ; No substance ; https://iberoamericana.se/ ; >
+      au < notReady ; exists ; 2025 ; 55 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 55 ; Stockholm University Press ; No substance ; https://iberoamericana.se/ ; >
 
   }
   {
@@ -486,8 +486,8 @@
       au < finished ; crawling ; 2021 ; 4 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2021 ; 2021 ; 4 ; Stockholm University Press ;  ; https://franorfon.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 5 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2022 [superseded] ; 2022 ; 5 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2023 ; 2023 ; 6 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
-      au < manifest ; exists ; 2024 ; 7 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2024 ; 2024 ; 7 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
-      au < manifest ; exists ; 2025 ; 8 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2025 ; 2025 ; 8 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
+      au < notReady ; exists ; 2024 ; 7 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2024 ; 2024 ; 7 ; Stockholm University Press ; No substance ; https://franorfon.org/ ; >
+      au < notReady ; exists ; 2025 ; 8 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2025 ; 2025 ; 8 ; Stockholm University Press ; No substance ; https://franorfon.org/ ; >
 
   }
   {
@@ -579,7 +579,7 @@
       au < frozen ; exists ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 ; 73 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; 74 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; > #Lists all volumes.
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
-      au < manifest ; exists ; 2024 ; 76 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
+      au < notReady ; exists ; 2024 ; 76 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2024 ; 2024 ; 76 ; Stockholm University Press ; 403. articles/4083/files/6752f648ee5db.zip ; https://a.tellusjournals.se/ ; >
       au < manifest ; exists ; 2025 ; 77 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
 
   }
@@ -666,7 +666,7 @@
       au < finished ; crawling ; 2021 ; 8 ; Annals of Global Health Volume 2021 ; 2021 ; 8 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 9 ; Annals of Global Health Volume 2022 [superseded] ; 2022 ; 9 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Annals of Global Health Volume 2023 ; 2023 ; 10 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
-      au < manifest ; exists ; 2024 ; 11 ; Annals of Global Health Volume 2024 ; 2024 ; 11 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
+      au < notReady ; exists ; 2024 ; 11 ; Annals of Global Health Volume 2024 ; 2024 ; 11 ; Ubiquity Press ; No substance ; https://annalsofglobalhealth.org/ ; >
       au < manifest ; exists ; 2025 ; 12 ; Annals of Global Health Volume 2025 ; 2025 ; 12 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
 
   }
