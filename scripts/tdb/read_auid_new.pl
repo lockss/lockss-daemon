@@ -1572,7 +1572,9 @@ while (my $line = <>) {
     #printf("URL: %s\n", $perm_url); #debug
     $vol_title = $perm_url ;
     #start_url for all OAI queries https://www.comicsgrid.com/api/oai/?verb=ListRecords&metadataPrefix=oai_dc&from=2019-01-01&until=2019-12-31
-    $url = sprintf("%s%s/api/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31",
+#    $url = sprintf("%s%s/api/oai/?verb=ListRecords&amp;metadataPrefix=oai_dc&amp;from=%d-01-01&amp;until=%d-12-31",
+#      $param{base_url}, $param{journal_id}, $param{year}, $param{year});
+    $url = sprintf("%s%s/api/oai/?verb=ListRecords&from=%d-01-01&until=%d-12-31&metadataPrefix=oai_dc",
       $param{base_url}, $param{journal_id}, $param{year}, $param{year});
 
     #$url = sprintf("%slockss?year=%d&amp;optional_journal_id=%s",
@@ -1591,13 +1593,13 @@ while (my $line = <>) {
             $result = "Redirected";
         } elsif (defined($perm_contents) && ($perm_contents =~ m/$clockss_tag/s) && ($perm_contents =~ m/$lockss_tag/s)) {
         if ($resp_s->is_success) {
-          #if ($resp_s->content =~ m/results in an empty (set|list)/is) {
-            #$result = "--EMPTY_LIST--"
-          #} elsif ($resp_s->content !~ m/<dc:date>$param{year}/ ) {
-            #$result = "--MISSING-YEAR--"
-          #} else {
+          if ($resp_s->content =~ m/results in an empty (set|list)/is) {
+            $result = "--EMPTY_LIST--"
+          } elsif ($resp_s->content !~ m/<dc:date>$param{year}/ ) {
+            $result = "--MISSING-YEAR--"
+          } else {
             $result = "Manifest";
-          #}
+          }
         } else {
           #printf("URL: %s\n", $man_url);
           $result = "--REQ_FAIL--"
