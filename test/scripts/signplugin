@@ -1,5 +1,33 @@
-#!/usr/bin/python2
+#!/usr/bin/env python3
+
+# Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 #
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#
+# 1. Redistributions of source code must retain the above copyright notice,
+# this list of conditions and the following disclaimer.
+#
+# 2. Redistributions in binary form must reproduce the above copyright notice,
+# this list of conditions and the following disclaimer in the documentation
+# and/or other materials provided with the distribution.
+#
+# 3. Neither the name of the copyright holder nor the names of its contributors
+# may be used to endorse or promote products derived from this software without
+# specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+# LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
 # Sign a plugin jar.
 #
 # The syntax of the java 'jarsigner' tool is hard to remember,
@@ -12,28 +40,28 @@
 # attacks, some random bits should be added to plugins received from
 # third parties before we sign them.
 
-from sys import argv, exit
-from getpass import getpass
 from getopt import getopt, GetoptError
-from os import path, environ, popen
+from getpass import getpass
 from glob import glob
+from os import path, environ, popen
+import sys
 
 validArgs = ["help", "jar=", "alias=", "keystore=", "password="]
 args = {}
 
 def usage(help):
     """ Print usage information """
-    print "Usage: signplugin [--help] [--jar <jarname>] \\\n \
-		 [--alias <alias>] [--keystore <keystore>] \\\n \
-		 [--password <password>]"
-    if (help):
-	print """
+    print("Usage: signplugin [--help] [--jar <jarname>] \\\n \
+         [--alias <alias>] [--keystore <keystore>] \\\n \
+         [--password <password>]")
+    if help:
+        print("""
  help         Print this help message.
  jar          The name of the JAR file to sign.
  alias        The alias to use when signing the jar.
  keystore     The keystore holding your signing key.
  password     Your signing password.
-"""
+""")
 
 def file_exists(file):
     """ Verify that a given file exists. """
@@ -47,25 +75,25 @@ def gather_input():
     """ Prompt the user for missing arguments """
     global args
 
-    while not args.has_key("jar") or len(args["jar"]) == 0:
-	args["jar"] = raw_input("JAR file: ")
+    while 'jar' not in args or len(args["jar"]) == 0:
+        args["jar"] = input("JAR file: ")
 
     if not file_exists(args["jar"]):
-	print "Jar file %s does not exist!" % args["jar"]
-	exit(1)
+        print(f"Jar file {args['jar']} does not exist!")
+        sys.exit(1)
 
-    while not args.has_key("alias") or len(args["alias"]) == 0:
-	args["alias"] = raw_input("Signing alias: ")
+    while 'alias' not in args or len(args["alias"]) == 0:
+        args["alias"] = input("Signing alias: ")
 
-    while not args.has_key("keystore") or len(args["keystore"]) == 0:
-	args["keystore"] = raw_input("Signing keystore: ")
+    while 'keystore' not in args or len(args["keystore"]) == 0:
+        args["keystore"] = input("Signing keystore: ")
 
     if not file_exists(args["keystore"]):
-	print "Keystore %s does not exist!" % args["keystore"]
-	exit(1)
+        print(f"Keystore {args['keystore']} does not exist!")
+        sys.exit(1)
 
-    while not args.has_key("password") or len(args["password"]) == 0:
-	args["password"] = getpass("Signing Password: ")
+    while 'password' not in args or len(args["password"]) == 0:
+        args["password"] = getpass("Signing Password: ")
 
 #
 # Parse passed-in command-line arguments.
@@ -75,26 +103,26 @@ def parse_options(argv):
     global args
 
     if len(argv) == 0:
-	print "For help, use the --help option."
+        print("For help, use the --help option.")
 
     (opts, vals) = getopt(argv, None, validArgs)
 
     if len(vals) > 0:
-	usage(0)
-	exit(1)
+        usage(0)
+        sys.exit(1)
 
     for (opt, val) in opts:
-	if opt == "--help":
-	    usage(1)
-	    exit()
-	elif opt == "--jar":
-	    args["jar"] = val
-	elif opt == "--alias":
-	    args["alias"] = val
-	elif opt == "--password":
-	    args["password"] = val
-	elif opt == "--keystore":
-	    args["keystore"] = val
+        if opt == "--help":
+            usage(1)
+            sys.exit()
+        elif opt == "--jar":
+            args["jar"] = val
+        elif opt == "--alias":
+            args["alias"] = val
+        elif opt == "--password":
+            args["password"] = val
+        elif opt == "--keystore":
+            args["keystore"] = val
 
 #
 # Sign the plugin
@@ -104,49 +132,49 @@ def sign_plugin():
     global jarsigner
     global args
 
-    print ("Signing plugin %s..." % args["jar"])
+    print(f"Signing plugin {args['jar']}...")
 
     commandArgs = " -keystore \'" + args["keystore"] + "\'" + \
-		  " -keypass \'" + args["password"] + "\'" + \
-		  " -storepass \'" + args["password"] + "\'" + \
-		  " " + args["jar"] + \
-		  " " + args["alias"]
+          " -keypass \'" + args["password"] + "\'" + \
+          " -storepass \'" + args["password"] + "\'" + \
+          " " + args["jar"] + \
+          " " + args["alias"]
 
     child = popen(jarsigner + commandArgs)
     output = child.read()
     err = child.close()
     if err:
-        print "Signing failed."
-        print output
-        exit(1)
+        print("Signing failed.")
+        print(output)
+        sys.exit(1)
     else:
-        print "Plugin jar %s signed successfully." % args["jar"]
+        print(f"Plugin jar {args['jar']} signed successfully.")
 
 def main():
     """ Main entry point """
     global jarsigner
 
     # Make sure 'JAVA_HOME' is set.
-    if not environ.has_key('JAVA_HOME'):
-        print "Can't continue. 'JAVA_HOME' must be defined in your environment."
-        exit(1)
+    if 'JAVA_HOME' not in environ:
+        print("Can't continue. 'JAVA_HOME' must be defined in your environment.")
+        sys.exit(1)
 
     # Location of the 'jarsigner' command.
     jarsigner = path.join(environ.get('JAVA_HOME'), 'bin', 'jarsigner')
 
     # Parse command line options
     try:
-        parse_options(argv[1:])
+        parse_options(sys.argv[1:])
     except GetoptError:
         usage(0)
-        exit(1)
+        sys.exit(1)
 
     # Get missing input
     try:
         gather_input()
     except SyntaxError:
-        print "Problem while parsing input"
-        exit(1)
+        print("Problem while parsing input")
+        sys.exit(1)
 
     # Actually generate the plugin and sign it.
     sign_plugin()
@@ -158,5 +186,5 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print
-        exit(0)
+        print()
+        sys.exit(0)
