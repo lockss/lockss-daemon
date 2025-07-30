@@ -507,14 +507,24 @@
         eissn = 2815-8202
       >
 
+      {
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = rangahau-aranga/1
+
+      au < doNotProcess ; doNotProcess ; 2022 ; Rangahau Aranga: AUT Graduate Review Volume 1 ; 1 ; 2022 ; reingest5.clockss.org:8082 >
+      au < doNotProcess ; doNotProcess ; 2023 ; Rangahau Aranga: AUT Graduate Review Volume 2 ; 2 ; 2023 ; >
+      au < manifest ; exists ; 2024 ; Rangahau Aranga: AUT Graduate Review Volume 3 ; 3 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; Rangahau Aranga: AUT Graduate Review Volume 4 ; 4 ; 2025 ; >
+      }
+      {
       param[base_url] = https://ojs.aut.ac.nz/
       param[journal_id] = rangahau-aranga
 
       au < finished ; crawling ; 2022 ; Rangahau Aranga: AUT Graduate Review Volume 1 ; 1 ; 2022 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2023 ; Rangahau Aranga: AUT Graduate Review Volume 2 ; 2 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Rangahau Aranga: AUT Graduate Review Volume 3 ; 3 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Rangahau Aranga: AUT Graduate Review Volume 4 ; 4 ; 2025 ; >
-
+      au < frozen ; exists ; 2023 ; Rangahau Aranga: AUT Graduate Review Volume 2 ; 2 ; 2023 ; >
+      au < superseded ; exists ; 2024 ; Rangahau Aranga: AUT Graduate Review Volume 3 [superseded] ; 3 ; 2024 ; >
+      au < doNotProcess ; exists ; 2025 ; Rangahau Aranga: AUT Graduate Review Volume 4 ; 4 ; 2025 ; >
+      }
   }
 
 }
