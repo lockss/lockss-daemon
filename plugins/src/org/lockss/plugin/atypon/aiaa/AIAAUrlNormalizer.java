@@ -33,13 +33,46 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.atypon.aiaa;
 
 import org.lockss.plugin.QueryUrlNormalizer;
+import org.lockss.plugin.UrlNormalizer;
+import org.lockss.util.Logger;
+import org.lockss.daemon.PluginException;
+import java.util.regex.*;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
 
 public class AIAAUrlNormalizer extends QueryUrlNormalizer {
+
+    private static Logger log = Logger.getLogger(AIAAUrlNormalizer.class);
+
+    //Example: https://arc.aiaa.org/browse/book/10.2514/MAVIAT21/proceedings-topics/aer
+    protected Pattern TOC_PAGE = Pattern.compile("https://[^/]+/browse/book/[0-9.]+/[^./]+/proceedings-topics/[^./]+$", Pattern.CASE_INSENSITIVE);
+
+    protected UrlNormalizer baseUrlNormalizer = new BaseAtyponUrlNormalizer();
+
+    @Override 
+    public String normalizeUrl(String url, ArchivalUnit au)
+      throws PluginException {
+        url = baseUrlNormalizer.normalizeUrl(url, au);
+        if(TOC_PAGE.matcher(url).matches()){
+            url = url + "?pageSize=100&sortBy=Earliest&startPage=0";
+        }
+        return super.normalizeUrl(url, au);
+      }
+
     @Override
     public boolean shouldDropKeyValue(String key, String value) {
       if((key.equals("pageSize") && (value.equals("20") || value.equals("50"))) ||
          (key.equals("sortBy") && value.equals("relevancy"))){
+            log.debug3("key is " + key + " and the value is " + value);
         return true;
       }else return false;
+    }
+
+    @Override
+    public boolean shouldDropKey(String key) {
+      if(key.equals("pageSize") || key.equals("sortBy") || 
+         key.equals("startPage")){
+        return false;
+      }else return true;
     }
 }

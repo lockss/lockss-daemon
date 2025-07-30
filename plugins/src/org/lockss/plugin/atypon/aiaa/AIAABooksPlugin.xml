@@ -70,13 +70,15 @@ POSSIBILITY OF SUCH DAMAGE.
       Copied from 
      -->
     <list>
-      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff[0-9]?)(_v[0-9]+)?$", url_host(base_url)</string>
+      <string>1,"^https?://%s/[^?]*\.(webp|bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff[0-9]?)(_v[0-9]+)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/na101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", url_host(base_url), book_eisbn</string>
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/[^/]+/[0-9.]+/(null\?|[-.9]+$)", url_host(base_url)</string>
       <string>1,"^https?://%s/doi/book/[0-9.]+/", url_host(base_url)</string>
       <string>1,"^https?://(static\.cloudflareinsights|(ajax|fonts)\.(googleapis|gstatic))\.com/"</string>
-      <string>1,"^https?://%s/browse/book/[0-9.]+/[^./]/proceedings-topics/[^./]\?pageSize=100&amp;startPage=[0-9]+&amp;sortBy=Earliest", url_host(base_url)</string>
+      <string>1,"^https?://%s/browse/book/[0-9.]+/[^./]+/proceedings-topics/[^/?]+(\?.*)?$", url_host(base_url)</string>
+      <!--<string>1,"^https?://%s/browse/book/[0-9.]+/[^./]+/proceedings-topics/[^./?]+$", url_host(base_url)</string>
+      <string>1,"^https?://%s/browse/book/[0-9.]+/[^./]+/proceedings-topics/[^./?]+\?pageSize=(20|50|100)&amp;sortBy=(Earliest|relevancy)&amp;startPage=[0-9]+$", url_host(base_url)</string>-->
       <!--
         Update URL for SIAM PDF files
         https://epubs.siam.org/doi/reader/10.1137/1.9781611976953.ch8
@@ -126,5 +128,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.atypon.aiaa.AIAAHtmlLinkRewriterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.atypon.aiaa.AIAAUrlNormalizer</string>
   </entry>
 </map>
