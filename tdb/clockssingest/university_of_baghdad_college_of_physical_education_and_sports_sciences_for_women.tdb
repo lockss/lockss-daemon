@@ -23,13 +23,13 @@
       param[journal_abbr] = journal
       #published 2005-present
 
-      au < manifest ; exists ; 2005 ; Modern Sport Volume 2005 ; 4 ; >
-      au < manifest ; exists ; 2006 ; Modern Sport Volume 2006 ; 5 ; >
-      au < manifest ; exists ; 2007 ; Modern Sport Volume 2007 ; 6 ; >
-      au < manifest ; exists ; 2008 ; Modern Sport Volume 2008 ; 7 ; >
-      au < manifest ; exists ; 2009 ; Modern Sport Volume 2009 ; 8 ; >
-      au < manifest ; exists ; 2010 ; Modern Sport Volume 2010 ; 9 ; >
-      au < manifest ; exists ; 2011 ; Modern Sport Volume 2011 ; 10 ; >
+      au < testing ; exists ; 2005 ; Modern Sport Volume 2005 ; 4 ; >
+      au < testing ; exists ; 2006 ; Modern Sport Volume 2006 ; 5 ; >
+      au < testing ; exists ; 2007 ; Modern Sport Volume 2007 ; 6 ; >
+      au < testing ; exists ; 2008 ; Modern Sport Volume 2008 ; 7 ; >
+      au < testing ; exists ; 2009 ; Modern Sport Volume 2009 ; 8 ; >
+      au < testing ; exists ; 2010 ; Modern Sport Volume 2010 ; 9 ; >
+      au < testing ; exists ; 2011 ; Modern Sport Volume 2011 ; 10 ; >
       au < doNotProcess ; exists ; 2012 ; Modern Sport Volume 2012 ; 11 ; >
       au < doNotProcess ; exists ; 2013 ; Modern Sport Volume 2013 ; 12 ; >
       au < doNotProcess ; exists ; 2014 ; Modern Sport Volume 2014 ; 13 ; >
@@ -43,7 +43,7 @@
       au < doNotProcess ; exists ; 2022 ; Modern Sport Volume 2022 ; 21 ; >
       au < doNotProcess ; exists ; 2023 ; Modern Sport Volume 2023 ; 22 ; >
       au < doNotProcess ; exists ; 2024 ; Modern Sport Volume 2024 ; 23 ; >
-      au < manifest ; exists ; 2025 ; Modern Sport Volume 2025 ; 24 ; >
+      au < testing ; exists ; 2025 ; Modern Sport Volume 2025 ; 24 ; >
     }
     {
       provider = University of Baghdad, College of Physical Education and Sports Sciences for Women
