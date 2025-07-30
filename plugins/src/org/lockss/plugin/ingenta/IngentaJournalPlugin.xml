@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>74</string>
+    <string>75</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -71,7 +71,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Ingenta Journal Plugin, Base URL %s, API URL %s, Graphics URL %s, Publisher ID %s, Journal ID %s, Journal ISSN %s, Volume %s", base_url, api_url, graphics_url, publisher_id, journal_id, journal_issn, volume_name</string>
+    <string>"Ingenta Journals Plugin, Base URL %s, API URL %s, Graphics URL %s, Publisher ID %s, Journal ID %s, Journal ISSN %s, Volume %s", base_url, api_url, graphics_url, publisher_id, journal_id, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -79,7 +79,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Ingenta Journal Plugin</string>
+    <string>Ingenta Journals Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
