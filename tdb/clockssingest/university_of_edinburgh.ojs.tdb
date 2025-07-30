@@ -36,7 +36,7 @@
         name = Contemporary Challenges: The Global Crime, Justice and Security Journal ;
         eissn = 2634-7555
       >
-
+      {
       param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = Contemporary-Challenges
 
@@ -44,9 +44,20 @@
       au < frozen ; exists ; 2021 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2021 ; 2 ; 2021 ; >
       au < frozen ; exists ; 2022 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2022 ; 3 ; 2022 ; >
       au < frozen ; exists ; 2023 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2023 ; 4 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2024 ; 5 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2025 ; 6 ; 2025 ; >
+      au < superseded ; exists ; 2024 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2024 [superseded] ; 5 ; 2024 ; >
+      au < doNotProcess ; exists ; 2025 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2025 ; 6 ; 2025 ; >
+      }
+      {
+      param[base_url] = https://journals.ed.ac.uk/
+      param[journal_id] = ccj
 
+      au < doNotProcess ; doNotProcess ; 2020 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2020 ; 1 ; 2020 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2021 ; 2 ; 2021 ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2022 ; 3 ; 2022 ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2023 ; 4 ; 2023 ; >
+      au < manifest ; exists ; 2024 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2024 ; 5 ; 2024 ; >
+      au < expected ; exists ; 2025 ; Contemporary Challenges: The Global Crime, Justice and Security Journal Volume 2025 ; 6 ; 2025 ; >
+      }
   }
 
   {
