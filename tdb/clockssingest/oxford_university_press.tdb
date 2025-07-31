@@ -288,7 +288,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; African Affairs Volume 121 ; 121 ; >
     au < finished ; manifest ; 2023 ; 2023 ; African Affairs Volume 122 ; 122 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; African Affairs Volume 123 ; 123 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; African Affairs Volume 124 ; 124 ; >
+    au < testing ; exists ; 2025 ; 2025 ; African Affairs Volume 124 ; 124 ; >
 
   }
 
@@ -1151,7 +1151,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Animal Science Volume 99 ; 99 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Animal Science Volume 100 ; 100 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2024 ; 2024 ; Journal of Animal Science Volume 101 ; 101 ; >
-    au < manifest ; exists ; 2025 ;2025 ; Journal of Animal Science Volume 102 ; 102 ; >
+    au < testing ; exists ; 2025 ;2025 ; Journal of Animal Science Volume 102 ; 102 ; >
 
   }
 
@@ -1167,16 +1167,16 @@
     param[journal_id] = abm
     #content available from 1979 volume 1 to 2007 volume 34
 
-    au < manifest ; exists ; 2008 ; 2008 ; Annals of Behavioral Medicine Volume 35-36 ; 35-36 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Annals of Behavioral Medicine Volume 37-38 ; 37-38 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Annals of Behavioral Medicine Volume 39-40 ; 39-40 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Annals of Behavioral Medicine Volume 41-42 ; 41-42 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Annals of Behavioral Medicine Volume 43-44 ; 43-44 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Annals of Behavioral Medicine Volume 45-46 ; 45-46 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Annals of Behavioral Medicine Volume 47-48 ; 47-48 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Annals of Behavioral Medicine Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Annals of Behavioral Medicine Volume 50 ; 50 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Annals of Behavioral Medicine Volume 51 ; 51 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Annals of Behavioral Medicine Volume 35-36 ; 35-36 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Annals of Behavioral Medicine Volume 37-38 ; 37-38 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Annals of Behavioral Medicine Volume 39-40 ; 39-40 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Annals of Behavioral Medicine Volume 41-42 ; 41-42 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Annals of Behavioral Medicine Volume 43-44 ; 43-44 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Annals of Behavioral Medicine Volume 45-46 ; 45-46 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Annals of Behavioral Medicine Volume 47-48 ; 47-48 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Annals of Behavioral Medicine Volume 49 ; 49 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Annals of Behavioral Medicine Volume 50 ; 50 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Annals of Behavioral Medicine Volume 51 ; 51 ; >
     au < finished ; crawling ; 2018 ; 2018 ; Annals of Behavioral Medicine Volume 52 ; 52 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; 2019 ; Annals of Behavioral Medicine Volume 53 ; 53 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Annals of Behavioral Medicine Volume 54 ; 54 ; reingest4.clockss.org:8082 >
