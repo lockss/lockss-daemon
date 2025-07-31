@@ -39,13 +39,20 @@ import org.lockss.daemon.PluginException;
 import java.util.regex.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
+import org.apache.commons.collections4.ListValuedMap;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
 
 public class AIAAUrlNormalizer extends QueryUrlNormalizer {
 
     private static Logger log = Logger.getLogger(AIAAUrlNormalizer.class);
 
     //Example: https://arc.aiaa.org/browse/book/10.2514/MAVIAT21/proceedings-topics/aer
-    protected Pattern TOC_PAGE = Pattern.compile("https://[^/]+/browse/book/[0-9.]+/[^./]+/proceedings-topics/[^./]+$", Pattern.CASE_INSENSITIVE);
+    protected Pattern TOC_PAGE = Pattern.compile("https://[^/]+/browse/book/[0-9.]+/[^./]+/proceedings-topics/[^./#=\\?]+$", Pattern.CASE_INSENSITIVE);
 
     protected UrlNormalizer baseUrlNormalizer = new BaseAtyponUrlNormalizer();
 
@@ -56,16 +63,24 @@ public class AIAAUrlNormalizer extends QueryUrlNormalizer {
         if(TOC_PAGE.matcher(url).matches()){
             url = url + "?pageSize=100&sortBy=Earliest&startPage=0";
         }
+        
         return super.normalizeUrl(url, au);
       }
 
     @Override
-    public boolean shouldDropKeyValue(String key, String value) {
-      if((key.equals("pageSize") && (value.equals("20") || value.equals("50"))) ||
-         (key.equals("sortBy") && value.equals("relevancy"))){
-            log.debug3("key is " + key + " and the value is " + value);
-        return true;
-      }else return false;
+    public void processQueryMap(ListValuedMap<String, String> queryMap){
+        List<String> keySet = new ArrayList<String>(queryMap.keySet());
+        for(String key:keySet){
+            log.debug3("key is " + key + " value is " + queryMap.get(key));
+            if("sortBy".equals(key) && queryMap.get(key).contains("relevancy")){
+                queryMap.remove("sortBy");
+                queryMap.put("sortBy","Earliest");
+            }
+            if("pageSize".equals(key) && (queryMap.get(key).contains("20") || queryMap.get(key).contains("50"))){
+                queryMap.remove("pageSize");
+                queryMap.put("pageSize","100");
+            }
+        }
     }
 
     @Override
