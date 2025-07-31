@@ -977,9 +977,9 @@
       au < finished ; finished ; 2020 ; 21 ; International Journal of Integrated Care Volume 2020 ; 2020 ; 21 ; Ubiquity Press ;  ; https://www.ijic.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2021 ; 22 ; International Journal of Integrated Care Volume 2021 ; 2021 ; 22 ; Ubiquity Press ;  ; https://www.ijic.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 23 ; International Journal of Integrated Care Volume 2022 [superseded] ; 2022 ; 23 ; Ubiquity Press ;  ; https://www.ijic.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 24 ; International Journal of Integrated Care Volume 2023 ; 2023 ; 24 ; Ubiquity Press ;  ; https://.ijic.org/ ; >
-      au < manifest ; exists ; 2024 ; 25 ; International Journal of Integrated Care Volume 2024 ; 2024 ; 25 ; Ubiquity Press ;  ; https://www.ijic.org/ ; >
-      au < manifest ; exists ; 2025 ; 26 ; International Journal of Integrated Care Volume 2025 ; 2025 ; 26 ; Ubiquity Press ;  ; https://www.ijic.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 24 ; International Journal of Integrated Care Volume 2023 ; 2023 ; 24 ; Ubiquity Press ;  ; https://ijic.org/ ; >
+      au < exists ; exists ; 2024 ; 25 ; International Journal of Integrated Care Volume 2024 ; 2024 ; 25 ; Ubiquity Press ;  ; https://ijic.org/ ; >
+      au < exists ; exists ; 2025 ; 26 ; International Journal of Integrated Care Volume 2025 ; 2025 ; 26 ; Ubiquity Press ;  ; https://ijic.org/ ; >
 
   }
 
@@ -1868,10 +1868,10 @@
       nondefparam[base_url2] = https://account.ijelt.dundee.ac.uk/
       nondefparam[journal_id] = up-j-ijelt
 
-      au < manifest ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; 1 ; Ubiquity Press ;  ; https://ijelt.dundee.ac.uk/ ; >
-      au < manifest ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; 2 ; Ubiquity Press ;  ; https://ijelt.dundee.ac.uk/ ; >
-      au < manifest ; exists ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 ; 3 ; Ubiquity Press ;  ; https://ijelt.dundee.ac.uk/ ; >
-      au < manifest ; exists ; 2025 ; 4 ; International Journal of Educational and Life Transitions Volume 2025 ; 2025 ; 4 ; Ubiquity Press ;  ; https://ijelt.dundee.ac.uk/ ; >
+      au < notReady ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; 1 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
+      au < notReady ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; 2 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
+      au < notReady ; exists ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 ; 3 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
+      au < notReady ; exists ; 2025 ; 4 ; International Journal of Educational and Life Transitions Volume 2025 ; 2025 ; 4 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
 
   }
 
@@ -2422,9 +2422,9 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 15 ; The International Journal of Servant-Leadership Volume 2021 ; 2021 ; 15 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 16 ; The International Journal of Servant-Leadership Volume 2022 ; 2022 ; 16 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 17 ; The International Journal of Servant-Leadership Volume 2023 ; 2023 ; 17 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < manifest ; exists ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 ; 18 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < expected ; exists ; 2025 ; 19 ; The International Journal of Servant-Leadership Volume 2025 ; 2025 ; 19 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-
+      au < doNotProcess ; exists ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 ; 18 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+      au < doNotProcess ; exists ; 2025 ; 19 ; The International Journal of Servant-Leadership Volume 2025 ; 2025 ; 19 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+      #Moved to bepress
   }
 
   {
