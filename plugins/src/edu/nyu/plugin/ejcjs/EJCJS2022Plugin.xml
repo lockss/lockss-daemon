@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
     <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -71,6 +71,23 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
   <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>"Electronic Journal of Contemporary Japanese Studies Plugin (Legacy), Base URL %s, Volume %d", base_url, volume</string>
   </entry>
@@ -81,6 +98,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_permission_url</string>
     <string>"%sLOCKSS_Manifests/manifest2001.html", base_url</string><!-- a surviving manifest page -->
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+      <string>"%s[^/]+/vol\d+/iss\d+/[^.]+\.html",base_url</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>

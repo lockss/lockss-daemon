@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -70,6 +70,23 @@ POSSIBILITY OF SUCH DAMAGE.
     </list>
   </entry>
   <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
     <string>au_name</string>
     <string>"Journal of Religion and Society Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
@@ -78,10 +95,16 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>"%stoc/%s.html", base_url, volume_name</string>
   </entry>
   <entry>
+    <string>au_substance_url_pattern</string>
+    <string>"^https?://cdr.creighton.edu/bitstream/handle/.*\.pdf"</string>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,"^%s[^?]*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", base_url</string>
       <string>1,"^https?://dspace2\.creighton\.edu/xmlui/bitstream/handle/[^/]+/[^/]+/[^.]+.pdf(\?.*)?$", base_url, volume_name</string>
+      <string>1,"^https?://cdr.creighton.edu/bitstream/handle/.*\.pdf"</string>
+      <string>1,"^https?://cdr.creighton.edu/.*\.(bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff)(\?.*)?$"</string>
     </list>
   </entry>
   <entry>
@@ -96,6 +119,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_permitted_host_pattern</string>
     <list>
       <string>dspace2\.creighton\.edu</string>
+      <string>cdr\.creighton\.edu</string>
     </list>
   </entry>
 </map>
