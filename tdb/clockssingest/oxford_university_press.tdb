@@ -288,7 +288,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; African Affairs Volume 121 ; 121 ; >
     au < finished ; manifest ; 2023 ; 2023 ; African Affairs Volume 122 ; 122 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; African Affairs Volume 123 ; 123 ; >
-    au < testing ; exists ; 2025 ; 2025 ; African Affairs Volume 124 ; 124 ; >
+    au < ready ; exists ; 2025 ; 2025 ; African Affairs Volume 124 ; 124 ; >
 
   }
 
@@ -1167,16 +1167,16 @@
     param[journal_id] = abm
     #content available from 1979 volume 1 to 2007 volume 34
 
-    au < testing ; exists ; 2008 ; 2008 ; Annals of Behavioral Medicine Volume 35-36 ; 35-36 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Annals of Behavioral Medicine Volume 37-38 ; 37-38 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Annals of Behavioral Medicine Volume 39-40 ; 39-40 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Annals of Behavioral Medicine Volume 41-42 ; 41-42 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Annals of Behavioral Medicine Volume 43-44 ; 43-44 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Annals of Behavioral Medicine Volume 45-46 ; 45-46 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Annals of Behavioral Medicine Volume 47-48 ; 47-48 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Annals of Behavioral Medicine Volume 49 ; 49 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Annals of Behavioral Medicine Volume 50 ; 50 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Annals of Behavioral Medicine Volume 51 ; 51 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Annals of Behavioral Medicine Volume 35-36 ; 35-36 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Annals of Behavioral Medicine Volume 37-38 ; 37-38 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Annals of Behavioral Medicine Volume 39-40 ; 39-40 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Annals of Behavioral Medicine Volume 41-42 ; 41-42 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Annals of Behavioral Medicine Volume 43-44 ; 43-44 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Annals of Behavioral Medicine Volume 45-46 ; 45-46 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Annals of Behavioral Medicine Volume 47-48 ; 47-48 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Annals of Behavioral Medicine Volume 49 ; 49 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Annals of Behavioral Medicine Volume 50 ; 50 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Annals of Behavioral Medicine Volume 51 ; 51 ; >
     au < finished ; crawling ; 2018 ; 2018 ; Annals of Behavioral Medicine Volume 52 ; 52 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2019 ; 2019 ; Annals of Behavioral Medicine Volume 53 ; 53 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Annals of Behavioral Medicine Volume 54 ; 54 ; reingest4.clockss.org:8082 >
@@ -1352,16 +1352,16 @@
 
     param[journal_id] = anncom
 
-    au < manifest ; exists ; 2008 ; 2008 ; Annals of the International Communication Association Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Annals of the International Communication Association Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Annals of the International Communication Association Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Annals of the International Communication Association Volume 35 ; 35 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Annals of the International Communication Association Volume 32 ; 32 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Annals of the International Communication Association Volume 33 ; 33 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Annals of the International Communication Association Volume 34 ; 34 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Annals of the International Communication Association Volume 35 ; 35 ; >
     au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; Annals of the International Communication Association Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Annals of the International Communication Association Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Annals of the International Communication Association Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Annals of the International Communication Association Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Annals of the International Communication Association Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Annals of the International Communication Association Volume 41 ; 41 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Annals of the International Communication Association Volume 37 ; 37 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Annals of the International Communication Association Volume 38 ; 38 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Annals of the International Communication Association Volume 39 ; 39 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Annals of the International Communication Association Volume 40 ; 40 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Annals of the International Communication Association Volume 41 ; 41 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Annals of the International Communication Association Volume 42 ; 42 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Annals of the International Communication Association Volume 43 ; 43 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Annals of the International Communication Association Volume 44 ; 44 ; >
@@ -1876,7 +1876,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Aristotelian Society Supplementary Volume Volume 96 ; 96 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Aristotelian Society Supplementary Volume Volume 97 ; 97 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Aristotelian Society Supplementary Volume Volume 98 ; 98 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Aristotelian Society Supplementary Volume Volume 99 ; 99 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Aristotelian Society Supplementary Volume Volume 99 ; 99 ; >
 
   }
 
@@ -1891,16 +1891,16 @@
 
     param[journal_id] = arthistory
 
-    au < manifest ; exists ; 2008 ; 2008 ; Art History Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Art History Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Art History Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Art History Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Art History Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Art History Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Art History Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Art History Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Art History Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Art History Volume 40 ; 40 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Art History Volume 31 ; 31 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Art History Volume 32 ; 32 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Art History Volume 33 ; 33 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Art History Volume 34 ; 34 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Art History Volume 35 ; 35 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Art History Volume 36 ; 36 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Art History Volume 37 ; 37 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Art History Volume 38 ; 38 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Art History Volume 39 ; 39 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Art History Volume 40 ; 40 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Art History Volume 41 ; 41 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Art History Volume 42 ; 42 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Art History Volume 43 ; 43 ; >
