@@ -7,8 +7,7 @@
     info[tester] = X
   >
 
-  plugin = needs.plugin
-  #plugin = org.lockss.plugin.silverchair.companybiologists.ClockssCompanyBiologistsSilverchairPlugin
+  plugin = org.lockss.plugin.silverchair.emerald.ClockssEmeraldSilverchairPlugin
   param[base_url] = https://www.emerald.com/
   implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
 
@@ -25,12 +24,12 @@
 
     au < exists ; exists ; 2013 ; 2013 ; Academia Revista Latinoamericana de Administración Volume 26 ; 26 ; >
     au < exists ; exists ; 2014 ; 2014 ; Academia Revista Latinoamericana de Administración Volume 27 ; 27 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Academia Revista Latinoamericana de Administración Volume 28 ; 28 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Academia Revista Latinoamericana de Administración Volume 28 ; 28 ; >
     au < exists ; exists ; 2016 ; 2016 ; Academia Revista Latinoamericana de Administración Volume 29 ; 29 ; >
     au < exists ; exists ; 2017 ; 2017 ; Academia Revista Latinoamericana de Administración Volume 30 ; 30 ; >
     au < exists ; exists ; 2018 ; 2018 ; Academia Revista Latinoamericana de Administración Volume 31 ; 31 ; >
     au < exists ; exists ; 2019 ; 2019 ; Academia Revista Latinoamericana de Administración Volume 32 ; 32 ; >
-    au < exists ; exists ; 2020 ; 2020 ; Academia Revista Latinoamericana de Administración Volume 33 ; 33 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Academia Revista Latinoamericana de Administración Volume 33 ; 33 ; >
     au < exists ; exists ; 2021 ; 2021 ; Academia Revista Latinoamericana de Administración Volume 34 ; 34 ; >
     au < exists ; exists ; 2022 ; 2022 ; Academia Revista Latinoamericana de Administración Volume 35 ; 35 ; >
     au < exists ; exists ; 2023 ; 2023 ; Academia Revista Latinoamericana de Administración Volume 36 ; 36 ; >
@@ -71,7 +70,7 @@
     au < exists ; exists ; 2008 ; 2008 ; Accounting Research Journal Volume 21 ; 21 ; >
     au < exists ; exists ; 2009 ; 2009 ; Accounting Research Journal Volume 22 ; 22 ; >
     au < exists ; exists ; 2010 ; 2010 ; Accounting Research Journal Volume 23 ; 23 ; >
-    au < exists ; exists ; 2011 ; 2011 ; Accounting Research Journal Volume 24 ; 24 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Accounting Research Journal Volume 24 ; 24 ; >
     au < exists ; exists ; 2012 ; 2012 ; Accounting Research Journal Volume 25 ; 25 ; >
     au < exists ; exists ; 2013 ; 2013 ; Accounting Research Journal Volume 26 ; 26 ; >
     au < exists ; exists ; 2014 ; 2014 ; Accounting Research Journal Volume 27 ; 27 ; >
@@ -79,7 +78,7 @@
     au < exists ; exists ; 2016 ; 2016 ; Accounting Research Journal Volume 29 ; 29 ; >
     au < exists ; exists ; 2017 ; 2017 ; Accounting Research Journal Volume 30 ; 30 ; >
     au < exists ; exists ; 2018 ; 2018 ; Accounting Research Journal Volume 31 ; 31 ; >
-    au < exists ; exists ; 2019 ; 2019 ; Accounting Research Journal Volume 32 ; 32 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Accounting Research Journal Volume 32 ; 32 ; >
     au < exists ; exists ; 2020 ; 2020 ; Accounting Research Journal Volume 33 ; 33 ; >
     au < exists ; exists ; 2021 ; 2021 ; Accounting Research Journal Volume 34 ; 34 ; >
     au < exists ; exists ; 2022 ; 2022 ; Accounting Research Journal Volume 35 ; 35 ; >
@@ -102,7 +101,7 @@
 
     au < exists ; exists ; 2022 ; 2022 ; Consumer Behavior in Tourism and Hospitality Volume 17 ; 17 ; >
     au < exists ; exists ; 2023 ; 2023 ; Consumer Behavior in Tourism and Hospitality Volume 18 ; 18 ; >
-    au < exists ; exists ; 2024 ; 2024 ; Consumer Behavior in Tourism and Hospitality Volume 19 ; 19 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Consumer Behavior in Tourism and Hospitality Volume 19 ; 19 ; >
     au < exists ; exists ; 2025 ; 2025 ; Consumer Behavior in Tourism and Hospitality Volume 20 ; 20 ; >
 
   }
@@ -120,7 +119,7 @@
 
     au < exists ; exists ; 2022 ; 2022 ; Drugs, Habits and Social Policy Volume 23 ; 23 ; >
     au < exists ; exists ; 2023 ; 2023 ; Drugs, Habits and Social Policy Volume 24 ; 24 ; >
-    au < exists ; exists ; 2024 ; 2024 ; Drugs, Habits and Social Policy Volume 25 ; 25 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Drugs, Habits and Social Policy Volume 25 ; 25 ; >
     au < exists ; exists ; 2025 ; 2025 ; Drugs, Habits and Social Policy Volume 26 ; 26 ; >
 
   }
@@ -137,7 +136,7 @@
     param[journal_id] = techs
 
     au < exists ; exists ; 2022 ; 2022 ; Drugs, Habits and Social Policy Volume 1 ; 1 ; >
-    au < exists ; exists ; 2023 ; 2023 ; Drugs, Habits and Social Policy Volume 2 ; 2 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Drugs, Habits and Social Policy Volume 2 ; 2 ; >
     au < exists ; exists ; 2024 ; 2024 ; Drugs, Habits and Social Policy Volume 3 ; 3 ; >
     au < exists ; exists ; 2025 ; 2025 ; Drugs, Habits and Social Policy Volume 4 ; 4 ; >
 
@@ -169,10 +168,10 @@
 #    au < exists ; exists ; 2018 ; 2018 ; Archnet-IJAR Volume 12 ; 12 ; >
     au < exists ; exists ; 2019 ; 2019 ; Archnet-IJAR Volume 13 ; 13 ; >
     au < exists ; exists ; 2020 ; 2020 ; Archnet-IJAR Volume 14 ; 14 ; >
-    au < exists ; exists ; 2021 ; 2021 ; Archnet-IJAR Volume 15 ; 15 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Archnet-IJAR Volume 15 ; 15 ; >
     au < exists ; exists ; 2022 ; 2022 ; Archnet-IJAR Volume 16 ; 16 ; >
     au < exists ; exists ; 2023 ; 2023 ; Archnet-IJAR Volume 17 ; 17 ; >
-    au < exists ; exists ; 2024 ; 2024 ; Archnet-IJAR Volume 18 ; 18 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Archnet-IJAR Volume 18 ; 18 ; >
     au < exists ; exists ; 2025 ; 2025 ; Archnet-IJAR Volume 19 ; 19 ; >
 
   }
