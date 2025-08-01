@@ -77,8 +77,6 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/doi/book/[0-9.]+/", url_host(base_url)</string>
       <string>1,"^https?://(static\.cloudflareinsights|(ajax|fonts)\.(googleapis|gstatic))\.com/"</string>
       <string>1,"^https?://%s/browse/book/[0-9.]+/[^./]+/proceedings-topics/[^/?]+(\?.*)?$", url_host(base_url)</string>
-      <!--<string>1,"^https?://%s/browse/book/[0-9.]+/[^./]+/proceedings-topics/[^./?]+$", url_host(base_url)</string>
-      <string>1,"^https?://%s/browse/book/[0-9.]+/[^./]+/proceedings-topics/[^./?]+\?pageSize=(20|50|100)&amp;sortBy=(Earliest|relevancy)&amp;startPage=[0-9]+$", url_host(base_url)</string>-->
       <!--
         Update URL for SIAM PDF files
         https://epubs.siam.org/doi/reader/10.1137/1.9781611976953.ch8
