@@ -757,7 +757,7 @@
     #journal_num = 65
 
     au < finished ; manifest ; 2002 ; International Development Planning Review Volume 24 ; 24 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2003 ; International Development Planning Review Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2003 ; International Development Planning Review Volume 25 ; 25 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2004 ; International Development Planning Review Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; International Development Planning Review Volume 27 ; 27 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2006 ; International Development Planning Review Volume 28 ; 28 ; reingest5.clockss.org:8082 >
@@ -1637,7 +1637,7 @@
     param[journal_id] = rost
     #journal_num = 76
 
-    au < frozen ; exists ; 2000 ; Romani Studies Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2000 ; Romani Studies Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2001 ; Romani Studies Volume 11 ; 11 ; >
     au < finished ; manifest ; 2002 ; Romani Studies Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; Romani Studies Volume 13 ; 13 ; reingest2.clockss.org:8085 >
