@@ -146,8 +146,7 @@ public class FollowLinkCrawler extends BaseCrawler {
   // this.setCrawlConfig().  If we want to report all excluded URLs, this
   // can be changed to a simple Set.
   private Map excludedUrlCache = new HashMap();
-  private Set<String> failedUrls = new HashSet<String>();
-    
+
   protected CrawlQueue fetchQueue;
   protected Queue<CrawlUrlData> permissionProbeUrls;
   protected FifoQueue parseQueue;
