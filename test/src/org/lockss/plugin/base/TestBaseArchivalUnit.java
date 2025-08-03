@@ -578,7 +578,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     List expectedReturn = ListUtil.list(START_URL);
     List actualReturn = (List) mbau.getStartUrls();
     assertIsomorphic("return value", expectedReturn, actualReturn);
+    assertFalse(mbau.isAllowStartUrlError());
   }
+
   public void testGetPermissionPages() throws ConfigurationException {
     Configuration config =
       ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(), BASE_URL,

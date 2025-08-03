@@ -180,10 +180,10 @@ public class FollowLinkCrawler extends BaseCrawler {
     return Crawler.Type.NEW_CONTENT;
   }
 
-  /** Return true if crawler should fail if any start URL(s) can't be
-   * fetched */
-  protected boolean isFailOnStartUrlError() {
-    return getCrawlSeed().isFailOnStartUrlError();
+  /** Return true if crawler should continue after a start URL fetch
+   * failure */
+  protected boolean isAllowStartUrlError() {
+    return getCrawlSeed().isAllowStartUrlError();
   }
 
   protected int getRefetchDepth() {
@@ -596,7 +596,7 @@ public class FollowLinkCrawler extends BaseCrawler {
             res = fetcher.fetch();
             updateCacheStats(res, curl);
             if (res == FetchResult.NOT_FETCHED) {
-              if(curl.isStartUrl() && isFailOnStartUrlError()) {
+              if(curl.isStartUrl() && !isAllowStartUrlError()) {
                 // fail if cannot fetch a StartUrl
                 log.error(CrawlerStatus.START_URL_ERR_MSG + ": " + curl.getUrl());
                 crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR,
@@ -616,7 +616,7 @@ public class FollowLinkCrawler extends BaseCrawler {
               updateCdnStems(url);
             }
           } catch (CacheException ex) {
-            if(curl.isStartUrl() && isFailOnStartUrlError()) {
+            if(curl.isStartUrl() && !isAllowStartUrlError()) {
               // fail if cannot fetch a StartUrl
               log.error(CrawlerStatus.START_URL_ERR_MSG + ": " + curl.getUrl());
               crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR, 

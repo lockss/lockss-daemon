@@ -899,6 +899,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
                 au.makeUrlFetcher(new MockCrawler().new MockCrawlerFacade(),
                                   u1));
     assertNull(au.getPerHostPermissionPath());
+    assertFalse(au.isAllowStartUrlError());
 
     assertEmpty(au.getHttpCookies());
     assertEmpty(au.getHttpRequestHeaders());
@@ -1527,6 +1528,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 		    "http://base.foo/base_path/issuestart/issue-3/",
 		    "http://base.foo/base_path/issuestart/issue-3a/");
     assertEquals(expStartUrls, au.getStartUrls());
+    assertTrue(au.isAllowStartUrlError());
     assertEquals("Large Plugin AU, Base URL http://base.foo/base_path/, Resolver URL http://resolv.er/path/, Journal Code J47, Year 1984, Issues 1, 2, 3, 3a, Range 3-7",
 		 au.makeName());
 

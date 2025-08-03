@@ -65,6 +65,10 @@
     </list>
   </entry>
   <entry>
+    <string>plugin_allow_start_url_error</string>
+    <boolean>true</boolean>
+  </entry>
+  <entry>
     <string>plugin_config_props</string>
     <list>
       <org.lockss.daemon.ConfigParamDescr>

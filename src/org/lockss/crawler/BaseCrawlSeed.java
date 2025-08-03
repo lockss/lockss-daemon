@@ -133,11 +133,11 @@ public class BaseCrawlSeed implements CrawlSeed {
   
   /**
    * If there is an error on fetch of a start Url should we abort?
-   * Crawl seeds that provide large lists of start URLs should override
-   * this and change to false.
+   * Crawl seeds that provide large lists of start URLs might want to
+   * override this and return true.
    */
-  public boolean isFailOnStartUrlError() {
-    return true;
+  public boolean isAllowStartUrlError() {
+    return au.isAllowStartUrlError();
   }
 
 }
