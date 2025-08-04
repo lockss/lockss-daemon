@@ -1352,16 +1352,16 @@
 
     param[journal_id] = anncom
 
-    au < testing ; exists ; 2008 ; 2008 ; Annals of the International Communication Association Volume 32 ; 32 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Annals of the International Communication Association Volume 33 ; 33 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Annals of the International Communication Association Volume 34 ; 34 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Annals of the International Communication Association Volume 35 ; 35 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Annals of the International Communication Association Volume 32 ; 32 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Annals of the International Communication Association Volume 33 ; 33 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Annals of the International Communication Association Volume 34 ; 34 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Annals of the International Communication Association Volume 35 ; 35 ; >
     au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; Annals of the International Communication Association Volume 36 ; 36 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Annals of the International Communication Association Volume 37 ; 37 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Annals of the International Communication Association Volume 38 ; 38 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Annals of the International Communication Association Volume 39 ; 39 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Annals of the International Communication Association Volume 40 ; 40 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Annals of the International Communication Association Volume 41 ; 41 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Annals of the International Communication Association Volume 37 ; 37 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Annals of the International Communication Association Volume 38 ; 38 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Annals of the International Communication Association Volume 39 ; 39 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Annals of the International Communication Association Volume 40 ; 40 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Annals of the International Communication Association Volume 41 ; 41 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Annals of the International Communication Association Volume 42 ; 42 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Annals of the International Communication Association Volume 43 ; 43 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Annals of the International Communication Association Volume 44 ; 44 ; >
@@ -1876,7 +1876,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Aristotelian Society Supplementary Volume Volume 96 ; 96 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Aristotelian Society Supplementary Volume Volume 97 ; 97 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Aristotelian Society Supplementary Volume Volume 98 ; 98 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Aristotelian Society Supplementary Volume Volume 99 ; 99 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Aristotelian Society Supplementary Volume Volume 99 ; 99 ; >
 
   }
 
@@ -1891,16 +1891,16 @@
 
     param[journal_id] = arthistory
 
-    au < testing ; exists ; 2008 ; 2008 ; Art History Volume 31 ; 31 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Art History Volume 32 ; 32 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Art History Volume 33 ; 33 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Art History Volume 34 ; 34 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Art History Volume 35 ; 35 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Art History Volume 36 ; 36 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Art History Volume 37 ; 37 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Art History Volume 38 ; 38 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Art History Volume 39 ; 39 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Art History Volume 40 ; 40 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Art History Volume 31 ; 31 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Art History Volume 32 ; 32 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Art History Volume 33 ; 33 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Art History Volume 34 ; 34 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Art History Volume 35 ; 35 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Art History Volume 36 ; 36 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Art History Volume 37 ; 37 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Art History Volume 38 ; 38 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Art History Volume 39 ; 39 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Art History Volume 40 ; 40 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Art History Volume 41 ; 41 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Art History Volume 42 ; 42 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Art History Volume 43 ; 43 ; >
@@ -2052,7 +2052,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The Auk: Ornithological Advances Volume 137 ; 137 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The Auk: Ornithological Advances Volume 138 ; 138 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Auk: Ornithological Advances Volume 139 ; 139 ; >
-    au < manifest ; exists ; 2025 ;2025 ; The Auk: Ornithological Advances Volume 140 ; 140 ; >
+    au < ready ; exists ; 2025 ;2025 ; The Auk: Ornithological Advances Volume 140 ; 140 ; >
 
   }
 
@@ -2629,16 +2629,16 @@
 
     param[journal_id] = biometrics
 
-    au < manifest ; exists ; 2008 ; 2008 ; Biometrics Volume 64 ; 64 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Biometrics Volume 65 ; 65 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Biometrics Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Biometrics Volume 67 ; 67 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Biometrics Volume 68 ; 68 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Biometrics Volume 69 ; 69 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Biometrics Volume 70 ; 70 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Biometrics Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Biometrics Volume 72 ; 72 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Biometrics Volume 73 ; 73 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Biometrics Volume 64 ; 64 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Biometrics Volume 65 ; 65 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Biometrics Volume 66 ; 66 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Biometrics Volume 67 ; 67 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Biometrics Volume 68 ; 68 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Biometrics Volume 69 ; 69 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Biometrics Volume 70 ; 70 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Biometrics Volume 71 ; 71 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Biometrics Volume 72 ; 72 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Biometrics Volume 73 ; 73 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Biometrics Volume 74 ; 74 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Biometrics Volume 75 ; 75 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Biometrics Volume 76 ; 76 ; >
@@ -3175,16 +3175,16 @@
 
     param[journal_id] = bjr
 
-    au < manifest ; exists ; 2008 ; 2008 ; The British Journal of Radiology Volume 81 ; 81 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; The British Journal of Radiology Volume 82 ; 82 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; The British Journal of Radiology Volume 83 ; 83 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; The British Journal of Radiology Volume 84 ; 84 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; The British Journal of Radiology Volume 85 ; 85 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; The British Journal of Radiology Volume 86 ; 86 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; The British Journal of Radiology Volume 87 ; 87 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; The British Journal of Radiology Volume 88 ; 88 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; The British Journal of Radiology Volume 89 ; 89 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; The British Journal of Radiology Volume 90 ; 90 ; >
+    au < testing ; exists ; 2008 ; 2008 ; The British Journal of Radiology Volume 81 ; 81 ; >
+    au < testing ; exists ; 2009 ; 2009 ; The British Journal of Radiology Volume 82 ; 82 ; >
+    au < testing ; exists ; 2010 ; 2010 ; The British Journal of Radiology Volume 83 ; 83 ; >
+    au < testing ; exists ; 2011 ; 2011 ; The British Journal of Radiology Volume 84 ; 84 ; >
+    au < testing ; exists ; 2012 ; 2012 ; The British Journal of Radiology Volume 85 ; 85 ; >
+    au < testing ; exists ; 2013 ; 2013 ; The British Journal of Radiology Volume 86 ; 86 ; >
+    au < testing ; exists ; 2014 ; 2014 ; The British Journal of Radiology Volume 87 ; 87 ; >
+    au < testing ; exists ; 2015 ; 2015 ; The British Journal of Radiology Volume 88 ; 88 ; >
+    au < testing ; exists ; 2016 ; 2016 ; The British Journal of Radiology Volume 89 ; 89 ; >
+    au < testing ; exists ; 2017 ; 2017 ; The British Journal of Radiology Volume 90 ; 90 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The British Journal of Radiology Volume 91 ; 91 ; >
     au < frozen ; exists ; 2019 ; 2019 ; The British Journal of Radiology Volume 92 ; 92 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The British Journal of Radiology Volume 93 ; 93 ; >
@@ -3206,9 +3206,9 @@
 
     param[journal_id] = bjrcr
 
-    au < manifest ; exists ; 2015 ; 2015 ; BJR|Case Reports Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; BJR|Case Reports Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; BJR|Case Reports Volume 3 ; 3 ; >
+    au < testing ; exists ; 2015 ; 2015 ; BJR|Case Reports Volume 1 ; 1 ; >
+    au < testing ; exists ; 2016 ; 2016 ; BJR|Case Reports Volume 2 ; 2 ; >
+    au < testing ; exists ; 2017 ; 2017 ; BJR|Case Reports Volume 3 ; 3 ; >
     au < frozen ; exists ; 2018 ; 2018 ; BJR|Case Reports Volume 4 ; 4 ; >
     au < frozen ; exists ; 2019 ; 2019 ; BJR|Case Reports Volume 5 ; 5 ; >
     au < frozen ; exists ; 2020 ; 2020 ; BJR|Case Reports Volume 6 ; 6 ; >
@@ -3428,16 +3428,16 @@
     param[journal_id] = bcsj
     #content available from 1926 Volume 1 to 2007 Volume 80
 
-    au < manifest ; exists ; 2008 ; 2008 ; Bulletin of the Chemical Society of Japan Volume 81 ; 81 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Bulletin of the Chemical Society of Japan Volume 82 ; 82 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Bulletin of the Chemical Society of Japan Volume 83 ; 83 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Bulletin of the Chemical Society of Japan Volume 84 ; 84 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Bulletin of the Chemical Society of Japan Volume 85 ; 85 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Bulletin of the Chemical Society of Japan Volume 86 ; 86 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Bulletin of the Chemical Society of Japan Volume 87 ; 87 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Bulletin of the Chemical Society of Japan Volume 88 ; 88 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Bulletin of the Chemical Society of Japan Volume 89 ; 89 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Bulletin of the Chemical Society of Japan Volume 90 ; 90 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Bulletin of the Chemical Society of Japan Volume 81 ; 81 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Bulletin of the Chemical Society of Japan Volume 82 ; 82 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Bulletin of the Chemical Society of Japan Volume 83 ; 83 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Bulletin of the Chemical Society of Japan Volume 84 ; 84 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Bulletin of the Chemical Society of Japan Volume 85 ; 85 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Bulletin of the Chemical Society of Japan Volume 86 ; 86 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Bulletin of the Chemical Society of Japan Volume 87 ; 87 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Bulletin of the Chemical Society of Japan Volume 88 ; 88 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Bulletin of the Chemical Society of Japan Volume 89 ; 89 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Bulletin of the Chemical Society of Japan Volume 90 ; 90 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Bulletin of the Chemical Society of Japan Volume 91 ; 91 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Bulletin of the Chemical Society of Japan Volume 92 ; 92 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Bulletin of the Chemical Society of Japan Volume 93 ; 93 ; >
@@ -3445,7 +3445,7 @@
     au < frozen ; exists ; 2022 ; 2022 ; Bulletin of the Chemical Society of Japan Volume 95 ; 95 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Bulletin of the Chemical Society of Japan Volume 96 ; 96 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Bulletin of the Chemical Society of Japan Volume 97 ; 97 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Bulletin of the Chemical Society of Japan Volume 98 ; 98 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Bulletin of the Chemical Society of Japan Volume 98 ; 98 ; >
 
   }
 
@@ -3461,16 +3461,16 @@
     param[journal_id] = bics
     #content available from 1954 Volume 1 to 2007 Volume 50
 
-    au < manifest ; exists ; 2008 ; 2008 ; Bulletin of the Institute of Classical Studies Volume 51 ; 51 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Bulletin of the Institute of Classical Studies Volume 52 ; 52 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Bulletin of the Institute of Classical Studies Volume 53 ; 53 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Bulletin of the Institute of Classical Studies Volume 54 ; 54 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Bulletin of the Institute of Classical Studies Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Bulletin of the Institute of Classical Studies Volume 56 ; 56 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Bulletin of the Institute of Classical Studies Volume 57 ; 57 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Bulletin of the Institute of Classical Studies Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Bulletin of the Institute of Classical Studies Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Bulletin of the Institute of Classical Studies Volume 60 ; 60 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Bulletin of the Institute of Classical Studies Volume 51 ; 51 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Bulletin of the Institute of Classical Studies Volume 52 ; 52 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Bulletin of the Institute of Classical Studies Volume 53 ; 53 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Bulletin of the Institute of Classical Studies Volume 54 ; 54 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Bulletin of the Institute of Classical Studies Volume 55 ; 55 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Bulletin of the Institute of Classical Studies Volume 56 ; 56 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Bulletin of the Institute of Classical Studies Volume 57 ; 57 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Bulletin of the Institute of Classical Studies Volume 58 ; 58 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Bulletin of the Institute of Classical Studies Volume 59 ; 59 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Bulletin of the Institute of Classical Studies Volume 60 ; 60 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Bulletin of the Institute of Classical Studies Volume 61 ; 61 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Bulletin of the Institute of Classical Studies Volume 62 ; 62 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Bulletin of the Institute of Classical Studies Volume 63 ; 63 ; >
