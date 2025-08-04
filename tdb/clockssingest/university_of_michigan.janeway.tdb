@@ -711,18 +711,18 @@
       #published 2014-2025
       param[journal_id] = weaveux
 
-      au < exists ; exists ; 2014 ; 1 ; Weave: Journal of Library User Experience Volume 2014 ; 2014 ; >
-      au < exists ; exists ; 2015 ; 2 ; Weave: Journal of Library User Experience Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2014 ; 1 ; Weave: Journal of Library User Experience Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; 2 ; Weave: Journal of Library User Experience Volume 2015 ; 2015 ; >
       au < exists ; exists ; 2016 ; 3 ; Weave: Journal of Library User Experience Volume 2016 ; 2016 ; >
       au < exists ; exists ; 2017 ; 4 ; Weave: Journal of Library User Experience Volume 2017 ; 2017 ; >
       au < exists ; exists ; 2018 ; 5 ; Weave: Journal of Library User Experience Volume 2018 ; 2018 ; >
       au < exists ; exists ; 2019 ; 6 ; Weave: Journal of Library User Experience Volume 2019 ; 2019 ; >
       au < exists ; exists ; 2020 ; 7 ; Weave: Journal of Library User Experience Volume 2020 ; 2020 ; >
-      au < exists ; exists ; 2021 ; 8 ; Weave: Journal of Library User Experience Volume 2021 ; 2021 ; >
-      au < exists ; exists ; 2022 ; 9 ; Weave: Journal of Library User Experience Volume 2022 ; 2022 ; >
-      au < exists ; exists ; 2023 ; 10 ; Weave: Journal of Library User Experience Volume 2023 ; 2023 ; >
-      au < exists ; exists ; 2024 ; 11 ; Weave: Journal of Library User Experience Volume 2024 ; 2024 ; >
-      au < exists ; exists ; 2025 ; 12 ; Weave: Journal of Library User Experience Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2021 ; 8 ; Weave: Journal of Library User Experience Volume 2021 ; 2021 ; >
+      au < manifest ; exists ; 2022 ; 9 ; Weave: Journal of Library User Experience Volume 2022 ; 2022 ; >
+      au < manifest ; exists ; 2023 ; 10 ; Weave: Journal of Library User Experience Volume 2023 ; 2023 ; >
+      au < manifest ; exists ; 2024 ; 11 ; Weave: Journal of Library User Experience Volume 2024 ; 2024 ; >
+      au < manifest ; exists ; 2025 ; 12 ; Weave: Journal of Library User Experience Volume 2025 ; 2025 ; >
 
   }
 
@@ -788,7 +788,7 @@
       au < exists ; exists ; 2022 ; 49 ; Journal of the Western Society for French History Volume 2022 ; 2022 ; >
       au < exists ; exists ; 2023 ; 50 ; Journal of the Western Society for French History Volume 2023 ; 2023 ; >
       au < ready ; exists ; 2024 ; 51 ; Journal of the Western Society for French History Volume 2024 ; 2024 ; >
-      au < exists ; exists ; 2025 ; 52 ; Journal of the Western Society for French History Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 52 ; Journal of the Western Society for French History Volume 2025 ; 2025 ; >
 
   }
 
