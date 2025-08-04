@@ -25,10 +25,10 @@
 
       au < ready ; exists ; 2005 ; Modern Sport Volume 2005 ; 4 ; >
       au < ready ; exists ; 2006 ; Modern Sport Volume 2006 ; 5 ; >
-      au < ready ; exists ; 2007 ; Modern Sport Volume 2007 ; 6 ; >
+      au < crawling ; exists ; 2007 ; Modern Sport Volume 2007 ; 6 ; >
       au < ready ; exists ; 2008 ; Modern Sport Volume 2008 ; 7 ; >
       au < ready ; exists ; 2009 ; Modern Sport Volume 2009 ; 8 ; >
-      au < ready ; exists ; 2010 ; Modern Sport Volume 2010 ; 9 ; >
+      au < crawling ; exists ; 2010 ; Modern Sport Volume 2010 ; 9 ; >
       au < ready ; exists ; 2011 ; Modern Sport Volume 2011 ; 10 ; >
       au < doNotProcess ; exists ; 2012 ; Modern Sport Volume 2012 ; 11 ; >
       au < doNotProcess ; exists ; 2013 ; Modern Sport Volume 2013 ; 12 ; >
@@ -43,7 +43,7 @@
       au < doNotProcess ; exists ; 2022 ; Modern Sport Volume 2022 ; 21 ; >
       au < doNotProcess ; exists ; 2023 ; Modern Sport Volume 2023 ; 22 ; >
       au < doNotProcess ; exists ; 2024 ; Modern Sport Volume 2024 ; 23 ; >
-      au < ready ; exists ; 2025 ; Modern Sport Volume 2025 ; 24 ; >
+      au < crawling ; exists ; 2025 ; Modern Sport Volume 2025 ; 24 ; >
     }
     {
       provider = University of Baghdad, College of Physical Education and Sports Sciences for Women

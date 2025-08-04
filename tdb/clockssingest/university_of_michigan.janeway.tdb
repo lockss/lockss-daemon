@@ -133,7 +133,7 @@
       au < ready ; exists ; 2021 ; 127 ; Absinthe: World Literature in Translation Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 128 ; Absinthe: World Literature in Translation Volume 2022 ; 2022 ; >
       au < exists ; exists ; 2023 ; 129 ; Absinthe: World Literature in Translation Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 130 ; Absinthe: World Literature in Translation Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 130 ; Absinthe: World Literature in Translation Volume 2024 ; 2024 ; >
       au < exists ; exists ; 2025 ; 131 ; Absinthe: World Literature in Translation Volume 2025 ; 2025 ; >
 
   }
@@ -220,7 +220,7 @@
       au < exists ; exists ; 2020 ; 2 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2020 ; 2020 ; >
       au < exists ; exists ; 2021 ; 3 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 4 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2022 ; 2022 ; >
-      au < ready ; exists ; 2023 ; 5 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; 5 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2023 ; 2023 ; >
       au < exists ; exists ; 2024 ; 6 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2024 ; 2024 ; >
       au < exists ; exists ; 2025 ; 7 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2025 ; 2025 ; >
 
@@ -346,7 +346,7 @@
       #published 2023-2025
       param[journal_id] = mjm
 
-      au < ready ; exists ; 2023 ; 7 ; Michigan Journal of Medicine Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; 7 ; Michigan Journal of Medicine Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 8 ; Michigan Journal of Medicine Volume 2024 ; 2024 ; >
       au < exists ; exists ; 2025 ; 9 ; Michigan Journal of Medicine Volume 2025 ; 2025 ; >
 
@@ -432,7 +432,7 @@
       au < exists ; exists ; 2021 ; 36 ; NASIG Proceedings Volume 2021 ; 2021 ; >
       au < exists ; exists ; 2022 ; 37 ; NASIG Proceedings Volume 2022 ; 2022 ; >
       au < ready ; exists ; 2023 ; 38 ; NASIG Proceedings Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 39 ; NASIG Proceedings Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 39 ; NASIG Proceedings Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 40 ; NASIG Proceedings Volume 2025 ; 2025 ; >
 
   }
@@ -559,7 +559,7 @@
       au < exists ; exists ; 2021 ; 26 ; Saksaha: A Journal of Manchu Studies Volume 2021 ; 2021 ; >
       au < exists ; exists ; 2022 ; 27 ; Saksaha: A Journal of Manchu Studies Volume 2022 ; 2022 ; >
       au < ready ; exists ; 2023 ; 28 ; Saksaha: A Journal of Manchu Studies Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 29 ; Saksaha: A Journal of Manchu Studies Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 29 ; Saksaha: A Journal of Manchu Studies Volume 2024 ; 2024 ; >
       au < exists ; exists ; 2025 ; 30 ; Saksaha: A Journal of Manchu Studies Volume 2025 ; 2025 ; >
 
   }
