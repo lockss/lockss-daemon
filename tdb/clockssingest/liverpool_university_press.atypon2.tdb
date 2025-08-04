@@ -1638,7 +1638,7 @@
     #journal_num = 76
 
     au < finished ; manifest ; 2000 ; Romani Studies Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2001 ; Romani Studies Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2001 ; Romani Studies Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2002 ; Romani Studies Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; Romani Studies Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2004 ; Romani Studies Volume 14 ; 14 ; >
@@ -1657,7 +1657,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Romani Studies Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Romani Studies Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Romani Studies Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2020 ; Romani Studies Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2020 ; Romani Studies Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; Romani Studies Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2022 ; Romani Studies Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2023 ; Romani Studies Volume 33 ; 33 ; >
@@ -1679,20 +1679,20 @@
     #Published 1983-present
     #journal_num = 51
 
-    au < frozen ; exists ; 2000 ; Quebec Studies Volume 29 ; 29 ; >
+    au < finished ; manifest ; 2000 ; Quebec Studies Volume 29 ; 29 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; Quebec Studies Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Quebec Studies Volume 31 ; 31 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Quebec Studies Volume 32 ; 32 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2002 ; Quebec Studies Volume 33 ; 33 ; >
+    au < finished ; manifest ; 2002 ; Quebec Studies Volume 33 ; 33 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2002 ; Quebec Studies Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2003 ; Quebec Studies Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2003 ; Quebec Studies Volume 36 ; 36 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2004 ; Quebec Studies Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2004 ; Quebec Studies Volume 38 ; 38 ; >
-    au < frozen ; exists ; 2005 ; Quebec Studies Volume 39 ; 39 ; >
-    au < frozen ; exists ; 2005 ; Quebec Studies Volume 40 ; 40 ; >
-    au < frozen ; exists ; 2006 ; Quebec Studies Volume 41 ; 41 ; >
-    au < frozen ; exists ; 2006 ; Quebec Studies Volume 42 ; 42 ; >
+    au < finished ; manifest ; 2004 ; Quebec Studies Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; Quebec Studies Volume 38 ; 38 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; Quebec Studies Volume 39 ; 39 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; Quebec Studies Volume 40 ; 40 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2006 ; Quebec Studies Volume 41 ; 41 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Quebec Studies Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; Quebec Studies Volume 43 ; 43 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; Quebec Studies Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2008 ; Quebec Studies Volume 45 ; 45 ; >
@@ -1722,7 +1722,7 @@
     au < finished ; manifest ; 2019 ; Quebec Studies Volume 68 ; 68 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Quebec Studies Volume 69 ; 69 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Quebec Studies Volume 70 ; 70 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2021 ; Quebec Studies Volume 71 ; 71 ; >
+    au < finished ; manifest ; 2021 ; Quebec Studies Volume 71 ; 71 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Quebec Studies Volume 72 ; 72 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Quebec Studies Volume 73 ; 73 ; >
     au < deepCrawl ; exists ; 2023 ; Quebec Studies Volume 74 ; 74 ; >
@@ -1780,10 +1780,10 @@
 
     au < manifest ; exists ; 2004 ; Sculpture Journal Volume 11 ; 11 ; >
     au < manifest ; exists ; 2004 ; Sculpture Journal Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2005 ; Sculpture Journal Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2005 ; Sculpture Journal Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2006 ; Sculpture Journal Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2007 ; Sculpture Journal Volume 16 ; 16 ; >
+    au < finished ; manifest ; 2005 ; Sculpture Journal Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2005 ; Sculpture Journal Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Sculpture Journal Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Sculpture Journal Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2008 ; Sculpture Journal Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Sculpture Journal Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Sculpture Journal Volume 19 ; 19 ; >
@@ -1797,7 +1797,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Sculpture Journal Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Sculpture Journal Volume 28 ; 28 ; >
     au < finished ; manifest ; 2020 ; Sculpture Journal Volume 29 ; 29 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2021 ; Sculpture Journal Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2021 ; Sculpture Journal Volume 30 ; 30 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Sculpture Journal Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2023 ; Sculpture Journal Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2024 ; Sculpture Journal Volume 33 ; 33 ; >
@@ -1884,9 +1884,9 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Theory & Struggle Volume 117 ; 117 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Theory & Struggle Volume 118 ; 118 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Theory & Struggle Volume 119 ; 119 ; >
-    au < frozen ; exists ; 2019 ; Theory & Struggle Volume 120 ; 120 ; >
-    au < frozen ; exists ; 2020 ; Theory & Struggle Volume 121 ; 121 ; >
-    au < frozen ; exists ; 2021 ; Theory & Struggle Volume 122 ; 122 ; >
+    au < finished ; manifest ; 2019 ; Theory & Struggle Volume 120 ; 120 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Theory & Struggle Volume 121 ; 121 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Theory & Struggle Volume 122 ; 122 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Theory & Struggle Volume 123 ; 123 ; >
     au < deepCrawl ; exists ; 2023 ; Theory & Struggle Volume 124 ; 124 ; >
     au < deepCrawl ; exists ; 2024 ; Theory & Struggle Volume 125 ; 125 ; >
@@ -2002,14 +2002,14 @@
     au < doNotProcess ; exists ; 1997 ; Town Planning Review Volume 68 ; 68 ; >
     au < doNotProcess ; exists ; 1998 ; Town Planning Review Volume 69 ; 69 ; >
     au < doNotProcess ; exists ; 1999 ; Town Planning Review Volume 70 ; 70 ; >
-    au < frozen ; exists ; 2000 ; Town Planning Review Volume 71 ; 71 ; >
+    au < finished ; manifest ; 2000 ; Town Planning Review Volume 71 ; 71 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2001 ; Town Planning Review Volume 72 ; 72 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2002 ; Town Planning Review Volume 73 ; 73 ; >
-    au < frozen ; exists ; 2003 ; Town Planning Review Volume 74 ; 74 ; >
-    au < frozen ; exists ; 2004 ; Town Planning Review Volume 75 ; 75 ; >
+    au < finished ; manifest ; 2002 ; Town Planning Review Volume 73 ; 73 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2003 ; Town Planning Review Volume 74 ; 74 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2004 ; Town Planning Review Volume 75 ; 75 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Town Planning Review Volume 76 ; 76 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2006 ; Town Planning Review Volume 77 ; 77 ; >
-    au < frozen ; exists ; 2007 ; Town Planning Review Volume 78 ; 78 ; >
+    au < finished ; manifest ; 2006 ; Town Planning Review Volume 77 ; 77 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; Town Planning Review Volume 78 ; 78 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2008 ; Town Planning Review Volume 79 ; 79 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; Town Planning Review Volume 80 ; 80 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; Town Planning Review Volume 81 ; 81 ; >
