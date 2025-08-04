@@ -71,6 +71,7 @@ extends BaseAtyponHtmlLinkExtractorFactory {
     private static Logger log = Logger.getLogger(AIAALinkTagLinkExtractor.class);
 
     protected Pattern SUBMIT_ARTICLES_PATTERN = Pattern.compile("javascript:submitArticles\\(([^,]+),([^,]+),*", Pattern.CASE_INSENSITIVE);
+    //protected Pattern CIT_PATTERN = Pattern.compile("/action/showCitFormats\\?doi=[^/]", Pattern.CASE_INSENSITIVE);
     protected Pattern DOI_URL_PATTERN = Pattern.compile("^(https?://.*/)doi/(abs|full|book)/([.0-9]+)/([^/]+)$");
     private static final String CIT_FORMATS_ACTION = "action/showCitFormats";
 
@@ -99,7 +100,9 @@ extends BaseAtyponHtmlLinkExtractorFactory {
         // now do we have a citation download href?
         if ((node.hasAttr(HREF_NAME)) ) {
           Matcher hrefMat = SUBMIT_ARTICLES_PATTERN.matcher(node.attr(HREF_NAME));
-          if ( (hrefMat.find() && hrefMat.group(2).contains(CIT_FORMATS_ACTION))) {
+          //Matcher citMat = CIT_PATTERN.matcher(node.attr(HREF_NAME));
+          //add below later - citMat.find()
+          if ( (hrefMat.find() && hrefMat.group(2).contains(CIT_FORMATS_ACTION)) ) {
             String newUrl =  doiMat.group(1) + CIT_FORMATS_ACTION + "?doi=" + doiMat.group(3) + "/" + doiMat.group(4);
             newUrl = AuUtil.normalizeHttpHttpsFromBaseUrl(au, newUrl);
             log.debug3("Generated citation download url: " + newUrl);
