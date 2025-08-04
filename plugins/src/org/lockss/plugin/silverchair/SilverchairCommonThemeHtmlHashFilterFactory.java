@@ -72,6 +72,10 @@ public class SilverchairCommonThemeHtmlHashFilterFactory implements FilterFactor
             HtmlNodeFilters.tagWithAttributeRegex("a", "class", "download-slide"),
             //https://books.rsc.org/books/edited-volume/2096/chapter/7630738/Metal-Organic-Frameworks-in-Green-Analytical
             HtmlNodeFilters.tagWithAttributeRegex("span", "class", "title-label"),
+            //https://www.emerald.com/arj/article/32/1/20/132193/An-IFRS-based-taxonomy-of-financial-ratios
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-footnote"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "table-wrap-title"),
+            HtmlNodeFilters.tagWithAttributeRegex("div", "class", "table-overflow"),
             
     };
 
