@@ -33,9 +33,13 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.ojs3;
 
 import java.io.InputStream;
+import java.util.regex.Pattern;
 
+import org.htmlparser.Node;
 import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
+import org.htmlparser.tags.CompositeTag;
+import org.htmlparser.tags.LinkTag;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
@@ -52,6 +56,7 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 
   private static final Logger log = Logger.getLogger(Ojs3HtmlCrawlFilterFactory.class);
 
+  protected static final Pattern ISSUE_PATTERN = Pattern.compile("^https://.*/issue/view/[0-9]+$", Pattern.CASE_INSENSITIVE);
   
   private static final NodeFilter[] excludeNodes = new NodeFilter[] {
 		// Need the header for the download content in the pdf viewing frame
@@ -77,6 +82,19 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 		HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "most_read"),
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-linked-art"),
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "site-footer"),
+		//Aug 2025, U of Edinburgh started adding 'test issues' (unpublished issues) on manifest page which redirect to login page. Exclude these links.
+		new NodeFilter() {
+      		@Override public boolean accept(Node node) {
+			if (!(node instanceof LinkTag)) return false;
+				String allText = ((CompositeTag)node).toPlainTextString();
+				String link = ((CompositeTag)node).getAttribute("href");
+				if(link != null && ISSUE_PATTERN.matcher(link).matches() && allText != null && allText.contains("test issue")){
+					log.debug3("Removing link: " + link);
+					return true;
+				}
+				return false;
+      		}
+    	},
 	};
  
   @Override
