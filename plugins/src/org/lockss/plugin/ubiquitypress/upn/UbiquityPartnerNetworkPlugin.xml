@@ -98,6 +98,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
 <!--      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.jquery\.com|(fonts|ajax)\.(gstatic|googleapis)\.com)/."</string> -->
 <!--  take out jquery temporarily to see what it is that this needed -->
+<!-- exclude bad file found on Aug 2025: https://jte-journal.org/articles/699/files/article.xsl in Journal of Technology Education Volume 2024-->
+      <string>2,"^https?://%s%sarticles/.*/article\.xsl",url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://(maxcdn\.bootstrapcdn\.com|cdnjs\.cloudflare\.com|.+\.cloudfront\.net|cdn\.mathjax\.org|(fonts|ajax|storage)\.(gstatic|googleapis)\.com)/."</string>
       <string>1,"^https?://%s/index.php/%s/issue/view/[0-9]+$", url_host(base_url2), journal_id</string>
       <string>1,"^https?://%s/index.php/%s/.*/css\?name=(stylesheet|font)$", url_host(base_url2), journal_id</string>

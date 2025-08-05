@@ -72,6 +72,7 @@ public class UbiquityPartnerNetworkHtmlCrawlFilterFactory implements FilterFacto
         
         // do not get links from references section
         HtmlNodeFilters.tagWithAttribute("div", "id", "articleCitations"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "references"),
         
         /*
          * Now that we are allowing TOC pages, we must be pro-active about
