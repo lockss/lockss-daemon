@@ -183,7 +183,7 @@
     au < finished ; manifest ; 2021 ; 9780784415825 ; 9780784483633 ; 9780784415825 ; Construction Quality in the Alternate Project Delivery Environment (9780784415825) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; 9780784415832 ; 9780784483640 ; 9780784415832 ; Steel Structures : Considerations to Reduce Failures Due to Instability (9780784415832) ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 9780784415849 ; 9780784483657 ; 9780784415849 ; Investigation of Constructed Facilities : Sampling Methodologies (9780784415849) ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2021 ; 9780784415863 ; 9780784483725 ; 9780784415863 ; Impacts of Future Weather and Climate Extremes on United States Infrastructure : Assessing and Prioritizing Adaptation Actions (9780784415863) ; >
+    au < crawling ; exists ; 2021 ; 9780784415863 ; 9780784483725 ; 9780784415863 ; Impacts of Future Weather and Climate Extremes on United States Infrastructure : Assessing and Prioritizing Adaptation Actions (9780784415863) ; >
     au < ready ; exists ; 2022 ;  ; 9780784484616 ; 9780784484616 ; Procurement of Peer Review Services for Complex Bridge Design Projects : Recommended Procedures (9780784484616) ; >
     au < ready ; exists ; 2022 ; 9780784415702 ; 9780784483329 ; 9780784415702 ; Investigation of Land Subsidence due to Fluid Withdrawal (9780784415702) ; >
     au < ready ; exists ; 2022 ; 9780784415856 ; 9780784483664 ; 9780784415856 ; Renewable Energy Technologies and Water Infrastructure (9780784415856) ; >
@@ -191,7 +191,7 @@
     au < ingNotReady ; exists ; 2022 ; 9780784415894 ; 9780784483756 ; 9780784415894 ; Objective Resilience : Objective Processes (9780784415894) ; > #not good to test, but added on ingest1 to 3
     au < finished ; manifest ; 2022 ; 9780784415900 ; 9780784483763 ; 9780784415900 ; Objective Resilience : Technology (9780784415900) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; 9780784415917 ; 9780784483770 ; 9780784415917 ; Objective Resilience : Applications (9780784415917) ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2022 ; 9780784415948 ; 9780784483824 ; 9780784415948 ; Total Maximum Daily Load Development and Implementation : Models, Methods, and Resources (9780784415948) ; >
+    au < crawling ; exists ; 2022 ; 9780784415948 ; 9780784483824 ; 9780784415948 ; Total Maximum Daily Load Development and Implementation : Models, Methods, and Resources (9780784415948) ; >
     au < finished ; manifest ; 2022 ; 9780784415962 ; 9780784483855 ; 9780784415962 ; Site-Specific Ground Motions for Seismic Design of Buildings and Other Structures (9780784415962) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; 9780784415979 ; 9780784483862 ; 9780784415979 ; Sustainable Design of Pipelines : Guidelines for Achieving Advanced Functionality (9780784415979) ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2022 ; 9780784415986 ; 9780784483909 ; 9780784415986 ; Disruptive Emerging Transportation Technologies (9780784415986) ; >
@@ -220,7 +220,7 @@
     au < finished ; manifest ; 2023 ; 9780784416174 ; 9780784485170 ; 9780784485170 ; Substation Structure Design Guide : Recommended Practice for Design and Use (9780784485170) ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 9780784416198 ; 9780784485361 ; 9780784485361 ; Bridge Demolition Engineering : Best Practices (9780784485361) ; >
 
-    au < ready ; exists ; 1985 ; 9780872624757 ; 9780784473573 ; 9780872624757 ; Structural Plastics Selection Manual (9780872624757) ; >
+    au < crawling ; exists ; 1985 ; 9780872624757 ; 9780784473573 ; 9780872624757 ; Structural Plastics Selection Manual (9780872624757) ; >
     au < ready ; exists ; 1986 ; 9780872625464 ; 9780784473580 ; 9780872625464 ; Urban Planning Guide (9780872625464) ; >
     au < ready ; exists ; 1990 ; 9780872627376 ; 9780784473610 ; 9780872627376 ; The Colossus of 1812 : An American Engineering Superlative (9780872627376) ; >
     au < ready ; exists ; 1991 ; 9780872627857 ; 9780784473641 ; 9780872627857 ; Management, Operation and Maintenance of Irrigation and Drainage Systems (9780872627857) ; >
@@ -267,7 +267,7 @@
     au < ready ; exists ; 2000 ; 9780784404263 ; 9780784470435 ; 9780784404263 ; Surety Bonds for Construction Contracts (9780784404263) ; >
     au < ready ; exists ; 2000 ; 9780784404294 ; 9780784470466 ; 9780784404294 ; Diatomaceous Earth Filtration for Safe Drinking Water (9780784404294) ; >
     au < ready ; exists ; 2000 ; 9780784404386 ; 9780784470503 ; 9780784404386 ; Conveyance of Residuals from Water and Wastewater Treatment (9780784404386) ; >
-    au < ready ; exists ; 2000 ; 9780784404447 ; 9780784470527 ; 9780784404447 ; Machu Picchu : A Civil Engineering Marvel (9780784404447) ; >
+    au < crawling ; exists ; 2000 ; 9780784404447 ; 9780784470527 ; 9780784404447 ; Machu Picchu : A Civil Engineering Marvel (9780784404447) ; >
     au < ready ; exists ; 2000 ; 9780784404591 ; 9780784470572 ; 9780784404591 ; Using Meteorology Probability Forecasts in Operational Hydrology (9780784404591) ; >
     au < ready ; exists ; 2000 ; 9780784404607 ; 9780784470589 ; 9780784404607 ; Coupled Processes in Subsurface Deformation, Flow, and Transport (9780784404607) ; >
     au < ready ; exists ; 2000 ; 9780784404843 ; 9780784478844 ; 9780784404843 ; National Geotechnical Experimentation Sites (9780784404843) ; >
@@ -282,7 +282,7 @@
     au < ready ; exists ; 2001 ; 9780784405468 ; 9780784470770 ; 9780784405468 ; Collective Excellence : Building Effective Teams (9780784405468) ; >
     au < ready ; exists ; 2002 ; 9780784405291 ; 9780784470701 ; 9780784405291 ; America Transformed : Engineering and Technology in the Nineteenth Century (9780784405291) ; >
     au < ready ; exists ; 2002 ; 9780784405321 ; 9780784470718 ; 9780784405321 ; Stochastic Methods in Subsurface Contaminant Hydrology (9780784405321) ; >
-    au < ready ; exists ; 2002 ; 9780784405505 ; 9780784470794 ; 9780784405505 ; Waterbody Hydrodynamic and Water Quality Modeling : An Introductory Workbook and CD-ROM on Three-Dimensional Waterbody Modeling (9780784405505) ; >
+    au < crawling ; exists ; 2002 ; 9780784405505 ; 9780784470794 ; 9780784405505 ; Waterbody Hydrodynamic and Water Quality Modeling : An Introductory Workbook and CD-ROM on Three-Dimensional Waterbody Modeling (9780784405505) ; >
     au < ready ; exists ; 2002 ; 9780784405734 ; 9780784470848 ; 9780784405734 ; GIS Tools for Water, Wastewater, and Stormwater Systems (9780784405734) ; >
     au < ready ; exists ; 2002 ; 9780784406274 ; 9780784470909 ; 9780784406274 ; Guide to Hiring and Retaining Great Civil Engineers (9780784406274) ; >
     au < ready ; exists ; 2002 ; 9780784406311 ; 9780784470916 ; 9780784406311 ; Hydraulic Design of Labyrinth Weirs (9780784406311) ; >
@@ -304,7 +304,7 @@
     au < ready ; exists ; 2005 ; 9780784407578 ; 9780784471128 ; 9780784407578 ; The Lead Dog Has the Best View : Leading Your Project Team to Success (9780784407578) ; >
     au < ready ; exists ; 2005 ; 9780784407707 ; 9780784471159 ; 9780784407707 ; Ship Channel Design and Operation (9780784407707) ; >
     au < ready ; exists ; 2005 ; 9780784408018 ; 9780784471210 ; 9780784408018 ; Engineering Legends : Great American Civil Engineers (9780784408018) ; >
-    au < ready ; exists ; 2005 ; 9780784408049 ; 9780784471234 ; 9780784408049 ; Pipeline Design for Installation by Horizontal Directional Drilling (9780784408049) ; >
+    au < crawling ; exists ; 2005 ; 9780784408049 ; 9780784471234 ; 9780784408049 ; Pipeline Design for Installation by Horizontal Directional Drilling (9780784408049) ; >
     au < ready ; exists ; 2005 ; 9780784408155 ; 9780784471296 ; 9780784408155 ; Infrastructure Risk Management Processes : Natural, Accidental, and Deliberate Hazards (9780784408155) ; >
     au < ready ; exists ; 2005 ; 9780784408179 ; 9780784471302 ; 9780784408179 ; Bracing Cold-Formed Steel Structures : A Design Guide (9780784408179) ; >
     au < ready ; exists ; 2005 ; 9780784408247 ; 9780784471357 ; 9780784408247 ; Climate Variations, Climate Change, and Water Resources Engineering (9780784408247) ; >
@@ -313,7 +313,7 @@
     au < ready ; exists ; 2006 ; 9780784408285 ; 9780784471395 ; 9780784408285 ; Preparing for Design-Build Projects : A Primer for Owners, Engineers, and Contractors (9780784408285) ; >
     au < ready ; exists ; 2006 ; 9780784408292 ; 9780784471401 ; 9780784408292 ; Designed for Dry Feet : Flood Protection and Land Reclamation in the Netherlands (9780784408292) ; >
     au < ready ; exists ; 2006 ; 9780784408421 ; 9780784471470 ; 9780784408421 ; Asphalt Mix Design and Construction : Past, Present, and Future (9780784408421) ; >
-    au < ready ; exists ; 2006 ; 9780784408438 ; 9780784471487 ; 9780784408438 ; Great Works on Urban Water Resources (1962-2001) (9780784408438) ; >
+    au < crawling ; exists ; 2006 ; 9780784408438 ; 9780784471487 ; 9780784408438 ; Great Works on Urban Water Resources (1962-2001) (9780784408438) ; >
     au < ready ; exists ; 2006 ; 9780784408452 ; 9780784471494 ; 9780784408452 ; Reliability-Based Design of Utility Pole Structures (9780784408452) ; >
     au < ready ; exists ; 2006 ; 9780784408469 ; 9780784471500 ; 9780784408469 ; Sharing Water in Times of Scarcity : Guidelines and Procedures in the Development of Effective Agreements to Share Water Across Political Boundaries (9780784408469) ; >
     au < exists ; exists ; 2006 ; 9780784408476 ; 9780784471517 ; 9780784408476 ; State Water Resources Planning in the United States (9780784408476) ; >
@@ -340,7 +340,7 @@
     au < ready ; exists ; 2007 ; 9780784409008 ; 9780784471876 ; 9780784409008 ; Gravity Sanitary Sewer Design and Construction (9780784409008) ; >
     au < ready ; exists ; 2007 ; 9780784409213 ; 9780784471906 ; 9780784409213 ; Interpreting Construction Contracts : Fundamental Principles for Contractors, Project Managers, and Contract Administrators (9780784409213) ; >
     au < ready ; exists ; 2007 ; 9780784409237 ; 9780784471913 ; 9780784409237 ; Civil Works for Hydroelectric Facilities : Guidelines for Life Extension Upgrade (9780784409237) ; >
-    au < ready ; exists ; 2007 ; 9780784409305 ; 9780784471975 ; 9780784409305 ; Geotechnical Baseline Reports for Construction : Suggested Guidelines (9780784409305) ; >
+    au < crawling ; exists ; 2007 ; 9780784409305 ; 9780784471975 ; 9780784409305 ; Geotechnical Baseline Reports for Construction : Suggested Guidelines (9780784409305) ; >
     au < ready ; exists ; 2007 ; 9780784409312 ; 9780784471982 ; 9780784409312 ; Hurricane Katrina Damage Assessment : Louisiana, Alabama, and Mississippi Ports and Coasts (9780784409312) ; >
     au < ready ; exists ; 2007 ; 9780784409367 ; 9780784472026 ; 9780784409367 ; The 21st-Century Engineer : A Proposal for Engineering Education Reform (9780784409367) ; >
     au < ready ; exists ; 2007 ; 9780784409398 ; 9780784472057 ; 9780784409398 ; Natural Processes and Systems for Hazardous Waste Treatment (9780784409398) ; >
@@ -353,19 +353,19 @@
     au < ready ; exists ; 2008 ; 9780784409497 ; 9780784472095 ; 9780784409497 ; Geotechnical Testing, Observation, and Documentation (9780784409497) ; >
     au < ready ; exists ; 2008 ; 9780784409510 ; 9780784472101 ; 9780784409510 ; Sumatra-Andaman Islands Earthquake and Tsunami of December 26, 2004 : Lifeline Performance (9780784409510) ; >
     au < ready ; exists ; 2008 ; 9780784409572 ; 9780784472156 ; 9780784409572 ; Verification and Validation of 3D Free-Surface Flow Models (9780784409572) ; >
-    au < ready ; exists ; 2008 ; 9780784409589 ; 9780784472163 ; 9780784409589 ; Infrastructure Reporting and Asset Management : Best Practices and Opportunities (9780784409589) ; >
+    au < crawling ; exists ; 2008 ; 9780784409589 ; 9780784472163 ; 9780784409589 ; Infrastructure Reporting and Asset Management : Best Practices and Opportunities (9780784409589) ; >
     au < ready ; exists ; 2008 ; 9780784409633 ; 9780784472200 ; 9780784409633 ; Performance-Based Design of Structural Steel for Fire Conditions : A Calculation Methodology (9780784409633) ; >
     au < ready ; exists ; 2008 ; 9780784409657 ; 9780784472224 ; 9780784409657 ; Civil Engineering Body of Knowledge for the 21st Century : Preparing the Civil Engineer for the Future (9780784409657) ; >
     au < ready ; exists ; 2008 ; 9780784409671 ; 9780784472231 ; 9780784409671 ; Residential Land Development Practices : A Textbook on Developing Land into Finished Lots (9780784409671) ; >
     au < ready ; exists ; 2008 ; 9780784409732 ; 9780784472286 ; 9780784409732 ; Beyond Failure : Forensic Case Studies for Civil Engineers (9780784409732) ; >
     au < ready ; exists ; 2008 ; 9780784409794 ; 9780784472347 ; 9780784409794 ; Pipe Ramming Projects (9780784409794) ; >
     au < ready ; exists ; 2008 ; 9780784409831 ; 9780784472385 ; 9780784409831 ; Diversity by Design : Guide to Fostering Diversity in the Civil Engineering Workforce (9780784409831) ; >
-    au < ready ; exists ; 2008 ; 9780784409879 ; 9780784472422 ; 9780784409879 ; Preparing Requests for Proposals and Specifications for Design-Build Projects (9780784409879) ; >
+    au < crawling ; exists ; 2008 ; 9780784409879 ; 9780784472422 ; 9780784409879 ; Preparing Requests for Proposals and Specifications for Design-Build Projects (9780784409879) ; >
     au < ready ; exists ; 2008 ; 9780784409893 ; 9780784472446 ; 9780784409893 ; Frozen in Time : Permafrost and Engineering Problems (9780784409893) ; >
     au < ready ; exists ; 2008 ; 9780784409923 ; 9780784472477 ; 9780784409923 ; Navigation Engineering Practice and Ethical Standards (9780784409923) ; >
     au < ready ; exists ; 2008 ; 9780784410042 ; 9780784472576 ; 9780784410042 ; Curve Number Hydrology : State of the Practice (9780784410042) ; >
     au < ready ; exists ; 2008 ; 9780784410127 ; 9780784472651 ; 9780784410127 ; Disaster Risk Assessment and Mitigation : Arrival of the South Asia Tsunami Wave in Thailand (9780784410127) ; >
-    au < ready ; exists ; 2009 ; 9780784409749 ; 9780784472293 ; 9780784409749 ; Economics and Finance for Engineers and Planners : Managing Infrastructure and Natural Resources (9780784409749) ; >
+    au < crawling ; exists ; 2009 ; 9780784409749 ; 9780784472293 ; 9780784409749 ; Economics and Finance for Engineers and Planners : Managing Infrastructure and Natural Resources (9780784409749) ; >
     au < ready ; exists ; 2009 ; 9780784409817 ; 9780784472361 ; 9780784409817 ; River Training and Sediment Management with Submerged Vanes (9780784409817) ; >
     au < ready ; exists ; 2009 ; 9780784409848 ; 9780784472392 ; 9780784409848 ; Marine Outfall Construction : Background, Techniques, and Case Studies (9780784409848) ; >
     au < ready ; exists ; 2009 ; 9780784409855 ; 9780784472408 ; 9780784409855 ; Field Guide to Environmental Engineering for Development Workers : Water, Sanitation, and Indoor Air (9780784409855) ; >
@@ -429,7 +429,7 @@
     au < frozen ; exists ; 2012 ; 9780784411964 ; 9780784476468 ; 9780784411964 ; Advanced Analysis in Steel Frame Design : Guidelines for Direct Second-Order Inelastic Analysis (9780784411964) ; >
     au < frozen ; exists ; 2012 ; 9780784411988 ; 9780784476499 ; 9780784411988 ; Planning and Design Guidelines for Small Craft Harbors (9780784411988) ; >
     au < frozen ; exists ; 2012 ; 9780784412008 ; 9780784476512 ; 9780784412008 ; Sea Level Rise and Coastal Infrastructure : Prediction, Risks, and Solution (9780784412008) ; >
-    au < ready ; exists ; 2012 ; 9780784412053 ; 9780784476741 ; 9780784412053 ; English-Chinese and Chinese-English Glossary of Transportation Terms : Highways and Railroad (9780784412053) ; >
+    au < crawling ; exists ; 2012 ; 9780784412053 ; 9780784476741 ; 9780784412053 ; English-Chinese and Chinese-English Glossary of Transportation Terms : Highways and Railroad (9780784412053) ; >
     au < frozen ; exists ; 2012 ; 9780784412077 ; 9780784476758 ; 9780784412077 ; Toward a Sustainable Water Future : Visions for 2050 (9780784412077) ; >
     au < ready ; exists ; 2012 ; 9780784412091 ; 9780784476772 ; 9780784412091 ; Spar Platforms : Technology and Analysis Methods (9780784412091) ; >
     au < frozen ; exists ; 2012 ; 9780784412107 ; 9780784476789 ; 9780784412107 ; Concentrate Management in Desalination : Case Studies (9780784412107) ; >
@@ -446,14 +446,14 @@
     au < frozen ; exists ; 2012 ; 9780784412398 ; 9780784476949 ; 9780784412398 ; Seismic Resilience of Natural Gas Systems : Improving Performance (9780784412398) ; >
     au < frozen ; exists ; 2012 ; 9780784412404 ; 9780784476956 ; 9780784412404 ; Haiti Mw 7.0 Earthquake of January 12, 2010 : Lifeline Performance (9780784412404) ; >
     au < frozen ; exists ; 2012 ; 9780784412503 ; 9780784476987 ; 9780784412503 ; Joplin, Missouri, Tornado of May 22, 2011 : Structural Damage Survey and Case for Tornado-Resilient Building Codes (9780784412503) ; >
-    au < ready ; exists ; 2012 ; 9780784412510 ; 9780784476994 ; 9780784412510 ; Rebar Cage Construction and Safety : Best Practices (9780784412510) ; >
+    au < crawling ; exists ; 2012 ; 9780784412510 ; 9780784476994 ; 9780784412510 ; Rebar Cage Construction and Safety : Best Practices (9780784412510) ; >
     au < frozen ; exists ; 2012 ; 9780784412541 ; 9780784477021 ; 9780784412541 ; H2Oh! : Classroom Demonstrations for Water Concepts (9780784412541) ; >
     au < frozen ; exists ; 2012 ; 9780784412558 ; 9780784477038 ; 9780784412558 ; Failure Case Studies in Civil Engineering : Structures, Foundations, and the Geoenvironment (9780784412558) ; >
     au < frozen ; exists ; 2012 ; 9780784412565 ; 9780784477045 ; 9780784477045 ; Airfield Safety and Capacity Improvements : Case Studies on Successful Projects (9780784412565) ; >
     au < ready ; exists ; 2013 ;  ; 9780784478233 ; 9780784478233 ; All in the Family : Civil Engineering Legacy Stories (9780784478233) ; >
     au < frozen ; exists ; 2013 ; 9780784411209 ; 9780784476888 ; 9780784411209 ; Hurricane Ike Field Investigations : A Report of Field Operations from October 3-6, 2008 (9780784411209) ; >
     au < frozen ; exists ; 2013 ; 9780784411971 ; 9780784476475 ; 9780784411971 ; Structural Identification of Constructed Systems : Approaches, Methods, and Technologies for Effective Practice of St-Id (9780784411971) ; >
-    au < ready ; exists ; 2013 ; 9780784412466 ; 9780784476963 ; 9780784412466 ; Guidelines for Forensic Engineering Practice (9780784412466) ; >
+    au < crawling ; exists ; 2013 ; 9780784412466 ; 9780784476963 ; 9780784412466 ; Guidelines for Forensic Engineering Practice (9780784412466) ; >
     au < ready ; exists ; 2013 ; 9780784412497 ; 9780784476970 ; 9780784412497 ; Tohoku, Japan, Earthquake and Tsunami of 2011 : Performance of Structures under Tsunami Loads (9780784412497) ; >
     au < ready ; exists ; 2013 ; 9780784412534 ; 9780784477014 ; 9780784477014 ; Inland Navigation : Channel Training Works (9780784412534) ; >
     au < frozen ; exists ; 2013 ; 9780784412695 ; 9780784477663 ; 9780784412695 ; Tohoku, Japan, Earthquake and Tsunami of 2011 : Survey of Coastal Structures (9780784412695) ; >
@@ -467,7 +467,7 @@
     au < frozen ; exists ; 2013 ; 9780784412893 ; 9780784477922 ; 9780784412893 ; Tensile Fabric Structures : Design, Analysis, and Construction (9780784412893) ; >
     au < ready ; exists ; 2013 ; 9780784412930 ; 9780784477885 ; 9780784412930 ; Padang, West Sumatra, Indonesia, Earthquake of 2009 : Lifeline Performance (9780784412930) ; >
     au < frozen ; exists ; 2013 ; 9780784413043 ; 9780784477946 ; 9780784413043 ; Preparation of Construction Specifications for Civil Projects (9780784413043) ; >
-    au < ready ; exists ; 2014 ;  ; 9780784478585 ; 9780784478585 ; Flood Risk Management : Call for a National Strategy (9780784478585) ; >
+    au < crawling ; exists ; 2014 ;  ; 9780784478585 ; 9780784478585 ; Flood Risk Management : Call for a National Strategy (9780784478585) ; >
     au < frozen ; exists ; 2014 ; 9780784412886 ; 9780784478004 ; 9780784412886 ; Slope Stability Analysis by the Limit Equilibrium Method : Fundamentals and Methods (9780784412886) ; >
     au < ready ; exists ; 2014 ; 9780784413500 ; 9780784478370 ; 9780784413500 ; Pipeline Design for Installation by Horizontal Directional Drilling (9780784413500) ; >
     au < ready ; exists ; 2014 ; 9780784413531 ; 9780784478400 ; 9780784413531 ; Engineering for Sustainable Human Development : A Guide to Successful Small-Scale Community Projects (9780784413531) ; >
@@ -493,7 +493,7 @@
     au < frozen ; exists ; 2024 ;  ; 9780784485866 ; 9780784485866 ; Cold-Formed Steel Connections to Other Materials (9780784485866) ; >
     au < frozen ; exists ; 2024 ; 9780784416242 ; 9780784485712 ; 9780784485712 ; Pipeline Design for Installation by Horizontal Directional Drilling (9780784485712) ; >
     au < frozen ; exists ; 2024 ;  ; 9780784485804 ; 9780784485804 ; Effects of Climate Change on Life-Cycle Performance of Structures and Infrastructure Systems (9780784485804) ; >
-    au < ready ; exists ; 2024 ; 9780784415771 ; 9780784483480 ; 9780784483480 ; Load and Resistance Factor Design (LRFD) for Pultruded Fiber Reinforced Polymer (FRP) Structures (9780784483480) ; >
+    au < crawling ; exists ; 2024 ; 9780784415771 ; 9780784483480 ; 9780784483480 ; Load and Resistance Factor Design (LRFD) for Pultruded Fiber Reinforced Polymer (FRP) Structures (9780784483480) ; >
     au < frozen ; exists ; 2024 ; 9780784416129 ; 9780784484784 ; 9780784484784 ; Guidelines for Operational Hail Suppression Programs (9780784484784) ; >
     au < frozen ; exists ; 2024 ; 9780784416150 ; 9780784485071 ; 9780784485071 ; Guidelines for the Physical Security of Water and Wastewater/Stormwater Utilities (9780784485071) ; >
     au < frozen ; exists ; 2024 ; 9780784414989 ; 9780784481226 ; 9780784481226 ; Comprehensive Transboundary Water Quality Management Agreement (9780784481226) ; >
@@ -501,7 +501,7 @@
     au < frozen ; exists ; 2024 ;  ; 9780784485224 ; 9780784485224 ; Computing in Civil Engineering 2023 (9780784485224) ; >
     au < frozen ; exists ; 2024 ;  ; 9780784485231 ; 9780784485231 ; Computing in Civil Engineering 2023 (9780784485231) ; >
     au < frozen ; exists ; 2024 ;  ; 9780784485255 ; 9780784485255 ; International Conference on Road and Airfield Pavement Technology 2023 (9780784485255) ; >
-    au < ready ; exists ; 2024 ;  ; 9780784485316 ; 9780784485316 ; Geo-Congress 2024 (9780784485316) ; >
+    au < crawling ; exists ; 2024 ;  ; 9780784485316 ; 9780784485316 ; Geo-Congress 2024 (9780784485316) ; >
     au < frozen ; exists ; 2024 ;  ; 9780784485309 ; 9780784485309 ; Geo-Congress 2024 (9780784485309) ; >
     au < frozen ; exists ; 2024 ;  ; 9780784485323 ; 9780784485323 ; Geo-Congress 2024 (9780784485323) ; >
     au < ready ; exists ; 2024 ;  ; 9780784485354 ; 9780784485354 ; Geo-Congress 2024 (9780784485354) ; >
