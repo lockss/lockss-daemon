@@ -25,11 +25,11 @@
       param[base_url] = https://revistas.uv.cl/
       param[journal_id] = Panambi
 
-      au < testing ; exists ; 2015 ; Panambí Volume 2015 ; 1 ; 2015 ; >
-      au < testing ; exists ; 2016 ; Panambí Volume 2016 ; 2 ; 2016 ; >
-      au < testing ; exists ; 2017 ; Panambí Volume 2017 ; 3 ; 2017 ; >
-      au < testing ; exists ; 2018 ; Panambí Volume 2018 ; 4 ; 2018 ; >
-      au < testing ; exists ; 2019 ; Panambí Volume 2019 ; 5 ; 2019 ; >
+      au < ready ; exists ; 2015 ; Panambí Volume 2015 ; 1 ; 2015 ; >
+      au < ready ; exists ; 2016 ; Panambí Volume 2016 ; 2 ; 2016 ; >
+      au < ready ; exists ; 2017 ; Panambí Volume 2017 ; 3 ; 2017 ; >
+      au < ready ; exists ; 2018 ; Panambí Volume 2018 ; 4 ; 2018 ; >
+      au < ready ; exists ; 2019 ; Panambí Volume 2019 ; 5 ; 2019 ; >
       au < ready ; exists ; 2020 ; Panambí Volume 2020 ; 6 ; 2020 ; >
       au < frozen ; exists ; 2021 ; Panambí Volume 2021 ; 7 ; 2021 ; >
       au < crawling ; exists ; 2022 ; Panambí Volume 2022 ; 8 ; 2022 ; >
