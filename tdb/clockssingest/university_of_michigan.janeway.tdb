@@ -151,7 +151,7 @@
 
       au < exists ; exists ; 2022 ; 53 ; Ars Orientalis Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 54 ; Ars Orientalis Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 55 ; Ars Orientalis Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 55 ; Ars Orientalis Volume 2024 ; 2024 ; >
       au < exists ; exists ; 2025 ; 56 ; Ars Orientalis Volume 2025 ; 2025 ; >
 
   }
@@ -167,9 +167,9 @@
       #published 2022-2025
       param[journal_id] = circus
 
-      au < ready ; exists ; 2022 ; 1 ; Circus: Arts, Life and Sciences Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; 1 ; Circus: Arts, Life and Sciences Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 2 ; Circus: Arts, Life and Sciences Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 3 ; Circus: Arts, Life and Sciences Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 3 ; Circus: Arts, Life and Sciences Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 4 ; Circus: Arts, Life and Sciences Volume 2025 ; 2025 ; >
 
   }
@@ -200,8 +200,8 @@
       au < exists ; exists ; 2020 ; 40 ; Conversations Across the Field of Dance Volume 2020 ; 2020 ; >
       au < exists ; exists ; 2021 ; 41 ; Conversations Across the Field of Dance Volume 2021 ; 2021 ; >
       au < ready ; exists ; 2022 ; 42 ; Conversations Across the Field of Dance Volume 2022 ; 2022 ; >
-      au < ready ; exists ; 2023 ; 43 ; Conversations Across the Field of Dance Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 44 ; Conversations Across the Field of Dance Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2023 ; 43 ; Conversations Across the Field of Dance Volume 2023 ; 2023 ; >
+      au < crawling ; exists ; 2024 ; 44 ; Conversations Across the Field of Dance Volume 2024 ; 2024 ; >
       au < exists ; exists ; 2025 ; 45 ; Conversations Across the Field of Dance Volume 2025 ; 2025 ; >
 
   }
@@ -265,7 +265,7 @@
       au < exists ; exists ; 2018 ; 5 ; Ergo Volume 2018 ; 2018 ; >
       au < exists ; exists ; 2019 ; 6 ; Ergo Volume 2019 ; 2019 ; >
       au < exists ; exists ; 2020 ; 7 ; Ergo Volume 2020 ; 2020 ; >
-      au < ready ; exists ; 2021 ; 8 ; Ergo Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; 8 ; Ergo Volume 2021 ; 2021 ; >
       au < ready ; exists ; 2022 ; 9 ; Ergo Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 10 ; Ergo Volume 2023 ; 2023 ; >
       au < ready ; exists ; 2024 ; 11 ; Ergo Volume 2024 ; 2024 ; >
@@ -483,7 +483,7 @@
       au < exists ; exists ; 2019 ; 19 ; Philosophers' Imprint Volume 2019 ; 2019 ; >
       au < exists ; exists ; 2020 ; 20 ; Philosophers' Imprint Volume 2020 ; 2020 ; >
       au < exists ; exists ; 2021 ; 21 ; Philosophers' Imprint Volume 2021 ; 2021 ; >
-      au < ready ; exists ; 2022 ; 22 ; Philosophers' Imprint Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; 22 ; Philosophers' Imprint Volume 2022 ; 2022 ; >
       au < ready ; exists ; 2023 ; 23 ; Philosophers' Imprint Volume 2023 ; 2023 ; >
       au < ready ; exists ; 2024 ; 24 ; Philosophers' Imprint Volume 2024 ; 2024 ; >
       au < exists ; exists ; 2025 ; 25 ; Philosophers' Imprint Volume 2025 ; 2025 ; >
@@ -633,7 +633,7 @@
       au < exists ; exists ; 2019 ; 38 ; To Improve the Academy: A Journal of Educational Development Volume 2019 ; 2019 ; >
       au < exists ; exists ; 2020 ; 39 ; To Improve the Academy: A Journal of Educational Development Volume 2020 ; 2020 ; >
       au < ready ; exists ; 2021 ; 40 ; To Improve the Academy: A Journal of Educational Development Volume 2021 ; 2021 ; >
-      au < ready ; exists ; 2022 ; 41 ; To Improve the Academy: A Journal of Educational Development Volume 2022 ; 2022 ; >
+      au < crawling ; exists ; 2022 ; 41 ; To Improve the Academy: A Journal of Educational Development Volume 2022 ; 2022 ; >
       au < ready ; exists ; 2023 ; 42 ; To Improve the Academy: A Journal of Educational Development Volume 2023 ; 2023 ; >
       au < ready ; exists ; 2024 ; 43 ; To Improve the Academy: A Journal of Educational Development Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 44 ; To Improve the Academy: A Journal of Educational Development Volume 2025 ; 2025 ; >
@@ -676,7 +676,7 @@
       #published 2024-2025
       param[journal_id] = ujph
 
-      au < ready ; exists ; 2024 ; 8 ; Undergraduate Journal of Public Health Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 8 ; Undergraduate Journal of Public Health Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 9 ; Undergraduate Journal of Public Health Volume 2025 ; 2025 ; >
 
   }
@@ -787,7 +787,7 @@
       au < exists ; exists ; 2021 ; 48 ; Journal of the Western Society for French History Volume 2021 ; 2021 ; >
       au < exists ; exists ; 2022 ; 49 ; Journal of the Western Society for French History Volume 2022 ; 2022 ; >
       au < exists ; exists ; 2023 ; 50 ; Journal of the Western Society for French History Volume 2023 ; 2023 ; >
-      au < ready ; exists ; 2024 ; 51 ; Journal of the Western Society for French History Volume 2024 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; 51 ; Journal of the Western Society for French History Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 52 ; Journal of the Western Society for French History Volume 2025 ; 2025 ; >
 
   }
