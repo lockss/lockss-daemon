@@ -3889,6 +3889,7 @@ while (my $line = <>) {
            ($plugin eq "AACRSilverchairPlugin") || 
            ($plugin eq "AmericanDiabetesAssociationSilverchairPlugin") || 
            ($plugin eq "CompanyBiologistsSilverchairPlugin") || 
+           ($plugin eq "EmeraldSilverchairPlugin") || 
            ($plugin eq "PortlandPressSilverchairPlugin") || 
            ($plugin eq "RockefellerUniversityPressSilverchairPlugin") || 
            ($plugin eq "UCPressSilverchairPlugin")) {
@@ -3924,6 +3925,7 @@ while (my $line = <>) {
            ($plugin eq "ClockssAACRSilverchairPlugin") || 
            ($plugin eq "ClockssAmericanDiabetesAssociationSilverchairPlugin") || 
            ($plugin eq "ClockssCompanyBiologistsSilverchairPlugin") || 
+           ($plugin eq "ClockssEmeraldSilverchairPlugin") || 
            ($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
            ($plugin eq "ClockssPortlandPressSilverchairPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
