@@ -904,14 +904,24 @@ while (my $line = <>) {
       $param{base_url}, $param{resource_id});
     #Permission page is same as the start page for GLN
     $book_handle_short = uri_unescape($param{resource_id});
-    #printf("book_handle_short: %s\n", $book_handle_short); #debug
+    #printf("book_handle_short1: %s\n", $book_handle_short); #debug
     $man_url = uri_unescape($url);
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     my $man_contents = $resp->is_success ? $resp->content : "";
+    #If handle redirects to another
+    if (($req->url ne $resp->request->uri) && ($resp->request->uri =~ "https://library.oapen.org/(handle/20.500.12657/.*)")) {
+        # Use a regex to match the last element after the last forward slash
+        $book_handle_short = $1;
+        #printf("book_handle_short2: %s\n", $book_handle_short); #debug
+    }
     if (! $resp->is_success) {
         $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    } elsif ($req->url ne $resp->request->uri) {
+    } elsif (($req->url ne $resp->request->uri) && ($resp->request->uri eq "https://library.oapen.org/password-login")) {
+#    } elsif (($req->url ne $resp->request->uri)) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected_LOGIN";
+    } elsif (($req->url ne $resp->request->uri) && ($resp->request->uri !~ "https://library.oapen.org/handle/20.500.12657/")) {
         $vol_title = $resp->request->uri;
         $result = "Redirected";
     } elsif (! defined($man_contents)) {
@@ -928,6 +938,9 @@ while (my $line = <>) {
             $vol_title = $1;
         }
         $result = "Manifest";
+        if ($req->url ne $resp->request->uri) {
+            $vol_title = $resp->request->uri;
+        }
     } else {
         $result = "--NO_CONT--";
     }
