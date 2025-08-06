@@ -4,7 +4,8 @@
     name = Emerald Group Publishing ;
     info[contract] = 2015 ;
     info[back] = 1994 ;
-    info[tester] = X
+    info[tester] = X ;
+    info[platform] = Silverchair Books
   >
 
   plugin = org.lockss.plugin.silverchair.emerald.ClockssEmeraldSilverchairPlugin
