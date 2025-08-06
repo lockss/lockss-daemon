@@ -8,8 +8,7 @@
     info[platform] = Silverchair
   >
 
-  plugin = needs.plugin
-  #plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairBooksPlugin
+  plugin = org.lockss.plugin.silverchair.emerald.ClockssEmeraldSilverchairBooksPlugin
   implicit < status ; status2 ; year ; isbn ; eisbn ; doi ; name ; param[resource_id]; hidden[proxy] >
   param[base_url] = https://www.emerald.com/
   #See https://www.emerald.com/search-results?f_ContentType=Book
