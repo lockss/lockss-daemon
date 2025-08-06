@@ -792,4 +792,95 @@
 
   }
 
+  {
+
+      title <
+        name = Global Storytelling: Journal of Digital and Moving Images ;
+        issn = 2836-0141 ;
+        eissn = 2769-4941
+      >
+
+      #published 2021-2025
+      param[journal_id] = gs
+
+      au < exists ; exists ; 2021 ; 1 ; Global Storytelling: Journal of Digital and Moving Images Volume 2021 ; 2021 ; >
+      au < exists ; exists ; 2022 ; 2 ; Global Storytelling: Journal of Digital and Moving Images Volume 2022 ; 2022 ; >
+      au < exists ; exists ; 2023 ; 3 ; Global Storytelling: Journal of Digital and Moving Images Volume 2023 ; 2023 ; >
+      au < exists ; exists ; 2024 ; 4 ; Global Storytelling: Journal of Digital and Moving Images Volume 2024 ; 2024 ; >
+      au < expected ; exists ; 2025 ; 5 ; Global Storytelling: Journal of Digital and Moving Images Volume 2025 ; 2025 ; >
+
+  }
+
+  {
+
+      title <
+        name = The Great Lakes Botanist ;
+        issn = 2576-8727 ;
+        eissn = 2573-4172
+      >
+
+      #published 2022-2025
+      param[journal_id] = glbot
+
+      au < exists ; exists ; 2022 ; 61 ; The Great Lakes Botanist Volume 2022 ; 2022 ; >
+      au < exists ; exists ; 2023 ; 62 ; The Great Lakes Botanist Volume 2023 ; 2023 ; >
+      au < exists ; exists ; 2024 ; 63 ; The Great Lakes Botanist Volume 2024 ; 2024 ; >
+      au < expected ; exists ; 2025 ; 64 ; The Great Lakes Botanist Volume 2025 ; 2025 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Glass Studies ;
+        issn = 0075-4250 ;
+        eissn = 3067-834X
+      >
+
+      #published 2024-2025
+      param[journal_id] = jgs
+
+      au < exists ; exists ; 2024 ; 66 ; Journal of Glass Studies Volume 2024 ; 2024 ; >
+      au < expected ; exists ; 2025 ; 67 ; Journal of Glass Studies Volume 2025 ; 2025 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Muslim Mental Health ;
+        issn = 1556-4908 ;
+        eissn = 1556-5009
+      >
+
+      #published 2021-2025
+      param[journal_id] = jmmh
+
+      au < exists ; exists ; 2021 ; 15 ; Journal of Muslim Mental Health Volume 2021 ; 2021 ; >
+      au < exists ; exists ; 2022 ; 16 ; Journal of Muslim Mental Health Volume 2022 ; 2022 ; >
+      au < exists ; exists ; 2023 ; 17 ; Journal of Muslim Mental Health Volume 2023 ; 2023 ; >
+      au < exists ; exists ; 2024 ; 18 ; Journal of Muslim Mental Health Volume 2024 ; 2024 ; >
+      au < expected ; exists ; 2025 ; 19 ; Journal of Muslim Mental Health Volume 2025 ; 2025 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Practical Ethics ;
+        issn = 2056-6158 ;
+        eissn = 2051-655X
+      >
+
+      #published 2021-2025
+      param[journal_id] = jpe
+
+      au < exists ; exists ; 2021 ; 9 ; Journal of Practical Ethics Volume 2021 ; 2021 ; >
+      au < exists ; exists ; 2022 ; 10 ; Journal of Practical Ethics Volume 2022 ; 2022 ; >
+      au < exists ; exists ; 2023 ; 11 ; Journal of Practical Ethics Volume 2023 ; 2023 ; >
+      au < exists ; exists ; 2024 ; 12 ; Journal of Practical Ethics Volume 2024 ; 2024 ; >
+      au < expected ; exists ; 2025 ; 13 ; Journal of Practical Ethics Volume 2025 ; 2025 ; >
+
+  }
+
 }
