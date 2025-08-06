@@ -22,8 +22,8 @@
     param[journal_abbr] = jsha
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < deepCrawl ; exists ; 2020 ; Journal of the Saudi Heart Association Volume 32 ; 32 ; >
-    au < deepCrawl ; exists ; 2021 ; Journal of the Saudi Heart Association Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2020 ; Journal of the Saudi Heart Association Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2021 ; Journal of the Saudi Heart Association Volume 33 ; 33 ; >
     au < deepCrawl ; exists ; 2022 ; Journal of the Saudi Heart Association Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of the Saudi Heart Association Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2024 ; Journal of the Saudi Heart Association Volume 36 ; 36 ; >

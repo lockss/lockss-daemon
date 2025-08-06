@@ -97,7 +97,7 @@
       #name and issn changed from: Business, Management and Education 2029-6169
       {
       param[journal_id] = BME
-      au < deepCrawl ; exists ; 2021 ; Business, Management and Economics Engineering Volume 2021 ; 12 ; 2021 ; https://journals.vgtu.lt/ ; >
+      au < frozen ; exists ; 2021 ; Business, Management and Economics Engineering Volume 2021 ; 12 ; 2021 ; https://journals.vgtu.lt/ ; >
       }
       {
       param[journal_id] = BMEE
