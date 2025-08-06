@@ -687,7 +687,7 @@
       au < doNotProcess ; exists ; 2021 ; 2 ; Buildings and Cities Volume 2021 ; 2021 ; 2 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #403 forbidden cloudfront.net
       au < superseded ; exists ; 2022 ; 3 ; Buildings and Cities Volume 2022 [superseded] ; 2022 ; 3 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #403 forbidden cloudfront.net
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Buildings and Cities Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #404 forbidden cloudfront.net  
-      au < ready ; exists ; 2024 ; 5 ; Buildings and Cities Volume 2024 ; 2024 ; 5 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #505 forbidden cloudfront.net
+      au < crawling ; exists ; 2024 ; 5 ; Buildings and Cities Volume 2024 ; 2024 ; 5 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #505 forbidden cloudfront.net
       au < manifest ; exists ; 2025 ; 6 ; Buildings and Cities Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #606 forbidden cloudfront.net
 
   }
@@ -889,7 +889,7 @@
       au < finished ; crawling ; 2021 ; 20 ; Data Science Journal Volume 2021 ; 2021 ; 20 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 21 ; Data Science Journal Volume 2022 [superseded] ; 2022 ; 21 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
       au < doNotProcess ; exists ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 ; 22 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
-      au < ready ; exists ; 2024 ; 23 ; Data Science Journal Volume 2024 ; 2024 ; 23 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
+      au < crawling ; exists ; 2024 ; 23 ; Data Science Journal Volume 2024 ; 2024 ; 23 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
       au < manifest ; exists ; 2025 ; 24 ; Data Science Journal Volume 2025 ; 2025 ; 24 ; Ubiquity Press ;  ; https://datascience.codata.org/ ; >
 
   }
@@ -1452,7 +1452,7 @@
       au < finished ; crawling ; 2021 ; 2 ; Continuity in Education Volume 2021 ; 2021 ; 2 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 3 ; Continuity in Education Volume 2022 [superseded] ; 2022 ; 3 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Continuity in Education Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
-      au < ready ; exists ; 2024 ; 5 ; Continuity in Education Volume 2024 ; 2024 ; 5 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
+      au < crawling ; exists ; 2024 ; 5 ; Continuity in Education Volume 2024 ; 2024 ; 5 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
       au < manifest ; exists ; 2025 ; 6 ; Continuity in Education Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
 
   }
@@ -1521,7 +1521,7 @@
       au < finished ; crawling ; 2021 ; 16 ; Global Heart Volume 2021 ; 2021 ; 16 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 17 ; Global Heart Volume 2022 [superseded] ; 2022 ; 17 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < doNotProcess ; exists ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ; 18 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
-      au < ready ; exists ; 2024 ; 19 ; Global Heart Volume 2024 ; 2024 ; 19 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
+      au < crawling ; exists ; 2024 ; 19 ; Global Heart Volume 2024 ; 2024 ; 19 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < manifest ; exists ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
 
   }
@@ -1674,7 +1674,7 @@
       au < finished ; crawling ; 2021 ; 11 ; Tremor and Other Hyperkinetic Movements Volume 2021 ; 2021 ; 11 ; Ubiquity Press ;  ; https://tremorjournal.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 12 ; Tremor and Other Hyperkinetic Movements Volume 2022 [superseded] ; 2022 ; 12 ; Ubiquity Press ;  ; https://tremorjournal.org/ ; >
       au < doNotProcess ; exists ; 2023 ; 13 ; Tremor and Other Hyperkinetic Movements Volume 2023 ; 2023 ; 13 ; Ubiquity Press ;  ; https://tremorjournal.org/ ; >
-      au < ready ; exists ; 2024 ; 14 ; Tremor and Other Hyperkinetic Movements Volume 2024 ; 2024 ; 14 ; Ubiquity Press ;  ; https://tremorjournal.org/ ; >
+      au < crawling ; exists ; 2024 ; 14 ; Tremor and Other Hyperkinetic Movements Volume 2024 ; 2024 ; 14 ; Ubiquity Press ;  ; https://tremorjournal.org/ ; >
       au < manifest ; exists ; 2025 ; 15 ; Tremor and Other Hyperkinetic Movements Volume 2025 ; 2025 ; 15 ; Ubiquity Press ;  ; https://tremorjournal.org/ ; >
 
   }
@@ -1767,7 +1767,7 @@
       au < finished ; crawling ; 2021 ; 5 ; Physical Activity and Health Volume 2021 ; 2021 ; 5 ; Ubiquity Press ;  ; https://paahjournal.com/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 6 ; Physical Activity and Health Volume 2022 [superseded] ; 2022 ; 6 ; Ubiquity Press ;  ; https://paahjournal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Physical Activity and Health Volume 2023 ; 2023 ; 7 ; Ubiquity Press ;  ; https://paahjournal.com/ ; >
-      au < ready ; exists ; 2024 ; 8 ; Physical Activity and Health Volume 2024 ; 2024 ; 8 ; Ubiquity Press ;  ; https://paahjournal.com/ ; >
+      au < crawling ; exists ; 2024 ; 8 ; Physical Activity and Health Volume 2024 ; 2024 ; 8 ; Ubiquity Press ;  ; https://paahjournal.com/ ; >
       au < manifest ; exists ; 2025 ; 9 ; Physical Activity and Health Volume 2025 ; 2025 ; 9 ; Ubiquity Press ;  ; https://paahjournal.com/ ; >
 
   }
@@ -1890,7 +1890,7 @@
       au < frozen ; exists ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 ; 1 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ ; >
       au < superseded ; exists ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 [superseded] ; 2022 ; 2 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 3 ; Swiss Psychology Open Volume 2023 ; 2023 ; 3 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ ; >
-      au < ready ; exists ; 2024 ; 4 ; Swiss Psychology Open Volume 2024 ; 2024 ; 4 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ ; >
+      au < crawling ; exists ; 2024 ; 4 ; Swiss Psychology Open Volume 2024 ; 2024 ; 4 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ ; >
       au < manifest ; exists ; 2025 ; 5 ; Swiss Psychology Open Volume 2025 ; 2025 ; 5 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ ; >
 
   }
@@ -1919,7 +1919,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 10 ; Perspectives on Medical Education Volume 2021 ; 2021 ; 10 ; Ubiquity Press ;  ; https://pmejournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 11 ; Perspectives on Medical Education Volume 2022 ; 2022 ; 11 ; Ubiquity Press ;  ; https://pmejournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Perspectives on Medical Education Volume 2023 ; 2023 ; 12 ; Ubiquity Press ;  ; https://pmejournal.org/ ; >
-      au < ready ; exists ; 2024 ; 13 ; Perspectives on Medical Education Volume 2024 ; 2024 ; 13 ; Ubiquity Press ;  ; https://pmejournal.org/ ; >
+      au < crawling ; exists ; 2024 ; 13 ; Perspectives on Medical Education Volume 2024 ; 2024 ; 13 ; Ubiquity Press ;  ; https://pmejournal.org/ ; >
       au < manifest ; exists ; 2025 ; 14 ; Perspectives on Medical Education Volume 2025 ; 2025 ; 14 ; Ubiquity Press ;  ; https://pmejournal.org/ ; >
 
   }
@@ -2036,7 +2036,7 @@
       au < finished ; crawling ; 2021 ; 17 ; Utrecht Law Review Volume 2021 ; 2021 ; 17 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 18 ; Utrecht Law Review Volume 2022 [superseded] ; 2022 ; 18 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 19 ; Utrecht Law Review Volume 2023 ; 2023 ; 19 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
-      au < ready ; exists ; 2024 ; 20 ; Utrecht Law Review Volume 2024 ; 2024 ; 20 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
+      au < crawling ; exists ; 2024 ; 20 ; Utrecht Law Review Volume 2024 ; 2024 ; 20 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
       au < expected ; exists ; 2025 ; 21 ; Utrecht Law Review Volume 2025 ; 2025 ; 21 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
 
   }
@@ -2106,7 +2106,7 @@
       au < finished ; crawling ; 2021 ; 34 ; Insights: the UKSG journal Volume 2021 ; 2021 ; 34 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 35 ; Insights: the UKSG journal Volume 2022 [superseded] ; 2022 ; 35 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
       au < manifest ; exists ; 2023 ; 36 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 36 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
-      au < ready ; exists ; 2024 ; 37 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 37 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
+      au < crawling ; exists ; 2024 ; 37 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 37 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
       au < manifest ; exists ; 2025 ; 38 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 38 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
 
   }
@@ -2137,7 +2137,7 @@
       au < finished ; crawling ; 2021 ; 17 ; British and Irish Orthoptic Journal Volume 2021 ; 2021 ; 17 ; White Rose University Press ;  ; https://www.bioj-online.com/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 18 ; British and Irish Orthoptic Journal Volume 2022 [superseded] ; 2022 ; 18 ; White Rose University Press ;  ; https://www.bioj-online.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 19 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 ; 19 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
-      au < ready ; exists ; 2024 ; 20 ; British and Irish Orthoptic Journal Volume 2024 ; 2024 ; 20 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
+      au < crawling ; exists ; 2024 ; 20 ; British and Irish Orthoptic Journal Volume 2024 ; 2024 ; 20 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
       au < manifest ; exists ; 2025 ; 21 ; British and Irish Orthoptic Journal Volume 2025 ; 2025 ; 21 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
 
   }
@@ -2161,7 +2161,7 @@
       au < finished ; crawling ; 2021 ; 5 ; Journal of the European Second Language Association Volume 2021 ; 2021 ; 5 ; White Rose University Press ;  ; https://www.euroslajournal.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 [superseded] ; 2022 ; 6 ; White Rose University Press ;  ; https://www.euroslajournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Journal of the European Second Language Association Volume 2023 ; 2023 ; 7 ; White Rose University Press ;  ; https://euroslajournal.org/ ; >
-      au < ready ; exists ; 2024 ; 8 ; Journal of the European Second Language Association Volume 2024 ; 2024 ; 8 ; White Rose University Press ;  ; https://euroslajournal.org/ ; >
+      au < crawling ; exists ; 2024 ; 8 ; Journal of the European Second Language Association Volume 2024 ; 2024 ; 8 ; White Rose University Press ;  ; https://euroslajournal.org/ ; >
       au < manifest ; exists ; 2025 ; 9 ; Journal of the European Second Language Association Volume 2025 ; 2025 ; 9 ; White Rose University Press ;  ; https://euroslajournal.org/ ; >
 
   }
@@ -2215,7 +2215,7 @@
 
       au < doNotProcess ; doNotProcess ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 ; 1 ; White Rose University Press ;  ; https://writingchinesejournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 ; 2 ; White Rose University Press ;  ; https://writingchinesejournal.org/ ; >
-      au < ready ; exists ; 2024 ; 3 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2024 ; 2024 ; 3 ; White Rose University Press ;  ; https://writingchinesejournal.org/ ; >
+      au < crawling ; exists ; 2024 ; 3 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2024 ; 2024 ; 3 ; White Rose University Press ;  ; https://writingchinesejournal.org/ ; >
       au < expected ; exists ; 2025 ; 4 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2025 ; 2025 ; 4 ; White Rose University Press ;  ; https://writingchinesejournal.org/ ; >
 
   }
@@ -2312,7 +2312,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 47 ; The Journal of Technology Studies Volume 2021 ; 2021 ; 47 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 48 ; The Journal of Technology Studies Volume 2022 ; 2022 ; 48 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       #au < doesNotExist ; doesNotExist ; 2023 ; 0 ; The Journal of Technology Studies Volume 2023 ; 2023 ; 0 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
-      au < ready ; exists ; 2024 ; 49 ; The Journal of Technology Studies Volume 2024 ; 2024 ; 49 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
+      au < crawling ; exists ; 2024 ; 49 ; The Journal of Technology Studies Volume 2024 ; 2024 ; 49 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       au < manifest ; exists ; 2025 ; 50 ; The Journal of Technology Studies Volume 2025 ; 2025 ; 50 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
 
   }
@@ -2555,7 +2555,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; 2 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; 3 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
-      au < ready ; exists ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
+      au < crawling ; exists ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
       au < expected ; exists ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
 
   }
@@ -2609,7 +2609,7 @@
       au < manifest ; exists ; 2021 ; 5-6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5-6 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < manifest ; exists ; 2023 ; 8-9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8-9 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
-      au < ready ; exists ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
+      au < crawling ; exists ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < manifest ; exists ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
 
   }
