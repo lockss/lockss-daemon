@@ -82,6 +82,9 @@ public class UbiquityPartnerNetworkHtmlCrawlFilterFactory implements FilterFacto
         HtmlNodeFilters.tagWithAttribute("div", "class", "volume-list"),
         HtmlNodeFilters.tagWithAttribute("section", "aria-labelledby", "issue-archive"),
         HtmlNodeFilters.tag("aside"),
+
+        //There are a lot of links to other UPN articles in article content. Let's remove them so no chance of overcrawl. 
+        HtmlNodeFilters.tagWithAttribute("article", "id", "article-container"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
