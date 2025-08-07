@@ -23,13 +23,13 @@
       param[journal_abbr] = journal
       #published 2005-present
 
-      au < crawling ; exists ; 2005 ; Modern Sport Volume 2005 ; 4 ; >
+      au < frozen ; exists ; 2005 ; Modern Sport Volume 2005 ; 4 ; >
       au < frozen ; exists ; 2006 ; Modern Sport Volume 2006 ; 5 ; >
       au < frozen ; exists ; 2007 ; Modern Sport Volume 2007 ; 6 ; >
-      au < crawling ; exists ; 2008 ; Modern Sport Volume 2008 ; 7 ; >
-      au < crawling ; exists ; 2009 ; Modern Sport Volume 2009 ; 8 ; >
+      au < frozen ; exists ; 2008 ; Modern Sport Volume 2008 ; 7 ; >
+      au < frozen ; exists ; 2009 ; Modern Sport Volume 2009 ; 8 ; >
       au < frozen ; exists ; 2010 ; Modern Sport Volume 2010 ; 9 ; >
-      au < crawling ; exists ; 2011 ; Modern Sport Volume 2011 ; 10 ; >
+      au < frozen ; exists ; 2011 ; Modern Sport Volume 2011 ; 10 ; >
       au < doNotProcess ; exists ; 2012 ; Modern Sport Volume 2012 ; 11 ; >
       au < doNotProcess ; exists ; 2013 ; Modern Sport Volume 2013 ; 12 ; >
       au < doNotProcess ; exists ; 2014 ; Modern Sport Volume 2014 ; 13 ; >
