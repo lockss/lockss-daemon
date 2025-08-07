@@ -56,7 +56,7 @@ public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNorm
       Pattern.compile("\\.jpg(?:\\?|%3F)t(?:=|%3D)\\d+$",
                       Pattern.CASE_INSENSITIVE);
   protected static Pattern JPG_WITH_TIMESTAMP_AND_WIDTH =
-      Pattern.compile("\\.jpg(?:\\?|%3F)t(?:=|%3D)\\d+(?:&|%26)w=",
+      Pattern.compile("\\.jpg(?:\\?|%3F)t(?:=|%3D)\\d+(?:&|%26|&amp;)w=",
                       Pattern.CASE_INSENSITIVE);
 
   @Override
