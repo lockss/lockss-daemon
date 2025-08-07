@@ -169,7 +169,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <org.lockss.daemon.ConfigParamDescr>
         <key>volume_name</key>
         <displayName>Volume Name</displayName>
-        <type>1</type>
+        <type>9</type>
         <size>20</size>
         <definitional>false</definitional>
         <defaultOnly>false</defaultOnly>

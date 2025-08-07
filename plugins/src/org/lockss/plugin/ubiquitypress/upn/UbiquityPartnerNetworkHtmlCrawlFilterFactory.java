@@ -80,6 +80,8 @@ public class UbiquityPartnerNetworkHtmlCrawlFilterFactory implements FilterFacto
          * on TOC pages.
          */
         HtmlNodeFilters.tagWithAttribute("div", "class", "volume-list"),
+        HtmlNodeFilters.tagWithAttribute("section", "aria-labelledby", "issue-archive"),
+        HtmlNodeFilters.tag("aside"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
