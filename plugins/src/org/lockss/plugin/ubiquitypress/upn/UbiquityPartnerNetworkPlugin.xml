@@ -93,6 +93,24 @@ POSSIBILITY OF SUCH DAMAGE.
           </entry>
       </map>
   </entry>
+
+  <!-- The volume_name parameter may now be a set, to handle AUs
+       containing issues from more than one volume.  This could result
+       in overcrawls if there are links from issues intended to be in
+       the AU to issues not intended to be in the AU.  If that happens
+       (it didn't with the first multi-volume AU we tried), it will be
+       necessary for the crawl rules to match specific volume/issue
+       pairs.  One way to do that is to make the set elements be
+       vol:issue pairs and define two custom param functors that
+       return the first & second elements of the pair.  Unfortunately
+       that would be incompatible with all the existing AUs.  A hack
+       to do it compatibly would be to make the functors work on
+       non-pairs: the first would return the value (volume), the
+       second would return something that allows the regexp to match
+       any issue.  Simply returning .* probably won't work because it
+       will be escaped to \.\* when substituted into the regexp, but
+       something along these lines should be possible. -->
+
   <entry>
     <string>au_crawlrules</string>
     <list>
