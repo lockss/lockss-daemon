@@ -30,17 +30,17 @@
       param[base_url] = https://www.authorship.ugent.be/
       #param[journal_id] = authorship
 
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Authorship Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Authorship Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Authorship Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Authorship Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Authorship Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Authorship Volume 2011 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Authorship Volume 2012 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Authorship Volume 2013 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Authorship Volume 2014 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Authorship Volume 2015 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Authorship Volume 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Authorship Volume 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Authorship Volume 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Authorship Volume 2019 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Authorship Volume 2020 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Authorship Volume 2021 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Authorship Volume 2023 ; >
 
   }
@@ -63,41 +63,41 @@
       au < manifest ; exists ; 1987 ; 1987 ; 5 ; Documenta Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 6 ; Documenta Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 7 ; Documenta Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 8 ; Documenta Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 9 ; Documenta Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 10 ; Documenta Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 11 ; Documenta Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 12 ; Documenta Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 13 ; Documenta Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 14 ; Documenta Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 15 ; Documenta Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 16 ; Documenta Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 17 ; Documenta Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 18 ; Documenta Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 19 ; Documenta Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 20 ; Documenta Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 21 ; Documenta Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 22 ; Documenta Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 23 ; Documenta Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 24 ; Documenta Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 25 ; Documenta Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 26 ; Documenta Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 27 ; Documenta Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 28 ; Documenta Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 29 ; Documenta Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 30 ; Documenta Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 31 ; Documenta Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 32 ; Documenta Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 33 ; Documenta Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 34 ; Documenta Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 35 ; Documenta Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 36 ; Documenta Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 37 ; Documenta Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 38 ; Documenta Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 39 ; Documenta Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 40 ; Documenta Volume 2022 ; >
-      au < frozen ; exists ; 2023 ; 2023 ; 41 ; Documenta Volume 2023 ; >
-      au < frozen ; exists ; 2024 ; 2024 ; 42 ; Documenta Volume 2024 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 8 ; Documenta Volume 1990 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1991 ; 1991 ; 9 ; Documenta Volume 1991 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1992 ; 1992 ; 10 ; Documenta Volume 1992 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; 11 ; Documenta Volume 1993 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1994 ; 1994 ; 12 ; Documenta Volume 1994 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; 1995 ; 13 ; Documenta Volume 1995 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; 1996 ; 14 ; Documenta Volume 1996 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1997 ; 1997 ; 15 ; Documenta Volume 1997 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1998 ; 1998 ; 16 ; Documenta Volume 1998 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 1999 ; 17 ; Documenta Volume 1999 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 18 ; Documenta Volume 2000 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; 19 ; Documenta Volume 2001 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; 20 ; Documenta Volume 2002 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2003 ; 2003 ; 21 ; Documenta Volume 2003 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2004 ; 2004 ; 22 ; Documenta Volume 2004 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; 23 ; Documenta Volume 2005 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; 24 ; Documenta Volume 2006 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; 25 ; Documenta Volume 2007 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; 2008 ; 26 ; Documenta Volume 2008 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; 2009 ; 27 ; Documenta Volume 2009 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; 28 ; Documenta Volume 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; 29 ; Documenta Volume 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 30 ; Documenta Volume 2012 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 31 ; Documenta Volume 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 2014 ; 32 ; Documenta Volume 2014 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 33 ; Documenta Volume 2015 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; 34 ; Documenta Volume 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; 35 ; Documenta Volume 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; 36 ; Documenta Volume 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 37 ; Documenta Volume 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 38 ; Documenta Volume 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; 39 ; Documenta Volume 2021 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2022 ; 2022 ; 40 ; Documenta Volume 2022 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; 2023 ; 41 ; Documenta Volume 2023 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 2024 ; 42 ; Documenta Volume 2024 ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2025 ; 2025 ; 43 ; Documenta Volume 2025 ; >
 
   }
@@ -114,9 +114,9 @@
       param[base_url] = https://www.digest.ugent.be/
       #param[journal_id] = digest
 
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2025 ; >
@@ -134,10 +134,10 @@
       param[base_url] = https://jolcel.ugent.be/
       #param[journal_id] = jolcel
 
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2021 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2025 ; >
@@ -172,11 +172,11 @@
       param[base_url] = https://www.philosophica.ugent.be/
       #param[journal_id] = philosophica
 
-      au < frozen ; exists ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 ; >
       au < manifest ; exists ; 2022 ; 2022 ; 93 ; Philosophica Volume 93 ; >
 
@@ -573,12 +573,12 @@
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Ghendtsche Tydinghen Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Ghendtsche Tydinghen Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Ghendtsche Tydinghen Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Ghendtsche Tydinghen Volume 2017 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Ghendtsche Tydinghen Volume 2017 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Ghendtsche Tydinghen Volume 2018 ; >
       au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Ghendtsche Tydinghen Volume 2019 ; >
       au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Ghendtsche Tydinghen Volume 2020 ; >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Ghendtsche Tydinghen Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Ghendtsche Tydinghen Volume 2022 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Ghendtsche Tydinghen Volume 2022 ; reingest3.clockss.org:8083 >
       au < exists ; exists ; 2023 ; 2023 ; 2023 ; Ghendtsche Tydinghen Volume 2023 ; >
 
   }
@@ -690,14 +690,14 @@
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2013 ; >
       au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; 2014 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2014 ; > #Does not exist
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2015 ; >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2015 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2016 ; >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; 2017 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2017 ; > #No substance
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2019 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2019 ; reingest5.clockss.org:8082 >
 
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2022 ; >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2021 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2022 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2025 ; >
@@ -781,11 +781,11 @@
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2013 ; >
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2016 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2016 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2020 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2019 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2020 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2021 ; >
       au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2022 ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 2023 ; 2023 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2023 ; >
@@ -895,7 +895,7 @@
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; International Journal Sustainable Construction & Design Volume 2013 ; >
       au < frozen ; exists ; 2014 ; 2014 ; 2014 ; International Journal Sustainable Construction & Design Volume 2014 ; >
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; International Journal Sustainable Construction & Design Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; International Journal Sustainable Construction & Design Volume 2016 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; International Journal Sustainable Construction & Design Volume 2016 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; International Journal Sustainable Construction & Design Volume 2017 ; >
 
   }
@@ -1306,18 +1306,18 @@
       #published 2011-2022
       param[journal_id] = reng
 
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Relaties en Nieuwe Gezinnen Volume 2011 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Relaties en Nieuwe Gezinnen Volume 2011 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Relaties en Nieuwe Gezinnen Volume 2012 ; >
       au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Relaties en Nieuwe Gezinnen Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Relaties en Nieuwe Gezinnen Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Relaties en Nieuwe Gezinnen Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Relaties en Nieuwe Gezinnen Volume 2016 ; >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Relaties en Nieuwe Gezinnen Volume 2014 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Relaties en Nieuwe Gezinnen Volume 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Relaties en Nieuwe Gezinnen Volume 2016 ; reingest1.clockss.org:8082 >
 
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Relaties en Nieuwe Gezinnen Volume 2018 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Relaties en Nieuwe Gezinnen Volume 2018 ; reingest2.clockss.org:8085 >
 
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Relaties en Nieuwe Gezinnen Volume 2020 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Relaties en Nieuwe Gezinnen Volume 2020 ; reingest3.clockss.org:8083 >
 
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Relaties en Nieuwe Gezinnen Volume 2022 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Relaties en Nieuwe Gezinnen Volume 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Relaties en Nieuwe Gezinnen Volume 2023 ; >
       au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; 2024 ; Relaties en Nieuwe Gezinnen Volume 2024 ; > #No content
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Relaties en Nieuwe Gezinnen Volume 2025 ; >
@@ -1393,7 +1393,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Res Publica Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Res Publica Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Res Publica Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Res Publica Volume 2018 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Res Publica Volume 2018 ; reingest5.clockss.org:8082 >
 
       au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Res Publica Volume 2021 ; >
 
@@ -1528,7 +1528,7 @@
       au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2015 ; >
       au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2016 ; >
       au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2018 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2018 ; reingest4.clockss.org:8082 >
 
   }
 
