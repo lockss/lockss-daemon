@@ -1164,8 +1164,8 @@
 
     #content available from 1979 volume 1 to 2007 volume 34
 
-    au < manifest ; 2008 ; 2008 ; Annals of Behavioral Medicine Volume 35-36 ; 35-36 >
-    au < manifest ; 2009 ; 2009 ; Annals of Behavioral Medicine Volume 37-38 ; 37-38 >
+    au < ready ; 2008 ; 2008 ; Annals of Behavioral Medicine Volume 35-36 ; 35-36 >
+    au < ready ; 2009 ; 2009 ; Annals of Behavioral Medicine Volume 37-38 ; 37-38 >
     au < ready ; 2010 ; 2010 ; Annals of Behavioral Medicine Volume 39-40 ; 39-40 >
     au < ready ; 2011 ; 2011 ; Annals of Behavioral Medicine Volume 41-42 ; 41-42 >
     au < ready ; 2012 ; 2012 ; Annals of Behavioral Medicine Volume 43-44 ; 43-44 >
@@ -1349,8 +1349,8 @@
 
     param[journal_id] = anncom
 
-    au < manifest ; 2008 ; 2008 ; Annals of the International Communication Association Volume 32 ; 32 >
-    au < manifest ; 2009 ; 2009 ; Annals of the International Communication Association Volume 33 ; 33 >
+    au < ready ; 2008 ; 2008 ; Annals of the International Communication Association Volume 32 ; 32 >
+    au < ready ; 2009 ; 2009 ; Annals of the International Communication Association Volume 33 ; 33 >
     au < released ; 2010 ; 2010 ; Annals of the International Communication Association Volume 34 ; 34 >
     au < released ; 2011 ; 2011 ; Annals of the International Communication Association Volume 35 ; 35 >
     au < notReady ; 2012 ; 2012 ; Annals of the International Communication Association Volume 36 ; 36 >
@@ -1889,8 +1889,8 @@
 
     param[journal_id] = arthistory
 
-    au < manifest ; 2008 ; 2008 ; Art History Volume 31 ; 31 >
-    au < manifest ; 2009 ; 2009 ; Art History Volume 32 ; 32 >
+    au < ready ; 2008 ; 2008 ; Art History Volume 31 ; 31 >
+    au < ready ; 2009 ; 2009 ; Art History Volume 32 ; 32 >
     au < released ; 2010 ; 2010 ; Art History Volume 33 ; 33 >
     au < released ; 2011 ; 2011 ; Art History Volume 34 ; 34 >
     au < released ; 2012 ; 2012 ; Art History Volume 35 ; 35 >
