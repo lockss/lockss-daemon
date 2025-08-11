@@ -177,7 +177,7 @@
       au < finished ; manifest ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 2022 ; 2022 ; 93 ; Philosophica Volume 93 ; >
 
   }
@@ -204,12 +204,12 @@
       #param[base_url] = https://openjournals.ugent.be/
       param[journal_id] = jeps
 
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Journal of European Periodical Studies Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Journal of European Periodical Studies Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Journal of European Periodical Studies Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Journal of European Periodical Studies Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Journal of European Periodical Studies Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Journal of European Periodical Studies Volume 2021 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Journal of European Periodical Studies Volume 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Journal of European Periodical Studies Volume 2017 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Journal of European Periodical Studies Volume 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Journal of European Periodical Studies Volume 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Journal of European Periodical Studies Volume 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Journal of European Periodical Studies Volume 2021 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; 2022 ; Journal of European Periodical Studies Volume 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Journal of European Periodical Studies Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Journal of European Periodical Studies Volume 2024 ; >
@@ -229,19 +229,19 @@
       #param[base_url] = https://openjournals.ugent.be/
       param[journal_id] = vdt
 
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Vlaams Diergeneeskundig Tijdschrift Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Vlaams Diergeneeskundig Tijdschrift Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Vlaams Diergeneeskundig Tijdschrift Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Vlaams Diergeneeskundig Tijdschrift Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Vlaams Diergeneeskundig Tijdschrift Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Vlaams Diergeneeskundig Tijdschrift Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Vlaams Diergeneeskundig Tijdschrift Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Vlaams Diergeneeskundig Tijdschrift Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Vlaams Diergeneeskundig Tijdschrift Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Vlaams Diergeneeskundig Tijdschrift Volume 2021 ; >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Vlaams Diergeneeskundig Tijdschrift Volume 2009 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Vlaams Diergeneeskundig Tijdschrift Volume 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Vlaams Diergeneeskundig Tijdschrift Volume 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Vlaams Diergeneeskundig Tijdschrift Volume 2012 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Vlaams Diergeneeskundig Tijdschrift Volume 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Vlaams Diergeneeskundig Tijdschrift Volume 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Vlaams Diergeneeskundig Tijdschrift Volume 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Vlaams Diergeneeskundig Tijdschrift Volume 2016 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Vlaams Diergeneeskundig Tijdschrift Volume 2017 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Vlaams Diergeneeskundig Tijdschrift Volume 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Vlaams Diergeneeskundig Tijdschrift Volume 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Vlaams Diergeneeskundig Tijdschrift Volume 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Vlaams Diergeneeskundig Tijdschrift Volume 2021 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; 2022 ; Vlaams Diergeneeskundig Tijdschrift Volume 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Vlaams Diergeneeskundig Tijdschrift Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Vlaams Diergeneeskundig Tijdschrift Volume 2024 ; >
@@ -260,33 +260,33 @@
       #param[base_url] = https://openjournals.ugent.be/
       param[journal_id] = wt
 
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2021 ; >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1995 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1996 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1997 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1998 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 1999 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2000 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2001 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2002 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2003 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2004 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2005 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2006 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2007 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2008 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2009 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2010 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2011 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2012 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2013 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2014 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2018 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2019 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2020 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2021 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; 2022 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2024 ; >
@@ -310,35 +310,35 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Afrika Focus Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Afrika Focus Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Afrika Focus Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Afrika Focus Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Afrika Focus Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Afrika Focus Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Afrika Focus Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Afrika Focus Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Afrika Focus Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Afrika Focus Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Afrika Focus Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Afrika Focus Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Afrika Focus Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Afrika Focus Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Afrika Focus Volume 2001 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Afrika Focus Volume 1990 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Afrika Focus Volume 1991 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Afrika Focus Volume 1992 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Afrika Focus Volume 1993 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Afrika Focus Volume 1994 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Afrika Focus Volume 1995 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Afrika Focus Volume 1996 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Afrika Focus Volume 1997 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Afrika Focus Volume 1998 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Afrika Focus Volume 1999 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Afrika Focus Volume 2000 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Afrika Focus Volume 2001 ; reingest3.clockss.org:8083 >
 
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Afrika Focus Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Afrika Focus Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Afrika Focus Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Afrika Focus Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Afrika Focus Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Afrika Focus Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Afrika Focus Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Afrika Focus Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Afrika Focus Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Afrika Focus Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Afrika Focus Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Afrika Focus Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Afrika Focus Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Afrika Focus Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Afrika Focus Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Afrika Focus Volume 2020 ; >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Afrika Focus Volume 2005 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Afrika Focus Volume 2006 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Afrika Focus Volume 2007 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Afrika Focus Volume 2008 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Afrika Focus Volume 2009 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Afrika Focus Volume 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Afrika Focus Volume 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Afrika Focus Volume 2012 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Afrika Focus Volume 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Afrika Focus Volume 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Afrika Focus Volume 2015 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Afrika Focus Volume 2016 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Afrika Focus Volume 2017 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Afrika Focus Volume 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Afrika Focus Volume 2019 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Afrika Focus Volume 2020 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -358,39 +358,39 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Agora Magazine Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Agora Magazine Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Agora Magazine Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Agora Magazine Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Agora Magazine Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Agora Magazine Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Agora Magazine Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Agora Magazine Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Agora Magazine Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Agora Magazine Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Agora Magazine Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Agora Magazine Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Agora Magazine Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Agora Magazine Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Agora Magazine Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Agora Magazine Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Agora Magazine Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Agora Magazine Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Agora Magazine Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Agora Magazine Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Agora Magazine Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Agora Magazine Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Agora Magazine Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Agora Magazine Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Agora Magazine Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Agora Magazine Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Agora Magazine Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Agora Magazine Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Agora Magazine Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Agora Magazine Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Agora Magazine Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Agora Magazine Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Agora Magazine Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Agora Magazine Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Agora Magazine Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Agora Magazine Volume 2022 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Agora Magazine Volume 1990 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Agora Magazine Volume 1991 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Agora Magazine Volume 1992 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Agora Magazine Volume 1993 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Agora Magazine Volume 1994 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Agora Magazine Volume 1995 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Agora Magazine Volume 1996 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Agora Magazine Volume 1997 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Agora Magazine Volume 1998 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Agora Magazine Volume 1999 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Agora Magazine Volume 2000 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Agora Magazine Volume 2001 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Agora Magazine Volume 2002 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Agora Magazine Volume 2003 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Agora Magazine Volume 2004 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Agora Magazine Volume 2005 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Agora Magazine Volume 2006 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Agora Magazine Volume 2007 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Agora Magazine Volume 2008 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Agora Magazine Volume 2009 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Agora Magazine Volume 2010 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Agora Magazine Volume 2011 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Agora Magazine Volume 2012 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Agora Magazine Volume 2013 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Agora Magazine Volume 2014 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Agora Magazine Volume 2015 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Agora Magazine Volume 2016 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Agora Magazine Volume 2017 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Agora Magazine Volume 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Agora Magazine Volume 2019 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Agora Magazine Volume 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Agora Magazine Volume 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Agora Magazine Volume 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Agora Magazine Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Agora Magazine Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Agora Magazine Volume 2025 ; >
@@ -415,13 +415,13 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Amsab Tijdingen Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Amsab Tijdingen Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Amsab Tijdingen Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Amsab Tijdingen Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Amsab Tijdingen Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Amsab Tijdingen Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Amsab Tijdingen Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Amsab Tijdingen Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Amsab Tijdingen Volume 1995 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Amsab Tijdingen Volume 2019 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Amsab Tijdingen Volume 1990 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Amsab Tijdingen Volume 1991 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Amsab Tijdingen Volume 1992 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Amsab Tijdingen Volume 1993 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Amsab Tijdingen Volume 1994 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Amsab Tijdingen Volume 1995 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Amsab Tijdingen Volume 2019 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -435,31 +435,31 @@
       #published 1996-2020
       param[journal_id] = broodenrozen
 
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Brood & Rozen Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Brood & Rozen Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Brood & Rozen Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Brood & Rozen Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Brood & Rozen Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Brood & Rozen Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Brood & Rozen Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Brood & Rozen Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Brood & Rozen Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Brood & Rozen Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Brood & Rozen Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Brood & Rozen Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Brood & Rozen Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Brood & Rozen Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Brood & Rozen Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Brood & Rozen Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Brood & Rozen Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Brood & Rozen Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Brood & Rozen Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Brood & Rozen Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Brood & Rozen Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Brood & Rozen Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Brood & Rozen Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Brood & Rozen Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Brood & Rozen Volume 2020 ; >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Brood & Rozen Volume 1996 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Brood & Rozen Volume 1997 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Brood & Rozen Volume 1998 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Brood & Rozen Volume 1999 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Brood & Rozen Volume 2000 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Brood & Rozen Volume 2001 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Brood & Rozen Volume 2002 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Brood & Rozen Volume 2003 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Brood & Rozen Volume 2004 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Brood & Rozen Volume 2005 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Brood & Rozen Volume 2006 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Brood & Rozen Volume 2007 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Brood & Rozen Volume 2008 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Brood & Rozen Volume 2009 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Brood & Rozen Volume 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Brood & Rozen Volume 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Brood & Rozen Volume 2012 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Brood & Rozen Volume 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Brood & Rozen Volume 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Brood & Rozen Volume 2015 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Brood & Rozen Volume 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Brood & Rozen Volume 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Brood & Rozen Volume 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Brood & Rozen Volume 2019 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Brood & Rozen Volume 2020 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -479,38 +479,38 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; De Uil van Minerva Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; De Uil van Minerva Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; De Uil van Minerva Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; De Uil van Minerva Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; De Uil van Minerva Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; De Uil van Minerva Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; De Uil van Minerva Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; De Uil van Minerva Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; De Uil van Minerva Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; De Uil van Minerva Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; De Uil van Minerva Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; De Uil van Minerva Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; De Uil van Minerva Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; De Uil van Minerva Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; De Uil van Minerva Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; De Uil van Minerva Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; De Uil van Minerva Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; De Uil van Minerva Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; De Uil van Minerva Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; De Uil van Minerva Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; De Uil van Minerva Volume 2007 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; De Uil van Minerva Volume 1990 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; De Uil van Minerva Volume 1991 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; De Uil van Minerva Volume 1992 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; De Uil van Minerva Volume 1993 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; De Uil van Minerva Volume 1994 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; De Uil van Minerva Volume 1995 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; De Uil van Minerva Volume 1996 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; De Uil van Minerva Volume 1997 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; De Uil van Minerva Volume 1998 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; De Uil van Minerva Volume 1999 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; De Uil van Minerva Volume 2000 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; De Uil van Minerva Volume 2001 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; De Uil van Minerva Volume 2002 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; De Uil van Minerva Volume 2003 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; De Uil van Minerva Volume 2004 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; De Uil van Minerva Volume 2005 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; De Uil van Minerva Volume 2006 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; De Uil van Minerva Volume 2007 ; reingest1.clockss.org:8082 >
 
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; De Uil van Minerva Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; De Uil van Minerva Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; De Uil van Minerva Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; De Uil van Minerva Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; De Uil van Minerva Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; De Uil van Minerva Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; De Uil van Minerva Volume 2016 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; De Uil van Minerva Volume 2010 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; De Uil van Minerva Volume 2011 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; De Uil van Minerva Volume 2012 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; De Uil van Minerva Volume 2013 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; De Uil van Minerva Volume 2014 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; De Uil van Minerva Volume 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; De Uil van Minerva Volume 2016 ; reingest5.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2017 ; 2017 ; 2017 ; De Uil van Minerva Volume 2017 ; > #Does not exist
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; De Uil van Minerva Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; De Uil van Minerva Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; De Uil van Minerva Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; De Uil van Minerva Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; De Uil van Minerva Volume 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; De Uil van Minerva Volume 2019 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; De Uil van Minerva Volume 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; De Uil van Minerva Volume 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; De Uil van Minerva Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; De Uil van Minerva Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; De Uil van Minerva Volume 2025 ; >
@@ -546,38 +546,38 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Ghendtsche Tydinghen Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Ghendtsche Tydinghen Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Ghendtsche Tydinghen Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Ghendtsche Tydinghen Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Ghendtsche Tydinghen Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Ghendtsche Tydinghen Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Ghendtsche Tydinghen Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Ghendtsche Tydinghen Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Ghendtsche Tydinghen Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Ghendtsche Tydinghen Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Ghendtsche Tydinghen Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Ghendtsche Tydinghen Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Ghendtsche Tydinghen Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Ghendtsche Tydinghen Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Ghendtsche Tydinghen Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Ghendtsche Tydinghen Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Ghendtsche Tydinghen Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Ghendtsche Tydinghen Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Ghendtsche Tydinghen Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Ghendtsche Tydinghen Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Ghendtsche Tydinghen Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Ghendtsche Tydinghen Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Ghendtsche Tydinghen Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Ghendtsche Tydinghen Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Ghendtsche Tydinghen Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Ghendtsche Tydinghen Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Ghendtsche Tydinghen Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Ghendtsche Tydinghen Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Ghendtsche Tydinghen Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Ghendtsche Tydinghen Volume 2016 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Ghendtsche Tydinghen Volume 1990 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Ghendtsche Tydinghen Volume 1991 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Ghendtsche Tydinghen Volume 1992 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Ghendtsche Tydinghen Volume 1993 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Ghendtsche Tydinghen Volume 1994 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Ghendtsche Tydinghen Volume 1995 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Ghendtsche Tydinghen Volume 1996 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Ghendtsche Tydinghen Volume 1997 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Ghendtsche Tydinghen Volume 1998 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Ghendtsche Tydinghen Volume 1999 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Ghendtsche Tydinghen Volume 2000 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Ghendtsche Tydinghen Volume 2001 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Ghendtsche Tydinghen Volume 2002 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Ghendtsche Tydinghen Volume 2003 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Ghendtsche Tydinghen Volume 2004 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Ghendtsche Tydinghen Volume 2005 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Ghendtsche Tydinghen Volume 2006 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Ghendtsche Tydinghen Volume 2007 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Ghendtsche Tydinghen Volume 2008 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Ghendtsche Tydinghen Volume 2009 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Ghendtsche Tydinghen Volume 2010 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Ghendtsche Tydinghen Volume 2011 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Ghendtsche Tydinghen Volume 2012 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Ghendtsche Tydinghen Volume 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Ghendtsche Tydinghen Volume 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Ghendtsche Tydinghen Volume 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Ghendtsche Tydinghen Volume 2016 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Ghendtsche Tydinghen Volume 2017 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Ghendtsche Tydinghen Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Ghendtsche Tydinghen Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Ghendtsche Tydinghen Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Ghendtsche Tydinghen Volume 2021 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Ghendtsche Tydinghen Volume 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Ghendtsche Tydinghen Volume 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Ghendtsche Tydinghen Volume 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Ghendtsche Tydinghen Volume 2021 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Ghendtsche Tydinghen Volume 2022 ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Ghendtsche Tydinghen Volume 2023 ; >
 
@@ -665,33 +665,33 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2013 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1990 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1991 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1992 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1993 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1994 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1995 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1996 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1997 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1998 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1999 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2000 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2001 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2002 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2003 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2004 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2005 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2006 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2007 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2008 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2009 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2010 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2012 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2013 ; reingest2.clockss.org:8085 >
       au < doesNotExist ; doesNotExist ; 2014 ; 2014 ; 2014 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2014 ; > #Does not exist
       au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2015 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2016 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2016 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; 2017 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2017 ; > #No substance
       au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2018 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2019 ; reingest5.clockss.org:8082 >
@@ -755,39 +755,39 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2015 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1990 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1991 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1992 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1993 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1994 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1995 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1996 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1997 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1998 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1999 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2000 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2001 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2002 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2003 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2004 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2005 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2006 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2007 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2008 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2009 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2010 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2011 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2012 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2013 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2014 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2015 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2016 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2017 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2017 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2018 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2019 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2020 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2022 ; >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2022 ; reingest3.clockss.org:8083 >
       au < doesNotExist ; doesNotExist ; 2023 ; 2023 ; 2023 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2025 ; >
@@ -850,31 +850,31 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Handelingen van het Genootschap voor Geschiedenis Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Handelingen van het Genootschap voor Geschiedenis Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Handelingen van het Genootschap voor Geschiedenis Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Handelingen van het Genootschap voor Geschiedenis Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Handelingen van het Genootschap voor Geschiedenis Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Handelingen van het Genootschap voor Geschiedenis Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Handelingen van het Genootschap voor Geschiedenis Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Handelingen van het Genootschap voor Geschiedenis Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Handelingen van het Genootschap voor Geschiedenis Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Handelingen van het Genootschap voor Geschiedenis Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Handelingen van het Genootschap voor Geschiedenis Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Handelingen van het Genootschap voor Geschiedenis Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Handelingen van het Genootschap voor Geschiedenis Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Handelingen van het Genootschap voor Geschiedenis Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Handelingen van het Genootschap voor Geschiedenis Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Handelingen van het Genootschap voor Geschiedenis Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Handelingen van het Genootschap voor Geschiedenis Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Handelingen van het Genootschap voor Geschiedenis Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Handelingen van het Genootschap voor Geschiedenis Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Handelingen van het Genootschap voor Geschiedenis Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Handelingen van het Genootschap voor Geschiedenis Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Handelingen van het Genootschap voor Geschiedenis Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Handelingen van het Genootschap voor Geschiedenis Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Handelingen van het Genootschap voor Geschiedenis Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen van het Genootschap voor Geschiedenis Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen van het Genootschap voor Geschiedenis Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen van het Genootschap voor Geschiedenis Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Handelingen van het Genootschap voor Geschiedenis Volume 2014 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Handelingen van het Genootschap voor Geschiedenis Volume 1990 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Handelingen van het Genootschap voor Geschiedenis Volume 1991 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Handelingen van het Genootschap voor Geschiedenis Volume 1992 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Handelingen van het Genootschap voor Geschiedenis Volume 1993 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Handelingen van het Genootschap voor Geschiedenis Volume 1994 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Handelingen van het Genootschap voor Geschiedenis Volume 1995 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Handelingen van het Genootschap voor Geschiedenis Volume 1996 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Handelingen van het Genootschap voor Geschiedenis Volume 1997 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Handelingen van het Genootschap voor Geschiedenis Volume 1998 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Handelingen van het Genootschap voor Geschiedenis Volume 1999 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Handelingen van het Genootschap voor Geschiedenis Volume 2000 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Handelingen van het Genootschap voor Geschiedenis Volume 2001 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Handelingen van het Genootschap voor Geschiedenis Volume 2002 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Handelingen van het Genootschap voor Geschiedenis Volume 2003 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Handelingen van het Genootschap voor Geschiedenis Volume 2004 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Handelingen van het Genootschap voor Geschiedenis Volume 2005 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Handelingen van het Genootschap voor Geschiedenis Volume 2006 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Handelingen van het Genootschap voor Geschiedenis Volume 2007 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Handelingen van het Genootschap voor Geschiedenis Volume 2008 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Handelingen van het Genootschap voor Geschiedenis Volume 2009 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Handelingen van het Genootschap voor Geschiedenis Volume 2010 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Handelingen van het Genootschap voor Geschiedenis Volume 2011 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Handelingen van het Genootschap voor Geschiedenis Volume 2012 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Handelingen van het Genootschap voor Geschiedenis Volume 2013 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Handelingen van het Genootschap voor Geschiedenis Volume 2014 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -889,14 +889,14 @@
       #published 2010-2017
       param[journal_id] = scad
 
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; International Journal Sustainable Construction & Design Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; International Journal Sustainable Construction & Design Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; International Journal Sustainable Construction & Design Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; International Journal Sustainable Construction & Design Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; International Journal Sustainable Construction & Design Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; International Journal Sustainable Construction & Design Volume 2015 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; International Journal Sustainable Construction & Design Volume 2010 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; International Journal Sustainable Construction & Design Volume 2011 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; International Journal Sustainable Construction & Design Volume 2012 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; International Journal Sustainable Construction & Design Volume 2013 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; International Journal Sustainable Construction & Design Volume 2014 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; International Journal Sustainable Construction & Design Volume 2015 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; 2016 ; 2016 ; International Journal Sustainable Construction & Design Volume 2016 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; International Journal Sustainable Construction & Design Volume 2017 ; >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; International Journal Sustainable Construction & Design Volume 2017 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -926,24 +926,24 @@
       #published 2006-present
       param[journal_id] = ewopinpractice
 
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; EWOP in Practice Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; EWOP in Practice Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; EWOP in Practice Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; EWOP in Practice Volume 2009 ; >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; EWOP in Practice Volume 2006 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; EWOP in Practice Volume 2007 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; EWOP in Practice Volume 2008 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; EWOP in Practice Volume 2009 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; 2010 ; EWOP in Practice Volume 2010 ; > #No substance
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; EWOP in Practice Volume 2011 ; >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; EWOP in Practice Volume 2011 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; 2012 ; EWOP in Practice Volume 2012 ; > #No substance
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; EWOP in Practice Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; EWOP in Practice Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; EWOP in Practice Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; EWOP in Practice Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; EWOP in Practice Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; EWOP in Practice Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; EWOP in Practice Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; EWOP in Practice Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; EWOP in Practice Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; EWOP in Practice Volume 2022 ; >
-      au < frozen ; exists ; 2023 ; 2023 ; 2023 ; EWOP in Practice Volume 2023 ; >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; EWOP in Practice Volume 2013 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; EWOP in Practice Volume 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; EWOP in Practice Volume 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; EWOP in Practice Volume 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; EWOP in Practice Volume 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; EWOP in Practice Volume 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; EWOP in Practice Volume 2019 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; EWOP in Practice Volume 2020 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; EWOP in Practice Volume 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; EWOP in Practice Volume 2022 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 2023 ; 2023 ; EWOP in Practice Volume 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; EWOP in Practice Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; EWOP in Practice Volume 2025 ; >
 
@@ -1025,38 +1025,38 @@
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1989 ; >
       au < manifest ; exists ; 1990 ; 1990 ; 1990 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2022 ; >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1991 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1992 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1993 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1994 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1995 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1996 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1997 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1998 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1999 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2000 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2001 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2002 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2003 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2004 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2005 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2006 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2007 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2008 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2009 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2010 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2011 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2012 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2014 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2017 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2021 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 2022 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1080,36 +1080,36 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Sociologos Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Sociologos Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Sociologos Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Sociologos Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Sociologos Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Sociologos Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Sociologos Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Sociologos Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Sociologos Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Sociologos Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Sociologos Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Sociologos Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Sociologos Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Sociologos Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Sociologos Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Sociologos Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Sociologos Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Sociologos Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Sociologos Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Sociologos Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Sociologos Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Sociologos Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Sociologos Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Sociologos Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Sociologos Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Sociologos Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Sociologos Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Sociologos Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Sociologos Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Sociologos Volume 2016 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Sociologos Volume 1990 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Sociologos Volume 1991 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Sociologos Volume 1992 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Sociologos Volume 1993 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Sociologos Volume 1994 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Sociologos Volume 1995 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Sociologos Volume 1996 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Sociologos Volume 1997 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Sociologos Volume 1998 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Sociologos Volume 1999 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Sociologos Volume 2000 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Sociologos Volume 2001 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Sociologos Volume 2002 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Sociologos Volume 2003 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Sociologos Volume 2004 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Sociologos Volume 2005 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Sociologos Volume 2006 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Sociologos Volume 2007 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Sociologos Volume 2008 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Sociologos Volume 2009 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Sociologos Volume 2010 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Sociologos Volume 2011 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Sociologos Volume 2012 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Sociologos Volume 2013 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Sociologos Volume 2014 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Sociologos Volume 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Sociologos Volume 2016 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; 2017 ; Sociologos Volume 2017 ; > #No substance
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Sociologos Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Sociologos Volume 2019 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Sociologos Volume 2018 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Sociologos Volume 2019 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -1128,16 +1128,16 @@
       au < doesNotExist ; doesNotExist ; 2007 ; 2007 ; 2007 ; Sociologie Volume 2007 ; >
       au < doesNotExist ; doesNotExist ; 2008 ; 2008 ; 2008 ; Sociologie Volume 2008 ; >
       au < doesNotExist ; doesNotExist ; 2009 ; 2009 ; 2009 ; Sociologie Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Sociologie Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Sociologie Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Sociologie Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Sociologie Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Sociologie Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Sociologie Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Sociologie Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Sociologie Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Sociologie Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Sociologie Volume 2019 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Sociologie Volume 2010 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Sociologie Volume 2011 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Sociologie Volume 2012 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Sociologie Volume 2013 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Sociologie Volume 2014 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Sociologie Volume 2015 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Sociologie Volume 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Sociologie Volume 2017 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Sociologie Volume 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Sociologie Volume 2019 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1175,20 +1175,20 @@
       #published 2010-2024
       param[journal_id] = nise
 
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; NISE Essays Volume 2010 ; >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; NISE Essays Volume 2010 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; 2011 ; NISE Essays Volume 2011 ; > #No substance
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; 2012 ; NISE Essays Volume 2012 ; > #No substance
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; NISE Essays Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; NISE Essays Volume 2014 ; >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; NISE Essays Volume 2013 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; NISE Essays Volume 2014 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; 2015 ; NISE Essays Volume 2015 ; > #No substance
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; 2016 ; NISE Essays Volume 2016 ; > #No substance
       au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; 2017 ; NISE Essays Volume 2017 ; > #No substance
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; NISE Essays Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; NISE Essays Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; NISE Essays Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; NISE Essays Volume 2021 ; >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; NISE Essays Volume 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; NISE Essays Volume 2019 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; NISE Essays Volume 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; NISE Essays Volume 2021 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; 2022 ; NISE Essays Volume 2022 ; > #No content
-      au < frozen ; exists ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 ; >
+      au < finished ; manifest ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; NISE Essays Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; NISE Essays Volume 2025 ; >
 
@@ -1287,12 +1287,12 @@
       au < manifest ; exists ; 1994 ; 1994 ; 1994 ; Oostvlaamse Zanten Volume 1994 ; >
       au < manifest ; exists ; 1995 ; 1995 ; 1995 ; Oostvlaamse Zanten Volume 1995 ; >
       au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; 1996 ; Oostvlaamse Zanten Volume 1996 ; > #No content
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Oostvlaamse Zanten Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Oostvlaamse Zanten Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Oostvlaamse Zanten Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Oostvlaamse Zanten Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Oostvlaamse Zanten Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Oostvlaamse Zanten Volume 2002 ; >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Oostvlaamse Zanten Volume 1997 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Oostvlaamse Zanten Volume 1998 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Oostvlaamse Zanten Volume 1999 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Oostvlaamse Zanten Volume 2000 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Oostvlaamse Zanten Volume 2001 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Oostvlaamse Zanten Volume 2002 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1307,8 +1307,8 @@
       param[journal_id] = reng
 
       au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Relaties en Nieuwe Gezinnen Volume 2011 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Relaties en Nieuwe Gezinnen Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Relaties en Nieuwe Gezinnen Volume 2013 ; >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Relaties en Nieuwe Gezinnen Volume 2012 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Relaties en Nieuwe Gezinnen Volume 2013 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Relaties en Nieuwe Gezinnen Volume 2014 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Relaties en Nieuwe Gezinnen Volume 2015 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Relaties en Nieuwe Gezinnen Volume 2016 ; reingest1.clockss.org:8082 >
@@ -1365,37 +1365,37 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Res Publica Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Res Publica Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Res Publica Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Res Publica Volume 1990 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Res Publica Volume 1990 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 1991 ; 1991 ; 1991 ; Res Publica Volume 1991 ; >
       au < manifest ; exists ; 1992 ; 1992 ; 1992 ; Res Publica Volume 1992 ; >
       au < manifest ; exists ; 1993 ; 1993 ; 1993 ; Res Publica Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Res Publica Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Res Publica Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Res Publica Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Res Publica Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Res Publica Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Res Publica Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Res Publica Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Res Publica Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Res Publica Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Res Publica Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Res Publica Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Res Publica Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Res Publica Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Res Publica Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Res Publica Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Res Publica Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Res Publica Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Res Publica Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Res Publica Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Res Publica Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Res Publica Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Res Publica Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Res Publica Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Res Publica Volume 2017 ; >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Res Publica Volume 1994 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Res Publica Volume 1995 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Res Publica Volume 1996 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Res Publica Volume 1997 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Res Publica Volume 1998 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Res Publica Volume 1999 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Res Publica Volume 2000 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Res Publica Volume 2001 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Res Publica Volume 2002 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Res Publica Volume 2003 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Res Publica Volume 2004 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Res Publica Volume 2005 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Res Publica Volume 2006 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Res Publica Volume 2007 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Res Publica Volume 2008 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Res Publica Volume 2009 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Res Publica Volume 2010 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Res Publica Volume 2011 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Res Publica Volume 2012 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Res Publica Volume 2013 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Res Publica Volume 2014 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Res Publica Volume 2015 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Res Publica Volume 2016 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Res Publica Volume 2017 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Res Publica Volume 2018 ; reingest5.clockss.org:8082 >
 
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Res Publica Volume 2021 ; >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Res Publica Volume 2021 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1431,18 +1431,18 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Silva Gandavensis Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Silva Gandavensis Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Silva Gandavensis Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Silva Gandavensis Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Silva Gandavensis Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Silva Gandavensis Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Silva Gandavensis Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Silva Gandavensis Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Silva Gandavensis Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Silva Gandavensis Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Silva Gandavensis Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Silva Gandavensis Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Silva Gandavensis Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Silva Gandavensis Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Silva Gandavensis Volume 2001 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Silva Gandavensis Volume 1990 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Silva Gandavensis Volume 1991 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Silva Gandavensis Volume 1992 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Silva Gandavensis Volume 1993 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Silva Gandavensis Volume 1994 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Silva Gandavensis Volume 1995 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Silva Gandavensis Volume 1996 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Silva Gandavensis Volume 1997 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Silva Gandavensis Volume 1998 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Silva Gandavensis Volume 1999 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Silva Gandavensis Volume 2000 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Silva Gandavensis Volume 2001 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -1463,8 +1463,8 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1991 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1990 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1991 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -1478,28 +1478,28 @@
       #published 1992-2013
       param[journal_id] = tic
 
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Tijdschrift voor industriële cultuur Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Tijdschrift voor industriële cultuur Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Tijdschrift voor industriële cultuur Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Tijdschrift voor industriële cultuur Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Tijdschrift voor industriële cultuur Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Tijdschrift voor industriële cultuur Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Tijdschrift voor industriële cultuur Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Tijdschrift voor industriële cultuur Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Tijdschrift voor industriële cultuur Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Tijdschrift voor industriële cultuur Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Tijdschrift voor industriële cultuur Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Tijdschrift voor industriële cultuur Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Tijdschrift voor industriële cultuur Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Tijdschrift voor industriële cultuur Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Tijdschrift voor industriële cultuur Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Tijdschrift voor industriële cultuur Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Tijdschrift voor industriële cultuur Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Tijdschrift voor industriële cultuur Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Tijdschrift voor industriële cultuur Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Tijdschrift voor industriële cultuur Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Tijdschrift voor industriële cultuur Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Tijdschrift voor industriële cultuur Volume 2013 ; >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Tijdschrift voor industriële cultuur Volume 1992 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Tijdschrift voor industriële cultuur Volume 1993 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Tijdschrift voor industriële cultuur Volume 1994 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Tijdschrift voor industriële cultuur Volume 1995 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Tijdschrift voor industriële cultuur Volume 1996 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Tijdschrift voor industriële cultuur Volume 1997 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Tijdschrift voor industriële cultuur Volume 1998 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Tijdschrift voor industriële cultuur Volume 1999 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Tijdschrift voor industriële cultuur Volume 2000 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Tijdschrift voor industriële cultuur Volume 2001 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Tijdschrift voor industriële cultuur Volume 2002 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Tijdschrift voor industriële cultuur Volume 2003 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Tijdschrift voor industriële cultuur Volume 2004 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Tijdschrift voor industriële cultuur Volume 2005 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Tijdschrift voor industriële cultuur Volume 2006 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Tijdschrift voor industriële cultuur Volume 2007 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Tijdschrift voor industriële cultuur Volume 2008 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Tijdschrift voor industriële cultuur Volume 2009 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Tijdschrift voor industriële cultuur Volume 2010 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Tijdschrift voor industriële cultuur Volume 2011 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Tijdschrift voor industriële cultuur Volume 2012 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Tijdschrift voor industriële cultuur Volume 2013 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -1513,21 +1513,21 @@
       #published 2003-2018
       param[journal_id] = vmd
 
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2017 ; >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2003 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2004 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2005 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2006 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2007 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2008 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2009 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2010 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2011 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2012 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2013 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2014 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2016 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2017 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Van Mensen en Dingen: tijdschrift voor volkscultuur in Vlaanderen Volume 2018 ; reingest4.clockss.org:8082 >
 
   }
@@ -1542,7 +1542,7 @@
       #published 2016-2016
       param[journal_id] = ichmet
 
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Proceedings of the 18th International Conference on Heavy Metals in the Environment Volume 2016 ; >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Proceedings of the 18th International Conference on Heavy Metals in the Environment Volume 2016 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1555,7 +1555,7 @@
       #published 2019-2019
       param[journal_id] = autex
 
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Proceedings of the 19th World Textile Conference - Autex 2019 Volume 2019 ; >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Proceedings of the 19th World Textile Conference - Autex 2019 Volume 2019 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1569,13 +1569,13 @@
       #published 2013-present
       param[journal_id] = snm
 
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Studies on National Movements Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Studies on National Movements Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Studies on National Movements Volume 2015 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Studies on National Movements Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Studies on National Movements Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Studies on National Movements Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Studies on National Movements Volume 2022 ; >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Studies on National Movements Volume 2013 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Studies on National Movements Volume 2014 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Studies on National Movements Volume 2015 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Studies on National Movements Volume 2019 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Studies on National Movements Volume 2020 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Studies on National Movements Volume 2021 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Studies on National Movements Volume 2022 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Studies on National Movements Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Studies on National Movements Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Studies on National Movements Volume 2025 ; >
@@ -1593,7 +1593,7 @@
       param[journal_id] = radices
 
       au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; 2021 ; Radices Volume 2021 ; > #No substance
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Radices Volume 2022 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Radices Volume 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Radices Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Radices Volume 2024 ; >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Radices Volume 2025 ; >
@@ -1610,38 +1610,38 @@
       #published 1992-2025
       param[journal_id] = tetradio
 
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Tetradio Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Tetradio Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Tetradio Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Tetradio Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Tetradio Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Tetradio Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Tetradio Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Tetradio Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Tetradio Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Tetradio Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Tetradio Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Tetradio Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Tetradio Volume 2004 ; >
-      au < frozen ; exists ; 2005 ; 2005 ; 2005 ; Tetradio Volume 2005 ; >
-      au < frozen ; exists ; 2006 ; 2006 ; 2006 ; Tetradio Volume 2006 ; >
-      au < frozen ; exists ; 2007 ; 2007 ; 2007 ; Tetradio Volume 2007 ; >
-      au < frozen ; exists ; 2008 ; 2008 ; 2008 ; Tetradio Volume 2008 ; >
-      au < frozen ; exists ; 2009 ; 2009 ; 2009 ; Tetradio Volume 2009 ; >
-      au < frozen ; exists ; 2010 ; 2010 ; 2010 ; Tetradio Volume 2010 ; >
-      au < frozen ; exists ; 2011 ; 2011 ; 2011 ; Tetradio Volume 2011 ; >
-      au < frozen ; exists ; 2012 ; 2012 ; 2012 ; Tetradio Volume 2012 ; >
-      au < frozen ; exists ; 2013 ; 2013 ; 2013 ; Tetradio Volume 2013 ; >
-      au < frozen ; exists ; 2014 ; 2014 ; 2014 ; Tetradio Volume 2014 ; >
-      au < frozen ; exists ; 2015 ; 2015 ; 2015 ; Tetradio Volume 2015 ; >
-      au < frozen ; exists ; 2016 ; 2016 ; 2016 ; Tetradio Volume 2016 ; >
-      au < frozen ; exists ; 2017 ; 2017 ; 2017 ; Tetradio Volume 2017 ; >
-      au < frozen ; exists ; 2018 ; 2018 ; 2018 ; Tetradio Volume 2018 ; >
-      au < frozen ; exists ; 2019 ; 2019 ; 2019 ; Tetradio Volume 2019 ; >
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Tetradio Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Tetradio Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Tetradio Volume 2022 ; >
-      au < frozen ; exists ; 2023 ; 2023 ; 2023 ; Tetradio Volume 2023 ; >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Tetradio Volume 1992 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Tetradio Volume 1993 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Tetradio Volume 1994 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Tetradio Volume 1995 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Tetradio Volume 1996 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Tetradio Volume 1997 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Tetradio Volume 1998 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Tetradio Volume 1999 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Tetradio Volume 2000 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Tetradio Volume 2001 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Tetradio Volume 2002 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Tetradio Volume 2003 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Tetradio Volume 2004 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; 2005 ; 2005 ; Tetradio Volume 2005 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2006 ; 2006 ; 2006 ; Tetradio Volume 2006 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2007 ; 2007 ; 2007 ; Tetradio Volume 2007 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; 2008 ; 2008 ; Tetradio Volume 2008 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2009 ; 2009 ; 2009 ; Tetradio Volume 2009 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; 2010 ; 2010 ; Tetradio Volume 2010 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2011 ; 2011 ; 2011 ; Tetradio Volume 2011 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2012 ; 2012 ; 2012 ; Tetradio Volume 2012 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2013 ; 2013 ; 2013 ; Tetradio Volume 2013 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2014 ; 2014 ; 2014 ; Tetradio Volume 2014 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; 2015 ; 2015 ; Tetradio Volume 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; 2016 ; 2016 ; Tetradio Volume 2016 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; 2017 ; 2017 ; Tetradio Volume 2017 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; 2018 ; 2018 ; Tetradio Volume 2018 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; 2019 ; 2019 ; Tetradio Volume 2019 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Tetradio Volume 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Tetradio Volume 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Tetradio Volume 2022 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 2023 ; 2023 ; Tetradio Volume 2023 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; 2024 ; Tetradio Volume 2024 ; > #No content
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tetradio Volume 2025 ; >
 
@@ -1657,11 +1657,11 @@
       #published 2020-2025
       param[journal_id] = ts
 
-      au < frozen ; exists ; 2020 ; 2020 ; 2020 ; Tijdschrift Sociologie Volume 2020 ; >
-      au < frozen ; exists ; 2021 ; 2021 ; 2021 ; Tijdschrift Sociologie Volume 2021 ; >
-      au < frozen ; exists ; 2022 ; 2022 ; 2022 ; Tijdschrift Sociologie Volume 2022 ; >
-      au < frozen ; exists ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 ; >
-      au < frozen ; exists ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 ; >
+      au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Tijdschrift Sociologie Volume 2020 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Tijdschrift Sociologie Volume 2021 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Tijdschrift Sociologie Volume 2022 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 ; >
 
   }
@@ -1695,21 +1695,21 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Communicatiewetenschap Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Communicatiewetenschap Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Communicatiewetenschap Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Communicatiewetenschap Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Communicatiewetenschap Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Tijdschrift voor Communicatiewetenschap Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Tijdschrift voor Communicatiewetenschap Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Tijdschrift voor Communicatiewetenschap Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Tijdschrift voor Communicatiewetenschap Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Tijdschrift voor Communicatiewetenschap Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Tijdschrift voor Communicatiewetenschap Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Tijdschrift voor Communicatiewetenschap Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Tijdschrift voor Communicatiewetenschap Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Tijdschrift voor Communicatiewetenschap Volume 2000 ; >
-      au < frozen ; exists ; 2001 ; 2001 ; 2001 ; Tijdschrift voor Communicatiewetenschap Volume 2001 ; >
-      au < frozen ; exists ; 2002 ; 2002 ; 2002 ; Tijdschrift voor Communicatiewetenschap Volume 2002 ; >
-      au < frozen ; exists ; 2003 ; 2003 ; 2003 ; Tijdschrift voor Communicatiewetenschap Volume 2003 ; >
-      au < frozen ; exists ; 2004 ; 2004 ; 2004 ; Tijdschrift voor Communicatiewetenschap Volume 2004 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Communicatiewetenschap Volume 1990 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Communicatiewetenschap Volume 1991 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Tijdschrift voor Communicatiewetenschap Volume 1992 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Tijdschrift voor Communicatiewetenschap Volume 1993 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Tijdschrift voor Communicatiewetenschap Volume 1994 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Tijdschrift voor Communicatiewetenschap Volume 1995 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Tijdschrift voor Communicatiewetenschap Volume 1996 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Tijdschrift voor Communicatiewetenschap Volume 1997 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Tijdschrift voor Communicatiewetenschap Volume 1998 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Tijdschrift voor Communicatiewetenschap Volume 1999 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Tijdschrift voor Communicatiewetenschap Volume 2000 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; 2001 ; 2001 ; Tijdschrift voor Communicatiewetenschap Volume 2001 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; 2002 ; 2002 ; Tijdschrift voor Communicatiewetenschap Volume 2002 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2003 ; 2003 ; 2003 ; Tijdschrift voor Communicatiewetenschap Volume 2003 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2004 ; 2004 ; 2004 ; Tijdschrift voor Communicatiewetenschap Volume 2004 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -1745,17 +1745,17 @@
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1987 ; >
       au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1988 ; >
       au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1989 ; >
-      au < frozen ; exists ; 1990 ; 1990 ; 1990 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1990 ; >
-      au < frozen ; exists ; 1991 ; 1991 ; 1991 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1991 ; >
-      au < frozen ; exists ; 1992 ; 1992 ; 1992 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1992 ; >
-      au < frozen ; exists ; 1993 ; 1993 ; 1993 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1993 ; >
-      au < frozen ; exists ; 1994 ; 1994 ; 1994 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1994 ; >
-      au < frozen ; exists ; 1995 ; 1995 ; 1995 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1995 ; >
-      au < frozen ; exists ; 1996 ; 1996 ; 1996 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1996 ; >
-      au < frozen ; exists ; 1997 ; 1997 ; 1997 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1997 ; >
-      au < frozen ; exists ; 1998 ; 1998 ; 1998 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1998 ; >
-      au < frozen ; exists ; 1999 ; 1999 ; 1999 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1999 ; >
-      au < frozen ; exists ; 2000 ; 2000 ; 2000 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2000 ; >
+      au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1990 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1991 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1992 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1993 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1994 ; 1994 ; 1994 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1994 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; 1995 ; 1995 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1995 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; 1996 ; 1996 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1996 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1997 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1998 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1999 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; 2000 ; 2000 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 2000 ; reingest5.clockss.org:8082 >
 
   }
 
