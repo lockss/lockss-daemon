@@ -34,7 +34,8 @@
       plugin = edu.nyu.plugin.ejcjs.EJCJS2022Plugin
       param[base_url] = http://www.japanesestudies.org.uk/
       implicit < status ; year ; volume ; name ; param[volume] >
-    
+      #0 metadata, Crawl completed with no substance, LXQUEUE-2040
+
       au < released ; 2001 ; 1 ; Electronic Journal of Contemporary Japanese Studies Volume 1 ; 1 >
       au < released ; 2002 ; 2 ; Electronic Journal of Contemporary Japanese Studies Volume 2 ; 2 >
       au < released ; 2003 ; 3 ; Electronic Journal of Contemporary Japanese Studies Volume 3 ; 3 >
@@ -56,9 +57,9 @@
       au < released ; 2019 ; 19 ; Electronic Journal of Contemporary Japanese Studies Volume 19 ; 19 >
       au < released ; 2020 ; 20 ; Electronic Journal of Contemporary Japanese Studies Volume 20 ; 20 >
       au < released ; 2021 ; 21 ; Electronic Journal of Contemporary Japanese Studies Volume 21 ; 21 >
-      au < notReady ; 2022 ; 22 ; Electronic Journal of Contemporary Japanese Studies Volume 22 ; 22 > #LXQUEUE-2040, 500 error
-      au < notReady ; 2023 ; 23 ; Electronic Journal of Contemporary Japanese Studies Volume 23 ; 23 > #LXQUEUE-2040, 500 error
-      au < notReady ; 2024 ; 24 ; Electronic Journal of Contemporary Japanese Studies Volume 24 ; 24 > #LXQUEUE-2040, 500 error
+      au < ready ; 2022 ; 22 ; Electronic Journal of Contemporary Japanese Studies Volume 22 ; 22 >
+      au < ready ; 2023 ; 23 ; Electronic Journal of Contemporary Japanese Studies Volume 23 ; 23 >
+      au < ready ; 2024 ; 24 ; Electronic Journal of Contemporary Japanese Studies Volume 24 ; 24 >
       au < manifest ; 2025 ; 25 ; Electronic Journal of Contemporary Japanese Studies Volume 25 ; 25 >
     }
   

@@ -36,6 +36,7 @@
       plugin = edu.harvard.plugin.jrs.JRS2022Plugin
       param[base_url] = http://moses.creighton.edu/JRS/
       implicit < status ; year ; volume ; name ; param[volume_name] >
+      #0 metadata, Crawl completed with no substance, LXQUEUE-2040
     
       au < released ; 1999 ; 1 ; Journal of Religion & Society Volume 1 ; 1999 >
       au < released ; 2000 ; 2 ; Journal of Religion & Society Volume 2 ; 2000 >
@@ -60,9 +61,9 @@
       au < released ; 2019 ; 21 ; Journal of Religion & Society Volume 21 ; 2019 >
       au < released ; 2020 ; 22 ; Journal of Religion & Society Volume 22 ; 2020 >
       au < released ; 2021 ; 23 ; Journal of Religion & Society Volume 23 ; 2021 >
-      au < notReady ; 2022 ; 24 ; Journal of Religion & Society Volume 24 ; 2022 >#LXQUEUE-2040, 500 error
-      au < notReady ; 2023 ; 25 ; Journal of Religion & Society Volume 25 ; 2023 >#LXQUEUE-2040, 500 error
-      au < notReady ; 2024 ; 26 ; Journal of Religion & Society Volume 26 ; 2024 >#LXQUEUE-2040, 500 error
+      au < ready ; 2022 ; 24 ; Journal of Religion & Society Volume 24 ; 2022 >
+      au < ready ; 2023 ; 25 ; Journal of Religion & Society Volume 25 ; 2023 >
+      au < ready ; 2024 ; 26 ; Journal of Religion & Society Volume 26 ; 2024 >
       au < manifest ; 2025 ; 27 ; Journal of Religion & Society Volume 27 ; 2025 >
     }
 
