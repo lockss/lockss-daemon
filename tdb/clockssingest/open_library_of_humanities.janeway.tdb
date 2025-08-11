@@ -611,13 +611,14 @@
 
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.genealogy-critique.net/
+      #volume 15-20 processed as Ubiquity platform
 
-      au < manifest ; exists ; 2015 ; 1 ; Genealogy+Critique Volume 1 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; 2 ; Genealogy+Critique Volume 2 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; 3 ; Genealogy+Critique Volume 3 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; 4 ; Genealogy+Critique Volume 4 ; 2018 ; >
-      au < manifest ; exists ; 2019 ; 5 ; Genealogy+Critique Volume 5 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; 6 ; Genealogy+Critique Volume 6 ; 2020 ; >
+      au < doNotProcess ; exists ; 2015 ; 1 ; Genealogy+Critique Volume 1 ; 2015 ; >
+      au < doNotProcess ; exists ; 2016 ; 2 ; Genealogy+Critique Volume 2 ; 2016 ; >
+      au < doNotProcess ; exists ; 2017 ; 3 ; Genealogy+Critique Volume 3 ; 2017 ; >
+      au < doNotProcess ; exists ; 2018 ; 4 ; Genealogy+Critique Volume 4 ; 2018 ; >
+      au < doNotProcess ; exists ; 2019 ; 5 ; Genealogy+Critique Volume 5 ; 2019 ; >
+      au < doNotProcess ; exists ; 2020 ; 6 ; Genealogy+Critique Volume 6 ; 2020 ; >
       au < doNotProcess ; exists ; 2021 ; 7 ; Genealogy+Critique Volume 7 ; 2021 ; >
       au < deepCrawl ; exists ; 2022 ; 8 ; Genealogy+Critique Volume 8 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 9 ; Genealogy+Critique Volume 9 ; 2023 ; >
