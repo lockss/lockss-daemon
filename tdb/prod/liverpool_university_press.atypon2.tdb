@@ -413,6 +413,22 @@
   {
 
     title <
+      name = Continuity and Change ;
+      issn = 0268-4160 ;
+      eissn = 1469-218X ;
+      issnl = 0268-4160
+    >
+
+    param[journal_id] = cont
+    #Move from Cambridge University Press (2026)
+
+   au < expected ; 2026 ; Continuity and Change Volume 41 ; 41 >
+
+  }
+
+  {
+
+    title <
       name = Developing Academic Practice ;
       eissn = 2732-5725 ;
       issnl = 2732-5725
