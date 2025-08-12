@@ -656,18 +656,18 @@
       nondefparam[base_url2] = https://account.annalsofglobalhealth.org/
       nondefparam[journal_id] = up-j-agh
 
-      au < finished ; finished ; 2014 ; 1 ; Annals of Global Health Volume 2014 ; 2014 ; 1 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2015 ; 2 ; Annals of Global Health Volume 2015 ; 2015 ; 2 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2016 ; 3 ; Annals of Global Health Volume 2016 ; 2016 ; 3 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; 4 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; 5 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 6 ; Annals of Global Health Volume 2019 ; 2019 ; 6 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; 7 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 8 ; Annals of Global Health Volume 2021 ; 2021 ; 8 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 9 ; Annals of Global Health Volume 2022 [superseded] ; 2022 ; 9 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Annals of Global Health Volume 2023 ; 2023 ; 10 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
-      au < notReady ; exists ; 2024 ; 11 ; Annals of Global Health Volume 2024 ; 2024 ; 11 ; Ubiquity Press ; No substance ; https://annalsofglobalhealth.org/ ; >
-      au < manifest ; exists ; 2025 ; 12 ; Annals of Global Health Volume 2025 ; 2025 ; 12 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
+      au < finished ; finished ; 2014 ; 80 ; Annals of Global Health Volume 2014 ; 2014 ; 80 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2015 ; 81 ; Annals of Global Health Volume 2015 ; 2015 ; 81 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2016 ; 82 ; Annals of Global Health Volume 2016 ; 2016 ; 82 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 83 ; Annals of Global Health Volume 2017 ; 2017 ; 83 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2018 ; 84 ; Annals of Global Health Volume 2018 ; 2018 ; 84 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 85 ; Annals of Global Health Volume 2019 ; 2019 ; 85 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2020 ; 86 ; Annals of Global Health Volume 2020 ; 2020 ; 86 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 87 ; Annals of Global Health Volume 2021 ; 2021 ; 87 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 88 ; Annals of Global Health Volume 2022 [superseded] ; 2022 ; 88 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 89 ; Annals of Global Health Volume 2023 ; 2023 ; 89 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
+      au < manifest ; exists ; 2024 ; 90 ; Annals of Global Health Volume 2024 ; 2024 ; 90 ; Ubiquity Press ; No substance ; https://annalsofglobalhealth.org/ ; >
+      au < manifest ; exists ; 2025 ; 91 ; Annals of Global Health Volume 2025 ; 2025 ; 91 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
 
   }
 
