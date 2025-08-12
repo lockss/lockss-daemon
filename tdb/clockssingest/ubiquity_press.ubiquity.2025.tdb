@@ -306,9 +306,8 @@
       au < finished ; finished ; 2020 ; 12 ; Designs for Learning Volume 2020 ; 2020 ; 12 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; 13 ; Designs for Learning Volume 2021 ; 2021 ; 13 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 14 ; Designs for Learning Volume 2022 [superseded] ; 2022 ; 14 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 15 ; Designs for Learning Volume 2023 ; 2023 ; 15 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
-      au < expected ; exists ; 2024 ; 16 ; Designs for Learning Volume 2024 ; 2024 ; 16 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
-      au < manifest ; exists ; 2025 ; 17 ; Designs for Learning Volume 2025 ; 2025 ; 17 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
+      au < expected ; exists ; 2024 ; 15 ; Designs for Learning Volume 2024 ; 2024 ; 15 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
+      au < manifest ; exists ; 2025 ; 16 ; Designs for Learning Volume 2025 ; 2025 ; 16 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
 
   }
 
@@ -714,19 +713,19 @@
       au < doNotProcess ; doNotProcess ; 2010 ; 26 ; Current: Journal of Marine Education Volume 2010 ; 2010 ; 26 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; 27 ; Current: Journal of Marine Education Volume 2011 ; 2011 ; 27 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 28 ; Current: Journal of Marine Education Volume 2012 ; 2012 ; 28 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
-      au < doesNotExist ; doesNotExist ; 2013 ; 29 ; Current: Journal of Marine Education Volume 2013 ; 2013 ; 29 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 30 ; Current: Journal of Marine Education Volume 2014 ; 2014 ; 30 ; Ubiquity Press ;  ; https://current-journal.com/ ; > 
-      au < doNotProcess ; doNotProcess ; 2015 ; 31 ; Current: Journal of Marine Education Volume 2015 ; 2015 ; 31 ; Ubiquity Press ;  ; https://current-journal.com/ ; > 
-      au < doNotProcess ; doNotProcess ; 2016 ; 32 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; 32 ; Ubiquity Press ;  ; https://current-journal.com/ ; > 
-      au < doNotProcess ; doNotProcess ; 2017 ; 33 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; 33 ; Ubiquity Press ;  ; https://current-journal.com/ ; > 
-      au < finished ; finished ; 2018 ; 34 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; 34 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2019 ; 35 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; 35 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2020 ; 36 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; 36 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2021 ; 37 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; 37 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
-      au < superseded ; exists ; 2022 ; 38 ; Current: Journal of Marine Education Volume 2022 [superseded] ; 2022 ; 38 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 39 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; 39 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
-      au < manifest ; exists ; 2024 ; 40 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 40 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
-      au < manifest ; exists ; 2025 ; 41 ; Current: Journal of Marine Education Volume 2025 ; 2025 ; 41 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
+      au < doesNotExist ; doesNotExist ; 2013 ; 28 ; Current: Journal of Marine Education Volume 2013 ; 2013 ; 28 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 29 ; Current: Journal of Marine Education Volume 2014 ; 2014 ; 29 ; Ubiquity Press ;  ; https://current-journal.com/ ; > 
+      au < doNotProcess ; doNotProcess ; 2015 ; 29 ; Current: Journal of Marine Education Volume 2015 ; 2015 ; 29 ; Ubiquity Press ;  ; https://current-journal.com/ ; > 
+      au < doNotProcess ; doNotProcess ; 2016 ; 30 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; 30 ; Ubiquity Press ;  ; https://current-journal.com/ ; > 
+      au < doNotProcess ; doNotProcess ; 2017 ; 31 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; 31 ; Ubiquity Press ;  ; https://current-journal.com/ ; > 
+      au < finished ; finished ; 2018 ; 31,32 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; 31,32 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2019 ; 33 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; 33 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2020 ; 34 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; 34 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2021 ; 35 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; 35 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2022 ; 36 ; Current: Journal of Marine Education Volume 2022 [superseded] ; 2022 ; 36 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 37,38 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; 37,38 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
+      au < manifest ; exists ; 2024 ; 39 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
+      au < manifest ; exists ; 2025 ; 40 ; Current: Journal of Marine Education Volume 2025 ; 2025 ; 40 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
 
   }
 
@@ -931,14 +930,14 @@
 
       au < finished ; finished ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; 1 ; Ubiquity Press ;  ; http://www.glocality.eu/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; 2 ; Ubiquity Press ;  ; http://www.glocality.eu/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2017 ; 2017 ; 3 ; Ubiquity Press ;  ; http://www.glocality.eu/ ; reingest3.clockss.org:8083 >
-      au < doesNotExist ; doesNotExist ; 2019 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2019 ; 2019 ; 4 ; Ubiquity Press ;  ; https://glocality.eu/ ; >
-      au < finished ; finished ; 2020 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2020 ; 2020 ; 5 ; Ubiquity Press ;  ; https://www.glocality.eu/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 6 ; Glocality: Undergraduate Academic Journal Volume 2021 ; 2021 ; 6 ; Ubiquity Press ;  ; https://www.glocality.eu/ ; reingest2.clockss.org:8085 >
-      au < superseded ; exists ; 2022 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2022 [superseded] ; 2022 ; 7 ; Ubiquity Press ;  ; https://www.glocality.eu/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 ; 8 ; Ubiquity Press ;  ; https://glocality.eu/ ; >
-      au < notReady ; exists ; 2024 ; 9 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 9 ; Ubiquity Press ; No substance ; http://glocality.eu/ ; >
-      au < manifest ; exists ; 2025 ; 10 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 10 ; Ubiquity Press ;  ; http://glocality.eu/ ; >
+      au < finished ; superseded ; 2017 ; 0 ; Glocality: Undergraduate Academic Journal Volume 2017 [superseded] ; 2017 ; 0 ; Ubiquity Press ;  ; http://www.glocality.eu/ ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; doNotProcess ; 2019 ; 0 ; Glocality: Undergraduate Academic Journal Volume 2019 ; 2019 ; 0 ; Ubiquity Press ;  ; https://glocality.eu/ ; >
+      au < finished ; finished ; 2020 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2020 ; 2020 ; 3 ; Ubiquity Press ;  ; https://www.glocality.eu/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://www.glocality.eu/ ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2022 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ;  ; https://www.glocality.eu/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://glocality.eu/ ; >
+      au < manifest ; exists ; 2024 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 7 ; Ubiquity Press ; No substance ; http://glocality.eu/ ; >
+      au < manifest ; exists ; 2025 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; http://glocality.eu/ ; >
 
   }
 
@@ -995,16 +994,16 @@
       nondefparam[base_url2] = https://account.rips-irsp.com/
       nondefparam[journal_id] = up-j-irsp
 
-      au < finished ; finished ; 2016 ; 1 ; International Review of Social Psychology Volume 2016 ; 2016 ; 1 ; Ubiquity Press ;  ; http://www.rips-irsp.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2017 ; 2 ; International Review of Social Psychology Volume 2017 ; 2017 ; 2 ; Ubiquity Press ;  ; http://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 3 ; International Review of Social Psychology Volume 2018 ; 2018 ; 3 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 4 ; International Review of Social Psychology Volume 2019 ; 2019 ; 4 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 5 ; International Review of Social Psychology Volume 2020 ; 2020 ; 5 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 6 ; International Review of Social Psychology Volume 2021 ; 2021 ; 6 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; reingest2.clockss.org:8085 >
-      au < superseded ; exists ; 2022 ; 7 ; International Review of Social Psychology Volume 2022 [superseded] ; 2022 ; 7 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 8 ; International Review of Social Psychology Volume 2023 ; 2023 ; 8 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
-      au < manifest ; exists ; 2024 ; 9 ; International Review of Social Psychology Volume 2024 ; 2024 ; 9 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
-      au < manifest ; exists ; 2025 ; 10 ; International Review of Social Psychology Volume 2025 ; 2025 ; 10 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
+      au < finished ; finished ; 2016 ; 29 ; International Review of Social Psychology Volume 2016 ; 2016 ; 29 ; Ubiquity Press ;  ; http://www.rips-irsp.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2017 ; 30 ; International Review of Social Psychology Volume 2017 ; 2017 ; 30 ; Ubiquity Press ;  ; http://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 31 ; International Review of Social Psychology Volume 2018 ; 2018 ; 31 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 32 ; International Review of Social Psychology Volume 2019 ; 2019 ; 32 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 33 ; International Review of Social Psychology Volume 2020 ; 2020 ; 33 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 34 ; International Review of Social Psychology Volume 2021 ; 2021 ; 34 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; reingest2.clockss.org:8085 >
+      au < superseded ; exists ; 2022 ; 35 ; International Review of Social Psychology Volume 2022 [superseded] ; 2022 ; 35 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 36 ; International Review of Social Psychology Volume 2023 ; 2023 ; 36 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
+      au < manifest ; exists ; 2024 ; 37 ; International Review of Social Psychology Volume 2024 ; 2024 ; 37 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
+      au < manifest ; exists ; 2025 ; 38 ; International Review of Social Psychology Volume 2025 ; 2025 ; 38 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
 
   }
 
@@ -1237,8 +1236,7 @@
       nondefparam[journal_id] = up-j-srah
 
       au < crawling ; exists ; 2023 ; 1 ; Silk Roads Archaeology and Heritage Volume 2023 ; 2023 ; 1 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
-      au < expected ; exists ; 2024 ; 2 ; Silk Roads Archaeology and Heritage Volume 2024 ; 2024 ; 2 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
-      au < manifest ; exists ; 2025 ; 3 ; Silk Roads Archaeology and Heritage Volume 2025 ; 2025 ; 3 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
+      au < manifest ; exists ; 2025 ; 2 ; Silk Roads Archaeology and Heritage Volume 2025 ; 2025 ; 2 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
 
   }
 
@@ -1563,28 +1561,32 @@
       nondefparam[base_url2] = https://account.psychologicabelgica.com/
       nondefparam[journal_id] = up-j-pb
 
-      au < finished ; finished ; 2005 ; 1 ; Psychologica Belgica Volume 2005 ; 2005 ; 1 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2006 ; 2 ; Psychologica Belgica Volume 2006 ; 2006 ; 2 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2007 ; 3 ; Psychologica Belgica Volume 2007 ; 2007 ; 3 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2008 ; 4 ; Psychologica Belgica Volume 2008 ; 2008 ; 4 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2009 ; 5 ; Psychologica Belgica Volume 2009 ; 2009 ; 5 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2010 ; 6 ; Psychologica Belgica Volume 2010 ; 2010 ; 6 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2011 ; 7 ; Psychologica Belgica Volume 2011 ; 2011 ; 7 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
-      au < manifest ; exists ; 2012 ; 8 ; Psychologica Belgica Volume 2012 ; 2012 ; 8 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
-      au < manifest ; exists ; 2013 ; 9 ; Psychologica Belgica Volume 2013 ; 2013 ; 9 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
-      au < manifest ; exists ; 2014 ; 10 ; Psychologica Belgica Volume 2014 ; 2014 ; 10 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
-      au < finished ; finished ; 2015 ; 11 ; Psychologica Belgica Volume 2015 ; 2015 ; 11 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2016 ; 12 ; Psychologica Belgica Volume 2016 [superseded] ; 2016 ; 12 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ ; >
-      au < finished ; finished ; 2016 ; 12 ; Psychologica Belgica Volume 2016 ; 2016 ; 12 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 13 ; Psychologica Belgica Volume 2017 ; 2017 ; 13 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 14 ; Psychologica Belgica Volume 2018 ; 2018 ; 14 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 15 ; Psychologica Belgica Volume 2019 ; 2019 ; 15 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 16 ; Psychologica Belgica Volume 2020 ; 2020 ; 16 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 17 ; Psychologica Belgica Volume 2021 ; 2021 ; 17 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 18 ; Psychologica Belgica Volume 2022 [superseded] ; 2022 ; 18 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 19 ; Psychologica Belgica Volume 2023 ; 2023 ; 19 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
-      au < manifest ; exists ; 2024 ; 20 ; Psychologica Belgica Volume 2024 ; 2024 ; 20 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
-      au < manifest ; exists ; 2025 ; 21 ; Psychologica Belgica Volume 2025 ; 2025 ; 21 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
+      au < exists ; exists ; 2001 ; 41 ; Psychologica Belgica Volume 2001 ; 2001 ; 41 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < exists ; exists ; 2002 ; 42 ; Psychologica Belgica Volume 2002 ; 2002 ; 42 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < exists ; exists ; 2003 ; 43 ; Psychologica Belgica Volume 2003 ; 2003 ; 43 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < exists ; exists ; 2004 ; 44 ; Psychologica Belgica Volume 2004 ; 2004 ; 44 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2005 ; 45 ; Psychologica Belgica Volume 2005 ; 2005 ; 45 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2006 ; 46 ; Psychologica Belgica Volume 2006 ; 2006 ; 46 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; finished ; 2007 ; 47 ; Psychologica Belgica Volume 2007 ; 2007 ; 47 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; finished ; 2008 ; 48 ; Psychologica Belgica Volume 2008 ; 2008 ; 48 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2009 ; 48,49 ; Psychologica Belgica Volume 2009 ; 2009 ; 48,49 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2010 ; 49,50 ; Psychologica Belgica Volume 2010 ; 2010 ; 49,50 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ ; reingest2.clockss.org:8085 >
+      au < manifest ; exists ; 2011 ; 51 ; Psychologica Belgica Volume 2011 ; 2011 ; 51 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
+      au < manifest ; exists ; 2012 ; 52 ; Psychologica Belgica Volume 2012 ; 2012 ; 52 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
+      au < manifest ; exists ; 2013 ; 53 ; Psychologica Belgica Volume 2013 ; 2013 ; 53 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
+      au < manifest ; exists ; 2014 ; 54 ; Psychologica Belgica Volume 2014 ; 2014 ; 54 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
+      au < finished ; finished ; 2015 ; 55 ; Psychologica Belgica Volume 2015 ; 2015 ; 55 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
+      au < superseded ; exists ; 2016 ; 56 ; Psychologica Belgica Volume 2016 [superseded] ; 2016 ; 56 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ ; >
+      au < finished ; finished ; 2016 ; 56 ; Psychologica Belgica Volume 2016 ; 2016 ; 56 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 57 ; Psychologica Belgica Volume 2017 ; 2017 ; 57 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 57,58 ; Psychologica Belgica Volume 2018 ; 2018 ; 57,58 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 59 ; Psychologica Belgica Volume 2019 ; 2019 ; 59 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 60 ; Psychologica Belgica Volume 2020 ; 2020 ; 60 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 61 ; Psychologica Belgica Volume 2021 ; 2021 ; 61 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < superseded ; exists ; 2022 ; 62 ; Psychologica Belgica Volume 2022 [superseded] ; 2022 ; 62 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 63 ; Psychologica Belgica Volume 2023 ; 2023 ; 63 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
+      au < manifest ; exists ; 2024 ; 64 ; Psychologica Belgica Volume 2024 ; 2024 ; 64 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
+      au < manifest ; exists ; 2025 ; 65 ; Psychologica Belgica Volume 2025 ; 2025 ; 65 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; >
 
   }
 
@@ -1936,11 +1938,11 @@
       nondefparam[base_url2] = https://account.ubiquityproceedings.com/
       nondefparam[journal_id] = up-j-up
 
-      au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Ubiquity Proceedings Volume 2018 ; 2018 ; 2018 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Ubiquity Proceedings Volume 2022 ; 2022 ; 2022 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Ubiquity Proceedings Volume 2023 ; 2023 ; 2023 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
-      au < manifest ; exists ; 2024 ; 2024 ; Ubiquity Proceedings Volume 2024 ; 2024 ; 2024 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
-      au < expected ; exists ; 2025 ; 2025 ; Ubiquity Proceedings Volume 2025 ; 2025 ; 2025 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 1 ; Ubiquity Proceedings Volume 2018 ; 2018 ; 1 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 2 ; Ubiquity Proceedings Volume 2022 ; 2022 ; 2 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 3 ; Ubiquity Proceedings Volume 2023 ; 2023 ; 3 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
+      au < manifest ; exists ; 2024 ; 4,5 ; Ubiquity Proceedings Volume 2024 ; 2024 ; 4,5 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
+      au < expected ; exists ; 2025 ; 5 ; Ubiquity Proceedings Volume 2025 ; 2025 ; 5 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
 
   }
 
@@ -2389,7 +2391,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 33,34 ; Journal of Technology Education Volume 2022 ; 2022 ; 33,34 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 34,35 ; Journal of Technology Education Volume 2023 ; 2023 ; 34,35 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < manifest ; exists ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < manifest ; exists ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 37,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < manifest ; exists ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
 
   }
 
@@ -2515,27 +2517,27 @@
       nondefparam[journal_id] = up-j-mdbcj
 
       au < doNotProcess ; doNotProcess ; 2004 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2004 ; 2004 ; 1 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2005 ; 2 ; Methodist DeBakey Cardiovascular Journal Volume 2005 ; 2005 ; 2 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2006 ; 2006 ; 3 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 4 ; Methodist DeBakey Cardiovascular Journal Volume 2007 ; 2007 ; 4 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 5 ; Methodist DeBakey Cardiovascular Journal Volume 2008 ; 2008 ; 5 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 6 ; Methodist DeBakey Cardiovascular Journal Volume 2009 ; 2009 ; 6 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 7 ; Methodist DeBakey Cardiovascular Journal Volume 2010 ; 2010 ; 7 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 8 ; Methodist DeBakey Cardiovascular Journal Volume 2011 ; 2011 ; 8 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2012 ; 9 ; Methodist DeBakey Cardiovascular Journal Volume 2012 ; 2012 ; 9 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 10 ; Methodist DeBakey Cardiovascular Journal Volume 2013 ; 2013 ; 10 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 11 ; Methodist DeBakey Cardiovascular Journal Volume 2014 ; 2014 ; 11 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 12 ; Methodist DeBakey Cardiovascular Journal Volume 2015 ; 2015 ; 12 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2016 ; 13 ; Methodist DeBakey Cardiovascular Journal Volume 2016 ; 2016 ; 13 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 14 ; Methodist DeBakey Cardiovascular Journal Volume 2017 ; 2017 ; 14 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 15 ; Methodist DeBakey Cardiovascular Journal Volume 2018 ; 2018 ; 15 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 16 ; Methodist DeBakey Cardiovascular Journal Volume 2019 ; 2019 ; 16 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 17 ; Methodist DeBakey Cardiovascular Journal Volume 2020 ; 2020 ; 17 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 18 ; Methodist DeBakey Cardiovascular Journal Volume 2021 ; 2021 ; 18 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 ; 19 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2023 ; 2023 ; 20 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < manifest ; exists ; 2024 ; 21 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 21 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < manifest ; exists ; 2025 ; 22 ; Methodist DeBakey Cardiovascular Journal Volume 2025 ; 2025 ; 22 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2005 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2005 ; 2005 ; 1 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2006 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2006 ; 2006 ; 2 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2007 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2007 ; 2007 ; 3 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2008 ; 4 ; Methodist DeBakey Cardiovascular Journal Volume 2008 ; 2008 ; 4 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2009 ; 5 ; Methodist DeBakey Cardiovascular Journal Volume 2009 ; 2009 ; 5 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2010 ; 6 ; Methodist DeBakey Cardiovascular Journal Volume 2010 ; 2010 ; 6 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2011 ; 7 ; Methodist DeBakey Cardiovascular Journal Volume 2011 ; 2011 ; 7 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2012 ; 8 ; Methodist DeBakey Cardiovascular Journal Volume 2012 ; 2012 ; 8 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2013 ; 9 ; Methodist DeBakey Cardiovascular Journal Volume 2013 ; 2013 ; 9 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2014 ; 10 ; Methodist DeBakey Cardiovascular Journal Volume 2014 ; 2014 ; 10 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2015 ; 11 ; Methodist DeBakey Cardiovascular Journal Volume 2015 ; 2015 ; 11 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2016 ; 12 ; Methodist DeBakey Cardiovascular Journal Volume 2016 ; 2016 ; 12 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 13 ; Methodist DeBakey Cardiovascular Journal Volume 2017 ; 2017 ; 13 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2018 ; 14 ; Methodist DeBakey Cardiovascular Journal Volume 2018 ; 2018 ; 14 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2019 ; 15 ; Methodist DeBakey Cardiovascular Journal Volume 2019 ; 2019 ; 15 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; 16 ; Methodist DeBakey Cardiovascular Journal Volume 2020 ; 2020 ; 16 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 17 ; Methodist DeBakey Cardiovascular Journal Volume 2021 ; 2021 ; 17 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 18 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 ; 18 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2023 ; 2023 ; 19 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < manifest ; exists ; 2024 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 20 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < manifest ; exists ; 2025 ; 21 ; Methodist DeBakey Cardiovascular Journal Volume 2025 ; 2025 ; 21 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
 
   }
 
