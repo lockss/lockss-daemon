@@ -911,9 +911,9 @@
       au < finished ; crawling ; 2021 ; 4 ; Future Cities and Environment Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://futurecitiesandenvironment.com/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 5 ; Future Cities and Environment Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ;  ; https://futurecitiesandenvironment.com/ ; >
       au < doNotProcess ; exists ; 2023 ; 6 ; Future Cities and Environment Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://futurecitiesandenvironment.com/ ; >
-      au < manifest ; exists ; 2024 ; 7 ; Future Cities and Environment Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://futurecitiesandenvironment.com/ ; >
-      au < expected ; exists ; 2025 ; 8 ; Future Cities and Environment Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://futurecitiesandenvironment.com/ ; >
-
+      au < doNotProcess ; exists ; 2024 ; 7 ; Future Cities and Environment Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://futurecitiesandenvironment.com/ ; >
+      au < doNotProcess ; exists ; 2025 ; 8 ; Future Cities and Environment Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://futurecitiesandenvironment.com/ ; >
+      #Moved to Scopus
   }
 
   {
@@ -2480,10 +2480,10 @@
       nondefparam[journal_id] = dmu-j-gpajepr
 
       au < doNotProcess ; doNotProcess ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 ; 12 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 ; 13 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; 14 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
-      au < manifest ; exists ; 2024 ; 15 ; Gateway Papers Volume 2024 ; 2024 ; 15 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 2 ; Gateway Papers Volume 2021 ; 2021 ; 2 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; 3 ; Gateway Papers Volume 2022 ; 2022 ; 3 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Gateway Papers Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
+      au < manifest ; exists ; 2024 ; 5 ; Gateway Papers Volume 2024 ; 2024 ; 5 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
       #Title changed to Studies in Empowering Education (2977-4748) 2025 and forward
   }
 
@@ -2500,7 +2500,7 @@
       nondefparam[journal_id] = dmu-j-gpajepr
       #Previously Gateway Papers (2044-852X) 2010 to 2024
 
-      au < manifest ; exists ; 2025 ; 16 ; Studies in Empowering Education Volume 2025 ; 2025 ; 16 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
+      au < manifest ; exists ; 2025 ; 6 ; Studies in Empowering Education Volume 2025 ; 2025 ; 6 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
 
   }
 
