@@ -227,8 +227,6 @@
       au < finished ; manifest ; 2019 ; Lifespans and Styles Volume 2019 ; 5 ; 2019 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2020 ; Lifespans and Styles Volume 2020 ; 6 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; Lifespans and Styles Volume 2021 ; 7 ; 2021 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2024 ; Lifespans and Styles Volume 2024 ; 8 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Lifespans and Styles Volume 2025 ; 9 ; 2025 ; >
 
   }
 
@@ -246,8 +244,6 @@
       au < finished ; manifest ; 2021 ; MUSIC.OLOGY.ECA Volume 2021 ; 2 ; 2021 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; MUSIC.OLOGY.ECA Volume 2022 ; 3 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; MUSIC.OLOGY.ECA Volume 2023 ; 4 ; 2023 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2024 ; MUSIC.OLOGY.ECA Volume 2024 ; 5 ; 2024 ; >
-      au < expected ; exists ; 2025 ; MUSIC.OLOGY.ECA Volume 2025 ; 6 ; 2025 ; >
 
   }
 
@@ -269,8 +265,6 @@
       au < finished ; manifest ; 2021 ; Papers in Historical Phonology Volume 2021 ; 6 ; 2021 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Papers in Historical Phonology Volume 2022 ; 7 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Papers in Historical Phonology Volume 2023 ; 8 ; 2023 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2024 ; Papers in Historical Phonology Volume 2024 ; 9 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Papers in Historical Phonology Volume 2025 ; 10 ; 2025 ; >
 
   }
 
@@ -288,8 +282,6 @@
       au < finished ; manifest ; 2019 ; re:think - a journal of creative ethnography Volume 2019 ; 2 ; 2019 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; re:think - a journal of creative ethnography Volume 2021 ; 3 ; 2021 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; re:think - a journal of creative ethnography Volume 2023 ; 4 ; 2023 ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2024 ; re:think - a journal of creative ethnography Volume 2024 ; 5 ; 2024 ; >
-      au < expected ; exists ; 2025 ; re:think - a journal of creative ethnography Volume 2025 ; 6 ; 2025 ; >
 
   }
 
@@ -330,8 +322,6 @@
       au < finished ; manifest ; 2021 ; Social Science Protocols Volume 2021 ; 4 ; 2021 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Social Science Protocols Volume 2022 ; 5 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Social Science Protocols Volume 2023 ; 6 ; 2023 ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2024 ; Social Science Protocols Volume 2024 ; 7 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Social Science Protocols Volume 2025 ; 8 ; 2025 ; >
 
   }
 
@@ -412,8 +402,6 @@
       au < finished ; manifest ; 2021 ; Language and Psychoanalysis Volume 2021 ; 10 ; 2021 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Language and Psychoanalysis Volume 2022 ; 11 ; 2022 ; reingest5.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2023 ; Language and Psychoanalysis Volume 2023 ; 12 ; 2023 ; >
-      au < expected ; exists ; 2024 ; Language and Psychoanalysis Volume 2024 ; 13 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Language and Psychoanalysis Volume 2025 ; 14 ; 2025 ; >
 
   }
 
@@ -457,17 +445,13 @@
       au < finished ; manifest ; 2012 ; The South Asianist Journal Volume 2012 ; 1 ; 2012 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; The South Asianist Journal Volume 2013 ; 2 ; 2013 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2014 ; The South Asianist Journal Volume 2014 ; 3 ; 2014 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2015 ; The South Asianist Journal Volume 2015 ; 4 ; 2015 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2016 ; The South Asianist Journal Volume 2016 ; 5 ; 2016 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2017 ; The South Asianist Journal Volume 2017 ; 6 ; 2017 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2018 ; The South Asianist Journal Volume 2018 ; 7 ; 2018 ; reingest1.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2019 ; The South Asianist Journal Volume 2019 ; 8 ; 2019 ; >
-      au < finished ; manifest ; 2020 ; The South Asianist Journal Volume 2020 ; 9 ; 2020 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2021 ; The South Asianist Journal Volume 2021 ; 10 ; 2021 ; reingest3.clockss.org:8083 >
-      au < doesNotExist ; doesNotExist ; 2022 ; The South Asianist Journal Volume 2022 ; 11 ; 2022 ; >
-      au < finished ; manifest ; 2023 ; The South Asianist Journal Volume 2023 ; 12 ; 2023 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2024 ; The South Asianist Journal Volume 2024 ; 13 ; 2024 ; >
-      au < expected ; exists ; 2025 ; The South Asianist Journal Volume 2025 ; 14 ; 2025 ; >
+      au < finished ; manifest ; 2015 ; The South Asianist Journal Volume 2015 ; 3-4 ; 2015 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; The South Asianist Journal Volume 2016 ; 4 ; 2016 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; The South Asianist Journal Volume 2017 ; 5 ; 2017 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; The South Asianist Journal Volume 2018 ; 6 ; 2018 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; The South Asianist Journal Volume 2020 ; 7 ; 2020 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; The South Asianist Journal Volume 2021 ; 8 ; 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; The South Asianist Journal Volume 2023 ; 9 ; 2023 ; reingest4.clockss.org:8082 >
 
   }
 
