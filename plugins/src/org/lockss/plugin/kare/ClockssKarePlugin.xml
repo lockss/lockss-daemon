@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -95,7 +95,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <map>
             <entry>
                 <string>Metadata</string>
-                <string>3</string>
+                <string>4</string>
             </entry>
             <entry>
                 <string>Poll</string>
@@ -138,7 +138,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"%s%s/pdfs/", web_url,journal_id</string>
             <!-- https://jag.journalagent.com/z4/gencitation.asp?pdir=agri&article=AGRI-20270&format=RIS -->
             <string>1,"%s.*gencitation.asp\?pdir=%s&amp;article=.*&amp;format=(RIS|EndNote|BibTeX|Medlars|Procite|referenceManager)", web_url,journal_id</string>
-            <string>1,"%sjvi.aspx\?un=[^/]+&amp;volume=%s&amp;issue=", base_url,volume</string>
+            <string>1,"%sjvi.aspx\?un=[^/]+&amp;volume=%s&amp;(issue|supp)=", base_url,volume</string>
         </list>
     </entry>
     <entry>

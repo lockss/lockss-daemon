@@ -49,6 +49,7 @@ import java.util.regex.Pattern;
 
  Article:
  https://agridergisi.com/jvi.aspx?un=AGRI-42800&volume=34&issue=1
+ https://agridergisi.com/jvi.aspx?un=AGRI-60243&volume=33&supp=1
 
  Abstract:
  https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&un=AGRI-42800&look4= // not guaranteed to be there
@@ -67,19 +68,19 @@ import java.util.regex.Pattern;
 public class KareArticleIteratorFactory
         implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    private static final Logger log = Logger.getLogger(KareArticleIteratorFactory.class);
+    private static final Logger log = Logger.getLogger(KareArticleIteratorFactory2.class);
 
 
     private static final String ROOT_TEMPLATE = "\"%s\", base_url";
 
     private static final String PATTERN_TEMPLATE =
-            "\"%sjvi\\.aspx\\?un=[^&]+&volume=[^&]+&issue=[^&]+\", base_url";
+            "\"%sjvi\\.aspx\\?un=[^&]+&volume=[^&]+&(issue|supp)=[^&]+\", base_url";
 
     private static final Pattern ARTICLE_PATTERN = Pattern.compile(
-            "jvi\\.aspx\\?un=([^&]+)&volume=([^&]+)&issue=([^&]+)", Pattern.CASE_INSENSITIVE);
+            "jvi\\.aspx\\?un=([^&]+)&volume=([^&]+)&((issue|supp)=[^&]+)", Pattern.CASE_INSENSITIVE);
 
 
-    private static final String ARTICLE_REPLACEMENT = "jvi.aspx?un=$1&volume=$2&issue=$3";
+    private static final String ARTICLE_REPLACEMENT = "jvi.aspx?un=$1&volume=$2&$3";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
