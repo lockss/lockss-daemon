@@ -78,6 +78,10 @@ public class CuBase extends Worker {
     namespace = auMover.getNamespace();
   }
 
+  private boolean isTrue(String boolstr) {
+    return Boolean.parseBoolean(boolstr);
+  }
+
   // This causes an InputStream to be opened on each CU, which 1) may
   // take some time, and 2) consumes a number of File Descriptors
   // equal to the number of versions.  The time to open the files
@@ -92,6 +96,22 @@ public class CuBase extends Worker {
     for (CachedUrl cuVer : v1Versions) {
       String v1Url = cuVer.getUrl();
       CIProperties verProps = cuVer.getProperties();
+      // skip malformed, incomplete, inactive, etc. versions
+      if (cuVer.getVersion() == 0) {
+        log.warning("Skipping malformed version 0 of " + cu);
+        continue;
+      }
+      if (isTrue(verProps.getProperty(RepositoryNodeImpl.INACTIVE_CONTENT_PROPERTY))) {
+        log.warning("Skipping inactive version " + cuVer.getVersion() +
+                    " of " + cu);
+        continue;
+      }
+      if (isTrue(verProps.getProperty(RepositoryNodeImpl.NODE_WAS_INACTIVE_PROPERTY))) {
+        log.warning("Skipping was-inactive version " + cuVer.getVersion() +
+                    " of " + cu);
+        continue;
+      }
+
       String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
       String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
       if (UrlUtil.isDirectoryRedirection(v1Url, nodeUrl)) {

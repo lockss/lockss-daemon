@@ -69,6 +69,9 @@ public class CuMover extends CuBase {
     try {
       log.debug2("Starting CuMover: " + au + ", " + cu);
       buildCompatMap(cu);
+      if (mappedCus.isEmpty()) {
+        log.warning("No active versions of " + cu + " found.");
+      }
       for (String v2Url : mappedCus.keySet()) {
         // Skip fetching the existing V2 artifects if we know no
         // artifacts of this AU were present on target when operation

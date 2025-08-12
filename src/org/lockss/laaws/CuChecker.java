@@ -58,6 +58,9 @@ public class CuChecker extends CuBase {
     try {
       log.debug2("Starting CuChecker: " + au + ", " + cu);
       buildCompatMap(cu);
+      if (mappedCus.isEmpty()) {
+        log.debug2("No active versions of " + cu + " found.");
+      }
       for (String v2Url : mappedCus.keySet()) {
         try {
           checkCuVersions(v2Url, mappedCus.get(v2Url),
