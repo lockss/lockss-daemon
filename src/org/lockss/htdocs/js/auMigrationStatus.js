@@ -173,7 +173,7 @@ class AuMigrationStatus extends React.Component {
     }
 
     if (this.state.finishedCount != this.state.finishedData.length) {
-      fetch("/MigrateContent?output=json&status=finished" +
+      fetch("/MigrateContent?reqfreq=high&output=json&status=finished" +
             "&index=" + this.state.finishedData.length +
             "&size=" + (this.state.finishedCount - this.state.finishedData.length))
         .then(response => response.json())
