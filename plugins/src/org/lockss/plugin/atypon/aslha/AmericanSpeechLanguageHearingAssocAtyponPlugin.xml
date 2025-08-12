@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -98,5 +98,14 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>org.lockss.plugin.atypon.aslha.AmericanSpeechLanguageHearingAssocHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!--
+      https://pubs.asha.org/doi/epdf/10.1044/persp3.SIG13.C10 File size (51477) differs from Content-Length header (51968)
+      -->
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheException$WarningOnly</string>
+    </list>
   </entry>
 </map>
