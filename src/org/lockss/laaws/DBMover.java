@@ -168,6 +168,8 @@ public class DBMover extends Worker {
   }
 
   private void copyDerbyDb() throws IOException {
+    LockssUrlConnectionPool connectionPool =
+      auMover.getMigrationMgr().getConnectionPool();
     long startTime = TimeBase.nowMs();
     // Dump V1 subscriptions & COUNTER data
     File bakDir = FileUtil.createTempDir("dbtemp", "");
@@ -200,6 +202,7 @@ public class DBMover extends Worker {
       conn.setRequestEntity(new MultipartRequestEntity(parts, new HttpMethodParams()));
 
       conn.execute();
+      conn = UrlUtil.handleLoginForm(conn, v2user, v2pass, connectionPool);
       int statusCode = conn.getResponseCode();
       if (statusCode == 200) {
         log.info("Success!");
