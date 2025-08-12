@@ -108,6 +108,12 @@ public class UrlUtil {
   static final String PARAM_USE_HTTPCLIENT = PREFIX + "useHttpClient";
   static final boolean DEFAULT_USE_HTTPCLIENT = true;
 
+  /** Pattern to detect redirect to login form.  Was hardwired to
+   * "/LoginForm;jsessionid=" but ";sessionid" is absent in some
+   * circumstances */
+  static final String PARAM_LOGIN_REDIRECT_PAT = PREFIX + "loginRedirectPattern";
+  static final String DEFAULT_LOGIN_REDIRECT_PAT = "/LoginForm";
+
   /** If true, normalizeUrl replaces Akamai Resource Locator URLs (ARL) of
    * the form
    * <code>http://a123.g.akamai.net/f/123/4567/1d/www.pubsite.com/images/blip.ico</code>
@@ -133,7 +139,7 @@ public class UrlUtil {
   private static boolean normalizeAkamaiUrl = DEFAULT_NORMALIZE_AKAMAI_URL;
   private static boolean allowSiteNormalizeChangeStem =
       DEFAULT_ALLOW_SITE_NORMALIZE_CHANGE_STEM;
-
+  private static String loginRedirectPat = DEFAULT_LOGIN_REDIRECT_PAT;
 
   /** Called by org.lockss.config.MiscConfig
    */
@@ -155,6 +161,8 @@ public class UrlUtil {
       allowSiteNormalizeChangeStem =
           config.getBoolean(PARAM_ALLOW_SITE_NORMALIZE_CHANGE_STEM,
               DEFAULT_ALLOW_SITE_NORMALIZE_CHANGE_STEM);
+      loginRedirectPat =
+        config.get(PARAM_LOGIN_REDIRECT_PAT, DEFAULT_LOGIN_REDIRECT_PAT);
     }
   }
 
@@ -1364,7 +1372,7 @@ public class UrlUtil {
       throws IOException {
     // Detect redirect to ".../LoginForm"
     String actualUrl = conn.getActualUrl();
-    if (actualUrl.indexOf("/LoginForm;jsessionid=") > 0) {
+    if (actualUrl.indexOf(loginRedirectPat) > 0) {
       String relUrl = org.lockss.servlet.LoginForm.FORM_ACTION;
       String logUrl = UrlUtil.resolveUri(actualUrl, relUrl);
       log.debug2("Login form detected: " + actualUrl +
