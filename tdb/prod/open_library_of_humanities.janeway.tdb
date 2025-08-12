@@ -97,7 +97,7 @@
       au < manifest ; 2003 ; 52-53 ; Pynchon Notes Issue 52-53 ; 2003 >
       au < manifest ; 2008 ; 54-55 ; Pynchon Notes Issue 54-55 ; 2008 >
 
-      au < releasing ; 2011 ; 56-57 ; Pynchon Notes Issue 56-57 ; 2011 >
+      au < released ; 2011 ; 56-57 ; Pynchon Notes Issue 56-57 ; 2011 >
 
   }
 
@@ -110,8 +110,8 @@
 
        param[base_url] = https://c21.openlibhums.org/
 
-       au < releasing ; 2016 ; 4 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 >
-       au < releasing ; 2017 ; 5 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 >
+       au < released ; 2016 ; 4 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 >
+       au < released ; 2017 ; 5 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 >
        au < released ; 2018 ; 6 ; C21 Literature: journal of 21st-century writings Volume 2018 ; 2018 >
        au < released ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 >
        au < released ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 >
@@ -137,15 +137,15 @@
       au < manifest ; 2007 ; 4-5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 4-5 ; 2007 >
       au < manifest ; 2008 ; 6-7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 6-7 ; 2008 >
       au < manifest ; 2009 ; 8-9 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 8-9 ; 2009 >
-      au < releasing ; 2010 ; 10-11 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 10-11 ; 2010 >
-      au < releasing ; 2011 ; 12-14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 12-14 ; 2011 >
-      au < releasing ; 2012 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 15 ; 2012 >
-      au < releasing ; 2013 ; 16-17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 16-17 ; 2013 >
-      au < releasing ; 2014 ; 18-19 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 18-19 ; 2014 >
-      au < releasing ; 2015 ; 20-21 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 20-21 ; 2015 >
-      au < releasing ; 2016 ; 22-23 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 22-23 ; 2016 >
-      au < releasing ; 2017 ; 24-25 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 24-25 ; 2017 >
-      au < releasing ; 2018 ; 26-27 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 26-27 ; 2018 >
+      au < released ; 2010 ; 10-11 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 10-11 ; 2010 >
+      au < released ; 2011 ; 12-14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 12-14 ; 2011 >
+      au < released ; 2012 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 15 ; 2012 >
+      au < released ; 2013 ; 16-17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 16-17 ; 2013 >
+      au < released ; 2014 ; 18-19 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 18-19 ; 2014 >
+      au < released ; 2015 ; 20-21 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 20-21 ; 2015 >
+      au < released ; 2016 ; 22-23 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 22-23 ; 2016 >
+      au < released ; 2017 ; 24-25 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 24-25 ; 2017 >
+      au < released ; 2018 ; 26-27 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 26-27 ; 2018 >
       au < released ; 2019 ; 28 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 28 ; 2019 >
       au < released ; 2020 ; 29-30 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 29-30 ; 2020 >
       au < released ; 2021 ; 31-32 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 31-32 ; 2021 >
@@ -560,7 +560,7 @@
       au < released ; 2021 ; 6 ; Glossa: a journal of general linguistics Volume 2021 ; 2021 >
       au < released ; 2022 ; 7 ; Glossa: a journal of general linguistics Volume 2022 ; 2022 >
       au < notReady ; 2023 ; 8 ; Glossa: a journal of general linguistics Volume 2023 ; 2023 > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5823/galley/23046/download/
-      au < releasing ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 >
+      au < released ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 >
       au < manifest ; 2025 ; 10 ; Glossa: a journal of general linguistics Volume 2025 ; 2025 >
 
   }
@@ -737,7 +737,7 @@
       #All issues were published the day before the new year, except 2023.
       #Volumes are 2006, 2008, 2012, 2015, 2022, 2023.
 
-      au < releasing ; 2006 ; 1 ; Lifewriting Annual Volume 2006 ; 2005 >
+      au < released ; 2006 ; 1 ; Lifewriting Annual Volume 2006 ; 2005 >
       au < released ; 2008 ; 2 ; Lifewriting Annual Volume 2008 ; 2007 >
       au < released ; 2012 ; 3 ; Lifewriting Annual Volume 2012 ; 2012 >
       au < released ; 2015 ; 4 ; Lifewriting Annual Volume 2015 ; 2014 >

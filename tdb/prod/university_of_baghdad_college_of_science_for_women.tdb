@@ -19,8 +19,8 @@
       param[journal_abbr] = home
       provider = bepress
 
-      au < releasing ; 2022 ; Baghdad Science Journal Volume 19 ; 19 >
-      au < releasing ; 2023 ; Baghdad Science Journal Volume 20 ; 20 >
+      au < released ; 2022 ; Baghdad Science Journal Volume 19 ; 19 >
+      au < released ; 2023 ; Baghdad Science Journal Volume 20 ; 20 >
       au < manifest ; 2024 ; Baghdad Science Journal Volume 21 ; 21 >
       au < manifest ; 2025 ; Baghdad Science Journal Volume 22 ; 22 >
     }
