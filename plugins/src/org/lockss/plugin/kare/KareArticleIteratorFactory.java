@@ -68,7 +68,7 @@ import java.util.regex.Pattern;
 public class KareArticleIteratorFactory
         implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    private static final Logger log = Logger.getLogger(KareArticleIteratorFactory2.class);
+    private static final Logger log = Logger.getLogger(KareArticleIteratorFactory.class);
 
 
     private static final String ROOT_TEMPLATE = "\"%s\", base_url";
