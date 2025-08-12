@@ -51,7 +51,7 @@ import java.util.regex.Pattern;
  https://agridergisi.com/jvi.aspx?un=AGRI-42800&volume=34&issue=1
 
  Abstract:
- https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&un=AGRI-42800&look4=
+ https://agridergisi.com/jvi.aspx?pdir=agri&plng=eng&un=AGRI-42800&look4= // not guaranteed to be there
 
  PDF:
  https://jag.journalagent.com/z4/download_fulltext.asp?pdir=agri&plng=eng&un=AGRI-42800
@@ -73,12 +73,13 @@ public class KareArticleIteratorFactory
     private static final String ROOT_TEMPLATE = "\"%s\", base_url";
 
     private static final String PATTERN_TEMPLATE =
-            "\"%sjvi\\.aspx\\?pdir=%s&plng=eng&un=[^&]+&look4=\", base_url, journal_id";
+            "\"%sjvi\\.aspx\\?un=[^&]+&volume=[^&]+&issue=[^&]+\", base_url";
 
-    private static final Pattern ABSTRACT_PATTERN = Pattern.compile(
-            "jvi\\.aspx\\?pdir=([^&]+)&plng=eng&un=([^&]+)&look4=", Pattern.CASE_INSENSITIVE);
+    private static final Pattern ARTICLE_PATTERN = Pattern.compile(
+            "jvi\\.aspx\\?un=([^&]+)&volume=([^&]+)&issue=([^&]+)", Pattern.CASE_INSENSITIVE);
 
-    private static final String ABSTRACT_REPLACEMENT = "jvi.aspx?pdir=$1&plng=eng&un=$2&look4=";
+
+    private static final String ARTICLE_REPLACEMENT = "jvi.aspx?un=$1&volume=$2&issue=$3";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
@@ -89,8 +90,8 @@ public class KareArticleIteratorFactory
                 .setRootTemplate(ROOT_TEMPLATE)
                 .setPatternTemplate(PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE));
 
-        builder.addAspect(ABSTRACT_PATTERN,
-                ABSTRACT_REPLACEMENT,
+        builder.addAspect(ARTICLE_PATTERN,
+                ARTICLE_REPLACEMENT,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
 
