@@ -71,7 +71,7 @@
     au < finished ; manifest ; 2022 ; Contemporary Mathematics 2022 ; 2022 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Contemporary Mathematics 2023 ; 2023 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; Contemporary Mathematics 2024 ; 2024 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2025 ; Contemporary Mathematics 2025 ; 2025 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2025 ; Contemporary Mathematics 2025 ; 2025 ; https://www.ams.org/ ; >
 
     }
 
@@ -137,7 +137,7 @@
     au < finished ; manifest ; 2022 ; Mathematical Surveys and Monographs 2022 ; 2022 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Mathematical Surveys and Monographs 2023 ; 2023 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2024 ; Mathematical Surveys and Monographs 2024 ; 2024 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2025 ; Mathematical Surveys and Monographs 2025 ; 2025 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2025 ; Mathematical Surveys and Monographs 2025 ; 2025 ; https://www.ams.org/ ; >
 
 #Not in original contract. Move doNotProcess to manifest when contract is approved.
     }
@@ -227,7 +227,7 @@
     au < finished ; manifest ; 2022 ; Memoirs of the American Mathematical Society 2022 ; 2022 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; Memoirs of the American Mathematical Society 2023 ; 2023 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; Memoirs of the American Mathematical Society 2024 ; 2024 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2025 ; Memoirs of the American Mathematical Society 2025 ; 2025 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2025 ; Memoirs of the American Mathematical Society 2025 ; 2025 ; https://www.ams.org/ ; >
 
     }
 
