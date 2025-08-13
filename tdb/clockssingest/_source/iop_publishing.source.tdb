@@ -46,7 +46,7 @@
 
      au < readySource ; crawling ; 2025 ; IOP Publishing JATS Source Content 2025_01 ; 2025_01 >
      au < readySource ; crawling ; 2025 ; IOP Publishing JATS Source Content 2025_02 ; 2025_02 >
-     au < ready ; exists ; 2025 ; IOP Publishing JATS Source Content 2025_03 ; 2025_03 >
+     au < testing ; exists ; 2025 ; IOP Publishing JATS Source Content 2025_03 ; 2025_03 > #Tested; Will merge with 02 bucket
      au < expected ; exists ; 2025 ; IOP Publishing JATS Source Content 2025_04 ; 2025_04 >
 
      }

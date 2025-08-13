@@ -6,34 +6,29 @@
     info[platform] = Source/FTP
   >
   hidden[proxy] = DIRECT
+  implicit < status ; status2 ; year ; name ; param[directory] >
 
   {
 
     title <
       name = Chinese University of Hong Kong Source Content
     >
-    implicit < status ; status2 ; year ; name ; param[directory] >
-
-#    {
-#      #Not Zipped. HTTPS
-#      plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssCUHKSourcePlugin
-#      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
-#
-#      au < expected ; exists ; 2025 ; Chinese University of Hong Kong Source Content 2025_01 ; 2025_01 >
-#
-#    }
+    #No more non-zipped / repository content expected.
 
     {
-      #Zipped. HTTPS
+      #Zipped. HTTPS (Journal: Logos & Pneuma)
+      #CUHK Journal  Content https://cup.cuhk.edu.hk/Logos  (all buckets except 2023_01 - aka Zipped content)
       plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssChineseUniversityHongKongSourcePlugin
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
 
-      au < testing ; exists ; 2024 ; Chinese University of Hong Kong Source Content 2024_02 ; 2024_02 >
-      au < testing ; exists ; 2025 ; Chinese University of Hong Kong Source Content 2025_01 ; 2025_01 >
+      au < ready ; exists ; 2024 ; Chinese University of Hong Kong Source Content 2024_02 ; 2024_02 >
+      au < ready ; exists ; 2025 ; Chinese University of Hong Kong Source Content 2025_01 ; 2025_01 >
 
     }
     {
-      #Not Zipped. HTTP
+      #Not Zipped. HTTP (70s and 90s)
+      #CUHK 70s repository (cuhk 2023_01)  https://repository.lib.cuhk.edu.hk/en/item/cuhk-2709711
+      #CUHK 90s repository (cuhk 2023_01) https://repository.lib.cuhk.edu.hk/en/item/cuhk-3119953
       plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssCUHKSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
 
@@ -42,7 +37,8 @@
     }
 
     {
-      #Zipped. HTTP
+      #Zipped. HTTP (Journal: Logos & Pneuma)
+      #CUHK Journal  Content https://cup.cuhk.edu.hk/Logos  (all buckets except 2023_01 - aka Zipped content)
       plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssChineseUniversityHongKongSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
 
@@ -51,7 +47,8 @@
     }
 
     {
-      #Combined Zipped and Not Zipped. HTTP
+      #Zipped. HTTP (Journal: Logos & Pneuma)
+      #CUHK Journal  Content https://cup.cuhk.edu.hk/Logos  (all buckets except 2023_01 - aka Zipped content)
       plugin = org.lockss.plugin.clockss.chineseuniversityhongkong.ClockssChineseUniversityHongKongSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/cuhk-released/
 

@@ -317,13 +317,23 @@
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_41 ; 2025_41 >
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_42 ; 2025_42 >
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_43 ; 2025_43 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_44 ; 2025_44 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_45 ; 2025_45 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_46 ; 2025_46 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_47 ; 2025_47 >
+        au < ready ; exists ; 2025 ; Elsevier Source Content 2025_44 ; 2025_44 >
+        au < ready ; exists ; 2025 ; Elsevier Source Content 2025_45 ; 2025_45 >
+        au < ready ; exists ; 2025 ; Elsevier Source Content 2025_46 ; 2025_46 >
+        au < ready ; exists ; 2025 ; Elsevier Source Content 2025_47 ; 2025_47 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_48 ; 2025_48 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_49 ; 2025_49 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_50 ; 2025_50 >
+        au < expected ; exists ; 2025 ; Elsevier Source Content 2025_51 ; 2025_51 >
+        au < expected ; exists ; 2025 ; Elsevier Source Content 2025_52 ; 2025_52 >
+        au < expected ; exists ; 2025 ; Elsevier Source Content 2025_53 ; 2025_53 >
+        au < expected ; exists ; 2025 ; Elsevier Source Content 2025_54 ; 2025_54 >
+        au < expected ; exists ; 2025 ; Elsevier Source Content 2025_55 ; 2025_55 >
+        au < expected ; exists ; 2025 ; Elsevier Source Content 2025_56 ; 2025_56 >
+        au < expected ; exists ; 2025 ; Elsevier Source Content 2025_57 ; 2025_57 >
+        au < expected ; exists ; 2025 ; Elsevier Source Content 2025_58 ; 2025_58 >
+        au < expected ; exists ; 2025 ; Elsevier Source Content 2025_59 ; 2025_59 >
+        au < expected ; exists ; 2025 ; Elsevier Source Content 2025_60 ; 2025_60 >
 
       }
     }
