@@ -47,13 +47,12 @@
     }
     {
      param[base_url] = https://www.informationr.net/ir/
+     #moved to https://publicera.kb.se/ir
 
     au < released ; 2020 ; Information Research Volume 25 ; 25 >
     au < released ; 2021 ; Information Research Volume 26 ; 26 >
     au < released ; 2022 ; Information Research Volume 27 ; 27 >
-    au < notReady ; 2023 ; Information Research Volume 28 ; 28 > #Crawl completed with no substance, https://informationr.net/infres/issue/view/28-1
-    au < manifest ; 2024 ; Information Research Volume 29 ; 29 >
-    au < manifest ; 2025 ; Information Research Volume 30 ; 30 >
+    au < doNotProcess ; 2023 ; Information Research Volume 28 ; 28 > #Crawl completed with no substance, https://informationr.net/infres/issue/view/28-1
     }
 
   }
