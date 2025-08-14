@@ -82,7 +82,7 @@ public class MigrateContent extends LockssServlet {
     Collections.emptyList();
 
   public static final String PARAM_DEFAULT_OPTYPE = PREFIX + "defaultOpType";
-  static final OpType DEFAULT_DEFAULT_OPTYPE = OpType.CopyOnly;
+  static final OpType DEFAULT_DEFAULT_OPTYPE = OpType.CopyAndVerify;
 
   public static final String PARAM_ALLOW_MISSING_AUIDS =
     PREFIX + "allowMissingAuids";
