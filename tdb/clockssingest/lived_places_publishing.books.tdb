@@ -12,8 +12,8 @@
   >
 
   provider = Lived Places Publishing
-  plugin = needs.plugin
-  #plugin = org.lockss.plugin.michigan.ClockssUMichFulcrumBooksPlugin
+  #plugin = needs.plugin
+  plugin = org.lockss.plugin.michigan.ClockssUMichFulcrumBooksPlugin
   param[base_url] = https://www.fulcrum.org/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >
 
@@ -79,6 +79,8 @@
     au < manifest ; exists ; 2024 ; 9781915734143 ; 9781915734167 ; concern/monographs/z029p7921 ; Tiun Chhang-Miâ (Minnie Mackay, 1860?–1925): Life in Taiwan's Contested Colonial Space ; >
     au < manifest ; exists ; 2024 ; 9781916704978 ; 9781916704985 ; concern/monographs/jh343w54n ; University for a Good Woman: Reflections on Gender, Class and Labor in American Higher Education ; >
     au < manifest ; exists ; 2024 ; 9781916704251 ; 9781916704275 ; concern/monographs/9306t240v ; Untapped Talent: A Practical Guide for Hiring and Retaining Neurodivergent Staff ; >
+
+    au < expected ; exists ; 2025 ; 9781917566094 ; 9781917566117 ; concern/monographs/cc08hk10k ; In the Herder's Boots: Challenging Life of the Nomadic Cashmere Goat herder in the Gobi Desert of Mongolia ; >
 
   }
 }
