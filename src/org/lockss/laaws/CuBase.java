@@ -93,41 +93,51 @@ public class CuBase extends Worker {
   // number of versions that are copied (with a config param?)
   void buildCompatMap(CachedUrl cu) {
     CachedUrl[] v1Versions = cu.getCuVersions();
-    for (CachedUrl cuVer : v1Versions) {
-      String v1Url = cuVer.getUrl();
-      CIProperties verProps = cuVer.getProperties();
-      // skip malformed, incomplete, inactive, etc. versions
-      if (cuVer.getVersion() == 0) {
-        log.warning("Skipping malformed version 0 of " + cu);
-        continue;
-      }
-      if (isTrue(verProps.getProperty(RepositoryNodeImpl.INACTIVE_CONTENT_PROPERTY))) {
-        log.warning("Skipping inactive version " + cuVer.getVersion() +
-                    " of " + cu);
-        continue;
-      }
-      if (isTrue(verProps.getProperty(RepositoryNodeImpl.NODE_WAS_INACTIVE_PROPERTY))) {
-        log.warning("Skipping was-inactive version " + cuVer.getVersion() +
-                    " of " + cu);
-        continue;
-      }
+    List<CachedUrl> toRelease = new ArrayList<>();
+    try {
+      for (CachedUrl cuVer : v1Versions) {
+        String v1Url = cuVer.getUrl();
+        CIProperties verProps = cuVer.getProperties();
+        // skip malformed, incomplete, inactive, etc. versions
+        if (cuVer.getVersion() == 0) {
+          log.warning("Skipping malformed version 0 of " + cu);
+          toRelease.add(cuVer);
+          continue;
+        }
+        if (isTrue(verProps.getProperty(RepositoryNodeImpl.INACTIVE_CONTENT_PROPERTY))) {
+          log.warning("Skipping inactive version " + cuVer.getVersion() +
+                      " of " + cu);
+          toRelease.add(cuVer);
+          continue;
+        }
+        //       if (isTrue(verProps.getProperty(RepositoryNodeImpl.NODE_WAS_INACTIVE_PROPERTY))) {
+        //         log.warning("Skipping was-inactive version " + cuVer.getVersion() +
+        //                     " of " + cu);
+        //         toRelease.add(cuVer);
+        //         continue;
+        //       }
 
-      String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
-      String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
-      if (UrlUtil.isDirectoryRedirection(v1Url, nodeUrl)) {
-        // This was collected as "foo/", not the result of a redirect.
-        // Copy it only as "foo/"
-        V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, nodeUrl);
-        mappedCus.put(nodeUrl, v2cuVer);
-      } else if (UrlUtil.isDirectoryRedirection(v1Url, redirTo)) {
-        // This was redirected from "foo" to "foo/".  Copy as both
-        // "foo" and "foo/" to match what V2 would have collected
-        V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, redirTo);
-        mappedCus.put(v1Url, cuVer);
-        mappedCus.put(redirTo, v2cuVer);
-      } else {
-        // No slash - V2 name is the same
-        mappedCus.put(v1Url, cuVer);
+        String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
+        String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
+        if (UrlUtil.isDirectoryRedirection(v1Url, nodeUrl)) {
+          // This was collected as "foo/", not the result of a redirect.
+          // Copy it only as "foo/"
+          V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, nodeUrl);
+          mappedCus.put(nodeUrl, v2cuVer);
+        } else if (UrlUtil.isDirectoryRedirection(v1Url, redirTo)) {
+          // This was redirected from "foo" to "foo/".  Copy as both
+          // "foo" and "foo/" to match what V2 would have collected
+          V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, redirTo);
+          mappedCus.put(v1Url, cuVer);
+          mappedCus.put(redirTo, v2cuVer);
+        } else {
+          // No slash - V2 name is the same
+          mappedCus.put(v1Url, cuVer);
+        }
+      }
+    } finally {
+      for (CachedUrl relCu : toRelease) {
+        AuUtil.safeRelease(relCu);
       }
     }
   }
