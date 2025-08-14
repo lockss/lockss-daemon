@@ -32,11 +32,14 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.michigan;
 
+import java.io.IOException;
+
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.plugin.CachedUrl;
 
 
 //<meta name="citation_title" content="Printing and Prophecy: Prognostication and Media Change 1450-1550">
@@ -77,7 +80,16 @@ public class UMichHtmlMetadataExtractorFactory
           new MetadataField(MetadataField.FIELD_AUTHOR,
                             MetadataField.splitAt(",")));
     }
-    
+    @Override
+    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
+      throws IOException {
+        ArticleMetadata am = super.extract(target, cu);
+        //hardcode article and publication types
+        am.put(MetadataField.FIELD_ARTICLE_TYPE, MetadataField.ARTICLE_TYPE_BOOKVOLUME);
+        am.put(MetadataField.FIELD_PUBLICATION_TYPE, MetadataField.PUBLICATION_TYPE_BOOK);
+        am.cook(tagMap);
+        return am;
+      }
     
   }
   
