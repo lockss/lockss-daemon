@@ -12,7 +12,6 @@
   >
 
   provider = Lived Places Publishing
-  #plugin = needs.plugin
   plugin = org.lockss.plugin.michigan.ClockssUMichFulcrumBooksPlugin
   param[base_url] = https://www.fulcrum.org/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >
