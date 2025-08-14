@@ -98,7 +98,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 40 ; Documenta Volume 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; 41 ; Documenta Volume 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; 42 ; Documenta Volume 2024 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2025 ; 2025 ; 43 ; Documenta Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 43 ; Documenta Volume 2025 ; >
 
   }
 
@@ -119,7 +119,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2025 ; >
 
   }
 
@@ -155,8 +155,8 @@
       param[base_url] = https://lcj.ugent.be/
       #param[journal_id] = lcj
 
-      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Law & Criminology Journal Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Law & Criminology Journal Volume 2025 ; >
+      au < ready ; exists ; 2024 ; 2024 ; 2024 ; Law & Criminology Journal Volume 2024 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Law & Criminology Journal Volume 2025 ; >
 
   }
 
@@ -245,7 +245,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; 2022 ; Vlaams Diergeneeskundig Tijdschrift Volume 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Vlaams Diergeneeskundig Tijdschrift Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Vlaams Diergeneeskundig Tijdschrift Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Vlaams Diergeneeskundig Tijdschrift Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Vlaams Diergeneeskundig Tijdschrift Volume 2025 ; >
 
   }
 
@@ -290,7 +290,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; 2022 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2025 ; >
 
   } 
 
@@ -393,7 +393,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Agora Magazine Volume 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Agora Magazine Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Agora Magazine Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Agora Magazine Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Agora Magazine Volume 2025 ; >
 
   }
 
@@ -513,7 +513,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; De Uil van Minerva Volume 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; De Uil van Minerva Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; De Uil van Minerva Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; De Uil van Minerva Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; De Uil van Minerva Volume 2025 ; >
 
   }
 
@@ -945,7 +945,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; EWOP in Practice Volume 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; 2023 ; EWOP in Practice Volume 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; EWOP in Practice Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; EWOP in Practice Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; EWOP in Practice Volume 2025 ; >
 
   }
 
@@ -1190,7 +1190,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; 2022 ; NISE Essays Volume 2022 ; > #No content
       au < finished ; manifest ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; NISE Essays Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; NISE Essays Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; NISE Essays Volume 2025 ; >
 
   }
 
@@ -1578,7 +1578,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Studies on National Movements Volume 2022 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Studies on National Movements Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Studies on National Movements Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Studies on National Movements Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Studies on National Movements Volume 2025 ; >
 
   }
 
@@ -1596,7 +1596,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Radices Volume 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Radices Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Radices Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Radices Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Radices Volume 2025 ; >
 
   }
   
@@ -1643,7 +1643,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Tetradio Volume 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; 2023 ; Tetradio Volume 2023 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; 2024 ; Tetradio Volume 2024 ; > #No content
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tetradio Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Tetradio Volume 2025 ; >
 
   }
 
@@ -1662,7 +1662,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Tijdschrift Sociologie Volume 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 ; >
 
   }
 
