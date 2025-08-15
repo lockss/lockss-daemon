@@ -269,7 +269,7 @@
       au < frozen ; exists ; 2022 ; 9 ; Ergo Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 10 ; Ergo Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 11 ; Ergo Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 12 ; Ergo Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 12 ; Ergo Volume 2025 ; 2025 ; >
 
   }
 
@@ -448,7 +448,7 @@
       param[journal_id] = par
 
       au < frozen ; exists ; 2024 ; 36 ; Performing Arts Resources Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 37 ; Performing Arts Resources Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 37 ; Performing Arts Resources Volume 2025 ; 2025 ; >
 
   }
 
@@ -516,7 +516,7 @@
       au < frozen ; exists ; 2022 ; 14 ; Philosophy, Theory, and Practice in Biology Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 15 ; Philosophy, Theory, and Practice in Biology Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 16 ; Philosophy, Theory, and Practice in Biology Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 17 ; Philosophy, Theory, and Practice in Biology Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 17 ; Philosophy, Theory, and Practice in Biology Volume 2025 ; 2025 ; >
 
   }
 
@@ -825,7 +825,7 @@
       au < manifest ; exists ; 2022 ; 61 ; The Great Lakes Botanist Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 62 ; The Great Lakes Botanist Volume 2023 ; 2023 ; >
       au < ready ; exists ; 2024 ; 63 ; The Great Lakes Botanist Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 64 ; The Great Lakes Botanist Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 64 ; The Great Lakes Botanist Volume 2025 ; 2025 ; >
 
   }
 
@@ -841,7 +841,7 @@
       param[journal_id] = jgs
 
       au < exists ; exists ; 2024 ; 66 ; Journal of Glass Studies Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 67 ; Journal of Glass Studies Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 67 ; Journal of Glass Studies Volume 2025 ; 2025 ; >
 
   }
 

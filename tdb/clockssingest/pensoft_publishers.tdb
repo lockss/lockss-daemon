@@ -92,7 +92,7 @@
     au < finished ; manifest ; 2022 ; 17 ; BioRisk Volume 2022 ; 2022 ; https://biorisk.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 18 ; BioRisk Volume 2023 ; 2023 ; https://biorisk.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 19 ; BioRisk Volume 2024 ; 2024 ; https://biorisk.pensoft.net/ ; >
-    au < ready ; exists ; 2025 ; 20 ; BioRisk Volume 2025 ; 2025 ; https://biorisk.pensoft.net/ ; >
+    au < crawling ; exists ; 2025 ; 20 ; BioRisk Volume 2025 ; 2025 ; https://biorisk.pensoft.net/ ; >
 
    }
    
@@ -110,7 +110,7 @@
     au < finished ; manifest ; 2022 ; 1 ; Caucasiana Volume 2022 ; 2022 ; https://caucasiana.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2 ; Caucasiana Volume 2023 ; 2023 ; https://caucasiana.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 3 ; Caucasiana Volume 2024 ; 2024 ; https://caucasiana.pensoft.net/ ; >
-    au < ready ; exists ; 2025 ; 4 ; Caucasiana Volume 2025 ; 2025 ; https://caucasiana.pensoft.net/ ; >
+    au < crawling ; exists ; 2025 ; 4 ; Caucasiana Volume 2025 ; 2025 ; https://caucasiana.pensoft.net/ ; >
 
    }
   
@@ -200,7 +200,7 @@
     au < finished ; manifest ; 2022 ; 89-94 ; Journal of Hymenoptera Research Volume 2022 ; 2022 ; https://jhr.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 95-96 ; Journal of Hymenoptera Research Volume 2023 ; 2023 ; https://jhr.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 97-98 ; Journal of Hymenoptera Research Volume 2024 ; 2024 ; https://jhr.pensoft.net/ ; >
-    au < ready ; exists ; 2025 ; 98-99 ; Journal of Hymenoptera Research Volume 2025 ; 2025 ; https://jhr.pensoft.net/ ; >
+    au < crawling ; exists ; 2025 ; 98-99 ; Journal of Hymenoptera Research Volume 2025 ; 2025 ; https://jhr.pensoft.net/ ; >
 
    }
   
@@ -287,7 +287,7 @@
     au < finished ; manifest ; 2022 ; 71-79 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 80-89 ; NeoBiota Volume 2023 ; 2023 ; https://neobiota.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < manifest ; exists ; 2024 ; 90-96 ; NeoBiota Volume 2024 ; 2024 ; https://neobiota.pensoft.net/ ; >
-    au < ready ; exists ; 2025 ; 97-103 ; NeoBiota Volume 2025 ; 2025 ; https://neobiota.pensoft.net/ ; >
+    au < crawling ; exists ; 2025 ; 97-103 ; NeoBiota Volume 2025 ; 2025 ; https://neobiota.pensoft.net/ ; >
 
    }
 
@@ -459,7 +459,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Alpine Entomology Volume 2022 ; 2022 ; https://alpineentomology.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Alpine Entomology Volume 2023 ; 2023 ; https://alpineentomology.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Alpine Entomology Volume 2024 ; 2024 ; https://alpineentomology.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Alpine Entomology Volume 2025 ; 2025 ; https://alpineentomology.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Alpine Entomology Volume 2025 ; 2025 ; https://alpineentomology.pensoft.net/ ; >
 
   }
 
@@ -541,7 +541,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Biodiversity Information Science and Standards Volume 2022 ; 2022 ; https://biss.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Biodiversity Information Science and Standards Volume 2023 ; 2023 ; https://biss.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Biodiversity Information Science and Standards Volume 2024 ; 2024 ; https://biss.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Biodiversity Information Science and Standards Volume 2025 ; 2025 ; https://biss.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Biodiversity Information Science and Standards Volume 2025 ; 2025 ; https://biss.pensoft.net/ ; >
 
   }
 
@@ -590,7 +590,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Evolutionary Systematics Volume 2022 ; 2022 ; https://evolsyst.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Evolutionary Systematics Volume 2023 ; 2023 ; https://evolsyst.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Evolutionary Systematics Volume 2024 ; 2024 ; https://evolsyst.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Evolutionary Systematics Volume 2025 ; 2025 ; https://evolsyst.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Evolutionary Systematics Volume 2025 ; 2025 ; https://evolsyst.pensoft.net/ ; >
 
   }
 
@@ -695,7 +695,7 @@
     au < finished ; manifest ; 2022 ; 16 ; Comparative Cytogenetics Volume 2022 ; 2022 ; https://compcytogen.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 17 ; Comparative Cytogenetics Volume 2023 ; 2023 ; https://compcytogen.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 18 ; Comparative Cytogenetics Volume 2024 ; 2024 ; https://compcytogen.pensoft.net/ ; >
-    au < ready ; exists ; 2025 ; 19 ; Comparative Cytogenetics Volume 2025 ; 2025 ; https://compcytogen.pensoft.net/ ; >
+    au < crawling ; exists ; 2025 ; 19 ; Comparative Cytogenetics Volume 2025 ; 2025 ; https://compcytogen.pensoft.net/ ; >
 
    }
 
@@ -822,7 +822,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Nuclear Energy and Technology Volume 2022 ; 2022 ; https://nucet.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Nuclear Energy and Technology Volume 2023 ; 2023 ; https://nucet.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Nuclear Energy and Technology Volume 2024 ; 2024 ; https://nucet.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Nuclear Energy and Technology Volume 2025 ; 2025 ; https://nucet.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Nuclear Energy and Technology Volume 2025 ; 2025 ; https://nucet.pensoft.net/ ; >
 
   }
 
@@ -845,7 +845,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; One Ecosystem Volume 2022 ; 2022 ; https://oneecosystem.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; One Ecosystem Volume 2023 ; 2023 ; https://oneecosystem.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; One Ecosystem Volume 2024 ; 2024 ; https://oneecosystem.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; One Ecosystem Volume 2025 ; 2025 ; https://oneecosystem.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; One Ecosystem Volume 2025 ; 2025 ; https://oneecosystem.pensoft.net/ ; >
 
   }
 
@@ -869,7 +869,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Research Ideas and Outcomes Volume 2022 ; 2022 ; https://riojournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Research Ideas and Outcomes Volume 2023 ; 2023 ; https://riojournal.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Research Ideas and Outcomes Volume 2024 ; 2024 ; https://riojournal.com/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Research Ideas and Outcomes Volume 2025 ; 2025 ; https://riojournal.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Research Ideas and Outcomes Volume 2025 ; 2025 ; https://riojournal.com/ ; >
 
   }
 
@@ -1154,7 +1154,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Bulgarian Cardiology Volume 2022 ; 2022 ; https://journal.bgcardio.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; Bulgarian Cardiology Volume 2023 ; 2023 ; https://journal.bgcardio.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Bulgarian Cardiology Volume 2024 ; 2024 ; https://journal.bgcardio.org/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Bulgarian Cardiology Volume 2025 ; 2025 ; https://journal.bgcardio.org/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Bulgarian Cardiology Volume 2025 ; 2025 ; https://journal.bgcardio.org/ ; >
 
   }
 
@@ -1173,7 +1173,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Silva Balcanica Volume 2022 ; 2022 ; https://silvabalcanica.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Silva Balcanica Volume 2023 ; 2023 ; https://silvabalcanica.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Silva Balcanica Volume 2024 ; 2024 ; https://silvabalcanica.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Silva Balcanica Volume 2025 ; 2025 ; https://silvabalcanica.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Silva Balcanica Volume 2025 ; 2025 ; https://silvabalcanica.pensoft.net/ ; >
 
   }
 
@@ -1209,7 +1209,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Vegetation Classification and Survey Volume 2022 ; 2022 ; https://vcs.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Vegetation Classification and Survey Volume 2023 ; 2023 ; https://vcs.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Vegetation Classification and Survey Volume 2024 ; 2024 ; https://vcs.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Vegetation Classification and Survey Volume 2025 ; 2025 ; https://vcs.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Vegetation Classification and Survey Volume 2025 ; 2025 ; https://vcs.pensoft.net/ ; >
 
   }
 
@@ -1247,7 +1247,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Arthropod Systematics & Phylogeny Volume 2022 ; 2022 ; https://arthropod-systematics.arphahub.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Arthropod Systematics & Phylogeny Volume 2023 ; 2023 ; https://arthropod-systematics.arphahub.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Arthropod Systematics & Phylogeny Volume 2024 ; 2024 ; https://arthropod-systematics.arphahub.com/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Arthropod Systematics & Phylogeny Volume 2025 ; 2025 ; https://arthropod-systematics.arphahub.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Arthropod Systematics & Phylogeny Volume 2025 ; 2025 ; https://arthropod-systematics.arphahub.com/ ; >
 
   }
 
@@ -1363,7 +1363,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Population and Economics Volume 2022 ; 2022 ; https://populationandeconomics.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; Population and Economics Volume 2023 ; 2023 ; https://populationandeconomics.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Population and Economics Volume 2024 ; 2024 ; https://populationandeconomics.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Population and Economics Volume 2025 ; 2025 ; https://populationandeconomics.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Population and Economics Volume 2025 ; 2025 ; https://populationandeconomics.pensoft.net/ ; >
 
   }
 
@@ -1513,7 +1513,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Geologica Saxonica Volume 2022 ; 2022 ; https://geologica-saxonica.arphahub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; Geologica Saxonica Volume 2023 ; 2023 ; https://geologica-saxonica.arphahub.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Geologica Saxonica Volume 2024 ; 2024 ; https://geologica-saxonica.arphahub.com/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Geologica Saxonica Volume 2025 ; 2025 ; https://geologica-saxonica.arphahub.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Geologica Saxonica Volume 2025 ; 2025 ; https://geologica-saxonica.arphahub.com/ ; >
 
   }
 
@@ -1570,7 +1570,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Plant Ecology and Evolution Volume 2022 ; 2022 ; https://plecevo.eu/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Plant Ecology and Evolution Volume 2023 ; 2023 ; https://plecevo.eu/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Plant Ecology and Evolution Volume 2024 ; 2024 ; https://plecevo.eu/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Plant Ecology and Evolution Volume 2025 ; 2025 ; https://plecevo.eu/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Plant Ecology and Evolution Volume 2025 ; 2025 ; https://plecevo.eu/ ; >
 
   }
 
@@ -1587,7 +1587,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Tuhinga Volume 2022 ; 2022 ; https://tuhinga.arphahub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Tuhinga Volume 2024 ; 2024 ; https://tuhinga.arphahub.com/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Tuhinga Volume 2025 ; 2025 ; https://tuhinga.arphahub.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Tuhinga Volume 2025 ; 2025 ; https://tuhinga.arphahub.com/ ; >
 
   }
 
@@ -1633,7 +1633,7 @@
 
       au < exists ; exists ; 2023 ; 2023 ; Bulgarian Society of Medical Sciences Journal Volume 2023 ; 2023 ; https://bsms.arphahub.com/ ; >
       au < frozen ; exists ; 2024 ; 2024 ; Bulgarian Society of Medical Sciences Journal Volume 2024 ; 2024 ; https://bsms.arphahub.com/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Bulgarian Society of Medical Sciences Journal Volume 2025 ; 2025 ; https://bsms.arphahub.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Bulgarian Society of Medical Sciences Journal Volume 2025 ; 2025 ; https://bsms.arphahub.com/ ; >
 
   }
 
@@ -1677,7 +1677,7 @@
       param[au_oai_set] = geostudies
 
       au < manifest ; exists ; 2024 ; 2024 ; GeoStudies Volume 2024 ; 2024 ; https://geostudies.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; GeoStudies Volume 2025 ; 2025 ; https://geostudies.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; GeoStudies Volume 2025 ; 2025 ; https://geostudies.net/ ; >
 
   }
 
@@ -1777,7 +1777,7 @@
       param[au_oai_set] = nhcm
 
       au < manifest ; exists ; 2024 ; 2024 ; Natural History Collections and Museomics Volume 2024 ; 2024 ; https://nhcm.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Natural History Collections and Museomics Volume 2025 ; 2025 ; https://nhcm.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Natural History Collections and Museomics Volume 2025 ; 2025 ; https://nhcm.pensoft.net/ ; >
 
   }
 
@@ -1832,7 +1832,7 @@
 
       param[au_oai_set] = ibe
 
-      au < ready ; exists ; 2025 ; 1 ; Individual-based Ecology (IBE) Volume 2025 ; 2025 ; https://ibe.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 1 ; Individual-based Ecology (IBE) Volume 2025 ; 2025 ; https://ibe.pensoft.net/ ; >
 
   }
 

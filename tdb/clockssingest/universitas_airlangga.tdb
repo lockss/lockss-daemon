@@ -315,7 +315,7 @@
       au < finished ; manifest ; 2022 ; Global Strategis Volume 16 ; 16 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Global Strategis Volume 17 ; 17 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Global Strategis Volume 18 ; 18 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Global Strategis Volume 19 ; 19 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Global Strategis Volume 19 ; 19 ; 2025 ; >
 
   }
 
@@ -412,7 +412,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 14 ; 14 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 15 ; 15 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 16 ; 16 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 17 ; 17 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Ilmiah Perikanan dan Kelautan Volume 17 ; 17 ; 2025 ; >
 
   }
 
@@ -554,7 +554,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Kesehatan Lingkungan Volume 15 ; 15 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Jurnal Kesehatan Lingkungan Volume 16 ; 16 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Kesehatan Lingkungan Volume 17 ; 17 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Kesehatan Lingkungan Volume 18 ; 18 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Kesehatan Lingkungan Volume 18 ; 18 ; 2025 ; >
 
   }
 
@@ -600,7 +600,7 @@
       au < finished ; manifest ; 2022 ; The Indonesian Journal of Public Health Volume 17 ; 17 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; The Indonesian Journal of Public Health Volume 18 ; 18 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; The Indonesian Journal of Public Health Volume 19 ; 19 ; 2024 ; >
-      au < ready ; exists ; 2025 ; The Indonesian Journal of Public Health Volume 20 ; 20 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; The Indonesian Journal of Public Health Volume 20 ; 20 ; 2025 ; >
 
   }
 
@@ -649,7 +649,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 10 ; 10 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 11 ; 11 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 12 ; 12 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 13 ; 13 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Promkes: The Indonesian Journal of Health Promotion and Health Education Volume 13 ; 13 ; 2025 ; >
 
   }
 
@@ -673,7 +673,7 @@
       au < finished ; manifest ; 2022 ; The Indonesian Journal of Occupational Safety and Health Volume 11 ; 11 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; The Indonesian Journal of Occupational Safety and Health Volume 12 ; 12 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; The Indonesian Journal of Occupational Safety and Health Volume 13 ; 13 ; 2024 ; >
-      au < ready ; exists ; 2025 ; The Indonesian Journal of Occupational Safety and Health Volume 14 ; 14 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; The Indonesian Journal of Occupational Safety and Health Volume 14 ; 14 ; 2025 ; >
 
   }
 
@@ -754,7 +754,7 @@
       au < finished ; manifest ; 2022 ; Journal Of Vocational Health Studies Volume 6 ; 6 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Journal Of Vocational Health Studies Volume 7 ; 7 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Journal Of Vocational Health Studies Volume 8 ; 8 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Journal Of Vocational Health Studies Volume 9 ; 9 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Journal Of Vocational Health Studies Volume 9 ; 9 ; 2025 ; >
 
   }
 
@@ -842,7 +842,7 @@
       au < finished ; manifest ; 2022 ; Airlangga International Journal of Islamic Economics and Finance Volume 5 ; 5 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Airlangga International Journal of Islamic Economics and Finance Volume 6 ; 6 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Airlangga International Journal of Islamic Economics and Finance Volume 7 ; 7 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Airlangga International Journal of Islamic Economics and Finance Volume 8 ; 8 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Airlangga International Journal of Islamic Economics and Finance Volume 8 ; 8 ; 2025 ; >
 
   }
 
@@ -864,7 +864,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Medik Veteriner Volume 6 ; 6 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Medik Veteriner Volume 7 ; 7 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Medik Veteriner Volume 8 ; 8 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Medik Veteriner Volume 9 ; 9 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Medik Veteriner Volume 9 ; 9 ; 2025 ; >
 
   }
 
@@ -925,7 +925,7 @@
       au < finished ; manifest ; 2022 ; Journal of Basic Medical Veterinary Volume 11 ; 11 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Journal of Basic Medical Veterinary Volume 12 ; 12 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Journal of Basic Medical Veterinary Volume 13 ; 13 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Journal of Basic Medical Veterinary Volume 14 ; 14 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Journal of Basic Medical Veterinary Volume 14 ; 14 ; 2025 ; >
 
   }
 
@@ -973,7 +973,7 @@
 
       au < frozen ; exists ; 2023 ; Southeast Asian Business Review Volume 1 ; 1 ; 2023 ; >
       au < frozen ; exists ; 2024 ; Southeast Asian Business Review Volume 2 ; 2 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Southeast Asian Business Review Volume 3 ; 3 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Southeast Asian Business Review Volume 3 ; 3 ; 2025 ; >
 
   }
 
@@ -1050,7 +1050,7 @@
       au < finished ; manifest ; 2022 ; Jurist-Diction Volume 5 ; 5 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurist-Diction Volume 6 ; 6 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jurist-Diction Volume 7 ; 7 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurist-Diction Volume 8 ; 8 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurist-Diction Volume 8 ; 8 ; 2025 ; >
 
   }
 
@@ -1108,7 +1108,7 @@
       au < finished ; manifest ; 2022 ; Journal of Vocational Nursing Volume 3 ; 3 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Journal of Vocational Nursing Volume 4 ; 4 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Journal of Vocational Nursing Volume 5 ; 5 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Journal of Vocational Nursing Volume 6 ; 6 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Journal of Vocational Nursing Volume 6 ; 6 ; 2025 ; >
 
   }
 
@@ -1304,7 +1304,7 @@
       au < finished ; manifest ; 2022 ; Notaire Volume 5 ; 5 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Notaire Volume 6 ; 6 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Notaire Volume 7 ; 7 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Notaire Volume 8 ; 8 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Notaire Volume 8 ; 8 ; 2025 ; >
 
   }
 
@@ -1371,7 +1371,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Ilmu Ekonomi Terapan Volume 7 ; 7 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Jurnal Ilmu Ekonomi Terapan Volume 8 ; 8 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Ilmu Ekonomi Terapan Volume 9 ; 9 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Ilmu Ekonomi Terapan Volume 10 ; 10 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Ilmu Ekonomi Terapan Volume 10 ; 10 ; 2025 ; >
 
   }
 
@@ -1440,7 +1440,7 @@
       au < finished ; manifest ; 2022 ; Berkala Akuntansi dan Keuangan Indonesia Volume 7 ; 7 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Berkala Akuntansi dan Keuangan Indonesia Volume 8 ; 8 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Berkala Akuntansi dan Keuangan Indonesia Volume 9 ; 9 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Berkala Akuntansi dan Keuangan Indonesia Volume 10 ; 10 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Berkala Akuntansi dan Keuangan Indonesia Volume 10 ; 10 ; 2025 ; >
 
   }
 
@@ -1462,7 +1462,7 @@
       au < finished ; manifest ; 2022 ; Airlangga Development Journal Volume 6 ; 6 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Airlangga Development Journal Volume 7 ; 7 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Airlangga Development Journal Volume 8 ; 8 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Airlangga Development Journal Volume 9 ; 9 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Airlangga Development Journal Volume 9 ; 9 ; 2025 ; >
 
   }
 
@@ -1506,7 +1506,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Layanan Masyarakat Volume 6 ; 6 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Layanan Masyarakat Volume 7 ; 7 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Layanan Masyarakat Volume 8 ; 8 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Layanan Masyarakat Volume 9 ; 9 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Layanan Masyarakat Volume 9 ; 9 ; 2025 ; >
 
   }
 
@@ -1599,7 +1599,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Psikiatri Surabaya Volume 11 ; 11 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Psikiatri Surabaya Volume 12 ; 12 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Psikiatri Surabaya Volume 13 ; 13 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Psikiatri Surabaya Volume 14 ; 14 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Psikiatri Surabaya Volume 14 ; 14 ; 2025 ; >
 
   }
 
@@ -1643,7 +1643,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Sosiologi Dialektika Volume 17 ; 17 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Sosiologi Dialektika Volume 18 ; 18 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Sosiologi Dialektika Volume 19 ; 19 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Sosiologi Dialektika Volume 20 ; 20 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Sosiologi Dialektika Volume 20 ; 20 ; 2025 ; >
 
   }
 
@@ -1723,7 +1723,7 @@
       au < finished ; manifest ; 2022 ; Majalah Biomorfologi Volume 32 ; 32 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Majalah Biomorfologi Volume 33 ; 33 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Majalah Biomorfologi Volume 34 ; 34 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Majalah Biomorfologi Volume 35 ; 35 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Majalah Biomorfologi Volume 35 ; 35 ; 2025 ; >
 
   }
 
@@ -1779,7 +1779,7 @@
       au < finished ; manifest ; 2022 ; Journal of Applied Veterinary Science and Technology Volume 3 ; 3 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Journal of Applied Veterinary Science and Technology Volume 4 ; 4 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Journal of Applied Veterinary Science and Technology Volume 5 ; 5 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Journal of Applied Veterinary Science and Technology Volume 6 ; 6 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Journal of Applied Veterinary Science and Technology Volume 6 ; 6 ; 2025 ; >
 
   }
 
@@ -1819,7 +1819,7 @@
       au < finished ; manifest ; 2022 ; Cardiovascular and Cardiometabolic Journal Volume 3 ; 3 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Cardiovascular and Cardiometabolic Journal Volume 4 ; 4 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Cardiovascular and Cardiometabolic Journal Volume 5 ; 5 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Cardiovascular and Cardiometabolic Journal Volume 6 ; 6 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Cardiovascular and Cardiometabolic Journal Volume 6 ; 6 ; 2025 ; >
 
   }
 
@@ -1878,7 +1878,7 @@
       au < finished ; manifest ; 2022 ; Media Gizi Kesmas Volume 11 ; 11 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Media Gizi Kesmas Volume 12 ; 12 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Media Gizi Kesmas Volume 13 ; 13 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Media Gizi Kesmas Volume 14 ; 14 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Media Gizi Kesmas Volume 14 ; 14 ; 2025 ; >
 
   }
 
@@ -1934,7 +1934,7 @@
       au < finished ; manifest ; 2022 ; Media Kedokteran Hewan Volume 33 ; 33 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Media Kedokteran Hewan Volume 34 ; 34 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Media Kedokteran Hewan Volume 35 ; 35 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Media Kedokteran Hewan Volume 36 ; 36 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Media Kedokteran Hewan Volume 36 ; 36 ; 2025 ; >
 
   }
 
@@ -2011,7 +2011,7 @@
       au < finished ; manifest ; 2022 ; Medkom (Jurnal Media dan Komunikasi) Volume 3 ; 3 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Medkom (Jurnal Media dan Komunikasi) Volume 4 ; 4 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Medkom (Jurnal Media dan Komunikasi) Volume 5 ; 5 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Medkom (Jurnal Media dan Komunikasi) Volume 6 ; 6 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Medkom (Jurnal Media dan Komunikasi) Volume 6 ; 6 ; 2025 ; >
 
   }
 
@@ -2030,7 +2030,7 @@
       au < finished ; manifest ; 2022 ; Palimpsest: Journal of Information and Library Science Volume 13 ; 13 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Palimpsest: Journal of Information and Library Science Volume 14 ; 14 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Palimpsest: Journal of Information and Library Science Volume 15 ; 15 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Palimpsest: Journal of Information and Library Science Volume 16 ; 16 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Palimpsest: Journal of Information and Library Science Volume 16 ; 16 ; 2025 ; >
 
   }
 
@@ -2066,7 +2066,7 @@
       au < finished ; manifest ; 2022 ; Buletin Riset Psikologi dan Kesehatan Mental Volume 2 ; 2 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Buletin Riset Psikologi dan Kesehatan Mental Volume 3 ; 3 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Buletin Riset Psikologi dan Kesehatan Mental Volume 4 ; 4 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Buletin Riset Psikologi dan Kesehatan Mental Volume 5 ; 5 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Buletin Riset Psikologi dan Kesehatan Mental Volume 5 ; 5 ; 2025 ; >
 
   }
 
@@ -2210,7 +2210,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; Journal of Aquaculture Science Volume 7 ; 7 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Journal of Aquaculture Science Volume 8 ; 8 ; 2023 ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 2024 ; Journal of Aquaculture Science Volume 9 ; 9 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Journal of Aquaculture Science Volume 10 ; 10 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Journal of Aquaculture Science Volume 10 ; 10 ; 2025 ; >
 
   }
   } #end URL
