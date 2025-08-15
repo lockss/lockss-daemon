@@ -26,10 +26,10 @@
     param[journal_id] = abbs
 
     au < doNotProcess ; exists ; 2003 ; 2003 ; Acta Biochimica et Biophysica Sinica Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Acta Biochimica et Biophysica Sinica Volume 36 ; 36 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Acta Biochimica et Biophysica Sinica Volume 37 ; 37 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Acta Biochimica et Biophysica Sinica Volume 38 ; 38 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Acta Biochimica et Biophysica Sinica Volume 39 ; 39 ; >
     au < finished ; finished ; 2008 ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
@@ -124,14 +124,14 @@
     au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Aesthetic Surgery Journal Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Aesthetic Surgery Journal Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Aesthetic Surgery Journal Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2000 ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2002 ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 ; >
+    au < doNotProcess ; exists ; 2000 ; 2000 ; Aesthetic Surgery Journal Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 2001 ; 2001 ; Aesthetic Surgery Journal Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 2002 ; 2002 ; Aesthetic Surgery Journal Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 2003 ; 2003 ; Aesthetic Surgery Journal Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 2004 ; 2004 ; Aesthetic Surgery Journal Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 2005 ; 2005 ; Aesthetic Surgery Journal Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 2006 ; 2006 ; Aesthetic Surgery Journal Volume 26 ; 26 ; >
+    au < doNotProcess ; exists ; 2007 ; 2007 ; Aesthetic Surgery Journal Volume 27 ; 27 ; >
     au < finished ; manifest ; 2008 ; 2008 ; Aesthetic Surgery Journal Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Aesthetic Surgery Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Aesthetic Surgery Journal Volume 30 ; 30 ; >
@@ -9606,15 +9606,28 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Interactive CardioVascular and Thoracic Surgery Volume 18-19 ; 18-19 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Interactive CardioVascular and Thoracic Surgery Volume 20-21 ; 20-21 ; >
     au < finished ; crawling ; 2016 ; 2016 ; Interactive CardioVascular and Thoracic Surgery Volume 22-23 ; 22-23 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < finished ; crawling ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 25 ; 25 ; reingest4.clockss.org:8082 >
-    au < finished ; manifest ; 2019 ; 2019 ; Interactive CardioVascular and Thoracic Surgery Volume 26 ; 26 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2020 ; 2020 ; Interactive CardioVascular and Thoracic Surgery Volume 27 ; 27 ; >
-    au < finished ; manifest ; 2021 ; 2021 ; Interactive CardioVascular and Thoracic Surgery Volume 28 ; 28 ; reingest1.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; 2022 ; Interactive CardioVascular and Thoracic Surgery Volume 29 ; 29 ; >
-    au < finished ; manifest ; 2023 ; 2023 ; Interactive CardioVascular and Thoracic Surgery Volume 30 ; 30 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2024 ; 2024 ; Interactive CardioVascular and Thoracic Surgery Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Interactive CardioVascular and Thoracic Surgery Volume 32 ; 32 ; >
+    au < finished ; crawling ; 2017 ; 2017 ; Interactive CardioVascular and Thoracic Surgery Volume 24-25 ; 24-25 ; reingest5.clockss.org:8082 >
+    au < finished ; crawling ; 2018 ; 2018 ; Interactive CardioVascular and Thoracic Surgery Volume 26-27 ; 26-27 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 2019 ; Interactive CardioVascular and Thoracic Surgery Volume 28-29 ; 28-29 ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 2020 ; 2020 ; Interactive CardioVascular and Thoracic Surgery Volume 30-31 ; 30-31 ; >
+    au < finished ; manifest ; 2021 ; 2021 ; Interactive CardioVascular and Thoracic Surgery Volume 32-33 ; 32-33 ; reingest1.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2022 ; 2022 ; Interactive CardioVascular and Thoracic Surgery Volume 34-35 ; 34-35 ; >
+
+  }
+
+  {
+
+    title <
+      name = Interdisciplinary CardioVascular and Thoracic Surgery ;
+      eissn = 2753-670X ;
+      issnl = 2753-670X
+    >
+
+    param[journal_id] = icvts
+
+    au < finished ; manifest ; 2023 ; 2023 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 36-37 ; 36-37 ; reingest3.clockss.org:8083 >
+    au < deepCrawl ; exists ; 2024 ; 2024 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 38-39 ; 38-39 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Interdisciplinary CardioVascular and Thoracic Surgery Volume 40-41 ; 40-41 ; >
 
   }
 
@@ -9629,6 +9642,8 @@
     param[journal_id] = ia
     #this title was ONLY in the publisher listing
 
+    au < exists ; exists ; 2008 ; 2008 ; International Affairs Volume 84 ; 84 ;  >
+    au < exists ; exists ; 2009 ; 2009 ; International Affairs Volume 85 ; 85 ;  >
     au < finished ; crawling ; 2010 ; 2010 ; International Affairs Volume 86 ; 86 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; 2011 ; International Affairs Volume 87 ; 87 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 ; reingest1.clockss.org:8082 >
