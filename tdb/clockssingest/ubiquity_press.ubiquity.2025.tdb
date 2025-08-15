@@ -144,7 +144,7 @@
       nondefparam[base_url2] = https://account.hysafejournal.org/
       nondefparam[journal_id] = kitl-j-hs
 
-      au < notReady ; exists ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; KIT Scientific Publishing ; Issue URL does not redirect to journal site ; https://hysafejournal.org/ ; >
+      au < notReady ; exists ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; KIT Scientific Publishing ; Issue URL does not redirect to journal sit. https://account.hysafejournal.org/index.php/kitl-j-hs/gateway/clockss?year=2024 ; https://hysafejournal.org/ ; >
       au < crawling ; exists ; 2025 ; 2 ; Hydrogen Safety Volume 2025 ; 2025 ; 2 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ ; >
 
   }
