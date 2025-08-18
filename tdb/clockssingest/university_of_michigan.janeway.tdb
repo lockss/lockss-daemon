@@ -332,7 +332,7 @@
       au < frozen ; exists ; 2022 ; 29 ; Michigan Journal of Community Service Learning Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 30 ; Michigan Journal of Community Service Learning Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 31 ; Michigan Journal of Community Service Learning Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 32 ; Michigan Journal of Community Service Learning Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 32 ; Michigan Journal of Community Service Learning Volume 2025 ; 2025 ; >
 
   }
 
@@ -433,7 +433,7 @@
       au < exists ; exists ; 2022 ; 37 ; NASIG Proceedings Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 38 ; NASIG Proceedings Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 39 ; NASIG Proceedings Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 40 ; NASIG Proceedings Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 40 ; NASIG Proceedings Volume 2025 ; 2025 ; >
 
   }
 
@@ -677,7 +677,7 @@
       param[journal_id] = ujph
 
       au < frozen ; exists ; 2024 ; 8 ; Undergraduate Journal of Public Health Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 9 ; Undergraduate Journal of Public Health Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 9 ; Undergraduate Journal of Public Health Volume 2025 ; 2025 ; >
 
   }
 
@@ -860,7 +860,7 @@
       au < manifest ; exists ; 2022 ; 16 ; Journal of Muslim Mental Health Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 17 ; Journal of Muslim Mental Health Volume 2023 ; 2023 ; >
       au < ready ; exists ; 2024 ; 18 ; Journal of Muslim Mental Health Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 19 ; Journal of Muslim Mental Health Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; 19 ; Journal of Muslim Mental Health Volume 2025 ; 2025 ; >
 
   }
 

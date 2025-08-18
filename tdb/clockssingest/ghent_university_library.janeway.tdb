@@ -98,7 +98,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 40 ; Documenta Volume 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; 41 ; Documenta Volume 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; 42 ; Documenta Volume 2024 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2025 ; 2025 ; 43 ; Documenta Volume 2025 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; 43 ; Documenta Volume 2025 ; >
 
   }
 
@@ -156,7 +156,7 @@
       #param[journal_id] = lcj
 
       au < ready ; exists ; 2024 ; 2024 ; 2024 ; Law & Criminology Journal Volume 2024 ; >
-      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Law & Criminology Journal Volume 2025 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; 2025 ; Law & Criminology Journal Volume 2025 ; >
 
   }
 
@@ -945,7 +945,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; EWOP in Practice Volume 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; 2023 ; EWOP in Practice Volume 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; EWOP in Practice Volume 2024 ; >
-      au < ready ; exists ; 2025 ; 2025 ; 2025 ; EWOP in Practice Volume 2025 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; 2025 ; EWOP in Practice Volume 2025 ; >
 
   }
 
@@ -1190,7 +1190,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; 2022 ; NISE Essays Volume 2022 ; > #No content
       au < finished ; manifest ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; NISE Essays Volume 2024 ; >
-      au < ready ; exists ; 2025 ; 2025 ; 2025 ; NISE Essays Volume 2025 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; 2025 ; NISE Essays Volume 2025 ; >
 
   }
 
@@ -1643,7 +1643,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Tetradio Volume 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; 2023 ; Tetradio Volume 2023 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; 2024 ; Tetradio Volume 2024 ; > #No content
-      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Tetradio Volume 2025 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; 2025 ; Tetradio Volume 2025 ; >
 
   }
 
@@ -1662,7 +1662,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Tijdschrift Sociologie Volume 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 ; >
 
   }
 

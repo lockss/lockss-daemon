@@ -136,7 +136,7 @@
      au < finished ; manifest ; 2022 ; 69 ; Deutsche Entomologische Zeitschrift Volume 2022 ; 2022 ; https://dez.pensoft.net/ ; reingest3.clockss.org:8083 >
      au < finished ; manifest ; 2023 ; 70 ; Deutsche Entomologische Zeitschrift Volume 2023 ; 2023 ; https://dez.pensoft.net/ ; reingest5.clockss.org:8082 >
      au < deepCrawl ; exists ; 2024 ; 71 ; Deutsche Entomologische Zeitschrift Volume 2024 ; 2024 ; https://dez.pensoft.net/ ; >
-     au < ready ; exists ; 2025 ; 72 ; Deutsche Entomologische Zeitschrift Volume 2025 ; 2025 ; https://dez.pensoft.net/ ; >
+     au < crawling ; exists ; 2025 ; 72 ; Deutsche Entomologische Zeitschrift Volume 2025 ; 2025 ; https://dez.pensoft.net/ ; >
 
    }
    
@@ -230,7 +230,7 @@
     au < finished ; manifest ; 2022 ; 86-94 ; MycoKeys Volume 2022 ; 2022 ; https://mycokeys.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 95-100 ; MycoKeys Volume 2023 ; 2023 ; https://mycokeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 101-111 ; MycoKeys Volume 2024 ; 2024 ; https://mycokeys.pensoft.net/ ; >
-    au < ready ; exists ; 2025 ; 112-122 ; MycoKeys Volume 2025 ; 2025 ; https://mycokeys.pensoft.net/ ; >
+    au < crawling ; exists ; 2025 ; 112-122 ; MycoKeys Volume 2025 ; 2025 ; https://mycokeys.pensoft.net/ ; >
 
    }
   
@@ -257,7 +257,7 @@
     au < finished ; manifest ; 2022 ; 46-50 ; Nature Conservation Volume 2022 ; 2022 ; https://natureconservation.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 51-54 ; Nature Conservation Volume 2023 ; 2023 ; https://natureconservation.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 55-57 ; Nature Conservation Volume 2024 ; 2024 ; https://natureconservation.pensoft.net/ ; >
-    au < ready ; exists ; 2025 ; 58-60 ; Nature Conservation Volume 2025 ; 2025 ; https://natureconservation.pensoft.net/ ; >
+    au < crawling ; exists ; 2025 ; 58-60 ; Nature Conservation Volume 2025 ; 2025 ; https://natureconservation.pensoft.net/ ; >
 
    }
   
@@ -437,7 +437,7 @@
     au < finished ; manifest ; 2022 ; 98 ; Zoosystematics and Evolution Volume 2022 ; 2022 ; https://zse.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 99 ; Zoosystematics and Evolution Volume 2023 ; 2023 ; https://zse.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 100 ; Zoosystematics and Evolution Volume 2024 ; 2024 ; https://zse.pensoft.net/ ; >
-    au < ready ; exists ; 2025 ; 101 ; Zoosystematics and Evolution Volume 2025 ; 2025 ; https://zse.pensoft.net/ ; >
+    au < crawling ; exists ; 2025 ; 101 ; Zoosystematics and Evolution Volume 2025 ; 2025 ; https://zse.pensoft.net/ ; >
 
     }
 
@@ -717,7 +717,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Journal of Orthoptera Research Volume 2022 ; 2022 ; https://jor.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Journal of Orthoptera Research Volume 2023 ; 2023 ; https://jor.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Orthoptera Research Volume 2024 ; 2024 ; https://jor.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Journal of Orthoptera Research Volume 2025 ; 2025 ; https://jor.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Journal of Orthoptera Research Volume 2025 ; 2025 ; https://jor.pensoft.net/ ; >
 
   }
 
@@ -779,7 +779,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Metabarcoding and Metagenomics Volume 2022 ; 2022 ; https://mbmg.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; Metabarcoding and Metagenomics Volume 2023 ; 2023 ; https://mbmg.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Metabarcoding and Metagenomics Volume 2024 ; 2024 ; https://mbmg.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Metabarcoding and Metagenomics Volume 2025 ; 2025 ; https://mbmg.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Metabarcoding and Metagenomics Volume 2025 ; 2025 ; https://mbmg.pensoft.net/ ; >
 
   }
 
@@ -1013,7 +1013,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; ARPHA Proceedings Volume 2022 ; 2022 ; https://ap.pensoft.net/ ; reingest4.clockss.org:8082 >
 
       au < manifest ; exists ; 2024 ; 2024 ; ARPHA Proceedings Volume 2024 ; 2024 ; https://ap.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; ARPHA Proceedings Volume 2025 ; 2025 ; https://ap.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; ARPHA Proceedings Volume 2025 ; 2025 ; https://ap.pensoft.net/ ; >
 
   }
 
@@ -1049,7 +1049,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; NeoTropical Biology and Conservation Volume 2022 ; 2022 ; https://neotropical.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; NeoTropical Biology and Conservation Volume 2023 ; 2023 ; https://neotropical.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; NeoTropical Biology and Conservation Volume 2024 ; 2024 ; https://neotropical.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; NeoTropical Biology and Conservation Volume 2025 ; 2025 ; https://neotropical.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; NeoTropical Biology and Conservation Volume 2025 ; 2025 ; https://neotropical.pensoft.net/ ; >
 
   }
 
@@ -1070,7 +1070,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; OGH Herpetozoa Volume 2022 ; 2022 ; https://herpetozoa.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; OGH Herpetozoa Volume 2023 ; 2023 ; https://herpetozoa.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; OGH Herpetozoa Volume 2024 ; 2024 ; https://herpetozoa.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; OGH Herpetozoa Volume 2025 ; 2025 ; https://herpetozoa.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; OGH Herpetozoa Volume 2025 ; 2025 ; https://herpetozoa.pensoft.net/ ; >
 
   }
 
@@ -1111,7 +1111,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2022 ; 2022 ; https://travaux.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2023 ; 2023 ; https://travaux.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2024 ; 2024 ; https://travaux.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2025 ; 2025 ; https://travaux.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Journal of the Grigore Antipa National Museum of Natural History Volume 2025 ; 2025 ; https://travaux.pensoft.net/ ; >
 
   }
 
@@ -1437,7 +1437,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; BRICS Journal of Economics Volume 2022 ; 2022 ; https://brics-econ.arphahub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; BRICS Journal of Economics Volume 2023 ; 2023 ; https://brics-econ.arphahub.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; BRICS Journal of Economics Volume 2024 ; 2024 ; https://brics-econ.arphahub.com/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; BRICS Journal of Economics Volume 2025 ; 2025 ; https://brics-econ.arphahub.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; BRICS Journal of Economics Volume 2025 ; 2025 ; https://brics-econ.arphahub.com/ ; >
 
   }
 
@@ -1663,7 +1663,7 @@
       param[au_oai_set] = emt
 
       au < manifest ; exists ; 2024 ; 2024 ; Estuarine Management and Technologies Volume 2024 ; 2024 ; https://emt.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Estuarine Management and Technologies Volume 2025 ; 2025 ; https://emt.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Estuarine Management and Technologies Volume 2025 ; 2025 ; https://emt.pensoft.net/ ; >
 
   }
 
@@ -1706,7 +1706,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; IMA Fungus Volume 2022 ; 2022 ; https://imafungus.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; 2023 ; IMA Fungus Volume 2023 ; 2023 ; https://imafungus.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < manifest ; exists ; 2024 ; 2024 ; IMA Fungus Volume 2024 ; 2024 ; https://imafungus.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; IMA Fungus Volume 2025 ; 2025 ; https://imafungus.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; IMA Fungus Volume 2025 ; 2025 ; https://imafungus.pensoft.net/ ; >
 
   }
 
@@ -1726,7 +1726,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Innovations in Agriculture Volume 2022 ; 2022 ; https://innovationsagriculture.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Innovations in Agriculture Volume 2023 ; 2023 ; https://innovationsagriculture.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2024 ; 2024 ; Innovations in Agriculture Volume 2024 ; 2024 ; https://innovationsagriculture.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Innovations in Agriculture Volume 2025 ; 2025 ; https://innovationsagriculture.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Innovations in Agriculture Volume 2025 ; 2025 ; https://innovationsagriculture.pensoft.net/ ; >
 
   }
 
@@ -1805,7 +1805,7 @@
       param[au_oai_set] = biogeography
 
       au < manifest ; exists ; 2024 ; 2024 ; Frontiers of Biogeography Volume 2024 ; 2024 ; https://biogeography.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Frontiers of Biogeography Volume 2025 ; 2025 ; https://biogeography.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Frontiers of Biogeography Volume 2025 ; 2025 ; https://biogeography.pensoft.net/ ; >
 
   }
 
@@ -1819,7 +1819,7 @@
 
       param[au_oai_set] = bulletinofinsectology
 
-      au < ready ; exists ; 2025 ; 78 ; Bulletin of Insectology Volume 2025 ; 2025 ; https://bulletinofinsectology.org/ ; >
+      au < crawling ; exists ; 2025 ; 78 ; Bulletin of Insectology Volume 2025 ; 2025 ; https://bulletinofinsectology.org/ ; >
 
   }
 
@@ -1846,7 +1846,7 @@
 
       param[au_oai_set] = skinonline
 
-      au < ready ; exists ; 2025 ; 1 ; SKINdeep Volume 2025 ; 2025 ; https://skindeep.skinonline.org/ ; >
+      au < crawling ; exists ; 2025 ; 1 ; SKINdeep Volume 2025 ; 2025 ; https://skindeep.skinonline.org/ ; >
 
   }
 
