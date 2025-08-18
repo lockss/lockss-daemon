@@ -1561,10 +1561,10 @@
       nondefparam[base_url2] = https://account.psychologicabelgica.com/
       nondefparam[journal_id] = up-j-pb
 
-      au < exists ; exists ; 2001 ; 41 ; Psychologica Belgica Volume 2001 ; 2001 ; 41 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < exists ; exists ; 2002 ; 42 ; Psychologica Belgica Volume 2002 ; 2002 ; 42 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < exists ; exists ; 2003 ; 43 ; Psychologica Belgica Volume 2003 ; 2003 ; 43 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
-      au < exists ; exists ; 2004 ; 44 ; Psychologica Belgica Volume 2004 ; 2004 ; 44 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < manifest ; exists ; 2001 ; 41 ; Psychologica Belgica Volume 2001 ; 2001 ; 41 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < manifest ; exists ; 2002 ; 42 ; Psychologica Belgica Volume 2002 ; 2002 ; 42 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < manifest ; exists ; 2003 ; 43 ; Psychologica Belgica Volume 2003 ; 2003 ; 43 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
+      au < manifest ; exists ; 2004 ; 44 ; Psychologica Belgica Volume 2004 ; 2004 ; 44 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2005 ; 45 ; Psychologica Belgica Volume 2005 ; 2005 ; 45 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2006 ; 46 ; Psychologica Belgica Volume 2006 ; 2006 ; 46 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2007 ; 47 ; Psychologica Belgica Volume 2007 ; 2007 ; 47 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; reingest4.clockss.org:8082 >
@@ -2248,7 +2248,7 @@
       au < superseded ; exists ; 2022 ; 11 ; Stability: International Journal of Security & Development Volume 2022 [superseded] ; 2022 ; 11 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; 12 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; >
       au < expected ; exists ; 2024 ; 13 ; Stability: International Journal of Security & Development Volume 2024 ; 2024 ; 13 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
-      au < expected ; exists ; 2025 ; 14 ; Stability: International Journal of Security & Development Volume 2025 ; 2025 ; 14 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
+      au < manifest ; exists ; 2025 ; 14 ; Stability: International Journal of Security & Development Volume 2025 ; 2025 ; 14 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
 
   }
 
