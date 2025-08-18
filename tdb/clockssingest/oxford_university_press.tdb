@@ -2636,8 +2636,8 @@
     au < crawling ; exists ; 2012 ; 2012 ; Biometrics Volume 68 ; 68 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Biometrics Volume 69 ; 69 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Biometrics Volume 70 ; 70 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Biometrics Volume 71 ; 71 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Biometrics Volume 72 ; 72 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Biometrics Volume 71 ; 71 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Biometrics Volume 72 ; 72 ; >
     au < ready ; exists ; 2017 ; 2017 ; Biometrics Volume 73 ; 73 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Biometrics Volume 74 ; 74 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Biometrics Volume 75 ; 75 ; >
@@ -3906,16 +3906,16 @@
 
     param[journal_id] = chemlett
 
-    au < testing ; exists ; 2008 ; 2008 ; Chemistry Letters Volume 37 ; 37 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Chemistry Letters Volume 38 ; 38 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Chemistry Letters Volume 39 ; 39 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Chemistry Letters Volume 40 ; 40 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Chemistry Letters Volume 41 ; 41 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Chemistry Letters Volume 42 ; 42 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Chemistry Letters Volume 43 ; 43 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Chemistry Letters Volume 44 ; 44 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Chemistry Letters Volume 45 ; 45 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Chemistry Letters Volume 46 ; 46 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Chemistry Letters Volume 37 ; 37 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Chemistry Letters Volume 38 ; 38 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Chemistry Letters Volume 39 ; 39 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Chemistry Letters Volume 40 ; 40 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Chemistry Letters Volume 41 ; 41 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Chemistry Letters Volume 42 ; 42 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Chemistry Letters Volume 43 ; 43 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Chemistry Letters Volume 44 ; 44 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Chemistry Letters Volume 45 ; 45 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Chemistry Letters Volume 46 ; 46 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Chemistry Letters Volume 47 ; 47 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Chemistry Letters Volume 48 ; 48 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Chemistry Letters Volume 49 ; 49 ; >
@@ -3985,7 +3985,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Children & Schools Volume 44 ; 44 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Children & Schools Volume 45 ; 45 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Children & Schools Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2025 ;2025 ; Children & Schools Volume 47 ; 47 ; >
+    au < ready ; exists ; 2025 ;2025 ; Children & Schools Volume 47 ; 47 ; >
 
   }
 
@@ -4201,7 +4201,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical & Experimental Immunology Volume 207-210 ; 207-210 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Clinical & Experimental Immunology Volume 211-214 ; 211-214 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Clinical & Experimental Immunology Volume 215-218 ; 215-218 ; >
-    au < manifest ; exists ; 2025 ;2025 ; Clinical & Experimental Immunology Volume 219-222 ; 219-222 ; >
+    au < ready ; exists ; 2025 ;2025 ; Clinical & Experimental Immunology Volume 219-222 ; 219-222 ; >
 
   }
 
@@ -4583,7 +4583,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Conservation Physiology Volume 10 ; 10 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Conservation Physiology Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Conservation Physiology Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2025 ;2025 ; Conservation Physiology Volume 13 ; 13 ; >
+    au < ready ; exists ; 2025 ;2025 ; Conservation Physiology Volume 13 ; 13 ; >
 
   }
   #Publisher and previous TDB differ on eissn - 1754-1476 vs 1754-1484
@@ -4676,7 +4676,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Contributions to Political Economy Volume 41 ; 41 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Contributions to Political Economy Volume 42 ; 42 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Contributions to Political Economy Volume 43 ; 43 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Contributions to Political Economy Volume 44 ; 44 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Contributions to Political Economy Volume 44 ; 44 ; >
 
   }
 
@@ -4888,16 +4888,16 @@
 
     param[journal_id] = dmfr
 
-    au < testing ; exists ; 2008 ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; >
-    au < testing ; exists ; 2012 ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; >
-    au < testing ; exists ; 2013 ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; >
-    au < testing ; exists ; 2014 ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; >
-    au < testing ; exists ; 2015 ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 ; >
-    au < testing ; exists ; 2016 ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; >
+    au < ready ; exists ; 2012 ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; >
+    au < ready ; exists ; 2013 ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; >
+    au < ready ; exists ; 2014 ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; >
+    au < ready ; exists ; 2015 ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Dentomaxillofacial Radiology Volume 47 ; 47 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Dentomaxillofacial Radiology Volume 48 ; 48 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Dentomaxillofacial Radiology Volume 49 ; 49 ; >
@@ -4905,7 +4905,7 @@
     au < frozen ; exists ; 2022 ; 2022 ; Dentomaxillofacial Radiology Volume 51 ; 51 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Dentomaxillofacial Radiology Volume 52 ; 52 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Dentomaxillofacial Radiology Volume 53 ; 53 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Dentomaxillofacial Radiology Volume 54 ; 54 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Dentomaxillofacial Radiology Volume 54 ; 54 ; >
 
   }
 
@@ -5875,16 +5875,16 @@
 
     param[journal_id] = etc
 
-    au < manifest ; exists ; 2008 ; 2008 ; Environmental Toxicology and Chemistry Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Environmental Toxicology and Chemistry Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Environmental Toxicology and Chemistry Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Environmental Toxicology and Chemistry Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Environmental Toxicology and Chemistry Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Environmental Toxicology and Chemistry Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Environmental Toxicology and Chemistry Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Environmental Toxicology and Chemistry Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Environmental Toxicology and Chemistry Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Environmental Toxicology and Chemistry Volume 36 ; 36 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Environmental Toxicology and Chemistry Volume 27 ; 27 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Environmental Toxicology and Chemistry Volume 28 ; 28 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Environmental Toxicology and Chemistry Volume 29 ; 29 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Environmental Toxicology and Chemistry Volume 30 ; 30 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Environmental Toxicology and Chemistry Volume 31 ; 31 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Environmental Toxicology and Chemistry Volume 32 ; 32 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Environmental Toxicology and Chemistry Volume 33 ; 33 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Environmental Toxicology and Chemistry Volume 34 ; 34 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Environmental Toxicology and Chemistry Volume 35 ; 35 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Environmental Toxicology and Chemistry Volume 36 ; 36 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Environmental Toxicology and Chemistry Volume 37 ; 37 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Environmental Toxicology and Chemistry Volume 38 ; 38 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Environmental Toxicology and Chemistry Volume 39 ; 39 ; >
@@ -5892,7 +5892,7 @@
     au < frozen ; exists ; 2022 ; 2022 ; Environmental Toxicology and Chemistry Volume 41 ; 41 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Environmental Toxicology and Chemistry Volume 42 ; 42 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Environmental Toxicology and Chemistry Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Environmental Toxicology and Chemistry Volume 44 ; 44 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Environmental Toxicology and Chemistry Volume 44 ; 44 ; >
 
   }
 
@@ -5953,7 +5953,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Epidemiologic Reviews Volume 44 ; 44 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Epidemiologic Reviews Volume 45 ; 45 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Epidemiologic Reviews Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Epidemiologic Reviews Volume 47 ; 47 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Epidemiologic Reviews Volume 47 ; 47 ; >
 
   }
 
@@ -6094,7 +6094,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Heart Journal Volume 43 ; 43 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Heart Journal Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Heart Journal Volume 45 ; 45 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Heart Journal Volume 46 ; 46 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Heart Journal Volume 46 ; 46 ; >
 
   }
 
@@ -6134,7 +6134,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Heart Journal - Cardiovascular Imaging Volume 23 ; 23 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Heart Journal - Cardiovascular Imaging Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Heart Journal - Cardiovascular Imaging Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Heart Journal - Cardiovascular Imaging Volume 26 ; 26 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Heart Journal - Cardiovascular Imaging Volume 26 ; 26 ; >
 
   }
 
@@ -6158,7 +6158,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 8 ; 8 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 11 ; 11 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Heart Journal - Cardiovascular Pharmacotherapy Volume 11 ; 11 ; >
 
   }
 
@@ -6187,7 +6187,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Heart Journal. Acute Cardiovascular Care Volume 11 ; 11 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Heart Journal. Acute Cardiovascular Care Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Heart Journal. Acute Cardiovascular Care Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Heart Journal. Acute Cardiovascular Care Volume 14 ; 14 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Heart Journal. Acute Cardiovascular Care Volume 14 ; 14 ; >
 
   }
 
@@ -6212,7 +6212,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 8 ; 8 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 11 ; 11 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Heart Journal - Quality of Care and Clinical Outcomes Volume 11 ; 11 ; >
 
   }
 
@@ -6251,7 +6251,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; European Heart Journal Supplements Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; European Heart Journal Supplements Volume 25 ; 25 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Heart Journal Supplements Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Heart Journal Supplements Volume 27 ; 27 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Heart Journal Supplements Volume 27 ; 27 ; >
 
   }
 
@@ -6304,7 +6304,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Journal of Cardio-Thoracic Surgery Volume 61-62 ; 61-62 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of Cardio-Thoracic Surgery Volume 63-64 ; 63-64 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2024 ; 2024 ; European Journal of Cardio-Thoracic Surgery Volume 65-66 ; 65-66 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Journal of Cardio-Thoracic Surgery Volume 67-68 ; 67-68 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Journal of Cardio-Thoracic Surgery Volume 67-68 ; 67-68 ; >
 
   }
 
@@ -6342,7 +6342,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Journal of Cardiovascular Nursing Volume 21 ; 21 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of Cardiovascular Nursing Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Journal of Cardiovascular Nursing Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Journal of Cardiovascular Nursing Volume 24 ; 24 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Journal of Cardiovascular Nursing Volume 24 ; 24 ; >
 
   }
 
@@ -6392,7 +6392,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; European Journal of Endocrinology Volume 186-187 ; 186-187 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of Endocrinology Volume 188-189 ; 188-189 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Journal of Endocrinology Volume 190-191 ; 190-191 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Journal of Endocrinology Volume 192-193 ; 192-193 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Journal of Endocrinology Volume 192-193 ; 192-193 ; >
 
   }
 
@@ -6442,7 +6442,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Journal of International Law Volume 33 ; 33 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of International Law Volume 34 ; 34 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Journal of International Law Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Journal of International Law Volume 36 ; 36 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Journal of International Law Volume 36 ; 36 ; >
 
   }
 
@@ -6503,7 +6503,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Journal of Orthodontics Volume 44 ; 44 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of Orthodontics Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Journal of Orthodontics Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Journal of Orthodontics Volume 47 ; 47 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Journal of Orthodontics Volume 47 ; 47 ; >
 
   }
 
@@ -6552,7 +6552,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Journal of Public Health Volume 32 ; 32 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of Public Health Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Journal of Public Health Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Journal of Public Health Volume 35 ; 35 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Journal of Public Health Volume 35 ; 35 ; >
 
   }
 
@@ -6582,7 +6582,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Journal of Preventive Cardiology Volume 29 ; 29 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of Preventive Cardiology Volume 30 ; 30 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Journal of Preventive Cardiology Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Journal of Preventive Cardiology Volume 32 ; 32 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Journal of Preventive Cardiology Volume 32 ; 32 ; >
 
   }
 
@@ -6648,7 +6648,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Review of Agricultural Economics Volume 49 ; 49 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Review of Agricultural Economics Volume 50 ; 50 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Review of Agricultural Economics Volume 51 ; 51 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Review of Agricultural Economics Volume 52 ; 52 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Review of Agricultural Economics Volume 52 ; 52 ; >
 
   }
 
@@ -6691,7 +6691,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Review of Economic History Volume 26 ; 26 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Review of Economic History Volume 27 ; 27 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Review of Economic History Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Review of Economic History Volume 29 ; 29 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Review of Economic History Volume 29 ; 29 ; >
 
   }
 
@@ -6746,7 +6746,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Sociological Review Volume 38 ; 38 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Sociological Review Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Sociological Review Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; European Sociological Review Volume 41 ; 41 ; >
+    au < testing ; exists ; 2025 ; 2025 ; European Sociological Review Volume 41 ; 41 ; >
 
   }
 
@@ -6797,7 +6797,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Evolution Volume 76 ; 76 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Evolution Volume 77 ; 77 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Evolution Volume 78 ; 78 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Evolution Volume 79 ; 79 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Evolution Volume 79 ; 79 ; >
 
   }
 
@@ -6815,7 +6815,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Evolution Letters Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Evolution Letters Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Evolution Letters Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Evolution Letters Volume 9 ; 9 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Evolution Letters Volume 9 ; 9 ; >
 
   }
 
@@ -6840,7 +6840,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Evolution, Medicine, and Public Health Volume 10 ; 10 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Evolution, Medicine, and Public Health Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Evolution, Medicine, and Public Health Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Evolution, Medicine, and Public Health Volume 13 ; 13 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Evolution, Medicine, and Public Health Volume 13 ; 13 ; >
 
   }
 
@@ -6895,7 +6895,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; FEMS Microbiology Ecology Volume 98 ; 98 ; >
     au < finished ; manifest ; 2023 ; 2023 ; FEMS Microbiology Ecology Volume 99 ; 99 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2024 ; 2024 ; FEMS Microbiology Ecology Volume 100 ; 100 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; FEMS Microbiology Ecology Volume 101 ; 101 ; >
+    au < testing ; exists ; 2025 ; 2025 ; FEMS Microbiology Ecology Volume 101 ; 101 ; >
 
   }
 
@@ -7103,7 +7103,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Family Practice Volume 39 ; 39 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Family Practice Volume 40 ; 40 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Family Practice Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Family Practice Volume 42 ; 42 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Family Practice Volume 42 ; 42 ; >
 
   }
 
@@ -7118,16 +7118,16 @@
 
     param[journal_id] = fisheries
 
-    au < manifest ; exists ; 2008 ; 2008 ; Fisheries Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Fisheries Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Fisheries Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Fisheries Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Fisheries Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Fisheries Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Fisheries Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Fisheries Volume 40 ; 40 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Fisheries Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Fisheries Volume 42 ; 42 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Fisheries Volume 33 ; 33 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Fisheries Volume 34 ; 34 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Fisheries Volume 35 ; 35 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Fisheries Volume 36 ; 36 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Fisheries Volume 37 ; 37 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Fisheries Volume 38 ; 38 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Fisheries Volume 39 ; 39 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Fisheries Volume 40 ; 40 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Fisheries Volume 41 ; 41 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Fisheries Volume 42 ; 42 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Fisheries Volume 43 ; 43 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Fisheries Volume 44 ; 44 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Fisheries Volume 45 ; 45 ; >
@@ -7135,7 +7135,7 @@
     au < frozen ; exists ; 2022 ; 2022 ; Fisheries Volume 47 ; 47 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Fisheries Volume 48 ; 48 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Fisheries Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Fisheries Volume 50 ; 50 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Fisheries Volume 50 ; 50 ; >
 
   }
 
