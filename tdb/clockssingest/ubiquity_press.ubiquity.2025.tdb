@@ -43,9 +43,9 @@
       au < crawling ; exists ; 2020 ; 23 ; Journal of The American Society of Questioned Document Examiners Volume 2020 ; 2020 ; 23 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2021 ; 24 ; Journal of The American Society of Questioned Document Examiners Volume 2021 ; 2021 ; 24 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < doesNotExist ; doesNotExist ; 2023 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2023 ; 2023 ; 26 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < expected ; exists ; 2024 ; 27 ; Journal of The American Society of Questioned Document Examiners Volume 2024 ; 2024 ; 27 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < manifest ; exists ; 2025 ; 28 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 28 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < doesNotExist ; doesNotExist ; 2023 ; 0 ; Journal of The American Society of Questioned Document Examiners Volume 2023 ; 2023 ; 0 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < doesNotExist ; doesNotExist ; 2024 ; 0 ; Journal of The American Society of Questioned Document Examiners Volume 2024 ; 2024 ; 0 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < manifest ; exists ; 2025 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 26 ; ASQDE ;  ; https://journal.asqde.org/ ; >
 
   }
 
@@ -176,9 +176,9 @@
       au < superseded ; exists ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 [superseded] ; 2020 ; 57 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < frozen ; down ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; 58 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 [superseded] ; 2022 ; 59 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
-      au < notReady ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ; about redirects ; https://estetikajournal.org/ ; >
-      au < crawling ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ; about redirects ; https://estetikajournal.org/ ; >
-      au < crawling ; exists ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ; about redirects ; https://estetikajournal.org/ ; >
+      au < manifest ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
+      au < crawling ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
+      au < crawling ; exists ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
   }
 
   {
@@ -454,17 +454,17 @@
       au < finished ; finished ; 2012 ; 42 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2012 ; 2012 ; 42 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2013 ; 43 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2013 ; 2013 ; 43 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2014 ; 44 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2014 ; 2014 ; 44 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest1.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2015 ; 45 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2015 ; 2015 ; 45 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; > #M exists. No articles for that year.
-      au < finished ; finished ; 2016 ; 46 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2016 ; 2016 ; 46 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2017 ; 47 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2017 ; 2017 ; 47 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2018 ; 48 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2018 ; 2018 ; 48 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2019 ; 49 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2019 ; 2019 ; 49 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest5.clockss.org:8082 >
-      au < finished ; finished ; 2020 ; 50 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2020 ; 2020 ; 50 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest1.clockss.org:8082 >
-      au < finished ; crawling ; 2021 ; 51 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2021 ; 2021 ; 51 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest3.clockss.org:8083 >
-      au < superseded ; exists ; 2022 ; 52 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 [superseded] ; 2022 ; 52 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2023 ; 2023 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
-      au < manifest ; exists ; 2024 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 54 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
-      au < manifest ; exists ; 2025 ; 55 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 55 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
+      au < doesNotExist ; doesNotExist ; 2015 ; 0 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2015 ; 2015 ; 0 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; > #M exists. No articles for that year.
+      au < finished ; finished ; 2016 ; 45 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2016 ; 2016 ; 45 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest2.clockss.org:8085 >
+      au < finished ; finished ; 2017 ; 46 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2017 ; 2017 ; 46 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2018 ; 47 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2018 ; 2018 ; 47 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest1.clockss.org:8082 >
+      au < finished ; finished ; 2019 ; 48 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2019 ; 2019 ; 48 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest5.clockss.org:8082 >
+      au < finished ; finished ; 2020 ; 49 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2020 ; 2020 ; 49 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest1.clockss.org:8082 >
+      au < finished ; crawling ; 2021 ; 50 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2021 ; 2021 ; 50 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest3.clockss.org:8083 >
+      au < superseded ; exists ; 2022 ; 51 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 [superseded] ; 2022 ; 51 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 52 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2023 ; 2023 ; 52 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
+      au < manifest ; exists ; 2024 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
+      au < manifest ; exists ; 2025 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 54 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
 
   }
   {
@@ -2474,7 +2474,7 @@
         name = Gateway Papers ;
         eissn = 2044-852X
       >
-
+      {
       comment[publisher] = De Montfort University Press
       #param[base_url] = https://gp.demontfortuniversitypress.org/
       nondefparam[base_url2] = https://account.gp.demontfortuniversitypress.org/
@@ -2484,7 +2484,15 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 2 ; Gateway Papers Volume 2021 ; 2021 ; 2 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 3 ; Gateway Papers Volume 2022 ; 2022 ; 3 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Gateway Papers Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ ; >
-      au < notReady ; exists ; 2024 ; 5 ; Gateway Papers Volume 2024 ; 2024 ; 5 ; De Montfort University Press ; Certificate Issue ; https://gp.demontfortuniversitypress.org/ ; >
+      }
+      {
+      comment[publisher] = De Montfort University Press
+      #param[base_url] = https://see.demontfortuniversitypress.org/
+      nondefparam[base_url2] = https://account.see.demontfortuniversitypress.org/
+      nondefparam[journal_id] = dmu-j-gpajepr
+
+      au < manifest ; exists ; 2024 ; 5 ; Gateway Papers Volume 2024 ; 2024 ; 5 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
+      }
       #Title changed to Studies in Empowering Education (2977-4748) 2025 and forward
   }
 
@@ -2496,12 +2504,12 @@
       >
 
       comment[publisher] = De Montfort University Press
-      #param[base_url] = https://gp.demontfortuniversitypress.org/
-      nondefparam[base_url2] = https://account.gp.demontfortuniversitypress.org/
+      #param[base_url] = https://see.demontfortuniversitypress.org/
+      nondefparam[base_url2] = https://account.see.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-gpajepr
       #Previously Gateway Papers (2044-852X) 2010 to 2024
 
-      au < notReady ; exists ; 2025 ; 6 ; Studies in Empowering Education Volume 2025 ; 2025 ; 6 ; De Montfort University Press ; Certificate Issue ; https://gp.demontfortuniversitypress.org/ ; >
+      au < manifest ; exists ; 2025 ; 6 ; Studies in Empowering Education Volume 2025 ; 2025 ; 6 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
 
   }
 
