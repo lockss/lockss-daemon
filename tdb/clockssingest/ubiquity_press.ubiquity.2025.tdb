@@ -666,7 +666,7 @@
       au < superseded ; exists ; 2022 ; 88 ; Annals of Global Health Volume 2022 [superseded] ; 2022 ; 88 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 89 ; Annals of Global Health Volume 2023 ; 2023 ; 89 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
       au < ready ; exists ; 2024 ; 90 ; Annals of Global Health Volume 2024 ; 2024 ; 90 ; Ubiquity Press ; No substance ; https://annalsofglobalhealth.org/ ; >
-      au < ready ; exists ; 2025 ; 91 ; Annals of Global Health Volume 2025 ; 2025 ; 91 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
+      au < crawling ; exists ; 2025 ; 91 ; Annals of Global Health Volume 2025 ; 2025 ; 91 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
 
   }
 
@@ -687,7 +687,7 @@
       au < superseded ; exists ; 2022 ; 3 ; Buildings and Cities Volume 2022 [superseded] ; 2022 ; 3 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #403 forbidden cloudfront.net
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Buildings and Cities Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #404 forbidden cloudfront.net  
       au < crawling ; exists ; 2024 ; 5 ; Buildings and Cities Volume 2024 ; 2024 ; 5 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #505 forbidden cloudfront.net
-      au < ready ; exists ; 2025 ; 6 ; Buildings and Cities Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #606 forbidden cloudfront.net
+      au < crawling ; exists ; 2025 ; 6 ; Buildings and Cities Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ ; > #606 forbidden cloudfront.net
 
   }
 
@@ -826,7 +826,7 @@
       au < superseded ; exists ; 2022 ; 7 ; Citizen Science: Theory and Practice Volume 2022 [superseded] ; 2022 ; 7 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ ; >
       au < doNotProcess ; exists ; 2023 ; 8 ; Citizen Science: Theory and Practice Volume 2023 ; 2023 ; 8 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ ; >
       au < frozen ; exists ; 2024 ; 9 ; Citizen Science: Theory and Practice Volume 2024 ; 2024 ; 9 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ ; >
-      au < ready ; exists ; 2025 ; 10 ; Citizen Science: Theory and Practice Volume 2025 ; 2025 ; 10 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ ; >
+      au < crawling ; exists ; 2025 ; 10 ; Citizen Science: Theory and Practice Volume 2025 ; 2025 ; 10 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ ; >
 
   }
 
@@ -850,7 +850,7 @@
       au < superseded ; exists ; 2022 ; 6 ; Computational Psychiatry Volume 2022 [superseded] ; 2022 ; 6 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Computational Psychiatry Volume 2023 ; 2023 ; 7 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
       au < crawling ; exists ; 2024 ; 8 ; Computational Psychiatry Volume 2024 ; 2024 ; 8 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
-      au < ready ; exists ; 2025 ; 9 ; Computational Psychiatry Volume 2025 ; 2025 ; 9 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
+      au < crawling ; exists ; 2025 ; 9 ; Computational Psychiatry Volume 2025 ; 2025 ; 9 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
 
   }
 
@@ -978,7 +978,7 @@
       au < superseded ; exists ; 2022 ; 22 ; International Journal of Integrated Care Volume 2022 [superseded] ; 2022 ; 22 ; Ubiquity Press ;  ; https://www.ijic.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 23 ; International Journal of Integrated Care Volume 2023 ; 2023 ; 23 ; Ubiquity Press ;  ; https://ijic.org/ ; >
       au < ready ; exists ; 2024 ; 24 ; International Journal of Integrated Care Volume 2024 ; 2024 ; 24 ; Ubiquity Press ;  ; https://ijic.org/ ; >
-      au < ready ; exists ; 2025 ; 25 ; International Journal of Integrated Care Volume 2025 ; 2025 ; 25 ; Ubiquity Press ;  ; https://ijic.org/ ; >
+      au < crawling ; exists ; 2025 ; 25 ; International Journal of Integrated Care Volume 2025 ; 2025 ; 25 ; Ubiquity Press ;  ; https://ijic.org/ ; >
 
   }
 
@@ -1003,7 +1003,7 @@
       au < superseded ; exists ; 2022 ; 35 ; International Review of Social Psychology Volume 2022 [superseded] ; 2022 ; 35 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 36 ; International Review of Social Psychology Volume 2023 ; 2023 ; 36 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
       au < ready ; exists ; 2024 ; 37 ; International Review of Social Psychology Volume 2024 ; 2024 ; 37 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
-      au < ready ; exists ; 2025 ; 38 ; International Review of Social Psychology Volume 2025 ; 2025 ; 38 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
+      au < crawling ; exists ; 2025 ; 38 ; International Review of Social Psychology Volume 2025 ; 2025 ; 38 ; Ubiquity Press ;  ; https://rips-irsp.com/ ; >
 
   }
 
@@ -1236,7 +1236,7 @@
       nondefparam[journal_id] = up-j-srah
 
       au < crawling ; exists ; 2023 ; 1 ; Silk Roads Archaeology and Heritage Volume 2023 ; 2023 ; 1 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
-      au < ready ; exists ; 2025 ; 2 ; Silk Roads Archaeology and Heritage Volume 2025 ; 2025 ; 2 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
+      au < crawling ; exists ; 2025 ; 2 ; Silk Roads Archaeology and Heritage Volume 2025 ; 2025 ; 2 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
 
   }
 
@@ -1262,7 +1262,7 @@
       au < superseded ; exists ; 2022 ; 8 ; Journal of Open Humanities Data Volume 2022 [superseded] ; 2022 ; 8 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Journal of Open Humanities Data Volume 2023 ; 2023 ; 9 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
       au < crawling ; exists ; 2024 ; 10 ; Journal of Open Humanities Data Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
-      au < ready ; exists ; 2025 ; 11 ; Journal of Open Humanities Data Volume 2025 ; 2025 ; 11 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
+      au < crawling ; exists ; 2025 ; 11 ; Journal of Open Humanities Data Volume 2025 ; 2025 ; 11 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
 
   }
 
@@ -1616,7 +1616,7 @@
       au < superseded ; exists ; 2022 ; 11 ; Secularism and Nonreligion Volume 2022 [superseded] ; 2022 ; 11 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Secularism and Nonreligion Volume 2023 ; 2023 ; 12 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
       au < ready ; exists ; 2024 ; 13 ; Secularism and Nonreligion Volume 2024 ; 2024 ; 13 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
-      au < ready ; exists ; 2025 ; 14 ; Secularism and Nonreligion Volume 2025 ; 2025 ; 14 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
+      au < crawling ; exists ; 2025 ; 14 ; Secularism and Nonreligion Volume 2025 ; 2025 ; 14 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
 
   }
 
@@ -1700,7 +1700,7 @@
       au < superseded ; exists ; 2022 ; 5 ; Journal of Cognition Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Journal of Cognition Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
       au < manifest ; exists ; 2024 ; 7 ; Journal of Cognition Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
-      au < ready ; exists ; 2025 ; 8 ; Journal of Cognition Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
+      au < crawling ; exists ; 2025 ; 8 ; Journal of Cognition Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
 
   }
 
@@ -1723,7 +1723,7 @@
       au < superseded ; exists ; 2022 ; 5 ; Journal of Computer Applications in Archaeology Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ;  ; https://journal.caa-international.org/ ; >
       au < doNotProcess ; exists ; 2023 ; 6 ; Journal of Computer Applications in Archaeology Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://journal.caa-international.org/ ; >
       au < ready ; exists ; 2024 ; 7 ; Journal of Computer Applications in Archaeology Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://journal.caa-international.org/ ; >
-      au < ready ; exists ; 2025 ; 8 ; Journal of Computer Applications in Archaeology Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journal.caa-international.org/ ; >
+      au < crawling ; exists ; 2025 ; 8 ; Journal of Computer Applications in Archaeology Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journal.caa-international.org/ ; >
 
   }
 
@@ -1854,7 +1854,7 @@
       au < superseded ; exists ; 2022 ; 5 ; Transactions of the International Society for Music Information Retrieval Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Transactions of the International Society for Music Information Retrieval Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
       au < manifest ; exists ; 2024 ; 7 ; Transactions of the International Society for Music Information Retrieval Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
-      au < ready ; exists ; 2025 ; 8 ; Transactions of the International Society for Music Information Retrieval Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
+      au < crawling ; exists ; 2025 ; 8 ; Transactions of the International Society for Music Information Retrieval Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
 
   }
 
@@ -2141,7 +2141,7 @@
       au < superseded ; exists ; 2022 ; 18 ; British and Irish Orthoptic Journal Volume 2022 [superseded] ; 2022 ; 18 ; White Rose University Press ;  ; https://www.bioj-online.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 19 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 ; 19 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
       au < crawling ; exists ; 2024 ; 20 ; British and Irish Orthoptic Journal Volume 2024 ; 2024 ; 20 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
-      au < ready ; exists ; 2025 ; 21 ; British and Irish Orthoptic Journal Volume 2025 ; 2025 ; 21 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
+      au < crawling ; exists ; 2025 ; 21 ; British and Irish Orthoptic Journal Volume 2025 ; 2025 ; 21 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
 
   }
 
@@ -2271,7 +2271,7 @@
       au < superseded ; exists ; 2022 ; 5 ; Scandinavian Military Studies Volume 2022 [superseded] ; 2022 ; 5 ; Scandinavian Military Studies ;  ; https://sjms.nu/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Scandinavian Military Studies Volume 2023 ; 2023 ; 6 ; Scandinavian Military Studies ;  ; https://sjms.nu/ ; >
       au < ready ; exists ; 2024 ; 7 ; Scandinavian Military Studies Volume 2024 ; 2024 ; 7 ; Scandinavian Military Studies ;  ; https://sjms.nu/ ; >
-      au < ready ; exists ; 2025 ; 8 ; Scandinavian Military Studies Volume 2025 ; 2025 ; 8 ; Scandinavian Military Studies ;  ; https://sjms.nu/ ; >
+      au < crawling ; exists ; 2025 ; 8 ; Scandinavian Military Studies Volume 2025 ; 2025 ; 8 ; Scandinavian Military Studies ;  ; https://sjms.nu/ ; >
 
   }
 
@@ -2392,7 +2392,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 33,34 ; Journal of Technology Education Volume 2022 ; 2022 ; 33,34 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 34,35 ; Journal of Technology Education Volume 2023 ; 2023 ; 34,35 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < manifest ; exists ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < ready ; exists ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < crawling ; exists ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
 
   }
 
@@ -2589,7 +2589,7 @@
       #au < doesNotExist ; doesNotExist ; 2022 ; 0 ; Scientific Study of Literature Volume 2022 ; 2022 ; 0 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < ready ; exists ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
-      au < ready ; exists ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
+      au < crawling ; exists ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
 
   }
 
@@ -2613,7 +2613,7 @@
       au < crawling ; exists ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < ready ; exists ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
-      au < ready ; exists ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
+      au < crawling ; exists ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
 
   }
 
