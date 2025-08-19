@@ -60,6 +60,7 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
   private static final Logger log = Logger.getLogger(UbiquityPartnerNetworkHtmlFilterFactory.class);
 
   protected static Pattern PNG_WITH_TIMESTAMP = UbiquityPartnerNetworkUrlNormalizer.PNG_WITH_TIMESTAMP;
+  protected static Pattern PNG_WITH_TIMESTAMP_AND_WIDTH = UbiquityPartnerNetworkUrlNormalizer.PNG_WITH_TIMESTAMP_AND_WIDTH;
   protected static Pattern JPG_WITH_TIMESTAMP_AND_WIDTH = UbiquityPartnerNetworkUrlNormalizer.JPG_WITH_TIMESTAMP_AND_WIDTH;
   protected static Pattern JPG_WITH_TIMESTAMP = UbiquityPartnerNetworkUrlNormalizer.JPG_WITH_TIMESTAMP; 
 
@@ -173,6 +174,9 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
                 }else if(JPG_WITH_TIMESTAMP.matcher(srcurl).find()){
                   String newUrl = JPG_WITH_TIMESTAMP.matcher(srcurl).replaceFirst(".jpg");
                   tag.setAttribute("src", newUrl);
+                }else if(PNG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcurl).find()){
+                  String newUrl = PNG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcurl).replaceFirst(".png?w=");
+                  tag.setAttribute("src", newUrl);
                 }
                 log.debug3("the NEW source of image tag is " + tag.getAttribute("src"));
               }
@@ -187,6 +191,9 @@ public class UbiquityPartnerNetworkHtmlFilterFactory implements FilterFactory {
                   tag.setAttribute("srcSet", newUrl);
                 }else if(JPG_WITH_TIMESTAMP.matcher(srcSetUrl).find()){
                   String newUrl = JPG_WITH_TIMESTAMP.matcher(srcSetUrl).replaceAll(".jpg");
+                  tag.setAttribute("srcSet", newUrl);
+                }else if(PNG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcSetUrl).find()){
+                  String newUrl = PNG_WITH_TIMESTAMP_AND_WIDTH.matcher(srcSetUrl).replaceAll(".png?w=");
                   tag.setAttribute("srcSet", newUrl);
                 }
                 log.debug3("the NEW sourceSet of image tag is " + tag.getAttribute("srcSet"));

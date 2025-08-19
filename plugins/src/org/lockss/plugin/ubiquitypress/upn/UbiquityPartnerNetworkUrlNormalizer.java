@@ -52,6 +52,9 @@ public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNorm
   protected static Pattern PNG_WITH_TIMESTAMP =
       Pattern.compile("\\.png(?:\\?|%3F)t(?:=|%3D)\\d+$",
                       Pattern.CASE_INSENSITIVE);
+  protected static Pattern PNG_WITH_TIMESTAMP_AND_WIDTH =
+      Pattern.compile("\\.png(?:\\?|%3F)t(?:=|%3D)\\d+(?:&|%26|&amp;)w=",
+                      Pattern.CASE_INSENSITIVE);
   protected static Pattern JPG_WITH_TIMESTAMP =
       Pattern.compile("\\.jpg(?:\\?|%3F)t(?:=|%3D)\\d+$",
                       Pattern.CASE_INSENSITIVE);
@@ -88,6 +91,7 @@ public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNorm
      * Various .png and .jpg URLs have a timestamp, e.g. .png?t=1745443500000 or .jpg?t=1745443500000 or .jpg?t=1745443500000&w=100
      */
     url = PNG_WITH_TIMESTAMP.matcher(url).replaceFirst(".png");
+    url = PNG_WITH_TIMESTAMP_AND_WIDTH.matcher(url).replaceFirst(".png?w=");
     url = JPG_WITH_TIMESTAMP.matcher(url).replaceFirst(".jpg");
     url = JPG_WITH_TIMESTAMP_AND_WIDTH.matcher(url).replaceFirst(".jpg?w=");
     return url;

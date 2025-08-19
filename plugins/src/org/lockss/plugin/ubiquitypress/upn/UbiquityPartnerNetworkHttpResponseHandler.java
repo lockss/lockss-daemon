@@ -70,11 +70,11 @@ public class UbiquityPartnerNetworkHttpResponseHandler implements CacheResultHan
         return new CacheException.NoRetryDeadLinkException("404 Not Found");
       case 403: 
         logger.debug3("found 403");
-        if (url.contains("files/article.xsl")) {
-          logger.debug3("broken xsl file");
+        if (url.contains("files/article.xsl") || url.contains("article.css")) {
+          logger.debug3("broken xsl or css file");
           return new CacheException.NoRetryDeadLinkException("403 Forbidden (non-fatal)");
         }
-        return new CacheException.RetrySameUrlException("403 Forbidden errror");
+        return new CacheException.RetrySameUrlException("403 Forbidden error");
       default:
         logger.debug2("default");
         throw new UnsupportedOperationException();
