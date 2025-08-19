@@ -574,7 +574,7 @@
       au < frozen ; exists ; 2017 ; 69 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2017 ; 2017 ; 69 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 2018 ; 70 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2018 ; 2018 ; 70 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 2019 ; 71 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2019 ; 2019 ; 71 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
-      au < manifest ; exists ; 2020 ; 72 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2020 ; 2020 ; 72 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
+      au < notReady ; exists ; 2020 ; 72 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2020 ; 2020 ; 72 ; Stockholm University Press ; Error Parsing Page. https://a.tellusjournals.se/articles/103/files/submission/proof/103-1-6353-1-10-20220607.xml ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 ; 73 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; 74 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; > #Lists all volumes.
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
@@ -2660,12 +2660,12 @@
       >
 
       comment[publisher] = Weather Hills Publishing, LLC
-      #param[base_url] = https://.neuroircases.com/
+      #param[base_url] = https://neuroircases.com/
       nondefparam[base_url2] = https://account.neuroircases.com/
       nondefparam[journal_id] = wpllc-j-jncr
 
-      au < manifest ; exists ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://.neuroircases.com/ ; >
-      au < manifest ; exists ; 2025 ; 2 ; Journal of Neurointerventional Case Reports Volume 2025 ; 2025 ; 2 ; Weather Hills Publishing, LLC ;  ; https://.neuroircases.com/ ; >
+      au < manifest ; exists ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
+      au < manifest ; exists ; 2025 ; 2 ; Journal of Neurointerventional Case Reports Volume 2025 ; 2025 ; 2 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
 
   }
 
