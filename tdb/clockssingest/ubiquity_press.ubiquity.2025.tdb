@@ -144,7 +144,7 @@
       nondefparam[base_url2] = https://account.hysafejournal.org/
       nondefparam[journal_id] = kitl-j-hs
 
-      au < notReady ; exists ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; KIT Scientific Publishing ; Issue URL does not redirect to journal site ; https://hysafejournal.org/ ; >
+      au < ready ; exists ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; KIT Scientific Publishing ; Issue URL does not redirect to journal site ; https://hysafejournal.org/ ; >
       au < crawling ; exists ; 2025 ; 2 ; Hydrogen Safety Volume 2025 ; 2025 ; 2 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ ; >
 
   }
@@ -275,8 +275,8 @@
       au < finished ; finished ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; 8 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 9 ; Modern Languages Open Volume 2022 [superseded] ; 2022 ; 9 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; 10 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ ; >
-      au < notReady ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
-      au < notReady ; exists ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
+      au < ready ; exists ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
+      au < ready ; exists ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ; 403. articles/191/files/submission/proof/article.xsl ; https://modernlanguagesopen.org/ ; >
 
   }
 
@@ -485,8 +485,8 @@
       au < finished ; crawling ; 2021 ; 4 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2021 ; 2021 ; 4 ; Stockholm University Press ;  ; https://franorfon.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 5 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2022 [superseded] ; 2022 ; 5 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2023 ; 2023 ; 6 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
-      au < manifest ; exists ; 2024 ; 7 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2024 ; 2024 ; 7 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
-      au < manifest ; exists ; 2025 ; 8 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2025 ; 2025 ; 8 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
+      au < ready ; exists ; 2024 ; 7 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2024 ; 2024 ; 7 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
+      au < ready ; exists ; 2025 ; 8 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2025 ; 2025 ; 8 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
 
   }
   {
@@ -1367,7 +1367,7 @@
       au < finished ; crawling ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 ; 105 ; Ubiquity Press ;  ; https://www.jbsr.be/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 [superseded] ; 2022 ; 106 ; Ubiquity Press ;  ; https://www.jbsr.be/ ; >
       au < doNotProcess ; exists ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; 107 ; Ubiquity Press ;  ; https://www.jbsr.be/ ; >
-      au < manifest ; exists ; 2024 ; 108 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2024 ; 2024 ; 108 ; Ubiquity Press ;  ; https://jbsr.be/ ; >
+      au < ready ; exists ; 2024 ; 108 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2024 ; 2024 ; 108 ; Ubiquity Press ;  ; https://jbsr.be/ ; >
       au < ready ; exists ; 2025 ; 109 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2025 ; 2025 ; 109 ; Ubiquity Press ;  ; https://jbsr.be/ ; >
 
   }
@@ -1520,7 +1520,7 @@
       au < superseded ; exists ; 2022 ; 17 ; Global Heart Volume 2022 [superseded] ; 2022 ; 17 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < doNotProcess ; exists ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ; 18 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < crawling ; exists ; 2024 ; 19 ; Global Heart Volume 2024 ; 2024 ; 19 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
-      au < manifest ; exists ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
+      au < notReady ; exists ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ; 403: https://storage.googleapis.com/jnl-up-j-gh-files/journals/1/articles/1421/67e521b0e7226.png from https://globalheartjournal.com/en/articles/1421 ; https://globalheartjournal.com/ ; >
 
   }
 
@@ -1699,7 +1699,7 @@
       au < finished ; crawling ; 2021 ; 4 ; Journal of Cognition Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 5 ; Journal of Cognition Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Journal of Cognition Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
-      au < manifest ; exists ; 2024 ; 7 ; Journal of Cognition Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
+      au < ready ; exists ; 2024 ; 7 ; Journal of Cognition Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
       au < crawling ; exists ; 2025 ; 8 ; Journal of Cognition Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journalofcognition.org/ ; >
 
   }
@@ -1799,7 +1799,7 @@
       au < finished ; finished ; 2021 ; 26 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2021 ; 2021 ; 26 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2022 ; 27 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2022 ; 2022 ; 27 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 ; 28 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
-      au < manifest ; exists ; 2024 ; 29 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2024 ; 2024 ; 29 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
+      au < ready ; exists ; 2024 ; 29 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2024 ; 2024 ; 29 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
       au < expected ; exists ; 2025 ; 30 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2025 ; 2025 ; 30 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
 
   }
@@ -1853,7 +1853,7 @@
       au < finished ; crawling ; 2021 ; 4 ; Transactions of the International Society for Music Information Retrieval Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 5 ; Transactions of the International Society for Music Information Retrieval Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Transactions of the International Society for Music Information Retrieval Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
-      au < manifest ; exists ; 2024 ; 7 ; Transactions of the International Society for Music Information Retrieval Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
+      au < ready ; exists ; 2024 ; 7 ; Transactions of the International Society for Music Information Retrieval Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
       au < crawling ; exists ; 2025 ; 8 ; Transactions of the International Society for Music Information Retrieval Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
 
   }
@@ -2108,7 +2108,7 @@
       au < finished ; finished ; 2020 ; 33 ; Insights: the UKSG journal Volume 2020 ; 2020 ; 33 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 34 ; Insights: the UKSG journal Volume 2021 ; 2021 ; 34 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 35 ; Insights: the UKSG journal Volume 2022 [superseded] ; 2022 ; 35 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
-      au < manifest ; exists ; 2023 ; 36 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 36 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
+      au < ready ; exists ; 2023 ; 36 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 36 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
       au < crawling ; exists ; 2024 ; 37 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 37 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
       au < crawling ; exists ; 2025 ; 38 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 38 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
 
@@ -2391,7 +2391,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 32,33 ; Journal of Technology Education Volume 2021 ; 2021 ; 32,33 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 33,34 ; Journal of Technology Education Volume 2022 ; 2022 ; 33,34 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 34,35 ; Journal of Technology Education Volume 2023 ; 2023 ; 34,35 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < manifest ; exists ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < ready ; exists ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < crawling ; exists ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
 
   }
@@ -2645,10 +2645,10 @@
       au < manifest ; exists ; 2018 ; 21 ; European Journal of Open, Distance and E-Learning Volume 2018 ; 2018 ; 21 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < manifest ; exists ; 2019 ; 22 ; European Journal of Open, Distance and E-Learning Volume 2019 ; 2019 ; 22 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < ready ; exists ; 2020 ; 23 ; European Journal of Open, Distance and E-Learning Volume 2020 ; 2020 ; 23 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
-      au < manifest ; exists ; 2022 ; 24 ; European Journal of Open, Distance and E-Learning Volume 2022 ; 2022 ; 24 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
-      au < manifest ; exists ; 2023 ; 25 ; European Journal of Open, Distance and E-Learning Volume 2023 ; 2023 ; 25 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
+      au < ready ; exists ; 2022 ; 24 ; European Journal of Open, Distance and E-Learning Volume 2022 ; 2022 ; 24 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
+      au < ready ; exists ; 2023 ; 25 ; European Journal of Open, Distance and E-Learning Volume 2023 ; 2023 ; 25 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < manifest ; exists ; 2024 ; 26 ; European Journal of Open, Distance and E-Learning Volume 2024 ; 2024 ; 26 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
-      au < manifest ; exists ; 2025 ; 27 ; European Journal of Open, Distance and E-Learning Volume 2025 ; 2025 ; 27 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
+      au < ready ; exists ; 2025 ; 27 ; European Journal of Open, Distance and E-Learning Volume 2025 ; 2025 ; 27 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
 
   }
 
