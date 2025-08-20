@@ -115,7 +115,7 @@
       au < finished ; manifest ; 2022 ; Masyarakat, Kebudayaan dan Politik Volume 35 ; 35 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Masyarakat, Kebudayaan dan Politik Volume 36 ; 36 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Masyarakat, Kebudayaan dan Politik Volume 37 ; 37 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Masyarakat, Kebudayaan dan Politik Volume 38 ; 38 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Masyarakat, Kebudayaan dan Politik Volume 38 ; 38 ; 2025 ; >
 
   }
 
@@ -243,7 +243,7 @@
       au < finished ; manifest ; 2022 ; Majalah Obstetri dan Ginekologi Volume 30 ; 30 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Majalah Obstetri dan Ginekologi Volume 31 ; 31 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Majalah Obstetri dan Ginekologi Volume 32 ; 32 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Majalah Obstetri dan Ginekologi Volume 33 ; 33 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Majalah Obstetri dan Ginekologi Volume 33 ; 33 ; 2025 ; >
 
   }
 
@@ -478,7 +478,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Ekonomi dan Bisnis Islam Volume 8 ; 8 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Ekonomi dan Bisnis Islam Volume 9 ; 9 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Ekonomi dan Bisnis Islam Volume 10 ; 10 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Ekonomi dan Bisnis Islam Volume 11 ; 11 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Ekonomi dan Bisnis Islam Volume 11 ; 11 ; 2025 ; >
 
   }
 
@@ -577,7 +577,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Biometrika dan Kependudukan Volume 11 ; 11 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Biometrika dan Kependudukan Volume 12 ; 12 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Biometrika dan Kependudukan Volume 13 ; 13 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Biometrika dan Kependudukan Volume 14 ; 14 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Biometrika dan Kependudukan Volume 14 ; 14 ; 2025 ; >
 
   }
 
@@ -776,7 +776,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 32 ; 32 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 33 ; 33 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 34 ; 34 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 35 ; 35 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Ekonomi dan Bisnis Airlangga (JEBA) Volume 35 ; 35 ; 2025 ; >
 
   }
 
@@ -959,7 +959,7 @@
       param[journal_id] = agrovet
 
       au < frozen ; exists ; 2024 ; Jurnal Agro Veteriner Volume 8 ; 8 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Agro Veteriner Volume 9 ; 9 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Agro Veteriner Volume 9 ; 9 ; 2025 ; >
 
   }
 
@@ -1005,7 +1005,7 @@
       au < finished ; manifest ; 2022 ; Journal of Governance and Administrative Reform Volume 3 ; 3 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Journal of Governance and Administrative Reform Volume 4 ; 4 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Journal of Governance and Administrative Reform Volume 5 ; 5 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Journal of Governance and Administrative Reform Volume 6 ; 6 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Journal of Governance and Administrative Reform Volume 6 ; 6 ; 2025 ; >
 
   }
 
@@ -1089,7 +1089,7 @@
       au < finished ; manifest ; 2022 ; JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga Volume 13 ; 13 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga Volume 14 ; 14 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga Volume 15 ; 15 ; 2024 ; >
-      au < ready ; exists ; 2025 ; JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga Volume 16 ; 16 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; JUXTA: Jurnal Ilmiah Mahasiswa Kedokteran Universitas Airlangga Volume 16 ; 16 ; 2025 ; >
 
   }
 
@@ -1128,7 +1128,7 @@
       au < finished ; manifest ; 2022 ; Psychiatry Nursing Journal Volume 4 ; 4 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Psychiatry Nursing Journal Volume 5 ; 5 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Psychiatry Nursing Journal Volume 6 ; 6 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Psychiatry Nursing Journal Volume 7 ; 7 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Psychiatry Nursing Journal Volume 7 ; 7 ; 2025 ; >
 
   }
 
@@ -1153,7 +1153,7 @@
       au < finished ; manifest ; 2022 ; Pediomaternal Nursing Journal Volume 10 ; 10 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Pediomaternal Nursing Journal Volume 11 ; 11 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Pediomaternal Nursing Journal Volume 12 ; 12 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Pediomaternal Nursing Journal Volume 13 ; 13 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Pediomaternal Nursing Journal Volume 13 ; 13 ; 2025 ; >
 
   }
 
@@ -1262,7 +1262,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Respirasi Volume 8 ; 8 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Jurnal Respirasi Volume 9 ; 9 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Respirasi Volume 10 ; 10 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Respirasi Volume 11 ; 11 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Respirasi Volume 11 ; 11 ; 2025 ; >
 
   }
 
@@ -1530,7 +1530,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Biosains Pascasarjana Volume 24 ; 24 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Jurnal Biosains Pascasarjana Volume 25 ; 25 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Biosains Pascasarjana Volume 26 ; 26 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Biosains Pascasarjana Volume 27 ; 27 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Biosains Pascasarjana Volume 27 ; 27 ; 2025 ; >
 
   }
 
@@ -1622,7 +1622,7 @@
       au < finished ; manifest ; 2022 ; Conservative Dentistry Journal Volume 12 ; 12 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Conservative Dentistry Journal Volume 13 ; 13 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Conservative Dentistry Journal Volume 14 ; 14 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Conservative Dentistry Journal Volume 15 ; 15 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Conservative Dentistry Journal Volume 15 ; 15 ; 2025 ; >
 
   }
 
@@ -1858,7 +1858,7 @@
       au < finished ; manifest ; 2022 ; Ovozoa: Journal of Animal Reproduction Volume 11 ; 11 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Ovozoa: Journal of Animal Reproduction Volume 12 ; 12 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Ovozoa: Journal of Animal Reproduction Volume 13 ; 13 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Ovozoa: Journal of Animal Reproduction Volume 14 ; 14 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Ovozoa: Journal of Animal Reproduction Volume 14 ; 14 ; 2025 ; >
 
   }
 
@@ -1955,7 +1955,7 @@
       au < finished ; manifest ; 2022 ; Jurnal Perpustakaan Universitas Airlangga Volume 12 ; 12 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Jurnal Perpustakaan Universitas Airlangga Volume 13 ; 13 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Jurnal Perpustakaan Universitas Airlangga Volume 14 ; 14 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Jurnal Perpustakaan Universitas Airlangga Volume 15 ; 15 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Jurnal Perpustakaan Universitas Airlangga Volume 15 ; 15 ; 2025 ; >
 
   }
 

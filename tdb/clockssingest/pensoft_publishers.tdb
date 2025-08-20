@@ -375,7 +375,7 @@
     au < finished ; manifest ; 2022 ; 42-44 ; Subterranean Biology Volume 2022 ; 2022 ; https://subtbiol.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 45-47 ; Subterranean Biology Volume 2023 ; 2023 ; https://subtbiol.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 48-50 ; Subterranean Biology Volume 2024 ; 2024 ; https://subtbiol.pensoft.net/ ; >
-    au < ready ; exists ; 2025 ; 51-53 ; Subterranean Biology Volume 2025 ; 2025 ; https://subtbiol.pensoft.net/ ; >
+    au < crawling ; exists ; 2025 ; 51-53 ; Subterranean Biology Volume 2025 ; 2025 ; https://subtbiol.pensoft.net/ ; >
 
    }
   
@@ -570,7 +570,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Check List Volume 2022 ; 2022 ; https://checklist.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; Check List Volume 2023 ; 2023 ; https://checklist.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Check List Volume 2024 ; 2024 ; https://checklist.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Check List Volume 2025 ; 2025 ; https://checklist.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Check List Volume 2025 ; 2025 ; https://checklist.pensoft.net/ ; >
 
   }
 
@@ -757,7 +757,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2022 ; 2022 ; https://mab-online.nl/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2023 ; 2023 ; https://mab-online.nl/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2024 ; 2024 ; https://mab-online.nl/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2025 ; 2025 ; https://mab-online.nl/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2025 ; 2025 ; https://mab-online.nl/ ; >
 
   }
 
@@ -1090,7 +1090,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; European Science Editing (ESE) Volume 2022 ; 2022 ; https://ese.arphahub.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; European Science Editing (ESE) Volume 2023 ; 2023 ; https://ese.arphahub.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; European Science Editing (ESE) Volume 2024 ; 2024 ; https://ese.arphahub.com/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; European Science Editing (ESE) Volume 2025 ; 2025 ; https://ese.arphahub.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; European Science Editing (ESE) Volume 2025 ; 2025 ; https://ese.arphahub.com/ ; >
 
   }
 
@@ -1308,7 +1308,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Journal of Universal Computer Science Volume 2022 ; 2022 ; https://lib.jucs.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Journal of Universal Computer Science Volume 2023 ; 2023 ; https://lib.jucs.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Universal Computer Science Volume 2024 ; 2024 ; https://lib.jucs.org/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Journal of Universal Computer Science Volume 2025 ; 2025 ; https://lib.jucs.org/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Journal of Universal Computer Science Volume 2025 ; 2025 ; https://lib.jucs.org/ ; >
 
   }
 
@@ -1341,7 +1341,7 @@
       param[au_oai_set] = ved
       #Moved from Plant Sociology
 
-      au < ready ; exists ; 2025 ; 2025 ; Vegetation Ecology and Diversity Volume 2025 ; 2025 ; https://ved.arphahub.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Vegetation Ecology and Diversity Volume 2025 ; 2025 ; https://ved.arphahub.com/ ; >
 
   }
 
@@ -1400,7 +1400,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; Zitteliana Volume 2023 ; 2023 ; https://zitteliana.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 2024 ; 2024 ; Zitteliana Volume 2024 ; 2024 ; https://zitteliana.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Zitteliana Volume 2025 ; 2025 ; https://zitteliana.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Zitteliana Volume 2025 ; 2025 ; https://zitteliana.pensoft.net/ ; >
 
   }
 
@@ -1495,7 +1495,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; Fossil Record Volume 2022 ; 2022 ; https://fr.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Fossil Record Volume 2023 ; 2023 ; https://fr.pensoft.net/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Fossil Record Volume 2024 ; 2024 ; https://fr.pensoft.net/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Fossil Record Volume 2025 ; 2025 ; https://fr.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Fossil Record Volume 2025 ; 2025 ; https://fr.pensoft.net/ ; >
 
   }
 
@@ -1763,7 +1763,7 @@
       param[au_oai_set] = jbcr
 
       au < finished ; manifest ; 2024 ; 2024 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2024 ; 2024 ; https://jbcr.arphahub.com/ ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2025 ; 2025 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2025 ; 2025 ; https://jbcr.arphahub.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2025 ; 2025 ; https://jbcr.arphahub.com/ ; >
 
   }
 
