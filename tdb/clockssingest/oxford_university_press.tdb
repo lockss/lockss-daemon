@@ -9642,8 +9642,8 @@
     param[journal_id] = ia
     #this title was ONLY in the publisher listing
 
-    au < exists ; exists ; 2008 ; 2008 ; International Affairs Volume 84 ; 84 ;  >
-    au < exists ; exists ; 2009 ; 2009 ; International Affairs Volume 85 ; 85 ;  >
+    au < manifest ; exists ; 2008 ; 2008 ; International Affairs Volume 84 ; 84 ;  >
+    au < manifest ; exists ; 2009 ; 2009 ; International Affairs Volume 85 ; 85 ;  >
     au < finished ; crawling ; 2010 ; 2010 ; International Affairs Volume 86 ; 86 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; 2011 ; International Affairs Volume 87 ; 87 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 ; reingest1.clockss.org:8082 >
