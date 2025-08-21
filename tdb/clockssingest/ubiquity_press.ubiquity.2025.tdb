@@ -2669,5 +2669,21 @@
 
   }
 
+  {
+
+      title <
+        name = Research and Reviews in Sustainability ;
+        eissn = 2977-8441
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://sustainability-journal.com/
+      nondefparam[base_url2] = https://account.sustainability-journal.com/
+      nondefparam[journal_id] = up-j-rrs
+
+      au < manifest ; exists ; 2025 ; 1 ; Research and Reviews in Sustainability Volume 2025 ; 2025 ; 1 ; Ubiquity Press ;  ; https://sustainability-journal.com/ ; >
+
+  }
+
 }
 
