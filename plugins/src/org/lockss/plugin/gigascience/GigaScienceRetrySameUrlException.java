@@ -1,4 +1,4 @@
-<!--
+/*
 
 Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
@@ -28,34 +28,31 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
--->
-<map>
-    <entry>
-        <string>plugin_status</string>
-        <string>ready</string>
-    </entry>
-    <entry>
-        <string>plugin_identifier</string>
-        <string>org.lockss.plugin.gigascience.ClockssGigaSciencePlugin</string>
-    </entry>
-    <entry>
-        <string>plugin_name</string>
-        <string>GigaScience Plugin (CLOCKSS)</string>
-    </entry>
-    <entry>
-        <string>plugin_version</string>
-        <string>14</string>
-    </entry>
-    <entry>
-        <string>plugin_parent</string>
-        <string>org.lockss.plugin.gigascience.GigaSciencePlugin</string>
-    </entry>
-    <entry>
-        <string>plugin_parent_version</string>
-        <string>14</string>
-    </entry>
-    <entry>
-        <string>au_name</string>
-        <string>"GigaScience Plugin (CLOCKSS), Base URL %s, Year %d", base_url, year</string>
-    </entry>
-</map>
+*/
+
+package org.lockss.plugin.gigascience;
+
+import org.lockss.util.Constants;
+import org.lockss.util.urlconn.CacheException.RetrySameUrlException;
+
+
+public class GigaScienceRetrySameUrlException extends RetrySameUrlException{
+    
+  public GigaScienceRetrySameUrlException() {
+    super();
+  }
+  
+  public GigaScienceRetrySameUrlException(String message) {
+    super(message);
+  }
+  
+  @Override
+  public int getRetryCount() {
+    return 60;
+  }
+  
+  @Override
+  public long getRetryDelay() {
+    return 60 * Constants.SECOND;
+  }
+}

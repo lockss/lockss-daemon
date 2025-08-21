@@ -46,7 +46,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>13</string>
+        <string>14</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -97,8 +97,8 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <!--<string>"%sapi/", to_http(base_url)</string>
             <string>"%sapi/", to_https(base_url)</string>-->
-            <string>"%slockss-generated/", to_http(base_url)</string>
-            <string>"%slockss-generated/", to_https(base_url)</string>
+            <string>"%slockss-generated/%d", to_http(base_url), year</string>
+            <string>"%slockss-generated/%d", to_https(base_url), year</string>
         </list>
     </entry>
     <entry>
@@ -113,6 +113,8 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
         <!-- this is to catch the 500 errors but continue -->
         <string>500=org.lockss.plugin.gigascience.GigaScienceHttpResponseHandler</string>
+        <string>504=org.lockss.plugin.gigascience.GigaScienceHttpResponseHandler</string>
+        <string>524=org.lockss.plugin.gigascience.GigaScienceRetrySameUrlException</string>
         </list>
     </entry>
     <entry>
