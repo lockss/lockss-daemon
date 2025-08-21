@@ -45,7 +45,7 @@
       au < crawling ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 0 ; Journal of The American Society of Questioned Document Examiners Volume 2023 ; 2023 ; 0 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < doesNotExist ; doesNotExist ; 2024 ; 0 ; Journal of The American Society of Questioned Document Examiners Volume 2024 ; 2024 ; 0 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < manifest ; exists ; 2025 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 26 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < ready ; exists ; 2025 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 26 ; ASQDE ;  ; https://journal.asqde.org/ ; >
 
   }
 
@@ -176,7 +176,7 @@
       au < superseded ; exists ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 [superseded] ; 2020 ; 57 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < frozen ; down ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; 58 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 [superseded] ; 2022 ; 59 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
-      au < manifest ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
+      au < ready ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < crawling ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < crawling ; exists ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
   }
@@ -463,8 +463,8 @@
       au < finished ; crawling ; 2021 ; 50 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2021 ; 2021 ; 50 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 51 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 [superseded] ; 2022 ; 51 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 52 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2023 ; 2023 ; 52 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
-      au < manifest ; exists ; 2024 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
-      au < manifest ; exists ; 2025 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 54 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
+      au < ready ; exists ; 2024 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
+      au < ready ; exists ; 2025 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 54 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
 
   }
   {
@@ -578,7 +578,7 @@
       au < frozen ; exists ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 ; 73 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; 74 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; > #Lists all volumes.
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
-      au < notReady ; exists ; 2024 ; 76 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2024 ; 2024 ; 76 ; Stockholm University Press ; 403. articles/4083/files/6752f648ee5db.zip ; https://a.tellusjournals.se/ ; >
+      au < ready ; exists ; 2024 ; 76 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < crawling ; exists ; 2025 ; 77 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
 
   }
@@ -742,7 +742,7 @@
       nondefparam[journal_id] = up-j-as
       #2019 AUs are published on the 2020 manifest page. See https://account.revista-anglo-saxonica.org/lockss/year/2020/
 
-      au < manifest ; exists ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
+      au < ready ; exists ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
       au < finished ; finished ; 2020 ; 18 ; Anglo Saxonica Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.revista-anglo-saxonica.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 19 ; Anglo Saxonica Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.revista-anglo-saxonica.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 20 ; Anglo Saxonica Volume 2022 [superseded] ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.revista-anglo-saxonica.org/ ; >
@@ -1428,7 +1428,7 @@
       nondefparam[journal_id] = su-j-jmre
 
       au < superseded ; finished ; 2016 ; 1 ; Journal of Montessori Research & Education Volume 2016 [superseded] ; 2016 ; 1 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2019 ; 2 ; Journal of Montessori Research & Education Volume 2019 ; 2019 ; 2 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
+      au < ready ; exists ; 2019 ; 2 ; Journal of Montessori Research & Education Volume 2019 ; 2019 ; 2 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2021 ; 3 ; Journal of Montessori Research & Education Volume 2021 ; 2021 ; 3 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2023 ; 4 ; Journal of Montessori Research & Education Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
 
@@ -2491,7 +2491,7 @@
       nondefparam[base_url2] = https://account.see.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-gpajepr
 
-      au < manifest ; exists ; 2024 ; 5 ; Gateway Papers Volume 2024 ; 2024 ; 5 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
+      au < ready ; exists ; 2024 ; 5 ; Gateway Papers Volume 2024 ; 2024 ; 5 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
       }
       #Title changed to Studies in Empowering Education (2977-4748) 2025 and forward
   }
@@ -2509,7 +2509,7 @@
       nondefparam[journal_id] = dmu-j-gpajepr
       #Previously Gateway Papers (2044-852X) 2010 to 2024
 
-      au < manifest ; exists ; 2025 ; 6 ; Studies in Empowering Education Volume 2025 ; 2025 ; 6 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
+      au < ready ; exists ; 2025 ; 6 ; Studies in Empowering Education Volume 2025 ; 2025 ; 6 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
 
   }
 
@@ -2614,10 +2614,10 @@
       nondefparam[journal_id] = ul-j-jhnr
 
       au < manifest ; exists ; 2017 ; 1 ; Journal of Historical Network Research Volume 2017 ; 2017 ; 1 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
-      au < manifest ; exists ; 2018 ; 2 ; Journal of Historical Network Research Volume 2018 ; 2018 ; 2 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
-      au < manifest ; exists ; 2019 ; 3 ; Journal of Historical Network Research Volume 2019 ; 2019 ; 3 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
+      au < ready ; exists ; 2018 ; 2 ; Journal of Historical Network Research Volume 2018 ; 2018 ; 2 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
+      au < ready ; exists ; 2019 ; 3 ; Journal of Historical Network Research Volume 2019 ; 2019 ; 3 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < ready ; exists ; 2020 ; 4 ; Journal of Historical Network Research Volume 2020 ; 2020 ; 4 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
-      au < notReady ; exists ; 2021 ; 5,6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5,6 ; Université du Luxembourg ; LOCKSS ; https://jhnr.net/ ; >
+      au < ready ; exists ; 2021 ; 5,6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5,6 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < ready ; exists ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
@@ -2642,12 +2642,12 @@
       au < manifest ; exists ; 2015 ; 18 ; European Journal of Open, Distance and E-Learning Volume 2015 ; 2015 ; 18 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < manifest ; exists ; 2016 ; 19 ; European Journal of Open, Distance and E-Learning Volume 2016 ; 2016 ; 19 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < manifest ; exists ; 2017 ; 20 ; European Journal of Open, Distance and E-Learning Volume 2017 ; 2017 ; 20 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
-      au < manifest ; exists ; 2018 ; 21 ; European Journal of Open, Distance and E-Learning Volume 2018 ; 2018 ; 21 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
-      au < manifest ; exists ; 2019 ; 22 ; European Journal of Open, Distance and E-Learning Volume 2019 ; 2019 ; 22 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
+      au < ready ; exists ; 2018 ; 21 ; European Journal of Open, Distance and E-Learning Volume 2018 ; 2018 ; 21 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
+      au < ready ; exists ; 2019 ; 22 ; European Journal of Open, Distance and E-Learning Volume 2019 ; 2019 ; 22 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < ready ; exists ; 2020 ; 23 ; European Journal of Open, Distance and E-Learning Volume 2020 ; 2020 ; 23 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < ready ; exists ; 2022 ; 24 ; European Journal of Open, Distance and E-Learning Volume 2022 ; 2022 ; 24 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < ready ; exists ; 2023 ; 25 ; European Journal of Open, Distance and E-Learning Volume 2023 ; 2023 ; 25 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
-      au < manifest ; exists ; 2024 ; 26 ; European Journal of Open, Distance and E-Learning Volume 2024 ; 2024 ; 26 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
+      au < ready ; exists ; 2024 ; 26 ; European Journal of Open, Distance and E-Learning Volume 2024 ; 2024 ; 26 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < crawling ; exists ; 2025 ; 27 ; European Journal of Open, Distance and E-Learning Volume 2025 ; 2025 ; 27 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
 
   }
@@ -2664,8 +2664,8 @@
       nondefparam[base_url2] = https://account.neuroircases.com/
       nondefparam[journal_id] = wpllc-j-jncr
 
-      au < manifest ; exists ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
-      au < manifest ; exists ; 2025 ; 2 ; Journal of Neurointerventional Case Reports Volume 2025 ; 2025 ; 2 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
+      au < ready ; exists ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
+      au < ready ; exists ; 2025 ; 2 ; Journal of Neurointerventional Case Reports Volume 2025 ; 2025 ; 2 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
 
   }
 
