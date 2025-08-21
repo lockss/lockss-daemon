@@ -76,8 +76,8 @@
       au < finished ; finished ; 2021 ; 1,2 ; LSE Public Policy Review Volume 2021 ; 2021 ; 1,2 ; ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 2 ; LSE Public Policy Review Volume 2022 [superseded] ; 2022 ; 2 ; ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 3 ; LSE Public Policy Review Volume 2023 ; 2023 ; 3 ; ; >
-      au < manifest ; exists ; 2024 ; 3 ; LSE Public Policy Review Volume 2024 ; 2024 ; 3 ; No substance ; >
-      au < manifest ; exists ; 2025 ; 3 ; LSE Public Policy Review Volume 2025 ; 2025 ; 3 ; No substance ; >
+      au < manifest ; exists ; 2024 ; 3 ; LSE Public Policy Review Volume 2024 ; 2024 ; 3 ;  ; >
+      au < manifest ; exists ; 2025 ; 3 ; LSE Public Policy Review Volume 2025 ; 2025 ; 3 ;  ; >
 
   }
 
@@ -136,8 +136,8 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 22 ; Economía Volume 2021 ; 2021 ; 22 ; ; >
       au < doesNotExist ; doesNotExist ; 2022 ; 21 ; Economía Volume 2022 ; 2022 ; 21 ; ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 22 ; Economía Volume 2023 ; 2023 ; 22 ; ; >
-      au < manifest ; exists ; 2024 ; 23 ; Economía Volume 2024 ; 2024 ; 23 ; No substance ; >
-      au < manifest ; exists ; 2025 ; 24 ; Economía Volume 2025 ; 2025 ; 24 ; No substance ; >
+      au < manifest ; exists ; 2024 ; 23 ; Economía Volume 2024 ; 2024 ; 23 ;  ; >
+      au < manifest ; exists ; 2025 ; 24 ; Economía Volume 2025 ; 2025 ; 24 ;  ; >
 
   }
 
