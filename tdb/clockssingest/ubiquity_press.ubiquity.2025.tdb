@@ -33,12 +33,12 @@
       au < ready ; exists ; 2010 ; 13 ; Journal of The American Society of Questioned Document Examiners Volume 2010 ; 2010 ; 13 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < ready ; exists ; 2011 ; 14 ; Journal of The American Society of Questioned Document Examiners Volume 2011 ; 2011 ; 14 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < ready ; exists ; 2012 ; 15 ; Journal of The American Society of Questioned Document Examiners Volume 2012 ; 2012 ; 15 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < ready ; exists ; 2013 ; 16 ; Journal of The American Society of Questioned Document Examiners Volume 2013 ; 2013 ; 16 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < crawling ; exists ; 2013 ; 16 ; Journal of The American Society of Questioned Document Examiners Volume 2013 ; 2013 ; 16 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < ready ; exists ; 2014 ; 17 ; Journal of The American Society of Questioned Document Examiners Volume 2014 ; 2014 ; 17 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2015 ; 18 ; Journal of The American Society of Questioned Document Examiners Volume 2015 ; 2015 ; 18 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < ready ; exists ; 2016 ; 19 ; Journal of The American Society of Questioned Document Examiners Volume 2016 ; 2016 ; 19 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < crawling ; exists ; 2016 ; 19 ; Journal of The American Society of Questioned Document Examiners Volume 2016 ; 2016 ; 19 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2017 ; 20 ; Journal of The American Society of Questioned Document Examiners Volume 2017 ; 2017 ; 20 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < ready ; exists ; 2018 ; 21 ; Journal of The American Society of Questioned Document Examiners Volume 2018 ; 2018 ; 21 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < crawling ; exists ; 2018 ; 21 ; Journal of The American Society of Questioned Document Examiners Volume 2018 ; 2018 ; 21 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < ready ; exists ; 2019 ; 22 ; Journal of The American Society of Questioned Document Examiners Volume 2019 ; 2019 ; 22 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2020 ; 23 ; Journal of The American Society of Questioned Document Examiners Volume 2020 ; 2020 ; 23 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2021 ; 24 ; Journal of The American Society of Questioned Document Examiners Volume 2021 ; 2021 ; 24 ; ASQDE ;  ; https://journal.asqde.org/ ; >
@@ -665,7 +665,7 @@
       au < finished ; crawling ; 2021 ; 87 ; Annals of Global Health Volume 2021 ; 2021 ; 87 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 88 ; Annals of Global Health Volume 2022 [superseded] ; 2022 ; 88 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 89 ; Annals of Global Health Volume 2023 ; 2023 ; 89 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
-      au < ready ; exists ; 2024 ; 90 ; Annals of Global Health Volume 2024 ; 2024 ; 90 ; Ubiquity Press ; No substance ; https://annalsofglobalhealth.org/ ; >
+      au < crawling ; exists ; 2024 ; 90 ; Annals of Global Health Volume 2024 ; 2024 ; 90 ; Ubiquity Press ; No substance ; https://annalsofglobalhealth.org/ ; >
       au < crawling ; exists ; 2025 ; 91 ; Annals of Global Health Volume 2025 ; 2025 ; 91 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ ; >
 
   }
@@ -724,7 +724,7 @@
       au < finished ; finished ; 2021 ; 35 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; 35 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 36 ; Current: Journal of Marine Education Volume 2022 [superseded] ; 2022 ; 36 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 37,38 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; 37,38 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
-      au < ready ; exists ; 2024 ; 39 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
+      au < crawling ; exists ; 2024 ; 39 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
       au < crawling ; exists ; 2025 ; 40 ; Current: Journal of Marine Education Volume 2025 ; 2025 ; 40 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
 
   }
@@ -799,7 +799,7 @@
       au < finished ; crawling ; 2021 ; 31 ; Bulletin of the History of Archaeology Volume 2021 ; 2021 ; 31 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 32 ; Bulletin of the History of Archaeology Volume 2022 [superseded] ; 2022 ; 32 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 33 ; Bulletin of the History of Archaeology Volume 2023 ; 2023 ; 33 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
-      au < ready ; exists ; 2024 ; 34 ; Bulletin of the History of Archaeology Volume 2024 ; 2024 ; 34 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
+      au < crawling ; exists ; 2024 ; 34 ; Bulletin of the History of Archaeology Volume 2024 ; 2024 ; 34 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < crawling ; exists ; 2025 ; 35 ; Bulletin of the History of Archaeology Volume 2025 ; 2025 ; 35 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
 
 
@@ -936,7 +936,7 @@
       au < finished ; crawling ; 2021 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://www.glocality.eu/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ;  ; https://www.glocality.eu/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://glocality.eu/ ; >
-      au < ready ; exists ; 2024 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 7 ; Ubiquity Press ; No substance ; http://glocality.eu/ ; >
+      au < crawling ; exists ; 2024 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 7 ; Ubiquity Press ; No substance ; http://glocality.eu/ ; >
       au < crawling ; exists ; 2025 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; http://glocality.eu/ ; >
 
   }
@@ -1545,7 +1545,7 @@
       au < finished ; crawling ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; 7 ; Ubiquity Press ;  ; https://www.openquaternary.com/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 8 ; Open Quaternary Volume 2022 [superseded] ; 2022 ; 8 ; Ubiquity Press ;  ; https://www.openquaternary.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Open Quaternary Volume 2023 ; 2023 ; 9 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
-      au < ready ; exists ; 2024 ; 10 ; Open Quaternary Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
+      au < crawling ; exists ; 2024 ; 10 ; Open Quaternary Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
       au < crawling ; exists ; 2025 ; 11 ; Open Quaternary Volume 2025 ; 2025 ; 11 ; Ubiquity Press ;  ; https://openquaternary.com/ ; >
 
   }
@@ -1615,7 +1615,7 @@
       au < finished ; crawling ; 2021 ; 10 ; Secularism and Nonreligion Volume 2021 ; 2021 ; 10 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 11 ; Secularism and Nonreligion Volume 2022 [superseded] ; 2022 ; 11 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Secularism and Nonreligion Volume 2023 ; 2023 ; 12 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
-      au < ready ; exists ; 2024 ; 13 ; Secularism and Nonreligion Volume 2024 ; 2024 ; 13 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
+      au < crawling ; exists ; 2024 ; 13 ; Secularism and Nonreligion Volume 2024 ; 2024 ; 13 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
       au < crawling ; exists ; 2025 ; 14 ; Secularism and Nonreligion Volume 2025 ; 2025 ; 14 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
 
   }
@@ -1646,7 +1646,7 @@
       au < finished ; crawling ; 2021 ; 36 ; Utrecht Journal of International and European Law Volume 2021 ; 2021 ; 36 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 37 ; Utrecht Journal of International and European Law Volume 2022 [superseded] ; 2022 ; 37 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 38 ; Utrecht Journal of International and European Law Volume 2023 ; 2023 ; 38 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
-      au < ready ; exists ; 2024 ; 39 ; Utrecht Journal of International and European Law Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
+      au < crawling ; exists ; 2024 ; 39 ; Utrecht Journal of International and European Law Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
       au < expected ; exists ; 2025 ; 40 ; Utrecht Journal of International and European Law Volume 2025 ; 2025 ; 40 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
 
   }
@@ -1853,7 +1853,7 @@
       au < finished ; crawling ; 2021 ; 4 ; Transactions of the International Society for Music Information Retrieval Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 5 ; Transactions of the International Society for Music Information Retrieval Volume 2022 [superseded] ; 2022 ; 5 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Transactions of the International Society for Music Information Retrieval Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
-      au < ready ; exists ; 2024 ; 7 ; Transactions of the International Society for Music Information Retrieval Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
+      au < crawling ; exists ; 2024 ; 7 ; Transactions of the International Society for Music Information Retrieval Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
       au < crawling ; exists ; 2025 ; 8 ; Transactions of the International Society for Music Information Retrieval Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://transactions.ismir.net/ ; >
 
   }
@@ -2108,7 +2108,7 @@
       au < finished ; finished ; 2020 ; 33 ; Insights: the UKSG journal Volume 2020 ; 2020 ; 33 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 34 ; Insights: the UKSG journal Volume 2021 ; 2021 ; 34 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 35 ; Insights: the UKSG journal Volume 2022 [superseded] ; 2022 ; 35 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
-      au < ready ; exists ; 2023 ; 36 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 36 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
+      au < crawling ; exists ; 2023 ; 36 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 36 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
       au < crawling ; exists ; 2024 ; 37 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 37 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
       au < crawling ; exists ; 2025 ; 38 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 38 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ ; >
 
@@ -2335,7 +2335,7 @@
       au < superseded ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 [superseded] ; 2020 ; 1 ; Virginia Tech Publishing ; removed www ; https://www.seejournal.org/ ; >
       au < superseded ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 [superseded] ; 2021 ; 2 ; Virginia Tech Publishing ; removed www ; https://www.seejournal.org/ ; >
 
-      au < ready ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
+      au < crawling ; exists ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
       au < crawling ; exists ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; Virginia Tech Publishing ;  ; https://seejournal.org/ ; >
       au < superseded ; exists ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 [superseded] ; 2022 ; 3 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; 4 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ ; >
@@ -2391,7 +2391,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 32,33 ; Journal of Technology Education Volume 2021 ; 2021 ; 32,33 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 33,34 ; Journal of Technology Education Volume 2022 ; 2022 ; 33,34 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 34,35 ; Journal of Technology Education Volume 2023 ; 2023 ; 34,35 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < ready ; exists ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < crawling ; exists ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < crawling ; exists ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
 
   }
@@ -2616,7 +2616,7 @@
       au < manifest ; exists ; 2017 ; 1 ; Journal of Historical Network Research Volume 2017 ; 2017 ; 1 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < ready ; exists ; 2018 ; 2 ; Journal of Historical Network Research Volume 2018 ; 2018 ; 2 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < ready ; exists ; 2019 ; 3 ; Journal of Historical Network Research Volume 2019 ; 2019 ; 3 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
-      au < ready ; exists ; 2020 ; 4 ; Journal of Historical Network Research Volume 2020 ; 2020 ; 4 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
+      au < crawling ; exists ; 2020 ; 4 ; Journal of Historical Network Research Volume 2020 ; 2020 ; 4 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < ready ; exists ; 2021 ; 5,6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5,6 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < ready ; exists ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
@@ -2644,8 +2644,8 @@
       au < manifest ; exists ; 2017 ; 20 ; European Journal of Open, Distance and E-Learning Volume 2017 ; 2017 ; 20 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < ready ; exists ; 2018 ; 21 ; European Journal of Open, Distance and E-Learning Volume 2018 ; 2018 ; 21 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < ready ; exists ; 2019 ; 22 ; European Journal of Open, Distance and E-Learning Volume 2019 ; 2019 ; 22 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
-      au < ready ; exists ; 2020 ; 23 ; European Journal of Open, Distance and E-Learning Volume 2020 ; 2020 ; 23 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
-      au < ready ; exists ; 2022 ; 24 ; European Journal of Open, Distance and E-Learning Volume 2022 ; 2022 ; 24 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
+      au < crawling ; exists ; 2020 ; 23 ; European Journal of Open, Distance and E-Learning Volume 2020 ; 2020 ; 23 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
+      au < crawling ; exists ; 2022 ; 24 ; European Journal of Open, Distance and E-Learning Volume 2022 ; 2022 ; 24 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < ready ; exists ; 2023 ; 25 ; European Journal of Open, Distance and E-Learning Volume 2023 ; 2023 ; 25 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < ready ; exists ; 2024 ; 26 ; European Journal of Open, Distance and E-Learning Volume 2024 ; 2024 ; 26 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >
       au < crawling ; exists ; 2025 ; 27 ; European Journal of Open, Distance and E-Learning Volume 2025 ; 2025 ; 27 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ ; >

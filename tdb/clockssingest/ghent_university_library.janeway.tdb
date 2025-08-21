@@ -155,7 +155,7 @@
       param[base_url] = https://lcj.ugent.be/
       #param[journal_id] = lcj
 
-      au < ready ; exists ; 2024 ; 2024 ; 2024 ; Law & Criminology Journal Volume 2024 ; >
+      au < crawling ; exists ; 2024 ; 2024 ; 2024 ; Law & Criminology Journal Volume 2024 ; >
       au < crawling ; exists ; 2025 ; 2025 ; 2025 ; Law & Criminology Journal Volume 2025 ; >
 
   }
