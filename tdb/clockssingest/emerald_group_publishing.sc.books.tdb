@@ -5,7 +5,7 @@
     info[contract] = 2015 ;
     info[back] = 1994 ;
     info[tester] = X ;
-    info[platform] = Silverchair
+    info[platform] = Silverchair Books
   >
 
   plugin = org.lockss.plugin.silverchair.emerald.ClockssEmeraldSilverchairBooksPlugin
