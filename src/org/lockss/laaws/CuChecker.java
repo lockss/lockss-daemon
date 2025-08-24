@@ -66,9 +66,12 @@ public class CuChecker extends CuBase {
           checkCuVersions(v2Url, mappedCus.get(v2Url),
                           getV2ArtifactsForUrl(auid, v2Url));
         } catch (ApiException e) {
-          // XXX FATAL?
           log.warning("Can't get list of V2 artifacts for " +
                       v2Url + ", continuing.");
+          String err = "Error fetching V2 artifacts for " + v2Url +
+            " in: " + au.getName();
+          log.warning(err, e);
+          task.addError(err + ": " + e.toString());
         }
       }
       ctrs.add(CounterType.URLS_VERIFIED, mappedCus.keySet().size());
