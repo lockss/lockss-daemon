@@ -2230,6 +2230,8 @@ public class V2AuMover {
     if (hasBeenStarted) {
       if (isFailed()) {
         return "Failed";
+      } else if (isRunning()) {
+        return "Starting";
       } else {
         return "Done";
       }
@@ -2624,7 +2626,6 @@ public class V2AuMover {
       totalTimers.addCounterStatus(sb, opType, ": ");
       currentStatus = sb.toString();
     }
-    running = false;
     if (writer != null) {
       writer.println("--------------------------------------------------");
       writer.println((isAbort() ? " Aborted" : "  Finished") + " with " +
