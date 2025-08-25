@@ -31,15 +31,15 @@
       au < manifest ; exists ; 2008 ; 11 ; Journal of The American Society of Questioned Document Examiners Volume 2008 ; 2008 ; 11 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < manifest ; exists ; 2009 ; 12 ; Journal of The American Society of Questioned Document Examiners Volume 2009 ; 2009 ; 12 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2010 ; 13 ; Journal of The American Society of Questioned Document Examiners Volume 2010 ; 2010 ; 13 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < ready ; exists ; 2011 ; 14 ; Journal of The American Society of Questioned Document Examiners Volume 2011 ; 2011 ; 14 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < ready ; exists ; 2012 ; 15 ; Journal of The American Society of Questioned Document Examiners Volume 2012 ; 2012 ; 15 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < crawling ; exists ; 2011 ; 14 ; Journal of The American Society of Questioned Document Examiners Volume 2011 ; 2011 ; 14 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < crawling ; exists ; 2012 ; 15 ; Journal of The American Society of Questioned Document Examiners Volume 2012 ; 2012 ; 15 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2013 ; 16 ; Journal of The American Society of Questioned Document Examiners Volume 2013 ; 2013 ; 16 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2014 ; 17 ; Journal of The American Society of Questioned Document Examiners Volume 2014 ; 2014 ; 17 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2015 ; 18 ; Journal of The American Society of Questioned Document Examiners Volume 2015 ; 2015 ; 18 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2016 ; 19 ; Journal of The American Society of Questioned Document Examiners Volume 2016 ; 2016 ; 19 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2017 ; 20 ; Journal of The American Society of Questioned Document Examiners Volume 2017 ; 2017 ; 20 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2018 ; 21 ; Journal of The American Society of Questioned Document Examiners Volume 2018 ; 2018 ; 21 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < ready ; exists ; 2019 ; 22 ; Journal of The American Society of Questioned Document Examiners Volume 2019 ; 2019 ; 22 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < crawling ; exists ; 2019 ; 22 ; Journal of The American Society of Questioned Document Examiners Volume 2019 ; 2019 ; 22 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2020 ; 23 ; Journal of The American Society of Questioned Document Examiners Volume 2020 ; 2020 ; 23 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2021 ; 24 ; Journal of The American Society of Questioned Document Examiners Volume 2021 ; 2021 ; 24 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; ASQDE ;  ; https://journal.asqde.org/ ; >
@@ -463,7 +463,7 @@
       au < finished ; crawling ; 2021 ; 50 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2021 ; 2021 ; 50 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 51 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 [superseded] ; 2022 ; 51 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 52 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2023 ; 2023 ; 52 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
-      au < ready ; exists ; 2024 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
+      au < crawling ; exists ; 2024 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
       au < crawling ; exists ; 2025 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 54 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
 
   }
@@ -485,7 +485,7 @@
       au < finished ; crawling ; 2021 ; 4 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2021 ; 2021 ; 4 ; Stockholm University Press ;  ; https://franorfon.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 5 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2022 [superseded] ; 2022 ; 5 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 6 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2023 ; 2023 ; 6 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
-      au < ready ; exists ; 2024 ; 7 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2024 ; 2024 ; 7 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
+      au < crawling ; exists ; 2024 ; 7 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2024 ; 2024 ; 7 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
       au < crawling ; exists ; 2025 ; 8 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2025 ; 2025 ; 8 ; Stockholm University Press ;  ; https://franorfon.org/ ; >
 
   }
@@ -742,7 +742,7 @@
       nondefparam[journal_id] = up-j-as
       #2019 AUs are published on the 2020 manifest page. See https://account.revista-anglo-saxonica.org/lockss/year/2020/
 
-      au < ready ; exists ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
+      au < crawling ; exists ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
       au < finished ; finished ; 2020 ; 18 ; Anglo Saxonica Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.revista-anglo-saxonica.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 19 ; Anglo Saxonica Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.revista-anglo-saxonica.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 20 ; Anglo Saxonica Volume 2022 [superseded] ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.revista-anglo-saxonica.org/ ; >
@@ -1289,7 +1289,7 @@
       au < finished ; crawling ; 2021 ; 9 ; Journal of Open Psychology Data Volume 2021 ; 2021 ; 9 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 10 ; Journal of Open Psychology Data Volume 2022 [superseded] ; 2022 ; 10 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Journal of Open Psychology Data Volume 2023 ; 2023 ; 11 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
-      au < ready ; exists ; 2024 ; 12 ; Journal of Open Psychology Data Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
+      au < crawling ; exists ; 2024 ; 12 ; Journal of Open Psychology Data Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
       au < crawling ; exists ; 2025 ; 13 ; Journal of Open Psychology Data Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ ; >
 
   }
@@ -1428,9 +1428,9 @@
       nondefparam[journal_id] = su-j-jmre
 
       au < superseded ; finished ; 2016 ; 1 ; Journal of Montessori Research & Education Volume 2016 [superseded] ; 2016 ; 1 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2019 ; 2 ; Journal of Montessori Research & Education Volume 2019 ; 2019 ; 2 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2021 ; 3 ; Journal of Montessori Research & Education Volume 2021 ; 2021 ; 3 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2023 ; 4 ; Journal of Montessori Research & Education Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://journalofmore.org/ ; reingest3.clockss.org:8083 >
+      au < ready ; exists ; 2019 ; 2 ; Journal of Montessori Research & Education Volume 2019 ; 2019 ; 2 ; Ubiquity Press ;  ; https://journalofmore.org/ ; >
+      au < ready ; exists ; 2021 ; 3 ; Journal of Montessori Research & Education Volume 2021 ; 2021 ; 3 ; Ubiquity Press ;  ; https://journalofmore.org/ ; >
+      au < ready ; exists ; 2023 ; 4 ; Journal of Montessori Research & Education Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://journalofmore.org/ ; >
 
   }
 
@@ -2545,7 +2545,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 17 ; Methodist DeBakey Cardiovascular Journal Volume 2021 ; 2021 ; 17 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 18 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 ; 18 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2023 ; 2023 ; 19 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
-      au < ready ; exists ; 2024 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 20 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
+      au < crawling ; exists ; 2024 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 20 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
       au < crawling ; exists ; 2025 ; 21 ; Methodist DeBakey Cardiovascular Journal Volume 2025 ; 2025 ; 21 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ ; >
 
   }
@@ -2596,7 +2596,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       #au < doesNotExist ; doesNotExist ; 2022 ; 0 ; Scientific Study of Literature Volume 2022 ; 2022 ; 0 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
-      au < ready ; exists ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
+      au < crawling ; exists ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < crawling ; exists ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
 
   }
@@ -2614,7 +2614,7 @@
       nondefparam[journal_id] = ul-j-jhnr
 
       au < manifest ; exists ; 2017 ; 1 ; Journal of Historical Network Research Volume 2017 ; 2017 ; 1 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
-      au < ready ; exists ; 2018 ; 2 ; Journal of Historical Network Research Volume 2018 ; 2018 ; 2 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
+      au < crawling ; exists ; 2018 ; 2 ; Journal of Historical Network Research Volume 2018 ; 2018 ; 2 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2019 ; 3 ; Journal of Historical Network Research Volume 2019 ; 2019 ; 3 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2020 ; 4 ; Journal of Historical Network Research Volume 2020 ; 2020 ; 4 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2021 ; 5,6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5,6 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
@@ -2664,7 +2664,7 @@
       nondefparam[base_url2] = https://account.neuroircases.com/
       nondefparam[journal_id] = wpllc-j-jncr
 
-      au < ready ; exists ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
+      au < crawling ; exists ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
       au < crawling ; exists ; 2025 ; 2 ; Journal of Neurointerventional Case Reports Volume 2025 ; 2025 ; 2 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ ; >
 
   }

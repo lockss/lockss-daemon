@@ -121,7 +121,7 @@
     au < finished ; manifest ; 2022 ; Australian Journal of French Studies Volume 59 ; 59 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; Australian Journal of French Studies Volume 60 ; 60 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Australian Journal of French Studies Volume 61 ; 61 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; Australian Journal of French Studies Volume 62 ; 62 ; >
+    au < crawling ; exists ; 2025 ; Australian Journal of French Studies Volume 62 ; 62 ; >
 
   }
 
@@ -181,7 +181,7 @@
     au < finished ; manifest ; 2022 ; British Journal of Canadian Studies Volume 34 ; 34 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; British Journal of Canadian Studies Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; British Journal of Canadian Studies Volume 36 ; 36 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; British Journal of Canadian Studies Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2025 ; British Journal of Canadian Studies Volume 37 ; 37 ; >
 
   }
 
@@ -1743,7 +1743,7 @@
     au < finished ; manifest ; 2022 ; Quebec Studies Volume 73 ; 73 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; Quebec Studies Volume 74 ; 74 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Quebec Studies Volume 75 ; 75 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; Quebec Studies Volume 76 ; 76 ; >
+    au < crawling ; exists ; 2025 ; Quebec Studies Volume 76 ; 76 ; >
 
   }
 
@@ -1777,7 +1777,7 @@
     au < finished ; manifest ; 2022 ; Science Fiction Film and Television Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Science Fiction Film and Television Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Science Fiction Film and Television Volume 17 ; 17 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2025 ; Science Fiction Film and Television Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2025 ; Science Fiction Film and Television Volume 18 ; 18 ; >
 
   }
 
@@ -1794,7 +1794,7 @@
     #Published 1997-present
     #journal_num = 74
 
-    au < ready ; exists ; 2004 ; Sculpture Journal Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2004 ; Sculpture Journal Volume 11 ; 11 ; >
     au < ready ; exists ; 2004 ; Sculpture Journal Volume 12 ; 12 ; >
     au < finished ; manifest ; 2005 ; Sculpture Journal Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2005 ; Sculpture Journal Volume 14 ; 14 ; reingest4.clockss.org:8082 >
