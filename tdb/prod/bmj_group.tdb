@@ -568,7 +568,7 @@
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Volume 383 ; 383 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Volume 384 ; 384 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Volume 385 ; 385 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; notReady ; 2024 ; BMJ Volume 386 ; 386 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; ready ; 2024 ; BMJ Volume 386 ; 386 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Volume 387 ; 387 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 388 ; 388 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 389 ; 389 ; https://www.bmj.com/ >
@@ -785,10 +785,10 @@
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Supportive & Palliative Care Volume 8 ; 8 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2019 ; BMJ Supportive & Palliative Care Volume 9 ; 9 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2020 ; BMJ Supportive & Palliative Care Volume 10 ; 10 ; https://spcare.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Supportive & Palliative Care Volume 11 ; 11 ; https://spcare.bmj.com/ > #login, https://spcare.bmj.com/content/11/1/1
+    au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Supportive & Palliative Care Volume 11 ; 11 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Supportive & Palliative Care Volume 12 ; 12 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Supportive & Palliative Care Volume 13 ; 13 ; https://spcare.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; notReady ; 2024 ; BMJ Supportive & Palliative Care Volume 14 ; 14 ; https://spcare.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2024 ; BMJ Supportive & Palliative Care Volume 14 ; 14 ; https://spcare.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Supportive & Palliative Care Volume 15 ; 15 ; https://spcare.bmj.com/ >
 
   }
