@@ -125,6 +125,12 @@ public class CuBase extends Worker {
             V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, redirTo);
             mappedCus.put(v1Url, cuVer);
             mappedCus.put(redirTo, v2cuVer);
+//         } else if (UrlUtil.isDirectoryRedirection(redirTo, v1Url)) {
+//           // This was redirected from "foo/" to "foo".  Copy as both
+//           // "foo/" and "foo" to match what V2 would have collected
+//           V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, v1);
+//           mappedCus.put(redirTo, v2cuVer);
+//           mappedCus.put(v1Url, cuVer);
           } else {
             // No slash - V2 name is the same
             mappedCus.put(v1Url, cuVer);

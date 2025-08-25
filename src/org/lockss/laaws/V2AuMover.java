@@ -128,7 +128,7 @@ public class V2AuMover {
    */
   public static final String PARAM_COPY_EXECUTOR_SPEC =
     EXEC_PREFIX + "copy.spec";
-  public static final String DEFAULT_COPY_EXECUTOR_SPEC = "1000;10";
+  public static final String DEFAULT_COPY_EXECUTOR_SPEC = "1000;20";
 
   /**
    * Verify task Executor.  Queue should be large to reduce waiting
@@ -144,7 +144,7 @@ public class V2AuMover {
    */
   public static final String PARAM_COPY_ITER_EXECUTOR_SPEC =
     EXEC_PREFIX + "copyIter.spec";
-  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "2;4";
+  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "2;10";
 
   /**
    * Verify CU iterators run in this Executor.  Controls the number of
@@ -152,7 +152,7 @@ public class V2AuMover {
    */
   public static final String PARAM_VERIFY_ITER_EXECUTOR_SPEC =
     EXEC_PREFIX + "verifyIter.spec";
-  public static final String DEFAULT_VERIFY_ITER_EXECUTOR_SPEC = "10;2";
+  public static final String DEFAULT_VERIFY_ITER_EXECUTOR_SPEC = "10;16";
 
   /**
    * Index Executor.  Controls max simulataneous finishBulk operations
