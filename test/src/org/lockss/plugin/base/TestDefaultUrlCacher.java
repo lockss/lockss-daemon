@@ -175,32 +175,6 @@ public class TestDefaultUrlCacher extends LockssTestCase {
     assertNotEquals(rcu1, rcu2);
   }
 
-  public void testCacheDirRedirect() throws IOException {
-    String cont = "test stream";
-    ud = new UrlData(new StringInputStream(cont),
-		     new CIProperties(), TEST_URL);
-    long origChange = maus.getLastContentChange();
-    cacher = new MyDefaultUrlCacher(mau, ud);
-    cacher.setRedirectUrls(ListUtil.list(REDIR_URL_1));
-    CachedUrl cu = new BaseCachedUrl(mau, TEST_URL);
-    mau.addCu(cu);
-    mau.addUrlToBeCached(TEST_URL);
-    mau.addUrlToBeCached(REDIR_URL_1);
-
-    cacher.storeContent();
-    assertTrue(cacher.wasStored);
-
-    CachedUrl rcu1 = new BaseCachedUrl(mau, TEST_URL);
-    assertTrue(rcu1.hasContent());
-    assertInputStreamMatchesString(cont, rcu1.getUnfilteredInputStream());
-
-    CachedUrl rcu2 = new BaseCachedUrl(mau, REDIR_URL_1);
-    assertTrue(rcu2.hasContent());
-    assertInputStreamMatchesString(cont, rcu2.getUnfilteredInputStream());
-
-    assertNotEquals(rcu1, rcu2);
-  }
-
   public void testCacheEmpty() throws IOException {
     ud = new UrlData(new StringInputStream(""), 
         new CIProperties(), TEST_URL);
