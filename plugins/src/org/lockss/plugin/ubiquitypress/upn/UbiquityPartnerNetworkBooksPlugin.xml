@@ -97,16 +97,21 @@ POSSIBILITY OF SUCH DAMAGE.
     They have different links
     https://utsepress.lib.uts.edu.au/site/books/10.5130/978-0-6481242-8-3
     https://utsepress.lib.uts.edu.au/site/books/10.5130/pmrp.ipmarc2017/
+
+    Updated 2025, start links now look like this:
+    https://luminosoa.org/books/m/10.1525/luminos.11
+    https://utsepress.lib.uts.edu.au/books/e/10.5130/pmrp.ipmarc2017
      -->
-    <string>"%sbooks/m/%s", base_url, book_doi</string>
+    <string>"%sbooks/%s", base_url, book_doi</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1, "https://s3-eu-west-1.amazonaws.com/.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)"</string>
-      <string>1, "https://netdna.bootstrapcdn.com/font-awesome/"</string>
-      <string>1,"^https://fonts.googleapis.com/css"</string>
-      <string>1,"%sbooks/.*\.(epub|mobi|pdf)$", base_url, book_doi</string>
+      <string>1,"^https?://%s%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf|properties|pdf|mrc)", base_url_host, base_url_path</string>
+      <string>1,"^https?://%s%sapi/theme$",base_url_host, base_url_path</string>
+      <string>1,"^https?://(maxcdn\.bootstrapcdn\.com|cdnjs\.cloudflare\.com|.+\.cloudfront\.net|cdn\.mathjax\.org|(fonts|ajax|storage)\.(gstatic|googleapis)\.com)/."</string>
+      <string>1,"^https?://%s%sbooks/.*\.(epub|mobi|pdf)$", base_url_host, base_url_path</string>
+      <string>1,"^https?://%s%sreader/books/pdf/[0-9\.]+/[a-z0-9\.]+$", base_url_host, base_url_path</string>
       <!--
       https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download/2946/
       https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download/2947/
@@ -114,12 +119,12 @@ POSSIBILITY OF SUCH DAMAGE.
       https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download_citation/ris/
       https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download_citation/bib/
       -->
-      <string>1,"%sbooks/.*/(download|download_citation)/", base_url, book_doi</string>
+      <string>1,"^https?://%s%sbooks/.*/(download|download_citation)/", base_url_host, base_url_path</string>
     </list>
   </entry>
  <entry>
      <string>au_substance_url_pattern</string>
-   <string>"%sbooks/.*/download/", base_url</string>
+     <string>"^https?://%s%sbooks/.*\.(epub|mobi|pdf)$", base_url_host, base_url_path</string>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
@@ -188,7 +193,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>cdnjs\.cloudflare\.com</string>
       <string>.+\.cloudfront\.net</string>
       <string>.+\.mathjax\.org</string>
-      <string>(fonts|ajax)\.(gstatic|googleapis)\.com</string>
+      <string>(fonts|ajax|storage)\.(gstatic|googleapis)\.com</string>
       <string>.+\.jquery\.com</string>
     </list>
   </entry>
