@@ -53,31 +53,21 @@ public class UbiquityPartnerNetworkBookIteratorFactory implements ArticleIterato
           Logger.getLogger(UbiquityPartnerNetworkBookIteratorFactory.class);
 
   /*
-  https://utsepress.lib.uts.edu.au/site/books/10.5130/978-0-6481242-8-3
-  //Content-Type: ('application/pdf', None)
-  https://utsepress.lib.uts.edu.au/site/books/10.5130/978-0-6481242-8-3/download/3149/
-
-  https://utsepress.lib.uts.edu.au/site/books/10.5130/pmrp.ipmarc2017
-  https://utsepress.lib.uts.edu.au/site/books/10.5130/pmrp.ipmarc2017/download/2735/
-
-  https://utsepress.lib.uts.edu.au/site/books/10.5130/aae
-  https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download/2948/
-
-  https://www.ubiquitypress.com/site/books/e/10.5334/bcj/
-  https://www.ubiquitypress.com/site/books/10.5334/bcj/download/3331
+  https://luminosoa.org/books/m/10.1525/luminos.11
+  https://luminosoa.org/books/3/files/13-3-96-1-10-20160223.pdf
    */
 
   // Limit to just journal volume items
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   // Match on only those patters that could be an article
   //protected static final String PATTERN_TEMPLATE = "\"%ssite/books/([^/]+/[^/]+([^/]+/)?)$\", base_url";
-  protected static final String PATTERN_TEMPLATE = "\"%sbooks((/[^/]+)?/[^/]+/[^/]+)$\", base_url";
+  protected static final String PATTERN_TEMPLATE = "\"%sbooks((/[^/]+)?/[^/(?:files)]+/[^/]+)$\", base_url";
 
   //public static final Pattern PDF_PATTERN = Pattern.compile("/(.*/download/\\d+)$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern FULLTEXT_PATTERN = Pattern.compile("/([^/]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern ABSTRACT_PATTERN = Pattern.compile("/([^/]+/[^/]+)$", Pattern.CASE_INSENSITIVE);
 
-  public static final String PDF_REPLACEMENT = "/$1";
-  public static final String FULLTEXT_REPLACEMENT =  "/$1";
+  public static final String ABSTRACT_REPLACEMENT = "/$1";
+  //public static final String FULLTEXT_REPLACEMENT =  "/$1";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
@@ -87,9 +77,9 @@ public class UbiquityPartnerNetworkBookIteratorFactory implements ArticleIterato
             ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
     
     builder.addAspect(
-            FULLTEXT_PATTERN,
-            FULLTEXT_REPLACEMENT,
-            ArticleFiles.ROLE_FULL_TEXT_HTML,
+            ABSTRACT_PATTERN,
+            ABSTRACT_REPLACEMENT,
+            ArticleFiles.ROLE_ABSTRACT,
             ArticleFiles.ROLE_ARTICLE_METADATA);
 
     /*

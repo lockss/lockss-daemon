@@ -124,7 +124,9 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
  <entry>
      <string>au_substance_url_pattern</string>
-     <string>"^https?://%s%sbooks/.*\.(epub|mobi|pdf)$", base_url_host, base_url_path</string>
+     <list>
+      <string>"%sbooks/.*\.(epub|mobi|pdf)$", base_url</string>
+     </list>
   </entry>
   <entry>
     <string>plugin_cache_result_list</string>
