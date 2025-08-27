@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>11</string>
+        <string>12</string>
     </entry>
     <entry>
         <string>au_name</string>
@@ -63,7 +63,7 @@ POSSIBILITY OF SUCH DAMAGE.
             </entry>
             <entry>
                 <string>Substance</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
             <entry>
                 <string>Metadata</string>
@@ -142,6 +142,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_permission_url</string>
         <string>https://partner.archive-it.org/static/LOCKSS</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"https://warcs.archive-it.org/webdatafile/[^/]+.warc.gz"</string>
+        </list>
     </entry>
     <entry>
         <string>au_feature_urls</string>
