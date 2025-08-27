@@ -2155,7 +2155,7 @@
     au < finished ; manifest ; 2022 ; CFC Intersections Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; CFC Intersections Volume 2 ; 2 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; CFC Intersections Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2025 ; CFC Intersections Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2025 ; CFC Intersections Volume 4 ; 4 ; >
 
   }
   
