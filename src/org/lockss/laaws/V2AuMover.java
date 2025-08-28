@@ -1674,6 +1674,10 @@ public class V2AuMover {
     }
   }
 
+  public String getTargetHostName() {
+    return hostName;
+  }
+
   public String getCfgSvcVersion() {
     return cfgStatus.getLockssVersion();
   }

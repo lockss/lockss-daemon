@@ -60,11 +60,11 @@ public class ConfigFileMover extends Worker {
   private static final Logger log = Logger.getLogger(ConfigFileMover.class);
 
   static final String COPIED_CONTENT_MARKER_TEMPLATE =
-    "### Copied from LOCKSS %s to LOCKSS %s by migrator, %s";
+    "### Copied from %s (%s) to %s (%s) by migrator, %s";
   static final Pattern COPIED_CONTENT_MARKER_PATTERN =
-    Pattern.compile("### Copied from LOCKSS .* to LOCKSS .* by migrator");
+    Pattern.compile("### Copied from .* to .* by migrator");
   static final String TRANSFORMED_CONTENT_SERVERS_TEMPLATE =
-    "### Adapted from LOCKSS %s to LOCKSS %s by migrator, %s";
+    "### Adapted from %s (%s) to %s (%s) by migrator, %s";
 
 
   private static final Map<String, String> configSectionMap =
@@ -249,7 +249,9 @@ public class ConfigFileMover extends Worker {
 
   String copiedConfigComment(String template) {
     return String.format(template,
+                         PlatformUtil.getLocalHostname(),
                          auMover.getLocalVersion(),
+                         auMover.getTargetHostName(),
                          auMover.getCfgSvcVersion(),
                          auMover.nowTimestamp());
   }
