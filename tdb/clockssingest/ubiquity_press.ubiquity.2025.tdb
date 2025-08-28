@@ -41,8 +41,8 @@
       au < crawling ; exists ; 2018 ; 21 ; Journal of The American Society of Questioned Document Examiners Volume 2018 ; 2018 ; 21 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2019 ; 22 ; Journal of The American Society of Questioned Document Examiners Volume 2019 ; 2019 ; 22 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2020 ; 23 ; Journal of The American Society of Questioned Document Examiners Volume 2020 ; 2020 ; 23 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < crawling ; exists ; 2021 ; 24 ; Journal of The American Society of Questioned Document Examiners Volume 2021 ; 2021 ; 24 ; ASQDE ;  ; https://journal.asqde.org/ ; >
-      au < crawling ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < frozen ; exists ; 2021 ; 24 ; Journal of The American Society of Questioned Document Examiners Volume 2021 ; 2021 ; 24 ; ASQDE ;  ; https://journal.asqde.org/ ; >
+      au < frozen ; exists ; 2022 ; 25 ; Journal of The American Society of Questioned Document Examiners Volume 2022 ; 2022 ; 25 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 0 ; Journal of The American Society of Questioned Document Examiners Volume 2023 ; 2023 ; 0 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < doesNotExist ; doesNotExist ; 2024 ; 0 ; Journal of The American Society of Questioned Document Examiners Volume 2024 ; 2024 ; 0 ; ASQDE ;  ; https://journal.asqde.org/ ; >
       au < crawling ; exists ; 2025 ; 26 ; Journal of The American Society of Questioned Document Examiners Volume 2025 ; 2025 ; 26 ; ASQDE ;  ; https://journal.asqde.org/ ; >
@@ -69,7 +69,7 @@
       au < finished ; crawling ; 2021 ; 6 ; ARENA Journal of Architectural Research Volume 2021 ; 2021 ; 6 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 7 ; ARENA Journal of Architectural Research Volume 2022 [superseded] ; 2022 ; 7 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 8 ; ARENA Journal of Architectural Research Volume 2023 ; 2023 ; 8 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
-      au < crawling ; exists ; 2024 ; 9 ; ARENA Journal of Architectural Research Volume 2024 ; 2024 ; 9 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
+      au < frozen ; exists ; 2024 ; 9 ; ARENA Journal of Architectural Research Volume 2024 ; 2024 ; 9 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
       au < manifest ; exists ; 2025 ; 10 ; ARENA Journal of Architectural Research Volume 2025 ; 2025 ; 10 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ ; >
 
   }
@@ -177,7 +177,7 @@
       au < frozen ; down ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; 58 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 [superseded] ; 2022 ; 59 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < frozen ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
-      au < crawling ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
+      au < frozen ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < crawling ; exists ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
   }
 
@@ -206,7 +206,7 @@
       au < finished ; crawling ; 2021 ; 11 ; Nordic Journal of Migration Research Volume 2021 ; 2021 ; 11 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; reingest1.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 12 ; Nordic Journal of Migration Research Volume 2022 [superseded] ; 2022 ; 12 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 13 ; Nordic Journal of Migration Research Volume 2023 ; 2023 ; 13 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
-      au < crawling ; exists ; 2024 ; 14 ; Nordic Journal of Migration Research Volume 2024 ; 2024 ; 14 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
+      au < frozen ; exists ; 2024 ; 14 ; Nordic Journal of Migration Research Volume 2024 ; 2024 ; 14 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
       au < crawling ; exists ; 2025 ; 15 ; Nordic Journal of Migration Research Volume 2025 ; 2025 ; 15 ; Helsinki University Press ;  ; https://journal-njmr.org/ ; >
   }
 
@@ -248,7 +248,7 @@
       au < finished ; crawling ; 2021 ; 24 ; Redescriptions Volume 2021 ; 2021 ; 24 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 25 ; Redescriptions Volume 2022 [superseded] ; 2022 ; 25 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 26 ; Redescriptions Volume 2023 ; 2023 ; 26 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
-      au < crawling ; exists ; 2024 ; 27 ; Redescriptions Volume 2024 ; 2024 ; 27 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
+      au < frozen ; exists ; 2024 ; 27 ; Redescriptions Volume 2024 ; 2024 ; 27 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
       au < crawling ; exists ; 2025 ; 28 ; Redescriptions Volume 2025 ; 2025 ; 28 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
 
   }
