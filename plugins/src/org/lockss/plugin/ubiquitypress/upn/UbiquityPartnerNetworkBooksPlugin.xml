@@ -111,7 +111,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s%sapi/theme$",base_url_host, base_url_path</string>
       <string>1,"^https?://(maxcdn\.bootstrapcdn\.com|cdnjs\.cloudflare\.com|.+\.cloudfront\.net|cdn\.mathjax\.org|(fonts|ajax|storage)\.(gstatic|googleapis)\.com)/."</string>
       <string>1,"^https?://%s%sbooks/.*\.(epub|mobi|pdf)$", base_url_host, base_url_path</string>
-      <string>1,"^https?://%s%sreader/books/pdf/[0-9\.]+/[a-z0-9\.]+$", base_url_host, base_url_path</string>
+      <string>1,"^https?://%s%sreader/books/(epub|pdf)/[0-9\.]+/[a-z0-9\.]+$", base_url_host, base_url_path</string>
       <!--
       https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download/2946/
       https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download/2947/
