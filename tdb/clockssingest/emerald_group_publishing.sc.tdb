@@ -16294,7 +16294,7 @@
     >
 
     comment[journal_issn] = 2531-0488
-    param[journal_id] = 
+    param[journal_id] = rausp
 
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; RAUSP Management Journal Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; RAUSP Management Journal Volume 54 ; 54 ; >
@@ -16317,7 +16317,7 @@
     >
 
     comment[journal_issn] = 2631-3561
-    param[journal_id] = 
+    param[journal_id] = reps
 
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Review of Economics and Political Science Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Review of Economics and Political Science Volume 4 ; 4 ; >
@@ -16340,7 +16340,7 @@
     >
 
     comment[journal_issn] = 2177-8736
-    param[journal_id] = 
+    param[journal_id] = rege
 
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Revista de Gestão Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Revista de Gestão Volume 26 ; 26 ; >
@@ -16363,7 +16363,7 @@
     >
 
     comment[journal_issn] = 2632-0487
-    param[journal_id] = 
+    param[journal_id] = srt
 
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Smart and Resilient Transportation Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Smart and Resilient Transportation Volume 2 ; 2 ; >
@@ -16385,21 +16385,8 @@
     >
 
     {
-    comment[journal_issn] = 2444-9709
-    param[journal_id] = 
-
-    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 ; >
-    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Spanish Journal of Marketing - ESIC Volume 23 ; 23 ; >
-    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Spanish Journal of Marketing - ESIC Volume 24 ; 24 ; >
-    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Spanish Journal of Marketing - ESIC Volume 25 ; 25 ; >
-    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Spanish Journal of Marketing - ESIC Volume 26 ; 26 ; >
-    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Spanish Journal of Marketing - ESIC Volume 27 ; 27 ; >
-    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Spanish Journal of Marketing - ESIC Volume 28 ; 28 ; >
-    au < doNotProcess ; doNotProcess ; 2025 ; 2025 ; Spanish Journal of Marketing - ESIC Volume 29 ; 29 ; >
-    }
-    {
     comment[journal_issn] = 2444-9695
-    param[journal_id] = 
+    param[journal_id] = sjme
 
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Spanish Journal of Marketing - ESIC Volume 23 ; 23 ; >
@@ -16423,7 +16410,7 @@
     >
 
     comment[journal_issn] = 2633-1225
-    param[journal_id] = 
+    param[journal_id] = trc
 
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Tourism Critiques Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Tourism Critiques Volume 2 ; 2 ; >
@@ -16443,7 +16430,7 @@
     >
 
     comment[journal_issn] = 0973-1954
-    param[journal_id] = 
+    param[journal_id] = xjm
 
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; VILAKSHAN - XIMB Journal of Management Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; VILAKSHAN - XIMB Journal of Management Volume 18 ; 18 ; >
@@ -16463,7 +16450,7 @@
     >
 
     comment[journal_issn] = 2077-5504
-    param[journal_id] = 
+    param[journal_id] = lthe
 
     au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 2 ; 2 ; >
@@ -16496,7 +16483,7 @@
     >
 
     comment[journal_issn] = 2634-1964
-    param[journal_id] = 
+    param[journal_id] = aci
 
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Applied Computing and Informatics Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Applied Computing and Informatics Volume 17 ; 17 ; >
@@ -16517,7 +16504,7 @@
     >
 
     comment[journal_issn] = 1319-5166
-    param[journal_id] = 
+    param[journal_id] = ajms
 
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Arab Journal of Mathematical Sciences Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Arab Journal of Mathematical Sciences Volume 27 ; 27 ; >
@@ -16537,7 +16524,7 @@
     >
 
     comment[journal_issn] = 2752-6666
-    param[journal_id] = 
+    param[journal_id] = cbth
 
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Consumer Behavior in Tourism and Hospitality Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Consumer Behavior in Tourism and Hospitality Volume 18 ; 18 ; >
@@ -16555,7 +16542,7 @@
     >
 
     comment[journal_issn] = 2752-6739
-    param[journal_id] = 
+    param[journal_id] = dhs
 
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Drugs, Habits and Social Policy Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Drugs, Habits and Social Policy Volume 24 ; 24 ; >
@@ -16573,7 +16560,7 @@
     >
 
     comment[journal_issn] = 2754-1312
-    param[journal_id] = 
+    param[journal_id] = techs
 
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Drugs, Habits and Social Policy Volume 1 ; 1 ; >
     au < superseded ; exists ; 2023 ; 2023 ; Drugs, Habits and Social Policy Volume 2 [superseded] ; 2 ; >
@@ -16591,7 +16578,7 @@
     >
 
     comment[journal_issn] = 2631-6862
-    param[journal_id] = 
+    param[journal_id] = arch
 
 #Back content from external links.
 #    au < exists ; exists ; 2007 ; 2007 ; Archnet-IJAR Volume 1 ; 1 ; >
