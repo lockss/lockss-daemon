@@ -1184,9 +1184,17 @@
     au < ready ; 1997 ; ECONI 1997 ; 1997 ; https://www.govinfo.gov/ >
     au < ready ; 1998 ; ECONI 1998 ; 1998 ; https://www.govinfo.gov/ >
     au < ready ; 1999 ; ECONI 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < manifest ; 2008 ; ECONI 2008 ; 2008 ; https://www.govinfo.gov/ >
+    au < manifest ; 2009 ; ECONI 2009 ; 2009 ; https://www.govinfo.gov/ >
 
+    au < manifest ; 2010 ; Economic Indicators 2010 ; 2010 ; https://www.govinfo.gov/ >
+    au < manifest ; 2011 ; Economic Indicators 2011 ; 2011 ; https://www.govinfo.gov/ >
+    au < manifest ; 2012 ; Economic Indicators 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; Economic Indicators 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < manifest ; 2014 ; Economic Indicators 2014 ; 2014 ; https://www.govinfo.gov/ >
+    au < manifest ; 2015 ; Economic Indicators 2015 ; 2015 ; https://www.govinfo.gov/ >
     au < released ; 2016 ; Economic Indicators 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < manifest ; 2017 ; Economic Indicators 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Economic Indicators 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Economic Indicators 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Economic Indicators 2020 ; 2020 ; https://www.govinfo.gov/ >
@@ -1196,6 +1204,7 @@
     au < released ; 2024 ; Economic Indicators 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Economic Indicators 2025 ; 2025 ; https://www.govinfo.gov/ >
 
+ 
   }
 
   {
@@ -1480,12 +1489,14 @@
     au < manifest ; 1995 ; PAI 1995 ; 1995 ; https://www.govinfo.gov/ >
     au < manifest ; 1997 ; PAI 1997 ; 1997 ; https://www.govinfo.gov/ >
     au < manifest ; 1999 ; PAI 1999 ; 1999 ; https://www.govinfo.gov/ >
-
+    au < manifest ; 2001 ; PAI 2001 ; 2001 ; https://www.govinfo.gov/ >
+    au < manifest ; 2003 ; PAI 2003 ; 2003 ; https://www.govinfo.gov/ >
+    au < manifest ; 2005 ; Privacy Act Issuances 2005 ; 2005 ; https://www.govinfo.gov/ >
     au < released ; 2007 ; Privacy Act Issuances 2007 ; 2007 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 2008 ; Privacy Act Issuances 2008 ; 2008 ; https://www.govinfo.gov/ >
     au < released ; 2009 ; Privacy Act Issuances 2009 ; 2009 ; https://www.govinfo.gov/ >
     au < released ; 2011 ; Privacy Act Issuances 2011 ; 2011 ; https://www.govinfo.gov/ >
-    au < doNotProcess ; 2013 ; Privacy Act Issuances 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < manifest ; 2013 ; Privacy Act Issuances 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2015 ; Privacy Act Issuances 2015 ; 2015 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Privacy Act Issuances 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Privacy Act Issuances 2019 ; 2019 ; https://www.govinfo.gov/ >
@@ -1613,6 +1624,7 @@
     au < released ; 1995 ; Senate Manual 1995 ; 1995 ; https://www.govinfo.gov/ >
     au < released ; 1999 ; Senate Manual 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < released ; 2001 ; Senate Manual 2001 ; 2001 ; https://www.govinfo.gov/ >
+    au < manifest ; 2008 ; Senate Manual 2008 ; 2008 ; https://www.govinfo.gov/ >
     au < released ; 2011 ; Senate Manual 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; Senate Manual 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < down ; 2014 ; Senate Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
@@ -2120,15 +2132,16 @@
     au < manifest ; 1958 ; United States Statutes at Large 1958 ; 1958 ; https://www.govinfo.gov/ >
     au < manifest ; 1959 ; United States Statutes at Large 1959 ; 1959 ; https://www.govinfo.gov/ >
     au < manifest ; 1960 ; United States Statutes at Large 1960 ; 1960 ; https://www.govinfo.gov/ >
-    au < manifest ; 1961 ; STATUTE 1961 ; 1961 ; https://www.govinfo.gov/ >
-    au < manifest ; 1962 ; STATUTE 1962 ; 1962 ; https://www.govinfo.gov/ >
-    au < manifest ; 1963 ; STATUTE 1963 ; 1963 ; https://www.govinfo.gov/ >
-    au < manifest ; 1964 ; STATUTE 1964 ; 1964 ; https://www.govinfo.gov/ >
-    au < manifest ; 1965 ; STATUTE 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < manifest ; 1966 ; STATUTE 1966 ; 1966 ; https://www.govinfo.gov/ >
-    au < manifest ; 1967 ; STATUTE 1967 ; 1967 ; https://www.govinfo.gov/ >
-    au < manifest ; 1968 ; STATUTE 1968 ; 1968 ; https://www.govinfo.gov/ >
-    au < manifest ; 1969 ; STATUTE 1969 ; 1969 ; https://www.govinfo.gov/ >
+    au < manifest ; 1961 ; United States Statutes at Large 1961 ; 1961 ; https://www.govinfo.gov/ >
+    au < manifest ; 1962 ; United States Statutes at Large 1962 ; 1962 ; https://www.govinfo.gov/ >
+    au < manifest ; 1963 ; United States Statutes at Large 1963 ; 1963 ; https://www.govinfo.gov/ >
+    au < manifest ; 1964 ; United States Statutes at Large 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < manifest ; 1965 ; United States Statutes at Large 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < manifest ; 1966 ; United States Statutes at Large 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < manifest ; 1967 ; United States Statutes at Large 1967 ; 1967 ; https://www.govinfo.gov/ >
+    au < manifest ; 1968 ; United States Statutes at Large 1968 ; 1968 ; https://www.govinfo.gov/ >
+    au < manifest ; 1969 ; United States Statutes at Large 1969 ; 1969 ; https://www.govinfo.gov/ >
+    au < manifest ; 1971 ; STATUTE 1971 ; 1971 ; https://www.govinfo.gov/ >
     au < manifest ; 1972 ; STATUTE 1972 ; 1972 ; https://www.govinfo.gov/ >
     au < manifest ; 1973 ; STATUTE 1973 ; 1973 ; https://www.govinfo.gov/ >
     au < manifest ; 1974 ; STATUTE 1974 ; 1974 ; https://www.govinfo.gov/ >
@@ -2155,7 +2168,17 @@
     au < manifest ; 1998 ; STATUTE 1998 ; 1998 ; https://www.govinfo.gov/ >
     au < manifest ; 1999 ; STATUTE 1999 ; 1999 ; https://www.govinfo.gov/ >
 
-    au < doNotProcess ; 2012 ; United States Statutes at Large 2012 ; 2012 ; https://www.govinfo.gov/ >
+    au < manifest ; 2000 ; STATUTE 2000 ; 2000 ; https://www.govinfo.gov/ >
+    au < manifest ; 2001 ; STATUTE 2001 ; 2001 ; https://www.govinfo.gov/ >
+    au < manifest ; 2002 ; STATUTE 2002 ; 2002 ; https://www.govinfo.gov/ >
+    au < manifest ; 2003 ; STATUTE 2003 ; 2003 ; https://www.govinfo.gov/ >
+    au < manifest ; 2004 ; STATUTE 2004 ; 2004 ; https://www.govinfo.gov/ >
+    au < manifest ; 2005 ; STATUTE 2005 ; 2005 ; https://www.govinfo.gov/ >
+    au < manifest ; 2006 ; United States Statutes at Large 2006 ; 2006 ; https://www.govinfo.gov/ >
+    au < manifest ; 2007 ; United States Statutes at Large 2007 ; 2007 ; https://www.govinfo.gov/ >
+    au < manifest ; 2009 ; United States Statutes at Large 2009 ; 2009 ; https://www.govinfo.gov/ >
+    au < manifest ; 2010 ; United States Statutes at Large 2010 ; 2010 ; https://www.govinfo.gov/ >
+    au < manifest ; 2012 ; United States Statutes at Large 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; United States Statutes at Large 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2014 ; United States Statutes at Large 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < released ; 2015 ; United States Statutes at Large 2015 ; 2015 ; https://www.govinfo.gov/ >
@@ -2164,6 +2187,7 @@
     au < released ; 2019 ; United States Statutes at Large 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; United States Statutes at Large 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; United States Statutes at Large 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < manifest ; 2022 ; United States Statutes at Large 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
 
