@@ -2864,7 +2864,7 @@
     param[journal_id] = bjro
 
     au < frozen ; exists ; 2019 ; 2019 ; BJR|Open Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; BJR|Open Volume 2 ; 2 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; BJR|Open Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; BJR|Open Volume 3 ; 3 ; >
     au < frozen ; exists ; 2022 ; 2022 ; BJR|Open Volume 4 ; 4 ; >
     au < frozen ; exists ; 2023 ; 2023 ; BJR|Open Volume 5 ; 5 ; >
