@@ -2461,9 +2461,9 @@
       nondefparam[base_url2] = https://account.jcss.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-jcss
 
-      au < doNotProcess ; doNotProcess ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; 1 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; 2 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; 3 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
+      au < manifest ; exists ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; 1 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
+      au < manifest ; exists ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; 2 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
+      au < manifest ; exists ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; 3 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
       au < crawling ; exists ; 2023 ; 4 ; Journal of Critical Southern Studies Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
 
   }
