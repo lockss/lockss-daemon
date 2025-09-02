@@ -44,7 +44,7 @@
       au < deepCrawl ; exists ; 2022 ; Applied Finance Letters Volume 11 ; 11 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; Applied Finance Letters Volume 12 ; 12 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Applied Finance Letters Volume 13 ; 13 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Applied Finance Letters Volume 14 ; 14 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Applied Finance Letters Volume 14 ; 14 ; 2025 ; >
 
     }
 
@@ -106,7 +106,7 @@
       au < deepCrawl ; exists ; 2022 ; Te Kaharoa Volume 15 ; 15 ; 2022 ; >
       au < frozen ; exists ; 2023 ; Te Kaharoa Volume 16 ; 16 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Te Kaharoa Volume 17 ; 17 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Te Kaharoa Volume 18 ; 18 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Te Kaharoa Volume 18 ; 18 ; 2025 ; >
 
     }
 
@@ -319,7 +319,7 @@
       au < deepCrawl ; exists ; 2022 ; Pacific Health Volume 5 ; 5 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; Pacific Health Volume 6 ; 6 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Pacific Health Volume 7 ; 7 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Pacific Health Volume 8 ; 8 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Pacific Health Volume 8 ; 8 ; 2025 ; >
 
   }
 
@@ -340,7 +340,7 @@
       au < deepCrawl ; exists ; 2022 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 4 ; 4 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 5 ; 5 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 6 ; 6 ; 2024 ; >
-      au < ready ; exists ; 2025 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 7 ; 7 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; PJTEL: Pacific Journal of Technology Enhanced Learning Volume 7 ; 7 ; 2025 ; >
 
   }
 
@@ -385,7 +385,7 @@
       au < deepCrawl ; exists ; 2022 ; Teachers Work Volume 19 ; 19 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; Teachers Work Volume 20 ; 20 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Teachers Work Volume 21 ; 21 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Teachers Work Volume 22 ; 22 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Teachers Work Volume 22 ; 22 ; 2025 ; >
 
   }
 
@@ -425,7 +425,7 @@
       au < finished ; crawling ; 2022 ; Ethnographic Edge Volume 5 ; 5 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Ethnographic Edge Volume 6 ; 6 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Ethnographic Edge Volume 7 ; 7 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Ethnographic Edge Volume 8 ; 8 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Ethnographic Edge Volume 8 ; 8 ; 2025 ; >
 
   }
 
@@ -496,7 +496,7 @@
       au < finished ; crawling ; 2022 ; Psychotherapy and Politics International Volume 20 ; 20 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Psychotherapy and Politics International Volume 21 ; 21 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Psychotherapy and Politics International Volume 22 ; 22 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Psychotherapy and Politics International Volume 23 ; 23 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Psychotherapy and Politics International Volume 23 ; 23 ; 2025 ; >
 
   }
 
@@ -514,7 +514,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; Rangahau Aranga: AUT Graduate Review Volume 1 ; 1 ; 2022 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2023 ; Rangahau Aranga: AUT Graduate Review Volume 2 ; 2 ; 2023 ; >
       au < manifest ; exists ; 2024 ; Rangahau Aranga: AUT Graduate Review Volume 3 ; 3 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Rangahau Aranga: AUT Graduate Review Volume 4 ; 4 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Rangahau Aranga: AUT Graduate Review Volume 4 ; 4 ; 2025 ; >
       }
       {
       param[base_url] = https://ojs.aut.ac.nz/
