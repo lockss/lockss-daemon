@@ -408,7 +408,7 @@
     au < finished ; manifest ; 2022 ; 1080-1137 ; ZooKeys Volume 2022 ; 2022 ; https://zookeys.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 1138-1187 ; ZooKeys Volume 2023 ; 2023 ; https://zookeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 1188-1221 ; ZooKeys Volume 2024 ; 2024 ; https://zookeys.pensoft.net/ ; >
-    au < manifest ; exists ; 2025 ; 1222-1255 ; ZooKeys Volume 2025 ; 2025 ; https://zookeys.pensoft.net/ ; >
+    au < ready ; exists ; 2025 ; 1222-1255 ; ZooKeys Volume 2025 ; 2025 ; https://zookeys.pensoft.net/ ; >
 
    }
    
