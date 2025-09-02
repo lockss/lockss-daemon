@@ -3,7 +3,7 @@
   publisher <
     name = Tunç Çatal ;
     info[contract] = 2025 ;
-    info[tester] = 8 ;
+    info[tester] = 4 ;
     info[poller] = 8
   >
   
@@ -22,8 +22,8 @@
       attr[start_stem] = index.php/
       param[journal_id] = pub
 
-      au < manifest ; exists ; 2024 ; 2024 ; The European Chemistry and Biotechnology Journal Volume 1-2 ; 1-2 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; The European Chemistry and Biotechnology Journal Volume 3-4 ; 3-4 ; >
+      au < testing ; exists ; 2024 ; 2024 ; The European Chemistry and Biotechnology Journal Volume 1-2 ; 1-2 ; >
+      au < testing ; exists ; 2025 ; 2025 ; The European Chemistry and Biotechnology Journal Volume 3-4 ; 3-4 ; >
 
   }
 
