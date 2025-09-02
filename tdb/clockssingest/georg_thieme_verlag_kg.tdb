@@ -3854,7 +3854,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Klinikarzt Der Volume 46 ; 46 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Klinikarzt Der Volume 47 ; 47 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2019 ; 2019 ; Klinikarzt Der Volume 48 ; 48 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2020 ; 2020 ; Klinikarzt Der Volume 49 ; 49 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Klinikarzt Der Volume 49 ; 49 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -3909,7 +3909,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; Klinische Monatsblätter für Augenheilkunde Volume 234 ; 234 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Klinische Monatsblätter für Augenheilkunde Volume 235 ; 235 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; 2019 ; Klinische Monatsblätter für Augenheilkunde Volume 236 ; 236 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Klinische Monatsblätter für Augenheilkunde Volume 237 ; 237 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Klinische Monatsblätter für Augenheilkunde Volume 237 ; 237 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Klinische Monatsblätter für Augenheilkunde Volume 238 ; 238 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Klinische Monatsblätter für Augenheilkunde Volume 239 ; 239 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Klinische Monatsblätter für Augenheilkunde Volume 240 ; 240 ; >
@@ -3988,7 +3988,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Klinische Neurophysiologie Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2018 ; 2018 ; Klinische Neurophysiologie Volume 49 ; 49 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; Klinische Neurophysiologie Volume 50 ; 50 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Klinische Neurophysiologie Volume 51 ; 51 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Klinische Neurophysiologie Volume 51 ; 51 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Klinische Neurophysiologie Volume 52 ; 52 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Klinische Neurophysiologie Volume 53 ; 53 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Klinische Neurophysiologie Volume 54 ; 54 ; >
@@ -4048,7 +4048,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Klinische Pädiatrie Volume 229 ; 229 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Klinische Pädiatrie Volume 230 ; 230 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; Klinische Pädiatrie Volume 231 ; 231 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; 2020 ; Klinische Pädiatrie Volume 232 ; 232 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Klinische Pädiatrie Volume 232 ; 232 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Klinische Pädiatrie Volume 233 ; 233 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Klinische Pädiatrie Volume 234 ; 234 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Klinische Pädiatrie Volume 235 ; 235 ; >
@@ -4084,7 +4084,7 @@
     au < finished ; frozen ; 2017 ; 2017 ; kma - Das Gesundheitswirtschaftsmagazin Volume 22 ; 22 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; kma - Das Gesundheitswirtschaftsmagazin Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; 2019 ; kma - Das Gesundheitswirtschaftsmagazin Volume 24 ; 24 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2020 ; 2020 ; kma - Das Gesundheitswirtschaftsmagazin Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; kma - Das Gesundheitswirtschaftsmagazin Volume 25 ; 25 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; 2021 ; kma - Das Gesundheitswirtschaftsmagazin Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; kma - Das Gesundheitswirtschaftsmagazin Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; kma - Das Gesundheitswirtschaftsmagazin Volume 28 ; 28 ; >
@@ -4118,7 +4118,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Krankenhaushygiene up2date Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Krankenhaushygiene up2date Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2019 ; 2019 ; Krankenhaushygiene up2date Volume 14 ; 14 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Krankenhaushygiene up2date Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Krankenhaushygiene up2date Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Krankenhaushygiene up2date Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Krankenhaushygiene up2date Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Krankenhaushygiene up2date Volume 18 ; 18 ; >
@@ -4200,7 +4200,7 @@
     au < finished ; crawling ; 2017 ; 2017 ; Laryngo-Rhino-Otologie Volume 96 ; 96 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; Laryngo-Rhino-Otologie Volume 97 ; 97 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Laryngo-Rhino-Otologie Volume 98 ; 98 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; 2020 ; Laryngo-Rhino-Otologie Volume 99 ; 99 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Laryngo-Rhino-Otologie Volume 99 ; 99 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; 2021 ; Laryngo-Rhino-Otologie Volume 100 ; 100 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Laryngo-Rhino-Otologie Volume 101 ; 101 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Laryngo-Rhino-Otologie Volume 102 ; 102 ; >
@@ -4256,7 +4256,7 @@
     au < finished ; finished ; 2017 ; 2017 ; manuelletherapie Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2018 ; 2018 ; manuelletherapie Volume 22 ; 22 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; 2019 ; manuelletherapie Volume 23 ; 23 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; manuelletherapie Volume 24 ; 24 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; manuelletherapie Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -4364,7 +4364,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Neonatologie Scan Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2018 ; 2018 ; Neonatologie Scan Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; Neonatologie Scan Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Neonatologie Scan Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Neonatologie Scan Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Neonatologie Scan Volume 9 ; 9 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Neonatologie Scan Volume 10 ; 10 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Neonatologie Scan Volume 11 ; 11 ; >
@@ -4460,7 +4460,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Neuropediatrics Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2018 ; 2018 ; Neuropediatrics Volume 49 ; 49 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; Neuropediatrics Volume 50 ; 50 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Neuropediatrics Volume 51 ; 51 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Neuropediatrics Volume 51 ; 51 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Neuropediatrics Volume 52 ; 52 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Neuropediatrics Volume 53 ; 53 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Neuropediatrics Volume 54 ; 54 ; >
@@ -4490,7 +4490,7 @@
     au < finished ; frozen ; 2017 ; 2017 ; Neuroradiologie Scan Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Neuroradiologie Scan Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; 2019 ; Neuroradiologie Scan Volume 9 ; 9 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Neuroradiologie Scan Volume 10 ; 10 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Neuroradiologie Scan Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Neuroradiologie Scan Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Neuroradiologie Scan Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Neuroradiologie Scan Volume 13 ; 13 ; >
@@ -4521,7 +4521,7 @@
     au < finished ; frozen ; 2017 ; 2017 ; neuroreha Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; neuroreha Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; 2019 ; neuroreha Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; 2020 ; neuroreha Volume 12 ; 12 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; neuroreha Volume 12 ; 12 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; 2021 ; neuroreha Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; neuroreha Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; neuroreha Volume 15 ; 15 ; >
@@ -4562,7 +4562,7 @@
     au < finished ; frozen ; 2017 ; 2017 ; Notarzt Der Volume 33 ; 33 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; 2018 ; Notarzt Der Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Notarzt Der Volume 35 ; 35 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Notarzt Der Volume 36 ; 36 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Notarzt Der Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; 2021 ; Notarzt Der Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Notarzt Der Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Notarzt Der Volume 39 ; 39 ; >
@@ -4647,7 +4647,7 @@
     au < finished ; frozen ; 2017 ; 2017 ; Notfallmedizin up2date Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2018 ; 2018 ; Notfallmedizin up2date Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Notfallmedizin up2date Volume 14 ; 14 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2020 ; 2020 ; Notfallmedizin up2date Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Notfallmedizin up2date Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Notfallmedizin up2date Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Notfallmedizin up2date Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Notfallmedizin up2date Volume 18 ; 18 ; >
@@ -4685,7 +4685,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Der Nuklearmediziner Volume 40 ; 40 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; Der Nuklearmediziner Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; Der Nuklearmediziner Volume 42 ; 42 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; 2020 ; Der Nuklearmediziner Volume 43 ; 43 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Der Nuklearmediziner Volume 43 ; 43 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Der Nuklearmediziner Volume 44 ; 44 ; >
 
   }
@@ -4721,7 +4721,7 @@
     au < finished ; finished ; 2017 ; 2017 ; OP-Journal Volume 33 ; 33 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; OP-Journal Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2019 ; 2019 ; OP-Journal Volume 35 ; 35 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; OP-Journal Volume 36 ; 36 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; OP-Journal Volume 36 ; 36 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; OP-Journal Volume 37 ; 37 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; OP-Journal Volume 38 ; 38 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; OP-Journal Volume 39 ; 39 ; >
@@ -4774,7 +4774,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Orthopädie und Unfallchirurgie up2date Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2018 ; 2018 ; Orthopädie und Unfallchirurgie up2date Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; Orthopädie und Unfallchirurgie up2date Volume 14 ; 14 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Orthopädie und Unfallchirurgie up2date Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Orthopädie und Unfallchirurgie up2date Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2021 ; 2021 ; Orthopädie und Unfallchirurgie up2date Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Orthopädie und Unfallchirurgie up2date Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Orthopädie und Unfallchirurgie up2date Volume 18 ; 18 ; >
@@ -4869,7 +4869,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Pädiatrie up2date Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2018 ; 2018 ; Pädiatrie up2date Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; Pädiatrie up2date Volume 14 ; 14 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2020 ; 2020 ; Pädiatrie up2date Volume 15 ; 15 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Pädiatrie up2date Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2021 ; 2021 ; Pädiatrie up2date Volume 16 ; 16 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Pädiatrie up2date Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Pädiatrie up2date Volume 18 ; 18 ; >
@@ -4922,7 +4922,7 @@
     au < finished ; finished ; 2017 ; 2017 ; pferde spiegel Volume 20 ; 20 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; pferde spiegel Volume 21 ; 21 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; 2019 ; pferde spiegel Volume 22 ; 22 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; pferde spiegel Volume 23 ; 23 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; pferde spiegel Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; pferde spiegel Volume 24 ; 24 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; pferde spiegel Volume 25 ; 25 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; pferde spiegel Volume 26 ; 26 ; >
@@ -4995,7 +4995,7 @@
     au < finished ; finished ; 2017 ; 2017 ; Pharmacopsychiatry Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Pharmacopsychiatry Volume 51 ; 51 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2019 ; 2019 ; Pharmacopsychiatry Volume 52 ; 52 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Pharmacopsychiatry Volume 53 ; 53 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Pharmacopsychiatry Volume 53 ; 53 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Pharmacopsychiatry Volume 54 ; 54 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Pharmacopsychiatry Volume 55 ; 55 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Pharmacopsychiatry Volume 56 ; 56 ; >
@@ -5044,7 +5044,7 @@
     au < finished ; frozen ; 2017 ; 2017 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 27 ; 27 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; 2018 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < finished ; frozen ; 2019 ; 2019 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 29 ; 29 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2020 ; 2020 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 30 ; 30 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; 2021 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 31 ; 31 ; >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 32 ; 32 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Physikalische Medizin, Rehabilitationsmedizin, Kurortmedizin Volume 33 ; 33 ; >
