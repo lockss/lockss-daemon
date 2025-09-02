@@ -2636,9 +2636,9 @@
     au < frozen ; exists ; 2012 ; 2012 ; Biometrics Volume 68 ; 68 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Biometrics Volume 69 ; 69 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Biometrics Volume 70 ; 70 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Biometrics Volume 71 ; 71 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Biometrics Volume 72 ; 72 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Biometrics Volume 73 ; 73 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Biometrics Volume 71 ; 71 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Biometrics Volume 72 ; 72 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Biometrics Volume 73 ; 73 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Biometrics Volume 74 ; 74 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Biometrics Volume 75 ; 75 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Biometrics Volume 76 ; 76 ; >
@@ -3183,7 +3183,7 @@
     au < frozen ; exists ; 2013 ; 2013 ; The British Journal of Radiology Volume 86 ; 86 ; >
     au < frozen ; exists ; 2014 ; 2014 ; The British Journal of Radiology Volume 87 ; 87 ; >
     au < frozen ; exists ; 2015 ; 2015 ; The British Journal of Radiology Volume 88 ; 88 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; The British Journal of Radiology Volume 89 ; 89 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; The British Journal of Radiology Volume 89 ; 89 ; >
     au < frozen ; exists ; 2017 ; 2017 ; The British Journal of Radiology Volume 90 ; 90 ; >
     au < frozen ; exists ; 2018 ; 2018 ; The British Journal of Radiology Volume 91 ; 91 ; >
     au < frozen ; exists ; 2019 ; 2019 ; The British Journal of Radiology Volume 92 ; 92 ; >
@@ -3208,7 +3208,7 @@
 
     au < frozen ; exists ; 2015 ; 2015 ; BJR|Case Reports Volume 1 ; 1 ; >
     au < frozen ; exists ; 2016 ; 2016 ; BJR|Case Reports Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; BJR|Case Reports Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; BJR|Case Reports Volume 3 ; 3 ; >
     au < frozen ; exists ; 2018 ; 2018 ; BJR|Case Reports Volume 4 ; 4 ; >
     au < frozen ; exists ; 2019 ; 2019 ; BJR|Case Reports Volume 5 ; 5 ; >
     au < finished ; manifest ; 2020 ; 2020 ; BJR|Case Reports Volume 6 ; 6 ; reingest5.clockss.org:8082 >
@@ -3428,16 +3428,16 @@
     param[journal_id] = bcsj
     #content available from 1926 Volume 1 to 2007 Volume 80
 
-    au < crawling ; exists ; 2008 ; 2008 ; Bulletin of the Chemical Society of Japan Volume 81 ; 81 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Bulletin of the Chemical Society of Japan Volume 81 ; 81 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Bulletin of the Chemical Society of Japan Volume 82 ; 82 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Bulletin of the Chemical Society of Japan Volume 83 ; 83 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Bulletin of the Chemical Society of Japan Volume 83 ; 83 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Bulletin of the Chemical Society of Japan Volume 84 ; 84 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Bulletin of the Chemical Society of Japan Volume 85 ; 85 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Bulletin of the Chemical Society of Japan Volume 86 ; 86 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Bulletin of the Chemical Society of Japan Volume 85 ; 85 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Bulletin of the Chemical Society of Japan Volume 86 ; 86 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Bulletin of the Chemical Society of Japan Volume 87 ; 87 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Bulletin of the Chemical Society of Japan Volume 88 ; 88 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Bulletin of the Chemical Society of Japan Volume 89 ; 89 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Bulletin of the Chemical Society of Japan Volume 90 ; 90 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Bulletin of the Chemical Society of Japan Volume 88 ; 88 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Bulletin of the Chemical Society of Japan Volume 89 ; 89 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Bulletin of the Chemical Society of Japan Volume 90 ; 90 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Bulletin of the Chemical Society of Japan Volume 91 ; 91 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Bulletin of the Chemical Society of Japan Volume 92 ; 92 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Bulletin of the Chemical Society of Japan Volume 93 ; 93 ; >
@@ -3461,16 +3461,16 @@
     param[journal_id] = bics
     #content available from 1954 Volume 1 to 2007 Volume 50
 
-    au < crawling ; exists ; 2008 ; 2008 ; Bulletin of the Institute of Classical Studies Volume 51 ; 51 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; Bulletin of the Institute of Classical Studies Volume 52 ; 52 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Bulletin of the Institute of Classical Studies Volume 53 ; 53 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Bulletin of the Institute of Classical Studies Volume 54 ; 54 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Bulletin of the Institute of Classical Studies Volume 55 ; 55 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Bulletin of the Institute of Classical Studies Volume 51 ; 51 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Bulletin of the Institute of Classical Studies Volume 52 ; 52 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Bulletin of the Institute of Classical Studies Volume 53 ; 53 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Bulletin of the Institute of Classical Studies Volume 54 ; 54 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Bulletin of the Institute of Classical Studies Volume 55 ; 55 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Bulletin of the Institute of Classical Studies Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Bulletin of the Institute of Classical Studies Volume 57 ; 57 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Bulletin of the Institute of Classical Studies Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Bulletin of the Institute of Classical Studies Volume 59 ; 59 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Bulletin of the Institute of Classical Studies Volume 60 ; 60 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Bulletin of the Institute of Classical Studies Volume 57 ; 57 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Bulletin of the Institute of Classical Studies Volume 58 ; 58 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Bulletin of the Institute of Classical Studies Volume 59 ; 59 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Bulletin of the Institute of Classical Studies Volume 60 ; 60 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Bulletin of the Institute of Classical Studies Volume 61 ; 61 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Bulletin of the Institute of Classical Studies Volume 62 ; 62 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Bulletin of the Institute of Classical Studies Volume 63 ; 63 ; >
@@ -3906,15 +3906,15 @@
 
     param[journal_id] = chemlett
 
-    au < crawling ; exists ; 2008 ; 2008 ; Chemistry Letters Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; Chemistry Letters Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Chemistry Letters Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Chemistry Letters Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Chemistry Letters Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Chemistry Letters Volume 42 ; 42 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Chemistry Letters Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Chemistry Letters Volume 44 ; 44 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Chemistry Letters Volume 45 ; 45 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Chemistry Letters Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Chemistry Letters Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Chemistry Letters Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Chemistry Letters Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Chemistry Letters Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Chemistry Letters Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Chemistry Letters Volume 43 ; 43 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Chemistry Letters Volume 44 ; 44 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Chemistry Letters Volume 45 ; 45 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Chemistry Letters Volume 46 ; 46 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Chemistry Letters Volume 47 ; 47 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Chemistry Letters Volume 48 ; 48 ; >
@@ -4888,16 +4888,16 @@
 
     param[journal_id] = dmfr
 
-    au < crawling ; exists ; 2008 ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Dentomaxillofacial Radiology Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Dentomaxillofacial Radiology Volume 43 ; 43 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Dentomaxillofacial Radiology Volume 44 ; 44 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Dentomaxillofacial Radiology Volume 45 ; 45 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Dentomaxillofacial Radiology Volume 46 ; 46 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Dentomaxillofacial Radiology Volume 47 ; 47 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Dentomaxillofacial Radiology Volume 48 ; 48 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Dentomaxillofacial Radiology Volume 49 ; 49 ; >
@@ -5875,16 +5875,16 @@
 
     param[journal_id] = etc
 
-    au < crawling ; exists ; 2008 ; 2008 ; Environmental Toxicology and Chemistry Volume 27 ; 27 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; Environmental Toxicology and Chemistry Volume 28 ; 28 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Environmental Toxicology and Chemistry Volume 29 ; 29 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Environmental Toxicology and Chemistry Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Environmental Toxicology and Chemistry Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Environmental Toxicology and Chemistry Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Environmental Toxicology and Chemistry Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Environmental Toxicology and Chemistry Volume 29 ; 29 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Environmental Toxicology and Chemistry Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Environmental Toxicology and Chemistry Volume 31 ; 31 ; >
     au < testing ; exists ; 2013 ; 2013 ; Environmental Toxicology and Chemistry Volume 32 ; 32 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Environmental Toxicology and Chemistry Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Environmental Toxicology and Chemistry Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Environmental Toxicology and Chemistry Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Environmental Toxicology and Chemistry Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Environmental Toxicology and Chemistry Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Environmental Toxicology and Chemistry Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Environmental Toxicology and Chemistry Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Environmental Toxicology and Chemistry Volume 36 ; 36 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Environmental Toxicology and Chemistry Volume 37 ; 37 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Environmental Toxicology and Chemistry Volume 38 ; 38 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Environmental Toxicology and Chemistry Volume 39 ; 39 ; >
@@ -7118,16 +7118,16 @@
 
     param[journal_id] = fisheries
 
-    au < crawling ; exists ; 2008 ; 2008 ; Fisheries Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; Fisheries Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Fisheries Volume 35 ; 35 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Fisheries Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Fisheries Volume 37 ; 37 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Fisheries Volume 38 ; 38 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Fisheries Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Fisheries Volume 33 ; 33 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Fisheries Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Fisheries Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Fisheries Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Fisheries Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Fisheries Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Fisheries Volume 39 ; 39 ; >
     au < testing ; exists ; 2015 ; 2015 ; Fisheries Volume 40 ; 40 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Fisheries Volume 41 ; 41 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Fisheries Volume 42 ; 42 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Fisheries Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Fisheries Volume 42 ; 42 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Fisheries Volume 43 ; 43 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Fisheries Volume 44 ; 44 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Fisheries Volume 45 ; 45 ; >
