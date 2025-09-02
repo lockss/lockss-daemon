@@ -2308,7 +2308,7 @@ while (my $line = <>) {
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|epub)(plus)?\/${doi1}\//)) {  #"
                       #if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/)(book)?(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
-                      if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub\/)(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</) || ($b_contents =~ m/>Buy Online</) || ($b_contents =~ m/>Buy Digital</))) {  #"
+                      if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub\/)(full)?(plus)?\/?${doi1}\//) || ($b_contents =~ m/>Buy PDF</) || ($b_contents =~ m/>Buy Online</) || ($b_contents =~ m/>Buy Digital</))) {  #"
                           $result = "Manifest";
                       }
                   }
@@ -2347,11 +2347,13 @@ while (my $line = <>) {
           } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/)) {
               #prepare for the worst by presetting a not found result...
               $result = "--";
-              if ($man_contents =~ m/doi\/book\/([^\/]+)\/([^"']+)/) {  #"
+              if ($man_contents =~ m/doi\/book\/([^\/]+)\/([^"']+)/) {  #" 
+                  #printf("Passed first test\n"); #debug
                   my $doi1 = $1;
                   my $doi2 = $2;
                   #get the title of the book if we found the manifest page
                   if ($man_contents =~ m/<title>(.*) Manifest Page<\/title>/si) {
+                      #printf("Found the title\n"); #debug
                       $vol_title = $1;
                       $vol_title =~ s/\s*\n\s*/ /g;
                       $vol_title =~ s/ &amp\; / & /;
@@ -2366,13 +2368,14 @@ while (my $line = <>) {
                   my $breq = HTTP::Request->new(GET, $book_url);
                   my $bresp = $ua->request($breq);
                   if ($bresp->is_success) {
+                      #printf("Passed next test\n"); #debug
                       my $b_contents = $bresp->content;
                       # what we're looking for on the page is href="/doi/pdf/doi1/doi2" OR href="/doi/pdfplus/doi1/doi2" OR href="/doi/epub/doi1/doi2"
                       #printf("href=\"pdfplus/%s/%s\"",${doi1},${doi2});
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+pdf(plus)?\/${doi1}\/${doi2}/)) {
                       #if (defined($b_contents) && ($b_contents =~ m/href=\"[^"]+(pdf|epub)(plus)?\/${doi1}\//)) {  #"
                       #if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub|doi\/)(book)?(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</))) {  #"
-                      if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub\/)(full)?(plus)?\/${doi1}\//) || ($b_contents =~ m/>Buy PDF</) || ($b_contents =~ m/>Buy Online</) || ($b_contents =~ m/>Buy Digital</))) {  #"
+                      if (defined($b_contents) && (($b_contents =~ m/href=\"[^"]+(epdf|pdf|epub\/)(full)?(plus)?\/?${doi1}\//) || ($b_contents =~ m/>Buy PDF</) || ($b_contents =~ m/>Buy Online</) || ($b_contents =~ m/>Buy Digital</))) {  #"
                           $result = "Manifest";
                       }
                   }

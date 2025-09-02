@@ -195,7 +195,7 @@
     au < finished ; finished ; 2003 ; 69 ; 9781874774747 ; 9781909821675 ; 9781874774747 ; Polin Studies in Polish Jewry Volume 16: Focusing on Jewish Popular Culture and its Afterlife (9781874774747) ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2003 ; 70 ; 9781904113683 ; 9781909821798 ; 9781904113683 ; Time and Process in Ancient Judaism (9781904113683) ; http://online.liverpooluniversitypress.co.uk/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2004 ; 71 ; 9781904113331 ; 9781909821040 ; 9781904113331 ; The Three Temples: On the Emergence of Jewish Mysticism (9781904113331) ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
-    au < finished ; finished ; 2004 ; 72 ; 9781906764234 ; 9781909821132 ; 9781906764234 ; The Limits of Orthodox Theology (9781906764234) ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+    au < finished ; finished ; 2003 ; 72 ; 9781906764234 ; 9781909821132 ; 9781906764234 ; The Limits of Orthodox Theology (9781906764234) ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2004 ; 73 ; 9781874774945 ; 9781909821194 ; 9781874774945 ; Arthur Szyk: Artist, Jew, Pole (9781874774945) ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2004 ; 74 ; 9781904113324 ; 9781909821286 ; 9781904113324 ; Yom Tov Lipmann Heller: Portrait of a Seventeenth-Century Rabbi (9781904113324) ; http://online.liverpooluniversitypress.co.uk/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2004 ; 75 ; 9781874774563 ; 9781909821354 ; 9781874774563 ; Meshal Haqadmoni: Fables from the Distant Past Volumes 1 & 2 (9781874774563) ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
@@ -214,6 +214,11 @@
     au < finished ; finished ; 2011 ; 88 ; 9781906764777 ; 9781909821033 ; 9781906764777 ; Maimonides the Rationalist (9781906764777) ; http://online.liverpooluniversitypress.co.uk/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2012 ; 89 ; 9781906764920 ; 9781909821057 ; 9781906764920 ; Jewish Theology and World Religions (9781906764920) ; http://online.liverpooluniversitypress.co.uk/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2013 ; 90 ; 9781906764449 ; 9781909821118 ; 9781906764449 ; Founder of Hasidism: A Quest for the Historical Ba'al Shem Tov (9781906764449) ; http://online.liverpooluniversitypress.co.uk/ ; reingest5.clockss.org:8082 >
+
+    #Duplicates
+    au < doNotProcess ; exists ; 2003 ; 72 ; 9781874774907 ; 9781909821132 ; 9781909821132 ; Limits of Orthodox Theology: Maimonides' Thirteen Principles Reappraised (9781874774907) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2006 ; 80 ; 9781874774846 ; 9781909821309 ; 9781874774846 ; Mystical Origins of Hasidism (9781874774846) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < doNotProcess ; exists ; 2007 ; 82 ; 9781874774990 ; 9781909821064 ; 9781874774990 ; Book in the Jewish World, 1700-1900 (9781874774990) ; https://www.liverpooluniversitypress.co.uk/ ; >
 
    }
 
@@ -264,7 +269,7 @@
     au < frozen ; exists ; 1960 ; 9780582011182 ; 9781837649792 ; 9781837649792 ; Trollope (9780582011182) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 1960 ; 9780582011267 ; 9781837646883 ; 9781837646883 ; Walter Savage Landor (9780582011267) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 1960 ; 9780582011212 ; 9781837649754 ; 9781837649754 ; William Cowper (9780582011212) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < doesNotExist ; doesNotExist ; 1961 ; 9780582010093 ; 9781837649808 ; 9780582010093 ; Arnold Bennett (9780582010093) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 1961 ; 9780582010093 ; 9781837649808 ; 9781837649808 ; Arnold Bennett (9780582010093) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 1961 ; 9780582011366 ; 9781837647262 ; 9780582011366 ; Christopher Smart (9780582011366) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 1961 ; 9780729400701 ; 9781800344532 ; 9780729400701 ; Denis Diderot, 'Est-il bon? Est-il méchant?': édition critique par J. Undank (9780729400701) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 1961 ; 9780582010451 ; 9781837647811 ; 9781837647811 ; Herbert Read (9780582010451) ; https://www.liverpooluniversitypress.co.uk/ ; >
@@ -961,7 +966,6 @@
     au < frozen ; exists ; 2003 ; 9780746310199 ; 9781837649211 ; 9780746310199 ; John Fowles (9780746310199) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2003 ; 9780729408172 ; 9781789626896 ; 9780729408172 ; La Poésie philosophique de Voltaire\; Voltaire and the Temple of bad taste: a study of 'La Pucelle d'Orléans' (9780729408172) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2003 ; 9780729408196 ; 9781789626919 ; 9780729408196 ; Les Mémoires De Saint-Simon: Lecteur Virtuel Et Stratégies D'écriture (9780729408196) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < notReady ; exists ; 2003 ; 9781874774907 ; 9781909821132 ; 9781909821132 ; Limits of Orthodox Theology: Maimonides' Thirteen Principles Reappraised (9781874774907) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2003 ; 9780746311202 ; 9781786946621 ; 9780746311202 ; Neil Gunn (9780746311202) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2003 ; 9780729408363 ; 9781789626940 ; 9780729408363 ; Nicolas-Etienne Framery: and lyric theatre in eighteenth-century France (9780729408363) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2003 ; 9780729408110 ; 9781789626889 ; 9780729408110 ; Nikolai Karamzin: Letters of a Russian Traveller (9780729408110) ; https://www.liverpooluniversitypress.co.uk/ ; >
@@ -1059,7 +1063,6 @@
     au < doesNotExist ; doesNotExist ; 2006 ; 9780856687617 ; 9781800344907 ; 9780856687617 ; Juan Ramon Jimenez: Selected Poems (Poesias escogidas) (9780856687617) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2006 ; 9780729408820 ; 9781786947789 ; 9780729408820 ; Le Théâtre De Lélio: étude du répertoire du Nouveau théâtre italien de 1716 à 1729 (9780729408820) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2006 ; 9780729408790 ; 9781786947963 ; 9780729408790 ; Medievalism and manière gothique in Enlightenment France (9780729408790) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < doesNotExist ; doesNotExist ; 2006 ; 9781874774846 ; 9781909821309 ; 9781874774846 ; Mystical Origins of Hasidism (9781874774846) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2006 ; 9780746311349 ; 9781800854383 ; 9780746311349 ; Oscar Wilde (9780746311349) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < doesNotExist ; doesNotExist ; 2006 ; 9781874774969 ; 9781874774976 ; 9781874774969 ; Polin: Studies in Polish Jewry Volume 19: Polish-Jewish Relations in North America (9781874774969) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2006 ; 9780729408769 ; 9781786943682 ; 9780729408769 ; Progrès et perfectibilité: un dilemme des Lumières françaises (1755-1814) (9780729408769) ; https://www.liverpooluniversitypress.co.uk/ ; >
@@ -1084,7 +1087,6 @@
     au < doesNotExist ; doesNotExist ; 2007 ; 9780859897792 ; 9781800344860 ; 9780859897792 ; Aelfric's Lives of the Virgin Spouses: with Modern English Parallel-Text Translations (9780859897792) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2007 ; 9780856687594 ; 9781800346437 ; 9780856687594 ; Augustine: The City of God Books III and IV (9780856687594) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2007 ; 9780729409070 ; 9781786946874 ; 9780729409070 ; Between State and Market: Printing and bookselling in eighteenth-century France (9780729409070) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < doesNotExist ; doesNotExist ; 2007 ; 9781874774990 ; 9781909821064 ; 9781874774990 ; Book in the Jewish World, 1700-1900 (9781874774990) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2007 ; 9780856687778 ; 9781800344921 ; 9780856687778 ; Calderon The Physician of his Honour (9780856687778) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2007 ; 9780746311479 ; 9781802079937 ; 9781802079937 ; Coriolanus (9780746311479) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2007 ; 9780729409117 ; 9781786947123 ; 9780729409117 ; Divine Thalie: the Career Of Jeanne Quinault (9780729409117) ; https://www.liverpooluniversitypress.co.uk/ ; >
@@ -2096,8 +2098,8 @@
     au < notReady ; exists ; 2013 ; 9781904113959 ; 9781837649457 ; 9781837649457 ; Becoming Habsburg: The Jews of Habsburg Bukovina, 1774-1918 (9781904113959) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2013 ; 9781853411359 ; 9781837645381 ; 9781837645381 ; Garden and Landscape: The Lectures of Anthony Du Gard Pasley (9781853411359) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2013 ; 9781853411397 ; 9781837645398 ; 9781837645398 ; Planting and Design for Seaside and Shelter (9781853411397) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < doesNotExist ; doesNotExist ; 2013 ; 9781845195748 ; 9781782840039 ; 9781845195748 ; Ring of Myths: Israelis, Wagner and the Nazis (9781845195748) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < notReady ; exists ; 2013 ; 9781845196066 ; 9781782840084 ; 9781782840084 ; Schism: The Battle that Forged Freemasonry (9781845196066) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2013 ; 9781845195748 ; 9781902210520 ; 9781902210520 ; Ring of Myths: Israelis, Wagner and the Nazis (9781902210520) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < ready ; exists ; 2013 ; 9781845196066 ; 9781782840084 ; 9781782840084 ; Schism: The Battle that Forged Freemasonry (9781845196066) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2013 ; 9780859898690 ; 9781800344334 ; 9781800344334 ; The Making of Thomas Hoccleve's 'Series' (9780859898690) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2013 ; 9781906764173 ; 9781837649464 ; 9781837649464 ; Toleration within Judaism (9781906764173) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2014 ; 9781848021785 ;  ; 9781848021785 ; Baths Basilica Wroxeter: Excavations 1966-90 (9781848021785) ; https://www.liverpooluniversitypress.co.uk/ ; >
@@ -2107,7 +2109,7 @@
     au < doesNotExist ; doesNotExist ; 2014 ; 9781873592939 ; 9781848022188 ; 9781873592939 ; Wearmouth and Jarrow Monastic Sites, Volume 1 (9781873592939) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < doesNotExist ; doesNotExist ; 2014 ; 9781873592946 ; 9781848022195 ; 9781873592946 ; Wearmouth and Jarrow Monastic Sites, Volume 2 (9781873592946) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2015 ; 9781845197339 ; 9781782842736 ; 9781782842736 ; Art, Archaeology & Science: An Interdisciplinary Approach to Chinese Archaeological and Artistic Materials (9781845197339) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < notReady ; exists ; 2015 ; 9781845196608 ; 9781782842408 ; 9781782842408 ; Spain's Martyred Cities: From the Battle of Madrid to Picasso's Guernica (9781845196608) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < ready ; exists ; 2015 ; 9781845196608 ; 9781782842408 ; 9781782842408 ; Spain's Martyred Cities: From the Battle of Madrid to Picasso's Guernica (9781845196608) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2015 ; 9781845196875 ; 9781782842224 ; 9781782842224 ; Spanish Education in Morocco, 1912-1956: Cultural Interactions in a Colonial Context (9781845196875) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2016 ; 9781845198275 ; 9781782843757 ; 9781782843757 ; Experimental Shakespeare: A Novel Reading of His Play-Scripts (9781845198275) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2016 ; 9781898595700 ; 9781898595731 ; 9781898595731 ; From a Safe Distance: Suicide is Not the End of the Story (9781898595700) ; https://www.liverpooluniversitypress.co.uk/ ; >
@@ -2117,14 +2119,14 @@
     au < notReady ; exists ; 2016 ; 9781845197568 ; 9781782842675 ; 9781845197568 ; Spanish-Israeli Relations, 1956-1992: Ghosts of the Past and Contemporary Challenges in the Middle East (9781845197568) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2016 ; 9781845197872 ; 9781782843030 ; 9781845197872 ; 'Paracuellos': The Elimination of the 'Fifth Column' in Republican Madrid During the Spanish Civil War (9781845197872) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2017 ; 9781845198732 ; 9781782844839 ; 9781782844839 ; Additional Memoirs of Lady Hester Stanhope: An Unpublished Historical Account for the Years 1819-1820, as Recorded by Her Physician Charles Lewis Meryon (9781845198732) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < notReady ; exists ; 2017 ; 9781845198350 ; 9781782844266 ; 9781782844266 ; Adoption of a Pro-US Foreign Policy by Spain and the United Kingdom: José Maria Aznar and Tony Blair's Personal Motivations and their Global Impact (9781845198350) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < ready ; exists ; 2017 ; 9781845198350 ; 9781782844266 ; 9781782844266 ; Adoption of a Pro-US Foreign Policy by Spain and the United Kingdom: José Maria Aznar and Tony Blair's Personal Motivations and their Global Impact (9781845198350) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2017 ; 9781845197599 ; 9781782844235 ; 9781782844235 ; Arab Political Demography: Population Growth, Labor Migration and Natalist Policies (9781845197599) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2017 ; 9781845198848 ; 9781782844501 ; 9781782844501 ; Balancing Act: British Intelligence in Spain During the Second World War (9781845198848) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2017 ; 9781845198480 ; 9781782843870 ; 9781782843870 ; Child Actors on the London Stage, Circa 1600: Their Education, Recruitment and Theatrical Success (9781845198480) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < notReady ; exists ; 2017 ; 9781845198817 ; 9781782844204 ; 9781782844204 ; Conspiracy, Coup d'état and Civil War in Seville, 1936-1939: History and Myth in Francoist Spain (9781845198817) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < ready ; exists ; 2017 ; 9781845198817 ; 9781782844204 ; 9781782844204 ; Conspiracy, Coup d'état and Civil War in Seville, 1936-1939: History and Myth in Francoist Spain (9781845198817) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2017 ; 9781845197704 ; 9781782843399 ; 9781782843399 ; Cosmic Threats: A Planetary Response (9781845197704) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2017 ; 9781845198404 ; 9781782844051 ; 9781782844051 ; David Foster Wallace: Presences of the Other (9781845198404) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < notReady ; exists ; 2017 ; 9781845198855 ; 9781782844532 ; 9781782844532 ; Democracy, Deeds and Dilemmas: Support for the Spanish Republic within British Civil Society, 1936-1939 (9781845198855) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < ready ; exists ; 2017 ; 9781845198855 ; 9781782844532 ; 9781782844532 ; Democracy, Deeds and Dilemmas: Support for the Spanish Republic within British Civil Society, 1936-1939 (9781845198855) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2017 ; 9781845198336 ; 9781782841777 ; 9781782841777 ; Eli Ben Amram and his Companions: Jewish Leadership in the Eleventh-Century Mediterranean Basin (9781845198336) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2017 ; 9781845198213 ; 9781782843573 ; 9781782843573 ; Fresca -- A Life in the Making: A Biographer's Quest for a Forgotten Bloomsbury Polymath (9781845198213) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2017 ; 9781845198244 ; 9781782843931 ; 9781782843931 ; Intellectual Response to the First World War: How the Conflict Impacted on Ideas, Methods and Fields of Enquiry (9781845198244) ; https://www.liverpooluniversitypress.co.uk/ ; >
@@ -2149,9 +2151,9 @@
     au < notReady ; exists ; 2018 ; 9781845199036 ; 9781782845348 ; 9781782845348 ; Jose Maria Gil-Robles: Leader of the Catholic Right during the Spanish Second Republic (9781845199036) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2018 ; 9781845199081 ; 9781782845331 ; 9781782845331 ; Literary Universe in Three Parts: Language - Fiction - Experience (9781845199081) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2018 ; 9781845196493 ; 9781782845256 ; 9781782845256 ; National Schism and Civil Integration: Mutual Relations Between the Israeli Central Government and the Israeli Arab Palestinian Minority (9781845196493) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < notReady ; exists ; 2018 ; 9781845199005 ; 9781782845362 ; 9781782845362 ; Pablo Picasso: The Interaction Between Collectors and Exhibitions, 1899-1939 (9781845199005) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < ready ; exists ; 2018 ; 9781845199005 ; 9781782845362 ; 9781782845362 ; Pablo Picasso: The Interaction Between Collectors and Exhibitions, 1899-1939 (9781845199005) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2018 ; 9781853411656 ; 9781837645336 ; 9781837645336 ; Practical Management of Invasive Non-Native Weeds in Britain and Ireland 2018 (9781853411656) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < notReady ; exists ; 2018 ; 9781845198152 ; 9781782845102 ; 9781845198152 ; Press, Politics and National Identities in Catalonia: The Transformation of La Vanguardia, 1881-1931 (9781845198152) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < ready ; exists ; 2018 ; 9781845198152 ; 9781782845102 ; 9781845198152 ; Press, Politics and National Identities in Catalonia: The Transformation of La Vanguardia, 1881-1931 (9781845198152) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2018 ; 9781845198954 ; 9781782844860 ; 9781845198954 ; Reading Fragments and Fragmentation in Modernist Literature (9781845198954) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2018 ; 9781845198923 ; 9781782845041 ; 9781845198923 ; Spain 1936: Year Zero (9781845198923) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2018 ; 9781845199449 ; 9781782845669 ; 9781845199449 ; The Bay of Bengal: The Next BRICS Asset Class (9781845199449) ; https://www.liverpooluniversitypress.co.uk/ ; >
@@ -2159,7 +2161,7 @@
     au < frozen ; exists ; 2018 ; 9781845199333 ; 9781782845515 ; 9781845199333 ; The Song of BEOWULF: A New Transcreation (9781845199333) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2018 ; 9781845199227 ; 9781782845416 ; 9781845199227 ; Utopias in Latin America: Past and Present (9781845199227) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2019 ; 9781853411281 ; 9781837645329 ; 9781853411281 ; Landscape Appreciation: Theories since the Cultural Turn (9781853411281) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < notReady ; exists ; 2019 ; 9781789760378 ; 9781782846260 ; 9781789760378 ; The House of Alice Roughton: Cambridge Doctor, Humanist, Patron and Activist: From the Edwardian to the Contemporary (9781789760378) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < ready ; exists ; 2019 ; 9781789760378 ; 9781782846260 ; 9781789760378 ; The House of Alice Roughton: Cambridge Doctor, Humanist, Patron and Activist: From the Edwardian to the Contemporary (9781789760378) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2019 ; 9781789760323 ; 9781782846697 ; 9781789760323 ; The Illusion of Statehood: Perceptions of Catalan Independence up to the End of the Spanish Civil War (9781789760323) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2019 ; 9781789760163 ; 9781782846598 ; 9781789760163 ; The Nightly Act of Dreaming: Cognitive Narratology and the Shared Identity of Myth (9781789760163) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2019 ; 9781789760293 ; 9781782846642 ; 9781789760293 ; The Road to Madrid: Diary of Donald Gallie, Member of the Scottish Medical Aid Unit, Serving in the Spanish Civil War, September-December 1936 (9781789760293) ; https://www.liverpooluniversitypress.co.uk/ ; >
@@ -2170,17 +2172,17 @@
     au < notReady ; exists ; 2020 ; 9781789760767 ; 9781782847069 ; 9781789760767 ; The Semiotics of Israeli Space and Time (9781789760767) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2020 ; 9781800348356 ; 9781800346048 ; 9781800348356 ; Witch (9781800348356) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2021 ; 9781853411694 ; 9781837645534 ; 9781853411694 ; Access and Other Rights over Rural Land 2021 (9781853411694) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < notReady ; exists ; 2021 ; 9781800348349 ; 9781800346055 ; 9781800348349 ; Blood on Satan's Claw (9781800348349) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2021 ; 9781800348066 ; 9781800346055 ; 9781800348066 ; Blood on Satan's Claw (9781800348066) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2021 ; 9781853411670 ; 9781837645541 ; 9781853411670 ; FORESTRY AND WOODLAND MANAGEMENT ON FARMS AND RURAL ESTATES 2021 (9781853411670) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2021 ; 9781853411434 ; 9781837645312 ; 9781853411434 ; Invasive Bamboos 2021: Their Impact and Management in Great Britain and Ireland (9781853411434) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2021 ; 9781789761726 ; 9781782847496 ; 9781789761726 ; The Bookman: William Troy on Literature and Criticism, 1927-1950 (9781789761726) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < notReady ; exists ; 2021 ; 9781789761085 ; 9781782847595 ; 9781789761085 ; The Sounds of Aurora Australis: A History of Australia's Musical Identity (9781789761085) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < manifest ; exists ; 2021 ; 9781789761085 ; 9781782847595 ; 9781782847595 ; The Sounds of Aurora Australis: A History of Australia's Musical Identity (9781782847595) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2021 ; 9781789761108 ; 9781782847564 ; 9781789761108 ; The Strategy of Tension in Italy: Neofascist Terrorism and Coup Plots, 1969-1980 (9781789761108) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2021 ; 9781800856776 ; 9781802070873 ; 9781800856776 ; Themistius and Valens: Orations 6-13 (9781800856776) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2022 ; 9781800856844 ; 9781802079203 ; 9781800856844 ; Acts of the Council of Constantinople of 869-70 (9781800856844) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < manifest ; exists ; 2022 ; 9781800856783 ; 9781837645572 ; 9781800856783 ; Disputatio of the Latins and the Greeks, 1234: Introduction, Translation, and Commentary (9781800856783) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < ready ; exists ; 2022 ; 9781800856783 ; 9781837645572 ; 9781800856783 ; Disputatio of the Latins and the Greeks, 1234: Introduction, Translation, and Commentary (9781800856783) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2022 ; 9781789761252 ; 9781837645589 ; 9781789761252 ; Down to the Sunless Sea: A Troubled Samuel Taylor Coleridge in the Mediterranean (9781789761252) ; https://www.liverpooluniversitypress.co.uk/ ; >
-    au < manifest ; exist ; 2022 ; 9781802076820 ; 9781837645619 ; 9781802076820 ; Festal Letters of Athanasius of Alexandria, with the Festal Index and the Historia Acephala (9781802076820) ; https://www.liverpooluniversitypress.co.uk/ ; >
+    au < ready ; exist ; 2022 ; 9781802076820 ; 9781837645619 ; 9781802076820 ; Festal Letters of Athanasius of Alexandria, with the Festal Index and the Historia Acephala (9781802076820) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2022 ; 9781802070606 ; 9781802071139 ; 9781802070606 ; La République de Harrington dans la France des Lumières et de la Révolution (9781802070606) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < frozen ; exists ; 2022 ; 9781800348592 ; 9781802076592 ; 9781800348592 ; Sidonius Apollinaris Complete Poems (9781800348592) ; https://www.liverpooluniversitypress.co.uk/ ; >
     au < notReady ; exists ; 2022 ; 9781802077650 ; 9781802079692 ; 9781802077650 ; T. S. Eliot Studies Annual: Volume 4 (9781802077650) ; https://www.liverpooluniversitypress.co.uk/ ; >
