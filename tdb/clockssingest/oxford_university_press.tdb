@@ -7173,8 +7173,8 @@
 
     param[journal_id] = fst
 
-    au < testing ; exists ; 2016 ; 2016 ; Food Science and Technology Volume 30 ; 30 ; >
-    au < testing ; exists ; 2017 ; 2017 ; Food Science and Technology Volume 31 ; 31 ; >
+    au < ready ; exists ; 2016 ; 2016 ; Food Science and Technology Volume 30 ; 30 ; >
+    au < ready ; exists ; 2017 ; 2017 ; Food Science and Technology Volume 31 ; 31 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Food Science and Technology Volume 32 ; 32 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Food Science and Technology Volume 33 ; 33 ; >
     au < finished ; manifest ; 2020 ; 2020 ; Food Science and Technology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
