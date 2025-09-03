@@ -1341,7 +1341,7 @@
     au < finished ; manifest ; 2022 ; Transfers Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2023 ; Transfers Volume 13 ; 13 ; >
     au < frozen ; exists ; 2024 ; Transfers Volume 14 ; 14 ; >
-    au < expected ; exists ; 2025 ; Transfers Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2025 ; Transfers Volume 15 ; 15 ; >
 
   }
 
