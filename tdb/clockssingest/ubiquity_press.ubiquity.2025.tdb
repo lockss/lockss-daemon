@@ -849,7 +849,7 @@
       au < finished ; crawling ; 2021 ; 5 ; Computational Psychiatry Volume 2021 ; 2021 ; 5 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 6 ; Computational Psychiatry Volume 2022 [superseded] ; 2022 ; 6 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Computational Psychiatry Volume 2023 ; 2023 ; 7 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
-      au < crawling ; exists ; 2024 ; 8 ; Computational Psychiatry Volume 2024 ; 2024 ; 8 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
+      au < frozen ; exists ; 2024 ; 8 ; Computational Psychiatry Volume 2024 ; 2024 ; 8 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
       au < crawling ; exists ; 2025 ; 9 ; Computational Psychiatry Volume 2025 ; 2025 ; 9 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
 
   }
@@ -1233,7 +1233,7 @@
       nondefparam[base_url2] = https://account.silkroadsarchaeoheritage.org/
       nondefparam[journal_id] = up-j-srah
 
-      au < crawling ; exists ; 2023 ; 1 ; Silk Roads Archaeology and Heritage Volume 2023 ; 2023 ; 1 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
+      au < frozen ; exists ; 2023 ; 1 ; Silk Roads Archaeology and Heritage Volume 2023 ; 2023 ; 1 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
       au < crawling ; exists ; 2025 ; 2 ; Silk Roads Archaeology and Heritage Volume 2025 ; 2025 ; 2 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ ; >
 
   }
@@ -1259,7 +1259,7 @@
       au < finished ; crawling ; 2021 ; 7 ; Journal of Open Humanities Data Volume 2021 ; 2021 ; 7 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 8 ; Journal of Open Humanities Data Volume 2022 [superseded] ; 2022 ; 8 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 9 ; Journal of Open Humanities Data Volume 2023 ; 2023 ; 9 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
-      au < crawling ; exists ; 2024 ; 10 ; Journal of Open Humanities Data Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
+      au < frozen ; exists ; 2024 ; 10 ; Journal of Open Humanities Data Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
       au < crawling ; exists ; 2025 ; 11 ; Journal of Open Humanities Data Volume 2025 ; 2025 ; 11 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ ; >
 
   }
@@ -2614,7 +2614,7 @@
       au < crawling ; exists ; 2019 ; 3 ; Journal of Historical Network Research Volume 2019 ; 2019 ; 3 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2020 ; 4 ; Journal of Historical Network Research Volume 2020 ; 2020 ; 4 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2021 ; 5,6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5,6 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
-      au < crawling ; exists ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
+      au < frozen ; exists ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
       au < crawling ; exists ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ;  ; https://jhnr.net/ ; >
