@@ -39,6 +39,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.LockssThread;
 import org.lockss.db.DbManager;
+import org.lockss.metadata.MetadataManager;
 import org.lockss.remote.*;
 import org.lockss.servlet.MigrateContent;
 import org.lockss.util.*;
@@ -93,6 +94,7 @@ public class DBMover extends Worker {
         log.info("Db has already been moved.");
         return;
       }
+      disableMdIndexing();
       initParams();
       if (dbManager.isTypeDerby()) {
         log.info("Migrating Derby DB Content");
@@ -117,6 +119,22 @@ public class DBMover extends Worker {
       String msg = "Database copy failed: " + e.getMessage();
       logError(msg, e);
       throw new MigrationTaskFailedException(msg);
+    } finally {
+      enableMdIndexing();
+    }
+  }
+
+  /** Disable MD indexing while copy is in progress */
+  private void disableMdIndexing() {
+    daemon.getMetadataManager().setIndexingEnabled(false);
+  }
+
+  /** Reenable MD indexing if so configured */
+  private void enableMdIndexing() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    if (config.getBoolean(MetadataManager.PARAM_INDEXING_ENABLED,
+                          MetadataManager.DEFAULT_INDEXING_ENABLED)) {
+      daemon.getMetadataManager().setIndexingEnabled(true);
     }
   }
 
