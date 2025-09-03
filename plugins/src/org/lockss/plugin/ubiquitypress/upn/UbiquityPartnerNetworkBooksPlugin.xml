@@ -125,7 +125,7 @@ POSSIBILITY OF SUCH DAMAGE.
  <entry>
      <string>au_substance_url_pattern</string>
      <list>
-      <string>"%sbooks/.*\.(epub|mobi|pdf)$", base_url</string>
+      <string>"%s.*books/.*/files/.*\.pdf$", base_url</string>
      </list>
   </entry>
   <entry>
@@ -152,6 +152,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkBookIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkHtmlLinkRewriterFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
