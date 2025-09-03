@@ -342,11 +342,14 @@ public class MigrateContent extends LockssServlet {
 
   private void doBuildArgsAndRun() {
     try {
-      startRunner(ListUtil.list(
-          getArgsToMigrateSystemSettings(),
-          getArgsToMigrateDatabase(),
-          getArgsToMigrateConfig(),
-          getArgsToMigrateAus()));
+      List <V2AuMover.Args> argses = new ArrayList<>();
+      argses.add(getArgsToMigrateSystemSettings());
+      if (!migrationMgr.isDryRun()) {
+        argses.add(getArgsToMigrateDatabase());
+      }
+      argses.add(getArgsToMigrateConfig());
+      argses.add(getArgsToMigrateAus());
+      startRunner(argses);
     } catch (Exception e) {
       log.error("Could not start runner", e);
     }
