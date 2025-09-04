@@ -67,12 +67,12 @@
       attr[start_stem] = index.php/
       param[journal_id] = UWS
 
-      au < exists ; 2019 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 1 ; 1 ; 2025 >
-      au < exists ; 2020 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 2 ; 2 ; 2025 >
-      au < exists ; 2021 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 3 ; 3 ; 2025 >
-      au < exists ; 2022 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 4 ; 4 ; 2025 >
-      au < exists ; 2023 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 5 ; 5 ; 2025 >
-      au < exists ; 2024 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 6 ; 6 ; 2025 >
+      au < exists ; 2019 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 1 ; 1 ; 2019 >
+      au < exists ; 2020 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 2 ; 2 ; 2020 >
+      au < exists ; 2021 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 3 ; 3 ; 2021 >
+      au < exists ; 2022 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 4 ; 4 ; 2022 >
+      au < exists ; 2023 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 5 ; 5 ; 2023 >
+      au < exists ; 2024 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 6 ; 6 ; 2024 >
       au < manifest ; 2025 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 7 ; 7 ; 2025 >
 
   }
@@ -102,8 +102,24 @@
       attr[start_stem] = index.php/
       param[journal_id] = homiletic
 
-      au < manifest ; 2024 ; Homiletic Volume 1 ; 1 ; 2024 >
-      au < manifest ; 2025 ; Homiletic Volume 2 ; 2 ; 2025 >
+      au < exists ; 2008 ; Homiletic Volume 33 ; 33 ; 2008 >
+      au < exists ; 2009 ; Homiletic Volume 34 ; 34 ; 2009 >
+      au < exists ; 2010 ; Homiletic Volume 35 ; 35 ; 2010 >
+      au < exists ; 2011 ; Homiletic Volume 36 ; 36 ; 2011 >
+      au < exists ; 2012 ; Homiletic Volume 37 ; 37 ; 2012 >
+      au < exists ; 2013 ; Homiletic Volume 38 ; 38 ; 2013 >
+      au < exists ; 2014 ; Homiletic Volume 39 ; 39 ; 2014 >
+      au < exists ; 2015 ; Homiletic Volume 40 ; 40 ; 2015 >
+      au < exists ; 2016 ; Homiletic Volume 41 ; 41 ; 2016 >
+      au < exists ; 2017 ; Homiletic Volume 42 ; 42 ; 2017 >
+      au < exists ; 2018 ; Homiletic Volume 43 ; 43 ; 2018 >
+      au < exists ; 2019 ; Homiletic Volume 44 ; 44 ; 2019 >
+      au < exists ; 2020 ; Homiletic Volume 45 ; 45 ; 2020 >
+      au < exists ; 2021 ; Homiletic Volume 46 ; 46 ; 2021 >
+      au < manifest ; 2022 ; Homiletic Volume 47 ; 47 ; 2022 >
+      au < manifest ; 2023 ; Homiletic Volume 48 ; 48 ; 2023 >
+      au < manifest ; 2024 ; Homiletic Volume 49 ; 49 ; 2024 >
+      au < manifest ; 2025 ; Homiletic Volume 50 ; 50 ; 2025 >
 
   }
 
@@ -117,8 +133,11 @@
       attr[start_stem] = index.php/
       param[journal_id] = VanderbiltLives
 
-      au < manifest ; 2021 ; Vanderbilt Lives Volume 1 ; 1 ; 2021 >
-      au < manifest ; 2023 ; Vanderbilt Lives Volume 2 ; 2 ; 2023 >
+      au < exists ; 2018 ; Vanderbilt Lives Volume 1 ; 1 ; 2018 >
+      au < exists ; 2019 ; Vanderbilt Lives Volume 2 ; 2 ; 2019 >
+      au < exists ; 2020 ; Vanderbilt Lives Volume 3 ; 3 ; 2020 >
+      au < manifest ; 2021 ; Vanderbilt Lives Volume 4 ; 4 ; 2021 >
+      au < manifest ; 2023 ; Vanderbilt Lives Volume 5 ; 5 ; 2023 >
 
   }
 
@@ -147,8 +166,17 @@
       attr[start_stem] = index.php/
       param[journal_id] = lusohispanic
 
-      au < manifest ; 2014 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 1 ; 1 ; 2014 >
-      au < manifest ; 2020 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 2 ; 2 ; 2020 >
+      au < exists ; 2004 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 1 ; 1 ; 2004 >
+      au < exists ; 2005 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 2 ; 2 ; 2005 >
+      au < exists ; 2006 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 3 ; 3 ; 2006 >
+      au < exists ; 2008 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 4 ; 4 ; 2008 >
+      au < exists ; 2009 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 5 ; 5 ; 2009 >
+      au < exists ; 2010 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 6 ; 6 ; 2010 >
+      au < exists ; 2011 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 7 ; 7 ; 2011 >
+      au < exists ; 2012 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 8 ; 8 ; 2012 >
+      au < exists ; 2013 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 9 ; 9 ; 2013 >
+      au < manifest ; 2014 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 10 ; 10 ; 2014 >
+      au < manifest ; 2020 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 11 ; 11 ; 2020 >
 
   }
 
@@ -162,8 +190,21 @@
       attr[start_stem] = index.php/
       param[journal_id] = vurj
 
+      au < exists ; 2005 ; Vanderbilt Undergraduate Research Journal Volume 1 ; 1 ; 2005 >
+      au < exists ; 2006 ; Vanderbilt Undergraduate Research Journal Volume 2 ; 2 ; 2006 >
+      au < exists ; 2007 ; Vanderbilt Undergraduate Research Journal Volume 3 ; 3 ; 2007 >
+      au < exists ; 2008 ; Vanderbilt Undergraduate Research Journal Volume 4 ; 4 ; 2008 >
+      au < exists ; 2009 ; Vanderbilt Undergraduate Research Journal Volume 5 ; 5 ; 2009 >
+      au < exists ; 2010 ; Vanderbilt Undergraduate Research Journal Volume 6 ; 6 ; 2010 >
+      au < exists ; 2011 ; Vanderbilt Undergraduate Research Journal Volume 7 ; 7 ; 2011 >
+      au < exists ; 2012 ; Vanderbilt Undergraduate Research Journal Volume 8 ; 8 ; 2012 >
+      au < exists ; 2013 ; Vanderbilt Undergraduate Research Journal Volume 9 ; 9 ; 2013 >
+      au < exists ; 2015 ; Vanderbilt Undergraduate Research Journal Volume 10 ; 10 ; 2015 >
+      au < exists ; 2021 ; Vanderbilt Undergraduate Research Journal Volume 11 ; 11 ; 2021 >
+      au < exists ; 2022 ; Vanderbilt Undergraduate Research Journal Volume 12 ; 12 ; 2022 >
       au < manifest ; 2023 ; Vanderbilt Undergraduate Research Journal Volume 13 ; 13 ; 2023 >
       au < manifest ; 2024 ; Vanderbilt Undergraduate Research Journal Volume 14 ; 14 ; 2024 >
+      au < expected ; 2025 ; Vanderbilt Undergraduate Research Journal Volume 15 ; 15 ; 2025 >
 
   }
 
