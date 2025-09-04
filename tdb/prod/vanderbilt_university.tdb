@@ -87,8 +87,8 @@
       attr[start_stem] = index.php/
       param[journal_id] = iris
 
-      au < exists ; 2019 ; Iris Journal of Scholarship Volume 1 ; 1 ; 2019 >
-      au < exists ; 2020 ; Iris Journal of Scholarship Volume 2 ; 2 ; 2020 >
+      au < manifest ; 2019 ; Iris Journal of Scholarship Volume 1 ; 1 ; 2019 >
+      au < manifest ; 2020 ; Iris Journal of Scholarship Volume 2 ; 2 ; 2020 >
 
   }
 
@@ -102,8 +102,8 @@
       attr[start_stem] = index.php/
       param[journal_id] = homiletic
 
-      au < exists ; 2024 ; Homiletic Volume 1 ; 1 ; 2024 >
-      au < exists ; 2025 ; Homiletic Volume 2 ; 2 ; 2025 >
+      au < manifest ; 2024 ; Homiletic Volume 1 ; 1 ; 2024 >
+      au < manifest ; 2025 ; Homiletic Volume 2 ; 2 ; 2025 >
 
   }
 
@@ -117,8 +117,8 @@
       attr[start_stem] = index.php/
       param[journal_id] = VanderbiltLives
 
-      au < exists ; 2021 ; Vanderbilt Lives Volume 1 ; 1 ; 2021 >
-      au < exists ; 2023 ; Vanderbilt Lives Volume 2 ; 2 ; 2023 >
+      au < manifest ; 2021 ; Vanderbilt Lives Volume 1 ; 1 ; 2021 >
+      au < manifest ; 2023 ; Vanderbilt Lives Volume 2 ; 2 ; 2023 >
 
   }
 
@@ -147,8 +147,8 @@
       attr[start_stem] = index.php/
       param[journal_id] = lusohispanic
 
-      au < exists ; 2014 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 1 ; 1 ; 2014 >
-      au < exists ; 2020 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 2 ; 2 ; 2020 >
+      au < manifest ; 2014 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 1 ; 1 ; 2014 >
+      au < manifest ; 2020 ; Vanderbilt e-Journal of Luso-Hispanic Studies Volume 2 ; 2 ; 2020 >
 
   }
 
@@ -162,8 +162,8 @@
       attr[start_stem] = index.php/
       param[journal_id] = vurj
 
-      au < exists ; 2023 ; Vanderbilt Undergraduate Research Journal Volume 13 ; 13 ; 2023 >
-      au < exists ; 2024 ; Vanderbilt Undergraduate Research Journal Volume 14 ; 14 ; 2024 >
+      au < manifest ; 2023 ; Vanderbilt Undergraduate Research Journal Volume 13 ; 13 ; 2023 >
+      au < manifest ; 2024 ; Vanderbilt Undergraduate Research Journal Volume 14 ; 14 ; 2024 >
 
   }
 
