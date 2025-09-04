@@ -67,6 +67,12 @@
       attr[start_stem] = index.php/
       param[journal_id] = UWS
 
+      au < exists ; 2019 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 1 ; 1 ; 2025 >
+      au < exists ; 2020 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 2 ; 2 ; 2025 >
+      au < exists ; 2021 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 3 ; 3 ; 2025 >
+      au < exists ; 2022 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 4 ; 4 ; 2025 >
+      au < exists ; 2023 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 5 ; 5 ; 2025 >
+      au < exists ; 2024 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 6 ; 6 ; 2025 >
       au < manifest ; 2025 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 7 ; 7 ; 2025 >
 
   }
