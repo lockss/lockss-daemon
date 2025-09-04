@@ -11980,9 +11980,9 @@
     param[journal_id] = jeb
 
     au < crawling ; exists ; 2008 ; 2008 ; Journal of Evolutionary Biology Volume 21 ; 21 ; >
-    au < testing ; exists ; 2009 ; 2009 ; Journal of Evolutionary Biology Volume 22 ; 22 ; >
-    au < testing ; exists ; 2010 ; 2010 ; Journal of Evolutionary Biology Volume 23 ; 23 ; >
-    au < testing ; exists ; 2011 ; 2011 ; Journal of Evolutionary Biology Volume 24 ; 24 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Journal of Evolutionary Biology Volume 22 ; 22 ; >
+    au < ready ; exists ; 2010 ; 2010 ; Journal of Evolutionary Biology Volume 23 ; 23 ; >
+    au < ready ; exists ; 2011 ; 2011 ; Journal of Evolutionary Biology Volume 24 ; 24 ; >
     au < crawling ; exists ; 2012 ; 2012 ; Journal of Evolutionary Biology Volume 25 ; 25 ; >
     au < crawling ; exists ; 2013 ; 2013 ; Journal of Evolutionary Biology Volume 26 ; 26 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Journal of Evolutionary Biology Volume 27 ; 27 ; >
@@ -22117,7 +22117,7 @@
     au < crawling ; exists ; 2014 ; 2014 ; The ISME Journal Volume 8 ; 8 ; >
     au < crawling ; exists ; 2015 ; 2015 ; The ISME Journal Volume 9 ; 9 ; >
     au < crawling ; exists ; 2016 ; 2016 ; The ISME Journal Volume 10 ; 10 ; >
-    au < testing ; exists ; 2017 ; 2017 ; The ISME Journal Volume 11 ; 11 ; >
+    au < notReady ; exists ; 2017 ; 2017 ; The ISME Journal Volume 11 ; 11 ; > #403 Forbidden, LXQUEUE-2052
     au < frozen ; exists ; 2018 ; 2018 ; The ISME Journal Volume 12 ; 12 ; >
     au < frozen ; exists ; 2019 ; 2019 ; The ISME Journal Volume 13 ; 13 ; >
     au < frozen ; exists ; 2020 ; 2020 ; The ISME Journal Volume 14 ; 14 ; >
