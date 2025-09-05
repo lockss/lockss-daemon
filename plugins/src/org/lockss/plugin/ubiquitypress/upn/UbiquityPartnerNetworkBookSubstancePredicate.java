@@ -32,6 +32,11 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ubiquitypress.upn;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
+
+import org.apache.commons.io.IOUtils;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
@@ -56,6 +61,7 @@ public class UbiquityPartnerNetworkBookSubstancePredicate implements SubstancePr
   // Content-Type: ('application/pdf', None), the above link will show the content type like this
 
   private static final String SUBSTANCE_STRING = "application/pdf";
+  private static final String BINARY_STRING = "binary/octet-stream";
 
   public UbiquityPartnerNetworkBookSubstancePredicate(ArchivalUnit au) {
     log = Logger.getLogger("UTSePressSubstancePredicate");
@@ -76,9 +82,14 @@ public class UbiquityPartnerNetworkBookSubstancePredicate implements SubstancePr
    * @Return false if the url does not match the substance pattern, or the mime-type does not match 
    * the content type
    * @Return true when url matches the pattern and the mime-type matches and has content
-   */
+  
+    UPDATE September 2025
+     Some pdfs are of type binary/octet-stream so check first 5 bytes
+     to see if they are (25 50 44 46 2D) (which is "%PDF-")
+     then we can assume it's a pdf
+    */
   @Override
-  public boolean isSubstanceUrl(String url) {
+  public boolean isSubstanceUrl(String url){
     // check url against substance rules for publisher
     if (log.isDebug3()) log.debug3("isSubstanceURL("+url+")");
     if ((up == null) || !( up.isMatchSubstancePat(url))) {
@@ -90,7 +101,26 @@ public class UbiquityPartnerNetworkBookSubstancePredicate implements SubstancePr
     }
     try {
       String mime = HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
-      boolean res = cu.hasContent() && mime.contains(SUBSTANCE_STRING);
+      boolean res = false;
+      if(!cu.hasContent()){
+        return res;
+      }
+      if(mime.contains(SUBSTANCE_STRING)){
+        res = true;
+      }
+      if(mime.contains(BINARY_STRING)){
+        InputStream is = cu.getUnfilteredInputStream();
+        byte[] buffer = new byte[5];
+        try{
+          IOUtils.readFully(is, buffer);
+        }catch(IOException ioe){
+          log.error("unable to read first 5 bytes of input stream");
+        }
+        String s = new String(buffer); 
+        if(s.equals("%PDF-")){
+          res = true;
+        }
+      }
       if (log.isDebug3()) {
 	    log.debug3("MimeType: " + mime + "\t Returning: "+ res);
       }
