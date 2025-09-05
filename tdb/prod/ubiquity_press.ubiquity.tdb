@@ -934,26 +934,26 @@
 
   }
 
-  {
-
-      title <
-        name = ARENA Journal of Architectural Research ;
-        eissn = 2397-0820
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = http://ajar.arena-architecture.eu/
-
-      au < down ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; http://ajar.arena-architecture.eu/ >
-      au < down ; 2017 ; 2 ; ARENA Journal of Architectural Research Volume 2017 ; 2017 ; https://ajar.arena-architecture.eu/ >
-      au < down ; 2018 ; 3 ; ARENA Journal of Architectural Research Volume 2018 ; 2018 ; https://ajar.arena-architecture.eu/ >
-      au < down ; 2019 ; 4 ; ARENA Journal of Architectural Research Volume 2019 ; 2019 ; https://ajar.arena-architecture.eu/ >
-      au < down ; 2020 ; 5 ; ARENA Journal of Architectural Research Volume 2020 ; 2020 ; https://ajar.arena-architecture.eu/ >
-      au < down ; 2021 ; 6 ; ARENA Journal of Architectural Research Volume 2021 ; 2021 ; https://ajar.arena-architecture.eu/ >
-      au < doNotProcess ; 2022 ; 7 ; ARENA Journal of Architectural Research Volume 2022 ; 2022 ; https://ajar.arena-architecture.eu/ >
-      au < doNotProcess ; 2023 ; 8 ; ARENA Journal of Architectural Research Volume 2023 ; 2023 ; https://ajar.arena-architecture.eu/ >
-
-  }
+#  {
+#
+#      title <
+#        name = ARENA Journal of Architectural Research ;
+#        eissn = 2397-0820
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = http://ajar.arena-architecture.eu/
+#
+#      au < down ; 2016 ; 1 ; ARENA Journal of Architectural Research Volume 2016 ; 2016 ; http://ajar.arena-architecture.eu/ >
+#      au < down ; 2017 ; 2 ; ARENA Journal of Architectural Research Volume 2017 ; 2017 ; https://ajar.arena-architecture.eu/ >
+#      au < down ; 2018 ; 3 ; ARENA Journal of Architectural Research Volume 2018 ; 2018 ; https://ajar.arena-architecture.eu/ >
+#      au < down ; 2019 ; 4 ; ARENA Journal of Architectural Research Volume 2019 ; 2019 ; https://ajar.arena-architecture.eu/ >
+#      au < down ; 2020 ; 5 ; ARENA Journal of Architectural Research Volume 2020 ; 2020 ; https://ajar.arena-architecture.eu/ >
+#      au < down ; 2021 ; 6 ; ARENA Journal of Architectural Research Volume 2021 ; 2021 ; https://ajar.arena-architecture.eu/ >
+#      au < doNotProcess ; 2022 ; 7 ; ARENA Journal of Architectural Research Volume 2022 ; 2022 ; https://ajar.arena-architecture.eu/ >
+#      au < doNotProcess ; 2023 ; 8 ; ARENA Journal of Architectural Research Volume 2023 ; 2023 ; https://ajar.arena-architecture.eu/ >
+#
+#  }
 
   {
 

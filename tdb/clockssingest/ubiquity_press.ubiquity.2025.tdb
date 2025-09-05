@@ -1,5 +1,5 @@
 
-#tdbout -EXt auidplus tdb/clockssingest/ubiquity_press.ubiquity.2025.tdb | grep Clockss | sed s'/@@@NONDEF@@@/\&/'
+#tdbout -EXt auidplus tdb/clockssingest/ubiquity_press.ubiquity.2025.tdb | sed s'/@@@NONDEF@@@/\&/'
 
 {
   publisher <
@@ -86,27 +86,29 @@
       nondefparam[base_url2] = https://account.erlacs.org/
       nondefparam[journal_id] = lasa-j-erlacs
 
-     au < finished ; finished ; 2003 ; 1 ; ERLACS Volume 2003 ; 2003 ; 1 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest3.clockss.org:8083 >
-     au < finished ; finished ; 2004 ; 2 ; ERLACS Volume 2004 ; 2004 ; 2 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest4.clockss.org:8082 >
-     au < finished ; finished ; 2005 ; 3 ; ERLACS Volume 2005 ; 2005 ; 3 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest5.clockss.org:8082 >
-     au < finished ; finished ; 2006 ; 4 ; ERLACS Volume 2006 ; 2006 ; 4 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest1.clockss.org:8082 >
-     au < finished ; finished ; 2007 ; 5 ; ERLACS Volume 2007 ; 2007 ; 5 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest2.clockss.org:8085 >
-     au < finished ; finished ; 2008 ; 6 ; ERLACS Volume 2008 ; 2008 ; 6 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest3.clockss.org:8083 >
-     au < finished ; finished ; 2009 ; 7 ; ERLACS Volume 2009 ; 2009 ; 7 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest4.clockss.org:8082 >
-     au < finished ; finished ; 2010 ; 8 ; ERLACS Volume 2010 ; 2010 ; 8 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest5.clockss.org:8082 >
-     au < finished ; finished ; 2011 ; 9 ; ERLACS Volume 2011 ; 2011 ; 9 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest1.clockss.org:8082 >
-     au < finished ; finished ; 2012 ; 10 ; ERLACS Volume 2012 ; 2012 ; 10 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest2.clockss.org:8085 >
-     au < finished ; finished ; 2013 ; 11 ; ERLACS Volume 2013 ; 2013 ; 11 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest3.clockss.org:8083 >
-     au < finished ; finished ; 2014 ; 12 ; ERLACS Volume 2014 ; 2014 ; 12 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest4.clockss.org:8082 >
-     au < finished ; finished ; 2015 ; 13 ; ERLACS Volume 2015 ; 2015 ; 13 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest5.clockss.org:8082 >
-     au < finished ; finished ; 2016 ; 14 ; ERLACS Volume 2016 ; 2016 ; 14 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest2.clockss.org:8085 >
-     au < finished ; crawling ; 2017 ; 15 ; ERLACS Volume 2017 ; 2017 ; 15 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest1.clockss.org:8082 >
-     au < finished ; crawling ; 2018 ; 16 ; ERLACS Volume 2018 ; 2018 ; 16 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest5.clockss.org:8082 >
-     au < finished ; finished ; 2019 ; 17 ; ERLACS Volume 2019 ; 2019 ; 17 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest4.clockss.org:8082 >
-     au < finished ; finished ; 2020 ; 18 ; ERLACS Volume 2020 ; 2020 ; 18 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest2.clockss.org:8085 >
-     au < finished ; crawling ; 2021 ; 19 ; ERLACS Volume 2021 ; 2021 ; 19 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest1.clockss.org:8082 >
-     au < superseded ; exists ; 2022 ; 20 ; ERLACS Volume 2022 [superseded] ; 2022 ; 20 ; CEDLA ;  ; https://www.erlacs.org/ ; >
-     au < frozen ; exists ; 2023 ; 21 ; ERLACS Volume 2023 ; 2023 ; 21 ; CEDLA ;  ; https://erlacs.org/ ; >
+     au < finished ; finished ; 2003 ; 74,75 ; ERLACS Volume 2003 ; 2003 ; 74,75 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest3.clockss.org:8083 >
+     au < finished ; finished ; 2004 ; 76,77 ; ERLACS Volume 2004 ; 2004 ; 76,77 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest4.clockss.org:8082 >
+     au < finished ; finished ; 2005 ; 78,79 ; ERLACS Volume 2005 ; 2005 ; 78,79 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest5.clockss.org:8082 >
+     au < finished ; finished ; 2006 ; 80,81 ; ERLACS Volume 2006 ; 2006 ; 80,81 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest1.clockss.org:8082 >
+     au < finished ; finished ; 2007 ; 82,83 ; ERLACS Volume 2007 ; 2007 ; 82,83 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; finished ; 2008 ; 84,85 ; ERLACS Volume 2008 ; 2008 ; 84,85 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest3.clockss.org:8083 >
+     au < finished ; finished ; 2009 ; 86,87 ; ERLACS Volume 2009 ; 2009 ; 86,87 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest4.clockss.org:8082 >
+     au < finished ; finished ; 2010 ; 88,89 ; ERLACS Volume 2010 ; 2010 ; 88,89 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest5.clockss.org:8082 >
+     au < finished ; finished ; 2011 ; 90,91 ; ERLACS Volume 2011 ; 2011 ; 90,91 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest1.clockss.org:8082 >
+     au < finished ; finished ; 2012 ; 92,93 ; ERLACS Volume 2012 ; 2012 ; 92,93 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; finished ; 2013 ; 94,95 ; ERLACS Volume 2013 ; 2013 ; 94,95 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest3.clockss.org:8083 >
+     au < finished ; finished ; 2014 ; 96,97 ; ERLACS Volume 2014 ; 2014 ; 96,97 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest4.clockss.org:8082 >
+     au < finished ; finished ; 2015 ; 98,99,100 ; ERLACS Volume 2015 ; 2015 ; 98,99,100 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest5.clockss.org:8082 >
+     au < finished ; finished ; 2016 ; 101,102 ; ERLACS Volume 2016 ; 2016 ; 101,102 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; crawling ; 2017 ; 103,104 ; ERLACS Volume 2017 ; 2017 ; 103,104 ; CEDLA ;  ; http://www.erlacs.org/ ; reingest1.clockss.org:8082 >
+     au < finished ; crawling ; 2018 ; 105,106 ; ERLACS Volume 2018 ; 2018 ; 105,106 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest5.clockss.org:8082 >
+     au < finished ; finished ; 2019 ; 107,108 ; ERLACS Volume 2019 ; 2019 ; 107,108 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest4.clockss.org:8082 >
+     au < finished ; finished ; 2020 ; 109,110 ; ERLACS Volume 2020 ; 2020 ; 109,110 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest2.clockss.org:8085 >
+     au < finished ; crawling ; 2021 ; 111,112 ; ERLACS Volume 2021 ; 2021 ; 111,112 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest1.clockss.org:8082 >
+     au < superseded ; exists ; 2022 ; 113,114 ; ERLACS Volume 2022 [superseded] ; 2022 ; 113,114 ; CEDLA ;  ; https://www.erlacs.org/ ; >
+     au < frozen ; exists ; 2023 ; 115,116 ; ERLACS Volume 2023 ; 2023 ; 115,116 ; CEDLA ;  ; https://erlacs.org/ ; >
+     au < exists ; exists ; 2024 ; 117,118 ; ERLACS Volume 2024 ; 2024 ; 117,118 ; CEDLA ;  ; https://erlacs.org/ ; >
+     au < exists ; exists ; 2025 ; 119,120 ; ERLACS Volume 2024 ; 2024 ; 119,120 ; CEDLA ;  ; https://erlacs.org/ ; >
 
   }
 

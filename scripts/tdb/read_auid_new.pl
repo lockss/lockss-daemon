@@ -678,37 +678,38 @@ while (my $line = <>) {
       }
       sleep(5);
 
-  } elsif ($plugin eq "UbiquityPartnerNetworkPlugin") {
-      ####start url & permission url in one
-      $url = sprintf("%slockss/year/%d/",
-          $param{base_url}, $param{year});
-      $man_url = uri_unescape($url);
-      my $req = HTTP::Request->new(GET, $man_url);
-      my $resp = $ua->request($req);
-      if ($resp->is_success) {
-          my $man_contents = $resp->content;
-          if ($req->url ne $resp->request->uri) {
-              $vol_title = $resp->request->uri;
-              $result = "Redirected";
-          } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
-              if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
-                  $vol_title = $1;
-              }
-              #if ($man_contents =~ m/\/articles\//) {
-              #if ($man_contents =~ m/\/volume\/.+\/issue\//) {
-              if ($man_contents =~ m/\/volume\//) {
-                  $result = "Manifest";
-              } else {
-                  $result = "--NO_CONT--";
-              }
-          } else {
-              $result = "--NO_TAG--";
-          }
-      } else {
-          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-      }
-      sleep(5);
-
+# See instead the OJS3 MPC
+#  } elsif ($plugin eq "UbiquityPartnerNetworkPlugin") {
+#      ####start url & permission url in one
+#      $url = sprintf("%slockss/year/%d/",
+#          $param{base_url}, $param{year});
+#      $man_url = uri_unescape($url);
+#      my $req = HTTP::Request->new(GET, $man_url);
+#      my $resp = $ua->request($req);
+#      if ($resp->is_success) {
+#          my $man_contents = $resp->content;
+#          if ($req->url ne $resp->request->uri) {
+#              $vol_title = $resp->request->uri;
+#              $result = "Redirected";
+#          } elsif (defined($man_contents) && ($man_contents =~ m/$lockss_tag/)) {
+#              if ($man_contents =~ m/<title>\s*(.*)\s*<\/title>/si) {
+#                  $vol_title = $1;
+#              }
+#              #if ($man_contents =~ m/\/articles\//) {
+#              #if ($man_contents =~ m/\/volume\/.+\/issue\//) {
+#              if ($man_contents =~ m/\/volume\//) {
+#                  $result = "Manifest";
+#              } else {
+#                  $result = "--NO_CONT--";
+#              }
+#          } else {
+#              $result = "--NO_TAG--";
+#          }
+#      } else {
+#          $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+#      }
+#      sleep(5);
+#
 # See instead the OJS3 MPC
 #  } elsif ($plugin eq "ClockssUbiquityPartnerNetworkPlugin") {
 #      ####start url only
@@ -1314,42 +1315,17 @@ while (my $line = <>) {
         }
         sleep(4);
 
-  # Start ClockssOMPBooksPlugin.
-  } elsif ($plugin eq "ClockssOMPBooksPlugin") {
-    $url = sprintf("%s%s/catalog/book/ed-%s",
-        $param{base_url}, $param{publisher_id}, $param{isbn});
-    $man_url = uri_unescape($url);
-    my $req = HTTP::Request->new(GET, $man_url);
-    my $resp = $ua->request($req);
-    #printf("resp is %s\n",$resp->status_line);
-    my $man_contents = $resp->is_success ? $resp->content : "";
-    if (! $resp->is_success) {
-        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    } elsif ($req->url ne $resp->request->uri) {
-        $vol_title = $resp->request->uri;
-        $result = "Redirected";
-    } elsif (! defined($man_contents)) {
-        $result = "--NOT_DEF--";
-    } elsif ($man_contents !~ m/$clockss_tag/) {
-        $result = "--NO_TAG--";
-    } elsif ($man_contents !~ m/\/issue\/$param{year}\/$param{volume_name}\/\d/) {
-        $result = "--NO_VOL--";
-    } else {
-        $result = "Manifest";
-        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
-            $vol_title = $1 . " Volume " . $param{volume_name} . " Year " . $param{year};
-            $vol_title =~ s/\s*\n\s*/ /g;
-        }
-    }
-  sleep(4);
-  # End ClockssOMPBooksPlugin
-
 # thin child of OJS2 but with a different start_url and no permission_url
-  } elsif ($plugin eq "Ojs3Plugin") {
+  } elsif (($plugin eq "Ojs3Plugin") ||
+          ($plugin eq "UbiquityPartnerNetworkPlugin")) {
     #OJS3 allows an attr to define variants for location of manifest
         if ($param{base_url} =~ m/scholarworks/) {
             $url = sprintf("%sjournals/index.php/%s/gateway/lockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
+        } elsif ($plugin eq "UbiquityPartnerNetworkPlugin") {
+            $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d",
+            $param{base_url2}, $param{journal_id}, $param{year});
+            $auid_long =~ s/&base_url2~http.*//;
         } else {
           #default behavior
           $url = sprintf("%sindex.php/%s/gateway/lockss?year=%d",
@@ -1391,6 +1367,36 @@ while (my $line = <>) {
             $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
         }
         sleep(4);
+
+  # Start ClockssOMPBooksPlugin.
+  } elsif ($plugin eq "ClockssOMPBooksPlugin") {
+    $url = sprintf("%s%s/catalog/book/ed-%s",
+        $param{base_url}, $param{publisher_id}, $param{isbn});
+    $man_url = uri_unescape($url);
+    my $req = HTTP::Request->new(GET, $man_url);
+    my $resp = $ua->request($req);
+    #printf("resp is %s\n",$resp->status_line);
+    my $man_contents = $resp->is_success ? $resp->content : "";
+    if (! $resp->is_success) {
+        $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+    } elsif ($req->url ne $resp->request->uri) {
+        $vol_title = $resp->request->uri;
+        $result = "Redirected";
+    } elsif (! defined($man_contents)) {
+        $result = "--NOT_DEF--";
+    } elsif ($man_contents !~ m/$clockss_tag/) {
+        $result = "--NO_TAG--";
+    } elsif ($man_contents !~ m/\/issue\/$param{year}\/$param{volume_name}\/\d/) {
+        $result = "--NO_VOL--";
+    } else {
+        $result = "Manifest";
+        if ($man_contents =~ m/<title>(.*)<\/title>/si) {
+            $vol_title = $1 . " Volume " . $param{volume_name} . " Year " . $param{year};
+            $vol_title =~ s/\s*\n\s*/ /g;
+        }
+    }
+  sleep(4);
+  # End ClockssOMPBooksPlugin
 
   } elsif ($plugin eq "PensoftOaiPlugin" || $plugin eq "ClockssPensoftOaiPlugin") {
     #no lockss permission statement on start page. Permission statement is on the base_url
