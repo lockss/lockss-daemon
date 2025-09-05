@@ -47,7 +47,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; Clinical Diabetes Volume 40 ; 40 ; >
       au < frozen ; exists ; 2023 ; 2023 ; Clinical Diabetes Volume 41 ; 41 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Clinical Diabetes Volume 42 ; 42 ; >
-      au < ready ; exists ; 2025 ; 2025 ; Clinical Diabetes Volume 43 ; 43 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Clinical Diabetes Volume 43 ; 43 ; >
 
     }
     
@@ -137,7 +137,7 @@
         au < deepCrawl ; exists ; 2022 ; 2022 ; Diabetes Volume 71 ; 71 ; >
         au < frozen ; exists ; 2023 ; 2023 ; Diabetes Volume 72 ; 72 ; >
         au < deepCrawl ; exists ; 2024 ; 2024 ; Diabetes Volume 73 ; 73 ; >
-        au < ready ; exists ; 2025 ; 2025 ; Diabetes Volume 74 ; 74 ; >
+        au < crawling ; exists ; 2025 ; 2025 ; Diabetes Volume 74 ; 74 ; >
 
     }
     
@@ -200,7 +200,7 @@
         au < deepCrawl ; exists ; 2022 ; 2022 ; Diabetes Care Volume 45 ; 45 ; >
         au < frozen ; exists ; 2023 ; 2023 ; Diabetes Care Volume 46 ; 46 ; >
         au < deepCrawl ; exists ; 2024 ; 2024 ; Diabetes Care Volume 47 ; 47 ; >
-        au < ready ; exists ; 2025 ; 2025 ; Diabetes Care Volume 48 ; 48 ; >
+        au < crawling ; exists ; 2025 ; 2025 ; Diabetes Care Volume 48 ; 48 ; >
 
     }
     
@@ -239,7 +239,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; Diabetes Spectrum Volume 35 ; 35 ; >
       au < frozen ; exists ; 2023 ; 2023 ; Diabetes Spectrum Volume 36 ; 36 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Diabetes Spectrum Volume 37 ; 37 ; >
-      au < ready ; exists ; 2025 ; 2025 ; Diabetes Spectrum Volume 38 ; 38 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Diabetes Spectrum Volume 38 ; 38 ; >
 
     }
 
