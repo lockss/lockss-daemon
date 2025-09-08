@@ -30,7 +30,7 @@
       au < finished ; manifest ; 2022 ; Arabian Journal of Scientific Research Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Arabian Journal of Scientific Research Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < exists ; exists ; 2024 ; Arabian Journal of Scientific Research Volume 5 ; 5 ; >
-      au < ready ; exists ; 2025 ; Arabian Journal of Scientific Research Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Arabian Journal of Scientific Research Volume 2025 ; 2025 ; >
   }
 
   {
@@ -58,7 +58,7 @@
     au < finished ; manifest ; 2022 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2024 ; 2024 ; >
-    au < ready ; exists ; 2025 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2025 ; 2025 ; >
+    au < crawling ; exists ; 2025 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2025 ; 2025 ; >
 
   }
 
@@ -144,7 +144,7 @@
       au < finished ; manifest ; 2022 ; QScience Connect Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; QScience Connect Volume 2023 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; QScience Connect Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; QScience Connect Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; QScience Connect Volume 2025 ; 2025 ; >
 
     }
   }
@@ -187,7 +187,7 @@
       au < finished ; manifest ; 2022 ; Avicenna Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Avicenna Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Avicenna Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; Avicenna Volume 2025 ; 2025 ; >
+      au < crawling ; exists ; 2025 ; Avicenna Volume 2025 ; 2025 ; >
 
 
     }
