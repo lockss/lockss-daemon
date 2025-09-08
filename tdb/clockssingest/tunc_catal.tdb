@@ -22,7 +22,7 @@
       attr[start_stem] = index.php/
       param[journal_id] = pub
 
-      au < crawling ; exists ; 2024 ; 2024 ; The European Chemistry and Biotechnology Journal Volume 1-2 ; 1-2 ; >
+      au < frozen ; exists ; 2024 ; 2024 ; The European Chemistry and Biotechnology Journal Volume 1-2 ; 1-2 ; >
       au < crawling ; exists ; 2025 ; 2025 ; The European Chemistry and Biotechnology Journal Volume 3-4 ; 3-4 ; >
 
   }
