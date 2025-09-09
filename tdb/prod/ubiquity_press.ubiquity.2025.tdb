@@ -2388,7 +2388,7 @@
 #      au < exists ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
 #
 #  }
-#
+
 #  {
 #
 #      title <
@@ -2435,248 +2435,248 @@
 #      nondefparam[base_url2] = https://account.ibapa.org/
 #      nondefparam[journal_id] = gl-j-ibpa
 #
-#      au < exists ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 ; 1 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
-#      au < exists ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 ; 2 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
-#      au < exists ; 2024 ; 3 ; Indigenous Business & Public Administration Volume 2024 ; 2024 ; 3 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
-#      au < exists ; 2025 ; 4 ; Indigenous Business & Public Administration Volume 2025 ; 2025 ; 4 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
+#      au < doNotProcess ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 ; 1 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
+#      au < doNotProcess ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 ; 2 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
+#      au < doNotProcess ; 2024 ; 3 ; Indigenous Business & Public Administration Volume 2024 ; 2024 ; 3 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
+#      au < doNotProcess ; 2025 ; 4 ; Indigenous Business & Public Administration Volume 2025 ; 2025 ; 4 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
 #      #Moved to bepress
 #  }
-#
-#  {
-#
-#      title <
-#        name = Journal of Critical Southern Studies ;
-#        eissn = 0796-1901
-#      >
-#
-#      comment[publisher] = De Montfort University Press
-#      #param[base_url] = https://jcss.demontfortuniversitypress.org/
-#      nondefparam[base_url2] = https://account.jcss.demontfortuniversitypress.org/
-#      nondefparam[journal_id] = dmu-j-jcss
-#
-#      au < exists ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; 1 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ >
-#      au < exists ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; 2 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ >
-#      au < exists ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; 3 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ >
-#      au < exists ; 2023 ; 4 ; Journal of Critical Southern Studies Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ >
-#
-#  }
-#
-#  {
-#
-#      title <
-#        name = Gateway Papers ;
-#        eissn = 2044-852X
-#      >
-#      {
-#      comment[publisher] = De Montfort University Press
-#      #param[base_url] = https://gp.demontfortuniversitypress.org/
-#      nondefparam[base_url2] = https://account.gp.demontfortuniversitypress.org/
-#      nondefparam[journal_id] = dmu-j-gpajepr
-#
-#      au < exists ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
-#      au < exists ; 2021 ; 2 ; Gateway Papers Volume 2021 ; 2021 ; 2 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
-#      au < exists ; 2022 ; 3 ; Gateway Papers Volume 2022 ; 2022 ; 3 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
-#      au < exists ; 2023 ; 4 ; Gateway Papers Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
-#      }
-#      {
-#      comment[publisher] = De Montfort University Press
-#      #param[base_url] = https://see.demontfortuniversitypress.org/
-#      nondefparam[base_url2] = https://account.see.demontfortuniversitypress.org/
-#      nondefparam[journal_id] = dmu-j-gpajepr
-#
-#      au < exists ; 2024 ; 5 ; Gateway Papers Volume 2024 ; 2024 ; 5 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ >
-#      }
-#      #Title changed to Studies in Empowering Education (2977-4748) 2025 and forward
-#  }
-#
-#  {
-#
-#      title <
-#        name = Studies in Empowering Education ;
-#        eissn = 2977-4748
-#      >
-#
-#      comment[publisher] = De Montfort University Press
-#      #param[base_url] = https://see.demontfortuniversitypress.org/
-#      nondefparam[base_url2] = https://account.see.demontfortuniversitypress.org/
-#      nondefparam[journal_id] = dmu-j-gpajepr
-#      #Previously Gateway Papers (2044-852X) 2010 to 2024
-#
-#      au < exists ; 2025 ; 6 ; Studies in Empowering Education Volume 2025 ; 2025 ; 6 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ >
-#
-#  }
-#
-#  {
-#
-#      title <
-#        name = Methodist DeBakey Cardiovascular Journal ;
-#        eissn = 1947-6108
-#      >
-#
-#      comment[publisher] = Houston Methodist DeBakey Heart & Vascular Center
-#      #param[base_url] = https://journal.houstonmethodist.org/
-#      nondefparam[base_url2] = https://account.journal.houstonmethodist.org/
-#      nondefparam[journal_id] = up-j-mdbcj
-#
-#      au < exists ; 2004 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2004 ; 2004 ; 1 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2005 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2005 ; 2005 ; 1 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2006 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2006 ; 2006 ; 2 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2007 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2007 ; 2007 ; 3 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2008 ; 4 ; Methodist DeBakey Cardiovascular Journal Volume 2008 ; 2008 ; 4 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2009 ; 5 ; Methodist DeBakey Cardiovascular Journal Volume 2009 ; 2009 ; 5 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2010 ; 6 ; Methodist DeBakey Cardiovascular Journal Volume 2010 ; 2010 ; 6 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2011 ; 7 ; Methodist DeBakey Cardiovascular Journal Volume 2011 ; 2011 ; 7 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2012 ; 8 ; Methodist DeBakey Cardiovascular Journal Volume 2012 ; 2012 ; 8 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2013 ; 9 ; Methodist DeBakey Cardiovascular Journal Volume 2013 ; 2013 ; 9 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2014 ; 10 ; Methodist DeBakey Cardiovascular Journal Volume 2014 ; 2014 ; 10 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2015 ; 11 ; Methodist DeBakey Cardiovascular Journal Volume 2015 ; 2015 ; 11 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2016 ; 12 ; Methodist DeBakey Cardiovascular Journal Volume 2016 ; 2016 ; 12 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2017 ; 13 ; Methodist DeBakey Cardiovascular Journal Volume 2017 ; 2017 ; 13 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2018 ; 14 ; Methodist DeBakey Cardiovascular Journal Volume 2018 ; 2018 ; 14 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2019 ; 15 ; Methodist DeBakey Cardiovascular Journal Volume 2019 ; 2019 ; 15 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2020 ; 16 ; Methodist DeBakey Cardiovascular Journal Volume 2020 ; 2020 ; 16 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2021 ; 17 ; Methodist DeBakey Cardiovascular Journal Volume 2021 ; 2021 ; 17 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2022 ; 18 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 ; 18 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2023 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2023 ; 2023 ; 19 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2024 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 20 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#      au < exists ; 2025 ; 21 ; Methodist DeBakey Cardiovascular Journal Volume 2025 ; 2025 ; 21 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-#
-#  }
-#
-#  {
-#
-#      title <
-#        name = New Area Studies ;
-#        eissn = 2633-3716
-#      >
-#
-#      comment[publisher] = University of East Anglia
-#      #param[base_url] = https://newareastudies.com/
-#      nondefparam[base_url2] = https://account.newareastudies.com/
-#      nondefparam[journal_id] = up-j-nas
-#
-#      au < exists ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; 1 ; University of East Anglia ;  ; https://newareastudies.com/ >
-#      au < exists ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; 2 ; University of East Anglia ;  ; https://newareastudies.com/ >
-#      au < exists ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; 3 ; University of East Anglia ;  ; https://newareastudies.com/ >
-#      au < doesNotExist ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ >
-#      au < exists ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ >
-#      au < exists ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; University of East Anglia ;  ; https://newareastudies.com/ >
-#
-#  }
-#
-#  {
-#
-#      title <
-#        name = Scientific Study of Literature ;
-#        eissn = 2210-4380
-#      >
-#
-#      comment[publisher] = International Society for the Empirical Study of Literature
-#      #param[base_url] = https://ssol-journal.com/
-#      nondefparam[base_url2] = https://account.ssol-journal.com/
-#      nondefparam[journal_id] = isesl-j-ssl
-#
-#      au < exists ; 2011 ; 1 ; Scientific Study of Literature Volume 2011 ; 2011 ; 1 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2012 ; 2 ; Scientific Study of Literature Volume 2012 ; 2012 ; 2 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2013 ; 3 ; Scientific Study of Literature Volume 2013 ; 2013 ; 3 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2014 ; 4 ; Scientific Study of Literature Volume 2014 ; 2014 ; 4 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2015 ; 5 ; Scientific Study of Literature Volume 2015 ; 2015 ; 5 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2016 ; 6 ; Scientific Study of Literature Volume 2016 ; 2016 ; 6 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2017 ; 7 ; Scientific Study of Literature Volume 2017 ; 2017 ; 7 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2018 ; 8 ; Scientific Study of Literature Volume 2018 ; 2018 ; 8 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2019 ; 9 ; Scientific Study of Literature Volume 2019 ; 2019 ; 9 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; 10 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      #au < doesNotExist ; 2022 ; 0 ; Scientific Study of Literature Volume 2022 ; 2022 ; 0 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#      au < exists ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-#
-#  }
-#
-#  {
-#
-#      title <
-#        name = Journal of Historical Network Research ;
-#        eissn = 2535-8863
-#      >
-#
-#      comment[publisher] = Université du Luxembourg
-#      #param[base_url] = https://jhnr.net/
-#      nondefparam[base_url2] = https://account.jhnr.net/
-#      nondefparam[journal_id] = ul-j-jhnr
-#
-#      au < exists ; 2017 ; 1 ; Journal of Historical Network Research Volume 2017 ; 2017 ; 1 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-#      au < exists ; 2018 ; 2 ; Journal of Historical Network Research Volume 2018 ; 2018 ; 2 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-#      au < exists ; 2019 ; 3 ; Journal of Historical Network Research Volume 2019 ; 2019 ; 3 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-#      au < exists ; 2020 ; 4 ; Journal of Historical Network Research Volume 2020 ; 2020 ; 4 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-#      au < exists ; 2021 ; 5,6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5,6 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-#      au < exists ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-#      au < exists ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-#      au < exists ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-#      au < exists ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-#
-#  }
-#
-#  {
-#
-#      title <
-#        name = European Journal of Open, Distance and E-Learning ;
-#        eissn = 1027-5207
-#      >
-#
-#      comment[publisher] = EDEN Digital Learning Europe
-#      #param[base_url] = https://eurodljournal.com/
-#      nondefparam[base_url2] = https://account.eurodljournal.com/
-#      nondefparam[journal_id] = edendle-j-ejodel
-#      #No volume for 2021
-#
-#      au < exists ; 2014 ; 17 ; European Journal of Open, Distance and E-Learning Volume 2014 ; 2014 ; 17 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-#      au < exists ; 2015 ; 18 ; European Journal of Open, Distance and E-Learning Volume 2015 ; 2015 ; 18 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-#      au < exists ; 2016 ; 19 ; European Journal of Open, Distance and E-Learning Volume 2016 ; 2016 ; 19 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-#      au < exists ; 2017 ; 20 ; European Journal of Open, Distance and E-Learning Volume 2017 ; 2017 ; 20 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-#      au < exists ; 2018 ; 21 ; European Journal of Open, Distance and E-Learning Volume 2018 ; 2018 ; 21 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-#      au < exists ; 2019 ; 22 ; European Journal of Open, Distance and E-Learning Volume 2019 ; 2019 ; 22 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-#      au < exists ; 2020 ; 23 ; European Journal of Open, Distance and E-Learning Volume 2020 ; 2020 ; 23 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-#      au < exists ; 2022 ; 24 ; European Journal of Open, Distance and E-Learning Volume 2022 ; 2022 ; 24 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-#      au < exists ; 2023 ; 25 ; European Journal of Open, Distance and E-Learning Volume 2023 ; 2023 ; 25 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-#      au < exists ; 2024 ; 26 ; European Journal of Open, Distance and E-Learning Volume 2024 ; 2024 ; 26 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-#      au < exists ; 2025 ; 27 ; European Journal of Open, Distance and E-Learning Volume 2025 ; 2025 ; 27 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-#
-#  }
-#
-#  {
-#
-#      title <
-#        name = Journal of Neurointerventional Case Reports ;
-#        eissn = 3067-7416
-#      >
-#
-#      comment[publisher] = Weather Hills Publishing, LLC
-#      #param[base_url] = https://neuroircases.com/
-#      nondefparam[base_url2] = https://account.neuroircases.com/
-#      nondefparam[journal_id] = wpllc-j-jncr
-#
-#      au < exists ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ >
-#      au < exists ; 2025 ; 2 ; Journal of Neurointerventional Case Reports Volume 2025 ; 2025 ; 2 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ >
-#
-#  }
-#
-#  {
-#
-#      title <
-#        name = Research and Reviews in Sustainability ;
-#        eissn = 2977-8441
-#      >
-#
-#      comment[publisher] = Ubiquity Press
-#      #param[base_url] = https://sustainability-journal.com/
-#      nondefparam[base_url2] = https://account.sustainability-journal.com/
-#      nondefparam[journal_id] = up-j-rrs
-#
-#      au < exists ; 2025 ; 1 ; Research and Reviews in Sustainability Volume 2025 ; 2025 ; 1 ; Ubiquity Press ;  ; https://sustainability-journal.com/ >
-#
-#  }
-#
+
+  {
+
+      title <
+        name = Journal of Critical Southern Studies ;
+        eissn = 0796-1901
+      >
+
+      comment[publisher] = De Montfort University Press
+      #param[base_url] = https://jcss.demontfortuniversitypress.org/
+      nondefparam[base_url2] = https://account.jcss.demontfortuniversitypress.org/
+      nondefparam[journal_id] = dmu-j-jcss
+
+      au < doNotProcess ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; 1 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ >
+      au < doNotProcess ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; 2 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ >
+      au < doNotProcess ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; 3 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ >
+      au < exists ; 2023 ; 4 ; Journal of Critical Southern Studies Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Gateway Papers ;
+        eissn = 2044-852X
+      >
+      {
+      comment[publisher] = De Montfort University Press
+      #param[base_url] = https://gp.demontfortuniversitypress.org/
+      nondefparam[base_url2] = https://account.gp.demontfortuniversitypress.org/
+      nondefparam[journal_id] = dmu-j-gpajepr
+
+      au < doNotProcess ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
+      au < doNotProcess ; 2021 ; 2 ; Gateway Papers Volume 2021 ; 2021 ; 2 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
+      au < doNotProcess ; 2022 ; 3 ; Gateway Papers Volume 2022 ; 2022 ; 3 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
+      au < doNotProcess ; 2023 ; 4 ; Gateway Papers Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
+      }
+      {
+      comment[publisher] = De Montfort University Press
+      #param[base_url] = https://see.demontfortuniversitypress.org/
+      nondefparam[base_url2] = https://account.see.demontfortuniversitypress.org/
+      nondefparam[journal_id] = dmu-j-gpajepr
+
+      au < exists ; 2024 ; 5 ; Gateway Papers Volume 2024 ; 2024 ; 5 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ >
+      }
+      #Title changed to Studies in Empowering Education (2977-4748) 2025 and forward
+  }
+
+  {
+
+      title <
+        name = Studies in Empowering Education ;
+        eissn = 2977-4748
+      >
+
+      comment[publisher] = De Montfort University Press
+      #param[base_url] = https://see.demontfortuniversitypress.org/
+      nondefparam[base_url2] = https://account.see.demontfortuniversitypress.org/
+      nondefparam[journal_id] = dmu-j-gpajepr
+      #Previously Gateway Papers (2044-852X) 2010 to 2024
+
+      au < exists ; 2025 ; 6 ; Studies in Empowering Education Volume 2025 ; 2025 ; 6 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Methodist DeBakey Cardiovascular Journal ;
+        eissn = 1947-6108
+      >
+
+      comment[publisher] = Houston Methodist DeBakey Heart & Vascular Center
+      #param[base_url] = https://journal.houstonmethodist.org/
+      nondefparam[base_url2] = https://account.journal.houstonmethodist.org/
+      nondefparam[journal_id] = up-j-mdbcj
+
+      au < doNotProcess ; 2004 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2004 ; 2004 ; 1 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2005 ; 1 ; Methodist DeBakey Cardiovascular Journal Volume 2005 ; 2005 ; 1 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2006 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2006 ; 2006 ; 2 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2007 ; 3 ; Methodist DeBakey Cardiovascular Journal Volume 2007 ; 2007 ; 3 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2008 ; 4 ; Methodist DeBakey Cardiovascular Journal Volume 2008 ; 2008 ; 4 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2009 ; 5 ; Methodist DeBakey Cardiovascular Journal Volume 2009 ; 2009 ; 5 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2010 ; 6 ; Methodist DeBakey Cardiovascular Journal Volume 2010 ; 2010 ; 6 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2011 ; 7 ; Methodist DeBakey Cardiovascular Journal Volume 2011 ; 2011 ; 7 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2012 ; 8 ; Methodist DeBakey Cardiovascular Journal Volume 2012 ; 2012 ; 8 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2013 ; 9 ; Methodist DeBakey Cardiovascular Journal Volume 2013 ; 2013 ; 9 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2014 ; 10 ; Methodist DeBakey Cardiovascular Journal Volume 2014 ; 2014 ; 10 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2015 ; 11 ; Methodist DeBakey Cardiovascular Journal Volume 2015 ; 2015 ; 11 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2016 ; 12 ; Methodist DeBakey Cardiovascular Journal Volume 2016 ; 2016 ; 12 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2017 ; 13 ; Methodist DeBakey Cardiovascular Journal Volume 2017 ; 2017 ; 13 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2018 ; 14 ; Methodist DeBakey Cardiovascular Journal Volume 2018 ; 2018 ; 14 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2019 ; 15 ; Methodist DeBakey Cardiovascular Journal Volume 2019 ; 2019 ; 15 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2020 ; 16 ; Methodist DeBakey Cardiovascular Journal Volume 2020 ; 2020 ; 16 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2021 ; 17 ; Methodist DeBakey Cardiovascular Journal Volume 2021 ; 2021 ; 17 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2022 ; 18 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 ; 18 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < doNotProcess ; 2023 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2023 ; 2023 ; 19 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < exists ; 2024 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 20 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < exists ; 2025 ; 21 ; Methodist DeBakey Cardiovascular Journal Volume 2025 ; 2025 ; 21 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+
+  }
+
+  {
+
+      title <
+        name = New Area Studies ;
+        eissn = 2633-3716
+      >
+
+      comment[publisher] = University of East Anglia
+      #param[base_url] = https://newareastudies.com/
+      nondefparam[base_url2] = https://account.newareastudies.com/
+      nondefparam[journal_id] = up-j-nas
+
+      au < down ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; 1 ; University of East Anglia ;  ; https://newareastudies.com/ >
+      au < down ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; 2 ; University of East Anglia ;  ; https://newareastudies.com/ >
+      au < doNotProcess ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; 3 ; University of East Anglia ;  ; https://newareastudies.com/ >
+      au < doesNotExist ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ >
+      au < exists ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ >
+      au < exists ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; University of East Anglia ;  ; https://newareastudies.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Scientific Study of Literature ;
+        eissn = 2210-4380
+      >
+
+      comment[publisher] = International Society for the Empirical Study of Literature
+      #param[base_url] = https://ssol-journal.com/
+      nondefparam[base_url2] = https://account.ssol-journal.com/
+      nondefparam[journal_id] = isesl-j-ssl
+
+      au < exists ; 2011 ; 1 ; Scientific Study of Literature Volume 2011 ; 2011 ; 1 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < exists ; 2012 ; 2 ; Scientific Study of Literature Volume 2012 ; 2012 ; 2 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < exists ; 2013 ; 3 ; Scientific Study of Literature Volume 2013 ; 2013 ; 3 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < exists ; 2014 ; 4 ; Scientific Study of Literature Volume 2014 ; 2014 ; 4 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < exists ; 2015 ; 5 ; Scientific Study of Literature Volume 2015 ; 2015 ; 5 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < doNotProcess ; 2016 ; 6 ; Scientific Study of Literature Volume 2016 ; 2016 ; 6 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < exists ; 2017 ; 7 ; Scientific Study of Literature Volume 2017 ; 2017 ; 7 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < doNotProcess ; 2018 ; 8 ; Scientific Study of Literature Volume 2018 ; 2018 ; 8 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < exists ; 2019 ; 9 ; Scientific Study of Literature Volume 2019 ; 2019 ; 9 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < exists ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; 10 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < exists ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      #au < doesNotExist ; 2022 ; 0 ; Scientific Study of Literature Volume 2022 ; 2022 ; 0 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < exists ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < exists ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Historical Network Research ;
+        eissn = 2535-8863
+      >
+
+      comment[publisher] = Université du Luxembourg
+      #param[base_url] = https://jhnr.net/
+      nondefparam[base_url2] = https://account.jhnr.net/
+      nondefparam[journal_id] = ul-j-jhnr
+
+      au < exists ; 2017 ; 1 ; Journal of Historical Network Research Volume 2017 ; 2017 ; 1 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < exists ; 2018 ; 2 ; Journal of Historical Network Research Volume 2018 ; 2018 ; 2 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < exists ; 2019 ; 3 ; Journal of Historical Network Research Volume 2019 ; 2019 ; 3 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < exists ; 2020 ; 4 ; Journal of Historical Network Research Volume 2020 ; 2020 ; 4 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < exists ; 2021 ; 5,6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5,6 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < exists ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < exists ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < exists ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < exists ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+
+  }
+
+  {
+
+      title <
+        name = European Journal of Open, Distance and E-Learning ;
+        eissn = 1027-5207
+      >
+
+      comment[publisher] = EDEN Digital Learning Europe
+      #param[base_url] = https://eurodljournal.com/
+      nondefparam[base_url2] = https://account.eurodljournal.com/
+      nondefparam[journal_id] = edendle-j-ejodel
+      #No volume for 2021
+
+      au < exists ; 2014 ; 17 ; European Journal of Open, Distance and E-Learning Volume 2014 ; 2014 ; 17 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < exists ; 2015 ; 18 ; European Journal of Open, Distance and E-Learning Volume 2015 ; 2015 ; 18 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < exists ; 2016 ; 19 ; European Journal of Open, Distance and E-Learning Volume 2016 ; 2016 ; 19 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < exists ; 2017 ; 20 ; European Journal of Open, Distance and E-Learning Volume 2017 ; 2017 ; 20 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < exists ; 2018 ; 21 ; European Journal of Open, Distance and E-Learning Volume 2018 ; 2018 ; 21 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < exists ; 2019 ; 22 ; European Journal of Open, Distance and E-Learning Volume 2019 ; 2019 ; 22 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < exists ; 2020 ; 23 ; European Journal of Open, Distance and E-Learning Volume 2020 ; 2020 ; 23 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < exists ; 2022 ; 24 ; European Journal of Open, Distance and E-Learning Volume 2022 ; 2022 ; 24 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < exists ; 2023 ; 25 ; European Journal of Open, Distance and E-Learning Volume 2023 ; 2023 ; 25 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < exists ; 2024 ; 26 ; European Journal of Open, Distance and E-Learning Volume 2024 ; 2024 ; 26 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < exists ; 2025 ; 27 ; European Journal of Open, Distance and E-Learning Volume 2025 ; 2025 ; 27 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Neurointerventional Case Reports ;
+        eissn = 3067-7416
+      >
+
+      comment[publisher] = Weather Hills Publishing, LLC
+      #param[base_url] = https://neuroircases.com/
+      nondefparam[base_url2] = https://account.neuroircases.com/
+      nondefparam[journal_id] = wpllc-j-jncr
+
+      au < exists ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ >
+      au < exists ; 2025 ; 2 ; Journal of Neurointerventional Case Reports Volume 2025 ; 2025 ; 2 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Research and Reviews in Sustainability ;
+        eissn = 2977-8441
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://sustainability-journal.com/
+      nondefparam[base_url2] = https://account.sustainability-journal.com/
+      nondefparam[journal_id] = up-j-rrs
+
+      au < exists ; 2025 ; 1 ; Research and Reviews in Sustainability Volume 2025 ; 2025 ; 1 ; Ubiquity Press ;  ; https://sustainability-journal.com/ >
+
+  }
+
 }
 

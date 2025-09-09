@@ -2410,20 +2410,20 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
-  {
-
-      title <
-        name = New Area Studies ;
-        eissn = 2633-3716
-      >
-
-      comment[publisher] = University of East Anglia
-#      param[base_url] = https://newareastudies.com/
-
-      au < down ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ >
-      au < down ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ >
-
-  }
+#  {
+#
+#      title <
+#        name = New Area Studies ;
+#        eissn = 2633-3716
+#      >
+#
+#      comment[publisher] = University of East Anglia
+##      param[base_url] = https://newareastudies.com/
+#
+#      au < down ; 2020 ; 1 ; New Area Studies Volume 2020 ; 2020 ; https://newareastudies.com/ >
+#      au < down ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ >
+#
+#  }
 }
 
 {
@@ -3335,20 +3335,20 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
-  {
-
-      title <
-        name = Indigenous Business & Public Administration ;
-        eissn = 2766-015X
-      >
-
-      comment[publisher] = Gonzaga Library Publishing
-#      param[base_url] = https://ibapa.org/
-
-      au < doNotProcess ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 ; https://ibapa.org/ >
-      au < doNotProcess ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 ; https://ibapa.org/ >
-
-  }
+#  {
+#
+#      title <
+#        name = Indigenous Business & Public Administration ;
+#        eissn = 2766-015X
+#      >
+#
+#      comment[publisher] = Gonzaga Library Publishing
+##      param[base_url] = https://ibapa.org/
+#
+#      au < doNotProcess ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 ; https://ibapa.org/ >
+#      au < doNotProcess ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 ; https://ibapa.org/ >
+#
+#  }
 
 }
 {
@@ -3364,37 +3364,37 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
-  {
-
-      title <
-        name = Journal of Critical Southern Studies ;
-        eissn = 0796-1901
-      >
-
-      comment[publisher] = De Montfort University Press
-#      param[base_url] = https://jcss.demontfortuniversitypress.org/
-
-      au < doNotProcess ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; https://jcss.demontfortuniversitypress.org/ >
-      au < doNotProcess ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; https://jcss.demontfortuniversitypress.org/ >
-      au < doNotProcess ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; https://jcss.demontfortuniversitypress.org/ >
-
-  }
-  {
-
-      title <
-        name = Gateway Papers ;
-        eissn = 2044-852X
-      >
-
-      comment[publisher] = De Montfort University Press
-#      param[base_url] = https://gp.demontfortuniversitypress.org/
-
-      au < doNotProcess ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; https://gp.demontfortuniversitypress.org/ >
-      au < doNotProcess ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 ; https://gp.demontfortuniversitypress.org/ >
-      au < doNotProcess ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 ; https://gp.demontfortuniversitypress.org/ >
-      au < doNotProcess ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; https://gp.demontfortuniversitypress.org/ >
-
-  }
+#  {
+#
+#      title <
+#        name = Journal of Critical Southern Studies ;
+#        eissn = 0796-1901
+#      >
+#
+#      comment[publisher] = De Montfort University Press
+##      param[base_url] = https://jcss.demontfortuniversitypress.org/
+#
+#      au < doNotProcess ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; https://jcss.demontfortuniversitypress.org/ >
+#      au < doNotProcess ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; https://jcss.demontfortuniversitypress.org/ >
+#      au < doNotProcess ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; https://jcss.demontfortuniversitypress.org/ >
+#
+#  }
+#  {
+#
+#      title <
+#        name = Gateway Papers ;
+#        eissn = 2044-852X
+#      >
+#
+#      comment[publisher] = De Montfort University Press
+##      param[base_url] = https://gp.demontfortuniversitypress.org/
+#
+#      au < doNotProcess ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; https://gp.demontfortuniversitypress.org/ >
+#      au < doNotProcess ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 ; https://gp.demontfortuniversitypress.org/ >
+#      au < doNotProcess ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 ; https://gp.demontfortuniversitypress.org/ >
+#      au < doNotProcess ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; https://gp.demontfortuniversitypress.org/ >
+#
+#  }
 
 }
 
