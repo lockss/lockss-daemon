@@ -2073,24 +2073,24 @@
 #
 #  }
 #
-  {
-
-      title <
-        name = Journal of Computer Applications in Archaeology ;
-        eissn = 2514-8362
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://journal.caa-international.org/
-
-      au < down ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; https://journal.caa-international.org/ >
-      au < down ; 2019 ; 2 ; Journal of Computer Applications in Archaeology Volume 2019 ; 2019 ; https://journal.caa-international.org/ >
-      au < down ; 2020 ; 3 ; Journal of Computer Applications in Archaeology Volume 2020 ; 2020 ; https://journal.caa-international.org/ >
-      au < down ; 2021 ; 4 ; Journal of Computer Applications in Archaeology Volume 2021 ; 2021 ; https://journal.caa-international.org/ >
-      au < down ; 2022 ; 5 ; Journal of Computer Applications in Archaeology Volume 2022 ; 2022 ; https://journal.caa-international.org/ >
-      au < doNotProcess ; 2023 ; 6 ; Journal of Computer Applications in Archaeology Volume 2023 ; 2023 ; https://journal.caa-international.org/ >
-
-  }
+#  {
+#
+#      title <
+#        name = Journal of Computer Applications in Archaeology ;
+#        eissn = 2514-8362
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://journal.caa-international.org/
+#
+#      au < down ; 2018 ; 1 ; Journal of Computer Applications in Archaeology Volume 2018 ; 2018 ; https://journal.caa-international.org/ >
+#      au < down ; 2019 ; 2 ; Journal of Computer Applications in Archaeology Volume 2019 ; 2019 ; https://journal.caa-international.org/ >
+#      au < down ; 2020 ; 3 ; Journal of Computer Applications in Archaeology Volume 2020 ; 2020 ; https://journal.caa-international.org/ >
+#      au < down ; 2021 ; 4 ; Journal of Computer Applications in Archaeology Volume 2021 ; 2021 ; https://journal.caa-international.org/ >
+#      au < down ; 2022 ; 5 ; Journal of Computer Applications in Archaeology Volume 2022 ; 2022 ; https://journal.caa-international.org/ >
+#      au < doNotProcess ; 2023 ; 6 ; Journal of Computer Applications in Archaeology Volume 2023 ; 2023 ; https://journal.caa-international.org/ >
+#
+#  }
 
   {
 
@@ -2110,24 +2110,24 @@
 
   }
 
-  {
-
-      title <
-        name = Metaphysics ;
-        eissn = 2515-8279
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://metaphysicsjournal.com/
-
-      au < down ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; https://metaphysicsjournal.com/ >
-      au < down ; 2019 ; 2 ; Metaphysics Volume 2019 ; 2019 ; https://metaphysicsjournal.com/ >
-      au < down ; 2020 ; 3 ; Metaphysics Volume 2020 ; 2020 ; https://metaphysicsjournal.com/ >
-      au < down ; 2021 ; 4 ; Metaphysics Volume 2021 ; 2021 ; https://metaphysicsjournal.com/ >
-      au < doNotProcess ; 2022 ; 5 ; Metaphysics Volume 2022 ; 2022 ; https://metaphysicsjournal.com/ >
-      au < doNotProcess ; 2023 ; 6 ; Metaphysics Volume 2023 ; 2023 ; https://metaphysicsjournal.com/ >
-
-  }
+#  {
+#
+#      title <
+#        name = Metaphysics ;
+#        eissn = 2515-8279
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://metaphysicsjournal.com/
+#
+#      au < down ; 2018 ; 1 ; Metaphysics Volume 2018 ; 2018 ; https://metaphysicsjournal.com/ >
+#      au < down ; 2019 ; 2 ; Metaphysics Volume 2019 ; 2019 ; https://metaphysicsjournal.com/ >
+#      au < down ; 2020 ; 3 ; Metaphysics Volume 2020 ; 2020 ; https://metaphysicsjournal.com/ >
+#      au < down ; 2021 ; 4 ; Metaphysics Volume 2021 ; 2021 ; https://metaphysicsjournal.com/ >
+#      au < doNotProcess ; 2022 ; 5 ; Metaphysics Volume 2022 ; 2022 ; https://metaphysicsjournal.com/ >
+#      au < doNotProcess ; 2023 ; 6 ; Metaphysics Volume 2023 ; 2023 ; https://metaphysicsjournal.com/ >
+#
+#  }
 
   {
 
