@@ -2128,80 +2128,80 @@
 #      au < doNotProcess ; 2023 ; 6 ; Metaphysics Volume 2023 ; 2023 ; https://metaphysicsjournal.com/ >
 #
 #  }
-
-  {
-
-      title <
-        name = Physical Activity and Health ;
-        eissn = 2515-2270
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://paahjournal.com/
-
-      au < down ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; https://paahjournal.com/ >
-      au < down ; 2018 ; 2 ; Physical Activity and Health Volume 2018 ; 2018 ; https://paahjournal.com/ >
-      au < down ; 2019 ; 3 ; Physical Activity and Health Volume 2019 ; 2019 ; https://paahjournal.com/ >
-      au < down ; 2020 ; 4 ; Physical Activity and Health Volume 2020 ; 2020 ; https://paahjournal.com/ >
-      au < down ; 2021 ; 5 ; Physical Activity and Health Volume 2021 ; 2021 ; https://paahjournal.com/ >
-      au < doNotProcess ; 2022 ; 6 ; Physical Activity and Health Volume 2022 ; 2022 ; https://paahjournal.com/ >
-      au < doNotProcess ; 2023 ; 7 ; Physical Activity and Health Volume 2023 ; 2023 ; https://paahjournal.com/ >
-
-  }
-
-  {
-
-      title <
-        name = Tilburg Law Review: Journal of International and Comparative Law ;
-        eissn = 2211-2545
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://tilburglawreview.com/
-      #name changed in 2008 to: Tilburg Law Review: Journal of International and Comparative Law. 
-
-      au < down ; 2012 ; 17 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2012 ; 2012 ; https://tilburglawreview.com/ >
-      au < down ; 2013 ; 18 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2013 ; 2013 ; https://tilburglawreview.com/ >
-      au < down ; 2014 ; 19 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2014 ; 2014 ; https://tilburglawreview.com/ >
-      au < down ; 2015 ; 20 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2015 ; 2015 ; https://tilburglawreview.com/ >
-      au < down ; 2016 ; 21 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2016 ; 2016 ; https://tilburglawreview.com/ >
-      au < down ; 2017 ; 22 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2017 ; 2017 ; https://tilburglawreview.com/ >
-      au < down ; 2018 ; 23 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2018 ; 2018 ; https://tilburglawreview.com/ >
-      au < down ; 2019 ; 24 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 ; https://tilburglawreview.com/ >
-      au < down ; 2020 ; 25 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ >
-      au < down ; 2021 ; 26 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2021 ; 2021 ; https://tilburglawreview.com/ >
-      au < doNotProcess ; 2022 ; 27 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2022 ; 2022 ; https://tilburglawreview.com/ >
-      au < doNotProcess ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 ; https://tilburglawreview.com/ >
-
-  }
-
-  {
-
-      title <
-        name = Yearbook of Swiss Administrative Science ;
-        eissn = 2296-8717
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://www.ssas-yearbook.com/
-
-      au < down ; 2010 ; 1 ; Yearbook of Swiss Administrative Science Volume 2010 ; 2010 ; https://www.ssas-yearbook.com/ >
-      au < down ; 2011 ; 2 ; Yearbook of Swiss Administrative Science Volume 2011 ; 2011 ; https://www.ssas-yearbook.com/ >
-      au < down ; 2012 ; 3 ; Yearbook of Swiss Administrative Science Volume 2012 ; 2012 ; https://www.ssas-yearbook.com/ >
-      au < down ; 2013 ; 4 ; Yearbook of Swiss Administrative Science Volume 2013 ; 2013 ; https://www.ssas-yearbook.com/ >
-      au < down ; 2014 ; 5 ; Yearbook of Swiss Administrative Science Volume 2014 ; 2014 ; https://www.ssas-yearbook.com/ >
-      au < down ; 2015 ; 6 ; Yearbook of Swiss Administrative Science Volume 2015 ; 2015 ; https://www.ssas-yearbook.com/ >
-      au < down ; 2016 ; 7 ; Yearbook of Swiss Administrative Science Volume 2016 ; 2016 ; https://www.ssas-yearbook.com/ >
-      au < down ; 2017 ; 8 ; Yearbook of Swiss Administrative Science Volume 2017 ; 2017 ; https://www.ssas-yearbook.com/ >
-      au < down ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://www.ssas-yearbook.com/ >
-      au < down ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; https://www.ssas-yearbook.com/ >
-      au < down ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; https://www.ssas-yearbook.com/ >
-      au < down ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; https://www.ssas-yearbook.com/ >
-      au < doNotProcess ; 2022 ; 13 ; Yearbook of Swiss Administrative Science Volume 2022 ; 2022 ; https://www.ssas-yearbook.com/ >
-      au < doNotProcess ; 2023 ; 14 ; Yearbook of Swiss Administrative Science Volume 2023 ; 2023 ; https://www.ssas-yearbook.com/ >
-
-  }
-
+#
+#  {
+#
+#      title <
+#        name = Physical Activity and Health ;
+#        eissn = 2515-2270
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://paahjournal.com/
+#
+#      au < down ; 2017 ; 1 ; Physical Activity and Health Volume 2017 ; 2017 ; https://paahjournal.com/ >
+#      au < down ; 2018 ; 2 ; Physical Activity and Health Volume 2018 ; 2018 ; https://paahjournal.com/ >
+#      au < down ; 2019 ; 3 ; Physical Activity and Health Volume 2019 ; 2019 ; https://paahjournal.com/ >
+#      au < down ; 2020 ; 4 ; Physical Activity and Health Volume 2020 ; 2020 ; https://paahjournal.com/ >
+#      au < down ; 2021 ; 5 ; Physical Activity and Health Volume 2021 ; 2021 ; https://paahjournal.com/ >
+#      au < doNotProcess ; 2022 ; 6 ; Physical Activity and Health Volume 2022 ; 2022 ; https://paahjournal.com/ >
+#      au < doNotProcess ; 2023 ; 7 ; Physical Activity and Health Volume 2023 ; 2023 ; https://paahjournal.com/ >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Tilburg Law Review: Journal of International and Comparative Law ;
+#        eissn = 2211-2545
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://tilburglawreview.com/
+#      #name changed in 2008 to: Tilburg Law Review: Journal of International and Comparative Law. 
+#
+#      au < down ; 2012 ; 17 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2012 ; 2012 ; https://tilburglawreview.com/ >
+#      au < down ; 2013 ; 18 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2013 ; 2013 ; https://tilburglawreview.com/ >
+#      au < down ; 2014 ; 19 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2014 ; 2014 ; https://tilburglawreview.com/ >
+#      au < down ; 2015 ; 20 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2015 ; 2015 ; https://tilburglawreview.com/ >
+#      au < down ; 2016 ; 21 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2016 ; 2016 ; https://tilburglawreview.com/ >
+#      au < down ; 2017 ; 22 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2017 ; 2017 ; https://tilburglawreview.com/ >
+#      au < down ; 2018 ; 23 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2018 ; 2018 ; https://tilburglawreview.com/ >
+#      au < down ; 2019 ; 24 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2019 ; 2019 ; https://tilburglawreview.com/ >
+#      au < down ; 2020 ; 25 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2020 ; 2020 ; https://tilburglawreview.com/ >
+#      au < down ; 2021 ; 26 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2021 ; 2021 ; https://tilburglawreview.com/ >
+#      au < doNotProcess ; 2022 ; 27 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2022 ; 2022 ; https://tilburglawreview.com/ >
+#      au < doNotProcess ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 ; https://tilburglawreview.com/ >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Yearbook of Swiss Administrative Science ;
+#        eissn = 2296-8717
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://www.ssas-yearbook.com/
+#
+#      au < down ; 2010 ; 1 ; Yearbook of Swiss Administrative Science Volume 2010 ; 2010 ; https://www.ssas-yearbook.com/ >
+#      au < down ; 2011 ; 2 ; Yearbook of Swiss Administrative Science Volume 2011 ; 2011 ; https://www.ssas-yearbook.com/ >
+#      au < down ; 2012 ; 3 ; Yearbook of Swiss Administrative Science Volume 2012 ; 2012 ; https://www.ssas-yearbook.com/ >
+#      au < down ; 2013 ; 4 ; Yearbook of Swiss Administrative Science Volume 2013 ; 2013 ; https://www.ssas-yearbook.com/ >
+#      au < down ; 2014 ; 5 ; Yearbook of Swiss Administrative Science Volume 2014 ; 2014 ; https://www.ssas-yearbook.com/ >
+#      au < down ; 2015 ; 6 ; Yearbook of Swiss Administrative Science Volume 2015 ; 2015 ; https://www.ssas-yearbook.com/ >
+#      au < down ; 2016 ; 7 ; Yearbook of Swiss Administrative Science Volume 2016 ; 2016 ; https://www.ssas-yearbook.com/ >
+#      au < down ; 2017 ; 8 ; Yearbook of Swiss Administrative Science Volume 2017 ; 2017 ; https://www.ssas-yearbook.com/ >
+#      au < down ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; https://www.ssas-yearbook.com/ >
+#      au < down ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; https://www.ssas-yearbook.com/ >
+#      au < down ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; https://www.ssas-yearbook.com/ >
+#      au < down ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; https://www.ssas-yearbook.com/ >
+#      au < doNotProcess ; 2022 ; 13 ; Yearbook of Swiss Administrative Science Volume 2022 ; 2022 ; https://www.ssas-yearbook.com/ >
+#      au < doNotProcess ; 2023 ; 14 ; Yearbook of Swiss Administrative Science Volume 2023 ; 2023 ; https://www.ssas-yearbook.com/ >
+#
+#  }
+#
   {
 
       title <
@@ -2235,56 +2235,56 @@
 
   }
 
-  {
-
-      title <
-        name = Transactions of the International Society for Music Information Retrieval ;
-        eissn = 2514-3298
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://transactions.ismir.net/
-
-      au < down ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ >
-      au < down ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ >
-      au < down ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 ; https://transactions.ismir.net/ >
-      au < down ; 2021 ; 4 ; Transactions of the International Society for Music Information Retrieval Volume 2021 ; 2021 ; https://transactions.ismir.net/ >
-      au < doNotProcess ; 2022 ; 5 ; Transactions of the International Society for Music Information Retrieval Volume 2022 ; 2022 ; https://transactions.ismir.net/ >
-      au < doNotProcess ; 2023 ; 6 ; Transactions of the International Society for Music Information Retrieval Volume 2023 ; 2023 ; https://transactions.ismir.net/ >
-
-  }
-
-  {
-
-      title <
-        name = International Journal of Educational and Life Transitions ;
-        eissn = 2754-2890
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://ijelt.dundee.ac.uk/
-
-      au < doNotProcess ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; https://ijelt.dundee.ac.uk/ >
-      au < doNotProcess ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; https://ijelt.dundee.ac.uk/ >
-
-  }
-
-  {
-
-      title <
-        name = Swiss Psychology Open ;
-        eissn = 2752-5341
-      >
-
-      comment[publisher] = Ubiquity Press
-#      param[base_url] = https://swisspsychologyopen.com/
-
-      au < doNotProcess ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 ; https://swisspsychologyopen.com/ >
-      au < doNotProcess ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 ; https://swisspsychologyopen.com/ >
-      au < doNotProcess ; 2023 ; 3 ; Swiss Psychology Open Volume 2023 ; 2023 ; https://swisspsychologyopen.com/ >
-
-  }
-
+#  {
+#
+#      title <
+#        name = Transactions of the International Society for Music Information Retrieval ;
+#        eissn = 2514-3298
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://transactions.ismir.net/
+#
+#      au < down ; 2018 ; 1 ; Transactions of the International Society for Music Information Retrieval Volume 2018 ; 2018 ; https://transactions.ismir.net/ >
+#      au < down ; 2019 ; 2 ; Transactions of the International Society for Music Information Retrieval Volume 2019 ; 2019 ; https://transactions.ismir.net/ >
+#      au < down ; 2020 ; 3 ; Transactions of the International Society for Music Information Retrieval Volume 2020 ; 2020 ; https://transactions.ismir.net/ >
+#      au < down ; 2021 ; 4 ; Transactions of the International Society for Music Information Retrieval Volume 2021 ; 2021 ; https://transactions.ismir.net/ >
+#      au < doNotProcess ; 2022 ; 5 ; Transactions of the International Society for Music Information Retrieval Volume 2022 ; 2022 ; https://transactions.ismir.net/ >
+#      au < doNotProcess ; 2023 ; 6 ; Transactions of the International Society for Music Information Retrieval Volume 2023 ; 2023 ; https://transactions.ismir.net/ >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = International Journal of Educational and Life Transitions ;
+#        eissn = 2754-2890
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://ijelt.dundee.ac.uk/
+#
+#      au < doNotProcess ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; https://ijelt.dundee.ac.uk/ >
+#      au < doNotProcess ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; https://ijelt.dundee.ac.uk/ >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Swiss Psychology Open ;
+#        eissn = 2752-5341
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+##      param[base_url] = https://swisspsychologyopen.com/
+#
+#      au < doNotProcess ; 2021 ; 1 ; Swiss Psychology Open Volume 2021 ; 2021 ; https://swisspsychologyopen.com/ >
+#      au < doNotProcess ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 ; https://swisspsychologyopen.com/ >
+#      au < doNotProcess ; 2023 ; 3 ; Swiss Psychology Open Volume 2023 ; 2023 ; https://swisspsychologyopen.com/ >
+#
+#  }
+#
 }
 {
   publisher <
@@ -2295,121 +2295,121 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
-  {
-
-      title <
-        name = Insights: the UKSG journal ;
-        eissn = 2048-7754
-      >
-
-      comment[publisher] = United Kingdom Serials Group
-#      param[base_url] = http://insights.uksg.org/
-
-      au < down ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; http://insights.uksg.org/ >
-      au < down ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; http://insights.uksg.org/ >
-      au < down ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; http://insights.uksg.org/ >
-      au < down ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; http://insights.uksg.org/ >
-      au < down ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; http://insights.uksg.org/ >
-      au < down ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; https://insights.uksg.org/ >
-      au < down ; 2018 ; 7 ; Insights: the UKSG journal Volume 2018 ; 2018 ; https://insights.uksg.org/ >
-      au < down ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; https://insights.uksg.org/ >
-      au < down ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 ; https://insights.uksg.org/ >
-      au < down ; 2021 ; 10 ; Insights: the UKSG journal Volume 2021 ; 2021 ; https://insights.uksg.org/ >
-      au < doNotProcess ; 2022 ; 11 ; Insights: the UKSG journal Volume 2022 ; 2022 ; https://insights.uksg.org/ >
-      au < doNotProcess ; 2023 ; 12 ; Insights: the UKSG journal Volume 2023 ; 2023 ; https://insights.uksg.org/ >
-
-  }
-
-  {
-
-      title <
-        name = Serials: The Journal for the Serials Community ;
-        issn = 0953-0460 ;
-        eissn = 1475-3308
-      >
-
-      comment[publisher] = United Kingdom Serials Group
-#      param[base_url] = http://serials.uksg.org/
-
-      au < doNotProcess ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; https://serials.uksg.org/ >
-      au < doNotProcess ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; https://serials.uksg.org/ >
-      au < doNotProcess ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; https://serials.uksg.org/ >
-      au < doNotProcess ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; https://serials.uksg.org/ >
-      au < doNotProcess ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; https://serials.uksg.org/ >
-      au < doNotProcess ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; https://serials.uksg.org/ >
-      au < doNotProcess ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; https://serials.uksg.org/ >
-      au < doNotProcess ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; https://serials.uksg.org/ >
-      au < doNotProcess ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; https://serials.uksg.org/ >
-      au < doNotProcess ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; https://serials.uksg.org/ >
-      au < doNotProcess ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; https://serials.uksg.org/ >
-      au < doNotProcess ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; https://serials.uksg.org/ >
-      au < down ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ >
-      au < down ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ >
-      au < down ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ >
-      au < down ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ >
-      au < down ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ >
-      au < down ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ >
-      au < down ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; https://serials.uksg.org/ >
-      au < down ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; https://serials.uksg.org/ >
-      au < down ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; https://serials.uksg.org/ >
-      au < down ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; https://serials.uksg.org/ >
-      au < down ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; http://serials.uksg.org/ >
-      au < down ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; http://serials.uksg.org/ >
-
-  }
-
+#  {
+#
+#      title <
+#        name = Insights: the UKSG journal ;
+#        eissn = 2048-7754
+#      >
+#
+#      comment[publisher] = United Kingdom Serials Group
+##      param[base_url] = http://insights.uksg.org/
+#
+#      au < down ; 2012 ; 1 ; Insights: the UKSG journal Volume 2012 ; 2012 ; http://insights.uksg.org/ >
+#      au < down ; 2013 ; 2 ; Insights: the UKSG journal Volume 2013 ; 2013 ; http://insights.uksg.org/ >
+#      au < down ; 2014 ; 3 ; Insights: the UKSG journal Volume 2014 ; 2014 ; http://insights.uksg.org/ >
+#      au < down ; 2015 ; 4 ; Insights: the UKSG journal Volume 2015 ; 2015 ; http://insights.uksg.org/ >
+#      au < down ; 2016 ; 5 ; Insights: the UKSG journal Volume 2016 ; 2016 ; http://insights.uksg.org/ >
+#      au < down ; 2017 ; 6 ; Insights: the UKSG journal Volume 2017 ; 2017 ; https://insights.uksg.org/ >
+#      au < down ; 2018 ; 7 ; Insights: the UKSG journal Volume 2018 ; 2018 ; https://insights.uksg.org/ >
+#      au < down ; 2019 ; 8 ; Insights: the UKSG journal Volume 2019 ; 2019 ; https://insights.uksg.org/ >
+#      au < down ; 2020 ; 9 ; Insights: the UKSG journal Volume 2020 ; 2020 ; https://insights.uksg.org/ >
+#      au < down ; 2021 ; 10 ; Insights: the UKSG journal Volume 2021 ; 2021 ; https://insights.uksg.org/ >
+#      au < doNotProcess ; 2022 ; 11 ; Insights: the UKSG journal Volume 2022 ; 2022 ; https://insights.uksg.org/ >
+#      au < doNotProcess ; 2023 ; 12 ; Insights: the UKSG journal Volume 2023 ; 2023 ; https://insights.uksg.org/ >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Serials: The Journal for the Serials Community ;
+#        issn = 0953-0460 ;
+#        eissn = 1475-3308
+#      >
+#
+#      comment[publisher] = United Kingdom Serials Group
+##      param[base_url] = http://serials.uksg.org/
+#
+#      au < doNotProcess ; 1988 ; 1 ; Serials: The Journal for the Serials Community Volume 1988 ; 1988 ; https://serials.uksg.org/ >
+#      au < doNotProcess ; 1989 ; 2 ; Serials: The Journal for the Serials Community Volume 1989 ; 1989 ; https://serials.uksg.org/ >
+#      au < doNotProcess ; 1990 ; 3 ; Serials: The Journal for the Serials Community Volume 1990 ; 1990 ; https://serials.uksg.org/ >
+#      au < doNotProcess ; 1991 ; 4 ; Serials: The Journal for the Serials Community Volume 1991 ; 1991 ; https://serials.uksg.org/ >
+#      au < doNotProcess ; 1992 ; 5 ; Serials: The Journal for the Serials Community Volume 1992 ; 1992 ; https://serials.uksg.org/ >
+#      au < doNotProcess ; 1993 ; 6 ; Serials: The Journal for the Serials Community Volume 1993 ; 1993 ; https://serials.uksg.org/ >
+#      au < doNotProcess ; 1994 ; 7 ; Serials: The Journal for the Serials Community Volume 1994 ; 1994 ; https://serials.uksg.org/ >
+#      au < doNotProcess ; 1995 ; 8 ; Serials: The Journal for the Serials Community Volume 1995 ; 1995 ; https://serials.uksg.org/ >
+#      au < doNotProcess ; 1996 ; 9 ; Serials: The Journal for the Serials Community Volume 1996 ; 1996 ; https://serials.uksg.org/ >
+#      au < doNotProcess ; 1997 ; 10 ; Serials: The Journal for the Serials Community Volume 1997 ; 1997 ; https://serials.uksg.org/ >
+#      au < doNotProcess ; 1998 ; 11 ; Serials: The Journal for the Serials Community Volume 1998 ; 1998 ; https://serials.uksg.org/ >
+#      au < doNotProcess ; 1999 ; 12 ; Serials: The Journal for the Serials Community Volume 1999 ; 1999 ; https://serials.uksg.org/ >
+#      au < down ; 2000 ; 13 ; Serials: The Journal for the Serials Community Volume 2000 ; 2000 ; https://serials.uksg.org/ >
+#      au < down ; 2001 ; 14 ; Serials: The Journal for the Serials Community Volume 2001 ; 2001 ; https://serials.uksg.org/ >
+#      au < down ; 2002 ; 15 ; Serials: The Journal for the Serials Community Volume 2002 ; 2002 ; https://serials.uksg.org/ >
+#      au < down ; 2003 ; 16 ; Serials: The Journal for the Serials Community Volume 2003 ; 2003 ; https://serials.uksg.org/ >
+#      au < down ; 2004 ; 17 ; Serials: The Journal for the Serials Community Volume 2004 ; 2004 ; https://serials.uksg.org/ >
+#      au < down ; 2005 ; 18 ; Serials: The Journal for the Serials Community Volume 2005 ; 2005 ; https://serials.uksg.org/ >
+#      au < down ; 2006 ; 19 ; Serials: The Journal for the Serials Community Volume 2006 ; 2006 ; https://serials.uksg.org/ >
+#      au < down ; 2007 ; 20 ; Serials: The Journal for the Serials Community Volume 2007 ; 2007 ; https://serials.uksg.org/ >
+#      au < down ; 2008 ; 21 ; Serials: The Journal for the Serials Community Volume 2008 ; 2008 ; https://serials.uksg.org/ >
+#      au < down ; 2009 ; 22 ; Serials: The Journal for the Serials Community Volume 2009 ; 2009 ; https://serials.uksg.org/ >
+#      au < down ; 2010 ; 23 ; Serials: The Journal for the Serials Community Volume 2010 ; 2010 ; http://serials.uksg.org/ >
+#      au < down ; 2011 ; 24 ; Serials: The Journal for the Serials Community Volume 2011 ; 2011 ; http://serials.uksg.org/ >
+#
+#  }
+#
 }
 
-{
-  publisher <
-    name = University of Birmingham ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
-  {
-
-      title <
-        name = Journal of Philosophy in Schools ;
-        eissn = 2204-2482
-      >
-
-      comment[publisher] = University of Birmingham
-#      param[base_url] = https://jps.bham.ac.uk/
-
-      au < doNotProcess ; 2014 ; 1 ; Journal of Philosophy in Schools Volume 2014 ; 2014 ; https://jps.bham.ac.uk/ >
-      au < doNotProcess ; 2015 ; 2 ; Journal of Philosophy in Schools Volume 2015 ; 2015 ; https://jps.bham.ac.uk/ >
-      au < doNotProcess ; 2016 ; 3 ; Journal of Philosophy in Schools Volume 2016 ; 2016 ; https://jps.bham.ac.uk/ >
-      au < doNotProcess ; 2017 ; 4 ; Journal of Philosophy in Schools Volume 2017 ; 2017 ; https://jps.bham.ac.uk/ >
-      au < doNotProcess ; 2018 ; 5 ; Journal of Philosophy in Schools Volume 2018 ; 2018 ; https://jps.bham.ac.uk/ >
-      au < doNotProcess ; 2019 ; 6 ; Journal of Philosophy in Schools Volume 2019 ; 2019 ; https://jps.bham.ac.uk/ >
-      au < down ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ >
-      au < down ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ > #no substance
-      au < down ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 ; 2022 ; https://jps.bham.ac.uk/ > #no substance
-      au < doNotProcess ; 2023 ; 10 ; Journal of Philosophy in Schools Volume 2023 ; 2023 ; https://jps.bham.ac.uk/ > #no substance
-
-  }
-}
-
-{
-  publisher <
-    name = University of East Anglia ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
+#{
+#  publisher <
+#    name = University of Birmingham ;
+#    info[contract] = 2011 ;
+#    info[back] = 2000 ;
+#    info[tester] = 8 ;
+#    info[poller] = 8
+#  >
+#
+#    provider = Ubiquity Press
+#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+#
+#  {
+#
+#      title <
+#        name = Journal of Philosophy in Schools ;
+#        eissn = 2204-2482
+#      >
+#
+#      comment[publisher] = University of Birmingham
+##      param[base_url] = https://jps.bham.ac.uk/
+#
+#      au < doNotProcess ; 2014 ; 1 ; Journal of Philosophy in Schools Volume 2014 ; 2014 ; https://jps.bham.ac.uk/ >
+#      au < doNotProcess ; 2015 ; 2 ; Journal of Philosophy in Schools Volume 2015 ; 2015 ; https://jps.bham.ac.uk/ >
+#      au < doNotProcess ; 2016 ; 3 ; Journal of Philosophy in Schools Volume 2016 ; 2016 ; https://jps.bham.ac.uk/ >
+#      au < doNotProcess ; 2017 ; 4 ; Journal of Philosophy in Schools Volume 2017 ; 2017 ; https://jps.bham.ac.uk/ >
+#      au < doNotProcess ; 2018 ; 5 ; Journal of Philosophy in Schools Volume 2018 ; 2018 ; https://jps.bham.ac.uk/ >
+#      au < doNotProcess ; 2019 ; 6 ; Journal of Philosophy in Schools Volume 2019 ; 2019 ; https://jps.bham.ac.uk/ >
+#      au < down ; 2020 ; 7 ; Journal of Philosophy in Schools Volume 2020 ; 2020 ; https://jps.bham.ac.uk/ >
+#      au < down ; 2021 ; 8 ; Journal of Philosophy in Schools Volume 2021 ; 2021 ; https://jps.bham.ac.uk/ > #no substance
+#      au < down ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 ; 2022 ; https://jps.bham.ac.uk/ > #no substance
+#      au < doNotProcess ; 2023 ; 10 ; Journal of Philosophy in Schools Volume 2023 ; 2023 ; https://jps.bham.ac.uk/ > #no substance
+#
+#  }
+#}
+#
+#{
+#  publisher <
+#    name = University of East Anglia ;
+#    info[contract] = 2011 ;
+#    info[back] = 2000 ;
+#    info[tester] = 8 ;
+#    info[poller] = 8
+#  >
+#
+#    provider = Ubiquity Press
+#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+#
 #  {
 #
 #      title <
@@ -2424,8 +2424,8 @@
 #      au < down ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; https://newareastudies.com/ >
 #
 #  }
-}
-
+#}
+#
 {
   publisher <
     name = University of New South Wales ;
@@ -2974,37 +2974,37 @@
 
   }
 
-  {
-
-      title <
-        name = Utrecht Law Review ;
-        eissn = 1871-515X
-      >
-
-      comment[publisher] = Utrecht University Library
-#      param[base_url] = https://www.utrechtlawreview.org/
-
-      au < down ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2007 ; 3 ; Utrecht Law Review Volume 2007 ; 2007 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2008 ; 4 ; Utrecht Law Review Volume 2008 ; 2008 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2009 ; 5 ; Utrecht Law Review Volume 2009 ; 2009 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2010 ; 6 ; Utrecht Law Review Volume 2010 ; 2010 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2011 ; 7 ; Utrecht Law Review Volume 2011 ; 2011 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2019 ; 15 ; Utrecht Law Review Volume 2019 ; 2019 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2020 ; 16 ; Utrecht Law Review Volume 2020 ; 2020 ; https://www.utrechtlawreview.org/ >
-      au < down ; 2021 ; 17 ; Utrecht Law Review Volume 2021 ; 2021 ; https://www.utrechtlawreview.org/ >
-      au < doNotProcess ; 2022 ; 18 ; Utrecht Law Review Volume 2022 ; 2022 ; https://www.utrechtlawreview.org/ >
-      au < doNotProcess ; 2023 ; 19 ; Utrecht Law Review Volume 2023 ; 2023 ; https://www.utrechtlawreview.org/ >
-
-  }
+#  {
+#
+#      title <
+#        name = Utrecht Law Review ;
+#        eissn = 1871-515X
+#      >
+#
+#      comment[publisher] = Utrecht University Library
+##      param[base_url] = https://www.utrechtlawreview.org/
+#
+#      au < down ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2007 ; 3 ; Utrecht Law Review Volume 2007 ; 2007 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2008 ; 4 ; Utrecht Law Review Volume 2008 ; 2008 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2009 ; 5 ; Utrecht Law Review Volume 2009 ; 2009 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2010 ; 6 ; Utrecht Law Review Volume 2010 ; 2010 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2011 ; 7 ; Utrecht Law Review Volume 2011 ; 2011 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2019 ; 15 ; Utrecht Law Review Volume 2019 ; 2019 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2020 ; 16 ; Utrecht Law Review Volume 2020 ; 2020 ; https://www.utrechtlawreview.org/ >
+#      au < down ; 2021 ; 17 ; Utrecht Law Review Volume 2021 ; 2021 ; https://www.utrechtlawreview.org/ >
+#      au < doNotProcess ; 2022 ; 18 ; Utrecht Law Review Volume 2022 ; 2022 ; https://www.utrechtlawreview.org/ >
+#      au < doNotProcess ; 2023 ; 19 ; Utrecht Law Review Volume 2023 ; 2023 ; https://www.utrechtlawreview.org/ >
+#
+#  }
 
 }
 {
@@ -3059,159 +3059,159 @@
   }
 
 }
-{
-  publisher <
-    name = White Rose University Press
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
-  {
-
-      title <
-        name = British and Irish Orthoptic Journal ;
-        eissn = 2516-3590
-      >
-
-      comment[publisher] = White Rose University Press
-#      param[base_url] = https://www.bioj-online.com/
-
-      au < down ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; https://www.bioj-online.com/ >
-      au < down ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; https://www.bioj-online.com/ >
-      au < down ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; https://www.bioj-online.com/ >
-      au < down ; 2012 ; 9 ; British and Irish Orthoptic Journal Volume 2012 ; 2012 ; https://www.bioj-online.com/ >
-      au < down ; 2013 ; 10 ; British and Irish Orthoptic Journal Volume 2013 ; 2013 ; https://www.bioj-online.com/ >
-      au < down ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; https://www.bioj-online.com/ >
-      au < down ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; https://www.bioj-online.com/ >
-      au < down ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ >
-      au < down ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ >
-      au < down ; 2019 ; 16 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ >
-      au < down ; 2020 ; 17 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; https://www.bioj-online.com/ >
-      au < down ; 2021 ; 18 ; British and Irish Orthoptic Journal Volume 2021 ; 2021 ; https://www.bioj-online.com/ >
-      au < doNotProcess ; 2022 ; 19 ; British and Irish Orthoptic Journal Volume 2022 ; 2022 ; https://www.bioj-online.com/ >
-      au < doNotProcess ; 2023 ; 20 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 ; https://www.bioj-online.com/ >
-
-  }
-
-  {
-
-      title <
-        name = Journal of the European Second Language Association ;
-        eissn = 2399-9101
-      >
-
-      comment[publisher] = White Rose University Press
-#      param[base_url] = https://www.euroslajournal.org/
-
-      au < down ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ >
-      au < down ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ >
-      au < down ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; https://www.euroslajournal.org/ >
-      au < down ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; https://www.euroslajournal.org/ >
-      au < down ; 2021 ; 5 ; Journal of the European Second Language Association Volume 2021 ; 2021 ; https://www.euroslajournal.org/ >
-      au < doNotProcess ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 ; 2022 ; https://www.euroslajournal.org/ >
-      au < doNotProcess ; 2023 ; 7 ; Journal of the European Second Language Association Volume 2023 ; 2023 ; https://www.euroslajournal.org/ >
-
-  }
-
-  {
-
-      title <
-        name = Undergraduate Journal of Politics and International Relations ;
-        eissn = 2398-5992
-      >
-
-      comment[publisher] = White Rose University Press
-#      param[base_url] = https://www.ujpir-journal.com/
-
-      au < down ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ >
-      au < down ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; https://www.ujpir-journal.com/ >
-
-  }
-  {
-
-      title <
-        name = Writing Chinese: A Journal of Contemporary Sinophone Literature ;
-        eissn = 2633-8815
-      >
-
-      comment[publisher] = White Rose University Press
-#      param[base_url] = https://writingchinesejournal.org/
-
-      au < doNotProcess ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 ; https://writingchinesejournal.org/ >
-      au < doNotProcess ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 ; https://writingchinesejournal.org/ >
-
-  }
-
-}
-{
-  publisher <
-    name = Centre for Security Governance
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
-  {
-
-      title <
-        name = Stability: International Journal of Security & Development ;
-        eissn = 2165-2627
-      >
-
-      comment[publisher] = Centre for Security Governance
-#      param[base_url] = http://www.stabilityjournal.org/
-
-      au < down ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; https://www.stabilityjournal.org/ >
-      au < down ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; https://www.stabilityjournal.org/ >
-      au < down ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; https://www.stabilityjournal.org/ >
-      au < down ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; http://www.stabilityjournal.org/ >
-      au < down ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; http://www.stabilityjournal.org/ >
-      au < down ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; https://www.stabilityjournal.org/ >
-      au < down ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ >
-      au < down ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; https://www.stabilityjournal.org/ >
-      au < down ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; https://www.stabilityjournal.org/ >
-      au < doNotProcess ; 2021 ; 10 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; https://www.stabilityjournal.org/ >
-      au < doNotProcess ; 2022 ; 11 ; Stability: International Journal of Security & Development Volume 2022 ; 2022 ; https://www.stabilityjournal.org/ >
-      au < doNotProcess ; 2023 ; 12 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; https://www.stabilityjournal.org/ >
-
-  }
-
-}
-
-{
-  publisher <
-    name = Scandinavian Military Studies ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-  {
-
-      title <
-        name = Scandinavian Journal of Military Studies ;
-        eissn = 2596-3856
-      >
-
-      comment[publisher] = Scandinavian Military Studies
-#      param[base_url] = https://sjms.nu/
-
-      au < down ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ >
-      au < down ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ >
-      au < down ; 2020 ; 3 ; Scandinavian Military Studies Volume 2020 ; 2020 ; https://sjms.nu/ >
-      au < down ; 2021 ; 4 ; Scandinavian Military Studies Volume 2021 ; 2021 ; https://sjms.nu/ >
-      au < doNotProcess ; 2022 ; 5 ; Scandinavian Military Studies Volume 2022 ; 2022 ; https://sjms.nu/ >
-      au < doNotProcess ; 2023 ; 6 ; Scandinavian Military Studies Volume 2023 ; 2023 ; https://sjms.nu/ >
-
-  }
-}
+#{
+#  publisher <
+#    name = White Rose University Press
+#  >
+#
+#    provider = Ubiquity Press
+#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+#
+#  {
+#
+#      title <
+#        name = British and Irish Orthoptic Journal ;
+#        eissn = 2516-3590
+#      >
+#
+#      comment[publisher] = White Rose University Press
+##      param[base_url] = https://www.bioj-online.com/
+#
+#      au < down ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; https://www.bioj-online.com/ >
+#      au < down ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; https://www.bioj-online.com/ >
+#      au < down ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; https://www.bioj-online.com/ >
+#      au < down ; 2012 ; 9 ; British and Irish Orthoptic Journal Volume 2012 ; 2012 ; https://www.bioj-online.com/ >
+#      au < down ; 2013 ; 10 ; British and Irish Orthoptic Journal Volume 2013 ; 2013 ; https://www.bioj-online.com/ >
+#      au < down ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; https://www.bioj-online.com/ >
+#      au < down ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; https://www.bioj-online.com/ >
+#      au < down ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ >
+#      au < down ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ >
+#      au < down ; 2019 ; 16 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ >
+#      au < down ; 2020 ; 17 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; https://www.bioj-online.com/ >
+#      au < down ; 2021 ; 18 ; British and Irish Orthoptic Journal Volume 2021 ; 2021 ; https://www.bioj-online.com/ >
+#      au < doNotProcess ; 2022 ; 19 ; British and Irish Orthoptic Journal Volume 2022 ; 2022 ; https://www.bioj-online.com/ >
+#      au < doNotProcess ; 2023 ; 20 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 ; https://www.bioj-online.com/ >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Journal of the European Second Language Association ;
+#        eissn = 2399-9101
+#      >
+#
+#      comment[publisher] = White Rose University Press
+##      param[base_url] = https://www.euroslajournal.org/
+#
+#      au < down ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ >
+#      au < down ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ >
+#      au < down ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; https://www.euroslajournal.org/ >
+#      au < down ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; https://www.euroslajournal.org/ >
+#      au < down ; 2021 ; 5 ; Journal of the European Second Language Association Volume 2021 ; 2021 ; https://www.euroslajournal.org/ >
+#      au < doNotProcess ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 ; 2022 ; https://www.euroslajournal.org/ >
+#      au < doNotProcess ; 2023 ; 7 ; Journal of the European Second Language Association Volume 2023 ; 2023 ; https://www.euroslajournal.org/ >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Undergraduate Journal of Politics and International Relations ;
+#        eissn = 2398-5992
+#      >
+#
+#      comment[publisher] = White Rose University Press
+##      param[base_url] = https://www.ujpir-journal.com/
+#
+#      au < down ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ >
+#      au < down ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; https://www.ujpir-journal.com/ >
+#
+#  }
+#  {
+#
+#      title <
+#        name = Writing Chinese: A Journal of Contemporary Sinophone Literature ;
+#        eissn = 2633-8815
+#      >
+#
+#      comment[publisher] = White Rose University Press
+##      param[base_url] = https://writingchinesejournal.org/
+#
+#      au < doNotProcess ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 ; https://writingchinesejournal.org/ >
+#      au < doNotProcess ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 ; https://writingchinesejournal.org/ >
+#
+#  }
+#
+#}
+#{
+#  publisher <
+#    name = Centre for Security Governance
+#  >
+#
+#    provider = Ubiquity Press
+#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+#
+#  {
+#
+#      title <
+#        name = Stability: International Journal of Security & Development ;
+#        eissn = 2165-2627
+#      >
+#
+#      comment[publisher] = Centre for Security Governance
+##      param[base_url] = http://www.stabilityjournal.org/
+#
+#      au < down ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; https://www.stabilityjournal.org/ >
+#      au < down ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; https://www.stabilityjournal.org/ >
+#      au < down ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; https://www.stabilityjournal.org/ >
+#      au < down ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; http://www.stabilityjournal.org/ >
+#      au < down ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; http://www.stabilityjournal.org/ >
+#      au < down ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; https://www.stabilityjournal.org/ >
+#      au < down ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ >
+#      au < down ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; https://www.stabilityjournal.org/ >
+#      au < down ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; https://www.stabilityjournal.org/ >
+#      au < doNotProcess ; 2021 ; 10 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; https://www.stabilityjournal.org/ >
+#      au < doNotProcess ; 2022 ; 11 ; Stability: International Journal of Security & Development Volume 2022 ; 2022 ; https://www.stabilityjournal.org/ >
+#      au < doNotProcess ; 2023 ; 12 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; https://www.stabilityjournal.org/ >
+#
+#  }
+#
+#}
+#
+#{
+#  publisher <
+#    name = Scandinavian Military Studies ;
+#    info[contract] = 2011 ;
+#    info[back] = 2000 ;
+#    info[tester] = 8 ;
+#    info[poller] = 8
+#  >
+#
+#    provider = Ubiquity Press
+#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+#  {
+#
+#      title <
+#        name = Scandinavian Journal of Military Studies ;
+#        eissn = 2596-3856
+#      >
+#
+#      comment[publisher] = Scandinavian Military Studies
+##      param[base_url] = https://sjms.nu/
+#
+#      au < down ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ >
+#      au < down ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ >
+#      au < down ; 2020 ; 3 ; Scandinavian Military Studies Volume 2020 ; 2020 ; https://sjms.nu/ >
+#      au < down ; 2021 ; 4 ; Scandinavian Military Studies Volume 2021 ; 2021 ; https://sjms.nu/ >
+#      au < doNotProcess ; 2022 ; 5 ; Scandinavian Military Studies Volume 2022 ; 2022 ; https://sjms.nu/ >
+#      au < doNotProcess ; 2023 ; 6 ; Scandinavian Military Studies Volume 2023 ; 2023 ; https://sjms.nu/ >
+#
+#  }
+#}
 {
   publisher <
     name = Aperio ;
@@ -3256,71 +3256,71 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
-  {
-
-      title <
-        name = Studies in Engineering Education ;
-        eissn = 2690-5450
-      >
-
-      comment[publisher] = Virginia Tech Publishing
-#      param[base_url] = https://www.seejournal.org/
-
-      au < doNotProcess ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; https://www.seejournal.org/ >
-      au < doNotProcess ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; https://www.seejournal.org/ >
-      au < doNotProcess ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 ; https://www.seejournal.org/ >
-      au < doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; https://www.seejournal.org/ >
-
-  }
-
-  {
-
-      title <
-        name = Journal of Technology Education ;
-        eissn = 1045-1064
-      >
-
-      comment[publisher] = Virginia Tech Publishing
-#      param[base_url] = https://jte-journal.org/
-
-      au < doNotProcess ; 1989 ; 1 ; Journal of Technology Education Volume 1989 ; 1989 ; https://jte-journal.org/ >
-      au < doNotProcess ; 1990 ; 2 ; Journal of Technology Education Volume 1990 ; 1990 ; https://jte-journal.org/ >
-      au < doNotProcess ; 1991 ; 3 ; Journal of Technology Education Volume 1991 ; 1991 ; https://jte-journal.org/ >
-      au < doNotProcess ; 1992 ; 4 ; Journal of Technology Education Volume 1992 ; 1992 ; https://jte-journal.org/ >
-      au < doNotProcess ; 1993 ; 5 ; Journal of Technology Education Volume 1993 ; 1993 ; https://jte-journal.org/ >
-      au < doNotProcess ; 1994 ; 6 ; Journal of Technology Education Volume 1994 ; 1994 ; https://jte-journal.org/ >
-      au < doNotProcess ; 1995 ; 7 ; Journal of Technology Education Volume 1995 ; 1995 ; https://jte-journal.org/ >
-      au < doNotProcess ; 1996 ; 8 ; Journal of Technology Education Volume 1996 ; 1996 ; https://jte-journal.org/ >
-      au < doNotProcess ; 1997 ; 9 ; Journal of Technology Education Volume 1997 ; 1997 ; https://jte-journal.org/ >
-      au < doNotProcess ; 1998 ; 10 ; Journal of Technology Education Volume 1998 ; 1998 ; https://jte-journal.org/ >
-      au < doNotProcess ; 1999 ; 11 ; Journal of Technology Education Volume 1999 ; 1999 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2000 ; 12 ; Journal of Technology Education Volume 2000 ; 2000 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2001 ; 13 ; Journal of Technology Education Volume 2001 ; 2001 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2002 ; 14 ; Journal of Technology Education Volume 2002 ; 2002 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2003 ; 15 ; Journal of Technology Education Volume 2003 ; 2003 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2004 ; 16 ; Journal of Technology Education Volume 2004 ; 2004 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2005 ; 17 ; Journal of Technology Education Volume 2005 ; 2005 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2006 ; 18 ; Journal of Technology Education Volume 2006 ; 2006 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2007 ; 19 ; Journal of Technology Education Volume 2007 ; 2007 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2008 ; 20 ; Journal of Technology Education Volume 2008 ; 2008 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2009 ; 21 ; Journal of Technology Education Volume 2009 ; 2009 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2010 ; 22 ; Journal of Technology Education Volume 2010 ; 2010 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2011 ; 23 ; Journal of Technology Education Volume 2011 ; 2011 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2012 ; 24 ; Journal of Technology Education Volume 2012 ; 2012 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2013 ; 25 ; Journal of Technology Education Volume 2013 ; 2013 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2014 ; 26 ; Journal of Technology Education Volume 2014 ; 2014 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2015 ; 27 ; Journal of Technology Education Volume 2015 ; 2015 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2016 ; 28 ; Journal of Technology Education Volume 2016 ; 2016 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2017 ; 29 ; Journal of Technology Education Volume 2017 ; 2017 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2018 ; 30 ; Journal of Technology Education Volume 2018 ; 2018 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2019 ; 31 ; Journal of Technology Education Volume 2019 ; 2019 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2020 ; 32 ; Journal of Technology Education Volume 2020 ; 2020 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2021 ; 33 ; Journal of Technology Education Volume 2021 ; 2021 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2022 ; 34 ; Journal of Technology Education Volume 2022 ; 2022 ; https://jte-journal.org/ >
-      au < doNotProcess ; 2023 ; 35 ; Journal of Technology Education Volume 2023 ; 2023 ; https://jte-journal.org/ >
-
-  }
-
+#  {
+#
+#      title <
+#        name = Studies in Engineering Education ;
+#        eissn = 2690-5450
+#      >
+#
+#      comment[publisher] = Virginia Tech Publishing
+##      param[base_url] = https://www.seejournal.org/
+#
+#      au < doNotProcess ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; https://www.seejournal.org/ >
+#      au < doNotProcess ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; https://www.seejournal.org/ >
+#      au < doNotProcess ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 ; https://www.seejournal.org/ >
+#      au < doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; https://www.seejournal.org/ >
+#
+#  }
+#
+#  {
+#
+#      title <
+#        name = Journal of Technology Education ;
+#        eissn = 1045-1064
+#      >
+#
+#      comment[publisher] = Virginia Tech Publishing
+##      param[base_url] = https://jte-journal.org/
+#
+#      au < doNotProcess ; 1989 ; 1 ; Journal of Technology Education Volume 1989 ; 1989 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 1990 ; 2 ; Journal of Technology Education Volume 1990 ; 1990 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 1991 ; 3 ; Journal of Technology Education Volume 1991 ; 1991 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 1992 ; 4 ; Journal of Technology Education Volume 1992 ; 1992 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 1993 ; 5 ; Journal of Technology Education Volume 1993 ; 1993 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 1994 ; 6 ; Journal of Technology Education Volume 1994 ; 1994 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 1995 ; 7 ; Journal of Technology Education Volume 1995 ; 1995 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 1996 ; 8 ; Journal of Technology Education Volume 1996 ; 1996 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 1997 ; 9 ; Journal of Technology Education Volume 1997 ; 1997 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 1998 ; 10 ; Journal of Technology Education Volume 1998 ; 1998 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 1999 ; 11 ; Journal of Technology Education Volume 1999 ; 1999 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2000 ; 12 ; Journal of Technology Education Volume 2000 ; 2000 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2001 ; 13 ; Journal of Technology Education Volume 2001 ; 2001 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2002 ; 14 ; Journal of Technology Education Volume 2002 ; 2002 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2003 ; 15 ; Journal of Technology Education Volume 2003 ; 2003 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2004 ; 16 ; Journal of Technology Education Volume 2004 ; 2004 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2005 ; 17 ; Journal of Technology Education Volume 2005 ; 2005 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2006 ; 18 ; Journal of Technology Education Volume 2006 ; 2006 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2007 ; 19 ; Journal of Technology Education Volume 2007 ; 2007 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2008 ; 20 ; Journal of Technology Education Volume 2008 ; 2008 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2009 ; 21 ; Journal of Technology Education Volume 2009 ; 2009 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2010 ; 22 ; Journal of Technology Education Volume 2010 ; 2010 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2011 ; 23 ; Journal of Technology Education Volume 2011 ; 2011 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2012 ; 24 ; Journal of Technology Education Volume 2012 ; 2012 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2013 ; 25 ; Journal of Technology Education Volume 2013 ; 2013 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2014 ; 26 ; Journal of Technology Education Volume 2014 ; 2014 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2015 ; 27 ; Journal of Technology Education Volume 2015 ; 2015 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2016 ; 28 ; Journal of Technology Education Volume 2016 ; 2016 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2017 ; 29 ; Journal of Technology Education Volume 2017 ; 2017 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2018 ; 30 ; Journal of Technology Education Volume 2018 ; 2018 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2019 ; 31 ; Journal of Technology Education Volume 2019 ; 2019 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2020 ; 32 ; Journal of Technology Education Volume 2020 ; 2020 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2021 ; 33 ; Journal of Technology Education Volume 2021 ; 2021 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2022 ; 34 ; Journal of Technology Education Volume 2022 ; 2022 ; https://jte-journal.org/ >
+#      au < doNotProcess ; 2023 ; 35 ; Journal of Technology Education Volume 2023 ; 2023 ; https://jte-journal.org/ >
+#
+#  }
+#
 }
 {
   publisher <

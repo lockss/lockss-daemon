@@ -1898,22 +1898,22 @@
 
   }
 
-  {
-
-      title <
-        name = International Journal of Educational and Life Transitions ;
-        eissn = 2754-2890
-      >
-
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.ijelt.dundee.ac.uk/
-      param[journal_id] = up-j-ijelt
-
-      au < manifest ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 >
-      au < manifest ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 >
-      au < manifest ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 >
-
-  }
+#  {
+#
+#      title <
+#        name = International Journal of Educational and Life Transitions ;
+#        eissn = 2754-2890
+#      >
+#
+#      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://account.ijelt.dundee.ac.uk/
+#      param[journal_id] = up-j-ijelt
+#
+#      au < manifest ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 >
+#      au < manifest ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 >
+#      au < manifest ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 >
+#
+#  }
 
   {
 
