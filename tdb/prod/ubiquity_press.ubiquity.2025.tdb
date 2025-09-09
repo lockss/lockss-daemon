@@ -300,7 +300,7 @@
       au < down ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; 6 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
       au < down ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; 7 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
       au < down ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; 8 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
-      au < down ; 2017 ; 9 ; Designs for Learning Volume 2017 ; 2017 ; 9 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
+      au < down ; 2017 ; 9 ; Designs for Learning Volume 2017 ; 2017 ; 9 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
       au < down ; 2018 ; 10 ; Designs for Learning Volume 2018 ; 2018 ; 10 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
       au < down ; 2019 ; 11 ; Designs for Learning Volume 2019 ; 2019 ; 11 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
       au < down ; 2020 ; 12 ; Designs for Learning Volume 2020 ; 2020 ; 12 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
@@ -347,7 +347,7 @@
       au < down ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; 1 ; Stockholm University Press ;  ; http://www.rurallandscapesjournal.com/ >
       au < down ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; 2 ; Stockholm University Press ;  ; http://www.rurallandscapesjournal.com/ >
       au < down ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; 3 ; Stockholm University Press ;  ; http://www.rurallandscapesjournal.com/ >
-      au < down ; 2017 ; 4 ; Rural Landscapes: Society, Environment, History Volume 2017 ; 2017 ; 4 ; Stockholm University Press ;  ; http://www.rurallandscapesjournal.com/ >
+      au < down ; 2017 ; 4 ; Rural Landscapes: Society, Environment, History Volume 2017 ; 2017 ; 4 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
       au < down ; 2018 ; 5 ; Rural Landscapes: Society, Environment, History Volume 2018 ; 2018 ; 5 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
       au < down ; 2019 ; 6 ; Rural Landscapes: Society, Environment, History Volume 2019 ; 2019 ; 6 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
       au < down ; 2020 ; 7 ; Rural Landscapes: Society, Environment, History Volume 2020 ; 2020 ; 7 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
@@ -374,8 +374,8 @@
       nondefparam[journal_id] = su-j-sjdr
 
       au < exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; 1 ; Stockholm University Press ;  ; https://sjdr.se/ >
-      au < doNotProcess ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; 2 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < doNotProcess ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; 3 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < down ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; 2 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < down ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; 3 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
       au < doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; 4 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
       au < down ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; 5 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
       au < down ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 ; 6 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
@@ -416,7 +416,7 @@
       nondefparam[journal_id] = su-j-sjwop
 
       au < down ; 2016 ; 1 ; Scandinavian Journal of Work and Organizational Psychology Volume 2016 ; 2016 ; 1 ; Stockholm University Press ;  ; http://www.sjwop.com/ >
-      au < down ; 2017 ; 2 ; Scandinavian Journal of Work and Organizational Psychology Volume 2017 ; 2017 ; 2 ; Stockholm University Press ;  ; http://www.sjwop.com/ >
+      au < down ; 2017 ; 2 ; Scandinavian Journal of Work and Organizational Psychology Volume 2017 ; 2017 ; 2 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
       au < down ; 2018 ; 3 ; Scandinavian Journal of Work and Organizational Psychology Volume 2018 ; 2018 ; 3 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
       au < down ; 2019 ; 4 ; Scandinavian Journal of Work and Organizational Psychology Volume 2019 ; 2019 ; 4 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
       au < down ; 2020 ; 5 ; Scandinavian Journal of Work and Organizational Psychology Volume 2020 ; 2020 ; 5 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
@@ -930,7 +930,7 @@
 
       au < down ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; 1 ; Ubiquity Press ;  ; http://www.glocality.eu/ >
       au < down ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; 2 ; Ubiquity Press ;  ; http://www.glocality.eu/ >
-      au < superseded ; 2017 ; 0 ; Glocality: Undergraduate Academic Journal Volume 2017 [superseded] ; 2017 ; 0 ; Ubiquity Press ;  ; http://www.glocality.eu/ >
+      au < superseded ; 2017 ; 0 ; Glocality: Undergraduate Academic Journal Volume 2017 [superseded] ; 2017 ; 0 ; Ubiquity Press ;  ; https://www.glocality.eu/ >
       au < doesNotExist ; 2019 ; 0 ; Glocality: Undergraduate Academic Journal Volume 2019 ; 2019 ; 0 ; Ubiquity Press ;  ; https://glocality.eu/ >
       au < down ; 2020 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2020 ; 2020 ; 3 ; Ubiquity Press ;  ; https://www.glocality.eu/ >
       au < down ; 2021 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://www.glocality.eu/ >
@@ -970,7 +970,7 @@
       au < down ; 2014 ; 14 ; International Journal of Integrated Care Volume 2014 ; 2014 ; 14 ; Ubiquity Press ;  ; http://www.ijic.org/ >
       au < down ; 2015 ; 15 ; International Journal of Integrated Care Volume 2015 ; 2015 ; 15 ; Ubiquity Press ;  ; http://www.ijic.org/ >
       au < down ; 2016 ; 16 ; International Journal of Integrated Care Volume 2016 ; 2016 ; 16 ; Ubiquity Press ;  ; http://www.ijic.org/ >
-      au < down ; 2017 ; 17 ; International Journal of Integrated Care Volume 2017 ; 2017 ; 17 ; Ubiquity Press ;  ; http://www.ijic.org/ >
+      au < down ; 2017 ; 17 ; International Journal of Integrated Care Volume 2017 ; 2017 ; 17 ; Ubiquity Press ;  ; https://www.ijic.org/ >
       au < down ; 2018 ; 18 ; International Journal of Integrated Care Volume 2018 ; 2018 ; 18 ; Ubiquity Press ;  ; https://www.ijic.org/ >
       au < down ; 2019 ; 19 ; International Journal of Integrated Care Volume 2019 ; 2019 ; 19 ; Ubiquity Press ;  ; https://www.ijic.org/ >
       au < down ; 2020 ; 20 ; International Journal of Integrated Care Volume 2020 ; 2020 ; 20 ; Ubiquity Press ;  ; https://www.ijic.org/ >
@@ -995,7 +995,7 @@
       nondefparam[journal_id] = up-j-irsp
 
       au < down ; 2016 ; 29 ; International Review of Social Psychology Volume 2016 ; 2016 ; 29 ; Ubiquity Press ;  ; http://www.rips-irsp.com/ >
-      au < down ; 2017 ; 30 ; International Review of Social Psychology Volume 2017 ; 2017 ; 30 ; Ubiquity Press ;  ; http://www.rips-irsp.com/ >
+      au < down ; 2017 ; 30 ; International Review of Social Psychology Volume 2017 ; 2017 ; 30 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
       au < down ; 2018 ; 31 ; International Review of Social Psychology Volume 2018 ; 2018 ; 31 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
       au < down ; 2019 ; 32 ; International Review of Social Psychology Volume 2019 ; 2019 ; 32 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
       au < down ; 2020 ; 33 ; International Review of Social Psychology Volume 2020 ; 2020 ; 33 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
@@ -1026,14 +1026,14 @@
       au < down ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; 5 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
       au < exists ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; 6 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
       au < exists ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; 7 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
-      au < down ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; 8 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
-      au < down ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
-      au < down ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
-      au < down ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
-      au < down ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
+      au < down ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; 8 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < down ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < down ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < down ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < down ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
       au < down ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; 13 ; Ubiquity Press ;  ; http://www.jcircadianrhythms.com/ >
       au < down ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; 14 ; Ubiquity Press ;  ; http://www.jcircadianrhythms.com/ >
-      au < down ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; 15 ; Ubiquity Press ;  ; http://www.jcircadianrhythms.com/ >
+      au < down ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; 15 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
       au < down ; 2018 ; 16 ; Journal of Circadian Rhythms Volume 2018 ; 2018 ; 16 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
       au < down ; 2019 ; 17 ; Journal of Circadian Rhythms Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
       au < down ; 2020 ; 18 ; Journal of Circadian Rhythms Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
@@ -1063,10 +1063,10 @@
       au < exists ; 1999 ; 6 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; 6 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
       au < down ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; 7 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
       au < down ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; 8 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < down ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
-      au < down ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
-      au < down ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
-      au < down ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
+      au < down ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < down ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < down ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < down ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
       au < down ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; 13 ; Ubiquity Press ;  ; http://www.jcms-journal.com/ >
       au < down ; 2016 ; 14 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; 14 ; Ubiquity Press ;  ; http://www.jcms-journal.com/ >
       au < down ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; 15 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
@@ -1185,7 +1185,7 @@
       au < down ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; 9 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
       au < down ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; 10 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
       au < down ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; 11 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
-      au < down ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; 12 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
+      au < down ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; 12 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
       au < down ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; 13 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
       au < down ; 2020 ; 14 ; Journal of Molecular Signaling Volume 2020 ; 2020 ; 14 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
       au < down ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; 15 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
@@ -1356,7 +1356,7 @@
 
       au < down ; 2015 ; 98,99 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2015 ; 2015 ; 98,99 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
       au < down ; 2016 ; 100 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2016 ; 2016 ; 100 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
-      au < down ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; 101 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
+      au < down ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; 101 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
       au < down ; 2018 ; 102 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2018 ; 2018 ; 102 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
       au < down ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 ; 103 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
       au < down ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; 104 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
@@ -1534,7 +1534,7 @@
 
       au < down ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; 1 ; Ubiquity Press ;  ; http://www.openquaternary.com/ >
       au < down ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; 2 ; Ubiquity Press ;  ; http://www.openquaternary.com/ >
-      au < down ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; 3 ; Ubiquity Press ;  ; http://www.openquaternary.com/ >
+      au < down ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; 3 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
       au < down ; 2018 ; 4 ; Open Quaternary Volume 2018 ; 2018 ; 4 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
       au < down ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 ; 5 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
       au < down ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; 6 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
@@ -1567,10 +1567,10 @@
       au < down ; 2008 ; 48 ; Psychologica Belgica Volume 2008 ; 2008 ; 48 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
       au < down ; 2009 ; 48,49 ; Psychologica Belgica Volume 2009 ; 2009 ; 48,49 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
       au < down ; 2010 ; 49,50 ; Psychologica Belgica Volume 2010 ; 2010 ; 49,50 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ >
-      au < down ; 2011 ; 51 ; Psychologica Belgica Volume 2011 ; 2011 ; 51 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
-      au < down ; 2012 ; 52 ; Psychologica Belgica Volume 2012 ; 2012 ; 52 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
-      au < down ; 2013 ; 53 ; Psychologica Belgica Volume 2013 ; 2013 ; 53 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
-      au < down ; 2014 ; 54 ; Psychologica Belgica Volume 2014 ; 2014 ; 54 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
+      au < down ; 2011 ; 51 ; Psychologica Belgica Volume 2011 ; 2011 ; 51 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < down ; 2012 ; 52 ; Psychologica Belgica Volume 2012 ; 2012 ; 52 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < down ; 2013 ; 53 ; Psychologica Belgica Volume 2013 ; 2013 ; 53 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < down ; 2014 ; 54 ; Psychologica Belgica Volume 2014 ; 2014 ; 54 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
       au < down ; 2015 ; 55 ; Psychologica Belgica Volume 2015 ; 2015 ; 55 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ >
       au < down ; 2016 ; 56 ; Psychologica Belgica Volume 2016 ; 2016 ; 56 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ >
       au < down ; 2017 ; 57 ; Psychologica Belgica Volume 2017 ; 2017 ; 57 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
