@@ -552,7 +552,7 @@
       au < ready ; exists ; 1993 ; 45 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1993 ; 1993 ; 45 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < ready ; exists ; 1994 ; 46 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1994 ; 1994 ; 46 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < ready ; exists ; 1995 ; 47 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1995 ; 1995 ; 47 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
-      au < ready ; exists ; 1996 ; 48 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1996 ; 1996 ; 48 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
+      au < crawling ; exists ; 1996 ; 48 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1996 ; 1996 ; 48 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < ready ; exists ; 1997 ; 49 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1997 ; 1997 ; 49 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < ready ; exists ; 1998 ; 50 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1998 ; 1998 ; 50 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 1999 ; 51 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1999 ; 1999 ; 51 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
@@ -603,14 +603,14 @@
       au < ready ; exists ; 1984 ; 36 ; Tellus B: Chemical and Physical Meteorology Volume 1984 ; 1984 ; 36 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < ready ; exists ; 1985 ; 37 ; Tellus B: Chemical and Physical Meteorology Volume 1985 ; 1985 ; 37 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 1986 ; 38 ; Tellus B: Chemical and Physical Meteorology Volume 1986 ; 1986 ; 38 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < ready ; exists ; 1987 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 1987 ; 1987 ; 39 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
+      au < crawling ; exists ; 1987 ; 39 ; Tellus B: Chemical and Physical Meteorology Volume 1987 ; 1987 ; 39 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < ready ; exists ; 1988 ; 40 ; Tellus B: Chemical and Physical Meteorology Volume 1988 ; 1988 ; 40 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < ready ; exists ; 1989 ; 41 ; Tellus B: Chemical and Physical Meteorology Volume 1989 ; 1989 ; 41 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < ready ; exists ; 1990 ; 42 ; Tellus B: Chemical and Physical Meteorology Volume 1990 ; 1990 ; 42 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < ready ; exists ; 1991 ; 43 ; Tellus B: Chemical and Physical Meteorology Volume 1991 ; 1991 ; 43 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
+      au < crawling ; exists ; 1990 ; 42 ; Tellus B: Chemical and Physical Meteorology Volume 1990 ; 1990 ; 42 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
+      au < crawling ; exists ; 1991 ; 43 ; Tellus B: Chemical and Physical Meteorology Volume 1991 ; 1991 ; 43 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 1992 ; 44 ; Tellus B: Chemical and Physical Meteorology Volume 1992 ; 1992 ; 44 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < ready ; exists ; 1993 ; 45 ; Tellus B: Chemical and Physical Meteorology Volume 1993 ; 1993 ; 45 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < ready ; exists ; 1994 ; 46 ; Tellus B: Chemical and Physical Meteorology Volume 1994 ; 1994 ; 46 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
+      au < crawling ; exists ; 1994 ; 46 ; Tellus B: Chemical and Physical Meteorology Volume 1994 ; 1994 ; 46 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < ready ; exists ; 1995 ; 47 ; Tellus B: Chemical and Physical Meteorology Volume 1995 ; 1995 ; 47 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < ready ; exists ; 1996 ; 48 ; Tellus B: Chemical and Physical Meteorology Volume 1996 ; 1996 ; 48 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 1997 ; 49 ; Tellus B: Chemical and Physical Meteorology Volume 1997 ; 1997 ; 49 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
@@ -768,14 +768,14 @@
       nondefparam[base_url2] = https://account.archaeologybulletin.org/
       nondefparam[journal_id] = up-j-bha
 
-      au < ready ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; 1 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
+      au < crawling ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; 1 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < ready ; exists ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; 2 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < ready ; exists ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; 3 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < ready ; exists ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 ; 4 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
-      au < ready ; exists ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; 5 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
+      au < crawling ; exists ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; 5 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < frozen ; exists ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 ; 6 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < frozen ; exists ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 ; 7 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
-      au < ready ; exists ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 ; 8 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
+      au < crawling ; exists ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 ; 8 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < frozen ; exists ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 ; 9 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < finished ; finished ; 2000 ; 10 ; Bulletin of the History of Archaeology Volume 2000 ; 2000 ; 10 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2001 ; 11 ; Bulletin of the History of Archaeology Volume 2001 ; 2001 ; 11 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; reingest2.clockss.org:8085 >
@@ -2461,7 +2461,7 @@
 
       au < frozen ; exists ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; 1 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
       au < ready ; exists ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; 2 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
-      au < ready ; exists ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; 3 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
+      au < crawling ; exists ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; 3 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
       au < frozen ; exists ; 2023 ; 4 ; Journal of Critical Southern Studies Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
 
   }

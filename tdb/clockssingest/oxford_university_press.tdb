@@ -5880,7 +5880,7 @@
     au < frozen ; exists ; 2010 ; 2010 ; Environmental Toxicology and Chemistry Volume 29 ; 29 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Environmental Toxicology and Chemistry Volume 30 ; 30 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Environmental Toxicology and Chemistry Volume 31 ; 31 ; >
-    au < ready ; exists ; 2013 ; 2013 ; Environmental Toxicology and Chemistry Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Environmental Toxicology and Chemistry Volume 32 ; 32 ; >
     au < frozen ; exists ; 2014 ; 2014 ; Environmental Toxicology and Chemistry Volume 33 ; 33 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Environmental Toxicology and Chemistry Volume 34 ; 34 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Environmental Toxicology and Chemistry Volume 35 ; 35 ; >
@@ -5892,7 +5892,7 @@
     au < frozen ; exists ; 2022 ; 2022 ; Environmental Toxicology and Chemistry Volume 41 ; 41 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Environmental Toxicology and Chemistry Volume 42 ; 42 ; >
     au < finished ; manifest ; 2024 ; 2024 ; Environmental Toxicology and Chemistry Volume 43 ; 43 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2025 ; 2025 ; Environmental Toxicology and Chemistry Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Environmental Toxicology and Chemistry Volume 44 ; 44 ; >
 
   }
 
@@ -6582,7 +6582,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; European Journal of Preventive Cardiology Volume 29 ; 29 ; >
     au < finished ; manifest ; 2023 ; 2023 ; European Journal of Preventive Cardiology Volume 30 ; 30 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Journal of Preventive Cardiology Volume 31 ; 31 ; >
-    au < ready ; exists ; 2025 ; 2025 ; European Journal of Preventive Cardiology Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; European Journal of Preventive Cardiology Volume 32 ; 32 ; >
 
   }
 
@@ -7135,7 +7135,7 @@
     au < frozen ; exists ; 2022 ; 2022 ; Fisheries Volume 47 ; 47 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Fisheries Volume 48 ; 48 ; >
     au < finished ; manifest ; 2024 ; 2024 ; Fisheries Volume 49 ; 49 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2025 ; 2025 ; Fisheries Volume 50 ; 50 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Fisheries Volume 50 ; 50 ; >
 
   }
 
@@ -7877,10 +7877,10 @@
     au < ready ; exists ; 2010 ; 2010 ; Genomics, Proteomics and Bioinformatics Volume 8 ; 8 ; >
     au < ready ; exists ; 2011 ; 2011 ; Genomics, Proteomics and Bioinformatics Volume 9 ; 9 ; >
     au < ready ; exists ; 2012 ; 2012 ; Genomics, Proteomics and Bioinformatics Volume 10 ; 10 ; >
-    au < ready ; exists ; 2013 ; 2013 ; Genomics, Proteomics and Bioinformatics Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2013 ; 2013 ; Genomics, Proteomics and Bioinformatics Volume 11 ; 11 ; >
     au < ready ; exists ; 2014 ; 2014 ; Genomics, Proteomics and Bioinformatics Volume 12 ; 12 ; >
     au < ready ; exists ; 2015 ; 2015 ; Genomics, Proteomics and Bioinformatics Volume 13 ; 13 ; >
-    au < ready ; exists ; 2016 ; 2016 ; Genomics, Proteomics and Bioinformatics Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; Genomics, Proteomics and Bioinformatics Volume 14 ; 14 ; >
     au < ready ; exists ; 2017 ; 2017 ; Genomics, Proteomics and Bioinformatics Volume 15 ; 15 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Genomics, Proteomics and Bioinformatics Volume 16 ; 16 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Genomics, Proteomics and Bioinformatics Volume 17 ; 17 ; >
@@ -9529,16 +9529,16 @@
 
     param[journal_id] = ieam
 
-    au < ready ; exists ; 2008 ; 2008 ; Integrated Environmental Assessment and Management Volume 4 ; 4 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Integrated Environmental Assessment and Management Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Integrated Environmental Assessment and Management Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Integrated Environmental Assessment and Management Volume 5 ; 5 ; >
     au < ready ; exists ; 2010 ; 2010 ; Integrated Environmental Assessment and Management Volume 6 ; 6 ; >
-    au < ready ; exists ; 2011 ; 2011 ; Integrated Environmental Assessment and Management Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; Integrated Environmental Assessment and Management Volume 7 ; 7 ; >
     au < ready ; exists ; 2012 ; 2012 ; Integrated Environmental Assessment and Management Volume 8 ; 8 ; >
     au < ready ; exists ; 2013 ; 2013 ; Integrated Environmental Assessment and Management Volume 9 ; 9 ; >
     au < ready ; exists ; 2014 ; 2014 ; Integrated Environmental Assessment and Management Volume 10 ; 10 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Integrated Environmental Assessment and Management Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Integrated Environmental Assessment and Management Volume 11 ; 11 ; >
     au < ready ; exists ; 2016 ; 2016 ; Integrated Environmental Assessment and Management Volume 12 ; 12 ; >
-    au < ready ; exists ; 2017 ; 2017 ; Integrated Environmental Assessment and Management Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Integrated Environmental Assessment and Management Volume 13 ; 13 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Integrated Environmental Assessment and Management Volume 14 ; 14 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Integrated Environmental Assessment and Management Volume 15 ; 15 ; >
     au < finished ; manifest ; 2020 ; 2020 ; Integrated Environmental Assessment and Management Volume 16 ; 16 ; reingest4.clockss.org:8082 >
@@ -9943,13 +9943,13 @@
 
     au < ready ; exists ; 2008 ; 2008 ; International Journal of Food Science & Technology Volume 43 ; 43 ; >
     au < ready ; exists ; 2009 ; 2009 ; International Journal of Food Science & Technology Volume 44 ; 44 ; >
-    au < ready ; exists ; 2010 ; 2010 ; International Journal of Food Science & Technology Volume 45 ; 45 ; >
-    au < ready ; exists ; 2011 ; 2011 ; International Journal of Food Science & Technology Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2010 ; 2010 ; International Journal of Food Science & Technology Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2011 ; 2011 ; International Journal of Food Science & Technology Volume 46 ; 46 ; >
     au < ready ; exists ; 2012 ; 2012 ; International Journal of Food Science & Technology Volume 47 ; 47 ; >
     au < ready ; exists ; 2013 ; 2013 ; International Journal of Food Science & Technology Volume 48 ; 48 ; >
     au < testing ; exists ; 2014 ; 2014 ; International Journal of Food Science & Technology Volume 49 ; 49 ; >
-    au < ready ; exists ; 2015 ; 2015 ; International Journal of Food Science & Technology Volume 50-51 ; 50-51 ; >
-    au < ready ; exists ; 2016 ; 2016 ; International Journal of Food Science & Technology Volume 51-52 ; 51-52 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; International Journal of Food Science & Technology Volume 50-51 ; 50-51 ; >
+    au < crawling ; exists ; 2016 ; 2016 ; International Journal of Food Science & Technology Volume 51-52 ; 51-52 ; >
     au < ready ; exists ; 2017 ; 2017 ; International Journal of Food Science & Technology Volume 52-53 ; 52-53 ; >
     au < frozen ; exists ; 2018 ; 2018 ; International Journal of Food Science & Technology Volume 53-54 ; 53-54 ; >
     au < frozen ; exists ; 2019 ; 2019 ; International Journal of Food Science & Technology Volume 54-55 ; 54-55 ; >
@@ -11167,8 +11167,8 @@
 
     param[journal_id] = jaah
 
-    au < ready ; exists ; 2008 ; 2008 ; Journal of Aquatic Animal Health Volume 20 ; 20 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Journal of Aquatic Animal Health Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Journal of Aquatic Animal Health Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Journal of Aquatic Animal Health Volume 21 ; 21 ; >
     au < ready ; exists ; 2010 ; 2010 ; Journal of Aquatic Animal Health Volume 22 ; 22 ; >
     au < ready ; exists ; 2011 ; 2011 ; Journal of Aquatic Animal Health Volume 23 ; 23 ; >
     au < ready ; exists ; 2012 ; 2012 ; Journal of Aquatic Animal Health Volume 24 ; 24 ; >
