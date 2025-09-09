@@ -65,7 +65,7 @@
     au < finished ; manifest ; 2011 ; 9780784478813 ;  ; 9780784478813 ; Failure to Act : The Economic Impact of Current Investment Trends in Water and Wastewater Treatment Infrastructure (9780784478813) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; 9780784412589 ; 9780784477182 ; 9780784412589 ; Anchorage Design for Petrochemical Facilities (9780784412589) ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2012 ; 9780784478790 ;  ; 9780784478790 ; Failure to Act : The Economic Impact of Current Investment Trends in Airports, Inland Waterways, and Marine Ports Infrastructure (9780784478790) ; >
-    au < crawling ; exists ; 2013 ;  ; 9780784478837 ; 9780784478837 ; 2013 Report Card for America's Infrastructure (9780784478837) ; >
+    au < frozen ; exists ; 2013 ;  ; 9780784478837 ; 9780784478837 ; 2013 Report Card for America's Infrastructure (9780784478837) ; >
     au < frozen ; exists ; 2013 ; 9780784413173 ; 9780784478011 ; 9780784413173 ; Raise the Bar : Strengthening the Civil Engineering Profession (9780784413173) ; >
     au < finished ; manifest ; 2013 ; 9780784478820 ;  ; 9780784478820 ; Failure to Act : The Impact of Current Infrastructure Investment on America's Economic Future (9780784478820) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2014 ;  ; 9780784478240 ; 9780784478240 ; Snow-Related Roof Collapse during the Winter of 2010–2011 : Implications for Building Codes (9780784478240) ; reingest1.clockss.org:8082 >
@@ -227,7 +227,7 @@
     au < frozen ; exists ; 1993 ; 9780872628458 ; 9780784473658 ; 9780872628458 ; Civil Engineering for the Community (9780872628458) ; >
     au < frozen ; exists ; 1993 ; 9780872628571 ; 9780784473689 ; 9780872628571 ; Landmark American Bridges (9780872628571) ; >
     au < frozen ; exists ; 1993 ; 9780872628847 ; 9780784473696 ; 9780872628847 ; Win-Win Negotiating : A Professional's Playbook (9780872628847) ; >
-    au < crawling ; exists ; 1993 ; 9780872628953 ; 9780784478752 ; 9780872628953 ; Applications of Fiber Optic Sensors in Engineering Mechanics (9780872628953) ; >
+    au < frozen ; exists ; 1993 ; 9780872628953 ; 9780784478752 ; 9780872628953 ; Applications of Fiber Optic Sensors in Engineering Mechanics (9780872628953) ; >
     au < frozen ; exists ; 1994 ; 9780872629035 ; 9780784473719 ; 9780872629035 ; Dispute Avoidance and Resolution for Consulting Engineers (9780872629035) ; >
     au < frozen ; exists ; 1994 ; 9780872629325 ; 9780784473733 ; 9780872629325 ; Technological Advance in Japanese Building Design and Construction (9780872629325) ; >
     au < frozen ; exists ; 1995 ; 9780784400739 ; 9780784473832 ; 9780784400739 ; Guidelines for Design of Intakes for Hydroelectric Plants (9780784400739) ; >
@@ -237,7 +237,7 @@
     au < frozen ; exists ; 1996 ; 9780784401002 ; 9780784470091 ; 9780784401002 ; Marketing and Selling A/E and Other Engineering Services (9780784401002) ; >
     au < frozen ; exists ; 1996 ; 9780784401378 ; 9780784470138 ; 9780784401378 ; Quality of Ground Water : Guidelines for Selection and Application of Frequently Used Models (9780784401378) ; >
     au < frozen ; exists ; 1996 ; 9780784401385 ; 9780784470145 ; 9780784401385 ; Hydrology Handbook (9780784401385) ; >
-    au < crawling ; exists ; 1996 ; 9780784401477 ; 9780784470152 ; 9780784401477 ; Fundamentals of Hydraulic Dredging (9780784401477) ; >
+    au < frozen ; exists ; 1996 ; 9780784401477 ; 9780784470152 ; 9780784401477 ; Fundamentals of Hydraulic Dredging (9780784401477) ; >
     au < frozen ; exists ; 1996 ; 9780784401606 ; 9780784470169 ; 9780784401606 ; Management of the Hanford Engineer Works in World War II : How the Corps, DuPont and the Metallurgical Laboratory Fast Tracked the Original Plutonium Works (9780784401606) ; >
     au < ready ; exists ; 1996 ; 9780784401705 ; 9780784470176 ; 9780784401705 ; Numerical Methods in Structural Mechanics (9780784401705) ; >
     au < frozen ; exists ; 1996 ; 9780784401750 ; 9780784470183 ; 9780784401750 ; Preparing for Project Management : A Guide for the New Architectural Engineering Project Manager in Private Practice (9780784401750) ; >
@@ -330,7 +330,7 @@
     au < frozen ; exists ; 2007 ; 9780784408506 ; 9780784471531 ; 9780784408506 ; Modeling Complex Engineering Structures (9780784408506) ; >
     au < frozen ; exists ; 2007 ; 9780784408575 ; 9780784471609 ; 9780784408575 ; Snow Loads : A Guide to the Snow Load Provisions of ASCE 7-05 (9780784408575) ; >
     au < frozen ; exists ; 2007 ; 9780784408599 ; 9780784471623 ; 9780784408599 ; Waste Containment Facilities : Guidance for Construction Quality Assurance and Construction Quality Control of Liner and Cover Systems (9780784408599) ; >
-    au < crawling ; exists ; 2007 ; 9780784408827 ; 9780784471746 ; 9780784408827 ; Pipe Bursting Projects (9780784408827) ; >
+    au < frozen ; exists ; 2007 ; 9780784408827 ; 9780784471746 ; 9780784408827 ; Pipe Bursting Projects (9780784408827) ; >
     au < frozen ; exists ; 2007 ; 9780784408872 ; 9780784471777 ; 9780784408872 ; Appropriative Rights Model Water Code (9780784408872) ; >
     au < frozen ; exists ; 2007 ; 9780784408919 ; 9780784471807 ; 9780784408919 ; Risk and Reliability Analysis : A Handbook for Civil and Environmental Engineers (9780784408919) ; >
     au < frozen ; exists ; 2007 ; 9780784408933 ; 9780784471821 ; 9780784408933 ; The New Orleans Hurricane Protection System : What Went Wrong and Why (9780784408933) ; >
@@ -344,19 +344,19 @@
     au < frozen ; exists ; 2007 ; 9780784409312 ; 9780784471982 ; 9780784409312 ; Hurricane Katrina Damage Assessment : Louisiana, Alabama, and Mississippi Ports and Coasts (9780784409312) ; >
     au < crawling ; exists ; 2007 ; 9780784409367 ; 9780784472026 ; 9780784409367 ; The 21st-Century Engineer : A Proposal for Engineering Education Reform (9780784409367) ; >
     au < frozen ; exists ; 2007 ; 9780784409398 ; 9780784472057 ; 9780784409398 ; Natural Processes and Systems for Hazardous Waste Treatment (9780784409398) ; >
-    au < crawling ; exists ; 2007 ; 9780784409473 ; 9780784472071 ; 9780784409473 ; Permafrost Foundation : State of the Practice (9780784409473) ; >
+    au < frozen ; exists ; 2007 ; 9780784409473 ; 9780784472071 ; 9780784409473 ; Permafrost Foundation : State of the Practice (9780784409473) ; >
     au < ready ; exists ; 2008 ; 9780784408148 ; 9780784471289 ; 9780784408148 ; Sedimentation Engineering : Processes, Measurements, Modeling, and Practice (9780784408148) ; >
     au < frozen ; exists ; 2008 ; 9780784409190 ; 9780784471883 ; 9780784409190 ; Treatment System Hydraulics (9780784409190) ; >
     au < frozen ; exists ; 2008 ; 9780784409206 ; 9780784471890 ; 9780784409206 ; Becoming Leaders: A Practical Handbook for Women in Engineering, Science, and Technology, First Edition (9780784409206) ; >
     au < frozen ; exists ; 2008 ; 9780784409350 ; 9780784472019 ; 9780784409350 ; Substation Structure Design Guide (9780784409350) ; >
-    au < crawling ; exists ; 2008 ; 9780784409480 ; 9780784472088 ; 9780784409480 ; Washington Roebling's Father : A Memoir of John A. Roebling (9780784409480) ; >
+    au < frozen ; exists ; 2008 ; 9780784409480 ; 9780784472088 ; 9780784409480 ; Washington Roebling's Father : A Memoir of John A. Roebling (9780784409480) ; >
     au < frozen ; exists ; 2008 ; 9780784409497 ; 9780784472095 ; 9780784409497 ; Geotechnical Testing, Observation, and Documentation (9780784409497) ; >
     au < crawling ; exists ; 2008 ; 9780784409510 ; 9780784472101 ; 9780784409510 ; Sumatra-Andaman Islands Earthquake and Tsunami of December 26, 2004 : Lifeline Performance (9780784409510) ; >
     au < frozen ; exists ; 2008 ; 9780784409572 ; 9780784472156 ; 9780784409572 ; Verification and Validation of 3D Free-Surface Flow Models (9780784409572) ; >
     au < frozen ; exists ; 2008 ; 9780784409589 ; 9780784472163 ; 9780784409589 ; Infrastructure Reporting and Asset Management : Best Practices and Opportunities (9780784409589) ; >
     au < frozen ; exists ; 2008 ; 9780784409633 ; 9780784472200 ; 9780784409633 ; Performance-Based Design of Structural Steel for Fire Conditions : A Calculation Methodology (9780784409633) ; >
     au < frozen ; exists ; 2008 ; 9780784409657 ; 9780784472224 ; 9780784409657 ; Civil Engineering Body of Knowledge for the 21st Century : Preparing the Civil Engineer for the Future (9780784409657) ; >
-    au < crawling ; exists ; 2008 ; 9780784409671 ; 9780784472231 ; 9780784409671 ; Residential Land Development Practices : A Textbook on Developing Land into Finished Lots (9780784409671) ; >
+    au < frozen ; exists ; 2008 ; 9780784409671 ; 9780784472231 ; 9780784409671 ; Residential Land Development Practices : A Textbook on Developing Land into Finished Lots (9780784409671) ; >
     au < frozen ; exists ; 2008 ; 9780784409732 ; 9780784472286 ; 9780784409732 ; Beyond Failure : Forensic Case Studies for Civil Engineers (9780784409732) ; >
     au < frozen ; exists ; 2008 ; 9780784409794 ; 9780784472347 ; 9780784409794 ; Pipe Ramming Projects (9780784409794) ; >
     au < frozen ; exists ; 2008 ; 9780784409831 ; 9780784472385 ; 9780784409831 ; Diversity by Design : Guide to Fostering Diversity in the Civil Engineering Workforce (9780784409831) ; >

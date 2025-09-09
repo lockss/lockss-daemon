@@ -7174,7 +7174,7 @@
     param[journal_id] = fst
 
     au < crawling ; exists ; 2016 ; 2016 ; Food Science and Technology Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Food Science and Technology Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Food Science and Technology Volume 31 ; 31 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Food Science and Technology Volume 32 ; 32 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Food Science and Technology Volume 33 ; 33 ; >
     au < finished ; manifest ; 2020 ; 2020 ; Food Science and Technology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
@@ -11983,9 +11983,9 @@
     au < ready ; exists ; 2009 ; 2009 ; Journal of Evolutionary Biology Volume 22 ; 22 ; >
     au < ready ; exists ; 2010 ; 2010 ; Journal of Evolutionary Biology Volume 23 ; 23 ; >
     au < ready ; exists ; 2011 ; 2011 ; Journal of Evolutionary Biology Volume 24 ; 24 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; Journal of Evolutionary Biology Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; Journal of Evolutionary Biology Volume 25 ; 25 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of Evolutionary Biology Volume 26 ; 26 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Journal of Evolutionary Biology Volume 27 ; 27 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Journal of Evolutionary Biology Volume 27 ; 27 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Journal of Evolutionary Biology Volume 28 ; 28 ; >
     au < frozen ; exists ; 2016 ; 2016 ; Journal of Evolutionary Biology Volume 29 ; 29 ; >
     au < crawling ; exists ; 2017 ; 2017 ; Journal of Evolutionary Biology Volume 30 ; 30 ; >
@@ -13319,16 +13319,16 @@
 
     param[journal_id] = joh
 
-    au < crawling ; exists ; 2008 ; 2008 ; Journal of Occupational Health Volume 50 ; 50 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; Journal of Occupational Health Volume 51 ; 51 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Journal of Occupational Health Volume 50 ; 50 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Journal of Occupational Health Volume 51 ; 51 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Journal of Occupational Health Volume 52 ; 52 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Journal of Occupational Health Volume 53 ; 53 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Journal of Occupational Health Volume 54 ; 54 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Journal of Occupational Health Volume 55 ; 55 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Journal of Occupational Health Volume 56 ; 56 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; Journal of Occupational Health Volume 57 ; 57 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Journal of Occupational Health Volume 58 ; 58 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Journal of Occupational Health Volume 59 ; 59 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Journal of Occupational Health Volume 56 ; 56 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; Journal of Occupational Health Volume 57 ; 57 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Journal of Occupational Health Volume 58 ; 58 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Journal of Occupational Health Volume 59 ; 59 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Occupational Health Volume 60 ; 60 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Journal of Occupational Health Volume 61 ; 61 ; >
     au < finished ; manifest ; 2020 ; 2020 ; Journal of Occupational Health Volume 62 ; 62 ; reingest2.clockss.org:8085 >
@@ -15256,7 +15256,7 @@
 
     param[journal_id] = mcf
 
-    au < crawling ; exists ; 2009 ; 2009 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 1 ; 1 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 2 ; 2 ; >
     au < frozen ; exists ; 2011 ; 2011 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 3 ; 3 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 4 ; 4 ; >
@@ -16809,14 +16809,14 @@
     comment[continues] = 0033-0779
     param[journal_id] = naja
 
-    au < crawling ; exists ; 2008 ; 2008 ; North American Journal of Aquaculture Volume 70 ; 70 ; >
-    au < crawling ; exists ; 2009 ; 2009 ; North American Journal of Aquaculture Volume 71 ; 71 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; North American Journal of Aquaculture Volume 72 ; 72 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; North American Journal of Aquaculture Volume 70 ; 70 ; >
+    au < frozen ; exists ; 2009 ; 2009 ; North American Journal of Aquaculture Volume 71 ; 71 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; North American Journal of Aquaculture Volume 72 ; 72 ; >
     au < frozen ; exists ; 2011 ; 2011 ; North American Journal of Aquaculture Volume 73 ; 73 ; >
     au < crawling ; exists ; 2012 ; 2012 ; North American Journal of Aquaculture Volume 74 ; 74 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; North American Journal of Aquaculture Volume 75 ; 75 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; North American Journal of Aquaculture Volume 76 ; 76 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; North American Journal of Aquaculture Volume 77 ; 77 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; North American Journal of Aquaculture Volume 75 ; 75 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; North American Journal of Aquaculture Volume 76 ; 76 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; North American Journal of Aquaculture Volume 77 ; 77 ; >
     au < frozen ; exists ; 2016 ; 2016 ; North American Journal of Aquaculture Volume 78 ; 78 ; >
     au < frozen ; exists ; 2017 ; 2017 ; North American Journal of Aquaculture Volume 79 ; 79 ; >
     au < frozen ; exists ; 2018 ; 2018 ; North American Journal of Aquaculture Volume 80 ; 80 ; >
@@ -16841,16 +16841,16 @@
 
     param[journal_id] = najfm
 
-    au < crawling ; exists ; 2008 ; 2008 ; North American Journal of Fisheries Management Volume 28 ; 28 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; North American Journal of Fisheries Management Volume 28 ; 28 ; >
     au < frozen ; exists ; 2009 ; 2009 ; North American Journal of Fisheries Management Volume 29 ; 29 ; >
     au < frozen ; exists ; 2010 ; 2010 ; North American Journal of Fisheries Management Volume 30 ; 30 ; >
     au < crawling ; exists ; 2011 ; 2011 ; North American Journal of Fisheries Management Volume 31 ; 31 ; >
-    au < crawling ; exists ; 2012 ; 2012 ; North American Journal of Fisheries Management Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2012 ; 2012 ; North American Journal of Fisheries Management Volume 32 ; 32 ; >
     au < frozen ; exists ; 2013 ; 2013 ; North American Journal of Fisheries Management Volume 33 ; 33 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; North American Journal of Fisheries Management Volume 34 ; 34 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; North American Journal of Fisheries Management Volume 35 ; 35 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; North American Journal of Fisheries Management Volume 34 ; 34 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; North American Journal of Fisheries Management Volume 35 ; 35 ; >
     au < crawling ; exists ; 2016 ; 2016 ; North American Journal of Fisheries Management Volume 36 ; 36 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; North American Journal of Fisheries Management Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; North American Journal of Fisheries Management Volume 37 ; 37 ; >
     au < frozen ; exists ; 2018 ; 2018 ; North American Journal of Fisheries Management Volume 38 ; 38 ; >
     au < frozen ; exists ; 2019 ; 2019 ; North American Journal of Fisheries Management Volume 39 ; 39 ; >
     au < finished ; manifest ; 2020 ; 2020 ; North American Journal of Fisheries Management Volume 40 ; 40 ; reingest4.clockss.org:8082 >
@@ -20037,16 +20037,16 @@
     param[journal_id] = jrssig
     #move from Wiley by 2023-01-01
 
-    au < crawling ; exists ; 2008 ; 2008 ; Significance Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Significance Volume 5 ; 5 ; >
     au < crawling ; exists ; 2009 ; 2009 ; Significance Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Significance Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Significance Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Significance Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Significance Volume 8 ; 8 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Significance Volume 9 ; 9 ; >
     au < frozen ; exists ; 2013 ; 2013 ; Significance Volume 10 ; 10 ; >
     au < crawling ; exists ; 2014 ; 2014 ; Significance Volume 11 ; 11 ; >
     au < frozen ; exists ; 2015 ; 2015 ; Significance Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Significance Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Significance Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Significance Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Significance Volume 14 ; 14 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Significance Volume 15 ; 15 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Significance Volume 16 ; 16 ; >
     au < finished ; manifest ; 2020 ; 2020 ; Significance Volume 17 ; 17 ; reingest3.clockss.org:8083 >
@@ -22108,14 +22108,14 @@
 
     param[journal_id] = ismej
 
-    au < crawling ; exists ; 2008 ; 2008 ; The ISME Journal Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; The ISME Journal Volume 2 ; 2 ; >
     au < frozen ; exists ; 2009 ; 2009 ; The ISME Journal Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; The ISME Journal Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; The ISME Journal Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; The ISME Journal Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; The ISME Journal Volume 5 ; 5 ; >
     au < crawling ; exists ; 2012 ; 2012 ; The ISME Journal Volume 6 ; 6 ; >
     au < frozen ; exists ; 2013 ; 2013 ; The ISME Journal Volume 7 ; 7 ; >
     au < frozen ; exists ; 2014 ; 2014 ; The ISME Journal Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2015 ; 2015 ; The ISME Journal Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2015 ; 2015 ; The ISME Journal Volume 9 ; 9 ; >
     au < frozen ; exists ; 2016 ; 2016 ; The ISME Journal Volume 10 ; 10 ; >
     au < notReady ; exists ; 2017 ; 2017 ; The ISME Journal Volume 11 ; 11 ; > #403 Forbidden, LXQUEUE-2052
     au < frozen ; exists ; 2018 ; 2018 ; The ISME Journal Volume 12 ; 12 ; >
@@ -24722,16 +24722,16 @@
 
     param[journal_id] = tafs
 
-    au < crawling ; exists ; 2008 ; 2008 ; Transactions of the American Fisheries Society Volume 137 ; 137 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Transactions of the American Fisheries Society Volume 137 ; 137 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Transactions of the American Fisheries Society Volume 138 ; 138 ; >
-    au < crawling ; exists ; 2010 ; 2010 ; Transactions of the American Fisheries Society Volume 139 ; 139 ; >
-    au < crawling ; exists ; 2011 ; 2011 ; Transactions of the American Fisheries Society Volume 140 ; 140 ; >
+    au < frozen ; exists ; 2010 ; 2010 ; Transactions of the American Fisheries Society Volume 139 ; 139 ; >
+    au < frozen ; exists ; 2011 ; 2011 ; Transactions of the American Fisheries Society Volume 140 ; 140 ; >
     au < frozen ; exists ; 2012 ; 2012 ; Transactions of the American Fisheries Society Volume 141 ; 141 ; >
-    au < crawling ; exists ; 2013 ; 2013 ; Transactions of the American Fisheries Society Volume 142 ; 142 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; Transactions of the American Fisheries Society Volume 143 ; 143 ; >
+    au < frozen ; exists ; 2013 ; 2013 ; Transactions of the American Fisheries Society Volume 142 ; 142 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; Transactions of the American Fisheries Society Volume 143 ; 143 ; >
     au < crawling ; exists ; 2015 ; 2015 ; Transactions of the American Fisheries Society Volume 144 ; 144 ; >
-    au < crawling ; exists ; 2016 ; 2016 ; Transactions of the American Fisheries Society Volume 145 ; 145 ; >
-    au < crawling ; exists ; 2017 ; 2017 ; Transactions of the American Fisheries Society Volume 146 ; 146 ; >
+    au < frozen ; exists ; 2016 ; 2016 ; Transactions of the American Fisheries Society Volume 145 ; 145 ; >
+    au < frozen ; exists ; 2017 ; 2017 ; Transactions of the American Fisheries Society Volume 146 ; 146 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Transactions of the American Fisheries Society Volume 147 ; 147 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Transactions of the American Fisheries Society Volume 148 ; 148 ; >
     au < finished ; manifest ; 2020 ; 2020 ; Transactions of the American Fisheries Society Volume 149 ; 149 ; reingest1.clockss.org:8082 >
