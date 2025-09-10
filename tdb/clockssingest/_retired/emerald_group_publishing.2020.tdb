@@ -9645,7 +9645,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Social Marketing Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Journal of Social Marketing Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Social Marketing Volume 6 ; 6 ; >
-    au < finished ; manifest ; 2017 ; Journal of Social Marketing Volume 7 ; 7 ; reingest3.clockss.org:8083 > #no access to permission page.
+    au < finished ; manifest ; 2017 ; Journal of Social Marketing Volume 7 ; 7 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Social Marketing Volume 8 ; 8 ; >
     au < finished ; manifest ; 2019 ; Journal of Social Marketing Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; Journal of Social Marketing Volume 10 ; 10 ; >
@@ -10040,7 +10040,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; The Learning Organization Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; The Learning Organization Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; The Learning Organization Volume 23 ; 23 ; >
-    au < finished ; manifest ; 2017 ; The Learning Organization Volume 24 ; 24 ; reingest4.clockss.org:8082 > #no access to permission page
+    au < finished ; manifest ; 2017 ; The Learning Organization Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2018 ; The Learning Organization Volume 25 ; 25 ; >
     au < finished ; manifest ; 2019 ; The Learning Organization Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; The Learning Organization Volume 27 ; 27 ; >
@@ -10166,7 +10166,7 @@
     au < finished ; manifest ; 2006 ; Library Hi Tech News Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; Library Hi Tech News Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2008 ; Library Hi Tech News Volume 25 ; 25 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2009 ; Library Hi Tech News Volume 26 ; 26 ; reingest3.clockss.org:8083 > #403 Forbidden
+    au < finished ; manifest ; 2009 ; Library Hi Tech News Volume 26 ; 26 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; Library Hi Tech News Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; Library Hi Tech News Volume 28 ; 28 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; Library Hi Tech News Volume 29 ; 29 ; reingest1.clockss.org:8082 >
@@ -10237,7 +10237,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; Library Management Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Library Management Volume 39 ; 39 ; >
     au < finished ; manifest ; 2019 ; Library Management Volume 40 ; 40 ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2020 ; Library Management Volume 41 ; 41 ; reingest4.clockss.org:8082 > #500 error https://www.emerald.com/insight/content/doi/10.1108/LM-02-2017%200022/full/pdf?title=libraries-and-technology-canadian-and-malaysian-copyright-exceptions
+    au < finished ; manifest ; 2020 ; Library Management Volume 41 ; 41 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2021 ; Library Management Volume 42 ; 42 ; >
     au < frozen ; exists ; 2022 ; Library Management Volume 43 ; 43 ; >
     au < frozen ; exists ; 2023 ; Library Management Volume 44 ; 44 ; >
@@ -11823,10 +11823,10 @@
     au < finished ; manifest ; 2019 ; Performance Measurement and Metrics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Performance Measurement and Metrics Volume 21 ; 21 ; reingest4.clockss.org:8082 >
     au < notReady ; exists ; 2021 ; Performance Measurement and Metrics Volume 22 ; 22 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
-    au < frozen ; exists ; 2022 ; Performance Measurement and Metrics Volume 23 ; 23 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
-    au < frozen ; exists ; 2023 ; Performance Measurement and Metrics Volume 24 ; 24 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
-    au < frozen ; exists ; 2024 ; Performance Measurement and Metrics Volume 25 ; 25 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
-    au < doNotProcess ; exists ; 2025 ; Performance Measurement and Metrics Volume 26 ; 26 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
+    au < frozen ; exists ; 2022 ; Performance Measurement and Metrics Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2023 ; Performance Measurement and Metrics Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2024 ; Performance Measurement and Metrics Volume 25 ; 25 ; >
+    au < doNotProcess ; exists ; 2025 ; Performance Measurement and Metrics Volume 26 ; 26 ; >
 
   }
 
@@ -11959,10 +11959,10 @@
     au < finished ; manifest ; 2019 ; Pigment & Resin Technology Volume 48 ; 48 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; Pigment & Resin Technology Volume 49 ; 49 ; >
     au < notReady ; exists ; 2021 ; Pigment & Resin Technology Volume 50 ; 50 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PRT-12-2019-0119/full/html
-    au < frozen ; exists ; 2022 ; Pigment & Resin Technology Volume 51 ; 51 ; > #510 https://www.emerald.com/insight/content/doi/10.1108/PRT-12-2019-0119/full/html
-    au < frozen ; exists ; 2023 ; Pigment & Resin Technology Volume 52 ; 52 ; > #520 https://www.emerald.com/insight/content/doi/10.1108/PRT-12-2019-0119/full/html
-    au < frozen ; exists ; 2024 ; Pigment & Resin Technology Volume 53 ; 53 ; > #530 https://www.emerald.com/insight/content/doi/10.1108/PRT-12-2019-0119/full/html
-    au < doNotProcess ; exists ; 2025 ; Pigment & Resin Technology Volume 54 ; 54 ; > #540 https://www.emerald.com/insight/content/doi/10.1108/PRT-12-2019-0119/full/html
+    au < frozen ; exists ; 2022 ; Pigment & Resin Technology Volume 51 ; 51 ; >
+    au < frozen ; exists ; 2023 ; Pigment & Resin Technology Volume 52 ; 52 ; >
+    au < frozen ; exists ; 2024 ; Pigment & Resin Technology Volume 53 ; 53 ; >
+    au < doNotProcess ; exists ; 2025 ; Pigment & Resin Technology Volume 54 ; 54 ; >
 
   }
 
@@ -12179,11 +12179,11 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Property Management Volume 36 ; 36 ; >
     au < finished ; manifest ; 2019 ; Property Management Volume 37 ; 37 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; Property Management Volume 38 ; 38 ; >
-    au < finished ; manifest ; 2021 ; Property Management Volume 39 ; 39 ; reingest4.clockss.org:8082 > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
-    au < frozen ; exists ; 2022 ; Property Management Volume 40 ; 40 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
-    au < frozen ; exists ; 2023 ; Property Management Volume 41 ; 41 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
-    au < frozen ; exists ; 2024 ; Property Management Volume 42 ; 42 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
-    au < doNotProcess ; exists ; 2025 ; Property Management Volume 43 ; 43 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
+    au < finished ; manifest ; 2021 ; Property Management Volume 39 ; 39 ; reingest4.clockss.org:8082 >
+    au < frozen ; exists ; 2022 ; Property Management Volume 40 ; 40 ; >
+    au < frozen ; exists ; 2023 ; Property Management Volume 41 ; 41 ; >
+    au < frozen ; exists ; 2024 ; Property Management Volume 42 ; 42 ; >
+    au < doNotProcess ; exists ; 2025 ; Property Management Volume 43 ; 43 ; >
 
   }
 

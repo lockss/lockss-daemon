@@ -9518,6 +9518,24 @@
 
   {
     title <
+      name = Journal of Mental Health Promotion ;
+      issn = 1475-9535 ;
+      eissn = 2977-7054 ;
+      issnl = 1475-9535
+    >
+
+    comment[journal_issn] = 1475-9535
+    param[journal_id] = jpmh
+    #continues = 1462-3730
+    #continued_by = 1746-5729
+
+    au < exists ; exists ; 2003 ; 2003 ; Journal of Mental Health Promotion Volume 2 ; 2 ; >
+    au < exists ; exists ; 2004 ; 2004 ; Journal of Mental Health Promotion Volume 3 ; 3 ; >
+
+  }
+
+  {
+    title <
       name = Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society ;
       issn = 1746-5729 ;
       eissn = 2042-8731 ;
@@ -9526,7 +9544,7 @@
 
     comment[journal_issn] = 1746-5729
     param[journal_id] = jpmh
-    #continues = 1462-3730
+    #continues = 1475-9535
 
     au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 3 ; 3 ; >
@@ -9676,6 +9694,7 @@
     title <
       name = The Journal of Risk Finance ;
       issn = 1526-5943 ;
+      eissn = 2331-2947 ;
       issnl = 1526-5943
     >
 
@@ -9720,7 +9739,8 @@
     >
 
     comment[journal_issn] = 1758-552X
-    param[journal_id] = jstpc
+    param[journal_id] = jstpm
+    #continued_by = 2053-4620
 
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Science and Technology Policy in China Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Science and Technology Policy in China Volume 2 ; 2 ; >
@@ -9766,6 +9786,7 @@
     title <
       name = Journal of Services Marketing ;
       issn = 0887-6045 ;
+      eissn = 2054-1651 ;
       issnl = 0887-6045
     >
 
@@ -9864,6 +9885,7 @@
     title <
       name = Journal of Social Marketing ;
       issn = 2042-6763 ;
+      eissn = 2042-6771 ;
       issnl = 2042-6763
     >
 
@@ -9876,7 +9898,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Social Marketing Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Social Marketing Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Social Marketing Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Social Marketing Volume 7 ; 7 ; > #no access to permission page.
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Social Marketing Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Social Marketing Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Social Marketing Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Social Marketing Volume 10 ; 10 ; >
@@ -9988,11 +10010,12 @@
     title <
       name = Employee Counselling Today ;
       issn = 0955-8217 ;
+      eissn = 2054-5614 ;
       issnl = 0955-8217
     >
 
     comment[journal_issn] = 0955-8217
-    param[journal_id] = ect
+    param[journal_id] = jwl
     #continued_by = 1366-5626
 
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Employee Counselling Today Volume 1 ; 1 ; >
@@ -10108,7 +10131,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Kybernetes Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Kybernetes Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Kybernetes Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Kybernetes Volume 48 ; 48 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/K-05-2018-0267/full/html
+    au < manifest ; exists ; 2019 ; 2019 ; Kybernetes Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Kybernetes Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Kybernetes Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Kybernetes Volume 51 ; 51 ; >
@@ -10182,11 +10205,12 @@
     title <
       name = Leadership in Health Services ;
       issn = 1366-0756 ;
+      eissn = 2051-3135 ;
       issnl = 1366-0756
     >
 
     comment[journal_issn] = 1366-0756
-    param[journal_id] = lhsv
+    param[journal_id] = lhs
     #continued_by = 1751-1879
 
     au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Leadership in Health Services Volume 10 ; 10 ; >
@@ -10271,7 +10295,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Learning Organization Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Learning Organization Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Learning Organization Volume 23 ; 23 ; >
-    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Learning Organization Volume 24 ; 24 ; > #no access to permission page
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Learning Organization Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; The Learning Organization Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; The Learning Organization Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; The Learning Organization Volume 27 ; 27 ; >
@@ -10309,11 +10333,12 @@
 
     title <
       name = Library Consortium Management: An International Journal ;
-      issn = 1466-2760 ;
+      issn = 1466-2752 ;
+      eissn = 1466-2760 ;
       issnl = 1466-2752
     >
 
-    comment[journal_issn] = 1466-2760
+    comment[journal_issn] = 1466-2752
     param[journal_id] = lcmij
 
     au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Library Consortium Management: An International Journal Volume 1 ; 1 ; >
@@ -10381,23 +10406,24 @@
     title <
       name = Library Hi Tech News ;
       issn = 0741-9058 ;
+      issn = 2054-1678 ;
       issnl = 0741-9058
     >
 
     comment[journal_issn] = 0741-9058
     param[journal_id] = lhtn
 
-    au < manifest ; exists ; 1999 ; 1999 ; Library Hi Tech News Volume 16 ; 16 ; > #no substance
+    au < manifest ; exists ; 1999 ; 1999 ; Library Hi Tech News Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Library Hi Tech News Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; Library Hi Tech News Volume 18 ; 18 ; > #403 Forbidden https://d1bxh8uas1mnw7.cloudfront.net/assets/embed
+    au < manifest ; exists ; 2001 ; 2001 ; Library Hi Tech News Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Library Hi Tech News Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Library Hi Tech News Volume 20 ; 20 ; > #No pdfs
+    au < manifest ; exists ; 2003 ; 2003 ; Library Hi Tech News Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Library Hi Tech News Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Library Hi Tech News Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Library Hi Tech News Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Library Hi Tech News Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Library Hi Tech News Volume 25 ; 25 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Library Hi Tech News Volume 26 ; 26 ; > #403 Forbidden
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Library Hi Tech News Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Library Hi Tech News Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Library Hi Tech News Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Library Hi Tech News Volume 29 ; 29 ; >
@@ -10468,7 +10494,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Library Management Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Library Management Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Library Management Volume 40 ; 40 ; >
-    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Library Management Volume 41 ; 41 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/LM-02-2017%200022/full/pdf?title=libraries-and-technology-canadian-and-malaysian-copyright-exceptions
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Library Management Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Library Management Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Library Management Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Library Management Volume 44 ; 44 ; >
@@ -10486,7 +10512,7 @@
     >
 
     comment[journal_issn] = 0024-2535
-    param[journal_id] = lr
+    param[journal_id] = gkmc
     #continued_by = 2514-9342
 
     au < exists ; exists ; 1928 ; 1928 ; Library Review Volume 1 ; 1 ; >
@@ -10561,6 +10587,7 @@
     title <
       name = Global Knowledge, Memory and Communication ;
       issn = 2514-9342 ;
+      issn = 2514-9350 ;
       issnl = 2514-9342
     >
 
@@ -10770,7 +10797,7 @@
     >
 
     comment[journal_issn] = 0140-9174
-    param[journal_id] = mrn
+    param[journal_id] = mrr
     comment[continued_by] = 2040-8269
 
     au < exists ; exists ; 1978 ; 1978 ; Management Research News Volume 1 ; 1 ; >
@@ -10812,12 +10839,14 @@
     title <
       name = Management Research Review ;
       issn = 2040-8269 ;
+      eissn = 2040-8277 ;
       issnl = 2040-8269
     >
 
     comment[journal_issn] = 2040-8269
     param[journal_id] = mrr
     # online from 2010
+    #continues = 0140-9174
 
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Management Research Review Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Management Research Review Volume 34 ; 34 ; >
@@ -11075,7 +11104,8 @@
     >
 
     comment[journal_issn] = 0960-4529
-    param[journal_id] = msq
+    param[journal_id] = jstp
+    #continued_by = 2055-6225
 
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Managing Service Quality Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; Managing Service Quality Volume 2 ; 2 ; >
@@ -11210,9 +11240,8 @@
       issn = 1022-2529
     >
 
-    {
     comment[journal_issn] = 1022-2529
-    param[journal_id] = mar
+    param[journal_id] = medar
 
     au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Meditari Accountancy Research Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Meditari Accountancy Research Volume 9 ; 9 ; >
@@ -11226,9 +11255,15 @@
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Meditari Accountancy Research Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Meditari Accountancy Research Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Meditari Accountancy Research Volume 19 ; 19 ; >
-    }
 
-    {
+  }
+
+  {
+    title <
+      name = Meditari Accountancy Research ;
+      issn = 2049-372X ;
+      eissn = 2049-3738
+    >
     comment[journal_issn] = 2049-372X
     param[journal_id] = medar
 
@@ -11239,7 +11274,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Meditari Accountancy Research Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Meditari Accountancy Research Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Meditari Accountancy Research Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Meditari Accountancy Research Volume 27 ; 27 ; > #500 error 
+    au < manifest ; exists ; 2019 ; 2019 ; Meditari Accountancy Research Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Meditari Accountancy Research Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Meditari Accountancy Research Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Meditari Accountancy Research Volume 30 ; 30 ; >
@@ -11247,7 +11282,6 @@
     au < manifest ; exists ; 2024 ; 2024 ; Meditari Accountancy Research Volume 32 ; 32 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Meditari Accountancy Research Volume 33 ; 33 ; >
 
-    }
 
   }
 
@@ -11255,11 +11289,12 @@
     title <
       name = A Life in the Day ;
       issn = 1366-6282 ;
+      eissn = 2054-5533 ;
       issnl = 1366-6282
     >
 
     comment[journal_issn] = 1366-6282
-    param[journal_id] = ald
+    param[journal_id] = mhsi
     #continued_by = 2042-8308
 
     au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; A Life in the Day Volume 1 ; 1 ; >
@@ -11377,8 +11412,8 @@
     au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; Microelectronics International Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; Microelectronics International Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; Microelectronics International Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1996 ; 1996 ; Microelectronics International Volume 13 ; 13 ; > #no substance
-    au < manifest ; exists ; 1997 ; 1997 ; Microelectronics International Volume 14 ; 14 ; > #no substance
+    au < manifest ; exists ; 1996 ; 1996 ; Microelectronics International Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1997 ; 1997 ; Microelectronics International Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Microelectronics International Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Microelectronics International Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Microelectronics International Volume 17 ; 17 ; >
@@ -11419,7 +11454,8 @@
     >
 
     comment[journal_issn] = 1750-497X
-    param[journal_id] = metj
+    param[journal_id] = jme
+    #continued_by = 2053-535X
 
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Multicultural Education & Technology Journal Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Multicultural Education & Technology Journal Volume 2 ; 2 ; >
@@ -11428,6 +11464,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Multicultural Education & Technology Journal Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Multicultural Education & Technology Journal Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Multicultural Education & Technology Journal Volume 7 ; 7 ; >
+    au < exists ; exists ; 2014 ; 2014 ; Multicultural Education & Technology Journal Volume 8 ; 8 ; >
 
   }
 
@@ -11470,7 +11507,8 @@
   {
     title <
       name = Multinational Business Review ;
-      issn =  1525-383X ;
+      issn = 1525-383X ;
+      eissn = 2054-1686 ;
       issnl = 1525-383X
     >
 
@@ -11478,6 +11516,10 @@
     param[journal_id] = mbr
     # online from 2007
 
+    au < exists ; exists ; 2003 ; 2003 ; Multinational Business Review Volume 11 ; 11 ; >
+    au < exists ; exists ; 2004 ; 2004 ; Multinational Business Review Volume 12 ; 12 ; >
+    au < exists ; exists ; 2005 ; 2005 ; Multinational Business Review Volume 13 ; 13 ; >
+    au < exists ; exists ; 2006 ; 2006 ; Multinational Business Review Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Multinational Business Review Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Multinational Business Review Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Multinational Business Review Volume 17 ; 17 ; >
@@ -11539,7 +11581,7 @@
     >
 
     comment[journal_issn] = 0307-4803
-    param[journal_id] = nlw
+    param[journal_id] = ils
     #continued_by = 2398-5348
 
     au < exists ; exists ; 1899 ; 1899 ; New Library World Volume 1 ; 1 ; >
@@ -11667,6 +11709,7 @@
     title <
       name = Information and Learning Science ;
       issn = 2398-5348 ;
+      eissn = 2398-5356 ;
       issnl = 2398-5348
     >
 
@@ -11760,11 +11803,12 @@
     title <
       name = OCLC Micro ;
       issn = 8756-5196 ;
+      eissn = 2377-620X ;
       issnl = 8756-5196
     >
 
     comment[journal_issn] = 8756-5196
-    param[journal_id] = oclcm
+    param[journal_id] = dlp
     #continued_by = 1065-075X
 
     au < exists ; exists ; 1985 ; 1985 ; OCLC Micro Volume 1 ; 1 ; >
@@ -11782,11 +11826,12 @@
     title <
       name = OCLC Systems & Services ;
       issn = 1065-075X ;
+      issn = 2054-1694 ;
       issnl = 1065-075X
     >
 
     comment[journal_issn] = 1065-075X
-    param[journal_id] = oclc
+    param[journal_id] = dlp
     #continues = 8756-5196
     #continued_by = 2059-5816
 
@@ -11820,6 +11865,7 @@
     title <
       name = Digital Library Perspectives ;
       issn = 2059-5816 ;
+      eissn = 2059-5824 ;
       issnl = 2059-5816
     >
 
@@ -11885,11 +11931,12 @@
     title <
       name = Online Review ;
       issn = 0309-314X ;
+      eissn = 2396-9091 ;
       issnl = 0309-314X
     >
 
     comment[journal_issn] = 0309-314X
-    param[journal_id] = or
+    param[journal_id] = oir
     #continued_by = 1353-2642
 
     au < exists ; exists ; 1977 ; 1977 ; Online Review Volume 1 ; 1 ; >
@@ -11915,11 +11962,12 @@
     title <
       name = Online and CD-Rom Review ;
       issn = 1353-2642 ;
+      eissn = 2396-9105 ;
       issnl = 1353-2642
     >
 
     comment[journal_issn] = 1353-2642
-    param[journal_id] = ocrr
+    param[journal_id] = oir
     #continues = 0309-314X
     #continued_by = 1468-4527
 
@@ -12065,11 +12113,11 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Performance Measurement and Metrics Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Performance Measurement and Metrics Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Performance Measurement and Metrics Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Performance Measurement and Metrics Volume 22 ; 22 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
-    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Performance Measurement and Metrics Volume 23 ; 23 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
-    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Performance Measurement and Metrics Volume 24 ; 24 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
-    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Performance Measurement and Metrics Volume 25 ; 25 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
-    au < manifest ; exists ; 2025 ; 2025 ; Performance Measurement and Metrics Volume 26 ; 26 ; > #500 https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_PMM-03-2020-0015/urn:emeraldgroup.com:asset:id:binary:PMM-03-2020-0015_suppl1.xlsx
+    au < manifest ; exists ; 2021 ; 2021 ; Performance Measurement and Metrics Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Performance Measurement and Metrics Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Performance Measurement and Metrics Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Performance Measurement and Metrics Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Performance Measurement and Metrics Volume 26 ; 26 ; >
 
   }
 
@@ -12201,11 +12249,11 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Pigment & Resin Technology Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Pigment & Resin Technology Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Pigment & Resin Technology Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Pigment & Resin Technology Volume 50 ; 50 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PRT-12-2019-0119/full/html
-    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Pigment & Resin Technology Volume 51 ; 51 ; > #510 https://www.emerald.com/insight/content/doi/10.1108/PRT-12-2019-0119/full/html
-    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Pigment & Resin Technology Volume 52 ; 52 ; > #520 https://www.emerald.com/insight/content/doi/10.1108/PRT-12-2019-0119/full/html
-    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Pigment & Resin Technology Volume 53 ; 53 ; > #530 https://www.emerald.com/insight/content/doi/10.1108/PRT-12-2019-0119/full/html
-    au < manifest ; exists ; 2025 ; 2025 ; Pigment & Resin Technology Volume 54 ; 54 ; > #540 https://www.emerald.com/insight/content/doi/10.1108/PRT-12-2019-0119/full/html
+    au < manifest ; exists ; 2021 ; 2021 ; Pigment & Resin Technology Volume 50 ; 50 ; >
+    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Pigment & Resin Technology Volume 51 ; 51 ; >
+    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Pigment & Resin Technology Volume 52 ; 52 ; >
+    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Pigment & Resin Technology Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Pigment & Resin Technology Volume 54 ; 54 ; >
 
   }
 
@@ -12213,16 +12261,17 @@
     title <
       name = Police Studies: International Review of Police Development ;
       issn = 0141-2949 ;
+      eissn = 2054-5630 ;
       issnl = 0141-2949
     >
 
     comment[journal_issn] = 0141-2949
-    param[journal_id] = ps
+    param[journal_id] = pijpsm
     # online from 1995
     comment[continued_by] = 1363-951X
 
-    au < exists ; exists ; 1995 ; 1995 ; Police Studies: International Review of Police Development Volume 18 ; 18 ; > #no substance
-    au < exists ; exists ; 1996 ; 1996 ; Police Studies: International Review of Police Development Volume 19 ; 19 ; > #no substance
+    au < exists ; exists ; 1995 ; 1995 ; Police Studies: International Review of Police Development Volume 18 ; 18 ; >
+    au < exists ; exists ; 1996 ; 1996 ; Police Studies: International Review of Police Development Volume 19 ; 19 ; >
 
   }
 
@@ -12236,6 +12285,7 @@
 
     comment[journal_issn] = 1363-951X
     param[journal_id] = pijpsm
+    #continues = 0141-2949
 
     au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Policing: An International Journal of Police Strategies & Management Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Policing: An International Journal of Police Strategies & Management Volume 21 ; 21 ; >
@@ -12295,7 +12345,7 @@
     >
 
     comment[journal_issn] = 0033-0337
-    param[journal_id] = prog
+    param[journal_id] = dta
     #continued_by = 2514-9288
 
     au < exists ; exists ; 1968 ; 1968 ; Program: Electronic Library and Information Systems Volume 1 ; 1 ; >
@@ -12355,6 +12405,7 @@
     title <
       name = Data Technologies and Applications ;
       issn = 2514-9288 ;
+      eissn = 2514-9318 ;
       issnl = 2514-9288
     >
 
@@ -12422,11 +12473,11 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Property Management Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Property Management Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Property Management Volume 38 ; 38 ; >
-    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Property Management Volume 39 ; 39 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
-    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Property Management Volume 40 ; 40 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
-    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Property Management Volume 41 ; 41 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
-    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Property Management Volume 42 ; 42 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
-    au < manifest ; exists ; 2025 ; 2025 ; Property Management Volume 43 ; 43 ; > #500 https://www.emerald.com/insight/content/doi/10.1108/PM-03-2020-0018/full/html
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Property Management Volume 39 ; 39 ; >
+    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Property Management Volume 40 ; 40 ; >
+    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Property Management Volume 41 ; 41 ; >
+    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Property Management Volume 42 ; 42 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Property Management Volume 43 ; 43 ; >
 
   }
 
@@ -14912,11 +14963,12 @@
 
     title <
       name = Journal for Multicultural Education ;
-      eissn = 2053-535X
+      issn = 2053-535X ;
+      eissn = 2053-5368
     >
 
     comment[journal_issn] = 2053-535X
-    param[journal_id] = 
+    param[journal_id] = jme
 
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal for Multicultural Education Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal for Multicultural Education Volume 9 ; 9 ; >
@@ -14929,7 +14981,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal for Multicultural Education Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal for Multicultural Education Volume 17 ; 17 ; >
     au < exists ; exists ; 2024 ; 2024 ; Journal for Multicultural Education Volume 18 ; 18 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Journal for Multicultural Education Volume 19 ; 19 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Journal for Multicultural Education Volume 19 ; 19 ; >
 
   }
 
@@ -15248,11 +15300,12 @@
 
     title <
       name = Journal of Science and Technology Policy Management ;
-      eissn = 2053-4620
+      issn = 2053-4620 ;
+      eissn = 2053-4639
     >
 
     comment[journal_issn] = 2053-4620
-    param[journal_id] = 
+    param[journal_id] = jstpm
 
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Science and Technology Policy Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Science and Technology Policy Management Volume 6 ; 6 ; >
@@ -15265,7 +15318,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Science and Technology Policy Management Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Science and Technology Policy Management Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Science and Technology Policy Management Volume 15 ; 15 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Journal of Science and Technology Policy Management Volume 16 ; 16 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Journal of Science and Technology Policy Management Volume 16 ; 16 ; >
 
   }
 
@@ -15274,11 +15327,12 @@
 
     title <
       name = Journal of Service Theory and Practice ;
-      eissn = 2055-6225
+      issn = 2055-6225 ;
+      eissn = 2055-6233
     >
 
     comment[journal_issn] = 2055-6225
-    param[journal_id] = 
+    param[journal_id] = jstp
 
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Service Theory and Practice Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Service Theory and Practice Volume 26 ; 26 ; >
@@ -15290,7 +15344,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Service Theory and Practice Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Service Theory and Practice Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Service Theory and Practice Volume 34 ; 34 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Journal of Service Theory and Practice Volume 35 ; 35 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Journal of Service Theory and Practice Volume 35 ; 35 ; >
 
   }
 
