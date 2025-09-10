@@ -1,0 +1,128 @@
+#tdbout -EXt auidplus tdb/prod/ubiquity_press.gln.ubiquity.tdb | sed s'/@@@NONDEF@@@/\&/'
+
+{
+
+  publisher <
+    name = Ubiquity Press
+  >
+
+    provider = Ubiquity Press
+    implicit < status ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; publisherName ; param[base_url] >
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+
+
+  {
+
+      title <
+        name = Journal of Scientific Innovation in Medicine ;
+        eissn = 2579-0153
+      >
+
+      comment[publisher] = Levy Library Press
+#      param[base_url] = https://journalofscientificinnovationinmedicine.org/
+      nondefparam[base_url2] = https://account.journalofscientificinnovationinmedicine.org/
+      nondefparam[journal_id] = ll-j-jsim
+      #GLN only. Seems to need a login.
+
+      au < down ; 2018 ; 1 ; Journal of Scientific Innovation in Medicine Volume 2018 ; 2018 ; 1 ; Levy Library Press ; https://journalofscientificinnovationinmedicine.org/  >
+      au < down ; 2019 ; 2 ; Journal of Scientific Innovation in Medicine Volume 2019 ; 2019 ; 2 ; Levy Library Press ; https://journalofscientificinnovationinmedicine.org/  >
+      au < down ; 2020 ; 3 ; Journal of Scientific Innovation in Medicine Volume 2020 ; 2020 ; 3 ; Levy Library Press ; https://journalofscientificinnovationinmedicine.org/  >
+      au < down ; 2021 ; 4 ; Journal of Scientific Innovation in Medicine Volume 2021 ; 2021 ; 4 ; Levy Library Press ; https://journalofscientificinnovationinmedicine.org/  >
+      au < notReady ; 2022 ; 5 ; Journal of Scientific Innovation in Medicine Volume 2022 ; 2022 ; 5 ; Levy Library Press ; https://journalofscientificinnovationinmedicine.org/ >
+      au < notReady ; 2023 ; 6 ; Journal of Scientific Innovation in Medicine Volume 2023 ; 2023 ; 6 ; Levy Library Press ; https://journalofscientificinnovationinmedicine.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Practical Implementation of Nursing Science ;
+        eissn = 2832-2037
+      >
+
+      comment[publisher] = Levy Library Press
+#      param[base_url] = https://practicalimplementationofnursingscience.org/
+      nondefparam[base_url2] = https://account.practicalimplementationofnursingscience.org/
+      nondefparam[journal_id] = ll-j-pins
+      #GLN only
+
+      au < doNotProcess ; 2022 ; 1 ; Practical Implementation of Nursing Science Volume 2022 ; 2022 ; 1 ; Levy Library Press ; https://practicalimplementationofnursingscience.org/ >
+      au < doNotProcess ; 2023 ; 2 ; Practical Implementation of Nursing Science Volume 2023 ; 2023 ; 2 ; Levy Library Press ; https://practicalimplementationofnursingscience.org/ >
+      au < manifest ; 2024 ; 3 ; Practical Implementation of Nursing Science Volume 2024 ; 2024 ; 3 ; Levy Library Press ; https://practicalimplementationofnursingscience.org/ >
+      au < manifest ; 2025 ; 4 ; Practical Implementation of Nursing Science Volume 2025 ; 2025 ; 4 ; Levy Library Press ; https://practicalimplementationofnursingscience.org/ >
+
+  }
+
+  {
+
+      title <
+        name = International Journal for Court Administration ;
+        eissn = 2156-7964
+      >
+
+      comment[publisher] = Utrecht University Library
+#      param[base_url] = https://iacajournal.org/
+      nondefparam[base_url2] = https://account.iacajournal.org/
+      nondefparam[journal_id] = up-j-ijca
+      #GLN only
+
+      au < down ; 2008 ; 1 ; International Journal for Court Administration Volume 2008 ; 2008 ; 1 ; Utrecht University Library ; https://www.iacajournal.org/ >
+      au < down ; 2009 ; 2 ; International Journal for Court Administration Volume 2009 ; 2009 ; 2 ; Utrecht University Library ; https://www.iacajournal.org/ >
+      au < down ; 2010 ; 3 ; International Journal for Court Administration Volume 2010 ; 2010 ; 3 ; Utrecht University Library ; http://www.iacajournal.org/ >
+      au < down ; 2011 ; 4 ; International Journal for Court Administration Volume 2011 ; 2011 ; 4 ; Utrecht University Library ; http://www.iacajournal.org/ >
+      au < down ; 2012 ; 5 ; International Journal for Court Administration Volume 2012 ; 2012 ; 5 ; Utrecht University Library ; http://www.iacajournal.org/ >
+      au < down ; 2013 ; 6 ; International Journal for Court Administration Volume 2013 ; 2013 ; 6 ; Utrecht University Library ; http://www.iacajournal.org/ >
+      au < down ; 2014 ; 7 ; International Journal for Court Administration Volume 2014 ; 2014 ; 7 ; Utrecht University Library ; http://www.iacajournal.org/ >
+      au < down ; 2015 ; 8 ; International Journal for Court Administration Volume 2015 ; 2015 ; 8 ; Utrecht University Library ; http://www.iacajournal.org/ >
+      au < down ; 2016 ; 9 ; International Journal for Court Administration Volume 2016 ; 2016 ; 9 ; Utrecht University Library ; http://www.iacajournal.org/ >
+      au < down ; 2017 ; 10 ; International Journal for Court Administration Volume 2017 ; 2017 ; 10 ; Utrecht University Library ; https://www.iacajournal.org/ >
+      au < down ; 2018 ; 11 ; International Journal for Court Administration Volume 2018 ; 2018 ; 11 ; Utrecht University Library ; https://www.iacajournal.org/ >
+      au < down ; 2019 ; 12 ; International Journal for Court Administration Volume 2019 ; 2019 ; 12 ; Utrecht University Library ; https://www.iacajournal.org/ >
+      au < down ; 2020 ; 13 ; International Journal for Court Administration Volume 2020 ; 2020 ; 13 ; Utrecht University Library ; https://www.iacajournal.org/ >
+      au < down ; 2021 ; 14 ; International Journal for Court Administration Volume 2021 ; 2021 ; 14 ; Utrecht University Library ; https://www.iacajournal.org/ >
+      au < manifest ; 2022 ; 15 ; International Journal for Court Administration Volume 2022 ; 2022 ; 15 ; Utrecht University Library ; https://iacajournal.org/ >
+      au < manifest ; 2023 ; 16 ; International Journal for Court Administration Volume 2023 ; 2023 ; 16 ; Utrecht University Library ; https://iacajournal.org/ >
+      au < manifest ; 2024 ; 17 ; International Journal for Court Administration Volume 2024 ; 2024 ; 17 ; Utrecht University Library ; https://iacajournal.org/ >
+      au < manifest ; 2025 ; 18 ; International Journal for Court Administration Volume 2025 ; 2025 ; 18 ; Utrecht University Library ; https://iacajournal.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Social Intervention ;
+        eissn = 1876-8830
+      >
+
+      comment[publisher] = Utrecht University Library
+#      param[base_url] = https://journalsi.org/
+      nondefparam[base_url2] = https://account.journalsi.org/
+      nondefparam[journal_id] = up-j-jsitp
+      #GLN only
+
+      au < down ; 2005 ; 1 ; Journal of Social Intervention Volume 2005 ; 2005 ; 1 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2006 ; 2 ; Journal of Social Intervention Volume 2006 ; 2006 ; 2 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2007 ; 3 ; Journal of Social Intervention Volume 2007 ; 2007 ; 3 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2008 ; 4 ; Journal of Social Intervention Volume 2008 ; 2008 ; 4 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2009 ; 5 ; Journal of Social Intervention Volume 2009 ; 2009 ; 5 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2010 ; 6 ; Journal of Social Intervention Volume 2010 ; 2010 ; 6 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2011 ; 7 ; Journal of Social Intervention Volume 2011 ; 2011 ; 7 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2012 ; 8 ; Journal of Social Intervention Volume 2012 ; 2012 ; 8 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2013 ; 9 ; Journal of Social Intervention Volume 2013 ; 2013 ; 9 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2014 ; 10 ; Journal of Social Intervention Volume 2014 ; 2014 ; 10 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2015 ; 11 ; Journal of Social Intervention Volume 2015 ; 2015 ; 11 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2016 ; 12 ; Journal of Social Intervention Volume 2016 ; 2016 ; 12 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2017 ; 13 ; Journal of Social Intervention Volume 2017 ; 2017 ; 13 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2018 ; 14 ; Journal of Social Intervention Volume 2018 ; 2018 ; 14 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2019 ; 15 ; Journal of Social Intervention Volume 2019 ; 2019 ; 15 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2020 ; 16 ; Journal of Social Intervention Volume 2020 ; 2020 ; 16 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < down ; 2021 ; 17 ; Journal of Social Intervention Volume 2021 ; 2021 ; 17 ; Utrecht University Library ; https://www.journalsi.org/ >
+      au < manifest ; 2022 ; 18 ; Journal of Social Intervention Volume 2022 ; 2022 ; 18 ; Utrecht University Library ; https://journalsi.org/ >
+      au < manifest ; 2023 ; 19 ; Journal of Social Intervention Volume 2023 ; 2023 ; 19 ; Utrecht University Library ; https://journalsi.org/ >
+      au < manifest ; 2024 ; 20 ; Journal of Social Intervention Volume 2024 ; 2024 ; 20 ; Utrecht University Library ; https://journalsi.org/ >
+      au < manifest ; 2025 ; 21 ; Journal of Social Intervention Volume 2025 ; 2025 ; 21 ; Utrecht University Library ; https://journalsi.org/ >
+
+  }
+
+
+}
