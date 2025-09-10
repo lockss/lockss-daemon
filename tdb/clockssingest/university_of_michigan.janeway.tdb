@@ -804,7 +804,7 @@
       param[journal_id] = gs
 
       au < crawling ; exists ; 2021 ; 1 ; Global Storytelling: Journal of Digital and Moving Images Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 2 ; Global Storytelling: Journal of Digital and Moving Images Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2022 ; 2 ; Global Storytelling: Journal of Digital and Moving Images Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 3 ; Global Storytelling: Journal of Digital and Moving Images Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 4 ; Global Storytelling: Journal of Digital and Moving Images Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 5 ; Global Storytelling: Journal of Digital and Moving Images Volume 2025 ; 2025 ; >
@@ -876,8 +876,8 @@
       param[journal_id] = jpe
 
       au < ready ; exists ; 2021 ; 9 ; Journal of Practical Ethics Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 10 ; Journal of Practical Ethics Volume 2022 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; 11 ; Journal of Practical Ethics Volume 2023 ; 2023 ; >
+      au < frozen ; exists ; 2022 ; 10 ; Journal of Practical Ethics Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; 11 ; Journal of Practical Ethics Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 12 ; Journal of Practical Ethics Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 13 ; Journal of Practical Ethics Volume 2025 ; 2025 ; >
 
