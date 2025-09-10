@@ -321,11 +321,11 @@
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_45 ; 2025_45 >
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_46 ; 2025_46 >
         au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_47 ; 2025_47 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_48 ; 2025_48 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_49 ; 2025_49 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_50 ; 2025_50 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_51 ; 2025_51 >
-        au < manifest ; exists ; 2025 ; Elsevier Source Content 2025_52 ; 2025_52 >
+        au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_48 ; 2025_48 >
+        au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_49 ; 2025_49 >
+        au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_50 ; 2025_50 >
+        au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_51 ; 2025_51 >
+        au < readySource ; crawling ; 2025 ; Elsevier Source Content 2025_52 ; 2025_52 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_53 ; 2025_53 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_54 ; 2025_54 >
         au < expected ; exists ; 2025 ; Elsevier Source Content 2025_55 ; 2025_55 >
