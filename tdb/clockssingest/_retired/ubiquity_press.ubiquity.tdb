@@ -136,22 +136,6 @@
       #Stopped publication -- all content collected. Available at https://ll-j-sar.ubiquityjournal.website/
   }
 
-#  {
-#
-#      title <
-#        name = ISMMS Journal of Science and Medicine ;
-#        eissn = 2690-3865
-#      >
-#
-#      comment[publisher] = Levy Library Press
-##      param[base_url] = https://www.journal-of-science-and-medicine.org/
-#
-#      au < doNotProcess ; exists ; 2021 ; 1 ; ISMMS Journal of Science and Medicine Volume 2021 ; 2021 ; 1 ; Levy Library Press ; https://www.journal-of-science-and-medicine.org/ ; >
-#      au < doNotProcess ; doNotProcess ; 2022 ; 2 ; ISMMS Journal of Science and Medicine Volume 2022 ; 2022 ; 2 ; Levy Library Press ; https://www.journal-of-science-and-medicine.org/ ; >
-#      au < doNotProcess ; doNotProcess ; 2023 ; 3 ; ISMMS Journal of Science and Medicine Volume 2023 ; 2023 ; 3 ; Levy Library Press ; https://www.journal-of-science-and-medicine.org/ ; >
-#      #Transferred away
-#  }
-
   {
 
       title <

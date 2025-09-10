@@ -1,28 +1,3 @@
-#{
-#  publisher <
-#    name = frommann-holzboog
-#  >
-#
-#    provider = Ubiquity Press
-#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-#
-#  {
-#
-#      title <
-#        name = Steiner Studies ;
-#        eissn = 2698-217X
-#      >
-#
-#      comment[publisher] = frommann-holzboog
-##      param[base_url] = https://steiner-studies.org/
-#
-#      au < down ; 2020 ; 1 ; Steiner Studies Volume 2020 ; 2020 ; https://steiner-studies.org/ >
-#      au < down ; 2021 ; 2 ; Steiner Studies Volume 2021 ; 2021 ; https://steiner-studies.org/ >
-#
-#  }
-#}
-#
 {
   publisher <
     name = Gonzaga Library Publishing ;
@@ -64,115 +39,9 @@
       au < down ; 2020 ; 16 ; Journal of Hate Studies Volume 2020 ; 2020 ; https://jhs.press.gonzaga.edu/ >
       au < down ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; https://jhs.press.gonzaga.edu/ >
       au < doNotProcess ; 2022 ; 18 ; Journal of Hate Studies Volume 2022 ; 2022 ; https://jhs.press.gonzaga.edu/ >
-
+     #Moved to bepress
   }
 }
-
-#{
-#  publisher <
-#    name = Helsinki University Press ;
-#    info[contract] = 2011 ;
-#    info[back] = 2000 ;
-#    info[tester] = 8 ;
-#    info[poller] = 8
-#  >
-#
-#    provider = Ubiquity Press
-#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-#
-#  {
-#
-#      title <
-#        name = Estetika: The European Journal of Aesthetics ;
-#        eissn = 2571-0915
-#      >
-#
-#      comment[publisher] = Helsinki University Press
-##      param[base_url] = https://estetikajournal.org/
-#
-#      au < doNotProcess ; 2008 ; 45 ; Estetika: The European Journal of Aesthetics Volume 2008 ; 2008 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2009 ; 46 ; Estetika: The European Journal of Aesthetics Volume 2009 ; 2009 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2010 ; 47 ; Estetika: The European Journal of Aesthetics Volume 2010 ; 2010 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2011 ; 48 ; Estetika: The European Journal of Aesthetics Volume 2011 ; 2011 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2012 ; 49 ; Estetika: The European Journal of Aesthetics Volume 2012 ; 2012 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2013 ; 50 ; Estetika: The European Journal of Aesthetics Volume 2013 ; 2013 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2014 ; 51 ; Estetika: The European Journal of Aesthetics Volume 2014 ; 2014 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2015 ; 52 ; Estetika: The European Journal of Aesthetics Volume 2015 ; 2015 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2016 ; 53 ; Estetika: The European Journal of Aesthetics Volume 2016 ; 2016 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2017 ; 54 ; Estetika: The European Journal of Aesthetics Volume 2017 ; 2017 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2018 ; 55 ; Estetika: The European Journal of Aesthetics Volume 2018 ; 2018 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2019 ; 56 ; Estetika: The European Journal of Aesthetics Volume 2019 ; 2019 ; https://estetikajournal.org/ >
-#      au < down ; 2020 ; 57 ; Estetika: The European Journal of Aesthetics Volume 2020 ; 2020 ; https://estetikajournal.org/ >
-#      au < down ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 ; 2022 ; https://estetikajournal.org/ >
-#      au < doNotProcess ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; https://estetikajournal.org/ >
-#  }
-#
-#  {
-#
-#      title <
-#        name = Nordic Journal of Migration Research ;
-#        eissn = 1799-649X
-#      >
-#
-#      comment[publisher] = Helsinki University Press
-##      param[base_url] = https://journal-njmr.org/
-#
-#      au < down ; 2011 ; 1 ; Nordic Journal of Migration Research Volume 2011 ; 2011 ; https://journal-njmr.org/ >
-#      au < down ; 2012 ; 2 ; Nordic Journal of Migration Research Volume 2012 ; 2012 ; https://journal-njmr.org/ >
-#      au < down ; 2013 ; 3 ; Nordic Journal of Migration Research Volume 2013 ; 2013 ; https://journal-njmr.org/ >
-#      au < down ; 2014 ; 4 ; Nordic Journal of Migration Research Volume 2014 ; 2014 ; https://journal-njmr.org/ >
-#      au < down ; 2015 ; 5 ; Nordic Journal of Migration Research Volume 2015 ; 2015 ; https://journal-njmr.org/ >
-#      au < down ; 2016 ; 6 ; Nordic Journal of Migration Research Volume 2016 ; 2016 ; https://journal-njmr.org/ >
-#      au < down ; 2017 ; 7 ; Nordic Journal of Migration Research Volume 2017 ; 2017 ; https://journal-njmr.org/ >
-#      au < down ; 2018 ; 8 ; Nordic Journal of Migration Research Volume 2018 ; 2018 ; https://journal-njmr.org/ >
-#      au < down ; 2019 ; 9 ; Nordic Journal of Migration Research Volume 2019 ; 2019 ; https://journal-njmr.org/ >
-#      au < down ; 2020 ; 10 ; Nordic Journal of Migration Research Volume 2020 ; 2020 ; https://journal-njmr.org/ >
-#      au < down ; 2021 ; 11 ; Nordic Journal of Migration Research Volume 2021 ; 2021 ; https://journal-njmr.org/ >
-#      au < doNotProcess ; 2022 ; 12 ; Nordic Journal of Migration Research Volume 2022 ; 2022 ; https://journal-njmr.org/ >
-#      au < doNotProcess ; 2023 ; 13 ; Nordic Journal of Migration Research Volume 2023 ; 2023 ; https://journal-njmr.org/ >
-#  }
-#
-#  {
-#
-#      title <
-#        name = Redescriptions: Political Thought, Conceptual History and Feminist Theory ;
-#        eissn = 2308-0914
-#      >
-#
-#      comment[publisher] = Helsinki University Press
-##      param[base_url] =  https://journal-redescriptions.org/
-#
-#      au < doNotProcess ; 1997 ; 1 ; Redescriptions Volume 1997 ; 1997 ; https://journal-redescriptions.org/ >
-#      au < doNotProcess ; 1998 ; 2 ; Redescriptions Volume 1998 ; 1998 ; https://journal-redescriptions.org/ >
-#      au < doNotProcess ; 1999 ; 3 ; Redescriptions Volume 1999 ; 1999 ; https://journal-redescriptions.org/ >
-#      au < down ; 2000 ; 4 ; Redescriptions Volume 2000 ; 2000 ; https://journal-redescriptions.org/ >
-#      au < down ; 2001 ; 5 ; Redescriptions Volume 2001 ; 2001 ; https://journal-redescriptions.org/ >
-#      au < down ; 2002 ; 6 ; Redescriptions Volume 2002 ; 2002 ; https://journal-redescriptions.org/ >
-#      au < down ; 2003 ; 7 ; Redescriptions Volume 2003 ; 2003 ; https://journal-redescriptions.org/ >
-#      au < down ; 2004 ; 8 ; Redescriptions Volume 2004 ; 2004 ; https://journal-redescriptions.org/ >
-#      au < down ; 2005 ; 9 ; Redescriptions Volume 2005 ; 2005 ; https://journal-redescriptions.org/ >
-#      au < down ; 2006 ; 10 ; Redescriptions Volume 2006 ; 2006 ; https://journal-redescriptions.org/ >
-#      au < down ; 2007 ; 11 ; Redescriptions Volume 2007 ; 2007 ; https://journal-redescriptions.org/ >
-#      au < down ; 2008 ; 12 ; Redescriptions Volume 2008 ; 2008 ; https://journal-redescriptions.org/ >
-#      au < down ; 2009 ; 13 ; Redescriptions Volume 2009 ; 2009 ; https://journal-redescriptions.org/ >
-#      au < down ; 2010 ; 14 ; Redescriptions Volume 2010 ; 2010 ; https://journal-redescriptions.org/ >
-#      au < down ; 2011 ; 15 ; Redescriptions Volume 2011 ; 2011 ; https://journal-redescriptions.org/ >
-#      au < doesNotExist ; 2012 ; 16 ; Redescriptions Volume 2012 ; 2012 ; https://journal-redescriptions.org/ >
-#      au < down ; 2013 ; 17 ; Redescriptions Volume 2013 ; 2013 ; https://journal-redescriptions.org/ >
-#      au < down ; 2014 ; 18 ; Redescriptions Volume 2014 ; 2014 ; https://journal-redescriptions.org/ >
-#      au < down ; 2016 ; 19 ; Redescriptions Volume 2016 ; 2016 ; https://journal-redescriptions.org/ >
-#      au < down ; 2017 ; 20 ; Redescriptions Volume 2017 ; 2017 ; https://journal-redescriptions.org/ >
-#      au < down ; 2018 ; 21 ; Redescriptions Volume 2018 ; 2018 ; https://journal-redescriptions.org/ >
-#      au < down ; 2019 ; 22 ; Redescriptions Volume 2019 ; 2019 ; https://journal-redescriptions.org/ >
-#      au < down ; 2020 ; 23 ; Redescriptions Volume 2020 ; 2020 ; https://journal-redescriptions.org/ >
-#      au < down ; 2021 ; 24 ; Redescriptions Volume 2021 ; 2021 ; https://journal-redescriptions.org/ >
-#      au < down ; 2022 ; 25 ; Redescriptions Volume 2022 ; 2022 ; https://journal-redescriptions.org/ >
-#      au < doNotProcess ; 2023 ; 26 ; Redescriptions Volume 2023 ; 2023 ; https://journal-redescriptions.org/ >
-#
-#  }
-#}
 
 {
   publisher <
@@ -196,6 +65,7 @@
 
       au < down ; 2018 ; 1 ; Annals of Medicine and Surgery Case Reports Volume 1 ; 2018 ; https://www.amscasereports.com/ >
       au < down ; 2021 ; 2 ; Annals of Medicine and Surgery Case Reports Volume 2 ; 2021 ; https://www.amscasereports.com/ >
+      #Triggered
 
   }
 
@@ -208,9 +78,9 @@
 
       comment[publisher] = IJS Publishing Group
 #      param[base_url] = https://www.amsprotocols.com/
-      #content not available
 
       au < down ; 2018 ; 1 ; Annals of Medicine and Surgery Protocols Volume 1 ; 2018 ; https://www.amsprotocols.com/ >
+      #Triggered
 
   }
 
@@ -227,22 +97,7 @@
 
       au < down ; 2018 ; 1 ; International Journal of Orthoplastic Surgery Volume 2018 ; 2018 ; https://ijops.com/ >
       au < down ; 2019 ; 2 ; International Journal of Orthoplastic Surgery Volume 2019 ; 2019 ; https://ijops.com/ >
-
-  }
-
-  {
-
-      title <
-        name = International Journal of Digital Health ;
-        eissn = 2634-4580
-      >
-
-      comment[publisher] = IJS Publishing Group
-#      param[base_url] = https://ijdigitalhealth.com/
-
-      au < doNotProcess ; 2021 ; 1 ; International Journal of Digital Health Volume 2021 ; 2021 ; https://ijdigitalhealth.com/ >
-      au < doNotProcess ; 2022 ; 2 ; International Journal of Digital Health Volume 2022 ; 2022 ; https://ijdigitalhealth.com/ >
-      au < doNotProcess ; 2023 ; 3 ; International Journal of Digital Health Volume 2023 ; 2023 ; https://ijdigitalhealth.com/ >
+      #Transfered away
 
   }
 
@@ -274,7 +129,7 @@
       au < down ; 2019 ; 3 ; Latin American Research Review Volume 2019 ; 2019 ; https://larrlasa.org/ >
       au < down ; 2020 ; 4 ; Latin American Research Review Volume 2020 ; 2020 ; https://larrlasa.org/ >
       au < down ; 2021 ; 5 ; Latin American Research Review Volume 2021 ; 2021 ; https://larrlasa.org/ >
-      #Moved to Cambridge U Press https://www.cambridge.org/core/journals/latin-american-research-review
+      #Transfered away. Cambridge U Press https://www.cambridge.org/core/journals/latin-american-research-review
   }
 
 }
@@ -287,29 +142,6 @@
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
-#  {
-#
-#      title <
-#        name = Annals of Global Health ;
-#        eissn = 2214-9996
-#      >
-#
-#      comment[publisher] = Levy Library Press
-##      param[base_url] = https://www.annalsofglobalhealth.org/
-#
-#      au < down ; 2014 ; 1 ; Annals of Global Health Volume 2014 ; 2014 ; https://www.annalsofglobalhealth.org/ >
-#      au < down ; 2015 ; 2 ; Annals of Global Health Volume 2015 ; 2015 ; https://www.annalsofglobalhealth.org/ >
-#      au < down ; 2016 ; 3 ; Annals of Global Health Volume 2016 ; 2016 ; https://www.annalsofglobalhealth.org/ >
-#      au < down ; 2017 ; 4 ; Annals of Global Health Volume 2017 ; 2017 ; https://www.annalsofglobalhealth.org/ >
-#      au < down ; 2018 ; 5 ; Annals of Global Health Volume 2018 ; 2018 ; https://www.annalsofglobalhealth.org/ >
-#      au < down ; 2019 ; 6 ; Annals of Global Health Volume 2019 ; 2019 ; https://www.annalsofglobalhealth.org/ >
-#      au < down ; 2020 ; 7 ; Annals of Global Health Volume 2020 ; 2020 ; https://www.annalsofglobalhealth.org/ >
-#      au < down ; 2021 ; 8 ; Annals of Global Health Volume 2021 ; 2021 ; https://www.annalsofglobalhealth.org/ >
-#      au < down ; 2022 ; 9 ; Annals of Global Health Volume 2022 ; 2022 ; https://www.annalsofglobalhealth.org/ >
-#      au < doNotProcess ; 2023 ; 10 ; Annals of Global Health Volume 2023 ; 2023 ; https://www.annalsofglobalhealth.org/ >
-#
-#  }
 
 
   {
@@ -328,6 +160,7 @@
       au < doNotProcess ; 2021 ; 4 ; Journal of Altmetrics Volume 2021 ; 2021 ; https://www.journalofaltmetrics.org/ >
       au < doNotProcess ; 2022 ; 5 ; Journal of Altmetrics Volume 2022 ; 2022 ; https://www.journalofaltmetrics.org/ >
       au < doNotProcess ; 2023 ; 6 ; Journal of Altmetrics Volume 2023 ; 2023 ; https://www.journalofaltmetrics.org/ >
+      #Transfered away
 
   }
 
@@ -347,7 +180,7 @@
       au < down ; 2021 ; 4 ; Journal of Scientific Innovation in Medicine Volume 2021 ; 2021 ; https://journalofscientificinnovationinmedicine.org/ >
       au < doNotProcess ; 2022 ; 5 ; Journal of Scientific Innovation in Medicine Volume 2022 ; 2022 ; https://journalofscientificinnovationinmedicine.org/ >
       au < doNotProcess ; 2023 ; 6 ; Journal of Scientific Innovation in Medicine Volume 2023 ; 2023 ; https://journalofscientificinnovationinmedicine.org/ >
-
+      #GLN only
   }
 
   {
@@ -366,73 +199,8 @@
       #Stopped publication.
   }
 
-  {
-
-      title <
-        name = ISMMS Journal of Science and Medicine ;
-        eissn = 2690-3865
-      >
-
-      comment[publisher] = Levy Library Press
-#      param[base_url] = https://www.journal-of-science-and-medicine.org/
-
-      au < doNotProcess ; 2021 ; 1 ; ISMMS Journal of Science and Medicine Volume 2021 ; 2021 ; https://www.journal-of-science-and-medicine.org/ >
-      au < doNotProcess ; 2022 ; 2 ; ISMMS Journal of Science and Medicine Volume 2022 ; 2022 ; https://www.journal-of-science-and-medicine.org/ >
-      au < doNotProcess ; 2023 ; 3 ; ISMMS Journal of Science and Medicine Volume 2023 ; 2023 ; https://www.journal-of-science-and-medicine.org/ >
-
-  }
-
-  {
-
-      title <
-        name = Practical Implementation of Nursing Science ;
-        eissn = 2832-2037
-      >
-
-      comment[publisher] = Levy Library Press
-#      param[base_url] = https://www.practicalimplementationofnursingscience.org/
-
-      au < doNotProcess ; 2022 ; 1 ; Practical Implementation of Nursing Science Volume 2022 ; 2022 ; https://www.practicalimplementationofnursingscience.org/ >
-      au < doNotProcess ; 2023 ; 2 ; Practical Implementation of Nursing Science Volume 2023 ; 2023 ; https://www.practicalimplementationofnursingscience.org/ >
-
-  }
-
 }
 
-#{
-#  publisher <
-#    name = Liverpool University Press
-#  >
-#
-#    provider = Ubiquity Press
-#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-#
-#  {
-#
-#      title <
-#        name = Modern Languages Open ;
-#        eissn = 2052-5397
-#      >
-#
-#      comment[publisher] = Liverpool University Press
-##      param[base_url] = https://www.modernlanguagesopen.org/
-#
-#      au < down ; 2014 ; 1 ; Modern Languages Open Volume 2014 ; 2014 ; https://www.modernlanguagesopen.org/ >
-#      au < down ; 2015 ; 2 ; Modern Languages Open Volume 2015 ; 2015 ; https://www.modernlanguagesopen.org/ >
-#      au < down ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; https://www.modernlanguagesopen.org/ >
-#      au < down ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; https://www.modernlanguagesopen.org/ >
-#      au < down ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; https://www.modernlanguagesopen.org/ >
-#      au < down ; 2019 ; 6 ; Modern Languages Open Volume 2019 ; 2019 ; https://www.modernlanguagesopen.org/ >
-#      au < down ; 2020 ; 7 ; Modern Languages Open Volume 2020 ; 2020 ; https://www.modernlanguagesopen.org/ >
-#      au < down ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; https://www.modernlanguagesopen.org/ >
-#      au < down ; 2022 ; 9 ; Modern Languages Open Volume 2022 ; 2022 ; https://www.modernlanguagesopen.org/ >
-#      au < doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; https://www.modernlanguagesopen.org/ >
-#
-#  }
-#
-#}
-#
 {
   publisher <
     name = London School of Economics and Political Science
@@ -442,43 +210,25 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
-  {
-
-      title <
-        name = Journal of Illicit Economies and Development ;
-        eissn = 2516-7227
-      >
-
-      comment[publisher] = London School of Economics and Political Science
-#      param[base_url] = https://jied.lse.ac.uk/
-
-      au < down ; 2019 ; 1 ; Journal of Illicit Economies and Development Volume 2019 ; 2019 ; https://jied.lse.ac.uk/ >
-      au < down ; 2020 ; 2 ; Journal of Illicit Economies and Development Volume 2020 ; 2020 ; https://jied.lse.ac.uk/ >
-      au < down ; 2021 ; 3 ; Journal of Illicit Economies and Development Volume 2021 ; 2021 ; https://jied.lse.ac.uk/ >
-      au < doNotProcess ; 2022 ; 4 ; Journal of Illicit Economies and Development Volume 2022 ; 2022 ; https://jied.lse.ac.uk/ >
-      au < doNotProcess ; 2023 ; 5 ; Journal of Illicit Economies and Development Volume 2023 ; 2023 ; https://jied.lse.ac.uk/ >
-
-  }
-  
-  {
-
-      title <
-        name = Journal of Long-Term Care ;
-        eissn = 2516-9122
-      >
-
-      comment[publisher] = London School of Economics and Political Science
-#      param[base_url] = https://journal.ilpnetwork.org/
-
-      au < down ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ > #problem with volume url?
-      au < down ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; https://journal.ilpnetwork.org/ >
-      au < down ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; https://journal.ilpnetwork.org/ >
-      au < down ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; https://journal.ilpnetwork.org/ >
-      au < doNotProcess ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 ; https://journal.ilpnetwork.org/ >
-      au < doNotProcess ; 2023 ; 10 ; Journal of Long-Term Care Volume 2023 ; 2023 ; https://journal.ilpnetwork.org/ >
-
-  }
-  
+#  {
+#
+#      title <
+#        name = Journal of Long-Term Care ;
+#        eissn = 2516-9122
+#      >
+#
+#      comment[publisher] = London School of Economics and Political Science
+##      param[base_url] = https://journal.ilpnetwork.org/
+#
+#      au < down ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; https://journal.ilpnetwork.org/ > #problem with volume url?
+#      au < down ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; https://journal.ilpnetwork.org/ >
+#      au < down ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; https://journal.ilpnetwork.org/ >
+#      au < down ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; https://journal.ilpnetwork.org/ >
+#      au < doNotProcess ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 ; https://journal.ilpnetwork.org/ >
+#      au < doNotProcess ; 2023 ; 10 ; Journal of Long-Term Care Volume 2023 ; 2023 ; https://journal.ilpnetwork.org/ >
+#
+#  }
+#  
   {
 
       title <
@@ -2974,38 +2724,6 @@
 
   }
 
-#  {
-#
-#      title <
-#        name = Utrecht Law Review ;
-#        eissn = 1871-515X
-#      >
-#
-#      comment[publisher] = Utrecht University Library
-##      param[base_url] = https://www.utrechtlawreview.org/
-#
-#      au < down ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2007 ; 3 ; Utrecht Law Review Volume 2007 ; 2007 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2008 ; 4 ; Utrecht Law Review Volume 2008 ; 2008 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2009 ; 5 ; Utrecht Law Review Volume 2009 ; 2009 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2010 ; 6 ; Utrecht Law Review Volume 2010 ; 2010 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2011 ; 7 ; Utrecht Law Review Volume 2011 ; 2011 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2019 ; 15 ; Utrecht Law Review Volume 2019 ; 2019 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2020 ; 16 ; Utrecht Law Review Volume 2020 ; 2020 ; https://www.utrechtlawreview.org/ >
-#      au < down ; 2021 ; 17 ; Utrecht Law Review Volume 2021 ; 2021 ; https://www.utrechtlawreview.org/ >
-#      au < doNotProcess ; 2022 ; 18 ; Utrecht Law Review Volume 2022 ; 2022 ; https://www.utrechtlawreview.org/ >
-#      au < doNotProcess ; 2023 ; 19 ; Utrecht Law Review Volume 2023 ; 2023 ; https://www.utrechtlawreview.org/ >
-#
-#  }
-
 }
 {
   publisher <
@@ -3059,159 +2777,7 @@
   }
 
 }
-#{
-#  publisher <
-#    name = White Rose University Press
-#  >
-#
-#    provider = Ubiquity Press
-#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-#
-#  {
-#
-#      title <
-#        name = British and Irish Orthoptic Journal ;
-#        eissn = 2516-3590
-#      >
-#
-#      comment[publisher] = White Rose University Press
-##      param[base_url] = https://www.bioj-online.com/
-#
-#      au < down ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; https://www.bioj-online.com/ >
-#      au < down ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; https://www.bioj-online.com/ >
-#      au < down ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; https://www.bioj-online.com/ >
-#      au < down ; 2012 ; 9 ; British and Irish Orthoptic Journal Volume 2012 ; 2012 ; https://www.bioj-online.com/ >
-#      au < down ; 2013 ; 10 ; British and Irish Orthoptic Journal Volume 2013 ; 2013 ; https://www.bioj-online.com/ >
-#      au < down ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; https://www.bioj-online.com/ >
-#      au < down ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; https://www.bioj-online.com/ >
-#      au < down ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; https://www.bioj-online.com/ >
-#      au < down ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; https://www.bioj-online.com/ >
-#      au < down ; 2019 ; 16 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; https://www.bioj-online.com/ >
-#      au < down ; 2020 ; 17 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; https://www.bioj-online.com/ >
-#      au < down ; 2021 ; 18 ; British and Irish Orthoptic Journal Volume 2021 ; 2021 ; https://www.bioj-online.com/ >
-#      au < doNotProcess ; 2022 ; 19 ; British and Irish Orthoptic Journal Volume 2022 ; 2022 ; https://www.bioj-online.com/ >
-#      au < doNotProcess ; 2023 ; 20 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 ; https://www.bioj-online.com/ >
-#
-#  }
-#
-#  {
-#
-#      title <
-#        name = Journal of the European Second Language Association ;
-#        eissn = 2399-9101
-#      >
-#
-#      comment[publisher] = White Rose University Press
-##      param[base_url] = https://www.euroslajournal.org/
-#
-#      au < down ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; https://www.euroslajournal.org/ >
-#      au < down ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; https://www.euroslajournal.org/ >
-#      au < down ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; https://www.euroslajournal.org/ >
-#      au < down ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; https://www.euroslajournal.org/ >
-#      au < down ; 2021 ; 5 ; Journal of the European Second Language Association Volume 2021 ; 2021 ; https://www.euroslajournal.org/ >
-#      au < doNotProcess ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 ; 2022 ; https://www.euroslajournal.org/ >
-#      au < doNotProcess ; 2023 ; 7 ; Journal of the European Second Language Association Volume 2023 ; 2023 ; https://www.euroslajournal.org/ >
-#
-#  }
-#
-#  {
-#
-#      title <
-#        name = Undergraduate Journal of Politics and International Relations ;
-#        eissn = 2398-5992
-#      >
-#
-#      comment[publisher] = White Rose University Press
-##      param[base_url] = https://www.ujpir-journal.com/
-#
-#      au < down ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; https://www.ujpir-journal.com/ >
-#      au < down ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; https://www.ujpir-journal.com/ >
-#
-#  }
-#  {
-#
-#      title <
-#        name = Writing Chinese: A Journal of Contemporary Sinophone Literature ;
-#        eissn = 2633-8815
-#      >
-#
-#      comment[publisher] = White Rose University Press
-##      param[base_url] = https://writingchinesejournal.org/
-#
-#      au < doNotProcess ; 2022 ; 1 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2022 ; 2022 ; https://writingchinesejournal.org/ >
-#      au < doNotProcess ; 2023 ; 2 ; Writing Chinese: A Journal of Contemporary Sinophone Literature Volume 2023 ; 2023 ; https://writingchinesejournal.org/ >
-#
-#  }
-#
-#}
-#{
-#  publisher <
-#    name = Centre for Security Governance
-#  >
-#
-#    provider = Ubiquity Press
-#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-#
-#  {
-#
-#      title <
-#        name = Stability: International Journal of Security & Development ;
-#        eissn = 2165-2627
-#      >
-#
-#      comment[publisher] = Centre for Security Governance
-##      param[base_url] = http://www.stabilityjournal.org/
-#
-#      au < down ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; https://www.stabilityjournal.org/ >
-#      au < down ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; https://www.stabilityjournal.org/ >
-#      au < down ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; https://www.stabilityjournal.org/ >
-#      au < down ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; http://www.stabilityjournal.org/ >
-#      au < down ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; http://www.stabilityjournal.org/ >
-#      au < down ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; https://www.stabilityjournal.org/ >
-#      au < down ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; https://www.stabilityjournal.org/ >
-#      au < down ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; https://www.stabilityjournal.org/ >
-#      au < down ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; https://www.stabilityjournal.org/ >
-#      au < doNotProcess ; 2021 ; 10 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; https://www.stabilityjournal.org/ >
-#      au < doNotProcess ; 2022 ; 11 ; Stability: International Journal of Security & Development Volume 2022 ; 2022 ; https://www.stabilityjournal.org/ >
-#      au < doNotProcess ; 2023 ; 12 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; https://www.stabilityjournal.org/ >
-#
-#  }
-#
-#}
-#
-#{
-#  publisher <
-#    name = Scandinavian Military Studies ;
-#    info[contract] = 2011 ;
-#    info[back] = 2000 ;
-#    info[tester] = 8 ;
-#    info[poller] = 8
-#  >
-#
-#    provider = Ubiquity Press
-#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-#  {
-#
-#      title <
-#        name = Scandinavian Journal of Military Studies ;
-#        eissn = 2596-3856
-#      >
-#
-#      comment[publisher] = Scandinavian Military Studies
-##      param[base_url] = https://sjms.nu/
-#
-#      au < down ; 2018 ; 1 ; Scandinavian Military Studies Volume 2018 ; 2018 ; https://sjms.nu/ >
-#      au < down ; 2019 ; 2 ; Scandinavian Military Studies Volume 2019 ; 2019 ; https://sjms.nu/ >
-#      au < down ; 2020 ; 3 ; Scandinavian Military Studies Volume 2020 ; 2020 ; https://sjms.nu/ >
-#      au < down ; 2021 ; 4 ; Scandinavian Military Studies Volume 2021 ; 2021 ; https://sjms.nu/ >
-#      au < doNotProcess ; 2022 ; 5 ; Scandinavian Military Studies Volume 2022 ; 2022 ; https://sjms.nu/ >
-#      au < doNotProcess ; 2023 ; 6 ; Scandinavian Military Studies Volume 2023 ; 2023 ; https://sjms.nu/ >
-#
-#  }
-#}
+
 {
   publisher <
     name = Aperio ;
@@ -3239,23 +2805,23 @@
       au < down ; 2021 ; 3 ; Journal of Modern Philosophy Volume 2021 ; 2021 ; https://jmphil.org/ >
       au < doNotProcess ; 2022 ; 4 ; Journal of Modern Philosophy Volume 2022 ; 2022 ; https://jmphil.org/ >
       au < doNotProcess ; 2023 ; 5 ; Journal of Modern Philosophy Volume 2023 ; 2023 ; https://jmphil.org/ >
-
+      #Transfered away
   }
 
 }
-{
-  publisher <
-    name = Virginia Tech Publishing ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
+#{
+#  publisher <
+#    name = Virginia Tech Publishing ;
+#    info[contract] = 2011 ;
+#    info[back] = 2000 ;
+#    info[tester] = 8 ;
+#    info[poller] = 8
+#  >
+#
+#    provider = Ubiquity Press
+#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+#
 #  {
 #
 #      title <
@@ -3321,20 +2887,20 @@
 #
 #  }
 #
-}
-{
-  publisher <
-    name = Gonzaga Library Publishing ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
+#}
+#{
+#  publisher <
+#    name = Gonzaga Library Publishing ;
+#    info[contract] = 2011 ;
+#    info[back] = 2000 ;
+#    info[tester] = 8 ;
+#    info[poller] = 8
+#  >
+#
+#    provider = Ubiquity Press
+#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+#
 #  {
 #
 #      title <
@@ -3349,21 +2915,21 @@
 #      au < doNotProcess ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 ; https://ibapa.org/ >
 #
 #  }
-
-}
-{
-  publisher <
-    name = De Montfort University Press ;
-    info[contract] = 2011 ;
-    info[back] = 2000 ;
-    info[tester] = 8 ;
-    info[poller] = 8
-  >
-
-    provider = Ubiquity Press
-    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
-    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
-
+#
+#}
+#{
+#  publisher <
+#    name = De Montfort University Press ;
+#    info[contract] = 2011 ;
+#    info[back] = 2000 ;
+#    info[tester] = 8 ;
+#    info[poller] = 8
+#  >
+#
+#    provider = Ubiquity Press
+#    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+#    implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+#
 #  {
 #
 #      title <
@@ -3395,9 +2961,9 @@
 #      au < doNotProcess ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; https://gp.demontfortuniversitypress.org/ >
 #
 #  }
-
-}
-
+#
+#}
+#
 #{
 #  publisher <
 #    name = Stockholm University Press ;

@@ -1,0 +1,141 @@
+
+#tdbout -EXt auidplus tdb/prod/london_school_of_economics_and_political_science.ubiquity.tdb | sed s'/@@@NONDEF@@@/\&/'
+
+
+{
+  publisher <
+    name = London School of Economics and Political Science
+  >
+
+    provider = London School of Economics and Political Science ##################### NOT UBIQUITY
+    implicit < status ; year ; volume ; name ; param[year] ; nondefparam[volume_name] ; comment[error] >
+    plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
+
+  {
+
+      title <
+        name = Journal of Illicit Economies and Development ;
+        eissn = 2516-7227
+      >
+
+      comment[publisher] = London School of Economics and Political Science
+      param[base_url] = https://jied.lse.ac.uk/
+      nondefparam[base_url2] = https://account.jied.lse.ac.uk/
+      nondefparam[journal_id] = lse-j-jied
+
+      au < down ; 2019 ; 1 ; Journal of Illicit Economies and Development Volume 2019 ; 2019 ; 1 ; >
+      au < down ; 2020 ; 2 ; Journal of Illicit Economies and Development Volume 2020 ; 2020 ; 2 ; >
+      au < down ; 2021 ; 3 ; Journal of Illicit Economies and Development Volume 2021 ; 2021 ; 3 ; >
+      au < exists ; 2022 ; 4 ; Journal of Illicit Economies and Development Volume 2022 ; 2022 ; 4 ; >
+      au < exists ; 2023 ; 5 ; Journal of Illicit Economies and Development Volume 2023 ; 2023 ; 5 ; >
+      au < exists ; 2024 ; 6 ; Journal of Illicit Economies and Development Volume 2024 ; 2024 ; 6 ; >
+      au < exists ; 2025 ; 7 ; Journal of Illicit Economies and Development Volume 2025 ; 2025 ; 7 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Long-Term Care ;
+        eissn = 2516-9122
+      >
+
+      comment[publisher] = London School of Economics and Political Science
+      param[base_url] = https://journal.ilpnetwork.org/
+      nondefparam[base_url2] = https://account.journal.ilpnetwork.org/
+      nondefparam[journal_id] = lse-j-jltc
+
+      au < exists ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; 2 ; >
+      au < exists ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; 5 ; >
+      au < exists ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; 6 ; >
+      au < exists ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; 8 ; >
+      au < exists ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 ; 9 ; >
+      au < exists ; 2023 ; 10 ; Journal of Long-Term Care Volume 2023 ; 2023 ; 10 ; >
+      au < exists ; 2024 ; 11 ; Journal of Long-Term Care Volume 2024 ; 2024 ; 11 ; >
+      au < exists ; 2025 ; 12 ; Journal of Long-Term Care Volume 2025 ; 2025 ; 12 ; >
+
+  }
+
+  {
+
+      title <
+        name = LSE Public Policy Review ;
+        eissn = 2633-4046
+      >
+
+      comment[publisher] = London School of Economics and Political Science
+      param[base_url] = https://ppr.lse.ac.uk/
+      nondefparam[base_url2] = https://account.ppr.lse.ac.uk/
+      nondefparam[journal_id] = lse-j-lseppr
+
+      au < exists ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; 1 ; >
+      au < exists ; 2021 ; 1,2 ; LSE Public Policy Review Volume 2021 ; 2021 ; 1,2 ; >
+      au < exists ; 2022 ; 2 ; LSE Public Policy Review Volume 2022 [superseded] ; 2022 ; 2 ; >
+      au < exists ; 2023 ; 3 ; LSE Public Policy Review Volume 2023 ; 2023 ; 3 ; >
+      au < exists ; 2024 ; 3 ; LSE Public Policy Review Volume 2024 ; 2024 ; 3 ; >
+      au < exists ; 2025 ; 3 ; LSE Public Policy Review Volume 2025 ; 2025 ; 3 ; >
+
+  }
+
+  {
+
+      title <
+        name = Philosophy of Physics ;
+        eissn = 2753-5908
+      >
+
+      comment[publisher] = London School of Economics and Political Science
+      param[base_url] = https://philosophyofphysics.lse.ac.uk/
+      nondefparam[base_url2] = https://account.philosophyofphysics.lse.ac.uk/
+      nondefparam[journal_id] = lse-j-pp
+
+      au < exists ; 2023 ; 1 ; Philosophy of Physics Volume 2023 ; 2023 ; 1 ; >
+      au < exists ; 2024 ; 2 ; Philosophy of Physics Volume 2024 ; 2024 ; 2 ; >
+      au < exists ; 2025 ; 3 ; Philosophy of Physics Volume 2025 ; 2025 ; 3 ; >
+
+  }
+
+  {
+
+      title <
+        name = Economía ;
+        issn = 1533-6239 ;
+        eissn = 1529-7470
+      >
+
+      comment[publisher] = London School of Economics and Political Science
+      param[base_url] = https://economia.lse.ac.uk/
+      nondefparam[base_url2] = https://account.economia.lse.ac.uk/
+      nondefparam[journal_id] = lse-j-elaceaj
+
+      au < exists ; 2000 ; 1 ; Economía Volume 2000 ; 2000 ; 1 ; >
+      au < exists ; 2001 ; 2 ; Economía Volume 2001 ; 2001 ; 2 ; >
+      au < exists ; 2002 ; 3 ; Economía Volume 2002 ; 2002 ; 3 ; >
+      au < exists ; 2003 ; 4 ; Economía Volume 2003 ; 2003 ; 4 ; >
+      au < exists ; 2004 ; 5 ; Economía Volume 2004 ; 2004 ; 5 ; >
+      au < exists ; 2005 ; 6 ; Economía Volume 2005 ; 2005 ; 6 ; >
+      au < exists ; 2006 ; 7 ; Economía Volume 2006 ; 2006 ; 7 ; >
+      au < exists ; 2007 ; 8 ; Economía Volume 2007 ; 2007 ; 8 ; >
+      au < exists ; 2008 ; 9 ; Economía Volume 2008 ; 2008 ; 9 ; >
+      au < exists ; 2009 ; 9,10 ; Economía Volume 2009 ; 2009 ; 9,10 ; >
+      au < exists ; 2010 ; 10,11 ; Economía Volume 2010 ; 2010 ; 10,11 ; >
+      au < exists ; 2011 ; 11,12 ; Economía Volume 2011 ; 2011 ; 11,12 ; >
+      au < exists ; 2012 ; 12,13 ; Economía Volume 2012 ; 2012 ; 12,13 ; >
+      au < exists ; 2013 ; 13,14 ; Economía Volume 2013 ; 2013 ; 13,14 ; >
+      au < exists ; 2014 ; 14,15 ; Economía Volume 2014 ; 2014 ; 14,15 ; >
+      au < exists ; 2015 ; 15,16 ; Economía Volume 2015 ; 2015 ; 15,16 ; >
+      au < exists ; 2016 ; 16,17 ; Economía Volume 2016 ; 2016 ; 16,17 ; >
+      au < exists ; 2017 ; 17,18 ; Economía Volume 2017 ; 2017 ; 17,18 ; >
+      au < exists ; 2018 ; 18,19 ; Economía Volume 2018 ; 2018 ; 18,19 ; >
+      au < exists ; 2019 ; 19,20 ; Economía Volume 2019 ; 2019 ; 19,20 ; >
+      au < exists ; 2020 ; 20,21 ; Economía Volume 2020 ; 2020 ; 20,21 ; >
+      au < exists ; 2021 ; 22 ; Economía Volume 2021 ; 2021 ; 22 ; >
+      au < doesNotExist ; 2022 ; 21 ; Economía Volume 2022 ; 2022 ; 21 ; >
+      au < exists ; 2023 ; 22 ; Economía Volume 2023 ; 2023 ; 22 ; >
+      au < exists ; 2024 ; 23 ; Economía Volume 2024 ; 2024 ; 23 ; >
+      au < exists ; 2025 ; 24 ; Economía Volume 2025 ; 2025 ; 24 ; >
+
+  }
+
+}
+
