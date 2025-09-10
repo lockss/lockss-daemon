@@ -5912,6 +5912,7 @@
     comment[journal_issn] = 1741-0401
     param[journal_id] = ijppm
     # online from 2004
+    #continues = 0043-8022
 
     au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; International Journal of Productivity and Performance Management Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; International Journal of Productivity and Performance Management Volume 54 ; 54 ; >
@@ -6097,6 +6098,38 @@
 
   {
     title <
+      name = Retail and Distribution Management ;
+      issn = 0307-2363 ;
+      eissn = 2396-9083 ;
+      issnl = 0307-2363
+    >
+
+    comment[journal_issn] = 0307-2363
+    param[journal_id] = ijrdm
+    #continued_by = 0959-0552
+
+    au < exists ; exists ; 1973 ; 1973 ; Retail and Distribution Management Volume 1 ; 1 ; >
+    au < exists ; exists ; 1974 ; 1974 ; Retail and Distribution Management Volume 2 ; 2 ; >
+    au < exists ; exists ; 1975 ; 1975 ; Retail and Distribution Management Volume 3 ; 3 ; >
+    au < exists ; exists ; 1976 ; 1976 ; Retail and Distribution Management Volume 4 ; 4 ; >
+    au < exists ; exists ; 1977 ; 1977 ; Retail and Distribution Management Volume 5 ; 5 ; >
+    au < exists ; exists ; 1978 ; 1978 ; Retail and Distribution Management Volume 6 ; 6 ; >
+    au < exists ; exists ; 1979 ; 1979 ; Retail and Distribution Management Volume 7 ; 7 ; >
+    au < exists ; exists ; 1980 ; 1980 ; Retail and Distribution Management Volume 8 ; 8 ; >
+    au < exists ; exists ; 1981 ; 1981 ; Retail and Distribution Management Volume 9 ; 9 ; >
+    au < exists ; exists ; 1982 ; 1982 ; Retail and Distribution Management Volume 10 ; 10 ; >
+    au < exists ; exists ; 1983 ; 1983 ; Retail and Distribution Management Volume 11 ; 11 ; >
+    au < exists ; exists ; 1984 ; 1984 ; Retail and Distribution Management Volume 12 ; 12 ; >
+    au < exists ; exists ; 1985 ; 1985 ; Retail and Distribution Management Volume 13 ; 13 ; >
+    au < exists ; exists ; 1986 ; 1986 ; Retail and Distribution Management Volume 14 ; 14 ; >
+    au < exists ; exists ; 1987 ; 1987 ; Retail and Distribution Management Volume 15 ; 15 ; >
+    au < exists ; exists ; 1988 ; 1988 ; Retail and Distribution Management Volume 16 ; 16 ; >
+    au < exists ; exists ; 1989 ; 1989 ; Retail and Distribution Management Volume 17 ; 17 ; >
+
+  }
+
+  {
+    title <
       name = International Journal of Retail & Distribution Management ;
       issn = 0959-0552 ;
       eissn = 1758-6690 ;
@@ -6105,6 +6138,7 @@
 
     comment[journal_issn] = 0959-0552
     param[journal_id] = ijrdm
+    #continues = 0307-2363
 
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; International Journal of Retail & Distribution Management Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; International Journal of Retail & Distribution Management Volume 19 ; 19 ; >
@@ -6154,7 +6188,8 @@
     >
 
     comment[journal_issn] = 0956-4233
-    param[journal_id] = ijsim
+    param[journal_id] = josm
+    #continued_by = 1757-5818
 
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; International Journal of Service Industry Management Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; International Journal of Service Industry Management Volume 2 ; 2 ; >
@@ -6235,7 +6270,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; International Journal of Social Economics Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; International Journal of Social Economics Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; International Journal of Social Economics Volume 46 ; 46 ; >
-    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; International Journal of Social Economics Volume 47 ; 47 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_IJSE-05-2019-0310/urn:emeraldgroup.com:asset:id:binary:IJSE-05-2019-0310_mmc1.doc
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; International Journal of Social Economics Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; International Journal of Social Economics Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Social Economics Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Social Economics Volume 50 ; 50 ; >
@@ -6419,10 +6454,11 @@
     comment[journal_issn] = 1751-1062
     param[journal_id] = ijwbr
     #  online from 2007
+    #continues = 0954-7541
 
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; International Journal of Wine Business Research Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; International Journal of Wine Business Research Volume 20 ; 20 ; >
-    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; International Journal of Wine Business Research Volume 21 ; 21 ; reingest1.clockss.org:8082>
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; International Journal of Wine Business Research Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; International Journal of Wine Business Research Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; International Journal of Wine Business Research Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; International Journal of Wine Business Research Volume 24 ; 24 ; >
@@ -6451,7 +6487,7 @@
     >
 
     comment[journal_issn] = 0954-7541
-    param[journal_id] = ijwm
+    param[journal_id] = ijwbr
     comment[continued_by] = 1751-1062
 
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; International Journal of Wine Marketing Volume 1 ; 1 ; >
@@ -6486,7 +6522,7 @@
     comment[journal_issn] = 1753-8351
     param[journal_id] = ijwhm
 
-    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; International Journal of Workplace Health Management Volume 1 ; 1 ; reingest1.clockss.org:8082>
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; International Journal of Workplace Health Management Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; International Journal of Workplace Health Management Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; International Journal of Workplace Health Management Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; International Journal of Workplace Health Management Volume 4 ; 4 ; >
@@ -6554,7 +6590,7 @@
     au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; International Marketing Review Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; International Marketing Review Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; International Marketing Review Volume 21 ; 21 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; International Marketing Review Volume 22 ; 22 ; reingest1.clockss.org:8082>
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; International Marketing Review Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; International Marketing Review Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; International Marketing Review Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; International Marketing Review Volume 25 ; 25 ; >
@@ -6591,7 +6627,7 @@
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Internet Research Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; Internet Research Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; Internet Research Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1994 ; 1994 ; Internet Research Volume 4 ; 4 ; > #no substance
+    au < manifest ; exists ; 1994 ; 1994 ; Internet Research Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; Internet Research Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; Internet Research Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Internet Research Volume 7 ; 7 ; >
@@ -6835,10 +6871,15 @@
     param[journal_id] = jaar
     # online from 2000
 
-    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 5 ; 5 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Journal of Applied Accounting Research Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Journal of Applied Accounting Research Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Journal of Applied Accounting Research Volume 8 ; 8 ; >
+    au < exists ; exists ; 1999 ; 1999 ; Journal of Applied Accounting Research Volume 5 (1999) ; 5 ; >
+    au < exists ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 5 (2000) ; 5 ; >
+    au < exists ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 6 (2000) ; 6 ; >
+    au < exists ; exists ; 2001 ; 2001 ; Journal of Applied Accounting Research Volume 6 (2001) ; 6 ; >
+    au < exists ; exists ; 2002 ; 2002 ; Journal of Applied Accounting Research Volume 6 (2002) ; 6 ; >
+    au < exists ; exists ; 2004 ; 2004 ; Journal of Applied Accounting Research Volume 7 (2004) ; 7 ; >
+    au < exists ; exists ; 2005 ; 2005 ; Journal of Applied Accounting Research Volume 7 (2005) ; 7 ; >
+    au < exists ; exists ; 2006 ; 2006 ; Journal of Applied Accounting Research Volume 8 (2006) ; 8 ; >
+    au < exists ; exists ; 2007 ; 2007 ; Journal of Applied Accounting Research Volume 8 (2007) ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Applied Accounting Research Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Applied Accounting Research Volume 11 ; 11 ; >
@@ -6934,7 +6975,7 @@
     >
 
     comment[journal_issn] = 1754-9450
-    param[journal_id] = jat
+    param[journal_id] = jet
     #continued_by = 2398-6263
 
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Journal of Assistive Technologies: Enabling technologies for inclusion in health, support, care and education Volume 1 ; 1 ; >
@@ -6954,6 +6995,7 @@
     title <
       name = Journal of Enabling Technologies ;
       issn = 2398-6263 ;
+      eissn = 2398-6271 ;
       issnl = 2398-6263
     >
 
@@ -7160,7 +7202,8 @@
     >
 
     comment[journal_issn] = 1756-1396
-    param[journal_id] = jce
+    param[journal_id] = jeee
+    #continued_by = 2053-4604
 
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Chinese Entrepreneurship Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Chinese Entrepreneurship Volume 2 ; 2 ; >
@@ -7180,6 +7223,7 @@
 
     comment[journal_issn] = 2040-8005
     param[journal_id] = jchrm
+    #published by World Scientific Publishing House, 2020
 
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Chinese Human Resources Management Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Chinese Human Resources Management Volume 2 ; 2 ; >
@@ -7490,9 +7534,9 @@
       eissn = 2054-6246 ;
       issnl = 2054-6238
     >
-    param[journal_id] = jeas
-    {
+
     comment[journal_issn] = 2054-6238
+    param[journal_id] = jeas
 
     au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 ; >
@@ -7517,7 +7561,6 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Journal of Economic and Administrative Sciences Volume 41 ; 41 ; >
-    }
 
   }
 
@@ -7712,6 +7755,7 @@
     comment[journal_issn] = 1741-0398
     param[journal_id] = jeim
     # online from 2004
+    #continues = 0957-6053
 
     au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Enterprise Information Management Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Journal of Enterprise Information Management Volume 18 ; 18 ; >
@@ -7806,7 +7850,8 @@
     >
 
     comment[journal_issn] = 0309-0590
-    param[journal_id] = jeit
+    param[journal_id] = ejtd
+    #continued_by = 2046-9012
 
     au < exists ; exists ; 1977 ; 1977 ; Journal of European Industrial Training Volume 1 ; 1 ; >
     au < exists ; exists ; 1978 ; 1978 ; Journal of European Industrial Training Volume 2 ; 2 ; >
@@ -7977,7 +8022,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Fashion Marketing and Management Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Fashion Marketing and Management Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Fashion Marketing and Management Volume 23 ; 23 ; >
-    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Fashion Marketing and Management Volume 24 ; 24 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFMM-10-2018-0138/full/html
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Fashion Marketing and Management Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Fashion Marketing and Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Fashion Marketing and Management Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Fashion Marketing and Management Volume 27 ; 27 ; >
@@ -8054,7 +8099,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Financial Economic Policy Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Financial Economic Policy Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Financial Economic Policy Volume 11 ; 11 ; >
-    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Financial Economic Policy Volume 12 ; 12 ; > #500 error https://www.emerald.com/insight/content/doi/10.1108/JFEP-02-2019-0036/full/html
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Financial Economic Policy Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Financial Economic Policy Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Financial Economic Policy Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Financial Economic Policy Volume 15 ; 15 ; >
@@ -8224,6 +8269,7 @@
     comment[journal_issn] = 1477-7266
     param[journal_id] = jhom
     #  online from 2003
+    #continues = 0268-9235
 
     au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Health Organization and Management Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Health Organization and Management Volume 18 ; 18 ; >
@@ -8439,6 +8485,62 @@
 
   {
     title <
+      name = Community Care Management & Planning ;
+      issn = 0968-9249 ;
+      eissn = 2977-7100 ;
+      issnl = 0968-9249
+    >
+
+    comment[journal_issn] = 0968-9249
+    param[journal_id] = jica
+    #continued_by = 1461-5436
+
+    au < exists ; exists ; 1996 ; 1996 ; Community Care Management & Planning Volume 4 ; 4 ; >
+    au < exists ; exists ; 1997 ; 1997 ; Community Care Management & Planning Volume 5 ; 5 ; >
+
+  }
+
+  {
+    title <
+      name = Managing Community Care ;
+      issn = 1461-5436 ;
+      eissn = 2977-7119 ;
+      issnl = 1461-5436
+    >
+
+    comment[journal_issn] = 1461-5436
+    param[journal_id] = jica
+    #continues = 0968-9249
+    #continued_by = 1477-5190
+
+    au < exists ; exists ; 1996 ; 1996 ; Managing Community Care Volume 4 ; 4 ; >
+    au < exists ; exists ; 1997 ; 1997 ; Managing Community Care Volume 5 ; 5 ; >
+    au < exists ; exists ; 1998 ; 1998 ; Managing Community Care Volume 6 ; 6 ; >
+    au < exists ; exists ; 1999 ; 1999 ; Managing Community Care Volume 7 ; 7 ; >
+    au < exists ; exists ; 2000 ; 2000 ; Managing Community Care Volume 8 ; 8 ; >
+    au < exists ; exists ; 2001 ; 2001 ; Managing Community Care Volume 9 ; 9 ; >
+
+  }
+
+  {
+    title <
+      name = MCC ;
+      issn = 1477-5190 ;
+      eissn = 2977-7127 ;
+      issnl = 1477-5190
+    >
+
+    comment[journal_issn] = 1477-5190
+    param[journal_id] = jica
+    #continues = 1461-5436
+    #continued_by = 1476-9018
+
+    au < exists ; exists ; 2002 ; 2002 ; MCC Volume 10 ; 10 ; >
+
+  }
+
+  {
+    title <
       name = Journal of Integrated Care: Practical evidence for service improvement ;
       issn = 1476-9018 ;
       eissn = 2042-8685 ;
@@ -8447,14 +8549,8 @@
 
     comment[journal_issn] = 1476-9018
     param[journal_id] = jica
+    #continues = 1477-5190
 
-    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; Journal of Integrated Care: Practical evidence for service improvement Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Journal of Integrated Care: Practical evidence for service improvement Volume 5 ; 5 ; >
-    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Journal of Integrated Care: Practical evidence for service improvement Volume 6 ; 6 ; >
-    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Journal of Integrated Care: Practical evidence for service improvement Volume 7 ; 7 ; >
-    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Journal of Integrated Care: Practical evidence for service improvement Volume 8 ; 8 ; >
-    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Journal of Integrated Care: Practical evidence for service improvement Volume 9 ; 9 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Journal of Integrated Care: Practical evidence for service improvement Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Integrated Care: Practical evidence for service improvement Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Integrated Care: Practical evidence for service improvement Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Journal of Integrated Care: Practical evidence for service improvement Volume 13 ; 13 ; >
@@ -8757,7 +8853,8 @@
     >
 
     comment[journal_issn] = 2042-0927
-    param[journal_id] = jldob
+    param[journal_id] = jidob
+    #continued_by = 2050-8824
 
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 2 ; 2 ; >
@@ -8867,7 +8964,7 @@
     >
 
     comment[journal_issn] = 1355-252X
-    param[journal_id] = jmh_arc
+    param[journal_id] = jmh-arc
     comment[merged_into] = 0025-1747
 
     au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; Journal of Management History (Archive) Volume 1 ; 1 ; >
@@ -8888,7 +8985,7 @@
     >
 
     comment[journal_issn] = 0268-9235
-    param[journal_id] = jmm
+    param[journal_id] = jhom
     comment[continued_by] = 1477-7266
 
     au < exists ; exists ; 1986 ; 1986 ; Journal of Management in Medicine Volume 1 ; 1 ; >
@@ -9323,6 +9420,7 @@
     comment[journal_issn] = 1463-578X
     param[journal_id] = jpif
     # online from 1999
+    #continues = 0960-2712
 
     au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Journal of Property Investment & Finance Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Journal of Property Investment & Finance Volume 18 ; 18 ; >
@@ -9358,11 +9456,12 @@
     title <
       name = Journal of Valuation ;
       issn = 0263-7480 ;
+      eissn = 2396-9067 ;
       issnl = 0263-7480
     >
 
     comment[journal_issn] = 0263-7480
-    param[journal_id] = jv
+    param[journal_id] = jpif
     comment[continued_by] = 0960-2712
 
     au < exists ; exists ; 1983 ; 1983 ; Journal of Valuation Volume 1 ; 1 ; >
@@ -9385,7 +9484,7 @@
     >
 
     comment[journal_issn] = 0960-2712
-    param[journal_id] = jpvi
+    param[journal_id] = jpif
     #continues = 0263-7480
     comment[continued_by] = 1463-578X
 
@@ -9402,6 +9501,23 @@
 
   {
     title <
+      name = International Journal of Mental Health Promotion ;
+      issn = 1462-3730 ;
+      eissn = 2049-8543 ;
+      issnl = 1462-3730
+    >
+
+    comment[journal_issn] = 1462-3730
+    param[journal_id] = jpmh
+    #continued_by = 1746-5729
+
+    au < exists ; exists ; 1999 ; 1999 ; International Journal of Mental Health Promotion Volume 1 ; 1 ; >
+    au < exists ; exists ; 2000 ; 2000 ; International Journal of Mental Health Promotion Volume 2 ; 2 ; >
+
+  }
+
+  {
+    title <
       name = Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society ;
       issn = 1746-5729 ;
       eissn = 2042-8731 ;
@@ -9410,6 +9526,7 @@
 
     comment[journal_issn] = 1746-5729
     param[journal_id] = jpmh
+    #continues = 1462-3730
 
     au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 3 ; 3 ; >
@@ -9623,6 +9740,7 @@
     comment[journal_issn] = 1757-5818
     param[journal_id] = josm
     # online from 2009
+    #continues = 0956-4233
 
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Service Management Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Service Management Volume 21 ; 21 ; >
@@ -10465,6 +10583,7 @@
     title <
       name = Logistics World ;
       issn = 0953-2137 ;
+      eissn = 2396-9121 ;
       issnl = 0953-2137
     >
 
@@ -10486,7 +10605,7 @@
     >
 
     comment[journal_issn] = 0957-6053
-    param[journal_id] = lim
+    param[journal_id] = jeim
     #continues = 0953-2137
     comment[continued_by] = 1741-0398
 
@@ -14067,7 +14186,7 @@
     >
 
     comment[journal_issn] = 0043-8022
-    param[journal_id] = ws
+    param[journal_id] = ijppm
     comment[continued_by] = 1741-0401
 
     au < exists ; exists ; 1952 ; 1952 ; Work Study Volume 1 ; 1 ; >
@@ -14448,11 +14567,13 @@
 
     title <
       name = European Journal of Training and Development ;
-      eissn = 2046-9012
+      issn = 2046-9012 ;
+      eissn = 2046-9020
     >
 
     comment[journal_issn] = 2046-9012
     param[journal_id] = ejtd
+    #continues = 0309-0590
 
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; European Journal of Training and Development Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; European Journal of Training and Development Volume 37 ; 37 ; >
@@ -14864,24 +14985,26 @@
 
     title <
       name = Journal of Entrepreneurship in Emerging Economies ;
-      eissn = 2053-4604
+      issn = 2053-4604 ;
+      eissn = 2053-4612
     >
 
     comment[journal_issn] = 2053-4604
-    param[journal_id] = 
+    param[journal_id] = jeee
+    #continues = 1756-1396
 
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Entrepreneurship in Emerging Economies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Entrepreneurship in Emerging Economies Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Entrepreneurship in Emerging Economies Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Entrepreneurship in Emerging Economies Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Entrepreneurship in Emerging Economies Volume 10 ; 10 ; >
-    au < exists ; exists ; 2019 ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 ; > #500 error
+    au < exists ; exists ; 2019 ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Entrepreneurship in Emerging Economies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Entrepreneurship in Emerging Economies Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Entrepreneurship in Emerging Economies Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Entrepreneurship in Emerging Economies Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Entrepreneurship in Emerging Economies Volume 16 ; 16 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Journal of Entrepreneurship in Emerging Economies Volume 17 ; 17 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Journal of Entrepreneurship in Emerging Economies Volume 17 ; 17 ; >
 
   }
 
@@ -14939,11 +15062,13 @@
 
     title <
       name = Journal of Intellectual Disabilities and Offending Behaviour ;
-      eissn = 2050-8824
+      issn = 2050-8824 ;
+      eissn = 2050-8832
     >
 
     comment[journal_issn] = 2050-8824
-    param[journal_id] = 
+    param[journal_id] = jidob
+    #continues = 2042-0927
 
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 5 ; 5 ; >
