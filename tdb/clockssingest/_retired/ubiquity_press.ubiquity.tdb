@@ -273,20 +273,20 @@
       #Transfered away
   }
 
-#  {
-#
-#      title <
-#        name = Journal of Open Public Health Data ;
-#        eissn = 2053-2407
-#      >
-#
-#      comment[publisher] = Ubiquity Press
-##      param[base_url] = http://openhealthdata.metajnl.com/
-#      # continued by Open Health Data
-#
-#      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; 1 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ ; >
-#
-#  }
+  {
+
+      title <
+        name = Journal of Open Public Health Data ;
+        eissn = 2053-2407
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = http://openhealthdata.metajnl.com/
+      # continued by Open Health Data
+
+      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; 1 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ ; >
+      #Renamed to Open Health Data. Keep to match GLN.
+  }
 
   {
 

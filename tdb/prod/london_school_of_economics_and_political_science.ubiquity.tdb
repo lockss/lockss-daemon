@@ -45,10 +45,10 @@
       nondefparam[base_url2] = https://account.journal.ilpnetwork.org/
       nondefparam[journal_id] = lse-j-jltc
 
-      au < exists ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; 2 ; >
-      au < exists ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; 5 ; >
-      au < exists ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; 6 ; >
-      au < exists ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; 8 ; >
+      au < down ; 2018 ; 2 ; Journal of Long-Term Care Volume 2018 ; 2018 ; 2 ; >
+      au < down ; 2019 ; 5 ; Journal of Long-Term Care Volume 2019 ; 2019 ; 5 ; >
+      au < down ; 2020 ; 6 ; Journal of Long-Term Care Volume 2020 ; 2020 ; 6 ; >
+      au < down ; 2021 ; 8 ; Journal of Long-Term Care Volume 2021 ; 2021 ; 8 ; >
       au < exists ; 2022 ; 9 ; Journal of Long-Term Care Volume 2022 ; 2022 ; 9 ; >
       au < exists ; 2023 ; 10 ; Journal of Long-Term Care Volume 2023 ; 2023 ; 10 ; >
       au < exists ; 2024 ; 11 ; Journal of Long-Term Care Volume 2024 ; 2024 ; 11 ; >
@@ -68,9 +68,9 @@
       nondefparam[base_url2] = https://account.ppr.lse.ac.uk/
       nondefparam[journal_id] = lse-j-lseppr
 
-      au < exists ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; 1 ; >
-      au < exists ; 2021 ; 1,2 ; LSE Public Policy Review Volume 2021 ; 2021 ; 1,2 ; >
-      au < exists ; 2022 ; 2 ; LSE Public Policy Review Volume 2022 [superseded] ; 2022 ; 2 ; >
+      au < down ; 2020 ; 1 ; LSE Public Policy Review Volume 2020 ; 2020 ; 1 ; >
+      au < down ; 2021 ; 1,2 ; LSE Public Policy Review Volume 2021 ; 2021 ; 1,2 ; >
+      au < down ; 2022 ; 2 ; LSE Public Policy Review Volume 2022 [superseded] ; 2022 ; 2 ; >
       au < exists ; 2023 ; 3 ; LSE Public Policy Review Volume 2023 ; 2023 ; 3 ; >
       au < exists ; 2024 ; 3 ; LSE Public Policy Review Volume 2024 ; 2024 ; 3 ; >
       au < exists ; 2025 ; 3 ; LSE Public Policy Review Volume 2025 ; 2025 ; 3 ; >
