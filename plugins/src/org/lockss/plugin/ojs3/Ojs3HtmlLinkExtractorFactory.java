@@ -34,40 +34,41 @@ package org.lockss.plugin.ojs3;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
+import org.jsoup.nodes.Node;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.extractor.LinkExtractorFactory;
+import org.lockss.extractor.JsoupHtmlLinkExtractor.ScriptTagLinkExtractor;
+import org.lockss.extractor.LinkExtractor.Callback;
 
 
 public class Ojs3HtmlLinkExtractorFactory implements LinkExtractorFactory {
 
 	protected static final Logger log = Logger.getLogger(Ojs3HtmlLinkExtractorFactory.class);
 
-
 	// instead of a crawl filter, limit which links are found on which pages
 	protected static final String MANIFEST_PATH = "/gateway/";
 	protected static final String TOC_PATH = "/issue/view/";
-protected static final Pattern TOC_PAT = Pattern.compile(TOC_PATH + "[^/]+$", Pattern.CASE_INSENSITIVE);
+	protected static final Pattern TOC_PAT = Pattern.compile(TOC_PATH + "[^/]+$", Pattern.CASE_INSENSITIVE);
 	protected static final Pattern LAND_PAT = Pattern.compile("/article/view/[^/]+$", Pattern.CASE_INSENSITIVE);
-
 
 	@Override
 	public LinkExtractor createLinkExtractor(String mimeType) throws PluginException {
-		return new JsoupHtmlLinkExtractor() {
-			@Override
-			public void extractUrls(final ArchivalUnit au,
-					InputStream in,
-					String encoding,
-					final String srcUrl,
-					final Callback cb)
-							throws IOException, PluginException {
-				super.extractUrls(au,in,encoding,srcUrl,
+		return new Ojs3JsoupHtmlLinkExtractor();
+	}
+
+	public static class Ojs3JsoupHtmlLinkExtractor extends JsoupHtmlLinkExtractor{
+		@Override
+		public void extractUrls(ArchivalUnit au, InputStream in, String encoding, String srcUrl, Callback cb)
+				throws IOException, PluginException {
+			super.extractUrls(au,in,encoding,srcUrl,
 						new Callback() {
 					@Override
 					public void foundLink(String url) {
@@ -89,8 +90,16 @@ protected static final Pattern TOC_PAT = Pattern.compile(TOC_PATH + "[^/]+$", Pa
 						cb.foundLink(url);
 					}
 				});
-			}
-		};
+		}
+		
+		public static class Ojs3ScriptTagLinkExtractor extends ScriptTagLinkExtractor{
+		@Override
+		public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
+			log.debug3("Inside Ojs3ScriptTagLinkExtractor");
+			super.tagBegin(node, au, cb);
+			//get whole text, pass to buffered line reader, if line contains lens.css, then look
+		}
+	}
 	}
 
 }
