@@ -79,7 +79,8 @@
 
   {
     title <
-      name = Iris Journal of Scholarship
+      name = Iris Journal of Scholarship ;
+      eissn = 2643-2633
     >
 
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -94,7 +95,8 @@
 
   {
     title <
-      name = Homiletic 
+      name = Homiletic ;
+      eissn = 2152-6923
     >
 
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -125,7 +127,8 @@
 
   {
     title <
-      name = Vanderbilt Lives 
+      name = Vanderbilt Lives ;
+      eissn = 2693-0862
     >
 
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -158,7 +161,8 @@
 
   {
     title <
-      name = Vanderbilt e-Journal of Luso-Hispanic Studies
+      name = Vanderbilt e-Journal of Luso-Hispanic Studies ;
+      eissn = 1547-5743
     >
 
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -182,7 +186,8 @@
 
   {
     title <
-      name = Vanderbilt Undergraduate Research Journal
+      name = Vanderbilt Undergraduate Research Journal ;
+      eissn = 1555-788X
     >
 
       plugin = org.lockss.plugin.ojs3.Ojs3Plugin
@@ -207,5 +212,6 @@
       au < expected ; 2025 ; Vanderbilt Undergraduate Research Journal Volume 15 ; 15 ; 2025 >
 
   }
+
 
 }
