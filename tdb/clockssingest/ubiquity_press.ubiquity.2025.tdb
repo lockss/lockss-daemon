@@ -549,11 +549,11 @@
       au < frozen ; exists ; 1990 ; 42 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1990 ; 1990 ; 42 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 1991 ; 43 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1991 ; 1991 ; 43 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 1992 ; 44 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1992 ; 1992 ; 44 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
-      au < ready ; exists ; 1993 ; 45 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1993 ; 1993 ; 45 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
-      au < ready ; exists ; 1994 ; 46 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1994 ; 1994 ; 46 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
+      au < crawling ; exists ; 1993 ; 45 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1993 ; 1993 ; 45 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
+      au < crawling ; exists ; 1994 ; 46 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1994 ; 1994 ; 46 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 1995 ; 47 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1995 ; 1995 ; 47 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 1996 ; 48 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1996 ; 1996 ; 48 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
-      au < ready ; exists ; 1997 ; 49 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1997 ; 1997 ; 49 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
+      au < crawling ; exists ; 1997 ; 49 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1997 ; 1997 ; 49 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 1998 ; 50 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1998 ; 1998 ; 50 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 1999 ; 51 ; Tellus A: Dynamic Meteorology and Oceanography Volume 1999 ; 1999 ; 51 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2000 ; 52 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2000 ; 2000 ; 52 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
@@ -609,12 +609,12 @@
       au < frozen ; exists ; 1990 ; 42 ; Tellus B: Chemical and Physical Meteorology Volume 1990 ; 1990 ; 42 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 1991 ; 43 ; Tellus B: Chemical and Physical Meteorology Volume 1991 ; 1991 ; 43 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 1992 ; 44 ; Tellus B: Chemical and Physical Meteorology Volume 1992 ; 1992 ; 44 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < ready ; exists ; 1993 ; 45 ; Tellus B: Chemical and Physical Meteorology Volume 1993 ; 1993 ; 45 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
+      au < crawling ; exists ; 1993 ; 45 ; Tellus B: Chemical and Physical Meteorology Volume 1993 ; 1993 ; 45 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 1994 ; 46 ; Tellus B: Chemical and Physical Meteorology Volume 1994 ; 1994 ; 46 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < ready ; exists ; 1995 ; 47 ; Tellus B: Chemical and Physical Meteorology Volume 1995 ; 1995 ; 47 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
+      au < crawling ; exists ; 1995 ; 47 ; Tellus B: Chemical and Physical Meteorology Volume 1995 ; 1995 ; 47 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 1996 ; 48 ; Tellus B: Chemical and Physical Meteorology Volume 1996 ; 1996 ; 48 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 1997 ; 49 ; Tellus B: Chemical and Physical Meteorology Volume 1997 ; 1997 ; 49 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < ready ; exists ; 1998 ; 50 ; Tellus B: Chemical and Physical Meteorology Volume 1998 ; 1998 ; 50 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
+      au < crawling ; exists ; 1998 ; 50 ; Tellus B: Chemical and Physical Meteorology Volume 1998 ; 1998 ; 50 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 1999 ; 51 ; Tellus B: Chemical and Physical Meteorology Volume 1999 ; 1999 ; 51 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2000 ; 52 ; Tellus B: Chemical and Physical Meteorology Volume 2000 ; 2000 ; 52 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2001 ; 53 ; Tellus B: Chemical and Physical Meteorology Volume 2001 ; 2001 ; 53 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
@@ -769,7 +769,7 @@
       nondefparam[journal_id] = up-j-bha
 
       au < frozen ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; 1 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
-      au < ready ; exists ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; 2 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
+      au < crawling ; exists ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; 2 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < frozen ; exists ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; 3 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < frozen ; exists ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 ; 4 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < frozen ; exists ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; 5 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
@@ -1026,7 +1026,7 @@
       au < finished ; finished ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; 3 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2006 ; 4 ; Journal of Circadian Rhythms Volume 2006 ; 2006 ; 4 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; 5 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; 6 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
+      au < crawling ; exists ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; 6 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
       au < frozen ; exists ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; 7 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
       au < frozen ; exists ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; 8 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
       au < frozen ; exists ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ ; >
@@ -2287,7 +2287,7 @@
       nondefparam[base_url2] = https://account.jotsjournal.org/
       nondefparam[journal_id] = vt-j-jts
 
-      au < ready ; exists ; 1996 ; 22 ; The Journal of Technology Studies Volume 1996 ; 1996 ; 22 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
+      au < crawling ; exists ; 1996 ; 22 ; The Journal of Technology Studies Volume 1996 ; 1996 ; 22 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       au < frozen ; exists ; 1997 ; 23 ; The Journal of Technology Studies Volume 1997 ; 1997 ; 23 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       au < manifest ; exists ; 1998 ; 24 ; The Journal of Technology Studies Volume 1998 ; 1998 ; 24 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       au < manifest ; exists ; 1999 ; 25 ; The Journal of Technology Studies Volume 1999 ; 1999 ; 25 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
@@ -2462,7 +2462,7 @@
       nondefparam[journal_id] = dmu-j-jcss
 
       au < frozen ; exists ; 2013 ; 1 ; Journal of Critical Southern Studies Volume 2013 ; 2013 ; 1 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
-      au < ready ; exists ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; 2 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
+      au < crawling ; exists ; 2014 ; 2 ; Journal of Critical Southern Studies Volume 2014 ; 2014 ; 2 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
       au < frozen ; exists ; 2015 ; 3 ; Journal of Critical Southern Studies Volume 2015 ; 2015 ; 3 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
       au < frozen ; exists ; 2023 ; 4 ; Journal of Critical Southern Studies Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://jcss.demontfortuniversitypress.org/ ; >
 
