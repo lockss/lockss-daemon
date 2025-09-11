@@ -803,7 +803,7 @@
       #published 2021-2025
       param[journal_id] = gs
 
-      au < crawling ; exists ; 2021 ; 1 ; Global Storytelling: Journal of Digital and Moving Images Volume 2021 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; 1 ; Global Storytelling: Journal of Digital and Moving Images Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 2 ; Global Storytelling: Journal of Digital and Moving Images Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 3 ; Global Storytelling: Journal of Digital and Moving Images Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 4 ; Global Storytelling: Journal of Digital and Moving Images Volume 2024 ; 2024 ; >
@@ -822,8 +822,8 @@
       #published 2022-2025
       param[journal_id] = glbot
 
-      au < crawling ; exists ; 2022 ; 61 ; The Great Lakes Botanist Volume 2022 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; 62 ; The Great Lakes Botanist Volume 2023 ; 2023 ; >
+      au < frozen ; exists ; 2022 ; 61 ; The Great Lakes Botanist Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; 62 ; The Great Lakes Botanist Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 63 ; The Great Lakes Botanist Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 64 ; The Great Lakes Botanist Volume 2025 ; 2025 ; >
 
@@ -858,7 +858,7 @@
 
       au < ready ; exists ; 2021 ; 15 ; Journal of Muslim Mental Health Volume 2021 ; 2021 ; >
       au < ready ; exists ; 2022 ; 16 ; Journal of Muslim Mental Health Volume 2022 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; 17 ; Journal of Muslim Mental Health Volume 2023 ; 2023 ; >
+      au < frozen ; exists ; 2023 ; 17 ; Journal of Muslim Mental Health Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 18 ; Journal of Muslim Mental Health Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 19 ; Journal of Muslim Mental Health Volume 2025 ; 2025 ; >
 

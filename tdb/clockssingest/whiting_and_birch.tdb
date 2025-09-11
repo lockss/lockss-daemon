@@ -29,7 +29,7 @@
       
       au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1988 ; 1988 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 1 ; 1 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 1989 ; 1989 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 2 ; 2 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2004 ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2004 ; 2004 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 14 ; 14 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2005 ; 2005 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 15 ; 15 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2006 ; 2006 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 16 ; 16 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2007 ; 2007 ; Groupwork: An Interdisciplinary Journal for Working with Groups Volume 17 ; 17 ; https://journals.whitingbirch.net/ ; >
@@ -70,9 +70,9 @@
       param[journal_id] = JPTS
       #PKP is now hosting our online journals
 
-      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2003 ; 2003 ; The Journal of Practice Teaching and Learning Volume 2003 ; 5 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2003 ; 2003 ; The Journal of Practice Teaching and Learning Volume 2003 ; 5 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2005 ; 2005 ; The Journal of Practice Teaching and Learning Volume 2005 ; 6 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2006 ; 2006 ; The Journal of Practice Teaching and Learning Volume 2006 ; 7 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2006 ; 2006 ; The Journal of Practice Teaching and Learning Volume 2006 ; 7 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2008 ; 2008 ; The Journal of Practice Teaching and Learning Volume 2008 ; 8 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2009 ; 2009 ; The Journal of Practice Teaching and Learning Volume 2009 ; 9 ; https://journals.whitingbirch.net/ ; >
       au < ojs2.ClockssOJS2Plugin ; doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Journal of Practice Teaching and Learning Volume 2010 ; 10 ; https://journals.whitingbirch.net/ ; >
@@ -111,9 +111,9 @@
       
       au < ojs2.ClockssOJS2Plugin ; superseded ; exists ; 2019 ; 2019 ; Social Work and Social Sciences Review Volume 2019 [superseded] ; 2019 ; https://journals.whitingbirch.net/ ; >
 
-      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2004 ; 2004 ; Social Work and Social Sciences Review Volume 2004 ; 2004 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2004 ; 2004 ; Social Work and Social Sciences Review Volume 2004 ; 2004 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2005 ; 2005 ; Social Work and Social Sciences Review Volume 2005 ; 2005 ; https://journals.whitingbirch.net/ ; >
-      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2007 ; 2007 ; Social Work and Social Sciences Review Volume 2007 ; 2007 ; https://journals.whitingbirch.net/ ; >
+      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2007 ; 2007 ; Social Work and Social Sciences Review Volume 2007 ; 2007 ; https://journals.whitingbirch.net/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2008 ; 2008 ; Social Work and Social Sciences Review Volume 2008 ; 2008 ; https://journals.whitingbirch.net/ ; >
 
       au < ojs2.ClockssOJS2Plugin ; doNotProcess ; doNotProcess ; 2010 ; 2010 ; Social Work and Social Sciences Review Volume 2010 ; 2010 ; https://journals.whitingbirch.net/ ; >
