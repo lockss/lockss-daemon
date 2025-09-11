@@ -5,24 +5,62 @@
     info[contract] = 2022 ;
     info[back] = 2013 ;
     info[tester] = 5 ;
-    info[poller] = 3 ;
-    info[platform] = OJS3. Open Journal Systems 3.3.0.13
+    info[poller] = 3
   >
 
-    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
-    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
-    attr[start_stem] = index.php/
-
   {
-
     title <
       name = Alustath Journal for Human and Social Sciences ;
       issn = 0552-265X ;
       eissn = 2518-9263
     >
+
+      #published 2014-present
+
+    {
+      provider = bepress
+      implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+      plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+      param[base_url] = https://alustath.uobaghdad.edu.iq/
+      param[journal_abbr] = journal
+
+      au < exists ; exists ; 2014 ; Alustath Journal for Human and Social Sciences Volume 210 ; 210 ; >
+      au < exists ; exists ; 2014 ; Alustath Journal for Human and Social Sciences Volume 211 ; 211 ; >
+      au < exists ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 212 ; 212 ; >
+      au < exists ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 213 ; 213 ; >
+      au < exists ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 214 ; 214 ; >
+      au < exists ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 215 ; 215 ; >
+      au < exists ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 216 ; 216 ; >
+      au < exists ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 217 ; 217 ; >
+      au < exists ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 218 ; 218 ; >
+      au < exists ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 219 ; 219 ; >
+      au < exists ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 220 ; 220 ; >
+      au < exists ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 221 ; 221 ; >
+      au < exists ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 222 ; 222 ; >
+      au < exists ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 223 ; 223 ; >
+      au < exists ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 224 ; 224 ; >
+      au < exists ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 225 ; 225 ; >
+      au < exists ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 226 ; 226 ; >
+      au < exists ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 227 ; 227 ; >
+
+      au < doNotProcess ; doNotProcess ; 2019 ; Alustath Journal for Human and Social Sciences Volume 58 ; 58 ; >
+      au < doNotProcess ; doNotProcess ; 2020 ; Alustath Journal for Human and Social Sciences Volume 59 ; 59 ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; Alustath Journal for Human and Social Sciences Volume 60 ; 60 ; >
+      au < doNotProcess ; doNotProcess ; 2022 ; Alustath Journal for Human and Social Sciences Volume 61 ; 61 ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; Alustath Journal for Human and Social Sciences Volume 62 ; 62 ; >
+      au < doNotProcess ; doNotProcess ; 2024 ; Alustath Journal for Human and Social Sciences Volume 63 ; 63 ; >
+      au < exists ; exists ; 2025 ; Alustath Journal for Human and Social Sciences Volume 64 ; 64 ; >
+
+    }
+
+    {
+
+      info[platform] = OJS3. Open Journal Systems 3.3.0.13
       param[base_url] = https://alustath.uobaghdad.edu.iq/
       param[journal_id] = UJIRCO
-      #published 2014-present
+      implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+      plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+      attr[start_stem] = index.php/
 
       au < finished ; manifest ; 2014 ; Alustath Journal for Human and Social Sciences Volume 2014 ; 53 ; 2014 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2015 ; Alustath Journal for Human and Social Sciences Volume 2015 ; 54 ; 2015 ; reingest2.clockss.org:8085 >
@@ -37,6 +75,6 @@
       au < finished ; manifest ; 2024 ; Alustath Journal for Human and Social Sciences Volume 2024 ; 63 ; 2024 ; reingest1.clockss.org:8082 >
       au < doNotProcess ; exists ; 2025 ; Alustath Journal for Human and Social Sciences Volume 2025 ; 64 ; 2025 ; > #LXPUB-1322
       #move to Bepress
+    }
   }
-
 }
