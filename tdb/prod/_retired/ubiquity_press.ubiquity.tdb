@@ -11,6 +11,10 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
+
   {
 
       title <
@@ -51,6 +55,10 @@
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
 
   {
 
@@ -112,6 +120,10 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
+
   {
 
       title <
@@ -143,6 +155,9 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
 
   {
 
@@ -210,6 +225,9 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
 
   {
 
@@ -258,6 +276,10 @@
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
 
   {
 
@@ -736,6 +758,10 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
+
   {
 
       title <
@@ -764,6 +790,10 @@
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
 
   {
 
@@ -881,6 +911,10 @@
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
 
   {
 
@@ -1238,6 +1272,10 @@
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
 
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
+
   {
 
       title <
@@ -1295,6 +1333,11 @@
     provider = Ubiquity Press
     plugin = org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkPlugin
     implicit < status ; year ; volume ; name ; param[year] ; param[base_url] >
+    
+    # All the AUs in this file are retired from before the nondef params were introduced
+    nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+    nondefparam[journal_id] = nondefparam
+
   {
 
       title <
