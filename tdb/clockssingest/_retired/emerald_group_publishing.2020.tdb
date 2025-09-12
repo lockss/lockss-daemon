@@ -12486,7 +12486,7 @@
     au < finished ; manifest ; 2019 ; Rapid Prototyping Journal Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Rapid Prototyping Journal Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < down ; exists ; 2021 ; Rapid Prototyping Journal Volume 27 ; 27 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id//
-    au < frozen ; exists ; 2022 ; Rapid Prototyping Journal Volume 28 ; 28 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id//
+    au < frozen ; exists ; 2022 ; Rapid Prototyping Journal Volume 28 ; 28 ; >
     au < frozen ; exists ; 2023 ; Rapid Prototyping Journal Volume 29 ; 29 ; >
     au < frozen ; exists ; 2024 ; Rapid Prototyping Journal Volume 30 ; 30 ; >
     au < doNotProcess ; exists ; 2025 ; Rapid Prototyping Journal Volume 31 ; 31 ; >
@@ -12704,13 +12704,13 @@
     au < doNotProcess ; doNotProcess ; 2016 ; Review of Behavioral Finance Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Review of Behavioral Finance Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Review of Behavioral Finance Volume 10 ; 10 ; >
-    au < finished ; manifest ; 2019 ; Review of Behavioral Finance Volume 11 ; 11 ; reingest1.clockss.org:8082 > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2020-0013/urn:emeraldgroup.com:asset:id:binary:RBF-01-2020-0013_mmc001.docx
-    au < finished ; manifest ; 2020 ; Review of Behavioral Finance Volume 12 ; 12 ; reingest3.clockss.org:8083 > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2020-0013/urn:emeraldgroup.com:asset:id:binary:RBF-01-2020-0013_mmc001.docx
-    au < frozen ; exists ; 2021 ; Review of Behavioral Finance Volume 13 ; 13 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2021-0013/urn:emeraldgroup.com:asset:id:binary:RBF-01-2021-0013_mmc001.docx
-    au < frozen ; exists ; 2022 ; Review of Behavioral Finance Volume 14 ; 14 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2022-0014/urn:emeraldgroup.com:asset:id:binary:RBF-01-2022-0014_mmc001.docx
-    au < frozen ; exists ; 2023 ; Review of Behavioral Finance Volume 15 ; 15 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2023-0015/urn:emeraldgroup.com:asset:id:binary:RBF-01-2023-0015_mmc001.docx
-    au < frozen ; exists ; 2024 ; Review of Behavioral Finance Volume 16 ; 16 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2024-0016/urn:emeraldgroup.com:asset:id:binary:RBF-01-2024-0016_mmc001.docx
-    au < doNotProcess ; exists ; 2025 ; Review of Behavioral Finance Volume 17 ; 17 ; > #500 error https://www.emerald.com/insight/proxy/img?link=/resource/id/urn:emeraldgroup.com:asset:id:article:10_1108_RBF-01-2025-0017/urn:emeraldgroup.com:asset:id:binary:RBF-01-2025-0017_mmc001.docx
+    au < finished ; manifest ; 2019 ; Review of Behavioral Finance Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Review of Behavioral Finance Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+    au < frozen ; exists ; 2021 ; Review of Behavioral Finance Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2022 ; Review of Behavioral Finance Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2023 ; Review of Behavioral Finance Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2024 ; Review of Behavioral Finance Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2025 ; Review of Behavioral Finance Volume 17 ; 17 ; >
 
   }
 
