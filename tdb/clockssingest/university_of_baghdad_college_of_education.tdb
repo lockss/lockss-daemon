@@ -24,24 +24,24 @@
       param[base_url] = https://alustath.uobaghdad.edu.iq/
       param[journal_abbr] = journal
 
-      au < exists ; exists ; 2014 ; Alustath Journal for Human and Social Sciences Volume 210 ; 210 ; >
-      au < exists ; exists ; 2014 ; Alustath Journal for Human and Social Sciences Volume 211 ; 211 ; >
-      au < exists ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 212 ; 212 ; >
-      au < exists ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 213 ; 213 ; >
-      au < exists ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 214 ; 214 ; >
-      au < exists ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 215 ; 215 ; >
-      au < exists ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 216 ; 216 ; >
-      au < exists ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 217 ; 217 ; >
-      au < exists ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 218 ; 218 ; >
-      au < exists ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 219 ; 219 ; >
-      au < exists ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 220 ; 220 ; >
-      au < exists ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 221 ; 221 ; >
-      au < exists ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 222 ; 222 ; >
-      au < exists ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 223 ; 223 ; >
-      au < exists ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 224 ; 224 ; >
-      au < exists ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 225 ; 225 ; >
-      au < exists ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 226 ; 226 ; >
-      au < exists ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 227 ; 227 ; >
+      au < manifest ; exists ; 2014 ; Alustath Journal for Human and Social Sciences Volume 210 ; 210 ; >
+      au < manifest ; exists ; 2014 ; Alustath Journal for Human and Social Sciences Volume 211 ; 211 ; >
+      au < manifest ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 212 ; 212 ; >
+      au < manifest ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 213 ; 213 ; >
+      au < manifest ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 214 ; 214 ; >
+      au < manifest ; exists ; 2015 ; Alustath Journal for Human and Social Sciences Volume 215 ; 215 ; >
+      au < manifest ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 216 ; 216 ; >
+      au < manifest ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 217 ; 217 ; >
+      au < manifest ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 218 ; 218 ; >
+      au < manifest ; exists ; 2016 ; Alustath Journal for Human and Social Sciences Volume 219 ; 219 ; >
+      au < manifest ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 220 ; 220 ; >
+      au < manifest ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 221 ; 221 ; >
+      au < manifest ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 222 ; 222 ; >
+      au < manifest ; exists ; 2017 ; Alustath Journal for Human and Social Sciences Volume 223 ; 223 ; >
+      au < manifest ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 224 ; 224 ; >
+      au < manifest ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 225 ; 225 ; >
+      au < manifest ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 226 ; 226 ; >
+      au < manifest ; exists ; 2018 ; Alustath Journal for Human and Social Sciences Volume 227 ; 227 ; >
 
       au < doNotProcess ; doNotProcess ; 2019 ; Alustath Journal for Human and Social Sciences Volume 58 ; 58 ; >
       au < doNotProcess ; doNotProcess ; 2020 ; Alustath Journal for Human and Social Sciences Volume 59 ; 59 ; >
@@ -49,7 +49,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; Alustath Journal for Human and Social Sciences Volume 61 ; 61 ; >
       au < doNotProcess ; doNotProcess ; 2023 ; Alustath Journal for Human and Social Sciences Volume 62 ; 62 ; >
       au < doNotProcess ; doNotProcess ; 2024 ; Alustath Journal for Human and Social Sciences Volume 63 ; 63 ; >
-      au < exists ; exists ; 2025 ; Alustath Journal for Human and Social Sciences Volume 64 ; 64 ; >
+      au < manifest ; exists ; 2025 ; Alustath Journal for Human and Social Sciences Volume 64 ; 64 ; >
 
     }
 

@@ -6108,23 +6108,23 @@
     param[journal_id] = ijrdm
     #continued_by = 0959-0552
 
-    au < exists ; exists ; 1973 ; 1973 ; Retail and Distribution Management Volume 1 ; 1 ; >
-    au < exists ; exists ; 1974 ; 1974 ; Retail and Distribution Management Volume 2 ; 2 ; >
-    au < exists ; exists ; 1975 ; 1975 ; Retail and Distribution Management Volume 3 ; 3 ; >
-    au < exists ; exists ; 1976 ; 1976 ; Retail and Distribution Management Volume 4 ; 4 ; >
-    au < exists ; exists ; 1977 ; 1977 ; Retail and Distribution Management Volume 5 ; 5 ; >
-    au < exists ; exists ; 1978 ; 1978 ; Retail and Distribution Management Volume 6 ; 6 ; >
-    au < exists ; exists ; 1979 ; 1979 ; Retail and Distribution Management Volume 7 ; 7 ; >
-    au < exists ; exists ; 1980 ; 1980 ; Retail and Distribution Management Volume 8 ; 8 ; >
-    au < exists ; exists ; 1981 ; 1981 ; Retail and Distribution Management Volume 9 ; 9 ; >
-    au < exists ; exists ; 1982 ; 1982 ; Retail and Distribution Management Volume 10 ; 10 ; >
-    au < exists ; exists ; 1983 ; 1983 ; Retail and Distribution Management Volume 11 ; 11 ; >
-    au < exists ; exists ; 1984 ; 1984 ; Retail and Distribution Management Volume 12 ; 12 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Retail and Distribution Management Volume 13 ; 13 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Retail and Distribution Management Volume 14 ; 14 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Retail and Distribution Management Volume 15 ; 15 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Retail and Distribution Management Volume 16 ; 16 ; >
-    au < exists ; exists ; 1989 ; 1989 ; Retail and Distribution Management Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1973 ; 1973 ; Retail and Distribution Management Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; Retail and Distribution Management Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1975 ; 1975 ; Retail and Distribution Management Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; Retail and Distribution Management Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Retail and Distribution Management Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Retail and Distribution Management Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Retail and Distribution Management Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Retail and Distribution Management Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Retail and Distribution Management Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Retail and Distribution Management Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Retail and Distribution Management Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Retail and Distribution Management Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Retail and Distribution Management Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Retail and Distribution Management Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Retail and Distribution Management Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Retail and Distribution Management Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1989 ; 1989 ; Retail and Distribution Management Volume 17 ; 17 ; >
 
   }
 
@@ -6871,15 +6871,15 @@
     param[journal_id] = jaar
     # online from 2000
 
-    au < exists ; exists ; 1999 ; 1999 ; Journal of Applied Accounting Research Volume 5 (1999) ; 5 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 5 (2000) ; 5 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 6 (2000) ; 6 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Journal of Applied Accounting Research Volume 6 (2001) ; 6 ; >
-    au < exists ; exists ; 2002 ; 2002 ; Journal of Applied Accounting Research Volume 6 (2002) ; 6 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Journal of Applied Accounting Research Volume 7 (2004) ; 7 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Journal of Applied Accounting Research Volume 7 (2005) ; 7 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Journal of Applied Accounting Research Volume 8 (2006) ; 8 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Journal of Applied Accounting Research Volume 8 (2007) ; 8 ; >
+    au < manifest ; exists ; 1999 ; 1999 ; Journal of Applied Accounting Research Volume 5 (1999) ; 5 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 5 (2000) ; 5 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 6 (2000) ; 6 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Journal of Applied Accounting Research Volume 6 (2001) ; 6 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; Journal of Applied Accounting Research Volume 6 (2002) ; 6 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Journal of Applied Accounting Research Volume 7 (2004) ; 7 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Journal of Applied Accounting Research Volume 7 (2005) ; 7 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Journal of Applied Accounting Research Volume 8 (2006) ; 8 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Journal of Applied Accounting Research Volume 8 (2007) ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Applied Accounting Research Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Applied Accounting Research Volume 11 ; 11 ; >
@@ -7123,7 +7123,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Business Strategy Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Business Strategy Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Business Strategy Volume 45 ; 45 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Journal of Business Strategy Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Business Strategy Volume 46 ; 46 ; >
 
   }
 
@@ -7853,18 +7853,18 @@
     param[journal_id] = ejtd
     #continued_by = 2046-9012
 
-    au < exists ; exists ; 1977 ; 1977 ; Journal of European Industrial Training Volume 1 ; 1 ; >
-    au < exists ; exists ; 1978 ; 1978 ; Journal of European Industrial Training Volume 2 ; 2 ; >
-    au < exists ; exists ; 1979 ; 1979 ; Journal of European Industrial Training Volume 3 ; 3 ; >
-    au < exists ; exists ; 1980 ; 1980 ; Journal of European Industrial Training Volume 4 ; 4 ; >
-    au < exists ; exists ; 1981 ; 1981 ; Journal of European Industrial Training Volume 5 ; 5 ; >
-    au < exists ; exists ; 1982 ; 1982 ; Journal of European Industrial Training Volume 6 ; 6 ; >
-    au < exists ; exists ; 1983 ; 1983 ; Journal of European Industrial Training Volume 7 ; 7 ; >
-    au < exists ; exists ; 1984 ; 1984 ; Journal of European Industrial Training Volume 8 ; 8 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Journal of European Industrial Training Volume 9 ; 9 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Journal of European Industrial Training Volume 10 ; 10 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Journal of European Industrial Training Volume 11 ; 11 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Journal of European Industrial Training Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Journal of European Industrial Training Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Journal of European Industrial Training Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Journal of European Industrial Training Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Journal of European Industrial Training Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Journal of European Industrial Training Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Journal of European Industrial Training Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Journal of European Industrial Training Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Journal of European Industrial Training Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Journal of European Industrial Training Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Journal of European Industrial Training Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Journal of European Industrial Training Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Journal of European Industrial Training Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of European Industrial Training Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of European Industrial Training Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of European Industrial Training Volume 15 ; 15 ; >
@@ -8495,8 +8495,8 @@
     param[journal_id] = jica
     #continued_by = 1461-5436
 
-    au < exists ; exists ; 1996 ; 1996 ; Community Care Management & Planning Volume 4 ; 4 ; >
-    au < exists ; exists ; 1997 ; 1997 ; Community Care Management & Planning Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; Community Care Management & Planning Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1997 ; 1997 ; Community Care Management & Planning Volume 5 ; 5 ; >
 
   }
 
@@ -8513,12 +8513,10 @@
     #continues = 0968-9249
     #continued_by = 1477-5190
 
-    au < exists ; exists ; 1996 ; 1996 ; Managing Community Care Volume 4 ; 4 ; >
-    au < exists ; exists ; 1997 ; 1997 ; Managing Community Care Volume 5 ; 5 ; >
-    au < exists ; exists ; 1998 ; 1998 ; Managing Community Care Volume 6 ; 6 ; >
-    au < exists ; exists ; 1999 ; 1999 ; Managing Community Care Volume 7 ; 7 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Managing Community Care Volume 8 ; 8 ; >
-    au < exists ; exists ; 2001 ; 2001 ; Managing Community Care Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1998 ; 1998 ; Managing Community Care Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1999 ; 1999 ; Managing Community Care Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Managing Community Care Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; Managing Community Care Volume 9 ; 9 ; >
 
   }
 
@@ -8535,7 +8533,7 @@
     #continues = 1461-5436
     #continued_by = 1476-9018
 
-    au < exists ; exists ; 2002 ; 2002 ; MCC Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; MCC Volume 10 ; 10 ; >
 
   }
 
@@ -8988,9 +8986,9 @@
     param[journal_id] = jhom
     comment[continued_by] = 1477-7266
 
-    au < exists ; exists ; 1986 ; 1986 ; Journal of Management in Medicine Volume 1 ; 1 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Journal of Management in Medicine Volume 2 ; 2 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Journal of Management in Medicine Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Journal of Management in Medicine Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Journal of Management in Medicine Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Journal of Management in Medicine Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Management in Medicine Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Management in Medicine Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; Journal of Management in Medicine Volume 6 ; 6 ; >
@@ -9464,12 +9462,12 @@
     param[journal_id] = jpif
     comment[continued_by] = 0960-2712
 
-    au < exists ; exists ; 1983 ; 1983 ; Journal of Valuation Volume 1 ; 1 ; >
-    au < exists ; exists ; 1984 ; 1984 ; Journal of Valuation Volume 2 ; 2 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Journal of Valuation Volume 3 ; 3 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Journal of Valuation Volume 4 ; 4 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Journal of Valuation Volume 5 ; 5 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Journal of Valuation Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Journal of Valuation Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Journal of Valuation Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Journal of Valuation Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Journal of Valuation Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Journal of Valuation Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Journal of Valuation Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Valuation Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Valuation Volume 8 ; 8 ; >
 
@@ -9511,8 +9509,8 @@
     param[journal_id] = jpmh
     #continued_by = 1746-5729
 
-    au < exists ; exists ; 1999 ; 1999 ; International Journal of Mental Health Promotion Volume 1 ; 1 ; >
-    au < exists ; exists ; 2000 ; 2000 ; International Journal of Mental Health Promotion Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1999 ; 1999 ; International Journal of Mental Health Promotion Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; International Journal of Mental Health Promotion Volume 2 issue 1-3 ; 2 ; >
 
   }
 
@@ -9529,8 +9527,8 @@
     #continues = 1462-3730
     #continued_by = 1746-5729
 
-    au < exists ; exists ; 2003 ; 2003 ; Journal of Mental Health Promotion Volume 2 ; 2 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Journal of Mental Health Promotion Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Journal of Mental Health Promotion Volume 2 issue 4 ; 2 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Journal of Mental Health Promotion Volume 3 ; 3 ; >
 
   }
 
@@ -10515,43 +10513,43 @@
     param[journal_id] = gkmc
     #continued_by = 2514-9342
 
-    au < exists ; exists ; 1928 ; 1928 ; Library Review Volume 1 ; 1 ; >
-    au < exists ; exists ; 1930 ; 1930 ; Library Review Volume 2 ; 2 ; >
-    au < exists ; exists ; 1932 ; 1932 ; Library Review Volume 3 ; 3 ; >
-    au < exists ; exists ; 1934 ; 1934 ; Library Review Volume 4 ; 4 ; >
-    au < exists ; exists ; 1936 ; 1936 ; Library Review Volume 5 ; 5 ; >
-    au < exists ; exists ; 1938 ; 1938 ; Library Review Volume 6 ; 6 ; >
-    au < exists ; exists ; 1940 ; 1940 ; Library Review Volume 7 ; 7 ; >
-    au < exists ; exists ; 1942 ; 1942 ; Library Review Volume 8 ; 8 ; >
-    au < exists ; exists ; 1944 ; 1944 ; Library Review Volume 9 ; 9 ; >
-    au < exists ; exists ; 1946 ; 1946 ; Library Review Volume 10 ; 10 ; >
-    au < exists ; exists ; 1948 ; 1948 ; Library Review Volume 11 ; 11 ; >
-    au < exists ; exists ; 1950 ; 1950 ; Library Review Volume 12 ; 12 ; >
-    au < exists ; exists ; 1952 ; 1952 ; Library Review Volume 13 ; 13 ; >
-    au < exists ; exists ; 1954 ; 1954 ; Library Review Volume 14 ; 14 ; >
-    au < exists ; exists ; 1956 ; 1956 ; Library Review Volume 15 ; 15 ; >
-    au < exists ; exists ; 1958 ; 1958 ; Library Review Volume 16 ; 16 ; >
-    au < exists ; exists ; 1960 ; 1960 ; Library Review Volume 17 ; 17 ; >
-    au < exists ; exists ; 1962 ; 1962 ; Library Review Volume 18 ; 18 ; >
-    au < exists ; exists ; 1964 ; 1964 ; Library Review Volume 19 ; 19 ; >
-    au < exists ; exists ; 1966 ; 1966 ; Library Review Volume 20 ; 20 ; >
-    au < exists ; exists ; 1968 ; 1968 ; Library Review Volume 21 ; 21 ; >
-    au < exists ; exists ; 1970 ; 1970 ; Library Review Volume 22 ; 22 ; >
-    au < exists ; exists ; 1972 ; 1972 ; Library Review Volume 23 ; 23 ; >
-    au < exists ; exists ; 1974 ; 1974 ; Library Review Volume 24 ; 24 ; >
-    au < exists ; exists ; 1976 ; 1976 ; Library Review Volume 25 ; 25 ; >
-    au < exists ; exists ; 1977 ; 1977 ; Library Review Volume 26 ; 26 ; >
-    au < exists ; exists ; 1978 ; 1978 ; Library Review Volume 27 ; 27 ; >
-    au < exists ; exists ; 1979 ; 1979 ; Library Review Volume 28 ; 28 ; >
-    au < exists ; exists ; 1980 ; 1980 ; Library Review Volume 29 ; 29 ; >
-    au < exists ; exists ; 1981 ; 1981 ; Library Review Volume 30 ; 30 ; >
-    au < exists ; exists ; 1982 ; 1982 ; Library Review Volume 31 ; 31 ; >
-    au < exists ; exists ; 1983 ; 1983 ; Library Review Volume 32 ; 32 ; >
-    au < exists ; exists ; 1984 ; 1984 ; Library Review Volume 33 ; 33 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Library Review Volume 34 ; 34 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Library Review Volume 35 ; 35 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Library Review Volume 36 ; 36 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Library Review Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1928 ; 1928 ; Library Review Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1930 ; 1930 ; Library Review Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1932 ; 1932 ; Library Review Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1934 ; 1934 ; Library Review Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1936 ; 1936 ; Library Review Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1938 ; 1938 ; Library Review Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1940 ; 1940 ; Library Review Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1942 ; 1942 ; Library Review Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1944 ; 1944 ; Library Review Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1946 ; 1946 ; Library Review Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1948 ; 1948 ; Library Review Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1950 ; 1950 ; Library Review Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1952 ; 1952 ; Library Review Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1954 ; 1954 ; Library Review Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1956 ; 1956 ; Library Review Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1958 ; 1958 ; Library Review Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1960 ; 1960 ; Library Review Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1962 ; 1962 ; Library Review Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1964 ; 1964 ; Library Review Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1966 ; 1966 ; Library Review Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1968 ; 1968 ; Library Review Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1970 ; 1970 ; Library Review Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1972 ; 1972 ; Library Review Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; Library Review Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; Library Review Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Library Review Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Library Review Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Library Review Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Library Review Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Library Review Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Library Review Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Library Review Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Library Review Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Library Review Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Library Review Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Library Review Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Library Review Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Library Review Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Library Review Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Library Review Volume 40 ; 40 ; >
@@ -10800,17 +10798,17 @@
     param[journal_id] = mrr
     comment[continued_by] = 2040-8269
 
-    au < exists ; exists ; 1978 ; 1978 ; Management Research News Volume 1 ; 1 ; >
-    au < exists ; exists ; 1979 ; 1979 ; Management Research News Volume 2 ; 2 ; >
-    au < exists ; exists ; 1980 ; 1980 ; Management Research News Volume 3 ; 3 ; >
-    au < exists ; exists ; 1982 ; 1982 ; Management Research News Volume 4 ; 4 ; >
-    au < exists ; exists ; 1982 ; 1982 ; Management Research News Volume 5 ; 5 ; >
-    au < exists ; exists ; 1983 ; 1983 ; Management Research News Volume 6 ; 6 ; >
-    au < exists ; exists ; 1984 ; 1984 ; Management Research News Volume 7 ; 7 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Management Research News Volume 8 ; 8 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Management Research News Volume 9 ; 9 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Management Research News Volume 10 ; 10 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Management Research News Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Management Research News Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Management Research News Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Management Research News Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Management Research News Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Management Research News Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Management Research News Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Management Research News Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Management Research News Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Management Research News Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Management Research News Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Management Research News Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Management Research News Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Management Research News Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Management Research News Volume 14 ; 14 ; >
@@ -11464,7 +11462,7 @@
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Multicultural Education & Technology Journal Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Multicultural Education & Technology Journal Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Multicultural Education & Technology Journal Volume 7 ; 7 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Multicultural Education & Technology Journal Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Multicultural Education & Technology Journal Volume 8 ; 8 ; >
 
   }
 
@@ -11516,10 +11514,10 @@
     param[journal_id] = mbr
     # online from 2007
 
-    au < exists ; exists ; 2003 ; 2003 ; Multinational Business Review Volume 11 ; 11 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Multinational Business Review Volume 12 ; 12 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Multinational Business Review Volume 13 ; 13 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Multinational Business Review Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Multinational Business Review Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Multinational Business Review Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Multinational Business Review Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Multinational Business Review Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Multinational Business Review Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Multinational Business Review Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Multinational Business Review Volume 17 ; 17 ; >
@@ -11584,95 +11582,95 @@
     param[journal_id] = ils
     #continued_by = 2398-5348
 
-    au < exists ; exists ; 1899 ; 1899 ; New Library World Volume 1 ; 1 ; >
-    au < exists ; exists ; 1900 ; 1900 ; New Library World Volume 2 ; 2 ; >
-    au < exists ; exists ; 1901 ; 1901 ; New Library World Volume 3 ; 3 ; >
-    au < exists ; exists ; 1902 ; 1902 ; New Library World Volume 4 ; 4 ; >
-    au < exists ; exists ; 1903 ; 1903 ; New Library World Volume 5 ; 5 ; >
-    au < exists ; exists ; 1904 ; 1904 ; New Library World Volume 6 ; 6 ; >
-    au < exists ; exists ; 1905 ; 1905 ; New Library World Volume 7 ; 7 ; >
-    au < exists ; exists ; 1906 ; 1906 ; New Library World Volume 8 ; 8 ; >
-    au < exists ; exists ; 1907 ; 1907 ; New Library World Volume 9 ; 9 ; >
-    au < exists ; exists ; 1908 ; 1908 ; New Library World Volume 10 ; 10 ; >
-    au < exists ; exists ; 1909 ; 1909 ; New Library World Volume 11 ; 11 ; >
-    au < exists ; exists ; 1910 ; 1910 ; New Library World Volume 12 ; 12 ; >
-    au < exists ; exists ; 1911 ; 1911 ; New Library World Volume 13 ; 13 ; >
-    au < exists ; exists ; 1912 ; 1912 ; New Library World Volume 14 ; 14 ; >
-    au < exists ; exists ; 1913 ; 1913 ; New Library World Volume 15 ; 15 ; >
-    au < exists ; exists ; 1914 ; 1914 ; New Library World Volume 16 ; 16 ; >
-    au < exists ; exists ; 1915 ; 1915 ; New Library World Volume 17 ; 17 ; >
-    au < exists ; exists ; 1916 ; 1916 ; New Library World Volume 18 ; 18 ; >
-    au < exists ; exists ; 1917 ; 1917 ; New Library World Volume 19 ; 19 ; >
-    au < exists ; exists ; 1918 ; 1918 ; New Library World Volume 20 ; 20 ; >
-    au < exists ; exists ; 1918 ; 1918 ; New Library World Volume 21 ; 21 ; >
-    au < exists ; exists ; 1920 ; 1920 ; New Library World Volume 22 ; 22 ; >
-    au < exists ; exists ; 1921 ; 1921 ; New Library World Volume 23 ; 23 ; >
-    au < exists ; exists ; 1922 ; 1922 ; New Library World Volume 24 ; 24 ; >
-    au < exists ; exists ; 1923 ; 1923 ; New Library World Volume 25 ; 25 ; >
-    au < exists ; exists ; 1924 ; 1924 ; New Library World Volume 26 ; 26 ; >
-    au < exists ; exists ; 1925 ; 1925 ; New Library World Volume 27 ; 27 ; >
-    au < exists ; exists ; 1926 ; 1926 ; New Library World Volume 28 ; 28 ; >
-    au < exists ; exists ; 1927 ; 1927 ; New Library World Volume 29 ; 29 ; >
-    au < exists ; exists ; 1928 ; 1928 ; New Library World Volume 30 ; 30 ; >
-    au < exists ; exists ; 1929 ; 1929 ; New Library World Volume 31 ; 31 ; >
-    au < exists ; exists ; 1930 ; 1930 ; New Library World Volume 32 ; 32 ; >
-    au < exists ; exists ; 1931 ; 1931 ; New Library World Volume 33 ; 33 ; >
-    au < exists ; exists ; 1932 ; 1932 ; New Library World Volume 34 ; 34 ; >
-    au < exists ; exists ; 1933 ; 1933 ; New Library World Volume 35 ; 35 ; >
-    au < exists ; exists ; 1934 ; 1934 ; New Library World Volume 36 ; 36 ; >
-    au < exists ; exists ; 1935 ; 1935 ; New Library World Volume 37 ; 37 ; >
-    au < exists ; exists ; 1936 ; 1936 ; New Library World Volume 38 ; 38 ; >
-    au < exists ; exists ; 1937 ; 1937 ; New Library World Volume 39 ; 39 ; >
-    au < exists ; exists ; 1938 ; 1938 ; New Library World Volume 40 ; 40 ; >
-    au < exists ; exists ; 1939 ; 1939 ; New Library World Volume 41 ; 41 ; >
-    au < exists ; exists ; 1940 ; 1940 ; New Library World Volume 42 ; 42 ; >
-    au < exists ; exists ; 1941 ; 1941 ; New Library World Volume 43 ; 43 ; >
-    au < exists ; exists ; 1942 ; 1942 ; New Library World Volume 44 ; 44 ; >
-    au < exists ; exists ; 1943 ; 1943 ; New Library World Volume 45 ; 45 ; >
-    au < exists ; exists ; 1944 ; 1944 ; New Library World Volume 46 ; 46 ; >
-    au < exists ; exists ; 1945 ; 1945 ; New Library World Volume 47 ; 47 ; >
-    au < exists ; exists ; 1946 ; 1946 ; New Library World Volume 48 ; 48 ; >
-    au < exists ; exists ; 1947 ; 1947 ; New Library World Volume 49 ; 49 ; >
-    au < exists ; exists ; 1948 ; 1948 ; New Library World Volume 50 ; 50 ; >
-    au < exists ; exists ; 1949 ; 1949 ; New Library World Volume 51 ; 51 ; >
-    au < exists ; exists ; 1950 ; 1950 ; New Library World Volume 52 ; 52 ; >
-    au < exists ; exists ; 1952 ; 1952 ; New Library World Volume 53 ; 53 ; >
-    au < exists ; exists ; 1953 ; 1953 ; New Library World Volume 54 ; 54 ; >
-    au < exists ; exists ; 1954 ; 1954 ; New Library World Volume 55 ; 55 ; >
-    au < exists ; exists ; 1955 ; 1955 ; New Library World Volume 56 ; 56 ; >
-    au < exists ; exists ; 1956 ; 1956 ; New Library World Volume 57 ; 57 ; >
-    au < exists ; exists ; 1957 ; 1957 ; New Library World Volume 58 ; 58 ; >
-    au < exists ; exists ; 1958 ; 1958 ; New Library World Volume 59 ; 59 ; >
-    au < exists ; exists ; 1959 ; 1959 ; New Library World Volume 60 ; 60 ; >
-    au < exists ; exists ; 1960 ; 1960 ; New Library World Volume 61 ; 61 ; >
-    au < exists ; exists ; 1961 ; 1961 ; New Library World Volume 62 ; 62 ; >
-    au < exists ; exists ; 1962 ; 1962 ; New Library World Volume 63 ; 63 ; >
-    au < exists ; exists ; 1963 ; 1963 ; New Library World Volume 64 ; 64 ; >
-    au < exists ; exists ; 1964 ; 1964 ; New Library World Volume 65 ; 65 ; >
-    au < exists ; exists ; 1964 ; 1964 ; New Library World Volume 66 ; 66 ; >
-    au < exists ; exists ; 1966 ; 1966 ; New Library World Volume 67 ; 67 ; >
-    au < exists ; exists ; 1967 ; 1967 ; New Library World Volume 68 ; 68 ; >
-    au < exists ; exists ; 1968 ; 1968 ; New Library World Volume 69 ; 69 ; >
-    au < exists ; exists ; 1969 ; 1969 ; New Library World Volume 70 ; 70 ; >
-    au < exists ; exists ; 1970 ; 1970 ; New Library World Volume 71 ; 71 ; >
-    au < exists ; exists ; 1971 ; 1971 ; New Library World Volume 72 ; 72 ; >
-    au < exists ; exists ; 1972 ; 1972 ; New Library World Volume 73 ; 73 ; >
-    au < exists ; exists ; 1973 ; 1973 ; New Library World Volume 74 ; 74 ; >
-    au < exists ; exists ; 1974 ; 1974 ; New Library World Volume 75 ; 75 ; >
-    au < exists ; exists ; 1975 ; 1975 ; New Library World Volume 76 ; 76 ; >
-    au < exists ; exists ; 1976 ; 1976 ; New Library World Volume 77 ; 77 ; >
-    au < exists ; exists ; 1977 ; 1977 ; New Library World Volume 78 ; 78 ; >
-    au < exists ; exists ; 1978 ; 1978 ; New Library World Volume 79 ; 79 ; >
-    au < exists ; exists ; 1979 ; 1979 ; New Library World Volume 80 ; 80 ; >
-    au < exists ; exists ; 1980 ; 1980 ; New Library World Volume 81 ; 81 ; >
-    au < exists ; exists ; 1981 ; 1981 ; New Library World Volume 82 ; 82 ; >
-    au < exists ; exists ; 1982 ; 1982 ; New Library World Volume 83 ; 83 ; >
-    au < exists ; exists ; 1983 ; 1983 ; New Library World Volume 84 ; 84 ; >
-    au < exists ; exists ; 1984 ; 1984 ; New Library World Volume 85 ; 85 ; >
-    au < exists ; exists ; 1985 ; 1985 ; New Library World Volume 86 ; 86 ; >
-    au < exists ; exists ; 1986 ; 1986 ; New Library World Volume 87 ; 87 ; >
-    au < exists ; exists ; 1987 ; 1987 ; New Library World Volume 88 ; 88 ; >
-    au < exists ; exists ; 1988 ; 1988 ; New Library World Volume 89 ; 89 ; >
+    au < manifest ; exists ; 1899 ; 1899 ; New Library World Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1900 ; 1900 ; New Library World Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1901 ; 1901 ; New Library World Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1902 ; 1902 ; New Library World Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1903 ; 1903 ; New Library World Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1904 ; 1904 ; New Library World Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1905 ; 1905 ; New Library World Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1906 ; 1906 ; New Library World Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1907 ; 1907 ; New Library World Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1908 ; 1908 ; New Library World Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1909 ; 1909 ; New Library World Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1910 ; 1910 ; New Library World Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1911 ; 1911 ; New Library World Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1912 ; 1912 ; New Library World Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1913 ; 1913 ; New Library World Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1914 ; 1914 ; New Library World Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1915 ; 1915 ; New Library World Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1916 ; 1916 ; New Library World Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1917 ; 1917 ; New Library World Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1918 ; 1918 ; New Library World Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1918 ; 1918 ; New Library World Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1920 ; 1920 ; New Library World Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1921 ; 1921 ; New Library World Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1922 ; 1922 ; New Library World Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1923 ; 1923 ; New Library World Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1924 ; 1924 ; New Library World Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1925 ; 1925 ; New Library World Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1926 ; 1926 ; New Library World Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1927 ; 1927 ; New Library World Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1928 ; 1928 ; New Library World Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1929 ; 1929 ; New Library World Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1930 ; 1930 ; New Library World Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1931 ; 1931 ; New Library World Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1932 ; 1932 ; New Library World Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1933 ; 1933 ; New Library World Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1934 ; 1934 ; New Library World Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1935 ; 1935 ; New Library World Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1936 ; 1936 ; New Library World Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1937 ; 1937 ; New Library World Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1938 ; 1938 ; New Library World Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1939 ; 1939 ; New Library World Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1940 ; 1940 ; New Library World Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1941 ; 1941 ; New Library World Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1942 ; 1942 ; New Library World Volume 44 ; 44 ; >
+    au < manifest ; exists ; 1943 ; 1943 ; New Library World Volume 45 ; 45 ; >
+    au < manifest ; exists ; 1944 ; 1944 ; New Library World Volume 46 ; 46 ; >
+    au < manifest ; exists ; 1945 ; 1945 ; New Library World Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1946 ; 1946 ; New Library World Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1947 ; 1947 ; New Library World Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1948 ; 1948 ; New Library World Volume 50 ; 50 ; >
+    au < manifest ; exists ; 1949 ; 1949 ; New Library World Volume 51 ; 51 ; >
+    au < manifest ; exists ; 1950 ; 1950 ; New Library World Volume 52 ; 52 ; >
+    au < manifest ; exists ; 1952 ; 1952 ; New Library World Volume 53 ; 53 ; >
+    au < manifest ; exists ; 1953 ; 1953 ; New Library World Volume 54 ; 54 ; >
+    au < manifest ; exists ; 1954 ; 1954 ; New Library World Volume 55 ; 55 ; >
+    au < manifest ; exists ; 1955 ; 1955 ; New Library World Volume 56 ; 56 ; >
+    au < manifest ; exists ; 1956 ; 1956 ; New Library World Volume 57 ; 57 ; >
+    au < manifest ; exists ; 1957 ; 1957 ; New Library World Volume 58 ; 58 ; >
+    au < manifest ; exists ; 1958 ; 1958 ; New Library World Volume 59 ; 59 ; >
+    au < manifest ; exists ; 1959 ; 1959 ; New Library World Volume 60 ; 60 ; >
+    au < manifest ; exists ; 1960 ; 1960 ; New Library World Volume 61 ; 61 ; >
+    au < manifest ; exists ; 1961 ; 1961 ; New Library World Volume 62 ; 62 ; >
+    au < manifest ; exists ; 1962 ; 1962 ; New Library World Volume 63 ; 63 ; >
+    au < manifest ; exists ; 1963 ; 1963 ; New Library World Volume 64 ; 64 ; >
+    au < manifest ; exists ; 1964 ; 1964 ; New Library World Volume 65 ; 65 ; >
+    au < manifest ; exists ; 1964 ; 1964 ; New Library World Volume 66 ; 66 ; >
+    au < manifest ; exists ; 1966 ; 1966 ; New Library World Volume 67 ; 67 ; >
+    au < manifest ; exists ; 1967 ; 1967 ; New Library World Volume 68 ; 68 ; >
+    au < manifest ; exists ; 1968 ; 1968 ; New Library World Volume 69 ; 69 ; >
+    au < manifest ; exists ; 1969 ; 1969 ; New Library World Volume 70 ; 70 ; >
+    au < manifest ; exists ; 1970 ; 1970 ; New Library World Volume 71 ; 71 ; >
+    au < manifest ; exists ; 1971 ; 1971 ; New Library World Volume 72 ; 72 ; >
+    au < manifest ; exists ; 1972 ; 1972 ; New Library World Volume 73 ; 73 ; >
+    au < manifest ; exists ; 1973 ; 1973 ; New Library World Volume 74 ; 74 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; New Library World Volume 75 ; 75 ; >
+    au < manifest ; exists ; 1975 ; 1975 ; New Library World Volume 76 ; 76 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; New Library World Volume 77 ; 77 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; New Library World Volume 78 ; 78 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; New Library World Volume 79 ; 79 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; New Library World Volume 80 ; 80 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; New Library World Volume 81 ; 81 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; New Library World Volume 82 ; 82 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; New Library World Volume 83 ; 83 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; New Library World Volume 84 ; 84 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; New Library World Volume 85 ; 85 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; New Library World Volume 86 ; 86 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; New Library World Volume 87 ; 87 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; New Library World Volume 88 ; 88 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; New Library World Volume 89 ; 89 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; New Library World Volume 90 ; 90 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; New Library World Volume 91 ; 91 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; New Library World Volume 92 ; 92 ; >
@@ -11811,10 +11809,10 @@
     param[journal_id] = dlp
     #continued_by = 1065-075X
 
-    au < exists ; exists ; 1985 ; 1985 ; OCLC Micro Volume 1 ; 1 ; >
-    au < exists ; exists ; 1986 ; 1986 ; OCLC Micro Volume 2 ; 2 ; >
-    au < exists ; exists ; 1987 ; 1987 ; OCLC Micro Volume 3 ; 3 ; >
-    au < exists ; exists ; 1988 ; 1988 ; OCLC Micro Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; OCLC Micro Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; OCLC Micro Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; OCLC Micro Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; OCLC Micro Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; OCLC Micro Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; OCLC Micro Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; OCLC Micro Volume 7 ; 7 ; >
@@ -11939,18 +11937,18 @@
     param[journal_id] = oir
     #continued_by = 1353-2642
 
-    au < exists ; exists ; 1977 ; 1977 ; Online Review Volume 1 ; 1 ; >
-    au < exists ; exists ; 1978 ; 1978 ; Online Review Volume 2 ; 2 ; >
-    au < exists ; exists ; 1979 ; 1979 ; Online Review Volume 3 ; 3 ; >
-    au < exists ; exists ; 1980 ; 1980 ; Online Review Volume 4 ; 4 ; >
-    au < exists ; exists ; 1981 ; 1981 ; Online Review Volume 5 ; 5 ; >
-    au < exists ; exists ; 1982 ; 1982 ; Online Review Volume 6 ; 6 ; >
-    au < exists ; exists ; 1983 ; 1983 ; Online Review Volume 7 ; 7 ; >
-    au < exists ; exists ; 1984 ; 1984 ; Online Review Volume 8 ; 8 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Online Review Volume 9 ; 9 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Online Review Volume 10 ; 10 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Online Review Volume 11 ; 11 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Online Review Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Online Review Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Online Review Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Online Review Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Online Review Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Online Review Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Online Review Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Online Review Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Online Review Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Online Review Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Online Review Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Online Review Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Online Review Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Online Review Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Online Review Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Online Review Volume 15 ; 15 ; >
@@ -12270,8 +12268,8 @@
     # online from 1995
     comment[continued_by] = 1363-951X
 
-    au < exists ; exists ; 1995 ; 1995 ; Police Studies: International Review of Police Development Volume 18 ; 18 ; >
-    au < exists ; exists ; 1996 ; 1996 ; Police Studies: International Review of Police Development Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1995 ; 1995 ; Police Studies: International Review of Police Development Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; Police Studies: International Review of Police Development Volume 19 ; 19 ; >
 
   }
 
@@ -12348,28 +12346,28 @@
     param[journal_id] = dta
     #continued_by = 2514-9288
 
-    au < exists ; exists ; 1968 ; 1968 ; Program: Electronic Library and Information Systems Volume 1 ; 1 ; >
-    au < exists ; exists ; 1969 ; 1969 ; Program: Electronic Library and Information Systems Volume 2 ; 2 ; >
-    au < exists ; exists ; 1969 ; 1969 ; Program: Electronic Library and Information Systems Volume 3 ; 3 ; >
-    au < exists ; exists ; 1970 ; 1970 ; Program: Electronic Library and Information Systems Volume 4 ; 4 ; >
-    au < exists ; exists ; 1971 ; 1971 ; Program: Electronic Library and Information Systems Volume 5 ; 5 ; >
-    au < exists ; exists ; 1972 ; 1972 ; Program: Electronic Library and Information Systems Volume 6 ; 6 ; >
-    au < exists ; exists ; 1973 ; 1973 ; Program: Electronic Library and Information Systems Volume 7 ; 7 ; >
-    au < exists ; exists ; 1974 ; 1974 ; Program: Electronic Library and Information Systems Volume 8 ; 8 ; >
-    au < exists ; exists ; 1975 ; 1975 ; Program: Electronic Library and Information Systems Volume 9 ; 9 ; >
-    au < exists ; exists ; 1976 ; 1976 ; Program: Electronic Library and Information Systems Volume 10 ; 10 ; >
-    au < exists ; exists ; 1977 ; 1977 ; Program: Electronic Library and Information Systems Volume 11 ; 11 ; >
-    au < exists ; exists ; 1978 ; 1978 ; Program: Electronic Library and Information Systems Volume 12 ; 12 ; >
-    au < exists ; exists ; 1979 ; 1979 ; Program: Electronic Library and Information Systems Volume 13 ; 13 ; >
-    au < exists ; exists ; 1980 ; 1980 ; Program: Electronic Library and Information Systems Volume 14 ; 14 ; >
-    au < exists ; exists ; 1981 ; 1981 ; Program: Electronic Library and Information Systems Volume 15 ; 15 ; >
-    au < exists ; exists ; 1982 ; 1982 ; Program: Electronic Library and Information Systems Volume 16 ; 16 ; >
-    au < exists ; exists ; 1983 ; 1983 ; Program: Electronic Library and Information Systems Volume 17 ; 17 ; >
-    au < exists ; exists ; 1984 ; 1984 ; Program: Electronic Library and Information Systems Volume 18 ; 18 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Program: Electronic Library and Information Systems Volume 19 ; 19 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Program: Electronic Library and Information Systems Volume 20 ; 20 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Program: Electronic Library and Information Systems Volume 21 ; 21 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Program: Electronic Library and Information Systems Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1968 ; 1968 ; Program: Electronic Library and Information Systems Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1969 ; 1969 ; Program: Electronic Library and Information Systems Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1969 ; 1969 ; Program: Electronic Library and Information Systems Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1970 ; 1970 ; Program: Electronic Library and Information Systems Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1971 ; 1971 ; Program: Electronic Library and Information Systems Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1972 ; 1972 ; Program: Electronic Library and Information Systems Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1973 ; 1973 ; Program: Electronic Library and Information Systems Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; Program: Electronic Library and Information Systems Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1975 ; 1975 ; Program: Electronic Library and Information Systems Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; Program: Electronic Library and Information Systems Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Program: Electronic Library and Information Systems Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Program: Electronic Library and Information Systems Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Program: Electronic Library and Information Systems Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Program: Electronic Library and Information Systems Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Program: Electronic Library and Information Systems Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Program: Electronic Library and Information Systems Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Program: Electronic Library and Information Systems Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Program: Electronic Library and Information Systems Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Program: Electronic Library and Information Systems Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Program: Electronic Library and Information Systems Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Program: Electronic Library and Information Systems Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Program: Electronic Library and Information Systems Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Program: Electronic Library and Information Systems Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Program: Electronic Library and Information Systems Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Program: Electronic Library and Information Systems Volume 25 ; 25 ; >
@@ -13535,7 +13533,7 @@
     au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; Planning Review Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; Planning Review Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; Planning Review Volume 23 ; 23 ; >
-    au < exists ; exists ; 1996 ; 1996 ; Planning Review Volume 24 issue 1-2 ; 24 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; Planning Review Volume 24 issue 1-2 ; 24 ; >
 
   }
 
@@ -13596,12 +13594,12 @@
     param[journal_id] = ijbpa
     #continued_by = 2398-4708
 
-    au < exists ; exists ; 1983 ; 1983 ; Structural Survey Volume 1 ; 1 ; >
-    au < exists ; exists ; 1984 ; 1984 ; Structural Survey Volume 2 ; 2 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Structural Survey Volume 3 ; 3 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Structural Survey Volume 4 ; 4 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Structural Survey Volume 5 ; 5 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Structural Survey Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Structural Survey Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Structural Survey Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Structural Survey Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Structural Survey Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Structural Survey Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Structural Survey Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Structural Survey Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Structural Survey Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Structural Survey Volume 9 ; 9 ; >
@@ -13916,61 +13914,61 @@
     param[journal_id] = tr
     #continued_by = 1660-5373
 
-    au < exists ; exists ; 1946 ; 1946 ; Tourism Review Volume 1 ; 1 ; >
-    au < exists ; exists ; 1947 ; 1947 ; Tourism Review Volume 2 ; 2 ; >
-    au < exists ; exists ; 1948 ; 1948 ; Tourism Review Volume 3 ; 3 ; >
-    au < exists ; exists ; 1949 ; 1949 ; Tourism Review Volume 4 ; 4 ; >
-    au < exists ; exists ; 1950 ; 1950 ; Tourism Review Volume 5 ; 5 ; >
-    au < exists ; exists ; 1951 ; 1951 ; Tourism Review Volume 6 ; 6 ; >
-    au < exists ; exists ; 1952 ; 1952 ; Tourism Review Volume 7 ; 7 ; >
-    au < exists ; exists ; 1953 ; 1953 ; Tourism Review Volume 8 ; 8 ; >
-    au < exists ; exists ; 1954 ; 1954 ; Tourism Review Volume 9 ; 9 ; >
-    au < exists ; exists ; 1955 ; 1955 ; Tourism Review Volume 10 ; 10 ; >
-    au < exists ; exists ; 1956 ; 1956 ; Tourism Review Volume 11 ; 11 ; >
-    au < exists ; exists ; 1957 ; 1957 ; Tourism Review Volume 12 ; 12 ; >
-    au < exists ; exists ; 1958 ; 1958 ; Tourism Review Volume 13 ; 13 ; >
-    au < exists ; exists ; 1959 ; 1959 ; Tourism Review Volume 14 ; 14 ; >
-    au < exists ; exists ; 1960 ; 1960 ; Tourism Review Volume 15 ; 15 ; >
-    au < exists ; exists ; 1961 ; 1961 ; Tourism Review Volume 16 ; 16 ; >
-    au < exists ; exists ; 1962 ; 1962 ; Tourism Review Volume 17 ; 17 ; >
-    au < exists ; exists ; 1963 ; 1963 ; Tourism Review Volume 18 ; 18 ; >
-    au < exists ; exists ; 1964 ; 1964 ; Tourism Review Volume 19 ; 19 ; >
-    au < exists ; exists ; 1965 ; 1965 ; Tourism Review Volume 20 ; 20 ; >
-    au < exists ; exists ; 1966 ; 1966 ; Tourism Review Volume 21 ; 21 ; >
-    au < exists ; exists ; 1967 ; 1967 ; Tourism Review Volume 22 ; 22 ; >
-    au < exists ; exists ; 1968 ; 1968 ; Tourism Review Volume 23 ; 23 ; >
-    au < exists ; exists ; 1969 ; 1969 ; Tourism Review Volume 24 ; 24 ; >
-    au < exists ; exists ; 1970 ; 1970 ; Tourism Review Volume 25 ; 25 ; >
-    au < exists ; exists ; 1971 ; 1971 ; Tourism Review Volume 26 ; 26 ; >
-    au < exists ; exists ; 1972 ; 1972 ; Tourism Review Volume 27 ; 27 ; >
-    au < exists ; exists ; 1973 ; 1973 ; Tourism Review Volume 28 ; 28 ; >
-    au < exists ; exists ; 1974 ; 1974 ; Tourism Review Volume 29 ; 29 ; >
-    au < exists ; exists ; 1975 ; 1975 ; Tourism Review Volume 30 ; 30 ; >
-    au < exists ; exists ; 1976 ; 1976 ; Tourism Review Volume 31 ; 31 ; >
-    au < exists ; exists ; 1977 ; 1977 ; Tourism Review Volume 32 ; 32 ; >
-    au < exists ; exists ; 1978 ; 1978 ; Tourism Review Volume 33 ; 33 ; >
-    au < exists ; exists ; 1979 ; 1979 ; Tourism Review Volume 34 ; 34 ; >
-    au < exists ; exists ; 1980 ; 1980 ; Tourism Review Volume 35 ; 35 ; >
-    au < exists ; exists ; 1981 ; 1981 ; Tourism Review Volume 36 ; 36 ; >
-    au < exists ; exists ; 1982 ; 1982 ; Tourism Review Volume 37 ; 37 ; >
-    au < exists ; exists ; 1983 ; 1983 ; Tourism Review Volume 38 ; 38 ; >
-    au < exists ; exists ; 1984 ; 1984 ; Tourism Review Volume 39 ; 39 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Tourism Review Volume 40 ; 40 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Tourism Review Volume 41 ; 41 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Tourism Review Volume 42 ; 42 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Tourism Review Volume 43 ; 43 ; >
-    au < exists ; exists ; 1989 ; 1989 ; Tourism Review Volume 44 ; 44 ; >
-    au < exists ; exists ; 1990 ; 1990 ; Tourism Review Volume 45 ; 45 ; >
-    au < exists ; exists ; 1991 ; 1991 ; Tourism Review Volume 46 ; 46 ; >
-    au < exists ; exists ; 1992 ; 1992 ; Tourism Review Volume 47 ; 47 ; >
-    au < exists ; exists ; 1993 ; 1993 ; Tourism Review Volume 48 ; 48 ; >
-    au < exists ; exists ; 1994 ; 1994 ; Tourism Review Volume 49 ; 49 ; >
-    au < exists ; exists ; 1995 ; 1995 ; Tourism Review Volume 50 ; 50 ; >
-    au < exists ; exists ; 1996 ; 1996 ; Tourism Review Volume 51 ; 51 ; >
-    au < exists ; exists ; 1997 ; 1997 ; Tourism Review Volume 52 ; 52 ; >
-    au < exists ; exists ; 1998 ; 1998 ; Tourism Review Volume 53 ; 53 ; >
-    au < exists ; exists ; 1999 ; 1999 ; Tourism Review Volume 54 ; 54 ; >
-    au < exists ; exists ; 2000 ; 2000 ; Tourism Review Volume 55 ; 55 ; >
+    au < manifest ; exists ; 1946 ; 1946 ; Tourism Review Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1947 ; 1947 ; Tourism Review Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1948 ; 1948 ; Tourism Review Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1949 ; 1949 ; Tourism Review Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1950 ; 1950 ; Tourism Review Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1951 ; 1951 ; Tourism Review Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1952 ; 1952 ; Tourism Review Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1953 ; 1953 ; Tourism Review Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1954 ; 1954 ; Tourism Review Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1955 ; 1955 ; Tourism Review Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1956 ; 1956 ; Tourism Review Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1957 ; 1957 ; Tourism Review Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1958 ; 1958 ; Tourism Review Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1959 ; 1959 ; Tourism Review Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1960 ; 1960 ; Tourism Review Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1961 ; 1961 ; Tourism Review Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1962 ; 1962 ; Tourism Review Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1963 ; 1963 ; Tourism Review Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1964 ; 1964 ; Tourism Review Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1965 ; 1965 ; Tourism Review Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1966 ; 1966 ; Tourism Review Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1967 ; 1967 ; Tourism Review Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1968 ; 1968 ; Tourism Review Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1969 ; 1969 ; Tourism Review Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1970 ; 1970 ; Tourism Review Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1971 ; 1971 ; Tourism Review Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1972 ; 1972 ; Tourism Review Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1973 ; 1973 ; Tourism Review Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; Tourism Review Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1975 ; 1975 ; Tourism Review Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; Tourism Review Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Tourism Review Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Tourism Review Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Tourism Review Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Tourism Review Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Tourism Review Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Tourism Review Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Tourism Review Volume 38 ; 38 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Tourism Review Volume 39 ; 39 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Tourism Review Volume 40 ; 40 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Tourism Review Volume 41 ; 41 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Tourism Review Volume 42 ; 42 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Tourism Review Volume 43 ; 43 ; >
+    au < manifest ; exists ; 1989 ; 1989 ; Tourism Review Volume 44 ; 44 ; >
+    au < manifest ; exists ; 1990 ; 1990 ; Tourism Review Volume 45 ; 45 ; >
+    au < manifest ; exists ; 1991 ; 1991 ; Tourism Review Volume 46 ; 46 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; Tourism Review Volume 47 ; 47 ; >
+    au < manifest ; exists ; 1993 ; 1993 ; Tourism Review Volume 48 ; 48 ; >
+    au < manifest ; exists ; 1994 ; 1994 ; Tourism Review Volume 49 ; 49 ; >
+    au < manifest ; exists ; 1995 ; 1995 ; Tourism Review Volume 50 ; 50 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; Tourism Review Volume 51 ; 51 ; >
+    au < manifest ; exists ; 1997 ; 1997 ; Tourism Review Volume 52 ; 52 ; >
+    au < manifest ; exists ; 1998 ; 1998 ; Tourism Review Volume 53 ; 53 ; >
+    au < manifest ; exists ; 1999 ; 1999 ; Tourism Review Volume 54 ; 54 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; Tourism Review Volume 55 ; 55 ; >
 
   }
 
@@ -14166,24 +14164,24 @@
     param[journal_id] = vjikms
     #continued_by = 2059-5891
 
-    au < exists ; exists ; 1971 ; 1971 ; VINE Volume 1 ; 1 ; >
-    au < exists ; exists ; 1972 ; 1972 ; VINE Volume 2 ; 2 ; >
-    au < exists ; exists ; 1973 ; 1973 ; VINE Volume 3 ; 3 ; >
-    au < exists ; exists ; 1974 ; 1974 ; VINE Volume 4 ; 4 ; >
-    au < exists ; exists ; 1975 ; 1975 ; VINE Volume 5 ; 5 ; >
-    au < exists ; exists ; 1976 ; 1976 ; VINE Volume 6 ; 6 ; >
-    au < exists ; exists ; 1977 ; 1977 ; VINE Volume 7 ; 7 ; >
-    au < exists ; exists ; 1978 ; 1978 ; VINE Volume 8 ; 8 ; >
-    au < exists ; exists ; 1979 ; 1979 ; VINE Volume 9 ; 9 ; >
-    au < exists ; exists ; 1980 ; 1980 ; VINE Volume 10 ; 10 ; >
-    au < exists ; exists ; 1981 ; 1981 ; VINE Volume 11 ; 11 ; >
-    au < exists ; exists ; 1982 ; 1982 ; VINE Volume 12 ; 12 ; >
-    au < exists ; exists ; 1983 ; 1983 ; VINE Volume 13 ; 13 ; >
-    au < exists ; exists ; 1984 ; 1984 ; VINE Volume 14 ; 14 ; >
-    au < exists ; exists ; 1985 ; 1985 ; VINE Volume 15 ; 15 ; >
-    au < exists ; exists ; 1986 ; 1986 ; VINE Volume 16 ; 16 ; >
-    au < exists ; exists ; 1987 ; 1987 ; VINE Volume 17 ; 17 ; >
-    au < exists ; exists ; 1988 ; 1988 ; VINE Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1971 ; 1971 ; VINE Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1972 ; 1972 ; VINE Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1973 ; 1973 ; VINE Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; VINE Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1975 ; 1975 ; VINE Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; VINE Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; VINE Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; VINE Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; VINE Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; VINE Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; VINE Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; VINE Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; VINE Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; VINE Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; VINE Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; VINE Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; VINE Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; VINE Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; VINE Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; VINE Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; VINE Volume 21 ; 21 ; >
@@ -14264,43 +14262,43 @@
     param[journal_id] = ijppm
     comment[continued_by] = 1741-0401
 
-    au < exists ; exists ; 1952 ; 1952 ; Work Study Volume 1 ; 1 ; >
-    au < exists ; exists ; 1953 ; 1953 ; Work Study Volume 2 ; 2 ; >
-    au < exists ; exists ; 1954 ; 1954 ; Work Study Volume 3 ; 3 ; >
-    au < exists ; exists ; 1955 ; 1955 ; Work Study Volume 4 ; 4 ; >
-    au < exists ; exists ; 1956 ; 1956 ; Work Study Volume 5 ; 5 ; >
-    au < exists ; exists ; 1957 ; 1957 ; Work Study Volume 6 ; 6 ; >
-    au < exists ; exists ; 1958 ; 1958 ; Work Study Volume 7 ; 7 ; >
-    au < exists ; exists ; 1959 ; 1959 ; Work Study Volume 8 ; 8 ; >
-    au < exists ; exists ; 1960 ; 1960 ; Work Study Volume 9 ; 9 ; >
-    au < exists ; exists ; 1961 ; 1961 ; Work Study Volume 10 ; 10 ; >
-    au < exists ; exists ; 1962 ; 1962 ; Work Study Volume 11 ; 11 ; >
-    au < exists ; exists ; 1963 ; 1963 ; Work Study Volume 12 ; 12 ; >
-    au < exists ; exists ; 1964 ; 1964 ; Work Study Volume 13 ; 13 ; >
-    au < exists ; exists ; 1965 ; 1965 ; Work Study Volume 14 ; 14 ; >
-    au < exists ; exists ; 1966 ; 1966 ; Work Study Volume 15 ; 15 ; >
-    au < exists ; exists ; 1967 ; 1967 ; Work Study Volume 16 ; 16 ; >
-    au < exists ; exists ; 1968 ; 1968 ; Work Study Volume 17 ; 17 ; >
-    au < exists ; exists ; 1969 ; 1969 ; Work Study Volume 18 ; 18 ; >
-    au < exists ; exists ; 1970 ; 1970 ; Work Study Volume 19 ; 19 ; >
-    au < exists ; exists ; 1971 ; 1971 ; Work Study Volume 20 ; 20 ; >
-    au < exists ; exists ; 1972 ; 1972 ; Work Study Volume 21 ; 21 ; >
-    au < exists ; exists ; 1973 ; 1973 ; Work Study Volume 22 ; 22 ; >
-    au < exists ; exists ; 1974 ; 1974 ; Work Study Volume 23 ; 23 ; >
-    au < exists ; exists ; 1975 ; 1975 ; Work Study Volume 24 ; 24 ; >
-    au < exists ; exists ; 1976 ; 1976 ; Work Study Volume 25 ; 25 ; >
-    au < exists ; exists ; 1977 ; 1977 ; Work Study Volume 26 ; 26 ; >
-    au < exists ; exists ; 1978 ; 1978 ; Work Study Volume 27 ; 27 ; >
-    au < exists ; exists ; 1979 ; 1979 ; Work Study Volume 28 ; 28 ; >
-    au < exists ; exists ; 1980 ; 1980 ; Work Study Volume 29 ; 29 ; >
-    au < exists ; exists ; 1981 ; 1981 ; Work Study Volume 30 ; 30 ; >
-    au < exists ; exists ; 1982 ; 1982 ; Work Study Volume 31 ; 31 ; >
-    au < exists ; exists ; 1983 ; 1983 ; Work Study Volume 32 ; 32 ; >
-    au < exists ; exists ; 1984 ; 1984 ; Work Study Volume 33 ; 33 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Work Study Volume 34 ; 34 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Work Study Volume 35 ; 35 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Work Study Volume 36 ; 36 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Work Study Volume 37 ; 37 ; >
+    au < manifest ; exists ; 1952 ; 1952 ; Work Study Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1953 ; 1953 ; Work Study Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1954 ; 1954 ; Work Study Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1955 ; 1955 ; Work Study Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1956 ; 1956 ; Work Study Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1957 ; 1957 ; Work Study Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1958 ; 1958 ; Work Study Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1959 ; 1959 ; Work Study Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1960 ; 1960 ; Work Study Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1961 ; 1961 ; Work Study Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1962 ; 1962 ; Work Study Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1963 ; 1963 ; Work Study Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1964 ; 1964 ; Work Study Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1965 ; 1965 ; Work Study Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1966 ; 1966 ; Work Study Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1967 ; 1967 ; Work Study Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1968 ; 1968 ; Work Study Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1969 ; 1969 ; Work Study Volume 18 ; 18 ; >
+    au < manifest ; exists ; 1970 ; 1970 ; Work Study Volume 19 ; 19 ; >
+    au < manifest ; exists ; 1971 ; 1971 ; Work Study Volume 20 ; 20 ; >
+    au < manifest ; exists ; 1972 ; 1972 ; Work Study Volume 21 ; 21 ; >
+    au < manifest ; exists ; 1973 ; 1973 ; Work Study Volume 22 ; 22 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; Work Study Volume 23 ; 23 ; >
+    au < manifest ; exists ; 1975 ; 1975 ; Work Study Volume 24 ; 24 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; Work Study Volume 25 ; 25 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; Work Study Volume 26 ; 26 ; >
+    au < manifest ; exists ; 1978 ; 1978 ; Work Study Volume 27 ; 27 ; >
+    au < manifest ; exists ; 1979 ; 1979 ; Work Study Volume 28 ; 28 ; >
+    au < manifest ; exists ; 1980 ; 1980 ; Work Study Volume 29 ; 29 ; >
+    au < manifest ; exists ; 1981 ; 1981 ; Work Study Volume 30 ; 30 ; >
+    au < manifest ; exists ; 1982 ; 1982 ; Work Study Volume 31 ; 31 ; >
+    au < manifest ; exists ; 1983 ; 1983 ; Work Study Volume 32 ; 32 ; >
+    au < manifest ; exists ; 1984 ; 1984 ; Work Study Volume 33 ; 33 ; >
+    au < manifest ; exists ; 1985 ; 1985 ; Work Study Volume 34 ; 34 ; >
+    au < manifest ; exists ; 1986 ; 1986 ; Work Study Volume 35 ; 35 ; >
+    au < manifest ; exists ; 1987 ; 1987 ; Work Study Volume 36 ; 36 ; >
+    au < manifest ; exists ; 1988 ; 1988 ; Work Study Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Work Study Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Work Study Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Work Study Volume 40 ; 40 ; >
@@ -14861,7 +14859,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Innovation Science Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Innovation Science Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Innovation Science Volume 16 ; 16 ; >
-    au < exists ; exists ; 2025 ; 2025 ; International Journal of Innovation Science Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; International Journal of Innovation Science Volume 17 ; 17 ; >
 
   }
 
@@ -14889,7 +14887,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Intelligent Unmanned Systems Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Intelligent Unmanned Systems Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Intelligent Unmanned Systems Volume 12 ; 12 ; >
-    au < exists ; exists ; 2025 ; 2025 ; International Journal of Intelligent Unmanned Systems Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; International Journal of Intelligent Unmanned Systems Volume 13 ; 13 ; >
 
   }
 
@@ -14932,7 +14930,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Organization Theory & Behavior Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Organization Theory & Behavior Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Organization Theory & Behavior Volume 27 ; 27 ; >
-    au < exists ; exists ; 2025 ; 2025 ; International Journal of Organization Theory & Behavior Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; International Journal of Organization Theory & Behavior Volume 28 ; 28 ; >
 
   }
 
@@ -14988,7 +14986,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Sports Marketing and Sponsorship Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Sports Marketing and Sponsorship Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Sports Marketing and Sponsorship Volume 25 ; 25 ; >
-    au < exists ; exists ; 2025 ; 2025 ; International Journal of Sports Marketing and Sponsorship Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; International Journal of Sports Marketing and Sponsorship Volume 26 ; 26 ; >
 
   }
 
@@ -15015,8 +15013,8 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal for Multicultural Education Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal for Multicultural Education Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal for Multicultural Education Volume 17 ; 17 ; >
-    au < exists ; exists ; 2024 ; 2024 ; Journal for Multicultural Education Volume 18 ; 18 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal for Multicultural Education Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Journal for Multicultural Education Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal for Multicultural Education Volume 19 ; 19 ; >
 
   }
 
@@ -15039,7 +15037,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Contemporary Marketing Science Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Contemporary Marketing Science Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Contemporary Marketing Science Volume 7 ; 7 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Contemporary Marketing Science Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Contemporary Marketing Science Volume 8 ; 8 ; >
 
   }
 
@@ -15065,7 +15063,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Criminological Research, Policy and Practice Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Criminological Research, Policy and Practice Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Criminological Research, Policy and Practice Volume 10 ; 10 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Criminological Research, Policy and Practice Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Criminological Research, Policy and Practice Volume 11 ; 11 ; >
 
   }
 
@@ -15087,13 +15085,13 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Entrepreneurship in Emerging Economies Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Entrepreneurship in Emerging Economies Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Entrepreneurship in Emerging Economies Volume 10 ; 10 ; >
-    au < exists ; exists ; 2019 ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Entrepreneurship in Emerging Economies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Entrepreneurship in Emerging Economies Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Entrepreneurship in Emerging Economies Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Entrepreneurship in Emerging Economies Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Entrepreneurship in Emerging Economies Volume 16 ; 16 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Entrepreneurship in Emerging Economies Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Entrepreneurship in Emerging Economies Volume 17 ; 17 ; >
 
   }
 
@@ -15121,7 +15119,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Global Mobility Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Global Mobility Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Global Mobility Volume 12 ; 12 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Global Mobility Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Global Mobility Volume 13 ; 13 ; >
 
   }
 
@@ -15144,7 +15142,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Hospitality and Tourism Insights Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Hospitality and Tourism Insights Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Hospitality and Tourism Insights Volume 7 ; 7 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Hospitality and Tourism Insights Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Hospitality and Tourism Insights Volume 8 ; 8 ; >
 
   }
 
@@ -15200,7 +15198,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Organizational Effectiveness: People and Performance Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Organizational Effectiveness: People and Performance Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Organizational Effectiveness: People and Performance Volume 11 ; 11 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Organizational Effectiveness: People and Performance Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Organizational Effectiveness: People and Performance Volume 12 ; 12 ; >
 
   }
 
@@ -15248,7 +15246,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Professional Capital and Community Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Professional Capital and Community Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Professional Capital and Community Volume 9 ; 9 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Professional Capital and Community Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Professional Capital and Community Volume 10 ; 10 ; >
 
   }
 
@@ -15295,7 +15293,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Public Budgeting, Accounting & Financial Management Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Public Budgeting, Accounting & Financial Management Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Public Budgeting, Accounting & Financial Management Volume 36 ; 36 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Public Budgeting, Accounting & Financial Management Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Public Budgeting, Accounting & Financial Management Volume 37 ; 37 ; >
 
   }
 
@@ -15335,7 +15333,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Public Procurement Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Public Procurement Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Public Procurement Volume 24 ; 24 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Public Procurement Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Public Procurement Volume 25 ; 25 ; >
 
   }
 
@@ -15363,7 +15361,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Science and Technology Policy Management Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Science and Technology Policy Management Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Science and Technology Policy Management Volume 15 ; 15 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Science and Technology Policy Management Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Science and Technology Policy Management Volume 16 ; 16 ; >
 
   }
 
@@ -15390,7 +15388,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Service Theory and Practice Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Service Theory and Practice Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Service Theory and Practice Volume 34 ; 34 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Service Theory and Practice Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Service Theory and Practice Volume 35 ; 35 ; >
 
   }
 
@@ -15421,7 +15419,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Structural Fire Engineering Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Structural Fire Engineering Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Structural Fire Engineering Volume 15 ; 15 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Structural Fire Engineering Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Structural Fire Engineering Volume 16 ; 16 ; >
 
   }
 
@@ -15457,7 +15455,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Open House International Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Open House International Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Open House International Volume 49 ; 49 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Open House International Volume 50 ; 50 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Open House International Volume 50 ; 50 ; >
 
   }
 
@@ -15501,7 +15499,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Research Journal of Textile and Apparel Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Research Journal of Textile and Apparel Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Research Journal of Textile and Apparel Volume 28 ; 28 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Research Journal of Textile and Apparel Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Research Journal of Textile and Apparel Volume 29 ; 29 ; >
 
   }
 
@@ -15535,7 +15533,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Social Studies Research and Practice Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Social Studies Research and Practice Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Social Studies Research and Practice Volume 19 ; 19 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Social Studies Research and Practice Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Social Studies Research and Practice Volume 20 ; 20 ; >
 
   }
 
@@ -15560,7 +15558,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Social Transformations in Chinese Societies Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Social Transformations in Chinese Societies Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Social Transformations in Chinese Societies Volume 20 ; 20 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Social Transformations in Chinese Societies Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Social Transformations in Chinese Societies Volume 21 ; 21 ; >
 
   }
 
@@ -15615,7 +15613,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; VINE Journal of Information and Knowledge Management Systems Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; VINE Journal of Information and Knowledge Management Systems Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; VINE Journal of Information and Knowledge Management Systems Volume 54 ; 54 ; >
-    au < exists ; exists ; 2025 ; 2025 ; VINE Journal of Information and Knowledge Management Systems Volume 55 ; 55 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; VINE Journal of Information and Knowledge Management Systems Volume 55 ; 55 ; >
 
   }
 
@@ -15645,7 +15643,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; World Journal of Engineering Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; World Journal of Engineering Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; World Journal of Engineering Volume 21 ; 21 ; >
-    au < exists ; exists ; 2025 ; 2025 ; World Journal of Engineering Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; World Journal of Engineering Volume 22 ; 22 ; >
 
   }
 
@@ -15665,7 +15663,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Applied Economic Analysis Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Applied Economic Analysis Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Applied Economic Analysis Volume 32 ; 32 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Applied Economic Analysis Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Applied Economic Analysis Volume 33 ; 33 ; >
 
   }
 
@@ -15690,7 +15688,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 18 ; 18 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Asia Pacific Journal of Innovation & Entrepreneurship Volume 19 ; 19 ; >
 
   }
 
@@ -15725,7 +15723,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Asian Association of Open Universities Journal Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Asian Association of Open Universities Journal Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Asian Association of Open Universities Journal Volume 19 ; 19 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Asian Association of Open Universities Journal Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Asian Association of Open Universities Journal Volume 20 ; 20 ; >
 
   }
 
@@ -15750,7 +15748,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Asian Journal of Accounting Research Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Asian Journal of Accounting Research Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Asian Journal of Accounting Research Volume 9 ; 9 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Asian Journal of Accounting Research Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Asian Journal of Accounting Research Volume 10 ; 10 ; >
 
   }
 
@@ -15835,7 +15833,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; European Journal of Management & Business Economics Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; European Journal of Management & Business Economics Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; European Journal of Management & Business Economics Volume 33 ; 33 ; >
-    au < exists ; exists ; 2025 ; 2025 ; European Journal of Management & Business Economics Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; European Journal of Management & Business Economics Volume 34 ; 34 ; >
 
   }
 
@@ -15856,7 +15854,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Forest Economic Review Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Forest Economic Review Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Forest Economic Review Volume 6 ; 6 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Forest Economic Review Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Forest Economic Review Volume 7 ; 7 ; >
 
   }
 
@@ -15880,7 +15878,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Higher Education Evaluation and Development Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Higher Education Evaluation and Development Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Higher Education Evaluation and Development Volume 18 ; 18 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Higher Education Evaluation and Development Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Higher Education Evaluation and Development Volume 19 ; 19 ; >
 
   }
 
@@ -15902,7 +15900,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Innovation & Management Review Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Innovation & Management Review Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Innovation & Management Review Volume 21 ; 21 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Innovation & Management Review Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Innovation & Management Review Volume 22 ; 22 ; >
 
   }
 
@@ -15924,7 +15922,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Hospitality Review Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Hospitality Review Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Hospitality Review Volume 38 ; 38 ; >
-    au < exists ; exists ; 2025 ; 2025 ; International Hospitality Review Volume 39 ; 39 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; International Hospitality Review Volume 39 ; 39 ; >
 
   }
 
@@ -15997,7 +15995,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Trade, Politics and Development Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Trade, Politics and Development Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Trade, Politics and Development Volume 8 ; 8 ; >
-    au < expected ; exists ; 2025 ; 2025 ; International Trade, Politics and Development Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; International Trade, Politics and Development Volume 9 ; 9 ; >
 
   }
 
@@ -16021,7 +16019,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Irish Journal of Occupational Therapy Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Irish Journal of Occupational Therapy Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Irish Journal of Occupational Therapy Volume 52 ; 52 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Irish Journal of Occupational Therapy Volume 53 ; 53 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Irish Journal of Occupational Therapy Volume 53 ; 53 ; >
 
   }
 
@@ -16085,8 +16083,8 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Asian Business Economics Studies Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Asian Business Economics Studies Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Asian Business Economics Studies Volume 30 ; 30 ; >
-    au < exists ; exists ; 2024 ; 2024 ; Journal of Asian Business Economics Studies Volume 31 ; 31 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Asian Business Economics Studies Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Journal of Asian Business Economics Studies Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Asian Business Economics Studies Volume 32 ; 32 ; >
 
   }
 
@@ -16106,7 +16104,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Business and Socio-economic Development Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Business and Socio-economic Development Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Business and Socio-economic Development Volume 4 ; 4 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Business and Socio-economic Development Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Business and Socio-economic Development Volume 5 ; 5 ; >
 
   }
 
@@ -16187,30 +16185,30 @@
     comment[journal_issn] = 1229-988X
     param[journal_id] = jdqs
 
-    au < exists ; exists ; 2002 ; 2002 ; Journal of Derivatives and Quantitative Studies Volume 10 ; 10 ; >
-    au < exists ; exists ; 2003 ; 2003 ; Journal of Derivatives and Quantitative Studies Volume 11 ; 11 ; >
-    au < exists ; exists ; 2004 ; 2004 ; Journal of Derivatives and Quantitative Studies Volume 12 ; 12 ; >
-    au < exists ; exists ; 2005 ; 2005 ; Journal of Derivatives and Quantitative Studies Volume 13 ; 13 ; >
-    au < exists ; exists ; 2006 ; 2006 ; Journal of Derivatives and Quantitative Studies Volume 14 ; 14 ; >
-    au < exists ; exists ; 2007 ; 2007 ; Journal of Derivatives and Quantitative Studies Volume 15 ; 15 ; >
-    au < exists ; exists ; 2008 ; 2008 ; Journal of Derivatives and Quantitative Studies Volume 16 ; 16 ; >
-    au < exists ; exists ; 2009 ; 2009 ; Journal of Derivatives and Quantitative Studies Volume 17 ; 17 ; >
-    au < exists ; exists ; 2010 ; 2010 ; Journal of Derivatives and Quantitative Studies Volume 18 ; 18 ; >
-    au < exists ; exists ; 2011 ; 2011 ; Journal of Derivatives and Quantitative Studies Volume 19 ; 19 ; >
-    au < exists ; exists ; 2012 ; 2012 ; Journal of Derivatives and Quantitative Studies Volume 20 ; 20 ; >
-    au < exists ; exists ; 2013 ; 2013 ; Journal of Derivatives and Quantitative Studies Volume 21 ; 21 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Journal of Derivatives and Quantitative Studies Volume 22 ; 22 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Journal of Derivatives and Quantitative Studies Volume 23 ; 23 ; >
-    au < exists ; exists ; 2016 ; 2016 ; Journal of Derivatives and Quantitative Studies Volume 24 ; 24 ; >
-    au < exists ; exists ; 2017 ; 2017 ; Journal of Derivatives and Quantitative Studies Volume 25 ; 25 ; >
-    au < exists ; exists ; 2018 ; 2018 ; Journal of Derivatives and Quantitative Studies Volume 26 ; 26 ; >
-    au < exists ; exists ; 2019 ; 2019 ; Journal of Derivatives and Quantitative Studies Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2002 ; 2002 ; Journal of Derivatives and Quantitative Studies Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2003 ; 2003 ; Journal of Derivatives and Quantitative Studies Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2004 ; 2004 ; Journal of Derivatives and Quantitative Studies Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2005 ; 2005 ; Journal of Derivatives and Quantitative Studies Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2006 ; 2006 ; Journal of Derivatives and Quantitative Studies Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2007 ; 2007 ; Journal of Derivatives and Quantitative Studies Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2008 ; 2008 ; Journal of Derivatives and Quantitative Studies Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2009 ; 2009 ; Journal of Derivatives and Quantitative Studies Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2010 ; 2010 ; Journal of Derivatives and Quantitative Studies Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2011 ; 2011 ; Journal of Derivatives and Quantitative Studies Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2012 ; 2012 ; Journal of Derivatives and Quantitative Studies Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Journal of Derivatives and Quantitative Studies Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Journal of Derivatives and Quantitative Studies Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Journal of Derivatives and Quantitative Studies Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Journal of Derivatives and Quantitative Studies Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Journal of Derivatives and Quantitative Studies Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Journal of Derivatives and Quantitative Studies Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Journal of Derivatives and Quantitative Studies Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Derivatives and Quantitative Studies Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Derivatives and Quantitative Studies Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Derivatives and Quantitative Studies Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Derivatives and Quantitative Studies Volume 31 ; 31 ; >
-    au < exists ; exists ; 2024 ; 2024 ; Journal of Derivatives and Quantitative Studies Volume 32 ; 32 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Derivatives and Quantitative Studies Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Journal of Derivatives and Quantitative Studies Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Derivatives and Quantitative Studies Volume 33 ; 33 ; >
 
   }
 
@@ -16234,7 +16232,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Economics, Finance and Administrative Science Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Economics, Finance and Administrative Science Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Economics, Finance and Administrative Science Volume 29 ; 29 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Economics, Finance and Administrative Science Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Economics, Finance and Administrative Science Volume 30 ; 30 ; >
 
   }
 
@@ -16296,8 +16294,8 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Humanities and Applied Social Sciences Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Humanities and Applied Social Sciences Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Humanities and Applied Social Sciences Volume 5 ; 5 ; >
-    au < exists ; exists ; 2024 ; 2024 ; Journal of Humanities and Applied Social Sciences Volume 6 ; 6 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Humanities and Applied Social Sciences Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Journal of Humanities and Applied Social Sciences Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Humanities and Applied Social Sciences Volume 7 ; 7 ; >
 
   }
 
@@ -16354,7 +16352,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Intelligent Manufacturing and Special Equipment Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Intelligent Manufacturing and Special Equipment Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Intelligent Manufacturing and Special Equipment Volume 5 ; 5 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Intelligent Manufacturing and Special Equipment Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Intelligent Manufacturing and Special Equipment Volume 6 ; 6 ; >
 
   }
 
@@ -16377,7 +16375,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Research in Innovative Teaching & Learning Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Research in Innovative Teaching & Learning Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Research in Innovative Teaching & Learning Volume 17 ; 17 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Research in Innovative Teaching & Learning Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Research in Innovative Teaching & Learning Volume 18 ; 18 ; >
 
   }
 
@@ -16421,7 +16419,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Tourism Futures Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Tourism Futures Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Tourism Futures Volume 10 ; 10 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Tourism Futures Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Tourism Futures Volume 11 ; 11 ; >
 
   }
 
@@ -16447,7 +16445,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Work Applied Management Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Work Applied Management Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Work Applied Management Volume 16 ; 16 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Journal of Work Applied Management Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Journal of Work Applied Management Volume 17 ; 17 ; >
 
   }
 
@@ -16468,7 +16466,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Marine Economics and Management Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Marine Economics and Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Marine Economics and Management Volume 6 ; 6 ; >
-    au < exists ; exists ; 2024 ; 2024 ; Marine Economics and Management Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Marine Economics and Management Volume 7 ; 7 ; >
     au < expected ; exists ; 2025 ; 2025 ; Marine Economics and Management Volume 8 ; 8 ; >
 
   }
@@ -16494,7 +16492,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Maritme Business Review Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Maritme Business Review Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Maritme Business Review Volume 9 ; 9 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Maritme Business Review Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Maritme Business Review Volume 10 ; 10 ; >
 
   }
 
@@ -16543,7 +16541,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Modern Supply Chain Research and Applications Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Modern Supply Chain Research and Applications Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Modern Supply Chain Research and Applications Volume 6 ; 6 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Modern Supply Chain Research and Applications Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Modern Supply Chain Research and Applications Volume 7 ; 7 ; >
 
   }
 
@@ -16585,7 +16583,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; New England Journal of Entrepreneurship Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; New England Journal of Entrepreneurship Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; New England Journal of Entrepreneurship Volume 26 ; 26 ; >
-    au < exists ; exists ; 2024 ; 2024 ; New England Journal of Entrepreneurship Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; New England Journal of Entrepreneurship Volume 27 ; 27 ; >
     au < expected ; exists ; 2025 ; 2025 ; New England Journal of Entrepreneurship Volume 28 ; 28 ; >
 
   }
@@ -16607,7 +16605,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Organization Management Journal Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Organization Management Journal Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Organization Management Journal Volume 21 ; 21 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Organization Management Journal Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Organization Management Journal Volume 22 ; 22 ; >
 
   }
 
@@ -16653,8 +16651,8 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Public Administration and Policy Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Public Administration and Policy Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Public Administration and Policy Volume 26 ; 26 ; >
-    au < exists ; exists ; 2024 ; 2024 ; Public Administration and Policy Volume 27 ; 27 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Public Administration and Policy Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Public Administration and Policy Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Public Administration and Policy Volume 28 ; 28 ; >
 
   }
 
@@ -16676,7 +16674,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Rajagiri Management Journal Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Rajagiri Management Journal Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Rajagiri Management Journal Volume 18 ; 18 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Rajagiri Management Journal Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Rajagiri Management Journal Volume 19 ; 19 ; >
 
   }
 
@@ -16831,7 +16829,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; VILAKSHAN - XIMB Journal of Management Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; VILAKSHAN - XIMB Journal of Management Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; VILAKSHAN - XIMB Journal of Management Volume 21 ; 21 ; >
-    au < exists ; exists ; 2025 ; 2025 ; VILAKSHAN - XIMB Journal of Management Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; VILAKSHAN - XIMB Journal of Management Volume 22 ; 22 ; >
 
   }
 

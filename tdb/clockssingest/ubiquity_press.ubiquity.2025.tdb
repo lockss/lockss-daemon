@@ -107,8 +107,8 @@
      au < finished ; crawling ; 2021 ; 111,112 ; ERLACS Volume 2021 ; 2021 ; 111,112 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest1.clockss.org:8082 >
      au < superseded ; exists ; 2022 ; 113,114 ; ERLACS Volume 2022 [superseded] ; 2022 ; 113,114 ; CEDLA ;  ; https://www.erlacs.org/ ; >
      au < frozen ; exists ; 2023 ; 115,116 ; ERLACS Volume 2023 ; 2023 ; 115,116 ; CEDLA ;  ; https://erlacs.org/ ; >
-     au < exists ; exists ; 2024 ; 117,118 ; ERLACS Volume 2024 ; 2024 ; 117,118 ; CEDLA ;  ; https://erlacs.org/ ; >
-     au < exists ; exists ; 2025 ; 119,120 ; ERLACS Volume 2025 ; 2025 ; 119,120 ; CEDLA ;  ; https://erlacs.org/ ; >
+     au < manifest ; exists ; 2024 ; 117,118 ; ERLACS Volume 2024 ; 2024 ; 117,118 ; CEDLA ;  ; https://erlacs.org/ ; >
+     au < manifest ; exists ; 2025 ; 119,120 ; ERLACS Volume 2025 ; 2025 ; 119,120 ; CEDLA ;  ; https://erlacs.org/ ; >
 
   }
 
@@ -1606,7 +1606,7 @@
       au < frozen ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; 1 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
       au < frozen ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; 2 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
       au < frozen ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; 3 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
-      au < exists ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; 4 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ;  >
+      au < manifest ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; 4 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ;  >
       au < finished ; finished ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; 5 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; 6 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; 7 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; reingest1.clockss.org:8082 >
