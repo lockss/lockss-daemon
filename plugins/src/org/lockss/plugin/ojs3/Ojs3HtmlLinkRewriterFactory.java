@@ -32,9 +32,19 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ojs3;
 
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.filter.html.HtmlTags.Iframe;
 import org.lockss.rewriter.NodeFilterHtmlLinkRewriterFactory;
+import org.lockss.servlet.ServletUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
+import org.lockss.util.UrlUtil;
+import org.lockss.util.urlconn.CacheException.MalformedURLException;
+
+import java.util.Collection;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.htmlparser.*;
 import org.htmlparser.tags.Div;
 import org.htmlparser.tags.LinkTag;
@@ -47,6 +57,30 @@ public class Ojs3HtmlLinkRewriterFactory extends NodeFilterHtmlLinkRewriterFacto
         super();
         addPostXform(new NodeFilter(){
             String pdfhref;
+            /* IN PROGRESS
+            String rewrite(String url,
+                    String srcUrl,
+                    Collection<String> urlStems,
+                    ServletUtil.LinkTransform srvLinkXform) {
+                    if (UrlUtil.isAbsoluteUrl(url)) {
+                        for (String stem : urlStems) {
+                            if (StringUtil.startsWithIgnoreCase(url, stem)) {
+                                return srvLinkXform.rewrite(encodeQueryArg(url));
+                            }
+                        }
+                        return url;
+                    } else  {
+                        try {
+                            return srvLinkXform.rewrite(encodeQueryArg(UrlUtil.resolveUri(srcUrl,
+                                                    url,
+                                                    urlEncodeMode == CssLinkRewriterUrlEncodeMode.Minimal)));
+                        } catch (MalformedURLException e) {
+                        og.error("Can't rewrite " + url + " in " + srcUrl);
+                        return url;
+                        }
+                    }
+                }
+            */
             @Override
             public boolean accept(Node node) {
                 if (node instanceof LinkTag) {
@@ -56,12 +90,48 @@ public class Ojs3HtmlLinkRewriterFactory extends NodeFilterHtmlLinkRewriterFacto
                     //add request_disposition=attachment to download button
                     link.setAttribute("href",pdfhref+"&requested_disposition=attachment");
                   }
-                }/*else if(node instanceof ScriptTag){
+                }/* IN PROGRESS
+                 else if(node instanceof ScriptTag){
                     ScriptTag script = (ScriptTag)node;
                     String scriptContent = script.toPlainTextString();
-                    if(scriptContent.contains("/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html")){
-                        return true;
-                    }*/
+                    if (!StringUtil.isNullString(scriptContent)) {
+                        String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+                        String journalID = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
+                        Pattern lensPat = Pattern.compile(String.format("linkElement.href = \"(%s[^\"]+lens\\.css)\"; //Replace here", baseUrl),
+                                                            Pattern.CASE_INSENSITIVE);
+                        Matcher lensMat = lensPat.matcher(scriptContent);
+                        if (lensMat.find()) {
+                            /*This script tag lives at https://euchembioj.com/index.php/pub/article/view/13/26. 
+                            Example script tag that contains css and xml download links: 
+                            <script type="text/javascript">
+
+                                var linkElement = document.createElement("link");
+                                linkElement.rel = "stylesheet";
+                                linkElement.href = "https://euchembioj.com/plugins/generic/lensGalley/lib/lens/lens.css"; //Replace here
+
+                                document.head.appendChild(linkElement);
+
+                                $(document).ready(function(){
+                                    var app = new Lens({
+                                        document_url: "https://euchembioj.com/index.php/pub/article/download/13/26/491"
+                                    });
+                                    app.start();
+                                    window.app = app;
+                                });
+                            </script>
+                            
+                        log.debug3("found correct script tag");
+                        log.debug3("the script tag is " + scriptContent);
+                        Pattern lensXmlPat = Pattern.compile(String.format("document_url: \"(%sindex.php/%s/article/download/[^\"]+)\"", baseUrl, journalID));
+                        Matcher lensXmlMat = lensXmlPat.matcher(scriptContent);
+                        if(lensXmlMat.find()){
+                            cb.foundLink(lensXmlMat.group(1).trim());
+                        }else{
+                            log.debug("Unable to find xml download link in script tag that contains lens.css link: " + node.baseUri());
+                        }
+                        }
+                    }
+                }*/
                 else if(node instanceof Iframe){
                     Iframe iframe = (Iframe)node;
                     Node parent = iframe.getParent();
@@ -77,6 +147,4 @@ public class Ojs3HtmlLinkRewriterFactory extends NodeFilterHtmlLinkRewriterFacto
             }
         });
     }
-
-
 }

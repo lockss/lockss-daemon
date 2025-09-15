@@ -41,7 +41,8 @@ import java.util.regex.Pattern;
 import org.lockss.extractor.JsoupHtmlLinkExtractor;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
-import org.jsoup.nodes.Node;
+import org.jsoup.nodes.*;
+import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.LinkExtractor;
 import org.lockss.extractor.LinkExtractorFactory;
@@ -65,6 +66,12 @@ public class Ojs3HtmlLinkExtractorFactory implements LinkExtractorFactory {
 	}
 
 	public static class Ojs3JsoupHtmlLinkExtractor extends JsoupHtmlLinkExtractor{
+
+		public Ojs3JsoupHtmlLinkExtractor() {
+			super();
+			registerScriptTagExtractor();
+		}
+
 		@Override
 		public void extractUrls(ArchivalUnit au, InputStream in, String encoding, String srcUrl, Callback cb)
 				throws IOException, PluginException {
@@ -92,14 +99,65 @@ public class Ojs3HtmlLinkExtractorFactory implements LinkExtractorFactory {
 				});
 		}
 		
-		public static class Ojs3ScriptTagLinkExtractor extends ScriptTagLinkExtractor{
+		/*public static class Ojs3ScriptTagLinkExtractor extends ScriptTagLinkExtractor{
 		@Override
 		public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
 			log.debug3("Inside Ojs3ScriptTagLinkExtractor");
 			super.tagBegin(node, au, cb);
 			//get whole text, pass to buffered line reader, if line contains lens.css, then look
 		}
-	}
-	}
+	}*/
 
+	protected void registerScriptTagExtractor() {
+    registerTagExtractor("script", new ScriptTagLinkExtractor() {
+      @Override
+      public void tagBegin(Node node, ArchivalUnit au, Callback cb) {
+		log.debug3("Inside Ojs3 registerScriptTagExtractor, base uri is " + node.baseUri());
+		//look only inside article pages 
+        if (node.baseUri().contains("euchembioj.com/index.php/pub/article/view/")) {
+          String scriptHtml = ((Element)node).html();
+          if (!StringUtil.isNullString(scriptHtml)) {
+            String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+			String journalID = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
+            Pattern lensPat = Pattern.compile(String.format("linkElement.href = \"(%s[^\"]+lens\\.css)\"; //Replace here", baseUrl),
+                                                 Pattern.CASE_INSENSITIVE);
+            Matcher lensMat = lensPat.matcher(scriptHtml);
+            if (lensMat.find()) {
+				/*This script tag lives at https://euchembioj.com/index.php/pub/article/view/13/26. 
+				Example script tag that contains css and xml download links: 
+				  <script type="text/javascript">
+
+					var linkElement = document.createElement("link");
+					linkElement.rel = "stylesheet";
+					linkElement.href = "https://euchembioj.com/plugins/generic/lensGalley/lib/lens/lens.css"; //Replace here
+
+					document.head.appendChild(linkElement);
+
+					$(document).ready(function(){
+						var app = new Lens({
+							document_url: "https://euchembioj.com/index.php/pub/article/download/13/26/491"
+						});
+						app.start();
+						window.app = app;
+					});
+				</script>
+				 */
+			  log.debug3("found correct script tag");
+			  log.debug3("the script tag is " + scriptHtml);
+			  cb.foundLink(lensMat.group(1).trim());
+			  Pattern lensXmlPat = Pattern.compile(String.format("document_url: \"(%sindex.php/%s/article/download/[^\"]+)\"", baseUrl, journalID));
+			  Matcher lensXmlMat = lensXmlPat.matcher(scriptHtml);
+			  if(lensXmlMat.find()){
+				cb.foundLink(lensXmlMat.group(1).trim());
+			  }else{
+				log.debug("Unable to find xml download link in script tag that contains lens.css link: " + node.baseUri());
+			  }
+            }
+          }
+        }
+        super.tagBegin(node, au, cb);
+      }
+    });
+  }
+}
 }
