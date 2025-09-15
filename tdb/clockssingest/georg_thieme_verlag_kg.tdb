@@ -906,15 +906,15 @@
     comment[years] = 2000-2011
     # combined with Journal of Neurological Surgery Part A - Central European Neorosurgery in 2012
 
-    au < crawling ; exists ; 2000 ; 2000 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 60 ; 60 ; >
-    au < crawling ; exists ; 2001 ; 2001 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 61 ; 61 ; >
-    au < crawling ; exists ; 2002 ; 2002 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 62 ; 62 ; >
-    au < crawling ; exists ; 2003 ; 2003 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 63 ; 63 ; >
-    au < crawling ; exists ; 2004 ; 2004 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 64 ; 64 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 65 ; 65 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 66 ; 66 ; >
-    au < crawling ; exists ; 2007 ; 2007 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 67 ; 67 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 68 ; 68 ; >
+    au < frozen ; exists ; 2000 ; 2000 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 60 ; 60 ; >
+    au < frozen ; exists ; 2001 ; 2001 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 61 ; 61 ; >
+    au < frozen ; exists ; 2002 ; 2002 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 62 ; 62 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 63 ; 63 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 64 ; 64 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 65 ; 65 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 66 ; 66 ; >
+    au < frozen ; exists ; 2007 ; 2007 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 67 ; 67 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 68 ; 68 ; >
     au < ingNotReady ; exists ; 2009 ; 2009 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 69 ; 69 ; > #no metadata
     au < finished ; finished ; 2010 ; 2010 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 70 ; 70 ; >
     au < finished ; finished ; 2011 ; 2011 ; Central European Neurosurgery - Zentralblatt für Neurochirurgie Volume 71 ; 71 ; >
@@ -3629,7 +3629,7 @@
     au < finished ; finished ; 2005 ; 2005 ; Journal of Reconstructive Microsurgery Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2006 ; 2006 ; Journal of Reconstructive Microsurgery Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2007 ; 2007 ; Journal of Reconstructive Microsurgery Volume 23 ; 23 ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2008 ; 2008 ; Journal of Reconstructive Microsurgery Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; Journal of Reconstructive Microsurgery Volume 24 ; 24 ; >
     au < finished ; finished ; 2009 ; 2009 ; Journal of Reconstructive Microsurgery Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2010 ; 2010 ; Journal of Reconstructive Microsurgery Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2011 ; 2011 ; Journal of Reconstructive Microsurgery Volume 27 ; 27 ; reingest2.clockss.org:8085 >
@@ -4582,8 +4582,8 @@
     param[journal_id] = 10.1055/s-00000123
     comment[years] = 2004-2009
 
-    au < crawling ; exists ; 2004 ; 2004 ; Notfall & Hausarztmedizin Volume 30 ; 30 ; >
-    au < crawling ; exists ; 2005 ; 2005 ; Notfall & Hausarztmedizin Volume 31 ; 31 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Notfall & Hausarztmedizin Volume 30 ; 30 ; >
+    au < frozen ; exists ; 2005 ; 2005 ; Notfall & Hausarztmedizin Volume 31 ; 31 ; >
     au < finished ; finished ; 2006 ; 2006 ; Notfall & Hausarztmedizin Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2007 ; 2007 ; Notfall & Hausarztmedizin Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2008 ; 2008 ; Notfall & Hausarztmedizin Volume 34 ; 34 ; reingest3.clockss.org:8083 >

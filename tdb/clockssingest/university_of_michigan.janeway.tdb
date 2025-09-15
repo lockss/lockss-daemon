@@ -856,8 +856,8 @@
       #published 2021-2025
       param[journal_id] = jmmh
 
-      au < crawling ; exists ; 2021 ; 15 ; Journal of Muslim Mental Health Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 16 ; Journal of Muslim Mental Health Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2021 ; 15 ; Journal of Muslim Mental Health Volume 2021 ; 2021 ; >
+      au < frozen ; exists ; 2022 ; 16 ; Journal of Muslim Mental Health Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 17 ; Journal of Muslim Mental Health Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 18 ; Journal of Muslim Mental Health Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 19 ; Journal of Muslim Mental Health Volume 2025 ; 2025 ; >
@@ -875,7 +875,7 @@
       #published 2021-2025
       param[journal_id] = jpe
 
-      au < crawling ; exists ; 2021 ; 9 ; Journal of Practical Ethics Volume 2021 ; 2021 ; >
+      au < frozen ; exists ; 2021 ; 9 ; Journal of Practical Ethics Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 10 ; Journal of Practical Ethics Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 11 ; Journal of Practical Ethics Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 12 ; Journal of Practical Ethics Volume 2024 ; 2024 ; >
