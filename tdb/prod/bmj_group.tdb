@@ -66,7 +66,6 @@
     >
     #param[base_url] = http://ard.bmj.com/
 
-
     au < HighWirePressH20Plugin ; down ; 1939 ; Annals of the Rheumatic Diseases Volume 1 ; 1 ; http://ard.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1940-1941 ; Annals of the Rheumatic Diseases Volume 2 ; 2 ; http://ard.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1942-1943 ; Annals of the Rheumatic Diseases Volume 3 ; 3 ; http://ard.bmj.com/ >
@@ -161,7 +160,6 @@
       issnl = 0003-9888
     >
     #param[base_url] = http://adc.bmj.com/
-
 
     au < bmj.BMJDrupalPlugin ; manifest ; 1926 ; Archives of Disease in Childhood Volume 1 ; 1 ; https://adc.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1927 ; Archives of Disease in Childhood Volume 2 ; 2 ; http://adc.bmj.com/ >
@@ -285,7 +283,6 @@
       issnl = 1743-0585
     >
     #param[base_url] = http://ep.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 2004 ; Archives of Disease in Childhood - Education and Practice Volume 89 ; 89 ; http://ep.bmj.com/ >
     au < HighWireStrVolPlugin ; down ; 2005 ; Archives of Disease in Childhood - Education and Practice Volume 90 ; 90 ; http://ep.bmj.com/ >
@@ -597,7 +594,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Health & Care Informatics Volume 28 ; 28 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Health & Care Informatics Volume 29 ; 29 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Health & Care Informatics Volume 30 ; 30 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; notReady ; 2024 ; BMJ Health & Care Informatics Volume 31 ; 31 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2024 ; BMJ Health & Care Informatics Volume 31 ; 31 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Health & Care Informatics Volume 32 ; 32 ; https://informatics.bmj.com/ >
 
   }
@@ -610,7 +607,6 @@
       issn = 2055-8074
     >
     #param[base_url] = http://innovations.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Innovations Volume 1 ; 1 ; http://innovations.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; BMJ Innovations Volume 2 ; 2 ; https://innovations.bmj.com/ >
@@ -632,7 +628,6 @@
       issn = 2044-6055
     >
     #param[base_url] = http://bmjopen.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 2011 ; BMJ Open Volume 1 ; 1 ; http://bmjopen.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; BMJ Open Volume 2 ; 2 ; http://bmjopen.bmj.com/ >
@@ -684,7 +679,6 @@
     >
     #param[base_url] = http://bmjophth.bmj.com/
 
-
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; BMJ Open Ophthalmology Volume 1 ; 1 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; BMJ Open Ophthalmology Volume 2 ; 2 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2018 ; BMJ Open Ophthalmology Volume 3 ; 3 ; https://bmjophth.bmj.com/ >
@@ -704,7 +698,6 @@
       eissn = 2052-4439
     >
     #param[base_url] = http://bmjopenrespres.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 2014 ; BMJ Open Respiratory Research Volume 1 ; 1 ; http://bmjopenrespres.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2015 ; BMJ Open Respiratory Research Volume 2 ; 2 ; http://bmjopenrespres.bmj.com/ >
@@ -774,7 +767,6 @@
     >
     #param[base_url] = http://spcare.bmj.com/
 
-    
     au < HighWirePressH20Plugin ; down ; 2011 ; BMJ Supportive & Palliative Care Volume 1 ; 1 ; http://spcare.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; BMJ Supportive & Palliative Care Volume 2 ; 2 ; http://spcare.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2013 ; BMJ Supportive & Palliative Care Volume 3 ; 3 ; http://spcare.bmj.com/ >
@@ -802,7 +794,6 @@
     >
     #param[base_url] = http://bjo.bmj.com/
 
-    
     comment[bjo_v95] = V84-88 very large volume. Problems with recursive generated links. RU3644
 
     au < HighWirePressH20Plugin ; down ; 1917 ; British Journal of Ophthalmology Volume 1 ; 1 ; http://bjo.bmj.com/ >
@@ -926,7 +917,6 @@
     >
     #param[base_url] = http://bjsm.bmj.com/
 
-
     au < HighWirePressH20Plugin ; down ; 1964 ; British Journal of Sports Medicine Volume 1 ; 1 ; http://bjsm.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1965 ; British Journal of Sports Medicine Volume 2 ; 2 ; http://bjsm.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1967-1968 ; British Journal of Sports Medicine Volume 3 ; 3 ; http://bjsm.bmj.com/ >
@@ -997,7 +987,6 @@
       issnl = 0012-6543
     >
     #param[base_url] = http://dtb.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 1962 ; DTB - Drug and Therapeutics Bulletin Volume s1-1 ; s1-1 ; http://dtb.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1963 ; DTB - Drug and Therapeutics Bulletin Volume s1-2 ; s1-2 ; http://dtb.bmj.com/ >
@@ -1189,7 +1178,6 @@
       >
     #param[base_url] = http://fg.bmj.com/
 
-
     au < HighWirePressH20Plugin ; down ; 2010 ; Frontline Gastroenterology Volume 1 ; 1 ; http://fg.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2011 ; Frontline Gastroenterology Volume 2 ; 2 ; http://fg.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2012 ; Frontline Gastroenterology Volume 3 ; 3 ; http://fg.bmj.com/ >
@@ -1241,7 +1229,6 @@
     #param[base_url] = http://heartasia.bmj.com/
     #stopped publication end of 2019.
 
-
     au < bmj.BMJDrupalPlugin ; manifest ; 2009 ; Heart Asia Volume 1 ; 1 ; https://heartasia.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2010 ; Heart Asia Volume 2 ; 2 ; http://heartasia.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2011 ; Heart Asia Volume 3 ; 3 ; http://heartasia.bmj.com/ >
@@ -1263,7 +1250,6 @@
       >
     #param[base_url] = http://casereports.bmj.com/
 
-    
     comment[structure] = This journal seems different from others. Case reports are grouped by date, not by volume.
     #need special plugin, please see #LXQUEUE-1316
     ###***SEE TITLE BLOCK BELOW WITH NEEDS.PLUGIN***###
@@ -1290,7 +1276,6 @@
       issnl = 1056-8751
     >
     #param[base_url] = http://ebm.bmj.com/
-
 
 comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
@@ -1336,7 +1321,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
     #param[base_url] = http://ebmh.bmj.com/ to https://mentalhealth.bmj.com/
 
-
     au < HighWirePressH20Plugin ; down ; 1998 ; Evidence-Based Mental Health Volume 1 ; 1 ; http://ebmh.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1999 ; Evidence-Based Mental Health Volume 2 ; 2 ; http://ebmh.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2000 ; Evidence-Based Mental Health Volume 3 ; 3 ; http://ebmh.bmj.com/ >
@@ -1377,7 +1361,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
     #param[base_url] = http://ebn.bmj.com/
 
-
     au < HighWirePressH20Plugin ; down ; 1998 ; Evidence-Based Nursing Volume 1 ; 1 ; http://ebn.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1999 ; Evidence-Based Nursing Volume 2 ; 2 ; http://ebn.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2000 ; Evidence-Based Nursing Volume 3 ; 3 ; http://ebn.bmj.com/ >
@@ -1417,7 +1400,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       issnl = 0017-5749
     >
     #param[base_url] = http://gut.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 1960 ; Gut Volume 1 ; 1 ; http://gut.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1961 ; Gut Volume 2 ; 2 ; http://gut.bmj.com/ >
@@ -1504,7 +1486,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       issnl = 1355-6037
     >
     #param[base_url] = http://heart.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 1939 ; Heart Volume 1 ; 1 ; http://heart.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1940 ; Heart Volume 2 ; 2 ; http://heart.bmj.com/ >
@@ -1635,10 +1616,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 #
 #    }
 
-
     {
       #param[base_url] = http://injuryprevention.bmj.com/
-
 
       au < HighWirePressH20Plugin ; down ; 1995 ; Injury Prevention Volume 1 ; 1 ; http://injuryprevention.bmj.com/ >
       au < HighWirePressH20Plugin ; down ; 1996 ; Injury Prevention Volume 2 ; 2 ; http://injuryprevention.bmj.com/ >
@@ -1684,7 +1663,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       issnl = 0021-9746
     >
     #param[base_url] = http://jcp.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 1947-1948 ; Journal of Clinical Pathology Volume 1 ; 1 ; http://jcp.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1949 ; Journal of Clinical Pathology Volume 2 ; 2 ; http://jcp.bmj.com/ >
@@ -1775,7 +1753,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       issnl = 0143-005X
     >
     #param[base_url] = http://jech.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 1947 ; Journal of Epidemiology & Community Health Volume 1 ; 1 ; http://jech.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1948 ; Journal of Epidemiology & Community Health Volume 2 ; 2 ; http://jech.bmj.com/ >
@@ -1928,7 +1905,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
     #param[base_url] = http://jme.bmj.com/
 
-
     au < HighWirePressH20Plugin ; down ; 1975 ; Journal of Medical Ethics Volume 1 ; 1 ; http://jme.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1976 ; Journal of Medical Ethics Volume 2 ; 2 ; http://jme.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1977 ; Journal of Medical Ethics Volume 3 ; 3 ; http://jme.bmj.com/ >
@@ -1991,7 +1967,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       issnl = 0022-2593
     >
     #param[base_url] = http://jmg.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 1964 ; Journal of Medical Genetics Volume 1 ; 1 ; http://jmg.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1965 ; Journal of Medical Genetics Volume 2 ; 2 ; http://jmg.bmj.com/ >
@@ -2067,7 +2042,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
     #param[base_url] = http://jnis.bmj.com/
 
-
     au < HighWirePressH20Plugin ; down ; 2009 ; Journal of NeuroInterventional Surgery Volume 1 ; 1 ; http://jnis.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2010 ; Journal of NeuroInterventional Surgery Volume 2 ; 2 ; http://jnis.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2011 ; Journal of NeuroInterventional Surgery Volume 3 ; 3 ; http://jnis.bmj.com/ >
@@ -2096,7 +2070,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       issnl = 0022-3050
     >
     #param[base_url] = http://jnnp.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 1938 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 1 ; 1 ; http://jnnp.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1939 ; Journal of Neurology, Neurosurgery & Psychiatry Volume 2 ; 2 ; http://jnnp.bmj.com/ >
@@ -2427,7 +2400,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
     #param[base_url] = http://mh.bmj.com/
 
-
     au < HighWirePressH20Plugin ; down ; 2000 ; Medical Humanities Volume 26 ; 26 ; http://mh.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2001 ; Medical Humanities Volume 27 ; 27 ; http://mh.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2002 ; Medical Humanities Volume 28 ; 28 ; http://mh.bmj.com/ >
@@ -2487,7 +2459,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       issnl = 1351-0711
     >
     #param[base_url] = http://oem.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 1944 ; Occupational and Environmental Medicine Volume 1 ; 1 ; http://oem.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1945 ; Occupational and Environmental Medicine Volume 2 ; 2 ; http://oem.bmj.com/ >
@@ -2693,7 +2664,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
     #param[base_url] = http://pn.bmj.com/
 
-
     au < HighWirePressH20Plugin ; down ; 2001 ; Practical Neurology Volume 1 ; 1 ; http://pn.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2002 ; Practical Neurology Volume 2 ; 2 ; http://pn.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 2003 ; Practical Neurology Volume 3 ; 3 ; http://pn.bmj.com/ >
@@ -2809,7 +2779,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
     #param[base_url] = http://rmdopen.bmj.com/
 
-
     au < HighWirePressH20Plugin ; down ; 2015 ; RMD Open Volume 1 ; 1 ; http://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2016 ; RMD Open Volume 2 ; 2 ; https://rmdopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2017 ; RMD Open Volume 3 ; 3 ; https://rmdopen.bmj.com/ >
@@ -2832,7 +2801,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       issnl = 1368-4973
     >
     #param[base_url] = http://sti.bmj.com/
-
 
     au < HighWirePressH20Plugin ; down ; 1925 ; Sexually Transmitted Infections Volume 1 ; 1 ; http://sti.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1926 ; Sexually Transmitted Infections Volume 2 ; 2 ; http://sti.bmj.com/ >
@@ -2947,7 +2915,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     >
     #param[base_url] = http://thorax.bmj.com/
 
-
     au < HighWirePressH20Plugin ; down ; 1946 ; Thorax Volume 1 ; 1 ; http://thorax.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1947 ; Thorax Volume 2 ; 2 ; http://thorax.bmj.com/ >
     au < HighWirePressH20Plugin ; down ; 1948 ; Thorax Volume 3 ; 3 ; http://thorax.bmj.com/ >
@@ -3051,7 +3018,6 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
 comment[tc15] = recursive URL structure
       #param[base_url] = http://tobaccocontrol.bmj.com/
-
 
       au < HighWirePressH20Plugin ; down ; 1992 ; Tobacco Control Volume 1 ; 1 ; http://tobaccocontrol.bmj.com/ >
       au < HighWirePressH20Plugin ; down ; 1993 ; Tobacco Control Volume 2 ; 2 ; http://tobaccocontrol.bmj.com/ >
