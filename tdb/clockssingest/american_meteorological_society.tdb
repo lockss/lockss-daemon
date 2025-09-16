@@ -118,7 +118,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; Earth Interactions Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Earth Interactions Volume 23 ; 23 ; >
     au < finished ; manifest ; 2020 ; Earth Interactions Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2021 ; Earth Interactions Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2021 ; Earth Interactions Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; Earth Interactions Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2023 ; Earth Interactions Volume 27 ; 27 ; >
     au < deepCrawl ; exists ; 2024 ; Earth Interactions Volume 28 ; 28 ; >
@@ -236,13 +236,13 @@
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Applied Meteorology and Climatology Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Applied Meteorology and Climatology Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Applied Meteorology and Climatology Volume 53 ; 53 ; >
-    au < frozen ; exists ; 2015 ; Journal of Applied Meteorology and Climatology Volume 54 ; 54 ; >
+    au < finished ; manifest ; 2015 ; Journal of Applied Meteorology and Climatology Volume 54 ; 54 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Applied Meteorology and Climatology Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Applied Meteorology and Climatology Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Applied Meteorology and Climatology Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Applied Meteorology and Climatology Volume 58 ; 58 ; >
-    au < frozen ; exists ; 2020 ; Journal of Applied Meteorology and Climatology Volume 59 ; 59 ; >
-    au < frozen ; exists ; 2021 ; Journal of Applied Meteorology and Climatology Volume 60 ; 60 ; >
+    au < finished ; manifest ; 2020 ; Journal of Applied Meteorology and Climatology Volume 59 ; 59 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Journal of Applied Meteorology and Climatology Volume 60 ; 60 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Journal of Applied Meteorology and Climatology Volume 61 ; 61 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Applied Meteorology and Climatology Volume 62 ; 62 ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Applied Meteorology and Climatology Volume 63 ; 63 ; >
@@ -290,15 +290,15 @@
     au < doNotProcess ; exists ; 2010 ; Journal of Atmospheric and Oceanic Technology Volume 27 ; 27 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Atmospheric and Oceanic Technology Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Atmospheric and Oceanic Technology Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2013 ; Journal of Atmospheric and Oceanic Technology Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2013 ; Journal of Atmospheric and Oceanic Technology Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Atmospheric and Oceanic Technology Volume 31 ; 31 ; >
-    au < frozen ; exists ; 2015 ; Journal of Atmospheric and Oceanic Technology Volume 32 ; 32 ; >
+    au < finished ; manifest ; 2015 ; Journal of Atmospheric and Oceanic Technology Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Atmospheric and Oceanic Technology Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Atmospheric and Oceanic Technology Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Atmospheric and Oceanic Technology Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Atmospheric and Oceanic Technology Volume 36 ; 36 ; >
-    au < frozen ; exists ; 2020 ; Journal of Atmospheric and Oceanic Technology Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2021 ; Journal of Atmospheric and Oceanic Technology Volume 38 ; 38 ; >
+    au < finished ; manifest ; 2020 ; Journal of Atmospheric and Oceanic Technology Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2021 ; Journal of Atmospheric and Oceanic Technology Volume 38 ; 38 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Atmospheric and Oceanic Technology Volume 39 ; 39 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Atmospheric and Oceanic Technology Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Atmospheric and Oceanic Technology Volume 41 ; 41 ; >
@@ -316,7 +316,6 @@
     >
     
     param[journal_id] = clim
-
 
     au < doNotProcess ; exists ; 1988 ; Journal of Climate Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1989 ; Journal of Climate Volume 2 ; 2 ; >
@@ -342,16 +341,16 @@
     au < doNotProcess ; exists ; 2009 ; Journal of Climate Volume 22 ; 22 ; >
     au < doNotProcess ; exists ; 2010 ; Journal of Climate Volume 23 ; 23 ; >
     au < doNotProcess ; exists ; 2011 ; Journal of Climate Volume 24 ; 24 ; >
-    au < frozen ; exists ; 2012 ; Journal of Climate Volume 25 ; 25 ; >
-    au < frozen ; exists ; 2013 ; Journal of Climate Volume 26 ; 26 ; >
+    au < finished ; manifest ; 2012 ; Journal of Climate Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2013 ; Journal of Climate Volume 26 ; 26 ; reingest4.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2014 ; Journal of Climate Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2015 ; Journal of Climate Volume 28 ; 28 ; >
+    au < finished ; manifest ; 2015 ; Journal of Climate Volume 28 ; 28 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2016 ; Journal of Climate Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; Journal of Climate Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; Journal of Climate Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Climate Volume 32 ; 32 ; >
-    au < frozen ; exists ; 2020 ; Journal of Climate Volume 33 ; 33 ; >
-    au < frozen ; exists ; 2021 ; Journal of Climate Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2020 ; Journal of Climate Volume 33 ; 33 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Journal of Climate Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Journal of Climate Volume 35 ; 35 ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Climate Volume 36 ; 36 ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Climate Volume 37 ; 37 ; >
