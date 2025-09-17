@@ -190,7 +190,7 @@ public class TestHeterocyclesArticleIteratorFactory
     int deletedFileCount = 0; 
     for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
-        log.info("au cached url: " + url);
+        //log.info("au cached url: " + url);
         if ((url.contains("/fulltext/") && url.endsWith("1")) 
             || (url.contains("/PDF/") && url.endsWith("2"))) {
           deleteBlock(cu);
@@ -215,12 +215,12 @@ public class TestHeterocyclesArticleIteratorFactory
     // including 4 deleted full text htmls
     while (it.hasNext()) {
       ArticleFiles af = it.next();
-      log.info(af.toString());
+      //log.info(af.toString());
       CachedUrl cu = af.getFullTextCu();
       String url = cu.getUrl();
       //assertNotNull(cu);
       String contentType = cu.getContentType();
-      log.info("count " + count + " url " + url + " " + contentType);
+      //log.info("count " + count + " url " + url + " " + contentType);
       count++;
       url = af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF);
       if (!StringUtil.isNullString(url) && url.contains("PDF")) {
@@ -247,7 +247,7 @@ public class TestHeterocyclesArticleIteratorFactory
       }
     }
     
-    log.info("Full text Article count is " + count);
+    //log.info("Full text Article count is " + count);
     //assertEquals(EXP_FULL_TEXT_COUNT, count);
     //assertEquals(EXP_PDF_COUNT, countPdfOnly);
     //assertEquals(EXP_PDF_WITH_LINKS_COUNT, countPdfwithLinksOnly);
@@ -258,7 +258,7 @@ public class TestHeterocyclesArticleIteratorFactory
    }
  
   private void deleteBlock(CachedUrl cu) throws IOException {
-    log.info("deleting " + cu.getUrl());
+    //log.info("deleting " + cu.getUrl());
     cu.delete();
   }
 

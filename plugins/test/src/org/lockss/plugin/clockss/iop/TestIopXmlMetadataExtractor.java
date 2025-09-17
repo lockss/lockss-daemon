@@ -161,7 +161,7 @@ public class TestIopXmlMetadataExtractor extends LockssTestCase {
 	      ArticleMetadata mdRecord = null;
 	      while (mdIt.hasNext()) {
 	        mdRecord = (ArticleMetadata) mdIt.next();
-	        log.info(mdRecord.ppString(2));
+	        //log.info(mdRecord.ppString(2));
 	      }
 	    }finally {
 	      IOUtil.safeClose(file_input);

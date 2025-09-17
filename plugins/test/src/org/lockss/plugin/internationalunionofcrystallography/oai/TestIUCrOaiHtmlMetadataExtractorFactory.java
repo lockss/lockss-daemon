@@ -225,8 +225,8 @@ public class TestIUCrOaiHtmlMetadataExtractorFactory extends LockssTestCase {
     assertEquals(goodEndPage, md.get(MetadataField.FIELD_END_PAGE));
     assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
     assertEquals(goodISSN, md.get(MetadataField.FIELD_ISSN));
-    log.info(goodPdfUrl);
-    log.info(md.get(MetadataField.FIELD_ACCESS_URL));
+    //log.info(goodPdfUrl);
+    //log.info(md.get(MetadataField.FIELD_ACCESS_URL));
     assertEquals(goodPdfUrl, md.get(MetadataField.FIELD_ACCESS_URL));
     assertEquals(goodAbstractUrl, md.get(MetadataField.FIELD_ABSTRACT));
   }

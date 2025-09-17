@@ -34,7 +34,7 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
                 Integer.toString(year),
                 YEAR_END);
 
-        log.info("apiStartUrl: " + apiStartUrl);
+        //log.info("apiStartUrl: " + apiStartUrl);
 
         String fname = "sample_single_doi.xml";
         Document document = getDocumentFromResource(fname);
@@ -69,11 +69,11 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
             count = nodes.getLength();
             assertNotEquals(nodes.getLength(), 0);
 
-            log.info("Expression is " + xpathExpression + ", count ======  " + count);
+            //log.info("Expression is " + xpathExpression + ", count ======  " + count);
 
             for (int i = 0; i < count ; i++) {
                 String value = nodes.item(i).getTextContent();
-                log.info("Expression is " + xpathExpression + ", value ===== " + value);
+                //log.info("Expression is " + xpathExpression + ", value ===== " + value);
                 assertNotNull(value);
             }
 
@@ -98,12 +98,12 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
             count = nodes.getLength();
             assertNotEquals(nodes.getLength(), 0);
 
-            log.info("Expression is " + xpathExpression + ", count ======  " + count);
+            //log.info("Expression is " + xpathExpression + ", count ======  " + count);
 
             for (int i = 0; i < count ; i++) {
                 NodeList nameChildren = nodes.item(i).getChildNodes();
                 if (nameChildren == null) {
-                    log.info("nameChildren is null");
+                    //log.info("nameChildren is null");
                 }
 
                 String surname = null;
@@ -115,10 +115,10 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
 
                     if ("surname".equals(partName)) {
                         surname = partNode.getTextContent();
-                        log.info("surname is " + surname);
+                        //log.info("surname is " + surname);
                     }  else if ("firstname".equals(partName)) {
                         firstname = partNode.getTextContent();
-                        log.info("firstname is " + firstname);
+                        //log.info("firstname is " + firstname);
                     }
                 }
                 StringBuilder valbuilder = new StringBuilder();
@@ -127,7 +127,7 @@ public class TestGigaScienceAPIHelper extends LockssTestCase {
                     if (!StringUtils.isBlank(surname)) {
                         valbuilder.append("  " + surname);
                     }
-                    log.info("author name is " + valbuilder.toString());
+                    //log.info("author name is " + valbuilder.toString());
                 }
                 assertNotNull(valbuilder.toString());
             }

@@ -170,15 +170,15 @@ public class TestPalgraveBookArticleIteratorFactory extends ArticleIteratorTestC
     for (CachedUrl cu : AuUtil.getCuIterable(sau)) {
       if (cuPdf == null
           && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_PDF)) {
-        log.info("pdf contenttype: " + cu.getContentType());
+        //log.info("pdf contenttype: " + cu.getContentType());
         cuPdf = cu;
       } else if (cuHtml == null 
           && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)) {
-        log.info("html contenttype: " + cu.getContentType());
+        //log.info("html contenttype: " + cu.getContentType());
         cuHtml = cu;
       } else if (cuEpub == null 
           && cu.getContentType().toLowerCase().startsWith("application/epub")) {
-        log.info("epub contenttype: " + cu.getContentType());
+        //log.info("epub contenttype: " + cu.getContentType());
         cuEpub = cu;
       }
     	if (cuPdf != null && cuHtml != null && cuEpub != null) {
@@ -231,11 +231,11 @@ public class TestPalgraveBookArticleIteratorFactory extends ArticleIteratorTestC
                               af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF),
                               //af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE) 
                               };
-      log.info("actualUrls: " + actualUrls.length);
+      //log.info("actualUrls: " + actualUrls.length);
       for (int i = 0;i< actualUrls.length; i++) {
-        log.info("e_url: " + expectedUrls[i]);
+        //log.info("e_url: " + expectedUrls[i]);
 
-        log.info("url: " + actualUrls[i]);
+        //log.info("url: " + actualUrls[i]);
         //assertEquals(expectedUrls[i], actualUrls[i]);
       }   
     }

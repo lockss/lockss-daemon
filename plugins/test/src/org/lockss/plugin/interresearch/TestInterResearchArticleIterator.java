@@ -117,7 +117,7 @@ public class TestInterResearchArticleIterator extends LockssTestCase {
     int deleted = 0;
     for (CachedUrl cu : AuUtil.getCuIterable(nau)) {
       String url = cu.getUrl();
-      // log.info("url: " + url);
+      // //log.info("url: " + url);
       // delete a few pdfs, and one html page
       if (url.endsWith("m043p001.pdf") || url.endsWith("m047p006.pdf") || url.endsWith("m045p003.pdf")) {
         deleteBlock(cu);

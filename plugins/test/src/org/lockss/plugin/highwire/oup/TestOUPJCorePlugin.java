@@ -203,7 +203,7 @@ http://jinsectscience.oxfordjournals.org/highwire/article_citation_preview/61258
   }
   
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
-    log.info ("shouldCacheTest url: " + url);
+    //log.info ("shouldCacheTest url: " + url);
     assertEquals(shouldCache, au.shouldBeCached(url));
   }
   

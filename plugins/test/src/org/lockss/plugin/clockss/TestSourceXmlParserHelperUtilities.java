@@ -125,7 +125,7 @@ public class TestSourceXmlParserHelperUtilities extends LockssTestCase {
             XPathExpression expr = xpath.compile(xpathPubDateExpression);
             NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
             String nodeValue = SourceXmlParserHelperUtilities.getAuthorNameFromAuthorNameXpathNodeValue(nodes.item(0));
-            log.info("nodeValue = " + nodeValue);
+            //log.info("nodeValue = " + nodeValue);
             assertEquals(nodeValue, "Ofir Artzi");
             assertNotEquals(nodeValue, "Artzi Ofir");
         } catch (XPathExpressionException e) {
@@ -157,7 +157,7 @@ public class TestSourceXmlParserHelperUtilities extends LockssTestCase {
             XPathExpression expr = xpath.compile(xpathPubDateExpression);
             NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
             String nodeValue = SourceXmlParserHelperUtilities.getAuthorNameFromAuthorNameXpathNodeValue(nodes.item(0));
-            log.info("nodeValue = " + nodeValue);
+            //log.info("nodeValue = " + nodeValue);
             assertEquals(nodeValue, "Ofir Artzi");
             assertNotEquals(nodeValue, "Artzi Ofir");
         } catch (XPathExpressionException e) {

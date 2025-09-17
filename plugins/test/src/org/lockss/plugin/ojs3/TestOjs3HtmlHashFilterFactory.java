@@ -427,7 +427,7 @@ public class TestOjs3HtmlHashFilterFactory  extends LockssTestCase {
     assertEquals(getStringfromFilteredInputStream(jatsArticle), jatsArticleFilt);
   }
   public void testRemoveViewCount() throws Exception {
-    log.info(getStringfromFilteredInputStream(articleWithStats));
+    //log.info(getStringfromFilteredInputStream(articleWithStats));
     assertEquals(getStringfromFilteredInputStream(articleWithStats), articleWithoutStats);
   }
 

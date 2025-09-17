@@ -122,7 +122,7 @@ public class TestSageBooksXmlMetadataExtractor extends LockssTestCase {
       ArticleMetadata mdRecord = null;
       while (mdIt.hasNext()) {
         mdRecord = (ArticleMetadata) mdIt.next();
-        log.info(mdRecord.ppString(2));
+        //log.info(mdRecord.ppString(2));
         log.debug3(mdRecord.ppString(2));
         //compareMetadata(mdRecord);
       }

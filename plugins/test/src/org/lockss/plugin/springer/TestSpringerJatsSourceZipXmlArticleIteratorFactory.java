@@ -105,18 +105,18 @@ public class TestSpringerJatsSourceZipXmlArticleIteratorFactory extends ArticleI
 
         for (CachedUrl cu : AuUtil.getCuIterable(au)) {
             String url = cu.getUrl();
-            log.info("url: " + url);
+            //log.info("url: " + url);
             if (url.contains("Article")) {
                 if (url.endsWith(".xml")) {
-                    log.info("Article url = " + url);
+                    //log.info("Article url = " + url);
                 }
                 xmlCount++;
             } else if (url.endsWith(".pdf")) {
                 pdfCount++;
             }
         }
-        log.info("xml count is " + xmlCount);
-        log.info("pdf count is " + pdfCount);
+        //log.info("xml count is " + xmlCount);
+        //log.info("pdf count is " + pdfCount);
 
     }
 

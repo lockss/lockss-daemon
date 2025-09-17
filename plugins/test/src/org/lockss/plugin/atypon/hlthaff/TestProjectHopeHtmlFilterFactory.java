@@ -1428,8 +1428,8 @@ public class TestProjectHopeHtmlFilterFactory extends LockssTestCase {
         new StringInputStream(nameToHash), Constants.ENCODING_UTF_8);
     String inStr = StringUtil.fromInputStream(actIn);
 
-    log.info(inStr);
-    log.info(expectedStr);
+    //log.info(inStr);
+    //log.info(expectedStr);
     assertEquals(expectedStr, inStr);
   }
   

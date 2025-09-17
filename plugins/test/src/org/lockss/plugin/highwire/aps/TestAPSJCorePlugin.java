@@ -205,7 +205,7 @@ http://ajpregu.physiology.org/content/304/1/R23.full.pdf+html
   }
   
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
-    log.info ("shouldCacheTest url: " + url);
+    //log.info ("shouldCacheTest url: " + url);
     assertEquals(shouldCache, au.shouldBeCached(url));
   }
   

@@ -122,7 +122,7 @@ public class TestEuclidXmlMetadataExtractor extends LockssTestCase {
       ArticleMetadata mdRecord = null;
       while (mdIt.hasNext()) {
         mdRecord = (ArticleMetadata) mdIt.next();
-        log.info(mdRecord.ppString(2));
+        //log.info(mdRecord.ppString(2));
         compareMetadata(mdRecord);
         //assertEquals(pdf_url1, mdRecord.get(MetadataField.FIELD_ACCESS_URL));
 
@@ -165,7 +165,7 @@ public class TestEuclidXmlMetadataExtractor extends LockssTestCase {
       ArticleMetadata mdRecord = null;
       while (mdIt.hasNext()) {
         mdRecord = (ArticleMetadata) mdIt.next();
-        log.info(mdRecord.ppString(2));
+        //log.info(mdRecord.ppString(2));
         compareMetadata(mdRecord);
         //assertEquals(pdf_url1, mdRecord.get(MetadataField.FIELD_ACCESS_URL));
 

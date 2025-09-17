@@ -122,7 +122,7 @@ public class TestScienceOpenBookXMLMetadataExtractor extends LockssTestCase {
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    log.info(md.toString());
+    //log.info(md.toString());
     assertEquals("ScienceOpen", md.get(MetadataField.FIELD_PUBLISHER));
   }
 

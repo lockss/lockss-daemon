@@ -114,12 +114,12 @@ public class TestMetadataStringHelperUtilities extends LockssTestCase {
 
 
             if (!publisherNameShortcutMap.containsKey(publisherCleanName) && !publisherNameShortcutMap2016.containsKey(publisherCleanName)) {
-                log.info(String.format("NOT IN ANY: %s -> %s%n", line, cleanupName));
+                //log.info(String.format("NOT IN ANY: %s -> %s%n", line, cleanupName));
             }
 
             // One key found in two places
             if (publisherShortCut2016 != null && publisherShortCut != null && !publisherShortCut2016.equalsIgnoreCase(publisherShortCut)) {
-                log.info(String.format("2016 vs 2019 vs 2020: %s -> %s -> 2016:%s -> %s", line, cleanupName, publisherShortCut2016, publisherShortCut));
+                //log.info(String.format("2016 vs 2019 vs 2020: %s -> %s -> 2016:%s -> %s", line, cleanupName, publisherShortCut2016, publisherShortCut));
             }
 
             if (publisherShortCut2016 != null) {

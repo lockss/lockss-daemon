@@ -67,7 +67,7 @@ public class TestEdituraASEXmlMetadataExtractorFactory extends SourceXmlMetadata
 
     MockArchivalUnit mau = new MockArchivalUnit();
     MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
-    log.info(BaseUrl + Directory + pdf_url);
+    //log.info(BaseUrl + Directory + pdf_url);
     mau.addUrl(BaseUrl + Directory + pdf_url, true, true, xmlHeader);
     mcu.setContent(journalXml);
     mcu.setContentSize(journalXml.length());

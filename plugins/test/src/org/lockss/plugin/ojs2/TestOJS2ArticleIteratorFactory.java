@@ -120,7 +120,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
   
   // Simulated content URLs stored in the UrlCacher object.
   public void storeTestContent(String url) throws Exception {
-    log.info("storeTestContent() url: " + url);
+    //log.info("storeTestContent() url: " + url);
     InputStream input = null;
     CIProperties props = null;
     // issue table of content
@@ -170,7 +170,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
     Iterator<String> itr = articleUrls.iterator();
     while (itr.hasNext()) {
       String url = itr.next();
-      log.info("testCreateArticleFiles() url: " + url);
+      //log.info("testCreateArticleFiles() url: " + url);
       storeTestContent(url);
     }
     
@@ -178,7 +178,7 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
     Iterator<ArticleFiles> it = au.getArticleIterator();
     while (it.hasNext()) {
       ArticleFiles af1 = it.next();
-      log.info("article file af1: " + af1.toString());
+      //log.info("article file af1: " + af1.toString());
       
       // assert article 1
       String[] actualUrls1 = { af1.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
@@ -188,15 +188,15 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
                                af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) };
 
       for (int i = 0;i< actualUrls1.length; i++) {
-        log.info("expected url1: " + expectedUrls1[i]);
-        log.info("  actual url1: " + actualUrls1[i]);
+        //log.info("expected url1: " + expectedUrls1[i]);
+        //log.info("  actual url1: " + actualUrls1[i]);
         assertEquals(expectedUrls1[i], actualUrls1[i]);
       }
       
       // assert article 2 - with frame src
       if (it.hasNext()) {
         ArticleFiles af2 = it.next();
-        log.info("article file af2: " + af2.toString());
+        //log.info("article file af2: " + af2.toString());
 
         String[] actualUrls2 = { af2.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
                                  af2.getRoleUrl(ArticleFiles.ROLE_ARTICLE_METADATA),
@@ -205,8 +205,8 @@ public class TestOJS2ArticleIteratorFactory extends ArticleIteratorTestCase {
                                  af2.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) };
 
         for (int i = 0;i< actualUrls2.length; i++) {
-          log.info("expected url2: " + expectedUrls2[i]);
-          log.info("  actual url2: " + actualUrls2[i]);
+          //log.info("expected url2: " + expectedUrls2[i]);
+          //log.info("  actual url2: " + actualUrls2[i]);
           assertEquals(expectedUrls2[i], actualUrls2[i]);
         }
       }

@@ -94,13 +94,13 @@ public class TestACMJatsXmlXPathMetadataExtractor extends SourceXmlMetadataExtra
             String url = cu.getUrl();
             // acm  conferences is using BITS format
             if ((url != null) && url.indexOf("conferences") > -1) {
-                log.info("Setup Bits schema helper for url " + url);
+                //log.info("Setup Bits schema helper for url " + url);
                 if (BitsPublishingHelper == null) {
                     BitsPublishingHelper = new ACMBitsPublishingSchemaHelper();
                 }
                 return BitsPublishingHelper;
             } else {
-                log.info("Setup Jats schema helper for url " + url);
+                //log.info("Setup Jats schema helper for url " + url);
                 // acm other material is using JATS format
                 if (JatsPublishingHelper == null) {
                     JatsPublishingHelper = new JatsPublishingSchemaHelper();

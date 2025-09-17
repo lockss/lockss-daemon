@@ -153,7 +153,7 @@ public class TestOjs3TocParsingArticleIteratorFactory extends ArticleIteratorTes
     int count = 0;
     while (it.hasNext()) {
       ArticleFiles af1 = it.next();
-      log.info("article file af1: " + af1.toString());
+      //log.info("article file af1: " + af1.toString());
       count+=1;
       // assert article 1
       String[] actualUrls1 = { af1.getRoleUrl(ArticleFiles.ROLE_ABSTRACT),
@@ -163,8 +163,8 @@ public class TestOjs3TocParsingArticleIteratorFactory extends ArticleIteratorTes
                                af1.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_HTML) };
 
       for (int i = 0;i< actualUrls1.length; i++) {
-        log.info("expected url1: " + expectedUrls1[i]);
-        log.info("  actual url1: " + actualUrls1[i]);
+        //log.info("expected url1: " + expectedUrls1[i]);
+        //log.info("  actual url1: " + actualUrls1[i]);
 
         // "scholarworks.iu.edu" has speical case, which only has html page, no other aspects of article
         if (!BASE_URL.contains("scholarworks.iu.edu")) {
@@ -292,7 +292,7 @@ public class TestOjs3TocParsingArticleIteratorFactory extends ArticleIteratorTes
 
     // Store test cases - articleUrls
     for (String url : articleUrls) {
-      log.info("testCreateArticleFiles() url: " + url);
+      //log.info("testCreateArticleFiles() url: " + url);
       storeTestContent(url, htmlString);
     }
   }

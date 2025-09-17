@@ -256,7 +256,7 @@ public class TestACSESSJournalsArticleIteratorFactory
     int deletedFileCount = 0; 
     for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
-        log.info("au cached url: " + url);
+        //log.info("au cached url: " + url);
         if ((url.contains("/articles/") && url.endsWith("1")) 
             || (url.contains("/pdfs/") && url.endsWith("2"))) {
           deleteBlock(cu);
@@ -277,12 +277,12 @@ public class TestACSESSJournalsArticleIteratorFactory
     int countRisOnly = 0;
     while (it.hasNext()) {
       ArticleFiles af = it.next();
-      log.info(af.toString());
+      //log.info(af.toString());
       CachedUrl cu = af.getFullTextCu();
       String url = cu.getUrl();
       assertNotNull(cu);
       String contentType = cu.getContentType();
-      log.info("count " + count + " url " + url + " " + contentType);
+      //log.info("count " + count + " url " + url + " " + contentType);
       count++;
       url = af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_HTML);
       if (!StringUtil.isNullString(url) && url.contains("/articles/")) {
@@ -306,7 +306,7 @@ public class TestACSESSJournalsArticleIteratorFactory
       }    
     }
     
-    log.info("Full text Article count is " + count);
+    //log.info("Full text Article count is " + count);
     assertEquals(EXP_FULL_TEXT_COUNT, count);
     assertEquals(EXP_HTML_COUNT, countHtmlOnly);
     assertEquals(EXP_PDF_COUNT, countPdfOnly);
@@ -316,7 +316,7 @@ public class TestACSESSJournalsArticleIteratorFactory
    }
  
   private void deleteBlock(CachedUrl cu) throws IOException {
-    log.info("deleting " + cu.getUrl());
+    //log.info("deleting " + cu.getUrl());
     cu.delete();
   }
 

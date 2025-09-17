@@ -133,7 +133,7 @@ public class TestMetapressArticleIteratorFactory extends ArticleIteratorTestCase
     // convert 'code' tp upper case.
     // citation ris: http://uksg.metapress.com/export.mpx?code=823XP7LGUBLQAH49&mode=ris";
     String citStr = mat.replaceFirst(String.format("/export.mpx?code=%s&mode=ris", mat.group(1).toUpperCase()));
-    log.info("citStr: " + citStr);
+    //log.info("citStr: " + citStr);
     assertEquals(EXPECTED_CITATION_RIS_URL, citStr);
    }
   

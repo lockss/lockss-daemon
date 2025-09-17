@@ -45,11 +45,11 @@ public class TestAslhaSchemaHelper extends LockssTestCase {
             NodeList nodes = (NodeList) expr.evaluate(document, XPathConstants.NODESET);
             count = nodes.getLength();
 
-            log.info("count === " + Integer.toString(count));
+            //log.info("count === " + Integer.toString(count));
 
             for (int i = 0; i < count ; i++) {
                 String value = nodes.item(i).getTextContent();
-                log.info("value === " + value);
+                //log.info("value === " + value);
                 assertNotNull(value);
             }
 

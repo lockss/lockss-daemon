@@ -160,7 +160,7 @@ public class TestDigitalCommonsRepositoryArticleIteratorFactory
     int deletedFileCount = 0; 
     for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
-        log.info("au cached url: " + url);
+        //log.info("au cached url: " + url);
         if (url.contains("article=002") || url.contains("article=004")) {
           deleteBlock(cu);
           ++deletedFileCount;
@@ -177,13 +177,12 @@ public class TestDigitalCommonsRepositoryArticleIteratorFactory
     // left for volume 2
     while (it.hasNext()) {
       ArticleFiles af = it.next();
-      log.info(af.toString());
+      //log.info(af.toString());
       CachedUrl cu = af.getFullTextCu();
       String url = cu.getUrl();
       assertNotNull(cu);
       String contentType = cu.getContentType();
-      log.info("count full text " + countFullText + " url " 
-               + url + " " + contentType);
+      //log.info("count full text " + countFullText + " url " + url + " " + contentType);
       countFullText++;
       url = af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF);
       if (!StringUtil.isNullString(url)) {

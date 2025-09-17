@@ -58,8 +58,8 @@ public class TestLopezIborXmlMetadataExtractorFactory extends SourceXmlMetadataE
         String xml_url = BaseUrl + Directory + "/" + fname;
         CIProperties xmlHeader = new CIProperties();
         xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
-        log.info("XML URL is: " + xml_url);
-        log.info("PDF URL is: " + pdfUrl1);
+        //log.info("XML URL is: " + xml_url);
+        //log.info("PDF URL is: " + pdfUrl1);
         MockArchivalUnit mau = new MockArchivalUnit();
         MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
         mcu.setProperty(CachedUrl.PROPERTY_CONTENT_ENCODING, "UTF-8");

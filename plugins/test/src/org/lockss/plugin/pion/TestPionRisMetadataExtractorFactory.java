@@ -194,12 +194,12 @@ public class TestPionRisMetadataExtractorFactory extends LockssTestCase {
     MockArchivalUnit mau; // source au
     mau = new MockArchivalUnit();
     mau.setConfiguration(pionAuConfig());
-    log.info("testing Real RIS File");
+    //log.info("testing Real RIS File");
     try {
       file_input = getResourceAsStream(realRISFile);
       //String string_input = StringUtil.fromInputStream(file_input);
       String string_input = StringUtil.fromReader(new InputStreamReader(file_input, Constants.ENCODING_UTF_8));
- log.info("string: "+string_input);     
+ //log.info("string: "+string_input);     
       IOUtil.safeClose(file_input);
 
       String ris_url = BASE_URL + realRISFile;
@@ -234,8 +234,8 @@ public class TestPionRisMetadataExtractorFactory extends LockssTestCase {
       ArticleMetadata mdRecord = null;
       while (mdIt.hasNext()) {
         mdRecord = (ArticleMetadata) mdIt.next();
-log.info("mdRecord: "+mdRecord.toString());  
-log.info("pub title: " + mdRecord.get(MetadataField.FIELD_ARTICLE_TITLE));
+//log.info("mdRecord: "+mdRecord.toString());  
+//log.info("pub title: " + mdRecord.get(MetadataField.FIELD_ARTICLE_TITLE));
 
       }
     }finally {

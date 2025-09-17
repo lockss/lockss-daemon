@@ -184,7 +184,7 @@ public class TestPeerJArticleIteratorFactory
     int deletedFileCount = 0; 
     for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
-        log.info("au cached url: " + url);
+        //log.info("au cached url: " + url);
         if (url.contains(variantBaseConstant) 
             && (url.endsWith("1.xml") || url.endsWith("2.pdf"))) {
           deleteBlock(cu);
@@ -209,12 +209,12 @@ public class TestPeerJArticleIteratorFactory
     
     while (it.hasNext()) {
       ArticleFiles af = it.next();
-      log.info(af.toString());
+      //log.info(af.toString());
       CachedUrl cu = af.getFullTextCu();
       String url = cu.getUrl();
       assertNotNull(cu);
       String contentType = cu.getContentType();
-      log.info("count " + count + " url " + url + " " + contentType);
+      //log.info("count " + count + " url " + url + " " + contentType);
       count++;
       url = af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF);
       if (!StringUtil.isNullString(url) && url.endsWith(".pdf")) {
@@ -225,9 +225,9 @@ public class TestPeerJArticleIteratorFactory
         ++countXmlOnly;
       }
       url = af.getRoleUrl(ArticleFiles.ROLE_ABSTRACT);
-      log.info("abs url: " + url);
+      //log.info("abs url: " + url);
       if (!StringUtil.isNullString(url) && url.matches(".*/\\d+$")) {
-        log.info("abs url2: " + url);
+        //log.info("abs url2: " + url);
         ++countAbsOnly;
       }     
       if (!StringUtil.isNullString(
@@ -252,7 +252,7 @@ public class TestPeerJArticleIteratorFactory
       }
     }
     
-    log.info("Full text Article count is " + count);
+    //log.info("Full text Article count is " + count);
     assertEquals(EXP_FULL_TEXT_COUNT, count);
     assertEquals(EXP_PDF_COUNT, countPdfOnly);
     assertEquals(EXP_XML_COUNT, countXmlOnly);
@@ -264,7 +264,7 @@ public class TestPeerJArticleIteratorFactory
    }
  
   private void deleteBlock(CachedUrl cu) throws IOException {
-    log.info("deleting " + cu.getUrl());
+    //log.info("deleting " + cu.getUrl());
     cu.delete();
   }
   

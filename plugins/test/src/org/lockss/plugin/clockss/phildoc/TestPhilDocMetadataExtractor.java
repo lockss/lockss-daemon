@@ -159,7 +159,7 @@ public class TestPhilDocMetadataExtractor extends LockssTestCase {
       assertEquals("Second Title Goes Here", AM.get(MetadataField.FIELD_ARTICLE_TITLE));
     } else {
       //fail
-      log.info("The filename didn't match our test cases: " + fname);
+      //log.info("The filename didn't match our test cases: " + fname);
       assertFalse(true);
     }
   }

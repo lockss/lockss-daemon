@@ -195,7 +195,7 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
     int countMetadata = 0;
     while (it.hasNext()) {
       ArticleFiles af = it.next();
-      log.info(af.toString());
+      //log.info(af.toString());
       count ++;
       CachedUrl cu = af.getFullTextCu();
       if ( cu != null) {
@@ -220,7 +220,7 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
 }
 
 private void deleteBlock(CachedUrl cu) throws IOException {
-  log.info("deleting " + cu.getUrl());
+  //log.info("deleting " + cu.getUrl());
     cu.delete();
 }
 }

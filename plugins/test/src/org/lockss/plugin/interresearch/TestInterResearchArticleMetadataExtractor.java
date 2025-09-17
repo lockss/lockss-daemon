@@ -105,7 +105,7 @@ public class TestInterResearchArticleMetadataExtractor extends LockssTestCase {
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    log.info(md.toString());
+    //log.info(md.toString());
     assertEquals(goodPublisher, md.get(MetadataField.FIELD_PUBLISHER));
     assertEquals(goodTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));

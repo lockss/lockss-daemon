@@ -225,7 +225,7 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
 
     for ( Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any()); it.hasNext(); ) {
       ArticleFiles af = it.next();
-      log.info("next AF: " + af.getFullTextUrl());
+      //log.info("next AF: " + af.getFullTextUrl());
       ArticleFiles exp= fullUrlToAF.get(af.getFullTextUrl());
       assertNotNull(exp);
       compareArticleFiles(exp, af);
@@ -239,15 +239,15 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
 
   private void compareArticleFiles(ArticleFiles exp, ArticleFiles act) {
     /*
-    log.info("CompareArticleFiles: " );
-    log.info("checking html:");
-    log.info("expected: "+exp.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_HTML));
-    log.info("actual: "+act.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_HTML));
+    //log.info("CompareArticleFiles: " );
+    //log.info("checking html:");
+    //log.info("expected: "+exp.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_HTML));
+    //log.info("actual: "+act.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_HTML));
 
     
-    log.info("checking pdf:");
-    log.info("expected: "+exp.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_PDF));
-    log.info("actual: "+act.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_PDF));
+    //log.info("checking pdf:");
+    //log.info("expected: "+exp.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_PDF));
+    //log.info("actual: "+act.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_PDF));
     */
 
     assertEquals("ROLE_FULL_TEXT_PDF: ",
@@ -257,14 +257,14 @@ public class TestMassachusettsMedicalSocietyArticleIteratorFactory extends Artic
         exp.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_HTML),
         act.getRoleAsString(ArticleFiles.ROLE_FULL_TEXT_HTML));
 /*
-    log.info("checking ris:");
+    //log.info("checking ris:");
 
-    log.info("ris expected: "+exp.getRoleAsString(ArticleFiles.ROLE_CITATION_RIS));
-    log.info("ris actual: "+act.getRoleAsString(ArticleFiles.ROLE_CITATION_RIS));
+    //log.info("ris expected: "+exp.getRoleAsString(ArticleFiles.ROLE_CITATION_RIS));
+    //log.info("ris actual: "+act.getRoleAsString(ArticleFiles.ROLE_CITATION_RIS));
    
-    log.info("checking supplementary:");
-    log.info("expected: "+exp.getRoleAsString(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS));
-    log.info("actual: "+act.getRoleAsString(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS));
+    //log.info("checking supplementary:");
+    //log.info("expected: "+exp.getRoleAsString(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS));
+    //log.info("actual: "+act.getRoleAsString(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS));
     */
     assertEquals("ROLE_CITATION: ",
         exp.getRoleAsString(ArticleFiles.ROLE_CITATION),

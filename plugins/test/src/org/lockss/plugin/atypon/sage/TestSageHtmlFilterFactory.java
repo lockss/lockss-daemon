@@ -123,8 +123,8 @@ public class TestSageHtmlFilterFactory extends LockssTestCase {
         new StringInputStream(nameToHash), Constants.ENCODING_UTF_8);
     String filterdStr = StringUtil.fromInputStream(actIn);
 
-    log.info("filteredStr = " + filterdStr);
-    log.info("expectedStr = " + expectedStr);
+    //log.info("filteredStr = " + filterdStr);
+    //log.info("expectedStr = " + expectedStr);
 
     assertTrue(filterdStr.equals(expectedStr));
   }

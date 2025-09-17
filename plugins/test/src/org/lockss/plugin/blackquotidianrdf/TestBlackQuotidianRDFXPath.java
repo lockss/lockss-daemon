@@ -62,7 +62,7 @@ public class TestBlackQuotidianRDFXPath extends LockssTestCase {
 
             NodeList nodes = (NodeList) expr.evaluate(document, XPathConstants.NODESET);
             count = nodes.getLength();
-            log.info("count ======" + count);
+            //log.info("count ======" + count);
             //assertNotEquals(nodes.getLength(), 0);
 
             for (int i = 0; i < count ; i++) {
@@ -103,10 +103,10 @@ public class TestBlackQuotidianRDFXPath extends LockssTestCase {
 
                     if ("LastName".equals(partName)) {
                         surname = partNode.getTextContent();
-                        log.info("surname is " + surname);
+                        //log.info("surname is " + surname);
                     }  else if ("ForeName".equals(partName)) {
                         firstname = partNode.getTextContent();
-                        log.info("firstname is " + firstname);
+                        //log.info("firstname is " + firstname);
                     }
                 }
                 StringBuilder valbuilder = new StringBuilder();
@@ -115,7 +115,7 @@ public class TestBlackQuotidianRDFXPath extends LockssTestCase {
                     if (!StringUtils.isBlank(surname)) {
                         valbuilder.append("  " + surname);
                     }
-                    log.info("author name is " + valbuilder.toString());
+                    //log.info("author name is " + valbuilder.toString());
                 }
                 assertNotNull(valbuilder.toString());
             }
@@ -145,15 +145,15 @@ public class TestBlackQuotidianRDFXPath extends LockssTestCase {
             count = nodes.getLength();
             assertNotEquals(nodes.getLength(), 0);
 
-            log.info("Expression is " + xpathExpression + ", count ======  " + count);
+            //log.info("Expression is " + xpathExpression + ", count ======  " + count);
 
             for (int i = 0; i < count ; i++) {
                 String value = nodes.item(i).getTextContent();
                 Matcher iMat = PAGINATION_PATTER_PATTERN .matcher(value);
                 if(!iMat.find()){ //use find not match to ignore trailing stuff
-                    log.info("Acta DerMato Venereologica pagination no match");
+                    //log.info("Acta DerMato Venereologica pagination no match");
                 } else {
-                    log.info("start_page = " + iMat.group(1) + ", end_page = " + iMat.group(3));
+                    //log.info("start_page = " + iMat.group(1) + ", end_page = " + iMat.group(3));
 
                 }
                 assertNotNull(value);
@@ -166,14 +166,14 @@ public class TestBlackQuotidianRDFXPath extends LockssTestCase {
 
     private void doSomething(Node node) {
         // do something with the current node instead of System.out
-        log.info("node: " + node.getNodeName());
+        //log.info("node: " + node.getNodeName());
 
         NodeList nodeList = node.getChildNodes();
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node currentNode = nodeList.item(i);
             if (currentNode.getNodeType() == Node.ELEMENT_NODE) {
                 //calls this method for all the children which is Element
-                log.info("node -------- Element_Node: " + node.getNodeName());
+                //log.info("node -------- Element_Node: " + node.getNodeName());
                 doSomething(currentNode);
             }
         }

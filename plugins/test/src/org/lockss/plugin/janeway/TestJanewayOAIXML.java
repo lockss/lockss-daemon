@@ -75,9 +75,9 @@ public class TestJanewayOAIXML extends LockssTestCase {
             } catch (XmlReaderException e) {
                 throw new RuntimeException(e);
             }
-            log.info(record.getMetadata().getValue().searcher().findOne("dc.title"));
+            //log.info(record.getMetadata().getValue().searcher().findOne("dc.title"));
         } else {
-            log.info("Resource not found");
+            //log.info("Resource not found");
         }
     }
 
@@ -98,9 +98,9 @@ public class TestJanewayOAIXML extends LockssTestCase {
             } catch (XmlReaderException e) {
                 throw new RuntimeException(e);
             }
-            log.info(record.getMetadata().getValue().searcher().findOne("dc.title"));
+            //log.info(record.getMetadata().getValue().searcher().findOne("dc.title"));
         } else {
-            log.info("Resource not found");
+            //log.info("Resource not found");
         }
     }
 
@@ -124,9 +124,9 @@ public class TestJanewayOAIXML extends LockssTestCase {
             } catch (XmlReaderException e) {
                 throw new RuntimeException(e);
             }
-            log.info(record.getMetadata().getValue().searcher().findOne("dc.title"));
+            //log.info(record.getMetadata().getValue().searcher().findOne("dc.title"));
         } else {
-            log.info("Resource not found");
+            //log.info("Resource not found");
         }
     }
 

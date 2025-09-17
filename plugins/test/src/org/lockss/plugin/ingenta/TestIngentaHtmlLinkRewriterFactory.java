@@ -307,7 +307,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
         "text/html", mockAu, in, "UTF-8", 
         baseArtUrl, xfm);
     String fout = StringUtil.fromReader(new InputStreamReader(newIn, "UTF-8"));
-    log.info(fout);
+    //log.info(fout);
     assertEquals(testNewLinkAttrOutput, fout);
   }
 
@@ -329,7 +329,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
         "text/html", mockAu, in, "UTF-8", 
         baseArtUrl, xfm);
     String fout = StringUtil.fromReader(new InputStreamReader(newIn, "UTF-8"));
-    log.info(fout);
+    //log.info(fout);
     assertEquals(testOnClickLinkOutput, fout);
   }
   
@@ -353,7 +353,7 @@ public class TestIngentaHtmlLinkRewriterFactory extends LockssTestCase {
         "text/html", mockAu, in, "UTF-8", 
         baseChaptUrl, xfm);
     String fout = StringUtil.fromReader(new InputStreamReader(newIn, "UTF-8"));
-    log.info(fout);
+    //log.info(fout);
     assertEquals(testOnClickBookLinkOutput, fout);
   }
 

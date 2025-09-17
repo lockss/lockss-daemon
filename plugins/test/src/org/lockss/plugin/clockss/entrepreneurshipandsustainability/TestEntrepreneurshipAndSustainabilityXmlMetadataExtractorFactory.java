@@ -60,8 +60,8 @@ public class TestEntrepreneurshipAndSustainabilityXmlMetadataExtractorFactory  e
         assertNotNull(journalXml);
 
         String xml_url = BaseUrl + Directory + "/" + fname;
-        log.info("xmlUrl is " + xml_url);
-        log.info("pdfUrl is " + pdfUrl1);
+        //log.info("xmlUrl is " + xml_url);
+        //log.info("pdfUrl is " + pdfUrl1);
         CIProperties xmlHeader = new CIProperties();
         xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
 

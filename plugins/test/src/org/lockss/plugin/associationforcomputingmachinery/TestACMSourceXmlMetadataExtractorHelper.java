@@ -754,8 +754,8 @@ public class TestACMSourceXmlMetadataExtractorHelper
       //assertEquals(HARDWIRED_PUBLISHER, md.get(MetadataField.FIELD_PUBLISHER));
       assertEquals(GOOD_TITLE, md.get(MetadataField.FIELD_ARTICLE_TITLE));
       //use FIELD_JOURNAL_TITLE for content5/6 until they adopt the latest daemon
-log.info("1: "+GOOD_PROCEEDINGS_TITLE);
-log.info("2: "+md.get(MetadataField.FIELD_JOURNAL_TITLE));
+//log.info("1: "+GOOD_PROCEEDINGS_TITLE);
+//log.info("2: "+md.get(MetadataField.FIELD_JOURNAL_TITLE));
       assertEquals(GOOD_PROCEEDINGS_TITLE, md.get(MetadataField.FIELD_JOURNAL_TITLE));
       //assertEquals(GOOD_JOURNAL_NAME, md.get(MetadataField.FIELD_PUBLICATION_TITLE));
       assertEquals("FOO", md.get(MetadataField.FIELD_PROPRIETARY_IDENTIFIER));
@@ -792,8 +792,8 @@ log.info("2: "+md.get(MetadataField.FIELD_JOURNAL_TITLE));
       ArticleMetadata md = mdlist.get(0);
       assertNotNull(md);
 
-      log.info(md.getList(MetadataField.FIELD_AUTHOR).toString());
-      log.info(md.get(MetadataField.FIELD_JOURNAL_TITLE));
+      //log.info(md.getList(MetadataField.FIELD_AUTHOR).toString());
+      //log.info(md.get(MetadataField.FIELD_JOURNAL_TITLE));
 
     } finally {
       //IOUtil.safeClose(file_input);

@@ -222,26 +222,26 @@ public class TestAaasHtmlHashFilterFactory extends LockssTestCase {
 
   public void testCardFiltering() throws Exception {
     String filtered1 = filterString(toc_div_card_footer);
-    log.info(filtered1);
+    //log.info(filtered1);
     assertEquals(filterString(toc_div_card_footer2), filtered1);
   }
 
   public void testTocPodcastFiltering() throws Exception {
     String filtered1 = filterString(toc_podcast);
-    log.info(filtered1);
+    //log.info(filtered1);
     assertEquals(filtered1, "");
   }
 
   public void testArticleRecFiltering() throws Exception {
     String filtered1 = filterString(article_show_recommend1);
-    log.info(filtered1);
+    //log.info(filtered1);
     assertEquals(filtered1, " ");
     assertEquals(filterString(article_show_recommend2), filtered1);
   }
 
   public void testArticleAsideFiltering() throws Exception {
     String filtered1 = filterString(article_cnews_article_aside1);
-    log.info(filtered1);
+    //log.info(filtered1);
     assertEquals(filtered1, " ");
     assertEquals(filterString(article_cnews_article_aside2), filtered1);
   }

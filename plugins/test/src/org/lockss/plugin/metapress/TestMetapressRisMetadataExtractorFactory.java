@@ -163,7 +163,7 @@ public class TestMetapressRisMetadataExtractorFactory extends LockssTestCase {
    */
   public void testExtractFromGoodContent() throws Exception {
 	  String goodContent = createGoodContent();
-	  log.info(goodContent);
+	  //log.info(goodContent);
     String url = "http://inderscience.metapress.com/content/kv824m8x38336011";
     MockCachedUrl cu = new MockCachedUrl(url, bau);
     cu.setContent(goodContent);

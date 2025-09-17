@@ -96,10 +96,10 @@ public class TestActaDermatoVenereologicaNLMHelper extends LockssTestCase {
 
                     if ("LastName".equals(partName)) {
                         surname = partNode.getTextContent();
-                        log.info("surname is " + surname);
+                        //log.info("surname is " + surname);
                     }  else if ("ForeName".equals(partName)) {
                         firstname = partNode.getTextContent();
-                        log.info("firstname is " + firstname);
+                        //log.info("firstname is " + firstname);
                     }
                 }
                 StringBuilder valbuilder = new StringBuilder();
@@ -108,7 +108,7 @@ public class TestActaDermatoVenereologicaNLMHelper extends LockssTestCase {
                     if (!StringUtils.isBlank(surname)) {
                         valbuilder.append("  " + surname);
                     }
-                    log.info("author name is " + valbuilder.toString());
+                    //log.info("author name is " + valbuilder.toString());
                 }
                 assertNotNull(valbuilder.toString());
             }
@@ -138,15 +138,15 @@ public class TestActaDermatoVenereologicaNLMHelper extends LockssTestCase {
             count = nodes.getLength();
             assertNotEquals(nodes.getLength(), 0);
 
-            log.info("Expression is " + xpathExpression + ", count ======  " + count);
+            //log.info("Expression is " + xpathExpression + ", count ======  " + count);
 
             for (int i = 0; i < count ; i++) {
                 String value = nodes.item(i).getTextContent();
                 Matcher iMat = PAGINATION_PATTER_PATTERN .matcher(value);
                 if(!iMat.find()){ //use find not match to ignore trailing stuff
-                    log.info("Acta DerMato Venereologica pagination no match");
+                    //log.info("Acta DerMato Venereologica pagination no match");
                 } else {
-                    log.info("start_page = " + iMat.group(1) + ", end_page = " + iMat.group(3));
+                    //log.info("start_page = " + iMat.group(1) + ", end_page = " + iMat.group(3));
 
                 }
                 assertNotNull(value);

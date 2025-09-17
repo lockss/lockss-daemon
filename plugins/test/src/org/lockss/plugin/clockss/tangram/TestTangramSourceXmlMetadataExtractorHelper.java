@@ -288,9 +288,9 @@ public class TestTangramSourceXmlMetadataExtractorHelper
       ArticleMetadata md = mdlist.get(0);
       assertNotNull(md);
 
-      log.info(md.get(MetadataField.FIELD_DATE));
-      log.info("from cooked: "+md.get(MetadataField.FIELD_PUBLICATION_TITLE));
-      log.info("from metadata: "+GOOD_BOOK_TITLE+":"+GOOD_SUBTITLE);
+      //log.info(md.get(MetadataField.FIELD_DATE));
+      //log.info("from cooked: "+md.get(MetadataField.FIELD_PUBLICATION_TITLE));
+      //log.info("from metadata: "+GOOD_BOOK_TITLE+":"+GOOD_SUBTITLE);
 
 
       assertEquals(GOOD_PUBYEAR, md.get(MetadataField.FIELD_DATE));

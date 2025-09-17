@@ -336,9 +336,9 @@ public class TestJasperJsonMetadataExtractorFactory extends LockssTestCase {
     String updated = rootNode.get("last_updated").asText(null);
     String created = rootNode.get("created_date").asText(null);
     String id = rootNode.get("id").asText(null);
-    log.info(updated);
-    log.info(created);
-    log.info(id);
+    //log.info(updated);
+    //log.info(created);
+    //log.info(id);
 
     JsonNode bibNode = rootNode.get("bibjson");
     if (!bibNode.isMissingNode()) {
@@ -348,12 +348,12 @@ public class TestJasperJsonMetadataExtractorFactory extends LockssTestCase {
       int start_page = bibNode.get("start_page").asInt(-1);
       int end_page = bibNode.get("end_page").asInt(-1);
       String abs = bibNode.get("abstract").asText(null);
-      log.info(" " +title );
-      log.info(" " +year );
-      log.info(" " +month );
-      log.info(" " +start_page );
-      log.info(" " +end_page );
-      log.info(" " +abs );
+      //log.info(" " +title );
+      //log.info(" " +year );
+      //log.info(" " +month );
+      //log.info(" " +start_page );
+      //log.info(" " +end_page );
+      //log.info(" " +abs );
       JsonNode journalNode = bibNode.get("journal");
       if (!journalNode.isMissingNode()) {
         int volume = journalNode.get("volume").asInt(-1);
@@ -363,13 +363,13 @@ public class TestJasperJsonMetadataExtractorFactory extends LockssTestCase {
         String country = journalNode.get("country").asText(null);
         String langCode = journalNode.get("language").get(0).asText(null);
         String issnNode = journalNode.get("issns").get(0).asText(null);
-        log.info(" " +volume );
-        log.info(" " +number );
-        log.info(" " +publisherID );
-        log.info(" " +journalTitle );
-        log.info(" " +country );
-        log.info(" " +langCode );
-        log.info(" " +issnNode );
+        //log.info(" " +volume );
+        //log.info(" " +number );
+        //log.info(" " +publisherID );
+        //log.info(" " +journalTitle );
+        //log.info(" " +country );
+        //log.info(" " +langCode );
+        //log.info(" " +issnNode );
       }
       JsonNode identifierNode = bibNode.get("identifier");
       if (!identifierNode.isMissingNode() && identifierNode.isArray()) {
@@ -379,10 +379,10 @@ public class TestJasperJsonMetadataExtractorFactory extends LockssTestCase {
           String type = ident.get("type").asText(null);
           if (type.equals("doi")) {
             String doi = ident.get("id").asText(null);
-            log.info(" " +doi );
+            //log.info(" " +doi );
           } else if (type.equals("eissn")) {
             String eissn = ident.get("id").asText(null);
-            log.info(" " +eissn );
+            //log.info(" " +eissn );
           }
         }
       }
@@ -394,9 +394,9 @@ public class TestJasperJsonMetadataExtractorFactory extends LockssTestCase {
         for (int i = 1; keywordIter.hasNext(); ++i) {
           kw = keywordIter.next();
           keywordBuilder.append(kw.asText(""));
-          log.info("   -" +kw );
+          //log.info("   -" +kw );
         }
-        log.info("   -" +keywordBuilder.toString() );
+        //log.info("   -" +keywordBuilder.toString() );
       }
       JsonNode authorsNode = bibNode.get("author");
       if (!authorsNode.isMissingNode() && authorsNode.isArray()) {

@@ -70,7 +70,7 @@ public class TestHindawi2020HttpResponseHandler extends LockssTestCase {
     assertClass(CacheException.RetryableException.class, exc);
 
     conn.setURL(data_url);
-    log.info(" " + data_url.contains("'data:"));
+    //log.info(" " + data_url.contains("'data:"));
     exc = ((HttpResultMap)plugin.getCacheResultMap()).mapException(au, conn, 500, "foo");
     assertTrue(exc instanceof CacheException.NoRetryDeadLinkException);
 

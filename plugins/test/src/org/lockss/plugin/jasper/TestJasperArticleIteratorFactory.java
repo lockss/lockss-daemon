@@ -110,7 +110,7 @@ public class TestJasperArticleIteratorFactory extends ArticleIteratorTestCase {
   public void testUrlsWithPrefixes() throws Exception {
     SubTreeArticleIterator artIter = createSubTreeIter();
     Pattern pat = getPattern(artIter);
-    log.info("Pattern is: " + pat.toString());
+    //log.info("Pattern is: " + pat.toString());
     String targzPath = ITEM + "/rama-2021-06-25-11-25-53.tar.gz!";
     String metadataPath = "/2051-5960/00003741594643f4996e2555a01e03c7/data/metadata/metadata.json";
     String pdfPath = "/2051-5960/00003741594643f4996e2555a01e03c7/data/ArticleFoo.pdf";
@@ -144,7 +144,7 @@ public class TestJasperArticleIteratorFactory extends ArticleIteratorTestCase {
 
     for (CachedUrl cu : AuUtil.getCuIterable(au)) {
       String url = cu.getUrl();
-      log.info(url);
+      //log.info(url);
     }
 
     Iterator<ArticleFiles> it = au.getArticleIterator(MetadataTarget.Any());
@@ -153,7 +153,7 @@ public class TestJasperArticleIteratorFactory extends ArticleIteratorTestCase {
     int countMetadata = 0;
     while (it.hasNext()) {
       ArticleFiles af = it.next();
-      log.info(af.toString());
+      //log.info(af.toString());
       count ++;
       //log.info(af.toString());
       CachedUrl cu = af.getFullTextCu();

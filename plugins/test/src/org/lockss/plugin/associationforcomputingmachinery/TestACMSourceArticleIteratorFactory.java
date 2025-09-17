@@ -133,11 +133,11 @@ public class TestACMSourceArticleIteratorFactory extends ArticleIteratorTestCase
     int pdfCount = 0;
     for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
-        log.info("url: " + url);
+        //log.info("url: " + url);
         if (url.contains("/NEW-MAG-QUEUE-V9I7-2001562/")) {
           if (url.endsWith(".xml")) {
             //verifyArticleFile(cu);
-            log.info(url);
+            //log.info(url);
           }
           xmlCount++;
         } else if (url.endsWith(".pdf")) {
@@ -145,8 +145,8 @@ public class TestACMSourceArticleIteratorFactory extends ArticleIteratorTestCase
         }
     }
     //log.info("Article count is " + count);
-    log.info("xml count is " + xmlCount);
-    log.info("pdf count is " + pdfCount);
+    //log.info("xml count is " + xmlCount);
+    //log.info("pdf count is " + pdfCount);
 
   }                     
 

@@ -159,7 +159,7 @@ public class TestJstorArticleIteratorFactory extends ArticleIteratorTestCase {
     while (it.hasNext()) {
       ArticleFiles af = it.next();
       count ++;
-      log.info(af.toString());
+      //log.info(af.toString());
       CachedUrl cu = af.getFullTextCu();
       if ( cu != null) {
         ++countFullText;

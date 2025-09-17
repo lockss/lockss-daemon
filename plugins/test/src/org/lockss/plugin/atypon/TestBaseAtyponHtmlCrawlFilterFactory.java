@@ -477,7 +477,7 @@ public class TestBaseAtyponHtmlCrawlFilterFactory extends LockssTestCase {
     inStream = fact.createFilteredInputStream(mau,
         new StringInputStream(glma20581),
         Constants.DEFAULT_ENCODING);
-//    log.info(StringUtil.fromInputStream(inStream));
+//    //log.info(StringUtil.fromInputStream(inStream));
     assertEquals(filteredGlma20581, StringUtil.fromInputStream(inStream));
 
     InputStream inStream2;

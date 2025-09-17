@@ -356,7 +356,7 @@ public class TestClockssELifeDrupalPlugin extends LockssTestCase {
   }
   
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
-    log.info ("shouldCacheTest url: " + url);
+    //log.info ("shouldCacheTest url: " + url);
     assertEquals(shouldCache, au.shouldBeCached(url));
   }
   

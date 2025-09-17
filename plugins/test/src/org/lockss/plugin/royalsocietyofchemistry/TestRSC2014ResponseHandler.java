@@ -181,7 +181,7 @@ public class TestRSC2014ResponseHandler extends LockssTestCase {
       contentValidator.validate(cu);
       fail("Bad cu should throw exception");
     }catch (Exception e) {
-      log.info(e.toString());
+      //log.info(e.toString());
       // okay, fall-thru - we expected this to happen
       assertClass(ContentValidationException.class, e);
     }

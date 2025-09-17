@@ -444,7 +444,7 @@ public class TestAIPJatsSourceXmlMetadataExtractorHelper
       ArticleMetadata mdRecord = null;
       while (mdIt.hasNext()) {
         mdRecord = (ArticleMetadata) mdIt.next();
-        log.info(mdRecord.ppString(2));
+        //log.info(mdRecord.ppString(2));
         assertEquals("10.1111/FOO.3.3430", mdRecord.get(MetadataField.FIELD_DOI));
         assertEquals(testAuthors.toString(), mdRecord.getList(MetadataField.FIELD_AUTHOR).toString());
         assertEquals("Phyics Foo", mdRecord.get(MetadataField.FIELD_PUBLICATION_TITLE));

@@ -198,7 +198,7 @@ public class TestNationalWeatherAssociationArticleIteratorFactory
     int deletedFileCount = 0; 
     for (CachedUrl cu : AuUtil.getCuIterable(au)) {
         String url = cu.getUrl();
-        log.info("au cached url: " + url);
+        //log.info("au cached url: " + url);
         if ((url.contains("/articles/") && url.endsWith("1001.pdf")) 
             || (url.contains("/abstracts/") && url.contains("002"))) {
           deleteBlock(cu);
@@ -219,13 +219,12 @@ public class TestNationalWeatherAssociationArticleIteratorFactory
     // after deleting, there are 8 full text pdfs left.
     while (it.hasNext()) {
       ArticleFiles af = it.next();
-      log.info(af.toString());
+      //log.info(af.toString());
       CachedUrl cu = af.getFullTextCu();
       String url = cu.getUrl();
       assertNotNull(cu);
       String contentType = cu.getContentType();
-      log.info("count full text " + countFullText + " url " + url 
-          + " " + contentType);
+      //log.info("count full text " + countFullText + " url " + url + " " + contentType);
       countFullText++;
       url = af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF);
       if (!StringUtil.isNullString(url) && url.contains("pdf")) {
@@ -242,10 +241,10 @@ public class TestNationalWeatherAssociationArticleIteratorFactory
 
     }
     
-    log.info("Full text article count is " + countFullText);
-    log.info("Pdf count is " + countPdf);
-    log.info("Abstract count is " + countAbs);
-    log.info("Article Metadata count is " + countAm);
+    //log.info("Full text article count is " + countFullText);
+    //log.info("Pdf count is " + countPdf);
+    //log.info("Abstract count is " + countAbs);
+    //log.info("Article Metadata count is " + countAm);
     assertEquals(EXP_FULL_TEXT_COUNT, countFullText);
     assertEquals(EXP_PDF_COUNT, countPdf);
     assertEquals(EXP_ABS_COUNT, countAbs);
@@ -253,7 +252,7 @@ public class TestNationalWeatherAssociationArticleIteratorFactory
   }
  
   private void deleteBlock(CachedUrl cu) throws IOException {
-    log.info("deleting " + cu.getUrl());
+    //log.info("deleting " + cu.getUrl());
     cu.delete();
   }
 

@@ -101,7 +101,7 @@ public class TestSageAtyponHtmlMetadataExtractorFactory extends LockssTestCase {
         String volume = null;
         try {
             volume = getVolumeNumber(in, "utf-8", BASE_URL);
-            log.info("volume in test============" + volume);
+            //log.info("volume in test============" + volume);
             in.close();
             assertEquals(volume, "9");
         } catch (IOException e) {

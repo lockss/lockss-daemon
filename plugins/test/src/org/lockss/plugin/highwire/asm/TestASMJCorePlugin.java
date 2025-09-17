@@ -209,7 +209,7 @@ http://msystems.asm.org/content/1/6/e00128-16.full.pdf
   }
   
   private void shouldCacheTest(String url, boolean shouldCache, ArchivalUnit au) {
-    log.info ("shouldCacheTest url: " + url);
+    //log.info ("shouldCacheTest url: " + url);
     assertEquals(shouldCache, au.shouldBeCached(url));
   }
   
