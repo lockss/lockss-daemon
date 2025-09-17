@@ -148,7 +148,7 @@ public class TestAnuHtmlMetadataExtractorFactory extends LockssTestCase {
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    log.info(md.toString());
+    //log.info(md.toString());
     assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
   }
