@@ -2480,10 +2480,10 @@
       nondefparam[base_url2] = https://account.gp.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-gpajepr
 
-      au < testing ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
-      au < testing ; 2021 ; 2 ; Gateway Papers Volume 2021 ; 2021 ; 2 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
-      au < testing ; 2022 ; 3 ; Gateway Papers Volume 2022 ; 2022 ; 3 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
-      au < testing ; 2023 ; 4 ; Gateway Papers Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
+      au < doNotProcess ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
+      au < doNotProcess ; 2021 ; 2 ; Gateway Papers Volume 2021 ; 2021 ; 2 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
+      au < doNotProcess ; 2022 ; 3 ; Gateway Papers Volume 2022 ; 2022 ; 3 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
+      au < doNotProcess ; 2023 ; 4 ; Gateway Papers Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://gp.demontfortuniversitypress.org/ >
       }
       {
       comment[publisher] = De Montfort University Press
@@ -2491,6 +2491,10 @@
       nondefparam[base_url2] = https://account.see.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-gpajepr
 
+      au < testing ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ >
+      au < testing ; 2021 ; 2 ; Gateway Papers Volume 2021 ; 2021 ; 2 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ >
+      au < testing ; 2022 ; 3 ; Gateway Papers Volume 2022 ; 2022 ; 3 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ >
+      au < testing ; 2023 ; 4 ; Gateway Papers Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ >
       au < exists ; 2024 ; 5 ; Gateway Papers Volume 2024 ; 2024 ; 5 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ >
       }
       #Title changed to Studies in Empowering Education (2977-4748) 2025 and forward

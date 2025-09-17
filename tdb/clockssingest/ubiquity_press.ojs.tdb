@@ -2923,10 +2923,10 @@
       param[base_url] = https://account.gp.demontfortuniversitypress.org/
       param[journal_id] = dmu-j-gpajepr
 
-      au < finished ; crawling ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; reingest2.clockss.org:8085 >
-      au < finished ; crawling ; 2021 ; 12 ; Gateway Papers Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
-      au < finished ; crawling ; 2022 ; 13 ; Gateway Papers Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; 14 ; Gateway Papers Volume 2023 ; 2023 ; >
+      au < superseded ; crawling ; 2010 ; 1 ; Gateway Papers Volume 2010 [superseded] ; 2010 ; reingest2.clockss.org:8085 >
+      au < superseded ; crawling ; 2021 ; 12 ; Gateway Papers Volume 2021 [superseded] ; 2021 ; reingest3.clockss.org:8083 >
+      au < superseded ; crawling ; 2022 ; 13 ; Gateway Papers Volume 2022 [superseded] ; 2022 ; reingest4.clockss.org:8082 >
+      au < frozen ; exists ; 2023 ; 14 ; Gateway Papers Volume 2023 [superseded] ; 2023 ; >
       au < superseded ; exists ; 2024 ; 15 ; Gateway Papers Volume 2024 [superseded] ; 2024 ; >
 
   }
