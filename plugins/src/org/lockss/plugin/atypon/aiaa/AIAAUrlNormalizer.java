@@ -42,9 +42,6 @@ import org.lockss.plugin.atypon.BaseAtyponUrlNormalizer;
 import org.apache.commons.collections4.ListValuedMap;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
 
 public class AIAAUrlNormalizer extends QueryUrlNormalizer {
@@ -53,18 +50,32 @@ public class AIAAUrlNormalizer extends QueryUrlNormalizer {
 
     //Example: https://arc.aiaa.org/browse/book/10.2514/MAVIAT21/proceedings-topics/aer
     protected Pattern TOC_PAGE = Pattern.compile("https://[^/]+/browse/book/[0-9.]+/[^./]+/proceedings-topics/[^./#=\\?]+$", Pattern.CASE_INSENSITIVE);
+    //we want to massage the parameters of the browse pages to be consistent: https://arc.aiaa.org/browse/book/10.2514/MASCEND22/proceedings-topics/sep?pageSize=100&sortBy=Earliest&startPage=0
+    protected Pattern LIST_PAGE = Pattern.compile("https://[^/]+/browse/book/[0-9.]+/[^./]+/proceedings-topics/[a-zA-Z]+\\?", Pattern.CASE_INSENSITIVE);
+    
+    //we want to make sure pdfs are counted in the article iterator so adjust URLs to be recognized
+    protected static final String DOWNLOAD_STRING = "?download=true";
+    protected static final Pattern DOWNLOAD_PAT = Pattern.compile("\\?download=true", Pattern.CASE_INSENSITIVE);
 
     protected UrlNormalizer baseUrlNormalizer = new BaseAtyponUrlNormalizer();
 
     @Override 
     public String normalizeUrl(String url, ArchivalUnit au)
       throws PluginException {
-        url = baseUrlNormalizer.normalizeUrl(url, au);
         if(TOC_PAGE.matcher(url).matches()){
             url = url + "?pageSize=100&sortBy=Earliest&startPage=0";
         }
-        
-        return super.normalizeUrl(url, au);
+        else if(LIST_PAGE.matcher(url).find()){
+          url = super.normalizeUrl(url, au);
+        }else{
+          url = baseUrlNormalizer.normalizeUrl(url, au);
+        }
+
+        Matcher download_mat = DOWNLOAD_PAT.matcher(url);
+        if (download_mat.find()) {
+          url = url.replace(DOWNLOAD_STRING, "");
+        }
+        return url;
       }
 
     @Override

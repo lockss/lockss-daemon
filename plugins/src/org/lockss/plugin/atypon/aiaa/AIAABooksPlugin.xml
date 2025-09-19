@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>30</string>
+    <string>31</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -77,22 +77,11 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/doi/book/[0-9.]+/", url_host(base_url)</string>
       <string>1,"^https?://(static\.cloudflareinsights|(ajax|fonts)\.(googleapis|gstatic))\.com/"</string>
       <string>1,"^https?://%s/browse/book/[0-9.]+/[^./]+/proceedings-topics/[^/?]+(\?.*)?$", url_host(base_url)</string>
-      <!--
-        Update URL for SIAM PDF files
-        https://epubs.siam.org/doi/reader/10.1137/1.9781611976953.ch8
-        https://epubs.siam.org/doi/reader/10.1137/1.9781611976953.ch9
-        https://epubs.siam.org/doi/reader/10.1137/1.9781611976953.fm
-      -->
       <string>1,"^https?://%s/doi/((e?pdf|e?pdfplus|epub|full|abs|ref(erences)?|suppl|figure|video[^/]+|reader)/)?[0-9.]+/", url_host(base_url)</string>
       <!--<string>1,"^https?://%s/doi/(reader|pdf|epdf)/[0-9.]+/([^\?&amp;]+$)?", url_host(base_url)</string>-->
       <string>1,"^https?://%s/action/(showImage|showFullPopup|showCitFormats|showSupplements|showMediaPlayer|showPopup)\?([^=]+=[^&amp;]+&amp;)*doi=", url_host(base_url)</string>
       <string>1,"^https?://%s/action/downloadCitation\?doi=.*&amp;format=ris&amp;include=(cit|abs)$", url_host(base_url)</string>
     </list>
-  </entry>
-  <!--  also for https conversion -->
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.atypon.BaseAtyponHttpHttpsUrlNormalizer</string>
   </entry>
  <entry>
     <string>plugin_url_fetcher_factory</string>
