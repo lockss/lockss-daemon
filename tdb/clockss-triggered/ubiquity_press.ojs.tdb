@@ -1,27 +1,28 @@
 {
+
   publisher <
     name = Ubiquity Press
   >
 
-    provider = Ubiquity Press
-    implicit < status ; year ; volume ; name ; param[year] >
-    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
-    attr[start_stem] = index.php/
+  provider = Ubiquity Press
+  implicit < status ; year ; volume ; name ; param[year] >
+  plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+  attr[start_stem] = index.php/
 
-{
+  {
 
-      title <
-        name = International Journal of Driving Science ;
-        eissn = 2397-1959
-      >
+    title <
+      name = International Journal of Driving Science ;
+      eissn = 2397-1959
+    >
 
-      comment[publisher] = Ubiquity Press
-      param[base_url] = https://account.up-j-ijds.ubiquityjournal.website/
-      param[journal_id] = up-j-ijds
-      #LXPUB-876
+    comment[publisher] = Ubiquity Press
+    param[base_url] = https://account.up-j-ijds.ubiquityjournal.website/
+    param[journal_id] = up-j-ijds
+    #LXPUB-876
 
-      au < expected ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 (OJS3) ; 2018 >
-      au < expected ; 2021 ; 2 ; International Journal of Driving Science Volume 2021 (OJS3) ; 2021 >
+    au < released ; 2018 ; 1 ; International Journal of Driving Science Volume 2018 ; 2018 >
+    au < released ; 2021 ; 2 ; International Journal of Driving Science Volume 2021 ; 2021 >
 
   }
 
