@@ -40,7 +40,7 @@ import java.util.Collection;
 import java.util.EnumMap;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
-import org.lockss.laaws.client.ApiException;
+import org.lockss.laaws.client.*;
 import org.lockss.laaws.model.cfg.AuConfiguration;
 import org.lockss.laaws.model.cfg.V2AuStateBean;
 import org.lockss.plugin.ArchivalUnit;
@@ -156,7 +156,7 @@ public class AuStateChecker extends Worker {
       AuSuspectUrlVersionsBean v1Bean = asuv.getBean(au.getAuId());
       try {
         final String json = cfgAusApiClient.getAuSuspectUrlVersions(au.getAuId());
-        AuSuspectUrlVersionsBean v2Bean = new Gson().fromJson(json, AuSuspectUrlVersionsBean.class);
+        AuSuspectUrlVersionsBean v2Bean = getGson().fromJson(json, AuSuspectUrlVersionsBean.class);
         if (v2Bean.equals(v1Bean)) {
           log.info("V2 AU Suspect Url Versions are the same");
         }
