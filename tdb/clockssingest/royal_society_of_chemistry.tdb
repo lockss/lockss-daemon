@@ -986,8 +986,8 @@
       au < finished ; crawling ; 2017 ; Nanoscale Volume 9 ; 9 ; 2017 ; http://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; Nanoscale Volume 10 ; 10 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Nanoscale Volume 11 ; 11 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; Nanoscale Volume 12 ; 12 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Nanoscale Volume 13 ; 13 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Nanoscale Volume 12 ; 12 ; 2020 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Nanoscale Volume 13 ; 13 ; 2021 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2022 ; Nanoscale Volume 14 ; 14 ; 2022 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Nanoscale Volume 15 ; 15 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Nanoscale Volume 16 ; 16 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -1031,8 +1031,8 @@
       au < finished ; finished ; 2017 ; Natural Product Reports Volume 34 ; 34 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Natural Product Reports Volume 35 ; 35 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Natural Product Reports Volume 36 ; 36 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; Natural Product Reports Volume 37 ; 37 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Natural Product Reports Volume 38 ; 38 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Natural Product Reports Volume 37 ; 37 ; 2020 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; Natural Product Reports Volume 38 ; 38 ; 2021 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Natural Product Reports Volume 39 ; 39 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Natural Product Reports Volume 40 ; 40 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Natural Product Reports Volume 41 ; 41 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -1074,7 +1074,7 @@
       au < finished ; crawling ; 2017 ; New Journal of Chemistry Volume 41 ; 41 ; 2017 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; New Journal of Chemistry Volume 42 ; 42 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; New Journal of Chemistry Volume 43 ; 43 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; New Journal of Chemistry Volume 44 ; 44 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; New Journal of Chemistry Volume 44 ; 44 ; 2020 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; New Journal of Chemistry Volume 45 ; 45 ; 2021 ; https://pubs.rsc.org/ ; >
       au < finished ; crawling ; 2022 ; New Journal of Chemistry Volume 46 ; 46 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; New Journal of Chemistry Volume 47 ; 47 ; 2023 ; https://pubs.rsc.org/ ; >
