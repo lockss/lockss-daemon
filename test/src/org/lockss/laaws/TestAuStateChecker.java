@@ -30,10 +30,18 @@
 
 package org.lockss.laaws;
 
+import java.util.*;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 import junit.framework.TestCase;
+import com.google.gson.Gson;
+import org.lockss.util.*;
+import org.lockss.hasher.*;
+import org.lockss.repository.AuSuspectUrlVersions;
+import org.lockss.repository.AuSuspectUrlVersions.SuspectUrlVersion;
+import org.lockss.repository.AuSuspectUrlVersionsBean;
 import org.lockss.test.LockssTestCase;
+import org.lockss.laaws.client.*;
 
 /**
  * AuStateChecker Tester.
@@ -41,6 +49,7 @@ import org.lockss.test.LockssTestCase;
  * @version 1.0
  */
 public class TestAuStateChecker extends LockssTestCase {
+  private Logger log = Logger.getLogger("TestAuStateChecker");
 
   public TestAuStateChecker(String name) {
     super(name);
@@ -92,23 +101,25 @@ try {
 */
   }
 
-  /**
-*
-   * Method: checkAuSuspectUrlVersions(ArchivalUnit au)
-*
-   */
   public void testCheckAuSuspectUrlVersions() throws Exception {
-//TODO: Test goes here... 
-/* 
-try { 
-   Method method = AuStateChecker.getClass().getMethod("checkAuSuspectUrlVersions", ArchivalUnit.class); 
-   method.setAccessible(true); 
-   method.invoke(<Object>, <Parameters>); 
-} catch(NoSuchMethodException e) { 
-} catch(IllegalAccessException e) { 
-} catch(InvocationTargetException e) { 
-} 
-*/
+    AuSuspectUrlVersions asuv = new TestableAuSuspectUrlVersions();
+    TimeBase.setSimulated(12345);
+    asuv.markAsSuspect("https://www.ajtmh.org/assets/vendor/za34738ba/respond.min.js", 2,
+                       HashResult.make("SHA-1:deadbeef"),
+                       HashResult.make("SHA-1:8888777766665555"));
+    TimeBase.setSimulated(123456);
+    asuv.markAsSuspect("url2", 1,
+                       HashResult.make("SHA-1:beeffeed"),
+                       HashResult.make("SHA-1:01234567"));
+
+    String expJson = "{\"auid\":\"org|lockss|plugin|DirTreePlugin&base_url~https%3A%2F%2Fwww%2Elockss%2Eorg%2Ffoo\",\"suspectVersions\":[{\"url\":\"https://www.ajtmh.org/assets/vendor/za34738ba/respond.min.js\",\"version\":2,\"created\":12345,\"computedHash\":{\"bytes\":\"3q2+7w==\",\"algorithm\":\"SHA-1\"},\"storedHash\":{\"bytes\":\"iIh3d2ZmVVU=\",\"algorithm\":\"SHA-1\"}},{\"url\":\"url2\",\"version\":1,\"created\":123456,\"computedHash\":{\"bytes\":\"vu/+7Q==\",\"algorithm\":\"SHA-1\"},\"storedHash\":{\"bytes\":\"ASNFZw==\",\"algorithm\":\"SHA-1\"}}]}";
+
+    AuSuspectUrlVersionsBean expBean = asuv.getBean("org|lockss|plugin|DirTreePlugin&base_url~https%3A%2F%2Fwww%2Elockss%2Eorg%2Ffoo");
+    String genJson = JSON.getGson().toJson(expBean);
+    assertEquals(expJson, genJson);
+
+    AuSuspectUrlVersionsBean deserBean = JSON.getGson().fromJson(genJson, AuSuspectUrlVersionsBean.class);
+    assertEquals(expBean, deserBean);
   }
 
   /**
@@ -167,6 +178,13 @@ try {
 } 
 */
   }
+
+  static class TestableAuSuspectUrlVersions extends AuSuspectUrlVersions {
+    protected Set<SuspectUrlVersion> makeSuspectVersionsSet() {
+      return new LinkedHashSet<SuspectUrlVersion>();
+    }
+  }
+
 
 
   public static Test suite() {
