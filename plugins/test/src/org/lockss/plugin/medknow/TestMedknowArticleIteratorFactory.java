@@ -179,11 +179,11 @@ public class TestMedknowArticleIteratorFactory extends ArticleIteratorTestCase {
           cuPdf = cu;
         } else if (cuAbs == null 
             && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)) {
-          // log.info("abs html contenttype: " + cu.getContentType());
+          //log.info("abs html contenttype: " + cu.getContentType());
           cuAbs = cu;
         } else if (cuHtml == null 
             && cu.getContentType().toLowerCase().startsWith(Constants.MIME_TYPE_HTML)) {
-          // log.info("abs html contenttype: " + cu.getContentType());
+          //log.info("abs html contenttype: " + cu.getContentType());
           cuHtml = cu;
         }
         if (cuPdf != null && cuAbs != null && cuHtml != null) {
