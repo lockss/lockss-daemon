@@ -68,7 +68,7 @@
       au < doNotProcess ; 2022 ; 7 ; ARENA Journal of Architectural Research Volume 2022 ; 2022 ; 7 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ >
       au < doNotProcess ; 2023 ; 8 ; ARENA Journal of Architectural Research Volume 2023 ; 2023 ; 8 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ >
       au < testing ; 2024 ; 9 ; ARENA Journal of Architectural Research Volume 2024 ; 2024 ; 9 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ >
-      au < ready ; 2025 ; 10 ; ARENA Journal of Architectural Research Volume 2025 ; 2025 ; 10 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ >
+      au < manifest ; 2025 ; 10 ; ARENA Journal of Architectural Research Volume 2025 ; 2025 ; 10 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ >
 
   }
 
@@ -106,7 +106,7 @@
      au < doNotProcess ; 2022 ; 113,114 ; ERLACS Volume 2022 ; 2022 ; 113,114 ; CEDLA ;  ; https://erlacs.org/ >
      au < doNotProcess ; 2023 ; 115,116 ; ERLACS Volume 2023 ; 2023 ; 115,116 ; CEDLA ;  ; https://erlacs.org/ >
      au < testing ; 2024 ; 117,118 ; ERLACS Volume 2024 ; 2024 ; 117,118 ; CEDLA ;  ; https://erlacs.org/ >
-     au < ready ; 2025 ; 119,120 ; ERLACS Volume 2025 ; 2025 ; 119,120 ; CEDLA ;  ; https://erlacs.org/ >
+     au < manifest ; 2025 ; 119,120 ; ERLACS Volume 2025 ; 2025 ; 119,120 ; CEDLA ;  ; https://erlacs.org/ >
 
   }
 
@@ -128,7 +128,7 @@
       au < doNotProcess ; 2022 ; 3 ; Steiner Studies Volume 2022 ; 2022 ; 3 ; frommann-holzboog ;  ; https://steiner-studies.org/ >
       au < doNotProcess ; 2023 ; 4 ; Steiner Studies Volume 2023 ; 2023 ; 4 ; frommann-holzboog ;  ; https://steiner-studies.org/ >
       au < ready ; 2024 ; 5 ; Steiner Studies Volume 2024 ; 2024 ; 5 ; frommann-holzboog ;  ; https://steiner-studies.org/ >
-      au < ready ; 2025 ; 6 ; Steiner Studies Volume 2025 ; 2025 ; 6 ; frommann-holzboog ;  ; https://steiner-studies.org/ >
+      au < manifest ; 2025 ; 6 ; Steiner Studies Volume 2025 ; 2025 ; 6 ; frommann-holzboog ;  ; https://steiner-studies.org/ >
 
   }
 
@@ -145,7 +145,7 @@
       nondefparam[journal_id] = kitl-j-hs
 
       au < ready ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ >
-      au < ready ; 2025 ; 2 ; Hydrogen Safety Volume 2025 ; 2025 ; 2 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ >
+      au < manifest ; 2025 ; 2 ; Hydrogen Safety Volume 2025 ; 2025 ; 2 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ >
 
   }
 
@@ -178,7 +178,7 @@
       au < doNotProcess ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 ; 2022 ; 59 ; Helsinki University Press ;  ; https://estetikajournal.org/ >
       au < doNotProcess ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ;  ; https://estetikajournal.org/ >
       au < ready ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ;  ; https://estetikajournal.org/ >
-      au < ready ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ;  ; https://estetikajournal.org/ >
+      au < manifest ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ;  ; https://estetikajournal.org/ >
   }
 
   {
@@ -207,7 +207,7 @@
       au < doNotProcess ; 2022 ; 12 ; Nordic Journal of Migration Research Volume 2022 ; 2022 ; 12 ; Helsinki University Press ;  ; https://journal-njmr.org/ >
       au < doNotProcess ; 2023 ; 13 ; Nordic Journal of Migration Research Volume 2023 ; 2023 ; 13 ; Helsinki University Press ;  ; https://journal-njmr.org/ >
       au < ready ; 2024 ; 14 ; Nordic Journal of Migration Research Volume 2024 ; 2024 ; 14 ; Helsinki University Press ;  ; https://journal-njmr.org/ >
-      au < ready ; 2025 ; 15 ; Nordic Journal of Migration Research Volume 2025 ; 2025 ; 15 ; Helsinki University Press ;  ; https://journal-njmr.org/ >
+      au < manifest ; 2025 ; 15 ; Nordic Journal of Migration Research Volume 2025 ; 2025 ; 15 ; Helsinki University Press ;  ; https://journal-njmr.org/ >
   }
 
   {
@@ -249,7 +249,7 @@
       au < released ; 2022 ; 25 ; Redescriptions Volume 2022 ; 2022 ; 25 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
       au < doNotProcess ; 2023 ; 26 ; Redescriptions Volume 2023 ; 2023 ; 26 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
       au < ready ; 2024 ; 27 ; Redescriptions Volume 2024 ; 2024 ; 27 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
-      au < ready ; 2025 ; 28 ; Redescriptions Volume 2025 ; 2025 ; 28 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
+      au < manifest ; 2025 ; 28 ; Redescriptions Volume 2025 ; 2025 ; 28 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
 
   }
 
@@ -276,7 +276,7 @@
       au < down ; 2022 ; 9 ; Modern Languages Open Volume 2022 ; 2022 ; 9 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
       au < doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; 10 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ >
       au < ready ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ >
-      au < ready ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ >
+      au < manifest ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ >
 
   }
 
@@ -307,7 +307,7 @@
       au < down ; 2021 ; 13 ; Designs for Learning Volume 2021 ; 2021 ; 13 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
       au < doNotProcess ; 2022 ; 14 ; Designs for Learning Volume 2022 ; 2022 ; 14 ; Stockholm University Press ;  ; https://designsforlearning.nu/ >
       au < doNotProcess ; 2023 ; 15 ; Designs for Learning Volume 2024 ; 2023 ; 15 ; Stockholm University Press ;  ; https://designsforlearning.nu/ >
-      au < ready ; 2025 ; 16 ; Designs for Learning Volume 2025 ; 2025 ; 16 ; Stockholm University Press ;  ; https://designsforlearning.nu/ >
+      au < manifest ; 2025 ; 16 ; Designs for Learning Volume 2025 ; 2025 ; 16 ; Stockholm University Press ;  ; https://designsforlearning.nu/ >
 
   }
 
@@ -328,7 +328,7 @@
       au < doNotProcess ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 ; 3 ; Stockholm University Press ;  ; https://njtcg.org/ >
       au < doNotProcess ; 2023 ; 4 ; Nordic Journal of Transitions, Careers and Guidance Volume 2023 ; 2023 ; 4 ; Stockholm University Press ;  ; https://njtcg.org/ >
       au < ready ; 2024 ; 5 ; Nordic Journal of Transitions, Careers and Guidance Volume 2024 ; 2024 ; 5 ; Stockholm University Press ;  ; https://njtcg.org/ >
-      au < ready ; 2025 ; 6 ; Nordic Journal of Transitions, Careers and Guidance Volume 2025 ; 2025 ; 6 ; Stockholm University Press ;  ; https://njtcg.org/ >
+      au < manifest ; 2025 ; 6 ; Nordic Journal of Transitions, Careers and Guidance Volume 2025 ; 2025 ; 6 ; Stockholm University Press ;  ; https://njtcg.org/ >
 
   }
 
@@ -355,7 +355,7 @@
       au < doNotProcess ; 2022 ; 9 ; Rural Landscapes: Society, Environment, History Volume 2022 ; 2022 ; 9 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
       au < doNotProcess ; 2023 ; 10 ; Rural Landscapes: Society, Environment, History Volume 2023 ; 2023 ; 10 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
       au < ready ; 2024 ; 11 ; Rural Landscapes: Society, Environment, History Volume 2024 ; 2024 ; 11 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
-      au < ready ; 2025 ; 12 ; Rural Landscapes: Society, Environment, History Volume 2025 ; 2025 ; 12 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
+      au < manifest ; 2025 ; 12 ; Rural Landscapes: Society, Environment, History Volume 2025 ; 2025 ; 12 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
 
   }
 
@@ -399,7 +399,7 @@
       au < doNotProcess ; 2022 ; 24 ; Scandinavian Journal of Disability Research Volume 24 ; 2022 ; 24 ; Stockholm University Press ;  ; https://sjdr.se/ >
       au < doNotProcess ; 2023 ; 25 ; Scandinavian Journal of Disability Research Volume 25 ; 2023 ; 25 ; Stockholm University Press ;  ; https://sjdr.se/ >
       au < ready ; 2024 ; 26 ; Scandinavian Journal of Disability Research Volume 26 ; 2024 ; 26 ; Stockholm University Press ;  ; https://sjdr.se/ >
-      au < ready ; 2025 ; 27 ; Scandinavian Journal of Disability Research Volume 27 ; 2025 ; 27 ; Stockholm University Press ;  ; https://sjdr.se/ >
+      au < manifest ; 2025 ; 27 ; Scandinavian Journal of Disability Research Volume 27 ; 2025 ; 27 ; Stockholm University Press ;  ; https://sjdr.se/ >
 
   }
 
