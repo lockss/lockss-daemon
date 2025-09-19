@@ -84,25 +84,25 @@
       nondefparam[base_url2] = https://account.erlacs.org/
       nondefparam[journal_id] = lasa-j-erlacs
 
-     au < down ; 2003 ; 74,75 ; ERLACS Volume 2003 ; 2003 ; 74,75 ; CEDLA ;  ; https://www.erlacs.org/ >
-     au < down ; 2004 ; 76,77 ; ERLACS Volume 2004 ; 2004 ; 76,77 ; CEDLA ;  ; https://www.erlacs.org/ >
-     au < down ; 2005 ; 78,79 ; ERLACS Volume 2005 ; 2005 ; 78,79 ; CEDLA ;  ; https://www.erlacs.org/ >
-     au < down ; 2006 ; 80,81 ; ERLACS Volume 2006 ; 2006 ; 80,81 ; CEDLA ;  ; https://www.erlacs.org/ >
-     au < down ; 2007 ; 82,83 ; ERLACS Volume 2007 ; 2007 ; 82,83 ; CEDLA ;  ; https://www.erlacs.org/ >
-     au < down ; 2008 ; 84,85 ; ERLACS Volume 2008 ; 2008 ; 84,85 ; CEDLA ;  ; https://www.erlacs.org/ >
-     au < down ; 2009 ; 86,87 ; ERLACS Volume 2009 ; 2009 ; 86,87 ; CEDLA ;  ; https://www.erlacs.org/ >
-     au < down ; 2010 ; 88,89 ; ERLACS Volume 2010 ; 2010 ; 88,89 ; CEDLA ;  ; http://www.erlacs.org/ >
-     au < down ; 2011 ; 90,91 ; ERLACS Volume 2011 ; 2011 ; 90,91 ; CEDLA ;  ; http://www.erlacs.org/ >
-     au < down ; 2012 ; 92,93 ; ERLACS Volume 2012 ; 2012 ; 92,93 ; CEDLA ;  ; http://www.erlacs.org/ >
-     au < down ; 2013 ; 94,95 ; ERLACS Volume 2013 ; 2013 ; 94,95 ; CEDLA ;  ; http://www.erlacs.org/ >
-     au < down ; 2014 ; 96,97 ; ERLACS Volume 2014 ; 2014 ; 96,97 ; CEDLA ;  ; http://www.erlacs.org/ >
-     au < down ; 2015 ; 98,99,100 ; ERLACS Volume 2015 ; 2015 ; 98,99,100 ; CEDLA ;  ; http://www.erlacs.org/ >
-     au < down ; 2016 ; 101,102 ; ERLACS Volume 2016 ; 2016 ; 101,102 ; CEDLA ;  ; http://www.erlacs.org/ >
-     au < down ; 2017 ; 103,104 ; ERLACS Volume 2017 ; 2017 ; 103,104 ; CEDLA ;  ; https://www.erlacs.org/ >
-     au < down ; 2018 ; 105,106 ; ERLACS Volume 2018 ; 2018 ; 105,106 ; CEDLA ;  ; https://www.erlacs.org/ >
-     au < down ; 2019 ; 107,108 ; ERLACS Volume 2019 ; 2019 ; 107,108 ; CEDLA ;  ; https://www.erlacs.org/ >
-     au < down ; 2020 ; 109,110 ; ERLACS Volume 2020 ; 2020 ; 109,110 ; CEDLA ;  ; https://www.erlacs.org/ >
-     au < down ; 2021 ; 111,112 ; ERLACS Volume 2021 ; 2021 ; 111,112 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2003 ; 74,75 ; ERLACS Volume 2003 ; 2003 ; 74,75 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2004 ; 76,77 ; ERLACS Volume 2004 ; 2004 ; 76,77 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2005 ; 78,79 ; ERLACS Volume 2005 ; 2005 ; 78,79 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2006 ; 80,81 ; ERLACS Volume 2006 ; 2006 ; 80,81 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2007 ; 82,83 ; ERLACS Volume 2007 ; 2007 ; 82,83 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2008 ; 84,85 ; ERLACS Volume 2008 ; 2008 ; 84,85 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2009 ; 86,87 ; ERLACS Volume 2009 ; 2009 ; 86,87 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2010 ; 88,89 ; ERLACS Volume 2010 ; 2010 ; 88,89 ; CEDLA ;  ; http://www.erlacs.org/ >
+     au < released ; 2011 ; 90,91 ; ERLACS Volume 2011 ; 2011 ; 90,91 ; CEDLA ;  ; http://www.erlacs.org/ >
+     au < released ; 2012 ; 92,93 ; ERLACS Volume 2012 ; 2012 ; 92,93 ; CEDLA ;  ; http://www.erlacs.org/ >
+     au < released ; 2013 ; 94,95 ; ERLACS Volume 2013 ; 2013 ; 94,95 ; CEDLA ;  ; http://www.erlacs.org/ >
+     au < released ; 2014 ; 96,97 ; ERLACS Volume 2014 ; 2014 ; 96,97 ; CEDLA ;  ; http://www.erlacs.org/ >
+     au < released ; 2015 ; 98,99,100 ; ERLACS Volume 2015 ; 2015 ; 98,99,100 ; CEDLA ;  ; http://www.erlacs.org/ >
+     au < released ; 2016 ; 101,102 ; ERLACS Volume 2016 ; 2016 ; 101,102 ; CEDLA ;  ; http://www.erlacs.org/ >
+     au < released ; 2017 ; 103,104 ; ERLACS Volume 2017 ; 2017 ; 103,104 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2018 ; 105,106 ; ERLACS Volume 2018 ; 2018 ; 105,106 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2019 ; 107,108 ; ERLACS Volume 2019 ; 2019 ; 107,108 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2020 ; 109,110 ; ERLACS Volume 2020 ; 2020 ; 109,110 ; CEDLA ;  ; https://www.erlacs.org/ >
+     au < released ; 2021 ; 111,112 ; ERLACS Volume 2021 ; 2021 ; 111,112 ; CEDLA ;  ; https://www.erlacs.org/ >
      au < doNotProcess ; 2022 ; 113,114 ; ERLACS Volume 2022 ; 2022 ; 113,114 ; CEDLA ;  ; https://erlacs.org/ >
      au < doNotProcess ; 2023 ; 115,116 ; ERLACS Volume 2023 ; 2023 ; 115,116 ; CEDLA ;  ; https://erlacs.org/ >
      au < testing ; 2024 ; 117,118 ; ERLACS Volume 2024 ; 2024 ; 117,118 ; CEDLA ;  ; https://erlacs.org/ >
@@ -265,15 +265,15 @@
       nondefparam[base_url2] = https://account.modernlanguagesopen.org/
       nondefparam[journal_id] = up-j-mlo
 
-      au < down ; 2014 ; 1 ; Modern Languages Open Volume 2014 ; 2014 ; 1 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
-      au < down ; 2015 ; 2 ; Modern Languages Open Volume 2015 ; 2015 ; 2 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
-      au < down ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; 3 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
-      au < down ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; 4 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
-      au < down ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; 5 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
-      au < down ; 2019 ; 6 ; Modern Languages Open Volume 2019 ; 2019 ; 6 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
-      au < down ; 2020 ; 7 ; Modern Languages Open Volume 2020 ; 2020 ; 7 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
-      au < down ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; 8 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
-      au < down ; 2022 ; 9 ; Modern Languages Open Volume 2022 ; 2022 ; 9 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
+      au < released ; 2014 ; 1 ; Modern Languages Open Volume 2014 ; 2014 ; 1 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
+      au < released ; 2015 ; 2 ; Modern Languages Open Volume 2015 ; 2015 ; 2 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
+      au < released ; 2016 ; 3 ; Modern Languages Open Volume 2016 ; 2016 ; 3 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
+      au < released ; 2017 ; 4 ; Modern Languages Open Volume 2017 ; 2017 ; 4 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
+      au < released ; 2018 ; 5 ; Modern Languages Open Volume 2018 ; 2018 ; 5 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
+      au < released ; 2019 ; 6 ; Modern Languages Open Volume 2019 ; 2019 ; 6 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
+      au < released ; 2020 ; 7 ; Modern Languages Open Volume 2020 ; 2020 ; 7 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
+      au < released ; 2021 ; 8 ; Modern Languages Open Volume 2021 ; 2021 ; 8 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
+      au < released ; 2022 ; 9 ; Modern Languages Open Volume 2022 ; 2022 ; 9 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
       au < doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; 10 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ >
       au < ready ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ >
       au < manifest ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ >
@@ -292,19 +292,19 @@
       nondefparam[base_url2] = https://account.designsforlearning.nu/
       nondefparam[journal_id] = su-j-dl
 
-      au < down ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 ; 1 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ > #No substance LXPLUG-1981
-      au < down ; 2009 ; 2 ; Designs for Learning Volume 2009 ; 2009 ; 2 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ > #No substance LXPLUG-1981
-      au < down ; 2010 ; 3 ; Designs for Learning Volume 2010 ; 2010 ; 3 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
-      au < down ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 ; 4 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
-      au < down ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 ; 5 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
-      au < down ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; 6 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
-      au < down ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; 7 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
-      au < down ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; 8 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
-      au < down ; 2017 ; 9 ; Designs for Learning Volume 2017 ; 2017 ; 9 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
-      au < down ; 2018 ; 10 ; Designs for Learning Volume 2018 ; 2018 ; 10 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
-      au < down ; 2019 ; 11 ; Designs for Learning Volume 2019 ; 2019 ; 11 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
-      au < down ; 2020 ; 12 ; Designs for Learning Volume 2020 ; 2020 ; 12 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
-      au < down ; 2021 ; 13 ; Designs for Learning Volume 2021 ; 2021 ; 13 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
+      au < released ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 ; 1 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ > #No substance LXPLUG-1981
+      au < released ; 2009 ; 2 ; Designs for Learning Volume 2009 ; 2009 ; 2 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ > #No substance LXPLUG-1981
+      au < released ; 2010 ; 3 ; Designs for Learning Volume 2010 ; 2010 ; 3 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
+      au < released ; 2011 ; 4 ; Designs for Learning Volume 2011 ; 2011 ; 4 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
+      au < released ; 2012 ; 5 ; Designs for Learning Volume 2012 ; 2012 ; 5 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
+      au < released ; 2013 ; 6 ; Designs for Learning Volume 2013 ; 2013 ; 6 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
+      au < released ; 2014 ; 7 ; Designs for Learning Volume 2014 ; 2014 ; 7 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
+      au < released ; 2016 ; 8 ; Designs for Learning Volume 2016 ; 2016 ; 8 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ >
+      au < released ; 2017 ; 9 ; Designs for Learning Volume 2017 ; 2017 ; 9 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
+      au < released ; 2018 ; 10 ; Designs for Learning Volume 2018 ; 2018 ; 10 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
+      au < released ; 2019 ; 11 ; Designs for Learning Volume 2019 ; 2019 ; 11 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
+      au < released ; 2020 ; 12 ; Designs for Learning Volume 2020 ; 2020 ; 12 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
+      au < released ; 2021 ; 13 ; Designs for Learning Volume 2021 ; 2021 ; 13 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
       au < doNotProcess ; 2022 ; 14 ; Designs for Learning Volume 2022 ; 2022 ; 14 ; Stockholm University Press ;  ; https://designsforlearning.nu/ >
       au < doNotProcess ; 2023 ; 15 ; Designs for Learning Volume 2024 ; 2023 ; 15 ; Stockholm University Press ;  ; https://designsforlearning.nu/ >
       au < manifest ; 2025 ; 16 ; Designs for Learning Volume 2025 ; 2025 ; 16 ; Stockholm University Press ;  ; https://designsforlearning.nu/ >
@@ -344,14 +344,14 @@
       nondefparam[base_url2] = https://account.rurallandscapesjournal.com/
       nondefparam[journal_id] = su-j-rlseh
 
-      au < down ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; 1 ; Stockholm University Press ;  ; http://www.rurallandscapesjournal.com/ >
-      au < down ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; 2 ; Stockholm University Press ;  ; http://www.rurallandscapesjournal.com/ >
-      au < down ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; 3 ; Stockholm University Press ;  ; http://www.rurallandscapesjournal.com/ >
-      au < down ; 2017 ; 4 ; Rural Landscapes: Society, Environment, History Volume 2017 ; 2017 ; 4 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
-      au < down ; 2018 ; 5 ; Rural Landscapes: Society, Environment, History Volume 2018 ; 2018 ; 5 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
-      au < down ; 2019 ; 6 ; Rural Landscapes: Society, Environment, History Volume 2019 ; 2019 ; 6 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
-      au < down ; 2020 ; 7 ; Rural Landscapes: Society, Environment, History Volume 2020 ; 2020 ; 7 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
-      au < down ; 2021 ; 8 ; Rural Landscapes: Society, Environment, History Volume 2021 ; 2021 ; 8 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
+      au < released ; 2014 ; 1 ; Rural Landscapes: Society, Environment, History Volume 2014 ; 2014 ; 1 ; Stockholm University Press ;  ; http://www.rurallandscapesjournal.com/ >
+      au < released ; 2015 ; 2 ; Rural Landscapes: Society, Environment, History Volume 2015 ; 2015 ; 2 ; Stockholm University Press ;  ; http://www.rurallandscapesjournal.com/ >
+      au < released ; 2016 ; 3 ; Rural Landscapes: Society, Environment, History Volume 2016 ; 2016 ; 3 ; Stockholm University Press ;  ; http://www.rurallandscapesjournal.com/ >
+      au < released ; 2017 ; 4 ; Rural Landscapes: Society, Environment, History Volume 2017 ; 2017 ; 4 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
+      au < released ; 2018 ; 5 ; Rural Landscapes: Society, Environment, History Volume 2018 ; 2018 ; 5 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
+      au < released ; 2019 ; 6 ; Rural Landscapes: Society, Environment, History Volume 2019 ; 2019 ; 6 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
+      au < released ; 2020 ; 7 ; Rural Landscapes: Society, Environment, History Volume 2020 ; 2020 ; 7 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
+      au < released ; 2021 ; 8 ; Rural Landscapes: Society, Environment, History Volume 2021 ; 2021 ; 8 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
       au < doNotProcess ; 2022 ; 9 ; Rural Landscapes: Society, Environment, History Volume 2022 ; 2022 ; 9 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
       au < doNotProcess ; 2023 ; 10 ; Rural Landscapes: Society, Environment, History Volume 2023 ; 2023 ; 10 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
       au < ready ; 2024 ; 11 ; Rural Landscapes: Society, Environment, History Volume 2024 ; 2024 ; 11 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
@@ -374,28 +374,28 @@
       nondefparam[journal_id] = su-j-sjdr
 
       au < ready ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; 1 ; Stockholm University Press ;  ; https://sjdr.se/ >
-      au < down ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; 2 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; 3 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; 2 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; 3 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
       au < doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; 4 ; Stockholm University Press ;  ; https://sjdr.se/ >
-      au < down ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; 5 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 ; 6 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2005 ; 7 ; Scandinavian Journal of Disability Research Volume 7 ; 2005 ; 7 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2006 ; 8 ; Scandinavian Journal of Disability Research Volume 8 ; 2006 ; 8 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2007 ; 9 ; Scandinavian Journal of Disability Research Volume 9 ; 2007 ; 9 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2008 ; 10 ; Scandinavian Journal of Disability Research Volume 10 ; 2008 ; 10 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2009 ; 11 ; Scandinavian Journal of Disability Research Volume 11 ; 2009 ; 11 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2010 ; 12 ; Scandinavian Journal of Disability Research Volume 12 ; 2010 ; 12 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2011 ; 13 ; Scandinavian Journal of Disability Research Volume 13 ; 2011 ; 13 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2012 ; 14 ; Scandinavian Journal of Disability Research Volume 14 ; 2012 ; 14 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2013 ; 15 ; Scandinavian Journal of Disability Research Volume 15 ; 2013 ; 15 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2014 ; 16 ; Scandinavian Journal of Disability Research Volume 16 ; 2014 ; 16 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2015 ; 17 ; Scandinavian Journal of Disability Research Volume 17 ; 2015 ; 17 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2016 ; 18 ; Scandinavian Journal of Disability Research Volume 18 ; 2016 ; 18 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2017 ; 19 ; Scandinavian Journal of Disability Research Volume 19 ; 2017 ; 19 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; 20 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 ; 21 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2020 ; 22 ; Scandinavian Journal of Disability Research Volume 22 ; 2020 ; 22 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
-      au < down ; 2021 ; 23 ; Scandinavian Journal of Disability Research Volume 23 ; 2021 ; 23 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; 5 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 ; 6 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2005 ; 7 ; Scandinavian Journal of Disability Research Volume 7 ; 2005 ; 7 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2006 ; 8 ; Scandinavian Journal of Disability Research Volume 8 ; 2006 ; 8 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2007 ; 9 ; Scandinavian Journal of Disability Research Volume 9 ; 2007 ; 9 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2008 ; 10 ; Scandinavian Journal of Disability Research Volume 10 ; 2008 ; 10 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2009 ; 11 ; Scandinavian Journal of Disability Research Volume 11 ; 2009 ; 11 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2010 ; 12 ; Scandinavian Journal of Disability Research Volume 12 ; 2010 ; 12 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2011 ; 13 ; Scandinavian Journal of Disability Research Volume 13 ; 2011 ; 13 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2012 ; 14 ; Scandinavian Journal of Disability Research Volume 14 ; 2012 ; 14 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2013 ; 15 ; Scandinavian Journal of Disability Research Volume 15 ; 2013 ; 15 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2014 ; 16 ; Scandinavian Journal of Disability Research Volume 16 ; 2014 ; 16 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2015 ; 17 ; Scandinavian Journal of Disability Research Volume 17 ; 2015 ; 17 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2016 ; 18 ; Scandinavian Journal of Disability Research Volume 18 ; 2016 ; 18 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2017 ; 19 ; Scandinavian Journal of Disability Research Volume 19 ; 2017 ; 19 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2018 ; 20 ; Scandinavian Journal of Disability Research Volume 20 ; 2018 ; 20 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2019 ; 21 ; Scandinavian Journal of Disability Research Volume 21 ; 2019 ; 21 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2020 ; 22 ; Scandinavian Journal of Disability Research Volume 22 ; 2020 ; 22 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
+      au < released ; 2021 ; 23 ; Scandinavian Journal of Disability Research Volume 23 ; 2021 ; 23 ; Stockholm University Press ;  ; https://www.sjdr.se/ >
       au < doNotProcess ; 2022 ; 24 ; Scandinavian Journal of Disability Research Volume 24 ; 2022 ; 24 ; Stockholm University Press ;  ; https://sjdr.se/ >
       au < doNotProcess ; 2023 ; 25 ; Scandinavian Journal of Disability Research Volume 25 ; 2023 ; 25 ; Stockholm University Press ;  ; https://sjdr.se/ >
       au < ready ; 2024 ; 26 ; Scandinavian Journal of Disability Research Volume 26 ; 2024 ; 26 ; Stockholm University Press ;  ; https://sjdr.se/ >
@@ -415,13 +415,13 @@
       nondefparam[base_url2] = https://account.sjwop.com/
       nondefparam[journal_id] = su-j-sjwop
 
-      au < down ; 2016 ; 1 ; Scandinavian Journal of Work and Organizational Psychology Volume 2016 ; 2016 ; 1 ; Stockholm University Press ;  ; http://www.sjwop.com/ >
-      au < down ; 2017 ; 2 ; Scandinavian Journal of Work and Organizational Psychology Volume 2017 ; 2017 ; 2 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
-      au < down ; 2018 ; 3 ; Scandinavian Journal of Work and Organizational Psychology Volume 2018 ; 2018 ; 3 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
-      au < down ; 2019 ; 4 ; Scandinavian Journal of Work and Organizational Psychology Volume 2019 ; 2019 ; 4 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
-      au < down ; 2020 ; 5 ; Scandinavian Journal of Work and Organizational Psychology Volume 2020 ; 2020 ; 5 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
-      au < down ; 2021 ; 6 ; Scandinavian Journal of Work and Organizational Psychology Volume 2021 ; 2021 ; 6 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
-      au < down ; 2022 ; 7 ; Scandinavian Journal of Work and Organizational Psychology Volume 2022 ; 2022 ; 7 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
+      au < released ; 2016 ; 1 ; Scandinavian Journal of Work and Organizational Psychology Volume 2016 ; 2016 ; 1 ; Stockholm University Press ;  ; http://www.sjwop.com/ >
+      au < released ; 2017 ; 2 ; Scandinavian Journal of Work and Organizational Psychology Volume 2017 ; 2017 ; 2 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
+      au < released ; 2018 ; 3 ; Scandinavian Journal of Work and Organizational Psychology Volume 2018 ; 2018 ; 3 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
+      au < released ; 2019 ; 4 ; Scandinavian Journal of Work and Organizational Psychology Volume 2019 ; 2019 ; 4 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
+      au < released ; 2020 ; 5 ; Scandinavian Journal of Work and Organizational Psychology Volume 2020 ; 2020 ; 5 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
+      au < released ; 2021 ; 6 ; Scandinavian Journal of Work and Organizational Psychology Volume 2021 ; 2021 ; 6 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
+      au < released ; 2022 ; 7 ; Scandinavian Journal of Work and Organizational Psychology Volume 2022 ; 2022 ; 7 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
       au < doNotProcess ; 2023 ; 8 ; Scandinavian Journal of Work and Organizational Psychology Volume 2023 ; 2023 ; 8 ; Stockholm University Press ;  ; https://sjwop.com/ >
       au < manifest ; 2024 ; 9 ; Scandinavian Journal of Work and Organizational Psychology Volume 2024 ; 2024 ; 9 ; Stockholm University Press ;  ; https://sjwop.com/ >
       au < manifest ; 2025 ; 10 ; Scandinavian Journal of Work and Organizational Psychology Volume 2025 ; 2025 ; 10 ; Stockholm University Press ;  ; https://sjwop.com/ >
@@ -440,27 +440,27 @@
       nondefparam[base_url2] = https://account.iberoamericana.se/
       nondefparam[journal_id] = su-j-injlacs
 
-      au < down ; 2001 ; 31 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2001 ; 2001 ; 31 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2002 ; 32 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2002 ; 2002 ; 32 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2003 ; 33 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2003 ; 2003 ; 33 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2004 ; 34 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2004 ; 2004 ; 34 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2005 ; 35 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2005 ; 2005 ; 35 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2006 ; 36 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2006 ; 2006 ; 36 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2007 ; 37 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2007 ; 2007 ; 37 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2001 ; 31 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2001 ; 2001 ; 31 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2002 ; 32 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2002 ; 2002 ; 32 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2003 ; 33 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2003 ; 2003 ; 33 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2004 ; 34 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2004 ; 2004 ; 34 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2005 ; 35 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2005 ; 2005 ; 35 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2006 ; 36 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2006 ; 2006 ; 36 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2007 ; 37 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2007 ; 2007 ; 37 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
       au < doesNotExist ; 2008 ; 38 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2008 ; 2008 ; 38 ; Stockholm University Press ;  ; https://iberoamericana.se/ > #M exists. No articles for that year.
-      au < down ; 2009 ; 39 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2009 ; 2009 ; 39 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2010 ; 40 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2010 ; 2010 ; 40 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2011 ; 41 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2011 ; 2011 ; 41 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2012 ; 42 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2012 ; 2012 ; 42 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2013 ; 43 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2013 ; 2013 ; 43 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2014 ; 44 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2014 ; 2014 ; 44 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2009 ; 39 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2009 ; 2009 ; 39 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2010 ; 40 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2010 ; 2010 ; 40 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2011 ; 41 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2011 ; 2011 ; 41 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2012 ; 42 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2012 ; 2012 ; 42 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2013 ; 43 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2013 ; 2013 ; 43 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2014 ; 44 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2014 ; 2014 ; 44 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
       au < doesNotExist ; 2015 ; 0 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2015 ; 2015 ; 0 ; Stockholm University Press ;  ; https://iberoamericana.se/ > #M exists. No articles for that year.
-      au < down ; 2016 ; 45 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2016 ; 2016 ; 45 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2017 ; 46 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2017 ; 2017 ; 46 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2018 ; 47 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2018 ; 2018 ; 47 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2019 ; 48 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2019 ; 2019 ; 48 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2020 ; 49 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2020 ; 2020 ; 49 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
-      au < down ; 2021 ; 50 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2021 ; 2021 ; 50 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2016 ; 45 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2016 ; 2016 ; 45 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2017 ; 46 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2017 ; 2017 ; 46 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2018 ; 47 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2018 ; 2018 ; 47 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2019 ; 48 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2019 ; 2019 ; 48 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2020 ; 49 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2020 ; 2020 ; 49 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
+      au < released ; 2021 ; 50 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2021 ; 2021 ; 50 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ >
       au < doNotProcess ; 2022 ; 51 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 ; 2022 ; 51 ; Stockholm University Press ;  ; https://iberoamericana.se/ >
       au < doNotProcess ; 2023 ; 52 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2023 ; 2023 ; 52 ; Stockholm University Press ;  ; https://iberoamericana.se/ >
       au < manifest ; 2024 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ >
@@ -655,15 +655,15 @@
       nondefparam[base_url2] = https://account.annalsofglobalhealth.org/
       nondefparam[journal_id] = up-j-agh
 
-      au < down ; 2014 ; 80 ; Annals of Global Health Volume 2014 ; 2014 ; 80 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
-      au < down ; 2015 ; 81 ; Annals of Global Health Volume 2015 ; 2015 ; 81 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
-      au < down ; 2016 ; 82 ; Annals of Global Health Volume 2016 ; 2016 ; 82 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
-      au < down ; 2017 ; 83 ; Annals of Global Health Volume 2017 ; 2017 ; 83 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
-      au < down ; 2018 ; 84 ; Annals of Global Health Volume 2018 ; 2018 ; 84 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
-      au < down ; 2019 ; 85 ; Annals of Global Health Volume 2019 ; 2019 ; 85 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
-      au < down ; 2020 ; 86 ; Annals of Global Health Volume 2020 ; 2020 ; 86 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
-      au < down ; 2021 ; 87 ; Annals of Global Health Volume 2021 ; 2021 ; 87 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
-      au < down ; 2022 ; 88 ; Annals of Global Health Volume 2022 ; 2022 ; 88 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
+      au < released ; 2014 ; 80 ; Annals of Global Health Volume 2014 ; 2014 ; 80 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
+      au < released ; 2015 ; 81 ; Annals of Global Health Volume 2015 ; 2015 ; 81 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
+      au < released ; 2016 ; 82 ; Annals of Global Health Volume 2016 ; 2016 ; 82 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
+      au < released ; 2017 ; 83 ; Annals of Global Health Volume 2017 ; 2017 ; 83 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
+      au < released ; 2018 ; 84 ; Annals of Global Health Volume 2018 ; 2018 ; 84 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
+      au < released ; 2019 ; 85 ; Annals of Global Health Volume 2019 ; 2019 ; 85 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
+      au < released ; 2020 ; 86 ; Annals of Global Health Volume 2020 ; 2020 ; 86 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
+      au < released ; 2021 ; 87 ; Annals of Global Health Volume 2021 ; 2021 ; 87 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
+      au < released ; 2022 ; 88 ; Annals of Global Health Volume 2022 ; 2022 ; 88 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
       au < doNotProcess ; 2023 ; 89 ; Annals of Global Health Volume 2023 ; 2023 ; 89 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ >
       au < manifest ; 2024 ; 90 ; Annals of Global Health Volume 2024 ; 2024 ; 90 ; Ubiquity Press ; No substance ; https://annalsofglobalhealth.org/ >
       au < manifest ; 2025 ; 91 ; Annals of Global Health Volume 2025 ; 2025 ; 91 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ >
@@ -718,10 +718,10 @@
       au < doNotProcess ; 2015 ; 29 ; Current: Journal of Marine Education Volume 2015 ; 2015 ; 29 ; Ubiquity Press ;  ; https://current-journal.com/ > 
       au < doNotProcess ; 2016 ; 30 ; Current: Journal of Marine Education Volume 2016 ; 2016 ; 30 ; Ubiquity Press ;  ; https://current-journal.com/ > 
       au < doNotProcess ; 2017 ; 31 ; Current: Journal of Marine Education Volume 2017 ; 2017 ; 31 ; Ubiquity Press ;  ; https://current-journal.com/ > 
-      au < down ; 2018 ; 31,32 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; 31,32 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
-      au < down ; 2019 ; 33 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; 33 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
-      au < down ; 2020 ; 34 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; 34 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
-      au < down ; 2021 ; 35 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; 35 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
+      au < released ; 2018 ; 31,32 ; Current: Journal of Marine Education Volume 2018 ; 2018 ; 31,32 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
+      au < released ; 2019 ; 33 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; 33 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
+      au < released ; 2020 ; 34 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; 34 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
+      au < released ; 2021 ; 35 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; 35 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
       au < manifest ; 2022 ; 36 ; Current: Journal of Marine Education Volume 2022 ; 2022 ; 36 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
       au < manifest ; 2023 ; 37,38 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; 37,38 ; Ubiquity Press ;  ; https://current-journal.com/ >
       au < manifest ; 2024 ; 39 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://current-journal.com/ >
@@ -743,8 +743,8 @@
       #2019 AUs were published on the 2020 manifest page. Now fixed. See https://account.revista-anglo-saxonica.org/index.php/up-j-as/gateway/lockss?year=2020
 
       au < manifest ; 2019 ; 17 ; Anglo Saxonica Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ >
-      au < down ; 2020 ; 18 ; Anglo Saxonica Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.revista-anglo-saxonica.org/ >
-      au < down ; 2021 ; 19 ; Anglo Saxonica Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.revista-anglo-saxonica.org/ >
+      au < released ; 2020 ; 18 ; Anglo Saxonica Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.revista-anglo-saxonica.org/ >
+      au < released ; 2021 ; 19 ; Anglo Saxonica Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.revista-anglo-saxonica.org/ >
       au < doNotProcess ; 2022 ; 20 ; Anglo Saxonica Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ >
       au < doNotProcess ; 2023 ; 21 ; Anglo Saxonica Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ >
       au < manifest ; 2024 ; 22 ; Anglo Saxonica Volume 2024 ; 2024 ; 22 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ >
@@ -766,38 +766,38 @@
       nondefparam[base_url2] = https://account.archaeologybulletin.org/
       nondefparam[journal_id] = up-j-bha
 
-      au < down ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; 1 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; 2 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; 3 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 ; 4 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; 5 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 ; 6 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 ; 7 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 ; 8 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 ; 9 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2000 ; 10 ; Bulletin of the History of Archaeology Volume 2000 ; 2000 ; 10 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2001 ; 11 ; Bulletin of the History of Archaeology Volume 2001 ; 2001 ; 11 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2002 ; 12 ; Bulletin of the History of Archaeology Volume 2002 ; 2002 ; 12 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2003 ; 13 ; Bulletin of the History of Archaeology Volume 2003 ; 2003 ; 13 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2004 ; 14 ; Bulletin of the History of Archaeology Volume 2004 ; 2004 ; 14 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2005 ; 15 ; Bulletin of the History of Archaeology Volume 2005 ; 2005 ; 15 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2006 ; 16 ; Bulletin of the History of Archaeology Volume 2006 ; 2006 ; 16 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2007 ; 17 ; Bulletin of the History of Archaeology Volume 2007 ; 2007 ; 17 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 ; 18 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 ; 19 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2010 ; 20 ; Bulletin of the History of Archaeology Volume 2010 ; 2010 ; 20 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 ; 21 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
-      au < down ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; 22 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
-      au < down ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; 23 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
-      au < down ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; 24 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
-      au < down ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; 25 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; 26 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
-      au < down ; 2017 ; 27 ; Bulletin of the History of Archaeology Volume 2017 ; 2017 ; 27 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
-      au < down ; 2018 ; 28 ; Bulletin of the History of Archaeology Volume 2018 ; 2018 ; 28 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
-      au < down ; 2019 ; 29 ; Bulletin of the History of Archaeology Volume 2019 ; 2019 ; 29 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
-      au < down ; 2020 ; 30 ; Bulletin of the History of Archaeology Volume 2020 ; 2020 ; 30 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
-      au < down ; 2021 ; 31 ; Bulletin of the History of Archaeology Volume 2021 ; 2021 ; 31 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
-      au < down ; 2022 ; 32 ; Bulletin of the History of Archaeology Volume 2022 ; 2022 ; 32 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
+      au < released ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; 1 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; 2 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; 3 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 ; 4 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; 5 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 ; 6 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 ; 7 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 ; 8 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 ; 9 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2000 ; 10 ; Bulletin of the History of Archaeology Volume 2000 ; 2000 ; 10 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2001 ; 11 ; Bulletin of the History of Archaeology Volume 2001 ; 2001 ; 11 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2002 ; 12 ; Bulletin of the History of Archaeology Volume 2002 ; 2002 ; 12 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2003 ; 13 ; Bulletin of the History of Archaeology Volume 2003 ; 2003 ; 13 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2004 ; 14 ; Bulletin of the History of Archaeology Volume 2004 ; 2004 ; 14 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2005 ; 15 ; Bulletin of the History of Archaeology Volume 2005 ; 2005 ; 15 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2006 ; 16 ; Bulletin of the History of Archaeology Volume 2006 ; 2006 ; 16 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2007 ; 17 ; Bulletin of the History of Archaeology Volume 2007 ; 2007 ; 17 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2008 ; 18 ; Bulletin of the History of Archaeology Volume 2008 ; 2008 ; 18 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2009 ; 19 ; Bulletin of the History of Archaeology Volume 2009 ; 2009 ; 19 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2010 ; 20 ; Bulletin of the History of Archaeology Volume 2010 ; 2010 ; 20 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 ; 21 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
+      au < released ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; 22 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
+      au < released ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; 23 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
+      au < released ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; 24 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
+      au < released ; 2015 ; 25 ; Bulletin of the History of Archaeology Volume 2015 ; 2015 ; 25 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2016 ; 26 ; Bulletin of the History of Archaeology Volume 2016 ; 2016 ; 26 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
+      au < released ; 2017 ; 27 ; Bulletin of the History of Archaeology Volume 2017 ; 2017 ; 27 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
+      au < released ; 2018 ; 28 ; Bulletin of the History of Archaeology Volume 2018 ; 2018 ; 28 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
+      au < released ; 2019 ; 29 ; Bulletin of the History of Archaeology Volume 2019 ; 2019 ; 29 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
+      au < released ; 2020 ; 30 ; Bulletin of the History of Archaeology Volume 2020 ; 2020 ; 30 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
+      au < released ; 2021 ; 31 ; Bulletin of the History of Archaeology Volume 2021 ; 2021 ; 31 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
+      au < released ; 2022 ; 32 ; Bulletin of the History of Archaeology Volume 2022 ; 2022 ; 32 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
       au < doNotProcess ; 2023 ; 33 ; Bulletin of the History of Archaeology Volume 2023 ; 2023 ; 33 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ >
       au < manifest ; 2024 ; 34 ; Bulletin of the History of Archaeology Volume 2024 ; 2024 ; 34 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ >
       au < manifest ; 2025 ; 35 ; Bulletin of the History of Archaeology Volume 2025 ; 2025 ; 35 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ >
@@ -928,12 +928,12 @@
       nondefparam[base_url2] = https://account.glocality.eu/
       nondefparam[journal_id] = up-j-g
 
-      au < down ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; 1 ; Ubiquity Press ;  ; http://www.glocality.eu/ >
-      au < down ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; 2 ; Ubiquity Press ;  ; http://www.glocality.eu/ >
+      au < released ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; 1 ; Ubiquity Press ;  ; http://www.glocality.eu/ >
+      au < released ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; 2 ; Ubiquity Press ;  ; http://www.glocality.eu/ >
       au < superseded ; 2017 ; 0 ; Glocality: Undergraduate Academic Journal Volume 2017 [superseded] ; 2017 ; 0 ; Ubiquity Press ;  ; https://www.glocality.eu/ >
       au < doesNotExist ; 2019 ; 0 ; Glocality: Undergraduate Academic Journal Volume 2019 ; 2019 ; 0 ; Ubiquity Press ;  ; https://glocality.eu/ >
-      au < down ; 2020 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2020 ; 2020 ; 3 ; Ubiquity Press ;  ; https://www.glocality.eu/ >
-      au < down ; 2021 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://www.glocality.eu/ >
+      au < released ; 2020 ; 3 ; Glocality: Undergraduate Academic Journal Volume 2020 ; 2020 ; 3 ; Ubiquity Press ;  ; https://www.glocality.eu/ >
+      au < released ; 2021 ; 4 ; Glocality: Undergraduate Academic Journal Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://www.glocality.eu/ >
       au < doNotProcess ; 2022 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2022 ; 2022 ; 5 ; Ubiquity Press ;  ; https://glocality.eu/ >
       au < doNotProcess ; 2023 ; 6 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://glocality.eu/ >
       au < manifest ; 2024 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 7 ; Ubiquity Press ; No substance ; http://glocality.eu/ >
@@ -953,28 +953,28 @@
       nondefparam[base_url2] = https://account.ijic.org/
       nondefparam[journal_id] = up-j-ijic
 
-      au < down ; 2000 ; 1 ; International Journal of Integrated Care Volume 2000 ; 2000 ; 1 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2001 ; 1 ; International Journal of Integrated Care Volume 2001 ; 2001 ; 1 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2002 ; 2 ; International Journal of Integrated Care Volume 2002 ; 2002 ; 2 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2003 ; 3 ; International Journal of Integrated Care Volume 2003 ; 2003 ; 3 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2004 ; 4 ; International Journal of Integrated Care Volume 2004 ; 2004 ; 4 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2005 ; 5 ; International Journal of Integrated Care Volume 2005 ; 2005 ; 5 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2006 ; 6 ; International Journal of Integrated Care Volume 2006 ; 2006 ; 6 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2007 ; 7 ; International Journal of Integrated Care Volume 2007 ; 2007 ; 7 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2008 ; 8 ; International Journal of Integrated Care Volume 2008 ; 2008 ; 8 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2009 ; 9 ; International Journal of Integrated Care Volume 2009 ; 2009 ; 9 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2010 ; 10 ; International Journal of Integrated Care Volume 2010 ; 2010 ; 10 ; Ubiquity Press ;  ; http://www.ijic.org/ >
-      au < down ; 2011 ; 11 ; International Journal of Integrated Care Volume 2011 ; 2011 ; 11 ; Ubiquity Press ;  ; http://www.ijic.org/ >
-      au < down ; 2012 ; 12 ; International Journal of Integrated Care Volume 2012 ; 2012 ; 12 ; Ubiquity Press ;  ; http://www.ijic.org/ >
-      au < down ; 2013 ; 13 ; International Journal of Integrated Care Volume 2013 ; 2013 ; 13 ; Ubiquity Press ;  ; http://www.ijic.org/ >
-      au < down ; 2014 ; 14 ; International Journal of Integrated Care Volume 2014 ; 2014 ; 14 ; Ubiquity Press ;  ; http://www.ijic.org/ >
-      au < down ; 2015 ; 15 ; International Journal of Integrated Care Volume 2015 ; 2015 ; 15 ; Ubiquity Press ;  ; http://www.ijic.org/ >
-      au < down ; 2016 ; 16 ; International Journal of Integrated Care Volume 2016 ; 2016 ; 16 ; Ubiquity Press ;  ; http://www.ijic.org/ >
-      au < down ; 2017 ; 17 ; International Journal of Integrated Care Volume 2017 ; 2017 ; 17 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2018 ; 18 ; International Journal of Integrated Care Volume 2018 ; 2018 ; 18 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2019 ; 19 ; International Journal of Integrated Care Volume 2019 ; 2019 ; 19 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2020 ; 20 ; International Journal of Integrated Care Volume 2020 ; 2020 ; 20 ; Ubiquity Press ;  ; https://www.ijic.org/ >
-      au < down ; 2021 ; 21 ; International Journal of Integrated Care Volume 2021 ; 2021 ; 21 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2000 ; 1 ; International Journal of Integrated Care Volume 2000 ; 2000 ; 1 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2001 ; 1 ; International Journal of Integrated Care Volume 2001 ; 2001 ; 1 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2002 ; 2 ; International Journal of Integrated Care Volume 2002 ; 2002 ; 2 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2003 ; 3 ; International Journal of Integrated Care Volume 2003 ; 2003 ; 3 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2004 ; 4 ; International Journal of Integrated Care Volume 2004 ; 2004 ; 4 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2005 ; 5 ; International Journal of Integrated Care Volume 2005 ; 2005 ; 5 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2006 ; 6 ; International Journal of Integrated Care Volume 2006 ; 2006 ; 6 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2007 ; 7 ; International Journal of Integrated Care Volume 2007 ; 2007 ; 7 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2008 ; 8 ; International Journal of Integrated Care Volume 2008 ; 2008 ; 8 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2009 ; 9 ; International Journal of Integrated Care Volume 2009 ; 2009 ; 9 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2010 ; 10 ; International Journal of Integrated Care Volume 2010 ; 2010 ; 10 ; Ubiquity Press ;  ; http://www.ijic.org/ >
+      au < released ; 2011 ; 11 ; International Journal of Integrated Care Volume 2011 ; 2011 ; 11 ; Ubiquity Press ;  ; http://www.ijic.org/ >
+      au < released ; 2012 ; 12 ; International Journal of Integrated Care Volume 2012 ; 2012 ; 12 ; Ubiquity Press ;  ; http://www.ijic.org/ >
+      au < released ; 2013 ; 13 ; International Journal of Integrated Care Volume 2013 ; 2013 ; 13 ; Ubiquity Press ;  ; http://www.ijic.org/ >
+      au < released ; 2014 ; 14 ; International Journal of Integrated Care Volume 2014 ; 2014 ; 14 ; Ubiquity Press ;  ; http://www.ijic.org/ >
+      au < released ; 2015 ; 15 ; International Journal of Integrated Care Volume 2015 ; 2015 ; 15 ; Ubiquity Press ;  ; http://www.ijic.org/ >
+      au < released ; 2016 ; 16 ; International Journal of Integrated Care Volume 2016 ; 2016 ; 16 ; Ubiquity Press ;  ; http://www.ijic.org/ >
+      au < released ; 2017 ; 17 ; International Journal of Integrated Care Volume 2017 ; 2017 ; 17 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2018 ; 18 ; International Journal of Integrated Care Volume 2018 ; 2018 ; 18 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2019 ; 19 ; International Journal of Integrated Care Volume 2019 ; 2019 ; 19 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2020 ; 20 ; International Journal of Integrated Care Volume 2020 ; 2020 ; 20 ; Ubiquity Press ;  ; https://www.ijic.org/ >
+      au < released ; 2021 ; 21 ; International Journal of Integrated Care Volume 2021 ; 2021 ; 21 ; Ubiquity Press ;  ; https://www.ijic.org/ >
       au < doNotProcess ; 2022 ; 22 ; International Journal of Integrated Care Volume 2022 ; 2022 ; 22 ; Ubiquity Press ;  ; https://ijic.org/ >
       au < doNotProcess ; 2023 ; 23 ; International Journal of Integrated Care Volume 2023 ; 2023 ; 23 ; Ubiquity Press ;  ; https://ijic.org/ >
       au < manifest ; 2024 ; 24 ; International Journal of Integrated Care Volume 2024 ; 2024 ; 24 ; Ubiquity Press ;  ; https://ijic.org/ >
@@ -994,12 +994,12 @@
       nondefparam[base_url2] = https://account.rips-irsp.com/
       nondefparam[journal_id] = up-j-irsp
 
-      au < down ; 2016 ; 29 ; International Review of Social Psychology Volume 2016 ; 2016 ; 29 ; Ubiquity Press ;  ; http://www.rips-irsp.com/ >
-      au < down ; 2017 ; 30 ; International Review of Social Psychology Volume 2017 ; 2017 ; 30 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
-      au < down ; 2018 ; 31 ; International Review of Social Psychology Volume 2018 ; 2018 ; 31 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
-      au < down ; 2019 ; 32 ; International Review of Social Psychology Volume 2019 ; 2019 ; 32 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
-      au < down ; 2020 ; 33 ; International Review of Social Psychology Volume 2020 ; 2020 ; 33 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
-      au < down ; 2021 ; 34 ; International Review of Social Psychology Volume 2021 ; 2021 ; 34 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
+      au < released ; 2016 ; 29 ; International Review of Social Psychology Volume 2016 ; 2016 ; 29 ; Ubiquity Press ;  ; http://www.rips-irsp.com/ >
+      au < released ; 2017 ; 30 ; International Review of Social Psychology Volume 2017 ; 2017 ; 30 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
+      au < released ; 2018 ; 31 ; International Review of Social Psychology Volume 2018 ; 2018 ; 31 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
+      au < released ; 2019 ; 32 ; International Review of Social Psychology Volume 2019 ; 2019 ; 32 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
+      au < released ; 2020 ; 33 ; International Review of Social Psychology Volume 2020 ; 2020 ; 33 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
+      au < released ; 2021 ; 34 ; International Review of Social Psychology Volume 2021 ; 2021 ; 34 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
       au < doNotProcess ; 2022 ; 35 ; International Review of Social Psychology Volume 2022 ; 2022 ; 35 ; Ubiquity Press ;  ; https://rips-irsp.com/ >
       au < doNotProcess ; 2023 ; 36 ; International Review of Social Psychology Volume 2023 ; 2023 ; 36 ; Ubiquity Press ;  ; https://rips-irsp.com/ >
       au < manifest ; 2024 ; 37 ; International Review of Social Psychology Volume 2024 ; 2024 ; 37 ; Ubiquity Press ;  ; https://rips-irsp.com/ >
@@ -1019,25 +1019,25 @@
       nondefparam[base_url2] = https://account.jcircadianrhythms.com/
       nondefparam[journal_id] = up-j-jcr
 
-      au < down ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; 1 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; 2 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; 3 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2006 ; 4 ; Journal of Circadian Rhythms Volume 2006 ; 2006 ; 4 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; 5 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; 1 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; 2 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; 3 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2006 ; 4 ; Journal of Circadian Rhythms Volume 2006 ; 2006 ; 4 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2007 ; 5 ; Journal of Circadian Rhythms Volume 2007 ; 2007 ; 5 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
       au < manifest ; 2008 ; 6 ; Journal of Circadian Rhythms Volume 2008 ; 2008 ; 6 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
       au < manifest ; 2009 ; 7 ; Journal of Circadian Rhythms Volume 2009 ; 2009 ; 7 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
-      au < down ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; 8 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; 13 ; Ubiquity Press ;  ; http://www.jcircadianrhythms.com/ >
-      au < down ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; 14 ; Ubiquity Press ;  ; http://www.jcircadianrhythms.com/ >
-      au < down ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; 15 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2018 ; 16 ; Journal of Circadian Rhythms Volume 2018 ; 2018 ; 16 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2019 ; 17 ; Journal of Circadian Rhythms Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2020 ; 18 ; Journal of Circadian Rhythms Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
-      au < down ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; 8 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2015 ; 13 ; Journal of Circadian Rhythms Volume 2015 ; 2015 ; 13 ; Ubiquity Press ;  ; http://www.jcircadianrhythms.com/ >
+      au < released ; 2016 ; 14 ; Journal of Circadian Rhythms Volume 2016 ; 2016 ; 14 ; Ubiquity Press ;  ; http://www.jcircadianrhythms.com/ >
+      au < released ; 2017 ; 15 ; Journal of Circadian Rhythms Volume 2017 ; 2017 ; 15 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2018 ; 16 ; Journal of Circadian Rhythms Volume 2018 ; 2018 ; 16 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2019 ; 17 ; Journal of Circadian Rhythms Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2020 ; 18 ; Journal of Circadian Rhythms Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
+      au < released ; 2021 ; 19 ; Journal of Circadian Rhythms Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
       au < doNotProcess ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
       au < doNotProcess ; 2023 ; 21 ; Journal of Circadian Rhythms Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
       au < manifest ; 2024 ; 22 ; Journal of Circadian Rhythms Volume 2024 ; 2024 ; 22 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
@@ -1061,19 +1061,19 @@
       au < manifest ; 1997 ; 2,3 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; 2,3 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
       au < manifest ; 1998 ; 4,5 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; 4,5 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
       au < manifest ; 1999 ; 6 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; 6 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
-      au < down ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; 7 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < down ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; 8 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < down ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < down ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < down ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < down ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < down ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; 13 ; Ubiquity Press ;  ; http://www.jcms-journal.com/ >
-      au < down ; 2016 ; 14 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; 14 ; Ubiquity Press ;  ; http://www.jcms-journal.com/ >
-      au < down ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; 15 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < down ; 2018 ; 16 ; Journal of Conservation and Museum Studies Volume 2018 ; 2018 ; 16 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < down ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < down ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < down ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < released ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; 7 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < released ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; 8 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < released ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < released ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < released ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < released ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < released ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; 13 ; Ubiquity Press ;  ; http://www.jcms-journal.com/ >
+      au < released ; 2016 ; 14 ; Journal of Conservation and Museum Studies Volume 2016 ; 2016 ; 14 ; Ubiquity Press ;  ; http://www.jcms-journal.com/ >
+      au < released ; 2017 ; 15 ; Journal of Conservation and Museum Studies Volume 2017 ; 2017 ; 15 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < released ; 2018 ; 16 ; Journal of Conservation and Museum Studies Volume 2018 ; 2018 ; 16 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < released ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < released ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
+      au < released ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
       au < doNotProcess ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
       au < doNotProcess ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
 
@@ -1174,21 +1174,21 @@
       nondefparam[base_url2] = https://account.jmolecularsignaling.com/
       nondefparam[journal_id] = up-j-jms
 
-      au < down ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; 1 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
-      au < down ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; 2 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
-      au < down ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; 3 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
-      au < down ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; 4 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
-      au < down ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; 5 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
-      au < down ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; 6 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
-      au < down ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; 7 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
-      au < down ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; 8 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
-      au < down ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; 9 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
-      au < down ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; 10 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
-      au < down ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; 11 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
-      au < down ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; 12 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
-      au < down ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; 13 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
-      au < down ; 2020 ; 14 ; Journal of Molecular Signaling Volume 2020 ; 2020 ; 14 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
-      au < down ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; 15 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
+      au < released ; 2006 ; 1 ; Journal of Molecular Signaling Volume 2006 ; 2006 ; 1 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
+      au < released ; 2007 ; 2 ; Journal of Molecular Signaling Volume 2007 ; 2007 ; 2 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
+      au < released ; 2008 ; 3 ; Journal of Molecular Signaling Volume 2008 ; 2008 ; 3 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
+      au < released ; 2009 ; 4 ; Journal of Molecular Signaling Volume 2009 ; 2009 ; 4 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
+      au < released ; 2010 ; 5 ; Journal of Molecular Signaling Volume 2010 ; 2010 ; 5 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
+      au < released ; 2011 ; 6 ; Journal of Molecular Signaling Volume 2011 ; 2011 ; 6 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
+      au < released ; 2012 ; 7 ; Journal of Molecular Signaling Volume 2012 ; 2012 ; 7 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
+      au < released ; 2013 ; 8 ; Journal of Molecular Signaling Volume 2013 ; 2013 ; 8 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
+      au < released ; 2014 ; 9 ; Journal of Molecular Signaling Volume 2014 ; 2014 ; 9 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
+      au < released ; 2015 ; 10 ; Journal of Molecular Signaling Volume 2015 ; 2015 ; 10 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
+      au < released ; 2016 ; 11 ; Journal of Molecular Signaling Volume 2016 ; 2016 ; 11 ; Journal of Molecular Signaling ;  ; http://www.jmolecularsignaling.com/ >
+      au < released ; 2017 ; 12 ; Journal of Molecular Signaling Volume 2017 ; 2017 ; 12 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
+      au < released ; 2018 ; 13 ; Journal of Molecular Signaling Volume 2018 ; 2018 ; 13 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
+      au < released ; 2020 ; 14 ; Journal of Molecular Signaling Volume 2020 ; 2020 ; 14 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
+      au < released ; 2021 ; 15 ; Journal of Molecular Signaling Volume 2021 ; 2021 ; 15 ; Journal of Molecular Signaling ;  ; https://www.jmolecularsignaling.com/ >
       au < doNotProcess ; 2022 ; 16 ; Journal of Molecular Signaling Volume 2022 ; 2022 ; 16 ; Journal of Molecular Signaling ;  ; https://jmolecularsignaling.com/ >
 
   }
@@ -1334,11 +1334,11 @@
       nondefparam[journal_id] = up-j-jbsr
       #volume 1-98 this title. As of volume 99, name changed to Journal of the Belgian Society of Radiology 2514-8281
 
-      au < down ; 2010 ; 93 ; JBR-BTR Volume 2010 ; 2010 ; 93 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
-      au < down ; 2011 ; 94 ; JBR-BTR Volume 2011 ; 2011 ; 94 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
-      au < down ; 2012 ; 95 ; JBR-BTR Volume 2012 ; 2012 ; 95 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
-      au < down ; 2013 ; 96 ; JBR-BTR Volume 2013 ; 2013 ; 96 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
-      au < down ; 2014 ; 97 ; JBR-BTR Volume 2014 ; 2014 ; 97 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
+      au < released ; 2010 ; 93 ; JBR-BTR Volume 2010 ; 2010 ; 93 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
+      au < released ; 2011 ; 94 ; JBR-BTR Volume 2011 ; 2011 ; 94 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
+      au < released ; 2012 ; 95 ; JBR-BTR Volume 2012 ; 2012 ; 95 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
+      au < released ; 2013 ; 96 ; JBR-BTR Volume 2013 ; 2013 ; 96 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
+      au < released ; 2014 ; 97 ; JBR-BTR Volume 2014 ; 2014 ; 97 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
 
   }
 
@@ -1354,13 +1354,13 @@
       nondefparam[base_url2] = https://account.jbsr.be/
       nondefparam[journal_id] = up-j-jbsr
 
-      au < down ; 2015 ; 98,99 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2015 ; 2015 ; 98,99 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
-      au < down ; 2016 ; 100 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2016 ; 2016 ; 100 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
-      au < down ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; 101 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
-      au < down ; 2018 ; 102 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2018 ; 2018 ; 102 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
-      au < down ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 ; 103 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
-      au < down ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; 104 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
-      au < down ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 ; 105 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
+      au < released ; 2015 ; 98,99 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2015 ; 2015 ; 98,99 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
+      au < released ; 2016 ; 100 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2016 ; 2016 ; 100 ; Ubiquity Press ;  ; http://www.jbsr.be/ >
+      au < released ; 2017 ; 101 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2017 ; 2017 ; 101 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
+      au < released ; 2018 ; 102 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2018 ; 2018 ; 102 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
+      au < released ; 2019 ; 103 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2019 ; 2019 ; 103 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
+      au < released ; 2020 ; 104 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2020 ; 2020 ; 104 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
+      au < released ; 2021 ; 105 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2021 ; 2021 ; 105 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
       au < doNotProcess ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 ; 106 ; Ubiquity Press ;  ; https://jbsr.be/ >
       au < doNotProcess ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; 107 ; Ubiquity Press ;  ; https://jbsr.be/ >
       au < manifest ; 2024 ; 108 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2024 ; 2024 ; 108 ; Ubiquity Press ;  ; https://jbsr.be/ >
@@ -1380,11 +1380,11 @@
       nondefparam[base_url2] = https://account.mahkuscript.com/
       nondefparam[journal_id] = up-j-mhkujfar
 
-      au < down ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 1 (2016) ; 2016 ; 1 ; Ubiquity Press ;  ; http://www.mahkuscript.com/ >
-      au < down ; 2017 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 2 (2017) ; 2017 ; 1 ; Ubiquity Press ;  ; https://www.mahkuscript.com/ >
-      au < down ; 2018 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2 ; 2018 ; 2 ; Ubiquity Press ;  ; https://www.mahkuscript.com/ >
-      au < down ; 2019 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 3 ; 2019 ; 3 ; Ubiquity Press ;  ; https://www.mahkuscript.com/ >
-      au < down ; 2020 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 4 ; 2020 ; 4 ; Ubiquity Press ;  ; https://www.mahkuscript.com/ >
+      au < released ; 2016 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 1 (2016) ; 2016 ; 1 ; Ubiquity Press ;  ; http://www.mahkuscript.com/ >
+      au < released ; 2017 ; 1 ; MaHKUscript: Journal of Fine Art Research Volume 1 Issue 2 (2017) ; 2017 ; 1 ; Ubiquity Press ;  ; https://www.mahkuscript.com/ >
+      au < released ; 2018 ; 2 ; MaHKUscript: Journal of Fine Art Research Volume 2 ; 2018 ; 2 ; Ubiquity Press ;  ; https://www.mahkuscript.com/ >
+      au < released ; 2019 ; 3 ; MaHKUscript: Journal of Fine Art Research Volume 3 ; 2019 ; 3 ; Ubiquity Press ;  ; https://www.mahkuscript.com/ >
+      au < released ; 2020 ; 4 ; MaHKUscript: Journal of Fine Art Research Volume 4 ; 2020 ; 4 ; Ubiquity Press ;  ; https://www.mahkuscript.com/ >
       #Closed. All processed here. Available at https://mahkuscript.com/
   }
 
@@ -1463,22 +1463,22 @@
       nondefparam[base_url2] = https://account.thecommonsjournal.org/
       nondefparam[journal_id] = up-j-ijc
 
-      au < down ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; 1 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; 2 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; 3 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; 4 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; 5 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; 6 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; 7 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; 8 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; 9 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; 10 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; 11 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; 12 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; 13 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; 14 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2021 ; 15 ; International Journal of the Commons Volume 2021 ; 2021 ; 15 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
-      au < down ; 2022 ; 16 ; International Journal of the Commons Volume 2022 ; 2022 ; 16 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2007 ; 1 ; International Journal of the Commons Volume 2007 ; 2007 ; 1 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2008 ; 2 ; International Journal of the Commons Volume 2008 ; 2008 ; 2 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2009 ; 3 ; International Journal of the Commons Volume 2009 ; 2009 ; 3 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2010 ; 4 ; International Journal of the Commons Volume 2010 ; 2010 ; 4 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2011 ; 5 ; International Journal of the Commons Volume 2011 ; 2011 ; 5 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2012 ; 6 ; International Journal of the Commons Volume 2012 ; 2012 ; 6 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2013 ; 7 ; International Journal of the Commons Volume 2013 ; 2013 ; 7 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2014 ; 8 ; International Journal of the Commons Volume 2014 ; 2014 ; 8 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2015 ; 9 ; International Journal of the Commons Volume 2015 ; 2015 ; 9 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2016 ; 10 ; International Journal of the Commons Volume 2016 ; 2016 ; 10 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2017 ; 11 ; International Journal of the Commons Volume 2017 ; 2017 ; 11 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2018 ; 12 ; International Journal of the Commons Volume 2018 ; 2018 ; 12 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2019 ; 13 ; International Journal of the Commons Volume 2019 ; 2019 ; 13 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2020 ; 14 ; International Journal of the Commons Volume 2020 ; 2020 ; 14 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2021 ; 15 ; International Journal of the Commons Volume 2021 ; 2021 ; 15 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
+      au < released ; 2022 ; 16 ; International Journal of the Commons Volume 2022 ; 2022 ; 16 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
       au < doNotProcess ; 2023 ; 17 ; International Journal of the Commons Volume 2023 ; 2023 ; 17 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ >
       au < manifest ; 2024 ; 18 ; International Journal of the Commons Volume 2024 ; 2024 ; 18 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ >
       au < manifest ; 2025 ; 19 ; International Journal of the Commons Volume 2025 ; 2025 ; 19 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ >
@@ -1532,13 +1532,13 @@
       nondefparam[base_url2] = https://account.openquaternary.com/
       nondefparam[journal_id] = up-j-oq
 
-      au < down ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; 1 ; Ubiquity Press ;  ; http://www.openquaternary.com/ >
-      au < down ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; 2 ; Ubiquity Press ;  ; http://www.openquaternary.com/ >
-      au < down ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; 3 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
-      au < down ; 2018 ; 4 ; Open Quaternary Volume 2018 ; 2018 ; 4 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
-      au < down ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 ; 5 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
-      au < down ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; 6 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
-      au < down ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; 7 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
+      au < released ; 2015 ; 1 ; Open Quaternary Volume 2015 ; 2015 ; 1 ; Ubiquity Press ;  ; http://www.openquaternary.com/ >
+      au < released ; 2016 ; 2 ; Open Quaternary Volume 2016 ; 2016 ; 2 ; Ubiquity Press ;  ; http://www.openquaternary.com/ >
+      au < released ; 2017 ; 3 ; Open Quaternary Volume 2017 ; 2017 ; 3 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
+      au < released ; 2018 ; 4 ; Open Quaternary Volume 2018 ; 2018 ; 4 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
+      au < released ; 2019 ; 5 ; Open Quaternary Volume 2019 ; 2019 ; 5 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
+      au < released ; 2020 ; 6 ; Open Quaternary Volume 2020 ; 2020 ; 6 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
+      au < released ; 2021 ; 7 ; Open Quaternary Volume 2021 ; 2021 ; 7 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
       au < doNotProcess ; 2022 ; 8 ; Open Quaternary Volume 2022 ; 2022 ; 8 ; Ubiquity Press ;  ; https://openquaternary.com/ >
       au < doNotProcess ; 2023 ; 9 ; Open Quaternary Volume 2023 ; 2023 ; 9 ; Ubiquity Press ;  ; https://openquaternary.com/ >
       au < manifest ; 2024 ; 10 ; Open Quaternary Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openquaternary.com/ >
@@ -1561,23 +1561,23 @@
       au < manifest ; 2002 ; 42 ; Psychologica Belgica Volume 2002 ; 2002 ; 42 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
       au < manifest ; 2003 ; 43 ; Psychologica Belgica Volume 2003 ; 2003 ; 43 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
       au < manifest ; 2004 ; 44 ; Psychologica Belgica Volume 2004 ; 2004 ; 44 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
-      au < down ; 2005 ; 45 ; Psychologica Belgica Volume 2005 ; 2005 ; 45 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2006 ; 46 ; Psychologica Belgica Volume 2006 ; 2006 ; 46 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2007 ; 47 ; Psychologica Belgica Volume 2007 ; 2007 ; 47 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2008 ; 48 ; Psychologica Belgica Volume 2008 ; 2008 ; 48 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2009 ; 48,49 ; Psychologica Belgica Volume 2009 ; 2009 ; 48,49 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2010 ; 49,50 ; Psychologica Belgica Volume 2010 ; 2010 ; 49,50 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ >
-      au < down ; 2011 ; 51 ; Psychologica Belgica Volume 2011 ; 2011 ; 51 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2012 ; 52 ; Psychologica Belgica Volume 2012 ; 2012 ; 52 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2013 ; 53 ; Psychologica Belgica Volume 2013 ; 2013 ; 53 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2014 ; 54 ; Psychologica Belgica Volume 2014 ; 2014 ; 54 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2015 ; 55 ; Psychologica Belgica Volume 2015 ; 2015 ; 55 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ >
-      au < down ; 2016 ; 56 ; Psychologica Belgica Volume 2016 ; 2016 ; 56 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ >
-      au < down ; 2017 ; 57 ; Psychologica Belgica Volume 2017 ; 2017 ; 57 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2018 ; 57,58 ; Psychologica Belgica Volume 2018 ; 2018 ; 57,58 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2019 ; 59 ; Psychologica Belgica Volume 2019 ; 2019 ; 59 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2020 ; 60 ; Psychologica Belgica Volume 2020 ; 2020 ; 60 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
-      au < down ; 2021 ; 61 ; Psychologica Belgica Volume 2021 ; 2021 ; 61 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2005 ; 45 ; Psychologica Belgica Volume 2005 ; 2005 ; 45 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2006 ; 46 ; Psychologica Belgica Volume 2006 ; 2006 ; 46 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2007 ; 47 ; Psychologica Belgica Volume 2007 ; 2007 ; 47 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2008 ; 48 ; Psychologica Belgica Volume 2008 ; 2008 ; 48 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2009 ; 48,49 ; Psychologica Belgica Volume 2009 ; 2009 ; 48,49 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2010 ; 49,50 ; Psychologica Belgica Volume 2010 ; 2010 ; 49,50 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ >
+      au < released ; 2011 ; 51 ; Psychologica Belgica Volume 2011 ; 2011 ; 51 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2012 ; 52 ; Psychologica Belgica Volume 2012 ; 2012 ; 52 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2013 ; 53 ; Psychologica Belgica Volume 2013 ; 2013 ; 53 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2014 ; 54 ; Psychologica Belgica Volume 2014 ; 2014 ; 54 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2015 ; 55 ; Psychologica Belgica Volume 2015 ; 2015 ; 55 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ >
+      au < released ; 2016 ; 56 ; Psychologica Belgica Volume 2016 ; 2016 ; 56 ; Ubiquity Press ;  ; http://www.psychologicabelgica.com/ >
+      au < released ; 2017 ; 57 ; Psychologica Belgica Volume 2017 ; 2017 ; 57 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2018 ; 57,58 ; Psychologica Belgica Volume 2018 ; 2018 ; 57,58 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2019 ; 59 ; Psychologica Belgica Volume 2019 ; 2019 ; 59 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2020 ; 60 ; Psychologica Belgica Volume 2020 ; 2020 ; 60 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
+      au < released ; 2021 ; 61 ; Psychologica Belgica Volume 2021 ; 2021 ; 61 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
       au < doNotProcess ; 2022 ; 62 ; Psychologica Belgica Volume 2022 ; 2022 ; 62 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
       au < doNotProcess ; 2023 ; 63 ; Psychologica Belgica Volume 2023 ; 2023 ; 63 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
       au < manifest ; 2024 ; 64 ; Psychologica Belgica Volume 2024 ; 2024 ; 64 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
@@ -1693,11 +1693,11 @@
       nondefparam[base_url2] = https://account.journalofcognition.org/
       nondefparam[journal_id] = up-j-jc
 
-      au < down ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; 1 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ >
-      au < down ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; 2 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ >
-      au < down ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; 3 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ >
-      au < down ; 2021 ; 4 ; Journal of Cognition Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ >
-      au < down ; 2022 ; 5 ; Journal of Cognition Volume 2022 ; 2022 ; 5 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ >
+      au < released ; 2018 ; 1 ; Journal of Cognition Volume 2018 ; 2018 ; 1 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ >
+      au < released ; 2019 ; 2 ; Journal of Cognition Volume 2019 ; 2019 ; 2 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ >
+      au < released ; 2020 ; 3 ; Journal of Cognition Volume 2020 ; 2020 ; 3 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ >
+      au < released ; 2021 ; 4 ; Journal of Cognition Volume 2021 ; 2021 ; 4 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ >
+      au < released ; 2022 ; 5 ; Journal of Cognition Volume 2022 ; 2022 ; 5 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ >
       au < doNotProcess ; 2023 ; 6 ; Journal of Cognition Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://journalofcognition.org/ >
       au < manifest ; 2024 ; 7 ; Journal of Cognition Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://journalofcognition.org/ >
       au < manifest ; 2025 ; 8 ; Journal of Cognition Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journalofcognition.org/ >
@@ -1816,18 +1816,18 @@
       nondefparam[base_url2] = https://account.ssas-yearbook.com/
       nondefparam[journal_id] = up-j-jsv
 
-      au < down ; 2010 ; 1 ; Yearbook of Swiss Administrative Science Volume 2010 ; 2010 ; 1 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
-      au < down ; 2011 ; 2 ; Yearbook of Swiss Administrative Science Volume 2011 ; 2011 ; 2 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
-      au < down ; 2012 ; 3 ; Yearbook of Swiss Administrative Science Volume 2012 ; 2012 ; 3 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
-      au < down ; 2013 ; 4 ; Yearbook of Swiss Administrative Science Volume 2013 ; 2013 ; 4 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
-      au < down ; 2014 ; 5 ; Yearbook of Swiss Administrative Science Volume 2014 ; 2014 ; 5 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
-      au < down ; 2015 ; 6 ; Yearbook of Swiss Administrative Science Volume 2015 ; 2015 ; 6 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
-      au < down ; 2016 ; 7 ; Yearbook of Swiss Administrative Science Volume 2016 ; 2016 ; 7 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
-      au < down ; 2017 ; 8 ; Yearbook of Swiss Administrative Science Volume 2017 ; 2017 ; 8 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
-      au < down ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; 9 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
-      au < down ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; 10 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
-      au < down ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; 11 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
-      au < down ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; 12 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2010 ; 1 ; Yearbook of Swiss Administrative Science Volume 2010 ; 2010 ; 1 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2011 ; 2 ; Yearbook of Swiss Administrative Science Volume 2011 ; 2011 ; 2 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2012 ; 3 ; Yearbook of Swiss Administrative Science Volume 2012 ; 2012 ; 3 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2013 ; 4 ; Yearbook of Swiss Administrative Science Volume 2013 ; 2013 ; 4 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2014 ; 5 ; Yearbook of Swiss Administrative Science Volume 2014 ; 2014 ; 5 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2015 ; 6 ; Yearbook of Swiss Administrative Science Volume 2015 ; 2015 ; 6 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2016 ; 7 ; Yearbook of Swiss Administrative Science Volume 2016 ; 2016 ; 7 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2017 ; 8 ; Yearbook of Swiss Administrative Science Volume 2017 ; 2017 ; 8 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2018 ; 9 ; Yearbook of Swiss Administrative Science Volume 2018 ; 2018 ; 9 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2019 ; 10 ; Yearbook of Swiss Administrative Science Volume 2019 ; 2019 ; 10 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2020 ; 11 ; Yearbook of Swiss Administrative Science Volume 2020 ; 2020 ; 11 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
+      au < released ; 2021 ; 12 ; Yearbook of Swiss Administrative Science Volume 2021 ; 2021 ; 12 ; Ubiquity Press ;  ; https://www.ssas-yearbook.com/ >
       au < doNotProcess ; 2022 ; 13 ; Yearbook of Swiss Administrative Science Volume 2022 ; 2022 ; 13 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ >
       au < doNotProcess ; 2023 ; 14 ; Yearbook of Swiss Administrative Science Volume 2023 ; 2023 ; 14 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ >
       au < manifest ; 2024 ; 15 ; Yearbook of Swiss Administrative Science Volume 2024 ; 2024 ; 15 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ >
@@ -1857,26 +1857,6 @@
       au < manifest ; 2025 ; 8 ; Transactions of the International Society for Music Information Retrieval Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://transactions.ismir.net/ >
 
   }
-
-##  {
-##
-##      title <
-##        name = International Journal of Educational and Life Transitions ;
-##        eissn = 2754-2890
-##      >
-##
-##      comment[publisher] = Ubiquity Press
-##      #param[base_url] = https://ijelt.dundee.ac.uk/ #login found, https://account.ijelt.dundee.ac.uk/index.php/up-j-ijelt/login?source=%2Findex.php%2Fup-j-ijelt%2Fuser%2Fprofile
-##      nondefparam[base_url2] = https://account.ijelt.dundee.ac.uk/
-##      nondefparam[journal_id] = up-j-ijelt   
-##      #Left ubiquity
-##
-##      au < manifest ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; 1 ; Ubiquity Press ;  ; https://ijelt.dundee.ac.uk/ >
-##      au < manifest ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; 2 ; Ubiquity Press ;  ; https://ijelt.dundee.ac.uk/ >
-##      au < manifest ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 ; 3 ; Ubiquity Press ;  ; https://ijelt.dundee.ac.uk/ >
-##      au < manifest ; 2025 ; 4 ; International Journal of Educational and Life Transitions Volume 2025 ; 2025 ; 4 ; Ubiquity Press ;  ; https://ijelt.dundee.ac.uk/ >
-##
-##  }
 
   {
 
@@ -2020,23 +2000,23 @@
       nondefparam[base_url2] = https://account.utrechtlawreview.org/
       nondefparam[journal_id] = up-j-ulr
 
-      au < down ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; 1 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; 2 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2007 ; 3 ; Utrecht Law Review Volume 2007 ; 2007 ; 3 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2008 ; 4 ; Utrecht Law Review Volume 2008 ; 2008 ; 4 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2009 ; 5 ; Utrecht Law Review Volume 2009 ; 2009 ; 5 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2010 ; 6 ; Utrecht Law Review Volume 2010 ; 2010 ; 6 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2011 ; 7 ; Utrecht Law Review Volume 2011 ; 2011 ; 7 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; 8 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; 9 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; 10 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; 11 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; 12 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; 13 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; 14 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2019 ; 15 ; Utrecht Law Review Volume 2019 ; 2019 ; 15 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2020 ; 16 ; Utrecht Law Review Volume 2020 ; 2020 ; 16 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
-      au < down ; 2021 ; 17 ; Utrecht Law Review Volume 2021 ; 2021 ; 17 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; 1 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; 2 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2007 ; 3 ; Utrecht Law Review Volume 2007 ; 2007 ; 3 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2008 ; 4 ; Utrecht Law Review Volume 2008 ; 2008 ; 4 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2009 ; 5 ; Utrecht Law Review Volume 2009 ; 2009 ; 5 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2010 ; 6 ; Utrecht Law Review Volume 2010 ; 2010 ; 6 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2011 ; 7 ; Utrecht Law Review Volume 2011 ; 2011 ; 7 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2012 ; 8 ; Utrecht Law Review Volume 2012 ; 2012 ; 8 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2013 ; 9 ; Utrecht Law Review Volume 2013 ; 2013 ; 9 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2014 ; 10 ; Utrecht Law Review Volume 2014 ; 2014 ; 10 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2015 ; 11 ; Utrecht Law Review Volume 2015 ; 2015 ; 11 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2016 ; 12 ; Utrecht Law Review Volume 2016 ; 2016 ; 12 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2017 ; 13 ; Utrecht Law Review Volume 2017 ; 2017 ; 13 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2018 ; 14 ; Utrecht Law Review Volume 2018 ; 2018 ; 14 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2019 ; 15 ; Utrecht Law Review Volume 2019 ; 2019 ; 15 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2020 ; 16 ; Utrecht Law Review Volume 2020 ; 2020 ; 16 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
+      au < released ; 2021 ; 17 ; Utrecht Law Review Volume 2021 ; 2021 ; 17 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ >
       au < doNotProcess ; 2022 ; 18 ; Utrecht Law Review Volume 2022 ; 2022 ; 18 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ >
       au < doNotProcess ; 2023 ; 19 ; Utrecht Law Review Volume 2023 ; 2023 ; 19 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ >
       au < manifest ; 2024 ; 20 ; Utrecht Law Review Volume 2024 ; 2024 ; 20 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ >
@@ -2126,18 +2106,18 @@
       nondefparam[base_url2] = https://account.bioj-online.com/
       nondefparam[journal_id] = wr-j-bioj
 
-      au < down ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; 6 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
-      au < down ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; 7 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
-      au < down ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; 8 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
-      au < down ; 2012 ; 9 ; British and Irish Orthoptic Journal Volume 2012 ; 2012 ; 9 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
-      au < down ; 2013 ; 10 ; British and Irish Orthoptic Journal Volume 2013 ; 2013 ; 10 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
-      au < down ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; 11 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
-      au < down ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; 12 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
-      au < down ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; 13 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
-      au < down ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; 14 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
-      au < down ; 2019 ; 15 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; 15 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
-      au < down ; 2020 ; 16 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; 16 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
-      au < down ; 2021 ; 17 ; British and Irish Orthoptic Journal Volume 2021 ; 2021 ; 17 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; 6 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; 7 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; 8 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2012 ; 9 ; British and Irish Orthoptic Journal Volume 2012 ; 2012 ; 9 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2013 ; 10 ; British and Irish Orthoptic Journal Volume 2013 ; 2013 ; 10 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2014 ; 11 ; British and Irish Orthoptic Journal Volume 2014 ; 2014 ; 11 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2015 ; 12 ; British and Irish Orthoptic Journal Volume 2015 ; 2015 ; 12 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2016 ; 13 ; British and Irish Orthoptic Journal Volume 2016 ; 2016 ; 13 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2018 ; 14 ; British and Irish Orthoptic Journal Volume 2018 ; 2018 ; 14 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2019 ; 15 ; British and Irish Orthoptic Journal Volume 2019 ; 2019 ; 15 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2020 ; 16 ; British and Irish Orthoptic Journal Volume 2020 ; 2020 ; 16 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+      au < released ; 2021 ; 17 ; British and Irish Orthoptic Journal Volume 2021 ; 2021 ; 17 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
       au < doNotProcess ; 2022 ; 18 ; British and Irish Orthoptic Journal Volume 2022 ; 2022 ; 18 ; White Rose University Press ;  ; https://bioj-online.com/ >
       au < doNotProcess ; 2023 ; 19 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 ; 19 ; White Rose University Press ;  ; https://bioj-online.com/ >
       au < manifest ; 2024 ; 20 ; British and Irish Orthoptic Journal Volume 2024 ; 2024 ; 20 ; White Rose University Press ;  ; https://bioj-online.com/ >
@@ -2157,11 +2137,11 @@
       nondefparam[base_url2] = https://account.euroslajournal.org/
       nondefparam[journal_id] = wr-j-jesla
 
-      au < down ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; 1 ; White Rose University Press ;  ; https://www.euroslajournal.org/ >
-      au < down ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; 2 ; White Rose University Press ;  ; https://www.euroslajournal.org/ >
-      au < down ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; 3 ; White Rose University Press ;  ; https://www.euroslajournal.org/ >
-      au < down ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; 4 ; White Rose University Press ;  ; https://www.euroslajournal.org/ >
-      au < down ; 2021 ; 5 ; Journal of the European Second Language Association Volume 2021 ; 2021 ; 5 ; White Rose University Press ;  ; https://www.euroslajournal.org/ >
+      au < released ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; 1 ; White Rose University Press ;  ; https://www.euroslajournal.org/ >
+      au < released ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; 2 ; White Rose University Press ;  ; https://www.euroslajournal.org/ >
+      au < released ; 2019 ; 3 ; Journal of the European Second Language Association Volume 2019 ; 2019 ; 3 ; White Rose University Press ;  ; https://www.euroslajournal.org/ >
+      au < released ; 2020 ; 4 ; Journal of the European Second Language Association Volume 2020 ; 2020 ; 4 ; White Rose University Press ;  ; https://www.euroslajournal.org/ >
+      au < released ; 2021 ; 5 ; Journal of the European Second Language Association Volume 2021 ; 2021 ; 5 ; White Rose University Press ;  ; https://www.euroslajournal.org/ >
       au < doNotProcess ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 ; 2022 ; 6 ; White Rose University Press ;  ; https://euroslajournal.org/ >
       au < doNotProcess ; 2023 ; 7 ; Journal of the European Second Language Association Volume 2023 ; 2023 ; 7 ; White Rose University Press ;  ; https://euroslajournal.org/ >
       au < manifest ; 2024 ; 8 ; Journal of the European Second Language Association Volume 2024 ; 2024 ; 8 ; White Rose University Press ;  ; https://euroslajournal.org/ >
@@ -2199,8 +2179,8 @@
       nondefparam[base_url2] = https://account.ujpir-journal.com/
       nondefparam[journal_id] = wr-j-ujpir
 
-      au < down ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; 1 ; White Rose University Press ;  ; https://www.ujpir-journal.com/ >
-      au < down ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; 2 ; White Rose University Press ;  ; https://www.ujpir-journal.com/ >
+      au < released ; 2018 ; 1 ; Undergraduate Journal of Politics and International Relations Volume 2018 ; 2018 ; 1 ; White Rose University Press ;  ; https://www.ujpir-journal.com/ >
+      au < released ; 2019 ; 2 ; Undergraduate Journal of Politics and International Relations Volume 2019 ; 2019 ; 2 ; White Rose University Press ;  ; https://www.ujpir-journal.com/ >
 
   }
 
@@ -2235,15 +2215,15 @@
       nondefparam[base_url2] = https://account.stabilityjournal.org/
       nondefparam[journal_id] = up-j-sijsd
 
-      au < down ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
-      au < down ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
-      au < down ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; 3 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
-      au < down ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; 4 ; University of Bradford, Department of Peace Studies and International Development ;  ; http://www.stabilityjournal.org/ >
-      au < down ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; 5 ; University of Bradford, Department of Peace Studies and International Development ;  ; http://www.stabilityjournal.org/ >
-      au < down ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; 6 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
-      au < down ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; 7 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
-      au < down ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; 8 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
-      au < down ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; 9 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
+      au < released ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
+      au < released ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
+      au < released ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; 3 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
+      au < released ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; 4 ; University of Bradford, Department of Peace Studies and International Development ;  ; http://www.stabilityjournal.org/ >
+      au < released ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; 5 ; University of Bradford, Department of Peace Studies and International Development ;  ; http://www.stabilityjournal.org/ >
+      au < released ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; 6 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
+      au < released ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; 7 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
+      au < released ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; 8 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
+      au < released ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; 9 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
       au < doesNotExist ; 2021 ; 0 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; 0 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ >
       au < doNotProcess ; 2022 ; 10 ; Stability: International Journal of Security & Development Volume 2022 ; 2022 ; 10 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ >
       au < doNotProcess ; 2023 ; 11 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; 11 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ >
@@ -2395,59 +2375,6 @@
       au < manifest ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
 
   }
-
-#  {
-#
-#      title <
-#        name = The International Journal of Servant-Leadership ;
-#        eissn = 2160-8172
-#      >
-#
-#      comment[publisher] = Gonzaga Library Publishing
-#      #param[base_url] = https://ijsl.press.gonzaga.edu/
-#      nondefparam[base_url2] = https://account.ijsl.press.gonzaga.edu/
-#      nondefparam[journal_id] = gl-j-ijsl
-#
-#      au < manifest ; 2005 ; 1 ; The International Journal of Servant-Leadership Volume 2005 ; 2005 ; 1 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < manifest ; 2006 ; 2 ; The International Journal of Servant-Leadership Volume 2006 ; 2006 ; 2 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < doNotProcess ; 2007 ; 3 ; The International Journal of Servant-Leadership Volume 2007 ; 2007 ; 3 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < doNotProcess ; 2008 ; 4 ; The International Journal of Servant-Leadership Volume 2008 ; 2008 ; 4 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < manifest ; 2009 ; 5 ; The International Journal of Servant-Leadership Volume 2009 ; 2009 ; 5 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < doNotProcess ; 2010 ; 6 ; The International Journal of Servant-Leadership Volume 2010 ; 2010 ; 6 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < doNotProcess ; 2011 ; 7 ; The International Journal of Servant-Leadership Volume 2011 ; 2011 ; 7 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < doesNotExist ; 2012 ; 8 ; The International Journal of Servant-Leadership Volume 2012 ; 2012 ; 8 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < manifest ; 2013 ; 9 ; The International Journal of Servant-Leadership Volume 2013 ; 2013 ; 9 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < manifest ; 2014 ; 10 ; The International Journal of Servant-Leadership Volume 2014 ; 2014 ; 10 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < doNotProcess ; 2017 ; 11 ; The International Journal of Servant-Leadership Volume 2017 ; 2017 ; 11 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < manifest ; 2018 ; 12 ; The International Journal of Servant-Leadership Volume 2018 ; 2018 ; 12 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < manifest ; 2019 ; 13 ; The International Journal of Servant-Leadership Volume 2019 ; 2019 ; 13 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < manifest ; 2020 ; 14 ; The International Journal of Servant-Leadership Volume 2020 ; 2020 ; 14 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < manifest ; 2021 ; 15 ; The International Journal of Servant-Leadership Volume 2021 ; 2021 ; 15 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < doNotProcess ; 2022 ; 16 ; The International Journal of Servant-Leadership Volume 2022 ; 2022 ; 16 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < manifest ; 2023 ; 17 ; The International Journal of Servant-Leadership Volume 2023 ; 2023 ; 17 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < manifest ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 ; 18 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      au < manifest ; 2025 ; 19 ; The International Journal of Servant-Leadership Volume 2025 ; 2025 ; 19 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ >
-#      #Moved to bepress
-#  }
-#
-#  {
-#
-#      title <
-#        name = Indigenous Business & Public Administration ;
-#        eissn = 2766-015X
-#      >
-#
-#      comment[publisher] = Gonzaga Library Publishing
-#      #param[base_url] = https://ibapa.org/
-#      nondefparam[base_url2] = https://account.ibapa.org/
-#      nondefparam[journal_id] = gl-j-ibpa
-#
-#      au < doNotProcess ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 ; 1 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
-#      au < doNotProcess ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 ; 2 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
-#      au < doNotProcess ; 2024 ; 3 ; Indigenous Business & Public Administration Volume 2024 ; 2024 ; 3 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
-#      au < doNotProcess ; 2025 ; 4 ; Indigenous Business & Public Administration Volume 2025 ; 2025 ; 4 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
-#      #Moved to bepress
-#  }
 
   {
 
