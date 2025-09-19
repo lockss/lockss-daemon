@@ -96,9 +96,9 @@
       nondefparam[journal_id] = nondefparam
 #      param[base_url] = https://jhlr.org/
 
-      au < released ; 2016 ; 1 ; Journal of Home Language Research Volume 1 ; 2016 ; 1 ; Stockholm University Press ; https://jhlr.org/ >
-      au < released ; 2017 ; 2 ; Journal of Home Language Research Volume 2 ; 2017 ; 2 ; Stockholm University Press ; https://jhlr.org/ >
-      au < released ; 2018 ; 3 ; Journal of Home Language Research Volume 3 ; 2018 ; 3 ; Stockholm University Press ; https://jhlr.org/ >
+      au < down ; 2016 ; 1 ; Journal of Home Language Research Volume 1 ; 2016 ; 1 ; Stockholm University Press ; https://jhlr.org/ >
+      au < down ; 2017 ; 2 ; Journal of Home Language Research Volume 2 ; 2017 ; 2 ; Stockholm University Press ; https://jhlr.org/ >
+      au < down ; 2018 ; 3 ; Journal of Home Language Research Volume 3 ; 2018 ; 3 ; Stockholm University Press ; https://jhlr.org/ >
       
   }
 
