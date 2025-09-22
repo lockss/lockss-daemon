@@ -68,12 +68,12 @@
       param[journal_id] = UWS
 
       au < manifest ; 2019 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 1 ; 1 ; 2019 >
-      au < ready ; 2020 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 2 ; 2 ; 2020 >
-      au < ready ; 2021 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 3 ; 3 ; 2021 >
+      au < releasing ; 2020 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 2 ; 2 ; 2020 >
+      au < releasing ; 2021 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 3 ; 3 ; 2021 >
       au < manifest ; 2022 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 4 ; 4 ; 2022 >
-      au < ready ; 2023 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 5 ; 5 ; 2023 >
-      au < ready ; 2024 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 6 ; 6 ; 2024 >
-      au < ready ; 2025 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 7 ; 7 ; 2025 >
+      au < releasing ; 2023 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 5 ; 5 ; 2023 >
+      au < releasing ; 2024 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 6 ; 6 ; 2024 >
+      au < releasing ; 2025 ; SCAFFOLD: A SHOWCASE OF VANDERBILT FIRST-YEAR WRITING Volume 7 ; 7 ; 2025 >
 
   }
 
@@ -88,8 +88,8 @@
       attr[start_stem] = index.php/
       param[journal_id] = iris
 
-      au < ready ; 2019 ; Iris Journal of Scholarship Volume 1 ; 1 ; 2019 >
-      au < ready ; 2020 ; Iris Journal of Scholarship Volume 2 ; 2 ; 2020 >
+      au < releasing ; 2019 ; Iris Journal of Scholarship Volume 1 ; 1 ; 2019 >
+      au < releasing ; 2020 ; Iris Journal of Scholarship Volume 2 ; 2 ; 2020 >
 
   }
 
@@ -136,11 +136,11 @@
       attr[start_stem] = index.php/
       param[journal_id] = VanderbiltLives
 
-      au < ready ; 2018 ; Vanderbilt Lives Volume 1 ; 1 ; 2018 >
-      au < ready ; 2019 ; Vanderbilt Lives Volume 2 ; 2 ; 2019 >
+      au < releasing ; 2018 ; Vanderbilt Lives Volume 1 ; 1 ; 2018 >
+      au < releasing ; 2019 ; Vanderbilt Lives Volume 2 ; 2 ; 2019 >
       au < manifest ; 2020 ; Vanderbilt Lives Volume 3 ; 3 ; 2020 >
-      au < ready ; 2021 ; Vanderbilt Lives Volume 4 ; 4 ; 2021 >
-      au < ready ; 2023 ; Vanderbilt Lives Volume 5 ; 5 ; 2023 >
+      au < releasing ; 2021 ; Vanderbilt Lives Volume 4 ; 4 ; 2021 >
+      au < releasing ; 2023 ; Vanderbilt Lives Volume 5 ; 5 ; 2023 >
 
   }
 
