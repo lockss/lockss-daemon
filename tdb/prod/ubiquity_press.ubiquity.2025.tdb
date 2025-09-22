@@ -2267,15 +2267,15 @@
       nondefparam[base_url2] = https://account.jotsjournal.org/
       nondefparam[journal_id] = vt-j-jts
 
-      au < manifest ; 1996 ; 22 ; The Journal of Technology Studies Volume 1996 ; 1996 ; 22 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
-      au < manifest ; 1997 ; 23 ; The Journal of Technology Studies Volume 1997 ; 1997 ; 23 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
+      au < ready ; 1996 ; 22 ; The Journal of Technology Studies Volume 1996 ; 1996 ; 22 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
+      au < ready ; 1997 ; 23 ; The Journal of Technology Studies Volume 1997 ; 1997 ; 23 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < manifest ; 1998 ; 24 ; The Journal of Technology Studies Volume 1998 ; 1998 ; 24 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < manifest ; 1999 ; 25 ; The Journal of Technology Studies Volume 1999 ; 1999 ; 25 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < manifest ; 2000 ; 26 ; The Journal of Technology Studies Volume 2000 ; 2000 ; 26 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < doNotProcess ; 2001 ; 27 ; The Journal of Technology Studies Volume 2001 ; 2001 ; 27 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
-      au < manifest ; 2002 ; 28 ; The Journal of Technology Studies Volume 2002 ; 2002 ; 28 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
-      au < manifest ; 2003 ; 29 ; The Journal of Technology Studies Volume 2003 ; 2003 ; 29 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
-      au < manifest ; 2004 ; 30 ; The Journal of Technology Studies Volume 2004 ; 2004 ; 30 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
+      au < ready ; 2002 ; 28 ; The Journal of Technology Studies Volume 2002 ; 2002 ; 28 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
+      au < ready ; 2003 ; 29 ; The Journal of Technology Studies Volume 2003 ; 2003 ; 29 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
+      au < ready ; 2004 ; 30 ; The Journal of Technology Studies Volume 2004 ; 2004 ; 30 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < doNotProcess ; 2005 ; 31 ; The Journal of Technology Studies Volume 2005 ; 2005 ; 31 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < manifest ; 2006 ; 32 ; The Journal of Technology Studies Volume 2006 ; 2006 ; 32 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < doNotProcess ; 2007 ; 33 ; The Journal of Technology Studies Volume 2007 ; 2007 ; 33 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
@@ -2289,13 +2289,13 @@
       au < manifest ; 2015 ; 41 ; The Journal of Technology Studies Volume 2015 ; 2015 ; 41 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < manifest ; 2016 ; 42 ; The Journal of Technology Studies Volume 2016 ; 2016 ; 42 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < doNotProcess ; 2017 ; 43 ; The Journal of Technology Studies Volume 2017 ; 2017 ; 43 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
-      au < manifest ; 2018 ; 44 ; The Journal of Technology Studies Volume 2018 ; 2018 ; 44 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
-      au < manifest ; 2019 ; 45 ; The Journal of Technology Studies Volume 2019 ; 2019 ; 45 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
+      au < ready ; 2018 ; 44 ; The Journal of Technology Studies Volume 2018 ; 2018 ; 44 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
+      au < ready ; 2019 ; 45 ; The Journal of Technology Studies Volume 2019 ; 2019 ; 45 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < doNotProcess ; 2020 ; 46 ; The Journal of Technology Studies Volume 2020 ; 2020 ; 46 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
-      au < manifest ; 2021 ; 47 ; The Journal of Technology Studies Volume 2021 ; 2021 ; 47 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
-      au < manifest ; 2022 ; 48 ; The Journal of Technology Studies Volume 2022 ; 2022 ; 48 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
+      au < ready ; 2021 ; 47 ; The Journal of Technology Studies Volume 2021 ; 2021 ; 47 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
+      au < ready ; 2022 ; 48 ; The Journal of Technology Studies Volume 2022 ; 2022 ; 48 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       #au < doesNotExist ; 2023 ; 0 ; The Journal of Technology Studies Volume 2023 ; 2023 ; 0 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
-      au < manifest ; 2024 ; 49 ; The Journal of Technology Studies Volume 2024 ; 2024 ; 49 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
+      au < ready ; 2024 ; 49 ; The Journal of Technology Studies Volume 2024 ; 2024 ; 49 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < manifest ; 2025 ; 50 ; The Journal of Technology Studies Volume 2025 ; 2025 ; 50 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
 
   }
@@ -2319,7 +2319,7 @@
       au < doNotProcess ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
       au < doNotProcess ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 ; 3 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
       au < doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; 4 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
-      au < manifest ; 2024 ; 5 ; Studies in Engineering Education Volume 2024 ; 2024 ; 5 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
+      au < ready ; 2024 ; 5 ; Studies in Engineering Education Volume 2024 ; 2024 ; 5 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
       au < manifest ; 2025 ; 6 ; Studies in Engineering Education Volume 2025 ; 2025 ; 6 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
 
   }
@@ -2371,7 +2371,7 @@
       au < doNotProcess ; 2021 ; 32,33 ; Journal of Technology Education Volume 2021 ; 2021 ; 32,33 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
       au < doNotProcess ; 2022 ; 33,34 ; Journal of Technology Education Volume 2022 ; 2022 ; 33,34 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
       au < doNotProcess ; 2023 ; 34,35 ; Journal of Technology Education Volume 2023 ; 2023 ; 34,35 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
-      au < manifest ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < ready ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
       au < manifest ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
 
   }
@@ -2476,7 +2476,7 @@
       au < doNotProcess ; 2021 ; 17 ; Methodist DeBakey Cardiovascular Journal Volume 2021 ; 2021 ; 17 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
       au < doNotProcess ; 2022 ; 18 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 ; 18 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
       au < doNotProcess ; 2023 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2023 ; 2023 ; 19 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-      au < manifest ; 2024 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 20 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < ready ; 2024 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 20 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
       au < manifest ; 2025 ; 21 ; Methodist DeBakey Cardiovascular Journal Volume 2025 ; 2025 ; 21 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
 
   }
@@ -2497,7 +2497,7 @@
       au < released ; 2021 ; 2 ; New Area Studies Volume 2021 ; 2021 ; 2 ; University of East Anglia ;  ; https://newareastudies.com/ >
       au < doNotProcess ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; 3 ; University of East Anglia ;  ; https://newareastudies.com/ >
       au < doesNotExist ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ >
-      au < manifest ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ >
+      au < ready ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ >
       au < expected ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; University of East Anglia ;  ; https://newareastudies.com/ >
 
   }
@@ -2526,7 +2526,7 @@
       au < manifest ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; 10 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
       au < manifest ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
       au < doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-      au < manifest ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < ready ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
       au < manifest ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
 
   }
@@ -2543,14 +2543,14 @@
       nondefparam[base_url2] = https://account.jhnr.net/
       nondefparam[journal_id] = ul-j-jhnr
 
-      au < manifest ; 2017 ; 1 ; Journal of Historical Network Research Volume 2017 ; 2017 ; 1 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-      au < manifest ; 2018 ; 2 ; Journal of Historical Network Research Volume 2018 ; 2018 ; 2 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-      au < manifest ; 2019 ; 3 ; Journal of Historical Network Research Volume 2019 ; 2019 ; 3 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-      au < manifest ; 2020 ; 4 ; Journal of Historical Network Research Volume 2020 ; 2020 ; 4 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-      au < manifest ; 2021 ; 5,6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5,6 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-      au < manifest ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-      au < manifest ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-      au < manifest ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < ready ; 2017 ; 1 ; Journal of Historical Network Research Volume 2017 ; 2017 ; 1 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < ready ; 2018 ; 2 ; Journal of Historical Network Research Volume 2018 ; 2018 ; 2 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < ready ; 2019 ; 3 ; Journal of Historical Network Research Volume 2019 ; 2019 ; 3 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < ready ; 2020 ; 4 ; Journal of Historical Network Research Volume 2020 ; 2020 ; 4 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < ready ; 2021 ; 5,6 ; Journal of Historical Network Research Volume 2021 ; 2021 ; 5,6 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < ready ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < ready ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < ready ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ >
       au < manifest ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ;  ; https://jhnr.net/ >
 
   }
@@ -2568,16 +2568,16 @@
       nondefparam[journal_id] = edendle-j-ejodel
       #No volume for 2021
 
-      au < manifest ; 2014 ; 17 ; European Journal of Open, Distance and E-Learning Volume 2014 ; 2014 ; 17 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-      au < manifest ; 2015 ; 18 ; European Journal of Open, Distance and E-Learning Volume 2015 ; 2015 ; 18 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-      au < manifest ; 2016 ; 19 ; European Journal of Open, Distance and E-Learning Volume 2016 ; 2016 ; 19 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-      au < manifest ; 2017 ; 20 ; European Journal of Open, Distance and E-Learning Volume 2017 ; 2017 ; 20 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-      au < manifest ; 2018 ; 21 ; European Journal of Open, Distance and E-Learning Volume 2018 ; 2018 ; 21 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-      au < manifest ; 2019 ; 22 ; European Journal of Open, Distance and E-Learning Volume 2019 ; 2019 ; 22 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-      au < manifest ; 2020 ; 23 ; European Journal of Open, Distance and E-Learning Volume 2020 ; 2020 ; 23 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-      au < manifest ; 2022 ; 24 ; European Journal of Open, Distance and E-Learning Volume 2022 ; 2022 ; 24 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-      au < manifest ; 2023 ; 25 ; European Journal of Open, Distance and E-Learning Volume 2023 ; 2023 ; 25 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-      au < manifest ; 2024 ; 26 ; European Journal of Open, Distance and E-Learning Volume 2024 ; 2024 ; 26 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < ready ; 2014 ; 17 ; European Journal of Open, Distance and E-Learning Volume 2014 ; 2014 ; 17 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < ready ; 2015 ; 18 ; European Journal of Open, Distance and E-Learning Volume 2015 ; 2015 ; 18 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < ready ; 2016 ; 19 ; European Journal of Open, Distance and E-Learning Volume 2016 ; 2016 ; 19 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < ready ; 2017 ; 20 ; European Journal of Open, Distance and E-Learning Volume 2017 ; 2017 ; 20 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < ready ; 2018 ; 21 ; European Journal of Open, Distance and E-Learning Volume 2018 ; 2018 ; 21 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < ready ; 2019 ; 22 ; European Journal of Open, Distance and E-Learning Volume 2019 ; 2019 ; 22 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < ready ; 2020 ; 23 ; European Journal of Open, Distance and E-Learning Volume 2020 ; 2020 ; 23 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < ready ; 2022 ; 24 ; European Journal of Open, Distance and E-Learning Volume 2022 ; 2022 ; 24 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < ready ; 2023 ; 25 ; European Journal of Open, Distance and E-Learning Volume 2023 ; 2023 ; 25 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < ready ; 2024 ; 26 ; European Journal of Open, Distance and E-Learning Volume 2024 ; 2024 ; 26 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
       au < manifest ; 2025 ; 27 ; European Journal of Open, Distance and E-Learning Volume 2025 ; 2025 ; 27 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
 
   }
@@ -2594,7 +2594,7 @@
       nondefparam[base_url2] = https://account.neuroircases.com/
       nondefparam[journal_id] = wpllc-j-jncr
 
-      au < manifest ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ >
+      au < ready ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ >
       au < manifest ; 2025 ; 2 ; Journal of Neurointerventional Case Reports Volume 2025 ; 2025 ; 2 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ >
 
   }
