@@ -719,6 +719,44 @@ public class TestAuUtil extends LockssTestCase {
 						"text/html;charset=\"utf-8\""));
   }
 
+  public void testGetContentEncoding() /*throws Exception*/ {
+    String url = "http://foo/";
+    MockArchivalUnit mau = new MockArchivalUnit();
+
+    MockCachedUrl mcu = new MockCachedUrl(url, mau);
+    assertNull(AuUtil.getContentEncoding(mcu));
+
+    CIProperties props = new CIProperties();
+    mcu.setProperties(props);
+    assertNull(AuUtil.getContentEncoding(props));
+    assertNull(AuUtil.getContentEncoding(mcu));
+
+    props.setProperty(CachedUrl.PROPERTY_CONTENT_ENCODING, "");
+    mcu.setProperties(props);
+    assertNull(AuUtil.getContentEncoding(props));
+    assertNull(AuUtil.getContentEncoding(mcu));
+
+    props.setProperty(CachedUrl.PROPERTY_CONTENT_ENCODING, "\"\"");
+    mcu.setProperties(props);
+    assertNull(AuUtil.getContentEncoding(props));
+    assertNull(AuUtil.getContentEncoding(mcu));
+
+    props.setProperty(CachedUrl.PROPERTY_CONTENT_ENCODING, "foo");
+    mcu.setProperties(props);
+    assertEquals("foo", AuUtil.getContentEncoding(props));
+    assertEquals("foo", AuUtil.getContentEncoding(mcu));
+
+    props.setProperty(CachedUrl.PROPERTY_CONTENT_ENCODING, "\"foo\"");
+    mcu.setProperties(props);
+    assertEquals("foo", AuUtil.getContentEncoding(props));
+    assertEquals("foo", AuUtil.getContentEncoding(mcu));
+
+    props.setProperty(CachedUrl.PROPERTY_CONTENT_ENCODING, "\"foo");
+    mcu.setProperties(props);
+    assertEquals("\"foo", AuUtil.getContentEncoding(props));
+    assertEquals("\"foo", AuUtil.getContentEncoding(mcu));
+  }
+
   public void testGetAuCreationTime() throws IOException {
     long now = TimeBase.nowMs() - 10000;
     setUpDiskSpace();

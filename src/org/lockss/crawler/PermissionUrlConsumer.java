@@ -112,8 +112,7 @@ public class PermissionUrlConsumer extends SimpleUrlConsumer {
 
     PermissionChecker checker;
 
-    String contentEncoding =
-      fud.headers.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING);
+    String contentEncoding = AuUtil.getContentEncoding(fud.headers);
 
     // check the lockss checkers and find at least one checker that matches
     for (Iterator<PermissionChecker> it = permCheckers.iterator();

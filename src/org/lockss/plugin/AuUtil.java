@@ -756,6 +756,42 @@ public class AuUtil {
     return HeaderUtil.getCharsetOrDefaultFromContentType(ctype);
   }
 
+  /** Return the Content-Encoding of a CachedUrl.  See {@link
+   * AuUtil#getContentEncoding(String)} */
+  public static String getContentEncoding(CachedUrl cu) {
+    return AuUtil.getContentEncoding(cu.getProperties());
+  }
+
+  /** Return the Content-Encoding from a CachedUrl's properties.  See
+   * {@link AuUtil#getContentEncoding(String)} */
+  public static String getContentEncoding(CIProperties props) {
+    return AuUtil.getContentEncoding(props.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING));
+  }
+
+  /** Process a Content-Encoding string, removing delimiting quotes
+   * and ensuring that null is returned for both null and empty
+   * string.  Some origin servers have returned an empty
+   * Content-Encoding: header, which when served via a jetty proxy
+   * turned into Content-Encoding: "", which got stored that way and
+   * caused <tt>UnsupportedEncodingException: ""</tt>.  All users of
+   * Content-Encoding should call one of these methods rather than
+   * accessing it directly. */
+  public static String getContentEncoding(String enc) {
+    log.critical("enc: " + enc);
+
+    if (enc == null) {
+      return null;
+    }
+    if (enc.length() >= 2 &&
+        enc.charAt(0) == '"' && enc.charAt(enc.length() - 1) == '"') {
+      enc = enc.substring(1, enc.length() - 1);
+    }
+    if (enc.length() == 0) {
+      return null;
+    }
+    return enc;
+  }
+
   /** Return true iff the AU specifies archive file types whose memebers
    * should be accessible as CachedUrls */
   public static boolean hasArchiveFileTypes(ArchivalUnit au) {

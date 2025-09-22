@@ -307,7 +307,8 @@ public class BaseCachedUrl implements CachedUrl {
    * compressed content, not what is returned in this stream. */
   public InputStream getUncompressedInputStream(HashedInputStream.Hasher hasher) {
     InputStream in = getUnfilteredInputStream(hasher);;
-    String contentEncoding = getProperty(PROPERTY_CONTENT_ENCODING);
+    String contentEncoding =
+      AuUtil.getContentEncoding(getProperty(PROPERTY_CONTENT_ENCODING));
     // Daemon versions 1.67 and 1.68 decompressed on receipt but didn't
     // remove the Content-Encoding header.  If decompression fails return
     // the raw stream.

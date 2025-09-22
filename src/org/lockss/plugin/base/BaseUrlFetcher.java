@@ -589,8 +589,7 @@ public class BaseUrlFetcher implements UrlFetcher {
       input = StreamUtil.getResettableInputStream(input);
       input.mark(CurrentConfig.getIntParam(PARAM_LOGIN_CHECKER_MARK_LIMIT,
 					   DEFAULT_LOGIN_CHECKER_MARK_LIMIT));
-      String contentEncoding =
-	headers.getProperty(CachedUrl.PROPERTY_CONTENT_ENCODING);
+      String contentEncoding = AuUtil.getContentEncoding(headers);
       InputStream uncIn =
 	StreamUtil.getUncompressedInputStreamOrFallback(input,
 							contentEncoding,

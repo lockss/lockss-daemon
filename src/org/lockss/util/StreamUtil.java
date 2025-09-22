@@ -376,6 +376,7 @@ public class StreamUtil {
       log.debug3("Wrapping in InflaterInputStream");
       res = new InflaterInputStream(instr);
     } else {
+      log.warning("Unsupported content encoding: " + contentEncoding);
       throw new UnsupportedEncodingException(contentEncoding);
     }
     return res;
