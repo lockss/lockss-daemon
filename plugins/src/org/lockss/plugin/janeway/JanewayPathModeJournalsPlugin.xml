@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -128,13 +128,11 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>2,"https://twitter.com"</string>
-      <string>2,"https://plus.google.com"</string>
-      <string>2,"https://www.linkedin.com"</string>
-      <string>2,"https://www.facebook.com"</string>
       <string>1,"https://cdnjs.cloudflare.com/.+\.(css|js)"</string>
       <string>1,"https://use.typekit.net/.*\.js"</string>
-      <string>1,"https://maxcdn.bootstrapcdn.com/.+\.css"</string>
+      <string>1,"https://maxcdn.bootstrapcdn.com/.+\.(css|js)"</string>
+      <string>1,"https://maxcdn.bootstrapcdn.com/font-awesome/"</string>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
       <!--exclude the following link, so it will not overcrawl-->
       <!--Some API is at https, but it is fullTextUrl still uses http-->
       <string>2, "^https?://%s/([^/]+/)?issue/[^/]+/info/", url_host(base_url)</string>
@@ -143,6 +141,15 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1, "%s%s/api/oai/?verb=ListRecords&amp;resumptionToken=", base_url,journal_id</string>
       <string>1, "%slockss?year=%d&amp;optional_journal_id=%s", base_url, year, journal_id</string>
       <string>1, "%smedia/", base_url</string>
+      <!--
+        Need to collect audio files inside ifrmae like: https://www.fulcrum.org/embed?hdl=2027%2Ffulcrum.sn00b133k
+        Did not include "https://hdl.handle.net/2027/fulcrum.sn00b133k", fetching this will not help reply much
+        but introduce a lot of complication
+      -->
+      <string>1, "https://www.fulcrum.org/embed\?hdl="</string>
+      <string>1, "https://www.fulcrum.org/(downloads|assets|concern/file_sets)/"</string>
+      <string>1, "https://www.fulcrum.org/.+\.(css|js|png)$"</string>
+      <string>1, "https://www.fulcrum.org/ableplayer"</string>
     </list>
   </entry>
   <entry>
@@ -157,6 +164,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.janeway.JanewayOaiCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.janeway.HtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
@@ -205,6 +216,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"cdnjs\.cloudflare\.com"</string>
       <string>"use\.typekit\.net"</string>
       <string>"maxcdn\.bootstrapcdn\.com"</string>
+      <string>"www\.fulcrum\.org"</string>
     </list>
   </entry>
 </map>
