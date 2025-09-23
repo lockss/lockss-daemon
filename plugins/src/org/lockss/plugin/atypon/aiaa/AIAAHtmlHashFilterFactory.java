@@ -65,6 +65,8 @@ public class AIAAHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         // add the following after AIAA platform upgrade 05/2019
         HtmlNodeFilters.tagWithAttribute("div",  "class", "header__institution-bar"),
         HtmlNodeFilters.tagWithAttribute("div",  "class", "header__search-bar"),
+        HtmlNodeFilters.tagWithAttribute("span", "class", "citation__access__type"),
+        HtmlNodeFilters.tagWithAttribute("div","class","measurement-tool__content"),
         
     };
     // super.createFilteredInputStream adds aiaa filter to the baseAtyponFilters
