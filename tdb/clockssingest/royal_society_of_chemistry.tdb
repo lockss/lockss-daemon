@@ -646,9 +646,9 @@
       au < notReady ; exists ; 2025 ; Faraday Discussions Volume 256 ; 256 ; 2025 ; https://pubs.rsc.org/ ; > #broken link on manifest page, https://pubs.rsc.org/en/journals/lockss?journalcode=fd&volume=256&year=2025
       au < notReady ; exists ; 2025 ; Faraday Discussions Volume 257 ; 257 ; 2025 ; https://pubs.rsc.org/ ; > #broken link on manifest page, https://pubs.rsc.org/en/journals/lockss?journalcode=fd&volume=257&year=2025
       au < notReady ; exists ; 2025 ; Faraday Discussions Volume 258 ; 258 ; 2025 ; https://pubs.rsc.org/ ; > #broken link on manifest page, https://pubs.rsc.org/en/journals/lockss?journalcode=fd&volume=258&year=2025
-      au < testing ; exists ; 2025 ; Faraday Discussions Volume 259 ; 259 ; 2025 ; https://pubs.rsc.org/ ; >
-      au < testing ; exists ; 2025 ; Faraday Discussions Volume 260 ; 260 ; 2025 ; https://pubs.rsc.org/ ; >
-      au < manifest ; exists ; 2025 ; Faraday Discussions Volume 261 ; 261 ; 2025 ; https://pubs.rsc.org/ ; >
+      au < notReady ; exists ; 2025 ; Faraday Discussions Volume 259 ; 259 ; 2025 ; https://pubs.rsc.org/ ; > #broken link on manifest page, https://pubs.rsc.org/en/journals/lockss?journalcode=fd&volume=259&year=2025
+      au < notReady ; exists ; 2025 ; Faraday Discussions Volume 260 ; 260 ; 2025 ; https://pubs.rsc.org/ ; > #broken link on manifest page, https://pubs.rsc.org/en/journals/lockss?journalcode=fd&volume=260&year=2025
+      au < notReady ; exists ; 2025 ; Faraday Discussions Volume 261 ; 261 ; 2025 ; https://pubs.rsc.org/ ; > #broken link on manifest page, https://pubs.rsc.org/en/journals/lockss?journalcode=fd&volume=261&year=2025
       au < expected ; exists ; 2025 ; Faraday Discussions Volume 262 ; 262 ; 2025 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2025 ; Faraday Discussions Volume 263 ; 263 ; 2025 ; https://pubs.rsc.org/ ; >
       au < expected ; exists ; 2025 ; Faraday Discussions Volume 264 ; 264 ; 2025 ; https://pubs.rsc.org/ ; >
