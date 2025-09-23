@@ -2532,7 +2532,7 @@
       eissn = 1758-5775 ;
       issnl = 0036-8792
     >
-
+    {
     param[journal_issn] = 0036-8792
 
     
@@ -2600,7 +2600,75 @@
     au < down ; 2010 ; Industrial Lubrication and Tribology Volume 62 ; 62 >
     au < down ; 2011 ; Industrial Lubrication and Tribology Volume 63 ; 63 >
     au < down ; 2012 ; Industrial Lubrication and Tribology Volume 64 ; 64 >
+    }
+    {
+    param[journal_issn] = ready
 
+    
+    au < superseded ; 1949-1950 ; Industrial Lubrication and Tribology Volume 1 [superseded] ; 1 >
+    au < superseded ; 1950 ; Industrial Lubrication and Tribology Volume 2 [superseded] ; 2 >
+    au < superseded ; 1951 ; Industrial Lubrication and Tribology Volume 3 [superseded] ; 3 >
+    au < superseded ; 1952 ; Industrial Lubrication and Tribology Volume 4 [superseded] ; 4 >
+    au < superseded ; 1953 ; Industrial Lubrication and Tribology Volume 5 [superseded] ; 5 >
+    au < superseded ; 1954 ; Industrial Lubrication and Tribology Volume 6 [superseded] ; 6 >
+    au < superseded ; 1955 ; Industrial Lubrication and Tribology Volume 7 [superseded] ; 7 >
+    au < superseded ; 1956 ; Industrial Lubrication and Tribology Volume 8 [superseded] ; 8 >
+    au < superseded ; 1957 ; Industrial Lubrication and Tribology Volume 9 [superseded] ; 9 >
+    au < superseded ; 1958 ; Industrial Lubrication and Tribology Volume 10 [superseded] ; 10 >
+    au < superseded ; 1959 ; Industrial Lubrication and Tribology Volume 11 [superseded] ; 11 >
+    au < superseded ; 1960 ; Industrial Lubrication and Tribology Volume 12 [superseded] ; 12 >
+    au < superseded ; 1961 ; Industrial Lubrication and Tribology Volume 13 [superseded] ; 13 >
+    au < superseded ; 1962 ; Industrial Lubrication and Tribology Volume 14 [superseded] ; 14 >
+    au < superseded ; 1963 ; Industrial Lubrication and Tribology Volume 15 [superseded] ; 15 >
+    au < superseded ; 1964 ; Industrial Lubrication and Tribology Volume 16 [superseded] ; 16 >
+    au < superseded ; 1965 ; Industrial Lubrication and Tribology Volume 17 [superseded] ; 17 >
+    au < superseded ; 1966 ; Industrial Lubrication and Tribology Volume 18 [superseded] ; 18 >
+    au < superseded ; 1967 ; Industrial Lubrication and Tribology Volume 19 [superseded] ; 19 >
+    au < superseded ; 1968 ; Industrial Lubrication and Tribology Volume 20 [superseded] ; 20 >
+    au < superseded ; 1969 ; Industrial Lubrication and Tribology Volume 21 [superseded] ; 21 >
+    au < superseded ; 1970 ; Industrial Lubrication and Tribology Volume 22 [superseded] ; 22 >
+    au < superseded ; 1971 ; Industrial Lubrication and Tribology Volume 23 [superseded] ; 23 >
+    au < superseded ; 1972 ; Industrial Lubrication and Tribology Volume 24 [superseded] ; 24 >
+    au < superseded ; 1973 ; Industrial Lubrication and Tribology Volume 25 [superseded] ; 25 >
+    au < superseded ; 1974 ; Industrial Lubrication and Tribology Volume 26 [superseded] ; 26 >
+    au < superseded ; 1975 ; Industrial Lubrication and Tribology Volume 27 [superseded] ; 27 >
+    au < superseded ; 1976 ; Industrial Lubrication and Tribology Volume 28 [superseded] ; 28 >
+    au < superseded ; 1977 ; Industrial Lubrication and Tribology Volume 29 [superseded] ; 29 >
+    au < superseded ; 1978 ; Industrial Lubrication and Tribology Volume 30 [superseded] ; 30 >
+    au < superseded ; 1979 ; Industrial Lubrication and Tribology Volume 31 [superseded] ; 31 >
+    au < superseded ; 1980 ; Industrial Lubrication and Tribology Volume 32 [superseded] ; 32 >
+    au < superseded ; 1981 ; Industrial Lubrication and Tribology Volume 33 [superseded] ; 33 >
+    au < superseded ; 1982 ; Industrial Lubrication and Tribology Volume 34 [superseded] ; 34 >
+    au < superseded ; 1983 ; Industrial Lubrication and Tribology Volume 35 [superseded] ; 35 >
+    au < superseded ; 1984 ; Industrial Lubrication and Tribology Volume 36 [superseded] ; 36 >
+    au < superseded ; 1985 ; Industrial Lubrication and Tribology Volume 37 [superseded] ; 37 >
+    au < superseded ; 1986 ; Industrial Lubrication and Tribology Volume 38 [superseded] ; 38 >
+    au < superseded ; 1987 ; Industrial Lubrication and Tribology Volume 39 [superseded] ; 39 >
+    au < superseded ; 1988 ; Industrial Lubrication and Tribology Volume 40 [superseded] ; 40 >
+    au < superseded ; 1989 ; Industrial Lubrication and Tribology Volume 41 [superseded] ; 41 >
+    au < superseded ; 1990 ; Industrial Lubrication and Tribology Volume 42 [superseded] ; 42 >
+    au < superseded ; 1991 ; Industrial Lubrication and Tribology Volume 43 [superseded] ; 43 >
+    au < superseded ; 1992 ; Industrial Lubrication and Tribology Volume 44 [superseded] ; 44 >
+    au < superseded ; 1993 ; Industrial Lubrication and Tribology Volume 45 [superseded] ; 45 >
+    au < superseded ; 1994 ; Industrial Lubrication and Tribology Volume 46 [superseded] ; 46 >
+    au < superseded ; 1995 ; Industrial Lubrication and Tribology Volume 47 [superseded] ; 47 >
+    au < superseded ; 1996 ; Industrial Lubrication and Tribology Volume 48 [superseded] ; 48 >
+    au < superseded ; 1997 ; Industrial Lubrication and Tribology Volume 49 [superseded] ; 49 >
+    au < superseded ; 1998 ; Industrial Lubrication and Tribology Volume 50 [superseded] ; 50 >
+    au < superseded ; 1999 ; Industrial Lubrication and Tribology Volume 51 [superseded] ; 51 >
+    au < superseded ; 2000 ; Industrial Lubrication and Tribology Volume 52 [superseded] ; 52 >
+    au < superseded ; 2001 ; Industrial Lubrication and Tribology Volume 53 [superseded] ; 53 >
+    au < superseded ; 2002 ; Industrial Lubrication and Tribology Volume 54 [superseded] ; 54 >
+    au < superseded ; 2003 ; Industrial Lubrication and Tribology Volume 55 [superseded] ; 55 >
+    au < superseded ; 2004 ; Industrial Lubrication and Tribology Volume 56 [superseded] ; 56 >
+    au < superseded ; 2005 ; Industrial Lubrication and Tribology Volume 57 [superseded] ; 57 >
+    au < superseded ; 2006 ; Industrial Lubrication and Tribology Volume 58 [superseded] ; 58 >
+    au < superseded ; 2007 ; Industrial Lubrication and Tribology Volume 59 [superseded] ; 59 >
+    au < superseded ; 2008 ; Industrial Lubrication and Tribology Volume 60 [superseded] ; 60 >
+    au < superseded ; 2009 ; Industrial Lubrication and Tribology Volume 61 [superseded] ; 61 >
+    au < superseded ; 2010 ; Industrial Lubrication and Tribology Volume 62 [superseded] ; 62 >
+    au < superseded ; 2011 ; Industrial Lubrication and Tribology Volume 63 [superseded] ; 63 >
+    }
   }
 
   {
@@ -6818,6 +6886,7 @@
       issnl = 1751-1879
     >
 
+    {
     param[journal_issn] = 1751-1879
     # online from 1997
     
@@ -6837,7 +6906,28 @@
     au < down ; 2010 ; Leadership in Health Services Volume 23 ; 23 >
     au < down ; 2011 ; Leadership in Health Services Volume 24 ; 24 >
     au < down ; 2012 ; Leadership in Health Services Volume 25 ; 25 >
-
+    }
+    {
+    param[journal_issn] = 1366-0756
+    # online from 1997
+    
+    au < superseded ; 1997 ; Leadership in Health Services Volume 10 [superseded] ; 10 >
+    au < superseded ; 1998 ; Leadership in Health Services Volume 11 [superseded] ; 11 >
+    au < superseded ; 1999 ; Leadership in Health Services Volume 12 [superseded] ; 12 >
+    au < superseded ; 2000 ; Leadership in Health Services Volume 13 [superseded] ; 13 >
+    au < superseded ; 2001 ; Leadership in Health Services Volume 14 [superseded] ; 14 >
+    au < superseded ; 2002 ; Leadership in Health Services Volume 15 [superseded] ; 15 >
+    au < superseded ; 2003 ; Leadership in Health Services Volume 16 [superseded] ; 16 >
+    au < superseded ; 2004 ; Leadership in Health Services Volume 17 [superseded] ; 17 >
+    au < superseded ; 2005 ; Leadership in Health Services Volume 18 [superseded] ; 18 >
+    au < superseded ; 2006 ; Leadership in Health Services Volume 19 [superseded] ; 19 >
+    au < superseded ; 2007 ; Leadership in Health Services Volume 20 [superseded] ; 20 >
+    au < superseded ; 2008 ; Leadership in Health Services Volume 21 [superseded] ; 21 >
+    au < superseded ; 2009 ; Leadership in Health Services Volume 22 [superseded] ; 22 >
+    au < superseded ; 2010 ; Leadership in Health Services Volume 23 [superseded] ; 23 >
+    au < superseded ; 2011 ; Leadership in Health Services Volume 24 [superseded] ; 24 >
+    au < superseded ; 2012 ; Leadership in Health Services Volume 25 [superseded] ; 25 >
+    }
   }
 
   {
