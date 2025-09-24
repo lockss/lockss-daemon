@@ -26,13 +26,10 @@
 
         au < finished ; crawling ; 2017 ; Transportation Systems in Buildings Volume 1 ; 2017 ; 1 ; reingest1.clockss.org:8082 >
         au < finished ; crawling ; 2018 ; Transportation Systems in Buildings Volume 2 ; 2018 ; 2 ; reingest2.clockss.org:8085 >
-        au < doesNotExist ; doesNotExist ; 2019 ; Transportation Systems in Buildings Volume 3 ; 2019 ; 3 ; >
-        au < doesNotExist ; doesNotExist ; 2020 ; Transportation Systems in Buildings Volume 4 ; 2020 ; 4 ; >
-        au < finished ; crawling ; 2021 ; Transportation Systems in Buildings Volume 5 ; 2021 ; 5 ; reingest3.clockss.org:8083 >
-        au < finished ; crawling ; 2022 ; Transportation Systems in Buildings Volume 6 ; 2022 ; 6 ; reingest4.clockss.org:8082 >
-        au < deepCrawl ; exists ; 2023 ; Transportation Systems in Buildings Volume 7 ; 2023 ; 7 ; >
-        au < expected ; exists ; 2024 ; Transportation Systems in Buildings Volume 8 ; 2024 ; 8 ; >
-        au < crawling ; exists ; 2025 ; Transportation Systems in Buildings Volume 9 ; 2025 ; 9 ; >
+        au < finished ; crawling ; 2021 ; Transportation Systems in Buildings Volume 3 ; 2021 ; 3 ; reingest3.clockss.org:8083 >
+        au < finished ; crawling ; 2022 ; Transportation Systems in Buildings Volume 4 ; 2022 ; 4 ; reingest4.clockss.org:8082 >
+        au < deepCrawl ; exists ; 2023 ; Transportation Systems in Buildings Volume 5 ; 2023 ; 5 ; >
+        au < crawling ; exists ; 2025 ; Transportation Systems in Buildings Volume 6 ; 2025 ; 6 ; >
 
     }
     {
