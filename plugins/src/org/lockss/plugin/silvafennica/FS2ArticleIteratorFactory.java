@@ -69,6 +69,7 @@ public class FS2ArticleIteratorFactory implements ArticleIteratorFactory, Articl
   private static final String PDF_REPLACEMENT = "/pdf/$1";
   //private static final Pattern ENW_PATTERN = Pattern.compile("/export/([0-9]+)$", Pattern.CASE_INSENSITIVE);
   private static final String ENW_REPLACEMENT = "/export/refer/$1";
+  private static final String ENW_REPLACEMENT_2 = "/export/$1";
   
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target)
@@ -79,6 +80,7 @@ public class FS2ArticleIteratorFactory implements ArticleIteratorFactory, Articl
     builder.addAspect(HTML_PATTERN, HTML_REPLACEMENT, ArticleFiles.ROLE_FULL_TEXT_HTML);
     builder.addAspect(PDF_REPLACEMENT, ArticleFiles.ROLE_FULL_TEXT_PDF);
     builder.addAspect(ENW_REPLACEMENT, ArticleFiles.ROLE_CITATION_ENDNOTE);
+    builder.addAspect(ENW_REPLACEMENT_2, ArticleFiles.ROLE_CITATION_ENDNOTE);
     builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_CITATION_ENDNOTE);
     builder.setFullTextFromRoles(
         ArticleFiles.ROLE_FULL_TEXT_HTML,
