@@ -1075,7 +1075,7 @@
       au < finished ; finished ; 2018 ; New Journal of Chemistry Volume 42 ; 42 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; New Journal of Chemistry Volume 43 ; 43 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; New Journal of Chemistry Volume 44 ; 44 ; 2020 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; New Journal of Chemistry Volume 45 ; 45 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2021 ; New Journal of Chemistry Volume 45 ; 45 ; 2021 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; New Journal of Chemistry Volume 46 ; 46 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; New Journal of Chemistry Volume 47 ; 47 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; New Journal of Chemistry Volume 48 ; 48 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -1112,7 +1112,7 @@
       au < finished ; finished ; 2017 ; Organic & Biomolecular Chemistry Volume 15 ; 15 ; 2017 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Organic & Biomolecular Chemistry Volume 16 ; 16 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Organic & Biomolecular Chemistry Volume 17 ; 17 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Organic & Biomolecular Chemistry Volume 18 ; 18 ; 2020 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Organic & Biomolecular Chemistry Volume 18 ; 18 ; 2020 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; Organic & Biomolecular Chemistry Volume 19 ; 19 ; 2021 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Organic & Biomolecular Chemistry Volume 20 ; 20 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Organic & Biomolecular Chemistry Volume 21 ; 21 ; 2023 ; https://pubs.rsc.org/ ; >
@@ -1491,7 +1491,7 @@
       au < finished ; finished ; 2018 ; Catalysis Science & Technology Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Catalysis Science & Technology Volume 9 ; 9 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2020 ; Catalysis Science & Technology Volume 10 ; 10 ; 2020 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; Catalysis Science & Technology Volume 11 ; 11 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2021 ; Catalysis Science & Technology Volume 11 ; 11 ; 2021 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Catalysis Science & Technology Volume 12 ; 12 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Catalysis Science & Technology Volume 13 ; 13 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Catalysis Science & Technology Volume 14 ; 14 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -1680,8 +1680,8 @@
       au < finished ; finished ; 2017 ; Environmental Science: Water Research & Technology Volume 3 ; 3 ; 2017 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Environmental Science: Water Research & Technology Volume 4 ; 4 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Environmental Science: Water Research & Technology Volume 5 ; 5 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Environmental Science: Water Research & Technology Volume 6 ; 6 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Environmental Science: Water Research & Technology Volume 7 ; 7 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Environmental Science: Water Research & Technology Volume 6 ; 6 ; 2020 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Environmental Science: Water Research & Technology Volume 7 ; 7 ; 2021 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Environmental Science: Water Research & Technology Volume 8 ; 8 ; 2022 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; Environmental Science: Water Research & Technology Volume 9 ; 9 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Environmental Science: Water Research & Technology Volume 10 ; 10 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -1791,8 +1791,8 @@
       au < finished ; finished ; 2017 ; Food & Function Volume 8 ; 8 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Food & Function Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Food & Function Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Food & Function Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Food & Function Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Food & Function Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; Food & Function Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2022 ; Food & Function Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; Food & Function Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Food & Function Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -1836,8 +1836,8 @@
       au < finished ; crawling ; 2017 ; Inorganic Chemistry Frontiers Volume 4 ; 4 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Inorganic Chemistry Frontiers Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2019 ; Inorganic Chemistry Frontiers Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Inorganic Chemistry Frontiers Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Inorganic Chemistry Frontiers Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Inorganic Chemistry Frontiers Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; Inorganic Chemistry Frontiers Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Inorganic Chemistry Frontiers Volume 9 ; 9 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Inorganic Chemistry Frontiers Volume 10 ; 10 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Inorganic Chemistry Frontiers Volume 11 ; 11 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -1932,8 +1932,8 @@
       au < finished ; finished ; 2017 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 5 ; 5 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 7 ; 7 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 8 ; 8 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 8 ; 8 ; 2020 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 10 ; 10 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 11 ; 11 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Materials Chemistry A: Materials for energy and sustainability Volume 12 ; 12 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -1960,8 +1960,8 @@
       au < finished ; finished ; 2017 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 5 ; 5 ; 2017 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 7 ; 7 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 8 ; 8 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 8 ; 8 ; 2020 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 10 ; 10 ; 2022 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 11 ; 11 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Materials Chemistry B: Materials for biology and medicine Volume 12 ; 12 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -1988,8 +1988,8 @@
       au < finished ; finished ; 2017 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 5 ; 5 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 6 ; 6 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 7 ; 7 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 8 ; 8 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 8 ; 8 ; 2020 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 9 ; 9 ; 2021 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 10 ; 10 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 11 ; 11 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Materials Chemistry C: Materials for optical and electronic devices Volume 12 ; 12 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -2636,8 +2636,8 @@
       au < finished ; finished ; 2017 ; Materials Horizons Volume 4 ; 4 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Materials Horizons Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Materials Horizons Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Materials Horizons Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Materials Horizons Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Materials Horizons Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Materials Horizons Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Materials Horizons Volume 9 ; 9 ; 2022 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Materials Horizons Volume 10 ; 10 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Materials Horizons Volume 11 ; 11 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -2681,8 +2681,8 @@
       param[journal_code] = md
       #journal changing its name in 2020 from 'MedChemComm'
 
-      au < frozen ; exists ; 2020 ; RSC Medicinal Chemistry Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; RSC Medicinal Chemistry Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; RSC Medicinal Chemistry Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; RSC Medicinal Chemistry Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; RSC Medicinal Chemistry Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; RSC Medicinal Chemistry Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; RSC Medicinal Chemistry Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -2726,8 +2726,8 @@
       au < finished ; finished ; 2017 ; Nanoscale Horizons Volume 2 ; 2 ; 2017 ; http://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Nanoscale Horizons Volume 3 ; 3 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Nanoscale Horizons Volume 4 ; 4 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; Nanoscale Horizons Volume 5 ; 5 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Nanoscale Horizons Volume 6 ; 6 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Nanoscale Horizons Volume 5 ; 5 ; 2020 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; Nanoscale Horizons Volume 6 ; 6 ; 2021 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Nanoscale Horizons Volume 7 ; 7 ; 2022 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Nanoscale Horizons Volume 8 ; 8 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Nanoscale Horizons Volume 9 ; 9 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -2752,8 +2752,8 @@
       au < finished ; finished ; 2017 ; Organic Chemistry Frontiers Volume 4 ; 4 ; 2017 ; http://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Organic Chemistry Frontiers Volume 5 ; 5 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Organic Chemistry Frontiers Volume 6 ; 6 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Organic Chemistry Frontiers Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Organic Chemistry Frontiers Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Organic Chemistry Frontiers Volume 7 ; 7 ; 2020 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Organic Chemistry Frontiers Volume 8 ; 8 ; 2021 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Organic Chemistry Frontiers Volume 9 ; 9 ; 2022 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; Organic Chemistry Frontiers Volume 10 ; 10 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Organic Chemistry Frontiers Volume 11 ; 11 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -2822,8 +2822,8 @@
       au < finished ; finished ; 2017 ; Polymer Chemistry Volume 8 ; 8 ; 2017 ; http://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Polymer Chemistry Volume 9 ; 9 ; 2018 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Polymer Chemistry Volume 10 ; 10 ; 2019 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; Polymer Chemistry Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Polymer Chemistry Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Polymer Chemistry Volume 11 ; 11 ; 2020 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2021 ; Polymer Chemistry Volume 12 ; 12 ; 2021 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2022 ; Polymer Chemistry Volume 13 ; 13 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; Polymer Chemistry Volume 14 ; 14 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Polymer Chemistry Volume 15 ; 15 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -3091,8 +3091,8 @@
       au < finished ; finished ; 2017 ; RSC Advances Volume 7 ; 7 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; RSC Advances Volume 8 ; 8 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; RSC Advances Volume 9 ; 9 ; 2019 ; https://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; RSC Advances Volume 10 ; 10 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; RSC Advances Volume 11 ; 11 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; RSC Advances Volume 10 ; 10 ; 2020 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; RSC Advances Volume 11 ; 11 ; 2021 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; RSC Advances Volume 12 ; 12 ; 2022 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; RSC Advances Volume 13 ; 13 ; 2023 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; RSC Advances Volume 14 ; 14 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -3114,8 +3114,8 @@
       au < finished ; finished ; 2017 ; Reaction Chemistry & Engineering Volume 2 ; 2 ; 2017 ; http://pubs.rsc.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Reaction Chemistry & Engineering Volume 3 ; 3 ; 2018 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Reaction Chemistry & Engineering Volume 4 ; 4 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Reaction Chemistry & Engineering Volume 5 ; 5 ; 2020 ; https://pubs.rsc.org/ ; >
-      au < frozen ; exists ; 2021 ; Reaction Chemistry & Engineering Volume 6 ; 6 ; 2021 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2020 ; Reaction Chemistry & Engineering Volume 5 ; 5 ; 2020 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Reaction Chemistry & Engineering Volume 6 ; 6 ; 2021 ; https://pubs.rsc.org/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; Reaction Chemistry & Engineering Volume 7 ; 7 ; 2022 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Reaction Chemistry & Engineering Volume 8 ; 8 ; 2023 ; https://pubs.rsc.org/ ; >
       au < deepCrawl ; exists ; 2024 ; Reaction Chemistry & Engineering Volume 9 ; 9 ; 2024 ; https://pubs.rsc.org/ ; >
@@ -3446,7 +3446,7 @@
       comment[years] = Published 2022-present
       param[journal_code] = sd
 
-      au < frozen ; exists ; 2022 ; Sensors & Diagnostics Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; >
+      au < finished ; manifest ; 2022 ; Sensors & Diagnostics Volume 1 ; 1 ; 2022 ; https://pubs.rsc.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Sensors & Diagnostics Volume 2 ; 2 ; 2023 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Sensors & Diagnostics Volume 3 ; 3 ; 2024 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2025 ; Sensors & Diagnostics Volume 4 ; 4 ; 2025 ; https://pubs.rsc.org/ ; >
