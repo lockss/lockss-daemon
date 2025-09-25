@@ -21,6 +21,13 @@
         ###TESTING###
         param[base_url] = https://clockss-test.lockss.org/sourcefiles/frontiersjats-released/
 
+        au < doNotProcess ; exists ; 2025 ; Frontiers Journals JATS Source Content 2025_01 ; 2025_01 >
+
+      }
+      {
+        ###PRODUCTION###
+        param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/frontiersjats-released/
+
         au < ready ; exists ; 2025 ; Frontiers Journals JATS Source Content 2025_01 ; 2025_01 >
 
       }
