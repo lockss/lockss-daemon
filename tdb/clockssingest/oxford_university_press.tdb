@@ -3885,10 +3885,10 @@
     au < finished ; crawling ; 2018 ; 2018 ; Chemical Senses Volume 43 ; 43 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 2019 ; Chemical Senses Volume 44 ; 44 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; 2020 ; Chemical Senses Volume 45 ; 45 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2021 ; 2021 ; Chemical Senses Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Chemical Senses Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Chemical Senses Volume 48 ; 48 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Chemical Senses Volume 49 ; 49 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Chemical Senses Volume 46 ; 46 ; >
+    au < testing ; exists ; 2022 ; 2022 ; Chemical Senses Volume 47 ; 47 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Chemical Senses Volume 48 ; 48 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Chemical Senses Volume 49 ; 49 ; >
     au < exists ; exists ; 2025 ; 2025 ; Chemical Senses Volume 50 ; 50 ; >
 
   }
@@ -4868,7 +4868,7 @@
     au < finished ; manifest ; 2020 ; 2020 ; Database Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Database Volume 2021 ; 2021 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; 2022 ; Database Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2023 ; 2023 ; Database Volume 2023 ; 2023 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Database Volume 2023 ; 2023 ; >
     au < exists ; exists ; 2024 ; 2024 ; Database Volume 2024 ; 2024 ; >
     au < exists ; exists ; 2025 ; 2025 ; Database Volume 2025 ; 2025 ; >
 
@@ -6953,8 +6953,8 @@
     au < finished ; manifest ; 2020 ; 2020 ; FEMS Microbiology Letters Volume 367 ; 367 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; FEMS Microbiology Letters Volume 367-368 ; 367-368 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; FEMS Microbiology Letters Volume 368-369 ; 368-369 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; FEMS Microbiology Letters Volume 370 ; 370 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; FEMS Microbiology Letters Volume 371 ; 371 ; >
+    au < testing ; exists ; 2023 ; 2023 ; FEMS Microbiology Letters Volume 370 ; 370 ; >
+    au < testing ; exists ; 2024 ; 2024 ; FEMS Microbiology Letters Volume 371 ; 371 ; >
     au < exists ; exists ; 2025 ; 2025 ; FEMS Microbiology Letters Volume 372 ; 372 ; >
 
   }
@@ -7042,8 +7042,8 @@
     au < finished ; manifest ; 2020 ; 2020 ; FEMS Yeast Research Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; 2021 ; FEMS Yeast Research Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; FEMS Yeast Research Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; FEMS Yeast Research Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; FEMS Yeast Research Volume 24 ; 24 ; >
+    au < testing ; exists ; 2023 ; 2023 ; FEMS Yeast Research Volume 23 ; 23 ; >
+    au < testing ; exists ; 2024 ; 2024 ; FEMS Yeast Research Volume 24 ; 24 ; >
     au < exists ; exists ; 2025 ; 2025 ; FEMS Yeast Research Volume 25 ; 25 ; >
 
   }
@@ -7151,10 +7151,10 @@
     au < finished ; crawling ; 2018 ; 2018 ; Food Quality and Safety Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Food Quality and Safety Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Food Quality and Safety Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2021 ; 2021 ; Food Quality and Safety Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Food Quality and Safety Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Food Quality and Safety Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Food Quality and Safety Volume 8 ; 8 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Food Quality and Safety Volume 5 ; 5 ; >
+    au < testing ; exists ; 2022 ; 2022 ; Food Quality and Safety Volume 6 ; 6 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Food Quality and Safety Volume 7 ; 7 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Food Quality and Safety Volume 8 ; 8 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Food Quality and Safety Volume 9 ; 9 ; >
 
   }
@@ -8453,8 +8453,8 @@
     au < finished ; manifest ; 2020 ; 2020 ; History Workshop Journal Volume 89 ; 89 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; History Workshop Journal Volume 90-92 ; 90-92 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; History Workshop Journal Volume 93-94 ; 93-94 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; History Workshop Journal Volume 95-96 ; 95-96 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; History Workshop Journal Volume 97-98 ; 97-98 ; >
+    au < testing ; exists ; 2023 ; 2023 ; History Workshop Journal Volume 95-96 ; 95-96 ; >
+    au < testing ; exists ; 2024 ; 2024 ; History Workshop Journal Volume 97-98 ; 97-98 ; >
     au < exists ; exists ; 2025 ; 2025 ; History Workshop Journal Volume 99-100 ; 99-100 ; >
 
   }
@@ -9569,8 +9569,8 @@
     au < finished ; manifest ; 2020 ; 2020 ; Integrative Biology Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Integrative Biology Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Integrative Biology Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Integrative Biology Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Integrative Biology Volume 16 ; 16 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Integrative Biology Volume 15 ; 15 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Integrative Biology Volume 16 ; 16 ; >
     au < exists ; exists ; 2025 ; 2025 ; Integrative Biology Volume 17 ; 17 ; >
 
   }
@@ -10137,9 +10137,9 @@
     au < finished ; manifest ; 2019 ; 2019 ; International Journal of Low-Carbon Technologies Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; International Journal of Low-Carbon Technologies Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; 2021 ; International Journal of Low-Carbon Technologies Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2022 ; 2022 ; International Journal of Low-Carbon Technologies Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; International Journal of Low-Carbon Technologies Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; International Journal of Low-Carbon Technologies Volume 19 ; 19 ; >
+    au < testing ; exists ; 2022 ; 2022 ; International Journal of Low-Carbon Technologies Volume 17 ; 17 ; >
+    au < testing ; exists ; 2023 ; 2023 ; International Journal of Low-Carbon Technologies Volume 18 ; 18 ; >
+    au < testing ; exists ; 2024 ; 2024 ; International Journal of Low-Carbon Technologies Volume 19 ; 19 ; >
     au < exists ; exists ; 2025 ; 2025 ; International Journal of Low-Carbon Technologies Volume 20 ; 20 ; >
 
   }
@@ -18068,8 +18068,8 @@
     au < finished ; manifest ; 2020 ; 2020 ; Pathogens and Disease Volume 78 ; 78 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Pathogens and Disease Volume 79 ; 79 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Pathogens and Disease Volume 80 ; 80 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Pathogens and Disease Volume 81 ; 81 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Pathogens and Disease Volume 82 ; 82 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Pathogens and Disease Volume 81 ; 81 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Pathogens and Disease Volume 82 ; 82 ; >
     au < exists ; exists ; 2025 ; 2025 ; Pathogens and Disease Volume 83 ; 83 ; >
 
   }
@@ -18421,7 +18421,7 @@
     au < finished ; manifest ; 2020 ; 2020 ; Policing: A Journal of Policy and Practice Volume 14 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; 2021 ; Policing: A Journal of Policy and Practice Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Policing: A Journal of Policy and Practice Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Policing: A Journal of Policy and Practice Volume 17 ; 17 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Policing: A Journal of Policy and Practice Volume 17 ; 17 ; >
     au < finished ; manifest ; 2024 ; 2024 ; Policing: A Journal of Policy and Practice Volume 18 ; 18 ; reingest4.clockss.org:8082 >
     au < exists ; exists ; 2025 ; 2025 ; Policing: A Journal of Policy and Practice Volume 19 ; 19 ; >
 
@@ -18927,9 +18927,9 @@
     au < finished ; manifest ; 2019 ; 2019 ; Protein Engineering, Design and Selection (PEDS) Volume 32 ; 32 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Protein Engineering, Design and Selection (PEDS) Volume 33 ; 33 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Protein Engineering, Design and Selection (PEDS) Volume 34 ; 34 ; reingest3.clockss.org:8083 >
-    au < manifest ; exists ; 2022 ; 2022 ; Protein Engineering, Design and Selection (PEDS) Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Protein Engineering, Design and Selection (PEDS) Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Protein Engineering, Design and Selection (PEDS) Volume 37 ; 37 ; >
+    au < testing ; exists ; 2022 ; 2022 ; Protein Engineering, Design and Selection (PEDS) Volume 35 ; 35 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Protein Engineering, Design and Selection (PEDS) Volume 36 ; 36 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Protein Engineering, Design and Selection (PEDS) Volume 37 ; 37 ; >
     au < exists ; exists ; 2025 ; 2025 ; Protein Engineering, Design and Selection (PEDS) Volume 38 ; 38 ; >
 
   }
@@ -19463,8 +19463,8 @@
     au < finished ; manifest ; 2020 ; 2020 ; Regenerative Biomaterials Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Regenerative Biomaterials Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Regenerative Biomaterials Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Regenerative Biomaterials Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Regenerative Biomaterials Volume 11 ; 11 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Regenerative Biomaterials Volume 10 ; 10 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Regenerative Biomaterials Volume 11 ; 11 ; >
     au < exists ; exists ; 2025 ; 2025 ; Regenerative Biomaterials Volume 12 ; 12 ; >
 
   }
@@ -22760,9 +22760,9 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Mechanics Volume 34 ; 34 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Mechanics Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Journal of Mechanics Volume 36 ; 36 ; reingest2.clockss.org:8085 >
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of Mechanics Volume 37-38 ; 37-38 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Journal of Mechanics Volume 39 ; 39 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Journal of Mechanics Volume 40 ; 40 ; >
+    au < testing ; exists ; 2022 ; 2022 ; Journal of Mechanics Volume 37-38 ; 37-38 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Journal of Mechanics Volume 39 ; 39 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Journal of Mechanics Volume 40 ; 40 ; >
     au < exists ; exists ; 2025 ; 2025 ; Journal of Mechanics Volume 41 ; 41 ; >
 
   }
@@ -25290,8 +25290,8 @@
     au < finished ; manifest ; 2019 ; 2019 ; Yearbook of European Law Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Yearbook of European Law Volume 39 (2020) ; 39 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; 2022 ; Yearbook of European Law Volume 40 (2021) ; 40 ; reingest5.clockss.org:8082 >
-    au < manifest ; exists ; 2023 ; 2023 ; Yearbook of European Law Volume 41 (2022) ; 41 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Yearbook of European Law Volume 42-43 (2023) ; 42-43 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Yearbook of European Law Volume 41 (2022) ; 41 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Yearbook of European Law Volume 42-43 (2023) ; 42-43 ; >
     au < expected ; exists ; 2025 ; 2025 ; Yearbook of European Law Volume 44 (2024) ; 44 ; >
 
   }
