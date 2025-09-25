@@ -357,24 +357,13 @@
   {
 
     title <
-      name = Edähi Boletín Científico de Ciencias Sociales y Humanidades del ICSHu ;
+      name = Journals of Universidad Autónoma del Estado de Hidalgo ;
+      eissn = 2683-2321 ;
       eissn = 2007-4581
     >
     provider = Universidad Autónoma del Estado de Hidalgo
 
-    au < expected ; exists ; 2025 ; Edähi Boletín Científico de Ciencias Sociales y Humanidades del ICSHu ; UNKNOWN >
-
-  }
-
-  {
-
-    title <
-      name = Revista Lengua y Cultura ;
-      eissn = 2683-2321
-    >
-    provider = Universidad Autónoma del Estado de Hidalgo
-
-    au < readySource ; crawling ; 2025 ; Revista Lengua y Cultura ; revista_lengua_y_cultura_2683-2321 >
+    au < readySource ; crawling ; 2025 ; Journals of Universidad Autónoma del Estado de Hidalgo ; revista_lengua_y_cultura_2683-2321 >
 
   }
 
