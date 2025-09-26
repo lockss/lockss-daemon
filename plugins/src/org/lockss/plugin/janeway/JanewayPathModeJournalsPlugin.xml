@@ -128,6 +128,8 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!--publisher put <a href="duckduckgo.com" target="_blank"> on their domain, cause http 406 Error-->
+      <string>2,"https://www.fulcrum.org/concern/file_sets/duckduckgo"</string>
       <string>1,"https://cdnjs.cloudflare.com/.+\.(css|js)"</string>
       <string>1,"https://use.typekit.net/.*\.js"</string>
       <string>1,"https://maxcdn.bootstrapcdn.com/.+\.(css|js)"</string>
@@ -150,6 +152,11 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1, "https://www.fulcrum.org/(downloads|assets|concern/file_sets)/"</string>
       <string>1, "https://www.fulcrum.org/.+\.(css|js|png)$"</string>
       <string>1, "https://www.fulcrum.org/ableplayer"</string>
+      <string>1, "https://d1bxh8uas1mnw7.cloudfront.net/assets/"</string>
+      <string>1, "https://www.fulcrum.org/cdn-cgi/challenge-platform/h/b/scripts/jsd/5783333ceb22/main.js"</string>
+      <string>1, "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"</string>
+      <string>1, "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/extensions/MathMenu.js"</string>
+      <string>1, "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/extensions/MathZoom.js"</string>
     </list>
   </entry>
   <entry>
@@ -217,6 +224,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"use\.typekit\.net"</string>
       <string>"maxcdn\.bootstrapcdn\.com"</string>
       <string>"www\.fulcrum\.org"</string>
+      <string>"d1bxh8uas1mnw7\.cloudfront\.net"</string>
     </list>
   </entry>
 </map>
