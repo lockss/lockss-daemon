@@ -162,6 +162,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                         afTemp.setFullTextCu(cuTemp);
                         if ((abstractsUrl != null) && abstractsUrl.hasContent()) {
                             afTemp.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractsUrl);
+                            afTemp.setRole(ArticleFiles.ROLE_ABSTRACT,abstractsUrl);
                         }
                         //log additional pdf urls
                         log.debug3("I am number " + i + " and I am " + PDFs.get(i));
