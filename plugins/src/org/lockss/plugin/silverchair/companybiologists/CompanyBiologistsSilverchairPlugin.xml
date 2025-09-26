@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>23</string>
+        <string>24</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -66,6 +66,18 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_start_url</string>
         <list>
             <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_cache_result_list</string>
+        <list>
+            <string>403=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
         </list>
     </entry>
 </map>
