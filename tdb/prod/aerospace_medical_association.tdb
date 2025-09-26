@@ -30,18 +30,18 @@
      # changed name and issn after first issue of 2015. http://www.ingentaconnect.com/content/asma/asem
 
 
-    au < released ; 2003 ; 74 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 >
-    au < released ; 2004 ; 75 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 >
-    au < released ; 2005 ; 76 ; Aviation, Space, and Environmental Medicine Volume 76 ; 76 >
-    au < released ; 2006 ; 77 ; Aviation, Space, and Environmental Medicine Volume 77 ; 77 >
-    au < released ; 2007 ; 78 ; Aviation, Space, and Environmental Medicine Volume 78 ; 78 >
-    au < released ; 2008 ; 79 ; Aviation, Space, and Environmental Medicine Volume 79 ; 79 >
-    au < released ; 2009 ; 80 ; Aviation, Space, and Environmental Medicine Volume 80 ; 80 >
-    au < released ; 2010 ; 81 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 >
-    au < released ; 2011 ; 82 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 >
-    au < released ; 2012 ; 83 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 >
-    au < released ; 2013 ; 84 ; Aviation, Space, and Environmental Medicine Volume 84 ; 84 >
-    au < released ; 2014 ; 85 ; Aviation, Space, and Environmental Medicine Volume 85 ; 85 >
+    au < down ; 2003 ; 74 ; Aviation, Space, and Environmental Medicine Volume 74 ; 74 >
+    au < down ; 2004 ; 75 ; Aviation, Space, and Environmental Medicine Volume 75 ; 75 >
+    au < down ; 2005 ; 76 ; Aviation, Space, and Environmental Medicine Volume 76 ; 76 >
+    au < down ; 2006 ; 77 ; Aviation, Space, and Environmental Medicine Volume 77 ; 77 >
+    au < down ; 2007 ; 78 ; Aviation, Space, and Environmental Medicine Volume 78 ; 78 >
+    au < down ; 2008 ; 79 ; Aviation, Space, and Environmental Medicine Volume 79 ; 79 >
+    au < down ; 2009 ; 80 ; Aviation, Space, and Environmental Medicine Volume 80 ; 80 >
+    au < down ; 2010 ; 81 ; Aviation, Space, and Environmental Medicine Volume 81 ; 81 >
+    au < down ; 2011 ; 82 ; Aviation, Space, and Environmental Medicine Volume 82 ; 82 >
+    au < down ; 2012 ; 83 ; Aviation, Space, and Environmental Medicine Volume 83 ; 83 >
+    au < down ; 2013 ; 84 ; Aviation, Space, and Environmental Medicine Volume 84 ; 84 >
+    au < down ; 2014 ; 85 ; Aviation, Space, and Environmental Medicine Volume 85 ; 85 >
 
    }
 
@@ -50,7 +50,7 @@
      param[base_url] = https://www.ingentaconnect.com/
      param[api_url] = https://api.ingentaconnect.com/
 
-    au < released ; 2015 ; 86 ; Aviation, Space, and Environmental Medicine Volume 86 ; 86 >
+    au < down ; 2015 ; 86 ; Aviation, Space, and Environmental Medicine Volume 86 ; 86 >
     #changed title after the first issue of 2015
 
    }
@@ -73,9 +73,9 @@
      param[base_url] = http://www.ingentaconnect.com/
      param[api_url] = http://api.ingentaconnect.com/
 
-    au < released ; 2015 ; 86 ; Aerospace Medicine and Human Performance Volume 86 ; 86 >
-    au < released ; 2016 ; 87 ; Aerospace Medicine and Human Performance Volume 87 ; 87 >
-    au < released ; 2017 ; 88 ; Aerospace Medicine and Human Performance Volume 88 ; 88 >
+    au < down ; 2015 ; 86 ; Aerospace Medicine and Human Performance Volume 86 ; 86 >
+    au < down ; 2016 ; 87 ; Aerospace Medicine and Human Performance Volume 87 ; 87 >
+    au < down ; 2017 ; 88 ; Aerospace Medicine and Human Performance Volume 88 ; 88 >
 
    }
 
@@ -84,14 +84,14 @@
      param[base_url] = https://www.ingentaconnect.com/
      param[api_url] = https://api.ingentaconnect.com/
 
-    au < released ; 2018 ; 89 ; Aerospace Medicine and Human Performance Volume 89 ; 89 >
-    au < released ; 2019 ; 90 ; Aerospace Medicine and Human Performance Volume 90 ; 90 >
-    au < released ; 2020 ; 91 ; Aerospace Medicine and Human Performance Volume 91 ; 91 >
-    au < released ; 2021 ; 92 ; Aerospace Medicine and Human Performance Volume 92 ; 92 >
-    au < released ; 2022 ; 93 ; Aerospace Medicine and Human Performance Volume 93 ; 93 >
-    au < released ; 2023 ; 94 ; Aerospace Medicine and Human Performance Volume 94 ; 94 >
-    au < manifest ; 2024 ; 95 ; Aerospace Medicine and Human Performance Volume 95 ; 95 >
-    au < expected ; 2025 ; 96 ; Aerospace Medicine and Human Performance Volume 96 ; 96 >
+    au < down ; 2018 ; 89 ; Aerospace Medicine and Human Performance Volume 89 ; 89 >
+    au < down ; 2019 ; 90 ; Aerospace Medicine and Human Performance Volume 90 ; 90 >
+    au < down ; 2020 ; 91 ; Aerospace Medicine and Human Performance Volume 91 ; 91 >
+    au < down ; 2021 ; 92 ; Aerospace Medicine and Human Performance Volume 92 ; 92 >
+    au < down ; 2022 ; 93 ; Aerospace Medicine and Human Performance Volume 93 ; 93 >
+    au < down ; 2023 ; 94 ; Aerospace Medicine and Human Performance Volume 94 ; 94 >
+    au < doNotProcess ; 2024 ; 95 ; Aerospace Medicine and Human Performance Volume 95 ; 95 >
+    au < doNotProcess ; 2025 ; 96 ; Aerospace Medicine and Human Performance Volume 96 ; 96 >
 
    }
   }
