@@ -595,12 +595,12 @@
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.genealogy-critique.net/
 
-      au < manifest ; 2015 ; 1 ; Genealogy+Critique Volume 1 ; 2015 >
-      au < manifest ; 2016 ; 2 ; Genealogy+Critique Volume 2 ; 2016 >
-      au < manifest ; 2017 ; 3 ; Genealogy+Critique Volume 3 ; 2017 >
-      au < manifest ; 2018 ; 4 ; Genealogy+Critique Volume 4 ; 2018 >
-      au < manifest ; 2019 ; 5 ; Genealogy+Critique Volume 5 ; 2019 >
-      au < manifest ; 2020 ; 6 ; Genealogy+Critique Volume 6 ; 2020 >
+      au < ready ; 2015 ; 1 ; Genealogy+Critique Volume 1 ; 2015 >
+      au < ready ; 2016 ; 2 ; Genealogy+Critique Volume 2 ; 2016 >
+      au < ready ; 2017 ; 3 ; Genealogy+Critique Volume 3 ; 2017 >
+      au < ready ; 2018 ; 4 ; Genealogy+Critique Volume 4 ; 2018 >
+      au < ready ; 2019 ; 5 ; Genealogy+Critique Volume 5 ; 2019 >
+      au < ready ; 2020 ; 6 ; Genealogy+Critique Volume 6 ; 2020 >
       au < doNotProcess ; 2021 ; 7 ; Genealogy+Critique Volume 7 ; 2021 >
       au < released ; 2022 ; 8 ; Genealogy+Critique Volume 8 ; 2022 >
       au < released ; 2023 ; 9 ; Genealogy+Critique Volume 9 ; 2023 >
@@ -619,12 +619,12 @@
       comment[publisher] = Open Library of Humanities
       param[base_url] = https://www.genealogy-critique.net/
 
-      au < doNotProcess ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 >
-      au < doNotProcess ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 >
-      au < doNotProcess ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 >
-      au < doNotProcess ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 >
-      au < doNotProcess ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 >
-      au < doNotProcess ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 >
+      #au < doNotProcess ; 2015 ; 1 ; Le foucaldien Volume 2015 ; 2015 >
+      #au < doNotProcess ; 2016 ; 2 ; Le foucaldien Volume 2016 ; 2016 >
+      #au < doNotProcess ; 2017 ; 3 ; Le foucaldien Volume 2017 ; 2017 >
+      #au < doNotProcess ; 2018 ; 4 ; Le foucaldien Volume 2018 ; 2018 >
+      #au < doNotProcess ; 2019 ; 5 ; Le foucaldien Volume 2019 ; 2019 >
+      #au < doNotProcess ; 2020 ; 6 ; Le foucaldien Volume 2020 ; 2020 >
       au < released ; 2021 ; 7 ; Le foucaldien Volume 2021 ; 2021 >
       #Changed name and issn: Genealogy+Critique 2755-0923
   }
