@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>60</string>
+    <string>61</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -117,8 +117,9 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s%s(index\.php/)?(%s/)?gateway/plugin/WebFeedGatewayPlugin/",url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"https://docs.lib.purdue.edu/cgi/viewcontent.cgi\?article="</string>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?|webp)([?]((itok|v)=)?[^&amp;]+)?$", base_url_host</string>
-      <string>1,"^https?://%s/.*/css([?]name=((child-)?stylesheet|bootstrap(Theme-%s)?|ojsplus|font))?$", base_url_host,journal_id</string>
+      <string>1,"^https?://%s/.*/css([?]name=((child-)?stylesheet|bootstrap(Theme-%s)?|ojsplus|font))?", base_url_host,journal_id</string>
       <string>1,"^https?://(cdnjs\.cloudflare|(ajax|fonts)\.(googleapis|gstatic))\.com/"</string>
+      <string>1,"^https?://cdn\.jsdelivr\.net/.*\.(css|js)"</string>
         <!--  index.php or journals/index.php are an optional attr so allow but do not require -->
         <!-- Some publisher using "ojs" instead of journal_id in start_url -->
         <!-- https://www.combinatorics.org/ojs/index.php/eljc/gateway/lockss?year=2018-->
@@ -145,6 +146,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^(%s|%s)html/", to_http(base_url),to_https(base_url)</string>
       <string>2,"^(%s|%s).*plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=https?[%%]25", to_http(base_url), to_https(base_url)</string>
       <string>1,"^https?://%s/plugins/generic/pdfJsViewer/pdf\.js/web/viewer\.html\?file=.*", base_url_host</string>
+      <string>1,"^https?://%s/customviewer/v-pdf\.html\?pdfUrl=.*%s", base_url_host, base_url_host</string>
     </list>
   </entry>
   <!--  The default. The start_stem attribute is inserted as needed by the crawl seed-->
@@ -293,7 +295,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_permitted_host_pattern</string>
     <list>
       <string>.+\.cloudfront\.net</string>
-      <string>cdnjs\.cloudflare\.com</string>      
+      <string>cdnjs\.cloudflare\.com</string>   
+      <string>cdn\.jsdelivr\.net</string>   
       <string>.+\.mathjax\.org</string>
       <string>.+\.gstatic\.com</string>
       <string>(fonts|ajax)\.googleapis\.com</string>
