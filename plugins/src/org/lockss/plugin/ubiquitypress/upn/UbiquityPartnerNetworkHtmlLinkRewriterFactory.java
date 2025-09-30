@@ -39,8 +39,7 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import org.lockss.util.UrlUtil;
 
-import com.fasterxml.jackson.core.JsonFactory;
-import com.fasterxml.jackson.core.JsonParser;
+import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.ReadContext;
 
@@ -61,7 +60,8 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
   static Logger log = Logger.getLogger(UbiquityPartnerNetworkHtmlLinkRewriterFactory.class);
   //{\"href\":\"/api/1.8.4/spritesheet#user\"}
   static Pattern jsonHref = Pattern.compile("(\\\\\"href\\\\\":\\s*\\\\\")(.*?)(\\\\\")");
-  static Pattern jsonPushPat = Pattern.compile("^((?:self\\.__next_f|\\(self\\.__next_[fs]=self\\.__next_[fs]\\|\\|\\[\\]\\))\\.push\\())(.*)(\\))$");
+  static Pattern jsonPushPat = Pattern.compile("^((?:self\\.__next_f|\\(self\\.__next_[fs]=self\\.__next_[fs]\\|\\|\\[\\])\\.push\\()(.*)(\\))$");
+  static Pattern jsonStrWithDigitsPat = Pattern.compile("^(\\d+:)(.*)$");
 
   // Matches protocol pattern (e.g. "http://")
   static final String protocolPat = "[^:/?#]+://+";
@@ -152,15 +152,27 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
           if (!StringUtil.isNullString(s)) {
             //script.removeAttribute("src");
             log.debug3("the text BEFORE replacement is " + s);
-            if(s.startsWith("self.__next") || s.startsWith("(self.__next")){
+            //if(s.startsWith("self.__next") || s.startsWith("(self.__next")){
 
-            //Matcher jsonPushMat = jsonPushPat.matcher(s);
-            //if(jsonPushMat.find()){
-              //String jsonExpression = jsonPushMat.group(2);
-              //DocumentContext dc = JsonPath.parse(jsonExpression);
-              //dc.read("")
-
-
+            Matcher jsonPushMat = jsonPushPat.matcher(s);
+            if(jsonPushMat.find()){
+              String jsonExpression = jsonPushMat.group(2);
+              DocumentContext dc = JsonPath.parse(jsonExpression);
+              Object obj1 = dc.read("$",Object.class);
+              
+              if(obj1 instanceof ArrayList){
+                ArrayList arr1 = (ArrayList)obj1;
+                if(arr1.size() == 2 && arr1.get(0) instanceof Integer && arr1.get(1) instanceof String){
+                  String str1 = (String)arr1.get(1);
+                  Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(str1);
+                  if(jsonStrWithDigitsMat.find()){
+                    String str2 = jsonStrWithDigitsMat.group(2);
+                    JsonPath.parse(str2); 
+                  }
+                }
+              }
+            
+              /* 
               Matcher mat = jsonHref.matcher(s);
               StringBuffer sb = new StringBuffer();
               while(mat.find()){
@@ -185,7 +197,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
               }
               mat.appendTail(sb);
               script.setScriptCode(sb.toString());
-              log.debug3("the text AFTER replacement is " + sb.toString());
+              log.debug3("the text AFTER replacement is " + sb.toString());*/
             }
           }
         }
@@ -255,5 +267,5 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
     
     return fact.createLinkRewriter(mimeType, au, in, encoding, url, xform);
   }
-  
+
 }
