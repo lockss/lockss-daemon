@@ -398,23 +398,23 @@
     param[collection_id] = BUDGET
 
 
-    au < down ; 1995 ; Budget of the United States Government 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < down ; 1996 ; Budget of the United States Government 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < down ; 1997 ; Budget of the United States Government 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < down ; 1998 ; Budget of the United States Government 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < released ; 1995 ; Budget of the United States Government 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < released ; 1996 ; Budget of the United States Government 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < released ; 1997 ; Budget of the United States Government 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < released ; 1998 ; Budget of the United States Government 1998 ; 1998 ; https://www.govinfo.gov/ >
     au < manifest ; 1999 ; Budget of the United States Government 1999 ; 1999 ; https://www.govinfo.gov/ >
  
-    au < down ; 2014 ; Budget of the United States Government 2014 ; 2014 ; https://www.govinfo.gov/ >
-    au < down ; 2015 ; Budget of the United States Government 2015 ; 2015 ; https://www.govinfo.gov/ >
-    au < down ; 2016 ; Budget of the United States Government 2016 ; 2016 ; https://www.govinfo.gov/ >
-    au < down ; 2017 ; Budget of the United States Government 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < down ; 2018 ; Budget of the United States Government 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < down ; 2019 ; Budget of the United States Government 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < down ; 2020 ; Budget of the United States Government 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < down ; 2021 ; Budget of the United States Government 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < down ; 2022 ; Budget of the United States Government 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < down ; 2023 ; Budget of the United States Government 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < down ; 2024 ; Budget of the United States Government 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < released ; 2014 ; Budget of the United States Government 2014 ; 2014 ; https://www.govinfo.gov/ >
+    au < released ; 2015 ; Budget of the United States Government 2015 ; 2015 ; https://www.govinfo.gov/ >
+    au < released ; 2016 ; Budget of the United States Government 2016 ; 2016 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; Budget of the United States Government 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; Budget of the United States Government 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < released ; 2019 ; Budget of the United States Government 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < released ; 2020 ; Budget of the United States Government 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < released ; 2021 ; Budget of the United States Government 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < released ; 2022 ; Budget of the United States Government 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Budget of the United States Government 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Budget of the United States Government 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Budget of the United States Government 2025 ; 2025 ; https://www.govinfo.gov/ >
  
   }
@@ -428,46 +428,46 @@
     param[collection_id] = CZIC
     # stopped publication in 1999. See https://www.govinfo.gov/sitemap/CZIC_sitemap_index.xml
 
-    au < down ; 1951 ; Coastal Zone Information Center 1951 ; 1951 ; https://www.govinfo.gov/ >
-    au < down ; 1959 ; Coastal Zone Information Center 1959 ; 1959 ; https://www.govinfo.gov/ >
-    au < down ; 1962 ; CZIC 1962 ; 1962 ; https://www.govinfo.gov/ >
-    au < down ; 1963 ; CZIC 1963 ; 1963 ; https://www.govinfo.gov/ >
-    au < down ; 1964 ; CZIC 1964 ; 1964 ; https://www.govinfo.gov/ >
-    au < down ; 1965 ; CZIC 1965 ; 1965 ; https://www.govinfo.gov/ >
-    au < down ; 1966 ; CZIC 1966 ; 1966 ; https://www.govinfo.gov/ >
-    au < down ; 1967 ; CZIC 1967 ; 1967 ; https://www.govinfo.gov/ >
-    au < down ; 1968 ; CZIC 1968 ; 1968 ; https://www.govinfo.gov/ >
-    au < down ; 1969 ; CZIC 1969 ; 1969 ; https://www.govinfo.gov/ >
-    au < down ; 1970 ; CZIC 1970 ; 1970 ; https://www.govinfo.gov/ >
-    au < down ; 1971 ; CZIC 1971 ; 1971 ; https://www.govinfo.gov/ >
-    au < down ; 1972 ; CZIC 1972 ; 1972 ; https://www.govinfo.gov/ >
-    au < down ; 1973 ; CZIC 1973 ; 1973 ; https://www.govinfo.gov/ >
-    au < down ; 1974 ; CZIC 1974 ; 1974 ; https://www.govinfo.gov/ >
-    au < down ; 1975 ; CZIC 1975 ; 1975 ; https://www.govinfo.gov/ >
-    au < down ; 1976 ; CZIC 1976 ; 1976 ; https://www.govinfo.gov/ >
-    au < down ; 1977 ; CZIC 1977 ; 1977 ; https://www.govinfo.gov/ >
-    au < down ; 1978 ; CZIC 1978 ; 1978 ; https://www.govinfo.gov/ >
-    au < down ; 1979 ; CZIC 1979 ; 1979 ; https://www.govinfo.gov/ >
-    au < down ; 1980 ; CZIC 1980 ; 1980 ; https://www.govinfo.gov/ >
-    au < down ; 1981 ; CZIC 1981 ; 1981 ; https://www.govinfo.gov/ >
-    au < down ; 1982 ; CZIC 1982 ; 1982 ; https://www.govinfo.gov/ >
-    au < down ; 1983 ; CZIC 1983 ; 1983 ; https://www.govinfo.gov/ >
-    au < down ; 1984 ; CZIC 1984 ; 1984 ; https://www.govinfo.gov/ >
-    au < down ; 1985 ; CZIC 1985 ; 1985 ; https://www.govinfo.gov/ >
-    au < down ; 1986 ; CZIC 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < down ; 1987 ; CZIC 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < down ; 1988 ; CZIC 1988 ; 1988 ; https://www.govinfo.gov/ >
-    au < down ; 1989 ; CZIC 1989 ; 1989 ; https://www.govinfo.gov/ >
-    au < down ; 1990 ; CZIC 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < down ; 1991 ; CZIC 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < down ; 1992 ; CZIC 1992 ; 1992 ; https://www.govinfo.gov/ >
-    au < down ; 1993 ; CZIC 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < down ; 1994 ; CZIC 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < down ; 1995 ; CZIC 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < down ; 1996 ; CZIC 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < down ; 1997 ; CZIC 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < down ; 1998 ; CZIC 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < down ; 1999 ; CZIC 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < released ; 1951 ; Coastal Zone Information Center 1951 ; 1951 ; https://www.govinfo.gov/ >
+    au < released ; 1959 ; Coastal Zone Information Center 1959 ; 1959 ; https://www.govinfo.gov/ >
+    au < released ; 1962 ; CZIC 1962 ; 1962 ; https://www.govinfo.gov/ >
+    au < released ; 1963 ; CZIC 1963 ; 1963 ; https://www.govinfo.gov/ >
+    au < released ; 1964 ; CZIC 1964 ; 1964 ; https://www.govinfo.gov/ >
+    au < released ; 1965 ; CZIC 1965 ; 1965 ; https://www.govinfo.gov/ >
+    au < released ; 1966 ; CZIC 1966 ; 1966 ; https://www.govinfo.gov/ >
+    au < released ; 1967 ; CZIC 1967 ; 1967 ; https://www.govinfo.gov/ >
+    au < released ; 1968 ; CZIC 1968 ; 1968 ; https://www.govinfo.gov/ >
+    au < released ; 1969 ; CZIC 1969 ; 1969 ; https://www.govinfo.gov/ >
+    au < released ; 1970 ; CZIC 1970 ; 1970 ; https://www.govinfo.gov/ >
+    au < released ; 1971 ; CZIC 1971 ; 1971 ; https://www.govinfo.gov/ >
+    au < released ; 1972 ; CZIC 1972 ; 1972 ; https://www.govinfo.gov/ >
+    au < released ; 1973 ; CZIC 1973 ; 1973 ; https://www.govinfo.gov/ >
+    au < released ; 1974 ; CZIC 1974 ; 1974 ; https://www.govinfo.gov/ >
+    au < released ; 1975 ; CZIC 1975 ; 1975 ; https://www.govinfo.gov/ >
+    au < released ; 1976 ; CZIC 1976 ; 1976 ; https://www.govinfo.gov/ >
+    au < released ; 1977 ; CZIC 1977 ; 1977 ; https://www.govinfo.gov/ >
+    au < released ; 1978 ; CZIC 1978 ; 1978 ; https://www.govinfo.gov/ >
+    au < released ; 1979 ; CZIC 1979 ; 1979 ; https://www.govinfo.gov/ >
+    au < released ; 1980 ; CZIC 1980 ; 1980 ; https://www.govinfo.gov/ >
+    au < released ; 1981 ; CZIC 1981 ; 1981 ; https://www.govinfo.gov/ >
+    au < released ; 1982 ; CZIC 1982 ; 1982 ; https://www.govinfo.gov/ >
+    au < released ; 1983 ; CZIC 1983 ; 1983 ; https://www.govinfo.gov/ >
+    au < released ; 1984 ; CZIC 1984 ; 1984 ; https://www.govinfo.gov/ >
+    au < released ; 1985 ; CZIC 1985 ; 1985 ; https://www.govinfo.gov/ >
+    au < released ; 1986 ; CZIC 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < released ; 1987 ; CZIC 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < released ; 1988 ; CZIC 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < released ; 1989 ; CZIC 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < released ; 1990 ; CZIC 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < released ; 1991 ; CZIC 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < released ; 1992 ; CZIC 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < released ; 1993 ; CZIC 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < released ; 1994 ; CZIC 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < released ; 1995 ; CZIC 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < released ; 1996 ; CZIC 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < released ; 1997 ; CZIC 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < released ; 1998 ; CZIC 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < released ; 1999 ; CZIC 1999 ; 1999 ; https://www.govinfo.gov/ >
  
   }
 
@@ -556,19 +556,19 @@
     param[collection_id] = CCAL
 
  
-    au < down ; 1996 ; Congressional Calendars 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < down ; 1998 ; Congressional Calendars 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < released ; 1996 ; Congressional Calendars 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < released ; 1998 ; Congressional Calendars 1998 ; 1998 ; https://www.govinfo.gov/ >
 
-    au < down ; 2013 ; Congressional Calendars 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < down ; 2017 ; Congressional Calendars 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < down ; 2018 ; Congressional Calendars 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < released ; 2013 ; Congressional Calendars 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; Congressional Calendars 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; Congressional Calendars 2018 ; 2018 ; https://www.govinfo.gov/ >
 
-    au < down ; 2019 ; Congressional Calendars 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < down ; 2020 ; Congressional Calendars 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < down ; 2021 ; Congressional Calendars 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < down ; 2022 ; Congressional Calendars 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < down ; 2023 ; Congressional Calendars 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < down ; 2024 ; Congressional Calendars 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < released ; 2019 ; Congressional Calendars 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < released ; 2020 ; Congressional Calendars 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < released ; 2021 ; Congressional Calendars 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < released ; 2022 ; Congressional Calendars 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Congressional Calendars 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Congressional Calendars 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Congressional Calendars 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
@@ -782,27 +782,27 @@
 
     param[collection_id] = CDOC
 
-    au < down ; 1862 ; Congressional Documents 1862 ; 1862 ; https://www.govinfo.gov/ >
+    au < released ; 1862 ; Congressional Documents 1862 ; 1862 ; https://www.govinfo.gov/ >
 
-    au < down ; 1986 ; Congressional Documents 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < released ; 1986 ; Congressional Documents 1986 ; 1986 ; https://www.govinfo.gov/ >
 
-    au < down ; 1976 ; CDOC 1976 ; 1976 ; https://www.govinfo.gov/ >
-    au < down ; 1979 ; CDOC 1979 ; 1979 ; https://www.govinfo.gov/ >
-    au < down ; 1992 ; CDOC 1992 ; 1992 ; https://www.govinfo.gov/ >
-    au < down ; 1994 ; CDOC 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < down ; 1995 ; CDOC 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < released ; 1976 ; CDOC 1976 ; 1976 ; https://www.govinfo.gov/ >
+    au < released ; 1979 ; CDOC 1979 ; 1979 ; https://www.govinfo.gov/ >
+    au < released ; 1992 ; CDOC 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < released ; 1994 ; CDOC 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < released ; 1995 ; CDOC 1995 ; 1995 ; https://www.govinfo.gov/ >
     au < ready ; 1996 ; CDOC 1996 ; 1996 ; https://www.govinfo.gov/ >
     au < ready ; 1997 ; CDOC 1997 ; 1997 ; https://www.govinfo.gov/ >
     au < ready ; 1998 ; CDOC 1998 ; 1998 ; https://www.govinfo.gov/ >
     au < ready ; 1999 ; CDOC 1999 ; 1999 ; https://www.govinfo.gov/ >
  
-    au < down ; 2018 ; Congressional Documents 2018 ; 2018 ; https://www.govinfo.gov/ >
-    au < down ; 2019 ; Congressional Documents 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < down ; 2020 ; Congressional Documents 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < down ; 2021 ; Congressional Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < down ; 2022 ; Congressional Documents 2022 ; 2022 ; https://www.govinfo.gov/ >
-    au < down ; 2023 ; Congressional Documents 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < down ; 2024 ; Congressional Documents 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < released ; 2018 ; Congressional Documents 2018 ; 2018 ; https://www.govinfo.gov/ >
+    au < released ; 2019 ; Congressional Documents 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < released ; 2020 ; Congressional Documents 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < released ; 2021 ; Congressional Documents 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < released ; 2022 ; Congressional Documents 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Congressional Documents 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2024 ; Congressional Documents 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Congressional Documents 2025 ; 2025 ; https://www.govinfo.gov/ >
 
 
@@ -1355,10 +1355,10 @@
     comment[0] = published from 1994 to 2008, +2017
     param[collection_id] = GAOREPORTS
 
-    au < down ; 1989 ; Government Accountability Office Reports and Comptroller General Decisions 1989 ; 1989 ; https://www.govinfo.gov/ >
-    au < down ; 1990 ; Government Accountability Office Reports and Comptroller General Decisions 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < down ; 1991 ; Government Accountability Office Reports and Comptroller General Decisions 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < down ; 1992 ; Government Accountability Office Reports and Comptroller General Decisions 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < released ; 1989 ; Government Accountability Office Reports and Comptroller General Decisions 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < released ; 1990 ; Government Accountability Office Reports and Comptroller General Decisions 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < released ; 1991 ; Government Accountability Office Reports and Comptroller General Decisions 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < released ; 1992 ; Government Accountability Office Reports and Comptroller General Decisions 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < manifest ; 1993 ; Government Accountability Office Reports and Comptroller General Decisions 1993 ; 1993 ; https://www.govinfo.gov/ >
     au < manifest ; 1994 ; Government Accountability Office Reports and Comptroller General Decisions 1994 ; 1994 ; https://www.govinfo.gov/ >
     au < manifest ; 1995 ; Government Accountability Office Reports and Comptroller General Decisions 1995 ; 1995 ; https://www.govinfo.gov/ >
@@ -1492,18 +1492,18 @@
     au < manifest ; 2001 ; PAI 2001 ; 2001 ; https://www.govinfo.gov/ >
     au < manifest ; 2003 ; PAI 2003 ; 2003 ; https://www.govinfo.gov/ >
     au < manifest ; 2005 ; Privacy Act Issuances 2005 ; 2005 ; https://www.govinfo.gov/ >
-    au < down ; 2007 ; Privacy Act Issuances 2007 ; 2007 ; https://www.govinfo.gov/ >
+    au < released ; 2007 ; Privacy Act Issuances 2007 ; 2007 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 2008 ; Privacy Act Issuances 2008 ; 2008 ; https://www.govinfo.gov/ >
-    au < down ; 2009 ; Privacy Act Issuances 2009 ; 2009 ; https://www.govinfo.gov/ >
-    au < down ; 2011 ; Privacy Act Issuances 2011 ; 2011 ; https://www.govinfo.gov/ >
+    au < released ; 2009 ; Privacy Act Issuances 2009 ; 2009 ; https://www.govinfo.gov/ >
+    au < released ; 2011 ; Privacy Act Issuances 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < manifest ; 2013 ; Privacy Act Issuances 2013 ; 2013 ; https://www.govinfo.gov/ >
-    au < down ; 2015 ; Privacy Act Issuances 2015 ; 2015 ; https://www.govinfo.gov/ >
-    au < down ; 2017 ; Privacy Act Issuances 2017 ; 2017 ; https://www.govinfo.gov/ >
-    au < down ; 2019 ; Privacy Act Issuances 2019 ; 2019 ; https://www.govinfo.gov/ >
-    au < down ; 2020 ; Privacy Act Issuances 2020 ; 2020 ; https://www.govinfo.gov/ >
-    au < down ; 2021 ; Privacy Act Issuances 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < down ; 2023 ; Privacy Act Issuances 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < down ; 2025 ; Privacy Act Issuances 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < released ; 2015 ; Privacy Act Issuances 2015 ; 2015 ; https://www.govinfo.gov/ >
+    au < released ; 2017 ; Privacy Act Issuances 2017 ; 2017 ; https://www.govinfo.gov/ >
+    au < released ; 2019 ; Privacy Act Issuances 2019 ; 2019 ; https://www.govinfo.gov/ >
+    au < released ; 2020 ; Privacy Act Issuances 2020 ; 2020 ; https://www.govinfo.gov/ >
+    au < released ; 2021 ; Privacy Act Issuances 2021 ; 2021 ; https://www.govinfo.gov/ >
+    au < released ; 2023 ; Privacy Act Issuances 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < released ; 2025 ; Privacy Act Issuances 2025 ; 2025 ; https://www.govinfo.gov/ >
 
   }
 
