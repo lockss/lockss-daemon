@@ -904,8 +904,8 @@ public class V2AuMover {
         continue;
       }
       // Filter by selection pattern if set
-      if (!(args.selPatterns == null || args.selPatterns.isEmpty() ||
-            isMatch(au.getAuId(), args.selPatterns))) {
+      if (args.selPatterns != null && !args.selPatterns.isEmpty() &&
+          !isMatch(au.getAuId(), args.selPatterns)) {
         continue;
       }
       if (isSkipFinished(args, au)) {
@@ -976,7 +976,9 @@ public class V2AuMover {
     ausLatch = new CountUpDownLatch(1, "AU");
     currentStatus = STATUS_RUNNING;
     totalAusToMove = auMoveQueue.size();
-    log.debug("Moving " + totalAusToMove + " aus.");
+    String msg = "Copying " + StringUtil.numberOfUnits(totalAusToMove, "AU");
+    log.debug(msg);
+    logReport(msg + "\n");
 
     for (ArchivalUnit au : auMoveQueue) {
       if (isAbort()) {
