@@ -33,18 +33,16 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.ubiquitypress.upn;
 
 import java.io.*;
-import java.net.MalformedURLException;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
-import org.lockss.util.UrlUtil;
 
+import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
-import com.jayway.jsonpath.ReadContext;
+import com.jayway.jsonpath.Option;
 
 import org.htmlparser.*;
-import org.htmlparser.filters.*;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.ScriptTag;
 import org.lockss.daemon.PluginException;
@@ -61,7 +59,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
   //{\"href\":\"/api/1.8.4/spritesheet#user\"}
   static Pattern jsonHref = Pattern.compile("(\\\\\"href\\\\\":\\s*\\\\\")(.*?)(\\\\\")");
   static Pattern jsonPushPat = Pattern.compile("^((?:self\\.__next_f|\\(self\\.__next_[fs]=self\\.__next_[fs]\\|\\|\\[\\])\\.push\\()(.*)(\\))$");
-  static Pattern jsonStrWithDigitsPat = Pattern.compile("^(\\d+:)(.*)$");
+  static Pattern jsonStrWithDigitsPat = Pattern.compile("^(\\d+:)([\\[\\{\"].*)$");
 
   // Matches protocol pattern (e.g. "http://")
   static final String protocolPat = "[^:/?#]+://+";
@@ -151,7 +149,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
           String s = script.toPlainTextString();
           if (!StringUtil.isNullString(s)) {
             //script.removeAttribute("src");
-            log.debug3("the text BEFORE replacement is " + s);
+            //log.debug3("the text BEFORE replacement is " + s);
             //if(s.startsWith("self.__next") || s.startsWith("(self.__next")){
 
             Matcher jsonPushMat = jsonPushPat.matcher(s);
@@ -163,11 +161,28 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
               if(obj1 instanceof ArrayList){
                 ArrayList arr1 = (ArrayList)obj1;
                 if(arr1.size() == 2 && arr1.get(0) instanceof Integer && arr1.get(1) instanceof String){
+                  boolean changed = false;
                   String str1 = (String)arr1.get(1);
                   Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(str1);
                   if(jsonStrWithDigitsMat.find()){
                     String str2 = jsonStrWithDigitsMat.group(2);
-                    JsonPath.parse(str2); 
+                    Configuration conf = Configuration.builder().options(Option.AS_PATH_LIST, Option.SUPPRESS_EXCEPTIONS, Option.ALWAYS_RETURN_LIST).build();
+                    DocumentContext dc2Paths = JsonPath.using(conf).parse(str2);
+                    DocumentContext dc2Values = JsonPath.parse(str2);
+                    Object obj2 = dc2Paths.read("$",Object.class);
+                    List<String> paths = dc2Paths.read("$..pageUrl");
+                    log.debug3("paths is " + paths.toString());
+                    for(String path : paths){
+                      log.debug3("the path is " + dc2Values.read(path));
+                      dc2Paths.set(path, "WOOHOO!!!!");
+                      changed = true;
+                    }
+                    if(changed){
+                      str1 = jsonStrWithDigitsMat.replaceFirst(String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString())));
+                      dc.set("$[1]",str1);
+                      s = jsonPushMat.replaceFirst(String.format("$1%s$3",Matcher.quoteReplacement(dc.jsonString())));
+                      script.setScriptCode(s);
+                    }
                   }
                 }
               }
