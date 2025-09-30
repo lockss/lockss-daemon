@@ -59,6 +59,30 @@ import org.lockss.util.Logger;
   		<source src="/downloads/sn00b133k?file=mp3&amp;locale=en" type="audio/mpeg" />
 	</audio>
  */
+
+/*
+	Article page:
+    https://journals.publishing.umich.edu/conversations/article/id/2354/ has the following chain
+
+    https://journals.publishing.umich.edu/conversations/article/id/2354/ => https://www.fulcrum.org/embed?hdl=2027%2Ffulcrum.jm214r214&fs=1 => https://www.fulcrum.org/downloads/jm214r214?file=mp4&locale=en
+
+    <video id="video"
+       preload="metadata"
+       width="8000px"
+       data-able-player
+       data-skin="2020"
+       data-captions-position="overlay"
+       data-include-transcript="false"
+       data-heading-level="0"
+       data-allow-fullscreen=true
+       poster="/downloads/jm214r214?file=jpeg&amp;locale=en"
+       data-transcript-div="video-hidden-transcript-container" data-lyrics-mode>
+  <source src="/downloads/jm214r214?file=mp4&amp;locale=en" type="video/mp4" />
+
+    <track kind="subtitles" src="/downloads/jm214r214?file=captions_vtt&amp;locale=en" srclang="en" label="English"  />
+  Your browser does not support the video tag.
+</video>
+ */
 public class HtmlLinkExtractorFactory
 implements LinkExtractorFactory {
 	public static final String SOURCE_TAG = "source";
@@ -78,8 +102,6 @@ implements LinkExtractorFactory {
 	 *  pick up the "src" attribute on <source> tags
 	 */
 	protected void registerExtractors(JsoupHtmlLinkExtractor extractor) {
-
-
 		extractor.registerTagExtractor(SOURCE_TAG,
 				new SimpleTagLinkExtractor(new String[]{"src"}));
 

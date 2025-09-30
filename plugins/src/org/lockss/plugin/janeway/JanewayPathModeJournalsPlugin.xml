@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -175,6 +175,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.janeway.HtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_rewriter_factory</string>
+    <string>org.lockss.plugin.janeway.HtmlLinkRewriterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
