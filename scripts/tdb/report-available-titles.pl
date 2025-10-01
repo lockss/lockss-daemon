@@ -526,7 +526,8 @@ sub generateCsvMetadata {
     print STDERR " 1. Participating publishers and titles ($committedTitles)\n";
     # Don't forget the header row (though it is not used)
     run("echo '$cheader' > $committedTitles");
-    run("$tdbout -j $tdbs $dumpErr | sort -u >> $committedTitles");
+    #run("$tdbout -j $tdbs $dumpErr | sort -u >> $committedTitles");
+    run("$tdbout -c publisher,title,issn,eissn -Q 'type is "journal"' $tdbs $dumpErr | sort -u >> $committedTitles");
 
     # (1) TDB metadata for AUs released into production
     #     (including those that have subsequently been marked as down)
