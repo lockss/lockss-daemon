@@ -592,7 +592,8 @@ sub fileHasMoreThanAHeader() {
 
 sub getFieldLabel() {
     my $f = shift;
-    return $tdbFieldMapping{$f} or $f;
+    $result = $tdbFieldMapping{$f} or $f;
+    return $result;
 }
 
 # Show usage message
