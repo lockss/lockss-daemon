@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>176</string>
+    <string>177</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -145,6 +145,11 @@ POSSIBILITY OF SUCH DAMAGE.
     massmedical and t&f have a number of additions 
      -->
     <list>
+      <!-- Many plugins got 500 error on link like:
+      "https://www.ajronline.org/products/arrs/releasedAssets/css/%22data:application/font-woff"
+      "/css/(%22|")data:application/font-woff$"
+      -->
+      <string>2, "^%s.*/css/(%%22|\")data:application/font-woff$", base_url</string>
       <string>2,"^https?://%s/imgJawr/[^/]+/templates/jsp/_style2/_tandf/images/favicon\.png$", url_host(base_url)</string>
       <string>2,"^https?://%s/doi/.*/googleAnalyticsPlugin\.js$", url_host(base_url)</string>
       <string>2,"^https?://%s/.*/www\.tandf\.co\.uk/", url_host(base_url)</string>
