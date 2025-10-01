@@ -527,7 +527,8 @@ sub generateCsvMetadata {
     # Don't forget the header row (though it is not used)
     run("echo '$cheader' > $committedTitles");
     #run("$tdbout -j $tdbs $dumpErr | sort -u >> $committedTitles");
-    run("$tdbout -c publisher,title,issn,eissn -Q 'type is "journal"' $tdbs $dumpErr | sort -u >> $committedTitles");
+    my $content_type = 'type is "journal"';
+    run("$tdbout -c publisher,title,issn,eissn -Q $content_type $tdbs $dumpErr | sort -u >> $committedTitles");
 
     # (1) TDB metadata for AUs released into production
     #     (including those that have subsequently been marked as down)
@@ -593,8 +594,7 @@ sub fileHasMoreThanAHeader() {
 
 sub getFieldLabel() {
     my $f = shift;
-    $result = $tdbFieldMapping{$f} or $f;
-    return $result;
+    return $tdbFieldMapping{$f} || $f;
 }
 
 # Show usage message
