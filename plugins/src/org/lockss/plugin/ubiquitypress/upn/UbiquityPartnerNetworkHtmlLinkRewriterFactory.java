@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.ubiquitypress.upn;
 
 import java.io.*;
+import java.net.MalformedURLException;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
@@ -149,7 +150,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
           String s = script.toPlainTextString();
           if (!StringUtil.isNullString(s)) {
             //script.removeAttribute("src");
-            //log.debug3("the text BEFORE replacement is " + s);
+            log.debug3("the text BEFORE replacement is " + s);
             //if(s.startsWith("self.__next") || s.startsWith("(self.__next")){
 
             Matcher jsonPushMat = jsonPushPat.matcher(s);
@@ -170,12 +171,25 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                     DocumentContext dc2Paths = JsonPath.using(conf).parse(str2);
                     DocumentContext dc2Values = JsonPath.parse(str2);
                     Object obj2 = dc2Paths.read("$",Object.class);
-                    List<String> paths = dc2Paths.read("$..pageUrl");
-                    log.debug3("paths is " + paths.toString());
-                    for(String path : paths){
-                      log.debug3("the path is " + dc2Values.read(path));
-                      dc2Paths.set(path, "WOOHOO!!!!");
-                      changed = true;
+                    List<String> JSONpaths = Arrays.asList("$..pageUrl","$..link","$..href","$..children[?(@[3].item.link)][2]","$..children[?(@[3].href)][2]");
+                    log.debug3("JSONpaths is " + JSONpaths.toString());
+                    for(String JSONpath : JSONpaths){
+                      List<String> paths = dc2Paths.read(JSONpath);
+                      for(String path : paths){
+                        log.debug3("the path is " + dc2Values.read(path));
+                        String val = dc2Values.read(path);
+                        if(val != null){
+                          String newUrl;
+                          try{
+                            newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, val)));
+                            log.debug3("the new url is " + newUrl);
+                            dc2Paths.set(path, newUrl);
+                            changed = true;
+                          }catch (MalformedURLException e){
+                            log.debug("Couldn't resolve: the base url is " + baseUrl + " and the second group is " +  val);
+                          };
+                        }
+                      }
                     }
                     if(changed){
                       str1 = jsonStrWithDigitsMat.replaceFirst(String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString())));
@@ -186,7 +200,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                   }
                 }
               }
-            
+              
               /* 
               Matcher mat = jsonHref.matcher(s);
               StringBuffer sb = new StringBuffer();
@@ -214,6 +228,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
               script.setScriptCode(sb.toString());
               log.debug3("the text AFTER replacement is " + sb.toString());*/
             }
+            log.debug3("the text AFTER replacement is " + s);
           }
         }
         return false;
