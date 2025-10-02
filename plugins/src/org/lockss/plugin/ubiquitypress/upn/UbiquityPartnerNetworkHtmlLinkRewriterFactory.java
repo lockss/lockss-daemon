@@ -155,17 +155,20 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
 
             Matcher jsonPushMat = jsonPushPat.matcher(s);
             if(jsonPushMat.find()){
+              StringBuffer sb = new StringBuffer();
+              //contents of json
               String jsonExpression = jsonPushMat.group(2);
               DocumentContext dc = JsonPath.parse(jsonExpression);
               Object obj1 = dc.read("$",Object.class);
               
               if(obj1 instanceof ArrayList){
                 ArrayList arr1 = (ArrayList)obj1;
-                if(arr1.size() == 2 && arr1.get(0) instanceof Integer && arr1.get(1) instanceof String){
+                if(arr1.size() > 1 && arr1.get(0) instanceof Integer && arr1.get(1) instanceof String){
                   boolean changed = false;
                   String str1 = (String)arr1.get(1);
+                  log.debug3("STRING 1 IS: " + str1);
                   Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(str1);
-                  if(jsonStrWithDigitsMat.find()){
+                  while(jsonStrWithDigitsMat.find()){
                     String str2 = jsonStrWithDigitsMat.group(2);
                     Configuration conf = Configuration.builder().options(Option.AS_PATH_LIST, Option.SUPPRESS_EXCEPTIONS, Option.ALWAYS_RETURN_LIST).build();
                     DocumentContext dc2Paths = JsonPath.using(conf).parse(str2);
@@ -192,8 +195,11 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                       }
                     }
                     if(changed){
-                      str1 = jsonStrWithDigitsMat.replaceFirst(String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString())));
-                      dc.set("$[1]",str1);
+                      str1 = String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString()));
+                      jsonStrWithDigitsMat.appendReplacement(sb, str1);
+                      jsonStrWithDigitsMat.appendTail(sb);
+                      log.debug3("STRING BUFFER IS " + sb);
+                      dc.set("$[1]",sb.toString());
                       s = jsonPushMat.replaceFirst(String.format("$1%s$3",Matcher.quoteReplacement(dc.jsonString())));
                       script.setScriptCode(s);
                     }
