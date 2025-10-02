@@ -352,8 +352,8 @@
     au < finished ; manifest ; 2020 ; Journal of Climate Volume 33 ; 33 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Climate Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2022 ; Journal of Climate Volume 35 ; 35 ; >
-    au < deepCrawl ; exists ; 2023 ; Journal of Climate Volume 36 ; 36 ; >
-    au < deepCrawl ; exists ; 2024 ; Journal of Climate Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2023 ; Journal of Climate Volume 36 ; 36 ; >
+    au < frozen ; exists ; 2024 ; Journal of Climate Volume 37 ; 37 ; >
     au < crawling ; exists ; 2025 ; Journal of Climate Volume 38 ; 38 ; >
 
   }
@@ -392,9 +392,9 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Hydrometeorology Volume 20 ; 20 ; >
     au < finished ; manifest ; 2020 ; Journal of Hydrometeorology Volume 21 ; 21 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Hydrometeorology Volume 22 ; 22 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2022 ; Journal of Hydrometeorology Volume 23 ; 23 ; >
-    au < deepCrawl ; exists ; 2023 ; Journal of Hydrometeorology Volume 24 ; 24 ; >
-    au < deepCrawl ; exists ; 2024 ; Journal of Hydrometeorology Volume 25 ; 25 ; >
+    au < frozen ; exists ; 2022 ; Journal of Hydrometeorology Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2023 ; Journal of Hydrometeorology Volume 24 ; 24 ; >
+    au < frozen ; exists ; 2024 ; Journal of Hydrometeorology Volume 25 ; 25 ; >
     au < crawling ; exists ; 2025 ; Journal of Hydrometeorology Volume 26 ; 26 ; >
 
   }
@@ -461,9 +461,9 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of Physical Oceanography Volume 49 ; 49 ; >
     au < finished ; manifest ; 2020 ; Journal of Physical Oceanography Volume 50 ; 50 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Physical Oceanography Volume 51 ; 51 ; reingest2.clockss.org:8085 >
-    au < deepCrawl ; exists ; 2022 ; Journal of Physical Oceanography Volume 52 ; 52 ; >
-    au < deepCrawl ; exists ; 2023 ; Journal of Physical Oceanography Volume 53 ; 53 ; >
-    au < deepCrawl ; exists ; 2024 ; Journal of Physical Oceanography Volume 54 ; 54 ; >
+    au < frozen ; exists ; 2022 ; Journal of Physical Oceanography Volume 52 ; 52 ; >
+    au < frozen ; exists ; 2023 ; Journal of Physical Oceanography Volume 53 ; 53 ; >
+    au < frozen ; exists ; 2024 ; Journal of Physical Oceanography Volume 54 ; 54 ; >
     au < crawling ; exists ; 2025 ; Journal of Physical Oceanography Volume 55 ; 55 ; >
 
   }
@@ -557,9 +557,9 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Journal of the Atmospheric Sciences Volume 76 ; 76 ; >
     au < finished ; manifest ; 2020 ; Journal of the Atmospheric Sciences Volume 77 ; 77 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of the Atmospheric Sciences Volume 78 ; 78 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2022 ; Journal of the Atmospheric Sciences Volume 79 ; 79 ; >
-    au < deepCrawl ; exists ; 2023 ; Journal of the Atmospheric Sciences Volume 80 ; 80 ; >
-    au < deepCrawl ; exists ; 2024 ; Journal of the Atmospheric Sciences Volume 81 ; 81 ; >
+    au < frozen ; exists ; 2022 ; Journal of the Atmospheric Sciences Volume 79 ; 79 ; >
+    au < frozen ; exists ; 2023 ; Journal of the Atmospheric Sciences Volume 80 ; 80 ; >
+    au < frozen ; exists ; 2024 ; Journal of the Atmospheric Sciences Volume 81 ; 81 ; >
     au < crawling ; exists ; 2025 ; Journal of the Atmospheric Sciences Volume 82 ; 82 ; >
 
   }
@@ -754,9 +754,9 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Monthly Weather Review Volume 147 ; 147 ; >
     au < finished ; manifest ; 2020 ; Monthly Weather Review Volume 148 ; 148 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Monthly Weather Review Volume 149 ; 149 ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; Monthly Weather Review Volume 150 ; 150 ; >
-    au < deepCrawl ; exists ; 2023 ; Monthly Weather Review Volume 151 ; 151 ; >
-    au < deepCrawl ; exists ; 2024 ; Monthly Weather Review Volume 152 ; 152 ; >
+    au < frozen ; exists ; 2022 ; Monthly Weather Review Volume 150 ; 150 ; >
+    au < frozen ; exists ; 2023 ; Monthly Weather Review Volume 151 ; 151 ; >
+    au < frozen ; exists ; 2024 ; Monthly Weather Review Volume 152 ; 152 ; >
     au < crawling ; exists ; 2025 ; Monthly Weather Review Volume 153 ; 153 ; >
 
   }
@@ -785,9 +785,9 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Weather, Climate, and Society Volume 11 ; 11 ; >
     au < finished ; manifest ; 2020 ; Weather, Climate, and Society Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Weather, Climate, and Society Volume 13 ; 13 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2022 ; Weather, Climate, and Society Volume 14 ; 14 ; >
-    au < deepCrawl ; exists ; 2023 ; Weather, Climate, and Society Volume 15 ; 15 ; >
-    au < deepCrawl ; exists ; 2024 ; Weather, Climate, and Society Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2022 ; Weather, Climate, and Society Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2023 ; Weather, Climate, and Society Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2024 ; Weather, Climate, and Society Volume 16 ; 16 ; >
     au < crawling ; exists ; 2025 ; Weather, Climate, and Society Volume 17 ; 17 ; >
 
   }
@@ -839,9 +839,9 @@
     au < doNotProcess ; doNotProcess ; 2019 ; Weather and Forecasting Volume 34 ; 34 ; >
     au < finished ; manifest ; 2020 ; Weather and Forecasting Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Weather and Forecasting Volume 36 ; 36 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2022 ; Weather and Forecasting Volume 37 ; 37 ; >
-    au < deepCrawl ; exists ; 2023 ; Weather and Forecasting Volume 38 ; 38 ; >
-    au < deepCrawl ; exists ; 2024 ; Weather and Forecasting Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2022 ; Weather and Forecasting Volume 37 ; 37 ; >
+    au < frozen ; exists ; 2023 ; Weather and Forecasting Volume 38 ; 38 ; >
+    au < frozen ; exists ; 2024 ; Weather and Forecasting Volume 39 ; 39 ; >
     au < crawling ; exists ; 2025 ; Weather and Forecasting Volume 40 ; 40 ; >
 
   }
