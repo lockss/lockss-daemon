@@ -805,9 +805,35 @@ while (my $line = <>) {
     } elsif ($man_contents !~ m/$oa_tag/si && $man_contents !~ m/$lockss_tag/si) {
         $result = "--NO_TAG--";
     #Test for link to chapter
-    } elsif ($man_contents =~ m/$param{year}/) {
-        #Collect title
-        $result = "Manifest";
+#    } elsif ($man_contents =~ m/$param{year}/) {
+#    } elsif (($man_contents =~ m/$url/) && ($man_contents =~ m/\/Library\/Article\//)) {
+#    } elsif (($man_contents =~ m/$param{journal_id}\?year=$param{year}/)) {
+    } elsif (($man_contents =~ m/\Q$man_url\E/)) {
+        if ($man_contents !~ m/="\/(Library\/Article\/[^"]*)">[^<]*<\/a>/si) {
+            $result = "NoArticles";
+        } else {
+            my $art_url = $param{base_url} . $1;
+            $man_art_url = uri_unescape($art_url);
+            my $req_art = HTTP::Request->new(GET, $man_art_url);
+            my $resp_art = $ua->request($req_art);
+            #print("$man_art_url\n"); #debug
+            #print("Result:$result\n"); #debug
+            my $man_art_contents = $resp_art->is_success ? $resp_art->content : "";
+            if (! $resp_art->is_success) {
+                $result = "BadArticleLink-" . $resp_art->code() . " " . $resp_art->message();
+                $vol_title = $man_art_url;
+            } elsif ($req_art->url ne $resp_art->request->uri) {
+                $result = "ArticleLinkRedirect";
+                $vol_title = $man_art_url;
+            } elsif ($man_art_contents =~ "Becoming a member is easy.") {
+                $result = "LoginPage";
+                $vol_title = $man_art_url;
+            } else {
+                #Collect title
+                $vol_title = $param{journal_id} . " " . $param{year};
+                $result = "Manifest";
+            }
+        }
     } else {
         $result = "--NO_CONT--";
     }
