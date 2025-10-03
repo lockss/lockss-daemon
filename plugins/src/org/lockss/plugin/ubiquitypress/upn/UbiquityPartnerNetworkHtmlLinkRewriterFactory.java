@@ -50,7 +50,6 @@ import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.rewriter.*;
 import org.lockss.servlet.ServletUtil.LinkTransform;
-import org.lockss.util.Logger;
 import org.lockss.rewriter.NodeFilterHtmlLinkRewriterFactory.HtmlBaseProcessor;
 import org.lockss.util.*;
 
@@ -60,7 +59,8 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
   //{\"href\":\"/api/1.8.4/spritesheet#user\"}
   static Pattern jsonHref = Pattern.compile("(\\\\\"href\\\\\":\\s*\\\\\")(.*?)(\\\\\")");
   static Pattern jsonPushPat = Pattern.compile("^((?:self\\.__next_f|\\(self\\.__next_[fs]=self\\.__next_[fs]\\|\\|\\[\\])\\.push\\()(.*)(\\))$");
-  static Pattern jsonStrWithDigitsPat = Pattern.compile("^(\\d+:)([\\[\\{\"].*)$");
+  //json expressions may be across multiple lines (/n)
+  static Pattern jsonStrWithDigitsPat = Pattern.compile("^((?:[0-9A-Fa-f]+)?:)([\\[\\{\"].*)$",Pattern.MULTILINE);
 
   // Matches protocol pattern (e.g. "http://")
   static final String protocolPat = "[^:/?#]+://+";
@@ -164,13 +164,23 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
               if(obj1 instanceof ArrayList){
                 ArrayList arr1 = (ArrayList)obj1;
                 if(arr1.size() > 1 && arr1.get(0) instanceof Integer && arr1.get(1) instanceof String){
-                  boolean changed = false;
                   String str1 = (String)arr1.get(1);
                   log.debug3("STRING 1 IS: " + str1);
                   Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(str1);
                   while(jsonStrWithDigitsMat.find()){
                     String str2 = jsonStrWithDigitsMat.group(2);
                     Configuration conf = Configuration.builder().options(Option.AS_PATH_LIST, Option.SUPPRESS_EXCEPTIONS, Option.ALWAYS_RETURN_LIST).build();
+                    log.debug3("STR2 is : " + str2);
+                    //some json is not configured correctly (i.e., open brackets/parentheses are not closed properly)
+                    //Example: \n47:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/6/volume/2/issue/0\",\"locale\":\"$"]
+                    if(str2.startsWith("[") && !str2.endsWith("]")){
+                      if(str2.endsWith("$")){
+                        str2 += "\"}]";
+                      }else{
+                        str2 += ":\"blah\"}]";
+                      }
+                      log.debug3("NEW STRING: " + str2);
+                    }
                     DocumentContext dc2Paths = JsonPath.using(conf).parse(str2);
                     DocumentContext dc2Values = JsonPath.parse(str2);
                     Object obj2 = dc2Paths.read("$",Object.class);
@@ -187,23 +197,20 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                             newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, val)));
                             log.debug3("the new url is " + newUrl);
                             dc2Paths.set(path, newUrl);
-                            changed = true;
                           }catch (MalformedURLException e){
                             log.debug("Couldn't resolve: the base url is " + baseUrl + " and the second group is " +  val);
                           };
                         }
                       }
                     }
-                    if(changed){
-                      str1 = String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString()));
-                      jsonStrWithDigitsMat.appendReplacement(sb, str1);
-                      jsonStrWithDigitsMat.appendTail(sb);
-                      log.debug3("STRING BUFFER IS " + sb);
-                      dc.set("$[1]",sb.toString());
-                      s = jsonPushMat.replaceFirst(String.format("$1%s$3",Matcher.quoteReplacement(dc.jsonString())));
-                      script.setScriptCode(s);
-                    }
+                    jsonStrWithDigitsMat.appendReplacement(sb, String.format("$1%s\n", Matcher.quoteReplacement(dc2Paths.jsonString())));
+                    log.debug3("STRING BUFFER IS " + sb.toString());
                   }
+                  jsonStrWithDigitsMat.appendTail(sb);
+                  log.debug3("AFTER APPEND TAIL: " + sb.toString());
+                  dc.set("$[1]",sb.toString());
+                  s = jsonPushMat.replaceFirst(String.format("$1%s$3",Matcher.quoteReplacement(dc.jsonString())));
+                  script.setScriptCode(s);
                 }
               }
               
