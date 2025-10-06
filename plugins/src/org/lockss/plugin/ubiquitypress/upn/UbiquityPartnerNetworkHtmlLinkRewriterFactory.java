@@ -38,11 +38,15 @@ import java.util.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.io.JsonEOFException;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
+import com.jayway.jsonpath.JsonPathException;
 import com.jayway.jsonpath.Option;
 
+import org.apache.commons.lang.StringUtils;
 import org.htmlparser.*;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.ScriptTag;
@@ -58,7 +62,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
   static Logger log = Logger.getLogger(UbiquityPartnerNetworkHtmlLinkRewriterFactory.class);
   //{\"href\":\"/api/1.8.4/spritesheet#user\"}
   static Pattern jsonHref = Pattern.compile("(\\\\\"href\\\\\":\\s*\\\\\")(.*?)(\\\\\")");
-  static Pattern jsonPushPat = Pattern.compile("^((?:self\\.__next_f|\\(self\\.__next_[fs]=self\\.__next_[fs]\\|\\|\\[\\])\\.push\\()(.*)(\\))$");
+  static Pattern jsonPushPat = Pattern.compile("^((?:self\\.__next_f|\\(self\\.__next_[fs]=self\\.__next_[fs]\\|\\|\\[\\]\\))\\.push\\()(.*)(\\))$");
   //json expressions may be across multiple lines (/n)
   static Pattern jsonStrWithDigitsPat = Pattern.compile("^((?:[0-9A-Fa-f]+)?:)([\\[\\{\"].*)$",Pattern.MULTILINE);
 
@@ -158,7 +162,18 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
               StringBuffer sb = new StringBuffer();
               //contents of json
               String jsonExpression = jsonPushMat.group(2);
-              DocumentContext dc = JsonPath.parse(jsonExpression);
+              if(jsonExpression.startsWith("[") && !jsonExpression.endsWith("]")){
+                jsonExpression = jsonExpression + "\"]";
+                log.debug3("NOT WOOHOO!!!! :(");
+              }
+              DocumentContext dc = null;
+              try{
+                dc = JsonPath.parse(jsonExpression);
+              }catch(JsonPathException e){
+                //some json couldn't parse, ignoring
+                log.debug3("could not parse json dc: " + jsonExpression,e);
+                return false;
+              }
               Object obj1 = dc.read("$",Object.class);
               
               if(obj1 instanceof ArrayList){
@@ -170,22 +185,70 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                   while(jsonStrWithDigitsMat.find()){
                     String str2 = jsonStrWithDigitsMat.group(2);
                     Configuration conf = Configuration.builder().options(Option.AS_PATH_LIST, Option.SUPPRESS_EXCEPTIONS, Option.ALWAYS_RETURN_LIST).build();
-                    log.debug3("STR2 is : " + str2);
+                    /*log.debug3("STR2 is : " + str2);
                     //some json is not configured correctly (i.e., open brackets/parentheses are not closed properly)
                     //Example: \n47:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/6/volume/2/issue/0\",\"locale\":\"$"]
                     //\n4e:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/articles/28\",\"locale\":\"$undefined\",\"localeCookie\":\"$2a:"]
+                    */
                     if(str2.startsWith("[") && !str2.endsWith("]")){
-                      if(str2.endsWith("$")){
-                        str2 += "\"}]";
-                      }else{
-                        str2 += ":\"blah\"}]";
+                      int closedCurly = StringUtils.countMatches(str2, "{") - StringUtils.countMatches(str2, "}");
+                      if(closedCurly > 0){
+                        int lastOpenCurly = str2.lastIndexOf("{");
+                        int lastComma = str2.substring(lastOpenCurly).lastIndexOf(",");
+                        String lastItem = str2.substring(lastComma);
+                        if(lastItem.contains(":")){
+                          if(lastItem.endsWith(":")){
+                            //add a fake value
+                          }else{
+                            //do nothing
+                          }
+                        }else{
+                          if(lastItem.length() > 0){
+                            //then add colon and fake value
+                          }else{
+                            //add a fake key, a colon and a fake value to str2
+                          }
+                        }
+                        int commas = StringUtils.countMatches(str2.substring(lastOpenCurly), ",");
+                        int colons = StringUtils.countMatches(str2.substring(lastOpenCurly), ":");
+                        if(colons == commas + 1){
+                          //the object definition seems to be balanced (have all its key-value pairs); then do nothing
+                          if(str2.endsWith(":")){
+                            //last key-value pair doesn't have value
+                            str2 = str2 + "\"FAKE-VALUE\"";
+                          }
+                        }else if(colons == commas){
+                          //it appears the last key-value pair only has a key
+                          str2 = str2 + ":\"FAKE-VALUE\"";
+                        }else{
+                          //there are probably colons and/or commas in the key-pair values 
+                        }
                       }
-                      log.debug3("NEW STRING: " + str2);
+                      while(closedCurly > 0){
+                        str2 = str2 + "}";
+                        closedCurly--;
+                      }
+                      str2 = str2 + "]";
+
+                      /*if(str2.endsWith("$")){
+                        str2 += "\"}]";
+                      }else if(!str2.endsWith(":")){
+                        str2 += ":\"blah\"}]";
+                      }else{
+                        str2 += "blah\"}]";
+                      }
+                      log.debug3("NEW STRING: " + str2);*/
                     }
-                    DocumentContext dc2Paths = JsonPath.using(conf).parse(str2);
+                    DocumentContext dc2Paths = null;
+                    try{
+                      dc2Paths = JsonPath.using(conf).parse(str2);
+                    }catch(JsonPathException e){
+                      //some json couldn't parse, ignoring
+                      log.debug3("could not parse json dc2paths: " + str2,e);
+                    }
                     DocumentContext dc2Values = JsonPath.parse(str2);
-                    Object obj2 = dc2Paths.read("$",Object.class);
-                    List<String> JSONpaths = Arrays.asList("$..pageUrl","$..link","$..href","$..children[?(@[3].item.link)][2]","$..children[?(@[3].href)][2]");
+                    //fix FRONTEND_URL
+                    List<String> JSONpaths = Arrays.asList("$..pageUrl","$..link","$..href","$..children[?(@[3].item.link)][2]","$..children[?(@[3].href)][2]","$..FRONTEND_URL");
                     log.debug3("JSONpaths is " + JSONpaths.toString());
                     for(String JSONpath : JSONpaths){
                       List<String> paths = dc2Paths.read(JSONpath);
@@ -204,7 +267,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                         }
                       }
                     }
-                    jsonStrWithDigitsMat.appendReplacement(sb, String.format("$1%s\n", Matcher.quoteReplacement(dc2Paths.jsonString())));
+                    jsonStrWithDigitsMat.appendReplacement(sb, String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString())));
                     log.debug3("STRING BUFFER IS " + sb.toString());
                   }
                   jsonStrWithDigitsMat.appendTail(sb);
