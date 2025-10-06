@@ -1,0 +1,63 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Markers: Annual Journal of the Association for Gravestone Studies ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 896
+
+      au < manifest ; 1979-1980 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 1 [1979-1980] ; 19785 >
+      au < manifest ; 1983 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 2 [1983] ; 19784 >
+      au < manifest ; 1985 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 3 [1985] ; 19783 >
+      au < manifest ; 1987 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 4 [1987] ; 19782 >
+      au < manifest ; 1988 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 5 [1988] ; 19781 >
+      au < manifest ; 1989 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 6 [1989] ; 19780 >
+      au < manifest ; 1990 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 7 [1990] ; 19779 >
+      au < manifest ; 1991 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 8 [1991] ; 19778 >
+      au < manifest ; 1992 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 9 [1992] ; 19777 >
+      au < manifest ; 1993 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 10 [1993] ; 19776 >
+      au < manifest ; 1994 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 11 [1994] ; 19775 >
+      au < manifest ; 1995 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 12 [1995] ; 19774 >
+      au < manifest ; 1996 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 13 [1996] ; 19773 >
+      au < manifest ; 1997 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 14 [1997] ; 19772 >
+      au < manifest ; 1998 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 15 [1998] ; 19771 >
+      au < manifest ; 1999 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 16 [1999] ; 19770 >
+      au < manifest ; 2000 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 17 [2000] ; 19769 >
+      au < manifest ; 2001 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 18 [2001] ; 19768 >
+      au < manifest ; 2002 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 19 [2002] ; 19767 >
+      au < manifest ; 2003 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 20 [2003] ; 19766 >
+      au < manifest ; 2004 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 21 [2004] ; 19765 >
+      au < manifest ; 2005 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 22 [2005] ; 19764 >
+      au < manifest ; 2006 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 23 [2006] ; 19613 >
+      au < manifest ; 2007 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 24 [2007] ; 19612 >
+      au < manifest ; 2008 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 25 [2008] ; 19611 >
+      au < manifest ; 2009 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 26 [2009] ; 19610 >
+      au < manifest ; 2011 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 27 [2011] ; 19609 >
+      au < manifest ; 2013 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 28 [2013] ; 19608 >
+      au < manifest ; 2014 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 29 [2014] ; 19607 >
+      au < manifest ; 2015 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 30 [2015] ; 19606 >
+      au < manifest ; 2016 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 32 [2016] ; 19604 >
+      au < manifest ; 2017 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 33 [2017] ; 19603 >
+      au < manifest ; 2018 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 34 [2018] ; 19602 >
+      au < manifest ; 2019 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 35 [2019] ; 19601 >
+      au < manifest ; 2020 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 36 [2020] ; 19600 >
+      au < manifest ; 2021 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 37 [2021] ; 19599 >
+      au < manifest ; 2022 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 38 [2022] ; 19598 >
+      au < manifest ; 2024 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 39 [2024] ; 19597 >
+      au < manifest ; 2025 ; Markers: Annual Journal of the Association for Gravestone Studies Volume 40 [2025] ; 19735 >
+
+    }
+
+}

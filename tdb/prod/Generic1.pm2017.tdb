@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = PUBLISHER_NAME
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:PUB_ID
+
+    {
+    title <
+      name = Historical Studies in the Natural Sciences ;
+      issn = ISSN ;
+      eissn = EISSN
+
+    >
+
+      attr[journal_id] = 890
+
+      au < manifest ; 2023 ; Historical Studies in the Natural Sciences Volume 53 [2023] ; 19240 >
+      au < manifest ; 2024 ; Historical Studies in the Natural Sciences Volume 54 [2024] ; 19241 >
+      au < manifest ; 2025 ; Historical Studies in the Natural Sciences Volume 55 [2025] ; 19733 >
+
+    }
+
+}
