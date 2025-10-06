@@ -126,6 +126,23 @@
 
     {
     title <
+      name = Foucault Studies ;
+      eissn = 1832-5203
+
+    >
+
+      attr[journal_id] = 891
+
+      au < manifest ; 2021 ; Foucault Studies Volume 31 [2021] ; 19434 >
+      au < manifest ; 2022 ; Foucault Studies Volume 33 [2022] ; 19372 >
+      au < manifest ; 2023 ; Foucault Studies Volume 35 [2023] ; 19374 >
+      au < manifest ; 2024 ; Foucault Studies Volume 36 [2024] ; 19375 >
+      au < manifest ; 2025 ; Foucault Studies Volume 37 [2025] ; 20012 >
+
+    }
+
+    {
+    title <
       name = French Forum ;
       issn = 0098-9355  ;
       eissn = 1534-1836  ;
@@ -164,6 +181,20 @@
 
     {
     title <
+      name = Global Black Thought ;
+      issn = 3065-1905 ;
+      eissn = 3065-1913
+
+    >
+
+      attr[journal_id] = 893
+
+      au < manifest ; 2025 ; Global Black Thought Volume 1 [2025] ; 19522 >
+
+    }
+
+    {
+    title <
       name = Hispanic Review ;
       issn = 0018-2176  ;
       eissn = 1553-0639  ;
@@ -194,6 +225,20 @@
         au < released ; 2023 ; Hispanic Review Volume 91 [2023] ; 18456 >
         au < released ; 2024 ; Hispanic Review Volume 92 [2024] ; 18953 >
         au < manifest ; 2025 ; Hispanic Review Volume 93 [2025] ; 19684 >
+
+    }
+
+    {
+    title <
+      name = History of Social Science ;
+      issn = 2835-0197 ;
+      eissn = 2835-0200
+
+    >
+
+      attr[journal_id] = 892
+
+      au < manifest ; 2025 ; History of Social Science Volume 1 [2025] ; 19521 >
 
     }
 

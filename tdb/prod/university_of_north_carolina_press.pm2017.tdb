@@ -76,6 +76,31 @@
 
     {
     title <
+      name = Appalachian Journal ;
+      issn = 0090-3779 ;
+      eissn = 2330-2291
+
+    >
+
+      attr[journal_id] = 899
+
+      au < manifest ; 2013-2014 ; Appalachian Journal Volume 41 [2013-2014] ; 19716 >
+      au < manifest ; 2014-2015 ; Appalachian Journal Volume 42 [2014-2015] ; 19719 >
+      au < manifest ; 2015-2016 ; Appalachian Journal Volume 43 [2015-2016] ; 19720 >
+      au < manifest ; 2016-2017 ; Appalachian Journal Volume 44 [2016-2017] ; 19721 >
+      au < manifest ; 2017-2018 ; Appalachian Journal Volume 45 [2017-2018] ; 19722 >
+      au < manifest ; 2018-2019 ; Appalachian Journal Volume 46 [2018-2019] ; 19723 >
+      au < manifest ; 2019-2020 ; Appalachian Journal Volume 47 [2019-2020] ; 19724 >
+      au < manifest ; 2020-2021 ; Appalachian Journal Volume 48 [2020-2021] ; 19725 >
+      au < manifest ; 2021-2022 ; Appalachian Journal Volume 49 [2021-2022] ; 19726 >
+      au < manifest ; 2022-2023 ; Appalachian Journal Volume 50 [2022-2023] ; 19727 >
+      au < manifest ; 2023-2024 ; Appalachian Journal Volume 51 [2023-2024] ; 19728 >
+      au < manifest ; 2024-2025 ; Appalachian Journal Volume 52 [2024-2025] ; 19729 >
+
+    }
+
+    {
+    title <
       name = Arris ;
       issn = 1048-5945 ;
       eissn = 2769-2434
