@@ -173,6 +173,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                     log.debug3("STR2 is : " + str2);
                     //some json is not configured correctly (i.e., open brackets/parentheses are not closed properly)
                     //Example: \n47:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/6/volume/2/issue/0\",\"locale\":\"$"]
+                    //\n4e:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/articles/28\",\"locale\":\"$undefined\",\"localeCookie\":\"$2a:"]
                     if(str2.startsWith("[") && !str2.endsWith("]")){
                       if(str2.endsWith("$")){
                         str2 += "\"}]";
