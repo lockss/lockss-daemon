@@ -153,12 +153,12 @@
 
       param[journal_id] = eg
 
-      au < frozen ; exists ; 2004 ; Electronic Government, an International Journal Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2005 ; Electronic Government, an International Journal Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2006 ; Electronic Government, an International Journal Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2007 ; Electronic Government, an International Journal Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2008 ; Electronic Government, an International Journal Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2009 ; Electronic Government, an International Journal Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; exists ; 2004 ; Electronic Government, an International Journal Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; exists ; 2005 ; Electronic Government, an International Journal Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; exists ; 2006 ; Electronic Government, an International Journal Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; exists ; 2007 ; Electronic Government, an International Journal Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; exists ; 2008 ; Electronic Government, an International Journal Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; exists ; 2009 ; Electronic Government, an International Journal Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2010 ; Electronic Government, an International Journal Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Electronic Government, an International Journal Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Electronic Government, an International Journal Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
@@ -207,9 +207,9 @@
 
       param[journal_id] = ejie
 
-      au < frozen ; exists ; 2007 ; European Journal of Industrial Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2008 ; European Journal of Industrial Engineering Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2009 ; European Journal of Industrial Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; exists ; 2007 ; European Journal of Industrial Engineering Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; exists ; 2008 ; European Journal of Industrial Engineering Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; exists ; 2009 ; European Journal of Industrial Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2010 ; European Journal of Industrial Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; European Journal of Industrial Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; European Journal of Industrial Engineering Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -240,9 +240,9 @@
 
       param[journal_id] = ejim
 
-      au < frozen ; exists ; 2007 ; European Journal of International Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2008 ; European Journal of International Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2009 ; European Journal of International Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; exists ; 2007 ; European Journal of International Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; exists ; 2008 ; European Journal of International Management Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; exists ; 2009 ; European Journal of International Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2010 ; European Journal of International Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; European Journal of International Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; European Journal of International Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -274,11 +274,11 @@
       param[journal_id] = gber
 
       au < doNotProcess ; exists ; 1999 ; Global Business and Economics Review Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2000 ; Global Business and Economics Review Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2001 ; Global Business and Economics Review Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2002 ; Global Business and Economics Review Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2003 ; Global Business and Economics Review Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2004 ; Global Business and Economics Review Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; exists ; 2000 ; Global Business and Economics Review Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; exists ; 2001 ; Global Business and Economics Review Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; exists ; 2002 ; Global Business and Economics Review Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; exists ; 2003 ; Global Business and Economics Review Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; exists ; 2004 ; Global Business and Economics Review Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2005 ; Global Business and Economics Review Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2006 ; Global Business and Economics Review Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2007 ; Global Business and Economics Review Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
