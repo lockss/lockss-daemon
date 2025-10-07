@@ -247,7 +247,7 @@
     au < frozen ; exists ; 2022 ; 2022 ; The Journal of Cell Biology Volume 221 ; 221 ; 221 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; The Journal of Cell Biology Volume 222 ; 222 ; 222 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Journal of Cell Biology Volume 223 ; 223 ; 223 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; The Journal of Cell Biology Volume 224 ; 224 ; 224 ; >
+    au < ready ; exists ; 2025 ; 2025 ; The Journal of Cell Biology Volume 224 ; 224 ; 224 ; >
   }
 
  
@@ -482,7 +482,7 @@
     au < frozen ; exists ; 2022 ; 2022 ; The Journal of Experimental Medicine Volume 219 ; 219 ; 219 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; The Journal of Experimental Medicine Volume 220 ; 220 ; 220 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Journal of Experimental Medicine Volume 221 ; 221 ; 221 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; The Journal of Experimental Medicine Volume 222 ; 222 ; 222 ; >
+    au < ready ; exists ; 2025 ; 2025 ; The Journal of Experimental Medicine Volume 222 ; 222 ; 222 ; >
 
   }
 
@@ -653,7 +653,7 @@
     au < frozen ; exists ; 2022 ; 2022 ; The Journal of General Physiology Volume 154 ; 154 ; 154 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; The Journal of General Physiology Volume 155 ; 155 ; 155 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Journal of General Physiology Volume 156 ; 156 ; 156 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; The Journal of General Physiology Volume 157 ; 157 ; 157 ; >
+    au < ready ; exists ; 2025 ; 2025 ; The Journal of General Physiology Volume 157 ; 157 ; 157 ; >
 
   }
 
@@ -666,7 +666,7 @@
 
     param[journal_id] = jhi
 
-    au < manifest ; exists ; 2025 ; 2025 ; The Journal of Human Immunity Volume 1 ; 1 ; 1 ;  >
+    au < ready ; exists ; 2025 ; 2025 ; The Journal of Human Immunity Volume 1 ; 1 ; 1 ;  >
 
   }
 
