@@ -86,6 +86,8 @@
       nondefparam[base_url2] = https://account.erlacs.org/
       nondefparam[journal_id] = lasa-j-erlacs
 
+     au < doNotProcess ; exists ; 2022 ; 113,114 ; ERLACS Volume 2022 ; 2022 ; 113,114 ; CEDLA ;  ; https://erlacs.org/ ; >
+
      au < finished ; finished ; 2003 ; 74,75 ; ERLACS Volume 2003 ; 2003 ; 74,75 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest3.clockss.org:8083 >
      au < finished ; finished ; 2004 ; 76,77 ; ERLACS Volume 2004 ; 2004 ; 76,77 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest4.clockss.org:8082 >
      au < finished ; finished ; 2005 ; 78,79 ; ERLACS Volume 2005 ; 2005 ; 78,79 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest5.clockss.org:8082 >
@@ -294,6 +296,8 @@
       #param[base_url] = https://designsforlearning.nu/
       nondefparam[base_url2] = https://account.designsforlearning.nu/
       nondefparam[journal_id] = su-j-dl
+
+      au < doNotProcess ; exists ; 2022 ; 14 ; Designs for Learning Volume 2022 ; 2022 ; 14 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
 
       au < superseded ; exists ; 2008 ; 1 ; Designs for Learning Volume 2008 [superseded] ; 2008 ; 1 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ ; > #No substance LXPLUG-1981
       au < superseded ; exists ; 2009 ; 2 ; Designs for Learning Volume 2009 [superseded] ; 2009 ; 2 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ ; > #No substance LXPLUG-1981
@@ -566,7 +570,7 @@
       au < doNotProcess ; exists ; 2006 ; 58 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2006 ; 2006 ; 58 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2007 ; 59 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2007 ; 2007 ; 59 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2008 ; 60 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2008 ; 2008 ; 60 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
-      au < doNotProcess ; exists ; 2009 ; 61 ; Tellus A: Dynamic Meteorology anfd Oceanography Volume 2009 ; 2009 ; 61 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
+      au < doNotProcess ; exists ; 2009 ; 61 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2009 ; 2009 ; 61 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2010 ; 62 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2010 ; 2010 ; 62 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2011 ; 63 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2011 ; 2011 ; 63 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; exists ; 2012 ; 64 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2012 ; 2012 ; 64 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
@@ -577,7 +581,7 @@
       au < frozen ; exists ; 2017 ; 69 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2017 ; 2017 ; 69 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 2018 ; 70 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2018 ; 2018 ; 70 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 2019 ; 71 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2019 ; 2019 ; 71 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
-      au < notReady ; exists ; 2020 ; 72 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2020 ; 2020 ; 72 ; Stockholm University Press ; Error Parsing Page. https://a.tellusjournals.se/articles/103/files/submission/proof/103-1-6353-1-10-20220607.xml ; https://a.tellusjournals.se/ ; >
+      au < exists ; exists ; 2020 ; 72 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2020 ; 2020 ; 72 ; Stockholm University Press ; Error Parsing Page. https://a.tellusjournals.se/articles/103/files/submission/proof/103-1-6353-1-10-20220607.xml ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 2021 ; 73 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2021 ; 2021 ; 73 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 74 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2022 ; 2022 ; 74 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; > #Lists all volumes.
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
@@ -752,7 +756,6 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 21 ; Anglo Saxonica Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
       au < frozen ; exists ; 2024 ; 22 ; Anglo Saxonica Volume 2024 ; 2024 ; 22 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
       au < crawling ; exists ; 2025 ; 23 ; Anglo Saxonica Volume 2025 ; 2025 ; 23 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ ; >
-     
 
   }
 
@@ -768,6 +771,20 @@
       #param[base_url] = https://archaeologybulletin.org/
       nondefparam[base_url2] = https://account.archaeologybulletin.org/
       nondefparam[journal_id] = up-j-bha
+
+      au < doNotProcess ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; 1 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; 2 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; 3 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 ; 4 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; 5 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 ; 6 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 ; 7 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 ; 8 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 ; 9 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 ; 21 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; 22 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; 23 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
+      au < doNotProcess ; exists ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; 24 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ ; >
 
       au < frozen ; exists ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; 1 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
       au < frozen ; exists ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; 2 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ ; >
@@ -931,6 +948,8 @@
       nondefparam[base_url2] = https://account.glocality.eu/
       nondefparam[journal_id] = up-j-g
 
+      au < doNotProcess ; exists ; 2022 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2022 ; 2022 ; 5 ; Ubiquity Press ;  ; https://glocality.eu/ ; >
+
       au < finished ; finished ; 2015 ; 1 ; Glocality: Undergraduate Academic Journal Volume 2015 ; 2015 ; 1 ; Ubiquity Press ;  ; http://www.glocality.eu/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 2 ; Glocality: Undergraduate Academic Journal Volume 2016 ; 2016 ; 2 ; Ubiquity Press ;  ; http://www.glocality.eu/ ; reingest5.clockss.org:8082 >
       au < finished ; superseded ; 2017 ; 0 ; Glocality: Undergraduate Academic Journal Volume 2017 [superseded] ; 2017 ; 0 ; Ubiquity Press ;  ; http://www.glocality.eu/ ; reingest3.clockss.org:8083 >
@@ -1022,6 +1041,12 @@
       nondefparam[base_url2] = https://account.jcircadianrhythms.com/
       nondefparam[journal_id] = up-j-jcr
 
+      au < doNotProcess ; exists ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; 8 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; exists ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; >
+
       au < finished ; finished ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; 1 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; 2 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; 3 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ ; reingest4.clockss.org:8082 >
@@ -1060,14 +1085,19 @@
       nondefparam[base_url2] = https://account.jcms-journal.com/
       nondefparam[journal_id] = up-j-jcms
 
+      au < doNotProcess ; exists ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
+      au < doNotProcess ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
+
       au < manifest ; exists ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; 1 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < manifest ; exists ; 1997 ; 2,3 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; 2,3 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < manifest ; exists ; 1998 ; 4,5 ; Journal of Conservation and Museum Studies Volume 1998 ; 1998 ; 4,5 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < frozen ; exists ; 1999 ; 6 ; Journal of Conservation and Museum Studies Volume 1999 ; 1999 ; 6 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < finished ; finished ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; 7 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; 8 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest3.clockss.org:8083 >
-      au < notReady ; exists ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < notReady ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < exists ; exists ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < exists ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < frozen ; exists ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < frozen ; exists ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < finished ; finished ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; 13 ; Ubiquity Press ;  ; http://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
@@ -1519,7 +1549,7 @@
       au < superseded ; exists ; 2022 ; 17 ; Global Heart Volume 2022 [superseded] ; 2022 ; 17 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < doNotProcess ; exists ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ; 18 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < frozen ; exists ; 2024 ; 19 ; Global Heart Volume 2024 ; 2024 ; 19 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
-      au < notReady ; exists ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ; 403: https://storage.googleapis.com/jnl-up-j-gh-files/journals/1/articles/1421/67e521b0e7226.png from https://globalheartjournal.com/en/articles/1421 ; https://globalheartjournal.com/ ; >
+      au < exists ; exists ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ; 403: https://storage.googleapis.com/jnl-up-j-gh-files/journals/1/articles/1421/67e521b0e7226.png from https://globalheartjournal.com/en/articles/1421 ; https://globalheartjournal.com/ ; >
 
   }
 
@@ -1559,6 +1589,11 @@
       #param[base_url] = https://psychologicabelgica.com/
       nondefparam[base_url2] = https://account.psychologicabelgica.com/
       nondefparam[journal_id] = up-j-pb
+
+      au < doNotProcess ; exists ; 2011 ; 51 ; Psychologica Belgica Volume 2011 ; 2011 ; 51 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2012 ; 52 ; Psychologica Belgica Volume 2012 ; 2012 ; 52 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 53 ; Psychologica Belgica Volume 2013 ; 2013 ; 53 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; >
+      au < doNotProcess ; exists ; 2014 ; 54 ; Psychologica Belgica Volume 2014 ; 2014 ; 54 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ ; >
 
       au < ready ; exists ; 2001 ; 41 ; Psychologica Belgica Volume 2001 ; 2001 ; 41 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 2002 ; 42 ; Psychologica Belgica Volume 2002 ; 2002 ; 42 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ ; reingest1.clockss.org:8082 >
@@ -1872,10 +1907,10 @@
 #      nondefparam[journal_id] = up-j-ijelt   
 #      #Left ubiquity
 #
-#      au < notReady ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; 1 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
-#      au < notReady ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; 2 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
-#      au < notReady ; exists ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 ; 3 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
-#      au < notReady ; exists ; 2025 ; 4 ; International Journal of Educational and Life Transitions Volume 2025 ; 2025 ; 4 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
+#      au < exists ; exists ; 2022 ; 1 ; International Journal of Educational and Life Transitions Volume 2022 ; 2022 ; 1 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
+#      au < exists ; exists ; 2023 ; 2 ; International Journal of Educational and Life Transitions Volume 2023 ; 2023 ; 2 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
+#      au < exists ; exists ; 2024 ; 3 ; International Journal of Educational and Life Transitions Volume 2024 ; 2024 ; 3 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
+#      au < exists ; exists ; 2025 ; 4 ; International Journal of Educational and Life Transitions Volume 2025 ; 2025 ; 4 ; Ubiquity Press ; about page missing ; https://ijelt.dundee.ac.uk/ ; >
 #
 #  }
 
@@ -2127,6 +2162,8 @@
       nondefparam[base_url2] = https://account.bioj-online.com/
       nondefparam[journal_id] = wr-j-bioj
 
+      au < doNotProcess ; exists ; 2022 ; 18 ; British and Irish Orthoptic Journal Volume 2022 ; 2022 ; 18 ; White Rose University Press ;  ; https://bioj-online.com/ ; >
+
       au < finished ; finished ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; 6 ; White Rose University Press ;  ; https://www.bioj-online.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; 7 ; White Rose University Press ;  ; https://www.bioj-online.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; 8 ; White Rose University Press ;  ; https://www.bioj-online.com/ ; reingest2.clockss.org:8085 >
@@ -2157,6 +2194,8 @@
       #param[base_url] = https://euroslajournal.org/
       nondefparam[base_url2] = https://account.euroslajournal.org/
       nondefparam[journal_id] = wr-j-jesla
+
+      au < doNotProcess ; exists ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 ; 2022 ; 6 ; White Rose University Press ;  ; https://euroslajournal.org/ ; >
 
       au < finished ; finished ; 2017 ; 1 ; Journal of the European Second Language Association Volume 2017 ; 2017 ; 1 ; White Rose University Press ;  ; https://www.euroslajournal.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; 2 ; Journal of the European Second Language Association Volume 2018 ; 2018 ; 2 ; White Rose University Press ;  ; https://www.euroslajournal.org/ ; reingest2.clockss.org:8085 >
@@ -2236,9 +2275,13 @@
       nondefparam[base_url2] = https://account.stabilityjournal.org/
       nondefparam[journal_id] = up-j-sijsd
 
-      au < notReady ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; University of Bradford, Department of Peace Studies and International Development ; Various ; https://stabilityjournal.org/ ; >
-      au < notReady ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; University of Bradford, Department of Peace Studies and International Development ; Various ; https://stabilityjournal.org/ ; >
-      au < notReady ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; 3 ; University of Bradford, Department of Peace Studies and International Development ; Various ; https://stabilityjournal.org/ ; >
+      au < doNotProcess ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; >
+      au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; >
+      au < doNotProcess ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; 3 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; >
+
+      au < exists ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
+      au < exists ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
+      au < exists ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; 3 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
       au < finished ; finished ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; 4 ; University of Bradford, Department of Peace Studies and International Development ;  ; http://www.stabilityjournal.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; 5 ; University of Bradford, Department of Peace Studies and International Development ;  ; http://www.stabilityjournal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; 6 ; University of Bradford, Department of Peace Studies and International Development ;  ; http://www.stabilityjournal.org/ ; reingest3.clockss.org:8083 >
@@ -2397,39 +2440,39 @@
 
   }
 
-  {
-
-      title <
-        name = The International Journal of Servant-Leadership ;
-        eissn = 2160-8172
-      >
-
-      comment[publisher] = Gonzaga Library Publishing
-      #param[base_url] = https://ijsl.press.gonzaga.edu/
-      nondefparam[base_url2] = https://account.ijsl.press.gonzaga.edu/
-      nondefparam[journal_id] = gl-j-ijsl
-
-      au < doNotProcess ; doNotProcess ; 2005 ; 1 ; The International Journal of Servant-Leadership Volume 2005 ; 2005 ; 1 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2006 ; 2 ; The International Journal of Servant-Leadership Volume 2006 ; 2006 ; 2 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2007 ; 3 ; The International Journal of Servant-Leadership Volume 2007 ; 2007 ; 3 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2008 ; 4 ; The International Journal of Servant-Leadership Volume 2008 ; 2008 ; 4 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2009 ; 5 ; The International Journal of Servant-Leadership Volume 2009 ; 2009 ; 5 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2010 ; 6 ; The International Journal of Servant-Leadership Volume 2010 ; 2010 ; 6 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2011 ; 7 ; The International Journal of Servant-Leadership Volume 2011 ; 2011 ; 7 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doesNotExist ; doesNotExist ; 2012 ; 8 ; The International Journal of Servant-Leadership Volume 2012 ; 2012 ; 8 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2013 ; 9 ; The International Journal of Servant-Leadership Volume 2013 ; 2013 ; 9 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2014 ; 10 ; The International Journal of Servant-Leadership Volume 2014 ; 2014 ; 10 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2017 ; 11 ; The International Journal of Servant-Leadership Volume 2017 ; 2017 ; 11 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2018 ; 12 ; The International Journal of Servant-Leadership Volume 2018 ; 2018 ; 12 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2019 ; 13 ; The International Journal of Servant-Leadership Volume 2019 ; 2019 ; 13 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2020 ; 14 ; The International Journal of Servant-Leadership Volume 2020 ; 2020 ; 14 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 15 ; The International Journal of Servant-Leadership Volume 2021 ; 2021 ; 15 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2022 ; 16 ; The International Journal of Servant-Leadership Volume 2022 ; 2022 ; 16 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 17 ; The International Journal of Servant-Leadership Volume 2023 ; 2023 ; 17 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; exists ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 ; 18 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      au < doNotProcess ; exists ; 2025 ; 19 ; The International Journal of Servant-Leadership Volume 2025 ; 2025 ; 19 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
-      #Moved to bepress
-  }
+#  {
+#
+#      title <
+#        name = The International Journal of Servant-Leadership ;
+#        eissn = 2160-8172
+#      >
+#
+#      comment[publisher] = Gonzaga Library Publishing
+#      #param[base_url] = https://ijsl.press.gonzaga.edu/
+#      nondefparam[base_url2] = https://account.ijsl.press.gonzaga.edu/
+#      nondefparam[journal_id] = gl-j-ijsl
+#
+#      au < doNotProcess ; doNotProcess ; 2005 ; 1 ; The International Journal of Servant-Leadership Volume 2005 ; 2005 ; 1 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2006 ; 2 ; The International Journal of Servant-Leadership Volume 2006 ; 2006 ; 2 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2007 ; 3 ; The International Journal of Servant-Leadership Volume 2007 ; 2007 ; 3 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2008 ; 4 ; The International Journal of Servant-Leadership Volume 2008 ; 2008 ; 4 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2009 ; 5 ; The International Journal of Servant-Leadership Volume 2009 ; 2009 ; 5 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2010 ; 6 ; The International Journal of Servant-Leadership Volume 2010 ; 2010 ; 6 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2011 ; 7 ; The International Journal of Servant-Leadership Volume 2011 ; 2011 ; 7 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doesNotExist ; doesNotExist ; 2012 ; 8 ; The International Journal of Servant-Leadership Volume 2012 ; 2012 ; 8 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2013 ; 9 ; The International Journal of Servant-Leadership Volume 2013 ; 2013 ; 9 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2014 ; 10 ; The International Journal of Servant-Leadership Volume 2014 ; 2014 ; 10 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2017 ; 11 ; The International Journal of Servant-Leadership Volume 2017 ; 2017 ; 11 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2018 ; 12 ; The International Journal of Servant-Leadership Volume 2018 ; 2018 ; 12 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2019 ; 13 ; The International Journal of Servant-Leadership Volume 2019 ; 2019 ; 13 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2020 ; 14 ; The International Journal of Servant-Leadership Volume 2020 ; 2020 ; 14 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2021 ; 15 ; The International Journal of Servant-Leadership Volume 2021 ; 2021 ; 15 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2022 ; 16 ; The International Journal of Servant-Leadership Volume 2022 ; 2022 ; 16 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; doNotProcess ; 2023 ; 17 ; The International Journal of Servant-Leadership Volume 2023 ; 2023 ; 17 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; exists ; 2024 ; 18 ; The International Journal of Servant-Leadership Volume 2024 ; 2024 ; 18 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      au < doNotProcess ; exists ; 2025 ; 19 ; The International Journal of Servant-Leadership Volume 2025 ; 2025 ; 19 ; Gonzaga Library Publishing ;  ; https://ijsl.press.gonzaga.edu/ ; >
+#      #Moved to bepress
+#  }
 
   {
 

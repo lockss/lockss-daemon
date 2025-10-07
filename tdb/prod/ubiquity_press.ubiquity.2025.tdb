@@ -213,6 +213,7 @@
 
       title <
         name = Redescriptions: Political Thought, Conceptual History and Feminist Theory ;
+        issn = 2308-0906 ;
         eissn = 2308-0914
       >
 
@@ -290,6 +291,8 @@
       #param[base_url] = https://designsforlearning.nu/
       nondefparam[base_url2] = https://account.designsforlearning.nu/
       nondefparam[journal_id] = su-j-dl
+
+      au < doNotProcess ; 2022 ; 14 ; Designs for Learning Volume 2022 ; 2022 ; 14 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
 
       au < down ; 2008 ; 1 ; Designs for Learning Volume 2008 ; 2008 ; 1 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ > #No substance LXPLUG-1981
       au < down ; 2009 ; 2 ; Designs for Learning Volume 2009 ; 2009 ; 2 ; Stockholm University Press ;  ; http://www.designsforlearning.nu/ > #No substance LXPLUG-1981
@@ -765,6 +768,20 @@
       nondefparam[base_url2] = https://account.archaeologybulletin.org/
       nondefparam[journal_id] = up-j-bha
 
+      au < doNotProcess ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; 1 ; Ubiquity Press ;  ; http://archaeologybulletin.org/ >
+      au < doNotProcess ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; 2 ; Ubiquity Press ;  ; http://archaeologybulletin.org/ >
+      au < doNotProcess ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; 3 ; Ubiquity Press ;  ; http://archaeologybulletin.org/ >
+      au < doNotProcess ; 1994 ; 4 ; Bulletin of the History of Archaeology Volume 1994 ; 1994 ; 4 ; Ubiquity Press ;  ; http://archaeologybulletin.org/ >
+      au < doNotProcess ; 1995 ; 5 ; Bulletin of the History of Archaeology Volume 1995 ; 1995 ; 5 ; Ubiquity Press ;  ; http://archaeologybulletin.org/ >
+      au < doNotProcess ; 1996 ; 6 ; Bulletin of the History of Archaeology Volume 1996 ; 1996 ; 6 ; Ubiquity Press ;  ; http://archaeologybulletin.org/ >
+      au < doNotProcess ; 1997 ; 7 ; Bulletin of the History of Archaeology Volume 1997 ; 1997 ; 7 ; Ubiquity Press ;  ; http://archaeologybulletin.org/ >
+      au < doNotProcess ; 1998 ; 8 ; Bulletin of the History of Archaeology Volume 1998 ; 1998 ; 8 ; Ubiquity Press ;  ; http://archaeologybulletin.org/ >
+      au < doNotProcess ; 1999 ; 9 ; Bulletin of the History of Archaeology Volume 1999 ; 1999 ; 9 ; Ubiquity Press ;  ; http://archaeologybulletin.org/ >
+      au < doNotProcess ; 2011 ; 21 ; Bulletin of the History of Archaeology Volume 2011 ; 2011 ; 21 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ >
+      au < doNotProcess ; 2012 ; 22 ; Bulletin of the History of Archaeology Volume 2012 ; 2012 ; 22 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ >
+      au < doNotProcess ; 2013 ; 23 ; Bulletin of the History of Archaeology Volume 2013 ; 2013 ; 23 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ >
+      au < doNotProcess ; 2014 ; 24 ; Bulletin of the History of Archaeology Volume 2014 ; 2014 ; 24 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ >
+
       au < down ; 1991 ; 1 ; Bulletin of the History of Archaeology Volume 1991 ; 1991 ; 1 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
       au < down ; 1992 ; 2 ; Bulletin of the History of Archaeology Volume 1992 ; 1992 ; 2 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
       au < down ; 1993 ; 3 ; Bulletin of the History of Archaeology Volume 1993 ; 1993 ; 3 ; Ubiquity Press ;  ; http://www.archaeologybulletin.org/ >
@@ -1018,6 +1035,12 @@
       nondefparam[base_url2] = https://account.jcircadianrhythms.com/
       nondefparam[journal_id] = up-j-jcr
 
+      au < doNotProcess ; 2010 ; 8 ; Journal of Circadian Rhythms Volume 2010 ; 2010 ; 8 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
+      au < doNotProcess ; 2011 ; 9 ; Journal of Circadian Rhythms Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
+      au < doNotProcess ; 2012 ; 10 ; Journal of Circadian Rhythms Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
+      au < doNotProcess ; 2013 ; 11 ; Journal of Circadian Rhythms Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
+      au < doNotProcess ; 2014 ; 12 ; Journal of Circadian Rhythms Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
+
       au < down ; 2003 ; 1 ; Journal of Circadian Rhythms Volume 2003 ; 2003 ; 1 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
       au < down ; 2004 ; 2 ; Journal of Circadian Rhythms Volume 2004 ; 2004 ; 2 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
       au < down ; 2005 ; 3 ; Journal of Circadian Rhythms Volume 2005 ; 2005 ; 3 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
@@ -1055,6 +1078,11 @@
       #param[base_url] = https://jcms-journal.com/
       nondefparam[base_url2] = https://account.jcms-journal.com/
       nondefparam[journal_id] = up-j-jcms
+
+      au < doNotProcess ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
+      au < doNotProcess ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
+      au < doNotProcess ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
+      au < doNotProcess ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
 
       au < manifest ; 1996 ; 1 ; Journal of Conservation and Museum Studies Volume 1996 ; 1996 ; 1 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
       au < manifest ; 1997 ; 2,3 ; Journal of Conservation and Museum Studies Volume 1997 ; 1997 ; 2,3 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
@@ -1555,6 +1583,11 @@
       #param[base_url] = https://psychologicabelgica.com/
       nondefparam[base_url2] = https://account.psychologicabelgica.com/
       nondefparam[journal_id] = up-j-pb
+
+      au < doNotProcess ; 2011 ; 51 ; Psychologica Belgica Volume 2011 ; 2011 ; 51 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
+      au < doNotProcess ; 2012 ; 52 ; Psychologica Belgica Volume 2012 ; 2012 ; 52 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
+      au < doNotProcess ; 2013 ; 53 ; Psychologica Belgica Volume 2013 ; 2013 ; 53 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
+      au < doNotProcess ; 2014 ; 54 ; Psychologica Belgica Volume 2014 ; 2014 ; 54 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
 
       au < ready ; 2001 ; 41 ; Psychologica Belgica Volume 2001 ; 2001 ; 41 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
       au < ready ; 2002 ; 42 ; Psychologica Belgica Volume 2002 ; 2002 ; 42 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
@@ -2105,6 +2138,8 @@
       nondefparam[base_url2] = https://account.bioj-online.com/
       nondefparam[journal_id] = wr-j-bioj
 
+      au < doNotProcess ; 2022 ; 18 ; British and Irish Orthoptic Journal Volume 2022 ; 2022 ; 18 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
+
       au < down ; 2009 ; 6 ; British and Irish Orthoptic Journal Volume 2009 ; 2009 ; 6 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
       au < down ; 2010 ; 7 ; British and Irish Orthoptic Journal Volume 2010 ; 2010 ; 7 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
       au < down ; 2011 ; 8 ; British and Irish Orthoptic Journal Volume 2011 ; 2011 ; 8 ; White Rose University Press ;  ; https://www.bioj-online.com/ >
@@ -2213,6 +2248,10 @@
       #param[base_url] = https://stabilityjournal.org/
       nondefparam[base_url2] = https://account.stabilityjournal.org/
       nondefparam[journal_id] = up-j-sijsd
+
+      au < doNotProcess ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ >
+      au < doNotProcess ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ >
+      au < doNotProcess ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; 3 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ >
 
       au < down ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
       au < down ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ >
@@ -2378,6 +2417,25 @@
   {
 
       title <
+        name = Indigenous Business & Public Administration ;
+        eissn = 2766-015X
+      >
+
+      comment[publisher] = Gonzaga Library Publishing
+      #param[base_url] = https://ibapa.org/
+      nondefparam[base_url2] = https://account.ibapa.org/
+      nondefparam[journal_id] = gl-j-ibpa
+
+      au < doNotProcess ; 2022 ; 1 ; Indigenous Business & Public Administration Volume 2022 ; 2022 ; 1 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
+      au < doNotProcess ; 2023 ; 2 ; Indigenous Business & Public Administration Volume 2023 ; 2023 ; 2 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
+      au < doNotProcess ; 2024 ; 3 ; Indigenous Business & Public Administration Volume 2024 ; 2024 ; 3 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
+      au < doNotProcess ; 2025 ; 4 ; Indigenous Business & Public Administration Volume 2025 ; 2025 ; 4 ; Gonzaga Library Publishing ;  ; https://ibapa.org/ >
+      #Moved to bepress. Save to match clockss tdb file
+  }
+
+  {
+
+      title <
         name = Journal of Critical Southern Studies ;
         eissn = 0796-1901
       >
@@ -2513,17 +2571,17 @@
       nondefparam[base_url2] = https://account.ssol-journal.com/
       nondefparam[journal_id] = isesl-j-ssl
 
-      au < notReady ; 2011 ; 1 ; Scientific Study of Literature Volume 2011 ; 2011 ; 1 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < notReady ; 2012 ; 2 ; Scientific Study of Literature Volume 2012 ; 2012 ; 2 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < notReady ; 2013 ; 3 ; Scientific Study of Literature Volume 2013 ; 2013 ; 3 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < notReady ; 2014 ; 4 ; Scientific Study of Literature Volume 2014 ; 2014 ; 4 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < notReady ; 2015 ; 5 ; Scientific Study of Literature Volume 2015 ; 2015 ; 5 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < exists ; 2011 ; 1 ; Scientific Study of Literature Volume 2011 ; 2011 ; 1 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < exists ; 2012 ; 2 ; Scientific Study of Literature Volume 2012 ; 2012 ; 2 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < exists ; 2013 ; 3 ; Scientific Study of Literature Volume 2013 ; 2013 ; 3 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < exists ; 2014 ; 4 ; Scientific Study of Literature Volume 2014 ; 2014 ; 4 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < exists ; 2015 ; 5 ; Scientific Study of Literature Volume 2015 ; 2015 ; 5 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
       au < doNotProcess ; 2016 ; 6 ; Scientific Study of Literature Volume 2016 ; 2016 ; 6 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-      au < notReady ; 2017 ; 7 ; Scientific Study of Literature Volume 2017 ; 2017 ; 7 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < exists ; 2017 ; 7 ; Scientific Study of Literature Volume 2017 ; 2017 ; 7 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
       au < doNotProcess ; 2018 ; 8 ; Scientific Study of Literature Volume 2018 ; 2018 ; 8 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-      au < notReady ; 2019 ; 9 ; Scientific Study of Literature Volume 2019 ; 2019 ; 9 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < notReady ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; 10 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < notReady ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < exists ; 2019 ; 9 ; Scientific Study of Literature Volume 2019 ; 2019 ; 9 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < exists ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; 10 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < exists ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
       au < doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
       au < released ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
       au < manifest ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
