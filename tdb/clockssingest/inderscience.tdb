@@ -281,9 +281,9 @@
       au < finished ; exists ; 2004 ; Global Business and Economics Review Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2005 ; Global Business and Economics Review Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2006 ; Global Business and Economics Review Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2007 ; Global Business and Economics Review Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2008 ; Global Business and Economics Review Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2009 ; Global Business and Economics Review Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; exists ; 2007 ; Global Business and Economics Review Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; exists ; 2008 ; Global Business and Economics Review Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; exists ; 2009 ; Global Business and Economics Review Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2010 ; Global Business and Economics Review Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Global Business and Economics Review Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Global Business and Economics Review Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
@@ -314,8 +314,8 @@
 
       param[journal_id] = ijat
 
-      au < frozen ; exists ; 2007-2008 ; International Journal of Abrasive Technology Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2009 ; International Journal of Abrasive Technology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; exists ; 2007-2008 ; International Journal of Abrasive Technology Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; exists ; 2009 ; International Journal of Abrasive Technology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Abrasive Technology Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Abrasive Technology Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Abrasive Technology Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
@@ -341,7 +341,7 @@
 
       param[journal_id] = ijaf
 
-      au < frozen ; exists ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; exists ; 2008-2009 ; International Journal of Accounting and Finance Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Accounting and Finance Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Accounting and Finance Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2014 ; International Journal of Accounting and Finance Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
@@ -368,11 +368,11 @@
 
       param[journal_id] = ijaape
 
-      au < frozen ; exists ; 2004 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2005 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2006 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2007 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2008-2009 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; exists ; 2004 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
+      au < finished ; exists ; 2005 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
+      au < finished ; exists ; 2006 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
+      au < finished ; exists ; 2007 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
+      au < finished ; exists ; 2008-2009 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
@@ -403,7 +403,7 @@
 
       param[journal_id] = ijahuc
 
-      au < frozen ; exists ; 2005-2006 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; exists ; 2005-2006 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2007 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2008 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < frozen ; exists ; 2009 ; International Journal of Ad Hoc and Ubiquitous Computing Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
