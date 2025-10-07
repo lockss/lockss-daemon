@@ -107,8 +107,8 @@
      au < finished ; crawling ; 2021 ; 111,112 ; ERLACS Volume 2021 ; 2021 ; 111,112 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest1.clockss.org:8082 >
      au < superseded ; exists ; 2022 ; 113,114 ; ERLACS Volume 2022 [superseded] ; 2022 ; 113,114 ; CEDLA ;  ; https://www.erlacs.org/ ; >
      au < frozen ; exists ; 2023 ; 115,116 ; ERLACS Volume 2023 ; 2023 ; 115,116 ; CEDLA ;  ; https://erlacs.org/ ; >
-     au < ready ; exists ; 2024 ; 117,118 ; ERLACS Volume 2024 ; 2024 ; 117,118 ; CEDLA ;  ; https://erlacs.org/ ; >
-     au < ready ; exists ; 2025 ; 119,120 ; ERLACS Volume 2025 ; 2025 ; 119,120 ; CEDLA ;  ; https://erlacs.org/ ; >
+     au < crawling ; exists ; 2024 ; 117,118 ; ERLACS Volume 2024 ; 2024 ; 117,118 ; CEDLA ;  ; https://erlacs.org/ ; >
+     au < crawling ; exists ; 2025 ; 119,120 ; ERLACS Volume 2025 ; 2025 ; 119,120 ; CEDLA ;  ; https://erlacs.org/ ; >
 
   }
 
@@ -309,7 +309,7 @@
       au < finished ; finished ; 2020 ; 12 ; Designs for Learning Volume 2020 ; 2020 ; 12 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; 13 ; Designs for Learning Volume 2021 ; 2021 ; 13 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 14 ; Designs for Learning Volume 2022 [superseded] ; 2022 ; 14 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ ; >
-      au < ready ; exists ; 2023 ; 15 ; Designs for Learning Volume 2024 ; 2023 ; 15 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
+      au < crawling ; exists ; 2023 ; 15 ; Designs for Learning Volume 2024 ; 2023 ; 15 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
       au < crawling ; exists ; 2025 ; 16 ; Designs for Learning Volume 2025 ; 2025 ; 16 ; Stockholm University Press ;  ; https://designsforlearning.nu/ ; >
 
   }
@@ -1607,7 +1607,7 @@
       au < frozen ; exists ; 2012 ; 1 ; Secularism and Nonreligion Volume 2012 ; 2012 ; 1 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
       au < frozen ; exists ; 2013 ; 2 ; Secularism and Nonreligion Volume 2013 ; 2013 ; 2 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
       au < frozen ; exists ; 2014 ; 3 ; Secularism and Nonreligion Volume 2014 ; 2014 ; 3 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; >
-      au < ready ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; 4 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ;  >
+      au < crawling ; exists ; 2015 ; 4 ; Secularism and Nonreligion Volume 2015 ; 2015 ; 4 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ;  >
       au < finished ; finished ; 2016 ; 5 ; Secularism and Nonreligion Volume 2016 ; 2016 ; 5 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; 6 ; Secularism and Nonreligion Volume 2017 ; 2017 ; 6 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 7 ; Secularism and Nonreligion Volume 2018 ; 2018 ; 7 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ ; reingest1.clockss.org:8082 >
@@ -1801,7 +1801,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 27 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2022 ; 2022 ; 27 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 ; 28 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
       au < frozen ; exists ; 2024 ; 29 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2024 ; 2024 ; 29 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
-      au < ready ; exists ; 2025 ; 30 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2025 ; 2025 ; 30 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
+      au < crawling ; exists ; 2025 ; 30 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2025 ; 2025 ; 30 ; Ubiquity Press ;  ; https://tilburglawreview.com/ ; >
 
   }
 
@@ -2041,7 +2041,7 @@
       au < superseded ; exists ; 2022 ; 18 ; Utrecht Law Review Volume 2022 [superseded] ; 2022 ; 18 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 19 ; Utrecht Law Review Volume 2023 ; 2023 ; 19 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
       au < frozen ; exists ; 2024 ; 20 ; Utrecht Law Review Volume 2024 ; 2024 ; 20 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
-      au < ready ; exists ; 2025 ; 21 ; Utrecht Law Review Volume 2025 ; 2025 ; 21 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
+      au < crawling ; exists ; 2025 ; 21 ; Utrecht Law Review Volume 2025 ; 2025 ; 21 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
 
   }
 
@@ -2492,10 +2492,10 @@
       nondefparam[base_url2] = https://account.see.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-gpajepr
 
-      au < ready ; exists ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
+      au < crawling ; exists ; 2010 ; 1 ; Gateway Papers Volume 2010 ; 2010 ; 1 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
       au < ready ; exists ; 2021 ; 2 ; Gateway Papers Volume 2021 ; 2021 ; 2 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
-      au < ready ; exists ; 2022 ; 3 ; Gateway Papers Volume 2022 ; 2022 ; 3 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
-      au < ready ; exists ; 2023 ; 4 ; Gateway Papers Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
+      au < crawling ; exists ; 2022 ; 3 ; Gateway Papers Volume 2022 ; 2022 ; 3 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
+      au < crawling ; exists ; 2023 ; 4 ; Gateway Papers Volume 2023 ; 2023 ; 4 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
       au < frozen ; exists ; 2024 ; 5 ; Gateway Papers Volume 2024 ; 2024 ; 5 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ ; >
       }
       #Title changed to Studies in Empowering Education (2977-4748) 2025 and forward
