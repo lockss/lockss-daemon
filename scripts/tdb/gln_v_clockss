@@ -96,8 +96,10 @@ if [[ ($exists_cks == 1 && $exists_gln == 1) || ($exists_cks_retired == 1 && $ex
 then
   [ $exists_cks == 1 ] && fcpath="tdb/clockssingest" || fcpath="tdb/clockssingest/_retired"
   [ $exists_gln == 1 ] && fgpath="tdb/prod" || fgpath="tdb/prod/_retired"
-  scripts/tdb/tdbout -j $fgpath/$file | sort | uniq | grep -vf scripts/tdb/gvc_gln.txt > $tpath/glnt.txt
-  scripts/tdb/tdbout -j $fcpath/$file | sort | uniq | grep -vf scripts/tdb/gvc_clockss.txt > $tpath/clocksst.txt
+  #scripts/tdb/tdbout -j $fgpath/$file | sort | uniq | grep -vf scripts/tdb/gvc_gln.txt > $tpath/glnt.txt
+  scripts/tdb/tdbout -c publisher,title,issn,eissn -Q 'type is "journal"' $fgpath/$file | sort | uniq | grep -vf scripts/tdb/gvc_gln.txt > $tpath/glnt.txt
+  #scripts/tdb/tdbout -j $fcpath/$file | sort | uniq | grep -vf scripts/tdb/gvc_clockss.txt > $tpath/clocksst.txt
+  scripts/tdb/tdbout -c publisher,title,issn,eissn -Q 'type is "journal"' $fcpath/$file | sort | uniq | grep -vf scripts/tdb/gvc_clockss.txt > $tpath/clocksst.txt
   rm $tpath/diff.txt
   echo $fgpath/$file
   echo $fcpath/$file
