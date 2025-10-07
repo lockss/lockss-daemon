@@ -185,43 +185,40 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                   while(jsonStrWithDigitsMat.find()){
                     String str2 = jsonStrWithDigitsMat.group(2);
                     Configuration conf = Configuration.builder().options(Option.AS_PATH_LIST, Option.SUPPRESS_EXCEPTIONS, Option.ALWAYS_RETURN_LIST).build();
-                    /*log.debug3("STR2 is : " + str2);
-                    //some json is not configured correctly (i.e., open brackets/parentheses are not closed properly)
-                    //Example: \n47:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/6/volume/2/issue/0\",\"locale\":\"$"]
-                    //\n4e:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/articles/28\",\"locale\":\"$undefined\",\"localeCookie\":\"$2a:"]
+                    /*
+                      some json is not configured correctly (i.e., open brackets/parentheses are not closed properly)
+                      Example: \n47:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/6/volume/2/issue/0\",\"locale\":\"$"]
+                      \n4e:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/articles/28\",\"locale\":\"$undefined\",\"localeCookie\":\"$2a:"]
                     */
                     if(str2.startsWith("[") && !str2.endsWith("]")){
                       int closedCurly = StringUtils.countMatches(str2, "{") - StringUtils.countMatches(str2, "}");
                       if(closedCurly > 0){
                         int lastOpenCurly = str2.lastIndexOf("{");
                         int lastComma = str2.substring(lastOpenCurly).lastIndexOf(",");
-                        String lastItem = str2.substring(lastComma);
+                        String lastItem = str2.substring(lastOpenCurly).substring(lastComma);
                         if(lastItem.contains(":")){
                           if(lastItem.endsWith(":")){
                             //add a fake value
+                            if(lastItem.endsWith("\":")){
+                              str2 = str2 + "\"FAKE-VALUE\"";
+                            }else{
+                              str2 = str2 + "\"";
+                            } 
                           }else{
-                            //do nothing
+                            //add closing quote
+                            str2 = str2 + "\"";
                           }
                         }else{
                           if(lastItem.length() > 0){
                             //then add colon and fake value
+                            if(!lastItem.endsWith("\"")){
+                              str2 = str2 + "\"";
+                            }
+                            str2 = str2 + ":\"FAKE-VALUE\"";
                           }else{
                             //add a fake key, a colon and a fake value to str2
+                            str2 = str2 + "\"FAKE-KEY\":\"FAKE-VALUE\"";
                           }
-                        }
-                        int commas = StringUtils.countMatches(str2.substring(lastOpenCurly), ",");
-                        int colons = StringUtils.countMatches(str2.substring(lastOpenCurly), ":");
-                        if(colons == commas + 1){
-                          //the object definition seems to be balanced (have all its key-value pairs); then do nothing
-                          if(str2.endsWith(":")){
-                            //last key-value pair doesn't have value
-                            str2 = str2 + "\"FAKE-VALUE\"";
-                          }
-                        }else if(colons == commas){
-                          //it appears the last key-value pair only has a key
-                          str2 = str2 + ":\"FAKE-VALUE\"";
-                        }else{
-                          //there are probably colons and/or commas in the key-pair values 
                         }
                       }
                       while(closedCurly > 0){
@@ -229,15 +226,6 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                         closedCurly--;
                       }
                       str2 = str2 + "]";
-
-                      /*if(str2.endsWith("$")){
-                        str2 += "\"}]";
-                      }else if(!str2.endsWith(":")){
-                        str2 += ":\"blah\"}]";
-                      }else{
-                        str2 += "blah\"}]";
-                      }
-                      log.debug3("NEW STRING: " + str2);*/
                     }
                     DocumentContext dc2Paths = null;
                     try{
@@ -248,7 +236,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                     }
                     DocumentContext dc2Values = JsonPath.parse(str2);
                     //fix FRONTEND_URL
-                    List<String> JSONpaths = Arrays.asList("$..pageUrl","$..link","$..href","$..children[?(@[3].item.link)][2]","$..children[?(@[3].href)][2]","$..FRONTEND_URL");
+                    List<String> JSONpaths = Arrays.asList("$..pageUrl","$..link","$..href","$..children[?(@[3].item.link)][2]","$..children[?(@[3].href)][2]","$..FRONTEND_URL","$..src");
                     log.debug3("JSONpaths is " + JSONpaths.toString());
                     for(String JSONpath : JSONpaths){
                       List<String> paths = dc2Paths.read(JSONpath);
