@@ -91,9 +91,9 @@ public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNorm
      * Various .png and .jpg URLs have a timestamp, e.g. .png?t=1745443500000 or .jpg?t=1745443500000 or .jpg?t=1745443500000&w=100
      */
     url = PNG_WITH_TIMESTAMP.matcher(url).replaceFirst(".png");
-    url = PNG_WITH_TIMESTAMP_AND_WIDTH.matcher(url).replaceFirst(".png?w=");
+    url = PNG_WITH_TIMESTAMP_AND_WIDTH.matcher(url).replaceFirst(".png?&w=");
     url = JPG_WITH_TIMESTAMP.matcher(url).replaceFirst(".jpg");
-    url = JPG_WITH_TIMESTAMP_AND_WIDTH.matcher(url).replaceFirst(".jpg?w=");
+    url = JPG_WITH_TIMESTAMP_AND_WIDTH.matcher(url).replaceFirst(".jpg?&w=");
     return url;
   }
 }
