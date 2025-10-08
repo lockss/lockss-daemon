@@ -637,6 +637,7 @@ Args:
     <pathelement path="${jsr305.jar}" />
     <!-- Json-Path depends on Json-Smart and SLF4J -->
     <pathelement path="${json-path.jar}" />
+    <pathelement path="${json-smart.jar}" />
     <!-- Needed for TDB tools: -->
     <pathelement path="${antlr.runtime.jar}" />
     <!-- Needed by XOAI -->

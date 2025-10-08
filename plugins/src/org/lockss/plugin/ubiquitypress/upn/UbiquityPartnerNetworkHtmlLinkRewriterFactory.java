@@ -64,7 +64,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
   static Pattern jsonHref = Pattern.compile("(\\\\\"href\\\\\":\\s*\\\\\")(.*?)(\\\\\")");
   static Pattern jsonPushPat = Pattern.compile("^((?:self\\.__next_f|\\(self\\.__next_[fs]=self\\.__next_[fs]\\|\\|\\[\\]\\))\\.push\\()(.*)(\\))$");
   //json expressions may be across multiple lines (/n)
-  static Pattern jsonStrWithDigitsPat = Pattern.compile("^((?:[0-9A-Fa-f]+)?:)([\\[\\{\"].*)$",Pattern.MULTILINE);
+  static Pattern jsonStrWithDigitsPat = Pattern.compile("^([0-9A-Fa-f]*:[^\\[\\{]*)([\\[\\{].*)$",Pattern.MULTILINE);
 
   // Matches protocol pattern (e.g. "http://")
   static final String protocolPat = "[^:/?#]+://+";
@@ -184,6 +184,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                   Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(str1);
                   while(jsonStrWithDigitsMat.find()){
                     String str2 = jsonStrWithDigitsMat.group(2);
+                    log.debug3("STR2 IS " + str2);
                     Configuration conf = Configuration.builder().options(Option.AS_PATH_LIST, Option.SUPPRESS_EXCEPTIONS, Option.ALWAYS_RETURN_LIST).build();
                     /*
                       some json is not configured correctly (i.e., open brackets/parentheses are not closed properly)
@@ -192,32 +193,37 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                     */
                     if(str2.startsWith("[") && !str2.endsWith("]")){
                       int closedCurly = StringUtils.countMatches(str2, "{") - StringUtils.countMatches(str2, "}");
+                      log.debug3("CLOSEDCURLS " + closedCurly);
                       if(closedCurly > 0){
                         int lastOpenCurly = str2.lastIndexOf("{");
-                        int lastComma = str2.substring(lastOpenCurly).lastIndexOf(",");
-                        String lastItem = str2.substring(lastOpenCurly).substring(lastComma);
-                        if(lastItem.contains(":")){
-                          if(lastItem.endsWith(":")){
-                            //add a fake value
-                            if(lastItem.endsWith("\":")){
-                              str2 = str2 + "\"FAKE-VALUE\"";
+                        log.debug3("LAST OPEN CURLY IS " + lastOpenCurly);
+                        if(lastOpenCurly >= 0){
+                          int lastComma = str2.substring(lastOpenCurly).lastIndexOf(",") > -1 ? str2.substring(lastOpenCurly).lastIndexOf(",") : 0;
+                          String lastItem = str2.substring(lastOpenCurly).substring(lastComma);
+                          log.debug3("LAST ITEM IS " + lastItem);
+                          if(lastItem.contains(":")){
+                            if(lastItem.endsWith(":")){
+                              //add a fake value
+                              if(lastItem.endsWith("\":")){
+                                str2 = str2 + "\"FAKE-VALUE\"";
+                              }else{
+                                str2 = str2 + "\"";
+                              } 
                             }else{
-                              str2 = str2 + "\"";
-                            } 
-                          }else{
-                            //add closing quote
-                            str2 = str2 + "\"";
-                          }
-                        }else{
-                          if(lastItem.length() > 0){
-                            //then add colon and fake value
-                            if(!lastItem.endsWith("\"")){
+                              //add closing quote
                               str2 = str2 + "\"";
                             }
-                            str2 = str2 + ":\"FAKE-VALUE\"";
                           }else{
-                            //add a fake key, a colon and a fake value to str2
-                            str2 = str2 + "\"FAKE-KEY\":\"FAKE-VALUE\"";
+                            if(lastItem.length() > 0){
+                              //then add colon and fake value
+                              if(!lastItem.endsWith("\"")){
+                                str2 = str2 + "\"";
+                              }
+                              str2 = str2 + ":\"FAKE-VALUE\"";
+                            }else{
+                              //add a fake key, a colon and a fake value to str2
+                              str2 = str2 + "\"FAKE-KEY\":\"FAKE-VALUE\"";
+                            }
                           }
                         }
                       }
@@ -236,7 +242,12 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                     }
                     DocumentContext dc2Values = JsonPath.parse(str2);
                     //fix FRONTEND_URL
-                    List<String> JSONpaths = Arrays.asList("$..pageUrl","$..link","$..href","$..children[?(@[3].item.link)][2]","$..children[?(@[3].href)][2]","$..FRONTEND_URL","$..src");
+                    List<String> JSONpaths = null;
+                    if(jsonStrWithDigitsMat.group(1).endsWith(":")){
+                      JSONpaths = Arrays.asList("$..pageUrl","$..link","$..href","$..children[?(@[3].item.link)][2]","$..children[?(@[3].href)][2]","$..src");;
+                    }else{
+                      JSONpaths = Arrays.asList("[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]","[?..*(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]");
+                    }
                     log.debug3("JSONpaths is " + JSONpaths.toString());
                     for(String JSONpath : JSONpaths){
                       List<String> paths = dc2Paths.read(JSONpath);
