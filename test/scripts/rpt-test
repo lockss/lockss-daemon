@@ -24,27 +24,15 @@ while true ; do
     "-q" )
       showdots=0
       shift; continue;;
-    "-1.4" )
-      if [ -z "$JAVA_14_HOME" ] ; then
-	echo "-1.4 option requires JAVA_14_HOME to point to 1.4 install dir"
+    "-8" )
+      if [ -z "$JAVA_8_HOME" ] ; then
+	echo "-8 option requires JAVA_14_HOME to point to 8 install dir"
 	exit 1;
       fi
-      JAVA_HOME="${JAVA_14_HOME}"
+      JAVA_HOME="${JAVA_8_HOME}"
       export JAVA_HOME
       PATH="$JAVA_HOME/bin:$PATH"
       export PATH
-      echo JAVA_HOME="$JAVA_HOME"
-      shift; continue;;
-    "-1.5" )
-      if [ -z "$JAVA_15_HOME" ] ; then
-	echo "-1.5 option requires JAVA_15_HOME to point to 1.5 install dir"
-	exit 1;
-      fi
-      JAVA_HOME="${JAVA_15_HOME}"
-      export JAVA_HOME
-      PATH="$JAVA_HOME/bin:$PATH"
-      export PATH
-      echo JAVA_HOME="$JAVA_HOME"
       shift; continue;;
     -* )
       if [ -z "$jvmargs" ] ; then
