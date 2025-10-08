@@ -2571,17 +2571,17 @@
       nondefparam[base_url2] = https://account.ssol-journal.com/
       nondefparam[journal_id] = isesl-j-ssl
 
-      au < exists ; 2011 ; 1 ; Scientific Study of Literature Volume 2011 ; 2011 ; 1 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < exists ; 2012 ; 2 ; Scientific Study of Literature Volume 2012 ; 2012 ; 2 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < exists ; 2013 ; 3 ; Scientific Study of Literature Volume 2013 ; 2013 ; 3 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < exists ; 2014 ; 4 ; Scientific Study of Literature Volume 2014 ; 2014 ; 4 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < exists ; 2015 ; 5 ; Scientific Study of Literature Volume 2015 ; 2015 ; 5 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < manifest ; 2011 ; 1 ; Scientific Study of Literature Volume 2011 ; 2011 ; 1 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < manifest ; 2012 ; 2 ; Scientific Study of Literature Volume 2012 ; 2012 ; 2 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < manifest ; 2013 ; 3 ; Scientific Study of Literature Volume 2013 ; 2013 ; 3 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < manifest ; 2014 ; 4 ; Scientific Study of Literature Volume 2014 ; 2014 ; 4 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < manifest ; 2015 ; 5 ; Scientific Study of Literature Volume 2015 ; 2015 ; 5 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
       au < doNotProcess ; 2016 ; 6 ; Scientific Study of Literature Volume 2016 ; 2016 ; 6 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-      au < exists ; 2017 ; 7 ; Scientific Study of Literature Volume 2017 ; 2017 ; 7 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < manifest ; 2017 ; 7 ; Scientific Study of Literature Volume 2017 ; 2017 ; 7 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
       au < doNotProcess ; 2018 ; 8 ; Scientific Study of Literature Volume 2018 ; 2018 ; 8 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-      au < exists ; 2019 ; 9 ; Scientific Study of Literature Volume 2019 ; 2019 ; 9 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < exists ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; 10 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
-      au < exists ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < manifest ; 2019 ; 9 ; Scientific Study of Literature Volume 2019 ; 2019 ; 9 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < manifest ; 2020 ; 10 ; Scientific Study of Literature Volume 2020 ; 2020 ; 10 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
+      au < manifest ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
       au < doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
       au < released ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
       au < manifest ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
