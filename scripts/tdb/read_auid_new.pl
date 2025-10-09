@@ -825,7 +825,7 @@ while (my $line = <>) {
             } elsif ($req_art->url ne $resp_art->request->uri) {
                 $result = "ArticleLinkRedirect";
                 $vol_title = $man_art_url;
-            } elsif ($man_art_contents =~ "Becoming a member is easy.") {
+            } elsif (($man_art_contents =~ "Becoming a member is easy.") || ($man_art_contents =~ "Not yet registered to read this free article?")) {
                 $result = "LoginPage";
                 $vol_title = $man_art_url;
             } else {
