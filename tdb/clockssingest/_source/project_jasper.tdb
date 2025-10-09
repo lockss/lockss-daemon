@@ -187,42 +187,6 @@
   {
 
     title <
-      name = Groundings ;
-      eissn = 1755-2702
-    >
-    provider = Glasgow University Union
-
-    au < readySource ; crawling ; 2025 ; Groundings ; groundings_1755-2702 >
-
-  }
-
-  {
-
-    title <
-      name = Cuadernos de teología - Universidad Católica del Norte ;
-      eissn = 0719-8175
-    >
-    provider = Institute of Religious Sciences and Philosophy of the Universidad Católica del Norte
-
-    au < expected ; exists ; 2025 ; Cuadernos de teología - Universidad Católica del Norte ; UNKNOWN >
-
-  }
-
-  {
-
-    title <
-      name = Journal of Krishna Institute of Medical Sciences University ;
-      eissn = 2231-4261
-    >
-    provider = Krishna Vishwa Vidyapeeth, Karad
-
-    au < expected ; exists ; 2025 ; Journal of Krishna Institute of Medical Sciences University ; UNKNOWN >
-
-  }
-
-  {
-
-    title <
       name = Lilloa ;
       eissn = 2346-9641
     >
@@ -235,12 +199,36 @@
   {
 
     title <
+      name = Groundings ;
+      eissn = 1755-2702
+    >
+    provider = Glasgow University Union
+
+    au < readySource ; crawling ; 2025 ; Groundings ; groundings_1755-2702 >
+
+  }
+
+  {
+
+    title <
       name = History of Classical Scholarship ;
       eissn = 2632-4091
     >
     provider = History of Classical Scholarship
 
     au < readySource ; crawling ; 2023-2025 ; History of Classical Scholarship ; history_of_classical_scholarship_2632-4091 >
+
+  }
+
+  {
+
+    title <
+      name = Cuadernos de teología - Universidad Católica del Norte ;
+      eissn = 0719-8175
+    >
+    provider = Institute of Religious Sciences and Philosophy of the Universidad Católica del Norte
+
+    au < expected ; exists ; 2025 ; Cuadernos de teología - Universidad Católica del Norte ; UNKNOWN >
 
   }
 
@@ -271,6 +259,18 @@
   {
 
     title <
+      name = Journal of Krishna Institute of Medical Sciences University ;
+      eissn = 2231-4261
+    >
+    provider = Krishna Vishwa Vidyapeeth, Karad
+
+    au < expected ; exists ; 2025 ; Journal of Krishna Institute of Medical Sciences University ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
       name = Public Governance, Administration and Finances Law Review ;
       issn = 2498-6275 ;
       eissn = 2786-0736
@@ -290,6 +290,18 @@
     provider = Media Studies Press
 
     au < readySource ; crawling ; 2025 ; History of Media Studies ; history_of_media_studies_26376091 >
+
+  }
+
+  {
+
+    title <
+      name = Nama Journal of Islamic Sciences and Humanities ;
+      eissn = 2785-9746
+    >
+    provider = Namae Center for Research and Studies
+
+    au < expected ; exists ; 2025 ; Nama Journal of Islamic Sciences and Humanities ; UNKNOWN >
 
   }
 
@@ -339,6 +351,19 @@
     provider = Society for Promotion of Horticulture - Indian Institute of Horticultural Research
 
     au < expected ; exists ; 2025 ; Journal of Horticultural Sciences ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
+      name = Egyháztörténeti Szemle ;
+      issn = 1585-7476 ;
+      eissn = 1587-026X
+    >
+    provider = Tiszáninnen Reformed Church District
+
+    au < expected ; exists ; 2025 ; Egyháztörténeti Szemle ; UNKNOWN >
 
   }
 
