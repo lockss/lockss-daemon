@@ -10,14 +10,12 @@
     info[tester] = 8 ;
     comment[platform] = Fulcrum
   >
-
   provider = Lived Places Publishing
   plugin = org.lockss.plugin.michigan.ClockssUMichFulcrumBooksPlugin
   param[base_url] = https://www.fulcrum.org/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >
 
   {
-  
     title <
       name = Lived Places Publishing Books ;
       type = bookSeries
@@ -50,7 +48,7 @@
     au < frozen ; exists ; 2024 ; 9781916985360 ; 9781916985384 ; concern/monographs/v405sd55v ; A Neurodivergent Blogger: Posts Highlighting Lived Experience of Self-Determination, Pride, and Empowerment ; >
     au < frozen ; exists ; 2024 ; 9781916704701 ; 9781916704718 ; concern/monographs/5x21tj43m ; A West African Entrepreneur's Challenging Path to Financial Freedom: For Future and Family ; >
     au < frozen ; exists ; 2024 ; 9781916704138 ; 9781916704152 ; concern/monographs/73666764x ; Advocating for Queer and BIPOC Survivors of Rape at Public Universities: The \#ChangeRapeCulture Movement ; >
-    au < frozen ; exists ; 2024 ;  ; 9781915734600 ; concern/monographs/v979v615m ; Aging In and Out of Place: Lived Experiences of Forced Migration Across the Life Course ; >
+    au < frozen ; exists ; 2024 ; ; 9781915734600 ; concern/monographs/v979v615m ; Aging In and Out of Place: Lived Experiences of Forced Migration Across the Life Course ; >
     au < frozen ; exists ; 2024 ; 9781915734266 ; 9781915734280 ; concern/monographs/nc580q84d ; An Ethiopian Family's Journey of Entrepreneurship in the US: A Story of Determination, Resourcefulness, and Faith ; >
     au < ready ; exists ; 2024 ;  ; 9781915734631 ; concern/monographs/1v53k1480 ; Black Family Enterprise and Community in Segregated North Omaha: The Pratt Street House ; >
     au < frozen ; exists ; 2024 ;  ; 9781916704114 ; concern/monographs/kh04ds83r ; Can Social Entrepreneurship Work in the Rust Belt? A Mom, a Dream, and a Declining Downtown ; >
@@ -80,6 +78,23 @@
     au < frozen ; exists ; 2024 ; 9781916704251 ; 9781916704275 ; concern/monographs/9306t240v ; Untapped Talent: A Practical Guide for Hiring and Retaining Neurodivergent Staff ; >
 
     au < crawling ; exists ; 2025 ; 9781917566094 ; 9781917566117 ; concern/monographs/cc08hk10k ; In the Herder's Boots: Challenging Life of the Nomadic Cashmere Goat herder in the Gobi Desert of Mongolia ; >
+    au < manifest ; exists ; 2025 ; 9781917566001 ; 9781917566025 ; concern/monographs/5999n700p ; What Teaching Teen Moms Taught Me: Lessons From a High School Classroom ; >
+    au < manifest ; exists ; 2025 ; 9781916985247 ; 9781916985261 ; concern/monographs/4m90dz59v ; A Neurodiverse Journey in Social Entrepreneurship: Embracing the Spectrum ; >
+    au < manifest ; exists ; 2025 ; 9781917503129 ;  ; concern/monographs/2j62s8558 ; Brazilians in Dialogue Between the University and the Prison ; >
+    au < manifest ; exists ; 2025 ; 9781916704619 ;  ; concern/monographs/f1881q27c ; Breaking the Boundaries: On Lived-Experience Mentorship for Autistic Students in Higher Education ; >
+    au < manifest ; exists ; 2025 ; 9781915734686 ;  ; concern/monographs/pz50h062q ; Czechoslovakia's Cold War Refugee Children Contemporary Resonance ; >
+    au < manifest ; exists ; 2025 ; 9781916985339 ; 9781916985353 ; concern/monographs/n583xz17v ; Displacement of the Hazara People of Afghanistan: Complex Histories ; >
+    au < manifest ; exists ; 2025 ; 9781915734082 ; 9781915734105 ; concern/monographs/vd66w309q ; Feminist Scholars' Experiences in Decolonising the Academy: Race, Class, and Identity in Narrative ; >
+    au < manifest ; exists ; 2025 ; 9781917503334 ;  ; concern/monographs/5712mb08d ; From Scientist to Stroke Survivor: Life Redacted ; >
+    au < manifest ; exists ; 2025 ; 9781916704589 ; 9781916704602 ; concern/monographs/z890rx65n ; Harm to Healing: A Pathway to Abolition ; >
+    au < manifest ; exists ; 2025 ; 9781916704046 ;  ; concern/monographs/bc386n80d ; Infants, Children, and Youth: Multi-sited Stories of Adversity from South Asia to Australia ; >
+    au < manifest ; exists ; 2025 ; 9781916704282 ;  ; concern/monographs/td96k597g ; Inner City Sissy: A Black Queer Literacy Story ; >
+    au < manifest ; exists ; 2025 ; 9781917503303 ; 9781917503327 ; concern/monographs/8336h5342 ; Léa Roback: Quebec Social Justice Activist ; >
+    au < manifest ; exists ; 2025 ; 9781916985902 ;  ; concern/monographs/rb68xg25k ; Picking Up the Pieces: Finding My Way as a Visually Impaired Woman in Higher Education ; >
+    au < manifest ; exists ; 2025 ; 9781916985391 ;  ; concern/monographs/7h149t127 ; Representing the Fashion of Our Nineteenth Century Cherokee Ancestor: Culture Not Costume ; >
+    au < manifest ; exists ; 2025 ; 9781916704015 ; 9781916704039 ; concern/monographs/6t053k598 ; Singing the Landscapes of Queer Self: Gender, Religion, and Community in the Northeastern United States ; >
+    au < manifest ; exists ; 2025 ; 9781917503099 ;  ; concern/monographs/70795c11v ; The Quest for Identity and Agency as a Black Scholar and Human Rights Activist: Combatting Invisibility and Gaining Legitimacy ; >
 
   }
+
 }
