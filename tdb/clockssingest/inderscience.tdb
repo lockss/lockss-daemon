@@ -4926,8 +4926,8 @@
       param[journal_id] = ijge
 
       au < finished ; exists ; 2006-2007 ; International Journal of Green Economics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2008 ; International Journal of Green Economics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
-      au < frozen ; exists ; 2009 ; International Journal of Green Economics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; exists ; 2008 ; International Journal of Green Economics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
+      au < finished ; exists ; 2009 ; International Journal of Green Economics Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2010 ; International Journal of Green Economics Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Green Economics Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Green Economics Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
@@ -4958,7 +4958,7 @@
 
       param[journal_id] = ijguc
 
-      au < frozen ; exists ; 2005-2009 ; International Journal of Grid and Utility Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; exists ; 2005-2009 ; International Journal of Grid and Utility Computing Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Grid and Utility Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; International Journal of Grid and Utility Computing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2013 ; International Journal of Grid and Utility Computing Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
