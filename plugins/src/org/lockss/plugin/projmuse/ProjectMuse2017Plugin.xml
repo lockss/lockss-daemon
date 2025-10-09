@@ -46,7 +46,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>20</string>
+    <string>21</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -82,6 +82,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s/issue/\d+(/image/.+)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/article/\d+(/(pdf|pdfimage|summary|(figure|image|inline)/.+))?$", url_host(base_url)</string>
       <string>1,"^https?://%s/css", url_host(base_url)</string>
+      <!-- Include URLs with a single '/thumb/' but exclude those with repeating '/thumb/' -->
+      <string>1,"^https?://%s/article/\d+/thumb/(?!thumb/).+\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff.?)(\?v=.*)?$", url_host(base_url)</string>
     </list>
   </entry>
   <!-- Some volume numbers are now 4-digit years, but this works -->  
