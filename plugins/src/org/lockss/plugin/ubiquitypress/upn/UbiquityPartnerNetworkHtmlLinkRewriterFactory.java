@@ -244,22 +244,22 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                     //fix FRONTEND_URL
                     List<String> JSONpaths = null;
                     if(jsonStrWithDigitsMat.group(1).endsWith(":")){
-                      JSONpaths = Arrays.asList("$..pageUrl","$..link","$..href","$..children[?(@[3].item.link)][2]","$..children[?(@[3].href)][2]","$..src");;
+                      JSONpaths = Arrays.asList("$..pageUrl","$..link","$..href","$..children[?(@[3].item.link)][2]","$..children[?(@[3].href)][2]","$..src","$..[?(@.content=~/https?:\\/\\/.*/)].content");
                     }else{
-                      JSONpaths = Arrays.asList("[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]","[?..*(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]");
+                      JSONpaths = Arrays.asList("$[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]","$..*[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]");
                     }
-                    log.debug3("JSONpaths is " + JSONpaths.toString());
                     for(String JSONpath : JSONpaths){
                       List<String> paths = dc2Paths.read(JSONpath);
                       for(String path : paths){
                         log.debug3("the path is " + dc2Values.read(path));
-                        String val = dc2Values.read(path);
-                        if(val != null){
+                        Object objVal = dc2Values.read(path);
+                        if(objVal != null && objVal instanceof String){
+                          String val = (String)objVal;
                           String newUrl;
                           try{
                             newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, val)));
                             log.debug3("the new url is " + newUrl);
-                            dc2Paths.set(path, newUrl);
+                            dc2Paths.set((String)path, newUrl);
                           }catch (MalformedURLException e){
                             log.debug("Couldn't resolve: the base url is " + baseUrl + " and the second group is " +  val);
                           };
