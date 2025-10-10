@@ -195,7 +195,9 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                       int closedCurly = StringUtils.countMatches(str2, "{") - StringUtils.countMatches(str2, "}");
                       log.debug3("CLOSEDCURLS " + closedCurly);
                       if(closedCurly > 0){
-                        int lastOpenCurly = str2.lastIndexOf("{");
+                        continue;
+                        //commenting out to NOT rewrite JSON
+                        /*int lastOpenCurly = str2.lastIndexOf("{");
                         log.debug3("LAST OPEN CURLY IS " + lastOpenCurly);
                         if(lastOpenCurly >= 0){
                           int lastComma = str2.substring(lastOpenCurly).lastIndexOf(",") > -1 ? str2.substring(lastOpenCurly).lastIndexOf(",") : 0;
@@ -225,7 +227,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                               str2 = str2 + "\"FAKE-KEY\":\"FAKE-VALUE\"";
                             }
                           }
-                        }
+                        }*/
                       }
                       while(closedCurly > 0){
                         str2 = str2 + "}";
