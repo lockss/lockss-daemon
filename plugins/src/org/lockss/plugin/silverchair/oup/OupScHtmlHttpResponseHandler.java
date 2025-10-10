@@ -45,12 +45,46 @@ public class OupScHtmlHttpResponseHandler extends BaseScHtmlHttpResponseHandler 
   // https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/hmg/26/3/10.1093_hmg_ddw419/2/m_ddw419_supp.zip?Expires=2147483647&Signature=MJDYDzdo...&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
   // PDF files use a changing Expires date and get consumed. Only supporting content uses the specific stable Expires date so use that as the pattern match
   // oup/backfile/Content_public/[^?]+\?Expires=2147483647&Signature="
-  protected static final Pattern NON_FATAL_PAT = 
-      Pattern.compile("(oup/backfile/Content_public/[^?]+\\?Expires=2147483647&Signature=|\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$)");
+  // Also need to handle the following error:
+  /*
+  Warning         https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ismej/11/1/10.1038_ismej.2016.99/2/images/ui-bg_flat_75_ffffff_40x100.png            403 Forbidden (non-fatal)
+  Warning         https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ismej/11/1/10.1038_ismej.2016.99/2/images/ui-bg_highlight-soft_75_cccccc_1x100.png           403 Forbidden (non-fatal)
+  Warning         https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ismej/11/1/10.1038_ismej.2016.99/2/images/ui-bg_glass_75_e6e6e6_1x400.png            403 Forbidden (non-fatal)
+  Warning         https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ismej/11/1/10.1038_ismej.2016.99/2/images/ui-bg_glass_75_dadada_1x400.png            403 Forbidden (non-fatal)
+   */
+  protected static final Pattern OUP_EXPIRING_URL_PAT =
+          Pattern.compile("oup/backfile/Content_public/[^?]+\\?Expires=2147483647&Signature=");
+  protected static final Pattern FILE_EXTENSION_PAT =
+          Pattern.compile("\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$");
+  protected static final Pattern OUP_UI_BG_PAT =
+          Pattern.compile("oup/backfile/Content_public/.*/images/ui-bg_[^.]+\\.png");
+  protected static final Pattern OUP_MANIFEST_PAT =
+          Pattern.compile("UI/app/img/manifest\\.js");
+  protected static final Pattern OUP_SVG_ICONS_PAT =
+          Pattern.compile("Themes/Client/app/svg/icons/[^.]+\\.svg");
 
   @Override
   protected Pattern getNonFatalPattern() {
-    return NON_FATAL_PAT;
+    // This is still needed for the interface, but you can build it from the pieces if necessary.
+    // Or, you can change the logic to test against each pattern individually.
+    return Pattern.compile(
+            OUP_EXPIRING_URL_PAT.pattern() + "|" +
+                    FILE_EXTENSION_PAT.pattern() + "|" +
+                    OUP_UI_BG_PAT.pattern() + "|" +
+                    OUP_MANIFEST_PAT.pattern() + "|" +
+                    OUP_SVG_ICONS_PAT.pattern()
+    );
   }
 
+  // In your checking logic, you can now use a cleaner method.
+  public boolean isNonFatal(String url) {
+    return OUP_EXPIRING_URL_PAT.matcher(url).find()
+            || FILE_EXTENSION_PAT.matcher(url).find()
+            || OUP_UI_BG_PAT.matcher(url).find()
+            || OUP_MANIFEST_PAT.matcher(url).find()
+            || OUP_SVG_ICONS_PAT.matcher(url).find();
+  }
+
+
 }
+
