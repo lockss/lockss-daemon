@@ -756,6 +756,21 @@ public class CacheException
     }
   }
 
+  public static class UnpermittedOffHostRedirect
+      extends UnretryableException {
+    public UnpermittedOffHostRedirect() {
+      super();
+    }
+
+    public UnpermittedOffHostRedirect(String message) {
+      super(message);
+    }
+
+    protected void setAttributes() {
+      attributeBits.clear(ATTRIBUTE_FAIL);
+    }
+  }
+
   /** An error storing the cached content or properties in the repository */
   public static class RepositoryException
       extends UnretryableException {

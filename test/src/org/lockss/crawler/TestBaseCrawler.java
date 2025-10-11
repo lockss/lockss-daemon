@@ -317,7 +317,8 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
   }
 
   public void testMakePermissionUrlFetcherLegacy() {
-    assertEquals(StorePermissionScheme.Legacy, getConfigPermissionScheme());
+    assertEquals(StorePermissionScheme.AllowOffHostExcursion,
+                 getConfigPermissionScheme());
     crawlMgr.newCrawlRateLimiter(mau);
     crawler.setCrawlConfig(ConfigManager.getCurrentConfig());
     UrlFetcher uf = crawler.makePermissionUrlFetcher(startUrl);
@@ -328,7 +329,7 @@ public class TestBaseCrawler extends LockssPermissionCheckerTestCase {
     assertSame(crawler.getAu(), muf.getArchivalUnit());
     assertNull(muf.getLocalAddress());
     assertNotNull(muf.getCrawlRateLimiter());
-    assertEquals(UrlFetcher.REDIRECT_SCHEME_FOLLOW_ON_HOST,
+    assertEquals(UrlFetcher.REDIRECT_SCHEME_ALLOW_HOST_EXCURSION,
 		 muf.getRedirectScheme());
   }
 

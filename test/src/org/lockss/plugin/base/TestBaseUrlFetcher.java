@@ -840,6 +840,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
       assertEquals(redTo, p.getProperty("location"));
     }
   }
+
   public void testRedirectNormalize() throws Exception {
     String redToUnNorm = "http://Somewhere.ELSE/foo#removeme";
     String redTo = "http://somewhere.else/foo";
@@ -939,6 +940,24 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   }
 
   // Should follow redirection to URL on same host
+  public void testRedirectOnHost() throws Exception {
+    String redTo = "http://www.example.com/foo";
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muf.addConnection(makeConn(200, "Ok", null, "bar"));
+    muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
+    InputStream is = muf.getUncachedInputStream();
+    CIProperties p = muf.getUncachedProperties();
+    assertNull(p.getProperty("location"));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
+    assertReaderMatchesString("bar", new InputStreamReader(is));
+    // Make sure the UrlFetcher still has the original URL
+    assertEquals(TEST_URL, muf.getUrl());
+  }
+
+  // Should follow redirection to URL on same host
   public void testRedirectInSpecOnHost() throws Exception {
     String redTo = "http://www.example.com/foo";
     MockConnectionBaseUrlFetcher muf =
@@ -976,22 +995,137 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     }
   }
 
-  // Should follow redirection to URL on same host
-  public void testRedirectOnHost() throws Exception {
-    String redTo = "http://www.example.com/foo";
+  // ALLOW_HOST_EXCURSION should follow redirection off-host then back
+  // to original host
+  public void testRedirectHostExcursionSameUrl() throws Exception {
+    String redTo = "http://www.other.com/foo";
+    mau.addUrlToBeCached(TEST_URL);
+    mau.addUrlToBeCached(redTo);
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
     muf.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muf.addConnection(makeConn(301, "Moved back to Catalonia",
+                               TEST_URL/* + "/different"*/));
     muf.addConnection(makeConn(200, "Ok", null, "bar"));
-    muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
+    muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_ALLOW_HOST_EXCURSION);
     InputStream is = muf.getUncachedInputStream();
     CIProperties p = muf.getUncachedProperties();
     assertNull(p.getProperty("location"));
-    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
-    assertEquals(redTo, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
+    // Should look like no redirection
+    assertEquals(null, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(null, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
     assertReaderMatchesString("bar", new InputStreamReader(is));
     // Make sure the UrlFetcher still has the original URL
     assertEquals(TEST_URL, muf.getUrl());
+  }
+
+  // ALLOW_HOST_EXCURSION should follow redirection off-host then back
+  // to a original host even if a different URL
+  public void testRedirectHostExcursionDifferentUrl() throws Exception {
+    String redTo = "http://www.other.com/foo";
+    String redTo2 = TEST_URL + "/different";
+    mau.addUrlToBeCached(TEST_URL);
+    mau.addUrlToBeCached(redTo);
+    mau.addUrlToBeCached(redTo2);
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muf.addConnection(makeConn(301, "Moved back to Catalonia", redTo2));
+    muf.addConnection(makeConn(200, "Ok", null, "bar"));
+    muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_ALLOW_HOST_EXCURSION);
+    InputStream is = muf.getUncachedInputStream();
+    CIProperties p = muf.getUncachedProperties();
+    assertNull(p.getProperty("location"));
+    // Should look like a single redirection
+    assertEquals(redTo2, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(redTo2, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
+    assertReaderMatchesString("bar", new InputStreamReader(is));
+    // Make sure the UrlFetcher still has the original URL
+    assertEquals(TEST_URL, muf.getUrl());
+  }
+
+  // ALLOW_HOST_EXCURSION should not follow redirection off-host then
+  // back to a different host
+  public void testRedirectHostExcursionDifferentHost() throws Exception {
+    String redTo = "http://www.other.com/foo";
+    String redTo2 = "http://www.different.com/foo";
+    mau.addUrlToBeCached(TEST_URL);
+    mau.addUrlToBeCached(redTo);
+    mau.addUrlToBeCached(redTo2);
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muf.addConnection(makeConn(301, "Moved back to Catalonia", redTo2));
+    muf.addConnection(makeConn(200, "Ok", null, "bar"));
+    muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_ALLOW_HOST_EXCURSION);
+    try {
+      muf.getUncachedInputStream();
+      fail("Off-host excursion back to different host should not be allowed with REDIRECT_SCHEME_ALLOW_HOST_EXCURSION");
+    } catch (CacheException.UnpermittedOffHostRedirect e) {
+      assertMatchesRE("from " + TEST_URL + " to " + redTo2, e.getMessage());
+    }
+  }
+
+  // ALLOW_HOST_EXCURSION_TO_ORIG_URL should follow redirection
+  // off-host then back to original URL
+  public void testRedirectHostExcursionToOrigUrl() throws Exception {
+    String redTo = "http://www.example.com/foo";
+    mau.addUrlToBeCached(TEST_URL);
+    mau.addUrlToBeCached(redTo);
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muf.addConnection(makeConn(301, "Moved back to Catalonia", TEST_URL));
+    muf.addConnection(makeConn(200, "Ok", null, "bar"));
+    muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_ALLOW_HOST_EXCURSION_TO_ORIG_URL);
+    InputStream is = muf.getUncachedInputStream();
+    CIProperties p = muf.getUncachedProperties();
+    assertNull(p.getProperty("location"));
+    assertEquals(null, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+    assertEquals(null, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
+    assertReaderMatchesString("bar", new InputStreamReader(is));
+    // Make sure the UrlFetcher still has the original URL
+    assertEquals(TEST_URL, muf.getUrl());
+  }
+
+  // ALLOW_HOST_EXCURSION_TO_ORIG_URL should not follow redirection
+  // off-host then back to a different URL on original host
+  public void testRedirectHostExcursionToOrigUrlDifferentUrl() throws Exception {
+    String redTo = "http://www.other.com/foo";
+    String redTo2 = TEST_URL + "/different";
+    mau.addUrlToBeCached(TEST_URL);
+    mau.addUrlToBeCached(redTo);
+    mau.addUrlToBeCached(redTo2);
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muf.addConnection(makeConn(301, "Moved back to Catalonia", redTo2));
+    muf.addConnection(makeConn(200, "Ok", null, "bar"));
+    muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_ALLOW_HOST_EXCURSION_TO_ORIG_URL);
+    try {
+      muf.getUncachedInputStream();
+      fail("Off-host excursion back to different URL should not be allowed with REDIRECT_SCHEME_ALLOW_HOST_EXCURSION_TO_ORIG_URL");
+    } catch (CacheException.UnpermittedOffHostRedirect e) {
+      assertMatchesRE("from " + TEST_URL + " to " + redTo2, e.getMessage());
+    }
+  }
+
+  // Should not follow redirection off- then back-on-host
+  public void testRedirectNoHostExcursion() throws Exception {
+    String redTo = "http://somewhere.else/foo";
+    MockConnectionBaseUrlFetcher muf =
+      new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
+    muf.addConnection(makeConn(301, "Moved to Fresno", redTo));
+    muf.addConnection(makeConn(200, "Ok", null, "bar"));
+    muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+    try {
+      InputStream is = muf.getUncachedInputStream();
+      fail("Should have thrown RedirectOutsideCrawlSpecException");
+    } catch (CacheException.RedirectOutsideCrawlSpecException e) {
+      assertEquals("Redirected to excluded URL: " + redTo, e.getMessage());
+      CIProperties p = muf.getUncachedProperties();
+      assertEquals(redTo, p.getProperty("location"));
+    }
   }
 
   // Should not follow redirection to URL on different host

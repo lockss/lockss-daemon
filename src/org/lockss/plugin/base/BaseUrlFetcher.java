@@ -446,11 +446,28 @@ public class BaseUrlFetcher implements UrlFetcher {
           return null;
         }
       }
+      if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_HOST)) {
+        if (!UrlUtil.isSameHost(origUrl, fetchUrl)) {
+          throw new CacheException.UnpermittedOffHostRedirect("Redirect chain from " + origUrl + " to " + fetchUrl + " did not return to original host");
+        } else {
+          log.debug2("Allowing off-host excursion from " +
+                     origUrl + " to " + fetchUrl);
+        }
+      }
+      if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_URL)) {
+        if (!StringUtil.equalStrings(origUrl, fetchUrl)) {
+          throw new CacheException.UnpermittedOffHostRedirect("Redirect chain from " + origUrl + " to " + fetchUrl + " did not return to original URL");
+        } else {
+          log.debug2("Allowing off-host excursion from " +
+                     origUrl + " to itself");
+        }
+      }
       input = conn.getResponseInputStream();
       if (input == null) {
         log.warning("Got null input stream back from conn.getResponseInputStream");
+      } else {
+        input = StreamUtil.getResettableInputStream(input);
       }
-      input = StreamUtil.getResettableInputStream(input);
     } finally {
       if (conn != null && input == null) {
         log.debug3("Releasing connection");
@@ -800,7 +817,8 @@ public class BaseUrlFetcher implements UrlFetcher {
           log.warning("Redirect to different host: " + newUrlString +
 			 " from: " + origUrl);
           return false;
-        } else if (!crawlFacade.hasPermission(newUrlString)) {
+        } else if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_REQUIRES_PERMISSION) &&
+                   !crawlFacade.hasPermission(newUrlString)) {
           log.warning("No permission for redirect to different host: "
                          + newUrlString + " from: " + origUrl);
           return false;
@@ -875,7 +893,9 @@ public class BaseUrlFetcher implements UrlFetcher {
       if (!origUrl.equals(actualURL)) {
 	props.setProperty(CachedUrl.PROPERTY_CONTENT_URL, actualURL);
       }
-      if (redirectUrls != null && !redirectUrls.isEmpty()) {
+      if (redirectUrls != null && !redirectUrls.isEmpty() &&
+          !redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_HOST +
+                                           RedirectScheme.REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_URL)) {
 	props.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO,
 			  redirectUrls.get(0));
       } else if (!origUrl.equals(actualURL)) {

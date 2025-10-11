@@ -57,18 +57,29 @@ public interface UrlFetcher {
     new RedirectScheme(RedirectScheme.REDIRECT_OPTION_FOLLOW_AUTO);
   /** Follow redirects only in crawl spec */
   public static final RedirectScheme REDIRECT_SCHEME_FOLLOW_IN_SPEC =
-    new RedirectScheme(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC);
+    new RedirectScheme(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC +
+                       RedirectScheme.REDIRECT_OPTION_REQUIRES_PERMISSION);
   /** Follow redirects only on same host */
   public static final RedirectScheme REDIRECT_SCHEME_FOLLOW_ON_HOST =
     new RedirectScheme(RedirectScheme.REDIRECT_OPTION_ON_HOST_ONLY);
   /** Follow redirects only in crawl spec and on host */
   public static final RedirectScheme REDIRECT_SCHEME_FOLLOW_IN_SPEC_ON_HOST =
     new RedirectScheme(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC +
-        RedirectScheme.REDIRECT_OPTION_ON_HOST_ONLY);
+        RedirectScheme.REDIRECT_OPTION_ON_HOST_ONLY +
+        RedirectScheme.REDIRECT_OPTION_REQUIRES_PERMISSION);
   /** Follow redirects if within the crawl spec, store under all names */
   public static final RedirectScheme REDIRECT_SCHEME_STORE_ALL_IN_SPEC =
     new RedirectScheme(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC +
         RedirectScheme.REDIRECT_OPTION_STORE_ALL);
+  /** Follow redirects iff the redirect chain ends on the same host as
+   * the initial URL */
+  public static final RedirectScheme REDIRECT_SCHEME_ALLOW_HOST_EXCURSION =
+    new RedirectScheme(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC +
+        RedirectScheme.REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_HOST);
+  /** Follow redirects iff the redirect chain ends on the initial URL */
+  public static final RedirectScheme REDIRECT_SCHEME_ALLOW_HOST_EXCURSION_TO_ORIG_URL =
+    new RedirectScheme(RedirectScheme.REDIRECT_OPTION_IF_CRAWL_SPEC +
+        RedirectScheme.REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_URL);
 	
   public enum FetchResult {
     FETCHED, FETCHED_NOT_MODIFIED, NOT_FETCHED
@@ -175,6 +186,13 @@ public interface UrlFetcher {
     public static final int REDIRECT_OPTION_STORE_ALL = 4;
     /** Follow redirects only within same host */
     public static final int REDIRECT_OPTION_ON_HOST_ONLY = 8;
+    /** Follow cross-host redirects only if known permission for all
+     * hosts */
+    public static final int REDIRECT_OPTION_REQUIRES_PERMISSION = 16;
+    /** Require that redirect chain leads back to original host */
+    public static final int REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_HOST = 32;
+    /** Requre that redirect chain leads back to original URL */
+    public static final int REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_URL = 64;
     
     private int options = 0;
     private RedirectScheme(int options) {
