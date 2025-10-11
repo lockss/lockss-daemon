@@ -52,39 +52,19 @@ public class OupScHtmlHttpResponseHandler extends BaseScHtmlHttpResponseHandler 
   Warning         https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ismej/11/1/10.1038_ismej.2016.99/2/images/ui-bg_glass_75_e6e6e6_1x400.png            403 Forbidden (non-fatal)
   Warning         https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/ismej/11/1/10.1038_ismej.2016.99/2/images/ui-bg_glass_75_dadada_1x400.png            403 Forbidden (non-fatal)
    */
-  protected static final Pattern OUP_EXPIRING_URL_PAT =
-          Pattern.compile("oup/backfile/Content_public/[^?]+\\?Expires=2147483647&Signature=");
-  protected static final Pattern FILE_EXTENSION_PAT =
-          Pattern.compile("\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$");
-  protected static final Pattern OUP_UI_BG_PAT =
-          Pattern.compile("oup/backfile/Content_public/.*/images/ui-bg_[^.]+\\.png");
-  protected static final Pattern OUP_MANIFEST_PAT =
-          Pattern.compile("UI/app/img/manifest\\.js");
-  protected static final Pattern OUP_SVG_ICONS_PAT =
-          Pattern.compile("Themes/Client/app/svg/icons/[^.]+\\.svg");
+
+
+  protected static final Pattern NON_FATAL_PAT = Pattern.compile(
+          "(oup/backfile/Content_public/[^?]+\\?Expires=2147483647&Signature=|"
+                  + "\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$|"
+                  + "oup/backfile/Content_public/.*/images/ui-bg_[^.]+\\.png|"
+                  + "UI/app/img/manifest\\.js|"
+                  + "Themes/Client/app/svg/icons/[^.]+\\.svg)"
+  );
 
   @Override
   protected Pattern getNonFatalPattern() {
-    // This is still needed for the interface, but you can build it from the pieces if necessary.
-    // Or, you can change the logic to test against each pattern individually.
-    return Pattern.compile(
-            OUP_EXPIRING_URL_PAT.pattern() + "|" +
-                    FILE_EXTENSION_PAT.pattern() + "|" +
-                    OUP_UI_BG_PAT.pattern() + "|" +
-                    OUP_MANIFEST_PAT.pattern() + "|" +
-                    OUP_SVG_ICONS_PAT.pattern()
-    );
+    return NON_FATAL_PAT;
   }
-
-  // In your checking logic, you can now use a cleaner method.
-  public boolean isNonFatal(String url) {
-    return OUP_EXPIRING_URL_PAT.matcher(url).find()
-            || FILE_EXTENSION_PAT.matcher(url).find()
-            || OUP_UI_BG_PAT.matcher(url).find()
-            || OUP_MANIFEST_PAT.matcher(url).find()
-            || OUP_SVG_ICONS_PAT.matcher(url).find();
-  }
-
-
 }
 
