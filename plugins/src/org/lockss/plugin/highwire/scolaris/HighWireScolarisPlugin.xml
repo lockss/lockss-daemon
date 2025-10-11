@@ -140,9 +140,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <string>1,"%scontent/%s/lockss-manifest/vol_%s_manifest.html", base_url, journal_id, volume_name</string>
+            <string>1,"%scontent/%s/c?lockss-manifest/vol_%s_manifest.html", base_url, journal_id, volume_name</string>
             <string>1,"^https?://%s/content/%s/%s", base_url_host, journal_id, volume_name</string>
             <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?(v|itok)=[^/]*)?$", base_url_host</string>
+            <string>1,"^https?://%s/openid-connect/", base_url_host</string>
             <string>1,"https://cdnjs.cloudflare.com/"</string>
             <string>1,"https://semantic-ui.com/"</string>
             <string>1,"https://code.jquery.com/"</string>
