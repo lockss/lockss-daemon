@@ -151,7 +151,8 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
         }
         if(node instanceof ScriptTag){
           ScriptTag script = (ScriptTag)node;
-          String scriptContents = script.toPlainTextString();
+          String scriptContentsBefore = script.toPlainTextString();
+          String scriptContents = scriptContentsBefore;
           if (!StringUtil.isNullString(scriptContents)) {
             //script.removeAttribute("src");
             log.debug3(String.format("Contents of the script tag before processing: %s", scriptContents));
@@ -160,7 +161,6 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
             Matcher jsonPushMat = jsonPushPat.matcher(scriptContents);
             if(jsonPushMat.find()){
               String jsonExpression = jsonPushMat.group(2);
-              log.debug3(String.format("The script tag is a recognized push expression with JSON expression: %s", jsonExpression));
               StringBuffer sb = new StringBuffer();
               if(jsonExpression.startsWith("[") && !jsonExpression.endsWith("]")){
                 jsonExpression = jsonExpression + "\"]";
@@ -176,7 +176,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
               }
               Object obj1 = dc.read("$",Object.class);
               
-              if(obj1 instanceof ArrayList){
+              if( !(obj1 instanceof ArrayList) ){
                 log.debug3("JSON expression is not the expected array");
               }
               else {
@@ -186,10 +186,10 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                 }
                 else {
                   String str1 = (String)arr1.get(1);
-                  log.debug3(String.format("str1 is: %s", str1));
                   Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(str1);
                   while(jsonStrWithDigitsMat.find()){
-                    String str2 = jsonStrWithDigitsMat.group(2);
+                    String str2Before = jsonStrWithDigitsMat.group(2);
+                    String str2 = str2Before;
                     log.debug3(String.format("str2 is: %s", str2));
                     Configuration conf = Configuration.builder().options(Option.AS_PATH_LIST, Option.SUPPRESS_EXCEPTIONS, Option.ALWAYS_RETURN_LIST).build();
                     /*
@@ -287,14 +287,16 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                       }
                     }
                     String repl2 = String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString()));
-                    log.debug3(String.format("str2 replacement is: %s", repl2));
+                    if (!repl2.equals(str2Before)) {
+                      log.debug3(String.format("str2 replacement is: %s", repl2));
+                    }
                     jsonStrWithDigitsMat.appendReplacement(sb, repl2);
                   }
                   jsonStrWithDigitsMat.appendTail(sb);
-                  log.debug3(String.format("String buffer after all replacements: %s", sb.toString()));
-                  dc.set("$[1]",sb.toString());
                   String repl1 = String.format("$1%s$3",Matcher.quoteReplacement(dc.jsonString()));
-                  log.debug3(String.format("str1 after all replacements: %s", sb.toString()));
+                  if (!repl1.equals(str1)) {
+                    log.debug3(String.format("str1 after all replacements: %s", sb.toString()));
+                  }
                   scriptContents = jsonPushMat.replaceFirst(repl1);
                   script.setScriptCode(scriptContents);
                 }
@@ -327,7 +329,9 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
               script.setScriptCode(sb.toString());
               log.debug3("the text AFTER replacement is " + sb.toString());*/
             }
-            log.debug3(String.format("Contents of the script tag after processing: %s", scriptContents));
+            if (!scriptContents.equals(scriptContentsBefore)) {
+              log.debug3(String.format("Contents of the script tag after processing: %s", scriptContents));
+            }
           }
         }
         return false;
