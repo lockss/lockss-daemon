@@ -1166,7 +1166,7 @@
     #content available from 1979 volume 1 to 2007 volume 34
 
     au < frozen ; exists ; 2008 ; 2008 ; Annals of Behavioral Medicine Volume 35-36 ; 35-36 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Annals of Behavioral Medicine Volume 37-38 ; 37-38 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Annals of Behavioral Medicine Volume 37-38 ; 37-38 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Annals of Behavioral Medicine Volume 39-40 ; 39-40 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 2011 ; Annals of Behavioral Medicine Volume 41-42 ; 41-42 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Annals of Behavioral Medicine Volume 43-44 ; 43-44 ; reingest5.clockss.org:8082 >
@@ -1351,7 +1351,7 @@
     param[journal_id] = anncom
 
     au < frozen ; exists ; 2008 ; 2008 ; Annals of the International Communication Association Volume 32 ; 32 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Annals of the International Communication Association Volume 33 ; 33 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Annals of the International Communication Association Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 2010 ; Annals of the International Communication Association Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 2011 ; Annals of the International Communication Association Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < doesNotExist ; doesNotExist ; 2012 ; 2012 ; Annals of the International Communication Association Volume 36 ; 36 ; >
@@ -1890,7 +1890,7 @@
     param[journal_id] = arthistory
 
     au < frozen ; exists ; 2008 ; 2008 ; Art History Volume 31 ; 31 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Art History Volume 32 ; 32 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Art History Volume 32 ; 32 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; 2010 ; Art History Volume 33 ; 33 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; Art History Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2012 ; 2012 ; Art History Volume 35 ; 35 ; reingest1.clockss.org:8082 >
@@ -2229,7 +2229,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; British Journal of Dermatology Volume 154-155 ; 154-155 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; British Journal of Dermatology Volume 156-157 ; 156-157 ; >
     au < frozen ; exists ; 2008 ; 2008 ; British Journal of Dermatology Volume 158-159 ; 158-159 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; British Journal of Dermatology Volume 160-161 ; 160-161 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; British Journal of Dermatology Volume 160-161 ; 160-161 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; British Journal of Dermatology Volume 162-163 ; 162-163 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; British Journal of Dermatology Volume 164-165 ; 164-165 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; 2012 ; British Journal of Dermatology Volume 166-167 ; 166-167 ; reingest2.clockss.org:8085 >
@@ -2628,7 +2628,7 @@
     param[journal_id] = biometrics
 
     au < frozen ; exists ; 2008 ; 2008 ; Biometrics Volume 64 ; 64 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Biometrics Volume 65 ; 65 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; Biometrics Volume 65 ; 65 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Biometrics Volume 66 ; 66 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; Biometrics Volume 67 ; 67 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Biometrics Volume 68 ; 68 ; reingest1.clockss.org:8082 >
@@ -2902,7 +2902,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Botanical Journal of the Linnean Society Volume 150-152 ; 150-152 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Botanical Journal of the Linnean Society Volume 153-155 ; 153-155 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Botanical Journal of the Linnean Society Volume 156-158 ; 156-158 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Botanical Journal of the Linnean Society Volume 159-161 ; 159-161 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; Botanical Journal of the Linnean Society Volume 159-161 ; 159-161 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2010 ; 2010 ; Botanical Journal of the Linnean Society Volume 162-164 ; 162-164 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2011 ; 2011 ; Botanical Journal of the Linnean Society Volume 165-167 ; 165-167 ; reingest4.clockss.org:8082 >
     au < finished ; frozen ; 2012 ; 2012 ; Botanical Journal of the Linnean Society Volume 168-170 ; 168-170 ; reingest1.clockss.org:8082 >
@@ -3174,7 +3174,7 @@
     param[journal_id] = bjr
 
     au < frozen ; exists ; 2008 ; 2008 ; The British Journal of Radiology Volume 81 ; 81 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; The British Journal of Radiology Volume 82 ; 82 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; The British Journal of Radiology Volume 82 ; 82 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 2010 ; The British Journal of Radiology Volume 83 ; 83 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; The British Journal of Radiology Volume 84 ; 84 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; The British Journal of Radiology Volume 85 ; 85 ; reingest5.clockss.org:8082 >
@@ -3460,7 +3460,7 @@
     #content available from 1954 Volume 1 to 2007 Volume 50
 
     au < frozen ; exists ; 2008 ; 2008 ; Bulletin of the Institute of Classical Studies Volume 51 ; 51 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Bulletin of the Institute of Classical Studies Volume 52 ; 52 ; >
+    au < finished ; manifest ; 2009 ; 2009 ; Bulletin of the Institute of Classical Studies Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Bulletin of the Institute of Classical Studies Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 2011 ; Bulletin of the Institute of Classical Studies Volume 54 ; 54 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; 2012 ; Bulletin of the Institute of Classical Studies Volume 55 ; 55 ; reingest2.clockss.org:8085 >
@@ -3904,7 +3904,7 @@
     param[journal_id] = chemlett
 
     au < frozen ; exists ; 2008 ; 2008 ; Chemistry Letters Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Chemistry Letters Volume 38 ; 38 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Chemistry Letters Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Chemistry Letters Volume 39 ; 39 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; Chemistry Letters Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Chemistry Letters Volume 41 ; 41 ; reingest3.clockss.org:8083 >
@@ -4886,7 +4886,7 @@
     param[journal_id] = dmfr
 
     au < frozen ; exists ; 2008 ; 2008 ; Dentomaxillofacial Radiology Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Dentomaxillofacial Radiology Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Dentomaxillofacial Radiology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; Dentomaxillofacial Radiology Volume 40 ; 40 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Dentomaxillofacial Radiology Volume 41 ; 41 ; reingest4.clockss.org:8082 >
@@ -5873,7 +5873,7 @@
     param[journal_id] = etc
 
     au < frozen ; exists ; 2008 ; 2008 ; Environmental Toxicology and Chemistry Volume 27 ; 27 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Environmental Toxicology and Chemistry Volume 28 ; 28 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Environmental Toxicology and Chemistry Volume 28 ; 28 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Environmental Toxicology and Chemistry Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 2011 ; Environmental Toxicology and Chemistry Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Environmental Toxicology and Chemistry Volume 31 ; 31 ; reingest5.clockss.org:8082 >
@@ -6373,7 +6373,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; European Journal of Endocrinology Volume 154-155 ; 154-155 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; European Journal of Endocrinology Volume 156-157 ; 156-157 ; >
     au < frozen ; exists ; 2008 ; 2008 ; European Journal of Endocrinology Volume 158-159 ; 158-159 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; European Journal of Endocrinology Volume 160-161 ; 160-161 ; >
+    au < finished ; exists ; 2009 ; 2009 ; European Journal of Endocrinology Volume 160-161 ; 160-161 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; European Journal of Endocrinology Volume 162-163 ; 162-163 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; European Journal of Endocrinology Volume 164-165 ; 164-165 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; European Journal of Endocrinology Volume 166-167 ; 166-167 ; reingest3.clockss.org:8083 >
@@ -6778,7 +6778,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Evolution Volume 60 ; 60 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Evolution Volume 61 ; 61 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Evolution Volume 62 ; 62 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Evolution Volume 63 ; 63 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Evolution Volume 63 ; 63 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 2010 ; Evolution Volume 64 ; 64 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 2011 ; Evolution Volume 65 ; 65 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2012 ; 2012 ; Evolution Volume 66 ; 66 ; reingest4.clockss.org:8082 >
@@ -7116,7 +7116,7 @@
     param[journal_id] = fisheries
 
     au < frozen ; exists ; 2008 ; 2008 ; Fisheries Volume 33 ; 33 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Fisheries Volume 34 ; 34 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Fisheries Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; 2010 ; Fisheries Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 2011 ; Fisheries Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Fisheries Volume 37 ; 37 ; reingest5.clockss.org:8082 >
@@ -7870,7 +7870,7 @@
     param[journal_id] = gpb
 
     au < frozen ; exists ; 2008 ; 2008 ; Genomics, Proteomics and Bioinformatics Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Genomics, Proteomics and Bioinformatics Volume 7 ; 7 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Genomics, Proteomics and Bioinformatics Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 2010 ; Genomics, Proteomics and Bioinformatics Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; Genomics, Proteomics and Bioinformatics Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Genomics, Proteomics and Bioinformatics Volume 10 ; 10 ; reingest1.clockss.org:8082 >
@@ -9526,7 +9526,7 @@
     param[journal_id] = ieam
 
     au < frozen ; exists ; 2008 ; 2008 ; Integrated Environmental Assessment and Management Volume 4 ; 4 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Integrated Environmental Assessment and Management Volume 5 ; 5 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Integrated Environmental Assessment and Management Volume 5 ; 5 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; 2010 ; Integrated Environmental Assessment and Management Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 2011 ; Integrated Environmental Assessment and Management Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Integrated Environmental Assessment and Management Volume 8 ; 8 ; reingest1.clockss.org:8082 >
@@ -9639,7 +9639,7 @@
     #this title was ONLY in the publisher listing
 
     au < frozen ; exists ; 2008 ; 2008 ; International Affairs Volume 84 ; 84 ;  >
-    au < frozen ; exists ; 2009 ; 2009 ; International Affairs Volume 85 ; 85 ;  >
+    au < finished ; exists ; 2009 ; 2009 ; International Affairs Volume 85 ; 85 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2010 ; 2010 ; International Affairs Volume 86 ; 86 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2011 ; 2011 ; International Affairs Volume 87 ; 87 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2012 ; 2012 ; International Affairs Volume 88 ; 88 ; reingest1.clockss.org:8082 >
@@ -9938,7 +9938,7 @@
     param[journal_id] = ijfst
 
     au < frozen ; exists ; 2008 ; 2008 ; International Journal of Food Science & Technology Volume 43 ; 43 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; International Journal of Food Science & Technology Volume 44 ; 44 ; >
+    au < finished ; exists ; 2009 ; 2009 ; International Journal of Food Science & Technology Volume 44 ; 44 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; International Journal of Food Science & Technology Volume 45 ; 45 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; International Journal of Food Science & Technology Volume 46 ; 46 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; International Journal of Food Science & Technology Volume 47 ; 47 ; reingest2.clockss.org:8085 >
@@ -11164,7 +11164,7 @@
     param[journal_id] = jaah
 
     au < frozen ; exists ; 2008 ; 2008 ; Journal of Aquatic Animal Health Volume 20 ; 20 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Journal of Aquatic Animal Health Volume 21 ; 21 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Journal of Aquatic Animal Health Volume 21 ; 21 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Journal of Aquatic Animal Health Volume 22 ; 22 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; Journal of Aquatic Animal Health Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2012 ; 2012 ; Journal of Aquatic Animal Health Volume 24 ; 24 ; reingest4.clockss.org:8082 >
@@ -11976,7 +11976,7 @@
     param[journal_id] = jeb
 
     au < frozen ; exists ; 2008 ; 2008 ; Journal of Evolutionary Biology Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Journal of Evolutionary Biology Volume 22 ; 22 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Journal of Evolutionary Biology Volume 22 ; 22 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Journal of Evolutionary Biology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; Journal of Evolutionary Biology Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Journal of Evolutionary Biology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
@@ -12863,7 +12863,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Leukocyte Biology Volume 96 ; 96 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Leukocyte Biology Volume 97 ; 97 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Journal of Leukocyte Biology Volume 98 ; 98 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Journal of Leukocyte Biology Volume 99 ; 99 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Journal of Leukocyte Biology Volume 99 ; 99 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 2010 ; Journal of Leukocyte Biology Volume 100 ; 100 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 2011 ; Journal of Leukocyte Biology Volume 101 ; 101 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Journal of Leukocyte Biology Volume 102 ; 102 ; reingest3.clockss.org:8083 >
@@ -13316,7 +13316,7 @@
     param[journal_id] = joh
 
     au < frozen ; exists ; 2008 ; 2008 ; Journal of Occupational Health Volume 50 ; 50 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Journal of Occupational Health Volume 51 ; 51 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Journal of Occupational Health Volume 51 ; 51 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Journal of Occupational Health Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; Journal of Occupational Health Volume 53 ; 53 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Journal of Occupational Health Volume 54 ; 54 ; reingest4.clockss.org:8082 >
@@ -13638,7 +13638,7 @@
     au < manifest ; exists ; 2006 ; 2006 ; Journal of Pharmacy and Pharmacology Volume 58 ; 58 ; >
     au < manifest ; exists ; 2007 ; 2007 ; Journal of Pharmacy and Pharmacology Volume 59 ; 59 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Journal of Pharmacy and Pharmacology Volume 60 ; 60 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Journal of Pharmacy and Pharmacology Volume 61 ; 61 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Journal of Pharmacy and Pharmacology Volume 61 ; 61 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2010 ; 2010 ; Journal of Pharmacy and Pharmacology Volume 62 ; 62 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 2011 ; Journal of Pharmacy and Pharmacology Volume 63 ; 63 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; 2012 ; Journal of Pharmacy and Pharmacology Volume 64 ; 64 ; reingest2.clockss.org:8085 >
@@ -15252,7 +15252,7 @@
 
     param[journal_id] = mcf
 
-    au < frozen ; exists ; 2009 ; 2009 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 1 ; 1 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2011 ; 2011 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 3 ; 3 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2012 ; 2012 ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 4 ; 4 ; reingest5.clockss.org:8082 >
@@ -16806,7 +16806,7 @@
     param[journal_id] = naja
 
     au < frozen ; exists ; 2008 ; 2008 ; North American Journal of Aquaculture Volume 70 ; 70 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; North American Journal of Aquaculture Volume 71 ; 71 ; >
+    au < finished ; exists ; 2009 ; 2009 ; North American Journal of Aquaculture Volume 71 ; 71 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2010 ; 2010 ; North American Journal of Aquaculture Volume 72 ; 72 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 2011 ; North American Journal of Aquaculture Volume 73 ; 73 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2012 ; 2012 ; North American Journal of Aquaculture Volume 74 ; 74 ; reingest1.clockss.org:8082 >
@@ -16838,7 +16838,7 @@
     param[journal_id] = najfm
 
     au < frozen ; exists ; 2008 ; 2008 ; North American Journal of Fisheries Management Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; North American Journal of Fisheries Management Volume 29 ; 29 ; >
+    au < finished ; exists ; 2009 ; 2009 ; North American Journal of Fisheries Management Volume 29 ; 29 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2010 ; 2010 ; North American Journal of Fisheries Management Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; North American Journal of Fisheries Management Volume 31 ; 31 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; North American Journal of Fisheries Management Volume 32 ; 32 ; reingest1.clockss.org:8082 >
@@ -20034,7 +20034,7 @@
     #move from Wiley by 2023-01-01
 
     au < frozen ; exists ; 2008 ; 2008 ; Significance Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Significance Volume 6 ; 6 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Significance Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Significance Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; Significance Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Significance Volume 9 ; 9 ; reingest2.clockss.org:8085 >
@@ -22105,7 +22105,7 @@
     param[journal_id] = ismej
 
     au < frozen ; exists ; 2008 ; 2008 ; The ISME Journal Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; The ISME Journal Volume 3 ; 3 ; >
+    au < finished ; exists ; 2009 ; 2009 ; The ISME Journal Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; The ISME Journal Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2011 ; 2011 ; The ISME Journal Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; The ISME Journal Volume 6 ; 6 ; reingest3.clockss.org:8083 >
@@ -24718,7 +24718,7 @@
     param[journal_id] = tafs
 
     au < frozen ; exists ; 2008 ; 2008 ; Transactions of the American Fisheries Society Volume 137 ; 137 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Transactions of the American Fisheries Society Volume 138 ; 138 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Transactions of the American Fisheries Society Volume 138 ; 138 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Transactions of the American Fisheries Society Volume 139 ; 139 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2011 ; 2011 ; Transactions of the American Fisheries Society Volume 140 ; 140 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2012 ; 2012 ; Transactions of the American Fisheries Society Volume 141 ; 141 ; reingest4.clockss.org:8082 >
@@ -25366,7 +25366,7 @@
     au < doNotProcess ; exists ; 2006 ; 2006 ; Zoological Journal of the Linnean Society Volume 146-148 ; 146-148 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Zoological Journal of the Linnean Society Volume 149-151 ; 149-151 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Zoological Journal of the Linnean Society Volume 152-154 ; 152-154 ; >
-    au < frozen ; exists ; 2009 ; 2009 ; Zoological Journal of the Linnean Society Volume 155-157 ; 155-157 ; >
+    au < finished ; exists ; 2009 ; 2009 ; Zoological Journal of the Linnean Society Volume 155-157 ; 155-157 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; 2010 ; Zoological Journal of the Linnean Society Volume 158-160 ; 158-160 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2011 ; 2011 ; Zoological Journal of the Linnean Society Volume 161-163 ; 161-163 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; 2012 ; Zoological Journal of the Linnean Society Volume 164-166 ; 164-166 ; reingest2.clockss.org:8085 >
