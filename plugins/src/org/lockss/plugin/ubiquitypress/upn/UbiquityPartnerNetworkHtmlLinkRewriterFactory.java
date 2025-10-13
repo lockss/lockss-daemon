@@ -293,6 +293,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                     jsonStrWithDigitsMat.appendReplacement(sb, repl2);
                   }
                   jsonStrWithDigitsMat.appendTail(sb);
+                  dc.set("$[1]",sb.toString());
                   String repl1 = String.format("$1%s$3",Matcher.quoteReplacement(dc.jsonString()));
                   if (!repl1.equals(str1)) {
                     log.debug3(String.format("str1 after all replacements: %s", sb.toString()));
