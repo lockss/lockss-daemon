@@ -84,17 +84,17 @@
 
       attr[journal_id] = 899
 
-      au < manifest ; 2013-2014 ; Appalachian Journal Volume 41 [2013-2014] ; 19716 >
-      au < manifest ; 2014-2015 ; Appalachian Journal Volume 42 [2014-2015] ; 19719 >
-      au < manifest ; 2015-2016 ; Appalachian Journal Volume 43 [2015-2016] ; 19720 >
-      au < manifest ; 2016-2017 ; Appalachian Journal Volume 44 [2016-2017] ; 19721 >
-      au < manifest ; 2017-2018 ; Appalachian Journal Volume 45 [2017-2018] ; 19722 >
-      au < manifest ; 2018-2019 ; Appalachian Journal Volume 46 [2018-2019] ; 19723 >
-      au < manifest ; 2019-2020 ; Appalachian Journal Volume 47 [2019-2020] ; 19724 >
-      au < manifest ; 2020-2021 ; Appalachian Journal Volume 48 [2020-2021] ; 19725 >
-      au < manifest ; 2021-2022 ; Appalachian Journal Volume 49 [2021-2022] ; 19726 >
-      au < manifest ; 2022-2023 ; Appalachian Journal Volume 50 [2022-2023] ; 19727 >
-      au < manifest ; 2023-2024 ; Appalachian Journal Volume 51 [2023-2024] ; 19728 >
+      au < testing ; 2013-2014 ; Appalachian Journal Volume 41 [2013-2014] ; 19716 >
+      au < testing ; 2014-2015 ; Appalachian Journal Volume 42 [2014-2015] ; 19719 >
+      au < testing ; 2015-2016 ; Appalachian Journal Volume 43 [2015-2016] ; 19720 >
+      au < testing ; 2016-2017 ; Appalachian Journal Volume 44 [2016-2017] ; 19721 >
+      au < testing ; 2017-2018 ; Appalachian Journal Volume 45 [2017-2018] ; 19722 >
+      au < testing ; 2018-2019 ; Appalachian Journal Volume 46 [2018-2019] ; 19723 >
+      au < testing ; 2019-2020 ; Appalachian Journal Volume 47 [2019-2020] ; 19724 >
+      au < ready ; 2020-2021 ; Appalachian Journal Volume 48 [2020-2021] ; 19725 >
+      au < ready ; 2021-2022 ; Appalachian Journal Volume 49 [2021-2022] ; 19726 >
+      au < ready ; 2022-2023 ; Appalachian Journal Volume 50 [2022-2023] ; 19727 >
+      au < ready ; 2023-2024 ; Appalachian Journal Volume 51 [2023-2024] ; 19728 >
       au < manifest ; 2024-2025 ; Appalachian Journal Volume 52 [2024-2025] ; 19729 >
 
     }
@@ -457,7 +457,7 @@
         au < released ; 2021-2022 ; The High School Journal Volume 105 [2021-2022] ; 17180 >
         au < released ; 2020-2021 ; The High School Journal Volume 104 [2020-2021] ; 15649 >
         au < released ; 2022-2023 ; The High School Journal Volume 106 [2022-2023] ; 18500 >
-        au < manifest ; 2023-2024 ; The High School Journal Volume 107 [2023-2024] ; 19488 >
+        au < ready ; 2023-2024 ; The High School Journal Volume 107 [2023-2024] ; 19488 >
         au < ready ; 2024 ; The High School Journal Volume 108 [2024] ; 20092 >
 
     }
@@ -556,13 +556,12 @@
         au < released ; 2012-2013 ; The Southern Literary Journal Volume 45 [2012-2013] ; 9205 >
         au < released ; 2013-2014 ; The Southern Literary Journal Volume 46 [2013-2014] ; 9651 >
         au < released ; 2014-2015 ; The Southern Literary Journal Volume 47 [2014-2015] ; 10638 >
-        au < released ; 2018-2019 ; South: a scholarly journal Volume 51 [2018-2019] ; 14528 >
 
     }
 
     {
     title <
-      name = South: a scholary journal ;
+      name = South: a scholarly journal ;
       issn = 2474-8102  ;
       eissn = 2470-9506  ;
       issnl = 2474-8102
@@ -572,9 +571,10 @@
       attr[journal_id] = 183
       #continues = 0038-4291
 
-        au < released ; 2015-2016 ; South: a scholary journal Volume 48 [2015-2016] ; 11283 >
-        au < released ; 2016-2017 ; South: a scholary journal Volume 49 [2016-2017] ; 12717 >
-        au < released ; 2017-2018 ; South: a scholary journal Volume 50 [2017-2018] ; 13642 >
+        au < released ; 2015-2016 ; South: a scholarly journal Volume 48 [2015-2016] ; 11283 >
+        au < released ; 2016-2017 ; South: a scholarly journal Volume 49 [2016-2017] ; 12717 >
+        au < released ; 2017-2018 ; South: a scholarly journal Volume 50 [2017-2018] ; 13642 >
+        au < released ; 2018-2019 ; South: a scholarly journal Volume 51 [2018-2019] ; 14528 >
 
     }
 
