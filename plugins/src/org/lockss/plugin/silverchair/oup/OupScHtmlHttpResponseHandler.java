@@ -56,11 +56,12 @@ public class OupScHtmlHttpResponseHandler extends BaseScHtmlHttpResponseHandler 
 
   protected static final Pattern NON_FATAL_PAT = Pattern.compile(
           "(oup/backfile/Content_public/[^?]+\\?Expires=2147483647&Signature=|"
-                  + "\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)$|"
+                  + "\\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\\?.*)?$|"
                   + "oup/backfile/Content_public/.*/images/ui-bg_[^.]+\\.png|"
                   + "UI/app/img/manifest\\.js|"
                   + "Themes/Client/app/svg/icons/[^.]+\\.svg)"
   );
+
 
   @Override
   protected Pattern getNonFatalPattern() {
