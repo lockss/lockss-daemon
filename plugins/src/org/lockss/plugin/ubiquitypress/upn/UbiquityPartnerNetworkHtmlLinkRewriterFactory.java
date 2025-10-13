@@ -151,49 +151,55 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
         }
         if(node instanceof ScriptTag){
           ScriptTag script = (ScriptTag)node;
-          String s = script.toPlainTextString();
-          if (!StringUtil.isNullString(s)) {
+          String scriptContents = script.toPlainTextString();
+          if (!StringUtil.isNullString(scriptContents)) {
             //script.removeAttribute("src");
-            log.debug3("the text BEFORE replacement is " + s);
+            log.debug3(String.format("Contents of the script tag before processing: %s", scriptContents));
             //if(s.startsWith("self.__next") || s.startsWith("(self.__next")){
 
-            Matcher jsonPushMat = jsonPushPat.matcher(s);
+            Matcher jsonPushMat = jsonPushPat.matcher(scriptContents);
             if(jsonPushMat.find()){
-              StringBuffer sb = new StringBuffer();
-              //contents of json
               String jsonExpression = jsonPushMat.group(2);
+              log.debug3(String.format("The script tag is a recognized push expression with JSON expression: %s", jsonExpression));
+              StringBuffer sb = new StringBuffer();
               if(jsonExpression.startsWith("[") && !jsonExpression.endsWith("]")){
                 jsonExpression = jsonExpression + "\"]";
-                log.debug3("NOT WOOHOO!!!! :(");
+                log.debug3(String.format("JSON expression adjusted to: %s", jsonExpression));
               }
               DocumentContext dc = null;
               try{
                 dc = JsonPath.parse(jsonExpression);
               }catch(JsonPathException e){
                 //some json couldn't parse, ignoring
-                log.debug3("could not parse json dc: " + jsonExpression,e);
+                log.debug3(String.format("Could not parse JSON expression into dc: %s", jsonExpression), e);
                 return false;
               }
               Object obj1 = dc.read("$",Object.class);
               
               if(obj1 instanceof ArrayList){
+                log.debug3("JSON expression is not the expected array");
+              }
+              else {
                 ArrayList arr1 = (ArrayList)obj1;
-                if(arr1.size() > 1 && arr1.get(0) instanceof Integer && arr1.get(1) instanceof String){
+                if( !( arr1.size() > 1 && arr1.get(0) instanceof Integer && arr1.get(1) instanceof String ) ){
+                  log.debug3("JSON expression array is not in the expected shape");
+                }
+                else {
                   String str1 = (String)arr1.get(1);
-                  log.debug3("STRING 1 IS: " + str1);
+                  log.debug3(String.format("str1 is: %s", str1));
                   Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(str1);
                   while(jsonStrWithDigitsMat.find()){
                     String str2 = jsonStrWithDigitsMat.group(2);
-                    log.debug3("STR2 IS " + str2);
+                    log.debug3(String.format("str2 is: %s", str2));
                     Configuration conf = Configuration.builder().options(Option.AS_PATH_LIST, Option.SUPPRESS_EXCEPTIONS, Option.ALWAYS_RETURN_LIST).build();
                     /*
-                      some json is not configured correctly (i.e., open brackets/parentheses are not closed properly)
+                      some json is malformed (i.e., open brackets/parentheses are not closed properly)
                       Example: \n47:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/6/volume/2/issue/0\",\"locale\":\"$"]
                       \n4e:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/articles/28\",\"locale\":\"$undefined\",\"localeCookie\":\"$2a:"]
                     */
                     if(str2.startsWith("[") && !str2.endsWith("]")){
                       int closedCurly = StringUtils.countMatches(str2, "{") - StringUtils.countMatches(str2, "}");
-                      log.debug3("CLOSEDCURLS " + closedCurly);
+                      log.debug3(String.format("Adjusting str2; closedCurly=%d", closedCurly));
                       if(closedCurly > 0){
                         continue;
                         //commenting out to NOT rewrite JSON
@@ -234,48 +240,63 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                         closedCurly--;
                       }
                       str2 = str2 + "]";
+                      log.debug3(String.format("str2 adjusted to: %s", str2));
                     }
                     DocumentContext dc2Paths = null;
                     try{
                       dc2Paths = JsonPath.using(conf).parse(str2);
                     }catch(JsonPathException e){
                       //some json couldn't parse, ignoring
-                      log.debug3("could not parse json dc2paths: " + str2,e);
+                      log.debug3(String.format("Could not parse str2 into dc2Paths: %s", str2), e);
                     }
                     DocumentContext dc2Values = JsonPath.parse(str2);
                     //fix FRONTEND_URL
-                    List<String> JSONpaths = null;
+                    List<String> jsonPaths = null;
                     if(jsonStrWithDigitsMat.group(1).endsWith(":")){
-                      JSONpaths = Arrays.asList("$..pageUrl","$..link","$..href","$..children[?(@[3].item.link)][2]","$..children[?(@[3].href)][2]","$..src","$..[?(@.content=~/https?:\\/\\/.*/)].content");
+                      jsonPaths = Arrays.asList("$..pageUrl",
+                                                "$..link",
+                                                "$..href",
+                                                "$..src",
+                                                "$..children[?(@[3].item.link)][2]",
+                                                "$..children[?(@[3].href)][2]",
+                                                "$..[?(@.content=~/https?:\\/\\/.*/)].content");
                     }else{
-                      JSONpaths = Arrays.asList("$[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]","$..*[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]");
+                      jsonPaths = Arrays.asList("$[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]",
+                                                "$..*[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]");
                     }
-                    for(String JSONpath : JSONpaths){
-                      List<String> paths = dc2Paths.read(JSONpath);
+                    for(String jsonPath : jsonPaths){
+                      log.debug3(String.format("Applying JSON Path: %s", jsonPath));
+                      List<String> paths = dc2Paths.read(jsonPath);
                       for(String path : paths){
-                        log.debug3("the path is " + dc2Values.read(path));
                         Object objVal = dc2Values.read(path);
-                        if(objVal != null && objVal instanceof String){
+                        log.debug3(String.format("Applying replacement to: %s", objVal));
+                        if( !( objVal != null && objVal instanceof String ) ){
+                          log.debug3("Not the expected object value");
+                        }
+                        else {
                           String val = (String)objVal;
                           String newUrl;
                           try{
                             newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, val)));
-                            log.debug3("the new url is " + newUrl);
+                            log.debug3(String.format("Transformation from %s to %s", val, newUrl));
                             dc2Paths.set((String)path, newUrl);
                           }catch (MalformedURLException e){
-                            log.debug("Couldn't resolve: the base url is " + baseUrl + " and the second group is " +  val);
+                            log.debug3(String.format("Malformed URL during transformation: baseUrl=%s val=%s", baseUrl, val));
                           };
                         }
                       }
                     }
-                    jsonStrWithDigitsMat.appendReplacement(sb, String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString())));
-                    log.debug3("STRING BUFFER IS " + sb.toString());
+                    String repl2 = String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString()));
+                    log.debug3(String.format("str2 replacement is: %s", repl2));
+                    jsonStrWithDigitsMat.appendReplacement(sb, repl2);
                   }
                   jsonStrWithDigitsMat.appendTail(sb);
-                  log.debug3("AFTER APPEND TAIL: " + sb.toString());
+                  log.debug3(String.format("String buffer after all replacements: %s", sb.toString()));
                   dc.set("$[1]",sb.toString());
-                  s = jsonPushMat.replaceFirst(String.format("$1%s$3",Matcher.quoteReplacement(dc.jsonString())));
-                  script.setScriptCode(s);
+                  String repl1 = String.format("$1%s$3",Matcher.quoteReplacement(dc.jsonString()));
+                  log.debug3(String.format("str1 after all replacements: %s", sb.toString()));
+                  scriptContents = jsonPushMat.replaceFirst(repl1);
+                  script.setScriptCode(scriptContents);
                 }
               }
               
@@ -306,7 +327,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
               script.setScriptCode(sb.toString());
               log.debug3("the text AFTER replacement is " + sb.toString());*/
             }
-            log.debug3("the text AFTER replacement is " + s);
+            log.debug3(String.format("Contents of the script tag after processing: %s", scriptContents));
           }
         }
         return false;
