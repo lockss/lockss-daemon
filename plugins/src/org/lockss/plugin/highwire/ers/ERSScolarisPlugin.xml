@@ -69,10 +69,10 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>plugin_url_consumer_factory</string>
         <string>org.lockss.plugin.highwire.ers.ERSScolarisUrlConsumerFactory</string>
     </entry>-->
-  <entry>
+  <!--<entry>
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.highwire.ers.ERSScolarisCrawlSeedFactory</string>
-  </entry>
+  </entry>-->
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
