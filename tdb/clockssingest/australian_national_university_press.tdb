@@ -215,7 +215,7 @@
     au < notReady ; exists ; 2022 ; Made in China Volume 7 ; 7 ; > #manifest page checker finds a volume that does not exist.
     au < deepCrawl ; exists ; 2023 ; Made in China Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2024 ; Made in China Volume 9 ; 9 ; >
-    au < expected ; exists ; 2025 ; Made in China Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2025 ; Made in China Volume 10 ; 10 ; >
 
   }
 
