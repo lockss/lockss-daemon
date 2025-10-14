@@ -124,6 +124,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s%sapi/theme$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s/index.php/%s/issue/view/[0-9]+$", url_host(base_url2), journal_id</string>
       <string>1,"^https?://%s/index.php/%s/.*/css\?name=(stylesheet|font)$", url_host(base_url2), journal_id</string>
+      <string>1,"^https?://%s/api/[0-9\.]+/spritesheet", url_host(base_url)</string>
       <string>1,"^https?://%s%slockss/year/%d/?$", url_host(base_url), url_path(base_url), year</string>
       <string>1,"^https?://%s%sarticles/[0-9]+/files/submission/proof/[0-9-]+\.(html|pdf)", url_host(base_url), url_path(base_url)</string>
       <string>2,"^https?://%s%sarticles/[0-9]+/files/submission/proof/.*(\.(css|jpe?g|gif|pdf))?$", url_host(base_url), url_path(base_url)</string>
@@ -297,6 +298,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>text/xml_link_extractor_factory</string>
     <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkXmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
