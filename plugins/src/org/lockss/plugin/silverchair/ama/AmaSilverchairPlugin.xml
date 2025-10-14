@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -179,9 +179,11 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"%sCitation/Download\?resourceId=[^&amp;]+&amp;resourceType=[^&amp;]+&amp;citationFormat=0", base_url</string>
       <string>2,"^https?://%s/downloadimage\.aspx\?", url_host(base_url)</string>
       <string>1,"https://cdn.jamanetwork.com/UI/app/dist/.*"</string>
-      
+
       <!--  Not collecting audio/video/interactive content
       <string>1,"^%slearning/(audio|video)-player/[^./]+$", base_url</string> -->
+      <!--exclude 	https://jamanetwork.com/journals/jama/fullarticle/http/:newsatjama.jama.com/category/the-jama-forum/	-->
+      <string>2,"^https?://%s/journals/jama/fullarticle/http", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
