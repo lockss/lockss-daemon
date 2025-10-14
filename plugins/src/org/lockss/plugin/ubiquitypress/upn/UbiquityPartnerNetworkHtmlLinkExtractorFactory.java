@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.ubiquitypress.upn;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -70,8 +71,19 @@ public class UbiquityPartnerNetworkHtmlLinkExtractorFactory implements LinkExtra
                         log.debug3("The href is :" + resolveUri(baseUrl, href));
                     }
                 }
-                return href;
-            } else{
+                return super.extractLinkFromTag(link, au, cb);
+            } else if ((ch == 'l' || ch == 'L') && beginsWithTag(link, "link")) {
+                String imageSrcSet = getAttributeValue("imageSrcSet", link);
+                if(imageSrcSet != null){
+                    String[] listOfImages = imageSrcSet.split(",");
+                    for(String image : listOfImages){
+                        cb.foundLink(resolveUri(baseUrl, image));
+                        log.debug3("The image is :" + resolveUri(baseUrl, image));
+                    }
+                }
+                return super.extractLinkFromTag(link, au, cb);
+            } 
+            else{
                 return super.extractLinkFromTag(link, au, cb);
             }
         }
