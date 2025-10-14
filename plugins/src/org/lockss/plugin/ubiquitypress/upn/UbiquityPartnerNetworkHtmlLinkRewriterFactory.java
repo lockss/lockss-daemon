@@ -65,6 +65,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
   static Pattern jsonPushPat = Pattern.compile("^((?:self\\.__next_f|\\(self\\.__next_[fs]=self\\.__next_[fs]\\|\\|\\[\\]\\))\\.push\\()(.*)(\\))$");
   //json expressions may be across multiple lines (/n)
   static Pattern jsonStrWithDigitsPat = Pattern.compile("^([0-9A-Fa-f]*:[^\\[\\{]*)([\\[\\{].*)$",Pattern.MULTILINE);
+  static Pattern rawJsonHrefPat = Pattern.compile("(\"href\":\")(/[^\"]+)(\")");
 
   // Matches protocol pattern (e.g. "http://")
   static final String protocolPat = "[^:/?#]+://+";
@@ -198,6 +199,27 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                       \n4e:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/articles/28\",\"locale\":\"$undefined\",\"localeCookie\":\"$2a:"]
                     */
                     if(str2.startsWith("[") && !str2.endsWith("]")){
+                      // JSON string ends badly
+                      Matcher rawJsonHrefMat = rawJsonHrefPat.matcher(str2);
+                      if (rawJsonHrefMat.find()) {
+                        try {
+                          String oldUrl = rawJsonHrefMat.group(2);
+                          String newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, oldUrl)));
+                          str2 = rawJsonHrefMat.replaceFirst(String.format("$1%s$3", Matcher.quoteReplacement(newUrl)));
+                        }
+                        catch (MalformedURLException mue) {
+                          log.debug3(String.format("Malformed URL in substitution from: %s", rawJsonHrefMat.group(2)), mue);
+                        }
+                      }
+                      else {
+                        // Nothing
+                      }
+                      String repl2 = String.format("$1%s", Matcher.quoteReplacement(str2));
+                      if (!repl2.equals(str2Before)) {
+                        log.debug3(String.format("str2 adjusted to: %s", str2));
+                      }
+                      jsonStrWithDigitsMat.appendReplacement(sb, repl2);
+/*
                       int closedCurly = StringUtils.countMatches(str2, "{") - StringUtils.countMatches(str2, "}");
                       log.debug3(String.format("Adjusting str2; closedCurly=%d", closedCurly));
                       if(closedCurly > 0){
@@ -239,57 +261,59 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                         closedCurly--;
                       }
                       str2 = str2 + "]";
-                      log.debug3(String.format("str2 adjusted to: %s", str2));
+*/
                     }
-                    DocumentContext dc2Paths = null;
-                    try{
-                      dc2Paths = JsonPath.using(conf).parse(str2);
-                    }catch(JsonPathException e){
-                      //some json couldn't parse, ignoring
-                      log.debug3(String.format("Could not parse str2 into dc2Paths: %s", str2), e);
-                    }
-                    DocumentContext dc2Values = JsonPath.parse(str2);
-                    //fix FRONTEND_URL
-                    List<String> jsonPaths = null;
-                    if(jsonStrWithDigitsMat.group(1).endsWith(":")){
-                      jsonPaths = Arrays.asList("$..pageUrl",
-                                                "$..link",
-                                                "$..href",
-                                                "$..src",
-                                                "$..children[?(@[3].item.link)][2]",
-                                                "$..children[?(@[3].href)][2]",
-                                                "$..[?(@.content=~/https?:\\/\\/.*/)].content");
-                    }else{
-                      jsonPaths = Arrays.asList("$[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]",
-                                                "$..*[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]");
-                    }
-                    for(String jsonPath : jsonPaths){
-                      log.debug3(String.format("Applying JSON Path: %s", jsonPath));
-                      List<String> paths = dc2Paths.read(jsonPath);
-                      for(String path : paths){
-                        Object objVal = dc2Values.read(path);
-                        log.debug3(String.format("Applying replacement to: %s", objVal));
-                        if( !( objVal != null && objVal instanceof String ) ){
-                          log.debug3("Not the expected object value");
-                        }
-                        else {
-                          String val = (String)objVal;
-                          String newUrl;
-                          try{
-                            newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, val)));
-                            log.debug3(String.format("Transformation from %s to %s", val, newUrl));
-                            dc2Paths.set((String)path, newUrl);
-                          }catch (MalformedURLException e){
-                            log.debug3(String.format("Malformed URL during transformation: baseUrl=%s val=%s", baseUrl, val));
-                          };
+                    else {
+                      DocumentContext dc2Paths = null;
+                      try{
+                        dc2Paths = JsonPath.using(conf).parse(str2);
+                      }catch(JsonPathException e){
+                        //some json couldn't parse, ignoring
+                        log.debug3(String.format("Could not parse str2 into dc2Paths: %s", str2), e);
+                      }
+                      DocumentContext dc2Values = JsonPath.parse(str2);
+                      //fix FRONTEND_URL
+                      List<String> jsonPaths = null;
+                      if(jsonStrWithDigitsMat.group(1).endsWith(":")){
+                        jsonPaths = Arrays.asList("$..pageUrl",
+                                                  "$..link",
+                                                  "$..href",
+                                                  "$..src",
+                                                  "$..children[?(@[3].item.link)][2]",
+                                                  "$..children[?(@[3].href)][2]",
+                                                  "$..[?(@.content=~/https?:\\/\\/.*/)].content");
+                      }else{
+                        jsonPaths = Arrays.asList("$[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]",
+                                                  "$..*[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]");
+                      }
+                      for(String jsonPath : jsonPaths){
+                        log.debug3(String.format("Applying JSON Path: %s", jsonPath));
+                        List<String> paths = dc2Paths.read(jsonPath);
+                        for(String path : paths){
+                          Object objVal = dc2Values.read(path);
+                          log.debug3(String.format("Applying replacement to: %s", objVal));
+                          if( !( objVal != null && objVal instanceof String ) ){
+                            log.debug3("Not the expected object value");
+                          }
+                          else {
+                            String val = (String)objVal;
+                            String newUrl;
+                            try{
+                              newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, val)));
+                              log.debug3(String.format("Transformation from %s to %s", val, newUrl));
+                              dc2Paths.set((String)path, newUrl);
+                            }catch (MalformedURLException e){
+                              log.debug3(String.format("Malformed URL during transformation: baseUrl=%s val=%s", baseUrl, val));
+                            };
+                          }
                         }
                       }
+                      String repl2 = String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString()));
+                      if (!repl2.equals(str2Before)) {
+                        log.debug3(String.format("str2 replacement is: %s", repl2));
+                      }
+                      jsonStrWithDigitsMat.appendReplacement(sb, repl2);
                     }
-                    String repl2 = String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString()));
-                    if (!repl2.equals(str2Before)) {
-                      log.debug3(String.format("str2 replacement is: %s", repl2));
-                    }
-                    jsonStrWithDigitsMat.appendReplacement(sb, repl2);
                   }
                   jsonStrWithDigitsMat.appendTail(sb);
                   dc.set("$[1]",sb.toString());
