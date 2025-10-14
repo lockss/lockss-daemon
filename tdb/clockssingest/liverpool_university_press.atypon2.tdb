@@ -426,7 +426,46 @@
     param[journal_id] = cont
     #Move from Cambridge University Press (2026)
 
-   au < expected ; exists ; 2026 ; Continuity and Change Volume 41 ; 41 ; >
+   au < manifest ; exists ; 1986 ; Continuity and Change Volume 1 ; 1 ; >
+   au < manifest ; exists ; 1987 ; Continuity and Change Volume 2 ; 2 ; >
+   au < manifest ; exists ; 1988 ; Continuity and Change Volume 3 ; 3 ; >
+   au < manifest ; exists ; 1989 ; Continuity and Change Volume 4 ; 4 ; >
+   au < manifest ; exists ; 1990 ; Continuity and Change Volume 5 ; 5 ; >
+   au < manifest ; exists ; 1991 ; Continuity and Change Volume 6 ; 6 ; >
+   au < manifest ; exists ; 1992 ; Continuity and Change Volume 7 ; 7 ; >
+   au < manifest ; exists ; 1993 ; Continuity and Change Volume 8 ; 8 ; >
+   au < manifest ; exists ; 1994 ; Continuity and Change Volume 9 ; 9 ; >
+   au < manifest ; exists ; 1995 ; Continuity and Change Volume 10 ; 10 ; >
+   au < manifest ; exists ; 1996 ; Continuity and Change Volume 11 ; 11 ; >
+   au < manifest ; exists ; 1997 ; Continuity and Change Volume 12 ; 12 ; >
+   au < manifest ; exists ; 1998 ; Continuity and Change Volume 13 ; 13 ; >
+   au < manifest ; exists ; 1999 ; Continuity and Change Volume 14 ; 14 ; >
+   au < exists ; exists ; 2000 ; Continuity and Change Volume 15 ; 15 ; >
+   au < exists ; exists ; 2001 ; Continuity and Change Volume 16 ; 16 ; >
+   au < exists ; exists ; 2002 ; Continuity and Change Volume 17 ; 17 ; >
+   au < exists ; exists ; 2003 ; Continuity and Change Volume 18 ; 18 ; >
+   au < exists ; exists ; 2004 ; Continuity and Change Volume 19 ; 19 ; >
+   au < exists ; exists ; 2005 ; Continuity and Change Volume 20 ; 20 ; >
+   au < exists ; exists ; 2006 ; Continuity and Change Volume 21 ; 21 ; >
+   au < exists ; exists ; 2007 ; Continuity and Change Volume 22 ; 22 ; >
+   au < exists ; exists ; 2008 ; Continuity and Change Volume 23 ; 23 ; >
+   au < exists ; exists ; 2009 ; Continuity and Change Volume 24 ; 24 ; >
+   au < exists ; exists ; 2010 ; Continuity and Change Volume 25 ; 25 ; >
+   au < exists ; exists ; 2011 ; Continuity and Change Volume 26 ; 26 ; >
+   au < exists ; exists ; 2012 ; Continuity and Change Volume 27 ; 27 ; >
+   au < exists ; exists ; 2013 ; Continuity and Change Volume 28 ; 28 ; >
+   au < exists ; exists ; 2014 ; Continuity and Change Volume 29 ; 29 ; >
+   au < exists ; exists ; 2015 ; Continuity and Change Volume 30 ; 30 ; >
+   au < exists ; exists ; 2016 ; Continuity and Change Volume 31 ; 31 ; >
+   au < exists ; exists ; 2017 ; Continuity and Change Volume 32 ; 32 ; >
+   au < exists ; exists ; 2018 ; Continuity and Change Volume 33 ; 33 ; >
+   au < exists ; exists ; 2019 ; Continuity and Change Volume 34 ; 34 ; >
+   au < exists ; exists ; 2020 ; Continuity and Change Volume 35 ; 35 ; >
+   au < exists ; exists ; 2021 ; Continuity and Change Volume 36 ; 36 ; >
+   au < exists ; exists ; 2022 ; Continuity and Change Volume 37 ; 37 ; >
+   au < exists ; exists ; 2023 ; Continuity and Change Volume 38 ; 38 ; >
+   au < exists ; exists ; 2024 ; Continuity and Change Volume 39 ; 39 ; >
+   au < expected ; exists ; 2025 ; Continuity and Change Volume 40 ; 40 ; >
 
   }
 
@@ -2630,4 +2669,95 @@
     au < expected ; exists ; 2025 ; Church Archaeology Volume 25 ; 25 ; >
 
   }
+
+  {
+
+    title <
+      name = Arabic Sciences & Philosophy ;
+      issn = 0957-4239 ;
+      eissn = 1474-0524
+    >
+
+    param[journal_id] = asp
+
+    au < manifest ; exists ; 1991 ; Arabic Sciences & Philosophy Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1992 ; Arabic Sciences & Philosophy Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1993 ; Arabic Sciences & Philosophy Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1994 ; Arabic Sciences & Philosophy Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1995 ; Arabic Sciences & Philosophy Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1996 ; Arabic Sciences & Philosophy Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1997 ; Arabic Sciences & Philosophy Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1998 ; Arabic Sciences & Philosophy Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1999 ; Arabic Sciences & Philosophy Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2000 ; Arabic Sciences & Philosophy Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2001 ; Arabic Sciences & Philosophy Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2002 ; Arabic Sciences & Philosophy Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2003 ; Arabic Sciences & Philosophy Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2004 ; Arabic Sciences & Philosophy Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2005 ; Arabic Sciences & Philosophy Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2006 ; Arabic Sciences & Philosophy Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2007 ; Arabic Sciences & Philosophy Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2008 ; Arabic Sciences & Philosophy Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2009 ; Arabic Sciences & Philosophy Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2010 ; Arabic Sciences & Philosophy Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2011 ; Arabic Sciences & Philosophy Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2012 ; Arabic Sciences & Philosophy Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2013 ; Arabic Sciences & Philosophy Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2014 ; Arabic Sciences & Philosophy Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2015 ; Arabic Sciences & Philosophy Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2016 ; Arabic Sciences & Philosophy Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2017 ; Arabic Sciences & Philosophy Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2018 ; Arabic Sciences & Philosophy Volume 28 ; 28 ; >
+    au < manifest ; exists ; 2019 ; Arabic Sciences & Philosophy Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2020 ; Arabic Sciences & Philosophy Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2021 ; Arabic Sciences & Philosophy Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2022 ; Arabic Sciences & Philosophy Volume 32 ; 32 ; >
+    au < manifest ; exists ; 2023 ; Arabic Sciences & Philosophy Volume 33 ; 33 ; >
+    au < manifest ; exists ; 2024 ; Arabic Sciences & Philosophy Volume 34 ; 34 ; >
+    au < expected ; exists ; 2025 ; Arabic Sciences & Philosophy Volume 35 ; 35 ; >
+
+  }
+
+  {
+
+    title <
+      name = Architectural Research Quarterly ;
+      issn = 1359-1355 ;
+      eissn = 1474-0516
+    >
+
+    param[journal_id] = arq
+
+    au < manifest ; exists ; 1995-1996 ; Architectural Research Quarterly Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1996-1997 ; Architectural Research Quarterly Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1999 ; Architectural Research Quarterly Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2000 ; Architectural Research Quarterly Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2001 ; Architectural Research Quarterly Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2002 ; Architectural Research Quarterly Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2003 ; Architectural Research Quarterly Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2004 ; Architectural Research Quarterly Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2005 ; Architectural Research Quarterly Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2006 ; Architectural Research Quarterly Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2007 ; Architectural Research Quarterly Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2008 ; Architectural Research Quarterly Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2009 ; Architectural Research Quarterly Volume 13 ; 13 ; >
+    au < manifest ; exists ; 2010 ; Architectural Research Quarterly Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2011 ; Architectural Research Quarterly Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2012 ; Architectural Research Quarterly Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2013 ; Architectural Research Quarterly Volume 17 ; 17 ; >
+    au < manifest ; exists ; 2014 ; Architectural Research Quarterly Volume 18 ; 18 ; >
+    au < manifest ; exists ; 2015 ; Architectural Research Quarterly Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2016 ; Architectural Research Quarterly Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2017 ; Architectural Research Quarterly Volume 21 ; 21 ; >
+    au < manifest ; exists ; 2018 ; Architectural Research Quarterly Volume 22 ; 22 ; >
+    au < manifest ; exists ; 2019 ; Architectural Research Quarterly Volume 23 ; 23 ; >
+    au < manifest ; exists ; 2020 ; Architectural Research Quarterly Volume 24 ; 24 ; >
+    au < manifest ; exists ; 2021 ; Architectural Research Quarterly Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2022 ; Architectural Research Quarterly Volume 26 ; 26 ; >
+    au < manifest ; exists ; 2023 ; Architectural Research Quarterly Volume 27 ; 27 ; >
+    au < manifest ; exists ; 2024 ; Architectural Research Quarterly Volume 28 ; 28 ; >
+    au < expected ; exists ; 2025 ; Architectural Research Quarterly Volume 29 ; 29 ; >
+
+  }
+
 }
