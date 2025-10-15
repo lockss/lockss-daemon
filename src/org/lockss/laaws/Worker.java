@@ -44,6 +44,7 @@ public abstract class Worker {
   protected Counters ctrs;
 
   protected final StreamingArtifactsApi artifactsApi;
+  protected final StreamingArtifactsApi artifactsApiLongCall;
   protected final AusApi cfgAusApiClient;
   protected final UsersApi cfgUsersApiClient;
   protected final ConfigApi cfgConfigApiClient;
@@ -58,6 +59,7 @@ public abstract class Worker {
     }
     this.ctrs = task.getCounters();
     artifactsApi = auMover.getRepoArtifactsApiClient();
+    artifactsApiLongCall = auMover.getRepoArtifactsApiLongCallClient();
     cfgAusApiClient = auMover.getCfgAusApiClient();
     cfgUsersApiClient = auMover.getCfgUsersApiClient();
     cfgConfigApiClient = auMover.getCfgConfigApiClient();

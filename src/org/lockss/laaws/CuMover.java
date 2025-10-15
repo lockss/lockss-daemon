@@ -220,8 +220,8 @@ public class CuMover extends CuBase {
       }
 
       Artifact uncommitted =
-        artifactsApi.createArtifact(prop_str, dcu,
-                                    respHeadersToString(response));
+        artifactsApiLongCall.createArtifact(prop_str, dcu,
+                                            respHeadersToString(response));
       if (uncommitted != null) {
         if (log.isDebug3()) {
           log.debug3("createArtifact returned,  content bytes: " +

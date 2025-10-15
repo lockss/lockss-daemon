@@ -680,6 +680,7 @@ public class V2AuMover {
       repoStatusApiClient =
           new org.lockss.laaws.api.rs.StatusApi(repoApiStatusClient);
       repoArtifactsApiClient = new StreamingArtifactsApi(repoClient);
+      repoArtifactsApiLongCallClient = new StreamingArtifactsApi(repoLongCallClient);
       repoAusApiClient = new org.lockss.laaws.api.rs.AusApi(repoClient);
       repoAusApiLongCallClient = new org.lockss.laaws.api.rs.AusApi(repoLongCallClient);
     }
@@ -1876,6 +1877,10 @@ public class V2AuMover {
 
   StreamingArtifactsApi getRepoArtifactsApiClient() {
     return repoArtifactsApiClient;
+  }
+
+  StreamingArtifactsApi getRepoArtifactsApiLongCallClient() {
+    return repoArtifactsApiLongCallClient;
   }
 
   public String getNamespace() {
