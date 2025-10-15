@@ -2,6 +2,7 @@
   publisher <
     name = Al-Iraqia university;
     info[contract] = 2025 ;
+    info[back] = 2020 ;
     info[tester] = 5 ;
     info[platform] = bepress
   >
@@ -19,6 +20,7 @@
       comment[publisher] = College of education, Al-Iraqia university
       param[base_url] = https://ijcsm.researchcommons.org/
       param[journal_abbr] = ijcsm
+      #Volume 1 is from 2024 per the website as of 20251015
 
       au < finished ; manifest ; 2024 ; Iraqi Journal for Computer Science and Mathematics Volume 1 ; 1 ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 2021 ; Iraqi Journal for Computer Science and Mathematics Volume 2 ; 2 ; >

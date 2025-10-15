@@ -724,7 +724,7 @@
       au < down ; 2019 ; 33 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; 33 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
       au < down ; 2020 ; 34 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; 34 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
       au < down ; 2021 ; 35 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; 35 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
-      au < manifest ; 2022 ; 36 ; Current: Journal of Marine Education Volume 2022 ; 2022 ; 36 ; Ubiquity Press ;  ; https://www.current-journal.com/ >
+      au < manifest ; 2022 ; 36 ; Current: Journal of Marine Education Volume 2022 ; 2022 ; 36 ; Ubiquity Press ;  ; https://current-journal.com/ >
       au < ready ; 2023 ; 37,38 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; 37,38 ; Ubiquity Press ;  ; https://current-journal.com/ >
       au < ready ; 2024 ; 39 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://current-journal.com/ >
       au < manifest ; 2025 ; 40 ; Current: Journal of Marine Education Volume 2025 ; 2025 ; 40 ; Ubiquity Press ;  ; https://current-journal.com/ >
@@ -2350,11 +2350,11 @@
       nondefparam[base_url2] = https://account.seejournal.org/
       nondefparam[journal_id] = vt-j-see
 
-      au < manifest ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; Virginia Tech Publishing ; removed www ; https://www.seejournal.org/ >
-      au < manifest ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; Virginia Tech Publishing ; removed www ; https://www.seejournal.org/ >
+      au < doNotProcess ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ >
+      au < doNotProcess ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ >
 
-      au < doNotProcess ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
-      au < doNotProcess ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
+      au < manifest ; 2020 ; 1 ; Studies in Engineering Education Volume 2020 ; 2020 ; 1 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
+      au < manifest ; 2021 ; 2 ; Studies in Engineering Education Volume 2021 ; 2021 ; 2 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
       au < doNotProcess ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 ; 3 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
       au < doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; 4 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
       au < released ; 2024 ; 5 ; Studies in Engineering Education Volume 2024 ; 2024 ; 5 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
