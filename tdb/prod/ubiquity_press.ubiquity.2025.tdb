@@ -1159,8 +1159,8 @@
       au < doNotProcess ; 2017 ; 2017 ; Journal of Interactive Media in Education Volume 2017 ; 2017 ; 2017 ; Ubiquity Press ;  ; http://www-jime.open.ac.uk/ >
       
       #non-WWW-
-      au < manifest ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; 1998 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
-      au < manifest ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; 1999 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
+      au < ready ; 1998 ; 1998 ; Journal of Interactive Media in Education Volume 1998 ; 1998 ; 1998 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
+      au < ready ; 1999 ; 1999 ; Journal of Interactive Media in Education Volume 1999 ; 1999 ; 1999 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
       au < released ; 2000 ; 2000 ; Journal of Interactive Media in Education Volume 2000 ; 2000 ; 2000 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
       au < released ; 2001 ; 2001 ; Journal of Interactive Media in Education Volume 2001 ; 2001 ; 2001 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
       au < released ; 2002 ; 2002 ; Journal of Interactive Media in Education Volume 2002 ; 2002 ; 2002 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
@@ -2374,17 +2374,17 @@
       nondefparam[base_url2] = https://account.jte-journal.org/
       nondefparam[journal_id] = vt-j-jte
 
-      au < manifest ; 1989 ; 1 ; Journal of Technology Education Volume 1989 ; 1989 ; 1 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
-      au < manifest ; 1990 ; 1,2 ; Journal of Technology Education Volume 1990 ; 1990 ; 1,2 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < ready ; 1989 ; 1 ; Journal of Technology Education Volume 1989 ; 1989 ; 1 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < ready ; 1990 ; 1,2 ; Journal of Technology Education Volume 1990 ; 1990 ; 1,2 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
       au < manifest ; 1991 ; 2,3 ; Journal of Technology Education Volume 1991 ; 1991 ; 2,3 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
-      au < manifest ; 1992 ; 3,4 ; Journal of Technology Education Volume 1992 ; 1992 ; 3,4 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
-      au < manifest ; 1993 ; 4,5 ; Journal of Technology Education Volume 1993 ; 1993 ; 4,5 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
-      au < manifest ; 1994 ; 5,6 ; Journal of Technology Education Volume 1994 ; 1994 ; 5,6 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
-      au < manifest ; 1995 ; 6,7 ; Journal of Technology Education Volume 1995 ; 1995 ; 6,7 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
-      au < manifest ; 1996 ; 7,8 ; Journal of Technology Education Volume 1996 ; 1996 ; 7,8 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
-      au < manifest ; 1997 ; 8,9 ; Journal of Technology Education Volume 1997 ; 1997 ; 8,9 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
-      au < manifest ; 1998 ; 9,10 ; Journal of Technology Education Volume 1998 ; 1998 ; 9,10 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
-      au < manifest ; 1999 ; 10,11 ; Journal of Technology Education Volume 1999 ; 1999 ; 10,11 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < ready ; 1992 ; 3,4 ; Journal of Technology Education Volume 1992 ; 1992 ; 3,4 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < ready ; 1993 ; 4,5 ; Journal of Technology Education Volume 1993 ; 1993 ; 4,5 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < ready ; 1994 ; 5,6 ; Journal of Technology Education Volume 1994 ; 1994 ; 5,6 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < ready ; 1995 ; 6,7 ; Journal of Technology Education Volume 1995 ; 1995 ; 6,7 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < ready ; 1996 ; 7,8 ; Journal of Technology Education Volume 1996 ; 1996 ; 7,8 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < ready ; 1997 ; 8,9 ; Journal of Technology Education Volume 1997 ; 1997 ; 8,9 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < ready ; 1998 ; 9,10 ; Journal of Technology Education Volume 1998 ; 1998 ; 9,10 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < ready ; 1999 ; 10,11 ; Journal of Technology Education Volume 1999 ; 1999 ; 10,11 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
       au < doNotProcess ; 2000 ; 11,12 ; Journal of Technology Education Volume 2000 ; 2000 ; 11,12 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
       au < doNotProcess ; 2001 ; 12,13 ; Journal of Technology Education Volume 2001 ; 2001 ; 12,13 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
       au < doNotProcess ; 2002 ; 13,14 ; Journal of Technology Education Volume 2002 ; 2002 ; 13,14 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
