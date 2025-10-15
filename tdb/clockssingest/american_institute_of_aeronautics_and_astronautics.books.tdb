@@ -194,6 +194,11 @@
      type = bookSeries
     >
 
+    au < expected ; exists ; 1992 ; ; ; MBFT92 ; 6th AIAA Biennial Flight Test Conference ; https://arc.aiaa.org/ ; >
+    au < expected ; exists ; 1963 ; ; ; MGNC63 ; Guidance and Control Conference 1963 Cambridge MA ; https://arc.aiaa.org/ ; >
+    au < expected ; exists ; 1992 ; ; ; MIAPC92 ; AlAA 4th International Aerospace Planes Conference ; https://arc.aiaa.org/ ; >
+    au < expected ; exists ; 1969 ; ; ; Msah69 ; CASI/AIAA Subsonic Aero-and Hydro-Dynamics Meeting 1969 Ottawa  ; https://arc.aiaa.org/ ; >
+
     au < finished ; finished ; 1987 ; ; 9781624105470 ; 9781624105470 ; 22nd Intersociety Energy Conversion Engineering Conference ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < doesNotExist ; doesNotExist ; 1992 ; ; 9781563470622 ; 9781563470622 ; Proceedings of the 35th Colloquium on the Law of Outer Space ; https://arc.aiaa.org/ ; >
     au < doesNotExist ; doesNotExist ; 1993 ; ; 9781563471049 ; 9781563471049 ; Proceedings of the 36th Colloquium on the Law of Outer Space ; https://arc.aiaa.org/ ; >
