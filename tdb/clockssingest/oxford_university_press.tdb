@@ -3885,10 +3885,10 @@
     au < finished ; crawling ; 2018 ; 2018 ; Chemical Senses Volume 43 ; 43 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 2019 ; Chemical Senses Volume 44 ; 44 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; 2020 ; Chemical Senses Volume 45 ; 45 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2021 ; 2021 ; Chemical Senses Volume 46 ; 46 ; >
-    au < frozen ; exists ; 2022 ; 2022 ; Chemical Senses Volume 47 ; 47 ; >
+    au < finished ; manifest ; 2021 ; 2021 ; Chemical Senses Volume 46 ; 46 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; 2022 ; Chemical Senses Volume 47 ; 47 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Chemical Senses Volume 48 ; 48 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2024 ; 2024 ; Chemical Senses Volume 49 ; 49 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; Chemical Senses Volume 49 ; 49 ; reingest2.clockss.org:8085 >
     au < exists ; exists ; 2025 ; 2025 ; Chemical Senses Volume 50 ; 50 ; >
 
   }
@@ -6954,7 +6954,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; FEMS Microbiology Letters Volume 367-368 ; 367-368 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; FEMS Microbiology Letters Volume 368-369 ; 368-369 ; >
     au < finished ; manifest ; 2023 ; 2023 ; FEMS Microbiology Letters Volume 370 ; 370 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2024 ; 2024 ; FEMS Microbiology Letters Volume 371 ; 371 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; FEMS Microbiology Letters Volume 371 ; 371 ; reingest3.clockss.org:8083 >
     au < exists ; exists ; 2025 ; 2025 ; FEMS Microbiology Letters Volume 372 ; 372 ; >
 
   }
@@ -7043,7 +7043,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; FEMS Yeast Research Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; FEMS Yeast Research Volume 22 ; 22 ; >
     au < finished ; manifest ; 2023 ; 2023 ; FEMS Yeast Research Volume 23 ; 23 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; 2024 ; FEMS Yeast Research Volume 24 ; 24 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; FEMS Yeast Research Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < exists ; exists ; 2025 ; 2025 ; FEMS Yeast Research Volume 25 ; 25 ; >
 
   }
@@ -7151,8 +7151,8 @@
     au < finished ; crawling ; 2018 ; 2018 ; Food Quality and Safety Volume 2 ; 2 ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2019 ; 2019 ; Food Quality and Safety Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Food Quality and Safety Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2021 ; 2021 ; Food Quality and Safety Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2022 ; 2022 ; Food Quality and Safety Volume 6 ; 6 ; >
+    au < finished ; manifest ; 2021 ; 2021 ; Food Quality and Safety Volume 5 ; 5 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2022 ; 2022 ; Food Quality and Safety Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Food Quality and Safety Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2024 ; 2024 ; Food Quality and Safety Volume 8 ; 8 ; >
     au < manifest ; exists ; 2025 ; 2025 ; Food Quality and Safety Volume 9 ; 9 ; >
@@ -7704,7 +7704,7 @@
     au < finished ; finished ; 2021 ; 2021 ; French Studies Volume 75 ; 75 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2022 ; 2022 ; French Studies Volume 76 ; 76 ; >
     au < finished ; manifest ; 2023 ; 2023 ; French Studies Volume 77 ; 77 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; 2024 ; French Studies Volume 78 ; 78 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; French Studies Volume 78 ; 78 ; reingest1.clockss.org:8082 >
 
   }
 
