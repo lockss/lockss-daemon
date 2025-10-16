@@ -38,8 +38,6 @@ import java.util.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.io.JsonEOFException;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
@@ -48,10 +46,10 @@ import com.jayway.jsonpath.Option;
 
 import org.apache.commons.lang.StringUtils;
 import org.htmlparser.*;
-import org.htmlparser.tags.LinkTag;
-import org.htmlparser.tags.ScriptTag;
+import org.htmlparser.tags.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkHtmlLinkExtractorFactory.UbiquityPartnerNetworkHtmlLinkExtractor;
 import org.lockss.rewriter.*;
 import org.lockss.servlet.ServletUtil.LinkTransform;
 import org.lockss.rewriter.NodeFilterHtmlLinkRewriterFactory.HtmlBaseProcessor;
@@ -143,11 +141,42 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
 
       @Override
       public boolean accept(Node node) {
-        if (node instanceof LinkTag) {
+        if (node instanceof LinkTag) { // Note: LinkTag is <a>
           LinkTag link = (LinkTag)node;
           String href = link.getLink();
           if (href != null) {
             link.setLink(href.trim());
+          }
+        }
+        if (   (node instanceof ImageTag)
+            || (node instanceof Tag && "link".equalsIgnoreCase(((Tag)node).getTagName())) // Note: LinkTag is <a>
+            || (node instanceof Tag && "source".equalsIgnoreCase(((Tag)node).getTagName()))) {
+          Tag tag = (Tag)node;
+          String attr = "link".equalsIgnoreCase(((Tag)node).getTagName()) ? "imagesrcset" : "srcset";
+          String srcSet = tag.getAttribute(attr);
+          if (StringUtils.isNotEmpty(srcSet)) {
+            String[] candidateImageStrings = StringUtils.split(srcSet, ',');
+            boolean atLeastOneChange = false;
+            for (int i = 0 ; i < candidateImageStrings.length ; ++i) {
+              Matcher srcSetMat = UbiquityPartnerNetworkHtmlLinkExtractor.srcSetPat.matcher(candidateImageStrings[i]);
+              if (srcSetMat.matches()) {
+                try {
+                  String oldUrl = srcSetMat.group(2).replace("&amp;", "&");
+                  if (!oldUrl.startsWith("/")) {
+                    continue;
+                  }
+                  String newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, oldUrl)));
+                  candidateImageStrings[i] = String.format("%s %s", newUrl, srcSetMat.group(4));
+                  atLeastOneChange = true;
+                }
+                catch (MalformedURLException mue) {
+                  log.debug3("Malformed source set URL", mue);
+                }
+              }
+            }
+            if (atLeastOneChange) {
+              tag.setAttribute(attr, StringUtils.join(candidateImageStrings, ','));
+            }
           }
         }
         if(node instanceof ScriptTag){
@@ -155,12 +184,9 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
           String scriptContentsBefore = script.toPlainTextString();
           String scriptContents = scriptContentsBefore;
           if (!StringUtil.isNullString(scriptContents)) {
-            //script.removeAttribute("src");
-            log.debug3(String.format("Contents of the script tag before processing: %s", scriptContents));
-            //if(s.startsWith("self.__next") || s.startsWith("(self.__next")){
-
             Matcher jsonPushMat = jsonPushPat.matcher(scriptContents);
             if(jsonPushMat.find()){
+              log.debug3(String.format("Contents of the script tag before processing: %s", scriptContents));
               String jsonExpression = jsonPushMat.group(2);
               StringBuffer sb = new StringBuffer();
               if(jsonExpression.startsWith("[") && !jsonExpression.endsWith("]")){
@@ -360,6 +386,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
         }
         return false;
       }
+      
     }
 
     // Rewrite absolute links to urlStem/... to targetStem + urlStem/...
