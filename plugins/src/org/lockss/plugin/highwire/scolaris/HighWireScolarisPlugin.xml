@@ -1,6 +1,6 @@
 <!--
 
-Copyright (c) 2000-2022, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -141,16 +141,23 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_crawlrules</string>
         <list>
             <string>1,"%scontent/%s/c?lockss-manifest/vol_%s_manifest.html", base_url, journal_id, volume_name</string>
-            <string>1,"^https?://%s/content/%s/%s", base_url_host, journal_id, volume_name</string>
             <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?(v|itok)=[^/]*)?$", base_url_host</string>
+            <string>1,"^https?://%s/content/%s/%s", base_url_host, journal_id, volume_name</string>
+            <string>1,"^https?://%s/admin/highwire/citation/", base_url_host</string>
+            <string>1,"^https?://%s/highwire_display/entity_view/node/", base_url_host</string>
+            <string>1,"^https?://%s/highwire/markup/item_fulltext/", base_url_host</string>
+            <!-- looks ERS-specific, but necessary to get the tabbed content -->
+            <string>1,"^https?://%s/ers-lookup/tab-link/", base_url_host</string>
+            <!-- allowed for the permission URL auth excursion at ERS, but beware, see HTML crawl filter -->
             <string>1,"^https?://%s/openid-connect/", base_url_host</string>
+            <!-- allowed for the permission URL auth excursion at ERS -->
+            <string>1,"https?://idp\.sams-sigma\.com/"</string>
             <string>1,"https://cdnjs.cloudflare.com/"</string>
             <string>1,"https://semantic-ui.com/"</string>
             <string>1,"https://code.jquery.com/"</string>
             <string>1,"https://fonts.gstatic.com/"</string>
             <string>1,"https?://(fonts|ajax).googleapis.com/"</string>
             <string>1,"https://themes.googleusercontent.com/"</string>
-            <string>1,"https?://idp\.sams-sigma\.com/"</string>
             <!--
             <string>1,"^https?://%s/content/%s(/[^/]+)?/suppl/", url_host(base_url), journal_id</string>
             <string>2,"^https?://%s/content/(by/(year|volume)|current|.*(/|\.)article-)", url_host(base_url)</string>
@@ -230,4 +237,8 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>idp\.sams-sigma\.com</string>
         </list>
     </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.highwire.scolaris.HighWireScolarisHtmlCrawlFilterFactory</string>
+  </entry>
 </map>
