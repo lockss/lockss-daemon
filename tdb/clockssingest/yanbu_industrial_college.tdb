@@ -23,9 +23,9 @@
     param[base_url] = https://yjes.researchcommons.org/
     param[journal_abbr] = yjes
 
-    au < ready ; exists ; 2010 ; Yanbu Journal of Engineering and Science Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2010 ; Yanbu Journal of Engineering and Science Volume 1 ; 1 ; >
     au < crawling ; exists ; 2011 ; Yanbu Journal of Engineering and Science Volume 2 ; 2 ; >
-    au < ready ; exists ; 2011 ; Yanbu Journal of Engineering and Science Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2011 ; Yanbu Journal of Engineering and Science Volume 3 ; 3 ; >
     au < crawling ; exists ; 2012 ; Yanbu Journal of Engineering and Science Volume 4 ; 4 ; >
     au < crawling ; exists ; 2012 ; Yanbu Journal of Engineering and Science Volume 5 ; 5 ; >
     au < crawling ; exists ; 2013 ; Yanbu Journal of Engineering and Science Volume 6 ; 6 ; >
