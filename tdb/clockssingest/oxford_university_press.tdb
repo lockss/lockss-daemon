@@ -7154,7 +7154,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; Food Quality and Safety Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; 2022 ; Food Quality and Safety Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Food Quality and Safety Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; 2024 ; Food Quality and Safety Volume 8 ; 8 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; Food Quality and Safety Volume 8 ; 8 ; reingest3.clockss.org:8083 >
     au < manifest ; exists ; 2025 ; 2025 ; Food Quality and Safety Volume 9 ; 9 ; >
 
   }
@@ -7702,7 +7702,7 @@
     au < finished ; manifest ; 2019 ; 2019 ; French Studies Volume 73 ; 73 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; 2020 ; French Studies Volume 74 ; 74 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; 2021 ; French Studies Volume 75 ; 75 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2022 ; 2022 ; French Studies Volume 76 ; 76 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; French Studies Volume 76 ; 76 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; French Studies Volume 77 ; 77 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; French Studies Volume 78 ; 78 ; reingest1.clockss.org:8082 >
 
@@ -10137,9 +10137,9 @@
     au < finished ; manifest ; 2019 ; 2019 ; International Journal of Low-Carbon Technologies Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; International Journal of Low-Carbon Technologies Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; 2021 ; International Journal of Low-Carbon Technologies Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2022 ; 2022 ; International Journal of Low-Carbon Technologies Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; International Journal of Low-Carbon Technologies Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Low-Carbon Technologies Volume 18 ; 18 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; 2024 ; International Journal of Low-Carbon Technologies Volume 19 ; 19 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; International Journal of Low-Carbon Technologies Volume 19 ; 19 ; reingest3.clockss.org:8083 >
     au < exists ; exists ; 2025 ; 2025 ; International Journal of Low-Carbon Technologies Volume 20 ; 20 ; >
 
   }
@@ -18069,7 +18069,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; Pathogens and Disease Volume 79 ; 79 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Pathogens and Disease Volume 80 ; 80 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Pathogens and Disease Volume 81 ; 81 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2024 ; 2024 ; Pathogens and Disease Volume 82 ; 82 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; Pathogens and Disease Volume 82 ; 82 ; reingest4.clockss.org:8082 >
     au < exists ; exists ; 2025 ; 2025 ; Pathogens and Disease Volume 83 ; 83 ; >
 
   }
@@ -18927,9 +18927,9 @@
     au < finished ; manifest ; 2019 ; 2019 ; Protein Engineering, Design and Selection (PEDS) Volume 32 ; 32 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Protein Engineering, Design and Selection (PEDS) Volume 33 ; 33 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Protein Engineering, Design and Selection (PEDS) Volume 34 ; 34 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2022 ; 2022 ; Protein Engineering, Design and Selection (PEDS) Volume 35 ; 35 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; Protein Engineering, Design and Selection (PEDS) Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Protein Engineering, Design and Selection (PEDS) Volume 36 ; 36 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; 2024 ; Protein Engineering, Design and Selection (PEDS) Volume 37 ; 37 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; Protein Engineering, Design and Selection (PEDS) Volume 37 ; 37 ; reingest1.clockss.org:8082 >
     au < exists ; exists ; 2025 ; 2025 ; Protein Engineering, Design and Selection (PEDS) Volume 38 ; 38 ; >
 
   }
@@ -19464,7 +19464,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; Regenerative Biomaterials Volume 8 ; 8 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Regenerative Biomaterials Volume 9 ; 9 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Regenerative Biomaterials Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2024 ; 2024 ; Regenerative Biomaterials Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; Regenerative Biomaterials Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < exists ; exists ; 2025 ; 2025 ; Regenerative Biomaterials Volume 12 ; 12 ; >
 
   }
@@ -19525,9 +19525,9 @@
     au < finished ; crawling ; 2018 ; 2018 ; Reports of Patent, Design and Trade Mark Cases Volume 135 ; 135 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; 2019 ; Reports of Patent, Design and Trade Mark Cases Volume 136 ; 136 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; 2021 ; Reports of Patent, Design and Trade Mark Cases Volume 136-137 ; 136-137 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2022 ; 2022 ; Reports of Patent, Design and Trade Mark Cases Volume 137-138 ; 137-138 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; Reports of Patent, Design and Trade Mark Cases Volume 137-138 ; 137-138 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Reports of Patent, Design and Trade Mark Cases Volume 138-139 ; 138-139 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2024 ; 2024 ; Reports of Patent, Design and Trade Mark Cases Volume 137-139 ; 137-139 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; Reports of Patent, Design and Trade Mark Cases Volume 137-139 ; 137-139 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -22760,9 +22760,9 @@
     au < finished ; crawling ; 2018 ; 2018 ; Journal of Mechanics Volume 34 ; 34 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2019 ; 2019 ; Journal of Mechanics Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Journal of Mechanics Volume 36 ; 36 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2022 ; 2022 ; Journal of Mechanics Volume 37-38 ; 37-38 ; >
+    au < finished ; manifest ; 2022 ; 2022 ; Journal of Mechanics Volume 37-38 ; 37-38 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Mechanics Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2024 ; 2024 ; Journal of Mechanics Volume 40 ; 40 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; Journal of Mechanics Volume 40 ; 40 ; reingest5.clockss.org:8082 >
     au < exists ; exists ; 2025 ; 2025 ; Journal of Mechanics Volume 41 ; 41 ; >
 
   }
@@ -25291,7 +25291,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; Yearbook of European Law Volume 39 (2020) ; 39 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; 2022 ; Yearbook of European Law Volume 40 (2021) ; 40 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Yearbook of European Law Volume 41 (2022) ; 41 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; 2024 ; Yearbook of European Law Volume 42-43 (2023) ; 42-43 ; >
+    au < finished ; manifest ; 2024 ; 2024 ; Yearbook of European Law Volume 42-43 (2023) ; 42-43 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2025 ; 2025 ; Yearbook of European Law Volume 44 (2024) ; 44 ; >
 
   }
