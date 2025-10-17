@@ -996,7 +996,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
   }
 
   // ALLOW_HOST_EXCURSION should follow redirection off-host then back
-  // to original host
+  // to original URL on original host
   public void testRedirectHostExcursionSameUrl() throws Exception {
     String redTo = "http://www.other.com/foo";
     mau.addUrlToBeCached(TEST_URL);
@@ -1004,8 +1004,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     MockConnectionBaseUrlFetcher muf =
       new MockConnectionBaseUrlFetcher(mcf, TEST_URL);
     muf.addConnection(makeConn(301, "Moved to Spain", redTo));
-    muf.addConnection(makeConn(301, "Moved back to Catalonia",
-                               TEST_URL/* + "/different"*/));
+    muf.addConnection(makeConn(301, "Moved back to Catalonia", TEST_URL));
     muf.addConnection(makeConn(200, "Ok", null, "bar"));
     muf.setRedirectScheme(UrlFetcher.REDIRECT_SCHEME_ALLOW_HOST_EXCURSION);
     InputStream is = muf.getUncachedInputStream();
@@ -1014,6 +1013,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     // Should look like no redirection
     assertEquals(null, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
     assertEquals(null, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
+    assertEquals(null, muf.redirectUrls);
     assertReaderMatchesString("bar", new InputStreamReader(is));
     // Make sure the UrlFetcher still has the original URL
     assertEquals(TEST_URL, muf.getUrl());
@@ -1039,6 +1039,7 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     // Should look like a single redirection
     assertEquals(redTo2, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
     assertEquals(redTo2, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
+    assertEquals(ListUtil.list(redTo2), muf.redirectUrls);
     assertReaderMatchesString("bar", new InputStreamReader(is));
     // Make sure the UrlFetcher still has the original URL
     assertEquals(TEST_URL, muf.getUrl());
@@ -1081,8 +1082,10 @@ public class TestBaseUrlFetcher extends LockssTestCase {
     InputStream is = muf.getUncachedInputStream();
     CIProperties p = muf.getUncachedProperties();
     assertNull(p.getProperty("location"));
+    // Should look like no redirect
     assertEquals(null, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
     assertEquals(null, p.getProperty(CachedUrl.PROPERTY_CONTENT_URL));
+    assertEquals(null, muf.redirectUrls);
     assertReaderMatchesString("bar", new InputStreamReader(is));
     // Make sure the UrlFetcher still has the original URL
     assertEquals(TEST_URL, muf.getUrl());
