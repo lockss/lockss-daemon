@@ -228,7 +228,6 @@ public class BaseUrlFetcher implements UrlFetcher {
   
   protected FetchResult fetchWithRetries(String lastModified)
       throws IOException {
-    log.critical("fetchWithRetries");
     int retriesLeft = -1;
     int totalRetries = -1;
     InputStream input = null;
@@ -471,7 +470,6 @@ public class BaseUrlFetcher implements UrlFetcher {
         // (e.g., to authentication pages), but there's no real reason
         // to store any intermediate permission redirects so no need to
         // remember if there actually was an excursion.
-        log.critical("chain: " + redirectUrls);
         if (redirectUrls != null && redirectUrls.size() > 1) {
           String lastUrl = redirectUrls.get(redirectUrls.size() - 1);
           if (!origUrl.equals(lastUrl)) {
