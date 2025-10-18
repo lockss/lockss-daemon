@@ -890,7 +890,7 @@ public class BaseUrlFetcher implements UrlFetcher {
       }
       props.setProperty(CachedUrl.PROPERTY_FETCH_TIME,
 			Long.toString(TimeBase.nowMs()));
-      if (origUrl != fetchUrl &&
+      if (!origUrl.equals(fetchUrl) &&
 	  !UrlUtil.isDirectoryRedirection(origUrl, fetchUrl)) {
 	// XXX this property does not have consistent semantics.  It will be
 	// set to the first url in a chain of redirects that led to content,
