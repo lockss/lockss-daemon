@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>3</string>
+        <string>4</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -142,6 +142,8 @@ POSSIBILITY OF SUCH DAMAGE.
         <list>
             <string>1,"%scontent/%s/c?lockss-manifest/vol_%s_manifest.html", base_url, journal_id, volume_name</string>
             <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?(v|itok)=[^/]*)?$", base_url_host</string>
+            <!-- Numerous MalformedURLException e.g. https://publications.ersnet.org/content/erj/63/6/{openurl}?query=rft.jtitle%3DLancet+Respir+Med&rft.volume%3D6&rft.spage%3D715&rft.genre%3Darticle&rft_val_fmt%3Dinfo%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&ctx_ver%3DZ39.88-2004&url_ver%3DZ39.88-2004&url_ctx_fmt%3Dinfo%3Aofi%2Ffmt%3Akev%3Amtx%3Actx -->
+            <string>1,"^https?://%s/.*(\{|%%7B)openurl(\}|%%7D)", base_url_host</string>
             <string>1,"^https?://%s/content/%s/%s", base_url_host, journal_id, volume_name</string>
             <string>1,"^https?://%s/admin/highwire/citation/", base_url_host</string>
             <string>1,"^https?://%s/highwire_display/entity_view/node/", base_url_host</string>
