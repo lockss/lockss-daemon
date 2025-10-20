@@ -190,7 +190,8 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
               String jsonExpression = jsonPushMat.group(2);
               StringBuffer sb = new StringBuffer();
               if(jsonExpression.startsWith("[") && !jsonExpression.endsWith("]")){
-                jsonExpression = jsonExpression + "\"]";
+                //FIX ME
+                jsonExpression = fixBadJSON(xform, jsonExpression, scriptContentsBefore, baseUrl);
                 log.debug3(String.format("JSON expression adjusted to: %s", jsonExpression));
               }
               DocumentContext dc = null;
@@ -225,25 +226,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                       \n4e:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/articles/28\",\"locale\":\"$undefined\",\"localeCookie\":\"$2a:"]
                     */
                     if(str2.startsWith("[") && !str2.endsWith("]")){
-                      // JSON string ends badly
-                      Matcher rawJsonHrefMat = rawJsonHrefPat.matcher(str2);
-                      if (rawJsonHrefMat.find()) {
-                        try {
-                          String oldUrl = rawJsonHrefMat.group(2);
-                          String newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, oldUrl)));
-                          str2 = rawJsonHrefMat.replaceFirst(String.format("$1%s$3", Matcher.quoteReplacement(newUrl)));
-                        }
-                        catch (MalformedURLException mue) {
-                          log.debug3(String.format("Malformed URL in substitution from: %s", rawJsonHrefMat.group(2)), mue);
-                        }
-                      }
-                      else {
-                        // Nothing
-                      }
-                      String repl2 = String.format("$1%s", Matcher.quoteReplacement(str2));
-                      if (!repl2.equals(str2Before)) {
-                        log.debug3(String.format("str2 adjusted to: %s", str2));
-                      }
+                      String repl2 = fixBadJSON(xform, str2, str2Before, baseUrl);
                       jsonStrWithDigitsMat.appendReplacement(sb, repl2);
 /*
                       int closedCurly = StringUtils.countMatches(str2, "{") - StringUtils.countMatches(str2, "}");
@@ -452,4 +435,26 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
     return fact.createLinkRewriter(mimeType, au, in, encoding, url, xform);
   }
 
+  public String fixBadJSON(LinkTransform xform, String str2, String str2Before, String baseUrl){
+    // JSON string ends badly
+    Matcher rawJsonHrefMat = rawJsonHrefPat.matcher(str2);
+    if (rawJsonHrefMat.find()) {
+      try {
+        String oldUrl = rawJsonHrefMat.group(2);
+        String newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, oldUrl)));
+        str2 = rawJsonHrefMat.replaceFirst(String.format("$1%s$3", Matcher.quoteReplacement(newUrl)));
+      }
+      catch (MalformedURLException mue) {
+        log.debug3(String.format("Malformed URL in substitution from: %s", rawJsonHrefMat.group(2)), mue);
+      }
+    }
+    else {
+      // Nothing
+    }
+    String repl2 = String.format("$1%s", Matcher.quoteReplacement(str2));
+    if (!repl2.equals(str2Before)) {
+      log.debug3(String.format("str2 adjusted to: %s", str2));
+    }
+    return repl2;
+  }
 }
