@@ -1856,7 +1856,7 @@
     param[journal_id] = cc
     #continues = 0160-4953
 
-    au < manifest ; exists ; 2018 ; 2018 ; Collection and Curation Volume 37 ; 37 ; >
+    au < ready ; exists ; 2018 ; 2018 ; Collection and Curation Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Collection and Curation Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Collection and Curation Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Collection and Curation Volume 40 ; 40 ; >
@@ -2638,7 +2638,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Engineering Computations Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Engineering Computations Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Engineering Computations Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Engineering Computations Volume 37 ; 37 ; > #500 Error
+    au < ready ; exists ; 2020 ; 2020 ; Engineering Computations Volume 37 ; 37 ; > #500 Error
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Engineering Computations Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Engineering Computations Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Engineering Computations Volume 40 ; 40 ; >
@@ -3089,7 +3089,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Facilities Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Facilities Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Facilities Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Facilities Volume 37 ; 37 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Facilities Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Facilities Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Facilities Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Facilities Volume 40 ; 40 ; >
@@ -4147,13 +4147,13 @@
     au < manifest ; exists ; 2000 ; 2000 ; Interlending & Document Supply Volume 28 ; 28 ; >
     au < manifest ; exists ; 2001 ; 2001 ; Interlending & Document Supply Volume 29 ; 29 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Interlending & Document Supply Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2003 ; 2003 ; Interlending & Document Supply Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Interlending & Document Supply Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Interlending & Document Supply Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Interlending & Document Supply Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Interlending & Document Supply Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Interlending & Document Supply Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Interlending & Document Supply Volume 37 ; 37 ; >
+    au < ready ; exists ; 2003 ; 2003 ; Interlending & Document Supply Volume 31 ; 31 ; >
+    au < ready ; exists ; 2004 ; 2004 ; Interlending & Document Supply Volume 32 ; 32 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Interlending & Document Supply Volume 33 ; 33 ; >
+    au < ready ; exists ; 2006 ; 2006 ; Interlending & Document Supply Volume 34 ; 34 ; >
+    au < ready ; exists ; 2007 ; 2007 ; Interlending & Document Supply Volume 35 ; 35 ; >
+    au < ready ; exists ; 2008 ; 2008 ; Interlending & Document Supply Volume 36 ; 36 ; >
+    au < ready ; exists ; 2009 ; 2009 ; Interlending & Document Supply Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Interlending & Document Supply Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Interlending & Document Supply Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Interlending & Document Supply Volume 40 ; 40 ; >
@@ -5640,7 +5640,7 @@
     au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; International Journal of Organizational Analysis Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; International Journal of Organizational Analysis Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; International Journal of Organizational Analysis Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; International Journal of Organizational Analysis Volume 12 ; 12 ; >
+    au < ready ; exists ; 2004 ; 2004 ; International Journal of Organizational Analysis Volume 12 ; 12 ; >
 
   }
 
@@ -6876,10 +6876,10 @@
     au < manifest ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 6 (2000) ; 6 ; >
     au < manifest ; exists ; 2001 ; 2001 ; Journal of Applied Accounting Research Volume 6 (2001) ; 6 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Journal of Applied Accounting Research Volume 6 (2002) ; 6 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Journal of Applied Accounting Research Volume 7 (2004) ; 7 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Journal of Applied Accounting Research Volume 7 (2005) ; 7 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Journal of Applied Accounting Research Volume 8 (2006) ; 8 ; >
-    au < manifest ; exists ; 2007 ; 2007 ; Journal of Applied Accounting Research Volume 8 (2007) ; 8 ; >
+    au < ready ; exists ; 2004 ; 2004 ; Journal of Applied Accounting Research Volume 7 (2004) ; 7 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Journal of Applied Accounting Research Volume 7 (2005) ; 7 ; >
+    au < ready ; exists ; 2006 ; 2006 ; Journal of Applied Accounting Research Volume 8 (2006) ; 8 ; >
+    au < ready ; exists ; 2007 ; 2007 ; Journal of Applied Accounting Research Volume 8 (2007) ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Applied Accounting Research Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Applied Accounting Research Volume 11 ; 11 ; >
@@ -7556,7 +7556,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 ; >
@@ -10129,7 +10129,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Kybernetes Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Kybernetes Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Kybernetes Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Kybernetes Volume 48 ; 48 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Kybernetes Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Kybernetes Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Kybernetes Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Kybernetes Volume 51 ; 51 ; >
@@ -11272,7 +11272,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Meditari Accountancy Research Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Meditari Accountancy Research Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Meditari Accountancy Research Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Meditari Accountancy Research Volume 27 ; 27 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Meditari Accountancy Research Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Meditari Accountancy Research Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Meditari Accountancy Research Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Meditari Accountancy Research Volume 30 ; 30 ; >
@@ -11514,10 +11514,10 @@
     param[journal_id] = mbr
     # online from 2007
 
-    au < manifest ; exists ; 2003 ; 2003 ; Multinational Business Review Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2004 ; 2004 ; Multinational Business Review Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2005 ; 2005 ; Multinational Business Review Volume 13 ; 13 ; >
-    au < manifest ; exists ; 2006 ; 2006 ; Multinational Business Review Volume 14 ; 14 ; >
+    au < ready ; exists ; 2003 ; 2003 ; Multinational Business Review Volume 11 ; 11 ; >
+    au < ready ; exists ; 2004 ; 2004 ; Multinational Business Review Volume 12 ; 12 ; >
+    au < ready ; exists ; 2005 ; 2005 ; Multinational Business Review Volume 13 ; 13 ; >
+    au < ready ; exists ; 2006 ; 2006 ; Multinational Business Review Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Multinational Business Review Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Multinational Business Review Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Multinational Business Review Volume 17 ; 17 ; >
@@ -12111,7 +12111,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Performance Measurement and Metrics Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Performance Measurement and Metrics Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Performance Measurement and Metrics Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Performance Measurement and Metrics Volume 22 ; 22 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Performance Measurement and Metrics Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Performance Measurement and Metrics Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Performance Measurement and Metrics Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Performance Measurement and Metrics Volume 25 ; 25 ; >
@@ -12247,7 +12247,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Pigment & Resin Technology Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Pigment & Resin Technology Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Pigment & Resin Technology Volume 49 ; 49 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Pigment & Resin Technology Volume 50 ; 50 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Pigment & Resin Technology Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Pigment & Resin Technology Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Pigment & Resin Technology Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Pigment & Resin Technology Volume 53 ; 53 ; >
@@ -12777,7 +12777,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Rapid Prototyping Journal Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Rapid Prototyping Journal Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Rapid Prototyping Journal Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Rapid Prototyping Journal Volume 27 ; 27 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Rapid Prototyping Journal Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Rapid Prototyping Journal Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Rapid Prototyping Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Rapid Prototyping Journal Volume 30 ; 30 ; >
@@ -14142,7 +14142,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Transforming Government: People, Process and Policy Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Transforming Government: People, Process and Policy Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Transforming Government: People, Process and Policy Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Transforming Government: People, Process and Policy Volume 13 ; 13 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Transforming Government: People, Process and Policy Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Transforming Government: People, Process and Policy Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Transforming Government: People, Process and Policy Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Transforming Government: People, Process and Policy Volume 16 ; 16 ; >
@@ -15085,7 +15085,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Entrepreneurship in Emerging Economies Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Entrepreneurship in Emerging Economies Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Entrepreneurship in Emerging Economies Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 ; >
+    au < ready ; exists ; 2019 ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Entrepreneurship in Emerging Economies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Entrepreneurship in Emerging Economies Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Entrepreneurship in Emerging Economies Volume 14 ; 14 ; >
