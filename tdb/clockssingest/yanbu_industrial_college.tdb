@@ -23,18 +23,18 @@
     param[base_url] = https://yjes.researchcommons.org/
     param[journal_abbr] = yjes
 
-    au < crawling ; exists ; 2010 ; Yanbu Journal of Engineering and Science Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2011 ; Yanbu Journal of Engineering and Science Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2011 ; Yanbu Journal of Engineering and Science Volume 3 ; 3 ; >
-    au < crawling ; exists ; 2012 ; Yanbu Journal of Engineering and Science Volume 4 ; 4 ; >
-    au < crawling ; exists ; 2012 ; Yanbu Journal of Engineering and Science Volume 5 ; 5 ; >
-    au < crawling ; exists ; 2013 ; Yanbu Journal of Engineering and Science Volume 6 ; 6 ; >
-    au < crawling ; exists ; 2013 ; Yanbu Journal of Engineering and Science Volume 7 ; 7 ; >
-    au < crawling ; exists ; 2014 ; Yanbu Journal of Engineering and Science Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2014 ; Yanbu Journal of Engineering and Science Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2015 ; Yanbu Journal of Engineering and Science Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2015 ; Yanbu Journal of Engineering and Science Volume 11 ; 11 ; >
-    au < crawling ; exists ; 2016 ; Yanbu Journal of Engineering and Science Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2010 ; Yanbu Journal of Engineering and Science Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2011 ; Yanbu Journal of Engineering and Science Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2011 ; Yanbu Journal of Engineering and Science Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2012 ; Yanbu Journal of Engineering and Science Volume 4 ; 4 ; >
+    au < frozen ; exists ; 2012 ; Yanbu Journal of Engineering and Science Volume 5 ; 5 ; >
+    au < frozen ; exists ; 2013 ; Yanbu Journal of Engineering and Science Volume 6 ; 6 ; >
+    au < frozen ; exists ; 2013 ; Yanbu Journal of Engineering and Science Volume 7 ; 7 ; >
+    au < frozen ; exists ; 2014 ; Yanbu Journal of Engineering and Science Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2014 ; Yanbu Journal of Engineering and Science Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2015 ; Yanbu Journal of Engineering and Science Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2015 ; Yanbu Journal of Engineering and Science Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2016 ; Yanbu Journal of Engineering and Science Volume 12 ; 12 ; >
     au < testing ; exists ; 2016 ; Yanbu Journal of Engineering and Science Volume 13 ; 13 ; >
     au < testing ; exists ; 2017 ; Yanbu Journal of Engineering and Science Volume 14 ; 14 ; >
     au < testing ; exists ; 2017 ; Yanbu Journal of Engineering and Science Volume 15 ; 15 ; >
