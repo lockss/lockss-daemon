@@ -142,7 +142,8 @@ public class TestBaseCrawlSeed extends LockssTestCase {
     assertEquals(permissionUrls, bcs.getPermissionUrls());
   }
   
-  public void testIsFailOnStartUrl() {
+  public void testIsAllowStartUrlError() {
+    assertFalse(bcs.isAllowStartUrlError());
     assertTrue(bcs.isFailOnStartUrlError());
   }
   

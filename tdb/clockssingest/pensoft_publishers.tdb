@@ -3,6 +3,7 @@
   publisher <
     name = Pensoft Publishers ;
     info[contract] = 2012 ;
+    info[back] = 2000 ;
     info[tester] = 8 ;
     info[poller] = 2
   >
@@ -286,7 +287,7 @@
     au < finished ; manifest ; 2021 ; 64-70 ; NeoBiota Volume 2021 ; 2021 ; https://neobiota.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; 71-79 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 80-89 ; NeoBiota Volume 2023 ; 2023 ; https://neobiota.pensoft.net/ ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2024 ; 90-96 ; NeoBiota Volume 2024 ; 2024 ; https://neobiota.pensoft.net/ ; >
+    au < ready ; exists ; 2024 ; 90-96 ; NeoBiota Volume 2024 ; 2024 ; https://neobiota.pensoft.net/ ; >
     au < crawling ; exists ; 2025 ; 97-103 ; NeoBiota Volume 2025 ; 2025 ; https://neobiota.pensoft.net/ ; >
 
    }
@@ -972,7 +973,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Viticulture Data Journal Volume 2021 ; 2021 ; https://vdj.pensoft.net/ ; reingest5.clockss.org:8082 >
 
       au < finished ; manifest ; 2023 ; 2023 ; Viticulture Data Journal Volume 2023 ; 2023 ; https://vdj.pensoft.net/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2024 ; 2024 ; Viticulture Data Journal Volume 2024 ; 2024 ; https://vdj.pensoft.net/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; Viticulture Data Journal Volume 2024 ; 2024 ; https://vdj.pensoft.net/ ; >
       au < expected ; exists ; 2025 ; 2025 ; Viticulture Data Journal Volume 2025 ; 2025 ; https://vdj.pensoft.net/ ; >
 
   }
@@ -1012,7 +1013,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 2022 ; ARPHA Proceedings Volume 2022 ; 2022 ; https://ap.pensoft.net/ ; reingest4.clockss.org:8082 >
 
-      au < manifest ; exists ; 2024 ; 2024 ; ARPHA Proceedings Volume 2024 ; 2024 ; https://ap.pensoft.net/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; ARPHA Proceedings Volume 2024 ; 2024 ; https://ap.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; ARPHA Proceedings Volume 2025 ; 2025 ; https://ap.pensoft.net/ ; >
 
   }
@@ -1399,7 +1400,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Zitteliana Volume 2021 ; 2021 ; https://zitteliana.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; Zitteliana Volume 2023 ; 2023 ; https://zitteliana.pensoft.net/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2024 ; 2024 ; Zitteliana Volume 2024 ; 2024 ; https://zitteliana.pensoft.net/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; Zitteliana Volume 2024 ; 2024 ; https://zitteliana.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Zitteliana Volume 2025 ; 2025 ; https://zitteliana.pensoft.net/ ; >
 
   }
@@ -1417,7 +1418,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Biosystematics and Ecology Volume 2021 ; 2021 ; https://biosystecol.oeaw.ac.at/ ; reingest5.clockss.org:8082 >
 
       au < finished ; manifest ; 2023 ; 2023 ; Biosystematics and Ecology Volume 2023 ; 2023 ; https://biosystecol.oeaw.ac.at/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2024 ; 2024 ; Biosystematics and Ecology Volume 2024 ; 2024 ; https://biosystecol.oeaw.ac.at/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; Biosystematics and Ecology Volume 2024 ; 2024 ; https://biosystecol.oeaw.ac.at/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Biosystematics and Ecology Volume 2025 ; 2025 ; https://biosystecol.oeaw.ac.at/ ; >
 
   }
@@ -1648,7 +1649,7 @@
       param[au_oai_set] = ejfa
 
       au < finished ; manifest ; 2023 ; 2023 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2023 ; 2023 ; https://ejfa.pensoft.net/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2024 ; 2024 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2024 ; 2024 ; https://ejfa.pensoft.net/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2024 ; 2024 ; https://ejfa.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2025 ; 2025 ; https://ejfa.pensoft.net/ ; >
 
   }
@@ -1662,7 +1663,7 @@
 
       param[au_oai_set] = emt
 
-      au < manifest ; exists ; 2024 ; 2024 ; Estuarine Management and Technologies Volume 2024 ; 2024 ; https://emt.pensoft.net/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; Estuarine Management and Technologies Volume 2024 ; 2024 ; https://emt.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Estuarine Management and Technologies Volume 2025 ; 2025 ; https://emt.pensoft.net/ ; >
 
   }
@@ -1676,7 +1677,7 @@
 
       param[au_oai_set] = geostudies
 
-      au < manifest ; exists ; 2024 ; 2024 ; GeoStudies Volume 2024 ; 2024 ; https://geostudies.net/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; GeoStudies Volume 2024 ; 2024 ; https://geostudies.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; GeoStudies Volume 2025 ; 2025 ; https://geostudies.net/ ; >
 
   }
@@ -1705,7 +1706,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; IMA Fungus Volume 2021 ; 2021 ; https://imafungus.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 2022 ; IMA Fungus Volume 2022 ; 2022 ; https://imafungus.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; 2023 ; IMA Fungus Volume 2023 ; 2023 ; https://imafungus.pensoft.net/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2024 ; 2024 ; IMA Fungus Volume 2024 ; 2024 ; https://imafungus.pensoft.net/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; IMA Fungus Volume 2024 ; 2024 ; https://imafungus.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; IMA Fungus Volume 2025 ; 2025 ; https://imafungus.pensoft.net/ ; >
 
   }
@@ -1725,7 +1726,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Innovations in Agriculture Volume 2021 ; 2021 ; https://innovationsagriculture.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; 2022 ; Innovations in Agriculture Volume 2022 ; 2022 ; https://innovationsagriculture.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Innovations in Agriculture Volume 2023 ; 2023 ; https://innovationsagriculture.pensoft.net/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2024 ; 2024 ; Innovations in Agriculture Volume 2024 ; 2024 ; https://innovationsagriculture.pensoft.net/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; Innovations in Agriculture Volume 2024 ; 2024 ; https://innovationsagriculture.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Innovations in Agriculture Volume 2025 ; 2025 ; https://innovationsagriculture.pensoft.net/ ; >
 
   }
@@ -1747,7 +1748,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Journal of Applied Sports Sciences Volume 2021 ; 2021 ; https://journal.nsa.bg/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 2022 ; Journal of Applied Sports Sciences Volume 2022 ; 2022 ; https://journal.nsa.bg/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Journal of Applied Sports Sciences Volume 2023 ; 2023 ; https://journal.nsa.bg/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2024 ; 2024 ; Journal of Applied Sports Sciences Volume 2024 ; 2024 ; https://journal.nsa.bg/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; Journal of Applied Sports Sciences Volume 2024 ; 2024 ; https://journal.nsa.bg/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Journal of Applied Sports Sciences Volume 2025 ; 2025 ; https://journal.nsa.bg/ ; >
 
   }
@@ -1776,7 +1777,7 @@
 
       param[au_oai_set] = nhcm
 
-      au < manifest ; exists ; 2024 ; 2024 ; Natural History Collections and Museomics Volume 2024 ; 2024 ; https://nhcm.pensoft.net/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; Natural History Collections and Museomics Volume 2024 ; 2024 ; https://nhcm.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Natural History Collections and Museomics Volume 2025 ; 2025 ; https://nhcm.pensoft.net/ ; >
 
   }
@@ -1791,7 +1792,7 @@
       param[au_oai_set] = papahou
 
       au < finished ; manifest ; 2024 ; 2024 ; Papahou: Records of the Auckland Museum Volume 2024 ; 2024 ; https://papahou.arphahub.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2025 ; 2025 ; Papahou: Records of the Auckland Museum Volume 2025 ; 2025 ; https://papahou.arphahub.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Papahou: Records of the Auckland Museum Volume 2025 ; 2025 ; https://papahou.arphahub.com/ ; >
 
   }
 
@@ -1804,7 +1805,7 @@
 
       param[au_oai_set] = biogeography
 
-      au < manifest ; exists ; 2024 ; 2024 ; Frontiers of Biogeography Volume 2024 ; 2024 ; https://biogeography.pensoft.net/ ; >
+      au < ready ; exists ; 2024 ; 2024 ; Frontiers of Biogeography Volume 2024 ; 2024 ; https://biogeography.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Frontiers of Biogeography Volume 2025 ; 2025 ; https://biogeography.pensoft.net/ ; >
 
   }

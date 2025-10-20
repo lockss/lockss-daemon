@@ -2,6 +2,7 @@
   publisher <
     name = Islamic University in Najaf, Iraq ;
     info[contract] = 2025 ;
+    info[back] = 2024 ;
     info[tester] = 5 ;
     info[platform] = bepress
   >
@@ -50,7 +51,7 @@
       param[journal_abbr] = journal
 
       au < frozen ; exists ; 2024 ; NJF Islamic University Journal Volume 1 ; 1 ;  >
-      au < testing ; exists ; 2025 ; NJF Islamic University Journal Volume 2 ; 2 ;  >
+      au < crawling ; exists ; 2025 ; NJF Islamic University Journal Volume 2 ; 2 ;  >
 
   }
 }

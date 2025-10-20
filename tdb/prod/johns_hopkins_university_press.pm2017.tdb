@@ -1045,13 +1045,13 @@
 
       attr[journal_id] = 887
 
-      au < testing ; 2015 ; Early Medieval China Volume 21 [2015] ; 19378 >
-      au < testing ; 2016 ; Early Medieval China Volume 22 [2016] ; 19379 >
-      au < testing ; 2017 ; Early Medieval China Volume 23 [2017] ; 19380 >
-      au < testing ; 2018 ; Early Medieval China Volume 24 [2018] ; 19381 >
-      au < testing ; 2019 ; Early Medieval China Volume 25 [2019] ; 19382 >
-      au < testing ; 2020 ; Early Medieval China Volume 26 [2020] ; 19383 >
-      au < testing ; 2021 ; Early Medieval China Volume 27 [2021] ; 19384 >
+      au < ready ; 2015 ; Early Medieval China Volume 21 [2015] ; 19378 >
+      au < ready ; 2016 ; Early Medieval China Volume 22 [2016] ; 19379 >
+      au < ready ; 2017 ; Early Medieval China Volume 23 [2017] ; 19380 >
+      au < ready ; 2018 ; Early Medieval China Volume 24 [2018] ; 19381 >
+      au < ready ; 2019 ; Early Medieval China Volume 25 [2019] ; 19382 >
+      au < ready ; 2020 ; Early Medieval China Volume 26 [2020] ; 19383 >
+      au < ready ; 2021 ; Early Medieval China Volume 27 [2021] ; 19384 >
       au < ready ; 2022 ; Early Medieval China Volume 28 [2022] ; 19385 >
       au < ready ; 2023 ; Early Medieval China Volume 29 [2023] ; 19386 >
       au < ready ; 2024 ; Early Medieval China Volume 30 [2024] ; 19518 >
@@ -1171,7 +1171,7 @@
         au < released ; 2018 ; The Faulkner Journal Volume 32 [2018] ; 15363 >
         au < released ; 2019 ; The Faulkner Journal Volume 33 [2019] ; 17364 >
         au < released ; 2020 ; The Faulkner Journal Volume 34 [2020] ; 18464 >
-        au < testing ; 2021 ; The Faulkner Journal Volume 35 [2021] ; 20193 >
+        au < ready ; 2021 ; The Faulkner Journal Volume 35 [2021] ; 20193 >
 
     }
 
@@ -1661,11 +1661,11 @@
       attr[journal_id] = 880
 
       au < released ; 2024 ; Journal of Indian Ocean World Studies Volume 8 [2024] ; 19182 >
-      au < testing ; 2017 ; Journal of Indian Ocean World Studies Volume 1 [2017] ; 20168 >
-      au < testing ; 2018 ; Journal of Indian Ocean World Studies Volume 2 [2018] ; 20169 >
-      au < testing ; 2019 ; Journal of Indian Ocean World Studies Volume 3 [2019] ; 20170 >
-      au < manifest ; 2020-2021 ; Journal of Indian Ocean World Studies Volume 4 [2020-2021] ; 20171 >
-      au < testing ; 2021 ; Journal of Indian Ocean World Studies Volume 5 [2021] ; 20172 >
+      au < ready ; 2017 ; Journal of Indian Ocean World Studies Volume 1 [2017] ; 20168 >
+      au < ready ; 2018 ; Journal of Indian Ocean World Studies Volume 2 [2018] ; 20169 >
+      au < ready ; 2019 ; Journal of Indian Ocean World Studies Volume 3 [2019] ; 20170 >
+      au < ready ; 2020-2021 ; Journal of Indian Ocean World Studies Volume 4 [2020-2021] ; 20171 >
+      au < ready ; 2021 ; Journal of Indian Ocean World Studies Volume 5 [2021] ; 20172 >
       au < ready ; 2022 ; Journal of Indian Ocean World Studies Volume 6 [2022] ; 20173 >
       au < ready ; 2023 ; Journal of Indian Ocean World Studies Volume 7 [2023] ; 20167 >
 
@@ -2179,18 +2179,18 @@
       attr[journal_id] = 888
 
       au < manifest ; 2009 ; Literary Imagination Volume 11 [2009] ; 19401 >
-      au < testing ; 2010 ; Literary Imagination Volume 12 [2010] ; 19410 >
-      au < testing ; 2011 ; Literary Imagination Volume 13 [2011] ; 19409 >
-      au < testing ; 2012 ; Literary Imagination Volume 14 [2012] ; 19408 >
-      au < testing ; 2013 ; Literary Imagination Volume 15 [2013] ; 19407 >
-      au < testing ; 2014 ; Literary Imagination Volume 16 [2014] ; 19406 >
-      au < testing ; 2015 ; Literary Imagination Volume 17 [2015] ; 19405 >
-      au < testing ; 2016 ; Literary Imagination Volume 18 [2016] ; 19411 >
-      au < testing ; 2017 ; Literary Imagination Volume 19 [2017] ; 19404 >
-      au < testing ; 2018 ; Literary Imagination Volume 20 [2018] ; 19403 >
-      au < testing ; 2019 ; Literary Imagination Volume 21 [2019] ; 19402 >
-      au < testing ; 2020 ; Literary Imagination Volume 22 [2020] ; 19394 >
-      au < testing ; 2021 ; Literary Imagination Volume 23 [2021] ; 19393 >
+      au < ready ; 2010 ; Literary Imagination Volume 12 [2010] ; 19410 >
+      au < ready ; 2011 ; Literary Imagination Volume 13 [2011] ; 19409 >
+      au < ready ; 2012 ; Literary Imagination Volume 14 [2012] ; 19408 >
+      au < ready ; 2013 ; Literary Imagination Volume 15 [2013] ; 19407 >
+      au < ready ; 2014 ; Literary Imagination Volume 16 [2014] ; 19406 >
+      au < ready ; 2015 ; Literary Imagination Volume 17 [2015] ; 19405 >
+      au < ready ; 2016 ; Literary Imagination Volume 18 [2016] ; 19411 >
+      au < ready ; 2017 ; Literary Imagination Volume 19 [2017] ; 19404 >
+      au < ready ; 2018 ; Literary Imagination Volume 20 [2018] ; 19403 >
+      au < ready ; 2019 ; Literary Imagination Volume 21 [2019] ; 19402 >
+      au < ready ; 2020 ; Literary Imagination Volume 22 [2020] ; 19394 >
+      au < ready ; 2021 ; Literary Imagination Volume 23 [2021] ; 19393 >
       au < ready ; 2022 ; Literary Imagination Volume 24 [2022] ; 19392 >
       au < ready ; 2023 ; Literary Imagination Volume 25 [2023] ; 19391 >
       au < ready ; 2024 ; Literary Imagination Volume 26 [2024] ; 19390 >
@@ -2872,7 +2872,7 @@
         au < released ; 2020-2021 ; Postmodern Culture Volume 31 [2020-2021] ; 16092 >
         au < released ; 2021-2022 ; Postmodern Culture Volume 32 [2021-2022] ; 16782 >
         au < released ; 2022-2023 ; Postmodern Culture Volume 33 [2022-2023] ; 18752 >
-        au < manifest ; 2023-2024 ; Postmodern Culture Volume 34 [2023-2024] ; 19657 >
+        au < ready ; 2023-2024 ; Postmodern Culture Volume 34 [2023-2024] ; 19657 >
 
     }
     

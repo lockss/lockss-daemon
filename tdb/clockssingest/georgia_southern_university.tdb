@@ -2,6 +2,7 @@
   publisher <
     name = Georgia Southern University ;
     info[contract] = 2012 ;
+    info[back] = 2010 ;
     info[tester] = 5 ;
     info[poller] = 6 ;
     info[platform] = bepress
@@ -219,7 +220,7 @@
       au < finished ; finished ; 2015-2016 ; Journal of the Georgia Public Health Association Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016-2017 ; Journal of the Georgia Public Health Association Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017-2019 ; Journal of the Georgia Public Health Association Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2020-2021 ; Journal of the Georgia Public Health Association Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2020-2021 ; Journal of the Georgia Public Health Association Volume 8 ; 8 ; >
       au < deepCrawl ; exists ; 2023 ; Journal of the Georgia Public Health Association Volume 9 ; 9 ; >
       au < deepCrawl ; exists ; 2024 ; Journal of the Georgia Public Health Association Volume 10 ; 10 ; >
       au < crawling ; exists ; 2025 ; Journal of the Georgia Public Health Association Volume 11 ; 11 ; >

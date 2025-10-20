@@ -165,6 +165,7 @@ public abstract class BaseCrawler implements Crawler {
   protected Set<String> origStems;
   protected Set<String> cdnStems;
   protected AuCacheResultMap auResultMap;
+  protected Set<String> failedUrls = new HashSet<String>();
 
   public enum StorePermissionScheme {
     Legacy,
@@ -527,32 +528,40 @@ public abstract class BaseCrawler implements Crawler {
   }
 
   protected boolean populatePermissionMap() {
-    Collection<String> permissionUrls = null;
     try {
-      permissionUrls = getCrawlSeed().getPermissionUrls();
-    } catch (ConfigurationException|PluginException|IOException e) {
-      logger.error("Could not compute permission URLs", e);
-      crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR, 
-                                 "Plugin failed to provide permission URLs");
-      return false;
-    }
-
-    permissionMap = new PermissionMap(getCrawlerFacade(),
-                                      getDaemonPermissionCheckers(),
-                                      au.makePermissionCheckers(),
-                                      permissionUrls);
-    String perHost = au.getPerHostPermissionPath();
-    if (perHost != null) {
+      Collection<String> permissionUrls = null;
       try {
-        permissionMap.setPerHostPermissionPath(perHost);
+        permissionUrls = getCrawlSeed().getPermissionUrls();
+      } catch (ConfigurationException | PluginException | IOException e) {
+        logger.error("Could not compute permission URLs", e);
+        crawlStatus.setCrawlStatus(Crawler.STATUS_PLUGIN_ERROR,
+            "Plugin failed to provide permission URLs");
+        return false;
       }
-      catch (MalformedURLException mue) {
-        logger.error("Plugin error", mue);
-        // XXX we currently just go on, should we do something else?
+
+      permissionMap = new PermissionMap(getCrawlerFacade(),
+          getDaemonPermissionCheckers(),
+          au.makePermissionCheckers(),
+          permissionUrls);
+      String perHost = au.getPerHostPermissionPath();
+      if (perHost != null) {
+        try {
+          permissionMap.setPerHostPermissionPath(perHost);
+        } catch (MalformedURLException mue) {
+          logger.error("Plugin error", mue);
+          // XXX we currently just go on, should we do something else?
+        }
       }
+      permissionMap.setFailOnPermissionError(paramFailOnPermissionError);
+      return permissionMap.populate();
+    } finally {
+      // Plugins with alternate permission URLs on the same host may
+      // get permission fetch errors and continue.  Ensure that a
+      // fetch is attempted for all such URLs during the normal crawl,
+      // in order for proper error handling.  (E.g., start URL failure
+      // usually causes the crawl to abort.)
+      failedUrls.clear();
     }
-    permissionMap.setFailOnPermissionError(paramFailOnPermissionError);
-    return permissionMap.populate();
   }
   
   /**

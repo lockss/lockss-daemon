@@ -50,8 +50,25 @@ public interface CrawlSeed {
   public Collection<String> getPermissionUrls() 
       throws ConfigurationException, PluginException, IOException;
 
-  public boolean isFailOnStartUrlError();
+  /**
+   * Old method to control whether a start URL fetch failure aborts
+   * the crawl.  Replaced by {@link #isAllowStartUrlError()} but must
+   * be kept until all plugins that implement it have been fixed.
+   * @deprecated Implement isAllowStartUrlError() instead
+   */
+  @Deprecated
+  default boolean isFailOnStartUrlError() {
+    return true;
+  }
 
+  /**
+   * If there is an error on fetch of a start Url should we abort?
+   * Crawl seeds that provide large lists of start URLs should
+   * implement this and return true.
+   */
+  default boolean isAllowStartUrlError() {
+    return !isFailOnStartUrlError();
+  }
 }
 
 

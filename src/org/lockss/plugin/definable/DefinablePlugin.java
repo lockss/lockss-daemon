@@ -93,6 +93,8 @@ public class DefinablePlugin extends BasePlugin {
   public static final String KEY_CRAWL_TYPE =
       "plugin_crawl_type";
   public static final String KEY_FOLLOW_LINKS = "plugin_follow_link";
+  public static final String KEY_PLUGIN_ALLOW_START_URL_ERROR =
+    "plugin_allow_start_url_error";
   /** Message to be displayed when user configures an AU with this plugin */
   public static final String KEY_PLUGIN_AU_CONFIG_USER_MSG =
     "plugin_au_config_user_msg";
@@ -1111,6 +1113,10 @@ public class DefinablePlugin extends BasePlugin {
     return crawlSeedFactory;
   }
   
+  public boolean isAllowStartUrlError() {
+    return definitionMap.getBoolean(KEY_PLUGIN_ALLOW_START_URL_ERROR, false);
+  }
+
   protected FeatureUrlHelperFactory featHelperFact = null;
 
   protected FeatureUrlHelperFactory getFeatureUrlHelperFactory() {

@@ -82,6 +82,10 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"%sarticles/%s/index.html", base_url, volume_name</string>
     </list>
   </entry>
+  <entry>
+    <string>plugin_allow_start_url_error</string>
+    <boolean>true</boolean>
+  </entry>
 <!--  first check the start_url and if not there, look at volumes (this is OR); then AND also need permission at home_url -->
   <entry>
     <string>au_permission_url</string>

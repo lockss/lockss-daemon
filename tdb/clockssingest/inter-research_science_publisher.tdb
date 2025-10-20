@@ -3,7 +3,7 @@
   publisher <
     name = Inter-Research Science Publisher ;
     info[contract] = 2021 ;
-    info[back] = 2015 ;
+    info[back] = 2019 ;
     info[tester] = 5 ;
     info[poller] = 8 ;
     info[platform] = Custom.
@@ -12,6 +12,7 @@
   plugin = org.lockss.plugin.interresearch.ClockssInterResearchPlugin
   implicit < status ; status2 ; year ; param[year] ; param[volume] ; name ; hidden[proxy] >
   param[base_url] = https://www.int-res.com/
+  #####Permission statement at https://www.int-res.com/lockss
   #####Process content at the end of the year when all volumes are online. 
   #####Publisher moved.
   
@@ -26,7 +27,8 @@
       param[journal_id] = meps
       #Published 1979 to present
 
-      au < exists ; exists ; 2010 ; 2010 ; 402-425 ; Marine Ecology Progress Series Volume 2010 ; >
+      au < exists ; exists ; 2009 ; 2009 ; 374-397 ; Marine Ecology Progress Series Volume 2009 ; >
+      au < exists ; exists ; 2010 ; 2010 ; 398-425 ; Marine Ecology Progress Series Volume 2010 ; >
       au < exists ; exists ; 2011 ; 2011 ; 426-448 ; Marine Ecology Progress Series Volume 2011 ; >
       au < exists ; exists ; 2012 ; 2012 ; 449-471 ; Marine Ecology Progress Series Volume 2012 ; >
       au < exists ; exists ; 2013 ; 2013 ; 472-496 ; Marine Ecology Progress Series Volume 2013 ; >
