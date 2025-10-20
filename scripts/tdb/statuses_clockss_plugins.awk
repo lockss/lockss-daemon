@@ -22,7 +22,7 @@ BEGIN {
   if (length($4) > 3) {
     end_year = substr($4,length($4)-3,4)
   }
-#  #printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\n", $1,$2,$3,$4,$7,end_year,test_year
+#   printf "..%s..%s..%s..%s..%s..%s..%s..%s..\n", $1,$2,$3,$4,$5,$6,$7,end_year  #debug
 #  # Is the AU year >= the contract year or the back year. And then decide what to do with the current year.
 #  if ($6 == "wanted" || $6 == "testing") {
 #      incontract = 1;
