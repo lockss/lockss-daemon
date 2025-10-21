@@ -62,7 +62,8 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
   static Pattern jsonHref = Pattern.compile("(\\\\\"href\\\\\":\\s*\\\\\")(.*?)(\\\\\")");
   static Pattern jsonPushPat = Pattern.compile("^((?:self\\.__next_f|\\(self\\.__next_[fs]=self\\.__next_[fs]\\|\\|\\[\\]\\))\\.push\\()(.*)(\\))$");
   //json expressions may be across multiple lines (/n)
-  static Pattern jsonStrWithDigitsPat = Pattern.compile("^([0-9A-Fa-f]*:[^\\[\\{]*)([\\[\\{].*)$",Pattern.MULTILINE);
+  //static Pattern jsonStrWithDigitsPat = Pattern.compile("^([0-9A-Fa-f]*:[^\\[\\{]*)([\\[\\{].*)$",Pattern.MULTILINE);
+  static Pattern jsonStrWithDigitsPat = Pattern.compile("^([0-9A-Fa-f]*:[^\\[\\{]*)([\\[\\{].*)$");
   static Pattern rawJsonHrefPat = Pattern.compile("(\"href\":\")(/[^\"]+)(\")");
 
   // Matches protocol pattern (e.g. "http://")
@@ -188,12 +189,13 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
             if(jsonPushMat.find()){
               log.debug3(String.format("Contents of the script tag before processing: %s", scriptContents));
               String jsonExpression = jsonPushMat.group(2);
+              log.debug3("jsonExpression is: " + jsonExpression);
               StringBuffer sb = new StringBuffer();
-              if(jsonExpression.startsWith("[") && !jsonExpression.endsWith("]")){
+              /*if(jsonExpression.startsWith("[") && !jsonExpression.endsWith("]")){
                 //FIX ME
-                jsonExpression = fixBadJSON(xform, jsonExpression, scriptContentsBefore, baseUrl);
+                jsonExpression = fixBadJSON(xform, jsonExpression, baseUrl);
                 log.debug3(String.format("JSON expression adjusted to: %s", jsonExpression));
-              }
+              }*/
               DocumentContext dc = null;
               try{
                 dc = JsonPath.parse(jsonExpression);
@@ -214,21 +216,35 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                 }
                 else {
                   String str1 = (String)arr1.get(1);
-                  Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(str1);
-                  while(jsonStrWithDigitsMat.find()){
-                    String str2Before = jsonStrWithDigitsMat.group(2);
-                    String str2 = str2Before;
-                    log.debug3(String.format("str2 is: %s", str2));
-                    Configuration conf = Configuration.builder().options(Option.AS_PATH_LIST, Option.SUPPRESS_EXCEPTIONS, Option.ALWAYS_RETURN_LIST).build();
+                  //split str1 around newlines
+                  String[] arr2 = StringUtils.splitPreserveAllTokens(str1, '\n'); 
+                  //for each substring check if it matches the str2 regex 
+                  //String str2 = arr2[0];
+                  //Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(str1);
+                  //while(jsonStrWithDigitsMat.find()){
+                  for(int i = 0; i < arr2.length; i++){
+                    String strArr2 = arr2[i];
+                    Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(strArr2);
+                    String str2 = null;
+                    if(jsonStrWithDigitsMat.find(0)){
+                      str2 = jsonStrWithDigitsMat.group(2);
+                    }
+                    if(!jsonStrWithDigitsMat.find(0) || (str2.startsWith("[") && !str2.endsWith("]")) || (!str2.startsWith("[") && str2.endsWith("]"))){
+                      String repl2 = fixBadJSON(xform, strArr2, baseUrl);
+                      sb.append(repl2);
+                    }else{
+                      String str2Before = strArr2;
+                      log.debug3(String.format("str2 is: %s", str2));
+                      Configuration conf = Configuration.builder().options(Option.AS_PATH_LIST, Option.SUPPRESS_EXCEPTIONS, Option.ALWAYS_RETURN_LIST).build();
                     /*
                       some json is malformed (i.e., open brackets/parentheses are not closed properly)
                       Example: \n47:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/6/volume/2/issue/0\",\"locale\":\"$"]
                       \n4e:[\"$\",\"$L2e\",null,{\"ref\":\"$undefined\",\"href\":\"/en/articles/28\",\"locale\":\"$undefined\",\"localeCookie\":\"$2a:"]
                     */
-                    if(str2.startsWith("[") && !str2.endsWith("]")){
-                      String repl2 = fixBadJSON(xform, str2, str2Before, baseUrl);
-                      jsonStrWithDigitsMat.appendReplacement(sb, repl2);
-/*
+                    //if((str2.startsWith("[") && !str2.endsWith("]")) || (!str2.startsWith("[") && str2.endsWith("]"))){
+
+                      //jsonStrWithDigitsMat.appendReplacement(sb, repl2);
+                      /*
                       int closedCurly = StringUtils.countMatches(str2, "{") - StringUtils.countMatches(str2, "}");
                       log.debug3(String.format("Adjusting str2; closedCurly=%d", closedCurly));
                       if(closedCurly > 0){
@@ -270,9 +286,9 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                         closedCurly--;
                       }
                       str2 = str2 + "]";
-*/
-                    }
-                    else {
+                      */
+                    //}
+                    //else {
                       DocumentContext dc2Paths = null;
                       try{
                         dc2Paths = JsonPath.using(conf).parse(str2);
@@ -319,12 +335,17 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                       }
                       String repl2 = String.format("$1%s", Matcher.quoteReplacement(dc2Paths.jsonString()));
                       if (!repl2.equals(str2Before)) {
-                        log.debug3(String.format("str2 replacement is: %s", repl2));
+                        log.debug3(String.format("repl2 replacement is: %s", repl2));
                       }
-                      jsonStrWithDigitsMat.appendReplacement(sb, repl2);
+                      String replaced = jsonStrWithDigitsMat.replaceFirst(repl2);
+                      log.debug3("replaced string is : " + replaced);
+                      sb.append(replaced);
+                    }
+                    if(i != arr2.length - 1){
+                      sb.append("\n");
                     }
                   }
-                  jsonStrWithDigitsMat.appendTail(sb);
+                  //jsonStrWithDigitsMat.appendTail(sb);
                   dc.set("$[1]",sb.toString());
                   String repl1 = String.format("$1%s$3",Matcher.quoteReplacement(dc.jsonString()));
                   if (!repl1.equals(str1)) {
@@ -435,14 +456,15 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
     return fact.createLinkRewriter(mimeType, au, in, encoding, url, xform);
   }
 
-  public String fixBadJSON(LinkTransform xform, String str2, String str2Before, String baseUrl){
+  public String fixBadJSON(LinkTransform xform, String str, String baseUrl){
     // JSON string ends badly
-    Matcher rawJsonHrefMat = rawJsonHrefPat.matcher(str2);
+    String previousStr = str;
+    Matcher rawJsonHrefMat = rawJsonHrefPat.matcher(str);
     if (rawJsonHrefMat.find()) {
       try {
         String oldUrl = rawJsonHrefMat.group(2);
         String newUrl = xform.rewrite(UrlUtil.encodeUrl(UrlUtil.resolveUri(baseUrl, oldUrl)));
-        str2 = rawJsonHrefMat.replaceFirst(String.format("$1%s$3", Matcher.quoteReplacement(newUrl)));
+        str = rawJsonHrefMat.replaceFirst(String.format("$1%s$3", Matcher.quoteReplacement(newUrl)));
       }
       catch (MalformedURLException mue) {
         log.debug3(String.format("Malformed URL in substitution from: %s", rawJsonHrefMat.group(2)), mue);
@@ -451,10 +473,9 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
     else {
       // Nothing
     }
-    String repl2 = String.format("$1%s", Matcher.quoteReplacement(str2));
-    if (!repl2.equals(str2Before)) {
-      log.debug3(String.format("str2 adjusted to: %s", str2));
+    if (!str.equals(previousStr)) {
+      log.debug3(String.format("str adjusted to: %s", str));
     }
-    return repl2;
+    return str;
   }
 }
