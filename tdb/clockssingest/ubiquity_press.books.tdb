@@ -12,7 +12,6 @@
       info[contract] = 2011 ;
       info[back] = 2001 ;
       info[tester] = 5 ;
-      info[poller] = 3 ;
       info[platform] = Ubiquity Books
     >
 
@@ -111,9 +110,7 @@
       name = Kriterium ;
       info[contract] = 2011 ;
       info[back] = 2001 ;
-      info[min_year] = 2016 ;
       info[tester] = 5 ;
-      info[poller] = 3 ;
       info[platform] = Ubiquity Books
     >
 
@@ -160,9 +157,7 @@
       name = Modern Academic Publishing ;
       info[contract] = 2011 ;
       info[back] = 2001 ;
-      info[min_year] = 2015 ;
       info[tester] = 5 ;
-      info[poller] = 3 ;
       info[platform] = Ubiquity Books
     >
 
@@ -295,9 +290,7 @@
       name = Ubiquity Press ;
       info[contract] = 2011 ;
       info[back] = 2001 ;
-      info[min_year] = 2013 ;
       info[tester] = 5 ;
-      info[poller] = 3 ;
       info[platform] = Ubiquity Books
     >
 

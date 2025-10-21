@@ -12,7 +12,7 @@
     comment[platform] = Fulcrum
   >
 
-  provider = University of Michigan Press
+  provider = University of Michigan
   plugin = org.lockss.plugin.michigan.ClockssUMichFulcrumBooksPlugin
   param[base_url] = https://www.fulcrum.org/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >  
@@ -1437,11 +1437,10 @@
     info[contract] = 2018 ;
     info[back] = 2018 ;
     info[tester] = 8 ;
-    info[poller] = 8 ;
     comment[platform] = Fulcrum
   >
 
-  provider = University of Michigan Press
+  provider = University of Michigan
   plugin = org.lockss.plugin.michigan.ClockssUMichFulcrumBooksPlugin
   param[base_url] = https://www.fulcrum.org/
   implicit < status ; status2 ; year ; isbn ; eisbn ; param[book_uri] ; name ; hidden[proxy] >  

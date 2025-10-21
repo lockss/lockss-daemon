@@ -4,9 +4,8 @@
     name = American Physiological Society ;
     info[contract] = 2008 ;
     info[back] = 2000 ;
-    info[min_year] = 1898 ;
     info[tester] = 5 ;
-    info[poller] = 2
+    info[platform] = Atypon
   >
 
   plugin = org.lockss.plugin.atypon.aps.ClockssAmPhysSocAtyponPlugin
