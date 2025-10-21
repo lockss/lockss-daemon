@@ -5,8 +5,7 @@
     info[contract] = 2021 ;
     info[back] = 2019 ;
     info[tester] = 5 ;
-    info[poller] = 8 ;
-    info[platform] = Custom.
+    info[platform] = Custom
   >
   
   plugin = org.lockss.plugin.interresearch.ClockssInterResearchPlugin

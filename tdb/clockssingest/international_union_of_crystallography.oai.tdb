@@ -5,7 +5,7 @@
     info[back] = 2000 ;
     info[contract] = 2010 ;
     info[tester] = 5 ;
-    info[poller] = 3
+    info[platform] = Custom
   >
   
   plugin = org.lockss.plugin.internationalunionofcrystallography.oai.ClockssIUCrOaiPlugin

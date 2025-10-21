@@ -3,8 +3,9 @@
   publisher <
     name = International Union of Crystallography ;
     info[contract] = 2010 ;
+    info[back] = 2010 ;
     info[tester] = 8 ;
-    info[poller] = 3
+    info[platform] = Custom
   >
   
   {

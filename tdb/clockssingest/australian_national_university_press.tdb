@@ -4,7 +4,8 @@
     name = Australian National University Press ;
     info[contract] = 2014 ;
     info[back] = 1977 ;
-    info[tester] = 8
+    info[tester] = 8 ;
+    info[platform] = Custom
   >
 
     plugin = org.lockss.plugin.anu.ClockssAnuPlugin 
