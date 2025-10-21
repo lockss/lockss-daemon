@@ -30,7 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Alliance of Crop, Soil, and Environmental Science Societies Books Plugin (CLOCKSS)</string>
+    <string>Alliance of Crop, Soil, and Environmental Science Societies Books Plugin (CLOCKSS, Legacy)</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -93,7 +93,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Alliance of Crop, Soil, and Environmental Science Societies Books Plugin (CLOCKSS), Base URL %s, Series ID %s, Volume %s", base_url, series_id, book_id</string>
+    <string>"Alliance of Crop, Soil, and Environmental Science Societies Books Plugin (CLOCKSS, Legacy), Base URL %s, Series ID %s, Volume %s", base_url, series_id, book_id</string>
   </entry>
   <entry>
     <!-- https://dl.sciencesocieties.org/publications/books/tocs/sssaspecialpubl/sssaspecpub63 -->
