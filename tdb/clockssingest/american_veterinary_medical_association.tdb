@@ -22,16 +22,16 @@
     >
       param[journal_id] = ajvr
 
-      au < manifest ; exists ; 2000 ; American Journal of Veterinary Research Volume 61 ; 61 ; >
-      au < manifest ; exists ; 2001 ; American Journal of Veterinary Research Volume 62 ; 62 ; >
-      au < manifest ; exists ; 2002 ; American Journal of Veterinary Research Volume 63 ; 63 ; >
-      au < manifest ; exists ; 2003 ; American Journal of Veterinary Research Volume 64 ; 64 ; >
-      au < manifest ; exists ; 2004 ; American Journal of Veterinary Research Volume 65 ; 65 ; >
-      au < manifest ; exists ; 2005 ; American Journal of Veterinary Research Volume 66 ; 66 ; >
-      au < manifest ; exists ; 2006 ; American Journal of Veterinary Research Volume 67 ; 67 ; >
-      au < manifest ; exists ; 2007 ; American Journal of Veterinary Research Volume 68 ; 68 ; >
-      au < manifest ; exists ; 2008 ; American Journal of Veterinary Research Volume 69 ; 69 ; >
-      au < manifest ; exists ; 2009 ; American Journal of Veterinary Research Volume 70 ; 70 ; >
+      au < testing ; exists ; 2000 ; American Journal of Veterinary Research Volume 61 ; 61 ; >
+      au < testing ; exists ; 2001 ; American Journal of Veterinary Research Volume 62 ; 62 ; >
+      au < testing ; exists ; 2002 ; American Journal of Veterinary Research Volume 63 ; 63 ; >
+      au < testing ; exists ; 2003 ; American Journal of Veterinary Research Volume 64 ; 64 ; >
+      au < testing ; exists ; 2004 ; American Journal of Veterinary Research Volume 65 ; 65 ; >
+      au < testing ; exists ; 2005 ; American Journal of Veterinary Research Volume 66 ; 66 ; >
+      au < testing ; exists ; 2006 ; American Journal of Veterinary Research Volume 67 ; 67 ; >
+      au < testing ; exists ; 2007 ; American Journal of Veterinary Research Volume 68 ; 68 ; >
+      au < testing ; exists ; 2008 ; American Journal of Veterinary Research Volume 69 ; 69 ; >
+      au < testing ; exists ; 2009 ; American Journal of Veterinary Research Volume 70 ; 70 ; >
       au < frozen ; exists ; 2010 ; American Journal of Veterinary Research Volume 71 ; 71 ; >
       au < frozen ; exists ; 2011 ; American Journal of Veterinary Research Volume 72 ; 72 ; >
       au < frozen ; exists ; 2012 ; American Journal of Veterinary Research Volume 73 ; 73 ; >
@@ -64,23 +64,23 @@
       au < manifest ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 216 ; 216 ; >
       au < manifest ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 217 ; 217 ; >
       au < manifest ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 218 ; 218 ; >
-      au < manifest ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 219 ; 219 ; >
-      au < manifest ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 220 ; 220 ; >
-      au < manifest ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 221 ; 221 ; >
-      au < manifest ; exists ; 2003 ; Journal of the American Veterinary Medical Association Volume 222 ; 222 ; >
-      au < manifest ; exists ; 2003 ; Journal of the American Veterinary Medical Association Volume 223 ; 223 ; >
-      au < manifest ; exists ; 2004 ; Journal of the American Veterinary Medical Association Volume 224 ; 224 ; >
-      au < manifest ; exists ; 2004 ; Journal of the American Veterinary Medical Association Volume 225 ; 225 ; >
-      au < manifest ; exists ; 2005 ; Journal of the American Veterinary Medical Association Volume 226 ; 226 ; >
-      au < manifest ; exists ; 2005 ; Journal of the American Veterinary Medical Association Volume 227 ; 227 ; >
-      au < manifest ; exists ; 2006 ; Journal of the American Veterinary Medical Association Volume 228 ; 228 ; >
-      au < manifest ; exists ; 2006 ; Journal of the American Veterinary Medical Association Volume 229 ; 229 ; >
-      au < manifest ; exists ; 2007 ; Journal of the American Veterinary Medical Association Volume 230 ; 230 ; >
-      au < manifest ; exists ; 2007 ; Journal of the American Veterinary Medical Association Volume 231 ; 231 ; >
-      au < manifest ; exists ; 2008 ; Journal of the American Veterinary Medical Association Volume 232 ; 232 ; >
-      au < manifest ; exists ; 2008 ; Journal of the American Veterinary Medical Association Volume 233 ; 233 ; >
-      au < manifest ; exists ; 2009 ; Journal of the American Veterinary Medical Association Volume 234 ; 234 ; >
-      au < manifest ; exists ; 2009 ; Journal of the American Veterinary Medical Association Volume 235 ; 235 ; >
+      au < testing ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 219 ; 219 ; >
+      au < testing ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 220 ; 220 ; >
+      au < testing ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 221 ; 221 ; >
+      au < testing ; exists ; 2003 ; Journal of the American Veterinary Medical Association Volume 222 ; 222 ; >
+      au < testing ; exists ; 2003 ; Journal of the American Veterinary Medical Association Volume 223 ; 223 ; >
+      au < testing ; exists ; 2004 ; Journal of the American Veterinary Medical Association Volume 224 ; 224 ; >
+      au < testing ; exists ; 2004 ; Journal of the American Veterinary Medical Association Volume 225 ; 225 ; >
+      au < testing ; exists ; 2005 ; Journal of the American Veterinary Medical Association Volume 226 ; 226 ; >
+      au < testing ; exists ; 2005 ; Journal of the American Veterinary Medical Association Volume 227 ; 227 ; >
+      au < testing ; exists ; 2006 ; Journal of the American Veterinary Medical Association Volume 228 ; 228 ; >
+      au < testing ; exists ; 2006 ; Journal of the American Veterinary Medical Association Volume 229 ; 229 ; >
+      au < testing ; exists ; 2007 ; Journal of the American Veterinary Medical Association Volume 230 ; 230 ; >
+      au < testing ; exists ; 2007 ; Journal of the American Veterinary Medical Association Volume 231 ; 231 ; >
+      au < testing ; exists ; 2008 ; Journal of the American Veterinary Medical Association Volume 232 ; 232 ; >
+      au < testing ; exists ; 2008 ; Journal of the American Veterinary Medical Association Volume 233 ; 233 ; >
+      au < testing ; exists ; 2009 ; Journal of the American Veterinary Medical Association Volume 234 ; 234 ; >
+      au < testing ; exists ; 2009 ; Journal of the American Veterinary Medical Association Volume 235 ; 235 ; >
       au < frozen ; exists ; 2010 ; Journal of the American Veterinary Medical Association Volume 236 ; 236 ; >
       au < frozen ; exists ; 2010 ; Journal of the American Veterinary Medical Association Volume 237 ; 237 ; >
       au < frozen ; exists ; 2011 ; Journal of the American Veterinary Medical Association Volume 238 ; 238 ; >
