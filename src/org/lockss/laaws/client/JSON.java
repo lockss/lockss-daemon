@@ -268,7 +268,9 @@ public class JSON {
       if (date == null) {
         out.nullValue();
       } else {
-        out.value(formatter.format(date));
+        // add null check
+        DateTimeFormatter fmt = (formatter != null) ? formatter : DateTimeFormatter.ISO_OFFSET_DATE_TIME;
+        out.value(fmt.format(date));
       }
     }
 
@@ -283,7 +285,9 @@ public class JSON {
           if (date.endsWith("+0000")) {
             date = date.substring(0, date.length() - 5) + "Z";
           }
-          return OffsetDateTime.parse(date, formatter);
+          // add null check
+          DateTimeFormatter fmt = (formatter != null) ? formatter : DateTimeFormatter.ISO_OFFSET_DATE_TIME;
+          return OffsetDateTime.parse(date, fmt);
       }
     }
   }
@@ -311,7 +315,9 @@ public class JSON {
       if (date == null) {
         out.nullValue();
       } else {
-        out.value(formatter.format(date));
+        // add null check
+        DateTimeFormatter fmt = (formatter != null) ? formatter : DateTimeFormatter.ISO_LOCAL_DATE;
+        out.value(fmt.format(date));
       }
     }
 
@@ -323,7 +329,9 @@ public class JSON {
           return null;
         default:
           String date = in.nextString();
-          return LocalDate.parse(date, formatter);
+          // add null check
+          DateTimeFormatter fmt = (formatter != null) ? formatter : DateTimeFormatter.ISO_LOCAL_DATE;
+          return LocalDate.parse(date, fmt);
       }
     }
   }
