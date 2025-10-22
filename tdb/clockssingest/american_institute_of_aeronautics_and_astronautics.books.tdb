@@ -4,7 +4,7 @@
     info[contract] = 2014 ;
     info[back] = 1960 ;
     info[tester] = 8 ;
-    info[poller] = 3
+    info[platform] = Atypon
   >
 
   plugin = org.lockss.plugin.atypon.aiaa.ClockssAIAABooksPlugin

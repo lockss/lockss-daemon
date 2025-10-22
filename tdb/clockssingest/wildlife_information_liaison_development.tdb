@@ -5,7 +5,7 @@
     info[contract] = 2013 ;
     info[back] = 2009 ;
     info[tester] = 8 ;
-    info[poller] = 8
+    info[platform] = OJS
   >
   
   implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
