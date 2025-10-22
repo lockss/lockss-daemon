@@ -1418,7 +1418,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Biosystematics and Ecology Volume 2021 ; 2021 ; https://biosystecol.oeaw.ac.at/ ; reingest5.clockss.org:8082 >
 
       au < finished ; manifest ; 2023 ; 2023 ; Biosystematics and Ecology Volume 2023 ; 2023 ; https://biosystecol.oeaw.ac.at/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2024 ; 2024 ; Biosystematics and Ecology Volume 2024 ; 2024 ; https://biosystecol.oeaw.ac.at/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Biosystematics and Ecology Volume 2024 ; 2024 ; https://biosystecol.oeaw.ac.at/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Biosystematics and Ecology Volume 2025 ; 2025 ; https://biosystecol.oeaw.ac.at/ ; >
 
   }
@@ -1677,7 +1677,7 @@
 
       param[au_oai_set] = geostudies
 
-      au < ready ; exists ; 2024 ; 2024 ; GeoStudies Volume 2024 ; 2024 ; https://geostudies.net/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; GeoStudies Volume 2024 ; 2024 ; https://geostudies.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; GeoStudies Volume 2025 ; 2025 ; https://geostudies.net/ ; >
 
   }
@@ -1726,7 +1726,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Innovations in Agriculture Volume 2021 ; 2021 ; https://innovationsagriculture.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; 2022 ; Innovations in Agriculture Volume 2022 ; 2022 ; https://innovationsagriculture.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Innovations in Agriculture Volume 2023 ; 2023 ; https://innovationsagriculture.pensoft.net/ ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2024 ; 2024 ; Innovations in Agriculture Volume 2024 ; 2024 ; https://innovationsagriculture.pensoft.net/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Innovations in Agriculture Volume 2024 ; 2024 ; https://innovationsagriculture.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Innovations in Agriculture Volume 2025 ; 2025 ; https://innovationsagriculture.pensoft.net/ ; >
 
   }
