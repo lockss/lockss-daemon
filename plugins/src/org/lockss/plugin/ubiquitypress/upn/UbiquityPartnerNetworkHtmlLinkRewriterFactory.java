@@ -219,9 +219,6 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                   //split str1 around newlines
                   String[] arr2 = StringUtils.splitPreserveAllTokens(str1, '\n'); 
                   //for each substring check if it matches the str2 regex 
-                  //String str2 = arr2[0];
-                  //Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(str1);
-                  //while(jsonStrWithDigitsMat.find()){
                   for(int i = 0; i < arr2.length; i++){
                     String strArr2 = arr2[i];
                     Matcher jsonStrWithDigitsMat = jsonStrWithDigitsPat.matcher(strArr2);
@@ -230,6 +227,22 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                       str2 = jsonStrWithDigitsMat.group(2);
                     }
                     if(!jsonStrWithDigitsMat.find(0) || (str2.startsWith("[") && !str2.endsWith("]")) || (!str2.startsWith("[") && str2.endsWith("]"))){
+                      /*
+                        Unfortunately, there are some href links that are split across script tags
+                        We need to find these and rewrite them ad-hoc. 
+                        Ones found: 
+                          On In/Visibility, article jcss.45 in Volume 4 (2023)
+                      */
+                      if(strArr2 != null){
+                        if(strArr2.endsWith("\"href\":\"/en/a")){
+                          //complete href link at end of first script tag
+                          strArr2 += "rticles/10.3943/jcss.45\"";
+                        }
+                        if(strArr2.startsWith("rticles/10.3943/jcss.45")){
+                          //remove end of href link at the beginning of next script tag 
+                          strArr2 = strArr2.substring(24);
+                        }  
+                      } 
                       String repl2 = fixBadJSON(xform, strArr2, baseUrl);
                       sb.append(repl2);
                     }else{
