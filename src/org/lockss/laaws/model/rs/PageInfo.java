@@ -259,7 +259,8 @@ public class PageInfo implements Serializable {
     openapiRequiredFields.add("itemsInPage");
     openapiRequiredFields.add("continuationToken");
     openapiRequiredFields.add("curLink");
-    openapiRequiredFields.add("nextLink");
+    // nextlink can be null
+   // openapiRequiredFields.add("nextLink");
   }
 
   /**
