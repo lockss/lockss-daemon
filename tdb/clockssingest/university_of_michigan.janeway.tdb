@@ -229,6 +229,24 @@
   {
 
       title <
+        name = Deaf Studies Digital Journal ;
+        eissn = 2158-1398 
+      >
+
+      #published 2014-present
+      param[journal_id] = dsdj
+
+      au < exists ; exists ; 2009 ; 1 ; Ergo Volume 2009 ; 2009 ; >
+      au < exists ; exists ; 2010 ; 2 ; Ergo Volume 2010 ; 2010 ; >
+      au < exists ; exists ; 2012 ; 3 ; Ergo Volume 2012 ; 2012 ; >
+      au < exists ; exists ; 2014 ; 4 ; Ergo Volume 2014 ; 2014 ; >
+      au < exists ; exists ; 2020 ; 5 ; Ergo Volume 2020 ; 2020 ; >
+
+  }
+
+  {
+
+      title <
         name = Dialectic ;
         eissn = 2572-7001
       >
