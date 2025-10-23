@@ -13,7 +13,7 @@
       name = Voprosy Khimii i Khimicheskoi Tekhnologii Source Content
     >
 
-    plugin = org.lockss.plugin.clockss.vhht.VoprosyKhimiiJournalsSourcePlugin
+    plugin = org.lockss.plugin.clockss.vhht.ClockssVoprosyKhimiiJournalsSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/TESTING-released/
 
