@@ -1400,7 +1400,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Zitteliana Volume 2021 ; 2021 ; https://zitteliana.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; 2023 ; Zitteliana Volume 2023 ; 2023 ; https://zitteliana.pensoft.net/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2024 ; 2024 ; Zitteliana Volume 2024 ; 2024 ; https://zitteliana.pensoft.net/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Zitteliana Volume 2024 ; 2024 ; https://zitteliana.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Zitteliana Volume 2025 ; 2025 ; https://zitteliana.pensoft.net/ ; >
 
   }
@@ -1706,7 +1706,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; IMA Fungus Volume 2021 ; 2021 ; https://imafungus.pensoft.net/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 2022 ; IMA Fungus Volume 2022 ; 2022 ; https://imafungus.pensoft.net/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; 2023 ; IMA Fungus Volume 2023 ; 2023 ; https://imafungus.pensoft.net/ ; reingest3.clockss.org:8083 >
-      au < ready ; exists ; 2024 ; 2024 ; IMA Fungus Volume 2024 ; 2024 ; https://imafungus.pensoft.net/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; IMA Fungus Volume 2024 ; 2024 ; https://imafungus.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; IMA Fungus Volume 2025 ; 2025 ; https://imafungus.pensoft.net/ ; >
 
   }
@@ -1748,7 +1748,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; Journal of Applied Sports Sciences Volume 2021 ; 2021 ; https://journal.nsa.bg/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 2022 ; Journal of Applied Sports Sciences Volume 2022 ; 2022 ; https://journal.nsa.bg/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 2023 ; Journal of Applied Sports Sciences Volume 2023 ; 2023 ; https://journal.nsa.bg/ ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2024 ; 2024 ; Journal of Applied Sports Sciences Volume 2024 ; 2024 ; https://journal.nsa.bg/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Journal of Applied Sports Sciences Volume 2024 ; 2024 ; https://journal.nsa.bg/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Journal of Applied Sports Sciences Volume 2025 ; 2025 ; https://journal.nsa.bg/ ; >
 
   }
