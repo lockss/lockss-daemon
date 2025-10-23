@@ -236,17 +236,17 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                        * second item (index 1) is the continuation of strArr2 in
                        * the next <script> tag, and the third and later (index 2
                        * and later) items are URLs where this specific
-                       * interruption occurs
+                       * interruption occurs.
                        */
                       String[][] splitHrefs = {
                           {
-                            "\"href\":\"/en/a", "rticles/10.3943/jcss.45\",",
+                            "\"href\":\"/en/a", "rticles/10.3943/jcss.45\",", // Link to https://jcss.demontfortuniversitypress.org/en/articles/10.3943/jcss.45 (which redirects to https://jcss.demontfortuniversitypress.org/articles/10.3943/jcss.45), found on...
                             "https://account.jcss.demontfortuniversitypress.org/index.php/dmu-j-jcss/issue/view/8", // which redirects to...
                             "https://jcss.demontfortuniversitypress.org/8/volume/0/issue/0", // which in turn redirects to...
                             "https://jcss.demontfortuniversitypress.org/8/volume/4/issue/0"
                           },
                           {
-                            "\"href\":\"/en/articles/10.2259", "9/jachs.111\",",
+                            "\"href\":\"/en/articles/10.2259", "9/jachs.111\",", // Link to https://jachs.org/en/articles/10.22599/jachs.111 (which redirects to https://jachs.org/articles/10.22599/jachs.111), found on... 
                             "https://account.jachs.org/index.php/wr-j-jachs/issue/view/6", // which redirects to...
                             "https://jachs.org/6/volume/0/issue/0", // which in turn redirects to...
                             "https://jachs.org/6/volume/3/issue/1"
