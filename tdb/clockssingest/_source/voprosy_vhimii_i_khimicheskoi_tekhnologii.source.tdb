@@ -2,7 +2,7 @@
   publisher <
     name = Voprosy Khimii i Khimicheskoi Tekhnologii ;
     info[contract] = 2025 ;
-    info[tester] = 4 ;
+    info[tester] = S ;
     info[platform] = Source
   >
   hidden[proxy] = DIRECT
@@ -18,7 +18,7 @@
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/vhht-released/
 
     #####TESTING
-    au < testing ; exists ; 2025 ; Voprosy Khimii i Khimicheskoi Tekhnologii Source Content 2025_01 ; 2025_01 >
+    au < ready ; exists ; 2025 ; Voprosy Khimii i Khimicheskoi Tekhnologii Source Content 2025_01 ; 2025_01 >
 
   }
 }
