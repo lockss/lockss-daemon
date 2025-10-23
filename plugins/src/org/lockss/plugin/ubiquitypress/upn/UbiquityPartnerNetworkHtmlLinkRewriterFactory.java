@@ -63,7 +63,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
   static Pattern jsonPushPat = Pattern.compile("^((?:self\\.__next_f|\\(self\\.__next_[fs]=self\\.__next_[fs]\\|\\|\\[\\]\\))\\.push\\()(.*)(\\))$");
   //json expressions may be across multiple lines (/n)
   //static Pattern jsonStrWithDigitsPat = Pattern.compile("^([0-9A-Fa-f]*:[^\\[\\{]*)([\\[\\{].*)$",Pattern.MULTILINE);
-  static Pattern jsonStrWithDigitsPat = Pattern.compile("^([0-9A-Fa-f]*:[^\\[\\{]*)([\\[\\{].*)$");
+  static Pattern jsonStrWithDigitsPat = Pattern.compile("^([0-9A-Fa-f]*:(?:HL|I)?)([\\[\\{].*)$");
   static Pattern rawJsonHrefPat = Pattern.compile("(\"href\":\")(/[^\"]+)(\")");
 
   // Matches protocol pattern (e.g. "http://")
