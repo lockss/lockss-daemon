@@ -228,21 +228,48 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                     }
                     if(!jsonStrWithDigitsMat.find(0) || (str2.startsWith("[") && !str2.endsWith("]")) || (!str2.startsWith("[") && str2.endsWith("]"))){
                       /*
-                        Unfortunately, there are some href links that are split across script tags
-                        We need to find these and rewrite them ad-hoc. 
-                        Ones found: 
-                          On In/Visibility, article jcss.45 in Volume 4 (2023)
-                      */
-                      if(strArr2 != null){
-                        if(strArr2.endsWith("\"href\":\"/en/a")){
-                          //complete href link at end of first script tag
-                          strArr2 += "rticles/10.3943/jcss.45\"";
+                       * Unfortunately, there are some href links that are split
+                       * across script tags. We need to find these and rewrite
+                       * them ad-hoc. In this array of arrays, each sub-array
+                       * represents a known case; the first item (index 0) is
+                       * the interrupted end of strArr2 in one <script> tag, the
+                       * second item (index 1) is the continuation of strArr2 in
+                       * the next <script> tag, and the third and later (index 2
+                       * and later) items are URLs where this specific
+                       * interruption occurs
+                       */
+                      String[][] splitHrefs = {
+                          {
+                            "\"href\":\"/en/a", "rticles/10.3943/jcss.45\",",
+                            "https://account.jcss.demontfortuniversitypress.org/index.php/dmu-j-jcss/issue/view/8", // which redirects to...
+                            "https://jcss.demontfortuniversitypress.org/8/volume/0/issue/0", // which in turn redirects to...
+                            "https://jcss.demontfortuniversitypress.org/8/volume/4/issue/0"
+                          },
+                          {
+                            "\"href\":\"/en/articles/10.2259", "9/jachs.111\",",
+                            "https://account.jachs.org/index.php/wr-j-jachs/issue/view/6", // which redirects to...
+                            "https://jachs.org/6/volume/0/issue/0", // which in turn redirects to...
+                            "https://jachs.org/6/volume/3/issue/1"
+                          },
+                      };
+                      special_cases_label: for (int specialCase = 0 ; specialCase < splitHrefs.length ; ++specialCase) {
+                        for (int pageUrl = 2 ; pageUrl < splitHrefs[specialCase].length ; ++pageUrl) {
+                          if (splitHrefs[specialCase][pageUrl].equals(url)) {
+                            String splitEnding = splitHrefs[specialCase][0];
+                            String splitBeginning = splitHrefs[specialCase][1];
+                            if (strArr2.endsWith(splitEnding)) {
+                              strArr2 += splitBeginning;
+                              log.debug3(String.format("strArr2 lengthened to: %s", strArr2));
+                              break special_cases_label; 
+                            }
+                            if (strArr2.startsWith(splitBeginning)) {
+                              strArr2 = strArr2.substring(splitBeginning.length());
+                              log.debug3(String.format("strArr2 shortened to: %s", strArr2));
+                              break special_cases_label; 
+                            }
+                          }
                         }
-                        if(strArr2.startsWith("rticles/10.3943/jcss.45")){
-                          //remove end of href link at the beginning of next script tag 
-                          strArr2 = strArr2.substring(24);
-                        }  
-                      } 
+                      }
                       String repl2 = fixBadJSON(xform, strArr2, baseUrl);
                       sb.append(repl2);
                     }else{
