@@ -1013,7 +1013,7 @@
       au < finished ; manifest ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 2022 ; ARPHA Proceedings Volume 2022 ; 2022 ; https://ap.pensoft.net/ ; reingest4.clockss.org:8082 >
 
-      au < ready ; exists ; 2024 ; 2024 ; ARPHA Proceedings Volume 2024 ; 2024 ; https://ap.pensoft.net/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; ARPHA Proceedings Volume 2024 ; 2024 ; https://ap.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; ARPHA Proceedings Volume 2025 ; 2025 ; https://ap.pensoft.net/ ; >
 
   }
@@ -1663,7 +1663,7 @@
 
       param[au_oai_set] = emt
 
-      au < ready ; exists ; 2024 ; 2024 ; Estuarine Management and Technologies Volume 2024 ; 2024 ; https://emt.pensoft.net/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Estuarine Management and Technologies Volume 2024 ; 2024 ; https://emt.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Estuarine Management and Technologies Volume 2025 ; 2025 ; https://emt.pensoft.net/ ; >
 
   }
@@ -1777,7 +1777,7 @@
 
       param[au_oai_set] = nhcm
 
-      au < ready ; exists ; 2024 ; 2024 ; Natural History Collections and Museomics Volume 2024 ; 2024 ; https://nhcm.pensoft.net/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Natural History Collections and Museomics Volume 2024 ; 2024 ; https://nhcm.pensoft.net/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Natural History Collections and Museomics Volume 2025 ; 2025 ; https://nhcm.pensoft.net/ ; >
 
   }

@@ -134,7 +134,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Commentarii Mathematici Helvetici Volume 79 ; 79 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Commentarii Mathematici Helvetici Volume 80 ; 80 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Commentarii Mathematici Helvetici Volume 81 ; 81 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Commentarii Mathematici Helvetici Volume 82 ; 82 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Commentarii Mathematici Helvetici Volume 82 ; 82 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Commentarii Mathematici Helvetici Volume 83 ; 83 ; >
     au < crawling ; exists ; 2009 ; 2009 ; Commentarii Mathematici Helvetici Volume 84 ; 84 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Commentarii Mathematici Helvetici Volume 85 ; 85 ; >
@@ -177,7 +177,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Documenta Mathematica Volume 9  ; 9  ; >
     au < manifest ; exists ; 2005 ; 2005 ; Documenta Mathematica Volume 10 ; 10 ; >
     au < crawling ; exists ; 2006 ; 2006 ; Documenta Mathematica Volume 11 ; 11 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Documenta Mathematica Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Documenta Mathematica Volume 12 ; 12 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Documenta Mathematica Volume 13 ; 13 ; >
     au < crawling ; exists ; 2009 ; 2009 ; Documenta Mathematica Volume 14 ; 14 ; >
     au < frozen ; exists ; 2010 ; 2010 ; Documenta Mathematica Volume 15 ; 15 ; >
@@ -220,7 +220,7 @@
     au < crawling ; exists ; 2006 ; 2006 ; Elemente der Mathematik Volume 61 ; 61 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Elemente der Mathematik Volume 62 ; 62 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Elemente der Mathematik Volume 63 ; 63 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Elemente der Mathematik Volume 64 ; 64 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Elemente der Mathematik Volume 64 ; 64 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Elemente der Mathematik Volume 65 ; 65 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Elemente der Mathematik Volume 66 ; 66 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Elemente der Mathematik Volume 67 ; 67 ; >
@@ -325,8 +325,8 @@
     param[journal_id] = ggd
 
     au < crawling ; exists ; 2007 ; 2007 ; Groups, Geometry, and Dynamics Volume 1 ; 1 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Groups, Geometry, and Dynamics Volume 2 ; 2 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Groups, Geometry, and Dynamics Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Groups, Geometry, and Dynamics Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Groups, Geometry, and Dynamics Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Groups, Geometry, and Dynamics Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Groups, Geometry, and Dynamics Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Groups, Geometry, and Dynamics Volume 6 ; 6 ; >
@@ -362,10 +362,10 @@
     au < manifest ; exists ; 2003 ; 2003 ; Interfaces and Free Boundaries Volume 5 ; 5 ; >
     au < manifest ; exists ; 2004 ; 2004 ; Interfaces and Free Boundaries Volume 6 ; 6 ; >
     au < manifest ; exists ; 2005 ; 2005 ; Interfaces and Free Boundaries Volume 7 ; 7 ; >
-    au < ready ; exists ; 2006 ; 2006 ; Interfaces and Free Boundaries Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2006 ; 2006 ; Interfaces and Free Boundaries Volume 8 ; 8 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Interfaces and Free Boundaries Volume 9 ; 9 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Interfaces and Free Boundaries Volume 10 ; 10 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Interfaces and Free Boundaries Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Interfaces and Free Boundaries Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Interfaces and Free Boundaries Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Interfaces and Free Boundaries Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Interfaces and Free Boundaries Volume 14 ; 14 ; >
@@ -595,7 +595,7 @@
     au < manifest ; exists ; 2004 ; 2004 ; Oberwolfach Reports Volume 1  ; 1  ; >
     au < manifest ; exists ; 2005 ; 2005 ; Oberwolfach Reports Volume 2  ; 2  ; >
     au < crawling ; exists ; 2006 ; 2006 ; Oberwolfach Reports Volume 3  ; 3  ; >
-    au < ready ; exists ; 2007 ; 2007 ; Oberwolfach Reports Volume 4  ; 4  ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Oberwolfach Reports Volume 4  ; 4  ; >
     au < crawling ; exists ; 2008 ; 2008 ; Oberwolfach Reports Volume 5  ; 5  ; >
     au < crawling ; exists ; 2009 ; 2009 ; Oberwolfach Reports Volume 6  ; 6  ; >
     au < frozen ; exists ; 2010 ; 2010 ; Oberwolfach Reports Volume 7  ; 7  ; >
@@ -790,10 +790,10 @@
     param[journal_serial_number] = 10
     param[journal_id] = rlm
 
-    au < ready ; exists ; 2006 ; 2006 ; Rendiconti Lincei - Matematica e Applicazioni Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2006 ; 2006 ; Rendiconti Lincei - Matematica e Applicazioni Volume 17 ; 17 ; >
     au < crawling ; exists ; 2007 ; 2007 ; Rendiconti Lincei - Matematica e Applicazioni Volume 18 ; 18 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Rendiconti Lincei - Matematica e Applicazioni Volume 19 ; 19 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Rendiconti Lincei - Matematica e Applicazioni Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Rendiconti Lincei - Matematica e Applicazioni Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Rendiconti Lincei - Matematica e Applicazioni Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Rendiconti Lincei - Matematica e Applicazioni Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Rendiconti Lincei - Matematica e Applicazioni Volume 23 ; 23 ; >
