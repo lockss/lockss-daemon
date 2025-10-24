@@ -158,6 +158,18 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkHtmlLinkRewriterFactory</string>
   </entry>
   <entry>
+    <string>application/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkXmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkXmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
