@@ -62,8 +62,8 @@ public class TestMiscSetupManager extends LockssTestCase {
   public void testInitializeJsonPath() throws Exception {
     com.jayway.jsonpath.Configuration jsonPathConfig = null;
     try {
+      // Tests for when json-smart and its dependencies are on the classpath (like in v2) 
       jsonPathConfig = com.jayway.jsonpath.Configuration.defaultConfiguration();
-      // The default is json-smart
       assertEquals("com.jayway.jsonpath.spi.json.JsonSmartJsonProvider",
                    jsonPathConfig.jsonProvider().getClass().getName());
       assertEquals("com.jayway.jsonpath.spi.mapper.JsonSmartMappingProvider",
@@ -71,9 +71,7 @@ public class TestMiscSetupManager extends LockssTestCase {
       assertEquals(0, jsonPathConfig.getOptions().size());
     }
     catch (NoClassDefFoundError ncdfe) {
-      // json-smart is now on the classpath (formerly not on it), but it requires a
-      // bunch of dependencies we don't have, so there is still a NoClassDefFoundError
-      // on net.minidev.asm.FieldFilter instead of net.minidev.json.writer.JsonReaderI
+      // Tests for when json-smart is on the classpath but not its dependencies (like in v1) 
       assertTrue("Expected NoClassDefFoundError on net.minidev.asm.FieldFilter but got: " + ncdfe.getMessage(),
                  ncdfe.getMessage().endsWith("net/minidev/asm/FieldFilter"));
     }
