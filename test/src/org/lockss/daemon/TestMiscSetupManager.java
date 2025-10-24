@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2021, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -63,7 +63,7 @@ public class TestMiscSetupManager extends LockssTestCase {
     com.jayway.jsonpath.Configuration jsonPathConfig = null;
     try {
       jsonPathConfig = com.jayway.jsonpath.Configuration.defaultConfiguration();
-      // Option 1: the default is json-smart
+      // The default is json-smart
       assertEquals("com.jayway.jsonpath.spi.json.JsonSmartJsonProvider",
                    jsonPathConfig.jsonProvider().getClass().getName());
       assertEquals("com.jayway.jsonpath.spi.mapper.JsonSmartMappingProvider",
@@ -71,9 +71,11 @@ public class TestMiscSetupManager extends LockssTestCase {
       assertEquals(0, jsonPathConfig.getOptions().size());
     }
     catch (NoClassDefFoundError ncdfe) {
-      // Option 2: NoClassDefFoundError (json-smart is not on the classpath)
-      assertTrue("Expected NoClassDefFoundError on net.minidev.json.writer.JsonReaderI but got: " + ncdfe.getMessage(),
-                 ncdfe.getMessage().endsWith("net/minidev/json/writer/JsonReaderI"));
+      // json-smart is now on the classpath (formerly not on it), but it requires a
+      // bunch of dependencies we don't have, so there is still a NoClassDefFoundError
+      // on net.minidev.asm.FieldFilter instead of net.minidev.json.writer.JsonReaderI
+      assertTrue("Expected NoClassDefFoundError on net.minidev.asm.FieldFilter but got: " + ncdfe.getMessage(),
+                 ncdfe.getMessage().endsWith("net/minidev/asm/FieldFilter"));
     }
     MiscSetupManager.initializeJsonPath();
     jsonPathConfig = Configuration.defaultConfiguration();
