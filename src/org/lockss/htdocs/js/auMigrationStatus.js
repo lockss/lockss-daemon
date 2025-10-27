@@ -11,6 +11,17 @@ function toggleElement(elem) {
     }
 }
 
+// Append a received page of finished statuses to the full status
+// list, ensuring that duplicate responses are handled correctly
+function addFinishedPage(list, page, index) {
+    // Avoid copy if not truncating array
+    if (list.length == index) {
+        return list.concat(page);
+    } else {
+        return list.slice(0, index).concat(page);
+    }
+}
+
 class AuMigrationStatus extends React.Component {
   constructor(props) {
     super(props);
@@ -50,7 +61,7 @@ class AuMigrationStatus extends React.Component {
     }
     return (
         <div className="stats-div">
-        {this.state.activeList.length} Active: <ul>{this.state.activeList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
+        {this.state.activeList.length} Tasks Active: <ul>{this.state.activeList.map((msg, index) =>  <li key={index}>{msg}</li>)}</ul></div>
     )
   }
 
@@ -61,7 +72,7 @@ class AuMigrationStatus extends React.Component {
     }
     return (
         <div className="stats-div">
-        {this.state.finishedData.length} Finished:
+        {this.state.finishedData.length} Tasks Finished:
         <div className={"finished"} id={"finishedList"}>
         <ul>{this.state.finishedData.map((msg, index) => <li key={index}>{msg}</li>)}</ul>
         </div>
@@ -163,7 +174,9 @@ class AuMigrationStatus extends React.Component {
         .then(
           (result) => {
             this.setState({
-              finishedData: this.state.finishedData.concat(result.finished_page),
+              finishedData: addFinishedPage(this.state.finishedData,
+                                            result.finished_page,
+                                            result.finished_index),
             });
 
           },

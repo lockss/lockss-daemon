@@ -144,7 +144,7 @@ public class V2AuMover {
    */
   public static final String PARAM_COPY_ITER_EXECUTOR_SPEC =
     EXEC_PREFIX + "copyIter.spec";
-  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "10;2";
+  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "2;4";
 
   /**
    * Verify CU iterators run in this Executor.  Controls the number of
@@ -475,7 +475,7 @@ public class V2AuMover {
   /** Filled when request completely done and report written */
   private OneShotSemaphore doneSem = new OneShotSemaphore();
 
-  private boolean terminated = false;
+  private boolean failed = false;
   private boolean globalAbort = false;
 
   ConfigManager cfgManager;
@@ -759,7 +759,7 @@ public class V2AuMover {
     try {
       checkV2ServicesAvailable();
       openReportFiles(firstArgs); // must follow checkV2ServicesAvailable
-      if (!migrationMgr.isDryRun() &&
+      if (!isDryRun() &&
           !migrationMgr.isTargetInMigrationMode(hostName, cfgUiPort,
                                                 userName, userPass)) {
         currentStatus = "Failed - target is not in migration mode";
@@ -795,7 +795,12 @@ public class V2AuMover {
         moveSystemSettings(args);
         break;
       case CopyDatabase:
-        moveDatabase(args);
+        try {
+          moveDatabase(args);
+        } catch (Exception e) {
+          log.error("Copy Database failed, aborting", e);
+          throw e;
+        }
         break;
       case CopyConfig:
         moveConfigFiles(args);
@@ -952,10 +957,14 @@ public class V2AuMover {
     enqueueFinishAll();
   }
 
+  public boolean isDryRun() {
+    return migrationMgr.isDryRun();
+  }
+
   private void setAuMigrationState(ArchivalUnit au,
                                    AuState.MigrationState state) {
     // Do nothing if dry run mode
-    if (migrationMgr.isDryRun()) {
+    if (isDryRun()) {
       return;
     }
 
@@ -983,7 +992,7 @@ public class V2AuMover {
         break;
       case Finished:
         // Optionally delete the AU from the system
-        if (!migrationMgr.isDryRun()) {
+        if (!isDryRun()) {
           try {
             if (migrationMgr.isDeleteMigratedAus()) {
               // Remove AU from LOCKSS
@@ -1093,7 +1102,7 @@ public class V2AuMover {
         String err = "Attempt to verify AU failed: " + auName +
           ": " + ex.getMessage();
         auStat.addError(err);
-        terminated = true;
+        setFailed(true);
       }
       break;
       case CopyOnly:
@@ -1135,7 +1144,7 @@ public class V2AuMover {
         String err = "Attempt to move AU failed: " + auName +
           ": " + ex.getMessage();
         auStat.addError(err);
-        terminated = true;
+        setFailed(true);
       }
       break;
     }
@@ -1357,7 +1366,6 @@ public class V2AuMover {
     case FinishAu:
       log.debug2("Finishing AU: " + auName);
       removeActiveAu(au);
-      addFinishedAu(au, auStat);
       updateReport(auStat);
       if (auStat.isAbort()) {
         setAuMigrationState(au, AuState.MigrationState.Aborted);
@@ -1377,6 +1385,7 @@ public class V2AuMover {
         }
         auStat.endPhase();
       }
+      addFinishedAu(au, auStat);
       ausLatch.countDown();
       break;
     }
@@ -2159,7 +2168,11 @@ public class V2AuMover {
       return "Aborted";
     }
     if (hasBeenStarted) {
-      return "Done";
+      if (isFailed()) {
+        return "Failed";
+      } else {
+        return "Done";
+      }
     }
     return "Idle";
   }
@@ -2200,9 +2213,14 @@ public class V2AuMover {
 //   }
 
   public int getFinishedStatusCount() {
-    synchronized (finishedAus) {
-      return finishedAus.size();
+    int res = 0;
+    synchronized (finishedOthers) {
+      res += finishedOthers.size();
     }
+    synchronized (finishedAus) {
+      res += finishedAus.size();
+    }
+    return res;
   }
 
   public List<String> getFinishedStatusPage(int index, int size) {
@@ -2285,12 +2303,12 @@ public class V2AuMover {
     return running;
   }
 
-  public boolean isTerminated() {
-    return terminated;
+  public boolean isFailed() {
+    return failed;
   }
 
-  public void setTerminated(boolean isTerminated) {
-    this.terminated = isTerminated;
+  public void setFailed(boolean isFailed) {
+    this.failed = isFailed;
   }
 
   public boolean isAbort() {
@@ -2351,7 +2369,7 @@ public class V2AuMover {
   public static final DateFormat TIMESTAMP_FMT =
                       new SimpleDateFormat("MM/dd/yy HH:mm:ss zzz");
 
-  public String nowTimestamp() {
+  public static String nowTimestamp() {
     return TIMESTAMP_FMT.format(new Date());
   }
 

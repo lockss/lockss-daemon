@@ -46,7 +46,9 @@ import okhttp3.Response;
 import org.apache.commons.io.*;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
+import org.lockss.crawler.*;
 import org.lockss.laaws.client.ApiException;
+import org.lockss.poller.v3.*;
 import org.lockss.proxy.*;
 import org.lockss.servlet.*;
 import org.lockss.util.*;
@@ -106,9 +108,7 @@ public class ConfigFileMover extends Worker {
           continue;
         }
       } catch (IOException e) {
-        String msg = "Couldn't read V1 config file: " + file;
-        log.error(msg, e);
-        auMover.logReportAndError(msg);
+        logError("Couldn't read V1 config file: " + file, e);
         continue;
       }
       String v2Content = readV2Config(section);
@@ -138,7 +138,15 @@ public class ConfigFileMover extends Worker {
     try {
       switch (section) {
       case SECTION_NAME_EXPERT:
-        writeV2ConfigFile(section, StringUtil.commentize(v1Content));
+        String v2Content = StringUtil.commentize(v1Content);
+        if (auMover.isDryRun()) {
+          String origV2 = v2Content;
+          v2Content = addV2DryRun(v2Content);
+          if (!v2Content.equals(origV2)) {
+            logDebug("Disabling crawling & polling in V2 because V1 is in dry-run mode");
+          }
+        }
+        writeV2ConfigFile(section, v2Content);
         break;
       case SECTION_NAME_CONTENT_SERVERS:
         Configuration c = cfgManager.readCacheConfigFile(configSectionMap.get(section));
@@ -149,13 +157,9 @@ public class ConfigFileMover extends Worker {
         writeV2ConfigFile(section, v1Content);
         break;
       }
-      String msg = "Copied config section: " + section;
-      log.debug(msg);
-      auMover.logReport(msg);
+      logDebug("Copied config section: " + section);
     } catch (ApiException | IOException e) {
-      String msg = "Couldn't copy config section: " + section;
-      log.error(msg, e);
-      auMover.logReportAndError(msg);
+      logError("Couldn't write config section: " + section + " to V2", e);
     }
   }
 
@@ -197,7 +201,6 @@ public class ConfigFileMover extends Worker {
     return newContent;
   }
 
-
   private boolean isMigrated(String v2Content) {
     Matcher m = COPIED_CONTENT_MARKER_PATTERN.matcher(v2Content);
     return m.find();
@@ -209,28 +212,30 @@ public class ConfigFileMover extends Worker {
     try {
       switch (section) {
       case SECTION_NAME_EXPERT:
-        if (!isMigrated(v2Content)) {
-          writeV2ConfigFile(section,
-                            appendComment(section, v1Content, v2Content));
-          String msg = "Merged config section: " + section;
-          log.debug(msg);
-          auMover.logReport(msg);
+        String origV2 = v2Content;
+        if (isMigrated(v2Content)) {
+          logDebug("Already merged config section: " + section);
         } else {
-          String msg = "Skipping already-merged config section; " + section;
-          log.debug(msg);
-          auMover.logReport(msg);
+          v2Content = appendComment(section, v1Content, v2Content);
+          logDebug("Merging config section: " + section);
+        }
+        String mergedV2Content = v2Content;
+        if (auMover.isDryRun()) {
+          v2Content = addV2DryRun(v2Content);
+        }
+        if (!v2Content.equals(mergedV2Content)) {
+          logDebug("Disabling crawling & polling in V2 because V1 is in dry-run mode");
+        }
+        if (!v2Content.equals(origV2)) {
+          writeV2ConfigFile(section, v2Content);
         }
         break;
       default:
-        String msg = "Not merging config section; " + section;
-        log.debug(msg);
-        auMover.logReport(msg);
+        logDebug("Not merging config section; " + section);
         break;
       }
     } catch (ApiException | IOException e) {
-      String msg = "Couldn't store LOCKSS 2.0 config section: " + section;
-      log.error(msg, e);
-      auMover.logReportAndError(msg);
+      logError("Couldn't store LOCKSS 2.0 config section: " + section, e);
     }
   }
 
@@ -247,6 +252,40 @@ public class ConfigFileMover extends Worker {
                          auMover.getLocalVersion(),
                          auMover.getCfgSvcVersion(),
                          auMover.nowTimestamp());
+  }
+
+
+  static String addV2DryRun(String propStr) {
+    try {
+      Properties props = PropUtil.fromString(propStr);
+      List<String> toAdd = new ArrayList<>();
+      for (String param :
+             (List<String>)ListUtil.list(V3PollFactory.PARAM_ENABLE_V3_POLLER,
+                                         V3PollFactory.PARAM_ENABLE_V3_VOTER,
+                                         CrawlManagerImpl.PARAM_CRAWLER_ENABLED)) {
+        if (!props.containsKey(param)) {
+          toAdd.add(param);
+        }
+      }
+      if (toAdd.isEmpty()) {
+        return propStr;
+      } else {
+        StringBuilder res = new StringBuilder(propStr);
+        res.append("\n\n### Added by migrator to prevent crawling and polling during\n### migration dry-run, ");
+        res.append(V2AuMover.nowTimestamp());
+        res.append("\n### You should remove these before running migration for real.");
+        for (String param : toAdd) {
+          res.append("\n");
+          res.append(param);
+          res.append("=false");
+        }
+        res.append("\n### End of migrator-added params\n");
+        return res.toString();
+      }
+    } catch (IOException e) {
+      log.error("Error attempting to disable V2 crawling & polling", e);
+      return propStr;
+    }
   }
 
   private void writeV2ConfigFile(String section, String v2Content)
@@ -315,11 +354,18 @@ public class ConfigFileMover extends Worker {
       }
       return null;
     } catch (IOException e) {
-      String msg = "Couldn't read LOCKSS 2.0 config file: " + section;
-      log.error(msg, e);
-      auMover.logReportAndError(msg);
+      logError("Couldn't read LOCKSS 2.0 config file: " + section, e);
       return null;
     }
   }
 
+  private void logDebug(String msg) {
+    log.debug(msg);
+    auMover.logReport(msg);
+  }
+
+  private void logError(String msg, Throwable t) {
+    log.error(msg, t);
+    auMover.logReportAndError(msg + "; " + t.toString());
+  }
 }

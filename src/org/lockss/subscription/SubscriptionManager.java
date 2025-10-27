@@ -442,6 +442,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     }
 
     pluginManager.registerAuEventHandler(auEventHandler);
+    resetConfig();
     ready = true;
 
     if (log.isDebug()) log.debug(DEBUG_HEADER
@@ -523,55 +524,58 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
 	  + "isWholeTitleSynchronization = " + isWholeTitleSynchronization);
     }
 
-    if (!migrationMgr.isInMigrationMode()) {
-      // Check whether the handling of configuration changes should be done in a
-      // new thread.
-      if (!isReady() || starter == null || starterThread == null
-          || !starterThread.isAlive()) {
-        // Yes: Create it and start it.
-        starter = new SubscriptionStarter(this, configureAuBatchSize,
-                                          configureAuRateLimiter,
-                                          changedKeys.getTdbDifferences().newTdbAuIterator(), false);
+    if (isDaemonInited()) {
+      if (!migrationMgr.isInMigrationMode()) {
+        // Don't instantiate subscriptions when in migration mode
 
-        starterThread = new Thread(starter);
-        starterThread.start();
-        if (log.isDebug3())
-          log.debug3(DEBUG_HEADER + "Created new SubscriptionStarter.");
-      } else {
-        // No: Reuse the existing thread.
-        if (changedKeys.contains(PARAM_SUBSCRIPTION_AU_CONFIGURATION_BATCH_SIZE))
-          {
-            starter.setConfigureAuBatchSize(configureAuBatchSize);
-          }
-
-        if (changedKeys.contains(PARAM_SUBSCRIPTION_AU_CONFIGURATION_RATE)) {
-          starter.setConfigureAuRateLimiter(configureAuRateLimiter);
-        }
-
-        // Add the new workload to the existing thread.
-        boolean added = starter.addTdbAuIterator(
-                                                 changedKeys.getTdbDifferences().newTdbAuIterator());
-        if (log.isDebug3()) log.debug3(DEBUG_HEADER + "added = " + added);
-
-        // Check whether the new workload was successfully added.
-        if (added) {
-          // Yes.
-          if (log.isDebug3())
-            log.debug3(DEBUG_HEADER + "Reused existing SubscriptionStarter.");
-        } else {
-          // No: Create a new thread and start it.
+        // Check whether the handling of configuration changes should be done in a
+        // new thread.
+        if (!isReady() || starter == null || starterThread == null
+            || !starterThread.isAlive()) {
+          // Yes: Create it and start it.
           starter = new SubscriptionStarter(this, configureAuBatchSize,
                                             configureAuRateLimiter,
-                                            changedKeys.getTdbDifferences().newTdbAuIterator(),false);
+                                            changedKeys.getTdbDifferences().newTdbAuIterator(), false);
 
           starterThread = new Thread(starter);
           starterThread.start();
           if (log.isDebug3())
             log.debug3(DEBUG_HEADER + "Created new SubscriptionStarter.");
+        } else {
+          // No: Reuse the existing thread.
+          if (changedKeys.contains(PARAM_SUBSCRIPTION_AU_CONFIGURATION_BATCH_SIZE))
+            {
+              starter.setConfigureAuBatchSize(configureAuBatchSize);
+            }
+
+          if (changedKeys.contains(PARAM_SUBSCRIPTION_AU_CONFIGURATION_RATE)) {
+            starter.setConfigureAuRateLimiter(configureAuRateLimiter);
+          }
+
+          // Add the new workload to the existing thread.
+          boolean added = starter.addTdbAuIterator(
+                                                   changedKeys.getTdbDifferences().newTdbAuIterator());
+          if (log.isDebug3()) log.debug3(DEBUG_HEADER + "added = " + added);
+
+          // Check whether the new workload was successfully added.
+          if (added) {
+            // Yes.
+            if (log.isDebug3())
+              log.debug3(DEBUG_HEADER + "Reused existing SubscriptionStarter.");
+          } else {
+            // No: Create a new thread and start it.
+            starter = new SubscriptionStarter(this, configureAuBatchSize,
+                                              configureAuRateLimiter,
+                                              changedKeys.getTdbDifferences().newTdbAuIterator(),false);
+
+            starterThread = new Thread(starter);
+            starterThread.start();
+            if (log.isDebug3())
+              log.debug3(DEBUG_HEADER + "Created new SubscriptionStarter.");
+          }
         }
       }
     }
-
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
     return;
   }

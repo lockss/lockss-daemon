@@ -43,6 +43,7 @@ import java.util.Map;
 import javax.sql.DataSource;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.config.TdbAu;
 import org.lockss.exporter.FetchTimeExporter;
 import org.lockss.plugin.ArchivalUnit;
@@ -2348,6 +2349,8 @@ public class DbManagerSql {
   // The data source user.
   private String dataSourceUser = null;
 
+  private boolean isInitialConnection = true;
+
   // The maximum number of retries to be attempted when encountering transient
   // SQL exceptions.
   private int maxRetryCount = -1;
@@ -2766,6 +2769,17 @@ public class DbManagerSql {
     }
 
     try {
+      // Override maxRetryCount and retryDelay if this is the first attempt
+      // making a database connection:
+      if (isInitialConnection) {
+        Configuration cfg = ConfigManager.getCurrentConfig();
+        maxRetryCount = cfg.getInt(DbManager.PARAM_INITIAL_MAX_RETRY_COUNT,
+            DbManager.DEFAULT_INITIAL_MAX_RETRY_COUNT);
+        retryDelay = cfg.getTimeInterval(DbManager.PARAM_INITIAL_RETRY_DELAY,
+            DbManager.DEFAULT_INITIAL_RETRY_DELAY);
+        isInitialConnection = false;
+      }
+
       return
 	  JdbcBridge.getConnection(ds, maxRetryCount, retryDelay, autoCommit);
     } catch (SQLException sqle) {
