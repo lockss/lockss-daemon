@@ -327,7 +327,7 @@
       au < finished ; finished ; 2019 ; International Journal of Abrasive Technology Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2020-2021 ; International Journal of Abrasive Technology Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2022-2023 ; International Journal of Abrasive Technology Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2024 ; International Journal of Abrasive Technology Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2024 ; International Journal of Abrasive Technology Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Abrasive Technology Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -702,7 +702,7 @@
       au < finished ; crawling ; 2019-2020 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022-2023 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2024 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2024 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Agriculture Innovation, Technology and Globalisation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -1175,7 +1175,7 @@
       au < finished ; finished ; 2020 ; International Journal of Banking, Accounting and Finance Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2021 ; International Journal of Banking, Accounting and Finance Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022-2023 ; International Journal of Banking, Accounting and Finance Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2024 ; International Journal of Banking, Accounting and Finance Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2024 ; International Journal of Banking, Accounting and Finance Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2025 ; International Journal of Banking, Accounting and Finance Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -2879,7 +2879,7 @@
       au < finished ; finished ; 2018 ; International Journal of Critical Computer-Based Systems Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Journal of Critical Computer-Based Systems Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2020-2023 ; International Journal of Critical Computer-Based Systems Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2024 ; International Journal of Critical Computer-Based Systems Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2024 ; International Journal of Critical Computer-Based Systems Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Critical Computer-Based Systems Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -7446,7 +7446,7 @@
       au < finished ; finished ; 2018 ; International Journal of Materials and Structural Integrity Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; International Journal of Materials and Structural Integrity Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020-2021 ; International Journal of Materials and Structural Integrity Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2023 ; International Journal of Materials and Structural Integrity Volume 15 [partial] ; 15 ; https://www.inderscienceonline.com/ ; > #issue 2, 3 ,4 not online
+      au < frozen ; exists ; 2023 ; International Journal of Materials and Structural Integrity Volume 15 [partial] ; 15 ; https://www.inderscienceonline.com/ ; > #issue 2, 3 ,4 not online
 
     }
 
@@ -9205,7 +9205,7 @@
       au < finished ; finished ; 2018-2019 ; International Journal of Quality Engineering and Technology Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020-2022 ; International Journal of Quality Engineering and Technology Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > #no access, no content on ingest1
       au < deepCrawl ; exists ; 2023 ; International Journal of Quality Engineering and Technology Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
-      au < crawling ; exists ; 2024 ; International Journal of Quality Engineering and Technology Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < frozen ; exists ; 2024 ; International Journal of Quality Engineering and Technology Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Quality Engineering and Technology Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
 
     }
