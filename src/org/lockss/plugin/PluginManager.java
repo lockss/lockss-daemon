@@ -2309,7 +2309,7 @@ public class PluginManager
 	  log.debug3("cache hit " + rcu.cu.toString() + ", " + rcu.contentReq);
 	}
 	recentCuHits++;
- 	return rcu.cu;
+	return rcu.cu.getArchivalUnit().makeCachedUrl(rcu.cu.getUrl());
       } else {
 	log.debug3("cache miss for " + url);
 	recentCuMisses++;
