@@ -1419,7 +1419,7 @@
 
     au < ready ; 1995 ; House Rules and Manual 1995 ; 1995 ; https://www.govinfo.gov/ >
     au < released ; 1997 ; House Rules and Manual 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; House Rules and Manual 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; House Rules and Manual 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < released ; 2003 ; House Rules and Manual 2003 ; 2003 ; https://www.govinfo.gov/ >
     au < doesNotExist ; 2014 ; House Rules and Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2015 ; House Rules and Manual 2015 ; 2015 ; https://www.govinfo.gov/ >
@@ -1462,9 +1462,9 @@
 
     param[collection_id] = LSA
 
-    au < manifest ; 1997 ; List of CFR Sections Affected 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; List of CFR Sections Affected 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; List of CFR Sections Affected 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; List of CFR Sections Affected 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; List of CFR Sections Affected 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; List of CFR Sections Affected 1999 ; 1999 ; https://www.govinfo.gov/ >
 
     au < released ; 2016 ; List of CFR Sections Affected 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; List of CFR Sections Affected 2017 ; 2017 ; https://www.govinfo.gov/ >
@@ -1496,7 +1496,7 @@
     au < doesNotExist ; 2008 ; Privacy Act Issuances 2008 ; 2008 ; https://www.govinfo.gov/ >
     au < released ; 2009 ; Privacy Act Issuances 2009 ; 2009 ; https://www.govinfo.gov/ >
     au < released ; 2011 ; Privacy Act Issuances 2011 ; 2011 ; https://www.govinfo.gov/ >
-    au < manifest ; 2013 ; Privacy Act Issuances 2013 ; 2013 ; https://www.govinfo.gov/ >
+    au < ready ; 2013 ; Privacy Act Issuances 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2015 ; Privacy Act Issuances 2015 ; 2015 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Privacy Act Issuances 2017 ; 2017 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Privacy Act Issuances 2019 ; 2019 ; https://www.govinfo.gov/ >
@@ -1515,11 +1515,11 @@
 
     param[collection_id] = PLAW
 
-    au < manifest ; 1995 ; Public and Private Laws 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; Public and Private Laws 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; Public and Private Laws 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; Public and Private Laws 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; Public and Private Laws 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 1995 ; Public and Private Laws 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < ready ; 1996 ; Public and Private Laws 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; Public and Private Laws 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; Public and Private Laws 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; Public and Private Laws 1999 ; 1999 ; https://www.govinfo.gov/ >
  
     au < released ; 2013 ; Public and Private Laws 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2017 ; Public and Private Laws 2017 ; 2017 ; https://www.govinfo.gov/ >
@@ -1542,15 +1542,15 @@
     comment[0] = published from 1991 to 2013
     param[collection_id] = PPP
 
-    au < manifest ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < manifest ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 ; https://www.govinfo.gov/ >
-    au < manifest ; 1993 ; Public Papers of the Presidents of the United States 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < manifest ; 1994 ; Public Papers of the Presidents of the United States 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < manifest ; 1995 ; Public Papers of the Presidents of the United States 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; Public Papers of the Presidents of the United States 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; Public Papers of the Presidents of the United States 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; Public Papers of the Presidents of the United States 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; Public Papers of the Presidents of the United States 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < ready ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < ready ; 1993 ; Public Papers of the Presidents of the United States 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < ready ; 1994 ; Public Papers of the Presidents of the United States 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < ready ; 1995 ; Public Papers of the Presidents of the United States 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < ready ; 1996 ; Public Papers of the Presidents of the United States 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; Public Papers of the Presidents of the United States 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; Public Papers of the Presidents of the United States 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; Public Papers of the Presidents of the United States 1999 ; 1999 ; https://www.govinfo.gov/ >
 
     au < released ; 1929 ; Public Papers of the Presidents of the United States 1929 ; 1929 ; https://www.govinfo.gov/ >
     au < released ; 1930 ; Public Papers of the Presidents of the United States 1930 ; 1930 ; https://www.govinfo.gov/ >
@@ -1624,7 +1624,7 @@
     au < released ; 1995 ; Senate Manual 1995 ; 1995 ; https://www.govinfo.gov/ >
     au < released ; 1999 ; Senate Manual 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < released ; 2001 ; Senate Manual 2001 ; 2001 ; https://www.govinfo.gov/ >
-    au < manifest ; 2008 ; Senate Manual 2008 ; 2008 ; https://www.govinfo.gov/ >
+    au < ready ; 2008 ; Senate Manual 2008 ; 2008 ; https://www.govinfo.gov/ >
     au < released ; 2011 ; Senate Manual 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; Senate Manual 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < down ; 2014 ; Senate Manual 2014 ; 2014 ; https://www.govinfo.gov/ >
@@ -1833,7 +1833,7 @@
     au < released ; 1991 ; U.S. Congressional Serial Set 1991 ; 1991 ; https://www.govinfo.gov/ >
     au < released ; 1992 ; U.S. Congressional Serial Set 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < released ; 1993 ; U.S. Congressional Serial Set 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < manifest ; 1994 ; U.S. Congressional Serial Set 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < ready ; 1994 ; U.S. Congressional Serial Set 1994 ; 1994 ; https://www.govinfo.gov/ >
  
   }
 
@@ -1847,10 +1847,10 @@
 
     au < manifest ; 1994 ; United States Code 1994 ; 1994 ; https://www.govinfo.gov/ >
     au < manifest ; 1995 ; United States Code 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; United States Code 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; United States Code 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; United States Code 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; United States Code 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 1996 ; United States Code 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; United States Code 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; United States Code 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; United States Code 1999 ; 1999 ; https://www.govinfo.gov/ >
 
     au < released ; 2011 ; United States Code 2011 ; 2011 ; https://www.govinfo.gov/ >
     au < doNotProcess ; 2012 ; United States Code 2012 ; 2012 ; https://www.govinfo.gov/ >
@@ -1865,7 +1865,7 @@
     au < released ; 2021 ; United States Code 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; United States Code 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2023 ; United States Code 2023 ; 2023 ; https://www.govinfo.gov/ >
-    au < manifest ; 2024 ; USCODE 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < ready ; 2024 ; USCODE 2024 ; 2024 ; https://www.govinfo.gov/ >
  
   }
 
@@ -1894,9 +1894,9 @@
 
     param[collection_id] = USREPORTS
 
-    au < manifest ; 1809 ; USREPORTS 1809 ; 1809 ; https://www.govinfo.gov/ >
-    au < manifest ; 1823 ; USREPORTS 1823 ; 1823 ; https://www.govinfo.gov/ >
-    au < manifest ; 1824 ; USREPORTS 1824 ; 1824 ; https://www.govinfo.gov/ >
+    au < ready ; 1809 ; USREPORTS 1809 ; 1809 ; https://www.govinfo.gov/ >
+    au < ready ; 1823 ; USREPORTS 1823 ; 1823 ; https://www.govinfo.gov/ >
+    au < ready ; 1824 ; USREPORTS 1824 ; 1824 ; https://www.govinfo.gov/ >
     au < manifest ; 1857 ; USREPORTS 1857 ; 1857 ; https://www.govinfo.gov/ >
     au < manifest ; 1858 ; USREPORTS 1858 ; 1858 ; https://www.govinfo.gov/ >
     au < manifest ; 1859 ; USREPORTS 1859 ; 1859 ; https://www.govinfo.gov/ >
