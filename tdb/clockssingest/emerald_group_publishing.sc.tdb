@@ -1590,7 +1590,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; China Agricultural Economic Review Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; China Agricultural Economic Review Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; China Agricultural Economic Review Volume 15 ; 15 ; >
-    au < ready ; exists ; 2024 ; 2024 ; China Agricultural Economic Review Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; China Agricultural Economic Review Volume 16 ; 16 ; >
     au < crawling ; exists ; 2025 ; 2025 ; China Agricultural Economic Review Volume 17 ; 17 ; >
 
   }
@@ -3089,7 +3089,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Facilities Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Facilities Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Facilities Volume 36 ; 36 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Facilities Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Facilities Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Facilities Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Facilities Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Facilities Volume 40 ; 40 ; >
@@ -3320,7 +3320,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Higher Education, Skills and Work-based Learning Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Higher Education, Skills and Work-based Learning Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Higher Education, Skills and Work-based Learning Volume 13 ; 13 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Higher Education, Skills and Work-based Learning Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Higher Education, Skills and Work-based Learning Volume 14 ; 14 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Higher Education, Skills and Work-based Learning Volume 15 ; 15 ; >
 
   }
@@ -4148,10 +4148,10 @@
     au < manifest ; exists ; 2001 ; 2001 ; Interlending & Document Supply Volume 29 ; 29 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Interlending & Document Supply Volume 30 ; 30 ; >
     au < ready ; exists ; 2003 ; 2003 ; Interlending & Document Supply Volume 31 ; 31 ; >
-    au < ready ; exists ; 2004 ; 2004 ; Interlending & Document Supply Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2004 ; 2004 ; Interlending & Document Supply Volume 32 ; 32 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Interlending & Document Supply Volume 33 ; 33 ; >
-    au < ready ; exists ; 2006 ; 2006 ; Interlending & Document Supply Volume 34 ; 34 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Interlending & Document Supply Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2006 ; 2006 ; Interlending & Document Supply Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2007 ; 2007 ; Interlending & Document Supply Volume 35 ; 35 ; >
     au < crawling ; exists ; 2008 ; 2008 ; Interlending & Document Supply Volume 36 ; 36 ; >
     au < ready ; exists ; 2009 ; 2009 ; Interlending & Document Supply Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Interlending & Document Supply Volume 38 ; 38 ; >
@@ -5896,7 +5896,7 @@
     param[journal_id] = ijoph
     #continues = 1744-9200
 
-    au < ready ; exists ; 2024 ; 2024 ; International Journal of Prison Health Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; International Journal of Prison Health Volume 20 ; 20 ; >
     au < crawling ; exists ; 2025 ; 2025 ; International Journal of Prison Health Volume 21 ; 21 ; >
 
   }
@@ -6333,7 +6333,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; International Journal of Sociology and Social Policy Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Sociology and Social Policy Volume 42 ; 42 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Sociology and Social Policy Volume 43 ; 43 ; >
-    au < ready ; exists ; 2024 ; 2024 ; International Journal of Sociology and Social Policy Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; International Journal of Sociology and Social Policy Volume 44 ; 44 ; >
     au < crawling ; exists ; 2025 ; 2025 ; International Journal of Sociology and Social Policy Volume 45 ; 45 ; >
 
   }
@@ -6877,7 +6877,7 @@
     au < manifest ; exists ; 2001 ; 2001 ; Journal of Applied Accounting Research Volume 6 (2001) ; 6 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Journal of Applied Accounting Research Volume 6 (2002) ; 6 ; >
     au < frozen ; exists ; 2004 ; 2004 ; Journal of Applied Accounting Research Volume 7 (2004) ; 7 ; >
-    au < ready ; exists ; 2005 ; 2005 ; Journal of Applied Accounting Research Volume 7 (2005) ; 7 ; >
+    au < crawling ; exists ; 2005 ; 2005 ; Journal of Applied Accounting Research Volume 7 (2005) ; 7 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Journal of Applied Accounting Research Volume 8 (2006) ; 8 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Journal of Applied Accounting Research Volume 8 (2007) ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 ; >
@@ -7276,7 +7276,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Communication Management Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Communication Management Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Communication Management Volume 27 ; 27 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Journal of Communication Management Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of Communication Management Volume 28 ; 28 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Journal of Communication Management Volume 29 ; 29 ; >
 
   }
@@ -8641,7 +8641,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of International Education in Business Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of International Education in Business Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of International Education in Business Volume 16 ; 16 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Journal of International Education in Business Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of International Education in Business Volume 17 ; 17 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Journal of International Education in Business Volume 18 ; 18 ; >
 
   }
@@ -9935,7 +9935,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Strategy and Management Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Strategy and Management Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Strategy and Management Volume 16 ; 16 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Journal of Strategy and Management Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of Strategy and Management Volume 17 ; 17 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Journal of Strategy and Management Volume 18 ; 18 ; >
 
   }
@@ -11514,9 +11514,9 @@
     param[journal_id] = mbr
     # online from 2007
 
-    au < ready ; exists ; 2003 ; 2003 ; Multinational Business Review Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Multinational Business Review Volume 11 ; 11 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Multinational Business Review Volume 12 ; 12 ; >
-    au < ready ; exists ; 2005 ; 2005 ; Multinational Business Review Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2005 ; 2005 ; Multinational Business Review Volume 13 ; 13 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Multinational Business Review Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Multinational Business Review Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Multinational Business Review Volume 16 ; 16 ; >
@@ -11535,7 +11535,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Multinational Business Review Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Multinational Business Review Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Multinational Business Review Volume 31 ; 31 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Multinational Business Review Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Multinational Business Review Volume 32 ; 32 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Multinational Business Review Volume 33 ; 33 ; >
 
   }
@@ -13341,7 +13341,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; South Asian Journal of Business Studies Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; South Asian Journal of Business Studies Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; South Asian Journal of Business Studies Volume 12 ; 12 ; >
-    au < ready ; exists ; 2024 ; 2024 ; South Asian Journal of Business Studies Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; South Asian Journal of Business Studies Volume 13 ; 13 ; >
     au < crawling ; exists ; 2025 ; 2025 ; South Asian Journal of Business Studies Volume 14 ; 14 ; >
 
   }
@@ -16466,7 +16466,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Marine Economics and Management Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Marine Economics and Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Marine Economics and Management Volume 6 ; 6 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Marine Economics and Management Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Marine Economics and Management Volume 7 ; 7 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Marine Economics and Management Volume 8 ; 8 ; >
 
   }
@@ -16583,7 +16583,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; New England Journal of Entrepreneurship Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; New England Journal of Entrepreneurship Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; New England Journal of Entrepreneurship Volume 26 ; 26 ; >
-    au < ready ; exists ; 2024 ; 2024 ; New England Journal of Entrepreneurship Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; New England Journal of Entrepreneurship Volume 27 ; 27 ; >
     au < crawling ; exists ; 2025 ; 2025 ; New England Journal of Entrepreneurship Volume 28 ; 28 ; >
 
   }
