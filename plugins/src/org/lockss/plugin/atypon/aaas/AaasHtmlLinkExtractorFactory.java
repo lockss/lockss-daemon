@@ -92,7 +92,7 @@ public class AaasHtmlLinkExtractorFactory
         if ((node.hasAttr("href")) ) {
           String hrefval = node.attr("href");
           if (hrefval.contains(PILL_CITATIONS_ANCHOR)) {
-            logger.info("found #pill-citations, rewriting");
+            logger.debug3("found #pill-citations, rewriting");
             // the "/" gets normalized to %2F
             String urlPath = ACTION_DOWNLOAD_CITATION +
                 "?doi=" + doiMat.group(2) + "/" + doiMat.group(3) +
