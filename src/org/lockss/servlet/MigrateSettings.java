@@ -343,8 +343,21 @@ public class MigrateSettings extends LockssServlet {
                 }
               }
               // Write migration configuration to file
-              writeMigrationConfigFile(mCfg);
+              migrationMgr.writeMigrationConfigFile(mCfg);
+
+              // If the DB datasource has changed (now points to V2),
+              // restart DbManager
+              Configuration cfg = ConfigManager.getCurrentConfig();
+              Configuration dsBefore =
+                cfg.getConfigTree(DbManager.DATASOURCE_ROOT);
               ConfigManager.getConfigManager().reloadAndWait();
+              cfg = ConfigManager.getCurrentConfig();
+              Configuration dsAfter =
+                cfg.getConfigTree(DbManager.DATASOURCE_ROOT);
+              if (!java.util.Objects.equals(dsBefore, dsAfter)) {
+                DbManager dbMgr = theDaemon.getDbManager();
+                dbMgr.restartService();
+              }
               redirectToMigrateContent();
             }
           }
@@ -859,19 +872,5 @@ public class MigrateSettings extends LockssServlet {
     res.removeConfigTree(root);
     res.addAsSubTree(cfgSrc.getConfigTree(root), prefix + "." + root);
     return res;
-  }
-
-  /**
-   * Writes a {@link Configuration} containing the Migration Configuration to the Migration Configuration
-   * File (see {@link ConfigManager#CONFIG_FILE_MIGRATION}).
-   *
-   * @param mCfg A {@link Configuration} containing the migration configuration.
-   * @throws IOException
-   */
-  private void writeMigrationConfigFile(Configuration mCfg) throws IOException {
-    ConfigManager cfgMgr = ConfigManager.getConfigManager();
-    cfgMgr.writeCacheConfigFile(mCfg, ConfigManager.CONFIG_FILE_MIGRATION,
-        MigrationManager.CONFIG_FILE_MIGRATION_HEADER, true);
-    cfgMgr.reloadAndWait();
   }
 }

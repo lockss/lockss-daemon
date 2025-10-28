@@ -353,6 +353,7 @@ public class BlockingStreamComm
 
   private IdentityManager idMgr;
   protected LockssKeyStoreManager keystoreMgr;
+  private LcapRouter lcapRtr;
 
   private OneShot configShot = new OneShot();
 
@@ -890,6 +891,7 @@ public class BlockingStreamComm
     super.startService();
     LockssDaemon daemon = getDaemon();
     idMgr = daemon.getIdentityManager();
+    lcapRtr = daemon.getRouterManager();
     keystoreMgr = daemon.getKeystoreManager();
     resetConfig();
     anyRateLimited = false;
@@ -2134,6 +2136,11 @@ public class BlockingStreamComm
       res.add(new StatusTable.SummaryInfo("SSL",
 					  ColumnDescriptor.TYPE_STRING,
 					  sb.toString()));
+      if (lcapRtr != null && lcapRtr.getMigrateTo() != null) {
+        res.add(new StatusTable.SummaryInfo("Forwarding messages for migrated AUs to",
+                                            ColumnDescriptor.TYPE_STRING,
+                                            lcapRtr.getMigrateTo().toString()));
+      }
       res.add(new StatusTable.SummaryInfo("Channels",
 					  ColumnDescriptor.TYPE_STRING,
 					  nPrimary + "/"

@@ -44,6 +44,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.laaws.V2AuMover;
 import org.lockss.plugin.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.laaws.*;
 import org.lockss.laaws.MigrationManager.OpType;
@@ -529,6 +530,18 @@ public class MigrateContent extends LockssServlet {
     setTabOrder(sel);
   }
 
+  private int numUnmigrated(Plugin plug) {
+    int res = 0;
+    for (ArchivalUnit au : plug.getAllAus()) {
+      AuState auState = AuUtil.getAuState(au);
+      switch (auState.getMigrationState()) {
+      case Finished: break;
+      default: res++;
+      }
+    }
+    return res;
+  }
+
   private void addPluginSelToTable(Table tbl, String key, String preselId) {
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
@@ -540,7 +553,7 @@ public class MigrateContent extends LockssServlet {
       // Filter out registry AUs
       .filter(plug -> !(pluginMgr.isInternalPlugin(plug)))
       .collect(Collectors.toMap(plug -> plug,
-                                plug -> plug.getAllAus().size()));
+                                plug -> numUnmigrated(plug)));
     // Sum total AUs
     int totalAus = plugs.entrySet().stream()
       .map(Map.Entry::getValue)

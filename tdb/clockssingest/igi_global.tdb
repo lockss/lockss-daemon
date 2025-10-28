@@ -4,9 +4,8 @@
     name = IGI Global ;
     info[contract] = 2012 ;
     info[back] = 2000 ;
-    info[min_year] = 1988 ;
     info[tester] = 5 ;
-    info[poller] = 5
+    info[platform] = Custom
   >
 
   plugin = org.lockss.plugin.igiglobal.ClockssIgiGlobalPlugin
@@ -326,7 +325,7 @@
     au < deepCrawl ; exists ; 2022 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2023 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 2025 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
+    au < notReady ; exists ; 2025 ; International Journal of Ambient Computing and Intelligence (IJACI) Volume 16 ; 16 ; https://www.igi-global.com/ ; > #URL MIME type mismatch,
 
   }
 
@@ -352,8 +351,7 @@
     au < finished ; manifest ; 2021 ; International Journal of Applied Behavioral Economics (IJABE) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Applied Behavioral Economics (IJABE) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2023 ; International Journal of Applied Behavioral Economics (IJABE) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
-    au < finished ; manifest ; 2024 ; International Journal of Applied Behavioral Economics (IJABE) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2025 ; International Journal of Applied Behavioral Economics (IJABE) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2025 ; International Journal of Applied Behavioral Economics (IJABE) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -431,8 +429,7 @@
     au < finished ; crawling ; 2020 ; International Journal of Applied Industrial Engineering (IJAIE) Volume 7 ; 7 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2021 ; International Journal of Applied Industrial Engineering (IJAIE) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; International Journal of Applied Industrial Engineering (IJAIE) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2024 ; International Journal of Applied Industrial Engineering (IJAIE) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-    au < expected ; exists ; 2025 ; International Journal of Applied Industrial Engineering (IJAIE) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2025 ; International Journal of Applied Industrial Engineering (IJAIE) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1715,8 +1712,7 @@
     au < finished ; manifest ; 2021 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2023 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2024 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 15 ; 15 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
-    au < expected ; exists ; 2025 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2025 ; International Journal of Geotechnical Earthquake Engineering (IJGEE) Volume 15 ; 15 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
 
   }
 
@@ -1759,8 +1755,7 @@
     au < finished ; manifest ; 2021 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2023 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-    au < finished ; manifest ; 2024 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 15 ; 15 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
-    au < expected ; exists ; 2025 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 2025 ; International Journal of Environmental Sustainability and Green Technologies (IJESGT) Volume 15 ; 15 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2647,9 +2642,8 @@
     au < finished ; finished ; 2020 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
-    au < finished ; manifest ; 2023 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
-    au < finished ; manifest ; 2024 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
-    au < expected ; exists ; 2025 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
+    au < finished ; manifest ; 2024 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
+    au < crawling ; exists ; 2025 ; International Journal of Manufacturing, Materials, and Mechanical Engineering (IJMMME) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2790,13 +2784,13 @@
     >
     param[journal_issn] = 2640-4079
     #continues = 2166-7241
+    #Out of print, 2025
 
     au < exists ; exists ; 2019 ; International Journal of Smart Security Technologies (IJSST) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
     au < exists ; exists ; 2020 ; International Journal of Smart Security Technologies (IJSST) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
     au < exists ; exists ; 2021 ; International Journal of Smart Security Technologies (IJSST) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
     au < exists ; exists ; 2022 ; International Journal of Smart Security Technologies (IJSST) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
     au < exists ; exists ; 2024 ; International Journal of Smart Security Technologies (IJSST) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2025 ; International Journal of Smart Security Technologies (IJSST) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -3496,8 +3490,7 @@
     au < finished ; manifest ; 2021 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2022 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2023 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-    au < notReady ; exists ; 2024 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 15 ; 15 ; https://www.igi-global.com/ ; > #Contents Coming Soon, https://www.igi-global.com/gateway/issue/333312
-    au < expected ; exists ; 2025 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
+    au < manifest ; exists ; 2025 ; International Journal of Strategic Decision Sciences (IJSDS) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -3640,10 +3633,7 @@
     >
     param[journal_issn] = 2837-4622
     #continues = 1947-9093
-    #coming soon
-
-    au < expected ; exists ; 2024 ; Journal of Affective Computing and Human Interfaces (JACHI) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
-    au < expected ; exists ; 2025 ; Journal of Affective Computing and Human Interfaces (JACHI) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
+    #Out of print.
 
   }
 

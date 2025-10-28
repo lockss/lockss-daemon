@@ -4,7 +4,6 @@
     info[contract] = 2013 ;
     info[back] = 1900 ;
     info[tester] = 8 ;
-    info[poller] = 3 ;
     comment[platform] = Atypon 
  >
   plugin = org.lockss.plugin.atypon.seg.ClockssSEGBooksPlugin

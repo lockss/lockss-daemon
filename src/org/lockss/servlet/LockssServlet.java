@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2025 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -127,8 +127,7 @@ public abstract class LockssServlet extends HttpServlet
   public static final String JAVASCRIPT_RESOURCE =
     "org/lockss/htdocs/admin.js";
 
-  private static final String DOCTYPE =
-    "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">";
+  private static final String DOCTYPE = "<!DOCTYPE html>";
 
   public static final String ATTR_INCLUDE_SCRIPT = "IncludeScript";
   public static final String ATTR_ALLOW_ROLES = "AllowRoles";

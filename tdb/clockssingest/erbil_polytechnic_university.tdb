@@ -5,7 +5,7 @@
     info[contract] = 2025 ;
     info[back] = 2017 ;
     info[tester] = 5 ;
-    info[poller] = 8
+    info[platform] = bepress
   >
   provider = bepress
   
@@ -24,12 +24,12 @@
     param[base_url] = https://polytechnic-journal.epu.edu.iq/
     param[journal_abbr] = home
 
-    au < manifest ; exists ; 2017 ; Polytechnic Journal Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2018 ; Polytechnic Journal Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2019 ; Polytechnic Journal Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2020 ; Polytechnic Journal Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2021 ; Polytechnic Journal Volume 11 ; 11 ; >
-    au < manifest ; exists ; 2022 ; Polytechnic Journal Volume 12 ; 12 ; >
+    au < testing ; exists ; 2017 ; Polytechnic Journal Volume 7 ; 7 ; >
+    au < testing ; exists ; 2018 ; Polytechnic Journal Volume 8 ; 8 ; >
+    au < testing ; exists ; 2019 ; Polytechnic Journal Volume 9 ; 9 ; >
+    au < testing ; exists ; 2020 ; Polytechnic Journal Volume 10 ; 10 ; >
+    au < testing ; exists ; 2021 ; Polytechnic Journal Volume 11 ; 11 ; >
+    au < testing ; exists ; 2022 ; Polytechnic Journal Volume 12 ; 12 ; >
     au < frozen ; exists ; 2023 ; Polytechnic Journal Volume 13 ; 13 ; >
     au < frozen ; exists ; 2024 ; Polytechnic Journal Volume 14 ; 14 ; >
     au < crawling ; exists ; 2025 ; Polytechnic Journal Volume 15 ; 15 ; >

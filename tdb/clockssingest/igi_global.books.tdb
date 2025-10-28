@@ -4,7 +4,7 @@
     info[contract] = 2012 ;
     info[back] = 2000 ;
     info[tester] = 5 ;
-    info[poller] = 2 
+    info[platform] = Custom
  >
   plugin = org.lockss.plugin.igiglobal.ClockssIgiGlobalBooksPlugin
   #  param[base_url] = http://www.igi-global.com/

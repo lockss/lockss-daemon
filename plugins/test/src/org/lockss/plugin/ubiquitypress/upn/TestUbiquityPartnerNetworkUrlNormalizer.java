@@ -101,7 +101,7 @@ public class TestUbiquityPartnerNetworkUrlNormalizer extends LockssTestCase {
                    norm.normalizeUrl("http://www.xyz.com/foo.png?t=123", testAU) );
       assertEquals("http://www.xyz.com/foo.jpg",
                    norm.normalizeUrl("http://www.xyz.com/foo.jpg?t=123", testAU) );
-      assertEquals("http://www.xyz.com/foo.jpg?&w=456",
+      assertEquals("http://www.xyz.com/foo.jpg&w=456",
                    norm.normalizeUrl("http://www.xyz.com/foo.jpg?t=123&w=456", testAU) );
     }
   

@@ -53,9 +53,11 @@ public class TestBasePlugin extends LockssTestCase {
 
   static final ConfigParamDescr PD_VOL = ConfigParamDescr.VOLUME_NUMBER;
   static final ConfigParamDescr PD_YEAR = ConfigParamDescr.YEAR;
+  static final ConfigParamDescr PD_URL = ConfigParamDescr.BASE_URL;
 
   static final String AUPARAM_VOL = PD_VOL.getKey();
   static final String AUPARAM_YEAR = PD_YEAR.getKey();
+  static final String AUPARAM_URL = PD_URL.getKey();
 
   static String MY_PLUG_ID =
     "org.lockss.plugin.base.TestBasePlugin$MyBasePlugin";
@@ -94,6 +96,72 @@ public class TestBasePlugin extends LockssTestCase {
     assertNotNull(au);
     Configuration resconf = au.getConfiguration();
     assertEquals(auconf, resconf);
+  }
+
+  private void setupNonDefTdb(String plugName) throws Exception {
+    // set title database properties
+    Properties p1 = new Properties();
+    p1.put("title", "It's");
+    p1.put("journalTitle", "jtitle");
+    p1.put("plugin", plugName);
+    p1.put("pluginVersion", "4");
+    p1.put("param.1.key", AUPARAM_URL);
+    p1.put("param.1.value", "http://example.com/a1/u1/");
+    p1.put("param.2.key", AUPARAM_YEAR);
+    p1.put("param.2.value", "2020");
+
+    Properties p2 = new Properties();
+    p2.put("title", "Howl");
+    p2.put("journalTitle", "hj");
+    p2.put("plugin", plugName);
+    p2.put("pluginVersion", "4");
+    p2.put("param.1.key", AUPARAM_URL);
+    p2.put("param.1.value", "http://example.com/a2/u1/");
+    p2.put("param.2.key", AUPARAM_YEAR);
+    p2.put("param.2.value", "2021");
+    p2.put("param.3.key", "base_url_nondef");
+    p2.put("param.3.value", "http://example.com/a2/u2/");
+
+    // populate the title database from the properties
+    Tdb tdb = new Tdb();
+    tdb.addTdbAuFromProperties(p1);
+    tdb.addTdbAuFromProperties(p2);
+
+    // install a new configuration with the TDB
+    ConfigurationUtil.setTdb(tdb);
+  }
+
+  public void testConfigureAuAddNonDef() throws Exception {
+    String plugName = "org.lockss.plugin.base.TestBasePlugin$MyBasePlugin";
+    ConfigParamDescr nondefDesc = new ConfigParamDescr()
+      .setDefinitional(false)
+      .setKey("base_url_nondef")
+      .setType(ConfigParamDescr.TYPE_URL);
+
+    mbp.setConfigDescrs(ListUtil.list(PD_URL, PD_YEAR, nondefDesc));
+    setupNonDefTdb(plugName);
+    assertSameElements(ListUtil.list("It's", "Howl"),
+		       mbp.getSupportedTitles());
+
+    TitleConfig tc = mbp.getTitleConfig(new String("Howl"));
+    assertEquals("Howl", tc.getDisplayName());
+    assertEquals("hj", tc.getJournalTitle());
+    assertEquals("4", tc.getPluginVersion());
+    assertEquals(plugName, tc.getPluginName());
+    Configuration tcConf = tc.getConfig();
+    assertEquals(SetUtil.set(AUPARAM_URL, AUPARAM_YEAR, "base_url_nondef"),
+                 tcConf.keySet());
+
+    Configuration auconf1 =
+      ConfigurationUtil.fromArgs(PD_URL.getKey(), "http://example.com/a2/u1/",
+                                 PD_YEAR.getKey(), "2021");
+    ArchivalUnit au = mbp.configureAu(auconf1, null);
+    assertNotNull(au);
+    Configuration resconf1 = au.getConfiguration();
+    assertEquals(SetUtil.set(AUPARAM_URL, AUPARAM_YEAR, "base_url_nondef"),
+                 resconf1.keySet());
+    // ensure supplied config wasn't modified
+    assertEquals(SetUtil.set(AUPARAM_URL, AUPARAM_YEAR), auconf1.keySet());
   }
 
   public void testStopPlugin() {

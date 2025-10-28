@@ -40,9 +40,9 @@
 
       attr[journal_id] = 889
 
-      au < ready ; 2021 ; National Review of Black Politics Volume 2 [2021] ; 19881 >
-      au < ready ; 2022 ; National Review of Black Politics Volume 3 [2022] ; 19882 >
-      au < ready ; 2023 ; National Review of Black Politics Volume 4 [2023] ; 19429 >
+      au < released ; 2021 ; National Review of Black Politics Volume 2 [2021] ; 19881 >
+      au < released ; 2022 ; National Review of Black Politics Volume 3 [2022] ; 19882 >
+      au < released ; 2023 ; National Review of Black Politics Volume 4 [2023] ; 19429 >
 
     }
 
@@ -70,7 +70,7 @@
         au < released ; 2021 ; Philosophical Topics Volume 49 [2021] ; 17017 >
         au < released ; 2022 ; Philosophical Topics Volume 50 [2022] ; 17464 >
         au < released ; 2023 ; Philosophical Topics Volume 51 [2023] ; 19122 >
-        au < ready ; 2024 ; Philosophical Topics Volume 52 [2024] ; 20010 >
+        au < released ; 2024 ; Philosophical Topics Volume 52 [2024] ; 20010 >
 
     }
 

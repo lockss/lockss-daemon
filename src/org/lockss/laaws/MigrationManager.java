@@ -81,8 +81,7 @@ import org.lockss.config.*;
  *
  * <li><b>isMigrationInDebugMode</b> - Enables additional UI buttons,
  * allows combinations of actions and state that should normally be
- * prohibited, prevents permanent changes to V1 <i>a la</i> dry run
- * mode </li>
+ * prohibited, prevent AUs from being deleted. </li>
  */
 public class MigrationManager extends BaseLockssDaemonManager
   implements ConfigurableManager  {
@@ -94,6 +93,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   static final String STATUS_ACTIVE_LIST = "active_list";
 //   static final String STATUS_FINISHED_LIST = "finished_list";
   static final String STATUS_FINISHED_PAGE = "finished_page";
+  static final String STATUS_FINISHED_INDEX = "finished_index";
   static final String STATUS_FINISHED_COUNT = "finished_count";
   static final String STATUS_START_TIME = "start_time";
   static final String STATUS_STATUS = "status_list";
@@ -119,6 +119,7 @@ public class MigrationManager extends BaseLockssDaemonManager
 
   private V2AuMover mover;
   private Runner runner;
+  LockssUrlConnectionPool connectionPool;
   private String idleError;
   private long startTime = 0;
 
@@ -135,6 +136,8 @@ public class MigrationManager extends BaseLockssDaemonManager
     super.startService();
     cfgMgr = getDaemon().getConfigManager();
     pluginMgr = getDaemon().getPluginManager();
+    connectionPool = new LockssUrlConnectionPool();
+    connectionPool.setConnectTimeout(15000);
   }
 
   public void stopService() {
@@ -158,15 +161,11 @@ public class MigrationManager extends BaseLockssDaemonManager
   }
 
   public boolean isDeactivateMigratedAus() {
-    return !isMigrationInDebugMode && isInMigrationMode && !isDeleteMigratedAus;
-  }
-
-  public boolean isTargetPostgres() {
-    return DbManagerSql.isTypePostgresql(dsClassName);
+    return isInMigrationMode && !isDeleteMigratedAus;
   }
 
   public boolean isSkipDbCopy() {
-    return !isTargetPostgres();
+    return false;
   }
 
   public void setConfig(Configuration config, Configuration oldConfig,
@@ -206,8 +205,8 @@ public class MigrationManager extends BaseLockssDaemonManager
     Configuration mCfg = cfgMgr.newConfiguration();
     mCfg.put(MigrationManager.PARAM_IS_IN_MIGRATION_MODE,
              String.valueOf(inMigrationMode));
-    cfgMgr.modifyCacheConfigFile(mCfg,
-        ConfigManager.CONFIG_FILE_MIGRATION, CONFIG_FILE_MIGRATION_HEADER);
+    updateMigrationConfigFile(mCfg);
+    this.isInMigrationMode = inMigrationMode;
   }
 
   public void setIsDbMoved(boolean isDbMoved) throws IOException {
@@ -219,10 +218,67 @@ public class MigrationManager extends BaseLockssDaemonManager
       log.debug("Not setting isDbMoved because in debug mode");
       return;
     }
+//     if (isMigrationInDebugMode()) {
+//       log.debug("Not setting isDbMoved because in debug mode");
+//       return;
+//     }
     Configuration mCfg = cfgMgr.newConfiguration();
     mCfg.put(MigrationManager.PARAM_IS_DB_MOVED, String.valueOf(isDbMoved));
-    cfgMgr.modifyCacheConfigFile(mCfg,
-        ConfigManager.CONFIG_FILE_MIGRATION, CONFIG_FILE_MIGRATION_HEADER);
+    updateMigrationConfigFile(mCfg);
+  }
+
+  /**
+   * Writes the migration config File ({@link
+   * ConfigManager#CONFIG_FILE_MIGRATION}), triggers and waits for a
+   * config relead.  If, after the reload, the DB datasource has
+   * changed to point a different DB (i.e., the V2 DB), restarts
+   * DbManager to establish a new DB connection
+   *
+   * @param mCfg A {@link Configuration} containing the migration configuration.
+   * @throws IOException
+   */
+  public boolean writeMigrationConfigFile(Configuration mCfg)
+      throws IOException {
+    Configuration wasDatasource = getDataSourceConfig();
+
+    ConfigManager cfgMgr = ConfigManager.getConfigManager();
+    cfgMgr.writeCacheConfigFile(mCfg, ConfigManager.CONFIG_FILE_MIGRATION,
+        MigrationManager.CONFIG_FILE_MIGRATION_HEADER, true);
+    return handleMigrationStateChange(wasDatasource);
+  }
+
+  public boolean updateMigrationConfigFile(Configuration mCfg)
+      throws IOException {
+    Configuration wasDatasource = getDataSourceConfig();
+
+    ConfigManager cfgMgr = ConfigManager.getConfigManager();
+    cfgMgr.modifyCacheConfigFile(mCfg, ConfigManager.CONFIG_FILE_MIGRATION,
+        MigrationManager.CONFIG_FILE_MIGRATION_HEADER);
+    return handleMigrationStateChange(wasDatasource);
+  }
+
+  private boolean handleMigrationStateChange(Configuration wasDatasource) {
+    cfgMgr.reloadAndWait();
+    Configuration isDatasource = getDataSourceConfig();
+    // restart DbManager if the datasource config has changed
+    if (!isDatasource.equals(wasDatasource)) {
+      DbManager dbMgr = getDaemon().getDbManager();
+      dbMgr.restartService();
+      return true;
+    }
+    return false;
+  }
+
+  public LockssUrlConnectionPool getConnectionPool() {
+    return connectionPool;
+  }
+
+  private Configuration getDataSourceConfig() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    if (config == null) {
+      return ConfigManager.EMPTY_CONFIGURATION;
+    }
+    return config.getConfigTree(DbManager.DATASOURCE_ROOT);
   }
 
   public Map getStatus() {
@@ -261,6 +317,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   public Map getFinishedPage(int index, int size) {
     Map stat = new HashMap();
     if (runner != null && idleError == null) {
+      stat.put(STATUS_FINISHED_INDEX, index);
       stat.put(STATUS_FINISHED_PAGE, mover.getFinishedStatusPage(index, size));
     }
     return stat;
@@ -313,6 +370,8 @@ public class MigrationManager extends BaseLockssDaemonManager
    * @throws IOException Thrown if there were network errors, or if the server response was
    * not a 200.
    */
+  // DBMover.copyDerbyDb() relies on this having run and supplied
+  // credentials, before it runs.
   public Configuration getConfigFromMigrationTarget(String hostname, int cfgUiPort,
                                                     String userName, String userPass)
       throws IOException {
@@ -320,8 +379,6 @@ public class MigrationManager extends BaseLockssDaemonManager
         "/DaemonStatus?table=ConfigStatus&output=csv");
     log.debug("V2 config GET url: " + cfgStatUrl.toString());
 
-    LockssUrlConnectionPool connectionPool = new LockssUrlConnectionPool();
-    connectionPool.setConnectTimeout(15000);
 
     LockssUrlConnection conn = UrlUtil.openConnection(cfgStatUrl.toString(),
                                                       connectionPool);

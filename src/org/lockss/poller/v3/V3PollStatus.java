@@ -47,10 +47,10 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.poller.PollManager.*;
 import org.lockss.hasher.LocalHashResult;
-import org.lockss.state.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 import org.lockss.protocol.V3LcapMessage.PollNak;
+import org.lockss.state.*;
 
 import static org.lockss.poller.v3.V3Poller.*;
 import static org.lockss.poller.v3.V3Voter.*;
@@ -270,6 +270,9 @@ public class V3PollStatus {
 //                                     ColumnDescriptor.TYPE_STRING,
 // 				    au.getName()));
 //       }
+        summary.add(new StatusTable.SummaryInfo("Protocol Version",
+                                                ColumnDescriptor.TYPE_STRING,
+                                                Poll.V3_POLL + "." + V3LcapMessage.getSupportedProtocolRev()));
       return summary;
     }
 

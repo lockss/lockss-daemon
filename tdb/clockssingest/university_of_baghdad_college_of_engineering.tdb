@@ -24,19 +24,19 @@
       param[journal_id] = ijcpe
       #published 2000-present
 
-      au < crawling ; exists ; 2000 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2000 ; 1 ; 2000 ; >
+      au < frozen ; exists ; 2000 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2000 ; 1 ; 2000 ; >
       au < testing ; exists ; 2001 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2001 ; 2 ; 2001 ; >
       au < testing ; exists ; 2002 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2002 ; 3 ; 2002 ; >
       au < testing ; exists ; 2003 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2003 ; 4 ; 2003 ; >
-      au < crawling ; exists ; 2004 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2004 ; 5 ; 2004 ; >
+      au < frozen ; exists ; 2004 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2004 ; 5 ; 2004 ; >
       au < doesNotExist ; doesNotExist ; 2005 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2005 ; 6 ; 2005 ; >
       au < doesNotExist ; doesNotExist ; 2006 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2006 ; 7 ; 2006 ; >
-      au < crawling ; exists ; 2007 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2007 ; 8 ; 2007 ; >
-      au < ready ; exists ; 2008 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2008 ; 9 ; 2008 ; >
-      au < ready ; exists ; 2009 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2009 ; 10 ; 2009 ; >
-      au < ready ; exists ; 2010 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2010 ; 11 ; 2010 ; >
-      au < crawling ; exists ; 2011 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2011 ; 12 ; 2011 ; >
-      au < crawling ; exists ; 2012 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2012 ; 13 ; 2012 ; >
+      au < frozen ; exists ; 2007 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2007 ; 8 ; 2007 ; >
+      au < frozen ; exists ; 2008 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2008 ; 9 ; 2008 ; >
+      au < frozen ; exists ; 2009 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2009 ; 10 ; 2009 ; >
+      au < frozen ; exists ; 2010 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2010 ; 11 ; 2010 ; >
+      au < frozen ; exists ; 2011 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2011 ; 12 ; 2011 ; >
+      au < frozen ; exists ; 2012 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2012 ; 13 ; 2012 ; >
       au < frozen ; exists ; 2013 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2013 ; 14 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2014 ; 15 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Iraqi Journal of Chemical and Petroleum Engineering Volume 2015 ; 16 ; 2015 ; >
@@ -64,7 +64,7 @@
       param[journal_id] = main
       #published 2012-present
 
-      au < crawling ; exists ; 2012 ; Iraqi Journal of Engineering Volume 2012 ; 18 ; 2012 ; >
+      au < frozen ; exists ; 2012 ; Iraqi Journal of Engineering Volume 2012 ; 18 ; 2012 ; >
       au < frozen ; exists ; 2013 ; Iraqi Journal of Engineering Volume 2013 ; 19 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Iraqi Journal of Engineering Volume 2014 ; 20 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Iraqi Journal of Engineering Volume 2015 ; 21 ; 2015 ; >

@@ -1594,6 +1594,59 @@ public class TestConfigManager extends LockssTestCase {
     assertMatchesRE("02-yyy.txt.gz$", pf2.getPath());
   }
 
+  public void testMigrate() {
+
+    // Start with a non-V2 param
+    Configuration config = ConfigurationUtil.fromArgs("a", "v");
+    Configuration orig = config.copy();
+    // Should do nothing
+    mgr.setMigrationParams(config);
+    assertEquals(orig, config);
+
+    // ... even in migration mode
+    config.put("org.lockss.v2.migrate.inMigrationMode", "true");
+    orig = config.copy();
+    mgr.setMigrationParams(config);
+    assertEquals(orig, config);
+    config.put("org.lockss.v2.migrate.inMigrationMode", "false");
+
+    // V2 params that s.b. installed if inMigrationMode is true
+    config.put("v2.org.lockss.comm.migrateTo", "TCP:[171.66.236.20]:9729");
+
+    // V2 DB params that s.b. installed if both inMigrationMode and
+    // isDbMoved are true
+    config.put("v2.org.lockss.dbManager.datasource.databaseName", "DB_NAME");
+    config.put("v2.org.lockss.dbManager.datasource.className", "DB_CLASS");
+    config.put("v2.org.lockss.dbManager.datasource.user", "DB_USER");
+
+    orig = config.copy();
+    // Should do nothing
+    mgr.setMigrationParams(config);
+    assertEquals(orig, config);
+
+    config.put("org.lockss.v2.migrate.inMigrationMode", "true");
+    mgr.setMigrationParams(config);
+    Configuration exp = ConfigurationUtil
+      .fromArgs("a", "v",
+                "org.lockss.v2.migrate.inMigrationMode", "true",
+                "v2.org.lockss.comm.migrateTo", "TCP:[171.66.236.20]:9729",
+                "org.lockss.comm.migrateTo", "TCP:[171.66.236.20]:9729",
+                // DB params not copied yet
+                "v2.org.lockss.dbManager.datasource.databaseName", "DB_NAME",
+                "v2.org.lockss.dbManager.datasource.className", "DB_CLASS",
+                "v2.org.lockss.dbManager.datasource.user", "DB_USER");
+    assertEquals(exp, config);
+
+    config.put("org.lockss.v2.migrate.isDbMoved", "true");
+    mgr.setMigrationParams(config);
+    exp.put("org.lockss.v2.migrate.isDbMoved", "true");
+    // DB params now copyied
+    exp.put("org.lockss.dbManager.datasource.databaseName", "DB_NAME");
+    exp.put("org.lockss.dbManager.datasource.className", "DB_CLASS");
+    exp.put("org.lockss.dbManager.datasource.user", "DB_USER");
+    assertEquals(exp, config);
+  }
+
   private Configuration newConfiguration() {
     return new ConfigurationPropTreeImpl();
   }

@@ -91,7 +91,13 @@ public class DataSourceUtil {
       String dsClassName = dsCfg.get("className");
       String databaseName = dsCfg.get("databaseName");
 
-      Connection conn = getConnection(ds, maxRetryCount, retryDelay, true);
+      Configuration cfg = ConfigManager.getCurrentConfig();
+      int validationMaxRetryCount =
+          cfg.getInt(DbManager.PARAM_VALIDATION_MAX_RETRY_COUNT, DbManager.DEFAULT_VALIDATION_MAX_RETRY_COUNT);
+      long validationRetryDelay =
+          cfg.getTimeInterval(DbManager.PARAM_VALIDATION_RETRY_DELAY, DbManager.DEFAULT_VALIDATION_RETRY_DELAY);
+
+      Connection conn = getConnection(ds, validationMaxRetryCount, validationRetryDelay, true);
 
       if (DbManagerSql.isTypePostgresql(dsClassName)) {
         return getSqlDatabaseExists(conn, databaseName, FIND_DATABASE_QUERY_PG);

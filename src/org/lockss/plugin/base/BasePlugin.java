@@ -377,6 +377,26 @@ public abstract class BasePlugin
     if(config == null) {
       throw new  ArchivalUnit.ConfigurationException("Null Configuration");
     }
+    String auid = null;
+    try {
+      auid = pluginMgr.generateAuId(this, config);
+    } catch (Exception e) {
+      log.warning("Can't generate auid for " + this + ", " + config +
+                  ", not consuling tdb for non-def params",
+                  e);
+    }
+    return configureAu(config, au, auid);
+  }
+
+  public ArchivalUnit configureAu(Configuration config, ArchivalUnit au,
+                                  String auid) throws
+      ArchivalUnit.ConfigurationException {
+    if (config == null) {
+      throw new ArchivalUnit.ConfigurationException("Null Configuration");
+    }
+    if (auid != null) {
+      config = addNonDefParams(config, auid);
+    }
     if (au != null) {
       au.setConfiguration(config);
     }
@@ -384,6 +404,38 @@ public abstract class BasePlugin
       au = createAu(config);
     }
     return au;
+  }
+
+  // If any of the plugin's nondef params don't have values, look them
+  // up from the TDB.  This allows existing AUs to conform to later
+  // changes made to a plugin
+  Configuration addNonDefParams(Configuration auConfig, String auid) {
+    List<ConfigParamDescr> nondef = new ArrayList<>();
+    for (ConfigParamDescr descr : getLocalAuConfigDescrs()) {
+      if (!descr.isDefinitional() && !auConfig.containsKey(descr.getKey())) {
+        nondef.add(descr);
+      }
+    }
+    if (nondef.isEmpty()) {
+      return auConfig;
+    }
+    TitleConfig tc = getTitleConfigFromAuId(auid);
+    if (tc == null) {
+      log.error("No tdb entry, not adding nondef params to " + auid);
+      return auConfig;
+    }
+    // Don't modify passed in auConfig
+    auConfig = auConfig.copy();
+    for (ConfigParamDescr descr : nondef) {
+      ConfigParamAssignment cpa = tc.findCpa(descr);
+      if (cpa != null) {
+        log.debug2("Adding " + descr.getKey() + " to " + auid);
+        auConfig.put(descr.getKey(), cpa.getValue());
+      } else {
+        log.error("Shouldn't happen: Can't find ConfigParamAssignment for ConfigParamDescr " + descr + " in " + tc);
+      }
+    }
+    return auConfig;
   }
 
   /** Create an AU and add it to our list.  Subclasses should implement

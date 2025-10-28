@@ -163,6 +163,30 @@ public class DbManager extends BaseLockssDaemonManager
   static final boolean DEFAULT_DBMANAGER_ENABLED = true;
 
   /**
+   * Maximum number of retries for transient SQL exceptions during database initialization.
+   */
+  public static final String PARAM_INITIAL_MAX_RETRY_COUNT = PREFIX + "initialMaxRetryCount";
+  public static final int DEFAULT_INITIAL_MAX_RETRY_COUNT = 60;
+
+  /**
+   * Delay  between retries for transient SQL exceptions during database initialization.
+   */
+  public static final String PARAM_INITIAL_RETRY_DELAY = PREFIX + "initialRetryDelay";
+  public static final long DEFAULT_INITIAL_RETRY_DELAY = 30 * Constants.SECOND;
+
+  /**
+   * Maximum number of retries for transient SQL exceptions during database configuration validation.
+   */
+  public static final String PARAM_VALIDATION_MAX_RETRY_COUNT = PREFIX + "validationMaxRetryCount";
+  public static final int DEFAULT_VALIDATION_MAX_RETRY_COUNT = 10;
+
+  /**
+   * Delay  between retries for transient SQL exceptions during database configuration validation.
+   */
+  public static final String PARAM_VALIDATION_RETRY_DELAY = PREFIX + "validationRetryDelay";
+  public static final long DEFAULT_VALIDATION_RETRY_DELAY = 3 * Constants.SECOND;
+
+  /**
    * Maximum number of retries for transient SQL exceptions.
    */
   public static final String PARAM_MAX_RETRY_COUNT = PREFIX + "maxRetryCount";
@@ -264,9 +288,27 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   public void restartService() {
+    Configuration cur = ConfigManager.getCurrentConfig();
+    if (cur.get(PARAM_DATASOURCE_CLASSNAME) == null) {
+      log.debug("Restarting, was default DB");
+    } else {
+      log.debug("Restarting, was "
+                + cur.get(PARAM_DATASOURCE_CLASSNAME)
+                + ", " + cur.get(PARAM_DATASOURCE_SERVERNAME)
+                + ":" + cur.get(PARAM_DATASOURCE_PORTNUMBER));
+    }
     stopService();
     resetConfig();
     startService();
+    Configuration now = ConfigManager.getCurrentConfig();
+    if (now.get(PARAM_DATASOURCE_CLASSNAME) == null) {
+      log.debug("Restarted with default DB");
+    } else {
+      log.debug("Restarted with "
+                + now.get(PARAM_DATASOURCE_CLASSNAME)
+                + ", " + now.get(PARAM_DATASOURCE_SERVERNAME)
+                + ":" + now.get(PARAM_DATASOURCE_PORTNUMBER));
+    }
   }
 
   /**

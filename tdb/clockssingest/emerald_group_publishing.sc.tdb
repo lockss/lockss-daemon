@@ -71,7 +71,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Accounting Research Journal Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Accounting Research Journal Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Accounting Research Journal Volume 37 ; 37 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Accounting Research Journal Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Accounting Research Journal Volume 38 ; 38 ; >
 
   }
 
@@ -436,7 +436,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; American Journal of Business Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; American Journal of Business Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; American Journal of Business Volume 38 ; 38 ; >
-    au < ready ; exists ; 2024 ; 2024 ; American Journal of Business Volume 39 ; 39 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; American Journal of Business Volume 39 ; 39 ; >
     au < crawling ; exists ; 2025 ; 2025 ; American Journal of Business Volume 40 ; 40 ; >
 
   }
@@ -1140,7 +1140,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; The Bottom Line: Managing Library Finances Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; The Bottom Line: Managing Library Finances Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; The Bottom Line: Managing Library Finances Volume 36 ; 36 ; >
-    au < ready ; exists ; 2024 ; 2024 ; The Bottom Line: Managing Library Finances Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; The Bottom Line: Managing Library Finances Volume 37 ; 37 ; >
     au < crawling ; exists ; 2025 ; 2025 ; The Bottom Line: Managing Library Finances Volume 38 ; 38 ; >
 
   }
@@ -1281,7 +1281,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; British Food Journal Volume 123 ; 123 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; British Food Journal Volume 124 ; 124 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; British Food Journal Volume 125 ; 125 ; >
-    au < ready ; exists ; 2024 ; 2024 ; British Food Journal Volume 126 ; 126 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; British Food Journal Volume 126 ; 126 ; >
     au < crawling ; exists ; 2025 ; 2025 ; British Food Journal Volume 127 ; 127 ; >
 
   }
@@ -1376,7 +1376,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Built Environment Project and Asset Management Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Built Environment Project and Asset Management Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Built Environment Project and Asset Management Volume 13 ; 13 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Built Environment Project and Asset Management Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Built Environment Project and Asset Management Volume 14 ; 14 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Built Environment Project and Asset Management Volume 15 ; 15 ; >
 
   }
@@ -1651,7 +1651,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Chinese Management Studies Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Chinese Management Studies Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Chinese Management Studies Volume 17 ; 17 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Chinese Management Studies Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Chinese Management Studies Volume 18 ; 18 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Chinese Management Studies Volume 19 ; 19 ; >
 
   }
@@ -1856,7 +1856,7 @@
     param[journal_id] = cc
     #continues = 0160-4953
 
-    au < ready ; exists ; 2018 ; 2018 ; Collection and Curation Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Collection and Curation Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Collection and Curation Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Collection and Curation Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Collection and Curation Volume 40 ; 40 ; >
@@ -2090,7 +2090,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Corporate Governance Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Corporate Governance Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Corporate Governance Volume 24 ; 24 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Corporate Governance Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Corporate Governance Volume 25 ; 25 ; >
 
   }
 
@@ -2226,7 +2226,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Development and Learning in Organizations Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Development and Learning in Organizations Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Development and Learning in Organizations Volume 38 ; 38 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Development and Learning in Organizations Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Development and Learning in Organizations Volume 39 ; 39 ; >
 
   }
 
@@ -2638,7 +2638,7 @@
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Engineering Computations Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Engineering Computations Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Engineering Computations Volume 36 ; 36 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Engineering Computations Volume 37 ; 37 ; > #500 Error
+    au < crawling ; exists ; 2020 ; 2020 ; Engineering Computations Volume 37 ; 37 ; > #500 Error
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Engineering Computations Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Engineering Computations Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Engineering Computations Volume 40 ; 40 ; >
@@ -2899,7 +2899,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; European Business Review Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; European Business Review Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; European Business Review Volume 35 ; 35 ; >
-    au < ready ; exists ; 2024 ; 2024 ; European Business Review Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; European Business Review Volume 36 ; 36 ; >
     au < crawling ; exists ; 2025 ; 2025 ; European Business Review Volume 37 ; 37 ; >
 
   }
@@ -3895,7 +3895,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Digital Policy, Regulation and Governance Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Digital Policy, Regulation and Governance Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Digital Policy, Regulation and Governance Volume 26 ; 26 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Digital Policy, Regulation and Governance Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Digital Policy, Regulation and Governance Volume 27 ; 27 ; >
 
   }
 
@@ -4003,7 +4003,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Information Technology & People Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Information Technology & People Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Information Technology & People Volume 37 ; 37 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Information Technology & People Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Information Technology & People Volume 38 ; 38 ; >
 
   }
 
@@ -4068,7 +4068,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Interactive Technology and Smart Education Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Interactive Technology and Smart Education Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Interactive Technology and Smart Education Volume 21 ; 21 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Interactive Technology and Smart Education Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Interactive Technology and Smart Education Volume 22 ; 22 ; >
 
   }
 
@@ -4149,10 +4149,10 @@
     au < manifest ; exists ; 2002 ; 2002 ; Interlending & Document Supply Volume 30 ; 30 ; >
     au < ready ; exists ; 2003 ; 2003 ; Interlending & Document Supply Volume 31 ; 31 ; >
     au < ready ; exists ; 2004 ; 2004 ; Interlending & Document Supply Volume 32 ; 32 ; >
-    au < ready ; exists ; 2005 ; 2005 ; Interlending & Document Supply Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2005 ; 2005 ; Interlending & Document Supply Volume 33 ; 33 ; >
     au < ready ; exists ; 2006 ; 2006 ; Interlending & Document Supply Volume 34 ; 34 ; >
     au < ready ; exists ; 2007 ; 2007 ; Interlending & Document Supply Volume 35 ; 35 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Interlending & Document Supply Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Interlending & Document Supply Volume 36 ; 36 ; >
     au < ready ; exists ; 2009 ; 2009 ; Interlending & Document Supply Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Interlending & Document Supply Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Interlending & Document Supply Volume 39 ; 39 ; >
@@ -4186,7 +4186,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal for Lesson and Learning Studies Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal for Lesson and Learning Studies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal for Lesson and Learning Studies Volume 13 ; 13 ; >
-    au < ready ; exists ; 2025 ; 2025 ; International Journal for Lesson and Learning Studies Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Journal for Lesson and Learning Studies Volume 14 ; 14 ; >
 
   }
 
@@ -4233,7 +4233,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Studies in Graduate and Postdoctoral Education Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Studies in Graduate and Postdoctoral Education Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Studies in Graduate and Postdoctoral Education Volume 15 ; 15 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Studies in Graduate and Postdoctoral Education Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Studies in Graduate and Postdoctoral Education Volume 16 ; 16 ; >
 
   }
 
@@ -4341,7 +4341,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Bank Marketing Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Bank Marketing Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Bank Marketing Volume 42 ; 42 ; >
-    au < ready ; exists ; 2025 ; 2025 ; International Journal of Bank Marketing Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Journal of Bank Marketing Volume 43 ; 43 ; >
 
   }
 
@@ -4761,7 +4761,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; International Journal of Educational Management Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Educational Management Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Educational Management Volume 37 ; 37 ; >
-    au < ready ; exists ; 2024 ; 2024 ; International Journal of Educational Management Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; International Journal of Educational Management Volume 38 ; 38 ; >
     au < crawling ; exists ; 2025 ; 2025 ; International Journal of Educational Management Volume 39 ; 39 ; >
 
   }
@@ -4855,7 +4855,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Energy Sector Management Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Energy Sector Management Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Energy Sector Management Volume 18 ; 18 ; >
-    au < ready ; exists ; 2025 ; 2025 ; International Journal of Energy Sector Management Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Journal of Energy Sector Management Volume 19 ; 19 ; >
 
   }
 
@@ -4928,7 +4928,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Event and Festival Management Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Event and Festival Management Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Event and Festival Management Volume 15 ; 15 ; >
-    au < ready ; exists ; 2025 ; 2025 ; International Journal of Event and Festival Management Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Journal of Event and Festival Management Volume 16 ; 16 ; >
 
   }
 
@@ -5073,7 +5073,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; International Journal of Intelligent Computing and Cybernetics Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Intelligent Computing and Cybernetics Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Intelligent Computing and Cybernetics Volume 16 ; 16 ; >
-    au < ready ; exists ; 2024 ; 2024 ; International Journal of Intelligent Computing and Cybernetics Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; International Journal of Intelligent Computing and Cybernetics Volume 17 ; 17 ; >
     au < crawling ; exists ; 2025 ; 2025 ; International Journal of Intelligent Computing and Cybernetics Volume 18 ; 18 ; >
 
   }
@@ -5139,7 +5139,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; International Journal of Law and Management Volume 63 ; 63 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Law and Management Volume 64 ; 64 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Law and Management Volume 65 ; 65 ; >
-    au < ready ; exists ; 2024 ; 2024 ; International Journal of Law and Management Volume 66 ; 66 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; International Journal of Law and Management Volume 66 ; 66 ; >
     au < crawling ; exists ; 2025 ; 2025 ; International Journal of Law and Management Volume 67 ; 67 ; >
 
   }
@@ -5351,7 +5351,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Managerial Finance Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Managerial Finance Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Managerial Finance Volume 20 ; 20 ; >
-    au < ready ; exists ; 2025 ; 2025 ; International Journal of Managerial Finance Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Journal of Managerial Finance Volume 21 ; 21 ; >
 
   }
 
@@ -5383,7 +5383,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Managing Projects in Business Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Managing Projects in Business Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Managing Projects in Business Volume 17 ; 17 ; >
-    au < ready ; exists ; 2025 ; 2025 ; International Journal of Managing Projects in Business Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Journal of Managing Projects in Business Volume 18 ; 18 ; >
 
   }
 
@@ -5640,7 +5640,7 @@
     au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; International Journal of Organizational Analysis Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; International Journal of Organizational Analysis Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; International Journal of Organizational Analysis Volume 11 ; 11 ; >
-    au < ready ; exists ; 2004 ; 2004 ; International Journal of Organizational Analysis Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; International Journal of Organizational Analysis Volume 12 ; 12 ; >
 
   }
 
@@ -5935,7 +5935,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Productivity and Performance Management Volume 71 ; 71 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Productivity and Performance Management Volume 72 ; 72 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Productivity and Performance Management Volume 73 ; 73 ; >
-    au < ready ; exists ; 2025 ; 2025 ; International Journal of Productivity and Performance Management Volume 74 ; 74 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Journal of Productivity and Performance Management Volume 74 ; 74 ; >
 
   }
 
@@ -5987,7 +5987,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Public Sector Management Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Public Sector Management Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Public Sector Management Volume 37 ; 37 ; >
-    au < ready ; exists ; 2025 ; 2025 ; International Journal of Public Sector Management Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Journal of Public Sector Management Volume 38 ; 38 ; >
 
   }
 
@@ -6042,7 +6042,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; International Journal of Quality & Reliability Management Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Quality & Reliability Management Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Quality & Reliability Management Volume 40 ; 40 ; >
-    au < ready ; exists ; 2024 ; 2024 ; International Journal of Quality & Reliability Management Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; International Journal of Quality & Reliability Management Volume 41 ; 41 ; >
     au < crawling ; exists ; 2025 ; 2025 ; International Journal of Quality & Reliability Management Volume 42 ; 42 ; >
 
   }
@@ -6474,7 +6474,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Wine Business Research Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Wine Business Research Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Wine Business Research Volume 36 ; 36 ; >
-    au < ready ; exists ; 2025 ; 2025 ; International Journal of Wine Business Research Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Journal of Wine Business Research Volume 37 ; 37 ; >
 
   }
 
@@ -6796,7 +6796,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Advances in management Research Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Advances in management Research Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Advances in management Research Volume 21 ; 21 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Advances in management Research Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Advances in management Research Volume 22 ; 22 ; >
 
   }
 
@@ -6855,7 +6855,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Agribusiness in Developing and Emerging Economies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Agribusiness in Developing and Emerging Economies Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Agribusiness in Developing and Emerging Economies Volume 14 ; 14 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Agribusiness in Developing and Emerging Economies Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Agribusiness in Developing and Emerging Economies Volume 15 ; 15 ; >
 
   }
 
@@ -6876,10 +6876,10 @@
     au < manifest ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 6 (2000) ; 6 ; >
     au < manifest ; exists ; 2001 ; 2001 ; Journal of Applied Accounting Research Volume 6 (2001) ; 6 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Journal of Applied Accounting Research Volume 6 (2002) ; 6 ; >
-    au < ready ; exists ; 2004 ; 2004 ; Journal of Applied Accounting Research Volume 7 (2004) ; 7 ; >
+    au < frozen ; exists ; 2004 ; 2004 ; Journal of Applied Accounting Research Volume 7 (2004) ; 7 ; >
     au < ready ; exists ; 2005 ; 2005 ; Journal of Applied Accounting Research Volume 7 (2005) ; 7 ; >
-    au < ready ; exists ; 2006 ; 2006 ; Journal of Applied Accounting Research Volume 8 (2006) ; 8 ; >
-    au < ready ; exists ; 2007 ; 2007 ; Journal of Applied Accounting Research Volume 8 (2007) ; 8 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Journal of Applied Accounting Research Volume 8 (2006) ; 8 ; >
+    au < frozen ; exists ; 2007 ; 2007 ; Journal of Applied Accounting Research Volume 8 (2007) ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Applied Accounting Research Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Applied Accounting Research Volume 11 ; 11 ; >
@@ -7064,7 +7064,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Business & Industrial Marketing Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Business & Industrial Marketing Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Business & Industrial Marketing Volume 39 ; 39 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Business & Industrial Marketing Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Business & Industrial Marketing Volume 40 ; 40 ; >
 
   }
 
@@ -7157,7 +7157,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Children's Services: Research informing policy and practice Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Children's Services: Research informing policy and practice Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Children's Services: Research informing policy and practice Volume 19 ; 19 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Children's Services: Research informing policy and practice Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Children's Services: Research informing policy and practice Volume 20 ; 20 ; >
 
   }
 
@@ -7189,7 +7189,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Chinese Economic and Foreign Trade Studies Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Chinese Economic and Foreign Trade Studies Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Chinese Economic and Foreign Trade Studies Volume 17 ; 17 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Chinese Economic and Foreign Trade Studies Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Chinese Economic and Foreign Trade Studies Volume 18 ; 18 ; >
 
   }
 
@@ -7372,8 +7372,8 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Corporate Real Estate Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Corporate Real Estate Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Corporate Real Estate Volume 25 ; 25 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Journal of Corporate Real Estate Volume 26 ; 26 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Corporate Real Estate Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of Corporate Real Estate Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Corporate Real Estate Volume 27 ; 27 ; >
 
   }
 
@@ -7428,7 +7428,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Cultural Heritage Management and Sustainable Development Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Cultural Heritage Management and Sustainable Development Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Cultural Heritage Management and Sustainable Development Volume 14 ; 14 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Cultural Heritage Management and Sustainable Development Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Cultural Heritage Management and Sustainable Development Volume 15 ; 15 ; >
 
   }
 
@@ -7556,7 +7556,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 ; >
@@ -7811,7 +7811,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 18 ; 18 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Enterprising Communities: People and Places in the Global Economy Volume 19 ; 19 ; >
 
   }
 
@@ -7956,7 +7956,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Facilities Management Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Facilities Management Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Facilities Management Volume 22 ; 22 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Facilities Management Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Facilities Management Volume 23 ; 23 ; >
 
   }
 
@@ -7984,7 +7984,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Family Business Management Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Family Business Management Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Family Business Management Volume 14 ; 14 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Family Business Management Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Family Business Management Volume 15 ; 15 ; >
 
   }
 
@@ -8224,7 +8224,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Financial Reporting & Accounting Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Financial Reporting & Accounting Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Financial Reporting & Accounting Volume 22 ; 22 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Financial Reporting & Accounting Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Financial Reporting & Accounting Volume 23 ; 23 ; >
 
   }
 
@@ -8254,7 +8254,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Global Responsibility Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Global Responsibility Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Global Responsibility Volume 15 ; 15 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Global Responsibility Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Global Responsibility Volume 16 ; 16 ; >
 
   }
 
@@ -8293,7 +8293,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Health Organization and Management Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Health Organization and Management Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Health Organization and Management Volume 38 ; 38 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Health Organization and Management Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Health Organization and Management Volume 39 ; 39 ; >
 
   }
 
@@ -8323,7 +8323,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Historical Research in Marketing Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Historical Research in Marketing Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Historical Research in Marketing Volume 15 ; 15 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Journal of Historical Research in Marketing Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; Journal of Historical Research in Marketing Volume 16 ; 16 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Journal of Historical Research in Marketing Volume 17 ; 17 ; >
 
   }
@@ -8354,7 +8354,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Hospitality and Tourism Technology Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Hospitality and Tourism Technology Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Hospitality and Tourism Technology Volume 15 ; 15 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Hospitality and Tourism Technology Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Hospitality and Tourism Technology Volume 16 ; 16 ; >
 
   }
 
@@ -8411,7 +8411,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 14 ; 14 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Humanitarian Logistics and Supply Chain Management Volume 15 ; 15 ; >
 
   }
 
@@ -8571,7 +8571,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Integrated Care: Practical evidence for service improvement Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Integrated Care: Practical evidence for service improvement Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Integrated Care: Practical evidence for service improvement Volume 32 ; 32 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Integrated Care: Practical evidence for service improvement Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Integrated Care: Practical evidence for service improvement Volume 33 ; 33 ; >
 
   }
 
@@ -8746,7 +8746,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Islamic Accounting and Business Research Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Islamic Accounting and Business Research Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Islamic Accounting and Business Research Volume 15 ; 15 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Islamic Accounting and Business Research Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Islamic Accounting and Business Research Volume 16 ; 16 ; >
 
   }
 
@@ -8776,7 +8776,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Islamic Marketing Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Islamic Marketing Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Islamic Marketing Volume 15 ; 15 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Islamic Marketing Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Islamic Marketing Volume 16 ; 16 ; >
 
   }
 
@@ -9055,7 +9055,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Managerial Psychology Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Managerial Psychology Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Managerial Psychology Volume 39 ; 39 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Managerial Psychology Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Managerial Psychology Volume 40 ; 40 ; >
 
   }
 
@@ -9092,8 +9092,8 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Manufacturing Technology Management Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Manufacturing Technology Management Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Manufacturing Technology Management Volume 34 ; 34 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Journal of Manufacturing Technology Management Volume 35 ; 35 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Manufacturing Technology Management Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of Manufacturing Technology Management Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Manufacturing Technology Management Volume 36 ; 36 ; >
 
   }
 
@@ -9380,7 +9380,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Product & Brand Management Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Product & Brand Management Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Product & Brand Management Volume 33 ; 33 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Product & Brand Management Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Product & Brand Management Volume 34 ; 34 ; >
 
   }
 
@@ -9445,7 +9445,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Property Investment & Finance Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Property Investment & Finance Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Property Investment & Finance Volume 41 ; 41 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Journal of Property Investment & Finance Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of Property Investment & Finance Volume 42 ; 42 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Journal of Property Investment & Finance Volume 43 ; 43 ; >
 
   }
@@ -9724,7 +9724,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; The Journal of Risk Finance Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; The Journal of Risk Finance Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; The Journal of Risk Finance Volume 25 ; 25 ; >
-    au < ready ; exists ; 2025 ; 2025 ; The Journal of Risk Finance Volume 26 ; 26 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; The Journal of Risk Finance Volume 26 ; 26 ; >
 
   }
 
@@ -10067,7 +10067,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Workplace Learning Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Workplace Learning Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Workplace Learning Volume 36 ; 36 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Workplace Learning Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Workplace Learning Volume 37 ; 37 ; >
 
   }
 
@@ -10129,12 +10129,12 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Kybernetes Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Kybernetes Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Kybernetes Volume 47 ; 47 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Kybernetes Volume 48 ; 48 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Kybernetes Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Kybernetes Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Kybernetes Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Kybernetes Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Kybernetes Volume 52 ; 52 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Kybernetes Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Kybernetes Volume 53 ; 53 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Kybernetes Volume 54 ; 54 ; >
 
   }
@@ -10301,7 +10301,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; The Learning Organization Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; The Learning Organization Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; The Learning Organization Volume 31 ; 31 ; >
-    au < ready ; exists ; 2025 ; 2025 ; The Learning Organization Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; The Learning Organization Volume 32 ; 32 ; >
 
   }
 
@@ -10782,7 +10782,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Management of Environmental Quality: An International Journal Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Management of Environmental Quality: An International Journal Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Management of Environmental Quality: An International Journal Volume 35 ; 35 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Management of Environmental Quality: An International Journal Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Management of Environmental Quality: An International Journal Volume 36 ; 36 ; >
 
   }
 
@@ -10898,7 +10898,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 22 ; 22 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Management Research: The journal of the Iberoamerican Academy of Management Volume 23 ; 23 ; >
 
   }
 
@@ -11017,7 +11017,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Managerial Finance Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Managerial Finance Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Managerial Finance Volume 50 ; 50 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Managerial Finance Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Managerial Finance Volume 51 ; 51 ; >
 
   }
 
@@ -11278,7 +11278,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Meditari Accountancy Research Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Meditari Accountancy Research Volume 31 ; 31 ; >
     au < ready ; exists ; 2024 ; 2024 ; Meditari Accountancy Research Volume 32 ; 32 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Meditari Accountancy Research Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Meditari Accountancy Research Volume 33 ; 33 ; >
 
 
   }
@@ -11383,7 +11383,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Mental Health Review Journal: Research, Policy and Practice Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Mental Health Review Journal: Research, Policy and Practice Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Mental Health Review Journal: Research, Policy and Practice Volume 29 ; 29 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Mental Health Review Journal: Research, Policy and Practice Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Mental Health Review Journal: Research, Policy and Practice Volume 30 ; 30 ; >
 
   }
 
@@ -11515,9 +11515,9 @@
     # online from 2007
 
     au < ready ; exists ; 2003 ; 2003 ; Multinational Business Review Volume 11 ; 11 ; >
-    au < ready ; exists ; 2004 ; 2004 ; Multinational Business Review Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2004 ; 2004 ; Multinational Business Review Volume 12 ; 12 ; >
     au < ready ; exists ; 2005 ; 2005 ; Multinational Business Review Volume 13 ; 13 ; >
-    au < ready ; exists ; 2006 ; 2006 ; Multinational Business Review Volume 14 ; 14 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; Multinational Business Review Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Multinational Business Review Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Multinational Business Review Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Multinational Business Review Volume 17 ; 17 ; >
@@ -11536,7 +11536,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Multinational Business Review Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Multinational Business Review Volume 31 ; 31 ; >
     au < ready ; exists ; 2024 ; 2024 ; Multinational Business Review Volume 32 ; 32 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Multinational Business Review Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Multinational Business Review Volume 33 ; 33 ; >
 
   }
 
@@ -11566,7 +11566,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Nankai Business Review International Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Nankai Business Review International Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Nankai Business Review International Volume 15 ; 15 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Nankai Business Review International Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Nankai Business Review International Volume 16 ; 16 ; >
 
   }
 
@@ -11793,7 +11793,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Nutrition & Food Science Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Nutrition & Food Science Volume 53 ; 53 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Nutrition & Food Science Volume 54 ; 54 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Nutrition & Food Science Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Nutrition & Food Science Volume 55 ; 55 ; >
 
   }
 
@@ -11921,7 +11921,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; On The Horizon Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; On The Horizon Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; On The Horizon Volume 32 ; 32 ; >
-    au < ready ; exists ; 2025 ; 2025 ; On The Horizon Volume 33 ; 33 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; On The Horizon Volume 33 ; 33 ; >
 
   }
 
@@ -12016,7 +12016,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Online Information Review Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Online Information Review Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Online Information Review Volume 48 ; 48 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Online Information Review Volume 49 ; 49 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Online Information Review Volume 49 ; 49 ; >
 
   }
 
@@ -12111,7 +12111,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Performance Measurement and Metrics Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Performance Measurement and Metrics Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Performance Measurement and Metrics Volume 21 ; 21 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Performance Measurement and Metrics Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Performance Measurement and Metrics Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Performance Measurement and Metrics Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Performance Measurement and Metrics Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Performance Measurement and Metrics Volume 25 ; 25 ; >
@@ -12247,7 +12247,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Pigment & Resin Technology Volume 47 ; 47 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Pigment & Resin Technology Volume 48 ; 48 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Pigment & Resin Technology Volume 49 ; 49 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Pigment & Resin Technology Volume 50 ; 50 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Pigment & Resin Technology Volume 50 ; 50 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Pigment & Resin Technology Volume 51 ; 51 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Pigment & Resin Technology Volume 52 ; 52 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Pigment & Resin Technology Volume 53 ; 53 ; >
@@ -12312,7 +12312,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Policing: An International Journal of Police Strategies & Management Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Policing: An International Journal of Police Strategies & Management Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Policing: An International Journal of Police Strategies & Management Volume 46 ; 46 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Policing: An International Journal of Police Strategies & Management Volume 47 ; 47 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; Policing: An International Journal of Police Strategies & Management Volume 47 ; 47 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Policing: An International Journal of Police Strategies & Management Volume 48 ; 48 ; >
 
   }
@@ -12517,7 +12517,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Qualitative Market Research: An International Journal Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Qualitative Market Research: An International Journal Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Qualitative Market Research: An International Journal Volume 27 ; 27 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Qualitative Market Research: An International Journal Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Qualitative Market Research: An International Journal Volume 28 ; 28 ; >
 
   }
 
@@ -12777,7 +12777,7 @@
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Rapid Prototyping Journal Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Rapid Prototyping Journal Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Rapid Prototyping Journal Volume 26 ; 26 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Rapid Prototyping Journal Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Rapid Prototyping Journal Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Rapid Prototyping Journal Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Rapid Prototyping Journal Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Rapid Prototyping Journal Volume 30 ; 30 ; >
@@ -12830,7 +12830,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Records Management Journal Volume 32 ; 32 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Records Management Journal Volume 33 ; 33 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Records Management Journal Volume 34 ; 34 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Records Management Journal Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Records Management Journal Volume 35 ; 35 ; >
 
   }
 
@@ -13214,7 +13214,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Social Responsibility Journal Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Social Responsibility Journal Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Social Responsibility Journal Volume 20 ; 20 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Social Responsibility Journal Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Social Responsibility Journal Volume 21 ; 21 ; >
 
   }
 
@@ -13371,7 +13371,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Sport, Business and Management: An International Journal Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Sport, Business and Management: An International Journal Volume 13 ; 13 ; >
     au < ready ; exists ; 2024 ; 2024 ; Sport, Business and Management: An International Journal Volume 14 ; 14 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Sport, Business and Management: An International Journal Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Sport, Business and Management: An International Journal Volume 15 ; 15 ; >
 
   }
 
@@ -13410,7 +13410,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Strategic Direction Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Strategic Direction Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Strategic Direction Volume 40 ; 40 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Strategic Direction Volume 41 ; 41 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Strategic Direction Volume 41 ; 41 ; >
 
   }
 
@@ -13447,7 +13447,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Strategic HR Review Volume 21 ; 21 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Strategic HR Review Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Strategic HR Review Volume 23 ; 23 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Strategic HR Review Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Strategic HR Review Volume 24 ; 24 ; >
 
   }
 
@@ -13707,7 +13707,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Studies in Economics and Finance Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Studies in Economics and Finance Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Studies in Economics and Finance Volume 41 ; 41 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Studies in Economics and Finance Volume 42 ; 42 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Studies in Economics and Finance Volume 42 ; 42 ; >
 
   }
 
@@ -13826,7 +13826,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Team Performance Management Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Team Performance Management Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Team Performance Management Volume 30 ; 30 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Team Performance Management Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Team Performance Management Volume 31 ; 31 ; >
 
   }
 
@@ -13870,7 +13870,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 29 ; 29 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 30 ; 30 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Tizard Learning Disability Review: Practice, management, research and innovation Volume 30 ; 30 ; >
 
   }
 
@@ -14043,7 +14043,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; The TQM Journal Volume 34 ; 34 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; The TQM Journal Volume 35 ; 35 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; The TQM Journal Volume 36 ; 36 ; >
-    au < ready ; exists ; 2025 ; 2025 ; The TQM Journal Volume 37 ; 37 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; The TQM Journal Volume 37 ; 37 ; >
 
   }
 
@@ -14353,7 +14353,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 28 ; 28 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Working with Older People: Practical approaches to work, leisure, lifestyle and learning Volume 29 ; 29 ; >
 
   }
 
@@ -14697,7 +14697,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Evidence-based HRM Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Evidence-based HRM Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Evidence-based HRM Volume 12 ; 12 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Evidence-based HRM Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Evidence-based HRM Volume 13 ; 13 ; >
 
   }
 
@@ -14930,7 +14930,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Organization Theory & Behavior Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Organization Theory & Behavior Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Organization Theory & Behavior Volume 27 ; 27 ; >
-    au < ready ; exists ; 2025 ; 2025 ; International Journal of Organization Theory & Behavior Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Journal of Organization Theory & Behavior Volume 28 ; 28 ; >
 
   }
 
@@ -15013,7 +15013,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal for Multicultural Education Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal for Multicultural Education Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal for Multicultural Education Volume 17 ; 17 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Journal for Multicultural Education Volume 18 ; 18 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; Journal for Multicultural Education Volume 18 ; 18 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Journal for Multicultural Education Volume 19 ; 19 ; >
 
   }
@@ -15085,7 +15085,7 @@
     au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Entrepreneurship in Emerging Economies Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Entrepreneurship in Emerging Economies Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Entrepreneurship in Emerging Economies Volume 10 ; 10 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Journal of Entrepreneurship in Emerging Economies Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Entrepreneurship in Emerging Economies Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Entrepreneurship in Emerging Economies Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Entrepreneurship in Emerging Economies Volume 14 ; 14 ; >
@@ -15333,7 +15333,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Public Procurement Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Public Procurement Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Public Procurement Volume 24 ; 24 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Public Procurement Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Public Procurement Volume 25 ; 25 ; >
 
   }
 
@@ -15361,7 +15361,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Science and Technology Policy Management Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Science and Technology Policy Management Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Science and Technology Policy Management Volume 15 ; 15 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Science and Technology Policy Management Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Science and Technology Policy Management Volume 16 ; 16 ; >
 
   }
 
@@ -15419,7 +15419,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Structural Fire Engineering Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Structural Fire Engineering Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Structural Fire Engineering Volume 15 ; 15 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Structural Fire Engineering Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Structural Fire Engineering Volume 16 ; 16 ; >
 
   }
 
@@ -15499,7 +15499,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Research Journal of Textile and Apparel Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Research Journal of Textile and Apparel Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Research Journal of Textile and Apparel Volume 28 ; 28 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Research Journal of Textile and Apparel Volume 29 ; 29 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Research Journal of Textile and Apparel Volume 29 ; 29 ; >
 
   }
 
@@ -15643,7 +15643,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; World Journal of Engineering Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; World Journal of Engineering Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; World Journal of Engineering Volume 21 ; 21 ; >
-    au < ready ; exists ; 2025 ; 2025 ; World Journal of Engineering Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; World Journal of Engineering Volume 22 ; 22 ; >
 
   }
 
@@ -15723,7 +15723,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Asian Association of Open Universities Journal Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Asian Association of Open Universities Journal Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Asian Association of Open Universities Journal Volume 19 ; 19 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Asian Association of Open Universities Journal Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Asian Association of Open Universities Journal Volume 20 ; 20 ; >
 
   }
 
@@ -16127,7 +16127,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Capital Markets Studies Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Capital Markets Studies Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Capital Markets Studies Volume 8 ; 8 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Capital Markets Studies Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Capital Markets Studies Volume 9 ; 9 ; >
 
   }
 
@@ -16207,7 +16207,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Derivatives and Quantitative Studies Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Derivatives and Quantitative Studies Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Derivatives and Quantitative Studies Volume 31 ; 31 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Journal of Derivatives and Quantitative Studies Volume 32 ; 32 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; Journal of Derivatives and Quantitative Studies Volume 32 ; 32 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Journal of Derivatives and Quantitative Studies Volume 33 ; 33 ; >
 
   }
@@ -16294,8 +16294,8 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Humanities and Applied Social Sciences Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Humanities and Applied Social Sciences Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Humanities and Applied Social Sciences Volume 5 ; 5 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Journal of Humanities and Applied Social Sciences Volume 6 ; 6 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Humanities and Applied Social Sciences Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of Humanities and Applied Social Sciences Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Humanities and Applied Social Sciences Volume 7 ; 7 ; >
 
   }
 
@@ -16467,7 +16467,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Marine Economics and Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Marine Economics and Management Volume 6 ; 6 ; >
     au < ready ; exists ; 2024 ; 2024 ; Marine Economics and Management Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Marine Economics and Management Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Marine Economics and Management Volume 8 ; 8 ; >
 
   }
 
@@ -16492,7 +16492,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Maritme Business Review Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Maritme Business Review Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Maritme Business Review Volume 9 ; 9 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Maritme Business Review Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Maritme Business Review Volume 10 ; 10 ; >
 
   }
 
@@ -16651,7 +16651,7 @@
     au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Public Administration and Policy Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Public Administration and Policy Volume 25 ; 25 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Public Administration and Policy Volume 26 ; 26 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Public Administration and Policy Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Public Administration and Policy Volume 27 ; 27 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Public Administration and Policy Volume 28 ; 28 ; >
 
   }
@@ -16764,7 +16764,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Smart and Resilient Transportation Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Smart and Resilient Transportation Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Smart and Resilient Transportation Volume 6 ; 6 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Smart and Resilient Transportation Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Smart and Resilient Transportation Volume 7 ; 7 ; >
 
   }
 
@@ -16808,7 +16808,7 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Tourism Critiques Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Tourism Critiques Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Tourism Critiques Volume 5 ; 5 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Tourism Critiques Volume 6 ; 6 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Tourism Critiques Volume 6 ; 6 ; >
 
   }
 

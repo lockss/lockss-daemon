@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -152,6 +152,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!--exclude 	https://jamanetwork.com/journals/jama/fullarticle/http/:newsatjama.jama.com/category/the-jama-forum/	-->
+      <string>2,"^https?://%s/.*/(https?://|http/:|www\.)", url_host(base_url)</string>
+      <string>2,"^https://%s/journals/jama/fullarticle/http/:newsatjama\.jama\.com/category/the-jama-forum/", url_host(base_url)</string>
+      <string>2,"^https?://%s/downloadimage\.aspx\?", url_host(base_url)</string>
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net)/"</string>
       <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/journals/%s/issue/", url_host(base_url), journal_id</string>
@@ -177,14 +181,10 @@ POSSIBILITY OF SUCH DAMAGE.
         https://jamanetwork.com/Citation/Download?resourceId=2792304&resourceType=3&citationFormat=3
       -->
       <string>1,"%sCitation/Download\?resourceId=[^&amp;]+&amp;resourceType=[^&amp;]+&amp;citationFormat=0", base_url</string>
-      <string>2,"^https?://%s/downloadimage\.aspx\?", url_host(base_url)</string>
       <string>1,"https://cdn.jamanetwork.com/UI/app/dist/.*"</string>
 
       <!--  Not collecting audio/video/interactive content
       <string>1,"^%slearning/(audio|video)-player/[^./]+$", base_url</string> -->
-      <!--exclude 	https://jamanetwork.com/journals/jama/fullarticle/http/:newsatjama.jama.com/category/the-jama-forum/	-->
-      <string>2,"^https?://%s/.*/(https?://|http/:|www\.)", url_host(base_url)</string>
-      <string>2,"^https://%s/journals/jama/fullarticle/http/:newsatjama\.jama\.com/category/the-jama-forum/", url_host(base_url)</string>
     </list>
   </entry>
   <entry>
