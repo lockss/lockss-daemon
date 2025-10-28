@@ -89,7 +89,7 @@ public class CambridgeXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
       } else {
       // Once you have it, just keep returning the same one. It won't change.
       if (JatsPublishingHelper == null) {
-        JatsPublishingHelper = new JatsPublishingSchemaHelper();
+        JatsPublishingHelper = new CambridgeJATSchemaHelper();
       }
       return JatsPublishingHelper;
     }
