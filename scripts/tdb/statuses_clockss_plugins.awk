@@ -30,7 +30,7 @@ BEGIN {
 #      incontract = 1;
 #  }
 
-  if ($6 != "doNotProcess") {
+  if (($6 != "doNotProcess") && ($6 != "doesNotExist")) {
        incontract = 1;
   }
 
