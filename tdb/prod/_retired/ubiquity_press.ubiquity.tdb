@@ -42,7 +42,6 @@
       au < down ; 2019 ; 14-15 ; Journal of Hate Studies Volume 2019 ; 2019 ; https://jhs.press.gonzaga.edu/ >
       au < down ; 2020 ; 16 ; Journal of Hate Studies Volume 2020 ; 2020 ; https://jhs.press.gonzaga.edu/ >
       au < down ; 2021 ; 17 ; Journal of Hate Studies Volume 2021 ; 2021 ; https://jhs.press.gonzaga.edu/ >
-      au < doNotProcess ; 2022 ; 18 ; Journal of Hate Studies Volume 2022 ; 2022 ; https://jhs.press.gonzaga.edu/ >
      #Moved to bepress
   }
 }
@@ -260,9 +259,9 @@
       comment[publisher] = Stockholm University Press
 #      param[base_url] = https://jhlr.org/
 
-      au < down ; 2016 ; 1 ; Journal of Home Language Research Volume 2016 ; 2016 ; https://jhlr.org/ >
-      au < down ; 2017 ; 2 ; Journal of Home Language Research Volume 2017 ; 2017 ; https://jhlr.org/ >
-      au < down ; 2018 ; 3 ; Journal of Home Language Research Volume 2018 ; 2018 ; https://jhlr.org/ >
+      au < down ; 2016 ; 1 ; Journal of Home Language Research Volume 1 ; 2016 ; https://jhlr.org/ >
+      au < down ; 2017 ; 2 ; Journal of Home Language Research Volume 2 ; 2017 ; https://jhlr.org/ >
+      au < down ; 2018 ; 3 ; Journal of Home Language Research Volume 3 ; 2018 ; https://jhlr.org/ >
       #Triggered
 
   }
@@ -362,6 +361,23 @@
       au < down ; 2016 ; 3 ; Governance in Africa Volume 2016 ; 2016 ; http://www.govafricajournal.org/ >
       #Closed. Available https://up-j-ga.ubiquityjournal.website/
 
+  }
+
+  {
+
+      title <
+        name = Journal for the History of Knowledge ;
+        eissn = 2632-282X
+      >
+
+      comment[publisher] = Ubiquity Press
+#      param[base_url] = https://journalhistoryknowledge.org/
+
+      au < doNotProcess ; 2020 ; 1 ; Journal for the History of Knowledge Volume 2020 ; 2020 ; https://journalhistoryknowledge.org/ >
+      au < doNotProcess ; 2021 ; 2 ; Journal for the History of Knowledge Volume 2021 [superseded] ; 2021 ; https://journalhistoryknowledge.org/ >
+      au < doNotProcess ; 2022 ; 3 ; Journal for the History of Knowledge Volume 2022 ; 2022 ; https://journalhistoryknowledge.org/ >
+      au < doNotProcess ; 2023 ; 4 ; Journal for the History of Knowledge Volume 2023 ; 2023 ; https://journalhistoryknowledge.org/ >
+      #Transfered away
   }
 
   {
