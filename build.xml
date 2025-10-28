@@ -484,6 +484,7 @@ Args:
     value="${lib}/org.bouncycastle-bcpkix-jdk15on.jar" />
   <property name="org.fishwife-jrugged-core.jar"
     value="${lib}/org.fishwife-jrugged-core.jar" />
+  <!-- If change this version, also change it in StaticLoggerBinder -->
   <property name="org.slf4j-slf4j-api.jar"
     value="${lib}/slf4j-api-1.7.25.jar" />
   <property name="xmltooling-1.3.2.jar" value="${lib}/xmltooling-1.3.2.jar" />
