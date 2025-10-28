@@ -13,12 +13,13 @@ public class CambridgeJATSchemaHelper extends JatsPublishingSchemaHelper {
 
 
     static protected final String ArticleReviewTitle =  "front/article-meta/product[@product-type = \"book\" ]/source";
-
+    static protected final String ArticleReviewTitleAlt =  "front/article-meta/product/source";
 
     @Override
     public Map<String, XmlDomMetadataExtractor.XPathValue> getArticleMetaMap() {
         Map<String, XmlDomMetadataExtractor.XPathValue> theMap = super.getArticleMetaMap();
         theMap.put(ArticleReviewTitle, XmlDomMetadataExtractor.TEXT_VALUE);
+        theMap.put(ArticleReviewTitleAlt, XmlDomMetadataExtractor.TEXT_VALUE);
         return theMap;
     }
 
@@ -27,6 +28,7 @@ public class CambridgeJATSchemaHelper extends JatsPublishingSchemaHelper {
     public MultiValueMap getCookMap() {
         MultiValueMap theCookMap = super.getCookMap();
         theCookMap.put(ArticleReviewTitle, MetadataField.FIELD_ARTICLE_TITLE);
+        theCookMap.put(ArticleReviewTitleAlt, MetadataField.FIELD_ARTICLE_TITLE);
         return theCookMap;
     }
 }
