@@ -134,7 +134,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://journal-assets\.ubiquity\.press/.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)$"</string>
       <string>1,"^https?://%s%s_next/image\?url=.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%sindex.php/%s/.*/page/page/css\?name=(stylesheet|font)", url_host(base_url), url_path(base_url2), journal_id</string>
-      <string>1,"^https?://%s%s((en|es|fr)/)?articles(/abstract)?/[0-9\.]+", url_host(base_url), url_path(base_url)</string>
+      <string>1,"^https?://%s%s((en|es|fr)/)?articles(/abstract)?/[a-zA-Z0-9\.]+", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%sarticles/[^/?]+/thumbs/", url_host(base_url2), url_path(base_url2)</string>
       <string>1,"^https?://%s%s((en|es|fr)/)?[^/?]+/volume/(%s|0)/issue/", url_host(base_url), url_path(base_url), volume_name</string>
       <string>1,"^https?://%s%s[^/?]+(/volume/[^/?]+)?/issue/", url_host(base_url2), url_path(base_url2)</string>
