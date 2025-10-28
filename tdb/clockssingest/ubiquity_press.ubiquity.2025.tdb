@@ -87,7 +87,7 @@
       nondefparam[base_url2] = https://account.erlacs.org/
       nondefparam[journal_id] = lasa-j-erlacs
 
-     au < doNotProcess ; exists ; 2022 ; 113,114 ; ERLACS Volume 2022 ; 2022 ; 113,114 ; CEDLA ;  ; https://erlacs.org/ ; >
+     au < superseded ; exists ; 2022 ; 113,114 ; ERLACS Volume 2022 [superseded] ; 2022 ; 113,114 ; CEDLA ;  ; https://www.erlacs.org/ ; >
 
      au < finished ; finished ; 2003 ; 74,75 ; ERLACS Volume 2003 ; 2003 ; 74,75 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest3.clockss.org:8083 >
      au < finished ; finished ; 2004 ; 76,77 ; ERLACS Volume 2004 ; 2004 ; 76,77 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest4.clockss.org:8082 >
@@ -108,7 +108,7 @@
      au < finished ; finished ; 2019 ; 107,108 ; ERLACS Volume 2019 ; 2019 ; 107,108 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest4.clockss.org:8082 >
      au < finished ; finished ; 2020 ; 109,110 ; ERLACS Volume 2020 ; 2020 ; 109,110 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest2.clockss.org:8085 >
      au < finished ; crawling ; 2021 ; 111,112 ; ERLACS Volume 2021 ; 2021 ; 111,112 ; CEDLA ;  ; https://www.erlacs.org/ ; reingest1.clockss.org:8082 >
-     au < superseded ; exists ; 2022 ; 113,114 ; ERLACS Volume 2022 [superseded] ; 2022 ; 113,114 ; CEDLA ;  ; https://www.erlacs.org/ ; >
+     au < doNotProcess ; exists ; 2022 ; 113,114 ; ERLACS Volume 2022 ; 2022 ; 113,114 ; CEDLA ;  ; https://erlacs.org/ ; >
      au < frozen ; exists ; 2023 ; 115,116 ; ERLACS Volume 2023 ; 2023 ; 115,116 ; CEDLA ;  ; https://erlacs.org/ ; >
      au < frozen ; exists ; 2024 ; 117,118 ; ERLACS Volume 2024 ; 2024 ; 117,118 ; CEDLA ;  ; https://erlacs.org/ ; >
      au < crawling ; exists ; 2025 ; 119,120 ; ERLACS Volume 2025 ; 2025 ; 119,120 ; CEDLA ;  ; https://erlacs.org/ ; >
@@ -384,7 +384,7 @@
       au < frozen ; exists ; 1999 ; 1 ; Scandinavian Journal of Disability Research Volume 1 ; 1999 ; 1 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
       au < finished ; finished ; 2000 ; 2 ; Scandinavian Journal of Disability Research Volume 2 ; 2000 ; 2 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2001 ; 3 ; Scandinavian Journal of Disability Research Volume 3 ; 2001 ; 3 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; reingest2.clockss.org:8085 >
-      au < doesNotExist ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; 4 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; >
+      au < doesNotExist ; doesNotExist ; 2002 ; 4 ; Scandinavian Journal of Disability Research Volume 4 ; 2002 ; 4 ; Stockholm University Press ;  ; https://sjdr.se/ ; >
       au < finished ; finished ; 2003 ; 5 ; Scandinavian Journal of Disability Research Volume 5 ; 2003 ; 5 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2004 ; 6 ; Scandinavian Journal of Disability Research Volume 6 ; 2004 ; 6 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2005 ; 7 ; Scandinavian Journal of Disability Research Volume 7 ; 2005 ; 7 ; Stockholm University Press ;  ; https://www.sjdr.se/ ; reingest5.clockss.org:8082 >
@@ -447,6 +447,8 @@
       #param[base_url] = https://iberoamericana.se/
       nondefparam[base_url2] = https://account.iberoamericana.se/
       nondefparam[journal_id] = su-j-injlacs
+
+      au < doNotProcess ; exists ; 2022 ; 51 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 [superseded] ; 2022 ; 51 ; Stockholm University Press ;  ; https://iberoamericana.se/ ; >
 
       au < finished ; finished ; 2001 ; 31 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2001 ; 2001 ; 31 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2002 ; 32 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2002 ; 2002 ; 32 ; Stockholm University Press ;  ; https://www.iberoamericana.se/ ; reingest5.clockss.org:8082 >
@@ -548,41 +550,41 @@
       au < doNotProcess ; exists ; 1982 ; 34 ; Tellus Volume 1982 ; 1982 ; 34 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < doNotProcess ; exists ; 1983 ; 35 ; Tellus Volume 1983 ; 1983 ; 35 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < frozen ; exists ; 1984 ; 36 ; Tellus Volume 1984 ; 1984 ; 36 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1985 ; 37 ; Volume 1985 ; 1985 ; 37 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1986 ; 38 ; Volume 1986 ; 1986 ; 38 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1987 ; 39 ; Volume 1987 ; 1987 ; 39 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1988 ; 40 ; Volume 1988 ; 1988 ; 40 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1989 ; 41 ; Volume 1989 ; 1989 ; 41 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1990 ; 42 ; Volume 1990 ; 1990 ; 42 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1991 ; 43 ; Volume 1991 ; 1991 ; 43 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1992 ; 44 ; Volume 1992 ; 1992 ; 44 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1993 ; 45 ; Volume 1993 ; 1993 ; 45 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1994 ; 46 ; Volume 1994 ; 1994 ; 46 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1995 ; 47 ; Volume 1995 ; 1995 ; 47 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1996 ; 48 ; Volume 1996 ; 1996 ; 48 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1997 ; 49 ; Volume 1997 ; 1997 ; 49 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1998 ; 50 ; Volume 1998 ; 1998 ; 50 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 1999 ; 51 ; Volume 1999 ; 1999 ; 51 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2000 ; 52 ; Volume 2000 ; 2000 ; 52 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2001 ; 53 ; Volume 2001 ; 2001 ; 53 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2002 ; 54 ; Volume 2002 ; 2002 ; 54 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2003 ; 55 ; Volume 2003 ; 2003 ; 55 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2004 ; 56 ; Volume 2004 ; 2004 ; 56 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2005 ; 57 ; Volume 2005 ; 2005 ; 57 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2006 ; 58 ; Volume 2006 ; 2006 ; 58 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2007 ; 59 ; Volume 2007 ; 2007 ; 59 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2008 ; 60 ; Volume 2008 ; 2008 ; 60 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2009 ; 61 ; Volume 2009 ; 2009 ; 61 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2010 ; 62 ; Volume 2010 ; 2010 ; 62 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2011 ; 63 ; Volume 2011 ; 2011 ; 63 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2012 ; 64 ; Volume 2012 ; 2012 ; 64 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2013 ; 65 ; Volume 2013 ; 2013 ; 65 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2014 ; 66 ; Volume 2014 ; 2014 ; 66 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2015 ; 67 ; Volume 2015 ; 2015 ; 67 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2016 ; 68 ; Volume 2016 ; 2016 ; 68 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2017 ; 69 ; Volume 2017 ; 2017 ; 69 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2018 ; 70 ; Volume 2018 ; 2018 ; 70 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < doNotProcess ; exists ; 2019 ; 71 ; Volume 2019 ; 2019 ; 71 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1985 ; 37 ; Tellus Volume 1985 ; 1985 ; 37 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1986 ; 38 ; Tellus Volume 1986 ; 1986 ; 38 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1987 ; 39 ; Tellus Volume 1987 ; 1987 ; 39 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1988 ; 40 ; Tellus Volume 1988 ; 1988 ; 40 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1989 ; 41 ; Tellus Volume 1989 ; 1989 ; 41 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1990 ; 42 ; Tellus Volume 1990 ; 1990 ; 42 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1991 ; 43 ; Tellus Volume 1991 ; 1991 ; 43 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1992 ; 44 ; Tellus Volume 1992 ; 1992 ; 44 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1993 ; 45 ; Tellus Volume 1993 ; 1993 ; 45 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1994 ; 46 ; Tellus Volume 1994 ; 1994 ; 46 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1995 ; 47 ; Tellus Volume 1995 ; 1995 ; 47 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1996 ; 48 ; Tellus Volume 1996 ; 1996 ; 48 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1997 ; 49 ; Tellus Volume 1997 ; 1997 ; 49 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1998 ; 50 ; Tellus Volume 1998 ; 1998 ; 50 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 1999 ; 51 ; Tellus Volume 1999 ; 1999 ; 51 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2000 ; 52 ; Tellus Volume 2000 ; 2000 ; 52 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2001 ; 53 ; Tellus Volume 2001 ; 2001 ; 53 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2002 ; 54 ; Tellus Volume 2002 ; 2002 ; 54 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2003 ; 55 ; Tellus Volume 2003 ; 2003 ; 55 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2004 ; 56 ; Tellus Volume 2004 ; 2004 ; 56 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2005 ; 57 ; Tellus Volume 2005 ; 2005 ; 57 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2006 ; 58 ; Tellus Volume 2006 ; 2006 ; 58 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2007 ; 59 ; Tellus Volume 2007 ; 2007 ; 59 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2008 ; 60 ; Tellus Volume 2008 ; 2008 ; 60 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2009 ; 61 ; Tellus Volume 2009 ; 2009 ; 61 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2010 ; 62 ; Tellus Volume 2010 ; 2010 ; 62 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2011 ; 63 ; Tellus Volume 2011 ; 2011 ; 63 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2012 ; 64 ; Tellus Volume 2012 ; 2012 ; 64 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2013 ; 65 ; Tellus Volume 2013 ; 2013 ; 65 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2014 ; 66 ; Tellus Volume 2014 ; 2014 ; 66 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2015 ; 67 ; Tellus Volume 2015 ; 2015 ; 67 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2016 ; 68 ; Tellus Volume 2016 ; 2016 ; 68 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2017 ; 69 ; Tellus Volume 2017 ; 2017 ; 69 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2018 ; 70 ; Tellus Volume 2018 ; 2018 ; 70 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < doNotProcess ; exists ; 2019 ; 71 ; Tellus Volume 2019 ; 2019 ; 71 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < frozen ; exists ; 2020 ; 72 ; Tellus Volume 2020 ; 2020 ; 72 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < doNotProcess ; exists ; 2021 ; 73 ; Tellus Volume 2021 ; 2021 ; 73 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 74 ; Tellus Volume 2022 ; 2022 ; 74 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
@@ -744,7 +746,6 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 2024 ; 76 ; Tellus B: Chemical and Physical Meteorology Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < frozen ; exists ; 2025 ; 77 ; Tellus B: Chemical and Physical Meteorology Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < doNotProcess ; doNotProcess ; 2026 ; 78 ; Tellus B: Chemical and Physical Meteorology Volume 2026 ; 2026 ; 78 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       #Merged with Tellus A to form Tellus.
   }
 
@@ -808,6 +809,8 @@
       nondefparam[base_url2] = https://account.current-journal.com/
       nondefparam[journal_id] = up-j-ctjme
 
+      au < superseded ; exists ; 2022 ; 36 ; Current: Journal of Marine Education Volume 2022 [superseded] ; 2022 ; 36 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; >
+
       au < doNotProcess ; doNotProcess ; 2003 ; 19 ; Current: Journal of Marine Education Volume 2003 ; 2003 ; 19 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
       au < doesNotExist ; doesNotExist ; 2004 ; 20 ; Current: Journal of Marine Education Volume 2004 ; 2004 ; 20 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2005 ; 21 ; Current: Journal of Marine Education Volume 2005 ; 2005 ; 21 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
@@ -827,7 +830,7 @@
       au < finished ; finished ; 2019 ; 33 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; 33 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; 34 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; 34 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; 35 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; 35 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
-      au < superseded ; exists ; 2022 ; 36 ; Current: Journal of Marine Education Volume 2022 [superseded] ; 2022 ; 36 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; >
+      au < exists ; exists ; 2022 ; 36 ; Current: Journal of Marine Education Volume 2022 ; 2022 ; 36 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 37,38 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; 37,38 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
       au < frozen ; exists ; 2024 ; 39 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
       au < crawling ; exists ; 2025 ; 40 ; Current: Journal of Marine Education Volume 2025 ; 2025 ; 40 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
@@ -2154,6 +2157,8 @@
       nondefparam[base_url2] = https://account.utrechtlawreview.org/
       nondefparam[journal_id] = up-j-ulr
 
+      au < doNotProcess ; exists ; 2022 ; 18 ; Utrecht Law Review Volume 2022 [superseded] ; 2022 ; 18 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ ; >
+
       au < finished ; finished ; 2005 ; 1 ; Utrecht Law Review Volume 2005 ; 2005 ; 1 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2006 ; 2 ; Utrecht Law Review Volume 2006 ; 2006 ; 2 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2007 ; 3 ; Utrecht Law Review Volume 2007 ; 2007 ; 3 ; Utrecht University School of Law ;  ; https://www.utrechtlawreview.org/ ; reingest5.clockss.org:8082 >
@@ -2376,6 +2381,7 @@
       au < doNotProcess ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; >
       au < doNotProcess ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; >
       au < doNotProcess ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; 3 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; >
+      au < doNotProcess ; exists ; 2022 ; 10 ; Stability: International Journal of Security & Development Volume 2022 [superseded] ; 2022 ; 10 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
 
       au < frozen ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
       au < manifest ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
@@ -2386,9 +2392,9 @@
       au < finished ; finished ; 2018 ; 7 ; Stability: International Journal of Security & Development Volume 2018 ; 2018 ; 7 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 8 ; Stability: International Journal of Security & Development Volume 2019 ; 2019 ; 8 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 9 ; Stability: International Journal of Security & Development Volume 2020 ; 2020 ; 9 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; reingest4.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2021 ; 0 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; 0 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; >
+      au < doesNotExist ; doesNotExist ; 2021 ; 0 ; Stability: International Journal of Security & Development Volume 2021 ; 2021 ; 0 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
       au < superseded ; exists ; 2022 ; 10 ; Stability: International Journal of Security & Development Volume 2022 [superseded] ; 2022 ; 10 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; 11 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://www.stabilityjournal.org/ ; >
+      au < doNotProcess ; doNotProcess ; 2023 ; 11 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; 11 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
       au < doesNotExist ; doesNotExist ; 2024 ; 0 ; Stability: International Journal of Security & Development Volume 2024 ; 2024 ; 0 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
       au < crawling ; exists ; 2025 ; 12 ; Stability: International Journal of Security & Development Volume 2025 ; 2025 ; 12 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
 
