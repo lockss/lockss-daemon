@@ -45,7 +45,7 @@ public class UbiquityPartnerNetworkArticleIteratorFactory
   private static final String ROOT_TEMPLATE = "\"%s\", base_url";
   private static final String PATTERN_TEMPLATE = "\"^%sarticles/\", base_url";
 
-  private static final Pattern LANDING_PATTERN = Pattern.compile("/articles/([0-9\\.]+)(/[a-zA-Z0-9\\.-]+)?$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern LANDING_PATTERN = Pattern.compile("/articles/([a-zA-Z0-9\\.]+)(/[a-zA-Z0-9\\.-]+)?$", Pattern.CASE_INSENSITIVE);
   private static final String LANDING_REPLACEMENT = "/articles/$1$2";
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
