@@ -14,7 +14,7 @@ public class CambridgeJATSchemaHelper extends JatsPublishingSchemaHelper {
 
     static protected final String ArticleReviewTitle =  "front/article-meta/product[@product-type = \"book\" ]/source";
     static protected final String ArticleReviewTitleAlt =  "front/article-meta/product/source";
-    static protected final String ArticleReviewTitleAlt2 =  "front/article-meta/product/source";
+    static protected final String ArticleReviewTitleAlt2 =  "front/article-meta/product";
 
     @Override
     public Map<String, XmlDomMetadataExtractor.XPathValue> getArticleMetaMap() {
