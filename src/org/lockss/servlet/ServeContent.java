@@ -344,6 +344,7 @@ public class ServeContent extends LockssServlet {
   private String versionStr; // non-null iff handling a (possibly-invalid)
 			     // Memento request
   private CachedUrl cu;
+  private boolean isCuEncoded = false;
   private boolean enabledPluginsOnly;
   private String accessLogInfo;
   private AccessLogType requestType = AccessLogType.None;
@@ -363,6 +364,7 @@ public class ServeContent extends LockssServlet {
     versionStr = null;
     au = null;
     explicitAu = null;
+    isCuEncoded = false;
     super.resetLocals();
   }
 
@@ -1353,6 +1355,7 @@ public class ServeContent extends LockssServlet {
 
     // rewrite content from cache
     CharsetUtil.InputStreamAndCharset isc = CharsetUtil.getCharsetStream(cu);
+    isCuEncoded = AuUtil.hasContentEncoding(cu);
     handleRewriteInputStream(isc.getInStream(), mimeType,
 			     isc.getCharset(), cu.getContentSize());
   }
@@ -1860,7 +1863,9 @@ public class ServeContent extends LockssServlet {
 	    log.debug2("Not rewriting, memento request: " + url);
 	  }
 	}
-        setContentLength(length);
+        if (!isCuEncoded) {
+          setContentLength(length);
+        }
         outStr = resp.getOutputStream();
         StreamUtil.copy(original, outStr);
       } else {
@@ -1903,7 +1908,9 @@ public class ServeContent extends LockssServlet {
           ByteArrayOutputStream baos =
               new ByteArrayOutputStream((int)(length * 1.1 + 100));
           long bytes = StreamUtil.copy(rewritten, baos);
-          setContentLength(bytes);
+          if (!isCuEncoded) {
+            setContentLength(bytes);
+          }
           outStr = resp.getOutputStream();
           baos.writeTo(outStr);
         } else {
