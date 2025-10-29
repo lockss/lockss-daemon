@@ -730,6 +730,7 @@ public class TestAuUtil extends LockssTestCase {
     mcu.setProperties(props);
     assertNull(AuUtil.getContentEncoding(props));
     assertNull(AuUtil.getContentEncoding(mcu));
+    assertFalse(AuUtil.hasContentEncoding(mcu));
 
     props.setProperty(CachedUrl.PROPERTY_CONTENT_ENCODING, "");
     mcu.setProperties(props);
@@ -745,16 +746,23 @@ public class TestAuUtil extends LockssTestCase {
     mcu.setProperties(props);
     assertEquals("foo", AuUtil.getContentEncoding(props));
     assertEquals("foo", AuUtil.getContentEncoding(mcu));
+    assertTrue(AuUtil.hasContentEncoding(mcu));
 
     props.setProperty(CachedUrl.PROPERTY_CONTENT_ENCODING, "\"foo\"");
     mcu.setProperties(props);
     assertEquals("foo", AuUtil.getContentEncoding(props));
     assertEquals("foo", AuUtil.getContentEncoding(mcu));
+    assertTrue(AuUtil.hasContentEncoding(mcu));
 
     props.setProperty(CachedUrl.PROPERTY_CONTENT_ENCODING, "\"foo");
     mcu.setProperties(props);
     assertEquals("\"foo", AuUtil.getContentEncoding(props));
     assertEquals("\"foo", AuUtil.getContentEncoding(mcu));
+
+    props.setProperty(CachedUrl.PROPERTY_CONTENT_ENCODING, "identity");
+    mcu.setProperties(props);
+    assertEquals("identity", AuUtil.getContentEncoding(props));
+    assertFalse(AuUtil.hasContentEncoding(mcu));
   }
 
   public void testGetAuCreationTime() throws IOException {
