@@ -365,8 +365,9 @@ public class ViewContent extends LockssServlet {
                                   "UnnamedContent");
       resp.setHeader("Content-disposition", "inline; filename=" + fname);
     }
-    // if filtering, don't know content length
-    if (!isFilter) {
+    // if filtering or content is encoded (compressed), don't know
+    // content length
+    if (!isFilter && !AuUtil.hasContentEncoding(cu)) {
       if (clen <= Integer.MAX_VALUE) {
 	resp.setContentLength((int)clen);
       } else {
