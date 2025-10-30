@@ -784,8 +784,6 @@ public class AuUtil {
    * Content-Encoding should call one of these methods rather than
    * accessing it directly. */
   public static String getContentEncoding(String enc) {
-    log.critical("enc: " + enc);
-
     if (enc == null) {
       return null;
     }
