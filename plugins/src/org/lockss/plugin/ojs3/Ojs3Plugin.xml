@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>62</string>
+    <string>63</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -320,5 +320,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.ojs3.Ojs3HtmlLinkRewriterFactory</string>
+  </entry>
+  <!-- some publishers do not have content-encoding -->
+  <entry>
+    <string>au_http_request_header</string>
+    <string>Accept-Encoding: gzip</string>
   </entry>
 </map>
