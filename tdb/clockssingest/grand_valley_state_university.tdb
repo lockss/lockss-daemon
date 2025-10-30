@@ -3,9 +3,9 @@
   publisher <
     name = Scholarworks @ GVSU ;
     info[contract] = 2008 ;
-    info[back] = 2000 ;
+    info[back] = 1985 ;
     info[tester] = 5 ;
-    info[poller] = 8
+    info[platform] = bepress
   >
   provider = bepress
   #provider = Scholarworks @ GVSU
