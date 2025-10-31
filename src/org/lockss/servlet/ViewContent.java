@@ -236,7 +236,11 @@ public class ViewContent extends LockssServlet {
       addPropRow(tbl, "Content Type" + addFootnote("Inferred by plugin"),
 		 contentType);
     }
-    addPropRow(tbl, "Length", clen);
+    if (AuUtil.hasContentEncoding(cu)) {
+      addPropRow(tbl, "Length", clen + " (Compressed)");
+    } else {
+      addPropRow(tbl, "Length", clen);
+    }
     try {
       String versionStr = Integer.toString(cu.getVersion());
       CachedUrl[] cuVersions = cu.getCuVersions(2);

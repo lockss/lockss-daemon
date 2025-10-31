@@ -54,6 +54,7 @@ public class ListObjects extends LockssServlet {
   public static final String FIELD_POLL_WEIGHT = "PollWeight";
   public static final String FIELD_CONTENT_TYPE = "ContentType";
   public static final String FIELD_SIZE = "Size";
+  public static final String FIELD_COMPRESSED = "Compressed";
   public static final String FIELD_PROPS_URL = "PropsUrl";
   public static final String FIELD_VERSION = "Version";
 
@@ -134,10 +135,10 @@ public class ListObjects extends LockssServlet {
       fields = StringUtil.breakAt(fieldParam, ",", 0, true);
     }
 
-    // Backwards compatibility with old "Files"
     if (type.equalsIgnoreCase("files")) {
       type = "urls";
-      fields = ListUtil.list(FIELD_CONTENT_TYPE, FIELD_SIZE, FIELD_POLL_WEIGHT);
+      fields = ListUtil.list(FIELD_CONTENT_TYPE, FIELD_SIZE,
+                             FIELD_COMPRESSED, FIELD_POLL_WEIGHT);
     }    
 
     // Backwards compatibility with old "auids"
@@ -408,6 +409,9 @@ public class ListObjects extends LockssServlet {
 	    break;
 	  case FIELD_SIZE:
 	    wrtr.print("\t" + cu.getContentSize());
+	    break;
+	  case FIELD_COMPRESSED:
+	    wrtr.print("\t" + (AuUtil.hasContentEncoding(cu) ? "Y" : "N"));
 	    break;
 	  case FIELD_VERSION:
 	    wrtr.print("\t" + cu.getVersion());
