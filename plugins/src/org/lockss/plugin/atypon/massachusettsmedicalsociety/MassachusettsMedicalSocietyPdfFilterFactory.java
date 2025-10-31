@@ -65,7 +65,7 @@ public class MassachusettsMedicalSocietyPdfFilterFactory extends BaseAtyponPdfFi
     for (PdfToken tok: tokens) {
       if (tok.isString()) {
         String str = tok.getString();
-        log.info(str);
+        log.debug3(str);
         if (str.matches("\\s*Protocol\\s*") ||
             str.matches("\\s*Supplementary Appendix\\s*") ||
             str.matches("\\s*ICMJE Form for Disclosure of Potential Conflicts of Interest\\s*")) {
