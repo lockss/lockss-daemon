@@ -446,11 +446,46 @@ public class BaseUrlFetcher implements UrlFetcher {
           return null;
         }
       }
+      if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_HOST) ||
+          redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_URL)) {
+        if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_HOST)) {
+          if (!UrlUtil.isSameHost(origUrl, fetchUrl)) {
+            throw new CacheException.UnpermittedOffHostRedirect("Redirect chain from " + origUrl + " to " + fetchUrl + " did not return to original host");
+          } else {
+            log.debug2("Allowing off-host excursion from " +
+                       origUrl + " to " + redirectUrls);
+          }
+        }
+        if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_HOST_EXCURSION_END_ON_ORIG_URL)) {
+          if (!StringUtil.equalStrings(origUrl, fetchUrl)) {
+            throw new CacheException.UnpermittedOffHostRedirect("Redirect chain from " + origUrl + " to " + fetchUrl + " did not return to original URL");
+          } else {
+            log.debug2("Allowing off-host excursion from " +
+                       origUrl + " to itself");
+          }
+        }
+        // Semantics for new permission schemes is to short-circuit any
+        // redirect chain to a single redirect from the first to the
+        // last.  The main purpose is to not store off-host excursions
+        // (e.g., to authentication pages), but there's no real reason
+        // to store any intermediate permission redirects so no need to
+        // remember if there actually was an excursion.
+        if (redirectUrls != null && redirectUrls.size() > 1) {
+          String lastUrl = redirectUrls.get(redirectUrls.size() - 1);
+          if (!origUrl.equals(lastUrl)) {
+            redirectUrls = ListUtil.list(lastUrl);
+          } else {
+            redirectUrls = null;
+          }
+        }
+      }
+
       input = conn.getResponseInputStream();
       if (input == null) {
         log.warning("Got null input stream back from conn.getResponseInputStream");
+      } else {
+        input = StreamUtil.getResettableInputStream(input);
       }
-      input = StreamUtil.getResettableInputStream(input);
     } finally {
       if (conn != null && input == null) {
         log.debug3("Releasing connection");
@@ -800,7 +835,8 @@ public class BaseUrlFetcher implements UrlFetcher {
           log.warning("Redirect to different host: " + newUrlString +
 			 " from: " + origUrl);
           return false;
-        } else if (!crawlFacade.hasPermission(newUrlString)) {
+        } else if (redirectScheme.isRedirectOption(RedirectScheme.REDIRECT_OPTION_REQUIRES_PERMISSION) &&
+                   !crawlFacade.hasPermission(newUrlString)) {
           log.warning("No permission for redirect to different host: "
                          + newUrlString + " from: " + origUrl);
           return false;
@@ -854,7 +890,7 @@ public class BaseUrlFetcher implements UrlFetcher {
       }
       props.setProperty(CachedUrl.PROPERTY_FETCH_TIME,
 			Long.toString(TimeBase.nowMs()));
-      if (origUrl != fetchUrl &&
+      if (!origUrl.equals(fetchUrl) &&
 	  !UrlUtil.isDirectoryRedirection(origUrl, fetchUrl)) {
 	// XXX this property does not have consistent semantics.  It will be
 	// set to the first url in a chain of redirects that led to content,

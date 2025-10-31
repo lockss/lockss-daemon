@@ -1,4 +1,4 @@
-<!--
+/*
 
 Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
@@ -28,48 +28,32 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
--->
-<map>
-  <entry>
-    <string>plugin_status</string>
-    <string>testing</string>
-  </entry>
-  <entry>
-    <string>plugin_identifier</string>
-    <string>org.lockss.plugin.highwire.ers.ClockssERSScolarisPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>European Respiratory Society Scolaris Plugin (CLOCKSS)</string>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>4</string>
-  </entry>
-  <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.highwire.ers.ERSScolarisPlugin</string>
-  </entry>
-  <entry>
-    <string>plugin_parent_version</string>
-    <string>4</string>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>"European Respiratory Society Scolaris Plugin (CLOCKSS), Base URL %s, Journal %s, Volume %s", base_url, journal_id, volume_name</string>
-  </entry>
-  <entry>
-      <string>au_start_url</string>
-      <!-- content/sgrehpp/lockss-manifest/vol_10_manifest.html -->
-      <string>"%scontent/%s/clockss-manifest/vol_%s_manifest.html", base_url, journal_id, volume_name</string>
-  </entry>
-  <entry>
-    <string>clockss_override</string>
-    <map>
-      <entry>
-        <string>au_def_pause_time</string>
-        <long>100</long>
-      </entry>
-    </map>
-  </entry>
-</map>
+*/
+
+package org.lockss.plugin.highwire.scolaris;
+
+import java.io.InputStream;
+
+import org.htmlparser.NodeFilter;
+import org.lockss.daemon.PluginException;
+import org.lockss.filter.html.*;
+import org.lockss.plugin.*;
+import org.lockss.plugin.highwire.HighWireJCoreHtmlCrawlFilterFactory;
+
+public class HighWireScolarisHtmlCrawlFilterFactory extends HighWireJCoreHtmlCrawlFilterFactory {
+  
+  protected static NodeFilter[] filters = new NodeFilter[] {
+    // Links to /openid-connect/ URLs which are allowed by the crawl rules for the permission URL auth excursion but shouldn't be routinely followed
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "login--"),
+    HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/openid-connect/"),
+  };
+  
+  @Override
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding)
+      throws PluginException {
+    return super.createFilteredInputStream(au, in, encoding, filters);
+  }
+
+}

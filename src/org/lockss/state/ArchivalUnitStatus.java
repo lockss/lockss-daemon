@@ -34,8 +34,10 @@ package org.lockss.state;
 
 import java.io.*;
 import java.util.*;
+import java.util.function.Consumer;
 import java.text.*;
 import java.net.MalformedURLException;
+import org.apache.commons.lang.mutable.MutableBoolean;
 
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -651,12 +653,15 @@ public class ArchivalUnitStatus
     static final String TABLE_TITLE = "AUs containing URL";
     static final String COL_AU_NAME = "AuName";
     static final String COL_SIZE = "Size";
+    static final String COL_COMPRESSED = "Compressed";
     static final String COL_COLLECTED_DATE = "CollectedDate";
     static final String COL_VERSIONS = "Versions";
 
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor(COL_AU_NAME, "AU", ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor(COL_SIZE, "Size", ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor(COL_COMPRESSED, "C", ColumnDescriptor.TYPE_STRING,
+                           "Content is compressed"),
       new ColumnDescriptor(COL_COLLECTED_DATE, "Date Collected",
 			   ColumnDescriptor.TYPE_DATE),
       new ColumnDescriptor(COL_VERSIONS, "Versions", ColumnDescriptor.TYPE_INT)
@@ -681,6 +686,7 @@ public class ArchivalUnitStatus
       return true;
     }
 
+    // ppppp
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
       String url = table.getKey();
@@ -691,9 +697,15 @@ public class ArchivalUnitStatus
 	if (cuLst.isEmpty()) {
 	  table.setSummaryInfo(getNoMatchSummaryInfo());
 	} else {
-	  table.setColumnDescriptors(columnDescriptors);
+          final MutableBoolean omitCompressed = new MutableBoolean(true);
+	  table.setRows(getRows(table, cuLst,
+                                (x) -> omitCompressed.setValue(x)));
+          if (omitCompressed.booleanValue()) {
+            table.setColumnDescriptors(columnDescriptors, null, "-Compressed");
+          } else {
+            table.setColumnDescriptors(columnDescriptors);
+          }
 	  table.setDefaultSortRules(sortRules);
-	  table.setRows(getRows(table, cuLst));
 	}
       } catch (Exception e) {
 	logger.warning("Error building table", e);
@@ -704,13 +716,14 @@ public class ArchivalUnitStatus
     }
 
     private List getRows(StatusTable table,
-			 List<CachedUrl> cuLst) {
+			 List<CachedUrl> cuLst,
+                         Consumer<Boolean> includeCompressedColumnSetter) {
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
       List rowL = new ArrayList();
       for (CachedUrl cu : cuLst) {
 	try {
-	  rowL.add(makeRow(table, cu));
+	  rowL.add(makeRow(table, cu, includeCompressedColumnSetter));
 	} catch (Exception e) {
 	  logger.warning("Unexpected execption building row", e);
 	}
@@ -718,7 +731,8 @@ public class ArchivalUnitStatus
       return rowL;
     }
 
-    private Map makeRow(StatusTable table, CachedUrl cu) {
+    private Map makeRow(StatusTable table, CachedUrl cu,
+                        Consumer<Boolean> includeCompressedColumnSetter) {
       try {
 	HashMap rowMap = new HashMap();
 	ArchivalUnit au = cu.getArchivalUnit();
@@ -732,6 +746,10 @@ public class ArchivalUnitStatus
 				  PropUtil.fromArgs("auid", au.getAuId(),
 						    "url", cu.getUrl()));
 	rowMap.put(COL_SIZE, val);
+        if (AuUtil.hasContentEncoding(cu)) {
+          includeCompressedColumnSetter.accept(false);
+          rowMap.put(COL_COMPRESSED, "Y");
+        }
 
 	int version = cu.getVersion();
 	Object versionObj = new Long(version);
@@ -827,6 +845,8 @@ public class ArchivalUnitStatus
 
     static final String COL_NODE_CONTENT_SIZE = "NodeContentSize";
 
+    static final String COL_NODE_CONTENT_COMPRESSED = "Compressed";
+
     static final String COL_NODE_TREE_SIZE = "NodeTreeSize";
 
     static final String COL_NODE_CHILD_COUNT = "NodeChildCount";
@@ -842,6 +862,9 @@ public class ArchivalUnitStatus
                            ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(COL_NODE_CONTENT_SIZE, "Size",
                            ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor(COL_NODE_CONTENT_COMPRESSED, "C",
+                           ColumnDescriptor.TYPE_STRING,
+                           "Content is compressed"),
       new ColumnDescriptor(COL_NODE_TREE_SIZE, "Tree Size",
                            ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(COL_NODE_CHILD_COUNT, "Children",
@@ -855,6 +878,7 @@ public class ArchivalUnitStatus
       super(theDaemon);
     }
 
+    // ppppp
     protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
       LockssRepository repo = theDaemon.getLockssRepository(au);
@@ -866,15 +890,22 @@ public class ArchivalUnitStatus
       table.setSummaryInfo(getSummaryInfo(table, au,
 					  nodeMan.getAuState(), topNode));
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
-	table.setColumnDescriptors(columnDescriptors);
+        final MutableBoolean omitCompressed = new MutableBoolean(true);
+	table.setRows(getRows(table, au, repo, nodeMan,
+                              (x) -> omitCompressed.setValue(x)));
+        if (omitCompressed.booleanValue()) {
+          table.setColumnDescriptors(columnDescriptors, null, "-Compressed");
+        } else {
+          table.setColumnDescriptors(columnDescriptors);
+        }
 	table.setDefaultSortRules(sortRules);
-	table.setRows(getRows(table, au, repo, nodeMan));
       }
     }
 
 
     private List getRows(StatusTable table, ArchivalUnit au,
-			 LockssRepository repo, NodeManager nodeMan) {
+			 LockssRepository repo, NodeManager nodeMan,
+                         Consumer<Boolean> includeCompressedColumnSetter) {
       int startRow = Math.max(0, getIntProp(table, "skiprows"));
       int numRows = getIntProp(table, "numrows");
       if (numRows <= 0) {
@@ -918,7 +949,8 @@ public class ArchivalUnitStatus
 	  if (normUrl.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
 	    normUrl = normUrl.substring(0, normUrl.length() - 1);
 	  }
-	  Map row = makeRow(au, repo.getNode(normUrl), cu, startUrls);
+	  Map row = makeRow(au, repo.getNode(normUrl), cu, startUrls,
+                            includeCompressedColumnSetter);
 	  row.put("sort", new Integer(curRow));
           rowL.add(row);
         } catch (MalformedURLException ignore) {
@@ -935,7 +967,8 @@ public class ArchivalUnitStatus
     }
 
     private Map makeRow(ArchivalUnit au, RepositoryNode node,
-			CachedUrl cu, Collection<String> startUrls) {
+			CachedUrl cu, Collection<String> startUrls,
+                        Consumer<Boolean> includeCompressedColumnSetter) {
       boolean hasContent = node.hasContent();
       String url = null;
       boolean isStartUrl = false;
@@ -996,6 +1029,10 @@ public class ArchivalUnitStatus
 	  }
 	}
         sizeObj = new OrderedObject(new Long(node.getContentSize()));
+        if (AuUtil.hasContentEncoding(cu)) {
+          includeCompressedColumnSetter.accept(false);
+          rowMap.put(COL_NODE_CONTENT_COMPRESSED, "Y");
+        }
       }
       rowMap.put("NodeHasContent", (hasContent ? "yes" : "no"));
       rowMap.put(COL_NODE_VERSION, versionObj);
@@ -1362,7 +1399,7 @@ public class ArchivalUnitStatus
 		       AdminServletManager.SERVLET_LIST_OBJECTS,
 		       PropUtil.fromArgs("type", "urls",
 					 "auid", au.getAuId(),
-					 "fields", "ContentType,Size,PollWeight")));
+					 "fields", "ContentType,Size,Compressed,PollWeight")));
 
       if (au.getArchiveFileTypes() != null) {
 	addLink(urlLinks,
@@ -1628,11 +1665,14 @@ public class ArchivalUnitStatus
 
     static final String COL_VERSION = "Version";
     static final String COL_SIZE = "Size";
+    static final String COL_COMPRESSED = "Compressed";
     static final String COL_DATE_COLLECTED = "DateCollected";
 
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor(COL_VERSION, "Version", ColumnDescriptor.TYPE_INT),
       new ColumnDescriptor(COL_SIZE, "Size", ColumnDescriptor.TYPE_INT),
+      new ColumnDescriptor(COL_COMPRESSED, "C", ColumnDescriptor.TYPE_STRING,
+                           "Content is compressed"),
       new ColumnDescriptor(COL_DATE_COLLECTED, "Date Collected",
                            ColumnDescriptor.TYPE_DATE)
       );
@@ -1644,16 +1684,24 @@ public class ArchivalUnitStatus
       super(theDaemon);
     }
 
+    // ppppp
     protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
       String url = getStringProp(table, "url");
       table.setTitle("Versions of " + url + " in " + au.getName());
-      table.setColumnDescriptors(columnDescriptors);
+      final MutableBoolean omitCompressed = new MutableBoolean(true);
+      table.setRows(getRows(table, au, url,
+                            (x) -> omitCompressed.setValue(x)));
+      if (omitCompressed.booleanValue()) {
+        table.setColumnDescriptors(columnDescriptors, null, "-Compressed");
+      } else {
+        table.setColumnDescriptors(columnDescriptors);
+      }
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(table, au, url));
     }
 
-    private List getRows(StatusTable table, ArchivalUnit au, String url)
+    private List getRows(StatusTable table, ArchivalUnit au, String url,
+                         Consumer<Boolean> includeCompressedColumnSetter)
 	throws StatusService.NoSuchTableException {
       int startRow = Math.max(0, getIntProp(table, "skiprows"));
       int numRows = getIntProp(table, "numrows");
@@ -1695,7 +1743,7 @@ public class ArchivalUnitStatus
 	      rowL.add(makeOtherRowsLink(true, endRow1, au.getAuId(), url));
 	      break;
 	    }
-	    Map row = makeRow(au, cu, curVer);
+	    Map row = makeRow(au, cu, curVer, includeCompressedColumnSetter);
 	    row.put("sort", curRow);
 	    rowL.add(row);
 	  } finally {
@@ -1708,7 +1756,8 @@ public class ArchivalUnitStatus
       }
     }
 
-    private Map makeRow(ArchivalUnit au, CachedUrl cu, int ver) {
+    private Map makeRow(ArchivalUnit au, CachedUrl cu, int ver,
+                        Consumer<Boolean> includeCompressedColumnSetter) {
       String url = cu.getUrl();
       HashMap rowMap = new HashMap();
       Properties args = new Properties();
@@ -1720,6 +1769,10 @@ public class ArchivalUnitStatus
 				AdminServletManager.SERVLET_DISPLAY_CONTENT,
 				args);
       rowMap.put(COL_VERSION, val);
+      if (AuUtil.hasContentEncoding(cu)) {
+        includeCompressedColumnSetter.accept(false);
+        rowMap.put(COL_COMPRESSED, "Y");
+      }
       rowMap.put(COL_SIZE, cu.getContentSize());
       Properties cuProps = cu.getProperties();
       try {
