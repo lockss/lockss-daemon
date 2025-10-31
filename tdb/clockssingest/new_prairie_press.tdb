@@ -435,7 +435,7 @@
       au < finished ; manifest ; 2018-2019 ; Educational Considerations Volume 44 ; 44 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2019-2020 ; Educational Considerations Volume 45 ; 45 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Educational Considerations Volume 46 ; 46 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; Educational Considerations Volume 47 ; 47 ; >
+      au < finished ; manifest ; 2021 ; Educational Considerations Volume 47 ; 47 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Educational Considerations Volume 48 ; 48 ; >
       au < deepCrawl ; exists ; 2023 ; Educational Considerations Volume 49 ; 49 ; >
       au < deepCrawl ; exists ; 2024 ; Educational Considerations Volume 50 ; 50 ; >
@@ -594,7 +594,7 @@
       au < finished ; finished ; 2018-2019 ; Fungal Genetics Reports Volume 63 ; 63 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Fungal Genetics Reports Volume 64 ; 64 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2021 ; Fungal Genetics Reports Volume 65 ; 65 ; >
-      au < frozen ; exists ; 2022 ; Fungal Genetics Reports Volume 66 ; 66 ; >
+      au < finished ; manifest ; 2022 ; Fungal Genetics Reports Volume 66 ; 66 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Fungal Genetics Reports Volume 67 ; 67 ; >
       au < deepCrawl ; exists ; 2024 ; Fungal Genetics Reports Volume 68 ; 68 ; >
       au < expected ; exists ; 2025 ; Fungal Genetics Reports Volume 69 ; 69 ; >
@@ -616,8 +616,8 @@
 
       au < finished ; finished ; 2017-2018 ; Human Behavior Research Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; down ; 2019 ; Human Behavior Research Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2020 ; Human Behavior Research Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2021 ; Human Behavior Research Volume 4 ; 4 ; >
+      au < finished ; manifest ; 2020 ; Human Behavior Research Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Human Behavior Research Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Human Behavior Research Volume 5 ; 5 ; >
       au < deepCrawl ; exists ; 2023 ; Human Behavior Research Volume 6 ; 6 ; >
       au < deepCrawl ; exists ; 2024 ; Human Behavior Research Volume 7 ; 7 ; >
@@ -641,8 +641,8 @@
       au < finished ; finished ; 2016 ; International Journal of School Social Work Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; International Journal of School Social Work Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; International Journal of School Social Work Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2019 ; International Journal of School Social Work Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2020 ; International Journal of School Social Work Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2019 ; International Journal of School Social Work Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; International Journal of School Social Work Volume 5 ; 5 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2021-2022 ; International Journal of School Social Work Volume 6 ; 6 ; >
       au < finished ; crawling ; 2022 ; International Journal of School Social Work Volume 7 ; 7 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022-2023 ; International Journal of School Social Work Volume 8 ; 8 ; >
@@ -715,10 +715,10 @@
       au < finished ; finished ; 2015-2016 ; Journal of Applied Communications Volume 99 ; 99 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2016 ; Journal of Applied Communications Volume 100 ; 100 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Journal of Applied Communications Volume 101 ; 101 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2018 ; Journal of Applied Communications Volume 102 ; 102 ; >
+      au < finished ; manifest ; 2018 ; Journal of Applied Communications Volume 102 ; 102 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Journal of Applied Communications Volume 103 ; 103 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Journal of Applied Communications Volume 104 ; 104 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; Journal of Applied Communications Volume 105 ; 105 ; >
+      au < finished ; manifest ; 2021 ; Journal of Applied Communications Volume 105 ; 105 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Journal of Applied Communications Volume 106 ; 106 ; >
       au < deepCrawl ; exists ; 2023 ; Journal of Applied Communications Volume 107 ; 107 ; >
       au < deepCrawl ; exists ; 2024 ; Journal of Applied Communications Volume 108 ; 108 ; >
@@ -767,8 +767,8 @@
       au < finished ; finished ; 2016 ; Kansas Agricultural Experiment Station Research Reports Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Kansas Agricultural Experiment Station Research Reports Volume 3 ; 3 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Kansas Agricultural Experiment Station Research Reports Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2019 ; Kansas Agricultural Experiment Station Research Reports Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2020 ; Kansas Agricultural Experiment Station Research Reports Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2019 ; Kansas Agricultural Experiment Station Research Reports Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Kansas Agricultural Experiment Station Research Reports Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; Kansas Agricultural Experiment Station Research Reports Volume 7 ; 7 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; Kansas Agricultural Experiment Station Research Reports Volume 8 ; 8 ; >
       au < deepCrawl ; exists ; 2023 ; Kansas Agricultural Experiment Station Research Reports Volume 9 ; 9 ; >
@@ -797,7 +797,7 @@
       au < finished ; finished ; 2017 ; Kansas State University Libraries Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018 ; Kansas State University Libraries Volume 6 ; 6 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2018 ; Kansas State University Libraries Volume 7 ; 7 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2019 ; Kansas State University Libraries Volume 8 ; 8 ; >
+      au < finished ; manifest ; 2019 ; Kansas State University Libraries Volume 8 ; 8 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2019 ; Kansas State University Libraries Volume 9 ; 9 ; reingest5.clockss.org:8082 >
 
   }
@@ -835,11 +835,11 @@
       au < finished ; finished ; 2016 ; Networks: An Online Journal for Teacher Research Volume 18 ; 18 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Networks: An Online Journal for Teacher Research Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Networks: An Online Journal for Teacher Research Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2019 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2020 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; >
-      au < frozen ; exists ; 2021 ; Networks: An Online Journal for Teacher Research Volume 23 ; 23 ; >
+      au < finished ; manifest ; 2019 ; Networks: An Online Journal for Teacher Research Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Networks: An Online Journal for Teacher Research Volume 22 ; 22 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Networks: An Online Journal for Teacher Research Volume 23 ; 23 ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2023 ; Networks: An Online Journal for Teacher Research Volume 24 ; 24 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2024 ; Networks: An Online Journal for Teacher Research Volume 25 ; 25 ; >
+      au < finished ; manifest ; 2024 ; Networks: An Online Journal for Teacher Research Volume 25 ; 25 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2025 ; Networks: An Online Journal for Teacher Research Volume 26 ; 26 ; >
 
   }
@@ -956,7 +956,7 @@
       au < finished ; finished ; 2016 ; Seek Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017 ; Seek Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; Seek Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2019 ; Seek Volume 9 ; 9 ; >
+      au < finished ; manifest ; 2019 ; Seek Volume 9 ; 9 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; Seek Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; Seek Volume 11 ; 11 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; Seek Volume 12 ; 12 ; >
@@ -1020,8 +1020,8 @@
       au < finished ; finished ; 2017 ; Studies in 20th & 21st Century Literature Volume 41 ; 41 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; Studies in 20th & 21st Century Literature Volume 42 ; 42 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018-2019 ; Studies in 20th & 21st Century Literature Volume 43 ; 43 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2020 ; Studies in 20th & 21st Century Literature Volume 44 ; 44 ; >
-      au < frozen ; exists ; 2021 ; Studies in 20th & 21st Century Literature Volume 45 ; 45 ; >
+      au < finished ; manifest ; 2020 ; Studies in 20th & 21st Century Literature Volume 44 ; 44 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Studies in 20th & 21st Century Literature Volume 45 ; 45 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; Studies in 20th & 21st Century Literature Volume 46 ; 46 ; >
       au < deepCrawl ; exists ; 2023 ; Studies in 20th & 21st Century Literature Volume 47 ; 47 ; >
       au < deepCrawl ; exists ; 2024 ; Studies in 20th & 21st Century Literature Volume 48 ; 48 ; >
