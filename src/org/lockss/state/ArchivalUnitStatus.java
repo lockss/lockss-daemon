@@ -686,7 +686,6 @@ public class ArchivalUnitStatus
       return true;
     }
 
-    // ppppp
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
       String url = table.getKey();
@@ -697,10 +696,10 @@ public class ArchivalUnitStatus
 	if (cuLst.isEmpty()) {
 	  table.setSummaryInfo(getNoMatchSummaryInfo());
 	} else {
-          final MutableBoolean omitCompressed = new MutableBoolean(true);
+          final MutableBoolean includeCompressed = new MutableBoolean(false);
 	  table.setRows(getRows(table, cuLst,
-                                (x) -> omitCompressed.setValue(x)));
-          if (omitCompressed.booleanValue()) {
+                                (x) -> includeCompressed.setValue(x)));
+          if (!includeCompressed.booleanValue()) {
             table.setColumnDescriptors(columnDescriptors, null, "-Compressed");
           } else {
             table.setColumnDescriptors(columnDescriptors);
@@ -747,7 +746,7 @@ public class ArchivalUnitStatus
 						    "url", cu.getUrl()));
 	rowMap.put(COL_SIZE, val);
         if (AuUtil.hasContentEncoding(cu)) {
-          includeCompressedColumnSetter.accept(false);
+          includeCompressedColumnSetter.accept(true);
           rowMap.put(COL_COMPRESSED, "Y");
         }
 
@@ -878,7 +877,6 @@ public class ArchivalUnitStatus
       super(theDaemon);
     }
 
-    // ppppp
     protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
       LockssRepository repo = theDaemon.getLockssRepository(au);
@@ -890,10 +888,10 @@ public class ArchivalUnitStatus
       table.setSummaryInfo(getSummaryInfo(table, au,
 					  nodeMan.getAuState(), topNode));
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
-        final MutableBoolean omitCompressed = new MutableBoolean(true);
+        final MutableBoolean includeCompressed = new MutableBoolean(false);
 	table.setRows(getRows(table, au, repo, nodeMan,
-                              (x) -> omitCompressed.setValue(x)));
-        if (omitCompressed.booleanValue()) {
+                              (x) -> includeCompressed.setValue(x)));
+        if (!includeCompressed.booleanValue()) {
           table.setColumnDescriptors(columnDescriptors, null, "-Compressed");
         } else {
           table.setColumnDescriptors(columnDescriptors);
@@ -1030,7 +1028,7 @@ public class ArchivalUnitStatus
 	}
         sizeObj = new OrderedObject(new Long(node.getContentSize()));
         if (AuUtil.hasContentEncoding(cu)) {
-          includeCompressedColumnSetter.accept(false);
+          includeCompressedColumnSetter.accept(true);
           rowMap.put(COL_NODE_CONTENT_COMPRESSED, "Y");
         }
       }
@@ -1684,15 +1682,14 @@ public class ArchivalUnitStatus
       super(theDaemon);
     }
 
-    // ppppp
     protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
       String url = getStringProp(table, "url");
       table.setTitle("Versions of " + url + " in " + au.getName());
-      final MutableBoolean omitCompressed = new MutableBoolean(true);
+      final MutableBoolean includeCompressed = new MutableBoolean(false);
       table.setRows(getRows(table, au, url,
-                            (x) -> omitCompressed.setValue(x)));
-      if (omitCompressed.booleanValue()) {
+                            (x) -> includeCompressed.setValue(x)));
+      if (!includeCompressed.booleanValue()) {
         table.setColumnDescriptors(columnDescriptors, null, "-Compressed");
       } else {
         table.setColumnDescriptors(columnDescriptors);
@@ -1770,7 +1767,7 @@ public class ArchivalUnitStatus
 				args);
       rowMap.put(COL_VERSION, val);
       if (AuUtil.hasContentEncoding(cu)) {
-        includeCompressedColumnSetter.accept(false);
+        includeCompressedColumnSetter.accept(true);
         rowMap.put(COL_COMPRESSED, "Y");
       }
       rowMap.put(COL_SIZE, cu.getContentSize());
