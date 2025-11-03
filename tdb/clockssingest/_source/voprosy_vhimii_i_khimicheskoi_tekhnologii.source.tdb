@@ -15,10 +15,15 @@
 
     plugin = org.lockss.plugin.clockss.vhht.ClockssVoprosyKhimiiJournalsSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
+    {
+    #####TESTING. Testing completed
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/vhht-released/
-
-    #####TESTING
-    au < ready ; exists ; 2025 ; Voprosy Khimii i Khimicheskoi Tekhnologii Source Content 2025_01 ; 2025_01 >
-
+    au < doNotProcess ; exists ; 2025 ; Voprosy Khimii i Khimicheskoi Tekhnologii Source Content 2025_01 ; 2025_01 >
+    }
+    {
+    #####PRODUCTION
+    param[base_url] = https://clockss.lockss.org/sourcefiles/vhht-released/
+    au < expected ; exists ; 2025 ; Voprosy Khimii i Khimicheskoi Tekhnologii Source Content 2025_01 ; 2025_01 >
+    }
   }
 }
