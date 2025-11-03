@@ -53,7 +53,7 @@ public class TestAmericanMathematicalSocietyArticleIteratorFactory extends Artic
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String JOURNAL_ID_KEY = ConfigParamDescr.JOURNAL_ID.getKey();
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
-  private final String BASE_URL = "http://www.ams.org/";
+  private final String BASE_URL = "https://www.ams.org/";
   private final String JOURNAL_ID = "jid";
   private final String YEAR = "2008";
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
@@ -121,20 +121,20 @@ public class TestAmericanMathematicalSocietyArticleIteratorFactory extends Artic
     Pattern pat = getPattern(artIter);
     
     // we match to "%sjournals/%s/%d[^/]+/.+", base, jid, year
-    assertMatchesRE(pat, "http://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9");
-    assertMatchesRE(pat, "http://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9/S0894-0347-2008-00769-9.pdf");
-    assertMatchesRE(pat, "http://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9/viewer");
-    assertMatchesRE(pat, "http://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9/?active=current");
+    assertMatchesRE(pat, "https://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9");
+    assertMatchesRE(pat, "https://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9/S0894-0347-2008-00769-9.pdf");
+    assertMatchesRE(pat, "https://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9/viewer");
+    assertMatchesRE(pat, "https://www.ams.org/journals/jid/2008-26-04/S0894-0347-2008-00769-9/?active=current");
     
     // but not to pdf or image
-    assertNotMatchesRE(pat, "http://www.ams.org/jid/2008-26-04/S0894-0347-2008-00769-9");
-    assertNotMatchesRE(pat, "http://www.ams.org/jid/2008-26-04/S0894-0347-2008-00769-9/S0894-0347-2008-00769-9.pdf");
-    assertNotMatchesRE(pat, "http://www.ams.org/journals/jid/2008-26-04");
-    assertNotMatchesRE(pat, "http://www.ams.org/journals/jid/2008-26-01/jams-26-1-print-matter.pdf");
-    assertNotMatchesRE(pat, "http://www.ams.org/journals/jid/2008-26-01/S0894-0347-2012-00753-X/images/img1.gif");
+    assertNotMatchesRE(pat, "https://www.ams.org/jid/2008-26-04/S0894-0347-2008-00769-9");
+    assertNotMatchesRE(pat, "https://www.ams.org/jid/2008-26-04/S0894-0347-2008-00769-9/S0894-0347-2008-00769-9.pdf");
+    assertNotMatchesRE(pat, "https://www.ams.org/journals/jid/2008-26-04");
+    assertNotMatchesRE(pat, "https://www.ams.org/journals/jid/2008-26-01/jams-26-1-print-matter.pdf");
+    assertNotMatchesRE(pat, "https://www.ams.org/journals/jid/2008-26-01/S0894-0347-2012-00753-X/images/img1.gif");
     
     // wrong base url
-    assertNotMatchesRE(pat, "http://ametsoc.org/jid/2008/3-1/p01.xhtml");
+    assertNotMatchesRE(pat, "https://ametsoc.org/jid/2008/3-1/p01.xhtml");
   }
   
   //

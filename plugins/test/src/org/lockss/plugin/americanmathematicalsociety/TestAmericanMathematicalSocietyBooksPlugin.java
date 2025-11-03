@@ -160,7 +160,7 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
   
   // Test the crawl rules for AmericanMathematicalSocietyPlugin
   public void testShouldCacheProperPages() throws Exception {
-    String ROOT_URL = "http://www.example.com/";
+    String ROOT_URL = "https://www.example.com/";
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(COLLECTION_ID_KEY, "asdf");
@@ -200,11 +200,11 @@ public class TestAmericanMathematicalSocietyBooksPlugin extends LockssTestCase {
     // should not get crawled - wrong journal
     shouldCacheTest(ROOT_URL + "clockssdata/?p=ecgd", false, au);
     // should not get crawled - LOCKSS
-    shouldCacheTest("http://lockss.stanford.edu", false, au);
+    shouldCacheTest("https://lockss.stanford.edu", false, au);
   }
   
   public void testShouldCacheProperPagesYears() throws Exception {
-    String ROOT_URL = "http://www.example.com/";
+    String ROOT_URL = "https://www.example.com/";
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(COLLECTION_ID_KEY, "xyz");

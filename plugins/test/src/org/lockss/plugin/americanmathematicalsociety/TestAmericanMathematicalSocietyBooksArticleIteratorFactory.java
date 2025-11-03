@@ -53,7 +53,7 @@ public class TestAmericanMathematicalSocietyBooksArticleIteratorFactory extends 
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
   static final String COLLECTION_ID_KEY = "collection_id";
   static final String YEAR_KEY = "year_string";
-  private final String BASE_URL = "http://www.ams.org/";
+  private final String BASE_URL = "https://www.ams.org/";
   private final String COLLECTION_ID = "colid";
   private final String YEAR = "2008";
   private final Configuration AU_CONFIG = ConfigurationUtil.fromArgs(
@@ -121,19 +121,19 @@ public class TestAmericanMathematicalSocietyBooksArticleIteratorFactory extends 
     Pattern pat = getPattern(artIter);
     
     // we match to "^%sbooks/(%s)/([0-9.]+)(/\\1\\2\\.pdf)?$", base_url, collection_i
-    assertMatchesRE(pat, "http://www.ams.org/books/colid/200");
-    assertMatchesRE(pat, "http://www.ams.org/books/colid/200/colid200.pdf");
-    assertMatchesRE(pat, "http://www.ams.org/books/colid/010.1");
-    assertMatchesRE(pat, "http://www.ams.org/books/colid/010.1/colid010.1.pdf");
+    assertMatchesRE(pat, "https://www.ams.org/books/colid/200");
+    assertMatchesRE(pat, "https://www.ams.org/books/colid/200/colid200.pdf");
+    assertMatchesRE(pat, "https://www.ams.org/books/colid/010.1");
+    assertMatchesRE(pat, "https://www.ams.org/books/colid/010.1/colid010.1.pdf");
     
     // but not to pdf or image http://www.ams.org/books/conm/629/conm629-endmatter.pdf
-    assertNotMatchesRE(pat, "http://www.ams.org/colid/200/colid200-endmatter.pdf");
-    assertNotMatchesRE(pat, "http://www.ams.org/images/remote-access-icon.png");
-    assertNotMatchesRE(pat, "http://www.ams.org/books/colid/200/12300");
-    assertNotMatchesRE(pat, "http://www.ams.org/books/colid/200/12300/colid200-12300.pdf");
+    assertNotMatchesRE(pat, "https://www.ams.org/colid/200/colid200-endmatter.pdf");
+    assertNotMatchesRE(pat, "https://www.ams.org/images/remote-access-icon.png");
+    assertNotMatchesRE(pat, "https://www.ams.org/books/colid/200/12300");
+    assertNotMatchesRE(pat, "https://www.ams.org/books/colid/200/12300/colid200-12300.pdf");
     
     // wrong base url
-    assertNotMatchesRE(pat, "http://ametsoc.org/colid/2008/3-1/p01.xhtml");
+    assertNotMatchesRE(pat, "https://ametsoc.org/colid/2008/3-1/p01.xhtml");
   }
   
   //

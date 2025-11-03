@@ -173,7 +173,7 @@ public class TestAmericanMathematicalSocietyPlugin extends LockssTestCase {
   
   // Test the crawl rules for AmericanMathematicalSocietyPlugin
   public void testShouldCacheProperPages() throws Exception {
-    String ROOT_URL = "http://www.example.com/";
+    String ROOT_URL = "https://www.example.com/";
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, ROOT_URL);
     props.setProperty(JOURNAL_ID_KEY, "asdf");
