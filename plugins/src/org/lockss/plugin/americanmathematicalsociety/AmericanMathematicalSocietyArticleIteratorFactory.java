@@ -53,10 +53,10 @@ implements ArticleIteratorFactory,
   
   // params from tdb file corresponding to AU
   protected static final String ROOT_TEMPLATE =
-      "\"%sjournals/%s/\", base_url, journal_id";
+      "\"%sjournals/%s/\", to_https(base_url), journal_id";
   
   protected static final String PATTERN_TEMPLATE =
-      "\"^%sjournals/%s/%d-[0-9-]+/([^/?&.]+)(?:/\\1[.]pdf|/viewer|/?\\?active=current)?$\", base_url, journal_id, year";
+      "\"^%sjournals/%s/%d-[0-9-]+/([^/?&.]+)(?:/\\1[.]pdf|/viewer|/?\\?active=current)?$\", to_https(base_url), journal_id, year";
   
   /*
     various files

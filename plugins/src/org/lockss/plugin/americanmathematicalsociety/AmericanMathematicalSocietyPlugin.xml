@@ -45,14 +45,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
     <map>
       <entry>
         <string>Metadata</string>
-        <string>4</string>
+        <string>5</string>
       </entry>
       <entry>
         <string>Poll</string>
@@ -75,26 +75,26 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <!-- Not really in use for the GLN, see the CLOCKSS version -->
     <string>au_start_url</string>
-    <string>"%slockssdata/?p=%s&amp;y=%d", base_url, journal_id, year</string>
+    <string>"%slockssdata/?p=%s&amp;y=%d", to_https(base_url), journal_id, year</string>
   </entry>
   <entry> 
     <string>au_feature_urls</string>
     <map>
       <entry>
         <string>au_title</string>
-        <string>"%sjournals/%s", base_url, journal_id</string>
+        <string>"%sjournals/%s", to_https(base_url), journal_id</string>
       </entry>
       <entry>
         <string>au_volume</string>
-        <string>"%sclockssdata/?p=%s&amp;y=%d", base_url, journal_id, year</string>
+        <string>"%sclockssdata/?p=%s&amp;y=%d", to_https(base_url), journal_id, year</string>
       </entry>
       <entry>
         <string>au_issue</string>
-        <string>"%sjournals/%s/%s/%04d-%s-%s/", base_url, journal_id, year, volume_name, issue</string>
+        <string>"%sjournals/%s/%s/%04d-%s-%s/", to_https(base_url), journal_id, year, volume_name, issue</string>
       </entry>
       <entry>
         <string>au_article</string>
-        <string>"%sjournals/%s/%s/%04d-%s-%s/%s/", base_url, journal_id, year, volume_name, issue, article</string>
+        <string>"%sjournals/%s/%s/%04d-%s-%s/%s/", to_https(base_url), journal_id, year, volume_name, issue, article</string>
       </entry>
     </map>
   </entry>
@@ -103,11 +103,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <!-- all content from CDN -->
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|[^.]+\.(jquery|bootstrapcdn)\.com|cdn\.mathjax\.org)/."</string>
-      <string>1,"^https?://%s/[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", url_host(base_url)</string>
-      <string>4,"^%s", base_url</string>
-      <string>1,"^%s(?:journals/)?%s/home-%d[.]html$", base_url, journal_id, year</string>
-      <string>1,"^%s%s/%d-[0-9-]{2,9}/?$", base_url, journal_id, year</string>
-      <string>1,"^%sjournals/%s/%d-[0-9-]{2,9}/", base_url, journal_id, year</string>
+      <!--fix below-->
+      <string>1,"%s[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", to_https(base_url)</string>
+      <string>4,"^%s", to_https(base_url)</string>
+      <string>1,"^%s(?:journals/)?%s/home-%d[.]html$", to_https(base_url), journal_id, year</string>
+      <string>1,"^%s%s/%d-[0-9-]{2,9}/?$", to_https(base_url), journal_id, year</string>
+      <string>1,"^%sjournals/%s/%d-[0-9-]{2,9}/", to_https(base_url), journal_id, year</string>
     </list>
   </entry>
   <entry>
@@ -150,23 +151,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%sjournals/%s/%d[^/]+/[^/]+/[^.]+[.]pdf$", base_url, journal_id, year</string>
+      <string>"^%sjournals/%s/%d[^/]+/[^/]+/[^.]+[.]pdf$", to_https(base_url), journal_id, year</string>
     </list>
   </entry>
-  <!--  support http to https transition for existing AUs -->
-  <entry>
-    <string>plugin_url_consumer_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlConsumerFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_url_fetcher_factory</string>
-    <string>org.lockss.plugin.base.HttpToHttpsUrlFetcherFactory</string>
-  </entry>
-  <entry>
-    <string>au_url_normalizer</string>
-    <string>org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer</string>
-  </entry>
-  <!--  end http to https transition specific support  -->
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.americanmathematicalsociety.AmericanMathematicalSocietyHtmlFilterFactory</string>
