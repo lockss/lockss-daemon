@@ -87,16 +87,12 @@
     {
     #param[base_url] = http://erj.ersjournals.com/
     
-     {
-      attr[au_coverage_depth] = abstracts
-    
-      au < HighWirePressH20Plugin ; down ; 1988 ; European Respiratory Journal Volume 1 [abstracts only] ; 1 ; http://erj.ersjournals.com/ >
-      au < HighWirePressH20Plugin ; down ; 1989 ; European Respiratory Journal Volume 2 [abstracts only] ; 2 ; http://erj.ersjournals.com/ >
-      au < HighWirePressH20Plugin ; down ; 1990 ; European Respiratory Journal Volume 3 [abstracts only] ; 3 ; http://erj.ersjournals.com/ >
-      au < HighWirePressH20Plugin ; down ; 1991 ; European Respiratory Journal Volume 4 [abstracts only] ; 4 ; http://erj.ersjournals.com/ >
-      au < HighWirePressH20Plugin ; down ; 1992 ; European Respiratory Journal Volume 5 [abstracts only] ; 5 ; http://erj.ersjournals.com/ >
-      au < HighWirePressH20Plugin ; down ; 1993 ; European Respiratory Journal Volume 6 [abstracts only] ; 6 ; http://erj.ersjournals.com/ >
-     }
+    au < HighWirePressH20Plugin ; down ; 1988 ; European Respiratory Journal Volume 1 ; 1 ; http://erj.ersjournals.com/ >
+    au < HighWirePressH20Plugin ; down ; 1989 ; European Respiratory Journal Volume 2 ; 2 ; http://erj.ersjournals.com/ >
+    au < HighWirePressH20Plugin ; down ; 1990 ; European Respiratory Journal Volume 3 ; 3 ; http://erj.ersjournals.com/ >
+    au < HighWirePressH20Plugin ; down ; 1991 ; European Respiratory Journal Volume 4 ; 4 ; http://erj.ersjournals.com/ >
+    au < HighWirePressH20Plugin ; down ; 1992 ; European Respiratory Journal Volume 5 ; 5 ; http://erj.ersjournals.com/ >
+    au < HighWirePressH20Plugin ; down ; 1993 ; European Respiratory Journal Volume 6 ; 6 ; http://erj.ersjournals.com/ >
     au < HighWirePressH20Plugin ; down ; 1994 ; European Respiratory Journal Volume 7 ; 7 ; http://erj.ersjournals.com/ >
     au < HighWirePressH20Plugin ; down ; 1995 ; European Respiratory Journal Volume 8 ; 8 ; http://erj.ersjournals.com/ >
     au < HighWirePressH20Plugin ; down ; 1996 ; European Respiratory Journal Volume 9 ; 9 ; http://erj.ersjournals.com/ >
