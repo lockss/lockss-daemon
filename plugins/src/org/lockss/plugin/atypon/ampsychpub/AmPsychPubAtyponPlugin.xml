@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -104,5 +104,14 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>text/html_link_rewriter_factory</string>
     <string>org.lockss.plugin.atypon.ampsychpub.AmPsychPubHtmlLinkRewriterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <!--
+      Error		https://psychiatryonline.org/cms/10.1176/apt.2025.78.issue-3/asset/1994c32a-de19-4c32-fde1-94c32afde199/apt.2025.78.issue-3.cover.jpg		File size (80258) differs from Content-Length header (376853): https://psychiatryonline.org/cms/10.1176/apt.2025.78.issue-3/asset/1994c32a-de19-4c32-fde1-94c32afde199/apt.2025.78.issue-3.cover.jpg
+      -->
+      <string>org.lockss.plugin.ContentValidationException$WrongLength=org.lockss.util.urlconn.CacheException$WarningOnly</string>
+    </list>
   </entry>
 </map>
