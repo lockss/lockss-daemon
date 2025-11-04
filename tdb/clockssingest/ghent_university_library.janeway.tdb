@@ -56,12 +56,12 @@
       #param[journal_id] = documenta
 
       au < ready ; exists ; 1983 ; 1983 ; 1 ; Documenta Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 2 ; Documenta Volume 1984 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 2 ; Documenta Volume 1984 ; >
       au < manifest ; exists ; 1985 ; 1985 ; 3 ; Documenta Volume 1985 ; >
       au < manifest ; exists ; 1986 ; 1986 ; 4 ; Documenta Volume 1986 ; >
       au < manifest ; exists ; 1987 ; 1987 ; 5 ; Documenta Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 6 ; Documenta Volume 1988 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; 7 ; Documenta Volume 1989 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 6 ; Documenta Volume 1988 ; >
+      au < ready ; exists ; 1989 ; 1989 ; 7 ; Documenta Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 8 ; Documenta Volume 1990 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 1991 ; 1991 ; 9 ; Documenta Volume 1991 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 1992 ; 1992 ; 10 ; Documenta Volume 1992 ; reingest4.clockss.org:8082 >
@@ -139,7 +139,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2025 ; >
 
   }
 
@@ -212,7 +212,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; 2022 ; Journal of European Periodical Studies Volume 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Journal of European Periodical Studies Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Journal of European Periodical Studies Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Journal of European Periodical Studies Volume 2025 ; >
+      au < ready ; exists ; 2025 ; 2025 ; 2025 ; Journal of European Periodical Studies Volume 2025 ; >
 
   }
 
@@ -578,7 +578,7 @@
       au < finished ; manifest ; 2020 ; 2020 ; 2020 ; Ghendtsche Tydinghen Volume 2020 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 2021 ; 2021 ; Ghendtsche Tydinghen Volume 2021 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Ghendtsche Tydinghen Volume 2022 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Ghendtsche Tydinghen Volume 2023 ; >
+      au < ready ; exists ; 2023 ; 2023 ; 2023 ; Ghendtsche Tydinghen Volume 2023 ; >
 
   }
 
@@ -1460,7 +1460,7 @@
       au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1985 ; >
       au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1986 ; >
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1988 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1988 ; >
       au < ready ; exists ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1990 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1991 ; reingest5.clockss.org:8082 >
@@ -1692,7 +1692,7 @@
       au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Tijdschrift voor Communicatiewetenschap Volume 1985 ; >
       au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Tijdschrift voor Communicatiewetenschap Volume 1986 ; >
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Communicatiewetenschap Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Communicatiewetenschap Volume 1988 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Communicatiewetenschap Volume 1988 ; >
       au < crawling ; exists ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Communicatiewetenschap Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Communicatiewetenschap Volume 1990 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Tijdschrift voor Communicatiewetenschap Volume 1991 ; reingest1.clockss.org:8082 >
@@ -1742,8 +1742,8 @@
       au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1985 ; >
       au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1986 ; >
       au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1988 ; >
-      au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1989 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1988 ; >
+      au < ready ; exists ; 1989 ; 1989 ; 1989 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1990 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1991 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1992 ; reingest2.clockss.org:8085 >
