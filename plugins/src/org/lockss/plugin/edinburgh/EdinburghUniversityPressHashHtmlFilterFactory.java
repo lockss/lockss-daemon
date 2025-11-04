@@ -100,6 +100,10 @@ public class EdinburghUniversityPressHashHtmlFilterFactory extends BaseAtyponHtm
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pageHeader"),
         //verified specificity of right column tagging still in place
 
+
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar-metric-container"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "class", "sr-only-focusable"),
+
     };
     // super.createFilteredInputStream adds Edinburgh's filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that 

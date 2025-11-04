@@ -78,6 +78,9 @@ public class SEGHtmlHashFilterFactory extends BaseAtyponHtmlHashFilterFactory {
         // http://library.seg.org/doi/abs/10.1190/2013-0823-SPSEINTRO.1
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "firstPage"),
 
+        HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "rlist"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "tab--slide"),
+
         // footer filtered in BaseAtypon
     };
 

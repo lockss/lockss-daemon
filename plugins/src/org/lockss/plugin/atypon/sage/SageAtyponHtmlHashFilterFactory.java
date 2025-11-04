@@ -109,6 +109,12 @@ public class SageAtyponHtmlHashFilterFactory
 		HtmlNodeFilters.tagWithAttributeRegex("fieldset", "class", "tocListWidgetContainer"),
 		HtmlNodeFilters.tagWithAttributeRegex("fieldset", "class", "tocTools"),
 
+		//https://journals.sagepub.com/doi/10.1007/s11832-012-0456-5
+		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-aside-grid"),
+		HtmlNodeFilters.tagWithAttributeRegex("section", "id", "backmatter"),
+		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "core-nav-wrapper"),
+		HtmlNodeFilters.tagWithAttributeRegex("section", "class", "more-sage-products__container"),
+
 
 				// footer filtered in BaseAtypon
 		};

@@ -75,6 +75,14 @@ public class AaasHtmlHashFilterFactory  extends BaseAtyponHtmlHashFilterFactory 
         // Publisher add "modified" articles in the main body
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "related-item"),
 
+        //https://www.science.org/doi/10.1126/sciimmunol.aat7117
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "show-recommended"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "id", "bibliography"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "current-issue-aside"),
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "aside-ads"),
+        HtmlNodeFilters.tagWithAttributeRegex("aside","data-core-aside","right-rail"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "id", "backmatter"),
+        HtmlNodeFilters.tagWithAttributeRegex("section", "id", "elettersSection"),
     };
     // super.createFilteredInputStream adds aaas filter to the baseAtyponFilters
     // and returns the filtered input stream using an array of NodeFilters that

@@ -212,6 +212,14 @@ public class BaseAtyponHtmlHashFilterFactory implements FilterFactory {
     // https://www.ajronline.org/doi/full/10.2214/AJR.22.27901
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "js--citations-truncated"),
     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "relatedTab"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "id", "core-collateral-metrics"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "show-recommended"),
+    HtmlNodeFilters.tagWithAttributeRegex("section", "id", "bibliography"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "current-issue-aside"),
+    HtmlNodeFilters.tagWithAttributeRegex("div", "class", "aside-ads"),
+    HtmlNodeFilters.tagWithAttributeRegex("aside","data-core-aside","right-rail"),
+    HtmlNodeFilters.tagWithAttributeRegex("section", "id", "backmatter"),
+    HtmlNodeFilters.tagWithAttributeRegex("section", "id", "elettersSection"),
 
     // A number of children add a link item "Cited By" only after the article
     // has been cited...remove the entire list item - look for text pattern
