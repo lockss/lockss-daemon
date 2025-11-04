@@ -422,7 +422,7 @@
       #published 2023-present
       param[journal_id] = mjm
 
-      au < manifest ; exists ; 2021 ; 5 ; Michigan Journal of Medicine Volume 2021 ; 2021 ; >
+      au < ready ; exists ; 2021 ; 5 ; Michigan Journal of Medicine Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 6 ; Michigan Journal of Medicine Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 7 ; Michigan Journal of Medicine Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 8 ; Michigan Journal of Medicine Volume 2024 ; 2024 ; >
@@ -755,8 +755,8 @@
       #published 2024-present
       param[journal_id] = ujph
 
-      au < manifest ; exists ; 2022 ; 6 ; Undergraduate Journal of Public Health Volume 2022 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; 7 ; Undergraduate Journal of Public Health Volume 2023 ; 2023 ; >
+      au < ready ; exists ; 2022 ; 6 ; Undergraduate Journal of Public Health Volume 2022 ; 2022 ; >
+      au < ready ; exists ; 2023 ; 7 ; Undergraduate Journal of Public Health Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 8 ; Undergraduate Journal of Public Health Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 9 ; Undergraduate Journal of Public Health Volume 2025 ; 2025 ; >
 
