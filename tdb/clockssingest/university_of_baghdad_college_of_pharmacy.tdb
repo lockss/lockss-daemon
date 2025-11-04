@@ -3,7 +3,7 @@
   publisher <
     name = University of Baghdad, College of Pharmacy ;
     info[contract] = 2023 ;
-    info[back] = 2014 ;
+    info[back] = 1982 ;
     info[tester] = 5 ;
     info[platform] = OJS3
   >
@@ -22,29 +22,29 @@
       param[base_url] = https://bijps.uobaghdad.edu.iq/
       param[journal_id] = bijps
 
-      au < doNotProcess ; exists ; 1982 ; Iraqi Journal of Pharmaceutical Sciences Volume 1 ; 1 ; 1982 ; >
-      au < doNotProcess ; exists ; 1989 ; Iraqi Journal of Pharmaceutical Sciences Volume 2 ; 2 ; 1989 ; >
-      au < doNotProcess ; exists ; 1990 ; Iraqi Journal of Pharmaceutical Sciences Volume 3 ; 3 ; 1990 ; >
-      au < doNotProcess ; exists ; 1994 ; Iraqi Journal of Pharmaceutical Sciences Volume 4 ; 4 ; 1994 ; >
-      au < doNotProcess ; exists ; 1995 ; Iraqi Journal of Pharmaceutical Sciences Volume 6 ; 6 ; 1995 ; >
-      au < doNotProcess ; exists ; 1996 ; Iraqi Journal of Pharmaceutical Sciences Volume 7 ; 7 ; 1996 ; >
-      au < doNotProcess ; exists ; 1997 ; Iraqi Journal of Pharmaceutical Sciences Volume 8 ; 8 ; 1997 ; >
-      au < doNotProcess ; exists ; 1998 ; Iraqi Journal of Pharmaceutical Sciences Volume 9 ; 9 ; 1998 ; >
-      au < doNotProcess ; exists ; 1999 ; Iraqi Journal of Pharmaceutical Sciences Volume 10 ; 10 ; 1999 ; >
-      au < doNotProcess ; exists ; 2000 ; Iraqi Journal of Pharmaceutical Sciences Volume 11 ; 11 ; 2000 ; >
-      au < doNotProcess ; exists ; 2001 ; Iraqi Journal of Pharmaceutical Sciences Volume 12 ; 12 ; 2001 ; >
-      au < doNotProcess ; exists ; 2002 ; Iraqi Journal of Pharmaceutical Sciences Volume 13 ; 13 ; 2002 ; >
+      au < exists ; exists ; 1982 ; Iraqi Journal of Pharmaceutical Sciences Volume 1 ; 1 ; 1982 ; >
+      au < exists ; exists ; 1989 ; Iraqi Journal of Pharmaceutical Sciences Volume 2 ; 2 ; 1989 ; >
+      au < exists ; exists ; 1990 ; Iraqi Journal of Pharmaceutical Sciences Volume 3 ; 3 ; 1990 ; >
+      au < exists ; exists ; 1994 ; Iraqi Journal of Pharmaceutical Sciences Volume 4 ; 4 ; 1994 ; >
+      au < exists ; exists ; 1995 ; Iraqi Journal of Pharmaceutical Sciences Volume 6 ; 6 ; 1995 ; >
+      au < exists ; exists ; 1996 ; Iraqi Journal of Pharmaceutical Sciences Volume 7 ; 7 ; 1996 ; >
+      au < exists ; exists ; 1997 ; Iraqi Journal of Pharmaceutical Sciences Volume 8 ; 8 ; 1997 ; >
+      au < exists ; exists ; 1998 ; Iraqi Journal of Pharmaceutical Sciences Volume 9 ; 9 ; 1998 ; >
+      au < exists ; exists ; 1999 ; Iraqi Journal of Pharmaceutical Sciences Volume 10 ; 10 ; 1999 ; >
+      au < exists ; exists ; 2000 ; Iraqi Journal of Pharmaceutical Sciences Volume 11 ; 11 ; 2000 ; >
+      au < exists ; exists ; 2001 ; Iraqi Journal of Pharmaceutical Sciences Volume 12 ; 12 ; 2001 ; >
+      au < exists ; exists ; 2002 ; Iraqi Journal of Pharmaceutical Sciences Volume 13 ; 13 ; 2002 ; >
       au < doesNotExist ; doesNotExist ; 2003 ; Iraqi Journal of Pharmaceutical Sciences Volume 2003 ; 2003 ; 2003 ; >
       au < doesNotExist ; doesNotExist ; 2004 ; Iraqi Journal of Pharmaceutical Sciences Volume 2004 ; 2004 ; 2004 ; >
-      au < doNotProcess ; exists ; 2005 ; Iraqi Journal of Pharmaceutical Sciences Volume 14 ; 14 ; 2005 ; >
-      au < doNotProcess ; exists ; 2006 ; Iraqi Journal of Pharmaceutical Sciences Volume 15 ; 15 ; 2006 ; >
-      au < doNotProcess ; exists ; 2007 ; Iraqi Journal of Pharmaceutical Sciences Volume 16 ; 16 ; 2007 ; >
-      au < doNotProcess ; exists ; 2008 ; Iraqi Journal of Pharmaceutical Sciences Volume 17 ; 17 ; 2008 ; >
-      au < doNotProcess ; exists ; 2009 ; Iraqi Journal of Pharmaceutical Sciences Volume 18 ; 18 ; 2009 ; >
-      au < doNotProcess ; exists ; 2010 ; Iraqi Journal of Pharmaceutical Sciences Volume 19 ; 19 ; 2010 ; >
-      au < doNotProcess ; exists ; 2011 ; Iraqi Journal of Pharmaceutical Sciences Volume 20 ; 20 ; 2011 ; >
-      au < doNotProcess ; exists ; 2012 ; Iraqi Journal of Pharmaceutical Sciences Volume 21 ; 21 ; 2012 ; >
-      au < doNotProcess ; exists ; 2013 ; Iraqi Journal of Pharmaceutical Sciences Volume 22 ; 22 ; 2013 ; >
+      au < exists ; exists ; 2005 ; Iraqi Journal of Pharmaceutical Sciences Volume 14 ; 14 ; 2005 ; >
+      au < exists ; exists ; 2006 ; Iraqi Journal of Pharmaceutical Sciences Volume 15 ; 15 ; 2006 ; >
+      au < exists ; exists ; 2007 ; Iraqi Journal of Pharmaceutical Sciences Volume 16 ; 16 ; 2007 ; >
+      au < exists ; exists ; 2008 ; Iraqi Journal of Pharmaceutical Sciences Volume 17 ; 17 ; 2008 ; >
+      au < exists ; exists ; 2009 ; Iraqi Journal of Pharmaceutical Sciences Volume 18 ; 18 ; 2009 ; >
+      au < exists ; exists ; 2010 ; Iraqi Journal of Pharmaceutical Sciences Volume 19 ; 19 ; 2010 ; >
+      au < exists ; exists ; 2011 ; Iraqi Journal of Pharmaceutical Sciences Volume 20 ; 20 ; 2011 ; >
+      au < exists ; exists ; 2012 ; Iraqi Journal of Pharmaceutical Sciences Volume 21 ; 21 ; 2012 ; >
+      au < exists ; exists ; 2013 ; Iraqi Journal of Pharmaceutical Sciences Volume 22 ; 22 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Iraqi Journal of Pharmaceutical Sciences Volume 23 ; 23 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Iraqi Journal of Pharmaceutical Sciences Volume 24 ; 24 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Iraqi Journal of Pharmaceutical Sciences Volume 25 ; 25 ; 2016 ; >
