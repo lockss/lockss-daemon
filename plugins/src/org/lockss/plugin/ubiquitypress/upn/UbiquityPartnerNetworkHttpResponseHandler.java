@@ -48,6 +48,15 @@ public class UbiquityPartnerNetworkHttpResponseHandler implements CacheResultHan
   protected static final Pattern ISSUE_PAT = 
       Pattern.compile("/volume/[0-9]+/issue/[0-9]+");
 
+  /*
+    2025: There have been a lot of files that we don't have access to on the html versions of articles. 
+    Example html article page: https://jotsjournal.org/articles/52/files/63858eb401680.html
+    Example broken media link files: https://jotsjournal.org/articles/52/files/aba1.jpg
+    UPN said this was expected so we will downgrade these 403s to warnings so that crawl can complete. 
+   */ 
+  protected static final Pattern MEDIA_PAT = 
+      Pattern.compile("/articles/[0-9]+/files/.*\\.(css|jpg|png|gif|webmanifest)");
+
   @Override
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
@@ -59,19 +68,20 @@ public class UbiquityPartnerNetworkHttpResponseHandler implements CacheResultHan
                                      String url,
                                      int responseCode) {
     logger.debug2(url);  
-    Matcher mat = ISSUE_PAT.matcher(url);      
+    Matcher issueMat = ISSUE_PAT.matcher(url);  
+    Matcher mediaPat = MEDIA_PAT.matcher(url);      
     switch (responseCode) {
       case 404: 
         logger.debug3("found 404");
-        if (mat.find()) {
+        if (issueMat.find()) {
           logger.debug3("found issue page");
           return new CacheException.RetryableNetworkException_5_10S();
         }
         return new CacheException.NoRetryDeadLinkException("404 Not Found");
       case 403: 
         logger.debug3("found 403");
-        if (url.contains("files/article.xsl") || url.contains("article.css")) {
-          logger.debug3("broken xsl or css file");
+        if (url.contains("files/article.xsl") || url.contains("article.css") || mediaPat.find()) {
+          logger.debug3("Bad media file or forbidden access, downgrading to warning.");
           return new CacheException.NoRetryDeadLinkException("403 Forbidden (non-fatal)");
         }
         return new CacheException.RetrySameUrlException("403 Forbidden error");

@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>44</string>
+    <string>45</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -119,16 +119,16 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_crawlrules</string>
     <list>
 <!--      <string>1,"^https?://(.+\.cloudfront\.net|cdn\.mathjax\.org|.+\.jquery\.com|(fonts|ajax)\.(gstatic|googleapis)\.com)/."</string> -->
-<!--  take out jquery temporarily to see what it is that this needed -->
+      <!-- exclude email links and improperly relative links -->
+      <string>2,"^https://%s/articles/[0-9]+/files/.*@.*\.edu",url_host(base_url)</string>
+      <string>2,"^https://%s/articles/[0-9]+/files/www\.",url_host(base_url)</string>
+      <!--  take out jquery temporarily to see what it is that this needed -->
       <string>1,"^https?://(maxcdn\.bootstrapcdn\.com|cdnjs\.cloudflare\.com|.+\.cloudfront\.net|cdn\.mathjax\.org|(fonts|ajax|storage)\.(gstatic|googleapis)\.com)/."</string>
       <string>1,"^https?://%s%sapi/theme$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s/index.php/%s/issue/view/[0-9]+$", url_host(base_url2), journal_id</string>
       <string>1,"^https?://%s/index.php/%s/.*/css\?name=(stylesheet|font)$", url_host(base_url2), journal_id</string>
       <string>1,"^https?://%s/api/[0-9\.]+/spritesheet", url_host(base_url)</string>
       <string>1,"^https?://%s%slockss/year/%d/?$", url_host(base_url), url_path(base_url), year</string>
-      <string>1,"^https?://%s%sarticles/[0-9]+/files/submission/proof/[0-9-]+\.(html|pdf)", url_host(base_url), url_path(base_url)</string>
-      <string>2,"^https?://%s%sarticles/[0-9]+/files/submission/proof/.*(\.(css|jpe?g|gif|pdf))?$", url_host(base_url), url_path(base_url)</string>
-      <string>2,"^https?://%s%sarticles/[0-9]+/files/(quicktime|browsers|resources)", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://%s%s.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?(/)?$", url_host(base_url2), url_path(base_url2)</string>
       <string>1,"^https?://%s%s.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)([?]((itok|v)=)?[^&amp;]+)?(/)?$", url_host(base_url), url_path(base_url)</string>
       <string>1,"^https?://journal-assets\.ubiquity\.press/.*\.(bmp|css|eot|gif|ico|js|jpe?g|png|tif?f|svg|ttf|woff.?)$"</string>
