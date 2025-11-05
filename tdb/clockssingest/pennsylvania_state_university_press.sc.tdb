@@ -578,7 +578,7 @@
       au < finished ; manifest ; 2022 ; The Mark Twain Annual Volume 20 ; 20 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; The Mark Twain Annual Volume 21 ; 21 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; The Mark Twain Annual Volume 22 ; 22 ; 2024 ; >
-      au < expected ; exists ; 2025 ; The Mark Twain Annual Volume 23 ; 23 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; The Mark Twain Annual Volume 23 ; 23 ; 2025 ; >
 
   }
 
@@ -842,7 +842,7 @@
       au < finished ; manifest ; 2022 ; Steinbeck Review Volume 19 ; 19 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Steinbeck Review Volume 20 ; 20 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Steinbeck Review Volume 21 ; 21 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Steinbeck Review Volume 22 ; 22 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; Steinbeck Review Volume 22 ; 22 ; 2025 ; >
 
   }
 
