@@ -145,7 +145,7 @@
       au < finished ; finished ; 2020 ; 2020 ; Advances in Science and Research Volume 17 ; 17 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; Advances in Science and Research Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Advances in Science and Research Volume 19 ; 19 ; >
-      au < deepCrawl ; exists ; 2023 ; 2023 ; Advances in Science and Research Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2023 ; 2023 ; Advances in Science and Research Volume 20 ; 20 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Advances in Science and Research Volume 21 ; 21 ; >
       au < crawling ; exists ; 2025 ; 2025 ; Advances in Science and Research Volume 22 ; 22 ; >
 
@@ -418,7 +418,7 @@
       au < finished ; frozen ; 2021 ; 2021 ; Biogeosciences Volume 18 ; 18 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Biogeosciences Volume 19 ; 19 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Biogeosciences Volume 20 ; 20 ; >
-      au < deepCrawl ; exists ; 2024 ; 2024 ; Biogeosciences Volume 21 ; 21 ; >
+      au < frozen ; exists ; 2024 ; 2024 ; Biogeosciences Volume 21 ; 21 ; >
       au < crawling ; exists ; 2025 ; 2025 ; Biogeosciences Volume 22 ; 22 ; >
 
   }
@@ -452,7 +452,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Climate of the Past Volume 15 ; 15 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Climate of the Past Volume 16 ; 16 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2021 ; 2021 ; Climate of the Past Volume 17 ; 17 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2022 ; 2022 ; Climate of the Past Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; Climate of the Past Volume 18 ; 18 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Climate of the Past Volume 19 ; 19 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Climate of the Past Volume 20 ; 20 ; >
       au < crawling ; exists ; 2025 ; 2025 ; Climate of the Past Volume 21 ; 21 ; >
@@ -588,7 +588,7 @@
       au < finished ; frozen ; 2021 ; 2021 ; Earth System Science Data Volume 13 ; 13 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2022 ; 2022 ; Earth System Science Data Volume 14 ; 14 ; >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Earth System Science Data Volume 15 ; 15 ; >
-      au < deepCrawl ; exists ; 2024 ; 2024 ; Earth System Science Data Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2024 ; 2024 ; Earth System Science Data Volume 16 ; 16 ; >
       au < crawling ; exists ; 2025 ; 2025 ; Earth System Science Data Volume 17 ; 17 ; >
 
   }
@@ -672,8 +672,8 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; E&G Quaternary Science Journal Volume 68 ; 68 ; >
       au < finished ; finished ; 2020 ; 2020 ; E&G Quaternary Science Journal Volume 69 ; 69 ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; 2021 ; E&G Quaternary Science Journal Volume 70 ; 70 ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2022 ; 2022 ; E&G Quaternary Science Journal Volume 71 ; 71 ; >
-      au < deepCrawl ; exists ; 2023 ; 2023 ; E&G Quaternary Science Journal Volume 72 ; 72 ; >
+      au < frozen ; exists ; 2022 ; 2022 ; E&G Quaternary Science Journal Volume 71 ; 71 ; >
+      au < frozen ; exists ; 2023 ; 2023 ; E&G Quaternary Science Journal Volume 72 ; 72 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; E&G Quaternary Science Journal Volume 73 ; 73 ; >
       au < crawling ; exists ; 2025 ; 2025 ; E&G Quaternary Science Journal Volume 74 ; 74 ; >
 
