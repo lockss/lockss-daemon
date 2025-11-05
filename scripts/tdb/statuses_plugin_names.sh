@@ -30,30 +30,33 @@ spath=$lpath/../scripts
 mkdir -p $tpath
 
 #To get the plugins with AU counts:
-grep -rl --include "*.xml" "plugin_identifier" plugins/src | sed 's/\(.*\).xml/\1/' | sort -u > $tpath/ab.txt
-scripts/tdb/tdbout -t plugin tdb/*/*.tdb | sort -u | sed 's/\./\//g' > $tpath/ac.txt
+grep -rl --include "*.xml" "plugin_identifier" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1/' | sort -u > $tpath/ab.txt
+scripts/tdb/tdbout -t plugin tdb/*/{,*/}*.tdb | sort -u | sed 's/\./\//g' > $tpath/ac.txt
 #plugins that have no AUs.
-diff $tpath/ab.txt $tpath/ac.txt | grep "^< " | sed 's/..\(.*\)/\1,0/' > $tpath/foo00.txt
+#diff $tpath/ab.txt $tpath/ac.txt | grep "^< " | sed 's/..\(.*\)/\1,0/' > $tpath/foo00.txt
+comm -23 $tpath/ab.txt $tpath/ac.txt | sed 's/\(.*\)/\1,0/' > $tpath/foo00.txt
 #plugins that have AUs
 #shopt -s extglob
 scripts/tdb/tdbout -t plugin `find tdb -name \*.tdb -print` | sed 's/\./\//g' | awk -F"\t" 'BEGIN {OFS=","} {foo[$0]++} END {for(x in foo) {print x,foo[x]}}' >> $tpath/foo00.txt
 #shopt -u extglob
 
 #To get the plugins with Journal counts:
-grep -rl --include "*.xml" "plugin_identifier" plugins/src | sed 's/\(.*\).xml/\1/' | sort -u > $tpath/abj.txt
-scripts/tdb/tdbout -t plugin -Q 'type ~ "journal"' tdb/*/*.tdb | sort -u | sed 's/\./\//g' > $tpath/acj.txt
+#grep -rl --include "*.xml" "plugin_identifier" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1/' | sort -u > $tpath/abj.txt
+scripts/tdb/tdbout -t plugin -Q 'type ~ "journal"' tdb/*/{,*/}*.tdb | sort -u | sed 's/\./\//g' > $tpath/acj.txt
 #plugins that have no Journal AUs.
-diff $tpath/abj.txt $tpath/acj.txt | grep "^< " | sed 's/..\(.*\)/\1,0/' > $tpath/foo19.txt
+#diff $tpath/abj.txt $tpath/acj.txt | grep "^< " | sed 's/..\(.*\)/\1,0/' > $tpath/foo19.txt
+comm -23 $tpath/ab.txt $tpath/acj.txt | sed 's/\(.*\)/\1,0/' > $tpath/foo19.txt
 #plugins that have Journal AUs
 #shopt -s extglob
 scripts/tdb/tdbout -t plugin -Q 'type ~ "journal"' `find tdb -name \*.tdb -print` | sed 's/\./\//g' | awk -F"\t" 'BEGIN {OFS=","} {foo[$0]++} END {for(x in foo) {print x,foo[x]}}' >> $tpath/foo19.txt
 #shopt -u extglob
 
 #To get the plugins with Book counts:
-grep -rl --include "*.xml" "plugin_identifier" plugins/src | sed 's/\(.*\).xml/\1/' | sort -u > $tpath/abb.txt
-scripts/tdb/tdbout -t plugin -Q 'type ~ "bookSeries"' tdb/*/*.tdb | sort -u | sed 's/\./\//g' > $tpath/acb.txt
+#grep -rl --include "*.xml" "plugin_identifier" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1/' | sort -u > $tpath/abb.txt
+scripts/tdb/tdbout -t plugin -Q 'type ~ "bookSeries"' tdb/*/{,*/}*.tdb | sort -u | sed 's/\./\//g' > $tpath/acb.txt
 #plugins that have no Book AUs.
-diff $tpath/abb.txt $tpath/acb.txt | grep "^< " | sed 's/..\(.*\)/\1,0/' > $tpath/foo20.txt
+#diff $tpath/abb.txt $tpath/acb.txt | grep "^< " | sed 's/..\(.*\)/\1,0/' > $tpath/foo20.txt
+comm $tpath/ab.txt $tpath/acb.txt | sed 's/\(.*\)/\1,0/' > $tpath/foo20.txt
 #plugins that have Book AUs
 #shopt -s extglob
 scripts/tdb/tdbout -t plugin -Q 'type ~ "bookSeries"' `find tdb -name \*.tdb -print` | sed 's/\./\//g' | awk -F"\t" 'BEGIN {OFS=","} {foo[$0]++} END {for(x in foo) {print x,foo[x]}}' >> $tpath/foo20.txt
@@ -64,9 +67,9 @@ scripts/tdb/tdbout -t plugin -Q 'type ~ "bookSeries"' `find tdb -name \*.tdb -pr
 grep -r -A 1 --include "*.xml" "<string>plugin_status</string>" plugins/src | grep "\- " | sed 's/plugins\/src\/\(.*\).xml-.*<string>\(.*\)<\/string>/\1,\2/' > $tpath/foo01.txt
 grep -rL --include "*.xml" "<string>plugin_status</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo01.txt
 #To get statues except those that start with "deprecated" or "ready"
-cat $tpath/foo01.txt | grep -v ",deprecated" | grep -v ",ready" > $tpath/foo16.txt
+#cat $tpath/foo01.txt | grep -v ",deprecated" | grep -v ",ready" > $tpath/foo16.txt
 #To get the plugins that are for "CLOCKSS" or not-clockss.
-cat $tpath/foo01.txt | cut -f 1 -d, | sed 's/$/,!/' | sed 's/\(.*\/Clockss.*Plugin\),!/\1,CLOCKSS/' > $tpath/foo17.txt #add ! for all those without clockss
+#cat $tpath/foo01.txt | cut -f 1 -d, | sed 's/$/,!/' | sed 's/\(.*\/Clockss.*Plugin\),!/\1,CLOCKSS/' > $tpath/foo17.txt #add ! for all those without clockss
 
 #Create a base list of plugins
 cat $tpath/foo01.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/AllPlugins.txt
@@ -100,8 +103,8 @@ cat $tpath/foo01.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/AllPlugins.txt
 #grep -rL --include "*.xml" "<string>au_feature_urls</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo05.txt
 
 #To get the plugins with and without plugin names (human readable):
-grep -r -A 1 --include "*.xml" "<string>plugin_name</string>" plugins/src | grep "\- " | sed 's/plugins\/src\/\(.*\).xml-.*<string>\(.*\)<\/string>/\1,\2/' > $tpath/foo18.txt
-grep -rL --include "*.xml" "<string>plugin_name</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo18.txt
+grep -r -A 1 --include "*.xml" "<string>plugin_name</string>" plugins/src | grep "\- " | sed 's/plugins\/src\/\(.*\).xml-.*<string>\(.*\)<\/string>/\1,\"\2\"/' > $tpath/foo18.txt
+grep -rL --include "*.xml" "<string>plugin_name</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,\"!\"/' >> $tpath/foo18.txt
 
 #To get the plugins with and without the parent plugin:
 #grep -r -A 1 --include "*.xml" "<string>plugin_parent</string>" plugins/src | grep "\- " | sed 's/plugins\/src\/\(.*\).xml-.*<string>.*\.\(.*\)<\/string>/\1,\2/' > $tpath/foo06.txt
