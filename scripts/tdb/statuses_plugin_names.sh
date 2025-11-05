@@ -99,8 +99,8 @@ cat $tpath/foo01.txt | sed 's/,.*//' | sort -t, -k 1,1 > $tpath/AllPlugins.txt
 #grep -r --include "*.xml" "<string>au_feature_urls</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml.*<string>.*<\/string>/\1,openurl/' > $tpath/foo05.txt
 #grep -rL --include "*.xml" "<string>au_feature_urls</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo05.txt
 
-#To get the plugins with and without plugin names (human readable:
-grep -r -A 1 --include "*.xml" "<string>plugin_name</string>" plugins/src | grep "\- " | sed 's/plugins\/src\/\(.*\).xml-.*<string>.*\.\(.*\)<\/string>/\1,\2/' > $tpath/foo18.txt
+#To get the plugins with and without plugin names (human readable):
+grep -r -A 1 --include "*.xml" "<string>plugin_name</string>" plugins/src | grep "\- " | sed 's/plugins\/src\/\(.*\).xml-.*<string>\(.*\)<\/string>/\1,\2/' > $tpath/foo18.txt
 grep -rL --include "*.xml" "<string>plugin_name</string>" plugins/src | sed 's/plugins\/src\/\(.*\).xml/\1,!/' >> $tpath/foo18.txt
 
 #To get the plugins with and without the parent plugin:
@@ -140,6 +140,8 @@ cat $tpath/foo01.txt | sort -t, -k 1,1 > $tpath/blatz01.txt #plugin status
 #cat $tpath/foo16.txt | sort -t, -k 1,1 > $tpath/blatz16.txt #plugin status, not ready, deprecated
 #cat $tpath/foo17.txt | sort -t, -k 1,1 > $tpath/blatz17.txt #plugin clockss or not
 cat $tpath/foo18.txt | sort -t, -k 1,1 > $tpath/blatz18.txt #plugin name or not
+cat $tpath/foo19.txt | sort -t, -k 1,1 > $tpath/blatz19.txt #journals or not
+cat $tpath/foo20.txt | sort -t, -k 1,1 > $tpath/blatz20.txt #books or not
 #cat $tpath/foo02.txt | sort -t, -k 1,1 > $tpath/blatz02.txt #substance checkers
 #cat $tpath/foo13.txt | sort -t, -k 1,1 > $tpath/blatz13.txt #https A
 #cat $tpath/foo14.txt | sort -t, -k 1,1 > $tpath/blatz14.txt #https B
