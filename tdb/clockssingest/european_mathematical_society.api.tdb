@@ -66,7 +66,7 @@
     au < ready ; exists ; 2002 ; 2002 ; Annales de l'Institut Henri Poincaré C Volume 19 ; 19 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Annales de l'Institut Henri Poincaré C Volume 20 ; 20 ; >
     au < ready ; exists ; 2004 ; 2004 ; Annales de l'Institut Henri Poincaré C Volume 21 ; 21 ; >
-    au < ready ; exists ; 2005 ; 2005 ; Annales de l'Institut Henri Poincaré C Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2005 ; 2005 ; Annales de l'Institut Henri Poincaré C Volume 22 ; 22 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Annales de l'Institut Henri Poincaré C Volume 23 ; 23 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Annales de l'Institut Henri Poincaré C Volume 24 ; 24 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Annales de l'Institut Henri Poincaré C Volume 25 ; 25 ; >
@@ -172,10 +172,10 @@
     au < manifest ; exists ; 1999 ; 1999 ; Documenta Mathematica Volume 4  ; 4  ; >
     au < ready ; exists ; 2000 ; 2000 ; Documenta Mathematica Volume 5  ; 5  ; >
     au < ready ; exists ; 2001 ; 2001 ; Documenta Mathematica Volume 6  ; 6  ; >
-    au < ready ; exists ; 2002 ; 2002 ; Documenta Mathematica Volume 7  ; 7  ; >
-    au < ready ; exists ; 2003 ; 2003 ; Documenta Mathematica Volume 8  ; 8  ; >
+    au < crawling ; exists ; 2002 ; 2002 ; Documenta Mathematica Volume 7  ; 7  ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Documenta Mathematica Volume 8  ; 8  ; >
     au < ready ; exists ; 2004 ; 2004 ; Documenta Mathematica Volume 9  ; 9  ; >
-    au < ready ; exists ; 2005 ; 2005 ; Documenta Mathematica Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2005 ; 2005 ; Documenta Mathematica Volume 10 ; 10 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Documenta Mathematica Volume 11 ; 11 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Documenta Mathematica Volume 12 ; 12 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Documenta Mathematica Volume 13 ; 13 ; >
@@ -214,7 +214,7 @@
     au < ready ; exists ; 2000 ; 2000 ; Elemente der Mathematik Volume 55 ; 55 ; >
     au < ready ; exists ; 2001 ; 2001 ; Elemente der Mathematik Volume 56 ; 56 ; >
     au < ready ; exists ; 2002 ; 2002 ; Elemente der Mathematik Volume 57 ; 57 ; >
-    au < ready ; exists ; 2003 ; 2003 ; Elemente der Mathematik Volume 58 ; 58 ; >
+    au < crawling ; exists ; 2003 ; 2003 ; Elemente der Mathematik Volume 58 ; 58 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Elemente der Mathematik Volume 59 ; 59 ; >
     au < ready ; exists ; 2005 ; 2005 ; Elemente der Mathematik Volume 60 ; 60 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Elemente der Mathematik Volume 61 ; 61 ; >
@@ -357,7 +357,7 @@
 
     au < manifest ; exists ; 1999 ; 1999 ; Interfaces and Free Boundaries Volume 1 ; 1 ; >
     au < crawling ; exists ; 2000 ; 2000 ; Interfaces and Free Boundaries Volume 2 ; 2 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Interfaces and Free Boundaries Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Interfaces and Free Boundaries Volume 3 ; 3 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Interfaces and Free Boundaries Volume 4 ; 4 ; >
     au < ready ; exists ; 2003 ; 2003 ; Interfaces and Free Boundaries Volume 5 ; 5 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Interfaces and Free Boundaries Volume 6 ; 6 ; >
@@ -509,7 +509,7 @@
     au < ready ; exists ; 2002 ; 2002 ; Journal of the European Mathematical Society Volume 4 ; 4 ; >
     au < ready ; exists ; 2003 ; 2003 ; Journal of the European Mathematical Society Volume 5 ; 5 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Journal of the European Mathematical Society Volume 6 ; 6 ; >
-    au < ready ; exists ; 2005 ; 2005 ; Journal of the European Mathematical Society Volume 7 ; 7 ; >
+    au < crawling ; exists ; 2005 ; 2005 ; Journal of the European Mathematical Society Volume 7 ; 7 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Journal of the European Mathematical Society Volume 8 ; 8 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Journal of the European Mathematical Society Volume 9 ; 9 ; >
     au < frozen ; exists ; 2008 ; 2008 ; Journal of the European Mathematical Society Volume 10 ; 10 ; >
@@ -660,12 +660,12 @@
     au < frozen ; exists ; 1965 ; 1965 ; Publications of the Research Institute for Mathematical Sciences Volume 1 ; 1 ; >
     au < frozen ; exists ; 1966 ; 1966 ; Publications of the Research Institute for Mathematical Sciences Volume 2 ; 2 ; >
     au < ready ; exists ; 1967 ; 1967 ; Publications of the Research Institute for Mathematical Sciences Volume 3 ; 3 ; >
-    au < ready ; exists ; 1968 ; 1968 ; Publications of the Research Institute for Mathematical Sciences Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1968 ; 1968 ; Publications of the Research Institute for Mathematical Sciences Volume 4 ; 4 ; >
     au < crawling ; exists ; 1969 ; 1969 ; Publications of the Research Institute for Mathematical Sciences Volume 5 ; 5 ; >
     au < crawling ; exists ; 1970 ; 1970 ; Publications of the Research Institute for Mathematical Sciences Volume 6 ; 6 ; >
     au < ready ; exists ; 1971 ; 1971 ; Publications of the Research Institute for Mathematical Sciences Volume 7 ; 7 ; >
     au < ready ; exists ; 1972 ; 1972 ; Publications of the Research Institute for Mathematical Sciences Volume 8 ; 8 ; >
-    au < ready ; exists ; 1973 ; 1973 ; Publications of the Research Institute for Mathematical Sciences Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1973 ; 1973 ; Publications of the Research Institute for Mathematical Sciences Volume 9 ; 9 ; >
     au < crawling ; exists ; 1974 ; 1974 ; Publications of the Research Institute for Mathematical Sciences Volume 10 ; 10 ; >
     au < crawling ; exists ; 1975 ; 1975 ; Publications of the Research Institute for Mathematical Sciences Volume 11 ; 11 ; >
     au < crawling ; exists ; 1976 ; 1976 ; Publications of the Research Institute for Mathematical Sciences Volume 12 ; 12 ; >
@@ -696,7 +696,7 @@
     au < ready ; exists ; 2001 ; 2001 ; Publications of the Research Institute for Mathematical Sciences Volume 37 ; 37 ; >
     au < ready ; exists ; 2002 ; 2002 ; Publications of the Research Institute for Mathematical Sciences Volume 38 ; 38 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Publications of the Research Institute for Mathematical Sciences Volume 39 ; 39 ; >
-    au < ready ; exists ; 2004 ; 2004 ; Publications of the Research Institute for Mathematical Sciences Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2004 ; 2004 ; Publications of the Research Institute for Mathematical Sciences Volume 40 ; 40 ; >
     au < crawling ; exists ; 2005 ; 2005 ; Publications of the Research Institute for Mathematical Sciences Volume 41 ; 41 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Publications of the Research Institute for Mathematical Sciences Volume 42 ; 42 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Publications of the Research Institute for Mathematical Sciences Volume 43 ; 43 ; >
@@ -838,10 +838,10 @@
     au < manifest ; exists ; 1998 ; 1998 ; Revista Matemática Iberoamericana Volume 14 ; 14 ; >
     au < manifest ; exists ; 1999 ; 1999 ; Revista Matemática Iberoamericana Volume 15 ; 15 ; >
     au < ready ; exists ; 2000 ; 2000 ; Revista Matemática Iberoamericana Volume 16 ; 16 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Revista Matemática Iberoamericana Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Revista Matemática Iberoamericana Volume 17 ; 17 ; >
     au < crawling ; exists ; 2002 ; 2002 ; Revista Matemática Iberoamericana Volume 18 ; 18 ; >
     au < ready ; exists ; 2003 ; 2003 ; Revista Matemática Iberoamericana Volume 19 ; 19 ; >
-    au < ready ; exists ; 2004 ; 2004 ; Revista Matemática Iberoamericana Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2004 ; 2004 ; Revista Matemática Iberoamericana Volume 20 ; 20 ; >
     au < ready ; exists ; 2005 ; 2005 ; Revista Matemática Iberoamericana Volume 21 ; 21 ; >
     au < frozen ; exists ; 2006 ; 2006 ; Revista Matemática Iberoamericana Volume 22 ; 22 ; >
     au < frozen ; exists ; 2007 ; 2007 ; Revista Matemática Iberoamericana Volume 23 ; 23 ; >
@@ -896,8 +896,8 @@
     au < manifest ; exists ; 1997 ; 1997 ; Zeitschrift für Analysis und ihre Anwendungen Volume 16 ; 16 ; >
     au < manifest ; exists ; 1998 ; 1998 ; Zeitschrift für Analysis und ihre Anwendungen Volume 17 ; 17 ; >
     au < ready ; exists ; 1999 ; 1999 ; Zeitschrift für Analysis und ihre Anwendungen Volume 18 ; 18 ; >
-    au < ready ; exists ; 2000 ; 2000 ; Zeitschrift für Analysis und ihre Anwendungen Volume 19 ; 19 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Zeitschrift für Analysis und ihre Anwendungen Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Zeitschrift für Analysis und ihre Anwendungen Volume 19 ; 19 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Zeitschrift für Analysis und ihre Anwendungen Volume 20 ; 20 ; >
     au < ready ; exists ; 2002 ; 2002 ; Zeitschrift für Analysis und ihre Anwendungen Volume 21 ; 21 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Zeitschrift für Analysis und ihre Anwendungen Volume 22 ; 22 ; >
     au < crawling ; exists ; 2004 ; 2004 ; Zeitschrift für Analysis und ihre Anwendungen Volume 23 ; 23 ; >
