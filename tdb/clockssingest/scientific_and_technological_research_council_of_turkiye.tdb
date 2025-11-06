@@ -2,8 +2,9 @@
   publisher <
     name = Scientific and Technological Research Council of Türkiye (TUBITAK) ;
     info[contract] = 2008 ;
-    info[back] = 2008 ;
-    info[tester] = 5
+    info[back] = 1995 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
   >
   provider = bepress
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.

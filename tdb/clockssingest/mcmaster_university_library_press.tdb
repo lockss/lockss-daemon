@@ -3,9 +3,9 @@
   publisher <
     name = McMaster University Library Press ;
     info[contract] = 2017 ;
-    info[back] = 2000 ;
+    info[back] = 1990 ;
     info[tester] = 8 ;
-    info[poller] = 8
+    info[platform] = OJS2 & OJS3
   >
     #plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
 
