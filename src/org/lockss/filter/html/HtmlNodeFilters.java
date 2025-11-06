@@ -892,7 +892,7 @@ public class HtmlNodeFilters {
 	String mime = tag.getAttribute("type");
 	if (mime == null) {
 	  // shouldn't happen - type attr is required
-	  log.warning("<style> tag with no type attribute");
+	  log.debug2("<style> tag with no type attribute");
 	  mime = DEFAULT_STYLE_MIME_TYPE;
 	}
 	LinkRewriterFactory lrf = au.getLinkRewriterFactory(mime);
@@ -1041,7 +1041,7 @@ public class HtmlNodeFilters {
 	    }
 	  } else {
 	    // shouldn't happen - type attr is required
-	    log.warning("<script> tag with no type or language attribute");
+	    log.debug2("<script> tag with no type or language attribute");
 	    mime = DEFAULT_SCRIPT_MIME_TYPE;
 	  }
 	}
