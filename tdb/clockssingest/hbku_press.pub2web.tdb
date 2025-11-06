@@ -3,9 +3,8 @@
   publisher <
     name = HBKU Press ;
     info[contract] = 2011 ;
-    info[back] = 2000 ;
+    info[back] = 2009 ;
     info[tester] = 5 ;
-    info[poller] = 3 ;
     info[platform] = Pub2Web/Ingenta
     
   >
@@ -29,7 +28,7 @@
       au < finished ; manifest ; 2021 ; Arabian Journal of Scientific Research Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; Arabian Journal of Scientific Research Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Arabian Journal of Scientific Research Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
-      au < exists ; exists ; 2024 ; Arabian Journal of Scientific Research Volume 5 ; 5 ; >
+      au < exists ; exists ; 2024 ; Arabian Journal of Scientific Research Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Arabian Journal of Scientific Research Volume 2025 ; 2025 ; >
   }
 
@@ -439,12 +438,12 @@
     param[journal_id] = rels
     comment[journal] = stopped publishing.
 
-    au < notReady ; exists ; 2009 ; Religions: A Scholarly Journal Volume 2009 ; 2009 ; > #no pdf file collected
+    au < manifest ; exists ; 2009 ; Religions: A Scholarly Journal Volume 2009 ; 2009 ; > #no pdf file collected
     au < doNotProcess ; doNotProcess ; 2012 ; Religions: A Scholarly Journal Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; Religions: A Scholarly Journal Volume 2014 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; Religions: A Scholarly Journal Volume 2015 ; 2015 ; >
     au < doNotProcess ; doNotProcess ; 2016 ; Religions: A Scholarly Journal Volume 2016 ; 2016 ; >
-      #no longer publishing 20230221
+    #no longer publishing 20230221
 
   }
 
