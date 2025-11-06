@@ -106,7 +106,7 @@ END {
   #print out publisher, plugin, contract year, back, year, tester, back aus, total aus
   for (i = 0 ; i < pn ; i++) {
 #    printf "%s\t%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], k[i], d[i], r[i], b[p[i],n[i],d[i]]
-    printf "%s\t%s\t%s\t%s\t%s\t%s\t%d\t%d", p[i], n[i], t[i], k[i], d[p[i],n[i]], r[i], c[$1,lp2], b[p[i],n[i]]
+    printf "%s\t%s\t%s\t%s\t%s\t%s\t%d\t%d", p[i], n[i], t[i], k[i], d[p[i],n[i]], r[i], c[p[i],n[i]], b[p[i],n[i]]
 #    for (j = 0 ; j < sn ; j++) {
 #      if (x[s[j]] > 0){
 #      if (c[p[i],n[i],d[i],s[j]] == 0) {
