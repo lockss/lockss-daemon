@@ -12,13 +12,8 @@ BEGIN {
 #  # end_year is the AU year, or the second half of a range, ie 2014 in 2013-2014
   end_year = 0
   incontract = 0
-#  # test_year is the contract year, or the back year if there is one.
-#  test_year = ""
-#  if ($7 == "") {
-#    test_year = $3
-#  } else {
-#    test_year = $7
-#  }
+  # test_year is the contract year.
+  # test_year = $3
   if (length($4) > 3) {
     end_year = substr($4,length($4)-3,4)
   }
@@ -53,7 +48,9 @@ BEGIN {
       pn++
     }
     b[$1,lp2]++
-    #c[$1,lp2]++
+    if ((end_year < $3) && ($6 == "exists" || $6 == "expected" || $6 == "manifest" || $6 == "wanted" || $6 == "testing" || $6 == "notReady")) {
+      c[$1,lp2]++
+    }
     if (d[$1,lp2] > end_year) {
       d[$1,lp2] = end_year;
     }
@@ -98,7 +95,7 @@ END {
 #  scn = 15
 #
   #print out header
-  printf "Publisher\tPlugin\tContr\tBack\tYearMin\tT\tTotal"
+  printf "Publisher\tPlugin\tContr\tBack\tYearMin\tT\tBackT\tTotal"
 #  for (j = 0 ; j < scn ; j++) {
 #    if (x[s[j]] > 0) {
 #    printf "\t%s", sc[j]
@@ -106,10 +103,10 @@ END {
 #  }
   printf "\n"
 
-  #print out publisher, plugin, contract year, back, year, tester, total aus
+  #print out publisher, plugin, contract year, back, year, tester, back aus, total aus
   for (i = 0 ; i < pn ; i++) {
 #    printf "%s\t%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], k[i], d[i], r[i], b[p[i],n[i],d[i]]
-    printf "%s\t%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], k[i], d[p[i],n[i]], r[i], b[p[i],n[i]]
+    printf "%s\t%s\t%s\t%s\t%s\t%s\t%d\t%d", p[i], n[i], t[i], k[i], d[p[i],n[i]], r[i], c[$1,lp2], b[p[i],n[i]]
 #    for (j = 0 ; j < sn ; j++) {
 #      if (x[s[j]] > 0){
 #      if (c[p[i],n[i],d[i],s[j]] == 0) {
@@ -122,7 +119,7 @@ END {
     printf "\n"
   }
     #print out bottom line sums
-    printf "Publisher\tPlugin\tContr\tBack\tYearMin\tT\t%d", tt
+    printf "Publisher\tPlugin\tContr\tBack\tYearMin\tT\tBackT\tBackT\t%d", tt
 #    for (j = 0 ; j < sn ; j++) {
 #      if (x[s[j]] > 0) {
 #        printf "\t%d", x[s[j]]
