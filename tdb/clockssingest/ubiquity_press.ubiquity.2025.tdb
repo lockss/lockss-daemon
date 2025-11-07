@@ -149,7 +149,7 @@
       nondefparam[base_url2] = https://account.hysafejournal.org/
       nondefparam[journal_id] = kitl-j-hs
 
-      au < frozen ; exists ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; KIT Scientific Publishing ; Issue URL does not redirect to journal site ; https://hysafejournal.org/ ; >
+      au < finished ; manifest ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; KIT Scientific Publishing ; Issue URL does not redirect to journal site ; https://hysafejournal.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; 2 ; Hydrogen Safety Volume 2025 ; 2025 ; 2 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ ; >
 
   }
@@ -182,7 +182,7 @@
       au < frozen ; down ; 2021 ; 58 ; Estetika: The European Journal of Aesthetics Volume 2021 ; 2021 ; 58 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 [superseded] ; 2022 ; 59 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
       au < frozen ; exists ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
-      au < frozen ; exists ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
+      au < finished ; manifest ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ;  ; https://estetikajournal.org/ ; >
   }
 
@@ -254,7 +254,7 @@
       au < finished ; crawling ; 2021 ; 24 ; Redescriptions Volume 2021 ; 2021 ; 24 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 25 ; Redescriptions Volume 2022 [superseded] ; 2022 ; 25 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 26 ; Redescriptions Volume 2023 ; 2023 ; 26 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
-      au < frozen ; exists ; 2024 ; 27 ; Redescriptions Volume 2024 ; 2024 ; 27 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
+      au < finished ; manifest ; 2024 ; 27 ; Redescriptions Volume 2024 ; 2024 ; 27 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 28 ; Redescriptions Volume 2025 ; 2025 ; 28 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
 
   }
@@ -744,7 +744,7 @@
       au < frozen ; exists ; 2021 ; 73 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; 73 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       au < doNotProcess ; doNotProcess ; 2022 ; 74 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; 74 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; > # Lists all volumes.
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
-      au < frozen ; exists ; 2024 ; 76 ; Tellus B: Chemical and Physical Meteorology Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
+      au < finished ; manifest ; 2024 ; 76 ; Tellus B: Chemical and Physical Meteorology Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2025 ; 77 ; Tellus B: Chemical and Physical Meteorology Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ ; >
       #Merged with Tellus A to form Tellus.
   }
@@ -970,7 +970,7 @@
       au < finished ; crawling ; 2021 ; 5 ; Computational Psychiatry Volume 2021 ; 2021 ; 5 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 6 ; Computational Psychiatry Volume 2022 [superseded] ; 2022 ; 6 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 7 ; Computational Psychiatry Volume 2023 ; 2023 ; 7 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
-      au < frozen ; exists ; 2024 ; 8 ; Computational Psychiatry Volume 2024 ; 2024 ; 8 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
+      au < finished ; manifest ; 2024 ; 8 ; Computational Psychiatry Volume 2024 ; 2024 ; 8 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 9 ; Computational Psychiatry Volume 2025 ; 2025 ; 9 ; Ubiquity Press ;  ; https://cpsyjournal.org/ ; >
 
   }
@@ -1100,7 +1100,7 @@
       au < finished ; finished ; 2021 ; 21 ; International Journal of Integrated Care Volume 2021 ; 2021 ; 21 ; Ubiquity Press ;  ; https://www.ijic.org/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 22 ; International Journal of Integrated Care Volume 2022 [superseded] ; 2022 ; 22 ; Ubiquity Press ;  ; https://www.ijic.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 23 ; International Journal of Integrated Care Volume 2023 ; 2023 ; 23 ; Ubiquity Press ;  ; https://ijic.org/ ; >
-      au < frozen ; exists ; 2024 ; 24 ; International Journal of Integrated Care Volume 2024 ; 2024 ; 24 ; Ubiquity Press ;  ; https://ijic.org/ ; >
+      au < finished ; manifest ; 2024 ; 24 ; International Journal of Integrated Care Volume 2024 ; 2024 ; 24 ; Ubiquity Press ;  ; https://ijic.org/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; 25 ; International Journal of Integrated Care Volume 2025 ; 2025 ; 25 ; Ubiquity Press ;  ; https://ijic.org/ ; >
 
   }
@@ -1580,7 +1580,7 @@
       au < finished ; crawling ; 2021 ; 2 ; Continuity in Education Volume 2021 ; 2021 ; 2 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; reingest3.clockss.org:8083 >
       au < superseded ; exists ; 2022 ; 3 ; Continuity in Education Volume 2022 [superseded] ; 2022 ; 3 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 4 ; Continuity in Education Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
-      au < frozen ; exists ; 2024 ; 5 ; Continuity in Education Volume 2024 ; 2024 ; 5 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
+      au < finished ; manifest ; 2024 ; 5 ; Continuity in Education Volume 2024 ; 2024 ; 5 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; 6 ; Continuity in Education Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://continuityineducation.org/ ; >
 
   }
@@ -1649,7 +1649,7 @@
       au < finished ; crawling ; 2021 ; 16 ; Global Heart Volume 2021 ; 2021 ; 16 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
       au < superseded ; exists ; 2022 ; 17 ; Global Heart Volume 2022 [superseded] ; 2022 ; 17 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < doNotProcess ; exists ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ; 18 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
-      au < frozen ; exists ; 2024 ; 19 ; Global Heart Volume 2024 ; 2024 ; 19 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
+      au < finished ; manifest ; 2024 ; 19 ; Global Heart Volume 2024 ; 2024 ; 19 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ; 403: https://storage.googleapis.com/jnl-up-j-gh-files/journals/1/articles/1421/67e521b0e7226.png from https://globalheartjournal.com/en/articles/1421 ; https://globalheartjournal.com/ ; >
 
   }
