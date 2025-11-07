@@ -733,15 +733,15 @@
       param[au_oai_set] = mab
       #content 1924-present
 
-      au < ready ; exists ; 2000 ; 2000 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2000 ; 2000 ; https://mab-online.nl/ ; >
+      au < crawling ; exists ; 2000 ; 2000 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2000 ; 2000 ; https://mab-online.nl/ ; >
       au < crawling ; exists ; 2001 ; 2001 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2001 ; 2001 ; https://mab-online.nl/ ; >
-      au < ready ; exists ; 2002 ; 2002 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2002 ; 2002 ; https://mab-online.nl/ ; >
+      au < crawling ; exists ; 2002 ; 2002 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2002 ; 2002 ; https://mab-online.nl/ ; >
       au < crawling ; exists ; 2003 ; 2003 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2003 ; 2003 ; https://mab-online.nl/ ; >
       au < crawling ; exists ; 2004 ; 2004 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2004 ; 2004 ; https://mab-online.nl/ ; >
       au < crawling ; exists ; 2005 ; 2005 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2005 ; 2005 ; https://mab-online.nl/ ; >
       au < ready ; exists ; 2006 ; 2006 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2006 ; 2006 ; https://mab-online.nl/ ; >
       au < crawling ; exists ; 2007 ; 2007 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2007 ; 2007 ; https://mab-online.nl/ ; >
-      au < ready ; exists ; 2008 ; 2008 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2008 ; 2008 ; https://mab-online.nl/ ; >
+      au < crawling ; exists ; 2008 ; 2008 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2008 ; 2008 ; https://mab-online.nl/ ; >
       au < crawling ; exists ; 2009 ; 2009 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2009 ; 2009 ; https://mab-online.nl/ ; >
       au < ready ; exists ; 2010 ; 2010 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2010 ; 2010 ; https://mab-online.nl/ ; >
       au < crawling ; exists ; 2011 ; 2011 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2011 ; 2011 ; https://mab-online.nl/ ; >
