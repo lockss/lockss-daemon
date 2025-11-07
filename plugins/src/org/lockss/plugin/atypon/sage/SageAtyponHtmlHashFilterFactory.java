@@ -114,6 +114,8 @@ public class SageAtyponHtmlHashFilterFactory
 		HtmlNodeFilters.tagWithAttributeRegex("section", "id", "backmatter"),
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "core-nav-wrapper"),
 		HtmlNodeFilters.tagWithAttributeRegex("section", "class", "more-sage-products__container"),
+		HtmlNodeFilters.tagWithAttributeRegex("section", "id", "tab-information"),
+		HtmlNodeFilters.tagWithAttributeRegex("a", "class", "sr-only-focusable"),
 
 
 				// footer filtered in BaseAtypon
