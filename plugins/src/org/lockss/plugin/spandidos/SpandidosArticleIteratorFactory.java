@@ -65,7 +65,7 @@ public class SpandidosArticleIteratorFactory
   // Limit to just journal volume items
   protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
   // Match on only those patters that could be an article
-  protected static final String PATTERN_TEMPLATE = "\"https://[^/]+/([0-9\\.]+/[0-9a-zA-Z\\.]+)$\"";
+  protected static final String PATTERN_TEMPLATE = "\"https://[^/]+/([0-9\\.]+/[0-9a-zA-Z\\._]+)$\"";
 
   public static final Pattern ABSTRACT_PATTERN = Pattern.compile("/([^/]+/[^/]+)/abstract$", Pattern.CASE_INSENSITIVE);
   public static final Pattern PDF_PATTERN = Pattern.compile("/([^/]+/[^/]+)/download$", Pattern.CASE_INSENSITIVE);

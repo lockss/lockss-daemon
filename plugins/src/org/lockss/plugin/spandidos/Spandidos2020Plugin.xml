@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -258,6 +258,14 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>plugin_crawl_seed_factory</string>
     <string>org.lockss.plugin.spandidos.SpandidosCrawlSeedFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.spandidos.Spandidos2020CrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.spandidos.Spandidos2020HashFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>

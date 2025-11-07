@@ -1,4 +1,4 @@
-<!--
+/*
 
 Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
@@ -28,51 +28,43 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
--->
-<map>
-  <entry>
-    <string>plugin_status</string>
-    <string>ready</string>
-  </entry>
-  <entry>
-    <string>plugin_identifier</string>
-    <string>org.lockss.plugin.spandidos.ClockssSpandidos2020Plugin</string>
-  </entry>
-  <entry>
-    <string>plugin_name</string>
-    <string>Spandidos Plugin (CLOCKSS)</string>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>5</string>
-  </entry>
-  <entry>
-    <string>plugin_parent</string>
-    <string>org.lockss.plugin.spandidos.Spandidos2020Plugin</string>
-  </entry>
-  <entry>
-    <string>plugin_parent_version</string>
-    <string>5</string>
-  </entry>
-  <entry>
-    <string>plugin_publishing_platform</string>
-    <string>Spandidos</string>
-  </entry>
-  <entry>
-    <string>au_name</string>
-    <string>"Spandidos Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
-  </entry>
-  <entry>
-    <string>au_permission_url</string>
-    <string>"%slockss.txt", base_url</string>
-  </entry>
-  <entry>
-    <string>clockss_override</string>
-    <map>
-     <entry>
-        <string>au_def_pause_time</string>
-        <long>100</long>
-     </entry>
-    </map>
-  </entry>  
-</map>
+*/
+
+package org.lockss.plugin.spandidos;
+
+import java.io.Reader;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
+import org.htmlparser.filters.TagNameFilter;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.FilterFactory;
+import org.lockss.util.ReaderInputStream;
+import java.io.InputStream;
+import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
+import org.lockss.filter.html.*;
+
+public class Spandidos2020HashFilterFactory implements FilterFactory {
+
+  public InputStream createFilteredInputStream(ArchivalUnit au,
+                                               InputStream in,
+                                               String encoding) {
+
+    NodeFilter[] excludeNodes = new NodeFilter[] {
+      // filter out comments
+      HtmlNodeFilters.comment(),
+      // filter out script, footer
+      new TagNameFilter("script"),
+      new TagNameFilter("footer"),
+    };
+
+    InputStream interStream = new HtmlFilterInputStream(in, encoding,
+            new HtmlCompoundTransform(
+                    HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)) //, xformAllTags
+            ));
+
+    Reader reader = FilterUtil.getReader(interStream, encoding);
+    return new ReaderInputStream(new WhiteSpaceFilter(reader));
+  }
+
+}
