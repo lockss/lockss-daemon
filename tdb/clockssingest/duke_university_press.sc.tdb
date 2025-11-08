@@ -3,9 +3,9 @@
   publisher <
     name = Duke University Press ;
     info[contract] = 2012 ;
-    info[back] = 2000 ;
+    info[back] = 1987 ;
     info[tester] = 5 ;
-    info[poller] = 6
+    info[platform] = SC
   >
     plugin = org.lockss.plugin.silverchair.dup.ClockssDupSilverchairPlugin
     implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
