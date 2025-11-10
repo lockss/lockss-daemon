@@ -441,16 +441,16 @@
    au < manifest ; exists ; 1998 ; Continuity and Change Volume 13 ; 13 ; >
    au < manifest ; exists ; 1999 ; Continuity and Change Volume 14 ; 14 ; >
    au < frozen ; exists ; 2000 ; Continuity and Change Volume 15 ; 15 ; >
-   au < ready ; exists ; 2001 ; Continuity and Change Volume 16 ; 16 ; >
+   au < crawling ; exists ; 2001 ; Continuity and Change Volume 16 ; 16 ; >
    au < frozen ; exists ; 2002 ; Continuity and Change Volume 17 ; 17 ; >
    au < ready ; exists ; 2003 ; Continuity and Change Volume 18 ; 18 ; >
    au < frozen ; exists ; 2004 ; Continuity and Change Volume 19 ; 19 ; >
-   au < ready ; exists ; 2005 ; Continuity and Change Volume 20 ; 20 ; >
+   au < crawling ; exists ; 2005 ; Continuity and Change Volume 20 ; 20 ; >
    au < frozen ; exists ; 2006 ; Continuity and Change Volume 21 ; 21 ; >
    au < frozen ; exists ; 2007 ; Continuity and Change Volume 22 ; 22 ; >
-   au < ready ; exists ; 2008 ; Continuity and Change Volume 23 ; 23 ; >
+   au < crawling ; exists ; 2008 ; Continuity and Change Volume 23 ; 23 ; >
    au < frozen ; exists ; 2009 ; Continuity and Change Volume 24 ; 24 ; >
-   au < ready ; exists ; 2010 ; Continuity and Change Volume 25 ; 25 ; >
+   au < crawling ; exists ; 2010 ; Continuity and Change Volume 25 ; 25 ; >
    au < frozen ; exists ; 2011 ; Continuity and Change Volume 26 ; 26 ; >
    au < frozen ; exists ; 2012 ; Continuity and Change Volume 27 ; 27 ; >
    au < ready ; exists ; 2013 ; Continuity and Change Volume 28 ; 28 ; >
@@ -2690,7 +2690,7 @@
     au < manifest ; exists ; 1998 ; Arabic Sciences & Philosophy Volume 8 ; 8 ; >
     au < manifest ; exists ; 1999 ; Arabic Sciences & Philosophy Volume 9 ; 9 ; >
     au < ready ; exists ; 2000 ; Arabic Sciences & Philosophy Volume 10 ; 10 ; >
-    au < ready ; exists ; 2001 ; Arabic Sciences & Philosophy Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2001 ; Arabic Sciences & Philosophy Volume 11 ; 11 ; >
     au < ready ; exists ; 2002 ; Arabic Sciences & Philosophy Volume 12 ; 12 ; >
     au < frozen ; exists ; 2003 ; Arabic Sciences & Philosophy Volume 13 ; 13 ; >
     au < frozen ; exists ; 2004 ; Arabic Sciences & Philosophy Volume 14 ; 14 ; >
@@ -2704,7 +2704,7 @@
     au < frozen ; exists ; 2012 ; Arabic Sciences & Philosophy Volume 22 ; 22 ; >
     au < frozen ; exists ; 2013 ; Arabic Sciences & Philosophy Volume 23 ; 23 ; >
     au < frozen ; exists ; 2014 ; Arabic Sciences & Philosophy Volume 24 ; 24 ; >
-    au < ready ; exists ; 2015 ; Arabic Sciences & Philosophy Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2015 ; Arabic Sciences & Philosophy Volume 25 ; 25 ; >
     au < frozen ; exists ; 2016 ; Arabic Sciences & Philosophy Volume 26 ; 26 ; >
     au < frozen ; exists ; 2017 ; Arabic Sciences & Philosophy Volume 27 ; 27 ; >
     au < frozen ; exists ; 2018 ; Arabic Sciences & Philosophy Volume 28 ; 28 ; >
@@ -2739,9 +2739,9 @@
     au < frozen ; exists ; 2005 ; Architectural Research Quarterly Volume 9 ; 9 ; >
     au < ready ; exists ; 2006 ; Architectural Research Quarterly Volume 10 ; 10 ; >
     au < frozen ; exists ; 2007 ; Architectural Research Quarterly Volume 11 ; 11 ; >
-    au < ready ; exists ; 2008 ; Architectural Research Quarterly Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2008 ; Architectural Research Quarterly Volume 12 ; 12 ; >
     au < frozen ; exists ; 2009 ; Architectural Research Quarterly Volume 13 ; 13 ; >
-    au < ready ; exists ; 2010 ; Architectural Research Quarterly Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2010 ; Architectural Research Quarterly Volume 14 ; 14 ; >
     au < frozen ; exists ; 2011 ; Architectural Research Quarterly Volume 15 ; 15 ; >
     au < frozen ; exists ; 2012 ; Architectural Research Quarterly Volume 16 ; 16 ; >
     au < frozen ; exists ; 2013 ; Architectural Research Quarterly Volume 17 ; 17 ; >

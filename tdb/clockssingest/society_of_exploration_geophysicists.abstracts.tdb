@@ -21,7 +21,7 @@
    #All content at https://library.seg.org/series/segeab
    #Single book landing page at, for example: https://library.seg.org/doi/book/10.1190/SEGEAB.1
 
-   au < ready ; exists ; 1982 ; 10.1190/SEGEAB.1 ; SEG Technical Program Expanded Abstracts Volume 1982 ; >
+   au < crawling ; exists ; 1982 ; 10.1190/SEGEAB.1 ; SEG Technical Program Expanded Abstracts Volume 1982 ; >
    au < frozen ; exists ; 1983 ; 10.1190/SEGEAB.2 ; SEG Technical Program Expanded Abstracts Volume 1983 ; >
    au < frozen ; exists ; 1984 ; 10.1190/SEGEAB.3 ; SEG Technical Program Expanded Abstracts Volume 1984 ; >
    au < ready ; exists ; 1985 ; 10.1190/SEGEAB.4 ; SEG Technical Program Expanded Abstracts Volume 1985 ; >
@@ -35,17 +35,17 @@
    au < frozen ; exists ; 1993 ; 10.1190/SEGEAB.12 ; SEG Technical Program Expanded Abstracts Volume 1993 ; >
    au < frozen ; exists ; 1994 ; 10.1190/SEGEAB.13 ; SEG Technical Program Expanded Abstracts Volume 1994 ; >
    au < ready ; exists ; 1995 ; 10.1190/SEGEAB.14 ; SEG Technical Program Expanded Abstracts Volume 1995 ; >
-   au < ready ; exists ; 1996 ; 10.1190/SEGEAB.15 ; SEG Technical Program Expanded Abstracts Volume 1996 ; >
-   au < ready ; exists ; 1997 ; 10.1190/SEGEAB.16 ; SEG Technical Program Expanded Abstracts Volume 1997 ; >
+   au < crawling ; exists ; 1996 ; 10.1190/SEGEAB.15 ; SEG Technical Program Expanded Abstracts Volume 1996 ; >
+   au < crawling ; exists ; 1997 ; 10.1190/SEGEAB.16 ; SEG Technical Program Expanded Abstracts Volume 1997 ; >
    au < frozen ; exists ; 1998 ; 10.1190/SEGEAB.17 ; SEG Technical Program Expanded Abstracts Volume 1998 ; >
    au < frozen ; exists ; 1999 ; 10.1190/SEGEAB.18 ; SEG Technical Program Expanded Abstracts Volume 1999 ; >
-   au < ready ; exists ; 2000 ; 10.1190/SEGEAB.19 ; SEG Technical Program Expanded Abstracts Volume 2000 ; >
+   au < crawling ; exists ; 2000 ; 10.1190/SEGEAB.19 ; SEG Technical Program Expanded Abstracts Volume 2000 ; >
    au < ready ; exists ; 2001 ; 10.1190/SEGEAB.20 ; SEG Technical Program Expanded Abstracts Volume 2001 ; >
    au < frozen ; exists ; 2002 ; 10.1190/SEGEAB.21 ; SEG Technical Program Expanded Abstracts Volume 2002 ; >
    au < frozen ; exists ; 2003 ; 10.1190/SEGEAB.22 ; SEG Technical Program Expanded Abstracts Volume 2003 ; >
    au < frozen ; exists ; 2004 ; 10.1190/SEGEAB.23 ; SEG Technical Program Expanded Abstracts Volume 2004 ; >
    au < frozen ; exists ; 2005 ; 10.1190/SEGEAB.24 ; SEG Technical Program Expanded Abstracts Volume 2005 ; >
-   au < ready ; exists ; 2006 ; 10.1190/SEGEAB.25 ; SEG Technical Program Expanded Abstracts Volume 2006 ; >
+   au < crawling ; exists ; 2006 ; 10.1190/SEGEAB.25 ; SEG Technical Program Expanded Abstracts Volume 2006 ; >
    au < frozen ; exists ; 2007 ; 10.1190/SEGEAB.26 ; SEG Technical Program Expanded Abstracts Volume 2007 ; >
    au < frozen ; exists ; 2008 ; 10.1190/SEGEAB.27 ; SEG Technical Program Expanded Abstracts Volume 2008 ; >
    au < frozen ; exists ; 2009 ; 10.1190/SEGEAB.28 ; SEG Technical Program Expanded Abstracts Volume 2009 ; >
@@ -96,7 +96,7 @@
    au < frozen ; exists ; 2004 ; 10.1190/SAGEEP.17 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2004 ; >
    au < ready ; exists ; 2005 ; 10.1190/SAGEEP.18 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2005 ; >
    au < ready ; exists ; 2006 ; 10.1190/SAGEEP.19 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2006 ; >
-   au < ready ; exists ; 2007 ; 10.1190/SAGEEP.20 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2007 ; >
+   au < crawling ; exists ; 2007 ; 10.1190/SAGEEP.20 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2007 ; >
    au < frozen ; exists ; 2008 ; 10.1190/SAGEEP.21 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2008 ; >
    au < frozen ; exists ; 2009 ; 10.1190/SAGEEP.22 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2009 ; >
    au < frozen ; exists ; 2010 ; 10.1190/SAGEEP.23 ; Symposium on the Application of Geophysics to Engineering and Environmental Problems Volume 2010 ; >
@@ -124,7 +124,7 @@
    #Single book landing page at, for example: https://library.seg.org/doi/book/10.1190/SBGf2007
 
    #International Congress of the Brazilian Geophysical Society https://library.seg.org/topic/gma-series/sbgf
-   au < ready ; exists ; 2005 ; 10.1190/SBGf2005 ; 9th International Congress of the Brazilian Geophysical Society & EXPOGEF 2005 ; >
+   au < crawling ; exists ; 2005 ; 10.1190/SBGf2005 ; 9th International Congress of the Brazilian Geophysical Society & EXPOGEF 2005 ; >
    au < ready ; exists ; 2007 ; 10.1190/SBGf2007 ; 10th International Congress of the Brazilian Geophysical Society & EXPOGEF 2007 ; >
    au < frozen ; exists ; 2009 ; 10.1190/SBGf2009 ; 11th International Congress of the Brazilian Geophysical Society & EXPOGEF 2009 ; >
    au < frozen ; exists ; 2011 ; 10.1190/SBGf2011 ; 12th International Congress of the Brazilian Geophysical Society & EXPOGEF 2011 ; >

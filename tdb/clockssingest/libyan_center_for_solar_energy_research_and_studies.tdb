@@ -24,7 +24,7 @@
     param[base_url] = https://jsesd-ojs.csers.ly/ojs/
     param[journal_id] = jsesd
 
-    au < ready ; exists ; 2012 ; 2012 ; Acta Medica Indonesiana Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Acta Medica Indonesiana Volume 1 ; 1 ; >
     au < manifest ; exists ; 2013 ; 2013 ; Acta Medica Indonesiana Volume 2 ; 2 ; >
     au < manifest ; exists ; 2014 ; 2014 ; Acta Medica Indonesiana Volume 3 ; 3 ; >
     au < manifest ; exists ; 2015 ; 2015 ; Acta Medica Indonesiana Volume 4 ; 4 ; >
