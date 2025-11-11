@@ -120,7 +120,7 @@
     au < finished ; manifest ; 2021 ; Metsätieteen aikakauskirja vuosikerta 2021 ; 2021 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Metsätieteen aikakauskirja vuosikerta 2022 ; 2022 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Metsätieteen aikakauskirja vuosikerta 2023 ; 2023 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2024 ; Metsätieteen aikakauskirja vuosikerta 2024 ; 2024 ; >
+    au < frozen ; exists ; 2024 ; Metsätieteen aikakauskirja vuosikerta 2024 ; 2024 ; >
     au < crawling ; exists ; 2025 ; Metsätieteen aikakauskirja vuosikerta 2025 ; 2025 ; >
   }
 }

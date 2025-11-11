@@ -3,7 +3,7 @@
   publisher <
     name = Libyan Center for Solar Energy Research and Studies ;
     info[contract] = 2025 ;
-    info[back] = 2010 ;
+    info[back] = 2012 ;
     info[tester] = 8 ;
     info[platform] = OJS3
   >
@@ -24,20 +24,20 @@
     param[base_url] = https://jsesd-ojs.csers.ly/ojs/
     param[journal_id] = jsesd
 
-    au < crawling ; exists ; 2012 ; 2012 ; Acta Medica Indonesiana Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Acta Medica Indonesiana Volume 2 ; 2 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Acta Medica Indonesiana Volume 3 ; 3 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Acta Medica Indonesiana Volume 4 ; 4 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Acta Medica Indonesiana Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Acta Medica Indonesiana Volume 6 ; 6 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Acta Medica Indonesiana Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Acta Medica Indonesiana Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Acta Medica Indonesiana Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Acta Medica Indonesiana Volume 10 ; 10 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Acta Medica Indonesiana Volume 11 ; 11 ; >
-    au < ready ; exists ; 2023 ; 2023 ; Acta Medica Indonesiana Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Acta Medica Indonesiana Volume 13 ; 13 ; >
-    au < crawling ; exists ; 2025 ; 2025 ; Acta Medica Indonesiana Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2012 ; 2012 ; Solar Energy and Sustainable Development Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2013 ; 2013 ; Solar Energy and Sustainable Development Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2014 ; 2014 ; Solar Energy and Sustainable Development Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2015 ; 2015 ; Solar Energy and Sustainable Development Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2016 ; 2016 ; Solar Energy and Sustainable Development Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Solar Energy and Sustainable Development Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Solar Energy and Sustainable Development Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Solar Energy and Sustainable Development Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Solar Energy and Sustainable Development Volume 9 ; 9 ; >
+    au < manifest ; exists ; 2021 ; 2021 ; Solar Energy and Sustainable Development Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2022 ; 2022 ; Solar Energy and Sustainable Development Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; Solar Energy and Sustainable Development Volume 12 ; 12 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Solar Energy and Sustainable Development Volume 13 ; 13 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Solar Energy and Sustainable Development Volume 14 ; 14 ; >
 
   }
 }
