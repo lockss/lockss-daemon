@@ -817,7 +817,10 @@ while (my $line = <>) {
             #print("$man_art_url\n"); #debug
             #print("Result:$result\n"); #debug
             my $man_art_contents = $resp_art->is_success ? $resp_art->content : "";
-            if (($man_art_contents =~ "Becoming a member is easy.") || ($man_art_contents =~ "Not yet registered to read this free article?")) {
+            if (! $resp_art->is_success) {
+                $result = "BadArticleLink-" . $resp_art->code() . " " . $resp_art->message();
+                $vol_title = $man_art_url;
+            } elsif (($man_art_contents =~ "Becoming a member is easy.") || ($man_art_contents =~ "Not yet registered to read this free article?")) {
                 $result = "LoginPage";
                 $vol_title = $man_art_url;
             } else {
@@ -851,7 +854,7 @@ while (my $line = <>) {
                 $result = "Manifest";
             }
         } else{
-            $result = "SiteChangedStructure"
+            $result = "NoArticleURLs"
         }
     } else {
         $result = "--NO_CONT--";
