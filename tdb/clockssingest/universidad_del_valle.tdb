@@ -42,7 +42,7 @@
     au < manifest ; exists ; 1995 ; 1995 ; Cuadernos de administración Volume 14 ; 14 ; >
     au < manifest ; exists ; 1996 ; 1996 ; Cuadernos de administración Volume 15 ; 15 ; >
     au < manifest ; exists ; 1998 ; 1998 ; Cuadernos de administración Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2001 ; 2001 ; Cuadernos de administración Volume 17 ; 17 ; >
+    au < ready ; exists ; 2001 ; 2001 ; Cuadernos de administración Volume 17 ; 17 ; >
     au < manifest ; exists ; 2002 ; 2002 ; Cuadernos de administración Volume 18 ; 18 ; >
     au < manifest ; exists ; 2003 ; 2003 ; Cuadernos de administración Volume 19 ; 19 ; >
 
@@ -156,7 +156,7 @@
       au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; Revista Prospectiva Volume 1997 ; 0 ; >
       au < doesNotExist ; doesNotExist ; 1998 ; 1998 ; Revista Prospectiva Volume 1998 ; 0 ; >
       au < doesNotExist ; doesNotExist ; 1999 ; 1999 ; Revista Prospectiva Volume 1999 ; 0 ; >
-      au < manifest ; exists ; 2000 ; 2000 ; Revista Prospectiva Volume 2000 ; 4-5 ; >
+      au < ready ; exists ; 2000 ; 2000 ; Revista Prospectiva Volume 2000 ; 4-5 ; >
       au < doesNotExist ; doesNotExist ; 2001 ; 2001 ; Revista Prospectiva Volume 2001 ; 0 ; >
       au < manifest ; exists ; 2002 ; 2002 ; Revista Prospectiva Volume 2002 ; 6-7 ; >
       au < manifest ; exists ; 2003 ; 2003 ; Revista Prospectiva Volume 2003 ; 8 ; >
@@ -196,8 +196,8 @@
       param[base_url] =  https://sociedadyeconomia.univalle.edu.co/
       param[journal_id] = sociedad_y_economia
 
-      au < manifest ; exists ; 2001 ; 2001 ; Sociedad y Economía Volume 2001 ; 2001 ; >
-      au < manifest ; exists ; 2002 ; 2002 ; Sociedad y Economía Volume 2002 ; 2002 ; >
+      au < ready ; exists ; 2001 ; 2001 ; Sociedad y Economía Volume 2001 ; 2001 ; >
+      au < ready ; exists ; 2002 ; 2002 ; Sociedad y Economía Volume 2002 ; 2002 ; >
       au < manifest ; exists ; 2003 ; 2003 ; Sociedad y Economía Volume 2003 ; 2003 ; >
       au < manifest ; exists ; 2004 ; 2004 ; Sociedad y Economía Volume 2004 ; 2004 ; >
       au < manifest ; exists ; 2005 ; 2005 ; Sociedad y Economía Volume 2005 ; 2005 ; >

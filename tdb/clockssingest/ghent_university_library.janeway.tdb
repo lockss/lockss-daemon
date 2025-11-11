@@ -304,10 +304,10 @@
       #published 1985-2020
       param[journal_id] = af
 
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Afrika Focus Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Afrika Focus Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Afrika Focus Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Afrika Focus Volume 1988 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Afrika Focus Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Afrika Focus Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Afrika Focus Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Afrika Focus Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Afrika Focus Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Afrika Focus Volume 1990 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Afrika Focus Volume 1991 ; reingest1.clockss.org:8082 >
@@ -351,11 +351,11 @@
       #published 1984-2022
       param[journal_id] = agora
 
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Agora Magazine Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Agora Magazine Volume 1985 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Agora Magazine Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Agora Magazine Volume 1985 ; >
       au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Agora Magazine Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Agora Magazine Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Agora Magazine Volume 1988 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Agora Magazine Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Agora Magazine Volume 1988 ; >
       au < crawling ; exists ; 1989 ; 1989 ; 1989 ; Agora Magazine Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Agora Magazine Volume 1990 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Agora Magazine Volume 1991 ; reingest1.clockss.org:8082 >
@@ -408,11 +408,11 @@
 
       au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Amsab Tijdingen Volume 1982 ; >
       au < frozen ; exists ; 1983 ; 1983 ; 1983 ; Amsab Tijdingen Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Amsab Tijdingen Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Amsab Tijdingen Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Amsab Tijdingen Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Amsab Tijdingen Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Amsab Tijdingen Volume 1988 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Amsab Tijdingen Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Amsab Tijdingen Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Amsab Tijdingen Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Amsab Tijdingen Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Amsab Tijdingen Volume 1988 ; >
       au < crawling ; exists ; 1989 ; 1989 ; 1989 ; Amsab Tijdingen Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Amsab Tijdingen Volume 1990 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Amsab Tijdingen Volume 1991 ; reingest5.clockss.org:8082 >
@@ -472,11 +472,11 @@
       #published 1984-2022
       param[journal_id] = deuilvanminerva
 
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; De Uil van Minerva Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; De Uil van Minerva Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; De Uil van Minerva Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; De Uil van Minerva Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; De Uil van Minerva Volume 1988 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; De Uil van Minerva Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; De Uil van Minerva Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; De Uil van Minerva Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; De Uil van Minerva Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; De Uil van Minerva Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; De Uil van Minerva Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; De Uil van Minerva Volume 1990 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; De Uil van Minerva Volume 1991 ; reingest5.clockss.org:8082 >
@@ -539,11 +539,11 @@
       au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Ghendtsche Tydinghen Volume 1981 ; >
       au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Ghendtsche Tydinghen Volume 1982 ; >
       au < frozen ; exists ; 1983 ; 1983 ; 1983 ; Ghendtsche Tydinghen Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Ghendtsche Tydinghen Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Ghendtsche Tydinghen Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Ghendtsche Tydinghen Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Ghendtsche Tydinghen Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Ghendtsche Tydinghen Volume 1988 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Ghendtsche Tydinghen Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Ghendtsche Tydinghen Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Ghendtsche Tydinghen Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Ghendtsche Tydinghen Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Ghendtsche Tydinghen Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Ghendtsche Tydinghen Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Ghendtsche Tydinghen Volume 1990 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Ghendtsche Tydinghen Volume 1991 ; reingest5.clockss.org:8082 >
@@ -658,11 +658,11 @@
       au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1981 ; >
       au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1982 ; >
       au < crawling ; exists ; 1983 ; 1983 ; 1983 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1988 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1990 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 1991 ; reingest3.clockss.org:8083 >
@@ -748,11 +748,11 @@
       au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1981 ; >
       au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1982 ; >
       au < frozen ; exists ; 1983 ; 1983 ; 1983 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1988 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1990 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 1991 ; reingest1.clockss.org:8082 >
@@ -843,11 +843,11 @@
       au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Handelingen van het Genootschap voor Geschiedenis Volume 1981 ; >
       au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Handelingen van het Genootschap voor Geschiedenis Volume 1982 ; >
       au < frozen ; exists ; 1983 ; 1983 ; 1983 ; Handelingen van het Genootschap voor Geschiedenis Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Handelingen van het Genootschap voor Geschiedenis Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Handelingen van het Genootschap voor Geschiedenis Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Handelingen van het Genootschap voor Geschiedenis Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Handelingen van het Genootschap voor Geschiedenis Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Handelingen van het Genootschap voor Geschiedenis Volume 1988 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Handelingen van het Genootschap voor Geschiedenis Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Handelingen van het Genootschap voor Geschiedenis Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Handelingen van het Genootschap voor Geschiedenis Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Handelingen van het Genootschap voor Geschiedenis Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Handelingen van het Genootschap voor Geschiedenis Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Handelingen van het Genootschap voor Geschiedenis Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Handelingen van het Genootschap voor Geschiedenis Volume 1990 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Handelingen van het Genootschap voor Geschiedenis Volume 1991 ; reingest5.clockss.org:8082 >
@@ -1018,10 +1018,10 @@
       au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1982 ; >
       au < frozen ; exists ; 1983 ; 1983 ; 1983 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1983 ; >
       au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1988 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1989 ; >
       au < manifest ; exists ; 1990 ; 1990 ; 1990 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1990 ; >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1991 ; reingest5.clockss.org:8082 >
@@ -1073,11 +1073,11 @@
       au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Sociologos Volume 1981 ; >
       au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Sociologos Volume 1982 ; >
       au < frozen ; exists ; 1983 ; 1983 ; 1983 ; Sociologos Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Sociologos Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Sociologos Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Sociologos Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Sociologos Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Sociologos Volume 1988 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Sociologos Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Sociologos Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Sociologos Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Sociologos Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Sociologos Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Sociologos Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Sociologos Volume 1990 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Sociologos Volume 1991 ; reingest5.clockss.org:8082 >
@@ -1358,11 +1358,11 @@
       au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Res Publica Volume 1981 ; >
       au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Res Publica Volume 1982 ; >
       au < frozen ; exists ; 1983 ; 1983 ; 1983 ; Res Publica Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Res Publica Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Res Publica Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Res Publica Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Res Publica Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Res Publica Volume 1988 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Res Publica Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Res Publica Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Res Publica Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Res Publica Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Res Publica Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Res Publica Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Res Publica Volume 1990 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 1991 ; 1991 ; 1991 ; Res Publica Volume 1991 ; >
@@ -1424,11 +1424,11 @@
       au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Silva Gandavensis Volume 1981 ; >
 
       au < crawling ; exists ; 1983 ; 1983 ; 1983 ; Silva Gandavensis Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Silva Gandavensis Volume 1984 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Silva Gandavensis Volume 1984 ; >
 
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Silva Gandavensis Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Silva Gandavensis Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Silva Gandavensis Volume 1988 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Silva Gandavensis Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Silva Gandavensis Volume 1987 ; >
+      au < ready ; exists ; 1988 ; 1988 ; 1988 ; Silva Gandavensis Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Silva Gandavensis Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Silva Gandavensis Volume 1990 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Silva Gandavensis Volume 1991 ; reingest4.clockss.org:8082 >
@@ -1456,10 +1456,10 @@
       param[journal_id] = tgtic
 
       au < frozen ; exists ; 1983 ; 1983 ; 1983 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1987 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1987 ; >
       au < frozen ; exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1988 ; >
       au < crawling ; exists ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Geschiedenis van Techniek en Industriële Cultuur Volume 1990 ; reingest4.clockss.org:8082 >
@@ -1688,10 +1688,10 @@
       au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Tijdschrift voor Communicatiewetenschap Volume 1981 ; >
       au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Tijdschrift voor Communicatiewetenschap Volume 1982 ; >
       au < manifest ; exists ; 1983 ; 1983 ; 1983 ; Tijdschrift voor Communicatiewetenschap Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Tijdschrift voor Communicatiewetenschap Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Tijdschrift voor Communicatiewetenschap Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Tijdschrift voor Communicatiewetenschap Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Communicatiewetenschap Volume 1987 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Tijdschrift voor Communicatiewetenschap Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Tijdschrift voor Communicatiewetenschap Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Tijdschrift voor Communicatiewetenschap Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Tijdschrift voor Communicatiewetenschap Volume 1987 ; >
       au < crawling ; exists ; 1988 ; 1988 ; 1988 ; Tijdschrift voor Communicatiewetenschap Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Tijdschrift voor Communicatiewetenschap Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Tijdschrift voor Communicatiewetenschap Volume 1990 ; reingest5.clockss.org:8082 >
@@ -1738,10 +1738,10 @@
       au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1981 ; >
       au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1982 ; >
       au < frozen ; exists ; 1983 ; 1983 ; 1983 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1987 ; >
+      au < ready ; exists ; 1984 ; 1984 ; 1984 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1984 ; >
+      au < ready ; exists ; 1985 ; 1985 ; 1985 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1985 ; >
+      au < ready ; exists ; 1986 ; 1986 ; 1986 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1986 ; >
+      au < ready ; exists ; 1987 ; 1987 ; 1987 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1987 ; >
       au < frozen ; exists ; 1988 ; 1988 ; 1988 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1989 ; >
       au < finished ; manifest ; 1990 ; 1990 ; 1990 ; Communicatie: tijdschrift voor communicatiewetenschap en mediacultuur Volume 1990 ; reingest5.clockss.org:8082 >
