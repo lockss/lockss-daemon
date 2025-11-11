@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<book xml:lang="en" book-type="monograph" xsi:schemaLocation="http://specifications.silverchair.com/xsd/1/46/SCBITS-book.xsd xsd/SCBITS-book.xsd" xmlns="http://specifications.silverchair.com/xsd/1/46/SCBITS-book.xsd" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:ali="http://www.niso.org/schemas/ali/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <collection-meta collection-type="edition-set">
+        <collection-id collection-id-type="editionSet">9781837679638</collection-id>
+    </collection-meta>
+    <collection-meta collection-type="series">
+        <title-group>
+            <title>RSC Foundations</title>
+        </title-group>
+    </collection-meta>
+    <collection-meta collection-type="collection">
+        <title-group>
+            <title>RSC Foundations</title>
+        </title-group>
+    </collection-meta>
+    <book-meta xmlns:xlink="http://www.w3.org/1999/xlink">
+        <book-id book-id-type="doi">10.1039/9781837679638</book-id>
+        <subj-group subj-group-type="bic">
+            <subject>PNK</subject>
+            <subject>PNT</subject>
+            <subject>PD</subject>
+            <subject>TBN</subject>
+        </subj-group>
+        <subj-group subj-group-type="bisac">
+            <subject>SCI013030</subject>
+            <subject>SCI016000</subject>
+            <subject>SCI000000</subject>
+            <subject>TEC027000</subject>
+        </subj-group>
+        <book-title-group>
+            <book-title>Polyoxometalate Chemistry</book-title>
+            <alt-title alt-title-type="short-name">978-1-83767-963-8</alt-title>
+        </book-title-group>
+        <contrib-group>
+            <contrib contrib-type="author">
+                <contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-8240-1355</contrib-id>
+                <name>
+                    <surname>Raabe</surname>
+                    <given-names>Jan-Christian</given-names>
+                </name>
+                <aff>University of Hamburg, Germany <email>Jan-Christian.Raabe@Jan-Christian-Raabe.de</email></aff>
+            </contrib>
+        </contrib-group>
+        <pub-date iso-8601-date="2026-03-30" publication-format="print" date-type="pub">
+            <day>30</day>
+            <month>March</month>
+            <year>2026</year>
+        </pub-date>
+        <pub-date iso-8601-date="2025-10-30" publication-format="electronic" date-type="pub">
+            <day>30</day>
+            <month>October</month>
+            <year>2025</year>
+        </pub-date>
+        <book-volume-number>3</book-volume-number>
+        <issn publication-format="electronic">2977-0084</issn>
+        <isbn content-type="ISBN13" publication-format="print">978-1-83707-203-3</isbn>
+        <isbn content-type="ISBN13" publication-format="paperback">978-1-83707-203-3</isbn>
+        <isbn content-type="ISBN13" publication-format="pdf">978-1-83707-209-5</isbn>
+        <isbn content-type="ISBN13" publication-format="epub">978-1-83767-963-8</isbn>
+        <publisher>
+            <publisher-name>Royal Society of Chemistry</publisher-name>
+        </publisher>
+        <supplementary-material content-type="preview-pdf" xlink:href="9781837679638-gspreview.pdf" />
+        <supplementary-material content-type="cover" xlink:href="9781837679638.jpeg" />
+        <permissions>
+            <copyright-statement>© Jan-Christian Raabe 2025</copyright-statement>
+            <copyright-year>2025</copyright-year>
+            <copyright-holder>Jan-Christian Raabe</copyright-holder>
+        </permissions>
+        <self-uri xlink:href="9781837679638.epub" content-type="epub" />
+        <abstract abstract-type="abstract">
+            <p>Polyoxometalates (POMs) are an established family of metal–oxygen clustered compounds. Their unique properties, discovered over the last century, have allowed them to find applications in catalysis, reaction technology, biochemistry and biomedicine. These materials are used in sustainable and green chemistry processes or in the fight against different diseases due to their solubility in water, a green and environmentally friendly solvent. In addition, the solubility is easy to tailor for the desired application by choosing the correct cation and they can be produced on a large scale.</p>
+            <p>This short book brings PhD students and postdocs, unfamiliar with the specifics of the area, up-to-date. It provides the reader with an overview of the developments and current trends in POM chemistry. The full potential of polyoxometalates has not yet been exhausted. These materials are therefore proving to be interesting candidates for developing further technologies and areas of application to prepare humanity for the challenges of this century.</p>
+        </abstract>
+        <abstract abstract-type="teaser">
+            <p>Polyoxometalates (POMs) are metal–oxygen clustered compounds with applications in catalysis, reaction technology, biochemistry and biomedicine. This short book brings PhD students and postdocs, unfamiliar with the specifics of the area, up-to-date.</p>
+        </abstract>
+        <kwd-group>
+            <kwd>synthesis</kwd>
+            <kwd>main group</kwd>
+            <kwd>transition elements</kwd>
+            <kwd>properties</kwd>
+            <kwd>applications</kwd>
+            <kwd>sustainability</kwd>
+            <kwd>green chemistry</kwd>
+            <kwd>fundamentals</kwd>
+            <kwd>catalyst</kwd>
+        </kwd-group>
+    </book-meta>
+</book>
