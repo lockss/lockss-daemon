@@ -16,8 +16,10 @@ BEGIN {
 NR==FNR && FNR > 1 {
     key = $1;
     if ($2 && $0 ~ "Plugin") {
+        gsub(/\?/, "", $0);
         first[key] = $0;                   # Store the complete line by the Plugin key
         for (i = 1; i <= 11; i++) {        # Store all columns for later comparison
+            gsub(/\?/, "", $i);
             firstCols[key,i] = $i;
         }
     } else {
@@ -28,8 +30,10 @@ NR==FNR && FNR > 1 {
 NR!=FNR && FNR > 1 {
     key = $1;
     if ($2 && $0 ~ "Plugin") {
+        gsub(/\?/, "", $0);
         second[key] = $0;                  # Store the complete line by the Plugin key
         for (i = 1; i <= 11; i++) {        # Store all columns for later comparison
+            gsub(/\?/, "", $i);
             secondCols[key,i] = $i;
         }
     } else {
