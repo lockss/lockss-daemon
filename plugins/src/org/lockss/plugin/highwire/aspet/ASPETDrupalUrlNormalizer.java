@@ -54,7 +54,7 @@ public class ASPETDrupalUrlNormalizer extends HighWireJCoreUrlNormalizer {
             String primary = url.substring(0,qmark);
             String query = url.substring(qmark+1);
             StringBuilder result = new StringBuilder(primary + "%20numresults%3A100?" + query);
-            log.info("Old URL: " + url + "\\nNew URL: " + result.toString());
+            log.debug3("Old URL: " + url + "\\nNew URL: " + result.toString());
             url = result.toString();
         }
         return super.normalizeUrl(url, au);

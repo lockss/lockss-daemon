@@ -65,7 +65,7 @@ public class HmpGlobalXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
         // Once you have it, just keep returning the same one. It won't change.
             if (schemaHelper == null) {
                 schemaHelper = new HmpGlobalSchemaHelper();
-                log.info("setting up schema helper");
+                log.debug3("setting up schema helper");
             }
             return schemaHelper;
         }
@@ -80,7 +80,7 @@ public class HmpGlobalXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
         ArticleMetadata oneAM) {
             List<String> returnList = new ArrayList<String>();
             String cuBase = cu.getUrl();
-            log.info("CU Base is: " + cuBase);
+            log.debug3("CU Base is: " + cuBase);
             //remove xml part of URL
             int lastSubDirectory = cuBase.lastIndexOf("/");
             String pdfName;
@@ -107,7 +107,7 @@ public class HmpGlobalXmlMetadataExtractorFactory extends SourceXmlMetadataExtra
                 String doi = oneAM.getRaw(HmpGlobalSchemaHelper.art_doi).replace("10.25270/","").replace("/","_");
                 pdfName = cuBase.substring(0, lastSubDirectory) + "/" + doi + ".pdf";
             }
-            log.info("The pdf is: " + pdfName);
+            log.debug3("The pdf is: " + pdfName);
             returnList.add(pdfName);
             return returnList;
         }

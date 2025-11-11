@@ -62,7 +62,7 @@ public class AslhaXmlMetadataExtractorFactory extends SourceXmlMetadataExtractor
         // Once you have it, just keep returning the same one. It won't change.
             if (schemaHelper == null) {
                 schemaHelper = new AslhaXmlSchemaHelper();
-                log.info("setting up schema helper");
+                log.debug3("setting up schema helper");
             }
             return schemaHelper;
         }

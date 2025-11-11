@@ -66,7 +66,7 @@ public class AicXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
         // Once you have it, just keep returning the same one. It won't change.
             if (JatsPublishingHelper == null) {
                 JatsPublishingHelper = new AicSchemaHelper();
-                log.info("setting up schema helper");
+                log.debug3("setting up schema helper");
             }
             return JatsPublishingHelper;
         }
@@ -78,9 +78,9 @@ public class AicXmlMetadataExtractorFactory extends SourceXmlMetadataExtractorFa
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper schemaHelper, CachedUrl cu,
         ArticleMetadata oneAM) {
             String cuBase = cu.getUrl();
-            log.info("CU Base is: " + cuBase);
+            log.debug3("CU Base is: " + cuBase);
             String pdfName = cuBase.substring(0,cuBase.length() - 3) + "pdf";
-            log.info("The pdf is: " + pdfName);
+            log.debug3("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
             returnList.add(pdfName);
             return returnList;

@@ -690,7 +690,7 @@ public class OJS2ArticleIteratorFactory
       }
       @Override
       public void info(String msg) {
-        log.info(String.format("While processing %s: %s", url, msg));
+        log.debug3(String.format("While processing %s: %s", url, msg));
       }
       @Override
       public void warning(String msg) {

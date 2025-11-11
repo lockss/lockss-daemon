@@ -69,7 +69,7 @@ public class EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory extend
             // Once you have it, just keep returning the same one. It won't change.
             if (EandSSchemaHelper == null) {
                 EandSSchemaHelper = new CrossRefSchemaHelper();
-                log.info("Setting up schema helper.");
+                log.debug3("Setting up schema helper.");
             }
             return EandSSchemaHelper;
         }
@@ -90,9 +90,9 @@ public class EntrepreneurshipandSustainabilityXmlMetadataExtractorFactory extend
             log.debug3("CU Base is: " + cuBase);
             String doi = oneAM.getRaw(helper.getFilenameXPathKey());
             doi = doi.replace("/","_").trim();
-            log.info("DOI: " + doi);
+            log.debug3("DOI: " + doi);
             String pdfName = cuBase + doi + ".pdf";
-            log.info("The pdf is: " + pdfName);
+            log.debug3("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
             returnList.add(pdfName);
             return returnList;

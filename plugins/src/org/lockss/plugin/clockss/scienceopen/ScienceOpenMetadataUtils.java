@@ -31,18 +31,18 @@ public class ScienceOpenMetadataUtils {
     am.putIfBetter(MetadataField.FIELD_PUBLISHER, publisherName);
     // as ScienceOpen wants to all material they provide 'counted' as one,
     // setting the Provider field to ScienceOpen makes sense.
-    log.info("provider: " + am.get(MetadataField.FIELD_PROVIDER));
+    log.debug3("provider: " + am.get(MetadataField.FIELD_PROVIDER));
     if (providerName != null) {
       am.put(MetadataField.FIELD_PROVIDER, providerName);
     }
-    log.info("provider: " + am.get(MetadataField.FIELD_PROVIDER));
+    log.debug3("provider: " + am.get(MetadataField.FIELD_PROVIDER));
   }
 
   public static void normalizePublisher(ArticleMetadata am) {
     String publisherName = am.get(MetadataField.FIELD_PUBLISHER);
     Matcher m = Science_Open.matcher(publisherName);
     if (m.matches()) {
-      log.info("Found an improperly formatted pub name:");
+      log.debug3("Found an improperly formatted pub name:");
 
     }
 

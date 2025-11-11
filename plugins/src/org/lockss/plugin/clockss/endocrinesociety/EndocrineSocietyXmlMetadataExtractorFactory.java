@@ -65,7 +65,7 @@ public class EndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMetada
         // Once you have it, just keep returning the same one. It won't change.
             if (schemaHelper == null) {
                 schemaHelper = new EndocrineSocietyXmlSchemaHelper();
-                log.info("setting up schema helper");
+                log.debug3("setting up schema helper");
             }
             return schemaHelper;
         }
@@ -79,10 +79,10 @@ public class EndocrineSocietyXmlMetadataExtractorFactory extends SourceXmlMetada
             String cuBase = cu.getUrl();
             //xml and pdfs are in same directory, remove xml file name in cuBase
             int lastDirectory = cuBase.lastIndexOf("/");
-            log.info("CU Base is: " + cuBase);
+            log.debug3("CU Base is: " + cuBase);
             String id = oneAM.getRaw(EndocrineSocietyXmlSchemaHelper.id);
             String pdfName = cuBase.substring(0, lastDirectory) + "/" + id;
-            log.info("The pdf is: " + pdfName);
+            log.debug3("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
             returnList.add(pdfName);
             return returnList;

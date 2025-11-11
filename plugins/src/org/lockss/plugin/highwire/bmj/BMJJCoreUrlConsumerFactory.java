@@ -91,11 +91,11 @@ public class BMJJCoreUrlConsumerFactory extends HighWireJCoreUrlConsumerFactory 
             )
         );
       }
-      log.info("should: " + should );
-      log.info(String.valueOf(wwwPat));
-      log.info(String.valueOf(noWwwPat));
-      log.info(fud.origUrl);
-      log.info(fud.fetchUrl);
+      log.debug3("should: " + should );
+      log.debug3(String.valueOf(wwwPat));
+      log.debug3(String.valueOf(noWwwPat));
+      log.debug3(fud.origUrl);
+      log.debug3(fud.fetchUrl);
       return should;
     }
 

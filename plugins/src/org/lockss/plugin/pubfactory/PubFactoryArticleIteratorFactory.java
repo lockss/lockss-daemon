@@ -88,7 +88,7 @@ public class PubFactoryArticleIteratorFactory implements ArticleIteratorFactory,
     // see if base_url2 is a parameter for the AU. if it is, get the pattern that allows for it
     String base_url2 = au.getConfiguration().get(ConfigParamDescr.BASE_URL2.getKey());
     if (base_url2 != null) {
-      log.info("baseurl2 is : " + base_url2);
+      log.debug3("baseurl2 is : " + base_url2);
       PATTERN_TEMPLATE = PATTERN_TEMPLATE_W_2_BASE_URL;
     } else {
       PATTERN_TEMPLATE = PATTERN_TEMPLATE_W_1_BASE_URL;

@@ -99,10 +99,10 @@ public class APMAStringReplacementHtmlLinkRewriterFactory implements LinkRewrite
       // Log expanded context around 'typography-body'
       int index = inputContent.indexOf("typography-body");
       if (index != -1) {
-        log.info("Expanded Context around 'typography-body': " +
+        log.debug3("Expanded Context around 'typography-body': " +
                 inputContent.substring(Math.max(0, index - 500), Math.min(inputContent.length(), index + 500)));
       } else {
-        log.info("The 'typography-body' class was not found in the content.");
+        log.debug3("The 'typography-body' class was not found in the content.");
       }
 
       // Updated regex
@@ -115,11 +115,11 @@ public class APMAStringReplacementHtmlLinkRewriterFactory implements LinkRewrite
       boolean foundSpan = false;
       while (matcher.find()) {
         foundSpan = true;
-        log.info("Found span match: " + matcher.group() + ", spanReplacement  = " + spanReplacement);
+        log.debug3("Found span match: " + matcher.group() + ", spanReplacement  = " + spanReplacement);
       }
 
       if (!foundSpan) {
-        log.info("No span matches found in the content.");
+        log.debug3("No span matches found in the content.");
       }
 
       // Perform replacement
@@ -166,7 +166,7 @@ public class APMAStringReplacementHtmlLinkRewriterFactory implements LinkRewrite
         fos.write(buffer, 0, bytesRead);
       }
 
-      log.info("===writeInputStreamToFile===" + filePath);
+      log.debug3("===writeInputStreamToFile===" + filePath);
     }
   }
 }

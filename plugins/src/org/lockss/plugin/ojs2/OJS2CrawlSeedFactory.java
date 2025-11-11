@@ -101,11 +101,11 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
      */
     @Override
     protected void initialize() throws ConfigurationException, PluginException, IOException {
-      log.info("initializing localcrawlseed");
+      log.debug3("initializing localcrawlseed");
       baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
       jid = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ID.getKey());
       primaryLocale = AuUtil.getTitleAttribute(au, PRIMARY_LOCAL_ATTR);
-      log.info("stored params: " + baseUrl + jid + primaryLocale);
+      log.debug3("stored params: " + baseUrl + jid + primaryLocale);
     }
 
     @Override
@@ -121,7 +121,7 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
     }
 
     private Collection<String> addLocale(Collection<String> urls) {
-      log.info("In addLocale w/primaryLocale: " + primaryLocale);
+      log.debug3("In addLocale w/primaryLocale: " + primaryLocale);
       if (primaryLocale == null) {
         // nothing to do if this is missing.
         return urls;
@@ -134,7 +134,7 @@ public class OJS2CrawlSeedFactory implements CrawlSeedFactory {
         String setLocaleUrlRoot = url.substring(0, url.lastIndexOf(jid) + jid.length());
         setLocaleUrlRoot += SET_LOCAL_QUERY.replace(PRIMARY_LOCAL_ATTR, primaryLocale);
         localeUrls.add(setLocaleUrlRoot + UrlUtil.encodeUrl(sourcePath));
-        log.info("adding Url: " + setLocaleUrlRoot + UrlUtil.encodeUrl(sourcePath));
+        log.debug3("adding Url: " + setLocaleUrlRoot + UrlUtil.encodeUrl(sourcePath));
 
       }
       return localeUrls;

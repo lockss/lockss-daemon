@@ -64,7 +64,7 @@ public class EajseXmlMetadataExtractorFactory extends SourceXmlMetadataExtractor
         // Once you have it, just keep returning the same one. It won't change.
             if (schemaHelper == null) {
                 schemaHelper = new EajseXmlSchemaHelper();
-                log.info("setting up schema helper");
+                log.debug3("setting up schema helper");
             }
             return schemaHelper;
         }
@@ -76,9 +76,9 @@ public class EajseXmlMetadataExtractorFactory extends SourceXmlMetadataExtractor
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
         ArticleMetadata oneAM) {
             String cuBase = cu.getUrl();
-            log.info("CU Base is: " + cuBase);
+            log.debug3("CU Base is: " + cuBase);
             String pdfName = cuBase.substring(0,cuBase.length() - 3) + "pdf";
-            log.info("The pdf is: " + pdfName);
+            log.debug3("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
             returnList.add(pdfName);
             return returnList;

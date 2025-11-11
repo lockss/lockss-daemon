@@ -65,7 +65,7 @@ public class LupHtmlLinkRewriterFactory implements LinkRewriterFactory {
     public void rewriteOrNot(Node node, String attr) {
       // the ServeContent prepending has already been done, so, we actually rewrite the base_url
       String url = ((TagNode) node).getAttribute(attr);
-      log.info("checking url on readurl: " + url );
+      log.debug3("checking url on readurl: " + url );
       if ((url != null) && url.matches(RELATIVE_LINK_REGEX)) {
         log.debug3("found relative link: " + url);
         url =  LIVERPOOL_SUBDOMAIN + url;

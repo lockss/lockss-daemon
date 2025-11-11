@@ -64,11 +64,11 @@ public class ResilienceAllianceUrlFetcherFactory implements UrlFetcherFactory {
       try {
         String urlHost = UrlUtil.getHost(this.fetchUrl);
         if (urlHost.startsWith("www.") && urlHost.contains(UrlUtil.delSubDomain(baseUrlHost, "www"))) {
-          log.info("changing fetch url from: " + this.fetchUrl);
+          log.debug3("changing fetch url from: " + this.fetchUrl);
           this.fetchUrl = UrlUtil.delSubDomain(this.fetchUrl, "www");
-          log.info("to: " + this.fetchUrl);
+          log.debug3("to: " + this.fetchUrl);
         } else {
-          log.info("didnt change: " + this.fetchUrl);
+          log.debug3("didnt change: " + this.fetchUrl);
         }
       }
       catch (MalformedURLException mue) {

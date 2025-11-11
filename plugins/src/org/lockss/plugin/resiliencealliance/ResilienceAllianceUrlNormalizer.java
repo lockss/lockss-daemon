@@ -53,7 +53,7 @@ public class ResilienceAllianceUrlNormalizer extends HttpHttpsParamUrlNormalizer
     if (!startAndPermissionUrls.contains(url)) {
       try {
         String urlHost = UrlUtil.getHost(url);
-        log.info("url urlHost: " + url + " " + urlHost);
+        log.debug3("url urlHost: " + url + " " + urlHost);
         if (urlHost.equals("www." + baseUrlHost)) {
           url = UrlUtil.delSubDomain(url, "www");
         } else if (baseUrlHost.startsWith("www.") && urlHost.equals(baseUrlHost.replace("www.", ""))) {

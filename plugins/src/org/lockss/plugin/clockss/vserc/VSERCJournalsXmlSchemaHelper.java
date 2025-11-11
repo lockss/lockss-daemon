@@ -60,7 +60,7 @@ public class VSERCJournalsXmlSchemaHelper extends JatsPublishingSchemaHelper {
 
         @Override
         public String getValue(Node node) {
-            log.info("getValue of JATS publishing date");
+            log.debug3("getValue of JATS publishing date");
             NodeList elementChildren = node.getChildNodes();
             if (elementChildren == null) return null;
 
