@@ -56,6 +56,15 @@ public class UbiquityPartnerNetworkHttpResponseHandler implements CacheResultHan
    */ 
   protected static final Pattern MEDIA_PAT = 
       Pattern.compile("/articles/[0-9]+/files/.*\\.(css|jpg|png|gif|webmanifest)");
+  /* 
+    (continued)
+   * There are also a lot of bad citation links in these html pages. For example: https://jotsjournal.org/articles/30/files/wright
+   * leads to a 403 from page https://jotsjournal.org/articles/30/files/638465267c2b9.html. 
+   * AUID: org|lockss|plugin|ubiquitypress|upn|UbiquityPartnerNetworkPlugin&base_url~https%3A%2F%2Fjotsjournal%2Eorg%2F&year~2016 
+   * Let's downgrade to a warning these links that likely end with a name. 
+   */
+  protected static final Pattern AUTHOR_PAT = 
+      Pattern.compile("/articles/[0-9]+/files/[a-zA-Z]+$");
 
   @Override
   public void init(CacheResultMap crmap) {
@@ -69,7 +78,8 @@ public class UbiquityPartnerNetworkHttpResponseHandler implements CacheResultHan
                                      int responseCode) {
     logger.debug2(url);  
     Matcher issueMat = ISSUE_PAT.matcher(url);  
-    Matcher mediaPat = MEDIA_PAT.matcher(url);      
+    Matcher mediaMat = MEDIA_PAT.matcher(url);  
+    Matcher authorMat = AUTHOR_PAT.matcher(url);      
     switch (responseCode) {
       case 404: 
         logger.debug3("found 404");
@@ -80,7 +90,7 @@ public class UbiquityPartnerNetworkHttpResponseHandler implements CacheResultHan
         return new CacheException.NoRetryDeadLinkException("404 Not Found");
       case 403: 
         logger.debug3("found 403");
-        if (url.contains("files/article.xsl") || url.contains("article.css") || mediaPat.find()) {
+        if (url.contains("files/article.xsl") || url.contains("article.css") || mediaMat.find() || authorMat.find()) {
           logger.debug3("Bad media file or forbidden access, downgrading to warning.");
           return new CacheException.NoRetryDeadLinkException("403 Forbidden (non-fatal)");
         }
