@@ -54,15 +54,14 @@ public class Spandidos2020HashFilterFactory implements FilterFactory {
       // filter out comments
       HtmlNodeFilters.comment(),
       // filter out script, footer
-      new TagNameFilter("script"),
-      new TagNameFilter("footer"),
+      HtmlNodeFilters.tag("script"),
+      HtmlNodeFilters.tag("footer"),
+      //there are html tags in some of the script tags which is throwing off the filtering
+      //adding the filter below to remove changing numerical value for nextMsno
+      HtmlNodeFilters.tagWithTextRegex("div","\"nextMsno\""),
     };
 
-    InputStream interStream = new HtmlFilterInputStream(in, encoding,
-            new HtmlCompoundTransform(
-                    HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)) //, xformAllTags
-            ));
-
+    InputStream interStream = new HtmlFilterInputStream(in, encoding,HtmlNodeFilterTransform.exclude(new OrFilter(excludeNodes)));
     Reader reader = FilterUtil.getReader(interStream, encoding);
     return new ReaderInputStream(new WhiteSpaceFilter(reader));
   }
