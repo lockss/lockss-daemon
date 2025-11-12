@@ -902,7 +902,6 @@
       au < doNotProcess ; 2021 ; Transportation Journal Volume 60 ; 60 ; 2021 >
       au < released ; 2022 ; Transportation Journal Volume 61 ; 61 ; 2022 >
       au < released ; 2023 ; Transportation Journal Volume 62 ; 62 ; 2023 >
-      au < expected ; 2024 ; Transportation Journal Volume 63 ; 63 ; 2024 >
       au < expected ; 2025 ; Transportation Journal Volume 64 ; 64 ; 2025 >
 
   }
@@ -1429,8 +1428,7 @@
       au < doNotProcess ; 2021 ; Journal of Jewish Ethics Volume 2021 ; 2021 ; 2021 >
       au < released ; 2022 ; Journal of Jewish Ethics Volume 8 ; 8 ; 2022 >
       au < released ; 2023 ; Journal of Jewish Ethics Volume 9 ; 9 ; 2023 >
-      au < expected ; 2024 ; Journal of Jewish Ethics Volume 10 ; 10 ; 2024 >
-      au < expected ; 2025 ; Journal of Jewish Ethics Volume 11 ; 11 ; 2025 >
+      au < expected ; 2025 ; Journal of Jewish Ethics Volume 10 ; 10 ; 2025 >
 
   }
 
@@ -2249,8 +2247,7 @@
       au < released ; 2020 ; AMP: American Music Perspectives Volume 1 ; 1 ; 2020 >
       au < released ; 2021 ; AMP: American Music Perspectives Volume 2 ; 2 ; 2021 >
       au < released ; 2022 ; AMP: American Music Perspectives Volume 3 ; 3 ; 2022 >
-      au < expected ; 2024 ; AMP: American Music Perspectives Volume 4 ; 4 ; 2024 >
-      au < expected ; 2025 ; AMP: American Music Perspectives Volume 5 ; 5 ; 2025 >
+      au < expected ; 2025 ; AMP: American Music Perspectives Volume 4 ; 4 ; 2025 >
 
   }
 
@@ -2514,4 +2511,19 @@
       au < manifest ; 2025 ; Theatre and Performance Notes and Counternotes Volume 2 ; 2 ; 2025 >
 
   }
+
+  {
+
+      title <
+        name = American Gothic Studies ;
+        issn = 3066-1269 ;
+        eissn = 3066-1277
+      >
+
+      param[journal_id] = ags  
+
+      au < exists ; 2025 ; American Gothic Studies Volume 1 ; 1 ; 2025 >
+
+  }
+
 }

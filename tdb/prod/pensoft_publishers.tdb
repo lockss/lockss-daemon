@@ -151,8 +151,6 @@
     au < released ; 2021 ; 1 ; Heritage, Memory and Conflict Journal Volume 2021 ; 2021 ; https://ijhmc.arphahub.com/ >
     au < released ; 2022 ; 2 ; Heritage, Memory and Conflict Journal Volume 2022 ; 2022 ; https://ijhmc.arphahub.com/ >
     au < released ; 2023 ; 3 ; Heritage, Memory and Conflict Journal Volume 2023 ; 2023 ; https://ijhmc.arphahub.com/ >
-    au < expected ; 2024 ; 4 ; Heritage, Memory and Conflict Journal Volume 2024 ; 2024 ; https://ijhmc.arphahub.com/ >
-    au < expected ; 2025 ; 5 ; Heritage, Memory and Conflict Journal Volume 2025 ; 2025 ; https://ijhmc.arphahub.com/ >
 
    }
   
@@ -1342,10 +1340,23 @@
       au < released ; 2022 ; 2022 ; Plant Sociology Volume 2022 ; 2022 ; https://plantsociology.arphahub.com/ >
       au < released ; 2023 ; 2023 ; Plant Sociology Volume 2023 ; 2023 ; https://plantsociology.arphahub.com/ >
       au < released ; 2024 ; 2024 ; Plant Sociology Volume 2024 ; 2024 ; https://plantsociology.arphahub.com/ >
-      au < expected ; 2025 ; 2025 ; Plant Sociology Volume 2025 ; 2025 ; https://plantsociology.arphahub.com/ >
 
   }
 
+
+  {
+
+      title <
+        name = Vegetation Ecology and Diversity ;
+        eissn = 3033-1447
+      >
+
+      param[au_oai_set] = ved
+      #Moved from Plant Sociology
+
+      au < exists ; 2025 ; 2025 ; Vegetation Ecology and Diversity Volume 2025 ; 2025 ; https://ved.arphahub.com/ >
+
+  }
 
   {
 
@@ -1433,7 +1444,6 @@
 
       au < released ; 2023 ; 2023 ; Atomic Layer Deposition Volume 2023 ; 2023 ; https://journal.atomiclayerdeposition.com/ >
       au < manifest ; 2024 ; 2024 ; Atomic Layer Deposition Volume 2024 ; 2024 ; https://journal.atomiclayerdeposition.com/ >
-      au < expected ; 2025 ; 2025 ; Atomic Layer Deposition Volume 2025 ; 2025 ; https://journal.atomiclayerdeposition.com/ >
 
   }
 
@@ -1621,6 +1631,235 @@
       au < released ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ >
       au < released ; 2024 ; 2024 ; Tuhinga Volume 2024 ; 2024 ; https://tuhinga.arphahub.com/ >
       au < manifest ; 2025 ; 2025 ; Tuhinga Volume 2025 ; 2025 ; https://tuhinga.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Bulgarian Society of Medical Sciences Journal ;
+        issn = 2815-4959 ;
+        eissn = 3033-1471
+      >
+
+      param[au_oai_set] = bsms
+
+      au < exists ; 2023 ; 2023 ; Bulgarian Society of Medical Sciences Journal Volume 2023 ; 2023 ; https://bsms.arphahub.com/ >
+      au < exists ; 2024 ; 2024 ; Bulgarian Society of Medical Sciences Journal Volume 2024 ; 2024 ; https://bsms.arphahub.com/ >
+      au < exists ; 2025 ; 2025 ; Bulgarian Society of Medical Sciences Journal Volume 2025 ; 2025 ; https://bsms.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Emirates Journal of Food and Agriculture (EJFA) ;
+        issn = 2079-052X ;
+        eissn = 2079-0538
+      >
+
+      param[au_oai_set] = ejfa
+
+      au < exists ; 2023 ; 2023 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2023 ; 2023 ; https://ejfa.pensoft.net/ >
+      au < exists ; 2024 ; 2024 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2024 ; 2024 ; https://ejfa.pensoft.net/ >
+      au < exists ; 2025 ; 2025 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2025 ; 2025 ; https://ejfa.pensoft.net/ >
+
+  }
+
+  {
+
+      title <
+        name = Estuarine Management and Technologies ;
+        eissn = 3033-022X
+      >
+
+      param[au_oai_set] = emt
+
+      au < exists ; 2024 ; 2024 ; Estuarine Management and Technologies Volume 2024 ; 2024 ; https://emt.pensoft.net/ >
+      au < exists ; 2025 ; 2025 ; Estuarine Management and Technologies Volume 2025 ; 2025 ; https://emt.pensoft.net/ >
+
+  }
+
+  {
+
+      title <
+        name = GeoStudies ;
+        eissn = 3033-0238
+      >
+
+      param[au_oai_set] = geostudies
+
+      au < exists ; 2024 ; 2024 ; GeoStudies Volume 2024 ; 2024 ; https://geostudies.net/ >
+      au < exists ; 2025 ; 2025 ; GeoStudies Volume 2025 ; 2025 ; https://geostudies.net/ >
+
+  }
+
+  {
+
+      title <
+        name = IMA Fungus ;
+        issn = 2210-6340 ;
+        eissn = 2210-6359
+      >
+
+      param[au_oai_set] = imafungus
+
+      au < exists ; 2010 ; 2010 ; IMA Fungus Volume 2010 ; 2010 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2011 ; 2011 ; IMA Fungus Volume 2011 ; 2011 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2012 ; 2012 ; IMA Fungus Volume 2012 ; 2012 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2013 ; 2013 ; IMA Fungus Volume 2013 ; 2013 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2014 ; 2014 ; IMA Fungus Volume 2014 ; 2014 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2015 ; 2015 ; IMA Fungus Volume 2015 ; 2015 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2016 ; 2016 ; IMA Fungus Volume 2016 ; 2016 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2017 ; 2017 ; IMA Fungus Volume 2017 ; 2017 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2018 ; 2018 ; IMA Fungus Volume 2018 ; 2018 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2019 ; 2019 ; IMA Fungus Volume 2019 ; 2019 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2020 ; 2020 ; IMA Fungus Volume 2020 ; 2020 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2021 ; 2021 ; IMA Fungus Volume 2021 ; 2021 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2022 ; 2022 ; IMA Fungus Volume 2022 ; 2022 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2023 ; 2023 ; IMA Fungus Volume 2023 ; 2023 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2024 ; 2024 ; IMA Fungus Volume 2024 ; 2024 ; https://imafungus.pensoft.net/ >
+      au < exists ; 2025 ; 2025 ; IMA Fungus Volume 2025 ; 2025 ; https://imafungus.pensoft.net/ >
+
+  }
+
+  {
+
+      title <
+        name = Innovations in Agriculture ;
+        eissn = 2617-1295
+      >
+
+      param[au_oai_set] = innovationsagriculture
+
+      au < exists ; 2018 ; 2018 ; Innovations in Agriculture Volume 2018 ; 2018 ; https://innovationsagriculture.pensoft.net/ >
+      au < exists ; 2019 ; 2019 ; Innovations in Agriculture Volume 2019 ; 2019 ; https://innovationsagriculture.pensoft.net/ >
+      au < exists ; 2020 ; 2020 ; Innovations in Agriculture Volume 2020 ; 2020 ; https://innovationsagriculture.pensoft.net/ >
+      au < exists ; 2021 ; 2021 ; Innovations in Agriculture Volume 2021 ; 2021 ; https://innovationsagriculture.pensoft.net/ >
+      au < exists ; 2022 ; 2022 ; Innovations in Agriculture Volume 2022 ; 2022 ; https://innovationsagriculture.pensoft.net/ >
+      au < exists ; 2023 ; 2023 ; Innovations in Agriculture Volume 2023 ; 2023 ; https://innovationsagriculture.pensoft.net/ >
+      au < exists ; 2024 ; 2024 ; Innovations in Agriculture Volume 2024 ; 2024 ; https://innovationsagriculture.pensoft.net/ >
+      au < exists ; 2025 ; 2025 ; Innovations in Agriculture Volume 2025 ; 2025 ; https://innovationsagriculture.pensoft.net/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Applied Sports Sciences ;
+        issn = 2534-9597 ;
+        eissn = 2535-0145
+      >
+
+      param[au_oai_set] = jass
+
+      au < exists ; 2017 ; 2017 ; Journal of Applied Sports Sciences Volume 2017 ; 2017 ; https://journal.nsa.bg/ >
+      au < exists ; 2018 ; 2018 ; Journal of Applied Sports Sciences Volume 2018 ; 2018 ; https://journal.nsa.bg/ >
+      au < exists ; 2019 ; 2019 ; Journal of Applied Sports Sciences Volume 2019 ; 2019 ; https://journal.nsa.bg/ >
+      au < exists ; 2020 ; 2020 ; Journal of Applied Sports Sciences Volume 2020 ; 2020 ; https://journal.nsa.bg/ >
+      au < exists ; 2021 ; 2021 ; Journal of Applied Sports Sciences Volume 2021 ; 2021 ; https://journal.nsa.bg/ >
+      au < exists ; 2022 ; 2022 ; Journal of Applied Sports Sciences Volume 2022 ; 2022 ; https://journal.nsa.bg/ >
+      au < exists ; 2023 ; 2023 ; Journal of Applied Sports Sciences Volume 2023 ; 2023 ; https://journal.nsa.bg/ >
+      au < exists ; 2024 ; 2024 ; Journal of Applied Sports Sciences Volume 2024 ; 2024 ; https://journal.nsa.bg/ >
+      au < exists ; 2025 ; 2025 ; Journal of Applied Sports Sciences Volume 2025 ; 2025 ; https://journal.nsa.bg/ >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Biomedical and Clinical Research (JBCR) ;
+        issn = 1313-6917 ;
+        eissn = 1313-9053
+      >
+
+      param[au_oai_set] = jbcr
+
+      au < exists ; 2024 ; 2024 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2024 ; 2024 ; https://jbcr.arphahub.com/ >
+      au < exists ; 2025 ; 2025 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2025 ; 2025 ; https://jbcr.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Natural History Collections and Museomics ;
+        eissn = 3033-0955
+      >
+
+      param[au_oai_set] = nhcm
+
+      au < exists ; 2024 ; 2024 ; Natural History Collections and Museomics Volume 2024 ; 2024 ; https://nhcm.pensoft.net/ >
+      au < exists ; 2025 ; 2025 ; Natural History Collections and Museomics Volume 2025 ; 2025 ; https://nhcm.pensoft.net/ >
+
+  }
+
+  {
+
+      title <
+        name = Papahou: Records of the Auckland Museum ;
+        eissn = 3021-3576
+      >
+
+      param[au_oai_set] = papahou
+
+      au < exists ; 2024 ; 2024 ; Papahou: Records of the Auckland Museum Volume 2024 ; 2024 ; https://papahou.arphahub.com/ >
+      au < exists ; 2025 ; 2025 ; Papahou: Records of the Auckland Museum Volume 2025 ; 2025 ; https://papahou.arphahub.com/ >
+
+  }
+
+  {
+
+      title <
+        name = Frontiers of Biogeography ;
+        eissn = 1948-6596
+      >
+
+      param[au_oai_set] = biogeography
+
+      au < exists ; 2024 ; 2024 ; Frontiers of Biogeography Volume 2024 ; 2024 ; https://biogeography.pensoft.net/ >
+      au < exists ; 2025 ; 2025 ; Frontiers of Biogeography Volume 2025 ; 2025 ; https://biogeography.pensoft.net/ >
+
+  }
+
+  {
+
+      title <
+        name = Bulletin of Insectology ;
+        issn = 2283-0332 ;
+        eissn = 1721-8861
+      >
+
+      param[au_oai_set] = bulletinofinsectology
+
+      au < exists ; 2025 ; 78 ; Bulletin of Insectology Volume 2025 ; 2025 ; https://bulletinofinsectology.org/ >
+
+  }
+
+  {
+
+      title <
+        name = Individual-based Ecology (IBE) ;
+        eissn = 3033-0947
+      >
+
+      param[au_oai_set] = ibe
+
+      au < exists ; 2025 ; 1 ; Individual-based Ecology (IBE) Volume 2025 ; 2025 ; https://ibe.pensoft.net/ >
+
+  }
+
+  {
+
+      title <
+        name = SKINdeep ;
+        issn = 3061-0281 ;
+        eissn = 3061-029X
+      >
+
+      param[au_oai_set] = skinonline
+
+      au < exists ; 2025 ; 1 ; SKINdeep Volume 2025 ; 2025 ; https://skindeep.skinonline.org/ >
 
   }
 
