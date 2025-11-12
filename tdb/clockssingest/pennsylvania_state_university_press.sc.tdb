@@ -190,7 +190,7 @@
       au < finished ; manifest ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 19 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; The F. Scott Fitzgerald Review Volume 20 ; 20 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; The F. Scott Fitzgerald Review Volume 21 ; 21 ; 2023 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2024 ; The F. Scott Fitzgerald Review Volume 22 ; 22 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; The F. Scott Fitzgerald Review Volume 22 ; 22 ; 2024 ; >
       au < expected ; exists ; 2025 ; The F. Scott Fitzgerald Review Volume 23 ; 23 ; 2025 ; >
 
   }
@@ -2210,7 +2210,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; Studies in the American Short Story Volume 2 ; 2 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Studies in the American Short Story Volume 3 ; 3 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Studies in the American Short Story Volume 4 ; 4 ; 2023 ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2024 ; Studies in the American Short Story Volume 5 ; 5 ; 2024 ; >
+      au < manifest ; exists ; 2024 ; Studies in the American Short Story Volume 5 ; 5 ; 2024 ; >
       au < expected ; exists ; 2025 ; Studies in the American Short Story Volume 6 ; 6 ; 2025 ; >
 
   }
