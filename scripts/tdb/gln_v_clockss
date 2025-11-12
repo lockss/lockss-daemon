@@ -90,6 +90,8 @@ then
   echo "Ignore files"
   exists_cks=0
   exists_gln=0
+  exists_cks_retired=0
+  exists_gln_retired=0
 fi
 # If the files exist, compare the titles.
 if [[ ($exists_cks == 1 && $exists_gln == 1) || ($exists_cks_retired == 1 && $exists_gln_retired == 1) ]]

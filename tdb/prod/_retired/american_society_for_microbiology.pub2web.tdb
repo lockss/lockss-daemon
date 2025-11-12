@@ -25,7 +25,7 @@
       au < down ; 2012-2013 ; EcoSal Plus Volume 5 ; 5 ; http://www.asmscience.org/ >
       au < down ; 2014-2015 ; EcoSal Plus Volume 6 ; 6 ; http://www.asmscience.org/ >
       au < down ; 2016-2017 ; EcoSal Plus Volume 7 ; 7 ; http://www.asmscience.org/ >
-      au < doNotProcess ; 2018-2019 ; EcoSal Plus Volume 8 ; 8 ; https://www.asmscience.org/ >
+      #au < doNotProcess ; 2018-2019 ; EcoSal Plus Volume 8 ; 8 ; https://www.asmscience.org/ >
       au < doNotProcess ; 2020-2021 ; EcoSal Plus Volume 9 ; 9 ; https://www.asmscience.org/ >
 
     }
@@ -44,9 +44,9 @@
       au < down ; 2016 ; Microbiology Spectrum 2016 ; 4 ; http://www.asmscience.org/ >
       au < down ; 2017 ; Microbiology Spectrum 2017 ; 5 ; http://www.asmscience.org/ >
       au < down ; 2018 ; Microbiology Spectrum 2018 ; 6 ; http://www.asmscience.org/ >
-      au < doNotProcess ; 2019 ; Microbiology Spectrum 2019 ; 7 ; https://www.asmscience.org/ >
-      au < doNotProcess ; 2020 ; Microbiology Spectrum 2020 ; 8 ; https://www.asmscience.org/ >
-      au < doNotProcess ; 2021 ; Microbiology Spectrum 2021 ; 9 ; https://www.asmscience.org/ >
+      #au < doNotProcess ; 2019 ; Microbiology Spectrum 2019 ; 7 ; https://www.asmscience.org/ >
+      #au < doNotProcess ; 2020 ; Microbiology Spectrum 2020 ; 8 ; https://www.asmscience.org/ >
+      #au < doNotProcess ; 2021 ; Microbiology Spectrum 2021 ; 9 ; https://www.asmscience.org/ >
 
     }
 
