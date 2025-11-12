@@ -1307,7 +1307,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < bmj.BMJDrupalPlugin ; down ; 2021 ; Evidence-Based Medicine Volume 26 ; 26 ; https://ebm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; Evidence-Based Medicine Volume 27 ; 27 ; https://ebm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; Evidence-Based Medicine Volume 28 ; 28 ; https://ebm.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; notReady ; 2024 ; Evidence-Based Medicine Volume 29 ; 29 ; https://ebm.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2024 ; Evidence-Based Medicine Volume 29 ; 29 ; https://ebm.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; Evidence-Based Medicine Volume 30 ; 30 ; https://ebm.bmj.com/ >
 
   }
@@ -2765,7 +2765,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Quality & Safety Volume 30 ; 30 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Quality & Safety Volume 31 ; 31 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Quality & Safety Volume 32 ; 32 ; https://qualitysafety.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; notReady ; 2024 ; BMJ Quality & Safety Volume 33 ; 33 ; https://qualitysafety.bmj.com/ > #403 error, http://qualitysafety.bmj.com/lockss-manifest/vol_33_manifest.html
+      au < bmj.BMJDrupalPlugin ; ready ; 2024 ; BMJ Quality & Safety Volume 33 ; 33 ; https://qualitysafety.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Quality & Safety Volume 34 ; 34 ; https://qualitysafety.bmj.com/ >
 
       }
