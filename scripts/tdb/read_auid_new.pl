@@ -809,7 +809,7 @@ while (my $line = <>) {
 #    } elsif (($man_contents =~ m/$url/) && ($man_contents =~ m/\/Library\/Article\//)) {
 #    } elsif (($man_contents =~ m/$param{journal_id}\?year=$param{year}/)) {
     } elsif (($man_contents =~ m/\Q$man_url\E/)) {
-        if ($man_contents =~ m/="\/(Library\/Article\/[^"]*)">[^<]*<\/a>/si) {
+        if ($man_contents =~ m/="\/(Library\/Article\/[^"]*)">/si) {
             my $art_url = $param{base_url} . $1;
             $man_art_url = uri_unescape($art_url);
             my $req_art = HTTP::Request->new(GET, $man_art_url);
@@ -826,7 +826,7 @@ while (my $line = <>) {
             } else {
                 $result = "SiteChangedStructure"
             }
-        } elsif ($man_contents =~ m/="\/(Library\/SearchLinkRedirect\?folder=[^"]*)">[^<]*<\/a>/si) {
+        } elsif ($man_contents =~ m/="\/(Library\/SearchLinkRedirect\?folder=[^"]*)">/si) {
             my $art_url = $param{base_url} . $1;
             $man_art_url = uri_unescape($art_url);
             my $req_art = HTTP::Request->new(GET, $man_art_url);
