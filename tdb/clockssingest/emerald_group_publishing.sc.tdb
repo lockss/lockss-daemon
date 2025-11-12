@@ -4138,12 +4138,12 @@
     au < manifest ; exists ; 1991 ; 1991 ; Interlending & Document Supply Volume 19 ; 19 ; >
     au < manifest ; exists ; 1992 ; 1992 ; Interlending & Document Supply Volume 20 ; 20 ; >
     au < manifest ; exists ; 1993 ; 1993 ; Interlending & Document Supply Volume 21 ; 21 ; >
-    au < ready ; exists ; 1994 ; 1994 ; Interlending & Document Supply Volume 22 ; 22 ; >
-    au < ready ; exists ; 1995 ; 1995 ; Interlending & Document Supply Volume 23 ; 23 ; >
-    au < ready ; exists ; 1996 ; 1996 ; Interlending & Document Supply Volume 24 ; 24 ; >
-    au < ready ; exists ; 1997 ; 1997 ; Interlending & Document Supply Volume 25 ; 25 ; >
-    au < ready ; exists ; 1998 ; 1998 ; Interlending & Document Supply Volume 26 ; 26 ; >
-    au < ready ; exists ; 1999 ; 1999 ; Interlending & Document Supply Volume 27 ; 27 ; >
+    au < crawling ; exists ; 1994 ; 1994 ; Interlending & Document Supply Volume 22 ; 22 ; >
+    au < crawling ; exists ; 1995 ; 1995 ; Interlending & Document Supply Volume 23 ; 23 ; >
+    au < crawling ; exists ; 1996 ; 1996 ; Interlending & Document Supply Volume 24 ; 24 ; >
+    au < crawling ; exists ; 1997 ; 1997 ; Interlending & Document Supply Volume 25 ; 25 ; >
+    au < crawling ; exists ; 1998 ; 1998 ; Interlending & Document Supply Volume 26 ; 26 ; >
+    au < crawling ; exists ; 1999 ; 1999 ; Interlending & Document Supply Volume 27 ; 27 ; >
     au < ready ; exists ; 2000 ; 2000 ; Interlending & Document Supply Volume 28 ; 28 ; >
     au < ready ; exists ; 2001 ; 2001 ; Interlending & Document Supply Volume 29 ; 29 ; >
     au < ready ; exists ; 2002 ; 2002 ; Interlending & Document Supply Volume 30 ; 30 ; >
@@ -6872,8 +6872,8 @@
     # online from 2000
 
     au < ready ; exists ; 1999 ; 1999 ; Journal of Applied Accounting Research Volume 5 (1999) ; 5 ; >
-    au < ready ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 5 (2000) ; 5 ; >
-    au < ready ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 6 (2000) ; 6 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 5 (2000) ; 5 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 6 (2000) ; 6 ; >
     au < ready ; exists ; 2001 ; 2001 ; Journal of Applied Accounting Research Volume 6 (2001) ; 6 ; >
     au < frozen ; exists ; 2002 ; 2002 ; Journal of Applied Accounting Research Volume 6 (2002) ; 6 ; >
     au < frozen ; exists ; 2004 ; 2004 ; Journal of Applied Accounting Research Volume 7 (2004) ; 7 ; >
@@ -8496,7 +8496,7 @@
     #continued_by = 1461-5436
 
     au < ready ; exists ; 1996 ; 1996 ; Community Care Management & Planning Volume 4 ; 4 ; >
-    au < ready ; exists ; 1997 ; 1997 ; Community Care Management & Planning Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1997 ; 1997 ; Community Care Management & Planning Volume 5 ; 5 ; >
 
   }
 
@@ -8514,9 +8514,9 @@
     #continued_by = 1477-5190
 
     au < ready ; exists ; 1998 ; 1998 ; Managing Community Care Volume 6 ; 6 ; >
-    au < ready ; exists ; 1999 ; 1999 ; Managing Community Care Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1999 ; 1999 ; Managing Community Care Volume 7 ; 7 ; >
     au < ready ; exists ; 2000 ; 2000 ; Managing Community Care Volume 8 ; 8 ; >
-    au < ready ; exists ; 2001 ; 2001 ; Managing Community Care Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2001 ; 2001 ; Managing Community Care Volume 9 ; 9 ; >
 
   }
 
@@ -9509,7 +9509,7 @@
     param[journal_id] = jpmh
     #continued_by = 1746-5729
 
-    au < ready ; exists ; 1999 ; 1999 ; International Journal of Mental Health Promotion Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1999 ; 1999 ; International Journal of Mental Health Promotion Volume 1 ; 1 ; >
     au < ready ; exists ; 2000 ; 2000 ; International Journal of Mental Health Promotion Volume 2 issue 1-3 ; 2 ; >
 
   }
@@ -13962,12 +13962,12 @@
     au < manifest ; exists ; 1991 ; 1991 ; Tourism Review Volume 46 ; 46 ; >
     au < manifest ; exists ; 1992 ; 1992 ; Tourism Review Volume 47 ; 47 ; >
     au < manifest ; exists ; 1993 ; 1993 ; Tourism Review Volume 48 ; 48 ; >
-    au < ready ; exists ; 1994 ; 1994 ; Tourism Review Volume 49 ; 49 ; >
-    au < ready ; exists ; 1995 ; 1995 ; Tourism Review Volume 50 ; 50 ; >
-    au < ready ; exists ; 1996 ; 1996 ; Tourism Review Volume 51 ; 51 ; >
-    au < ready ; exists ; 1997 ; 1997 ; Tourism Review Volume 52 ; 52 ; >
-    au < ready ; exists ; 1998 ; 1998 ; Tourism Review Volume 53 ; 53 ; >
-    au < ready ; exists ; 1999 ; 1999 ; Tourism Review Volume 54 ; 54 ; >
+    au < crawling ; exists ; 1994 ; 1994 ; Tourism Review Volume 49 ; 49 ; >
+    au < crawling ; exists ; 1995 ; 1995 ; Tourism Review Volume 50 ; 50 ; >
+    au < crawling ; exists ; 1996 ; 1996 ; Tourism Review Volume 51 ; 51 ; >
+    au < crawling ; exists ; 1997 ; 1997 ; Tourism Review Volume 52 ; 52 ; >
+    au < crawling ; exists ; 1998 ; 1998 ; Tourism Review Volume 53 ; 53 ; >
+    au < crawling ; exists ; 1999 ; 1999 ; Tourism Review Volume 54 ; 54 ; >
     au < ready ; exists ; 2000 ; 2000 ; Tourism Review Volume 55 ; 55 ; >
 
   }
