@@ -167,17 +167,27 @@
         eissn = 2295-9084
       >
 
-      #published 2010-2017
+      #published 1963-2022
       param[base_url] = https://www.philosophica.ugent.be/
       #param[journal_id] = philosophica
 
+      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Philosophica Volume 2001 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Philosophica Volume 2001 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Philosophica Volume 2002 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Philosophica Volume 2003 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Philosophica Volume 2003 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Philosophica Volume 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Philosophica Volume 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Philosophica Volume 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Philosophica Volume 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Philosophica Volume 2008 ; >
       au < finished ; manifest ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2022 ; 2022 ; 93 ; Philosophica Volume 93 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 93 ; Philosophica Volume 93 ; >
 
   }
 
@@ -699,7 +709,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2022 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2025 ; >
+      au < expected ; exists ; 2025 ; 2025 ; 2025 ; Handelingen der maatschappij voor Geschiedenis en Oudheidkunde te Gent Volume 2025 ; >
 
   }
 
@@ -789,7 +799,7 @@
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2022 ; reingest3.clockss.org:8083 >
       au < doesNotExist ; doesNotExist ; 2023 ; 2023 ; 2023 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2025 ; >
+      au < expected ; exists ; 2025 ; 2025 ; 2025 ; Handelingen - Koninklijke Zuid-Nederlandse Maatschappij voor Taal- en Letterkunde en Geschiedenis Volume 2025 ; >
 
   }
 
@@ -911,7 +921,7 @@
 
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Journal for Digital Legal History Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Journal for Digital Legal History Volume 2024 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Journal for Digital Legal History Volume 2025 ; >
+      au < expected ; exists ; 2025 ; 2025 ; 2025 ; Journal for Digital Legal History Volume 2025 ; >
 
   }
 
@@ -1017,13 +1027,13 @@
       au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1981 ; >
       au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1982 ; >
       au < frozen ; exists ; 1983 ; 1983 ; 1983 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1984 ; >
+      au < doesNotExist ; doesNotExist ; 1984 ; 1984 ; 1984 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1984 ; >
       au < ready ; exists ; 1985 ; 1985 ; 1985 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1985 ; >
       au < ready ; exists ; 1986 ; 1986 ; 1986 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1986 ; >
       au < crawling ; exists ; 1987 ; 1987 ; 1987 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1987 ; >
       au < crawling ; exists ; 1988 ; 1988 ; 1988 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1989 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; 1990 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1990 ; >
+      au < doesNotExist ; doesNotExist ; 1990 ; 1990 ; 1990 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1990 ; >
       au < finished ; manifest ; 1991 ; 1991 ; 1991 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1991 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1992 ; 1992 ; 1992 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1992 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1993 ; 1993 ; 1993 ; Handelingen van de Koninklijke Commissie voor Toponymie en Dialectologie Volume 1993 ; reingest2.clockss.org:8085 >
@@ -1221,71 +1231,71 @@
       au < manifest ; exists ; 1929 ; 1929 ; 1929 ; Oostvlaamse Zanten Volume 1929 ; >
       au < manifest ; exists ; 1930 ; 1930 ; 1930 ; Oostvlaamse Zanten Volume 1930 ; >
       au < manifest ; exists ; 1931 ; 1931 ; 1931 ; Oostvlaamse Zanten Volume 1931 ; >
-      au < manifest ; exists ; 1932 ; 1932 ; 1932 ; Oostvlaamse Zanten Volume 1932 ; >
-      au < manifest ; exists ; 1933 ; 1933 ; 1933 ; Oostvlaamse Zanten Volume 1933 ; >
-      au < manifest ; exists ; 1934 ; 1934 ; 1934 ; Oostvlaamse Zanten Volume 1934 ; >
-      au < manifest ; exists ; 1935 ; 1935 ; 1935 ; Oostvlaamse Zanten Volume 1935 ; >
-      au < manifest ; exists ; 1936 ; 1936 ; 1936 ; Oostvlaamse Zanten Volume 1936 ; >
-      au < manifest ; exists ; 1937 ; 1937 ; 1937 ; Oostvlaamse Zanten Volume 1937 ; >
-      au < manifest ; exists ; 1938 ; 1938 ; 1938 ; Oostvlaamse Zanten Volume 1938 ; >
-      au < manifest ; exists ; 1939 ; 1939 ; 1939 ; Oostvlaamse Zanten Volume 1939 ; >
-      au < manifest ; exists ; 1940 ; 1940 ; 1940 ; Oostvlaamse Zanten Volume 1940 ; >
-      au < manifest ; exists ; 1941 ; 1941 ; 1941 ; Oostvlaamse Zanten Volume 1941 ; >
-      au < manifest ; exists ; 1942 ; 1942 ; 1942 ; Oostvlaamse Zanten Volume 1942 ; >
-      au < manifest ; exists ; 1943 ; 1943 ; 1943 ; Oostvlaamse Zanten Volume 1943 ; >
-      au < manifest ; exists ; 1944 ; 1944 ; 1944 ; Oostvlaamse Zanten Volume 1944 ; >
-      au < manifest ; exists ; 1945 ; 1945 ; 1945 ; Oostvlaamse Zanten Volume 1945 ; >
-      au < manifest ; exists ; 1946 ; 1946 ; 1946 ; Oostvlaamse Zanten Volume 1946 ; >
-      au < manifest ; exists ; 1947 ; 1947 ; 1947 ; Oostvlaamse Zanten Volume 1947 ; >
-      au < manifest ; exists ; 1948 ; 1948 ; 1948 ; Oostvlaamse Zanten Volume 1948 ; >
-      au < manifest ; exists ; 1949 ; 1949 ; 1949 ; Oostvlaamse Zanten Volume 1949 ; >
-      au < manifest ; exists ; 1950 ; 1950 ; 1950 ; Oostvlaamse Zanten Volume 1950 ; >
-      au < manifest ; exists ; 1951 ; 1951 ; 1951 ; Oostvlaamse Zanten Volume 1951 ; >
-      au < manifest ; exists ; 1952 ; 1952 ; 1952 ; Oostvlaamse Zanten Volume 1952 ; >
-      au < manifest ; exists ; 1953 ; 1953 ; 1953 ; Oostvlaamse Zanten Volume 1953 ; >
-      au < manifest ; exists ; 1954 ; 1954 ; 1954 ; Oostvlaamse Zanten Volume 1954 ; >
-      au < manifest ; exists ; 1955 ; 1955 ; 1955 ; Oostvlaamse Zanten Volume 1955 ; >
-      au < manifest ; exists ; 1956 ; 1956 ; 1956 ; Oostvlaamse Zanten Volume 1956 ; >
-      au < manifest ; exists ; 1957 ; 1957 ; 1957 ; Oostvlaamse Zanten Volume 1957 ; >
-      au < manifest ; exists ; 1958 ; 1958 ; 1958 ; Oostvlaamse Zanten Volume 1958 ; >
-      au < manifest ; exists ; 1959 ; 1959 ; 1959 ; Oostvlaamse Zanten Volume 1959 ; >
-      au < manifest ; exists ; 1960 ; 1960 ; 1960 ; Oostvlaamse Zanten Volume 1960 ; >
-      au < manifest ; exists ; 1961 ; 1961 ; 1961 ; Oostvlaamse Zanten Volume 1961 ; >
-      au < manifest ; exists ; 1962 ; 1962 ; 1962 ; Oostvlaamse Zanten Volume 1962 ; >
-      au < manifest ; exists ; 1963 ; 1963 ; 1963 ; Oostvlaamse Zanten Volume 1963 ; >
-      au < manifest ; exists ; 1964 ; 1964 ; 1964 ; Oostvlaamse Zanten Volume 1964 ; >
-      au < manifest ; exists ; 1965 ; 1965 ; 1965 ; Oostvlaamse Zanten Volume 1965 ; >
-      au < manifest ; exists ; 1966 ; 1966 ; 1966 ; Oostvlaamse Zanten Volume 1966 ; >
-      au < manifest ; exists ; 1967 ; 1967 ; 1967 ; Oostvlaamse Zanten Volume 1967 ; >
-      au < manifest ; exists ; 1968 ; 1968 ; 1968 ; Oostvlaamse Zanten Volume 1968 ; >
-      au < manifest ; exists ; 1969 ; 1969 ; 1969 ; Oostvlaamse Zanten Volume 1969 ; >
-      au < manifest ; exists ; 1970 ; 1970 ; 1970 ; Oostvlaamse Zanten Volume 1970 ; >
-      au < manifest ; exists ; 1971 ; 1971 ; 1971 ; Oostvlaamse Zanten Volume 1971 ; >
-      au < manifest ; exists ; 1972 ; 1972 ; 1972 ; Oostvlaamse Zanten Volume 1972 ; >
-      au < manifest ; exists ; 1973 ; 1973 ; 1973 ; Oostvlaamse Zanten Volume 1973 ; >
-      au < manifest ; exists ; 1974 ; 1974 ; 1974 ; Oostvlaamse Zanten Volume 1974 ; >
-      au < manifest ; exists ; 1975 ; 1975 ; 1975 ; Oostvlaamse Zanten Volume 1975 ; >
-      au < manifest ; exists ; 1976 ; 1976 ; 1976 ; Oostvlaamse Zanten Volume 1976 ; >
-      au < manifest ; exists ; 1977 ; 1977 ; 1977 ; Oostvlaamse Zanten Volume 1977 ; >
-      au < manifest ; exists ; 1978 ; 1978 ; 1978 ; Oostvlaamse Zanten Volume 1978 ; >
-      au < manifest ; exists ; 1979 ; 1979 ; 1979 ; Oostvlaamse Zanten Volume 1979 ; >
-      au < manifest ; exists ; 1980 ; 1980 ; 1980 ; Oostvlaamse Zanten Volume 1980 ; >
-      au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Oostvlaamse Zanten Volume 1981 ; >
-      au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Oostvlaamse Zanten Volume 1982 ; >
-      au < manifest ; exists ; 1983 ; 1983 ; 1983 ; Oostvlaamse Zanten Volume 1983 ; >
-      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Oostvlaamse Zanten Volume 1984 ; >
-      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Oostvlaamse Zanten Volume 1985 ; >
-      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Oostvlaamse Zanten Volume 1986 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Oostvlaamse Zanten Volume 1987 ; >
-      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Oostvlaamse Zanten Volume 1988 ; >
+      au < doesNotExist ; doesNotExist ; 1932 ; 1932 ; 1932 ; Oostvlaamse Zanten Volume 1932 ; >
+      au < doesNotExist ; doesNotExist ; 1933 ; 1933 ; 1933 ; Oostvlaamse Zanten Volume 1933 ; >
+      au < doesNotExist ; doesNotExist ; 1934 ; 1934 ; 1934 ; Oostvlaamse Zanten Volume 1934 ; >
+      au < doesNotExist ; doesNotExist ; 1935 ; 1935 ; 1935 ; Oostvlaamse Zanten Volume 1935 ; >
+      au < doesNotExist ; doesNotExist ; 1936 ; 1936 ; 1936 ; Oostvlaamse Zanten Volume 1936 ; >
+      au < doesNotExist ; doesNotExist ; 1937 ; 1937 ; 1937 ; Oostvlaamse Zanten Volume 1937 ; >
+      au < doesNotExist ; doesNotExist ; 1938 ; 1938 ; 1938 ; Oostvlaamse Zanten Volume 1938 ; >
+      au < doesNotExist ; doesNotExist ; 1939 ; 1939 ; 1939 ; Oostvlaamse Zanten Volume 1939 ; >
+      au < doesNotExist ; doesNotExist ; 1940 ; 1940 ; 1940 ; Oostvlaamse Zanten Volume 1940 ; >
+      au < doesNotExist ; doesNotExist ; 1941 ; 1941 ; 1941 ; Oostvlaamse Zanten Volume 1941 ; >
+      au < doesNotExist ; doesNotExist ; 1942 ; 1942 ; 1942 ; Oostvlaamse Zanten Volume 1942 ; >
+      au < doesNotExist ; doesNotExist ; 1943 ; 1943 ; 1943 ; Oostvlaamse Zanten Volume 1943 ; >
+      au < doesNotExist ; doesNotExist ; 1944 ; 1944 ; 1944 ; Oostvlaamse Zanten Volume 1944 ; >
+      au < doesNotExist ; doesNotExist ; 1945 ; 1945 ; 1945 ; Oostvlaamse Zanten Volume 1945 ; >
+      au < doesNotExist ; doesNotExist ; 1946 ; 1946 ; 1946 ; Oostvlaamse Zanten Volume 1946 ; >
+      au < doesNotExist ; doesNotExist ; 1947 ; 1947 ; 1947 ; Oostvlaamse Zanten Volume 1947 ; >
+      au < doesNotExist ; doesNotExist ; 1948 ; 1948 ; 1948 ; Oostvlaamse Zanten Volume 1948 ; >
+      au < doesNotExist ; doesNotExist ; 1949 ; 1949 ; 1949 ; Oostvlaamse Zanten Volume 1949 ; >
+      au < doesNotExist ; doesNotExist ; 1950 ; 1950 ; 1950 ; Oostvlaamse Zanten Volume 1950 ; >
+      au < doesNotExist ; doesNotExist ; 1951 ; 1951 ; 1951 ; Oostvlaamse Zanten Volume 1951 ; >
+      au < doesNotExist ; doesNotExist ; 1952 ; 1952 ; 1952 ; Oostvlaamse Zanten Volume 1952 ; >
+      au < doesNotExist ; doesNotExist ; 1953 ; 1953 ; 1953 ; Oostvlaamse Zanten Volume 1953 ; >
+      au < doesNotExist ; doesNotExist ; 1954 ; 1954 ; 1954 ; Oostvlaamse Zanten Volume 1954 ; >
+      au < doesNotExist ; doesNotExist ; 1955 ; 1955 ; 1955 ; Oostvlaamse Zanten Volume 1955 ; >
+      au < doesNotExist ; doesNotExist ; 1956 ; 1956 ; 1956 ; Oostvlaamse Zanten Volume 1956 ; >
+      au < doesNotExist ; doesNotExist ; 1957 ; 1957 ; 1957 ; Oostvlaamse Zanten Volume 1957 ; >
+      au < doesNotExist ; doesNotExist ; 1958 ; 1958 ; 1958 ; Oostvlaamse Zanten Volume 1958 ; >
+      au < doesNotExist ; doesNotExist ; 1959 ; 1959 ; 1959 ; Oostvlaamse Zanten Volume 1959 ; >
+      au < doesNotExist ; doesNotExist ; 1960 ; 1960 ; 1960 ; Oostvlaamse Zanten Volume 1960 ; >
+      au < doesNotExist ; doesNotExist ; 1961 ; 1961 ; 1961 ; Oostvlaamse Zanten Volume 1961 ; >
+      au < doesNotExist ; doesNotExist ; 1962 ; 1962 ; 1962 ; Oostvlaamse Zanten Volume 1962 ; >
+      au < doesNotExist ; doesNotExist ; 1963 ; 1963 ; 1963 ; Oostvlaamse Zanten Volume 1963 ; >
+      au < doesNotExist ; doesNotExist ; 1964 ; 1964 ; 1964 ; Oostvlaamse Zanten Volume 1964 ; >
+      au < doesNotExist ; doesNotExist ; 1965 ; 1965 ; 1965 ; Oostvlaamse Zanten Volume 1965 ; >
+      au < doesNotExist ; doesNotExist ; 1966 ; 1966 ; 1966 ; Oostvlaamse Zanten Volume 1966 ; >
+      au < doesNotExist ; doesNotExist ; 1967 ; 1967 ; 1967 ; Oostvlaamse Zanten Volume 1967 ; >
+      au < doesNotExist ; doesNotExist ; 1968 ; 1968 ; 1968 ; Oostvlaamse Zanten Volume 1968 ; >
+      au < doesNotExist ; doesNotExist ; 1969 ; 1969 ; 1969 ; Oostvlaamse Zanten Volume 1969 ; >
+      au < doesNotExist ; doesNotExist ; 1970 ; 1970 ; 1970 ; Oostvlaamse Zanten Volume 1970 ; >
+      au < doesNotExist ; doesNotExist ; 1971 ; 1971 ; 1971 ; Oostvlaamse Zanten Volume 1971 ; >
+      au < doesNotExist ; doesNotExist ; 1972 ; 1972 ; 1972 ; Oostvlaamse Zanten Volume 1972 ; >
+      au < doesNotExist ; doesNotExist ; 1973 ; 1973 ; 1973 ; Oostvlaamse Zanten Volume 1973 ; >
+      au < doesNotExist ; doesNotExist ; 1974 ; 1974 ; 1974 ; Oostvlaamse Zanten Volume 1974 ; >
+      au < doesNotExist ; doesNotExist ; 1975 ; 1975 ; 1975 ; Oostvlaamse Zanten Volume 1975 ; >
+      au < doesNotExist ; doesNotExist ; 1976 ; 1976 ; 1976 ; Oostvlaamse Zanten Volume 1976 ; >
+      au < doesNotExist ; doesNotExist ; 1977 ; 1977 ; 1977 ; Oostvlaamse Zanten Volume 1977 ; >
+      au < doesNotExist ; doesNotExist ; 1978 ; 1978 ; 1978 ; Oostvlaamse Zanten Volume 1978 ; >
+      au < doesNotExist ; doesNotExist ; 1979 ; 1979 ; 1979 ; Oostvlaamse Zanten Volume 1979 ; >
+      au < doesNotExist ; doesNotExist ; 1980 ; 1980 ; 1980 ; Oostvlaamse Zanten Volume 1980 ; >
+      au < doesNotExist ; doesNotExist ; 1981 ; 1981 ; 1981 ; Oostvlaamse Zanten Volume 1981 ; >
+      au < doesNotExist ; doesNotExist ; 1982 ; 1982 ; 1982 ; Oostvlaamse Zanten Volume 1982 ; >
+      au < doesNotExist ; doesNotExist ; 1983 ; 1983 ; 1983 ; Oostvlaamse Zanten Volume 1983 ; >
+      au < doesNotExist ; doesNotExist ; 1984 ; 1984 ; 1984 ; Oostvlaamse Zanten Volume 1984 ; >
+      au < doesNotExist ; doesNotExist ; 1985 ; 1985 ; 1985 ; Oostvlaamse Zanten Volume 1985 ; >
+      au < doesNotExist ; doesNotExist ; 1986 ; 1986 ; 1986 ; Oostvlaamse Zanten Volume 1986 ; >
+      au < doesNotExist ; doesNotExist ; 1987 ; 1987 ; 1987 ; Oostvlaamse Zanten Volume 1987 ; >
+      au < doesNotExist ; doesNotExist ; 1988 ; 1988 ; 1988 ; Oostvlaamse Zanten Volume 1988 ; >
       au < frozen ; exists ; 1989 ; 1989 ; 1989 ; Oostvlaamse Zanten Volume 1989 ; >
-      au < manifest ; exists ; 1990 ; 1990 ; 1990 ; Oostvlaamse Zanten Volume 1990 ; >
-      au < manifest ; exists ; 1991 ; 1991 ; 1991 ; Oostvlaamse Zanten Volume 1991 ; >
-      au < manifest ; exists ; 1992 ; 1992 ; 1992 ; Oostvlaamse Zanten Volume 1992 ; >
-      au < manifest ; exists ; 1993 ; 1993 ; 1993 ; Oostvlaamse Zanten Volume 1993 ; >
-      au < manifest ; exists ; 1994 ; 1994 ; 1994 ; Oostvlaamse Zanten Volume 1994 ; >
-      au < manifest ; exists ; 1995 ; 1995 ; 1995 ; Oostvlaamse Zanten Volume 1995 ; >
-      au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; 1996 ; Oostvlaamse Zanten Volume 1996 ; > #No content
+      au < doesNotExist ; doesNotExist ; 1990 ; 1990 ; 1990 ; Oostvlaamse Zanten Volume 1990 ; >
+      au < doesNotExist ; doesNotExist ; 1991 ; 1991 ; 1991 ; Oostvlaamse Zanten Volume 1991 ; >
+      au < doesNotExist ; doesNotExist ; 1992 ; 1992 ; 1992 ; Oostvlaamse Zanten Volume 1992 ; >
+      au < doesNotExist ; doesNotExist ; 1993 ; 1993 ; 1993 ; Oostvlaamse Zanten Volume 1993 ; >
+      au < doesNotExist ; doesNotExist ; 1994 ; 1994 ; 1994 ; Oostvlaamse Zanten Volume 1994 ; >
+      au < doesNotExist ; doesNotExist ; 1995 ; 1995 ; 1995 ; Oostvlaamse Zanten Volume 1995 ; >
+      au < doesNotExist ; doesNotExist ; 1996 ; 1996 ; 1996 ; Oostvlaamse Zanten Volume 1996 ; > #No content
       au < finished ; manifest ; 1997 ; 1997 ; 1997 ; Oostvlaamse Zanten Volume 1997 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1998 ; 1998 ; 1998 ; Oostvlaamse Zanten Volume 1998 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1999 ; 1999 ; 1999 ; Oostvlaamse Zanten Volume 1999 ; reingest2.clockss.org:8085 >
@@ -1318,8 +1328,8 @@
 
       au < finished ; manifest ; 2022 ; 2022 ; 2022 ; Relaties en Nieuwe Gezinnen Volume 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Relaties en Nieuwe Gezinnen Volume 2023 ; >
-      au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; 2024 ; Relaties en Nieuwe Gezinnen Volume 2024 ; > #No content
-      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Relaties en Nieuwe Gezinnen Volume 2025 ; >
+      au < doesNotExist ; doesNotExist ; 2024 ; 2024 ; 2024 ; Relaties en Nieuwe Gezinnen Volume 2024 ; > #No content
+      au < expected ; exists ; 2025 ; 2025 ; 2025 ; Relaties en Nieuwe Gezinnen Volume 2025 ; >
 
   }
 
