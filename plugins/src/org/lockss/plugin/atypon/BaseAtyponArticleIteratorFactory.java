@@ -93,7 +93,7 @@ ArticleMetadataExtractorFactory {
   private static final Pattern EPDFPLUS_PATTERN = Pattern.compile("/doi/epdfplus/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
 
   private static final Pattern DOI_PATTERN_2 = Pattern.compile("/doi/([.0-9]+)/([^?&/]+)/([-.0-9a-zA-Z_%]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern DOI_PATTERN = Pattern.compile("/doi/doi/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern DOI_PATTERN = Pattern.compile("/doi/([.0-9]+)/([^?&/]+)()$", Pattern.CASE_INSENSITIVE);
 
   // how to change from one form (aspect) of article to another
   private static final String HTML_REPLACEMENT_2 = "/doi/full/$1/$2/$3";
@@ -142,7 +142,7 @@ ArticleMetadataExtractorFactory {
   // AMetSoc doens't do an "include=cit", only "include=abs"
   // Do these as two separate patterns (not "OR") so we can have a priority choice
   private static final String SECOND_RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=abs";
-  private static final String SECOND_RIS_REPLACEMENT_WSLASH = "/action/downloadCitation?doi=$1%/$2&format=ris&include=abs";
+  private static final String SECOND_RIS_REPLACEMENT_WSLASH = "/action/downloadCitation?doi=$1/$2&format=ris&include=abs";
 
   /*
    * URLs have been found in certain Taylor & Francis journals that have one of the following
