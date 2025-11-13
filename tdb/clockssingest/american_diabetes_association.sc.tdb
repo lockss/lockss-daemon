@@ -22,7 +22,7 @@
       #param[base_url] = http://clinical.diabetesjournals.org/
       param[journal_id] = clinical
 
-      au < ready ; exists ; 2001 ; 2001 ; Clinical Diabetes Volume 19 ; 19 ; >
+      au < crawling ; exists ; 2001 ; 2001 ; Clinical Diabetes Volume 19 ; 19 ; >
       au < ready ; exists ; 2002 ; 2002 ; Clinical Diabetes Volume 20 ; 20 ; >
       au < ready ; exists ; 2003 ; 2003 ; Clinical Diabetes Volume 21 ; 21 ; >
       au < ready ; exists ; 2004 ; 2004 ; Clinical Diabetes Volume 22 ; 22 ; >
@@ -114,10 +114,10 @@
         au < ready ; exists ; 2000 ; 2000 ; Diabetes Volume 49 ; 49 ; >
         au < ready ; exists ; 2001 ; 2001 ; Diabetes Volume 50 ; 50 ; >
         au < ready ; exists ; 2002 ; 2002 ; Diabetes Volume 51 ; 51 ; >
-        au < ready ; exists ; 2003 ; 2003 ; Diabetes Volume 52 ; 52 ; >
-        au < ready ; exists ; 2004 ; 2004 ; Diabetes Volume 53 ; 53 ; >
+        au < crawling ; exists ; 2003 ; 2003 ; Diabetes Volume 52 ; 52 ; >
+        au < crawling ; exists ; 2004 ; 2004 ; Diabetes Volume 53 ; 53 ; >
         au < ready ; exists ; 2005 ; 2005 ; Diabetes Volume 54 ; 54 ; >
-        au < ready ; exists ; 2006 ; 2006 ; Diabetes Volume 55 ; 55 ; >
+        au < crawling ; exists ; 2006 ; 2006 ; Diabetes Volume 55 ; 55 ; >
         au < ready ; exists ; 2007 ; 2007 ; Diabetes Volume 56 ; 56 ; >
         au < ready ; exists ; 2008 ; 2008 ; Diabetes Volume 57 ; 57 ; >
         au < ready ; exists ; 2009 ; 2009 ; Diabetes Volume 58 ; 58 ; >
@@ -173,9 +173,9 @@
         au < manifest ; exists ; 1996 ; 1996 ; Diabetes Care Volume 19 ; 19 ; >
         au < manifest ; exists ; 1997 ; 1997 ; Diabetes Care Volume 20 ; 20 ; >
         au < manifest ; exists ; 1998 ; 1998 ; Diabetes Care Volume 21 ; 21 ; >
-        au < ready ; exists ; 1999 ; 1999 ; Diabetes Care Volume 22 ; 22 ; >
+        au < crawling ; exists ; 1999 ; 1999 ; Diabetes Care Volume 22 ; 22 ; >
         au < ready ; exists ; 2000 ; 2000 ; Diabetes Care Volume 23 ; 23 ; >
-        au < ready ; exists ; 2001 ; 2001 ; Diabetes Care Volume 24 ; 24 ; >
+        au < crawling ; exists ; 2001 ; 2001 ; Diabetes Care Volume 24 ; 24 ; >
         au < ready ; exists ; 2002 ; 2002 ; Diabetes Care Volume 25 ; 25 ; >
         au < ready ; exists ; 2003 ; 2003 ; Diabetes Care Volume 26 ; 26 ; >
         au < ready ; exists ; 2004 ; 2004 ; Diabetes Care Volume 27 ; 27 ; >
