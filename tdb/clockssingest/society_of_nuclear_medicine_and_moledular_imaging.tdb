@@ -5,7 +5,6 @@
     info[contract] = 2022 ;
     info[back] = 1964 ;
     info[tester] = 8 ;
-    info[poller] = 6 ;
     info[platform] = CLOCKSS Plugin released. HWDrupal.
   >
     plugin = org.lockss.plugin.highwire.snmmi.ClockssSnmmiDrupalPlugin
@@ -40,16 +39,16 @@
     au < manifest ; exists ; 1977 ; Journal of Nuclear Medicine Volume 18 ; 18 ; >
     au < manifest ; exists ; 1978 ; Journal of Nuclear Medicine Volume 19 ; 19 ; >
     au < manifest ; exists ; 1979 ; Journal of Nuclear Medicine Volume 20 ; 20 ; >
-    au < crawling ; exists ; 1980 ; Journal of Nuclear Medicine Volume 21 ; 21 ; >
-    au < crawling ; exists ; 1981 ; Journal of Nuclear Medicine Volume 22 ; 22 ; >
-    au < crawling ; exists ; 1982 ; Journal of Nuclear Medicine Volume 23 ; 23 ; >
-    au < crawling ; exists ; 1983 ; Journal of Nuclear Medicine Volume 24 ; 24 ; >
-    au < crawling ; exists ; 1984 ; Journal of Nuclear Medicine Volume 25 ; 25 ; >
-    au < crawling ; exists ; 1985 ; Journal of Nuclear Medicine Volume 26 ; 26 ; >
-    au < crawling ; exists ; 1986 ; Journal of Nuclear Medicine Volume 27 ; 27 ; >
-    au < crawling ; exists ; 1987 ; Journal of Nuclear Medicine Volume 28 ; 28 ; >
-    au < crawling ; exists ; 1988 ; Journal of Nuclear Medicine Volume 29 ; 29 ; >
-    au < crawling ; exists ; 1989 ; Journal of Nuclear Medicine Volume 30 ; 30 ; >
+    au < ready ; exists ; 1980 ; Journal of Nuclear Medicine Volume 21 ; 21 ; >
+    au < ready ; exists ; 1981 ; Journal of Nuclear Medicine Volume 22 ; 22 ; >
+    au < ready ; exists ; 1982 ; Journal of Nuclear Medicine Volume 23 ; 23 ; >
+    au < ready ; exists ; 1983 ; Journal of Nuclear Medicine Volume 24 ; 24 ; >
+    au < ready ; exists ; 1984 ; Journal of Nuclear Medicine Volume 25 ; 25 ; >
+    au < ready ; exists ; 1985 ; Journal of Nuclear Medicine Volume 26 ; 26 ; >
+    au < ready ; exists ; 1986 ; Journal of Nuclear Medicine Volume 27 ; 27 ; >
+    au < ready ; exists ; 1987 ; Journal of Nuclear Medicine Volume 28 ; 28 ; >
+    au < ready ; exists ; 1988 ; Journal of Nuclear Medicine Volume 29 ; 29 ; >
+    au < ready ; exists ; 1989 ; Journal of Nuclear Medicine Volume 30 ; 30 ; >
     au < frozen ; exists ; 1990 ; Journal of Nuclear Medicine Volume 31 ; 31 ; >
     au < crawling ; exists ; 1991 ; Journal of Nuclear Medicine Volume 32 ; 32 ; >
     au < crawling ; exists ; 1992 ; Journal of Nuclear Medicine Volume 33 ; 33 ; >
@@ -104,16 +103,16 @@
     au < manifest ; exists ; 1977 ; Journal of Nuclear Medicine Technology Volume 5 ; 5 ; >
     au < manifest ; exists ; 1978 ; Journal of Nuclear Medicine Technology Volume 6 ; 6 ; >
     au < manifest ; exists ; 1979 ; Journal of Nuclear Medicine Technology Volume 7 ; 7 ; >
-    au < crawling ; exists ; 1980 ; Journal of Nuclear Medicine Technology Volume 8 ; 8 ; >
-    au < crawling ; exists ; 1981 ; Journal of Nuclear Medicine Technology Volume 9 ; 9 ; >
-    au < crawling ; exists ; 1982 ; Journal of Nuclear Medicine Technology Volume 10 ; 10 ; >
-    au < crawling ; exists ; 1983 ; Journal of Nuclear Medicine Technology Volume 11 ; 11 ; >
+    au < ready ; exists ; 1980 ; Journal of Nuclear Medicine Technology Volume 8 ; 8 ; >
+    au < ready ; exists ; 1981 ; Journal of Nuclear Medicine Technology Volume 9 ; 9 ; >
+    au < ready ; exists ; 1982 ; Journal of Nuclear Medicine Technology Volume 10 ; 10 ; >
+    au < ready ; exists ; 1983 ; Journal of Nuclear Medicine Technology Volume 11 ; 11 ; >
     au < frozen ; exists ; 1984 ; Journal of Nuclear Medicine Technology Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1985 ; Journal of Nuclear Medicine Technology Volume 13 ; 13 ; >
-    au < crawling ; exists ; 1986 ; Journal of Nuclear Medicine Technology Volume 14 ; 14 ; >
-    au < crawling ; exists ; 1987 ; Journal of Nuclear Medicine Technology Volume 15 ; 15 ; >
-    au < crawling ; exists ; 1988 ; Journal of Nuclear Medicine Technology Volume 16 ; 16 ; >
-    au < crawling ; exists ; 1989 ; Journal of Nuclear Medicine Technology Volume 17 ; 17 ; >
+    au < ready ; exists ; 1985 ; Journal of Nuclear Medicine Technology Volume 13 ; 13 ; >
+    au < ready ; exists ; 1986 ; Journal of Nuclear Medicine Technology Volume 14 ; 14 ; >
+    au < ready ; exists ; 1987 ; Journal of Nuclear Medicine Technology Volume 15 ; 15 ; >
+    au < ready ; exists ; 1988 ; Journal of Nuclear Medicine Technology Volume 16 ; 16 ; >
+    au < ready ; exists ; 1989 ; Journal of Nuclear Medicine Technology Volume 17 ; 17 ; >
     au < crawling ; exists ; 1990 ; Journal of Nuclear Medicine Technology Volume 18 ; 18 ; >
     au < crawling ; exists ; 1991 ; Journal of Nuclear Medicine Technology Volume 19 ; 19 ; >
     au < crawling ; exists ; 1992 ; Journal of Nuclear Medicine Technology Volume 20 ; 20 ; >

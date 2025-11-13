@@ -4,7 +4,7 @@
     info[contract] = 2011 ;
     info[back] = 1999 ;
     info[tester] = 5 ;
-    info[poller] = 3
+    info[platform] = Atypon
   >
 
     plugin = org.lockss.plugin.atypon.inderscience.ClockssIndersciencePlugin
