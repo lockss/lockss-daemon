@@ -2,8 +2,9 @@
   publisher <
     name = Public Library of Science ;
     info[contract] = 2019 ;
-    info[back] = 1980 ;
-    info[tester] = 8
+    info[back] = 2003 ;
+    info[tester] = 8 ;
+    info[platform] = Custom
   >
     provider = Public Library of Science
     plugin = org.lockss.plugin.plos.ClockssPLoSPlugin
@@ -388,6 +389,19 @@
 
       #Published 2006 to present
       param[journal_id] = plosone
+
+      au < exists ; exists ; 2017 ; PLOS ONE Volume Jan 2017 ; 2017 ; January ; >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume Feb 2017 ; 2017 ; February ; >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume Mar 2017 ; 2017 ; March ; >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume Apr 2017 ; 2017 ; April ; >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume May 2017 ; 2017 ; May ; >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume Jun 2017 ; 2017 ; June ; >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume Jul 2017 ; 2017 ; July ; >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume Aug 2017 ; 2017 ; August ; >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume Sep 2017 ; 2017 ; September ; >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume Oct 2017 ; 2017 ; October ; >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume Nov 2017 ; 2017 ; November ; >
+      au < exists ; exists ; 2017 ; PLOS ONE Volume Dec 2017 ; 2017 ; December ; >
 
       au < manifest ; exists ; 2018 ; PLOS ONE Volume Jan 2018 ; 2018 ; January ; >
       au < manifest ; exists ; 2018 ; PLOS ONE Volume Feb 2018 ; 2018 ; February ; >
