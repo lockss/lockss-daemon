@@ -54,7 +54,7 @@
       au < finished ; finished ; 2018-2020 ; African Journal of Economic and Sustainable Development Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; African Journal of Economic and Sustainable Development Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022-2024 ; African Journal of Economic and Sustainable Development Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2025 ; African Journal of Economic and Sustainable Development Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2025 ; African Journal of Economic and Sustainable Development Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -105,8 +105,8 @@
       au < finished ; finished ; 2015-2016 ; American Journal of Finance and Accounting Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; American Journal of Finance and Accounting Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019-2021 ; American Journal of Finance and Accounting Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2022-2023 ; American Journal of Finance and Accounting Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2024-2025 ; American Journal of Finance and Accounting Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2022-2023 ; American Journal of Finance and Accounting Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2024-2025 ; American Journal of Finance and Accounting Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -471,7 +471,7 @@
 
       au < doNotProcess ; doNotProcess ; 2009-2010 ; International Journal of Adaptive and Innovative Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2019 ; International Journal of Adaptive and Innovative Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2021-2022 ; International Journal of Adaptive and Innovative Systems Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < testing ; exists ; 2021-2022 ; International Journal of Adaptive and Innovative Systems Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -1176,7 +1176,7 @@
       au < finished ; finished ; 2021 ; International Journal of Banking, Accounting and Finance Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022-2023 ; International Journal of Banking, Accounting and Finance Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2024 ; International Journal of Banking, Accounting and Finance Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2025 ; International Journal of Banking, Accounting and Finance Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2025 ; International Journal of Banking, Accounting and Finance Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1353,7 +1353,7 @@
       au < doNotProcess ; doNotProcess ; 2009-2011 ; International Journal of Biomechatronics and Biomedical Robotics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012-2013 ; International Journal of Biomechatronics and Biomedical Robotics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2014-2020 ; International Journal of Biomechatronics and Biomedical Robotics Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2022-2023 ; International Journal of Biomechatronics and Biomedical Robotics Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < testing ; exists ;2022-2023 ; International Journal of Biomechatronics and Biomedical Robotics Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -1416,7 +1416,7 @@
       au < finished ; manifest ; 2024 ; International Journal of Biomedical Engineering and Technology Volume 46 ; 46 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; International Journal of Biomedical Engineering and Technology Volume 47 ; 47 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Biomedical Engineering and Technology Volume 48 ; 48 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2025 ; International Journal of Biomedical Engineering and Technology Volume 49 ; 49 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2025 ; International Journal of Biomedical Engineering and Technology Volume 49 ; 49 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -1435,7 +1435,7 @@
       au < doNotProcess ; doNotProcess ; 2011-2012 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2017 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2024 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
+      au < testing ; exists ;2024 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
 
     }
 
@@ -2293,7 +2293,7 @@
       au < doNotProcess ; doNotProcess ; 2010-2011 ; International Journal of Complexity in Leadership and Management Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Complexity in Leadership and Management Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2016 ; International Journal of Complexity in Leadership and Management Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2025 ; International Journal of Complexity in Leadership and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2025 ; International Journal of Complexity in Leadership and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2826,7 +2826,7 @@
       param[journal_id] = ijcrc
 
       au < finished ; finished ; 2013-2016 ; International Journal of Creative Computing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2023-2024 ; International Journal of Creative Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < testing ; exists ;2023-2024 ; International Journal of Creative Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -5054,10 +5054,10 @@
       au < finished ; finished ; 2015-2016 ; International Journal of Healthcare Technology and Management Volume 15 ; 15 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2017 ; International Journal of Healthcare Technology and Management Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2018-2019 ; International Journal of Healthcare Technology and Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2020-2021 ; International Journal of Healthcare Technology and Management Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2022 ; International Journal of Healthcare Technology and Management Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2023 ; International Journal of Healthcare Technology and Management Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2024 ; International Journal of Healthcare Technology and Management Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2020-2021 ; International Journal of Healthcare Technology and Management Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2022 ; International Journal of Healthcare Technology and Management Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2023 ; International Journal of Healthcare Technology and Management Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2024 ; International Journal of Healthcare Technology and Management Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Healthcare Technology and Management Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -5631,7 +5631,7 @@
       au < doNotProcess ; doNotProcess ; 2011 ; International Journal of Information and Operations Management Education Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2012-2014 ; International Journal of Information and Operations Management Education Volume 5 ; 5 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2015-2018 ; International Journal of Information and Operations Management Education Volume 6 ; 6 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021-2024 ; International Journal of Information and Operations Management Education Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2021-2024 ; International Journal of Information and Operations Management Education Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2025-2028 ; International Journal of Information and Operations Management Education Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -6528,8 +6528,8 @@
       au < finished ; finished ; 2016-2017 ; International Journal of Knowledge Engineering and Data Mining Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2018 ; International Journal of Knowledge Engineering and Data Mining Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Journal of Knowledge Engineering and Data Mining Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2021-2022 ; International Journal of Knowledge Engineering and Data Mining Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2023 ; International Journal of Knowledge Engineering and Data Mining Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ ; > #issue 2, 3 ,4 not online
+      au < testing ; exists ;2021-2022 ; International Journal of Knowledge Engineering and Data Mining Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2023 ; International Journal of Knowledge Engineering and Data Mining Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ ; > #issue 2, 3 ,4 not online
 
     }
 
@@ -6882,7 +6882,7 @@
       au < deepCrawl ; exists ; 2024 ; International Journal of Logistics Systems and Management Volume 49 ; 49 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Logistics Systems and Management Volume 50 ; 50 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Logistics Systems and Management Volume 51 ; 51 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2025 ; International Journal of Logistics Systems and Management Volume 52 ; 52 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2025 ; International Journal of Logistics Systems and Management Volume 52 ; 52 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -7565,7 +7565,7 @@
       au < finished ; finished ; 2014-2015 ; International Journal of Mechanisms and Robotic Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2016 ; International Journal of Mechanisms and Robotic Systems Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2017-2018 ; International Journal of Mechanisms and Robotic Systems Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2021-2023 ; International Journal of Mechanisms and Robotic Systems Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2021-2023 ; International Journal of Mechanisms and Robotic Systems Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -8330,7 +8330,7 @@
       au < finished ; manifest ; 2008-2009 ; International Journal of Nuclear Governance, Economy and Ecology Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2010-2012 ; International Journal of Nuclear Governance, Economy and Ecology Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2013-2019 ; International Journal of Nuclear Governance, Economy and Ecology Volume 4 ; 4 ; http://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2021 ; International Journal of Nuclear Governance, Economy and Ecology Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2021 ; International Journal of Nuclear Governance, Economy and Ecology Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -9578,7 +9578,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Service and Computing Oriented Manufacturing Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2016 ; International Journal of Service and Computing Oriented Manufacturing Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2017-2018 ; International Journal of Service and Computing Oriented Manufacturing Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2021-2023 ; International Journal of Service and Computing Oriented Manufacturing Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; > #issue 3 ,4 not online
+      au < testing ; exists ;2021-2023 ; International Journal of Service and Computing Oriented Manufacturing Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ ; > #issue 3 ,4 not online
 
     }
 
@@ -10129,7 +10129,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Sport Management and Marketing Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; International Journal of Sport Management and Marketing Volume 23 ; 23 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; International Journal of Sport Management and Marketing Volume 24 ; 24 ; https://www.inderscienceonline.com/ ; >
-      au < manifest ; exists ; 2025 ; International Journal of Sport Management and Marketing Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;2025 ; International Journal of Sport Management and Marketing Volume 25 ; 25 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -11704,7 +11704,7 @@
 
       param[journal_id] = ier
 
-      au < manifest ; exists ; 1999 ; Interdisciplinary Environmental Review Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
+      au < testing ; exists ;1999 ; Interdisciplinary Environmental Review Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
       au < finished ; manifest ; 2000 ; Interdisciplinary Environmental Review Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2001 ; Interdisciplinary Environmental Review Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2002 ; Interdisciplinary Environmental Review Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
@@ -11860,7 +11860,7 @@
       param[journal_id] = lrj
 
       au < finished ; finished ; 2015-2018 ; Luxury Research Journal Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2021 ; Luxury Research Journal Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
+      au < testing ; exists ;2021 ; Luxury Research Journal Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
