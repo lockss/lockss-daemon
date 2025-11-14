@@ -1215,7 +1215,7 @@
     
     param[collection_id] = clrm
     
-    au < ready ; exists ; 1995 ; Classroom Resource Materials 1995 ; 1995 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 1995 ; Classroom Resource Materials 1995 ; 1995 ; https://www.ams.org/ ; >
     au < crawling ; exists ; 1996 ; Classroom Resource Materials 1996 ; 1996 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1997 ; Classroom Resource Materials 1997 ; 1997 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1998 ; Classroom Resource Materials 1998 ; 1998 ; https://www.ams.org/ ; >
@@ -1224,9 +1224,9 @@
     au < ready ; exists ; 2001 ; Classroom Resource Materials 2001 ; 2001 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2002 ; Classroom Resource Materials 2002 ; 2002 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2003 ; Classroom Resource Materials 2003 ; 2003 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2004 ; Classroom Resource Materials 2004 ; 2004 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2004 ; Classroom Resource Materials 2004 ; 2004 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2005 ; Classroom Resource Materials 2005 ; 2005 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2006 ; Classroom Resource Materials 2006 ; 2006 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2006 ; Classroom Resource Materials 2006 ; 2006 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2007 ; Classroom Resource Materials 2007 ; 2007 ; https://www.ams.org/ ; >
     au < doesNotExist ; doesNotExist ; 2008 ; Classroom Resource Materials 2008 ; 2008 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2009 ; Classroom Resource Materials 2009 ; 2009 ; https://www.ams.org/ ; >
@@ -1242,7 +1242,7 @@
     au < ready ; exists ; 2019 ; Classroom Resource Materials 2019 ; 2019 ; https://www.ams.org/ ; >
     au < doesNotExist ; doesNotExist ; 2020 ; Classroom Resource Materials 2020 ; 2020 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2021 ; Classroom Resource Materials 2021 ; 2021 ; https://www.ams.org/ ; >
-    au < ready ; exists ; 2022 ; Classroom Resource Materials 2022 ; 2022 ; https://www.ams.org/ ; >
+    au < crawling ; exists ; 2022 ; Classroom Resource Materials 2022 ; 2022 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2023 ; Classroom Resource Materials 2023 ; 2023 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2024 ; Classroom Resource Materials 2024 ; 2024 ; https://www.ams.org/ ; >
     au < notReady ; exists ; 2025 ; Classroom Resource Materials 2025 ; 2025 ; https://www.ams.org/ ; > #403 Forbidden, https://www.ams.org/books/clrm/076/clrm076.pdf

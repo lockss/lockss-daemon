@@ -30,7 +30,7 @@
       au < ready ; exists ; 2006 ; 2006 ; Clinical Diabetes Volume 24 ; 24 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Clinical Diabetes Volume 25 ; 25 ; >
       au < ready ; exists ; 2008 ; 2008 ; Clinical Diabetes Volume 26 ; 26 ; >
-      au < ready ; exists ; 2009 ; 2009 ; Clinical Diabetes Volume 27 ; 27 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; Clinical Diabetes Volume 27 ; 27 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Clinical Diabetes Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Clinical Diabetes Volume 29 ; 29 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Clinical Diabetes Volume 30 ; 30 ; >
@@ -177,9 +177,9 @@
         au < ready ; exists ; 2000 ; 2000 ; Diabetes Care Volume 23 ; 23 ; >
         au < crawling ; exists ; 2001 ; 2001 ; Diabetes Care Volume 24 ; 24 ; >
         au < ready ; exists ; 2002 ; 2002 ; Diabetes Care Volume 25 ; 25 ; >
-        au < ready ; exists ; 2003 ; 2003 ; Diabetes Care Volume 26 ; 26 ; >
-        au < ready ; exists ; 2004 ; 2004 ; Diabetes Care Volume 27 ; 27 ; >
-        au < ready ; exists ; 2005 ; 2005 ; Diabetes Care Volume 28 ; 28 ; >
+        au < crawling ; exists ; 2003 ; 2003 ; Diabetes Care Volume 26 ; 26 ; >
+        au < crawling ; exists ; 2004 ; 2004 ; Diabetes Care Volume 27 ; 27 ; >
+        au < crawling ; exists ; 2005 ; 2005 ; Diabetes Care Volume 28 ; 28 ; >
         au < ready ; exists ; 2006 ; 2006 ; Diabetes Care Volume 29 ; 29 ; >
         au < ready ; exists ; 2007 ; 2007 ; Diabetes Care Volume 30 ; 30 ; >
         au < ready ; exists ; 2008 ; 2008 ; Diabetes Care Volume 31 ; 31 ; >
@@ -220,7 +220,7 @@
       au < ready ; exists ; 2004 ; 2004 ; Diabetes Spectrum Volume 17 ; 17 ; >
       au < ready ; exists ; 2005 ; 2005 ; Diabetes Spectrum Volume 18 ; 18 ; >
       au < ready ; exists ; 2006 ; 2006 ; Diabetes Spectrum Volume 19 ; 19 ; >
-      au < ready ; exists ; 2007 ; 2007 ; Diabetes Spectrum Volume 20 ; 20 ; >
+      au < crawling ; exists ; 2007 ; 2007 ; Diabetes Spectrum Volume 20 ; 20 ; >
       au < ready ; exists ; 2008 ; 2008 ; Diabetes Spectrum Volume 21 ; 21 ; >
       au < ready ; exists ; 2009 ; 2009 ; Diabetes Spectrum Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Diabetes Spectrum Volume 23 ; 23 ; >
