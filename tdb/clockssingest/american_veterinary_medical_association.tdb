@@ -25,11 +25,11 @@
       au < frozen ; exists ; 2000 ; American Journal of Veterinary Research Volume 61 ; 61 ; >
       au < crawling ; exists ; 2001 ; American Journal of Veterinary Research Volume 62 ; 62 ; >
       au < frozen ; exists ; 2002 ; American Journal of Veterinary Research Volume 63 ; 63 ; >
-      au < testing ; exists ; 2003 ; American Journal of Veterinary Research Volume 64 ; 64 ; >
-      au < testing ; exists ; 2004 ; American Journal of Veterinary Research Volume 65 ; 65 ; >
-      au < testing ; exists ; 2005 ; American Journal of Veterinary Research Volume 66 ; 66 ; >
-      au < testing ; exists ; 2006 ; American Journal of Veterinary Research Volume 67 ; 67 ; >
-      au < testing ; exists ; 2007 ; American Journal of Veterinary Research Volume 68 ; 68 ; >
+      au < ready ; exists ; 2003 ; American Journal of Veterinary Research Volume 64 ; 64 ; >
+      au < ready ; exists ; 2004 ; American Journal of Veterinary Research Volume 65 ; 65 ; >
+      au < ready ; exists ; 2005 ; American Journal of Veterinary Research Volume 66 ; 66 ; >
+      au < ready ; exists ; 2006 ; American Journal of Veterinary Research Volume 67 ; 67 ; >
+      au < ready ; exists ; 2007 ; American Journal of Veterinary Research Volume 68 ; 68 ; >
       au < ready ; exists ; 2008 ; American Journal of Veterinary Research Volume 69 ; 69 ; >
       au < ready ; exists ; 2009 ; American Journal of Veterinary Research Volume 70 ; 70 ; >
       au < finished ; manifest ; 2010 ; American Journal of Veterinary Research Volume 71 ; 71 ; reingest1.clockss.org:8082 >
@@ -61,11 +61,11 @@
     >
       param[journal_id] = javma
 
-      au < manifest ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 216 ; 216 ; >
-      au < manifest ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 217 ; 217 ; >
-      au < manifest ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 218 ; 218 ; >
-      au < testing ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 219 ; 219 ; >
-      au < testing ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 220 ; 220 ; >
+      au < ready ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 216 ; 216 ; >
+      au < ready ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 217 ; 217 ; >
+      au < ready ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 218 ; 218 ; >
+      au < ready ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 219 ; 219 ; >
+      au < ready ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 220 ; 220 ; >
       au < ready ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 221 ; 221 ; >
       au < ready ; exists ; 2003 ; Journal of the American Veterinary Medical Association Volume 222 ; 222 ; >
       au < ready ; exists ; 2003 ; Journal of the American Veterinary Medical Association Volume 223 ; 223 ; >
