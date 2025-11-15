@@ -1,0 +1,31 @@
+{
+  publisher <
+    name = Kirkuk University ;
+    info[contract] = 2022 ;
+    info[tester] = S ;
+    info[platform] = WARC
+  >
+
+    plugin = org.lockss.plugin.clockss.warc.ClockssWarcPlugin
+    hidden[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+
+    {
+    title <
+      name = Kirkuk Journal of Science WARC Content
+      #eissn = 2160-6773
+    >
+
+    # This content was collected using wget and provided for preservation as a
+    # set of WARC files
+    # WARC content collected from:
+
+    {
+    param[base_url] = https://clockss-ingest.lockss.org/warcfiles/kirkuk-journal-of-science-released/
+
+    au < manifest ; exists ; 2025 ; Kirkuk Journal of Science WARC Content 2025 ; 2025 >
+
+    }
+    }
+
+}
