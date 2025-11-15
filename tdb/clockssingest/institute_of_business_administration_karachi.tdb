@@ -24,8 +24,8 @@
 
     param[journal_abbr] = businessreview
 
-    au < manifest ; exists ; 2006 ; Business Review Volume 1 ; 1 ; >
-    au < manifest ; exists ; 2007 ; Business Review Volume 2 ; 2 ; >
+    au < ready ; exists ; 2006 ; Business Review Volume 1 ; 1 ; >
+    au < ready ; exists ; 2007 ; Business Review Volume 2 ; 2 ; >
     au < frozen ; exists ; 2008 ; Business Review Volume 3 ; 3 ; >
     au < frozen ; exists ; 2009 ; Business Review Volume 4 ; 4 ; >
     au < frozen ; exists ; 2010 ; Business Review Volume 5 ; 5 ; >
