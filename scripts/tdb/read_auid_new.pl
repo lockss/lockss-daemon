@@ -249,7 +249,8 @@ while (my $line = <>) {
         $result = "--NOT_DEF--";
     } elsif ($man_contents !~ m/$lockss_tag/) {
         $result = "--NO_TAG--";
-    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+    #} elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) && ($man_contents !~ m/body.*="\/[^"]*"/s)) { #"
         #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
         #or must be a relative url, in which case, the link would not start with https://.
         if ($man_contents =~ m/<a\s*href="([^"]*)">/si) { #"
@@ -315,6 +316,7 @@ while (my $line = <>) {
     $man_url = uri_unescape($url);
     #printf("man_url=%s\n",$man_url);  #debug
     $base_url_short = substr(uri_unescape($param{base_url}), 0, -1);
+    #printf("man_url=%s\n",$base_url_short);  #debug
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     #print($resp->headers_as_string); #debug
@@ -328,13 +330,14 @@ while (my $line = <>) {
         $result = "--NOT_DEF--";
     } elsif ($man_contents !~ m/$clockss_tag/) {
         $result = "--NO_TAG--";
-    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+    #} elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) || ($man_contents !~ m/body.*="https?:\/\/.*"/s)) { #"
+    } elsif (($man_contents !~ m/body.*="$base_url_short[^"]*"/s) && ($man_contents !~ m/body.*="\/[^"]*"/s)) { #"
         #manifest page issue urls (after "body") must contain urls which start with the same characters as the manifest url
         #or must be a relative url, in which case, the link would not start with https://.
         if ($man_contents =~ m/<a\s*href="([^"]*)">/si) { #"
               $vol_title = $1;
         }
-        $result = "--BAD_ISS_URL--";
+        $result = "--BAD_ISS_URL_OR_NOBODY--";
     } elsif (($man_contents =~ m/\/cgi\/reprint\/$param{volume_name}\//) || ($man_contents =~ m/$base_url_short" lockss-probe/)) { #"
         $result = "CGI_probe_link";
     } elsif (($man_contents =~ m/\/content\/$param{volume_name}\//) || ($man_contents =~ m/\/content\/vol$param{volume_name}\//)) {
