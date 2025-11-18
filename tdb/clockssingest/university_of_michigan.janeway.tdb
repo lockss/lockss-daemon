@@ -3,7 +3,7 @@
   publisher <
     name = University of Michigan ;
     info[contract] = 2025 ;
-    info[back] = 2015 ;
+    info[back] = 2020 ;
     info[tester] = 8 ;
     info[platform] = Janeway.
   >
@@ -149,7 +149,7 @@
       #published 2022-present
       param[journal_id] = ars
 
-      au < manifest ; exists ; 2022 ; 53 ; Ars Orientalis Volume 2022 ; 2022 ; >
+      au < doNotProcess ; exists ; 2022 ; 53 ; Ars Orientalis Volume 2022 ; 2022 ; > #2022 content has dates from 2023
       au < frozen ; exists ; 2023 ; 54 ; Ars Orientalis Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 55 ; Ars Orientalis Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 56 ; Ars Orientalis Volume 2025 ; 2025 ; >
@@ -238,6 +238,7 @@
       au < doNotProcess ; exists ; 2012 ; 3 ; Deaf Studies Digital Journal Volume 2012 ; 2012 ; >
       au < doNotProcess ; exists ; 2014 ; 4 ; Deaf Studies Digital Journal Volume 2014 ; 2014 ; >
       au < doNotProcess ; exists ; 2020 ; 5 ; Deaf Studies Digital Journal Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2025 ; 6 ; Deaf Studies Digital Journal Volume 2025 ; 2025 ; >
 
   }
 
@@ -259,7 +260,7 @@
       au < doesNotExist ; doesNotExist ; 2022 ; 6 ; Dialectic Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; 7 ; Dialectic Volume 2023 ; 2023 ; >
       au < doesNotExist ; doesNotExist ; 2024 ; 8 ; Dialectic Volume 2024 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; 9 ; Dialectic Volume 2025 ; 2025 ; >
+      au < doNotProcess ; doNotProcess ; 2025 ; 9 ; Dialectic Volume 2025 ; 2025 ; > #erratum for 2023 was published in 2025, but is not substantial
 
   }
 
@@ -279,7 +280,7 @@
       au < doesNotExist ; doesNotExist ; 2017 ; 4 ; Ergo Volume 2017 ; 2017 ; >
       au < doesNotExist ; doesNotExist ; 2018 ; 5 ; Ergo Volume 2018 ; 2018 ; >
       au < doesNotExist ; doesNotExist ; 2019 ; 6 ; Ergo Volume 2019 ; 2019 ; >
-      au < manifest ; exists ; 2020 ; 7 ; Ergo Volume 2020 ; 2020 ; >
+      au < doesNotExist ; doesNotExist ; 2020 ; 7 ; Ergo Volume 2020 ; 2020 ; > #Articles for 2020 are dated 2021
       au < frozen ; exists ; 2021 ; 8 ; Ergo Volume 2021 ; 2021 ; >
       au < frozen ; exists ; 2022 ; 9 ; Ergo Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 10 ; Ergo Volume 2023 ; 2023 ; >
@@ -423,8 +424,8 @@
       param[journal_id] = mjm
 
       au < frozen ; exists ; 2021 ; 5 ; Michigan Journal of Medicine Volume 2021 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 6 ; Michigan Journal of Medicine Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 7 ; Michigan Journal of Medicine Volume 2023 ; 2023 ; >
+      au < doesNotExist ; doesNotExist ; 2022 ; 6 ; Michigan Journal of Medicine Volume 2022 ; 2022 ; > #2022 content is dated 2023
+      au < frozen ; exists ; 2023 ; 7 ; Michigan Journal of Medicine Volume 2023 ; 2023 ; > #2023 content is dated 2024
       au < frozen ; exists ; 2024 ; 8 ; Michigan Journal of Medicine Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 8 ; Michigan Journal of Medicine Volume 2025 ; 2025 ; >
 
@@ -508,9 +509,9 @@
       au < doesNotExist ; doesNotExist ; 2019 ; 34 ; NASIG Proceedings Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 35 ; NASIG Proceedings Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 36 ; NASIG Proceedings Volume 2021 ; 2021 ; >
-      au < manifest ; exists ; 2022 ; 37 ; NASIG Proceedings Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 38 ; NASIG Proceedings Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 39 ; NASIG Proceedings Volume 2024 ; 2024 ; >
+      au < doesNotExist ; doesNotExist ; 2022 ; 37 ; NASIG Proceedings Volume 2022 ; 2022 ; > #2022 content dated 2023
+      au < frozen ; exists ; 2023 ; 38 ; NASIG Proceedings Volume 2023 ; 2023 ; > #2023 content dated 2024
+      au < frozen ; exists ; 2024 ; 39 ; NASIG Proceedings Volume 2024 ; 2024 ; > #2024 content dated 2025
       au < crawling ; exists ; 2025 ; 40 ; NASIG Proceedings Volume 2025 ; 2025 ; >
 
   }
@@ -867,9 +868,9 @@
       au < doesNotExist ; doesNotExist ; 2020 ; 47 ; Journal of the Western Society for French History Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 48 ; Journal of the Western Society for French History Volume 2021 ; 2021 ; >
       au < doesNotExist ; doesNotExist ; 2022 ; 49 ; Journal of the Western Society for French History Volume 2022 ; 2022 ; >
-      au < manifest ; exists ; 2023 ; 50 ; Journal of the Western Society for French History Volume 2023 ; 2023 ; >
+      au < doesNotExist ; doesNotExist ; 2023 ; 50 ; Journal of the Western Society for French History Volume 2023 ; 2023 ; > #2023 content dated 2024
       au < frozen ; exists ; 2024 ; 51 ; Journal of the Western Society for French History Volume 2024 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; 52 ; Journal of the Western Society for French History Volume 2025 ; 2025 ; >
+      au < doesNotExist ; doesNotExist ; 2025 ; 52 ; Journal of the Western Society for French History Volume 2025 ; 2025 ; >
 
   }
 
@@ -921,8 +922,8 @@
       #published 2024-present
       param[journal_id] = jgs
 
-      au < manifest ; exists ; 2024 ; 66 ; Journal of Glass Studies Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; 67 ; Journal of Glass Studies Volume 2025 ; 2025 ; >
+      au < doesNotExist ; doesNotExist ; 2024 ; 66 ; Journal of Glass Studies Volume 2024 ; 2024 ; > #2024 content dated 2025
+      au < crawling ; exists ; 2025 ; 66 ; Journal of Glass Studies Volume 2025 ; 2025 ; > #2024 content dated 2025
 
   }
 
