@@ -90,13 +90,18 @@ ArticleMetadataExtractorFactory {
 
   // various aspects of an article
   // DOI's can have "/"s in the suffix
-  private static final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([0-9]+\\.[^?&.]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern EPDF_PATTERN = Pattern.compile("/doi/epdf/([.0-9]+)/([0-9]+\\.[^?&.]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([0-9]+\\.[^?&.]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([0-9]+\\.[^?&.]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([0-9]+\\.[^?&.]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern EPDFPLUS_PATTERN = Pattern.compile("/doi/epdfplus/([.0-9]+)/([0-9]+\\.[^?&.]+)$", Pattern.CASE_INSENSITIVE);
-  private static final Pattern DOI_PATTERN = Pattern.compile("/doi/([.0-9]+)/([0-9]+\\.[^?&.]+)$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern PDF_PATTERN = Pattern.compile("/doi/pdf/([.0-9]+)/([0-9.]+)(?:\\?.*)?$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern EPDF_PATTERN = Pattern.compile("/doi/epdf/([.0-9]+)/([0-9.]+)(?:\\?.*)?$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/doi/abs/([.0-9]+)/([0-9.]+)(?:\\?.*)?$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern HTML_PATTERN = Pattern.compile("/doi/full/([.0-9]+)/([0-9.]+)(?:\\?.*)?$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern PDFPLUS_PATTERN = Pattern.compile("/doi/pdfplus/([.0-9]+)/([0-9.]+)(?:\\?.*)?$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern EPDFPLUS_PATTERN = Pattern.compile("/doi/epdfplus/([.0-9]+)/([0-9.]+)(?:\\?.*)?$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern DOI_PATTERN = Pattern.compile(
+          "/doi/([.0-9]+)/([0-9.]+)(?:\\?.*)?$",
+          Pattern.CASE_INSENSITIVE
+  );
+
+
 
   // how to change from one form (aspect) of article to another
   private static final String HTML_REPLACEMENT = "/doi/full/$1/$2";
@@ -127,7 +132,7 @@ ArticleMetadataExtractorFactory {
   // AMetSoc doens't do an "include=cit", only "include=abs"
   // Do these as two separate patterns (not "OR") so we can have a priority choice
   private static final String SECOND_RIS_REPLACEMENT = "/action/downloadCitation?doi=$1%2F$2&format=ris&include=abs";
-  private static final String SECOND_RIS_REPLACEMENT_WSLASH = "/action/downloadCitation?doi=$1%/$2&format=ris&include=abs";
+  private static final String SECOND_RIS_REPLACEMENT_WSLASH = "/action/downloadCitation?doi=$1/$2&format=ris&include=abs";
 
 
   //
