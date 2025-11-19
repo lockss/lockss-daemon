@@ -2,7 +2,7 @@
   publisher <
     name = Public Library of Science ;
     info[contract] = 2019 ;
-    info[back] = 2003 ;
+    info[back] = 2015 ;
     info[tester] = 8 ;
     info[platform] = Custom
   >
@@ -389,6 +389,58 @@
 
       #Published 2006 to present
       param[journal_id] = plosone
+
+      au < exists ; exists ; 2013 ; PLOS ONE Volume Jan 2013 ; 2013 ; January ; >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume Feb 2013 ; 2013 ; February ; >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume Mar 2013 ; 2013 ; March ; >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume Apr 2013 ; 2013 ; April ; >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume May 2013 ; 2013 ; May ; >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume Jun 2013 ; 2013 ; June ; >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume Jul 2013 ; 2013 ; July ; >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume Aug 2013 ; 2013 ; August ; >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume Sep 2013 ; 2013 ; September ; >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume Oct 2013 ; 2013 ; October ; >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume Nov 2013 ; 2013 ; November ; >
+      au < exists ; exists ; 2013 ; PLOS ONE Volume Dec 2013 ; 2013 ; December ; >
+
+      au < exists ; exists ; 2014 ; PLOS ONE Volume Jan 2014 ; 2014 ; January ; >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume Feb 2014 ; 2014 ; February ; >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume Mar 2014 ; 2014 ; March ; >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume Apr 2014 ; 2014 ; April ; >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume May 2014 ; 2014 ; May ; >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume Jun 2014 ; 2014 ; June ; >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume Jul 2014 ; 2014 ; July ; >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume Aug 2014 ; 2014 ; August ; >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume Sep 2014 ; 2014 ; September ; >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume Oct 2014 ; 2014 ; October ; >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume Nov 2014 ; 2014 ; November ; >
+      au < exists ; exists ; 2014 ; PLOS ONE Volume Dec 2014 ; 2014 ; December ; >
+
+      au < exists ; exists ; 2015 ; PLOS ONE Volume Jan 2015 ; 2015 ; January ; >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume Feb 2015 ; 2015 ; February ; >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume Mar 2015 ; 2015 ; March ; >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume Apr 2015 ; 2015 ; April ; >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume May 2015 ; 2015 ; May ; >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume Jun 2015 ; 2015 ; June ; >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume Jul 2015 ; 2015 ; July ; >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume Aug 2015 ; 2015 ; August ; >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume Sep 2015 ; 2015 ; September ; >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume Oct 2015 ; 2015 ; October ; >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume Nov 2015 ; 2015 ; November ; >
+      au < exists ; exists ; 2015 ; PLOS ONE Volume Dec 2015 ; 2015 ; December ; >
+
+      au < exists ; exists ; 2016 ; PLOS ONE Volume Jan 2016 ; 2016 ; January ; >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume Feb 2016 ; 2016 ; February ; >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume Mar 2016 ; 2016 ; March ; >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume Apr 2016 ; 2016 ; April ; >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume May 2016 ; 2016 ; May ; >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume Jun 2016 ; 2016 ; June ; >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume Jul 2016 ; 2016 ; July ; >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume Aug 2016 ; 2016 ; August ; >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume Sep 2016 ; 2016 ; September ; >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume Oct 2016 ; 2016 ; October ; >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume Nov 2016 ; 2016 ; November ; >
+      au < exists ; exists ; 2016 ; PLOS ONE Volume Dec 2016 ; 2016 ; December ; >
 
       au < exists ; exists ; 2017 ; PLOS ONE Volume Jan 2017 ; 2017 ; January ; >
       au < exists ; exists ; 2017 ; PLOS ONE Volume Feb 2017 ; 2017 ; February ; >
