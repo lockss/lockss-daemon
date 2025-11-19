@@ -59,7 +59,7 @@ public class GovInfoSitemapsArticleIteratorFactory
     "\"^%scontent/pkg/([^/]+)/(html?|mp3|pdf|xml)/([^/]+)\\.(html?|mp3|pdf|xml)$\", base_url";
   
   protected static final Pattern HTML_PATTERN = 
-      Pattern.compile("([^/]+)/html/([^/]+)\\.htm$",
+      Pattern.compile("([^/]+)/html/([^/]+)\\.html?$",
           Pattern.CASE_INSENSITIVE);
   
   protected static final Pattern MP3_PATTERN = 
