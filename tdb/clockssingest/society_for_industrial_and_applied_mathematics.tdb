@@ -2,10 +2,10 @@
 
   publisher <
     name = Society for Industrial and Applied Mathematics ;
-    info[back] = 1900 ;
     info[contract] = 2011 ;
+    info[back] = 1953 ;
     info[tester] = 8 ;
-    info[poller] = 3
+    info[platform] = Atypon
   >
 
     plugin = org.lockss.plugin.atypon.siam.ClockssSiamPlugin

@@ -2,8 +2,9 @@
   publisher <
     name = L.N. Gumilyov Eurasian National University ;
     info[contract] = 2008 ;
+    info[back] = 2008 ;
     info[tester] = 5 ;
-    info[platform] = Bepress
+    info[platform] = bepress
   >
     provider = bepress
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin

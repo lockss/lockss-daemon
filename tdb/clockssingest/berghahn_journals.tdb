@@ -2,10 +2,10 @@
 
   publisher <
     name = Berghahn Journals ;
-    info[back] = 2011 ;
     info[contract] = 2012 ;
+    info[back] = 1997 ;
     info[tester] = 5 ;
-    info[poller] = 3
+    info[platform] = Custom
   >
 
   plugin = org.lockss.plugin.berghahn.ClockssBerghahnJournalsPlugin
