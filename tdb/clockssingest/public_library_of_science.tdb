@@ -32,7 +32,7 @@
       au < manifest ; exists ; 2012 ; PLOS Biology Volume 2012 ; 2012 ; >
       au < manifest ; exists ; 2013 ; PLOS Biology Volume 2013 ; 2013 ; >
       au < manifest ; exists ; 2014 ; PLOS Biology Volume 2014 ; 2014 ; >
-      au < manifest ; exists ; 2015 ; PLOS Biology Volume 2015 ; 2015 ; >
+      au < ready ; exists ; 2015 ; PLOS Biology Volume 2015 ; 2015 ; >
       au < ready ; exists ; 2016 ; PLOS Biology Volume 2016 ; 2016 ; >
       au < manifest ; exists ; 2017 ; PLOS Biology Volume 2017 ; 2017 ; >
       au < frozen ; exists ; 2018 ; PLOS Biology Volume 2018 ; 2018 ; >
@@ -110,7 +110,7 @@
       au < manifest ; exists ; 2013 ; PLOS Computational Biology Volume 2013 ; 2013 ; >
       au < manifest ; exists ; 2014 ; PLOS Computational Biology Volume 2014 ; 2014 ; >
       au < manifest ; exists ; 2015 ; PLOS Computational Biology Volume 2015 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; PLOS Computational Biology Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; PLOS Computational Biology Volume 2016 ; 2016 ; >
       au < frozen ; exists ; 2017 ; PLOS Computational Biology Volume 2017 ; 2017 ; >
       au < frozen ; exists ; 2018 ; PLOS Computational Biology Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; PLOS Computational Biology Volume 2019 ; 2019 ; >
@@ -255,7 +255,7 @@
       au < manifest ; exists ; 2013 ; PLOS Neglected Tropical Diseases Volume 2013 ; 2013 ; >
       au < manifest ; exists ; 2014 ; PLOS Neglected Tropical Diseases Volume 2014 ; 2014 ; >
       au < manifest ; exists ; 2015 ; PLOS Neglected Tropical Diseases Volume 2015 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; PLOS Neglected Tropical Diseases Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2016 ; PLOS Neglected Tropical Diseases Volume 2016 ; 2016 ; >
       au < frozen ; exists ; 2017 ; PLOS Neglected Tropical Diseases Volume 2017 ; 2017 ; >
       au < frozen ; exists ; 2018 ; PLOS Neglected Tropical Diseases Volume 2018 ; 2018 ; >
       au < frozen ; exists ; 2019 ; PLOS Neglected Tropical Diseases Volume 2019 ; 2019 ; >
@@ -555,7 +555,7 @@
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Jul 2025 ; 2025 ; July ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Aug 2025 ; 2025 ; August ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Sep 2025 ; 2025 ; September ; >
-      au < manifest ; exists ; 2025 ; PLOS ONE Volume Oct 2025 ; 2025 ; October ; >
+      au < ready ; exists ; 2025 ; PLOS ONE Volume Oct 2025 ; 2025 ; October ; >
       au < manifest ; exists ; 2025 ; PLOS ONE Volume Nov 2025 ; 2025 ; November ; >
       au < exists ; exists ; 2025 ; PLOS ONE Volume Dec 2025 ; 2025 ; December ; >
 

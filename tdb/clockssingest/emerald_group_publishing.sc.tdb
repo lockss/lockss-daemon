@@ -86,7 +86,7 @@
     comment[journal_issn] = 0951-3574
     param[journal_id] = aaaj
 
-    au < manifest ; exists ; 1988 ; 1988 ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 ; >
@@ -347,7 +347,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Aircraft Engineering and Aerospace Technology Volume 57 ; 57 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Aircraft Engineering and Aerospace Technology Volume 58 ; 58 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Aircraft Engineering and Aerospace Technology Volume 59 ; 59 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Aircraft Engineering and Aerospace Technology Volume 60 ; 60 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Aircraft Engineering and Aerospace Technology Volume 60 ; 60 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Aircraft Engineering and Aerospace Technology Volume 61 ; 61 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Aircraft Engineering and Aerospace Technology Volume 62 ; 62 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Aircraft Engineering and Aerospace Technology Volume 63 ; 63 ; >
@@ -400,7 +400,7 @@
 
     au < manifest ; exists ; 1986 ; 1986 ; American Journal of Business Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; 1987 ; American Journal of Business Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; American Journal of Business Volume 3 ; 3 ; >
+    au < ready ; exists ; 1988 ; 1988 ; American Journal of Business Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; American Journal of Business Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; American Journal of Business Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; American Journal of Business Volume 6 ; 6 ; >
@@ -1104,7 +1104,7 @@
     comment[journal_issn] = 0888-045X
     param[journal_id] = bl
 
-    au < manifest ; exists ; 1988 ; 1988 ; The Bottom Line: Managing Library Finances Volume 1 ; 1 ; >
+    au < ready ; exists ; 1988 ; 1988 ; The Bottom Line: Managing Library Finances Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; The Bottom Line: Managing Library Finances Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; The Bottom Line: Managing Library Finances Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; The Bottom Line: Managing Library Finances Volume 4 ; 4 ; >
@@ -1245,7 +1245,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; British Food Journal Volume 87 ; 87 ; >
     au < manifest ; exists ; 1986 ; 1986 ; British Food Journal Volume 88 ; 88 ; >
     au < manifest ; exists ; 1987 ; 1987 ; British Food Journal Volume 89 ; 89 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; British Food Journal Volume 90 ; 90 ; >
+    au < ready ; exists ; 1988 ; 1988 ; British Food Journal Volume 90 ; 90 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; British Food Journal Volume 91 ; 91 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; British Food Journal Volume 92 ; 92 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; British Food Journal Volume 93 ; 93 ; >
@@ -1681,7 +1681,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Circuit World Volume 11 ; 11 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Circuit World Volume 12 ; 12 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Circuit World Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Circuit World Volume 14 ; 14 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Circuit World Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Circuit World Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Circuit World Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Circuit World Volume 17 ; 17 ; >
@@ -1883,7 +1883,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 4 ; 4 ; >
     au < manifest ; exists ; 1986 ; 1986 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 5 ; 5 ; >
     au < manifest ; exists ; 1987 ; 1987 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 7 ; 7 ; >
+    au < ready ; exists ; 1988 ; 1988 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 10 ; 10 ; >
@@ -2606,7 +2606,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Engineering Computations Volume 2 ; 2 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Engineering Computations Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Engineering Computations Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Engineering Computations Volume 5 ; 5 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Engineering Computations Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Engineering Computations Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Engineering Computations Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Engineering Computations Volume 8 ; 8 ; >
@@ -2978,7 +2978,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; European Journal of Marketing Volume 19 ; 19 ; >
     au < manifest ; exists ; 1986 ; 1986 ; European Journal of Marketing Volume 20 ; 20 ; >
     au < manifest ; exists ; 1987 ; 1987 ; European Journal of Marketing Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; European Journal of Marketing Volume 22 ; 22 ; >
+    au < ready ; exists ; 1988 ; 1988 ; European Journal of Marketing Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; European Journal of Marketing Volume 23 ; 23 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; European Journal of Marketing Volume 24 ; 24 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; European Journal of Marketing Volume 25 ; 25 ; >
@@ -3733,7 +3733,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Industrial Management & Data Systems Volume 85 ; 85 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Industrial Management & Data Systems Volume 86 ; 86 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Industrial Management & Data Systems Volume 87 ; 87 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Industrial Management & Data Systems Volume 88 ; 88 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Industrial Management & Data Systems Volume 88 ; 88 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Industrial Management & Data Systems Volume 89 ; 89 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Industrial Management & Data Systems Volume 90 ; 90 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Industrial Management & Data Systems Volume 91 ; 91 ; >
@@ -4132,12 +4132,12 @@
     au < manifest ; exists ; 1985 ; 1985 ; Interlending & Document Supply Volume 13 ; 13 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Interlending & Document Supply Volume 14 ; 14 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Interlending & Document Supply Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Interlending & Document Supply Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1989 ; 1989 ; Interlending & Document Supply Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Interlending & Document Supply Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Interlending & Document Supply Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Interlending & Document Supply Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Interlending & Document Supply Volume 21 ; 21 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Interlending & Document Supply Volume 16 ; 16 ; >
+    au < ready ; exists ; 1989 ; 1989 ; Interlending & Document Supply Volume 17 ; 17 ; >
+    au < ready ; exists ; 1990 ; 1990 ; Interlending & Document Supply Volume 18 ; 18 ; >
+    au < ready ; exists ; 1991 ; 1991 ; Interlending & Document Supply Volume 19 ; 19 ; >
+    au < ready ; exists ; 1992 ; 1992 ; Interlending & Document Supply Volume 20 ; 20 ; >
+    au < ready ; exists ; 1993 ; 1993 ; Interlending & Document Supply Volume 21 ; 21 ; >
     au < crawling ; exists ; 1994 ; 1994 ; Interlending & Document Supply Volume 22 ; 22 ; >
     au < crawling ; exists ; 1995 ; 1995 ; Interlending & Document Supply Volume 23 ; 23 ; >
     au < crawling ; exists ; 1996 ; 1996 ; Interlending & Document Supply Volume 24 ; 24 ; >
@@ -4358,9 +4358,9 @@
     #  online from 1990
     comment[continued_by] = 1362-0436
 
-    au < manifest ; exists ; 1990 ; 1990 ; International Journal of Career Management Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; International Journal of Career Management Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; International Journal of Career Management Volume 4 ; 4 ; >
+    au < ready ; exists ; 1990 ; 1990 ; International Journal of Career Management Volume 2 ; 2 ; >
+    au < ready ; exists ; 1991 ; 1991 ; International Journal of Career Management Volume 3 ; 3 ; >
+    au < ready ; exists ; 1992 ; 1992 ; International Journal of Career Management Volume 4 ; 4 ; >
     au < manifest ; exists ; 1993 ; 1993 ; International Journal of Career Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; International Journal of Career Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; International Journal of Career Management Volume 7 ; 7 ; >
@@ -5406,7 +5406,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; International Journal of Manpower Volume 6 ; 6 ; >
     au < manifest ; exists ; 1986 ; 1986 ; International Journal of Manpower Volume 7 ; 7 ; >
     au < manifest ; exists ; 1987 ; 1987 ; International Journal of Manpower Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; International Journal of Manpower Volume 9 ; 9 ; >
+    au < ready ; exists ; 1988 ; 1988 ; International Journal of Manpower Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; International Journal of Manpower Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; International Journal of Manpower Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; International Journal of Manpower Volume 12 ; 12 ; >
@@ -5576,7 +5576,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; International Journal of Operations & Production Management Volume 5 ; 5 ; >
     au < manifest ; exists ; 1986 ; 1986 ; International Journal of Operations & Production Management Volume 6 ; 6 ; >
     au < manifest ; exists ; 1987 ; 1987 ; International Journal of Operations & Production Management Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; International Journal of Operations & Production Management Volume 8 ; 8 ; >
+    au < ready ; exists ; 1988 ; 1988 ; International Journal of Operations & Production Management Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; International Journal of Operations & Production Management Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; International Journal of Operations & Production Management Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; International Journal of Operations & Production Management Volume 11 ; 11 ; >
@@ -6006,7 +6006,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; International Journal of Quality & Reliability Management Volume 2 ; 2 ; >
     au < manifest ; exists ; 1986 ; 1986 ; International Journal of Quality & Reliability Management Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; 1987 ; International Journal of Quality & Reliability Management Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; International Journal of Quality & Reliability Management Volume 5 ; 5 ; >
+    au < ready ; exists ; 1988 ; 1988 ; International Journal of Quality & Reliability Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; International Journal of Quality & Reliability Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; International Journal of Quality & Reliability Management Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; International Journal of Quality & Reliability Management Volume 8 ; 8 ; >
@@ -6123,8 +6123,8 @@
     au < manifest ; exists ; 1985 ; 1985 ; Retail and Distribution Management Volume 13 ; 13 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Retail and Distribution Management Volume 14 ; 14 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Retail and Distribution Management Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Retail and Distribution Management Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1989 ; 1989 ; Retail and Distribution Management Volume 17 ; 17 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Retail and Distribution Management Volume 16 ; 16 ; >
+    au < ready ; exists ; 1989 ; 1989 ; Retail and Distribution Management Volume 17 ; 17 ; >
 
   }
 
@@ -6238,7 +6238,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; International Journal of Social Economics Volume 12 ; 12 ; >
     au < manifest ; exists ; 1986 ; 1986 ; International Journal of Social Economics Volume 13 ; 13 ; >
     au < manifest ; exists ; 1987 ; 1987 ; International Journal of Social Economics Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; International Journal of Social Economics Volume 15 ; 15 ; >
+    au < ready ; exists ; 1988 ; 1988 ; International Journal of Social Economics Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; International Journal of Social Economics Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; International Journal of Social Economics Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; International Journal of Social Economics Volume 18 ; 18 ; >
@@ -7295,7 +7295,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Journal of Consumer Marketing Volume 2 ; 2 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Consumer Marketing Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Journal of Consumer Marketing Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Journal of Consumer Marketing Volume 5 ; 5 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Journal of Consumer Marketing Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Consumer Marketing Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Consumer Marketing Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Consumer Marketing Volume 8 ; 8 ; >
@@ -7486,7 +7486,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Journal of Documentation Volume 41 ; 41 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Documentation Volume 42 ; 42 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Journal of Documentation Volume 43 ; 43 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Journal of Documentation Volume 44 ; 44 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Journal of Documentation Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Documentation Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Documentation Volume 46 ; 46 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Documentation Volume 47 ; 47 ; >
@@ -7589,7 +7589,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Journal of Economic Studies Volume 12 ; 12 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Economic Studies Volume 13 ; 13 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Journal of Economic Studies Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Journal of Economic Studies Volume 15 ; 15 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Journal of Economic Studies Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Economic Studies Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Economic Studies Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Economic Studies Volume 18 ; 18 ; >
@@ -7666,7 +7666,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Journal of Educational Administration Volume 23 ; 23 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Educational Administration Volume 24 ; 24 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Journal of Educational Administration Volume 25 ; 25 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Journal of Educational Administration Volume 26 ; 26 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Journal of Educational Administration Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Educational Administration Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Educational Administration Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Educational Administration Volume 29 ; 29 ; >
@@ -7864,7 +7864,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Journal of European Industrial Training Volume 9 ; 9 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Journal of European Industrial Training Volume 10 ; 10 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Journal of European Industrial Training Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Journal of European Industrial Training Volume 12 ; 12 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Journal of European Industrial Training Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of European Industrial Training Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of European Industrial Training Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of European Industrial Training Volume 15 ; 15 ; >
@@ -8877,7 +8877,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Journal of Management Development Volume 4 ; 4 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Management Development Volume 5 ; 5 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Journal of Management Development Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Journal of Management Development Volume 7 ; 7 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Journal of Management Development Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Management Development Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Management Development Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Management Development Volume 10 ; 10 ; >
@@ -8988,7 +8988,7 @@
 
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Management in Medicine Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Journal of Management in Medicine Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Journal of Management in Medicine Volume 3 ; 3 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Journal of Management in Medicine Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Management in Medicine Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Management in Medicine Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; Journal of Management in Medicine Volume 6 ; 6 ; >
@@ -9018,7 +9018,7 @@
 
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Managerial Psychology Volume 1 ; 1 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Journal of Managerial Psychology Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Journal of Managerial Psychology Volume 3 ; 3 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Journal of Managerial Psychology Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Managerial Psychology Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Managerial Psychology Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Managerial Psychology Volume 6 ; 6 ; >
@@ -13957,11 +13957,11 @@
     au < manifest ; exists ; 1986 ; 1986 ; Tourism Review Volume 41 ; 41 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Tourism Review Volume 42 ; 42 ; >
     au < manifest ; exists ; 1988 ; 1988 ; Tourism Review Volume 43 ; 43 ; >
-    au < manifest ; exists ; 1989 ; 1989 ; Tourism Review Volume 44 ; 44 ; >
-    au < manifest ; exists ; 1990 ; 1990 ; Tourism Review Volume 45 ; 45 ; >
-    au < manifest ; exists ; 1991 ; 1991 ; Tourism Review Volume 46 ; 46 ; >
-    au < manifest ; exists ; 1992 ; 1992 ; Tourism Review Volume 47 ; 47 ; >
-    au < manifest ; exists ; 1993 ; 1993 ; Tourism Review Volume 48 ; 48 ; >
+    au < ready ; exists ; 1989 ; 1989 ; Tourism Review Volume 44 ; 44 ; >
+    au < ready ; exists ; 1990 ; 1990 ; Tourism Review Volume 45 ; 45 ; >
+    au < ready ; exists ; 1991 ; 1991 ; Tourism Review Volume 46 ; 46 ; >
+    au < ready ; exists ; 1992 ; 1992 ; Tourism Review Volume 47 ; 47 ; >
+    au < ready ; exists ; 1993 ; 1993 ; Tourism Review Volume 48 ; 48 ; >
     au < crawling ; exists ; 1994 ; 1994 ; Tourism Review Volume 49 ; 49 ; >
     au < crawling ; exists ; 1995 ; 1995 ; Tourism Review Volume 50 ; 50 ; >
     au < crawling ; exists ; 1996 ; 1996 ; Tourism Review Volume 51 ; 51 ; >
