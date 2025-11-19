@@ -96,7 +96,7 @@
       eissn = 1944-5679 
     >
     
-    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    plugin = org.lockss.plugin.bepress.BePressPlugin 
     #param[base_url] = https://scholarworks.gvsu.edu/
     param[journal_abbr] = tfr
     implicit < status ; year ; name ; param[volume] ; param[base_url] >
