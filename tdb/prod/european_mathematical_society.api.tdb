@@ -61,16 +61,16 @@
     au < manifest ; 1997 ; 1997 ; Annales de l'Institut Henri Poincaré C Volume 14 ; 14 >
     au < manifest ; 1998 ; 1998 ; Annales de l'Institut Henri Poincaré C Volume 15 ; 15 >
     au < manifest ; 1999 ; 1999 ; Annales de l'Institut Henri Poincaré C Volume 16 ; 16 >
-    au < releasing ; 2000 ; 2000 ; Annales de l'Institut Henri Poincaré C Volume 17 ; 17 >
-    au < releasing ; 2001 ; 2001 ; Annales de l'Institut Henri Poincaré C Volume 18 ; 18 >
-    au < releasing ; 2002 ; 2002 ; Annales de l'Institut Henri Poincaré C Volume 19 ; 19 >
-    au < releasing ; 2003 ; 2003 ; Annales de l'Institut Henri Poincaré C Volume 20 ; 20 >
-    au < releasing ; 2004 ; 2004 ; Annales de l'Institut Henri Poincaré C Volume 21 ; 21 >
-    au < releasing ; 2005 ; 2005 ; Annales de l'Institut Henri Poincaré C Volume 22 ; 22 >
-    au < releasing ; 2006 ; 2006 ; Annales de l'Institut Henri Poincaré C Volume 23 ; 23 >
-    au < releasing ; 2007 ; 2007 ; Annales de l'Institut Henri Poincaré C Volume 24 ; 24 >
-    au < releasing ; 2008 ; 2008 ; Annales de l'Institut Henri Poincaré C Volume 25 ; 25 >
-    au < releasing ; 2009 ; 2009 ; Annales de l'Institut Henri Poincaré C Volume 26 ; 26 >
+    au < released ; 2000 ; 2000 ; Annales de l'Institut Henri Poincaré C Volume 17 ; 17 >
+    au < released ; 2001 ; 2001 ; Annales de l'Institut Henri Poincaré C Volume 18 ; 18 >
+    au < released ; 2002 ; 2002 ; Annales de l'Institut Henri Poincaré C Volume 19 ; 19 >
+    au < released ; 2003 ; 2003 ; Annales de l'Institut Henri Poincaré C Volume 20 ; 20 >
+    au < released ; 2004 ; 2004 ; Annales de l'Institut Henri Poincaré C Volume 21 ; 21 >
+    au < released ; 2005 ; 2005 ; Annales de l'Institut Henri Poincaré C Volume 22 ; 22 >
+    au < released ; 2006 ; 2006 ; Annales de l'Institut Henri Poincaré C Volume 23 ; 23 >
+    au < released ; 2007 ; 2007 ; Annales de l'Institut Henri Poincaré C Volume 24 ; 24 >
+    au < released ; 2008 ; 2008 ; Annales de l'Institut Henri Poincaré C Volume 25 ; 25 >
+    au < released ; 2009 ; 2009 ; Annales de l'Institut Henri Poincaré C Volume 26 ; 26 >
     au < released ; 2010 ; 2010 ; Annales de l'Institut Henri Poincaré C Volume 27 ; 27 >
     au < released ; 2011 ; 2011 ; Annales de l'Institut Henri Poincaré C Volume 28 ; 28 >
     au < released ; 2012 ; 2012 ; Annales de l'Institut Henri Poincaré C Volume 29 ; 29 >
@@ -177,16 +177,16 @@
     au < manifest ; 1997 ; 1997 ; Documenta Mathematica Volume 2  ; 2  >
     au < manifest ; 1998 ; 1998 ; Documenta Mathematica Volume 3  ; 3  >
     au < manifest ; 1999 ; 1999 ; Documenta Mathematica Volume 4  ; 4  >
-    au < releasing ; 2000 ; 2000 ; Documenta Mathematica Volume 5  ; 5  >
-    au < releasing ; 2001 ; 2001 ; Documenta Mathematica Volume 6  ; 6  >
-    au < releasing ; 2002 ; 2002 ; Documenta Mathematica Volume 7  ; 7  >
-    au < releasing ; 2003 ; 2003 ; Documenta Mathematica Volume 8  ; 8  >
-    au < releasing ; 2004 ; 2004 ; Documenta Mathematica Volume 9  ; 9  >
-    au < releasing ; 2005 ; 2005 ; Documenta Mathematica Volume 10 ; 10 >
-    au < releasing ; 2006 ; 2006 ; Documenta Mathematica Volume 11 ; 11 >
-    au < releasing ; 2007 ; 2007 ; Documenta Mathematica Volume 12 ; 12 >
-    au < releasing ; 2008 ; 2008 ; Documenta Mathematica Volume 13 ; 13 >
-    au < releasing ; 2009 ; 2009 ; Documenta Mathematica Volume 14 ; 14 >
+    au < released ; 2000 ; 2000 ; Documenta Mathematica Volume 5  ; 5  >
+    au < released ; 2001 ; 2001 ; Documenta Mathematica Volume 6  ; 6  >
+    au < released ; 2002 ; 2002 ; Documenta Mathematica Volume 7  ; 7  >
+    au < released ; 2003 ; 2003 ; Documenta Mathematica Volume 8  ; 8  >
+    au < released ; 2004 ; 2004 ; Documenta Mathematica Volume 9  ; 9  >
+    au < released ; 2005 ; 2005 ; Documenta Mathematica Volume 10 ; 10 >
+    au < released ; 2006 ; 2006 ; Documenta Mathematica Volume 11 ; 11 >
+    au < released ; 2007 ; 2007 ; Documenta Mathematica Volume 12 ; 12 >
+    au < released ; 2008 ; 2008 ; Documenta Mathematica Volume 13 ; 13 >
+    au < released ; 2009 ; 2009 ; Documenta Mathematica Volume 14 ; 14 >
     au < released ; 2010 ; 2010 ; Documenta Mathematica Volume 15 ; 15 >
     au < released ; 2011 ; 2011 ; Documenta Mathematica Volume 16 ; 16 >
     au < released ; 2012 ; 2012 ; Documenta Mathematica Volume 17 ; 17 >
@@ -630,12 +630,12 @@
     param[journal_serial_number] = 13
     param[journal_id] = owr
 
-    au < releasing ; 2004 ; 2004 ; Oberwolfach Reports Volume 1  ; 1  >
-    au < releasing ; 2005 ; 2005 ; Oberwolfach Reports Volume 2  ; 2  >
-    au < releasing ; 2006 ; 2006 ; Oberwolfach Reports Volume 3  ; 3  >
-    au < releasing ; 2007 ; 2007 ; Oberwolfach Reports Volume 4  ; 4  >
-    au < releasing ; 2008 ; 2008 ; Oberwolfach Reports Volume 5  ; 5  >
-    au < releasing ; 2009 ; 2009 ; Oberwolfach Reports Volume 6  ; 6  >
+    au < released ; 2004 ; 2004 ; Oberwolfach Reports Volume 1  ; 1  >
+    au < released ; 2005 ; 2005 ; Oberwolfach Reports Volume 2  ; 2  >
+    au < released ; 2006 ; 2006 ; Oberwolfach Reports Volume 3  ; 3  >
+    au < released ; 2007 ; 2007 ; Oberwolfach Reports Volume 4  ; 4  >
+    au < released ; 2008 ; 2008 ; Oberwolfach Reports Volume 5  ; 5  >
+    au < released ; 2009 ; 2009 ; Oberwolfach Reports Volume 6  ; 6  >
     au < released ; 2010 ; 2010 ; Oberwolfach Reports Volume 7  ; 7  >
     au < released ; 2011 ; 2011 ; Oberwolfach Reports Volume 8  ; 8  >
     au < released ; 2012 ; 2012 ; Oberwolfach Reports Volume 9  ; 9  >

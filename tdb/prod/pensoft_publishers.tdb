@@ -728,16 +728,16 @@
 
       param[au_oai_set] = mab
 
-      au < releasing ; 2000 ; 2000 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2000 ; 2000 ; https://mab-online.nl/ >
-      au < releasing ; 2001 ; 2001 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2001 ; 2001 ; https://mab-online.nl/ >
-      au < releasing ; 2002 ; 2002 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2002 ; 2002 ; https://mab-online.nl/ >
-      au < releasing ; 2003 ; 2003 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2003 ; 2003 ; https://mab-online.nl/ >
-      au < releasing ; 2004 ; 2004 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2004 ; 2004 ; https://mab-online.nl/ >
-      au < releasing ; 2005 ; 2005 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2005 ; 2005 ; https://mab-online.nl/ >
-      au < releasing ; 2006 ; 2006 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2006 ; 2006 ; https://mab-online.nl/ >
-      au < releasing ; 2007 ; 2007 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2007 ; 2007 ; https://mab-online.nl/ >
-      au < releasing ; 2008 ; 2008 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2008 ; 2008 ; https://mab-online.nl/ >
-      au < releasing ; 2009 ; 2009 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2009 ; 2009 ; https://mab-online.nl/ >
+      au < released ; 2000 ; 2000 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2000 ; 2000 ; https://mab-online.nl/ >
+      au < released ; 2001 ; 2001 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2001 ; 2001 ; https://mab-online.nl/ >
+      au < released ; 2002 ; 2002 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2002 ; 2002 ; https://mab-online.nl/ >
+      au < released ; 2003 ; 2003 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2003 ; 2003 ; https://mab-online.nl/ >
+      au < released ; 2004 ; 2004 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2004 ; 2004 ; https://mab-online.nl/ >
+      au < released ; 2005 ; 2005 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2005 ; 2005 ; https://mab-online.nl/ >
+      au < released ; 2006 ; 2006 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2006 ; 2006 ; https://mab-online.nl/ >
+      au < released ; 2007 ; 2007 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2007 ; 2007 ; https://mab-online.nl/ >
+      au < released ; 2008 ; 2008 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2008 ; 2008 ; https://mab-online.nl/ >
+      au < released ; 2009 ; 2009 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2009 ; 2009 ; https://mab-online.nl/ >
       au < released ; 2010 ; 2010 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2010 ; 2010 ; https://mab-online.nl/ >
       au < released ; 2011 ; 2011 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2011 ; 2011 ; https://mab-online.nl/ >
       au < released ; 2012 ; 2012 ; Maandblad voor Accountancy en Bedrijfseconomie (MAB) Volume 2012 ; 2012 ; https://mab-online.nl/ >
@@ -1027,7 +1027,7 @@
       au < released ; 2021 ; 2021 ; ARPHA Proceedings Volume 2021 ; 2021 ; https://ap.pensoft.net/ >
       au < released ; 2022 ; 2022 ; ARPHA Proceedings Volume 2022 ; 2022 ; https://ap.pensoft.net/ >
 
-      au < releasing ; 2024 ; 2024 ; ARPHA Proceedings Volume 2024 ; 2024 ; https://ap.pensoft.net/ >
+      au < released ; 2024 ; 2024 ; ARPHA Proceedings Volume 2024 ; 2024 ; https://ap.pensoft.net/ >
       au < manifest ; 2025 ; 2025 ; ARPHA Proceedings Volume 2025 ; 2025 ; https://ap.pensoft.net/ >
 
   }
@@ -1412,7 +1412,7 @@
       au < released ; 2021 ; 2021 ; Zitteliana Volume 2021 ; 2021 ; https://zitteliana.pensoft.net/ >
       au < released ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ >
       au < released ; 2023 ; 2023 ; Zitteliana Volume 2023 ; 2023 ; https://zitteliana.pensoft.net/ >
-      au < releasing ; 2024 ; 2024 ; Zitteliana Volume 2024 ; 2024 ; https://zitteliana.pensoft.net/ >
+      au < released ; 2024 ; 2024 ; Zitteliana Volume 2024 ; 2024 ; https://zitteliana.pensoft.net/ >
       au < manifest ; 2025 ; 2025 ; Zitteliana Volume 2025 ; 2025 ; https://zitteliana.pensoft.net/ >
 
   }
@@ -1460,7 +1460,7 @@
       au < released ; 2021 ; 2021 ; Biosystematics and Ecology Volume 2021 ; 2021 ; https://biosystecol.oeaw.ac.at/ >
 
       au < released ; 2023 ; 2023 ; Biosystematics and Ecology Volume 2023 ; 2023 ; https://biosystecol.oeaw.ac.at/ >
-      au < releasing ; 2024 ; 2024 ; Biosystematics and Ecology Volume 2024 ; 2024 ; https://biosystecol.oeaw.ac.at/ >
+      au < released ; 2024 ; 2024 ; Biosystematics and Ecology Volume 2024 ; 2024 ; https://biosystecol.oeaw.ac.at/ >
       au < manifest ; 2025 ; 2025 ; Biosystematics and Ecology Volume 2025 ; 2025 ; https://biosystecol.oeaw.ac.at/ >
 
   }
@@ -1645,7 +1645,7 @@
       param[au_oai_set] = bsms
 
       au < exists ; 2023 ; 2023 ; Bulgarian Society of Medical Sciences Journal Volume 2023 ; 2023 ; https://bsms.arphahub.com/ >
-      au < releasing ; 2024 ; 2024 ; Bulgarian Society of Medical Sciences Journal Volume 2024 ; 2024 ; https://bsms.arphahub.com/ >
+      au < released ; 2024 ; 2024 ; Bulgarian Society of Medical Sciences Journal Volume 2024 ; 2024 ; https://bsms.arphahub.com/ >
       au < manifest ; 2025 ; 2025 ; Bulgarian Society of Medical Sciences Journal Volume 2025 ; 2025 ; https://bsms.arphahub.com/ >
 
   }
@@ -1660,8 +1660,8 @@
 
       param[au_oai_set] = ejfa
 
-      au < releasing ; 2023 ; 2023 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2023 ; 2023 ; https://ejfa.pensoft.net/ >
-      au < releasing ; 2024 ; 2024 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2024 ; 2024 ; https://ejfa.pensoft.net/ >
+      au < released ; 2023 ; 2023 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2023 ; 2023 ; https://ejfa.pensoft.net/ >
+      au < released ; 2024 ; 2024 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2024 ; 2024 ; https://ejfa.pensoft.net/ >
       au < manifest ; 2025 ; 2025 ; Emirates Journal of Food and Agriculture (EJFA) Volume 2025 ; 2025 ; https://ejfa.pensoft.net/ >
 
   }
@@ -1675,7 +1675,7 @@
 
       param[au_oai_set] = emt
 
-      au < releasing ; 2024 ; 2024 ; Estuarine Management and Technologies Volume 2024 ; 2024 ; https://emt.pensoft.net/ >
+      au < released ; 2024 ; 2024 ; Estuarine Management and Technologies Volume 2024 ; 2024 ; https://emt.pensoft.net/ >
       au < manifest ; 2025 ; 2025 ; Estuarine Management and Technologies Volume 2025 ; 2025 ; https://emt.pensoft.net/ >
 
   }
@@ -1689,7 +1689,7 @@
 
       param[au_oai_set] = geostudies
 
-      au < releasing ; 2024 ; 2024 ; GeoStudies Volume 2024 ; 2024 ; https://geostudies.net/ >
+      au < released ; 2024 ; 2024 ; GeoStudies Volume 2024 ; 2024 ; https://geostudies.net/ >
       au < manifest ; 2025 ; 2025 ; GeoStudies Volume 2025 ; 2025 ; https://geostudies.net/ >
 
   }
@@ -1704,21 +1704,21 @@
 
       param[au_oai_set] = imafungus
 
-      au < releasing ; 2010 ; 2010 ; IMA Fungus Volume 2010 ; 2010 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2011 ; 2011 ; IMA Fungus Volume 2011 ; 2011 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2012 ; 2012 ; IMA Fungus Volume 2012 ; 2012 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2013 ; 2013 ; IMA Fungus Volume 2013 ; 2013 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2014 ; 2014 ; IMA Fungus Volume 2014 ; 2014 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2015 ; 2015 ; IMA Fungus Volume 2015 ; 2015 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2016 ; 2016 ; IMA Fungus Volume 2016 ; 2016 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2017 ; 2017 ; IMA Fungus Volume 2017 ; 2017 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2018 ; 2018 ; IMA Fungus Volume 2018 ; 2018 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2019 ; 2019 ; IMA Fungus Volume 2019 ; 2019 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2020 ; 2020 ; IMA Fungus Volume 2020 ; 2020 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2021 ; 2021 ; IMA Fungus Volume 2021 ; 2021 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2022 ; 2022 ; IMA Fungus Volume 2022 ; 2022 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2023 ; 2023 ; IMA Fungus Volume 2023 ; 2023 ; https://imafungus.pensoft.net/ >
-      au < releasing ; 2024 ; 2024 ; IMA Fungus Volume 2024 ; 2024 ; https://imafungus.pensoft.net/ >
+      au < released ; 2010 ; 2010 ; IMA Fungus Volume 2010 ; 2010 ; https://imafungus.pensoft.net/ >
+      au < released ; 2011 ; 2011 ; IMA Fungus Volume 2011 ; 2011 ; https://imafungus.pensoft.net/ >
+      au < released ; 2012 ; 2012 ; IMA Fungus Volume 2012 ; 2012 ; https://imafungus.pensoft.net/ >
+      au < released ; 2013 ; 2013 ; IMA Fungus Volume 2013 ; 2013 ; https://imafungus.pensoft.net/ >
+      au < released ; 2014 ; 2014 ; IMA Fungus Volume 2014 ; 2014 ; https://imafungus.pensoft.net/ >
+      au < released ; 2015 ; 2015 ; IMA Fungus Volume 2015 ; 2015 ; https://imafungus.pensoft.net/ >
+      au < released ; 2016 ; 2016 ; IMA Fungus Volume 2016 ; 2016 ; https://imafungus.pensoft.net/ >
+      au < released ; 2017 ; 2017 ; IMA Fungus Volume 2017 ; 2017 ; https://imafungus.pensoft.net/ >
+      au < released ; 2018 ; 2018 ; IMA Fungus Volume 2018 ; 2018 ; https://imafungus.pensoft.net/ >
+      au < released ; 2019 ; 2019 ; IMA Fungus Volume 2019 ; 2019 ; https://imafungus.pensoft.net/ >
+      au < released ; 2020 ; 2020 ; IMA Fungus Volume 2020 ; 2020 ; https://imafungus.pensoft.net/ >
+      au < released ; 2021 ; 2021 ; IMA Fungus Volume 2021 ; 2021 ; https://imafungus.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; IMA Fungus Volume 2022 ; 2022 ; https://imafungus.pensoft.net/ >
+      au < released ; 2023 ; 2023 ; IMA Fungus Volume 2023 ; 2023 ; https://imafungus.pensoft.net/ >
+      au < released ; 2024 ; 2024 ; IMA Fungus Volume 2024 ; 2024 ; https://imafungus.pensoft.net/ >
       au < manifest ; 2025 ; 2025 ; IMA Fungus Volume 2025 ; 2025 ; https://imafungus.pensoft.net/ >
 
   }
@@ -1732,13 +1732,13 @@
 
       param[au_oai_set] = innovationsagriculture
 
-      au < releasing ; 2018 ; 2018 ; Innovations in Agriculture Volume 2018 ; 2018 ; https://innovationsagriculture.pensoft.net/ >
-      au < releasing ; 2019 ; 2019 ; Innovations in Agriculture Volume 2019 ; 2019 ; https://innovationsagriculture.pensoft.net/ >
-      au < releasing ; 2020 ; 2020 ; Innovations in Agriculture Volume 2020 ; 2020 ; https://innovationsagriculture.pensoft.net/ >
-      au < releasing ; 2021 ; 2021 ; Innovations in Agriculture Volume 2021 ; 2021 ; https://innovationsagriculture.pensoft.net/ >
-      au < releasing ; 2022 ; 2022 ; Innovations in Agriculture Volume 2022 ; 2022 ; https://innovationsagriculture.pensoft.net/ >
-      au < releasing ; 2023 ; 2023 ; Innovations in Agriculture Volume 2023 ; 2023 ; https://innovationsagriculture.pensoft.net/ >
-      au < releasing ; 2024 ; 2024 ; Innovations in Agriculture Volume 2024 ; 2024 ; https://innovationsagriculture.pensoft.net/ >
+      au < released ; 2018 ; 2018 ; Innovations in Agriculture Volume 2018 ; 2018 ; https://innovationsagriculture.pensoft.net/ >
+      au < released ; 2019 ; 2019 ; Innovations in Agriculture Volume 2019 ; 2019 ; https://innovationsagriculture.pensoft.net/ >
+      au < released ; 2020 ; 2020 ; Innovations in Agriculture Volume 2020 ; 2020 ; https://innovationsagriculture.pensoft.net/ >
+      au < released ; 2021 ; 2021 ; Innovations in Agriculture Volume 2021 ; 2021 ; https://innovationsagriculture.pensoft.net/ >
+      au < released ; 2022 ; 2022 ; Innovations in Agriculture Volume 2022 ; 2022 ; https://innovationsagriculture.pensoft.net/ >
+      au < released ; 2023 ; 2023 ; Innovations in Agriculture Volume 2023 ; 2023 ; https://innovationsagriculture.pensoft.net/ >
+      au < released ; 2024 ; 2024 ; Innovations in Agriculture Volume 2024 ; 2024 ; https://innovationsagriculture.pensoft.net/ >
       au < manifest ; 2025 ; 2025 ; Innovations in Agriculture Volume 2025 ; 2025 ; https://innovationsagriculture.pensoft.net/ >
 
   }
@@ -1753,14 +1753,14 @@
 
       param[au_oai_set] = jass
 
-      au < releasing ; 2017 ; 2017 ; Journal of Applied Sports Sciences Volume 2017 ; 2017 ; https://journal.nsa.bg/ >
-      au < releasing ; 2018 ; 2018 ; Journal of Applied Sports Sciences Volume 2018 ; 2018 ; https://journal.nsa.bg/ >
-      au < releasing ; 2019 ; 2019 ; Journal of Applied Sports Sciences Volume 2019 ; 2019 ; https://journal.nsa.bg/ >
-      au < releasing ; 2020 ; 2020 ; Journal of Applied Sports Sciences Volume 2020 ; 2020 ; https://journal.nsa.bg/ >
-      au < releasing ; 2021 ; 2021 ; Journal of Applied Sports Sciences Volume 2021 ; 2021 ; https://journal.nsa.bg/ >
-      au < releasing ; 2022 ; 2022 ; Journal of Applied Sports Sciences Volume 2022 ; 2022 ; https://journal.nsa.bg/ >
-      au < releasing ; 2023 ; 2023 ; Journal of Applied Sports Sciences Volume 2023 ; 2023 ; https://journal.nsa.bg/ >
-      au < releasing ; 2024 ; 2024 ; Journal of Applied Sports Sciences Volume 2024 ; 2024 ; https://journal.nsa.bg/ >
+      au < released ; 2017 ; 2017 ; Journal of Applied Sports Sciences Volume 2017 ; 2017 ; https://journal.nsa.bg/ >
+      au < released ; 2018 ; 2018 ; Journal of Applied Sports Sciences Volume 2018 ; 2018 ; https://journal.nsa.bg/ >
+      au < released ; 2019 ; 2019 ; Journal of Applied Sports Sciences Volume 2019 ; 2019 ; https://journal.nsa.bg/ >
+      au < released ; 2020 ; 2020 ; Journal of Applied Sports Sciences Volume 2020 ; 2020 ; https://journal.nsa.bg/ >
+      au < released ; 2021 ; 2021 ; Journal of Applied Sports Sciences Volume 2021 ; 2021 ; https://journal.nsa.bg/ >
+      au < released ; 2022 ; 2022 ; Journal of Applied Sports Sciences Volume 2022 ; 2022 ; https://journal.nsa.bg/ >
+      au < released ; 2023 ; 2023 ; Journal of Applied Sports Sciences Volume 2023 ; 2023 ; https://journal.nsa.bg/ >
+      au < released ; 2024 ; 2024 ; Journal of Applied Sports Sciences Volume 2024 ; 2024 ; https://journal.nsa.bg/ >
       au < manifest ; 2025 ; 2025 ; Journal of Applied Sports Sciences Volume 2025 ; 2025 ; https://journal.nsa.bg/ >
 
   }
@@ -1775,7 +1775,7 @@
 
       param[au_oai_set] = jbcr
 
-      au < releasing ; 2024 ; 2024 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2024 ; 2024 ; https://jbcr.arphahub.com/ >
+      au < released ; 2024 ; 2024 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2024 ; 2024 ; https://jbcr.arphahub.com/ >
       au < manifest ; 2025 ; 2025 ; Journal of Biomedical and Clinical Research (JBCR) Volume 2025 ; 2025 ; https://jbcr.arphahub.com/ >
 
   }
@@ -1789,7 +1789,7 @@
 
       param[au_oai_set] = nhcm
 
-      au < releasing ; 2024 ; 2024 ; Natural History Collections and Museomics Volume 2024 ; 2024 ; https://nhcm.pensoft.net/ >
+      au < released ; 2024 ; 2024 ; Natural History Collections and Museomics Volume 2024 ; 2024 ; https://nhcm.pensoft.net/ >
       au < manifest ; 2025 ; 2025 ; Natural History Collections and Museomics Volume 2025 ; 2025 ; https://nhcm.pensoft.net/ >
 
   }
@@ -1803,7 +1803,7 @@
 
       param[au_oai_set] = papahou
 
-      au < releasing ; 2024 ; 2024 ; Papahou: Records of the Auckland Museum Volume 2024 ; 2024 ; https://papahou.arphahub.com/ >
+      au < released ; 2024 ; 2024 ; Papahou: Records of the Auckland Museum Volume 2024 ; 2024 ; https://papahou.arphahub.com/ >
       au < manifest ; 2025 ; 2025 ; Papahou: Records of the Auckland Museum Volume 2025 ; 2025 ; https://papahou.arphahub.com/ >
 
   }
@@ -1817,7 +1817,7 @@
 
       param[au_oai_set] = biogeography
 
-      au < releasing ; 2024 ; 2024 ; Frontiers of Biogeography Volume 2024 ; 2024 ; https://biogeography.pensoft.net/ >
+      au < released ; 2024 ; 2024 ; Frontiers of Biogeography Volume 2024 ; 2024 ; https://biogeography.pensoft.net/ >
       au < manifest ; 2025 ; 2025 ; Frontiers of Biogeography Volume 2025 ; 2025 ; https://biogeography.pensoft.net/ >
 
   }
