@@ -171,10 +171,9 @@
       param[base_url] = https://www.philosophica.ugent.be/
       #param[journal_id] = philosophica
 
-      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Philosophica Volume 2001 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Philosophica Volume 2000 ; >
       au < ready ; exists ; 2001 ; 2001 ; 2001 ; Philosophica Volume 2001 ; >
       au < ready ; exists ; 2002 ; 2002 ; 2002 ; Philosophica Volume 2002 ; >
-      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Philosophica Volume 2003 ; >
       au < ready ; exists ; 2003 ; 2003 ; 2003 ; Philosophica Volume 2003 ; >
       au < ready ; exists ; 2004 ; 2004 ; 2004 ; Philosophica Volume 2004 ; >
       au < ready ; exists ; 2005 ; 2005 ; 2005 ; Philosophica Volume 2005 ; >
