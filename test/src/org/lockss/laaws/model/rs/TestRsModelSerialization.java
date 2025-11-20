@@ -50,15 +50,12 @@ public class TestRsModelSerialization extends LockssTestCase {
 
   public void testApiStatus_nullFields() throws Exception {
     ApiStatus original = new ApiStatus();
-    // All fields null
-    // serialization succeeds and only deserialization fails this seems wrong.
-    // XXX fix the ApiStatus class to handle null fields when deserializing
+
     String json = JSON.serialize(original);
     try {
       ApiStatus deserialized = JSON.deserialize(json, ApiStatus.class);
-      fail("Serialization should have failed");
     } catch (Exception e) {
-      // expected
+      fail("Deerialization should not have failed on null fields");
     }
   }
 
