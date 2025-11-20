@@ -42,11 +42,33 @@
 
 package org.lockss.laaws.model.cfg;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapter;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.*;
+import java.io.IOException;
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
+import org.lockss.laaws.client.JSON;
 
 /**
  * The properties of a TDB Publisher
@@ -57,11 +79,11 @@ public class TdbPublisherWsResult implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) private String name;
+  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nonnull private String name;
 
   public TdbPublisherWsResult() {}
 
-  public TdbPublisherWsResult name(String name) {
+  public TdbPublisherWsResult name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
@@ -69,15 +91,13 @@ public class TdbPublisherWsResult implements Serializable {
   /**
    * The name of the TDB Publisher
    * @return name
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The name of the TDB Publisher")
-
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
@@ -116,5 +136,108 @@ public class TdbPublisherWsResult implements Serializable {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>(Arrays.asList("name"));
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("name"));
+  }
+
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to TdbPublisherWsResult
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+    if (jsonElement == null) {
+      if (!TdbPublisherWsResult.openapiRequiredFields
+              .isEmpty()) { // has required fields but JSON element is null
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The required field(s) %s in TdbPublisherWsResult is not found in the empty JSON "
+            + "string",
+            TdbPublisherWsResult.openapiRequiredFields.toString()));
+      }
+    }
+
+    Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+    // check to see if the JSON string contains additional fields
+    for (Map.Entry<String, JsonElement> entry : entries) {
+      if (!TdbPublisherWsResult.openapiFields.contains(entry.getKey())) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The field `%s` in the JSON string is not defined in the `TdbPublisherWsResult` "
+            + "properties. JSON: %s",
+            entry.getKey(), jsonElement.toString()));
+      }
+    }
+
+    // check to make sure all required properties/fields are present in the JSON string
+    for (String requiredField : TdbPublisherWsResult.openapiRequiredFields) {
+      if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The required field `%s` is not found in the JSON string: %s", requiredField,
+            jsonElement.toString()));
+      }
+    }
+    JsonObject jsonObj = jsonElement.getAsJsonObject();
+    if (!jsonObj.get("name").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `name` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("name").toString()));
+    }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+      if (!TdbPublisherWsResult.class.isAssignableFrom(type.getRawType())) {
+        return null; // this class only serializes 'TdbPublisherWsResult' and its subtypes
+      }
+      final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+      final TypeAdapter<TdbPublisherWsResult> thisAdapter =
+          gson.getDelegateAdapter(this, TypeToken.get(TdbPublisherWsResult.class));
+
+      return (TypeAdapter<T>) new TypeAdapter<TdbPublisherWsResult>() {
+        @Override
+        public void write(JsonWriter out, TdbPublisherWsResult value) throws IOException {
+          JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+          elementAdapter.write(out, obj);
+        }
+
+        @Override
+        public TdbPublisherWsResult read(JsonReader in) throws IOException {
+          JsonElement jsonElement = elementAdapter.read(in);
+          validateJsonElement(jsonElement);
+          return thisAdapter.fromJsonTree(jsonElement);
+        }
+      }.nullSafe();
+    }
+  }
+
+  /**
+   * Create an instance of TdbPublisherWsResult given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of TdbPublisherWsResult
+   * @throws IOException if the JSON string is invalid with respect to TdbPublisherWsResult
+   */
+  public static TdbPublisherWsResult fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TdbPublisherWsResult.class);
+  }
+
+  /**
+   * Convert an instance of TdbPublisherWsResult to an JSON string
+   *
+   * @return JSON string
+   */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }

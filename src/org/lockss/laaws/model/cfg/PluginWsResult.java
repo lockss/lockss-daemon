@@ -42,13 +42,33 @@
 
 package org.lockss.laaws.model.cfg;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapter;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
+import org.lockss.laaws.client.JSON;
+import io.swagger.annotations.ApiModel;
 
 /**
  * The properties of a plugin
@@ -59,33 +79,39 @@ public class PluginWsResult implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_PLUGIN_ID = "pluginId";
-  @SerializedName(SERIALIZED_NAME_PLUGIN_ID) private String pluginId;
+  @SerializedName(SERIALIZED_NAME_PLUGIN_ID) @javax.annotation.Nonnull private String pluginId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) private String name;
+  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nonnull private String name;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION) private String version;
+  @SerializedName(SERIALIZED_NAME_VERSION) @javax.annotation.Nonnull private String version;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE) private String type;
+  @SerializedName(SERIALIZED_NAME_TYPE) @javax.annotation.Nonnull private String type;
 
   public static final String SERIALIZED_NAME_DEFINITION = "definition";
   @SerializedName(SERIALIZED_NAME_DEFINITION)
+  @javax.annotation.Nonnull
   private Map<String, String> definition = new HashMap<>();
 
   public static final String SERIALIZED_NAME_REGISTRY = "registry";
-  @SerializedName(SERIALIZED_NAME_REGISTRY) private String registry;
+  @SerializedName(SERIALIZED_NAME_REGISTRY) @javax.annotation.Nonnull private String registry;
 
   public static final String SERIALIZED_NAME_URL = "url";
-  @SerializedName(SERIALIZED_NAME_URL) private String url;
+  @SerializedName(SERIALIZED_NAME_URL) @javax.annotation.Nonnull private String url;
+
+  public static final String SERIALIZED_NAME_AU_COUNT = "auCount";
+  @SerializedName(SERIALIZED_NAME_AU_COUNT) @javax.annotation.Nonnull private Integer auCount;
 
   public static final String SERIALIZED_NAME_PUBLISHING_PLATFORM = "publishingPlatform";
-  @SerializedName(SERIALIZED_NAME_PUBLISHING_PLATFORM) private String publishingPlatform;
+  @SerializedName(SERIALIZED_NAME_PUBLISHING_PLATFORM)
+  @javax.annotation.Nonnull
+  private String publishingPlatform;
 
   public PluginWsResult() {}
 
-  public PluginWsResult pluginId(String pluginId) {
+  public PluginWsResult pluginId(@javax.annotation.Nonnull String pluginId) {
     this.pluginId = pluginId;
     return this;
   }
@@ -93,15 +119,13 @@ public class PluginWsResult implements Serializable {
   /**
    * The identifier of the plugin
    * @return pluginId
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The identifier of the plugin")
-
   public String getPluginId() {
     return pluginId;
   }
 
-  public void setPluginId(String pluginId) {
+  public void setPluginId(@javax.annotation.Nonnull String pluginId) {
     this.pluginId = pluginId;
   }
 
@@ -113,19 +137,17 @@ public class PluginWsResult implements Serializable {
   /**
    * The name of the plugin
    * @return name
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The name of the plugin")
-
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
-  public PluginWsResult version(String version) {
+  public PluginWsResult version(@javax.annotation.Nonnull String version) {
     this.version = version;
     return this;
   }
@@ -133,19 +155,17 @@ public class PluginWsResult implements Serializable {
   /**
    * The version of the plugin
    * @return version
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The version of the plugin")
-
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nonnull String version) {
     this.version = version;
   }
 
-  public PluginWsResult type(String type) {
+  public PluginWsResult type(@javax.annotation.Nonnull String type) {
     this.type = type;
     return this;
   }
@@ -153,24 +173,25 @@ public class PluginWsResult implements Serializable {
   /**
    * The type of the plugin
    * @return type
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The type of the plugin")
-
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nonnull String type) {
     this.type = type;
   }
 
-  public PluginWsResult definition(Map<String, String> definition) {
+  public PluginWsResult definition(@javax.annotation.Nonnull Map<String, String> definition) {
     this.definition = definition;
     return this;
   }
 
   public PluginWsResult putDefinitionItem(String key, String definitionItem) {
+    if (this.definition == null) {
+      this.definition = new HashMap<>();
+    }
     this.definition.put(key, definitionItem);
     return this;
   }
@@ -178,19 +199,17 @@ public class PluginWsResult implements Serializable {
   /**
    * The map of plugin definition properties
    * @return definition
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The map of plugin definition properties")
-
   public Map<String, String> getDefinition() {
     return definition;
   }
 
-  public void setDefinition(Map<String, String> definition) {
+  public void setDefinition(@javax.annotation.Nonnull Map<String, String> definition) {
     this.definition = definition;
   }
 
-  public PluginWsResult registry(String registry) {
+  public PluginWsResult registry(@javax.annotation.Nonnull String registry) {
     this.registry = registry;
     return this;
   }
@@ -198,19 +217,17 @@ public class PluginWsResult implements Serializable {
   /**
    * The registry of the plugin
    * @return registry
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The registry of the plugin")
-
   public String getRegistry() {
     return registry;
   }
 
-  public void setRegistry(String registry) {
+  public void setRegistry(@javax.annotation.Nonnull String registry) {
     this.registry = registry;
   }
 
-  public PluginWsResult url(String url) {
+  public PluginWsResult url(@javax.annotation.Nonnull String url) {
     this.url = url;
     return this;
   }
@@ -218,19 +235,35 @@ public class PluginWsResult implements Serializable {
   /**
    * The URL of the plugin
    * @return url
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The URL of the plugin")
-
   public String getUrl() {
     return url;
   }
 
-  public void setUrl(String url) {
+  public void setUrl(@javax.annotation.Nonnull String url) {
     this.url = url;
   }
 
-  public PluginWsResult publishingPlatform(String publishingPlatform) {
+  public PluginWsResult auCount(@javax.annotation.Nonnull Integer auCount) {
+    this.auCount = auCount;
+    return this;
+  }
+
+  /**
+   * The count of Archival Units linked to the plugin
+   * @return auCount
+   */
+  @javax.annotation.Nonnull
+  public Integer getAuCount() {
+    return auCount;
+  }
+
+  public void setAuCount(@javax.annotation.Nonnull Integer auCount) {
+    this.auCount = auCount;
+  }
+
+  public PluginWsResult publishingPlatform(@javax.annotation.Nonnull String publishingPlatform) {
     this.publishingPlatform = publishingPlatform;
     return this;
   }
@@ -238,15 +271,13 @@ public class PluginWsResult implements Serializable {
   /**
    * The publishing platform of the plugin
    * @return publishingPlatform
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The publishing platform of the plugin")
-
   public String getPublishingPlatform() {
     return publishingPlatform;
   }
 
-  public void setPublishingPlatform(String publishingPlatform) {
+  public void setPublishingPlatform(@javax.annotation.Nonnull String publishingPlatform) {
     this.publishingPlatform = publishingPlatform;
   }
 
@@ -266,13 +297,14 @@ public class PluginWsResult implements Serializable {
         && Objects.equals(this.definition, pluginWsResult.definition)
         && Objects.equals(this.registry, pluginWsResult.registry)
         && Objects.equals(this.url, pluginWsResult.url)
+        && Objects.equals(this.auCount, pluginWsResult.auCount)
         && Objects.equals(this.publishingPlatform, pluginWsResult.publishingPlatform);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        pluginId, name, version, type, definition, registry, url, publishingPlatform);
+        pluginId, name, version, type, definition, registry, url, auCount, publishingPlatform);
   }
 
   @Override
@@ -286,6 +318,7 @@ public class PluginWsResult implements Serializable {
     sb.append("    definition: ").append(toIndentedString(definition)).append("\n");
     sb.append("    registry: ").append(toIndentedString(registry)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    auCount: ").append(toIndentedString(auCount)).append("\n");
     sb.append("    publishingPlatform: ").append(toIndentedString(publishingPlatform)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -300,5 +333,140 @@ public class PluginWsResult implements Serializable {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>(Arrays.asList("pluginId", "name", "version", "type",
+        "definition", "registry", "url", "auCount", "publishingPlatform"));
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pluginId", "name", "version", "type",
+        "definition", "registry", "url", "auCount", "publishingPlatform"));
+  }
+
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PluginWsResult
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+    if (jsonElement == null) {
+      if (!PluginWsResult.openapiRequiredFields
+              .isEmpty()) { // has required fields but JSON element is null
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The required field(s) %s in PluginWsResult is not found in the empty JSON string",
+            PluginWsResult.openapiRequiredFields.toString()));
+      }
+    }
+
+    Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+    // check to see if the JSON string contains additional fields
+    for (Map.Entry<String, JsonElement> entry : entries) {
+      if (!PluginWsResult.openapiFields.contains(entry.getKey())) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The field `%s` in the JSON string is not defined in the `PluginWsResult` properties. "
+            + "JSON: %s",
+            entry.getKey(), jsonElement.toString()));
+      }
+    }
+
+    // check to make sure all required properties/fields are present in the JSON string
+    for (String requiredField : PluginWsResult.openapiRequiredFields) {
+      if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The required field `%s` is not found in the JSON string: %s", requiredField,
+            jsonElement.toString()));
+      }
+    }
+    JsonObject jsonObj = jsonElement.getAsJsonObject();
+    if (!jsonObj.get("pluginId").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `pluginId` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("pluginId").toString()));
+    }
+    if (!jsonObj.get("name").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `name` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("name").toString()));
+    }
+    if (!jsonObj.get("version").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `version` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("version").toString()));
+    }
+    if (!jsonObj.get("type").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `type` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("type").toString()));
+    }
+    if (!jsonObj.get("registry").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `registry` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("registry").toString()));
+    }
+    if (!jsonObj.get("url").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `url` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("url").toString()));
+    }
+    if (!jsonObj.get("publishingPlatform").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `publishingPlatform` to be a primitive type in the JSON string but "
+          + "got `%s`",
+          jsonObj.get("publishingPlatform").toString()));
+    }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+      if (!PluginWsResult.class.isAssignableFrom(type.getRawType())) {
+        return null; // this class only serializes 'PluginWsResult' and its subtypes
+      }
+      final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+      final TypeAdapter<PluginWsResult> thisAdapter =
+          gson.getDelegateAdapter(this, TypeToken.get(PluginWsResult.class));
+
+      return (TypeAdapter<T>) new TypeAdapter<PluginWsResult>() {
+        @Override
+        public void write(JsonWriter out, PluginWsResult value) throws IOException {
+          JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+          elementAdapter.write(out, obj);
+        }
+
+        @Override
+        public PluginWsResult read(JsonReader in) throws IOException {
+          JsonElement jsonElement = elementAdapter.read(in);
+          validateJsonElement(jsonElement);
+          return thisAdapter.fromJsonTree(jsonElement);
+        }
+      }.nullSafe();
+    }
+  }
+
+  /**
+   * Create an instance of PluginWsResult given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PluginWsResult
+   * @throws IOException if the JSON string is invalid with respect to PluginWsResult
+   */
+  public static PluginWsResult fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, PluginWsResult.class);
+  }
+
+  /**
+   * Convert an instance of PluginWsResult to an JSON string
+   *
+   * @return JSON string
+   */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }

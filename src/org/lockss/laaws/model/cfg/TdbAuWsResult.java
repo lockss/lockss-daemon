@@ -42,13 +42,35 @@
 
 package org.lockss.laaws.model.cfg;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapter;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.*;
+import java.io.IOException;
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
+import org.lockss.laaws.client.JSON;
+import org.lockss.laaws.model.cfg.TdbPublisherWsResult;
+import org.lockss.laaws.model.cfg.TdbTitleWsResult;
 
 /**
  * The properties of a TDB Archival Unit
@@ -59,38 +81,48 @@ public class TdbAuWsResult implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_AU_ID = "auId";
-  @SerializedName(SERIALIZED_NAME_AU_ID) private String auId;
+  @SerializedName(SERIALIZED_NAME_AU_ID) @javax.annotation.Nullable private String auId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) private String name;
+  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nullable private String name;
 
   public static final String SERIALIZED_NAME_PLUGIN_NAME = "pluginName";
-  @SerializedName(SERIALIZED_NAME_PLUGIN_NAME) private String pluginName;
+  @SerializedName(SERIALIZED_NAME_PLUGIN_NAME) @javax.annotation.Nullable private String pluginName;
 
   public static final String SERIALIZED_NAME_TDB_TITLE = "tdbTitle";
-  @SerializedName(SERIALIZED_NAME_TDB_TITLE) private TdbTitleWsResult tdbTitle;
+  @SerializedName(SERIALIZED_NAME_TDB_TITLE)
+  @javax.annotation.Nullable
+  private TdbTitleWsResult tdbTitle;
 
   public static final String SERIALIZED_NAME_TDB_PUBLISHER = "tdbPublisher";
-  @SerializedName(SERIALIZED_NAME_TDB_PUBLISHER) private TdbPublisherWsResult tdbPublisher;
+  @SerializedName(SERIALIZED_NAME_TDB_PUBLISHER)
+  @javax.annotation.Nullable
+  private TdbPublisherWsResult tdbPublisher;
 
   public static final String SERIALIZED_NAME_DOWN = "down";
-  @SerializedName(SERIALIZED_NAME_DOWN) private Boolean down;
+  @SerializedName(SERIALIZED_NAME_DOWN) @javax.annotation.Nullable private Boolean down;
 
   public static final String SERIALIZED_NAME_ACTIVE = "active";
-  @SerializedName(SERIALIZED_NAME_ACTIVE) private Boolean active;
+  @SerializedName(SERIALIZED_NAME_ACTIVE) @javax.annotation.Nullable private Boolean active;
 
   public static final String SERIALIZED_NAME_PARAMS = "params";
-  @SerializedName(SERIALIZED_NAME_PARAMS) private Map<String, String> params = new HashMap<>();
+  @SerializedName(SERIALIZED_NAME_PARAMS)
+  @javax.annotation.Nullable
+  private Map<String, String> params = new HashMap<>();
 
   public static final String SERIALIZED_NAME_ATTRS = "attrs";
-  @SerializedName(SERIALIZED_NAME_ATTRS) private Map<String, String> attrs = new HashMap<>();
+  @SerializedName(SERIALIZED_NAME_ATTRS)
+  @javax.annotation.Nullable
+  private Map<String, String> attrs = new HashMap<>();
 
   public static final String SERIALIZED_NAME_PROPS = "props";
-  @SerializedName(SERIALIZED_NAME_PROPS) private Map<String, String> props = new HashMap<>();
+  @SerializedName(SERIALIZED_NAME_PROPS)
+  @javax.annotation.Nullable
+  private Map<String, String> props = new HashMap<>();
 
   public TdbAuWsResult() {}
 
-  public TdbAuWsResult auId(String auId) {
+  public TdbAuWsResult auId(@javax.annotation.Nullable String auId) {
     this.auId = auId;
     return this;
   }
@@ -98,19 +130,17 @@ public class TdbAuWsResult implements Serializable {
   /**
    * The identifier of the Archival Unit
    * @return auId
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The identifier of the Archival Unit")
-
+   */
+  @javax.annotation.Nullable
   public String getAuId() {
     return auId;
   }
 
-  public void setAuId(String auId) {
+  public void setAuId(@javax.annotation.Nullable String auId) {
     this.auId = auId;
   }
 
-  public TdbAuWsResult name(String name) {
+  public TdbAuWsResult name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
@@ -118,19 +148,17 @@ public class TdbAuWsResult implements Serializable {
   /**
    * The name of the Archival Unit
    * @return name
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The name of the Archival Unit")
-
+   */
+  @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
-  public TdbAuWsResult pluginName(String pluginName) {
+  public TdbAuWsResult pluginName(@javax.annotation.Nullable String pluginName) {
     this.pluginName = pluginName;
     return this;
   }
@@ -138,19 +166,17 @@ public class TdbAuWsResult implements Serializable {
   /**
    * The name of the Archival Unit plugin
    * @return pluginName
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The name of the Archival Unit plugin")
-
+   */
+  @javax.annotation.Nullable
   public String getPluginName() {
     return pluginName;
   }
 
-  public void setPluginName(String pluginName) {
+  public void setPluginName(@javax.annotation.Nullable String pluginName) {
     this.pluginName = pluginName;
   }
 
-  public TdbAuWsResult tdbTitle(TdbTitleWsResult tdbTitle) {
+  public TdbAuWsResult tdbTitle(@javax.annotation.Nullable TdbTitleWsResult tdbTitle) {
     this.tdbTitle = tdbTitle;
     return this;
   }
@@ -158,19 +184,17 @@ public class TdbAuWsResult implements Serializable {
   /**
    * Get tdbTitle
    * @return tdbTitle
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
+   */
+  @javax.annotation.Nullable
   public TdbTitleWsResult getTdbTitle() {
     return tdbTitle;
   }
 
-  public void setTdbTitle(TdbTitleWsResult tdbTitle) {
+  public void setTdbTitle(@javax.annotation.Nullable TdbTitleWsResult tdbTitle) {
     this.tdbTitle = tdbTitle;
   }
 
-  public TdbAuWsResult tdbPublisher(TdbPublisherWsResult tdbPublisher) {
+  public TdbAuWsResult tdbPublisher(@javax.annotation.Nullable TdbPublisherWsResult tdbPublisher) {
     this.tdbPublisher = tdbPublisher;
     return this;
   }
@@ -178,19 +202,17 @@ public class TdbAuWsResult implements Serializable {
   /**
    * Get tdbPublisher
    * @return tdbPublisher
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
+   */
+  @javax.annotation.Nullable
   public TdbPublisherWsResult getTdbPublisher() {
     return tdbPublisher;
   }
 
-  public void setTdbPublisher(TdbPublisherWsResult tdbPublisher) {
+  public void setTdbPublisher(@javax.annotation.Nullable TdbPublisherWsResult tdbPublisher) {
     this.tdbPublisher = tdbPublisher;
   }
 
-  public TdbAuWsResult down(Boolean down) {
+  public TdbAuWsResult down(@javax.annotation.Nullable Boolean down) {
     this.down = down;
     return this;
   }
@@ -198,21 +220,17 @@ public class TdbAuWsResult implements Serializable {
   /**
    * An indication of whether the AU is marked as down or not
    * @return down
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(
-      required = true, value = "An indication of whether the AU is marked as down or not")
-
-  public Boolean
-  getDown() {
+   */
+  @javax.annotation.Nullable
+  public Boolean getDown() {
     return down;
   }
 
-  public void setDown(Boolean down) {
+  public void setDown(@javax.annotation.Nullable Boolean down) {
     this.down = down;
   }
 
-  public TdbAuWsResult active(Boolean active) {
+  public TdbAuWsResult active(@javax.annotation.Nullable Boolean active) {
     this.active = active;
     return this;
   }
@@ -220,24 +238,25 @@ public class TdbAuWsResult implements Serializable {
   /**
    * An indication of whether the AU is active or not
    * @return active
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An indication of whether the AU is active or not")
-
+   */
+  @javax.annotation.Nullable
   public Boolean getActive() {
     return active;
   }
 
-  public void setActive(Boolean active) {
+  public void setActive(@javax.annotation.Nullable Boolean active) {
     this.active = active;
   }
 
-  public TdbAuWsResult params(Map<String, String> params) {
+  public TdbAuWsResult params(@javax.annotation.Nullable Map<String, String> params) {
     this.params = params;
     return this;
   }
 
   public TdbAuWsResult putParamsItem(String key, String paramsItem) {
+    if (this.params == null) {
+      this.params = new HashMap<>();
+    }
     this.params.put(key, paramsItem);
     return this;
   }
@@ -245,24 +264,25 @@ public class TdbAuWsResult implements Serializable {
   /**
    * The map of Archival Unit parameters
    * @return params
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The map of Archival Unit parameters")
-
+   */
+  @javax.annotation.Nullable
   public Map<String, String> getParams() {
     return params;
   }
 
-  public void setParams(Map<String, String> params) {
+  public void setParams(@javax.annotation.Nullable Map<String, String> params) {
     this.params = params;
   }
 
-  public TdbAuWsResult attrs(Map<String, String> attrs) {
+  public TdbAuWsResult attrs(@javax.annotation.Nullable Map<String, String> attrs) {
     this.attrs = attrs;
     return this;
   }
 
   public TdbAuWsResult putAttrsItem(String key, String attrsItem) {
+    if (this.attrs == null) {
+      this.attrs = new HashMap<>();
+    }
     this.attrs.put(key, attrsItem);
     return this;
   }
@@ -270,24 +290,25 @@ public class TdbAuWsResult implements Serializable {
   /**
    * The map of Archival Unit attributes
    * @return attrs
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The map of Archival Unit attributes")
-
+   */
+  @javax.annotation.Nullable
   public Map<String, String> getAttrs() {
     return attrs;
   }
 
-  public void setAttrs(Map<String, String> attrs) {
+  public void setAttrs(@javax.annotation.Nullable Map<String, String> attrs) {
     this.attrs = attrs;
   }
 
-  public TdbAuWsResult props(Map<String, String> props) {
+  public TdbAuWsResult props(@javax.annotation.Nullable Map<String, String> props) {
     this.props = props;
     return this;
   }
 
   public TdbAuWsResult putPropsItem(String key, String propsItem) {
+    if (this.props == null) {
+      this.props = new HashMap<>();
+    }
     this.props.put(key, propsItem);
     return this;
   }
@@ -295,15 +316,13 @@ public class TdbAuWsResult implements Serializable {
   /**
    * The map of Archival Unit properties
    * @return props
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The map of Archival Unit properties")
-
+   */
+  @javax.annotation.Nullable
   public Map<String, String> getProps() {
     return props;
   }
 
-  public void setProps(Map<String, String> props) {
+  public void setProps(@javax.annotation.Nullable Map<String, String> props) {
     this.props = props;
   }
 
@@ -361,5 +380,120 @@ public class TdbAuWsResult implements Serializable {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>(Arrays.asList("auId", "name", "pluginName", "tdbTitle",
+        "tdbPublisher", "down", "active", "params", "attrs", "props"));
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>(0);
+  }
+
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to TdbAuWsResult
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+    if (jsonElement == null) {
+      if (!TdbAuWsResult.openapiRequiredFields
+              .isEmpty()) { // has required fields but JSON element is null
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The required field(s) %s in TdbAuWsResult is not found in the empty JSON string",
+            TdbAuWsResult.openapiRequiredFields.toString()));
+      }
+    }
+
+    Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+    // check to see if the JSON string contains additional fields
+    for (Map.Entry<String, JsonElement> entry : entries) {
+      if (!TdbAuWsResult.openapiFields.contains(entry.getKey())) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The field `%s` in the JSON string is not defined in the `TdbAuWsResult` properties. "
+            + "JSON: %s",
+            entry.getKey(), jsonElement.toString()));
+      }
+    }
+    JsonObject jsonObj = jsonElement.getAsJsonObject();
+    if ((jsonObj.get("auId") != null && !jsonObj.get("auId").isJsonNull())
+        && !jsonObj.get("auId").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `auId` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("auId").toString()));
+    }
+    if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull())
+        && !jsonObj.get("name").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `name` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("name").toString()));
+    }
+    if ((jsonObj.get("pluginName") != null && !jsonObj.get("pluginName").isJsonNull())
+        && !jsonObj.get("pluginName").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `pluginName` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("pluginName").toString()));
+    }
+    // validate the optional field `tdbTitle`
+    if (jsonObj.get("tdbTitle") != null && !jsonObj.get("tdbTitle").isJsonNull()) {
+      TdbTitleWsResult.validateJsonElement(jsonObj.get("tdbTitle"));
+    }
+    // validate the optional field `tdbPublisher`
+    if (jsonObj.get("tdbPublisher") != null && !jsonObj.get("tdbPublisher").isJsonNull()) {
+      TdbPublisherWsResult.validateJsonElement(jsonObj.get("tdbPublisher"));
+    }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+      if (!TdbAuWsResult.class.isAssignableFrom(type.getRawType())) {
+        return null; // this class only serializes 'TdbAuWsResult' and its subtypes
+      }
+      final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+      final TypeAdapter<TdbAuWsResult> thisAdapter =
+          gson.getDelegateAdapter(this, TypeToken.get(TdbAuWsResult.class));
+
+      return (TypeAdapter<T>) new TypeAdapter<TdbAuWsResult>() {
+        @Override
+        public void write(JsonWriter out, TdbAuWsResult value) throws IOException {
+          JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+          elementAdapter.write(out, obj);
+        }
+
+        @Override
+        public TdbAuWsResult read(JsonReader in) throws IOException {
+          JsonElement jsonElement = elementAdapter.read(in);
+          validateJsonElement(jsonElement);
+          return thisAdapter.fromJsonTree(jsonElement);
+        }
+      }.nullSafe();
+    }
+  }
+
+  /**
+   * Create an instance of TdbAuWsResult given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of TdbAuWsResult
+   * @throws IOException if the JSON string is invalid with respect to TdbAuWsResult
+   */
+  public static TdbAuWsResult fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TdbAuWsResult.class);
+  }
+
+  /**
+   * Convert an instance of TdbAuWsResult to an JSON string
+   *
+   * @return JSON string
+   */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }

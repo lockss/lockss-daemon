@@ -61,7 +61,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.io.Serializable;
-import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -80,38 +79,46 @@ public class ArtifactProperties implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_NAMESPACE = "namespace";
-  @SerializedName(SERIALIZED_NAME_NAMESPACE) private String namespace = "lockss";
+  @SerializedName(SERIALIZED_NAME_NAMESPACE)
+  @javax.annotation.Nullable
+  private String namespace = "lockss";
 
   public static final String SERIALIZED_NAME_UUID = "uuid";
-  @SerializedName(SERIALIZED_NAME_UUID) private String uuid;
+  @SerializedName(SERIALIZED_NAME_UUID) @javax.annotation.Nullable private String uuid;
 
   public static final String SERIALIZED_NAME_AUID = "auid";
-  @SerializedName(SERIALIZED_NAME_AUID) private String auid;
+  @SerializedName(SERIALIZED_NAME_AUID) @javax.annotation.Nullable private String auid;
 
   public static final String SERIALIZED_NAME_URI = "uri";
-  @SerializedName(SERIALIZED_NAME_URI) private String uri;
+  @SerializedName(SERIALIZED_NAME_URI) @javax.annotation.Nullable private String uri;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION) private Integer version;
+  @SerializedName(SERIALIZED_NAME_VERSION) @javax.annotation.Nullable private Integer version;
 
   public static final String SERIALIZED_NAME_CONTENT_LENGTH = "contentLength";
-  @SerializedName(SERIALIZED_NAME_CONTENT_LENGTH) private Long contentLength;
+  @SerializedName(SERIALIZED_NAME_CONTENT_LENGTH)
+  @javax.annotation.Nullable
+  private Long contentLength;
 
   public static final String SERIALIZED_NAME_CONTENT_DIGEST = "contentDigest";
-  @SerializedName(SERIALIZED_NAME_CONTENT_DIGEST) private String contentDigest;
+  @SerializedName(SERIALIZED_NAME_CONTENT_DIGEST)
+  @javax.annotation.Nullable
+  private String contentDigest;
 
   public static final String SERIALIZED_NAME_COLLECTION_DATE = "collectionDate";
-  @SerializedName(SERIALIZED_NAME_COLLECTION_DATE) private Long collectionDate;
+  @SerializedName(SERIALIZED_NAME_COLLECTION_DATE)
+  @javax.annotation.Nullable
+  private Long collectionDate;
 
   public static final String SERIALIZED_NAME_STORE_DATE = "storeDate";
-  @SerializedName(SERIALIZED_NAME_STORE_DATE) private Long storeDate;
+  @SerializedName(SERIALIZED_NAME_STORE_DATE) @javax.annotation.Nullable private Long storeDate;
 
   public static final String SERIALIZED_NAME_STATE = "state";
-  @SerializedName(SERIALIZED_NAME_STATE) private String state;
+  @SerializedName(SERIALIZED_NAME_STATE) @javax.annotation.Nullable private String state;
 
   public ArtifactProperties() {}
 
-  public ArtifactProperties namespace(String namespace) {
+  public ArtifactProperties namespace(@javax.annotation.Nullable String namespace) {
     this.namespace = namespace;
     return this;
   }
@@ -126,11 +133,11 @@ public class ArtifactProperties implements Serializable {
     return namespace;
   }
 
-  public void setNamespace(String namespace) {
+  public void setNamespace(@javax.annotation.Nullable String namespace) {
     this.namespace = namespace;
   }
 
-  public ArtifactProperties uuid(String uuid) {
+  public ArtifactProperties uuid(@javax.annotation.Nullable String uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -145,11 +152,11 @@ public class ArtifactProperties implements Serializable {
     return uuid;
   }
 
-  public void setUuid(String uuid) {
+  public void setUuid(@javax.annotation.Nullable String uuid) {
     this.uuid = uuid;
   }
 
-  public ArtifactProperties auid(String auid) {
+  public ArtifactProperties auid(@javax.annotation.Nullable String auid) {
     this.auid = auid;
     return this;
   }
@@ -164,11 +171,11 @@ public class ArtifactProperties implements Serializable {
     return auid;
   }
 
-  public void setAuid(String auid) {
+  public void setAuid(@javax.annotation.Nullable String auid) {
     this.auid = auid;
   }
 
-  public ArtifactProperties uri(String uri) {
+  public ArtifactProperties uri(@javax.annotation.Nullable String uri) {
     this.uri = uri;
     return this;
   }
@@ -183,11 +190,11 @@ public class ArtifactProperties implements Serializable {
     return uri;
   }
 
-  public void setUri(String uri) {
+  public void setUri(@javax.annotation.Nullable String uri) {
     this.uri = uri;
   }
 
-  public ArtifactProperties version(Integer version) {
+  public ArtifactProperties version(@javax.annotation.Nullable Integer version) {
     this.version = version;
     return this;
   }
@@ -195,18 +202,18 @@ public class ArtifactProperties implements Serializable {
   /**
    * Get version
    * @return version
-   **/
+   */
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
   public Integer getVersion() {
     return version;
   }
 
-  public void setVersion(Integer version) {
+  public void setVersion(@javax.annotation.Nullable Integer version) {
     this.version = version;
   }
 
-  public ArtifactProperties contentLength(Long contentLength) {
+  public ArtifactProperties contentLength(@javax.annotation.Nullable Long contentLength) {
     this.contentLength = contentLength;
     return this;
   }
@@ -221,11 +228,11 @@ public class ArtifactProperties implements Serializable {
     return contentLength;
   }
 
-  public void setContentLength(Long contentLength) {
+  public void setContentLength(@javax.annotation.Nullable Long contentLength) {
     this.contentLength = contentLength;
   }
 
-  public ArtifactProperties contentDigest(String contentDigest) {
+  public ArtifactProperties contentDigest(@javax.annotation.Nullable String contentDigest) {
     this.contentDigest = contentDigest;
     return this;
   }
@@ -240,11 +247,11 @@ public class ArtifactProperties implements Serializable {
     return contentDigest;
   }
 
-  public void setContentDigest(String contentDigest) {
+  public void setContentDigest(@javax.annotation.Nullable String contentDigest) {
     this.contentDigest = contentDigest;
   }
 
-  public ArtifactProperties collectionDate(Long collectionDate) {
+  public ArtifactProperties collectionDate(@javax.annotation.Nullable Long collectionDate) {
     this.collectionDate = collectionDate;
     return this;
   }
@@ -259,11 +266,11 @@ public class ArtifactProperties implements Serializable {
     return collectionDate;
   }
 
-  public void setCollectionDate(Long collectionDate) {
+  public void setCollectionDate(@javax.annotation.Nullable Long collectionDate) {
     this.collectionDate = collectionDate;
   }
 
-  public ArtifactProperties storeDate(Long storeDate) {
+  public ArtifactProperties storeDate(@javax.annotation.Nullable Long storeDate) {
     this.storeDate = storeDate;
     return this;
   }
@@ -277,11 +284,11 @@ public class ArtifactProperties implements Serializable {
     return storeDate;
   }
 
-  public void setStoreDate(Long storeDate) {
+  public void setStoreDate(@javax.annotation.Nullable Long storeDate) {
     this.storeDate = storeDate;
   }
 
-  public ArtifactProperties state(String state) {
+  public ArtifactProperties state(@javax.annotation.Nullable String state) {
     this.state = state;
     return this;
   }
@@ -295,7 +302,7 @@ public class ArtifactProperties implements Serializable {
     return state;
   }
 
-  public void setState(String state) {
+  public void setState(@javax.annotation.Nullable String state) {
     this.state = state;
   }
 
@@ -373,7 +380,7 @@ public class ArtifactProperties implements Serializable {
     openapiFields.add("state");
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(0);
   }
 
   /**

@@ -119,8 +119,8 @@ public class TestRsModelSerialization extends LockssTestCase {
   }
 
   public void testArtifact_minimalFields() throws Exception {
-    Artifact original = new Artifact();
-    original.auid("minimal-artifact");
+    Artifact original = createTestArtifact("lockss", "minimal-artifact");
+    original.setAuid("minimal-artifact");
     original.setUri("http://example.com/minimal");
 
     String json = JSON.serialize(original);
@@ -131,8 +131,8 @@ public class TestRsModelSerialization extends LockssTestCase {
   }
 
   public void testArtifact_gsonToJackson() throws Exception {
-    Artifact original = new Artifact();
-    original.auid("test-123");
+    Artifact original = createTestArtifact("lockss", "test");
+    original.setAuid("test-123");
     original.setVersion(1);
     original.setCommitted(false);
 
@@ -153,20 +153,20 @@ public class TestRsModelSerialization extends LockssTestCase {
 
     PageInfo pageInfo = new PageInfo();
     pageInfo.setTotalCount(100);
-    pageInfo.setResultsPerPage(10);
+    pageInfo.setItemsInPage(10);
     pageInfo.setContinuationToken("next-page-token");
     pageInfo.setCurLink("/artifacts?page=1");
     pageInfo.setNextLink("/artifacts?page=2");
     original.setPageInfo(pageInfo);
 
     List<Artifact> artifacts = new ArrayList<Artifact>();
-    Artifact artifact1 = new Artifact();
-    artifact1.auid("art-1");
+    Artifact artifact1 = createTestArtifact("lockss", "art");
+    artifact1.setAuid("art-1");
     artifact1.setUri("http://example.com/1");
     artifacts.add(artifact1);
 
-    Artifact artifact2 = new Artifact();
-    artifact2.auid("art-2");
+    Artifact artifact2 = createTestArtifact("lockss", "art");
+    artifact2.setAuid("art-2");
     artifact2.setUri("http://example.com/2");
     artifacts.add(artifact2);
 
@@ -182,8 +182,8 @@ public class TestRsModelSerialization extends LockssTestCase {
       original.getPageInfo().getTotalCount(),
       deserialized.getPageInfo().getTotalCount());
     assertEquals("Results per page should match",
-      original.getPageInfo().getResultsPerPage(),
-      deserialized.getPageInfo().getResultsPerPage());
+      original.getPageInfo().getItemsInPage(),
+      deserialized.getPageInfo().getItemsInPage());
     assertEquals("Continuation token should match",
       original.getPageInfo().getContinuationToken(),
       deserialized.getPageInfo().getContinuationToken());
@@ -206,7 +206,7 @@ public class TestRsModelSerialization extends LockssTestCase {
 
     PageInfo pageInfo = new PageInfo();
     pageInfo.setTotalCount(0);
-    pageInfo.setResultsPerPage(10);
+    pageInfo.setItemsInPage(10);
     pageInfo.setContinuationToken("");
     pageInfo.setCurLink("/artifacts?page=1");
     pageInfo.setNextLink("");
@@ -220,7 +220,7 @@ public class TestRsModelSerialization extends LockssTestCase {
     assertEquals("Artifacts list should be empty", 0, deserialized.getArtifacts().size());
     assertNotNull("Page info should not be null", deserialized.getPageInfo());
     assertEquals("Total count should be 0", Integer.valueOf(0), deserialized.getPageInfo().getTotalCount());
-    assertEquals("Results per page should match", pageInfo.getResultsPerPage(), deserialized.getPageInfo().getResultsPerPage());
+    assertEquals("Results per page should match", pageInfo.getItemsInPage(), deserialized.getPageInfo().getItemsInPage());
     assertEquals("Continuation token should match", pageInfo.getContinuationToken(), deserialized.getPageInfo().getContinuationToken());
     assertEquals("Current link should match", pageInfo.getCurLink(), deserialized.getPageInfo().getCurLink());
     assertEquals("Next link should match", pageInfo.getNextLink(), deserialized.getPageInfo().getNextLink());
@@ -341,7 +341,7 @@ public class TestRsModelSerialization extends LockssTestCase {
   public void testPageInfo_roundTrip() throws Exception {
     PageInfo original = new PageInfo();
     original.setTotalCount(250);
-    original.setResultsPerPage(25);
+    original.setItemsInPage(25);
     original.setContinuationToken("page-token-abc");
     original.setCurLink("/api/resource?page=current");
     original.setNextLink("/api/resource?page=next");
@@ -352,7 +352,7 @@ public class TestRsModelSerialization extends LockssTestCase {
     PageInfo deserialized = JSON.deserialize(json, PageInfo.class);
     assertNotNull("Deserialized object should not be null", deserialized);
     assertEquals("Total count should match", original.getTotalCount(), deserialized.getTotalCount());
-    assertEquals("Results per page should match", original.getResultsPerPage(), deserialized.getResultsPerPage());
+    assertEquals("Results per page should match", original.getItemsInPage(), deserialized.getItemsInPage());
     assertEquals("Continuation token should match", original.getContinuationToken(), deserialized.getContinuationToken());
     assertEquals("Current link should match", original.getCurLink(), deserialized.getCurLink());
     assertEquals("Next link should match", original.getNextLink(), deserialized.getNextLink());
@@ -388,6 +388,127 @@ public class TestRsModelSerialization extends LockssTestCase {
     assertEquals("Index info should match", original.getIndexInfo(), deserialized.getIndexInfo());
   }
 
+  public void testRepositoryInfo_withStatistics() throws Exception {
+    RepositoryInfo original = createTestRepositoryInfo();
+
+    RepositoryStatistics stats = new RepositoryStatistics();
+    stats.setTimeSpentReiteratingIterators(12345L);
+    original.setRepositoryStatistics(stats);
+
+    String json = JSON.serialize(original);
+    assertNotNull("Serialized JSON should not be null", json);
+
+    RepositoryInfo deserialized = JSON.deserialize(json, RepositoryInfo.class);
+    assertNotNull("Deserialized object should not be null", deserialized);
+    assertNotNull("Repository statistics should not be null", deserialized.getRepositoryStatistics());
+    assertEquals("Time spent reiterating should match",
+      original.getRepositoryStatistics().getTimeSpentReiteratingIterators(),
+      deserialized.getRepositoryStatistics().getTimeSpentReiteratingIterators());
+  }
+
+  public void testRepositoryInfo_nullStatistics() throws Exception {
+    RepositoryInfo original = createTestRepositoryInfo();
+    original.setRepositoryStatistics(null);
+
+    String json = JSON.serialize(original);
+    RepositoryInfo deserialized = JSON.deserialize(json, RepositoryInfo.class);
+
+    assertNotNull("Deserialized object should not be null", deserialized);
+    assertNull("Repository statistics should be null", deserialized.getRepositoryStatistics());
+  }
+
+  // ============================================================================
+  // RepositoryStatistics Tests
+  // ============================================================================
+
+  public void testRepositoryStatistics_roundTrip() throws Exception {
+    RepositoryStatistics original = new RepositoryStatistics();
+    original.setTimeSpentReiteratingIterators(98765L);
+
+    String json = JSON.serialize(original);
+    assertNotNull("Serialized JSON should not be null", json);
+
+    RepositoryStatistics deserialized = JSON.deserialize(json, RepositoryStatistics.class);
+    assertNotNull("Deserialized object should not be null", deserialized);
+    assertEquals("Time spent reiterating should match",
+      original.getTimeSpentReiteratingIterators(),
+      deserialized.getTimeSpentReiteratingIterators());
+  }
+
+  public void testRepositoryStatistics_nullField() throws Exception {
+    RepositoryStatistics original = new RepositoryStatistics();
+    original.setTimeSpentReiteratingIterators(null);
+
+    String json = JSON.serialize(original);
+    RepositoryStatistics deserialized = JSON.deserialize(json, RepositoryStatistics.class);
+
+    assertNotNull("Deserialized object should not be null", deserialized);
+    assertNull("Time spent reiterating should be null", deserialized.getTimeSpentReiteratingIterators());
+  }
+
+  public void testRepositoryStatistics_zeroValue() throws Exception {
+    RepositoryStatistics original = new RepositoryStatistics();
+    original.setTimeSpentReiteratingIterators(0L);
+
+    String json = JSON.serialize(original);
+    RepositoryStatistics deserialized = JSON.deserialize(json, RepositoryStatistics.class);
+
+    assertNotNull("Deserialized object should not be null", deserialized);
+    assertEquals("Time spent reiterating should be 0", Long.valueOf(0L), deserialized.getTimeSpentReiteratingIterators());
+  }
+
+  public void testRepositoryStatistics_largeValue() throws Exception {
+    RepositoryStatistics original = new RepositoryStatistics();
+    original.setTimeSpentReiteratingIterators(Long.MAX_VALUE);
+
+    String json = JSON.serialize(original);
+    RepositoryStatistics deserialized = JSON.deserialize(json, RepositoryStatistics.class);
+
+    assertNotNull("Deserialized object should not be null", deserialized);
+    assertEquals("Time spent reiterating should match max value",
+      Long.valueOf(Long.MAX_VALUE),
+      deserialized.getTimeSpentReiteratingIterators());
+  }
+
+  public void testRepositoryStatistics_gsonToJackson() throws Exception {
+    RepositoryStatistics original = new RepositoryStatistics();
+    original.setTimeSpentReiteratingIterators(54321L);
+
+    String gsonJson = JSON.serialize(original);
+    RepositoryStatistics jacksonParsed = jackson.readValue(gsonJson, RepositoryStatistics.class);
+
+    assertEquals("Time spent reiterating should match",
+      original.getTimeSpentReiteratingIterators(),
+      jacksonParsed.getTimeSpentReiteratingIterators());
+  }
+
+  public void testRepositoryStatistics_jacksonToGson() throws Exception {
+    RepositoryStatistics original = new RepositoryStatistics();
+    original.setTimeSpentReiteratingIterators(11111L);
+
+    String jacksonJson = jackson.writeValueAsString(original);
+    RepositoryStatistics gsonParsed = JSON.deserialize(jacksonJson, RepositoryStatistics.class);
+
+    assertEquals("Time spent reiterating should match",
+      original.getTimeSpentReiteratingIterators(),
+      gsonParsed.getTimeSpentReiteratingIterators());
+  }
+
+  public void testRepositoryStatistics_equalsAndHashCode() throws Exception {
+    RepositoryStatistics stats1 = new RepositoryStatistics();
+    stats1.setTimeSpentReiteratingIterators(1000L);
+
+    RepositoryStatistics stats2 = new RepositoryStatistics();
+    stats2.setTimeSpentReiteratingIterators(1000L);
+
+    RepositoryStatistics stats3 = new RepositoryStatistics();
+    stats3.setTimeSpentReiteratingIterators(2000L);
+
+    assertEquals("Equal objects should be equal", stats1, stats2);
+    assertEquals("Equal objects should have same hash code", stats1.hashCode(), stats2.hashCode());
+    assertFalse("Different objects should not be equal", stats1.equals(stats3));
+  }
+
 
   // ============================================================================
   // StorageInfo Tests
@@ -402,8 +523,8 @@ public class TestRsModelSerialization extends LockssTestCase {
     StorageInfo deserialized = JSON.deserialize(json, StorageInfo.class);
     assertNotNull("Deserialized object should not be null", deserialized);
     assertEquals("Name should match", original.getName(), deserialized.getName());
-    assertEquals("Used space should match", original.getUsed(), deserialized.getUsed());
-    assertEquals("Available space should match", original.getAvail(), deserialized.getAvail());
+    assertEquals("Used space should match", original.getUsedKB(), deserialized.getUsedKB());
+    assertEquals("Available space should match", original.getAvailKB(), deserialized.getAvailKB());
     assertEquals("Percent used should match", original.getPercentUsed(), deserialized.getPercentUsed());
     assertEquals("Percent used string should match", original.getPercentUsedString(), deserialized.getPercentUsedString());
     assertEquals("Type should match", original.getType(), deserialized.getType());
@@ -411,28 +532,28 @@ public class TestRsModelSerialization extends LockssTestCase {
 
   public void testStorageInfo_fullDisk() throws Exception {
     StorageInfo original = createTestStorageInfo(new Random());
-    original.setAvail(0L);
+    original.setAvailKB(0L);
     original.setPercentUsed(100.0);
     original.setPercentUsedString("100%");
     String json = JSON.serialize(original);
     StorageInfo deserialized = JSON.deserialize(json, StorageInfo.class);
 
-    assertEquals("Used space should match", original.getUsed(), deserialized.getUsed());
-    assertEquals("Available space should be 0", Long.valueOf(0L), deserialized.getAvail());
+    assertEquals("Used space should match", original.getUsedKB(), deserialized.getUsedKB());
+    assertEquals("Available space should be 0", Long.valueOf(0L), deserialized.getAvailKB());
     assertEquals("Percent used should be 100%", Double.valueOf(100.0), deserialized.getPercentUsed());
   }
 
   public void testStorageInfo_gsonToJackson() throws Exception {
-    StorageInfo original = new StorageInfo();
-    original.setUsed(1000000L);
-    original.setAvail(9000000L);
+    StorageInfo original = createTestStorageInfo(new Random());
+    original.setUsedKB(1000000L);
+    original.setAvailKB(9000000L);
     original.setPercentUsed(10.0);
 
     String gsonJson = JSON.serialize(original);
     StorageInfo jacksonParsed = jackson.readValue(gsonJson, StorageInfo.class);
 
-    assertEquals("Used space should match", original.getUsed(), jacksonParsed.getUsed());
-    assertEquals("Available space should match", original.getAvail(), jacksonParsed.getAvail());
+    assertEquals("Used space should match", original.getUsedKB(), jacksonParsed.getUsedKB());
+    assertEquals("Available space should match", original.getAvailKB(), jacksonParsed.getAvailKB());
     assertEquals("Percent used should match", original.getPercentUsed(), jacksonParsed.getPercentUsed());
   }
 
@@ -503,7 +624,7 @@ public class TestRsModelSerialization extends LockssTestCase {
     apiStatus.setServiceName("repository");
     apiStatus.setReadyTime(System.currentTimeMillis() - random.nextInt(3600000)); // Ready within last hour
     apiStatus.setReason("Service started successfully");
-    apiStatus.setPluginsReady(true);
+    apiStatus.setReady(true);
 
     return apiStatus;
   }
@@ -517,7 +638,7 @@ public class TestRsModelSerialization extends LockssTestCase {
     int currentPage = random.nextInt(10) + 1;
 
     pageInfo.setTotalCount(totalCount);
-    pageInfo.setResultsPerPage(resultsPerPage);
+    pageInfo.setItemsInPage(resultsPerPage);
     pageInfo.setContinuationToken("token-" + UUID.randomUUID().toString());
     pageInfo.setCurLink("/api/artifacts?page=" + currentPage);
     pageInfo.setNextLink("/api/artifacts?page=" + (currentPage + 1));
@@ -543,13 +664,15 @@ public class TestRsModelSerialization extends LockssTestCase {
     StorageInfo indexInfo = new StorageInfo();
     indexInfo.setType("solr");
     indexInfo.setName("primary-index");
+    indexInfo.setPath("/var/solr");
+    indexInfo.setComponents(new ArrayList<StorageInfo>());
     long indexSize = 10000000000L; // 10 GB
     long indexUsed = random.nextInt(8) * 1000000000L; // Random used space (0-8 GB)
     long indexAvail = indexSize - indexUsed;
     double indexPercentUsed = (indexUsed * 100.0) / indexSize;
-    indexInfo.setSize(indexSize);
-    indexInfo.setUsed(indexUsed);
-    indexInfo.setAvail(indexAvail);
+    indexInfo.setSizeKB(indexSize);
+    indexInfo.setUsedKB(indexUsed);
+    indexInfo.setAvailKB(indexAvail);
     indexInfo.setPercentUsed(indexPercentUsed);
     indexInfo.setPercentUsedString(String.format("%.1f%%", indexPercentUsed));
     return indexInfo;
@@ -559,13 +682,15 @@ public class TestRsModelSerialization extends LockssTestCase {
     StorageInfo storeInfo = new StorageInfo();
     storeInfo.setType("filesystem");
     storeInfo.setName("primary-store");
+    storeInfo.setPath("/var/repo");
+    storeInfo.setComponents(new ArrayList<StorageInfo>());
     long storeSize = 100000000000L; // 100 GB
     long storeUsed = random.nextInt(80) * 1000000000L; // Random used space (0-80 GB)
     long storeAvail = storeSize - storeUsed;
     double storePercentUsed = (storeUsed * 100.0) / storeSize;
-    storeInfo.setSize(storeSize);
-    storeInfo.setUsed(storeUsed);
-    storeInfo.setAvail(storeAvail);
+    storeInfo.setSizeKB(storeSize);
+    storeInfo.setUsedKB(storeUsed);
+    storeInfo.setAvailKB(storeAvail);
     storeInfo.setPercentUsed(storePercentUsed);
     storeInfo.setPercentUsedString(String.format("%.1f%%", storePercentUsed));
     return storeInfo;

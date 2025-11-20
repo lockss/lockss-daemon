@@ -61,7 +61,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.io.Serializable;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -83,14 +82,16 @@ public class AuidPageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_AUIDS = "auids";
-  @SerializedName(SERIALIZED_NAME_AUIDS) private List<String> auids = new ArrayList<>();
+  @SerializedName(SERIALIZED_NAME_AUIDS)
+  @javax.annotation.Nonnull
+  private List<String> auids = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PAGE_INFO = "pageInfo";
-  @SerializedName(SERIALIZED_NAME_PAGE_INFO) private PageInfo pageInfo;
+  @SerializedName(SERIALIZED_NAME_PAGE_INFO) @javax.annotation.Nonnull private PageInfo pageInfo;
 
   public AuidPageInfo() {}
 
-  public AuidPageInfo auids(List<String> auids) {
+  public AuidPageInfo auids(@javax.annotation.Nonnull List<String> auids) {
     this.auids = auids;
     return this;
   }
@@ -111,11 +112,11 @@ public class AuidPageInfo implements Serializable {
     return auids;
   }
 
-  public void setAuids(List<String> auids) {
+  public void setAuids(@javax.annotation.Nonnull List<String> auids) {
     this.auids = auids;
   }
 
-  public AuidPageInfo pageInfo(PageInfo pageInfo) {
+  public AuidPageInfo pageInfo(@javax.annotation.Nonnull PageInfo pageInfo) {
     this.pageInfo = pageInfo;
     return this;
   }
@@ -131,7 +132,7 @@ public class AuidPageInfo implements Serializable {
     return pageInfo;
   }
 
-  public void setPageInfo(PageInfo pageInfo) {
+  public void setPageInfo(@javax.annotation.Nonnull PageInfo pageInfo) {
     this.pageInfo = pageInfo;
   }
 

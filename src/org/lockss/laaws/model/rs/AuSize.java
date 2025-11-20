@@ -65,6 +65,8 @@ import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
@@ -79,17 +81,23 @@ public class AuSize implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_TOTAL_LATEST_VERSIONS = "totalLatestVersions";
-  @SerializedName(SERIALIZED_NAME_TOTAL_LATEST_VERSIONS) private Long totalLatestVersions;
+  @SerializedName(SERIALIZED_NAME_TOTAL_LATEST_VERSIONS)
+  @javax.annotation.Nullable
+  private Long totalLatestVersions;
 
   public static final String SERIALIZED_NAME_TOTAL_ALL_VERSIONS = "totalAllVersions";
-  @SerializedName(SERIALIZED_NAME_TOTAL_ALL_VERSIONS) private Long totalAllVersions;
+  @SerializedName(SERIALIZED_NAME_TOTAL_ALL_VERSIONS)
+  @javax.annotation.Nullable
+  private Long totalAllVersions;
 
   public static final String SERIALIZED_NAME_TOTAL_WARC_SIZE = "totalWarcSize";
-  @SerializedName(SERIALIZED_NAME_TOTAL_WARC_SIZE) private Long totalWarcSize;
+  @SerializedName(SERIALIZED_NAME_TOTAL_WARC_SIZE)
+  @javax.annotation.Nullable
+  private Long totalWarcSize;
 
   public AuSize() {}
 
-  public AuSize totalLatestVersions(Long totalLatestVersions) {
+  public AuSize totalLatestVersions(@javax.annotation.Nullable Long totalLatestVersions) {
     this.totalLatestVersions = totalLatestVersions;
     return this;
   }
@@ -99,37 +107,33 @@ public class AuSize implements Serializable {
    * @return totalLatestVersions
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public Long getTotalLatestVersions() {
     return totalLatestVersions;
   }
 
-  public void setTotalLatestVersions(Long totalLatestVersions) {
+  public void setTotalLatestVersions(@javax.annotation.Nullable Long totalLatestVersions) {
     this.totalLatestVersions = totalLatestVersions;
   }
 
-  public AuSize totalAllVersions(Long totalAllVersions) {
+  public AuSize totalAllVersions(@javax.annotation.Nullable Long totalAllVersions) {
     this.totalAllVersions = totalAllVersions;
     return this;
   }
 
   /**
-   * Get totalAllVersions
+   * Total content size of all versions
    * @return totalAllVersions
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public Long getTotalAllVersions() {
     return totalAllVersions;
   }
 
-  public void setTotalAllVersions(Long totalAllVersions) {
+  public void setTotalAllVersions(@javax.annotation.Nullable Long totalAllVersions) {
     this.totalAllVersions = totalAllVersions;
   }
 
-  public AuSize totalWarcSize(Long totalWarcSize) {
+  public AuSize totalWarcSize(@javax.annotation.Nullable Long totalWarcSize) {
     this.totalWarcSize = totalWarcSize;
     return this;
   }
@@ -139,13 +143,11 @@ public class AuSize implements Serializable {
    * @return totalWarcSize
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public Long getTotalWarcSize() {
     return totalWarcSize;
   }
 
-  public void setTotalWarcSize(Long totalWarcSize) {
+  public void setTotalWarcSize(@javax.annotation.Nullable Long totalWarcSize) {
     this.totalWarcSize = totalWarcSize;
   }
 
@@ -203,7 +205,8 @@ public class AuSize implements Serializable {
     openapiFields.add("totalWarcSize");
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields = new HashSet<String>(
+        Arrays.asList("totalLatestVersions", "totalAllVersions", "totalWarcSize"));
   }
 
   /**
@@ -228,6 +231,15 @@ public class AuSize implements Serializable {
         throw new IllegalArgumentException(String.format(
             "The field `%s` in the JSON string is not defined in the `AuSize` properties. JSON: %s",
             entry.getKey(), jsonObj.toString()));
+      }
+    }
+
+    // check to make sure all required properties/fields are present in the JSON string
+    for (String requiredField : AuSize.openapiRequiredFields) {
+      if (jsonObj.get(requiredField) == null) {
+        throw new IllegalArgumentException(String.format(
+            "The required field `%s` is not found in the JSON string: %s", requiredField,
+          jsonObj.toString()));
       }
     }
   }

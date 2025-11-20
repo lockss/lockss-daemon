@@ -57,14 +57,13 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.io.Serializable;
-import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
@@ -74,41 +73,113 @@ import org.lockss.laaws.client.JSON;
 /**
  * The status information of the service
  */
-@ApiModel(description = "The status information of the service")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ApiStatus implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
-  @SerializedName(SERIALIZED_NAME_API_VERSION) private String apiVersion;
+  @SerializedName(SERIALIZED_NAME_API_VERSION) @javax.annotation.Nonnull private String apiVersion;
 
   public static final String SERIALIZED_NAME_COMPONENT_NAME = "componentName";
-  @SerializedName(SERIALIZED_NAME_COMPONENT_NAME) private String componentName;
+  @SerializedName(SERIALIZED_NAME_COMPONENT_NAME)
+  @javax.annotation.Nullable
+  private String componentName;
 
   public static final String SERIALIZED_NAME_COMPONENT_VERSION = "componentVersion";
-  @SerializedName(SERIALIZED_NAME_COMPONENT_VERSION) private String componentVersion;
+  @SerializedName(SERIALIZED_NAME_COMPONENT_VERSION)
+  @javax.annotation.Nullable
+  private String componentVersion;
 
   public static final String SERIALIZED_NAME_LOCKSS_VERSION = "lockssVersion";
-  @SerializedName(SERIALIZED_NAME_LOCKSS_VERSION) private String lockssVersion;
+  @SerializedName(SERIALIZED_NAME_LOCKSS_VERSION)
+  @javax.annotation.Nullable
+  private String lockssVersion;
 
   public static final String SERIALIZED_NAME_READY = "ready";
-  @SerializedName(SERIALIZED_NAME_READY) private Boolean ready;
+  @SerializedName(SERIALIZED_NAME_READY) @javax.annotation.Nonnull private Boolean ready;
 
   public static final String SERIALIZED_NAME_SERVICE_NAME = "serviceName";
-  @SerializedName(SERIALIZED_NAME_SERVICE_NAME) private String serviceName;
+  @SerializedName(SERIALIZED_NAME_SERVICE_NAME)
+  @javax.annotation.Nullable
+  private String serviceName;
 
   public static final String SERIALIZED_NAME_READY_TIME = "readyTime";
-  @SerializedName(SERIALIZED_NAME_READY_TIME) private Long readyTime;
+  @SerializedName(SERIALIZED_NAME_READY_TIME) @javax.annotation.Nullable private Long readyTime;
 
   public static final String SERIALIZED_NAME_REASON = "reason";
-  @SerializedName(SERIALIZED_NAME_REASON) private String reason;
+  @SerializedName(SERIALIZED_NAME_REASON) @javax.annotation.Nullable private String reason;
 
-  public static final String SERIALIZED_NAME_PLUGINS_READY = "pluginsReady";
-  @SerializedName(SERIALIZED_NAME_PLUGINS_READY) private Boolean pluginsReady;
+  /**
+   * Enum indicating progress of plugin/AU processing at startup.
+   */
+  @JsonAdapter(StartupStatusEnum.Adapter.class)
+  public enum StartupStatusEnum {
+    NONE("NONE"),
+
+    PLUGINS_CRAWLING("PLUGINS_CRAWLING"),
+
+    PLUGINS_COLLECTED("PLUGINS_COLLECTED"),
+
+    PLUGINS_LOADING("PLUGINS_LOADING"),
+
+    PLUGINS_LOADED("PLUGINS_LOADED"),
+
+    AUS_STARTING("AUS_STARTING"),
+
+    AUS_STARTED("AUS_STARTED");
+
+    private String value;
+
+    StartupStatusEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static StartupStatusEnum fromValue(String value) {
+      for (StartupStatusEnum b : StartupStatusEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<StartupStatusEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final StartupStatusEnum enumeration)
+          throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public StartupStatusEnum read(final JsonReader jsonReader) throws IOException {
+        String value = jsonReader.nextString();
+        return StartupStatusEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      StartupStatusEnum.fromValue(value);
+    }
+  }
+
+  public static final String SERIALIZED_NAME_STARTUP_STATUS = "startupStatus";
+  @SerializedName(SERIALIZED_NAME_STARTUP_STATUS)
+  @javax.annotation.Nullable
+  private StartupStatusEnum startupStatus;
 
   public ApiStatus() {}
 
-  public ApiStatus apiVersion(String apiVersion) {
+  public ApiStatus apiVersion(@javax.annotation.Nonnull String apiVersion) {
     this.apiVersion = apiVersion;
     return this;
   }
@@ -118,17 +189,15 @@ public class ApiStatus implements Serializable {
    * @return apiVersion
    **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The version of the API")
-
   public String getApiVersion() {
     return apiVersion;
   }
 
-  public void setApiVersion(String apiVersion) {
+  public void setApiVersion(@javax.annotation.Nonnull String apiVersion) {
     this.apiVersion = apiVersion;
   }
 
-  public ApiStatus componentName(String componentName) {
+  public ApiStatus componentName(@javax.annotation.Nullable String componentName) {
     this.componentName = componentName;
     return this;
   }
@@ -136,19 +205,17 @@ public class ApiStatus implements Serializable {
   /**
    * The name of the component
    * @return componentName
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The name of the component")
-
+   */
+  @javax.annotation.Nullable
   public String getComponentName() {
     return componentName;
   }
 
-  public void setComponentName(String componentName) {
+  public void setComponentName(@javax.annotation.Nullable String componentName) {
     this.componentName = componentName;
   }
 
-  public ApiStatus componentVersion(String componentVersion) {
+  public ApiStatus componentVersion(@javax.annotation.Nullable String componentVersion) {
     this.componentVersion = componentVersion;
     return this;
   }
@@ -156,19 +223,17 @@ public class ApiStatus implements Serializable {
   /**
    * The version of the component software
    * @return componentVersion
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The version of the component software")
-
+   */
+  @javax.annotation.Nullable
   public String getComponentVersion() {
     return componentVersion;
   }
 
-  public void setComponentVersion(String componentVersion) {
+  public void setComponentVersion(@javax.annotation.Nullable String componentVersion) {
     this.componentVersion = componentVersion;
   }
 
-  public ApiStatus lockssVersion(String lockssVersion) {
+  public ApiStatus lockssVersion(@javax.annotation.Nullable String lockssVersion) {
     this.lockssVersion = lockssVersion;
     return this;
   }
@@ -176,19 +241,17 @@ public class ApiStatus implements Serializable {
   /**
    * The version of the LOCKSS system
    * @return lockssVersion
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The version of the LOCKSS system")
-
+   */
+  @javax.annotation.Nullable
   public String getLockssVersion() {
     return lockssVersion;
   }
 
-  public void setLockssVersion(String lockssVersion) {
+  public void setLockssVersion(@javax.annotation.Nullable String lockssVersion) {
     this.lockssVersion = lockssVersion;
   }
 
-  public ApiStatus ready(Boolean ready) {
+  public ApiStatus ready(@javax.annotation.Nonnull Boolean ready) {
     this.ready = ready;
     return this;
   }
@@ -196,19 +259,17 @@ public class ApiStatus implements Serializable {
   /**
    * The indication of whether the service is available
    * @return ready
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The indication of whether the service is available")
-
   public Boolean getReady() {
     return ready;
   }
 
-  public void setReady(Boolean ready) {
+  public void setReady(@javax.annotation.Nonnull Boolean ready) {
     this.ready = ready;
   }
 
-  public ApiStatus serviceName(String serviceName) {
+  public ApiStatus serviceName(@javax.annotation.Nullable String serviceName) {
     this.serviceName = serviceName;
     return this;
   }
@@ -216,78 +277,68 @@ public class ApiStatus implements Serializable {
   /**
    * The name of the service
    * @return serviceName
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The name of the service")
-
+   */
+  @javax.annotation.Nullable
   public String getServiceName() {
     return serviceName;
   }
 
-  public void setServiceName(String serviceName) {
+  public void setServiceName(@javax.annotation.Nullable String serviceName) {
     this.serviceName = serviceName;
   }
 
-  public ApiStatus readyTime(Long readyTime) {
+  public ApiStatus readyTime(@javax.annotation.Nullable Long readyTime) {
     this.readyTime = readyTime;
     return this;
   }
 
   /**
-   * The time the service became ready.
+   * The time the service last became ready.
    * @return readyTime
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The time the service became ready.")
-
   public Long getReadyTime() {
     return readyTime;
   }
 
-  public void setReadyTime(Long readyTime) {
+  public void setReadyTime(@javax.annotation.Nullable Long readyTime) {
     this.readyTime = readyTime;
   }
 
-  public ApiStatus reason(String reason) {
+  public ApiStatus reason(@javax.annotation.Nullable String reason) {
     this.reason = reason;
     return this;
   }
 
   /**
-   * The reason this service is not ready.
+   * The reason the service isn&#39;t ready.
    * @return reason
    **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The reason this service is not ready.")
-
   public String getReason() {
     return reason;
   }
 
-  public void setReason(String reason) {
+  public void setReason(@javax.annotation.Nullable String reason) {
     this.reason = reason;
   }
 
-  public ApiStatus pluginsReady(Boolean pluginsReady) {
-    this.pluginsReady = pluginsReady;
+  public ApiStatus startupStatus(@javax.annotation.Nullable StartupStatusEnum startupStatus) {
+    this.startupStatus = startupStatus;
     return this;
   }
 
   /**
-   * An indication of whether this service has made the loadable plugins available.
-   * @return pluginsReady
-   **/
+   * Enum indicating progress of plugin/AU processing at startup.
+   * @return startupStatus
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(
-    value = "An indication of whether this service has made the loadable plugins available.")
-
-  public Boolean
-  getPluginsReady() {
-    return pluginsReady;
+  public StartupStatusEnum getStartupStatus() {
+    return startupStatus;
   }
 
-  public void setPluginsReady(Boolean pluginsReady) {
-    this.pluginsReady = pluginsReady;
+  public void setStartupStatus(@javax.annotation.Nullable StartupStatusEnum startupStatus) {
+    this.startupStatus = startupStatus;
   }
 
   @Override
@@ -307,13 +358,13 @@ public class ApiStatus implements Serializable {
       && Objects.equals(this.serviceName, apiStatus.serviceName)
       && Objects.equals(this.readyTime, apiStatus.readyTime)
       && Objects.equals(this.reason, apiStatus.reason)
-      && Objects.equals(this.pluginsReady, apiStatus.pluginsReady);
+        && Objects.equals(this.startupStatus, apiStatus.startupStatus);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(apiVersion, componentName, componentVersion, lockssVersion, ready,
-      serviceName, readyTime, reason, pluginsReady);
+        serviceName, readyTime, reason, startupStatus);
   }
 
   @Override
@@ -328,7 +379,7 @@ public class ApiStatus implements Serializable {
     sb.append("    serviceName: ").append(toIndentedString(serviceName)).append("\n");
     sb.append("    readyTime: ").append(toIndentedString(readyTime)).append("\n");
     sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
-    sb.append("    pluginsReady: ").append(toIndentedString(pluginsReady)).append("\n");
+    sb.append("    startupStatus: ").append(toIndentedString(startupStatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -358,16 +409,12 @@ public class ApiStatus implements Serializable {
     openapiFields.add("serviceName");
     openapiFields.add("readyTime");
     openapiFields.add("reason");
-    openapiFields.add("pluginsReady");
+    openapiFields.add("startupStatus");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("apiVersion");
-    openapiRequiredFields.add("componentName");
-    openapiRequiredFields.add("componentVersion");
-    openapiRequiredFields.add("lockssVersion");
     openapiRequiredFields.add("ready");
-    openapiRequiredFields.add("serviceName");
   }
 
   /**
@@ -386,15 +433,15 @@ public class ApiStatus implements Serializable {
       }
     }
 
-//     Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-//     // check to see if the JSON string contains additional fields
-//     for (Entry<String, JsonElement> entry : entries) {
-//       if (!ApiStatus.openapiFields.contains(entry.getKey())) {
-//         throw new IllegalArgumentException(String.format(
-//           "The field `%s` in the JSON string is not defined in the `ApiStatus` properties. JSON: %s",
-//           entry.getKey(), jsonObj.toString()));
-//       }
-//     }
+     Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+     // check to see if the JSON string contains additional fields
+     for (Entry<String, JsonElement> entry : entries) {
+       if (!ApiStatus.openapiFields.contains(entry.getKey())) {
+         throw new IllegalArgumentException(String.format(
+           "The field `%s` in the JSON string is not defined in the `ApiStatus` properties. JSON: %s",
+           entry.getKey(), jsonObj.toString()));
+       }
+     }
 
     // check to make sure all required properties/fields are present in the JSON string
     for (String requiredField : ApiStatus.openapiRequiredFields) {
@@ -439,6 +486,17 @@ public class ApiStatus implements Serializable {
       throw new IllegalArgumentException(String.format(
         "Expected the field `reason` to be a primitive type in the JSON string but got `%s`",
         jsonObj.get("reason").toString()));
+    }
+    if ((jsonObj.get("startupStatus") != null && !jsonObj.get("startupStatus").isJsonNull())
+        && !jsonObj.get("startupStatus").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `startupStatus` to be a primitive type in the JSON string but got "
+          + "`%s`",
+          jsonObj.get("startupStatus").toString()));
+  }
+    // validate the optional field `startupStatus`
+    if (jsonObj.get("startupStatus") != null && !jsonObj.get("startupStatus").isJsonNull()) {
+      StartupStatusEnum.validateJsonElement(jsonObj.get("startupStatus"));
     }
   }
 
