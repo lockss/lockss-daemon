@@ -42,13 +42,36 @@
 
 package org.lockss.laaws.model.cfg;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapter;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
+import org.lockss.laaws.client.JSON;
+import org.lockss.laaws.model.cfg.TdbPublisherWsResult;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * The properties of a TDB Title
@@ -59,42 +82,51 @@ public class TdbTitleWsResult implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) private String name;
+  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nullable private String name;
 
   public static final String SERIALIZED_NAME_TDB_PUBLISHER = "tdbPublisher";
-  @SerializedName(SERIALIZED_NAME_TDB_PUBLISHER) private TdbPublisherWsResult tdbPublisher;
+  @SerializedName(SERIALIZED_NAME_TDB_PUBLISHER)
+  @javax.annotation.Nullable
+  private TdbPublisherWsResult tdbPublisher;
 
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID) private String id;
+  @SerializedName(SERIALIZED_NAME_ID) @javax.annotation.Nullable private String id;
 
   public static final String SERIALIZED_NAME_PROPRIETARYID = "proprietaryid";
-  @SerializedName(SERIALIZED_NAME_PROPRIETARYID) private String proprietaryid;
+  @SerializedName(SERIALIZED_NAME_PROPRIETARYID)
+  @javax.annotation.Nullable
+  private String proprietaryid;
 
   public static final String SERIALIZED_NAME_PROPRIETARYIDS = "proprietaryids";
   @SerializedName(SERIALIZED_NAME_PROPRIETARYIDS)
+  @javax.annotation.Nullable
   private List<String> proprietaryids = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PUBLICATIONTYPE = "publicationtype";
-  @SerializedName(SERIALIZED_NAME_PUBLICATIONTYPE) private String publicationtype;
+  @SerializedName(SERIALIZED_NAME_PUBLICATIONTYPE)
+  @javax.annotation.Nullable
+  private String publicationtype;
 
   public static final String SERIALIZED_NAME_ISSN = "issn";
-  @SerializedName(SERIALIZED_NAME_ISSN) private String issn;
+  @SerializedName(SERIALIZED_NAME_ISSN) @javax.annotation.Nullable private String issn;
 
   public static final String SERIALIZED_NAME_ISSNL = "issnl";
-  @SerializedName(SERIALIZED_NAME_ISSNL) private String issnl;
+  @SerializedName(SERIALIZED_NAME_ISSNL) @javax.annotation.Nullable private String issnl;
 
   public static final String SERIALIZED_NAME_EISSN = "eissn";
-  @SerializedName(SERIALIZED_NAME_EISSN) private String eissn;
+  @SerializedName(SERIALIZED_NAME_EISSN) @javax.annotation.Nullable private String eissn;
 
   public static final String SERIALIZED_NAME_PRINTISSN = "printissn";
-  @SerializedName(SERIALIZED_NAME_PRINTISSN) private String printissn;
+  @SerializedName(SERIALIZED_NAME_PRINTISSN) @javax.annotation.Nullable private String printissn;
 
   public static final String SERIALIZED_NAME_ISSNS = "issns";
-  @SerializedName(SERIALIZED_NAME_ISSNS) private List<String> issns = new ArrayList<>();
+  @SerializedName(SERIALIZED_NAME_ISSNS)
+  @javax.annotation.Nullable
+  private List<String> issns = new ArrayList<>();
 
   public TdbTitleWsResult() {}
 
-  public TdbTitleWsResult name(String name) {
+  public TdbTitleWsResult name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
@@ -102,19 +134,18 @@ public class TdbTitleWsResult implements Serializable {
   /**
    * The name of the TDB Title
    * @return name
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The name of the TDB Title")
-
+   */
+  @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
-  public TdbTitleWsResult tdbPublisher(TdbPublisherWsResult tdbPublisher) {
+  public TdbTitleWsResult tdbPublisher(
+      @javax.annotation.Nullable TdbPublisherWsResult tdbPublisher) {
     this.tdbPublisher = tdbPublisher;
     return this;
   }
@@ -122,19 +153,17 @@ public class TdbTitleWsResult implements Serializable {
   /**
    * Get tdbPublisher
    * @return tdbPublisher
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
+   */
+  @javax.annotation.Nullable
   public TdbPublisherWsResult getTdbPublisher() {
     return tdbPublisher;
   }
 
-  public void setTdbPublisher(TdbPublisherWsResult tdbPublisher) {
+  public void setTdbPublisher(@javax.annotation.Nullable TdbPublisherWsResult tdbPublisher) {
     this.tdbPublisher = tdbPublisher;
   }
 
-  public TdbTitleWsResult id(String id) {
+  public TdbTitleWsResult id(@javax.annotation.Nullable String id) {
     this.id = id;
     return this;
   }
@@ -142,19 +171,17 @@ public class TdbTitleWsResult implements Serializable {
   /**
    * The identifier of the TDB Title
    * @return id
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The identifier of the TDB Title")
-
+   */
+  @javax.annotation.Nullable
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nullable String id) {
     this.id = id;
   }
 
-  public TdbTitleWsResult proprietaryid(String proprietaryid) {
+  public TdbTitleWsResult proprietaryid(@javax.annotation.Nullable String proprietaryid) {
     this.proprietaryid = proprietaryid;
     return this;
   }
@@ -162,24 +189,25 @@ public class TdbTitleWsResult implements Serializable {
   /**
    * The proprietary identifier of the TDB Title
    * @return proprietaryid
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The proprietary identifier of the TDB Title")
-
+   */
+  @javax.annotation.Nullable
   public String getProprietaryid() {
     return proprietaryid;
   }
 
-  public void setProprietaryid(String proprietaryid) {
+  public void setProprietaryid(@javax.annotation.Nullable String proprietaryid) {
     this.proprietaryid = proprietaryid;
   }
 
-  public TdbTitleWsResult proprietaryids(List<String> proprietaryids) {
+  public TdbTitleWsResult proprietaryids(@javax.annotation.Nullable List<String> proprietaryids) {
     this.proprietaryids = proprietaryids;
     return this;
   }
 
   public TdbTitleWsResult addProprietaryidsItem(String proprietaryidsItem) {
+    if (this.proprietaryids == null) {
+      this.proprietaryids = new ArrayList<>();
+    }
     this.proprietaryids.add(proprietaryidsItem);
     return this;
   }
@@ -187,19 +215,17 @@ public class TdbTitleWsResult implements Serializable {
   /**
    * The proprietary identifiers of the TDB Title
    * @return proprietaryids
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The proprietary identifiers of the TDB Title")
-
+   */
+  @javax.annotation.Nullable
   public List<String> getProprietaryids() {
     return proprietaryids;
   }
 
-  public void setProprietaryids(List<String> proprietaryids) {
+  public void setProprietaryids(@javax.annotation.Nullable List<String> proprietaryids) {
     this.proprietaryids = proprietaryids;
   }
 
-  public TdbTitleWsResult publicationtype(String publicationtype) {
+  public TdbTitleWsResult publicationtype(@javax.annotation.Nullable String publicationtype) {
     this.publicationtype = publicationtype;
     return this;
   }
@@ -207,19 +233,17 @@ public class TdbTitleWsResult implements Serializable {
   /**
    * The publication type of the TDB Title
    * @return publicationtype
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The publication type of the TDB Title")
-
+   */
+  @javax.annotation.Nullable
   public String getPublicationtype() {
     return publicationtype;
   }
 
-  public void setPublicationtype(String publicationtype) {
+  public void setPublicationtype(@javax.annotation.Nullable String publicationtype) {
     this.publicationtype = publicationtype;
   }
 
-  public TdbTitleWsResult issn(String issn) {
+  public TdbTitleWsResult issn(@javax.annotation.Nullable String issn) {
     this.issn = issn;
     return this;
   }
@@ -227,19 +251,17 @@ public class TdbTitleWsResult implements Serializable {
   /**
    * The ISSN of the TDB Title
    * @return issn
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The ISSN of the TDB Title")
-
+   */
+  @javax.annotation.Nullable
   public String getIssn() {
     return issn;
   }
 
-  public void setIssn(String issn) {
+  public void setIssn(@javax.annotation.Nullable String issn) {
     this.issn = issn;
   }
 
-  public TdbTitleWsResult issnl(String issnl) {
+  public TdbTitleWsResult issnl(@javax.annotation.Nullable String issnl) {
     this.issnl = issnl;
     return this;
   }
@@ -247,19 +269,17 @@ public class TdbTitleWsResult implements Serializable {
   /**
    * The ISSNL of the TDB Title
    * @return issnl
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The ISSNL of the TDB Title")
-
+   */
+  @javax.annotation.Nullable
   public String getIssnl() {
     return issnl;
   }
 
-  public void setIssnl(String issnl) {
+  public void setIssnl(@javax.annotation.Nullable String issnl) {
     this.issnl = issnl;
   }
 
-  public TdbTitleWsResult eissn(String eissn) {
+  public TdbTitleWsResult eissn(@javax.annotation.Nullable String eissn) {
     this.eissn = eissn;
     return this;
   }
@@ -267,19 +287,17 @@ public class TdbTitleWsResult implements Serializable {
   /**
    * The eISSN of the TDB Title
    * @return eissn
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The eISSN of the TDB Title")
-
+   */
+  @javax.annotation.Nullable
   public String getEissn() {
     return eissn;
   }
 
-  public void setEissn(String eissn) {
+  public void setEissn(@javax.annotation.Nullable String eissn) {
     this.eissn = eissn;
   }
 
-  public TdbTitleWsResult printissn(String printissn) {
+  public TdbTitleWsResult printissn(@javax.annotation.Nullable String printissn) {
     this.printissn = printissn;
     return this;
   }
@@ -287,24 +305,25 @@ public class TdbTitleWsResult implements Serializable {
   /**
    * The print ISSN of the TDB Title
    * @return printissn
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The print ISSN of the TDB Title")
-
+   */
+  @javax.annotation.Nullable
   public String getPrintissn() {
     return printissn;
   }
 
-  public void setPrintissn(String printissn) {
+  public void setPrintissn(@javax.annotation.Nullable String printissn) {
     this.printissn = printissn;
   }
 
-  public TdbTitleWsResult issns(List<String> issns) {
+  public TdbTitleWsResult issns(@javax.annotation.Nullable List<String> issns) {
     this.issns = issns;
     return this;
   }
 
   public TdbTitleWsResult addIssnsItem(String issnsItem) {
+    if (this.issns == null) {
+      this.issns = new ArrayList<>();
+    }
     this.issns.add(issnsItem);
     return this;
   }
@@ -312,15 +331,13 @@ public class TdbTitleWsResult implements Serializable {
   /**
    * The ISSNs of the TDB Title
    * @return issns
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The ISSNs of the TDB Title")
-
+   */
+  @javax.annotation.Nullable
   public List<String> getIssns() {
     return issns;
   }
 
-  public void setIssns(List<String> issns) {
+  public void setIssns(@javax.annotation.Nullable List<String> issns) {
     this.issns = issns;
   }
 
@@ -380,5 +397,162 @@ public class TdbTitleWsResult implements Serializable {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>(Arrays.asList("name", "tdbPublisher", "id", "proprietaryid",
+        "proprietaryids", "publicationtype", "issn", "issnl", "eissn", "printissn", "issns"));
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>(0);
+  }
+
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to TdbTitleWsResult
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+    if (jsonElement == null) {
+      if (!TdbTitleWsResult.openapiRequiredFields
+              .isEmpty()) { // has required fields but JSON element is null
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The required field(s) %s in TdbTitleWsResult is not found in the empty JSON string",
+            TdbTitleWsResult.openapiRequiredFields.toString()));
+      }
+    }
+
+    Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+    // check to see if the JSON string contains additional fields
+    for (Map.Entry<String, JsonElement> entry : entries) {
+      if (!TdbTitleWsResult.openapiFields.contains(entry.getKey())) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The field `%s` in the JSON string is not defined in the `TdbTitleWsResult` "
+            + "properties. JSON: %s",
+            entry.getKey(), jsonElement.toString()));
+      }
+    }
+    JsonObject jsonObj = jsonElement.getAsJsonObject();
+    if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull())
+        && !jsonObj.get("name").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `name` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("name").toString()));
+    }
+    // validate the optional field `tdbPublisher`
+    if (jsonObj.get("tdbPublisher") != null && !jsonObj.get("tdbPublisher").isJsonNull()) {
+      TdbPublisherWsResult.validateJsonElement(jsonObj.get("tdbPublisher"));
+    }
+    if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull())
+        && !jsonObj.get("id").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `id` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("id").toString()));
+    }
+    if ((jsonObj.get("proprietaryid") != null && !jsonObj.get("proprietaryid").isJsonNull())
+        && !jsonObj.get("proprietaryid").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `proprietaryid` to be a primitive type in the JSON string but got "
+          + "`%s`",
+          jsonObj.get("proprietaryid").toString()));
+    }
+    // ensure the optional json data is an array if present
+    if (jsonObj.get("proprietaryids") != null && !jsonObj.get("proprietaryids").isJsonNull()
+        && !jsonObj.get("proprietaryids").isJsonArray()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `proprietaryids` to be an array in the JSON string but got `%s`",
+          jsonObj.get("proprietaryids").toString()));
+    }
+    if ((jsonObj.get("publicationtype") != null && !jsonObj.get("publicationtype").isJsonNull())
+        && !jsonObj.get("publicationtype").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `publicationtype` to be a primitive type in the JSON string but got "
+          + "`%s`",
+          jsonObj.get("publicationtype").toString()));
+    }
+    if ((jsonObj.get("issn") != null && !jsonObj.get("issn").isJsonNull())
+        && !jsonObj.get("issn").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `issn` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("issn").toString()));
+    }
+    if ((jsonObj.get("issnl") != null && !jsonObj.get("issnl").isJsonNull())
+        && !jsonObj.get("issnl").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `issnl` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("issnl").toString()));
+    }
+    if ((jsonObj.get("eissn") != null && !jsonObj.get("eissn").isJsonNull())
+        && !jsonObj.get("eissn").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `eissn` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("eissn").toString()));
+    }
+    if ((jsonObj.get("printissn") != null && !jsonObj.get("printissn").isJsonNull())
+        && !jsonObj.get("printissn").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `printissn` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("printissn").toString()));
+    }
+    // ensure the optional json data is an array if present
+    if (jsonObj.get("issns") != null && !jsonObj.get("issns").isJsonNull()
+        && !jsonObj.get("issns").isJsonArray()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `issns` to be an array in the JSON string but got `%s`",
+          jsonObj.get("issns").toString()));
+    }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+      if (!TdbTitleWsResult.class.isAssignableFrom(type.getRawType())) {
+        return null; // this class only serializes 'TdbTitleWsResult' and its subtypes
+      }
+      final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+      final TypeAdapter<TdbTitleWsResult> thisAdapter =
+          gson.getDelegateAdapter(this, TypeToken.get(TdbTitleWsResult.class));
+
+      return (TypeAdapter<T>) new TypeAdapter<TdbTitleWsResult>() {
+        @Override
+        public void write(JsonWriter out, TdbTitleWsResult value) throws IOException {
+          JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+          elementAdapter.write(out, obj);
+        }
+
+        @Override
+        public TdbTitleWsResult read(JsonReader in) throws IOException {
+          JsonElement jsonElement = elementAdapter.read(in);
+          validateJsonElement(jsonElement);
+          return thisAdapter.fromJsonTree(jsonElement);
+        }
+      }.nullSafe();
+    }
+  }
+
+  /**
+   * Create an instance of TdbTitleWsResult given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of TdbTitleWsResult
+   * @throws IOException if the JSON string is invalid with respect to TdbTitleWsResult
+   */
+  public static TdbTitleWsResult fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TdbTitleWsResult.class);
+  }
+
+  /**
+   * Convert an instance of TdbTitleWsResult to an JSON string
+   *
+   * @return JSON string
+   */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }

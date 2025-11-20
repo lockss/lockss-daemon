@@ -57,14 +57,13 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.io.Serializable;
-import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
@@ -74,35 +73,46 @@ import org.lockss.laaws.client.JSON;
 /**
  * Information about a repository storage area
  */
-@ApiModel(description = "Information about a repository storage area")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StorageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE) private String type;
+  @SerializedName(SERIALIZED_NAME_TYPE) @javax.annotation.Nonnull private String type;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) private String name;
+  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nonnull private String name;
 
-  public static final String SERIALIZED_NAME_SIZE = "size";
-  @SerializedName(SERIALIZED_NAME_SIZE) private Long size;
+  public static final String SERIALIZED_NAME_PATH = "path";
+  @SerializedName(SERIALIZED_NAME_PATH) @javax.annotation.Nullable private String path;
 
-  public static final String SERIALIZED_NAME_USED = "used";
-  @SerializedName(SERIALIZED_NAME_USED) private Long used;
+  public static final String SERIALIZED_NAME_COMPONENTS = "components";
+  @SerializedName(SERIALIZED_NAME_COMPONENTS)
+  @javax.annotation.Nullable
+  private List<StorageInfo> components;
 
-  public static final String SERIALIZED_NAME_AVAIL = "avail";
-  @SerializedName(SERIALIZED_NAME_AVAIL) private Long avail;
+  public static final String SERIALIZED_NAME_SIZE_K_B = "sizeKB";
+  @SerializedName(SERIALIZED_NAME_SIZE_K_B) @javax.annotation.Nullable private Long sizeKB;
 
-  public static final String SERIALIZED_NAME_PERCENT_USED_STRING = "percentUsedString";
-  @SerializedName(SERIALIZED_NAME_PERCENT_USED_STRING) private String percentUsedString;
+  public static final String SERIALIZED_NAME_USED_K_B = "usedKB";
+  @SerializedName(SERIALIZED_NAME_USED_K_B) @javax.annotation.Nullable private Long usedKB;
+
+  public static final String SERIALIZED_NAME_AVAIL_K_B = "availKB";
+  @SerializedName(SERIALIZED_NAME_AVAIL_K_B) @javax.annotation.Nullable private Long availKB;
 
   public static final String SERIALIZED_NAME_PERCENT_USED = "percentUsed";
-  @SerializedName(SERIALIZED_NAME_PERCENT_USED) private Double percentUsed;
+  @SerializedName(SERIALIZED_NAME_PERCENT_USED)
+  @javax.annotation.Nullable
+  private Double percentUsed;
+
+  public static final String SERIALIZED_NAME_PERCENT_USED_STRING = "percentUsedString";
+  @SerializedName(SERIALIZED_NAME_PERCENT_USED_STRING)
+  @javax.annotation.Nullable
+  private String percentUsedString;
 
   public StorageInfo() {}
 
-  public StorageInfo type(String type) {
+  public StorageInfo type(@javax.annotation.Nonnull String type) {
     this.type = type;
     return this;
   }
@@ -112,17 +122,15 @@ public class StorageInfo implements Serializable {
    * @return type
    **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Type of the storage area")
-
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nonnull String type) {
     this.type = type;
   }
 
-  public StorageInfo name(String name) {
+  public StorageInfo name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
@@ -130,116 +138,148 @@ public class StorageInfo implements Serializable {
   /**
    * Name of the storage area
    * @return name
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Name of the storage area")
-
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
-  public StorageInfo size(Long size) {
-    this.size = size;
+  public StorageInfo path(@javax.annotation.Nullable String path) {
+    this.path = path;
     return this;
   }
 
   /**
-   * Size in bytes of the storage area
-   * @return size
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Size in bytes of the storage area")
-
-  public Long getSize() {
-    return size;
+   * Path, if applicable
+   * @return path
+   */
+  @javax.annotation.Nullable
+  public String getPath() {
+    return path;
   }
 
-  public void setSize(Long size) {
-    this.size = size;
+  public void setPath(@javax.annotation.Nullable String path) {
+    this.path = path;
   }
 
-  public StorageInfo used(Long used) {
-    this.used = used;
+  public StorageInfo components(@javax.annotation.Nullable List<StorageInfo> components) {
+    this.components = components;
+    return this;
+  }
+
+  public StorageInfo addComponentsItem(StorageInfo componentsItem) {
+    if (this.components == null) {
+      this.components = new ArrayList<>();
+    }
+    this.components.add(componentsItem);
     return this;
   }
 
   /**
-   * Used size in bytes of the torage area
-   * @return used
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Used size in bytes of the torage area")
-
-  public Long getUsed() {
-    return used;
+   * Storage areas that comprise this one
+   * @return components
+   */
+  @javax.annotation.Nullable
+  public List<StorageInfo> getComponents() {
+    return components;
   }
 
-  public void setUsed(Long used) {
-    this.used = used;
+  public void setComponents(@javax.annotation.Nullable List<StorageInfo> components) {
+    this.components = components;
   }
 
-  public StorageInfo avail(Long avail) {
-    this.avail = avail;
+  public StorageInfo sizeKB(@javax.annotation.Nullable Long sizeKB) {
+    this.sizeKB = sizeKB;
     return this;
   }
 
   /**
-   * Available size in bytes of the storage area
-   * @return avail
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Available size in bytes of the storage area")
-
-  public Long getAvail() {
-    return avail;
+   * Size of the storage area (in KB)
+   * @return sizeKB
+   */
+  @javax.annotation.Nullable
+  public Long getSizeKB() {
+    return sizeKB;
   }
 
-  public void setAvail(Long avail) {
-    this.avail = avail;
+  public void setSizeKB(@javax.annotation.Nullable Long sizeKB) {
+    this.sizeKB = sizeKB;
   }
 
-  public StorageInfo percentUsedString(String percentUsedString) {
-    this.percentUsedString = percentUsedString;
+  public StorageInfo usedKB(@javax.annotation.Nullable Long usedKB) {
+    this.usedKB = usedKB;
     return this;
   }
 
   /**
-   * Percentage of size used, formatted as a string
-   * @return percentUsedString
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Percentage of size used, formatted as a string")
-
-  public String getPercentUsedString() {
-    return percentUsedString;
+   * Size of the used storage area (in KB)
+   * @return usedKB
+   */
+  @javax.annotation.Nullable
+  public Long getUsedKB() {
+    return usedKB;
   }
 
-  public void setPercentUsedString(String percentUsedString) {
-    this.percentUsedString = percentUsedString;
+  public void setUsedKB(@javax.annotation.Nullable Long usedKB) {
+    this.usedKB = usedKB;
   }
 
-  public StorageInfo percentUsed(Double percentUsed) {
+  public StorageInfo availKB(@javax.annotation.Nullable Long availKB) {
+    this.availKB = availKB;
+    return this;
+  }
+
+  /**
+   * Size of the available storage area (in KB)
+   * @return availKB
+   */
+  @javax.annotation.Nullable
+  public Long getAvailKB() {
+    return availKB;
+  }
+
+  public void setAvailKB(@javax.annotation.Nullable Long availKB) {
+    this.availKB = availKB;
+  }
+
+  public StorageInfo percentUsed(@javax.annotation.Nullable Double percentUsed) {
     this.percentUsed = percentUsed;
     return this;
   }
 
   /**
-   * Percentage of size used
+   * Percentage of the storage area used
    * @return percentUsed
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "Percentage of size used")
-
+   */
+  @javax.annotation.Nullable
   public Double getPercentUsed() {
     return percentUsed;
   }
 
-  public void setPercentUsed(Double percentUsed) {
+  public void setPercentUsed(@javax.annotation.Nullable Double percentUsed) {
     this.percentUsed = percentUsed;
+  }
+
+  public StorageInfo percentUsedString(@javax.annotation.Nullable String percentUsedString) {
+    this.percentUsedString = percentUsedString;
+    return this;
+  }
+
+  /**
+   * Percentage of the storage area used, formatted as a string
+   * @return percentUsedString
+   */
+  @javax.annotation.Nullable
+  public String getPercentUsedString() {
+    return percentUsedString;
+  }
+
+  public void setPercentUsedString(@javax.annotation.Nullable String percentUsedString) {
+    this.percentUsedString = percentUsedString;
   }
 
   @Override
@@ -253,16 +293,19 @@ public class StorageInfo implements Serializable {
     StorageInfo storageInfo = (StorageInfo) o;
     return Objects.equals(this.type, storageInfo.type)
         && Objects.equals(this.name, storageInfo.name)
-        && Objects.equals(this.size, storageInfo.size)
-        && Objects.equals(this.used, storageInfo.used)
-        && Objects.equals(this.avail, storageInfo.avail)
-        && Objects.equals(this.percentUsedString, storageInfo.percentUsedString)
-        && Objects.equals(this.percentUsed, storageInfo.percentUsed);
+        && Objects.equals(this.path, storageInfo.path)
+        && Objects.equals(this.components, storageInfo.components)
+        && Objects.equals(this.sizeKB, storageInfo.sizeKB)
+        && Objects.equals(this.usedKB, storageInfo.usedKB)
+        && Objects.equals(this.availKB, storageInfo.availKB)
+        && Objects.equals(this.percentUsed, storageInfo.percentUsed)
+        && Objects.equals(this.percentUsedString, storageInfo.percentUsedString);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, name, size, used, avail, percentUsedString, percentUsed);
+    return Objects.hash(
+        type, name, path, components, sizeKB, usedKB, availKB, percentUsed, percentUsedString);
   }
 
   @Override
@@ -271,11 +314,13 @@ public class StorageInfo implements Serializable {
     sb.append("class StorageInfo {\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    size: ").append(toIndentedString(size)).append("\n");
-    sb.append("    used: ").append(toIndentedString(used)).append("\n");
-    sb.append("    avail: ").append(toIndentedString(avail)).append("\n");
-    sb.append("    percentUsedString: ").append(toIndentedString(percentUsedString)).append("\n");
+    sb.append("    path: ").append(toIndentedString(path)).append("\n");
+    sb.append("    components: ").append(toIndentedString(components)).append("\n");
+    sb.append("    sizeKB: ").append(toIndentedString(sizeKB)).append("\n");
+    sb.append("    usedKB: ").append(toIndentedString(usedKB)).append("\n");
+    sb.append("    availKB: ").append(toIndentedString(availKB)).append("\n");
     sb.append("    percentUsed: ").append(toIndentedString(percentUsed)).append("\n");
+    sb.append("    percentUsedString: ").append(toIndentedString(percentUsedString)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -299,21 +344,25 @@ public class StorageInfo implements Serializable {
     openapiFields = new HashSet<String>();
     openapiFields.add("type");
     openapiFields.add("name");
-    openapiFields.add("size");
-    openapiFields.add("used");
-    openapiFields.add("avail");
-    openapiFields.add("percentUsedString");
+    openapiFields.add("path");
+    openapiFields.add("components");
+    openapiFields.add("sizeKB");
+    openapiFields.add("usedKB");
+    openapiFields.add("availKB");
     openapiFields.add("percentUsed");
+    openapiFields.add("percentUsedString");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("type");
     openapiRequiredFields.add("name");
-    openapiRequiredFields.add("size");
-    openapiRequiredFields.add("used");
-    openapiRequiredFields.add("avail");
-    openapiRequiredFields.add("percentUsedString");
+    openapiRequiredFields.add("path");
+    openapiRequiredFields.add("components");
+    openapiRequiredFields.add("sizeKB");
+    openapiRequiredFields.add("usedKB");
+    openapiRequiredFields.add("availKB");
     openapiRequiredFields.add("percentUsed");
+    openapiRequiredFields.add("percentUsedString");
   }
 
   /**
@@ -324,9 +373,8 @@ public class StorageInfo implements Serializable {
    */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
     if (jsonObj == null) {
-      if (StorageInfo.openapiRequiredFields.isEmpty()) {
-        return;
-      } else { // has required fields
+      if (!StorageInfo.openapiRequiredFields
+              .isEmpty()) { // has required fields but JSON element is null
         throw new IllegalArgumentException(String.format(
             "The required field(s) %s in StorageInfo is not found in the empty JSON string",
             StorageInfo.openapiRequiredFields.toString()));
@@ -351,18 +399,34 @@ public class StorageInfo implements Serializable {
                 requiredField, jsonObj.toString()));
       }
     }
-    if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull())
-        && !jsonObj.get("type").isJsonPrimitive()) {
+    if (!jsonObj.get("type").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
           "Expected the field `type` to be a primitive type in the JSON string but got `%s`",
           jsonObj.get("type").toString()));
     }
-    if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull())
-        && !jsonObj.get("name").isJsonPrimitive()) {
+    if (!jsonObj.get("name").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
           "Expected the field `name` to be a primitive type in the JSON string but got `%s`",
           jsonObj.get("name").toString()));
     }
+    if ((jsonObj.get("path") != null && !jsonObj.get("path").isJsonNull())
+        && !jsonObj.get("path").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `path` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("path").toString()));
+    }
+    // ensure the json data is an array
+    if (!jsonObj.get("components").isJsonArray()) {
+      throw new IllegalArgumentException(String.format(
+          "Expected the field `components` to be an array in the JSON string but got `%s`",
+          jsonObj.get("components").toString()));
+    }
+
+    JsonArray jsonArraycomponents = jsonObj.getAsJsonArray("components");
+    // validate the required field `components` (array)
+    for (int i = 0; i < jsonArraycomponents.size(); i++) {
+      StorageInfo.validateJsonObject(jsonArraycomponents.get(i).getAsJsonObject());
+    };
     if ((jsonObj.get("percentUsedString") != null && !jsonObj.get("percentUsedString").isJsonNull())
         && !jsonObj.get("percentUsedString").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(

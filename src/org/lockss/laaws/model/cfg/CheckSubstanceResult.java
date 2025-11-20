@@ -42,16 +42,34 @@
 
 package org.lockss.laaws.model.cfg;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapter;
+import com.google.gson.TypeAdapterFactory;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
+import org.lockss.laaws.client.JSON;
 
 /**
  * The status of an archival unit
@@ -62,7 +80,7 @@ public class CheckSubstanceResult implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID) private String id;
+  @SerializedName(SERIALIZED_NAME_ID) @javax.annotation.Nonnull private String id;
 
   /**
    * An indication of whether the result is successful
@@ -112,10 +130,17 @@ public class CheckSubstanceResult implements Serializable {
         return OldStateEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      OldStateEnum.fromValue(value);
+  }
   }
 
   public static final String SERIALIZED_NAME_OLD_STATE = "oldState";
-  @SerializedName(SERIALIZED_NAME_OLD_STATE) private OldStateEnum oldState;
+  @SerializedName(SERIALIZED_NAME_OLD_STATE)
+  @javax.annotation.Nonnull
+  private OldStateEnum oldState;
 
   /**
    * An indication of whether the result is successful
@@ -165,17 +190,26 @@ public class CheckSubstanceResult implements Serializable {
         return NewStateEnum.fromValue(value);
       }
     }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      NewStateEnum.fromValue(value);
+  }
   }
 
   public static final String SERIALIZED_NAME_NEW_STATE = "newState";
-  @SerializedName(SERIALIZED_NAME_NEW_STATE) private NewStateEnum newState;
+  @SerializedName(SERIALIZED_NAME_NEW_STATE)
+  @javax.annotation.Nonnull
+  private NewStateEnum newState;
 
   public static final String SERIALIZED_NAME_ERROR_MESSAGE = "errorMessage";
-  @SerializedName(SERIALIZED_NAME_ERROR_MESSAGE) private String errorMessage;
+  @SerializedName(SERIALIZED_NAME_ERROR_MESSAGE)
+  @javax.annotation.Nonnull
+  private String errorMessage;
 
   public CheckSubstanceResult() {}
 
-  public CheckSubstanceResult id(String id) {
+  public CheckSubstanceResult id(@javax.annotation.Nonnull String id) {
     this.id = id;
     return this;
   }
@@ -183,19 +217,17 @@ public class CheckSubstanceResult implements Serializable {
   /**
    * The identifier of the archival unit
    * @return id
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The identifier of the archival unit")
-
   public String getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(@javax.annotation.Nonnull String id) {
     this.id = id;
   }
 
-  public CheckSubstanceResult oldState(OldStateEnum oldState) {
+  public CheckSubstanceResult oldState(@javax.annotation.Nonnull OldStateEnum oldState) {
     this.oldState = oldState;
     return this;
   }
@@ -203,19 +235,17 @@ public class CheckSubstanceResult implements Serializable {
   /**
    * An indication of whether the result is successful
    * @return oldState
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An indication of whether the result is successful")
-
   public OldStateEnum getOldState() {
     return oldState;
   }
 
-  public void setOldState(OldStateEnum oldState) {
+  public void setOldState(@javax.annotation.Nonnull OldStateEnum oldState) {
     this.oldState = oldState;
   }
 
-  public CheckSubstanceResult newState(NewStateEnum newState) {
+  public CheckSubstanceResult newState(@javax.annotation.Nonnull NewStateEnum newState) {
     this.newState = newState;
     return this;
   }
@@ -223,19 +253,17 @@ public class CheckSubstanceResult implements Serializable {
   /**
    * An indication of whether the result is successful
    * @return newState
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "An indication of whether the result is successful")
-
   public NewStateEnum getNewState() {
     return newState;
   }
 
-  public void setNewState(NewStateEnum newState) {
+  public void setNewState(@javax.annotation.Nonnull NewStateEnum newState) {
     this.newState = newState;
   }
 
-  public CheckSubstanceResult errorMessage(String errorMessage) {
+  public CheckSubstanceResult errorMessage(@javax.annotation.Nonnull String errorMessage) {
     this.errorMessage = errorMessage;
     return this;
   }
@@ -243,15 +271,13 @@ public class CheckSubstanceResult implements Serializable {
   /**
    * The error message as a result of the operation
    * @return errorMessage
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The error message as a result of the operation")
-
   public String getErrorMessage() {
     return errorMessage;
   }
 
-  public void setErrorMessage(String errorMessage) {
+  public void setErrorMessage(@javax.annotation.Nonnull String errorMessage) {
     this.errorMessage = errorMessage;
   }
 
@@ -296,5 +322,130 @@ public class CheckSubstanceResult implements Serializable {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields =
+        new HashSet<String>(Arrays.asList("id", "oldState", "newState", "errorMessage"));
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields =
+        new HashSet<String>(Arrays.asList("id", "oldState", "newState", "errorMessage"));
+  }
+
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to CheckSubstanceResult
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+    if (jsonElement == null) {
+      if (!CheckSubstanceResult.openapiRequiredFields
+              .isEmpty()) { // has required fields but JSON element is null
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The required field(s) %s in CheckSubstanceResult is not found in the empty JSON "
+            + "string",
+            CheckSubstanceResult.openapiRequiredFields.toString()));
+      }
+    }
+
+    Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+    // check to see if the JSON string contains additional fields
+    for (Map.Entry<String, JsonElement> entry : entries) {
+      if (!CheckSubstanceResult.openapiFields.contains(entry.getKey())) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The field `%s` in the JSON string is not defined in the `CheckSubstanceResult` "
+            + "properties. JSON: %s",
+            entry.getKey(), jsonElement.toString()));
+      }
+    }
+
+    // check to make sure all required properties/fields are present in the JSON string
+    for (String requiredField : CheckSubstanceResult.openapiRequiredFields) {
+      if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The required field `%s` is not found in the JSON string: %s", requiredField,
+            jsonElement.toString()));
+      }
+    }
+    JsonObject jsonObj = jsonElement.getAsJsonObject();
+    if (!jsonObj.get("id").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `id` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("id").toString()));
+    }
+    if (!jsonObj.get("oldState").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `oldState` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("oldState").toString()));
+    }
+    // validate the required field `oldState`
+    OldStateEnum.validateJsonElement(jsonObj.get("oldState"));
+    if (!jsonObj.get("newState").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `newState` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("newState").toString()));
+    }
+    // validate the required field `newState`
+    NewStateEnum.validateJsonElement(jsonObj.get("newState"));
+    if (!jsonObj.get("errorMessage").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `errorMessage` to be a primitive type in the JSON string but got "
+          + "`%s`",
+          jsonObj.get("errorMessage").toString()));
+    }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+      if (!CheckSubstanceResult.class.isAssignableFrom(type.getRawType())) {
+        return null; // this class only serializes 'CheckSubstanceResult' and its subtypes
+      }
+      final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+      final TypeAdapter<CheckSubstanceResult> thisAdapter =
+          gson.getDelegateAdapter(this, TypeToken.get(CheckSubstanceResult.class));
+
+      return (TypeAdapter<T>) new TypeAdapter<CheckSubstanceResult>() {
+        @Override
+        public void write(JsonWriter out, CheckSubstanceResult value) throws IOException {
+          JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+          elementAdapter.write(out, obj);
+        }
+
+        @Override
+        public CheckSubstanceResult read(JsonReader in) throws IOException {
+          JsonElement jsonElement = elementAdapter.read(in);
+          validateJsonElement(jsonElement);
+          return thisAdapter.fromJsonTree(jsonElement);
+        }
+      }.nullSafe();
+    }
+  }
+
+  /**
+   * Create an instance of CheckSubstanceResult given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of CheckSubstanceResult
+   * @throws IOException if the JSON string is invalid with respect to CheckSubstanceResult
+   */
+  public static CheckSubstanceResult fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CheckSubstanceResult.class);
+  }
+
+  /**
+   * Convert an instance of CheckSubstanceResult to an JSON string
+   *
+   * @return JSON string
+   */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }

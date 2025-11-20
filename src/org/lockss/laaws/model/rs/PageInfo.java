@@ -57,14 +57,12 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.io.Serializable;
-import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
@@ -74,69 +72,70 @@ import org.lockss.laaws.client.JSON;
 /**
  * The information related to pagination of content
  */
-@ApiModel(description = "The information related to pagination of content")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "totalCount";
-  @SerializedName(SERIALIZED_NAME_TOTAL_COUNT) private Integer totalCount;
+  @SerializedName(SERIALIZED_NAME_TOTAL_COUNT)
+  @javax.annotation.Nullable
+  private Integer totalCount;
 
   public static final String SERIALIZED_NAME_ITEMS_IN_PAGE = "itemsInPage";
-  @SerializedName(SERIALIZED_NAME_ITEMS_IN_PAGE) private Integer itemsInPage;
+  @SerializedName(SERIALIZED_NAME_ITEMS_IN_PAGE)
+  @javax.annotation.Nonnull
+  private Integer itemsInPage;
 
   public static final String SERIALIZED_NAME_CONTINUATION_TOKEN = "continuationToken";
-  @SerializedName(SERIALIZED_NAME_CONTINUATION_TOKEN) private String continuationToken;
+  @SerializedName(SERIALIZED_NAME_CONTINUATION_TOKEN)
+  @javax.annotation.Nullable
+  private String continuationToken;
 
   public static final String SERIALIZED_NAME_CUR_LINK = "curLink";
-  @SerializedName(SERIALIZED_NAME_CUR_LINK) private String curLink;
+  @SerializedName(SERIALIZED_NAME_CUR_LINK) @javax.annotation.Nonnull private String curLink;
 
   public static final String SERIALIZED_NAME_NEXT_LINK = "nextLink";
-  @SerializedName(SERIALIZED_NAME_NEXT_LINK) private String nextLink;
+  @SerializedName(SERIALIZED_NAME_NEXT_LINK) @javax.annotation.Nullable private String nextLink;
 
   public PageInfo() {}
 
-  public PageInfo totalCount(Integer totalCount) {
+  public PageInfo totalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
     return this;
   }
 
   /**
-   * The total number of results
+   * The total number of items
    * @return totalCount
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The total number of results")
-
+   */
+  @javax.annotation.Nullable
   public Integer getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(Integer totalCount) {
+  public void setTotalCount(@javax.annotation.Nullable Integer totalCount) {
     this.totalCount = totalCount;
   }
 
-  public PageInfo itemsInPage(Integer itemsInPage) {
+  public PageInfo itemsInPage(@javax.annotation.Nonnull Integer itemsInPage) {
     this.itemsInPage = itemsInPage;
     return this;
   }
 
   /**
-   * The number of results in the page
+   * The number of items in the page
    * @return itemsInPage
    **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The number of results in the page")
-
   public Integer getItemsInPage() {
     return itemsInPage;
   }
 
-  public void setItemsInPage(Integer itemsInPage) {
+  public void setItemsInPage(@javax.annotation.Nonnull Integer itemsInPage) {
     this.itemsInPage = itemsInPage;
   }
 
-  public PageInfo continuationToken(String continuationToken) {
+  public PageInfo continuationToken(@javax.annotation.Nullable String continuationToken) {
     this.continuationToken = continuationToken;
     return this;
   }
@@ -144,19 +143,17 @@ public class PageInfo implements Serializable {
   /**
    * The continuation token
    * @return continuationToken
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The continuation token")
-
+   */
+  @javax.annotation.Nullable
   public String getContinuationToken() {
     return continuationToken;
   }
 
-  public void setContinuationToken(String continuationToken) {
+  public void setContinuationToken(@javax.annotation.Nullable String continuationToken) {
     this.continuationToken = continuationToken;
   }
 
-  public PageInfo curLink(String curLink) {
+  public PageInfo curLink(@javax.annotation.Nonnull String curLink) {
     this.curLink = curLink;
     return this;
   }
@@ -166,17 +163,15 @@ public class PageInfo implements Serializable {
    * @return curLink
    **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The link of the current request")
-
   public String getCurLink() {
     return curLink;
   }
 
-  public void setCurLink(String curLink) {
+  public void setCurLink(@javax.annotation.Nonnull String curLink) {
     this.curLink = curLink;
   }
 
-  public PageInfo nextLink(String nextLink) {
+  public PageInfo nextLink(@javax.annotation.Nullable String nextLink) {
     this.nextLink = nextLink;
     return this;
   }
@@ -184,10 +179,8 @@ public class PageInfo implements Serializable {
   /**
    * The link of the next request
    * @return nextLink
-   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The link of the next request")
-
+   */
+  @javax.annotation.Nullable
   public String getNextLink() {
     return nextLink;
   }
@@ -259,8 +252,7 @@ public class PageInfo implements Serializable {
     openapiRequiredFields.add("itemsInPage");
     openapiRequiredFields.add("continuationToken");
     openapiRequiredFields.add("curLink");
-    // nextlink can be null
-   // openapiRequiredFields.add("nextLink");
+    openapiRequiredFields.add("nextLink");
   }
 
   /**
@@ -271,7 +263,7 @@ public class PageInfo implements Serializable {
    */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
     if (jsonObj == null) {
-      if (PageInfo.openapiRequiredFields.isEmpty()) {
+      if (!PageInfo.openapiRequiredFields.isEmpty()) {
         return;
       } else { // has required fields
         throw new IllegalArgumentException(String.format(
@@ -304,8 +296,7 @@ public class PageInfo implements Serializable {
           "Expected the field `continuationToken` to be a primitive type in the JSON string but got `%s`",
           jsonObj.get("continuationToken").toString()));
     }
-    if ((jsonObj.get("curLink") != null && !jsonObj.get("curLink").isJsonNull())
-        && !jsonObj.get("curLink").isJsonPrimitive()) {
+    if (!jsonObj.get("curLink").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
           "Expected the field `curLink` to be a primitive type in the JSON string but got `%s`",
           jsonObj.get("curLink").toString()));

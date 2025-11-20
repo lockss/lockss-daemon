@@ -122,6 +122,7 @@ public class JSON {
 
   static {
     GsonBuilder gsonBuilder = createGson();
+    gsonBuilder.serializeNulls(); // add this to allow for passing null values
     gsonBuilder.registerTypeAdapter(Date.class, dateTypeAdapter);
     gsonBuilder.registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter);
     gsonBuilder.registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter);
@@ -143,6 +144,8 @@ public class JSON {
         new org.lockss.laaws.model.rs.PageInfo.CustomTypeAdapterFactory());
     gsonBuilder.registerTypeAdapterFactory(
         new org.lockss.laaws.model.rs.RepositoryInfo.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.RepositoryStatistics.CustomTypeAdapterFactory());
     gsonBuilder.registerTypeAdapterFactory(
         new org.lockss.laaws.model.rs.StorageInfo.CustomTypeAdapterFactory());
     gsonBuilder.disableHtmlEscaping();

@@ -42,11 +42,33 @@
 
 package org.lockss.laaws.model.cfg;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapter;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
+import org.lockss.laaws.client.JSON;
+import io.swagger.annotations.ApiModel;
 
 /**
  * The encapsulation of the result of adding an Archival Unit
@@ -57,20 +79,20 @@ public class ContentConfigurationResult implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_AU_ID = "auId";
-  @SerializedName(SERIALIZED_NAME_AU_ID) private String auId;
+  @SerializedName(SERIALIZED_NAME_AU_ID) @javax.annotation.Nonnull private String auId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) private String name;
+  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nonnull private String name;
 
   public static final String SERIALIZED_NAME_IS_SUCCESS = "isSuccess";
-  @SerializedName(SERIALIZED_NAME_IS_SUCCESS) private Boolean isSuccess;
+  @SerializedName(SERIALIZED_NAME_IS_SUCCESS) @javax.annotation.Nonnull private Boolean isSuccess;
 
   public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE) private String message;
+  @SerializedName(SERIALIZED_NAME_MESSAGE) @javax.annotation.Nonnull private String message;
 
   public ContentConfigurationResult() {}
 
-  public ContentConfigurationResult auId(String auId) {
+  public ContentConfigurationResult auId(@javax.annotation.Nonnull String auId) {
     this.auId = auId;
     return this;
   }
@@ -78,19 +100,17 @@ public class ContentConfigurationResult implements Serializable {
   /**
    * The identifier of the Archival Unit
    * @return auId
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The identifier of the Archival Unit")
-
   public String getAuId() {
     return auId;
   }
 
-  public void setAuId(String auId) {
+  public void setAuId(@javax.annotation.Nonnull String auId) {
     this.auId = auId;
   }
 
-  public ContentConfigurationResult name(String name) {
+  public ContentConfigurationResult name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
@@ -98,41 +118,35 @@ public class ContentConfigurationResult implements Serializable {
   /**
    * The name of the Archival Unit
    * @return name
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The name of the Archival Unit")
-
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
-  public ContentConfigurationResult isSuccess(Boolean isSuccess) {
+  public ContentConfigurationResult isSuccess(@javax.annotation.Nonnull Boolean isSuccess) {
     this.isSuccess = isSuccess;
     return this;
   }
 
   /**
-   * An indication of whether the AU was successfully added or\\ \\ not
+   * An indication of whether the AU was successfully added or not
    * @return isSuccess
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(
-      required = true, value = "An indication of whether the AU was successfully added or\\ \\ not")
-
-  public Boolean
-  getIsSuccess() {
+  public Boolean getIsSuccess() {
     return isSuccess;
   }
 
-  public void setIsSuccess(Boolean isSuccess) {
+  public void setIsSuccess(@javax.annotation.Nonnull Boolean isSuccess) {
     this.isSuccess = isSuccess;
   }
 
-  public ContentConfigurationResult message(String message) {
+  public ContentConfigurationResult message(@javax.annotation.Nonnull String message) {
     this.message = message;
     return this;
   }
@@ -140,17 +154,13 @@ public class ContentConfigurationResult implements Serializable {
   /**
    * A descriptive message regarding the result of the operation
    * @return message
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(
-      required = true, value = "A descriptive message regarding the result of the operation")
-
-  public String
-  getMessage() {
+  public String getMessage() {
     return message;
   }
 
-  public void setMessage(String message) {
+  public void setMessage(@javax.annotation.Nonnull String message) {
     this.message = message;
   }
 
@@ -195,5 +205,119 @@ public class ContentConfigurationResult implements Serializable {
       return "null";
     }
     return o.toString().replace("\n", "\n    ");
+  }
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>(Arrays.asList("auId", "name", "isSuccess", "message"));
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields =
+        new HashSet<String>(Arrays.asList("auId", "name", "isSuccess", "message"));
+  }
+
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ContentConfigurationResult
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+    if (jsonElement == null) {
+      if (!ContentConfigurationResult.openapiRequiredFields
+              .isEmpty()) { // has required fields but JSON element is null
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The required field(s) %s in ContentConfigurationResult is not found in the empty JSON "
+            + "string",
+            ContentConfigurationResult.openapiRequiredFields.toString()));
+      }
+    }
+
+    Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+    // check to see if the JSON string contains additional fields
+    for (Map.Entry<String, JsonElement> entry : entries) {
+      if (!ContentConfigurationResult.openapiFields.contains(entry.getKey())) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The field `%s` in the JSON string is not defined in the `ContentConfigurationResult` "
+            + "properties. JSON: %s",
+            entry.getKey(), jsonElement.toString()));
+      }
+    }
+
+    // check to make sure all required properties/fields are present in the JSON string
+    for (String requiredField : ContentConfigurationResult.openapiRequiredFields) {
+      if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+        throw new IllegalArgumentException(String.format(Locale.ROOT,
+            "The required field `%s` is not found in the JSON string: %s", requiredField,
+            jsonElement.toString()));
+      }
+    }
+    JsonObject jsonObj = jsonElement.getAsJsonObject();
+    if (!jsonObj.get("auId").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `auId` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("auId").toString()));
+    }
+    if (!jsonObj.get("name").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `name` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("name").toString()));
+    }
+    if (!jsonObj.get("message").isJsonPrimitive()) {
+      throw new IllegalArgumentException(String.format(Locale.ROOT,
+          "Expected the field `message` to be a primitive type in the JSON string but got `%s`",
+          jsonObj.get("message").toString()));
+    }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+      if (!ContentConfigurationResult.class.isAssignableFrom(type.getRawType())) {
+        return null; // this class only serializes 'ContentConfigurationResult' and its subtypes
+      }
+      final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+      final TypeAdapter<ContentConfigurationResult> thisAdapter =
+          gson.getDelegateAdapter(this, TypeToken.get(ContentConfigurationResult.class));
+
+      return (TypeAdapter<T>) new TypeAdapter<ContentConfigurationResult>() {
+        @Override
+        public void write(JsonWriter out, ContentConfigurationResult value) throws IOException {
+          JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+          elementAdapter.write(out, obj);
+        }
+
+        @Override
+        public ContentConfigurationResult read(JsonReader in) throws IOException {
+          JsonElement jsonElement = elementAdapter.read(in);
+          validateJsonElement(jsonElement);
+          return thisAdapter.fromJsonTree(jsonElement);
+        }
+      }.nullSafe();
+    }
+  }
+
+  /**
+   * Create an instance of ContentConfigurationResult given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ContentConfigurationResult
+   * @throws IOException if the JSON string is invalid with respect to ContentConfigurationResult
+   */
+  public static ContentConfigurationResult fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ContentConfigurationResult.class);
+  }
+
+  /**
+   * Convert an instance of ContentConfigurationResult to an JSON string
+   *
+   * @return JSON string
+   */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }

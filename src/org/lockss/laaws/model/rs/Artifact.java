@@ -57,11 +57,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.*;
 import java.io.IOException;
 import java.io.Serializable;
-import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -80,40 +78,42 @@ public class Artifact implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_COMMITTED = "committed";
-  @SerializedName(SERIALIZED_NAME_COMMITTED) private Boolean committed;
+  @SerializedName(SERIALIZED_NAME_COMMITTED) @javax.annotation.Nonnull private Boolean committed;
 
   public static final String SERIALIZED_NAME_STORAGE_URL = "storageUrl";
-  @SerializedName(SERIALIZED_NAME_STORAGE_URL) private String storageUrl;
+  @SerializedName(SERIALIZED_NAME_STORAGE_URL) @javax.annotation.Nonnull private String storageUrl;
 
   public static final String SERIALIZED_NAME_NAMESPACE = "namespace";
-  @SerializedName(SERIALIZED_NAME_NAMESPACE) private String namespace = "lockss";
+  @SerializedName(SERIALIZED_NAME_NAMESPACE)
+  @javax.annotation.Nonnull
+  private String namespace = "lockss";
 
   public static final String SERIALIZED_NAME_UUID = "uuid";
-  @SerializedName(SERIALIZED_NAME_UUID) private String uuid;
+  @SerializedName(SERIALIZED_NAME_UUID) @javax.annotation.Nonnull private String uuid;
 
   public static final String SERIALIZED_NAME_AUID = "auid";
-  @SerializedName(SERIALIZED_NAME_AUID) private String auid;
+  @SerializedName(SERIALIZED_NAME_AUID) @javax.annotation.Nonnull private String auid;
 
   public static final String SERIALIZED_NAME_URI = "uri";
-  @SerializedName(SERIALIZED_NAME_URI) private String uri;
+  @SerializedName(SERIALIZED_NAME_URI) @javax.annotation.Nonnull private String uri;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION) private Integer version;
+  @SerializedName(SERIALIZED_NAME_VERSION) @javax.annotation.Nonnull private Integer version;
 
   public static final String SERIALIZED_NAME_CONTENT_LENGTH = "contentLength";
-  @SerializedName(SERIALIZED_NAME_CONTENT_LENGTH) private Long contentLength;
+  @SerializedName(SERIALIZED_NAME_CONTENT_LENGTH)
+  @javax.annotation.Nonnull
+  private Long contentLength;
 
   public static final String SERIALIZED_NAME_CONTENT_DIGEST = "contentDigest";
-  @SerializedName(SERIALIZED_NAME_CONTENT_DIGEST) private String contentDigest;
+  @SerializedName(SERIALIZED_NAME_CONTENT_DIGEST)
+  @javax.annotation.Nonnull
+  private String contentDigest;
 
   public static final String SERIALIZED_NAME_COLLECTION_DATE = "collectionDate";
-  @SerializedName(SERIALIZED_NAME_COLLECTION_DATE) private Long collectionDate;
-
-  public static final String SERIALIZED_NAME_STATE = "state";
-  @SerializedName(SERIALIZED_NAME_STATE) private String state;
-
-  public static final String SERIALIZED_NAME_SORTURI = "sortUri";
-  @SerializedName(SERIALIZED_NAME_SORTURI) private String sortUri;
+  @SerializedName(SERIALIZED_NAME_COLLECTION_DATE)
+  @javax.annotation.Nonnull
+  private Long collectionDate;
 
   public Artifact() {}
 
@@ -263,78 +263,52 @@ public class Artifact implements Serializable {
   }
 
   /**
-   * Get contentLength
+   * The length of the artifact&#39;s content
    * @return contentLength
-   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
+   */
+  @javax.annotation.Nonnull
   public Long getContentLength() {
     return contentLength;
   }
 
-  public void setContentLength(Long contentLength) {
+  public void setContentLength(@javax.annotation.Nonnull Long contentLength) {
     this.contentLength = contentLength;
   }
 
-  public Artifact contentDigest(String contentDigest) {
+  public Artifact contentDigest(@javax.annotation.Nonnull String contentDigest) {
     this.contentDigest = contentDigest;
     return this;
   }
 
   /**
-   * Get contentDigest
+   * The digest of the artifact&#39;s content
    * @return contentDigest
-   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
+   */
+  @javax.annotation.Nonnull
   public String getContentDigest() {
     return contentDigest;
   }
 
-  public void setContentDigest(String contentDigest) {
+  public void setContentDigest(@javax.annotation.Nonnull String contentDigest) {
     this.contentDigest = contentDigest;
   }
 
-  public Artifact collectionDate(Long collectionDate) {
+  public Artifact collectionDate(@javax.annotation.Nonnull Long collectionDate) {
     this.collectionDate = collectionDate;
     return this;
   }
 
   /**
-   * Get collectionDate
+   * The artifact&#39;s collection date
    * @return collectionDate
-   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
+   */
+  @javax.annotation.Nonnull
   public Long getCollectionDate() {
     return collectionDate;
   }
 
-  public void setCollectionDate(Long collectionDate) {
+  public void setCollectionDate(@javax.annotation.Nonnull Long collectionDate) {
     this.collectionDate = collectionDate;
-  }
-
-  public Artifact state(String state) {
-    this.state = state;
-    return this;
-  }
-
-  /**
-   * Get state
-   * @return state
-   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getState() {
-    return state;
-  }
-
-  public void setState(String state) {
-    this.state = state;
   }
 
   @Override
@@ -353,14 +327,13 @@ public class Artifact implements Serializable {
       && Objects.equals(this.uri, artifact.uri) && Objects.equals(this.version, artifact.version)
       && Objects.equals(this.contentLength, artifact.contentLength)
       && Objects.equals(this.contentDigest, artifact.contentDigest)
-      && Objects.equals(this.collectionDate, artifact.collectionDate)
-      && Objects.equals(this.state, artifact.state);
+      && Objects.equals(this.collectionDate, artifact.collectionDate);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(committed, storageUrl, namespace, uuid, auid, uri, version, contentLength,
-      contentDigest, collectionDate, state);
+      contentDigest, collectionDate);
   }
 
   @Override
@@ -377,7 +350,6 @@ public class Artifact implements Serializable {
     sb.append("    contentLength: ").append(toIndentedString(contentLength)).append("\n");
     sb.append("    contentDigest: ").append(toIndentedString(contentDigest)).append("\n");
     sb.append("    collectionDate: ").append(toIndentedString(collectionDate)).append("\n");
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -404,17 +376,24 @@ public class Artifact implements Serializable {
     openapiFields.add("auid");
     openapiFields.add("uri");
     openapiFields.add("version");
-    openapiFields.add("committed"); // may be returned, but not in api
-    openapiFields.add("storageUrl"); // may be returned, but not in api
+    openapiFields.add("committed");
+    openapiFields.add("storageUrl");
     openapiFields.add("contentLength");
     openapiFields.add("contentDigest");
     openapiFields.add("collectionDate");
-    openapiFields.add("state");
-    openapiFields.add("sortUri"); // may be returned, but not in api
-    openapiFields.add("identifier"); // is this still needed?
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("namespace");
+    openapiRequiredFields.add("uuid");
+    openapiRequiredFields.add("auid");
+    openapiRequiredFields.add("uri");
+    openapiRequiredFields.add("version");
+    openapiRequiredFields.add("committed");
+    openapiRequiredFields.add("storageUrl");
+    openapiRequiredFields.add("contentLength");
+    openapiRequiredFields.add("contentDigest");
+    openapiRequiredFields.add("collectionDate");
   }
 
   /**
@@ -442,11 +421,13 @@ public class Artifact implements Serializable {
           entry.getKey(), jsonObj.toString()));
       }
     }
-    if ((jsonObj.get("storageUrl") != null && !jsonObj.get("storageUrl").isJsonNull())
-      && !jsonObj.get("storageUrl").isJsonPrimitive()) {
-      throw new IllegalArgumentException(String.format(
-        "Expected the field `storageUrl` to be a primitive type in the JSON string but got `%s`",
-        jsonObj.get("storageUrl").toString()));
+    // check to make sure all required properties/fields are present in the JSON string
+    for (String requiredField : Artifact.openapiRequiredFields) {
+      if (jsonObj.getAsJsonObject().get(requiredField) == null) {
+        throw new IllegalArgumentException(String.format(
+            "The required field `%s` is not found in the JSON string: %s", requiredField,
+            jsonObj.toString()));
+      }
     }
     if ((jsonObj.get("namespace") != null && !jsonObj.get("namespace").isJsonNull())
       && !jsonObj.get("namespace").isJsonPrimitive()) {
@@ -472,7 +453,6 @@ public class Artifact implements Serializable {
         "Expected the field `uri` to be a primitive type in the JSON string but got `%s`",
         jsonObj.get("uri").toString()));
     }
-    // this field is returned but not defined in the api
     if ((jsonObj.get("storageUrl") != null && !jsonObj.get("storageUrl").isJsonNull())
         && !jsonObj.get("storageUrl").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
@@ -484,12 +464,6 @@ public class Artifact implements Serializable {
       throw new IllegalArgumentException(String.format(
         "Expected the field `contentDigest` to be a primitive type in the JSON string but got `%s`",
         jsonObj.get("contentDigest").toString()));
-    }
-    if ((jsonObj.get("state") != null && !jsonObj.get("state").isJsonNull())
-      && !jsonObj.get("state").isJsonPrimitive()) {
-      throw new IllegalArgumentException(String.format(
-        "Expected the field `state` to be a primitive type in the JSON string but got `%s`",
-        jsonObj.get("state").toString()));
     }
   }
 

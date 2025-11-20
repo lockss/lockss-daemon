@@ -57,38 +57,45 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.io.Serializable;
-import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Set;
 import org.lockss.laaws.client.JSON;
+import org.lockss.laaws.model.rs.RepositoryStatistics;
 import org.lockss.laaws.model.rs.StorageInfo;
 
 /**
  * Information about the repository
  */
-@ApiModel(description = "Information about the repository")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RepositoryInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_STORE_INFO = "storeInfo";
-  @SerializedName(SERIALIZED_NAME_STORE_INFO) private StorageInfo storeInfo;
+  @SerializedName(SERIALIZED_NAME_STORE_INFO)
+  @javax.annotation.Nonnull
+  private StorageInfo storeInfo;
 
   public static final String SERIALIZED_NAME_INDEX_INFO = "indexInfo";
-  @SerializedName(SERIALIZED_NAME_INDEX_INFO) private StorageInfo indexInfo;
+  @SerializedName(SERIALIZED_NAME_INDEX_INFO)
+  @javax.annotation.Nonnull
+  private StorageInfo indexInfo;
+
+  public static final String SERIALIZED_NAME_REPOSITORY_STATISTICS = "repositoryStatistics";
+  @SerializedName(SERIALIZED_NAME_REPOSITORY_STATISTICS)
+  @javax.annotation.Nullable
+  private RepositoryStatistics repositoryStatistics;
 
   public RepositoryInfo() {}
 
-  public RepositoryInfo storeInfo(StorageInfo storeInfo) {
+  public RepositoryInfo storeInfo(@javax.annotation.Nonnull StorageInfo storeInfo) {
     this.storeInfo = storeInfo;
     return this;
   }
@@ -98,17 +105,15 @@ public class RepositoryInfo implements Serializable {
    * @return storeInfo
    **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
   public StorageInfo getStoreInfo() {
     return storeInfo;
   }
 
-  public void setStoreInfo(StorageInfo storeInfo) {
+  public void setStoreInfo(@javax.annotation.Nonnull StorageInfo storeInfo) {
     this.storeInfo = storeInfo;
   }
 
-  public RepositoryInfo indexInfo(StorageInfo indexInfo) {
+  public RepositoryInfo indexInfo(@javax.annotation.Nonnull StorageInfo indexInfo) {
     this.indexInfo = indexInfo;
     return this;
   }
@@ -116,16 +121,34 @@ public class RepositoryInfo implements Serializable {
   /**
    * Get indexInfo
    * @return indexInfo
-   **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
   public StorageInfo getIndexInfo() {
     return indexInfo;
   }
 
-  public void setIndexInfo(StorageInfo indexInfo) {
+  public void setIndexInfo(@javax.annotation.Nonnull StorageInfo indexInfo) {
     this.indexInfo = indexInfo;
+  }
+
+  public RepositoryInfo repositoryStatistics(
+      @javax.annotation.Nullable RepositoryStatistics repositoryStatistics) {
+    this.repositoryStatistics = repositoryStatistics;
+    return this;
+  }
+
+  /**
+   * Get repositoryStatistics
+   * @return repositoryStatistics
+   */
+  @javax.annotation.Nullable
+  public RepositoryStatistics getRepositoryStatistics() {
+    return repositoryStatistics;
+  }
+
+  public void setRepositoryStatistics(
+      @javax.annotation.Nullable RepositoryStatistics repositoryStatistics) {
+    this.repositoryStatistics = repositoryStatistics;
   }
 
   @Override
@@ -138,12 +161,13 @@ public class RepositoryInfo implements Serializable {
     }
     RepositoryInfo repositoryInfo = (RepositoryInfo) o;
     return Objects.equals(this.storeInfo, repositoryInfo.storeInfo)
-        && Objects.equals(this.indexInfo, repositoryInfo.indexInfo);
+        && Objects.equals(this.indexInfo, repositoryInfo.indexInfo)
+        && Objects.equals(this.repositoryStatistics, repositoryInfo.repositoryStatistics);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeInfo, indexInfo);
+    return Objects.hash(storeInfo, indexInfo, repositoryStatistics);
   }
 
   @Override
@@ -152,6 +176,9 @@ public class RepositoryInfo implements Serializable {
     sb.append("class RepositoryInfo {\n");
     sb.append("    storeInfo: ").append(toIndentedString(storeInfo)).append("\n");
     sb.append("    indexInfo: ").append(toIndentedString(indexInfo)).append("\n");
+    sb.append("    repositoryStatistics: ")
+        .append(toIndentedString(repositoryStatistics))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -175,6 +202,7 @@ public class RepositoryInfo implements Serializable {
     openapiFields = new HashSet<String>();
     openapiFields.add("storeInfo");
     openapiFields.add("indexInfo");
+    openapiFields.add("repositoryStatistics");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -190,9 +218,8 @@ public class RepositoryInfo implements Serializable {
    */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
     if (jsonObj == null) {
-      if (RepositoryInfo.openapiRequiredFields.isEmpty()) {
-        return;
-      } else { // has required fields
+      if (!RepositoryInfo.openapiRequiredFields
+              .isEmpty()) { // has required fields but JSON element is null
         throw new IllegalArgumentException(String.format(
             "The required field(s) %s in RepositoryInfo is not found in the empty JSON string",
             RepositoryInfo.openapiRequiredFields.toString()));
@@ -217,13 +244,14 @@ public class RepositoryInfo implements Serializable {
                 requiredField, jsonObj.toString()));
       }
     }
-    // validate the optional field `storeInfo`
-    if (jsonObj.get("storeInfo") != null && !jsonObj.get("storeInfo").isJsonNull()) {
-      StorageInfo.validateJsonObject(jsonObj.getAsJsonObject("storeInfo"));
-    }
-    // validate the optional field `indexInfo`
-    if (jsonObj.get("indexInfo") != null && !jsonObj.get("indexInfo").isJsonNull()) {
-      StorageInfo.validateJsonObject(jsonObj.getAsJsonObject("indexInfo"));
+    // validate the required field `storeInfo`
+    StorageInfo.validateJsonObject(jsonObj.getAsJsonObject("storeInfo"));
+    // validate the required field `indexInfo`
+    StorageInfo.validateJsonObject(jsonObj.getAsJsonObject("indexInfo"));
+    // validate the optional field `repositoryStatistics`
+    if (jsonObj.get("repositoryStatistics") != null
+        && !jsonObj.get("repositoryStatistics").isJsonNull()) {
+      RepositoryStatistics.validateJsonObject(jsonObj.getAsJsonObject("repositoryStatistics"));
     }
   }
 
