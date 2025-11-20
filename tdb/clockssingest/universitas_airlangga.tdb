@@ -24,9 +24,9 @@
 
       param[journal_id] = MKG
 
-      au < manifest ; exists ; 2005 ; Dental Journal (Majalah Kedokteran Gigi) Volume 38 ; 38 ; 2005 ; >
+      au < ready ; exists ; 2005 ; Dental Journal (Majalah Kedokteran Gigi) Volume 38 ; 38 ; 2005 ; >
       au < finished ; finished ; 2006 ; Dental Journal (Majalah Kedokteran Gigi) Volume 39 ; 39 ; 2006 ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2007 ; Dental Journal (Majalah Kedokteran Gigi) Volume 40 ; 40 ; 2007 ; >
+      au < ready ; exists ; 2007 ; Dental Journal (Majalah Kedokteran Gigi) Volume 40 ; 40 ; 2007 ; >
       au < ready ; exists ; 2008 ; Dental Journal (Majalah Kedokteran Gigi) Volume 41 ; 41 ; 2008 ; >
       au < crawling ; exists ; 2009 ; Dental Journal (Majalah Kedokteran Gigi) Volume 42 ; 42 ; 2009 ; >
       au < ready ; exists ; 2010 ; Dental Journal (Majalah Kedokteran Gigi) Volume 43 ; 43 ; 2010 ; >
@@ -58,19 +58,19 @@
       param[journal_id] = YDK
 
       au < finished ; finished ; 1991 ; Yuridika Volume 6 ; 6 ; 1991 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 1992 ; Yuridika Volume 7 ; 7 ; 1992 ; >
+      au < ready ; exists ; 1992 ; Yuridika Volume 7 ; 7 ; 1992 ; >
       au < doesNotExist ; doesNotExist ; 1993 ; Yuridika Volume 8 ; 8 ; 1993 ; >
-      au < manifest ; exists ; 1994 ; Yuridika Volume 9 ; 9 ; 1994 ; >
+      au < ready ; exists ; 1994 ; Yuridika Volume 9 ; 9 ; 1994 ; >
       au < doesNotExist ; doesNotExist ; 1995 ; Yuridika Volume 10 ; 10 ; 1995 ; >
-      au < manifest ; exists ; 1996 ; Yuridika Volume 11 ; 11 ; 1996 ; >
-      au < manifest ; exists ; 1997 ; Yuridika Volume 12 ; 12 ; 1997 ; >
+      au < ready ; exists ; 1996 ; Yuridika Volume 11 ; 11 ; 1996 ; >
+      au < ready ; exists ; 1997 ; Yuridika Volume 12 ; 12 ; 1997 ; >
       au < doesNotExist ; doesNotExist ; 1998 ; Yuridika Volume 13 ; 13 ; 1998 ; >
-      au < manifest ; exists ; 1999 ; Yuridika Volume 14 ; 14 ; 1999 ; >
+      au < ready ; exists ; 1999 ; Yuridika Volume 14 ; 14 ; 1999 ; >
       au < finished ; finished ; 2000 ; Yuridika Volume 15 ; 15 ; 2000 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2001 ; Yuridika Volume 16 ; 16 ; 2001 ; >
+      au < ready ; exists ; 2001 ; Yuridika Volume 16 ; 16 ; 2001 ; >
       au < doesNotExist ; doesNotExist ; 2002 ; Yuridika Volume 17 ; 17 ; 2002 ; >
-      au < manifest ; exists ; 2003 ; Yuridika Volume 18 ; 18 ; 2003 ; >
-      au < manifest ; exists ; 2004 ; Yuridika Volume 19 ; 19 ; 2004 ; >
+      au < ready ; exists ; 2003 ; Yuridika Volume 18 ; 18 ; 2003 ; >
+      au < ready ; exists ; 2004 ; Yuridika Volume 19 ; 19 ; 2004 ; >
       au < doesNotExist ; doesNotExist ; 2005 ; Yuridika Volume 20 ; 20 ; 2005 ; >
       au < doesNotExist ; doesNotExist ; 2006 ; Yuridika Volume 21 ; 21 ; 2006 ; >
       au < doesNotExist ; doesNotExist ; 2007 ; Yuridika Volume 22 ; 22 ; 2007 ; >
@@ -128,7 +128,7 @@
 
       param[journal_id] = JNERS
 
-      au < manifest ; exists ; 2007 ; Jurnal Ners Volume 2 ; 2 ; 2007 ; >
+      au < ready ; exists ; 2007 ; Jurnal Ners Volume 2 ; 2 ; 2007 ; >
       au < finished ; finished ; 2008 ; Jurnal Ners Volume 3 ; 3 ; 2008 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2009 ; Jurnal Ners Volume 4 ; 4 ; 2009 ; >
       au < ready ; exists ; 2010 ; Jurnal Ners Volume 5 ; 5 ; 2010 ; >

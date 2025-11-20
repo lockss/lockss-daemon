@@ -2,12 +2,12 @@
 
   publisher <
     name = New Prairie Press ;
+    info[contract] = 2000 ;
     info[back] = 2008 ;
-    info[contract] = 2008 ;
-    # Under the auspices of Kansas State University on Digital Commons ;
     info[tester] = 5 ;
-    info[poller] = 8 ;
     info[platform] = bepress & OJS
+    # Under the auspices of Kansas State University on Digital Commons ;
+
   >
   provider = bepress
   
