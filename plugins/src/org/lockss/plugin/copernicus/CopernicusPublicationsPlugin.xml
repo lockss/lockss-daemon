@@ -78,8 +78,10 @@ POSSIBILITY OF SUCH DAMAGE.
   <!--  support migration to https for active AUs -->
     <string>au_start_url</string>
     <list>
-      <string>"%s%s/index.html", base_url, volume_name</string>
-      <string>"%sarticles/%s/index.html", base_url, volume_name</string>
+      <string>"%s%s/index.html", to_http(base_url), volume_name</string>
+      <string>"%s%s/index.html", to_https(base_url), volume_name</string>
+      <string>"%sarticles/%s/index.html", to_http(base_url), volume_name</string>
+      <string>"%sarticles/%s/index.html", to_https(base_url), volume_name</string>
     </list>
   </entry>
   <entry>
@@ -164,6 +166,7 @@ POSSIBILITY OF SUCH DAMAGE.
         https://ar.copernicus.org/preprints/ar-2023-1/ar-2023-1.pdf
       -->
       <string>1, "^https?://%s/preprints/.*\.pdf",url_host(base_url)</string>
+      <string>1,"^https?://%s/index.html", url_host(home_url)</string>
     </list>
   </entry>
   <entry>
