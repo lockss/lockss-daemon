@@ -36,11 +36,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeBooksPlugin</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeBooksTestPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>15</string>
+        <string>14</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -108,7 +108,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>"Silverchair Common Theme Books Plugin, Base URL %s, Resource Id %s", base_url, resource_id</string>
     </entry>
     <entry>
-        <string>au_start_url</string>
+        <string>au_permission_url</string>
         <list>
             <string>"%s%s", base_url, resource_id</string>
             <!--<string>"%s%s/books/([^/]+)/%s", base_url, journal_id, resource_id</string>-->
@@ -117,7 +117,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <!--Exclude improperly relative URLs, e.g. those with 'http// or 'https//' or 'www', or those that end with .com, .net, .org, etc. 
+            <!--Exclude improperly relative URLs, e.g. those with 'http// or 'https//' or 'www', or those that end with .com, .net, .org, etc.
             Also need to exclude links that end with javascript:;-->
             <string>2,"%sbooks/(book|edited-volume|monograph)/[^/]+/chapter/.*/(https?//|www\.)", base_url</string>
             <string>2,"%sbooks/(book|edited-volume|monograph)/[^/]+/chapter/.*/[^/]+\.(com|net|org|edu|gov)", base_url</string>
@@ -139,6 +139,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"%sCitation/Download\?resourceId=[^&amp;]+&amp;resourceType=[^&amp;]+&amp;citationFormat=2", base_url</string>
             <string>1,"^https?://([^/]+\.silverchair-cdn\.com)/[^?]+\?Expires=2147483647"</string>
             <string>1,"%s%s/", base_url, resource_id</string>
+            <string>1, "https://id.rsc.org/(samlp|u)/"</string>
             <!--
             https://pubs.geoscienceworld.org/books/book/2160/chapter-pdf/4705971/01_sp471-18-052.pdf
             https://books.rsc.org/books/edited-volume/2066/chapter/7493655/Computational-Methods-to-Study-Chalcogen-Bonds
@@ -152,6 +153,7 @@ POSSIBILITY OF SUCH DAMAGE.
             -->
             <string>1,"%s([^/]+/)?(books|edited-volume|monograph|ebooks)(/[^/]+)?(/[^/]+)?/(chapter|book)(-pdf)?/.*", base_url</string>
             <string>1,"%s([a-z]+/)books/(books|edited-volume|monograph|ebooks)(/[1-9]+)(/[^/]+)$", base_url</string>
+            <string>1,"%sbooks/(book-media|book-chapter-media)/[^/]+/epub/.*", base_url</string>
         </list>
     </entry>
     <entry>
@@ -219,6 +221,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>gsw\.silverchair-cdn\.com</string>
             <string>watermark\.silverchair\.com</string>
             <string>pub\.silverchair\.com</string>
+            <string>id\.rsc\.org</string>
         </list>
     </entry>
     <entry>
