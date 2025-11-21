@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>47</string>
+    <string>48</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -123,6 +123,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"^https://%s/articles/[0-9]+/files/.*@.*\.edu",url_host(base_url)</string>
       <string>2,"^https://%s/articles/[0-9]+/files/www\.",url_host(base_url)</string>
       <string>2,"^https://%s/articles/[0-9]+/files/.*\.(com|net|org|edu|gov)", url_host(base_url)</string>
+      <!-- bad url link in Journal of Conservation and Museum Studies Volume 2012 -->
+      <string>2,"https://jcms-journal\.com/articles/31/files/submission/proof/.r20"</string>
       <!--  take out jquery temporarily to see what it is that this needed -->
       <string>1,"^https?://(maxcdn\.bootstrapcdn\.com|cdnjs\.cloudflare\.com|.+\.cloudfront\.net|cdn\.mathjax\.org|(fonts|ajax|storage)\.(gstatic|googleapis)\.com)/."</string>
       <string>1,"^https?://%s%sapi/theme$", url_host(base_url), url_path(base_url)</string>
