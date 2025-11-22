@@ -20,8 +20,10 @@
 
       au < readySource ; finished ; 2023 ; American Institute of Physics Books Source Content 2023_01 ; 2023_01 >
       au < readySource ; crawling ; 2025 ; American Institute of Physics Books Source Content 2025_01 ; 2025_01 >
+      au < expected ; exists ; 2026 ; American Institute of Physics Books Source Content 2026_01 ; 2026_01 >
 
     }
+    
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aipbooks-released/
 
@@ -50,6 +52,9 @@
       au < readySource ; crawling ; 2025 ; American Institute of Physics JATS Source Content 2025_01 ; 2025_01 >
       au < readySource ; crawling ; 2025 ; American Institute of Physics JATS Source Content 2025_02 ; 2025_02 >
 
+      au < expected ; exists ; 2026 ; American Institute of Physics JATS Source Content 2026_01 ; 2026_01 >
+      au < expected ; exists ; 2026 ; American Institute of Physics JATS Source Content 2026_02 ; 2026_02 >
+
     }
     {
       plugin = org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsSourcePlugin
@@ -66,7 +71,6 @@
       au < zapped ; finished ; 2021 ; American Institute of Physics JATS Source Content 2021 ; 2021 >
       au < zapped ; finished ; 2022 ; American Institute of Physics JATS Source Content 2022 ; 2022 >
       #Change to directory base plugin
-
     }
     {
       plugin =  org.lockss.plugin.americaninstituteofphysics.ClockssAIPJatsDirSourcePlugin
@@ -75,7 +79,6 @@
 
       au < zapped ; finished ; 2022 ; American Institute of Physics JATS Source Content 2022_01 ; 2022_01 >
       #No more AUs. Moved to https.
-
     }
   }
 
