@@ -2,8 +2,9 @@
   publisher <
     name = Quebec Nursing Intervention Research Network ;
     info[contract] = 2008 ;
+    info[back] = 2008 ;
     info[tester] = 5 ;
-    info[poller] = 6
+    info[platform] = bepress
   >
   provider = bepress
 
