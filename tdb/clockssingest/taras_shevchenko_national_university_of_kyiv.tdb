@@ -1,0 +1,45 @@
+{
+
+  publisher <
+    name = IEREK ;
+    info[contract] = 2023 ;
+    info[back] = 2016 ;
+    info[tester] = 5 ;
+    info[platform] = OJS3.
+  >
+
+    #OJS3
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+    #attr[primary_locale] = es_ES
+
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+
+  {
+  
+    title < 
+      name = Current Issues of Ukrainian Linguistics: Theory and Practice ;
+      issn = 2311-2697 ;
+      eissn = 2523-4870 
+    >
+
+      #published 2015 to present
+      param[journal_id] = APULTP
+      param[base_url] = https://apultp.knu.ua/
+      #OJS3. 3.1.1.4. Need 3.1.3 at min
+
+      au < exists ; exists ; 2015 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 2015 ; 30-31 ; 2015 ; >
+      au < exists ; exists ; 2016 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 2016 ; 32-33 ; 2016 ; >
+      au < exists ; exists ; 2017 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 2017 ; 34-35 ; 2017 ; >
+      au < exists ; exists ; 2018 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 2018 ; 36-37 ; 2018 ; >
+      au < exists ; exists ; 2019 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 2019 ; 38-39 ; 2019 ; >
+      au < exists ; exists ; 2020 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 2020 ; 40-41 ; 2020 ; >
+      au < exists ; exists ; 2021 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 2021 ; 42-43 ; 2021 ; >
+      au < exists ; exists ; 2022 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 2022 ; 44-45 ; 2022 ; >
+      au < exists ; exists ; 2023 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 2023 ; 46-47 ; 2023 ; >
+      au < exists ; exists ; 2024 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 2024 ; 48-49 ; 2024 ; >
+      au < exists ; exists ; 2025 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 2025 ; 50-51 ; 2025 ; >
+
+  }
+
+}
