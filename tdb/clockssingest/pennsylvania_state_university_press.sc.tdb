@@ -2526,4 +2526,18 @@
 
   }
 
+  {
+
+      title <
+        name = Mediaevalia ;
+        issn = 0361-946X ;
+        eissn = 2161-8046
+      >
+
+      param[journal_id] = mediaevalia  
+
+      au < manifest ; exists ; 2025 ; Mediaevalia Volume 46 ; 46 ; 2025 ; >
+
+  }
+
 }
