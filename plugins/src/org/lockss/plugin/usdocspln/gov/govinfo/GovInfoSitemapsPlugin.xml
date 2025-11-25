@@ -148,7 +148,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <!-- https://fonts.googleapis.com/css?family=Lato:700%7CRoboto:400,700 -->
       <string>1,"^https?://fonts\.googleapis\.com/css\?"</string>
       <!-- There are some bad links that lead to a 404 in United States Code AUs-->
-      <string>2,"^%scontent/pkg/[a-zA-Z0-9-]+/graphics/$"</string>
+      <string>2,"^%scontent/pkg/[a-zA-Z0-9-]+/graphics/$",base_url</string>
     </list>
   </entry>
 <!-- for a long time this was shadowed by the other, simpler entry with the same key; 
