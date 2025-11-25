@@ -59,7 +59,7 @@ public class TestCopernicusArticleIteratorFactory extends ArticleIteratorTestCas
         static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
         static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
         static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
-        private final String BASE_URL = "http://www.clim-past.net/";
+        private final String BASE_URL = "https://www.clim-past.net/";
         private final String HOME_URL = "http://www.climate-of-the-past.net/";
         private final String VOLUME_NAME = "8";
         private final String YEAR = "2012";

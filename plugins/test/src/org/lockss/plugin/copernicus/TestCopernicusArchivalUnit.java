@@ -63,7 +63,8 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
   static final String BASE_HOST = "www.test-cop.com"; //this is not a real url
   static final String HOME_HOST = "www.TestCopernicus.com"; //this is not a real url
   
-  static final String ROOT_URL = "http://" + BASE_HOST + "/"; //this is not a real url
+  static final String ROOT_URL_HTTP = "http://" + BASE_HOST + "/"; //this is not a real url
+  static final String ROOT_URL_HTTPS = "https://" + BASE_HOST + "/"; //this is not a real url
   static final String ROOT_HOME_URL = "http://" + HOME_HOST + "/"; //this is not a real url
   
   static Logger log = Logger.getLogger(TestCopernicusArchivalUnit.class);
@@ -132,7 +133,7 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
   // Test the crawl rules
   //
   public void testShouldCacheProperPages() throws Exception {
-    URL base = new URL(ROOT_URL);
+    URL base = new URL(ROOT_URL_HTTP);
     URL home = new URL(ROOT_HOME_URL);
     ArchivalUnit ABAu = makeAu(base, home, 123, "2012");
     theDaemon.getLockssRepository(ABAu);
@@ -141,29 +142,29 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
         new RangeCachedUrlSetSpec(base.toString()));
     // Test for pages that should get crawled
     //start page
-    shouldCacheTest(ROOT_URL+"123/index.html", true, ABAu, cus);    
+    shouldCacheTest(ROOT_URL_HTTP+"123/index.html", true, ABAu, cus);    
     //TOC - same as start page, or 
-    shouldCacheTest(ROOT_URL+"123/issue5.html", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL_HTTP+"123/issue5.html", true, ABAu, cus);
     // articles - various allowed formats
-    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012.html", true, ABAu, cus);
-    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012.pdf", true, ABAu, cus);
-    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012.xml", true, ABAu, cus);
-    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012.bib", true, ABAu, cus);
-    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012.ris", true, ABAu, cus);
-    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012-supplement.pdf", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL_HTTP+"123/14/tc-123-18-2012.html", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL_HTTP+"123/14/tc-123-18-2012.pdf", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL_HTTP+"123/14/tc-123-18-2012.xml", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL_HTTP+"123/14/tc-123-18-2012.bib", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL_HTTP+"123/14/tc-123-18-2012.ris", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL_HTTP+"123/14/tc-123-18-2012-supplement.pdf", true, ABAu, cus);
 
     //home_url stuff
     shouldCacheTest(ROOT_HOME_URL+"foo/blah/whatsit.css", true, ABAu, cus);
     
     // Now a couple that shouldn't get crawled
     // wrong volume
-    shouldCacheTest(ROOT_URL+"12/index.html", false, ABAu, cus);
+    shouldCacheTest(ROOT_URL_HTTP+"12/index.html", false, ABAu, cus);
     // metrics page
-    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012-metrics.html", false, ABAu, cus);
+    shouldCacheTest(ROOT_URL_HTTP+"123/14/tc-123-18-2012-metrics.html", false, ABAu, cus);
     // related articles
-    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012-relations.html", false, ABAu, cus);
+    shouldCacheTest(ROOT_URL_HTTP+"123/14/tc-123-18-2012-relations.html", false, ABAu, cus);
     // discussion/"peer review"
-    shouldCacheTest(ROOT_URL+"123/14/tc-123-18-2012-discussion.html", true, ABAu, cus);
+    shouldCacheTest(ROOT_URL_HTTP+"123/14/tc-123-18-2012-discussion.html", true, ABAu, cus);
 
   }
   
@@ -173,13 +174,15 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
   }
   
   public void testStartUrlConstruction() throws Exception {
-    URL url = new URL(ROOT_URL);
+    URL url = new URL(ROOT_URL_HTTP);
 
     // 4 digit
-    String expected = ROOT_URL+"123/index.html";
-    String expected2 = ROOT_URL+"articles/123/index.html";
+    String expectedHttp = ROOT_URL_HTTP+"123/index.html";
+    String expected2Http = ROOT_URL_HTTP+"articles/123/index.html";
+    String expectedHttps = ROOT_URL_HTTPS+"123/index.html";
+    String expected2Https = ROOT_URL_HTTPS+"articles/123/index.html";
     DefinableArchivalUnit ABAu = makeAu(url, url, 123, "2010");
-    assertEquals(ListUtil.list(expected, expected2), ABAu.getStartUrls());
+    assertEquals(ListUtil.list(expectedHttp, expectedHttps, expected2Http, expected2Https), ABAu.getStartUrls());
 
     assertTrue(ABAu.isAllowStartUrlError());
   }
@@ -205,7 +208,7 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
   }
 
   public void testRepairList() throws Exception {
-    URL base = new URL(ROOT_URL);
+    URL base = new URL(ROOT_URL_HTTP);
     URL home = new URL(ROOT_HOME_URL);
     ArchivalUnit ABAu = makeAu(base, home, 123, "2012");
     theDaemon.getLockssRepository(ABAu);
@@ -215,10 +218,10 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
     // make sure that's the regexp that will match to the expected url string
     // this also tests the regexp (which is the same) for the weighted poll map
     List <String> repairList = ListUtil.list(   
-      ROOT_URL+"inc/amt/xml_fulltext_icon.gif",
-      ROOT_URL+"inc/amt/xml_icon.png",
-      ROOT_URL+"inc/amt/max1140.css",
-      ROOT_URL+"inc/amt/jquery-1.9.0.min.js",
+      ROOT_URL_HTTP+"inc/amt/xml_fulltext_icon.gif",
+      ROOT_URL_HTTP+"inc/amt/xml_icon.png",
+      ROOT_URL_HTTP+"inc/amt/max1140.css",
+      ROOT_URL_HTTP+"inc/amt/jquery-1.9.0.min.js",
       ROOT_HOME_URL+"AMT_figure_amt-7-4267-2014-f10_50x50.png",
       ROOT_HOME_URL+"base_print_new.css",
       ROOT_HOME_URL+"check-icon.png",

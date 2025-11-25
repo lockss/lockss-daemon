@@ -86,7 +86,7 @@ public class TestCopernicusMetadataExtractor extends LockssTestCase {
   static final String YEAR_KEY = ConfigParamDescr.YEAR.getKey();
   static final String VOLUME_NAME_KEY = ConfigParamDescr.VOLUME_NAME.getKey();
   private static String PLUGIN_NAME = "org.lockss.plugin.copernicus.ClockssCopernicusPublicationsPlugin";
-  private final String BASE_URL = "http://www.cop-foo.net/";
+  private final String BASE_URL = "https://www.cop-foo.net/";
   private final String HOME_URL = "http://www.copernicus-foobar.net/";
   private final String VOLUME_NAME = "8";
   private final String YEAR = "2012";
