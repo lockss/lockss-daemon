@@ -292,7 +292,7 @@
     au < zapped ; finished ; 1990-1999 ; Proceedings of Symposia in Pure Mathematics 1990-1999 ; 1990-1999 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2000-2009 ; Proceedings of Symposia in Pure Mathematics 2000-2009 ; 2000-2009 ; http://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2010-2019 ; Proceedings of Symposia in Pure Mathematics 2010-2019 ; 2010-2019 ; http://www.ams.org/ ; reingest1.clockss.org:8082 >
-    au < manifest ; exists ; 2020-2029 ; Proceedings of Symposia in Pure Mathematics 2020-2029 ; 2020-2029 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
+    au < manifest ; exists ; 2020-2029 ; Proceedings of Symposia in Pure Mathematics 2020-2029 ; 2020-2029 ; https://www.ams.org/ ; >
 
     }
    
@@ -642,7 +642,7 @@
     
     param[collection_id] = dimacs
     
-    au < exists ; exists ; 1990 ; Dimacs Workshop Series-Electronic 1990 ; 1990 ; https://www.ams.org/ ; > #toc only
+    au < doesNotExist ; doesNotExist ; 1990 ; Dimacs Workshop Series-Electronic 1990 ; 1990 ; https://www.ams.org/ ; > #toc only
     au < frozen ; exists ; 1991 ; Dimacs Workshop Series-Electronic 1991 ; 1991 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1992 ; Dimacs Workshop Series-Electronic 1992 ; 1992 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1993 ; Dimacs Workshop Series-Electronic 1993 ; 1993 ; https://www.ams.org/ ; >
