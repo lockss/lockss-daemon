@@ -103,6 +103,9 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- In 2025, bad link found in Journal of Distance Education Volume 21-22. 
+       https://www.ijede.ca/index.php/jde/article/download/34/ACED02.png></p><p>... -->
+      <string>2,"%s.*&gt;&lt;/p&gt;", base_url</string>
       <!--In 2024, reference links in Medicine Anthropology Theory were all 403s. We are excluding them here in the crawl rules.
           Example: https://www.medanthrotheory.org/article/download/4555/4584%3Fminimal=1.html -->
       <string>2,"^https?://www\.medanthrotheory\.org/article/download/.+minimal=1.html"</string>
