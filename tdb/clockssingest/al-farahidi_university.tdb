@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Al-Farahidi University;
+    info[contract] = 2025 ;
+    info[back] = 2025 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+  {
+
+      title <
+        name = Al-Farahidi Expert Systems Journal ;
+        eissn = 3105-9104
+      >
+
+      param[base_url] = https://fesj.uoalfarahidi.edu.iq/
+      param[journal_abbr] = journal
+
+      au < manifest ; exists ; 2025 ; Al-Farahidi Expert Systems Journal Volume 1 ; 1 ; >
+
+  }
+
+}
