@@ -33,9 +33,9 @@
 
     au < ready ; exists ; 1984 ; 1984 ; Cuadernos de administración Volume 7 ; 7 ; >
     au < ready ; exists ; 1985 ; 1985 ; Cuadernos de administración Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1987 ; 1987 ; Cuadernos de administración Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1988 ; 1988 ; Cuadernos de administración Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1989 ; 1989 ; Cuadernos de administración Volume 11 ; 11 ; >
+    au < ready ; exists ; 1987 ; 1987 ; Cuadernos de administración Volume 9 ; 9 ; >
+    au < ready ; exists ; 1988 ; 1988 ; Cuadernos de administración Volume 10 ; 10 ; >
+    au < ready ; exists ; 1989 ; 1989 ; Cuadernos de administración Volume 11 ; 11 ; >
     au < ready ; exists ; 1990 ; 1990 ; Cuadernos de administración Volume 12 ; 12 ; >
     au < ready ; exists ; 1992 ; 1992 ; Cuadernos de administración Volume 13 ; 13 ; >
 
@@ -97,7 +97,7 @@
       au < doesNotExist ; doesNotExist ; 1984 ; 1984 ; Lenguaje Volume 1984 ; 0 ; >
       au < ready ; exists ; 1985 ; 1985 ; Lenguaje Volume 1985 ; 15 ; >
       au < doesNotExist ; doesNotExist ; 1986 ; 1986 ; Lenguaje Volume 1986 ; 0 ; >
-      au < manifest ; exists ; 1987 ; 1987 ; Lenguaje Volume 1987 ; 16 ; >
+      au < ready ; exists ; 1987 ; 1987 ; Lenguaje Volume 1987 ; 16 ; >
       au < doesNotExist ; doesNotExist ; 1988 ; 1988 ; Lenguaje Volume 1988 ; 17 ; >
       au < doesNotExist ; doesNotExist ; 1989 ; 1989 ; Lenguaje Volume 1989 ; 18 ; >
       au < doesNotExist ; doesNotExist ; 1990 ; 1990 ; Lenguaje Volume 1990 ; 19 ; >
@@ -210,16 +210,16 @@
       au < ready ; exists ; 2012 ; 2012 ; Sociedad y Economía Volume 2012 ; 2012 ; >
       au < manifest ; exists ; 2013 ; 2013 ; Sociedad y Economía Volume 2013 ; 2013 ; >
       au < manifest ; exists ; 2014 ; 2014 ; Sociedad y Economía Volume 2014 ; 2014 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; Sociedad y Economía Volume 2015 ; 2015 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; Sociedad y Economía Volume 2016 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; Sociedad y Economía Volume 2017 ; 32-33 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Sociedad y Economía Volume 2018 ; 34-35 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Sociedad y Economía Volume 2019 ; 36-38 ; >
-      au < manifest ; exists ; 2020 ; 2020 ; Sociedad y Economía Volume 2020 ; 39-41 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; Sociedad y Economía Volume 2021 ; 42-44 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; Sociedad y Economía Volume 2022 ; 45-47 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; Sociedad y Economía Volume 2023 ; 48-50 ; >
-      au < manifest ; exists ; 2024 ; 2024 ; Sociedad y Economía Volume 2024 ; 51-53 ; >
+      au < ready ; exists ; 2015 ; 2015 ; Sociedad y Economía Volume 2015 ; 2015 ; >
+      au < ready ; exists ; 2016 ; 2016 ; Sociedad y Economía Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2017 ; 2017 ; Sociedad y Economía Volume 2017 ; 32-33 ; >
+      au < ready ; exists ; 2018 ; 2018 ; Sociedad y Economía Volume 2018 ; 34-35 ; >
+      au < ready ; exists ; 2019 ; 2019 ; Sociedad y Economía Volume 2019 ; 36-38 ; >
+      au < ready ; exists ; 2020 ; 2020 ; Sociedad y Economía Volume 2020 ; 39-41 ; >
+      au < ready ; exists ; 2021 ; 2021 ; Sociedad y Economía Volume 2021 ; 42-44 ; >
+      au < ready ; exists ; 2022 ; 2022 ; Sociedad y Economía Volume 2022 ; 45-47 ; >
+      au < ready ; exists ; 2023 ; 2023 ; Sociedad y Economía Volume 2023 ; 48-50 ; >
+      au < ready ; exists ; 2024 ; 2024 ; Sociedad y Economía Volume 2024 ; 51-53 ; >
       au < crawling ; exists ; 2025 ; 2025 ; Sociedad y Economía Volume 2025 ; 54-56 ; >
   }
 }

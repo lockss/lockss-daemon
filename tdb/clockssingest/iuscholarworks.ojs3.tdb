@@ -1072,7 +1072,7 @@
 
       param[journal_id] = sdh
 
-      au < notReady ; exists ; 2017 ; 2017 ; Studies in Digital Heritage Volume 1 ; 1 ; > #500 error on malformed url. https://scholarworks.iu.edu/journals/index.php/sdh/article/download/23331/%20/en.wikipedia.org/wiki/Goldilocks_principle
+      au < ready ; exists ; 2017 ; 2017 ; Studies in Digital Heritage Volume 1 ; 1 ; > #500 error on malformed url. https://scholarworks.iu.edu/journals/index.php/sdh/article/download/23331/%20/en.wikipedia.org/wiki/Goldilocks_principle
       au < finished ; finished ; 2018 ; 2018 ; Studies in Digital Heritage Volume 2 ; 2 ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 2019 ; Studies in Digital Heritage Volume 3 ; 3 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; Studies in Digital Heritage Volume 4 ; 4 ; >
@@ -1111,15 +1111,15 @@
 
       param[journal_id] = tributaries
 
-      au < notReady ; exists ; 2011 ; 2011 ; Tributaries Volume 14 ; 14 ; > #0 article, 0 metadata
-      au < notReady ; exists ; 2012 ; 2012 ; Tributaries Volume 15 ; 15 ; > #0 article, 0 metadata
-      au < notReady ; exists ; 2013 ; 2013 ; Tributaries Volume 16 ; 16 ; > #0 article, 0 metadata
+      au < ready ; exists ; 2011 ; 2011 ; Tributaries Volume 14 ; 14 ; > #0 article, 0 metadata
+      au < ready ; exists ; 2012 ; 2012 ; Tributaries Volume 15 ; 15 ; > #0 article, 0 metadata
+      au < ready ; exists ; 2013 ; 2013 ; Tributaries Volume 16 ; 16 ; > #0 article, 0 metadata
       au < finished ; finished ; 2014 ; 2014 ; Tributaries Volume 17 ; 17 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2015 ; 2015 ; Tributaries Volume 18 ; 18 ; reingest3.clockss.org:8083 > #no substance, but the single pdf is collected. https://scholarworks.iu.edu/journals/index.php/tributaries/issue/view/1243/pdf_8
       au < finished ; finished ; 2016 ; 2016 ; Tributaries Volume 19 ; 19 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 2017 ; Tributaries Volume 20 ; 20 ; reingest3.clockss.org:8083 > #no substance, but the two pdfs are collected. https://scholarworks.iu.edu/journals/index.php/tributaries/issue/view/1881/103 & 4
       au < notReady ; exists ; 2018 ; 2018 ; Tributaries Volume 21 ; 21 ; > #0 article, 0 metadata
-      au < notReady ; exists ; 2019 ; 2019 ; Tributaries Volume 22 ; 22 ; > #0 article, 0 metadata
+      au < ready ; exists ; 2019 ; 2019 ; Tributaries Volume 22 ; 22 ; > #0 article, 0 metadata
 
   }
 
@@ -1595,10 +1595,10 @@
 
       param[journal_id] = psource
 
-      au < notReady ; exists ; 2011 ; 2011 ; Primary Source Volume 2011 ; 1 ; > #no metadata
-      au < notReady ; exists ; 2012 ; 2012 ; Primary Source Volume 2012 ; 2 ; > #no metadata
-      au < notReady ; exists ; 2013 ; 2013 ; Primary Source Volume 2013 ; 3 ; > #no metadata
-      au < notReady ; exists ; 2014 ; 2014 ; Primary Source Volume 2014 ; 4 ; > #no metadata
+      au < ready ; exists ; 2011 ; 2011 ; Primary Source Volume 2011 ; 1 ; > #no metadata
+      au < ready ; exists ; 2012 ; 2012 ; Primary Source Volume 2012 ; 2 ; > #no metadata
+      au < ready ; exists ; 2013 ; 2013 ; Primary Source Volume 2013 ; 3 ; > #no metadata
+      au < ready ; exists ; 2014 ; 2014 ; Primary Source Volume 2014 ; 4 ; > #no metadata
       au < finished ; crawling ; 2015 ; 2015 ; Primary Source Volume 2015 ; 5 ; reingest5.clockss.org:8082 >
       #no more published
 
@@ -1695,7 +1695,7 @@
       au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Workshop Volume 2015 ; 3 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
       au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Workshop Volume 2016 ; 4 ; >
-      au < notReady ; exists ; 2018 ; 2018 ; The Workshop Volume 5 ; 5 ; >#Not a typo. Really 2018
+      au < ready ; exists ; 2018 ; 2018 ; The Workshop Volume 5 ; 5 ; >#Not a typo. Really 2018
       au < finished ; finished ; 2017 ; 2017 ; The Workshop Volume 6 ; 6 ; reingest5.clockss.org:8082 >#Not a typo. Really 2017
       #no more published
 

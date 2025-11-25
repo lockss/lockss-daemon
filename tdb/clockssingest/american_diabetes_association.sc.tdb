@@ -63,33 +63,33 @@
       #No volume 11 for 1962.
       param[journal_id] = diabetes
 
-        au < manifest ; exists ; 1952 ; 1952 ; Diabetes Volume 1 ; 1 ; >
-        au < manifest ; exists ; 1953 ; 1953 ; Diabetes Volume 2 ; 2 ; >
-        au < manifest ; exists ; 1954 ; 1954 ; Diabetes Volume 3 ; 3 ; >
-        au < manifest ; exists ; 1955 ; 1955 ; Diabetes Volume 4 ; 4 ; >
-        au < manifest ; exists ; 1956 ; 1956 ; Diabetes Volume 5 ; 5 ; >
-        au < manifest ; exists ; 1957 ; 1957 ; Diabetes Volume 6 ; 6 ; >
-        au < manifest ; exists ; 1958 ; 1958 ; Diabetes Volume 7 ; 7 ; >
-        au < manifest ; exists ; 1959 ; 1959 ; Diabetes Volume 8 ; 8 ; >
-        au < manifest ; exists ; 1960 ; 1960 ; Diabetes Volume 9 ; 9 ; >
-        au < manifest ; exists ; 1961 ; 1961 ; Diabetes Volume 10 ; 10 ; >
+        au < ready ; exists ; 1952 ; 1952 ; Diabetes Volume 1 ; 1 ; >
+        au < ready ; exists ; 1953 ; 1953 ; Diabetes Volume 2 ; 2 ; >
+        au < ready ; exists ; 1954 ; 1954 ; Diabetes Volume 3 ; 3 ; >
+        au < ready ; exists ; 1955 ; 1955 ; Diabetes Volume 4 ; 4 ; >
+        au < ready ; exists ; 1956 ; 1956 ; Diabetes Volume 5 ; 5 ; >
+        au < ready ; exists ; 1957 ; 1957 ; Diabetes Volume 6 ; 6 ; >
+        au < ready ; exists ; 1958 ; 1958 ; Diabetes Volume 7 ; 7 ; >
+        au < ready ; exists ; 1959 ; 1959 ; Diabetes Volume 8 ; 8 ; >
+        au < ready ; exists ; 1960 ; 1960 ; Diabetes Volume 9 ; 9 ; >
+        au < ready ; exists ; 1961 ; 1961 ; Diabetes Volume 10 ; 10 ; >
         au < doesNotExist ; doesNotExist ; 1962 ; 1962 ; Diabetes Volume 11 ; 11 ; >
-        au < manifest ; exists ; 1963 ; 1963 ; Diabetes Volume 12 ; 12 ; >
-        au < manifest ; exists ; 1964 ; 1964 ; Diabetes Volume 13 ; 13 ; >
-        au < manifest ; exists ; 1965 ; 1965 ; Diabetes Volume 14 ; 14 ; >
-        au < manifest ; exists ; 1966 ; 1966 ; Diabetes Volume 15 ; 15 ; >
-        au < manifest ; exists ; 1967 ; 1967 ; Diabetes Volume 16 ; 16 ; >
-        au < manifest ; exists ; 1968 ; 1968 ; Diabetes Volume 17 ; 17 ; >
-        au < manifest ; exists ; 1969 ; 1969 ; Diabetes Volume 18 ; 18 ; >
-        au < manifest ; exists ; 1970 ; 1970 ; Diabetes Volume 19 ; 19 ; >
-        au < manifest ; exists ; 1971 ; 1971 ; Diabetes Volume 20 ; 20 ; >
-        au < manifest ; exists ; 1972 ; 1972 ; Diabetes Volume 21 ; 21 ; >
-        au < manifest ; exists ; 1973 ; 1973 ; Diabetes Volume 22 ; 22 ; >
-        au < manifest ; exists ; 1974 ; 1974 ; Diabetes Volume 23 ; 23 ; >
-        au < manifest ; exists ; 1975 ; 1975 ; Diabetes Volume 24 ; 24 ; >
-        au < manifest ; exists ; 1976 ; 1976 ; Diabetes Volume 25 ; 25 ; >
-        au < manifest ; exists ; 1977 ; 1977 ; Diabetes Volume 26 ; 26 ; >
-        au < manifest ; exists ; 1978 ; 1978 ; Diabetes Volume 27 ; 27 ; >
+        au < ready ; exists ; 1963 ; 1963 ; Diabetes Volume 12 ; 12 ; >
+        au < ready ; exists ; 1964 ; 1964 ; Diabetes Volume 13 ; 13 ; >
+        au < ready ; exists ; 1965 ; 1965 ; Diabetes Volume 14 ; 14 ; >
+        au < ready ; exists ; 1966 ; 1966 ; Diabetes Volume 15 ; 15 ; >
+        au < ready ; exists ; 1967 ; 1967 ; Diabetes Volume 16 ; 16 ; >
+        au < ready ; exists ; 1968 ; 1968 ; Diabetes Volume 17 ; 17 ; >
+        au < ready ; exists ; 1969 ; 1969 ; Diabetes Volume 18 ; 18 ; >
+        au < ready ; exists ; 1970 ; 1970 ; Diabetes Volume 19 ; 19 ; >
+        au < ready ; exists ; 1971 ; 1971 ; Diabetes Volume 20 ; 20 ; >
+        au < ready ; exists ; 1972 ; 1972 ; Diabetes Volume 21 ; 21 ; >
+        au < ready ; exists ; 1973 ; 1973 ; Diabetes Volume 22 ; 22 ; >
+        au < ready ; exists ; 1974 ; 1974 ; Diabetes Volume 23 ; 23 ; >
+        au < ready ; exists ; 1975 ; 1975 ; Diabetes Volume 24 ; 24 ; >
+        au < ready ; exists ; 1976 ; 1976 ; Diabetes Volume 25 ; 25 ; >
+        au < ready ; exists ; 1977 ; 1977 ; Diabetes Volume 26 ; 26 ; >
+        au < ready ; exists ; 1978 ; 1978 ; Diabetes Volume 27 ; 27 ; >
         au < ready ; exists ; 1979 ; 1979 ; Diabetes Volume 28 ; 28 ; >
         au < ready ; exists ; 1980 ; 1980 ; Diabetes Volume 29 ; 29 ; >
         au < ready ; exists ; 1981 ; 1981 ; Diabetes Volume 30 ; 30 ; >
@@ -152,7 +152,7 @@
       comment[supplement] = Clinical Practice Recommendations - is published as a supplement to Diabetes Care journal
       param[journal_id] = care
 
-        au < manifest ; exists ; 1978 ; 1978 ; Diabetes Care Volume 1 ; 1 ; >
+        au < ready ; exists ; 1978 ; 1978 ; Diabetes Care Volume 1 ; 1 ; >
         au < ready ; exists ; 1979 ; 1979 ; Diabetes Care Volume 2 ; 2 ; >
         au < ready ; exists ; 1980 ; 1980 ; Diabetes Care Volume 3 ; 3 ; >
         au < ready ; exists ; 1981 ; 1981 ; Diabetes Care Volume 4 ; 4 ; >
