@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = Taras Shevchenko National University of Kyiv ;
+    info[contract] = 2025 ;
+    info[back] = 2015 ;
+    info[tester] = 5 ;
+    info[platform] = OJS3.
+  >
+    hidden[proxy] = DIRECT
+
+  {
+    title <
+       name = Taras Shevchenko National University of Kyiv Source Content
+    >
+
+    plugin = needs.plugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+    {
+      param[base_url] = https://clockss-test.lockss.org/sourcefiles/XXXXX-released/
+
+      au < expected ; exists ; 2025 ; Taras Shevchenko National University of Kyiv Source Content 2025_01 ; 2025_01 >
+      au < expected ; exists ; 2026 ; Taras Shevchenko National University of Kyiv Source Content 2026_01 ; 2026_01 >
+
+    }
+  }
+
+}
