@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -147,6 +147,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://(%s|[^.]+\.bootstrapcdn\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
       <!-- https://fonts.googleapis.com/css?family=Lato:700%7CRoboto:400,700 -->
       <string>1,"^https?://fonts\.googleapis\.com/css\?"</string>
+      <!-- There are some bad links that lead to a 404 in United States Code AUs-->
+      <string>2,"^%scontent/pkg/[a-zA-Z0-9-]+/graphics/$"</string>
     </list>
   </entry>
 <!-- for a long time this was shadowed by the other, simpler entry with the same key; 
