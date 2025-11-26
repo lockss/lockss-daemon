@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>34</string>
+    <string>35</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -130,6 +130,9 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"^%s.*/html/www\.", base_url</string>
 <!-- https://www.govinfo.gov/content/pkg/DCPD-201800002.zip-->
       <string>2,"^%scontent/(granule|pkg)/[^/]+\.zip$", base_url</string>
+       <!-- There are some bad links that lead to a 404 in United States Code AUs-->
+      <string>2,"^%scontent/pkg/[a-zA-Z0-9-]+/graphics/[^/\.]?$", base_url</string>
+      <string>2,"^%serror", base_url</string>
       <string>1,"^%scontent/(granule|pkg)/%s-", base_url, collection_id</string>
       <string>1,"^%smetadata/pkg/%s-.*/mods\.xml$", base_url, collection_id</string>
       <string>2,"^%smetadata/pkg/%s-.*/premis\.xml$", base_url, collection_id</string>
@@ -147,8 +150,6 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://(%s|[^.]+\.bootstrapcdn\.com)/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)", url_host(base_url)</string>
       <!-- https://fonts.googleapis.com/css?family=Lato:700%7CRoboto:400,700 -->
       <string>1,"^https?://fonts\.googleapis\.com/css\?"</string>
-      <!-- There are some bad links that lead to a 404 in United States Code AUs-->
-      <string>2,"^%scontent/pkg/[a-zA-Z0-9-]+/graphics/$",base_url</string>
     </list>
   </entry>
 <!-- for a long time this was shadowed by the other, simpler entry with the same key; 
