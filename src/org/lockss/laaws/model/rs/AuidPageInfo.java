@@ -79,6 +79,7 @@ import org.lockss.laaws.model.rs.PageInfo;
 @ApiModel(description = "A display page of Archival Unit identifiers")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AuidPageInfo implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_AUIDS = "auids";
@@ -87,9 +88,12 @@ public class AuidPageInfo implements Serializable {
   private List<String> auids = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PAGE_INFO = "pageInfo";
-  @SerializedName(SERIALIZED_NAME_PAGE_INFO) @javax.annotation.Nonnull private PageInfo pageInfo;
+  @SerializedName(SERIALIZED_NAME_PAGE_INFO)
+  @javax.annotation.Nonnull
+  private PageInfo pageInfo;
 
-  public AuidPageInfo() {}
+  public AuidPageInfo() {
+  }
 
   public AuidPageInfo auids(@javax.annotation.Nonnull List<String> auids) {
     this.auids = auids;

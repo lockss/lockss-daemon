@@ -79,10 +79,13 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(description = "The properties of a TDB Title")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TdbTitleWsResult implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nullable private String name;
+  @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
+  private String name;
 
   public static final String SERIALIZED_NAME_TDB_PUBLISHER = "tdbPublisher";
   @SerializedName(SERIALIZED_NAME_TDB_PUBLISHER)
@@ -90,7 +93,9 @@ public class TdbTitleWsResult implements Serializable {
   private TdbPublisherWsResult tdbPublisher;
 
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID) @javax.annotation.Nullable private String id;
+  @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
+  private String id;
 
   public static final String SERIALIZED_NAME_PROPRIETARYID = "proprietaryid";
   @SerializedName(SERIALIZED_NAME_PROPRIETARYID)
@@ -108,16 +113,24 @@ public class TdbTitleWsResult implements Serializable {
   private String publicationtype;
 
   public static final String SERIALIZED_NAME_ISSN = "issn";
-  @SerializedName(SERIALIZED_NAME_ISSN) @javax.annotation.Nullable private String issn;
+  @SerializedName(SERIALIZED_NAME_ISSN)
+  @javax.annotation.Nullable
+  private String issn;
 
   public static final String SERIALIZED_NAME_ISSNL = "issnl";
-  @SerializedName(SERIALIZED_NAME_ISSNL) @javax.annotation.Nullable private String issnl;
+  @SerializedName(SERIALIZED_NAME_ISSNL)
+  @javax.annotation.Nullable
+  private String issnl;
 
   public static final String SERIALIZED_NAME_EISSN = "eissn";
-  @SerializedName(SERIALIZED_NAME_EISSN) @javax.annotation.Nullable private String eissn;
+  @SerializedName(SERIALIZED_NAME_EISSN)
+  @javax.annotation.Nullable
+  private String eissn;
 
   public static final String SERIALIZED_NAME_PRINTISSN = "printissn";
-  @SerializedName(SERIALIZED_NAME_PRINTISSN) @javax.annotation.Nullable private String printissn;
+  @SerializedName(SERIALIZED_NAME_PRINTISSN)
+  @javax.annotation.Nullable
+  private String printissn;
 
   public static final String SERIALIZED_NAME_ISSNS = "issns";
   @SerializedName(SERIALIZED_NAME_ISSNS)

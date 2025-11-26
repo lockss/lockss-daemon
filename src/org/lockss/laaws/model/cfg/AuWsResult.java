@@ -79,7 +79,9 @@ public class AuWsResult implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_AU_ID = "auId";
-  @SerializedName(SERIALIZED_NAME_AU_ID) @javax.annotation.Nonnull private String auId;
+  @SerializedName(SERIALIZED_NAME_AU_ID)
+  @javax.annotation.Nonnull
+  private String auId;
 
   public AuWsResult() {}
 

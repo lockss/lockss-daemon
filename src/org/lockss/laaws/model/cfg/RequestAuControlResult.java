@@ -76,20 +76,26 @@ import org.lockss.laaws.client.JSON;
 @ApiModel(description = "The result of an archival unit generic control request")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RequestAuControlResult implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID) @javax.annotation.Nonnull private String id;
+  @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nonnull
+  private String id;
 
   public static final String SERIALIZED_NAME_SUCCESS = "success";
-  @SerializedName(SERIALIZED_NAME_SUCCESS) @javax.annotation.Nonnull private Boolean success;
+  @SerializedName(SERIALIZED_NAME_SUCCESS)
+  @javax.annotation.Nonnull
+  private Boolean success;
 
   public static final String SERIALIZED_NAME_ERROR_MESSAGE = "errorMessage";
   @SerializedName(SERIALIZED_NAME_ERROR_MESSAGE)
   @javax.annotation.Nonnull
   private String errorMessage;
 
-  public RequestAuControlResult() {}
+  public RequestAuControlResult() {
+  }
 
   public RequestAuControlResult id(@javax.annotation.Nonnull String id) {
     this.id = id;

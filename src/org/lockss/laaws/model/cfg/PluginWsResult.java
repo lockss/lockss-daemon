@@ -76,19 +76,28 @@ import io.swagger.annotations.ApiModel;
 @ApiModel(description = "The properties of a plugin")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PluginWsResult implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_PLUGIN_ID = "pluginId";
-  @SerializedName(SERIALIZED_NAME_PLUGIN_ID) @javax.annotation.Nonnull private String pluginId;
+  @SerializedName(SERIALIZED_NAME_PLUGIN_ID)
+  @javax.annotation.Nonnull
+  private String pluginId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nonnull private String name;
+  @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
+  private String name;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION) @javax.annotation.Nonnull private String version;
+  @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nonnull
+  private String version;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE) @javax.annotation.Nonnull private String type;
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nonnull
+  private String type;
 
   public static final String SERIALIZED_NAME_DEFINITION = "definition";
   @SerializedName(SERIALIZED_NAME_DEFINITION)
@@ -96,13 +105,19 @@ public class PluginWsResult implements Serializable {
   private Map<String, String> definition = new HashMap<>();
 
   public static final String SERIALIZED_NAME_REGISTRY = "registry";
-  @SerializedName(SERIALIZED_NAME_REGISTRY) @javax.annotation.Nonnull private String registry;
+  @SerializedName(SERIALIZED_NAME_REGISTRY)
+  @javax.annotation.Nonnull
+  private String registry;
 
   public static final String SERIALIZED_NAME_URL = "url";
-  @SerializedName(SERIALIZED_NAME_URL) @javax.annotation.Nonnull private String url;
+  @SerializedName(SERIALIZED_NAME_URL)
+  @javax.annotation.Nonnull
+  private String url;
 
   public static final String SERIALIZED_NAME_AU_COUNT = "auCount";
-  @SerializedName(SERIALIZED_NAME_AU_COUNT) @javax.annotation.Nonnull private Integer auCount;
+  @SerializedName(SERIALIZED_NAME_AU_COUNT)
+  @javax.annotation.Nonnull
+  private Integer auCount;
 
   public static final String SERIALIZED_NAME_PUBLISHING_PLATFORM = "publishingPlatform";
   @SerializedName(SERIALIZED_NAME_PUBLISHING_PLATFORM)

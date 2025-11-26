@@ -75,10 +75,13 @@ import org.lockss.laaws.client.JSON;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ApiStatus implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
-  @SerializedName(SERIALIZED_NAME_API_VERSION) @javax.annotation.Nonnull private String apiVersion;
+  @SerializedName(SERIALIZED_NAME_API_VERSION)
+  @javax.annotation.Nonnull
+  private String apiVersion;
 
   public static final String SERIALIZED_NAME_COMPONENT_NAME = "componentName";
   @SerializedName(SERIALIZED_NAME_COMPONENT_NAME)
@@ -96,7 +99,9 @@ public class ApiStatus implements Serializable {
   private String lockssVersion;
 
   public static final String SERIALIZED_NAME_READY = "ready";
-  @SerializedName(SERIALIZED_NAME_READY) @javax.annotation.Nonnull private Boolean ready;
+  @SerializedName(SERIALIZED_NAME_READY)
+  @javax.annotation.Nonnull
+  private Boolean ready;
 
   public static final String SERIALIZED_NAME_SERVICE_NAME = "serviceName";
   @SerializedName(SERIALIZED_NAME_SERVICE_NAME)
@@ -104,10 +109,14 @@ public class ApiStatus implements Serializable {
   private String serviceName;
 
   public static final String SERIALIZED_NAME_READY_TIME = "readyTime";
-  @SerializedName(SERIALIZED_NAME_READY_TIME) @javax.annotation.Nullable private Long readyTime;
+  @SerializedName(SERIALIZED_NAME_READY_TIME)
+  @javax.annotation.Nullable
+  private Long readyTime;
 
   public static final String SERIALIZED_NAME_REASON = "reason";
-  @SerializedName(SERIALIZED_NAME_REASON) @javax.annotation.Nullable private String reason;
+  @SerializedName(SERIALIZED_NAME_REASON)
+  @javax.annotation.Nullable
+  private String reason;
 
   /**
    * Enum indicating progress of plugin/AU processing at startup.
@@ -153,9 +162,10 @@ public class ApiStatus implements Serializable {
     }
 
     public static class Adapter extends TypeAdapter<StartupStatusEnum> {
+
       @Override
       public void write(final JsonWriter jsonWriter, final StartupStatusEnum enumeration)
-          throws IOException {
+        throws IOException {
         jsonWriter.value(enumeration.getValue());
       }
 
@@ -177,7 +187,8 @@ public class ApiStatus implements Serializable {
   @javax.annotation.Nullable
   private StartupStatusEnum startupStatus;
 
-  public ApiStatus() {}
+  public ApiStatus() {
+  }
 
   public ApiStatus apiVersion(@javax.annotation.Nonnull String apiVersion) {
     this.apiVersion = apiVersion;
@@ -186,6 +197,7 @@ public class ApiStatus implements Serializable {
 
   /**
    * The version of the API
+   *
    * @return apiVersion
    **/
   @javax.annotation.Nonnull
@@ -204,6 +216,7 @@ public class ApiStatus implements Serializable {
 
   /**
    * The name of the component
+   *
    * @return componentName
    */
   @javax.annotation.Nullable
@@ -222,6 +235,7 @@ public class ApiStatus implements Serializable {
 
   /**
    * The version of the component software
+   *
    * @return componentVersion
    */
   @javax.annotation.Nullable
@@ -240,6 +254,7 @@ public class ApiStatus implements Serializable {
 
   /**
    * The version of the LOCKSS system
+   *
    * @return lockssVersion
    */
   @javax.annotation.Nullable
@@ -258,6 +273,7 @@ public class ApiStatus implements Serializable {
 
   /**
    * The indication of whether the service is available
+   *
    * @return ready
    */
   @javax.annotation.Nonnull
@@ -276,6 +292,7 @@ public class ApiStatus implements Serializable {
 
   /**
    * The name of the service
+   *
    * @return serviceName
    */
   @javax.annotation.Nullable
@@ -294,6 +311,7 @@ public class ApiStatus implements Serializable {
 
   /**
    * The time the service last became ready.
+   *
    * @return readyTime
    **/
   @javax.annotation.Nullable
@@ -312,6 +330,7 @@ public class ApiStatus implements Serializable {
 
   /**
    * The reason the service isn&#39;t ready.
+   *
    * @return reason
    **/
   @javax.annotation.Nullable
@@ -330,6 +349,7 @@ public class ApiStatus implements Serializable {
 
   /**
    * Enum indicating progress of plugin/AU processing at startup.
+   *
    * @return startupStatus
    */
   @javax.annotation.Nullable
@@ -358,13 +378,13 @@ public class ApiStatus implements Serializable {
       && Objects.equals(this.serviceName, apiStatus.serviceName)
       && Objects.equals(this.readyTime, apiStatus.readyTime)
       && Objects.equals(this.reason, apiStatus.reason)
-        && Objects.equals(this.startupStatus, apiStatus.startupStatus);
+      && Objects.equals(this.startupStatus, apiStatus.startupStatus);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(apiVersion, componentName, componentVersion, lockssVersion, ready,
-        serviceName, readyTime, reason, startupStatus);
+      serviceName, readyTime, reason, startupStatus);
   }
 
   @Override
@@ -385,8 +405,8 @@ public class ApiStatus implements Serializable {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first
+   * line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {
@@ -426,22 +446,22 @@ public class ApiStatus implements Serializable {
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
     if (jsonObj == null) {
       if (!ApiStatus.openapiRequiredFields
-               .isEmpty()) { // has required fields but JSON object is null
+        .isEmpty()) { // has required fields but JSON object is null
         throw new IllegalArgumentException(String.format(
           "The required field(s) %s in ApiStatus is not found in the empty JSON string",
           ApiStatus.openapiRequiredFields.toString()));
       }
     }
 
-     Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-     // check to see if the JSON string contains additional fields
-     for (Entry<String, JsonElement> entry : entries) {
-       if (!ApiStatus.openapiFields.contains(entry.getKey())) {
-         throw new IllegalArgumentException(String.format(
-           "The field `%s` in the JSON string is not defined in the `ApiStatus` properties. JSON: %s",
-           entry.getKey(), jsonObj.toString()));
-       }
-     }
+    Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+    // check to see if the JSON string contains additional fields
+    for (Entry<String, JsonElement> entry : entries) {
+      if (!ApiStatus.openapiFields.contains(entry.getKey())) {
+        throw new IllegalArgumentException(String.format(
+          "The field `%s` in the JSON string is not defined in the `ApiStatus` properties. JSON: %s",
+          entry.getKey(), jsonObj.toString()));
+      }
+    }
 
     // check to make sure all required properties/fields are present in the JSON string
     for (String requiredField : ApiStatus.openapiRequiredFields) {
@@ -488,12 +508,12 @@ public class ApiStatus implements Serializable {
         jsonObj.get("reason").toString()));
     }
     if ((jsonObj.get("startupStatus") != null && !jsonObj.get("startupStatus").isJsonNull())
-        && !jsonObj.get("startupStatus").isJsonPrimitive()) {
+      && !jsonObj.get("startupStatus").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `startupStatus` to be a primitive type in the JSON string but got "
+        "Expected the field `startupStatus` to be a primitive type in the JSON string but got "
           + "`%s`",
-          jsonObj.get("startupStatus").toString()));
-  }
+        jsonObj.get("startupStatus").toString()));
+    }
     // validate the optional field `startupStatus`
     if (jsonObj.get("startupStatus") != null && !jsonObj.get("startupStatus").isJsonNull()) {
       StartupStatusEnum.validateJsonElement(jsonObj.get("startupStatus"));
@@ -501,6 +521,7 @@ public class ApiStatus implements Serializable {
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {

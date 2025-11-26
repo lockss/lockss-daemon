@@ -76,6 +76,7 @@ import org.lockss.laaws.model.rs.StorageInfo;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RepositoryInfo implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_STORE_INFO = "storeInfo";

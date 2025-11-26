@@ -76,10 +76,13 @@ import io.swagger.annotations.ApiModel;
 @ApiModel(description = "The status of an archival unit")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AuStatus implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_VOLUME = "volume";
-  @SerializedName(SERIALIZED_NAME_VOLUME) @javax.annotation.Nonnull private String volume;
+  @SerializedName(SERIALIZED_NAME_VOLUME)
+  @javax.annotation.Nonnull
+  private String volume;
 
   public AuStatus() {}
 

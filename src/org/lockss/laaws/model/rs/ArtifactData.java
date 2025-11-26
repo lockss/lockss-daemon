@@ -56,13 +56,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * An {@code ArtifactData} serves as an atomic unit of data archived in the
- * LOCKSS Repository.
+ * An {@code ArtifactData} serves as an atomic unit of data archived in the LOCKSS Repository.
  * <br>
  * Reusability and release:<ul>
  * <li>Once an ArtifactData is obtained, it <b>must</b> be released (by
- * calling {@link #release()}, whether or not {@link #getInputStream()} has
- * been called.
+ * calling {@link #release()}, whether or not {@link #getInputStream()} has been called.
  * </ul>
  */
 public class ArtifactData implements AutoCloseable {
@@ -122,7 +120,7 @@ public class ArtifactData implements AutoCloseable {
   long artifactDataSize;
 
   public ArtifactData(MultipartReader mpReader, Headers restRespHeaders)
-      throws IOException {
+    throws IOException {
     this.restRespHeaders = restRespHeaders;
     if (log.isDebug3()) log.debug3("restRespHeaders: " + restRespHeaders);
     artifactDataSize = restRespHeaders.byteCount();
@@ -137,28 +135,27 @@ public class ArtifactData implements AutoCloseable {
         Headers partHdrs = part.headers();
         String disposition = partHdrs.get(CONTENT_DISPOSITION);
         artifactDataSize += partHdrs.byteCount();
-        if(disposition.equals("artifactProps")) {
+        if (disposition.equals("artifactProps")) {
           cis = new CountingInputStream(part.body().inputStream());
           Properties props = mapper.readValue(cis, Properties.class);
           String namespace = props.getProperty(ArtifactProperties.SERIALIZED_NAME_NAMESPACE).toString();
           String auId = props.getProperty(ArtifactProperties.SERIALIZED_NAME_AUID);
-          String uri =props.getProperty(ArtifactProperties.SERIALIZED_NAME_URI);
+          String uri = props.getProperty(ArtifactProperties.SERIALIZED_NAME_URI);
           String colDate = props.getProperty(ArtifactProperties.SERIALIZED_NAME_COLLECTION_DATE);
           String vers = props.getProperty(ArtifactProperties.SERIALIZED_NAME_VERSION);
           Integer version = Integer.parseInt(vers);
-          this.identifier = new ArtifactIdentifier(namespace, auId,uri,version);
+          this.identifier = new ArtifactIdentifier(namespace, auId, uri, version);
           this.collectionDate = Long.parseLong(colDate);
           artifactDataSize += cis.getByteCount();
           part.close();
-        }
-        else if (disposition.contains("httpResponseHeader")) {
+        } else if (disposition.contains("httpResponseHeader")) {
           cis = new CountingInputStream(part.body().inputStream());
 
           // Parse the InputStream to a HttpResponse object
           SessionInputBufferImpl buffer =
             new SessionInputBufferImpl(new HttpTransportMetricsImpl(),
-                                       4096, 4096, null,
-                                       StandardCharsets.UTF_8.newDecoder());
+              4096, 4096, null,
+              StandardCharsets.UTF_8.newDecoder());
           buffer.bind(cis);
           HttpResponse response =
             (new DefaultHttpResponseParser(buffer)).parse();
@@ -238,10 +235,9 @@ public class ArtifactData implements AutoCloseable {
       try {
         artifactStream = new BufferedInputStream(new FileInputStream(contentFile));
         return artifactStream;
-      }
-      catch (FileNotFoundException ex) {
+      } catch (FileNotFoundException ex) {
         throw new IllegalStateException(
-            "Attempt to get InputStream from ArtifactData with no data.");
+          "Attempt to get InputStream from ArtifactData with no data.");
       }
     }
     return null;
@@ -330,11 +326,11 @@ public class ArtifactData implements AutoCloseable {
   @Override
   public String toString() {
     return "[ArtifactData identifier=" + identifier + ", respHdr="
-        + respHdr + ", httpStatus=" + httpStatus
-        + ", artifactRepositoryState=" + artifactRepositoryState + ", storageUrl="
-        + storageUrl + ", contentDigest=" + contentDigest
-        + ", contentLength=" + contentLength + ", collectionDate="
-        + getCollectionDate() + "]";
+      + respHdr + ", httpStatus=" + httpStatus
+      + ", artifactRepositoryState=" + artifactRepositoryState + ", storageUrl="
+      + storageUrl + ", contentDigest=" + contentDigest
+      + ", contentLength=" + contentLength + ", collectionDate="
+      + getCollectionDate() + "]";
   }
 
   @Override
@@ -350,7 +346,7 @@ public class ArtifactData implements AutoCloseable {
   public synchronized void release() {
     if (!isReleased) {
       IOUtils.closeQuietly(artifactStream);
-      if(contentFile != null) {
+      if (contentFile != null) {
         FileUtil.safeDeleteFile(contentFile);
         contentFile = null;
       }
@@ -367,11 +363,11 @@ public class ArtifactData implements AutoCloseable {
     this.storedDate = storedDate;
   }
 
-   public long  getSize() {
+  public long getSize() {
     return artifactDataSize;
   }
 
-  File fileFromContentDisposition(String contentDisposition) throws IOException{
+  File fileFromContentDisposition(String contentDisposition) throws IOException {
     String filename = null;
     if (contentDisposition != null && !"".equals(contentDisposition)) {
       // Get filename from the Content-Disposition header.

@@ -76,21 +76,31 @@ import io.swagger.annotations.ApiModel;
 @ApiModel(description = "The encapsulation of the result of adding an Archival Unit")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ContentConfigurationResult implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_AU_ID = "auId";
-  @SerializedName(SERIALIZED_NAME_AU_ID) @javax.annotation.Nonnull private String auId;
+  @SerializedName(SERIALIZED_NAME_AU_ID)
+  @javax.annotation.Nonnull
+  private String auId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nonnull private String name;
+  @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
+  private String name;
 
   public static final String SERIALIZED_NAME_IS_SUCCESS = "isSuccess";
-  @SerializedName(SERIALIZED_NAME_IS_SUCCESS) @javax.annotation.Nonnull private Boolean isSuccess;
+  @SerializedName(SERIALIZED_NAME_IS_SUCCESS)
+  @javax.annotation.Nonnull
+  private Boolean isSuccess;
 
   public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE) @javax.annotation.Nonnull private String message;
+  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  @javax.annotation.Nonnull
+  private String message;
 
-  public ContentConfigurationResult() {}
+  public ContentConfigurationResult() {
+  }
 
   public ContentConfigurationResult auId(@javax.annotation.Nonnull String auId) {
     this.auId = auId;
