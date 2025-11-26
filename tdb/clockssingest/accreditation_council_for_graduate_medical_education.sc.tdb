@@ -10,6 +10,7 @@
 
   plugin = org.lockss.plugin.silverchair.allenpress.ClockssAllenPressSilverchairPlugin
   implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
+  #Moved to PubFactory
 
   {
 
@@ -20,6 +21,7 @@
     >
 
     param[journal_id] = jgme
+
     {
     param[base_url] = https://meridian.allenpress.com/
 
@@ -37,9 +39,9 @@
     au < frozen ; exists ; 2020 ; 2020 ; Journal of Graduate Medical Education Volume 12 ; 12 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Journal of Graduate Medical Education Volume 13 ; 13 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Journal of Graduate Medical Education Volume 14 ; 14 ; >
-    au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Graduate Medical Education Volume 15 ; 15 ; >
-    au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Graduate Medical Education Volume 16 ; 16 ; >
-    au < crawling ; exists ; 2025 ; 2025 ; Journal of Graduate Medical Education Volume 17 ; 17 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Journal of Graduate Medical Education Volume 15 ; 15 ; >
+    au < frozen ; exists ; 2024 ; 2024 ; Journal of Graduate Medical Education Volume 16 ; 16 ; >
+    au < superseded ; exists ; 2025 ; 2025 ; Journal of Graduate Medical Education Volume 17 [superseded] ; 17 ; >
 
     }
 
