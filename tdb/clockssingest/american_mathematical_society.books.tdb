@@ -507,7 +507,7 @@
     au < finished ; crawling ; 2020 ; History of Math 2020 ; 2020 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2021 ; History of Math 2021 ; 2021 ; https://www.ams.org/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2024 ; History of Math 2024 ; 2024 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 2025 ; History of Math 2025 ; 2025 ; https://www.ams.org/ ; > #403 Forbidden, 	https://www.ams.org/books/hmath/048/hmath048.pdf
+    au < manifest ; exists ; 2025 ; History of Math 2025 ; 2025 ; https://www.ams.org/ ; > #403 Forbidden, 	https://www.ams.org/books/hmath/048/hmath048.pdf
 
     }
    
@@ -629,7 +629,7 @@
     au < finished ; crawling ; 2021 ; Spectrum 2021 ; 2021 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2022 ; Spectrum 2022 ; 2022 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2024 ; Spectrum 2024 ; 2024 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 2025 ; Spectrum 2025 ; 2025 ; https://www.ams.org/ ; > #403 Forbidden, https://www.ams.org/books/spec/108/spec108.pdf
+    au < manifest ; exists ; 2025 ; Spectrum 2025 ; 2025 ; https://www.ams.org/ ; > #403 Forbidden, https://www.ams.org/books/spec/108/spec108.pdf
 
     }
    
@@ -889,7 +889,7 @@
     au < finished ; crawling ; 2019 ; Colloquium Publications 2019 ; 2019 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2020 ; Colloquium Publications 2020 ; 2020 ; https://www.ams.org/ ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 2024 ; Colloquium Publications 2024 ; 2024 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 2025 ; Colloquium Publications 2025 ; 2025 ; https://www.ams.org/ ; > #403 Forbidden, https://www.ams.org/books/coll/069/coll069.pdf
+    au < manifest ; exists ; 2025 ; Colloquium Publications 2025 ; 2025 ; https://www.ams.org/ ; > #403 Forbidden, https://www.ams.org/books/coll/069/coll069.pdf
 
     }
 
@@ -993,7 +993,7 @@
     au < finished ; crawling ; 2022 ; Graduate Studies in Mathematics 2022 ; 2022 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2023 ; Graduate Studies in Mathematics 2023 ; 2023 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2024 ; Graduate Studies in Mathematics 2024 ; 2024 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 2025 ; Graduate Studies in Mathematics 2025 ; 2025 ; https://www.ams.org/ ; > #403 Forbidden, https://www.ams.org/books/gsm/251/gsm251.pdf
+    au < manifest ; exists ; 2025 ; Graduate Studies in Mathematics 2025 ; 2025 ; https://www.ams.org/ ; > #403 Forbidden, https://www.ams.org/books/gsm/251/gsm251.pdf
 
     }
 
@@ -1245,7 +1245,7 @@
     au < crawling ; exists ; 2022 ; Classroom Resource Materials 2022 ; 2022 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2023 ; Classroom Resource Materials 2023 ; 2023 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2024 ; Classroom Resource Materials 2024 ; 2024 ; https://www.ams.org/ ; >
-    au < exists ; exists ; 2025 ; Classroom Resource Materials 2025 ; 2025 ; https://www.ams.org/ ; > #403 Forbidden, https://www.ams.org/books/clrm/076/clrm076.pdf
+    au < manifest ; exists ; 2025 ; Classroom Resource Materials 2025 ; 2025 ; https://www.ams.org/ ; > #403 Forbidden, https://www.ams.org/books/clrm/076/clrm076.pdf
 
     }
 }
