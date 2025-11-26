@@ -118,9 +118,9 @@
          au < finished ; manifest ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
          au < finished ; manifest ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
          au < finished ; manifest ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
-         au < deepCrawl ; exists ; 2022 ; 10 ; C21 Literature: journal of 21st-century writings Volume 2022 ; 2022 ; >
-         au < deepCrawl ; exists ; 2023 ; 11 ; C21 Literature: journal of 21st-century writings Volume 2023 ; 2023 ; >
-         au < deepCrawl ; exists ; 2024 ; 12 ; C21 Literature: journal of 21st-century writings Volume 2024 ; 2024 ; >
+         au < frozen ; exists ; 2022 ; 10 ; C21 Literature: journal of 21st-century writings Volume 2022 ; 2022 ; >
+         au < frozen ; exists ; 2023 ; 11 ; C21 Literature: journal of 21st-century writings Volume 2023 ; 2023 ; >
+         au < frozen ; exists ; 2024 ; 12 ; C21 Literature: journal of 21st-century writings Volume 2024 ; 2024 ; >
          au < crawling ; exists ; 2025 ; 13 ; C21 Literature: journal of 21st-century writings Volume 2025 ; 2025 ; >
 
   }
@@ -151,8 +151,8 @@
         au < finished ; manifest ; 2019 ; 28 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 28 ; 2019 ; reingest3.clockss.org:8083 >
         au < finished ; manifest ; 2020 ; 29-30 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 29-30 ; 2020 ; reingest4.clockss.org:8082 >
         au < finished ; manifest ; 2021 ; 31-32 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 31-32 ; 2021 ; reingest5.clockss.org:8082 >
-        au < deepCrawl ; exists ; 2022 ; 33 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 33 ; 2022 ; >
-        au < deepCrawl ; exists ; 2023 ; 34-35 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 34-35 ; 2023 ; >
+        au < frozen ; exists ; 2022 ; 33 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 33 ; 2022 ; >
+        au < frozen ; exists ; 2023 ; 34-35 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 34-35 ; 2023 ; >
         au < finished ; manifest ; 2024 ; 36 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 36 ; 2024 ; reingest5.clockss.org:8082 >
         au < crawling ; exists ; 2025 ; 37 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 37 ; 2025 ; >
   }
@@ -179,8 +179,8 @@
       au < finished ; crawling ; 2019 ; 49 ; Ethnologia Europaea Volume 2019 ; 2019 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; 50 ; Ethnologia Europaea Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 51 ; Ethnologia Europaea Volume 2021 ; 2021 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2022 ; 52 ; Ethnologia Europaea Volume 2022 ; 2022 ; >
-      au < deepCrawl ; exists ; 2023 ; 53 ; Ethnologia Europaea Volume 2023 ; 2023 ; >
+      au < frozen ; exists ; 2022 ; 52 ; Ethnologia Europaea Volume 2022 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; 53 ; Ethnologia Europaea Volume 2023 ; 2023 ; >
 
   }
 
@@ -246,8 +246,8 @@
         au < finished ; crawling ; 2020 ; 7 ; International Journal of Welsh Writing in English Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
         au < finished ; manifest ; 2021 ; 8 ; International Journal of Welsh Writing in English Volume 2021 ; 2021 ; reingest1.clockss.org:8082 >
         au < finished ; manifest ; 2022 ; 9 ; International Journal of Welsh Writing in English Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
-        au < deepCrawl ; exists ; 2023 ; 10 ; International Journal of Welsh Writing in English Volume 2023 ; 2023 ; >
-        au < deepCrawl ; exists ; 2024 ; 11 ; International Journal of Welsh Writing in English Volume 2024 ; 2024 ; >
+        au < frozen ; exists ; 2023 ; 10 ; International Journal of Welsh Writing in English Volume 2023 ; 2023 ; >
+        au < frozen ; exists ; 2024 ; 11 ; International Journal of Welsh Writing in English Volume 2024 ; 2024 ; >
         au < expected ; exists ; 2025 ; 12 ; International Journal of Welsh Writing in English Volume 2025 ; 2025 ; >
 
   }
@@ -660,7 +660,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; 3 ; Journal of Embodied Research Volume 2020 ; 2020 ; >
       au < finished ; manifest ; 2021 ; 4 ; Journal of Embodied Research Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; 5 ; Journal of Embodied Research Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2023 ; 6 ; Journal of Embodied Research Volume 2023 ; 2023 ; >
+      au < frozen ; exists ; 2023 ; 6 ; Journal of Embodied Research Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 7 ; Journal of Embodied Research Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 8 ; Journal of Embodied Research Volume 2025 ; 2025 ; >
 
