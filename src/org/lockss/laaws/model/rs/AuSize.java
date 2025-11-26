@@ -78,6 +78,7 @@ import org.lockss.laaws.client.JSON;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AuSize implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_TOTAL_LATEST_VERSIONS = "totalLatestVersions";

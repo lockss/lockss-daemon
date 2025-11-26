@@ -76,6 +76,7 @@ import org.lockss.laaws.client.JSON;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ArtifactProperties implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_NAMESPACE = "namespace";
@@ -84,16 +85,24 @@ public class ArtifactProperties implements Serializable {
   private String namespace = "lockss";
 
   public static final String SERIALIZED_NAME_UUID = "uuid";
-  @SerializedName(SERIALIZED_NAME_UUID) @javax.annotation.Nullable private String uuid;
+  @SerializedName(SERIALIZED_NAME_UUID)
+  @javax.annotation.Nullable
+  private String uuid;
 
   public static final String SERIALIZED_NAME_AUID = "auid";
-  @SerializedName(SERIALIZED_NAME_AUID) @javax.annotation.Nullable private String auid;
+  @SerializedName(SERIALIZED_NAME_AUID)
+  @javax.annotation.Nullable
+  private String auid;
 
   public static final String SERIALIZED_NAME_URI = "uri";
-  @SerializedName(SERIALIZED_NAME_URI) @javax.annotation.Nullable private String uri;
+  @SerializedName(SERIALIZED_NAME_URI)
+  @javax.annotation.Nullable
+  private String uri;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION) @javax.annotation.Nullable private Integer version;
+  @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
+  private Integer version;
 
   public static final String SERIALIZED_NAME_CONTENT_LENGTH = "contentLength";
   @SerializedName(SERIALIZED_NAME_CONTENT_LENGTH)
@@ -111,12 +120,17 @@ public class ArtifactProperties implements Serializable {
   private Long collectionDate;
 
   public static final String SERIALIZED_NAME_STORE_DATE = "storeDate";
-  @SerializedName(SERIALIZED_NAME_STORE_DATE) @javax.annotation.Nullable private Long storeDate;
+  @SerializedName(SERIALIZED_NAME_STORE_DATE)
+  @javax.annotation.Nullable
+  private Long storeDate;
 
   public static final String SERIALIZED_NAME_STATE = "state";
-  @SerializedName(SERIALIZED_NAME_STATE) @javax.annotation.Nullable private String state;
+  @SerializedName(SERIALIZED_NAME_STATE)
+  @javax.annotation.Nullable
+  private String state;
 
-  public ArtifactProperties() {}
+  public ArtifactProperties() {
+  }
 
   public ArtifactProperties namespace(@javax.annotation.Nullable String namespace) {
     this.namespace = namespace;

@@ -92,10 +92,14 @@ public class PageInfo implements Serializable {
   private String continuationToken;
 
   public static final String SERIALIZED_NAME_CUR_LINK = "curLink";
-  @SerializedName(SERIALIZED_NAME_CUR_LINK) @javax.annotation.Nonnull private String curLink;
+  @SerializedName(SERIALIZED_NAME_CUR_LINK)
+  @javax.annotation.Nonnull
+  private String curLink;
 
   public static final String SERIALIZED_NAME_NEXT_LINK = "nextLink";
-  @SerializedName(SERIALIZED_NAME_NEXT_LINK) @javax.annotation.Nullable private String nextLink;
+  @SerializedName(SERIALIZED_NAME_NEXT_LINK)
+  @javax.annotation.Nullable
+  private String nextLink;
 
   public PageInfo() {}
 

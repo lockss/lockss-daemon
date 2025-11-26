@@ -80,7 +80,9 @@ public class CheckSubstanceResult implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID) @javax.annotation.Nonnull private String id;
+  @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nonnull
+  private String id;
 
   /**
    * An indication of whether the result is successful

@@ -80,6 +80,7 @@ import org.lockss.laaws.model.rs.PageInfo;
 @ApiModel(description = "A display page of artifacts")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ArtifactPageInfo implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_ARTIFACTS = "artifacts";
@@ -88,7 +89,9 @@ public class ArtifactPageInfo implements Serializable {
   private List<Artifact> artifacts = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PAGE_INFO = "pageInfo";
-  @SerializedName(SERIALIZED_NAME_PAGE_INFO) @javax.annotation.Nonnull private PageInfo pageInfo;
+  @SerializedName(SERIALIZED_NAME_PAGE_INFO)
+  @javax.annotation.Nonnull
+  private PageInfo pageInfo;
 
   public ArtifactPageInfo() {}
 

@@ -75,10 +75,13 @@ import org.lockss.laaws.client.JSON;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen",
     comments = "Generator version: 7.17.0")
 public class PlatformConfigurationWsResult implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_HOST_NAME = "hostName";
-  @SerializedName(SERIALIZED_NAME_HOST_NAME) @javax.annotation.Nonnull private String hostName;
+  @SerializedName(SERIALIZED_NAME_HOST_NAME)
+  @javax.annotation.Nonnull
+  private String hostName;
 
   public PlatformConfigurationWsResult() {}
 

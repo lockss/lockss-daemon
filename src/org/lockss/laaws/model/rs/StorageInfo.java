@@ -75,16 +75,23 @@ import org.lockss.laaws.client.JSON;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StorageInfo implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE) @javax.annotation.Nonnull private String type;
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nonnull
+  private String type;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nonnull private String name;
+  @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
+  private String name;
 
   public static final String SERIALIZED_NAME_PATH = "path";
-  @SerializedName(SERIALIZED_NAME_PATH) @javax.annotation.Nullable private String path;
+  @SerializedName(SERIALIZED_NAME_PATH)
+  @javax.annotation.Nullable
+  private String path;
 
   public static final String SERIALIZED_NAME_COMPONENTS = "components";
   @SerializedName(SERIALIZED_NAME_COMPONENTS)
@@ -92,13 +99,19 @@ public class StorageInfo implements Serializable {
   private List<StorageInfo> components;
 
   public static final String SERIALIZED_NAME_SIZE_K_B = "sizeKB";
-  @SerializedName(SERIALIZED_NAME_SIZE_K_B) @javax.annotation.Nullable private Long sizeKB;
+  @SerializedName(SERIALIZED_NAME_SIZE_K_B)
+  @javax.annotation.Nullable
+  private Long sizeKB;
 
   public static final String SERIALIZED_NAME_USED_K_B = "usedKB";
-  @SerializedName(SERIALIZED_NAME_USED_K_B) @javax.annotation.Nullable private Long usedKB;
+  @SerializedName(SERIALIZED_NAME_USED_K_B)
+  @javax.annotation.Nullable
+  private Long usedKB;
 
   public static final String SERIALIZED_NAME_AVAIL_K_B = "availKB";
-  @SerializedName(SERIALIZED_NAME_AVAIL_K_B) @javax.annotation.Nullable private Long availKB;
+  @SerializedName(SERIALIZED_NAME_AVAIL_K_B)
+  @javax.annotation.Nullable
+  private Long availKB;
 
   public static final String SERIALIZED_NAME_PERCENT_USED = "percentUsed";
   @SerializedName(SERIALIZED_NAME_PERCENT_USED)

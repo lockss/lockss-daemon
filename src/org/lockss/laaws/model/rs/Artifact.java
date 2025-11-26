@@ -75,13 +75,18 @@ import org.lockss.laaws.client.JSON;
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Artifact implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_COMMITTED = "committed";
-  @SerializedName(SERIALIZED_NAME_COMMITTED) @javax.annotation.Nonnull private Boolean committed;
+  @SerializedName(SERIALIZED_NAME_COMMITTED)
+  @javax.annotation.Nonnull
+  private Boolean committed;
 
   public static final String SERIALIZED_NAME_STORAGE_URL = "storageUrl";
-  @SerializedName(SERIALIZED_NAME_STORAGE_URL) @javax.annotation.Nonnull private String storageUrl;
+  @SerializedName(SERIALIZED_NAME_STORAGE_URL)
+  @javax.annotation.Nonnull
+  private String storageUrl;
 
   public static final String SERIALIZED_NAME_NAMESPACE = "namespace";
   @SerializedName(SERIALIZED_NAME_NAMESPACE)
@@ -89,16 +94,24 @@ public class Artifact implements Serializable {
   private String namespace = "lockss";
 
   public static final String SERIALIZED_NAME_UUID = "uuid";
-  @SerializedName(SERIALIZED_NAME_UUID) @javax.annotation.Nonnull private String uuid;
+  @SerializedName(SERIALIZED_NAME_UUID)
+  @javax.annotation.Nonnull
+  private String uuid;
 
   public static final String SERIALIZED_NAME_AUID = "auid";
-  @SerializedName(SERIALIZED_NAME_AUID) @javax.annotation.Nonnull private String auid;
+  @SerializedName(SERIALIZED_NAME_AUID)
+  @javax.annotation.Nonnull
+  private String auid;
 
   public static final String SERIALIZED_NAME_URI = "uri";
-  @SerializedName(SERIALIZED_NAME_URI) @javax.annotation.Nonnull private String uri;
+  @SerializedName(SERIALIZED_NAME_URI)
+  @javax.annotation.Nonnull
+  private String uri;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION) @javax.annotation.Nonnull private Integer version;
+  @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nonnull
+  private Integer version;
 
   public static final String SERIALIZED_NAME_CONTENT_LENGTH = "contentLength";
   @SerializedName(SERIALIZED_NAME_CONTENT_LENGTH)
@@ -115,7 +128,8 @@ public class Artifact implements Serializable {
   @javax.annotation.Nonnull
   private Long collectionDate;
 
-  public Artifact() {}
+  public Artifact() {
+  }
 
   public Artifact committed(Boolean committed) {
     this.committed = committed;
@@ -124,6 +138,7 @@ public class Artifact implements Serializable {
 
   /**
    * Get committed
+   *
    * @return committed
    **/
   @javax.annotation.Nullable
@@ -144,6 +159,7 @@ public class Artifact implements Serializable {
 
   /**
    * Get storageUrl
+   *
    * @return storageUrl
    **/
   @javax.annotation.Nullable
@@ -164,6 +180,7 @@ public class Artifact implements Serializable {
 
   /**
    * Get namespace
+   *
    * @return namespace
    **/
   @javax.annotation.Nullable
@@ -184,6 +201,7 @@ public class Artifact implements Serializable {
 
   /**
    * Get uuid
+   *
    * @return uuid
    **/
   @javax.annotation.Nullable
@@ -204,6 +222,7 @@ public class Artifact implements Serializable {
 
   /**
    * Get auid
+   *
    * @return auid
    **/
   @javax.annotation.Nullable
@@ -224,6 +243,7 @@ public class Artifact implements Serializable {
 
   /**
    * Get uri
+   *
    * @return uri
    **/
   @javax.annotation.Nullable
@@ -244,6 +264,7 @@ public class Artifact implements Serializable {
 
   /**
    * Get version
+   *
    * @return version
    **/
   @javax.annotation.Nullable
@@ -264,6 +285,7 @@ public class Artifact implements Serializable {
 
   /**
    * The length of the artifact&#39;s content
+   *
    * @return contentLength
    */
   @javax.annotation.Nonnull
@@ -282,6 +304,7 @@ public class Artifact implements Serializable {
 
   /**
    * The digest of the artifact&#39;s content
+   *
    * @return contentDigest
    */
   @javax.annotation.Nonnull
@@ -300,6 +323,7 @@ public class Artifact implements Serializable {
 
   /**
    * The artifact&#39;s collection date
+   *
    * @return collectionDate
    */
   @javax.annotation.Nonnull
@@ -355,8 +379,8 @@ public class Artifact implements Serializable {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first
+   * line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {
@@ -425,8 +449,8 @@ public class Artifact implements Serializable {
     for (String requiredField : Artifact.openapiRequiredFields) {
       if (jsonObj.getAsJsonObject().get(requiredField) == null) {
         throw new IllegalArgumentException(String.format(
-            "The required field `%s` is not found in the JSON string: %s", requiredField,
-            jsonObj.toString()));
+          "The required field `%s` is not found in the JSON string: %s", requiredField,
+          jsonObj.toString()));
       }
     }
     if ((jsonObj.get("namespace") != null && !jsonObj.get("namespace").isJsonNull())
@@ -454,10 +478,10 @@ public class Artifact implements Serializable {
         jsonObj.get("uri").toString()));
     }
     if ((jsonObj.get("storageUrl") != null && !jsonObj.get("storageUrl").isJsonNull())
-        && !jsonObj.get("storageUrl").isJsonPrimitive()) {
+      && !jsonObj.get("storageUrl").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
-          "Expected the field `storageUrl` to be a primitive type in the JSON string but got `%s`",
-          jsonObj.get("storageUrl").toString()));
+        "Expected the field `storageUrl` to be a primitive type in the JSON string but got `%s`",
+        jsonObj.get("storageUrl").toString()));
     }
     if ((jsonObj.get("contentDigest") != null && !jsonObj.get("contentDigest").isJsonNull())
       && !jsonObj.get("contentDigest").isJsonPrimitive()) {
@@ -468,6 +492,7 @@ public class Artifact implements Serializable {
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {

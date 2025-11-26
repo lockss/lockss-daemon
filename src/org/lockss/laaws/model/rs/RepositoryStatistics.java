@@ -53,10 +53,11 @@ import org.lockss.laaws.client.*;
  * Various statistics about the repository&#39;s internal operation.
  */
 public class RepositoryStatistics implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_TIME_SPENT_REITERATING_ITERATORS =
-      "timeSpentReiteratingIterators";
+    "timeSpentReiteratingIterators";
   @SerializedName(SERIALIZED_NAME_TIME_SPENT_REITERATING_ITERATORS)
   @javax.annotation.Nullable
   private Long timeSpentReiteratingIterators;

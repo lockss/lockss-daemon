@@ -76,12 +76,16 @@ import org.lockss.laaws.client.JSON;
 @ApiModel(description = "The properties of a TDB Publisher")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TdbPublisherWsResult implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nonnull private String name;
+  @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
+  private String name;
 
-  public TdbPublisherWsResult() {}
+  public TdbPublisherWsResult() {
+  }
 
   public TdbPublisherWsResult name(@javax.annotation.Nonnull String name) {
     this.name = name;

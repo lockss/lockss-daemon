@@ -80,7 +80,9 @@ public class ApiStatus implements Serializable {
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_API_VERSION = "apiVersion";
-  @SerializedName(SERIALIZED_NAME_API_VERSION) @javax.annotation.Nonnull private String apiVersion;
+  @SerializedName(SERIALIZED_NAME_API_VERSION)
+  @javax.annotation.Nonnull
+  private String apiVersion;
 
   public static final String SERIALIZED_NAME_COMPONENT_NAME = "componentName";
   @SerializedName(SERIALIZED_NAME_COMPONENT_NAME)
@@ -98,7 +100,9 @@ public class ApiStatus implements Serializable {
   private String lockssVersion;
 
   public static final String SERIALIZED_NAME_READY = "ready";
-  @SerializedName(SERIALIZED_NAME_READY) @javax.annotation.Nonnull private Boolean ready;
+  @SerializedName(SERIALIZED_NAME_READY)
+  @javax.annotation.Nonnull
+  private Boolean ready;
 
   public static final String SERIALIZED_NAME_SERVICE_NAME = "serviceName";
   @SerializedName(SERIALIZED_NAME_SERVICE_NAME)
@@ -106,10 +110,14 @@ public class ApiStatus implements Serializable {
   private String serviceName;
 
   public static final String SERIALIZED_NAME_READY_TIME = "readyTime";
-  @SerializedName(SERIALIZED_NAME_READY_TIME) @javax.annotation.Nullable private Long readyTime;
+  @SerializedName(SERIALIZED_NAME_READY_TIME)
+  @javax.annotation.Nullable
+  private Long readyTime;
 
   public static final String SERIALIZED_NAME_REASON = "reason";
-  @SerializedName(SERIALIZED_NAME_REASON) @javax.annotation.Nullable private String reason;
+  @SerializedName(SERIALIZED_NAME_REASON)
+  @javax.annotation.Nullable
+  private String reason;
 
   /**
    * Enum indicating progress of plugin/AU processing at startup.

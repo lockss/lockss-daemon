@@ -78,16 +78,23 @@ import org.lockss.laaws.model.cfg.TdbTitleWsResult;
 @ApiModel(description = "The properties of a TDB Archival Unit")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TdbAuWsResult implements Serializable {
+
   private static final long serialVersionUID = 1L;
 
   public static final String SERIALIZED_NAME_AU_ID = "auId";
-  @SerializedName(SERIALIZED_NAME_AU_ID) @javax.annotation.Nullable private String auId;
+  @SerializedName(SERIALIZED_NAME_AU_ID)
+  @javax.annotation.Nullable
+  private String auId;
 
   public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME) @javax.annotation.Nullable private String name;
+  @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
+  private String name;
 
   public static final String SERIALIZED_NAME_PLUGIN_NAME = "pluginName";
-  @SerializedName(SERIALIZED_NAME_PLUGIN_NAME) @javax.annotation.Nullable private String pluginName;
+  @SerializedName(SERIALIZED_NAME_PLUGIN_NAME)
+  @javax.annotation.Nullable
+  private String pluginName;
 
   public static final String SERIALIZED_NAME_TDB_TITLE = "tdbTitle";
   @SerializedName(SERIALIZED_NAME_TDB_TITLE)
@@ -100,10 +107,14 @@ public class TdbAuWsResult implements Serializable {
   private TdbPublisherWsResult tdbPublisher;
 
   public static final String SERIALIZED_NAME_DOWN = "down";
-  @SerializedName(SERIALIZED_NAME_DOWN) @javax.annotation.Nullable private Boolean down;
+  @SerializedName(SERIALIZED_NAME_DOWN)
+  @javax.annotation.Nullable
+  private Boolean down;
 
   public static final String SERIALIZED_NAME_ACTIVE = "active";
-  @SerializedName(SERIALIZED_NAME_ACTIVE) @javax.annotation.Nullable private Boolean active;
+  @SerializedName(SERIALIZED_NAME_ACTIVE)
+  @javax.annotation.Nullable
+  private Boolean active;
 
   public static final String SERIALIZED_NAME_PARAMS = "params";
   @SerializedName(SERIALIZED_NAME_PARAMS)
