@@ -355,7 +355,7 @@
     param[journal_serial_number] = 12
     param[journal_id] = ifb
 
-    au < ready ; exists ; 1999 ; 1999 ; Interfaces and Free Boundaries Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1999 ; 1999 ; Interfaces and Free Boundaries Volume 1 ; 1 ; >
     au < frozen ; exists ; 2000 ; 2000 ; Interfaces and Free Boundaries Volume 2 ; 2 ; >
     au < frozen ; exists ; 2001 ; 2001 ; Interfaces and Free Boundaries Volume 3 ; 3 ; >
     au < frozen ; exists ; 2002 ; 2002 ; Interfaces and Free Boundaries Volume 4 ; 4 ; >
@@ -670,7 +670,7 @@
     au < frozen ; exists ; 1975 ; 1975 ; Publications of the Research Institute for Mathematical Sciences Volume 11 ; 11 ; >
     au < frozen ; exists ; 1976 ; 1976 ; Publications of the Research Institute for Mathematical Sciences Volume 12 ; 12 ; >
     au < crawling ; exists ; 1977 ; 1977 ; Publications of the Research Institute for Mathematical Sciences Volume 13 ; 13 ; >
-    au < ready ; exists ; 1978 ; 1978 ; Publications of the Research Institute for Mathematical Sciences Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1978 ; 1978 ; Publications of the Research Institute for Mathematical Sciences Volume 14 ; 14 ; >
     au < crawling ; exists ; 1979 ; 1979 ; Publications of the Research Institute for Mathematical Sciences Volume 15 ; 15 ; >
     au < ready ; exists ; 1980 ; 1980 ; Publications of the Research Institute for Mathematical Sciences Volume 16 ; 16 ; >
     au < ready ; exists ; 1981 ; 1981 ; Publications of the Research Institute for Mathematical Sciences Volume 17 ; 17 ; >
@@ -687,7 +687,7 @@
     au < ready ; exists ; 1992 ; 1992 ; Publications of the Research Institute for Mathematical Sciences Volume 28 ; 28 ; >
     au < ready ; exists ; 1993 ; 1993 ; Publications of the Research Institute for Mathematical Sciences Volume 29 ; 29 ; >
     au < ready ; exists ; 1994 ; 1994 ; Publications of the Research Institute for Mathematical Sciences Volume 30 ; 30 ; >
-    au < ready ; exists ; 1995 ; 1995 ; Publications of the Research Institute for Mathematical Sciences Volume 31 ; 31 ; >
+    au < crawling ; exists ; 1995 ; 1995 ; Publications of the Research Institute for Mathematical Sciences Volume 31 ; 31 ; >
     au < ready ; exists ; 1996 ; 1996 ; Publications of the Research Institute for Mathematical Sciences Volume 32 ; 32 ; >
     au < crawling ; exists ; 1997 ; 1997 ; Publications of the Research Institute for Mathematical Sciences Volume 33 ; 33 ; >
     au < ready ; exists ; 1998 ; 1998 ; Publications of the Research Institute for Mathematical Sciences Volume 34 ; 34 ; >
