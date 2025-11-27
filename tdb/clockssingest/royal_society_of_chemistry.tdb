@@ -3332,6 +3332,7 @@
       comment[years] = Published 2018-present
       param[journal_code] = mo
       #journal changed its name in 2018 from 'Molecular BioSystems'
+      #move to OUP in 2026
 
       au < finished ; manifest ; 2018 ; Molecular Omics Volume 14 ; 14 ; 2018 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; Molecular Omics Volume 15 ; 15 ; 2019 ; https://pubs.rsc.org/ ; reingest5.clockss.org:8082 >
@@ -3341,6 +3342,7 @@
       au < finished ; manifest ; 2023 ; Molecular Omics Volume 19 ; 19 ; 2023 ; https://pubs.rsc.org/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Molecular Omics Volume 20 ; 20 ; 2024 ; https://pubs.rsc.org/ ; >
       au < crawling ; exists ; 2025 ; Molecular Omics Volume 21 ; 21 ; 2025 ; https://pubs.rsc.org/ ; >
+      #move to OUP in 2026
 
   }
 

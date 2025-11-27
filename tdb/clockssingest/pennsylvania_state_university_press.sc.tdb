@@ -2534,8 +2534,11 @@
         eissn = 2161-8046
       >
 
-      param[journal_id] = mediaevalia  
+      param[journal_id] = mediaevalia
+      #move from SUNY Press in 2025
 
+      au < exists ; exists ; 2023 ; Mediaevalia Volume 44 ; 44 ; 2023 ; >
+      au < exists ; exists ; 2024 ; Mediaevalia Volume 45 ; 45 ; 2024 ; >
       au < manifest ; exists ; 2025 ; Mediaevalia Volume 46 ; 46 ; 2025 ; >
 
   }

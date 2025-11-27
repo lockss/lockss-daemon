@@ -5956,6 +5956,20 @@
   {
 
     title <
+      name = ESC Heart Failure ;
+      eissn = 2055-5822
+    >
+    param[journal_id] = eschf
+    #move from Wiley in 2026
+
+    au < expected ; exists ; 2025 ; 2025 ; ESC Heart Failure Volume 11 ; 11 ; >
+    au < expected ; exists ; 2026 ; 2026 ; ESC Heart Failure Volume 12 ; 12 ; >
+
+  }
+
+  {
+
+    title <
       name = Essays in Criticism ;
       issn = 0014-0856 ;
       eissn = 1471-6852 ;
@@ -16108,6 +16122,20 @@
 
 
   {
+      title <
+        name = Molecular Omics ;
+        eissn = 2515-4184 ;
+        issnl = 2515-4184
+      >
+
+      param[journal_id] = molecular-omics
+      #move from RSC in 2026
+
+      au < expected ; exists ; 2026 ; 2026 ; Molecular Omics Volume 22 ; 22 ; >
+
+  }
+
+  {
 
     title <
       name = Monthly Notices of the Royal Astronomical Society ;
@@ -19940,6 +19968,20 @@
   {
 
     title <
+      name = Security Dialogue ;
+      issn = 0967-0106 ;
+      eissn = 1460-3640
+    >
+    param[journal_id] = sd
+    #move from Sage in 2026
+
+    au < expected ; exists ; 2026 ; 2026 ; Security Dialogue Volume 57 ; 57 ; >
+
+  }
+
+  {
+
+    title <
       name = Shakespeare Quarterly ;
       issn = 0037-3222 ;
       eissn = 1538-3555
@@ -23186,6 +23228,7 @@
     >
 
     param[journal_id] = library
+    #move to Liverpool University Press in 2026, Volume 27
 
     au < doNotProcess ; exists ; 1889 ; 1889 ; The Library Volume s1-1 ; s1-1 ; >
     au < doNotProcess ; exists ; 1890 ; 1890 ; The Library Volume s1-2 ; s1-2 ; >
@@ -23324,6 +23367,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; The Library Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Library Volume 25 ; 25 ; >
     au < manifest ; exists ; 2025 ; 2025 ; The Library Volume 26 ; 26 ; >
+    #move to Liverpool University Press in 2026, volume 27
 
   }
 

@@ -1264,6 +1264,22 @@
   {
 
     title <
+      name = The Library: The Transactions of the Bibliographical Society ;
+      issn = 0024-2160 ;
+      eissn = 1744-8581 ;
+      issnl = 0024-2160
+    >
+
+    param[journal_id] = library
+    #move from OUP in 2026, Volume 27
+
+    au < expected ; exists ; 2026 ; The Library Volume 27 ; 27 ; >
+
+  }
+
+  {
+
+    title <
       name = Marx House Bulletin ;
       issn =  ;
       eissn = 2634-8233 ;
@@ -1273,6 +1289,7 @@
     param[journal_id] = mhb
     #Published 1934-2002
     #journal_num = 96
+    #move to https://www.marx-memorial-library.org.uk/
 
     au < doNotProcess ; exists ; 1934 ; Marx House Bulletin Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1935 ; Marx House Bulletin Volume 2 ; 2 ; >
@@ -2678,6 +2695,7 @@
     >
 
     param[journal_id] = asp
+    #move from Cambridge University Press in 2026, Volume 36
 
     au < manifest ; exists ; 1991 ; Arabic Sciences & Philosophy Volume 1 ; 1 ; >
     au < manifest ; exists ; 1992 ; Arabic Sciences & Philosophy Volume 2 ; 2 ; >
@@ -2726,6 +2744,7 @@
     >
 
     param[journal_id] = arq
+    #move from Cambridge University Press in 2026, Volume 30
 
     au < manifest ; exists ; 1995-1996 ; Architectural Research Quarterly Volume 1 ; 1 ; >
     au < manifest ; exists ; 1996-1997 ; Architectural Research Quarterly Volume 2 ; 2 ; >
