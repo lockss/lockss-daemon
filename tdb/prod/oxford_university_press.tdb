@@ -5972,6 +5972,21 @@
   {
 
     title <
+      name = European Journal of Heart Failure ;
+      issn = 1388-9842 ;
+      eissn = 1879-0844
+    >
+    param[journal_id] = eurjhf
+    #move from Wiley in 2026
+
+    au < expected ; 2025 ; 2025 ; European Journal of Heart Failure Volume 27 ; 27 >
+    au < expected ; 2026 ; 2026 ; European Journal of Heart Failure Volume 28 ; 28 >
+
+  }
+
+  {
+
+    title <
       name = Essays in Criticism ;
       issn = 0014-0856 ;
       eissn = 1471-6852 ;
@@ -6759,6 +6774,20 @@
     au < released ; 2023 ; 2023 ; European Sociological Review Volume 39 ; 39 >
     au < released ; 2024 ; 2024 ; European Sociological Review Volume 40 ; 40 >
     au < manifest ; 2025 ; 2025 ; European Sociological Review Volume 41 ; 41 >
+
+  }
+
+  {
+
+    title <
+      name = European Stroke Journal ;
+      issn = 2396-9873 ;
+      eissn = 2396-9881
+    >
+    param[journal_id] = esj
+    #move from Sage in 2026
+
+    au < expected ; 2026 ; 2026 ; European Stroke Journal Volume 11 ; 11 >
 
   }
 
@@ -13334,6 +13363,20 @@
     au < released ; 2023 ; 2023 ; Journal of Occupational Health Volume 65 ; 65 >
     au < released ; 2024 ; 2024 ; Journal of Occupational Health Volume 66 ; 66 >
     au < manifest ; 2025 ; 2025 ; Journal of Occupational Health Volume 67 ; 67 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Peace Research ;
+      issn = 0022-3433 ;
+      eissn = 1460-3578
+    >
+    param[journal_id] = jpr
+    #move from Sage in 2026
+
+    au < expected ; 2026 ; 2026 ; Journal of Peace Research Volume 63 ; 63 >
 
   }
 
