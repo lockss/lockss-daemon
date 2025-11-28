@@ -24,7 +24,7 @@
     param[base_url] = https://cuadernosdeadministracion.univalle.edu.co/
     param[journal_id] = cuadernos_de_administracion
 
-    au < ready ; exists ; 1976 ; 1976 ; Cuadernos de administración Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1976 ; 1976 ; Cuadernos de administración Volume 1 ; 1 ; >
     au < frozen ; exists ; 1977 ; 1977 ; Cuadernos de administración Volume 2 (1977) ; 2 ; >
     au < ready ; exists ; 1978 ; 1978 ; Cuadernos de administración Volume 2 (1978) ; 2 ; >
     au < ready ; exists ; 1981 ; 1981 ; Cuadernos de administración Volume 4 ; 4 ; >
@@ -86,7 +86,7 @@
 
       au < crawling ; exists ; 1972 ; 1972 ; Lenguaje Volume 1972 ; 1 ; >
       au < ready ; exists ; 1973 ; 1973 ; Lenguaje Volume 1973 ; 5 ; >
-      au < ready ; exists ; 1976 ; 1976 ; Lenguaje Volume 1976 ; 6-7 ; >
+      au < crawling ; exists ; 1976 ; 1976 ; Lenguaje Volume 1976 ; 6-7 ; >
       au < doesNotExist ; doesNotExist ; 1977 ; 1977 ; Lenguaje Volume 1977 ; 0 ; >
       au < frozen ; exists ; 1978 ; 1978 ; Lenguaje Volume 1978 ; 8-9 ; >
       au < ready ; exists ; 1979 ; 1979 ; Lenguaje Volume 1979 ; 10 ; >
@@ -151,7 +151,7 @@
       param[journal_id] = prospectiva
 
       au < frozen ; exists ; 1994 ; 1994 ; Revista Prospectiva Volume 1994 ; 1 ; >
-      au < ready ; exists ; 1995 ; 1995 ; Revista Prospectiva Volume 1995 ; 2 ; >
+      au < crawling ; exists ; 1995 ; 1995 ; Revista Prospectiva Volume 1995 ; 2 ; >
       au < ready ; exists ; 1996 ; 1996 ; Revista Prospectiva Volume 1996 ; 3 ; >
       au < doesNotExist ; doesNotExist ; 1997 ; 1997 ; Revista Prospectiva Volume 1997 ; 0 ; >
       au < doesNotExist ; doesNotExist ; 1998 ; 1998 ; Revista Prospectiva Volume 1998 ; 0 ; >
@@ -173,7 +173,7 @@
       au < ready ; exists ; 2014 ; 2014 ; Revista Prospectiva Volume 2014 ; 19 ; >
       au < ready ; exists ; 2015 ; 2015 ; Revista Prospectiva Volume 2015 ; 20 ; >
       au < ready ; exists ; 2016 ; 2016 ; Revista Prospectiva Volume 2016 ; 21-22 ; >
-      au < ready ; exists ; 2017 ; 2017 ; Revista Prospectiva Volume 2017 ; 23-24 ; >
+      au < crawling ; exists ; 2017 ; 2017 ; Revista Prospectiva Volume 2017 ; 23-24 ; >
       au < ready ; exists ; 2018 ; 2018 ; Revista Prospectiva Volume 2018 ; 25-26 ; >
       au < crawling ; exists ; 2019 ; 2019 ; Revista Prospectiva Volume 2019 ; 27-28 ; >
       au < frozen ; exists ; 2020 ; 2020 ; Revista Prospectiva Volume 2020 ; 29-30 ; >
