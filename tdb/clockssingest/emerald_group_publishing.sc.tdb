@@ -11895,6 +11895,7 @@
     comment[journal_issn] = 1074-8121
     param[journal_id] = oth
     # online from 2000
+    #continued_by = 2978-5812
 
     au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; On The Horizon Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; On The Horizon Volume 9 ; 9 ; >
@@ -11922,6 +11923,22 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; On The Horizon Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; On The Horizon Volume 32 ; 32 ; >
     au < crawling ; exists ; 2025 ; 2025 ; On The Horizon Volume 33 ; 33 ; >
+
+  }
+
+  {
+    title <
+      name = Learning Futures and Emerging Technologies ;
+      issn = 2978-5812 ;
+      eissn = 2978-5820 ;
+      issnl = 2978-5812
+    >
+
+    comment[journal_issn] = 2978-5812
+    #continues = 1074-8121
+    param[journal_id] = oth
+
+    au < expected ; exists ; 2026 ; 2026 ; Learning Futures and Emerging Technologies Volume 34 ; 34 ; >
 
   }
 
