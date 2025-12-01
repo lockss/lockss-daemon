@@ -53,7 +53,7 @@ public class GovInfoRetrySameUrlException extends RetrySameUrlException {
   
   @Override
   public int getRetryCount() {
-    return 60;
+    return 120;
   }
   
   @Override
