@@ -24,9 +24,9 @@
     param[journal_id] = ajec
     #param[journal_issn] = 1755-2923
     
-    au < testing ; exists ; 2008 ; Anthropological Journal of European Cultures Volume 17 ; 17 ; >
-    au < testing ; exists ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 ; >
-    au < testing ; exists ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 ; >
+    au < ready ; exists ; 2008 ; Anthropological Journal of European Cultures Volume 17 ; 17 ; >
+    au < ready ; exists ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 ; >
+    au < ready ; exists ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 ; >
     au < finished ; finished ; 2013 ; Anthropological Journal of European Cultures Volume 22 ; 22 ; reingest1.clockss.org:8082 >
@@ -57,12 +57,12 @@
     param[journal_id] = aia
     #param[journal_issn] = 0967-201X
      
-    au < testing ; exists ; 2005 ; Anthropology in Action Volume 12 ; 12 ; >
-    au < testing ; exists ; 2006 ; Anthropology in Action Volume 13 ; 13 ; >
-    au < testing ; exists ; 2007 ; Anthropology in Action Volume 14 ; 14 ; >
-    au < testing ; exists ; 2008 ; Anthropology in Action Volume 15 ; 15 ; >
-    au < testing ; exists ; 2009 ; Anthropology in Action Volume 16 ; 16 ; >
-    au < testing ; exists ; 2010 ; Anthropology in Action Volume 17 ; 17 ; >
+    au < ready ; exists ; 2005 ; Anthropology in Action Volume 12 ; 12 ; >
+    au < ready ; exists ; 2006 ; Anthropology in Action Volume 13 ; 13 ; >
+    au < ready ; exists ; 2007 ; Anthropology in Action Volume 14 ; 14 ; >
+    au < ready ; exists ; 2008 ; Anthropology in Action Volume 15 ; 15 ; >
+    au < ready ; exists ; 2009 ; Anthropology in Action Volume 16 ; 16 ; >
+    au < ready ; exists ; 2010 ; Anthropology in Action Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropology in Action Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropology in Action Volume 19 ; 19 ; >
     au < finished ; finished ; 2013 ; Anthropology in Action Volume 20 ; 20 ; reingest5.clockss.org:8082 >
@@ -93,11 +93,11 @@
     param[journal_id] = ame
     #param[journal_issn] = 1746-0719
     
-    au < testing ; exists ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 ; >
-    au < testing ; exists ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 ; >
-    au < testing ; exists ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 ; >
-    au < testing ; exists ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 ; >
-    au < testing ; exists ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 ; >
+    au < ready ; exists ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 ; >
+    au < ready ; exists ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 ; >
+    au < ready ; exists ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 ; >
+    au < ready ; exists ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 ; >
+    au < ready ; exists ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Anthropology of the Middle East Volume 8 ; 8 ; >
@@ -148,9 +148,9 @@
     param[journal_id] = aspasia
     #param[journal_issn] = 1933-2882   
        
-    au < testing ; exists ; 2007 ; Aspasia Volume 1 ; 1 ; >
-    au < testing ; exists ; 2008 ; Aspasia Volume 2 ; 2 ; >
-    au < testing ; exists ; 2009 ; Aspasia Volume 3 ; 3 ; >
+    au < ready ; exists ; 2007 ; Aspasia Volume 1 ; 1 ; >
+    au < ready ; exists ; 2008 ; Aspasia Volume 2 ; 2 ; >
+    au < ready ; exists ; 2009 ; Aspasia Volume 3 ; 3 ; >
     au < finished ; crawling ; 2010 ; Aspasia Volume 4 ; 4 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2011 ; Aspasia Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Aspasia Volume 6 ; 6 ; >
@@ -166,7 +166,7 @@
     au < frozen ; exists ; 2022 ; Aspasia Volume 16 ; 16 ; >
     au < frozen ; exists ; 2023 ; Aspasia Volume 17 ; 17 ; >
     au < frozen ; exists ; 2024 ; Aspasia Volume 18 ; 18 ; >
-    au < testing ; exists ; 2025 ; Aspasia Volume 19 ; 19 ; >
+    au < ready ; exists ; 2025 ; Aspasia Volume 19 ; 19 ; >
 
   }
 
@@ -181,10 +181,10 @@
 
     param[journal_id] = boyhood-studies
        
-    au < testing ; exists ; 2007 ; Boyhood Studies Volume 1 ; 1 ; >
-    au < testing ; exists ; 2008 ; Boyhood Studies Volume 2 ; 2 ; >
-    au < testing ; exists ; 2009 ; Boyhood Studies Volume 3 ; 3 ; >
-    au < testing ; exists ; 2010 ; Boyhood Studies Volume 4 ; 4 ; >
+    au < ready ; exists ; 2007 ; Boyhood Studies Volume 1 ; 1 ; >
+    au < ready ; exists ; 2008 ; Boyhood Studies Volume 2 ; 2 ; >
+    au < ready ; exists ; 2009 ; Boyhood Studies Volume 3 ; 3 ; >
+    au < ready ; exists ; 2010 ; Boyhood Studies Volume 4 ; 4 ; >
     au < finished ; crawling ; 2011 ; Boyhood Studies Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2012 ; Boyhood Studies Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2013 ; Boyhood Studies Volume 7 ; 7 ; reingest1.clockss.org:8082 >
@@ -281,7 +281,7 @@
     au < frozen ; exists ; 2022 ; Contention Volume 10 ; 10 ; >
     au < frozen ; exists ; 2023 ; Contention Volume 11 ; 11 ; >
     au < frozen ; exists ; 2024 ; Contention Volume 12 ; 12 ; >
-    au < testing ; exists ; 2025 ; Contention Volume 13 ; 13 ; >
+    au < ready ; exists ; 2025 ; Contention Volume 13 ; 13 ; >
 
   }
 
@@ -297,11 +297,11 @@
     param[journal_id] = contributions
     #param[journal_issn] = 1807-9326
 
-    au < testing ; exists ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 ; >
-    au < testing ; exists ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 ; >
-    au < testing ; exists ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 ; >
-    au < testing ; exists ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 ; >
-    au < testing ; exists ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 ; >
+    au < ready ; exists ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 ; >
+    au < ready ; exists ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 ; >
+    au < ready ; exists ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 ; >
+    au < ready ; exists ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 ; >
+    au < ready ; exists ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Contributions to the History of Concepts Volume 8 ; 8 ; >
@@ -339,17 +339,17 @@
       au < manifest ; exists ; 1997 ; Critical Survey Volume 9 ; 9 ; >
       au < manifest ; exists ; 1998 ; Critical Survey Volume 10 ; 10 ; >
       au < manifest ; exists ; 1999 ; Critical Survey Volume 11 ; 11 ; >
-      au < testing ; exists ; 2000 ; Critical Survey Volume 12 ; 12 ; >
-      au < testing ; exists ; 2001 ; Critical Survey Volume 13 ; 13 ; >
-      au < testing ; exists ; 2002 ; Critical Survey Volume 14 ; 14 ; >
-      au < testing ; exists ; 2003 ; Critical Survey Volume 15 ; 15 ; >
-      au < testing ; exists ; 2004 ; Critical Survey Volume 16 ; 16 ; >
-      au < testing ; exists ; 2005 ; Critical Survey Volume 17 ; 17 ; >
-      au < testing ; exists ; 2006 ; Critical Survey Volume 18 ; 18 ; >
-      au < testing ; exists ; 2007 ; Critical Survey Volume 19 ; 19 ; >
-      au < testing ; exists ; 2008 ; Critical Survey Volume 20 ; 20 ; >
-      au < testing ; exists ; 2009 ; Critical Survey Volume 21 ; 21 ; >
-      au < testing ; exists ; 2010 ; Critical Survey Volume 22 ; 22 ; >
+      au < ready ; exists ; 2000 ; Critical Survey Volume 12 ; 12 ; >
+      au < ready ; exists ; 2001 ; Critical Survey Volume 13 ; 13 ; >
+      au < ready ; exists ; 2002 ; Critical Survey Volume 14 ; 14 ; >
+      au < ready ; exists ; 2003 ; Critical Survey Volume 15 ; 15 ; >
+      au < ready ; exists ; 2004 ; Critical Survey Volume 16 ; 16 ; >
+      au < ready ; exists ; 2005 ; Critical Survey Volume 17 ; 17 ; >
+      au < ready ; exists ; 2006 ; Critical Survey Volume 18 ; 18 ; >
+      au < ready ; exists ; 2007 ; Critical Survey Volume 19 ; 19 ; >
+      au < ready ; exists ; 2008 ; Critical Survey Volume 20 ; 20 ; >
+      au < ready ; exists ; 2009 ; Critical Survey Volume 21 ; 21 ; >
+      au < ready ; exists ; 2010 ; Critical Survey Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Critical Survey Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Critical Survey Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Critical Survey Volume 25 ; 25 ; >
@@ -400,14 +400,14 @@
     param[journal_id] = durkheimian-studies
     #param[journal_issn] = 1362-024X
       
-    au < testing ; exists ; 2003 ; Durkheimian Studies Volume 9 ; 9 ; >
-    au < testing ; exists ; 2004 ; Durkheimian Studies Volume 10 ; 10 ; >
-    au < testing ; exists ; 2005 ; Durkheimian Studies Volume 11 ; 11 ; >
-    au < testing ; exists ; 2006 ; Durkheimian Studies Volume 12 ; 12 ; >
-    au < testing ; exists ; 2007 ; Durkheimian Studies Volume 13 ; 13 ; >
-    au < testing ; exists ; 2008 ; Durkheimian Studies Volume 14 ; 14 ; >
-    au < testing ; exists ; 2009 ; Durkheimian Studies Volume 15 ; 15 ; >
-    au < testing ; exists ; 2010 ; Durkheimian Studies Volume 16 ; 16 ; >
+    au < ready ; exists ; 2003 ; Durkheimian Studies Volume 9 ; 9 ; >
+    au < ready ; exists ; 2004 ; Durkheimian Studies Volume 10 ; 10 ; >
+    au < ready ; exists ; 2005 ; Durkheimian Studies Volume 11 ; 11 ; >
+    au < ready ; exists ; 2006 ; Durkheimian Studies Volume 12 ; 12 ; >
+    au < ready ; exists ; 2007 ; Durkheimian Studies Volume 13 ; 13 ; >
+    au < ready ; exists ; 2008 ; Durkheimian Studies Volume 14 ; 14 ; >
+    au < ready ; exists ; 2009 ; Durkheimian Studies Volume 15 ; 15 ; >
+    au < ready ; exists ; 2010 ; Durkheimian Studies Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Durkheimian Studies Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Durkheimian Studies Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Durkheimian Studies Volume 19 ; 19 ; >
@@ -428,7 +428,7 @@
     param[journal_id] = environment-and-society
     #param[journal_issn] = 2150-6779
      
-    au < testing ; exists ; 2010 ; Environment and Society Volume 1 ; 1 ; >
+    au < ready ; exists ; 2010 ; Environment and Society Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Environment and Society Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Environment and Society Volume 3 ; 3 ; >
     au < finished ; finished ; 2013 ; Environment and Society Volume 4 ; 4 ; reingest3.clockss.org:8083 >
@@ -443,7 +443,7 @@
     au < frozen ; exists ; 2022 ; Environment and Society Volume 13 ; 13 ; >
     au < frozen ; exists ; 2023 ; Environment and Society Volume 14 ; 14 ; >
     au < frozen ; exists ; 2024 ; Environment and Society Volume 15 ; 15 ; >
-    au < testing ; exists ; 2025 ; Environment and Society Volume 16 ; 16 ; >
+    au < ready ; exists ; 2025 ; Environment and Society Volume 16 ; 16 ; >
 
   }
 
@@ -460,9 +460,9 @@
     
     # This title moved from Liverpool University Press
      
-    au < testing ; exists ; 2008 ; European Comic Art Volume 1 ; 1 ; >
-    au < testing ; exists ; 2009 ; European Comic Art Volume 2 ; 2 ; >
-    au < testing ; exists ; 2010 ; European Comic Art Volume 3 ; 3 ; >
+    au < ready ; exists ; 2008 ; European Comic Art Volume 1 ; 1 ; >
+    au < ready ; exists ; 2009 ; European Comic Art Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; European Comic Art Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Comic Art Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; European Comic Art Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Comic Art Volume 6 ; 6 ; >
@@ -494,17 +494,17 @@
     #param[journal_issn] = 0014-3006
    
     au < manifest ; exists ; 1999 ; European Judaism Volume 32 ; 32 ; >
-    au < testing ; exists ; 2000 ; European Judaism Volume 33 ; 33 ; >
-    au < testing ; exists ; 2001 ; European Judaism Volume 34 ; 34 ; >
-    au < testing ; exists ; 2002 ; European Judaism Volume 35 ; 35 ; >
-    au < testing ; exists ; 2003 ; European Judaism Volume 36 ; 36 ; >
-    au < testing ; exists ; 2004 ; European Judaism Volume 37 ; 37 ; >
-    au < testing ; exists ; 2005 ; European Judaism Volume 38 ; 38 ; >
-    au < testing ; exists ; 2006 ; European Judaism Volume 39 ; 39 ; >
-    au < testing ; exists ; 2007 ; European Judaism Volume 40 ; 40 ; >
-    au < testing ; exists ; 2008 ; European Judaism Volume 41 ; 41 ; >
-    au < testing ; exists ; 2009 ; European Judaism Volume 42 ; 42 ; >
-    au < testing ; exists ; 2010 ; European Judaism Volume 43 ; 43 ; >
+    au < ready ; exists ; 2000 ; European Judaism Volume 33 ; 33 ; >
+    au < ready ; exists ; 2001 ; European Judaism Volume 34 ; 34 ; >
+    au < ready ; exists ; 2002 ; European Judaism Volume 35 ; 35 ; >
+    au < ready ; exists ; 2003 ; European Judaism Volume 36 ; 36 ; >
+    au < ready ; exists ; 2004 ; European Judaism Volume 37 ; 37 ; >
+    au < ready ; exists ; 2005 ; European Judaism Volume 38 ; 38 ; >
+    au < ready ; exists ; 2006 ; European Judaism Volume 39 ; 39 ; >
+    au < ready ; exists ; 2007 ; European Judaism Volume 40 ; 40 ; >
+    au < ready ; exists ; 2008 ; European Judaism Volume 41 ; 41 ; >
+    au < ready ; exists ; 2009 ; European Judaism Volume 42 ; 42 ; >
+    au < ready ; exists ; 2010 ; European Judaism Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Judaism Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; European Judaism Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Judaism Volume 46 ; 46 ; >
@@ -535,13 +535,13 @@
     param[journal_id] = focaal
     #param[journal_issn] = 0920-1297
    
-    au < testing ; exists ; 2004 ; Focaal Volume 2004 ; 2004 ; >
-    au < testing ; exists ; 2005 ; Focaal Volume 2005 ; 2005 ; >
-    au < testing ; exists ; 2006 ; Focaal Volume 2006 ; 2006 ; >
-    au < testing ; exists ; 2007 ; Focaal Volume 2007 ; 2007 ; >
-    au < testing ; exists ; 2008 ; Focaal Volume 2008 ; 2008 ; >
-    au < testing ; exists ; 2009 ; Focaal Volume 2009 ; 2009 ; >
-    au < testing ; exists ; 2010 ; Focaal Volume 2010 ; 2010 ; >
+    au < ready ; exists ; 2004 ; Focaal Volume 2004 ; 2004 ; >
+    au < ready ; exists ; 2005 ; Focaal Volume 2005 ; 2005 ; >
+    au < ready ; exists ; 2006 ; Focaal Volume 2006 ; 2006 ; >
+    au < ready ; exists ; 2007 ; Focaal Volume 2007 ; 2007 ; >
+    au < ready ; exists ; 2008 ; Focaal Volume 2008 ; 2008 ; >
+    au < ready ; exists ; 2009 ; Focaal Volume 2009 ; 2009 ; >
+    au < ready ; exists ; 2010 ; Focaal Volume 2010 ; 2010 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Focaal Volume 2011 ; 2011 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Focaal Volume 2012 ; 2012 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Focaal Volume 2013 ; 2013 ; >
@@ -573,17 +573,17 @@
     #param[journal_issn] = 1537-6370
 
     au < manifest ; exists ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 ; >
-    au < testing ; exists ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 ; >
-    au < testing ; exists ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 ; >
-    au < testing ; exists ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 ; >
-    au < testing ; exists ; 2003 ; French Politics, Culture & Society Volume 21 ; 21 ; >
-    au < testing ; exists ; 2004 ; French Politics, Culture & Society Volume 22 ; 22 ; >
-    au < testing ; exists ; 2005 ; French Politics, Culture & Society Volume 23 ; 23 ; >
-    au < testing ; exists ; 2006 ; French Politics, Culture & Society Volume 24 ; 24 ; >
-    au < testing ; exists ; 2007 ; French Politics, Culture & Society Volume 25 ; 25 ; >
-    au < testing ; exists ; 2008 ; French Politics, Culture & Society Volume 26 ; 26 ; >
-    au < testing ; exists ; 2009 ; French Politics, Culture & Society Volume 27 ; 27 ; >
-    au < testing ; exists ; 2010 ; French Politics, Culture & Society Volume 28 ; 28 ; >
+    au < ready ; exists ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 ; >
+    au < ready ; exists ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 ; >
+    au < ready ; exists ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 ; >
+    au < ready ; exists ; 2003 ; French Politics, Culture & Society Volume 21 ; 21 ; >
+    au < ready ; exists ; 2004 ; French Politics, Culture & Society Volume 22 ; 22 ; >
+    au < ready ; exists ; 2005 ; French Politics, Culture & Society Volume 23 ; 23 ; >
+    au < ready ; exists ; 2006 ; French Politics, Culture & Society Volume 24 ; 24 ; >
+    au < ready ; exists ; 2007 ; French Politics, Culture & Society Volume 25 ; 25 ; >
+    au < ready ; exists ; 2008 ; French Politics, Culture & Society Volume 26 ; 26 ; >
+    au < ready ; exists ; 2009 ; French Politics, Culture & Society Volume 27 ; 27 ; >
+    au < ready ; exists ; 2010 ; French Politics, Culture & Society Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; French Politics, Culture & Society Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; French Politics, Culture & Society Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; French Politics, Culture & Society Volume 31 ; 31 ; >
@@ -616,17 +616,17 @@
 
     au < manifest ; exists ; 1998 ; German Politics and Society Volume 16 ; 16 ; >
     au < manifest ; exists ; 1999 ; German Politics and Society Volume 17 ; 17 ; >
-    au < testing ; exists ; 2000 ; German Politics and Society Volume 18 ; 18 ; >
-    au < testing ; exists ; 2001 ; German Politics and Society Volume 19 ; 19 ; >
-    au < testing ; exists ; 2002 ; German Politics and Society Volume 20 ; 20 ; >
-    au < testing ; exists ; 2003 ; German Politics and Society Volume 21 ; 21 ; >
-    au < testing ; exists ; 2004 ; German Politics and Society Volume 22 ; 22 ; >
-    au < testing ; exists ; 2005 ; German Politics and Society Volume 23 ; 23 ; >
-    au < testing ; exists ; 2006 ; German Politics and Society Volume 24 ; 24 ; >
+    au < ready ; exists ; 2000 ; German Politics and Society Volume 18 ; 18 ; >
+    au < ready ; exists ; 2001 ; German Politics and Society Volume 19 ; 19 ; >
+    au < ready ; exists ; 2002 ; German Politics and Society Volume 20 ; 20 ; >
+    au < ready ; exists ; 2003 ; German Politics and Society Volume 21 ; 21 ; >
+    au < ready ; exists ; 2004 ; German Politics and Society Volume 22 ; 22 ; >
+    au < ready ; exists ; 2005 ; German Politics and Society Volume 23 ; 23 ; >
+    au < ready ; exists ; 2006 ; German Politics and Society Volume 24 ; 24 ; >
     au < finished ; crawling ; 2007 ; German Politics and Society Volume 25 ; 25 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2008 ; German Politics and Society Volume 26 ; 26 ; >
-    au < testing ; exists ; 2009 ; German Politics and Society Volume 27 ; 27 ; >
-    au < testing ; exists ; 2010 ; German Politics and Society Volume 28 ; 28 ; >
+    au < ready ; exists ; 2008 ; German Politics and Society Volume 26 ; 26 ; >
+    au < ready ; exists ; 2009 ; German Politics and Society Volume 27 ; 27 ; >
+    au < ready ; exists ; 2010 ; German Politics and Society Volume 28 ; 28 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; German Politics and Society Volume 29 ; 29 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; German Politics and Society Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; German Politics and Society Volume 31 ; 31 ; >
@@ -657,9 +657,9 @@
     param[journal_id] = girlhood-studies
     #param[journal_issn] = 1938-8209
 
-    au < testing ; exists ; 2008 ; Girlhood Studies Volume 1 ; 1 ; >
-    au < testing ; exists ; 2009 ; Girlhood Studies Volume 2 ; 2 ; >
-    au < testing ; exists ; 2010 ; Girlhood Studies Volume 3 ; 3 ; >
+    au < ready ; exists ; 2008 ; Girlhood Studies Volume 1 ; 1 ; >
+    au < ready ; exists ; 2009 ; Girlhood Studies Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; Girlhood Studies Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Girlhood Studies Volume 4 ; 4 ; >
     au < finished ; finished ; 2012 ; Girlhood Studies Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; Girlhood Studies Volume 6 ; 6 ; reingest1.clockss.org:8082 >
@@ -690,9 +690,9 @@
     param[journal_id] = historical-reflections
     #param[journal_issn] = 0315-7997
       
-    au < testing ; exists ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 ; >
-    au < testing ; exists ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 ; >
-    au < testing ; exists ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 ; >
+    au < ready ; exists ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 ; >
+    au < ready ; exists ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 ; >
+    au < ready ; exists ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Historical Reflections/Reflexions Historiques Volume 39 ; 39 ; >
@@ -780,17 +780,17 @@
     param[journal_id] = italian-politics
     #param[journal_issn] = 1086-4946 
     
-    au < testing ; exists ; 2000 ; Italian Politics Volume 15 ; 15 ; >
-    au < testing ; exists ; 2001 ; Italian Politics Volume 16 ; 16 ; >
-    au < testing ; exists ; 2002 ; Italian Politics Volume 17 ; 17 ; >
-    au < testing ; exists ; 2003 ; Italian Politics Volume 18 ; 18 ; >
-    au < testing ; exists ; 2004 ; Italian Politics Volume 19 ; 19 ; >
-    au < testing ; exists ; 2005 ; Italian Politics Volume 20 ; 20 ; >
-    au < testing ; exists ; 2006 ; Italian Politics Volume 21 ; 21 ; >
-    au < testing ; exists ; 2007 ; Italian Politics Volume 22 ; 22 ; >
-    au < testing ; exists ; 2008 ; Italian Politics Volume 23 ; 23 ; >
-    au < testing ; exists ; 2009 ; Italian Politics Volume 24 ; 24 ; >
-    au < testing ; exists ; 2010 ; Italian Politics Volume 25 ; 25 ; >
+    au < ready ; exists ; 2000 ; Italian Politics Volume 15 ; 15 ; >
+    au < ready ; exists ; 2001 ; Italian Politics Volume 16 ; 16 ; >
+    au < ready ; exists ; 2002 ; Italian Politics Volume 17 ; 17 ; >
+    au < ready ; exists ; 2003 ; Italian Politics Volume 18 ; 18 ; >
+    au < ready ; exists ; 2004 ; Italian Politics Volume 19 ; 19 ; >
+    au < ready ; exists ; 2005 ; Italian Politics Volume 20 ; 20 ; >
+    au < ready ; exists ; 2006 ; Italian Politics Volume 21 ; 21 ; >
+    au < ready ; exists ; 2007 ; Italian Politics Volume 22 ; 22 ; >
+    au < ready ; exists ; 2008 ; Italian Politics Volume 23 ; 23 ; >
+    au < ready ; exists ; 2009 ; Italian Politics Volume 24 ; 24 ; >
+    au < ready ; exists ; 2010 ; Italian Politics Volume 25 ; 25 ; >
     au < finished ; crawling ; 2011 ; Italian Politics Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2012 ; Italian Politics Volume 27 ; 27 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Italian Politics Volume 28 ; 28 ; >
@@ -813,8 +813,8 @@
     param[journal_id] = jemms
     #param[journal_issn] = 2041-6938
        
-    au < testing ; exists ; 2009 ; Journal of Educational Media, Memory, and Society Volume 1 ; 1 ; >
-    au < testing ; exists ; 2010 ; Journal of Educational Media, Memory, and Society Volume 2 ; 2 ; >
+    au < ready ; exists ; 2009 ; Journal of Educational Media, Memory, and Society Volume 1 ; 1 ; >
+    au < ready ; exists ; 2010 ; Journal of Educational Media, Memory, and Society Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Educational Media, Memory, and Society Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Educational Media, Memory, and Society Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 ; >
@@ -846,17 +846,17 @@
     #param[journal_issn] = 1465-2609
     #Journeys will cease publication as of 2022
        
-    au < testing ; exists ; 2000 ; Journeys Volume 1 ; 1 ; >
-    au < testing ; exists ; 2001 ; Journeys Volume 2 ; 2 ; >
-    au < testing ; exists ; 2002 ; Journeys Volume 3 ; 3 ; >
-    au < testing ; exists ; 2003 ; Journeys Volume 4 ; 4 ; >
-    au < testing ; exists ; 2004 ; Journeys Volume 5 ; 5 ; >
-    au < testing ; exists ; 2005 ; Journeys Volume 6 ; 6 ; >
-    au < testing ; exists ; 2006 ; Journeys Volume 7 ; 7 ; >
-    au < testing ; exists ; 2007 ; Journeys Volume 8 ; 8 ; >
-    au < testing ; exists ; 2008 ; Journeys Volume 9 ; 9 ; >
-    au < testing ; exists ; 2009 ; Journeys Volume 10 ; 10 ; >
-    au < testing ; exists ; 2010 ; Journeys Volume 11 ; 11 ; >
+    au < ready ; exists ; 2000 ; Journeys Volume 1 ; 1 ; >
+    au < ready ; exists ; 2001 ; Journeys Volume 2 ; 2 ; >
+    au < ready ; exists ; 2002 ; Journeys Volume 3 ; 3 ; >
+    au < ready ; exists ; 2003 ; Journeys Volume 4 ; 4 ; >
+    au < ready ; exists ; 2004 ; Journeys Volume 5 ; 5 ; >
+    au < ready ; exists ; 2005 ; Journeys Volume 6 ; 6 ; >
+    au < ready ; exists ; 2006 ; Journeys Volume 7 ; 7 ; >
+    au < ready ; exists ; 2007 ; Journeys Volume 8 ; 8 ; >
+    au < ready ; exists ; 2008 ; Journeys Volume 9 ; 9 ; >
+    au < ready ; exists ; 2009 ; Journeys Volume 10 ; 10 ; >
+    au < ready ; exists ; 2010 ; Journeys Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Journeys Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journeys Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journeys Volume 14 ; 14 ; >
@@ -882,9 +882,9 @@
     param[journal_id] = latiss
     #param[journal_issn] = 1755-2273
        
-    au < testing ; exists ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 ; >
-    au < testing ; exists ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 ; >
-    au < testing ; exists ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
+    au < ready ; exists ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 ; >
+    au < ready ; exists ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 ; >
+    au < ready ; exists ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 ; reingest1.clockss.org:8082 >
@@ -967,7 +967,7 @@
     au < finished ; manifest ; 2022 ; Museum Worlds: Advances in Research Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2023 ; Museum Worlds: Advances in Research Volume 11 ; 11 ; >
     au < frozen ; exists ; 2024 ; Museum Worlds: Advances in Research Volume 12 ; 12 ; >
-    au < testing ; exists ; 2025 ; Museum Worlds: Advances in Research Volume 13 ; 13 ; >
+    au < ready ; exists ; 2025 ; Museum Worlds: Advances in Research Volume 13 ; 13 ; >
 
   }
 
@@ -982,11 +982,11 @@
     param[journal_id] = nature-and-culture
     #param[journal_issn] = 1558-6073
         
-    au < testing ; exists ; 2006 ; Nature and Culture Volume 1 ; 1 ; >
-    au < testing ; exists ; 2007 ; Nature and Culture Volume 2 ; 2 ; >
-    au < testing ; exists ; 2008 ; Nature and Culture Volume 3 ; 3 ; >
-    au < testing ; exists ; 2009 ; Nature and Culture Volume 4 ; 4 ; >
-    au < testing ; exists ; 2010 ; Nature and Culture Volume 5 ; 5 ; >
+    au < ready ; exists ; 2006 ; Nature and Culture Volume 1 ; 1 ; >
+    au < ready ; exists ; 2007 ; Nature and Culture Volume 2 ; 2 ; >
+    au < ready ; exists ; 2008 ; Nature and Culture Volume 3 ; 3 ; >
+    au < ready ; exists ; 2009 ; Nature and Culture Volume 4 ; 4 ; >
+    au < ready ; exists ; 2010 ; Nature and Culture Volume 5 ; 5 ; >
     au < finished ; finished ; 2011 ; Nature and Culture Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2012 ; Nature and Culture Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Nature and Culture Volume 8 ; 8 ; >
@@ -1051,10 +1051,10 @@
     param[journal_id] = projections
     #param[journal_issn] = 1934-9688
         
-    au < testing ; exists ; 2007 ; Projections Volume 1 ; 1 ; >
-    au < testing ; exists ; 2008 ; Projections Volume 2 ; 2 ; >
-    au < testing ; exists ; 2009 ; Projections Volume 3 ; 3 ; >
-    au < testing ; exists ; 2010 ; Projections Volume 4 ; 4 ; >
+    au < ready ; exists ; 2007 ; Projections Volume 1 ; 1 ; >
+    au < ready ; exists ; 2008 ; Projections Volume 2 ; 2 ; >
+    au < ready ; exists ; 2009 ; Projections Volume 3 ; 3 ; >
+    au < ready ; exists ; 2010 ; Projections Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Projections Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Projections Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Projections Volume 7 ; 7 ; >
@@ -1115,7 +1115,7 @@
     param[journal_id] = religion-and-society
     #param[journal_issn] = 2150-9298
 
-    au < testing ; exists ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 ; >
+    au < ready ; exists ; 2010 ; Religion and Society: Advances in Research Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Religion and Society: Advances in Research Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Religion and Society: Advances in Research Volume 3 ; 3 ; >
     au < finished ; finished ; 2013 ; Religion and Society: Advances in Research Volume 4 ; 4 ; reingest5.clockss.org:8082 >
@@ -1129,7 +1129,7 @@
     au < finished ; frozen ; 2021 ; Religion and Society: Advances in Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Religion and Society: Advances in Research Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2023 ; Religion and Society: Advances in Research Volume 14 ; 14 ; >
-    au < testing ; exists ; 2024 ; Religion and Society: Advances in Research Volume 15 ; 15 ; >
+    au < ready ; exists ; 2024 ; Religion and Society: Advances in Research Volume 15 ; 15 ; >
     au < exists ; exists ; 2025 ; Religion and Society: Advances in Research Volume 16 ; 16 ; >
 
   }
@@ -1148,17 +1148,17 @@
     au < manifest ; exists ; 1997 ; Sartre Studies International Volume 3 ; 3 ; >
     au < manifest ; exists ; 1998 ; Sartre Studies International Volume 4 ; 4 ; >
     au < manifest ; exists ; 1999 ; Sartre Studies International Volume 5 ; 5 ; >
-    au < testing ; exists ; 2000 ; Sartre Studies International Volume 6 ; 6 ; >
+    au < ready ; exists ; 2000 ; Sartre Studies International Volume 6 ; 6 ; >
     au < testing ; exists ; 2001 ; Sartre Studies International Volume 7 ; 7 ; >
-    au < testing ; exists ; 2002 ; Sartre Studies International Volume 8 ; 8 ; >
-    au < testing ; exists ; 2003 ; Sartre Studies International Volume 9 ; 9 ; >
-    au < testing ; exists ; 2004 ; Sartre Studies International Volume 10 ; 10 ; >
-    au < testing ; exists ; 2005 ; Sartre Studies International Volume 11 ; 11 ; >
-    au < testing ; exists ; 2006 ; Sartre Studies International Volume 12 ; 12 ; >
-    au < testing ; exists ; 2007 ; Sartre Studies International Volume 13 ; 13 ; >
-    au < testing ; exists ; 2008 ; Sartre Studies International Volume 14 ; 14 ; >
-    au < testing ; exists ; 2009 ; Sartre Studies International Volume 15 ; 15 ; >
-    au < testing ; exists ; 2010 ; Sartre Studies International Volume 16 ; 16 ; >
+    au < ready ; exists ; 2002 ; Sartre Studies International Volume 8 ; 8 ; >
+    au < ready ; exists ; 2003 ; Sartre Studies International Volume 9 ; 9 ; >
+    au < ready ; exists ; 2004 ; Sartre Studies International Volume 10 ; 10 ; >
+    au < ready ; exists ; 2005 ; Sartre Studies International Volume 11 ; 11 ; >
+    au < ready ; exists ; 2006 ; Sartre Studies International Volume 12 ; 12 ; >
+    au < ready ; exists ; 2007 ; Sartre Studies International Volume 13 ; 13 ; >
+    au < ready ; exists ; 2008 ; Sartre Studies International Volume 14 ; 14 ; >
+    au < ready ; exists ; 2009 ; Sartre Studies International Volume 15 ; 15 ; >
+    au < ready ; exists ; 2010 ; Sartre Studies International Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Sartre Studies International Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Sartre Studies International Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Sartre Studies International Volume 19 ; 19 ; >
@@ -1210,14 +1210,14 @@
     param[journal_id] = sibirica
     #param[journal_issn] = 1361-7362
        
-    au < testing ; exists ; 2002 ; Sibirica Volume 2 ; 2 ; >
-    au < testing ; exists ; 2003 ; Sibirica Volume 3 ; 3 ; >
+    au < ready ; exists ; 2002 ; Sibirica Volume 2 ; 2 ; >
+    au < ready ; exists ; 2003 ; Sibirica Volume 3 ; 3 ; >
     au < finished ; crawling ; 2004 ; Sibirica Volume 4 ; 4 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2006 ; Sibirica Volume 5 ; 5 ; >
-    au < testing ; exists ; 2007 ; Sibirica Volume 6 ; 6 ; >
-    au < testing ; exists ; 2008 ; Sibirica Volume 7 ; 7 ; >
-    au < testing ; exists ; 2009 ; Sibirica Volume 8 ; 8 ; >
-    au < testing ; exists ; 2010 ; Sibirica Volume 9 ; 9 ; >
+    au < ready ; exists ; 2006 ; Sibirica Volume 5 ; 5 ; >
+    au < ready ; exists ; 2007 ; Sibirica Volume 6 ; 6 ; >
+    au < ready ; exists ; 2008 ; Sibirica Volume 7 ; 7 ; >
+    au < ready ; exists ; 2009 ; Sibirica Volume 8 ; 8 ; >
+    au < ready ; exists ; 2010 ; Sibirica Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Sibirica Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Sibirica Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Sibirica Volume 12 ; 12 ; >
@@ -1247,15 +1247,15 @@
     param[journal_id] = social-analysis
     #param[journal_issn] = 0155-977X
         
-    au < testing ; exists ; 2002 ; Social Analysis Volume 46 ; 46 ; >
-    au < testing ; exists ; 2003 ; Social Analysis Volume 47 ; 47 ; >
-    au < testing ; exists ; 2004 ; Social Analysis Volume 48 ; 48 ; >
-    au < testing ; exists ; 2005 ; Social Analysis Volume 49 ; 49 ; >
-    au < testing ; exists ; 2006 ; Social Analysis Volume 50 ; 50 ; >
-    au < testing ; exists ; 2007 ; Social Analysis Volume 51 ; 51 ; >
-    au < testing ; exists ; 2008 ; Social Analysis Volume 52 ; 52 ; >
-    au < testing ; exists ; 2009 ; Social Analysis Volume 53 ; 53 ; >
-    au < testing ; exists ; 2010 ; Social Analysis Volume 54 ; 54 ; >
+    au < ready ; exists ; 2002 ; Social Analysis Volume 46 ; 46 ; >
+    au < ready ; exists ; 2003 ; Social Analysis Volume 47 ; 47 ; >
+    au < ready ; exists ; 2004 ; Social Analysis Volume 48 ; 48 ; >
+    au < ready ; exists ; 2005 ; Social Analysis Volume 49 ; 49 ; >
+    au < ready ; exists ; 2006 ; Social Analysis Volume 50 ; 50 ; >
+    au < ready ; exists ; 2007 ; Social Analysis Volume 51 ; 51 ; >
+    au < ready ; exists ; 2008 ; Social Analysis Volume 52 ; 52 ; >
+    au < ready ; exists ; 2009 ; Social Analysis Volume 53 ; 53 ; >
+    au < ready ; exists ; 2010 ; Social Analysis Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Social Analysis Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Social Analysis Volume 56 ; 56 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Social Analysis Volume 57 ; 57 ; >
@@ -1289,15 +1289,15 @@
     au < manifest ; exists ; 1997 ; Theoria Volume 44 ; 44 ; >
     au < manifest ; exists ; 1998 ; Theoria Volume 45 ; 45 ; >
     au < manifest ; exists ; 1999 ; Theoria Volume 46 ; 46 ; >
-    au < testing ; exists ; 2000 ; Theoria Volume 47 ; 47 ; >
-    au < testing ; exists ; 2001 ; Theoria Volume 48 ; 48 ; >
-    au < testing ; exists ; 2002 ; Theoria Volume 49 ; 49 ; >
-    au < testing ; exists ; 2003 ; Theoria Volume 50 ; 50 ; >
-    au < testing ; exists ; 2004 ; Theoria Volume 51 ; 51 ; >
-    au < testing ; exists ; 2005 ; Theoria Volume 52 ; 52 ; >
+    au < ready ; exists ; 2000 ; Theoria Volume 47 ; 47 ; >
+    au < ready ; exists ; 2001 ; Theoria Volume 48 ; 48 ; >
+    au < ready ; exists ; 2002 ; Theoria Volume 49 ; 49 ; >
+    au < ready ; exists ; 2003 ; Theoria Volume 50 ; 50 ; >
+    au < ready ; exists ; 2004 ; Theoria Volume 51 ; 51 ; >
+    au < ready ; exists ; 2005 ; Theoria Volume 52 ; 52 ; >
     au < testing ; exists ; 2006 ; Theoria Volume 53 ; 53 ; >
-    au < testing ; exists ; 2007 ; Theoria Volume 54 ; 54 ; >
-    au < testing ; exists ; 2008 ; Theoria Volume 55 ; 55 ; >
+    au < ready ; exists ; 2007 ; Theoria Volume 54 ; 54 ; >
+    au < ready ; exists ; 2008 ; Theoria Volume 55 ; 55 ; >
     au < testing ; exists ; 2009 ; Theoria Volume 56 ; 56 ; >
     au < testing ; exists ; 2010 ; Theoria Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Theoria Volume 58 ; 58 ; >
