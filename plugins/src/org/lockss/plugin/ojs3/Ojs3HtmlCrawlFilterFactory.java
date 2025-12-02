@@ -82,6 +82,8 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 		HtmlNodeFilters.tagWithAttributeRegex("ul", "class", "most_read"),
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "toc-linked-art"),
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "site-footer"),
+		//remove links in references
+		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-details-references-value"),
 		//Aug 2025, U of Edinburgh started adding 'test issues' (unpublished issues) on manifest page which redirect to login page. Exclude these links.
 		new NodeFilter() {
       		@Override public boolean accept(Node node) {
