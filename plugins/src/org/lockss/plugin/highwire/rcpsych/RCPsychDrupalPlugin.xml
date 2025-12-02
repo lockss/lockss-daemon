@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Royal College of Psychiatrists Plugin (Legacy)</string>
+    <string>Royal College of Psychiatrists Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>14</string>
+    <string>15</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -74,6 +74,6 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Royal College of Psychiatrists Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Royal College of Psychiatrists Journals Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
 </map>

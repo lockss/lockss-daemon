@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>EMBO Press Plugin (Legacy)</string>
+    <string>EMBO Press Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"EMBO Press Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"EMBO Press Journals Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>text/html_link_extractor_factory</string>

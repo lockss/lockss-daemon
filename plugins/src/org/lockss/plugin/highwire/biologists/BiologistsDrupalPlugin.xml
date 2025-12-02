@@ -43,11 +43,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Company of Biologists Plugin (Legacy)</string>
+    <string>Company of Biologists Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -76,7 +76,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Company of Biologists Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Company of Biologists Journals Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <!--  override start url from parent to support http to https conversion -->

@@ -43,11 +43,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Association of Immunologists Plugin (Legacy, CLOCKSS)</string>
+    <string>American Association of Immunologists Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -59,7 +59,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Association of Immunologists Plugin (Legacy, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"American Association of Immunologists Journals Plugin (Legacy, CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>

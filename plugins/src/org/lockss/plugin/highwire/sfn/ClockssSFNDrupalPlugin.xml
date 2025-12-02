@@ -42,11 +42,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Society for Neuroscience Plugin (CLOCKSS)</string>
+    <string>Society for Neuroscience Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>16</string>
+    <string>17</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -58,7 +58,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Society for Neuroscience Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Society for Neuroscience Journals Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
