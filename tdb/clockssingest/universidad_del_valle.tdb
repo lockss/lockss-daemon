@@ -28,10 +28,10 @@
     au < frozen ; exists ; 1977 ; 1977 ; Cuadernos de administración Volume 2 (1977) ; 2 ; >
     au < ready ; exists ; 1978 ; 1978 ; Cuadernos de administración Volume 2 (1978) ; 2 ; >
     au < ready ; exists ; 1981 ; 1981 ; Cuadernos de administración Volume 4 ; 4 ; >
-    au < ready ; exists ; 1982 ; 1982 ; Cuadernos de administración Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1982 ; 1982 ; Cuadernos de administración Volume 5 ; 5 ; >
     au < ready ; exists ; 1983 ; 1983 ; Cuadernos de administración Volume 6 ; 6 ; >
 
-    au < ready ; exists ; 1984 ; 1984 ; Cuadernos de administración Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Cuadernos de administración Volume 7 ; 7 ; >
     au < ready ; exists ; 1985 ; 1985 ; Cuadernos de administración Volume 8 ; 8 ; >
     au < crawling ; exists ; 1987 ; 1987 ; Cuadernos de administración Volume 9 ; 9 ; >
     au < ready ; exists ; 1988 ; 1988 ; Cuadernos de administración Volume 10 ; 10 ; >
@@ -51,7 +51,7 @@
     au < ready ; exists ; 2006 ; 2006 ; Cuadernos de administración Volume 22 ; 22 ; >
     au < ready ; exists ; 2007 ; 2007 ; Cuadernos de administración Volume 23 ; 23 ; >
     au < ready ; exists ; 2008 ; 2008 ; Cuadernos de administración Volume 24 ; 24 ; >
-    au < ready ; exists ; 2009 ; 2009 ; Cuadernos de administración Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2009 ; 2009 ; Cuadernos de administración Volume 25 ; 25 ; >
     au < ready ; exists ; 2010 ; 2010 ; Cuadernos de administración Volume 26 ; 26 ; >
     au < manifest ; exists ; 2011 ; 2011 ; Cuadernos de administración Volume 27 ; 27 ; >
     au < ready ; exists ; 2012 ; 2012 ; Cuadernos de administración Volume 28 ; 28 ; >
@@ -119,7 +119,7 @@
       au < ready ; exists ; 2006 ; 2006 ; Lenguaje Volume 2006 ; 34 ; >
       au < ready ; exists ; 2007 ; 2007 ; Lenguaje Volume 2007 ; 35 ; >
       au < ready ; exists ; 2008 ; 2008 ; Lenguaje Volume 2008 ; 36 ; >
-      au < ready ; exists ; 2009 ; 2009 ; Lenguaje Volume 2009 ; 37 ; >
+      au < crawling ; exists ; 2009 ; 2009 ; Lenguaje Volume 2009 ; 37 ; >
       au < ready ; exists ; 2010 ; 2010 ; Lenguaje Volume 2010 ; 38 ; >
       au < crawling ; exists ; 2011 ; 2011 ; Lenguaje Volume 2011 ; 39 ; >
       au < ready ; exists ; 2012 ; 2012 ; Lenguaje Volume 2012 ; 40 ; >

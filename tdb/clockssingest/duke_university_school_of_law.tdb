@@ -47,7 +47,7 @@
     au < ready ; exists ; 2003 ; Alaska Law Review Volume 20 ; 20 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2004 ; Alaska Law Review Volume 21 ; 21 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2005 ; Alaska Law Review Volume 22 ; 22 ; https://scholarship.law.duke.edu/ ; >
-    au < ready ; exists ; 2006 ; Alaska Law Review Volume 23 ; 23 ; https://scholarship.law.duke.edu/ ; >
+    au < crawling ; exists ; 2006 ; Alaska Law Review Volume 23 ; 23 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2007 ; Alaska Law Review Volume 24 ; 24 ; https://scholarship.law.duke.edu/ ; >
     au < frozen ; exists ; 2008 ; Alaska Law Review Volume 25 ; 25 ; https://scholarship.law.duke.edu/ ; >
     au < frozen ; exists ; 2009 ; Alaska Law Review Volume 26 ; 26 ; https://scholarship.law.duke.edu/ ; >
@@ -161,7 +161,7 @@
     au < ready ; exists ; 2002 ; Duke Journal of Comparative and International Law Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2003 ; Duke Journal of Comparative and International Law Volume 13 ; 13 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2004 ; Duke Journal of Comparative and International Law Volume 14 ; 14 ; https://scholarship.law.duke.edu/ ; >
-    au < ready ; exists ; 2005 ; Duke Journal of Comparative and International Law Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; >
+    au < crawling ; exists ; 2005 ; Duke Journal of Comparative and International Law Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2006 ; Duke Journal of Comparative and International Law Volume 16 ; 16 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2007 ; Duke Journal of Comparative and International Law Volume 17 ; 17 ; https://scholarship.law.duke.edu/ ; >
     au < frozen ; exists ; 2008 ; Duke Journal of Comparative and International Law Volume 18 ; 18 ; https://scholarship.law.duke.edu/ ; >
@@ -195,7 +195,7 @@
     param[journal_abbr] = djclpp
   
     au < ready ; exists ; 2006 ; Duke Journal of Constitutional Law and Public Policy Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
-    au < ready ; exists ; 2007 ; Duke Journal of Constitutional Law and Public Policy Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
+    au < crawling ; exists ; 2007 ; Duke Journal of Constitutional Law and Public Policy Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
     au < frozen ; exists ; 2008 ; Duke Journal of Constitutional Law and Public Policy Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
     au < frozen ; exists ; 2009 ; Duke Journal of Constitutional Law and Public Policy Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >
     au < frozen ; exists ; 2010 ; Duke Journal of Constitutional Law and Public Policy Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; >
