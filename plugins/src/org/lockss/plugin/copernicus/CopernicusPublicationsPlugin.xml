@@ -51,7 +51,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>26</string>
+    <string>27</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -98,8 +98,11 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>"%sarticles/%s/index.html", to_https(base_url), volume_name</string>
         <string>"%svolumes.html",to_http(base_url)</string>
         <string>"%svolumes.html",to_https(base_url)</string>
+        <!-- Commenting out for now (Dec 2025). Their permissions on their home_urls are no longer working
+             so we will not be collecting material from their home_urls for the time being. However, all scholarly content
+             is on their base_url so we will only be missing a few icons. LXQUEUE-2124
         <string>"%sindex.html",to_http(home_url)</string> 
-        <string>"%sindex.html",to_https(home_url)</string> 
+        <string>"%sindex.html",to_https(home_url)</string> -->
       </list>
   </entry>
   <entry>
@@ -129,7 +132,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^https?://(%s|%s).*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url), url_host(home_url)</string>
+      <!--<string>1,"^https?://(%s|%s).*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", url_host(base_url), url_host(home_url)</string>-->
       <!--  two CDN that contain style information and small supporting images-->
       <string>1,"^https?://(contentmanager|cdn)\.copernicus\.org/."</string>
 <!--  article level metrics live at <filename>-metrics.html -->      
@@ -166,7 +169,7 @@ POSSIBILITY OF SUCH DAMAGE.
         https://ar.copernicus.org/preprints/ar-2023-1/ar-2023-1.pdf
       -->
       <string>1, "^https?://%s/preprints/.*\.pdf",url_host(base_url)</string>
-      <string>1,"^https?://%s/index.html", url_host(home_url)</string>
+      <!--<string>1,"^https?://%s/index.html", url_host(home_url)</string>-->
     </list>
   </entry>
   <entry>
