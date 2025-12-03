@@ -79,7 +79,7 @@
     au < finished ; manifest ; 2021 ; Bulletin of the American Meteorological Society Volume 102 ; 102 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Bulletin of the American Meteorological Society Volume 103 ; 103 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Bulletin of the American Meteorological Society Volume 104 ; 104 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2024 ; Bulletin of the American Meteorological Society Volume 105 ; 105 ; >
+    au < finished ; manifest ; 2024 ; Bulletin of the American Meteorological Society Volume 105 ; 105 ; reingest4.clockss.org:8082 > # can't display image https://journals.ametsoc.org/view/journals/bams/105/8/full-BAMS-D-24-0116.1-f59.jpg
     au < crawling ; exists ; 2025 ; Bulletin of the American Meteorological Society Volume 106 ; 106 ; >
 
   }
@@ -120,7 +120,7 @@
     au < finished ; manifest ; 2020 ; Earth Interactions Volume 24 ; 24 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Earth Interactions Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Earth Interactions Volume 26 ; 26 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2023 ; Earth Interactions Volume 27 ; 27 ; >
+    au < finished ; manifest ; 2023 ; Earth Interactions Volume 27 ; 27 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Earth Interactions Volume 28 ; 28 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Earth Interactions Volume 29 ; 29 ; >
 
@@ -301,7 +301,7 @@
     au < finished ; manifest ; 2021 ; Journal of Atmospheric and Oceanic Technology Volume 38 ; 38 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Journal of Atmospheric and Oceanic Technology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Journal of Atmospheric and Oceanic Technology Volume 40 ; 40 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2024 ; Journal of Atmospheric and Oceanic Technology Volume 41 ; 41 ; >
+    au < finished ; manifest ; 2024 ; Journal of Atmospheric and Oceanic Technology Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Journal of Atmospheric and Oceanic Technology Volume 42 ; 42 ; >
 
   }
@@ -353,7 +353,7 @@
     au < finished ; manifest ; 2021 ; Journal of Climate Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; Journal of Climate Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; Journal of Climate Volume 36 ; 36 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; Journal of Climate Volume 37 ; 37 ; >
+    au < finished ; manifest ; 2024 ; Journal of Climate Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2025 ; Journal of Climate Volume 38 ; 38 ; >
 
   }
@@ -394,7 +394,7 @@
     au < finished ; manifest ; 2021 ; Journal of Hydrometeorology Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Journal of Hydrometeorology Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Journal of Hydrometeorology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; Journal of Hydrometeorology Volume 25 ; 25 ; >
+    au < finished ; manifest ; 2024 ; Journal of Hydrometeorology Volume 25 ; 25 ; reingest3.clockss.org:8083 > #can't display image https://journals.ametsoc.org/view/journals/hydr/25/9/full-JHM-D-23-0219.1-f6.jpg
     au < crawling ; exists ; 2025 ; Journal of Hydrometeorology Volume 26 ; 26 ; >
 
   }
@@ -463,7 +463,7 @@
     au < finished ; manifest ; 2021 ; Journal of Physical Oceanography Volume 51 ; 51 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; Journal of Physical Oceanography Volume 52 ; 52 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; Journal of Physical Oceanography Volume 53 ; 53 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2024 ; Journal of Physical Oceanography Volume 54 ; 54 ; >
+    au < finished ; manifest ; 2024 ; Journal of Physical Oceanography Volume 54 ; 54 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Journal of Physical Oceanography Volume 55 ; 55 ; >
 
   }
@@ -559,7 +559,7 @@
     au < finished ; manifest ; 2021 ; Journal of the Atmospheric Sciences Volume 78 ; 78 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Journal of the Atmospheric Sciences Volume 79 ; 79 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Journal of the Atmospheric Sciences Volume 80 ; 80 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; Journal of the Atmospheric Sciences Volume 81 ; 81 ; >
+    au < finished ; manifest ; 2024 ; Journal of the Atmospheric Sciences Volume 81 ; 81 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Journal of the Atmospheric Sciences Volume 82 ; 82 ; >
 
   }
@@ -756,7 +756,7 @@
     au < finished ; manifest ; 2021 ; Monthly Weather Review Volume 149 ; 149 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Monthly Weather Review Volume 150 ; 150 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Monthly Weather Review Volume 151 ; 151 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2024 ; Monthly Weather Review Volume 152 ; 152 ; >
+    au < finished ; manifest ; 2024 ; Monthly Weather Review Volume 152 ; 152 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Monthly Weather Review Volume 153 ; 153 ; >
 
   }
@@ -787,7 +787,7 @@
     au < finished ; manifest ; 2021 ; Weather, Climate, and Society Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Weather, Climate, and Society Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; Weather, Climate, and Society Volume 15 ; 15 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; Weather, Climate, and Society Volume 16 ; 16 ; >
+    au < finished ; manifest ; 2024 ; Weather, Climate, and Society Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2025 ; Weather, Climate, and Society Volume 17 ; 17 ; >
 
   }
@@ -841,7 +841,7 @@
     au < finished ; manifest ; 2021 ; Weather and Forecasting Volume 36 ; 36 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Weather and Forecasting Volume 37 ; 37 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Weather and Forecasting Volume 38 ; 38 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; Weather and Forecasting Volume 39 ; 39 ; >
+    au < finished ; manifest ; 2024 ; Weather and Forecasting Volume 39 ; 39 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2025 ; Weather and Forecasting Volume 40 ; 40 ; >
 
   }
