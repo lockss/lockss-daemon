@@ -118,7 +118,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
             Document doc = Jsoup.parse(tocCU.getUncompressedInputStream(), AuUtil.getCharsetOrDefault(tocCU.getProperties()), tocCU.getUrl());
             Elements articles = doc.select("div.article-summary,article.article,ul.articles>li,div.one-article-intoc,article.article_summary,div.article-sum,"
                 +"ul.it-list>li>div.it-right-zone,article.equal,div.grid-child:has(div>div.media-body),ul.row>li.issue__article,div.page-issue-galleys:has(div.h3:contains(Número completo)),"
-                +"div.galleys:has(h2:contains(Número completo)),div.galleys:has(h2:contains(Full Issue)),div.altex-issue-article,div.altex-issue-editorial");
+                +"div.galleys:has(h2:contains(Número completo)),div.galleys:has(h2:contains(Full Issue)),div.altex-issue-article,div.altex-issue-editorial, div.media-list>li");
             ArrayList<String> rolesForFullText = new ArrayList<>();
             for (Element article : articles) {
                 ArticleFiles af = new ArticleFiles();
@@ -126,7 +126,8 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                 Elements PDFs = article.select("div.article-summary-galleys>a[href*=article]:contains(PDF),ul.article__btn-group>li>a[href*=article]:contains(PDF),ul.galleys_links>li>a[href*=article]:contains(PDF),"
                     +"div.galleys_links>a[href*=article]:contains(PDF),div.btn-group>a[href*=article].pdf,a.indexGalleyLink:contains(PDF),"
                     +"div.galleryLinksWrp>div.btnsLink>a.galley-link:contains(PDF),ul.actions>li.galley-links-items>a:has(i.fa-file-pdf),div.row>div>a.galley-link:has(span.gallery_item_link:contains(PDF)),"
-                    +"a[href*=issue/view].btn:contains(PDF),ul.galleys_links>li>a.pdf[href*=issue/view],a[href*=article]:has(span:contains(pdf))");
+                    +"a[href*=issue/view].btn:contains(PDF),ul.galleys_links>li>a.pdf[href*=issue/view],a[href*=article]:has(span:contains(pdf)),"
+                    +"div.galleys_links>div>a.pdf[href*=article]");
                 pdfUrl = au.makeCachedUrl(PDFs.attr("href").trim());
 
                 Elements HTMLs = article.select("ul.galleys_links>li>a:contains(HTML),ul.article__btn-group>li>a:contains(HTML),div.btn-group>a:contains(HTML),"
@@ -143,7 +144,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                 Elements abstracts = article.select("div.article-summary-title>a[href*=article],h4.article__title>a[href*=article],div.obj_article_summary>h3.title>a[href*=article],h3.media-heading>a[href*=article],"+
                     "a.summary_title,span.article-title>a[href*=article],div.obj_article_summary>div.title>a[href*=article],a:has(span.text>h6.article-title),"
                     +"ul.actions>li>a:contains(View Article),div.obj_article_summary>h4.title>a[href*=article],div.obj_article_summary>div.card-body>h3.card-title>a[href*=article],"+
-                    "div.card-body>h4.issue-article-title>a");
+                    "div.card-body>h4.issue-article-title>a,div.obj_article_summary>div.summary>h2.title>a[href*=article]");
                 abstractsUrl = au.makeCachedUrl(abstracts.attr("href").trim());
 
                 /*
