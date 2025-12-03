@@ -59,12 +59,12 @@
     comment[base_url] = http://www.cardiac-nursing.co.uk/
     param[journal_id] = bjca
 
-    au < ready ; exists ; 2006 ; British Journal of Cardiac Nursing Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2007 ; British Journal of Cardiac Nursing Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2006 ; British Journal of Cardiac Nursing Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2007 ; British Journal of Cardiac Nursing Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2008 ; British Journal of Cardiac Nursing Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2009 ; British Journal of Cardiac Nursing Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2010 ; British Journal of Cardiac Nursing Volume 5 ; 5 ; https://www.magonlinelibrary.com/ ; >
-    au < ready ; exists ; 2011 ; British Journal of Cardiac Nursing Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 2011 ; British Journal of Cardiac Nursing Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; >
     au < frozen ; exists ; 2012 ; British Journal of Cardiac Nursing Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
     au < finished ; down ; 2013 ; British Journal of Cardiac Nursing Volume 8 ; 8 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2014 ; British Journal of Cardiac Nursing Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
@@ -1049,7 +1049,7 @@
     comment[base_url] = http://www.earlyyearseducator.co.uk/
     param[journal_id] = eyed
 
-    au < ready ; exists ; 1999-2000 ; Early Years Educator (EYE) Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
+    au < crawling ; exists ; 1999-2000 ; Early Years Educator (EYE) Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2000-2001 ; Early Years Educator (EYE) Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2001-2002 ; Early Years Educator (EYE) Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2002-2003 ; Early Years Educator (EYE) Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
