@@ -36,7 +36,7 @@ import org.lockss.util.Constants;
 import org.lockss.util.urlconn.CacheException.RetrySameUrlException;
 
 /**
- * <p>Same as {@link RetrySameUrlException} but with sixty 60-second retries
+ * <p>Same as {@link RetrySameUrlException} but with 24 5 minute retries
  * (instead of three 10-second retries by default).</p>
  * 
  * @author Thib Guicherd-Callin
@@ -53,12 +53,12 @@ public class GovInfoRetrySameUrlException extends RetrySameUrlException {
   
   @Override
   public int getRetryCount() {
-    return 120;
+    return 24;
   }
   
   @Override
   public long getRetryDelay() {
-    return 60 * Constants.SECOND;
+    return 300 * Constants.SECOND;
   }
 
 }
