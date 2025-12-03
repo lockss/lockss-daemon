@@ -24,13 +24,13 @@
     param[base_url] = https://cce.researchcommons.org/
     param[journal_abbr] = journal
 
-    au < manifest ; exists ; 2018 ; Chemistry and Chemical Engineering Volume 2018 ; 2018 ; >
-    au < manifest ; exists ; 2019 ; Chemistry and Chemical Engineering Volume 2019 ; 2019 ; >
-    au < manifest ; exists ; 2020 ; Chemistry and Chemical Engineering Volume 2020 ; 2020 ; >
-    au < manifest ; exists ; 2021 ; Chemistry and Chemical Engineering Volume 2021 ; 2021 ; >
-    au < manifest ; exists ; 2022 ; Chemistry and Chemical Engineering Volume 2022 ; 2022 ; >
-    au < manifest ; exists ; 2023 ; Chemistry and Chemical Engineering Volume 2023 ; 2023 ; >
-    au < manifest ; exists ; 2024 ; Chemistry and Chemical Engineering Volume 2024 ; 2024 ; >
+    au < testing ; exists ; 2018 ; Chemistry and Chemical Engineering Volume 2018 ; 2018 ; >
+    au < testing ; exists ; 2019 ; Chemistry and Chemical Engineering Volume 2019 ; 2019 ; >
+    au < testing ; exists ; 2020 ; Chemistry and Chemical Engineering Volume 2020 ; 2020 ; >
+    au < testing ; exists ; 2021 ; Chemistry and Chemical Engineering Volume 2021 ; 2021 ; >
+    au < testing ; exists ; 2022 ; Chemistry and Chemical Engineering Volume 2022 ; 2022 ; >
+    au < testing ; exists ; 2023 ; Chemistry and Chemical Engineering Volume 2023 ; 2023 ; >
+    au < testing ; exists ; 2024 ; Chemistry and Chemical Engineering Volume 2024 ; 2024 ; >
     au < crawling ; exists ; 2025 ; Chemistry and Chemical Engineering Volume 2025 ; 2025 ; >
 
   }
