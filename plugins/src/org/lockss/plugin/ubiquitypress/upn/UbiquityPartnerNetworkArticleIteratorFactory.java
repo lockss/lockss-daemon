@@ -46,11 +46,12 @@ public class UbiquityPartnerNetworkArticleIteratorFactory
   private static final String PATTERN_TEMPLATE = "\"^%sarticles/\", base_url";
 
   /*
-    We want to exclude "old" versions of articles page URLs like https://journalofcognition.org/en/articles/326
-    and include "newer" versions (like https://journalofcognition.org/en/articles/10.5334/joc.326 or https://jcms-journal.com/articles/jcms.1011201).
-    If we allow for both older and newer versions, we risk double counting articles. 
+    Note that there is a risk of double counting articles that have "older" versions of 
+    Article Pattern URLs(like https://journalofcognition.org/en/articles/326)
+    and "newer" versions (like https://journalofcognition.org/en/articles/10.5334/joc.326 
+    or https://jcms-journal.com/articles/jcms.1011201).
   */
-  private static final Pattern LANDING_PATTERN = Pattern.compile("/articles/([a-zA-Z0-9]+[\\.][a-zA-Z0-9]+)(/[a-zA-Z0-9\\.-]+)?$", Pattern.CASE_INSENSITIVE);
+  private static final Pattern LANDING_PATTERN = Pattern.compile("/articles/([a-zA-Z0-9\\.]+)(/[a-zA-Z0-9\\.-]+)?$", Pattern.CASE_INSENSITIVE);
   private static final String LANDING_REPLACEMENT = "/articles/$1$2";
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
