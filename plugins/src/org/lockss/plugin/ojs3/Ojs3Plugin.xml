@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>66</string>
+    <string>67</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -103,6 +103,8 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!--In 2025, different versions of articles were found in crawls. CLOCKSS let us know that we shouldn't be collecting these.-->
+      <string>2,"^https?://%s%s.*%s/article/view/[0-9]+/version/", url_host(base_url), url_path(base_url), journal_id</string>
       <!-- In 2025, bad link found in Journal of Distance Education Volume 21-22. 
        https://www.ijede.ca/index.php/jde/article/download/34/ACED02.png></p><p>... -->
       <string>2,"%s.*&gt;&lt;/p&gt;", base_url</string>
