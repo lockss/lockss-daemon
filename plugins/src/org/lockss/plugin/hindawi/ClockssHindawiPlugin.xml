@@ -10,15 +10,15 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Hindawi Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Hindawi Journals Plugin (Legacy 2020, CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Hindawi Plugin (CLOCKSS)</string>
+    <string>Hindawi Journals Plugin (Legacy 2020, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
