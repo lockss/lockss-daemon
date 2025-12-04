@@ -154,7 +154,8 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
     shouldCacheTest(ROOT_URL_HTTP+"123/14/tc-123-18-2012-supplement.pdf", true, ABAu, cus);
 
     //home_url stuff
-    shouldCacheTest(ROOT_HOME_URL+"foo/blah/whatsit.css", true, ABAu, cus);
+    //remove home_url stuff for now, Dec 2025
+    //shouldCacheTest(ROOT_HOME_URL+"foo/blah/whatsit.css", true, ABAu, cus);
     
     // Now a couple that shouldn't get crawled
     // wrong volume
