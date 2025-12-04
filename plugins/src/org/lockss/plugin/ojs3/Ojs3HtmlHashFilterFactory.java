@@ -285,6 +285,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
       HtmlNodeFilters.tagWithAttributeRegex("li", "class", "most_read_article"),
       HtmlNodeFilters.tagWithAttributeRegex("span", "class", "summary_stat"),
       HtmlNodeFilters.tagWithAttributeRegex("input",  "name", "csrfToken"),
+      HtmlNodeFilters.tagWithAttributeRegex("div",  "class", "metric-value"),
       /*
       want to remove this whole bit from this url https://revistas.udea.edu.co/index.php/lecturasdeeconomia/article/view/342002
       <div style="padding-left: 4%;">
