@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <string>deprecated</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>OECD iLibrary Journals Plugin (CLOCKSS)</string>
+        <string>OECD iLibrary Journals Plugin (CLOCKSS, Legacy)</string>
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>14</string>
+        <string>15</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -52,11 +52,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>13</string>
+        <string>15</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"OECD iLibrary Journals Plugin (CLOCKSS), Base URL %s, Topic %s, Journal Directory %s, Journal ISSN %s, Volume %s", base_url, topic, journal_dir, journal_issn, volume_name</string>
+        <string>"OECD iLibrary Journals Plugin (CLOCKSS, Legacy), Base URL %s, Topic %s, Journal Directory %s, Journal ISSN %s, Volume %s", base_url, topic, journal_dir, journal_issn, volume_name</string>
     </entry>
     <entry>
         <string>clockss_override</string>
