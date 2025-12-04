@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>25</string>
+        <string>26</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -53,11 +53,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Company of Biologists Plugin</string>
+        <string>Company of Biologists Journals Plugin</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Company of Biologists Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+        <string>"Company of Biologists Journals Plugin, Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
     <!--
     https://journals.biologists.com/jcs/issue/browse-by-year/2019

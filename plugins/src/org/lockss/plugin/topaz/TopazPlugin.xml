@@ -44,15 +44,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Topaz Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Topaz Journals Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Topaz Plugin</string>
+    <string>Topaz Journals Plugin</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

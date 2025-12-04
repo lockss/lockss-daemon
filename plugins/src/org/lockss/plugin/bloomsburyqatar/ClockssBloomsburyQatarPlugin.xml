@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -65,7 +65,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Bloomsbury Qatar Foundation Plugin (Legacy, CLOCKSS)</string>
+    <string>Bloomsbury Qatar Foundation Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -100,7 +100,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Bloomsbury Qatar Foundation Plugin (Legacy, CLOCKSS), Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_dir, volume_name</string>
+    <string>"Bloomsbury Qatar Foundation Journals Plugin (Legacy, CLOCKSS), Base URL %s, Journal Abbreviation %s, Volume %s", base_url, journal_dir, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

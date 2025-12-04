@@ -38,11 +38,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Taiwan Association for Aerosol Research Plugin (CLOCKSS, Legacy)</string>
+        <string>Taiwan Association for Aerosol Research Journals Plugin (CLOCKSS, Legacy)</string>
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -77,7 +77,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Taiwan Association for Aerosol Research Plugin (CLOCKSS, Legacy), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+        <string>"Taiwan Association for Aerosol Research Journals Plugin (CLOCKSS, Legacy), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>

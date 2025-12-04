@@ -90,7 +90,7 @@ public class TestEmlsPlugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "3");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("Early Modern Literary Studies Plugin, Base URL http://extra.shu.ac.uk/emls/, Volume 3", au.getName());
+    assertEquals("Early Modern Literary Studies Journals Plugin, Base URL http://extra.shu.ac.uk/emls/, Volume 3", au.getName());
   }
 
   public void testGetPluginId() {

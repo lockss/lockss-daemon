@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -61,7 +61,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Judgment and Decision Making Plugin</string>
+    <string>Judgment and Decision Making Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -87,7 +87,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Judgment and Decision Making Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Judgment and Decision Making Journals Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

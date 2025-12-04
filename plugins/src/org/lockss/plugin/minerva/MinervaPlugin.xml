@@ -45,11 +45,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Minerva Plugin (legacy site), Base URL %s, Second Base URL %s, Volume %s", base_url, base_url2, volume_name</string>
+    <string>"Minerva Journals Plugin (legacy site), Base URL %s, Second Base URL %s, Volume %s", base_url, base_url2, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -57,7 +57,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Minerva Plugin (legacy site)</string>
+    <string>Minerva Journals Plugin (legacy site)</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>

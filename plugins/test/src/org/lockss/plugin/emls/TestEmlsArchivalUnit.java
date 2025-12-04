@@ -182,7 +182,7 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
 
   public void testGetName() throws Exception {
     DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 3);
-    assertEquals("Early Modern Literary Studies Plugin, Base URL http://extra.shu.ac.uk/emls/, Volume 3", au.getName());
+    assertEquals("Early Modern Literary Studies Journals Plugin, Base URL http://extra.shu.ac.uk/emls/, Volume 3", au.getName());
   }
 
   public void testDefPauseTime() throws Exception {

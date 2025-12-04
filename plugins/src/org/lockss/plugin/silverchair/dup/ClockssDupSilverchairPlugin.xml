@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -52,11 +52,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Duke University Press Plugin (CLOCKSS)</string>
+    <string>Duke University Press Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Duke University Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Duke University Press Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>clockss_override</string>

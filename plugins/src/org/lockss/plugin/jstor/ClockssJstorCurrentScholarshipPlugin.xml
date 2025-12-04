@@ -10,11 +10,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>JSTOR Current Scholarship Plugin (CLOCKSS)</string>
+    <string>JSTOR Current Scholarship Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -26,7 +26,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"JSTOR Current Scholarship Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"JSTOR Current Scholarship Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <!--  start_url is same for both GLN and CLOCKSS -->
   <entry>

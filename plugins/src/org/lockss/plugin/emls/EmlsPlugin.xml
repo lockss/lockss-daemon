@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Early Modern Literary Studies Plugin</string>
+    <string>Early Modern Literary Studies Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -80,7 +80,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Early Modern Literary Studies Plugin, Base URL %s, Volume %d", base_url, volume</string>
+    <string>"Early Modern Literary Studies Journals Plugin, Base URL %s, Volume %d", base_url, volume</string>
   </entry>
   <entry>
     <string>au_start_url</string>

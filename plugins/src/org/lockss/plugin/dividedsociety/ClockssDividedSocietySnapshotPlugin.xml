@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Divided Society Snapshot Plugin (CLOCKSS)</string>
+    <string>Divided Society Snapshot Journals Plugin (CLOCKSS)</string>
   </entry>
   <!-- While not file-transfer, this is a single point in time collection of all content associated with a title  -->
   <entry>
@@ -71,7 +71,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Divided Society Snapshot Plugin (CLOCKSS), Base URL %s, Journal Number %s, Journal ID %s", base_url, journal_number, journal_id</string>
+    <string>"Divided Society Snapshot Journals Plugin (CLOCKSS), Base URL %s, Journal Number %s, Journal ID %s", base_url, journal_number, journal_id</string>
   </entry>
   <entry>
     <string>au_permission_url</string>

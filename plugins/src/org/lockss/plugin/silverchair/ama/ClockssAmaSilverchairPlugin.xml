@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -53,11 +53,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>American Medical Association Plugin (CLOCKSS)</string>
+    <string>American Medical Association Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"American Medical Association Plugin (CLOCKSS), Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
+    <string>"American Medical Association Journals Plugin (CLOCKSS), Base URL %s, Resource ID %d, Year %d", base_url, resource_id, year</string>
   </entry>
   <entry>
     <string>clockss_override</string>

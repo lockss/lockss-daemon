@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>12</string>
+        <string>13</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Project JASPER Plugin (CLOCKSS)</string>
+        <string>Project JASPER Journals Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -96,7 +96,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Project JASPER Plugin (CLOCKSS), Base URL %s, Item %s", base_url, item</string>
+        <string>"Project JASPER Journals Plugin (CLOCKSS), Base URL %s, Item %s", base_url, item</string>
     </entry>
     <entry>
         <string>au_def_pause_time</string>

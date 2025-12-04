@@ -46,18 +46,18 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
    <entry>
     <string>plugin_parent_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Copernicus Publications Plugin (CLOCKSS)</string>
+    <string>Copernicus Publications Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Copernicus Publications Plugin (CLOCKSS), Base URL %s, Home URL %s, Year %d, Volume %s", base_url, home_url, year, volume_name</string>
+    <string>"Copernicus Publications Journals Plugin (CLOCKSS), Base URL %s, Home URL %s, Year %d, Volume %s", base_url, home_url, year, volume_name</string>
   </entry>
  </map>

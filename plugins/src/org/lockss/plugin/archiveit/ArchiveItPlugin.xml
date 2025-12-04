@@ -44,15 +44,15 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Archive-It Plugin (Legacy), Base URL %s, Collection %s", base_url, collection</string>
+    <string>"Archive-It Journals Plugin (Legacy), Base URL %s, Collection %s", base_url, collection</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Archive-It Plugin (Legacy)</string>
+    <string>Archive-It Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Resid&#x00ea;ncia Pedi&#x00e1;trica Plugin (CLOCKSS)</string>
+    <string>Resid&#x00ea;ncia Pedi&#x00e1;trica Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -57,7 +57,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Resid&#x00ea;ncia Pedi&#x00e1;trica Plugin (CLOCKSS), Base URL %s, Year %d, OAI Granularity %s", base_url, year, oai_granularity</string>
+    <string>"Resid&#x00ea;ncia Pedi&#x00e1;trica Journals Plugin (CLOCKSS), Base URL %s, Year %d, OAI Granularity %s", base_url, year, oai_granularity</string>
   </entry>
   <entry>
     <string>clockss_override</string>

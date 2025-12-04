@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>25</string>
+        <string>26</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -53,10 +53,10 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Company of Biologists Plugin (CLOCKSS)</string>
+        <string>Company of Biologists Journals Plugin (CLOCKSS)</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Company of Biologists Plugin (CLOCKSS), Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+        <string>"Company of Biologists Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s,  Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
 </map>

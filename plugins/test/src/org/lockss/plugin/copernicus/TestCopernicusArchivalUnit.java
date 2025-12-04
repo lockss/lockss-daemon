@@ -70,7 +70,7 @@ public class TestCopernicusArchivalUnit extends LockssTestCase {
   static Logger log = Logger.getLogger(TestCopernicusArchivalUnit.class);
   
   static final String PLUGIN_ID = "org.lockss.plugin.copernicus.CopernicusPublicationsPlugin";
-  static final String PluginName = "Copernicus Publications Plugin";
+  static final String PluginName = "Copernicus Publications Journals Plugin";
   
   // need to call quotemeta on the base/home_urls because the RegexpUtil.regexpCollection 
   // call on the returning strings calls it (but only on the base/home_url params)

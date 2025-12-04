@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Open Library of Humanities Plugin</string>
+    <string>Open Library of Humanities Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>13</string>
+    <string>14</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -118,7 +118,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Open Library of Humanities Plugin, Base URL %s, Year %d", base_url, year</string>
+    <string>"Open Library of Humanities Journals Plugin, Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_permission_url</string>

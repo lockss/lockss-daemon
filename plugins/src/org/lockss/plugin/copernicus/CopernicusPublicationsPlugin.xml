@@ -47,11 +47,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>  
   <entry>
     <string>plugin_name</string>
-    <string>Copernicus Publications Plugin</string>
+    <string>Copernicus Publications Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>27</string>
+    <string>28</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -72,7 +72,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Copernicus Publications Plugin, Base URL %s, Home URL %s, Year %d, Volume %s", base_url, home_url, year, volume_name</string>
+    <string>"Copernicus Publications Journals Plugin, Base URL %s, Home URL %s, Year %d, Volume %s", base_url, home_url, year, volume_name</string>
   </entry>
   <entry>
   <!--  support migration to https for active AUs -->

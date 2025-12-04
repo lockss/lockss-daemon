@@ -141,7 +141,7 @@ public class TestIUCrOaiPlugin extends LockssPluginTestCase {
 
   public void testGetName() throws Exception {
     ArchivalUnit au = createAu(AU_CONFIG);
-    assertEquals("International Union of Crystallography Plugin (CLOCKSS), Base URL " + BASE_URL +
+    assertEquals("International Union of Crystallography Journals Plugin (CLOCKSS), Base URL " + BASE_URL +
         ", Script URL " + SCRIPT_URL + ", OAI Set " + OAI_SET + ", OAI Date " + OAI_DATE,
         au.getName());
   }

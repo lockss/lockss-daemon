@@ -10,11 +10,11 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>JSTOR Current Scholarship Plugin</string>
+    <string>JSTOR Current Scholarship Journals Plugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -45,7 +45,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"JSTOR Current Scholarship Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"JSTOR Current Scholarship Journals Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <!--  start urls to support http to https conversion -->
   <entry>

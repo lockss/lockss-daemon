@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>46</string>
+    <string>47</string>
   </entry>
   <!--  updating out of sync with parent, must have own feature_version_map -->
   <entry>
@@ -64,7 +64,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>NRC Research Press Plugin (CLOCKSS)</string>
+    <string>NRC Research Press Journals Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -76,7 +76,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"NRC Research Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"NRC Research Press Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>
