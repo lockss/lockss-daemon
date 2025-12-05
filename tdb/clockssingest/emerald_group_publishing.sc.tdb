@@ -496,7 +496,7 @@
     au < manifest ; exists ; 1978 ; 1978 ; Anti-Corrosion Methods and Materials Volume 25 ; 25 ; >
     au < manifest ; exists ; 1979 ; 1979 ; Anti-Corrosion Methods and Materials Volume 26 ; 26 ; >
     au < crawling ; exists ; 1980 ; 1980 ; Anti-Corrosion Methods and Materials Volume 27 ; 27 ; >
-    au < ready ; exists ; 1981 ; 1981 ; Anti-Corrosion Methods and Materials Volume 28 ; 28 ; >
+    au < crawling ; exists ; 1981 ; 1981 ; Anti-Corrosion Methods and Materials Volume 28 ; 28 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Anti-Corrosion Methods and Materials Volume 29 ; 29 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Anti-Corrosion Methods and Materials Volume 30 ; 30 ; >
     au < manifest ; exists ; 1984 ; 1984 ; Anti-Corrosion Methods and Materials Volume 31 ; 31 ; >
@@ -1104,7 +1104,7 @@
     comment[journal_issn] = 0888-045X
     param[journal_id] = bl
 
-    au < ready ; exists ; 1988 ; 1988 ; The Bottom Line: Managing Library Finances Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; The Bottom Line: Managing Library Finances Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; The Bottom Line: Managing Library Finances Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; The Bottom Line: Managing Library Finances Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; The Bottom Line: Managing Library Finances Volume 4 ; 4 ; >
@@ -3661,7 +3661,7 @@
     au < manifest ; exists ; 1984 ; 1984 ; Industrial Lubrication and Tribology Volume 36 ; 36 ; >
     au < manifest ; exists ; 1985 ; 1985 ; Industrial Lubrication and Tribology Volume 37 ; 37 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Industrial Lubrication and Tribology Volume 38 ; 38 ; >
-    au < ready ; exists ; 1987 ; 1987 ; Industrial Lubrication and Tribology Volume 39 ; 39 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; Industrial Lubrication and Tribology Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Industrial Lubrication and Tribology Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Industrial Lubrication and Tribology Volume 41 ; 41 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Industrial Lubrication and Tribology Volume 42 ; 42 ; >
@@ -4134,7 +4134,7 @@
     au < crawling ; exists ; 1987 ; 1987 ; Interlending & Document Supply Volume 15 ; 15 ; >
     au < ready ; exists ; 1988 ; 1988 ; Interlending & Document Supply Volume 16 ; 16 ; >
     au < crawling ; exists ; 1989 ; 1989 ; Interlending & Document Supply Volume 17 ; 17 ; >
-    au < ready ; exists ; 1990 ; 1990 ; Interlending & Document Supply Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1990 ; 1990 ; Interlending & Document Supply Volume 18 ; 18 ; >
     au < ready ; exists ; 1991 ; 1991 ; Interlending & Document Supply Volume 19 ; 19 ; >
     au < crawling ; exists ; 1992 ; 1992 ; Interlending & Document Supply Volume 20 ; 20 ; >
     au < crawling ; exists ; 1993 ; 1993 ; Interlending & Document Supply Volume 21 ; 21 ; >
@@ -4303,7 +4303,7 @@
     au < manifest ; exists ; 1984 ; 1984 ; International Journal of Bank Marketing Volume 2 ; 2 ; >
     au < manifest ; exists ; 1985 ; 1985 ; International Journal of Bank Marketing Volume 3 ; 3 ; >
     au < manifest ; exists ; 1986 ; 1986 ; International Journal of Bank Marketing Volume 4 ; 4 ; >
-    au < ready ; exists ; 1987 ; 1987 ; International Journal of Bank Marketing Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; International Journal of Bank Marketing Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; International Journal of Bank Marketing Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; International Journal of Bank Marketing Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; International Journal of Bank Marketing Volume 8 ; 8 ; >
@@ -6123,7 +6123,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Retail and Distribution Management Volume 13 ; 13 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Retail and Distribution Management Volume 14 ; 14 ; >
     au < crawling ; exists ; 1987 ; 1987 ; Retail and Distribution Management Volume 15 ; 15 ; >
-    au < ready ; exists ; 1988 ; 1988 ; Retail and Distribution Management Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; Retail and Distribution Management Volume 16 ; 16 ; >
     au < ready ; exists ; 1989 ; 1989 ; Retail and Distribution Management Volume 17 ; 17 ; >
 
   }
@@ -8876,7 +8876,7 @@
     au < manifest ; exists ; 1984 ; 1984 ; Journal of Management Development Volume 3 ; 3 ; >
     au < manifest ; exists ; 1985 ; 1985 ; Journal of Management Development Volume 4 ; 4 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Management Development Volume 5 ; 5 ; >
-    au < ready ; exists ; 1987 ; 1987 ; Journal of Management Development Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; Journal of Management Development Volume 6 ; 6 ; >
     au < crawling ; exists ; 1988 ; 1988 ; Journal of Management Development Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Management Development Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Management Development Volume 9 ; 9 ; >
@@ -8988,7 +8988,7 @@
 
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Management in Medicine Volume 1 ; 1 ; >
     au < crawling ; exists ; 1987 ; 1987 ; Journal of Management in Medicine Volume 2 ; 2 ; >
-    au < ready ; exists ; 1988 ; 1988 ; Journal of Management in Medicine Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; Journal of Management in Medicine Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Management in Medicine Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Management in Medicine Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; Journal of Management in Medicine Volume 6 ; 6 ; >
@@ -9018,7 +9018,7 @@
 
     au < manifest ; exists ; 1986 ; 1986 ; Journal of Managerial Psychology Volume 1 ; 1 ; >
     au < crawling ; exists ; 1987 ; 1987 ; Journal of Managerial Psychology Volume 2 ; 2 ; >
-    au < ready ; exists ; 1988 ; 1988 ; Journal of Managerial Psychology Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; Journal of Managerial Psychology Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Managerial Psychology Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Managerial Psychology Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Managerial Psychology Volume 6 ; 6 ; >
@@ -9238,7 +9238,7 @@
     comment[journal_issn] = 0953-4814
     param[journal_id] = jocm
 
-    au < ready ; exists ; 1988 ; 1988 ; Journal of Organizational Change Management Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; Journal of Organizational Change Management Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Organizational Change Management Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Journal of Organizational Change Management Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Journal of Organizational Change Management Volume 4 ; 4 ; >
@@ -10150,7 +10150,7 @@
     comment[journal_issn] = 0143-7739
     param[journal_id] = lodj
 
-    au < ready ; exists ; 1980 ; 1980 ; Leadership & Organization Development Journal Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1980 ; 1980 ; Leadership & Organization Development Journal Volume 1 ; 1 ; >
     au < crawling ; exists ; 1981 ; 1981 ; Leadership & Organization Development Journal Volume 2 ; 2 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Leadership & Organization Development Journal Volume 3 ; 3 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Leadership & Organization Development Journal Volume 4 ; 4 ; >
@@ -10359,7 +10359,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Library Hi Tech Volume 3 ; 3 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Library Hi Tech Volume 4 ; 4 ; >
     au < crawling ; exists ; 1987 ; 1987 ; Library Hi Tech Volume 5 ; 5 ; >
-    au < ready ; exists ; 1988 ; 1988 ; Library Hi Tech Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; Library Hi Tech Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Library Hi Tech Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Library Hi Tech Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Library Hi Tech Volume 9 ; 9 ; >
@@ -10616,7 +10616,7 @@
     param[journal_id] = lw
     #continued_by = 0957-6053
 
-    au < ready ; exists ; 1988 ; 1988 ; Logistics World Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; Logistics World Volume 1 ; 1 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Logistics World Volume 2 ; 2 ; >
 
   }
@@ -11402,7 +11402,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; Microelectronics International Volume 2 ; 2 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Microelectronics International Volume 3 ; 3 ; >
     au < manifest ; exists ; 1987 ; 1987 ; Microelectronics International Volume 4 ; 4 ; >
-    au < ready ; exists ; 1988 ; 1988 ; Microelectronics International Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; Microelectronics International Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Microelectronics International Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Microelectronics International Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Microelectronics International Volume 8 ; 8 ; >
@@ -12223,7 +12223,7 @@
     au < manifest ; exists ; 1977 ; 1977 ; Pigment & Resin Technology Volume 6 ; 6 ; >
     au < manifest ; exists ; 1978 ; 1978 ; Pigment & Resin Technology Volume 7 ; 7 ; >
     au < manifest ; exists ; 1979 ; 1979 ; Pigment & Resin Technology Volume 8 ; 8 ; >
-    au < ready ; exists ; 1980 ; 1980 ; Pigment & Resin Technology Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1980 ; 1980 ; Pigment & Resin Technology Volume 9 ; 9 ; >
     au < crawling ; exists ; 1981 ; 1981 ; Pigment & Resin Technology Volume 10 ; 10 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Pigment & Resin Technology Volume 11 ; 11 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Pigment & Resin Technology Volume 12 ; 12 ; >
@@ -13966,7 +13966,7 @@
     au < manifest ; exists ; 1978 ; 1978 ; Tourism Review Volume 33 ; 33 ; >
     au < manifest ; exists ; 1979 ; 1979 ; Tourism Review Volume 34 ; 34 ; >
     au < crawling ; exists ; 1980 ; 1980 ; Tourism Review Volume 35 ; 35 ; >
-    au < ready ; exists ; 1981 ; 1981 ; Tourism Review Volume 36 ; 36 ; >
+    au < crawling ; exists ; 1981 ; 1981 ; Tourism Review Volume 36 ; 36 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Tourism Review Volume 37 ; 37 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Tourism Review Volume 38 ; 38 ; >
     au < manifest ; exists ; 1984 ; 1984 ; Tourism Review Volume 39 ; 39 ; >
@@ -14190,7 +14190,7 @@
     au < manifest ; exists ; 1977 ; 1977 ; VINE Volume 7 ; 7 ; >
     au < manifest ; exists ; 1978 ; 1978 ; VINE Volume 8 ; 8 ; >
     au < manifest ; exists ; 1979 ; 1979 ; VINE Volume 9 ; 9 ; >
-    au < ready ; exists ; 1980 ; 1980 ; VINE Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1980 ; 1980 ; VINE Volume 10 ; 10 ; >
     au < crawling ; exists ; 1981 ; 1981 ; VINE Volume 11 ; 11 ; >
     au < manifest ; exists ; 1982 ; 1982 ; VINE Volume 12 ; 12 ; >
     au < manifest ; exists ; 1983 ; 1983 ; VINE Volume 13 ; 13 ; >
@@ -14198,7 +14198,7 @@
     au < manifest ; exists ; 1985 ; 1985 ; VINE Volume 15 ; 15 ; >
     au < manifest ; exists ; 1986 ; 1986 ; VINE Volume 16 ; 16 ; >
     au < manifest ; exists ; 1987 ; 1987 ; VINE Volume 17 ; 17 ; >
-    au < ready ; exists ; 1988 ; 1988 ; VINE Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1988 ; 1988 ; VINE Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; VINE Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; VINE Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; VINE Volume 21 ; 21 ; >
