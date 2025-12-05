@@ -55,7 +55,7 @@
     au < frozen ; down ; 2002 ; Aboriginal History Journal Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < frozen ; down ; 2003 ; Aboriginal History Journal Volume 27 ; 27 ; reingest2.clockss.org:8085 >
     au < frozen ; down ; 2004 ; Aboriginal History Journal Volume 28 ; 28 ; reingest3.clockss.org:8083 >
-    au < frozen ; down ; 2005 ; Aboriginal History Journal Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; Aboriginal History Journal Volume 29 ; 29 ; reingest4.clockss.org:8082 >
     au < frozen ; down ; 2006 ; Aboriginal History Journal Volume 30 ; 30 ; reingest5.clockss.org:8082 >
     au < frozen ; down ; 2007 ; Aboriginal History Journal Volume 31 ; 31 ; reingest1.clockss.org:8082 >
     au < frozen ; down ; 2008 ; Aboriginal History Journal Volume 32 ; 32 ; reingest2.clockss.org:8085 >
@@ -191,7 +191,7 @@
 
     au < finished ; finished ; 2020 ; Lilith: A Feminist History Journal Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2021 ; Lilith: A Feminist History Journal Volume 27 ; 27 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2022 ; Lilith: A Feminist History Journal Volume 28 ; 28 ; > #manifest page checker finds a volume that does not exist.
+    au < finished ; manifest ; 2022 ; Lilith: A Feminist History Journal Volume 28 ; 28 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2023 ; Lilith: A Feminist History Journal Volume 29 ; 29 ; >
     au < crawling ; exists ; 2025 ; Lilith: A Feminist History Journal Volume 30 ; 30 ; >
 
@@ -230,22 +230,22 @@
     {
     param[journal_id] = humanities-research-journal-series
     
-    au < frozen ; down ; 1997 ; Humanities Research Journal Series: 1997 ; 1997 ; reingest3.clockss.org:8083 >
-    au < frozen ; down ; 1998 ; Humanities Research Journal Series: 1998 ; 1998 ; reingest4.clockss.org:8082 >
-    au < frozen ; down ; 1999 ; Humanities Research Journal Series: 1999 ; 1999 ; reingest5.clockss.org:8082 >
-    au < frozen ; down ; 2000 ; Humanities Research Journal Series: 2000 ; 2000 ; reingest1.clockss.org:8082 >
-    au < frozen ; down ; 2001 ; Humanities Research Journal Series: Volume VIII ; viii ; reingest2.clockss.org:8085 >
-    au < frozen ; down ; 2002 ; Humanities Research Journal Series: Volume IX ; ix ; reingest3.clockss.org:8083 >
-    au < frozen ; down ; 2003 ; Humanities Research Journal Series: Volume X ; x ; reingest4.clockss.org:8082 >
-    au < frozen ; down ; 2004 ; Humanities Research Journal Series: Volume XI ; xi ; reingest5.clockss.org:8082 >
-    au < frozen ; down ; 2005 ; Humanities Research Journal Series: Volume XII ; xii ; reingest1.clockss.org:8082 >
-    au < frozen ; down ; 2006 ; Humanities Research Journal Series: Volume XIII ; xiii ; reingest2.clockss.org:8085 >
-    au < frozen ; down ; 2007 ; Humanities Research Journal Series: Volume XIV ; xiv ; reingest3.clockss.org:8083 >
-    au < frozen ; down ; 2009 ; Humanities Research Journal Series: Volume XV ; xv ; reingest4.clockss.org:8082 >
-    au < frozen ; down ; 2010 ; Humanities Research Journal Series: Volume XVI ; xvi ; reingest5.clockss.org:8082 >
-    au < frozen ; down ; 2011 ; Humanities Research Journal Series: Volume XVII ; xvii ; reingest1.clockss.org:8082 >
-    au < frozen ; down ; 2012 ; Humanities Research Journal Series: Volume XVIII ; xviii ; reingest2.clockss.org:8085 >
-    au < frozen ; down ; 2013 ; Humanities Research Journal Series: Volume XIX ; xix ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1997 ; Humanities Research Journal Series: 1997 ; 1997 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1998 ; Humanities Research Journal Series: 1998 ; 1998 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1999 ; Humanities Research Journal Series: 1999 ; 1999 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2000 ; Humanities Research Journal Series: 2000 ; 2000 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; Humanities Research Journal Series: Volume VIII ; viii ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2002 ; Humanities Research Journal Series: Volume IX ; ix ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2003 ; Humanities Research Journal Series: Volume X ; x ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; Humanities Research Journal Series: Volume XI ; xi ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; Humanities Research Journal Series: Volume XII ; xii ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Humanities Research Journal Series: Volume XIII ; xiii ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2007 ; Humanities Research Journal Series: Volume XIV ; xiv ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; Humanities Research Journal Series: Volume XV ; xv ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; Humanities Research Journal Series: Volume XVI ; xvi ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; Humanities Research Journal Series: Volume XVII ; xvii ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; Humanities Research Journal Series: Volume XVIII ; xviii ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2013 ; Humanities Research Journal Series: Volume XIX ; xix ; reingest3.clockss.org:8083 >
     #paused
     }
     {
@@ -420,11 +420,11 @@
     
     param[journal_id] = burgmann-journal-research-debate-opinion
 
-    au < frozen ; down ; 2012 ; Burgmann Journal - Research Debate Opinion Issue 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < frozen ; down ; 2013 ; Burgmann Journal - Research Debate Opinion Issue 2 ; 2 ; reingest5.clockss.org:8082 >
-    au < frozen ; down ; 2014 ; Burgmann Journal - Research Debate Opinion Issue 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < frozen ; down ; 2015 ; Burgmann Journal - Research Debate Opinion Issue 4 ; 4 ; reingest2.clockss.org:8085 >
-    au < frozen ; down ; 2016 ; Burgmann Journal - Research Debate Opinion Issue 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2012 ; Burgmann Journal - Research Debate Opinion Issue 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; Burgmann Journal - Research Debate Opinion Issue 2 ; 2 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2014 ; Burgmann Journal - Research Debate Opinion Issue 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2015 ; Burgmann Journal - Research Debate Opinion Issue 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2016 ; Burgmann Journal - Research Debate Opinion Issue 5 ; 5 ; reingest3.clockss.org:8083 >
     #after 2016 moved to http://studentjournals.anu.edu.au/index.php/burgmann (OJS3)
 
   }
@@ -485,8 +485,8 @@
     param[journal_id] = merici-ursula-hall-academic-journal
     #changed to param[journal_id] = merici
 
-    au < frozen ; down ; 2015 ; Merici - Ursula Hall Academic Journal: Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < frozen ; down ; 2016 ; Merici - Ursula Hall Academic Journal: Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2015 ; Merici - Ursula Hall Academic Journal: Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; Merici - Ursula Hall Academic Journal: Volume 2 ; 2 ; reingest2.clockss.org:8085 >
     #ceased publication
 
   }
@@ -501,7 +501,7 @@
     
     param[journal_id] = human-voyage-undergraduate-research-biological-anthropology
 
-    au < frozen ; down ; 2017 ; The Human Voyage: Undergraduate Research in Biological Anthropology Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; The Human Voyage: Undergraduate Research in Biological Anthropology Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     #after 2017 published at http://studentjournals.anu.edu.au/index.php/hv (OJS3)
 
   }
