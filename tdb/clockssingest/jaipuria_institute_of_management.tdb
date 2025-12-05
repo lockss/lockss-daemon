@@ -22,13 +22,13 @@
       param[base_url] = https://managementdynamics.researchcommons.org/
       param[journal_abbr] = journal
 
-      au < manifest ; exists ; 2000 ; Management Dynamics Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2001 ; Management Dynamics Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2002 ; Management Dynamics Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2003 ; Management Dynamics Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2005 ; Management Dynamics Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2006 ; Management Dynamics Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2007 ; Management Dynamics Volume 7 ; 7 ; >
+      au < testing ; exists ; 2000 ; Management Dynamics Volume 1 ; 1 ; >
+      au < testing ; exists ; 2001 ; Management Dynamics Volume 2 ; 2 ; >
+      au < testing ; exists ; 2002 ; Management Dynamics Volume 3 ; 3 ; >
+      au < testing ; exists ; 2003 ; Management Dynamics Volume 4 ; 4 ; >
+      au < testing ; exists ; 2005 ; Management Dynamics Volume 5 ; 5 ; >
+      au < testing ; exists ; 2006 ; Management Dynamics Volume 6 ; 6 ; >
+      au < testing ; exists ; 2007 ; Management Dynamics Volume 7 ; 7 ; >
       au < frozen ; exists ; 2008 ; Management Dynamics Volume 8 ; 8 ; >
       au < frozen ; exists ; 2009 ; Management Dynamics Volume 9 ; 9 ; >
       au < frozen ; exists ; 2010 ; Management Dynamics Volume 10 ; 10 ; >
