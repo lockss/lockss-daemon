@@ -3,7 +3,7 @@
     name = Universidad Tecnologica de Bolivar ;
     info[contract] = 2025 ;
     info[back] = 2020 ;
-    info[tester] = 5 ;
+    info[tester] = 4 ;
     info[platform] = OJS3
   >
 
@@ -22,11 +22,11 @@
       param[base_url] = https://revistas.utb.edu.co/
       param[journal_id] = tesea
 
-      au < manifest ; exists ; 2020 ; Transactionson Energy Systems and Engineering Applications Volume 2020 ; 2020 ; 1 ; >
+      au < testing ; exists ; 2020 ; Transactionson Energy Systems and Engineering Applications Volume 2020 ; 2020 ; 1 ; >
       au < manifest ; exists ; 2021 ; Transactionson Energy Systems and Engineering Applications Volume 2021 ; 2021 ; 2 ; >
       au < manifest ; exists ; 2022 ; Transactionson Energy Systems and Engineering Applications Volume 2022 ; 2022 ; 3 ; >
       au < manifest ; exists ; 2023 ; Transactionson Energy Systems and Engineering Applications Volume 2023 ; 2023 ; 4 ; >
-      au < manifest ; exists ; 2024 ; Transactionson Energy Systems and Engineering Applications Volume 2024 ; 2024 ; 5 ; >
+      au < testing ; exists ; 2024 ; Transactionson Energy Systems and Engineering Applications Volume 2024 ; 2024 ; 5 ; >
       au < manifest ; exists ; 2025 ; Transactionson Energy Systems and Engineering Applications Volume 2025 ; 2025 ; 6 ; >
 
   }
