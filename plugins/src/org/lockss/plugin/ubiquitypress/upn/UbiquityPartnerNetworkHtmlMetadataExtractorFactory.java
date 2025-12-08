@@ -34,6 +34,9 @@ package org.lockss.plugin.ubiquitypress.upn;
 
 import java.io.*;
 
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.lockss.util.*;
@@ -41,13 +44,11 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
-/*
- * OJS2HtmlMetadataExtractorFactory extracts metadata from each article.
- */
 public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
     FileMetadataExtractorFactory {
   
   static Logger log = Logger.getLogger(UbiquityPartnerNetworkHtmlMetadataExtractorFactory.class);
+  static Pattern doiPat = Pattern.compile("^10\\.[0-9]+/");
 
   public FileMetadataExtractor createFileMetadataExtractor(
       MetadataTarget target, String contentType) throws PluginException {
@@ -59,7 +60,6 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
   public static class UbiquityPartnerNetworkHtmlMetaTagMetadataExtractor 
     extends SimpleHtmlMetaTagMetadataExtractor {
     
-    // Map OJS2-specific HTML meta tag names to cooked metadata fields
     private static MultiMap tagMap = new MultiValueMap();
 
     //https://www.gewina-studium.nl/articles/10.18352/studium.10199/
@@ -69,7 +69,8 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
       tagMap.put("DC.Format", MetadataField.DC_FIELD_FORMAT);
       tagMap.put("DC.Language", MetadataField.DC_FIELD_LANGUAGE);
       tagMap.put("DC.Title", MetadataField.DC_FIELD_TITLE);
-      tagMap.put("DC.Identifier", MetadataField.DC_FIELD_IDENTIFIER);
+      //Some UPN Articles don't have DOIs so check the format of DC.Identifier before labeling as a DOI in the metadata. 
+      //tagMap.put("DC.Identifier", MetadataField.FIELD_DOI);
       tagMap.put("DC.Date", MetadataField.DC_FIELD_DATE);
       // In case DC.Date is null, use DC.Date.issued, like in  https://www.gewina-studium.nl/articles/10.18352/studium.10199/
       tagMap.put("DC.Date.issued", MetadataField.DC_FIELD_DATE);
@@ -94,7 +95,7 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
       tagMap.put("citation_public_url", MetadataField.FIELD_ACCESS_URL);
       tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
       
-    } // static
+    }
     
     @Override
     public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
@@ -105,6 +106,13 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
       ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
       String url = am.get(MetadataField.FIELD_ACCESS_URL);
+      String doi = am.getRaw("DC.Identifier");
+      if(doi != null){
+        Matcher doiMat = doiPat.matcher(doi);
+        if(doiMat.find()){
+          am.put(MetadataField.FIELD_DOI, doi);
+        }
+      }
       ArchivalUnit au = cu.getArchivalUnit();
       if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
         url = cu.getUrl();
@@ -113,9 +121,9 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
                  AuUtil.normalizeHttpHttpsFromBaseUrl(au, url));
       return am;
       
-    } // extract
+    }
     
-  } // OJS2HtmlMetadataExtractor
+  }
   
-} // OJS2HtmlMetadataExtractorFactory
+}
  
