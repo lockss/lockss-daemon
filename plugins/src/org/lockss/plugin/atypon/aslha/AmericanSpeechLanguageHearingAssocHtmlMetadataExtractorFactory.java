@@ -105,7 +105,6 @@ public class AmericanSpeechLanguageHearingAssocHtmlMetadataExtractorFactory exte
       // protect against counting overcrawled articles
       log.debug3("AmericanSpeechLanguageHearingAssoc Check: ---------AmericanSpeechLanguageHearingAssocAtyponHtmlMetadataExtractor start checking-------");
 
-      Set<String> skipVolumes = new HashSet<>(Arrays.asList("22", "21", "20", "19"));
       String cu_url = cu.getUrl();
       String lowerUrl = cu_url.toLowerCase();
 
@@ -118,16 +117,22 @@ public class AmericanSpeechLanguageHearingAssocHtmlMetadataExtractorFactory exte
         }
       }
 
+      // See Jira ticket: LXPLUG-2608, some old Aus crawlled between 2019 - 2024 has overcrawl issue. The Aus are not
+      // processed in sequential orders, for example volume 1-18 did not get processed until 2025.So need to handle with care
+      // volumesRequiringUrlCheck are the volumes all require url check, since it the publisher changed their url structure
+      Set<String> volumesRequiringUrlCheck = new HashSet<>(Arrays.asList("23", "24", "27", "28", "29", "30", "31", "32", "33"));
+
       if (journal_id.equals("ajslp") || journal_id.equals("aja")) {
-        if (skipVolumes.contains(AU_volume)) {
-          log.debug3("Skipping URL check for ajslp/aja volume: journal_id = " + journal_id + ", volume = " + AU_volume);
-        } else {
+        // This handles all older, historical volumes
+        if (volumesRequiringUrlCheck.contains(AU_volume)) {
           if (lowerUrl.contains(journal_id)) {
             log.debug3("Check passed - ajslp/aja in URL: journal_id = " + journal_id + ", url = " + cu_url + ", volume = " + AU_volume);
           } else {
             log.debug3("Check failed - ajslp/aja NOT in URL: journal_id = " + journal_id + ", url = " + cu_url + ", volume = " + AU_volume);
             return;
           }
+        } else {
+          log.debug3("Skipping URL check for ajslp/aja historical volume: journal_id = " + journal_id + ", volume = " + AU_volume);
         }
       }
 
