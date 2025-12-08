@@ -24,15 +24,15 @@
 
     param[journal_abbr] = journal
 
-    au < testing ; exists ; 1998 ; Asia Marketing Journal Volume 1 ; 1 ; >
-    au < testing ; exists ; 2000 ; Asia Marketing Journal Volume 2 ; 2 ; >
-    au < testing ; exists ; 2001 ; Asia Marketing Journal Volume 3 ; 3 ; >
-    au < testing ; exists ; 2002 ; Asia Marketing Journal Volume 4 ; 4 ; >
-    au < testing ; exists ; 2003 ; Asia Marketing Journal Volume 5 ; 5 ; >
-    au < testing ; exists ; 2004 ; Asia Marketing Journal Volume 6 ; 6 ; >
-    au < testing ; exists ; 2005 ; Asia Marketing Journal Volume 7 ; 7 ; >
-    au < testing ; exists ; 2006 ; Asia Marketing Journal Volume 8 ; 8 ; >
-    au < testing ; exists ; 2007 ; Asia Marketing Journal Volume 9 ; 9 ; >
+    au < ready ; exists ; 1998 ; Asia Marketing Journal Volume 1 ; 1 ; >
+    au < ready ; exists ; 2000 ; Asia Marketing Journal Volume 2 ; 2 ; >
+    au < ready ; exists ; 2001 ; Asia Marketing Journal Volume 3 ; 3 ; >
+    au < ready ; exists ; 2002 ; Asia Marketing Journal Volume 4 ; 4 ; >
+    au < ready ; exists ; 2003 ; Asia Marketing Journal Volume 5 ; 5 ; >
+    au < ready ; exists ; 2004 ; Asia Marketing Journal Volume 6 ; 6 ; >
+    au < ready ; exists ; 2005 ; Asia Marketing Journal Volume 7 ; 7 ; >
+    au < ready ; exists ; 2006 ; Asia Marketing Journal Volume 8 ; 8 ; >
+    au < ready ; exists ; 2007 ; Asia Marketing Journal Volume 9 ; 9 ; >
     au < frozen ; exists ; 2008 ; Asia Marketing Journal Volume 10 ; 10 ; >
     au < frozen ; exists ; 2009 ; Asia Marketing Journal Volume 11 ; 11 ; >
     au < frozen ; exists ; 2010 ; Asia Marketing Journal Volume 12 ; 12 ; >

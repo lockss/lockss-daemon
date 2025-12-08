@@ -322,7 +322,7 @@
       au < finished ; crawling ; 2022 ; Transactions of the Burgon Society Volume 21 ; 21 ; https://newprairiepress.org/ ; reingest5.clockss.org:8082 >
       au < notReady ; exists ; 2023 ; Transactions of the Burgon Society Volume 22 ; 22 ; https://newprairiepress.org/ ; > #embargo until October 20, 2024
       au < frozen ; exists ; 2024 ; Transactions of the Burgon Society Volume 23 ; 23 ; https://newprairiepress.org/ ; > #embargo until October 20, 2025
-      au < testing ; exists ; 2025 ; Transactions of the Burgon Society Volume 24 ; 24 ; https://newprairiepress.org/ ; > #embargo until October 20, 2025
+      au < notReady ; exists ; 2025 ; Transactions of the Burgon Society Volume 24 ; 24 ; https://newprairiepress.org/ ; > #embargo until October 20, 2026
 
   }
 
@@ -439,7 +439,7 @@
       au < frozen ; exists ; 2022 ; Educational Considerations Volume 48 ; 48 ; >
       au < frozen ; exists ; 2023 ; Educational Considerations Volume 49 ; 49 ; >
       au < frozen ; exists ; 2024 ; Educational Considerations Volume 50 ; 50 ; >
-      au < testing ; exists ; 2025 ; Educational Considerations Volume 51 ; 51 ; >
+      au < ready ; exists ; 2025 ; Educational Considerations Volume 51 ; 51 ; >
 
   }
 
