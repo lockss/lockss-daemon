@@ -71,7 +71,7 @@ public class TestJstorArchivalUnit extends LockssTestCase {
   
   static final String PLUGIN_ID = "org.lockss.plugin.jstor.JstorPlugin";
   static final String CLOCKSS_PLUGIN_ID = "org.lockss.plugin.jstor.ClockssJstorPlugin";
-  static final String PluginName = "JSTOR Plugin";
+  static final String PluginName = "JSTOR Plugin (Legacy)";
   
   public void setUp() throws Exception {
     super.setUp();

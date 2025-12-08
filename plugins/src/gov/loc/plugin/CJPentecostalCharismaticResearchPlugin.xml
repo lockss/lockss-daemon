@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Cyberjournal for Pentecostal-Charismatic Research Plugin</string>
+    <string>Cyberjournal for Pentecostal-Charismatic Research Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -71,7 +71,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Cyberjournal for Pentecostal-Charismatic Research Plugin, Base URL %s, Volume %d", base_url, volume</string>
+    <string>"Cyberjournal for Pentecostal-Charismatic Research Plugin (Legacy), Base URL %s, Volume %d", base_url, volume</string>
   </entry>
   <entry>
     <string>au_start_url</string>

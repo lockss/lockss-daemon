@@ -139,7 +139,7 @@ public class TestUbiquityPressArchivalUnit extends LockssTestCase {
 
   public void testGetName() throws Exception {
     DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), "pp","2003");
-    assertEquals("Ubiquity Press Plugin (CLOCKSS), Base URL http://www.presentpasts.info/, Journal ID pp, Year 2003", au.getName());
+    assertEquals("Ubiquity Press Journals Plugin (Legacy, CLOCKSS), Base URL http://www.presentpasts.info/, Journal ID pp, Year 2003", au.getName());
      }
 
   public static void main(String[] argv) {

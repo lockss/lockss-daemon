@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -61,7 +61,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>ASLO Plugin (Limnology and Oceanography Methods)</string>
+    <string>ASLO Plugin (Limnology and Oceanography Methods) (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -97,7 +97,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;ASLO Plugin (Limnology and Oceanography Methods), Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
+    <string>&quot;ASLO Plugin (Limnology and Oceanography Methods) (Legacy), Base URL %s, Journal ID %s, Year %d&quot;, base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>

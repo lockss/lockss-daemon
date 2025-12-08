@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>University of Kentucky ETD Plugin</string>
+    <string>University of Kentucky ETD Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_crawl_type</string>
@@ -93,7 +93,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"University of Kentucky ETD Plugin, Base URL %s, Secondary Base URL %s, OAI Request URL %s, Year %d", base_url, base_url2, oai_request_url, year</string>
+    <string>"University of Kentucky ETD Plugin (Legacy), Base URL %s, Secondary Base URL %s, OAI Request URL %s, Year %d", base_url, base_url2, oai_request_url, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>

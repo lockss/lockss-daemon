@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>DSpace Plugin</string>
+    <string>DSpace Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -56,7 +56,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"DSpace Plugin, Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
+    <string>"DSpace Plugin (Legacy), Base URL %s, OAI Set %s, OAI Date %s", base_url, au_oai_set, au_oai_date</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

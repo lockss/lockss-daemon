@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -61,7 +61,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Shampoo Plugin</string>
+    <string>Shampoo Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -97,7 +97,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Shampoo Plugin, Base URL %s, Year %d Issue Set %s", base_url, year, issue_set</string>
+    <string>"Shampoo Plugin (Legacy), Base URL %s, Year %d Issue Set %s", base_url, year, issue_set</string>
   </entry>
   <entry>
     <string>au_start_url</string>

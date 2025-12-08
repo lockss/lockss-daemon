@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Invisible Culture Plugin</string>
+    <string>Invisible Culture Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -80,7 +80,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Invisible Culture Plugin, Base URL %s, Year %d, Issue Range %s", base_url, year, num_issue_range</string>
+    <string>"Invisible Culture Plugin (Legacy), Base URL %s, Year %d, Issue Range %s", base_url, year, num_issue_range</string>
   </entry>
   <entry>
     <string>au_start_url</string>

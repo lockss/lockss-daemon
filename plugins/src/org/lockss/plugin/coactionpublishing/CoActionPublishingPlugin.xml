@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Co-Action Publishing Plugin</string>
+    <string>Co-Action Publishing Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>33</string>
+    <string>34</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -57,7 +57,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Co-Action Publishing Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Co-Action Publishing Journals Plugin (Legacy), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>

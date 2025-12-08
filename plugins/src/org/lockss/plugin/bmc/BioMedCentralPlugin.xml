@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>63</string>
+    <string>64</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -65,11 +65,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"BioMed Central Plugin (BMC Journals and Chemistry Central), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
+    <string>"BioMed Central Plugin (BMC Journals and Chemistry Central) (Legacy), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>BioMed Central Plugin (BMC Journals and Chemistry Central)</string>
+    <string>BioMed Central Plugin (BMC Journals and Chemistry Central) (Legacy)</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>

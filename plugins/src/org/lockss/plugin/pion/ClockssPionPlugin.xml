@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>32</string>
+    <string>33</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -73,7 +73,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Pion Plugin (CLOCKSS), Base URL %s, Journal Code %s, Short Journal Code %s, Volume %s", base_url, journal_code, short_journal_code, volume_name</string>
+    <string>"Pion Journals Plugin (Legacy, CLOCKSS), Base URL %s, Journal Code %s, Short Journal Code %s, Volume %s", base_url, journal_code, short_journal_code, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -81,7 +81,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Pion Plugin (CLOCKSS)</string>
+    <string>Pion Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>

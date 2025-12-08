@@ -201,7 +201,7 @@ public class TestMetapressPlugin extends LockssPluginTestCase {
   
   public void testGetName() throws Exception {
     ArchivalUnit au = createAu();
-    assertEquals("Metapress Plugin (CLOCKSS), Base URL " + BASE_URL + ", ISSN " + JOURNAL_ISSN + ", Volume " + VOLUME, au.getName());
+    assertEquals("Metapress Journals Plugin (Legacy, CLOCKSS), Base URL " + BASE_URL + ", ISSN " + JOURNAL_ISSN + ", Volume " + VOLUME, au.getName());
   }
   
   public void testPollSpecial() throws Exception {

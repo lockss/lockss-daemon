@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>JSTOR Plugin</string>
+    <string>JSTOR Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -73,7 +73,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>    
   <entry>
     <string>au_name</string>
-    <string>"JSTOR Plugin, Base URL %s, Base URL 2 %s, Journal ID %s, Volume %s", base_url, base_url2, journal_id, volume_name</string>
+    <string>"JSTOR Plugin (Legacy), Base URL %s, Base URL 2 %s, Journal ID %s, Volume %s", base_url, base_url2, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

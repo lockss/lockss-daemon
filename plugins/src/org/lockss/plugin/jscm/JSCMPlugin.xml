@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Journal of Seventeenth-Century Music Plugin</string>
+    <string>Journal of Seventeenth-Century Music Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Journal of Seventeenth-Century Music Plugin, Base URL %s, Volume %d", base_url, volume</string>
+    <string>"Journal of Seventeenth-Century Music Plugin (Legacy), Base URL %s, Volume %d", base_url, volume</string>
   </entry>
   <entry>
     <string>au_start_url</string>

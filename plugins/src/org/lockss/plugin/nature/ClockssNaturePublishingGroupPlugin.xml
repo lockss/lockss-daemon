@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>57</string>
+    <string>58</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -66,7 +66,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Nature Publishing Group Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+    <string>"Nature Publishing Group Journals Plugin (Legacy, CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Nature Publishing Group Plugin (CLOCKSS)</string>
+    <string>Nature Publishing Group Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>

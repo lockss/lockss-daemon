@@ -176,10 +176,10 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
 
   public void testGetName() throws Exception {
     DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), "2003");
-    assertEquals("Cultural Logic Plugin, Base URL http://eserver.org/clogic/, Year 2003", au.getName());
+    assertEquals("Cultural Logic Plugin (Legacy), Base URL http://eserver.org/clogic/, Year 2003", au.getName());
     DefinableArchivalUnit au1 =
         makeAu(new URL("http://www.bmj.com/clogic/"), "2004");
-    assertEquals("Cultural Logic Plugin, Base URL http://www.bmj.com/clogic/, Year 2004", au1.getName());
+    assertEquals("Cultural Logic Plugin (Legacy), Base URL http://www.bmj.com/clogic/, Year 2004", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {

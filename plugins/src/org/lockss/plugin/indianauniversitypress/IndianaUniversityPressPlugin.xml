@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Indiana University Press Plugin</string>
+    <string>Indiana University Press Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -83,7 +83,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Indiana University Press Plugin, Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Indiana University Press Journals Plugin (Legacy), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

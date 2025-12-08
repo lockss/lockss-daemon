@@ -67,7 +67,7 @@ public class TestNatureArchivalUnit extends LockssTestCase {
   static Logger log = Logger.getLogger("TestNatureArchivalUnit");
   
   static final String PLUGIN_ID = "org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin";
-  static final String PluginName = "Nature Publishing Group Plugin (CLOCKSS)";
+  static final String PluginName = "Nature Publishing Group Journals Plugin (Legacy, CLOCKSS)";
   private LockssRepository repo;
 
   public void setUp() throws Exception {

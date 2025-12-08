@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>38</string>
+    <string>39</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -61,7 +61,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Ammons Scientific Journals Plugin (CLOCKSS)</string>
+    <string>Ammons Scientific Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -73,7 +73,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Ammons Scientific Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Ammons Scientific Journals Plugin (Legacy, CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

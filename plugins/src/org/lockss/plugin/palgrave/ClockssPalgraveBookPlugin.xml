@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -66,7 +66,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Palgrave Macmillan Book Plugin (CLOCKSS)</string>
+    <string>Palgrave Macmillan Book Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -93,7 +93,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Palgrave Macmillan Book Plugin (CLOCKSS), Base URL %s, ISBN %s", base_url, book_isbn</string>
+    <string>"Palgrave Macmillan Book Plugin (Legacy, CLOCKSS), Base URL %s, ISBN %s", base_url, book_isbn</string>
   </entry>
   <entry>
     <string>au_start_url</string>

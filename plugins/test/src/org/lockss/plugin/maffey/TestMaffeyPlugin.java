@@ -190,7 +190,7 @@ public class TestMaffeyPlugin extends LockssPluginTestCase {
 	  
 	  public void testGetName() throws Exception {
 	    ArchivalUnit au = createAu();
-	    assertEquals("Libertas Academica Plugin, Base URL " + BASE_URL + ", Journal ID " + JOURNAL_ID + ", Year " + YEAR, au.getName());
+	    assertEquals("Libertas Academica Journals Plugin (Legacy), Base URL " + BASE_URL + ", Journal ID " + JOURNAL_ID + ", Year " + YEAR, au.getName());
 	  }
 	  
 	  // need to call quotemeta on the base/home_urls because the RegexpUtil.regexpCollection 

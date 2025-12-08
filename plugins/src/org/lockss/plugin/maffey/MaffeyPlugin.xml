@@ -42,11 +42,11 @@ POSSIBILITY OF SUCH DAMAGE.
   <!--  this plugin is a loose sibling of Dove Medical Press -->
   <entry>
     <string>plugin_name</string>
-    <string>Libertas Academica Plugin</string>
+    <string>Libertas Academica Journals Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>23</string>
+    <string>24</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -67,7 +67,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Libertas Academica Plugin, Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Libertas Academica Journals Plugin (Legacy), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>

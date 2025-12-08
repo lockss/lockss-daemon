@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -81,10 +81,10 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Ubiquity Press Plugin (CLOCKSS)</string>
+    <string>Ubiquity Press Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Ubiquity Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
+    <string>"Ubiquity Press Journals Plugin (Legacy, CLOCKSS), Base URL %s, Journal ID %s, Year %d", base_url, journal_id, year</string>
   </entry>
 </map>

@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Drunken Boat Plugin</string>
+    <string>Drunken Boat Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Drunken Boat Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Drunken Boat Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>

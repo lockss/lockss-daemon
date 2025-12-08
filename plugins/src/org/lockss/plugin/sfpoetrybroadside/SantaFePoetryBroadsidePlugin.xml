@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -61,7 +61,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Santa Fe Poetry Broadside Plugin</string>
+    <string>Santa Fe Poetry Broadside Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -88,7 +88,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Santa Fe Poetry Broadside Plugin, Base URL %s, Year %d", base_url, year</string>
+    <string>"Santa Fe Poetry Broadside Plugin (Legacy), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>

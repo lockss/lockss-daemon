@@ -92,7 +92,7 @@ public class TestCulturalLogicPlugin extends LockssTestCase {
     props.setProperty(YEAR_KEY, "2002");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("Cultural Logic Plugin, Base URL http://www.example.com/clogic/, Year 2002", au.getName());
+    assertEquals("Cultural Logic Plugin (Legacy), Base URL http://www.example.com/clogic/, Year 2002", au.getName());
   }
 
   public void testGetPluginId() {

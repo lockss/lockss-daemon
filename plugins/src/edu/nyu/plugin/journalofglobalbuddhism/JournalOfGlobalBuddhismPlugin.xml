@@ -38,11 +38,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Journal of Global Buddhism Plugin</string>
+    <string>Journal of Global Buddhism Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -77,7 +77,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Journal of Global Buddhism Plugin, Base URL %s, Volume %d, Year %d", base_url, volume, year</string>
+    <string>"Journal of Global Buddhism Plugin (Legacy), Base URL %s, Volume %d, Year %d", base_url, volume, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>

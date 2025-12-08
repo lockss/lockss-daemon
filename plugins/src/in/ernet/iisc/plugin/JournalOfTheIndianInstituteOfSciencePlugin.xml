@@ -40,11 +40,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Journal of the Indian Institute of Science Plugin</string>
+    <string>Journal of the Indian Institute of Science Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -71,7 +71,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Journal of the Indian Institute of Science Plugin, Base URL %s, Year %d", base_url, year</string>
+    <string>"Journal of the Indian Institute of Science Plugin (Legacy), Base URL %s, Year %d", base_url, year</string>
   </entry>
   <entry>
     <string>au_start_url</string>
