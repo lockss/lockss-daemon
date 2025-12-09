@@ -122,7 +122,7 @@ public class TestHighWireTriggeredPlugin extends LockssTestCase {
 //     props.setProperty(YEAR_KEY, "2004");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("HighWire Press Plugin (H10c Triggered Content), "
+    assertEquals("HighWire Press Journals Plugin (H10c Triggered Content), "
         + "Base URL http://pediatrics.aappublications.org/, Volume 52", au.getName());
   }
 
