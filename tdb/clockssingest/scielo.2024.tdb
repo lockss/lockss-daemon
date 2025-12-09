@@ -24,31 +24,31 @@
     param[base_url] = https://www.scielo.br/
     param[journal_id] = aabc
 
-    au < frozen ; exists ; 2000 ; 72 ; Anais da Academia Brasileira de Ciências Volume 72 ; 2000 ; >
-    au < frozen ; exists ; 2001 ; 73 ; Anais da Academia Brasileira de Ciências Volume 73 ; 2001 ; >
-    au < frozen ; exists ; 2002 ; 74 ; Anais da Academia Brasileira de Ciências Volume 74 ; 2002 ; >
-    au < frozen ; exists ; 2003 ; 75 ; Anais da Academia Brasileira de Ciências Volume 75 ; 2003 ; >
-    au < frozen ; exists ; 2004 ; 76 ; Anais da Academia Brasileira de Ciências Volume 76 ; 2004 ; >
-    au < frozen ; exists ; 2005 ; 77 ; Anais da Academia Brasileira de Ciências Volume 77 ; 2005 ; >
-    au < frozen ; exists ; 2006 ; 78 ; Anais da Academia Brasileira de Ciências Volume 78 ; 2006 ; >
-    au < frozen ; exists ; 2007 ; 79 ; Anais da Academia Brasileira de Ciências Volume 79 ; 2007 ; >
-    au < frozen ; exists ; 2008 ; 80 ; Anais da Academia Brasileira de Ciências Volume 80 ; 2008 ; >
-    au < frozen ; exists ; 2009 ; 81 ; Anais da Academia Brasileira de Ciências Volume 81 ; 2009 ; >
-    au < frozen ; exists ; 2010 ; 82 ; Anais da Academia Brasileira de Ciências Volume 82 ; 2010 ; >
-    au < frozen ; exists ; 2011 ; 83 ; Anais da Academia Brasileira de Ciências Volume 83 ; 2011 ; >
-    au < frozen ; exists ; 2012 ; 84 ; Anais da Academia Brasileira de Ciências Volume 84 ; 2012 ; >
+    au < finished ; manifest ; 2000 ; 72 ; Anais da Academia Brasileira de Ciências Volume 72 ; 2000 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; 73 ; Anais da Academia Brasileira de Ciências Volume 73 ; 2001 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; 74 ; Anais da Academia Brasileira de Ciências Volume 74 ; 2002 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2003 ; 75 ; Anais da Academia Brasileira de Ciências Volume 75 ; 2003 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2004 ; 76 ; Anais da Academia Brasileira de Ciências Volume 76 ; 2004 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2005 ; 77 ; Anais da Academia Brasileira de Ciências Volume 77 ; 2005 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2006 ; 78 ; Anais da Academia Brasileira de Ciências Volume 78 ; 2006 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2007 ; 79 ; Anais da Academia Brasileira de Ciências Volume 79 ; 2007 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; 80 ; Anais da Academia Brasileira de Ciências Volume 80 ; 2008 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; 81 ; Anais da Academia Brasileira de Ciências Volume 81 ; 2009 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; 82 ; Anais da Academia Brasileira de Ciências Volume 82 ; 2010 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; 83 ; Anais da Academia Brasileira de Ciências Volume 83 ; 2011 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2012 ; 84 ; Anais da Academia Brasileira de Ciências Volume 84 ; 2012 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2013 ; 85 ; Anais da Academia Brasileira de Ciências Volume 85 ; 2013 ; >
     au < doNotProcess ; doNotProcess ; 2014 ; 86 ; Anais da Academia Brasileira de Ciências Volume 86 ; 2014 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 87 ; Anais da Academia Brasileira de Ciências Volume 87 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; 88 ; Anais da Academia Brasileira de Ciências Volume 88 ; 2016 ; >
-    au < frozen ; exists ; 2017 ; 89 ; Anais da Academia Brasileira de Ciências Volume 89 ; 2017 ; >
-    au < frozen ; exists ; 2018 ; 90 ; Anais da Academia Brasileira de Ciências Volume 90 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; 91 ; Anais da Academia Brasileira de Ciências Volume 91 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; 92 ; Anais da Academia Brasileira de Ciências Volume 92 ; 2020 ; >
-    au < frozen ; exists ; 2021 ; 93 ; Anais da Academia Brasileira de Ciências Volume 93 ; 2021 ; >
-    au < frozen ; exists ; 2022 ; 94 ; Anais da Academia Brasileira de Ciências Volume 94 ; 2022 ; >
-    au < frozen ; exists ; 2023 ; 95 ; Anais da Academia Brasileira de Ciências Volume 95 ; 2023 ; >
-    au < frozen ; exists ; 2024 ; 96 ; Anais da Academia Brasileira de Ciências Volume 96 ; 2024 ; >
+    au < finished ; manifest ; 2016 ; 88 ; Anais da Academia Brasileira de Ciências Volume 88 ; 2016 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 89 ; Anais da Academia Brasileira de Ciências Volume 89 ; 2017 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; 90 ; Anais da Academia Brasileira de Ciências Volume 90 ; 2018 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; 91 ; Anais da Academia Brasileira de Ciências Volume 91 ; 2019 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; 92 ; Anais da Academia Brasileira de Ciências Volume 92 ; 2020 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2021 ; 93 ; Anais da Academia Brasileira de Ciências Volume 93 ; 2021 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; 94 ; Anais da Academia Brasileira de Ciências Volume 94 ; 2022 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; 95 ; Anais da Academia Brasileira de Ciências Volume 95 ; 2023 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2024 ; 96 ; Anais da Academia Brasileira de Ciências Volume 96 ; 2024 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2025 ; 97 ; Anais da Academia Brasileira de Ciências Volume 97 ; 2025 ; >
 
   }
@@ -80,21 +80,21 @@
     param[base_url] = https://www.scielo.br/
     param[journal_id] = rgenf
 
-    au < frozen ; exists ; 2009 ; 30 ; Revista Gaúcha de Enfermagem Volume 30 ; 2009 ; >
-    au < frozen ; exists ; 2010 ; 31 ; Revista Gaúcha de Enfermagem Volume 31 ; 2010 ; >
-    au < frozen ; exists ; 2011 ; 32 ; Revista Gaúcha de Enfermagem Volume 32 ; 2011 ; >
-    au < frozen ; exists ; 2012 ; 33 ; Revista Gaúcha de Enfermagem Volume 33 ; 2012 ; >
-    au < frozen ; exists ; 2013 ; 34 ; Revista Gaúcha de Enfermagem Volume 34 ; 2013 ; >
-    au < frozen ; exists ; 2014 ; 35 ; Revista Gaúcha de Enfermagem Volume 35 ; 2014 ; >
-    au < frozen ; exists ; 2015 ; 36 ; Revista Gaúcha de Enfermagem Volume 36 ; 2015 ; >
-    au < frozen ; exists ; 2016 ; 37 ; Revista Gaúcha de Enfermagem Volume 37 ; 2016 ; >
-    au < frozen ; exists ; 2017 ; 38 ; Revista Gaúcha de Enfermagem Volume 38 ; 2017 ; >
-    au < frozen ; exists ; 2018 ; 39 ; Revista Gaúcha de Enfermagem Volume 39 ; 2018 ; >
-    au < frozen ; exists ; 2019 ; 40 ; Revista Gaúcha de Enfermagem Volume 40 ; 2019 ; >
-    au < frozen ; exists ; 2020 ; 41 ; Revista Gaúcha de Enfermagem Volume 41 ; 2020 ; >
-    au < frozen ; exists ; 2021 ; 42 ; Revista Gaúcha de Enfermagem Volume 42 ; 2021 ; >
-    au < frozen ; exists ; 2022 ; 43 ; Revista Gaúcha de Enfermagem Volume 43 ; 2022 ; >
-    au < frozen ; exists ; 2023 ; 44 ; Revista Gaúcha de Enfermagem Volume 44 ; 2023 ; >
+    au < finished ; manifest ; 2009 ; 30 ; Revista Gaúcha de Enfermagem Volume 30 ; 2009 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2010 ; 31 ; Revista Gaúcha de Enfermagem Volume 31 ; 2010 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; 32 ; Revista Gaúcha de Enfermagem Volume 32 ; 2011 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; 33 ; Revista Gaúcha de Enfermagem Volume 33 ; 2012 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2013 ; 34 ; Revista Gaúcha de Enfermagem Volume 34 ; 2013 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2014 ; 35 ; Revista Gaúcha de Enfermagem Volume 35 ; 2014 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2015 ; 36 ; Revista Gaúcha de Enfermagem Volume 36 ; 2015 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2016 ; 37 ; Revista Gaúcha de Enfermagem Volume 37 ; 2016 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2017 ; 38 ; Revista Gaúcha de Enfermagem Volume 38 ; 2017 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2018 ; 39 ; Revista Gaúcha de Enfermagem Volume 39 ; 2018 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; 40 ; Revista Gaúcha de Enfermagem Volume 40 ; 2019 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; 41 ; Revista Gaúcha de Enfermagem Volume 41 ; 2020 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; 42 ; Revista Gaúcha de Enfermagem Volume 42 ; 2021 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; 43 ; Revista Gaúcha de Enfermagem Volume 43 ; 2022 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; 44 ; Revista Gaúcha de Enfermagem Volume 44 ; 2023 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 45 ; Revista Gaúcha de Enfermagem Volume 45 ; 2024 ; >
     au < crawling ; exists ; 2025 ; 46 ; Revista Gaúcha de Enfermagem Volume 46 ; 2025 ; >
 
