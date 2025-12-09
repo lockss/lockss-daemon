@@ -103,6 +103,13 @@ public class ServeContent extends LockssServlet {
   /** Prefix for this server's config tree */
   public static final String PREFIX = Configuration.PREFIX + "serveContent.";
 
+  /** If set, absolute rewritten links will use this stem instead of
+   * the one used to address ServeContent.  Useful when there's a
+   * proxy in front of ServeContent */
+  public static final String PARAM_REWRITE_FOR_STEM =
+      PREFIX + "rewriteForStem";
+  public static final String DEFAULT_REWRITE_FOR_STEM = null;
+
   /**
    * Forwards ServeContent requests to the specified machine if set
    **/
@@ -348,6 +355,7 @@ public class ServeContent extends LockssServlet {
   private boolean enabledPluginsOnly;
   private String accessLogInfo;
   private AccessLogType requestType = AccessLogType.None;
+  private String rewriteForStem = DEFAULT_REWRITE_FOR_STEM;
 
   private PluginManager pluginMgr;
   private ProxyManager proxyMgr;
@@ -365,6 +373,7 @@ public class ServeContent extends LockssServlet {
     au = null;
     explicitAu = null;
     isCuEncoded = false;
+    rewriteForStem = DEFAULT_REWRITE_FOR_STEM;
     super.resetLocals();
   }
 
@@ -527,6 +536,9 @@ public class ServeContent extends LockssServlet {
       displayNotStarted();
       return;
     }
+    Configuration config = ConfigManager.getCurrentConfig();
+    rewriteForStem =
+      config.get(PARAM_REWRITE_FOR_STEM, DEFAULT_REWRITE_FOR_STEM);
 
     accessLogInfo = null;
     enabledPluginsOnly =
@@ -921,7 +933,7 @@ public class ServeContent extends LockssServlet {
       String suffix = sb.toString();
 
       String srvUrl = absoluteLinks
-                      ? srvAbsURL(myServletDescr(), suffix)
+                      ? proxyableSrvAbsURL(myServletDescr(), suffix)
                       : srvURL(myServletDescr(), suffix);
 
       Page p = new Page();
@@ -1932,8 +1944,8 @@ public class ServeContent extends LockssServlet {
       return new ServletUtil.LinkTransform() {
 	public String rewrite(String url) {
 	  if (absoluteLinks) {
-	    return srvAbsURL(myServletDescr(),
-			     "url=" + url);
+	    return proxyableSrvAbsURL(myServletDescr(),
+                                      "url=" + url);
 	  } else {
 	    return srvURL(myServletDescr(),
 			  "url=" + url);
@@ -1944,7 +1956,7 @@ public class ServeContent extends LockssServlet {
       return new ServletUtil.LinkTransform() {
 	public String rewrite(String url) {
 	  if (absoluteLinks) {
-	    return srvAbsURL(myServletDescr()) + "/" + url;
+	    return proxyableSrvAbsURL(myServletDescr()) + "/" + url;
 	  } else {
 	    return srvURL(myServletDescr()) + "/" + url;
 	  }
@@ -1953,6 +1965,18 @@ public class ServeContent extends LockssServlet {
     }
   }
 
+
+  private String proxyableSrvAbsURL(ServletDescr d) {
+    return proxyableSrvAbsURL(d, null);
+  }
+
+  private String proxyableSrvAbsURL(ServletDescr d, String params) {
+    if (rewriteForStem != null) {
+      return srvURLFromStem(rewriteForStem, myServletDescr(), params);
+    } else {
+      return srvAbsURL(d, params);
+    }
+  }
 
   private void setContentLength(long length) {
     if (length >= 0) {
