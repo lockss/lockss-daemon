@@ -83,7 +83,7 @@
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
     attr[start_stem] = index.php/
 
-    au < ready ; exists ; 2000 ; 2000 ; Tendencias Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2000 ; 2000 ; Tendencias Volume 1 ; 1 ; >
     au < frozen ; exists ; 2001 ; 2001 ; Tendencias Volume 2 ; 2 ; >
     au < ready ; exists ; 2002 ; 2002 ; Tendencias Volume 3 ; 3 ; >
     au < crawling ; exists ; 2003 ; 2003 ; Tendencias Volume 4 ; 4 ; >
