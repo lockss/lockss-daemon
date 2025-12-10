@@ -442,7 +442,7 @@
       param[journal_id] = jsriue
       #no issn/eissn
 
-      au < doNotProcess ; doNotProcess ; 2017 ;2017 ; Journal of Student Research at Indiana University East Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
+      au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Student Research at Indiana University East Volume 1 ; 1 ; https://scholarworks.iu.edu/journals/ ; >
       au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Student Research at Indiana University East Volume 2 ; 2 ; https://scholarworks.iu.edu/journals/ ; >
 
   }

@@ -16512,7 +16512,7 @@
     param[base_url] = http://imammb.oxfordjournals.org/
     implicit < status ; year ; name ; param[volume] >
 
-    au < down ;2006 ;  Mathematical Medicine and Biology Volume 23 ; 23 >
+    au < down ; 2006 ;  Mathematical Medicine and Biology Volume 23 ; 23 >
 
     }
 
@@ -20674,7 +20674,7 @@
     param[base_url] = http://phe.oxfordjournals.org/
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
-    au < HighWirePressPlugin ; down ;2008 ;  Public Health Ethics Volume 1 ; 1 >
+    au < HighWirePressPlugin ; down ; 2008 ;  Public Health Ethics Volume 1 ; 1 >
     au < HighWirePressPlugin ; down ; 2009 ; Public Health Ethics Volume 2 ; 2 >
     au < HighWirePressH20Plugin ; down ; 2010 ; Public Health Ethics Volume 3 ; 3 >
     au < HighWirePressH20Plugin ; down ; 2011 ; Public Health Ethics Volume 4 ; 4 >

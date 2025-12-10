@@ -2039,19 +2039,19 @@
       implicit < status ; year ; name ; param[volume_name] ; param[base_url] >
       #doNotProcess. Volume numbers have special characters 1972-2007.
 
-      au < doNotProcess ;1995 ; Northern Scotland Volume 15 (First Series) ; 15+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;1996 ; Northern Scotland Volume 16 (First Series) ; 16+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;1997 ; Northern Scotland Volume 17 (First Series) ; 17+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;1998 ; Northern Scotland Volume 18 (First Series) ; 18+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;1999 ; Northern Scotland Volume 19 (First Series) ; 19+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;2000 ; Northern Scotland Volume 20 (First Series) ; 20+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;2001 ; Northern Scotland Volume 21 (First Series) ; 21+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;2002 ; Northern Scotland Volume 22 (First Series) ; 22+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;2003 ; Northern Scotland Volume 23 (First Series) ; 23+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;2004 ; Northern Scotland Volume 24 (First Series) ; 24+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;2005 ; Northern Scotland Volume 25 (First Series) ; 25+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;2006 ; Northern Scotland Volume 26 (First Series) ; 26+(First+Series) ; https://www.euppublishing.com/ >
-      au < doNotProcess ;2007 ; Northern Scotland Volume 27 (First Series) ; 27+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1995 ; Northern Scotland Volume 15 (First Series) ; 15+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1996 ; Northern Scotland Volume 16 (First Series) ; 16+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1997 ; Northern Scotland Volume 17 (First Series) ; 17+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1998 ; Northern Scotland Volume 18 (First Series) ; 18+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 1999 ; Northern Scotland Volume 19 (First Series) ; 19+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2000 ; Northern Scotland Volume 20 (First Series) ; 20+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2001 ; Northern Scotland Volume 21 (First Series) ; 21+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2002 ; Northern Scotland Volume 22 (First Series) ; 22+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2003 ; Northern Scotland Volume 23 (First Series) ; 23+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2004 ; Northern Scotland Volume 24 (First Series) ; 24+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2005 ; Northern Scotland Volume 25 (First Series) ; 25+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2006 ; Northern Scotland Volume 26 (First Series) ; 26+(First+Series) ; https://www.euppublishing.com/ >
+      au < doNotProcess ; 2007 ; Northern Scotland Volume 27 (First Series) ; 27+(First+Series) ; https://www.euppublishing.com/ >
       au < released ; 2010 ; Northern Scotland Volume 1 ; 1 ; http://www.euppublishing.com/ >
       au < released ; 2011 ; Northern Scotland Volume 2 ; 2 ; http://www.euppublishing.com/ >
       au < released ; 2012 ; Northern Scotland Volume 3 ; 3 ; http://www.euppublishing.com/ >
