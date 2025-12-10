@@ -1139,7 +1139,7 @@
     comment[base_url] = http://www.nurseryworld.co.uk/
     param[journal_id] = nuwa
 
-    au < exists ; exists ; 2008 ; Nursery World Volume 2008 ; 2008 ; https://www.magonlinelibrary.com/ ; >
+    #au < exists ; exists ; 2008 ; Nursery World Volume 2008 ; 2008 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2009 ; Nursery World Volume 2009 ; 2009 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2010 ; Nursery World Volume 2010 ; 2010 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2011 ; Nursery World Volume 2011 ; 2011 ; https://www.magonlinelibrary.com/ ; >
