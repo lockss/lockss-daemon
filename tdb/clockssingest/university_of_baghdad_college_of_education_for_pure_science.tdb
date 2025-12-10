@@ -23,14 +23,14 @@
       param[journal_id] = j
       #published 2005-present
 
-      au < frozen ; exists ; 2005 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2005 ; 18 ; 2005 ; >
+      au < finished ; manifest ; 2005 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2005 ; 18 ; 2005 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 2006 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2006 ; 19 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2007 ; 20 ; 2007 ; >
+      au < finished ; manifest ; 2007 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2007 ; 20 ; 2007 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2008 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2008 ; 21 ; 2008 ; >
-      au < frozen ; exists ; 2009 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2009 ; 22 ; 2009 ; >
-      au < frozen ; exists ; 2010 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2010 ; 23 ; 2010 ; >
-      au < frozen ; exists ; 2011 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2011 ; 24 ; 2011 ; >
-      au < frozen ; exists ; 2012 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2012 ; 25 ; 2012 ; >
+      au < ingNotReady ; exists ; 2009 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2009 ; 22 ; 2009 ; > #LXQUEUE-2143, Invalid or corrupted PDF file
+      au < ingNotReady ; exists ; 2010 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2010 ; 23 ; 2010 ; > #LXQUEUE-2143, Invalid or corrupted PDF file
+      au < ingNotReady ; exists ; 2011 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2011 ; 24 ; 2011 ; > #LXQUEUE-2143, Invalid or corrupted PDF file
+      au < finished ; manifest ; 2012 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2012 ; 25 ; 2012 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2013 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2013 ; 26 ; 2013 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2014 ; 27 ; 2014 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2015 ; Ibn Al-Haitham Journal for Pure and Applied Sciences Volume 2015 ; 28 ; 2015 ; reingest3.clockss.org:8083 >
