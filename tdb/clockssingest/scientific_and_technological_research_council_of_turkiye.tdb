@@ -70,7 +70,7 @@
       param[journal_abbr] = biology
 
       au < ready ; exists ; 1996 ; Turkish Journal of Biology Volume 20 ; 20 ; >
-      au < ready ; exists ; 1997 ; Turkish Journal of Biology Volume 21 ; 21 ; >
+      au < crawling ; exists ; 1997 ; Turkish Journal of Biology Volume 21 ; 21 ; >
       au < ready ; exists ; 1998 ; Turkish Journal of Biology Volume 22 ; 22 ; >
       au < ready ; exists ; 1999 ; Turkish Journal of Biology Volume 23 ; 23 ; >
       au < ready ; exists ; 2000 ; Turkish Journal of Biology Volume 24 ; 24 ; >
@@ -119,7 +119,7 @@
       au < crawling ; exists ; 1998 ; Turkish Journal of Botany Volume 22 ; 22 ; >
       au < ready ; exists ; 1999 ; Turkish Journal of Botany Volume 23 ; 23 ; >
       au < ready ; exists ; 2000 ; Turkish Journal of Botany Volume 24 ; 24 ; >
-      au < ready ; exists ; 2001 ; Turkish Journal of Botany Volume 25 ; 25 ; >
+      au < crawling ; exists ; 2001 ; Turkish Journal of Botany Volume 25 ; 25 ; >
       au < ready ; exists ; 2002 ; Turkish Journal of Botany Volume 26 ; 26 ; >
       au < ready ; exists ; 2003 ; Turkish Journal of Botany Volume 27 ; 27 ; >
       au < ready ; exists ; 2004 ; Turkish Journal of Botany Volume 28 ; 28 ; >
@@ -168,7 +168,7 @@
       au < ready ; exists ; 2002 ; Turkish Journal of Chemistry Volume 26 ; 26 ; >
       au < ready ; exists ; 2003 ; Turkish Journal of Chemistry Volume 27 ; 27 ; >
       au < ready ; exists ; 2004 ; Turkish Journal of Chemistry Volume 28 ; 28 ; >
-      au < ready ; exists ; 2005 ; Turkish Journal of Chemistry Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2005 ; Turkish Journal of Chemistry Volume 29 ; 29 ; >
       au < ready ; exists ; 2006 ; Turkish Journal of Chemistry Volume 30 ; 30 ; >
       au < ready ; exists ; 2007 ; Turkish Journal of Chemistry Volume 31 ; 31 ; >
       au < testing ; exists ; 2008 ; Turkish Journal of Chemistry Volume 32 ; 32 ; >
@@ -386,7 +386,7 @@
       param[journal_abbr] = physics
 
       au < ready ; exists ; 1996 ; Turkish Journal of Physics Volume 20 ; 20 ; >
-      au < ready ; exists ; 1997 ; Turkish Journal of Physics Volume 21 ; 21 ; >
+      au < crawling ; exists ; 1997 ; Turkish Journal of Physics Volume 21 ; 21 ; >
       au < ready ; exists ; 1998 ; Turkish Journal of Physics Volume 22 ; 22 ; >
       au < ready ; exists ; 1999 ; Turkish Journal of Physics Volume 23 ; 23 ; >
       au < ready ; exists ; 2000 ; Turkish Journal of Physics Volume 24 ; 24 ; >
@@ -484,7 +484,7 @@
       au < ready ; exists ; 2002 ; Turkish Journal of Zoology Volume 26 ; 26 ; >
       au < ready ; exists ; 2003 ; Turkish Journal of Zoology Volume 27 ; 27 ; >
       au < ready ; exists ; 2004 ; Turkish Journal of Zoology Volume 28 ; 28 ; >
-      au < ready ; exists ; 2005 ; Turkish Journal of Zoology Volume 29 ; 29 ; >
+      au < crawling ; exists ; 2005 ; Turkish Journal of Zoology Volume 29 ; 29 ; >
       au < ready ; exists ; 2006 ; Turkish Journal of Zoology Volume 30 ; 30 ; >
       au < ready ; exists ; 2007 ; Turkish Journal of Zoology Volume 31 ; 31 ; >
       au < frozen ; exists ; 2008 ; Turkish Journal of Zoology Volume 32 ; 32 ; >
