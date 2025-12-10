@@ -103,12 +103,15 @@ public class ServeContent extends LockssServlet {
   /** Prefix for this server's config tree */
   public static final String PREFIX = Configuration.PREFIX + "serveContent.";
 
-  /** If set, absolute rewritten links will use this stem instead of
-   * the one used to address ServeContent.  Useful when there's a
-   * proxy in front of ServeContent */
-  public static final String PARAM_REWRITE_FOR_STEM =
-      PREFIX + "rewriteForStem";
-  public static final String DEFAULT_REWRITE_FOR_STEM = null;
+  /** Map from REs matching stem ServeContent would normally use in
+   * abs rewritten URLs, to replacement stem, to handle cases where
+   * ServeContent is behind a proxy that has a different stem.  Map is
+   * used so different instances of ServeContent (e.g., Admin UI &
+   * Content Server) can be configured individually.  E.g., to affect
+   * just the content server, not the Admin UI, it could be
+   * "8082,http://front.end/" */
+  public static final String PARAM_REWRITE_FOR_STEM_MAP =
+      PREFIX + "rewriteForStemMap";
 
   /**
    * Forwards ServeContent requests to the specified machine if set
@@ -338,6 +341,7 @@ public class ServeContent extends LockssServlet {
   private static String candidates404Msg = DEFAULT_404_CANDIDATES_MSG;
   private static int loginCheckerBufSize =
     BaseUrlFetcher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT;
+  private static PatternStringMap rewriteForStemMap = PatternStringMap.EMPTY;
 
 
   private ArchivalUnit au;
@@ -355,11 +359,11 @@ public class ServeContent extends LockssServlet {
   private boolean enabledPluginsOnly;
   private String accessLogInfo;
   private AccessLogType requestType = AccessLogType.None;
-  private String rewriteForStem = DEFAULT_REWRITE_FOR_STEM;
 
   private PluginManager pluginMgr;
   private ProxyManager proxyMgr;
   private OpenUrlResolver openUrlResolver;
+  private String rewriteForStem = null;
 
   // don't hold onto objects after request finished
   protected void resetLocals() {
@@ -373,7 +377,7 @@ public class ServeContent extends LockssServlet {
     au = null;
     explicitAu = null;
     isCuEncoded = false;
-    rewriteForStem = DEFAULT_REWRITE_FOR_STEM;
+    rewriteForStem = null;
     super.resetLocals();
   }
 
@@ -457,11 +461,30 @@ public class ServeContent extends LockssServlet {
       processForms = config.getBoolean(PARAM_PROCESS_FORMS,
           DEFAULT_PROCESS_FORMS);
     }
+    if (diffs.contains(PARAM_REWRITE_FOR_STEM_MAP)) {
+      installRewriteForStemMap(config.getList(PARAM_REWRITE_FOR_STEM_MAP, null));
+    }
     // XXX this is an inconsistent use of this param
     loginCheckerBufSize =
       config.getInt(BaseUrlFetcher.PARAM_LOGIN_CHECKER_MARK_LIMIT,
 		    BaseUrlFetcher.DEFAULT_LOGIN_CHECKER_MARK_LIMIT);
 
+  }
+
+  /** Set up pattern map from our real stem to replacement rewrite stem. */
+  static void installRewriteForStemMap(List<String> patternPairs) {
+    if (patternPairs == null) {
+      log.debug("Installing empty rewriteForStemMap");
+      rewriteForStemMap = PatternStringMap.EMPTY;
+    } else {
+      try {
+        rewriteForStemMap = PatternStringMap.fromSpec(patternPairs);
+        log.debug("Installing rewriteForStemMap: " + rewriteForStemMap);
+      } catch (IllegalArgumentException e) {
+        log.error("Illegal rewriteForStemMap, ignoring", e);
+        log.error("rewriteForStemMap unchanged, still: " + rewriteForStemMap);
+      }
+    }
   }
 
   protected boolean isInCache() {
@@ -536,10 +559,14 @@ public class ServeContent extends LockssServlet {
       displayNotStarted();
       return;
     }
-    Configuration config = ConfigManager.getCurrentConfig();
-    rewriteForStem =
-      config.get(PARAM_REWRITE_FOR_STEM, DEFAULT_REWRITE_FOR_STEM);
-
+    if (absoluteLinks && !rewriteForStemMap.isEmpty()) {
+      String mystem = srvAbsURL(myServletDescr());
+      rewriteForStem = rewriteForStemMap.getMatch(mystem);
+      if (rewriteForStem != null && log.isDebug2()) {
+        log.debug2("Rewriting abs links " + mystem + " -> " + rewriteForStem);
+      }
+    }
+    
     accessLogInfo = null;
     enabledPluginsOnly =
         !"no".equalsIgnoreCase(getParameter("filterPlugins"));
