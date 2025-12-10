@@ -54,7 +54,7 @@
       au < finished ; manifest ; 2021 ; Sur y Tiempo Volume 2021 ; 2 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; Sur y Tiempo Volume 2022 ; 3 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Sur y Tiempo Volume 2023 ; 4 ; 2023 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2024 ; Sur y Tiempo Volume 2024 ; 5 ; 2024 ; >
+      au < ingNotReady ; exists ; 2024 ; Sur y Tiempo Volume 2024 ; 5 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Sur y Tiempo Volume 2025 ; 6 ; 2025 ; >
 
   }
