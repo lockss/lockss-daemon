@@ -27,6 +27,7 @@
       au < readySource ; finished ; 2023 ; East View Information Services Book Source Content 2023_01 ; 2023_01 >
       au < readySource ; crawling ; 2024 ; East View Information Services Book Source Content 2024_01 ; 2024_01 >
       au < readySource ; crawling ; 2025 ; East View Information Services Book Source Content 2025_01 ; 2025_01 >
+      au < expected ; exists ; 2026 ; East View Information Services Book Source Content 2026_01 ; 2026_01 >
 
     }
   }
@@ -51,6 +52,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastview-released/
 
       au < expected ; exists ; 2025 ; East View Information Services Journal Source Content 2025_01 ; 2025_01 >
+      au < expected ; exists ; 2026 ; East View Information Services Journal Source Content 2026_01 ; 2026_01 >
 
     }
   }
@@ -85,6 +87,7 @@
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewdb-released/
 
         au < readySource ; crawling ; 2025 ; East View Information Services Database Source Content 2025_01 ; 2025_01 >
+        au < expected ; exists ; 2026 ; East View Information Services Database Source Content 2026_01 ; 2026_01 >
 
     }
 

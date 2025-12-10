@@ -21,6 +21,7 @@
       au < readySource ; finished ; 2023 ; Editura ASE Source Content 2023_01 ; 2023_01 >
       au < readySource ; crawling ; 2024 ; Editura ASE Source Content 2024_01 ; 2024_01 >
       au < readySource ; crawling ; 2025 ; Editura ASE Source Content 2025_01 ; 2025_01 >
+      au < expected ; exists ; 2026 ; Editura ASE Source Content 2026_01 ; 2026_01 >
 
     }
     {
@@ -44,6 +45,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/easeproc-released/
 
       au < readySource ; crawling ; 2025 ; Editura ASE Proceedings Source Content 2025_01 ; 2025_01 >
+      au < expected ; exists ; 2026 ; Editura ASE Proceedings Source Content 2026_01 ; 2026_01 >
 
     }
   }
