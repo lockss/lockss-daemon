@@ -33,8 +33,8 @@
       au < ready ; exists ; 1997 ; American Journal of Audiology Volume 6 ; 6 ; >
       au < ready ; exists ; 1998 ; American Journal of Audiology Volume 7 ; 7 ; >
       au < ready ; exists ; 1999 ; American Journal of Audiology Volume 8 ; 8 ; >
-      au < ready ; exists ; 2000 ; American Journal of Audiology Volume 9 ; 9 ; >
-      au < ready ; exists ; 2001 ; American Journal of Audiology Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2000 ; American Journal of Audiology Volume 9 ; 9 ; >
+      au < crawling ; exists ; 2001 ; American Journal of Audiology Volume 10 ; 10 ; >
       au < ready ; exists ; 2002 ; American Journal of Audiology Volume 11 ; 11 ; >
       au < ready ; exists ; 2003 ; American Journal of Audiology Volume 12 ; 12 ; >
       au < ready ; exists ; 2004 ; American Journal of Audiology Volume 13 ; 13 ; >
@@ -79,12 +79,12 @@
       au < ready ; exists ; 1995 ; American Journal of Speech-Language Pathology Volume 4 ; 4 ; >
       au < ready ; exists ; 1996 ; American Journal of Speech-Language Pathology Volume 5 ; 5 ; >
       au < ready ; exists ; 1997 ; American Journal of Speech-Language Pathology Volume 6 ; 6 ; >
-      au < ready ; exists ; 1998 ; American Journal of Speech-Language Pathology Volume 7 ; 7 ; >
+      au < crawling ; exists ; 1998 ; American Journal of Speech-Language Pathology Volume 7 ; 7 ; >
       au < ready ; exists ; 1999 ; American Journal of Speech-Language Pathology Volume 8 ; 8 ; >
       au < ready ; exists ; 2000 ; American Journal of Speech-Language Pathology Volume 9 ; 9 ; >
-      au < ready ; exists ; 2001 ; American Journal of Speech-Language Pathology Volume 10 ; 10 ; >
+      au < crawling ; exists ; 2001 ; American Journal of Speech-Language Pathology Volume 10 ; 10 ; >
       au < ready ; exists ; 2002 ; American Journal of Speech-Language Pathology Volume 11 ; 11 ; >
-      au < ready ; exists ; 2003 ; American Journal of Speech-Language Pathology Volume 12 ; 12 ; >
+      au < crawling ; exists ; 2003 ; American Journal of Speech-Language Pathology Volume 12 ; 12 ; >
       au < ready ; exists ; 2004 ; American Journal of Speech-Language Pathology Volume 13 ; 13 ; >
       au < ready ; exists ; 2005 ; American Journal of Speech-Language Pathology Volume 14 ; 14 ; >
       au < ready ; exists ; 2006 ; American Journal of Speech-Language Pathology Volume 15 ; 15 ; >
@@ -184,14 +184,14 @@
       au < ready ; exists ; 1978 ; Journal of Speech and Hearing Disorders Volume 43 ; 43 ; >
       au < ready ; exists ; 1979 ; Journal of Speech and Hearing Disorders Volume 44 ; 44 ; >
       au < ready ; exists ; 1980 ; Journal of Speech and Hearing Disorders Volume 45 ; 45 ; >
-      au < ready ; exists ; 1981 ; Journal of Speech and Hearing Disorders Volume 46 ; 46 ; >
+      au < crawling ; exists ; 1981 ; Journal of Speech and Hearing Disorders Volume 46 ; 46 ; >
       au < ready ; exists ; 1982 ; Journal of Speech and Hearing Disorders Volume 47 ; 47 ; >
       au < ready ; exists ; 1983 ; Journal of Speech and Hearing Disorders Volume 48 ; 48 ; >
       au < ready ; exists ; 1984 ; Journal of Speech and Hearing Disorders Volume 49 ; 49 ; >
       au < ready ; exists ; 1985 ; Journal of Speech and Hearing Disorders Volume 50 ; 50 ; >
       au < ready ; exists ; 1986 ; Journal of Speech and Hearing Disorders Volume 51 ; 51 ; >
-      au < ready ; exists ; 1987 ; Journal of Speech and Hearing Disorders Volume 52 ; 52 ; >
-      au < ready ; exists ; 1988 ; Journal of Speech and Hearing Disorders Volume 53 ; 53 ; >
+      au < crawling ; exists ; 1987 ; Journal of Speech and Hearing Disorders Volume 52 ; 52 ; >
+      au < crawling ; exists ; 1988 ; Journal of Speech and Hearing Disorders Volume 53 ; 53 ; >
       au < ready ; exists ; 1989 ; Journal of Speech and Hearing Disorders Volume 54 ; 54 ; >
       au < crawling ; exists ; 1990 ; Journal of Speech and Hearing Disorders Volume 55 ; 55 ; >
 
@@ -254,7 +254,7 @@
       au < ready ; exists ; 1984 ; Journal of Speech, Language, and Hearing Research Volume 27 ; 27 ; >
       au < ready ; exists ; 1985 ; Journal of Speech, Language, and Hearing Research Volume 28 ; 28 ; >
       au < ready ; exists ; 1986 ; Journal of Speech, Language, and Hearing Research Volume 29 ; 29 ; >
-      au < ready ; exists ; 1987 ; Journal of Speech, Language, and Hearing Research Volume 30 ; 30 ; >
+      au < crawling ; exists ; 1987 ; Journal of Speech, Language, and Hearing Research Volume 30 ; 30 ; >
       au < ready ; exists ; 1988 ; Journal of Speech, Language, and Hearing Research Volume 31 ; 31 ; >
       au < ready ; exists ; 1989 ; Journal of Speech, Language, and Hearing Research Volume 32 ; 32 ; >
       au < crawling ; exists ; 1990 ; Journal of Speech, Language, and Hearing Research Volume 33 ; 33 ; >
@@ -314,7 +314,7 @@
       au < manifest ; exists ; 1974 ; Language, Speech, and Hearing Services in Schools Volume 5 ; 5 ; >
       au < manifest ; exists ; 1975 ; Language, Speech, and Hearing Services in Schools Volume 6 ; 6 ; >
       au < manifest ; exists ; 1976 ; Language, Speech, and Hearing Services in Schools Volume 7 ; 7 ; >
-      au < ready ; exists ; 1977 ; Language, Speech, and Hearing Services in Schools Volume 8 ; 8 ; >
+      au < crawling ; exists ; 1977 ; Language, Speech, and Hearing Services in Schools Volume 8 ; 8 ; >
       au < ready ; exists ; 1978 ; Language, Speech, and Hearing Services in Schools Volume 9 ; 9 ; >
       au < ready ; exists ; 1979 ; Language, Speech, and Hearing Services in Schools Volume 10 ; 10 ; >
       au < ready ; exists ; 1980 ; Language, Speech, and Hearing Services in Schools Volume 11 ; 11 ; >
@@ -325,7 +325,7 @@
       au < ready ; exists ; 1985 ; Language, Speech, and Hearing Services in Schools Volume 16 ; 16 ; >
       au < ready ; exists ; 1986 ; Language, Speech, and Hearing Services in Schools Volume 17 ; 17 ; >
       au < ready ; exists ; 1987 ; Language, Speech, and Hearing Services in Schools Volume 18 ; 18 ; >
-      au < ready ; exists ; 1988 ; Language, Speech, and Hearing Services in Schools Volume 19 ; 19 ; >
+      au < crawling ; exists ; 1988 ; Language, Speech, and Hearing Services in Schools Volume 19 ; 19 ; >
       au < ready ; exists ; 1989 ; Language, Speech, and Hearing Services in Schools Volume 20 ; 20 ; >
       au < crawling ; exists ; 1990 ; Language, Speech, and Hearing Services in Schools Volume 21 ; 21 ; >
       au < crawling ; exists ; 1991 ; Language, Speech, and Hearing Services in Schools Volume 22 ; 22 ; >

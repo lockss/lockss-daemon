@@ -438,7 +438,7 @@
    au < ready ; exists ; 1996 ; Continuity and Change Volume 11 ; 11 ; >
    au < ready ; exists ; 1997 ; Continuity and Change Volume 12 ; 12 ; >
    au < ready ; exists ; 1998 ; Continuity and Change Volume 13 ; 13 ; >
-   au < ready ; exists ; 1999 ; Continuity and Change Volume 14 ; 14 ; >
+   au < crawling ; exists ; 1999 ; Continuity and Change Volume 14 ; 14 ; >
    au < frozen ; exists ; 2000 ; Continuity and Change Volume 15 ; 15 ; >
    au < frozen ; exists ; 2001 ; Continuity and Change Volume 16 ; 16 ; >
    au < frozen ; exists ; 2002 ; Continuity and Change Volume 17 ; 17 ; >
@@ -972,7 +972,7 @@
     au < manifest ; exists ; 1994 ; Journal of Jewish Studies Volume 45 ; 45 ; >
     au < manifest ; exists ; 1995 ; Journal of Jewish Studies Volume 46 ; 46 ; >
     au < ready ; exists ; 1996 ; Journal of Jewish Studies Volume 47 ; 47 ; >
-    au < ready ; exists ; 1997 ; Journal of Jewish Studies Volume 48 ; 48 ; >
+    au < crawling ; exists ; 1997 ; Journal of Jewish Studies Volume 48 ; 48 ; >
     au < ready ; exists ; 1998 ; Journal of Jewish Studies Volume 49 ; 49 ; >
     au < ready ; exists ; 1999 ; Journal of Jewish Studies Volume 50 ; 50 ; >
     au < ingNotReady ; exists ; 2000 ; Journal of Jewish Studies Volume 51 ; 51 ; > # 0 article, 0 metadata
@@ -2366,7 +2366,7 @@
     au < ready ; exists ; 1985-1988 ; The Bodleian Library Record Volume 12 ; 12 ; >
     au < ready ; exists ; 1988-1991 ; The Bodleian Library Record Volume 13 ; 13 ; >
     au < ready ; exists ; 1991-1994 ; The Bodleian Library Record Volume 14 ; 14 ; >
-    au < ready ; exists ; 1994-1996 ; The Bodleian Library Record Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1994-1996 ; The Bodleian Library Record Volume 15 ; 15 ; >
     au < ready ; exists ; 1997-1999 ; The Bodleian Library Record Volume 16 ; 16 ; >
     au < finished ; manifest ; 2000-2002 ; The Bodleian Library Record Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2003-2005 ; The Bodleian Library Record Volume 18 ; 18 ; reingest5.clockss.org:8082 >
@@ -2412,7 +2412,7 @@
     au < finished ; manifest ; 2021 ; The Shandean Volume 32 ; 32 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; The Shandean Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; The Shandean Volume 34 ; 34 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2025 ; The Shandean Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2025 ; The Shandean Volume 35 ; 35 ; >
 
   }
   
@@ -2478,7 +2478,7 @@
     au < ready ; exists ; 1996 ; French Studies Volume 50 ; 50 ; >
     au < ready ; exists ; 1997 ; French Studies Volume 51 ; 51 ; >
     au < ready ; exists ; 1998 ; French Studies Volume 52 ; 52 ; >
-    au < ready ; exists ; 1999 ; French Studies Volume 53 ; 53 ; >
+    au < crawling ; exists ; 1999 ; French Studies Volume 53 ; 53 ; >
     au < finished ; manifest ; 2000 ; French Studies Volume 54 ; 54 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; French Studies Volume 55 ; 55 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; French Studies Volume 56 ; 56 ; reingest2.clockss.org:8085 >
@@ -2599,7 +2599,7 @@
     au < manifest ; exists ; 1965-1970 ; The Huguenot Society Journal Volume 21 ; 21 ; >
     au < manifest ; exists ; 1971-1976 ; The Huguenot Society Journal Volume 22 ; 22 ; >
     au < ready ; exists ; 1977-1982 ; The Huguenot Society Journal Volume 23 ; 23 ; >
-    au < ready ; exists ; 1983-1988 ; The Huguenot Society Journal Volume 24 ; 24 ; >
+    au < crawling ; exists ; 1983-1988 ; The Huguenot Society Journal Volume 24 ; 24 ; >
     au < ready ; exists ; 1989-1993 ; The Huguenot Society Journal Volume 25 ; 25 ; >
     au < ready ; exists ; 1994-1997 ; The Huguenot Society Journal Volume 26 ; 26 ; >
     au < finished ; manifest ; 1998-2002 ; The Huguenot Society Journal Volume 27 ; 27 ; reingest2.clockss.org:8085 >
@@ -2682,7 +2682,7 @@
     au < finished ; manifest ; 2022 ; Church Archaeology Volume 22 ; 22 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; Church Archaeology Volume 23 ; 23 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Church Archaeology Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; Church Archaeology Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2025 ; Church Archaeology Volume 25 ; 25 ; >
 
   }
 
