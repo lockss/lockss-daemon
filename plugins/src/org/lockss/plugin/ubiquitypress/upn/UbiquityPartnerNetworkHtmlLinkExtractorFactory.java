@@ -33,6 +33,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.ubiquitypress.upn;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -72,6 +73,8 @@ public class UbiquityPartnerNetworkHtmlLinkExtractorFactory implements LinkExtra
                                                                   + "[ \\t\\n\\r\\f]+[.0-9]+(?:[eE][+-]?[0-9]+)?[xX]" // allowing uppercase X; not a thorough floating point grammar (see https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-floating-point-number)
                                                                 + ")?"
                                                                 + "([ \\t\\n\\r\\f]*)");
+
+        public static final Pattern htmlPat = Pattern.compile("/files/submission/proof/.*\\.html");
       
         @Override
         protected String extractLinkFromTag(StringBuffer link,
@@ -139,6 +142,20 @@ public class UbiquityPartnerNetworkHtmlLinkExtractorFactory implements LinkExtra
             }
             return parts;
         }
+
+
+        @Override
+        public void extractUrls(final ArchivalUnit au, InputStream in, String encoding, final String srcUrl,
+                final Callback cb) throws IOException {
+                    //UPN told us to NOT crawl any content on uploaded html version of an article since a lot of the content on them are broken. 
+                    Matcher htmlMat = htmlPat.matcher(srcUrl);
+                    if(htmlMat.find()){
+                        log.debug3("Source URL is " + srcUrl + " and is an html page. No urls on this page wil be crawled.");
+                        return;
+                    }else{
+                        super.extractUrls(au, in, encoding, srcUrl, cb);;
+                    }
+                }
     
     }
     

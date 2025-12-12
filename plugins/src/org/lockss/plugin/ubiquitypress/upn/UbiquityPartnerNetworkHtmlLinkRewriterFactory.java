@@ -344,6 +344,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                       if(jsonStrWithDigitsMat.group(1).endsWith(":")){
                         jsonPaths = Arrays.asList("$..pageUrl",
                                                   "$..link",
+                                                  "$..thumb",
                                                   "$..href",
                                                   "$..src",
                                                   "$..children[?(@[3].item.link)][2]",
