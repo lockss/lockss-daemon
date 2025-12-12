@@ -1068,7 +1068,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Analysis Volume 82 ; 82 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Analysis Volume 83 ; 83 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Analysis Volume 84 ; 84 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Analysis Volume 85 ; 85 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Analysis Volume 85 ; 85 ; >
 
   }
 
@@ -2540,7 +2540,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Biology Methods and Protocols Volume 7 ; 7 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Biology Methods and Protocols Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Biology Methods and Protocols Volume 9 ; 9 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Biology Methods and Protocols Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Biology Methods and Protocols Volume 10 ; 10 ; >
 
   }
 
@@ -3157,7 +3157,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Briefings in Functional Genomics Volume 21 ; 21 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Briefings in Functional Genomics Volume 22 ; 22 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Briefings in Functional Genomics Volume 23 ; 23 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Briefings in Functional Genomics Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Briefings in Functional Genomics Volume 24 ; 24 ; >
 
   }
 
@@ -3474,7 +3474,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; Bulletin of the Institute of Classical Studies Volume 64 ; 64 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; 2022 ; Bulletin of the Institute of Classical Studies Volume 65 ; 65 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Bulletin of the Institute of Classical Studies Volume 66 ; 66 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2025 ; 2025 ; Bulletin of the Institute of Classical Studies Volume 67-68 ; 67-68 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Bulletin of the Institute of Classical Studies Volume 67-68 ; 67-68 ; >
 
   }
 
@@ -5206,7 +5206,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; EP Europace Volume 24 ; 24 ; >
     au < finished ; manifest ; 2023 ; 2023 ; EP Europace Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; EP Europace Volume 26 ; 26 ; >
-    au < ready ; exists ; 2025 ; 2025 ; EP Europace Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; EP Europace Volume 27 ; 27 ; >
 
   }
 
@@ -5336,7 +5336,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The Econometrics Journal Volume 25 ; 25 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The Econometrics Journal Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Econometrics Journal Volume 27 ; 27 ; >
-    au < ready ; exists ; 2025 ; 2025 ; The Econometrics Journal Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; The Econometrics Journal Volume 28 ; 28 ; >
 
   }
 
@@ -5485,7 +5485,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The Economic Journal Volume 132 ; 132 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The Economic Journal Volume 133 ; 133 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Economic Journal Volume 134 ; 134 ; >
-    au < ready ; exists ; 2025 ; 2025 ; The Economic Journal Volume 135 ; 135 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; The Economic Journal Volume 135 ; 135 ; >
 
   }
 
@@ -7197,7 +7197,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Food Quality and Safety Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Food Quality and Safety Volume 7 ; 7 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Food Quality and Safety Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2025 ; 2025 ; Food Quality and Safety Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Food Quality and Safety Volume 9 ; 9 ; >
 
   }
 
@@ -7256,7 +7256,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Foreign Policy Analysis Volume 18 ; 18 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Foreign Policy Analysis Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Foreign Policy Analysis Volume 20 ; 20 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Foreign Policy Analysis Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Foreign Policy Analysis Volume 21 ; 21 ; >
 
   }
 
@@ -7823,7 +7823,7 @@
     au < ingNotReady ; exists ; 2022 ; 2022 ; G3: Genes, Genomes, Genetics Volume 12 ; 12 ; > #403 Forbidden, https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/g3journal/PAP/10.1093_g3journal_jkac206/1/jkac206_supplementary_data.pdf?Expires=1664967694&Signature=CG95KvRwykfA7ST2aFmPcSBMaYRm~4V8~uY19ebraBjAbgs3SRiKQqx92tXN0lBBKYvqTGHMWBHd5hRGSWG~n9m3kbLB-eNesOhBoSn08NDl966Gz05ILqMaPN4-25e1aajKRTSxPTXSkc3Svuw8HiVpb2Qv4a9ml0oFQnRoDMQENm4kgI03kMfmGN58h5FBtoTF07fvpn0OxISnl5LjNdqLFzHLI8NqWwlNFEWa1olioMkM2EVbAllzchybpb-HL8XqCsnnFHFHpIotHpE1XDhFGMjPW9GTi~le2fjLoMdrMG34R5Fr0H4poReLIjf0tUxwXMpXF2NUiQlf9ahsVA__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
     au < finished ; manifest ; 2023 ; 2023 ; G3: Genes, Genomes, Genetics Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; G3: Genes, Genomes, Genetics Volume 14 ; 14 ; >
-    au < ready ; exists ; 2025 ; 2025 ; G3: Genes, Genomes, Genetics Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; G3: Genes, Genomes, Genetics Volume 15 ; 15 ; >
 
   }
 
@@ -7844,7 +7844,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Genetics Volume 220-222 ; 220-222 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Genetics Volume 223-225 ; 223-225 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; Genetics Volume 226-228 ; 226-228 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; 2025 ; Genetics Volume 229-231 ; 229-231 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Genetics Volume 229-231 ; 229-231 ; >
 
   }
 
@@ -7928,7 +7928,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Genomics, Proteomics and Bioinformatics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Genomics, Proteomics and Bioinformatics Volume 21 ; 21 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Genomics, Proteomics and Bioinformatics Volume 22 ; 22 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; 2025 ; Genomics, Proteomics and Bioinformatics Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Genomics, Proteomics and Bioinformatics Volume 23 ; 23 ; >
 
   }
 
@@ -8325,7 +8325,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Health Education Research Volume 37 ; 37 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Health Education Research Volume 38 ; 38 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Health Education Research Volume 39 ; 39 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2025 ; 2025 ; Health Education Research Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Health Education Research Volume 40 ; 40 ; >
 
   }
 
@@ -8379,7 +8379,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Health Policy and Planning Volume 37 ; 37 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Health Policy and Planning Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Health Policy and Planning Volume 39 ; 39 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; 2025 ; Health Policy and Planning Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Health Policy and Planning Volume 40 ; 40 ; >
 
   }
 
@@ -8433,7 +8433,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Health Promotion International Volume 37 ; 37 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Health Promotion International Volume 38 ; 38 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Health Promotion International Volume 39 ; 39 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Health Promotion International Volume 40 ; 40 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Health Promotion International Volume 40 ; 40 ; >
 
   }
 
@@ -8720,7 +8720,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Human Reproduction Update Volume 28 ; 28 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Human Reproduction Update Volume 29 ; 29 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; Human Reproduction Update Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2025 ; 2025 ; Human Reproduction Update Volume 31 ; 31 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Human Reproduction Update Volume 31 ; 31 ; >
 
   }
 
@@ -8742,7 +8742,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Human Communication Research Volume 5 ; 5 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Human Communication Research Volume 6 ; 6 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Human Communication Research Volume 7 ; 7 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2025 ; 2025 ; Human Communication Research Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Human Communication Research Volume 8 ; 8 ; >
 
   }
 
@@ -8781,7 +8781,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Human Rights Law Review Volume 22 ; 22 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Human Rights Law Review Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Human Rights Law Review Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; 2025 ; Human Rights Law Review Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Human Rights Law Review Volume 25 ; 25 ; >
 
   }
   #Publisher and previous TDB differ on title - ICES Journal of Marine Science vs ICES Journal of Marine Science: Journal du Conseil
@@ -9172,7 +9172,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; IMA Journal of Numerical Analysis Volume 42 ; 42 ; >
     au < finished ; manifest ; 2023 ; 2023 ; IMA Journal of Numerical Analysis Volume 43 ; 43 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; IMA Journal of Numerical Analysis Volume 44 ; 44 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2025 ; 2025 ; IMA Journal of Numerical Analysis Volume 45 ; 45 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; IMA Journal of Numerical Analysis Volume 45 ; 45 ; >
 
   }
 
@@ -9241,7 +9241,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 29 ; 29 ; >
     au < finished ; manifest ; 2023 ; 2023 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 30 ; 30 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 31 ; 31 ; >
-    au < ready ; exists ; 2025 ; 2025 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; ISLE: Interdisciplinary Studies in Literature and Environment Volume 32 ; 32 ; >
 
   }
 
@@ -9286,7 +9286,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; ITNOW Volume 64 ; 64 ; >
     au < finished ; manifest ; 2023 ; 2023 ; ITNOW Volume 65 ; 65 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; 2024 ; ITNOW Volume 66 ; 66 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; 2025 ; ITNOW Volume 67 ; 67 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; ITNOW Volume 67 ; 67 ; >
 
   }
 
@@ -9354,7 +9354,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Industrial Law Journal Volume 51 ; 51 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Industrial Law Journal Volume 52 ; 52 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Industrial Law Journal Volume 53 ; 53 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; 2025 ; Industrial Law Journal Volume 54 ; 54 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Industrial Law Journal Volume 54 ; 54 ; >
 
   }
 
@@ -9429,7 +9429,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Information and Inference: A Journal of the IMA Volume 11 ; 11 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Information and Inference: A Journal of the IMA Volume 12 ; 12 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Information and Inference: A Journal of the IMA Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2025 ; 2025 ; Information and Inference: A Journal of the IMA Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Information and Inference: A Journal of the IMA Volume 14 ; 14 ; >
 
   }
 
@@ -9473,7 +9473,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Insect Systematics and Diversity Volume 6 ; 6 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Insect Systematics and Diversity Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; 2024 ; Insect Systematics and Diversity Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2025 ; 2025 ; Insect Systematics and Diversity Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Insect Systematics and Diversity Volume 9 ; 9 ; >
 
   }
 
@@ -9552,7 +9552,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Integrative and Comparative Biology Volume 62 ; 62 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Integrative and Comparative Biology Volume 63 ; 63 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Integrative and Comparative Biology Volume 64 ; 64 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Integrative and Comparative Biology Volume 65 ; 65 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Integrative and Comparative Biology Volume 65 ; 65 ; >
 
   }
 
@@ -9584,7 +9584,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Integrated Environmental Assessment and Management Volume 18 ; 18 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Integrated Environmental Assessment and Management Volume 19 ; 19 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; Integrated Environmental Assessment and Management Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; 2025 ; Integrated Environmental Assessment and Management Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Integrated Environmental Assessment and Management Volume 21 ; 21 ; >
 
   }
 
@@ -9697,7 +9697,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Affairs Volume 98 ; 98 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Affairs Volume 99 ; 99 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Affairs Volume 100 ; 100 ; >
-    au < ready ; exists ; 2025 ; 2025 ; International Affairs Volume 101 ; 101 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Affairs Volume 101 ; 101 ; >
 
   }
 
