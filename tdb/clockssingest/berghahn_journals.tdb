@@ -336,9 +336,9 @@
       #they moved to eissn just before going offline
       #param[journal_issn] = 1752-2293
             
-      au < manifest ; exists ; 1997 ; Critical Survey Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1998 ; Critical Survey Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1999 ; Critical Survey Volume 11 ; 11 ; >
+      au < testing ; exists ; 1997 ; Critical Survey Volume 9 ; 9 ; >
+      au < testing ; exists ; 1998 ; Critical Survey Volume 10 ; 10 ; >
+      au < testing ; exists ; 1999 ; Critical Survey Volume 11 ; 11 ; >
       au < ready ; exists ; 2000 ; Critical Survey Volume 12 ; 12 ; >
       au < ready ; exists ; 2001 ; Critical Survey Volume 13 ; 13 ; >
       au < ready ; exists ; 2002 ; Critical Survey Volume 14 ; 14 ; >
@@ -493,7 +493,7 @@
     param[journal_id] = european-judaism
     #param[journal_issn] = 0014-3006
    
-    au < manifest ; exists ; 1999 ; European Judaism Volume 32 ; 32 ; >
+    au < testing ; exists ; 1999 ; European Judaism Volume 32 ; 32 ; >
     au < ready ; exists ; 2000 ; European Judaism Volume 33 ; 33 ; >
     au < ready ; exists ; 2001 ; European Judaism Volume 34 ; 34 ; >
     au < ready ; exists ; 2002 ; European Judaism Volume 35 ; 35 ; >
@@ -572,7 +572,7 @@
     param[journal_id] = fpcs
     #param[journal_issn] = 1537-6370
 
-    au < manifest ; exists ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 ; >
+    au < testing ; exists ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 ; >
     au < ready ; exists ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 ; >
     au < ready ; exists ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 ; >
     au < frozen ; exists ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 ; >
@@ -614,8 +614,8 @@
     param[journal_id] = gps
     #param[journal_issn] = 1045-0300
 
-    au < manifest ; exists ; 1998 ; German Politics and Society Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1999 ; German Politics and Society Volume 17 ; 17 ; >
+    au < testing ; exists ; 1998 ; German Politics and Society Volume 16 ; 16 ; >
+    au < testing ; exists ; 1999 ; German Politics and Society Volume 17 ; 17 ; >
     au < ready ; exists ; 2000 ; German Politics and Society Volume 18 ; 18 ; >
     au < ready ; exists ; 2001 ; German Politics and Society Volume 19 ; 19 ; >
     au < ready ; exists ; 2002 ; German Politics and Society Volume 20 ; 20 ; >
@@ -1145,9 +1145,9 @@
     param[journal_id] = sartre-studies
     #param[journal_issn] = 1357-1559
 
-    au < manifest ; exists ; 1997 ; Sartre Studies International Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1998 ; Sartre Studies International Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1999 ; Sartre Studies International Volume 5 ; 5 ; >
+    au < testing ; exists ; 1997 ; Sartre Studies International Volume 3 ; 3 ; >
+    au < testing ; exists ; 1998 ; Sartre Studies International Volume 4 ; 4 ; >
+    au < testing ; exists ; 1999 ; Sartre Studies International Volume 5 ; 5 ; >
     au < ready ; exists ; 2000 ; Sartre Studies International Volume 6 ; 6 ; >
     au < testing ; exists ; 2001 ; Sartre Studies International Volume 7 ; 7 ; >
     au < ready ; exists ; 2002 ; Sartre Studies International Volume 8 ; 8 ; >
@@ -1286,9 +1286,9 @@
     #param[journal_issn] = 0040-5817
 
 
-    au < manifest ; exists ; 1997 ; Theoria Volume 44 ; 44 ; >
-    au < manifest ; exists ; 1998 ; Theoria Volume 45 ; 45 ; >
-    au < manifest ; exists ; 1999 ; Theoria Volume 46 ; 46 ; >
+    au < testing ; exists ; 1997 ; Theoria Volume 44 ; 44 ; >
+    au < testing ; exists ; 1998 ; Theoria Volume 45 ; 45 ; >
+    au < testing ; exists ; 1999 ; Theoria Volume 46 ; 46 ; >
     au < ready ; exists ; 2000 ; Theoria Volume 47 ; 47 ; >
     au < ready ; exists ; 2001 ; Theoria Volume 48 ; 48 ; >
     au < ready ; exists ; 2002 ; Theoria Volume 49 ; 49 ; >
