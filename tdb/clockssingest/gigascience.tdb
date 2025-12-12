@@ -24,8 +24,8 @@
     au < finished ; crawling ; 2019 ; GigaDB 2019 ; 2019 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2020 ; GigaDB 2020 ; 2020 ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2021 ; GigaDB 2021 ; 2021 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2022 ; GigaDB 2022 ; 2022 ; >
-    au < frozen ; exists ; 2023 ; GigaDB 2023 ; 2023 ; >
+    au < finished ; manifest ; 2022 ; GigaDB 2022 ; 2022 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2023 ; GigaDB 2023 ; 2023 ; reingest4.clockss.org:8082 >
     # No more AUs. Moved to https
     }
     {
