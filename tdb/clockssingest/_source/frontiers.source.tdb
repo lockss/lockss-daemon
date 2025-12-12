@@ -24,6 +24,8 @@
         au < readySource ; crawling ; 2025 ; Frontiers Journals JATS Source Content 2025_01 ; 2025_01 >
         au < expected ; exists ; 2025 ; Frontiers Journals JATS Source Content 2025_02 ; 2025_02 >
 
+        au < expected ; exists ; 2026 ; Frontiers Journals JATS Source Content 2026_01 ; 2026_01 >
+
       }
     }
     {
@@ -58,6 +60,9 @@
         au < readySource ; crawling ; 2025 ; Frontiers Journals Source Content 2025_01 ; 2025_01 >
         au < readySource ; crawling ; 2025 ; Frontiers Journals Source Content 2025_02 ; 2025_02 >
         au < readySource ; crawling ; 2025 ; Frontiers Journals Source Content 2025_03 ; 2025_03 >
+
+        au < expected ; exists ; 2026 ; Frontiers Journals Source Content 2026_01 ; 2026_01 >
+        au < expected ; exists ; 2026 ; Frontiers Journals Source Content 2026_02 ; 2026_02 >
 
       }
 
@@ -101,6 +106,7 @@
 
         au < readySource ; finished ; 2023 ; Frontiers Books Source Content 2023_01 ; 2023_01 >
         au < expected ; exists ; 2025 ; Frontiers Books Source Content 2025_01 ; 2025_01 >
+        au < expected ; exists ; 2026 ; Frontiers Books Source Content 2026_01 ; 2026_01 >
 
       }
 
