@@ -437,7 +437,7 @@
    au < manifest ; exists ; 1995 ; Continuity and Change Volume 10 ; 10 ; >
    au < ready ; exists ; 1996 ; Continuity and Change Volume 11 ; 11 ; >
    au < ready ; exists ; 1997 ; Continuity and Change Volume 12 ; 12 ; >
-   au < ready ; exists ; 1998 ; Continuity and Change Volume 13 ; 13 ; >
+   au < crawling ; exists ; 1998 ; Continuity and Change Volume 13 ; 13 ; >
    au < crawling ; exists ; 1999 ; Continuity and Change Volume 14 ; 14 ; >
    au < frozen ; exists ; 2000 ; Continuity and Change Volume 15 ; 15 ; >
    au < frozen ; exists ; 2001 ; Continuity and Change Volume 16 ; 16 ; >
@@ -974,7 +974,7 @@
     au < ready ; exists ; 1996 ; Journal of Jewish Studies Volume 47 ; 47 ; >
     au < crawling ; exists ; 1997 ; Journal of Jewish Studies Volume 48 ; 48 ; >
     au < ready ; exists ; 1998 ; Journal of Jewish Studies Volume 49 ; 49 ; >
-    au < ready ; exists ; 1999 ; Journal of Jewish Studies Volume 50 ; 50 ; >
+    au < crawling ; exists ; 1999 ; Journal of Jewish Studies Volume 50 ; 50 ; >
     au < ingNotReady ; exists ; 2000 ; Journal of Jewish Studies Volume 51 ; 51 ; > # 0 article, 0 metadata
     au < ingNotReady ; exists ; 2001 ; Journal of Jewish Studies Volume 52 ; 52 ; > # 0 article, 0 metadata
     au < ingNotReady ; exists ; 2002 ; Journal of Jewish Studies Volume 53 ; 53 ; > # 0 article, 0 metadata
@@ -2303,7 +2303,7 @@
     au < manifest ; exists ; 1995 ; Revista Iberoamericana Volume 61 ; 61 ; >
     au < manifest ; exists ; 1996 ; Revista Iberoamericana Volume 62 ; 62 ; >
     au < ready ; exists ; 1997 ; Revista Iberoamericana Volume 63 ; 63 ; >
-    au < ready ; exists ; 1998 ; Revista Iberoamericana Volume 64 ; 64 ; >
+    au < crawling ; exists ; 1998 ; Revista Iberoamericana Volume 64 ; 64 ; >
     au < crawling ; exists ; 1999 ; Revista Iberoamericana Volume 65 ; 65 ; >
     au < finished ; manifest ; 2000 ; Revista Iberoamericana Volume 66 ; 66 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Revista Iberoamericana Volume 67 ; 67 ; reingest1.clockss.org:8082 >
@@ -2475,9 +2475,9 @@
     au < manifest ; exists ; 1993 ; French Studies Volume 47 ; 47 ; >
     au < manifest ; exists ; 1994 ; French Studies Volume 48 ; 48 ; >
     au < manifest ; exists ; 1995 ; French Studies Volume 49 ; 49 ; >
-    au < ready ; exists ; 1996 ; French Studies Volume 50 ; 50 ; >
+    au < crawling ; exists ; 1996 ; French Studies Volume 50 ; 50 ; >
     au < crawling ; exists ; 1997 ; French Studies Volume 51 ; 51 ; >
-    au < ready ; exists ; 1998 ; French Studies Volume 52 ; 52 ; >
+    au < crawling ; exists ; 1998 ; French Studies Volume 52 ; 52 ; >
     au < crawling ; exists ; 1999 ; French Studies Volume 53 ; 53 ; >
     au < finished ; manifest ; 2000 ; French Studies Volume 54 ; 54 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; French Studies Volume 55 ; 55 ; reingest5.clockss.org:8082 >
@@ -2638,7 +2638,7 @@
     au < ready ; exists ; 1996 ; Polin: Studies in Polish Jewry Volume 9 ; 9 ; >
     au < ready ; exists ; 1997 ; Polin: Studies in Polish Jewry Volume 10 ; 10 ; >
     au < ready ; exists ; 1998 ; Polin: Studies in Polish Jewry Volume 11 ; 11 ; >
-    au < ready ; exists ; 1999 ; Polin: Studies in Polish Jewry Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1999 ; Polin: Studies in Polish Jewry Volume 12 ; 12 ; >
     au < finished ; manifest ; 2000 ; Polin: Studies in Polish Jewry Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2001 ; Polin: Studies in Polish Jewry Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; Polin: Studies in Polish Jewry Volume 15 ; 15 ; reingest1.clockss.org:8082 >
@@ -2746,8 +2746,8 @@
     param[journal_id] = arq
     #move from Cambridge University Press in 2026, Volume 30
 
-    au < ready ; exists ; 1995-1996 ; Architectural Research Quarterly Volume 1 ; 1 ; >
-    au < ready ; exists ; 1996-1997 ; Architectural Research Quarterly Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1995-1996 ; Architectural Research Quarterly Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1996-1997 ; Architectural Research Quarterly Volume 2 ; 2 ; >
     au < ready ; exists ; 1999 ; Architectural Research Quarterly Volume 3 ; 3 ; >
     au < frozen ; exists ; 2000 ; Architectural Research Quarterly Volume 4 ; 4 ; >
     au < frozen ; exists ; 2001 ; Architectural Research Quarterly Volume 5 ; 5 ; >

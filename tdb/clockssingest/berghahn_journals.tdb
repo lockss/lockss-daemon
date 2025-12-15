@@ -461,7 +461,7 @@
     # This title moved from Liverpool University Press
      
     au < frozen ; exists ; 2008 ; European Comic Art Volume 1 ; 1 ; >
-    au < ready ; exists ; 2009 ; European Comic Art Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2009 ; European Comic Art Volume 2 ; 2 ; >
     au < ready ; exists ; 2010 ; European Comic Art Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Comic Art Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; European Comic Art Volume 5 ; 5 ; >
@@ -621,7 +621,7 @@
     au < ready ; exists ; 2002 ; German Politics and Society Volume 20 ; 20 ; >
     au < ready ; exists ; 2003 ; German Politics and Society Volume 21 ; 21 ; >
     au < ready ; exists ; 2004 ; German Politics and Society Volume 22 ; 22 ; >
-    au < ready ; exists ; 2005 ; German Politics and Society Volume 23 ; 23 ; >
+    au < crawling ; exists ; 2005 ; German Politics and Society Volume 23 ; 23 ; >
     au < ready ; exists ; 2006 ; German Politics and Society Volume 24 ; 24 ; >
     au < finished ; crawling ; 2007 ; German Politics and Society Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 2008 ; German Politics and Society Volume 26 ; 26 ; >
@@ -882,7 +882,7 @@
     param[journal_id] = latiss
     #param[journal_issn] = 1755-2273
        
-    au < ready ; exists ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 ; >
     au < ready ; exists ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 ; >
     au < ready ; exists ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 ; >
@@ -1153,7 +1153,7 @@
     au < ready ; exists ; 2002 ; Sartre Studies International Volume 8 ; 8 ; >
     au < ready ; exists ; 2003 ; Sartre Studies International Volume 9 ; 9 ; >
     au < frozen ; exists ; 2004 ; Sartre Studies International Volume 10 ; 10 ; >
-    au < ready ; exists ; 2005 ; Sartre Studies International Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2005 ; Sartre Studies International Volume 11 ; 11 ; >
     au < ready ; exists ; 2006 ; Sartre Studies International Volume 12 ; 12 ; >
     au < ready ; exists ; 2007 ; Sartre Studies International Volume 13 ; 13 ; >
     au < ready ; exists ; 2008 ; Sartre Studies International Volume 14 ; 14 ; >
