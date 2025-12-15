@@ -795,6 +795,13 @@ while (my $line = <>) {
     $url = sprintf("%sLibrary/Publication/%s?year=%d", 
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
+    $comp_man_url = $man_url;
+    $comp_man_url =~ s/%2c/,/g;
+    $comp_man_url =~ s/'/&#39;/g;
+    #print("================\n");  #debug
+    #print("$url\n"); #debug
+    #print("$man_url\n"); #debug
+    #print("$comp_man_url\n"); #debug
     my $req = HTTP::Request->new(GET, $man_url);
     my $resp = $ua->request($req);
     my $man_contents = $resp->is_success ? $resp->content : "";
@@ -811,7 +818,7 @@ while (my $line = <>) {
 #    } elsif ($man_contents =~ m/$param{year}/) {
 #    } elsif (($man_contents =~ m/$url/) && ($man_contents =~ m/\/Library\/Article\//)) {
 #    } elsif (($man_contents =~ m/$param{journal_id}\?year=$param{year}/)) {
-    } elsif (($man_contents =~ m/\Q$man_url\E/)) {
+    } elsif (($man_contents =~ m/\Q$comp_man_url\E/)) {
         if ($man_contents =~ m/="\/(Library\/Article\/[^"]*)">/si) {
             my $art_url = $param{base_url} . $1;
             $man_art_url = uri_unescape($art_url);
