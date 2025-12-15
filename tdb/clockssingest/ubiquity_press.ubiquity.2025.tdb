@@ -536,7 +536,7 @@
       au < doNotProcess ; exists ; 1968 ; 20 ; Tellus Volume 1968 ; 1968 ; 20 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < doNotProcess ; exists ; 1969 ; 21 ; Tellus Volume 1969 ; 1969 ; 21 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < doNotProcess ; exists ; 1970 ; 22 ; Tellus Volume 1970 ; 1970 ; 22 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
-      au < crawling ; exists ; 1971 ; 23 ; Tellus Volume 1971 ; 1971 ; 23 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
+      au < frozen ; exists ; 1971 ; 23 ; Tellus Volume 1971 ; 1971 ; 23 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < doNotProcess ; exists ; 1972 ; 24 ; Tellus Volume 1972 ; 1972 ; 24 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < frozen ; exists ; 1973 ; 25 ; Tellus Volume 1973 ; 1973 ; 25 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
       au < frozen ; exists ; 1974 ; 26 ; Tellus Volume 1974 ; 1974 ; 26 ; Stockholm University Press ;  ; https://tellusjournal.org/ ; >
@@ -830,7 +830,7 @@
       au < finished ; finished ; 2019 ; 33 ; Current: Journal of Marine Education Volume 2019 ; 2019 ; 33 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2020 ; 34 ; Current: Journal of Marine Education Volume 2020 ; 2020 ; 34 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2021 ; 35 ; Current: Journal of Marine Education Volume 2021 ; 2021 ; 35 ; Ubiquity Press ;  ; https://www.current-journal.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2022 ; 36 ; Current: Journal of Marine Education Volume 2022 ; 2022 ; 36 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
+      au < frozen ; exists ; 2022 ; 36 ; Current: Journal of Marine Education Volume 2022 ; 2022 ; 36 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 37,38 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; 37,38 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
       au < frozen ; exists ; 2024 ; 39 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
       au < crawling ; exists ; 2025 ; 40 ; Current: Journal of Marine Education Volume 2025 ; 2025 ; 40 ; Ubiquity Press ;  ; https://current-journal.com/ ; >
@@ -1198,7 +1198,7 @@
       au < finished ; finished ; 2001 ; 7 ; Journal of Conservation and Museum Studies Volume 2001 ; 2001 ; 7 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2002 ; 8 ; Journal of Conservation and Museum Studies Volume 2002 ; 2002 ; 8 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2011 ; 9 ; Journal of Conservation and Museum Studies Volume 2011 ; 2011 ; 9 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < crawling ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < frozen ; exists ; 2012 ; 10 ; Journal of Conservation and Museum Studies Volume 2012 ; 2012 ; 10 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < frozen ; exists ; 2013 ; 11 ; Journal of Conservation and Museum Studies Volume 2013 ; 2013 ; 11 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < frozen ; exists ; 2014 ; 12 ; Journal of Conservation and Museum Studies Volume 2014 ; 2014 ; 12 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < finished ; finished ; 2015 ; 13 ; Journal of Conservation and Museum Studies Volume 2015 ; 2015 ; 13 ; Ubiquity Press ;  ; http://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
@@ -2437,7 +2437,7 @@
 
       au < frozen ; exists ; 1996 ; 22 ; The Journal of Technology Studies Volume 1996 ; 1996 ; 22 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       au < frozen ; exists ; 1997 ; 23 ; The Journal of Technology Studies Volume 1997 ; 1997 ; 23 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
-      au < crawling ; exists ; 1998 ; 24 ; The Journal of Technology Studies Volume 1998 ; 1998 ; 24 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
+      au < frozen ; exists ; 1998 ; 24 ; The Journal of Technology Studies Volume 1998 ; 1998 ; 24 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       au < ready ; exists ; 1999 ; 25 ; The Journal of Technology Studies Volume 1999 ; 1999 ; 25 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2000 ; 26 ; The Journal of Technology Studies Volume 2000 ; 2000 ; 26 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2001 ; 27 ; The Journal of Technology Studies Volume 2001 ; 2001 ; 27 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ ; >
@@ -2510,11 +2510,11 @@
       au < frozen ; exists ; 1992 ; 3,4 ; Journal of Technology Education Volume 1992 ; 1992 ; 3,4 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < frozen ; exists ; 1993 ; 4,5 ; Journal of Technology Education Volume 1993 ; 1993 ; 4,5 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < frozen ; exists ; 1994 ; 5,6 ; Journal of Technology Education Volume 1994 ; 1994 ; 5,6 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < crawling ; exists ; 1995 ; 6,7 ; Journal of Technology Education Volume 1995 ; 1995 ; 6,7 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < frozen ; exists ; 1995 ; 6,7 ; Journal of Technology Education Volume 1995 ; 1995 ; 6,7 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < frozen ; exists ; 1996 ; 7,8 ; Journal of Technology Education Volume 1996 ; 1996 ; 7,8 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < frozen ; exists ; 1997 ; 8,9 ; Journal of Technology Education Volume 1997 ; 1997 ; 8,9 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < crawling ; exists ; 1998 ; 9,10 ; Journal of Technology Education Volume 1998 ; 1998 ; 9,10 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
-      au < crawling ; exists ; 1999 ; 10,11 ; Journal of Technology Education Volume 1999 ; 1999 ; 10,11 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < frozen ; exists ; 1998 ; 9,10 ; Journal of Technology Education Volume 1998 ; 1998 ; 9,10 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
+      au < frozen ; exists ; 1999 ; 10,11 ; Journal of Technology Education Volume 1999 ; 1999 ; 10,11 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2000 ; 11,12 ; Journal of Technology Education Volume 2000 ; 2000 ; 11,12 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2001 ; 12,13 ; Journal of Technology Education Volume 2001 ; 2001 ; 12,13 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >
       au < doNotProcess ; doNotProcess ; 2002 ; 13,14 ; Journal of Technology Education Volume 2002 ; 2002 ; 13,14 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ ; >

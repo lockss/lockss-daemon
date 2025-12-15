@@ -87,11 +87,11 @@
       param[base_url] = https://energystudiesreview.ca/
       param[journal_id] = esr
 
-      au < crawling ; exists ; 1989 ; Energy Studies Review Volume 1 ; 1 ; 1989 ; > 
+      au < frozen ; exists ; 1989 ; Energy Studies Review Volume 1 ; 1 ; 1989 ; > 
       au < frozen ; exists ; 1990 ; Energy Studies Review Volume 2 ; 2 ; 1990 ; > 
       au < ready ; exists ; 1991 ; Energy Studies Review Volume 3 ; 3 ; 1991 ; > 
       au < ready ; exists ; 1992 ; Energy Studies Review Volume 4 ; 4 ; 1992 ; > 
-      au < crawling ; exists ; 1993 ; Energy Studies Review Volume 5 ; 5 ; 1993 ; > 
+      au < frozen ; exists ; 1993 ; Energy Studies Review Volume 5 ; 5 ; 1993 ; > 
       au < ready ; exists ; 1994 ; Energy Studies Review Volume 6 ; 6 ; 1994 ; > 
       au < ready ; exists ; 1995 ; Energy Studies Review Volume 7 ; 7 ; 1995 ; > 
       au < ready ; exists ; 1996 ; Energy Studies Review Volume 8 ; 8 ; 1996 ; > 
@@ -306,7 +306,7 @@
       au < frozen ; exists ; 1986 ; Russell: the Journal of Bertrand Russell Studies Volume 6 ; 6 ; 1986 ; >
       au < ready ; exists ; 1987 ; Russell: the Journal of Bertrand Russell Studies Volume 7 ; 7 ; 1987 ; >
       au < frozen ; exists ; 1988 ; Russell: the Journal of Bertrand Russell Studies Volume 8 ; 8 ; 1988 ; >
-      au < crawling ; exists ; 1989 ; Russell: the Journal of Bertrand Russell Studies Volume 9 ; 9 ; 1989 ; >
+      au < frozen ; exists ; 1989 ; Russell: the Journal of Bertrand Russell Studies Volume 9 ; 9 ; 1989 ; >
       au < ready ; exists ; 1990 ; Russell: the Journal of Bertrand Russell Studies Volume 10 ; 10 ; 1990 ; >
       au < frozen ; exists ; 1991 ; Russell: the Journal of Bertrand Russell Studies Volume 11 ; 11 ; 1991 ; >
       au < ready ; exists ; 1992 ; Russell: the Journal of Bertrand Russell Studies Volume 12 ; 12 ; 1992 ; >
