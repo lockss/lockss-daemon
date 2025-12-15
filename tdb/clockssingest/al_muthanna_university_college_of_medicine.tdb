@@ -23,18 +23,18 @@
       param[base_url] = https://muthmj.mu.edu.iq/
       param[journal_abbr] = journal
 
-      au < manifest ; exists ; 2014 ; Muthanna Medical Journal Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2015 ; Muthanna Medical Journal Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2016 ; Muthanna Medical Journal Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2017 ; Muthanna Medical Journal Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2018 ; Muthanna Medical Journal Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2019 ; Muthanna Medical Journal Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2020 ; Muthanna Medical Journal Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2021 ; Muthanna Medical Journal Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2022 ; Muthanna Medical Journal Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2023 ; Muthanna Medical Journal Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2024 ; Muthanna Medical Journal Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2025 ; Muthanna Medical Journal Volume 12 ; 12 ; >
+      au < testing ; exists ; 2014 ; Muthanna Medical Journal Volume 1 ; 1 ; >
+      au < testing ; exists ; 2015 ; Muthanna Medical Journal Volume 2 ; 2 ; >
+      au < testing ; exists ; 2016 ; Muthanna Medical Journal Volume 3 ; 3 ; >
+      au < testing ; exists ; 2017 ; Muthanna Medical Journal Volume 4 ; 4 ; >
+      au < testing ; exists ; 2018 ; Muthanna Medical Journal Volume 5 ; 5 ; >
+      au < testing ; exists ; 2019 ; Muthanna Medical Journal Volume 6 ; 6 ; >
+      au < testing ; exists ; 2020 ; Muthanna Medical Journal Volume 7 ; 7 ; >
+      au < testing ; exists ; 2021 ; Muthanna Medical Journal Volume 8 ; 8 ; >
+      au < testing ; exists ; 2022 ; Muthanna Medical Journal Volume 9 ; 9 ; >
+      au < testing ; exists ; 2023 ; Muthanna Medical Journal Volume 10 ; 10 ; >
+      au < testing ; exists ; 2024 ; Muthanna Medical Journal Volume 11 ; 11 ; >
+      au < testing ; exists ; 2025 ; Muthanna Medical Journal Volume 12 ; 12 ; >
 
   }
 

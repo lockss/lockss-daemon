@@ -91,10 +91,10 @@
       param[base_url] = https://squlsj.squ.edu.om/
       param[journal_abbr] = journal
 
-      au < manifest ; exists ; 2022 ; Sultan Qaboos University Legal Studies Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2023 ; Sultan Qaboos University Legal Studies Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2024 ; Sultan Qaboos University Legal Studies Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2025 ; Sultan Qaboos University Legal Studies Volume 4 ; 4 ; >
+      au < testing ; exists ; 2022 ; Sultan Qaboos University Legal Studies Volume 1 ; 1 ; >
+      au < testing ; exists ; 2023 ; Sultan Qaboos University Legal Studies Volume 2 ; 2 ; >
+      au < testing ; exists ; 2024 ; Sultan Qaboos University Legal Studies Volume 3 ; 3 ; >
+      au < testing ; exists ; 2025 ; Sultan Qaboos University Legal Studies Volume 4 ; 4 ; >
 
   }
 
@@ -108,28 +108,28 @@
       param[base_url] = https://tjer.squ.edu.om/
       param[journal_abbr] = journal
 
-      au < manifest ; exists ; 2004 ; The Journal of Engineering Research Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2005 ; The Journal of Engineering Research Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2006 ; The Journal of Engineering Research Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2007 ; The Journal of Engineering Research Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2008 ; The Journal of Engineering Research Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2009 ; The Journal of Engineering Research Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2010 ; The Journal of Engineering Research Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2011 ; The Journal of Engineering Research Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2012 ; The Journal of Engineering Research Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2013 ; The Journal of Engineering Research Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2014 ; The Journal of Engineering Research Volume 11 ; 11 ; >
-      au < manifest ; exists ; 2015 ; The Journal of Engineering Research Volume 12 ; 12 ; >
-      au < manifest ; exists ; 2016 ; The Journal of Engineering Research Volume 13 ; 13 ; >
-      au < manifest ; exists ; 2017 ; The Journal of Engineering Research Volume 14 ; 14 ; >
-      au < manifest ; exists ; 2018 ; The Journal of Engineering Research Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2019 ; The Journal of Engineering Research Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2020 ; The Journal of Engineering Research Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2021 ; The Journal of Engineering Research Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2022 ; The Journal of Engineering Research Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2023 ; The Journal of Engineering Research Volume 20 ; 20 ; >
-      au < manifest ; exists ; 2024 ; The Journal of Engineering Research Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2025 ; The Journal of Engineering Research Volume 22 ; 22 ; >
+      au < testing ; exists ; 2004 ; The Journal of Engineering Research Volume 1 ; 1 ; >
+      au < testing ; exists ; 2005 ; The Journal of Engineering Research Volume 2 ; 2 ; >
+      au < testing ; exists ; 2006 ; The Journal of Engineering Research Volume 3 ; 3 ; >
+      au < testing ; exists ; 2007 ; The Journal of Engineering Research Volume 4 ; 4 ; >
+      au < testing ; exists ; 2008 ; The Journal of Engineering Research Volume 5 ; 5 ; >
+      au < testing ; exists ; 2009 ; The Journal of Engineering Research Volume 6 ; 6 ; >
+      au < testing ; exists ; 2010 ; The Journal of Engineering Research Volume 7 ; 7 ; >
+      au < testing ; exists ; 2011 ; The Journal of Engineering Research Volume 8 ; 8 ; >
+      au < testing ; exists ; 2012 ; The Journal of Engineering Research Volume 9 ; 9 ; >
+      au < testing ; exists ; 2013 ; The Journal of Engineering Research Volume 10 ; 10 ; >
+      au < testing ; exists ; 2014 ; The Journal of Engineering Research Volume 11 ; 11 ; >
+      au < testing ; exists ; 2015 ; The Journal of Engineering Research Volume 12 ; 12 ; >
+      au < testing ; exists ; 2016 ; The Journal of Engineering Research Volume 13 ; 13 ; >
+      au < testing ; exists ; 2017 ; The Journal of Engineering Research Volume 14 ; 14 ; >
+      au < testing ; exists ; 2018 ; The Journal of Engineering Research Volume 15 ; 15 ; >
+      au < testing ; exists ; 2019 ; The Journal of Engineering Research Volume 16 ; 16 ; >
+      au < testing ; exists ; 2020 ; The Journal of Engineering Research Volume 17 ; 17 ; >
+      au < testing ; exists ; 2021 ; The Journal of Engineering Research Volume 18 ; 18 ; >
+      au < testing ; exists ; 2022 ; The Journal of Engineering Research Volume 19 ; 19 ; >
+      au < testing ; exists ; 2023 ; The Journal of Engineering Research Volume 20 ; 20 ; >
+      au < testing ; exists ; 2024 ; The Journal of Engineering Research Volume 21 ; 21 ; >
+      au < testing ; exists ; 2025 ; The Journal of Engineering Research Volume 22 ; 22 ; >
 
   }
 

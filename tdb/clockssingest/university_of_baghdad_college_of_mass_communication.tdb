@@ -22,12 +22,12 @@
       param[base_url] = https://abaa.uobaghdad.edu.iq/
       param[journal_id] = abaa
 
-      au < manifest ; exists ; 2005 ; Al-Bahith Al-A'alami Journal Volume 2005 ; 2005 ; 2005 ; >
-      au < manifest ; exists ; 2006 ; Al-Bahith Al-A'alami Journal Volume 2006 ; 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; Al-Bahith Al-A'alami Journal Volume 2007 ; 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; Al-Bahith Al-A'alami Journal Volume 2008 ; 2008 ; 2008 ; >
-      au < manifest ; exists ; 2012 ; Al-Bahith Al-A'alami Journal Volume 4 ; 4 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; Al-Bahith Al-A'alami Journal Volume 5 ; 5 ; 2013 ; >
+      au < testing ; exists ; 2005 ; Al-Bahith Al-A'alami Journal Volume 2005 ; 2005 ; 2005 ; >
+      au < testing ; exists ; 2006 ; Al-Bahith Al-A'alami Journal Volume 2006 ; 2006 ; 2006 ; >
+      au < testing ; exists ; 2007 ; Al-Bahith Al-A'alami Journal Volume 2007 ; 2007 ; 2007 ; >
+      au < testing ; exists ; 2008 ; Al-Bahith Al-A'alami Journal Volume 2008 ; 2008 ; 2008 ; >
+      au < testing ; exists ; 2012 ; Al-Bahith Al-A'alami Journal Volume 4 ; 4 ; 2012 ; >
+      au < testing ; exists ; 2013 ; Al-Bahith Al-A'alami Journal Volume 5 ; 5 ; 2013 ; >
       au < frozen ; exists ; 2014 ; Al-Bahith Al-A'alami Journal Volume 6 ; 6 ; 2014 ; >
       au < frozen ; exists ; 2015 ; Al-Bahith Al-A'alami Journal Volume 7 ; 7 ; 2015 ; >
       au < frozen ; exists ; 2016 ; Al-Bahith Al-A'alami Journal Volume 8 ; 8 ; 2016 ; >
