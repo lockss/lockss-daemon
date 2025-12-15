@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ubiquitypress.upn;
 
-import java.util.Arrays;
+import java.util.*;
 import java.util.regex.*;
 
 import org.apache.commons.lang3.StringUtils;
@@ -62,9 +62,30 @@ public class UbiquityPartnerNetworkUrlNormalizer extends BaseUrlHttpHttpsUrlNorm
       Pattern.compile("\\.jpg(?:\\?|%3F)t(?:=|%3D)\\d+(?:&|%26|&amp;)w=",
                       Pattern.CASE_INSENSITIVE);
 
+  /**
+   * <p>
+   *   A set of special case URLs that should not be rewritten. 
+   * </p>
+   */
+  protected static Set<String> doNotNormalize = new HashSet<>(Arrays.asList(
+      /*
+       * Tijdschrift voor Tijdschriftstudies
+       * 
+       * This CLOCKSS-triggered title has the following two URLs with date
+       * suffixes in spite of the regex, perhaps the AUs were pub_down already.
+       */
+      "https://www.tijdschriftstudies.nl/static/css/journal.css?2016-11-15",
+      "https://www.tijdschriftstudies.nl/static/css/overrides.css?2016-11-15"
+  ));
+  
   @Override
    public String additionalNormalization(String url,ArchivalUnit au)
       throws PluginException {
+    // Do not normalize some specific URLs
+    if (url != null && doNotNormalize.contains(url)) {
+      return url;
+    }
+    
     /*
      * 'print/':
      * 

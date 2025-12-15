@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.ubiquitypress.upn;
 
-import java.util.Properties;
+import java.util.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.ConfigParamDescr;
@@ -80,7 +80,7 @@ public class TestUbiquityPartnerNetworkUrlNormalizer extends LockssTestCase {
     }
 
   
-    public void testUbiquityPartnerNetworkUrlNormalizer() throws Exception {
+    public void testNormalizer() throws Exception {
       UbiquityPartnerNetworkUrlNormalizer norm = new UbiquityPartnerNetworkUrlNormalizer();
       
       // manifest stays the manifest
@@ -105,8 +105,13 @@ public class TestUbiquityPartnerNetworkUrlNormalizer extends LockssTestCase {
                    norm.normalizeUrl("http://www.xyz.com/foo.jpg?t=123&w=456", testAU) );
     }
   
+    public void testDoNotNormalize() throws Exception {
+      UbiquityPartnerNetworkUrlNormalizer norm = new UbiquityPartnerNetworkUrlNormalizer();
+      for (String doNotNormalizeUrl : Arrays.asList(
+          "https://www.tijdschriftstudies.nl/static/css/journal.css?2016-11-15",
+          "https://www.tijdschriftstudies.nl/static/css/overrides.css?2016-11-15"
+      )) {
+        assertEquals(doNotNormalizeUrl, norm.normalizeUrl(doNotNormalizeUrl, testAU));
+      }
+    }
 }
-
-
-
-    
