@@ -59,6 +59,13 @@ public class Ojs3HttpResponseHandler implements CacheResultHandler {
           return new CacheException.WarningOnly("401 Unauthorized (non-fatal)");
         }
         return new CacheException.PermissionException("401 Unauthorized");
+      case 500:
+        logger.debug3("found 500");
+        if(url.contains("citationstylelanguage/get")){
+          logger.debug3("URL is citation link. Downgrade error to warning.");
+          return new CacheException.WarningOnly("500 Unauthorized (non-fatal)");
+        }
+        return new CacheException.PermissionException("500 Unauthorized");
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
         throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");

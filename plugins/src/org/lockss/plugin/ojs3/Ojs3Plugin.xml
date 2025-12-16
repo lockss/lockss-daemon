@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>67</string>
+    <string>68</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -280,6 +280,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>plugin_cache_result_list</string>
         <list>
             <string>401=org.lockss.plugin.ojs3.Ojs3HttpResponseHandler</string>
+            <string>500=org.lockss.plugin.ojs3.Ojs3HttpResponseHandler</string>
         </list>
     </entry>
   <!--  tell the default base.MimeTypeContentValidator what url patters to validate by mime type -->
