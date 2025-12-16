@@ -10,6 +10,7 @@
   provider = Kare Publishing
   plugin = org.lockss.plugin.kare.ClockssKarePlugin
   implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+  #LXPUB-1202, doNotProcess
 
   {
         title <
