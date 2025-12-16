@@ -398,7 +398,7 @@
     comment[journal_issn] = 1935-5181
     param[journal_id] = ajb
 
-    au < ready ; exists ; 1986 ; 1986 ; American Journal of Business Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; American Journal of Business Volume 1 ; 1 ; >
     au < frozen ; exists ; 1987 ; 1987 ; American Journal of Business Volume 2 ; 2 ; >
     au < crawling ; exists ; 1988 ; 1988 ; American Journal of Business Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; American Journal of Business Volume 4 ; 4 ; >
@@ -871,7 +871,7 @@
     au < manifest ; exists ; 1983 ; 1983 ; Aslib Proceedings: New Information Perspectives Volume 35 ; 35 ; >
     au < manifest ; exists ; 1984 ; 1984 ; Aslib Proceedings: New Information Perspectives Volume 36 ; 36 ; >
     au < manifest ; exists ; 1985 ; 1985 ; Aslib Proceedings: New Information Perspectives Volume 37 ; 37 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Aslib Proceedings: New Information Perspectives Volume 38 ; 38 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Aslib Proceedings: New Information Perspectives Volume 38 ; 38 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Aslib Proceedings: New Information Perspectives Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Aslib Proceedings: New Information Perspectives Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Aslib Proceedings: New Information Perspectives Volume 41 ; 41 ; >
@@ -3056,7 +3056,7 @@
     au < manifest ; exists ; 1983 ; 1983 ; Facilities Volume 1 ; 1 ; >
     au < manifest ; exists ; 1984 ; 1984 ; Facilities Volume 2 ; 2 ; >
     au < manifest ; exists ; 1985 ; 1985 ; Facilities Volume 3 ; 3 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Facilities Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Facilities Volume 4 ; 4 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Facilities Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Facilities Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Facilities Volume 7 ; 7 ; >
@@ -3569,7 +3569,7 @@
     au < manifest ; exists ; 1983 ; 1983 ; Industrial and Commercial Training Volume 15 ; 15 ; >
     au < manifest ; exists ; 1984 ; 1984 ; Industrial and Commercial Training Volume 16 ; 16 ; >
     au < manifest ; exists ; 1985 ; 1985 ; Industrial and Commercial Training Volume 17 ; 17 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Industrial and Commercial Training Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Industrial and Commercial Training Volume 18 ; 18 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Industrial and Commercial Training Volume 19 ; 19 ; >
     au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Industrial and Commercial Training Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Industrial and Commercial Training Volume 21 ; 21 ; >
@@ -3660,7 +3660,7 @@
     au < manifest ; exists ; 1983 ; 1983 ; Industrial Lubrication and Tribology Volume 35 ; 35 ; >
     au < manifest ; exists ; 1984 ; 1984 ; Industrial Lubrication and Tribology Volume 36 ; 36 ; >
     au < manifest ; exists ; 1985 ; 1985 ; Industrial Lubrication and Tribology Volume 37 ; 37 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Industrial Lubrication and Tribology Volume 38 ; 38 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Industrial Lubrication and Tribology Volume 38 ; 38 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Industrial Lubrication and Tribology Volume 39 ; 39 ; >
     au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Industrial Lubrication and Tribology Volume 40 ; 40 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Industrial Lubrication and Tribology Volume 41 ; 41 ; >
@@ -6004,7 +6004,7 @@
 
     au < manifest ; exists ; 1984 ; 1984 ; International Journal of Quality & Reliability Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1985 ; 1985 ; International Journal of Quality & Reliability Management Volume 2 ; 2 ; >
-    au < ready ; exists ; 1986 ; 1986 ; International Journal of Quality & Reliability Management Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; International Journal of Quality & Reliability Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1987 ; 1987 ; International Journal of Quality & Reliability Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1988 ; 1988 ; International Journal of Quality & Reliability Management Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; International Journal of Quality & Reliability Management Volume 6 ; 6 ; >
@@ -6121,7 +6121,7 @@
     au < manifest ; exists ; 1983 ; 1983 ; Retail and Distribution Management Volume 11 ; 11 ; >
     au < manifest ; exists ; 1984 ; 1984 ; Retail and Distribution Management Volume 12 ; 12 ; >
     au < manifest ; exists ; 1985 ; 1985 ; Retail and Distribution Management Volume 13 ; 13 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Retail and Distribution Management Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Retail and Distribution Management Volume 14 ; 14 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Retail and Distribution Management Volume 15 ; 15 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Retail and Distribution Management Volume 16 ; 16 ; >
     au < crawling ; exists ; 1989 ; 1989 ; Retail and Distribution Management Volume 17 ; 17 ; >
@@ -6236,7 +6236,7 @@
     au < manifest ; exists ; 1983 ; 1983 ; International Journal of Social Economics Volume 10 ; 10 ; >
     au < manifest ; exists ; 1984 ; 1984 ; International Journal of Social Economics Volume 11 ; 11 ; >
     au < manifest ; exists ; 1985 ; 1985 ; International Journal of Social Economics Volume 12 ; 12 ; >
-    au < ready ; exists ; 1986 ; 1986 ; International Journal of Social Economics Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; International Journal of Social Economics Volume 13 ; 13 ; >
     au < frozen ; exists ; 1987 ; 1987 ; International Journal of Social Economics Volume 14 ; 14 ; >
     au < frozen ; exists ; 1988 ; 1988 ; International Journal of Social Economics Volume 15 ; 15 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; International Journal of Social Economics Volume 16 ; 16 ; >
@@ -10807,7 +10807,7 @@
     au < manifest ; exists ; 1984 ; 1984 ; Management Research News Volume 7 ; 7 ; >
     au < manifest ; exists ; 1985 ; 1985 ; Management Research News Volume 8 ; 8 ; >
     au < manifest ; exists ; 1986 ; 1986 ; Management Research News Volume 9 ; 9 ; >
-    au < ready ; exists ; 1987 ; 1987 ; Management Research News Volume 10 ; 10 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; Management Research News Volume 10 ; 10 ; >
     au < crawling ; exists ; 1988 ; 1988 ; Management Research News Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Management Research News Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Management Research News Volume 13 ; 13 ; >
@@ -12382,7 +12382,7 @@
     au < manifest ; exists ; 1983 ; 1983 ; Program: Electronic Library and Information Systems Volume 17 ; 17 ; >
     au < manifest ; exists ; 1984 ; 1984 ; Program: Electronic Library and Information Systems Volume 18 ; 18 ; >
     au < manifest ; exists ; 1985 ; 1985 ; Program: Electronic Library and Information Systems Volume 19 ; 19 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Program: Electronic Library and Information Systems Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Program: Electronic Library and Information Systems Volume 20 ; 20 ; >
     au < crawling ; exists ; 1987 ; 1987 ; Program: Electronic Library and Information Systems Volume 21 ; 21 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Program: Electronic Library and Information Systems Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Program: Electronic Library and Information Systems Volume 23 ; 23 ; >

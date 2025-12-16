@@ -435,7 +435,7 @@
    au < manifest ; exists ; 1993 ; Continuity and Change Volume 8 ; 8 ; >
    au < manifest ; exists ; 1994 ; Continuity and Change Volume 9 ; 9 ; >
    au < manifest ; exists ; 1995 ; Continuity and Change Volume 10 ; 10 ; >
-   au < ready ; exists ; 1996 ; Continuity and Change Volume 11 ; 11 ; >
+   au < crawling ; exists ; 1996 ; Continuity and Change Volume 11 ; 11 ; >
    au < ready ; exists ; 1997 ; Continuity and Change Volume 12 ; 12 ; >
    au < crawling ; exists ; 1998 ; Continuity and Change Volume 13 ; 13 ; >
    au < frozen ; exists ; 1999 ; Continuity and Change Volume 14 ; 14 ; >
@@ -971,9 +971,9 @@
     au < manifest ; exists ; 1993 ; Journal of Jewish Studies Volume 44 ; 44 ; >
     au < manifest ; exists ; 1994 ; Journal of Jewish Studies Volume 45 ; 45 ; >
     au < manifest ; exists ; 1995 ; Journal of Jewish Studies Volume 46 ; 46 ; >
-    au < ready ; exists ; 1996 ; Journal of Jewish Studies Volume 47 ; 47 ; >
+    au < crawling ; exists ; 1996 ; Journal of Jewish Studies Volume 47 ; 47 ; >
     au < frozen ; exists ; 1997 ; Journal of Jewish Studies Volume 48 ; 48 ; >
-    au < ready ; exists ; 1998 ; Journal of Jewish Studies Volume 49 ; 49 ; >
+    au < crawling ; exists ; 1998 ; Journal of Jewish Studies Volume 49 ; 49 ; >
     au < crawling ; exists ; 1999 ; Journal of Jewish Studies Volume 50 ; 50 ; >
     au < ingNotReady ; exists ; 2000 ; Journal of Jewish Studies Volume 51 ; 51 ; > # 0 article, 0 metadata
     au < ingNotReady ; exists ; 2001 ; Journal of Jewish Studies Volume 52 ; 52 ; > # 0 article, 0 metadata
@@ -1893,7 +1893,7 @@
     au < manifest ; exists ; 1992 ; Studia Hibernica Volume 26 ; 26 ; >
     au < manifest ; exists ; 1993 ; Studia Hibernica Volume 27 ; 27 ; >
     au < manifest ; exists ; 1994 ; Studia Hibernica Volume 28 ; 28 ; >
-    au < ready ; exists ; 1997 ; Studia Hibernica Volume 29 ; 29 ; >
+    au < crawling ; exists ; 1997 ; Studia Hibernica Volume 29 ; 29 ; >
     au < ready ; exists ; 1999 ; Studia Hibernica Volume 30 ; 30 ; >
     au < finished ; manifest ; 2001 ; Studia Hibernica Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; Studia Hibernica Volume 32 ; 32 ; reingest5.clockss.org:8082 >
@@ -2533,9 +2533,9 @@
     au < manifest ; exists ; 1993 ; French Studies Bulletin Volume 13 ; 13 ; >
     au < manifest ; exists ; 1994 ; French Studies Bulletin Volume 15 ; 15 ; >
     au < manifest ; exists ; 1995 ; French Studies Bulletin Volume 16 ; 16 ; >
-    au < ready ; exists ; 1996 ; French Studies Bulletin Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1996 ; French Studies Bulletin Volume 17 ; 17 ; >
     au < ready ; exists ; 1997 ; French Studies Bulletin Volume 18 ; 18 ; >
-    au < ready ; exists ; 1998 ; French Studies Bulletin Volume 19 ; 19 ; >
+    au < crawling ; exists ; 1998 ; French Studies Bulletin Volume 19 ; 19 ; >
     au < frozen ; exists ; 1999 ; French Studies Bulletin Volume 20 ; 20 ; >
     au < finished ; manifest ; 2000 ; French Studies Bulletin Volume 21 ; 21 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2001 ; French Studies Bulletin Volume 22 ; 22 ; reingest4.clockss.org:8082 >
