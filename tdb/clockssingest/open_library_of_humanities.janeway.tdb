@@ -338,12 +338,12 @@
 #     for the conference, articles are from the previous year.
 #     nothing published in 1995.
 
-      au < testing ; exists ; 1991 ; 1 ; Theoretical Roman Archaeology Conference Volume 1991 ; 1991 ; >
-      au < testing ; exists ; 1992 ; 2 ; Theoretical Roman Archaeology Conference Volume 1992 ; 1992 ; >
+      au < doesNotExist ; doesNotExist ; 1991 ; 1 ; Theoretical Roman Archaeology Conference Volume 1991 ; 1991 ; >
+      au < doesNotExist ; doesNotExist ; 1992 ; 2 ; Theoretical Roman Archaeology Conference Volume 1992 ; 1992 ; >
       au < testing ; exists ; 1993 ; 3 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; ># 1991 articles
-      au < testing ; exists ; 1994 ; 4 ; Theoretical Roman Archaeology Conference Volume 1994 ; 1994 ; >
+      au < doesNotExist ; doesNotExist ; 1994 ; 4 ; Theoretical Roman Archaeology Conference Volume 1994 ; 1994 ; >
       au < testing ; exists ; 1995 ; 5 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; ># 1992 and 1994 articles
-      au < testing ; exists ; 1996 ; 6 ; Theoretical Roman Archaeology Conference Volume 1996 ; 1996 ; >
+      au < doesNotExist ; doesNotExist ; 1996 ; 6 ; Theoretical Roman Archaeology Conference Volume 1996 ; 1996 ; >
       au < testing ; exists ; 1997 ; 7 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; ># 1996 articles
       au < testing ; exists ; 1998 ; 8 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; >
       au < testing ; exists ; 1999 ; 9 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; >
