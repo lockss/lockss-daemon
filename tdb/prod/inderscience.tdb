@@ -103,7 +103,7 @@
       au < released ; 2015-2016 ; American Journal of Finance and Accounting Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
       au < released ; 2017-2018 ; American Journal of Finance and Accounting Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
       au < released ; 2019-2021 ; American Journal of Finance and Accounting Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2022-2023 ; American Journal of Finance and Accounting Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < ready ; 2022-2023 ; American Journal of Finance and Accounting Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2024-2025 ; American Journal of Finance and Accounting Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
 
     }
@@ -469,7 +469,7 @@
 
       au < doNotProcess ; 2009-2010 ; International Journal of Adaptive and Innovative Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2014-2019 ; International Journal of Adaptive and Innovative Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2021-2022 ; International Journal of Adaptive and Innovative Systems Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < ready ; 2021-2022 ; International Journal of Adaptive and Innovative Systems Volume 3 [partial] ; 3 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -1351,7 +1351,7 @@
       au < doNotProcess ; 2009-2011 ; International Journal of Biomechatronics and Biomedical Robotics Volume 1 ; 1 ; https://www.inderscienceonline.com/ >
       au < released ; 2012-2013 ; International Journal of Biomechatronics and Biomedical Robotics Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2014-2020 ; International Journal of Biomechatronics and Biomedical Robotics Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2022-2023 ; International Journal of Biomechatronics and Biomedical Robotics Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < ready ; 2022-2023 ; International Journal of Biomechatronics and Biomedical Robotics Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
 
     }
@@ -1434,7 +1434,7 @@
       au < doNotProcess ; 2011-2012 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2017 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
       au < released ; 2020 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2024 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
+      au < ready ; 2024 ; International Journal of Biomedical Nanoscience and Nanotechnology Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ > #issue 2, 3, 4 not online
 
     }
 
@@ -2825,7 +2825,7 @@
       param[journal_id] = ijcrc
 
       au < released ; 2013-2016 ; International Journal of Creative Computing Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2023-2024 ; International Journal of Creative Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < ready ; 2023-2024 ; International Journal of Creative Computing Volume 2 ; 2 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 
@@ -5052,10 +5052,10 @@
       au < released ; 2015-2016 ; International Journal of Healthcare Technology and Management Volume 15 ; 15 ; http://www.inderscienceonline.com/ >
       au < released ; 2017 ; International Journal of Healthcare Technology and Management Volume 16 ; 16 ; https://www.inderscienceonline.com/ >
       au < released ; 2018-2019 ; International Journal of Healthcare Technology and Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2020-2021 ; International Journal of Healthcare Technology and Management Volume 18 ; 18 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2022 ; International Journal of Healthcare Technology and Management Volume 19 ; 19 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2023 ; International Journal of Healthcare Technology and Management Volume 20 ; 20 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2024 ; International Journal of Healthcare Technology and Management Volume 21 ; 21 ; https://www.inderscienceonline.com/ >
+      au < ready ; 2020-2021 ; International Journal of Healthcare Technology and Management Volume 18 ; 18 ; https://www.inderscienceonline.com/ >
+      au < ready ; 2022 ; International Journal of Healthcare Technology and Management Volume 19 ; 19 ; https://www.inderscienceonline.com/ >
+      au < ready ; 2023 ; International Journal of Healthcare Technology and Management Volume 20 ; 20 ; https://www.inderscienceonline.com/ >
+      au < ready ; 2024 ; International Journal of Healthcare Technology and Management Volume 21 ; 21 ; https://www.inderscienceonline.com/ >
       au < expected ; 2025 ; International Journal of Healthcare Technology and Management Volume 22 ; 22 ; https://www.inderscienceonline.com/ >
 
     }
@@ -5629,7 +5629,7 @@
       au < doNotProcess ; 2011 ; International Journal of Information and Operations Management Education Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2012-2014 ; International Journal of Information and Operations Management Education Volume 5 ; 5 ; http://www.inderscienceonline.com/ >
       au < released ; 2015-2018 ; International Journal of Information and Operations Management Education Volume 6 ; 6 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2021-2024 ; International Journal of Information and Operations Management Education Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < ready ; 2021-2024 ; International Journal of Information and Operations Management Education Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
       au < manifest ; 2025-2028 ; International Journal of Information and Operations Management Education Volume 8 ; 8 ; https://www.inderscienceonline.com/ >
 
     }
@@ -6526,8 +6526,8 @@
       au < released ; 2016-2017 ; International Journal of Knowledge Engineering and Data Mining Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
       au < released ; 2018 ; International Journal of Knowledge Engineering and Data Mining Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
       au < released ; 2019 ; International Journal of Knowledge Engineering and Data Mining Volume 6 ; 6 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2021-2022 ; International Journal of Knowledge Engineering and Data Mining Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2023 ; International Journal of Knowledge Engineering and Data Mining Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ > #issue 2, 3 ,4 not online
+      au < ready ; 2021-2022 ; International Journal of Knowledge Engineering and Data Mining Volume 7 ; 7 ; https://www.inderscienceonline.com/ >
+      au < ready ; 2023 ; International Journal of Knowledge Engineering and Data Mining Volume 8 [partial] ; 8 ; https://www.inderscienceonline.com/ > #issue 2, 3 ,4 not online
 
     }
 
@@ -7562,7 +7562,7 @@
       au < released ; 2014-2015 ; International Journal of Mechanisms and Robotic Systems Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
       au < released ; 2016 ; International Journal of Mechanisms and Robotic Systems Volume 3 ; 3 ; http://www.inderscienceonline.com/ >
       au < released ; 2017-2018 ; International Journal of Mechanisms and Robotic Systems Volume 4 ; 4 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2021-2023 ; International Journal of Mechanisms and Robotic Systems Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
+      au < ready ; 2021-2023 ; International Journal of Mechanisms and Robotic Systems Volume 5 ; 5 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -8325,7 +8325,7 @@
       au < doNotProcess ; 2008-2009 ; International Journal of Nuclear Governance, Economy and Ecology Volume 2 ; 2 ; https://www.inderscienceonline.com/ >
       au < doNotProcess ; 2010-2012 ; International Journal of Nuclear Governance, Economy and Ecology Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
       au < released ; 2013-2019 ; International Journal of Nuclear Governance, Economy and Ecology Volume 4 ; 4 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2021 ; International Journal of Nuclear Governance, Economy and Ecology Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ >
+      au < ready ; 2021 ; International Journal of Nuclear Governance, Economy and Ecology Volume 5 [partial] ; 5 ; https://www.inderscienceonline.com/ >
 
     }
 
@@ -9566,7 +9566,7 @@
       au < released ; 2013-2014 ; International Journal of Service and Computing Oriented Manufacturing Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
       au < released ; 2016 ; International Journal of Service and Computing Oriented Manufacturing Volume 2 ; 2 ; http://www.inderscienceonline.com/ >
       au < released ; 2017-2018 ; International Journal of Service and Computing Oriented Manufacturing Volume 3 ; 3 ; https://www.inderscienceonline.com/ >
-      au < manifest ; 2021-2023 ; International Journal of Service and Computing Oriented Manufacturing Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ > #issue 3 ,4 not online
+      au < ready ; 2021-2023 ; International Journal of Service and Computing Oriented Manufacturing Volume 4 [partial] ; 4 ; https://www.inderscienceonline.com/ > #issue 3 ,4 not online
 
     }
 
@@ -11849,7 +11849,7 @@
       param[journal_id] = lrj
 
       au < released ; 2015-2018 ; Luxury Research Journal Volume 1 ; 1 ; http://www.inderscienceonline.com/ >
-      au < manifest ; 2021 ; Luxury Research Journal Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
+      au < ready ; 2021 ; Luxury Research Journal Volume 2 [partial] ; 2 ; https://www.inderscienceonline.com/ > #issue 3, 4 not online
 
     }
 

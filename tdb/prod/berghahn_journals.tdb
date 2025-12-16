@@ -336,12 +336,12 @@
       au < manifest ; 2000 ; Critical Survey Volume 12 ; 12 >
       au < manifest ; 2001 ; Critical Survey Volume 13 ; 13 >
       au < manifest ; 2002 ; Critical Survey Volume 14 ; 14 >
-      au < manifest ; 2003 ; Critical Survey Volume 15 ; 15 >
-      au < manifest ; 2004 ; Critical Survey Volume 16 ; 16 >
-      au < manifest ; 2005 ; Critical Survey Volume 17 ; 17 >
+      au < ready ; 2003 ; Critical Survey Volume 15 ; 15 >
+      au < ready ; 2004 ; Critical Survey Volume 16 ; 16 >
+      au < ready ; 2005 ; Critical Survey Volume 17 ; 17 >
       au < manifest ; 2006 ; Critical Survey Volume 18 ; 18 >
-      au < manifest ; 2007 ; Critical Survey Volume 19 ; 19 >
-      au < manifest ; 2008 ; Critical Survey Volume 20 ; 20 >
+      au < ready ; 2007 ; Critical Survey Volume 19 ; 19 >
+      au < ready ; 2008 ; Critical Survey Volume 20 ; 20 >
       au < manifest ; 2009 ; Critical Survey Volume 21 ; 21 >
       au < released ; 2010 ; Critical Survey Volume 22 ; 22 >
       au < released ; 2011 ; Critical Survey Volume 23 ; 23 >
@@ -782,7 +782,7 @@
     au < manifest ; 2006 ; Italian Politics Volume 21 ; 21 >
     au < manifest ; 2007 ; Italian Politics Volume 22 ; 22 >
     au < manifest ; 2008 ; Italian Politics Volume 23 ; 23 >
-    au < manifest ; 2009 ; Italian Politics Volume 24 ; 24 >
+    au < ready ; 2009 ; Italian Politics Volume 24 ; 24 >
     au < released ; 2010 ; Italian Politics Volume 25 ; 25 >
     au < released ; 2011 ; Italian Politics Volume 26 ; 26 >
     au < doNotProcess ; 2012 ; Italian Politics Volume 27 ; 27 >
