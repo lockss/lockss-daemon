@@ -7421,7 +7421,6 @@
       issnl = 2054-6238
     >
     param[journal_id] = jeas
-    {
     comment[journal_issn] = 2054-6238
 
     au < doNotProcess ; 2003 ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
@@ -7439,41 +7438,15 @@
     au < doNotProcess ; 2015 ; 2015 ; Journal of Economic and Administrative Sciences Volume 31 ; 31 >
     au < doNotProcess ; 2016 ; 2016 ; Journal of Economic and Administrative Sciences Volume 32 ; 32 >
     au < doNotProcess ; 2017 ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 >
-    au < exists ; 2018 ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 >
-    au < exists ; 2019 ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 >
-    au < doNotProcess ; 2020 ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 >
-    au < exists ; 2021 ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 >
-    au < doNotProcess ; 2022 ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 >
+    au < manifest ; 2018 ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 >
+    au < manifest ; 2019 ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 >
+    au < exists ; 2020 ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 >
+    au < manifest ; 2021 ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 >
+    au < exists ; 2022 ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 >
     au < manifest ; 2025 ; 2025 ; Journal of Economic and Administrative Sciences Volume 41 ; 41 >
-    }
-    {
-    comment[journal_issn] = 1026-4116
 
-    au < doNotProcess ; 2003 ; 2003 ; Journal of Economic and Administrative Sciences Volume 19 ; 19 >
-    au < doNotProcess ; 2004 ; 2004 ; Journal of Economic and Administrative Sciences Volume 20 ; 20 >
-    au < doNotProcess ; 2005 ; 2005 ; Journal of Economic and Administrative Sciences Volume 21 ; 21 >
-    au < doNotProcess ; 2006 ; 2006 ; Journal of Economic and Administrative Sciences Volume 22 ; 22 >
-    au < doNotProcess ; 2007 ; 2007 ; Journal of Economic and Administrative Sciences Volume 23 ; 23 >
-    au < doNotProcess ; 2008 ; 2008 ; Journal of Economic and Administrative Sciences Volume 24 ; 24 >
-    au < doNotProcess ; 2009 ; 2009 ; Journal of Economic and Administrative Sciences Volume 25 ; 25 >
-    au < doNotProcess ; 2010 ; 2010 ; Journal of Economic and Administrative Sciences Volume 26 ; 26 >
-    au < doNotProcess ; 2011 ; 2011 ; Journal of Economic and Administrative Sciences Volume 27 ; 27 >
-    au < doNotProcess ; 2012 ; 2012 ; Journal of Economic and Administrative Sciences Volume 28 ; 28 >
-    au < doNotProcess ; 2013 ; 2013 ; Journal of Economic and Administrative Sciences Volume 29 ; 29 >
-    au < doNotProcess ; 2014 ; 2014 ; Journal of Economic and Administrative Sciences Volume 30 ; 30 >
-    au < doNotProcess ; 2015 ; 2015 ; Journal of Economic and Administrative Sciences Volume 31 ; 31 >
-    au < doNotProcess ; 2016 ; 2016 ; Journal of Economic and Administrative Sciences Volume 32 ; 32 >
-    au < doNotProcess ; 2017 ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 >
-    au < manifest ; 2018 ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 >
-    au < manifest ; 2019 ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 >
-    au < manifest ; 2020 ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 >
-    au < manifest ; 2021 ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 >
-    au < manifest ; 2022 ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 >
-    au < doNotProcess ; 2023 ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 >
-    au < doNotProcess ; 2024 ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 >
-    }
   }
 
   {
@@ -14790,6 +14763,8 @@
     >
 
     comment[journal_issn] = 2053-535X
+    param[journal_id] = jme
+    #continues = 1750-497X
 
     au < doNotProcess ; 2014 ; 2014 ; Journal for Multicultural Education Volume 8 ; 8 >
     au < doNotProcess ; 2015 ; 2015 ; Journal for Multicultural Education Volume 9 ; 9 >
@@ -14816,6 +14791,7 @@
     >
 
     comment[journal_issn] = 2516-7480
+    param[journal_id] = jcmars
 
     au < doNotProcess ; 2018 ; 2018 ; Journal of Contemporary Marketing Science Volume 1 ; 1 >
     au < doNotProcess ; 2019 ; 2019 ; Journal of Contemporary Marketing Science Volume 2 ; 2 >
@@ -14838,6 +14814,7 @@
     >
 
     comment[journal_issn] = 2056-3841
+    param[journal_id] = jcrpp
 
     au < doNotProcess ; 2015 ; 2015 ; Journal of Criminological Research, Policy and Practice Volume 1 ; 1 >
     au < doNotProcess ; 2016 ; 2016 ; Journal of Criminological Research, Policy and Practice Volume 2 ; 2 >
@@ -14863,6 +14840,8 @@
     >
 
     comment[journal_issn] = 2053-4604
+    param[journal_id] = jeee
+    #continues = 1756-1396
 
     au < doNotProcess ; 2014 ; 2014 ; Journal of Entrepreneurship in Emerging Economies Volume 6 ; 6 >
     au < doNotProcess ; 2015 ; 2015 ; Journal of Entrepreneurship in Emerging Economies Volume 7 ; 7 >
@@ -14889,6 +14868,7 @@
     >
 
     comment[journal_issn] = 2049-8799
+    param[journal_id] = jgm
 
     au < doNotProcess ; 2013 ; 2013 ; Journal of Global Mobility Volume 1 ; 1 >
     au < doNotProcess ; 2014 ; 2014 ; Journal of Global Mobility Volume 2 ; 2 >
@@ -14916,6 +14896,7 @@
     >
 
     comment[journal_issn] = 2514-9792
+    param[journal_id] = jhti
 
     au < doNotProcess ; 2018 ; 2018 ; Journal of Hospitality and Tourism Insights Volume 1 ; 1 >
     au < doNotProcess ; 2019 ; 2019 ; Journal of Hospitality and Tourism Insights Volume 2 ; 2 >
@@ -14938,6 +14919,8 @@
     >
 
     comment[journal_issn] = 2050-8824
+    param[journal_id] = jidob
+    #continues = 2042-0927
 
     au < doNotProcess ; 2013 ; 2013 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 4 ; 4 >
     au < doNotProcess ; 2014 ; 2014 ; Journal of Intellectual Disabilities and Offending Behaviour Volume 5 ; 5 >
@@ -14965,6 +14948,7 @@
     >
 
     comment[journal_issn] = 2051-6614
+    param[journal_id] = joepp
 
     au < doNotProcess ; 2014 ; 2014 ; Journal of Organizational Effectiveness: People and Performance Volume 1 ; 1 >
     au < doNotProcess ; 2015 ; 2015 ; Journal of Organizational Effectiveness: People and Performance Volume 2 ; 2 >
@@ -14991,6 +14975,7 @@
     >
 
     comment[journal_issn] = 2514-7641
+    param[journal_id] = jpeo
 
     au < doNotProcess ; 2018 ; 2018 ; Journal of Participation and Employee Ownership Volume 1 ; 1 >
     au < doNotProcess ; 2019 ; 2019 ; Journal of Participation and Employee Ownership Volume 2 ; 2 >
@@ -15013,6 +14998,7 @@
     >
 
     comment[journal_issn] = 2056-9548
+    param[journal_id] = jpcc
 
     au < doNotProcess ; 2016 ; 2016 ; Journal of Professional Capital and Community Volume 1 ; 1 >
     au < doNotProcess ; 2017 ; 2017 ; Journal of Professional Capital and Community Volume 2 ; 2 >
@@ -15037,6 +15023,7 @@
     >
 
     comment[journal_issn] = 1096-3367
+    param[journal_id] = jpbafm
 
     au < exists ; 1994 ; 1994 ; Journal of Public Budgeting, Accounting & Financial Management Volume 6 ; 6 >
     au < exists ; 1995 ; 1995 ; Journal of Public Budgeting, Accounting & Financial Management Volume 7 ; 7 >
@@ -15083,6 +15070,7 @@
     >
 
     comment[journal_issn] = 1535-0118
+    param[journal_id] = jopp
 
     au < doNotProcess ; 2001 ; 2001 ; Journal of Public Procurement Volume 1 ; 1 >
     au < doNotProcess ; 2002 ; 2002 ; Journal of Public Procurement Volume 2 ; 2 >
@@ -15122,6 +15110,8 @@
     >
 
     comment[journal_issn] = 2053-4620
+    param[journal_id] = jstpm
+    #continues = 1758-552X
 
     au < doNotProcess ; 2014 ; 2014 ; Journal of Science and Technology Policy Management Volume 5 ; 5 >
     au < doNotProcess ; 2015 ; 2015 ; Journal of Science and Technology Policy Management Volume 6 ; 6 >
@@ -16491,19 +16481,7 @@
       eissn = 2444-9709
     >
 
-    {
-    comment[journal_issn] = 2444-9709
-
-    au < doNotProcess ; 2018 ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 >
-    au < doNotProcess ; 2019 ; 2019 ; Spanish Journal of Marketing - ESIC Volume 23 ; 23 >
-    au < doNotProcess ; 2020 ; 2020 ; Spanish Journal of Marketing - ESIC Volume 24 ; 24 >
-    au < doNotProcess ; 2021 ; 2021 ; Spanish Journal of Marketing - ESIC Volume 25 ; 25 >
-    au < doNotProcess ; 2022 ; 2022 ; Spanish Journal of Marketing - ESIC Volume 26 ; 26 >
-    au < doNotProcess ; 2023 ; 2023 ; Spanish Journal of Marketing - ESIC Volume 27 ; 27 >
-    au < doNotProcess ; 2024 ; 2024 ; Spanish Journal of Marketing - ESIC Volume 28 ; 28 >
-    au < exists ; 2025 ; 2025 ; Spanish Journal of Marketing - ESIC Volume 29 ; 29 >
-    }
-    {
+    param[journal_id] = sjme
     comment[journal_issn] = 2444-9695
 
     au < exists ; 2018 ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 >
@@ -16514,7 +16492,6 @@
     au < doNotProcess ; 2023 ; 2023 ; Spanish Journal of Marketing - ESIC Volume 27 ; 27 >
     au < doNotProcess ; 2024 ; 2024 ; Spanish Journal of Marketing - ESIC Volume 28 ; 28 >
     au < exists ; 2025 ; 2025 ; Spanish Journal of Marketing - ESIC Volume 29 ; 29 >
-    }
   }
 
 
