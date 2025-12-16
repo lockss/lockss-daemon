@@ -23,9 +23,9 @@
       param[journal_abbr] = aebj
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-      au < deepCrawl ; exists ; 2022 ; Arab Economic and Business Journal (AEBJ) Volume 14 ; 14 ; >
-      au < deepCrawl ; exists ; 2023 ; Arab Economic and Business Journal (AEBJ) Volume 15 ; 15 ; >
-      au < deepCrawl ; exists ; 2024 ; Arab Economic and Business Journal (AEBJ) Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2022 ; Arab Economic and Business Journal (AEBJ) Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2023 ; Arab Economic and Business Journal (AEBJ) Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2024 ; Arab Economic and Business Journal (AEBJ) Volume 16 ; 16 ; >
       au < crawling ; exists ; 2025 ; Arab Economic and Business Journal (AEBJ) Volume 17 ; 17 ; >
 
   }
