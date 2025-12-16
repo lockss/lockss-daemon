@@ -3921,6 +3921,7 @@
     title <
       name = Office Technology and People ;
       issn = 0167-5710 ;
+      eissn = 3050-6182 ;
       issnl = 0167-5710
     >
 
@@ -5118,6 +5119,7 @@
     title <
       name = Journal of Property, Planning and Environmental Law ;
       issn = 2514-9407 ;
+      eissn = 2514-9415 ;
       issnl = 2514-9407
     >
 
@@ -5166,6 +5168,7 @@
     title <
       name = International Journal of Public Leadership ;
       issn = 2056-4929 ;
+      eissn = 2056-4937 ;
       issnl = 2056-4929
     >
 
@@ -5396,7 +5399,8 @@
   {
     title <
       name = International Journal of Mentoring and Coaching in Education ;
-      issn = 2046-6854
+      issn = 2046-6854 ;
+      eissn = 2046-6862
     >
 
     comment[journal_issn] = 2046-6854
@@ -5570,6 +5574,7 @@
     title <
       name = International Journal of Organizational Analysis ;
       issn = 1055-3185 ;
+      eissn = 2576-0785 ;
       issnl = 1055-3185
     >
 
@@ -5699,6 +5704,7 @@
     title <
       name = International Journal of Physical Distribution & Logistics Management ;
       issn = 0020-7527 ;
+      eissn = 1747-3691 ;
       issnl = 0020-7527
     >
 
@@ -5720,6 +5726,7 @@
     title <
       name = International Journal of Physical Distribution & Materials Management ;
       issn = 0269-8218 ;
+      eissn = 1747-3683 ;
       issnl = 0269-8218
     >
 
@@ -5747,6 +5754,7 @@
     title <
       name = International Journal of Physical Distribution & Logistics Management ;
       issn = 0960-0035 ;
+      eissn = 1758-664X ;
       issnl = 0960-0035
     >
 
@@ -9288,6 +9296,7 @@
     title <
       name = Journal of Valuation ;
       issn = 0263-7480 ;
+      eissn = 2396-9067 ;
       issnl = 0263-7480
     >
 
@@ -9576,6 +9585,7 @@
     title <
       name = Journal of Services Marketing ;
       issn = 0887-6045 ;
+      eissn = 2054-1651 ;
       issnl = 0887-6045
     >
 
@@ -9674,6 +9684,7 @@
     title <
       name = Journal of Social Marketing ;
       issn = 2042-6763 ;
+      eissn = 2042-6771 ;
       issnl = 2042-6763
     >
 
@@ -9993,6 +10004,7 @@
     title <
       name = Leadership in Health Services ;
       issn = 1366-0756 ;
+      eissn = 2051-3135 ;
       issnl = 1366-0756
     >
 
@@ -10193,6 +10205,7 @@
     title <
       name = Library Hi Tech News ;
       issn = 0741-9058 ;
+      issn = 2054-1678 ;
       issnl = 0741-9058
     >
 
@@ -10397,6 +10410,7 @@
     title <
       name = Logistics World ;
       issn = 0953-2137 ;
+      eissn = 2396-9121 ;
       issnl = 0953-2137
     >
 
@@ -10517,6 +10531,7 @@
     title <
       name = Management Development Review ;
       issn = 0962-2519 ;
+      eissn = 1758-8219 ;
       issnl = 0962-2519
     >
 
@@ -10623,6 +10638,7 @@
     title <
       name = Management Research Review ;
       issn = 2040-8269 ;
+      eissn = 2040-8277 ;
       issnl = 2040-8269
     >
 
@@ -11282,7 +11298,8 @@
   {
     title <
       name = Multinational Business Review ;
-      issn =  1525-383X ;
+      issn = 1525-383X ;
+      eissn = 2054-1686 ;
       issnl = 1525-383X
     >
 
@@ -11574,6 +11591,7 @@
     title <
       name = OCLC Micro ;
       issn = 8756-5196 ;
+      eissn = 2377-620X ;
       issnl = 8756-5196
     >
 
@@ -11596,6 +11614,7 @@
     title <
       name = OCLC Systems & Services ;
       issn = 1065-075X ;
+      issn = 2054-1694 ;
       issnl = 1065-075X
     >
 
@@ -11700,11 +11719,12 @@
     title <
       name = Online Review ;
       issn = 0309-314X ;
+      eissn = 2396-9091 ;
       issnl = 0309-314X
     >
 
     comment[journal_issn] = 0309-314X
-    param[journal_id] = or
+    param[journal_id] = oir
     #continued_by = 1353-2642
 
     au < exists ; 1977 ; 1977 ; Online Review Volume 1 ; 1 >
@@ -11730,11 +11750,12 @@
     title <
       name = Online and CD-Rom Review ;
       issn = 1353-2642 ;
+      eissn = 2396-9105 ;
       issnl = 1353-2642
     >
 
     comment[journal_issn] = 1353-2642
-    param[journal_id] = ocrr
+    param[journal_id] = oir
     #continues = 0309-314X
     #continued_by = 1468-4527
 
@@ -11835,12 +11856,13 @@
   {
     title <
       name = Participation and Empowerment: An International Journal ;
-      issn = 1463-4449
+      eissn = 1463-4449
     >
 
     comment[journal_issn] = 1463-4449
     param[journal_id] = pe
     # online from 1999
+    #merged_into = 0143-7739
 
     au < manifest ; 1999 ; 1999 ; Participation and Empowerment: An International Journal Volume 7 ; 7 >
 
@@ -12027,11 +12049,12 @@
     title <
       name = Police Studies: International Review of Police Development ;
       issn = 0141-2949 ;
+      eissn = 2054-5630 ;
       issnl = 0141-2949
     >
 
     comment[journal_issn] = 0141-2949
-    param[journal_id] = ps
+    param[journal_id] = pijpsm
     # online from 1995
     comment[continued_by] = 1363-951X
 
@@ -12748,7 +12771,7 @@
     title <
       name = Review of Behavioral Finance ;
       issn = 1940-5979 ;
-      eissn =  ;
+      eissn = 1940-5987 ;
       issnl = 1940-5979
     >
 
@@ -13249,6 +13272,7 @@
     title <
       name = Journal of Global Operations and Strategic Sourcing ;
       issn = 2398-5364 ;
+      eissn = 2398-5372 ;
       issnl = 2398-5364
     >
 
@@ -13272,11 +13296,13 @@
     title <
       name = Planning Review ;
       issn = 0094-064X ;
+      eissn = 2377-7613 ;
       issnl = 0094-064X
     >
 
     comment[journal_issn] = 0094-064X
     param[journal_id] = plr
+    # online from 1975
     #continued_by = 1087-8572
 
     au < manifest ; 1975 ; 1975 ; Planning Review Volume 3 ; 3 >
@@ -15510,6 +15536,7 @@
     >
 
     comment[journal_issn] = 2615-9821
+    param[journal_id] = ajeb
 
     au < doNotProcess ; 2020 ; 2020 ; Asian Journal of Economics and Banking Volume 4 ; 4 >
     au < doNotProcess ; 2021 ; 2021 ; Asian Journal of Economics and Banking Volume 5 ; 5 >
@@ -15529,6 +15556,7 @@
     >
 
     comment[journal_issn] = 2516-1652
+    param[journal_id] = cpe
 
     au < doNotProcess ; 2018 ; 2018 ; China Political Economy Volume 1 ; 1 >
     au < doNotProcess ; 2019 ; 2019 ; China Political Economy Volume 2 ; 2 >
@@ -15551,6 +15579,7 @@
     >
 
     comment[journal_issn] = 2633-4062
+    param[journal_id] = efcc
 
     au < doNotProcess ; 2020 ; 2020 ; Ecofeminism and Climate Change Volume 1 ; 1 >
     au < doNotProcess ; 2021 ; 2021 ; Ecofeminism and Climate Change Volume 2 ; 2 >
@@ -15568,6 +15597,7 @@
     >
 
     comment[journal_issn] = 2444-8494
+    param[journal_id] = ejmbe
 
     au < doNotProcess ; 2017 ; 2017 ; European Journal of Management & Business Economics Volume 26 ; 26 >
     au < doNotProcess ; 2018 ; 2018 ; European Journal of Management & Business Economics Volume 27 ; 27 >
@@ -15590,6 +15620,7 @@
     >
 
     comment[journal_issn] = 2631-3030
+    param[journal_id] = fer
 
     au < doNotProcess ; 2019 ; 2019 ; Forest Economic Review Volume 1 ; 1 >
     au < doNotProcess ; 2020 ; 2020 ; Forest Economic Review Volume 2 ; 2 >
@@ -15611,6 +15642,7 @@
     >
 
     comment[journal_issn] = 2514-5789
+    param[journal_id] = heed
 
     au < doNotProcess ; 2017 ; 2017 ; Higher Education Evaluation and Development Volume 11 ; 11 >
     au < doNotProcess ; 2018 ; 2018 ; Higher Education Evaluation and Development Volume 12 ; 12 >
@@ -15634,6 +15666,7 @@
     >
 
     comment[journal_issn] = 2515-8961
+    param[journal_id] = inmr
 
     au < doNotProcess ; 2018 ; 2018 ; Innovation & Management Review Volume 15 ; 15 >
     au < doNotProcess ; 2019 ; 2019 ; Innovation & Management Review Volume 16 ; 16 >
@@ -15655,6 +15688,7 @@
     >
 
     comment[journal_issn] = 2516-8142
+    param[journal_id] = ihr
 
     au < doNotProcess ; 2018 ; 2018 ; International Hospitality Review Volume 32 ; 32 >
     au < doNotProcess ; 2019 ; 2019 ; International Hospitality Review Volume 33 ; 33 >
@@ -15677,6 +15711,7 @@
     >
 
     comment[journal_issn] = 2398-7294
+    param[journal_id] = ijcs
     #Moved to Tsinghua University Press
 
     au < doNotProcess ; 2017 ; 2017 ; International Journal of Crowd Science Volume 1 ; 1 >
@@ -15696,6 +15731,7 @@
     >
 
     comment[journal_issn] = 2516-4392
+    param[journal_id] = ijdig
 
     au < doNotProcess ; 2021 ; 2021 ; International Journal of Disruptive Innovation in Government Volume 1 ; 1 >
 
@@ -15710,6 +15746,7 @@
     >
 
     comment[journal_issn] = 2516-4384
+    param[journal_id] = ijeg
 
     au < doNotProcess ; 2019 ; 2019 ; International Journal of Excellence in Government Volume 1 ; 1 >
     au < doNotProcess ; 2021 ; 2021 ; International Journal of Excellence in Government Volume 2 ; 2 >
@@ -15725,6 +15762,7 @@
     >
 
     comment[journal_issn] = 2586-3932
+    param[journal_id] = itpd
 
     au < doNotProcess ; 2019 ; 2019 ; International Trade, Politics and Development Volume 3 ; 3 >
     au < doNotProcess ; 2020 ; 2020 ; International Trade, Politics and Development Volume 4 ; 4 >
@@ -15746,6 +15784,7 @@
     >
 
     comment[journal_issn] = 2398-8819
+    param[journal_id] = ijot
 
     au < doNotProcess ; 2017 ; 2017 ; Irish Journal of Occupational Therapy Volume 45 ; 45 >
     au < doNotProcess ; 2018 ; 2018 ; Irish Journal of Occupational Therapy Volume 46 ; 46 >
@@ -15769,6 +15808,7 @@
     >
 
     comment[journal_issn] = 1319-1616
+    param[journal_id] = ies
 
     au < doNotProcess ; 2019 ; 2019 ; Islamic Economic Studies Volume 27 ; 27 >
     au < doNotProcess ; 2020 ; 2020 ; Islamic Economic Studies Volume 28 ; 28 >
@@ -15790,6 +15830,7 @@
     >
 
     comment[journal_issn] = 2289-4365
+    param[journal_id] = ijif
 
     au < doNotProcess ; 2017 ; 2017 ; ISRA  International Journal of Islamic Finance Volume 9 ; 9 >
     au < doNotProcess ; 2018 ; 2018 ; ISRA  International Journal of Islamic Finance Volume 10 ; 10 >
@@ -15809,6 +15850,7 @@
     >
 
     comment[journal_issn] = 2515-964X
+    param[journal_id] = jabes
 
     au < doNotProcess ; 2018 ; 2018 ; Journal of Asian Business Economics Studies Volume 25 ; 25 >
     au < doNotProcess ; 2019 ; 2019 ; Journal of Asian Business Economics Studies Volume 26 ; 26 >
@@ -15831,6 +15873,7 @@
     >
 
     comment[journal_issn] = 2635-1374
+    param[journal_id] = jbsed
 
     au < doNotProcess ; 2021 ; 2021 ; Journal of Business and Socio-economic Development Volume 1 ; 1 >
     au < doNotProcess ; 2022 ; 2022 ; Journal of Business and Socio-economic Development Volume 2 ; 2 >
@@ -15849,6 +15892,7 @@
     >
 
     comment[journal_issn] = 2514-4774
+    param[journal_id] = jcms
 
     au < doNotProcess ; 2017 ; 2017 ; Journal of Capital Markets Studies Volume 1 ; 1 >
     au < doNotProcess ; 2018 ; 2018 ; Journal of Capital Markets Studies Volume 2 ; 2 >
@@ -15872,6 +15916,7 @@
     >
 
     comment[journal_issn] = 1851-6599
+    param[journal_id] = jcc
 
     au < doNotProcess ; 2015 ; 2015 ; Journal of Centrum Catherdra Volume 8 ; 8 >
     au < doNotProcess ; 2016 ; 2016 ; Journal of Centrum Catherdra Volume 9 ; 9 >
@@ -15889,6 +15934,7 @@
     >
 
     comment[journal_issn] = 2399-6439
+    param[journal_id] = jdal
 
     au < doNotProcess ; 2017 ; 2017 ; Journal of Defense Analytics & Logistics Volume 1 ; 1 >
     au < doNotProcess ; 2018 ; 2018 ; Journal of Defense Analytics & Logistics Volume 2 ; 2 >
@@ -15912,6 +15958,7 @@
     >
 
     comment[journal_issn] = 1229-988X
+    param[journal_id] = jdqs
     #No pdfs till V28
 
     au < doNotProcess ; 2002 ; 2002 ; Journal of Derivatives and Quantitative Studies Volume 10 ; 10 >
@@ -15951,6 +15998,7 @@
     >
 
     comment[journal_issn] = 2218-0648
+    param[journal_id] = jefas
 
     au < doNotProcess ; 2017 ; 2017 ; Journal of Economics, Finance and Administrative Science Volume 22 ; 22 >
     au < doNotProcess ; 2018 ; 2018 ; Journal of Economics, Finance and Administrative Science Volume 23 ; 23 >
@@ -15974,6 +16022,7 @@
     >
 
     comment[journal_issn] = 2633-7436
+    param[journal_id] = jeet
 
     au < doNotProcess ; 2021 ; 2021 ; Journal of Ethics, Entrepreneurship and Technology Volume 1 ; 1 >
     au < doNotProcess ; 2022 ; 2022 ; Journal of Ethics, Entrepreneurship and Technology Volume 2 ; 2 >
@@ -15993,6 +16042,8 @@
     >
 
     comment[journal_issn] = 2586-940X
+    param[journal_id] = jhr
+    #move to BePress, 2023
 
     au < doNotProcess ; 2018 ; 2018 ; Journal of Health Research Volume 32 ; 32 >
     au < doNotProcess ; 2019 ; 2019 ; Journal of Health Research Volume 33 ; 33 >
@@ -16012,6 +16063,7 @@
     >
 
     comment[journal_issn] = 2632-279X
+    param[journal_id] = jhass
 
     au < doNotProcess ; 2019 ; 2019 ; Journal of Humanities and Applied Social Sciences Volume 1 ; 1 >
     au < doNotProcess ; 2020 ; 2020 ; Journal of Humanities and Applied Social Sciences Volume 2 ; 2 >
@@ -16032,6 +16084,7 @@
     >
 
     comment[journal_issn] = 2631-357X
+    param[journal_id] = jiuc
 
     au < doNotProcess ; 2019 ; 2019 ; Journal of Industry-University Collaboration Volume 1 ; 1 >
     au < doNotProcess ; 2020 ; 2020 ; Journal of Industry-University Collaboration Volume 2 ; 2 >
@@ -16048,6 +16101,7 @@
     >
 
     comment[journal_issn] = 2399-9802
+    param[journal_id] = jicv
 
     au < doNotProcess ; 2018 ; 2018 ; Journal of Intelligent and Connected Vehicles Volume 1 ; 1 >
     au < doNotProcess ; 2019 ; 2019 ; Journal of Intelligent and Connected Vehicles Volume 2 ; 2 >
@@ -16067,6 +16121,7 @@
     >
 
     comment[journal_issn] = 2633-6596
+    param[journal_id] = jimse
 
     au < doNotProcess ; 2020 ; 2020 ; Journal of Intelligent Manufacturing and Special Equipment Volume 1 ; 1 >
     au < doNotProcess ; 2021 ; 2021 ; Journal of Intelligent Manufacturing and Special Equipment Volume 2 ; 2 >
@@ -16086,6 +16141,7 @@
     >
 
     comment[journal_issn] = 2397-7604
+    param[journal_id] = jrit
 
     au < doNotProcess ; 2017 ; 2017 ; Journal of Research in Innovative Teaching & Learning Volume 10 ; 10 >
     au < doNotProcess ; 2018 ; 2018 ; Journal of Research in Innovative Teaching & Learning Volume 11 ; 11 >
@@ -16109,6 +16165,7 @@
     >
 
     comment[journal_issn] = 2254-0644
+    param[journal_id] = jta
 
     au < doNotProcess ; 2018 ; 2018 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 25 ; 25 >
     au < doNotProcess ; 2019 ; 2019 ; Journal of Tourism Analysis: Revista de Análisis Turístico Volume 26 ; 26 >
@@ -16126,6 +16183,7 @@
     >
 
     comment[journal_issn] = 2055-5911
+    param[journal_id] = jtf
 
     au < doNotProcess ; 2015 ; 2015 ; Journal of Tourism Futures Volume 1 ; 1 >
     au < doNotProcess ; 2016 ; 2016 ; Journal of Tourism Futures Volume 2 ; 2 >
@@ -16504,6 +16562,7 @@
     >
 
     comment[journal_issn] = 2633-1225
+    param[journal_id] = trc
 
     au < doNotProcess ; 2020 ; 2020 ; Tourism Critiques Volume 1 ; 1 >
     au < doNotProcess ; 2021 ; 2021 ; Tourism Critiques Volume 2 ; 2 >
@@ -16524,6 +16583,7 @@
     >
 
     comment[journal_issn] = 0973-1954
+    param[journal_id] = xjm
 
     au < doNotProcess ; 2020 ; 2020 ; VILAKSHAN - XIMB Journal of Management Volume 17 ; 17 >
     au < doNotProcess ; 2021 ; 2021 ; VILAKSHAN - XIMB Journal of Management Volume 18 ; 18 >
@@ -16539,10 +16599,11 @@
 
     title <
       name = Learning and Teaching in Higher Education: Gulf Perspectives ;
-        issn = 2077-5504
+      eissn = 2077-5504
     >
 
     comment[journal_issn] = 2077-5504
+    param[journal_id] = lthe
 
     au < doNotProcess ; 2004 ; 2004 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 1 ; 1 >
     au < doNotProcess ; 2005 ; 2005 ; Learning and Teaching in Higher Education: Gulf Perspectives Volume 2 ; 2 >
@@ -16575,6 +16636,7 @@
     >
 
     comment[journal_issn] = 2634-1964
+    param[journal_id] = aci
 
     au < doNotProcess ; 2020 ; 2020 ; Applied Computing and Informatics Volume 16 ; 16 >
     au < doNotProcess ; 2021 ; 2021 ; Applied Computing and Informatics Volume 17 ; 17 >
@@ -16595,6 +16657,7 @@
     >
 
     comment[journal_issn] = 1319-5166
+    param[journal_id] = ajms
 
     au < doNotProcess ; 2020 ; 2020 ; Arab Journal of Mathematical Sciences Volume 26 ; 26 >
     au < doNotProcess ; 2021 ; 2021 ; Arab Journal of Mathematical Sciences Volume 27 ; 27 >
@@ -16614,6 +16677,7 @@
     >
 
     comment[journal_issn] = 2752-6666
+    param[journal_id] = cbth
 
     au < doNotProcess ; 2022 ; 2022 ; Consumer Behavior in Tourism and Hospitality Volume 17 ; 17 >
     au < doNotProcess ; 2023 ; 2023 ; Consumer Behavior in Tourism and Hospitality Volume 18 ; 18 >
@@ -16631,6 +16695,7 @@
     >
 
     comment[journal_issn] = 2752-6739
+    param[journal_id] = dhs
 
     au < doNotProcess ; 2022 ; 2022 ; Drugs, Habits and Social Policy Volume 23 ; 23 >
     au < doNotProcess ; 2023 ; 2023 ; Drugs, Habits and Social Policy Volume 24 ; 24 >
@@ -16648,6 +16713,7 @@
     >
 
     comment[journal_issn] = 2754-1312
+    param[journal_id] = techs
 
     au < doNotProcess ; 2022 ; 2022 ; Drugs, Habits and Social Policy Volume 1 ; 1 >
     au < doNotProcess ; 2023 ; 2023 ; Drugs, Habits and Social Policy Volume 2 ; 2 >
@@ -16666,6 +16732,7 @@
     >
 
     comment[journal_issn] = 2631-6862
+    param[journal_id] = arch
 
 #Back content from external links.
 #    au < exists ; 2007 ; 2007 ; Archnet-IJAR Volume 1 ; 1 >
