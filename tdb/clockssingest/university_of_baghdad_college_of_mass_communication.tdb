@@ -22,10 +22,10 @@
       param[base_url] = https://abaa.uobaghdad.edu.iq/
       param[journal_id] = abaa
 
-      au < testing ; exists ; 2005 ; Al-Bahith Al-A'alami Journal Volume 2005 ; 2005 ; 2005 ; >
-      au < testing ; exists ; 2006 ; Al-Bahith Al-A'alami Journal Volume 2006 ; 2006 ; 2006 ; >
-      au < testing ; exists ; 2007 ; Al-Bahith Al-A'alami Journal Volume 2007 ; 2007 ; 2007 ; >
-      au < testing ; exists ; 2008 ; Al-Bahith Al-A'alami Journal Volume 2008 ; 2008 ; 2008 ; >
+      au < ready ; exists ; 2005 ; Al-Bahith Al-A'alami Journal Volume 2005 ; 2005 ; 2005 ; >
+      au < ready ; exists ; 2006 ; Al-Bahith Al-A'alami Journal Volume 2006 ; 2006 ; 2006 ; >
+      au < ready ; exists ; 2007 ; Al-Bahith Al-A'alami Journal Volume 2007 ; 2007 ; 2007 ; >
+      au < ready ; exists ; 2008 ; Al-Bahith Al-A'alami Journal Volume 2008 ; 2008 ; 2008 ; >
       au < notReady ; exists ; 2012 ; Al-Bahith Al-A'alami Journal Volume 4 ; 4 ; 2012 ; > #Redirect to login page: https://abaa.uobaghdad.edu.iq/index.php/abaa/login?source=%2Findex.php%2Fabaa%2Fissue%2Fview%2F48 Redirect from https://abaa.uobaghdad.edu.iq/index.php/abaa/issue/view/48
       au < notReady ; exists ; 2013 ; Al-Bahith Al-A'alami Journal Volume 5 ; 5 ; 2013 ; > #Redirect to login page: https://abaa.uobaghdad.edu.iq/index.php/abaa/login?source=%2Findex.php%2Fabaa%2Fissue%2Fview%2F51 Redirect from https://abaa.uobaghdad.edu.iq/index.php/abaa/issue/view/51
       au < frozen ; exists ; 2014 ; Al-Bahith Al-A'alami Journal Volume 6 ; 6 ; 2014 ; >

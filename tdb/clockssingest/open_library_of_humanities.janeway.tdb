@@ -47,13 +47,13 @@
 
       param[base_url] = https://orbit.openlibhums.org/
 
-      au < testing ; exists ; 2012 ; 1 ; Orbit: A Journal of American Literature Volume 2012 ; 2012 ; >
-      au < testing ; exists ; 2013 ; 2 ; Orbit: A Journal of American Literature Volume 2013 ; 2013 ; >
-      au < testing ; exists ; 2014 ; 3 ; Orbit: A Journal of American Literature Volume 2014 ; 2014 ; >
-      au < testing ; exists ; 2015 ; 4 ; Orbit: A Journal of American Literature Volume 2015 ; 2015 ; >
-      au < testing ; exists ; 2016 ; 5 ; Orbit: A Journal of American Literature Volume 2016 ; 2016 ; >
-      au < manifest ; exists ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 ; >
-      au < manifest ; exists ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 ; >
+      au < ready ; exists ; 2012 ; 1 ; Orbit: A Journal of American Literature Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2013 ; 2 ; Orbit: A Journal of American Literature Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2014 ; 3 ; Orbit: A Journal of American Literature Volume 2014 ; 2014 ; >
+      au < ready ; exists ; 2015 ; 4 ; Orbit: A Journal of American Literature Volume 2015 ; 2015 ; >
+      au < ready ; exists ; 2016 ; 5 ; Orbit: A Journal of American Literature Volume 2016 ; 2016 ; >
+      au < ready ; exists ; 2017 ; 6 ; Orbit: A Journal of American Literature Volume 2017 ; 2017 ; >
+      au < ready ; exists ; 2018 ; 7 ; Orbit: A Journal of American Literature Volume 2018 ; 2018 ; >
       au < finished ; crawling ; 2019 ; 8 ; Orbit: A Journal of American Literature Volume 2019 ; 2019 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2020 ; 9 ; Orbit: A Journal of American Literature Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 10 ; Orbit: A Journal of American Literature Volume 2021 ; 2021 ; reingest5.clockss.org:8082 >
@@ -99,7 +99,7 @@
       au < doNotProcess ; exists ; 2003 ; 52-53 ; Pynchon Notes Issue 52-53 ; 2003 ; >
       au < doNotProcess ; exists ; 2008 ; 54-55 ; Pynchon Notes Issue 54-55 ; 2008 ; >
 
-      au < testing ; exists ; 2011 ; 56-57 ; Pynchon Notes Issue 56-57 ; 2011 ; >
+      au < ready ; exists ; 2011 ; 56-57 ; Pynchon Notes Issue 56-57 ; 2011 ; >
 
   }
 
@@ -112,9 +112,9 @@
 
       param[base_url] = https://c21.openlibhums.org/
 
-         au < testing ; exists ; 2016 ; 4 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; >
-         au < testing ; exists ; 2017 ; 5 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 ; >
-         au < manifest ; exists ; 2018 ; 6 ; C21 Literature: journal of 21st-century writings Volume 2018 ; 2018 ; >
+         au < ready ; exists ; 2016 ; 4 ; C21 Literature: journal of 21st-century writings Volume 2016 ; 2016 ; >
+         au < ready ; exists ; 2017 ; 5 ; C21 Literature: journal of 21st-century writings Volume 2017 ; 2017 ; >
+         au < ready ; exists ; 2018 ; 6 ; C21 Literature: journal of 21st-century writings Volume 2018 ; 2018 ; >
          au < finished ; manifest ; 2019 ; 7 ; C21 Literature: journal of 21st-century writings Volume 2019 ; 2019 ; reingest1.clockss.org:8082 >
          au < finished ; manifest ; 2020 ; 8 ; C21 Literature: journal of 21st-century writings Volume 2020 ; 2020 ; reingest2.clockss.org:8085 >
          au < finished ; manifest ; 2021 ; 9 ; C21 Literature: journal of 21st-century writings Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
@@ -134,20 +134,20 @@
 
       param[base_url] = https://19.bbk.ac.uk/
 
-        au < testing ; exists ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 1 ; 2005 ; >
-        au < testing ; exists ; 2006 ; 2-3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 2-3 ; 2006 ; >
-        au < testing ; exists ; 2007 ; 4-5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 4-5 ; 2007 ; >
-        au < testing ; exists ; 2008 ; 6-7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 6-7 ; 2008 ; >
-        au < testing ; exists ; 2009 ; 8-9 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 8-9 ; 2009 ; >
-        au < testing ; exists ; 2010 ; 10-11 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 10-11 ; 2010 ; >
-        au < testing ; exists ; 2011 ; 12-14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 12-14 ; 2011 ; >
-        au < testing ; exists ; 2012 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 15 ; 2012 ; >
-        au < testing ; exists ; 2013 ; 16-17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 16-17 ; 2013 ; >
+        au < ready ; exists ; 2005 ; 1 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 1 ; 2005 ; >
+        au < ready ; exists ; 2006 ; 2-3 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 2-3 ; 2006 ; >
+        au < ready ; exists ; 2007 ; 4-5 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 4-5 ; 2007 ; >
+        au < ready ; exists ; 2008 ; 6-7 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 6-7 ; 2008 ; >
+        au < ready ; exists ; 2009 ; 8-9 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 8-9 ; 2009 ; >
+        au < ready ; exists ; 2010 ; 10-11 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 10-11 ; 2010 ; >
+        au < ready ; exists ; 2011 ; 12-14 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 12-14 ; 2011 ; >
+        au < ready ; exists ; 2012 ; 15 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 15 ; 2012 ; >
+        au < ready ; exists ; 2013 ; 16-17 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 16-17 ; 2013 ; >
         au < testing ; exists ; 2014 ; 18-19 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 18-19 ; 2014 ; >
         au < testing ; exists ; 2015 ; 20-21 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 20-21 ; 2015 ; >
         au < testing ; exists ; 2016 ; 22-23 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 22-23 ; 2016 ; >
-        au < manifest ; exists ; 2017 ; 24-25 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 24-25 ; 2017 ; >
-        au < manifest ; exists ; 2018 ; 26-27 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 26-27 ; 2018 ; >
+        au < ready ; exists ; 2017 ; 24-25 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 24-25 ; 2017 ; >
+        au < ready ; exists ; 2018 ; 26-27 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 26-27 ; 2018 ; >
         au < finished ; manifest ; 2019 ; 28 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 28 ; 2019 ; reingest3.clockss.org:8083 >
         au < finished ; manifest ; 2020 ; 29-30 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 29-30 ; 2020 ; reingest4.clockss.org:8082 >
         au < finished ; manifest ; 2021 ; 31-32 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 31-32 ; 2021 ; reingest5.clockss.org:8082 >
