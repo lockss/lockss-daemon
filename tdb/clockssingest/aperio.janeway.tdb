@@ -51,15 +51,15 @@
         #au < doesNotExist ; doesNotExist ; 2003 ; 2003 ; 4 ; Summer Academe Volume 4 ; > #mpc can't find this
         #au < doesNotExist ; doesNotExist ; 2004 ; 2004 ; 5 ; Summer Academe Volume 5 ; > #mpc can't find this
         #au < doesNotExist ; doesNotExist ; 2009 ; 2009 ; 6 ; Summer Academe Volume 6 ; > #mpc can't find this
-        au < frozen ; exists ; 2012 ; 2012 ; 1-6 ; Summer Academe Volume 1-6 ; > #Nominally published 1996, 1997, 2000, 2003, 2004, 2009.
-        au < frozen ; exists ; 2013 ; 2013 ; 7 ; Summer Academe Volume 7 ; >
-        au < frozen ; exists ; 2015 ; 2015 ; 8-9 ; Summer Academe Volume 8-9 ; > #V8 nominally published in 2014, actually 2015
-        au < frozen ; exists ; 2016 ; 2016 ; 10 ; Summer Academe Volume 10 ; >
-        au < frozen ; exists ; 2018 ; 2018 ; 11 ; Summer Academe Volume 11 ; > #V11 nominally published in 2017, actually 2018
-        au < frozen ; exists ; 2019 ; 2019 ; 12 ; Summer Academe Volume 12 ; >
-        au < frozen ; exists ; 2020 ; 2020 ; 13 ; Summer Academe Volume 13 ; >
-        au < frozen ; exists ; 2021 ; 2021 ; 14 ; Summer Academe Volume 14 ; >
-        au < frozen ; exists ; 2022 ; 2022 ; 15 ; Summer Academe Volume 15 ; >
+        au < finished ; manifest ; 2012 ; 2012 ; 1-6 ; Summer Academe Volume 1-6 ; reingest4.clockss.org:8082 > #Nominally published 1996, 1997, 2000, 2003, 2004, 2009.
+        au < finished ; manifest ; 2013 ; 2013 ; 7 ; Summer Academe Volume 7 ; reingest5.clockss.org:8082 >
+        au < finished ; manifest ; 2015 ; 2015 ; 8-9 ; Summer Academe Volume 8-9 ; reingest1.clockss.org:8082 > #V8 nominally published in 2014, actually 2015
+        au < finished ; manifest ; 2016 ; 2016 ; 10 ; Summer Academe Volume 10 ; reingest2.clockss.org:8085 >
+        au < finished ; manifest ; 2018 ; 2018 ; 11 ; Summer Academe Volume 11 ; reingest3.clockss.org:8083 > #V11 nominally published in 2017, actually 2018
+        au < finished ; manifest ; 2019 ; 2019 ; 12 ; Summer Academe Volume 12 ; reingest4.clockss.org:8082 >
+        au < finished ; manifest ; 2020 ; 2020 ; 13 ; Summer Academe Volume 13 ; reingest5.clockss.org:8082 >
+        au < finished ; manifest ; 2021 ; 2021 ; 14 ; Summer Academe Volume 14 ; reingest1.clockss.org:8082 >
+        au < finished ; manifest ; 2022 ; 2022 ; 15 ; Summer Academe Volume 15 ; reingest2.clockss.org:8085 >
         #Nothing after 2022 as of 20240321
 
     }
@@ -74,63 +74,63 @@
 
         param[base_url] = https://essaysinhistoryjournal.com/
 
-        au < frozen ; exists ; 1954 ; 1954 ; 1  ; Essays in History Volume 1  ; > #mpc can't find this
-        au < frozen ; exists ; 1955 ; 1955 ; 2  ; Essays in History Volume 2  ; > #mpc can't find this
-        au < frozen ; exists ; 1956 ; 1956 ; 3  ; Essays in History Volume 3  ; > #mpc can't find this
-        au < frozen ; exists ; 1957 ; 1957 ; 4  ; Essays in History Volume 4  ; > #mpc can't find this
-        au < frozen ; exists ; 1959 ; 1959 ; 5  ; Essays in History Volume 5  ; > #mpc can't find this
-        au < frozen ; exists ; 1961 ; 1961 ; 6  ; Essays in History Volume 6  ; > #mpc can't find this
-        au < frozen ; exists ; 1962 ; 1962 ; 7  ; Essays in History Volume 7  ; > #mpc can't find this
-        au < frozen ; exists ; 1963 ; 1963 ; 8  ; Essays in History Volume 8  ; > #mpc can't find this
-        au < frozen ; exists ; 1964 ; 1964 ; 9  ; Essays in History Volume 9  ; > #mpc can't find this
-        au < frozen ; exists ; 1965 ; 1965 ; 10 ; Essays in History Volume 10 ; > #mpc can't find this
-        au < frozen ; exists ; 1966 ; 1966 ; 11 ; Essays in History Volume 11 ; > #mpc can't find this
-        au < frozen ; exists ; 1967 ; 1967 ; 12 ; Essays in History Volume 12 ; > #mpc can't find this
-        au < frozen ; exists ; 1968 ; 1968 ; 13 ; Essays in History Volume 13 ; > #mpc can't find this
-        au < frozen ; exists ; 1969 ; 1969 ; 14 ; Essays in History Volume 14 ; > #mpc can't find this
-        au < frozen ; exists ; 1971 ; 1971 ; 15 ; Essays in History Volume 15 ; > #mpc can't find this
-        au < frozen ; exists ; 1972 ; 1972 ; 16 ; Essays in History Volume 16 ; > #mpc can't find this
-        au < frozen ; exists ; 1973 ; 1973 ; 17 ; Essays in History Volume 17 ; > #mpc can't find this
-        au < frozen ; exists ; 1974 ; 1974 ; 18 ; Essays in History Volume 18 ; > #mpc can't find this
-        au < frozen ; exists ; 1975 ; 1975 ; 19 ; Essays in History Volume 19 ; > #mpc can't find this
-        au < frozen ; exists ; 1976 ; 1976 ; 20 ; Essays in History Volume 20 ; > #mpc can't find this
-        au < frozen ; exists ; 1977 ; 1977 ; 21 ; Essays in History Volume 21 ; > #mpc can't find this
-        au < frozen ; exists ; 1978 ; 1978 ; 22 ; Essays in History Volume 22 ; > #mpc can't find this
-        au < frozen ; exists ; 1979 ; 1979 ; 23 ; Essays in History Volume 23 ; > #mpc can't find this
-        au < frozen ; exists ; 1980 ; 1980 ; 24 ; Essays in History Volume 24 ; > #mpc can't find this
-        au < frozen ; exists ; 1981 ; 1981 ; 25 ; Essays in History Volume 25 ; > #mpc can't find this
-        au < frozen ; exists ; 1982 ; 1982 ; 26 ; Essays in History Volume 26 ; > #mpc can't find this
-        au < frozen ; exists ; 1983 ; 1983 ; 27 ; Essays in History Volume 27 ; > #mpc can't find this
-        au < frozen ; exists ; 1984 ; 1984 ; 28 ; Essays in History Volume 28 ; > #mpc can't find this
-        au < frozen ; exists ; 1985 ; 1985 ; 29 ; Essays in History Volume 29 ; > #mpc can't find this
-        au < frozen ; exists ; 1987 ; 1987 ; 30 ; Essays in History Volume 30 ; > #mpc can't find this
-        au < frozen ; exists ; 1988 ; 1988 ; 31 ; Essays in History Volume 31 ; > #mpc can't find this
-        au < frozen ; exists ; 1989 ; 1989 ; 32 ; Essays in History Volume 32 ; > #mpc can't find this
-        au < frozen ; exists ; 1990 ; 1990 ; 33 ; Essays in History Volume 33 ; > #mpc can't find this
-        au < frozen ; exists ; 1992 ; 1992 ; 34 ; Essays in History Volume 34 ; > #mpc can't find this
-        au < frozen ; exists ; 1993 ; 1993 ; 35 ; Essays in History Volume 35 ; > #mpc can't find this
-        au < frozen ; exists ; 1994 ; 1994 ; 36 ; Essays in History Volume 36 ; > #mpc can't find this
-        au < frozen ; exists ; 1995 ; 1995 ; 37 ; Essays in History Volume 37 ; > #mpc can't find this
-        au < frozen ; exists ; 1996 ; 1996 ; 38 ; Essays in History Volume 38 ; > #mpc can't find this
-        au < frozen ; exists ; 1997 ; 1997 ; 39 ; Essays in History Volume 39 ; > #mpc can't find this
-        au < frozen ; exists ; 1998 ; 1998 ; 40 ; Essays in History Volume 40 ; > #mpc can't find this
+        au < finished ; manifest ; 1954 ; 1954 ; 1  ; Essays in History Volume 1  ; reingest3.clockss.org:8083 > #mpc can't find this
+        au < finished ; manifest ; 1955 ; 1955 ; 2  ; Essays in History Volume 2  ; reingest4.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1956 ; 1956 ; 3  ; Essays in History Volume 3  ; reingest5.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1957 ; 1957 ; 4  ; Essays in History Volume 4  ; reingest1.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1959 ; 1959 ; 5  ; Essays in History Volume 5  ; reingest2.clockss.org:8085 > #mpc can't find this
+        au < finished ; manifest ; 1961 ; 1961 ; 6  ; Essays in History Volume 6  ; reingest3.clockss.org:8083 > #mpc can't find this
+        au < finished ; manifest ; 1962 ; 1962 ; 7  ; Essays in History Volume 7  ; reingest4.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1963 ; 1963 ; 8  ; Essays in History Volume 8  ; reingest5.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1964 ; 1964 ; 9  ; Essays in History Volume 9  ; reingest1.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1965 ; 1965 ; 10 ; Essays in History Volume 10 ; reingest2.clockss.org:8085 > #mpc can't find this
+        au < finished ; manifest ; 1966 ; 1966 ; 11 ; Essays in History Volume 11 ; reingest3.clockss.org:8083 > #mpc can't find this
+        au < finished ; manifest ; 1967 ; 1967 ; 12 ; Essays in History Volume 12 ; reingest4.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1968 ; 1968 ; 13 ; Essays in History Volume 13 ; reingest5.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1969 ; 1969 ; 14 ; Essays in History Volume 14 ; reingest1.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1971 ; 1971 ; 15 ; Essays in History Volume 15 ; reingest2.clockss.org:8085 > #mpc can't find this
+        au < finished ; manifest ; 1972 ; 1972 ; 16 ; Essays in History Volume 16 ; reingest3.clockss.org:8083 > #mpc can't find this
+        au < finished ; manifest ; 1973 ; 1973 ; 17 ; Essays in History Volume 17 ; reingest4.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1974 ; 1974 ; 18 ; Essays in History Volume 18 ; reingest5.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1975 ; 1975 ; 19 ; Essays in History Volume 19 ; reingest1.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1976 ; 1976 ; 20 ; Essays in History Volume 20 ; reingest2.clockss.org:8085 > #mpc can't find this
+        au < finished ; manifest ; 1977 ; 1977 ; 21 ; Essays in History Volume 21 ; reingest3.clockss.org:8083 > #mpc can't find this
+        au < finished ; manifest ; 1978 ; 1978 ; 22 ; Essays in History Volume 22 ; reingest4.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1979 ; 1979 ; 23 ; Essays in History Volume 23 ; reingest5.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1980 ; 1980 ; 24 ; Essays in History Volume 24 ; reingest1.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1981 ; 1981 ; 25 ; Essays in History Volume 25 ; reingest2.clockss.org:8085 > #mpc can't find this
+        au < finished ; manifest ; 1982 ; 1982 ; 26 ; Essays in History Volume 26 ; reingest3.clockss.org:8083 > #mpc can't find this
+        au < finished ; manifest ; 1983 ; 1983 ; 27 ; Essays in History Volume 27 ; reingest4.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1984 ; 1984 ; 28 ; Essays in History Volume 28 ; reingest5.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1985 ; 1985 ; 29 ; Essays in History Volume 29 ; reingest1.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1987 ; 1987 ; 30 ; Essays in History Volume 30 ; reingest2.clockss.org:8085 > #mpc can't find this
+        au < finished ; manifest ; 1988 ; 1988 ; 31 ; Essays in History Volume 31 ; reingest3.clockss.org:8083 > #mpc can't find this
+        au < finished ; manifest ; 1989 ; 1989 ; 32 ; Essays in History Volume 32 ; reingest4.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1990 ; 1990 ; 33 ; Essays in History Volume 33 ; reingest5.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1992 ; 1992 ; 34 ; Essays in History Volume 34 ; reingest1.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1993 ; 1993 ; 35 ; Essays in History Volume 35 ; reingest2.clockss.org:8085 > #mpc can't find this
+        au < finished ; manifest ; 1994 ; 1994 ; 36 ; Essays in History Volume 36 ; reingest3.clockss.org:8083 > #mpc can't find this
+        au < finished ; manifest ; 1995 ; 1995 ; 37 ; Essays in History Volume 37 ; reingest4.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1996 ; 1996 ; 38 ; Essays in History Volume 38 ; reingest5.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1997 ; 1997 ; 39 ; Essays in History Volume 39 ; reingest1.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 1998 ; 1998 ; 40 ; Essays in History Volume 40 ; reingest2.clockss.org:8085 > #mpc can't find this
 
-        au < frozen ; exists ; 1999 ; 1999 ; 41 ; Essays in History Volume 41 ; > #mpc can't find this
-        au < frozen ; exists ; 2000 ; 2000 ; 42 ; Essays in History Volume 42 ; > #mpc can't find this
-        au < frozen ; exists ; 2009 ; 2009 ; 43 ; Essays in History Volume 43 ; >
-        au < frozen ; exists ; 2010 ; 2010 ; 44 ; Essays in History Volume 44 ; >
-        au < frozen ; exists ; 2011 ; 2011 ; 45 ; Essays in History Volume 45 ; >
-        au < frozen ; exists ; 2012 ; 2012 ; 46 ; Essays in History Volume 46 ; >
-        au < frozen ; exists ; 2013 ; 2013 ; 47 ; Essays in History Volume 47 ; >
-        au < frozen ; exists ; 2014 ; 2014 ; 48 ; Essays in History Volume 48 ; >
-        au < frozen ; exists ; 2015 ; 2015 ; 49 ; Essays in History Volume 49 ; >
-        au < frozen ; exists ; 2016 ; 2016 ; 50 ; Essays in History Volume 50 ; >
-        au < frozen ; exists ; 2017 ; 2017 ; 51 ; Essays in History Volume 51 ; >
-        au < frozen ; exists ; 2018 ; 2018 ; 52 ; Essays in History Volume 52 ; >
-        au < frozen ; exists ; 2019 ; 2019 ; 53 ; Essays in History Volume 53 ; >
-        au < frozen ; exists ; 2020 ; 2020 ; 54 ; Essays in History Volume 54 ; >
-        au < frozen ; exists ; 2022 ; 2022 ; 55 ; Essays in History Volume 55 ; >
-        au < frozen ; exists ; 2023 ; 2023 ; 56 ; Essays in History Volume 56 ; >
+        au < finished ; manifest ; 1999 ; 1999 ; 41 ; Essays in History Volume 41 ; reingest3.clockss.org:8083 > #mpc can't find this
+        au < finished ; manifest ; 2000 ; 2000 ; 42 ; Essays in History Volume 42 ; reingest4.clockss.org:8082 > #mpc can't find this
+        au < finished ; manifest ; 2009 ; 2009 ; 43 ; Essays in History Volume 43 ; reingest5.clockss.org:8082 >
+        au < finished ; manifest ; 2010 ; 2010 ; 44 ; Essays in History Volume 44 ; reingest1.clockss.org:8082 >
+        au < finished ; manifest ; 2011 ; 2011 ; 45 ; Essays in History Volume 45 ; reingest2.clockss.org:8085 >
+        au < finished ; manifest ; 2012 ; 2012 ; 46 ; Essays in History Volume 46 ; reingest3.clockss.org:8083 >
+        au < finished ; manifest ; 2013 ; 2013 ; 47 ; Essays in History Volume 47 ; reingest4.clockss.org:8082 >
+        au < finished ; manifest ; 2014 ; 2014 ; 48 ; Essays in History Volume 48 ; reingest5.clockss.org:8082 >
+        au < finished ; manifest ; 2015 ; 2015 ; 49 ; Essays in History Volume 49 ; reingest1.clockss.org:8082 >
+        au < finished ; manifest ; 2016 ; 2016 ; 50 ; Essays in History Volume 50 ; reingest2.clockss.org:8085 >
+        au < finished ; manifest ; 2017 ; 2017 ; 51 ; Essays in History Volume 51 ; reingest3.clockss.org:8083 >
+        au < finished ; manifest ; 2018 ; 2018 ; 52 ; Essays in History Volume 52 ; reingest4.clockss.org:8082 >
+        au < finished ; manifest ; 2019 ; 2019 ; 53 ; Essays in History Volume 53 ; reingest5.clockss.org:8082 >
+        au < finished ; manifest ; 2020 ; 2020 ; 54 ; Essays in History Volume 54 ; reingest1.clockss.org:8082 >
+        au < finished ; manifest ; 2022 ; 2022 ; 55 ; Essays in History Volume 55 ; reingest2.clockss.org:8085 >
+        au < finished ; manifest ; 2023 ; 2023 ; 56 ; Essays in History Volume 56 ; reingest3.clockss.org:8083 >
 
     }
 
@@ -143,13 +143,13 @@
 
         param[base_url] = https://firstaidjournal.org/
 
-        au < frozen ; exists ; 2017 ; 2017 ; 1 ; International Journal of First Aid Education Volume 1 [2017] ; >
-        au < frozen ; exists ; 2018 ; 2018 ; 1 ; International Journal of First Aid Education Volume 1 [2018] ; >
-        au < frozen ; exists ; 2019 ; 2019 ; 2 ; International Journal of First Aid Education Volume 2 ; >
-        au < frozen ; exists ; 2020 ; 2020 ; 3 ; International Journal of First Aid Education Volume 3 ; >
-        au < frozen ; exists ; 2021 ; 2021 ; 4 ; International Journal of First Aid Education Volume 4 ; >
-        au < frozen ; exists ; 2022 ; 2022 ; 5 ; International Journal of First Aid Education Volume 5 ; >
-        au < frozen ; exists ; 2023 ; 2023 ; 6 ; International Journal of First Aid Education Volume 6 ; >
+        au < finished ; manifest ; 2017 ; 2017 ; 1 ; International Journal of First Aid Education Volume 1 [2017] ; reingest1.clockss.org:8082 >
+        au < finished ; manifest ; 2018 ; 2018 ; 1 ; International Journal of First Aid Education Volume 1 [2018] ; reingest2.clockss.org:8085 >
+        au < finished ; manifest ; 2019 ; 2019 ; 2 ; International Journal of First Aid Education Volume 2 ; reingest3.clockss.org:8083 >
+        au < finished ; manifest ; 2020 ; 2020 ; 3 ; International Journal of First Aid Education Volume 3 ; reingest4.clockss.org:8082 >
+        au < finished ; manifest ; 2021 ; 2021 ; 4 ; International Journal of First Aid Education Volume 4 ; reingest5.clockss.org:8082 >
+        au < finished ; manifest ; 2022 ; 2022 ; 5 ; International Journal of First Aid Education Volume 5 ; reingest1.clockss.org:8082 >
+        au < finished ; manifest ; 2023 ; 2023 ; 6 ; International Journal of First Aid Education Volume 6 ; reingest2.clockss.org:8085 >
         au < deepCrawl ; exists ; 2024 ; 2024 ; 7 ; International Journal of First Aid Education Volume 7 ; >
         au < crawling ; exists ; 2025 ; 2025 ; 8 ; International Journal of First Aid Education Volume 8 ; >
 
@@ -164,24 +164,24 @@
 
         param[base_url] = https://www.lddjournal.org/
 
-        au < frozen ; exists ; 2003 ; 2003 ; 1 ; Language Documentation and Description Volume 1 ; >
-        au < frozen ; exists ; 2004 ; 2004 ; 2 ; Language Documentation and Description Volume 2 ; >
-        au < frozen ; exists ; 2005 ; 2005 ; 3 ; Language Documentation and Description Volume 3 ; >
-        au < frozen ; exists ; 2007 ; 2007 ; 4 ; Language Documentation and Description Volume 4 ; >
-        au < frozen ; exists ; 2008 ; 2008 ; 5 ; Language Documentation and Description Volume 5 ; >
-        au < frozen ; exists ; 2009 ; 2009 ; 6 ; Language Documentation and Description Volume 6 ; >
-        au < frozen ; exists ; 2010 ; 2010 ; 7-8 ; Language Documentation and Description Volume 7-8 ; >
-        au < frozen ; exists ; 2011 ; 2011 ; 9 ; Language Documentation and Description Volume 9 ; >
-        au < frozen ; exists ; 2012 ; 2012 ; 10 ; Language Documentation and Description Volume 10 ; >
-        au < frozen ; exists ; 2014 ; 2014 ; 12 ; Language Documentation and Description Volume 12 ; >
-        au < frozen ; exists ; 2016 ; 2016 ; 13 ; Language Documentation and Description Volume 13 ; >
-        au < frozen ; exists ; 2017 ; 2017 ; 14 ; Language Documentation and Description Volume 14 ; >
-        au < frozen ; exists ; 2018 ; 2018 ; 15 ; Language Documentation and Description Volume 15 ; >
-        au < frozen ; exists ; 2019 ; 2019 ; 16 ; Language Documentation and Description Volume 16 ; >
-        au < frozen ; exists ; 2020 ; 2020 ; 17-19 ; Language Documentation and Description Volume 17-19 ; >
-        au < frozen ; exists ; 2021 ; 2021 ; 21 ; Language Documentation and Description Volume 21 ; >
-        au < frozen ; exists ; 2022 ; 2022 ; 22 ; Language Documentation and Description Volume 22 ; >
-        au < frozen ; exists ; 2023 ; 2023 ; 23 ; Language Documentation and Description Volume 23 ; >
+        au < finished ; manifest ; 2003 ; 2003 ; 1 ; Language Documentation and Description Volume 1 ; reingest3.clockss.org:8083 >
+        au < finished ; manifest ; 2004 ; 2004 ; 2 ; Language Documentation and Description Volume 2 ; reingest4.clockss.org:8082 >
+        au < finished ; manifest ; 2005 ; 2005 ; 3 ; Language Documentation and Description Volume 3 ; reingest5.clockss.org:8082 >
+        au < finished ; manifest ; 2007 ; 2007 ; 4 ; Language Documentation and Description Volume 4 ; reingest1.clockss.org:8082 >
+        au < finished ; manifest ; 2008 ; 2008 ; 5 ; Language Documentation and Description Volume 5 ; reingest2.clockss.org:8085 >
+        au < finished ; manifest ; 2009 ; 2009 ; 6 ; Language Documentation and Description Volume 6 ; reingest3.clockss.org:8083 >
+        au < finished ; manifest ; 2010 ; 2010 ; 7-8 ; Language Documentation and Description Volume 7-8 ; reingest4.clockss.org:8082 >
+        au < finished ; manifest ; 2011 ; 2011 ; 9 ; Language Documentation and Description Volume 9 ; reingest5.clockss.org:8082 >
+        au < finished ; manifest ; 2012 ; 2012 ; 10 ; Language Documentation and Description Volume 10 ; reingest1.clockss.org:8082 >
+        au < finished ; manifest ; 2014 ; 2014 ; 12 ; Language Documentation and Description Volume 12 ; reingest2.clockss.org:8085 >
+        au < finished ; manifest ; 2016 ; 2016 ; 13 ; Language Documentation and Description Volume 13 ; reingest3.clockss.org:8083 >
+        au < finished ; manifest ; 2017 ; 2017 ; 14 ; Language Documentation and Description Volume 14 ; reingest4.clockss.org:8082 >
+        au < finished ; manifest ; 2018 ; 2018 ; 15 ; Language Documentation and Description Volume 15 ; reingest5.clockss.org:8082 >
+        au < finished ; manifest ; 2019 ; 2019 ; 16 ; Language Documentation and Description Volume 16 ; reingest1.clockss.org:8082 >
+        au < finished ; manifest ; 2020 ; 2020 ; 17-19 ; Language Documentation and Description Volume 17-19 ; reingest2.clockss.org:8085 >
+        au < finished ; manifest ; 2021 ; 2021 ; 21 ; Language Documentation and Description Volume 21 ; reingest3.clockss.org:8083 >
+        au < finished ; manifest ; 2022 ; 2022 ; 22 ; Language Documentation and Description Volume 22 ; reingest4.clockss.org:8082 >
+        au < finished ; manifest ; 2023 ; 2023 ; 23 ; Language Documentation and Description Volume 23 ; reingest5.clockss.org:8082 >
         au < deepCrawl ; exists ; 2024 ; 2024 ; 24 ; Language Documentation and Description Volume 24 ; >
         au < crawling ; exists ; 2025 ; 2025 ; 25 ; Language Documentation and Description Volume 25 ; >
     }
