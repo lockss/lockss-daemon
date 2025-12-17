@@ -28,17 +28,17 @@
       au < ready ; exists ; 2008 ; Al-Bahith Al-A'alami Journal Volume 2008 ; 2008 ; 2008 ; >
       au < notReady ; exists ; 2012 ; Al-Bahith Al-A'alami Journal Volume 4 ; 4 ; 2012 ; > #Redirect to login page: https://abaa.uobaghdad.edu.iq/index.php/abaa/login?source=%2Findex.php%2Fabaa%2Fissue%2Fview%2F48 Redirect from https://abaa.uobaghdad.edu.iq/index.php/abaa/issue/view/48
       au < notReady ; exists ; 2013 ; Al-Bahith Al-A'alami Journal Volume 5 ; 5 ; 2013 ; > #Redirect to login page: https://abaa.uobaghdad.edu.iq/index.php/abaa/login?source=%2Findex.php%2Fabaa%2Fissue%2Fview%2F51 Redirect from https://abaa.uobaghdad.edu.iq/index.php/abaa/issue/view/51
-      au < frozen ; exists ; 2014 ; Al-Bahith Al-A'alami Journal Volume 6 ; 6 ; 2014 ; >
-      au < frozen ; exists ; 2015 ; Al-Bahith Al-A'alami Journal Volume 7 ; 7 ; 2015 ; >
-      au < frozen ; exists ; 2016 ; Al-Bahith Al-A'alami Journal Volume 8 ; 8 ; 2016 ; >
-      au < frozen ; exists ; 2017 ; Al-Bahith Al-A'alami Journal Volume 9 ; 9 ; 2017 ; >
-      au < frozen ; exists ; 2018 ; Al-Bahith Al-A'alami Journal Volume 10 ; 10 ; 2018 ; >
-      au < frozen ; exists ; 2019 ; Al-Bahith Al-A'alami Journal Volume 11 ; 11 ; 2019 ; >
-      au < frozen ; exists ; 2020 ; Al-Bahith Al-A'alami Journal Volume 12 ; 12 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; Al-Bahith Al-A'alami Journal Volume 13 ; 13 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; Al-Bahith Al-A'alami Journal Volume 14 ; 14 ; 2022 ; >
+      au < finished ; manifest ; 2014 ; Al-Bahith Al-A'alami Journal Volume 6 ; 6 ; 2014 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Al-Bahith Al-A'alami Journal Volume 7 ; 7 ; 2015 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2016 ; Al-Bahith Al-A'alami Journal Volume 8 ; 8 ; 2016 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2017 ; Al-Bahith Al-A'alami Journal Volume 9 ; 9 ; 2017 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2018 ; Al-Bahith Al-A'alami Journal Volume 10 ; 10 ; 2018 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2019 ; Al-Bahith Al-A'alami Journal Volume 11 ; 11 ; 2019 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2020 ; Al-Bahith Al-A'alami Journal Volume 12 ; 12 ; 2020 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Al-Bahith Al-A'alami Journal Volume 13 ; 13 ; 2021 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Al-Bahith Al-A'alami Journal Volume 14 ; 14 ; 2022 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Al-Bahith Al-A'alami Journal Volume 15 ; 15 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; Al-Bahith Al-A'alami Journal Volume 16 ; 16 ; 2024 ; >
+      au < finished ; manifest ; 2024 ; Al-Bahith Al-A'alami Journal Volume 16 ; 16 ; 2024 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; Al-Bahith Al-A'alami Journal Volume 17 ; 17 ; 2025 ; >
 
   }
