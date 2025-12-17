@@ -649,16 +649,16 @@
       au < manifest ; exists ; 1987 ; Proceedings of the Florida State Horticultural Society Volume 100 ; 100 ; 1987 ; >
       au < manifest ; exists ; 1988 ; Proceedings of the Florida State Horticultural Society Volume 101 ; 101 ; 1988 ; >
       au < manifest ; exists ; 1989 ; Proceedings of the Florida State Horticultural Society Volume 102 ; 102 ; 1989 ; >
-      au < testing ; exists ; 1990 ; Proceedings of the Florida State Horticultural Society Volume 103 ; 103 ; 1990 ; >
-      au < testing ; exists ; 1991 ; Proceedings of the Florida State Horticultural Society Volume 104 ; 104 ; 1991 ; >
-      au < testing ; exists ; 1992 ; Proceedings of the Florida State Horticultural Society Volume 105 ; 105 ; 1992 ; >
-      au < testing ; exists ; 1993 ; Proceedings of the Florida State Horticultural Society Volume 106 ; 106 ; 1993 ; >
-      au < testing ; exists ; 1994 ; Proceedings of the Florida State Horticultural Society Volume 107 ; 107 ; 1994 ; >
-      au < testing ; exists ; 1995 ; Proceedings of the Florida State Horticultural Society Volume 108 ; 108 ; 1995 ; >
-      au < testing ; exists ; 1996 ; Proceedings of the Florida State Horticultural Society Volume 109 ; 109 ; 1996 ; >
-      au < testing ; exists ; 1997 ; Proceedings of the Florida State Horticultural Society Volume 110 ; 110 ; 1997 ; >
-      au < testing ; exists ; 1998 ; Proceedings of the Florida State Horticultural Society Volume 111 ; 111 ; 1998 ; >
-      au < testing ; exists ; 1999 ; Proceedings of the Florida State Horticultural Society Volume 112 ; 112 ; 1999 ; >
+      au < ready ; exists ; 1990 ; Proceedings of the Florida State Horticultural Society Volume 103 ; 103 ; 1990 ; >
+      au < ready ; exists ; 1991 ; Proceedings of the Florida State Horticultural Society Volume 104 ; 104 ; 1991 ; >
+      au < ready ; exists ; 1992 ; Proceedings of the Florida State Horticultural Society Volume 105 ; 105 ; 1992 ; >
+      au < ready ; exists ; 1993 ; Proceedings of the Florida State Horticultural Society Volume 106 ; 106 ; 1993 ; >
+      au < ready ; exists ; 1994 ; Proceedings of the Florida State Horticultural Society Volume 107 ; 107 ; 1994 ; >
+      au < ready ; exists ; 1995 ; Proceedings of the Florida State Horticultural Society Volume 108 ; 108 ; 1995 ; >
+      au < ready ; exists ; 1996 ; Proceedings of the Florida State Horticultural Society Volume 109 ; 109 ; 1996 ; >
+      au < ready ; exists ; 1997 ; Proceedings of the Florida State Horticultural Society Volume 110 ; 110 ; 1997 ; >
+      au < ready ; exists ; 1998 ; Proceedings of the Florida State Horticultural Society Volume 111 ; 111 ; 1998 ; >
+      au < ready ; exists ; 1999 ; Proceedings of the Florida State Horticultural Society Volume 112 ; 112 ; 1999 ; >
       au < ready ; exists ; 2000 ; Proceedings of the Florida State Horticultural Society Volume 113 ; 113 ; 2000 ; >
       au < ready ; exists ; 2001 ; Proceedings of the Florida State Horticultural Society Volume 114 ; 114 ; 2001 ; >
       au < ready ; exists ; 2002 ; Proceedings of the Florida State Horticultural Society Volume 115 ; 115 ; 2002 ; >
@@ -735,12 +735,12 @@
 
       param[journal_id] = holarctic
 
-      au < testing ; exists ; 1994 ; Holarctic Lepidoptera Volume 1 ; 1 ; 1994 ; >
-      au < testing ; exists ; 1995 ; Holarctic Lepidoptera Volume 2 ; 2 ; 1995 ; >
-      au < testing ; exists ; 1996 ; Holarctic Lepidoptera Volume 3 ; 3 ; 1996 ; >
-      au < testing ; exists ; 1997 ; Holarctic Lepidoptera Volume 4 ; 4 ; 1997 ; >
-      au < testing ; exists ; 1998 ; Holarctic Lepidoptera Volume 5 ; 5 ; 1998 ; >
-      au < testing ; exists ; 1999 ; Holarctic Lepidoptera Volume 6 ; 6 ; 1999 ; >
+      au < ready ; exists ; 1994 ; Holarctic Lepidoptera Volume 1 ; 1 ; 1994 ; >
+      au < ready ; exists ; 1995 ; Holarctic Lepidoptera Volume 2 ; 2 ; 1995 ; >
+      au < ready ; exists ; 1996 ; Holarctic Lepidoptera Volume 3 ; 3 ; 1996 ; >
+      au < ready ; exists ; 1997 ; Holarctic Lepidoptera Volume 4 ; 4 ; 1997 ; >
+      au < ready ; exists ; 1998 ; Holarctic Lepidoptera Volume 5 ; 5 ; 1998 ; >
+      au < ready ; exists ; 1999 ; Holarctic Lepidoptera Volume 6 ; 6 ; 1999 ; >
       au < ready ; exists ; 2000 ; Holarctic Lepidoptera Volume 7 ; 7 ; 2000 ; >
       au < ready ; exists ; 2001 ; Holarctic Lepidoptera Volume 8 ; 8 ; 2001 ; >
       au < crawling ; exists ; 2002 ; Holarctic Lepidoptera Volume 9 ; 9 ; 2002 ; >
@@ -776,8 +776,8 @@
 
       param[journal_id] = edis
 
-      au < testing ; exists ; 1989 ; EDIS Volume 1989 ; 1989 ; 1989 ; >
-      au < testing ; exists ; 1990 ; EDIS Volume 1990 ; 1990 ; 1990 ; >
+      au < ready ; exists ; 1989 ; EDIS Volume 1989 ; 1989 ; 1989 ; >
+      au < ready ; exists ; 1990 ; EDIS Volume 1990 ; 1990 ; 1990 ; >
       au < doesNotExist ; doesNotExist ; 1991 ; EDIS Volume 1991 ; 1991 ; 1991 ; >
       au < testing ; exists ; 1992 ; EDIS Volume 1992 ; 1992 ; 1992 ; >
       au < testing ; exists ; 1993 ; EDIS Volume 1993 ; 1993 ; 1993 ; >
