@@ -773,12 +773,12 @@ while (my $line = <>) {
         $result = "--NOT_DEF--";
     } elsif ($man_contents !~ m/$cc_license_tag/ || $man_contents !~ m/$cc_license_url/) {
         $result = "--NO_TAG--";
-    } elsif (($man_contents =~ m/<h1>\s*(\S.*\S)\s*<\/h1>/si) || ($man_contents =~ m/<title>\s*(\S.*\S)\s*<\/title>/si)) {
+    } elsif (($man_contents =~ m/<h1>\s*(\S[^<]*\S)\s*<\/h1>/si) || ($man_contents =~ m/<title>\s*(\S[^<]*\S)\s*<\/title>/si)) {
         #Collect title
-        if ($man_contents =~ m/<h1>\s*(\S.*\S)\s*<\/h1>/si) {
+        if ($man_contents =~ m/<h1>\s*(\S[^<]*\S)\s*<\/h1>/si) {
             $vol_title = $1;
         }
-        if ($man_contents =~ m/<title>\s*(\S.*\S)\s*<\/title>/si) {
+        if ($man_contents =~ m/<title>\s*(\S[^<]*\S)\s*<\/title>/si) {
             $vol_title = $1 . ". " . $vol_title;
         }
         #Test for link to book
