@@ -19,6 +19,8 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/indicon-released/
 
       au < readySource ; crawling ; 2025 ; Indicon S.r.l. Journals Source Content 2025_01 ; 2025_01 >
+      au < expected ; exists ; 2026 ; Indicon S.r.l. Journals Source Content 2026_01 ; 2026_01 >
+
     }
 
   }

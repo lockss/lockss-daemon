@@ -20,6 +20,7 @@
 
       au < readySource ; crawling ; 2024 ; Multidisciplinary Digital Publishing Institute Books Source Content 2024_01 ; 2024_01 >
       au < readySource ; crawling ; 2025 ; Multidisciplinary Digital Publishing Institute Books Source Content 2025_01 ; 2025_01 >
+      au < expected ; exists ; 2026 ; Multidisciplinary Digital Publishing Institute Books Source Content 2026_01 ; 2026_01 >
 
     }
 
@@ -43,6 +44,11 @@
       au < readySource ; crawling ; 2025 ; Multidisciplinary Digital Publishing Institute Source Content 2025_02 ; 2025_02 > 
       au < readySource ; crawling ; 2025 ; Multidisciplinary Digital Publishing Institute Source Content 2025_03 ; 2025_03 > 
       au < readySource ; crawling ; 2025 ; Multidisciplinary Digital Publishing Institute Source Content 2025_04 ; 2025_04 > 
+
+      au < expected ; exists ; 2026 ; Multidisciplinary Digital Publishing Institute Source Content 2026_01 ; 2026_01 > 
+      au < expected ; exists ; 2026 ; Multidisciplinary Digital Publishing Institute Source Content 2026_02 ; 2026_02 > 
+      au < expected ; exists ; 2026 ; Multidisciplinary Digital Publishing Institute Source Content 2026_03 ; 2026_03 > 
+      au < expected ; exists ; 2026 ; Multidisciplinary Digital Publishing Institute Source Content 2026_04 ; 2026_04 > 
 
     }
 
