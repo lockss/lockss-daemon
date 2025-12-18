@@ -244,8 +244,9 @@
       au < finished ; finished ; 2010 ; 14 ; Redescriptions Volume 2010 ; 2010 ; 14 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2011 ; 15 ; Redescriptions Volume 2011 ; 2011 ; 15 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest5.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2012 ; 16 ; Redescriptions Volume 2012 ; 16 ; 2012 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
-      au < finished ; finished ; 2013 ; 17 ; Redescriptions Volume 2013 ; 2013 ; 17 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
-      au < finished ; finished ; 2014 ; 18 ; Redescriptions Volume 2014 ; 2014 ; 18 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest2.clockss.org:8085 >
+      au < crawling ; down ; 2013 ; 16 ; Redescriptions Volume 2013 ; 2013 ; 16 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
+      au < crawling ; down ; 2014 ; 17 ; Redescriptions Volume 2014 ; 2014 ; 17 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest2.clockss.org:8085 >
+      au < exists ; exists ; 2015 ; 18 ; Redescriptions Volume 2015 ; 2015 ; 18 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; 19 ; Redescriptions Volume 2016 ; 2016 ; 19 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 20 ; Redescriptions Volume 2017 ; 2017 ; 20 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 21 ; Redescriptions Volume 2018 ; 2018 ; 21 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest3.clockss.org:8083 >
@@ -1208,8 +1209,9 @@
       au < finished ; finished ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
-      au < superseded ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 [superseded] ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
-      au < doNotProcess ; doNotProcess ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < crawling ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
+      au < exists ; exists ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < exists ; exists ; 2025 ; 22 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 22 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
 
   }
 
@@ -1278,9 +1280,9 @@
       au < finished ; finished ; 2007 ; 2007 ; Journal of Interactive Media in Education Volume 2007 ; 2007 ; 2007 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2008 ; 2008 ; Journal of Interactive Media in Education Volume 2008 ; 2008 ; 2008 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2009 ; 2009 ; Journal of Interactive Media in Education Volume 2009 ; 2009 ; 2009 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest2.clockss.org:8085 >
-      au < finished ; finished ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; 2010 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 >
-      au < finished ; finished ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; 2012 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
-      au < finished ; finished ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; 2013 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest5.clockss.org:8082 >
+      au < superseded ; finished ; 2010 ; 2010 ; Journal of Interactive Media in Education Volume 2010 ; 2010 ; 2010 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest3.clockss.org:8083 > #OJS. do not recrawl
+      au < superseded ; finished ; 2012 ; 2012 ; Journal of Interactive Media in Education Volume 2012 ; 2012 ; 2012 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 > #OJS. do not recrawl
+      au < superseded ; finished ; 2013 ; 2013 ; Journal of Interactive Media in Education Volume 2013 ; 2013 ; 2013 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest5.clockss.org:8082 > #OJS. do not recrawl
       au < finished ; finished ; 2014 ; 2014 ; Journal of Interactive Media in Education Volume 2014 ; 2014 ; 2014 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2015 ; 2015 ; Journal of Interactive Media in Education Volume 2015 ; 2015 ; 2015 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest2.clockss.org:8085 >
       au < doNotProcess ; exists ; 2016 ; 2016 ; Journal of Interactive Media in Education Volume 2016 ; 2016 ; 2016 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ ; reingest4.clockss.org:8082 >
@@ -1631,8 +1633,8 @@
       nondefparam[base_url2] = https://account.globalheartjournal.com/
       nondefparam[journal_id] = up-j-gh
 
-      au < finished ; finished ; 2006 ; 1 ; Global Heart Volume 2006 ; 2006 ; 1 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2007 ; 2 ; Global Heart Volume 2007 ; 2007 ; 2 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
+      au < crawling ; down ; 2006 ; 2 ; Global Heart Volume 2 [2006] ; 2006 ; 2 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
+      au < exists ; exists ; 2006 ; 2 ; Global Heart Volume 2 [2007] ; 2007 ; 2 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < finished ; finished ; 2008 ; 3 ; Global Heart Volume 2008 ; 2008 ; 3 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2009 ; 4 ; Global Heart Volume 2009 ; 2009 ; 4 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; 5 ; Global Heart Volume 2010 ; 2010 ; 5 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest1.clockss.org:8082 >
@@ -2080,7 +2082,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 2 ; Ubiquity Proceedings Volume 2022 ; 2022 ; 2 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 3 ; Ubiquity Proceedings Volume 2023 ; 2023 ; 3 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
       au < frozen ; exists ; 2024 ; 4,5 ; Ubiquity Proceedings Volume 2024 ; 2024 ; 4,5 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
-      au < manifest ; exists ; 2025 ; 6 ; Ubiquity Proceedings Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
+      au < exists ; exists ; 2025 ; 6 ; Ubiquity Proceedings Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
 
   }
 
@@ -2734,6 +2736,7 @@
       #param[base_url] = https://ssol-journal.com/
       nondefparam[base_url2] = https://account.ssol-journal.com/
       nondefparam[journal_id] = isesl-j-ssl
+      #No articles
 
       au < doNotProcess ; doNotProcess ; 2011 ; 1 ; Scientific Study of Literature Volume 2011 ; 2011 ; 1 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
       au < doNotProcess ; doNotProcess ; 2012 ; 2 ; Scientific Study of Literature Volume 2012 ; 2012 ; 2 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ ; >
