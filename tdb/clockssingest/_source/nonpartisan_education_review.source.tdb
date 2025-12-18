@@ -17,7 +17,6 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/nper-released/
 
     au < readySource ; crawling ; 2024 ; Nonpartisan Education Review Source Content 2024_01 ; 2024_01 >
-    au < expected ; exists ; 2025 ; Nonpartisan Education Review Source Content 2025_01 ; 2025_01 >
     au < expected ; exists ; 2026 ; Nonpartisan Education Review Source Content 2026_01 ; 2026_01 >
 
   }

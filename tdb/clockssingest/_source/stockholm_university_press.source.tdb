@@ -21,6 +21,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/stockholmup-released/
 
       au < readySource ; crawling ; 2025 ; Stockholm University Source Content 2025 ; 2025 >
+      au < expected ; exists ; 2026 ; Stockholm University Source Content 2026 ; 2026 >
 
   }
 }

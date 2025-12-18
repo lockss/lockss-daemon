@@ -26,7 +26,6 @@
 
         au < readySource ; finished ; 2023 ; Casalini Libri Source Content 2023_01 ; 2023_01 >
         au < readySource ; crawling ; 2024 ; Casalini Libri Source Content 2024_01 ; 2024_01 >
-        au < expected ; exists ; 2025 ; Casalini Libri Source Content 2025_01 ; 2025_01 >
         au < expected ; exists ; 2026 ; Casalini Libri Source Content 2026_01 ; 2026_01 >
 
       }
@@ -63,7 +62,6 @@
 
       au < readySource ; finished ; 2023 ; Casalini Books Source Content 2023 ; 2023 >
       au < readySource ; crawling ; 2024 ; Casalini Books Source Content 2024 ; 2024 > 
-      au < expected ; exists ; 2025 ; Casalini Books Source Content 2025 ; 2025 > 
       au < expected ; exists ; 2026 ; Casalini Books Source Content 2026 ; 2026 > 
 
     }

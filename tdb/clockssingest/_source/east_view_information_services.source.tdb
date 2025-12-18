@@ -51,7 +51,6 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastview-released/
 
-      au < expected ; exists ; 2025 ; East View Information Services Journal Source Content 2025_01 ; 2025_01 >
       au < expected ; exists ; 2026 ; East View Information Services Journal Source Content 2026_01 ; 2026_01 >
 
     }

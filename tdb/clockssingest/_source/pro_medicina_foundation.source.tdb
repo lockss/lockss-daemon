@@ -26,6 +26,7 @@
     # tested https://clockss-test.lockss.org/sourcefiles/promed-released/2023_01, it has one less xml than PDF.
     au < readySource ; finished ; 2023 ; Pro Medicina Foundation Source Content 2023_01 ; 2023_01 >
     au < readySource ; crawling ; 2025 ; Pro Medicina Foundation Source Content 2025_01 ; 2025_01 >
+    au < expected ; exists ; 2026 ; Pro Medicina Foundation Source Content 2026_01 ; 2026_01 >
 
     }
   }
