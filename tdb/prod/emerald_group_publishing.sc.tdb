@@ -7448,9 +7448,9 @@
     au < doNotProcess ; 2017 ; 2017 ; Journal of Economic and Administrative Sciences Volume 33 ; 33 >
     au < manifest ; 2018 ; 2018 ; Journal of Economic and Administrative Sciences Volume 34 ; 34 >
     au < manifest ; 2019 ; 2019 ; Journal of Economic and Administrative Sciences Volume 35 ; 35 >
-    au < exists ; 2020 ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 >
+    au < manifest ; 2020 ; 2020 ; Journal of Economic and Administrative Sciences Volume 36 ; 36 >
     au < manifest ; 2021 ; 2021 ; Journal of Economic and Administrative Sciences Volume 37 ; 37 >
-    au < exists ; 2022 ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 >
+    au < manifest ; 2022 ; 2022 ; Journal of Economic and Administrative Sciences Volume 38 ; 38 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Economic and Administrative Sciences Volume 39 ; 39 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Economic and Administrative Sciences Volume 40 ; 40 >
     au < manifest ; 2025 ; 2025 ; Journal of Economic and Administrative Sciences Volume 41 ; 41 >
@@ -11727,22 +11727,22 @@
     param[journal_id] = oir
     #continued_by = 1353-2642
 
-    au < exists ; 1977 ; 1977 ; Online Review Volume 1 ; 1 >
-    au < exists ; 1978 ; 1978 ; Online Review Volume 2 ; 2 >
-    au < exists ; 1979 ; 1979 ; Online Review Volume 3 ; 3 >
-    au < exists ; 1980 ; 1980 ; Online Review Volume 4 ; 4 >
-    au < exists ; 1981 ; 1981 ; Online Review Volume 5 ; 5 >
-    au < exists ; 1982 ; 1982 ; Online Review Volume 6 ; 6 >
-    au < exists ; 1983 ; 1983 ; Online Review Volume 7 ; 7 >
-    au < exists ; 1984 ; 1984 ; Online Review Volume 8 ; 8 >
-    au < exists ; 1985 ; 1985 ; Online Review Volume 9 ; 9 >
-    au < exists ; 1986 ; 1986 ; Online Review Volume 10 ; 10 >
-    au < exists ; 1987 ; 1987 ; Online Review Volume 11 ; 11 >
-    au < exists ; 1988 ; 1988 ; Online Review Volume 12 ; 12 >
-    au < exists ; 1989 ; 1989 ; Online Review Volume 13 ; 13 >
-    au < exists ; 1990 ; 1990 ; Online Review Volume 14 ; 14 >
-    au < exists ; 1991 ; 1991 ; Online Review Volume 15 ; 15 >
-    au < exists ; 1992 ; 1992 ; Online Review Volume 16 ; 16 >
+    au < manifest ; 1977 ; 1977 ; Online Review Volume 1 ; 1 >
+    au < manifest ; 1978 ; 1978 ; Online Review Volume 2 ; 2 >
+    au < manifest ; 1979 ; 1979 ; Online Review Volume 3 ; 3 >
+    au < manifest ; 1980 ; 1980 ; Online Review Volume 4 ; 4 >
+    au < manifest ; 1981 ; 1981 ; Online Review Volume 5 ; 5 >
+    au < manifest ; 1982 ; 1982 ; Online Review Volume 6 ; 6 >
+    au < manifest ; 1983 ; 1983 ; Online Review Volume 7 ; 7 >
+    au < manifest ; 1984 ; 1984 ; Online Review Volume 8 ; 8 >
+    au < manifest ; 1985 ; 1985 ; Online Review Volume 9 ; 9 >
+    au < manifest ; 1986 ; 1986 ; Online Review Volume 10 ; 10 >
+    au < manifest ; 1987 ; 1987 ; Online Review Volume 11 ; 11 >
+    au < manifest ; 1988 ; 1988 ; Online Review Volume 12 ; 12 >
+    au < manifest ; 1989 ; 1989 ; Online Review Volume 13 ; 13 >
+    au < manifest ; 1990 ; 1990 ; Online Review Volume 14 ; 14 >
+    au < manifest ; 1991 ; 1991 ; Online Review Volume 15 ; 15 >
+    au < manifest ; 1992 ; 1992 ; Online Review Volume 16 ; 16 >
 
   }
 
@@ -11759,13 +11759,13 @@
     #continues = 0309-314X
     #continued_by = 1468-4527
 
-    au < exists ; 1993 ; 1993 ; Online and CD-Rom Review Volume 17 ; 17 >
-    au < exists ; 1994 ; 1994 ; Online and CD-Rom Review Volume 18 ; 18 >
-    au < exists ; 1995 ; 1995 ; Online and CD-Rom Review Volume 19 ; 19 >
-    au < exists ; 1996 ; 1996 ; Online and CD-Rom Review Volume 20 ; 20 >
-    au < exists ; 1997 ; 1997 ; Online and CD-Rom Review Volume 21 ; 21 >
-    au < exists ; 1998 ; 1998 ; Online and CD-Rom Review Volume 22 ; 22 >
-    au < exists ; 1999 ; 1999 ; Online and CD-Rom Review Volume 23 ; 23 >
+    au < manifest ; 1993 ; 1993 ; Online and CD-Rom Review Volume 17 ; 17 >
+    au < manifest ; 1994 ; 1994 ; Online and CD-Rom Review Volume 18 ; 18 >
+    au < manifest ; 1995 ; 1995 ; Online and CD-Rom Review Volume 19 ; 19 >
+    au < manifest ; 1996 ; 1996 ; Online and CD-Rom Review Volume 20 ; 20 >
+    au < manifest ; 1997 ; 1997 ; Online and CD-Rom Review Volume 21 ; 21 >
+    au < manifest ; 1998 ; 1998 ; Online and CD-Rom Review Volume 22 ; 22 >
+    au < manifest ; 1999 ; 1999 ; Online and CD-Rom Review Volume 23 ; 23 >
 
   }
 
@@ -12058,8 +12058,8 @@
     # online from 1995
     comment[continued_by] = 1363-951X
 
-    au < exists ; 1995 ; 1995 ; Police Studies: International Review of Police Development Volume 18 ; 18 >
-    au < exists ; 1996 ; 1996 ; Police Studies: International Review of Police Development Volume 19 ; 19 >
+    au < manifest ; 1995 ; 1995 ; Police Studies: International Review of Police Development Volume 18 ; 18 >
+    au < manifest ; 1996 ; 1996 ; Police Studies: International Review of Police Development Volume 19 ; 19 >
 
   }
 
@@ -14802,8 +14802,8 @@
     au < doNotProcess ; 2021 ; 2021 ; Journal for Multicultural Education Volume 15 ; 15 >
     au < doNotProcess ; 2022 ; 2022 ; Journal for Multicultural Education Volume 16 ; 16 >
     au < doNotProcess ; 2023 ; 2023 ; Journal for Multicultural Education Volume 17 ; 17 >
-    au < exists ; 2024 ; 2024 ; Journal for Multicultural Education Volume 18 ; 18 >
-    au < exists ; 2025 ; 2025 ; Journal for Multicultural Education Volume 19 ; 19 >
+    au < manifest ; 2024 ; 2024 ; Journal for Multicultural Education Volume 18 ; 18 >
+    au < manifest ; 2025 ; 2025 ; Journal for Multicultural Education Volume 19 ; 19 >
 
   }
 
@@ -14826,7 +14826,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Contemporary Marketing Science Volume 5 ; 5 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Contemporary Marketing Science Volume 6 ; 6 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Contemporary Marketing Science Volume 7 ; 7 >
-    au < exists ; 2025 ; 2025 ; Journal of Contemporary Marketing Science Volume 8 ; 8 >
+    au < manifest ; 2025 ; 2025 ; Journal of Contemporary Marketing Science Volume 8 ; 8 >
 
   }
 
@@ -14852,7 +14852,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Criminological Research, Policy and Practice Volume 8 ; 8 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Criminological Research, Policy and Practice Volume 9 ; 9 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Criminological Research, Policy and Practice Volume 10 ; 10 >
-    au < exists ; 2025 ; 2025 ; Journal of Criminological Research, Policy and Practice Volume 11 ; 11 >
+    au < manifest ; 2025 ; 2025 ; Journal of Criminological Research, Policy and Practice Volume 11 ; 11 >
 
   }
 
@@ -14880,7 +14880,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Entrepreneurship in Emerging Economies Volume 14 ; 14 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Entrepreneurship in Emerging Economies Volume 15 ; 15 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Entrepreneurship in Emerging Economies Volume 16 ; 16 >
-    au < exists ; 2025 ; 2025 ; Journal of Entrepreneurship in Emerging Economies Volume 17 ; 17 >
+    au < manifest ; 2025 ; 2025 ; Journal of Entrepreneurship in Emerging Economies Volume 17 ; 17 >
 
   }
 
@@ -14908,7 +14908,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Global Mobility Volume 10 ; 10 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Global Mobility Volume 11 ; 11 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Global Mobility Volume 12 ; 12 >
-    au < exists ; 2025 ; 2025 ; Journal of Global Mobility Volume 13 ; 13 >
+    au < manifest ; 2025 ; 2025 ; Journal of Global Mobility Volume 13 ; 13 >
 
   }
 
@@ -14931,7 +14931,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Hospitality and Tourism Insights Volume 5 ; 5 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Hospitality and Tourism Insights Volume 6 ; 6 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Hospitality and Tourism Insights Volume 7 ; 7 >
-    au < exists ; 2025 ; 2025 ; Journal of Hospitality and Tourism Insights Volume 8 ; 8 >
+    au < manifest ; 2025 ; 2025 ; Journal of Hospitality and Tourism Insights Volume 8 ; 8 >
 
   }
 
@@ -14987,7 +14987,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Organizational Effectiveness: People and Performance Volume 9 ; 9 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Organizational Effectiveness: People and Performance Volume 10 ; 10 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Organizational Effectiveness: People and Performance Volume 11 ; 11 >
-    au < exists ; 2025 ; 2025 ; Journal of Organizational Effectiveness: People and Performance Volume 12 ; 12 >
+    au < manifest ; 2025 ; 2025 ; Journal of Organizational Effectiveness: People and Performance Volume 12 ; 12 >
 
   }
 
@@ -15010,7 +15010,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Participation and Employee Ownership Volume 5 ; 5 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Participation and Employee Ownership Volume 6 ; 6 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Participation and Employee Ownership Volume 7 ; 7 >
-    au < exists ; 2025 ; 2025 ; Journal of Participation and Employee Ownership Volume 8 ; 8 >
+    au < manifest ; 2025 ; 2025 ; Journal of Participation and Employee Ownership Volume 8 ; 8 >
 
   }
 
@@ -15035,7 +15035,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Professional Capital and Community Volume 7 ; 7 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Professional Capital and Community Volume 8 ; 8 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Professional Capital and Community Volume 9 ; 9 >
-    au < exists ; 2025 ; 2025 ; Journal of Professional Capital and Community Volume 10 ; 10 >
+    au < manifest ; 2025 ; 2025 ; Journal of Professional Capital and Community Volume 10 ; 10 >
 
   }
 
@@ -15051,12 +15051,12 @@
     comment[journal_issn] = 1096-3367
     param[journal_id] = jpbafm
 
-    au < exists ; 1994 ; 1994 ; Journal of Public Budgeting, Accounting & Financial Management Volume 6 ; 6 >
-    au < exists ; 1995 ; 1995 ; Journal of Public Budgeting, Accounting & Financial Management Volume 7 ; 7 >
-    au < exists ; 1996 ; 1996 ; Journal of Public Budgeting, Accounting & Financial Management Volume 8 ; 8 >
-    au < exists ; 1997 ; 1997 ; Journal of Public Budgeting, Accounting & Financial Management Volume 9 ; 9 >
-    au < exists ; 1998 ; 1998 ; Journal of Public Budgeting, Accounting & Financial Management Volume 10 ; 10 >
-    au < exists ; 1999 ; 1999 ; Journal of Public Budgeting, Accounting & Financial Management Volume 11 ; 11 >
+    au < manifest ; 1994 ; 1994 ; Journal of Public Budgeting, Accounting & Financial Management Volume 6 ; 6 >
+    au < manifest ; 1995 ; 1995 ; Journal of Public Budgeting, Accounting & Financial Management Volume 7 ; 7 >
+    au < manifest ; 1996 ; 1996 ; Journal of Public Budgeting, Accounting & Financial Management Volume 8 ; 8 >
+    au < manifest ; 1997 ; 1997 ; Journal of Public Budgeting, Accounting & Financial Management Volume 9 ; 9 >
+    au < manifest ; 1998 ; 1998 ; Journal of Public Budgeting, Accounting & Financial Management Volume 10 ; 10 >
+    au < manifest ; 1999 ; 1999 ; Journal of Public Budgeting, Accounting & Financial Management Volume 11 ; 11 >
     au < doNotProcess ; 2000 ; 2000 ; Journal of Public Budgeting, Accounting & Financial Management Volume 12 ; 12 >
     au < exists ; 2001 ; 2001 ; Journal of Public Budgeting, Accounting & Financial Management Volume 13 ; 13 >
     au < doNotProcess ; 2002 ; 2002 ; Journal of Public Budgeting, Accounting & Financial Management Volume 14 ; 14 >
@@ -15082,7 +15082,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Public Budgeting, Accounting & Financial Management Volume 34 ; 34 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Public Budgeting, Accounting & Financial Management Volume 35 ; 35 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Public Budgeting, Accounting & Financial Management Volume 36 ; 36 >
-    au < exists ; 2025 ; 2025 ; Journal of Public Budgeting, Accounting & Financial Management Volume 37 ; 37 >
+    au < manifest ; 2025 ; 2025 ; Journal of Public Budgeting, Accounting & Financial Management Volume 37 ; 37 >
 
   }
 
@@ -15122,7 +15122,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Public Procurement Volume 22 ; 22 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Public Procurement Volume 23 ; 23 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Public Procurement Volume 24 ; 24 >
-    au < exists ; 2025 ; 2025 ; Journal of Public Procurement Volume 25 ; 25 >
+    au < manifest ; 2025 ; 2025 ; Journal of Public Procurement Volume 25 ; 25 >
 
   }
 
@@ -15150,7 +15150,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Science and Technology Policy Management Volume 13 ; 13 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Science and Technology Policy Management Volume 14 ; 14 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Science and Technology Policy Management Volume 15 ; 15 >
-    au < exists ; 2025 ; 2025 ; Journal of Science and Technology Policy Management Volume 16 ; 16 >
+    au < manifest ; 2025 ; 2025 ; Journal of Science and Technology Policy Management Volume 16 ; 16 >
 
   }
 
@@ -15543,7 +15543,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Asian Journal of Economics and Banking Volume 6 ; 6 >
     au < doNotProcess ; 2023 ; 2023 ; Asian Journal of Economics and Banking Volume 7 ; 7 >
     au < doNotProcess ; 2024 ; 2024 ; Asian Journal of Economics and Banking Volume 8 ; 8 >
-    au < exists ; 2025 ; 2025 ; Asian Journal of Economics and Banking Volume 9 ; 9 >
+    au < manifest ; 2025 ; 2025 ; Asian Journal of Economics and Banking Volume 9 ; 9 >
 
   }
 
@@ -15565,7 +15565,7 @@
     au < doNotProcess ; 2022 ; 2022 ; China Political Economy Volume 5 ; 5 >
     au < doNotProcess ; 2023 ; 2023 ; China Political Economy Volume 6 ; 6 >
     au < doNotProcess ; 2024 ; 2024 ; China Political Economy Volume 7 ; 7 >
-    au < exists ; 2025 ; 2025 ; China Political Economy Volume 8 ; 8 >
+    au < manifest ; 2025 ; 2025 ; China Political Economy Volume 8 ; 8 >
 
   }
 
@@ -15606,8 +15606,8 @@
     au < doNotProcess ; 2021 ; 2021 ; European Journal of Management & Business Economics Volume 30 ; 30 >
     au < doNotProcess ; 2022 ; 2022 ; European Journal of Management & Business Economics Volume 31 ; 31 >
     au < doNotProcess ; 2023 ; 2023 ; European Journal of Management & Business Economics Volume 32 ; 32 >
-    au < exists ; 2024 ; 2024 ; European Journal of Management & Business Economics Volume 33 ; 33 >
-    au < exists ; 2025 ; 2025 ; European Journal of Management & Business Economics Volume 34 ; 34 >
+    au < manifest ; 2024 ; 2024 ; European Journal of Management & Business Economics Volume 33 ; 33 >
+    au < manifest ; 2025 ; 2025 ; European Journal of Management & Business Economics Volume 34 ; 34 >
 
   }
 
@@ -15628,7 +15628,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Forest Economic Review Volume 4 ; 4 >
     au < doNotProcess ; 2023 ; 2023 ; Forest Economic Review Volume 5 ; 5 >
     au < doNotProcess ; 2024 ; 2024 ; Forest Economic Review Volume 6 ; 6 >
-    au < exists ; 2025 ; 2025 ; Forest Economic Review Volume 7 ; 7 >
+    au < manifest ; 2025 ; 2025 ; Forest Economic Review Volume 7 ; 7 >
 
   }
 
@@ -15652,7 +15652,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Higher Education Evaluation and Development Volume 16 ; 16 >
     au < doNotProcess ; 2023 ; 2023 ; Higher Education Evaluation and Development Volume 17 ; 17 >
     au < doNotProcess ; 2024 ; 2024 ; Higher Education Evaluation and Development Volume 18 ; 18 >
-    au < exists ; 2025 ; 2025 ; Higher Education Evaluation and Development Volume 19 ; 19 >
+    au < manifest ; 2025 ; 2025 ; Higher Education Evaluation and Development Volume 19 ; 19 >
 
   }
 
@@ -15675,7 +15675,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Innovation & Management Review Volume 19 ; 19 >
     au < doNotProcess ; 2023 ; 2023 ; Innovation & Management Review Volume 20 ; 20 >
     au < doNotProcess ; 2024 ; 2024 ; Innovation & Management Review Volume 21 ; 21 >
-    au < exists ; 2025 ; 2025 ; Innovation & Management Review Volume 22 ; 22 >
+    au < manifest ; 2025 ; 2025 ; Innovation & Management Review Volume 22 ; 22 >
 
   }
 
@@ -15697,7 +15697,7 @@
     au < doNotProcess ; 2022 ; 2022 ; International Hospitality Review Volume 36 ; 36 >
     au < doNotProcess ; 2023 ; 2023 ; International Hospitality Review Volume 37 ; 37 >
     au < doNotProcess ; 2024 ; 2024 ; International Hospitality Review Volume 38 ; 38 >
-    au < exists ; 2025 ; 2025 ; International Hospitality Review Volume 39 ; 39 >
+    au < manifest ; 2025 ; 2025 ; International Hospitality Review Volume 39 ; 39 >
 
   }
 
@@ -15770,7 +15770,7 @@
     au < doNotProcess ; 2022 ; 2022 ; International Trade, Politics and Development Volume 6 ; 6 >
     au < doNotProcess ; 2023 ; 2023 ; International Trade, Politics and Development Volume 7 ; 7 >
     au < doNotProcess ; 2024 ; 2024 ; International Trade, Politics and Development Volume 8 ; 8 >
-    au < exists ; 2025 ; 2025 ; International Trade, Politics and Development Volume 9 ; 9 >
+    au < manifest ; 2025 ; 2025 ; International Trade, Politics and Development Volume 9 ; 9 >
 
   }
 
@@ -15794,7 +15794,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Irish Journal of Occupational Therapy Volume 50 ; 50 >
     au < doNotProcess ; 2023 ; 2023 ; Irish Journal of Occupational Therapy Volume 51 ; 51 >
     au < doNotProcess ; 2024 ; 2024 ; Irish Journal of Occupational Therapy Volume 52 ; 52 >
-    au < exists ; 2025 ; 2025 ; Irish Journal of Occupational Therapy Volume 53 ; 53 >
+    au < manifest ; 2025 ; 2025 ; Irish Journal of Occupational Therapy Volume 53 ; 53 >
 
   }
 
@@ -15858,8 +15858,8 @@
     au < doNotProcess ; 2021 ; 2021 ; Journal of Asian Business Economics Studies Volume 28 ; 28 >
     au < doNotProcess ; 2022 ; 2022 ; Journal of Asian Business Economics Studies Volume 29 ; 29 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Asian Business Economics Studies Volume 30 ; 30 >
-    au < exists ; 2024 ; 2024 ; Journal of Asian Business Economics Studies Volume 31 ; 31 >
-    au < exists ; 2025 ; 2025 ; Journal of Asian Business Economics Studies Volume 32 ; 32 >
+    au < manifest ; 2024 ; 2024 ; Journal of Asian Business Economics Studies Volume 31 ; 31 >
+    au < manifest ; 2025 ; 2025 ; Journal of Asian Business Economics Studies Volume 32 ; 32 >
 
   }
 
@@ -15879,7 +15879,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Business and Socio-economic Development Volume 2 ; 2 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Business and Socio-economic Development Volume 3 ; 3 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Business and Socio-economic Development Volume 4 ; 4 >
-    au < exists ; 2025 ; 2025 ; Journal of Business and Socio-economic Development Volume 5 ; 5 >
+    au < manifest ; 2025 ; 2025 ; Journal of Business and Socio-economic Development Volume 5 ; 5 >
 
   }
 
@@ -15902,7 +15902,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Capital Markets Studies Volume 6 ; 6 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Capital Markets Studies Volume 7 ; 7 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Capital Markets Studies Volume 8 ; 8 >
-    au < exists ; 2025 ; 2025 ; Journal of Capital Markets Studies Volume 9 ; 9 >
+    au < manifest ; 2025 ; 2025 ; Journal of Capital Markets Studies Volume 9 ; 9 >
 
   }
 
@@ -15944,7 +15944,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Defense Analytics & Logistics Volume 6 ; 6 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Defense Analytics & Logistics Volume 7 ; 7 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Defense Analytics & Logistics Volume 8 ; 8 >
-    au < exists ; 2025 ; 2025 ; Journal of Defense Analytics & Logistics Volume 9 ; 9 >
+    au < manifest ; 2025 ; 2025 ; Journal of Defense Analytics & Logistics Volume 9 ; 9 >
 
   }
 
@@ -15983,8 +15983,8 @@
     au < doNotProcess ; 2021 ; 2021 ; Journal of Derivatives and Quantitative Studies Volume 29 ; 29 >
     au < doNotProcess ; 2022 ; 2022 ; Journal of Derivatives and Quantitative Studies Volume 30 ; 30 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Derivatives and Quantitative Studies Volume 31 ; 31 >
-    au < exists ; 2024 ; 2024 ; Journal of Derivatives and Quantitative Studies Volume 32 ; 32 >
-    au < exists ; 2025 ; 2025 ; Journal of Derivatives and Quantitative Studies Volume 33 ; 33 >
+    au < manifest ; 2024 ; 2024 ; Journal of Derivatives and Quantitative Studies Volume 32 ; 32 >
+    au < manifest ; 2025 ; 2025 ; Journal of Derivatives and Quantitative Studies Volume 33 ; 33 >
 
   }
 
@@ -16008,7 +16008,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Economics, Finance and Administrative Science Volume 27 ; 27 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Economics, Finance and Administrative Science Volume 28 ; 28 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Economics, Finance and Administrative Science Volume 29 ; 29 >
-    au < exists ; 2025 ; 2025 ; Journal of Economics, Finance and Administrative Science Volume 30 ; 30 >
+    au < manifest ; 2025 ; 2025 ; Journal of Economics, Finance and Administrative Science Volume 30 ; 30 >
 
   }
 
@@ -16028,7 +16028,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Ethics, Entrepreneurship and Technology Volume 2 ; 2 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Ethics, Entrepreneurship and Technology Volume 3 ; 3 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Ethics, Entrepreneurship and Technology Volume 4 ; 4 >
-    au < exists ; 2025 ; 2025 ; Journal of Ethics, Entrepreneurship and Technology Volume 5 ; 5 >
+    au < manifest ; 2025 ; 2025 ; Journal of Ethics, Entrepreneurship and Technology Volume 5 ; 5 >
 
   }
 
@@ -16070,8 +16070,8 @@
     au < doNotProcess ; 2021 ; 2021 ; Journal of Humanities and Applied Social Sciences Volume 3 ; 3 >
     au < doNotProcess ; 2022 ; 2022 ; Journal of Humanities and Applied Social Sciences Volume 4 ; 4 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Humanities and Applied Social Sciences Volume 5 ; 5 >
-    au < exists ; 2024 ; 2024 ; Journal of Humanities and Applied Social Sciences Volume 6 ; 6 >
-    au < exists ; 2025 ; 2025 ; Journal of Humanities and Applied Social Sciences Volume 7 ; 7 >
+    au < manifest ; 2024 ; 2024 ; Journal of Humanities and Applied Social Sciences Volume 6 ; 6 >
+    au < manifest ; 2025 ; 2025 ; Journal of Humanities and Applied Social Sciences Volume 7 ; 7 >
 
   }
 
@@ -16128,7 +16128,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Intelligent Manufacturing and Special Equipment Volume 3 ; 3 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Intelligent Manufacturing and Special Equipment Volume 4 ; 4 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Intelligent Manufacturing and Special Equipment Volume 5 ; 5 >
-    au < exists ; 2025 ; 2025 ; Journal of Intelligent Manufacturing and Special Equipment Volume 6 ; 6 >
+    au < manifest ; 2025 ; 2025 ; Journal of Intelligent Manufacturing and Special Equipment Volume 6 ; 6 >
 
   }
 
@@ -16151,7 +16151,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Research in Innovative Teaching & Learning Volume 15 ; 15 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Research in Innovative Teaching & Learning Volume 16 ; 16 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Research in Innovative Teaching & Learning Volume 17 ; 17 >
-    au < exists ; 2025 ; 2025 ; Journal of Research in Innovative Teaching & Learning Volume 18 ; 18 >
+    au < manifest ; 2025 ; 2025 ; Journal of Research in Innovative Teaching & Learning Volume 18 ; 18 >
 
   }
 
@@ -16195,7 +16195,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of Tourism Futures Volume 8 ; 8 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of Tourism Futures Volume 9 ; 9 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of Tourism Futures Volume 10 ; 10 >
-    au < exists ; 2025 ; 2025 ; Journal of Tourism Futures Volume 11 ; 11 >
+    au < manifest ; 2025 ; 2025 ; Journal of Tourism Futures Volume 11 ; 11 >
 
   }
 
@@ -16542,14 +16542,14 @@
     param[journal_id] = sjme
     comment[journal_issn] = 2444-9695
 
-    au < exists ; 2018 ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 >
+    au < manifest ; 2018 ; 2018 ; Spanish Journal of Marketing - ESIC Volume 22 ; 22 >
     au < doNotProcess ; 2019 ; 2019 ; Spanish Journal of Marketing - ESIC Volume 23 ; 23 >
-    au < exists ; 2020 ; 2020 ; Spanish Journal of Marketing - ESIC Volume 24 ; 24 >
-    au < exists ; 2021 ; 2021 ; Spanish Journal of Marketing - ESIC Volume 25 ; 25 >
-    au < exists ; 2022 ; 2022 ; Spanish Journal of Marketing - ESIC Volume 26 ; 26 >
+    au < manifest ; 2020 ; 2020 ; Spanish Journal of Marketing - ESIC Volume 24 ; 24 >
+    au < manifest ; 2021 ; 2021 ; Spanish Journal of Marketing - ESIC Volume 25 ; 25 >
+    au < manifest ; 2022 ; 2022 ; Spanish Journal of Marketing - ESIC Volume 26 ; 26 >
     au < doNotProcess ; 2023 ; 2023 ; Spanish Journal of Marketing - ESIC Volume 27 ; 27 >
     au < doNotProcess ; 2024 ; 2024 ; Spanish Journal of Marketing - ESIC Volume 28 ; 28 >
-    au < exists ; 2025 ; 2025 ; Spanish Journal of Marketing - ESIC Volume 29 ; 29 >
+    au < manifest ; 2025 ; 2025 ; Spanish Journal of Marketing - ESIC Volume 29 ; 29 >
   }
 
 
@@ -16568,8 +16568,8 @@
     au < doNotProcess ; 2021 ; 2021 ; Tourism Critiques Volume 2 ; 2 >
     au < doNotProcess ; 2022 ; 2022 ; Tourism Critiques Volume 3 ; 3 >
     au < doNotProcess ; 2023 ; 2023 ; Tourism Critiques Volume 4 ; 4 >
-    au < exists ; 2024 ; 2024 ; Tourism Critiques Volume 5 ; 5 >
-    au < exists ; 2025 ; 2025 ; Tourism Critiques Volume 6 ; 6 >
+    au < manifest ; 2024 ; 2024 ; Tourism Critiques Volume 5 ; 5 >
+    au < manifest ; 2025 ; 2025 ; Tourism Critiques Volume 6 ; 6 >
 
   }
 
@@ -16590,7 +16590,7 @@
     au < doNotProcess ; 2022 ; 2022 ; VILAKSHAN - XIMB Journal of Management Volume 19 ; 19 >
     au < doNotProcess ; 2023 ; 2023 ; VILAKSHAN - XIMB Journal of Management Volume 20 ; 20 >
     au < doNotProcess ; 2024 ; 2024 ; VILAKSHAN - XIMB Journal of Management Volume 21 ; 21 >
-    au < exists ; 2025 ; 2025 ; VILAKSHAN - XIMB Journal of Management Volume 22 ; 22 >
+    au < manifest ; 2025 ; 2025 ; VILAKSHAN - XIMB Journal of Management Volume 22 ; 22 >
 
   }
 
@@ -16643,7 +16643,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Applied Computing and Informatics Volume 18 ; 18 >
     au < doNotProcess ; 2023 ; 2023 ; Applied Computing and Informatics Volume 19 ; 19 >
     au < doNotProcess ; 2024 ; 2024 ; Applied Computing and Informatics Volume 20 ; 20 >
-    au < exists ; 2025 ; 2025 ; Applied Computing and Informatics Volume 21 ; 21 >
+    au < manifest ; 2025 ; 2025 ; Applied Computing and Informatics Volume 21 ; 21 >
 
   }
 
@@ -16664,7 +16664,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Arab Journal of Mathematical Sciences Volume 28 ; 28 >
     au < doNotProcess ; 2023 ; 2023 ; Arab Journal of Mathematical Sciences Volume 29 ; 29 >
     au < doNotProcess ; 2024 ; 2024 ; Arab Journal of Mathematical Sciences Volume 30 ; 30 >
-    au < exists ; 2025 ; 2025 ; Arab Journal of Mathematical Sciences Volume 31 ; 31 >
+    au < manifest ; 2025 ; 2025 ; Arab Journal of Mathematical Sciences Volume 31 ; 31 >
 
   }
 
@@ -16682,7 +16682,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Consumer Behavior in Tourism and Hospitality Volume 17 ; 17 >
     au < doNotProcess ; 2023 ; 2023 ; Consumer Behavior in Tourism and Hospitality Volume 18 ; 18 >
     au < doNotProcess ; 2024 ; 2024 ; Consumer Behavior in Tourism and Hospitality Volume 19 ; 19 >
-    au < exists ; 2025 ; 2025 ; Consumer Behavior in Tourism and Hospitality Volume 20 ; 20 >
+    au < manifest ; 2025 ; 2025 ; Consumer Behavior in Tourism and Hospitality Volume 20 ; 20 >
 
   }
 
@@ -16699,8 +16699,8 @@
 
     au < doNotProcess ; 2022 ; 2022 ; Drugs, Habits and Social Policy Volume 23 ; 23 >
     au < doNotProcess ; 2023 ; 2023 ; Drugs, Habits and Social Policy Volume 24 ; 24 >
-    au < exists ; 2024 ; 2024 ; Drugs, Habits and Social Policy Volume 25 ; 25 >
-    au < exists ; 2025 ; 2025 ; Drugs, Habits and Social Policy Volume 26 ; 26 >
+    au < manifest ; 2024 ; 2024 ; Drugs, Habits and Social Policy Volume 25 ; 25 >
+    au < manifest ; 2025 ; 2025 ; Drugs, Habits and Social Policy Volume 26 ; 26 >
 
   }
 
@@ -16718,7 +16718,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Drugs, Habits and Social Policy Volume 1 ; 1 >
     au < doNotProcess ; 2023 ; 2023 ; Drugs, Habits and Social Policy Volume 2 ; 2 >
     au < doNotProcess ; 2024 ; 2024 ; Drugs, Habits and Social Policy Volume 3 ; 3 >
-    au < exists ; 2025 ; 2025 ; Drugs, Habits and Social Policy Volume 4 ; 4 >
+    au < manifest ; 2025 ; 2025 ; Drugs, Habits and Social Policy Volume 4 ; 4 >
 
   }
 
@@ -16753,7 +16753,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Archnet-IJAR Volume 16 ; 16 >
     au < doNotProcess ; 2023 ; 2023 ; Archnet-IJAR Volume 17 ; 17 >
     au < doNotProcess ; 2024 ; 2024 ; Archnet-IJAR Volume 18 ; 18 >
-    au < exists ; 2025 ; 2025 ; Archnet-IJAR Volume 19 ; 19 >
+    au < manifest ; 2025 ; 2025 ; Archnet-IJAR Volume 19 ; 19 >
 
   }
 
