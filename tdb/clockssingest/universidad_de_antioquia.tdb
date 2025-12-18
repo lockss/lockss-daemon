@@ -147,7 +147,7 @@
       param[base_url] = https://revistas.udea.edu.co/
       param[journal_id] = cont
 
-      au < ready ; exists ; 1982 ; Contaduría Universidad de Antioquia Volume 1982 ; 1982 ; 1 ; >
+      au < crawling ; exists ; 1982 ; Contaduría Universidad de Antioquia Volume 1982 ; 1982 ; 1 ; >
       au < frozen ; exists ; 1983 ; Contaduría Universidad de Antioquia Volume 1983 ; 1983 ; 2 ; >
       au < frozen ; exists ; 1984 ; Contaduría Universidad de Antioquia Volume 1984 ; 1984 ; 3 ; >
       au < frozen ; exists ; 1985 ; Contaduría Universidad de Antioquia Volume 1985 ; 1985 ; 4 ; >
