@@ -27,22 +27,22 @@
     comment[base_url] = http://www.africanjournalofmidwifery.com/
     param[journal_id] = ajmw
 
-    au < frozen ; exists ; 2007 ; African Journal of Midwifery and Women's Health Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2008 ; African Journal of Midwifery and Women's Health Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2009 ; African Journal of Midwifery and Women's Health Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2010 ; African Journal of Midwifery and Women's Health Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2011 ; African Journal of Midwifery and Women's Health Volume 5 ; 5 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2012 ; African Journal of Midwifery and Women's Health Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2007 ; African Journal of Midwifery and Women's Health Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2008 ; African Journal of Midwifery and Women's Health Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2009 ; African Journal of Midwifery and Women's Health Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; African Journal of Midwifery and Women's Health Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; African Journal of Midwifery and Women's Health Volume 5 ; 5 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; African Journal of Midwifery and Women's Health Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2013 ; African Journal of Midwifery and Women's Health Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < down ; exists ; 2014 ; African Journal of Midwifery and Women's Health Volume 8 ; 8 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2015 ; African Journal of Midwifery and Women's Health Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; African Journal of Midwifery and Women's Health Volume 10 ; 10 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; African Journal of Midwifery and Women's Health Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; African Journal of Midwifery and Women's Health Volume 12 ; 12 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; African Journal of Midwifery and Women's Health Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; African Journal of Midwifery and Women's Health Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; African Journal of Midwifery and Women's Health Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; African Journal of Midwifery and Women's Health Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2019 ; African Journal of Midwifery and Women's Health Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; African Journal of Midwifery and Women's Health Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2021 ; African Journal of Midwifery and Women's Health Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2022 ; African Journal of Midwifery and Women's Health Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2023 ; African Journal of Midwifery and Women's Health Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; African Journal of Midwifery and Women's Health Volume 18 ; 18 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; African Journal of Midwifery and Women's Health Volume 19 ; 19 ; https://www.magonlinelibrary.com/ ; >
@@ -59,23 +59,23 @@
     comment[base_url] = http://www.cardiac-nursing.co.uk/
     param[journal_id] = bjca
 
-    au < frozen ; exists ; 2006 ; British Journal of Cardiac Nursing Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2007 ; British Journal of Cardiac Nursing Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2008 ; British Journal of Cardiac Nursing Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2009 ; British Journal of Cardiac Nursing Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2010 ; British Journal of Cardiac Nursing Volume 5 ; 5 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2011 ; British Journal of Cardiac Nursing Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2012 ; British Journal of Cardiac Nursing Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2006 ; British Journal of Cardiac Nursing Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2007 ; British Journal of Cardiac Nursing Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2008 ; British Journal of Cardiac Nursing Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2009 ; British Journal of Cardiac Nursing Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2010 ; British Journal of Cardiac Nursing Volume 5 ; 5 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2011 ; British Journal of Cardiac Nursing Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2012 ; British Journal of Cardiac Nursing Volume 7 ; 7 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; down ; 2013 ; British Journal of Cardiac Nursing Volume 8 ; 8 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; finished ; 2014 ; British Journal of Cardiac Nursing Volume 9 ; 9 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; British Journal of Cardiac Nursing Volume 10 ; 10 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2016 ; British Journal of Cardiac Nursing Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; British Journal of Cardiac Nursing Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; British Journal of Cardiac Nursing Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2019 ; British Journal of Cardiac Nursing Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; British Journal of Cardiac Nursing Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; British Journal of Cardiac Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; British Journal of Cardiac Nursing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2019 ; British Journal of Cardiac Nursing Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; British Journal of Cardiac Nursing Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2021 ; British Journal of Cardiac Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; British Journal of Cardiac Nursing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; British Journal of Cardiac Nursing Volume 18 ; 18 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; British Journal of Cardiac Nursing Volume 19 ; 19 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; British Journal of Cardiac Nursing Volume 20 ; 20 ; https://www.magonlinelibrary.com/ ; >
@@ -323,7 +323,7 @@
     au < frozen ; exists ; 2019 ; British Journal of Nursing Volume 28 ; 28 ; https://www.magonlinelibrary.com/ ; >
     au < frozen ; exists ; 2020 ; British Journal of Nursing Volume 29 ; 29 ; https://www.magonlinelibrary.com/ ; >
     au < frozen ; exists ; 2021 ; British Journal of Nursing Volume 30 ; 30 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; British Journal of Nursing Volume 31 ; 31 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2022 ; British Journal of Nursing Volume 31 ; 31 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; British Journal of Nursing Volume 32 ; 32 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; British Journal of Nursing Volume 33 ; 33 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; British Journal of Nursing Volume 34 ; 34 ; https://www.magonlinelibrary.com/ ; >
