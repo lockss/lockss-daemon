@@ -52,16 +52,16 @@
       au < manifest ; exists ; 1987 ; Chemical Engineering Education Volume 1987 ; 1987 ; 1987 ; >
       au < manifest ; exists ; 1988 ; Chemical Engineering Education Volume 1988 ; 1988 ; 1988 ; >
       au < manifest ; exists ; 1989 ; Chemical Engineering Education Volume 1989 ; 1989 ; 1989 ; >
-      au < testing ; exists ; 1990 ; Chemical Engineering Education Volume 1990 ; 1990 ; 1990 ; >
-      au < testing ; exists ; 1991 ; Chemical Engineering Education Volume 1991 ; 1991 ; 1991 ; >
-      au < testing ; exists ; 1992 ; Chemical Engineering Education Volume 1992 ; 1992 ; 1992 ; >
-      au < testing ; exists ; 1993 ; Chemical Engineering Education Volume 1993 ; 1993 ; 1993 ; >
-      au < testing ; exists ; 1994 ; Chemical Engineering Education Volume 1994 ; 1994 ; 1994 ; >
-      au < testing ; exists ; 1995 ; Chemical Engineering Education Volume 1995 ; 1995 ; 1995 ; >
-      au < testing ; exists ; 1996 ; Chemical Engineering Education Volume 1996 ; 1996 ; 1996 ; >
-      au < testing ; exists ; 1997 ; Chemical Engineering Education Volume 1997 ; 1997 ; 1997 ; >
-      au < testing ; exists ; 1998 ; Chemical Engineering Education Volume 1998 ; 1998 ; 1998 ; >
-      au < testing ; exists ; 1999 ; Chemical Engineering Education Volume 1999 ; 1999 ; 1999 ; >
+      au < ready ; exists ; 1990 ; Chemical Engineering Education Volume 1990 ; 1990 ; 1990 ; >
+      au < ready ; exists ; 1991 ; Chemical Engineering Education Volume 1991 ; 1991 ; 1991 ; >
+      au < ready ; exists ; 1992 ; Chemical Engineering Education Volume 1992 ; 1992 ; 1992 ; >
+      au < ready ; exists ; 1993 ; Chemical Engineering Education Volume 1993 ; 1993 ; 1993 ; >
+      au < ready ; exists ; 1994 ; Chemical Engineering Education Volume 1994 ; 1994 ; 1994 ; >
+      au < ready ; exists ; 1995 ; Chemical Engineering Education Volume 1995 ; 1995 ; 1995 ; >
+      au < ready ; exists ; 1996 ; Chemical Engineering Education Volume 1996 ; 1996 ; 1996 ; >
+      au < ready ; exists ; 1997 ; Chemical Engineering Education Volume 1997 ; 1997 ; 1997 ; >
+      au < ready ; exists ; 1998 ; Chemical Engineering Education Volume 1998 ; 1998 ; 1998 ; >
+      au < ready ; exists ; 1999 ; Chemical Engineering Education Volume 1999 ; 1999 ; 1999 ; >
       au < ready ; exists ; 2000 ; Chemical Engineering Education Volume 2000 ; 2000 ; 2000 ; >
       au < ready ; exists ; 2001 ; Chemical Engineering Education Volume 2001 ; 2001 ; 2001 ; >
       au < finished ; manifest ; 2002 ; Chemical Engineering Education Volume 2002 ; 2002 ; 2002 ; reingest1.clockss.org:8082 >
@@ -189,16 +189,16 @@
       au < manifest ; exists ; 1987 ; Florida Entomologist Volume 71 ; 71 ; 1987 ; >
       au < manifest ; exists ; 1988 ; Florida Entomologist Volume 72 ; 72 ; 1988 ; >
       au < manifest ; exists ; 1989 ; Florida Entomologist Volume 73 ; 73 ; 1989 ; >
-      au < testing ; exists ; 1990 ; Florida Entomologist Volume 74 ; 74 ; 1990 ; >
-      au < testing ; exists ; 1991 ; Florida Entomologist Volume 75 ; 75 ; 1991 ; >
-      au < testing ; exists ; 1992 ; Florida Entomologist Volume 76 ; 76 ; 1992 ; >
-      au < testing ; exists ; 1993 ; Florida Entomologist Volume 77 ; 77 ; 1993 ; >
-      au < testing ; exists ; 1994 ; Florida Entomologist Volume 78 ; 78 ; 1994 ; >
-      au < testing ; exists ; 1995 ; Florida Entomologist Volume 79 ; 79 ; 1995 ; >
-      au < testing ; exists ; 1996 ; Florida Entomologist Volume 80 ; 80 ; 1996 ; >
-      au < testing ; exists ; 1997 ; Florida Entomologist Volume 81 ; 81 ; 1997 ; >
-      au < testing ; exists ; 1998 ; Florida Entomologist Volume 82 ; 82 ; 1998 ; >
-      au < testing ; exists ; 1999 ; Florida Entomologist Volume 83 ; 83 ; 1999 ; >
+      au < ready ; exists ; 1990 ; Florida Entomologist Volume 74 ; 74 ; 1990 ; >
+      au < ready ; exists ; 1991 ; Florida Entomologist Volume 75 ; 75 ; 1991 ; >
+      au < ready ; exists ; 1992 ; Florida Entomologist Volume 76 ; 76 ; 1992 ; >
+      au < ready ; exists ; 1993 ; Florida Entomologist Volume 77 ; 77 ; 1993 ; >
+      au < ready ; exists ; 1994 ; Florida Entomologist Volume 78 ; 78 ; 1994 ; >
+      au < ready ; exists ; 1995 ; Florida Entomologist Volume 79 ; 79 ; 1995 ; >
+      au < ready ; exists ; 1996 ; Florida Entomologist Volume 80 ; 80 ; 1996 ; >
+      au < ready ; exists ; 1997 ; Florida Entomologist Volume 81 ; 81 ; 1997 ; >
+      au < ready ; exists ; 1998 ; Florida Entomologist Volume 82 ; 82 ; 1998 ; >
+      au < ready ; exists ; 1999 ; Florida Entomologist Volume 83 ; 83 ; 1999 ; >
       au < ready ; exists ; 2000 ; Florida Entomologist Volume 84 ; 84 ; 2000 ; >
       au < ready ; exists ; 2001 ; Florida Entomologist Volume 85 ; 85 ; 2001 ; >
       au < ready ; exists ; 2002 ; Florida Entomologist Volume 86 ; 86 ; 2002 ; >
@@ -235,16 +235,16 @@
 
       param[journal_id] = FLAIRS
 
-      au < testing ; exists ; 1988 ; The International FLAIRS Conference Proceedings Volume 1 ; 1 ; 1988 ; >
-      au < testing ; exists ; 1989 ; The International FLAIRS Conference Proceedings Volume 2 ; 2 ; 1989 ; >
-      au < testing ; exists ; 1990 ; The International FLAIRS Conference Proceedings Volume 3 ; 3 ; 1990 ; >
-      au < testing ; exists ; 1991 ; The International FLAIRS Conference Proceedings Volume 4 ; 4 ; 1991 ; >
-      au < testing ; exists ; 1992 ; The International FLAIRS Conference Proceedings Volume 5 ; 5 ; 1992 ; >
-      au < testing ; exists ; 1993 ; The International FLAIRS Conference Proceedings Volume 6 ; 6 ; 1993 ; >
+      au < ready ; exists ; 1988 ; The International FLAIRS Conference Proceedings Volume 1 ; 1 ; 1988 ; >
+      au < ready ; exists ; 1989 ; The International FLAIRS Conference Proceedings Volume 2 ; 2 ; 1989 ; >
+      au < ready ; exists ; 1990 ; The International FLAIRS Conference Proceedings Volume 3 ; 3 ; 1990 ; >
+      au < ready ; exists ; 1991 ; The International FLAIRS Conference Proceedings Volume 4 ; 4 ; 1991 ; >
+      au < ready ; exists ; 1992 ; The International FLAIRS Conference Proceedings Volume 5 ; 5 ; 1992 ; >
+      au < ready ; exists ; 1993 ; The International FLAIRS Conference Proceedings Volume 6 ; 6 ; 1993 ; >
       au < doesNotExist ; doesNotExist ; 1994 ; The International FLAIRS Conference Proceedings Volume 7 ; 7 ; 1994 ; >
-      au < testing ; exists ; 1995 ; The International FLAIRS Conference Proceedings Volume 8 ; 8 ; 1995 ; >
-      au < testing ; exists ; 1996 ; The International FLAIRS Conference Proceedings Volume 9 ; 9 ; 1996 ; >
-      au < testing ; exists ; 1997 ; The International FLAIRS Conference Proceedings Volume 10 ; 10 ; 1997 ; >
+      au < ready ; exists ; 1995 ; The International FLAIRS Conference Proceedings Volume 8 ; 8 ; 1995 ; >
+      au < ready ; exists ; 1996 ; The International FLAIRS Conference Proceedings Volume 9 ; 9 ; 1996 ; >
+      au < ready ; exists ; 1997 ; The International FLAIRS Conference Proceedings Volume 10 ; 10 ; 1997 ; >
       #No issues between 1998 and 2019
       au < finished ; manifest ; 2020 ; The International FLAIRS Conference Proceedings Volume 33 ; 33 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; The International FLAIRS Conference Proceedings Volume 34 ; 34 ; 2021 ; reingest3.clockss.org:8083 >
@@ -449,16 +449,16 @@
       au < manifest ; exists ; 1987 ; Studies in African Linguistics Volume 18 ; 18 ; 1987 ; >
       au < manifest ; exists ; 1988 ; Studies in African Linguistics Volume 19 ; 19 ; 1988 ; >
       au < manifest ; exists ; 1989 ; Studies in African Linguistics Volume 20 ; 20 ; 1989 ; >
-      au < testing ; exists ; 1990 ; Studies in African Linguistics Volume 21 ; 21 ; 1990 ; >
-      au < testing ; exists ; 1991 ; Studies in African Linguistics Volume 22 ; 22 ; 1991 ; >
-      au < testing ; exists ; 1992 ; Studies in African Linguistics Volume 23 ; 23 ; 1992 ; >
-      au < testing ; exists ; 1993 ; Studies in African Linguistics Volume 24 ; 24 ; 1993 ; >
-      au < testing ; exists ; 1994 ; Studies in African Linguistics Volume 25 ; 25 ; 1994 ; >
-      au < testing ; exists ; 1995 ; Studies in African Linguistics Volume 26 ; 26 ; 1995 ; >
-      au < testing ; exists ; 1996 ; Studies in African Linguistics Volume 27 ; 27 ; 1996 ; >
-      au < testing ; exists ; 1997 ; Studies in African Linguistics Volume 28 ; 28 ; 1997 ; >
-      au < testing ; exists ; 1998 ; Studies in African Linguistics Volume 29 ; 29 ; 1998 ; >
-      au < testing ; exists ; 1999 ; Studies in African Linguistics Volume 30 ; 30 ; 1999 ; >
+      au < ready ; exists ; 1990 ; Studies in African Linguistics Volume 21 ; 21 ; 1990 ; >
+      au < ready ; exists ; 1991 ; Studies in African Linguistics Volume 22 ; 22 ; 1991 ; >
+      au < ready ; exists ; 1992 ; Studies in African Linguistics Volume 23 ; 23 ; 1992 ; >
+      au < ready ; exists ; 1993 ; Studies in African Linguistics Volume 24 ; 24 ; 1993 ; >
+      au < ready ; exists ; 1994 ; Studies in African Linguistics Volume 25 ; 25 ; 1994 ; >
+      au < ready ; exists ; 1995 ; Studies in African Linguistics Volume 26 ; 26 ; 1995 ; >
+      au < ready ; exists ; 1996 ; Studies in African Linguistics Volume 27 ; 27 ; 1996 ; >
+      au < ready ; exists ; 1997 ; Studies in African Linguistics Volume 28 ; 28 ; 1997 ; >
+      au < ready ; exists ; 1998 ; Studies in African Linguistics Volume 29 ; 29 ; 1998 ; >
+      au < ready ; exists ; 1999 ; Studies in African Linguistics Volume 30 ; 30 ; 1999 ; >
       au < ready ; exists ; 2000 ; Studies in African Linguistics Volume 31 ; 31 ; 2000 ; >
       au < ready ; exists ; 2001 ; Studies in African Linguistics Volume 32 ; 32 ; 2001 ; >
       au < ready ; exists ; 2002 ; Studies in African Linguistics Volume 33 ; 33 ; 2002 ; >
@@ -498,16 +498,16 @@
 
       param[journal_id] = troplep
 
-      au < testing ; exists ; 1990 ; Tropical Lepidoptera Research Volume 1 ; 1 ; 1990 ; >
-      au < testing ; exists ; 1991 ; Tropical Lepidoptera Research Volume 2 ; 2 ; 1991 ; >
-      au < testing ; exists ; 1992 ; Tropical Lepidoptera Research Volume 3 ; 3 ; 1992 ; >
-      au < testing ; exists ; 1993 ; Tropical Lepidoptera Research Volume 4 ; 4 ; 1993 ; >
-      au < testing ; exists ; 1994 ; Tropical Lepidoptera Research Volume 5 ; 5 ; 1994 ; >
-      au < testing ; exists ; 1995 ; Tropical Lepidoptera Research Volume 6 ; 6 ; 1995 ; >
-      au < testing ; exists ; 1996 ; Tropical Lepidoptera Research Volume 7 ; 7 ; 1996 ; >
-      au < testing ; exists ; 1997 ; Tropical Lepidoptera Research Volume 8 ; 8 ; 1997 ; >
-      au < testing ; exists ; 1998 ; Tropical Lepidoptera Research Volume 9 ; 9 ; 1998 ; >
-      au < testing ; exists ; 1999 ; Tropical Lepidoptera Research Volume 10 ; 10 ; 1999 ; >
+      au < ready ; exists ; 1990 ; Tropical Lepidoptera Research Volume 1 ; 1 ; 1990 ; >
+      au < ready ; exists ; 1991 ; Tropical Lepidoptera Research Volume 2 ; 2 ; 1991 ; >
+      au < ready ; exists ; 1992 ; Tropical Lepidoptera Research Volume 3 ; 3 ; 1992 ; >
+      au < ready ; exists ; 1993 ; Tropical Lepidoptera Research Volume 4 ; 4 ; 1993 ; >
+      au < ready ; exists ; 1994 ; Tropical Lepidoptera Research Volume 5 ; 5 ; 1994 ; >
+      au < ready ; exists ; 1995 ; Tropical Lepidoptera Research Volume 6 ; 6 ; 1995 ; >
+      au < ready ; exists ; 1996 ; Tropical Lepidoptera Research Volume 7 ; 7 ; 1996 ; >
+      au < ready ; exists ; 1997 ; Tropical Lepidoptera Research Volume 8 ; 8 ; 1997 ; >
+      au < ready ; exists ; 1998 ; Tropical Lepidoptera Research Volume 9 ; 9 ; 1998 ; >
+      au < ready ; exists ; 1999 ; Tropical Lepidoptera Research Volume 10 ; 10 ; 1999 ; >
       au < ready ; exists ; 2000 ; Tropical Lepidoptera Research Volume 11 ; 11 ; 2000 ; >
       au < ready ; exists ; 2001 ; Tropical Lepidoptera Research Volume 12 ; 12 ; 2001 ; >
       au < ready ; exists ; 2002 ; Tropical Lepidoptera Research Volume 13 ; 13 ; 2002 ; >
@@ -778,13 +778,13 @@
       au < ready ; exists ; 1989 ; EDIS Volume 1989 ; 1989 ; 1989 ; >
       au < ready ; exists ; 1990 ; EDIS Volume 1990 ; 1990 ; 1990 ; >
       au < doesNotExist ; doesNotExist ; 1991 ; EDIS Volume 1991 ; 1991 ; 1991 ; >
-      au < testing ; exists ; 1992 ; EDIS Volume 1992 ; 1992 ; 1992 ; >
-      au < testing ; exists ; 1993 ; EDIS Volume 1993 ; 1993 ; 1993 ; >
-      au < testing ; exists ; 1994 ; EDIS Volume 1994 ; 1994 ; 1994 ; >
-      au < testing ; exists ; 1995 ; EDIS Volume 1995 ; 1995 ; 1995 ; >
-      au < testing ; exists ; 1996 ; EDIS Volume 1996 ; 1996 ; 1996 ; >
-      au < testing ; exists ; 1997 ; EDIS Volume 1997 ; 1997 ; 1997 ; >
-      au < testing ; exists ; 1998 ; EDIS Volume 1998 ; 1998 ; 1998 ; >
+      au < ready ; exists ; 1992 ; EDIS Volume 1992 ; 1992 ; 1992 ; >
+      au < ready ; exists ; 1993 ; EDIS Volume 1993 ; 1993 ; 1993 ; >
+      au < ready ; exists ; 1994 ; EDIS Volume 1994 ; 1994 ; 1994 ; >
+      au < ready ; exists ; 1995 ; EDIS Volume 1995 ; 1995 ; 1995 ; >
+      au < ready ; exists ; 1996 ; EDIS Volume 1996 ; 1996 ; 1996 ; >
+      au < ready ; exists ; 1997 ; EDIS Volume 1997 ; 1997 ; 1997 ; >
+      au < ready ; exists ; 1998 ; EDIS Volume 1998 ; 1998 ; 1998 ; >
       au < testing ; exists ; 1999 ; EDIS Volume 1999 ; 1999 ; 1999 ; >
       au < ready ; exists ; 2000 ; EDIS Volume 2000 ; 2000 ; 2000 ; >
       au < ready ; exists ; 2001 ; EDIS Volume 2001 ; 2001 ; 2001 ; >

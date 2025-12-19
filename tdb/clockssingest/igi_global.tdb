@@ -486,7 +486,7 @@
     au < deepCrawl ; exists ; 2022 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2023 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 2025 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 2025 ; International Journal of Applied Metaheuristic Computing (IJAMC) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4332,7 +4332,7 @@
       au < manifest ; exists ; 2021 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
       au < testing ; exists ; 2025 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
 
   }
@@ -4370,8 +4370,8 @@
       au < manifest ; exists ; 2021 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2025 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4385,7 +4385,7 @@
 
       param[journal_issn] = 2998-0941
 
-      au < testing ; exists ; 2025 ; International Journal of Artificial Intelligence (AI) in Business and Management (IJAIBM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Artificial Intelligence (AI) in Business and Management (IJAIBM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4399,7 +4399,7 @@
 
       param[journal_issn] = 2998-1271
 
-      au < testing ; exists ; 2025 ; International Journal of Artificial Intelligence (AI) in Teaching and Learning (IJAITL) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Artificial Intelligence (AI) in Teaching and Learning (IJAITL) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4418,7 +4418,7 @@
       au < manifest ; exists ; 2021 ; International Journal of Artificial Intelligence and Machine Learning (IJAIML) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Artificial Intelligence and Machine Learning (IJAIML) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Artificial Intelligence and Machine Learning (IJAIML) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Artificial Intelligence and Machine Learning (IJAIML) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Artificial Intelligence and Machine Learning (IJAIML) Volume 14 ; 14 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Artificial Intelligence and Machine Learning (IJAIML) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
 
   }
@@ -4441,7 +4441,7 @@
       au < manifest ; exists ; 2021 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
 
   }
@@ -4481,8 +4481,8 @@
       au < manifest ; exists ; 2021 ; International Journal of Big Data Intelligence and Applications (IJBDIA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Big Data Intelligence and Applications (IJBDIA) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Big Data Intelligence and Applications (IJBDIA) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Big Data Intelligence and Applications (IJBDIA) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2025 ; International Journal of Big Data Intelligence and Applications (IJBDIA) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Big Data Intelligence and Applications (IJBDIA) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Big Data Intelligence and Applications (IJBDIA) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4497,8 +4497,8 @@
       param[journal_issn] = 2771-5817
 
       au < manifest ; exists ; 2023 ; International Journal of Blockchain Applications and Secure Computing (IJBASC) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Blockchain Applications and Secure Computing (IJBASC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2025 ; International Journal of Blockchain Applications and Secure Computing (IJBASC) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Blockchain Applications and Secure Computing (IJBASC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Blockchain Applications and Secure Computing (IJBASC) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4522,8 +4522,8 @@
       au < manifest ; exists ; 2021 ; International Journal of Business Analytics (IJBAN) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Business Analytics (IJBAN) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Business Analytics (IJBAN) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Business Analytics (IJBAN) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2025 ; International Journal of Business Analytics (IJBAN) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Business Analytics (IJBAN) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Business Analytics (IJBAN) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4554,7 +4554,7 @@
 
       param[journal_issn] = 2998-0658
 
-      au < testing ; exists ; 2024 ; International Journal of Contemporary Islamic Studies (IJCIS) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Contemporary Islamic Studies (IJCIS) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Contemporary Islamic Studies (IJCIS) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
 
   }
@@ -4596,8 +4596,8 @@
       au < manifest ; exists ; 2021 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2025 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4615,7 +4615,7 @@
       au < manifest ; exists ; 2020 ; International Journal of Cyber Research and Education (IJCRE) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2021 ; International Journal of Cyber Research and Education (IJCRE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Cyber Research and Education (IJCRE) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Cyber Research and Education (IJCRE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Cyber Research and Education (IJCRE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4646,7 +4646,7 @@
 
       param[journal_issn] = 2998-4572
 
-      au < testing ; exists ; 2025 ; International Journal of Cybersecurity and Risk Assessment (IJCRA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Cybersecurity and Risk Assessment (IJCRA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4664,7 +4664,7 @@
       au < manifest ; exists ; 2021 ; International Journal of Data Analytics (IJDA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Data Analytics (IJDA) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Data Analytics (IJDA) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Data Analytics (IJDA) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Data Analytics (IJDA) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Data Analytics (IJDA) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
 
   }
@@ -4679,7 +4679,7 @@
 
       param[journal_issn] = 2998-4548
 
-      au < testing ; exists ; 2025 ; International Journal of Digital Marketing, Management, and Innovation (IJDMMI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Digital Marketing, Management, and Innovation (IJDMMI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4699,7 +4699,7 @@
       au < manifest ; exists ; 2021 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
 
   }
@@ -4735,8 +4735,8 @@
       au < manifest ; exists ; 2021 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2025 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4756,7 +4756,7 @@
       au < manifest ; exists ; 2021 ; International Journal of Fog Computing (IJFC) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Fog Computing (IJFC) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Fog Computing (IJFC) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2025 ; International Journal of Fog Computing (IJFC) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Fog Computing (IJFC) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4826,7 +4826,7 @@
       au < manifest ; exists ; 2021 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
 
   }
@@ -4859,8 +4859,8 @@
       au < manifest ; exists ; 2021 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2022 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2023 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2025 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2025 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -5098,7 +5098,7 @@
       param[journal_issn] = 2771-3687
 
       au < manifest ; exists ; 2022 ; International Journal of Practical Healthcare Innovation and Management Techniques (IJPHIMT) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
-      au < testing ; exists ; 2024 ; International Journal of Practical Healthcare Innovation and Management Techniques (IJPHIMT) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+      au < ready ; exists ; 2024 ; International Journal of Practical Healthcare Innovation and Management Techniques (IJPHIMT) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
 
   }
 
