@@ -29,7 +29,7 @@
       au < manifest ; exists ; 2009 ; PLOS Biology Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; PLOS Biology Volume 2010 ; 2010 ; >
       au < manifest ; exists ; 2011 ; PLOS Biology Volume 2011 ; 2011 ; >
-      au < manifest ; exists ; 2012 ; PLOS Biology Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2012 ; PLOS Biology Volume 2012 ; 2012 ; >
       au < ready ; exists ; 2013 ; PLOS Biology Volume 2013 ; 2013 ; >
       au < ready ; exists ; 2014 ; PLOS Biology Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; PLOS Biology Volume 2015 ; 2015 ; >
@@ -107,7 +107,7 @@
       au < manifest ; exists ; 2010 ; PLOS Computational Biology Volume 2010 ; 2010 ; >
       au < manifest ; exists ; 2011 ; PLOS Computational Biology Volume 2011 ; 2011 ; >
       au < manifest ; exists ; 2012 ; PLOS Computational Biology Volume 2012 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; PLOS Computational Biology Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2013 ; PLOS Computational Biology Volume 2013 ; 2013 ; >
       au < ready ; exists ; 2014 ; PLOS Computational Biology Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; PLOS Computational Biology Volume 2015 ; 2015 ; >
       au < ready ; exists ; 2016 ; PLOS Computational Biology Volume 2016 ; 2016 ; >
@@ -156,7 +156,7 @@
       au < manifest ; exists ; 2010 ; PLOS Genetics Volume 2010 ; 2010 ; >
       au < manifest ; exists ; 2011 ; PLOS Genetics Volume 2011 ; 2011 ; >
       au < manifest ; exists ; 2012 ; PLOS Genetics Volume 2012 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; PLOS Genetics Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2013 ; PLOS Genetics Volume 2013 ; 2013 ; >
       au < ready ; exists ; 2014 ; PLOS Genetics Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; PLOS Genetics Volume 2015 ; 2015 ; >
       au < manifest ; exists ; 2016 ; PLOS Genetics Volume 2016 ; 2016 ; >
@@ -206,7 +206,7 @@
       au < manifest ; exists ; 2009 ; PLOS Medicine Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; PLOS Medicine Volume 2010 ; 2010 ; >
       au < manifest ; exists ; 2011 ; PLOS Medicine Volume 2011 ; 2011 ; >
-      au < manifest ; exists ; 2012 ; PLOS Medicine Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2012 ; PLOS Medicine Volume 2012 ; 2012 ; >
       au < ready ; exists ; 2013 ; PLOS Medicine Volume 2013 ; 2013 ; >
       au < ready ; exists ; 2014 ; PLOS Medicine Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; PLOS Medicine Volume 2015 ; 2015 ; >
@@ -252,7 +252,7 @@
       au < manifest ; exists ; 2010 ; PLOS Neglected Tropical Diseases Volume 2010 ; 2010 ; >
       au < manifest ; exists ; 2011 ; PLOS Neglected Tropical Diseases Volume 2011 ; 2011 ; >
       au < manifest ; exists ; 2012 ; PLOS Neglected Tropical Diseases Volume 2012 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; PLOS Neglected Tropical Diseases Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2013 ; PLOS Neglected Tropical Diseases Volume 2013 ; 2013 ; >
       au < ready ; exists ; 2014 ; PLOS Neglected Tropical Diseases Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; PLOS Neglected Tropical Diseases Volume 2015 ; 2015 ; >
       au < ready ; exists ; 2016 ; PLOS Neglected Tropical Diseases Volume 2016 ; 2016 ; >
@@ -317,7 +317,7 @@
       au < manifest ; exists ; 2010 ; PLOS Pathogens Volume 2010 ; 2010 ; >
       au < manifest ; exists ; 2011 ; PLOS Pathogens Volume 2011 ; 2011 ; >
       au < manifest ; exists ; 2012 ; PLOS Pathogens Volume 2012 ; 2012 ; >
-      au < manifest ; exists ; 2013 ; PLOS Pathogens Volume 2013 ; 2013 ; >
+      au < ready ; exists ; 2013 ; PLOS Pathogens Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; PLOS Pathogens Volume 2014 ; 2014 ; >
       au < ready ; exists ; 2015 ; PLOS Pathogens Volume 2015 ; 2015 ; >
       au < frozen ; exists ; 2016 ; PLOS Pathogens Volume 2016 ; 2016 ; >
@@ -541,9 +541,9 @@
       au < manifest ; exists ; 2021 ; PLOS ONE Volume May 2021 ; 2021 ; May ; >
       au < manifest ; exists ; 2021 ; PLOS ONE Volume Jun 2021 ; 2021 ; June ; >
       au < ready ; exists ; 2021 ; PLOS ONE Volume Jul 2021 ; 2021 ; July ; >
-      au < manifest ; exists ; 2021 ; PLOS ONE Volume Aug 2021 ; 2021 ; August ; >
-      au < manifest ; exists ; 2021 ; PLOS ONE Volume Sep 2021 ; 2021 ; September ; >
-      au < manifest ; exists ; 2021 ; PLOS ONE Volume Oct 2021 ; 2021 ; October ; >
+      au < ready ; exists ; 2021 ; PLOS ONE Volume Aug 2021 ; 2021 ; August ; >
+      au < ready ; exists ; 2021 ; PLOS ONE Volume Sep 2021 ; 2021 ; September ; >
+      au < ready ; exists ; 2021 ; PLOS ONE Volume Oct 2021 ; 2021 ; October ; >
       au < manifest ; exists ; 2021 ; PLOS ONE Volume Nov 2021 ; 2021 ; November ; >
       au < manifest ; exists ; 2021 ; PLOS ONE Volume Dec 2021 ; 2021 ; December ; >
 
