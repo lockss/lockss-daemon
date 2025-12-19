@@ -483,7 +483,7 @@
 
       param[journal_id] = NTCS
 
-      au < frozen ; exists ; 2023 ; New Trends in Computer Sciences Volume 2023 ; 1 ; 2023 ; https://journals.vilniustech.lt/ ; >
+      au < finished ; manifest ; 2023 ; New Trends in Computer Sciences Volume 2023 ; 1 ; 2023 ; https://journals.vilniustech.lt/ ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; New Trends in Computer Sciences Volume 2024 ; 2 ; 2024 ; https://journals.vilniustech.lt/ ; >
       au < crawling ; exists ; 2025 ; New Trends in Computer Sciences Volume 2025 ; 3 ; 2025 ; https://journals.vilniustech.lt/ ; >
 
