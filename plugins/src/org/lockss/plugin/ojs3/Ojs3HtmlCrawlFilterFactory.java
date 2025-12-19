@@ -84,6 +84,9 @@ public class Ojs3HtmlCrawlFilterFactory implements FilterFactory {
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "site-footer"),
 		//remove links in references
 		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-details-references-value"),
+		//Some articles are linked in the full text of some IUScholarWorks AUs. Example: https://scholarworks.iu.edu/journals/index.php/tmr/article/view/20221/26303
+		// is linked on  https://scholarworks.iu.edu/journals/index.php/tmr/article/view/33881.
+		HtmlNodeFilters.tagWithAttributeRegex("div", "class", "jatsParser__article-fulltext"),
 		//Aug 2025, U of Edinburgh started adding 'test issues' (unpublished issues) on manifest page which redirect to login page. Exclude these links.
 		new NodeFilter() {
       		@Override public boolean accept(Node node) {

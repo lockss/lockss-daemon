@@ -65,7 +65,7 @@ public class Ojs3HttpResponseHandler implements CacheResultHandler {
           logger.debug3("URL is citation link. Downgrade error to warning.");
           return new CacheException.WarningOnly("500 Unauthorized (non-fatal)");
         }
-        return new CacheException.PermissionException("500 Unauthorized");
+        return new CacheException.RetrySameUrlException("500 Internal Server Error");
       default:
         logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
         throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");
