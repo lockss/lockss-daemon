@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>22</string>
+    <string>23</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -76,6 +76,8 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <!-- https://muse.jhu.edu/images/zoom_preloader.gif and https://muse.jhu.edu/images/zoom_icons.png caused 403s across the LOCKSS ecosystem for a couple of months -->
+      <string>2,"^https?://%s/images/(zoom_preloader\.gif|zoom_icons\.png)$", url_host(base_url)</string>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff.?)(\?v=.*)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/lockss\?vid=\d+$", url_host(base_url)</string>
       <string>1,"^https?://%s/issue/\d+(/image/.+)?$", url_host(base_url)</string>
