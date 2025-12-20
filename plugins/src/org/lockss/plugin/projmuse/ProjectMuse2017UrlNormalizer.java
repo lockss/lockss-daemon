@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2023, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -37,7 +37,6 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.BaseUrlHttpHttpsUrlNormalizer;
 import org.lockss.util.Logger;
 
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -55,13 +54,9 @@ public class ProjectMuse2017UrlNormalizer extends BaseUrlHttpHttpsUrlNormalizer 
       return url;
     }
 
-    Matcher mat = PUB_ID_PAT.matcher(url);
-    if (mat.find()) {
-      // https://muse.jhu.edu/pub/424/article/813469
-      // https://muse.jhu.edu/article/813469
-      url = mat.replaceFirst("/");
-    }
-
+    // https://muse.jhu.edu/pub/424/article/813469 -> https://muse.jhu.edu/article/813469
+    url = PUB_ID_PAT.matcher(url).replaceFirst("/");
+    
     return url;
   }
 
