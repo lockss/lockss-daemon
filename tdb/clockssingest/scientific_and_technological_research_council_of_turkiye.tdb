@@ -385,7 +385,7 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = physics
 
-      au < ready ; exists ; 1996 ; Turkish Journal of Physics Volume 20 ; 20 ; >
+      au < crawling ; exists ; 1996 ; Turkish Journal of Physics Volume 20 ; 20 ; >
       au < frozen ; exists ; 1997 ; Turkish Journal of Physics Volume 21 ; 21 ; >
       au < ready ; exists ; 1998 ; Turkish Journal of Physics Volume 22 ; 22 ; >
       au < ready ; exists ; 1999 ; Turkish Journal of Physics Volume 23 ; 23 ; >
