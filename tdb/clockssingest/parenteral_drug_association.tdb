@@ -22,26 +22,26 @@
       implicit < pluginSuffix ; status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
       #content available from 1980 Volume 34 to 1995 Volume 49
 
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1980 ; PDA Journal of Pharmaceutical Science and Technology Volume 34 ; 34 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1981 ; PDA Journal of Pharmaceutical Science and Technology Volume 35 ; 35 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1982 ; PDA Journal of Pharmaceutical Science and Technology Volume 36 ; 36 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1983 ; PDA Journal of Pharmaceutical Science and Technology Volume 37 ; 37 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1984 ; PDA Journal of Pharmaceutical Science and Technology Volume 38 ; 38 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1985 ; PDA Journal of Pharmaceutical Science and Technology Volume 39 ; 39 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1986 ; PDA Journal of Pharmaceutical Science and Technology Volume 40 ; 40 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1987 ; PDA Journal of Pharmaceutical Science and Technology Volume 41 ; 41 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1988 ; PDA Journal of Pharmaceutical Science and Technology Volume 42 ; 42 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1989 ; PDA Journal of Pharmaceutical Science and Technology Volume 43 ; 43 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1990 ; PDA Journal of Pharmaceutical Science and Technology Volume 44 ; 44 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1991 ; PDA Journal of Pharmaceutical Science and Technology Volume 45 ; 45 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1992 ; PDA Journal of Pharmaceutical Science and Technology Volume 46 ; 46 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1993 ; PDA Journal of Pharmaceutical Science and Technology Volume 47 ; 47 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1994 ; PDA Journal of Pharmaceutical Science and Technology Volume 48 ; 48 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1995 ; PDA Journal of Pharmaceutical Science and Technology Volume 49 ; 49 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1996 ; PDA Journal of Pharmaceutical Science and Technology Volume 50 ; 50 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1997 ; PDA Journal of Pharmaceutical Science and Technology Volume 51 ; 51 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1998 ; PDA Journal of Pharmaceutical Science and Technology Volume 52 ; 52 ; https://journal.pda.org/ ; >
-      au < pda.ClockssPDADrupalPlugin ; crawling ; exists ; 1999 ; PDA Journal of Pharmaceutical Science and Technology Volume 53 ; 53 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1980 ; PDA Journal of Pharmaceutical Science and Technology Volume 34 ; 34 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1981 ; PDA Journal of Pharmaceutical Science and Technology Volume 35 ; 35 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1982 ; PDA Journal of Pharmaceutical Science and Technology Volume 36 ; 36 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1983 ; PDA Journal of Pharmaceutical Science and Technology Volume 37 ; 37 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1984 ; PDA Journal of Pharmaceutical Science and Technology Volume 38 ; 38 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1985 ; PDA Journal of Pharmaceutical Science and Technology Volume 39 ; 39 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1986 ; PDA Journal of Pharmaceutical Science and Technology Volume 40 ; 40 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1987 ; PDA Journal of Pharmaceutical Science and Technology Volume 41 ; 41 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1988 ; PDA Journal of Pharmaceutical Science and Technology Volume 42 ; 42 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1989 ; PDA Journal of Pharmaceutical Science and Technology Volume 43 ; 43 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1990 ; PDA Journal of Pharmaceutical Science and Technology Volume 44 ; 44 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1991 ; PDA Journal of Pharmaceutical Science and Technology Volume 45 ; 45 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1992 ; PDA Journal of Pharmaceutical Science and Technology Volume 46 ; 46 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1993 ; PDA Journal of Pharmaceutical Science and Technology Volume 47 ; 47 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1994 ; PDA Journal of Pharmaceutical Science and Technology Volume 48 ; 48 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1995 ; PDA Journal of Pharmaceutical Science and Technology Volume 49 ; 49 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1996 ; PDA Journal of Pharmaceutical Science and Technology Volume 50 ; 50 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1997 ; PDA Journal of Pharmaceutical Science and Technology Volume 51 ; 51 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1998 ; PDA Journal of Pharmaceutical Science and Technology Volume 52 ; 52 ; https://journal.pda.org/ ; >
+      au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 1999 ; PDA Journal of Pharmaceutical Science and Technology Volume 53 ; 53 ; https://journal.pda.org/ ; >
       au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 2000 ; PDA Journal of Pharmaceutical Science and Technology Volume 54 ; 54 ; https://journal.pda.org/ ; >
       au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 2001 ; PDA Journal of Pharmaceutical Science and Technology Volume 55 ; 55 ; https://journal.pda.org/ ; >
       au < pda.ClockssPDADrupalPlugin ; frozen ; exists ; 2002 ; PDA Journal of Pharmaceutical Science and Technology Volume 56 ; 56 ; https://journal.pda.org/ ; >

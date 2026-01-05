@@ -95,7 +95,7 @@
     
     au < ready ; exists ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 ; >
     au < ready ; exists ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 ; >
     au < ready ; exists ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 ; >
     au < ready ; exists ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 ; >
@@ -344,10 +344,10 @@
       au < ready ; exists ; 2002 ; Critical Survey Volume 14 ; 14 ; >
       au < frozen ; exists ; 2003 ; Critical Survey Volume 15 ; 15 ; >
       au < frozen ; exists ; 2004 ; Critical Survey Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2005 ; Critical Survey Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2005 ; Critical Survey Volume 17 ; 17 ; >
       au < ready ; exists ; 2006 ; Critical Survey Volume 18 ; 18 ; >
       au < frozen ; exists ; 2007 ; Critical Survey Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2008 ; Critical Survey Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2008 ; Critical Survey Volume 20 ; 20 ; >
       au < ready ; exists ; 2009 ; Critical Survey Volume 21 ; 21 ; >
       au < ready ; exists ; 2010 ; Critical Survey Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Critical Survey Volume 23 ; 23 ; >
@@ -404,7 +404,7 @@
     au < ready ; exists ; 2004 ; Durkheimian Studies Volume 10 ; 10 ; >
     au < ready ; exists ; 2005 ; Durkheimian Studies Volume 11 ; 11 ; >
     au < ready ; exists ; 2006 ; Durkheimian Studies Volume 12 ; 12 ; >
-    au < crawling ; exists ; 2007 ; Durkheimian Studies Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2007 ; Durkheimian Studies Volume 13 ; 13 ; >
     au < frozen ; exists ; 2008 ; Durkheimian Studies Volume 14 ; 14 ; >
     au < ready ; exists ; 2009 ; Durkheimian Studies Volume 15 ; 15 ; >
     au < ready ; exists ; 2010 ; Durkheimian Studies Volume 16 ; 16 ; >
@@ -461,7 +461,7 @@
     # This title moved from Liverpool University Press
      
     au < frozen ; exists ; 2008 ; European Comic Art Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2009 ; European Comic Art Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2009 ; European Comic Art Volume 2 ; 2 ; >
     au < ready ; exists ; 2010 ; European Comic Art Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Comic Art Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; European Comic Art Volume 5 ; 5 ; >
@@ -577,7 +577,7 @@
     au < ready ; exists ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 ; >
     au < frozen ; exists ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 ; >
     au < ready ; exists ; 2003 ; French Politics, Culture & Society Volume 21 ; 21 ; >
-    au < crawling ; exists ; 2004 ; French Politics, Culture & Society Volume 22 ; 22 ; >
+    au < frozen ; exists ; 2004 ; French Politics, Culture & Society Volume 22 ; 22 ; >
     au < ready ; exists ; 2005 ; French Politics, Culture & Society Volume 23 ; 23 ; >
     au < ready ; exists ; 2006 ; French Politics, Culture & Society Volume 24 ; 24 ; >
     au < ready ; exists ; 2007 ; French Politics, Culture & Society Volume 25 ; 25 ; >
@@ -621,7 +621,7 @@
     au < ready ; exists ; 2002 ; German Politics and Society Volume 20 ; 20 ; >
     au < ready ; exists ; 2003 ; German Politics and Society Volume 21 ; 21 ; >
     au < ready ; exists ; 2004 ; German Politics and Society Volume 22 ; 22 ; >
-    au < crawling ; exists ; 2005 ; German Politics and Society Volume 23 ; 23 ; >
+    au < frozen ; exists ; 2005 ; German Politics and Society Volume 23 ; 23 ; >
     au < ready ; exists ; 2006 ; German Politics and Society Volume 24 ; 24 ; >
     au < finished ; crawling ; 2007 ; German Politics and Society Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 2008 ; German Politics and Society Volume 26 ; 26 ; >
@@ -814,7 +814,7 @@
     #param[journal_issn] = 2041-6938
        
     au < ready ; exists ; 2009 ; Journal of Educational Media, Memory, and Society Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2010 ; Journal of Educational Media, Memory, and Society Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2010 ; Journal of Educational Media, Memory, and Society Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Journal of Educational Media, Memory, and Society Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journal of Educational Media, Memory, and Society Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journal of Educational Media, Memory, and Society Volume 5 ; 5 ; >
@@ -855,8 +855,8 @@
     au < ready ; exists ; 2006 ; Journeys Volume 7 ; 7 ; >
     au < ready ; exists ; 2007 ; Journeys Volume 8 ; 8 ; >
     au < ready ; exists ; 2008 ; Journeys Volume 9 ; 9 ; >
-    au < crawling ; exists ; 2009 ; Journeys Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2010 ; Journeys Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2009 ; Journeys Volume 10 ; 10 ; >
+    au < frozen ; exists ; 2010 ; Journeys Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Journeys Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Journeys Volume 13 ; 13 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Journeys Volume 14 ; 14 ; >
@@ -882,7 +882,7 @@
     param[journal_id] = latiss
     #param[journal_issn] = 1755-2273
        
-    au < crawling ; exists ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 ; >
+    au < frozen ; exists ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 ; >
     au < ready ; exists ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 ; >
     au < ready ; exists ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 ; >
@@ -1052,7 +1052,7 @@
     #param[journal_issn] = 1934-9688
         
     au < ready ; exists ; 2007 ; Projections Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2008 ; Projections Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2008 ; Projections Volume 2 ; 2 ; >
     au < ready ; exists ; 2009 ; Projections Volume 3 ; 3 ; >
     au < ready ; exists ; 2010 ; Projections Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Projections Volume 5 ; 5 ; >
@@ -1153,12 +1153,12 @@
     au < ready ; exists ; 2002 ; Sartre Studies International Volume 8 ; 8 ; >
     au < ready ; exists ; 2003 ; Sartre Studies International Volume 9 ; 9 ; >
     au < frozen ; exists ; 2004 ; Sartre Studies International Volume 10 ; 10 ; >
-    au < crawling ; exists ; 2005 ; Sartre Studies International Volume 11 ; 11 ; >
+    au < frozen ; exists ; 2005 ; Sartre Studies International Volume 11 ; 11 ; >
     au < ready ; exists ; 2006 ; Sartre Studies International Volume 12 ; 12 ; >
     au < ready ; exists ; 2007 ; Sartre Studies International Volume 13 ; 13 ; >
     au < ready ; exists ; 2008 ; Sartre Studies International Volume 14 ; 14 ; >
     au < ready ; exists ; 2009 ; Sartre Studies International Volume 15 ; 15 ; >
-    au < crawling ; exists ; 2010 ; Sartre Studies International Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2010 ; Sartre Studies International Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Sartre Studies International Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Sartre Studies International Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Sartre Studies International Volume 19 ; 19 ; >
@@ -1217,7 +1217,7 @@
     au < frozen ; exists ; 2007 ; Sibirica Volume 6 ; 6 ; >
     au < ready ; exists ; 2008 ; Sibirica Volume 7 ; 7 ; >
     au < ready ; exists ; 2009 ; Sibirica Volume 8 ; 8 ; >
-    au < crawling ; exists ; 2010 ; Sibirica Volume 9 ; 9 ; >
+    au < frozen ; exists ; 2010 ; Sibirica Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Sibirica Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Sibirica Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Sibirica Volume 12 ; 12 ; >
@@ -1249,7 +1249,7 @@
         
     au < ready ; exists ; 2002 ; Social Analysis Volume 46 ; 46 ; >
     au < frozen ; exists ; 2003 ; Social Analysis Volume 47 ; 47 ; >
-    au < crawling ; exists ; 2004 ; Social Analysis Volume 48 ; 48 ; >
+    au < frozen ; exists ; 2004 ; Social Analysis Volume 48 ; 48 ; >
     au < ready ; exists ; 2005 ; Social Analysis Volume 49 ; 49 ; >
     au < frozen ; exists ; 2006 ; Social Analysis Volume 50 ; 50 ; >
     au < ready ; exists ; 2007 ; Social Analysis Volume 51 ; 51 ; >
@@ -1292,7 +1292,7 @@
     au < ready ; exists ; 2000 ; Theoria Volume 47 ; 47 ; >
     au < ready ; exists ; 2001 ; Theoria Volume 48 ; 48 ; >
     au < ready ; exists ; 2002 ; Theoria Volume 49 ; 49 ; >
-    au < crawling ; exists ; 2003 ; Theoria Volume 50 ; 50 ; >
+    au < frozen ; exists ; 2003 ; Theoria Volume 50 ; 50 ; >
     au < ready ; exists ; 2004 ; Theoria Volume 51 ; 51 ; >
     au < ready ; exists ; 2005 ; Theoria Volume 52 ; 52 ; >
     au < testing ; exists ; 2006 ; Theoria Volume 53 ; 53 ; >

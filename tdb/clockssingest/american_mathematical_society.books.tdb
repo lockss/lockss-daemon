@@ -1109,7 +1109,7 @@
     au < finished ; crawling ; 2020 ; University Lecture Series 2020 ; 2020 ; https://www.ams.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2021 ; University Lecture Series 2021 ; 2021 ; https://www.ams.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2023 ; University Lecture Series 2023 ; 2023 ; https://www.ams.org/ ; reingest4.clockss.org:8082 >
-    au < crawling ; exists ; 2024 ; University Lecture Series 2024 ; 2024 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 2024 ; University Lecture Series 2024 ; 2024 ; https://www.ams.org/ ; >
     }
 
     {
@@ -1218,7 +1218,7 @@
     au < frozen ; exists ; 1995 ; Classroom Resource Materials 1995 ; 1995 ; https://www.ams.org/ ; >
     au < frozen ; exists ; 1996 ; Classroom Resource Materials 1996 ; 1996 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1997 ; Classroom Resource Materials 1997 ; 1997 ; https://www.ams.org/ ; >
-    au < crawling ; exists ; 1998 ; Classroom Resource Materials 1998 ; 1998 ; https://www.ams.org/ ; >
+    au < frozen ; exists ; 1998 ; Classroom Resource Materials 1998 ; 1998 ; https://www.ams.org/ ; >
     au < ready ; exists ; 1999 ; Classroom Resource Materials 1999 ; 1999 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2000 ; Classroom Resource Materials 2000 ; 2000 ; https://www.ams.org/ ; >
     au < ready ; exists ; 2001 ; Classroom Resource Materials 2001 ; 2001 ; https://www.ams.org/ ; >

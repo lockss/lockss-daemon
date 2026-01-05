@@ -260,24 +260,24 @@
       param[journal_id] = llt
       comment[notReady] = # one year delayed Open Access policy -- one year embargo.
 
-      au < crawling ; exists ; 1976 ; Labour / Le Travail Volume 1 ; 1 ; 1976 ; >
-      au < crawling ; exists ; 1977 ; Labour / Le Travail Volume 2 ; 2 ; 1977 ; >
+      au < frozen ; exists ; 1976 ; Labour / Le Travail Volume 1 ; 1 ; 1976 ; >
+      au < frozen ; exists ; 1977 ; Labour / Le Travail Volume 2 ; 2 ; 1977 ; >
       au < ready ; exists ; 1978 ; Labour / Le Travail Volume 3 ; 3 ; 1978 ; >
-      au < crawling ; exists ; 1979 ; Labour / Le Travail Volume 4 ; 4 ; 1979 ; >
+      au < frozen ; exists ; 1979 ; Labour / Le Travail Volume 4 ; 4 ; 1979 ; >
       au < ready ; exists ; 1980 ; Labour / Le Travail Volume 5-6 ; 5-6 ; 1980 ; >
       au < ready ; exists ; 1981 ; Labour / Le Travail Volume 7-9 ; 7-9 ; 1981 ; >
-      au < crawling ; exists ; 1982 ; Labour / Le Travail Volume 10 ; 10 ; 1982 ; >
-      au < crawling ; exists ; 1983 ; Labour / Le Travail Volume 11-12 ; 11-12 ; 1983 ; >
+      au < frozen ; exists ; 1982 ; Labour / Le Travail Volume 10 ; 10 ; 1982 ; >
+      au < frozen ; exists ; 1983 ; Labour / Le Travail Volume 11-12 ; 11-12 ; 1983 ; >
       au < ready ; exists ; 1984 ; Labour / Le Travail Volume 13-14 ; 13-14 ; 1984 ; >
-      au < crawling ; exists ; 1985 ; Labour / Le Travail Volume 15-16 ; 15-16 ; 1985 ; >
-      au < crawling ; exists ; 1986 ; Labour / Le Travail Volume 17-18 ; 17-18 ; 1986 ; >
-      au < crawling ; exists ; 1987 ; Labour / Le Travail Volume 19-20 ; 19-20 ; 1987 ; >
+      au < frozen ; exists ; 1985 ; Labour / Le Travail Volume 15-16 ; 15-16 ; 1985 ; >
+      au < frozen ; exists ; 1986 ; Labour / Le Travail Volume 17-18 ; 17-18 ; 1986 ; >
+      au < frozen ; exists ; 1987 ; Labour / Le Travail Volume 19-20 ; 19-20 ; 1987 ; >
       au < ready ; exists ; 1988 ; Labour / Le Travail Volume 21-22 ; 21-22 ; 1988 ; >
       au < ready ; exists ; 1989 ; Labour / Le Travail Volume 23-24 ; 23-24 ; 1989 ; >
       au < ready ; exists ; 1990 ; Labour / Le Travail Volume 25-26 ; 25-26 ; 1990 ; >
-      au < crawling ; exists ; 1991 ; Labour / Le Travail Volume 27-28 ; 27-28 ; 1991 ; >
+      au < frozen ; exists ; 1991 ; Labour / Le Travail Volume 27-28 ; 27-28 ; 1991 ; >
       au < ready ; exists ; 1992 ; Labour / Le Travail Volume 29-30 ; 29-30 ; 1992 ; >
-      au < crawling ; exists ; 1993 ; Labour / Le Travail Volume 31-32 ; 31-32 ; 1993 ; >
+      au < frozen ; exists ; 1993 ; Labour / Le Travail Volume 31-32 ; 31-32 ; 1993 ; >
       au < doNotProcess ; doNotProcess ; 1994 ; Labour / Le Travail Volume 33-34 ; 33-34 ; 1994 ; >
       au < frozen ; exists ; 1995 ; Labour / Le Travail Volume 35-36 ; 35-36 ; 1995 ; >
       au < frozen ; exists ; 1996 ; Labour / Le Travail Volume 37-38 ; 37-38 ; 1996 ; >
@@ -435,13 +435,13 @@
       au < ready ; exists ; 1985 ; The Trumpeter Volume 2 ; 2 ; 1985 ; >
       au < ready ; exists ; 1986 ; The Trumpeter Volume 3 ; 3 ; 1986 ; >
       au < ready ; exists ; 1987 ; The Trumpeter Volume 4 ; 4 ; 1987 ; >
-      au < crawling ; exists ; 1988 ; The Trumpeter Volume 5 ; 5 ; 1988 ; >
-      au < crawling ; exists ; 1989 ; The Trumpeter Volume 6 ; 6 ; 1989 ; >
+      au < frozen ; exists ; 1988 ; The Trumpeter Volume 5 ; 5 ; 1988 ; >
+      au < frozen ; exists ; 1989 ; The Trumpeter Volume 6 ; 6 ; 1989 ; >
       au < ready ; exists ; 1990 ; The Trumpeter Volume 7 ; 7 ; 1990 ; >
       au < ready ; exists ; 1991 ; The Trumpeter Volume 8 ; 8 ; 1991 ; >
       au < manifest ; exists ; 1992 ; The Trumpeter Volume 9 ; 9 ; 1992 ; >
-      au < crawling ; exists ; 1993 ; The Trumpeter Volume 10 ; 10 ; 1993 ; >
-      au < crawling ; exists ; 1994 ; The Trumpeter Volume 11 ; 11 ; 1994 ; >
+      au < frozen ; exists ; 1993 ; The Trumpeter Volume 10 ; 10 ; 1993 ; >
+      au < frozen ; exists ; 1994 ; The Trumpeter Volume 11 ; 11 ; 1994 ; >
       au < frozen ; exists ; 1995 ; The Trumpeter Volume 12 ; 12 ; 1995 ; >
       au < frozen ; exists ; 1996 ; The Trumpeter Volume 13 ; 13 ; 1996 ; >
       au < frozen ; exists ; 1997 ; The Trumpeter Volume 14 ; 14 ; 1997 ; >

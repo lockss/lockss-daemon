@@ -190,7 +190,7 @@
       au < finished ; manifest ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 19 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; The F. Scott Fitzgerald Review Volume 20 ; 20 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; The F. Scott Fitzgerald Review Volume 21 ; 21 ; 2023 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2024 ; The F. Scott Fitzgerald Review Volume 22 ; 22 ; 2024 ; >
+      au < frozen ; exists ; 2024 ; The F. Scott Fitzgerald Review Volume 22 ; 22 ; 2024 ; >
       au < expected ; exists ; 2025 ; The F. Scott Fitzgerald Review Volume 23 ; 23 ; 2025 ; >
 
   }
@@ -235,7 +235,7 @@
       param[journal_id] = ils
       # 2009, 2010 volume numbers don't line up with years
 
-      au < crawling ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8 (2007) ; 8 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8 (2007) ; 8 ; 2007 ; >
       au < ready ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 9 (2007) ; 9 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Interdisciplinary Literary Studies Volume 9 (2008) ; 9 ; 2008 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Interdisciplinary Literary Studies Volume 10 (2008) ; 10 ; 2008 ; reingest5.clockss.org:8082 >
@@ -471,7 +471,7 @@
       param[journal_id] = moravian-history
 
       au < ready ; exists ; 2007 ; Journal of Moravian History Volume 2 ; 2 ; 2007 ; >
-      au < crawling ; exists ; 2007 ; Journal of Moravian History Volume 3 ; 3 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; Journal of Moravian History Volume 3 ; 3 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Journal of Moravian History Volume 4 ; 4 ; 2008 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Journal of Moravian History Volume 5 ; 5 ; 2008 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; 2009 ; >
@@ -1629,7 +1629,7 @@
       au < ready ; exists ; 2004 ; Resources for American Literary Study Volume 29 ; 29 ; 2004 ; >
       au < ready ; exists ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 ; >
       au < ready ; exists ; 2006 ; Resources for American Literary Study Volume 31 ; 31 ; 2006 ; >
-      au < crawling ; exists ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Resources for American Literary Study Volume 33 ; 33 ; 2008 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; Resources for American Literary Study Volume 34 ; 34 ; 2009 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Resources for American Literary Study Volume 35 ; 35 ; 2010 ; reingest2.clockss.org:8085 >
@@ -2283,7 +2283,7 @@
       au < ready ; exists ; 1998 ; Journal for the History of Rhetoric Volume 1 ; 1 ; 1998 ; >
       au < ready ; exists ; 1999 ; Journal for the History of Rhetoric Volume 2 ; 2 ; 1999 ; >
       au < ready ; exists ; 2000 ; Journal for the History of Rhetoric Volume 3 ; 3 ; 2000 ; >
-      au < crawling ; exists ; 2001 ; Journal for the History of Rhetoric Volume 4 ; 4 ; 2001 ; >
+      au < frozen ; exists ; 2001 ; Journal for the History of Rhetoric Volume 4 ; 4 ; 2001 ; >
       au < ready ; exists ; 2002 ; Journal for the History of Rhetoric Volume 5 ; 5 ; 2002 ; >
       au < frozen ; exists ; 2003 ; Journal for the History of Rhetoric Volume 6 ; 6 ; 2003 ; >
       au < ready ; exists ; 2004 ; Journal for the History of Rhetoric Volume 7 ; 7 ; 2004 ; >
@@ -2457,7 +2457,7 @@
       au < ready ; exists ; 2000 ; Victorians Institute Journal Volume 28 ; 28 ; 2000 ; >
       au < ready ; exists ; 2001 ; Victorians Institute Journal Volume 29 ; 29 ; 2001 ; >
       au < ready ; exists ; 2002 ; Victorians Institute Journal Volume 30 ; 30 ; 2002 ; >
-      au < crawling ; exists ; 2003 ; Victorians Institute Journal Volume 31 ; 31 ; 2003 ; >
+      au < frozen ; exists ; 2003 ; Victorians Institute Journal Volume 31 ; 31 ; 2003 ; >
       au < ready ; exists ; 2004 ; Victorians Institute Journal Volume 32 ; 32 ; 2004 ; >
       au < ready ; exists ; 2005 ; Victorians Institute Journal Volume 33 ; 33 ; 2005 ; >
       au < ready ; exists ; 2006 ; Victorians Institute Journal Volume 34 ; 34 ; 2006 ; >

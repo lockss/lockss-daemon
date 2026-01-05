@@ -90,7 +90,7 @@
       au < ready ; exists ; 2007 ; Georgia Educational Researcher Volume 5 ; 5 ; >
       au < ready ; exists ; 2008 ; Georgia Educational Researcher Volume 6 ; 6 ; >
       au < ready ; exists ; 2009 ; Georgia Educational Researcher Volume 7 ; 7 ; >
-      au < crawling ; exists ; 2010 ; Georgia Educational Researcher Volume 8 ; 8 ; >
+      au < frozen ; exists ; 2010 ; Georgia Educational Researcher Volume 8 ; 8 ; >
       au < frozen ; exists ; 2012 ; Georgia Educational Researcher Volume 9 ; 9 ; >
       au < finished ; finished ; 2013 ; Georgia Educational Researcher Volume 10 ; 10 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2014 ; Georgia Educational Researcher Volume 11 ; 11 ; reingest2.clockss.org:8085 >
@@ -138,11 +138,11 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = ij-sotl
 
-      au < crawling ; exists ; 2007 ; International Journal for the Scholarship of Teaching & Learning Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2007 ; International Journal for the Scholarship of Teaching & Learning Volume 1 ; 1 ; >
       au < ready ; exists ; 2008 ; International Journal for the Scholarship of Teaching & Learning Volume 2 ; 2 ; >
       au < ready ; exists ; 2009 ; International Journal for the Scholarship of Teaching & Learning Volume 3 ; 3 ; >
       au < ready ; exists ; 2010 ; International Journal for the Scholarship of Teaching & Learning Volume 4 ; 4 ; >
-      au < crawling ; exists ; 2011 ; International Journal for the Scholarship of Teaching & Learning Volume 5 ; 5 ; >
+      au < frozen ; exists ; 2011 ; International Journal for the Scholarship of Teaching & Learning Volume 5 ; 5 ; >
       au < finished ; finished ; 2012 ; International Journal for the Scholarship of Teaching & Learning Volume 6 ; 6 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2013 ; International Journal for the Scholarship of Teaching & Learning Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2014 ; International Journal for the Scholarship of Teaching & Learning Volume 8 ; 8 ; reingest3.clockss.org:8083 >
@@ -277,7 +277,7 @@
 
       au < ready ; exists ; 2007 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 1 ; 1 ; >
       au < ready ; exists ; 2008 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 2 ; 2 ; >
-      au < crawling ; exists ; 2009 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 3 ; 3 ; >
+      au < frozen ; exists ; 2009 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 3 ; 3 ; >
       au < finished ; finished ; 2020 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 4 ; 4 ; reingest4.clockss.org:8082 >
 
       au < finished ; finished ; 2013 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 7 ; 7 ; reingest5.clockss.org:8082 >
@@ -324,8 +324,8 @@
       au < ready ; exists ; 2004-2005 ; Southern Business Review Volume 30 ; 30 ; >
       au < ready ; exists ; 2005-2006 ; Southern Business Review Volume 31 ; 31 ; >
       au < finished ; finished ; 2006-2020 ; Southern Business Review Volume 32 ; 32 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2008 ; Southern Business Review Volume 33 ; 33 ; >
-      au < crawling ; exists ; 2009 ; Southern Business Review Volume 34 ; 34 ; >
+      au < frozen ; exists ; 2008 ; Southern Business Review Volume 33 ; 33 ; >
+      au < frozen ; exists ; 2009 ; Southern Business Review Volume 34 ; 34 ; >
       au < frozen ; exists ; 2010 ; Southern Business Review Volume 35 ; 35 ; >
       au < frozen ; exists ; 2011 ; Southern Business Review Volume 36 ; 36 ; >
       au < finished ; finished ; 2012 ; Southern Business Review Volume 37 ; 37 ; reingest4.clockss.org:8082 >
