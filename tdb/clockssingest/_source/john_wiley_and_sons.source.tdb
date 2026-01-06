@@ -29,7 +29,7 @@
       #au < expected ; exists ; 2023 ; Wiley Books Source Content 2023_01 ; 2023_01 >
       au < readySource ; crawling ; 2024 ; Wiley Books Source Content 2024_01 ; 2024_01 >
       au < readySource ; crawling ; 2025 ; Wiley Books Source Content 2025_01 ; 2025_01 >
-      au < expected ; exists ; 2026 ; Wiley Books Source Content 2026_01 ; 2026_01 >
+      au < manifest ; exists ; 2026 ; Wiley Books Source Content 2026_01 ; 2026_01 >
 
       }
   }
@@ -142,7 +142,7 @@
 
       au < readySource ; crawling ; 2024 ; Wiley MRW Source Content 2024_01 ; 2024_01 >
       au < readySource ; crawling ; 2025 ; Wiley MRW Source Content 2025_01 ; 2025_01 >
-      au < expected ; exists ; 2026 ; Wiley MRW Source Content 2026_01 ; 2026_01 >
+      au < manifest ; exists ; 2026 ; Wiley MRW Source Content 2026_01 ; 2026_01 >
 
     }
   }
