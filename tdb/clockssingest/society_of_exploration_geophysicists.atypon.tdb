@@ -10,8 +10,9 @@
 
  
   plugin = org.lockss.plugin.atypon.seg.ClockssSEGPlugin
-#  param[base_url] = http://library.seg.org/
+  #param[base_url] = http://library.seg.org/
   implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
+  #Moved to GSW/SC
 
   {
   
@@ -109,10 +110,10 @@
     au < frozen ; exists ; 2019 ; Geophysics Volume 84 ; 84 ; https://library.seg.org/ ; >
     au < finished ; manifest ; 2020 ; Geophysics Volume 85 ; 85 ; https://library.seg.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Geophysics Volume 86 ; 86 ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2022 ; Geophysics Volume 87 ; 87 ; https://library.seg.org/ ; >
-    au < notReady ; exists ; 2023 ; Geophysics Volume 88 ; 88 ; https://library.seg.org/ ; > #no metadata, 381 article, 381 suburls
+    au < frozen ; exists ; 2022 ; Geophysics Volume 87 ; 87 ; https://library.seg.org/ ; >
+    au < doNotProcess ; exists ; 2023 ; Geophysics Volume 88 ; 88 ; https://library.seg.org/ ; > #no metadata, 381 article, 381 suburls
     au < frozen ; exists ; 2024 ; Geophysics Volume 89 ; 89 ; https://library.seg.org/ ; >
-    au < crawling ; exists ; 2025 ; Geophysics Volume 90 ; 90 ; https://library.seg.org/ ; >
+    au < superseded ; exists ; 2025 ; Geophysics Volume 90 ; 90 ; https://library.seg.org/ ; >
 
   }
 
@@ -166,10 +167,10 @@
     au < frozen ; exists ; 2019 ; The Leading Edge Volume 38 ; 38 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2020 ; The Leading Edge Volume 39 ; 39 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2021 ; The Leading Edge Volume 40 ; 40 ; https://library.seg.org/ ; >
-    au < deepCrawl ; exists ; 2022 ; The Leading Edge Volume 41 ; 41 ; https://library.seg.org/ ; >
-    au < deepCrawl ; exists ; 2023 ; The Leading Edge Volume 42 ; 42 ; https://library.seg.org/ ; >
-    au < deepCrawl ; exists ; 2024 ; The Leading Edge Volume 43 ; 43 ; https://library.seg.org/ ; >
-    au < testing ; exists ; 2025 ; The Leading Edge Volume 44 ; 44 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2022 ; The Leading Edge Volume 41 ; 41 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2023 ; The Leading Edge Volume 42 ; 42 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2024 ; The Leading Edge Volume 43 ; 43 ; https://library.seg.org/ ; >
+    au < doNotProcess ; exists ; 2025 ; The Leading Edge Volume 44 ; 44 ; https://library.seg.org/ ; >
 
   }
 
@@ -192,10 +193,10 @@
     au < finished ; finished ; 2019 ; Interpretation Volume 7 ; 7 ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; Interpretation Volume 8 ; 8 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2021 ; Interpretation Volume 9 ; 9 ; https://library.seg.org/ ; >
-    au < deepCrawl ; exists ; 2022 ; Interpretation Volume 10 ; 10 ; https://library.seg.org/ ; >
-    au < deepCrawl ; exists ; 2023 ; Interpretation Volume 11 ; 11 ; https://library.seg.org/ ; >
-    au < deepCrawl ; exists ; 2024 ; Interpretation Volume 12 ; 12 ; https://library.seg.org/ ; >
-    au < crawling ; exists ; 2025 ; Interpretation Volume 13 ; 13 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2022 ; Interpretation Volume 10 ; 10 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2023 ; Interpretation Volume 11 ; 11 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2024 ; Interpretation Volume 12 ; 12 ; https://library.seg.org/ ; >
+    au < superseded ; exists ; 2025 ; Interpretation Volume 13 ; 13 ; https://library.seg.org/ ; >
 
   }
   
@@ -235,10 +236,10 @@
     au < finished ; finished ; 2019 ; Journal of Environmental and Engineering Geophysics Volume 24 ; 24 ; https://library.seg.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; Journal of Environmental and Engineering Geophysics Volume 25 ; 25 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2021 ; Journal of Environmental and Engineering Geophysics Volume 26 ; 26 ; https://library.seg.org/ ; >
-    au < deepCrawl ; exists ; 2022 ; Journal of Environmental and Engineering Geophysics Volume 27 ; 27 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2022 ; Journal of Environmental and Engineering Geophysics Volume 27 ; 27 ; https://library.seg.org/ ; >
     au < frozen ; exists ; 2023 ; Journal of Environmental and Engineering Geophysics Volume 28 ; 28 ; https://library.seg.org/ ; >
-    au < deepCrawl ; exists ; 2024 ; Journal of Environmental and Engineering Geophysics Volume 29 ; 29 ; https://library.seg.org/ ; >
-    au < expected ; exists ; 2025 ; Journal of Environmental and Engineering Geophysics Volume 30 ; 30 ; https://library.seg.org/ ; >
+    au < frozen ; exists ; 2024 ; Journal of Environmental and Engineering Geophysics Volume 29 ; 29 ; https://library.seg.org/ ; >
+    au < doNotProcess ; exists ; 2025 ; Journal of Environmental and Engineering Geophysics Volume 30 ; 30 ; https://library.seg.org/ ; >
 
   }
 

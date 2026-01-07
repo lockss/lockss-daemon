@@ -1,0 +1,247 @@
+{
+
+  publisher <
+    name = Society of Exploration Geophysicists ;
+    info[contract] = 2013 ;
+    info[back] = 1930 ;
+    info[tester] = 5 ;
+    comment[platform] = GSW/SC 
+  >
+
+ 
+  #implicit < status ; status2 ; year ; name ; param[volume_name] ; param[base_url] ; hidden[proxy] >
+
+  plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairPlugin
+  implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
+  param[base_url] = https://pubs.geoscienceworld.org/
+
+  {
+  
+    title < 
+      name = Geophysics ;
+      issn = 0016-8033 ;
+      eissn = 1942-2156
+    >
+    
+    param[journal_id] = geophysics
+
+    au < doNotProcess ; doNotProcess ; 1936 ; 1936 ; Geophysics Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1937 ; 1937 ; Geophysics Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1938 ; 1938 ; Geophysics Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1939 ; 1939 ; Geophysics Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1940 ; 1940 ; Geophysics Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1941 ; 1941 ; Geophysics Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1942 ; 1942 ; Geophysics Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1943 ; 1943 ; Geophysics Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1944 ; 1944 ; Geophysics Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1945 ; 1945 ; Geophysics Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1946 ; 1946 ; Geophysics Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1947 ; 1947 ; Geophysics Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 1948 ; 1948 ; Geophysics Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 1949 ; 1949 ; Geophysics Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 1950 ; 1950 ; Geophysics Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 1951 ; 1951 ; Geophysics Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1952 ; 1952 ; Geophysics Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 1953 ; 1953 ; Geophysics Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 1954 ; 1954 ; Geophysics Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 1955 ; 1955 ; Geophysics Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 1956 ; 1956 ; Geophysics Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 1957 ; 1957 ; Geophysics Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 1958 ; 1958 ; Geophysics Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 1959 ; 1959 ; Geophysics Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 1960 ; 1960 ; Geophysics Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 1961 ; 1961 ; Geophysics Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 1962 ; 1962 ; Geophysics Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 1963 ; 1963 ; Geophysics Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 1964 ; 1964 ; Geophysics Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 1965 ; 1965 ; Geophysics Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 1966 ; 1966 ; Geophysics Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 1967 ; 1967 ; Geophysics Volume 32 ; 32 ; >
+    au < doNotProcess ; doNotProcess ; 1968 ; 1968 ; Geophysics Volume 33 ; 33 ; >
+    au < doNotProcess ; doNotProcess ; 1969 ; 1969 ; Geophysics Volume 34 ; 34 ; >
+    au < doNotProcess ; doNotProcess ; 1970 ; 1970 ; Geophysics Volume 35 ; 35 ; >
+    au < doNotProcess ; doNotProcess ; 1971 ; 1971 ; Geophysics Volume 36 ; 36 ; >
+    au < doNotProcess ; doNotProcess ; 1972 ; 1972 ; Geophysics Volume 37 ; 37 ; >
+    au < doNotProcess ; doNotProcess ; 1973 ; 1973 ; Geophysics Volume 38 ; 38 ; >
+    au < doNotProcess ; doNotProcess ; 1974 ; 1974 ; Geophysics Volume 39 ; 39 ; >
+    au < doNotProcess ; doNotProcess ; 1975 ; 1975 ; Geophysics Volume 40 ; 40 ; >
+    au < doNotProcess ; doNotProcess ; 1976 ; 1976 ; Geophysics Volume 41 ; 41 ; >
+    au < doNotProcess ; doNotProcess ; 1977 ; 1977 ; Geophysics Volume 42 ; 42 ; >
+    au < doNotProcess ; doNotProcess ; 1978 ; 1978 ; Geophysics Volume 43 ; 43 ; >
+    au < doNotProcess ; doNotProcess ; 1979 ; 1979 ; Geophysics Volume 44 ; 44 ; >
+    au < doNotProcess ; doNotProcess ; 1980 ; 1980 ; Geophysics Volume 45 ; 45 ; >
+    au < doNotProcess ; doNotProcess ; 1981 ; 1981 ; Geophysics Volume 46 ; 46 ; >
+    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; Geophysics Volume 47 ; 47 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; Geophysics Volume 48 ; 48 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; Geophysics Volume 49 ; 49 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; Geophysics Volume 50 ; 50 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; Geophysics Volume 51 ; 51 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; Geophysics Volume 52 ; 52 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Geophysics Volume 53 ; 53 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Geophysics Volume 54 ; 54 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; Geophysics Volume 55 ; 55 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Geophysics Volume 56 ; 56 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; Geophysics Volume 57 ; 57 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; Geophysics Volume 58 ; 58 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; Geophysics Volume 59 ; 59 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; Geophysics Volume 60 ; 60 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; Geophysics Volume 61 ; 61 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Geophysics Volume 62 ; 62 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Geophysics Volume 63 ; 63 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Geophysics Volume 64 ; 64 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Geophysics Volume 65 ; 65 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Geophysics Volume 66 ; 66 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Geophysics Volume 67 ; 67 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Geophysics Volume 68 ; 68 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Geophysics Volume 69 ; 69 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Geophysics Volume 70 ; 70 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Geophysics Volume 71 ; 71 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Geophysics Volume 72 ; 72 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Geophysics Volume 73 ; 73 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Geophysics Volume 74 ; 74 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Geophysics Volume 75 ; 75 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Geophysics Volume 76 ; 76 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Geophysics Volume 77 ; 77 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Geophysics Volume 78 ; 78 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Geophysics Volume 79 ; 79 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Geophysics Volume 80 ; 80 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Geophysics Volume 81 ; 81 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Geophysics Volume 82 ; 82 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Geophysics Volume 83 ; 83 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Geophysics Volume 84 ; 84 ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Geophysics Volume 85 ; 85 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Geophysics Volume 86 ; 86 ; >
+    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Geophysics Volume 87 ; 87 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Geophysics Volume 88 ; 88 ; > #no metadata, 381 article, 381 suburls
+    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Geophysics Volume 89 ; 89 ; >
+    au < expected ; exists ; 2025 ; 2025 ; Geophysics Volume 90 ; 90 ; >
+
+  }
+
+  {
+  
+    title < 
+      name = The Leading Edge ;
+      issn = 1070-485X ; 
+      eissn = 1938-3789
+    >
+    
+    param[journal_id] = tle
+
+    au < doNotProcess ; doNotProcess ; 1982 ; 1982 ; The Leading Edge Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1983 ; 1983 ; The Leading Edge Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1984 ; 1984 ; The Leading Edge Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 1985 ; 1985 ; The Leading Edge Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 1986 ; 1986 ; The Leading Edge Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 1987 ; 1987 ; The Leading Edge Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; The Leading Edge Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; The Leading Edge Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 1990 ; 1990 ; The Leading Edge Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; The Leading Edge Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; The Leading Edge Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 1993 ; 1993 ; The Leading Edge Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 1994 ; 1994 ; The Leading Edge Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 1995 ; 1995 ; The Leading Edge Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; The Leading Edge Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; The Leading Edge Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; The Leading Edge Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; The Leading Edge Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; The Leading Edge Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; The Leading Edge Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; The Leading Edge Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; The Leading Edge Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; The Leading Edge Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; The Leading Edge Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; The Leading Edge Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; The Leading Edge Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; The Leading Edge Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; The Leading Edge Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; The Leading Edge Volume 29 ; 29 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; The Leading Edge Volume 30 ; 30 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; The Leading Edge Volume 31 ; 31 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; The Leading Edge Volume 32 ; 32 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; The Leading Edge Volume 33 ; 33 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; The Leading Edge Volume 34 ; 34 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; The Leading Edge Volume 35 ; 35 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; The Leading Edge Volume 36 ; 36 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; The Leading Edge Volume 37 ; 37 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; The Leading Edge Volume 38 ; 38 ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; The Leading Edge Volume 39 ; 39 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; The Leading Edge Volume 40 ; 40 ; >
+    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; The Leading Edge Volume 41 ; 41 ; >
+    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; The Leading Edge Volume 42 ; 42 ; >
+    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; The Leading Edge Volume 43 ; 43 ; >
+    au < expected ; exists ; 2025 ; 2025 ; The Leading Edge Volume 44 ; 44 ; >
+
+  }
+
+  {
+  
+    title < 
+      name = Interpretation ;
+      issn = 2324-8858 ; 
+      eissn = 2324-8866
+    >
+    
+    param[journal_id] = interpretation
+
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Interpretation Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Interpretation Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Interpretation Volume 3 ; 3 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Interpretation Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Interpretation Volume 5 ; 5 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Interpretation Volume 6 ; 6 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Interpretation Volume 7 ; 7 ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Interpretation Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Interpretation Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Interpretation Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Interpretation Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Interpretation Volume 12 ; 12 ; >
+    au < expected ; exists ; 2025 ; 2025 ; Interpretation Volume 13 ; 13 ; >
+
+  }
+  
+  {
+  
+    title < 
+      name = Journal of Environmental and Engineering Geophysics ;
+      issn = 1083-1363 ; 
+      eissn = 1943-2658
+    >
+    
+    param[journal_id] = jeeg
+
+    au < doNotProcess ; doNotProcess ; 1995-1996 ; 1995-1996 ; Journal of Environmental and Engineering Geophysics Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Journal of Environmental and Engineering Geophysics Volume 2 ; 2  ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Journal of Environmental and Engineering Geophysics Volume 3 ; 3  ; >
+    au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Journal of Environmental and Engineering Geophysics Volume 4 ; 4  ; >
+    au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Journal of Environmental and Engineering Geophysics Volume 5 ; 5  ; >
+    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Journal of Environmental and Engineering Geophysics Volume 6 ; 6  ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Journal of Environmental and Engineering Geophysics Volume 7 ; 7  ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Environmental and Engineering Geophysics Volume 8 ; 8  ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Environmental and Engineering Geophysics Volume 9 ; 9  ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Journal of Environmental and Engineering Geophysics Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Journal of Environmental and Engineering Geophysics Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Journal of Environmental and Engineering Geophysics Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Journal of Environmental and Engineering Geophysics Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Journal of Environmental and Engineering Geophysics Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Journal of Environmental and Engineering Geophysics Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Journal of Environmental and Engineering Geophysics Volume 16 ; 16 ; >
+    au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Journal of Environmental and Engineering Geophysics Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Journal of Environmental and Engineering Geophysics Volume 18 ; 18 ; >
+    au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Journal of Environmental and Engineering Geophysics Volume 19 ; 19 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Journal of Environmental and Engineering Geophysics Volume 20 ; 20 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; Journal of Environmental and Engineering Geophysics Volume 21 ; 21 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; Journal of Environmental and Engineering Geophysics Volume 22 ; 22 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; Journal of Environmental and Engineering Geophysics Volume 23 ; 23 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Journal of Environmental and Engineering Geophysics Volume 24 ; 24 ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; Journal of Environmental and Engineering Geophysics Volume 25 ; 25 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; Journal of Environmental and Engineering Geophysics Volume 26 ; 26 ; >
+    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Journal of Environmental and Engineering Geophysics Volume 27 ; 27 ; >
+    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Environmental and Engineering Geophysics Volume 28 ; 28 ; >
+    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Environmental and Engineering Geophysics Volume 29 ; 29 ; >
+    au < expected ; exists ; 2025 ; 2025 ; Journal of Environmental and Engineering Geophysics Volume 30 ; 30 ; >
+
+  }
+
+}
