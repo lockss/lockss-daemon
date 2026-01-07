@@ -256,6 +256,14 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>org.lockss.plugin.ojs3.Ojs3HtmlCrawlFilterFactory</string>
   </entry>
   <entry>
+    <string>text/xml_crawl_filter_factory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3XmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/xml_crawl_filter_factory</string>
+    <string>org.lockss.plugin.ojs3.Ojs3XmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
     <string>text/html_link_extractor_factory</string>
     <string>org.lockss.plugin.ojs3.Ojs3HtmlLinkExtractorFactory</string>
   </entry>
