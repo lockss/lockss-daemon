@@ -32,6 +32,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.projmuse;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ContentValidationException;
@@ -45,6 +48,8 @@ import org.lockss.util.urlconn.CacheSuccess;
 public class ProjectMuse2017HttpResponseHandler implements CacheResultHandler {
   private static final Logger logger = Logger.getLogger(ProjectMuse2017HttpResponseHandler.class);
 
+  protected static final Pattern IMAGE_PAT = Pattern.compile("/images/.*[.](gif|png)");
+
   @Override
   public void init(final CacheResultMap map) throws PluginException {
     logger.warning("Unexpected call to init()");
@@ -55,10 +60,21 @@ public class ProjectMuse2017HttpResponseHandler implements CacheResultHandler {
   // currently this is not called on
   @Override
   public CacheException handleResult(final ArchivalUnit au, final String url, int responseCode) throws PluginException {
-    logger.debug(responseCode + ": " + url);
-    
-    logger.warning("Unexpected responseCode (" + responseCode + ") in handleResult(): AU " + au.getName() + "; URL " + url);
-    throw new UnsupportedOperationException("Unexpected responseCode (" + responseCode + ")");
+
+    logger.debug2(url);  
+      switch (responseCode) {
+        case 403: 
+            logger.debug3("found 403");
+            Matcher imageMat = IMAGE_PAT.matcher(url);
+            if (imageMat.find()) {
+              logger.debug3("Bad media file or forbidden access, downgrading to warning.");
+              return new CacheException.NoRetryDeadLinkException("403 Forbidden (non-fatal)");
+            }
+            return new CacheException.RetrySameUrlException("403 Forbidden error");
+        default:
+            logger.debug2("default");
+            throw new UnsupportedOperationException();
+        }
   }
   
   

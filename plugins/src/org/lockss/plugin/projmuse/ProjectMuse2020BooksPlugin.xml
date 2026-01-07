@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -70,8 +70,6 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <!-- https://muse.jhu.edu/images/zoom_preloader.gif and https://muse.jhu.edu/images/zoom_icons.png caused 403s across the LOCKSS ecosystem for a couple of months; then in January we noticed https://muse.jhu.edu/images/searchbackground4.gif in some AUs -->
-      <string>2,"^https?://%s/images/(searchbackground4.gif|zoom_preloader\.gif|zoom_icons\.png)$", url_host(base_url)</string>
       <string>1,"^https?://%s[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff.?)(\?v=.*)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/books/lockss_books\.html$", url_host(base_url)</string>
       <string>1,"^https?://%s/lockss\?list=books$", url_host(base_url)</string>
@@ -160,5 +158,11 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_exclude_urls_from_polls_pattern</string>
     <string>/books/lockss_books\.html$</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>403=org.lockss.plugin.projmuse.ProjectMuse2017HttpResponseHandler</string>
+    </list>
   </entry>
 </map>
