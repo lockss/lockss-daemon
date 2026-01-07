@@ -66,13 +66,12 @@
          au < readySource ; crawling ; 2025 ; Association for Computing Machinery Source Content 2025_05 ; 2025_05 >
          au < readySource ; crawling ; 2025 ; Association for Computing Machinery Source Content 2025_06 ; 2025_06 >
          au < readySource ; crawling ; 2025 ; Association for Computing Machinery Source Content 2025_07 ; 2025_07 >
-         au < doNotProcess ; exists ; 2025 ; Association for Computing Machinery Source Content 2025_08 ; 2025_08 >
-         au < doNotProcess ; exists ; 2025 ; Association for Computing Machinery Source Content 2025_09 ; 2025_09 >
+         au < manifest ; exists ; 2025 ; Association for Computing Machinery Source Content 2025_08 ; 2025_08 >
 
-         au < expected ; exists ; 2026 ; Association for Computing Machinery Source Content 2026_01 ; 2026_01 >
-         au < expected ; exists ; 2026 ; Association for Computing Machinery Source Content 2026_02 ; 2026_02 >
-         au < expected ; exists ; 2026 ; Association for Computing Machinery Source Content 2026_03 ; 2026_03 >
-         au < expected ; exists ; 2026 ; Association for Computing Machinery Source Content 2026_04 ; 2026_04 >
+         au < doNotProcess ; exists ; 2026 ; Association for Computing Machinery Source Content 2026_01 ; 2026_01 >
+         au < doNotProcess ; exists ; 2026 ; Association for Computing Machinery Source Content 2026_02 ; 2026_02 >
+         au < doNotProcess ; exists ; 2026 ; Association for Computing Machinery Source Content 2026_03 ; 2026_03 >
+         au < doNotProcess ; exists ; 2026 ; Association for Computing Machinery Source Content 2026_04 ; 2026_04 >
 
          #ACM delivers content in big batches, so AUs should never be added to clockss without review
        }

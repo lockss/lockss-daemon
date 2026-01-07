@@ -19,7 +19,6 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/oupbooks-released/
 
       au < readySource ; finished ; 2023 ; Oxford University Press Book Source Content 2023_01 ; 2023_01 >
-      au < expected ; exists ; 2025 ; Oxford University Press Book Source Content 2025_01 ; 2025_01 >
       au < expected ; exists ; 2026 ; Oxford University Press Book Source Content 2026_01 ; 2026_01 >
 
   }
@@ -33,7 +32,7 @@
 #      plugin = needs.plugin
 #      param[base_url] = https://clockss-test.lockss.org/sourcefiles/oupjournals-released/
 #
-#      au < expected ; exists ; 2025 ; Oxford University Press Journal Source Content 2025 ; 2025 >
+#      au < expected ; exists ; 2026 ; Oxford University Press Journal Source Content 2026 ; 2026 >
 #
 #  }
 

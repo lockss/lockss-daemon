@@ -18,12 +18,9 @@
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       {
-        ###PRODUCTION###
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/frontiersjats-released/
 
         au < readySource ; crawling ; 2025 ; Frontiers Journals JATS Source Content 2025_01 ; 2025_01 >
-        au < expected ; exists ; 2025 ; Frontiers Journals JATS Source Content 2025_02 ; 2025_02 >
-
         au < manifest ; exists ; 2026 ; Frontiers Journals JATS Source Content 2026_01 ; 2026_01 >
 
       }
@@ -105,7 +102,6 @@
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/frontiersbooks-released/
 
         au < readySource ; finished ; 2023 ; Frontiers Books Source Content 2023_01 ; 2023_01 >
-        au < expected ; exists ; 2025 ; Frontiers Books Source Content 2025_01 ; 2025_01 >
         au < expected ; exists ; 2026 ; Frontiers Books Source Content 2026_01 ; 2026_01 >
 
       }
