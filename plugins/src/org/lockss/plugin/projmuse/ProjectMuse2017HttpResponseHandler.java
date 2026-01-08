@@ -48,7 +48,7 @@ import org.lockss.util.urlconn.CacheSuccess;
 public class ProjectMuse2017HttpResponseHandler implements CacheResultHandler {
   private static final Logger logger = Logger.getLogger(ProjectMuse2017HttpResponseHandler.class);
 
-  protected static final Pattern IMAGE_PAT = Pattern.compile("/images/.*[.](gif|png)");
+  protected static final Pattern IMAGE_PAT = Pattern.compile("/images/.*[.](gif|png|jpe?g)");
 
   @Override
   public void init(final CacheResultMap map) throws PluginException {
