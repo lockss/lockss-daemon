@@ -33,6 +33,10 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.ojs3;
 
 import java.io.InputStream;
+import java.io.SequenceInputStream;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.CharacterCodingException;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
@@ -53,19 +57,38 @@ public class Ojs3XmlCrawlFilterFactory implements FilterFactory {
                                                  InputStream in, 
                                                  String encoding) {
 
-        Pattern xmlEncodingPat = Pattern.compile("<\\?xml .* encoding='utf8'\\?>", Pattern.CASE_INSENSITIVE);
+        Pattern xmlEncodingPat = Pattern.compile("(<\\?xml\\s[^?]*encoding=)('utf8'|\"utf8\")([^?]*\\?>)", Pattern.CASE_INSENSITIVE);
 
         byte[] buffer = new byte[1024];
-        /* 
+        int actual = -1;
+        String beginning = "";
         try{
-            int actual = IOUtils.read(in, buffer);
-            String beginning = new String(buffer, 0, actual, encoding);
-            Matcher xmlEncodingMat = xmlEncodingPat.matcher(beginning);
-        }catch(Exception e){
-            e.getStackTrace();
-        }*/
-        //COMPLETE LATER
-
-	    return in;
+            actual = IOUtils.read(in, buffer);
+        }catch(IOException e){
+            log.debug3("Could not read from underlying input stream.", e);
+            return in;
+        }
+        int end = actual;
+        while(end > 0){
+            try{
+                beginning = new String(buffer, 0, end, encoding);
+                break;
+            }catch(CharacterCodingException cce){
+                end = end - 1;
+            }catch(UnsupportedEncodingException uee){
+                //fix later
+            }
+        }
+        if(end == 0){
+            log.debug3("Could not turn bytes into string.");
+            return new SequenceInputStream(new ByteArrayInputStream(buffer, 0, actual),in);
+        }
+        log.debug3("The beginning of the xml file is: " + beginning);
+        Matcher xmlEncodingMat = xmlEncodingPat.matcher(beginning);
+        beginning = xmlEncodingMat.replaceFirst("$1'utf-8'$3");
+        if(end < actual){
+            in = new SequenceInputStream(new ByteArrayInputStream(buffer, end, actual - end),in);
+        }
+        return new SequenceInputStream(IOUtils.toInputStream(beginning,encoding), in);
     }
 }
