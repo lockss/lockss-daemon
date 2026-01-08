@@ -47,7 +47,7 @@ public class MonitoringInputStream extends InputStream {
   private String name;
   private String openTrace;
   private long openTime;;
-//   private String closeTrace;
+  private String closeTrace;
   private String closeAbortTrace;
   private boolean isOpen = true;
   private boolean logClose = false;
@@ -63,25 +63,39 @@ public class MonitoringInputStream extends InputStream {
     this(in, name);
     this.logClose = logClose;
   }
+  @Override
   public int read() throws IOException {
+    checkUseAfterClose("read");
     return in.read();
   }
+  @Override
   public int read(byte b[]) throws IOException {
+    checkUseAfterClose("read");
     return read(b, 0, b.length);
   }
+  @Override
   public int read(byte b[], int off, int len) throws IOException {
+    checkUseAfterClose("read");
     return in.read(b, off, len);
   }
+  @Override
   public long skip(long n) throws IOException {
+    checkUseAfterClose("skip");
     return in.skip(n);
   }
+  @Override
   public int available() throws IOException {
+    checkUseAfterClose("available");
     return in.available();
   }
+  @Override
   public void close() throws IOException {
-//     closeTrace = StringUtil.stackTraceString(new Exception("Close"));
+    // Don't call checkUseAfterClose() here - redundant close doesn't
+    // cause a problem and is pretty common
     if (logClose) log.info("close(" + name + ")",
-			   new Throwable("Stack trace only"));
+                           new Throwable("Stack trace only"));
+    closeTrace = "Thread: " + java.lang.Thread.currentThread().getName() +
+      "\n" + StringUtil.stackTraceString(new Exception("Close"));
     try {
       in.close();
     } catch (IOException e) {
@@ -89,14 +103,31 @@ public class MonitoringInputStream extends InputStream {
     }
     isOpen = false;
   }
+  @Override
   public void mark(int readlimit) {
+    checkUseAfterClose("mark");
     in.mark(readlimit);
   }
+  @Override
   public void reset() throws IOException {
+    checkUseAfterClose("reset");
     in.reset();
   }
+  @Override
   public boolean markSupported() {
+    checkUseAfterClose("markSupported");
     return in.markSupported();
+  }
+
+  private boolean checkUseAfterClose(String msg) {
+    if (closeTrace != null) {
+      log.error("Attempt to call " + msg + " in thread: " +
+                java.lang.Thread.currentThread().getName() +
+                " on stream already closed at " +
+                closeTrace, new Throwable("Late " + msg + "() stack trace"));
+      return true;
+    }
+    return false;
   }
 
   protected void finalize() {

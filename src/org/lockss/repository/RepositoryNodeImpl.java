@@ -2000,7 +2000,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   class RepositoryNodeContentsImpl implements RepositoryNodeContents {
     private Properties props;
-    private InputStream is;
+    private InputStream curIs;
     List<InputStream> streams = new ArrayList<InputStream>();
 
     private RepositoryNodeContentsImpl() {
@@ -2008,9 +2008,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     public synchronized InputStream getInputStream() {
       ensureInputStream();
-      InputStream res = is;
+      InputStream res = curIs;
       // stream can only be used once.
-      is = null;
+      curIs = null;
       return res;
     }
 
@@ -2079,6 +2079,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	  IOUtil.safeClose(is);
 	}
 	streams = new ArrayList<InputStream>();
+        curIs = null;
       }
     }
 
@@ -2108,15 +2109,15 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
 
     private void ensureInputStream() {
-      if (is == null) {
+      if (curIs == null) {
 	assertContent();
 	try {
-	  is = new BufferedInputStream(FileUtil.newFileInputStream(getContentFile()));
+	  curIs = new BufferedInputStream(FileUtil.newFileInputStream(getContentFile()));
 	  if (CurrentConfig.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
 	                                    DEFAULT_MONITOR_INPUT_STREAMS)) {
-	    is = new MonitoringInputStream(is, getContentFile().toString());
+	    curIs = new MonitoringInputStream(curIs, getContentFile().toString());
 	  }
-	  streams.add(is);
+	  streams.add(curIs);
 	  props = getProps();
 	} catch (IOException e) {
 	  logger.error("Couldn't get inputstream for '" +
