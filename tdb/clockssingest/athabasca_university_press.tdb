@@ -81,7 +81,7 @@
       au < frozen ; exists ; 2018 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 19 ; 19 ; 2018 ; >
       au < frozen ; exists ; 2019 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 20 ; 20 ; 2019 ; >
       au < frozen ; exists ; 2020 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 21 ; 21 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 22 ; 22 ; 2021 ; >
+      au < finished ; manifest ; 2021 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 22 ; 22 ; 2021 ; reingest4.clockss.org:8082 >
       }
       {
       implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
@@ -89,7 +89,7 @@
       param[base_url] = https://www.irrodl.org/
       param[journal_id] = irrodl
 
-      au < frozen ; exists ; 2022 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 23 ; 23 ; 2022 ; > #no substance urls
+      au < finished ; manifest ; 2022 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 23 ; 23 ; 2022 ; reingest2.clockss.org:8085 > #no substance urls
       au < finished ; manifest ; 2023 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 24 ; 24 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 25 ; 25 ; 2024 ; >
       au < crawling ; exists ; 2025 ; International Review of Research in Open and Distributed Learning (IRRODL) Volume 26 ; 26 ; 2025 ; >
@@ -300,8 +300,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; Labour / Le Travail Volume 81-82 ; 81-82 ; 2018 ; >
       au < frozen ; exists ; 2019 ; Labour / Le Travail Volume 2019 ; 2019 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Labour / Le Travail Volume 2020 ; 2020 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; Labour / Le Travail Volume 2021 ; 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; Labour / Le Travail Volume 2022 ; 2022 ; 2022 ; >
+      au < finished ; manifest ; 2021 ; Labour / Le Travail Volume 2021 ; 2021 ; 2021 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Labour / Le Travail Volume 2022 ; 2022 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Labour / Le Travail Volume 2023 ; 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2024 ; Labour / Le Travail Volume 2024 ; 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; Labour / Le Travail Volume 2025 ; 2025 ; 2025 ; >

@@ -70,7 +70,7 @@
       au < finished ; finished ; 2018 ; Early Theatre Volume 21 ; 21 ; 2018 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; Early Theatre Volume 22 ; 22 ; 2019 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2020 ; Early Theatre Volume 23 ; 23 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; Early Theatre Volume 24 ; 24 ; 2021 ; >
+      au < finished ; manifest ; 2021 ; Early Theatre Volume 24 ; 24 ; 2021 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Early Theatre Volume 25 ; 25 ; 2022 ; >#subscription for a year. Wait till 2024
       au < crawling ; exists ; 2025 ; Early Theatre Volume 26 ; 26 ; 2023 ; >#subscription for a year. Wait till 2025
 
@@ -137,8 +137,8 @@
       au < finished ; finished ; 2018 ; Global Labour Journal Volume 9 ; 9 ; 2018 ; reingest3.clockss.org:8083 > 
       au < finished ; finished ; 2019 ; Global Labour Journal Volume 10 ; 10 ; 2019 ; reingest1.clockss.org:8082 > 
       au < finished ; finished ; 2020 ; Global Labour Journal Volume 11 ; 11 ; 2020 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2021 ; Global Labour Journal Volume 12 ; 12 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; Global Labour Journal Volume 13 ; 13 ; 2022 ; >
+      au < finished ; manifest ; 2021 ; Global Labour Journal Volume 12 ; 12 ; 2021 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Global Labour Journal Volume 13 ; 13 ; 2022 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; Global Labour Journal Volume 14 ; 14 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Global Labour Journal Volume 15 ; 15 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Global Labour Journal Volume 16 ; 16 ; 2025 ; >
@@ -176,7 +176,7 @@
       au < finished ; finished ; 2018 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 6 ; 6 ; 2018 ; reingest1.clockss.org:8082 > 
       au < finished ; finished ; 2019 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 7 ; 7 ; 2019 ; reingest3.clockss.org:8083 > 
       au < finished ; finished ; 2020 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 8 ; 8 ; 2020 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 9 ; 9 ; 2021 ; >
+      au < finished ; manifest ; 2021 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 9 ; 9 ; 2021 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2022 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 10 ; 10 ; 2022 ; > #500 Error https://mulpress.mcmaster.ca/hro-ors/article/view/4691
       au < ready ; exists ; 2023 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 11 ; 11 ; 2023 ; > #500 Error https://mulpress.mcmaster.ca/hro-ors/article/view/5341
       au < finished ; manifest ; 2024 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 12 ; 12 ; 2024 ; reingest3.clockss.org:8083 >
@@ -210,8 +210,8 @@
       au < finished ; crawling ; 2018 ; International Journal for Students as Partners Volume 2 ; 2 ; 2018 ; reingest2.clockss.org:8085 > 
       au < finished ; finished ; 2019 ; International Journal for Students as Partners Volume 3 ; 3 ; 2019 ; reingest5.clockss.org:8082 > 
       au < finished ; finished ; 2020 ; International Journal for Students as Partners Volume 4 ; 4 ; 2020 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2021 ; International Journal for Students as Partners Volume 5 ; 5 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; International Journal for Students as Partners Volume 6 ; 6 ; 2022 ; >
+      au < finished ; manifest ; 2021 ; International Journal for Students as Partners Volume 5 ; 5 ; 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; International Journal for Students as Partners Volume 6 ; 6 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; International Journal for Students as Partners Volume 7 ; 7 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; International Journal for Students as Partners Volume 8 ; 8 ; 2024 ; >
       au < expected ; exists ; 2025 ; International Journal for Students as Partners Volume 9 ; 9 ; 2025 ; >
@@ -247,8 +247,8 @@
       au < finished ; finished ; 2018 ; Journal for the History of Analytical Philosophy Volume 8 ; 8 ; 2018 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; Journal for the History of Analytical Philosophy Volume 9 ; 9 ; 2019 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2020 ; Journal for the History of Analytical Philosophy Volume 10 ; 10 ; 2020 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2021 ; Journal for the History of Analytical Philosophy Volume 11 ; 11 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; Journal for the History of Analytical Philosophy Volume 12 ; 12 ; 2022 ; >
+      au < finished ; manifest ; 2021 ; Journal for the History of Analytical Philosophy Volume 11 ; 11 ; 2021 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Journal for the History of Analytical Philosophy Volume 12 ; 12 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Journal for the History of Analytical Philosophy Volume 13 ; 13 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Journal for the History of Analytical Philosophy Volume 14 ; 14 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Journal for the History of Analytical Philosophy Volume 15 ; 15 ; 2025 ; >
@@ -338,8 +338,8 @@
       au < finished ; finished ; 2018 ; Russell: the Journal of Bertrand Russell Studies Volume 38 ; 38 ; 2018 ; reingest4.clockss.org:8082 > 
       au < finished ; crawling ; 2019 ; Russell: the Journal of Bertrand Russell Studies Volume 39 ; 39 ; 2019 ; reingest3.clockss.org:8083 > 
       au < finished ; finished ; 2020 ; Russell: the Journal of Bertrand Russell Studies Volume 40 ; 40 ; 2020 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2021 ; Russell: the Journal of Bertrand Russell Studies Volume 41 ; 41 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; Russell: the Journal of Bertrand Russell Studies Volume 42 ; 42 ; 2022 ; >
+      au < finished ; manifest ; 2021 ; Russell: the Journal of Bertrand Russell Studies Volume 41 ; 41 ; 2021 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Russell: the Journal of Bertrand Russell Studies Volume 42 ; 42 ; 2022 ; reingest5.clockss.org:8082 >
 
       }
 
@@ -415,7 +415,7 @@
       au < finished ; finished ; 2018 ; International Journal of Risk and Recovery Volume 1 ; 1 ; 2018 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; International Journal of Risk and Recovery Volume 2 ; 2 ; 2019 ; reingest2.clockss.org:8085 > 
       au < finished ; finished ; 2020 ; International Journal of Risk and Recovery Volume 3 ; 3 ; 2020 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2021 ; International Journal of Risk and Recovery Volume 4 ; 4 ; 2021 ; >
+      au < finished ; manifest ; 2021 ; International Journal of Risk and Recovery Volume 4 ; 4 ; 2021 ; reingest2.clockss.org:8085 >
 
     }
 

@@ -32,8 +32,8 @@
     au < frozen ; exists ; 2018 ; 2018 ; Medical Hypothesis Discovery and Innovation in Ophthalmology Volume 07 ; 07 ; >
     au < frozen ; exists ; 2019 ; 2019 ; Medical Hypothesis Discovery and Innovation in Ophthalmology Volume 08 ; 08 ; >
     au < frozen ; exists ; 2020 ; 2020 ; Medical Hypothesis Discovery and Innovation in Ophthalmology Volume 09 ; 09 ; >
-    au < frozen ; exists ; 2021 ; 2021 ; Medical Hypothesis Discovery and Innovation in Ophthalmology Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2022 ; 2022 ; Medical Hypothesis Discovery and Innovation in Ophthalmology Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2021 ; 2021 ; Medical Hypothesis Discovery and Innovation in Ophthalmology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; 2022 ; Medical Hypothesis Discovery and Innovation in Ophthalmology Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Medical Hypothesis Discovery and Innovation in Ophthalmology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; Medical Hypothesis Discovery and Innovation in Ophthalmology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; 2025 ; Medical Hypothesis Discovery and Innovation in Ophthalmology Volume 14 ; 14 ; >
@@ -51,8 +51,8 @@
     param[journal_id] = mehdioptometry
 
     au < frozen ; exists ; 2020 ; 2020 ; Medical Hypothesis, Discovery & Innovation in Optometry Volume 1 ; 1 ; >
-    au < frozen ; exists ; 2021 ; 2021 ; Medical Hypothesis, Discovery & Innovation in Optometry Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2022 ; 2022 ; Medical Hypothesis, Discovery & Innovation in Optometry Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2021 ; 2021 ; Medical Hypothesis, Discovery & Innovation in Optometry Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2022 ; 2022 ; Medical Hypothesis, Discovery & Innovation in Optometry Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Medical Hypothesis, Discovery & Innovation in Optometry Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Medical Hypothesis, Discovery & Innovation in Optometry Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; 2025 ; Medical Hypothesis, Discovery & Innovation in Optometry Volume 6 ; 6 ; >

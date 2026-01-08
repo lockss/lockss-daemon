@@ -320,9 +320,9 @@
     au < finished ; finished ; 2016 ; British Journal of Nursing Volume 25 ; 25 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; British Journal of Nursing Volume 26 ; 26 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; British Journal of Nursing Volume 27 ; 27 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; British Journal of Nursing Volume 28 ; 28 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; British Journal of Nursing Volume 29 ; 29 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; British Journal of Nursing Volume 30 ; 30 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2019 ; British Journal of Nursing Volume 28 ; 28 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; British Journal of Nursing Volume 29 ; 29 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2021 ; British Journal of Nursing Volume 30 ; 30 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; British Journal of Nursing Volume 31 ; 31 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; British Journal of Nursing Volume 32 ; 32 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; British Journal of Nursing Volume 33 ; 33 ; https://www.magonlinelibrary.com/ ; >
@@ -353,8 +353,8 @@
     au < finished ; finished ; 2015 ; British Journal of School Nursing Volume 10 ; 10 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2016 ; British Journal of School Nursing Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; British Journal of School Nursing Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; British Journal of School Nursing Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; British Journal of School Nursing Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2018 ; British Journal of School Nursing Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; British Journal of School Nursing Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
 
   }
 
@@ -368,9 +368,9 @@
     param[journal_id] = chhe
     #continues = 1752-2803
 
-    au < frozen ; exists ; 2020 ; British Journal of Child Health Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; British Journal of Child Health Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; British Journal of Child Health Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2020 ; British Journal of Child Health Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; British Journal of Child Health Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; British Journal of Child Health Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2023 ; British Journal of Child Health Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; British Journal of Child Health Volume 5 ; 5 ; https://www.magonlinelibrary.com/ ; >
     au < expected ; exists ; 2025 ; British Journal of Child Health Volume 6 ; 6 ; https://www.magonlinelibrary.com/ ; >
@@ -398,11 +398,11 @@
     au < finished ; finished ; 2015 ; Dental Nursing Volume 11 ; 11 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < finished ; crawling ; 2016 ; Dental Nursing Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Dental Nursing Volume 13 ; 13 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Dental Nursing Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; Dental Nursing Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; Dental Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; Dental Nursing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; Dental Nursing Volume 18 ; 18 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2018 ; Dental Nursing Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; Dental Nursing Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; Dental Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2021 ; Dental Nursing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; Dental Nursing Volume 18 ; 18 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; Dental Nursing Volume 19 ; 19 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Dental Nursing Volume 20 ; 20 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; Dental Nursing Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; >
@@ -429,11 +429,11 @@
     au < finished ; finished ; 2015 ; Gastrointestinal Nursing Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Gastrointestinal Nursing Volume 14 ; 14 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Gastrointestinal Nursing Volume 15 ; 15 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2018 ; Gastrointestinal Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; Gastrointestinal Nursing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; Gastrointestinal Nursing Volume 18 ; 18 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; Gastrointestinal Nursing Volume 19 ; 19 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; Gastrointestinal Nursing Volume 20 ; 20 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2018 ; Gastrointestinal Nursing Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Gastrointestinal Nursing Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; Gastrointestinal Nursing Volume 18 ; 18 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2021 ; Gastrointestinal Nursing Volume 19 ; 19 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; Gastrointestinal Nursing Volume 20 ; 20 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; Gastrointestinal Nursing Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Gastrointestinal Nursing Volume 22 ; 22 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; Gastrointestinal Nursing Volume 23 ; 23 ; https://www.magonlinelibrary.com/ ; >
@@ -460,11 +460,11 @@
     au < finished ; finished ; 2015 ; Independent Nurse Volume 2015 ; 2015 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2016 ; Independent Nurse Volume 2016 ; 2016 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Independent Nurse Volume 2017 ; 2017 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Independent Nurse Volume 2018 ; 2018 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; Independent Nurse Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; Independent Nurse Volume 2020 ; 2020 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; Independent Nurse Volume 2021 ; 2021 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; Independent Nurse Volume 2022 ; 2022 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2018 ; Independent Nurse Volume 2018 ; 2018 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Independent Nurse Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Independent Nurse Volume 2020 ; 2020 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Independent Nurse Volume 2021 ; 2021 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; Independent Nurse Volume 2022 ; 2022 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2023 ; Independent Nurse Volume 2023 ; 2023 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Independent Nurse Volume 2024 ; 2024 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; Independent Nurse Volume 2025 ; 2025 ; https://www.magonlinelibrary.com/ ; >
@@ -510,11 +510,11 @@
     au < finished ; finished ; 2015 ; International Journal of Palliative Nursing Volume 21 ; 21 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2016 ; International Journal of Palliative Nursing Volume 22 ; 22 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; International Journal of Palliative Nursing Volume 23 ; 23 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; International Journal of Palliative Nursing Volume 24 ; 24 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; International Journal of Palliative Nursing Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; International Journal of Palliative Nursing Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; International Journal of Palliative Nursing Volume 27 ; 27 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; International Journal of Palliative Nursing Volume 28 ; 28 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2018 ; International Journal of Palliative Nursing Volume 24 ; 24 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; International Journal of Palliative Nursing Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; International Journal of Palliative Nursing Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2021 ; International Journal of Palliative Nursing Volume 27 ; 27 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; International Journal of Palliative Nursing Volume 28 ; 28 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; International Journal of Palliative Nursing Volume 29 ; 29 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; International Journal of Palliative Nursing Volume 30 ; 30 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; International Journal of Palliative Nursing Volume 31 ; 31 ; https://www.magonlinelibrary.com/ ; >
@@ -541,11 +541,11 @@
     au < finished ; finished ; 2015 ; International Journal of Therapy and Rehabilitation Volume 22 ; 22 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2016 ; International Journal of Therapy and Rehabilitation Volume 23 ; 23 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; International Journal of Therapy and Rehabilitation Volume 24 ; 24 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2018 ; International Journal of Therapy and Rehabilitation Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; International Journal of Therapy and Rehabilitation Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; International Journal of Therapy and Rehabilitation Volume 27 ; 27 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; International Journal of Therapy and Rehabilitation Volume 28 ; 28 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; International Journal of Therapy and Rehabilitation Volume 29 ; 29 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2018 ; International Journal of Therapy and Rehabilitation Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; International Journal of Therapy and Rehabilitation Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; International Journal of Therapy and Rehabilitation Volume 27 ; 27 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; International Journal of Therapy and Rehabilitation Volume 28 ; 28 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2022 ; International Journal of Therapy and Rehabilitation Volume 29 ; 29 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2023 ; International Journal of Therapy and Rehabilitation Volume 30 ; 30 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; International Journal of Therapy and Rehabilitation Volume 31 ; 31 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; International Journal of Therapy and Rehabilitation Volume 32 ; 32 ; https://www.magonlinelibrary.com/ ; >
@@ -572,7 +572,7 @@
     au < finished ; finished ; 2016 ; International Paramedic Practice Volume 6 ; 6 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; International Paramedic Practice Volume 7 ; 7 ; http://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; International Paramedic Practice Volume 8 ; 8 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; International Paramedic Practice Volume 9 ; 9 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2019 ; International Paramedic Practice Volume 9 ; 9 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2020 ; International Paramedic Practice Volume 10 ; 10 ; https://www.magonlinelibrary.com/ ; >
     au < frozen ; exists ; 2021 ; International Paramedic Practice Volume 11 ; 11 ; https://www.magonlinelibrary.com/ ; >
     au < frozen ; exists ; 2022 ; International Paramedic Practice Volume 12 ; 12 ; https://www.magonlinelibrary.com/ ; >

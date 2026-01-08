@@ -44,7 +44,7 @@
     au < finished ; frozen ; 2021 ; 2021 ; Zoo's Print Volume 13 ; 13 ; https://zoosprint.zooreach.org/ ; reingest5.clockss.org:8082 >
     au < superseded ; exists ; 2022 ; 2022 ; Zoo's Print Volume 14 [superseded] ; 14 ; https://zoosprint.zooreach.org/ ; >
     au < superseded ; exists ; 2023 ; 2023 ; Zoo's Print Volume 15 [superseded] ; 15 ; https://zoosprint.zooreach.org/ ; >
-    au < frozen ; exists ; 2022 ; 2022 ; Zoo's Print Volume 14 ; 14 ; https://zoosprint.org/ ; >
+    au < finished ; manifest ; 2022 ; 2022 ; Zoo's Print Volume 14 ; 14 ; https://zoosprint.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Zoo's Print Volume 15 ; 15 ; https://zoosprint.org/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Zoo's Print Volume 16 ; 16 ; https://zoosprint.org/ ; >
     au < crawling ; exists ; 2025 ; 2025 ; Zoo's Print Volume 17 ; 17 ; https://zoosprint.org/ ; >
