@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>180</string>
+    <string>181</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -157,6 +157,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://((fonts|ajax)\.googleapis\.com)/"</string>
       <string>1,"^https?://(cdn\.nejm\.org)/."</string>
       <string>1,"^https?://faseb-prod-cdn\.literatumonline\.com/journals/content/fasebj/"</string>
+      <string>1,"^https?://static\.cloudflareinsights\.com/"</string>
       <!-- 15:32:20.525: Warning: 5-BaseUrlFetcher: Redirected to excluded URL: 
       https://faseb-prod-cdn.literatumonline.com/journals/content/fasebj/2018/fasebj.2018.32.issue-3/fj.201700767r/20180309/suppl/fj.201700767r.sd1
       .docx?b92b4ad1b4f274c70877518616abb28b5e60edcaa0d0d74615663cb6c98b26ea6fea4c67eff0c60316078c20dc3769af5f07d482336e6f4d26936c4e73b5f281744b9559753e

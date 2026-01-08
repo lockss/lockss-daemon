@@ -50,7 +50,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>56</string>
+    <string>57</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -109,6 +109,7 @@ POSSIBILITY OF SUCH DAMAGE.
      Some publisher changed their folder name from "pdf" to "epdf". July/2020
      -->
     <list>
+      <string>1,"^https?://static\.cloudflareinsights\.com/"</string>
       <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttf|woff[0-9]?)(_v[0-9]+)?$", url_host(base_url)</string>
       <string>1,"^https?://%s/na101/home/[a-z]+/publisher/[^/]+/books/content/books/[^/]+/%s/", url_host(base_url), book_eisbn</string>
       <string>1,"^https?://%s\.global\.prod\.fastly\.net/[^?]*\.(css|gif|jpe?g|js|png)$", url_host(base_url)</string>
