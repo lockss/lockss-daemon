@@ -690,7 +690,7 @@
     param[journal_id] = historical-reflections
     #param[journal_issn] = 0315-7997
       
-    au < ready ; exists ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 ; >
     au < ready ; exists ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 ; >
     au < ready ; exists ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 ; >
@@ -781,7 +781,7 @@
     #param[journal_issn] = 1086-4946 
     
     au < ready ; exists ; 2000 ; Italian Politics Volume 15 ; 15 ; >
-    au < ready ; exists ; 2001 ; Italian Politics Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2001 ; Italian Politics Volume 16 ; 16 ; >
     au < crawling ; exists ; 2002 ; Italian Politics Volume 17 ; 17 ; >
     au < ready ; exists ; 2003 ; Italian Politics Volume 18 ; 18 ; >
     au < ready ; exists ; 2004 ; Italian Politics Volume 19 ; 19 ; >
@@ -1293,7 +1293,7 @@
     au < ready ; exists ; 2001 ; Theoria Volume 48 ; 48 ; >
     au < ready ; exists ; 2002 ; Theoria Volume 49 ; 49 ; >
     au < frozen ; exists ; 2003 ; Theoria Volume 50 ; 50 ; >
-    au < ready ; exists ; 2004 ; Theoria Volume 51 ; 51 ; >
+    au < crawling ; exists ; 2004 ; Theoria Volume 51 ; 51 ; >
     au < ready ; exists ; 2005 ; Theoria Volume 52 ; 52 ; >
     au < testing ; exists ; 2006 ; Theoria Volume 53 ; 53 ; >
     au < ready ; exists ; 2007 ; Theoria Volume 54 ; 54 ; >

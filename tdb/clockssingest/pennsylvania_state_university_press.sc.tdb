@@ -1080,7 +1080,7 @@
       param[journal_id] = caliope
 
       au < ready ; exists ; 1995 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 1 ; 1 ; 1995 ; >
-      au < ready ; exists ; 1996 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 2 ; 2 ; 1996 ; >
+      au < crawling ; exists ; 1996 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 2 ; 2 ; 1996 ; >
       au < crawling ; exists ; 1997 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 3 ; 3 ; 1997 ; >
       au < ready ; exists ; 1998 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 4 ; 4 ; 1998 ; >
       au < crawling ; exists ; 1999 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 5 ; 5 ; 1999 ; >
@@ -2151,7 +2151,7 @@
       au < ready ; exists ; 1995 ; Nineteenth Century Studies Volume 9 ; 9 ; 1995 ; >
       au < ready ; exists ; 1996 ; Nineteenth Century Studies Volume 10 ; 10 ; 1996 ; >
       au < ready ; exists ; 1997 ; Nineteenth Century Studies Volume 11 ; 11 ; 1997 ; >
-      au < ready ; exists ; 1998 ; Nineteenth Century Studies Volume 12 ; 12 ; 1998 ; >
+      au < crawling ; exists ; 1998 ; Nineteenth Century Studies Volume 12 ; 12 ; 1998 ; >
       au < ready ; exists ; 1999 ; Nineteenth Century Studies Volume 13 ; 13 ; 1999 ; >
       au < ready ; exists ; 2000 ; Nineteenth Century Studies Volume 14 ; 14 ; 2000 ; >
       au < ready ; exists ; 2001 ; Nineteenth Century Studies Volume 15 ; 15 ; 2001 ; >
@@ -2280,11 +2280,11 @@
 
       param[journal_id] = jhr
 
-      au < ready ; exists ; 1998 ; Journal for the History of Rhetoric Volume 1 ; 1 ; 1998 ; >
+      au < crawling ; exists ; 1998 ; Journal for the History of Rhetoric Volume 1 ; 1 ; 1998 ; >
       au < ready ; exists ; 1999 ; Journal for the History of Rhetoric Volume 2 ; 2 ; 1999 ; >
       au < ready ; exists ; 2000 ; Journal for the History of Rhetoric Volume 3 ; 3 ; 2000 ; >
       au < frozen ; exists ; 2001 ; Journal for the History of Rhetoric Volume 4 ; 4 ; 2001 ; >
-      au < ready ; exists ; 2002 ; Journal for the History of Rhetoric Volume 5 ; 5 ; 2002 ; >
+      au < crawling ; exists ; 2002 ; Journal for the History of Rhetoric Volume 5 ; 5 ; 2002 ; >
       au < frozen ; exists ; 2003 ; Journal for the History of Rhetoric Volume 6 ; 6 ; 2003 ; >
       au < ready ; exists ; 2004 ; Journal for the History of Rhetoric Volume 7 ; 7 ; 2004 ; >
       au < ready ; exists ; 2005 ; Journal for the History of Rhetoric Volume 8 ; 8 ; 2005 ; >
