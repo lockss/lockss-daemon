@@ -939,14 +939,16 @@ public class LockssDaemon extends LockssApp {
     // Install loadable plugin support
     getPluginManager().startLoadablePlugins();
 
-    log.info("Started");
+    String uptime =
+      StringUtil.timeIntervalToString(TimeBase.msSince(getStartDate().getTime()));
+    log.info("Started in " + uptime);
     ausStarted.fill();
 
     AlertManager alertMgr = getAlertManager();
     alertMgr.raiseAlert(Alert.cacheAlert(Alert.DAEMON_STARTED),
 			"LOCKSS daemon " +
 			ConfigManager.getDaemonVersion().displayString() +
-			" started");
+			" started in " + uptime);
   }
 
 
