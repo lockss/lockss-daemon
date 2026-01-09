@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = University of Warith Al-Anbiyaa ;
+    info[contract] = 2008 ;
+    info[back] = 2008 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+    title <
+      name = The Warith Scientific Journal of Engineering and Technology (WSJET) ;
+      eissn = 3079-0697 ;
+      issnl = 3079-0697
+    >
+
+      plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+      param[base_url] = https://wsjet.uowa.edu.iq/
+      param[journal_abbr] = journal
+      implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+      au < manifest ; exists ; 2025 ; The Warith Scientific Journal of Engineering and Technology (WSJET) Volume 1 ; 1 ; >
+
+  }
+
+}
