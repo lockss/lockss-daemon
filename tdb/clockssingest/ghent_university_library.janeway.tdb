@@ -1351,7 +1351,7 @@
       au < ready ; exists ; 1965 ; 1965 ; 1965 ; Res Publica Volume 1965 ; >
       au < ready ; exists ; 1966 ; 1966 ; 1966 ; Res Publica Volume 1966 ; >
       au < ready ; exists ; 1967 ; 1967 ; 1967 ; Res Publica Volume 1967 ; >
-      au < ready ; exists ; 1968 ; 1968 ; 1968 ; Res Publica Volume 1968 ; >
+      au < crawling ; exists ; 1968 ; 1968 ; 1968 ; Res Publica Volume 1968 ; >
       au < ready ; exists ; 1969 ; 1969 ; 1969 ; Res Publica Volume 1969 ; >
       au < ready ; exists ; 1970 ; 1970 ; 1970 ; Res Publica Volume 1970 ; >
       au < ready ; exists ; 1971 ; 1971 ; 1971 ; Res Publica Volume 1971 ; >
@@ -1417,7 +1417,7 @@
       #published 1967-2001
       param[journal_id] = silva
 
-      au < ready ; exists ; 1967 ; 1967 ; 1967 ; Silva Gandavensis Volume 1967 ; >
+      au < crawling ; exists ; 1967 ; 1967 ; 1967 ; Silva Gandavensis Volume 1967 ; >
       au < ready ; exists ; 1968 ; 1968 ; 1968 ; Silva Gandavensis Volume 1968 ; >
       au < ready ; exists ; 1969 ; 1969 ; 1969 ; Silva Gandavensis Volume 1969 ; >
       au < ready ; exists ; 1970 ; 1970 ; 1970 ; Silva Gandavensis Volume 1970 ; >

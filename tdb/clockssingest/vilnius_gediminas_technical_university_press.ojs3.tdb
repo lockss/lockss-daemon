@@ -356,7 +356,7 @@
 
       param[journal_id] = JCEM
 
-      au < ready ; exists ; 1995 ; Journal of Civil Engineering and Management Volume 1995 ; 1 ; 1995 ; https://journals.vilniustech.lt/ ; >
+      au < crawling ; exists ; 1995 ; Journal of Civil Engineering and Management Volume 1995 ; 1 ; 1995 ; https://journals.vilniustech.lt/ ; >
       au < ready ; exists ; 1996 ; Journal of Civil Engineering and Management Volume 1996 ; 2 ; 1996 ; https://journals.vilniustech.lt/ ; >
       au < ready ; exists ; 1997 ; Journal of Civil Engineering and Management Volume 1997 ; 3 ; 1997 ; https://journals.vilniustech.lt/ ; >
       au < ready ; exists ; 1998 ; Journal of Civil Engineering and Management Volume 1998 ; 4 ; 1998 ; https://journals.vilniustech.lt/ ; >
@@ -445,7 +445,7 @@
       au < finished ; frozen ; 2000 ; Mathematical Modelling and Analysis Volume 2000 ; 5 ; 2000 ; https://journals.vilniustech.lt/ ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2001 ; Mathematical Modelling and Analysis Volume 2001 ; 6 ; 2001 ; https://journals.vilniustech.lt/ ; >
       au < ready ; exists ; 2002 ; Mathematical Modelling and Analysis Volume 2002 ; 7 ; 2002 ; https://journals.vilniustech.lt/ ; >
-      au < ready ; exists ; 2003 ; Mathematical Modelling and Analysis Volume 2003 ; 8 ; 2003 ; https://journals.vilniustech.lt/ ; >
+      au < crawling ; exists ; 2003 ; Mathematical Modelling and Analysis Volume 2003 ; 8 ; 2003 ; https://journals.vilniustech.lt/ ; >
       au < finished ; finished ; 2004 ; Mathematical Modelling and Analysis Volume 2004 ; 9 ; 2004 ; https://journals.vilniustech.lt/ ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2005 ; Mathematical Modelling and Analysis Volume 2005 ; 10 ; 2005 ; https://journals.vilniustech.lt/ ; >
 

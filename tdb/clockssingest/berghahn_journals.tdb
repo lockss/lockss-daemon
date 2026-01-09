@@ -504,7 +504,7 @@
     au < ready ; exists ; 2007 ; European Judaism Volume 40 ; 40 ; >
     au < ready ; exists ; 2008 ; European Judaism Volume 41 ; 41 ; >
     au < ready ; exists ; 2009 ; European Judaism Volume 42 ; 42 ; >
-    au < ready ; exists ; 2010 ; European Judaism Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2010 ; European Judaism Volume 43 ; 43 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Judaism Volume 44 ; 44 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; European Judaism Volume 45 ; 45 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Judaism Volume 46 ; 46 ; >
@@ -850,7 +850,7 @@
     au < ready ; exists ; 2001 ; Journeys Volume 2 ; 2 ; >
     au < frozen ; exists ; 2002 ; Journeys Volume 3 ; 3 ; >
     au < ready ; exists ; 2003 ; Journeys Volume 4 ; 4 ; >
-    au < ready ; exists ; 2004 ; Journeys Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2004 ; Journeys Volume 5 ; 5 ; >
     au < ready ; exists ; 2005 ; Journeys Volume 6 ; 6 ; >
     au < ready ; exists ; 2006 ; Journeys Volume 7 ; 7 ; >
     au < ready ; exists ; 2007 ; Journeys Volume 8 ; 8 ; >
@@ -1051,7 +1051,7 @@
     param[journal_id] = projections
     #param[journal_issn] = 1934-9688
         
-    au < ready ; exists ; 2007 ; Projections Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2007 ; Projections Volume 1 ; 1 ; >
     au < frozen ; exists ; 2008 ; Projections Volume 2 ; 2 ; >
     au < ready ; exists ; 2009 ; Projections Volume 3 ; 3 ; >
     au < ready ; exists ; 2010 ; Projections Volume 4 ; 4 ; >
@@ -1151,7 +1151,7 @@
     au < ready ; exists ; 2000 ; Sartre Studies International Volume 6 ; 6 ; >
     au < testing ; exists ; 2001 ; Sartre Studies International Volume 7 ; 7 ; >
     au < ready ; exists ; 2002 ; Sartre Studies International Volume 8 ; 8 ; >
-    au < ready ; exists ; 2003 ; Sartre Studies International Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2003 ; Sartre Studies International Volume 9 ; 9 ; >
     au < frozen ; exists ; 2004 ; Sartre Studies International Volume 10 ; 10 ; >
     au < frozen ; exists ; 2005 ; Sartre Studies International Volume 11 ; 11 ; >
     au < ready ; exists ; 2006 ; Sartre Studies International Volume 12 ; 12 ; >
@@ -1216,7 +1216,7 @@
     au < ready ; exists ; 2006 ; Sibirica Volume 5 ; 5 ; >
     au < frozen ; exists ; 2007 ; Sibirica Volume 6 ; 6 ; >
     au < ready ; exists ; 2008 ; Sibirica Volume 7 ; 7 ; >
-    au < ready ; exists ; 2009 ; Sibirica Volume 8 ; 8 ; >
+    au < crawling ; exists ; 2009 ; Sibirica Volume 8 ; 8 ; >
     au < frozen ; exists ; 2010 ; Sibirica Volume 9 ; 9 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Sibirica Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Sibirica Volume 11 ; 11 ; >
@@ -1247,7 +1247,7 @@
     param[journal_id] = social-analysis
     #param[journal_issn] = 0155-977X
         
-    au < ready ; exists ; 2002 ; Social Analysis Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2002 ; Social Analysis Volume 46 ; 46 ; >
     au < frozen ; exists ; 2003 ; Social Analysis Volume 47 ; 47 ; >
     au < frozen ; exists ; 2004 ; Social Analysis Volume 48 ; 48 ; >
     au < ready ; exists ; 2005 ; Social Analysis Volume 49 ; 49 ; >

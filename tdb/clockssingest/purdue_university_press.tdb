@@ -314,7 +314,7 @@
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
     au < crawling ; exists ; 2006 ; Journal of Southeast Asian American Education and Advancement Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
-    au < ready ; exists ; 2007 ; Journal of Southeast Asian American Education and Advancement Volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
+    au < crawling ; exists ; 2007 ; Journal of Southeast Asian American Education and Advancement Volume 2 ; 2 ; https://docs.lib.purdue.edu/ ; >
     au < frozen ; exists ; 2008 ; Journal of Southeast Asian American Education and Advancement Volume 3 ; 3 ; https://docs.lib.purdue.edu/ ; >
     au < frozen ; exists ; 2009 ; Journal of Southeast Asian American Education and Advancement Volume 4 ; 4 ; https://docs.lib.purdue.edu/ ; >
     au < frozen ; exists ; 2010 ; Journal of Southeast Asian American Education and Advancement Volume 5 ; 5 ; https://docs.lib.purdue.edu/ ; >
