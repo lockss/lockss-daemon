@@ -49,10 +49,13 @@ public class OAPENBooksHtmlCrawlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // On Issue TOC pages points to next/prev issue which could cross year and out of volume
-        HtmlNodeFilters.tagWithAttribute("div", "class", "item-page-field-wrapper"),
+    NodeFilter[] filters = new NodeFilter[]{
+            // On Issue TOC pages points to next/prev issue which could cross year and out of volume
+            HtmlNodeFilters.tagWithAttribute("div", "class", "item-page-field-wrapper"),
+            // on https://library.oapen.org/handle/20.500.12657/39444 found "featured titles" and "Imported or submitted locally" on 1/7/2026
+            HtmlNodeFilters.tagWithAttribute("ul", "class", "ds-referenceSet-list"),
     };
+
     return new HtmlFilterInputStream(in,
                                      encoding,
                                      HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
