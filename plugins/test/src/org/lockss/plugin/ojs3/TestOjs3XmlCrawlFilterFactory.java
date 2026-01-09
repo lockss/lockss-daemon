@@ -31,9 +31,291 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 package org.lockss.plugin.ojs3;
 
+import java.io.InputStream;
+
 import org.lockss.util.*;
 import org.lockss.test.*;
 
+import org.apache.commons.io.IOUtils;
+
 public class TestOjs3XmlCrawlFilterFactory extends LockssTestCase {
-    //test creating crawl filter, pass it a bunch of fake input, verify if result matches what is expected
+
+    private Ojs3XmlCrawlFilterFactory fact;
+    private MockArchivalUnit mau;
+
+    public void setUp() throws Exception {
+        super.setUp();
+        fact = new Ojs3XmlCrawlFilterFactory();
+        mau = new MockArchivalUnit();
+    }
+
+    private static final String emptyFile = "";
+
+    private static final String goodXml = 
+    "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n"+
+        "<!DOCTYPE article  PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n"+
+        "<article dtd-version=\"1.1\" article-type=\"book-review\">\n";
+
+    private static final String fixedXml =
+  		"<?xml version='1.0' encoding='utf-8'?>\n" + 
+  		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
+  		"<article dtd-version=\"1.1\" article-type=\"book-review\">";
+    
+    private static final String goodXmlLong =
+  		"<?xml version=\"1.0\" encoding='utf-8' standalone=\"yes\"?>\n" + 
+  		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
+  		"<article dtd-version=\"1.1\" article-type=\"book-review\">\n"+
+            "<front>\n"+
+                "<journal-meta>\n"+
+                    "<journal-id>TMR</journal-id>\n"+
+                        "<journal-title-group>\n"+
+                            "<journal-title>The Medieval Review</journal-title>\n"+
+                        "</journal-title-group>\n"+
+                        "<issn pub-type=\"epub\">1096-746X</issn>\n"+
+                        "<publisher>\n"+
+                            "<publisher-name>Indiana University</publisher-name>\n"+
+                        "</publisher>\n"+
+                "</journal-meta>\n"+
+                "<article-meta>\n"+
+                    "<article-id pub-id-type=\"publisher-id\">22.01.01</article-id>\n"+
+                    "<title-group>\n"+
+                        "<article-title>22.01.01, Pétrarque; Blanc, trans. and ed., Le Chansonnier</article-title>\n"+
+                    "</title-group>\n"+
+                    "<contrib-group>\n"+
+                        "<contrib contrib-type=\"author\">\n"+
+                            "<name>\n"+
+                                "<surname>Florence Bistagne </surname>\n"+
+                                "<given-names/>\n"+
+                            "</name>\n"+
+                            "<aff>Université d'Avignon</aff>\n"+
+                            "<address>\n"+
+                                "<email>florence.bistagne@orange.fr</email>\n"+
+                            "</address>\n"+
+                        "</contrib>\n"+
+                    "</contrib-group>\n"+
+                    "<pub-date publication-format=\"epub\" date-type=\"pub\" iso-8601-date=\"2022\">\n"+
+                        "<year>2022</year>\n"+
+                    "</pub-date>\n";
+
+    private static final String goodXmlEncodingLater =
+  		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
+  		"<article dtd-version=\"1.1\" article-type=\"book-review\">\n"+
+            "<front>\n"+
+                "<journal-meta>\n"+
+                    "<journal-id>TMR</journal-id>\n"+
+                        "<journal-title-group>\n"+
+                            "<journal-title>The Medieval Review</journal-title>\n"+
+                        "</journal-title-group>\n"+
+                        "<issn pub-type=\"epub\">1096-746X</issn>\n"+
+                        "<publisher>\n"+
+                            "<publisher-name>Indiana University</publisher-name>\n"+
+                        "</publisher>\n"+
+                "</journal-meta>\n"+
+                "<article-meta>\n"+
+                    "<article-id pub-id-type=\"publisher-id\">22.01.01</article-id>\n"+
+                    "<title-group>\n"+
+                        "<article-title>22.01.01, Pétrarque; Blanc, trans. and ed., Le Chansonnier</article-title>\n"+
+                    "</title-group>\n"+
+                    "<contrib-group>\n"+
+                        "<contrib contrib-type=\"author\">\n"+
+                            "<name>\n"+
+                                "<surname>Florence Bistagne </surname>\n"+
+                                "<given-names/>\n"+
+                            "</name>\n"+
+                            "<aff>Université d'Avignon</aff>\n"+
+                            "<address>\n"+
+                                "<email>florence.bistagne@orange.fr</email>\n"+
+                            "</address>\n"+
+                        "</contrib>\n"+
+                    "</contrib-group>\n"+
+                    "<pub-date publication-format=\"epub\" date-type=\"pub\" iso-8601-date=\"2022\">\n"+
+                        "<year>2022</year>\n"+
+                    "</pub-date>\n"+
+                    "<?xml version=\"1.0\" encoding=\"utf8\" standalone=\"yes\"?>\n";
+
+        private static final String goodXmlWithMultiByteCharacter =
+        "<?xml version=\"1.0\" encoding='utf-8' standalone=\"yes\"?>\n" + 
+  		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
+  		"<article dtd-version=\"1.1\" article-type=\"book-review\">\n"+
+            "<front>\n"+
+                "<journal-meta>\n"+
+                    "<journal-id>TMR</journal-id>\n"+
+                        "<journal-title-group>\n"+
+                            "<journal-title>The Medieval Review</journal-title>\n"+
+                        "</journal-title-group>\n"+
+                        "<issn pub-type=\"epub\">1096-746X</issn>\n"+
+                        "<publisher>\n"+
+                            "<publisher-name>Indiana University</publisher-name>\n"+
+                        "</publisher>\n"+
+                "</journal-meta>\n"+
+                "<article-meta>\n"+
+                    "<article-id pub-id-type=\"publisher-id\">22.01.01</article-id>\n"+
+                    "<title-group>\n"+
+                        "<article-title>22.01.01, Pétrarque; Blanc, trans. and ed., Le Chansonnier</article-title>\n"+
+                    "</title-group>\n"+
+                    "<contrib-group>\n"+
+                        "<contrib contrib-type=\"author\">\n"+
+                            "<name>\n"+
+                                "<surname>Florence Bistagne </surname>\n"+
+                                "<given-names/>\n"+
+                            "</name>\n"+
+                            "<aff>Université d'Avignon</aff>\n"+
+                            "<address>\n"+
+                                "<email>florence.bistagne@orange.fr</email>\n"+
+                            "</address>\n"+
+                        "</contrib>\n"+
+                    "</contrib-group>\n"+
+                    "<pub-date publication\u0800-format=\"epub\" date-type=\"pub\" iso-8601-date=\"2022\">\n"+
+                        "<year>2022</year>\n"+
+                    "</pub-date>\n";
+
+    private static final String badXml =
+  		"<?xml version='1.0' encoding='utf8'?>\n" + 
+  		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
+  		"<article dtd-version=\"1.1\" article-type=\"book-review\">";
+
+    private static final String badXmlDoubleQuotes =
+  		"<?xml version='1.0' encoding=\"utf8\"?>\n" + 
+  		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
+  		"<article dtd-version=\"1.1\" article-type=\"book-review\">";
+
+    private static final String badXmlLong =
+  		"<?xml version=\"1.0\" encoding=\"utf8\" standalone=\"yes\"?>\n" + 
+  		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
+  		"<article dtd-version=\"1.1\" article-type=\"book-review\">\n"+
+            "<front>\n"+
+                "<journal-meta>\n"+
+                    "<journal-id>TMR</journal-id>\n"+
+                        "<journal-title-group>\n"+
+                            "<journal-title>The Medieval Review</journal-title>\n"+
+                        "</journal-title-group>\n"+
+                        "<issn pub-type=\"epub\">1096-746X</issn>\n"+
+                        "<publisher>\n"+
+                            "<publisher-name>Indiana University</publisher-name>\n"+
+                        "</publisher>\n"+
+                "</journal-meta>\n"+
+                "<article-meta>\n"+
+                    "<article-id pub-id-type=\"publisher-id\">22.01.01</article-id>\n"+
+                    "<title-group>\n"+
+                        "<article-title>22.01.01, Pétrarque; Blanc, trans. and ed., Le Chansonnier</article-title>\n"+
+                    "</title-group>\n"+
+                    "<contrib-group>\n"+
+                        "<contrib contrib-type=\"author\">\n"+
+                            "<name>\n"+
+                                "<surname>Florence Bistagne </surname>\n"+
+                                "<given-names/>\n"+
+                            "</name>\n"+
+                            "<aff>Université d'Avignon</aff>\n"+
+                            "<address>\n"+
+                                "<email>florence.bistagne@orange.fr</email>\n"+
+                            "</address>\n"+
+                        "</contrib>\n"+
+                    "</contrib-group>\n"+
+                    "<pub-date publication-format=\"epub\" date-type=\"pub\" iso-8601-date=\"2022\">\n"+
+                        "<year>2022</year>\n"+
+                    "</pub-date>\n";
+
+    private static final String badXmlEncodingLater =
+  		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
+  		"<article dtd-version=\"1.1\" article-type=\"book-review\">\n"+
+            "<front>\n"+
+                "<journal-meta>\n"+
+                    "<journal-id>TMR</journal-id>\n"+
+                        "<journal-title-group>\n"+
+                            "<journal-title>The Medieval Review</journal-title>\n"+
+                        "</journal-title-group>\n"+
+                        "<issn pub-type=\"epub\">1096-746X</issn>\n"+
+                        "<publisher>\n"+
+                            "<publisher-name>Indiana University</publisher-name>\n"+
+                        "</publisher>\n"+
+                "</journal-meta>\n"+
+                "<article-meta>\n"+
+                    "<article-id pub-id-type=\"publisher-id\">22.01.01</article-id>\n"+
+                    "<title-group>\n"+
+                        "<article-title>22.01.01, Pétrarque; Blanc, trans. and ed., Le Chansonnier</article-title>\n"+
+                    "</title-group>\n"+
+                    "<contrib-group>\n"+
+                        "<contrib contrib-type=\"author\">\n"+
+                            "<name>\n"+
+                                "<surname>Florence Bistagne </surname>\n"+
+                                "<given-names/>\n"+
+                            "</name>\n"+
+                            "<aff>Université d'Avignon</aff>\n"+
+                            "<address>\n"+
+                                "<email>florence.bistagne@orange.fr</email>\n"+
+                            "</address>\n"+
+                        "</contrib>\n"+
+                    "</contrib-group>\n"+
+                    "<pub-date publication-format=\"epub\" date-type=\"pub\" iso-8601-date=\"2022\">\n"+
+                        "<year>2022</year>\n"+
+                    "</pub-date>\n"+
+                    "<?xml version=\"1.0\" encoding=\"utf8\" standalone=\"yes\"?>\n";
+
+    private static final String badXmlWithMultiByteCharacter =
+  		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
+  		"<article dtd-version=\"1.1\" article-type=\"book-review\">\n"+
+            "<front>\n"+
+                "<journal-meta>\n"+
+                    "<journal-id>TMR</journal-id>\n"+
+                        "<journal-title-group>\n"+
+                            "<journal-title>The Medieval Review</journal-title>\n"+
+                        "</journal-title-group>\n"+
+                        "<issn pub-type=\"epub\">1096-746X</issn>\n"+
+                        "<publisher>\n"+
+                            "<publisher-name>Indiana University</publisher-name>\n"+
+                        "</publisher>\n"+
+                "</journal-meta>\n"+
+                "<article-meta>\n"+
+                    "<article-id pub-id-type=\"publisher-id\">22.01.01</article-id>\n"+
+                    "<title-group>\n"+
+                        "<article-title>22.01.01, Pétrarque; Blanc, trans. and ed., Le Chansonnier</article-title>\n"+
+                    "</title-group>\n"+
+                    "<contrib-group>\n"+
+                        "<contrib contrib-type=\"author\">\n"+
+                            "<name>\n"+
+                                "<surname>Florence Bistagne </surname>\n"+
+                                "<given-names/>\n"+
+                            "</name>\n"+
+                            "<aff>Université d'Avignon</aff>\n"+
+                            "<address>\n"+
+                                "<email>florence.bistagne@orange.fr</email>\n"+
+                            "</address>\n"+
+                        "</contrib>\n"+
+                    "</contrib-group>\n"+
+                    "<pub-date publication\u0800-format=\"epub\" date-type=\"pub\" iso-8601-date=\"2022\">\n"+
+                        "<year>2022</year>\n"+
+                    "</pub-date>\n";
+//use U+0800 which is "\u0800" in java -> 0xE0 0xA0 0x80
+    public void testFiltering() throws Exception {
+        InputStream inA;
+        //make sure properly encoded xml files are not changed
+        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(goodXml, Constants.DEFAULT_ENCODING),
+            Constants.DEFAULT_ENCODING);
+        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(goodXml, Constants.DEFAULT_ENCODING), inA));
+        //check standard bad encoding
+        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(badXml, Constants.DEFAULT_ENCODING),
+            Constants.DEFAULT_ENCODING);
+        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(fixedXml, Constants.DEFAULT_ENCODING), inA));
+        //check when encoding is in double quotes
+        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(badXmlDoubleQuotes, Constants.DEFAULT_ENCODING),
+            Constants.DEFAULT_ENCODING);
+        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(fixedXml, Constants.DEFAULT_ENCODING), inA));
+        //check when xml file is more than 1025 bytes
+        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(badXmlLong, Constants.DEFAULT_ENCODING),
+            Constants.DEFAULT_ENCODING);
+        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(goodXmlLong, Constants.DEFAULT_ENCODING), inA));
+        //check empty string
+        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(emptyFile, Constants.DEFAULT_ENCODING),
+            Constants.DEFAULT_ENCODING);
+        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(emptyFile, Constants.DEFAULT_ENCODING), inA));
+        //check if utf8 is later in the xml file
+        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(badXmlEncodingLater, Constants.DEFAULT_ENCODING),
+            Constants.DEFAULT_ENCODING);
+        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(goodXmlEncodingLater, Constants.DEFAULT_ENCODING), inA));
+        //check when there's a multibyte character at 1024 bytes
+        //FIX
+        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(badXmlWithMultiByteCharacter, Constants.DEFAULT_ENCODING),
+            Constants.DEFAULT_ENCODING);
+        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(goodXmlWithMultiByteCharacter, Constants.DEFAULT_ENCODING), inA));
+    }
 }
