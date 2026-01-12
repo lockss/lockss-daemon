@@ -56,7 +56,7 @@
       au < ready ; exists ; 1991 ; Chemical Engineering Education Volume 1991 ; 1991 ; 1991 ; >
       au < ready ; exists ; 1992 ; Chemical Engineering Education Volume 1992 ; 1992 ; 1992 ; >
       au < ready ; exists ; 1993 ; Chemical Engineering Education Volume 1993 ; 1993 ; 1993 ; >
-      au < crawling ; exists ; 1994 ; Chemical Engineering Education Volume 1994 ; 1994 ; 1994 ; >
+      au < frozen ; exists ; 1994 ; Chemical Engineering Education Volume 1994 ; 1994 ; 1994 ; >
       au < ready ; exists ; 1995 ; Chemical Engineering Education Volume 1995 ; 1995 ; 1995 ; >
       au < ready ; exists ; 1996 ; Chemical Engineering Education Volume 1996 ; 1996 ; 1996 ; >
       au < ready ; exists ; 1997 ; Chemical Engineering Education Volume 1997 ; 1997 ; 1997 ; >
@@ -192,7 +192,7 @@
       au < ready ; exists ; 1990 ; Florida Entomologist Volume 74 ; 74 ; 1990 ; >
       au < ready ; exists ; 1991 ; Florida Entomologist Volume 75 ; 75 ; 1991 ; >
       au < ready ; exists ; 1992 ; Florida Entomologist Volume 76 ; 76 ; 1992 ; >
-      au < crawling ; exists ; 1993 ; Florida Entomologist Volume 77 ; 77 ; 1993 ; >
+      au < frozen ; exists ; 1993 ; Florida Entomologist Volume 77 ; 77 ; 1993 ; >
       au < ready ; exists ; 1994 ; Florida Entomologist Volume 78 ; 78 ; 1994 ; >
       au < ready ; exists ; 1995 ; Florida Entomologist Volume 79 ; 79 ; 1995 ; >
       au < ready ; exists ; 1996 ; Florida Entomologist Volume 80 ; 80 ; 1996 ; >
@@ -200,13 +200,13 @@
       au < ready ; exists ; 1998 ; Florida Entomologist Volume 82 ; 82 ; 1998 ; >
       au < ready ; exists ; 1999 ; Florida Entomologist Volume 83 ; 83 ; 1999 ; >
       au < ready ; exists ; 2000 ; Florida Entomologist Volume 84 ; 84 ; 2000 ; >
-      au < crawling ; exists ; 2001 ; Florida Entomologist Volume 85 ; 85 ; 2001 ; >
-      au < crawling ; exists ; 2002 ; Florida Entomologist Volume 86 ; 86 ; 2002 ; >
+      au < frozen ; exists ; 2001 ; Florida Entomologist Volume 85 ; 85 ; 2001 ; >
+      au < frozen ; exists ; 2002 ; Florida Entomologist Volume 86 ; 86 ; 2002 ; >
       au < ready ; exists ; 2003 ; Florida Entomologist Volume 87 ; 87 ; 2003 ; >
       au < ready ; exists ; 2004 ; Florida Entomologist Volume 88 ; 88 ; 2004 ; >
       au < ready ; exists ; 2005 ; Florida Entomologist Volume 89 ; 89 ; 2005 ; >
       au < ready ; exists ; 2006 ; Florida Entomologist Volume 90 ; 90 ; 2006 ; >
-      au < crawling ; exists ; 2007 ; Florida Entomologist Volume 91 ; 91 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; Florida Entomologist Volume 91 ; 91 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Florida Entomologist Volume 92 ; 92 ; 2008 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2009 ; Florida Entomologist Volume 93 ; 93 ; 2009 ; >
       au < finished ; manifest ; 2010 ; Florida Entomologist Volume 94 ; 94 ; 2010 ; reingest2.clockss.org:8085 >
@@ -454,7 +454,7 @@
       au < ready ; exists ; 1992 ; Studies in African Linguistics Volume 23 ; 23 ; 1992 ; >
       au < ready ; exists ; 1993 ; Studies in African Linguistics Volume 24 ; 24 ; 1993 ; >
       au < ready ; exists ; 1994 ; Studies in African Linguistics Volume 25 ; 25 ; 1994 ; >
-      au < crawling ; exists ; 1995 ; Studies in African Linguistics Volume 26 ; 26 ; 1995 ; >
+      au < frozen ; exists ; 1995 ; Studies in African Linguistics Volume 26 ; 26 ; 1995 ; >
       au < ready ; exists ; 1996 ; Studies in African Linguistics Volume 27 ; 27 ; 1996 ; >
       au < ready ; exists ; 1997 ; Studies in African Linguistics Volume 28 ; 28 ; 1997 ; >
       au < ready ; exists ; 1998 ; Studies in African Linguistics Volume 29 ; 29 ; 1998 ; >
@@ -462,11 +462,11 @@
       au < ready ; exists ; 2000 ; Studies in African Linguistics Volume 31 ; 31 ; 2000 ; >
       au < ready ; exists ; 2001 ; Studies in African Linguistics Volume 32 ; 32 ; 2001 ; >
       au < ready ; exists ; 2002 ; Studies in African Linguistics Volume 33 ; 33 ; 2002 ; >
-      au < crawling ; exists ; 2003 ; Studies in African Linguistics Volume 34 ; 34 ; 2003 ; >
+      au < frozen ; exists ; 2003 ; Studies in African Linguistics Volume 34 ; 34 ; 2003 ; >
       au < ready ; exists ; 2004 ; Studies in African Linguistics Volume 35 ; 35 ; 2004 ; >
       au < ready ; exists ; 2005 ; Studies in African Linguistics Volume 36 ; 36 ; 2005 ; >
       au < finished ; manifest ; 2006 ; Studies in African Linguistics Volume 37 ; 37 ; 2006 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2007 ; Studies in African Linguistics Volume 38 ; 38 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; Studies in African Linguistics Volume 38 ; 38 ; 2007 ; >
       au < ready ; exists ; 2008 ; Studies in African Linguistics Volume 39 ; 39 ; 2008 ; >
       au < ready ; exists ; 2009 ; Studies in African Linguistics Volume 40 ; 40 ; 2009 ; >
       au < finished ; manifest ; 2010 ; Studies in African Linguistics Volume 41 ; 41 ; 2010 ; reingest3.clockss.org:8083 >
@@ -510,7 +510,7 @@
       au < ready ; exists ; 1999 ; Tropical Lepidoptera Research Volume 10 ; 10 ; 1999 ; >
       au < ready ; exists ; 2000 ; Tropical Lepidoptera Research Volume 11 ; 11 ; 2000 ; >
       au < crawling ; exists ; 2001 ; Tropical Lepidoptera Research Volume 12 ; 12 ; 2001 ; >
-      au < crawling ; exists ; 2002 ; Tropical Lepidoptera Research Volume 13 ; 13 ; 2002 ; >
+      au < frozen ; exists ; 2002 ; Tropical Lepidoptera Research Volume 13 ; 13 ; 2002 ; >
       au < ready ; exists ; 2003 ; Tropical Lepidoptera Research Volume 14 ; 14 ; 2003 ; >
       au < ready ; exists ; 2004 ; Tropical Lepidoptera Research Volume 15 ; 15 ; 2004 ; >
       au < ready ; exists ; 2005 ; Tropical Lepidoptera Research Volume 16 ; 16 ; 2005 ; >
@@ -649,7 +649,7 @@
       au < manifest ; exists ; 1988 ; Proceedings of the Florida State Horticultural Society Volume 101 ; 101 ; 1988 ; >
       au < manifest ; exists ; 1989 ; Proceedings of the Florida State Horticultural Society Volume 102 ; 102 ; 1989 ; >
       au < ready ; exists ; 1990 ; Proceedings of the Florida State Horticultural Society Volume 103 ; 103 ; 1990 ; >
-      au < crawling ; exists ; 1991 ; Proceedings of the Florida State Horticultural Society Volume 104 ; 104 ; 1991 ; >
+      au < frozen ; exists ; 1991 ; Proceedings of the Florida State Horticultural Society Volume 104 ; 104 ; 1991 ; >
       au < ready ; exists ; 1992 ; Proceedings of the Florida State Horticultural Society Volume 105 ; 105 ; 1992 ; >
       au < ready ; exists ; 1993 ; Proceedings of the Florida State Horticultural Society Volume 106 ; 106 ; 1993 ; >
       au < ready ; exists ; 1994 ; Proceedings of the Florida State Horticultural Society Volume 107 ; 107 ; 1994 ; >
@@ -661,7 +661,7 @@
       au < ready ; exists ; 2000 ; Proceedings of the Florida State Horticultural Society Volume 113 ; 113 ; 2000 ; >
       au < ready ; exists ; 2001 ; Proceedings of the Florida State Horticultural Society Volume 114 ; 114 ; 2001 ; >
       au < ready ; exists ; 2002 ; Proceedings of the Florida State Horticultural Society Volume 115 ; 115 ; 2002 ; >
-      au < crawling ; exists ; 2003 ; Proceedings of the Florida State Horticultural Society Volume 116 ; 116 ; 2003 ; >
+      au < frozen ; exists ; 2003 ; Proceedings of the Florida State Horticultural Society Volume 116 ; 116 ; 2003 ; >
       au < ready ; exists ; 2004 ; Proceedings of the Florida State Horticultural Society Volume 117 ; 117 ; 2004 ; >
       au < ready ; exists ; 2005 ; Proceedings of the Florida State Horticultural Society Volume 118 ; 118 ; 2005 ; >
       au < ready ; exists ; 2006 ; Proceedings of the Florida State Horticultural Society Volume 119 ; 119 ; 2006 ; >
@@ -742,8 +742,8 @@
       au < crawling ; exists ; 1999 ; Holarctic Lepidoptera Volume 6 ; 6 ; 1999 ; >
       au < ready ; exists ; 2000 ; Holarctic Lepidoptera Volume 7 ; 7 ; 2000 ; >
       au < ready ; exists ; 2001 ; Holarctic Lepidoptera Volume 8 ; 8 ; 2001 ; >
-      au < crawling ; exists ; 2002 ; Holarctic Lepidoptera Volume 9 ; 9 ; 2002 ; >
-      au < crawling ; exists ; 2003 ; Holarctic Lepidoptera Volume 10 ; 10 ; 2003 ; >
+      au < frozen ; exists ; 2002 ; Holarctic Lepidoptera Volume 9 ; 9 ; 2002 ; >
+      au < frozen ; exists ; 2003 ; Holarctic Lepidoptera Volume 10 ; 10 ; 2003 ; >
       au < ready ; exists ; 2004 ; Holarctic Lepidoptera Volume 11 ; 11 ; 2004 ; >
       au < ready ; exists ; 2008 ; Holarctic Lepidoptera Volume 15 ; 15 ; 2008 ; >
       au < finished ; manifest ; 2019 ; Holarctic Lepidoptera Volume 26 ; 26 ; 2019 ; reingest3.clockss.org:8083 >
@@ -780,11 +780,11 @@
       au < doesNotExist ; doesNotExist ; 1991 ; EDIS Volume 1991 ; 1991 ; 1991 ; >
       au < ready ; exists ; 1992 ; EDIS Volume 1992 ; 1992 ; 1992 ; >
       au < ready ; exists ; 1993 ; EDIS Volume 1993 ; 1993 ; 1993 ; >
-      au < crawling ; exists ; 1994 ; EDIS Volume 1994 ; 1994 ; 1994 ; >
+      au < frozen ; exists ; 1994 ; EDIS Volume 1994 ; 1994 ; 1994 ; >
       au < ready ; exists ; 1995 ; EDIS Volume 1995 ; 1995 ; 1995 ; >
       au < ready ; exists ; 1996 ; EDIS Volume 1996 ; 1996 ; 1996 ; >
       au < ready ; exists ; 1997 ; EDIS Volume 1997 ; 1997 ; 1997 ; >
-      au < crawling ; exists ; 1998 ; EDIS Volume 1998 ; 1998 ; 1998 ; >
+      au < frozen ; exists ; 1998 ; EDIS Volume 1998 ; 1998 ; 1998 ; >
       au < testing ; exists ; 1999 ; EDIS Volume 1999 ; 1999 ; 1999 ; >
       au < ready ; exists ; 2000 ; EDIS Volume 2000 ; 2000 ; 2000 ; >
       au < ready ; exists ; 2001 ; EDIS Volume 2001 ; 2001 ; 2001 ; >

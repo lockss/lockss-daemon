@@ -23,7 +23,7 @@
       param[journal_abbr] = journal
 
       au < ready ; exists ; 1995 ; Journal of Electrochemistry Volume 1 ; 1 ; >
-      au < crawling ; exists ; 1996 ; Journal of Electrochemistry Volume 2 ; 2 ; >
+      au < frozen ; exists ; 1996 ; Journal of Electrochemistry Volume 2 ; 2 ; >
       au < ready ; exists ; 1997 ; Journal of Electrochemistry Volume 3 ; 3 ; >
       au < ready ; exists ; 1998 ; Journal of Electrochemistry Volume 4 ; 4 ; >
       au < ready ; exists ; 1999 ; Journal of Electrochemistry Volume 5 ; 5 ; >

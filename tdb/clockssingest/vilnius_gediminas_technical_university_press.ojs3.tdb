@@ -49,7 +49,7 @@
       au < finished ; manifest ; 2021 ; Aviation Volume 2021 ; 18 ; 2021 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
 
       au < ready ; exists ; 2004 ; Aviation Volume 2004 ; 1 ; 2004 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2005 ; Aviation Volume 2005 ; 2 ; 2005 ; https://journals.vilniustech.lt/ ; >
+      au < frozen ; exists ; 2005 ; Aviation Volume 2005 ; 2 ; 2005 ; https://journals.vilniustech.lt/ ; >
       au < doNotProcess ; exists ; 2006 ; Aviation Volume 2006 ; 3 ; 2006 ; https://journals.vilniustech.lt/ ; >
       au < doNotProcess ; exists ; 2007 ; Aviation Volume 2007 ; 4 ; 2007 ; https://journals.vilniustech.lt/ ; >
 
@@ -247,7 +247,7 @@
       param[journal_id] = IJSPM
 
       au < ready ; exists ; 2004 ; International Journal of Strategic Property Management Volume 2004 ; 1 ; 2004 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2005 ; International Journal of Strategic Property Management Volume 2005 ; 2 ; 2005 ; https://journals.vilniustech.lt/ ; >
+      au < frozen ; exists ; 2005 ; International Journal of Strategic Property Management Volume 2005 ; 2 ; 2005 ; https://journals.vilniustech.lt/ ; >
 
       au < finished ; finished ; 2006 ; International Journal of Strategic Property Management Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2007 ; International Journal of Strategic Property Management Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082 >
@@ -356,7 +356,7 @@
 
       param[journal_id] = JCEM
 
-      au < crawling ; exists ; 1995 ; Journal of Civil Engineering and Management Volume 1995 ; 1 ; 1995 ; https://journals.vilniustech.lt/ ; >
+      au < frozen ; exists ; 1995 ; Journal of Civil Engineering and Management Volume 1995 ; 1 ; 1995 ; https://journals.vilniustech.lt/ ; >
       au < ready ; exists ; 1996 ; Journal of Civil Engineering and Management Volume 1996 ; 2 ; 1996 ; https://journals.vilniustech.lt/ ; >
       au < ready ; exists ; 1997 ; Journal of Civil Engineering and Management Volume 1997 ; 3 ; 1997 ; https://journals.vilniustech.lt/ ; >
       au < ready ; exists ; 1998 ; Journal of Civil Engineering and Management Volume 1998 ; 4 ; 1998 ; https://journals.vilniustech.lt/ ; >
@@ -366,7 +366,7 @@
       au < ready ; exists ; 2002 ; Journal of Civil Engineering and Management Volume 2002 ; 8 ; 2002 ; https://journals.vilniustech.lt/ ; >
       au < finished ; frozen ; 2003 ; Journal of Civil Engineering and Management Volume 2003 ; 9 ; 2003 ; https://journals.vilniustech.lt/ ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2004 ; Journal of Civil Engineering and Management Volume 2004 ; 10 ; 2004 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2005 ; Journal of Civil Engineering and Management Volume 2005 ; 11 ; 2005 ; https://journals.vilniustech.lt/ ; >
+      au < frozen ; exists ; 2005 ; Journal of Civil Engineering and Management Volume 2005 ; 11 ; 2005 ; https://journals.vilniustech.lt/ ; >
       au < finished ; finished ; 2006 ; Journal of Civil Engineering and Management Volume 2006 ; 12 ; 2006 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2007 ; Journal of Civil Engineering and Management Volume 2007 ; 13 ; 2007 ; https://journals.vgtu.lt/ ; reingest5.clockss.org:8082 >
       au < finished ; frozen ; 2008 ; Journal of Civil Engineering and Management Volume 2008 ; 14 ; 2008 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082 >
@@ -439,13 +439,13 @@
       param[journal_id] = MMA
 
       au < finished ; frozen ; 1996 ; Mathematical Modelling and Analysis Volume 1996 ; 1 ; 1996 ; https://journals.vilniustech.lt/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 1997 ; Mathematical Modelling and Analysis Volume 1997 ; 2 ; 1997 ; https://journals.vilniustech.lt/ ; >
+      au < frozen ; exists ; 1997 ; Mathematical Modelling and Analysis Volume 1997 ; 2 ; 1997 ; https://journals.vilniustech.lt/ ; >
       au < ready ; exists ; 1998 ; Mathematical Modelling and Analysis Volume 1998 ; 3 ; 1998 ; https://journals.vilniustech.lt/ ; >
       au < ready ; exists ; 1999 ; Mathematical Modelling and Analysis Volume 1999 ; 4 ; 1999 ; https://journals.vilniustech.lt/ ; >
       au < finished ; frozen ; 2000 ; Mathematical Modelling and Analysis Volume 2000 ; 5 ; 2000 ; https://journals.vilniustech.lt/ ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2001 ; Mathematical Modelling and Analysis Volume 2001 ; 6 ; 2001 ; https://journals.vilniustech.lt/ ; >
       au < ready ; exists ; 2002 ; Mathematical Modelling and Analysis Volume 2002 ; 7 ; 2002 ; https://journals.vilniustech.lt/ ; >
-      au < crawling ; exists ; 2003 ; Mathematical Modelling and Analysis Volume 2003 ; 8 ; 2003 ; https://journals.vilniustech.lt/ ; >
+      au < frozen ; exists ; 2003 ; Mathematical Modelling and Analysis Volume 2003 ; 8 ; 2003 ; https://journals.vilniustech.lt/ ; >
       au < finished ; finished ; 2004 ; Mathematical Modelling and Analysis Volume 2004 ; 9 ; 2004 ; https://journals.vilniustech.lt/ ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2005 ; Mathematical Modelling and Analysis Volume 2005 ; 10 ; 2005 ; https://journals.vilniustech.lt/ ; >
 
@@ -531,7 +531,7 @@
 
       param[journal_id] = TEDE
 
-      au < crawling ; exists ; 2004 ; Technological and Economic Development of Economy Volume 2004 ; 1 ; 2004 ; https://journals.vilniustech.lt/ ; >
+      au < frozen ; exists ; 2004 ; Technological and Economic Development of Economy Volume 2004 ; 1 ; 2004 ; https://journals.vilniustech.lt/ ; >
       au < ready ; exists ; 2005 ; Technological and Economic Development of Economy Volume 2005 ; 2 ; 2005 ; https://journals.vilniustech.lt/ ; >
 
       au < finished ; frozen ; 2006 ; Technological and Economic Development of Economy Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ ; reingest4.clockss.org:8082 >

@@ -31,7 +31,7 @@
       au < frozen ; exists ; 1983 ; Revista Colombiana de Ciencias Pecuarias Volume 1983 ; 1983 ; 6 ; >
       au < doesNotExist ; doesNotExist ; 1984 ; Revista Colombiana de Ciencias Pecuarias Volume 1984 ; 1984 ; 7 ; >
       au < ready ; exists ; 1985 ; Revista Colombiana de Ciencias Pecuarias Volume 1985 ; 1985 ; 8 ; >
-      au < crawling ; exists ; 1986 ; Revista Colombiana de Ciencias Pecuarias Volume 1986 ; 1986 ; 9 ; >
+      au < frozen ; exists ; 1986 ; Revista Colombiana de Ciencias Pecuarias Volume 1986 ; 1986 ; 9 ; >
       au < doesNotExist ; doesNotExist ; 1987 ; Revista Colombiana de Ciencias Pecuarias Volume 1987 ; 1987 ; 10 ; >
       au < doesNotExist ; doesNotExist ; 1988 ; Revista Colombiana de Ciencias Pecuarias Volume 1988 ; 1988 ; 11 ; >
       au < frozen ; exists ; 1989 ; Revista Colombiana de Ciencias Pecuarias Volume 1989 ; 1989 ; 12 ; >
@@ -147,11 +147,11 @@
       param[base_url] = https://revistas.udea.edu.co/
       param[journal_id] = cont
 
-      au < crawling ; exists ; 1982 ; Contaduría Universidad de Antioquia Volume 1982 ; 1982 ; 1 ; >
+      au < frozen ; exists ; 1982 ; Contaduría Universidad de Antioquia Volume 1982 ; 1982 ; 1 ; >
       au < frozen ; exists ; 1983 ; Contaduría Universidad de Antioquia Volume 1983 ; 1983 ; 2 ; >
       au < frozen ; exists ; 1984 ; Contaduría Universidad de Antioquia Volume 1984 ; 1984 ; 3 ; >
       au < frozen ; exists ; 1985 ; Contaduría Universidad de Antioquia Volume 1985 ; 1985 ; 4 ; >
-      au < crawling ; exists ; 1986 ; Contaduría Universidad de Antioquia Volume 1986 ; 1986 ; 5 ; >
+      au < frozen ; exists ; 1986 ; Contaduría Universidad de Antioquia Volume 1986 ; 1986 ; 5 ; >
       au < frozen ; exists ; 1987 ; Contaduría Universidad de Antioquia Volume 1987 ; 1987 ; 6 ; >
       au < frozen ; exists ; 1988 ; Contaduría Universidad de Antioquia Volume 1988 ; 1988 ; 7 ; >
       au < ready ; exists ; 1989 ; Contaduría Universidad de Antioquia Volume 1989 ; 1989 ; 8 ; >
@@ -209,7 +209,7 @@
       au < ready ; exists ; 1984 ; Investigación y Educación En Enfermería Volume 1984 ; 1984 ; 2 ; >
       au < ready ; exists ; 1985 ; Investigación y Educación En Enfermería Volume 1985 ; 1985 ; 3 ; >
       au < ready ; exists ; 1986 ; Investigación y Educación En Enfermería Volume 1986 ; 1986 ; 4 ; >
-      au < crawling ; exists ; 1987 ; Investigación y Educación En Enfermería Volume 1987 ; 1987 ; 5 ; >
+      au < frozen ; exists ; 1987 ; Investigación y Educación En Enfermería Volume 1987 ; 1987 ; 5 ; >
       au < frozen ; exists ; 1988 ; Investigación y Educación En Enfermería Volume 1988 ; 1988 ; 6 ; >
       au < frozen ; exists ; 1989 ; Investigación y Educación En Enfermería Volume 1989 ; 1989 ; 7 ; >
       au < finished ; manifest ; 1990 ; Investigación y Educación En Enfermería Volume 1990 ; 1990 ; 8 ; reingest1.clockss.org:8082 >
@@ -300,7 +300,7 @@
       au < frozen ; exists ; 1985 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1985 ; 1985 ; 2 ; >
       au < frozen ; exists ; 1986 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1986 ; 1986 ; 3 ; >
       au < frozen ; exists ; 1987 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1987 ; 1987 ; 4 ; >
-      au < crawling ; exists ; 1988 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1988 ; 1988 ; 5 ; >
+      au < frozen ; exists ; 1988 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1988 ; 1988 ; 5 ; >
       au < doesNotExist ; doesNotExist ; 1989 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1989 ; 1989 ; 6 ; >
       au < doesNotExist ; doesNotExist ; 1990 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1990 ; 1990 ; 7 ; >
       au < doesNotExist ; doesNotExist ; 1991 ; Revista Facultad de Ingeniería Universidad de Antioquia Volume 1991 ; 1991 ; 8 ; >

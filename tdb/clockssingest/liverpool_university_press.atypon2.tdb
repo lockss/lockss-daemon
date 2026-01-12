@@ -426,15 +426,15 @@
     #Move from Cambridge University Press (2026)
 
    au < ready ; exists ; 1986 ; Continuity and Change Volume 1 ; 1 ; >
-   au < crawling ; exists ; 1987 ; Continuity and Change Volume 2 ; 2 ; >
-   au < crawling ; exists ; 1988 ; Continuity and Change Volume 3 ; 3 ; >
-   au < crawling ; exists ; 1989 ; Continuity and Change Volume 4 ; 4 ; >
-   au < crawling ; exists ; 1990 ; Continuity and Change Volume 5 ; 5 ; >
+   au < frozen ; exists ; 1987 ; Continuity and Change Volume 2 ; 2 ; >
+   au < frozen ; exists ; 1988 ; Continuity and Change Volume 3 ; 3 ; >
+   au < frozen ; exists ; 1989 ; Continuity and Change Volume 4 ; 4 ; >
+   au < frozen ; exists ; 1990 ; Continuity and Change Volume 5 ; 5 ; >
    au < ready ; exists ; 1991 ; Continuity and Change Volume 6 ; 6 ; >
    au < ready ; exists ; 1992 ; Continuity and Change Volume 7 ; 7 ; >
-   au < crawling ; exists ; 1993 ; Continuity and Change Volume 8 ; 8 ; >
-   au < crawling ; exists ; 1994 ; Continuity and Change Volume 9 ; 9 ; >
-   au < crawling ; exists ; 1995 ; Continuity and Change Volume 10 ; 10 ; >
+   au < frozen ; exists ; 1993 ; Continuity and Change Volume 8 ; 8 ; >
+   au < frozen ; exists ; 1994 ; Continuity and Change Volume 9 ; 9 ; >
+   au < frozen ; exists ; 1995 ; Continuity and Change Volume 10 ; 10 ; >
    au < frozen ; exists ; 1996 ; Continuity and Change Volume 11 ; 11 ; >
    au < ready ; exists ; 1997 ; Continuity and Change Volume 12 ; 12 ; >
    au < frozen ; exists ; 1998 ; Continuity and Change Volume 13 ; 13 ; >
@@ -956,19 +956,19 @@
     au < manifest ; exists ; 1978 ; Journal of Jewish Studies Volume 29 ; 29 ; >
     au < manifest ; exists ; 1979 ; Journal of Jewish Studies Volume 30 ; 30 ; >
     au < ready ; exists ; 1980 ; Journal of Jewish Studies Volume 31 ; 31 ; >
-    au < crawling ; exists ; 1981 ; Journal of Jewish Studies Volume 32 ; 32 ; >
+    au < frozen ; exists ; 1981 ; Journal of Jewish Studies Volume 32 ; 32 ; >
     au < ready ; exists ; 1982 ; Journal of Jewish Studies Volume 33 ; 33 ; >
     au < crawling ; exists ; 1983 ; Journal of Jewish Studies Volume 34 ; 34 ; >
     au < ready ; exists ; 1984 ; Journal of Jewish Studies Volume 35 ; 35 ; >
-    au < crawling ; exists ; 1985 ; Journal of Jewish Studies Volume 36 ; 36 ; >
-    au < crawling ; exists ; 1986 ; Journal of Jewish Studies Volume 37 ; 37 ; >
-    au < crawling ; exists ; 1987 ; Journal of Jewish Studies Volume 38 ; 38 ; >
+    au < frozen ; exists ; 1985 ; Journal of Jewish Studies Volume 36 ; 36 ; >
+    au < frozen ; exists ; 1986 ; Journal of Jewish Studies Volume 37 ; 37 ; >
+    au < frozen ; exists ; 1987 ; Journal of Jewish Studies Volume 38 ; 38 ; >
     au < ready ; exists ; 1988 ; Journal of Jewish Studies Volume 39 ; 39 ; >
-    au < crawling ; exists ; 1989 ; Journal of Jewish Studies Volume 40 ; 40 ; >
-    au < crawling ; exists ; 1990 ; Journal of Jewish Studies Volume 41 ; 41 ; >
+    au < frozen ; exists ; 1989 ; Journal of Jewish Studies Volume 40 ; 40 ; >
+    au < frozen ; exists ; 1990 ; Journal of Jewish Studies Volume 41 ; 41 ; >
     au < crawling ; exists ; 1991 ; Journal of Jewish Studies Volume 42 ; 42 ; >
-    au < crawling ; exists ; 1992 ; Journal of Jewish Studies Volume 43 ; 43 ; >
-    au < crawling ; exists ; 1993 ; Journal of Jewish Studies Volume 44 ; 44 ; >
+    au < frozen ; exists ; 1992 ; Journal of Jewish Studies Volume 43 ; 43 ; >
+    au < frozen ; exists ; 1993 ; Journal of Jewish Studies Volume 44 ; 44 ; >
     au < ready ; exists ; 1994 ; Journal of Jewish Studies Volume 45 ; 45 ; >
     au < ready ; exists ; 1995 ; Journal of Jewish Studies Volume 46 ; 46 ; >
     au < frozen ; exists ; 1996 ; Journal of Jewish Studies Volume 47 ; 47 ; >
@@ -1890,7 +1890,7 @@
     #journal_num = 62
 
     au < ready ; exists ; 1990 ; Studia Hibernica Volume 25 ; 25 ; >
-    au < crawling ; exists ; 1992 ; Studia Hibernica Volume 26 ; 26 ; >
+    au < frozen ; exists ; 1992 ; Studia Hibernica Volume 26 ; 26 ; >
     au < ready ; exists ; 1993 ; Studia Hibernica Volume 27 ; 27 ; >
     au < ready ; exists ; 1994 ; Studia Hibernica Volume 28 ; 28 ; >
     au < frozen ; exists ; 1997 ; Studia Hibernica Volume 29 ; 29 ; >
@@ -2285,23 +2285,23 @@
     au < manifest ; exists ; 1977 ; Revista Iberoamericana Volume 43 ; 43 ; >
     au < manifest ; exists ; 1978 ; Revista Iberoamericana Volume 44 ; 44 ; >
     au < manifest ; exists ; 1979 ; Revista Iberoamericana Volume 45 ; 45 ; >
-    au < crawling ; exists ; 1980 ; Revista Iberoamericana Volume 46 ; 46 ; >
+    au < frozen ; exists ; 1980 ; Revista Iberoamericana Volume 46 ; 46 ; >
     au < ready ; exists ; 1981 ; Revista Iberoamericana Volume 47 ; 47 ; >
-    au < crawling ; exists ; 1982 ; Revista Iberoamericana Volume 48 ; 48 ; >
-    au < crawling ; exists ; 1983 ; Revista Iberoamericana Volume 49 ; 49 ; >
+    au < frozen ; exists ; 1982 ; Revista Iberoamericana Volume 48 ; 48 ; >
+    au < frozen ; exists ; 1983 ; Revista Iberoamericana Volume 49 ; 49 ; >
     au < ready ; exists ; 1984 ; Revista Iberoamericana Volume 50 ; 50 ; >
     au < crawling ; exists ; 1985 ; Revista Iberoamericana Volume 51 ; 51 ; >
-    au < crawling ; exists ; 1986 ; Revista Iberoamericana Volume 52 ; 52 ; >
-    au < crawling ; exists ; 1987 ; Revista Iberoamericana Volume 53 ; 53 ; >
-    au < crawling ; exists ; 1988 ; Revista Iberoamericana Volume 54 ; 54 ; >
-    au < crawling ; exists ; 1989 ; Revista Iberoamericana Volume 55 ; 55 ; >
+    au < frozen ; exists ; 1986 ; Revista Iberoamericana Volume 52 ; 52 ; >
+    au < frozen ; exists ; 1987 ; Revista Iberoamericana Volume 53 ; 53 ; >
+    au < frozen ; exists ; 1988 ; Revista Iberoamericana Volume 54 ; 54 ; >
+    au < frozen ; exists ; 1989 ; Revista Iberoamericana Volume 55 ; 55 ; >
     au < ready ; exists ; 1990 ; Revista Iberoamericana Volume 56 ; 56 ; >
     au < ready ; exists ; 1991 ; Revista Iberoamericana Volume 57 ; 57 ; >
-    au < crawling ; exists ; 1992 ; Revista Iberoamericana Volume 58 ; 58 ; >
+    au < frozen ; exists ; 1992 ; Revista Iberoamericana Volume 58 ; 58 ; >
     au < crawling ; exists ; 1993 ; Revista Iberoamericana Volume 59 ; 59 ; >
-    au < crawling ; exists ; 1994 ; Revista Iberoamericana Volume 60 ; 60 ; >
-    au < crawling ; exists ; 1995 ; Revista Iberoamericana Volume 61 ; 61 ; >
-    au < crawling ; exists ; 1996 ; Revista Iberoamericana Volume 62 ; 62 ; >
+    au < frozen ; exists ; 1994 ; Revista Iberoamericana Volume 60 ; 60 ; >
+    au < frozen ; exists ; 1995 ; Revista Iberoamericana Volume 61 ; 61 ; >
+    au < frozen ; exists ; 1996 ; Revista Iberoamericana Volume 62 ; 62 ; >
     au < frozen ; exists ; 1997 ; Revista Iberoamericana Volume 63 ; 63 ; >
     au < frozen ; exists ; 1998 ; Revista Iberoamericana Volume 64 ; 64 ; >
     au < frozen ; exists ; 1999 ; Revista Iberoamericana Volume 65 ; 65 ; >
@@ -2367,7 +2367,7 @@
     au < frozen ; exists ; 1988-1991 ; The Bodleian Library Record Volume 13 ; 13 ; >
     au < frozen ; exists ; 1991-1994 ; The Bodleian Library Record Volume 14 ; 14 ; >
     au < frozen ; exists ; 1994-1996 ; The Bodleian Library Record Volume 15 ; 15 ; >
-    au < crawling ; exists ; 1997-1999 ; The Bodleian Library Record Volume 16 ; 16 ; >
+    au < frozen ; exists ; 1997-1999 ; The Bodleian Library Record Volume 16 ; 16 ; >
     au < finished ; manifest ; 2000-2002 ; The Bodleian Library Record Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2003-2005 ; The Bodleian Library Record Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2006 ; The Bodleian Library Record Volume 19 ; 19 ; reingest5.clockss.org:8082 >
@@ -2460,21 +2460,21 @@
     au < manifest ; exists ; 1978 ; French Studies Volume 32 ; 32 ; >
     au < manifest ; exists ; 1979 ; French Studies Volume 33 ; 33 ; >
     au < crawling ; exists ; 1980 ; French Studies Volume 34 ; 34 ; >
-    au < crawling ; exists ; 1981 ; French Studies Volume 35 ; 35 ; >
+    au < frozen ; exists ; 1981 ; French Studies Volume 35 ; 35 ; >
     au < ready ; exists ; 1982 ; French Studies Volume 36 ; 36 ; >
     au < ready ; exists ; 1983 ; French Studies Volume 37 ; 37 ; >
-    au < crawling ; exists ; 1984 ; French Studies Volume 38 ; 38 ; >
+    au < frozen ; exists ; 1984 ; French Studies Volume 38 ; 38 ; >
     au < ready ; exists ; 1985 ; French Studies Volume 39 ; 39 ; >
     au < ready ; exists ; 1986 ; French Studies Volume 40 ; 40 ; >
-    au < crawling ; exists ; 1987 ; French Studies Volume 41 ; 41 ; >
+    au < frozen ; exists ; 1987 ; French Studies Volume 41 ; 41 ; >
     au < ready ; exists ; 1988 ; French Studies Volume 42 ; 42 ; >
     au < ready ; exists ; 1989 ; French Studies Volume 43 ; 43 ; >
     au < ready ; exists ; 1990 ; French Studies Volume 44 ; 44 ; >
-    au < crawling ; exists ; 1991 ; French Studies Volume 45 ; 45 ; >
-    au < crawling ; exists ; 1992 ; French Studies Volume 46 ; 46 ; >
+    au < frozen ; exists ; 1991 ; French Studies Volume 45 ; 45 ; >
+    au < frozen ; exists ; 1992 ; French Studies Volume 46 ; 46 ; >
     au < ready ; exists ; 1993 ; French Studies Volume 47 ; 47 ; >
-    au < crawling ; exists ; 1994 ; French Studies Volume 48 ; 48 ; >
-    au < crawling ; exists ; 1995 ; French Studies Volume 49 ; 49 ; >
+    au < frozen ; exists ; 1994 ; French Studies Volume 48 ; 48 ; >
+    au < frozen ; exists ; 1995 ; French Studies Volume 49 ; 49 ; >
     au < frozen ; exists ; 1996 ; French Studies Volume 50 ; 50 ; >
     au < frozen ; exists ; 1997 ; French Studies Volume 51 ; 51 ; >
     au < frozen ; exists ; 1998 ; French Studies Volume 52 ; 52 ; >
@@ -2518,21 +2518,21 @@
 
     param[journal_id] = fsb
 
-    au < crawling ; exists ; 1981 ; French Studies Bulletin Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1981 ; French Studies Bulletin Volume 1 ; 1 ; >
     au < ready ; exists ; 1982 ; French Studies Bulletin Volume 2 ; 2 ; >
     au < ready ; exists ; 1983 ; French Studies Bulletin Volume 3 ; 3 ; >
     au < crawling ; exists ; 1984 ; French Studies Bulletin Volume 4 ; 4 ; >
-    au < crawling ; exists ; 1985 ; French Studies Bulletin Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1985 ; French Studies Bulletin Volume 5 ; 5 ; >
     au < ready ; exists ; 1986 ; French Studies Bulletin Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1987 ; French Studies Bulletin Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1987 ; French Studies Bulletin Volume 7 ; 7 ; >
     au < ready ; exists ; 1988 ; French Studies Bulletin Volume 8 ; 8 ; >
     au < crawling ; exists ; 1989 ; French Studies Bulletin Volume 9 ; 9 ; >
     au < ready ; exists ; 1990 ; French Studies Bulletin Volume 10 ; 10 ; >
     au < ready ; exists ; 1991 ; French Studies Bulletin Volume 11 ; 11 ; >
-    au < crawling ; exists ; 1992 ; French Studies Bulletin Volume 12 ; 12 ; >
+    au < frozen ; exists ; 1992 ; French Studies Bulletin Volume 12 ; 12 ; >
     au < ready ; exists ; 1993 ; French Studies Bulletin Volume 13 ; 13 ; >
     au < ready ; exists ; 1994 ; French Studies Bulletin Volume 15 ; 15 ; >
-    au < crawling ; exists ; 1995 ; French Studies Bulletin Volume 16 ; 16 ; >
+    au < frozen ; exists ; 1995 ; French Studies Bulletin Volume 16 ; 16 ; >
     au < frozen ; exists ; 1996 ; French Studies Bulletin Volume 17 ; 17 ; >
     au < frozen ; exists ; 1997 ; French Studies Bulletin Volume 18 ; 18 ; >
     au < frozen ; exists ; 1998 ; French Studies Bulletin Volume 19 ; 19 ; >
@@ -2633,7 +2633,7 @@
     au < crawling ; exists ; 1989 ; Polin: Studies in Polish Jewry Volume 4 ; 4 ; >
     au < ready ; exists ; 1990 ; Polin: Studies in Polish Jewry Volume 5 ; 5 ; >
     au < ready ; exists ; 1991 ; Polin: Studies in Polish Jewry Volume 6 ; 6 ; >
-    au < crawling ; exists ; 1992 ; Polin: Studies in Polish Jewry Volume 7 ; 7 ; >
+    au < frozen ; exists ; 1992 ; Polin: Studies in Polish Jewry Volume 7 ; 7 ; >
     au < ready ; exists ; 1994 ; Polin: Studies in Polish Jewry Volume 8 ; 8 ; >
     au < frozen ; exists ; 1996 ; Polin: Studies in Polish Jewry Volume 9 ; 9 ; >
     au < frozen ; exists ; 1997 ; Polin: Studies in Polish Jewry Volume 10 ; 10 ; >
@@ -2697,11 +2697,11 @@
     param[journal_id] = asp
     #move from Cambridge University Press in 2026, Volume 36
 
-    au < crawling ; exists ; 1991 ; Arabic Sciences & Philosophy Volume 1 ; 1 ; >
-    au < crawling ; exists ; 1992 ; Arabic Sciences & Philosophy Volume 2 ; 2 ; >
+    au < frozen ; exists ; 1991 ; Arabic Sciences & Philosophy Volume 1 ; 1 ; >
+    au < frozen ; exists ; 1992 ; Arabic Sciences & Philosophy Volume 2 ; 2 ; >
     au < ready ; exists ; 1993 ; Arabic Sciences & Philosophy Volume 3 ; 3 ; >
     au < ready ; exists ; 1994 ; Arabic Sciences & Philosophy Volume 4 ; 4 ; >
-    au < crawling ; exists ; 1995 ; Arabic Sciences & Philosophy Volume 5 ; 5 ; >
+    au < frozen ; exists ; 1995 ; Arabic Sciences & Philosophy Volume 5 ; 5 ; >
     au < frozen ; exists ; 1996 ; Arabic Sciences & Philosophy Volume 6 ; 6 ; >
     au < crawling ; exists ; 1997 ; Arabic Sciences & Philosophy Volume 7 ; 7 ; >
     au < frozen ; exists ; 1998 ; Arabic Sciences & Philosophy Volume 8 ; 8 ; >
