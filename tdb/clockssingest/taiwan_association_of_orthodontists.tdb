@@ -24,7 +24,7 @@
     param[journal_abbr] = tjo
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < ready ; exists ; 2009 ; Taiwanese Journal of Orthodontic Volume 21 ; 21 ; >
+    au < crawling ; exists ; 2009 ; Taiwanese Journal of Orthodontic Volume 21 ; 21 ; >
     au < frozen ; exists ; 2010 ; Taiwanese Journal of Orthodontic Volume 22 ; 22 ; >
     au < ready ; exists ; 2011 ; Taiwanese Journal of Orthodontic Volume 23 ; 23 ; >
     au < ready ; exists ; 2012 ; Taiwanese Journal of Orthodontic Volume 24 ; 24 ; >

@@ -29,7 +29,7 @@
 
       au < ready ; exists ; 2005 ; The Chaucer Review Volume 40 ; 40 ; 2005 ; >
       au < ready ; exists ; 2006 ; The Chaucer Review Volume 41 ; 41 ; 2006 ; >
-      au < ready ; exists ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 ; >
+      au < crawling ; exists ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 ; >
       au < finished ; manifest ; 2008 ; The Chaucer Review Volume 43 ; 43 ; 2008 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2009 ; The Chaucer Review Volume 44 ; 44 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; The Chaucer Review Volume 45 ; 45 ; 2010 ; >
@@ -1627,7 +1627,7 @@
       au < ready ; exists ; 2001 ; Resources for American Literary Study Volume 27 ; 27 ; 2001 ; >
       au < frozen ; exists ; 2002 ; Resources for American Literary Study Volume 28 ; 28 ; 2002 ; >
       au < ready ; exists ; 2004 ; Resources for American Literary Study Volume 29 ; 29 ; 2004 ; >
-      au < ready ; exists ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 ; >
+      au < crawling ; exists ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 ; >
       au < ready ; exists ; 2006 ; Resources for American Literary Study Volume 31 ; 31 ; 2006 ; >
       au < frozen ; exists ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Resources for American Literary Study Volume 33 ; 33 ; 2008 ; reingest3.clockss.org:8083 >
@@ -2102,7 +2102,7 @@
       au < ready ; exists ; 2001 ; Milton Studies Volume 40 ; 40 ; 2001 ; >
       au < ready ; exists ; 2002 ; Milton Studies Volume 41 ; 41 ; 2002 ; >
       au < ready ; exists ; 2002 ; Milton Studies Volume 42 ; 42 ; 2002 ; >
-      au < ready ; exists ; 2004 ; Milton Studies Volume 43 ; 43 ; 2004 ; >
+      au < crawling ; exists ; 2004 ; Milton Studies Volume 43 ; 43 ; 2004 ; >
       au < ready ; exists ; 2005 ; Milton Studies Volume 44 ; 44 ; 2005 ; >
       au < crawling ; exists ; 2006 ; Milton Studies Volume 45 ; 45 ; 2006 ; >
       au < ready ; exists ; 2007 ; Milton Studies Volume 46 ; 46 ; 2007 ; >
@@ -2456,7 +2456,7 @@
       au < ready ; exists ; 1999 ; Victorians Institute Journal Volume 27 ; 27 ; 1999 ; >
       au < ready ; exists ; 2000 ; Victorians Institute Journal Volume 28 ; 28 ; 2000 ; >
       au < crawling ; exists ; 2001 ; Victorians Institute Journal Volume 29 ; 29 ; 2001 ; >
-      au < ready ; exists ; 2002 ; Victorians Institute Journal Volume 30 ; 30 ; 2002 ; >
+      au < crawling ; exists ; 2002 ; Victorians Institute Journal Volume 30 ; 30 ; 2002 ; >
       au < frozen ; exists ; 2003 ; Victorians Institute Journal Volume 31 ; 31 ; 2003 ; >
       au < ready ; exists ; 2004 ; Victorians Institute Journal Volume 32 ; 32 ; 2004 ; >
       au < ready ; exists ; 2005 ; Victorians Institute Journal Volume 33 ; 33 ; 2005 ; >

@@ -919,7 +919,7 @@
     au < manifest ; exists ; 1982 ; 1982 ; Assembly Automation Volume 2 ; 2 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Assembly Automation Volume 3 ; 3 ; >
     au < ready ; exists ; 1984 ; 1984 ; Assembly Automation Volume 4 ; 4 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Assembly Automation Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Assembly Automation Volume 5 ; 5 ; >
     au < ready ; exists ; 1986 ; 1986 ; Assembly Automation Volume 6 ; 6 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Assembly Automation Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Assembly Automation Volume 8 ; 8 ; >
@@ -2602,7 +2602,7 @@
     comment[journal_issn] = 0264-4401
     param[journal_id] = ec
 
-    au < ready ; exists ; 1984 ; 1984 ; Engineering Computations Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Engineering Computations Volume 1 ; 1 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Engineering Computations Volume 2 ; 2 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Engineering Computations Volume 3 ; 3 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Engineering Computations Volume 4 ; 4 ; >
@@ -3796,7 +3796,7 @@
     au < frozen ; exists ; 1981 ; 1981 ; Industrial Robot: The international journal of industrial and service robotics Volume 8 ; 8 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Industrial Robot: The international journal of industrial and service robotics Volume 9 ; 9 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Industrial Robot: The international journal of industrial and service robotics Volume 10 ; 10 ; >
-    au < ready ; exists ; 1984 ; 1984 ; Industrial Robot: The international journal of industrial and service robotics Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Industrial Robot: The international journal of industrial and service robotics Volume 11 ; 11 ; >
     au < ready ; exists ; 1985 ; 1985 ; Industrial Robot: The international journal of industrial and service robotics Volume 12 ; 12 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Industrial Robot: The international journal of industrial and service robotics Volume 13 ; 13 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Industrial Robot: The international journal of industrial and service robotics Volume 14 ; 14 ; >
@@ -5790,7 +5790,7 @@
     au < manifest ; exists ; 1982 ; 1982 ; International Journal of Physical Distribution & Materials Management Volume 12 ; 12 ; >
     au < manifest ; exists ; 1983 ; 1983 ; International Journal of Physical Distribution & Materials Management Volume 13 ; 13 ; >
     au < crawling ; exists ; 1984 ; 1984 ; International Journal of Physical Distribution & Materials Management Volume 14 ; 14 ; >
-    au < ready ; exists ; 1985 ; 1985 ; International Journal of Physical Distribution & Materials Management Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; International Journal of Physical Distribution & Materials Management Volume 15 ; 15 ; >
     au < frozen ; exists ; 1986 ; 1986 ; International Journal of Physical Distribution & Materials Management Volume 16 ; 16 ; >
     au < frozen ; exists ; 1987 ; 1987 ; International Journal of Physical Distribution & Materials Management Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; International Journal of Physical Distribution & Materials Management Volume 18 ; 18 ; >
@@ -6003,7 +6003,7 @@
     param[journal_id] = ijqrm
 
     au < ready ; exists ; 1984 ; 1984 ; International Journal of Quality & Reliability Management Volume 1 ; 1 ; >
-    au < ready ; exists ; 1985 ; 1985 ; International Journal of Quality & Reliability Management Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; International Journal of Quality & Reliability Management Volume 2 ; 2 ; >
     au < frozen ; exists ; 1986 ; 1986 ; International Journal of Quality & Reliability Management Volume 3 ; 3 ; >
     au < frozen ; exists ; 1987 ; 1987 ; International Journal of Quality & Reliability Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1988 ; 1988 ; International Journal of Quality & Reliability Management Volume 5 ; 5 ; >
@@ -7082,7 +7082,7 @@
     au < manifest ; exists ; 1982 ; 1982 ; Journal of Business Strategy Volume 2 ; 2 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Journal of Business Strategy Volume 3 ; 3 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Journal of Business Strategy Volume 4 ; 4 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Journal of Business Strategy Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Journal of Business Strategy Volume 5 ; 5 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Journal of Business Strategy Volume 6 ; 6 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Journal of Business Strategy Volume 7 ; 7 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Journal of Business Strategy Volume 8 ; 8 ; >
@@ -7586,7 +7586,7 @@
     au < manifest ; exists ; 1982 ; 1982 ; Journal of Economic Studies Volume 9 ; 9 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Journal of Economic Studies Volume 10 ; 10 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Journal of Economic Studies Volume 11 ; 11 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Journal of Economic Studies Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Journal of Economic Studies Volume 12 ; 12 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Journal of Economic Studies Volume 13 ; 13 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Journal of Economic Studies Volume 14 ; 14 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Journal of Economic Studies Volume 15 ; 15 ; >
@@ -9016,7 +9016,7 @@
     comment[journal_issn] = 0268-3946
     param[journal_id] = jmp
 
-    au < ready ; exists ; 1986 ; 1986 ; Journal of Managerial Psychology Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Journal of Managerial Psychology Volume 1 ; 1 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Journal of Managerial Psychology Volume 2 ; 2 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Journal of Managerial Psychology Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Journal of Managerial Psychology Volume 4 ; 4 ; >
@@ -9463,7 +9463,7 @@
     comment[continued_by] = 0960-2712
 
     au < manifest ; exists ; 1983 ; 1983 ; Journal of Valuation Volume 1 ; 1 ; >
-    au < ready ; exists ; 1984 ; 1984 ; Journal of Valuation Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Journal of Valuation Volume 2 ; 2 ; >
     au < ready ; exists ; 1985 ; 1985 ; Journal of Valuation Volume 3 ; 3 ; >
     au < ready ; exists ; 1986 ; 1986 ; Journal of Valuation Volume 4 ; 4 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Journal of Valuation Volume 5 ; 5 ; >
@@ -10354,8 +10354,8 @@
     comment[journal_issn] = 0737-8831
     param[journal_id] = lht
 
-    au < ready ; exists ; 1984 ; 1984 ; Library Hi Tech Volume 1 ; 1 ; >
-    au < ready ; exists ; 1984 ; 1984 ; Library Hi Tech Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Library Hi Tech Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Library Hi Tech Volume 2 ; 2 ; >
     au < ready ; exists ; 1985 ; 1985 ; Library Hi Tech Volume 3 ; 3 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Library Hi Tech Volume 4 ; 4 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Library Hi Tech Volume 5 ; 5 ; >
@@ -10977,7 +10977,7 @@
     au < manifest ; exists ; 1982 ; 1982 ; Managerial Finance Volume 8 ; 8 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Managerial Finance Volume 9 ; 9 ; >
     au < ready ; exists ; 1984 ; 1984 ; Managerial Finance Volume 10 ; 10 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Managerial Finance Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Managerial Finance Volume 11 ; 11 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Managerial Finance Volume 12 ; 12 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Managerial Finance Volume 13 ; 13 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Managerial Finance Volume 14 ; 14 ; >
@@ -11398,7 +11398,7 @@
     comment[journal_issn] = 1356-5362
     param[journal_id] = mi
 
-    au < ready ; exists ; 1984 ; 1984 ; Microelectronics International Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Microelectronics International Volume 1 ; 1 ; >
     au < ready ; exists ; 1985 ; 1985 ; Microelectronics International Volume 2 ; 2 ; >
     au < crawling ; exists ; 1986 ; 1986 ; Microelectronics International Volume 3 ; 3 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Microelectronics International Volume 4 ; 4 ; >
@@ -11666,8 +11666,8 @@
     au < frozen ; exists ; 1981 ; 1981 ; New Library World Volume 82 ; 82 ; >
     au < manifest ; exists ; 1982 ; 1982 ; New Library World Volume 83 ; 83 ; >
     au < manifest ; exists ; 1983 ; 1983 ; New Library World Volume 84 ; 84 ; >
-    au < ready ; exists ; 1984 ; 1984 ; New Library World Volume 85 ; 85 ; >
-    au < ready ; exists ; 1985 ; 1985 ; New Library World Volume 86 ; 86 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; New Library World Volume 85 ; 85 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; New Library World Volume 86 ; 86 ; >
     au < frozen ; exists ; 1986 ; 1986 ; New Library World Volume 87 ; 87 ; >
     au < frozen ; exists ; 1987 ; 1987 ; New Library World Volume 88 ; 88 ; >
     au < frozen ; exists ; 1988 ; 1988 ; New Library World Volume 89 ; 89 ; >
@@ -11754,7 +11754,7 @@
     au < manifest ; exists ; 1983 ; 1983 ; Nutrition & Food Science Volume 83 ; 83 ; >
     au < ready ; exists ; 1984 ; 1984 ; Nutrition & Food Science Volume 84 ; 84 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Nutrition & Food Science Volume 85 ; 85 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Nutrition & Food Science Volume 86 ; 86 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Nutrition & Food Science Volume 86 ; 86 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Nutrition & Food Science Volume 87 ; 87 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Nutrition & Food Science Volume 88 ; 88 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Nutrition & Food Science Volume 89 ; 89 ; >
@@ -12451,7 +12451,7 @@
     param[journal_id] = pm
 
     au < manifest ; exists ; 1983 ; 1983 ; Property Management Volume 1 ; 1 ; >
-    au < ready ; exists ; 1984 ; 1984 ; Property Management Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Property Management Volume 2 ; 2 ; >
     au < ready ; exists ; 1985 ; 1985 ; Property Management Volume 3 ; 3 ; >
     au < ready ; exists ; 1986 ; 1986 ; Property Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Property Management Volume 5 ; 5 ; >
@@ -14311,7 +14311,7 @@
     au < frozen ; exists ; 1981 ; 1981 ; Work Study Volume 30 ; 30 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Work Study Volume 31 ; 31 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Work Study Volume 32 ; 32 ; >
-    au < ready ; exists ; 1984 ; 1984 ; Work Study Volume 33 ; 33 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Work Study Volume 33 ; 33 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Work Study Volume 34 ; 34 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Work Study Volume 35 ; 35 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Work Study Volume 36 ; 36 ; >
