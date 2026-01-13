@@ -686,7 +686,6 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 75 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < frozen ; exists ; 2024 ; 76 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
       au < superseded ; exists ; 2025 ; 77 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2025 [superseded] ; 2025 ; 77 ; Stockholm University Press ;  ; https://a.tellusjournals.se/ ; >
-      au < exists ; exists ; 2025 ; 77 ; Tellus A: Dynamic Meteorology and Oceanography Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://tellusjournals.org/ ; >
 
   }
 
@@ -1209,7 +1208,8 @@
       au < finished ; finished ; 2019 ; 17 ; Journal of Conservation and Museum Studies Volume 2019 ; 2019 ; 17 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
+      au < superseded ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 [superseded] ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
+      au < exists ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < manifest ; exists ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
       au < manifest ; exists ; 2025 ; 22 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 22 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
 
@@ -1634,8 +1634,8 @@
       nondefparam[journal_id] = up-j-gh
 
       au < crawling ; down ; 2006 ; 2 ; Global Heart Volume 2 [2006] ; 2006 ; 2 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
-      au < exists ; exists ; 2006 ; 2 ; Global Heart Volume 2 [2007] ; 2007 ; 2 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
-      au < finished ; finished ; 2008 ; 3 ; Global Heart Volume 2008 ; 2008 ; 3 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
+      au < doesNotExist ; doesNotExist ; 2007 ; 2 ; Global Heart Volume 2 [2007] ; 2007 ; 2 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
+      au < finished ; finished ; 2008 ; 3 ; Global Heart Volume 3 [2008] ; 2008 ; 3 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2009 ; 4 ; Global Heart Volume 2009 ; 2009 ; 4 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; 5 ; Global Heart Volume 2010 ; 2010 ; 5 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; 6 ; Global Heart Volume 2011 ; 2011 ; 6 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
@@ -1770,6 +1770,8 @@
       #param[base_url] = https://utrechtjournal.org/
       nondefparam[base_url2] = https://account.utrechtjournal.org/
       nondefparam[journal_id] = up-j-ujiel
+
+      au < doNotProcess ; doNotProcess ; 2015 ; 31 ; Utrecht Journal of International and European Law Volume 2015 [superseded] ; 2015 ; 31 ; Ubiquity Press ;  ; http://utrechtjournal.org/ ; >
 
       au < finished ; finished ; 2010 ; 26 ; Utrecht Journal of International and European Law Volume 2010 ; 2010 ; 26 ; Ubiquity Press ;  ; http://www.utrechtjournal.org/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2011 ; 27 ; Utrecht Journal of International and European Law Volume 2011 ; 2011 ; 27 ; Ubiquity Press ;  ; https://utrechtjournal.org/ ; >
