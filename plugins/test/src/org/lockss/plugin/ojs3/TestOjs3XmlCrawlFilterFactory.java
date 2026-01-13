@@ -246,23 +246,15 @@ public class TestOjs3XmlCrawlFilterFactory extends LockssTestCase {
         inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(badXmlEncodingLater, Constants.DEFAULT_ENCODING),
             Constants.DEFAULT_ENCODING);
         assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(goodXmlEncodingLater, Constants.DEFAULT_ENCODING), inA));
-        //check when there's a multibyte character at 1024, 1023, 1022 bytes  
-        String paddedBadString1024 = padString(1024, badHeaderString) + "\u8000" ;
+        //check when there's a multibyte character at 1021, 1022, 1023, 1024, and 1025 bytes  
         //need additional dummy character in 'good' string to make up for added hyphen in utf-8
-        String paddedGoodString1024 = padString(1024, goodHeaderString) + ".\u8000" ;
-        String paddedBadString1023 = padString(1023, badHeaderString) + "\u8000" ;
-        String paddedGoodString1023 = padString(1023, goodHeaderString) + ".\u8000" ;
-        String paddedBadString1022 = padString(1022, badHeaderString) + "\u8000" ;
-        String paddedGoodString1022 = padString(1022, goodHeaderString) + ".\u8000" ;
-        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(paddedBadString1024, Constants.ENCODING_UTF_8),
+        for(int i = 1021; i < 1026; i++){
+            String paddedBadString = padString(i, badHeaderString) + "\u8000" ;
+            String paddedGoodString = padString(i, goodHeaderString) + ".\u8000" ;
+            inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(paddedBadString, Constants.ENCODING_UTF_8),
             Constants.ENCODING_UTF_8);
-        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(paddedGoodString1024, Constants.ENCODING_UTF_8), inA));
-        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(paddedBadString1023, Constants.ENCODING_UTF_8),
-            Constants.ENCODING_UTF_8);
-        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(paddedGoodString1023, Constants.ENCODING_UTF_8), inA));
-        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(paddedBadString1022, Constants.ENCODING_UTF_8),
-            Constants.ENCODING_UTF_8);
-        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(paddedGoodString1022, Constants.ENCODING_UTF_8), inA));
+            assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(paddedGoodString, Constants.ENCODING_UTF_8), inA));
+        }
     }
 
     public String padString(int targetLength, String input) throws Exception{
