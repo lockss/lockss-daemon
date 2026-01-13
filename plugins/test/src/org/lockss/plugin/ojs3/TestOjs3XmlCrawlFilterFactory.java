@@ -40,6 +40,8 @@ import org.apache.commons.io.IOUtils;
 
 public class TestOjs3XmlCrawlFilterFactory extends LockssTestCase {
 
+    static Logger log = Logger.getLogger(TestOjs3XmlCrawlFilterFactory.class);
+
     private Ojs3XmlCrawlFilterFactory fact;
     private MockArchivalUnit mau;
 
@@ -133,42 +135,6 @@ public class TestOjs3XmlCrawlFilterFactory extends LockssTestCase {
                     "</pub-date>\n"+
                     "<?xml version=\"1.0\" encoding=\"utf8\" standalone=\"yes\"?>\n";
 
-        private static final String goodXmlWithMultiByteCharacter =
-        "<?xml version=\"1.0\" encoding='utf-8' standalone=\"yes\"?>\n" + 
-  		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
-  		"<article dtd-version=\"1.1\" article-type=\"book-review\">\n"+
-            "<front>\n"+
-                "<journal-meta>\n"+
-                    "<journal-id>TMR</journal-id>\n"+
-                        "<journal-title-group>\n"+
-                            "<journal-title>The Medieval Review</journal-title>\n"+
-                        "</journal-title-group>\n"+
-                        "<issn pub-type=\"epub\">1096-746X</issn>\n"+
-                        "<publisher>\n"+
-                            "<publisher-name>Indiana University</publisher-name>\n"+
-                        "</publisher>\n"+
-                "</journal-meta>\n"+
-                "<article-meta>\n"+
-                    "<article-id pub-id-type=\"publisher-id\">22.01.01</article-id>\n"+
-                    "<title-group>\n"+
-                        "<article-title>22.01.01, Pétrarque; Blanc, trans. and ed., Le Chansonnier</article-title>\n"+
-                    "</title-group>\n"+
-                    "<contrib-group>\n"+
-                        "<contrib contrib-type=\"author\">\n"+
-                            "<name>\n"+
-                                "<surname>Florence Bistagne </surname>\n"+
-                                "<given-names/>\n"+
-                            "</name>\n"+
-                            "<aff>Université d'Avignon</aff>\n"+
-                            "<address>\n"+
-                                "<email>florence.bistagne@orange.fr</email>\n"+
-                            "</address>\n"+
-                        "</contrib>\n"+
-                    "</contrib-group>\n"+
-                    "<pub-date publication\u0800-format=\"epub\" date-type=\"pub\" iso-8601-date=\"2022\">\n"+
-                        "<year>2022</year>\n"+
-                    "</pub-date>\n";
-
     private static final String badXml =
   		"<?xml version='1.0' encoding='utf8'?>\n" + 
   		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
@@ -251,40 +217,8 @@ public class TestOjs3XmlCrawlFilterFactory extends LockssTestCase {
                     "</pub-date>\n"+
                     "<?xml version=\"1.0\" encoding=\"utf8\" standalone=\"yes\"?>\n";
 
-    private static final String badXmlWithMultiByteCharacter =
-  		" <!DOCTYPE article PUBLIC \"-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN\" \"https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd\">\n" + 
-  		"<article dtd-version=\"1.1\" article-type=\"book-review\">\n"+
-            "<front>\n"+
-                "<journal-meta>\n"+
-                    "<journal-id>TMR</journal-id>\n"+
-                        "<journal-title-group>\n"+
-                            "<journal-title>The Medieval Review</journal-title>\n"+
-                        "</journal-title-group>\n"+
-                        "<issn pub-type=\"epub\">1096-746X</issn>\n"+
-                        "<publisher>\n"+
-                            "<publisher-name>Indiana University</publisher-name>\n"+
-                        "</publisher>\n"+
-                "</journal-meta>\n"+
-                "<article-meta>\n"+
-                    "<article-id pub-id-type=\"publisher-id\">22.01.01</article-id>\n"+
-                    "<title-group>\n"+
-                        "<article-title>22.01.01, Pétrarque; Blanc, trans. and ed., Le Chansonnier</article-title>\n"+
-                    "</title-group>\n"+
-                    "<contrib-group>\n"+
-                        "<contrib contrib-type=\"author\">\n"+
-                            "<name>\n"+
-                                "<surname>Florence Bistagne </surname>\n"+
-                                "<given-names/>\n"+
-                            "</name>\n"+
-                            "<aff>Université d'Avignon</aff>\n"+
-                            "<address>\n"+
-                                "<email>florence.bistagne@orange.fr</email>\n"+
-                            "</address>\n"+
-                        "</contrib>\n"+
-                    "</contrib-group>\n"+
-                    "<pub-date publication\u0800-format=\"epub\" date-type=\"pub\" iso-8601-date=\"2022\">\n"+
-                        "<year>2022</year>\n"+
-                    "</pub-date>\n";
+    private static String badHeaderString = "<?xml version=\'1.0\' encoding=\'utf8\' standalone=\'yes\'?>";
+    private static String goodHeaderString = "<?xml version=\'1.0\' encoding=\'utf-8\' standalone=\'yes\'?>";
 //use U+0800 which is "\u0800" in java -> 0xE0 0xA0 0x80
     public void testFiltering() throws Exception {
         InputStream inA;
@@ -312,10 +246,36 @@ public class TestOjs3XmlCrawlFilterFactory extends LockssTestCase {
         inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(badXmlEncodingLater, Constants.DEFAULT_ENCODING),
             Constants.DEFAULT_ENCODING);
         assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(goodXmlEncodingLater, Constants.DEFAULT_ENCODING), inA));
-        //check when there's a multibyte character at 1024 bytes
-        //FIX
-        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(badXmlWithMultiByteCharacter, Constants.DEFAULT_ENCODING),
-            Constants.DEFAULT_ENCODING);
-        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(goodXmlWithMultiByteCharacter, Constants.DEFAULT_ENCODING), inA));
+        //check when there's a multibyte character at 1024, 1023, 1022 bytes  
+        String paddedBadString1024 = padString(1024, badHeaderString) + "\u8000" ;
+        //need additional dummy character in 'good' string to make up for added hyphen in utf-8
+        String paddedGoodString1024 = padString(1024, goodHeaderString) + ".\u8000" ;
+        String paddedBadString1023 = padString(1023, badHeaderString) + "\u8000" ;
+        String paddedGoodString1023 = padString(1023, goodHeaderString) + ".\u8000" ;
+        String paddedBadString1022 = padString(1022, badHeaderString) + "\u8000" ;
+        String paddedGoodString1022 = padString(1022, goodHeaderString) + ".\u8000" ;
+        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(paddedBadString1024, Constants.ENCODING_UTF_8),
+            Constants.ENCODING_UTF_8);
+        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(paddedGoodString1024, Constants.ENCODING_UTF_8), inA));
+        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(paddedBadString1023, Constants.ENCODING_UTF_8),
+            Constants.ENCODING_UTF_8);
+        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(paddedGoodString1023, Constants.ENCODING_UTF_8), inA));
+        inA = fact.createFilteredInputStream(mau, IOUtils.toInputStream(paddedBadString1022, Constants.ENCODING_UTF_8),
+            Constants.ENCODING_UTF_8);
+        assertTrue(IOUtils.contentEquals(IOUtils.toInputStream(paddedGoodString1022, Constants.ENCODING_UTF_8), inA));
+    }
+
+    public String padString(int targetLength, String input) throws Exception{
+        int targetBytes = targetLength;
+        byte[] originalBytes = input.getBytes(Constants.ENCODING_UTF_8);
+        int currentBytesLength = originalBytes.length;
+        int bytesNeeded = targetBytes - currentBytesLength;
+        byte[] paddedBytes = new byte[targetBytes];
+        System.arraycopy(originalBytes, 0, paddedBytes, 0, currentBytesLength);
+        byte paddingChar = (byte)'.';
+        java.util.Arrays.fill(paddedBytes,currentBytesLength,targetBytes,paddingChar);
+        String paddedString = new String(paddedBytes, Constants.ENCODING_UTF_8);
+        log.debug3("Padded string length in bytes: " + paddedString.getBytes(Constants.ENCODING_UTF_8).length);
+        return paddedString;
     }
 }
