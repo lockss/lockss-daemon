@@ -572,7 +572,7 @@
     param[journal_id] = fpcs
     #param[journal_issn] = 1537-6370
 
-    au < ready ; exists ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 ; >
     au < ready ; exists ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 ; >
     au < ready ; exists ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 ; >
     au < frozen ; exists ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 ; >

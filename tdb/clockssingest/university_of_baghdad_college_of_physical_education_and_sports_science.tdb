@@ -23,7 +23,7 @@
       param[journal_id] = jcope
       #published 2010-present
 
-      au < ready ; exists ; 2010 ; Journal of Physical Education Volume 2010 ; 22 ; 2010 ; >
+      au < crawling ; exists ; 2010 ; Journal of Physical Education Volume 2010 ; 22 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Journal of Physical Education Volume 2011 ; 23 ; 2011 ; >
       au < finished ; manifest ; 2012 ; Journal of Physical Education Volume 2012 ; 24 ; 2012 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2013 ; Journal of Physical Education Volume 2013 ; 25 ; 2013 ; reingest5.clockss.org:8082 >

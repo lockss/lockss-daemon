@@ -966,7 +966,7 @@
 
       param[journal_id] = biblical-research
 
-      au < ready ; exists ; 1991 ; Bulletin for Biblical Research Volume 1 ; 1 ; 1991 ; >
+      au < crawling ; exists ; 1991 ; Bulletin for Biblical Research Volume 1 ; 1 ; 1991 ; >
       au < ready ; exists ; 1992 ; Bulletin for Biblical Research Volume 2 ; 2 ; 1992 ; >
       au < ready ; exists ; 1993 ; Bulletin for Biblical Research Volume 3 ; 3 ; 1993 ; >
       au < ready ; exists ; 1994 ; Bulletin for Biblical Research Volume 4 ; 4 ; 1994 ; >
@@ -2090,14 +2090,14 @@
       au < ready ; exists ; 1992 ; Milton Studies Volume 28 ; 28 ; 1992 ; >
       au < ready ; exists ; 1992 ; Milton Studies Volume 29 ; 29 ; 1992 ; >
       au < ready ; exists ; 1993 ; Milton Studies Volume 30 ; 30 ; 1993 ; >
-      au < ready ; exists ; 1994 ; Milton Studies Volume 31 ; 31 ; 1994 ; >
+      au < crawling ; exists ; 1994 ; Milton Studies Volume 31 ; 31 ; 1994 ; >
       au < ready ; exists ; 1995 ; Milton Studies Volume 32 ; 32 ; 1995 ; >
       au < ready ; exists ; 1996 ; Milton Studies Volume 33 ; 33 ; 1996 ; >
       au < ready ; exists ; 1996 ; Milton Studies Volume 34 ; 34 ; 1996 ; >
       au < ready ; exists ; 1997 ; Milton Studies Volume 35 ; 35 ; 1997 ; >
       au < ready ; exists ; 1998 ; Milton Studies Volume 36 ; 36 ; 1998 ; >
       au < ready ; exists ; 1999 ; Milton Studies Volume 37 ; 37 ; 1999 ; >
-      au < ready ; exists ; 2000 ; Milton Studies Volume 38 ; 38 ; 2000 ; >
+      au < crawling ; exists ; 2000 ; Milton Studies Volume 38 ; 38 ; 2000 ; >
       au < ready ; exists ; 2000 ; Milton Studies Volume 39 ; 39 ; 2000 ; >
       au < ready ; exists ; 2001 ; Milton Studies Volume 40 ; 40 ; 2001 ; >
       au < ready ; exists ; 2002 ; Milton Studies Volume 41 ; 41 ; 2002 ; >
@@ -2538,7 +2538,7 @@
       #move from SUNY Press in 2025
 
       au < ready ; exists ; 2023 ; Mediaevalia Volume 44 ; 44 ; 2023 ; >
-      au < ready ; exists ; 2024 ; Mediaevalia Volume 45 ; 45 ; 2024 ; >
+      au < crawling ; exists ; 2024 ; Mediaevalia Volume 45 ; 45 ; 2024 ; >
       au < crawling ; exists ; 2025 ;Mediaevalia Volume 46 ; 46 ; 2025 ; >
 
   }
