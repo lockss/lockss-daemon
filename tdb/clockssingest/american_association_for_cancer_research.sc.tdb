@@ -241,7 +241,7 @@
       au < notReady ; exists ; 2001 ; 2001 ; Cancer Research Volume 61 ; 61 ; > #403 Forbidden, https://aacr.silverchair-cdn.com/aacr/content_public/journal/cancerres/61/13/canres_61_13_1122/2/canzajchosuppfig1.jpg
       au < ready ; exists ; 2002 ; 2002 ; Cancer Research Volume 62 ; 62 ; >
       au < ready ; exists ; 2003 ; 2003 ; Cancer Research Volume 63 ; 63 ; >
-      au < ready ; exists ; 2004 ; 2004 ; Cancer Research Volume 64 ; 64 ; >
+      au < crawling ; exists ; 2004 ; 2004 ; Cancer Research Volume 64 ; 64 ; >
       au < notReady ; exists ; 2005 ; 2005 ; Cancer Research Volume 65 ; 65 ; > #520 error, login found, 	https://aacrjournals.org/sign-in?returnUrl=https%3A%2F%2Faacrjournals.org%2Fview-large%2Ffigure%2F12004244%2F05-2103f06c.jpeg
       au < ready ; exists ; 2006 ; 2006 ; Cancer Research Volume 66 ; 66 ; >
       au < ready ; exists ; 2007 ; 2007 ; Cancer Research Volume 67 ; 67 ; >
@@ -380,7 +380,7 @@
       au < ready ; exists ; 2001 ; 2001 ; Molecular Cancer Therapeutics Volume 1 (2001) ; 1 ; >
       au < ready ; exists ; 2002 ; 2002 ; Molecular Cancer Therapeutics Volume 1 (2002) ; 1 ; >
       au < ready ; exists ; 2003 ; 2003 ; Molecular Cancer Therapeutics Volume 2 ; 2 ; >
-      au < ready ; exists ; 2004 ; 2004 ; Molecular Cancer Therapeutics Volume 3 ; 3 ; >
+      au < crawling ; exists ; 2004 ; 2004 ; Molecular Cancer Therapeutics Volume 3 ; 3 ; >
       au < ready ; exists ; 2005 ; 2005 ; Molecular Cancer Therapeutics Volume 4 ; 4 ; >
       au < ready ; exists ; 2006 ; 2006 ; Molecular Cancer Therapeutics Volume 5 ; 5 ; >
       au < ready ; exists ; 2007 ; 2007 ; Molecular Cancer Therapeutics Volume 6 ; 6 ; >

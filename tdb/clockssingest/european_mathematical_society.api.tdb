@@ -878,7 +878,7 @@
     param[journal_serial_number] = 8
     param[journal_id] = zaa
     
-    au < ready ; exists ; 1982 ; 1982 ; Zeitschrift für Analysis und ihre Anwendungen Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1982 ; 1982 ; Zeitschrift für Analysis und ihre Anwendungen Volume 1 ; 1 ; >
     au < ready ; exists ; 1983 ; 1983 ; Zeitschrift für Analysis und ihre Anwendungen Volume 2 ; 2 ; >
     au < ready ; exists ; 1984 ; 1984 ; Zeitschrift für Analysis und ihre Anwendungen Volume 3 ; 3 ; >
     au < frozen ; exists ; 1985 ; 1985 ; Zeitschrift für Analysis und ihre Anwendungen Volume 4 ; 4 ; >
