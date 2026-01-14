@@ -17,7 +17,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/elifepreprint-released/
 
       au < readySource ; crawling ; 2025 ; eLife Sciences Preprint Source Content 2025 ; 2025 >
-      au < manifest ; exists ; 2026 ; eLife Sciences Preprint Source Content 2026 ; 2026 >
+      au < testing ; exists ; 2026 ; eLife Sciences Preprint Source Content 2026 ; 2026 >
 
   }
 
@@ -41,7 +41,7 @@
       au < readySource ; finished ; 2023 ; eLife Sciences Source Content 2023 ; 2023 >
       au < readySource ; crawling ; 2024 ; eLife Sciences Source Content 2024 ; 2024 >
       au < readySource ; crawling ; 2025 ; eLife Sciences Source Content 2025 ; 2025 >
-      au < manifest ; exists ; 2026 ; eLife Sciences Source Content 2026 ; 2026 >
+      au < testing ; exists ; 2026 ; eLife Sciences Source Content 2026 ; 2026 >
 
     }
 
