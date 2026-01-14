@@ -22,6 +22,9 @@
   #param[base_url] = https://www.govinfo.gov/
   implicit < status ; year ; name ; param[year] ; param[base_url] >
 
+
+
+
   {
 
     title <
@@ -529,6 +532,7 @@
     au < released ; 2023 ; Congressional Bills 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Congressional Bills 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Congressional Bills 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Congressional Bills 2026 ; 2026 ; https://www.govinfo.gov/ >
 
   }
 
@@ -555,7 +559,6 @@
 
     param[collection_id] = CCAL
 
- 
     au < released ; 1996 ; Congressional Calendars 1996 ; 1996 ; https://www.govinfo.gov/ >
     au < released ; 1998 ; Congressional Calendars 1998 ; 1998 ; https://www.govinfo.gov/ >
 
@@ -570,6 +573,7 @@
     au < released ; 2023 ; Congressional Calendars 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Congressional Calendars 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Congressional Calendars 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Congressional Calendars 2026 ; 2026 ; https://www.govinfo.gov/ >
 
   }
 
@@ -786,15 +790,15 @@
 
     au < released ; 1986 ; Congressional Documents 1986 ; 1986 ; https://www.govinfo.gov/ >
 
-    au < released ; 1976 ; CDOC 1976 ; 1976 ; https://www.govinfo.gov/ >
-    au < released ; 1979 ; CDOC 1979 ; 1979 ; https://www.govinfo.gov/ >
-    au < released ; 1992 ; CDOC 1992 ; 1992 ; https://www.govinfo.gov/ >
-    au < released ; 1994 ; CDOC 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < released ; 1995 ; CDOC 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < released ; 1996 ; CDOC 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < released ; 1997 ; CDOC 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < released ; 1998 ; CDOC 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < released ; 1999 ; CDOC 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < released ; 1976 ; Congressional Documents 1976 ; 1976 ; https://www.govinfo.gov/ >
+    au < released ; 1979 ; Congressional Documents 1979 ; 1979 ; https://www.govinfo.gov/ >
+    au < released ; 1992 ; Congressional Documents 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < released ; 1994 ; Congressional Documents 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < released ; 1995 ; Congressional Documents 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < released ; 1996 ; Congressional Documents 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < released ; 1997 ; Congressional Documents 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < released ; 1998 ; Congressional Documents 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < released ; 1999 ; Congressional Documents 1999 ; 1999 ; https://www.govinfo.gov/ >
  
     au < released ; 2018 ; Congressional Documents 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2019 ; Congressional Documents 2019 ; 2019 ; https://www.govinfo.gov/ >
@@ -804,6 +808,7 @@
     au < released ; 2023 ; Congressional Documents 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Congressional Documents 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Congressional Documents 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Congressional Documents 2026 ; 2026 ; https://www.govinfo.gov/ >
 
 
   }
@@ -921,6 +926,7 @@
     au < released ; 2023 ; Congressional Record 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Congressional Record 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Congressional Record 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Congressional Record 2026 ; 2026 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1091,22 +1097,22 @@
 
     param[collection_id] = CRI
 
-    au < released ; 1983 ; CRI 1983 ; 1983 ; https://www.govinfo.gov/ >
-    au < released ; 1984 ; CRI 1984 ; 1984 ; https://www.govinfo.gov/ >
-    au < released ; 1985 ; CRI 1985 ; 1985 ; https://www.govinfo.gov/ >
-    au < released ; 1986 ; CRI 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < released ; 1987 ; CRI 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < released ; 1988 ; CRI 1988 ; 1988 ; https://www.govinfo.gov/ >
-    au < released ; 1989 ; CRI 1989 ; 1989 ; https://www.govinfo.gov/ >
-    au < released ; 1990 ; CRI 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < released ; 1991 ; CRI 1991 ; 1991 ; https://www.govinfo.gov/ >
-    au < released ; 1992 ; CRI 1992 ; 1992 ; https://www.govinfo.gov/ >
-    au < released ; 1993 ; CRI 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < released ; 1994 ; CRI 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < released ; 1995 ; CRI 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < released ; 1996 ; CRI 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < released ; 1997 ; CRI 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < released ; 1999 ; CRI 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < released ; 1983 ; Congressional Record Index 1983 ; 1983 ; https://www.govinfo.gov/ >
+    au < released ; 1984 ; Congressional Record Index 1984 ; 1984 ; https://www.govinfo.gov/ >
+    au < released ; 1985 ; Congressional Record Index 1985 ; 1985 ; https://www.govinfo.gov/ >
+    au < released ; 1986 ; Congressional Record Index 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < released ; 1987 ; Congressional Record Index 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < released ; 1988 ; Congressional Record Index 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < released ; 1989 ; Congressional Record Index 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < released ; 1990 ; Congressional Record Index 1990 ; 1990 ; https://www.govinfo.gov/ >
+    au < released ; 1991 ; Congressional Record Index 1991 ; 1991 ; https://www.govinfo.gov/ >
+    au < released ; 1992 ; Congressional Record Index 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < released ; 1993 ; Congressional Record Index 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < released ; 1994 ; Congressional Record Index 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < released ; 1995 ; Congressional Record Index 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < released ; 1996 ; Congressional Record Index 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < released ; 1997 ; Congressional Record Index 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < released ; 1999 ; Congressional Record Index 1999 ; 1999 ; https://www.govinfo.gov/ >
  
     au < released ; 1998 ; Congressional Record Index 1998 ; 1998 ; https://www.govinfo.gov/ > #no substance
     au < released ; 2016 ; Congressional Record Index 2016 ; 2016 ; https://www.govinfo.gov/ >
@@ -1119,6 +1125,7 @@
     au < released ; 2023 ; Congressional Record Index 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Congressional Record Index 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Congressional Record Index 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Congressional Record Index 2026 ; 2026 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1148,6 +1155,7 @@
     au < released ; 2023 ; Congressional Reports 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Congressional Reports 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Congressional Reports 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Congressional Reports 2026 ; 2026 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1344,6 +1352,7 @@
     au < released ; 2023 ; Federal Register 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Federal Register 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; Federal Register 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Federal Register 2026 ; 2026 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1405,6 +1414,7 @@
     au < released ; 2023 ; History of Bills 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; History of Bills 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < manifest ; 2025 ; History of Bills 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; History of Bills 2026 ; 2026 ; https://www.govinfo.gov/ >
 
   }
 
@@ -2155,31 +2165,31 @@
     au < ready ; 1982 ; United States Statutes at Large 1982 ; 1982 ; https://www.govinfo.gov/ >
     au < ready ; 1983 ; United States Statutes at Large 1983 ; 1983 ; https://www.govinfo.gov/ >
     au < ready ; 1984 ; United States Statutes at Large 1984 ; 1984 ; https://www.govinfo.gov/ >
-    au < manifest ; 1985 ; United States Statutes at Large 1985 ; 1985 ; https://www.govinfo.gov/ >
-    au < manifest ; 1986 ; United States Statutes at Large 1986 ; 1986 ; https://www.govinfo.gov/ >
-    au < manifest ; 1987 ; United States Statutes at Large 1987 ; 1987 ; https://www.govinfo.gov/ >
-    au < manifest ; 1988 ; United States Statutes at Large 1988 ; 1988 ; https://www.govinfo.gov/ >
-    au < manifest ; 1989 ; United States Statutes at Large 1989 ; 1989 ; https://www.govinfo.gov/ >
+    au < ready ; 1985 ; United States Statutes at Large 1985 ; 1985 ; https://www.govinfo.gov/ >
+    au < ready ; 1986 ; United States Statutes at Large 1986 ; 1986 ; https://www.govinfo.gov/ >
+    au < ready ; 1987 ; United States Statutes at Large 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < ready ; 1988 ; United States Statutes at Large 1988 ; 1988 ; https://www.govinfo.gov/ >
+    au < ready ; 1989 ; United States Statutes at Large 1989 ; 1989 ; https://www.govinfo.gov/ >
     au < manifest ; 1990 ; United States Statutes at Large 1990 ; 1990 ; https://www.govinfo.gov/ >
-    au < manifest ; 1992 ; United States Statutes at Large 1992 ; 1992 ; https://www.govinfo.gov/ >
+    au < ready ; 1992 ; United States Statutes at Large 1992 ; 1992 ; https://www.govinfo.gov/ >
     au < manifest ; 1993 ; United States Statutes at Large 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < manifest ; 1994 ; United States Statutes at Large 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; United States Statutes at Large 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; United States Statutes at Large 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; United States Statutes at Large 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; United States Statutes at Large 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 1994 ; United States Statutes at Large 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < ready ; 1996 ; United States Statutes at Large 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; United States Statutes at Large 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; United States Statutes at Large 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; United States Statutes at Large 1999 ; 1999 ; https://www.govinfo.gov/ >
 
-    au < manifest ; 2000 ; United States Statutes at Large 2000 ; 2000 ; https://www.govinfo.gov/ >
-    au < manifest ; 2001 ; United States Statutes at Large 2001 ; 2001 ; https://www.govinfo.gov/ >
-    au < manifest ; 2002 ; United States Statutes at Large 2002 ; 2002 ; https://www.govinfo.gov/ >
-    au < manifest ; 2003 ; United States Statutes at Large 2003 ; 2003 ; https://www.govinfo.gov/ >
-    au < manifest ; 2004 ; United States Statutes at Large 2004 ; 2004 ; https://www.govinfo.gov/ >
-    au < manifest ; 2005 ; United States Statutes at Large 2005 ; 2005 ; https://www.govinfo.gov/ >
-    au < manifest ; 2006 ; United States Statutes at Large 2006 ; 2006 ; https://www.govinfo.gov/ >
-    au < manifest ; 2007 ; United States Statutes at Large 2007 ; 2007 ; https://www.govinfo.gov/ >
-    au < manifest ; 2009 ; United States Statutes at Large 2009 ; 2009 ; https://www.govinfo.gov/ >
-    au < manifest ; 2010 ; United States Statutes at Large 2010 ; 2010 ; https://www.govinfo.gov/ >
-    au < manifest ; 2012 ; United States Statutes at Large 2012 ; 2012 ; https://www.govinfo.gov/ >
+    au < ready ; 2000 ; United States Statutes at Large 2000 ; 2000 ; https://www.govinfo.gov/ >
+    au < ready ; 2001 ; United States Statutes at Large 2001 ; 2001 ; https://www.govinfo.gov/ >
+    au < ready ; 2002 ; United States Statutes at Large 2002 ; 2002 ; https://www.govinfo.gov/ >
+    au < ready ; 2003 ; United States Statutes at Large 2003 ; 2003 ; https://www.govinfo.gov/ >
+    au < ready ; 2004 ; United States Statutes at Large 2004 ; 2004 ; https://www.govinfo.gov/ >
+    au < ready ; 2005 ; United States Statutes at Large 2005 ; 2005 ; https://www.govinfo.gov/ >
+    au < ready ; 2006 ; United States Statutes at Large 2006 ; 2006 ; https://www.govinfo.gov/ >
+    au < ready ; 2007 ; United States Statutes at Large 2007 ; 2007 ; https://www.govinfo.gov/ >
+    au < ready ; 2009 ; United States Statutes at Large 2009 ; 2009 ; https://www.govinfo.gov/ >
+    au < ready ; 2010 ; United States Statutes at Large 2010 ; 2010 ; https://www.govinfo.gov/ >
+    au < ready ; 2012 ; United States Statutes at Large 2012 ; 2012 ; https://www.govinfo.gov/ >
     au < released ; 2013 ; United States Statutes at Large 2013 ; 2013 ; https://www.govinfo.gov/ >
     au < released ; 2014 ; United States Statutes at Large 2014 ; 2014 ; https://www.govinfo.gov/ >
     au < released ; 2015 ; United States Statutes at Large 2015 ; 2015 ; https://www.govinfo.gov/ >
@@ -2188,7 +2198,7 @@
     au < released ; 2019 ; United States Statutes at Large 2019 ; 2019 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; United States Statutes at Large 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; United States Statutes at Large 2021 ; 2021 ; https://www.govinfo.gov/ >
-    au < manifest ; 2022 ; United States Statutes at Large 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < ready ; 2022 ; United States Statutes at Large 2022 ; 2022 ; https://www.govinfo.gov/ >
 
   }
 
@@ -2201,23 +2211,23 @@
     param[collection_id] = WCPD
     #published 1993-2009
 
-    au < manifest ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 ; https://www.govinfo.gov/ >
-    au < manifest ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; 1994 ; https://www.govinfo.gov/ >
-    au < manifest ; 1995 ; Weekly Compilation of Presidential Documents 1995 ; 1995 ; https://www.govinfo.gov/ >
-    au < manifest ; 1996 ; Weekly Compilation of Presidential Documents 1996 ; 1996 ; https://www.govinfo.gov/ >
-    au < manifest ; 1997 ; Weekly Compilation of Presidential Documents 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < manifest ; 1998 ; Weekly Compilation of Presidential Documents 1998 ; 1998 ; https://www.govinfo.gov/ >
-    au < manifest ; 1999 ; Weekly Compilation of Presidential Documents 1999 ; 1999 ; https://www.govinfo.gov/ >
-    au < manifest ; 2000 ; Weekly Compilation of Presidential Documents 2000 ; 2000 ; https://www.govinfo.gov/ >
-    au < manifest ; 2001 ; Weekly Compilation of Presidential Documents 2001 ; 2001 ; https://www.govinfo.gov/ >
-    au < manifest ; 2002 ; Weekly Compilation of Presidential Documents 2002 ; 2002 ; https://www.govinfo.gov/ >
-    au < manifest ; 2003 ; Weekly Compilation of Presidential Documents 2003 ; 2003 ; https://www.govinfo.gov/ >
-    au < manifest ; 2004 ; Weekly Compilation of Presidential Documents 2004 ; 2004 ; https://www.govinfo.gov/ >
-    au < manifest ; 2005 ; Weekly Compilation of Presidential Documents 2005 ; 2005 ; https://www.govinfo.gov/ >
-    au < manifest ; 2006 ; Weekly Compilation of Presidential Documents 2006 ; 2006 ; https://www.govinfo.gov/ >
-    au < manifest ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; 2007 ; https://www.govinfo.gov/ >
-    au < manifest ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; 2008 ; https://www.govinfo.gov/ >
-    au < manifest ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 ; https://www.govinfo.gov/ >
+    au < ready ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 ; https://www.govinfo.gov/ >
+    au < ready ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; 1994 ; https://www.govinfo.gov/ >
+    au < ready ; 1995 ; Weekly Compilation of Presidential Documents 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < ready ; 1996 ; Weekly Compilation of Presidential Documents 1996 ; 1996 ; https://www.govinfo.gov/ >
+    au < ready ; 1997 ; Weekly Compilation of Presidential Documents 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < ready ; 1998 ; Weekly Compilation of Presidential Documents 1998 ; 1998 ; https://www.govinfo.gov/ >
+    au < ready ; 1999 ; Weekly Compilation of Presidential Documents 1999 ; 1999 ; https://www.govinfo.gov/ >
+    au < ready ; 2000 ; Weekly Compilation of Presidential Documents 2000 ; 2000 ; https://www.govinfo.gov/ >
+    au < ready ; 2001 ; Weekly Compilation of Presidential Documents 2001 ; 2001 ; https://www.govinfo.gov/ >
+    au < ready ; 2002 ; Weekly Compilation of Presidential Documents 2002 ; 2002 ; https://www.govinfo.gov/ >
+    au < ready ; 2003 ; Weekly Compilation of Presidential Documents 2003 ; 2003 ; https://www.govinfo.gov/ >
+    au < ready ; 2004 ; Weekly Compilation of Presidential Documents 2004 ; 2004 ; https://www.govinfo.gov/ >
+    au < ready ; 2005 ; Weekly Compilation of Presidential Documents 2005 ; 2005 ; https://www.govinfo.gov/ >
+    au < ready ; 2006 ; Weekly Compilation of Presidential Documents 2006 ; 2006 ; https://www.govinfo.gov/ >
+    au < ready ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; 2007 ; https://www.govinfo.gov/ >
+    au < ready ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; 2008 ; https://www.govinfo.gov/ >
+    au < ready ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 ; https://www.govinfo.gov/ >
  
   }
 
