@@ -8520,13 +8520,13 @@
     comment[journal_issn] = 1476-9018
     param[journal_id] = jica
 
-    au < manifest ; 1996 ; 1996 ; Journal of Integrated Care: Practical evidence for service improvement Volume 4 ; 4 >
-    au < manifest ; 1997 ; 1997 ; Journal of Integrated Care: Practical evidence for service improvement Volume 5 ; 5 >
-    au < manifest ; 1998 ; 1998 ; Journal of Integrated Care: Practical evidence for service improvement Volume 6 ; 6 >
-    au < manifest ; 1999 ; 1999 ; Journal of Integrated Care: Practical evidence for service improvement Volume 7 ; 7 >
-    au < doNotProcess ; 2000 ; 2000 ; Journal of Integrated Care: Practical evidence for service improvement Volume 8 ; 8 >
-    au < doNotProcess ; 2001 ; 2001 ; Journal of Integrated Care: Practical evidence for service improvement Volume 9 ; 9 >
-    au < doNotProcess ; 2002 ; 2002 ; Journal of Integrated Care: Practical evidence for service improvement Volume 10 ; 10 >
+    #au < manifest ; 1996 ; 1996 ; Journal of Integrated Care: Practical evidence for service improvement Volume 4 ; 4 >
+    #au < manifest ; 1997 ; 1997 ; Journal of Integrated Care: Practical evidence for service improvement Volume 5 ; 5 >
+    #au < manifest ; 1998 ; 1998 ; Journal of Integrated Care: Practical evidence for service improvement Volume 6 ; 6 >
+    #au < manifest ; 1999 ; 1999 ; Journal of Integrated Care: Practical evidence for service improvement Volume 7 ; 7 >
+    #au < doNotProcess ; 2000 ; 2000 ; Journal of Integrated Care: Practical evidence for service improvement Volume 8 ; 8 >
+    #au < doNotProcess ; 2001 ; 2001 ; Journal of Integrated Care: Practical evidence for service improvement Volume 9 ; 9 >
+    #au < doNotProcess ; 2002 ; 2002 ; Journal of Integrated Care: Practical evidence for service improvement Volume 10 ; 10 >
     au < doNotProcess ; 2003 ; 2003 ; Journal of Integrated Care: Practical evidence for service improvement Volume 11 ; 11 >
     au < doNotProcess ; 2004 ; 2004 ; Journal of Integrated Care: Practical evidence for service improvement Volume 12 ; 12 >
     au < doNotProcess ; 2005 ; 2005 ; Journal of Integrated Care: Practical evidence for service improvement Volume 13 ; 13 >
