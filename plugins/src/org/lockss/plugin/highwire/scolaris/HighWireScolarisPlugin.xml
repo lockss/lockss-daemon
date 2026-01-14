@@ -44,7 +44,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>6</string>
+        <string>7</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -141,9 +141,9 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_crawlrules</string>
         <list>
             <string>1,"%scontent/%s/c?lockss-manifest/vol_%s_manifest.html", base_url, journal_id, volume_name</string>
-            <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?(v|itok)=[^/]*)?$", base_url_host</string>
+            <string>1,"^https?://%s/.*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff2?)(\?(v|itok)=[^/]*)?[\./]", base_url_host</string>
             <!-- Numerous MalformedURLException e.g. https://publications.ersnet.org/content/erj/63/6/{openurl}?query=rft.jtitle%3DLancet+Respir+Med&rft.volume%3D6&rft.spage%3D715&rft.genre%3Darticle&rft_val_fmt%3Dinfo%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&ctx_ver%3DZ39.88-2004&url_ver%3DZ39.88-2004&url_ctx_fmt%3Dinfo%3Aofi%2Ffmt%3Akev%3Amtx%3Actx -->
-            <string>2,"^https?://%s/.*(\{|%%7B)openurl(\}|%%7D)", base_url_host</string>
+            <string>2,"^https?://%s/.*(\&#123;|%%7B)openurl(\&#125;|%%7D)", base_url_host</string>
             <string>1,"^https?://%s/content/%s/%s", base_url_host, journal_id, volume_name</string>
             <string>1,"^https?://%s/admin/highwire/citation/", base_url_host</string>
             <string>1,"^https?://%s/highwire_display/entity_view/node/", base_url_host</string>
@@ -153,32 +153,10 @@ POSSIBILITY OF SUCH DAMAGE.
             <!-- allowed for the permission URL auth excursion at ERS, but beware, see HTML crawl filter -->
             <string>1,"^https?://%s/openid-connect/", base_url_host</string>
             <!-- allowed for the permission URL auth excursion at ERS -->
-            <string>1,"https?://idp\.sams-sigma\.com/"</string>
-            <string>1,"https://cdnjs.cloudflare.com/"</string>
-            <string>1,"https://semantic-ui.com/"</string>
-            <string>1,"https://code.jquery.com/"</string>
-            <string>1,"https://fonts.gstatic.com/"</string>
-            <string>1,"https?://(fonts|ajax).googleapis.com/"</string>
-            <string>1,"https://themes.googleusercontent.com/"</string>
-            <!--
-            <string>1,"^https?://%s/content/%s(/[^/]+)?/suppl/", url_host(base_url), journal_id</string>
-            <string>2,"^https?://%s/content/(by/(year|volume)|current|.*(/|\.)article-)", url_host(base_url)</string>
-            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?(\.toc)?$", url_host(base_url), volume_name</string>
-            <string>1,"^https?://%s/content/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(|/related|/tab-figures-(data|only))$", url_host(base_url), volume_name</string>
-            <string>1,"^https?://%s/content/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(|/related|/tab-figures-(data|only))$", url_host(base_url), volume_name</string>
-            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/(((?:([ivx]+)\.)?[^/.]+?(\.\d+)?))(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
-            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/((ENEURO|wpt|masthead)\.[0-9.-]+)(\.(?:full(?:-text)?\.pdf(?:\+html)?))$", url_host(base_url), volume_name</string>
-            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+)?/.+\.(long|supplemental|data|figures-only)$", url_host(base_url), volume_name</string>
-            <string>1,"^https?://%s/search/volume[^/?]+?%s[^/?]+\?(page=[0-9]+&amp;)?facet.+toc-section-id", url_host(base_url), volume_name</string>
-            <string>1,"^https?://%s/highwire/filestream/", url_host(base_url)</string>
-            <string>1,"^https?://%s/[^/]+/(download-(pdf|suppl|video))/", url_host(base_url)</string>
-            <string>1,"^https?://%s/[^?]+(/embed/inline-supplementary-)", url_host(base_url)</string>
-            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+){1,2}/DC[^/]{0,5}/embed/", url_host(base_url), volume_name</string>
-            <string>1,"^https?://([^/]+\.glencoesoftware\.com/.)"</string>
-            <string>1,"^https?://signin\.hematology\.org/Login\.aspx"</string>
-            <string>1,"^https?://%s/content(/(?![0-9]+/)[^/.]+)?/%s(/[^/.]+).+[?]sso-checked=true$", url_host(base_url), volume_name</string>
-            <string>1,"^https?://movie\.biologists\.com/video/"</string>
-            -->
+            <string>1,"^https?://idp\.sams-sigma\.com/"</string>
+            <string>1,"^https?://semantic-ui\.com/"</string>
+            <string>1,"^https?://themes.googleusercontent\.com/"</string>
+            <string>1,"^https?://((fonts|ajax)\.googleapis\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com|fonts\.gstatic\.com|code\.jquery\.com)/.*(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$"</string>
         </list>
     </entry>
     <entry>
