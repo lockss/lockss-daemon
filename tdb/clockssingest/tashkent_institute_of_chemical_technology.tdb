@@ -24,7 +24,7 @@
     param[base_url] = https://cce.researchcommons.org/
     param[journal_abbr] = journal
 
-    au < ready ; exists ; 2018 ; Chemistry and Chemical Engineering Volume 2018 ; 2018 ; >
+    au < crawling ; exists ; 2018 ; Chemistry and Chemical Engineering Volume 2018 ; 2018 ; >
     au < frozen ; exists ; 2019 ; Chemistry and Chemical Engineering Volume 2019 ; 2019 ; >
     au < frozen ; exists ; 2020 ; Chemistry and Chemical Engineering Volume 2020 ; 2020 ; >
     au < frozen ; exists ; 2021 ; Chemistry and Chemical Engineering Volume 2021 ; 2021 ; >
