@@ -21,7 +21,7 @@
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/frontiersjats-released/
 
         au < readySource ; crawling ; 2025 ; Frontiers Journals JATS Source Content 2025_01 ; 2025_01 >
-        au < manifest ; exists ; 2026 ; Frontiers Journals JATS Source Content 2026_01 ; 2026_01 >
+        au < readySource ; crawling ; 2026 ; Frontiers Journals JATS Source Content 2026_01 ; 2026_01 >
 
       }
     }
@@ -58,7 +58,7 @@
         au < readySource ; crawling ; 2025 ; Frontiers Journals Source Content 2025_02 ; 2025_02 >
         au < readySource ; crawling ; 2025 ; Frontiers Journals Source Content 2025_03 ; 2025_03 >
 
-        au < manifest ; exists ; 2026 ; Frontiers Journals Source Content 2026_01 ; 2026_01 >
+        au < readySource ; crawling ; 2026 ; Frontiers Journals Source Content 2026_01 ; 2026_01 >
         au < expected ; exists ; 2026 ; Frontiers Journals Source Content 2026_02 ; 2026_02 >
 
       }
