@@ -9487,7 +9487,7 @@
     #continued_by = 1746-5729
 
     au < exists ; 1999 ; 1999 ; International Journal of Mental Health Promotion Volume 1 ; 1 >
-    au < exists ; 2000 ; 2000 ; International Journal of Mental Health Promotion Volume 2 issue 1-3 ; 2>
+    au < exists ; 2000 ; 2000 ; International Journal of Mental Health Promotion Volume 2 issue 1-3 ; 2 >
 
   }
 
@@ -9520,8 +9520,6 @@
     comment[journal_issn] = 1746-5729
     param[journal_id] = jpmh
 
-    au < doNotProcess ; 2003 ; 2003 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 2 ; 2 >
-    au < doNotProcess ; 2004 ; 2004 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 3 ; 3 >
     au < manifest ; 2005 ; 2005 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 4 ; 4 >
     au < doNotProcess ; 2006 ; 2006 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 5 ; 5 >
     au < doNotProcess ; 2007 ; 2007 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 6 ; 6 >
