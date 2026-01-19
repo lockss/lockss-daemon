@@ -983,9 +983,9 @@
     param[journal_id] = ria
     #continues = 0144-5154
 
-    au < exists ; 2013 ; 2013 ; Robotic Intelligence and Automation Volume 43 ; 43 >
-    au < exists ; 2014 ; 2014 ; Robotic Intelligence and Automation Volume 44 ; 44 >
-    au < exists ; 2015 ; 2015 ; Robotic Intelligence and Automation Volume 45 ; 45 >
+    au < exists ; 2023 ; 2023 ; Robotic Intelligence and Automation Volume 43 ; 43 >
+    au < exists ; 2024 ; 2024 ; Robotic Intelligence and Automation Volume 44 ; 44 >
+    au < exists ; 2025 ; 2025 ; Robotic Intelligence and Automation Volume 45 ; 45 >
 
   }
 
@@ -1235,7 +1235,7 @@
     au < manifest ; 1965 ; 1965 ; British Food Journal Volume 67 ; 67 >
     au < manifest ; 1966 ; 1966 ; British Food Journal Volume 68 ; 68 >
     au < manifest ; 1967 ; 1967 ; British Food Journal Volume 69 ; 69 >
-    au < exists ; 1969 ; 1969 ; British Food Journal Volume 70 ; 70 >
+    #au < exists ; 1969 ; 1969 ; British Food Journal Volume 70 ; 70 >
     au < manifest ; 1969 ; 1969 ; British Food Journal Volume 71 ; 71 >
     au < manifest ; 1970 ; 1970 ; British Food Journal Volume 72 ; 72 >
     au < manifest ; 1971 ; 1971 ; British Food Journal Volume 73 ; 73 >
@@ -1304,7 +1304,7 @@
     >
 
     comment[journal_issn] = 1361-5874
-    param[journal_id] = joce
+    param[journal_id] = ijhg
     #continued_by = 1466-4100
 
     au < exists ; 1996 ; 1996 ; Journal of Clinical Effectiveness Volume 1 ; 1 >
@@ -2713,7 +2713,7 @@
     >
 
     comment[journal_issn] = 0956-6163
-    param[journal_id] = emh
+    param[journal_id] = meq
     comment[continued_by] = 1477-7835
 
     au < exists ; 1990 ; 1990 ; Environmental Management and Health Volume 1 ; 1 >
@@ -2741,7 +2741,7 @@
     >
 
     comment[journal_issn] = 0261-0159
-    param[journal_id] = eoi
+    param[journal_id] = edi
     comment[continued_by] = 2040-7149
 
     au < exists ; 1981 ; 1981 ; Equal Opportunities International Volume 1 ; 1 >
@@ -3460,7 +3460,7 @@
     >
 
     comment[journal_issn] = 0828-8666
-    param[journal_id] = h
+    param[journal_id] = ijoes
     # online from 1989
     #continued_by = 2514-9369
 
