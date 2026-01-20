@@ -381,7 +381,43 @@ public class BaseAtyponMetadataUtil {
     }
 
 
+    //Do Edinburgh University Press specific check and emit 0 metadata based on publication title
+    String pubNameEUP = (tdbau == null) ? null : tdbau.getPublisherName();
 
+    log.debug3("EUP Check: Publisher Specific Checks for EUP = " + pubNameEUP);
+
+    String AU_journal_titleEUP = (tdbau == null) ? null : tdbau.getPublicationTitle();
+    String foundJournalTitleEUP = am.get(MetadataField.FIELD_PUBLICATION_TITLE);
+
+    log.debug3("EUP Check: Publisher Specific Checks for EUP = " + pubNameEUP + ", AU_journal_titleEUP = " +
+            AU_journal_titleEUP + ", foundJournalTitleEUP ="  + foundJournalTitleEUP + ", isInAu =" + isInAu);
+
+    if (isInAu && (pubNameEUP != null) && (foundJournalTitleEUP != null)) {
+      Boolean isEUP = pubNameSeg.equals("Edinburgh University Press");
+      if (isEUP) {
+        log.debug3("EUP Check:  Publisher Specific Checks for EUP");
+
+        // Check doi
+        String eup_jid = tdbau.getParam("journal_id");
+        String eup_year = tdbau.getAttr("year");
+        String eup_doi = am.get(MetadataField.FIELD_DOI);
+        int year = Integer.parseInt(eup_year);
+
+
+        log.debug3(String.format("EUP Check: EUP doi = %s, jid = %s, eup_year = %s ", eup_jid, eup_doi, eup_year));
+
+        if (eup_jid != null && eup_doi != null && year >= 2025) {
+          log.debug3(String.format("EUP Check: EUP doi = %s, jid = %s ", eup_jid, eup_doi));
+          if (eup_doi.contains(eup_jid)) {
+            log.debug3(String.format("EUP Check: EUP doi = %s contains jid = %s", eup_doi, eup_jid));
+          } else {
+            log.debug3(String.format("EUP Check: EUP  doi = %s does not contains jid = %s", eup_doi, eup_jid));
+          }
+        }
+        isInAu = eup_doi.contains(eup_jid);
+        return isInAu;
+      }
+    }
 
     // END PUBLISHER SPECIFIC CHECKS //
 

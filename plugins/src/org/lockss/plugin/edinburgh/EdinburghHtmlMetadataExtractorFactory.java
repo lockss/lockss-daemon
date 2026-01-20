@@ -119,6 +119,20 @@ public class EdinburghHtmlMetadataExtractorFactory
         IOUtil.safeClose(bReader);
       }
 
+      String jid = cu.getArchivalUnit().getTdbAu().getParam("journal_id");
+      String doi = am.get(MetadataField.DC_FIELD_IDENTIFIER);
+      String yearStr = cu.getArchivalUnit().getTdbAu().getAttr("year");
+      int year = Integer.parseInt(yearStr);
+
+      if (jid != null && doi != null  && year >= 2025) {
+        log.debug3(String.format("doi = %s, jid = %s, ", jid, doi));
+        if (doi.contains(jid)) {
+          log.debug3(String.format("doi = %s contains jid = %s", doi, jid));
+        } else {
+          log.debug3(String.format("doi = %s does not contains jid = %s", doi, jid));
+        }
+      }
+
       emitter.emitMetadata(cu, am);
     }
   }
