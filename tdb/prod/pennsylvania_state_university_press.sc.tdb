@@ -190,7 +190,7 @@
       au < released ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 19 ; 2021 >
       au < released ; 2022 ; The F. Scott Fitzgerald Review Volume 20 ; 20 ; 2022 >
       au < released ; 2023 ; The F. Scott Fitzgerald Review Volume 21 ; 21 ; 2023 >
-      au < manifest ; 2024 ; The F. Scott Fitzgerald Review Volume 22 ; 22 ; 2024 >
+      au < ready ; 2024 ; The F. Scott Fitzgerald Review Volume 22 ; 22 ; 2024 >
       au < expected ; 2025 ; The F. Scott Fitzgerald Review Volume 23 ; 23 ; 2025 >
 
   }
@@ -2209,7 +2209,7 @@
       au < doNotProcess ; 2021 ; Studies in the American Short Story Volume 2 ; 2 ; 2021 >
       au < released ; 2022 ; Studies in the American Short Story Volume 3 ; 3 ; 2022 >
       au < released ; 2023 ; Studies in the American Short Story Volume 4 ; 4 ; 2023 >
-      au < manifest ; 2024 ; Studies in the American Short Story Volume 5 ; 5 ; 2024 >
+      au < ready ; 2024 ; Studies in the American Short Story Volume 5 ; 5 ; 2024 >
       au < expected ; 2025 ; Studies in the American Short Story Volume 6 ; 6 ; 2025 >
 
   }
@@ -2537,8 +2537,8 @@
       param[journal_id] = mediaevalia  
       #move from SUNY Press in 2025
 
-      au < manifest ; 2023 ; Mediaevalia Volume 44 ; 44 ; 2023 >
-      au < manifest ; 2024 ; Mediaevalia Volume 45 ; 45 ; 2024 >
+      au < ready ; 2023 ; Mediaevalia Volume 44 ; 44 ; 2023 >
+      au < ready ; 2024 ; Mediaevalia Volume 45 ; 45 ; 2024 >
       au < manifest ; 2025 ; Mediaevalia Volume 46 ; 46 ; 2025 >
 
   }
