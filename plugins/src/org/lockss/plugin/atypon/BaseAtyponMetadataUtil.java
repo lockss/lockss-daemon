@@ -399,31 +399,46 @@ public class BaseAtyponMetadataUtil {
       if (isEUP) {
         log.debug3("EUP Check:  Publisher Specific Checks for EUP");
 
-        // List of years that require the DOI/JID check
-        List<Integer> checkYears = Arrays.asList(2025);
+        // Logic mapping:
+        // 2020 - 2026+: check both JID and Year
+        // 2000 - 2019: check JID only
 
         String eup_jid = tdbau.getParam("journal_id");
         String eup_year = tdbau.getAttr("year");
         String eup_doi = am.get(MetadataField.FIELD_DOI);
         int year = Integer.parseInt(eup_year);
 
-        log.debug3(String.format("EUP Check: EUP doi = %s, jid = %s, eup_year = %s ", eup_jid, eup_doi, eup_year));
+        log.debug3(String.format("EUP Check: EUP doi = %s, jid = %s, eup_year = %s ", eup_doi, eup_jid, eup_year));
 
-        // If the year is in our target list, apply the logic
-        if (checkYears.contains(year)) {
+        // 1. Check if year is within our valid processing range (2000 and forward)
+        if (year >= 2000) {
           if (eup_doi != null && eup_jid != null) {
-            isInAu = eup_doi.contains(eup_jid);
 
-            if (isInAu) {
-              log.debug3(String.format("EUP Check: EUP doi = %s contains jid = %s", eup_doi, eup_jid));
+            // Determine logic: 2020 and forward (including 2026+) uses both
+            boolean useYear = (year >= 2020);
+
+            boolean containsJid = eup_doi.contains(eup_jid);
+            boolean containsYear = eup_doi.contains(eup_year);
+
+            if (useYear) {
+              // 2020 - 2026+ Logic
+              isInAu = containsJid && containsYear;
+              log.debug3(String.format("EUP Check (JID+Year) for %d: %b", year, isInAu));
             } else {
-              log.debug3(String.format("EUP Check: EUP doi = %s does not contain jid = %s", eup_doi, eup_jid));
+              // 2000 - 2019 Logic
+              isInAu = containsJid;
+              log.debug3(String.format("EUP Check (JID only) for %d: %b", year, isInAu));
             }
           } else if (eup_doi == null) {
-            // If year is in list but DOI is missing, it fails the AU check
+            // Fail the check if DOI is missing for any year >= 2000
             isInAu = false;
+            log.debug3("EUP Check Failed: DOI is null");
           }
+        } else {
+          // Optional: Handle years before 2000 if necessary
+          log.debug3("EUP Check: Year " + year + " is outside the 2000-2026+ range.");
         }
+
         // If the year is NOT in the list (e.g., 1998), the block is skipped
         // and the inherited value of isInAu remains unchanged.
         return isInAu;
