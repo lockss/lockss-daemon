@@ -123,30 +123,37 @@ public class EdinburghHtmlMetadataExtractorFactory
 
       // Define the years that require validation
       // 2026: Include all target years starting from 2010
-      List<Integer> checkYears = Arrays.asList(2025);
-
       String jid = cu.getArchivalUnit().getTdbAu().getParam("journal_id");
       String doi = am.get(MetadataField.DC_FIELD_IDENTIFIER);
       String yearStr = cu.getArchivalUnit().getTdbAu().getAttr("year");
-      int year = Integer.parseInt(yearStr);
 
-      // Default to true so that non-listed years "pass through"
+      // Default to true so that years outside 2000-2026+ "pass through"
       boolean shouldEmit = true;
 
-      if (checkYears.contains(year)) {
-        // Perform validation for specific years in the list
-        if (jid != null && doi != null) {
-          shouldEmit = doi.contains(jid);
+      if (yearStr != null) {
+        int year = Integer.parseInt(yearStr);
 
-          if (shouldEmit) {
-            log.debug3(String.format("Check Passed: doi %s contains jid %s", doi, jid));
+        // Logic: 2020 and forward (including 2026+) check both JID and Year.
+        //        2000 to 2019 check JID only.
+        if (year >= 2000) {
+          if (jid != null && doi != null) {
+            boolean containsJid = doi.contains(jid);
+            boolean containsYear = doi.contains(yearStr);
+
+            if (year >= 2020) {
+              // 2020-2026+ Requirement: Both JID and Year
+              shouldEmit = containsJid && containsYear;
+              log.debug3(String.format("Check (JID+Year) for %d: %b (doi: %s, jid: %s)", year, shouldEmit, doi, jid));
+            } else {
+              // 2000-2019 Requirement: JID only
+              shouldEmit = containsJid;
+              log.debug3(String.format("Check (JID only) for %d: %b (doi: %s, jid: %s)", year, shouldEmit, doi, jid));
+            }
           } else {
-            log.debug3(String.format("Check Failed: doi %s does not contain jid %s", doi, jid));
+            // Fail if metadata is missing for any year in the 2000-2026+ range
+            shouldEmit = false;
+            log.debug3("Check Failed: Missing DOI or JID for year " + year);
           }
-        } else {
-          // If year is in list but metadata is missing, fail the check
-          shouldEmit = false;
-          log.debug3("Check Failed: Missing DOI or JID for year " + year);
         }
       }
 
