@@ -28,7 +28,7 @@
 
       au < manifest ; 2005 ; The Chaucer Review Volume 40 ; 40 ; 2005 >
       au < manifest ; 2006 ; The Chaucer Review Volume 41 ; 41 ; 2006 >
-      au < manifest ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 >
+      au < ready ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 >
       au < released ; 2008 ; The Chaucer Review Volume 43 ; 43 ; 2008 >
       au < doNotProcess ; 2009 ; The Chaucer Review Volume 44 ; 44 ; 2009 >
       au < doNotProcess ; 2010 ; The Chaucer Review Volume 45 ; 45 ; 2010 >
@@ -235,8 +235,8 @@
       param[journal_id] = ils
       # 2009, 2010 volume numbers don't line up with years
 
-      au < manifest ; 2007 ; Interdisciplinary Literary Studies Volume 8 (2007) ; 8 ; 2007 >
-      au < manifest ; 2007 ; Interdisciplinary Literary Studies Volume 9 (2007) ; 9 ; 2007 >
+      au < ready ; 2007 ; Interdisciplinary Literary Studies Volume 8 (2007) ; 8 ; 2007 >
+      au < ready ; 2007 ; Interdisciplinary Literary Studies Volume 9 (2007) ; 9 ; 2007 >
       au < released ; 2008 ; Interdisciplinary Literary Studies Volume 9 (2008) ; 9 ; 2008 >
       au < released ; 2008 ; Interdisciplinary Literary Studies Volume 10 (2008) ; 10 ; 2008 >
       au < doNotProcess ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 10-11 ; 2009 >
@@ -470,7 +470,7 @@
       param[journal_id] = moravian-history
 
       au < manifest ; 2007 ; Journal of Moravian History Volume 2 ; 2 ; 2007 >
-      au < manifest ; 2007 ; Journal of Moravian History Volume 3 ; 3 ; 2007 >
+      au < ready ; 2007 ; Journal of Moravian History Volume 3 ; 3 ; 2007 >
       au < released ; 2008 ; Journal of Moravian History Volume 4 ; 4 ; 2008 >
       au < released ; 2008 ; Journal of Moravian History Volume 5 ; 5 ; 2008 >
       au < doNotProcess ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; 2009 >
@@ -1516,7 +1516,7 @@
 
       param[journal_id] = theological-interpretation
 
-      au < manifest ; 2007 ; Journal of Theological Interpretation Volume 1 ; 1 ; 2007 >
+      au < ready ; 2007 ; Journal of Theological Interpretation Volume 1 ; 1 ; 2007 >
       au < released ; 2008 ; Journal of Theological Interpretation Volume 2 ; 2 ; 2008 >
       au < released ; 2009 ; Journal of Theological Interpretation Volume 3 ; 3 ; 2009 >
       au < released ; 2010 ; Journal of Theological Interpretation Volume 4 ; 4 ; 2010 >
@@ -1628,9 +1628,9 @@
       au < manifest ; 2001 ; Resources for American Literary Study Volume 27 ; 27 ; 2001 >
       au < released ; 2002 ; Resources for American Literary Study Volume 28 ; 28 ; 2002 >
       au < manifest ; 2004 ; Resources for American Literary Study Volume 29 ; 29 ; 2004 >
-      au < manifest ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 >
+      au < ready ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 >
       au < manifest ; 2006 ; Resources for American Literary Study Volume 31 ; 31 ; 2006 >
-      au < manifest ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 >
+      au < ready ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 >
       au < released ; 2008 ; Resources for American Literary Study Volume 33 ; 33 ; 2008 >
       au < released ; 2009 ; Resources for American Literary Study Volume 34 ; 34 ; 2009 >
       au < released ; 2010 ; Resources for American Literary Study Volume 35 ; 35 ; 2010 >
@@ -2096,14 +2096,14 @@
       au < manifest ; 1997 ; Milton Studies Volume 35 ; 35 ; 1997 >
       au < manifest ; 1998 ; Milton Studies Volume 36 ; 36 ; 1998 >
       au < manifest ; 1999 ; Milton Studies Volume 37 ; 37 ; 1999 >
-      au < manifest ; 2000 ; Milton Studies Volume 38 ; 38 ; 2000 >
+      au < ready ; 2000 ; Milton Studies Volume 38 ; 38 ; 2000 >
       au < manifest ; 2000 ; Milton Studies Volume 39 ; 39 ; 2000 >
       au < manifest ; 2001 ; Milton Studies Volume 40 ; 40 ; 2001 >
       au < manifest ; 2002 ; Milton Studies Volume 41 ; 41 ; 2002 >
       au < manifest ; 2002 ; Milton Studies Volume 42 ; 42 ; 2002 >
-      au < manifest ; 2004 ; Milton Studies Volume 43 ; 43 ; 2004 >
+      au < ready ; 2004 ; Milton Studies Volume 43 ; 43 ; 2004 >
       au < manifest ; 2005 ; Milton Studies Volume 44 ; 44 ; 2005 >
-      au < manifest ; 2006 ; Milton Studies Volume 45 ; 45 ; 2006 >
+      au < ready ; 2006 ; Milton Studies Volume 45 ; 45 ; 2006 >
       au < manifest ; 2007 ; Milton Studies Volume 46 ; 46 ; 2007 >
       au < released ; 2008 ; Milton Studies Volume 47 ; 47 ; 2008 >
       au < released ; 2008 ; Milton Studies Volume 48 ; 48 ; 2008 >
@@ -2282,8 +2282,8 @@
       au < manifest ; 1998 ; Journal for the History of Rhetoric Volume 1 ; 1 ; 1998 >
       au < manifest ; 1999 ; Journal for the History of Rhetoric Volume 2 ; 2 ; 1999 >
       au < manifest ; 2000 ; Journal for the History of Rhetoric Volume 3 ; 3 ; 2000 >
-      au < manifest ; 2001 ; Journal for the History of Rhetoric Volume 4 ; 4 ; 2001 >
-      au < manifest ; 2002 ; Journal for the History of Rhetoric Volume 5 ; 5 ; 2002 >
+      au < ready ; 2001 ; Journal for the History of Rhetoric Volume 4 ; 4 ; 2001 >
+      au < ready ; 2002 ; Journal for the History of Rhetoric Volume 5 ; 5 ; 2002 >
       au < released ; 2003 ; Journal for the History of Rhetoric Volume 6 ; 6 ; 2003 >
       au < manifest ; 2004 ; Journal for the History of Rhetoric Volume 7 ; 7 ; 2004 >
       au < manifest ; 2005 ; Journal for the History of Rhetoric Volume 8 ; 8 ; 2005 >
@@ -2343,7 +2343,7 @@
 
       au < manifest ; 2001 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 4 ; 4 ; 2001 >
       au < manifest ; 2002 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 5 ; 5 ; 2002 >
-      au < manifest ; 2003 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 6 ; 6 ; 2003 >
+      au < ready ; 2003 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 6 ; 6 ; 2003 >
       au < manifest ; 2004 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 7 ; 7 ; 2004 >
       au < manifest ; 2005 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 8 ; 8 ; 2005 >
       au < manifest ; 2006 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 9 ; 9 ; 2006 >
@@ -2455,9 +2455,9 @@
       au < manifest ; 1998 ; Victorians Institute Journal Volume 26 ; 26 ; 1998 >
       au < manifest ; 1999 ; Victorians Institute Journal Volume 27 ; 27 ; 1999 >
       au < manifest ; 2000 ; Victorians Institute Journal Volume 28 ; 28 ; 2000 >
-      au < manifest ; 2001 ; Victorians Institute Journal Volume 29 ; 29 ; 2001 >
-      au < manifest ; 2002 ; Victorians Institute Journal Volume 30 ; 30 ; 2002 >
-      au < manifest ; 2003 ; Victorians Institute Journal Volume 31 ; 31 ; 2003 >
+      au < ready ; 2001 ; Victorians Institute Journal Volume 29 ; 29 ; 2001 >
+      au < ready ; 2002 ; Victorians Institute Journal Volume 30 ; 30 ; 2002 >
+      au < ready ; 2003 ; Victorians Institute Journal Volume 31 ; 31 ; 2003 >
       au < manifest ; 2004 ; Victorians Institute Journal Volume 32 ; 32 ; 2004 >
       au < manifest ; 2005 ; Victorians Institute Journal Volume 33 ; 33 ; 2005 >
       au < manifest ; 2006 ; Victorians Institute Journal Volume 34 ; 34 ; 2006 >
