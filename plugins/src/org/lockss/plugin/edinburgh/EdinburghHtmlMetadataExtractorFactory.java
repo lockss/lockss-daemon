@@ -33,6 +33,8 @@ POSSIBILITY OF SUCH DAMAGE.
 package org.lockss.plugin.edinburgh;
 
 import java.io.*;
+import java.util.Arrays;
+import java.util.List;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -119,21 +121,40 @@ public class EdinburghHtmlMetadataExtractorFactory
         IOUtil.safeClose(bReader);
       }
 
+      // Define the years that require validation
+      // 2026: Include all target years starting from 2010
+      List<Integer> checkYears = Arrays.asList(2025);
+
       String jid = cu.getArchivalUnit().getTdbAu().getParam("journal_id");
       String doi = am.get(MetadataField.DC_FIELD_IDENTIFIER);
       String yearStr = cu.getArchivalUnit().getTdbAu().getAttr("year");
       int year = Integer.parseInt(yearStr);
 
-      if (jid != null && doi != null  && year >= 2025) {
-        log.debug3(String.format("doi = %s, jid = %s, ", jid, doi));
-        if (doi.contains(jid)) {
-          log.debug3(String.format("doi = %s contains jid = %s", doi, jid));
+      // Default to true so that non-listed years "pass through"
+      boolean shouldEmit = true;
+
+      if (checkYears.contains(year)) {
+        // Perform validation for specific years in the list
+        if (jid != null && doi != null) {
+          shouldEmit = doi.contains(jid);
+
+          if (shouldEmit) {
+            log.debug3(String.format("Check Passed: doi %s contains jid %s", doi, jid));
+          } else {
+            log.debug3(String.format("Check Failed: doi %s does not contain jid %s", doi, jid));
+          }
         } else {
-          log.debug3(String.format("doi = %s does not contains jid = %s", doi, jid));
+          // If year is in list but metadata is missing, fail the check
+          shouldEmit = false;
+          log.debug3("Check Failed: Missing DOI or JID for year " + year);
         }
       }
 
-      emitter.emitMetadata(cu, am);
+      // Final action: only emit if the year passed the check or was not in the list
+      if (shouldEmit) {
+        emitter.emitMetadata(cu, am);
+      }
+
     }
   }
 }

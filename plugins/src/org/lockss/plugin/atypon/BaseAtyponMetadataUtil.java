@@ -50,6 +50,8 @@ import org.lockss.plugin.CachedUrl;
 import org.lockss.util.UrlUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.TypedEntryMap;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * This class contains useful routines to allow a metadata extractor to verify
@@ -397,25 +399,35 @@ public class BaseAtyponMetadataUtil {
       if (isEUP) {
         log.debug3("EUP Check:  Publisher Specific Checks for EUP");
 
-        // Check doi
+        // List of years that require the DOI/JID check
+        List<Integer> checkYears = Arrays.asList(2025);
+
         String eup_jid = tdbau.getParam("journal_id");
         String eup_year = tdbau.getAttr("year");
         String eup_doi = am.get(MetadataField.FIELD_DOI);
         int year = Integer.parseInt(eup_year);
 
-
         log.debug3(String.format("EUP Check: EUP doi = %s, jid = %s, eup_year = %s ", eup_jid, eup_doi, eup_year));
 
-        if (eup_jid != null && eup_doi != null && year >= 2025) {
-          log.debug3(String.format("EUP Check: EUP doi = %s, jid = %s ", eup_jid, eup_doi));
-          if (eup_doi.contains(eup_jid)) {
-            log.debug3(String.format("EUP Check: EUP doi = %s contains jid = %s", eup_doi, eup_jid));
-          } else {
-            log.debug3(String.format("EUP Check: EUP  doi = %s does not contains jid = %s", eup_doi, eup_jid));
+        // If the year is in our target list, apply the logic
+        if (checkYears.contains(year)) {
+          if (eup_doi != null && eup_jid != null) {
+            isInAu = eup_doi.contains(eup_jid);
+
+            if (isInAu) {
+              log.debug3(String.format("EUP Check: EUP doi = %s contains jid = %s", eup_doi, eup_jid));
+            } else {
+              log.debug3(String.format("EUP Check: EUP doi = %s does not contain jid = %s", eup_doi, eup_jid));
+            }
+          } else if (eup_doi == null) {
+            // If year is in list but DOI is missing, it fails the AU check
+            isInAu = false;
           }
         }
-        isInAu = eup_doi.contains(eup_jid);
+        // If the year is NOT in the list (e.g., 1998), the block is skipped
+        // and the inherited value of isInAu remains unchanged.
         return isInAu;
+
       }
     }
 
