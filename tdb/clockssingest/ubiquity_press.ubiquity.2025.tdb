@@ -246,7 +246,7 @@
       au < doesNotExist ; doesNotExist ; 2012 ; 16 ; Redescriptions Volume 2012 ; 16 ; 2012 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; >
       au < crawling ; down ; 2013 ; 16 ; Redescriptions Volume 2013 ; 2013 ; 16 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
       au < crawling ; down ; 2014 ; 17 ; Redescriptions Volume 2014 ; 2014 ; 17 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2015 ; 18 ; Redescriptions Volume 2015 ; 2015 ; 18 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest2.clockss.org:8085 >
+      au < ready ; exists ; 2015 ; 18 ; Redescriptions Volume 2015 ; 2015 ; 18 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2016 ; 19 ; Redescriptions Volume 2016 ; 2016 ; 19 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 20 ; Redescriptions Volume 2017 ; 2017 ; 20 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2018 ; 21 ; Redescriptions Volume 2018 ; 2018 ; 21 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ ; reingest3.clockss.org:8083 >
@@ -1209,9 +1209,9 @@
       au < finished ; finished ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; reingest5.clockss.org:8082 >
       au < superseded ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 [superseded] ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ ; >
-      au < manifest ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < manifest ; exists ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
-      au < manifest ; exists ; 2025 ; 22 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 22 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < ready ; exists ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < ready ; exists ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
+      au < ready ; exists ; 2025 ; 22 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 22 ; Ubiquity Press ;  ; https://jcms-journal.com/ ; >
 
   }
 
@@ -1652,7 +1652,7 @@
       au < superseded ; exists ; 2022 ; 17 ; Global Heart Volume 2022 [superseded] ; 2022 ; 17 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < doNotProcess ; exists ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ; 18 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; >
       au < finished ; manifest ; 2024 ; 19 ; Global Heart Volume 2024 ; 2024 ; 19 ; Ubiquity Press ;  ; https://globalheartjournal.com/ ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ; 403: https://storage.googleapis.com/jnl-up-j-gh-files/journals/1/articles/1421/67e521b0e7226.png from https://globalheartjournal.com/en/articles/1421 ; https://globalheartjournal.com/ ; >
+      au < ready ; exists ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ; 403: https://storage.googleapis.com/jnl-up-j-gh-files/journals/1/articles/1421/67e521b0e7226.png from https://globalheartjournal.com/en/articles/1421 ; https://globalheartjournal.com/ ; >
 
   }
 
@@ -2084,7 +2084,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 2 ; Ubiquity Proceedings Volume 2022 ; 2022 ; 2 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 3 ; Ubiquity Proceedings Volume 2023 ; 2023 ; 3 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
       au < frozen ; exists ; 2024 ; 4,5 ; Ubiquity Proceedings Volume 2024 ; 2024 ; 4,5 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
-      au < manifest ; exists ; 2025 ; 6 ; Ubiquity Proceedings Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
+      au < ready ; exists ; 2025 ; 6 ; Ubiquity Proceedings Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ ; >
 
   }
 
@@ -2389,7 +2389,7 @@
 
       au < frozen ; exists ; 2012 ; 1 ; Stability: International Journal of Security & Development Volume 2012 ; 2012 ; 1 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
       au < frozen ; exists ; 2013 ; 2 ; Stability: International Journal of Security & Development Volume 2013 ; 2013 ; 2 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
-      au < manifest ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; 3 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
+      au < ready ; exists ; 2014 ; 3 ; Stability: International Journal of Security & Development Volume 2014 ; 2014 ; 3 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ ; >
       au < finished ; finished ; 2015 ; 4 ; Stability: International Journal of Security & Development Volume 2015 ; 2015 ; 4 ; University of Bradford, Department of Peace Studies and International Development ;  ; http://www.stabilityjournal.org/ ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2016 ; 5 ; Stability: International Journal of Security & Development Volume 2016 ; 2016 ; 5 ; University of Bradford, Department of Peace Studies and International Development ;  ; http://www.stabilityjournal.org/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2017 ; 6 ; Stability: International Journal of Security & Development Volume 2017 ; 2017 ; 6 ; University of Bradford, Department of Peace Studies and International Development ;  ; http://www.stabilityjournal.org/ ; reingest3.clockss.org:8083 >
@@ -2723,7 +2723,7 @@
       au < doNotProcess ; doNotProcess ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; 3 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
       au < finished ; manifest ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ ; reingest1.clockss.org:8082 >
-      au < manifest ; exists ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
+      au < ready ; exists ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; University of East Anglia ;  ; https://newareastudies.com/ ; >
 
   }
 

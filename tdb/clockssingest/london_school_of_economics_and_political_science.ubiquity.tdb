@@ -133,8 +133,8 @@
       au < doNotProcess ; doNotProcess ; 2018 ; 18,19 ; Economía Volume 2018 ; 2018 ; 18,19 ; ; >
       au < doNotProcess ; doNotProcess ; 2019 ; 19,20 ; Economía Volume 2019 ; 2019 ; 19,20 ; ; >
       au < doNotProcess ; doNotProcess ; 2020 ; 20,21 ; Economía Volume 2020 ; 2020 ; 20,21 ; ; >
-      au < doNotProcess ; doNotProcess ; 2021 ; 22 ; Economía Volume 2021 ; 2021 ; 22 ; ; >
-      au < doesNotExist ; doesNotExist ; 2022 ; 21 ; Economía Volume 2022 ; 2022 ; 21 ; ; >
+      au < doNotProcess ; doNotProcess ; 2021 ; 21 ; Economía Volume 2021 ; 2021 ; 21 ; ; >
+      au < doesNotExist ; doesNotExist ; 2022 ; 0 ; Economía Volume 2022 ; 2022 ; 0 ; ; >
       au < doNotProcess ; doNotProcess ; 2023 ; 22 ; Economía Volume 2023 ; 2023 ; 22 ; ; >
       au < frozen ; exists ; 2024 ; 23 ; Economía Volume 2024 ; 2024 ; 23 ;  ; >
       au < crawling ; exists ; 2025 ; 24 ; Economía Volume 2025 ; 2025 ; 24 ;  ; >
