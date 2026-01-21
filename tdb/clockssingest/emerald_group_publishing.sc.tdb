@@ -11,7 +11,6 @@
   plugin = org.lockss.plugin.silverchair.emerald.ClockssEmeraldSilverchairPlugin
   param[base_url] = https://www.emerald.com/
   implicit < status ; status2 ; year ; param[year] ; name ; param[volume_name] ; hidden[proxy] >
-  #implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
     title <
