@@ -36,11 +36,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_identifier</string>
-        <string>org.lockss.plugin.silverchair.rsc.RoyalSocietyPublishingSilverchairJournalsPlugin</string>
+        <string>org.lockss.plugin.silverchair.rsp.RoyalSocietyPublishingSilverchairJournalsPlugin</string>
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -57,6 +57,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_name</string>
         <string>"Royal Society Publishing Journals Plugin, Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <list>
+            <string>"%s%s/issue/browse-by-year/%d", base_url, journal_id, year</string>
+        </list>
     </entry>
     <entry>
         <string>au_def_new_content_crawl</string>
