@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>29</string>
+        <string>30</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -178,6 +178,7 @@
             <string>1,"^https?://(ucp\.silverchair-cdn\.com)/"</string>
             <string>1,"^https?://(watermark\.silverchair\.com)/"</string>
             <string>1,"^https?://(ajot2\.silverchair-cdn\.com)/"</string>
+            <string>1,"^https?://(trs\.silverchair-cdn\.com)/"</string>
             <!--Allow movies from CDN/Subdomain goes through, company of biologies need to collect movies-->
             <!--https://journals.biologists.com/jcs/article/135/18/jcs259657/276793/Mitotic-spindle-disassembly-in-human-cells-relies-->
             <string>1,"^https?://movie\.biologists\.com/video/"</string>
@@ -304,6 +305,7 @@
             <string>movie\.biologists\.com</string>
             <string>movie-usa\.glencoesoftware\.com</string>
             <string>static-movie-usa\.glencoesoftware\.com</string>
+            <string>trs\.silverchair-cdn\.com/</string>
         </list>
     </entry>
     <entry>
