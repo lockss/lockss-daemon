@@ -7,7 +7,7 @@
     #moved to Atypon in 2019; SC in 2025
 
 
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.silverchair.rsc.RoyalSocietyPublishingSilverchairJournalsPlugin
     #plugin = org.lockss.plugin.silverchair.emerald.ClockssEmeraldSilverchairPlugin
     param[base_url] = https://royalsocietypublishing.org/
     implicit < status ; year ; param[year] ; name ; param[volume_name] >
