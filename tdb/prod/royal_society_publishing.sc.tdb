@@ -7,8 +7,8 @@
     #moved to Atypon in 2019; SC in 2025
 
 
-    #plugin = needs.plugin
-    plugin = org.lockss.plugin.silverchair.emerald.ClockssEmeraldSilverchairPlugin
+    plugin = needs.plugin
+    #plugin = org.lockss.plugin.silverchair.emerald.ClockssEmeraldSilverchairPlugin
     param[base_url] = https://royalsocietypublishing.org/
     implicit < status ; year ; param[year] ; name ; param[volume_name] >
     #doNotProcess = processed in Highwire & Atypon
@@ -156,7 +156,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Biology Letters Volume 18 ; 18 >
     au < doNotProcess ; 2023 ; 2023 ; Biology Letters Volume 19 ; 19 >
     au < doNotProcess ; 2024 ; 2024 ; Biology Letters Volume 20 ; 20 >
-    au < exists ; 2025 ; 2025 ; Biology Letters Volume 21 ; 21 >
+    au < manifest ; 2025 ; 2025 ; Biology Letters Volume 21 ; 21 >
 
   }
 
@@ -189,7 +189,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Interface Focus Volume 12 ; 12 >
     au < doNotProcess ; 2023 ; 2023 ; Interface Focus Volume 13 ; 13 >
     au < doNotProcess ; 2024 ; 2024 ; Interface Focus Volume 14 ; 14 >
-    au < exists ; 2025 ; 2025 ; Interface Focus Volume 15 ; 15 >
+    au < manifest ; 2025 ; 2025 ; Interface Focus Volume 15 ; 15 >
 
   }
 
@@ -227,7 +227,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Journal of the Royal Society Interface Volume 19 ; 19 >
     au < doNotProcess ; 2023 ; 2023 ; Journal of the Royal Society Interface Volume 20 ; 20 >
     au < doNotProcess ; 2024 ; 2024 ; Journal of the Royal Society Interface Volume 21 ; 21 >
-    au < exists ; 2025 ; 2025 ; Journal of the Royal Society Interface Volume 22 ; 22 >
+    au < manifest ; 2025 ; 2025 ; Journal of the Royal Society Interface Volume 22 ; 22 >
 
   }
 
@@ -337,7 +337,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Notes and Records the Royal Society Journal of the History of Science Volume 76 ; 76 >
     au < doNotProcess ; 2023 ; 2023 ; Notes and Records the Royal Society Journal of the History of Science Volume 77 ; 77 >
     au < doNotProcess ; 2024 ; 2024 ; Notes and Records the Royal Society Journal of the History of Science Volume 78 ; 78 >
-    au < exists ; 2025 ; 2025 ; Notes and Records the Royal Society Journal of the History of Science Volume 79 ; 79 >
+    au < manifest ; 2025 ; 2025 ; Notes and Records the Royal Society Journal of the History of Science Volume 79 ; 79 >
 
     }
   }
@@ -369,7 +369,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Open Biology Volume 12 ; 12 >
     au < doNotProcess ; 2023 ; 2023 ; Open Biology Volume 13 ; 13 >
     au < doNotProcess ; 2024 ; 2024 ; Open Biology Volume 14 ; 14 >
-    au < exists ; 2025 ; 2025 ; Open Biology Volume 15 ; 15 >
+    au < manifest ; 2025 ; 2025 ; Open Biology Volume 15 ; 15 >
 
   }
   
@@ -613,7 +613,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 380 ; 380 >
     au < doNotProcess ; 2023 ; 2023 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 381 ; 381 >
     au < doNotProcess ; 2024 ; 2024 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 382 ; 382 >
-    au < exists ; 2025 ; 2025 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 383 ; 383 >
+    au < manifest ; 2025 ; 2025 ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 383 ; 383 >
     }
   }
 
@@ -859,7 +859,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 377 ; 377 >
     au < doNotProcess ; 2023 ; 2023 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 378 ; 378 >
     au < doNotProcess ; 2024 ; 2024 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 379 ; 379 >
-    au < exists ; 2025 ; 2025 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 380 ; 380 >
+    au < manifest ; 2025 ; 2025 ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 380 ; 380 >
     }
   }
 
@@ -1067,13 +1067,13 @@
 
     param[journal_id] = rscl
 
-    au < exists ; 1679 ; 1679 ; Philosophical Collections of the Royal Society of London Volume 1 ; 1 >
-    au < exists ; 1681 ; 1681 ; Philosophical Collections of the Royal Society of London Volume 2 ; 2 >
-    au < exists ; 1681 ; 1681 ; Philosophical Collections of the Royal Society of London Volume 3 ; 3 >
-    au < exists ; 1682 ; 1682 ; Philosophical Collections of the Royal Society of London Volume 4 ; 4 >
-    au < exists ; 1682 ; 1682 ; Philosophical Collections of the Royal Society of London Volume 5 ; 5 >
-    au < exists ; 1682 ; 1682 ; Philosophical Collections of the Royal Society of London Volume 6 ; 6 >
-    au < exists ; 1682 ; 1682 ; Philosophical Collections of the Royal Society of London Volume 7 ; 7 >
+    au < manifest ; 1679 ; 1679 ; Philosophical Collections of the Royal Society of London Volume 1 ; 1 >
+    au < manifest ; 1681 ; 1681 ; Philosophical Collections of the Royal Society of London Volume 2 ; 2 >
+    au < manifest ; 1681 ; 1681 ; Philosophical Collections of the Royal Society of London Volume 3 ; 3 >
+    au < manifest ; 1682 ; 1682 ; Philosophical Collections of the Royal Society of London Volume 4 ; 4 >
+    au < manifest ; 1682 ; 1682 ; Philosophical Collections of the Royal Society of London Volume 5 ; 5 >
+    au < manifest ; 1682 ; 1682 ; Philosophical Collections of the Royal Society of London Volume 6 ; 6 >
+    au < manifest ; 1682 ; 1682 ; Philosophical Collections of the Royal Society of London Volume 7 ; 7 >
 
   }
 
@@ -1518,7 +1518,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 478 ; 478 >
     au < doNotProcess ; 2023 ; 2023 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 479 ; 479 >
     au < doNotProcess ; 2024 ; 2024 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 480 ; 480 >
-    au < exists ; 2025 ; 2025 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 481 ; 481 >
+    au < manifest ; 2025 ; 2025 ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 481 ; 481 >
 
     }
   }
@@ -1771,7 +1771,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Proceedings of the Royal Society B: Biological Sciences Volume 289 ; 289 >
     au < doNotProcess ; 2023 ; 2023 ; Proceedings of the Royal Society B: Biological Sciences Volume 290 ; 290 >
     au < doNotProcess ; 2024 ; 2024 ; Proceedings of the Royal Society B: Biological Sciences Volume 291 ; 291 >
-    au < exists ; 2025 ; 2025 ; Proceedings of the Royal Society B: Biological Sciences Volume 292 ; 292 >
+    au < manifest ; 2025 ; 2025 ; Proceedings of the Royal Society B: Biological Sciences Volume 292 ; 292 >
 
     }
   }
@@ -1895,7 +1895,7 @@
     au < doNotProcess ; 2022 ; 2022 ; Royal Society Open Science Volume 9 ; 9 >
     au < doNotProcess ; 2023 ; 2023 ; Royal Society Open Science Volume 10 ; 10 >
     au < doNotProcess ; 2024 ; 2024 ; Royal Society Open Science Volume 11 ; 11 >
-    au < exists ; 2025 ; 2025 ; Royal Society Open Science Volume 12 ; 12 >
+    au < manifest ; 2025 ; 2025 ; Royal Society Open Science Volume 12 ; 12 >
 
   }
 
