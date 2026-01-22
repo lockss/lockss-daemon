@@ -1901,8 +1901,8 @@
 
       param[au_oai_set] = pdm
 
-      au < manifest ; 2023 ; 2023 ; Problems of Dental Medicine Volume 2023 ; 2023 ; https://pdm.pensoft.net/ >
-      au < manifest ; 2024 ; 2024 ; Problems of Dental Medicine Volume 2024 ; 2024 ; https://pdm.pensoft.net/ >
+      au < ready ; 2023 ; 2023 ; Problems of Dental Medicine Volume 2023 ; 2023 ; https://pdm.pensoft.net/ >
+      au < ready ; 2024 ; 2024 ; Problems of Dental Medicine Volume 2024 ; 2024 ; https://pdm.pensoft.net/ >
       au < manifest ; 2025 ; 2025 ; Problems of Dental Medicine Volume 2025 ; 2025 ; https://pdm.pensoft.net/ >
 
   }
@@ -1948,7 +1948,7 @@
 
       param[au_oai_set] = soils4europe
 
-      au < manifest ; 2024 ; 2024 ; Soils for Europe Volume 2024 ; 2024 ; https://journal.soils4europe.eu/ >
+      au < ready ; 2024 ; 2024 ; Soils for Europe Volume 2024 ; 2024 ; https://journal.soils4europe.eu/ >
       au < manifest ; 2025 ; 2025 ; Soils for Europe Volume 2025 ; 2025 ; https://journal.soils4europe.eu/ >
 
   }
@@ -1970,21 +1970,21 @@
       au < manifest ; 2007 ; 2007 ; Swiss Journal of Geosciences Volume 2007 ; 2007 ; https://sjg.pensoft.net/ >
       au < manifest ; 2008 ; 2008 ; Swiss Journal of Geosciences Volume 2008 ; 2008 ; https://sjg.pensoft.net/ >
       au < manifest ; 2009 ; 2009 ; Swiss Journal of Geosciences Volume 2009 ; 2009 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2010 ; 2010 ; Swiss Journal of Geosciences Volume 2010 ; 2010 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2011 ; 2011 ; Swiss Journal of Geosciences Volume 2011 ; 2011 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2012 ; 2012 ; Swiss Journal of Geosciences Volume 2012 ; 2012 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2013 ; 2013 ; Swiss Journal of Geosciences Volume 2013 ; 2013 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2014 ; 2014 ; Swiss Journal of Geosciences Volume 2014 ; 2014 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2015 ; 2015 ; Swiss Journal of Geosciences Volume 2015 ; 2015 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2016 ; 2016 ; Swiss Journal of Geosciences Volume 2016 ; 2016 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2017 ; 2017 ; Swiss Journal of Geosciences Volume 2017 ; 2017 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2018 ; 2018 ; Swiss Journal of Geosciences Volume 2018 ; 2018 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2019 ; 2019 ; Swiss Journal of Geosciences Volume 2019 ; 2019 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2020 ; 2020 ; Swiss Journal of Geosciences Volume 2020 ; 2020 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2021 ; 2021 ; Swiss Journal of Geosciences Volume 2021 ; 2021 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Swiss Journal of Geosciences Volume 2022 ; 2022 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2023 ; 2023 ; Swiss Journal of Geosciences Volume 2023 ; 2023 ; https://sjg.pensoft.net/ >
-      au < manifest ; 2024 ; 2024 ; Swiss Journal of Geosciences Volume 2024 ; 2024 ; https://sjg.pensoft.net/ >
+      au < ready ; 2010 ; 2010 ; Swiss Journal of Geosciences Volume 2010 ; 2010 ; https://sjg.pensoft.net/ >
+      au < ready ; 2011 ; 2011 ; Swiss Journal of Geosciences Volume 2011 ; 2011 ; https://sjg.pensoft.net/ >
+      au < ready ; 2012 ; 2012 ; Swiss Journal of Geosciences Volume 2012 ; 2012 ; https://sjg.pensoft.net/ >
+      au < ready ; 2013 ; 2013 ; Swiss Journal of Geosciences Volume 2013 ; 2013 ; https://sjg.pensoft.net/ >
+      au < ready ; 2014 ; 2014 ; Swiss Journal of Geosciences Volume 2014 ; 2014 ; https://sjg.pensoft.net/ >
+      au < ready ; 2015 ; 2015 ; Swiss Journal of Geosciences Volume 2015 ; 2015 ; https://sjg.pensoft.net/ >
+      au < ready ; 2016 ; 2016 ; Swiss Journal of Geosciences Volume 2016 ; 2016 ; https://sjg.pensoft.net/ >
+      au < ready ; 2017 ; 2017 ; Swiss Journal of Geosciences Volume 2017 ; 2017 ; https://sjg.pensoft.net/ >
+      au < ready ; 2018 ; 2018 ; Swiss Journal of Geosciences Volume 2018 ; 2018 ; https://sjg.pensoft.net/ >
+      au < ready ; 2019 ; 2019 ; Swiss Journal of Geosciences Volume 2019 ; 2019 ; https://sjg.pensoft.net/ >
+      au < ready ; 2020 ; 2020 ; Swiss Journal of Geosciences Volume 2020 ; 2020 ; https://sjg.pensoft.net/ >
+      au < ready ; 2021 ; 2021 ; Swiss Journal of Geosciences Volume 2021 ; 2021 ; https://sjg.pensoft.net/ >
+      au < ready ; 2022 ; 2022 ; Swiss Journal of Geosciences Volume 2022 ; 2022 ; https://sjg.pensoft.net/ >
+      au < ready ; 2023 ; 2023 ; Swiss Journal of Geosciences Volume 2023 ; 2023 ; https://sjg.pensoft.net/ >
+      au < ready ; 2024 ; 2024 ; Swiss Journal of Geosciences Volume 2024 ; 2024 ; https://sjg.pensoft.net/ >
       au < manifest ; 2025 ; 2025 ; Swiss Journal of Geosciences Volume 2025 ; 2025 ; https://sjg.pensoft.net/ >
 
   }
@@ -2000,21 +2000,21 @@
 
       param[au_oai_set] = sjp
 
-      au < manifest ; 2010 ; 2010 ; Swiss Journal of Palaeontology Volume 2010 ; 2010 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2011 ; 2011 ; Swiss Journal of Palaeontology Volume 2011 ; 2011 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2012 ; 2012 ; Swiss Journal of Palaeontology Volume 2012 ; 2012 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2013 ; 2013 ; Swiss Journal of Palaeontology Volume 2013 ; 2013 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2014 ; 2014 ; Swiss Journal of Palaeontology Volume 2014 ; 2014 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2015 ; 2015 ; Swiss Journal of Palaeontology Volume 2015 ; 2015 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2016 ; 2016 ; Swiss Journal of Palaeontology Volume 2016 ; 2016 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2017 ; 2017 ; Swiss Journal of Palaeontology Volume 2017 ; 2017 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2018 ; 2018 ; Swiss Journal of Palaeontology Volume 2018 ; 2018 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2019 ; 2019 ; Swiss Journal of Palaeontology Volume 2019 ; 2019 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2020 ; 2020 ; Swiss Journal of Palaeontology Volume 2020 ; 2020 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2021 ; 2021 ; Swiss Journal of Palaeontology Volume 2021 ; 2021 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2022 ; 2022 ; Swiss Journal of Palaeontology Volume 2022 ; 2022 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2023 ; 2023 ; Swiss Journal of Palaeontology Volume 2023 ; 2023 ; https://sjp.pensoft.net/ >
-      au < manifest ; 2024 ; 2024 ; Swiss Journal of Palaeontology Volume 2024 ; 2024 ; https://sjp.pensoft.net/ >
+      au < ready ; 2010 ; 2010 ; Swiss Journal of Palaeontology Volume 2010 ; 2010 ; https://sjp.pensoft.net/ >
+      au < ready ; 2011 ; 2011 ; Swiss Journal of Palaeontology Volume 2011 ; 2011 ; https://sjp.pensoft.net/ >
+      au < ready ; 2012 ; 2012 ; Swiss Journal of Palaeontology Volume 2012 ; 2012 ; https://sjp.pensoft.net/ >
+      au < ready ; 2013 ; 2013 ; Swiss Journal of Palaeontology Volume 2013 ; 2013 ; https://sjp.pensoft.net/ >
+      au < ready ; 2014 ; 2014 ; Swiss Journal of Palaeontology Volume 2014 ; 2014 ; https://sjp.pensoft.net/ >
+      au < ready ; 2015 ; 2015 ; Swiss Journal of Palaeontology Volume 2015 ; 2015 ; https://sjp.pensoft.net/ >
+      au < ready ; 2016 ; 2016 ; Swiss Journal of Palaeontology Volume 2016 ; 2016 ; https://sjp.pensoft.net/ >
+      au < ready ; 2017 ; 2017 ; Swiss Journal of Palaeontology Volume 2017 ; 2017 ; https://sjp.pensoft.net/ >
+      au < ready ; 2018 ; 2018 ; Swiss Journal of Palaeontology Volume 2018 ; 2018 ; https://sjp.pensoft.net/ >
+      au < ready ; 2019 ; 2019 ; Swiss Journal of Palaeontology Volume 2019 ; 2019 ; https://sjp.pensoft.net/ >
+      au < ready ; 2020 ; 2020 ; Swiss Journal of Palaeontology Volume 2020 ; 2020 ; https://sjp.pensoft.net/ >
+      au < ready ; 2021 ; 2021 ; Swiss Journal of Palaeontology Volume 2021 ; 2021 ; https://sjp.pensoft.net/ >
+      au < ready ; 2022 ; 2022 ; Swiss Journal of Palaeontology Volume 2022 ; 2022 ; https://sjp.pensoft.net/ >
+      au < ready ; 2023 ; 2023 ; Swiss Journal of Palaeontology Volume 2023 ; 2023 ; https://sjp.pensoft.net/ >
+      au < ready ; 2024 ; 2024 ; Swiss Journal of Palaeontology Volume 2024 ; 2024 ; https://sjp.pensoft.net/ >
       au < manifest ; 2025 ; 2025 ; Swiss Journal of Palaeontology Volume 2025 ; 2025 ; https://sjp.pensoft.net/ >
 
   }
