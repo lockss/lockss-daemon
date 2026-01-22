@@ -67,7 +67,7 @@
       au < doNotProcess ; 2022 ; 7 ; ARENA Journal of Architectural Research Volume 2022 ; 2022 ; 7 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ >
       au < doNotProcess ; 2023 ; 8 ; ARENA Journal of Architectural Research Volume 2023 ; 2023 ; 8 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ >
       au < released ; 2024 ; 9 ; ARENA Journal of Architectural Research Volume 2024 ; 2024 ; 9 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ >
-      au < ready ; 2025 ; 10 ; ARENA Journal of Architectural Research Volume 2025 ; 2025 ; 10 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ >
+      au < releasing ; 2025 ; 10 ; ARENA Journal of Architectural Research Volume 2025 ; 2025 ; 10 ; ARENA architectural research network ;  ; https://ajar.arena-architecture.eu/ >
 
   }
 
@@ -130,7 +130,7 @@
       au < doNotProcess ; 2022 ; 3 ; Steiner Studies Volume 2022 ; 2022 ; 3 ; frommann-holzboog ;  ; https://steiner-studies.org/ >
       au < doNotProcess ; 2023 ; 4 ; Steiner Studies Volume 2023 ; 2023 ; 4 ; frommann-holzboog ;  ; https://steiner-studies.org/ >
       au < released ; 2024 ; 5 ; Steiner Studies Volume 2024 ; 2024 ; 5 ; frommann-holzboog ;  ; https://steiner-studies.org/ >
-      au < ready ; 2025 ; 6 ; Steiner Studies Volume 2025 ; 2025 ; 6 ; frommann-holzboog ;  ; https://steiner-studies.org/ >
+      au < releasing ; 2025 ; 6 ; Steiner Studies Volume 2025 ; 2025 ; 6 ; frommann-holzboog ;  ; https://steiner-studies.org/ >
 
   }
 
@@ -147,7 +147,7 @@
       nondefparam[journal_id] = kitl-j-hs
 
       au < released ; 2024 ; 1 ; Hydrogen Safety Volume 2024 ; 2024 ; 1 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ >
-      au < ready ; 2025 ; 2 ; Hydrogen Safety Volume 2025 ; 2025 ; 2 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ >
+      au < releasing ; 2025 ; 2 ; Hydrogen Safety Volume 2025 ; 2025 ; 2 ; KIT Scientific Publishing ;  ; https://hysafejournal.org/ >
 
   }
 
@@ -180,7 +180,7 @@
       au < doNotProcess ; 2022 ; 59 ; Estetika: The European Journal of Aesthetics Volume 2022 ; 2022 ; 59 ; Helsinki University Press ;  ; https://estetikajournal.org/ >
       au < doNotProcess ; 2023 ; 60 ; Estetika: The European Journal of Aesthetics Volume 2023 ; 2023 ; 60 ; Helsinki University Press ;  ; https://estetikajournal.org/ >
       au < released ; 2024 ; 61 ; Estetika: The European Journal of Aesthetics Volume 2024 ; 2024 ; 61 ; Helsinki University Press ;  ; https://estetikajournal.org/ >
-      au < ready ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ;  ; https://estetikajournal.org/ >
+      au < releasing ; 2025 ; 62 ; Estetika: The European Journal of Aesthetics Volume 2025 ; 2025 ; 62 ; Helsinki University Press ;  ; https://estetikajournal.org/ >
   }
 
   {
@@ -209,7 +209,7 @@
       au < doNotProcess ; 2022 ; 12 ; Nordic Journal of Migration Research Volume 2022 ; 2022 ; 12 ; Helsinki University Press ;  ; https://journal-njmr.org/ >
       au < doNotProcess ; 2023 ; 13 ; Nordic Journal of Migration Research Volume 2023 ; 2023 ; 13 ; Helsinki University Press ;  ; https://journal-njmr.org/ >
       au < released ; 2024 ; 14 ; Nordic Journal of Migration Research Volume 2024 ; 2024 ; 14 ; Helsinki University Press ;  ; https://journal-njmr.org/ >
-      au < ready ; 2025 ; 15 ; Nordic Journal of Migration Research Volume 2025 ; 2025 ; 15 ; Helsinki University Press ;  ; https://journal-njmr.org/ >
+      au < releasing ; 2025 ; 15 ; Nordic Journal of Migration Research Volume 2025 ; 2025 ; 15 ; Helsinki University Press ;  ; https://journal-njmr.org/ >
   }
 
   {
@@ -243,7 +243,7 @@
       au < doesNotExist ; 2012 ; 16 ; Redescriptions Volume 2012 ; 16 ; 2012 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
       au < released ; 2013 ; 16 ; Redescriptions Volume 2013 ; 2013 ; 16 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
       au < released ; 2014 ; 17 ; Redescriptions Volume 2014 ; 2014 ; 17 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
-      au < ready ; 2015 ; 18 ; Redescriptions Volume 2015 ; 2015 ; 18 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
+      au < releasing ; 2015 ; 18 ; Redescriptions Volume 2015 ; 2015 ; 18 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
       au < released ; 2016 ; 19 ; Redescriptions Volume 2016 ; 2016 ; 19 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
       au < released ; 2017 ; 20 ; Redescriptions Volume 2017 ; 2017 ; 20 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
       au < released ; 2018 ; 21 ; Redescriptions Volume 2018 ; 2018 ; 21 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
@@ -253,7 +253,7 @@
       au < released ; 2022 ; 25 ; Redescriptions Volume 2022 ; 2022 ; 25 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
       au < doNotProcess ; 2023 ; 26 ; Redescriptions Volume 2023 ; 2023 ; 26 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
       au < released ; 2024 ; 27 ; Redescriptions Volume 2024 ; 2024 ; 27 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
-      au < ready ; 2025 ; 28 ; Redescriptions Volume 2025 ; 2025 ; 28 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
+      au < releasing ; 2025 ; 28 ; Redescriptions Volume 2025 ; 2025 ; 28 ; Helsinki University Press ;  ; https://journal-redescriptions.org/ >
 
   }
 
@@ -280,7 +280,7 @@
       au < down ; 2022 ; 9 ; Modern Languages Open Volume 2022 ; 2022 ; 9 ; Liverpool University Press ;  ; https://www.modernlanguagesopen.org/ >
       au < doNotProcess ; 2023 ; 10 ; Modern Languages Open Volume 2023 ; 2023 ; 10 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ >
       au < released ; 2024 ; 11 ; Modern Languages Open Volume 2024 ; 2024 ; 11 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ >
-      au < ready ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ >
+      au < releasing ; 2025 ; 12 ; Modern Languages Open Volume 2025 ; 2025 ; 12 ; Liverpool University Press ;  ; https://modernlanguagesopen.org/ >
 
   }
 
@@ -313,7 +313,7 @@
       au < down ; 2021 ; 13 ; Designs for Learning Volume 2021 ; 2021 ; 13 ; Stockholm University Press ;  ; https://www.designsforlearning.nu/ >
       au < doNotProcess ; 2022 ; 14 ; Designs for Learning Volume 2022 ; 2022 ; 14 ; Stockholm University Press ;  ; https://designsforlearning.nu/ >
       au < doNotProcess ; 2023 ; 15 ; Designs for Learning Volume 2024 ; 2023 ; 15 ; Stockholm University Press ;  ; https://designsforlearning.nu/ >
-      au < ready ; 2025 ; 16 ; Designs for Learning Volume 2025 ; 2025 ; 16 ; Stockholm University Press ;  ; https://designsforlearning.nu/ >
+      au < releasing ; 2025 ; 16 ; Designs for Learning Volume 2025 ; 2025 ; 16 ; Stockholm University Press ;  ; https://designsforlearning.nu/ >
 
   }
 
@@ -334,7 +334,7 @@
       au < doNotProcess ; 2022 ; 3 ; Nordic Journal of Transitions, Careers and Guidance Volume 2022 ; 2022 ; 3 ; Stockholm University Press ;  ; https://njtcg.org/ >
       au < doNotProcess ; 2023 ; 4 ; Nordic Journal of Transitions, Careers and Guidance Volume 2023 ; 2023 ; 4 ; Stockholm University Press ;  ; https://njtcg.org/ >
       au < released ; 2024 ; 5 ; Nordic Journal of Transitions, Careers and Guidance Volume 2024 ; 2024 ; 5 ; Stockholm University Press ;  ; https://njtcg.org/ >
-      au < ready ; 2025 ; 6 ; Nordic Journal of Transitions, Careers and Guidance Volume 2025 ; 2025 ; 6 ; Stockholm University Press ;  ; https://njtcg.org/ >
+      au < releasing ; 2025 ; 6 ; Nordic Journal of Transitions, Careers and Guidance Volume 2025 ; 2025 ; 6 ; Stockholm University Press ;  ; https://njtcg.org/ >
 
   }
 
@@ -361,7 +361,7 @@
       au < doNotProcess ; 2022 ; 9 ; Rural Landscapes: Society, Environment, History Volume 2022 ; 2022 ; 9 ; Stockholm University Press ;  ; https://www.rurallandscapesjournal.com/ >
       au < doNotProcess ; 2023 ; 10 ; Rural Landscapes: Society, Environment, History Volume 2023 ; 2023 ; 10 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
       au < released ; 2024 ; 11 ; Rural Landscapes: Society, Environment, History Volume 2024 ; 2024 ; 11 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
-      au < ready ; 2025 ; 12 ; Rural Landscapes: Society, Environment, History Volume 2025 ; 2025 ; 12 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
+      au < releasing ; 2025 ; 12 ; Rural Landscapes: Society, Environment, History Volume 2025 ; 2025 ; 12 ; Stockholm University Press ;  ; https://rurallandscapesjournal.com/ >
 
   }
 
@@ -430,7 +430,7 @@
       au < down ; 2022 ; 7 ; Scandinavian Journal of Work and Organizational Psychology Volume 2022 ; 2022 ; 7 ; Stockholm University Press ;  ; https://www.sjwop.com/ >
       au < doNotProcess ; 2023 ; 8 ; Scandinavian Journal of Work and Organizational Psychology Volume 2023 ; 2023 ; 8 ; Stockholm University Press ;  ; https://sjwop.com/ >
       au < released ; 2024 ; 9 ; Scandinavian Journal of Work and Organizational Psychology Volume 2024 ; 2024 ; 9 ; Stockholm University Press ;  ; https://sjwop.com/ >
-      au < ready ; 2025 ; 10 ; Scandinavian Journal of Work and Organizational Psychology Volume 2025 ; 2025 ; 10 ; Stockholm University Press ;  ; https://sjwop.com/ >
+      au < releasing ; 2025 ; 10 ; Scandinavian Journal of Work and Organizational Psychology Volume 2025 ; 2025 ; 10 ; Stockholm University Press ;  ; https://sjwop.com/ >
 
   }
 
@@ -472,7 +472,7 @@
       au < doNotProcess ; 2022 ; 51 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2022 ; 2022 ; 51 ; Stockholm University Press ;  ; https://iberoamericana.se/ >
       au < doNotProcess ; 2023 ; 52 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2023 ; 2023 ; 52 ; Stockholm University Press ;  ; https://iberoamericana.se/ >
       au < released ; 2024 ; 53 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2024 ; 2024 ; 53 ; Stockholm University Press ;  ; https://iberoamericana.se/ >
-      au < ready ; 2025 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 54 ; Stockholm University Press ;  ; https://iberoamericana.se/ >
+      au < releasing ; 2025 ; 54 ; Iberoamericana - Nordic Journal of Latin American and Caribbean Studies Volume 2025 ; 2025 ; 54 ; Stockholm University Press ;  ; https://iberoamericana.se/ >
 
   }
   {
@@ -494,7 +494,7 @@
       au < doNotProcess ; 2022 ; 5 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2022 ; 2022 ; 5 ; Stockholm University Press ;  ; https://franorfon.org/ >
       au < doNotProcess ; 2023 ; 6 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2023 ; 2023 ; 6 ; Stockholm University Press ;  ; https://franorfon.org/ >
       au < released ; 2024 ; 7 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2024 ; 2024 ; 7 ; Stockholm University Press ;  ; https://franorfon.org/ >
-      au < ready ; 2025 ; 8 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2025 ; 2025 ; 8 ; Stockholm University Press ;  ; https://franorfon.org/ >
+      au < releasing ; 2025 ; 8 ; Nordic Journal of Francophone Studies/ Revue nordique des études francophones Volume 2025 ; 2025 ; 8 ; Stockholm University Press ;  ; https://franorfon.org/ >
 
   }
 
@@ -511,25 +511,25 @@
       nondefparam[journal_id] = su-j-tadmo
       #2000-2016 processed under the publisher Co-action.
 
-      au < ready ; 1949 ; 1 ; Tellus Volume 1949 ; 1949 ; 1 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1950 ; 2 ; Tellus Volume 1950 ; 1950 ; 2 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1951 ; 3 ; Tellus Volume 1951 ; 1951 ; 3 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1952 ; 4 ; Tellus Volume 1952 ; 1952 ; 4 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1953 ; 5 ; Tellus Volume 1953 ; 1953 ; 5 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1954 ; 6 ; Tellus Volume 1954 ; 1954 ; 6 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1955 ; 7 ; Tellus Volume 1955 ; 1955 ; 7 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1956 ; 8 ; Tellus Volume 1956 ; 1956 ; 8 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1957 ; 9 ; Tellus Volume 1957 ; 1957 ; 9 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1958 ; 10 ; Tellus Volume 1958 ; 1958 ; 10 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1959 ; 11 ; Tellus Volume 1959 ; 1959 ; 11 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1960 ; 12 ; Tellus Volume 1960 ; 1960 ; 12 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1961 ; 13 ; Tellus Volume 1961 ; 1961 ; 13 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1962 ; 14 ; Tellus Volume 1962 ; 1962 ; 14 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1963 ; 15 ; Tellus Volume 1963 ; 1963 ; 15 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1964 ; 16 ; Tellus Volume 1964 ; 1964 ; 16 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1965 ; 17 ; Tellus Volume 1965 ; 1965 ; 17 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1966 ; 18 ; Tellus Volume 1966 ; 1966 ; 18 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1967 ; 19 ; Tellus Volume 1967 ; 1967 ; 19 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1949 ; 1 ; Tellus Volume 1949 ; 1949 ; 1 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1950 ; 2 ; Tellus Volume 1950 ; 1950 ; 2 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1951 ; 3 ; Tellus Volume 1951 ; 1951 ; 3 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1952 ; 4 ; Tellus Volume 1952 ; 1952 ; 4 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1953 ; 5 ; Tellus Volume 1953 ; 1953 ; 5 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1954 ; 6 ; Tellus Volume 1954 ; 1954 ; 6 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1955 ; 7 ; Tellus Volume 1955 ; 1955 ; 7 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1956 ; 8 ; Tellus Volume 1956 ; 1956 ; 8 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1957 ; 9 ; Tellus Volume 1957 ; 1957 ; 9 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1958 ; 10 ; Tellus Volume 1958 ; 1958 ; 10 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1959 ; 11 ; Tellus Volume 1959 ; 1959 ; 11 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1960 ; 12 ; Tellus Volume 1960 ; 1960 ; 12 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1961 ; 13 ; Tellus Volume 1961 ; 1961 ; 13 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1962 ; 14 ; Tellus Volume 1962 ; 1962 ; 14 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1963 ; 15 ; Tellus Volume 1963 ; 1963 ; 15 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1964 ; 16 ; Tellus Volume 1964 ; 1964 ; 16 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1965 ; 17 ; Tellus Volume 1965 ; 1965 ; 17 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1966 ; 18 ; Tellus Volume 1966 ; 1966 ; 18 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1967 ; 19 ; Tellus Volume 1967 ; 1967 ; 19 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
       au < released ; 1968 ; 20 ; Tellus Volume 1968 ; 1968 ; 20 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
       au < released ; 1969 ; 21 ; Tellus Volume 1969 ; 1969 ; 21 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
       au < released ; 1970 ; 22 ; Tellus Volume 1970 ; 1970 ; 22 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
@@ -543,35 +543,35 @@
       au < released ; 1978 ; 30 ; Tellus Volume 1978 ; 1978 ; 30 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
       au < released ; 1979 ; 31 ; Tellus Volume 1979 ; 1979 ; 31 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
       au < released ; 1980 ; 32 ; Tellus Volume 1980 ; 1980 ; 32 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1981 ; 33 ; Tellus Volume 1981 ; 1981 ; 33 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1982 ; 34 ; Tellus Volume 1982 ; 1982 ; 34 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1983 ; 35 ; Tellus Volume 1983 ; 1983 ; 35 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1981 ; 33 ; Tellus Volume 1981 ; 1981 ; 33 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1982 ; 34 ; Tellus Volume 1982 ; 1982 ; 34 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1983 ; 35 ; Tellus Volume 1983 ; 1983 ; 35 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
       au < manifest ; 1984 ; 36 ; Tellus Volume 1984 ; 1984 ; 36 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1985 ; 37 ; Tellus Volume 1985 ; 1985 ; 37 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1986 ; 38 ; Tellus Volume 1986 ; 1986 ; 38 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1987 ; 39 ; Tellus Volume 1987 ; 1987 ; 39 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1988 ; 40 ; Tellus Volume 1988 ; 1988 ; 40 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1989 ; 41 ; Tellus Volume 1989 ; 1989 ; 41 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1990 ; 42 ; Tellus Volume 1990 ; 1990 ; 42 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1991 ; 43 ; Tellus Volume 1991 ; 1991 ; 43 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1992 ; 44 ; Tellus Volume 1992 ; 1992 ; 44 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1993 ; 45 ; Tellus Volume 1993 ; 1993 ; 45 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1994 ; 46 ; Tellus Volume 1994 ; 1994 ; 46 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1995 ; 47 ; Tellus Volume 1995 ; 1995 ; 47 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1996 ; 48 ; Tellus Volume 1996 ; 1996 ; 48 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1997 ; 49 ; Tellus Volume 1997 ; 1997 ; 49 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1998 ; 50 ; Tellus Volume 1998 ; 1998 ; 50 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 1999 ; 51 ; Tellus Volume 1999 ; 1999 ; 51 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 2000 ; 52 ; Tellus Volume 2000 ; 2000 ; 52 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 2001 ; 53 ; Tellus Volume 2001 ; 2001 ; 53 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 2002 ; 54 ; Tellus Volume 2002 ; 2002 ; 54 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 2003 ; 55 ; Tellus Volume 2003 ; 2003 ; 55 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 2004 ; 56 ; Tellus Volume 2004 ; 2004 ; 56 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 2005 ; 57 ; Tellus Volume 2005 ; 2005 ; 57 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 2006 ; 58 ; Tellus Volume 2006 ; 2006 ; 58 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 2007 ; 59 ; Tellus Volume 2007 ; 2007 ; 59 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 2008 ; 60 ; Tellus Volume 2008 ; 2008 ; 60 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 2009 ; 61 ; Tellus Volume 2009 ; 2009 ; 61 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1985 ; 37 ; Tellus Volume 1985 ; 1985 ; 37 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1986 ; 38 ; Tellus Volume 1986 ; 1986 ; 38 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1987 ; 39 ; Tellus Volume 1987 ; 1987 ; 39 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1988 ; 40 ; Tellus Volume 1988 ; 1988 ; 40 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1989 ; 41 ; Tellus Volume 1989 ; 1989 ; 41 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1990 ; 42 ; Tellus Volume 1990 ; 1990 ; 42 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1991 ; 43 ; Tellus Volume 1991 ; 1991 ; 43 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1992 ; 44 ; Tellus Volume 1992 ; 1992 ; 44 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1993 ; 45 ; Tellus Volume 1993 ; 1993 ; 45 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1994 ; 46 ; Tellus Volume 1994 ; 1994 ; 46 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1995 ; 47 ; Tellus Volume 1995 ; 1995 ; 47 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1996 ; 48 ; Tellus Volume 1996 ; 1996 ; 48 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1997 ; 49 ; Tellus Volume 1997 ; 1997 ; 49 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1998 ; 50 ; Tellus Volume 1998 ; 1998 ; 50 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 1999 ; 51 ; Tellus Volume 1999 ; 1999 ; 51 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 2000 ; 52 ; Tellus Volume 2000 ; 2000 ; 52 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 2001 ; 53 ; Tellus Volume 2001 ; 2001 ; 53 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 2002 ; 54 ; Tellus Volume 2002 ; 2002 ; 54 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 2003 ; 55 ; Tellus Volume 2003 ; 2003 ; 55 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 2004 ; 56 ; Tellus Volume 2004 ; 2004 ; 56 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 2005 ; 57 ; Tellus Volume 2005 ; 2005 ; 57 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 2006 ; 58 ; Tellus Volume 2006 ; 2006 ; 58 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 2007 ; 59 ; Tellus Volume 2007 ; 2007 ; 59 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 2008 ; 60 ; Tellus Volume 2008 ; 2008 ; 60 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 2009 ; 61 ; Tellus Volume 2009 ; 2009 ; 61 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
       au < doNotProcess ; 2010 ; 62 ; Tellus Volume 2010 ; 2010 ; 62 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
       au < doNotProcess ; 2011 ; 63 ; Tellus Volume 2011 ; 2011 ; 63 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
       au < doNotProcess ; 2012 ; 64 ; Tellus Volume 2012 ; 2012 ; 64 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
@@ -587,7 +587,7 @@
       au < doNotProcess ; 2022 ; 74 ; Tellus Volume 2022 ; 2022 ; 74 ; Stockholm University Press ;  ; https://tellusjournal.org/ > #Lists all volumes.
       au < doNotProcess ; 2023 ; 75 ; Tellus Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
       au < released ; 2024 ; 76 ; Tellus Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
-      au < ready ; 2025 ; 77 ; Tellus Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
+      au < releasing ; 2025 ; 77 ; Tellus Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://tellusjournal.org/ >
 
   }
 
@@ -768,7 +768,7 @@
       au < down ; 2022 ; 88 ; Annals of Global Health Volume 2022 ; 2022 ; 88 ; Ubiquity Press ;  ; https://www.annalsofglobalhealth.org/ >
       au < doNotProcess ; 2023 ; 89 ; Annals of Global Health Volume 2023 ; 2023 ; 89 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ >
       au < released ; 2024 ; 90 ; Annals of Global Health Volume 2024 ; 2024 ; 90 ; Ubiquity Press ; No substance ; https://annalsofglobalhealth.org/ >
-      au < ready ; 2025 ; 91 ; Annals of Global Health Volume 2025 ; 2025 ; 91 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ >
+      au < releasing ; 2025 ; 91 ; Annals of Global Health Volume 2025 ; 2025 ; 91 ; Ubiquity Press ;  ; https://annalsofglobalhealth.org/ >
 
   }
 
@@ -789,7 +789,7 @@
       au < doNotProcess ; 2022 ; 3 ; Buildings and Cities Volume 2022 ; 2022 ; 3 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ > #403 forbidden cloudfront.net
       au < doNotProcess ; 2023 ; 4 ; Buildings and Cities Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ > #404 forbidden cloudfront.net  
       au < released ; 2024 ; 5 ; Buildings and Cities Volume 2024 ; 2024 ; 5 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ > #505 forbidden cloudfront.net
-      au < ready ; 2025 ; 6 ; Buildings and Cities Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ > #606 forbidden cloudfront.net
+      au < releasing ; 2025 ; 6 ; Buildings and Cities Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://journal-buildingscities.org/ > #606 forbidden cloudfront.net
 
   }
 
@@ -829,7 +829,7 @@
       au < released ; 2022 ; 36 ; Current: Journal of Marine Education Volume 2022 ; 2022 ; 36 ; Ubiquity Press ;  ; https://current-journal.com/ >
       au < released ; 2023 ; 37,38 ; Current: Journal of Marine Education Volume 2023 ; 2023 ; 37,38 ; Ubiquity Press ;  ; https://current-journal.com/ >
       au < released ; 2024 ; 39 ; Current: Journal of Marine Education Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://current-journal.com/ >
-      au < ready ; 2025 ; 40 ; Current: Journal of Marine Education Volume 2025 ; 2025 ; 40 ; Ubiquity Press ;  ; https://current-journal.com/ >
+      au < releasing ; 2025 ; 40 ; Current: Journal of Marine Education Volume 2025 ; 2025 ; 40 ; Ubiquity Press ;  ; https://current-journal.com/ >
 
   }
 
@@ -852,7 +852,7 @@
       au < doNotProcess ; 2022 ; 20 ; Anglo Saxonica Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.revista-anglo-saxonica.org/ >
       au < doNotProcess ; 2023 ; 21 ; Anglo Saxonica Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ >
       au < released ; 2024 ; 22 ; Anglo Saxonica Volume 2024 ; 2024 ; 22 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ >
-      au < ready ; 2025 ; 23 ; Anglo Saxonica Volume 2025 ; 2025 ; 23 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ >
+      au < releasing ; 2025 ; 23 ; Anglo Saxonica Volume 2025 ; 2025 ; 23 ; Ubiquity Press ;  ; https://revista-anglo-saxonica.org/ >
      
 
   }
@@ -918,7 +918,7 @@
       au < down ; 2022 ; 32 ; Bulletin of the History of Archaeology Volume 2022 ; 2022 ; 32 ; Ubiquity Press ;  ; https://www.archaeologybulletin.org/ >
       au < doNotProcess ; 2023 ; 33 ; Bulletin of the History of Archaeology Volume 2023 ; 2023 ; 33 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ >
       au < released ; 2024 ; 34 ; Bulletin of the History of Archaeology Volume 2024 ; 2024 ; 34 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ >
-      au < ready ; 2025 ; 35 ; Bulletin of the History of Archaeology Volume 2025 ; 2025 ; 35 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ >
+      au < releasing ; 2025 ; 35 ; Bulletin of the History of Archaeology Volume 2025 ; 2025 ; 35 ; Ubiquity Press ;  ; https://archaeologybulletin.org/ >
 
 
   }
@@ -944,7 +944,7 @@
       au < doNotProcess ; 2022 ; 7 ; Citizen Science: Theory and Practice Volume 2022 ; 2022 ; 7 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ >
       au < doNotProcess ; 2023 ; 8 ; Citizen Science: Theory and Practice Volume 2023 ; 2023 ; 8 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ >
       au < released ; 2024 ; 9 ; Citizen Science: Theory and Practice Volume 2024 ; 2024 ; 9 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ >
-      au < ready ; 2025 ; 10 ; Citizen Science: Theory and Practice Volume 2025 ; 2025 ; 10 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ >
+      au < releasing ; 2025 ; 10 ; Citizen Science: Theory and Practice Volume 2025 ; 2025 ; 10 ; Ubiquity Press ;  ; https://theoryandpractice.citizenscienceassociation.org/ >
 
   }
 
@@ -968,7 +968,7 @@
       au < doNotProcess ; 2022 ; 6 ; Computational Psychiatry Volume 2022 ; 2022 ; 6 ; Ubiquity Press ;  ; https://cpsyjournal.org/ >
       au < doNotProcess ; 2023 ; 7 ; Computational Psychiatry Volume 2023 ; 2023 ; 7 ; Ubiquity Press ;  ; https://cpsyjournal.org/ >
       au < released ; 2024 ; 8 ; Computational Psychiatry Volume 2024 ; 2024 ; 8 ; Ubiquity Press ;  ; https://cpsyjournal.org/ >
-      au < ready ; 2025 ; 9 ; Computational Psychiatry Volume 2025 ; 2025 ; 9 ; Ubiquity Press ;  ; https://cpsyjournal.org/ >
+      au < releasing ; 2025 ; 9 ; Computational Psychiatry Volume 2025 ; 2025 ; 9 ; Ubiquity Press ;  ; https://cpsyjournal.org/ >
 
   }
 
@@ -1007,7 +1007,7 @@
       au < doNotProcess ; 2022 ; 21 ; Data Science Journal Volume 2022 ; 2022 ; 21 ; Ubiquity Press ;  ; https://datascience.codata.org/ >
       au < doNotProcess ; 2023 ; 22 ; Data Science Journal Volume 2023 ; 2023 ; 22 ; Ubiquity Press ;  ; https://datascience.codata.org/ >
       au < released ; 2024 ; 23 ; Data Science Journal Volume 2024 ; 2024 ; 23 ; Ubiquity Press ;  ; https://datascience.codata.org/ >
-      au < ready ; 2025 ; 24 ; Data Science Journal Volume 2025 ; 2025 ; 24 ; Ubiquity Press ;  ; https://datascience.codata.org/ >
+      au < releasing ; 2025 ; 24 ; Data Science Journal Volume 2025 ; 2025 ; 24 ; Ubiquity Press ;  ; https://datascience.codata.org/ >
 
   }
 
@@ -1057,7 +1057,7 @@
       au < doNotProcess ; 2022 ; 5 ; Glocality: Undergraduate Academic Journal Volume 2022 ; 2022 ; 5 ; Ubiquity Press ;  ; https://glocality.eu/ >
       au < doNotProcess ; 2023 ; 6 ; Glocality: Undergraduate Academic Journal Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://glocality.eu/ >
       au < released ; 2024 ; 7 ; Glocality: Undergraduate Academic Journal Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://glocality.eu/ >
-      au < ready ; 2025 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://glocality.eu/ >
+      au < releasing ; 2025 ; 8 ; Glocality: Undergraduate Academic Journal Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://glocality.eu/ >
 
   }
 
@@ -1098,7 +1098,7 @@
       au < doNotProcess ; 2022 ; 22 ; International Journal of Integrated Care Volume 2022 ; 2022 ; 22 ; Ubiquity Press ;  ; https://www.ijic.org/ >
       au < doNotProcess ; 2023 ; 23 ; International Journal of Integrated Care Volume 2023 ; 2023 ; 23 ; Ubiquity Press ;  ; https://ijic.org/ >
       au < released ; 2024 ; 24 ; International Journal of Integrated Care Volume 2024 ; 2024 ; 24 ; Ubiquity Press ;  ; https://ijic.org/ >
-      au < ready ; 2025 ; 25 ; International Journal of Integrated Care Volume 2025 ; 2025 ; 25 ; Ubiquity Press ;  ; https://ijic.org/ >
+      au < releasing ; 2025 ; 25 ; International Journal of Integrated Care Volume 2025 ; 2025 ; 25 ; Ubiquity Press ;  ; https://ijic.org/ >
 
   }
 
@@ -1123,7 +1123,7 @@
       au < doNotProcess ; 2022 ; 35 ; International Review of Social Psychology Volume 2022 ; 2022 ; 35 ; Ubiquity Press ;  ; https://www.rips-irsp.com/ >
       au < doNotProcess ; 2023 ; 36 ; International Review of Social Psychology Volume 2023 ; 2023 ; 36 ; Ubiquity Press ;  ; https://rips-irsp.com/ >
       au < released ; 2024 ; 37 ; International Review of Social Psychology Volume 2024 ; 2024 ; 37 ; Ubiquity Press ;  ; https://rips-irsp.com/ >
-      au < ready ; 2025 ; 38 ; International Review of Social Psychology Volume 2025 ; 2025 ; 38 ; Ubiquity Press ;  ; https://rips-irsp.com/ >
+      au < releasing ; 2025 ; 38 ; International Review of Social Psychology Volume 2025 ; 2025 ; 38 ; Ubiquity Press ;  ; https://rips-irsp.com/ >
 
   }
 
@@ -1167,7 +1167,7 @@
       au < doNotProcess ; 2022 ; 20 ; Journal of Circadian Rhythms Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.jcircadianrhythms.com/ >
       au < doNotProcess ; 2023 ; 21 ; Journal of Circadian Rhythms Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
       au < released ; 2024 ; 22 ; Journal of Circadian Rhythms Volume 2024 ; 2024 ; 22 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
-      au < ready ; 2025 ; 23 ; Journal of Circadian Rhythms Volume 2025 ; 2025 ; 23 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
+      au < releasing ; 2025 ; 23 ; Journal of Circadian Rhythms Volume 2025 ; 2025 ; 23 ; Ubiquity Press ;  ; https://jcircadianrhythms.com/ >
 
   }
 
@@ -1206,9 +1206,9 @@
       au < released ; 2020 ; 18 ; Journal of Conservation and Museum Studies Volume 2020 ; 2020 ; 18 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
       au < released ; 2021 ; 19 ; Journal of Conservation and Museum Studies Volume 2021 ; 2021 ; 19 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
       au < doNotProcess ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://www.jcms-journal.com/ >
-      au < ready ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
-      au < ready ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
-      au < ready ; 2025 ; 22 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 22 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
+      au < releasing ; 2022 ; 20 ; Journal of Conservation and Museum Studies Volume 2022 ; 2022 ; 20 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
+      au < releasing ; 2023 ; 21 ; Journal of Conservation and Museum Studies Volume 2023 ; 2023 ; 21 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
+      au < releasing ; 2025 ; 22 ; Journal of Conservation and Museum Studies Volume 2025 ; 2025 ; 22 ; Ubiquity Press ;  ; https://jcms-journal.com/ >
 
   }
 
@@ -1291,7 +1291,7 @@
       au < doNotProcess ; 2022 ; 2022 ; Journal of Interactive Media in Education Volume 2022 ; 2022 ; 2022 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
       au < doNotProcess ; 2023 ; 2023 ; Journal of Interactive Media in Education Volume 2023 ; 2023 ; 2023 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
       au < released ; 2024 ; 2024 ; Journal of Interactive Media in Education Volume 2024 ; 2024 ; 2024 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
-      au < ready ; 2025 ; 2025 ; Journal of Interactive Media in Education Volume 2025 ; 2025 ; 2025 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
+      au < releasing ; 2025 ; 2025 ; Journal of Interactive Media in Education Volume 2025 ; 2025 ; 2025 ; Ubiquity Press ;  ; https://jime.open.ac.uk/ >
 
   }
 
@@ -1350,7 +1350,7 @@
       au < doNotProcess ; 2022 ; 10 ; Journal of Open Archaeology Data Volume 2022 ; 2022 ; 10 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ >
       au < doNotProcess ; 2023 ; 11 ; Journal of Open Archaeology Data Volume 2023 ; 2023 ; 11 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ >
       au < released ; 2024 ; 12 ; Journal of Open Archaeology Data Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ >
-      au < ready ; 2025 ; 13 ; Journal of Open Archaeology Data Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ >
+      au < releasing ; 2025 ; 13 ; Journal of Open Archaeology Data Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openarchaeologydata.metajnl.com/ >
 
   }
 
@@ -1367,7 +1367,7 @@
       nondefparam[journal_id] = up-j-srah
 
       au < released ; 2023 ; 1 ; Silk Roads Archaeology and Heritage Volume 2023 ; 2023 ; 1 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ >
-      au < ready ; 2025 ; 2 ; Silk Roads Archaeology and Heritage Volume 2025 ; 2025 ; 2 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ >
+      au < releasing ; 2025 ; 2 ; Silk Roads Archaeology and Heritage Volume 2025 ; 2025 ; 2 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ >
 
   }
 
@@ -1393,7 +1393,7 @@
       au < doNotProcess ; 2022 ; 8 ; Journal of Open Humanities Data Volume 2022 ; 2022 ; 8 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ >
       au < doNotProcess ; 2023 ; 9 ; Journal of Open Humanities Data Volume 2023 ; 2023 ; 9 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ >
       au < released ; 2024 ; 10 ; Journal of Open Humanities Data Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ >
-      au < ready ; 2025 ; 11 ; Journal of Open Humanities Data Volume 2025 ; 2025 ; 11 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ >
+      au < releasing ; 2025 ; 11 ; Journal of Open Humanities Data Volume 2025 ; 2025 ; 11 ; Ubiquity Press ;  ; https://openhumanitiesdata.metajnl.com/ >
 
   }
 
@@ -1421,7 +1421,7 @@
       au < doNotProcess ; 2022 ; 10 ; Journal of Open Psychology Data Volume 2022 ; 2022 ; 10 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ >
       au < doNotProcess ; 2023 ; 11 ; Journal of Open Psychology Data Volume 2023 ; 2023 ; 11 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ >
       au < released ; 2024 ; 12 ; Journal of Open Psychology Data Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ >
-      au < ready ; 2025 ; 13 ; Journal of Open Psychology Data Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ >
+      au < releasing ; 2025 ; 13 ; Journal of Open Psychology Data Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openpsychologydata.metajnl.com/ >
 
   }
 
@@ -1449,7 +1449,7 @@
       au < doNotProcess ; 2022 ; 10 ; Journal of Open Research Software Volume 2022 ; 2022 ; 10 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ >
       au < doNotProcess ; 2023 ; 11 ; Journal of Open Research Software Volume 2023 ; 2023 ; 11 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ >
       au < released ; 2024 ; 12 ; Journal of Open Research Software Volume 2024 ; 2024 ; 12 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ >
-      au < ready ; 2025 ; 13 ; Journal of Open Research Software Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ >
+      au < releasing ; 2025 ; 13 ; Journal of Open Research Software Volume 2025 ; 2025 ; 13 ; Ubiquity Press ;  ; https://openresearchsoftware.metajnl.com/ >
 
   }
 
@@ -1497,7 +1497,7 @@
       au < doNotProcess ; 2022 ; 106 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2022 ; 2022 ; 106 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
       au < doNotProcess ; 2023 ; 107 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2023 ; 2023 ; 107 ; Ubiquity Press ;  ; https://www.jbsr.be/ >
       au < released ; 2024 ; 108 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2024 ; 2024 ; 108 ; Ubiquity Press ;  ; https://jbsr.be/ >
-      au < ready ; 2025 ; 109 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2025 ; 2025 ; 109 ; Ubiquity Press ;  ; https://jbsr.be/ >
+      au < releasing ; 2025 ; 109 ; Journal of the Belgian Society of Radiology (JBSR) Volume 2025 ; 2025 ; 109 ; Ubiquity Press ;  ; https://jbsr.be/ >
 
   }
 
@@ -1580,7 +1580,7 @@
       au < doNotProcess ; 2022 ; 3 ; Continuity in Education Volume 2022 ; 2022 ; 3 ; Ubiquity Press ;  ; https://continuityineducation.org/ >
       au < doNotProcess ; 2023 ; 4 ; Continuity in Education Volume 2023 ; 2023 ; 4 ; Ubiquity Press ;  ; https://continuityineducation.org/ >
       au < released ; 2024 ; 5 ; Continuity in Education Volume 2024 ; 2024 ; 5 ; Ubiquity Press ;  ; https://continuityineducation.org/ >
-      au < ready ; 2025 ; 6 ; Continuity in Education Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://continuityineducation.org/ >
+      au < releasing ; 2025 ; 6 ; Continuity in Education Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://continuityineducation.org/ >
 
   }
 
@@ -1614,7 +1614,7 @@
       au < down ; 2022 ; 16 ; International Journal of the Commons Volume 2022 ; 2022 ; 16 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
       au < doNotProcess ; 2023 ; 17 ; International Journal of the Commons Volume 2023 ; 2023 ; 17 ; Ubiquity Press ;  ; https://www.thecommonsjournal.org/ >
       au < released ; 2024 ; 18 ; International Journal of the Commons Volume 2024 ; 2024 ; 18 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ >
-      au < ready ; 2025 ; 19 ; International Journal of the Commons Volume 2025 ; 2025 ; 19 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ >
+      au < releasing ; 2025 ; 19 ; International Journal of the Commons Volume 2025 ; 2025 ; 19 ; Ubiquity Press ;  ; https://thecommonsjournal.org/ >
 
   }
 
@@ -1649,7 +1649,7 @@
       au < doNotProcess ; 2022 ; 17 ; Global Heart Volume 2022 ; 2022 ; 17 ; Ubiquity Press ;  ; https://globalheartjournal.com/ >
       au < doNotProcess ; 2023 ; 18 ; Global Heart Volume 2023 ; 2023 ; 18 ; Ubiquity Press ;  ; https://globalheartjournal.com/ >
       au < released ; 2024 ; 19 ; Global Heart Volume 2024 ; 2024 ; 19 ; Ubiquity Press ;  ; https://globalheartjournal.com/ >
-      au < ready ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ;  ; https://globalheartjournal.com/ >
+      au < releasing ; 2025 ; 20 ; Global Heart Volume 2025 ; 2025 ; 20 ; Ubiquity Press ;  ; https://globalheartjournal.com/ >
 
   }
 
@@ -1675,7 +1675,7 @@
       au < doNotProcess ; 2022 ; 8 ; Open Quaternary Volume 2022 ; 2022 ; 8 ; Ubiquity Press ;  ; https://www.openquaternary.com/ >
       au < doNotProcess ; 2023 ; 9 ; Open Quaternary Volume 2023 ; 2023 ; 9 ; Ubiquity Press ;  ; https://openquaternary.com/ >
       au < released ; 2024 ; 10 ; Open Quaternary Volume 2024 ; 2024 ; 10 ; Ubiquity Press ;  ; https://openquaternary.com/ >
-      au < ready ; 2025 ; 11 ; Open Quaternary Volume 2025 ; 2025 ; 11 ; Ubiquity Press ;  ; https://openquaternary.com/ >
+      au < releasing ; 2025 ; 11 ; Open Quaternary Volume 2025 ; 2025 ; 11 ; Ubiquity Press ;  ; https://openquaternary.com/ >
 
   }
 
@@ -1719,7 +1719,7 @@
       au < doNotProcess ; 2022 ; 62 ; Psychologica Belgica Volume 2022 ; 2022 ; 62 ; Ubiquity Press ;  ; https://www.psychologicabelgica.com/ >
       au < doNotProcess ; 2023 ; 63 ; Psychologica Belgica Volume 2023 ; 2023 ; 63 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
       au < released ; 2024 ; 64 ; Psychologica Belgica Volume 2024 ; 2024 ; 64 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
-      au < ready ; 2025 ; 65 ; Psychologica Belgica Volume 2025 ; 2025 ; 65 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
+      au < releasing ; 2025 ; 65 ; Psychologica Belgica Volume 2025 ; 2025 ; 65 ; Ubiquity Press ;  ; https://psychologicabelgica.com/ >
 
   }
 
@@ -1751,7 +1751,7 @@
       au < doNotProcess ; 2022 ; 11 ; Secularism and Nonreligion Volume 2022 ; 2022 ; 11 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ >
       au < doNotProcess ; 2023 ; 12 ; Secularism and Nonreligion Volume 2023 ; 2023 ; 12 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ >
       au < released ; 2024 ; 13 ; Secularism and Nonreligion Volume 2024 ; 2024 ; 13 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ >
-      au < ready ; 2025 ; 14 ; Secularism and Nonreligion Volume 2025 ; 2025 ; 14 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ >
+      au < releasing ; 2025 ; 14 ; Secularism and Nonreligion Volume 2025 ; 2025 ; 14 ; Ubiquity Press ;  ; https://secularismandnonreligion.org/ >
 
   }
 
@@ -1785,7 +1785,7 @@
       au < doNotProcess ; 2022 ; 37 ; Utrecht Journal of International and European Law Volume 2022 ; 2022 ; 37 ; Ubiquity Press ;  ; https://utrechtjournal.org/ >
       au < doNotProcess ; 2023 ; 38 ; Utrecht Journal of International and European Law Volume 2023 ; 2023 ; 38 ; Ubiquity Press ;  ; https://utrechtjournal.org/ >
       au < released ; 2024 ; 39 ; Utrecht Journal of International and European Law Volume 2024 ; 2024 ; 39 ; Ubiquity Press ;  ; https://utrechtjournal.org/ >
-      au < ready ; 2025 ; 40 ; Utrecht Journal of International and European Law Volume 2025 ; 2025 ; 40 ; Ubiquity Press ;  ; https://utrechtjournal.org/ >
+      au < releasing ; 2025 ; 40 ; Utrecht Journal of International and European Law Volume 2025 ; 2025 ; 40 ; Ubiquity Press ;  ; https://utrechtjournal.org/ >
 
   }
 
@@ -1815,7 +1815,7 @@
       au < doNotProcess ; 2022 ; 12 ; Tremor and Other Hyperkinetic Movements Volume 2022 ; 2022 ; 12 ; Ubiquity Press ;  ; https://tremorjournal.org/ >
       au < doNotProcess ; 2023 ; 13 ; Tremor and Other Hyperkinetic Movements Volume 2023 ; 2023 ; 13 ; Ubiquity Press ;  ; https://tremorjournal.org/ >
       au < released ; 2024 ; 14 ; Tremor and Other Hyperkinetic Movements Volume 2024 ; 2024 ; 14 ; Ubiquity Press ;  ; https://tremorjournal.org/ >
-      au < ready ; 2025 ; 15 ; Tremor and Other Hyperkinetic Movements Volume 2025 ; 2025 ; 15 ; Ubiquity Press ;  ; https://tremorjournal.org/ >
+      au < releasing ; 2025 ; 15 ; Tremor and Other Hyperkinetic Movements Volume 2025 ; 2025 ; 15 ; Ubiquity Press ;  ; https://tremorjournal.org/ >
 
   }
 
@@ -1838,7 +1838,7 @@
       au < down ; 2022 ; 5 ; Journal of Cognition Volume 2022 ; 2022 ; 5 ; Ubiquity Press ;  ; https://www.journalofcognition.org/ >
       au < doNotProcess ; 2023 ; 6 ; Journal of Cognition Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://journalofcognition.org/ >
       au < released ; 2024 ; 7 ; Journal of Cognition Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://journalofcognition.org/ >
-      au < ready ; 2025 ; 8 ; Journal of Cognition Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journalofcognition.org/ >
+      au < releasing ; 2025 ; 8 ; Journal of Cognition Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journalofcognition.org/ >
 
   }
 
@@ -1861,7 +1861,7 @@
       au < released ; 2022 ; 5 ; Journal of Computer Applications in Archaeology Volume 2022 ; 2022 ; 5 ; Ubiquity Press ;  ; https://journal.caa-international.org/ >
       au < doNotProcess ; 2023 ; 6 ; Journal of Computer Applications in Archaeology Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://journal.caa-international.org/ >
       au < released ; 2024 ; 7 ; Journal of Computer Applications in Archaeology Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://journal.caa-international.org/ >
-      au < ready ; 2025 ; 8 ; Journal of Computer Applications in Archaeology Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journal.caa-international.org/ >
+      au < releasing ; 2025 ; 8 ; Journal of Computer Applications in Archaeology Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://journal.caa-international.org/ >
 
   }
 
@@ -1884,7 +1884,7 @@
       au < doNotProcess ; 2022 ; 5 ; Metaphysics Volume 2022 ; 2022 ; 5 ; Ubiquity Press ;  ; https://metaphysicsjournal.com/ >
       au < doNotProcess ; 2023 ; 6 ; Metaphysics Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://metaphysicsjournal.com/ >
       au < released ; 2024 ; 7 ; Metaphysics Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://metaphysicsjournal.com/ >
-      au < ready ; 2025 ; 8 ; Metaphysics Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://metaphysicsjournal.com/ >
+      au < releasing ; 2025 ; 8 ; Metaphysics Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://metaphysicsjournal.com/ >
 
   }
 
@@ -1908,7 +1908,7 @@
       au < doNotProcess ; 2022 ; 6 ; Physical Activity and Health Volume 2022 ; 2022 ; 6 ; Ubiquity Press ;  ; https://paahjournal.com/ >
       au < doNotProcess ; 2023 ; 7 ; Physical Activity and Health Volume 2023 ; 2023 ; 7 ; Ubiquity Press ;  ; https://paahjournal.com/ >
       au < released ; 2024 ; 8 ; Physical Activity and Health Volume 2024 ; 2024 ; 8 ; Ubiquity Press ;  ; https://paahjournal.com/ >
-      au < ready ; 2025 ; 9 ; Physical Activity and Health Volume 2025 ; 2025 ; 9 ; Ubiquity Press ;  ; https://paahjournal.com/ >
+      au < releasing ; 2025 ; 9 ; Physical Activity and Health Volume 2025 ; 2025 ; 9 ; Ubiquity Press ;  ; https://paahjournal.com/ >
 
   }
 
@@ -1938,7 +1938,7 @@
       au < doNotProcess ; 2022 ; 27 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2022 ; 2022 ; 27 ; Ubiquity Press ;  ; https://tilburglawreview.com/ >
       au < doNotProcess ; 2023 ; 28 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2023 ; 2023 ; 28 ; Ubiquity Press ;  ; https://tilburglawreview.com/ >
       au < released ; 2024 ; 29 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2024 ; 2024 ; 29 ; Ubiquity Press ;  ; https://tilburglawreview.com/ >
-      au < ready ; 2025 ; 30 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2025 ; 2025 ; 30 ; Ubiquity Press ;  ; https://tilburglawreview.com/ >
+      au < releasing ; 2025 ; 30 ; Tilburg Law Review: Journal of International and Comparative Law Volume 2025 ; 2025 ; 30 ; Ubiquity Press ;  ; https://tilburglawreview.com/ >
 
   }
 
@@ -1969,7 +1969,7 @@
       au < doNotProcess ; 2022 ; 13 ; Yearbook of Swiss Administrative Science Volume 2022 ; 2022 ; 13 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ >
       au < doNotProcess ; 2023 ; 14 ; Yearbook of Swiss Administrative Science Volume 2023 ; 2023 ; 14 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ >
       au < released ; 2024 ; 15 ; Yearbook of Swiss Administrative Science Volume 2024 ; 2024 ; 15 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ >
-      au < ready ; 2025 ; 16 ; Yearbook of Swiss Administrative Science Volume 2025 ; 2025 ; 16 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ >
+      au < releasing ; 2025 ; 16 ; Yearbook of Swiss Administrative Science Volume 2025 ; 2025 ; 16 ; Ubiquity Press ;  ; https://ssas-yearbook.com/ >
 
   }
 
@@ -1992,7 +1992,7 @@
       au < doNotProcess ; 2022 ; 5 ; Transactions of the International Society for Music Information Retrieval Volume 2022 ; 2022 ; 5 ; Ubiquity Press ;  ; https://transactions.ismir.net/ >
       au < doNotProcess ; 2023 ; 6 ; Transactions of the International Society for Music Information Retrieval Volume 2023 ; 2023 ; 6 ; Ubiquity Press ;  ; https://transactions.ismir.net/ >
       au < released ; 2024 ; 7 ; Transactions of the International Society for Music Information Retrieval Volume 2024 ; 2024 ; 7 ; Ubiquity Press ;  ; https://transactions.ismir.net/ >
-      au < ready ; 2025 ; 8 ; Transactions of the International Society for Music Information Retrieval Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://transactions.ismir.net/ >
+      au < releasing ; 2025 ; 8 ; Transactions of the International Society for Music Information Retrieval Volume 2025 ; 2025 ; 8 ; Ubiquity Press ;  ; https://transactions.ismir.net/ >
 
   }
 
@@ -2012,7 +2012,7 @@
       au < doNotProcess ; 2022 ; 2 ; Swiss Psychology Open Volume 2022 ; 2022 ; 2 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ >
       au < doNotProcess ; 2023 ; 3 ; Swiss Psychology Open Volume 2023 ; 2023 ; 3 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ >
       au < released ; 2024 ; 4 ; Swiss Psychology Open Volume 2024 ; 2024 ; 4 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ >
-      au < ready ; 2025 ; 5 ; Swiss Psychology Open Volume 2025 ; 2025 ; 5 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ >
+      au < releasing ; 2025 ; 5 ; Swiss Psychology Open Volume 2025 ; 2025 ; 5 ; Ubiquity Press ;  ; https://swisspsychologyopen.com/ >
 
   }
 
@@ -2036,12 +2036,12 @@
       au < doNotProcess ; 2017 ; 6 ; Perspectives on Medical Education Volume 2017 ; 2017 ; 6 ; Ubiquity Press ;  ; https://pmejournal.org/ >
       au < doNotProcess ; 2018 ; 7 ; Perspectives on Medical Education Volume 2018 ; 2018 ; 7 ; Ubiquity Press ;  ; https://pmejournal.org/ >
       au < released ; 2019 ; 8 ; Perspectives on Medical Education Volume 2019 ; 2019 ; 8 ; Ubiquity Press ;  ; https://pmejournal.org/ >
-      au < ready ; 2020 ; 9 ; Perspectives on Medical Education Volume 2020 ; 2020 ; 9 ; Ubiquity Press ;  ; https://pmejournal.org/ >
+      au < releasing ; 2020 ; 9 ; Perspectives on Medical Education Volume 2020 ; 2020 ; 9 ; Ubiquity Press ;  ; https://pmejournal.org/ >
       au < doNotProcess ; 2021 ; 10 ; Perspectives on Medical Education Volume 2021 ; 2021 ; 10 ; Ubiquity Press ;  ; https://pmejournal.org/ >
       au < doNotProcess ; 2022 ; 11 ; Perspectives on Medical Education Volume 2022 ; 2022 ; 11 ; Ubiquity Press ;  ; https://pmejournal.org/ >
       au < released ; 2023 ; 12 ; Perspectives on Medical Education Volume 2023 ; 2023 ; 12 ; Ubiquity Press ;  ; https://pmejournal.org/ >
       au < released ; 2024 ; 13 ; Perspectives on Medical Education Volume 2024 ; 2024 ; 13 ; Ubiquity Press ;  ; https://pmejournal.org/ >
-      au < ready ; 2025 ; 14 ; Perspectives on Medical Education Volume 2025 ; 2025 ; 14 ; Ubiquity Press ;  ; https://pmejournal.org/ >
+      au < releasing ; 2025 ; 14 ; Perspectives on Medical Education Volume 2025 ; 2025 ; 14 ; Ubiquity Press ;  ; https://pmejournal.org/ >
 
   }
 
@@ -2061,7 +2061,7 @@
       au < released ; 2022 ; 2 ; Ubiquity Proceedings Volume 2022 ; 2022 ; 2 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ >
       au < released ; 2023 ; 3 ; Ubiquity Proceedings Volume 2023 ; 2023 ; 3 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ >
       au < released ; 2024 ; 4-5 ; Ubiquity Proceedings Volume 2024 ; 2024 ; 4-5 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ >
-      au < ready ; 2025 ; 6 ; Ubiquity Proceedings Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ >
+      au < releasing ; 2025 ; 6 ; Ubiquity Proceedings Volume 2025 ; 2025 ; 6 ; Ubiquity Press ;  ; https://ubiquityproceedings.com/ >
 
   }
 
@@ -2122,7 +2122,7 @@
       au < released ; 2022 ; 9 ; Journal of Philosophy in Schools Volume 2022 ; 2022 ; 9 ; University of Birmingham Library Services ;  ; https://jps.bham.ac.uk/ > #no substance
       au < doNotProcess ; 2023 ; 10 ; Journal of Philosophy in Schools Volume 2023 ; 2023 ; 10 ; University of Birmingham Library Services ;  ; https://jps.bham.ac.uk/ > #no substance
       au < released ; 2024 ; 11 ; Journal of Philosophy in Schools Volume 2024 ; 2024 ; 11 ; University of Birmingham Library Services ;  ; https://jps.bham.ac.uk/ > #no substance
-      au < ready ; 2025 ; 12 ; Journal of Philosophy in Schools Volume 2025 ; 2025 ; 12 ; University of Birmingham Library Services ;  ; https://jps.bham.ac.uk/ > #no substance
+      au < releasing ; 2025 ; 12 ; Journal of Philosophy in Schools Volume 2025 ; 2025 ; 12 ; University of Birmingham Library Services ;  ; https://jps.bham.ac.uk/ > #no substance
 
   }
 
@@ -2160,7 +2160,7 @@
       au < doNotProcess ; 2022 ; 18 ; Utrecht Law Review Volume 2022 ; 2022 ; 18 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ >
       au < doNotProcess ; 2023 ; 19 ; Utrecht Law Review Volume 2023 ; 2023 ; 19 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ >
       au < released ; 2024 ; 20 ; Utrecht Law Review Volume 2024 ; 2024 ; 20 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ >
-      au < ready ; 2025 ; 21 ; Utrecht Law Review Volume 2025 ; 2025 ; 21 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ >
+      au < releasing ; 2025 ; 21 ; Utrecht Law Review Volume 2025 ; 2025 ; 21 ; Utrecht University School of Law ;  ; https://utrechtlawreview.org/ >
 
   }
 
@@ -2230,7 +2230,7 @@
       au < doNotProcess ; 2022 ; 35 ; Insights: the UKSG journal Volume 2022 ; 2022 ; 35 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ >
       au < doNotProcess ; 2023 ; 36 ; Insights: the UKSG journal Volume 2023 ; 2023 ; 36 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ >
       au < released ; 2024 ; 37 ; Insights: the UKSG journal Volume 2024 ; 2024 ; 37 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ >
-      au < ready ; 2025 ; 38 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 38 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ >
+      au < releasing ; 2025 ; 38 ; Insights: the UKSG journal Volume 2025 ; 2025 ; 38 ; United Kingdom Serials Group ;  ; https://insights.uksg.org/ >
 
   }
 
@@ -2263,7 +2263,7 @@
       au < doNotProcess ; 2022 ; 18 ; British and Irish Orthoptic Journal Volume 2022 ; 2022 ; 18 ; White Rose University Press ;  ; https://bioj-online.com/ >
       au < doNotProcess ; 2023 ; 19 ; British and Irish Orthoptic Journal Volume 2023 ; 2023 ; 19 ; White Rose University Press ;  ; https://bioj-online.com/ >
       au < released ; 2024 ; 20 ; British and Irish Orthoptic Journal Volume 2024 ; 2024 ; 20 ; White Rose University Press ;  ; https://bioj-online.com/ >
-      au < ready ; 2025 ; 21 ; British and Irish Orthoptic Journal Volume 2025 ; 2025 ; 21 ; White Rose University Press ;  ; https://bioj-online.com/ >
+      au < releasing ; 2025 ; 21 ; British and Irish Orthoptic Journal Volume 2025 ; 2025 ; 21 ; White Rose University Press ;  ; https://bioj-online.com/ >
 
   }
 
@@ -2289,7 +2289,7 @@
       au < doNotProcess ; 2022 ; 6 ; Journal of the European Second Language Association Volume 2022 ; 2022 ; 6 ; White Rose University Press ;  ; https://euroslajournal.org/ >
       au < doNotProcess ; 2023 ; 7 ; Journal of the European Second Language Association Volume 2023 ; 2023 ; 7 ; White Rose University Press ;  ; https://euroslajournal.org/ >
       au < released ; 2024 ; 8 ; Journal of the European Second Language Association Volume 2024 ; 2024 ; 8 ; White Rose University Press ;  ; https://euroslajournal.org/ >
-      au < ready ; 2025 ; 9 ; Journal of the European Second Language Association Volume 2025 ; 2025 ; 9 ; White Rose University Press ;  ; https://euroslajournal.org/ >
+      au < releasing ; 2025 ; 9 ; Journal of the European Second Language Association Volume 2025 ; 2025 ; 9 ; White Rose University Press ;  ; https://euroslajournal.org/ >
 
   }
 
@@ -2377,7 +2377,7 @@
       au < doNotProcess ; 2022 ; 10 ; Stability: International Journal of Security & Development Volume 2022 ; 2022 ; 10 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ >
       au < doNotProcess ; 2023 ; 11 ; Stability: International Journal of Security & Development Volume 2023 ; 2023 ; 11 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ >
       au < doesNotExist ; 2024 ; 0 ; Stability: International Journal of Security & Development Volume 2024 ; 2024 ; 0 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ >
-      au < ready ; 2025 ; 12 ; Stability: International Journal of Security & Development Volume 2025 ; 2025 ; 12 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ >
+      au < releasing ; 2025 ; 12 ; Stability: International Journal of Security & Development Volume 2025 ; 2025 ; 12 ; University of Bradford, Department of Peace Studies and International Development ;  ; https://stabilityjournal.org/ >
 
   }
 
@@ -2400,7 +2400,7 @@
       au < doNotProcess ; 2022 ; 5 ; Scandinavian Military Studies Volume 2022 ; 2022 ; 5 ; Scandinavian Military Studies ;  ; https://sjms.nu/ >
       au < doNotProcess ; 2023 ; 6 ; Scandinavian Military Studies Volume 2023 ; 2023 ; 6 ; Scandinavian Military Studies ;  ; https://sjms.nu/ >
       au < released ; 2024 ; 7 ; Scandinavian Military Studies Volume 2024 ; 2024 ; 7 ; Scandinavian Military Studies ;  ; https://sjms.nu/ >
-      au < ready ; 2025 ; 8 ; Scandinavian Military Studies Volume 2025 ; 2025 ; 8 ; Scandinavian Military Studies ;  ; https://sjms.nu/ >
+      au < releasing ; 2025 ; 8 ; Scandinavian Military Studies Volume 2025 ; 2025 ; 8 ; Scandinavian Military Studies ;  ; https://sjms.nu/ >
 
   }
 
@@ -2445,7 +2445,7 @@
       au < released ; 2022 ; 48 ; The Journal of Technology Studies Volume 2022 ; 2022 ; 48 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       #au < doesNotExist ; 2023 ; 0 ; The Journal of Technology Studies Volume 2023 ; 2023 ; 0 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
       au < released ; 2024 ; 49 ; The Journal of Technology Studies Volume 2024 ; 2024 ; 49 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
-      au < ready ; 2025 ; 50 ; The Journal of Technology Studies Volume 2025 ; 2025 ; 50 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
+      au < releasing ; 2025 ; 50 ; The Journal of Technology Studies Volume 2025 ; 2025 ; 50 ; Virginia Tech Publishing ;  ; https://jotsjournal.org/ >
 
   }
 
@@ -2469,7 +2469,7 @@
       au < doNotProcess ; 2022 ; 3 ; Studies in Engineering Education Volume 2022 ; 2022 ; 3 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ >
       au < doNotProcess ; 2023 ; 4 ; Studies in Engineering Education Volume 2023 ; 2023 ; 4 ; Virginia Tech Publishing ;  ; https://www.seejournal.org/ >
       au < released ; 2024 ; 5 ; Studies in Engineering Education Volume 2024 ; 2024 ; 5 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
-      au < ready ; 2025 ; 6 ; Studies in Engineering Education Volume 2025 ; 2025 ; 6 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
+      au < releasing ; 2025 ; 6 ; Studies in Engineering Education Volume 2025 ; 2025 ; 6 ; Virginia Tech Publishing ;  ; https://seejournal.org/ >
 
   }
 
@@ -2521,7 +2521,7 @@
       au < doNotProcess ; 2022 ; 33,34 ; Journal of Technology Education Volume 2022 ; 2022 ; 33,34 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
       au < doNotProcess ; 2023 ; 34,35 ; Journal of Technology Education Volume 2023 ; 2023 ; 34,35 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
       au < released ; 2024 ; 35,36 ; Journal of Technology Education Volume 2024 ; 2024 ; 35,36 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
-      au < ready ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
+      au < releasing ; 2025 ; 36,37 ; Journal of Technology Education Volume 2025 ; 2025 ; 36,37 ; Virginia Tech Publishing ;  ; https://jte-journal.org/ >
 
   }
 
@@ -2608,7 +2608,7 @@
       nondefparam[journal_id] = dmu-j-gpajepr
       #Previously Gateway Papers (2044-852X) 2010 to 2024
 
-      au < ready ; 2025 ; 6 ; Studies in Empowering Education Volume 2025 ; 2025 ; 6 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ >
+      au < releasing ; 2025 ; 6 ; Studies in Empowering Education Volume 2025 ; 2025 ; 6 ; De Montfort University Press ;  ; https://see.demontfortuniversitypress.org/ >
 
   }
 
@@ -2645,7 +2645,7 @@
       au < doNotProcess ; 2022 ; 18 ; Methodist DeBakey Cardiovascular Journal Volume 2022 ; 2022 ; 18 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
       au < doNotProcess ; 2023 ; 19 ; Methodist DeBakey Cardiovascular Journal Volume 2023 ; 2023 ; 19 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
       au < released ; 2024 ; 20 ; Methodist DeBakey Cardiovascular Journal Volume 2024 ; 2024 ; 20 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
-      au < ready ; 2025 ; 21 ; Methodist DeBakey Cardiovascular Journal Volume 2025 ; 2025 ; 21 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
+      au < releasing ; 2025 ; 21 ; Methodist DeBakey Cardiovascular Journal Volume 2025 ; 2025 ; 21 ; Houston Methodist DeBakey Heart & Vascular Center ;  ; https://journal.houstonmethodist.org/ >
 
   }
 
@@ -2666,7 +2666,7 @@
       au < doNotProcess ; 2022 ; 3 ; New Area Studies Volume 2022 ; 2022 ; 3 ; University of East Anglia ;  ; https://newareastudies.com/ >
       au < doesNotExist ; 2023 ; 4 ; New Area Studies Volume 2023 ; 2023 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ >
       au < released ; 2024 ; 4 ; New Area Studies Volume 2024 ; 2024 ; 4 ; University of East Anglia ;  ; https://newareastudies.com/ >
-      au < ready ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; University of East Anglia ;  ; https://newareastudies.com/ >
+      au < releasing ; 2025 ; 5 ; New Area Studies Volume 2025 ; 2025 ; 5 ; University of East Anglia ;  ; https://newareastudies.com/ >
 
   }
 
@@ -2695,7 +2695,7 @@
       au < notReady ; 2021 ; 11 ; Scientific Study of Literature Volume 2021 ; 2021 ; 11 ; International Society for the Empirical Study of Literature ; No substance ; https://ssol-journal.com/ >
       au < doNotProcess ; 2023 ; 12 ; Scientific Study of Literature Volume 2023 ; 2023 ; 12 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
       au < released ; 2024 ; 13 ; Scientific Study of Literature Volume 2024 ; 2024 ; 13 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
-      au < ready ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
+      au < releasing ; 2025 ; 14 ; Scientific Study of Literature Volume 2025 ; 2025 ; 14 ; International Society for the Empirical Study of Literature ;  ; https://ssol-journal.com/ >
 
   }
 
@@ -2719,7 +2719,7 @@
       au < released ; 2022 ; 7 ; Journal of Historical Network Research Volume 2022 ; 2022 ; 7 ; Université du Luxembourg ;  ; https://jhnr.net/ >
       au < released ; 2023 ; 8,9 ; Journal of Historical Network Research Volume 2023 ; 2023 ; 8,9 ; Université du Luxembourg ;  ; https://jhnr.net/ >
       au < released ; 2024 ; 10 ; Journal of Historical Network Research Volume 2024 ; 2024 ; 10 ; Université du Luxembourg ;  ; https://jhnr.net/ >
-      au < ready ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ;  ; https://jhnr.net/ >
+      au < releasing ; 2025 ; 11 ; Journal of Historical Network Research Volume 2025 ; 2025 ; 11 ; Université du Luxembourg ;  ; https://jhnr.net/ >
 
   }
 
@@ -2746,7 +2746,7 @@
       au < released ; 2022 ; 24 ; European Journal of Open, Distance and E-Learning Volume 2022 ; 2022 ; 24 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
       au < released ; 2023 ; 25 ; European Journal of Open, Distance and E-Learning Volume 2023 ; 2023 ; 25 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
       au < released ; 2024 ; 26 ; European Journal of Open, Distance and E-Learning Volume 2024 ; 2024 ; 26 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
-      au < ready ; 2025 ; 27 ; European Journal of Open, Distance and E-Learning Volume 2025 ; 2025 ; 27 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
+      au < releasing ; 2025 ; 27 ; European Journal of Open, Distance and E-Learning Volume 2025 ; 2025 ; 27 ; EDEN Digital Learning Europe ;  ; https://eurodljournal.com/ >
 
   }
 
@@ -2763,7 +2763,7 @@
       nondefparam[journal_id] = wpllc-j-jncr
 
       au < released ; 2024 ; 1 ; Journal of Neurointerventional Case Reports 2024 ; 2024 ; 1 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ >
-      au < ready ; 2025 ; 2 ; Journal of Neurointerventional Case Reports Volume 2025 ; 2025 ; 2 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ >
+      au < releasing ; 2025 ; 2 ; Journal of Neurointerventional Case Reports Volume 2025 ; 2025 ; 2 ; Weather Hills Publishing, LLC ;  ; https://neuroircases.com/ >
 
   }
 
@@ -2779,7 +2779,7 @@
       nondefparam[base_url2] = https://account.sustainability-journal.com/
       nondefparam[journal_id] = up-j-rrs
 
-      au < ready ; 2025 ; 1 ; Research and Reviews in Sustainability Volume 2025 ; 2025 ; 1 ; Ubiquity Press ;  ; https://sustainability-journal.com/ >
+      au < releasing ; 2025 ; 1 ; Research and Reviews in Sustainability Volume 2025 ; 2025 ; 1 ; Ubiquity Press ;  ; https://sustainability-journal.com/ >
 
   }
 
