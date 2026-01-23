@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>30</string>
+        <string>31</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -148,8 +148,11 @@
             https://rupress.org/jem/article/215/1/1/42506/pages/privacy-policy
             https://rupress.org/jem/article/215/1/5/42501/Shared-cancer-neoantigens-Making-private-matters
             https://rupress.org/jem/article/215/1/91/42480/Maternal-IgG-immune-complexes-induce-food-allergen
+
+            Some Atypon journal moved to Silverchair, and they do not have volume
+            https://royalsocietypublishing.org/rsbm/article/doi/10.1098/rsbm.2019.0011/116050/Sir-David-Cecil-Smith-21-May-1930-29-June-2018Sir
             -->
-            <string>1,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)/%s/", base_url, journal_id, volume_name</string>
+            <string>1,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)(/%s)?/", base_url, journal_id, volume_name</string>
             <!--
             https://pubs.geoscienceworld.org/gsabulletin/article-pdf/132/1-2/3/4907520/3.pdf
             Redirected to excluded URL:
@@ -157,7 +160,16 @@
 
             Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
             -->
-            <string>1,"%s([^/]+/)?%s/article-pdf/(doi/[^/]+/)?%s/.*\.pdf$", base_url, journal_id, volume_name</string>
+            <!--
+            Need to make volume optional. With Atypon journals moved to Silverchair, we see more and more doi based url.
+            https://royalsocietypublishing.org/rsbl/article/22/1/20250363/479254/The-value-of-satellite-tracking-across-multiple
+            https://royalsocietypublishing.org/rsbl/article/22/1/20250424/478866/Considering-affective-state-as-a-central-component
+            https://royalsocietypublishing.org/rsbl/article/22/1/20250488/479343/Sleeping-with-the-fishes-contradictory-results-on
+            https://royalsocietypublishing.org/rsbl/article-pdf/doi/10.1098/rsbl.2025.0620/5656983/rsbl.2025.0620.pdf
+            https://royalsocietypublishing.org/rsbl/article-pdf/doi/10.1098/rsbl.2025.0586/5656990/rsbl.2025.0586.pdf
+            https://royalsocietypublishing.org/rsbl/article-pdf/doi/10.1098/rsbl.2025.0548/5656987/rsbl.2025.0548.pdf
+            -->
+            <string>1,"%s([^/]+/)?%s/article-pdf/(doi/[^/]+/)?(%s/)?.*\.pdf$", base_url, journal_id, volume_name</string>
             <!--
                 citationFormat=0 // ris
                 citationFormat=1 // Endnote
@@ -206,6 +218,14 @@
               }
             -->
             <string>1,"https?://static-movie-usa.glencoesoftware.com/(mp4|source|webm|flv|jpg|ogv)"</string>
+            <!--Blow is all the rules added to "rsbm"-->
+            <!--
+            https://royalsocietypublishing.org/rsbm/issue/browse-by-year/2019
+            https://royalsocietypublishing.org/rsbm/issue/volume/67
+            https://royalsocietypublishing.org/rsbm/article/doi/10.1098/rsbm.2019.0011/116050/Sir-David-Cecil-Smith-21-May-1930-29-June-2018Sir
+            https://royalsocietypublishing.org/rsbm/article-pdf/doi/10.1098/rsbm.2019.0011/1419615/rsbm.2019.0011.pdf
+            -->
+            <string>1, "%s%s/issue/volume/%s",base_url, journal_id, volume_name</string>
         </list>
     </entry>
     <entry>
