@@ -205,6 +205,7 @@
       #param[base_url] = https://jcss.demontfortuniversitypress.org/
       nondefparam[base_url2] = https://account.jcss.demontfortuniversitypress.org/
       nondefparam[journal_id] = dmu-j-jcss
+      #LXQUEUE-2158
 
       au < exists ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; 2 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
       au < exists ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 ; 3 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
