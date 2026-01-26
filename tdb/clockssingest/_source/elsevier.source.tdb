@@ -359,8 +359,8 @@
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_03 ; 2026_03 >
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_04 ; 2026_04 >
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_05 ; 2026_05 >
-        au < expected ; exists ; 2026 ; Elsevier Source Content 2026_06 ; 2026_06 >
-        au < expected ; exists ; 2026 ; Elsevier Source Content 2026_07 ; 2026_07 >
+        au < manifest ; exists ; 2026 ; Elsevier Source Content 2026_06 ; 2026_06 >
+        au < manifest ; exists ; 2026 ; Elsevier Source Content 2026_07 ; 2026_07 >
         au < expected ; exists ; 2026 ; Elsevier Source Content 2026_08 ; 2026_08 >
         au < expected ; exists ; 2026 ; Elsevier Source Content 2026_09 ; 2026_09 >
         au < expected ; exists ; 2026 ; Elsevier Source Content 2026_10 ; 2026_10 >
