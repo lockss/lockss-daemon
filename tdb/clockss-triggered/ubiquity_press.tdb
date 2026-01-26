@@ -194,4 +194,26 @@
 
   }
 
+  {
+
+      title <
+        name = Open Health Data ;
+        eissn = 2054-7102
+      >
+
+      comment[publisher] = Ubiquity Press
+      #param[base_url] = https://jcss.demontfortuniversitypress.org/
+      nondefparam[base_url2] = https://account.jcss.demontfortuniversitypress.org/
+      nondefparam[journal_id] = dmu-j-jcss
+
+      au < exists ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; 2 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
+      au < exists ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 ; 3 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
+      au < exists ; 2016 ; 4 ; Open Health Data Volume 2016 ; 2016 ; 4 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
+      au < exists ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; 5 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
+      au < exists ; 2019 ; 6 ; Open Health Data Volume 2019 ; 2019 ; 6 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
+      au < exists ; 2020 ; 7 ; Open Health Data Volume 2020 ; 2020 ; 7 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
+      au < exists ; 2021 ; 8 ; Open Health Data Volume 2021 ; 2021 ; 8 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
+
+  }
+
 }
