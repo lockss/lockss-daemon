@@ -979,21 +979,21 @@
 
       param[journal_id] = tmr
 
-      au < notReady ; exists ; 1993 ; 1993 ; The Medieval Review Volume 1993 ; 1 ; > #Failed health check
+      au < ready ; exists ; 1993 ; 1993 ; The Medieval Review Volume 1993 ; 1 ; > #Failed health check
       au < finished ; finished ; 1994 ; 1994 ; The Medieval Review Volume 1994 ; 2 ; reingest1.clockss.org:8082 >
-      au < notReady ; exists ; 1995 ; 1995 ; The Medieval Review Volume 1995 ; 3 ; > #500 error
+      au < ready ; exists ; 1995 ; 1995 ; The Medieval Review Volume 1995 ; 3 ; > #500 error
       au < finished ; finished ; 1996 ; 1996 ; The Medieval Review Volume 1996 ; 4 ; reingest1.clockss.org:8082 >
-      au < notReady ; exists ; 1997 ; 1997 ; The Medieval Review Volume 1997 ; 5 ; > #500 error
+      au < ready ; exists ; 1997 ; 1997 ; The Medieval Review Volume 1997 ; 5 ; > #500 error
       au < finished ; finished ; 1998 ; 1998 ; The Medieval Review Volume 1998 ; 6 ; reingest2.clockss.org:8085 >
-      au < notReady ; exists ; 1999 ; 1999 ; The Medieval Review Volume 1999 ; 7 ; > #500 error
+      au < ready ; exists ; 1999 ; 1999 ; The Medieval Review Volume 1999 ; 7 ; > #500 error
       au < finished ; finished ; 2000 ; 2000 ; The Medieval Review Volume 2000 ; 8 ; reingest1.clockss.org:8082 >
-      au < notReady ; exists ; 2001 ; 2001 ; The Medieval Review Volume 2001 ; 9 ; > #0 article, 0 metadata
-      au < notReady ; exists ; 2002 ; 2002 ; The Medieval Review Volume 2002 ; 10 ; > #0 article, 0 metadata
-      au < notReady ; exists ; 2003 ; 2003 ; The Medieval Review Volume 2003 ; 11 ; > #0 article, 0 metadata
-      au < notReady ; exists ; 2004 ; 2004 ; The Medieval Review Volume 2004 ; 12 ; > #0 article, 0 metadata
-      au < notReady ; exists ; 2005 ; 2005 ; The Medieval Review Volume 2005 ; 13 ; > #0 article, 0 metadata
-      au < notReady ; exists ; 2006 ; 2006 ; The Medieval Review Volume 2006 ; 14 ; > #0 article, 0 metadata
-      au < notReady ; exists ; 2007 ; 2007 ; The Medieval Review Volume 2007 ; 15 ; > #0 article, 0 metadata
+      au < ready ; exists ; 2001 ; 2001 ; The Medieval Review Volume 2001 ; 9 ; > #0 article, 0 metadata
+      au < ready ; exists ; 2002 ; 2002 ; The Medieval Review Volume 2002 ; 10 ; > #0 article, 0 metadata
+      au < ready ; exists ; 2003 ; 2003 ; The Medieval Review Volume 2003 ; 11 ; > #0 article, 0 metadata
+      au < ready ; exists ; 2004 ; 2004 ; The Medieval Review Volume 2004 ; 12 ; > #0 article, 0 metadata
+      au < ready ; exists ; 2005 ; 2005 ; The Medieval Review Volume 2005 ; 13 ; > #0 article, 0 metadata
+      au < ready ; exists ; 2006 ; 2006 ; The Medieval Review Volume 2006 ; 14 ; > #0 article, 0 metadata
+      au < ready ; exists ; 2007 ; 2007 ; The Medieval Review Volume 2007 ; 15 ; > #0 article, 0 metadata
       au < finished ; finished ; 2008 ; 2008 ; The Medieval Review Volume 2008 ; 16 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2009 ; 2009 ; The Medieval Review Volume 2009 ; 17 ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2010 ; 2010 ; The Medieval Review Volume 2010 ; 18 ; reingest4.clockss.org:8082 >
@@ -1007,8 +1007,8 @@
       au < finished ; finished ; 2018 ; 2018 ; The Medieval Review Volume 2018 ; 26 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2019 ; 2019 ; The Medieval Review Volume 2019 ; 27 ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; 2020 ; The Medieval Review Volume 2020 ; 28 ; >
-      au < notReady ; exists ; 2021 ; 2021 ; The Medieval Review Volume 2021 ; 29 ; > #has substance, but no metadata, no articles.
-      au < manifest ; exists ; 2022 ; 2022 ; The Medieval Review Volume 2022 ; 30 ; >
+      au < ready ; exists ; 2021 ; 2021 ; The Medieval Review Volume 2021 ; 29 ; > #has substance, but no metadata, no articles.
+      au < ready ; exists ; 2022 ; 2022 ; The Medieval Review Volume 2022 ; 30 ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 2023 ; The Medieval Review Volume 2023 ; 31 ; >
       au < exists ; exists ; 2024 ; 2024 ; The Medieval Review Volume 2024 ; 32 ; >
       au < expected ; exists ; 2025 ; 2025 ; The Medieval Review Volume 2025 ; 33 ; >
