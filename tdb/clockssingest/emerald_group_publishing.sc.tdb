@@ -919,7 +919,7 @@
     au < manifest ; exists ; 1983 ; 1983 ; Assembly Automation Volume 3 ; 3 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Assembly Automation Volume 4 ; 4 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Assembly Automation Volume 5 ; 5 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Assembly Automation Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Assembly Automation Volume 6 ; 6 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Assembly Automation Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Assembly Automation Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Assembly Automation Volume 9 ; 9 ; >
@@ -1877,7 +1877,7 @@
     param[journal_id] = compel
 
     au < manifest ; exists ; 1982 ; 1982 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 1 ; 1 ; >
-    au < ready ; exists ; 1983 ; 1983 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1983 ; 1983 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 2 ; 2 ; >
     au < crawling ; exists ; 1984 ; 1984 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 3 ; 3 ; >
     au < frozen ; exists ; 1985 ; 1985 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 4 ; 4 ; >
     au < frozen ; exists ; 1986 ; 1986 ; COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering Volume 5 ; 5 ; >
@@ -2973,7 +2973,7 @@
     au < frozen ; exists ; 1981 ; 1981 ; European Journal of Marketing Volume 15 ; 15 ; >
     au < manifest ; exists ; 1982 ; 1982 ; European Journal of Marketing Volume 16 ; 16 ; >
     au < frozen ; exists ; 1983 ; 1983 ; European Journal of Marketing Volume 17 ; 17 ; >
-    au < ready ; exists ; 1984 ; 1984 ; European Journal of Marketing Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; European Journal of Marketing Volume 18 ; 18 ; >
     au < frozen ; exists ; 1985 ; 1985 ; European Journal of Marketing Volume 19 ; 19 ; >
     au < frozen ; exists ; 1986 ; 1986 ; European Journal of Marketing Volume 20 ; 20 ; >
     au < frozen ; exists ; 1987 ; 1987 ; European Journal of Marketing Volume 21 ; 21 ; >
@@ -3052,7 +3052,7 @@
     comment[journal_issn] = 0263-2772
     param[journal_id] = f
 
-    au < ready ; exists ; 1983 ; 1983 ; Facilities Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1983 ; 1983 ; Facilities Volume 1 ; 1 ; >
     au < frozen ; exists ; 1984 ; 1984 ; Facilities Volume 2 ; 2 ; >
     au < frozen ; exists ; 1985 ; 1985 ; Facilities Volume 3 ; 3 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Facilities Volume 4 ; 4 ; >
@@ -3566,7 +3566,7 @@
     au < frozen ; exists ; 1981 ; 1981 ; Industrial and Commercial Training Volume 13 ; 13 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Industrial and Commercial Training Volume 14 ; 14 ; >
     au < crawling ; exists ; 1983 ; 1983 ; Industrial and Commercial Training Volume 15 ; 15 ; >
-    au < ready ; exists ; 1984 ; 1984 ; Industrial and Commercial Training Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Industrial and Commercial Training Volume 16 ; 16 ; >
     au < frozen ; exists ; 1985 ; 1985 ; Industrial and Commercial Training Volume 17 ; 17 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Industrial and Commercial Training Volume 18 ; 18 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Industrial and Commercial Training Volume 19 ; 19 ; >
@@ -3796,7 +3796,7 @@
     au < manifest ; exists ; 1982 ; 1982 ; Industrial Robot: The international journal of industrial and service robotics Volume 9 ; 9 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Industrial Robot: The international journal of industrial and service robotics Volume 10 ; 10 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Industrial Robot: The international journal of industrial and service robotics Volume 11 ; 11 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Industrial Robot: The international journal of industrial and service robotics Volume 12 ; 12 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Industrial Robot: The international journal of industrial and service robotics Volume 12 ; 12 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Industrial Robot: The international journal of industrial and service robotics Volume 13 ; 13 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Industrial Robot: The international journal of industrial and service robotics Volume 14 ; 14 ; >
     au < doNotProcess ; doNotProcess ; 1988 ; 1988 ; Industrial Robot: The international journal of industrial and service robotics Volume 15 ; 15 ; >
@@ -5571,7 +5571,7 @@
     au < frozen ; exists ; 1981 ; 1981 ; International Journal of Operations & Production Management Volume 1 ; 1 ; >
     au < manifest ; exists ; 1982 ; 1982 ; International Journal of Operations & Production Management Volume 2 ; 2 ; >
     au < manifest ; exists ; 1983 ; 1983 ; International Journal of Operations & Production Management Volume 3 ; 3 ; >
-    au < ready ; exists ; 1984 ; 1984 ; International Journal of Operations & Production Management Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; International Journal of Operations & Production Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1985 ; 1985 ; International Journal of Operations & Production Management Volume 5 ; 5 ; >
     au < frozen ; exists ; 1986 ; 1986 ; International Journal of Operations & Production Management Volume 6 ; 6 ; >
     au < frozen ; exists ; 1987 ; 1987 ; International Journal of Operations & Production Management Volume 7 ; 7 ; >
@@ -7290,7 +7290,7 @@
     comment[journal_issn] = 0736-3761
     param[journal_id] = jcm
 
-    au < ready ; exists ; 1984 ; 1984 ; Journal of Consumer Marketing Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Journal of Consumer Marketing Volume 1 ; 1 ; >
     au < frozen ; exists ; 1985 ; 1985 ; Journal of Consumer Marketing Volume 2 ; 2 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Journal of Consumer Marketing Volume 3 ; 3 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Journal of Consumer Marketing Volume 4 ; 4 ; >
@@ -7481,7 +7481,7 @@
     au < frozen ; exists ; 1981 ; 1981 ; Journal of Documentation Volume 37 ; 37 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Journal of Documentation Volume 38 ; 38 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Journal of Documentation Volume 39 ; 39 ; >
-    au < ready ; exists ; 1984 ; 1984 ; Journal of Documentation Volume 40 ; 40 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Journal of Documentation Volume 40 ; 40 ; >
     au < frozen ; exists ; 1985 ; 1985 ; Journal of Documentation Volume 41 ; 41 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Journal of Documentation Volume 42 ; 42 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Journal of Documentation Volume 43 ; 43 ; >
@@ -10093,7 +10093,7 @@
     au < frozen ; exists ; 1981 ; 1981 ; Kybernetes Volume 10 ; 10 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Kybernetes Volume 11 ; 11 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Kybernetes Volume 12 ; 12 ; >
-    au < ready ; exists ; 1984 ; 1984 ; Kybernetes Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Kybernetes Volume 13 ; 13 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Kybernetes Volume 14 ; 14 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Kybernetes Volume 15 ; 15 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Kybernetes Volume 16 ; 16 ; >
@@ -10680,7 +10680,7 @@
     au < manifest ; exists ; 1982 ; 1982 ; Management Decision Volume 20 ; 20 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Management Decision Volume 21 ; 21 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Management Decision Volume 22 ; 22 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Management Decision Volume 23 ; 23 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Management Decision Volume 23 ; 23 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Management Decision Volume 24 ; 24 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Management Decision Volume 25 ; 25 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Management Decision Volume 26 ; 26 ; >
@@ -10804,7 +10804,7 @@
     au < manifest ; exists ; 1982 ; 1982 ; Management Research News Volume 5 ; 5 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Management Research News Volume 6 ; 6 ; >
     au < frozen ; exists ; 1984 ; 1984 ; Management Research News Volume 7 ; 7 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Management Research News Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Management Research News Volume 8 ; 8 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Management Research News Volume 9 ; 9 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Management Research News Volume 10 ; 10 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Management Research News Volume 11 ; 11 ; >
@@ -11398,7 +11398,7 @@
     param[journal_id] = mi
 
     au < crawling ; exists ; 1984 ; 1984 ; Microelectronics International Volume 1 ; 1 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Microelectronics International Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Microelectronics International Volume 2 ; 2 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Microelectronics International Volume 3 ; 3 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Microelectronics International Volume 4 ; 4 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Microelectronics International Volume 5 ; 5 ; >
@@ -12227,7 +12227,7 @@
     au < manifest ; exists ; 1982 ; 1982 ; Pigment & Resin Technology Volume 11 ; 11 ; >
     au < manifest ; exists ; 1983 ; 1983 ; Pigment & Resin Technology Volume 12 ; 12 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Pigment & Resin Technology Volume 13 ; 13 ; >
-    au < ready ; exists ; 1985 ; 1985 ; Pigment & Resin Technology Volume 14 ; 14 ; >
+    au < crawling ; exists ; 1985 ; 1985 ; Pigment & Resin Technology Volume 14 ; 14 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Pigment & Resin Technology Volume 15 ; 15 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Pigment & Resin Technology Volume 16 ; 16 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Pigment & Resin Technology Volume 17 ; 17 ; >
@@ -12379,7 +12379,7 @@
     au < frozen ; exists ; 1981 ; 1981 ; Program: Electronic Library and Information Systems Volume 15 ; 15 ; >
     au < manifest ; exists ; 1982 ; 1982 ; Program: Electronic Library and Information Systems Volume 16 ; 16 ; >
     au < frozen ; exists ; 1983 ; 1983 ; Program: Electronic Library and Information Systems Volume 17 ; 17 ; >
-    au < ready ; exists ; 1984 ; 1984 ; Program: Electronic Library and Information Systems Volume 18 ; 18 ; >
+    au < crawling ; exists ; 1984 ; 1984 ; Program: Electronic Library and Information Systems Volume 18 ; 18 ; >
     au < frozen ; exists ; 1985 ; 1985 ; Program: Electronic Library and Information Systems Volume 19 ; 19 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Program: Electronic Library and Information Systems Volume 20 ; 20 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Program: Electronic Library and Information Systems Volume 21 ; 21 ; >
@@ -12452,7 +12452,7 @@
     au < manifest ; exists ; 1983 ; 1983 ; Property Management Volume 1 ; 1 ; >
     au < crawling ; exists ; 1984 ; 1984 ; Property Management Volume 2 ; 2 ; >
     au < crawling ; exists ; 1985 ; 1985 ; Property Management Volume 3 ; 3 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Property Management Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Property Management Volume 4 ; 4 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Property Management Volume 5 ; 5 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Property Management Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; Property Management Volume 7 ; 7 ; >
@@ -14195,7 +14195,7 @@
     au < manifest ; exists ; 1983 ; 1983 ; VINE Volume 13 ; 13 ; >
     au < frozen ; exists ; 1984 ; 1984 ; VINE Volume 14 ; 14 ; >
     au < frozen ; exists ; 1985 ; 1985 ; VINE Volume 15 ; 15 ; >
-    au < ready ; exists ; 1986 ; 1986 ; VINE Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; VINE Volume 16 ; 16 ; >
     au < frozen ; exists ; 1987 ; 1987 ; VINE Volume 17 ; 17 ; >
     au < frozen ; exists ; 1988 ; 1988 ; VINE Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 1989 ; 1989 ; VINE Volume 19 ; 19 ; >
