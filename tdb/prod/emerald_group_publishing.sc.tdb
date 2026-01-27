@@ -983,9 +983,9 @@
     param[journal_id] = ria
     #continues = 0144-5154
 
-    au < exists ; 2023 ; 2023 ; Robotic Intelligence and Automation Volume 43 ; 43 >
-    au < exists ; 2024 ; 2024 ; Robotic Intelligence and Automation Volume 44 ; 44 >
-    au < exists ; 2025 ; 2025 ; Robotic Intelligence and Automation Volume 45 ; 45 >
+    au < manifest ; 2023 ; 2023 ; Robotic Intelligence and Automation Volume 43 ; 43 >
+    au < manifest ; 2024 ; 2024 ; Robotic Intelligence and Automation Volume 44 ; 44 >
+    au < manifest ; 2025 ; 2025 ; Robotic Intelligence and Automation Volume 45 ; 45 >
 
   }
 
@@ -1307,9 +1307,9 @@
     param[journal_id] = ijhg
     #continued_by = 1466-4100
 
-    au < exists ; 1996 ; 1996 ; Journal of Clinical Effectiveness Volume 1 ; 1 >
-    au < exists ; 1997 ; 1997 ; Journal of Clinical Effectiveness Volume 2 ; 2 >
-    au < exists ; 1998 ; 1998 ; Journal of Clinical Effectiveness Volume 3 ; 3 >
+    au < manifest ; 1996 ; 1996 ; Journal of Clinical Effectiveness Volume 1 ; 1 >
+    au < manifest ; 1997 ; 1997 ; Journal of Clinical Effectiveness Volume 2 ; 2 >
+    au < manifest ; 1998 ; 1998 ; Journal of Clinical Effectiveness Volume 3 ; 3 >
 
   }
 
@@ -2716,19 +2716,19 @@
     param[journal_id] = meq
     comment[continued_by] = 1477-7835
 
-    au < exists ; 1990 ; 1990 ; Environmental Management and Health Volume 1 ; 1 >
-    au < exists ; 1991 ; 1991 ; Environmental Management and Health Volume 2 ; 2 >
-    au < exists ; 1992 ; 1992 ; Environmental Management and Health Volume 3 ; 3 >
-    au < exists ; 1993 ; 1993 ; Environmental Management and Health Volume 4 ; 4 >
-    au < exists ; 1994 ; 1994 ; Environmental Management and Health Volume 5 ; 5 >
-    au < exists ; 1995 ; 1995 ; Environmental Management and Health Volume 6 ; 6 >
-    au < exists ; 1996 ; 1996 ; Environmental Management and Health Volume 7 ; 7 >
-    au < exists ; 1997 ; 1997 ; Environmental Management and Health Volume 8 ; 8 >
-    au < exists ; 1998 ; 1998 ; Environmental Management and Health Volume 9 ; 9 >
-    au < exists ; 1999 ; 1999 ; Environmental Management and Health Volume 10 ; 10 >
+    au < manifest ; 1990 ; 1990 ; Environmental Management and Health Volume 1 ; 1 >
+    au < manifest ; 1991 ; 1991 ; Environmental Management and Health Volume 2 ; 2 >
+    au < manifest ; 1992 ; 1992 ; Environmental Management and Health Volume 3 ; 3 >
+    au < manifest ; 1993 ; 1993 ; Environmental Management and Health Volume 4 ; 4 >
+    au < manifest ; 1994 ; 1994 ; Environmental Management and Health Volume 5 ; 5 >
+    au < manifest ; 1995 ; 1995 ; Environmental Management and Health Volume 6 ; 6 >
+    au < manifest ; 1996 ; 1996 ; Environmental Management and Health Volume 7 ; 7 >
+    au < manifest ; 1997 ; 1997 ; Environmental Management and Health Volume 8 ; 8 >
+    au < manifest ; 1998 ; 1998 ; Environmental Management and Health Volume 9 ; 9 >
+    au < manifest ; 1999 ; 1999 ; Environmental Management and Health Volume 10 ; 10 >
     au < doNotProcess ; 2000 ; 2000 ; Environmental Management and Health Volume 11 ; 11 >
     au < doNotProcess ; 2001 ; 2001 ; Environmental Management and Health Volume 12 ; 12 >
-    au < exists ; 2002 ; 2002 ; Environmental Management and Health Volume 13 ; 13 >
+    au < manifest ; 2002 ; 2002 ; Environmental Management and Health Volume 13 ; 13 >
 
   }
 
@@ -2744,24 +2744,24 @@
     param[journal_id] = edi
     comment[continued_by] = 2040-7149
 
-    au < exists ; 1981 ; 1981 ; Equal Opportunities International Volume 1 ; 1 >
-    au < exists ; 1983 ; 1983 ; Equal Opportunities International Volume 2 ; 2 >
-    au < exists ; 1984 ; 1984 ; Equal Opportunities International Volume 3 ; 3 >
-    au < exists ; 1985 ; 1985 ; Equal Opportunities International Volume 4 ; 4 >
-    au < exists ; 1986 ; 1986 ; Equal Opportunities International Volume 5 ; 5 >
-    au < exists ; 1987 ; 1987 ; Equal Opportunities International Volume 6 ; 6 >
-    au < exists ; 1988 ; 1988 ; Equal Opportunities International Volume 7 ; 7 >
-    au < exists ; 1989 ; 1989 ; Equal Opportunities International Volume 8 ; 8 >
-    au < exists ; 1990 ; 1990 ; Equal Opportunities International Volume 9 ; 9 >
-    au < exists ; 1991 ; 1991 ; Equal Opportunities International Volume 10 ; 10 >
-    au < exists ; 1992 ; 1992 ; Equal Opportunities International Volume 11 ; 11 >
-    au < exists ; 1993 ; 1993 ; Equal Opportunities International Volume 12 ; 12 >
-    au < exists ; 1994 ; 1994 ; Equal Opportunities International Volume 13 ; 13 >
-    au < exists ; 1995 ; 1995 ; Equal Opportunities International Volume 14 ; 14 >
-    au < exists ; 1996 ; 1996 ; Equal Opportunities International Volume 15 ; 15 >
-    au < exists ; 1997 ; 1997 ; Equal Opportunities International Volume 16 ; 16 >
-    au < exists ; 1998 ; 1998 ; Equal Opportunities International Volume 17 ; 17 >
-    au < exists ; 1999 ; 1999 ; Equal Opportunities International Volume 18 ; 18 >
+    au < manifest ; 1981 ; 1981 ; Equal Opportunities International Volume 1 ; 1 >
+    au < manifest ; 1983 ; 1983 ; Equal Opportunities International Volume 2 ; 2 >
+    au < manifest ; 1984 ; 1984 ; Equal Opportunities International Volume 3 ; 3 >
+    au < manifest ; 1985 ; 1985 ; Equal Opportunities International Volume 4 ; 4 >
+    au < manifest ; 1986 ; 1986 ; Equal Opportunities International Volume 5 ; 5 >
+    au < manifest ; 1987 ; 1987 ; Equal Opportunities International Volume 6 ; 6 >
+    au < manifest ; 1988 ; 1988 ; Equal Opportunities International Volume 7 ; 7 >
+    au < manifest ; 1989 ; 1989 ; Equal Opportunities International Volume 8 ; 8 >
+    au < manifest ; 1990 ; 1990 ; Equal Opportunities International Volume 9 ; 9 >
+    au < manifest ; 1991 ; 1991 ; Equal Opportunities International Volume 10 ; 10 >
+    au < manifest ; 1992 ; 1992 ; Equal Opportunities International Volume 11 ; 11 >
+    au < manifest ; 1993 ; 1993 ; Equal Opportunities International Volume 12 ; 12 >
+    au < manifest ; 1994 ; 1994 ; Equal Opportunities International Volume 13 ; 13 >
+    au < manifest ; 1995 ; 1995 ; Equal Opportunities International Volume 14 ; 14 >
+    au < manifest ; 1996 ; 1996 ; Equal Opportunities International Volume 15 ; 15 >
+    au < manifest ; 1997 ; 1997 ; Equal Opportunities International Volume 16 ; 16 >
+    au < manifest ; 1998 ; 1998 ; Equal Opportunities International Volume 17 ; 17 >
+    au < manifest ; 1999 ; 1999 ; Equal Opportunities International Volume 18 ; 18 >
     au < doNotProcess ; 2000 ; 2000 ; Equal Opportunities International Volume 19 ; 19 >
     au < doNotProcess ; 2001 ; 2001 ; Equal Opportunities International Volume 20 ; 20 >
     au < doNotProcess ; 2002 ; 2002 ; Equal Opportunities International Volume 21 ; 21 >
@@ -3464,17 +3464,17 @@
     # online from 1989
     #continued_by = 2514-9369
 
-    au < exists ; 1989 ; 1989 ; Humanomics Volume 5 ; 5 >
-    au < exists ; 1990 ; 1990 ; Humanomics Volume 6 ; 6 >
-    au < exists ; 1991 ; 1991 ; Humanomics Volume 7 ; 7 >
-    au < exists ; 1992 ; 1992 ; Humanomics Volume 8 ; 8 >
+    au < manifest ; 1989 ; 1989 ; Humanomics Volume 5 ; 5 >
+    au < manifest ; 1990 ; 1990 ; Humanomics Volume 6 ; 6 >
+    au < manifest ; 1991 ; 1991 ; Humanomics Volume 7 ; 7 >
+    au < manifest ; 1992 ; 1992 ; Humanomics Volume 8 ; 8 >
     au < doesNotExist ; 1993 ; 1993 ; Humanomics Volume 9 ; 9 >
-    au < exists ; 1994 ; 1994 ; Humanomics Volume 10 ; 10 >
-    au < exists ; 1995 ; 1995 ; Humanomics Volume 11 ; 11 >
-    au < exists ; 1996 ; 1996 ; Humanomics Volume 12 ; 12 >
-    au < exists ; 1997 ; 1997 ; Humanomics Volume 13 ; 13 >
-    au < exists ; 1998 ; 1998 ; Humanomics Volume 14 ; 14 >
-    au < exists ; 1999 ; 1999 ; Humanomics Volume 15 ; 15 >
+    au < manifest ; 1994 ; 1994 ; Humanomics Volume 10 ; 10 >
+    au < manifest ; 1995 ; 1995 ; Humanomics Volume 11 ; 11 >
+    au < manifest ; 1996 ; 1996 ; Humanomics Volume 12 ; 12 >
+    au < manifest ; 1997 ; 1997 ; Humanomics Volume 13 ; 13 >
+    au < manifest ; 1998 ; 1998 ; Humanomics Volume 14 ; 14 >
+    au < manifest ; 1999 ; 1999 ; Humanomics Volume 15 ; 15 >
     au < doNotProcess ; 2000 ; 2000 ; Humanomics Volume 16 ; 16 >
     au < doNotProcess ; 2001 ; 2001 ; Humanomics Volume 17 ; 17 >
     au < doNotProcess ; 2002 ; 2002 ; Humanomics Volume 18 ; 18 >
@@ -3483,7 +3483,7 @@
     au < doNotProcess ; 2005 ; 2005 ; Humanomics Volume 21 ; 21 >
     au < doNotProcess ; 2006 ; 2006 ; Humanomics Volume 22 ; 22 >
     au < doNotProcess ; 2007 ; 2007 ; Humanomics Volume 23 ; 23 >
-    au < exists ; 2008 ; 2008 ; Humanomics Volume 24 ; 24 >
+    au < manifest ; 2008 ; 2008 ; Humanomics Volume 24 ; 24 >
     au < doNotProcess ; 2009 ; 2009 ; Humanomics Volume 25 ; 25 >
     au < doNotProcess ; 2010 ; 2010 ; Humanomics Volume 26 ; 26 >
     au < doNotProcess ; 2011 ; 2011 ; Humanomics Volume 27 ; 27 >
