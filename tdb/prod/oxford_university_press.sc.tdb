@@ -5964,7 +5964,7 @@
     param[journal_id] = eschf
     #move from Wiley in 2026
 
-    au < expected ; 2025 ; 2025 ; ESC Heart Failure Volume 11 ; 11 >
+    au < manifest ; 2025 ; 2025 ; ESC Heart Failure Volume 11 ; 11 >
     au < expected ; 2026 ; 2026 ; ESC Heart Failure Volume 12 ; 12 >
 
   }
@@ -8502,7 +8502,7 @@
     au < released ; 2022 ; 2022 ; History Workshop Journal Volume 93-94 ; 93-94 >
     au < released ; 2023 ; 2023 ; History Workshop Journal Volume 95-96 ; 95-96 >
     au < released ; 2024 ; 2024 ; History Workshop Journal Volume 97-98 ; 97-98 >
-    au < exists ; 2025 ; 2025 ; History Workshop Journal Volume 99-100 ; 99-100 >
+    au < manifest ; 2025 ; 2025 ; History Workshop Journal Volume 99-100 ; 99-100 >
 
   }
 
@@ -16355,7 +16355,7 @@
       param[journal_id] = molecular-omics
       #move from RSC in 2026
 
-      au < expected ; 2026 ; 2026 ; Molecular Omics Volume 22 ; 22 >
+      au < manifest ; 2026 ; 2026 ; Molecular Omics Volume 22 ; 22 >
 
   }
 
