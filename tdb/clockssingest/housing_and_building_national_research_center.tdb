@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Housing and Building National Research Center ;
+    info[contract] = 2008 ;
+    info[back] = 2008 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+  provider = bepress
+  
+  # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
+
+  {
+  
+    title <
+      name = HBRC Journal ;
+      eissn = 2090-9934 ;
+      issnl = 2090-9934
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin 
+    param[base_url] = https://journal.hbrc.edu.eg/
+    param[journal_abbr] = journal
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+
+    au < manifest ; exists ; 2026 ; HBRC Journal Volume 22 ; 22 ; >
+
+  }
+
+}
