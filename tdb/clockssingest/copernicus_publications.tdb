@@ -1630,6 +1630,19 @@
 
   {
     title <
+      name = Proceedings of the International Ocean Drilling Programme ;
+      eissn = 3052-1386
+    >
+      attr[journal_id] = piodp
+      param[base_url] = https://piodp.copernicus.org/
+      param[home_url] = https://www.proceedings-iodp3.net/
+
+      au < manifest ; exists ; 2025 ; 2025 ; Proceedings of the International Ocean Drilling Programme Volume 501 ; 501 ; >
+
+  }
+
+  {
+    title <
       name = Geochronology: Advances in Gechronological Science ;
       issn = 2628-3697 ;
       eissn = 2628-3719 

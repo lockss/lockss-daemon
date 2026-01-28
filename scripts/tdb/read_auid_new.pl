@@ -3308,9 +3308,9 @@ while (my $line = <>) {
           (defined($perm2_contents)) && 
           (defined($start_contents)) && 
           ($start_contents =~ m/$article_prefix/) && 
-          ($perm1_contents =~ m/$cc_license_tag/) && 
+          #($perm1_contents =~ m/$cc_license_tag/) && 
           ($perm2_contents =~ m/$cc_license_tag/) && 
-          ($perm1_contents =~ m/$cc_license_url/) &&
+          #($perm1_contents =~ m/$cc_license_url/) &&
           ($perm2_contents =~ m/$cc_license_url/)) {
         if ($perm1_contents =~ m/j-name.>\s*([^<]*)\s*<\//si) {
             $vol_title = $1;
