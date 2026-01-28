@@ -34,7 +34,6 @@
       plugin = edu.nyu.plugin.ejcjs.EJCJS2022Plugin
       param[base_url] = http://www.japanesestudies.org.uk/
       implicit < status ; year ; volume ; name ; param[volume] >
-      #0 metadata, Crawl completed with no substance, LXQUEUE-2040
 
       au < released ; 2001 ; 1 ; Electronic Journal of Contemporary Japanese Studies Volume 1 ; 1 >
       au < released ; 2002 ; 2 ; Electronic Journal of Contemporary Japanese Studies Volume 2 ; 2 >

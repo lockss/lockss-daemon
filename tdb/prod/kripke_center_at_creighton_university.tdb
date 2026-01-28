@@ -36,8 +36,7 @@
       plugin = edu.harvard.plugin.jrs.JRS2022Plugin
       param[base_url] = http://moses.creighton.edu/JRS/
       implicit < status ; year ; volume ; name ; param[volume_name] >
-      #0 metadata, Crawl completed with no substance, LXQUEUE-2040
-    
+
       au < released ; 1999 ; 1 ; Journal of Religion & Society Volume 1 ; 1999 >
       au < released ; 2000 ; 2 ; Journal of Religion & Society Volume 2 ; 2000 >
       au < released ; 2001 ; 3 ; Journal of Religion & Society Volume 3 ; 2001 >
