@@ -1335,6 +1335,7 @@ while (my $line = <>) {
           #default behavior
           $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
           $param{base_url}, $param{journal_id}, $param{year});
+          #print("Default Behavior\n") #debug
         }
         $man_url = uri_unescape($url);
         my $req = HTTP::Request->new(GET, $man_url);
@@ -1352,6 +1353,7 @@ while (my $line = <>) {
                     if (($vol_title =~ m/</) || ($vol_title =~ m/>/)) {
                         $vol_title = "\"" . $vol_title . "\"";
                     }
+                    #print("Title:$vol_title\n") #debug
                 }
                 $result = "Manifest"
             } else {
