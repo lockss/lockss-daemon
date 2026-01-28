@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>31</string>
+        <string>32</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -75,5 +75,166 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>plugin_fetch_rate_limiter_source</string>
         <string>host:base_url</string>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <!--Exclude improperly relative URLs, e.g. those with 'http// or 'https//' or 'www', or those that end with .com, .net, .org, etc.
+            Also need to exclude links that end with javascript:;-->
+            <string>2,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)/%s/.*/(https?//|www\.)", base_url, journal_id, volume_name</string>
+            <string>2,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)/%s/.*/[^/]+\.(com|net|org|edu|gov)", base_url, journal_id, volume_name</string>
+            <string>2,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)/%s/.*/(javascript;:|javascript:;)$", base_url, journal_id, volume_name</string>
+            <!--Exclude this particular ".svg" file based on publisher's request, it will return 403
+            https://ash.silverchair-cdn.com/cassette.axd/file/Themes/Client/app/img/split-view_figures-tables-53a6d02348118354786b056ee1d24882350dc90b.svg
+            -->
+            <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/cassette\.axd/.*"</string>
+            <!--Found the link in:
+            https://ashpublications.org/blood/article/140/1/1/485736/Safety-of-genetically-modified-T-cells
+            <ul id="ShareDrop" class="addthis_toolbox addthis_default_style addthis_20x20_style f-dropdown" data-dropdown-content>
+                    <li><a class="addthis_button_twitter" href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=https://ashpublications.org/blood/article-abstract/140/1/1/485736/Safety-of-genetically-modified-T-cells%2F&amp;pubid=xa-5265518246c10183&amp;title=Safety of genetically modified T cells" target="_blank"><span>Twitter</span></a></li>
+                    <li><a class="addthis_button_linkedin" href="https://api.addthis.com/oexchange/0.8/forward/linkedin/offer?url=https://ashpublications.org/blood/article-abstract/140/1/1/485736/Safety-of-genetically-modified-T-cells%2F&amp;pubid=xa-5265518246c10183&amp;title=Safety of genetically modified T cells" target="_blank"><span>LinkedIn</span></a></li>
+                    </ul>
+            -->
+            <string>2, "^https://api\.addthis\.com/oexchange/.*"</string>
+            <!--
+            Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
+            -->
+            <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|cdn\.jsdelivr\.net|cdnjs\.cloudflare\.com)/"</string>
+            <!-- Excluded pattern should be listed ahead of included pattern, which is more general-->
+            <!--
+               Exclude the following, it looks like an image, actually, it is a PPT, it is a hidden div
+               <div class="downloadImagesppt">
+                    <a id="lnkDownloadAllImages" href="//rup.silverchair-cdn.com/DownloadFile/DownloadImage.aspx?image=&amp;PPTtype=SlideSet&amp;ar=132505&amp;xsltPath=~/UI/app/XSLT&amp;siteId=1000003"></a>
+               </div>
+               https://pubs.geoscienceworld.org/DownloadFile/DownloadImage.aspx?image=https://gsw.silverchair-cdn.com/gsw/Content_public/Journal/gsabulletin/131/1-2/10.1130_B31906.1/2/43f1.png?Expires=2147483647&Signature=EoPKk7ZpE2Yq5ufO-xl-wktspOeT9X4-BjnU8-OUMvvqv9S7fKDze99NsPGpNB6W9EjbER7DFk88iT56GVwtxUMJ3LHU~S5rzTKD-EDqjTDWOSxtNFMgMZ9kNu5OKbJsPQNvXIivlSdnYwxGQDEx0NcCmJZNBRe6OBLthjdrZIlA3Db~hyhBRfnHNK12JmAKZLO3ZqLMzqPaVNndrtnH4f5Hdnxfetu5piPzsX4G2lb7bk36OYUWqx51TyLUUkc3V5sJdetRwG8bqIJVF~x8j4ggu-cvjqURNryYdJ96mKI~Uk8XS6f3JCTdsRTxk~v9eYuHb8MqzbGLLLh7rqe9fg__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA&sec=119615352&ar=546403&xsltPath=~/UI/app/powerpointXslt&imagename=&siteId=69
+               Both of these will generate one page PPT, which are duplication of "View Large Images", exclude them.
+            -->
+            <string>2,"%sDownloadFile", base_url</string>
+            <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/DownloadFile"</string>
+            <!--
+               Exclude the following ppt file
+               https://pubs.geoscienceworld.org/downloadimage.aspx?image=&PPTtype=SlideSet&ar=570731&siteId=69
+            -->
+            <string>2,"%sdownloadimage.aspx?image=", base_url</string>
+            <!-- images/figures/supplemental have Expires that will always be 2147483647 and don't redirect - allow -->
+            <!--The following sample link may not be exactly as it is, some of them are modified to avoid xml error.
+                https://rup.silverchair-cdn.com/rup/content_public/journal/jem/215/2/10.1084_jem.20170771/5/jem_20170771_sm.pdf?Expires=2147483647&Signature=rI9kXCdL5Cv0WBt5YdJ-gxxe95TsNfBrzfHzLcKWUYOIx1FVo37jXXu8hrcOVnczg8C47liQK6c-V1CisInPdfiHiy~xzYJmm8NE1vUcTUbqB06RNW9QYW9xoqCT8dLNfZnySKBpZC-GrP6Twz56AujgYp0CFubZXpLo2WmaUCXYDAkzZVBqK1-bM9fAct9Ijc84BOwCdoprMRc4uPscnxncrUh3322sWUw0f-dIvWS~P2mXSZmdxsUNU536k4FfGM61Hw9eEUvfG3Wqi5jJCAPgiVzk4E0wOMG-l1u2XoH9F4zynbs1XU11-W0GlQoMST93xjQ082iBRLxPAjkHQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
+                https://rup.silverchair-cdn.com/rup/content_public/journal/jem/215/2/10.1084_jem.20180049/5/jem_20180049_fig1.jpeg?Expires=2147483647&Signature=HipSDWZt5DgmDzz2FPXTamzvr4F3XkkSeLC5MLzbZbXvzshd4KL4-1H5sAj-F7SMQul3Co-zyRubLUIyKZzNfuCnf9~HVVtPtE0GE-v7TLIN7l0AfdFn9Bn4jfHEgaG9uFtSjTgbqMBjjJUgt3pZW~UcCFvt3HTX9cfUg6bItcMH2m6iPfOBUhS2qYzOu1DjNp2Vr7ypj0Gf6nMJqGDun-dUMyAIEdJe3lhME9icVqdmZZBFtm~WB4X8cZrha1yvzaZWJnnrgkFURqhyi-NogG9QFG4Ag5GT69iCLlCAOkfTH4OcBmv4id22O5v~vuuHXpu~0rjeIj0iw4XWZBJ2ig__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
+            -->
+            <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/.*\.xlsx"</string>
+            <string>2,"^https?://(trs\.silverchair-cdn\.com)/"</string>
+            <string>2,"%smy-account/register", base_url</string>
+            <!--This is Video API call entry point: https?://movie-usa.glencoesoftware.com/metadata/
+                For example: http://movie-usa.glencoesoftware.com/metadata/10.1083/jcb.202111095
+            -->
+            <string>1,"https?://movie-usa.glencoesoftware.com/metadata/.*"</string>
+            <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+            <!--
+            https://pubs.geoscienceworld.org/gsabulletin/article/132/1-2/48/570322/Multiproxy-lacustrine-records-of-post-glacial
+            Redirected to excluded URL:
+            https://pubs.geoscienceworld.org/gsa/gsabulletin/article/132/1-2/48/570322/Multiproxy-lacustrine-records-of-post-glacial
+            https://pubs.geoscienceworld.org/gsabulletin/article-abstract/131/7-8/1203/568718/Paleogene-topographic-and-climatic-evolution-of
+
+            Rockefeller: volume 215
+            https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
+            https://rupress.org/jem/article-standard/215/1/1/42506/FcRn-is-mother-s-milk-to-allergen-tolerance
+            https://rupress.org/jem/article/215/1/1/42506/pages/privacy-policy
+            https://rupress.org/jem/article/215/1/5/42501/Shared-cancer-neoantigens-Making-private-matters
+            https://rupress.org/jem/article/215/1/91/42480/Maternal-IgG-immune-complexes-induce-food-allergen
+
+            Some Atypon journal moved to Silverchair, and they do not have volume
+            https://royalsocietypublishing.org/rsbm/article/doi/10.1098/rsbm.2019.0011/116050/Sir-David-Cecil-Smith-21-May-1930-29-June-2018Sir
+            -->
+            <string>1,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)(/%s)?/", base_url, journal_id, volume_name</string>
+            <!--
+            https://pubs.geoscienceworld.org/gsabulletin/article-pdf/132/1-2/3/4907520/3.pdf
+            Redirected to excluded URL:
+            https://pubs.geoscienceworld.org/gsa/gsabulletin/article-pdf/132/1-2/3/4907520/3.pdf
+
+            Rockefeller: https://rupress.org/jem/article-pdf/215/1/1/1018472/jem_20172022.pdf
+            -->
+            <!--
+            Need to make volume optional. With Atypon journals moved to Silverchair, we see more and more doi based url.
+            https://royalsocietypublishing.org/rsbl/article/22/1/20250363/479254/The-value-of-satellite-tracking-across-multiple
+            https://royalsocietypublishing.org/rsbl/article/22/1/20250424/478866/Considering-affective-state-as-a-central-component
+            https://royalsocietypublishing.org/rsbl/article/22/1/20250488/479343/Sleeping-with-the-fishes-contradictory-results-on
+            https://royalsocietypublishing.org/rsbl/article-pdf/doi/10.1098/rsbl.2025.0620/5656983/rsbl.2025.0620.pdf
+            https://royalsocietypublishing.org/rsbl/article-pdf/doi/10.1098/rsbl.2025.0586/5656990/rsbl.2025.0586.pdf
+            https://royalsocietypublishing.org/rsbl/article-pdf/doi/10.1098/rsbl.2025.0548/5656987/rsbl.2025.0548.pdf
+            -->
+            <string>1,"%s([^/]+/)?%s/article-pdf/(doi/[^/]+/)?(%s/)?.*\.pdf$", base_url, journal_id, volume_name</string>
+            <!--
+                citationFormat=0 // ris
+                citationFormat=1 // Endnote
+                citationFormat=2 // Bibtex
+                citationFormat=3 // Refworks
+                https://pubs.geoscienceworld.org/Citation/Download?resourceId=546403&resourceType=3&citationFormat=0
+                https://pubs.geoscienceworld.org/Citation/Download?resourceId=546403&resourceType=3&citationFormat=1
+                https://pubs.geoscienceworld.org/Citation/Download?resourceId=546403&resourceType=3&citationFormat=2
+                https://pubs.geoscienceworld.org/Citation/Download?resourceId=546403&resourceType=3&citationFormat=3
+            -->
+            <string>1,"%sCitation/Download\?resourceId=[^&amp;]+&amp;resourceType=[^&amp;]+&amp;citationFormat=0", base_url</string>
+            <string>1,"^https?://([^/]+\.silverchair-cdn\.com)/[^?]+\?Expires=2147483647"</string>
+            <!--
+              Exclude Excel sheet
+              https://rup.silverchair-cdn.com/rup/content_public/journal/jem/216/1/10.1084_jem.20181639/10/jem_20181639_tables1.xlsx"</string>
+              https://rup.silverchair-cdn.com/rup/content_public/journal/jem/216/1/10.1084_jem.20181639/10/jem_20181639_tables1.xlsx?Expires=2147483647&Signature=LhLOOKXoX9yAtA-snLr2GIuM3F-aNxj5WSegWD-zuiopouf97fVGu1j221Un~53eyszpjelOcnV8y39Wpn4h~RLGdGgFI0Ys67z6xonDgmyPo~k50NUppoTYDwmh08gHJzQPBXNxQT44pQNwDaR-RZ2~EsUPYx3SQp3aFijJ13BT2OpgN87HuEEnyjmeN6ft3nuOmiinTL1FVW24kRauYD9e9sF2Ma8zKYUNnEMC-1VhZ86kur3d6hB8tenr6V1aPTwrQZH68FgPVWpIHV1pZ3ztZTDV9Xm6kcfL6ZYDQ7zXwJ3p-zHGv~04ZpdVm4DIDRjdy4cwOHpugz~Xm1SdAQ__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
+            -->
+            <string>1,"^https?://(ucp\.silverchair-cdn\.com)/"</string>
+            <string>1,"^https?://(watermark\.silverchair\.com)/"</string>
+            <string>1,"^https?://(ajot2\.silverchair-cdn\.com)/"</string>
+            <!--Allow movies from CDN/Subdomain goes through, company of biologies need to collect movies-->
+            <!--https://journals.biologists.com/jcs/article/135/18/jcs259657/276793/Mitotic-spindle-disassembly-in-human-cells-relies-->
+            <string>1,"^https?://movie\.biologists\.com/video/"</string>
+            <!--http://movie-usa.glencoesoftware.com/metadata/10.1083/jcb.202111095-->
+            <!--
+              "Video 5": {
+                "source_href": "http://static-movie-usa.glencoesoftware.com/source/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.mp4",
+                "doi": "10.1083/jcb.202111095.v5",
+                "flv_href": "http://static-movie-usa.glencoesoftware.com/flv/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.flv",
+                "uuid": "47839814-f1ab-4f4b-9393-243ea5d92912",
+                "title": "Video 5.",
+                "video_id": "video-5",
+                "solo_href": "http://movie.rupress.org/video/10.1083/jcb.202111095/video-5",
+                "height": 718,
+                "ogv_href": "http://static-movie-usa.glencoesoftware.com/ogv/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.ogv",
+                "width": 1138,
+                "legend": "<div class=\"caption\"><p><b>Structure of </b><i><b>S. cerevisiae</b></i><b> Hob2 generated with RoseTTAFold and ChimeraX: β-sheets (blue), α-helices (red), and coil (green).</b> The movie shows rotation around the longitudinal axis. Frame rate = 5 frames per second.</p></div>",
+                "href": "JCB_202111095_V5.mp4",
+                "webm_href": "http://static-movie-usa.glencoesoftware.com/webm/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.webm",
+                "jpg_href": "http://static-movie-usa.glencoesoftware.com/jpg/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.jpg",
+                "duration": 7.2,
+                "mp4_href": "http://static-movie-usa.glencoesoftware.com/mp4/10.1083/157/6573459fd8d5825e210c60409e3c3decaf0e8378/JCB_202111095_V5.mp4",
+                "id": "video5",
+                "size": 4221638
+              }
+            -->
+            <string>1,"https?://static-movie-usa.glencoesoftware.com/(mp4|source|webm|flv|jpg|ogv)"</string>
+            <!--Blow is all the rules added to "rsbm"-->
+            <!--
+            https://royalsocietypublishing.org/rsbm/issue/browse-by-year/2019
+            https://royalsocietypublishing.org/rsbm/issue/volume/67
+            https://royalsocietypublishing.org/rsbm/article/doi/10.1098/rsbm.2019.0011/116050/Sir-David-Cecil-Smith-21-May-1930-29-June-2018Sir
+            https://royalsocietypublishing.org/rsbm/article-pdf/doi/10.1098/rsbm.2019.0011/1419615/rsbm.2019.0011.pdf
+            -->
+            <string>1, "%s%s/issue/volume/%s",base_url, journal_id, volume_name</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.silverchair.SilverchairCommonThemeArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.silverchair.rsp.RoyalSocietyPublishingHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
     </entry>
 </map>

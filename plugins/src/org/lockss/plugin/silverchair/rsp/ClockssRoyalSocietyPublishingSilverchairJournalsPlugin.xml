@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -48,15 +48,15 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>Royal Society Publishing Journals Plugin (CLOCKSS)</string>
+        <string>Royal Society Publishing Journals Plugin (Silverchair, CLOCKSS)</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"Royal Society Publishing Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+        <string>"Royal Society Publishing Journals Plugin (Silverchair, CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
     <entry>
         <string>clockss_override</string>
