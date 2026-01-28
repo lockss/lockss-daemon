@@ -63,7 +63,7 @@
 
       #param[base_url] = https://philair.ph/ (previous) or https://philair.org/ (current)
 
-      au < ready ; exists ; 2013 ; JPAIR Institutional Research Volume 2013 ; 8 ; 2013 ; https://philair.org/ ; >
+      au < crawling ; exists ; 2013 ; JPAIR Institutional Research Volume 2013 ; 8 ; 2013 ; https://philair.org/ ; >
       au < frozen ; exists ; 2014 ; JPAIR Institutional Research Volume 2014 ; 9 ; 2014 ; https://philair.org/ ; >
       au < frozen ; exists ; 2015 ; JPAIR Institutional Research Volume 2015 ; 10 ; 2015 ; https://philair.org/ ; >
       au < frozen ; exists ; 2016 ; JPAIR Institutional Research Volume 2016 ; 11 ; 2016 ; https://philair.org/ ; >

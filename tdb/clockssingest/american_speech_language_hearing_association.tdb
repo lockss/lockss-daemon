@@ -122,7 +122,7 @@
       param[journal_id] = jsd
       param[base_url] = https://pubs.asha.org/
 
-      au < ready ; exists ; 1936 ; Journal of Speech Disorders Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1936 ; Journal of Speech Disorders Volume 1 ; 1 ; >
       au < crawling ; exists ; 1937 ; Journal of Speech Disorders Volume 2 ; 2 ; >
       au < crawling ; exists ; 1938 ; Journal of Speech Disorders Volume 3 ; 3 ; >
       au < crawling ; exists ; 1939 ; Journal of Speech Disorders Volume 4 ; 4 ; >
@@ -155,7 +155,7 @@
       au < crawling ; exists ; 1949 ; Journal of Speech and Hearing Disorders Volume 14 ; 14 ; >
       au < crawling ; exists ; 1950 ; Journal of Speech and Hearing Disorders Volume 15 ; 15 ; >
       au < crawling ; exists ; 1951 ; Journal of Speech and Hearing Disorders Volume 16 ; 16 ; >
-      au < ready ; exists ; 1952 ; Journal of Speech and Hearing Disorders Volume 17 ; 17 ; >
+      au < crawling ; exists ; 1952 ; Journal of Speech and Hearing Disorders Volume 17 ; 17 ; >
       au < crawling ; exists ; 1953 ; Journal of Speech and Hearing Disorders Volume 18 ; 18 ; >
       au < crawling ; exists ; 1954 ; Journal of Speech and Hearing Disorders Volume 19 ; 19 ; >
       au < crawling ; exists ; 1955 ; Journal of Speech and Hearing Disorders Volume 20 ; 20 ; >
@@ -224,7 +224,7 @@
       au < crawling ; exists ; 1970 ; Journal of Speech and Hearing Research Volume 13 ; 13 ; >
       au < crawling ; exists ; 1971 ; Journal of Speech and Hearing Research Volume 14 ; 14 ; >
       au < crawling ; exists ; 1972 ; Journal of Speech and Hearing Research Volume 15 ; 15 ; >
-      au < ready ; exists ; 1973 ; Journal of Speech and Hearing Research Volume 16 ; 16 ; >
+      au < crawling ; exists ; 1973 ; Journal of Speech and Hearing Research Volume 16 ; 16 ; >
       au < crawling ; exists ; 1974 ; Journal of Speech and Hearing Research Volume 17 ; 17 ; >
       au < crawling ; exists ; 1975 ; Journal of Speech and Hearing Research Volume 18 ; 18 ; >
       au < crawling ; exists ; 1976 ; Journal of Speech and Hearing Research Volume 19 ; 19 ; >
@@ -307,7 +307,7 @@
       param[journal_id] = lshss
       param[base_url] = https://pubs.asha.org/
 
-      au < ready ; exists ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1 ; >
       au < crawling ; exists ; 1971 ; Language, Speech, and Hearing Services in Schools Volume 2 ; 2 ; >
       au < crawling ; exists ; 1972 ; Language, Speech, and Hearing Services in Schools Volume 3 ; 3 ; >
       au < crawling ; exists ; 1973 ; Language, Speech, and Hearing Services in Schools Volume 4 ; 4 ; >

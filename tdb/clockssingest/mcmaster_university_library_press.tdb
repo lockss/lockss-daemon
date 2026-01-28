@@ -288,7 +288,7 @@
       {
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
 
-      au < ready ; exists ; 1971 ; Russell: the Journal of Bertrand Russell Studies Number 1-4 ; 1-4 ; 1971 ; >
+      au < crawling ; exists ; 1971 ; Russell: the Journal of Bertrand Russell Studies Number 1-4 ; 1-4 ; 1971 ; >
       au < frozen ; exists ; 1972 ; Russell: the Journal of Bertrand Russell Studies Number 5-8 ; 5-8 ; 1972 ; >
       au < frozen ; exists ; 1973 ; Russell: the Journal of Bertrand Russell Studies Number 9-12 ; 9-12 ; 1973 ; >
       au < frozen ; exists ; 1974 ; Russell: the Journal of Bertrand Russell Studies Number 13-16 ; 13-16 ; 1974 ; >

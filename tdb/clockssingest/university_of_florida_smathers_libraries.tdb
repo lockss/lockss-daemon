@@ -498,7 +498,7 @@
 
       param[journal_id] = troplep
 
-      au < ready ; exists ; 1990 ; Tropical Lepidoptera Research Volume 1 ; 1 ; 1990 ; >
+      au < crawling ; exists ; 1990 ; Tropical Lepidoptera Research Volume 1 ; 1 ; 1990 ; >
       au < crawling ; exists ; 1991 ; Tropical Lepidoptera Research Volume 2 ; 2 ; 1991 ; >
       au < ready ; exists ; 1992 ; Tropical Lepidoptera Research Volume 3 ; 3 ; 1992 ; >
       au < ready ; exists ; 1993 ; Tropical Lepidoptera Research Volume 4 ; 4 ; 1993 ; >
@@ -648,7 +648,7 @@
       au < manifest ; exists ; 1987 ; Proceedings of the Florida State Horticultural Society Volume 100 ; 100 ; 1987 ; >
       au < manifest ; exists ; 1988 ; Proceedings of the Florida State Horticultural Society Volume 101 ; 101 ; 1988 ; >
       au < manifest ; exists ; 1989 ; Proceedings of the Florida State Horticultural Society Volume 102 ; 102 ; 1989 ; >
-      au < ready ; exists ; 1990 ; Proceedings of the Florida State Horticultural Society Volume 103 ; 103 ; 1990 ; >
+      au < crawling ; exists ; 1990 ; Proceedings of the Florida State Horticultural Society Volume 103 ; 103 ; 1990 ; >
       au < frozen ; exists ; 1991 ; Proceedings of the Florida State Horticultural Society Volume 104 ; 104 ; 1991 ; >
       au < ready ; exists ; 1992 ; Proceedings of the Florida State Horticultural Society Volume 105 ; 105 ; 1992 ; >
       au < crawling ; exists ; 1993 ; Proceedings of the Florida State Horticultural Society Volume 106 ; 106 ; 1993 ; >

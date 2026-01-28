@@ -26,8 +26,8 @@
 
       au < frozen ; exists ; 1996 ; Turkish Journal of Agriculture and Forestry Volume 20 ; 20 ; >
       au < ready ; exists ; 1997 ; Turkish Journal of Agriculture and Forestry Volume 21 ; 21 ; >
-      au < ready ; exists ; 1998 ; Turkish Journal of Agriculture and Forestry Volume 22 ; 22 ; >
-      au < ready ; exists ; 1999 ; Turkish Journal of Agriculture and Forestry Volume 23 ; 23 ; >
+      au < crawling ; exists ; 1998 ; Turkish Journal of Agriculture and Forestry Volume 22 ; 22 ; >
+      au < crawling ; exists ; 1999 ; Turkish Journal of Agriculture and Forestry Volume 23 ; 23 ; >
       au < ready ; exists ; 2000 ; Turkish Journal of Agriculture and Forestry Volume 24 ; 24 ; >
       au < crawling ; exists ; 2001 ; Turkish Journal of Agriculture and Forestry Volume 25 ; 25 ; >
       au < ready ; exists ; 2002 ; Turkish Journal of Agriculture and Forestry Volume 26 ; 26 ; >
@@ -249,7 +249,7 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = elektrik
 
-      au < ready ; exists ; 1995 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1995 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 3 ; 3 ; >
       au < ready ; exists ; 1996 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 4 ; 4 ; >
       au < ready ; exists ; 1997 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 5 ; 5 ; >
       au < ready ; exists ; 1998 ; Turkish Journal of Electrical Engineering and Computer Sciences Volume 6 ; 6 ; >
