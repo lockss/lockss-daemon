@@ -965,4 +965,18 @@
 
   }
 
+  {
+
+      title <
+        name = Black Music, In Theory ;
+        eissn = 3068-448X
+      >
+
+      #published 2025-present
+      param[journal_id] = bmit
+
+      au < manifest ; exists ; 2025 ; 1 ; Black Music, In Theory Volume 2025 ; 2025 ; >
+
+  }
+
 }
