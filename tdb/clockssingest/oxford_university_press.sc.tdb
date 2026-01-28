@@ -4765,7 +4765,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Current Legal Problems Volume 75 ; 75 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Current Legal Problems Volume 76 ; 76 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Current Legal Problems Volume 77 ; 77 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Current Legal Problems Volume 78 ; 78 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Current Legal Problems Volume 78 ; 78 ; >
 
   }
 
@@ -5692,7 +5692,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; English: Journal of the English Association Volume 70-71 ; 70-71 ; >
     au < finished ; manifest ; 2023 ; 2023 ; English: Journal of the English Association Volume 71-72 ; 71-72 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; English: Journal of the English Association Volume 72-73 ; 72-73 ; >
-    au < testing ; exists ; 2025 ; 2025 ; English: Journal of the English Association Volume 74 ; 74 ; >
+    au < ready ; exists ; 2025 ; 2025 ; English: Journal of the English Association Volume 74 ; 74 ; >
 
   }
 
@@ -5977,7 +5977,7 @@
     param[journal_id] = eurjhf
     #move from Wiley in 2026
 
-    au < testing ; exists ; 2025 ; 2025 ; European Journal of Heart Failure Volume 27 ; 27 ; >
+    au < ready ; exists ; 2025 ; 2025 ; European Journal of Heart Failure Volume 27 ; 27 ; >
     au < expected ; exists ; 2026 ; 2026 ; European Journal of Heart Failure Volume 28 ; 28 ; >
 
   }
@@ -9726,7 +9726,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Data Privacy Law Volume 12 ; 12 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Data Privacy Law Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; International Data Privacy Law Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; International Data Privacy Law Volume 15 ; 15 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Data Privacy Law Volume 15 ; 15 ; >
 
   }
 
@@ -9757,7 +9757,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Health Volume 14 ; 14 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Health Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; International Health Volume 16 ; 16 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; International Health Volume 17 ; 17 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Health Volume 17 ; 17 ; >
 
   }
 
@@ -9808,7 +9808,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Immunology Volume 34 ; 34 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Immunology Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; International Immunology Volume 36 ; 36 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; International Immunology Volume 37 ; 37 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Immunology Volume 37 ; 37 ; >
 
   }
 
@@ -9859,7 +9859,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal for Quality in Health Care Volume 34 ; 34 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal for Quality in Health Care Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Journal for Quality in Health Care Volume 36 ; 36 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal for Quality in Health Care Volume 37 ; 37 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal for Quality in Health Care Volume 37 ; 37 ; >
 
   }
 
@@ -9896,7 +9896,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Constitutional Law Volume 20 ; 20 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Constitutional Law Volume 21 ; 21 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; 2024 ; International Journal of Constitutional Law Volume 22 ; 22 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Constitutional Law Volume 23 ; 23 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Constitutional Law Volume 23 ; 23 ; >
 
   }
 
@@ -9964,7 +9964,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Epidemiology Volume 51 ; 51 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Epidemiology Volume 52 ; 52 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Journal of Epidemiology Volume 53 ; 53 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Epidemiology Volume 54 ; 54 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Epidemiology Volume 54 ; 54 ; >
 
   }
 
@@ -9996,7 +9996,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; International Journal of Food Science & Technology Volume 57-58 ; 57-58 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Food Science & Technology Volume 58-59 ; 58-59 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; International Journal of Food Science & Technology Volume 59 ; 59 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Food Science & Technology Volume 60 ; 60 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Food Science & Technology Volume 60 ; 60 ; >
 
   }
 
@@ -10043,7 +10043,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Law and Information Technology Volume 30 ; 30 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Law and Information Technology Volume 31 ; 31 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; International Journal of Law and Information Technology Volume 32 ; 32 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Law and Information Technology Volume 33 ; 33 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Law and Information Technology Volume 33 ; 33 ; >
 
   }
 
@@ -10096,7 +10096,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Law, Policy and the Family Volume 36 ; 36 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Law, Policy and the Family Volume 37 ; 37 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; International Journal of Law, Policy and the Family Volume 38 ; 38 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Law, Policy and the Family Volume 39 ; 39 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Law, Policy and the Family Volume 39 ; 39 ; >
 
   }
 
@@ -10148,7 +10148,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Lexicography Volume 35 ; 35 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Lexicography Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; International Journal of Lexicography Volume 37 ; 37 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Lexicography Volume 38 ; 38 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Lexicography Volume 38 ; 38 ; >
 
   }
 
@@ -10224,7 +10224,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Neuropsychopharmacology Volume 25 ; 25 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Neuropsychopharmacology Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Journal of Neuropsychopharmacology Volume 27 ; 27 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Neuropsychopharmacology Volume 28 ; 28 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Neuropsychopharmacology Volume 28 ; 28 ; >
 
   }
 
@@ -10273,7 +10273,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Pharmacy Practice Volume 30 ; 30 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Pharmacy Practice Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Journal of Pharmacy Practice Volume 32 ; 32 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Pharmacy Practice Volume 33 ; 33 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Pharmacy Practice Volume 33 ; 33 ; >
 
   }
 
@@ -10375,7 +10375,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Refugee Law Volume 34 ; 34 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Refugee Law Volume 35 ; 35 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Journal of Refugee Law Volume 36 ; 36 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Refugee Law Volume 37 ; 37 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Refugee Law Volume 37 ; 37 ; >
 
   }
 
@@ -10408,7 +10408,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Transitional Justice Volume 16 ; 16 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Transitional Justice Volume 17 ; 17 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Journal of Transitional Justice Volume 18 ; 18 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Transitional Justice Volume 19 ; 19 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Transitional Justice Volume 19 ; 19 ; >
 
   }
 
@@ -10457,7 +10457,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Mathematics Research Notices Volume 2022 ; 2022 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Mathematics Research Notices Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Mathematics Research Notices Volume 2024 ; 2024 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Mathematics Research Notices Volume 2025 ; 2025 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Mathematics Research Notices Volume 2025 ; 2025 ; >
 
   }
 
@@ -10525,7 +10525,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Political Sociology Volume 16 ; 16 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Political Sociology Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Political Sociology Volume 18 ; 18 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Political Sociology Volume 19 ; 19 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Political Sociology Volume 19 ; 19 ; >
 
   }
 
@@ -10564,7 +10564,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Relations of the Asia-Pacific Volume 22 ; 22 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Relations of the Asia-Pacific Volume 23 ; 23 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Relations of the Asia-Pacific Volume 24 ; 24 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Relations of the Asia-Pacific Volume 25 ; 25 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Relations of the Asia-Pacific Volume 25 ; 25 ; >
 
   }
 
@@ -10604,7 +10604,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Studies Perspectives Volume 23 ; 23 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Studies Perspectives Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Studies Perspectives Volume 25 ; 25 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Studies Perspectives Volume 26 ; 26 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Studies Perspectives Volume 26 ; 26 ; >
 
   }
 
@@ -10644,7 +10644,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Studies Quarterly Volume 66 ; 66 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Studies Quarterly Volume 67 ; 67 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Studies Quarterly Volume 68 ; 68 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Studies Quarterly Volume 69 ; 69 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Studies Quarterly Volume 69 ; 69 ; >
 
   }
 
@@ -10690,7 +10690,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Studies Review Volume 24 ; 24 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Studies Review Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; International Studies Review Volume 26 ; 26 ; >
-    au < testing ; exists ; 2025 ; 2025 ; International Studies Review Volume 27 ; 27 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Studies Review Volume 27 ; 27 ; >
 
   }
 
@@ -10732,7 +10732,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; JNCI Monographs Volume 2022 ; 2022 ; >
     au < finished ; manifest ; 2023 ; 2023 ; JNCI Monographs Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; JNCI Monographs Volume 2024 ; 2024 ; >
-    au < testing ; exists ; 2025 ; 2025 ; JNCI Monographs Volume 2025 ; 2025 ; >
+    au < ready ; exists ; 2025 ; 2025 ; JNCI Monographs Volume 2025 ; 2025 ; >
 
   }
 
@@ -10763,7 +10763,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; JNCI: Journal of the National Cancer Institute Volume 114 ; 114 ; >
     au < finished ; manifest ; 2023 ; 2023 ; JNCI: Journal of the National Cancer Institute Volume 115 ; 115 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; JNCI: Journal of the National Cancer Institute Volume 116 ; 116 ; >
-    au < testing ; exists ; 2025 ; 2025 ; JNCI: Journal of the National Cancer Institute Volume 117 ; 117 ; >
+    au < ready ; exists ; 2025 ; 2025 ; JNCI: Journal of the National Cancer Institute Volume 117 ; 117 ; >
 
   }
 
@@ -10832,7 +10832,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Japanese Journal of Clinical Oncology Volume 52 ; 52 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Japanese Journal of Clinical Oncology Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Japanese Journal of Clinical Oncology Volume 54 ; 54 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Japanese Journal of Clinical Oncology Volume 55 ; 55 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Japanese Journal of Clinical Oncology Volume 55 ; 55 ; >
 
   }
 
@@ -10862,7 +10862,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Jerusalem Review of Legal Studies Volume 25-26 ; 25-26 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Jerusalem Review of Legal Studies Volume 27-28 ; 27-28 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Jerusalem Review of Legal Studies Volume 29-30 ; 29-30 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Jerusalem Review of Legal Studies Volume 31-32 ; 31-32 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Jerusalem Review of Legal Studies Volume 31-32 ; 31-32 ; >
 
   }
 
@@ -10910,7 +10910,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of African Economies Volume 31 ; 31 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of African Economies Volume 32 ; 32 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of African Economies Volume 33 ; 33 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of African Economies Volume 34 ; 34 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of African Economies Volume 34 ; 34 ; >
 
   }
 
@@ -11036,7 +11036,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of American History Volume 108-109 ; 108-109 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of American History Volume 109-110 ; 109-110 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of American History Volume 110-111 ; 110-111 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of American History Volume 112-113 ; 112-113 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of American History Volume 112-113 ; 112-113 ; >
 
   }
 
@@ -11099,7 +11099,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Analytical Toxicology Volume 46 ; 46 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Analytical Toxicology Volume 47 ; 47 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Analytical Toxicology Volume 48 ; 48 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Analytical Toxicology Volume 49 ; 49 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Analytical Toxicology Volume 49 ; 49 ; >
 
   }
 
@@ -11164,7 +11164,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Antimicrobial Chemotherapy Volume 77 ; 77 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Antimicrobial Chemotherapy Volume 78 ; 78 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Antimicrobial Chemotherapy Volume 79 ; 79 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Antimicrobial Chemotherapy Volume 80 ; 80 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Antimicrobial Chemotherapy Volume 80 ; 80 ; >
 
   }
 
@@ -11190,7 +11190,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Antitrust Enforcement Volume 10 ; 10 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Antitrust Enforcement Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Antitrust Enforcement Volume 12 ; 12 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Antitrust Enforcement Volume 13 ; 13 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Antitrust Enforcement Volume 13 ; 13 ; >
 
   }
 
@@ -11222,7 +11222,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Aquatic Animal Health Volume 34 ; 34 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Aquatic Animal Health Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Journal of Aquatic Animal Health Volume 36 ; 36 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Aquatic Animal Health Volume 37 ; 37 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Aquatic Animal Health Volume 37 ; 37 ; >
 
   }
 
@@ -11282,7 +11282,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Burn Care & Research Volume 43 ; 43 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Burn Care & Research Volume 44 ; 44 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Burn Care & Research Volume 45 ; 45 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Burn Care & Research Volume 46 ; 46 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Burn Care & Research Volume 46 ; 46 ; >
 
   }
 
@@ -11359,7 +11359,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Chromatographic Science Volume 60 ; 60 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Chromatographic Science Volume 61 ; 61 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Chromatographic Science Volume 62 ; 62 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Chromatographic Science Volume 63 ; 63 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Chromatographic Science Volume 63 ; 63 ; >
 
   }
 
@@ -11440,7 +11440,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Church and State Volume 64 ; 64 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Church and State Volume 65 ; 65 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Church and State Volume 66 ; 66 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Church and State Volume 67 ; 67 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Church and State Volume 67 ; 67 ; >
 
   }
 
@@ -11462,7 +11462,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Communication Volume 5 ; 5 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Communication Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Communication Volume 7 ; 7 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Communication Volume 8 ; 8 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Communication Volume 8 ; 8 ; >
 
   }
 
@@ -11497,7 +11497,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Competition Law & Economics Volume 18 ; 18 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Competition Law & Economics Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Competition Law & Economics Volume 20 ; 20 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Competition Law & Economics Volume 21 ; 21 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Competition Law & Economics Volume 21 ; 21 ; >
 
   }
 
@@ -11524,7 +11524,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Complex Networks Volume 10 ; 10 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Complex Networks Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Complex Networks Volume 12 ; 12 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Complex Networks Volume 13 ; 13 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Complex Networks Volume 13 ; 13 ; >
 
   }
 
@@ -11548,7 +11548,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Computational Design and Engineering Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Computational Design and Engineering Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Computational Design and Engineering Volume 11 ; 11 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Computational Design and Engineering Volume 12 ; 12 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Computational Design and Engineering Volume 12 ; 12 ; >
 
   }
 
@@ -11569,7 +11569,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Computer-Mediated Communication Volume 5 ; 5 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Computer-Mediated Communication Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Computer-Mediated Communication Volume 7 ; 7 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Computer-Mediated Communication Volume 8 ; 8 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Computer-Mediated Communication Volume 8 ; 8 ; >
 
   }
 
@@ -11613,7 +11613,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Conflict and Security Law Volume 27 ; 27 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Conflict and Security Law Volume 28 ; 28 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Conflict and Security Law Volume 29 ; 29 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Conflict and Security Law Volume 30 ; 30 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Conflict and Security Law Volume 30 ; 30 ; >
 
   }
 
@@ -11646,7 +11646,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Consumer Research Volume 48-49 ; 48-49 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Consumer Research Volume 49-50 ; 49-50 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Consumer Research Volume 50-51 ; 50-51 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Consumer Research Volume 51-52 ; 51-52 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Consumer Research Volume 51-52 ; 51-52 ; >
 
   }
 
@@ -11679,7 +11679,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Crohn's and Colitis Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Crohn's and Colitis Volume 17 ; 17 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Crohn's and Colitis Volume 18 ; 18 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Crohn's and Colitis Volume 19 ; 19 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Crohn's and Colitis Volume 19 ; 19 ; >
 
   }
 
@@ -11755,7 +11755,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Crustacean Biology Volume 42 ; 42 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Crustacean Biology Volume 43 ; 43 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Crustacean Biology Volume 44 ; 44 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Crustacean Biology Volume 45 ; 45 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Crustacean Biology Volume 45 ; 45 ; >
 
   }
 
@@ -11780,7 +11780,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Cybersecurity Volume 8 ; 8 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Cybersecurity Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Cybersecurity Volume 10 ; 10 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Cybersecurity Volume 11 ; 11 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Cybersecurity Volume 11 ; 11 ; >
 
   }
 
@@ -11832,7 +11832,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Design History Volume 35 ; 35 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Design History Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Design History Volume 37 ; 37 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Design History Volume 38 ; 38 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Design History Volume 38 ; 38 ; >
 
   }
 
@@ -11882,7 +11882,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Economic Entomology Volume 115 ; 115 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Economic Entomology Volume 116 ; 116 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Economic Entomology Volume 117 ; 117 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Economic Entomology Volume 118 ; 118 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Economic Entomology Volume 118 ; 118 ; >
 
   }
 
@@ -11921,7 +11921,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Economic Geography Volume 22 ; 22 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Economic Geography Volume 23 ; 23 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Economic Geography Volume 24 ; 24 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Economic Geography Volume 25 ; 25 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Economic Geography Volume 25 ; 25 ; >
 
   }
 
@@ -11972,7 +11972,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Environmental Law Volume 34 ; 34 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Environmental Law Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Environmental Law Volume 36 ; 36 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Environmental Law Volume 37 ; 37 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Environmental Law Volume 37 ; 37 ; >
 
   }
 
@@ -12002,7 +12002,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of European Competition Law & Practice Volume 13 ; 13 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of European Competition Law & Practice Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < notReady ; exists ; 2024 ; 2024 ; Journal of European Competition Law & Practice Volume 15 ; 15 ; > #400 Bad Request on 	https://academic.oup.com/jeclap/article/13/5/336/6533512%3E
-    au < testing ; exists ; 2025 ; 2025 ; Journal of European Competition Law & Practice Volume 16 ; 16 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of European Competition Law & Practice Volume 16 ; 16 ; >
 
   }
 
@@ -12034,7 +12034,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Evolutionary Biology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Evolutionary Biology Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; 2024 ; Journal of Evolutionary Biology Volume 37 ; 37 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Evolutionary Biology Volume 38 ; 38 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Evolutionary Biology Volume 38 ; 38 ; >
 
   }
 
@@ -12124,7 +12124,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Experimental Botany Volume 73 ; 73 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Experimental Botany Volume 74 ; 74 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Experimental Botany Volume 75 ; 75 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Experimental Botany Volume 76 ; 76 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Experimental Botany Volume 76 ; 76 ; >
 
   }
 
@@ -12161,7 +12161,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Financial Econometrics Volume 20 ; 20 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Financial Econometrics Volume 21 ; 21 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Financial Econometrics Volume 22 ; 22 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Financial Econometrics Volume 23 ; 23 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Financial Econometrics Volume 23 ; 23 ; >
 
   }
 
@@ -12186,7 +12186,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Financial Regulation Volume 8 ; 8 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Financial Regulation Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Financial Regulation Volume 10 ; 10 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Financial Regulation Volume 11 ; 11 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Financial Regulation Volume 11 ; 11 ; >
 
   }
 
@@ -12248,7 +12248,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Geophysics and Engineering Volume 19 ; 19 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Geophysics and Engineering Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Geophysics and Engineering Volume 21 ; 21 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Geophysics and Engineering Volume 22 ; 22 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Geophysics and Engineering Volume 22 ; 22 ; >
 
   }
 
@@ -12333,7 +12333,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Global Security Studies Volume 7 ; 7 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Global Security Studies Volume 8 ; 8 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Global Security Studies Volume 9 ; 9 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Global Security Studies Volume 10 ; 10 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Global Security Studies Volume 10 ; 10 ; >
 
   }
 
@@ -12468,7 +12468,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Heredity Volume 113 ; 113 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Heredity Volume 114 ; 114 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Heredity Volume 115 ; 115 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Heredity Volume 116 ; 116 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Heredity Volume 116 ; 116 ; >
 
   }
 
@@ -12492,7 +12492,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Hip Preservation Surgery Volume 9 ; 9 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Hip Preservation Surgery Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Hip Preservation Surgery Volume 11 ; 11 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Hip Preservation Surgery Volume 12 ; 12 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Hip Preservation Surgery Volume 12 ; 12 ; >
 
   }
 
@@ -12523,7 +12523,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Human Rights Practice Volume 14 ; 14 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Human Rights Practice Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Human Rights Practice Volume 16 ; 16 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Human Rights Practice Volume 17 ; 17 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Human Rights Practice Volume 17 ; 17 ; >
 
   }
 
@@ -12560,7 +12560,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Insect Science Volume 22 ; 22 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Insect Science Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Insect Science Volume 24 ; 24 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Insect Science Volume 25 ; 25 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Insect Science Volume 25 ; 25 ; >
 
   }
 
@@ -12643,7 +12643,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Intellectual Property Law & Practice Volume 17 ; 17 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Intellectual Property Law & Practice Volume 18 ; 18 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Intellectual Property Law & Practice Volume 19 ; 19 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Intellectual Property Law & Practice Volume 20 ; 20 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Intellectual Property Law & Practice Volume 20 ; 20 ; >
 
   }
 
@@ -12680,7 +12680,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of International Criminal Justice Volume 19-20 ; 19-20 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of International Criminal Justice Volume 20-21 ; 20-21 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of International Criminal Justice Volume 21-22 ; 21-22 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of International Criminal Justice Volume 23 ; 23 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of International Criminal Justice Volume 23 ; 23 ; >
 
   }
 
@@ -12710,7 +12710,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of International Dispute Settlement Volume 13 ; 13 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of International Dispute Settlement Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of International Dispute Settlement Volume 15 ; 15 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of International Dispute Settlement Volume 16 ; 16 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of International Dispute Settlement Volume 16 ; 16 ; >
 
   }
 
@@ -12752,7 +12752,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of International Economic Law Volume 25 ; 25 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of International Economic Law Volume 26 ; 26 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of International Economic Law Volume 27 ; 27 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of International Economic Law Volume 28 ; 28 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of International Economic Law Volume 28 ; 28 ; >
 
   }
 
@@ -12802,7 +12802,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Islamic Studies Volume 33 ; 33 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Islamic Studies Volume 34 ; 34 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Islamic Studies Volume 35 ; 35 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Islamic Studies Volume 36 ; 36 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Islamic Studies Volume 36 ; 36 ; >
 
   }
 
@@ -12825,7 +12825,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Language Evolution Volume 7 ; 7 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Language Evolution Volume 8 ; 8 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Journal of Language Evolution Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Language Evolution Volume 10 ; 10 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Language Evolution Volume 10 ; 10 ; >
 
   }
 
@@ -12850,7 +12850,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Law and the Biosciences Volume 9 ; 9 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Law and the Biosciences Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Law and the Biosciences Volume 11 ; 11 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Law and the Biosciences Volume 12 ; 12 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Law and the Biosciences Volume 12 ; 12 ; >
 
   }
 
@@ -12881,7 +12881,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Legal Analysis Volume 14 ; 14 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Legal Analysis Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Legal Analysis Volume 16 ; 16 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Legal Analysis Volume 17 ; 17 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Legal Analysis Volume 17 ; 17 ; >
 
   }
 
@@ -12921,7 +12921,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Leukocyte Biology Volume 112 ; 112 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Leukocyte Biology Volume 113 ; 113 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Leukocyte Biology Volume 114 ; 114 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Leukocyte Biology Volume 115 ; 115 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Leukocyte Biology Volume 115 ; 115 ; >
 
   }
 
@@ -12971,7 +12971,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Logic and Computation Volume 32 ; 32 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Logic and Computation Volume 33 ; 33 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Logic and Computation Volume 34 ; 34 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Logic and Computation Volume 35 ; 35 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Logic and Computation Volume 35 ; 35 ; >
 
   }
 
@@ -13011,7 +13011,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Mammalogy Volume 103 ; 103 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Mammalogy Volume 104 ; 104 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Mammalogy Volume 105 ; 105 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Mammalogy Volume 106 ; 106 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Mammalogy Volume 106 ; 106 ; >
 
   }
   #Publisher and previous TDB differ on issn - 0022-2858 vs 0022-2585
@@ -13053,7 +13053,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Medical Entomology Volume 59 ; 59 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Medical Entomology Volume 60 ; 60 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Medical Entomology Volume 61 ; 61 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Medical Entomology Volume 62 ; 62 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Medical Entomology Volume 62 ; 62 ; >
 
   }
 
@@ -13189,7 +13189,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Molluscan Studies Volume 88 ; 88 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Molluscan Studies Volume 89 ; 89 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Molluscan Studies Volume 90 ; 90 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Molluscan Studies Volume 91 ; 91 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Molluscan Studies Volume 91 ; 91 ; >
 
   }
 
@@ -13265,7 +13265,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Music Therapy Volume 59 ; 59 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Music Therapy Volume 60 ; 60 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Music Therapy Volume 61 ; 61 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Music Therapy Volume 62 ; 62 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Music Therapy Volume 62 ; 62 ; >
 
   }
 
@@ -13286,12 +13286,12 @@
     au < manifest ; exists ; 2017 ; 2017 ; Journal of Nephrology Volume 30 ; 30 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Nephrology Volume 31 ; 31 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Nephrology Volume 32 ; 32 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Journal of Nephrology Volume 33 ; 33 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Journal of Nephrology Volume 34 ; 34 ; >
-    au < testing ; exists ; 2022 ; 2022 ; Journal of Nephrology Volume 35 ; 35 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Journal of Nephrology Volume 33 ; 33 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Journal of Nephrology Volume 34 ; 34 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Journal of Nephrology Volume 35 ; 35 ; >
     au < testing ; exists ; 2023 ; 2023 ; Journal of Nephrology Volume 36 ; 36 ; >
-    au < testing ; exists ; 2024 ; 2024 ; Journal of Nephrology Volume 37 ; 37 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Nephrology Volume 38 ; 38 ; >
+    au < ready ; exists ; 2024 ; 2024 ; Journal of Nephrology Volume 37 ; 37 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Nephrology Volume 38 ; 38 ; >
 
   }
 
@@ -13330,7 +13330,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Neuropathology & Experimental Neurology Volume 81 ; 81 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Neuropathology & Experimental Neurology Volume 82 ; 82 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Neuropathology & Experimental Neurology Volume 83 ; 83 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Neuropathology & Experimental Neurology Volume 84 ; 84 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Neuropathology & Experimental Neurology Volume 84 ; 84 ; >
 
   }
 
@@ -13400,7 +13400,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Occupational Health Volume 64 ; 64 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Occupational Health Volume 65 ; 65 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; Journal of Occupational Health Volume 66 ; 66 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Occupational Health Volume 67 ; 67 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Occupational Health Volume 67 ; 67 ; >
 
   }
 
@@ -13478,7 +13478,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Pediatric Psychology Volume 47 ; 47 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Pediatric Psychology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Pediatric Psychology Volume 49 ; 49 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Pediatric Psychology Volume 50 ; 50 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Pediatric Psychology Volume 50 ; 50 ; >
 
   }
 
@@ -13558,7 +13558,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Petrology Volume 63 ; 63 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Petrology Volume 64 ; 64 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Petrology Volume 65 ; 65 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Petrology Volume 66 ; 66 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Petrology Volume 66 ; 66 ; >
 
   }
 
@@ -13619,7 +13619,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Plankton Research Volume 44 ; 44 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Plankton Research Volume 45 ; 45 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Plankton Research Volume 46 ; 46 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Plankton Research Volume 47 ; 47 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Plankton Research Volume 47 ; 47 ; >
 
   }
 
@@ -13647,7 +13647,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Pharmaceutical Health Services Research Volume 13 ; 13 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Pharmaceutical Health Services Research Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Pharmaceutical Health Services Research Volume 15 ; 15 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Pharmaceutical Health Services Research Volume 16 ; 16 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Pharmaceutical Health Services Research Volume 16 ; 16 ; >
 
   }
 
@@ -14122,12 +14122,12 @@
     au < manifest ; exists ; 2017 ; 2017 ; Reproduction Volume 153-154 ; 153-154 ; >
     au < manifest ; exists ; 2018 ; 2018 ; Reproduction Volume 155-156 ; 155-156 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Reproduction Volume 157-158 ; 157-158 ; >
-    au < testing ; exists ; 2020 ; 2020 ; Reproduction Volume 159-160 ; 159-160 ; >
-    au < testing ; exists ; 2021 ; 2021 ; Reproduction Volume 161-162 ; 161-162 ; >
-    au < testing ; exists ; 2022 ; 2022 ; Reproduction Volume 163-164 ; 163-164 ; >
-    au < testing ; exists ; 2023 ; 2023 ; Reproduction Volume 165-166 ; 165-166 ; >
-    au < testing ; exists ; 2024 ; 2024 ; Reproduction Volume 167-168 ; 167-168 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Reproduction Volume 169-170 ; 169-170 ; >
+    au < ready ; exists ; 2020 ; 2020 ; Reproduction Volume 159-160 ; 159-160 ; >
+    au < ready ; exists ; 2021 ; 2021 ; Reproduction Volume 161-162 ; 161-162 ; >
+    au < ready ; exists ; 2022 ; 2022 ; Reproduction Volume 163-164 ; 163-164 ; >
+    au < ready ; exists ; 2023 ; 2023 ; Reproduction Volume 165-166 ; 165-166 ; >
+    au < ready ; exists ; 2024 ; 2024 ; Reproduction Volume 167-168 ; 167-168 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Reproduction Volume 169-170 ; 169-170 ; >
 
   }
 
@@ -24585,7 +24585,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The Review of English Studies Volume 73 ; 73 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The Review of English Studies Volume 74 ; 74 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Review of English Studies Volume 75 ; 75 ; >
-    au < testing ; exists ; 2025 ; 2025 ; The Review of English Studies Volume 76 ; 76 ; >
+    au < ready ; exists ; 2025 ; 2025 ; The Review of English Studies Volume 76 ; 76 ; >
 
   }
 
@@ -24637,7 +24637,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The Review of Financial Studies Volume 35 ; 35 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The Review of Financial Studies Volume 36 ; 36 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Review of Financial Studies Volume 37 ; 37 ; >
-    au < testing ; exists ; 2025 ; 2025 ; The Review of Financial Studies Volume 38 ; 38 ; >
+    au < ready ; exists ; 2025 ; 2025 ; The Review of Financial Studies Volume 38 ; 38 ; >
 
   }
 
@@ -24690,7 +24690,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The World Bank Economic Review Volume 36 ; 36 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The World Bank Economic Review Volume 37 ; 37 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The World Bank Economic Review Volume 38 ; 38 ; >
-    au < testing ; exists ; 2025 ; 2025 ; The World Bank Economic Review Volume 39 ; 39 ; >
+    au < ready ; exists ; 2025 ; 2025 ; The World Bank Economic Review Volume 39 ; 39 ; >
 
   }
 
@@ -24744,7 +24744,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The World Bank Research Observer Volume 37 ; 37 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The World Bank Research Observer Volume 38 ; 38 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The World Bank Research Observer Volume 39 ; 39 ; >
-    au < testing ; exists ; 2025 ; 2025 ; The World Bank Research Observer Volume 40 ; 40 ; >
+    au < ready ; exists ; 2025 ; 2025 ; The World Bank Research Observer Volume 40 ; 40 ; >
 
   }
 
@@ -24962,7 +24962,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Toxicological Sciences Volume 185-190 ; 185-190 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Toxicological Sciences Volume 191-196 ; 191-196 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Toxicological Sciences Volume 197-203 ; 197-203 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Toxicological Sciences Volume 203-208 ; 203-208 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Toxicological Sciences Volume 203-208 ; 203-208 ; >
 
   }
 
@@ -24994,7 +24994,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Transactions of the American Fisheries Society Volume 151 ; 151 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; Transactions of the American Fisheries Society Volume 152 ; 152 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Transactions of the American Fisheries Society Volume 153 ; 153 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; Transactions of the American Fisheries Society Volume 154 ; 154 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Transactions of the American Fisheries Society Volume 154 ; 154 ; >
 
   }
 
@@ -25126,7 +25126,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 116 ; 116 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 117 ; 117 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 118 ; 118 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 119 ; 119 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Transactions of The Royal Society of Tropical Medicine and Hygiene Volume 119 ; 119 ; >
 
   }
 
@@ -25177,7 +25177,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Translational Behavioral Medicine Volume 12 ; 12 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Translational Behavioral Medicine Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Translational Behavioral Medicine Volume 14 ; 14 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Translational Behavioral Medicine Volume 15 ; 15 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Translational Behavioral Medicine Volume 15 ; 15 ; >
 
   }
 
@@ -25231,7 +25231,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Tree Physiology Volume 42 ; 42 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Tree Physiology Volume 43 ; 43 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Tree Physiology Volume 44 ; 44 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Tree Physiology Volume 45 ; 45 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Tree Physiology Volume 45 ; 45 ; >
 
   }
 
@@ -25264,7 +25264,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Trusts & Trustees Volume 28 ; 28 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Trusts & Trustees Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Trusts & Trustees Volume 30 ; 30 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Trusts & Trustees Volume 31 ; 31 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Trusts & Trustees Volume 31 ; 31 ; >
 
   }
 
@@ -25314,7 +25314,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Twentieth Century British History Volume 33 ; 33 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Twentieth Century British History Volume 34 ; 34 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Twentieth Century British History Volume 35 ; 35 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Twentieth Century British History Volume 36 ; 36 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Twentieth Century British History Volume 36 ; 36 ; >
 
   }
 
@@ -25378,7 +25378,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Uniform Law Review - Revue de droit uniforme Volume 27 ; 27 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Uniform Law Review - Revue de droit uniforme Volume 28 ; 28 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Uniform Law Review - Revue de droit uniforme Volume 29 ; 29 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Uniform Law Review - Revue de droit uniforme Volume 30 ; 30 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Uniform Law Review - Revue de droit uniforme Volume 30 ; 30 ; >
 
   }
 
@@ -25402,7 +25402,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Virus Evolution Volume 8 ; 8 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Virus Evolution Volume 9-10 ; 9-10 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Virus Evolution Volume 10 ; 10 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Virus Evolution Volume 11 ; 11 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Virus Evolution Volume 11 ; 11 ; >
 
   }
 
@@ -25471,7 +25471,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Western Historical Quarterly Volume 53 ; 53 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Western Historical Quarterly Volume 54 ; 54 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Western Historical Quarterly Volume 55 ; 55 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Western Historical Quarterly Volume 56 ; 56 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Western Historical Quarterly Volume 56 ; 56 ; >
 
   }
 
@@ -25496,7 +25496,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Work, Aging and Retirement Volume 8 ; 8 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Work, Aging and Retirement Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Work, Aging and Retirement Volume 10 ; 10 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Work, Aging and Retirement Volume 11 ; 11 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Work, Aging and Retirement Volume 11 ; 11 ; >
 
   }
 
@@ -25642,7 +25642,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Zoological Journal of the Linnean Society Volume 194-196 ; 194-196 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Zoological Journal of the Linnean Society Volume 197-199 ; 197-199 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Zoological Journal of the Linnean Society Volume 200-203 ; 200-203 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Zoological Journal of the Linnean Society Volume 203-205 ; 203-205 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Zoological Journal of the Linnean Society Volume 203-205 ; 203-205 ; >
 
   }
   
