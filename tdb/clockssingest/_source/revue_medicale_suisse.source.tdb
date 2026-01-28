@@ -16,16 +16,11 @@
     plugin = org.lockss.plugin.clockss.rms.ClockssRevueMedicaleSuisseSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
     {
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/medhyg-released/
 
-    #####TESTING
-    au < ready ; exists ; 2026 ; Revue Médicale Suisse Source Content 2026_01 ; 2026_01 >
-    }
-    {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/medhyg-released/
 
-    #####Production
     au < readySource ; crawling ; 2026 ; Revue Médicale Suisse Source Content 2026_01 ; 2026_01 >
+
     }
   }
 }
