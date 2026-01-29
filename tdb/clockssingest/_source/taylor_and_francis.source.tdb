@@ -95,7 +95,7 @@
 
     au < readySource ; crawling ; 2025 ; Taylor & Francis Source Content 2025_01 ; 2025_01 >
     au < readySource ; crawling ; 2025 ; Taylor & Francis Source Content 2025_02 ; 2025_02 >
-    au < manifest ; exists ; 2025 ; Taylor & Francis Source Content 2025_03 ; 2025_03 >
+    au < readySource ; crawling ; 2025 ; Taylor & Francis Source Content 2025_03 ; 2025_03 >
     au < expected ; exists ; 2025 ; Taylor & Francis Source Content 2025_04 ; 2025_04 >
 
     au < testing ; exists ; 2026 ; Taylor & Francis Source Content 2026_01 ; 2026_01 >

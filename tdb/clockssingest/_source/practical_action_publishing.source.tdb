@@ -31,7 +31,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/practicalaction-released/
 
     au < readySource ; superseded ; 2025 ; Practical Action Publishing Books Source Content 2024_01 [superseded] ; 2024_01 >
-    au < ready ; exists ; 2025 ; Practical Action Publishing Books Source Content 2025_01 ; 2025_01 >
+    au < readySource ; crawling ; 2025 ; Practical Action Publishing Books Source Content 2025_01 ; 2025_01 >
     au < expected ; exists ; 2026 ; Practical Action Publishing Books Source Content 2026_01 ; 2026_01 >
 
   }
