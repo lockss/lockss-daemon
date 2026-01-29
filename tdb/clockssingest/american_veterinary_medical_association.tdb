@@ -24,7 +24,7 @@
       au < frozen ; exists ; 2000 ; American Journal of Veterinary Research Volume 61 ; 61 ; >
       au < frozen ; exists ; 2001 ; American Journal of Veterinary Research Volume 62 ; 62 ; >
       au < frozen ; exists ; 2002 ; American Journal of Veterinary Research Volume 63 ; 63 ; >
-      au < ready ; exists ; 2003 ; American Journal of Veterinary Research Volume 64 ; 64 ; >
+      au < crawling ; exists ; 2003 ; American Journal of Veterinary Research Volume 64 ; 64 ; >
       au < ready ; exists ; 2004 ; American Journal of Veterinary Research Volume 65 ; 65 ; >
       au < ready ; exists ; 2005 ; American Journal of Veterinary Research Volume 66 ; 66 ; >
       au < ready ; exists ; 2006 ; American Journal of Veterinary Research Volume 67 ; 67 ; >
@@ -60,7 +60,7 @@
     >
       param[journal_id] = javma
 
-      au < ready ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 216 ; 216 ; >
+      au < crawling ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 216 ; 216 ; >
       au < ready ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 217 ; 217 ; >
       au < frozen ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 218 ; 218 ; >
       au < ready ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 219 ; 219 ; >
