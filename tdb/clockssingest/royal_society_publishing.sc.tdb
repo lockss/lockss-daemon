@@ -40,8 +40,8 @@
 #    au < doNotProcess ; doNotProcess ; 1954 ; Biographical Memoirs of Fellows of the Royal Society Volume 9 [1954] ; 9 ; >
 #    }
 #    {
-#    param[journal_id] = rsbm
-#    
+    param[journal_id] = rsbm
+
 #    au < doNotProcess ; doNotProcess ; 1955 ; Biographical Memoirs of Fellows of the Royal Society Volume 1 [1955] ; 1 ; >
 #    au < doNotProcess ; doNotProcess ; 1956 ; Biographical Memoirs of Fellows of the Royal Society Volume 2 [1956] ; 2 ; >
 #    au < doNotProcess ; doNotProcess ; 1957 ; Biographical Memoirs of Fellows of the Royal Society Volume 3 [1957] ; 3 ; >
@@ -57,7 +57,7 @@
 #    au < doNotProcess ; doNotProcess ; 1967 ; Biographical Memoirs of Fellows of the Royal Society Volume 13 [1967] ; 13 ; >
 #    au < doNotProcess ; doNotProcess ; 1968 ; Biographical Memoirs of Fellows of the Royal Society Volume 14 [1968] ; 14 ; >
 #    au < doNotProcess ; doNotProcess ; 1969 ; Biographical Memoirs of Fellows of the Royal Society Volume 15 [1969] ; 15 ; >
-#    au < doNotProcess ; doNotProcess ; 1970 ; Biographical Memoirs of Fellows of the Royal Society Volume 16 [1970] ; 16 ; >
+    au < testing ; doNotProcess ; 1970 ; 1970 ; Biographical Memoirs of Fellows of the Royal Society Volume 16 [1970] ; 16 ; >
 #    au < doNotProcess ; doNotProcess ; 1971 ; Biographical Memoirs of Fellows of the Royal Society Volume 17 [1971] ; 17 ; >
 #    au < doNotProcess ; doNotProcess ; 1972 ; Biographical Memoirs of Fellows of the Royal Society Volume 18 [1972] ; 18 ; >
 #    au < doNotProcess ; doNotProcess ; 1973 ; Biographical Memoirs of Fellows of the Royal Society Volume 19 [1973] ; 19 ; >
@@ -77,7 +77,7 @@
 #    au < doNotProcess ; doNotProcess ; 1987 ; Biographical Memoirs of Fellows of the Royal Society Volume 33 ; 33 ; >
 #    au < doNotProcess ; doNotProcess ; 1988 ; Biographical Memoirs of Fellows of the Royal Society Volume 34 ; 34 ; >
 #    au < doNotProcess ; doNotProcess ; 1989 ; Biographical Memoirs of Fellows of the Royal Society Volume 35 ; 35 ; >
-#    au < doNotProcess ; doNotProcess ; 1990 ; Biographical Memoirs of Fellows of the Royal Society Volume 36 ; 36 ; >
+    au < testing ; doNotProcess ; 1990 ; 1990 ; Biographical Memoirs of Fellows of the Royal Society Volume 36 ; 36 ; >
 #    au < doNotProcess ; doNotProcess ; 1991 ; Biographical Memoirs of Fellows of the Royal Society Volume 37 ; 37 ; >
 #    au < doNotProcess ; doNotProcess ; 1992 ; Biographical Memoirs of Fellows of the Royal Society Volume 38 ; 38 ; >
 #    au < doNotProcess ; doNotProcess ; 1993 ; Biographical Memoirs of Fellows of the Royal Society Volume 39 ; 39 ; >
@@ -89,7 +89,7 @@
 #    au < doNotProcess ; doNotProcess ; 1999 ; Biographical Memoirs of Fellows of the Royal Society Volume 45 ; 45 ; >
 #    au < doNotProcess ; doNotProcess ; 2000 ; Biographical Memoirs of Fellows of the Royal Society Volume 46 ; 46 ; >
 #    au < doNotProcess ; doNotProcess ; 2001 ; Biographical Memoirs of Fellows of the Royal Society Volume 47 ; 47 ; >
-#    au < doNotProcess ; doNotProcess ; 2002 ; Biographical Memoirs of Fellows of the Royal Society Volume 48 ; 48 ; >
+    au < tseting ; doNotProcess ; 2002 ; 2002 ; Biographical Memoirs of Fellows of the Royal Society Volume 48 ; 48 ; >
 #    au < doNotProcess ; doNotProcess ; 2003 ; Biographical Memoirs of Fellows of the Royal Society Volume 49 ; 49 ; >
 #    au < doNotProcess ; doNotProcess ; 2004 ; Biographical Memoirs of Fellows of the Royal Society Volume 50 ; 50 ; >
 #    au < doNotProcess ; doNotProcess ; 2005 ; Biographical Memoirs of Fellows of the Royal Society Volume 51 ; 51 ; >
@@ -108,12 +108,12 @@
 #    au < doNotProcess ; doNotProcess ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 64 ; 64 ; >
 #    au < doNotProcess ; doNotProcess ; 2018 ; Biographical Memoirs of Fellows of the Royal Society Volume 65 ; 65 ; >
 #    au < doNotProcess ; doNotProcess ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 66 ; 66 ; >
-#    au < doNotProcess ; doNotProcess ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 67 ; 67 ; >
+    au < testing ; doNotProcess ; 2019 ; 2019 ; Biographical Memoirs of Fellows of the Royal Society Volume 67 ; 67 ; >
 #    au < doNotProcess ; doNotProcess ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 68 ; 68 ; >
 #    au < doNotProcess ; doNotProcess ; 2020 ; Biographical Memoirs of Fellows of the Royal Society Volume 69 ; 69 ; >
 #    au < doNotProcess ; doNotProcess ; 2021 ; Biographical Memoirs of Fellows of the Royal Society Volume 70 ; 70 ; >
 #    au < doNotProcess ; doNotProcess ; 2021 ; Biographical Memoirs of Fellows of the Royal Society Volume 71 ; 71 ; >
-#    au < doNotProcess ; doNotProcess ; 2022 ; Biographical Memoirs of Fellows of the Royal Society Volume 72 ; 72 ; >
+    au < testing ; doNotProcess ; 2022 ; 2022 ; Biographical Memoirs of Fellows of the Royal Society Volume 72 ; 72 ; >
 #    au < doNotProcess ; doNotProcess ; 2022 ; Biographical Memoirs of Fellows of the Royal Society Volume 73 ; 73 ; >
 #    au < doNotProcess ; doNotProcess ; 2023 ; Biographical Memoirs of Fellows of the Royal Society Volume 74 ; 74 ; >
 #    au < doNotProcess ; doNotProcess ; 2023 ; Biographical Memoirs of Fellows of the Royal Society Volume 75 ; 75 ; >
@@ -136,7 +136,7 @@
     param[journal_id] = rsbl
 
     au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Biology Letters Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Biology Letters Volume 2 ; 2 ; >
+    au < testing ; doNotProcess ; 2006 ; 2006 ; Biology Letters Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Biology Letters Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Biology Letters Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; Biology Letters Volume 5 ; 5 ; >
