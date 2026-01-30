@@ -122,12 +122,12 @@
       au < released ; 2014 ; Georgia Journal of College Student Affairs Volume 30 ; 30 >
       au < released ; 2016 ; Georgia Journal of College Student Affairs Volume 32 ; 32 >
 
-      au < exists ; 2019 ; Georgia Journal of College Student Affairs Volume 35 ; 35 >
-      au < exists ; 2020 ; Georgia Journal of College Student Affairs Volume 36 ; 36 >
-      au < exists ; 2021 ; Georgia Journal of College Student Affairs Volume 37 ; 37 >
-      au < exists ; 2022 ; Georgia Journal of College Student Affairs Volume 38 ; 38 >
-      au < exists ; 2023 ; Georgia Journal of College Student Affairs Volume 39 ; 39 >
-      au < exists ; 2024 ; Georgia Journal of College Student Affairs Volume 40 ; 40 >
+      au < manifest ; 2019 ; Georgia Journal of College Student Affairs Volume 35 ; 35 >
+      au < manifest ; 2020 ; Georgia Journal of College Student Affairs Volume 36 ; 36 >
+      au < manifest ; 2021 ; Georgia Journal of College Student Affairs Volume 37 ; 37 >
+      au < manifest ; 2022 ; Georgia Journal of College Student Affairs Volume 38 ; 38 >
+      au < manifest ; 2023 ; Georgia Journal of College Student Affairs Volume 39 ; 39 >
+      au < manifest ; 2024 ; Georgia Journal of College Student Affairs Volume 40 ; 40 >
 
   }
 
@@ -143,8 +143,8 @@
       param[journal_abbr] = gcpa
       #continues = 2330-7269
 
-      au < exists ; 2025 ; Journal of Higher Education and Student Affairs Volume 41 ; 41 >
-      au < exists ; 2026 ; Journal of Higher Education and Student Affairs Volume 42 ; 42 >
+      au < manifest ; 2025 ; Journal of Higher Education and Student Affairs Volume 41 ; 41 >
+      au < manifest ; 2026 ; Journal of Higher Education and Student Affairs Volume 42 ; 42 >
 
   }
 
