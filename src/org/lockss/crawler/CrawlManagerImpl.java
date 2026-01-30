@@ -192,10 +192,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public static final String DEFAULT_MAX_REPAIR_RATE = "50/1d";
 
   /** Maximum rate at which we will start new content crawls for any
-   * particular AU */
+   * particular AU.  If this is too low, AUs with some consistently
+   * failing URLs may crawl excessivly often and (on sites that
+   * timestamp content) accumulate excessive CU versions. */
   public static final String PARAM_MAX_NEW_CONTENT_RATE =
     PREFIX + "maxNewContentRate";
-  public static final String DEFAULT_MAX_NEW_CONTENT_RATE = "1/18h";
+  public static final String DEFAULT_MAX_NEW_CONTENT_RATE = "1/5d";
 
   /** Maximum rate at which we will start new content crawls for any
    * particular plugin registry */
