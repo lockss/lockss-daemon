@@ -96,7 +96,7 @@
     au < ready ; exists ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 ; >
     au < ready ; exists ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 ; >
     au < frozen ; exists ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 ; >
-    au < ready ; exists ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 ; >
     au < ready ; exists ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropology of the Middle East Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropology of the Middle East Volume 7 ; 7 ; >
@@ -615,7 +615,7 @@
     #param[journal_issn] = 1045-0300
 
     au < ready ; exists ; 1998 ; German Politics and Society Volume 16 ; 16 ; >
-    au < ready ; exists ; 1999 ; German Politics and Society Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1999 ; German Politics and Society Volume 17 ; 17 ; >
     au < ready ; exists ; 2000 ; German Politics and Society Volume 18 ; 18 ; >
     au < ready ; exists ; 2001 ; German Politics and Society Volume 19 ; 19 ; >
     au < crawling ; exists ; 2002 ; German Politics and Society Volume 20 ; 20 ; >
@@ -1156,7 +1156,7 @@
     au < frozen ; exists ; 2005 ; Sartre Studies International Volume 11 ; 11 ; >
     au < ready ; exists ; 2006 ; Sartre Studies International Volume 12 ; 12 ; >
     au < crawling ; exists ; 2007 ; Sartre Studies International Volume 13 ; 13 ; >
-    au < ready ; exists ; 2008 ; Sartre Studies International Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2008 ; Sartre Studies International Volume 14 ; 14 ; >
     au < ready ; exists ; 2009 ; Sartre Studies International Volume 15 ; 15 ; >
     au < frozen ; exists ; 2010 ; Sartre Studies International Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Sartre Studies International Volume 17 ; 17 ; >
