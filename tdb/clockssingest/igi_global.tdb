@@ -5350,4 +5350,32 @@
 
   }
 
+  {
+
+      title <
+        name = International Journal of Socially Responsible and Sustainable Healthcare (IJSRSH) ;
+        issn = 3066-599X ;
+        eissn = 3066-6007
+      >
+
+      param[journal_issn] = 3066-6007
+
+      au < exists ; exists ; 2025 ; International Journal of Socially Responsible and Sustainable Healthcare (IJSRSH) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Financial Technology and Innovation (IJFTI) ;
+        issn = 2998-0682 ;
+        eissn = 2998-0690
+      >
+
+      param[journal_issn] = 2998-0690
+
+      au < exists ; exists ; 2026 ; International Journal of Financial Technology and Innovation (IJFTI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+
+  }
+
 }
