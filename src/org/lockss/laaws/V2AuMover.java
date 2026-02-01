@@ -200,19 +200,19 @@ public class V2AuMover {
    * Repository service port
    */
   public static final String PARAM_RS_PORT = PREFIX + "rs.port";
-  public static final int DEFAULT_RS_PORT = 24610;
+  public static final int DEFAULT_RS_PORT = 24611;
 
   /**
    * Configuration service port
    */
   public static final String PARAM_CFG_PORT = PREFIX + "cfg.port";
-  public static final int DEFAULT_CFG_PORT = 24620;
+  public static final int DEFAULT_CFG_PORT = 24612;
 
   /**
    * Configuration service port
    */
   public static final String PARAM_CFG_UI_PORT = PREFIX + "cfg.ui.port";
-  public static final int DEFAULT_CFG_UI_PORT = 24621;
+  public static final int DEFAULT_CFG_UI_PORT = 24602;
 
   /**
    * Maximum number of retries for REST request failures

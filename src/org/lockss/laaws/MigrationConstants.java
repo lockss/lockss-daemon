@@ -65,12 +65,12 @@ public class MigrationConstants {
   public static final boolean V2_DEFAULT_CONTENTSERVLETMANAGER_START = false;
 
 
-  public static final int V2_DEFAULT_CFGSVC_UI_PORT = 24621;
-  public static final int V2_DEFAULT_PROXY_PORT = 24670;
-  public static final int V2_DEFAULT_PROXY_SSL_PORT = 24671;
-  public static final int V2_DEFAULT_AUDIT_PROXY_PORT = 24672;
-  public static final int V2_DEFAULT_AUDIT_PROXY_SSL_PORT = 24673;
-  public static final int V2_DEFAULT_CONTENTSERVLET_PORT = 24680;
+  public static final int V2_DEFAULT_CFGSVC_UI_PORT = 24602;
+  public static final int V2_DEFAULT_PROXY_PORT = 24630;
+  public static final int V2_DEFAULT_PROXY_SSL_PORT = 24642;
+  public static final int V2_DEFAULT_AUDIT_PROXY_PORT = 24631;
+  public static final int V2_DEFAULT_AUDIT_PROXY_SSL_PORT = 24643;
+  public static final int V2_DEFAULT_CONTENTSERVLET_PORT = 24640;
   public static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_CLASSNAME =
       EmbeddedDataSource.class.getCanonicalName();
   public static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_SERVERNAME = "localhost";
