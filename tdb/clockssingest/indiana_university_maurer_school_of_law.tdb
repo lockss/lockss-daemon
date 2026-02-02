@@ -26,7 +26,7 @@
     param[journal_abbr] = fclj
 
     au < ready ; exists ; 1993 ; Federal Communications Law Journal Volume 46 ; 46 ; https://www.repository.law.indiana.edu/ ; >
-    au < ready ; exists ; 1994 ; Federal Communications Law Journal Volume 47 ; 47 ; https://www.repository.law.indiana.edu/ ; >
+    au < crawling ; exists ; 1994 ; Federal Communications Law Journal Volume 47 ; 47 ; https://www.repository.law.indiana.edu/ ; >
     au < ready ; exists ; 1995 ; Federal Communications Law Journal Volume 48 ; 48 ; https://www.repository.law.indiana.edu/ ; >
     au < crawling ; exists ; 1996 ; Federal Communications Law Journal Volume 49 ; 49 ; https://www.repository.law.indiana.edu/ ; >
     au < ready ; exists ; 1997 ; Federal Communications Law Journal Volume 50 ; 50 ; https://www.repository.law.indiana.edu/ ; >

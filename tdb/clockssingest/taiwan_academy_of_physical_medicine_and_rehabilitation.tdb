@@ -21,7 +21,7 @@
       param[base_url] = https://rps.researchcommons.org/
       param[journal_abbr] = journal
 
-      au < ready ; exists ; 1973 ; Rehabilitation Practice and Science (RPS) Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1973 ; Rehabilitation Practice and Science (RPS) Volume 1 ; 1 ; >
       au < ready ; exists ; 1974 ; Rehabilitation Practice and Science (RPS) Volume 2 ; 2 ; >
       au < frozen ; exists ; 1975 ; Rehabilitation Practice and Science (RPS) Volume 3 ; 3 ; >
       au < doesNotExist ; doesNotExist ; 1976 ; Rehabilitation Practice and Science (RPS) Volume 4 ; 4 ; >
