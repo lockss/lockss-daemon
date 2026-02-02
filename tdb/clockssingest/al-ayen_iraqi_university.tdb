@@ -21,7 +21,7 @@
       param[base_url] = https://acbs.alayen.edu.iq/
       param[journal_abbr] = journal
 
-      au < frozen ; exists ; 2024 ; AUIQ Complementary Biological System Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2024 ; AUIQ Complementary Biological System Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; AUIQ Complementary Biological System Volume 2 ; 2 ; >
 
   }
@@ -37,7 +37,7 @@
       param[base_url] = https://ates.alayen.edu.iq/
       param[journal_abbr] = home
 
-      au < frozen ; exists ; 2024 ; AUIQ Technical Engineering Science Volume 1 ; 1 ; >
+      au < finished ; manifest ; 2024 ; AUIQ Technical Engineering Science Volume 1 ; 1 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; AUIQ Technical Engineering Science Volume 2 ; 2 ; >
 
   }

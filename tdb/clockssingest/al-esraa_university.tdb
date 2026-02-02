@@ -22,10 +22,10 @@
       param[base_url] = https://jms.esraa.edu.iq/
       param[journal_abbr] = journal
 
-      au < frozen ; exists ; 2020 ; Al-Esraa University College Journal for Medical Sciences Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2022 ; Al-Esraa University College Journal for Medical Sciences Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2023 ; Al-Esraa University College Journal for Medical Sciences Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2024 ; Al-Esraa University College Journal for Medical Sciences Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2020 ; Al-Esraa University College Journal for Medical Sciences Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Al-Esraa University College Journal for Medical Sciences Volume 3 ; 3 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; Al-Esraa University College Journal for Medical Sciences Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Al-Esraa University College Journal for Medical Sciences Volume 5 ; 5 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; Al-Esraa University College Journal for Medical Sciences Volume 6 ; 6 ; >
 
   }
@@ -42,11 +42,11 @@
       param[base_url] = https://jes.esraa.edu.iq/
       param[journal_abbr] = journal
 
-      au < frozen ; exists ; 2020 ; Al-Esraa University College Journal for Engineering Sciences Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2021 ; Al-Esraa University College Journal for Engineering Sciences Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2022 ; Al-Esraa University College Journal for Engineering Sciences Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2023 ; Al-Esraa University College Journal for Engineering Sciences Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2024 ; Al-Esraa University College Journal for Engineering Sciences Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2020 ; Al-Esraa University College Journal for Engineering Sciences Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2021 ; Al-Esraa University College Journal for Engineering Sciences Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; Al-Esraa University College Journal for Engineering Sciences Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; Al-Esraa University College Journal for Engineering Sciences Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Al-Esraa University College Journal for Engineering Sciences Volume 6 ; 6 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; Al-Esraa University College Journal for Engineering Sciences Volume 7 ; 7 ; >
 
   }

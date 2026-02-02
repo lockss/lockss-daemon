@@ -21,8 +21,8 @@
       param[base_url] = https://ajses.uomus.edu.iq/
       param[journal_abbr] = home
 
-      au < frozen ; exists ; 2023 ; Al-Mustaqbal Journal of Sustainability in Engineering Sciences (AJSES) Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2024 ; Al-Mustaqbal Journal of Sustainability in Engineering Sciences (AJSES) Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2023 ; Al-Mustaqbal Journal of Sustainability in Engineering Sciences (AJSES) Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2024 ; Al-Mustaqbal Journal of Sustainability in Engineering Sciences (AJSES) Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; Al-Mustaqbal Journal of Sustainability in Engineering Sciences (AJSES) Volume 3 ; 3 ; >
 
   }
@@ -39,8 +39,8 @@
       param[base_url] = https://mjpms.uomus.edu.iq/
       param[journal_abbr] = mjpms
 
-      au < frozen ; exists ; 2023 ; Al-Mustaqbal Journal of Pharmaceutical and Medical Sciences (MJPMS) Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2024 ; Al-Mustaqbal Journal of Pharmaceutical and Medical Sciences (MJPMS) Volume 2 ; 2 ; >
+      au < finished ; manifest ; 2023 ; Al-Mustaqbal Journal of Pharmaceutical and Medical Sciences (MJPMS) Volume 1 ; 1 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Al-Mustaqbal Journal of Pharmaceutical and Medical Sciences (MJPMS) Volume 2 ; 2 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; Al-Mustaqbal Journal of Pharmaceutical and Medical Sciences (MJPMS) Volume 3 ; 3 ; >
 
   }

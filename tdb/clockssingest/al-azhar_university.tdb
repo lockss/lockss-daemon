@@ -25,9 +25,9 @@
       au < finished ; manifest ; 2020 ; Al-Azhar International Medical Journal (AIMJ) Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; Al-Azhar International Medical Journal (AIMJ) Volume 2 ; 2 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; Al-Azhar International Medical Journal (AIMJ) Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Al-Azhar International Medical Journal (AIMJ) Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2024 ; Al-Azhar International Medical Journal (AIMJ) Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2025 ; Al-Azhar International Medical Journal (AIMJ) Volume 6 ; 6 ; >
+      au < finished ; manifest ; 2023 ; Al-Azhar International Medical Journal (AIMJ) Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Al-Azhar International Medical Journal (AIMJ) Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2025 ; Al-Azhar International Medical Journal (AIMJ) Volume 6 ; 6 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -45,10 +45,10 @@
       au < doNotProcess ; exists ; 2005 ; Al-Azhar Bulletin of Science Volume 16 ; 16 ; >
       au < doNotProcess ; exists ; 2006 ; Al-Azhar Bulletin of Science Volume 17 ; 17 ; >
       au < doNotProcess ; exists ; 2007 ; Al-Azhar Bulletin of Science Volume 18 ; 18 ; >
-      au < frozen ; exists ; 2008 ; Al-Azhar Bulletin of Science Volume 19 ; 19 ; >
-      au < frozen ; exists ; 2009 ; Al-Azhar Bulletin of Science Volume 20 ; 20 ; >
-      au < frozen ; exists ; 2010 ; Al-Azhar Bulletin of Science Volume 21 ; 21 ; >
-      au < frozen ; exists ; 2011 ; Al-Azhar Bulletin of Science Volume 22 ; 22 ; >
+      au < finished ; manifest ; 2008 ; Al-Azhar Bulletin of Science Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2009 ; Al-Azhar Bulletin of Science Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2010 ; Al-Azhar Bulletin of Science Volume 21 ; 21 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Al-Azhar Bulletin of Science Volume 22 ; 22 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2012 ; Al-Azhar Bulletin of Science Volume 23 ; 23 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Al-Azhar Bulletin of Science Volume 24 ; 24 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2014 ; Al-Azhar Bulletin of Science Volume 25 ; 25 ; reingest2.clockss.org:8085 >
@@ -60,9 +60,9 @@
       au < finished ; manifest ; 2020 ; Al-Azhar Bulletin of Science Volume 31 ; 31 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2021 ; Al-Azhar Bulletin of Science Volume 32 ; 32 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Al-Azhar Bulletin of Science Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Al-Azhar Bulletin of Science Volume 34 ; 34 ; >
-      au < frozen ; exists ; 2024 ; Al-Azhar Bulletin of Science Volume 35 ; 35 ; >
-      au < frozen ; exists ; 2025 ; Al-Azhar Bulletin of Science Volume 36 ; 36 ; >
+      au < finished ; manifest ; 2023 ; Al-Azhar Bulletin of Science Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Al-Azhar Bulletin of Science Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2025 ; Al-Azhar Bulletin of Science Volume 36 ; 36 ; reingest3.clockss.org:8083 >
 
   }
 
