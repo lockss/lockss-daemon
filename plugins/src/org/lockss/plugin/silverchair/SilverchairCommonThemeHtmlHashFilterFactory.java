@@ -81,6 +81,7 @@ public class SilverchairCommonThemeHtmlHashFilterFactory implements FilterFactor
             HtmlNodeFilters.tagWithAttributeRegex("a", "href", "cdn-cgi"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "info-author-correspondence"),
             HtmlNodeFilters.tagWithAttributeRegex("div", "class", "article-footnote"),
+            HtmlNodeFilters.tagWithAttributeRegex("input", "type", "hidden"),
             
     };
 
