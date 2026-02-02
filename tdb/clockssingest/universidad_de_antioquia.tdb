@@ -734,58 +734,58 @@
       param[base_url] = https://revistas.udea.edu.co/
       param[journal_id] = fnsp
 
-      au < exists ; exists ; 1974 ; Revista Facultad Nacional de Salud Pública Volume 1974 ; 1974 ; 1 ; >
-      au < exists ; exists ; 1975 ; Revista Facultad Nacional de Salud Pública Volume 1975 ; 1975 ; 2 ; >
-      au < exists ; exists ; 1976 ; Revista Facultad Nacional de Salud Pública Volume 1976 ; 1976 ; 3 ; >
-      au < exists ; exists ; 1977 ; Revista Facultad Nacional de Salud Pública Volume 1977 ; 1977 ; 4 ; >
-      au < exists ; exists ; 1978 ; Revista Facultad Nacional de Salud Pública Volume 1978 ; 1978 ; 5 ; >
-      au < exists ; exists ; 1979 ; Revista Facultad Nacional de Salud Pública Volume 1979 ; 1979 ; 6 ; >
-      au < exists ; exists ; 1980 ; Revista Facultad Nacional de Salud Pública Volume 1980 ; 1980 ; 7 ; >
-      au < exists ; exists ; 1981 ; Revista Facultad Nacional de Salud Pública Volume 1981 ; 1981 ; 8 ; >
+      au < manifest ; exists ; 1974 ; Revista Facultad Nacional de Salud Pública Volume 1974 ; 1974 ; 1 ; >
+      au < manifest ; exists ; 1975 ; Revista Facultad Nacional de Salud Pública Volume 1975 ; 1975 ; 2 ; >
+      au < manifest ; exists ; 1976 ; Revista Facultad Nacional de Salud Pública Volume 1976 ; 1976 ; 3 ; >
+      au < manifest ; exists ; 1977 ; Revista Facultad Nacional de Salud Pública Volume 1977 ; 1977 ; 4 ; >
+      au < manifest ; exists ; 1978 ; Revista Facultad Nacional de Salud Pública Volume 1978 ; 1978 ; 5 ; >
+      au < manifest ; exists ; 1979 ; Revista Facultad Nacional de Salud Pública Volume 1979 ; 1979 ; 6 ; >
+      au < manifest ; exists ; 1980 ; Revista Facultad Nacional de Salud Pública Volume 1980 ; 1980 ; 7 ; >
+      au < manifest ; exists ; 1981 ; Revista Facultad Nacional de Salud Pública Volume 1981 ; 1981 ; 8 ; >
       au < exists ; exists ; 1982 ; Revista Facultad Nacional de Salud Pública Volume 1982 ; 1982 ; 9 ; >
       au < exists ; exists ; 1983 ; Revista Facultad Nacional de Salud Pública Volume 1983 ; 1983 ; 10 ; >
       au < exists ; exists ; 1984 ; Revista Facultad Nacional de Salud Pública Volume 1984 ; 1984 ; 11 ; >
-      au < exists ; exists ; 1985 ; Revista Facultad Nacional de Salud Pública Volume 1985 ; 1985 ; 12 ; >
-      au < exists ; exists ; 1986 ; Revista Facultad Nacional de Salud Pública Volume 1986 ; 1986 ; 13 ; >
-      au < exists ; exists ; 1987 ; Revista Facultad Nacional de Salud Pública Volume 1987 ; 1987 ; 14 ; >
-      au < exists ; exists ; 1988 ; Revista Facultad Nacional de Salud Pública Volume 1988 ; 1988 ; 15 ; >
+      au < manifest ; exists ; 1985 ; Revista Facultad Nacional de Salud Pública Volume 1985 ; 1985 ; 12 ; >
+      au < manifest ; exists ; 1986 ; Revista Facultad Nacional de Salud Pública Volume 1986 ; 1986 ; 13 ; >
+      au < manifest ; exists ; 1987 ; Revista Facultad Nacional de Salud Pública Volume 1987 ; 1987 ; 14 ; >
+      au < manifest ; exists ; 1988 ; Revista Facultad Nacional de Salud Pública Volume 1988 ; 1988 ; 15 ; >
       au < exists ; exists ; 1989 ; Revista Facultad Nacional de Salud Pública Volume 1989 ; 1989 ; 16 ; >
       au < exists ; exists ; 1990 ; Revista Facultad Nacional de Salud Pública Volume 1990 ; 1990 ; 17 ; >
       au < exists ; exists ; 1991 ; Revista Facultad Nacional de Salud Pública Volume 1991 ; 1991 ; 18 ; >
-      au < exists ; exists ; 1992 ; Revista Facultad Nacional de Salud Pública Volume 1992 ; 1992 ; 19 ; >
+      au < manifest ; exists ; 1992 ; Revista Facultad Nacional de Salud Pública Volume 1992 ; 1992 ; 19 ; >
       au < exists ; exists ; 1993 ; Revista Facultad Nacional de Salud Pública Volume 1993 ; 1993 ; 20 ; >
       au < exists ; exists ; 1994 ; Revista Facultad Nacional de Salud Pública Volume 1994 ; 1994 ; 21 ; >
-      au < exists ; exists ; 1995 ; Revista Facultad Nacional de Salud Pública Volume 1995 ; 1995 ; 22 ; >
-      au < exists ; exists ; 1996 ; Revista Facultad Nacional de Salud Pública Volume 1996 ; 1996 ; 23 ; >
-      au < exists ; exists ; 1997 ; Revista Facultad Nacional de Salud Pública Volume 1997 ; 1997 ; 24 ; >
-      au < exists ; exists ; 1998 ; Revista Facultad Nacional de Salud Pública Volume 1998 ; 1998 ; 25 ; >
-      au < exists ; exists ; 1999 ; Revista Facultad Nacional de Salud Pública Volume 1999 ; 1999 ; 26 ; >
-      au < exists ; exists ; 2000 ; Revista Facultad Nacional de Salud Pública Volume 2000 ; 2000 ; 27 ; >
-      au < exists ; exists ; 2001 ; Revista Facultad Nacional de Salud Pública Volume 2001 ; 2001 ; 28 ; >
-      au < exists ; exists ; 2002 ; Revista Facultad Nacional de Salud Pública Volume 2002 ; 2002 ; 29 ; >
-      au < exists ; exists ; 2003 ; Revista Facultad Nacional de Salud Pública Volume 2003 ; 2003 ; 30 ; >
-      au < exists ; exists ; 2004 ; Revista Facultad Nacional de Salud Pública Volume 2004 ; 2004 ; 31 ; >
-      au < exists ; exists ; 2005 ; Revista Facultad Nacional de Salud Pública Volume 2005 ; 2005 ; 32 ; >
-      au < exists ; exists ; 2006 ; Revista Facultad Nacional de Salud Pública Volume 2006 ; 2006 ; 33 ; >
-      au < exists ; exists ; 2007 ; Revista Facultad Nacional de Salud Pública Volume 2007 ; 2007 ; 34 ; >
-      au < exists ; exists ; 2008 ; Revista Facultad Nacional de Salud Pública Volume 2008 ; 2008 ; 35 ; >
-      au < exists ; exists ; 2009 ; Revista Facultad Nacional de Salud Pública Volume 2009 ; 2009 ; 36 ; >
-      au < exists ; exists ; 2010 ; Revista Facultad Nacional de Salud Pública Volume 2010 ; 2010 ; 37 ; >
-      au < exists ; exists ; 2011 ; Revista Facultad Nacional de Salud Pública Volume 2011 ; 2011 ; 38 ; >
-      au < exists ; exists ; 2012 ; Revista Facultad Nacional de Salud Pública Volume 2012 ; 2012 ; 39 ; >
-      au < exists ; exists ; 2013 ; Revista Facultad Nacional de Salud Pública Volume 2013 ; 2013 ; 40 ; >
-      au < exists ; exists ; 2014 ; Revista Facultad Nacional de Salud Pública Volume 2014 ; 2014 ; 41 ; >
-      au < exists ; exists ; 2015 ; Revista Facultad Nacional de Salud Pública Volume 2015 ; 2015 ; 42 ; >
-      au < exists ; exists ; 2016 ; Revista Facultad Nacional de Salud Pública Volume 2016 ; 2016 ; 43 ; >
-      au < exists ; exists ; 2017 ; Revista Facultad Nacional de Salud Pública Volume 2017 ; 2017 ; 44 ; >
-      au < exists ; exists ; 2018 ; Revista Facultad Nacional de Salud Pública Volume 2018 ; 2018 ; 45 ; >
-      au < exists ; exists ; 2019 ; Revista Facultad Nacional de Salud Pública Volume 2019 ; 2019 ; 46 ; >
-      au < exists ; exists ; 2020 ; Revista Facultad Nacional de Salud Pública Volume 2020 ; 2020 ; 47 ; >
-      au < exists ; exists ; 2021 ; Revista Facultad Nacional de Salud Pública Volume 2021 ; 2021 ; 48 ; >
-      au < exists ; exists ; 2022 ; Revista Facultad Nacional de Salud Pública Volume 2022 ; 2022 ; 49 ; >
-      au < exists ; exists ; 2023 ; Revista Facultad Nacional de Salud Pública Volume 2023 ; 2023 ; 50 ; >
-      au < exists ; exists ; 2024 ; Revista Facultad Nacional de Salud Pública Volume 2024 ; 2024 ; 51 ; >
-      au < exists ; exists ; 2025 ; Revista Facultad Nacional de Salud Pública Volume 2025 ; 2025 ; 52 ; >
+      au < manifest ; exists ; 1995 ; Revista Facultad Nacional de Salud Pública Volume 1995 ; 1995 ; 22 ; >
+      au < manifest ; exists ; 1996 ; Revista Facultad Nacional de Salud Pública Volume 1996 ; 1996 ; 23 ; >
+      au < manifest ; exists ; 1997 ; Revista Facultad Nacional de Salud Pública Volume 1997 ; 1997 ; 24 ; >
+      au < manifest ; exists ; 1998 ; Revista Facultad Nacional de Salud Pública Volume 1998 ; 1998 ; 25 ; >
+      au < manifest ; exists ; 1999 ; Revista Facultad Nacional de Salud Pública Volume 1999 ; 1999 ; 26 ; >
+      au < manifest ; exists ; 2000 ; Revista Facultad Nacional de Salud Pública Volume 2000 ; 2000 ; 27 ; >
+      au < manifest ; exists ; 2001 ; Revista Facultad Nacional de Salud Pública Volume 2001 ; 2001 ; 28 ; >
+      au < manifest ; exists ; 2002 ; Revista Facultad Nacional de Salud Pública Volume 2002 ; 2002 ; 29 ; >
+      au < manifest ; exists ; 2003 ; Revista Facultad Nacional de Salud Pública Volume 2003 ; 2003 ; 30 ; >
+      au < manifest ; exists ; 2004 ; Revista Facultad Nacional de Salud Pública Volume 2004 ; 2004 ; 31 ; >
+      au < manifest ; exists ; 2005 ; Revista Facultad Nacional de Salud Pública Volume 2005 ; 2005 ; 32 ; >
+      au < manifest ; exists ; 2006 ; Revista Facultad Nacional de Salud Pública Volume 2006 ; 2006 ; 33 ; >
+      au < manifest ; exists ; 2007 ; Revista Facultad Nacional de Salud Pública Volume 2007 ; 2007 ; 34 ; >
+      au < manifest ; exists ; 2008 ; Revista Facultad Nacional de Salud Pública Volume 2008 ; 2008 ; 35 ; >
+      au < manifest ; exists ; 2009 ; Revista Facultad Nacional de Salud Pública Volume 2009 ; 2009 ; 36 ; >
+      au < manifest ; exists ; 2010 ; Revista Facultad Nacional de Salud Pública Volume 2010 ; 2010 ; 37 ; >
+      au < manifest ; exists ; 2011 ; Revista Facultad Nacional de Salud Pública Volume 2011 ; 2011 ; 38 ; >
+      au < manifest ; exists ; 2012 ; Revista Facultad Nacional de Salud Pública Volume 2012 ; 2012 ; 39 ; >
+      au < manifest ; exists ; 2013 ; Revista Facultad Nacional de Salud Pública Volume 2013 ; 2013 ; 40 ; >
+      au < manifest ; exists ; 2014 ; Revista Facultad Nacional de Salud Pública Volume 2014 ; 2014 ; 41 ; >
+      au < manifest ; exists ; 2015 ; Revista Facultad Nacional de Salud Pública Volume 2015 ; 2015 ; 42 ; >
+      au < manifest ; exists ; 2016 ; Revista Facultad Nacional de Salud Pública Volume 2016 ; 2016 ; 43 ; >
+      au < manifest ; exists ; 2017 ; Revista Facultad Nacional de Salud Pública Volume 2017 ; 2017 ; 44 ; >
+      au < manifest ; exists ; 2018 ; Revista Facultad Nacional de Salud Pública Volume 2018 ; 2018 ; 45 ; >
+      au < manifest ; exists ; 2019 ; Revista Facultad Nacional de Salud Pública Volume 2019 ; 2019 ; 46 ; >
+      au < manifest ; exists ; 2020 ; Revista Facultad Nacional de Salud Pública Volume 2020 ; 2020 ; 47 ; >
+      au < manifest ; exists ; 2021 ; Revista Facultad Nacional de Salud Pública Volume 2021 ; 2021 ; 48 ; >
+      au < manifest ; exists ; 2022 ; Revista Facultad Nacional de Salud Pública Volume 2022 ; 2022 ; 49 ; >
+      au < manifest ; exists ; 2023 ; Revista Facultad Nacional de Salud Pública Volume 2023 ; 2023 ; 50 ; >
+      au < manifest ; exists ; 2024 ; Revista Facultad Nacional de Salud Pública Volume 2024 ; 2024 ; 51 ; >
+      au < manifest ; exists ; 2025 ; Revista Facultad Nacional de Salud Pública Volume 2025 ; 2025 ; 52 ; >
 
   }
 
