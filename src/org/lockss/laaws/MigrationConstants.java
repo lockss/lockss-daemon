@@ -67,9 +67,9 @@ public class MigrationConstants {
 
   public static final int V2_DEFAULT_CFGSVC_UI_PORT = 24602;
   public static final int V2_DEFAULT_PROXY_PORT = 24630;
-  public static final int V2_DEFAULT_PROXY_SSL_PORT = 24642;
+  public static final int V2_DEFAULT_PROXY_SSL_PORT = 24633;
   public static final int V2_DEFAULT_AUDIT_PROXY_PORT = 24631;
-  public static final int V2_DEFAULT_AUDIT_PROXY_SSL_PORT = 24643;
+  public static final int V2_DEFAULT_AUDIT_PROXY_SSL_PORT = 24634;
   public static final int V2_DEFAULT_CONTENTSERVLET_PORT = 24640;
   public static final String V2_DEFAULT_METADATADBMANAGER_DATASOURCE_CLASSNAME =
       EmbeddedDataSource.class.getCanonicalName();
