@@ -30,7 +30,7 @@
       au < frozen ; exists ; 1994 ; American Journal of Audiology Volume 3 ; 3 ; >
       au < frozen ; exists ; 1995 ; American Journal of Audiology Volume 4 ; 4 ; >
       au < frozen ; exists ; 1996 ; American Journal of Audiology Volume 5 ; 5 ; >
-      au < crawling ; exists ; 1997 ; American Journal of Audiology Volume 6 ; 6 ; >
+      au < frozen ; exists ; 1997 ; American Journal of Audiology Volume 6 ; 6 ; >
       au < frozen ; exists ; 1998 ; American Journal of Audiology Volume 7 ; 7 ; >
       au < frozen ; exists ; 1999 ; American Journal of Audiology Volume 8 ; 8 ; >
       au < frozen ; exists ; 2000 ; American Journal of Audiology Volume 9 ; 9 ; >
@@ -39,10 +39,10 @@
       au < frozen ; exists ; 2003 ; American Journal of Audiology Volume 12 ; 12 ; >
       au < frozen ; exists ; 2004 ; American Journal of Audiology Volume 13 ; 13 ; >
       au < frozen ; exists ; 2005 ; American Journal of Audiology Volume 14 ; 14 ; >
-      au < crawling ; exists ; 2006 ; American Journal of Audiology Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2007 ; American Journal of Audiology Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2006 ; American Journal of Audiology Volume 15 ; 15 ; >
+      au < frozen ; exists ; 2007 ; American Journal of Audiology Volume 16 ; 16 ; >
       au < frozen ; exists ; 2008 ; American Journal of Audiology Volume 17 ; 17 ; >
-      au < crawling ; exists ; 2009 ; American Journal of Audiology Volume 18 ; 18 ; >
+      au < frozen ; exists ; 2009 ; American Journal of Audiology Volume 18 ; 18 ; >
       au < finished ; finished ; 2010 ; American Journal of Audiology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; American Journal of Audiology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; American Journal of Audiology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
@@ -88,8 +88,8 @@
       au < frozen ; exists ; 2004 ; American Journal of Speech-Language Pathology Volume 13 ; 13 ; >
       au < frozen ; exists ; 2005 ; American Journal of Speech-Language Pathology Volume 14 ; 14 ; >
       au < frozen ; exists ; 2006 ; American Journal of Speech-Language Pathology Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2007 ; American Journal of Speech-Language Pathology Volume 16 ; 16 ; >
-      au < crawling ; exists ; 2008 ; American Journal of Speech-Language Pathology Volume 17 ; 17 ; >
+      au < frozen ; exists ; 2007 ; American Journal of Speech-Language Pathology Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2008 ; American Journal of Speech-Language Pathology Volume 17 ; 17 ; >
       au < frozen ; exists ; 2009 ; American Journal of Speech-Language Pathology Volume 18 ; 18 ; >
       au < finished ; finished ; 2010 ; American Journal of Speech-Language Pathology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; American Journal of Speech-Language Pathology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
@@ -122,18 +122,18 @@
       param[journal_id] = jsd
       param[base_url] = https://pubs.asha.org/
 
-      au < crawling ; exists ; 1936 ; Journal of Speech Disorders Volume 1 ; 1 ; >
-      au < crawling ; exists ; 1937 ; Journal of Speech Disorders Volume 2 ; 2 ; >
-      au < crawling ; exists ; 1938 ; Journal of Speech Disorders Volume 3 ; 3 ; >
-      au < crawling ; exists ; 1939 ; Journal of Speech Disorders Volume 4 ; 4 ; >
-      au < crawling ; exists ; 1940 ; Journal of Speech Disorders Volume 5 ; 5 ; >
-      au < crawling ; exists ; 1941 ; Journal of Speech Disorders Volume 6 ; 6 ; >
-      au < crawling ; exists ; 1942 ; Journal of Speech Disorders Volume 7 ; 7 ; >
-      au < crawling ; exists ; 1943 ; Journal of Speech Disorders Volume 8 ; 8 ; >
-      au < crawling ; exists ; 1944 ; Journal of Speech Disorders Volume 9 ; 9 ; >
-      au < crawling ; exists ; 1945 ; Journal of Speech Disorders Volume 10 ; 10 ; >
-      au < crawling ; exists ; 1946 ; Journal of Speech Disorders Volume 11 ; 11 ; >
-      au < crawling ; exists ; 1947 ; Journal of Speech Disorders Volume 12 ; 12 ; >
+      au < frozen ; exists ; 1936 ; Journal of Speech Disorders Volume 1 ; 1 ; >
+      au < frozen ; exists ; 1937 ; Journal of Speech Disorders Volume 2 ; 2 ; >
+      au < frozen ; exists ; 1938 ; Journal of Speech Disorders Volume 3 ; 3 ; >
+      au < frozen ; exists ; 1939 ; Journal of Speech Disorders Volume 4 ; 4 ; >
+      au < frozen ; exists ; 1940 ; Journal of Speech Disorders Volume 5 ; 5 ; >
+      au < frozen ; exists ; 1941 ; Journal of Speech Disorders Volume 6 ; 6 ; >
+      au < frozen ; exists ; 1942 ; Journal of Speech Disorders Volume 7 ; 7 ; >
+      au < frozen ; exists ; 1943 ; Journal of Speech Disorders Volume 8 ; 8 ; >
+      au < frozen ; exists ; 1944 ; Journal of Speech Disorders Volume 9 ; 9 ; >
+      au < frozen ; exists ; 1945 ; Journal of Speech Disorders Volume 10 ; 10 ; >
+      au < frozen ; exists ; 1946 ; Journal of Speech Disorders Volume 11 ; 11 ; >
+      au < frozen ; exists ; 1947 ; Journal of Speech Disorders Volume 12 ; 12 ; >
 
   }
 
@@ -151,35 +151,35 @@
       param[journal_id] = jshd
       param[base_url] = https://pubs.asha.org/
 
-      au < crawling ; exists ; 1948 ; Journal of Speech and Hearing Disorders Volume 13 ; 13 ; >
-      au < crawling ; exists ; 1949 ; Journal of Speech and Hearing Disorders Volume 14 ; 14 ; >
-      au < crawling ; exists ; 1950 ; Journal of Speech and Hearing Disorders Volume 15 ; 15 ; >
-      au < crawling ; exists ; 1951 ; Journal of Speech and Hearing Disorders Volume 16 ; 16 ; >
-      au < crawling ; exists ; 1952 ; Journal of Speech and Hearing Disorders Volume 17 ; 17 ; >
-      au < crawling ; exists ; 1953 ; Journal of Speech and Hearing Disorders Volume 18 ; 18 ; >
-      au < crawling ; exists ; 1954 ; Journal of Speech and Hearing Disorders Volume 19 ; 19 ; >
-      au < crawling ; exists ; 1955 ; Journal of Speech and Hearing Disorders Volume 20 ; 20 ; >
-      au < crawling ; exists ; 1956 ; Journal of Speech and Hearing Disorders Volume 21 ; 21 ; >
-      au < crawling ; exists ; 1957 ; Journal of Speech and Hearing Disorders Volume 22 ; 22 ; >
-      au < crawling ; exists ; 1958 ; Journal of Speech and Hearing Disorders Volume 23 ; 23 ; >
-      au < crawling ; exists ; 1959 ; Journal of Speech and Hearing Disorders Volume 24 ; 24 ; >
-      au < crawling ; exists ; 1960 ; Journal of Speech and Hearing Disorders Volume 25 ; 25 ; >
-      au < crawling ; exists ; 1961 ; Journal of Speech and Hearing Disorders Volume 26 ; 26 ; >
-      au < crawling ; exists ; 1962 ; Journal of Speech and Hearing Disorders Volume 27 ; 27 ; >
-      au < crawling ; exists ; 1963 ; Journal of Speech and Hearing Disorders Volume 28 ; 28 ; >
-      au < crawling ; exists ; 1964 ; Journal of Speech and Hearing Disorders Volume 29 ; 29 ; >
-      au < crawling ; exists ; 1965 ; Journal of Speech and Hearing Disorders Volume 30 ; 30 ; >
-      au < crawling ; exists ; 1966 ; Journal of Speech and Hearing Disorders Volume 31 ; 31 ; >
-      au < crawling ; exists ; 1967 ; Journal of Speech and Hearing Disorders Volume 32 ; 32 ; >
-      au < crawling ; exists ; 1968 ; Journal of Speech and Hearing Disorders Volume 33 ; 33 ; >
-      au < crawling ; exists ; 1969 ; Journal of Speech and Hearing Disorders Volume 34 ; 34 ; >
-      au < crawling ; exists ; 1970 ; Journal of Speech and Hearing Disorders Volume 35 ; 35 ; >
-      au < crawling ; exists ; 1971 ; Journal of Speech and Hearing Disorders Volume 36 ; 36 ; >
-      au < crawling ; exists ; 1972 ; Journal of Speech and Hearing Disorders Volume 37 ; 37 ; >
-      au < crawling ; exists ; 1973 ; Journal of Speech and Hearing Disorders Volume 38 ; 38 ; >
-      au < crawling ; exists ; 1974 ; Journal of Speech and Hearing Disorders Volume 39 ; 39 ; >
-      au < crawling ; exists ; 1975 ; Journal of Speech and Hearing Disorders Volume 40 ; 40 ; >
-      au < crawling ; exists ; 1976 ; Journal of Speech and Hearing Disorders Volume 41 ; 41 ; >
+      au < frozen ; exists ; 1948 ; Journal of Speech and Hearing Disorders Volume 13 ; 13 ; >
+      au < frozen ; exists ; 1949 ; Journal of Speech and Hearing Disorders Volume 14 ; 14 ; >
+      au < frozen ; exists ; 1950 ; Journal of Speech and Hearing Disorders Volume 15 ; 15 ; >
+      au < frozen ; exists ; 1951 ; Journal of Speech and Hearing Disorders Volume 16 ; 16 ; >
+      au < frozen ; exists ; 1952 ; Journal of Speech and Hearing Disorders Volume 17 ; 17 ; >
+      au < frozen ; exists ; 1953 ; Journal of Speech and Hearing Disorders Volume 18 ; 18 ; >
+      au < frozen ; exists ; 1954 ; Journal of Speech and Hearing Disorders Volume 19 ; 19 ; >
+      au < frozen ; exists ; 1955 ; Journal of Speech and Hearing Disorders Volume 20 ; 20 ; >
+      au < frozen ; exists ; 1956 ; Journal of Speech and Hearing Disorders Volume 21 ; 21 ; >
+      au < frozen ; exists ; 1957 ; Journal of Speech and Hearing Disorders Volume 22 ; 22 ; >
+      au < frozen ; exists ; 1958 ; Journal of Speech and Hearing Disorders Volume 23 ; 23 ; >
+      au < frozen ; exists ; 1959 ; Journal of Speech and Hearing Disorders Volume 24 ; 24 ; >
+      au < frozen ; exists ; 1960 ; Journal of Speech and Hearing Disorders Volume 25 ; 25 ; >
+      au < frozen ; exists ; 1961 ; Journal of Speech and Hearing Disorders Volume 26 ; 26 ; >
+      au < frozen ; exists ; 1962 ; Journal of Speech and Hearing Disorders Volume 27 ; 27 ; >
+      au < frozen ; exists ; 1963 ; Journal of Speech and Hearing Disorders Volume 28 ; 28 ; >
+      au < frozen ; exists ; 1964 ; Journal of Speech and Hearing Disorders Volume 29 ; 29 ; >
+      au < frozen ; exists ; 1965 ; Journal of Speech and Hearing Disorders Volume 30 ; 30 ; >
+      au < frozen ; exists ; 1966 ; Journal of Speech and Hearing Disorders Volume 31 ; 31 ; >
+      au < frozen ; exists ; 1967 ; Journal of Speech and Hearing Disorders Volume 32 ; 32 ; >
+      au < frozen ; exists ; 1968 ; Journal of Speech and Hearing Disorders Volume 33 ; 33 ; >
+      au < frozen ; exists ; 1969 ; Journal of Speech and Hearing Disorders Volume 34 ; 34 ; >
+      au < frozen ; exists ; 1970 ; Journal of Speech and Hearing Disorders Volume 35 ; 35 ; >
+      au < frozen ; exists ; 1971 ; Journal of Speech and Hearing Disorders Volume 36 ; 36 ; >
+      au < frozen ; exists ; 1972 ; Journal of Speech and Hearing Disorders Volume 37 ; 37 ; >
+      au < frozen ; exists ; 1973 ; Journal of Speech and Hearing Disorders Volume 38 ; 38 ; >
+      au < frozen ; exists ; 1974 ; Journal of Speech and Hearing Disorders Volume 39 ; 39 ; >
+      au < frozen ; exists ; 1975 ; Journal of Speech and Hearing Disorders Volume 40 ; 40 ; >
+      au < frozen ; exists ; 1976 ; Journal of Speech and Hearing Disorders Volume 41 ; 41 ; >
       au < frozen ; exists ; 1977 ; Journal of Speech and Hearing Disorders Volume 42 ; 42 ; >
       au < frozen ; exists ; 1978 ; Journal of Speech and Hearing Disorders Volume 43 ; 43 ; >
       au < frozen ; exists ; 1979 ; Journal of Speech and Hearing Disorders Volume 44 ; 44 ; >
@@ -209,27 +209,27 @@
       param[journal_id] = jshr
       param[base_url] = https://pubs.asha.org/
 
-      au < crawling ; exists ; 1958 ; Journal of Speech and Hearing Research Volume 1 ; 1 ; >
-      au < crawling ; exists ; 1959 ; Journal of Speech and Hearing Research Volume 2 ; 2 ; >
-      au < crawling ; exists ; 1960 ; Journal of Speech and Hearing Research Volume 3 ; 3 ; >
-      au < crawling ; exists ; 1961 ; Journal of Speech and Hearing Research Volume 4 ; 4 ; >
-      au < crawling ; exists ; 1962 ; Journal of Speech and Hearing Research Volume 5 ; 5 ; >
-      au < crawling ; exists ; 1963 ; Journal of Speech and Hearing Research Volume 6 ; 6 ; >
-      au < crawling ; exists ; 1964 ; Journal of Speech and Hearing Research Volume 7 ; 7 ; >
-      au < crawling ; exists ; 1965 ; Journal of Speech and Hearing Research Volume 8 ; 8 ; >
-      au < crawling ; exists ; 1966 ; Journal of Speech and Hearing Research Volume 9 ; 9 ; >
-      au < crawling ; exists ; 1967 ; Journal of Speech and Hearing Research Volume 10 ; 10 ; >
-      au < crawling ; exists ; 1968 ; Journal of Speech and Hearing Research Volume 11 ; 11 ; >
-      au < crawling ; exists ; 1969 ; Journal of Speech and Hearing Research Volume 12 ; 12 ; >
-      au < crawling ; exists ; 1970 ; Journal of Speech and Hearing Research Volume 13 ; 13 ; >
-      au < crawling ; exists ; 1971 ; Journal of Speech and Hearing Research Volume 14 ; 14 ; >
-      au < crawling ; exists ; 1972 ; Journal of Speech and Hearing Research Volume 15 ; 15 ; >
-      au < crawling ; exists ; 1973 ; Journal of Speech and Hearing Research Volume 16 ; 16 ; >
-      au < crawling ; exists ; 1974 ; Journal of Speech and Hearing Research Volume 17 ; 17 ; >
-      au < crawling ; exists ; 1975 ; Journal of Speech and Hearing Research Volume 18 ; 18 ; >
-      au < crawling ; exists ; 1976 ; Journal of Speech and Hearing Research Volume 19 ; 19 ; >
+      au < frozen ; exists ; 1958 ; Journal of Speech and Hearing Research Volume 1 ; 1 ; >
+      au < frozen ; exists ; 1959 ; Journal of Speech and Hearing Research Volume 2 ; 2 ; >
+      au < frozen ; exists ; 1960 ; Journal of Speech and Hearing Research Volume 3 ; 3 ; >
+      au < frozen ; exists ; 1961 ; Journal of Speech and Hearing Research Volume 4 ; 4 ; >
+      au < frozen ; exists ; 1962 ; Journal of Speech and Hearing Research Volume 5 ; 5 ; >
+      au < frozen ; exists ; 1963 ; Journal of Speech and Hearing Research Volume 6 ; 6 ; >
+      au < frozen ; exists ; 1964 ; Journal of Speech and Hearing Research Volume 7 ; 7 ; >
+      au < frozen ; exists ; 1965 ; Journal of Speech and Hearing Research Volume 8 ; 8 ; >
+      au < frozen ; exists ; 1966 ; Journal of Speech and Hearing Research Volume 9 ; 9 ; >
+      au < frozen ; exists ; 1967 ; Journal of Speech and Hearing Research Volume 10 ; 10 ; >
+      au < frozen ; exists ; 1968 ; Journal of Speech and Hearing Research Volume 11 ; 11 ; >
+      au < frozen ; exists ; 1969 ; Journal of Speech and Hearing Research Volume 12 ; 12 ; >
+      au < frozen ; exists ; 1970 ; Journal of Speech and Hearing Research Volume 13 ; 13 ; >
+      au < frozen ; exists ; 1971 ; Journal of Speech and Hearing Research Volume 14 ; 14 ; >
+      au < frozen ; exists ; 1972 ; Journal of Speech and Hearing Research Volume 15 ; 15 ; >
+      au < frozen ; exists ; 1973 ; Journal of Speech and Hearing Research Volume 16 ; 16 ; >
+      au < frozen ; exists ; 1974 ; Journal of Speech and Hearing Research Volume 17 ; 17 ; >
+      au < frozen ; exists ; 1975 ; Journal of Speech and Hearing Research Volume 18 ; 18 ; >
+      au < frozen ; exists ; 1976 ; Journal of Speech and Hearing Research Volume 19 ; 19 ; >
       au < frozen ; exists ; 1977 ; Journal of Speech and Hearing Research Volume 20 ; 20 ; >
-      au < crawling ; exists ; 1978 ; Journal of Speech and Hearing Research Volume 21 ; 21 ; >
+      au < frozen ; exists ; 1978 ; Journal of Speech and Hearing Research Volume 21 ; 21 ; >
 
   }
 
@@ -246,12 +246,12 @@
       param[journal_id] = jslhr
       param[base_url] = https://pubs.asha.org/
 
-      au < crawling ; exists ; 1979 ; Journal of Speech, Language, and Hearing Research Volume 22 ; 22 ; >
+      au < frozen ; exists ; 1979 ; Journal of Speech, Language, and Hearing Research Volume 22 ; 22 ; >
       au < frozen ; exists ; 1980 ; Journal of Speech, Language, and Hearing Research Volume 23 ; 23 ; >
       au < frozen ; exists ; 1981 ; Journal of Speech, Language, and Hearing Research Volume 24 ; 24 ; >
       au < frozen ; exists ; 1982 ; Journal of Speech, Language, and Hearing Research Volume 25 ; 25 ; >
       au < frozen ; exists ; 1983 ; Journal of Speech, Language, and Hearing Research Volume 26 ; 26 ; >
-      au < crawling ; exists ; 1984 ; Journal of Speech, Language, and Hearing Research Volume 27 ; 27 ; >
+      au < frozen ; exists ; 1984 ; Journal of Speech, Language, and Hearing Research Volume 27 ; 27 ; >
       au < frozen ; exists ; 1985 ; Journal of Speech, Language, and Hearing Research Volume 28 ; 28 ; >
       au < frozen ; exists ; 1986 ; Journal of Speech, Language, and Hearing Research Volume 29 ; 29 ; >
       au < frozen ; exists ; 1987 ; Journal of Speech, Language, and Hearing Research Volume 30 ; 30 ; >
@@ -307,26 +307,26 @@
       param[journal_id] = lshss
       param[base_url] = https://pubs.asha.org/
 
-      au < crawling ; exists ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1 ; >
-      au < crawling ; exists ; 1971 ; Language, Speech, and Hearing Services in Schools Volume 2 ; 2 ; >
-      au < crawling ; exists ; 1972 ; Language, Speech, and Hearing Services in Schools Volume 3 ; 3 ; >
-      au < crawling ; exists ; 1973 ; Language, Speech, and Hearing Services in Schools Volume 4 ; 4 ; >
-      au < crawling ; exists ; 1974 ; Language, Speech, and Hearing Services in Schools Volume 5 ; 5 ; >
-      au < crawling ; exists ; 1975 ; Language, Speech, and Hearing Services in Schools Volume 6 ; 6 ; >
-      au < crawling ; exists ; 1976 ; Language, Speech, and Hearing Services in Schools Volume 7 ; 7 ; >
+      au < frozen ; exists ; 1970 ; Language, Speech, and Hearing Services in Schools Volume 1 ; 1 ; >
+      au < frozen ; exists ; 1971 ; Language, Speech, and Hearing Services in Schools Volume 2 ; 2 ; >
+      au < frozen ; exists ; 1972 ; Language, Speech, and Hearing Services in Schools Volume 3 ; 3 ; >
+      au < frozen ; exists ; 1973 ; Language, Speech, and Hearing Services in Schools Volume 4 ; 4 ; >
+      au < frozen ; exists ; 1974 ; Language, Speech, and Hearing Services in Schools Volume 5 ; 5 ; >
+      au < frozen ; exists ; 1975 ; Language, Speech, and Hearing Services in Schools Volume 6 ; 6 ; >
+      au < frozen ; exists ; 1976 ; Language, Speech, and Hearing Services in Schools Volume 7 ; 7 ; >
       au < frozen ; exists ; 1977 ; Language, Speech, and Hearing Services in Schools Volume 8 ; 8 ; >
       au < frozen ; exists ; 1978 ; Language, Speech, and Hearing Services in Schools Volume 9 ; 9 ; >
       au < frozen ; exists ; 1979 ; Language, Speech, and Hearing Services in Schools Volume 10 ; 10 ; >
       au < frozen ; exists ; 1980 ; Language, Speech, and Hearing Services in Schools Volume 11 ; 11 ; >
-      au < crawling ; exists ; 1981 ; Language, Speech, and Hearing Services in Schools Volume 12 ; 12 ; >
+      au < frozen ; exists ; 1981 ; Language, Speech, and Hearing Services in Schools Volume 12 ; 12 ; >
       au < frozen ; exists ; 1982 ; Language, Speech, and Hearing Services in Schools Volume 13 ; 13 ; >
-      au < crawling ; exists ; 1983 ; Language, Speech, and Hearing Services in Schools Volume 14 ; 14 ; >
-      au < crawling ; exists ; 1984 ; Language, Speech, and Hearing Services in Schools Volume 15 ; 15 ; >
-      au < crawling ; exists ; 1985 ; Language, Speech, and Hearing Services in Schools Volume 16 ; 16 ; >
+      au < frozen ; exists ; 1983 ; Language, Speech, and Hearing Services in Schools Volume 14 ; 14 ; >
+      au < frozen ; exists ; 1984 ; Language, Speech, and Hearing Services in Schools Volume 15 ; 15 ; >
+      au < frozen ; exists ; 1985 ; Language, Speech, and Hearing Services in Schools Volume 16 ; 16 ; >
       au < frozen ; exists ; 1986 ; Language, Speech, and Hearing Services in Schools Volume 17 ; 17 ; >
       au < frozen ; exists ; 1987 ; Language, Speech, and Hearing Services in Schools Volume 18 ; 18 ; >
       au < frozen ; exists ; 1988 ; Language, Speech, and Hearing Services in Schools Volume 19 ; 19 ; >
-      au < crawling ; exists ; 1989 ; Language, Speech, and Hearing Services in Schools Volume 20 ; 20 ; >
+      au < frozen ; exists ; 1989 ; Language, Speech, and Hearing Services in Schools Volume 20 ; 20 ; >
       au < frozen ; exists ; 1990 ; Language, Speech, and Hearing Services in Schools Volume 21 ; 21 ; >
       au < frozen ; exists ; 1991 ; Language, Speech, and Hearing Services in Schools Volume 22 ; 22 ; >
       au < frozen ; exists ; 1992 ; Language, Speech, and Hearing Services in Schools Volume 23 ; 23 ; >

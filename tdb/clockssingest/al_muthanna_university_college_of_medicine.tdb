@@ -24,12 +24,12 @@
       param[journal_abbr] = journal
 
       au < ready ; exists ; 2014 ; Muthanna Medical Journal Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2015 ; Muthanna Medical Journal Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2015 ; Muthanna Medical Journal Volume 2 ; 2 ; >
       au < ready ; exists ; 2016 ; Muthanna Medical Journal Volume 3 ; 3 ; >
-      au < crawling ; exists ; 2017 ; Muthanna Medical Journal Volume 4 ; 4 ; >
+      au < frozen ; exists ; 2017 ; Muthanna Medical Journal Volume 4 ; 4 ; >
       au < ready ; exists ; 2018 ; Muthanna Medical Journal Volume 5 ; 5 ; >
       au < ready ; exists ; 2019 ; Muthanna Medical Journal Volume 6 ; 6 ; >
-      au < crawling ; exists ; 2020 ; Muthanna Medical Journal Volume 7 ; 7 ; >
+      au < frozen ; exists ; 2020 ; Muthanna Medical Journal Volume 7 ; 7 ; >
       au < ready ; exists ; 2021 ; Muthanna Medical Journal Volume 8 ; 8 ; >
       au < ready ; exists ; 2022 ; Muthanna Medical Journal Volume 9 ; 9 ; >
       au < ready ; exists ; 2023 ; Muthanna Medical Journal Volume 10 ; 10 ; >

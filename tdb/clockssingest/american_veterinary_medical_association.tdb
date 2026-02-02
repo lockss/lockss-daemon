@@ -24,7 +24,7 @@
       au < frozen ; exists ; 2000 ; American Journal of Veterinary Research Volume 61 ; 61 ; >
       au < frozen ; exists ; 2001 ; American Journal of Veterinary Research Volume 62 ; 62 ; >
       au < frozen ; exists ; 2002 ; American Journal of Veterinary Research Volume 63 ; 63 ; >
-      au < crawling ; exists ; 2003 ; American Journal of Veterinary Research Volume 64 ; 64 ; >
+      au < frozen ; exists ; 2003 ; American Journal of Veterinary Research Volume 64 ; 64 ; >
       au < ready ; exists ; 2004 ; American Journal of Veterinary Research Volume 65 ; 65 ; >
       au < ready ; exists ; 2005 ; American Journal of Veterinary Research Volume 66 ; 66 ; >
       au < ready ; exists ; 2006 ; American Journal of Veterinary Research Volume 67 ; 67 ; >
@@ -60,13 +60,13 @@
     >
       param[journal_id] = javma
 
-      au < crawling ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 216 ; 216 ; >
+      au < frozen ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 216 ; 216 ; >
       au < ready ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 217 ; 217 ; >
       au < frozen ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 218 ; 218 ; >
       au < ready ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 219 ; 219 ; >
       au < ready ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 220 ; 220 ; >
       au < frozen ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 221 ; 221 ; >
-      au < crawling ; exists ; 2003 ; Journal of the American Veterinary Medical Association Volume 222 ; 222 ; >
+      au < frozen ; exists ; 2003 ; Journal of the American Veterinary Medical Association Volume 222 ; 222 ; >
       au < ready ; exists ; 2003 ; Journal of the American Veterinary Medical Association Volume 223 ; 223 ; >
       au < frozen ; exists ; 2004 ; Journal of the American Veterinary Medical Association Volume 224 ; 224 ; >
       au < ready ; exists ; 2004 ; Journal of the American Veterinary Medical Association Volume 225 ; 225 ; >
@@ -76,8 +76,8 @@
       au < frozen ; exists ; 2006 ; Journal of the American Veterinary Medical Association Volume 229 ; 229 ; >
       au < ready ; exists ; 2007 ; Journal of the American Veterinary Medical Association Volume 230 ; 230 ; >
       au < ready ; exists ; 2007 ; Journal of the American Veterinary Medical Association Volume 231 ; 231 ; >
-      au < crawling ; exists ; 2008 ; Journal of the American Veterinary Medical Association Volume 232 ; 232 ; >
-      au < crawling ; exists ; 2008 ; Journal of the American Veterinary Medical Association Volume 233 ; 233 ; >
+      au < frozen ; exists ; 2008 ; Journal of the American Veterinary Medical Association Volume 232 ; 232 ; >
+      au < frozen ; exists ; 2008 ; Journal of the American Veterinary Medical Association Volume 233 ; 233 ; >
       au < ready ; exists ; 2009 ; Journal of the American Veterinary Medical Association Volume 234 ; 234 ; >
       au < frozen ; exists ; 2009 ; Journal of the American Veterinary Medical Association Volume 235 ; 235 ; >
       au < finished ; manifest ; 2010 ; Journal of the American Veterinary Medical Association Volume 236 ; 236 ; reingest5.clockss.org:8082 >
