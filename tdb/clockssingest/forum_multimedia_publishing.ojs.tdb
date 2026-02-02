@@ -25,11 +25,11 @@
       param[journal_id] = HSF
 
       au < crawling ; exists ; 2003 ; Heart Surgery Forum Volume 2003 ; 2003 ; 2003 ; >
-      au < testing ; exists ; 2004 ; Heart Surgery Forum Volume 2004 ; 2004 ; 2004 ; >
-      au < testing ; exists ; 2005 ; Heart Surgery Forum Volume 2005 ; 2005 ; 2005 ; >
-      au < testing ; exists ; 2006 ; Heart Surgery Forum Volume 2006 ; 2006 ; 2006 ; >
+      au < notReady ; exists ; 2004 ; Heart Surgery Forum Volume 2004 ; 2004 ; 2004 ; > #LXQUEUE-2135, non-printing characters
+      au < notReady ; exists ; 2005 ; Heart Surgery Forum Volume 2005 ; 2005 ; 2005 ; > #LXQUEUE-2135, non-printing characters
+      au < notReady ; exists ; 2006 ; Heart Surgery Forum Volume 2006 ; 2006 ; 2006 ; > #LXQUEUE-2135, non-printing characters
       au < ready ; exists ; 2007 ; Heart Surgery Forum Volume 2007 ; 2007 ; 2007 ; >
-      au < testing ; exists ; 2008 ; Heart Surgery Forum Volume 2008 ; 2008 ; 2008 ; >
+      au < notReady ; exists ; 2008 ; Heart Surgery Forum Volume 2008 ; 2008 ; 2008 ; > #LXQUEUE-2135, non-printing characters
       au < ready ; exists ; 2009 ; Heart Surgery Forum Volume 2009 ; 2009 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Heart Surgery Forum Volume 2010 ; 2010 ; 2010 ; >
       au < ready ; exists ; 2011 ; Heart Surgery Forum Volume 2011 ; 2011 ; 2011 ; >
