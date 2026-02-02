@@ -1,5 +1,6 @@
 package org.lockss.plugin.silverchair;
 
+import org.lockss.daemon.PluginException;
 import org.lockss.plugin.clockss.aiaa.TestAIAAXmlMetadataExtractor;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
@@ -7,7 +8,12 @@ import org.lockss.test.StringInputStream;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
+import java.nio.ByteBuffer;
+import org.apache.commons.io.FileUtils;
 
 public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestCase {
 
@@ -100,7 +106,7 @@ public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestC
             "<html lang=\"en\" class=\"no-js\">\n" +
             "<body data-sitename=\"journalofexperimentalmedicine\" class=\"off-canvas pg_ArticleSplitView pg_articlesplitview  \" theme-jem data-sitestyletemplate=\"Journal\" >\n" +
             "<a href=\"#skipNav\" class=\"skipnav\">Skip to Main Content</a>\n" +
-            "<input id=\"hdnSiteID\" name=\"hdnSiteID\" type=\"hidden\" value=\"1000003\" /><input id=\"hdnAdDelaySeconds\" name=\"hdnAdDelaySeconds\" type=\"hidden\" value=\"3000\" /><input id=\"hdnAdConfigurationTop\" name=\"hdnAdConfigurationTop\" type=\"hidden\" value=\"basic\" /><input id=\"hdnAdConfigurationRightRail\" name=\"hdnAdConfigurationRightRail\" type=\"hidden\" value=\"basic\" />\n" +
+            "\n" +
             "<div id=\"main\" class=\"splitview__wrapper ui-base\">\n" +
             "    <section class=\"splitview__main\">\n" +
             "        <a href=\"#\" id=\"skipNav\" tabindex=\"-1\"></a>\n" +
@@ -126,7 +132,7 @@ public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestC
             "                        <div class=\"article-body\">\n" +
             "                            <div id=\"ContentTab\" class=\"content active\">\n" +
             "                                <div class=\"widget-ArticleFulltext widget-instance-ArticleFulltext_SplitView\">\n" +
-            "                                    <input type=\"hidden\" name=\"js-hfArticleLinksReferencesDoiRegex\" id=\"js-hfArticleLinksReferencesDoiRegex\" value=\"\" />\n" +
+            "                                    \n" +
             "                                    <div class=\"module-widget\">\n" +
             "                                        <div class=\"widget-items\" data-widgetname=\"ArticleFulltext\">\n" +
             "                                            ArticleFulltext content is here\n" +
@@ -174,6 +180,7 @@ public class TestSilverchairCommonThemeHtmlHashFilterFactory extends LockssTestC
         inA = fact.createFilteredInputStream(mau, new StringInputStream(articlePage),
                 Constants.DEFAULT_ENCODING);
         a = StringUtil.fromInputStream(inA);
+
         //System.out.println(a);
         //System.out.println(articlePageFiltered);
         assertEquals(articlePageFiltered, a);
