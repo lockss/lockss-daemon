@@ -5962,7 +5962,7 @@
     param[journal_id] = eschf
     #move from Wiley in 2026
 
-    au < testing ; exists ; 2025 ; 2025 ; ESC Heart Failure Volume 11 ; 11 ; >
+    au < ready ; exists ; 2025 ; 2025 ; ESC Heart Failure Volume 11 ; 11 ; >
 
   }
 
@@ -8495,7 +8495,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; History Workshop Journal Volume 93-94 ; 93-94 ; >
     au < finished ; manifest ; 2023 ; 2023 ; History Workshop Journal Volume 95-96 ; 95-96 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; 2024 ; History Workshop Journal Volume 97-98 ; 97-98 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2025 ; 2025 ; History Workshop Journal Volume 99-100 ; 99-100 ; >
+    au < ready ; exists ; 2025 ; 2025 ; History Workshop Journal Volume 99-100 ; 99-100 ; >
 
   }
 
@@ -10322,7 +10322,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; International Journal of Public Opinion Research Volume 34 ; 34 ; >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Public Opinion Research Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; International Journal of Public Opinion Research Volume 36 ; 36 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Public Opinion Research Volume 37 ; 37 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Public Opinion Research Volume 37 ; 37 ; >
 
   }
 
@@ -13082,7 +13082,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Molecular Cell Biology Volume 14 ; 14 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Molecular Cell Biology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Molecular Cell Biology Volume 16 ; 16 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Molecular Cell Biology Volume 17 ; 17 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Molecular Cell Biology Volume 17 ; 17 ; >
 
   }
 
