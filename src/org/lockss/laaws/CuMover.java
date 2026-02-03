@@ -1,6 +1,6 @@
 /*
 
-  Copyright (c) 2021-2022 Board of Trustees of Leland Stanford Jr. University,
+  Copyright (c) 2021-2025 Board of Trustees of Leland Stanford Jr. University,
   all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,38 +62,6 @@ public class CuMover extends CuBase {
     super(auMover, task);
   }
 
-  // This causes an InputStream to be opened on each CU, which 1) may
-  // take some time, and 2) consumes a number of File Descriptors
-  // equal to the number of versions.  The time to open the files
-  // shouldn't be much of an issue as this is running concurrently
-  // with several other CU copies.  If the FD consumption is a
-  // problem, that would require a not-simple refactoring, or might be
-  // more easily dealt with by limiting the number of versions that
-  // are copied (with a config param?)
-  void buildCompatMap(CachedUrl cu) {
-    CachedUrl[] v1Versions = cu.getCuVersions();
-    for (CachedUrl cuVer : v1Versions) {
-      CIProperties verProps = cuVer.getProperties();
-      String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
-      String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
-      if (UrlUtil.isDirectoryRedirection(v1Url, nodeUrl)) {
-        // This was collected as "foo/", not the result of a redirect.
-        // Copy it only as "foo/"
-        V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, nodeUrl);
-        mappedCus.put(nodeUrl, v2cuVer);
-      } else if (UrlUtil.isDirectoryRedirection(v1Url, redirTo)) {
-        // This was redirected from "foo" to "foo/".  Copy as both
-        // "foo" and "foo/" to match what V2 would have collected
-        V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, redirTo);
-        mappedCus.put(v1Url, cuVer);
-        mappedCus.put(redirTo, v2cuVer);
-      } else {
-        // No slash - V2 name is the same
-        mappedCus.put(v1Url, cuVer);
-      }
-    }
-  }
-
   public void run() {
     if (isAbort()) {
       return;
@@ -101,14 +69,24 @@ public class CuMover extends CuBase {
     try {
       log.debug2("Starting CuMover: " + au + ", " + cu);
       buildCompatMap(cu);
+      if (mappedCus.isEmpty()) {
+        log.warning("No active versions of " + cu + " found.");
+      }
       for (String v2Url : mappedCus.keySet()) {
-        try {
-          List<Artifact> v2Arts = getV2ArtifactsForUrl(auid, v2Url);
-          moveCuVersions(v2Url, mappedCus.get(v2Url), v2Arts);
-        } catch (ApiException e) {
-          log.warning("Can't get list of existing V2 artifacts for " +
-                      v2Url + ", continuing.");
+        // Skip fetching the existing V2 artifects if we know no
+        // artifacts of this AU were present on target when operation
+        // started
+        Map<Integer,Artifact> v2Artifacts = Collections.emptyMap();
+        if (auMover.existsInV2(au.getAuId())) {
+          try {
+            v2Artifacts = getV2ArtifactsForUrl(auid, v2Url);
+          } catch (ApiException e) {
+            // XXX FATAL?
+            log.warning("Can't get list of existing V2 artifacts for " +
+                        v2Url + ", continuing.");
+          }
         }
+        moveCuVersions(v2Url, mappedCus.get(v2Url), v2Artifacts);
       }
 
       ctrs.add(CounterType.URLS_MOVED, mappedCus.keySet().size());
@@ -123,32 +101,29 @@ public class CuMover extends CuBase {
    * Move all versions of one v2 URL for a cachedUrl.
    *
    * @param v2Url       The uri for the current cached url.
-   * @param cachedUrl   The cachedUrl we which to move
+   * @param v1Versions  V1 CUs
    * @param v2Artifacts The list of artifacts which already match this cachedUrl uri.
    */
-  void moveCuVersions(String v2Url, List<CachedUrl> localVersions,
-                      List<Artifact> v2Artifacts) {
+  void moveCuVersions(String v2Url, List<CachedUrl> v1Versions,
+                      Map<Integer,Artifact> v2Artifacts) {
     log.debug3("moveCuVersions("+v2Url+")");
-    Queue<CachedUrl> cuQueue = new ArrayDeque<>();
-    int v2Count = v2Artifacts.size();
-    //If we have more v1 versions than the v2 repo - copy the missing items
-    int v1Count = localVersions.size();
-    if (v2Count > 0) {
-      log.debug3("v2 versions available=" + v2Count + " v1 versions available="
-                 + v1Count);
+    // Will be sorted in ascending version order (which isn't really
+    // necessary now that we're explicitly setting version numbers)
+    Deque<CachedUrl> cuQueue = new ArrayDeque<>();
+    // Queue all CU versions that don't already exist on target
+    for (CachedUrl v1Ver : v1Versions) {
+      Artifact v2Ver = v2Artifacts.get(v1Ver.getVersion());
+      if (v2Ver == null) {
+        cuQueue.addFirst(v1Ver);
+      } else {
+        AuUtil.safeRelease(v1Ver);
+      }
     }
-    // if the v2 repository has fewer versions than the v1 repository
-    // then move the missing versions or release the cu version.
-    int vers_to_move = v1Count - v2Count;
-    log.debug3("Queueing " + vers_to_move + "/" + v1Count + " versions...");
-    for (int vx = v1Count - 1; vx >= 0; vx--) {
-      CachedUrl ver = localVersions.get(vx);
-      if (vx < vers_to_move) {
-        cuQueue.add(ver);
-      }
-      else {
-        AuUtil.safeRelease(ver);
-      }
+    int onTarget = v1Versions.size() - cuQueue.size();
+    log.debug2("Queueing " + cuQueue.size() + " versions, " +
+                 onTarget + " already present on target");
+    if (log.isDebug3()) {
+      log.debug3("Copy queue: " + cuQueue);
     }
     while(!isAbort() && cuQueue.peek() != null) {
       moveNextCuVersion(auid, v2Url, cuQueue);
@@ -229,6 +204,8 @@ public class CuMover extends CuBase {
       props.put(ArtifactProperties.SERIALIZED_NAME_NAMESPACE,namespace);
       props.put(ArtifactProperties.SERIALIZED_NAME_AUID, auid);
       props.put(ArtifactProperties.SERIALIZED_NAME_URI, v2Url);
+      props.put(ArtifactProperties.SERIALIZED_NAME_VERSION,
+                Integer.toString(cu.getVersion()));
       props.put(ArtifactProperties.SERIALIZED_NAME_COLLECTION_DATE, String.valueOf(collectionDate));
       String prop_str = gson.toJson(props);
 
@@ -243,8 +220,8 @@ public class CuMover extends CuBase {
       }
 
       Artifact uncommitted =
-        artifactsApi.createArtifact(prop_str, dcu,
-                                    respHeadersToString(response));
+        artifactsApiLongCall.createArtifact(prop_str, dcu,
+                                            respHeadersToString(response));
       if (uncommitted != null) {
         if (log.isDebug3()) {
           log.debug3("createArtifact returned,  content bytes: " +
@@ -312,7 +289,4 @@ public class CuMover extends CuBase {
       ctrs.add(CounterType.BYTES_MOVED, dcu.getTotalBytesMoved());
     }
   }
-
-
-
 }

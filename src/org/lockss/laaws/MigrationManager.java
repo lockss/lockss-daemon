@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2025 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -516,8 +516,8 @@ public class MigrationManager extends BaseLockssDaemonManager
     CopyConfig("Copy Misc. Config", COPY_BIT),
     CopySystemSettings("Copy System Settings", COPY_BIT),
     CopyOnly("Copy Content", COPY_BIT),
-    CopyAndVerify("Copy and Verify Content", COPY_BIT | VERIFY_BIT),
-    VerifyOnly("Verify Content", VERIFY_BIT);
+    CopyAndVerify("Copy and Verify", COPY_BIT | VERIFY_BIT),
+    VerifyOnly("Verify Only", VERIFY_BIT);
 
     private String label;
     private int bits;

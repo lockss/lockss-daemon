@@ -82,8 +82,8 @@ public class PageInfo implements Serializable {
   public static final String SERIALIZED_NAME_TOTAL_COUNT = "totalCount";
   @SerializedName(SERIALIZED_NAME_TOTAL_COUNT) private Integer totalCount;
 
-  public static final String SERIALIZED_NAME_RESULTS_PER_PAGE = "resultsPerPage";
-  @SerializedName(SERIALIZED_NAME_RESULTS_PER_PAGE) private Integer resultsPerPage;
+  public static final String SERIALIZED_NAME_ITEMS_IN_PAGE = "itemsInPage";
+  @SerializedName(SERIALIZED_NAME_ITEMS_IN_PAGE) private Integer itemsInPage;
 
   public static final String SERIALIZED_NAME_CONTINUATION_TOKEN = "continuationToken";
   @SerializedName(SERIALIZED_NAME_CONTINUATION_TOKEN) private String continuationToken;
@@ -116,24 +116,24 @@ public class PageInfo implements Serializable {
     this.totalCount = totalCount;
   }
 
-  public PageInfo resultsPerPage(Integer resultsPerPage) {
-    this.resultsPerPage = resultsPerPage;
+  public PageInfo itemsInPage(Integer itemsInPage) {
+    this.itemsInPage = itemsInPage;
     return this;
   }
 
   /**
-   * The number of results per page
-   * @return resultsPerPage
+   * The number of results in the page
+   * @return itemsInPage
    **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "The number of results per page")
+  @ApiModelProperty(required = true, value = "The number of results in the page")
 
-  public Integer getResultsPerPage() {
-    return resultsPerPage;
+  public Integer getItemsInPage() {
+    return itemsInPage;
   }
 
-  public void setResultsPerPage(Integer resultsPerPage) {
-    this.resultsPerPage = resultsPerPage;
+  public void setItemsInPage(Integer itemsInPage) {
+    this.itemsInPage = itemsInPage;
   }
 
   public PageInfo continuationToken(String continuationToken) {
@@ -206,7 +206,7 @@ public class PageInfo implements Serializable {
     }
     PageInfo pageInfo = (PageInfo) o;
     return Objects.equals(this.totalCount, pageInfo.totalCount)
-        && Objects.equals(this.resultsPerPage, pageInfo.resultsPerPage)
+        && Objects.equals(this.itemsInPage, pageInfo.itemsInPage)
         && Objects.equals(this.continuationToken, pageInfo.continuationToken)
         && Objects.equals(this.curLink, pageInfo.curLink)
         && Objects.equals(this.nextLink, pageInfo.nextLink);
@@ -214,7 +214,7 @@ public class PageInfo implements Serializable {
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalCount, resultsPerPage, continuationToken, curLink, nextLink);
+    return Objects.hash(totalCount, itemsInPage, continuationToken, curLink, nextLink);
   }
 
   @Override
@@ -222,7 +222,7 @@ public class PageInfo implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageInfo {\n");
     sb.append("    totalCount: ").append(toIndentedString(totalCount)).append("\n");
-    sb.append("    resultsPerPage: ").append(toIndentedString(resultsPerPage)).append("\n");
+    sb.append("    itemsInPage: ").append(toIndentedString(itemsInPage)).append("\n");
     sb.append("    continuationToken: ").append(toIndentedString(continuationToken)).append("\n");
     sb.append("    curLink: ").append(toIndentedString(curLink)).append("\n");
     sb.append("    nextLink: ").append(toIndentedString(nextLink)).append("\n");
@@ -248,7 +248,7 @@ public class PageInfo implements Serializable {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("totalCount");
-    openapiFields.add("resultsPerPage");
+    openapiFields.add("itemsInPage");
     openapiFields.add("continuationToken");
     openapiFields.add("curLink");
     openapiFields.add("nextLink");
@@ -256,7 +256,7 @@ public class PageInfo implements Serializable {
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("totalCount");
-    openapiRequiredFields.add("resultsPerPage");
+    openapiRequiredFields.add("itemsInPage");
     openapiRequiredFields.add("continuationToken");
     openapiRequiredFields.add("curLink");
     openapiRequiredFields.add("nextLink");

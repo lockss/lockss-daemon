@@ -107,9 +107,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // properties set in the content properties, such as 'current.props'
   public static final String LOCKSS_VERSION_NUMBER =
     "org.lockss.version.number";
-  static final String NODE_WAS_INACTIVE_PROPERTY = "org.lockss.node.was.inactive";
+  public static final String NODE_WAS_INACTIVE_PROPERTY = "org.lockss.node.was.inactive";
   // properties set in the node properties
-  static final String INACTIVE_CONTENT_PROPERTY = "node.content.isInactive";
+  public static final String INACTIVE_CONTENT_PROPERTY = "node.content.isInactive";
   static final String DELETION_PROPERTY = "node.isDeleted";
 
   static final String TREE_SIZE_PROPERTY = "node.tree.size";

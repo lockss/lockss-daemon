@@ -435,7 +435,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param enable
    *          A boolean with the new enabled state of this manager.
    */
-  void setIndexingEnabled(boolean enable) {
+  public void setIndexingEnabled(boolean enable) {
     final String DEBUG_HEADER = "setIndexingEnabled(): ";
     log.debug(DEBUG_HEADER + "enabled: " + enable);
 

@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2021-2024 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2021-2025 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -128,7 +128,7 @@ public class V2AuMover {
    */
   public static final String PARAM_COPY_EXECUTOR_SPEC =
     EXEC_PREFIX + "copy.spec";
-  public static final String DEFAULT_COPY_EXECUTOR_SPEC = "1000;10";
+  public static final String DEFAULT_COPY_EXECUTOR_SPEC = "1000;20";
 
   /**
    * Verify task Executor.  Queue should be large to reduce waiting
@@ -144,7 +144,7 @@ public class V2AuMover {
    */
   public static final String PARAM_COPY_ITER_EXECUTOR_SPEC =
     EXEC_PREFIX + "copyIter.spec";
-  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "2;4";
+  public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "2;10";
 
   /**
    * Verify CU iterators run in this Executor.  Controls the number of
@@ -152,7 +152,7 @@ public class V2AuMover {
    */
   public static final String PARAM_VERIFY_ITER_EXECUTOR_SPEC =
     EXEC_PREFIX + "verifyIter.spec";
-  public static final String DEFAULT_VERIFY_ITER_EXECUTOR_SPEC = "10;2";
+  public static final String DEFAULT_VERIFY_ITER_EXECUTOR_SPEC = "10;16";
 
   /**
    * Index Executor.  Controls max simulataneous finishBulk operations
@@ -283,9 +283,11 @@ public class V2AuMover {
 
   /**
    * If true, partial copies will be done for AUs some of whose
-   * content already exists in the V2 repo.  If false, AUs having any
-   * content in V2 will be skipped.
-   */
+   * content already exists in the V2 repo.  If false, AUs having
+   * <i>any</i> content in V2 will be skipped.  <b>Setting this false
+   * risks missing some files if migration is reatarted after being
+   * interrupted
+   y*/
   public static final String PARAM_CHECK_MISSING_CONTENT =
     PREFIX + "check.missing.content";
   public static final boolean DEFAULT_CHECK_MISSING_CONTENT = true;
@@ -330,6 +332,11 @@ public class V2AuMover {
   private static final String STATUS_DONE_COPYING_CONFIG = "Finished copying config files";
   private static final String STATUS_COPYING_USER_ACCOUNTS = "Copying user accounts";
   private static final String STATUS_DONE_COPYING_SYSTEM_SETTINGS = "Finished copying system settings";
+
+  /** Minimum V2 version that has all the features needed by this
+   * version of the migrator */
+  private static final DaemonVersion MIN_V2_REPO_VERSION =
+    new DaemonVersion("2.0.90-beta2");
 
   public static final ThreadLocal<NumberFormat> TH_BIGINT_FMT =
     new ThreadLocal<NumberFormat>() {
@@ -673,6 +680,7 @@ public class V2AuMover {
       repoStatusApiClient =
           new org.lockss.laaws.api.rs.StatusApi(repoApiStatusClient);
       repoArtifactsApiClient = new StreamingArtifactsApi(repoClient);
+      repoArtifactsApiLongCallClient = new StreamingArtifactsApi(repoLongCallClient);
       repoAusApiClient = new org.lockss.laaws.api.rs.AusApi(repoClient);
       repoAusApiLongCallClient = new org.lockss.laaws.api.rs.AusApi(repoLongCallClient);
     }
@@ -696,6 +704,9 @@ public class V2AuMover {
     initPhaseMap();
     if (whichAus != null) {
       logReport("Moving: " + whichAus);
+    }
+    if (args.skippedAuids != null && !args.skippedAuids.isEmpty()) {
+      logReport("AUIDs requested but not found, skipped: " + args.skippedAuids);
     }
   }
 
@@ -759,10 +770,17 @@ public class V2AuMover {
     try {
       checkV2ServicesAvailable();
       openReportFiles(firstArgs); // must follow checkV2ServicesAvailable
-      if (!isDryRun() &&
+      DaemonVersion v2RepoVer = new DaemonVersion(getRepoSvcVersion());
+      if (v2RepoVer.compareTo(MIN_V2_REPO_VERSION) < 0) {
+        currentStatus = "Failed - target is running version " + v2RepoVer +
+          ", version " + MIN_V2_REPO_VERSION + " or higher is required.";
+        failed = true;
+      }
+      else if (!isDryRun() &&
           !migrationMgr.isTargetInMigrationMode(hostName, cfgUiPort,
                                                 userName, userPass)) {
         currentStatus = "Failed - target is not in migration mode";
+        failed = true;
       } else {
         for (Args args : argsLst) {
           try {
@@ -811,6 +829,9 @@ public class V2AuMover {
         if (args.au != null) {
           // If an AU was supplied, copy it
           moveOneAu(args);
+        } else if (args.aus != null) {
+          // If a list of AUs was supplied, copy them
+          moveAus(args);
         } else if (args.plugins != null) {
           // If a plugin was supplied, copy its AUs
           movePluginAus(args);
@@ -823,7 +844,7 @@ public class V2AuMover {
       default:
         log.error("Unknown OpType: " + args.opType + ", ignored");
       }
-    } catch (IOException e) {
+      } catch (IOException e) {
       log.error("Unexpected exception", e);
       currentStatus = e.getMessage();
     }
@@ -884,8 +905,8 @@ public class V2AuMover {
         continue;
       }
       // Filter by selection pattern if set
-      if (!(args.selPatterns == null || args.selPatterns.isEmpty() ||
-            isMatch(au.getAuId(), args.selPatterns))) {
+      if (args.selPatterns != null && !args.selPatterns.isEmpty() &&
+          !isMatch(au.getAuId(), args.selPatterns)) {
         continue;
       }
       if (isSkipFinished(args, au)) {
@@ -923,6 +944,18 @@ public class V2AuMover {
     moveQueuedAus();
   }
 
+  /** Move all AUs specified by uploaded AUIDs file */
+  public void moveAus(Args args) throws IOException {
+    startTotalTimers();
+    for (ArchivalUnit au : args.aus) {
+      auMoveQueue.add(au);
+    }
+    initAuRequest(args, "AUIDs from file: " + args.auidsFilename);
+    // get the aus known to the v2 repo
+    getV2Aus();
+    moveQueuedAus();
+  }
+
   private boolean isSkipFinished(Args args, ArchivalUnit au) {
     if (!args.isSkipFinished) return false;
     AuState auState = AuUtil.getAuState(au);
@@ -944,7 +977,9 @@ public class V2AuMover {
     ausLatch = new CountUpDownLatch(1, "AU");
     currentStatus = STATUS_RUNNING;
     totalAusToMove = auMoveQueue.size();
-    log.debug("Moving " + totalAusToMove + " aus.");
+    String msg = "Copying " + StringUtil.numberOfUnits(totalAusToMove, "AU");
+    log.debug(msg);
+    logReport(msg + "\n");
 
     for (ArchivalUnit au : auMoveQueue) {
       if (isAbort()) {
@@ -1105,7 +1140,7 @@ public class V2AuMover {
         setFailed(true);
       }
       break;
-      case CopyOnly:
+    case CopyOnly:
     case CopyAndVerify:
       if (existsInV2(au)) {
         if (!checkMissingContent) {
@@ -1130,7 +1165,8 @@ public class V2AuMover {
             auStat.setIsBulk(true); // remember to finishBulk for this AU
           } catch (UnsupportedOperationException e) {
             // Expected if not running against a V2 repo configured to
-            // use the hybrid Volatile/Solr index
+            // use DispatchingArtifactIndex wrapping a Volatile &
+            // normal index
             log.debug2("startBulk() not supported, continuing.");
           }
         }
@@ -1641,6 +1677,10 @@ public class V2AuMover {
     }
   }
 
+  public String getTargetHostName() {
+    return hostName;
+  }
+
   public String getCfgSvcVersion() {
     return cfgStatus.getLockssVersion();
   }
@@ -1839,6 +1879,10 @@ public class V2AuMover {
     return repoArtifactsApiClient;
   }
 
+  StreamingArtifactsApi getRepoArtifactsApiLongCallClient() {
+    return repoArtifactsApiLongCallClient;
+  }
+
   public String getNamespace() {
     return namespace;
   }
@@ -1876,9 +1920,13 @@ public class V2AuMover {
     OpType opType;
     boolean isCompareContent;
     boolean isSkipFinished;
+    ArchivalUnit au;
     List<Pattern> selPatterns;
     Collection<Plugin> plugins;
-    ArchivalUnit au;
+    Collection<ArchivalUnit> aus;
+    Collection<String> auids;
+    Collection<String> skippedAuids;
+    String auidsFilename;
 
     public Args setHost(String host) {
       this.host = host;
@@ -1916,6 +1964,29 @@ public class V2AuMover {
     }
     public Args setAu(ArchivalUnit au) {
       this.au = au;
+      return this;
+    }
+
+    public Args setAus(Collection<ArchivalUnit> aus) {
+      this.aus = aus;
+      return this;
+    }
+
+    public Args setAuids(Collection<String> auids) {
+      this.auids = auids;
+      return this;
+    }
+
+    public Args setAuidsFilename(String auidsFilename) {
+      this.auidsFilename = auidsFilename;
+      return this;
+    }
+
+    public Args addSkippedAuid(String auid) {
+      if (skippedAuids == null) {
+        skippedAuids = new ArrayList<>();
+      }
+      skippedAuids.add(auid);
       return this;
     }
 
@@ -2170,6 +2241,8 @@ public class V2AuMover {
     if (hasBeenStarted) {
       if (isFailed()) {
         return "Failed";
+      } else if (isRunning()) {
+        return "Starting";
       } else {
         return "Done";
       }
@@ -2564,7 +2637,6 @@ public class V2AuMover {
       totalTimers.addCounterStatus(sb, opType, ": ");
       currentStatus = sb.toString();
     }
-    running = false;
     if (writer != null) {
       writer.println("--------------------------------------------------");
       writer.println((isAbort() ? " Aborted" : "  Finished") + " with " +

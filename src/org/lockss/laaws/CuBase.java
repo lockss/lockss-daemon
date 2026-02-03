@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2021-2022 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2021-2025 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -56,6 +56,14 @@ public class CuBase extends Worker {
   protected String namespace;
   protected String v1Url;
   protected boolean isPartialContent;
+
+  /** Maps each actual publisher URL from which any of the versions of
+   * this CU was collected to a list of CUs (possibly
+   * V2CompatCachedUrl) having the proper name for that version in V2.
+   * Not strictly necessary now that we don't rely on the order of
+   * copies to establish the correct version ordering in V2, but makes
+   * the copy & check process simpler.
+   */
   protected ListValuedMap<String,CachedUrl> mappedCus =
     new ArrayListValuedHashMap<>();
 
@@ -70,35 +78,66 @@ public class CuBase extends Worker {
     namespace = auMover.getNamespace();
   }
 
+  private boolean isTrue(String boolstr) {
+    return Boolean.parseBoolean(boolstr);
+  }
+
   // This causes an InputStream to be opened on each CU, which 1) may
   // take some time, and 2) consumes a number of File Descriptors
   // equal to the number of versions.  The time to open the files
-  // shouldn't be much of an issue as this is running concurrently
-  // with several other CU copies.  If the FD consumption is a
-  // problem, that would require a not-simple refactoring, or might be
-  // more easily dealt with by limiting the number of versions that
-  // are copied (with a config param?)
+  // shouldn't be much of an issue in CuMover as they'll be needed
+  // soon for the actual copy.  There may be more impact on CuChecker
+  // as they'll be used only if it's doing full content compare, If
+  // the FD consumption is a problem, that would require a not-simple
+  // refactoring, or might be more easily dealt with by limiting the
+  // number of versions that are copied (with a config param?)
   void buildCompatMap(CachedUrl cu) {
     CachedUrl[] v1Versions = cu.getCuVersions();
-    for (CachedUrl cuVer : v1Versions) {
-      String v1Url = cuVer.getUrl();
-      CIProperties verProps = cuVer.getProperties();
-      String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
-      String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
-      if (UrlUtil.isDirectoryRedirection(v1Url, nodeUrl)) {
-        // This was collected as "foo/", not the result of a redirect.
-        // Copy it only as "foo/"
-        V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, nodeUrl);
-        mappedCus.put(nodeUrl, v2cuVer);
-      } else if (UrlUtil.isDirectoryRedirection(v1Url, redirTo)) {
-        // This was redirected from "foo" to "foo/".  Copy as both
-        // "foo" and "foo/" to match what V2 would have collected
-        V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, redirTo);
-        mappedCus.put(v1Url, cuVer);
-        mappedCus.put(redirTo, v2cuVer);
-      } else {
-        // No slash - V2 name is the same
-        mappedCus.put(v1Url, cuVer);
+    List<CachedUrl> toRelease = new ArrayList<>();
+    try {
+      for (CachedUrl cuVer : v1Versions) {
+        String v1Url = cuVer.getUrl();
+        // skip malformed, incomplete, inactive, etc. versions
+        if (cuVer.getVersion() == 0) {
+          log.warning("Skipping malformed version 0 of " + cu);
+          toRelease.add(cuVer);
+          continue;
+        }
+        try {
+          CIProperties verProps = cuVer.getProperties();
+          if (isTrue(verProps.getProperty(RepositoryNodeImpl.INACTIVE_CONTENT_PROPERTY))) {
+            log.warning("Skipping inactive version " + cuVer.getVersion() +
+                        " of " + cu);
+            toRelease.add(cuVer);
+            continue;
+          }
+
+          String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
+          String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
+          if (UrlUtil.isDirectoryRedirection(v1Url, nodeUrl)) {
+            // This was collected as "foo/", not the result of a redirect.
+            // Copy it only as "foo/"
+            V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, nodeUrl);
+            mappedCus.put(nodeUrl, v2cuVer);
+          } else if (UrlUtil.isDirectoryRedirection(v1Url, redirTo)) {
+            // This was redirected from "foo" to "foo/".  Copy as both
+            // "foo" and "foo/" to match what V2 would have collected
+            V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, redirTo);
+            mappedCus.put(v1Url, cuVer);
+            mappedCus.put(redirTo, v2cuVer);
+          } else {
+            // No slash - V2 name is the same
+            mappedCus.put(v1Url, cuVer);
+          }
+        } catch (Exception e) {
+          String err = "Couldn't read props for " + cuVer + ", skipping";
+          log.warning(err, e);
+          task.addError(err);
+        }
+      }
+    } finally {
+      for (CachedUrl relCu : toRelease) {
+        AuUtil.safeRelease(relCu);
       }
     }
   }
@@ -115,24 +154,28 @@ public class CuBase extends Worker {
     return sb.toString();
   }
 
-  protected List<Artifact> getV2ArtifactsForUrl(String auId,  String v2Url)
+  /** Find the exiting artifacts for this URL on the target, return
+   * them in a {version -> artifact} map */
+  protected Map<Integer,Artifact> getV2ArtifactsForUrl(String auId,
+                                                       String v2Url)
       throws ApiException {
-    ArtifactPageInfo pageInfo;
     String token = null;
-    List<Artifact> cuArtifacts = new ArrayList<>();
-    // if the v2 repo knows about this au we need to call getArtifacts.
-    if (auMover.existsInV2(auId)) {
-      isPartialContent = true;
-      log.debug2("Checking for unmoved content: " + v2Url);
-      do {
-        pageInfo = artifactsApi.getArtifacts(auId, namespace,
-            v2Url, null, "all", false, null, token);
-        cuArtifacts.addAll(pageInfo.getArtifacts());
-        token = pageInfo.getPageInfo().getContinuationToken();
-      } while (!isAbort() && !StringUtil.isNullString(token));
-      log.debug2("Found " + cuArtifacts.size() + " matches for " + v2Url);
-    }
-    return cuArtifacts;
+    Map<Integer,Artifact> verMap = new HashMap<>();
+    log.debug3("Fetching V2 Artifacts for " + v2Url);
+    do {
+      ArtifactPageInfo pageInfo =
+        artifactsApi.getArtifacts(auId, namespace, v2Url, null,
+                                  "all", false, null, token);
+      for (Artifact art : pageInfo.getArtifacts()) {
+        verMap.put(art.getVersion(), art);
+      }
+      token = pageInfo.getPageInfo().getContinuationToken();
+    } while (!isAbort() && !StringUtil.isNullString(token));
+    log.debug3("Found " + verMap.size() + " artifacts for " + v2Url);
+    return verMap;
   }
 
+  protected String urlVer(CachedUrl cu) {
+    return cu.getUrl() + ":" + cu.getVersion();
+  }
 }

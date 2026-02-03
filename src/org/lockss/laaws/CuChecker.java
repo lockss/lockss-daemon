@@ -1,3 +1,31 @@
+/*
+
+Copyright (c) 2021-2025 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
 package org.lockss.laaws;
 
 import static org.lockss.laaws.Counters.CounterType;
@@ -30,15 +58,23 @@ public class CuChecker extends CuBase {
     try {
       log.debug2("Starting CuChecker: " + au + ", " + cu);
       buildCompatMap(cu);
+      if (mappedCus.isEmpty()) {
+        log.debug2("No active versions of " + cu + " found.");
+      }
       for (String v2Url : mappedCus.keySet()) {
         try {
-          List<Artifact> v2Arts = getV2ArtifactsForUrl(auid, v2Url);
-          checkCuVersions(v2Url, mappedCus.get(v2Url), v2Arts);
+          checkCuVersions(v2Url, mappedCus.get(v2Url),
+                          getV2ArtifactsForUrl(auid, v2Url));
         } catch (ApiException e) {
           log.warning("Can't get list of V2 artifacts for " +
                       v2Url + ", continuing.");
+          String err = "Error fetching V2 artifacts for " + v2Url +
+            " in: " + au.getName();
+          log.warning(err, e);
+          task.addError(err + ": " + e.toString());
         }
       }
+      ctrs.add(CounterType.URLS_VERIFIED, mappedCus.keySet().size());
     } finally {
       for (CachedUrl cu : mappedCus.values()) {
         AuUtil.safeRelease(cu);
@@ -53,91 +89,51 @@ public class CuChecker extends CuBase {
    * @param cachedUrl   The cachedUrl we which to move
    * @param v2Artifacts The list of artifacts which already match this cachedUrl uri.
    */
-  void checkCuVersions(String v2Url, List<CachedUrl> localVersions,
-                       List<Artifact> v2Artifacts) {
+  void checkCuVersions(String v2Url, List<CachedUrl> v1Versions,
+                       Map<Integer,Artifact> v2Artifacts) {
     log.debug3("checkCuVersions("+v2Url+")");
+    List<Integer> missingVers = new ArrayList();
+    Set<Integer> remainingV2 = new TreeSet(v2Artifacts.keySet());
     int v2Count = v2Artifacts.size();
-    try {
-      int minCount = Math.min(localVersions.size(), v2Artifacts.size());
-      if (v2Artifacts.size() != localVersions.size()) {
-        String msg = "Mismatched version count for: " + v2Url +
-          ": V1: " + localVersions.size() +
-          ", V2: " + v2Artifacts.size() + ".";
-        if (auMover.isCompareEvenIfVersionMismatch() && minCount > 0) {
-          msg += "  Attempting to compare the most recent " + minCount +
-            " versions.";
-          addError(msg);
-          log.error(msg);
+    for (CachedUrl v1Ver : v1Versions) {
+      if (isAbort()) {
+        break;
+      }
+      int ver = v1Ver.getVersion();
+      try {
+        Artifact v2Art = v2Artifacts.get(ver);
+        if (v2Art != null) {
+          remainingV2.remove(v2Art.getVersion());
+          compareCuToArtifact(v1Ver, v2Art, ver);
         } else {
-          // stop processing cu
-          terminated = true;
+          missingVers.add(ver);
         }
+      } catch (Exception e) {
+        String err = "Error verifying: " + v2Url + " version " + ver +
+          " in: " + au.getName() +
+          ": " + e;
+        log.error(err, e);
+        task.addError(err);
+      } finally {
+        AuUtil.safeRelease(v1Ver);
       }
-      if (!terminated) {
-        log.debug2(v2Url + ":Checking Artifact...");
-        for (int ver = 0; ver < minCount; ver++) {
-          if (isAbort()) {
-            break;
-          }
-          CachedUrl v1Version = localVersions.get(ver);
-          Artifact v2Artifact = v2Artifacts.get(ver);
-          compareCuToArtifact(v1Version, v2Artifact, ver + 1);
-          ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
-        }
-        ctrs.incr(CounterType.URLS_VERIFIED);
-      }
+      ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
     }
-    catch (Exception ex) {
-      String err = "Error verifying: " + v2Url + "in: " + au.getName() +
-        ": " + ex;
-      log.error(err, ex);
+    if (!missingVers.isEmpty()) {
+      String err = "Error: Target is missing " +
+        StringUtil.numberOfUnits(missingVers.size(), "version") + ": " +
+        StringUtil.separatedString(missingVers, ", ") + " of " + v2Url +
+        " in: " + au.getName();
+      log.error(err);
       task.addError(err);
-      terminated = true;
     }
-  }
-
-  private String mdMismatchMsg(ArchivalUnit au, CachedUrl cu, int ver,
-                               String field, String v1, String v2) {
-    return "Metadata mismatch: " + au.getName() + ", url: " + cu.getUrl() + ", ver: " + ver + ", " + field  +
-      ": V1: " + v1 + ", V2: " + v2;
-  }
-
-  List<String> compareMetadata(ArchivalUnit au, CachedUrl cu, int ver,
-                               Artifact artifact, Long v1CollectionDate) {
-    List<String> res = new ArrayList<>();
-
-    long collDate = v1CollectionDate != null ? v1CollectionDate : -1;
-    if (artifact.getAuid().equals(au.getAuId()) &&
-        artifact.getNamespace().equals(namespace)  &&
-        (collDate == -1 || artifact.getCollectionDate().equals(collDate)) &&
-        artifact.getCommitted().equals(Boolean.TRUE)) {
-      return res;
+    if (!remainingV2.isEmpty()) {
+      String err = "Error: Target has versions that source doesn't have: " +
+        StringUtil.separatedString(remainingV2, ", ") + " of " + v2Url +
+        " in: " + au.getName();
+      log.error(err);
+      task.addError(err);
     }
-    if (!artifact.getAuid().equals(au.getAuId())) {
-      String msg = mdMismatchMsg(au, cu, ver, "AUID",
-                                 au.getAuId(), artifact.getAuid());
-      log.warning(msg);
-      res.add(msg);
-    }
-    if (!artifact.getNamespace().equals(namespace)) {
-      String msg = mdMismatchMsg(au, cu, ver, "Namespace",
-                                 namespace, artifact.getNamespace());
-      log.warning(msg);
-      res.add(msg);
-    }
-    if (!artifact.getCollectionDate().equals(collDate)) {
-      String msg = mdMismatchMsg(au, cu, ver, "Collection date",
-                                 Long.toString(collDate),
-                                 Long.toString(artifact.getCollectionDate()));
-      log.warning(msg);
-      res.add(msg);
-    }
-    if (!artifact.getCommitted()) {
-      String msg = mdMismatchMsg(au, cu, ver, "Committed", "true", "false");
-      log.warning(msg);
-      res.add(msg);
-    }
-    return res;
   }
 
   void compareCuToArtifact(CachedUrl cu, Artifact artifact, int ver) {
@@ -158,14 +154,13 @@ public class CuChecker extends CuBase {
         }
       }
       else {
-        log.debug3(cu.getUrl() + ": metadata matches.");
+        log.debug3(urlVer(cu) + ": metadata matches.");
       }
       if (mderrs.isEmpty() && auMover.isCompareBytes()) {
-        log.debug3("Fetching content for byte compare");
+        log.debug3("Fetching content for byte compare: " + urlVer(cu));
         artifactData = artifactsApi.getMultipartArtifact(artifact.getUuid(),namespace,"ALWAYS");
-        log.debug3("Successfully fetched Artifact Data");
         isMatch = IOUtils.contentEquals(artifactData.getInputStream(),
-            cu.getUncompressedInputStream());
+                                        cu.getUncompressedInputStream());
         if (!isMatch) {
           String err = "Artifact content mistmatch between V1 and V2: " +
             cu.getUrl() + " Ver: " + ver + ": " + " in: " + au;
@@ -177,7 +172,7 @@ public class CuChecker extends CuBase {
         }
         // Ensure each V1 header has a V2 counterpart
         HttpResponse v2RespHdr = artifactData.getResponseHeader();
-        if (log.isDebug2()) log.debug2("ad.getResponseHeader(): " + v2RespHdr);
+        if (log.isDebug3()) log.debug3("ad.getResponseHeader(): " + v2RespHdr);
         Properties cuProps = cu.getProperties();
         for (Map.Entry ent : cuProps.entrySet()) {
           String v1Key = (String)ent.getKey();
@@ -225,32 +220,79 @@ public class CuChecker extends CuBase {
     }
   }
 
+  List<String> compareMetadata(ArchivalUnit au, CachedUrl cu, int ver,
+                               Artifact artifact, Long v1CollectionDate) {
+    List<String> res = new ArrayList<>();
+
+    long collDate = v1CollectionDate != null ? v1CollectionDate : -1;
+    if (artifact.getAuid().equals(au.getAuId()) &&
+        artifact.getNamespace().equals(namespace)  &&
+        (collDate == -1 || artifact.getCollectionDate().equals(collDate)) &&
+        artifact.getCommitted().equals(Boolean.TRUE)) {
+      return res;
+    }
+    if (!artifact.getAuid().equals(au.getAuId())) {
+      String msg = mdMismatchMsg(au, cu, ver, "AUID",
+                                 au.getAuId(), artifact.getAuid());
+      log.warning(msg);
+      res.add(msg);
+    }
+    if (!artifact.getNamespace().equals(namespace)) {
+      String msg = mdMismatchMsg(au, cu, ver, "Namespace",
+                                 namespace, artifact.getNamespace());
+      log.warning(msg);
+      res.add(msg);
+    }
+    if (!artifact.getCollectionDate().equals(collDate)) {
+      String msg = mdMismatchMsg(au, cu, ver, "Collection date",
+                                 Long.toString(collDate),
+                                 Long.toString(artifact.getCollectionDate()));
+      log.warning(msg);
+      res.add(msg);
+    }
+    if (!artifact.getCommitted()) {
+      String msg = mdMismatchMsg(au, cu, ver, "Committed", "true", "false");
+      log.warning(msg);
+      res.add(msg);
+    }
+    return res;
+  }
+
+  private String mdMismatchMsg(ArchivalUnit au, CachedUrl cu, int ver,
+                               String field, String v1, String v2) {
+    return "Metadata mismatch: " + au.getName() + ", url: " + cu.getUrl() + ", ver: " + ver + ", " + field  +
+      ": V1: " + v1 + ", V2: " + v2;
+  }
+
   /**
-   * Retrieve all the artifacts for an AU
-   * @param au The ArchivalUnit to retrieve
-   * @return a list of Artifacts.
+   * Retrieve all artifact versions for a URL in an AU
+   * @param au
+   * @param url
+   * @return Map of version -> artifact
    */
-  List<Artifact>  getAllCuArtifacts(ArchivalUnit au, String url) {
-    List<Artifact> auArtifacts = new ArrayList<>();
-    ArtifactPageInfo pageInfo;
+  Map<Integer,Artifact>  getArtifactVersions(ArchivalUnit au, String url) {
+    Map<Integer,Artifact> artMap = new HashMap<>();
     String token = null;
     do {
       try {
-        pageInfo = artifactsApi.getArtifacts( au.getAuId(),namespace,
-            url, null, "all", false, null, token);
-        auArtifacts.addAll(pageInfo.getArtifacts());
+        ArtifactPageInfo pageInfo =
+          artifactsApi.getArtifacts(au.getAuId(), namespace, url,
+                                    null, "all", false, null, token);
+        for (Artifact art : pageInfo.getArtifacts()) {
+          artMap.put(art.getVersion(), art);
+        }
         token = pageInfo.getPageInfo().getContinuationToken();
-      }
-      catch (ApiException apie) {
-        String msg = apie.getCode() == 0 ? apie.getMessage()
-            : apie.getCode() + " - " + apie.getMessage();
-        String err = "Error occurred while retrieving artifacts for au: " + msg;
+      } catch (ApiException e) {
+        String msg = e.getCode() == 0
+          ? e.getMessage() : e.getCode() + " - " + e.getMessage();
+        String err = "Error retrieving from target artifacts for: " + url +
+          " in " + au + ": " + msg;
         task.addError(err);
-        log.error(err, apie);
+        log.error(err, e);
         terminated = true;
       }
     } while (!terminated && !StringUtil.isNullString(token));
-    return auArtifacts;
+    return artMap;
   }
 
 }
