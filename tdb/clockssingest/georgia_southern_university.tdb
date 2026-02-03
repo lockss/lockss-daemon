@@ -300,7 +300,7 @@
       param[base_url] = https://digitalcommons.georgiasouthern.edu/
       param[journal_abbr] = gamte-proceedings
 
-      au < ready ; exists ; 2007 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2007 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 1 ; 1 ; >
       au < ready ; exists ; 2008 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 2 ; 2 ; >
       au < frozen ; exists ; 2009 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 3 ; 3 ; >
       au < finished ; finished ; 2020 ; Proceedings of the Annual Meeting of the Georgia Association of Mathematics Teacher Educators Volume 4 ; 4 ; reingest4.clockss.org:8082 >

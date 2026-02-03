@@ -21,7 +21,7 @@
       param[base_url] = https://jeps.squ.edu.om/
       param[journal_abbr] = journal
 
-      au < ready ; exists ; 2007 ; Journal of Educational and Psychological Studies Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2007 ; Journal of Educational and Psychological Studies Volume 1 ; 1 ; >
       au < ready ; exists ; 2008 ; Journal of Educational and Psychological Studies Volume 2 ; 2 ; >
       au < ready ; exists ; 2009 ; Journal of Educational and Psychological Studies Volume 3 ; 3 ; >
       au < frozen ; exists ; 2010 ; Journal of Educational and Psychological Studies Volume 4 ; 4 ; >
@@ -35,7 +35,7 @@
       au < ready ; exists ; 2018 ; Journal of Educational and Psychological Studies Volume 12 ; 12 ; >
       au < frozen ; exists ; 2019 ; Journal of Educational and Psychological Studies Volume 13 ; 13 ; >
       au < crawling ; exists ; 2020 ; Journal of Educational and Psychological Studies Volume 14 ; 14 ; >
-      au < ready ; exists ; 2021 ; Journal of Educational and Psychological Studies Volume 15 ; 15 ; >
+      au < crawling ; exists ; 2021 ; Journal of Educational and Psychological Studies Volume 15 ; 15 ; >
       au < ready ; exists ; 2022 ; Journal of Educational and Psychological Studies Volume 16 ; 16 ; >
       au < crawling ; exists ; 2023 ; Journal of Educational and Psychological Studies Volume 17 ; 17 ; >
       au < crawling ; exists ; 2024 ; Journal of Educational and Psychological Studies Volume 18 ; 18 ; >
@@ -113,7 +113,7 @@
       au < ready ; exists ; 2006 ; The Journal of Engineering Research Volume 3 ; 3 ; >
       au < ready ; exists ; 2007 ; The Journal of Engineering Research Volume 4 ; 4 ; >
       au < ready ; exists ; 2008 ; The Journal of Engineering Research Volume 5 ; 5 ; >
-      au < ready ; exists ; 2009 ; The Journal of Engineering Research Volume 6 ; 6 ; >
+      au < crawling ; exists ; 2009 ; The Journal of Engineering Research Volume 6 ; 6 ; >
       au < crawling ; exists ; 2010 ; The Journal of Engineering Research Volume 7 ; 7 ; >
       au < frozen ; exists ; 2011 ; The Journal of Engineering Research Volume 8 ; 8 ; >
       au < ready ; exists ; 2012 ; The Journal of Engineering Research Volume 9 ; 9 ; >

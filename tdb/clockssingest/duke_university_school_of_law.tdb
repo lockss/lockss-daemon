@@ -194,7 +194,7 @@
 
     param[journal_abbr] = djclpp
   
-    au < ready ; exists ; 2006 ; Duke Journal of Constitutional Law and Public Policy Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
+    au < crawling ; exists ; 2006 ; Duke Journal of Constitutional Law and Public Policy Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; manifest ; 2007 ; Duke Journal of Constitutional Law and Public Policy Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; Duke Journal of Constitutional Law and Public Policy Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Duke Journal of Constitutional Law and Public Policy Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
