@@ -23,7 +23,7 @@
       param[journal_abbr] = journal
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-      au < manifest ; exists ; 2025 ; The Warith Scientific Journal of Engineering and Technology (WSJET) Volume 1 ; 1 ; >
+      au < testing ; exists ; 2025 ; The Warith Scientific Journal of Engineering and Technology (WSJET) Volume 1 ; 1 ; >
 
   }
 

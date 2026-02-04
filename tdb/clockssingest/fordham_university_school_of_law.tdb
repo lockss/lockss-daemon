@@ -166,7 +166,7 @@
       au < finished ; manifest ; 2022 ; Fordham International Law Journal Volume 46 ; 46 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2023 ; Fordham International Law Journal Volume 47 ; 47 ; >
       au < deepCrawl ; exists ; 2024 ; Fordham International Law Journal Volume 48 ; 48 ; >
-      au < manifest ; exists ; 2025 ; Fordham International Law Journal Volume 49 ; 49 ; >
+      au < testing ; exists ; 2025 ; Fordham International Law Journal Volume 49 ; 49 ; >
 
   }
 
@@ -225,43 +225,43 @@
       param[base_url] = https://ir.lawnet.fordham.edu/
       param[journal_abbr] = flr
 
-      au < manifest ; exists ; 1914 ; Fordham Law Review Volume 1 ; 1 ; >
-      au < manifest ; exists ; 1915-1916 ; Fordham Law Review Volume 2 ; 2 ; >
-      au < manifest ; exists ; 1916-1917 ; Fordham Law Review Volume 3 ; 3 ; >
-      au < manifest ; exists ; 1935 ; Fordham Law Review Volume 4 ; 4 ; >
-      au < manifest ; exists ; 1936 ; Fordham Law Review Volume 5 ; 5 ; >
-      au < manifest ; exists ; 1937 ; Fordham Law Review Volume 6 ; 6 ; >
-      au < manifest ; exists ; 1938 ; Fordham Law Review Volume 7 ; 7 ; >
-      au < manifest ; exists ; 1939 ; Fordham Law Review Volume 8 ; 8 ; >
-      au < manifest ; exists ; 1940 ; Fordham Law Review Volume 9 ; 9 ; >
-      au < manifest ; exists ; 1941 ; Fordham Law Review Volume 10 ; 10 ; >
-      au < manifest ; exists ; 1942 ; Fordham Law Review Volume 11 ; 11 ; >
-      au < manifest ; exists ; 1943 ; Fordham Law Review Volume 12 ; 12 ; >
-      au < manifest ; exists ; 1944 ; Fordham Law Review Volume 13 ; 13 ; >
-      au < manifest ; exists ; 1945 ; Fordham Law Review Volume 14 ; 14 ; >
-      au < manifest ; exists ; 1946 ; Fordham Law Review Volume 15 ; 15 ; >
-      au < manifest ; exists ; 1947 ; Fordham Law Review Volume 16 ; 16 ; >
-      au < manifest ; exists ; 1948 ; Fordham Law Review Volume 17 ; 17 ; >
-      au < manifest ; exists ; 1949 ; Fordham Law Review Volume 18 ; 18 ; >
-      au < manifest ; exists ; 1950 ; Fordham Law Review Volume 19 ; 19 ; >
-      au < manifest ; exists ; 1951 ; Fordham Law Review Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1952 ; Fordham Law Review Volume 21 ; 21 ; >
-      au < manifest ; exists ; 1953 ; Fordham Law Review Volume 22 ; 22 ; >
-      au < manifest ; exists ; 1954 ; Fordham Law Review Volume 23 ; 23 ; >
-      au < manifest ; exists ; 1955 ; Fordham Law Review Volume 24 ; 24 ; >
-      au < manifest ; exists ; 1956 ; Fordham Law Review Volume 25 ; 25 ; >
-      au < manifest ; exists ; 1957 ; Fordham Law Review Volume 26 ; 26 ; >
-      au < manifest ; exists ; 1958 ; Fordham Law Review Volume 27 ; 27 ; >
-      au < manifest ; exists ; 1959 ; Fordham Law Review Volume 28 ; 28 ; >
-      au < manifest ; exists ; 1960-1961 ; Fordham Law Review Volume 29 ; 29 ; >
-      au < manifest ; exists ; 1961-1962 ; Fordham Law Review Volume 30 ; 30 ; >
-      au < manifest ; exists ; 1962-1963 ; Fordham Law Review Volume 31 ; 31 ; >
-      au < manifest ; exists ; 1963-1964 ; Fordham Law Review Volume 32 ; 32 ; >
-      au < manifest ; exists ; 1964-1965 ; Fordham Law Review Volume 33 ; 33 ; >
-      au < manifest ; exists ; 1965-1966 ; Fordham Law Review Volume 34 ; 34 ; >
-      au < manifest ; exists ; 1966-1967 ; Fordham Law Review Volume 35 ; 35 ; >
-      au < manifest ; exists ; 1967-1968 ; Fordham Law Review Volume 36 ; 36 ; >
-      au < manifest ; exists ; 1968-1969 ; Fordham Law Review Volume 37 ; 37 ; >
+      au < testing ; exists ; 1914 ; Fordham Law Review Volume 1 ; 1 ; >
+      au < testing ; exists ; 1915-1916 ; Fordham Law Review Volume 2 ; 2 ; >
+      au < testing ; exists ; 1916-1917 ; Fordham Law Review Volume 3 ; 3 ; >
+      au < testing ; exists ; 1935 ; Fordham Law Review Volume 4 ; 4 ; >
+      au < testing ; exists ; 1936 ; Fordham Law Review Volume 5 ; 5 ; >
+      au < testing ; exists ; 1937 ; Fordham Law Review Volume 6 ; 6 ; >
+      au < testing ; exists ; 1938 ; Fordham Law Review Volume 7 ; 7 ; >
+      au < testing ; exists ; 1939 ; Fordham Law Review Volume 8 ; 8 ; >
+      au < testing ; exists ; 1940 ; Fordham Law Review Volume 9 ; 9 ; >
+      au < testing ; exists ; 1941 ; Fordham Law Review Volume 10 ; 10 ; >
+      au < testing ; exists ; 1942 ; Fordham Law Review Volume 11 ; 11 ; >
+      au < testing ; exists ; 1943 ; Fordham Law Review Volume 12 ; 12 ; >
+      au < testing ; exists ; 1944 ; Fordham Law Review Volume 13 ; 13 ; >
+      au < testing ; exists ; 1945 ; Fordham Law Review Volume 14 ; 14 ; >
+      au < testing ; exists ; 1946 ; Fordham Law Review Volume 15 ; 15 ; >
+      au < testing ; exists ; 1947 ; Fordham Law Review Volume 16 ; 16 ; >
+      au < testing ; exists ; 1948 ; Fordham Law Review Volume 17 ; 17 ; >
+      au < testing ; exists ; 1949 ; Fordham Law Review Volume 18 ; 18 ; >
+      au < testing ; exists ; 1950 ; Fordham Law Review Volume 19 ; 19 ; >
+      au < testing ; exists ; 1951 ; Fordham Law Review Volume 20 ; 20 ; >
+      au < testing ; exists ; 1952 ; Fordham Law Review Volume 21 ; 21 ; >
+      au < testing ; exists ; 1953 ; Fordham Law Review Volume 22 ; 22 ; >
+      au < testing ; exists ; 1954 ; Fordham Law Review Volume 23 ; 23 ; >
+      au < testing ; exists ; 1955 ; Fordham Law Review Volume 24 ; 24 ; >
+      au < testing ; exists ; 1956 ; Fordham Law Review Volume 25 ; 25 ; >
+      au < testing ; exists ; 1957 ; Fordham Law Review Volume 26 ; 26 ; >
+      au < testing ; exists ; 1958 ; Fordham Law Review Volume 27 ; 27 ; >
+      au < testing ; exists ; 1959 ; Fordham Law Review Volume 28 ; 28 ; >
+      au < testing ; exists ; 1960-1961 ; Fordham Law Review Volume 29 ; 29 ; >
+      au < testing ; exists ; 1961-1962 ; Fordham Law Review Volume 30 ; 30 ; >
+      au < testing ; exists ; 1962-1963 ; Fordham Law Review Volume 31 ; 31 ; >
+      au < testing ; exists ; 1963-1964 ; Fordham Law Review Volume 32 ; 32 ; >
+      au < testing ; exists ; 1964-1965 ; Fordham Law Review Volume 33 ; 33 ; >
+      au < testing ; exists ; 1965-1966 ; Fordham Law Review Volume 34 ; 34 ; >
+      au < testing ; exists ; 1966-1967 ; Fordham Law Review Volume 35 ; 35 ; >
+      au < testing ; exists ; 1967-1968 ; Fordham Law Review Volume 36 ; 36 ; >
+      au < testing ; exists ; 1968-1969 ; Fordham Law Review Volume 37 ; 37 ; >
       au < ready ; exists ; 1969-1970 ; Fordham Law Review Volume 38 ; 38 ; >
       au < ready ; exists ; 1970-1971 ; Fordham Law Review Volume 39 ; 39 ; >
       au < frozen ; exists ; 1971-1972 ; Fordham Law Review Volume 40 ; 40 ; >
