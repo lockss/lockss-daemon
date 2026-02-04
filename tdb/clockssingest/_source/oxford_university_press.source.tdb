@@ -3,8 +3,8 @@
   publisher <
     name = Oxford University Press ;
     info[contract] = 2009 ;
-    info[tester] = S ;
-    info[platform] = Source. BLOCKED waiting for publisher
+    info[tester] = 4 ;
+    info[platform] = Source. 
   >
   hidden[proxy] = DIRECT
   implicit < status ; status2 ; year ; name ; param[directory] >
@@ -23,17 +23,17 @@
 
   }
 
-#  {
-#
-#    title <
-#      name = Oxford University Press Journal Source Content
-#    >
-#
-#      plugin = needs.plugin
-#      param[base_url] = https://clockss-test.lockss.org/sourcefiles/oupjournals-released/
-#
-#      au < expected ; exists ; 2026 ; Oxford University Press Journal Source Content 2026 ; 2026 >
-#
-#  }
+  {
+
+    title <
+      name = Oxford University Press Journal Source Content
+    >
+
+      plugin = org.lockss.plugin.clockss.oxforduniversitypress.ClockssOxfordUniversityPressJournalsSourcePlugin
+      param[base_url] = https://clockss-test.lockss.org/sourcefiles/oup-released/
+
+      au < testing ; exists ; 2026 ; Oxford University Press Journal Source Content 2026_01 ; 2026_01 >
+
+  }
 
 }
