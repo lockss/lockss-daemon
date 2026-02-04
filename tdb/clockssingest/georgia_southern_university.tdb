@@ -213,7 +213,7 @@
       param[journal_abbr] = jamt
 
       au < ready ; exists ; 2010 ; Journal of Applied Marketing Theory Volume 1 ; 1 ; >
-      au < ready ; exists ; 2011 ; Journal of Applied Marketing Theory Volume 2 ; 2 ; >
+      au < crawling ; exists ; 2011 ; Journal of Applied Marketing Theory Volume 2 ; 2 ; >
       au < frozen ; exists ; 2012 ; Journal of Applied Marketing Theory Volume 3 ; 3 ; >
       au < frozen ; exists ; 2013 ; Journal of Applied Marketing Theory Volume 4 ; 4 ; >
       au < frozen ; exists ; 2014 ; Journal of Applied Marketing Theory Volume 5 ; 5 ; >
