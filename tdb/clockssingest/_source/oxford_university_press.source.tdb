@@ -3,7 +3,7 @@
   publisher <
     name = Oxford University Press ;
     info[contract] = 2009 ;
-    info[tester] = 4 ;
+    info[tester] = 8 ;
     info[platform] = Source. 
   >
   hidden[proxy] = DIRECT
@@ -32,7 +32,7 @@
       plugin = org.lockss.plugin.clockss.oxforduniversitypress.ClockssOxfordUniversityPressJournalsSourcePlugin
       param[base_url] = https://clockss-test.lockss.org/sourcefiles/oup-released/
 
-      au < testing ; exists ; 2026 ; Oxford University Press Journal Source Content 2026_01 ; 2026_01 >
+      au < ready ; exists ; 2026 ; Oxford University Press Journal Source Content 2026_01 ; 2026_01 >
 
   }
 
