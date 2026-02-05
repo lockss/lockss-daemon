@@ -87,7 +87,7 @@
       au < ready ; exists ; 1995 ; Biochemistry and Cell Biology Volume 73 ; 73 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1996 ; Biochemistry and Cell Biology Volume 74 ; 74 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 1997 ; Biochemistry and Cell Biology Volume 75 ; 75 ; https://cdnsciencepub.com/ ; >
-      au < ready ; exists ; 1998 ; Biochemistry and Cell Biology Volume 76 ; 76 ; https://cdnsciencepub.com/ ; >
+      au < crawling ; exists ; 1998 ; Biochemistry and Cell Biology Volume 76 ; 76 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1999 ; Biochemistry and Cell Biology Volume 77 ; 77 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 2000 ; Biochemistry and Cell Biology Volume 78 ; 78 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 2001 ; Biochemistry and Cell Biology Volume 79 ; 79 ; https://cdnsciencepub.com/ ; >
@@ -316,7 +316,7 @@
       au < manifest ; exists ; 1991 ; Canadian Journal of Botany Volume 69 ; 69 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 1992 ; Canadian Journal of Botany Volume 70 ; 70 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 1993 ; Canadian Journal of Botany Volume 71 ; 71 ; https://cdnsciencepub.com/ ; >
-      au < ready ; exists ; 1994 ; Canadian Journal of Botany Volume 72 ; 72 ; https://cdnsciencepub.com/ ; >
+      au < crawling ; exists ; 1994 ; Canadian Journal of Botany Volume 72 ; 72 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1995 ; Canadian Journal of Botany Volume 73 ; 73 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1996 ; Canadian Journal of Botany Volume 74 ; 74 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 1997 ; Canadian Journal of Botany Volume 75 ; 75 ; https://cdnsciencepub.com/ ; >
@@ -380,11 +380,11 @@
     au < manifest ; exists ; 1991 ; Canadian Geotechnical Journal Volume 28 ; 28 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1992 ; Canadian Geotechnical Journal Volume 29 ; 29 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1993 ; Canadian Geotechnical Journal Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1994 ; Canadian Geotechnical Journal Volume 31 ; 31 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1994 ; Canadian Geotechnical Journal Volume 31 ; 31 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1995 ; Canadian Geotechnical Journal Volume 32 ; 32 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1996 ; Canadian Geotechnical Journal Volume 33 ; 33 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1997 ; Canadian Geotechnical Journal Volume 34 ; 34 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1998 ; Canadian Geotechnical Journal Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1998 ; Canadian Geotechnical Journal Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1999 ; Canadian Geotechnical Journal Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2000 ; Canadian Geotechnical Journal Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2001 ; Canadian Geotechnical Journal Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
@@ -426,10 +426,10 @@
     # published through 2005, changed name to Applied Physiology, Nutrition, and Metabolism
     param[journal_id] = cjap
     
-    au < ready ; exists ; 1993 ; Canadian Journal of Applied Physiology Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1994 ; Canadian Journal of Applied Physiology Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1993 ; Canadian Journal of Applied Physiology Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1994 ; Canadian Journal of Applied Physiology Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1995 ; Canadian Journal of Applied Physiology Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1996 ; Canadian Journal of Applied Physiology Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1996 ; Canadian Journal of Applied Physiology Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1997 ; Canadian Journal of Applied Physiology Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1998 ; Canadian Journal of Applied Physiology Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1999 ; Canadian Journal of Applied Physiology Volume 24 ; 24 ; https://cdnsciencepub.com/ ; >
@@ -573,9 +573,9 @@
     au < manifest ; exists ; 1993 ; Canadian Journal of Civil Engineering Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1994 ; Canadian Journal of Civil Engineering Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1995 ; Canadian Journal of Civil Engineering Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1996 ; Canadian Journal of Civil Engineering Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1996 ; Canadian Journal of Civil Engineering Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1997 ; Canadian Journal of Civil Engineering Volume 24 ; 24 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1998 ; Canadian Journal of Civil Engineering Volume 25 ; 25 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1998 ; Canadian Journal of Civil Engineering Volume 25 ; 25 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1999 ; Canadian Journal of Civil Engineering Volume 26 ; 26 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2000 ; Canadian Journal of Civil Engineering Volume 27 ; 27 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 2001 ; Canadian Journal of Civil Engineering Volume 28 ; 28 ; https://cdnsciencepub.com/ ; >
@@ -727,7 +727,7 @@
     au < crawling ; exists ; 1995 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 52 ; 52 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1996 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 53 ; 53 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1997 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 54 ; 54 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1998 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1998 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
     au < finished ; manifest ; 1999 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 56 ; 56 ; https://cdnsciencepub.com/ ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2000 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
     au < finished ; manifest ; 2001 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 58 ; 58 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
@@ -933,7 +933,7 @@
     au < crawling ; exists ; 1994 ; Canadian Journal of Forest Research Volume 24 ; 24 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1995 ; Canadian Journal of Forest Research Volume 25 ; 25 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1996 ; Canadian Journal of Forest Research Volume 26 ; 26 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1997 ; Canadian Journal of Forest Research Volume 27 ; 27 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1997 ; Canadian Journal of Forest Research Volume 27 ; 27 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1998 ; Canadian Journal of Forest Research Volume 28 ; 28 ; https://cdnsciencepub.com/ ; >
     au < finished ; manifest ; 1999 ; Canadian Journal of Forest Research Volume 29 ; 29 ; https://cdnsciencepub.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2000 ; Canadian Journal of Forest Research Volume 30 ; 30 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
@@ -1023,7 +1023,7 @@
     au < manifest ; exists ; 1991 ; Canadian Journal of Microbiology Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1992 ; Canadian Journal of Microbiology Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1993 ; Canadian Journal of Microbiology Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1994 ; Canadian Journal of Microbiology Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1994 ; Canadian Journal of Microbiology Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1995 ; Canadian Journal of Microbiology Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1996 ; Canadian Journal of Microbiology Volume 42 ; 42 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1997 ; Canadian Journal of Microbiology Volume 43 ; 43 ; https://cdnsciencepub.com/ ; >
@@ -1206,7 +1206,7 @@
     au < crawling ; exists ; 1994 ; Canadian Journal of Physiology and Pharmacology Volume 72 ; 72 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1995 ; Canadian Journal of Physiology and Pharmacology Volume 73 ; 73 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1996 ; Canadian Journal of Physiology and Pharmacology Volume 74 ; 74 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1997 ; Canadian Journal of Physiology and Pharmacology Volume 75 ; 75 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1997 ; Canadian Journal of Physiology and Pharmacology Volume 75 ; 75 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1998 ; Canadian Journal of Physiology and Pharmacology Volume 76 ; 76 ; https://cdnsciencepub.com/ ; >
     au < finished ; manifest ; 1999 ; Canadian Journal of Physiology and Pharmacology Volume 77 ; 77 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; Canadian Journal of Physiology and Pharmacology Volume 78 ; 78 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
@@ -1389,7 +1389,7 @@
     au < crawling ; exists ; 1995 ; Canadian Journal of Zoology Volume 73 ; 73 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1996 ; Canadian Journal of Zoology Volume 74 ; 74 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1997 ; Canadian Journal of Zoology Volume 75 ; 75 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1998 ; Canadian Journal of Zoology Volume 76 ; 76 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1998 ; Canadian Journal of Zoology Volume 76 ; 76 ; https://cdnsciencepub.com/ ; >
     au < finished ; manifest ; 1999 ; Canadian Journal of Zoology Volume 77 ; 77 ; https://cdnsciencepub.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2000 ; Canadian Journal of Zoology Volume 78 ; 78 ; https://cdnsciencepub.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2001 ; Canadian Journal of Zoology Volume 79 ; 79 ; https://cdnsciencepub.com/ ; reingest5.clockss.org:8082 >
@@ -1438,8 +1438,8 @@
 
     au < manifest ; exists ; 1993 ; Environmental Reviews Volume 1 ; 1 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1994 ; Environmental Reviews Volume 2 ; 2 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1995 ; Environmental Reviews Volume 3 ; 3 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1996 ; Environmental Reviews Volume 4 ; 4 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1995 ; Environmental Reviews Volume 3 ; 3 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1996 ; Environmental Reviews Volume 4 ; 4 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1997 ; Environmental Reviews Volume 5 ; 5 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1998 ; Environmental Reviews Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
     au < finished ; manifest ; 1999 ; Environmental Reviews Volume 7 ; 7 ; https://cdnsciencepub.com/ ; reingest1.clockss.org:8082 >
@@ -1501,7 +1501,7 @@
       au < manifest ; exists ; 1992 ; Genome Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 1993 ; Genome Volume 36 ; 36 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1994 ; Genome Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
-      au < ready ; exists ; 1995 ; Genome Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
+      au < crawling ; exists ; 1995 ; Genome Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 1996 ; Genome Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
       au < crawling ; exists ; 1997 ; Genome Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
       au < ready ; exists ; 1998 ; Genome Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
@@ -1874,7 +1874,7 @@
     au < manifest ; exists ; 1992 ; Transactions of the Canadian Society for Mechanical Engineering Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1993 ; Transactions of the Canadian Society for Mechanical Engineering Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1994 ; Transactions of the Canadian Society for Mechanical Engineering Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
-    au < ready ; exists ; 1995 ; Transactions of the Canadian Society for Mechanical Engineering Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
+    au < crawling ; exists ; 1995 ; Transactions of the Canadian Society for Mechanical Engineering Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1996 ; Transactions of the Canadian Society for Mechanical Engineering Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
     au < ready ; exists ; 1997 ; Transactions of the Canadian Society for Mechanical Engineering Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
     au < crawling ; exists ; 1998 ; Transactions of the Canadian Society for Mechanical Engineering Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >

@@ -166,7 +166,7 @@
     param[journal_serial_number] = 3345
     param[journal_id] = dm
 
-    au < ready ; exists ; 1996 ; 1996 ; Documenta Mathematica Volume 1  ; 1  ; >
+    au < crawling ; exists ; 1996 ; 1996 ; Documenta Mathematica Volume 1  ; 1  ; >
     au < frozen ; exists ; 1997 ; 1997 ; Documenta Mathematica Volume 2  ; 2  ; >
     au < frozen ; exists ; 1998 ; 1998 ; Documenta Mathematica Volume 3  ; 3  ; >
     au < ready ; exists ; 1999 ; 1999 ; Documenta Mathematica Volume 4  ; 4  ; >
@@ -688,7 +688,7 @@
     au < frozen ; exists ; 1993 ; 1993 ; Publications of the Research Institute for Mathematical Sciences Volume 29 ; 29 ; >
     au < frozen ; exists ; 1994 ; 1994 ; Publications of the Research Institute for Mathematical Sciences Volume 30 ; 30 ; >
     au < frozen ; exists ; 1995 ; 1995 ; Publications of the Research Institute for Mathematical Sciences Volume 31 ; 31 ; >
-    au < ready ; exists ; 1996 ; 1996 ; Publications of the Research Institute for Mathematical Sciences Volume 32 ; 32 ; >
+    au < crawling ; exists ; 1996 ; 1996 ; Publications of the Research Institute for Mathematical Sciences Volume 32 ; 32 ; >
     au < frozen ; exists ; 1997 ; 1997 ; Publications of the Research Institute for Mathematical Sciences Volume 33 ; 33 ; >
     au < ready ; exists ; 1998 ; 1998 ; Publications of the Research Institute for Mathematical Sciences Volume 34 ; 34 ; >
     au < frozen ; exists ; 1999 ; 1999 ; Publications of the Research Institute for Mathematical Sciences Volume 35 ; 35 ; >
@@ -882,7 +882,7 @@
     au < crawling ; exists ; 1983 ; 1983 ; Zeitschrift für Analysis und ihre Anwendungen Volume 2 ; 2 ; >
     au < ready ; exists ; 1984 ; 1984 ; Zeitschrift für Analysis und ihre Anwendungen Volume 3 ; 3 ; >
     au < frozen ; exists ; 1985 ; 1985 ; Zeitschrift für Analysis und ihre Anwendungen Volume 4 ; 4 ; >
-    au < ready ; exists ; 1986 ; 1986 ; Zeitschrift für Analysis und ihre Anwendungen Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1986 ; 1986 ; Zeitschrift für Analysis und ihre Anwendungen Volume 5 ; 5 ; >
     au < frozen ; exists ; 1987 ; 1987 ; Zeitschrift für Analysis und ihre Anwendungen Volume 6 ; 6 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Zeitschrift für Analysis und ihre Anwendungen Volume 7 ; 7 ; >
     au < frozen ; exists ; 1989 ; 1989 ; Zeitschrift für Analysis und ihre Anwendungen Volume 8 ; 8 ; >

@@ -304,7 +304,7 @@
       au < ready ; exists ; 2002 ; 2002 ; Clinical Cancer Research Volume 8 ; 8 ; >
       au < ready ; exists ; 2003 ; 2003 ; Clinical Cancer Research Volume 9 ; 9 ; >
       au < ready ; exists ; 2004 ; 2004 ; Clinical Cancer Research Volume 10 ; 10 ; >
-      au < ready ; exists ; 2005 ; 2005 ; Clinical Cancer Research Volume 11 ; 11 ; >
+      au < crawling ; exists ; 2005 ; 2005 ; Clinical Cancer Research Volume 11 ; 11 ; >
       au < ready ; exists ; 2006 ; 2006 ; Clinical Cancer Research Volume 12 ; 12 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Clinical Cancer Research Volume 13 ; 13 ; >
       au < ready ; exists ; 2008 ; 2008 ; Clinical Cancer Research Volume 14 ; 14 ; >
@@ -339,7 +339,7 @@
 
       param[journal_id] = mcr
 
-      au < ready ; exists ; 2002 ; 2002 ; Molecular Cancer Research Volume 1 (2002) ; 1 ; >
+      au < crawling ; exists ; 2002 ; 2002 ; Molecular Cancer Research Volume 1 (2002) ; 1 ; >
       au < ready ; exists ; 2003 ; 2003 ; Molecular Cancer Research Volume 1 (2003) ; 1 ; >
       au < ready ; exists ; 2004 ; 2004 ; Molecular Cancer Research Volume 2 ; 2 ; >
       au < ready ; exists ; 2005 ; 2005 ; Molecular Cancer Research Volume 3 ; 3 ; >

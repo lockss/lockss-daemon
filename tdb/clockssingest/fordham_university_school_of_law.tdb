@@ -69,7 +69,7 @@
       param[journal_abbr] = iplj
 
       au < ready ; exists ; 1990 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 1 ; 1 ; >
-      au < ready ; exists ; 1991 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1991 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 2 ; 2 ; >
       au < ready ; exists ; 1992 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 3 ; 3 ; >
       au < frozen ; exists ; 1993 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 4 ; 4 ; >
       au < ready ; exists ; 1994 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 5 ; 5 ; >
@@ -187,7 +187,7 @@
       au < frozen ; exists ; 1999 ; Fordham Journal of Corporate & Finance Law Volume 4 ; 4 ; >
       au < ready ; exists ; 2000 ; Fordham Journal of Corporate & Finance Law Volume 5 ; 5 ; >
       au < frozen ; exists ; 2001 ; Fordham Journal of Corporate & Finance Law Volume 6 ; 6 ; >
-      au < ready ; exists ; 2002 ; Fordham Journal of Corporate & Finance Law Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2002 ; Fordham Journal of Corporate & Finance Law Volume 7 ; 7 ; >
       au < frozen ; exists ; 2003 ; Fordham Journal of Corporate & Finance Law Volume 8 ; 8 ; >
       au < ready ; exists ; 2004 ; Fordham Journal of Corporate & Finance Law Volume 9 ; 9 ; >
       au < ready ; exists ; 2005 ; Fordham Journal of Corporate & Finance Law Volume 10 ; 10 ; >
@@ -299,7 +299,7 @@
       au < frozen ; exists ; 2003-2004 ; Fordham Law Review Volume 72 ; 72 ; >
       au < ready ; exists ; 2004-2005 ; Fordham Law Review Volume 73 ; 73 ; >
       au < frozen ; exists ; 2005-2006 ; Fordham Law Review Volume 74 ; 74 ; >
-      au < ready ; exists ; 2006-2007 ; Fordham Law Review Volume 75 ; 75 ; >
+      au < crawling ; exists ; 2006-2007 ; Fordham Law Review Volume 75 ; 75 ; >
       au < frozen ; exists ; 2007-2008 ; Fordham Law Review Volume 76 ; 76 ; >
       au < frozen ; exists ; 2008-2009 ; Fordham Law Review Volume 77 ; 77 ; >
       au < frozen ; exists ; 2009-2010 ; Fordham Law Review Volume 78 ; 78 ; >
