@@ -1650,7 +1650,8 @@
   {
 
     title <
-      name = U.S. Congressional Serial Set
+      name = U.S. Congressional Serial Set ;
+      issn = 1931-2822
     >
 
     param[collection_id] = SERIALSET
@@ -1853,7 +1854,8 @@
   {
 
     title <
-      name = United States Code
+      name = United States Code ;
+      issn = 1084-6719
     >
     #Published 1994-2017
     param[collection_id] = USCODE
@@ -1902,7 +1904,8 @@
 
   {
     title <
-      name = United States Reports
+      name = United States Reports ;
+      issn = 2150-2331
     >
 
     param[collection_id] = USREPORTS
