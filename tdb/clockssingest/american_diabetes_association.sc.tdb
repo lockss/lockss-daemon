@@ -63,7 +63,7 @@
       #No volume 11 for 1962.
       param[journal_id] = diabetes
 
-        au < ready ; exists ; 1952 ; 1952 ; Diabetes Volume 1 ; 1 ; >
+        au < crawling ; exists ; 1952 ; 1952 ; Diabetes Volume 1 ; 1 ; >
         au < frozen ; exists ; 1953 ; 1953 ; Diabetes Volume 2 ; 2 ; >
         au < ready ; exists ; 1954 ; 1954 ; Diabetes Volume 3 ; 3 ; >
         au < ready ; exists ; 1955 ; 1955 ; Diabetes Volume 4 ; 4 ; >

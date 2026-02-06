@@ -94,7 +94,7 @@
     #param[journal_issn] = 1746-0719
     
     au < ready ; exists ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 ; >
-    au < ready ; exists ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 ; >
     au < frozen ; exists ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 ; >
     au < frozen ; exists ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 ; >
     au < ready ; exists ; 2010 ; Anthropology of the Middle East Volume 5 ; 5 ; >
@@ -1297,7 +1297,7 @@
     au < ready ; exists ; 2005 ; Theoria Volume 52 ; 52 ; >
     au < testing ; exists ; 2006 ; Theoria Volume 53 ; 53 ; >
     au < ready ; exists ; 2007 ; Theoria Volume 54 ; 54 ; >
-    au < ready ; exists ; 2008 ; Theoria Volume 55 ; 55 ; >
+    au < crawling ; exists ; 2008 ; Theoria Volume 55 ; 55 ; >
     au < testing ; exists ; 2009 ; Theoria Volume 56 ; 56 ; >
     au < testing ; exists ; 2010 ; Theoria Volume 57 ; 57 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Theoria Volume 58 ; 58 ; >
