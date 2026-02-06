@@ -5367,6 +5367,36 @@
   {
 
       title <
+        name = International Journal of eSports Research (IJER) ;
+        issn = 2691-9273 ;
+        eissn = 2691-9281
+      >
+
+      param[journal_issn] = 2691-9273
+      #continued_by = 2771-1986
+
+      au < exists ; exists ; 2021 ; International Journal of eSports Research (IJER) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of eSports Multidisciplinary Research (IJEMR) ;
+        issn = 2771-1986 ;
+        eissn = 2771-2001
+      >
+
+      param[journal_issn] = 2771-1986
+      #continues = 2691-9273
+
+      au < exists ; exists ; 2022 ; International Journal of eSports Multidisciplinary Research (IJEMR) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+
+  }
+
+  {
+
+      title <
         name = International Journal of Financial Technology and Innovation (IJFTI) ;
         issn = 2998-0682 ;
         eissn = 2998-0690
