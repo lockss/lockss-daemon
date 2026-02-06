@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>33</string>
+        <string>34</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -135,6 +135,7 @@
                 For example: http://movie-usa.glencoesoftware.com/metadata/10.1083/jcb.202111095
             -->
             <string>1,"https?://movie-usa.glencoesoftware.com/metadata/.*"</string>
+            <string>1,"^https?://(trs\.silverchair-cdn\.com)/"</string>
             <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
             <!--
             https://pubs.geoscienceworld.org/gsabulletin/article/132/1-2/48/570322/Multiproxy-lacustrine-records-of-post-glacial
@@ -304,6 +305,7 @@
             <string>movie\.biologists\.com</string>
             <string>movie-usa\.glencoesoftware\.com</string>
             <string>static-movie-usa\.glencoesoftware\.com</string>
+            <string>trs\.silverchair-cdn\.com</string>
         </list>
     </entry>
     <entry>

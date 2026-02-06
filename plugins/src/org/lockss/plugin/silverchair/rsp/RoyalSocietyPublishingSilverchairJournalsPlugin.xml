@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>7</string>
+        <string>8</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>33</string>
+        <string>34</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -122,12 +122,12 @@ POSSIBILITY OF SUCH DAMAGE.
                 https://rup.silverchair-cdn.com/rup/content_public/journal/jem/215/2/10.1084_jem.20180049/5/jem_20180049_fig1.jpeg?Expires=2147483647&Signature=HipSDWZt5DgmDzz2FPXTamzvr4F3XkkSeLC5MLzbZbXvzshd4KL4-1H5sAj-F7SMQul3Co-zyRubLUIyKZzNfuCnf9~HVVtPtE0GE-v7TLIN7l0AfdFn9Bn4jfHEgaG9uFtSjTgbqMBjjJUgt3pZW~UcCFvt3HTX9cfUg6bItcMH2m6iPfOBUhS2qYzOu1DjNp2Vr7ypj0Gf6nMJqGDun-dUMyAIEdJe3lhME9icVqdmZZBFtm~WB4X8cZrha1yvzaZWJnnrgkFURqhyi-NogG9QFG4Ag5GT69iCLlCAOkfTH4OcBmv4id22O5v~vuuHXpu~0rjeIj0iw4XWZBJ2ig__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA
             -->
             <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/.*\.xlsx"</string>
-            <string>2,"^https?://(trs\.silverchair-cdn\.com)/"</string>
             <string>2,"%smy-account/register", base_url</string>
             <!--This is Video API call entry point: https?://movie-usa.glencoesoftware.com/metadata/
                 For example: http://movie-usa.glencoesoftware.com/metadata/10.1083/jcb.202111095
             -->
             <string>1,"https?://movie-usa.glencoesoftware.com/metadata/.*"</string>
+            <string>1,"^https?://(trs\.silverchair-cdn\.com)/"</string>
             <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
             <!--
             https://pubs.geoscienceworld.org/gsabulletin/article/132/1-2/48/570322/Multiproxy-lacustrine-records-of-post-glacial
