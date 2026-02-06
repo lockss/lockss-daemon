@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>8</string>
+        <string>9</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>34</string>
+        <string>35</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -123,6 +123,9 @@ POSSIBILITY OF SUCH DAMAGE.
             -->
             <string>2,"^https?://([^/]+\.silverchair-cdn\.com)/.*\.xlsx"</string>
             <string>2,"%smy-account/register", base_url</string>
+            <string>2,"^https?://(trs\.silverchair-cdn\.com)/Themes/Client/app/img/favicons/favicon-16x16\.png"</string>
+            <string>2,"^https?://(trs\.silverchair-cdn\.com)/Themes/Client/app/img/favicons/favicon-32x32\.png"</string>
+            <string>2,"^https?://(trs\.silverchair-cdn\.com)/Themes/Client/app/img/favicons/safari-pinned-tab\.svg"</string>
             <!--This is Video API call entry point: https?://movie-usa.glencoesoftware.com/metadata/
                 For example: http://movie-usa.glencoesoftware.com/metadata/10.1083/jcb.202111095
             -->
