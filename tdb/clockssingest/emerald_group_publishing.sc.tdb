@@ -4201,8 +4201,8 @@
     param[journal_id] = sgpe
     #continued_by = 2398-4686
 
-    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; International Journal for Researcher Development Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; International Journal for Researcher Development Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2009 ; 2009 ; International Journal for Researcher Development Volume 1 [2009] ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; International Journal for Researcher Development Volume 1 [2010] ; 1 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; International Journal for Researcher Development Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; International Journal for Researcher Development Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; International Journal for Researcher Development Volume 4 ; 4 ; >
@@ -5749,7 +5749,7 @@
 
   {
     title <
-      name = International Journal of Physical Distribution & Logistics Management ;
+      name = International Journal of Physical Distribution ;
       issn = 0020-7527 ;
       eissn = 1747-3691 ;
       issnl = 0020-7527
@@ -5759,13 +5759,13 @@
     param[journal_id] = ijpdlm
     #continued_by = 0269-8218
 
-    au < manifest ; exists ; 1971 ; 1971 ; International Journal of Physical Distribution & Logistics Management Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1972 ; 1972 ; International Journal of Physical Distribution & Logistics Management Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1973 ; 1973 ; International Journal of Physical Distribution & Logistics Management Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1974 ; 1974 ; International Journal of Physical Distribution & Logistics Management Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; International Journal of Physical Distribution & Logistics Management Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; International Journal of Physical Distribution & Logistics Management Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; International Journal of Physical Distribution & Logistics Management Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1971 ; 1971 ; International Journal of Physical Distribution Volume 1 ; 1 ; >
+    au < manifest ; exists ; 1972 ; 1972 ; International Journal of Physical Distribution Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1973 ; 1973 ; International Journal of Physical Distribution Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1974 ; 1974 ; International Journal of Physical Distribution Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1975 ; 1975 ; International Journal of Physical Distribution Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1976 ; 1976 ; International Journal of Physical Distribution Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1977 ; 1977 ; International Journal of Physical Distribution Volume 7 ; 7 ; >
     
   }
 
@@ -7934,8 +7934,8 @@
     comment[journal_issn] = 1472-5967
     param[journal_id] = jfm
 
-    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Facilities Management Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Facilities Management Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Journal of Facilities Management Volume 1 ; 1 ; >
+    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Facilities Management Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Journal of Facilities Management Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Journal of Facilities Management Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Journal of Facilities Management Volume 5 ; 5 ; >
@@ -8695,11 +8695,13 @@
     comment[journal_issn] = 1528-5812
     param[journal_id] = joic
 
-    au < doNotProcess ; doNotProcess ; 2001 ; 2001 ; Journal of Investment Compliance Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 2002 ; 2002 ; Journal of Investment Compliance Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Investment Compliance Volume 3 ; 3 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Investment Compliance Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Journal of Investment Compliance Volume 5 ; 5 ; >
+    au < exists ; exists ; 2000 ; 2000 ; Journal of Investment Compliance Volume 1 [2000] ; 1 ; >
+    au < exists ; exists ; 2001 ; 2001 ; Journal of Investment Compliance Volume 1 [2001] ; 1 ; >
+    au < exists ; exists ; 2001 ; 2001 ; Journal of Investment Compliance Volume 2 [2001] ; 2 ; >
+    au < exists ; exists ; 2002 ; 2002 ; Journal of Investment Compliance Volume 2 [2002] ; 2 ; >
+    au < exists ; exists ; 2002 ; 2002 ; Journal of Investment Compliance Volume 3 ; 3 ; >
+    au < exists ; exists ; 2003 ; 2003 ; Journal of Investment Compliance Volume 4 ; 4 ; >
+    au < exists ; exists ; 2004 ; 2004 ; Journal of Investment Compliance Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Journal of Investment Compliance Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Journal of Investment Compliance Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Journal of Investment Compliance Volume 8 ; 8 ; >
@@ -11355,7 +11357,7 @@
     param[journal_id] = mhrj
 
     au < doNotProcess ; doNotProcess ; 1996 ; 1996 ; Mental Health Review Journal: Research, Policy and Practice Volume 1 ; 1 ; >
-    au < doNotProcess ; doNotProcess ; 1997 ; 1997 ; Mental Health Review Journal: Research, Policy and Practice Volume 2 ; 2 ; >
+    au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Mental Health Review Journal: Research, Policy and Practice Volume 2 ; 2 ; >
     au < doNotProcess ; doNotProcess ; 1998 ; 1998 ; Mental Health Review Journal: Research, Policy and Practice Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 1999 ; 1999 ; Mental Health Review Journal: Research, Policy and Practice Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2000 ; 2000 ; Mental Health Review Journal: Research, Policy and Practice Volume 5 ; 5 ; >
@@ -14808,16 +14810,17 @@
     param[journal_id] = ijhrh
     #continues = 1757-0980
 
-    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; International Journal of Human Rights in Healthcare Volume 8 ; 8 ; >
-    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; International Journal of Human Rights in Healthcare Volume 9 ; 9 ; >
-    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; International Journal of Human Rights in Healthcare Volume 10 ; 10 ; >
-    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; International Journal of Human Rights in Healthcare Volume 11 ; 11 ; >
-    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; International Journal of Human Rights in Healthcare Volume 12 ; 12 ; >
-    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; International Journal of Human Rights in Healthcare Volume 13 ; 13 ; >
-    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Human Rights in Healthcare Volume 14 ; 14 ; >
-    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Human Rights in Healthcare Volume 15 ; 15 ; >
-    au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; International Journal of Human Rights in Healthcare Volume 16 ; 16 ; >
-    au < exists ; exists ; 2025 ; 2025 ; International Journal of Human Rights in Healthcare Volume 17 ; 17 ; >
+    au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; International Journal of Human Rights in Healthcare Volume 8 ; 8 ; >
+    au < doNotProcess ; doNotProcess ; 2016 ; 2016 ; International Journal of Human Rights in Healthcare Volume 9 ; 9 ; >
+    au < doNotProcess ; doNotProcess ; 2017 ; 2017 ; International Journal of Human Rights in Healthcare Volume 10 ; 10 ; >
+    au < doNotProcess ; doNotProcess ; 2018 ; 2018 ; International Journal of Human Rights in Healthcare Volume 11 ; 11 ; >
+    au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; International Journal of Human Rights in Healthcare Volume 12 ; 12 ; >
+    au < doNotProcess ; doNotProcess ; 2020 ; 2020 ; International Journal of Human Rights in Healthcare Volume 13 ; 13 ; >
+    au < doNotProcess ; doNotProcess ; 2021 ; 2021 ; International Journal of Human Rights in Healthcare Volume 14 ; 14 ; >
+    au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; International Journal of Human Rights in Healthcare Volume 15 ; 15 ; >
+    au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; International Journal of Human Rights in Healthcare Volume 16 ; 16 ; >
+    au < exists ; exists ; 2024 ; 2024 ; International Journal of Human Rights in Healthcare Volume 17 ; 17 ; >
+    au < exists ; exists ; 2025 ; 2025 ; International Journal of Human Rights in Healthcare Volume 18 ; 18 ; >
 
   }
 
