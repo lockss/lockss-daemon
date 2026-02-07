@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>36</string>
+        <string>37</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -133,12 +133,12 @@
             <string>2,"%smy-account/register", base_url</string>
             <!--
             Exclude all these files, Cloudflare/Clounfront return inconsistent response code, sometimes it is 403 sometimes 404
-            <link rel="apple-touch-icon" sizes="180x180" href="//trs.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639023850001008803/apple-touch-icon.png">
-            <link rel="icon" type="image/png" href="//trs.silverchair-cdn.com/Themes/Client/app/img/favicons/favicon-32x32.png" sizes="32x32">
-            <link rel="icon" type="image/png" href="//trs.silverchair-cdn.com/Themes/Client/app/img/favicons/favicon-16x16.png" sizes="16x16">
-            <link rel="mask-icon" href="//trs.silverchair-cdn.com/Themes/Client/app/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
-            <link rel="icon" href="//trs.silverchair-cdn.com/Themes/Client/app/img/favicons/v-639023850001108779/favicon.ico">
-            <link rel="manifest" href="//trs.silverchair-cdn.com/Themes/Client/app/img/favicons/manifest.json">
+            Themes/Client/app/img/favicons/v-639023850001008803/apple-touch-icon.png
+            Themes/Client/app/img/favicons/favicon-32x32.png
+            Themes/Client/app/img/favicons/favicon-16x16.png
+            Themes/Client/app/img/favicons/safari-pinned-tab.svg
+            Themes/Client/app/img/favicons/v-639023850001108779/favicon.ico
+            Themes/Client/app/img/favicons/manifest.json
             -->
             <string>2,"^https?://(trs\.silverchair-cdn\.com)/Themes/Client/app/img/favicons/.*"</string>
             <!--This is Video API call entry point: https?://movie-usa.glencoesoftware.com/metadata/
