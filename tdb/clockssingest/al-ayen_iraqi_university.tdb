@@ -29,6 +29,21 @@
   {
 
       title <
+        name = AUIQ Humanities and Social Sciences ;
+        eissn = 3106-7557
+      >
+
+      comment[publisher] = Al-Ayen Iraqi University
+      param[base_url] = https://ahss.alayen.edu.iq/
+      param[journal_abbr] = journal
+
+      au < exists ; exists ; 2025 ; AUIQ Humanities and Social Sciences Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+      title <
         name = AUIQ Technical Engineering Science ;
         eissn = 3078-3437
       >
