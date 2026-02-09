@@ -857,9 +857,9 @@
     au < finished ; crawling ; 2017 ; Practice Nursing Volume 28 ; 28 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2018 ; Practice Nursing Volume 29 ; 29 ; https://www.magonlinelibrary.com/ ; >
     au < frozen ; exists ; 2019 ; Practice Nursing Volume 30 ; 30 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; Practice Nursing Volume 31 ; 31 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; Practice Nursing Volume 32 ; 32 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; Practice Nursing Volume 33 ; 33 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2020 ; Practice Nursing Volume 31 ; 31 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Practice Nursing Volume 32 ; 32 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2022 ; Practice Nursing Volume 33 ; 33 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; Practice Nursing Volume 34 ; 34 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Practice Nursing Volume 35 ; 35 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; Practice Nursing Volume 36 ; 36 ; https://www.magonlinelibrary.com/ ; >
@@ -884,7 +884,7 @@
     au < doNotProcess ; exists ; 2010 ; Companion Animal Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2011 ; Companion Animal Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2012 ; Companion Animal Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Companion Animal Volume 18 (ukvc) ; 18 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Companion Animal Volume 18 (ukvc) ; 18 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     }
     {
     param[journal_id] = coan
