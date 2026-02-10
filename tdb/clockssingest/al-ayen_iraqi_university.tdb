@@ -9,6 +9,7 @@
     provider = bepress
     plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    comment[publisher] = Al-Ayen Iraqi University
 
   {
 
@@ -17,7 +18,6 @@
         eissn = 3007-973X
       >
 
-      comment[publisher] = Al-Ayen Iraqi University
       param[base_url] = https://acbs.alayen.edu.iq/
       param[journal_abbr] = journal
 
@@ -33,7 +33,6 @@
         eissn = 3106-7557
       >
 
-      comment[publisher] = Al-Ayen Iraqi University
       param[base_url] = https://ahss.alayen.edu.iq/
       param[journal_abbr] = journal
 
@@ -48,7 +47,6 @@
         eissn = 3078-3437
       >
 
-      comment[publisher] = Al-Ayen Iraqi University
       param[base_url] = https://ates.alayen.edu.iq/
       param[journal_abbr] = home
 
