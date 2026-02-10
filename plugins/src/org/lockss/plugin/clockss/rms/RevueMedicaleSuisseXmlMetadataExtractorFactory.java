@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2025, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -100,7 +100,7 @@ public class RevueMedicaleSuisseXmlMetadataExtractorFactory extends SourceXmlMet
       if (doctype != null && doctype.getPublicId() != null) {
           if (doctype.getPublicId().contains("-//NLM//DTD")) {
               log.debug3("Detected JATS schema via DTD");
-              return new JatsPublishingSchemaHelper();
+              return new RMSJatsEnglishSchemaHelper();
           }
       }
 
