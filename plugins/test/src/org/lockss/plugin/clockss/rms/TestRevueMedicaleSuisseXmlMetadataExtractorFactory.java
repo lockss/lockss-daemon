@@ -17,9 +17,9 @@ public class TestRevueMedicaleSuisseXmlMetadataExtractorFactory extends SourceXm
     private static String BaseUrl = "http://source.host.org/sourcefiles/oup/";
     private static String Directory = "2019";
 
-    public void testExtractArticleXmlSchema() throws Exception {
+    public void testExtractArticleMetadataJatsLikeEnglishSchema() throws Exception {
 
-        String fname = "sample.xml";
+        String fname = "jats_like_english_schema_sample.xml";
         String journalXml = getResourceContent(fname);
 
         assertNotNull(journalXml);
@@ -47,6 +47,39 @@ public class TestRevueMedicaleSuisseXmlMetadataExtractorFactory extends SourceXm
         assertEquals("Revue Médicale Suisse", md.get(MetadataField.FIELD_PUBLICATION_TITLE));
         assertEquals("2007", md.get(MetadataField.FIELD_DATE));
         assertEquals("1660-9379", md.get(MetadataField.FIELD_ISSN));
+        assertEquals(null, md.get(MetadataField.FIELD_DOI));
+    }
+
+    public void testExtractArticleMetadataEruditLikeFrenchSchema() throws Exception {
+
+        String fname = "erudit_frech_schema_sample.xml";
+        String journalXml = getResourceContent(fname);
+
+        assertNotNull(journalXml);
+
+        String xml_url = BaseUrl + Directory + "/" + fname;
+        CIProperties xmlHeader = new CIProperties();
+        xmlHeader.put(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+        MockArchivalUnit mau = new MockArchivalUnit();
+        MockCachedUrl mcu = mau.addUrl(xml_url, true, true, xmlHeader);
+        mcu.setContent(journalXml);
+        mcu.setContentSize(journalXml.length());
+        mcu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+
+        FileMetadataExtractor me =  new RevueMedicaleSuisseXmlMetadataExtractorFactory().createFileMetadataExtractor(MetadataTarget.Any(), "text/xml");
+        FileMetadataListExtractor mle =
+                new FileMetadataListExtractor(me);
+        List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any(), mcu);
+        assertNotEmpty(mdlist);
+        assertEquals(1, mdlist.size());
+
+        ArticleMetadata md = mdlist.get(0);
+        assertNotNull(md);
+
+        assertEquals("1660-9379", md.get(MetadataField.FIELD_ISSN));
+        assertEquals("20100414", md.get(MetadataField.FIELD_DATE));
+        assertEquals(null, md.get(MetadataField.FIELD_DOI));
     }
 }
 
