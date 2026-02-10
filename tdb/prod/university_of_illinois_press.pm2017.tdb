@@ -546,4 +546,20 @@
 
     }
 
+    {
+    title <
+      name = Journal of Mormon History ;
+      issn = 0094-7342 ;
+      eissn = 2473-6031
+
+    >
+
+      attr[journal_id] = 903
+
+      au < manifest ; 2024 ; Journal of Mormon History Volume 50 [2024] ; 20260 >
+      au < manifest ; 2025 ; Journal of Mormon History Volume 51 [2025] ; 20261 >
+      au < manifest ; 2026 ; Journal of Mormon History Volume 52 [2026] ; 20262 >
+
+    }
+
 }
