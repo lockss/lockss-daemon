@@ -205,7 +205,7 @@ revue == journal
  */
 
 public class EruditFrenchSchemaHelper implements SourceXmlSchemaHelper {
-    private static final Logger log = Logger.getLogger(EruditPublishingSchemaHelper.class);
+    private static final Logger log = Logger.getLogger(EruditFrenchSchemaHelper.class);
 
     private static final String AUTHOR_SEPARATOR = ",";
 
