@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = University of Bisha ;
+    info[contract] = 2026 ;
+    info[back] = 2026 ;
+    info[tester] = 5 ;
+    info[platform] = bepress
+  >
+    provider = bepress
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    comment[publisher] = University of Bisha
+
+  {
+
+      title <
+        name = University of Bisha Journal for Humanities ;
+        issn = 1658-9343 ;
+        eissn = 1658-9319
+      >
+
+      param[base_url] = https://ubjh.ub.edu.sa/
+      param[journal_abbr] = home
+
+      au < exists ; exists ; 2022 ; University of Bisha Journal for Humanities Volume 1 ; 1 ; >
+      au < exists ; exists ; 2023 ; University of Bisha Journal for Humanities Volume 2 ; 2 ; >
+      au < exists ; exists ; 2024 ; University of Bisha Journal for Humanities Volume 3 ; 3 ; >
+      au < exists ; exists ; 2025 ; University of Bisha Journal for Humanities Volume 4 ; 4 ; >
+
+  }
+
+}
