@@ -182,7 +182,7 @@
       param[journal_abbr] = jcfl
 
       au < ready ; exists ; 1996 ; Fordham Journal of Corporate & Finance Law Volume 1 ; 1 ; >
-      au < ready ; exists ; 1997 ; Fordham Journal of Corporate & Finance Law Volume 2 ; 2 ; >
+      au < crawling ; exists ; 1997 ; Fordham Journal of Corporate & Finance Law Volume 2 ; 2 ; >
       au < ready ; exists ; 1998 ; Fordham Journal of Corporate & Finance Law Volume 3 ; 3 ; >
       au < frozen ; exists ; 1999 ; Fordham Journal of Corporate & Finance Law Volume 4 ; 4 ; >
       au < ready ; exists ; 2000 ; Fordham Journal of Corporate & Finance Law Volume 5 ; 5 ; >
