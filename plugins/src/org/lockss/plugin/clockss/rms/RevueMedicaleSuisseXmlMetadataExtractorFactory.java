@@ -129,7 +129,7 @@ public class RevueMedicaleSuisseXmlMetadataExtractorFactory extends SourceXmlMet
       }
 
       String erudit_raw_doi = thisAM.getRaw("/article/admin/infoarticle/idpublic[@norme='doi']");
-      String jats_raw_doi = thisAM.getRaw("/article/front/article-meta/article-id[@pub-id-type = \"doi\"]");
+      String jats_raw_doi = thisAM.getRaw("front/article-meta/article-id[@pub-id-type = \"doi\"]");
 
       String doi = null;
 
