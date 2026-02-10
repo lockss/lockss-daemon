@@ -11,7 +11,7 @@ BEGIN {
   str = "date +%W";
   str | getline week;
   current_year=current_year-1;
-  if (week<9) {
+  if (week<6) {
       current_year=current_year-1
   }
   #printf "DEBUG: Current-Year:%s Current-Week:%s\n", current_year, week;
