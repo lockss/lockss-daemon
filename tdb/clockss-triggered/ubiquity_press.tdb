@@ -202,8 +202,8 @@
       >
 
       comment[publisher] = Ubiquity Press
-      nondefparam[base_url2] = https://account.jcss.demontfortuniversitypress.org/
-      nondefparam[journal_id] = dmu-j-jcss
+      nondefparam[base_url2] = https://ubiquitypress.com/nondefparam/
+      nondefparam[journal_id] = nondefparam
       #LXQUEUE-2158
 
       au < exists ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; 2 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
