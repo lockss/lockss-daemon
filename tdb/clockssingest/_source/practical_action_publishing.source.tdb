@@ -7,6 +7,7 @@
     info[platform] = Source LXPLUG-2032
   >
     hidden[proxy] = DIRECT
+    #Same directory; different plugin. Publisher reports they have stopped publishing journals.
 
   {
     title <
@@ -17,8 +18,6 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/practicalaction-released/
 
     au < readySource ; crawling ; 2024 ; Practical Action Publishing Source Content 2024_01 ; 2024_01 >
-    au < testing ; exists ; 2025 ; Practical Action Publishing Source Content 2025_01 ; 2025_01 >
-    au < expected ; exists ; 2026 ; Practical Action Publishing Source Content 2026_01 ; 2026_01 >
 
   }
 
