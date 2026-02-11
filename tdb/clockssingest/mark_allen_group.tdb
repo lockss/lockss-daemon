@@ -896,11 +896,11 @@
     au < finished ; crawling ; 2016 ; Companion Animal Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < superseded ; exists ; 2017 ; Companion Animal Volume 22 [superseded] ; 22 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; crawling ; 2017 ; Companion Animal Volume 22 ; 22 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Companion Animal Volume 23 ; 23 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; Companion Animal Volume 24 ; 24 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; Companion Animal Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; Companion Animal Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; Companion Animal Volume 27 ; 27 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2018 ; Companion Animal Volume 23 ; 23 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Companion Animal Volume 24 ; 24 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2020 ; Companion Animal Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Companion Animal Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; Companion Animal Volume 27 ; 27 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; Companion Animal Volume 28 ; 28 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Companion Animal Volume 29 ; 29 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; Companion Animal Volume 30 ; 30 ; https://www.magonlinelibrary.com/ ; >
@@ -924,9 +924,9 @@
     au < finished ; finished ; 2015 ; Equine Health Volume 2015 ; 2015 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Equine Health Volume 2016 ; 2016 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; Equine Health Volume 2017 ; 2017 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Equine Health Volume 2018 ; 2018 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; Equine Health Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; Equine Health Volume 2020 ; 2020 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2018 ; Equine Health Volume 2018 ; 2018 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019 ; Equine Health Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Equine Health Volume 2020 ; 2020 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -948,7 +948,7 @@
     au < doNotProcess ; exists ; 2010 ; Livestock Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2011 ; Livestock Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2012 ; Livestock Volume 17 ; 17 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2013 ; Livestock Volume 18 (uklv) ; 18 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2013 ; Livestock Volume 18 (uklv) ; 18 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     }
     {
     param[journal_id] = live
@@ -960,11 +960,11 @@
     au < finished ; crawling ; 2016 ; Livestock Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < superseded ; exists ; 2017 ; Livestock Volume 22 [superseded] ; 22 ; http://www.magonlinelibrary.com/ ; >
     au < finished ; crawling ; 2017 ; Livestock Volume 22 ; 22 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2018 ; Livestock Volume 23 ; 23 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; Livestock Volume 24 ; 24 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; Livestock Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; Livestock Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; Livestock Volume 27 ; 27 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2018 ; Livestock Volume 23 ; 23 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2019 ; Livestock Volume 24 ; 24 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; Livestock Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; Livestock Volume 26 ; 26 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2022 ; Livestock Volume 27 ; 27 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2023 ; Livestock Volume 28 ; 28 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Livestock Volume 29 ; 29 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; Livestock Volume 30 ; 30 ; https://www.magonlinelibrary.com/ ; >
@@ -990,10 +990,10 @@
     au < finished ; finished ; 2016 ; The Veterinary Nurse Volume 7 ; 7 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; The Veterinary Nurse Volume 8 ; 8 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2018 ; The Veterinary Nurse Volume 9 ; 9 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; The Veterinary Nurse Volume 10 ; 10 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; The Veterinary Nurse Volume 11 ; 11 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2021 ; The Veterinary Nurse Volume 12 ; 12 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2022 ; The Veterinary Nurse Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2019 ; The Veterinary Nurse Volume 10 ; 10 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2020 ; The Veterinary Nurse Volume 11 ; 11 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; The Veterinary Nurse Volume 12 ; 12 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2022 ; The Veterinary Nurse Volume 13 ; 13 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; The Veterinary Nurse Volume 14 ; 14 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2024 ; The Veterinary Nurse Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
     au < crawling ; exists ; 2025 ; The Veterinary Nurse Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
@@ -1034,8 +1034,8 @@
     au < finished ; finished ; 2015 ; Child Care Volume 12 ; 12 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2016 ; Child Care Volume 13 ; 13 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2017 ; Child Care Volume 14 ; 14 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Child Care Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; Child Care Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2018 ; Child Care Volume 15 ; 15 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Child Care Volume 16 ; 16 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
 
   }
 
@@ -1049,7 +1049,7 @@
     comment[base_url] = http://www.earlyyearseducator.co.uk/
     param[journal_id] = eyed
 
-    au < frozen ; exists ; 1999-2000 ; Early Years Educator (EYE) Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 1999-2000 ; Early Years Educator (EYE) Volume 1 ; 1 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < doNotProcess ; exists ; 2000-2001 ; Early Years Educator (EYE) Volume 2 ; 2 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2001-2002 ; Early Years Educator (EYE) Volume 3 ; 3 ; https://www.magonlinelibrary.com/ ; >
     au < doNotProcess ; exists ; 2002-2003 ; Early Years Educator (EYE) Volume 4 ; 4 ; https://www.magonlinelibrary.com/ ; >
@@ -1067,10 +1067,10 @@
     au < zapped ; finished ; 2014-2015 ; Early Years Educator (EYE) Volume 16 ; 16 ; http://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015-2016 ; Early Years Educator (EYE) Volume 17 ; 17 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2016-2017 ; Early Years Educator (EYE) Volume 18 ; 18 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2017-2018 ; Early Years Educator (EYE) Volume 19 ; 19 ; http://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2018-2019 ; Early Years Educator (EYE) Volume 20 ; 20 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019-2020 ; Early Years Educator (EYE) Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020-2021 ; Early Years Educator (EYE) Volume 22 ; 22 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2017-2018 ; Early Years Educator (EYE) Volume 19 ; 19 ; http://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2018-2019 ; Early Years Educator (EYE) Volume 20 ; 20 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2019-2020 ; Early Years Educator (EYE) Volume 21 ; 21 ; https://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2020-2021 ; Early Years Educator (EYE) Volume 22 ; 22 ; https://www.magonlinelibrary.com/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2021-2023 ; Early Years Educator (EYE) Volume 23 ; 23 ; https://www.magonlinelibrary.com/ ; >
     au < deepCrawl ; exists ; 2023-2025 ; Early Years Educator (EYE) Volume 24 ; 24 ; https://www.magonlinelibrary.com/ ; >
     au < expected ; exists ; 2025-2027 ; Early Years Educator (EYE) Volume 25 ; 25 ; https://www.magonlinelibrary.com/ ; >
@@ -1122,9 +1122,9 @@
     au < finished ; finished ; 2015 ; Headteacher Update Volume 2015 ; 2015 ; http://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2016 ; Headteacher Update Volume 2016 ; 2016 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Headteacher Update Volume 2017 ; 2017 ; http://www.magonlinelibrary.com/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2018 ; Headteacher Update Volume 2018 ; 2018 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2019 ; Headteacher Update Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ ; >
-    au < frozen ; exists ; 2020 ; Headteacher Update Volume 2020 ; 2020 ; https://www.magonlinelibrary.com/ ; >
+    au < finished ; manifest ; 2018 ; Headteacher Update Volume 2018 ; 2018 ; https://www.magonlinelibrary.com/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2019 ; Headteacher Update Volume 2019 ; 2019 ; https://www.magonlinelibrary.com/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; Headteacher Update Volume 2020 ; 2020 ; https://www.magonlinelibrary.com/ ; reingest3.clockss.org:8083 >
 
     au < frozen ; exists ; 2022 ; Headteacher Update Volume 2022 ; 2022 ; https://www.magonlinelibrary.com/ ; >
 

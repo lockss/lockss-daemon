@@ -1118,7 +1118,7 @@
 
       au < finished ; finished ; 2020 ; 2020 ; Magnetic Resonance Volume 1 ; 1 ; reingest2.clockss.org:8085 >
       au < finished ; frozen ; 2021 ; 2021 ; Magnetic Resonance Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2022 ; 2022 ; Magnetic Resonance Volume 3 ; 3 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Magnetic Resonance Volume 3 ; 3 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Magnetic Resonance Volume 4 ; 4 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Magnetic Resonance Volume 5 ; 5 ; >
       au < crawling ; exists ; 2025 ; 2025 ; Magnetic Resonance Volume 6 ; 6 ; >
@@ -1149,7 +1149,7 @@
       au < doNotProcess ; doNotProcess ; 2019 ; 2019 ; Mechanical Sciences Volume 10 ; 10 ; >
       au < finished ; frozen ; 2020 ; 2020 ; Mechanical Sciences Volume 11 ; 11 ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2021 ; 2021 ; Mechanical Sciences Volume 12 ; 12 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2022 ; 2022 ; Mechanical Sciences Volume 13 ; 13 ; >
+      au < finished ; manifest ; 2022 ; 2022 ; Mechanical Sciences Volume 13 ; 13 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; 2023 ; Mechanical Sciences Volume 14 ; 14 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Mechanical Sciences Volume 15 ; 15 ; >
       au < crawling ; exists ; 2025 ; 2025 ; Mechanical Sciences Volume 16 ; 16 ; >
