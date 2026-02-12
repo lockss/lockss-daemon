@@ -4135,9 +4135,36 @@
     >
 
     comment[journal_issn] = 0264-1615
-    param[journal_id] = ilr
+    param[journal_id] = idd
     #Published 1983-2016
 
+    au < exists ; 1983 ; 1983 ; Interlending & Document Supply Volume 11 ; 11 >
+    au < exists ; 1984 ; 1984 ; Interlending & Document Supply Volume 12 ; 12 >
+    au < exists ; 1985 ; 1985 ; Interlending & Document Supply Volume 13 ; 13 >
+    au < exists ; 1986 ; 1986 ; Interlending & Document Supply Volume 14 ; 14 >
+    au < exists ; 1987 ; 1987 ; Interlending & Document Supply Volume 15 ; 15 >
+    au < exists ; 1988 ; 1988 ; Interlending & Document Supply Volume 16 ; 16 >
+    au < exists ; 1989 ; 1989 ; Interlending & Document Supply Volume 17 ; 17 >
+    au < exists ; 1990 ; 1990 ; Interlending & Document Supply Volume 18 ; 18 >
+    au < exists ; 1991 ; 1991 ; Interlending & Document Supply Volume 19 ; 19 >
+    au < exists ; 1992 ; 1992 ; Interlending & Document Supply Volume 20 ; 20 >
+    au < exists ; 1993 ; 1993 ; Interlending & Document Supply Volume 21 ; 21 >
+    au < exists ; 1994 ; 1994 ; Interlending & Document Supply Volume 22 ; 22 >
+    au < exists ; 1995 ; 1995 ; Interlending & Document Supply Volume 23 ; 23 >
+    au < exists ; 1996 ; 1996 ; Interlending & Document Supply Volume 24 ; 24 >
+    au < exists ; 1997 ; 1997 ; Interlending & Document Supply Volume 25 ; 25 >
+    au < exists ; 1998 ; 1998 ; Interlending & Document Supply Volume 26 ; 26 >
+    au < exists ; 1999 ; 1999 ; Interlending & Document Supply Volume 27 ; 27 >
+    au < exists ; 2000 ; 2000 ; Interlending & Document Supply Volume 28 ; 28 >
+    au < exists ; 2001 ; 2001 ; Interlending & Document Supply Volume 29 ; 29 >
+    au < exists ; 2002 ; 2002 ; Interlending & Document Supply Volume 30 ; 30 >
+    au < exists ; 2003 ; 2003 ; Interlending & Document Supply Volume 31 ; 31 >
+    au < exists ; 2004 ; 2004 ; Interlending & Document Supply Volume 32 ; 32 >
+    au < exists ; 2005 ; 2005 ; Interlending & Document Supply Volume 33 ; 33 >
+    au < exists ; 2006 ; 2006 ; Interlending & Document Supply Volume 34 ; 34 >
+    au < exists ; 2007 ; 2007 ; Interlending & Document Supply Volume 35 ; 35 >
+    au < exists ; 2008 ; 2008 ; Interlending & Document Supply Volume 36 ; 36 >
+    au < exists ; 2009 ; 2009 ; Interlending & Document Supply Volume 37 ; 37 >
     au < doNotProcess ; 2010 ; 2010 ; Interlending & Document Supply Volume 38 ; 38 >
     au < doNotProcess ; 2011 ; 2011 ; Interlending & Document Supply Volume 39 ; 39 >
     au < doNotProcess ; 2012 ; 2012 ; Interlending & Document Supply Volume 40 ; 40 >
@@ -5138,7 +5165,7 @@
     >
 
     comment[journal_issn] = 1756-1450
-    param[journal_id] = ijlbe
+    param[journal_id] = jppel
     #continued_by = 2514-9407
 
     au < doNotProcess ; 2009 ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 >
@@ -5858,7 +5885,7 @@
     au < doNotProcess ; 2007 ; 2007 ; International Journal of Prisoner Health Volume 3 ; 3 >
     au < doNotProcess ; 2008 ; 2008 ; International Journal of Prisoner Health Volume 4 ; 4 >
     au < doNotProcess ; 2009 ; 2009 ; International Journal of Prisoner Health Volume 5 ; 5 >
-    au < doesNotExist ; 0 ; 0 ; International Journal of Prisoner Health Volume 6 ; 6 >
+    au < doesNotExist ; 2010 ; 2010 ; International Journal of Prisoner Health Volume 6 ; 6 >
     au < doNotProcess ; 2011 ; 2011 ; International Journal of Prisoner Health Volume 7 ; 7 >
     au < doNotProcess ; 2012 ; 2012 ; International Journal of Prisoner Health Volume 8 ; 8 >
     au < doNotProcess ; 2013 ; 2013 ; International Journal of Prisoner Health Volume 9 ; 9 >
@@ -6863,8 +6890,10 @@
     param[journal_id] = jaar
     # online from 2000
 
-    au < doNotProcess ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 5 ; 5 >
-    au < doNotProcess ; 2002 ; 2002 ; Journal of Applied Accounting Research Volume 6 ; 6 >
+    au < doNotProcess ; 1999 ; 1999 ; Journal of Applied Accounting Research Volume 5 [1999] ; 5 >
+    au < doNotProcess ; 2000 ; 2000 ; Journal of Applied Accounting Research Volume 5 [2000] ; 5 >
+    au < doNotProcess ; 2001 ; 2001 ; Journal of Applied Accounting Research Volume 6 [2001] ; 6 >
+    au < doNotProcess ; 2002 ; 2002 ; Journal of Applied Accounting Research Volume 6 [2002] ; 6 >
     au < doNotProcess ; 2005 ; 2005 ; Journal of Applied Accounting Research Volume 7 ; 7 >
     au < doNotProcess ; 2007 ; 2007 ; Journal of Applied Accounting Research Volume 8 ; 8 >
     au < doNotProcess ; 2008 ; 2008 ; Journal of Applied Accounting Research Volume 9 ; 9 >
@@ -14465,7 +14494,7 @@
     >
 
     comment[journal_issn] = 1464-6676
-    param[journal_id] = ijamc
+    param[journal_id] = yc
     #continued_by = 1747-3616
 
     au < doNotProcess ; 1999 ; 1999 ; International Journal of Advertising and Marketing to Children Volume 1 [1999] ; 1 >
@@ -14948,21 +14977,36 @@
     param[journal_id] = ijsms
 
     au < manifest ; 1999 ; 1999 ; International Journal of Sports Marketing and Sponsorship Volume 1 ; 1 >
-    #au < doNotProcess ; 2000-2001 ; International Journal of Sports Marketing and Sponsorship Volume 2 ; 2 >
-    #au < doNotProcess ; 2001-2002 ; International Journal of Sports Marketing and Sponsorship Volume 3 ; 3 >
-    #au < doNotProcess ; 2002-2003 ; International Journal of Sports Marketing and Sponsorship Volume 4 ; 4 >
-    #au < doNotProcess ; 2003-2004 ; International Journal of Sports Marketing and Sponsorship Volume 5 ; 5 >
-    #au < doNotProcess ; 2004-2005 ; International Journal of Sports Marketing and Sponsorship Volume 6 ; 6 >
-    #au < doNotProcess ; 2005-2006 ; International Journal of Sports Marketing and Sponsorship Volume 7 ; 7 >
-    #au < doNotProcess ; 2006-2007 ; International Journal of Sports Marketing and Sponsorship Volume 8 ; 8 >
-    #au < doNotProcess ; 2007-2008 ; International Journal of Sports Marketing and Sponsorship Volume 9 ; 9 >
-    #au < doNotProcess ; 2008-2009 ; International Journal of Sports Marketing and Sponsorship Volume 10 ; 10 >
-    #au < doNotProcess ; 2009-2010 ; International Journal of Sports Marketing and Sponsorship Volume 11 ; 11 >
-    #au < doNotProcess ; 2010-2011 ; International Journal of Sports Marketing and Sponsorship Volume 12 ; 12 >
-    #au < doNotProcess ; 2011-2012 ; International Journal of Sports Marketing and Sponsorship Volume 13 ; 13 >
-    #au < doNotProcess ; 2012-2013 ; International Journal of Sports Marketing and Sponsorship Volume 14 ; 14 >
-    #au < doNotProcess ; 2013-2014 ; International Journal of Sports Marketing and Sponsorship Volume 15 ; 15 >
-    #au < doNotProcess ; 2014-2015 ; International Journal of Sports Marketing and Sponsorship Volume 16 ; 16 >
+    au < doNotProcess ; 2000 ; 2000 ; International Journal of Sports Marketing and Sponsorship Volume 2 [2000] ; 2 >
+    au < doNotProcess ; 2001 ; 2001 ; International Journal of Sports Marketing and Sponsorship Volume 2 [2001] ; 2 >
+    au < doNotProcess ; 2001 ; 2001 ; International Journal of Sports Marketing and Sponsorship Volume 3 [2001] ; 3 >
+    au < doNotProcess ; 2002 ; 2002 ; International Journal of Sports Marketing and Sponsorship Volume 3 [2002] ; 3 >
+    au < doNotProcess ; 2002 ; 2002 ; International Journal of Sports Marketing and Sponsorship Volume 4 [2002] ; 4 >
+    au < doNotProcess ; 2003 ; 2003 ; International Journal of Sports Marketing and Sponsorship Volume 4 [2003] ; 4 >
+    au < doNotProcess ; 2003 ; 2003 ; International Journal of Sports Marketing and Sponsorship Volume 5 [2003] ; 5 >
+    au < doNotProcess ; 2004 ; 2004 ; International Journal of Sports Marketing and Sponsorship Volume 5 [2004] ; 5 >
+    au < doNotProcess ; 2004 ; 2004 ; International Journal of Sports Marketing and Sponsorship Volume 6 [2004] ; 6 >
+    au < doNotProcess ; 2005 ; 2005 ; International Journal of Sports Marketing and Sponsorship Volume 6 [2005] ; 6 >
+    au < doNotProcess ; 2005 ; 2005 ; International Journal of Sports Marketing and Sponsorship Volume 7 [2005] ; 7 >
+    au < doNotProcess ; 2006 ; 2006 ; International Journal of Sports Marketing and Sponsorship Volume 7 [2006] ; 7 >
+    au < doNotProcess ; 2006 ; 2006 ; International Journal of Sports Marketing and Sponsorship Volume 8 [2006] ; 8 >
+    au < doNotProcess ; 2007 ; 2007 ; International Journal of Sports Marketing and Sponsorship Volume 8 [2007] ; 8 >
+    au < doNotProcess ; 2007 ; 2007 ; International Journal of Sports Marketing and Sponsorship Volume 9 [2007] ; 9 >
+    au < doNotProcess ; 2008 ; 2008 ; International Journal of Sports Marketing and Sponsorship Volume 9 [2008] ; 9 >
+    au < doNotProcess ; 2008 ; 2008 ; International Journal of Sports Marketing and Sponsorship Volume 10 [2008] ; 10 >
+    au < doNotProcess ; 2009 ; 2009 ; International Journal of Sports Marketing and Sponsorship Volume 10 [2009] ; 10 >
+    au < doNotProcess ; 2009 ; 2009 ; International Journal of Sports Marketing and Sponsorship Volume 11 [2009] ; 11 >
+    au < doNotProcess ; 2010 ; 2010 ; International Journal of Sports Marketing and Sponsorship Volume 11 [2010] ; 11 >
+    au < doNotProcess ; 2010 ; 2010 ; International Journal of Sports Marketing and Sponsorship Volume 12 [2010] ; 12 >
+    au < doNotProcess ; 2011 ; 2011 ; International Journal of Sports Marketing and Sponsorship Volume 12 [2011] ; 12 >
+    au < doNotProcess ; 2011 ; 2011 ; International Journal of Sports Marketing and Sponsorship Volume 13 [2011] ; 13 >
+    au < doNotProcess ; 2012 ; 2012 ; International Journal of Sports Marketing and Sponsorship Volume 13 [2012] ; 13 >
+    au < doNotProcess ; 2012 ; 2012 ; International Journal of Sports Marketing and Sponsorship Volume 14 [2012] ; 14 >
+    au < doNotProcess ; 2013 ; 2013 ; International Journal of Sports Marketing and Sponsorship Volume 14 [2013] ; 14 >
+    au < doNotProcess ; 2013 ; 2013 ; International Journal of Sports Marketing and Sponsorship Volume 15 [2013] ; 15 >
+    au < doNotProcess ; 2014 ; 2014 ; International Journal of Sports Marketing and Sponsorship Volume 15 [2014] ; 15 >
+    au < doNotProcess ; 2014 ; 2014 ; International Journal of Sports Marketing and Sponsorship Volume 16 [2014] ; 16 >
+    au < doNotProcess ; 2015 ; 2015 ; International Journal of Sports Marketing and Sponsorship Volume 16 [2015] ; 16 >
     au < doNotProcess ; 2016 ; 2016 ; International Journal of Sports Marketing and Sponsorship Volume 17 ; 17 >
     au < doNotProcess ; 2017 ; 2017 ; International Journal of Sports Marketing and Sponsorship Volume 18 ; 18 >
     au < doNotProcess ; 2018 ; 2018 ; International Journal of Sports Marketing and Sponsorship Volume 19 ; 19 >
