@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Lusail University Press ;
+    info[contract] = 2026 ;
+    info[tester] = S ;
+    info[platform] = Source. See LXPUB-1397
+  >
+  hidden[proxy] = DIRECT
+
+  {
+    title < 
+      name = Lusail University Press Source Content
+    >
+
+    plugin = needs.plugin
+    implicit < status ; status2 ; year ; name ; param[directory] >
+
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/XXXXX-released/
+
+      au < expected ; exists ; 2026 ; Lusail University Press Source Content 2026_01 ; 2026_01 >
+
+
+  }
+
+}
