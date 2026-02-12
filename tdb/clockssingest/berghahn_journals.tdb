@@ -407,7 +407,7 @@
     au < finished ; manifest ; 2007 ; Durkheimian Studies Volume 13 ; 13 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; Durkheimian Studies Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2009 ; Durkheimian Studies Volume 15 ; 15 ; >
-    au < ready ; exists ; 2010 ; Durkheimian Studies Volume 16 ; 16 ; >
+    au < crawling ; exists ; 2010 ; Durkheimian Studies Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Durkheimian Studies Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Durkheimian Studies Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Durkheimian Studies Volume 19 ; 19 ; >
@@ -1146,7 +1146,7 @@
     #param[journal_issn] = 1357-1559
 
     au < frozen ; exists ; 1997 ; Sartre Studies International Volume 3 ; 3 ; >
-    au < ready ; exists ; 1998 ; Sartre Studies International Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1998 ; Sartre Studies International Volume 4 ; 4 ; >
     au < frozen ; exists ; 1999 ; Sartre Studies International Volume 5 ; 5 ; >
     au < ready ; exists ; 2000 ; Sartre Studies International Volume 6 ; 6 ; >
     au < testing ; exists ; 2001 ; Sartre Studies International Volume 7 ; 7 ; >
