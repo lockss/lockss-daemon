@@ -74,7 +74,7 @@ public class UbiquityPartnerNetworkHtmlLinkExtractorFactory implements LinkExtra
                                                                 + ")?"
                                                                 + "([ \\t\\n\\r\\f]*)");
 
-        public static final Pattern htmlPat = Pattern.compile("/files/submission/proof/.*\\.html");
+        public static final Pattern htmlPat = Pattern.compile("/files/(submission/proof/.*|[a-z0-9]+)\\.html");
       
         @Override
         protected String extractLinkFromTag(StringBuffer link,
