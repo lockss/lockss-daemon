@@ -48,11 +48,12 @@ import org.lockss.util.PreOrderComparator;
  * Comparable is implemented to allow for an ordering of artifacts.
  */
 public class ArtifactIdentifier implements Serializable, Comparable<ArtifactIdentifier> {
+
   private String artifactId;
-    private String namespace;
-    private String auid;
-    private String uri;
-    private Integer version;
+  private String namespace;
+  private String auid;
+  private String uri;
+  private Integer version;
 
   public ArtifactIdentifier(String namespace, String auid, String uri, Integer version) {
     this(null, namespace, auid, uri, version);

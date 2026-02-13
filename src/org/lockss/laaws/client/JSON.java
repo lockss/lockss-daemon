@@ -66,6 +66,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import okio.ByteString;
+import org.lockss.util.Logger;
 
 /*
  * A JSON utility class
@@ -74,6 +75,8 @@ import okio.ByteString;
  *       backward-compatibility
  */
 public class JSON {
+  private static Logger log = Logger.getLogger("JSON");
+
   private static Gson gson;
   private static boolean isLenientOnJson = false;
   private static DateTypeAdapter dateTypeAdapter = new DateTypeAdapter();
@@ -117,8 +120,9 @@ public class JSON {
     return clazz;
   }
 
-  {
+  static {
     GsonBuilder gsonBuilder = createGson();
+    gsonBuilder.serializeNulls(); // add this to allow for passing null values
     gsonBuilder.registerTypeAdapter(Date.class, dateTypeAdapter);
     gsonBuilder.registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter);
     gsonBuilder.registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter);
@@ -141,7 +145,10 @@ public class JSON {
     gsonBuilder.registerTypeAdapterFactory(
         new org.lockss.laaws.model.rs.RepositoryInfo.CustomTypeAdapterFactory());
     gsonBuilder.registerTypeAdapterFactory(
+        new org.lockss.laaws.model.rs.RepositoryStatistics.CustomTypeAdapterFactory());
+    gsonBuilder.registerTypeAdapterFactory(
         new org.lockss.laaws.model.rs.StorageInfo.CustomTypeAdapterFactory());
+    gsonBuilder.disableHtmlEscaping();
     gson = gsonBuilder.create();
   }
 
@@ -230,6 +237,12 @@ public class JSON {
         default:
           String bytesAsBase64 = in.nextString();
           ByteString byteString = ByteString.decodeBase64(bytesAsBase64);
+          if (byteString == null) {
+            log.warning("Invalid base64 string: \""
+                        + org.lockss.util.StringUtil.elideMiddleToMaxLen(bytesAsBase64, 30)
+                        + "\", returning null byte array");
+            return null;
+          }
           return byteString.toByteArray();
       }
     }
@@ -258,7 +271,9 @@ public class JSON {
       if (date == null) {
         out.nullValue();
       } else {
-        out.value(formatter.format(date));
+        // add null check
+        DateTimeFormatter fmt = (formatter != null) ? formatter : DateTimeFormatter.ISO_OFFSET_DATE_TIME;
+        out.value(fmt.format(date));
       }
     }
 
@@ -273,7 +288,9 @@ public class JSON {
           if (date.endsWith("+0000")) {
             date = date.substring(0, date.length() - 5) + "Z";
           }
-          return OffsetDateTime.parse(date, formatter);
+          // add null check
+          DateTimeFormatter fmt = (formatter != null) ? formatter : DateTimeFormatter.ISO_OFFSET_DATE_TIME;
+          return OffsetDateTime.parse(date, fmt);
       }
     }
   }
@@ -301,7 +318,9 @@ public class JSON {
       if (date == null) {
         out.nullValue();
       } else {
-        out.value(formatter.format(date));
+        // add null check
+        DateTimeFormatter fmt = (formatter != null) ? formatter : DateTimeFormatter.ISO_LOCAL_DATE;
+        out.value(fmt.format(date));
       }
     }
 
@@ -313,7 +332,9 @@ public class JSON {
           return null;
         default:
           String date = in.nextString();
-          return LocalDate.parse(date, formatter);
+          // add null check
+          DateTimeFormatter fmt = (formatter != null) ? formatter : DateTimeFormatter.ISO_LOCAL_DATE;
+          return LocalDate.parse(date, fmt);
       }
     }
   }
