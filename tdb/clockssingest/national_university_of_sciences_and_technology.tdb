@@ -34,6 +34,7 @@
       au < finished ; manifest ; 2023 ; NUST Journal of Social Sciences and Humanities Volume 2023 ; 9 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; NUST Journal of Social Sciences and Humanities Volume 2024 ; 10 ; 2024 ; >
       au < crawling ; exists ; 2025 ; NUST Journal of Social Sciences and Humanities Volume 2025 ; 11 ; 2025 ; >
+      au < expected ; exists ; 2026 ; NUST Journal of Social Sciences and Humanities Volume 2026 ; 12 ; 2026 ; >
 
   }
 
@@ -66,6 +67,7 @@
       au < finished ; manifest ; 2023 ; NUST Journal of Engineering Sciences Volume 2023 ; 16 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; NUST Journal of Engineering Sciences Volume 2024 ; 17 ; 2024 ; >
       au < notReady ; exists ; 2025 ; NUST Journal of Engineering Sciences Volume 2025 ; 18 ; 2025 ; > #0 mdata, 0 article
+      au < expected ; exists ; 2026 ; NUST Journal of Engineering Sciences Volume 2026 ; 19 ; 2026 ; > #0 mdata, 0 article
 
   }
 
@@ -87,6 +89,7 @@
       au < finished ; manifest ; 2023 ; NUST Business Review Volume 2023 ; 5 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; NUST Business Review Volume 2024 ; 6 ; 2024 ; >
       au < crawling ; exists ; 2025 ; NUST Business Review Volume 2025 ; 7 ; 2025 ; >
+      au < expected ; exists ; 2026 ; NUST Business Review Volume 2026 ; 8 ; 2026 ; >
 
   }
 
@@ -110,6 +113,7 @@
       au < doesNotExist ; doesNotExist ; 2023 ; NUST Journal of International Peace and Stability Volume 2023 ; 7 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; NUST Journal of International Peace and Stability Volume 2024 ; 8 ; 2024 ; >
       au < expected ; exists ; 2025 ; NUST Journal of International Peace and Stability Volume 2025 ; 9 ; 2025 ; >
+      au < expected ; exists ; 2026 ; NUST Journal of International Peace and Stability Volume 2026 ; 10 ; 2026 ; >
 
   }
 

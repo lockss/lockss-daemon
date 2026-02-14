@@ -21,6 +21,7 @@
       param[journal_abbr] = journal
 
       au < crawling ; exists ; 2025 ; Al-Farahidi Expert Systems Journal Volume 1 ; 1 ; >
+      au < expected ; exists ; 2026 ; Al-Farahidi Expert Systems Journal Volume 2 ; 2 ; >
 
   }
 

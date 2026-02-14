@@ -63,6 +63,7 @@
     au < exists ; exists ; 2023 ; Against the Grain Volume 35 ; 35 ; https://docs.lib.purdue.edu/ ; >
     au < exists ; exists ; 2024 ; Against the Grain Volume 36 ; 36 ; https://docs.lib.purdue.edu/ ; >
     au < exists ; exists ; 2025 ; Against the Grain Volume 37 ; 37 ; https://docs.lib.purdue.edu/ ; >
+    au < expected ; expected ; 2026 ; Against the Grain Volume 38 ; 38 ; https://docs.lib.purdue.edu/ ; >
 
   }
   
@@ -105,6 +106,7 @@
     au < deepCrawl ; exists ; 2023 ; CLCWeb: Comparative Literature and Culture Volume 25 ; 25 ; https://docs.lib.purdue.edu/ ; >
     au < deepCrawl ; exists ; 2024 ; CLCWeb: Comparative Literature and Culture Volume 26 ; 26 ; https://docs.lib.purdue.edu/ ; >
     au < expected ; exists ; 2025 ; CLCWeb: Comparative Literature and Culture Volume 27 ; 27 ; https://docs.lib.purdue.edu/ ; >
+    au < expected ; exists ; 2026 ; CLCWeb: Comparative Literature and Culture Volume 28 ; 28 ; https://docs.lib.purdue.edu/ ; >
 
   }
 
@@ -178,6 +180,7 @@
     au < deepCrawl ; exists ; 2023 ; Journal of Applied Farm Economics Volume 6 ; 6 ; https://docs.lib.purdue.edu/ ; >
     au < frozen ; exists ; 2024 ; Journal of Applied Farm Economics Volume 7 ; 7 ; https://docs.lib.purdue.edu/ ; >
     au < ready ; exists ; 2025 ; Journal of Applied Farm Economics Volume 8 ; 8 ; https://docs.lib.purdue.edu/ ; >
+    au < expected ; exists ; 2026 ; Journal of Applied Farm Economics Volume 9 ; 9 ; https://docs.lib.purdue.edu/ ; >
 
   }
   
@@ -208,6 +211,7 @@
     au < frozen ; exists ; 2023 ; Journal of Aviation Technology and Engineering Volume 13 ; 13 ; https://docs.lib.purdue.edu/ ; >
     au < frozen ; exists ; 2024 ; Journal of Aviation Technology and Engineering Volume 14 ; 14 ; https://docs.lib.purdue.edu/ ; >
     au < crawling ; exists ; 2025 ; Journal of Aviation Technology and Engineering Volume 15 ; 15 ; https://docs.lib.purdue.edu/ ; >
+    au < expected ; exists ; 2026 ; Journal of Aviation Technology and Engineering Volume 16 ; 16 ; https://docs.lib.purdue.edu/ ; >
 
   }
   
@@ -240,6 +244,7 @@
     au < frozen ; exists ; 2023 ; Journal of Human Performance in Extreme Environments Volume 19 ; 19 ; https://docs.lib.purdue.edu/ ; >
     au < frozen ; exists ; 2024 ; Journal of Human Performance in Extreme Environments Volume 20 ; 20 ; https://docs.lib.purdue.edu/ ; >
     au < expected ; exists ; 2025 ; Journal of Human Performance in Extreme Environments Volume 21 ; 21 ; https://docs.lib.purdue.edu/ ; >
+    au < expected ; exists ; 2026 ; Journal of Human Performance in Extreme Environments Volume 22 ; 22 ; https://docs.lib.purdue.edu/ ; >
 
   }
 
@@ -270,6 +275,7 @@
     au < deepCrawl ; exists ; 2023 ; Journal of Pre-College Engineering Education Research Volume 13 ; 13 ; https://docs.lib.purdue.edu/ ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Pre-College Engineering Education Research Volume 14 ; 14 ; https://docs.lib.purdue.edu/ ; >
     au < crawling ; exists ; 2025 ; Journal of Pre-College Engineering Education Research Volume 15 ; 15 ; https://docs.lib.purdue.edu/ ; >
+    au < expected ; exists ; 2026 ; Journal of Pre-College Engineering Education Research Volume 16 ; 16 ; https://docs.lib.purdue.edu/ ; >
 
   }
 
@@ -333,6 +339,7 @@
     au < deepCrawl ; exists ; 2023 ; Journal of Southeast Asian American Education and Advancement Volume 18 ; 18 ; https://docs.lib.purdue.edu/ ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Southeast Asian American Education and Advancement Volume 19 ; 19 ; https://docs.lib.purdue.edu/ ; >
     au < crawling ; exists ; 2025 ; Journal of Southeast Asian American Education and Advancement Volume 20 ; 20 ; https://docs.lib.purdue.edu/ ; >
+    au < expected ; exists ; 2026 ; Journal of Southeast Asian American Education and Advancement Volume 21 ; 21 ; https://docs.lib.purdue.edu/ ; >
 
   }
   #JTRP Technical Reports handled in purdue_university_press.source.tdb as WARC  

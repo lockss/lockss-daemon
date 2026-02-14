@@ -35,6 +35,7 @@
     au < doesNotExist ; doesNotExist ; 2023 ; 13 ; The Comics Grid Volume 2023 ; 2023 ; >
     au < deepCrawl ; exists ; 2024 ; 14 ; The Comics Grid Volume 2024 ; 2024 ; >
     au < crawling ; exists ; 2025 ; 15 ; The Comics Grid Volume 2025 ; 2025 ; >
+    au < expected ; exists ; 2026 ; 16 ; The Comics Grid Volume 2026 ; 2026 ; >
 
   }
 
@@ -61,6 +62,7 @@
       au < deepCrawl ; exists ; 2023 ; 12 ; Orbit: A Journal of American Literature Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 13 ; Orbit: A Journal of American Literature Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 14 ; Orbit: A Journal of American Literature Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 15 ; Orbit: A Journal of American Literature Volume 2026 ; 2026 ; >
 
   }
 
@@ -122,6 +124,7 @@
          au < frozen ; exists ; 2023 ; 11 ; C21 Literature: journal of 21st-century writings Volume 2023 ; 2023 ; >
          au < frozen ; exists ; 2024 ; 12 ; C21 Literature: journal of 21st-century writings Volume 2024 ; 2024 ; >
          au < crawling ; exists ; 2025 ; 13 ; C21 Literature: journal of 21st-century writings Volume 2025 ; 2025 ; >
+         au < expected ; exists ; 2026 ; 14 ; C21 Literature: journal of 21st-century writings Volume 2026 ; 2026 ; >
 
   }
 
@@ -155,6 +158,7 @@
         au < frozen ; exists ; 2023 ; 34-35 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 34-35 ; 2023 ; >
         au < finished ; manifest ; 2024 ; 36 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 36 ; 2024 ; reingest5.clockss.org:8082 >
         au < crawling ; exists ; 2025 ; 37 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 37 ; 2025 ; >
+        au < expected ; exists ; 2026 ; 38 ; 19: Interdisciplinary Studies in the Long Nineteenth Century Issue 38 ; 2026 ; >
   }
 
   {
@@ -203,6 +207,7 @@
         au < deepCrawl ; exists ; 2023 ; 15 ; Journal of British and Irish Innovative Poetry Volume 2023 ; 2023 ; >
         au < deepCrawl ; exists ; 2024 ; 16 ; Journal of British and Irish Innovative Poetry Volume 2024 ; 2024 ; >
         au < crawling ; exists ; 2025 ; 17 ; Journal of British and Irish Innovative Poetry Volume 2025 ; 2025 ; >
+        au < expected ; exists ; 2026 ; 18 ; Journal of British and Irish Innovative Poetry Volume 2026 ; 2026 ; >
 
   }
 
@@ -249,6 +254,7 @@
         au < frozen ; exists ; 2023 ; 10 ; International Journal of Welsh Writing in English Volume 2023 ; 2023 ; >
         au < frozen ; exists ; 2024 ; 11 ; International Journal of Welsh Writing in English Volume 2024 ; 2024 ; >
         au < manifest ; exists ; 2025 ; 12 ; International Journal of Welsh Writing in English Volume 2025 ; 2025 ; >
+        au < expected ; exists ; 2026 ; 13 ; International Journal of Welsh Writing in English Volume 2026 ; 2026 ; >
 
   }
 
@@ -271,6 +277,7 @@
       au < deepCrawl ; exists ; 2023 ; 8 ; Marvell Studies Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 9 ; Marvell Studies Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 10 ; Marvell Studies Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 11 ; Marvell Studies Volume 2026 ; 2026 ; >
 
   }
 
@@ -296,6 +303,7 @@
       au < deepCrawl ; exists ; 2023 ; 9 ; Open Library of Humanities Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 10 ; Open Library of Humanities Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 11 ; Open Library of Humanities Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 12 ; Open Library of Humanities Volume 2026 ; 2026 ; >
 
   }
 
@@ -323,6 +331,7 @@
       au < finished ; manifest ; 2020 ; 12-13 ; Studies in the Maternal Volume 2020 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 14 ; Studies in the Maternal Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 15 ; Studies in the Maternal Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 16 ; Studies in the Maternal Volume 2026 ; 2026 ; >
 
   }
 
@@ -373,6 +382,7 @@
       au < finished ; manifest ; 2023 ; 33 ; Theoretical Roman Archaeology Journal Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 34 ; Theoretical Roman Archaeology Journal Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 35 ; Theoretical Roman Archaeology Journal Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 36 ; Theoretical Roman Archaeology Journal Volume 2026 ; 2026 ; >
 
   }
 
@@ -393,6 +403,7 @@
       au < deepCrawl ; exists ; 2023 ; 11 ; ZFF: Zeitschrift für Fantastikforschung Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 12 ; ZFF: Zeitschrift für Fantastikforschung Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 13 ; ZFF: Zeitschrift für Fantastikforschung Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 14 ; ZFF: Zeitschrift für Fantastikforschung Volume 2026 ; 2026 ; >
 
   }
 
@@ -418,6 +429,7 @@
       au < deepCrawl ; exists ; 2023 ; 7 ; The Parish Review Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 8 ; The Parish Review Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 9 ; The Parish Review Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 10 ; The Parish Review Volume 2026 ; 2026 ; >
 
   }
 
@@ -448,6 +460,7 @@
       au < deepCrawl ; exists ; 2022 ; 28 ; ASIANetwork Exchange Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 28 ; ASIANetwork Exchange Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2025 ; 29 ; ASIANetwork Exchange Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 30 ; ASIANetwork Exchange Volume 2026 ; 2026 ; >
 
   }
 
@@ -471,6 +484,7 @@
       au < notReady ; exists ; 2023 ; 8 ; Glossa: a journal of general linguistics Volume 2023 ; 2023 ; > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5823/galley/23046/download/
       au < deepCrawl ; exists ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 10 ; Glossa: a journal of general linguistics Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 11 ; Glossa: a journal of general linguistics Volume 2026 ; 2026 ; >
 
   }
 
@@ -492,6 +506,7 @@
       au < deepCrawl ; exists ; 2023 ; 6 ; Open Screens Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 7 ; Open Screens Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 8 ; Open Screens Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 9 ; Open Screens Volume 2026 ; 2026 ; >
 
   }
 
@@ -533,6 +548,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Body, Space & Technology Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Body, Space & Technology Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 2025 ; Body, Space & Technology Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Body, Space & Technology Volume 2026 ; 2026 ; >
 
   }
 
@@ -568,6 +584,7 @@
       au < finished ; manifest ; 2023 ; 19 ; Digital Medievalist Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 20 ; Digital Medievalist Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 21 ; Digital Medievalist Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 22 ; Digital Medievalist Volume 2026 ; 2026 ; >
 
   }
 
@@ -597,6 +614,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Digital Studies / Le champ numérique Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Digital Studies / Le champ numérique Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 2025 ; Digital Studies / Le champ numérique Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Digital Studies / Le champ numérique Volume 2026 ; 2026 ; >
 
   }
 
@@ -622,6 +640,7 @@
       au < deepCrawl ; exists ; 2023 ; 9 ; Genealogy+Critique Volume 9 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 10 ; Genealogy+Critique Volume 10 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 11 ; Genealogy+Critique Volume 11 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 12 ; Genealogy+Critique Volume 12 ; 2026 ; >
 
   }
 
@@ -663,6 +682,7 @@
       au < frozen ; exists ; 2023 ; 6 ; Journal of Embodied Research Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 7 ; Journal of Embodied Research Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 8 ; Journal of Embodied Research Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 9 ; Journal of Embodied Research Volume 2026 ; 2026 ; >
 
   }
 
@@ -689,6 +709,7 @@
       au < deepCrawl ; exists ; 2023 ; 11 ; Architectural Histories Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 12 ; Architectural Histories Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 13 ; Architectural Histories Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 14 ; Architectural Histories Volume 2026 ; 2026 ; >
 
   }
 
@@ -714,6 +735,7 @@
       au < deepCrawl ; exists ; 2023 ; 9 ; Journal of Portuguese Linguistics Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 10 ; Journal of Portuguese Linguistics Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 11 ; Journal of Portuguese Linguistics Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 12 ; Journal of Portuguese Linguistics Volume 2026 ; 2026 ; >
 
   }
 
@@ -737,6 +759,7 @@
       au < deepCrawl ; exists ; 2023 ; 14 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2023 ; 2023 ; >
       au < notReady ; exists ; 2024 ; 15 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2024 ; 2024 ; > #LXQUEUE-1936, error starting https://www.journal-labphon.org/lockss?year=2024
       au < crawling ; exists ; 2025 ; 16 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 17 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2026 ; 2026 ; >
 
   }
 
@@ -759,6 +782,7 @@
       au < finished ; manifest ; 2022 ; 5 ; Lifewriting Annual Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023 ; 6 ; Lifewriting Annual Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2025 ; 7 ; Lifewriting Annual Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 8 ; Lifewriting Annual Volume 2026 ; 2026 ; >
 
   }
 

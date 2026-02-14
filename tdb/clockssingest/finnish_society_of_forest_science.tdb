@@ -36,6 +36,7 @@
     au < finished ; manifest ; 2023 ; Silva Fennica Volume 57 ; 57 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; Silva Fennica Volume 58 ; 58 ; >
     au < crawling ; exists ; 2025 ; Silva Fennica Volume 59 ; 59 ; >
+    au < expected ; exists ; 2026 ; Silva Fennica Volume 60 ; 60 ; >
 
   }
 
@@ -74,6 +75,7 @@
     au < finished ; manifest ; 2023 ; Dissertationes Forestales Volume 2023 ; 2023 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; Dissertationes Forestales Volume 2024 ; 2024 ; >
     au < crawling ; exists ; 2025 ; Dissertationes Forestales Volume 2025 ; 2025 ; >
+    au < expected ; exists ; 2026 ; Dissertationes Forestales Volume 2026 ; 2026 ; >
 
   }
   
@@ -122,5 +124,6 @@
     au < finished ; manifest ; 2023 ; Metsätieteen aikakauskirja vuosikerta 2023 ; 2023 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2024 ; Metsätieteen aikakauskirja vuosikerta 2024 ; 2024 ; >
     au < crawling ; exists ; 2025 ; Metsätieteen aikakauskirja vuosikerta 2025 ; 2025 ; >
+    au < expected ; exists ; 2026 ; Metsätieteen aikakauskirja vuosikerta 2026 ; 2026 ; >
   }
 }

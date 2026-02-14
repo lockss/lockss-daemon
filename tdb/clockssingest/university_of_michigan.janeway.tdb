@@ -135,6 +135,7 @@
       au < doNotProcess ; doNotProcess ; 2023 ; 129 ; Absinthe: World Literature in Translation Volume 2023 ; 2023 ; > # Volumes actually published in 2024.
       au < frozen ; exists ; 2024 ; 130 ; Absinthe: World Literature in Translation Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 131 ; Absinthe: World Literature in Translation Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 132 ; Absinthe: World Literature in Translation Volume 2026 ; 2026 ; >
 
   }
 
@@ -153,6 +154,7 @@
       au < frozen ; exists ; 2023 ; 54 ; Ars Orientalis Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 55 ; Ars Orientalis Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 56 ; Ars Orientalis Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 57 ; Ars Orientalis Volume 2026 ; 2026 ; >
 
   }
 
@@ -171,6 +173,7 @@
       au < frozen ; exists ; 2023 ; 2 ; Circus: Arts, Life and Sciences Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 3 ; Circus: Arts, Life and Sciences Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 4 ; Circus: Arts, Life and Sciences Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 5 ; Circus: Arts, Life and Sciences Volume 2026 ; 2026 ; >
 
   }
 
@@ -202,6 +205,7 @@
       au < frozen ; exists ; 2023 ; 42 ; Conversations Across the Field of Dance Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 43 ; Conversations Across the Field of Dance Volume 2024 ; 2024 ; >
       au < ready ; exists ; 2025 ; 44 ; Conversations Across the Field of Dance Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 45 ; Conversations Across the Field of Dance Volume 2026 ; 2026 ; >
 
   }
 
@@ -220,6 +224,7 @@
       au < frozen ; exists ; 2023 ; 3 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2023 ; 2023 ; >
       au < expected ; exists ; 2024 ; 4 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 5 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 6 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2026 ; 2026 ; >
 
   }
 
@@ -239,6 +244,7 @@
       au < doNotProcess ; exists ; 2014 ; 4 ; Deaf Studies Digital Journal Volume 2014 ; 2014 ; >
       au < doNotProcess ; exists ; 2020 ; 5 ; Deaf Studies Digital Journal Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2025 ; 6 ; Deaf Studies Digital Journal Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 7 ; Deaf Studies Digital Journal Volume 2026 ; 2026 ; >
 
   }
 
@@ -286,6 +292,7 @@
       au < manifest ; exists ; 2023 ; 10 ; Ergo Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 11 ; Ergo Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 12 ; Ergo Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 13 ; Ergo Volume 2026 ; 2026 ; >
 
   }
 
@@ -305,6 +312,7 @@
       au < manifest ; exists ; 2023 ; 47 ; Film Criticism Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 48 ; Film Criticism Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 48 ; Film Criticism Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 49 ; Film Criticism Volume 2026 ; 2026 ; >
 
   }
 
@@ -347,6 +355,7 @@
       au < frozen ; exists ; 2023 ; 26 ; Journal of Electronic Publishing Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 27 ; Journal of Electronic Publishing Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 28 ; Journal of Electronic Publishing Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 29 ; Journal of Electronic Publishing Volume 2026 ; 2026 ; >
 
   }
 
@@ -365,6 +374,7 @@
       au < frozen ; exists ; 2023 ; 10 ; Media Industries Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 11 ; Media Industries Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 12 ; Media Industries Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 13 ; Media Industries Volume 2026 ; 2026 ; >
 
   }
 
@@ -410,6 +420,7 @@
       au < frozen ; exists ; 2023 ; 29 ; Michigan Journal of Community Service Learning Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 30 ; Michigan Journal of Community Service Learning Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 31 ; Michigan Journal of Community Service Learning Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 32 ; Michigan Journal of Community Service Learning Volume 2026 ; 2026 ; >
 
   }
 
@@ -428,6 +439,7 @@
       au < frozen ; exists ; 2023 ; 7 ; Michigan Journal of Medicine Volume 2023 ; 2023 ; > #2023 content is dated 2024
       au < frozen ; exists ; 2024 ; 8 ; Michigan Journal of Medicine Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 8 ; Michigan Journal of Medicine Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 9 ; Michigan Journal of Medicine Volume 2026 ; 2026 ; >
 
   }
 
@@ -460,6 +472,7 @@
       au < frozen ; exists ; 2023 ; 17 ; Music & Politics Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 18 ; Music & Politics Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 19 ; Music & Politics Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 20 ; Music & Politics Volume 2026 ; 2026 ; >
 
   }
 
@@ -513,6 +526,7 @@
       au < frozen ; exists ; 2023 ; 38 ; NASIG Proceedings Volume 2023 ; 2023 ; > #2023 content dated 2024
       au < frozen ; exists ; 2024 ; 39 ; NASIG Proceedings Volume 2024 ; 2024 ; > #2024 content dated 2025
       au < crawling ; exists ; 2025 ; 40 ; NASIG Proceedings Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 41 ; NASIG Proceedings Volume 2026 ; 2026 ; >
 
   }
 
@@ -528,6 +542,7 @@
 
       au < frozen ; exists ; 2024 ; 36 ; Performing Arts Resources Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 37 ; Performing Arts Resources Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 38 ; Performing Arts Resources Volume 2026 ; 2026 ; >
 
   }
 
@@ -566,6 +581,7 @@
       au < frozen ; exists ; 2023 ; 23 ; Philosophers' Imprint Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 24 ; Philosophers' Imprint Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 25 ; Philosophers' Imprint Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 26 ; Philosophers' Imprint Volume 2026 ; 2026 ; >
 
   }
 
@@ -597,6 +613,7 @@
       au < frozen ; exists ; 2023 ; 15 ; Philosophy, Theory, and Practice in Biology Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 16 ; Philosophy, Theory, and Practice in Biology Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 17 ; Philosophy, Theory, and Practice in Biology Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 18 ; Philosophy, Theory, and Practice in Biology Volume 2026 ; 2026 ; >
 
   }
 
@@ -641,6 +658,7 @@
       au < frozen ; exists ; 2023 ; 28 ; Saksaha: A Journal of Manchu Studies Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 29 ; Saksaha: A Journal of Manchu Studies Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 30 ; Saksaha: A Journal of Manchu Studies Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 31 ; Saksaha: A Journal of Manchu Studies Volume 2026 ; 2026 ; >
 
   }
 
@@ -659,6 +677,7 @@
       au < manifest ; exists ; 2023 ; 8 ; Ticker: The Academic Business Librarianship Review Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 9 ; Ticker: The Academic Business Librarianship Review Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 10 ; Ticker: The Academic Business Librarianship Review Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 11 ; Ticker: The Academic Business Librarianship Review Volume 2026 ; 2026 ; >
 
   }
 
@@ -717,6 +736,7 @@
       au < frozen ; exists ; 2023 ; 42 ; To Improve the Academy: A Journal of Educational Development Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 43 ; To Improve the Academy: A Journal of Educational Development Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 44 ; To Improve the Academy: A Journal of Educational Development Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 45 ; To Improve the Academy: A Journal of Educational Development Volume 2026 ; 2026 ; >
 
   }
 
@@ -743,6 +763,7 @@
       au < doesNotExist ; doesNotExist ; 2023 ; 11 ; Translating the Americas Volume 2023 ; 2023 ; >
       au < doesNotExist ; doesNotExist ; 2024 ; 12 ; Translating the Americas Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 13 ; Translating the Americas Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 14 ; Translating the Americas Volume 2026 ; 2026 ; >
 
   }
 
@@ -760,6 +781,7 @@
       au < frozen ; exists ; 2023 ; 7 ; Undergraduate Journal of Public Health Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 8 ; Undergraduate Journal of Public Health Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 9 ; Undergraduate Journal of Public Health Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 10 ; Undergraduate Journal of Public Health Volume 2026 ; 2026 ; >
 
   }
 
@@ -780,6 +802,7 @@
       au < frozen ; exists ; 2023 ; 16 ; University of Michigan Undergraduate Research Journal Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 17 ; University of Michigan Undergraduate Research Journal Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 18 ; University of Michigan Undergraduate Research Journal Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 19 ; University of Michigan Undergraduate Research Journal Volume 2026 ; 2026 ; >
 
   }
 
@@ -805,6 +828,7 @@
       au < manifest ; exists ; 2023 ; 6 ; Weave: Journal of Library User Experience Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 7 ; Weave: Journal of Library User Experience Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 8 ; Weave: Journal of Library User Experience Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 9 ; Weave: Journal of Library User Experience Volume 2026 ; 2026 ; >
 
   }
 
@@ -871,6 +895,7 @@
       au < doesNotExist ; doesNotExist ; 2023 ; 50 ; Journal of the Western Society for French History Volume 2023 ; 2023 ; > #2023 content dated 2024
       au < frozen ; exists ; 2024 ; 51 ; Journal of the Western Society for French History Volume 2024 ; 2024 ; >
       au < doesNotExist ; doesNotExist ; 2025 ; 52 ; Journal of the Western Society for French History Volume 2025 ; 2025 ; >
+      au < expected ; expected ; 2026 ; 53 ; Journal of the Western Society for French History Volume 2026 ; 2026 ; >
 
   }
 
@@ -890,6 +915,7 @@
       au < frozen ; exists ; 2023 ; 3 ; Global Storytelling: Journal of Digital and Moving Images Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 4 ; Global Storytelling: Journal of Digital and Moving Images Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 5 ; Global Storytelling: Journal of Digital and Moving Images Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 6 ; Global Storytelling: Journal of Digital and Moving Images Volume 2026 ; 2026 ; >
 
   }
 
@@ -908,6 +934,7 @@
       au < frozen ; exists ; 2023 ; 62 ; The Great Lakes Botanist Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 63 ; The Great Lakes Botanist Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 64 ; The Great Lakes Botanist Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 65 ; The Great Lakes Botanist Volume 2026 ; 2026 ; >
 
   }
 
@@ -924,6 +951,7 @@
 
       au < doesNotExist ; doesNotExist ; 2024 ; 66 ; Journal of Glass Studies Volume 2024 ; 2024 ; > #2024 content dated 2025
       au < crawling ; exists ; 2025 ; 66 ; Journal of Glass Studies Volume 2025 ; 2025 ; > #2024 content dated 2025
+      au < expected ; exists ; 2026 ; 67 ; Journal of Glass Studies Volume 2026 ; 2026 ; > #2024 content dated 2026
 
   }
 
@@ -943,6 +971,7 @@
       au < frozen ; exists ; 2023 ; 17 ; Journal of Muslim Mental Health Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 18 ; Journal of Muslim Mental Health Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 19 ; Journal of Muslim Mental Health Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 20 ; Journal of Muslim Mental Health Volume 2026 ; 2026 ; >
 
   }
 
@@ -962,6 +991,7 @@
       au < frozen ; exists ; 2023 ; 11 ; Journal of Practical Ethics Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; 12 ; Journal of Practical Ethics Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 13 ; Journal of Practical Ethics Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 14 ; Journal of Practical Ethics Volume 2026 ; 2026 ; >
 
   }
 
@@ -976,6 +1006,7 @@
       param[journal_id] = bmit
 
       au < manifest ; exists ; 2025 ; 1 ; Black Music, In Theory Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; 2 ; Black Music, In Theory Volume 2026 ; 2026 ; >
 
   }
 
