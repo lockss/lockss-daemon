@@ -76,6 +76,8 @@
       au < released ; 2024 ; 2024 ; AAP Grand Rounds Volume 52 ; 52 > 
       au < manifest ; 2025 ; 2025 ; AAP Grand Rounds Volume 53 ; 53 > 
       au < manifest ; 2025 ; 2025 ; AAP Grand Rounds Volume 54 ; 54 > 
+      au < expected ; 2026 ; 2026 ; AAP Grand Rounds Volume 55 ; 55 > 
+      au < expected ; 2026 ; 2026 ; AAP Grand Rounds Volume 56 ; 56 > 
 
     }
 
@@ -166,6 +168,7 @@
       au < released ; 2023 ; 2023 ; Hospital Pediatrics Volume 13 ; 13 >
       au < released ; 2024 ; 2024 ; Hospital Pediatrics Volume 14 ; 14 >
       au < manifest ; 2025 ; 2025 ; Hospital Pediatrics Volume 15 ; 15 >
+      au < expected ; 2026 ; 2026 ; Hospital Pediatrics Volume 16 ; 16 >
 
     }
     
@@ -209,6 +212,7 @@
       au < released ; 2023 ; 2023 ; NeoReviews Volume 24 ; 24 >
       au < released ; 2024 ; 2024 ; NeoReviews Volume 25 ; 25 >
       au < manifest ; 2025 ; 2025 ; NeoReviews Volume 26 ; 26 >
+      au < expected ; 2026 ; 2026 ; NeoReviews Volume 27 ; 27 >
 
     }
 
@@ -383,6 +387,8 @@
       au < manifest ; 2024 ; 2024 ; Pediatrics Volume 154 ; 154 >
       au < manifest ; 2025 ; 2025 ; Pediatrics Volume 155 ; 155 >
       au < manifest ; 2025 ; 2025 ; Pediatrics Volume 156 ; 156 >
+      au < expected ; 2026 ; 2026 ; Pediatrics Volume 157 ; 157 >
+      au < expected ; 2026 ; 2026 ; Pediatrics Volume 158 ; 158 >
 
     }
 
@@ -447,6 +453,7 @@
       au < released ; 2023 ; 2023 ; Pediatrics in Review Volume 44 ; 44 >
       au < released ; 2024 ; 2024 ; Pediatrics in Review Volume 45 ; 45 >
       au < manifest ; 2025 ; 2025 ; Pediatrics in Review Volume 46 ; 46 >
+      au < expected ; 2026 ; 2026 ; Pediatrics in Review Volume 47 ; 47 >
 
     }
 
@@ -463,6 +470,7 @@
       param[journal_id] = pediatricsopenscience
 
       au < manifest ; 2025 ; 2025 ; Pediatrics Open Science Volume 1 ; 1 >
+      au < expected ; 2026 ; 2026 ; Pediatrics Open Science Volume 2 ; 2 >
 
   }
 

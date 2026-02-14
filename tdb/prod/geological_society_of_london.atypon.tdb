@@ -25,6 +25,7 @@
       au < manifest ; 2023 ; Earth Science, Systems and Society Volume 3 ; 3 >
       au < released ; 2024 ; Earth Science, Systems and Society Volume 4 ; 4 >
       au < manifest ; 2025 ; Earth Science, Systems and Society Volume 5 ; 5 >
+      au < expected ; 2026 ; Earth Science, Systems and Society Volume 6 ; 6 >
   }
 
   {
@@ -40,6 +41,7 @@
       au < released ; 2023 ; Geological Society of America Bulletin Volume 1 ; 1 >
       au < released ; 2024 ; Geological Society of America Bulletin Volume 2 ; 2 >
       au < manifest ; 2025 ; Geological Society of America Bulletin Volume 3 ; 3 >
+      au < expected ; 2026 ; Geological Society of America Bulletin Volume 4 ; 4 >
   }
 
   {
@@ -124,6 +126,7 @@
     au < released ; 2023 ; Geochemistry: Exploration, Environment, Analysis Volume 23 ; 23 >
     au < released ; 2024 ; Geochemistry: Exploration, Environment, Analysis Volume 24 ; 24 >
     au < manifest ; 2025 ; Geochemistry: Exploration, Environment, Analysis Volume 25 ; 25 >
+    au < expected ; 2026 ; Geochemistry: Exploration, Environment, Analysis Volume 26 ; 26 >
 
   }
 
@@ -204,6 +207,9 @@
     au < expected ; 2025 ; Geological Society of London Memoirs Volume 62 ; 62 >
     au < expected ; 2025 ; Geological Society of London Memoirs Volume 63 ; 63 >
     au < expected ; 2025 ; Geological Society of London Memoirs Volume 64 ; 64 >
+    au < expected ; 2026 ; Geological Society of London Memoirs Volume 65 ; 65 >
+    au < expected ; 2026 ; Geological Society of London Memoirs Volume 66 ; 66 >
+    au < expected ; 2026 ; Geological Society of London Memoirs Volume 67 ; 67 >
 
   }
 
@@ -781,6 +787,13 @@
     au < manifest ; 2026 ; Geological Society of London Special Publications Volume 559 ; 559 >
     au < manifest ; 2026 ; Geological Society of London Special Publications Volume 560 ; 560 >
     au < manifest ; 2026 ; Geological Society of London Special Publications Volume 561 ; 561 >
+    au < expected ; 2026 ; Geological Society of London Special Publications Volume 557 ; 557 >
+    au < expected ; 2026 ; Geological Society of London Special Publications Volume 558 ; 558 >
+    au < expected ; 2026 ; Geological Society of London Special Publications Volume 559 ; 559 >
+    au < expected ; 2026 ; Geological Society of London Special Publications Volume 560 ; 560 >
+    au < expected ; 2026 ; Geological Society of London Special Publications Volume 561 ; 561 >
+    au < expected ; 2026 ; Geological Society of London Special Publications Volume 562 ; 562 >
+    au < expected ; 2026 ; Geological Society of London Special Publications Volume 563 ; 563 >
 
   }
 
@@ -994,6 +1007,7 @@
     au < released ; 2023 ; Journal of the Geological Society of London Volume 180 ; 180 >
     au < released ; 2024 ; Journal of the Geological Society of London Volume 181 ; 181 >
     au < manifest ; 2025 ; Journal of the Geological Society of London Volume 182 ; 182 >
+    au < expected ; 2026 ; Journal of the Geological Society of London Volume 183 ; 183 >
 
   }
 
@@ -1040,6 +1054,7 @@
       au < released ; 2023 ; Petroleum Geoscience Volume 29 ; 29 >
       au < released ; 2024 ; Petroleum Geoscience Volume 30 ; 30 >
       au < manifest ; 2025 ; Petroleum Geoscience Volume 31 ; 31 >
+      au < expected ; 2026 ; Petroleum Geoscience Volume 32 ; 32 >
 
   }
 
@@ -1134,6 +1149,7 @@
       au < released ; 2023 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 56 ; 56 >
       au < released ; 2024 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 57 ; 57 >
       au < manifest ; 2025 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 58 ; 58 >
+      au < expected ; 2026 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 59 ; 59 >
 
   }
 
@@ -1399,6 +1415,7 @@
     au < released ; 2023 ; Scottish Journal of Geology Volume 59 ; 59 >
     au < released ; 2024 ; Scottish Journal of Geology Volume 60 ; 60 >
     au < manifest ; 2025 ; Scottish Journal of Geology Volume 61 ; 61 >
+    au < expected ; 2026 ; Scottish Journal of Geology Volume 62 ; 62 >
 
     }
     
@@ -1415,6 +1432,7 @@
     param[journal_id] = egc
 
     au < manifest ; 2025 ; Energy Geoscience Conference Series Volume 1 ; 1 >
+    au < expected ; 2026 ; Energy Geoscience Conference Series Volume 2 ; 2 >
 
   }
 

@@ -32,6 +32,7 @@
       au < expected ; 2023 ; Echo Research and Practice Volume 10 ; 10 >
       au < expected ; 2024 ; Echo Research and Practice Volume 11 ; 11 >
       au < expected ; 2025 ; Echo Research and Practice Volume 12 ; 12 >
+      au < expected ; 2026 ; Echo Research and Practice Volume 13 ; 13 >
 
   }
   
@@ -58,6 +59,7 @@
     au < released ; 2023 ; EFORT Open Reviews Volume 8 ; 8 >
     au < released ; 2024 ; EFORT Open Reviews Volume 9 ; 9 >
     au < manifest ; 2025 ; EFORT Open Reviews Volume 10 ; 10 >
+    au < expected ; 2026 ; EFORT Open Reviews Volume 11 ; 11 >
 
   }
 
@@ -86,6 +88,7 @@
       au < released ; 2023 ; Endocrine Connections Volume 12 ; 12 >
       au < released ; 2024 ; Endocrine Connections Volume 13 ; 13 >
       au < manifest ; 2025 ; Endocrine Connections Volume 14 ; 14 >
+      au < expected ; 2026 ; Endocrine Connections Volume 15 ; 15 >
 
   }
   
@@ -348,6 +351,8 @@
       au < released ; 2024 ; Reproduction Volume 168 ; 168 >
       au < manifest ; 2025 ; Reproduction Volume 169 ; 169 >
       au < manifest ; 2025 ; Reproduction Volume 170 ; 170 >
+      au < expected ; 2026 ; Reproduction Volume 171 ; 171 >
+      au < expected ; 2026 ; Reproduction Volume 172 ; 172 >
 
   }
 

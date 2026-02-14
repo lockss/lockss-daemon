@@ -44,6 +44,7 @@
 
     au < ers.ERSScolarisPlugin ; ready ; 2024 ; Breathe Volume 20 ; 20 ; https://publications.ersnet.org/ >
     au < ers.ERSScolarisPlugin ; manifest ; 2025 ; Breathe Volume 21 ; 21 ; https://publications.ersnet.org/ >
+    au < ers.ERSScolarisPlugin ; expected ; 2026 ; Breathe Volume 22 ; 22 ; https://publications.ersnet.org/ >
     }
   }
 
@@ -73,6 +74,7 @@
 
     au < ers.ERSScolarisPlugin ; ready ; 2024 ; ERJ Open Research Volume 10 ; 10 ; https://publications.ersnet.org/ >
     au < ers.ERSScolarisPlugin ; manifest ; 2025 ; ERJ Open Research Volume 11 ; 11 ; https://publications.ersnet.org/ >
+    au < ers.ERSScolarisPlugin ; expected ; 2026 ; ERJ Open Research Volume 12 ; 12 ; https://publications.ersnet.org/ >
     }
   }
 
@@ -175,6 +177,8 @@
       au < ers.ERSScolarisPlugin ; ready ; 2024 ; European Respiratory Journal Volume 64 ; 64 ; https://publications.ersnet.org/ >
       au < ers.ERSScolarisPlugin ; manifest ; 2025 ; European Respiratory Journal Volume 65 ; 65 ; https://publications.ersnet.org/ >
       au < ers.ERSScolarisPlugin ; expected ; 2025 ; European Respiratory Journal Volume 66 ; 66 ; https://publications.ersnet.org/ >
+      au < ers.ERSScolarisPlugin ; expected ; 2026 ; European Respiratory Journal Volume 67 ; 67 ; https://publications.ersnet.org/ >
+      au < ers.ERSScolarisPlugin ; expected ; 2026 ; European Respiratory Journal Volume 68 ; 68 ; https://publications.ersnet.org/ >
     }
 
   }
@@ -217,6 +221,7 @@
       au < ers.ERSScolarisPlugin ; manifest ; 2023 ; European Respiratory Review Volume 32 ; 32 ; https://publications.ersnet.org/ >
       au < ers.ERSScolarisPlugin ; ready ; 2024 ; European Respiratory Review Volume 33 ; 33 ; https://publications.ersnet.org/ >
       au < ers.ERSScolarisPlugin ; manifest ; 2025 ; European Respiratory Review Volume 34 ; 34 ; https://publications.ersnet.org/ >
+      au < ers.ERSScolarisPlugin ; expected ; 2026 ; European Respiratory Review Volume 35 ; 35 ; https://publications.ersnet.org/ >
     }
 
   }
