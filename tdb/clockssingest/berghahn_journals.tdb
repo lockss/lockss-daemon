@@ -673,7 +673,7 @@
     au < finished ; finished ; 2021 ; Girlhood Studies Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Girlhood Studies Volume 15 ; 15 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; Girlhood Studies Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2024 ; Girlhood Studies Volume 17 ; 17 ; >
+    au < finished ; manifest ; 2024 ; Girlhood Studies Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Girlhood Studies Volume 18 ; 18 ; >
 
   }
@@ -690,7 +690,7 @@
     param[journal_id] = historical-reflections
     #param[journal_issn] = 0315-7997
       
-    au < frozen ; exists ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 ; >
+    au < finished ; manifest ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 ; >
     au < ready ; exists ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 ; >
@@ -704,9 +704,9 @@
     au < finished ; crawling ; 2019 ; Historical Reflections/Reflexions Historiques Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Historical Reflections/Reflexions Historiques Volume 46 ; 46 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; Historical Reflections/Reflexions Historiques Volume 47 ; 47 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2022 ; Historical Reflections/Reflexions Historiques Volume 48 ; 48 ; >
-    au < frozen ; exists ; 2023 ; Historical Reflections/Reflexions Historiques Volume 49 ; 49 ; >
-    au < frozen ; exists ; 2024 ; Historical Reflections/Reflexions Historiques Volume 50 ; 50 ; >
+    au < finished ; manifest ; 2022 ; Historical Reflections/Reflexions Historiques Volume 48 ; 48 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2023 ; Historical Reflections/Reflexions Historiques Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2024 ; Historical Reflections/Reflexions Historiques Volume 50 ; 50 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2025 ; Historical Reflections/Reflexions Historiques Volume 51 ; 51 ; >
 
   }
@@ -735,7 +735,7 @@
     au < finished ; manifest ; 2020 ; International Journal of Social Quality Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; finished ; 2021 ; International Journal of Social Quality Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; International Journal of Social Quality Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2023 ; International Journal of Social Quality Volume 13 ; 13 ; >
+    au < finished ; manifest ; 2023 ; International Journal of Social Quality Volume 13 ; 13 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -762,9 +762,9 @@
     au < finished ; crawling ; 2019 ; Israel Studies Review Volume 34 ; 34 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Israel Studies Review Volume 35 ; 35 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Israel Studies Review Volume 36 ; 36 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2022 ; Israel Studies Review Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2023 ; Israel Studies Review Volume 38 ; 38 ; >
-    au < frozen ; exists ; 2024 ; Israel Studies Review Volume 39 ; 39 ; >
+    au < finished ; manifest ; 2022 ; Israel Studies Review Volume 37 ; 37 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Israel Studies Review Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2024 ; Israel Studies Review Volume 39 ; 39 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2025 ; Israel Studies Review Volume 40 ; 40 ; >
 
   }
@@ -1068,7 +1068,7 @@
     au < finished ; frozen ; 2021 ; Projections Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Projections Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Projections Volume 17 ; 17 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; Projections Volume 18 ; 18 ; >
+    au < finished ; manifest ; 2024 ; Projections Volume 18 ; 18 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2025 ; Projections Volume 19 ; 19 ; >
 
   }
@@ -1096,9 +1096,9 @@
     au < finished ; crawling ; 2019 ; Regions & Cohesion Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Regions & Cohesion Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Regions & Cohesion Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2022 ; Regions & Cohesion Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2023 ; Regions & Cohesion Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2024 ; Regions & Cohesion Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2022 ; Regions & Cohesion Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Regions & Cohesion Volume 13 ; 13 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2024 ; Regions & Cohesion Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < expected ; exists ; 2025 ; Regions & Cohesion Volume 15 ; 15 ; >
 
   }
@@ -1128,7 +1128,7 @@
     au < finished ; crawling ; 2020 ; Religion and Society: Advances in Research Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; frozen ; 2021 ; Religion and Society: Advances in Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; Religion and Society: Advances in Research Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2023 ; Religion and Society: Advances in Research Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2023 ; Religion and Society: Advances in Research Volume 14 ; 14 ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 2024 ; Religion and Society: Advances in Research Volume 15 ; 15 ; >
     au < exists ; exists ; 2025 ; Religion and Society: Advances in Research Volume 16 ; 16 ; >
 
@@ -1145,20 +1145,20 @@
     param[journal_id] = sartre-studies
     #param[journal_issn] = 1357-1559
 
-    au < frozen ; exists ; 1997 ; Sartre Studies International Volume 3 ; 3 ; >
+    au < finished ; manifest ; 1997 ; Sartre Studies International Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 1998 ; Sartre Studies International Volume 4 ; 4 ; >
-    au < frozen ; exists ; 1999 ; Sartre Studies International Volume 5 ; 5 ; >
+    au < finished ; manifest ; 1999 ; Sartre Studies International Volume 5 ; 5 ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2000 ; Sartre Studies International Volume 6 ; 6 ; >
     au < testing ; exists ; 2001 ; Sartre Studies International Volume 7 ; 7 ; >
     au < crawling ; exists ; 2002 ; Sartre Studies International Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2003 ; Sartre Studies International Volume 9 ; 9 ; >
-    au < frozen ; exists ; 2004 ; Sartre Studies International Volume 10 ; 10 ; >
-    au < frozen ; exists ; 2005 ; Sartre Studies International Volume 11 ; 11 ; >
+    au < finished ; manifest ; 2003 ; Sartre Studies International Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2004 ; Sartre Studies International Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; Sartre Studies International Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2006 ; Sartre Studies International Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2007 ; Sartre Studies International Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2008 ; Sartre Studies International Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2007 ; Sartre Studies International Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2008 ; Sartre Studies International Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2009 ; Sartre Studies International Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2010 ; Sartre Studies International Volume 16 ; 16 ; >
+    au < finished ; manifest ; 2010 ; Sartre Studies International Volume 16 ; 16 ; reingest5.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2011 ; Sartre Studies International Volume 17 ; 17 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Sartre Studies International Volume 18 ; 18 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Sartre Studies International Volume 19 ; 19 ; >
@@ -1170,9 +1170,9 @@
     au < finished ; crawling ; 2019 ; Sartre Studies International Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; Sartre Studies International Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Sartre Studies International Volume 27 ; 27 ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2022 ; Sartre Studies International Volume 28 ; 28 ; >
-    au < frozen ; exists ; 2023 ; Sartre Studies International Volume 29 ; 29 ; >
-    au < frozen ; exists ; 2024 ; Sartre Studies International Volume 30 ; 30 ; >
+    au < finished ; manifest ; 2022 ; Sartre Studies International Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2023 ; Sartre Studies International Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2024 ; Sartre Studies International Volume 30 ; 30 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Sartre Studies International Volume 31 ; 31 ; >
 
   }
@@ -1192,9 +1192,9 @@
     au < finished ; crawling ; 2019 ; Screen Bodies Volume 4 ; 4 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Screen Bodies Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Screen Bodies Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2022 ; Screen Bodies Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2023 ; Screen Bodies Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2024 ; Screen Bodies Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2022 ; Screen Bodies Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2023 ; Screen Bodies Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2024 ; Screen Bodies Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Screen Bodies Volume 10 ; 10 ; >
 
   }
@@ -1211,13 +1211,13 @@
     #param[journal_issn] = 1361-7362
        
     au < ready ; exists ; 2002 ; Sibirica Volume 2 ; 2 ; >
-    au < frozen ; exists ; 2003 ; Sibirica Volume 3 ; 3 ; >
+    au < finished ; manifest ; 2003 ; Sibirica Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2004 ; Sibirica Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2006 ; Sibirica Volume 5 ; 5 ; >
-    au < frozen ; exists ; 2007 ; Sibirica Volume 6 ; 6 ; >
-    au < frozen ; exists ; 2008 ; Sibirica Volume 7 ; 7 ; >
-    au < frozen ; exists ; 2009 ; Sibirica Volume 8 ; 8 ; >
-    au < frozen ; exists ; 2010 ; Sibirica Volume 9 ; 9 ; >
+    au < finished ; manifest ; 2007 ; Sibirica Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2008 ; Sibirica Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2009 ; Sibirica Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2010 ; Sibirica Volume 9 ; 9 ; reingest3.clockss.org:8083 >
     au < doNotProcess ; doNotProcess ; 2011 ; Sibirica Volume 10 ; 10 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Sibirica Volume 11 ; 11 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Sibirica Volume 12 ; 12 ; >
@@ -1229,9 +1229,9 @@
     au < finished ; crawling ; 2019 ; Sibirica Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Sibirica Volume 19 ; 19 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Sibirica Volume 20 ; 20 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2022 ; Sibirica Volume 21 ; 21 ; >
-    au < frozen ; exists ; 2023 ; Sibirica Volume 22 ; 22 ; >
-    au < frozen ; exists ; 2024 ; Sibirica Volume 23 ; 23 ; >
+    au < finished ; manifest ; 2022 ; Sibirica Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2023 ; Sibirica Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2024 ; Sibirica Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Sibirica Volume 24 ; 24 ; >
 
   }
@@ -1247,14 +1247,14 @@
     param[journal_id] = social-analysis
     #param[journal_issn] = 0155-977X
         
-    au < frozen ; exists ; 2002 ; Social Analysis Volume 46 ; 46 ; >
-    au < frozen ; exists ; 2003 ; Social Analysis Volume 47 ; 47 ; >
-    au < frozen ; exists ; 2004 ; Social Analysis Volume 48 ; 48 ; >
+    au < finished ; manifest ; 2002 ; Social Analysis Volume 46 ; 46 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2003 ; Social Analysis Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; Social Analysis Volume 48 ; 48 ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 2005 ; Social Analysis Volume 49 ; 49 ; >
-    au < frozen ; exists ; 2006 ; Social Analysis Volume 50 ; 50 ; >
+    au < finished ; manifest ; 2006 ; Social Analysis Volume 50 ; 50 ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2007 ; Social Analysis Volume 51 ; 51 ; >
     au < ready ; exists ; 2008 ; Social Analysis Volume 52 ; 52 ; >
-    au < frozen ; exists ; 2009 ; Social Analysis Volume 53 ; 53 ; >
+    au < finished ; manifest ; 2009 ; Social Analysis Volume 53 ; 53 ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 2010 ; Social Analysis Volume 54 ; 54 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Social Analysis Volume 55 ; 55 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Social Analysis Volume 56 ; 56 ; >
@@ -1267,9 +1267,9 @@
     au < finished ; crawling ; 2019 ; Social Analysis Volume 63 ; 63 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Social Analysis Volume 64 ; 64 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2021 ; Social Analysis Volume 65 ; 65 ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2022 ; Social Analysis Volume 66 ; 66 ; >
-    au < frozen ; exists ; 2023 ; Social Analysis Volume 67 ; 67 ; >
-    au < frozen ; exists ; 2024 ; Social Analysis Volume 68 ; 68 ; >
+    au < finished ; manifest ; 2022 ; Social Analysis Volume 66 ; 66 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2023 ; Social Analysis Volume 67 ; 67 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2024 ; Social Analysis Volume 68 ; 68 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Social Analysis Volume 69 ; 69 ; >
 
   }
@@ -1292,8 +1292,8 @@
     au < ready ; exists ; 2000 ; Theoria Volume 47 ; 47 ; >
     au < ready ; exists ; 2001 ; Theoria Volume 48 ; 48 ; >
     au < ready ; exists ; 2002 ; Theoria Volume 49 ; 49 ; >
-    au < frozen ; exists ; 2003 ; Theoria Volume 50 ; 50 ; >
-    au < frozen ; exists ; 2004 ; Theoria Volume 51 ; 51 ; >
+    au < finished ; manifest ; 2003 ; Theoria Volume 50 ; 50 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2004 ; Theoria Volume 51 ; 51 ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 2005 ; Theoria Volume 52 ; 52 ; >
     au < testing ; exists ; 2006 ; Theoria Volume 53 ; 53 ; >
     au < ready ; exists ; 2007 ; Theoria Volume 54 ; 54 ; >
@@ -1311,9 +1311,9 @@
     au < finished ; crawling ; 2019 ; Theoria Volume 66 ; 66 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Theoria Volume 67 ; 67 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2021 ; Theoria Volume 68 ; 68 ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2022 ; Theoria Volume 69 ; 69 ; >
-    au < frozen ; exists ; 2023 ; Theoria Volume 70 ; 70 ; >
-    au < frozen ; exists ; 2024 ; Theoria Volume 71 ; 71 ; >
+    au < finished ; manifest ; 2022 ; Theoria Volume 69 ; 69 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2023 ; Theoria Volume 70 ; 70 ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2024 ; Theoria Volume 71 ; 71 ; reingest5.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Theoria Volume 72 ; 72 ; >
 
   }
@@ -1341,8 +1341,8 @@
     au < finished ; finished ; 2020 ; Transfers Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Transfers Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2022 ; Transfers Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2023 ; Transfers Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2024 ; Transfers Volume 14 ; 14 ; >
+    au < finished ; manifest ; 2023 ; Transfers Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2024 ; Transfers Volume 14 ; 14 ; reingest1.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Transfers Volume 15 ; 15 ; >
 
   }
