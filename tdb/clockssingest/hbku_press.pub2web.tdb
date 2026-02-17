@@ -59,7 +59,7 @@
     au < finished ; manifest ; 2023 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2024 ; 2024 ; >
     au < crawling ; exists ; 2025 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2025 ; 2025 ; >
-    au < expected ; exists ; 2026 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2026 ; 2026 ; >
+    au < manifest ; exists ; 2026 ; Journal of Emergency Medicine, Trauma and Acute Care Volume 2026 ; 2026 ; >
 
   }
 
@@ -148,7 +148,7 @@
       au < finished ; manifest ; 2023 ; QScience Connect Volume 2023 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; QScience Connect Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; QScience Connect Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; QScience Connect Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; QScience Connect Volume 2026 ; 2026 ; >
 
     }
   }
@@ -192,7 +192,7 @@
       au < finished ; manifest ; 2023 ; Avicenna Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Avicenna Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Avicenna Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; Avicenna Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; Avicenna Volume 2026 ; 2026 ; >
 
 
     }

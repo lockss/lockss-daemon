@@ -50,7 +50,7 @@
     au < finished ; manifest ; 2023 ; 95 ; Anais da Academia Brasileira de Ciências Volume 95 ; 2023 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 96 ; Anais da Academia Brasileira de Ciências Volume 96 ; 2024 ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2025 ; 97 ; Anais da Academia Brasileira de Ciências Volume 97 ; 2025 ; >
-    au < expected ; exists ; 2026 ; 98 ; Anais da Academia Brasileira de Ciências Volume 98 ; 2026 ; >
+    au < manifest ; exists ; 2026 ; 98 ; Anais da Academia Brasileira de Ciências Volume 98 ; 2026 ; >
 
   }
 }
@@ -98,7 +98,7 @@
     au < finished ; manifest ; 2023 ; 44 ; Revista Gaúcha de Enfermagem Volume 44 ; 2023 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 45 ; Revista Gaúcha de Enfermagem Volume 45 ; 2024 ; >
     au < crawling ; exists ; 2025 ; 46 ; Revista Gaúcha de Enfermagem Volume 46 ; 2025 ; >
-    au < expected ; exists ; 2026 ; 47 ; Revista Gaúcha de Enfermagem Volume 47 ; 2026 ; >
+    au < manifest ; exists ; 2026 ; 47 ; Revista Gaúcha de Enfermagem Volume 47 ; 2026 ; >
 
   }
 

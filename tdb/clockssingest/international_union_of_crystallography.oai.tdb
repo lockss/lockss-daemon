@@ -167,8 +167,8 @@
     au < crawling ; exists ; 2025 ; 81 ; Acta Crystallographica Section E: Crystallographic Communications Volume 81 (10/2025) ; 2025-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < crawling ; exists ; 2025 ; 81 ; Acta Crystallographica Section E: Crystallographic Communications Volume 81 (11/2025) ; 2025-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < crawling ; exists ; 2025 ; 81 ; Acta Crystallographica Section E: Crystallographic Communications Volume 81 (12/2025) ; 2025-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2026 ; 82 ; Acta Crystallographica Section E: Crystallographic Communications Volume 82 (01/2026) ; 2026-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2026 ; 83 ; Acta Crystallographica Section E: Crystallographic Communications Volume 83 (02/2026) ; 2026-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2026 ; 82 ; Acta Crystallographica Section E: Crystallographic Communications Volume 82 (01/2026) ; 2026-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2026 ; 83 ; Acta Crystallographica Section E: Crystallographic Communications Volume 83 (02/2026) ; 2026-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2026 ; 84 ; Acta Crystallographica Section E: Crystallographic Communications Volume 84 (03/2026) ; 2026-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2026 ; 85 ; Acta Crystallographica Section E: Crystallographic Communications Volume 85 (04/2026) ; 2026-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2026 ; 86 ; Acta Crystallographica Section E: Crystallographic Communications Volume 86 (05/2026) ; 2026-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
@@ -552,8 +552,8 @@
     au < crawling ; exists ; 2025 ; 12 ; IUCrJ Volume 21 (10/2025) ; 2025-10 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2025 ; 12 ; IUCrJ Volume 22 (11/2025) ; 2025-11 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2025 ; 12 ; IUCrJ Volume 23 (12/2025) ; 2025-12 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2026 ; 13 ; IUCrJ Volume 13 (01/2026) ; 2026-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2026 ; 14 ; IUCrJ Volume 13 (02/2026) ; 2026-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2026 ; 13 ; IUCrJ Volume 13 (01/2026) ; 2026-01 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2026 ; 14 ; IUCrJ Volume 13 (02/2026) ; 2026-02 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2026 ; 15 ; IUCrJ Volume 14 (03/2026) ; 2026-03 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2026 ; 16 ; IUCrJ Volume 15 (04/2026) ; 2026-04 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2026 ; 17 ; IUCrJ Volume 16 (05/2026) ; 2026-05 ; https://journals.iucr.org/ ; https://scripts.iucr.org/ ; >
@@ -709,8 +709,8 @@
     au < crawling ; exists ; 2025 ; 10 ; IUCrData Volume 10 (10/2025) ; 2025-10 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < crawling ; exists ; 2025 ; 10 ; IUCrData Volume 10 (11/2025) ; 2025-11 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < crawling ; exists ; 2025 ; 10 ; IUCrData Volume 10 (12/2025) ; 2025-12 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2026 ; 11 ; IUCrData Volume 11 (01/2026) ; 2026-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
-    au < expected ; exists ; 2026 ; 12 ; IUCrData Volume 12 (02/2026) ; 2026-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2026 ; 11 ; IUCrData Volume 11 (01/2026) ; 2026-01 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
+    au < manifest ; exists ; 2026 ; 12 ; IUCrData Volume 12 (02/2026) ; 2026-02 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2026 ; 13 ; IUCrData Volume 13 (03/2026) ; 2026-03 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2026 ; 14 ; IUCrData Volume 14 (04/2026) ; 2026-04 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >
     au < expected ; exists ; 2026 ; 15 ; IUCrData Volume 15 (05/2026) ; 2026-05 ; https://iucrdata.iucr.org/ ; https://scripts.iucr.org/ ; >

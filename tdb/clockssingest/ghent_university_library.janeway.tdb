@@ -98,7 +98,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; 41 ; Documenta Volume 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; 42 ; Documenta Volume 2024 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 2025 ; 43 ; Documenta Volume 2025 ; >
-      au < expected ; exists ; 2026 ; 2026 ; 44 ; Documenta Volume 2026 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; 44 ; Documenta Volume 2026 ; >
 
   }
 
@@ -120,7 +120,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2024 ; >
       au < crawling ; exists ; 2025 ; 2025 ; 2025 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2025 ; >
-      au < expected ; exists ; 2026 ; 2026 ; 2026 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2026 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; 2026 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2026 ; >
 
   }
 
@@ -142,7 +142,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2024 ; >
       au < crawling ; exists ; 2025 ; 2025 ; 2025 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2025 ; >
-      au < expected ; exists ; 2026 ; 2026 ; 2026 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2026 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; 2026 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2026 ; >
 
   }
 
@@ -159,7 +159,7 @@
 
       au < frozen ; exists ; 2024 ; 2024 ; 2024 ; Law & Criminology Journal Volume 2024 ; >
       au < crawling ; exists ; 2025 ; 2025 ; 2025 ; Law & Criminology Journal Volume 2025 ; >
-      au < expected ; exists ; 2026 ; 2026 ; 2026 ; Law & Criminology Journal Volume 2026 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; 2026 ; Law & Criminology Journal Volume 2026 ; >
 
   }
 
@@ -305,7 +305,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; 2023 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; 2024 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2024 ; >
       au < crawling ; exists ; 2025 ; 2025 ; 2025 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2025 ; >
-      au < expected ; exists ; 2026 ; 2026 ; 2026 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2026 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; 2026 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2026 ; >
 
   } 
 
@@ -1689,7 +1689,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 ; >
-      au < expected ; exists ; 2026 ; 2026 ; 2026 ; Tijdschrift Sociologie Volume 2026 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; 2026 ; Tijdschrift Sociologie Volume 2026 ; >
 
   }
 

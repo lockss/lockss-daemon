@@ -122,7 +122,7 @@
       #It relies on a filter in the code to find the right publication date
       #The tdb file is up to date at March/2024
       au < manifest ; exists ; 2025 ; 2025 ; University of Michigan Press Deep Blue Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 2026 ; University of Michigan Press Deep Blue Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; University of Michigan Press Deep Blue Volume 2026 ; 2026 ; >
 
   }
 

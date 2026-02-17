@@ -28,7 +28,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Blood Cancer Discovery Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2024 ; 2024 ; Blood Cancer Discovery Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; 2025 ; Blood Cancer Discovery Volume 6 ; 6 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Blood Cancer Discovery Volume 7 ; 7 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Blood Cancer Discovery Volume 7 ; 7 ; >
 
   }
 
@@ -57,7 +57,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Cancer Discovery Volume 13 ; 13 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Cancer Discovery Volume 14 ; 14 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 2025 ; Cancer Discovery Volume 15 ; 15 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Cancer Discovery Volume 16 ; 16 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Cancer Discovery Volume 16 ; 16 ; >
 
   }
 
@@ -107,7 +107,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Cancer Epidemiology Biomarkers & Prevention Volume 32 ; 32 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Cancer Epidemiology Biomarkers & Prevention Volume 33 ; 33 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; 2025 ; Cancer Epidemiology Biomarkers & Prevention Volume 34 ; 34 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Cancer Epidemiology Biomarkers & Prevention Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Cancer Epidemiology Biomarkers & Prevention Volume 35 ; 35 ; >
 
   }
 
@@ -135,7 +135,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Cancer Immunology Research Volume 11 ; 11 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Cancer Immunology Research Volume 12 ; 12 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; 2025 ; Cancer Immunology Research Volume 13 ; 13 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Cancer Immunology Research Volume 14 ; 14 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Cancer Immunology Research Volume 14 ; 14 ; >
 
   }
 
@@ -168,7 +168,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Cancer Prevention Research Volume 16 ; 16 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Cancer Prevention Research Volume 17 ; 17 ; >
       au < crawling ; exists ; 2025 ; 2025 ; Cancer Prevention Research Volume 18 ; 18 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Cancer Prevention Research Volume 19 ; 19 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Cancer Prevention Research Volume 19 ; 19 ; >
 
   }
 
@@ -268,7 +268,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Cancer Research Volume 83 ; 83 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Cancer Research Volume 84 ; 84 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 2025 ; Cancer Research Volume 85 ; 85 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Cancer Research Volume 86 ; 86 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Cancer Research Volume 86 ; 86 ; >
 
   }
 
@@ -286,7 +286,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Cancer Research Communications Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Cancer Research Communications Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; 2025 ; Cancer Research Communications Volume 5 ; 5 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Cancer Research Communications Volume 6 ; 6 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Cancer Research Communications Volume 6 ; 6 ; >
 
   }
 
@@ -332,7 +332,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Clinical Cancer Research Volume 29 ; 29 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Clinical Cancer Research Volume 30 ; 30 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; 2025 ; Clinical Cancer Research Volume 31 ; 31 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Clinical Cancer Research Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Clinical Cancer Research Volume 32 ; 32 ; >
 
   }
 
@@ -371,7 +371,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Molecular Cancer Research Volume 21 ; 21 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Molecular Cancer Research Volume 22 ; 22 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 2025 ; Molecular Cancer Research Volume 23 ; 23 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Molecular Cancer Research Volume 24 ; 24 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Molecular Cancer Research Volume 24 ; 24 ; >
 
   }
 
@@ -411,7 +411,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Molecular Cancer Therapeutics Volume 22 ; 22 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2024 ; 2024 ; Molecular Cancer Therapeutics Volume 23 ; 23 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 2025 ; Molecular Cancer Therapeutics Volume 24 ; 24 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Molecular Cancer Therapeutics Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Molecular Cancer Therapeutics Volume 25 ; 25 ; >
 
   }
 

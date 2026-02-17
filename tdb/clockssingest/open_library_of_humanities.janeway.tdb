@@ -35,7 +35,7 @@
     au < doesNotExist ; doesNotExist ; 2023 ; 13 ; The Comics Grid Volume 2023 ; 2023 ; >
     au < deepCrawl ; exists ; 2024 ; 14 ; The Comics Grid Volume 2024 ; 2024 ; >
     au < crawling ; exists ; 2025 ; 15 ; The Comics Grid Volume 2025 ; 2025 ; >
-    au < expected ; exists ; 2026 ; 16 ; The Comics Grid Volume 2026 ; 2026 ; >
+    au < manifest ; exists ; 2026 ; 16 ; The Comics Grid Volume 2026 ; 2026 ; >
 
   }
 
@@ -124,7 +124,7 @@
          au < frozen ; exists ; 2023 ; 11 ; C21 Literature: journal of 21st-century writings Volume 2023 ; 2023 ; >
          au < frozen ; exists ; 2024 ; 12 ; C21 Literature: journal of 21st-century writings Volume 2024 ; 2024 ; >
          au < crawling ; exists ; 2025 ; 13 ; C21 Literature: journal of 21st-century writings Volume 2025 ; 2025 ; >
-         au < expected ; exists ; 2026 ; 14 ; C21 Literature: journal of 21st-century writings Volume 2026 ; 2026 ; >
+         au < manifest ; exists ; 2026 ; 14 ; C21 Literature: journal of 21st-century writings Volume 2026 ; 2026 ; >
 
   }
 
@@ -303,7 +303,7 @@
       au < deepCrawl ; exists ; 2023 ; 9 ; Open Library of Humanities Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 10 ; Open Library of Humanities Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 11 ; Open Library of Humanities Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 12 ; Open Library of Humanities Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 12 ; Open Library of Humanities Volume 2026 ; 2026 ; >
 
   }
 
@@ -403,7 +403,7 @@
       au < deepCrawl ; exists ; 2023 ; 11 ; ZFF: Zeitschrift für Fantastikforschung Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 12 ; ZFF: Zeitschrift für Fantastikforschung Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 13 ; ZFF: Zeitschrift für Fantastikforschung Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 14 ; ZFF: Zeitschrift für Fantastikforschung Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 14 ; ZFF: Zeitschrift für Fantastikforschung Volume 2026 ; 2026 ; >
 
   }
 
@@ -429,7 +429,7 @@
       au < deepCrawl ; exists ; 2023 ; 7 ; The Parish Review Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 8 ; The Parish Review Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 9 ; The Parish Review Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 10 ; The Parish Review Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 10 ; The Parish Review Volume 2026 ; 2026 ; >
 
   }
 
@@ -460,7 +460,7 @@
       au < deepCrawl ; exists ; 2022 ; 28 ; ASIANetwork Exchange Volume 2022 ; 2022 ; >
       au < deepCrawl ; exists ; 2023 ; 28 ; ASIANetwork Exchange Volume 2023 ; 2023 ; >
       au < crawling ; exists ; 2025 ; 29 ; ASIANetwork Exchange Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 30 ; ASIANetwork Exchange Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 30 ; ASIANetwork Exchange Volume 2026 ; 2026 ; >
 
   }
 
@@ -484,7 +484,7 @@
       au < notReady ; exists ; 2023 ; 8 ; Glossa: a journal of general linguistics Volume 2023 ; 2023 ; > #XML Parsing Error: no root element found ~ org.xml.sax.SAXParseException; Premature end of file. https://www.glossa-journal.org/article/5823/galley/23046/download/
       au < deepCrawl ; exists ; 2024 ; 9 ; Glossa: a journal of general linguistics Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 10 ; Glossa: a journal of general linguistics Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 11 ; Glossa: a journal of general linguistics Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 11 ; Glossa: a journal of general linguistics Volume 2026 ; 2026 ; >
 
   }
 
@@ -506,7 +506,7 @@
       au < deepCrawl ; exists ; 2023 ; 6 ; Open Screens Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 7 ; Open Screens Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 8 ; Open Screens Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 9 ; Open Screens Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 9 ; Open Screens Volume 2026 ; 2026 ; >
 
   }
 
@@ -614,7 +614,7 @@
       au < deepCrawl ; exists ; 2023 ; 2023 ; Digital Studies / Le champ numérique Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Digital Studies / Le champ numérique Volume 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; 2025 ; Digital Studies / Le champ numérique Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Digital Studies / Le champ numérique Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Digital Studies / Le champ numérique Volume 2026 ; 2026 ; >
 
   }
 
@@ -759,7 +759,7 @@
       au < deepCrawl ; exists ; 2023 ; 14 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2023 ; 2023 ; >
       au < notReady ; exists ; 2024 ; 15 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2024 ; 2024 ; > #LXQUEUE-1936, error starting https://www.journal-labphon.org/lockss?year=2024
       au < crawling ; exists ; 2025 ; 16 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 17 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2026 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; 17 ; Laboratory Phonology: Journal of the Association for Laboratory Phonology Volume 2026 ; 2026 ; >
 
   }
 
