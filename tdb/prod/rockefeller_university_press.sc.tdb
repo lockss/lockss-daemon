@@ -246,7 +246,7 @@
       au < released ; 2023 ; 2023 ; The Journal of Cell Biology Volume 222 ; 222 ; 222 >
       au < released ; 2024 ; 2024 ; The Journal of Cell Biology Volume 223 ; 223 ; 223 >
       au < manifest ; 2025 ; 2025 ; The Journal of Cell Biology Volume 224 ; 224 ; 224 >
-      au < expected ; 2026 ; 2026 ; The Journal of Cell Biology Volume 225 ; 225 ; 225 >
+      au < manifest ; 2026 ; 2026 ; The Journal of Cell Biology Volume 225 ; 225 ; 225 >
 
     }
 
@@ -487,7 +487,7 @@
       au < released ; 2023 ; 2023 ; The Journal of Experimental Medicine Volume 220 ; 220 ; 220 >
       au < released ; 2024 ; 2024 ; The Journal of Experimental Medicine Volume 221 ; 221 ; 221 >
       au < manifest ; 2025 ; 2025 ; The Journal of Experimental Medicine Volume 222 ; 222 ; 222 >
-      au < expected ; 2026 ; 2026 ; The Journal of Experimental Medicine Volume 223 ; 223 ; 223 >
+      au < manifest ; 2026 ; 2026 ; The Journal of Experimental Medicine Volume 223 ; 223 ; 223 >
 
     }
 
@@ -662,7 +662,7 @@
       au < released ; 2023 ; 2023 ; The Journal of General Physiology Volume 155 ; 155 ; 155 >
       au < released ; 2024 ; 2024 ; The Journal of General Physiology Volume 156 ; 156 ; 156 >
       au < manifest ; 2025 ; 2025 ; The Journal of General Physiology Volume 157 ; 157 ; 157 >
-      au < expected ; 2026 ; 2026 ; The Journal of General Physiology Volume 158 ; 158 ; 158 >
+      au < manifest ; 2026 ; 2026 ; The Journal of General Physiology Volume 158 ; 158 ; 158 >
 
     }
 
@@ -678,7 +678,7 @@
     param[journal_id] = jhi
 
     au < manifest ; 2025 ; 2025 ; The Journal of Human Immunity Volume 1 ; 1 ; 1 >
-    au < expected ; 2026 ; 2026 ; The Journal of Human Immunity Volume 2 ; 2 ; 2 >
+    au < manifest ; 2026 ; 2026 ; The Journal of Human Immunity Volume 2 ; 2 ; 2 >
 
   }
 
