@@ -1,0 +1,65 @@
+{
+
+  publisher <
+    name = Polemos Group ;
+    info[contract] = 2026 ;
+    info[back] = 1990 ;
+    info[tester] = 8 ;
+    info[platform] = OJS3
+  >
+
+  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+
+  {
+ 
+    title <
+      name = VERTEX Revista Argentina de Psiquiatría ;
+      eissn = 2718-904X ;
+      issnl = 2718-904X
+    >
+    
+    param[base_url] = https://www.revistavertex.com.ar/ojs/
+    param[journal_id] = vertex
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    attr[start_stem] = index.php/
+
+    au < manifest ; exists ; 1990 ; 1990 ; VERTEX Revista Argentina de Psiquiatría Volume 01 ; 01 ; >
+    au < manifest ; exists ; 1991 ; 1991 ; VERTEX Revista Argentina de Psiquiatría Volume 02 ; 02 ; >
+    au < manifest ; exists ; 1992 ; 1992 ; VERTEX Revista Argentina de Psiquiatría Volume 03 ; 03 ; >
+    au < manifest ; exists ; 1993 ; 1993 ; VERTEX Revista Argentina de Psiquiatría Volume 04 ; 04 ; >
+    au < manifest ; exists ; 1994 ; 1994 ; VERTEX Revista Argentina de Psiquiatría Volume 05 ; 05 ; >
+    au < manifest ; exists ; 1995 ; 1995 ; VERTEX Revista Argentina de Psiquiatría Volume 06 ; 06 ; >
+    au < manifest ; exists ; 1996 ; 1996 ; VERTEX Revista Argentina de Psiquiatría Volume 07 ; 07 ; >
+    au < manifest ; exists ; 1997 ; 1997 ; VERTEX Revista Argentina de Psiquiatría Volume 08 ; 08 ; >
+    au < manifest ; exists ; 1998 ; 1998 ; VERTEX Revista Argentina de Psiquiatría Volume 09 ; 09 ; >
+    au < manifest ; exists ; 1999 ; 1999 ; VERTEX Revista Argentina de Psiquiatría Volume 10 ; 10 ; >
+    au < manifest ; exists ; 2000 ; 2000 ; VERTEX Revista Argentina de Psiquiatría Volume 11 ; 11 ; >
+    au < manifest ; exists ; 2001 ; 2001 ; VERTEX Revista Argentina de Psiquiatría Volume 12 ; 12 ; >
+    au < exists ; exists ; 2002 ; 2002 ; VERTEX Revista Argentina de Psiquiatría Volume 13 ; 13 ; >
+    au < exists ; exists ; 2003 ; 2003 ; VERTEX Revista Argentina de Psiquiatría Volume 14 ; 14 ; >
+    au < exists ; exists ; 2004 ; 2004 ; VERTEX Revista Argentina de Psiquiatría Volume 15 ; 15 ; >
+    au < exists ; exists ; 2005 ; 2005 ; VERTEX Revista Argentina de Psiquiatría Volume 16 ; 16 ; >
+    au < exists ; exists ; 2006 ; 2006 ; VERTEX Revista Argentina de Psiquiatría Volume 17 ; 17 ; >
+    au < exists ; exists ; 2007 ; 2007 ; VERTEX Revista Argentina de Psiquiatría Volume 18 ; 18 ; >
+    au < exists ; exists ; 2008 ; 2008 ; VERTEX Revista Argentina de Psiquiatría Volume 19 ; 19 ; >
+    au < exists ; exists ; 2009 ; 2009 ; VERTEX Revista Argentina de Psiquiatría Volume 20 ; 20 ; >
+    au < exists ; exists ; 2010 ; 2010 ; VERTEX Revista Argentina de Psiquiatría Volume 21 ; 21 ; >
+    au < exists ; exists ; 2011 ; 2011 ; VERTEX Revista Argentina de Psiquiatría Volume 22 ; 22 ; >
+    au < exists ; exists ; 2012 ; 2012 ; VERTEX Revista Argentina de Psiquiatría Volume 23 ; 23 ; >
+    au < exists ; exists ; 2013 ; 2013 ; VERTEX Revista Argentina de Psiquiatría Volume 24 ; 24 ; >
+    au < exists ; exists ; 2014 ; 2014 ; VERTEX Revista Argentina de Psiquiatría Volume 25 ; 25 ; >
+    au < exists ; exists ; 2015 ; 2015 ; VERTEX Revista Argentina de Psiquiatría Volume 26 ; 26 ; >
+    au < exists ; exists ; 2016 ; 2016 ; VERTEX Revista Argentina de Psiquiatría Volume 27 ; 27 ; >
+    au < exists ; exists ; 2017 ; 2017 ; VERTEX Revista Argentina de Psiquiatría Volume 28 ; 28 ; >
+    au < exists ; exists ; 2018 ; 2018 ; VERTEX Revista Argentina de Psiquiatría Volume 29 ; 29 ; >
+    au < exists ; exists ; 2019 ; 2019 ; VERTEX Revista Argentina de Psiquiatría Volume 30 ; 30 ; >
+    au < exists ; exists ; 2020 ; 2020 ; VERTEX Revista Argentina de Psiquiatría Volume 31 ; 31 ; >
+    au < exists ; exists ; 2021 ; 2021 ; VERTEX Revista Argentina de Psiquiatría Volume 32 ; 32 ; >
+    au < exists ; exists ; 2022 ; 2022 ; VERTEX Revista Argentina de Psiquiatría Volume 33 ; 33 ; >
+    au < exists ; exists ; 2023 ; 2023 ; VERTEX Revista Argentina de Psiquiatría Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; VERTEX Revista Argentina de Psiquiatría Volume 35 ; 35 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; VERTEX Revista Argentina de Psiquiatría Volume 36 ; 36 ; >
+    au < expected ; exists ; 2026 ; 2026 ; VERTEX Revista Argentina de Psiquiatría Volume 37 ; 37 ; >
+
+  }
+}
