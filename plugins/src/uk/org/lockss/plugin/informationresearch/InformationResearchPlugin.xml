@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <entry>
   <!-- https transition enabled -->  
@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -62,7 +62,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Information Research Plugin</string>
+    <string>Information Research Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -88,7 +88,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Information Research Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+    <string>"Information Research Plugin (Legacy), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_start_url</string>
