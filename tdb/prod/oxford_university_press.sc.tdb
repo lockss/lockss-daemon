@@ -6051,7 +6051,6 @@
 
     au < manifest ; 2025 ; 2025 ; ESC Heart Failure Volume 11 ; 11 >
     au < manifest ; 2026 ; 2026 ; ESC Heart Failure Volume 12 ; 12 >
-    au < manifest ; 2026 ; 2026 ; ESC Heart Failure Volume 12 ; 12 >
 
   }
 
@@ -6066,7 +6065,6 @@
     #move from Wiley in 2026
 
     au < manifest ; 2025 ; 2025 ; European Journal of Heart Failure Volume 27 ; 27 >
-    au < expected ; 2026 ; 2026 ; European Journal of Heart Failure Volume 28 ; 28 >
     au < expected ; 2026 ; 2026 ; European Journal of Heart Failure Volume 28 ; 28 >
 
   }
