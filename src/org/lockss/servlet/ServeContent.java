@@ -536,7 +536,27 @@ public class ServeContent extends LockssServlet {
   }
 
   void logAccess(String url, String msg) {
-    String logmsg = "Content access from " + req.getRemoteAddr() + ": " +
+    String remoteAddr = req.getRemoteAddr();
+    String clientInfo = remoteAddr;
+
+    // If the request is from localhost, check for forwarded headers to get the real client IP
+    if ("127.0.0.1".equals(remoteAddr) || "::1".equals(remoteAddr) ||
+        "localhost".equalsIgnoreCase(remoteAddr)) {
+
+      // Check X-Forwarded-For header first (most common)
+      String xForwardedFor = req.getHeader("X-Forwarded-For");
+      if (!StringUtil.isNullString(xForwardedFor)) {
+        clientInfo = remoteAddr + " (X-Forwarded-For: " + xForwardedFor + ")";
+      } else {
+        // Check Forwarded header (RFC 7239)
+        String forwarded = req.getHeader("Forwarded");
+        if (!StringUtil.isNullString(forwarded)) {
+          clientInfo = remoteAddr + " (Forwarded: " + forwarded + ")";
+        }
+      }
+    }
+
+    String logmsg = "Content access from " + clientInfo + ": " +
       url + ": " + msg;
     if (paramAccessLogLevel >= 0) {
       log.log(paramAccessLogLevel, logmsg);
@@ -566,7 +586,7 @@ public class ServeContent extends LockssServlet {
         log.debug2("Rewriting abs links " + mystem + " -> " + rewriteForStem);
       }
     }
-    
+
     accessLogInfo = null;
     enabledPluginsOnly =
         !"no".equalsIgnoreCase(getParameter("filterPlugins"));
