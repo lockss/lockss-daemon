@@ -4,7 +4,7 @@
     name = Polemos Group ;
     info[contract] = 2026 ;
     info[back] = 1990 ;
-    info[tester] = 4 ;
+    info[tester] = 8 ;
     info[platform] = OJS3
   >
 
@@ -27,7 +27,7 @@
     au < manifest ; exists ; 1991 ; 1991 ; VERTEX Revista Argentina de Psiquiatría Volume 02 ; 02 ; >
     au < manifest ; exists ; 1992 ; 1992 ; VERTEX Revista Argentina de Psiquiatría Volume 03 ; 03 ; >
     au < manifest ; exists ; 1993 ; 1993 ; VERTEX Revista Argentina de Psiquiatría Volume 04 ; 04 ; >
-    au < testing ; exists ; 1994 ; 1994 ; VERTEX Revista Argentina de Psiquiatría Volume 05 ; 05 ; >
+    au < ready ; exists ; 1994 ; 1994 ; VERTEX Revista Argentina de Psiquiatría Volume 05 ; 05 ; >
     au < manifest ; exists ; 1995 ; 1995 ; VERTEX Revista Argentina de Psiquiatría Volume 06 ; 06 ; >
     au < manifest ; exists ; 1996 ; 1996 ; VERTEX Revista Argentina de Psiquiatría Volume 07 ; 07 ; >
     au < manifest ; exists ; 1997 ; 1997 ; VERTEX Revista Argentina de Psiquiatría Volume 08 ; 08 ; >
@@ -58,7 +58,7 @@
     au < exists ; exists ; 2022 ; 2022 ; VERTEX Revista Argentina de Psiquiatría Volume 33 ; 33 ; >
     au < exists ; exists ; 2023 ; 2023 ; VERTEX Revista Argentina de Psiquiatría Volume 34 ; 34 ; >
     au < manifest ; exists ; 2024 ; 2024 ; VERTEX Revista Argentina de Psiquiatría Volume 35 ; 35 ; >
-    au < testing ; exists ; 2025 ; 2025 ; VERTEX Revista Argentina de Psiquiatría Volume 36 ; 36 ; >
+    au < ready ; exists ; 2025 ; 2025 ; VERTEX Revista Argentina de Psiquiatría Volume 36 ; 36 ; >
     au < expected ; exists ; 2026 ; 2026 ; VERTEX Revista Argentina de Psiquiatría Volume 37 ; 37 ; >
 
   }
