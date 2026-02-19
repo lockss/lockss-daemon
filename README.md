@@ -36,7 +36,7 @@ git clone git@github.com:lockss/lockss-daemon.git
 git clone https://github.com/lockss/lockss-daemon.git
 ```
 
-You can subsquently use `git pull` to update.
+You can subsequently use `git pull` to update.
 
 ## Prerequisites
 
