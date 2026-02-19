@@ -233,7 +233,8 @@
     au < released ; 2022 ; 86-94 ; MycoKeys Volume 2022 ; 2022 ; https://mycokeys.pensoft.net/ >
     au < released ; 2023 ; 95-100 ; MycoKeys Volume 2023 ; 2023 ; https://mycokeys.pensoft.net/ >
     au < released ; 2024 ; 101-106 ; MycoKeys Volume 2024 ; 2024 ; https://mycokeys.pensoft.net/ >
-    au < manifest ; 2025 ; 112-122 ; MycoKeys Volume 2025 ; 2025 ; https://mycokeys.pensoft.net/ >
+    au < manifest ; 2025 ; 112-126 ; MycoKeys Volume 2025 ; 2025 ; https://mycokeys.pensoft.net/ >
+    au < exists ; 2026 ; 127-141 ; MycoKeys Volume 2026 ; 2026 ; https://mycokeys.pensoft.net/ >
 
    }
 
@@ -261,6 +262,7 @@
     au < released ; 2023 ; 51-54 ; Nature Conservation Volume 2023 ; 2023 ; https://natureconservation.pensoft.net/ >
     au < released ; 2024 ; 55-57 ; Nature Conservation Volume 2024 ; 2024 ; https://natureconservation.pensoft.net/ >
     au < manifest ; 2025 ; 58-60 ; Nature Conservation Volume 2025 ; 2025 ; https://natureconservation.pensoft.net/ >
+    au < exists ; 2026 ; 61-63 ; Nature Conservation Volume 2026 ; 2026 ; https://natureconservation.pensoft.net/ >
 
    }
 
@@ -290,7 +292,8 @@
     au < released ; 2022 ; 71-77 ; NeoBiota Volume 2022 ; 2022 ; https://neobiota.pensoft.net/ >
     au < released ; 2023 ; 80-89 ; NeoBiota Volume 2023 ; 2023 ; https://neobiota.pensoft.net/ >
     au < released ; 2024 ; 90-96 ; NeoBiota Volume 2024 ; 2024 ; https://neobiota.pensoft.net/ >
-    au < manifest ; 2025 ; 97-103 ; NeoBiota Volume 2025 ; 2025 ; https://neobiota.pensoft.net/ >
+    au < manifest ; 2025 ; 97-104 ; NeoBiota Volume 2025 ; 2025 ; https://neobiota.pensoft.net/ >
+    au < exists ; 2026 ; 105-112 ; NeoBiota Volume 2026 ; 2026 ; https://neobiota.pensoft.net/ >
 
    }
 
@@ -349,7 +352,8 @@
     au < released ; 2022 ; 188-216 ; PhytoKeys Volume 2022 ; 2022 ; https://phytokeys.pensoft.net/ >
     au < released ; 2023 ; 217-236 ; PhytoKeys Volume 2023 ; 2023 ; https://phytokeys.pensoft.net/ >
     au < released ; 2024 ; 237-250 ; PhytoKeys Volume 2024 ; 2024 ; https://phytokeys.pensoft.net/ >
-    au < manifest ; 2025 ; 251-264 ; PhytoKeys Volume 2025 ; 2025 ; https://phytokeys.pensoft.net/ >
+    au < manifest ; 2025 ; 251-268 ; PhytoKeys Volume 2025 ; 2025 ; https://phytokeys.pensoft.net/ >
+    au < exists ; 2026 ; 269-286 ; PhytoKeys Volume 2026 ; 2026 ; https://phytokeys.pensoft.net/ >
 
    }
 
@@ -379,7 +383,8 @@
     au < released ; 2022 ; 42-44 ; Subterranean Biology Volume 2022 ; 2022 ; https://subtbiol.pensoft.net/ >
     au < released ; 2023 ; 45-47 ; Subterranean Biology Volume 2023 ; 2023 ; https://subtbiol.pensoft.net/ >
     au < released ; 2024 ; 48-50 ; Subterranean Biology Volume 2024 ; 2024 ; https://subtbiol.pensoft.net/ >
-    au < manifest ; 2025 ; 51-53 ; Subterranean Biology Volume 2025 ; 2025 ; https://subtbiol.pensoft.net/ >
+    au < manifest ; 2025 ; 51-54 ; Subterranean Biology Volume 2025 ; 2025 ; https://subtbiol.pensoft.net/ >
+    au < exists ; 2025 ; 55-58 ; Subterranean Biology Volume 2026 ; 2026 ; https://subtbiol.pensoft.net/ >
 
    }
 
@@ -412,7 +417,8 @@
     au < released ; 2022 ; 1080-1150 ; ZooKeys Volume 2022 ; 2022 ; https://zookeys.pensoft.net/ >
     au < released ; 2023 ; 1138-1187 ; ZooKeys Volume 2023 ; 2023 ; https://zookeys.pensoft.net/ >
     au < released ; 2024 ; 1188-1221 ; ZooKeys Volume 2024 ; 2024 ; https://zookeys.pensoft.net/ >
-    au < manifest ; 2025 ; 1222-1255 ; ZooKeys Volume 2025 ; 2025 ; https://zookeys.pensoft.net/ >
+    au < manifest ; 2025 ; 1222-1265 ; ZooKeys Volume 2025 ; 2025 ; https://zookeys.pensoft.net/ >
+    au < exists ; 2026 ; 1266-1309 ; ZooKeys Volume 2026 ; 2026 ; https://zookeys.pensoft.net/ >
 
    }
    
