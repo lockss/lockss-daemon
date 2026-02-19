@@ -67,6 +67,19 @@
   {
 
     title <
+      name = Edebiyat Araştırmaları Dergisi ;
+      issn = 2757-9999 ;
+      eissn = 2822-468X
+    >
+    provider = Association for Thought and Literary Studies
+
+    au < expected ; exists ; 2026 ; Edebiyat Araştırmaları Dergisi ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
       name = Revista Vasca de Administración Pública ;
       issn = 2695-5407 ;
       eissn = 2695-5407
@@ -259,6 +272,19 @@
   {
 
     title <
+      name = Paradigma ;
+      issn = 1817-4221 ;
+      eissn = 2664-5033
+    >
+    provider = Instituto de Investigación y Evaluación Educativas y Sociales, de la Universidad Pedagógica Nacional Francisco Morazán
+
+    au < expected ; exists ; 2026 ; Paradigma ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
       name = Tecnología y ciencias del agua ;
       eissn = 2007-2422
     >
@@ -395,12 +421,24 @@
 
     title <
       name = Journals of Universidad Autónoma del Estado de Hidalgo ;
-      eissn = 2683-2321 ;
+      issn = 2683-2321 ;
       eissn = 2007-4581
     >
     provider = Universidad Autónoma del Estado de Hidalgo
 
     au < readySource ; crawling ; 2025-2026 ; Journals of Universidad Autónoma del Estado de Hidalgo ; revista_lengua_y_cultura_2683-2321 >
+
+  }
+
+  {
+
+    title <
+      name = Revista Gestión I+D ;
+      eissn = 2542-3142
+    >
+    provider = Universidad Central de Venezuela, Postgrado en Gestión de Investigación y Desarrollo
+
+    au < expected ; exists ; 2026 ; Revista Gestión I+D ; UNKNOWN >
 
   }
 
