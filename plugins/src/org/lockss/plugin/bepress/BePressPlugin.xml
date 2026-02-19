@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>36</string>
+    <string>37</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -172,6 +172,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>org.lockss.plugin.bepress.BePressHttpToHttpsUrlConsumerFactory</string>
   </entry>
   <!--  end for https conversion -->  
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryHtmlCrawlFilterFactory</string>
+  </entry>
   <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryHtmlHashFilterFactory</string>
