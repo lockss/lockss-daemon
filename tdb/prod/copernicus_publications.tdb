@@ -1581,8 +1581,8 @@
       param[base_url] = https://piodp.copernicus.org/
       param[home_url] = https://www.proceedings-iodp3.net/
 
-      au < exists ; 2025 ; 2025 ; Proceedings of the International Ocean Drilling Programme Volume 501 ; 501 >
-      au < exists ; 2026 ; 2026 ; Proceedings of the International Ocean Drilling Programme Volume 502 ; 502 >
+      au < manifest ; 2025 ; 2025 ; Proceedings of the International Ocean Drilling Programme Volume 501 ; 501 >
+      au < manifest ; 2026 ; 2026 ; Proceedings of the International Ocean Drilling Programme Volume 502 ; 502 >
 
   }
 
