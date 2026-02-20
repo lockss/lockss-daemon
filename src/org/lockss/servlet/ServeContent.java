@@ -2816,9 +2816,9 @@ public class ServeContent extends LockssServlet {
       if (pred != null && !pred.evaluate(au)) {
         continue;
       }
-
+      // eliminate the call to encodeText here and only encode when displaying
       AccessUrlRow row =
-          new AccessUrlRow(encodeText(au.getName()), AuUtil.hasCrawled(au));
+          new AccessUrlRow(au.getName(), AuUtil.hasCrawled(au));
 
       try {
         row.setAuId(au.getAuId());
