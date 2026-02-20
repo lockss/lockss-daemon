@@ -9416,7 +9416,7 @@
       au < finished ; finished ; 2020-2022 ; International Journal of Quality Engineering and Technology Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 > #no access, no content on ingest1
       au < deepCrawl ; exists ; 2023 ; International Journal of Quality Engineering and Technology Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
       au < finished ; manifest ; 2024 ; International Journal of Quality Engineering and Technology Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2025 ; International Journal of Quality Engineering and Technology Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2025 ; International Journal of Quality Engineering and Technology Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2026 ; International Journal of Quality Engineering and Technology Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -9895,7 +9895,7 @@
       au < finished ; finished ; 2017-2018 ; International Journal of Services and Standards Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2019-2023 ; International Journal of Services and Standards Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2024 ; International Journal of Services and Standards Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2025 ; International Journal of Services and Standards Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
+      au < finished ; manifest ; 2025 ; International Journal of Services and Standards Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < expected ; exists ; 2026 ; International Journal of Services and Standards Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
 
     }
@@ -12313,7 +12313,7 @@
       au < finished ; crawling ; 2021-2022 ; EuroMed Journal of Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; EuroMed Journal of Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; EuroMed Journal of Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2025 ; EuroMed Journal of Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ;  >
+      au < finished ; manifest ; 2025 ; EuroMed Journal of Management Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2026 ; EuroMed Journal of Management Volume 8 ; 8 ; https://www.inderscienceonline.com/ ;  >
 
   }
