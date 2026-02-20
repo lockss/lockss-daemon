@@ -1678,9 +1678,37 @@
       attr[journal_id] = piodp
       param[base_url] = https://piodp.copernicus.org/
       param[home_url] = https://www.proceedings-iodp3.net/
+      #year of publication may be out of order with volume number
 
       au < ready ; exists ; 2025 ; 2025 ; Proceedings of the International Ocean Drilling Programme Volume 501 ; 501 ; >
       au < manifest ; exists ; 2026 ; 2026 ; Proceedings of the International Ocean Drilling Programme Volume 502 ; 502 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; Proceedings of the International Ocean Drilling Programme Volume 503 ; 503 ; >
+
+  }
+
+  {
+    title <
+      name = Earth Observation ;
+      eissn = 3054-1786
+    >
+      attr[journal_id] = eo
+      param[base_url] = https://eo.copernicus.org/
+      param[home_url] = https://www.earth-observation.net/
+
+      au < expected ; exists ; 2026 ; 2026 ; Earth Observation Volume 1 ; 1 ; >
+
+  }
+
+  {
+    title <
+      name = Journal of Environmentally Compatible Air Transport System ;
+      eissn = 3054-1786
+    >
+      attr[journal_id] = jecats
+      param[base_url] = https://jecats.copernicus.org/
+      param[home_url] = https://www.jecats.net/
+
+      au < manifest ; exists ; 2026 ; 2026 ; Journal of Environmentally Compatible Air Transport System Volume 1 ; 1 ; >
 
   }
 
