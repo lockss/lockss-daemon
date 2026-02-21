@@ -1270,6 +1270,24 @@
       au < manifest ; exists ; 2026 ; Physiology Volume 41 ; 41 ; https://journals.physiology.org/ ; >
 
     }
+   }
+
+  {
+
+    title <
+      name = Function ;
+      eissn = 2633-8823 
+    >
+
+    param[journal_id] = function
+
+      au < manifest ; exists ; 2020 ; Function Volume 1 ; 1 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2021 ; Function Volume 2 ; 2 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2022 ; Function Volume 3 ; 3 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2023 ; Function Volume 4 ; 4 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2024 ; Function Volume 5 ; 5 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2025 ; Function Volume 6 ; 6 ; https://journals.physiology.org/ ; >
+      au < manifest ; exists ; 2026 ; Function Volume 7 ; 7 ; https://journals.physiology.org/ ; >
 
   }
 
