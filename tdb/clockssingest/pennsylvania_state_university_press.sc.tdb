@@ -29,7 +29,7 @@
 
       au < ready ; exists ; 2005 ; The Chaucer Review Volume 40 ; 40 ; 2005 ; >
       au < ready ; exists ; 2006 ; The Chaucer Review Volume 41 ; 41 ; 2006 ; >
-      au < crawling ; exists ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 ; >
       au < finished ; manifest ; 2008 ; The Chaucer Review Volume 43 ; 43 ; 2008 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2009 ; The Chaucer Review Volume 44 ; 44 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; The Chaucer Review Volume 45 ; 45 ; 2010 ; >
@@ -242,7 +242,7 @@
       # 2009, 2010 volume numbers don't line up with years
 
       au < frozen ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8 (2007) ; 8 ; 2007 ; >
-      au < crawling ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 9 (2007) ; 9 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 9 (2007) ; 9 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Interdisciplinary Literary Studies Volume 9 (2008) ; 9 ; 2008 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Interdisciplinary Literary Studies Volume 10 (2008) ; 10 ; 2008 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 10-11 ; 2009 ; >
@@ -330,7 +330,7 @@
 
       param[journal_id] = ayn-rand
 
-      au < crawling ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2007 ; >
       au < finished ; manifest ; 2007 ; The Journal of Ayn Rand Studies Volume 9 (2007) ; 9 ; 2007 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; The Journal of Ayn Rand Studies Volume 9 (2008) ; 9 ; 2008 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; The Journal of Ayn Rand Studies Volume 10 (2008) ; 10 ; 2008 ; reingest1.clockss.org:8082 >
@@ -989,23 +989,23 @@
 
       param[journal_id] = biblical-research
 
-      au < crawling ; exists ; 1991 ; Bulletin for Biblical Research Volume 1 ; 1 ; 1991 ; >
+      au < frozen ; exists ; 1991 ; Bulletin for Biblical Research Volume 1 ; 1 ; 1991 ; >
       au < ready ; exists ; 1992 ; Bulletin for Biblical Research Volume 2 ; 2 ; 1992 ; >
-      au < crawling ; exists ; 1993 ; Bulletin for Biblical Research Volume 3 ; 3 ; 1993 ; >
+      au < frozen ; exists ; 1993 ; Bulletin for Biblical Research Volume 3 ; 3 ; 1993 ; >
       au < ready ; exists ; 1994 ; Bulletin for Biblical Research Volume 4 ; 4 ; 1994 ; >
       au < ready ; exists ; 1995 ; Bulletin for Biblical Research Volume 5 ; 5 ; 1995 ; >
-      au < crawling ; exists ; 1996 ; Bulletin for Biblical Research Volume 6 ; 6 ; 1996 ; >
-      au < crawling ; exists ; 1997 ; Bulletin for Biblical Research Volume 7 ; 7 ; 1997 ; >
-      au < crawling ; exists ; 1998 ; Bulletin for Biblical Research Volume 8 ; 8 ; 1998 ; >
+      au < frozen ; exists ; 1996 ; Bulletin for Biblical Research Volume 6 ; 6 ; 1996 ; >
+      au < frozen ; exists ; 1997 ; Bulletin for Biblical Research Volume 7 ; 7 ; 1997 ; >
+      au < frozen ; exists ; 1998 ; Bulletin for Biblical Research Volume 8 ; 8 ; 1998 ; >
       au < ready ; exists ; 1999 ; Bulletin for Biblical Research Volume 9 ; 9 ; 1999 ; >
       au < ready ; exists ; 2000 ; Bulletin for Biblical Research Volume 10 ; 10 ; 2000 ; >
       au < ready ; exists ; 2001 ; Bulletin for Biblical Research Volume 11 ; 11 ; 2001 ; >
       au < ready ; exists ; 2002 ; Bulletin for Biblical Research Volume 12 ; 12 ; 2002 ; >
       au < ready ; exists ; 2003 ; Bulletin for Biblical Research Volume 13 ; 13 ; 2003 ; >
-      au < crawling ; exists ; 2004 ; Bulletin for Biblical Research Volume 14 ; 14 ; 2004 ; >
+      au < frozen ; exists ; 2004 ; Bulletin for Biblical Research Volume 14 ; 14 ; 2004 ; >
       au < frozen ; exists ; 2005 ; Bulletin for Biblical Research Volume 15 ; 15 ; 2005 ; >
       au < frozen ; exists ; 2006 ; Bulletin for Biblical Research Volume 16 ; 16 ; 2006 ; >
-      au < crawling ; exists ; 2007 ; Bulletin for Biblical Research Volume 17 ; 17 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; Bulletin for Biblical Research Volume 17 ; 17 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Bulletin for Biblical Research Volume 18 ; 18 ; 2008 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Bulletin for Biblical Research Volume 19 ; 19 ; 2009 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Bulletin for Biblical Research Volume 20 ; 20 ; 2010 ; reingest1.clockss.org:8082 >
@@ -1105,7 +1105,7 @@
 
       param[journal_id] = caliope
 
-      au < crawling ; exists ; 1995 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 1 ; 1 ; 1995 ; >
+      au < frozen ; exists ; 1995 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 1 ; 1 ; 1995 ; >
       au < frozen ; exists ; 1996 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 2 ; 2 ; 1996 ; >
       au < frozen ; exists ; 1997 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 3 ; 3 ; 1997 ; >
       au < ready ; exists ; 1998 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 4 ; 4 ; 1998 ; >
@@ -1115,7 +1115,7 @@
       au < ready ; exists ; 2002 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 8 ; 8 ; 2002 ; >
       au < ready ; exists ; 2003 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 9 ; 9 ; 2003 ; >
       au < ready ; exists ; 2004 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 10 ; 10 ; 2004 ; >
-      au < crawling ; exists ; 2005 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 11 ; 11 ; 2005 ; >
+      au < frozen ; exists ; 2005 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 11 ; 11 ; 2005 ; >
       au < frozen ; exists ; 2006 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 12 ; 12 ; 2006 ; >
       au < ready ; exists ; 2007 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 13 ; 13 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 14 ; 14 ; 2008 ; reingest4.clockss.org:8082 >
@@ -1154,7 +1154,7 @@
       au < ready ; exists ; 2004 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 1 ; 1 ; 2004 ; >
       au < ready ; exists ; 2005 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2 ; 2 ; 2005 ; >
       au < frozen ; exists ; 2006 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 3 ; 3 ; 2006 ; >
-      au < crawling ; exists ; 2007 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 4 ; 4 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 4 ; 4 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 5 ; 5 ; 2008 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 6 ; 6 ; 2009 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 7 ; 7 ; 2010 ; reingest3.clockss.org:8083 >
@@ -1308,7 +1308,7 @@
 
       au < frozen ; exists ; 1997 ; Gestalt Review Volume 1 ; 1 ; 1997 ; >
       au < ready ; exists ; 1998 ; Gestalt Review Volume 2 ; 2 ; 1998 ; >
-      au < crawling ; exists ; 1999 ; Gestalt Review Volume 3 ; 3 ; 1999 ; >
+      au < frozen ; exists ; 1999 ; Gestalt Review Volume 3 ; 3 ; 1999 ; >
       au < ready ; exists ; 2000 ; Gestalt Review Volume 4 ; 4 ; 2000 ; >
       au < ready ; exists ; 2001 ; Gestalt Review Volume 5 ; 5 ; 2001 ; >
       au < ready ; exists ; 2002 ; Gestalt Review Volume 6 ; 6 ; 2002 ; >
@@ -1656,19 +1656,19 @@
       au < manifest ; exists ; 1989 ; Resources for American Literary Study Volume 16 ; 16 ; 1989 ; >
       au < frozen ; exists ; 1990 ; Resources for American Literary Study Volume 17 (1990) ; 17 ; 1990 ; >
       au < ready ; exists ; 1991 ; Resources for American Literary Study Volume 17 (1991) ; 17 ; 1991 ; >
-      au < crawling ; exists ; 1992 ; Resources for American Literary Study Volume 18 ; 18 ; 1992 ; >
+      au < frozen ; exists ; 1992 ; Resources for American Literary Study Volume 18 ; 18 ; 1992 ; >
       au < ready ; exists ; 1993 ; Resources for American Literary Study Volume 19 ; 19 ; 1993 ; >
       au < ready ; exists ; 1994 ; Resources for American Literary Study Volume 20 ; 20 ; 1994 ; >
-      au < crawling ; exists ; 1995 ; Resources for American Literary Study Volume 21 ; 21 ; 1995 ; >
+      au < frozen ; exists ; 1995 ; Resources for American Literary Study Volume 21 ; 21 ; 1995 ; >
 
       au < ready ; exists ; 1997 ; Resources for American Literary Study Volume 23 ; 23 ; 1997 ; >
-      au < crawling ; exists ; 1998 ; Resources for American Literary Study Volume 24 ; 24 ; 1998 ; >
-      au < crawling ; exists ; 1999 ; Resources for American Literary Study Volume 25 ; 25 ; 1999 ; >
+      au < frozen ; exists ; 1998 ; Resources for American Literary Study Volume 24 ; 24 ; 1998 ; >
+      au < frozen ; exists ; 1999 ; Resources for American Literary Study Volume 25 ; 25 ; 1999 ; >
       au < ready ; exists ; 2000 ; Resources for American Literary Study Volume 26 ; 26 ; 2000 ; >
       au < ready ; exists ; 2001 ; Resources for American Literary Study Volume 27 ; 27 ; 2001 ; >
       au < frozen ; exists ; 2002 ; Resources for American Literary Study Volume 28 ; 28 ; 2002 ; >
-      au < crawling ; exists ; 2004 ; Resources for American Literary Study Volume 29 ; 29 ; 2004 ; >
-      au < crawling ; exists ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 ; >
+      au < frozen ; exists ; 2004 ; Resources for American Literary Study Volume 29 ; 29 ; 2004 ; >
+      au < frozen ; exists ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 ; >
       au < ready ; exists ; 2006 ; Resources for American Literary Study Volume 31 ; 31 ; 2006 ; >
       au < frozen ; exists ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Resources for American Literary Study Volume 33 ; 33 ; 2008 ; reingest3.clockss.org:8083 >
@@ -2042,7 +2042,7 @@
 
       au < ready ; exists ; 2005 ; Journal of African Development Volume 7 ; 7 ; 2005 ; >
       au < ready ; exists ; 2006 ; Journal of African Development Volume 8 ; 8 ; 2006 ; >
-      au < crawling ; exists ; 2007 ; Journal of African Development Volume 9 ; 9 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; Journal of African Development Volume 9 ; 9 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Journal of African Development Volume 10 ; 10 ; 2008 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Journal of African Development Volume 11 ; 11 ; 2009 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of African Development Volume 12 ; 12 ; 2010 ; >
@@ -2138,24 +2138,24 @@
       au < manifest ; exists ; 1987 ; Milton Studies Volume 23 ; 23 ; 1987 ; >
       au < manifest ; exists ; 1988 ; Milton Studies Volume 24 ; 24 ; 1988 ; >
       au < manifest ; exists ; 1989 ; Milton Studies Volume 25 ; 25 ; 1989 ; >
-      au < crawling ; exists ; 1990 ; Milton Studies Volume 26 ; 26 ; 1990 ; >
+      au < frozen ; exists ; 1990 ; Milton Studies Volume 26 ; 26 ; 1990 ; >
       au < ready ; exists ; 1991 ; Milton Studies Volume 27 ; 27 ; 1991 ; >
       au < ready ; exists ; 1992 ; Milton Studies Volume 28 ; 28 ; 1992 ; >
-      au < crawling ; exists ; 1992 ; Milton Studies Volume 29 ; 29 ; 1992 ; >
+      au < frozen ; exists ; 1992 ; Milton Studies Volume 29 ; 29 ; 1992 ; >
       au < ready ; exists ; 1993 ; Milton Studies Volume 30 ; 30 ; 1993 ; >
-      au < crawling ; exists ; 1994 ; Milton Studies Volume 31 ; 31 ; 1994 ; >
+      au < frozen ; exists ; 1994 ; Milton Studies Volume 31 ; 31 ; 1994 ; >
       au < ready ; exists ; 1995 ; Milton Studies Volume 32 ; 32 ; 1995 ; >
-      au < crawling ; exists ; 1996 ; Milton Studies Volume 33 ; 33 ; 1996 ; >
+      au < frozen ; exists ; 1996 ; Milton Studies Volume 33 ; 33 ; 1996 ; >
       au < ready ; exists ; 1996 ; Milton Studies Volume 34 ; 34 ; 1996 ; >
       au < ready ; exists ; 1997 ; Milton Studies Volume 35 ; 35 ; 1997 ; >
-      au < crawling ; exists ; 1998 ; Milton Studies Volume 36 ; 36 ; 1998 ; >
+      au < frozen ; exists ; 1998 ; Milton Studies Volume 36 ; 36 ; 1998 ; >
       au < ready ; exists ; 1999 ; Milton Studies Volume 37 ; 37 ; 1999 ; >
-      au < crawling ; exists ; 2000 ; Milton Studies Volume 38 ; 38 ; 2000 ; >
-      au < crawling ; exists ; 2000 ; Milton Studies Volume 39 ; 39 ; 2000 ; >
+      au < frozen ; exists ; 2000 ; Milton Studies Volume 38 ; 38 ; 2000 ; >
+      au < frozen ; exists ; 2000 ; Milton Studies Volume 39 ; 39 ; 2000 ; >
       au < ready ; exists ; 2001 ; Milton Studies Volume 40 ; 40 ; 2001 ; >
-      au < crawling ; exists ; 2002 ; Milton Studies Volume 41 ; 41 ; 2002 ; >
-      au < crawling ; exists ; 2002 ; Milton Studies Volume 42 ; 42 ; 2002 ; >
-      au < crawling ; exists ; 2004 ; Milton Studies Volume 43 ; 43 ; 2004 ; >
+      au < frozen ; exists ; 2002 ; Milton Studies Volume 41 ; 41 ; 2002 ; >
+      au < frozen ; exists ; 2002 ; Milton Studies Volume 42 ; 42 ; 2002 ; >
+      au < frozen ; exists ; 2004 ; Milton Studies Volume 43 ; 43 ; 2004 ; >
       au < ready ; exists ; 2005 ; Milton Studies Volume 44 ; 44 ; 2005 ; >
       au < frozen ; exists ; 2006 ; Milton Studies Volume 45 ; 45 ; 2006 ; >
       au < ready ; exists ; 2007 ; Milton Studies Volume 46 ; 46 ; 2007 ; >
@@ -2199,20 +2199,20 @@
       au < manifest ; exists ; 1989 ; Nineteenth Century Studies Volume 3 ; 3 ; 1989 ; >
       au < ready ; exists ; 1990 ; Nineteenth Century Studies Volume 4 ; 4 ; 1990 ; >
       au < ready ; exists ; 1991 ; Nineteenth Century Studies Volume 5 ; 5 ; 1991 ; >
-      au < crawling ; exists ; 1992 ; Nineteenth Century Studies Volume 6 ; 6 ; 1992 ; >
-      au < crawling ; exists ; 1993 ; Nineteenth Century Studies Volume 7 ; 7 ; 1993 ; >
-      au < crawling ; exists ; 1994 ; Nineteenth Century Studies Volume 8 ; 8 ; 1994 ; >
-      au < crawling ; exists ; 1995 ; Nineteenth Century Studies Volume 9 ; 9 ; 1995 ; >
+      au < frozen ; exists ; 1992 ; Nineteenth Century Studies Volume 6 ; 6 ; 1992 ; >
+      au < frozen ; exists ; 1993 ; Nineteenth Century Studies Volume 7 ; 7 ; 1993 ; >
+      au < frozen ; exists ; 1994 ; Nineteenth Century Studies Volume 8 ; 8 ; 1994 ; >
+      au < frozen ; exists ; 1995 ; Nineteenth Century Studies Volume 9 ; 9 ; 1995 ; >
       au < ready ; exists ; 1996 ; Nineteenth Century Studies Volume 10 ; 10 ; 1996 ; >
       au < frozen ; exists ; 1997 ; Nineteenth Century Studies Volume 11 ; 11 ; 1997 ; >
       au < frozen ; exists ; 1998 ; Nineteenth Century Studies Volume 12 ; 12 ; 1998 ; >
       au < ready ; exists ; 1999 ; Nineteenth Century Studies Volume 13 ; 13 ; 1999 ; >
       au < ready ; exists ; 2000 ; Nineteenth Century Studies Volume 14 ; 14 ; 2000 ; >
-      au < crawling ; exists ; 2001 ; Nineteenth Century Studies Volume 15 ; 15 ; 2001 ; >
-      au < crawling ; exists ; 2002 ; Nineteenth Century Studies Volume 16 ; 16 ; 2002 ; >
+      au < frozen ; exists ; 2001 ; Nineteenth Century Studies Volume 15 ; 15 ; 2001 ; >
+      au < frozen ; exists ; 2002 ; Nineteenth Century Studies Volume 16 ; 16 ; 2002 ; >
       au < ready ; exists ; 2003 ; Nineteenth Century Studies Volume 17 ; 17 ; 2003 ; >
       au < ready ; exists ; 2004 ; Nineteenth Century Studies Volume 18 ; 18 ; 2004 ; >
-      au < crawling ; exists ; 2005 ; Nineteenth Century Studies Volume 19 ; 19 ; 2005 ; >
+      au < frozen ; exists ; 2005 ; Nineteenth Century Studies Volume 19 ; 19 ; 2005 ; >
       au < ready ; exists ; 2006 ; Nineteenth Century Studies Volume 20 ; 20 ; 2006 ; >
       au < ready ; exists ; 2007 ; Nineteenth Century Studies Volume 21 ; 21 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Nineteenth Century Studies Volume 22 ; 22 ; 2008 ; reingest4.clockss.org:8082 >
@@ -2405,10 +2405,10 @@
       param[journal_id] = philosophia-africana
 
       au < ready ; exists ; 2001 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 4 ; 4 ; 2001 ; >
-      au < crawling ; exists ; 2002 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 5 ; 5 ; 2002 ; >
+      au < frozen ; exists ; 2002 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 5 ; 5 ; 2002 ; >
       au < frozen ; exists ; 2003 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 6 ; 6 ; 2003 ; >
       au < ready ; exists ; 2004 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 7 ; 7 ; 2004 ; >
-      au < crawling ; exists ; 2005 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 8 ; 8 ; 2005 ; >
+      au < frozen ; exists ; 2005 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 8 ; 8 ; 2005 ; >
       au < ready ; exists ; 2006 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 9 ; 9 ; 2006 ; >
       au < ready ; exists ; 2007 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 10 ; 10 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 11 ; 11 ; 2008 ; reingest2.clockss.org:8085 >
@@ -2510,18 +2510,18 @@
       au < manifest ; exists ; 1988 ; Victorians Institute Journal Volume 16 ; 16 ; 1988 ; >
       au < manifest ; exists ; 1989 ; Victorians Institute Journal Volume 17 ; 17 ; 1989 ; >
       au < ready ; exists ; 1990 ; Victorians Institute Journal Volume 18 ; 18 ; 1990 ; >
-      au < crawling ; exists ; 1991 ; Victorians Institute Journal Volume 19 ; 19 ; 1991 ; >
+      au < frozen ; exists ; 1991 ; Victorians Institute Journal Volume 19 ; 19 ; 1991 ; >
       au < frozen ; exists ; 1992 ; Victorians Institute Journal Volume 20 ; 20 ; 1992 ; >
-      au < crawling ; exists ; 1993 ; Victorians Institute Journal Volume 21 ; 21 ; 1993 ; >
+      au < frozen ; exists ; 1993 ; Victorians Institute Journal Volume 21 ; 21 ; 1993 ; >
       au < ready ; exists ; 1994 ; Victorians Institute Journal Volume 22 ; 22 ; 1994 ; >
-      au < crawling ; exists ; 1995 ; Victorians Institute Journal Volume 23 ; 23 ; 1995 ; >
-      au < crawling ; exists ; 1996 ; Victorians Institute Journal Volume 24 ; 24 ; 1996 ; >
+      au < frozen ; exists ; 1995 ; Victorians Institute Journal Volume 23 ; 23 ; 1995 ; >
+      au < frozen ; exists ; 1996 ; Victorians Institute Journal Volume 24 ; 24 ; 1996 ; >
       au < ready ; exists ; 1997 ; Victorians Institute Journal Volume 25 ; 25 ; 1997 ; >
       au < ready ; exists ; 1998 ; Victorians Institute Journal Volume 26 ; 26 ; 1998 ; >
       au < ready ; exists ; 1999 ; Victorians Institute Journal Volume 27 ; 27 ; 1999 ; >
-      au < crawling ; exists ; 2000 ; Victorians Institute Journal Volume 28 ; 28 ; 2000 ; >
+      au < frozen ; exists ; 2000 ; Victorians Institute Journal Volume 28 ; 28 ; 2000 ; >
       au < frozen ; exists ; 2001 ; Victorians Institute Journal Volume 29 ; 29 ; 2001 ; >
-      au < crawling ; exists ; 2002 ; Victorians Institute Journal Volume 30 ; 30 ; 2002 ; >
+      au < frozen ; exists ; 2002 ; Victorians Institute Journal Volume 30 ; 30 ; 2002 ; >
       au < frozen ; exists ; 2003 ; Victorians Institute Journal Volume 31 ; 31 ; 2003 ; >
       au < ready ; exists ; 2004 ; Victorians Institute Journal Volume 32 ; 32 ; 2004 ; >
       au < ready ; exists ; 2005 ; Victorians Institute Journal Volume 33 ; 33 ; 2005 ; >
@@ -2607,7 +2607,7 @@
       #move from SUNY Press in 2025
 
       au < ready ; exists ; 2023 ; Mediaevalia Volume 44 ; 44 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Mediaevalia Volume 45 ; 45 ; 2024 ; >
+      au < frozen ; exists ; 2024 ; Mediaevalia Volume 45 ; 45 ; 2024 ; >
       au < crawling ; exists ; 2025 ;Mediaevalia Volume 46 ; 46 ; 2025 ; >
       au < expected ; exists ; 2026 ;Mediaevalia Volume 47 ; 47 ; 2026 ; >
 
