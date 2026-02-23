@@ -53,18 +53,21 @@ import org.lockss.util.Logger;
  */
 
 public class UbiquityPartnerNetworkBookSubstancePredicate implements SubstancePredicate {
-  static Logger log; 
+  static Logger log;
   private ArchivalUnit au;
   private UrlPredicate up = null;
   // Assuming that UTSePress substance is only pdf files; otherwise, additional substance mime types go here
   //https://utsepress.lib.uts.edu.au/site/books/10.5130/978-0-6481242-8-3/download/3149
   // Content-Type: ('application/pdf', None), the above link will show the content type like this
 
-  private static final String SUBSTANCE_STRING = "application/pdf";
-  private static final String BINARY_STRING = "binary/octet-stream";
+  private static final String SUBSTANCE_PDF_STRING = "application/pdf";
+  private static final String SUBSTANCE_EPUB_STRING = "application/epub+zip";
+  private static final String NO_SUBSTANCE_BINARY_STRING = "binary/octet-stream";
+  private static final String NO_SUBSTANCE_APPLICATION_STRING = "application/octet-stream";
+  private static final byte[] EPUB_BYTES = {0x50,0x4b,0x03,0x04};
 
   public UbiquityPartnerNetworkBookSubstancePredicate(ArchivalUnit au) {
-    log = Logger.getLogger("UTSePressSubstancePredicate");
+    log = Logger.getLogger(UbiquityPartnerNetworkBookSubstancePredicate.class);
     this.au = au;
     // add substance rules to check against
     try {
@@ -86,7 +89,12 @@ public class UbiquityPartnerNetworkBookSubstancePredicate implements SubstancePr
     UPDATE September 2025
      Some pdfs are of type binary/octet-stream so check first 5 bytes
      to see if they are (25 50 44 46 2D) (which is "%PDF-")
-     then we can assume it's a pdf
+     then we can assume it's a pdf.
+
+    UPDATE FEB 2026
+     Some AUs have only EPUBs instead of PDFs so check if there's a valid mime-type (application/epub+zip).
+     If not, check first 4 bytes to see if they are (0x50,0x4b,0x03,0x04)
+     then we can assume it's an EPUB.
     */
   @Override
   public boolean isSubstanceUrl(String url){
@@ -105,10 +113,10 @@ public class UbiquityPartnerNetworkBookSubstancePredicate implements SubstancePr
       if(!cu.hasContent()){
         return res;
       }
-      if(mime.contains(SUBSTANCE_STRING)){
+      if(mime.contains(SUBSTANCE_PDF_STRING) || mime.contains(SUBSTANCE_EPUB_STRING)){
         res = true;
       }
-      if(mime.contains(BINARY_STRING)){
+      else if(mime.contains(NO_SUBSTANCE_BINARY_STRING) || mime.contains(NO_SUBSTANCE_APPLICATION_STRING)){
         InputStream is = cu.getUnfilteredInputStream();
         byte[] buffer = new byte[5];
         try{
@@ -116,13 +124,24 @@ public class UbiquityPartnerNetworkBookSubstancePredicate implements SubstancePr
         }catch(IOException ioe){
           log.error("unable to read first 5 bytes of input stream");
         }
-        String s = new String(buffer); 
-        if(s.equals("%PDF-")){
+        if(mime.contains(NO_SUBSTANCE_BINARY_STRING)){
+          String s = new String(buffer); 
+          if(s.equals("%PDF-")){
+            res = true;
+          }
+        }else{
+          for(int i = 0; i < 4; i++){
+            if(buffer[i] != (EPUB_BYTES[i])){
+              return res;
+            }
+          }
           res = true;
         }
+      }else{
+        return res;
       }
       if (log.isDebug3()) {
-	    log.debug3("MimeType: " + mime + "\t Returning: "+ res);
+	      log.debug3("MimeType: " + mime + "\t Returning: "+ res);
       }
       return res;
     } finally {
