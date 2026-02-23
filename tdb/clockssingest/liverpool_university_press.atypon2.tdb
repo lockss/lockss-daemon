@@ -53,7 +53,7 @@
     au < finished ; manifest ; 2022 ; Archives Volume 57 ; 57 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; Archives Volume 58 ; 58 ; reingest5.clockss.org:8082 >
     au < manifest ; exists ; 2024 ; Archives Volume 59 ; 59 ; >
-    au < expected ; exists ; 2025 ; Archives Volume 60 ; 60 ; >
+    au < manifest ; exists ; 2025 ; Archives Volume 60 ; 60 ; >
     au < expected ; exists ; 2026 ; Archives Volume 61 ; 61 ; >
 
   }
@@ -765,7 +765,7 @@
     au < finished ; manifest ; 2022 ; Historical Studies in Industrial Relations Volume 43 ; 43 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; Historical Studies in Industrial Relations Volume 44 ; 44 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Historical Studies in Industrial Relations Volume 45 ; 45 ; reingest3.clockss.org:8083 >
-    au < expected ; exists ; 2025 ; Historical Studies in Industrial Relations Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2025 ; Historical Studies in Industrial Relations Volume 46 ; 46 ; >
     au < expected ; exists ; 2026 ; Historical Studies in Industrial Relations Volume 47 ; 47 ; >
 
   }

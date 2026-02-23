@@ -34,7 +34,7 @@
     au < finished ; manifest ; 2023 ; 14 ; African Invertebrates Volume 2023 ; 2023 ; https://africaninvertebrates.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 15 ; African Invertebrates Volume 2024 ; 2024 ; https://africaninvertebrates.pensoft.net/ ; >
     au < crawling ; exists ; 2025 ; 16 ; African Invertebrates Volume 2025 ; 2025 ; https://africaninvertebrates.pensoft.net/ ; >
-    au < expected ; exists ; 2026 ; 17 ; African Invertebrates Volume 2026 ; 2026 ; https://africaninvertebrates.pensoft.net/ ; >
+    au < manifest ; exists ; 2026 ; 17 ; African Invertebrates Volume 2026 ; 2026 ; https://africaninvertebrates.pensoft.net/ ; >
 
   }
 
@@ -207,7 +207,7 @@
     au < finished ; manifest ; 2023 ; 95-96 ; Journal of Hymenoptera Research Volume 2023 ; 2023 ; https://jhr.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 97 ; Journal of Hymenoptera Research Volume 2024 ; 2024 ; https://jhr.pensoft.net/ ; >
     au < crawling ; exists ; 2025 ; 98 ; Journal of Hymenoptera Research Volume 2025 ; 2025 ; https://jhr.pensoft.net/ ; >
-    au < exists ; exists ; 2025 ; 99 ; Journal of Hymenoptera Research Volume 2026 ; 2026 ; https://jhr.pensoft.net/ ; >
+    au < manifest ; exists ; 2025 ; 99 ; Journal of Hymenoptera Research Volume 2026 ; 2026 ; https://jhr.pensoft.net/ ; >
 
    }
   
@@ -238,7 +238,7 @@
     au < finished ; manifest ; 2023 ; 95-100 ; MycoKeys Volume 2023 ; 2023 ; https://mycokeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 101-111 ; MycoKeys Volume 2024 ; 2024 ; https://mycokeys.pensoft.net/ ; >
     au < crawling ; exists ; 2025 ; 112-126 ; MycoKeys Volume 2025 ; 2025 ; https://mycokeys.pensoft.net/ ; >
-    au < exists ; exists ; 2026 ; 127-141 ; MycoKeys Volume 2026 ; 2026 ; https://mycokeys.pensoft.net/ ; >
+    au < manifest ; exists ; 2026 ; 127-141 ; MycoKeys Volume 2026 ; 2026 ; https://mycokeys.pensoft.net/ ; >
 
    }
   
@@ -266,7 +266,7 @@
     au < finished ; manifest ; 2023 ; 51-54 ; Nature Conservation Volume 2023 ; 2023 ; https://natureconservation.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 55-57 ; Nature Conservation Volume 2024 ; 2024 ; https://natureconservation.pensoft.net/ ; >
     au < crawling ; exists ; 2025 ; 58-60 ; Nature Conservation Volume 2025 ; 2025 ; https://natureconservation.pensoft.net/ ; >
-    au < exists ; exists ; 2026 ; 61-63 ; Nature Conservation Volume 2026 ; 2026 ; https://natureconservation.pensoft.net/ ; >
+    au < manifest ; exists ; 2026 ; 61-63 ; Nature Conservation Volume 2026 ; 2026 ; https://natureconservation.pensoft.net/ ; >
 
    }
   
@@ -297,7 +297,7 @@
     au < finished ; manifest ; 2023 ; 80-89 ; NeoBiota Volume 2023 ; 2023 ; https://neobiota.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2024 ; 90-96 ; NeoBiota Volume 2024 ; 2024 ; https://neobiota.pensoft.net/ ; >
     au < crawling ; exists ; 2025 ; 97-104 ; NeoBiota Volume 2025 ; 2025 ; https://neobiota.pensoft.net/ ; >
-    au < exists ; exists ; 2026 ; 105-112 ; NeoBiota Volume 2026 ; 2026 ; https://neobiota.pensoft.net/ ; >
+    au < manifest ; exists ; 2026 ; 105-112 ; NeoBiota Volume 2026 ; 2026 ; https://neobiota.pensoft.net/ ; >
 
    }
 
@@ -357,7 +357,7 @@
     au < finished ; manifest ; 2023 ; 217-236 ; PhytoKeys Volume 2023 ; 2023 ; https://phytokeys.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 237-250 ; PhytoKeys Volume 2024 ; 2024 ; https://phytokeys.pensoft.net/ ; >
     au < crawling ; exists ; 2025 ; 251-268 ; PhytoKeys Volume 2025 ; 2025 ; https://phytokeys.pensoft.net/ ; >
-    au < exists ; exists ; 2026 ; 269-286 ; PhytoKeys Volume 2026 ; 2026 ; https://phytokeys.pensoft.net/ ; >
+    au < manifest ; exists ; 2026 ; 269-286 ; PhytoKeys Volume 2026 ; 2026 ; https://phytokeys.pensoft.net/ ; >
 
    }
   
@@ -388,7 +388,7 @@
     au < finished ; manifest ; 2023 ; 45-47 ; Subterranean Biology Volume 2023 ; 2023 ; https://subtbiol.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 48-50 ; Subterranean Biology Volume 2024 ; 2024 ; https://subtbiol.pensoft.net/ ; >
     au < crawling ; exists ; 2025 ; 51-54 ; Subterranean Biology Volume 2025 ; 2025 ; https://subtbiol.pensoft.net/ ; >
-    au < exists ; exists ; 2025 ; 55-58 ; Subterranean Biology Volume 2026 ; 2026 ; https://subtbiol.pensoft.net/ ; >
+    au < manifest ; exists ; 2025 ; 55-58 ; Subterranean Biology Volume 2026 ; 2026 ; https://subtbiol.pensoft.net/ ; >
 
    }
   
@@ -422,7 +422,7 @@
     au < finished ; manifest ; 2023 ; 1138-1187 ; ZooKeys Volume 2023 ; 2023 ; https://zookeys.pensoft.net/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 1188-1221 ; ZooKeys Volume 2024 ; 2024 ; https://zookeys.pensoft.net/ ; >
     au < crawling ; exists ; 2025 ; 1222-1265 ; ZooKeys Volume 2025 ; 2025 ; https://zookeys.pensoft.net/ ; >
-    au < exists ; exists ; 2026 ; 1266-1309 ; ZooKeys Volume 2026 ; 2026 ; https://zookeys.pensoft.net/ ; >
+    au < manifest ; exists ; 2026 ; 1266-1309 ; ZooKeys Volume 2026 ; 2026 ; https://zookeys.pensoft.net/ ; >
 
    }
    
