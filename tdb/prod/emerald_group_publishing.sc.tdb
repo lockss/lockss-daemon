@@ -941,8 +941,8 @@
     comment[journal_issn] = 0144-5154
     param[journal_id] = ria
 
-    au < manifest ; 1980 ; 1980 ; Assembly Automation Volume 1 [1980] ; 1 >
-    au < manifest ; 1981 ; 1981 ; Assembly Automation Volume 1 [1981] ; 1 >
+    au < manifest ; 1980 ; 1980 ; Assembly Automation Volume 1 (1980) ; 1 >
+    au < manifest ; 1981 ; 1981 ; Assembly Automation Volume 1 (1981) ; 1 >
     au < manifest ; 1982 ; 1982 ; Assembly Automation Volume 2 ; 2 >
     au < manifest ; 1983 ; 1983 ; Assembly Automation Volume 3 ; 3 >
     au < manifest ; 1984 ; 1984 ; Assembly Automation Volume 4 ; 4 >
@@ -2292,7 +2292,7 @@
     comment[continued_by] = 2040-7122
 
     au < doNotProcess ; 2007 ; 2007 ; Direct Marketing: An International Journal Volume 1 ; 1 >
-    au < doNotProcess ; 2009 ; 2009 ; Direct Marketing: An International Journal Volume 2 ; 2 >
+    au < doNotProcess ; 2008 ; 2008 ; Direct Marketing: An International Journal Volume 2 ; 2 >
     au < doNotProcess ; 2009 ; 2009 ; Direct Marketing: An International Journal Volume 3 ; 3 >
 
   }
@@ -3685,6 +3685,40 @@
 
   {
     title <
+      name = Scientific Lubrication ;
+      issn = 0371-0947 ;
+      eissn = 2977-7224 ;
+      issnl = 0371-0947
+    >
+
+    comment[journal_issn] = 0371-0947
+    param[journal_id] = ilt
+    #continued_by = 0036-8792
+
+    au < manifest ; 1948 ; 1948 ; Scientific Lubrication Volume 1 (1948) ; 1 >
+    au < manifest ; 1949 ; 1949 ; Scientific Lubrication Volume 1 (1949) ; 1 >
+    au < manifest ; 1950 ; 1950 ; Scientific Lubrication Volume 2 ; 2 >
+    au < manifest ; 1951 ; 1951 ; Scientific Lubrication Volume 3 ; 3 >
+    au < manifest ; 1952 ; 1952 ; Scientific Lubrication Volume 4 ; 4 >
+    au < manifest ; 1953 ; 1953 ; Scientific Lubrication Volume 5 ; 5 >
+    au < manifest ; 1954 ; 1954 ; Scientific Lubrication Volume 6 ; 6 >
+    au < manifest ; 1955 ; 1955 ; Scientific Lubrication Volume 7 ; 7 >
+    au < manifest ; 1956 ; 1956 ; Scientific Lubrication Volume 8 ; 8 >
+    au < manifest ; 1957 ; 1957 ; Scientific Lubrication Volume 9 ; 9 >
+    au < manifest ; 1958 ; 1958 ; Scientific Lubrication Volume 10 ; 10 >
+    au < manifest ; 1959 ; 1959 ; Scientific Lubrication Volume 11 ; 11 >
+    au < manifest ; 1960 ; 1960 ; Scientific Lubrication Volume 12 ; 12 >
+    au < manifest ; 1961 ; 1961 ; Scientific Lubrication Volume 13 ; 13 >
+    au < manifest ; 1962 ; 1962 ; Scientific Lubrication Volume 14 ; 14 >
+    au < manifest ; 1963 ; 1963 ; Scientific Lubrication Volume 15 ; 15 >
+    au < manifest ; 1964 ; 1964 ; Scientific Lubrication Volume 16 ; 16 >
+    au < manifest ; 1965 ; 1965 ; Scientific Lubrication Volume 17 ; 17 >
+    au < manifest ; 1966 ; 1966 ; Scientific Lubrication Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
       name = Industrial Lubrication and Tribology ;
       issn = 0036-8792 ;
       eissn = 1758-5775 ;
@@ -3693,27 +3727,8 @@
 
     comment[journal_issn] = 0036-8792
     param[journal_id] = ilt
+    #continues = 0371-0947
 
-
-    au < manifest ; 1948 ; 1948 ; Industrial Lubrication and Tribology Volume 1 [1948] ; 1 >
-    au < manifest ; 1949 ; 1949 ; Industrial Lubrication and Tribology Volume 1 [1949] ; 1 >
-    au < manifest ; 1950 ; 1950 ; Industrial Lubrication and Tribology Volume 2 ; 2 >
-    au < manifest ; 1951 ; 1951 ; Industrial Lubrication and Tribology Volume 3 ; 3 >
-    au < manifest ; 1952 ; 1952 ; Industrial Lubrication and Tribology Volume 4 ; 4 >
-    au < manifest ; 1953 ; 1953 ; Industrial Lubrication and Tribology Volume 5 ; 5 >
-    au < manifest ; 1954 ; 1954 ; Industrial Lubrication and Tribology Volume 6 ; 6 >
-    au < manifest ; 1955 ; 1955 ; Industrial Lubrication and Tribology Volume 7 ; 7 >
-    au < manifest ; 1956 ; 1956 ; Industrial Lubrication and Tribology Volume 8 ; 8 >
-    au < manifest ; 1957 ; 1957 ; Industrial Lubrication and Tribology Volume 9 ; 9 >
-    au < manifest ; 1958 ; 1958 ; Industrial Lubrication and Tribology Volume 10 ; 10 >
-    au < manifest ; 1959 ; 1959 ; Industrial Lubrication and Tribology Volume 11 ; 11 >
-    au < manifest ; 1960 ; 1960 ; Industrial Lubrication and Tribology Volume 12 ; 12 >
-    au < manifest ; 1961 ; 1961 ; Industrial Lubrication and Tribology Volume 13 ; 13 >
-    au < manifest ; 1962 ; 1962 ; Industrial Lubrication and Tribology Volume 14 ; 14 >
-    au < manifest ; 1963 ; 1963 ; Industrial Lubrication and Tribology Volume 15 ; 15 >
-    au < manifest ; 1964 ; 1964 ; Industrial Lubrication and Tribology Volume 16 ; 16 >
-    au < manifest ; 1965 ; 1965 ; Industrial Lubrication and Tribology Volume 17 ; 17 >
-    au < manifest ; 1966 ; 1966 ; Industrial Lubrication and Tribology Volume 18 ; 18 >
     au < manifest ; 1967 ; 1967 ; Industrial Lubrication and Tribology Volume 19 ; 19 >
     au < manifest ; 1968 ; 1968 ; Industrial Lubrication and Tribology Volume 20 ; 20 >
     au < manifest ; 1969 ; 1969 ; Industrial Lubrication and Tribology Volume 21 ; 21 >
@@ -5315,7 +5330,6 @@
     au < doNotProcess ; 2012 ; 2012 ; The International Journal of Leadership in Public Services Volume 8 ; 8 >
     au < doNotProcess ; 2013 ; 2013 ; The International Journal of Leadership in Public Services Volume 9 ; 9 >
     au < doNotProcess ; 2014 ; 2014 ; The International Journal of Leadership in Public Services Volume 10 ; 10 >
-    au < exists ; 2015 ; 2015 ; The International Journal of Leadership in Public Services Volume 11 ; 11 > #change journal_id ijpl. Keep for clockss
 
   }
 
@@ -9041,7 +9055,8 @@
     >
 
     comment[journal_issn] = 2042-0927
-    param[journal_id] = jldob
+    param[journal_id] = jidob
+    #continued_by = 2050-8824
 
     au < doNotProcess ; 2010 ; 2010 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; 2011 ; Journal of Learning Disabilities and Offending Behaviour: Practice, policy and research Volume 2 ; 2 >
@@ -9940,7 +9955,8 @@
     >
 
     comment[journal_issn] = 1758-552X
-    param[journal_id] = jstpc
+    param[journal_id] = jstpm
+    #continued_by = 2053-4620
 
     au < doNotProcess ; 2010 ; 2010 ; Journal of Science and Technology Policy in China Volume 1 ; 1 >
     au < doNotProcess ; 2011 ; 2011 ; Journal of Science and Technology Policy in China Volume 2 ; 2 >
@@ -11740,6 +11756,10 @@
     param[journal_id] = mbr
     # online from 2007
 
+    au < exists ; 2003 ; 2003 ; Multinational Business Review Volume 11 ; 11 >
+    au < exists ; 2004 ; 2004 ; Multinational Business Review Volume 12 ; 12 >
+    au < exists ; 2005 ; 2005 ; Multinational Business Review Volume 13 ; 13 >
+    au < exists ; 2006 ; 2006 ; Multinational Business Review Volume 14 ; 14 >
     au < doNotProcess ; 2007 ; 2007 ; Multinational Business Review Volume 15 ; 15 >
     au < doNotProcess ; 2008 ; 2008 ; Multinational Business Review Volume 16 ; 16 >
     au < doNotProcess ; 2009 ; 2009 ; Multinational Business Review Volume 17 ; 17 >
@@ -12150,6 +12170,7 @@
     au < doNotProcess ; 2023 ; 2023 ; On The Horizon Volume 31 ; 31 >
     au < doNotProcess ; 2024 ; 2024 ; On The Horizon Volume 32 ; 32 >
     au < manifest ; 2025 ; 2025 ; On The Horizon Volume 33 ; 33 >
+    au < expected ; 2026 ; 2026 ; On The Horizon Volume 34 ; 34 >
 
   }
 
@@ -13587,7 +13608,7 @@
     >
 
     comment[journal_issn] = 2045-4457
-    param[journal_id] = sajgbr
+    param[journal_id] = sajbs
     #continued_by = 2398-628X
 
     au < doNotProcess ; 2012 ; 2012 ; South Asian Journal of Global Business Research Volume 1 ; 1 >
@@ -13815,6 +13836,7 @@
     au < manifest ; 1993 ; 1993 ; Planning Review Volume 21 ; 21 >
     au < manifest ; 1994 ; 1994 ; Planning Review Volume 22 ; 22 >
     au < manifest ; 1995 ; 1995 ; Planning Review Volume 23 ; 23 >
+    au < exists ; 1996 ; 1996 ; Planning Review Volume 24 issue 1-2 ; 24 >
 
   }
 
@@ -13831,7 +13853,7 @@
     # online from 1975
     #continues = 0094-064X
 
-    au < manifest ; 1996 ; 1996 ; Strategy & Leadership Volume 24 ; 24 >
+    au < manifest ; 1996 ; 1996 ; Strategy & Leadership Volume 24 issue 3-6 ; 24 >
     au < manifest ; 1997 ; 1997 ; Strategy & Leadership Volume 25 ; 25 >
     au < manifest ; 1998 ; 1998 ; Strategy & Leadership Volume 26 ; 26 >
     au < manifest ; 1999 ; 1999 ; Strategy & Leadership Volume 27 ; 27 >

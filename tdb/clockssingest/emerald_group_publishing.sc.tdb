@@ -986,9 +986,10 @@
     param[journal_id] = ria
     #continues = 0144-5154
 
-    au < exists ; exists ; 2013 ; 2013 ; Robotic Intelligence and Automation Volume 43 ; 43 ; >
-    au < exists ; exists ; 2014 ; 2014 ; Robotic Intelligence and Automation Volume 44 ; 44 ; >
-    au < exists ; exists ; 2015 ; 2015 ; Robotic Intelligence and Automation Volume 45 ; 45 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Robotic Intelligence and Automation Volume 43 ; 43 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Robotic Intelligence and Automation Volume 44 ; 44 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Robotic Intelligence and Automation Volume 45 ; 45 ; >
+    au < exists ; exists ; 2026 ; 2026 ; Robotic Intelligence and Automation Volume 46 ; 46 ; >
 
   }
 
@@ -3679,6 +3680,40 @@
 
   {
     title <
+      name = Scientific Lubrication ;
+      issn = 0371-0947 ;
+      eissn = 2977-7224 ;
+      issnl = 0371-0947
+    >
+
+    comment[journal_issn] = 0371-0947
+    param[journal_id] = ilt
+    #continued_by = 0036-8792
+
+    au < exists ; exists ; 1948 ; 1948 ; Scientific Lubrication Volume 1 (1948) ; 1 ; >
+    au < manifest ; exists ; 1949 ; 1949 ; Scientific Lubrication Volume 1 (1949) ; 1 ; >
+    au < manifest ; exists ; 1950 ; 1950 ; Scientific Lubrication Volume 2 ; 2 ; >
+    au < manifest ; exists ; 1951 ; 1951 ; Scientific Lubrication Volume 3 ; 3 ; >
+    au < manifest ; exists ; 1952 ; 1952 ; Scientific Lubrication Volume 4 ; 4 ; >
+    au < manifest ; exists ; 1953 ; 1953 ; Scientific Lubrication Volume 5 ; 5 ; >
+    au < manifest ; exists ; 1954 ; 1954 ; Scientific Lubrication Volume 6 ; 6 ; >
+    au < manifest ; exists ; 1955 ; 1955 ; Scientific Lubrication Volume 7 ; 7 ; >
+    au < manifest ; exists ; 1956 ; 1956 ; Scientific Lubrication Volume 8 ; 8 ; >
+    au < manifest ; exists ; 1957 ; 1957 ; Scientific Lubrication Volume 9 ; 9 ; >
+    au < manifest ; exists ; 1958 ; 1958 ; Scientific Lubrication Volume 10 ; 10 ; >
+    au < manifest ; exists ; 1959 ; 1959 ; Scientific Lubrication Volume 11 ; 11 ; >
+    au < manifest ; exists ; 1960 ; 1960 ; Scientific Lubrication Volume 12 ; 12 ; >
+    au < manifest ; exists ; 1961 ; 1961 ; Scientific Lubrication Volume 13 ; 13 ; >
+    au < manifest ; exists ; 1962 ; 1962 ; Scientific Lubrication Volume 14 ; 14 ; >
+    au < manifest ; exists ; 1963 ; 1963 ; Scientific Lubrication Volume 15 ; 15 ; >
+    au < manifest ; exists ; 1964 ; 1964 ; Scientific Lubrication Volume 16 ; 16 ; >
+    au < manifest ; exists ; 1965 ; 1965 ; Scientific Lubrication Volume 17 ; 17 ; >
+    au < manifest ; exists ; 1966 ; 1966 ; Scientific Lubrication Volume 18 ; 18 ; >
+
+  }
+
+  {
+    title <
       name = Industrial Lubrication and Tribology ;
       issn = 0036-8792 ;
       eissn = 1758-5775 ;
@@ -3687,25 +3722,8 @@
 
     comment[journal_issn] = 0036-8792
     param[journal_id] = ilt
+    #continues = 0371-0947
 
-    au < manifest ; exists ; 1949 ; 1949 ; Industrial Lubrication and Tribology Volume 1 ; 1 ; >
-    au < manifest ; exists ; 1950 ; 1950 ; Industrial Lubrication and Tribology Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1951 ; 1951 ; Industrial Lubrication and Tribology Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1952 ; 1952 ; Industrial Lubrication and Tribology Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1953 ; 1953 ; Industrial Lubrication and Tribology Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1954 ; 1954 ; Industrial Lubrication and Tribology Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1955 ; 1955 ; Industrial Lubrication and Tribology Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1956 ; 1956 ; Industrial Lubrication and Tribology Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1957 ; 1957 ; Industrial Lubrication and Tribology Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1958 ; 1958 ; Industrial Lubrication and Tribology Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1959 ; 1959 ; Industrial Lubrication and Tribology Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1960 ; 1960 ; Industrial Lubrication and Tribology Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1961 ; 1961 ; Industrial Lubrication and Tribology Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1962 ; 1962 ; Industrial Lubrication and Tribology Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1963 ; 1963 ; Industrial Lubrication and Tribology Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1964 ; 1964 ; Industrial Lubrication and Tribology Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1965 ; 1965 ; Industrial Lubrication and Tribology Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1966 ; 1966 ; Industrial Lubrication and Tribology Volume 18 ; 18 ; >
     au < manifest ; exists ; 1967 ; 1967 ; Industrial Lubrication and Tribology Volume 19 ; 19 ; >
     au < manifest ; exists ; 1968 ; 1968 ; Industrial Lubrication and Tribology Volume 20 ; 20 ; >
     au < manifest ; exists ; 1969 ; 1969 ; Industrial Lubrication and Tribology Volume 21 ; 21 ; >
