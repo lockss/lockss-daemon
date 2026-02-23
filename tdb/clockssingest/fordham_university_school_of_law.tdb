@@ -68,7 +68,7 @@
       param[base_url] = https://ir.lawnet.fordham.edu/
       param[journal_abbr] = iplj
 
-      au < ready ; exists ; 1990 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1990 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 1 ; 1 ; >
       au < crawling ; exists ; 1991 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 2 ; 2 ; >
       au < ready ; exists ; 1992 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 3 ; 3 ; >
       au < frozen ; exists ; 1993 ; Fordham Intellectual Property, Media & Entertainment Law Journal Volume 4 ; 4 ; >
