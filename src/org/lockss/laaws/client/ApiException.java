@@ -44,6 +44,7 @@ package org.lockss.laaws.client;
 
 import java.util.List;
 import java.util.Map;
+import org.lockss.util.StringUtil;
 
 /**
  * <p>ApiException class.</p>
@@ -191,8 +192,21 @@ public class ApiException extends Exception {
    * @return The exception message
    */
   public String getMessage() {
-    return String.format(
-        "Message: %s%nHTTP response code: %s%nHTTP response body: %s%nHTTP response headers: %s",
-        super.getMessage(), this.getCode(), this.getResponseBody(), this.getResponseHeaders());
+    StringBuilder sb = new StringBuilder();
+    sb.append(super.getMessage());
+    if (this.getCode() > 0) {
+      sb.append(", HTTP response code: ");
+      sb.append(this.getCode());
+    }
+    if (!StringUtil.isNullString(getResponseBody())) {
+      sb.append(", HTTP response body: ");
+      sb.append(getResponseBody());
+    }
+    if (getResponseHeaders() != null &&
+        !getResponseHeaders().isEmpty()) {
+      sb.append(", HTTP response headers: ");
+      sb.append(getResponseHeaders());
+    }
+    return sb.toString();
   }
 }
