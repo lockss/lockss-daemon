@@ -48,6 +48,8 @@ import org.lockss.util.UrlUtil;
 import java.util.*;
 
 import static org.lockss.laaws.Counters.CounterType;
+import static org.lockss.laaws.V2AuMover.FailedCuVer;
+import static org.lockss.laaws.MigrationTask.Option;
 
 public class CuMover extends CuBase {
   private static final Logger log = Logger.getLogger(CuMover.class);
@@ -67,17 +69,21 @@ public class CuMover extends CuBase {
       return;
     }
     try {
-      log.debug2("Starting CuMover: " + au + ", " + cu);
-      buildCompatMap(cu);
+      log.debug2("Starting CuMover: " + au + ", " + cu0);
+      buildCompatMap(cu0);
       if (mappedCus.isEmpty()) {
-        log.warning("No active versions of " + cu + " found.");
+        log.warning("No active versions of " + cu0 + " found.");
       }
       for (String v2Url : mappedCus.keySet()) {
         // Skip fetching the existing V2 artifects if we know no
         // artifacts of this AU were present on target when operation
         // started
         Map<Integer,Artifact> v2Artifacts = Collections.emptyMap();
-        if (auMover.existsInV2(au.getAuId())) {
+        // Must check for existing artifacts on target if any part of
+        // this AU existed on the target when we started, OR this is a
+        // retry phase
+        if (task.isOption(Option.RETRY_PHASE) ||
+            auMover.existsInV2(au.getAuId())) {
           try {
             v2Artifacts = getV2ArtifactsForUrl(auid, v2Url);
           } catch (ApiException e) {
@@ -160,24 +166,56 @@ public class CuMover extends CuBase {
       log.debug3("copyArtifact returned");
     }
     catch (ApiException apie) {
-      String err = "Failed to write " + v2Url + cuVersionString(cu) + ": " +
+      String err = "Failed to write " + rmsg() + v2Url + cuVersionString(cu) + ": " +
           apie.getCode() + " - " + apie.getMessage();
       log.warning(err);
-      task.addError(err);
+      // Very elegant: if target ran out of space, preempt decision
+      // about recording vs reporting the error and always report it
+      if (auMover.isNoSpaceMessage(apie.getMessage())) {
+        task.addError(err);
+        auMover.abortCopy("Aborted because target disk is full");
+      } else {
+        if (task.isOption(Option.RECORD_ERRORS)) {
+          recordFailedCu(auid, cu, v2Url, namespace, collectionDate);
+        }
+        if (task.isOption(Option.REPORT_ERRORS)) {
+          task.addError(err);
+        }
+      }
     }
     catch (LockssRepository.RepositoryStateException e) {
-      String err = "V1 repository error reading " + v1Url + cuVersionString(cu);
+      String err = "V1 repository error reading " + rmsg() + v1Url + cuVersionString(cu);
       log.warning(err, e);
-      task.addError(err + ": " + e);
+      if (task.isOption(Option.RECORD_ERRORS)) {
+        recordFailedCu(auid, cu, v2Url, namespace, collectionDate);
+      }
+      if (task.isOption(Option.REPORT_ERRORS)) {
+        task.addError(err + ": " + e);
+      }
     }
     catch (Exception | Error e) {
-      String err = "Unexpected Error copying " + v1Url + cuVersionString(cu);
+      String err = "Unexpected Error copying " + rmsg() + v1Url + cuVersionString(cu);
       log.warning(err, e);
-      task.addError(err + ": " + e);
+      if (task.isOption(Option.RECORD_ERRORS)) {
+        recordFailedCu(auid, cu, v2Url, namespace, collectionDate);
+      }
+      if (task.isOption(Option.REPORT_ERRORS)) {
+        task.addError(err + ": " + e);
+      }
     }
     finally {
       AuUtil.safeRelease(cu);
     }
+  }
+
+  String rmsg() {
+    return task.isOption(Option.RETRY_PHASE) ? "(retry) " : "";
+  }
+
+  private void recordFailedCu(String auid, CachedUrl cu, String v2Url,
+                          String namespace, long collectionDate) {
+    recordFailedCu(auid, cu, v2Url,
+                   namespace, collectionDate, FailedCuVer.Type.Copy);
   }
 
   /**

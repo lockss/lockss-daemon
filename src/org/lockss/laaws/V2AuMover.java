@@ -33,6 +33,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 import com.google.gson.Gson;
 import org.apache.commons.lang3.builder.*;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -42,6 +43,8 @@ import org.lockss.laaws.MigrationManager.OpType;
 import org.lockss.laaws.api.rs.StreamingArtifactsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
+import org.lockss.laaws.model.rs.Artifact;
+import org.lockss.laaws.model.rs.ArtifactProperties;
 import org.lockss.laaws.model.rs.AuidPageInfo;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
@@ -484,6 +487,7 @@ public class V2AuMover {
 
   private boolean failed = false;
   private boolean globalAbort = false;
+  private String abortReason = null;
 
   ConfigManager cfgManager;
   PluginManager pluginManager;
@@ -662,7 +666,8 @@ public class V2AuMover {
       }
       // Create a new RepoClient
       repoClient = makeV2RestClient();
-      setTimeouts(repoClient, "repo", connectTimeout, readTimeout);
+//       setTimeouts(repoClient, "repo", connectTimeout, readTimeout);
+      setTimeouts(repoClient, "repo", connectTimeout, longReadTimeout);
       repoLongCallClient = makeV2RestClient(repoClient);
       setTimeouts(repoLongCallClient, "index", connectTimeout, longReadTimeout);
       setClientParams(repoClient, userName, userPass, userAgent,
@@ -799,6 +804,11 @@ public class V2AuMover {
     } finally {
       running = false;
       closeReports();
+      try {
+        copyReportsToTarget();
+      } catch (Exception e) {
+        log.error("Failed to copy migration reports to target", e);
+      }
     }
   }
 
@@ -850,8 +860,9 @@ public class V2AuMover {
     }
   }
 
-  public void abortCopy() {
-    log.info("Abort requested");
+  public void abortCopy(String reason) {
+    log.info("Abort requested: " + reason);
+    abortReason = reason;
     globalAbort = true;
   }
 
@@ -1027,7 +1038,7 @@ public class V2AuMover {
         break;
       case Finished:
         // Optionally delete the AU from the system
-        if (!isDryRun()) {
+        if (opType.isCopy() && !isDryRun()) {
           try {
             if (migrationMgr.isDeleteMigratedAus()) {
               // Remove AU from LOCKSS
@@ -1149,7 +1160,7 @@ public class V2AuMover {
           enterPhase(auStat, Phase.FINISH);
           return;
         } else {
-          log.debug2("V2 Repo already has au " + au.getName() + ", added to check for unmoved content.");
+          log.debug2("V2 Repo already has au " + au.getName() + ", enqueueing anyway to check for uncopied content.");
         }
       }
 
@@ -1213,6 +1224,7 @@ public class V2AuMover {
     QUEUE("Queued"),                    // First phase
     START("Starting"),
     COPY("Copying", "Copied"),
+    RETRY("Retrying failed copies", "Retried"),
     INDEX("Indexing"),
     VERIFY("Checking", "Checked"),
     COPY_STATE("Copying State"),
@@ -1262,7 +1274,9 @@ public class V2AuMover {
     pdMap =
       MapUtil.
       map(
-          Phase.COPY, new PD(Action.EnqCopy, copyIterExecutor, Phase.INDEX),
+//           Phase.COPY, new PD(Action.EnqCopy, copyIterExecutor, Phase.INDEX),
+          Phase.COPY, new PD(Action.EnqCopy, copyIterExecutor, Phase.RETRY),
+          Phase.RETRY, new PD(Action.EnqRetry, copyIterExecutor, Phase.INDEX),
           Phase.INDEX, new PD(Action.EnqIndex, null/*indexExecutor*/,
                               opType.isVerify() ? Phase.VERIFY : firstStatePhase()),
           Phase.VERIFY, new PD(Action.EnqVerify, verifyIterExecutor,
@@ -1364,7 +1378,11 @@ public class V2AuMover {
   // State transition actions
   //////////////////////////////////////////////////////////////////////
 
-  enum Action { EnqCopy, EnqVerify, EnqCopyState, EnqCheckState, EnqIndex, FinishAu }
+  enum Action {
+    EnqCopy, EnqRetry, EnqVerify,
+    EnqCopyState, EnqCheckState,
+    EnqIndex, FinishAu
+  }
 
   void doAction(AuStatus auStat, Action action) {
     ArchivalUnit au = auStat.getAu();
@@ -1373,6 +1391,10 @@ public class V2AuMover {
     case EnqCopy:
       log.debug2("Enqueueing copy AU: " + auName);
       enqueueCopyAuContent(auStat);
+      break;
+    case EnqRetry:
+      log.debug2("Enqueueing copy AU retries: " + auName);
+      enqueueRetryCopyAuContent(auStat);
       break;
     case EnqVerify:
       if (opType.isVerify()) {
@@ -1603,6 +1625,40 @@ public class V2AuMover {
   }
 
   /**
+   * Like enqueueCopyAuContent() but enqueue a copy task for each
+   * failed CU */
+  void enqueueRetryCopyAuContent(AuStatus auStat) {
+    List<FailedCu> failedCus = getAuFailedCus(auStat.getAuId());
+    if (failedCus == null || failedCus.isEmpty()) {
+      log.debug("No CU copy retries to enqueue: " + auStat.getAuName());
+      exitPhase(auStat);
+      return;                           // shouldn't get here
+    }
+    CountUpDownLatch latch = makePhaseEndingLatch(auStat, "CopyRetry");
+    auStat.setLatch(Phase.RETRY, latch);
+    ArchivalUnit au = auStat.getAu();
+    log.debug("Enqueueing CU copy retries: " + au.getName());
+    // Queue copies for all failed CUs in the AU.
+    for (ListIterator<FailedCu> iter = failedCus.listIterator(); iter.hasNext();) {
+      FailedCu fcu = iter.next();
+      CachedUrl cu = fcu.noVerCu;
+      if (auStat.isAbort()) {
+        break;
+      }
+      // Remove FailedCu items as they're processed.  Might matter if
+      // we add Failed CU processing to verify phase
+      iter.remove();
+      MigrationTask task = MigrationTask.retryCuVersions(this, au, cu)
+        .setCounters(auStat.getCounters())
+        .setAuStatus(auStat)
+        .setCountDownLatch(latch);
+      latch.countUp();
+      copyExecutor.execute(new TaskRunner(this, task));
+      }
+    latch.countDown();
+  }
+
+  /**
    * Enqueue a verify task for each CU in the AU.  Will block if the
    * pool's queue fills.  Arrange for exitPhase() to be called when
    * all the CuChecker tasks have completed */
@@ -1661,18 +1717,26 @@ public class V2AuMover {
    * @throws IOException if server is unable to return status.
    */
   void checkV2ServicesAvailable() throws IOException {
+    String checking = null;
     try {
       log.info("Checking V2 Repository Status");
+      checking = "V2 Repository Service";
       repoStatus = repoStatusApiClient.getStatus();
       if (repoStatus == null || !repoStatus.getReady()) {
         throw new IOException("V2 Repository Service is not ready");
       }
       log.info("Checking V2 Configuration Status");
+      checking = "V2 Configuration Service";
       cfgStatus = cfgStatusApiClient.getStatus();
       if (cfgStatus == null || !cfgStatus.getReady()) {
         throw new IOException("V2 Configuration Service is not ready");
       }
     } catch (Exception e) {
+      if (checking != null) {
+        currentStatus = checking + " not ready";
+      } else {
+        currentStatus = "V2 services not ready";
+      }
       throw new ServiceUnavailableException("Couldn't fetch service status", e);
     }
   }
@@ -1765,7 +1829,7 @@ public class V2AuMover {
             lrhe = gson.fromJson(bodyStr,
                                  LockssRestHttpException.class);
             logErrorBody(response, bodyStr, lrhe);
-            if (isNonRetryableResponse(errCode)) {
+            if (isNonRetryableResponse(errCode, lrhe)) {
               // no retries
               msgPrefix = "Unretryable error: ";
               break;
@@ -1799,11 +1863,13 @@ public class V2AuMover {
             throw ioe;
           }
         }
-        // sleep before retrying
-        try {
-          Thread.sleep(retryBackoffDelay * tryCount);
-        } catch (InterruptedException e1) {
-          throw new RuntimeException(e1);
+        if (tryCount < maxRetryCount) {
+          // sleep before retrying
+          try {
+            Thread.sleep(retryBackoffDelay * tryCount);
+          } catch (InterruptedException e1) {
+            throw new RuntimeException(e1);
+          }
         }
       }
       //We've run out of retries and it is not IOException.
@@ -1819,7 +1885,8 @@ public class V2AuMover {
       throw new IOException(msg);
     }
 
-    private boolean isNonRetryableResponse(int errCode) {
+    private boolean isNonRetryableResponse(int errCode,
+                                           LockssRestHttpException lrhe) {
       switch (errCode) {
       case 400:
       case 401:
@@ -1827,10 +1894,17 @@ public class V2AuMover {
       case 404:
       case 501:
         return true;
+      case 500:
+      case 507:                         // Insufficient Storage
+        return (isNoSpaceMessage(lrhe.getMessage()));
       default:
         return false;
       }
     }
+  }
+
+  public boolean isNoSpaceMessage(String msg) {
+    return StringUtils.containsIgnoreCase(msg, "No space");
   }
 
   void logErrorBody(Response response, String bodyStr,
@@ -1862,6 +1936,74 @@ public class V2AuMover {
       log.error("Exception trying to retrieve error response body", e);
     }
   }
+
+  //////////////////////////////////////////////////////////////////////
+  // Failed CU record keeping
+  //////////////////////////////////////////////////////////////////////
+
+  /** A versionless CU some of whose versions failed, with the list of
+   * specific failures. */
+  static class FailedCu {
+    CachedUrl noVerCu;
+    List<FailedCuVer> failedCus = new ArrayList<>(2);
+
+    FailedCu(CachedUrl cu) {
+      this.noVerCu = cu;
+    }
+
+    void addFailedCuVer(FailedCuVer fcuv) {
+      failedCus.add(fcuv);
+    }
+
+    public String toString() {
+      return "[failed: " + noVerCu + failedCus + "]";
+    }
+  }
+
+  static class FailedCuVer {
+    String auid;
+    CachedUrl cu;
+    String v2Url;
+    String namespace;
+    long collectionDate;
+    Type failType;
+
+    enum Type {Copy, Verify}
+
+    FailedCuVer(String auid, CachedUrl cu, String v2Url, String namespace,
+             long collectionDate, Type failType) {
+      this.auid = auid;
+      this.cu = cu;
+      this.v2Url = v2Url;
+      this.namespace = namespace;
+      this.collectionDate = collectionDate;
+      this.failType = failType;
+    }
+
+    public String toString() {
+      return "[fcus: " + cu + "]";
+    }
+  }
+
+  // Maps AUID to list of FailedCus
+  private Map<String,List<FailedCu>> failedCuMap = new HashMap<>();
+
+  void addAuFailedCu(String auid, FailedCu fcu) {
+    synchronized (failedCuMap) {
+      List<FailedCu> lst = failedCuMap.get(auid);
+      if (lst == null) {
+        lst = new ArrayList<>();
+        failedCuMap.put(auid, lst);
+      }
+      lst.add(fcu);
+    }
+  }
+
+  List<FailedCu> getAuFailedCus(String auid) {
+    return failedCuMap.get(auid);
+  }
+
+
 
   //////////////////////////////////////////////////////////////////////
   // Accessors
@@ -2236,7 +2378,11 @@ public class V2AuMover {
 
   String getIdleStatus() {
     if (isAbort()) {
-      return "Aborted";
+      if (!StringUtil.isNullString(abortReason)) {
+        return abortReason;
+      } else {
+        return "Aborted";
+      }
     }
     if (hasBeenStarted) {
       if (isFailed()) {
@@ -2246,6 +2392,10 @@ public class V2AuMover {
       } else {
         return "Done";
       }
+    }
+    // Pretty kludgey
+    if ("Checking V2 services".equals(currentStatus)) {
+      return "Starting";
     }
     return "Idle";
   }
@@ -2653,6 +2803,38 @@ public class V2AuMover {
       writer.close();
     }
     log.info(currentStatus);
+  }
+
+  private void copyReportsToTarget() throws IOException, ApiException {
+    copyReportFileToTarget(reportFile);
+    copyReportFileToTarget(errorFile);
+  }
+
+  static String MIGRATION_REPORTS_NAMESPACE = "internal";
+  static String MIGRATION_REPORTS_AUID =
+    "org|lockss|plugin|NamedPlugin&handle~Migration+Reports";
+
+  private void copyReportFileToTarget(File file)
+      throws IOException, ApiException {
+    // Artifact properties
+    Map<String, String> props = new HashMap<>();
+    props.put(ArtifactProperties.SERIALIZED_NAME_NAMESPACE,
+              MIGRATION_REPORTS_NAMESPACE);
+    props.put(ArtifactProperties.SERIALIZED_NAME_AUID, MIGRATION_REPORTS_AUID);
+    props.put(ArtifactProperties.SERIALIZED_NAME_URI, file.getName());
+    Gson gson = new Gson();
+    String prop_str = gson.toJson(props);
+
+    log.debug("Storing " + file.getName() + " in V2 repo");
+    Artifact uncommitted =
+      getRepoArtifactsApiClient().createArtifact(prop_str, file, null);
+    if (uncommitted != null) {
+      Artifact committed =
+        getRepoArtifactsApiClient().updateArtifact(uncommitted.getUuid(),
+                                                   true,
+                                                   uncommitted.getNamespace());
+      log.debug("Committed " + file.getName() + " to V2 repo");
+    }
   }
 
   //////////////////////////////////////////////////////////////////////

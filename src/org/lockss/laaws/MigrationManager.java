@@ -339,11 +339,11 @@ public class MigrationManager extends BaseLockssDaemonManager
     new Thread(runner).start();
   }
 
-  public synchronized void abortCopy() throws IOException {
+  public synchronized void abortCopy(String reason) throws IOException {
     if (!isRunning()) {
       throw new IllegalStateException("Not running");
     }
-    mover.abortCopy();
+    mover.abortCopy(reason);
   }
 
   public void resetAllMigrationState()

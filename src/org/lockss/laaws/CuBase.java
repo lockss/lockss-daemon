@@ -48,14 +48,18 @@ import org.lockss.util.UrlUtil;
 import java.util.*;
 
 import static org.lockss.laaws.Counters.CounterType;
+import static org.lockss.laaws.V2AuMover.FailedCu;
+import static org.lockss.laaws.V2AuMover.FailedCuVer;
+import static org.lockss.laaws.MigrationTask.Option;
 
 public class CuBase extends Worker {
   private static final Logger log = Logger.getLogger(CuBase.class);
 
-  protected CachedUrl cu;
+  protected CachedUrl cu0;
   protected String namespace;
   protected String v1Url;
   protected boolean isPartialContent;
+  protected FailedCu fcu;
 
   /** Maps each actual publisher URL from which any of the versions of
    * this CU was collected to a list of CUs (possibly
@@ -73,8 +77,8 @@ public class CuBase extends Worker {
 
   protected CuBase(V2AuMover auMover, MigrationTask task) {
     super(auMover, task);
-    this.cu = task.getCu();
-    v1Url = cu.getUrl();
+    this.cu0 = task.getCu();
+    v1Url = cu0.getUrl();
     namespace = auMover.getNamespace();
   }
 
@@ -159,13 +163,22 @@ public class CuBase extends Worker {
   protected Map<Integer,Artifact> getV2ArtifactsForUrl(String auId,
                                                        String v2Url)
       throws ApiException {
+    return getV2ArtifactsForUrl(auId, v2Url, false);
+  }
+
+  /** Find the existing artifacts for this URL on the target, return
+   * them in a {version -> artifact} map */
+  protected Map<Integer,Artifact> getV2ArtifactsForUrl(String auId,
+                                                       String v2Url,
+                                                       boolean includeUncommitted)
+      throws ApiException {
     String token = null;
     Map<Integer,Artifact> verMap = new HashMap<>();
     log.debug3("Fetching V2 Artifacts for " + v2Url);
     do {
       ArtifactPageInfo pageInfo =
         artifactsApi.getArtifacts(auId, namespace, v2Url, null,
-                                  "all", false, null, token);
+                                  "all", includeUncommitted, null, token);
       for (Artifact art : pageInfo.getArtifacts()) {
         verMap.put(art.getVersion(), art);
       }
@@ -178,4 +191,19 @@ public class CuBase extends Worker {
   protected String urlVer(CachedUrl cu) {
     return cu.getUrl() + ":" + cu.getVersion();
   }
+
+  protected void recordFailedCu(String auid, CachedUrl cu, String v2Url,
+                                String namespace, long collectionDate,
+                                FailedCuVer.Type failType) {
+
+    if (fcu == null) {
+      fcu = new FailedCu(cu0);
+      auMover.addAuFailedCu(auid, fcu);
+    }
+    FailedCuVer fcuv = new FailedCuVer(auid, cu, v2Url, namespace,
+                                       collectionDate, failType);
+    log.debug("Recording failed CU: " + fcuv);
+    fcu.addFailedCuVer(fcuv);
+  }
+
 }

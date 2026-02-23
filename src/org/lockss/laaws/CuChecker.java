@@ -56,10 +56,10 @@ public class CuChecker extends CuBase {
       return;
     }
     try {
-      log.debug2("Starting CuChecker: " + au + ", " + cu);
-      buildCompatMap(cu);
+      log.debug2("Starting CuChecker: " + au + ", " + cu0);
+      buildCompatMap(cu0);
       if (mappedCus.isEmpty()) {
-        log.debug2("No active versions of " + cu + " found.");
+        log.debug2("No active versions of " + cu0 + " found.");
       }
       for (String v2Url : mappedCus.keySet()) {
         try {

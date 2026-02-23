@@ -129,35 +129,58 @@ public class MigrateContent extends LockssServlet {
   String pluginId;
   String auidsFilename;
   Collection<String> auids;
-  List<ArchivalUnit> aus = new ArrayList<>();
+  List<ArchivalUnit> aus;
   String userName;
   String userPass;
-  String hostName=DEFAULT_HOSTNAME;
-  OpType defaultOpType = DEFAULT_DEFAULT_OPTYPE;
-  boolean defaultCompare = DEFAULT_DEFAULT_COMPARE;
+  String hostName;
+  OpType defaultOpType;
   OpType opType;
   boolean isCompareContent;
   boolean isSkipFinished = true;
   boolean isMigratorConfigured;
   List<String> auSelectFilter;
   List<Pattern> auSelectPatterns;
-  boolean allowMissingAuids = DEFAULT_ALLOW_MISSING_AUIDS;
+  boolean allowMissingAuids;
+
+  protected void resetState() {
+    super.resetState();
+  }
 
   protected void resetLocals() {
     auid = null;
-    errMsg = null;
-    statusMsg = null;
+    pluginId = null;
+    auidsFilename = null;
+    auids = null;
+    aus = null;
     userName = null;
     userPass = null;
+    hostName = null;
+    defaultOpType = null;
     opType = null;
+    auSelectFilter = null;
+    auSelectPatterns = null;
+
+    errMsg = null;
+    statusMsg = null;
+
     super.resetLocals();
   }
 
+  public void init(ServletConfig config) throws ServletException {
+    super.init(config);
+    pluginMgr = getLockssDaemon().getPluginManager();
+    migrationMgr = getLockssDaemon().getMigrationManager();
+  }
+
   void initParams() {
+    // Set state from current config, incorporating defaults.  May be
+    // replaced by values from form submission
     Configuration config = ConfigManager.getCurrentConfig();
     isMigratorConfigured = config.getBoolean(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED,
         MigrationManager.DEFAULT_IS_MIGRATOR_CONFIGURED);
     hostName = config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
+    userName = config.get(PARAM_USERNAME);
+    userPass = config.get(PARAM_PASSWORD);
     auSelectFilter =
       config.getList(PARAM_AU_SELECT_FILTER, DEFAULT_AU_SELECT_FILTER);
     if(auSelectFilter != DEFAULT_AU_SELECT_FILTER) {
@@ -165,12 +188,11 @@ public class MigrateContent extends LockssServlet {
     }
     allowMissingAuids = config.getBoolean(PARAM_ALLOW_MISSING_AUIDS,
                                           DEFAULT_ALLOW_MISSING_AUIDS);
-  }
-
-  public void init(ServletConfig config) throws ServletException {
-    super.init(config);
-    pluginMgr = getLockssDaemon().getPluginManager();
-    migrationMgr = getLockssDaemon().getMigrationManager();
+    defaultOpType = config.getEnum(OpType.class,
+                                   PARAM_DEFAULT_OPTYPE,
+                                   DEFAULT_DEFAULT_OPTYPE);
+    isCompareContent = config.getBoolean(PARAM_DEFAULT_COMPARE,
+                                         DEFAULT_DEFAULT_COMPARE);
   }
 
   public void lockssHandleRequest() throws IOException {
@@ -180,6 +202,7 @@ public class MigrateContent extends LockssServlet {
     if (!isMigratorConfigured) {
       String redir = srvURL(AdminServletManager.SERVLET_MIGRATE_CONTENT_SETTINGS);
       resp.sendRedirect(redir);
+      return;
     }
 
     // Is this a status request?
@@ -198,13 +221,6 @@ public class MigrateContent extends LockssServlet {
       return;
     }
 
-    Configuration config = ConfigManager.getCurrentConfig();
-    defaultOpType = config.getEnum(OpType.class,
-                                   PARAM_DEFAULT_OPTYPE,
-                                   DEFAULT_DEFAULT_OPTYPE);
-    // default, if no value from form
-    isCompareContent = config.getBoolean(PARAM_DEFAULT_COMPARE,
-                                         DEFAULT_DEFAULT_COMPARE);
     String action = null;
     try {
       getMultiPartRequest();
@@ -216,10 +232,6 @@ public class MigrateContent extends LockssServlet {
     log.debug(KEY_ACTION + " = " + action);
 
     if (!StringUtil.isNullString(action)) {
-      userName = config.get(PARAM_USERNAME);
-      userPass = config.get(PARAM_PASSWORD);
-      hostName = config.get(PARAM_HOSTNAME);
-      if(hostName==null) hostName="localhost";
       isCompareContent = getParameter(KEY_COMPARE_CONTENT) != null;
       isSkipFinished = getParameter(KEY_SKIP_FINISHED) != null;
 
@@ -443,7 +455,7 @@ public class MigrateContent extends LockssServlet {
 
   private void doAbort() {
     try {
-      migrationMgr.abortCopy();
+      migrationMgr.abortCopy("Aborted due to user request");
       statusMsg = "Abort requested";
     } catch (Exception e) {
       log.error("Couldn't abort", e);

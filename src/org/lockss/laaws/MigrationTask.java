@@ -29,6 +29,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.laaws;
 
 import java.util.function.*;
+import java.util.Arrays;
+import java.util.EnumSet;
 import org.apache.commons.lang3.builder.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
@@ -64,6 +66,13 @@ public class MigrationTask {
     }
   }
 
+  /** Task options */
+  public enum Option {
+    RECORD_ERRORS,
+    REPORT_ERRORS,
+    RETRY_PHASE
+  }
+
   V2AuMover auMover;
   CachedUrl cu;
   ArchivalUnit au;
@@ -73,11 +82,12 @@ public class MigrationTask {
   CountUpDownLatch countDownLatch;
   CountUpDownLatch waitLatch;
   BiConsumer completionAction;
+  EnumSet<Option> options = EnumSet.of(Option.REPORT_ERRORS);
 
   public String toString() {
     switch (type) {
     case COPY_CU_VERSIONS:
-      return "Copy " + cu.getUrl();
+      return (options.contains(Option.RETRY_PHASE) ? "Retry " : "Copy ") + cu.getUrl();
     case CHECK_CU_VERSIONS:
       return "Verify " + cu.getUrl();
     case COPY_AU_STATE:
@@ -114,12 +124,26 @@ public class MigrationTask {
     return new MigrationTask(mover, TaskType.COPY_CONFIG_FILES);
   }
 
-  public static MigrationTask copyCuVersions(V2AuMover mover,
-                                             ArchivalUnit au,
-                                             CachedUrl cu) {
+  private static MigrationTask newCopyTask(V2AuMover mover,
+                                           ArchivalUnit au,
+                                           CachedUrl cu) {
     return new MigrationTask(mover, TaskType.COPY_CU_VERSIONS)
       .setCu(cu)
       .setAu(cu.getArchivalUnit());
+  }
+
+  public static MigrationTask copyCuVersions(V2AuMover mover,
+                                             ArchivalUnit au,
+                                             CachedUrl cu) {
+    return newCopyTask(mover, au, cu)
+      .setOptions(Option.RECORD_ERRORS);
+  }
+
+  public static MigrationTask retryCuVersions(V2AuMover mover,
+                                              ArchivalUnit au,
+                                              CachedUrl cu) {
+    return newCopyTask(mover, au, cu)
+      .setOptions(Option.REPORT_ERRORS, Option.RETRY_PHASE);
   }
 
   public static MigrationTask checkCuVersions(V2AuMover mover,
@@ -161,6 +185,16 @@ public class MigrationTask {
   public MigrationTask setCounters(Counters ctrs) {
     this.counters = ctrs;
     return this;
+  }
+
+  public MigrationTask setOptions(Option ... opts) {
+    // Why can't I just pass opts to EnumSet.of() ?
+    this.options = EnumSet.copyOf(Arrays.asList(opts));
+    return this;
+  }
+
+  public boolean isOption(Option opt) {
+    return options.contains(opt);
   }
 
   public MigrationTask setAuStatus(AuStatus stat) {
@@ -205,6 +239,10 @@ public class MigrationTask {
 
   public CachedUrl getCu() {
     return cu;
+  }
+
+  public EnumSet<Option> getOptions() {
+    return options;
   }
 
   public TaskType getType() {
