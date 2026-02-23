@@ -111,7 +111,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^https?://%s%s.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf|properties|pdf|mrc)", base_url_host, base_url_path</string>
       <string>1,"^https?://%s%sapi/theme$",base_url_host, base_url_path</string>
       <string>1,"^https?://(maxcdn\.bootstrapcdn\.com|cdnjs\.cloudflare\.com|.+\.cloudfront\.net|cdn\.mathjax\.org|(fonts|ajax|storage)\.(gstatic|googleapis)\.com)/."</string>
-      <string>1,"^https?://%s%sbooks/.*\.(epub|mobi|pdf)$", base_url_host, base_url_path</string>
+      <string>1,"^https?://%s%s(en/)?books/.*\.(epub|mobi|pdf)$", base_url_host, base_url_path</string>
       <string>1,"^https?://%s%sreader/books/(epub|pdf)/[0-9\.]+/[a-z0-9\.]+$", base_url_host, base_url_path</string>
       <!--
       https://utsepress.lib.uts.edu.au/site/books/10.5130/aae/download/2946/
@@ -126,7 +126,7 @@ POSSIBILITY OF SUCH DAMAGE.
  <entry>
      <string>au_substance_url_pattern</string>
      <list>
-      <string>"%s.*books/.*/files/.*\.pdf$", base_url</string>
+      <string>"%s.*books/.*/files/.*\.(pdf|epub)$", base_url</string>
      </list>
   </entry>
   <entry>
