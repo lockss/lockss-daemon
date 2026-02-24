@@ -9751,8 +9751,6 @@
     param[journal_id] = jpmh
     #continues = 1475-9535
 
-    au < doNotProcess ; doNotProcess ; 2003 ; 2003 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 2 ; 2 ; >
-    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Journal of Public Mental Health: The art, science and politics of creating a mentally healthy society Volume 6 ; 6 ; >
@@ -11701,7 +11699,6 @@
     au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Multicultural Education & Technology Journal Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; 2012 ; Multicultural Education & Technology Journal Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; 2013 ; Multicultural Education & Technology Journal Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Multicultural Education & Technology Journal Volume 8 ; 8 ; >
 
   }
 
@@ -13719,8 +13716,8 @@
     param[journal_id] = shr
     # online from 2005
 
-    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Strategic HR Review Volume 4 ; 4 ; >
-    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Strategic HR Review Volume 4 ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2004 ; 2004 ; Strategic HR Review Volume 4 (2004) ; 4 ; >
+    au < doNotProcess ; doNotProcess ; 2005 ; 2005 ; Strategic HR Review Volume 4 (2005) ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2006 ; 2006 ; Strategic HR Review Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2007 ; 2007 ; Strategic HR Review Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2008 ; 2008 ; Strategic HR Review Volume 7 ; 7 ; >
