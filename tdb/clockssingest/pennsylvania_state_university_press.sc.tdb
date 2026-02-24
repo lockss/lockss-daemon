@@ -2158,7 +2158,7 @@
       au < frozen ; exists ; 2004 ; Milton Studies Volume 43 ; 43 ; 2004 ; >
       au < ready ; exists ; 2005 ; Milton Studies Volume 44 ; 44 ; 2005 ; >
       au < frozen ; exists ; 2006 ; Milton Studies Volume 45 ; 45 ; 2006 ; >
-      au < ready ; exists ; 2007 ; Milton Studies Volume 46 ; 46 ; 2007 ; >
+      au < crawling ; exists ; 2007 ; Milton Studies Volume 46 ; 46 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Milton Studies Volume 47 ; 47 ; 2008 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Milton Studies Volume 48 ; 48 ; 2008 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; Milton Studies Volume 49 ; 49 ; 2009 ; reingest2.clockss.org:8085 >
@@ -2606,7 +2606,7 @@
       param[journal_id] = mediaevalia
       #move from SUNY Press in 2025
 
-      au < ready ; exists ; 2023 ; Mediaevalia Volume 44 ; 44 ; 2023 ; >
+      au < crawling ; exists ; 2023 ; Mediaevalia Volume 44 ; 44 ; 2023 ; >
       au < frozen ; exists ; 2024 ; Mediaevalia Volume 45 ; 45 ; 2024 ; >
       au < crawling ; exists ; 2025 ;Mediaevalia Volume 46 ; 46 ; 2025 ; >
       au < expected ; exists ; 2026 ;Mediaevalia Volume 47 ; 47 ; 2026 ; >

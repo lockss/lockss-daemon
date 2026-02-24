@@ -106,7 +106,7 @@
 
       param[journal_id] = ijsem
 
-      au < ready ; exists ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 ; https://www.microbiologyresearch.org/ ; >
+      au < crawling ; exists ; 2000 ; International Journal of Systematic and Evolutionary Microbiology Volume 50 ; 50 ; https://www.microbiologyresearch.org/ ; >
       au < ready ; exists ; 2001 ; International Journal of Systematic and Evolutionary Microbiology Volume 51 ; 51 ; https://www.microbiologyresearch.org/ ; >
       au < ready ; exists ; 2002 ; International Journal of Systematic and Evolutionary Microbiology Volume 52 ; 52 ; https://www.microbiologyresearch.org/ ; >
       au < ready ; exists ; 2003 ; International Journal of Systematic and Evolutionary Microbiology Volume 53 ; 53 ; https://www.microbiologyresearch.org/ ; >
