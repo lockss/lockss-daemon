@@ -526,7 +526,7 @@
     au < finished ; manifest ; 2024 ;  ; 9780784485484 ; 9780784485484 ; CICTP 2024 (9780784485484) ; reingest2.clockss.org:8085 >
 
     au < exists ; exists ; 2000 ; 9780784404256 ; 9780784470428 ; 9780784470428 ; Geometric Design Projects for Highways (9780784404256) ; >
-    au < manifest ; exists ; 2004 ; 9780784407264 ; 9780784471098 ; 9780784407264 ; Design of Marine Facilities for the Berthing, Mooring, and Repair of Vessels (9780784407264) ; >
+    #au < manifest ; exists ; 2004 ; 9780784407264 ; 9780784471098 ; 9780784407264 ; Design of Marine Facilities for the Berthing, Mooring, and Repair of Vessels (9780784407264) ; > #duplicate
     au < manifest ; exists ; 2014 ;  ; 9780784477991 ; 9780784477991 ; LEAME Software and User's Manual (9780784477991) ; >
     au < manifest ; exists ; 2025 ; 9780784416365 ; 9780784486245 ; 9780784486245 ; Design Snow Loads for Ground Mounted Solar Panels (9780784486245) ; >
     au < manifest ; exists ; 2025 ; 9780784416297 ; 9780784485897 ; 9780784485897 ; Design of Blast-Resistant Buildings in Energy and Industrial Facilities (9780784485897) ; >
@@ -540,7 +540,7 @@
 
     # Not books
     au < exists ; exists ; 2015 ;  ; 9780784479001 ; 9780784479001 ; Publishing Proceedings with ASCE : A Guide for Editors and Conference Committees (9780784479001) ; >
-    au < manifest ; exists ; 2023 ;  ; 9780784479018 ; 9780784479018 ; Publishing in ASCE Journals : A Guide for Authors (9780784479018) ; >
+    #au < manifest ; exists ; 2023 ;  ; 9780784479018 ; 9780784479018 ; Publishing in ASCE Journals : A Guide for Authors (9780784479018) ; >
 
   }
   
@@ -675,91 +675,94 @@
     au < frozen ; exists ; 2024 ; 9780784416129 ; 9780784484784 ; 9780784416129 ; STANDARD ANSI/ASCE/EWRI 39-23 (9780784416129) ; >
     au < frozen ; exists ; 2024 ; 9780784414989 ; 9780784481226 ; 9780784414989 ; STANDARD ASCE/EWRI 33-23 (9780784414989) ; >
 
-    au < exists ; exists ; 1900 ;  ; 9780784470824 ; 9780784405642 ; Design and Construction of Frost-Protected Shallow Foundations (9780784405642) ; >
+    #au < exists ; exists ; 1900 ;  ; 9780784470824 ; 9780784405642 ; Design and Construction of Frost-Protected Shallow Foundations (9780784405642) ; >
     au < exists ; exists ; 1983 ; 9780872623750 ; 9780784473566 ; 9780872623750 ; N-725 Guideline for Design and Analysis of Nuclear Safety Related Earth Structures (9780872623750) ; >
     au < exists ; exists ; 1990 ; 9780872627420 ; 9780784473627 ; 9780872627420 ; Minimum Design Loads for Buildings and Other Structures (9780872627420) ; >
-    au < exists ; exists ; 1993 ; 9780872628854 ; 9780784473702 ; 9780872628854 ; Measurement of Oxygen Transfer in Clean Water (9780872628854) ; >
-    au < exists ; exists ; 1994 ; 9780872629042 ; 9780784479100 ; 9780872629042 ; Minimum Design Loads for Buildings and Other Structures, (9780872629042) ; >
-    au < exists ; exists ; 1996 ; 9780784400920 ; 9780784479094 ; 9780784400920 ; Minimum Design Loads for Buildings and Other Structures (9780784400920) ; >
-    au < exists ; exists ; 1997 ; 9780784401934 ; 9780784470190 ; 9780784401934 ; Automated People Mover Standards, Part 1 (9780784401934) ; >
-    au < exists ; exists ; 1997 ; 9780784401163 ; 9780784479421 ; 9780784401163 ; Air-Supported Structures (9780784401163) ; >
-    au < exists ; exists ; 1997 ; 9780784402450 ; 9780784470244 ; 9780784402450 ; Structural Applications of Steel Cables for Buildings (9780784402450) ; >
-    au < exists ; exists ; 1999 ; 9780784404478 ; 9780784470558 ; 9780784404478 ; Automated People Mover Standards, Part 2 (9780784404478) ; >
-    au < exists ; exists ; 1999 ; 9780784403549 ; 9780784470374 ; 9780784403549 ; Earthquake-Actuated Automatic Gas Shutoff Devices (9780784403549) ; >
-    au < exists ; exists ; 1999 ; 9780784403006 ; 9780784470305 ; 9780784403006 ; Specifications for Structural Steel Beams with Web Openings (9780784403006) ; >
-    au < exists ; exists ; 2000 ; 9780784403242 ; 9780784470343 ; 9780784403242 ; Design of Latticed Steel Transmission Structures (9780784403242) ; >
-    au < exists ; exists ; 2000 ; 9780784404317 ; 9780784470473 ; 9780784404317 ; Flood Resistant Design and Construction (9780784404317) ; >
-    au < exists ; exists ; 2000 ; 9780784404836 ; 9780784470626 ; 9780784404836 ; Guideline for Condition Assessment of the Building Envelope (9780784404836) ; >
-    au < exists ; exists ; 2000 ; 9780784404324 ; 9780784470480 ; 9780784404324 ; Guideline for Structural Condition Assessment of Existing Buildings (9780784404324) ; >
-    au < exists ; exists ; 2000 ; 9780784404454 ; 9780784470534 ; 9780784404454 ; Minimum Design Loads for Buildings and Other Structures (9780784404454) ; >
-    au < exists ; exists ; 2000 ; 9780784404331 ; 9780784470497 ; 9780784404331 ; Seismic Analysis of Safety-Related Nuclear Structures and Commentary (9780784404331) ; >
-    au < exists ; exists ; 2001 ; 9780784405437 ; 9780784470749 ; 9780784405437 ; Comprehensive Transboundary International Water Quality Management Agreement (9780784405437) ; >
-    au < exists ; exists ; 2002 ; 9780784406038 ; 9780784470879 ; 9780784406038 ; Automated People Mover Standards, Part 3 (9780784406038) ; >
-    au < exists ; exists ; 2002 ; 9780784406182 ; 9780784470886 ; 9780784406182 ; Design Loads on Structures During Construction (9780784406182) ; >
-    au < exists ; exists ; 2002 ; 9780784405932 ; 9780784470855 ; 9780784405932 ; Guidelines for Quality Assurance of Installed Fine-Pore Aeration Equipment (9780784405932) ; >
-    au < exists ; exists ; 2002 ; 9780784405567 ; 9780784470800 ; 9780784405567 ; Specification for the Design of Cold-Formed Stainless Steel Structural Members (9780784405567) ; >
-    au < exists ; exists ; 2003 ; 9780784406243 ; 9780784470893 ; 9780784406243 ; Minimum Design Loads for Buildings and Other Structures (9780784406243) ; >
-    au < exists ; exists ; 2003 ; 9780784406816 ; 9780784471036 ; 9780784406816 ; Regulated Riparian Model Water Code (9780784406816) ; >
-    au < exists ; exists ; 2003 ; 9780784406700 ; 9780784470992 ; 9780784406700 ; Seismic Evaluation of Existing Buildings (9780784406700) ; >
-    au < exists ; exists ; 2005 ; 9780784407622 ; 9780784471135 ; 9780784407622 ; Seismic Design Criteria for Structures, Systems, and Components in Nuclear Facilities (9780784407622) ; >
-    au < exists ; exists ; 2005 ; 9780784408186 ; 9780784471319 ; 9780784408186 ; Flood Resistant Design and Construction (9780784408186) ; >
-    au < exists ; exists ; 2005 ; 9780784408094 ; 9780784471258 ; 9780784408094 ; Minimum Design Loads for Buildings and Other Structures (9780784408094) ; >
-    au < exists ; exists ; 2006 ; 9780784408735 ; 9780784471678 ; 9780784408735 ; Automated People Mover Standards, Part 1 (9780784408735) ; >
-    au < exists ; exists ; 2006 ; 9780784408377 ; 9780784471449 ; 9780784408377 ; Design of Steel Transmission Pole Structures (9780784408377) ; >
-    au < exists ; exists ; 2007 ; 9780784408483 ; 9780784471524 ; 9780784408483 ; Measurement of Oxygen Transfer in Clean Water (9780784408483) ; >
-    au < exists ; exists ; 2007 ; 9780784408841 ; 9780784471753 ; 9780784408841 ; Seismic Rehabilitation of Existing Buildings (9780784408841) ; >
-    au < exists ; exists ; 2008 ; 9780784409640 ; 9780784472217 ; 9780784409640 ; Automated People Mover Standards, Part 2 (9780784409640) ; >
-    au < exists ; exists ; 2008 ; 9780784409541 ; 9780784472132 ; 9780784409541 ; Automated People Mover Standards, Part 3 (9780784409541) ; >
-    au < exists ; exists ; 2008 ; 9780784409534 ; 9780784472125 ; 9780784409534 ; Automated People Mover Standards, Part 4 (9780784409534) ; >
-    au < exists ; exists ; 2008 ; 9780784408773 ; 9780784471715 ; 9780784408773 ; Earthquake-Actuated Automatic Gas Shutoff Devices (9780784408773) ; >
-    au < exists ; exists ; 2009 ; 9780784410196 ; 9780784472699 ; 9780784410196 ; Comprehensive Transboundary Water Quality Management Agreement (9780784410196) ; >
-    au < exists ; exists ; 2010 ; 9780784410943 ; 9780784473344 ; 9780784410943 ; Compaction Grouting Consensus Guide (9780784410943) ; >
-    au < exists ; exists ; 2010 ; 9780784410561 ; 9780784473030 ; 9780784410561 ; Design of Fiberglass-Reinforced Plastic (FRP) Stacks (9780784410561) ; >
-    au < exists ; exists ; 2010 ; 9780784411247 ; 9780784476802 ; 9780784411247 ; Structural Applications of Steel Cables for Buildings (9780784411247) ; >
-    au < exists ; exists ; 2010 ; 9780784411254 ; 9780784473252 ; 9780784411254 ; Structural Design of Interlocking Concrete Pavement for Municipal Streets and Roadways (9780784411254) ; >
-    au < exists ; exists ; 2010 ; 9780784410974 ; 9780784473245 ; 9780784410974 ; Tensile Membrane Structures (9780784410974) ; >
-    au < exists ; exists ; 2011 ; 9780784411889 ; 9780784476505 ; 9780784411889 ; Blast Protection of Buildings (9780784411889) ; >
-    au < exists ; exists ; 2011 ; 9780784411810 ; 9780784476406 ; 9780784411810 ; Design of Steel Transmission Pole Structures (9780784411810) ; >
-    au < exists ; exists ; 2011 ; 9780784411261 ; 9780784476697 ; 9780784411261 ; Guidelines for the Physical Security of Water Utilities - Guidelines for the Physical Security of Wastewater/Stormwater Utilities (9780784411261) ; >
-    au < exists ; exists ; 2012 ; 9780784412305 ; 9780784476918 ; 9780784412305 ; Guideline for Development of Effective Water Sharing Agreements (9780784412305) ; >
-    au < exists ; exists ; 2012 ; 9780784412282 ; 9780784476901 ; 9780784412282 ; Wind Tunnel Testing for Buildings and Other Structures (9780784412282) ; >
-    au < exists ; exists ; 2013 ; 9780784412985 ; 9780784477878 ; 9780784412985 ; Automated People Mover Standards (9780784412985) ; >
-    au < exists ; exists ; 2013 ; 9780784412916 ; 9780784477854 ; 9780784412916 ; Minimum Design Loads for Buildings and Other Structures (9780784412916) ; >
-    au < exists ; exists ; 2014 ; 9780784413791 ; 9780784478721 ; 9780784413791 ; Flood Resistant Design and Construction (9780784413791) ; >
-    au < exists ; exists ; 2014 ; 9780784413258 ; 9780784478271 ; 9780784413258 ; Guideline for Condition Assessment of the Building Envelope (9780784413258) ; >
-    au < exists ; exists ; 2014 ; 9780784413487 ; 9780784478349 ; 9780784413487 ; Seismic Design of Piers and Wharves (9780784413487) ; >
-    au < exists ; exists ; 2014 ; 9780784412855 ; 9780784477915 ; 9780784412855 ; Seismic Evaluation and Retrofit of Existing Buildings (9780784412855) ; >
-    au < exists ; exists ; 2015 ; 9780784413098 ; 9780784478691 ; 9780784413098 ; Design Loads on Structures during Construction (9780784413098) ; >
-    au < exists ; exists ; 2015 ; 9780784413760 ; 9780784478707 ; 9780784413760 ; Design of Latticed Steel Transmission Structures (9780784413760) ; >
-    au < exists ; exists ; 2015 ;  ; 9780784478660 ; 9780784478660 ; Tier 1 Checklists for Seismic Evaluation of Existing Buildings (9780784478660) ; >
-    au < exists ; exists ; 2016 ; 9780784413890 ; 9780784478936 ; 9780784413890 ; Earthquake-Actuated Automatic Gas Shutoff Devices (9780784413890) ; >
-    au < exists ; exists ; 2016 ; 9780784414392 ; 9780784479759 ; 9780784414392 ; Structural Applications of Steel Cables for Buildings (9780784414392) ; >
-    au < exists ; exists ; 2016 ; 9780784414507 ; 9780784480281 ; 9780784414507 ; Structural Design of Interlocking Concrete Pavement for Municipal Streets and Roadways (9780784414507) ; >
-    au < exists ; exists ; 2016 ; 9780784414378 ; 9780784479995 ; 9780784414378 ; Tensile Membrane Structures (9780784414378) ; >
-    au < exists ; exists ; 2017 ;  ; 9780784480748 ; 9780784480748 ; ASCE 7-16 Tsunami Design Zone Maps for Selected Locations (9780784480748) ; >
-    au < exists ; exists ; 2017 ; 9780784414224 ; 9780784479407 ; 9780784414224 ; Management Practices for Control of Erosion and Sediment from Construction Activities (9780784414224) ; >
-    au < exists ; exists ; 2017 ; 9780784414248 ; 9780784479964 ; 9780784414248 ; Minimum Design Loads and Associated Criteria for Buildings and Other Structures (9780784414248) ; >
-    au < exists ; exists ; 2017 ; 9780784413937 ; 9780784479988 ; 9780784413937 ; Seismic Analysis of Safety-Related Nuclear Structures (9780784413937) ; >
-    au < exists ; exists ; 2017 ; 9780784414859 ; 9780784480816 ; 9780784414859 ; Seismic Evaluation and Retrofit of Existing Buildings (9780784414859) ; >
-    au < exists ; exists ; 2018 ; 9780784415009 ; 9780784481929 ; 9780784415009 ; Permeable Interlocking Concrete Pavement (9780784415009) ; >
-    au < exists ; exists ; 2018 ; 9780784414682 ; 9780784480366 ; 9780784414682 ; Regulated Riparian Model Water Code (9780784414682) ; >
-    au < exists ; exists ; 2019 ; 9780784415030 ; 9780784482391 ; 9780784415030 ; Compaction Grouting Consensus Guide (9780784415030) ; >
-    au < exists ; exists ; 2020 ; 9780784415078 ; 9780784482254 ; 9780784415078 ; Design of Steel Transmission Pole Structures (9780784415078) ; >
-    au < exists ; exists ; 2020 ; 9780784415412 ; 9780784482520 ; 9780784415412 ; Estimation of Aquifer Hydraulic Properties by Inverse Numerical Modeling of Aquifer Pumping Tests (9780784415412) ; >
-    au < exists ; exists ; 2021 ; 9780784415429 ; 9780784482537 ; 9780784415429 ; Identifying, Quantifying, and Proving Loss of Productivity (9780784415429) ; >
-    au < exists ; exists ; 2021 ; 9780784415405 ; 9780784482407 ; 9780784415405 ; Seismic Design Criteria for Structures, Systems, and Components in Nuclear Facilities (9780784415405) ; >
-    au < exists ; exists ; 2021 ; 9780784415573 ; 9780784482926 ; 9780784415573 ; Automated People Mover Standards (9780784415573) ; >
-    au < exists ; exists ; 2021 ; 9780784415788 ; 9780784483497 ; 9780784415788 ; Minimum Design Loads and Associated Criteria for Buildings and Other Structures (9780784415788) ; >
-    au < exists ; exists ; 2021 ;  ; 9780784483718 ; 9780784483718 ; Tier 1 Checklists for Seismic Evaluation of Existing Buildings (9780784483718) ; >
-    au < exists ; exists ; 2022 ; 9780784415597 ; 9780784483015 ; 9780784415597 ; Design of Steel Lighting System Support Pole Structures (9780784415597) ; >
-    au < exists ; exists ; 2022 ; 9780784415641 ; 9780784483091 ; 9780784415641 ; Measurement of Oxygen Transfer in Clean Water (9780784415641) ; >
-    au < exists ; exists ; 2022 ; 9780784415740 ; 9780784483367 ; 9780784415740 ; Wind Tunnel Testing for Buildings and Other Structures (9780784415740) ; >
-    au < exists ; exists ; 2023 ; 9780784415719 ; 9780784483336 ; 9780784415719 ; Blast Protection of Buildings (9780784415719) ; >
-    au < exists ; exists ; 2023 ; 9780784416006 ; 9780784483923 ; 9780784416006 ; Dry Dock Standard (9780784416006) ; >
-    au < exists ; exists ; 2023 ; 9780784416112 ; 9780784484760 ; 9780784416112 ; Seismic Evaluation and Retrofit of Existing Buildings (9780784416112) ; >
-    au < exists ; exists ; 2023 ; 9780784415955 ; 9780784483831 ; 9780784415955 ; Specification for the Design of Cold-Formed Stainless Steel Structural Members (9780784415955) ; >
-    au < exists ; exists ; 2023 ;  ; 9780784484807 ; 9780784484807 ; Tier 1 Checklists for Seismic Evaluation and Retrofit of Existing Buildings: Fillable Forms for Standard ASCE/SEI 41-23 (9780784484807) ; >
-    au < exists ; exists ; 2025 ; 9780784414347 ; 9780784480496 ; 9780784414347 ; Calculation of the Saturated Hydraulic Conductivity of Fine-Grained Soils (9780784414347) ; >
+    #au < exists ; exists ; 1993 ; 9780872628854 ; 9780784473702 ; 9780872628854 ; Measurement of Oxygen Transfer in Clean Water (9780872628854) ; >
+    #au < exists ; exists ; 1994 ; 9780872629042 ; 9780784479100 ; 9780872629042 ; Minimum Design Loads for Buildings and Other Structures, (9780872629042) ; >
+    #au < exists ; exists ; 1996 ; 9780784400920 ; 9780784479094 ; 9780784400920 ; Minimum Design Loads for Buildings and Other Structures (9780784400920) ; > #duplicate
+    #au < exists ; exists ; 1997 ; 9780784401934 ; 9780784470190 ; 9780784401934 ; Automated People Mover Standards, Part 1 (9780784401934) ; >
+    #au < exists ; exists ; 1997 ; 9780784401163 ; 9780784479421 ; 9780784401163 ; Air-Supported Structures (9780784401163) ; > #duplicate
+    #au < exists ; exists ; 1997 ; 9780784402450 ; 9780784470244 ; 9780784402450 ; Structural Applications of Steel Cables for Buildings (9780784402450) ; >
+    #au < exists ; exists ; 1999 ; 9780784404478 ; 9780784470558 ; 9780784404478 ; Automated People Mover Standards, Part 2 (9780784404478) ; >
+    #au < exists ; exists ; 1999 ; 9780784403549 ; 9780784470374 ; 9780784403549 ; Earthquake-Actuated Automatic Gas Shutoff Devices (9780784403549) ; >
+    #au < exists ; exists ; 1999 ; 9780784403006 ; 9780784470305 ; 9780784403006 ; Specifications for Structural Steel Beams with Web Openings (9780784403006) ; >
+    #au < exists ; exists ; 2000 ; 9780784403242 ; 9780784470343 ; 9780784403242 ; Design of Latticed Steel Transmission Structures (9780784403242) ; >
+    #au < exists ; exists ; 2000 ; 9780784404317 ; 9780784470473 ; 9780784404317 ; Flood Resistant Design and Construction (9780784404317) ; >
+    #au < exists ; exists ; 2000 ; 9780784404836 ; 9780784470626 ; 9780784404836 ; Guideline for Condition Assessment of the Building Envelope (9780784404836) ; >
+    #au < exists ; exists ; 2000 ; 9780784404324 ; 9780784470480 ; 9780784404324 ; Guideline for Structural Condition Assessment of Existing Buildings (9780784404324) ; >
+    #au < exists ; exists ; 2000 ; 9780784404454 ; 9780784470534 ; 9780784404454 ; Minimum Design Loads for Buildings and Other Structures (9780784404454) ; >
+    #au < exists ; exists ; 2000 ; 9780784404331 ; 9780784470497 ; 9780784404331 ; Seismic Analysis of Safety-Related Nuclear Structures and Commentary (9780784404331) ; >
+    #au < exists ; exists ; 2001 ; 9780784405437 ; 9780784470749 ; 9780784405437 ; Comprehensive Transboundary International Water Quality Management Agreement (9780784405437) ; >
+    #au < exists ; exists ; 2002 ; 9780784406038 ; 9780784470879 ; 9780784406038 ; Automated People Mover Standards, Part 3 (9780784406038) ; >
+    #au < exists ; exists ; 2002 ; 9780784406182 ; 9780784470886 ; 9780784406182 ; Design Loads on Structures During Construction (9780784406182) ; >
+    #au < exists ; exists ; 2002 ; 9780784405932 ; 9780784470855 ; 9780784405932 ; Guidelines for Quality Assurance of Installed Fine-Pore Aeration Equipment (9780784405932) ; >
+    #au < exists ; exists ; 2002 ; 9780784405567 ; 9780784470800 ; 9780784405567 ; Specification for the Design of Cold-Formed Stainless Steel Structural Members (9780784405567) ; >
+    #au < exists ; exists ; 2003 ; 9780784406243 ; 9780784470893 ; 9780784406243 ; Minimum Design Loads for Buildings and Other Structures (9780784406243) ; >
+    #au < exists ; exists ; 2003 ; 9780784406816 ; 9780784471036 ; 9780784406816 ; Regulated Riparian Model Water Code (9780784406816) ; >
+    #au < exists ; exists ; 2003 ; 9780784406700 ; 9780784470992 ; 9780784406700 ; Seismic Evaluation of Existing Buildings (9780784406700) ; >
+    #au < exists ; exists ; 2005 ; 9780784407622 ; 9780784471135 ; 9780784407622 ; Seismic Design Criteria for Structures, Systems, and Components in Nuclear Facilities (9780784407622) ; >
+    #au < exists ; exists ; 2005 ; 9780784408186 ; 9780784471319 ; 9780784408186 ; Flood Resistant Design and Construction (9780784408186) ; >
+    #au < exists ; exists ; 2005 ; 9780784408094 ; 9780784471258 ; 9780784408094 ; Minimum Design Loads for Buildings and Other Structures (9780784408094) ; >
+    #au < exists ; exists ; 2006 ; 9780784408735 ; 9780784471678 ; 9780784408735 ; Automated People Mover Standards, Part 1 (9780784408735) ; >
+    #au < exists ; exists ; 2006 ; 9780784408377 ; 9780784471449 ; 9780784408377 ; Design of Steel Transmission Pole Structures (9780784408377) ; >
+    #au < exists ; exists ; 2007 ; 9780784408483 ; 9780784471524 ; 9780784408483 ; Measurement of Oxygen Transfer in Clean Water (9780784408483) ; >
+    #au < exists ; exists ; 2007 ; 9780784408841 ; 9780784471753 ; 9780784408841 ; Seismic Rehabilitation of Existing Buildings (9780784408841) ; >
+    #au < exists ; exists ; 2008 ; 9780784409640 ; 9780784472217 ; 9780784409640 ; Automated People Mover Standards, Part 2 (9780784409640) ; >
+    #au < exists ; exists ; 2008 ; 9780784409541 ; 9780784472132 ; 9780784409541 ; Automated People Mover Standards, Part 3 (9780784409541) ; >
+    #au < exists ; exists ; 2008 ; 9780784409534 ; 9780784472125 ; 9780784409534 ; Automated People Mover Standards, Part 4 (9780784409534) ; >
+    #au < exists ; exists ; 2008 ; 9780784408773 ; 9780784471715 ; 9780784408773 ; Earthquake-Actuated Automatic Gas Shutoff Devices (9780784408773) ; >
+    #au < exists ; exists ; 2009 ; 9780784410196 ; 9780784472699 ; 9780784410196 ; Comprehensive Transboundary Water Quality Management Agreement (9780784410196) ; >
+    #au < exists ; exists ; 2010 ; 9780784410943 ; 9780784473344 ; 9780784410943 ; Compaction Grouting Consensus Guide (9780784410943) ; >
+
+    #au < exists ; exists ; 2010 ; 9780784410561 ; 9780784473030 ; 9780784410561 ; Design of Fiberglass-Reinforced Plastic (FRP) Stacks (9780784410561) ; >
+    #au < exists ; exists ; 2010 ; 9780784411247 ; 9780784476802 ; 9780784411247 ; Structural Applications of Steel Cables for Buildings (9780784411247) ; >
+    #au < exists ; exists ; 2010 ; 9780784411254 ; 9780784473252 ; 9780784411254 ; Structural Design of Interlocking Concrete Pavement for Municipal Streets and Roadways (9780784411254) ; >
+    #au < exists ; exists ; 2010 ; 9780784410974 ; 9780784473245 ; 9780784410974 ; Tensile Membrane Structures (9780784410974) ; >
+    #au < exists ; exists ; 2011 ; 9780784411889 ; 9780784476505 ; 9780784411889 ; Blast Protection of Buildings (9780784411889) ; >
+    #au < exists ; exists ; 2011 ; 9780784411810 ; 9780784476406 ; 9780784411810 ; Design of Steel Transmission Pole Structures (9780784411810) ; >
+    #au < exists ; exists ; 2011 ; 9780784411261 ; 9780784476697 ; 9780784411261 ; Guidelines for the Physical Security of Water Utilities - Guidelines for the Physical Security of Wastewater/Stormwater Utilities (9780784411261) ; >
+    #au < exists ; exists ; 2012 ; 9780784412305 ; 9780784476918 ; 9780784412305 ; Guideline for Development of Effective Water Sharing Agreements (9780784412305) ; >
+    #au < exists ; exists ; 2012 ; 9780784412282 ; 9780784476901 ; 9780784412282 ; Wind Tunnel Testing for Buildings and Other Structures (9780784412282) ; >
+    #au < exists ; exists ; 2013 ; 9780784412985 ; 9780784477878 ; 9780784412985 ; Automated People Mover Standards (9780784412985) ; >
+
+    #au < exists ; exists ; 2013 ; 9780784412916 ; 9780784477854 ; 9780784412916 ; Minimum Design Loads for Buildings and Other Structures (9780784412916) ; >
+    #au < exists ; exists ; 2014 ; 9780784413791 ; 9780784478721 ; 9780784413791 ; Flood Resistant Design and Construction (9780784413791) ; >
+    #au < exists ; exists ; 2014 ; 9780784413258 ; 9780784478271 ; 9780784413258 ; Guideline for Condition Assessment of the Building Envelope (9780784413258) ; >
+    #au < exists ; exists ; 2014 ; 9780784413487 ; 9780784478349 ; 9780784413487 ; Seismic Design of Piers and Wharves (9780784413487) ; >
+    #au < exists ; exists ; 2014 ; 9780784412855 ; 9780784477915 ; 9780784412855 ; Seismic Evaluation and Retrofit of Existing Buildings (9780784412855) ; >
+    #au < exists ; exists ; 2015 ; 9780784413098 ; 9780784478691 ; 9780784413098 ; Design Loads on Structures during Construction (9780784413098) ; >
+    #au < exists ; exists ; 2015 ; 9780784413760 ; 9780784478707 ; 9780784413760 ; Design of Latticed Steel Transmission Structures (9780784413760) ; >
+    #au < exists ; exists ; 2015 ;  ; 9780784478660 ; 9780784478660 ; Tier 1 Checklists for Seismic Evaluation of Existing Buildings (9780784478660) ; >
+    #au < exists ; exists ; 2016 ; 9780784413890 ; 9780784478936 ; 9780784413890 ; Earthquake-Actuated Automatic Gas Shutoff Devices (9780784413890) ; >
+    #au < exists ; exists ; 2016 ; 9780784414392 ; 9780784479759 ; 9780784414392 ; Structural Applications of Steel Cables for Buildings (9780784414392) ; >
+
+    #au < exists ; exists ; 2016 ; 9780784414507 ; 9780784480281 ; 9780784414507 ; Structural Design of Interlocking Concrete Pavement for Municipal Streets and Roadways (9780784414507) ; >
+    #au < exists ; exists ; 2016 ; 9780784414378 ; 9780784479995 ; 9780784414378 ; Tensile Membrane Structures (9780784414378) ; >
+    #au < exists ; exists ; 2017 ;  ; 9780784480748 ; 9780784480748 ; ASCE 7-16 Tsunami Design Zone Maps for Selected Locations (9780784480748) ; >
+    #au < exists ; exists ; 2017 ; 9780784414224 ; 9780784479407 ; 9780784414224 ; Management Practices for Control of Erosion and Sediment from Construction Activities (9780784414224) ; >
+    #au < exists ; exists ; 2017 ; 9780784414248 ; 9780784479964 ; 9780784414248 ; Minimum Design Loads and Associated Criteria for Buildings and Other Structures (9780784414248) ; >
+    #au < exists ; exists ; 2017 ; 9780784413937 ; 9780784479988 ; 9780784413937 ; Seismic Analysis of Safety-Related Nuclear Structures (9780784413937) ; >
+    #au < exists ; exists ; 2017 ; 9780784414859 ; 9780784480816 ; 9780784414859 ; Seismic Evaluation and Retrofit of Existing Buildings (9780784414859) ; >
+    #au < exists ; exists ; 2018 ; 9780784415009 ; 9780784481929 ; 9780784415009 ; Permeable Interlocking Concrete Pavement (9780784415009) ; >
+    #au < exists ; exists ; 2018 ; 9780784414682 ; 9780784480366 ; 9780784414682 ; Regulated Riparian Model Water Code (9780784414682) ; >
+    #au < exists ; exists ; 2019 ; 9780784415030 ; 9780784482391 ; 9780784415030 ; Compaction Grouting Consensus Guide (9780784415030) ; >
+    #au < exists ; exists ; 2020 ; 9780784415078 ; 9780784482254 ; 9780784415078 ; Design of Steel Transmission Pole Structures (9780784415078) ; >
+    #au < exists ; exists ; 2020 ; 9780784415412 ; 9780784482520 ; 9780784415412 ; Estimation of Aquifer Hydraulic Properties by Inverse Numerical Modeling of Aquifer Pumping Tests (9780784415412) ; >
+    #au < exists ; exists ; 2021 ; 9780784415429 ; 9780784482537 ; 9780784415429 ; Identifying, Quantifying, and Proving Loss of Productivity (9780784415429) ; >
+    #au < exists ; exists ; 2021 ; 9780784415405 ; 9780784482407 ; 9780784415405 ; Seismic Design Criteria for Structures, Systems, and Components in Nuclear Facilities (9780784415405) ; >
+    #au < exists ; exists ; 2021 ; 9780784415573 ; 9780784482926 ; 9780784415573 ; Automated People Mover Standards (9780784415573) ; >
+    #au < exists ; exists ; 2021 ; 9780784415788 ; 9780784483497 ; 9780784415788 ; Minimum Design Loads and Associated Criteria for Buildings and Other Structures (9780784415788) ; >
+    #au < exists ; exists ; 2021 ;  ; 9780784483718 ; 9780784483718 ; Tier 1 Checklists for Seismic Evaluation of Existing Buildings (9780784483718) ; >
+    #au < exists ; exists ; 2022 ; 9780784415597 ; 9780784483015 ; 9780784415597 ; Design of Steel Lighting System Support Pole Structures (9780784415597) ; >
+    #au < exists ; exists ; 2022 ; 9780784415641 ; 9780784483091 ; 9780784415641 ; Measurement of Oxygen Transfer in Clean Water (9780784415641) ; >
+    #au < exists ; exists ; 2022 ; 9780784415740 ; 9780784483367 ; 9780784415740 ; Wind Tunnel Testing for Buildings and Other Structures (9780784415740) ; >
+    #au < exists ; exists ; 2023 ; 9780784415719 ; 9780784483336 ; 9780784415719 ; Blast Protection of Buildings (9780784415719) ; >
+    #au < exists ; exists ; 2023 ; 9780784416006 ; 9780784483923 ; 9780784416006 ; Dry Dock Standard (9780784416006) ; >
+    #au < exists ; exists ; 2023 ; 9780784416112 ; 9780784484760 ; 9780784416112 ; Seismic Evaluation and Retrofit of Existing Buildings (9780784416112) ; >
+    #au < exists ; exists ; 2023 ; 9780784415955 ; 9780784483831 ; 9780784415955 ; Specification for the Design of Cold-Formed Stainless Steel Structural Members (9780784415955) ; >
+    #au < exists ; exists ; 2023 ;  ; 9780784484807 ; 9780784484807 ; Tier 1 Checklists for Seismic Evaluation and Retrofit of Existing Buildings: Fillable Forms for Standard ASCE/SEI 41-23 (9780784484807) ; >
+    #au < exists ; exists ; 2025 ; 9780784414347 ; 9780784480496 ; 9780784414347 ; Calculation of the Saturated Hydraulic Conductivity of Fine-Grained Soils (9780784414347) ; >
     au < exists ; exists ; 2025 ; 9780784416259 ; 9780784485781 ; 9780784485781 ; Flood Resistant Design and Construction (9780784485781) ; >
 
   }
@@ -1541,10 +1544,10 @@
 
     au < exists ; exists ; 1964 ; 9780872620056 ; 9780784479674 ; 9780872620056 ; Coastal Engineering 1964 (9780872620056) ; >
     au < exists ; exists ; 1967 ; 9780872620087 ; 9780784479667 ; 9780872620087 ; Coastal Engineering 1966 (9780872620087) ; >
-    au < exists ; exists ; 2000 ; 9780784405185 ;  ; 9780784405185 ; Geotechnical Measurements (9780784405185) ; >
-    au < exists ; exists ; 2001 ; 9780784405826 ;  ; 9780784405826 ; Automated People Movers (9780784405826) ; >
-    au < exists ; exists ; 2008 ; 9780784410059 ;  ; 9780784410059 ; Airfield and Highway Pavements (9780784410059) ; >
-    au < exists ; exists ; 2012 ; 9780784412435 ;  ; 9780784412435 ; Civil Engineering and Urban Planning 2012 (9780784412435) ; >
+    #au < exists ; exists ; 2000 ; 9780784405185 ;  ; 9780784405185 ; Geotechnical Measurements (9780784405185) ; >
+    #au < exists ; exists ; 2001 ; 9780784405826 ;  ; 9780784405826 ; Automated People Movers (9780784405826) ; >
+    #au < exists ; exists ; 2008 ; 9780784410059 ;  ; 9780784410059 ; Airfield and Highway Pavements (9780784410059) ; >
+    #au < exists ; exists ; 2012 ; 9780784412435 ;  ; 9780784412435 ; Civil Engineering and Urban Planning 2012 (9780784412435) ; > #duplicate
     au < exists ; exists ; 2025 ;  ; 9780784486214 ; 9780784486214 ; Airfield and Highway Pavements 2025 (9780784486214) ; >
     au < exists ; exists ; 2025 ;  ; 9780784486221 ; 9780784486221 ; Airfield and Highway Pavements 2025 (9780784486221) ; >
     au < exists ; exists ; 2025 ;  ; 9780784486238 ; 9780784486238 ; Airfield and Highway Pavements 2025 (9780784486238) ; >

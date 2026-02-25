@@ -41,24 +41,26 @@ for FILENAME in "$@"; do
     # Test 2: Run tdbout, sort and uniq the list, and compare with a second sorted run
     echo "****Finding duplicate AUids in $FILENAME..."
     # Find the lines that are not uniq
-    DUPLICATES=$(./scripts/tdb/tdbout -VXEa "$FILENAME" | uniq -d)
-    
+    DUPLICATES=$(./scripts/tdb/tdbout -VXEa "$FILENAME" | sort | uniq -d)
+
     if [ -z "$DUPLICATES" ]; then
         echo "**No duplicate AUids found"
     else
-        echo "**Duplicate AUids found"
+        D_COUNT=$(printf "%s", "$DUPLICATES" | wc -l)
+        echo "**Top 10 Duplicate AUids of $D_COUNT found"
         echo "$DUPLICATES" | head
     fi
 
     # Test 3: Run tdbout, sort and uniq the list, and compare with a second sorted run
     echo "****Finding duplicate name/plugin pairs in $FILENAME..."
     # Find the lines that are not uniq
-    DUPLICATES=$(./scripts/tdb/tdbout -VXE -c plugin,name "$FILENAME" | uniq -d)
+    DUPLICATES=$(./scripts/tdb/tdbout -VXE -c plugin,name "$FILENAME" | sort | uniq -d)
     
     if [ -z "$DUPLICATES" ]; then
         echo "**No duplicate name/plugin pairs found"
     else
-        echo "**Duplicate name/plugin pairs found"
+        D_COUNT=$(printf "%s" "$DUPLICATES" | wc -l)
+        echo "**Top 10 Duplicate name/plugin pairs of $D_COUNT found"
         echo "$DUPLICATES" | head
     fi
 
