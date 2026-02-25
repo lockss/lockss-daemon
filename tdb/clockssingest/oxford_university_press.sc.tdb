@@ -5962,7 +5962,7 @@
     param[journal_id] = eschf
     #move from Wiley in 2026
 
-    au < ready ; exists ; 2025 ; 2025 ; ESC Heart Failure Volume 11 ; 11 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; ESC Heart Failure Volume 11 ; 11 ; >
 
   }
 
@@ -11357,7 +11357,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Chromatographic Science Volume 60 ; 60 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Chromatographic Science Volume 61 ; 61 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Chromatographic Science Volume 62 ; 62 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Chromatographic Science Volume 63 ; 63 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Chromatographic Science Volume 63 ; 63 ; >
 
   }
 
@@ -13285,7 +13285,7 @@
     au < manifest ; exists ; 2018 ; 2018 ; Journal of Nephrology Volume 31 ; 31 ; >
     au < manifest ; exists ; 2019 ; 2019 ; Journal of Nephrology Volume 32 ; 32 ; >
     au < ready ; exists ; 2020 ; 2020 ; Journal of Nephrology Volume 33 ; 33 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Journal of Nephrology Volume 34 ; 34 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Journal of Nephrology Volume 34 ; 34 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Journal of Nephrology Volume 35 ; 35 ; >
     au < testing ; exists ; 2023 ; 2023 ; Journal of Nephrology Volume 36 ; 36 ; >
     au < ready ; exists ; 2024 ; 2024 ; Journal of Nephrology Volume 37 ; 37 ; >
@@ -13328,7 +13328,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Neuropathology & Experimental Neurology Volume 81 ; 81 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Neuropathology & Experimental Neurology Volume 82 ; 82 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Neuropathology & Experimental Neurology Volume 83 ; 83 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Neuropathology & Experimental Neurology Volume 84 ; 84 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Neuropathology & Experimental Neurology Volume 84 ; 84 ; >
 
   }
 
@@ -19623,7 +19623,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Radiation Protection Dosimetry Volume 198 ; 198 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Radiation Protection Dosimetry Volume 199-200 ; 199-200 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Radiation Protection Dosimetry Volume 200-201 ; 200-201 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Radiation Protection Dosimetry Volume 201-202 ; 201-202 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Radiation Protection Dosimetry Volume 201-202 ; 201-202 ; >
 
   }
 
