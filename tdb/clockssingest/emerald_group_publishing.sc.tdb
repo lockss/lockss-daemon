@@ -986,10 +986,10 @@
     param[journal_id] = ria
     #continues = 0144-5154
 
-    au < exists ; exists ; 2023 ; 2023 ; Robotic Intelligence and Automation Volume 43 ; 43 ; >
-    au < exists ; exists ; 2024 ; 2024 ; Robotic Intelligence and Automation Volume 44 ; 44 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Robotic Intelligence and Automation Volume 45 ; 45 ; >
-    au < exists ; exists ; 2026 ; 2026 ; Robotic Intelligence and Automation Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2023 ; 2023 ; Robotic Intelligence and Automation Volume 43 ; 43 ; >
+    au < manifest ; exists ; 2024 ; 2024 ; Robotic Intelligence and Automation Volume 44 ; 44 ; >
+    au < manifest ; exists ; 2025 ; 2025 ; Robotic Intelligence and Automation Volume 45 ; 45 ; >
+    au < manifest ; exists ; 2026 ; 2026 ; Robotic Intelligence and Automation Volume 46 ; 46 ; >
 
   }
 
@@ -1751,7 +1751,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Circuit World Volume 49 ; 49 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Circuit World Volume 50 ; 50 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Circuit World Volume 51 ; 51 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Circuit World Volume 52 ; 52 ; >
+    au < manifest ; exists ; 2026 ; 2026 ; Circuit World Volume 52 ; 52 ; >
 
   }
 
@@ -3227,7 +3227,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Gender in Management: An International Journal Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Gender in Management: An International Journal Volume 39 ; 39 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Gender in Management: An International Journal Volume 40 ; 40 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Gender in Management: An International Journal Volume 41 ; 41 ; >
+    au < manifest ; exists ; 2026 ; 2026 ; Gender in Management: An International Journal Volume 41 ; 41 ; >
 
   }
 
@@ -3602,7 +3602,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Indian Growth and Development Review Volume 16 ; 16 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Indian Growth and Development Review Volume 17 ; 17 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Indian Growth and Development Review Volume 18 ; 18 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Indian Growth and Development Review Volume 19 ; 19 ; >
+    au < manifest ; exists ; 2026 ; 2026 ; Indian Growth and Development Review Volume 19 ; 19 ; >
 
   }
 
@@ -3690,7 +3690,7 @@
     param[journal_id] = ilt
     #continued_by = 0036-8792
 
-    au < exists ; exists ; 1948 ; 1948 ; Scientific Lubrication Volume 1 (1948) ; 1 ; >
+    au < manifest ; exists ; 1948 ; 1948 ; Scientific Lubrication Volume 1 (1948) ; 1 ; >
     au < manifest ; exists ; 1949 ; 1949 ; Scientific Lubrication Volume 1 (1949) ; 1 ; >
     au < manifest ; exists ; 1950 ; 1950 ; Scientific Lubrication Volume 2 ; 2 ; >
     au < manifest ; exists ; 1951 ; 1951 ; Scientific Lubrication Volume 3 ; 3 ; >
@@ -8007,7 +8007,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Entrepreneurship and Public Policy Volume 12 ; 12 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Entrepreneurship and Public Policy Volume 13 ; 13 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Journal of Entrepreneurship and Public Policy Volume 14 ; 14 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Journal of Entrepreneurship and Public Policy Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2026 ; 2026 ; Journal of Entrepreneurship and Public Policy Volume 15 ; 15 ; >
 
   }
 
@@ -9425,7 +9425,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Money Laundering Control Volume 26 ; 26 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Journal of Money Laundering Control Volume 27 ; 27 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Journal of Money Laundering Control Volume 28 ; 28 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Journal of Money Laundering Control Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2026 ; 2026 ; Journal of Money Laundering Control Volume 29 ; 29 ; >
 
   }
 
@@ -11774,7 +11774,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Multinational Business Review Volume 31 ; 31 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Multinational Business Review Volume 32 ; 32 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Multinational Business Review Volume 33 ; 33 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Multinational Business Review Volume 34 ; 34 ; >
+    au < manifest ; exists ; 2026 ; 2026 ; Multinational Business Review Volume 34 ; 34 ; >
 
   }
 
@@ -14950,7 +14950,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; English Teaching: Practice & Critique Volume 22 ; 22 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; English Teaching: Practice & Critique Volume 23 ; 23 ; >
     au < crawling ; exists ; 2025 ; 2025 ; English Teaching: Practice & Critique Volume 24 ; 24 ; >
-    au < expected ; exists ; 2026 ; 2026 ; English Teaching: Practice & Critique Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2026 ; 2026 ; English Teaching: Practice & Critique Volume 25 ; 25 ; >
 
   }
 
@@ -16688,7 +16688,7 @@
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Journal of Humanities and Applied Social Sciences Volume 5 ; 5 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Journal of Humanities and Applied Social Sciences Volume 6 ; 6 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Journal of Humanities and Applied Social Sciences Volume 7 ; 7 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Journal of Humanities and Applied Social Sciences Volume 8 ; 8 ; >
+    au < manifest ; exists ; 2026 ; 2026 ; Journal of Humanities and Applied Social Sciences Volume 8 ; 8 ; >
 
   }
 
