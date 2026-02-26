@@ -3231,7 +3231,7 @@
     au < doNotProcess ; 2023 ; 2023 ; Gender in Management: An International Journal Volume 38 ; 38 >
     au < doNotProcess ; 2024 ; 2024 ; Gender in Management: An International Journal Volume 39 ; 39 >
     au < manifest ; 2025 ; 2025 ; Gender in Management: An International Journal Volume 40 ; 40 >
-    au < expected ; 2026 ; 2026 ; Gender in Management: An International Journal Volume 41 ; 41 >
+    au < manifest ; 2026 ; 2026 ; Gender in Management: An International Journal Volume 41 ; 41 >
 
   }
 
@@ -8011,7 +8011,7 @@
     au < doNotProcess ; 2023 ; 2023 ; Journal of Entrepreneurship and Public Policy Volume 12 ; 12 >
     au < manifest ; 2024 ; 2024 ; Journal of Entrepreneurship and Public Policy Volume 13 ; 13 >
     au < manifest ; 2025 ; 2025 ; Journal of Entrepreneurship and Public Policy Volume 14 ; 14 >
-    au < expected ; 2026 ; 2026 ; Journal of Entrepreneurship and Public Policy Volume 15 ; 15 >
+    au < manifest ; 2026 ; 2026 ; Journal of Entrepreneurship and Public Policy Volume 15 ; 15 >
 
   }
 
@@ -11757,10 +11757,10 @@
     param[journal_id] = mbr
     # online from 2007
 
-    au < exists ; 2003 ; 2003 ; Multinational Business Review Volume 11 ; 11 >
-    au < exists ; 2004 ; 2004 ; Multinational Business Review Volume 12 ; 12 >
-    au < exists ; 2005 ; 2005 ; Multinational Business Review Volume 13 ; 13 >
-    au < exists ; 2006 ; 2006 ; Multinational Business Review Volume 14 ; 14 >
+    au < manifest ; 2003 ; 2003 ; Multinational Business Review Volume 11 ; 11 >
+    au < manifest ; 2004 ; 2004 ; Multinational Business Review Volume 12 ; 12 >
+    au < manifest ; 2005 ; 2005 ; Multinational Business Review Volume 13 ; 13 >
+    au < manifest ; 2006 ; 2006 ; Multinational Business Review Volume 14 ; 14 >
     au < doNotProcess ; 2007 ; 2007 ; Multinational Business Review Volume 15 ; 15 >
     au < doNotProcess ; 2008 ; 2008 ; Multinational Business Review Volume 16 ; 16 >
     au < doNotProcess ; 2009 ; 2009 ; Multinational Business Review Volume 17 ; 17 >
@@ -11780,7 +11780,7 @@
     au < doNotProcess ; 2023 ; 2023 ; Multinational Business Review Volume 31 ; 31 >
     au < released ; 2024 ; 2024 ; Multinational Business Review Volume 32 ; 32 >
     au < manifest ; 2025 ; 2025 ; Multinational Business Review Volume 33 ; 33 >
-    au < expected ; 2026 ; 2026 ; Multinational Business Review Volume 34 ; 34 >
+    au < manifest ; 2026 ; 2026 ; Multinational Business Review Volume 34 ; 34 >
 
   }
 
@@ -13837,7 +13837,7 @@
     au < manifest ; 1993 ; 1993 ; Planning Review Volume 21 ; 21 >
     au < manifest ; 1994 ; 1994 ; Planning Review Volume 22 ; 22 >
     au < manifest ; 1995 ; 1995 ; Planning Review Volume 23 ; 23 >
-    au < exists ; 1996 ; 1996 ; Planning Review Volume 24 issue 1-2 ; 24 >
+    au < manifest ; 1996 ; 1996 ; Planning Review Volume 24 issue 1-2 ; 24 >
 
   }
 
@@ -16702,7 +16702,7 @@
     au < doNotProcess ; 2023 ; 2023 ; Journal of Humanities and Applied Social Sciences Volume 5 ; 5 >
     au < released ; 2024 ; 2024 ; Journal of Humanities and Applied Social Sciences Volume 6 ; 6 >
     au < manifest ; 2025 ; 2025 ; Journal of Humanities and Applied Social Sciences Volume 7 ; 7 >
-    au < expected ; 2026 ; 2026 ; Journal of Humanities and Applied Social Sciences Volume 8 ; 8 >
+    au < manifest ; 2026 ; 2026 ; Journal of Humanities and Applied Social Sciences Volume 8 ; 8 >
 
   }
 
