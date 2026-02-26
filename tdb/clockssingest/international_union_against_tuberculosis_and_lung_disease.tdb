@@ -5,16 +5,9 @@
     info[contract] = 2013 ;
     info[back] = 1997 ;
     info[tester] = 8 ;
-    info[poller] = 6
+    info[platform] = Ingenta & HW
   >
 
-  plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
-#  param[base_url] = http://www.ingentaconnect.com/
-#  param[api_url] = http://api.ingentaconnect.com/
-  param[graphics_url] = http://graphics.ingentaconnect.com/
-  param[publisher_id] = iuatld
-  
-  implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
   {
     title <
@@ -24,6 +17,10 @@
       issnl = 1027-3719
     >
 
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = iuatld
     param[journal_id] = ijtld
     param[journal_issn] = 1027-3719
 
@@ -86,6 +83,10 @@
       issnl = 2220-8372
     >
 
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = iuatld
     param[journal_id] = pha
     param[journal_issn] = 2220-8372
 
@@ -95,6 +96,7 @@
 
     au < doNotProcess ; exists ; 2011 ; Public Health Action Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2012 ; Public Health Action Volume 2 ; 2 ; >
+    #No more content here.
 
     }
 
@@ -106,6 +108,7 @@
     au < finished ; finished ; 2014 ; Public Health Action Volume 4 ; 4 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2015 ; Public Health Action Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 2016 ; Public Health Action Volume 6 ; 6 ; >
+    #No more content here.
 
     }
 
@@ -118,11 +121,59 @@
     au < frozen ; exists ; 2019 ; Public Health Action Volume 9 ; 9 ; >
     au < frozen ; exists ; 2020 ; Public Health Action Volume 10 ; 10 ; >
     au < frozen ; exists ; 2021 ; Public Health Action Volume 11 ; 11 ; >
-    au < deepCrawl ; exists ; 2022 ; Public Health Action Volume 12 ; 12 ; >
-    au < deepCrawl ; exists ; 2023 ; Public Health Action Volume 13 ; 13 ; >
-    au < deepCrawl ; exists ; 2024 ; Public Health Action Volume 14 ; 14 ; >
-    au < crawling ; exists ; 2025 ; Public Health Action Volume 15 ; 15 ; >
-    au < expected ; exists ; 2026 ; Public Health Action Volume 16 ; 16 ; >
+    au < frozen ; exists ; 2022 ; Public Health Action Volume 12 ; 12 ; >
+    au < frozen ; exists ; 2023 ; Public Health Action Volume 13 ; 13 ; >
+    au < frozen ; exists ; 2024 ; Public Health Action Volume 14 ; 14 ; >
+    au < superseded ; exists ; 2025 ; Public Health Action Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2026 ; Public Health Action Volume 16 ; 16 ; >
+    #No more content here.
+
+    }
+  }
+
+  {
+    title <
+      name = Public Health Action ;
+      eissn = 2220-8372 ;
+      issnl = 2220-8372
+    >
+
+    plugin = org.lockss.plugin.highwire.ers.ERSScolarisPlugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    param[journal_id] = pha
+
+    {
+    param[base_url] = https://journals.theunion.org/
+
+    au < exists ; exists ; 2025 ; Public Health Action Volume 15 ; 15 ; >
+    au < exists ; exists ; 2026 ; Public Health Action Volume 16 ; 16 ; >
+
+    }
+
+  }
+
+  {
+    title <
+      name = IJTLD OPEN ;
+      eissn = 3005-7590 ;
+      issnl = 3005-7590
+    >
+
+    plugin = org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = iuatld
+    param[journal_id] = ijtldo
+    param[journal_issn] = 3005-7590
+
+    {
+    param[base_url] = https://www.ingentaconnect.com/
+    param[api_url] = https://api.ingentaconnect.com/
+
+    au < frozen ; exists ; 2024 ; IJTLD OPEN Volume 1 ; 1 ; >
+    au < superseded ; exists ; 2025 ; IJTLD OPEN Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 2026 ; IJTLD OPEN Volume 3 ; 3 ; >
+    #No more content here.
 
     }
   }
@@ -134,16 +185,16 @@
       issnl = 3005-7590
     >
 
+    plugin = org.lockss.plugin.highwire.ers.ERSScolarisPlugin
+    implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     param[journal_id] = ijtldo
-    param[journal_issn] = 3005-7590
 
     {
-    param[base_url] = https://www.ingentaconnect.com/
-    param[api_url] = https://api.ingentaconnect.com/
+    param[base_url] = https://journals.theunion.org/
 
-    au < frozen ; exists ; 2024 ; IJTLD OPEN Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2025 ; IJTLD OPEN Volume 2 ; 2 ; >
-    au < expected ; exists ; 2026 ; IJTLD OPEN Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 2024 ; IJTLD OPEN Volume 1 ; 1 ; >
+    au < exists ; exists ; 2025 ; IJTLD OPEN Volume 2 ; 2 ; >
+    au < exists ; exists ; 2026 ; IJTLD OPEN Volume 3 ; 3 ; >
 
     }
   }
