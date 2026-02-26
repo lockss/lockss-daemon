@@ -308,7 +308,7 @@
     au < finished ; manifest ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 ; >
     au < ready ; exists ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 ; >
-    au < ready ; exists ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 ; >
+    au < crawling ; exists ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 ; >
     au < finished ; manifest ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < doNotProcess ; doNotProcess ; 2011 ; Contributions to the History of Concepts Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Contributions to the History of Concepts Volume 7 ; 7 ; >
@@ -637,7 +637,7 @@
     au < crawling ; exists ; 2003 ; German Politics and Society Volume 21 ; 21 ; >
     au < finished ; manifest ; 2004 ; German Politics and Society Volume 22 ; 22 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2005 ; German Politics and Society Volume 23 ; 23 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2006 ; German Politics and Society Volume 24 ; 24 ; >
+    au < crawling ; exists ; 2006 ; German Politics and Society Volume 24 ; 24 ; >
     au < finished ; crawling ; 2007 ; German Politics and Society Volume 25 ; 25 ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 2008 ; German Politics and Society Volume 26 ; 26 ; >
     au < crawling ; exists ; 2009 ; German Politics and Society Volume 27 ; 27 ; >
@@ -708,7 +708,7 @@
     #param[journal_issn] = 0315-7997
       
     au < finished ; manifest ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 ; >
+    au < crawling ; exists ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 ; >
     au < ready ; exists ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 ; >
@@ -1239,7 +1239,7 @@
     param[journal_id] = sibirica
     #param[journal_issn] = 1361-7362
        
-    au < ready ; exists ; 2002 ; Sibirica Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2002 ; Sibirica Volume 2 ; 2 ; >
     au < finished ; manifest ; 2003 ; Sibirica Volume 3 ; 3 ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2004 ; Sibirica Volume 4 ; 4 ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2006 ; Sibirica Volume 5 ; 5 ; >
