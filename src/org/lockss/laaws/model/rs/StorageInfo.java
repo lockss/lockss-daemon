@@ -428,18 +428,20 @@ public class StorageInfo implements Serializable {
           "Expected the field `path` to be a primitive type in the JSON string but got `%s`",
           jsonObj.get("path").toString()));
     }
-    // ensure the json data is an array
-    if (!jsonObj.get("components").isJsonArray()) {
-      throw new IllegalArgumentException(String.format(
-          "Expected the field `components` to be an array in the JSON string but got `%s`",
-          jsonObj.get("components").toString()));
-    }
+    if (jsonObj.get("components") != null && !jsonObj.get("components").isJsonNull()) {
+      // ensure the json data is an array
+      if (!jsonObj.get("components").isJsonArray()) {
+        throw new IllegalArgumentException(String.format(
+                                                         "Expected the field `components` to be an array in the JSON string but got `%s`",
+                                                         jsonObj.get("components").toString()));
+      }
 
-    JsonArray jsonArraycomponents = jsonObj.getAsJsonArray("components");
-    // validate the required field `components` (array)
-    for (int i = 0; i < jsonArraycomponents.size(); i++) {
-      StorageInfo.validateJsonObject(jsonArraycomponents.get(i).getAsJsonObject());
-    };
+      JsonArray jsonArraycomponents = jsonObj.getAsJsonArray("components");
+      // validate the required field `components` (array)
+      for (int i = 0; i < jsonArraycomponents.size(); i++) {
+        StorageInfo.validateJsonObject(jsonArraycomponents.get(i).getAsJsonObject());
+      };
+    }
     if ((jsonObj.get("percentUsedString") != null && !jsonObj.get("percentUsedString").isJsonNull())
         && !jsonObj.get("percentUsedString").isJsonPrimitive()) {
       throw new IllegalArgumentException(String.format(
