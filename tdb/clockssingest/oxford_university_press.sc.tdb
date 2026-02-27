@@ -13278,12 +13278,12 @@
 
     param[journal_id] = joneph
 
-    au < manifest ; exists ; 2014 ; 2014 ; Journal of Nephrology Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Journal of Nephrology Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Journal of Nephrology Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Nephrology Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Journal of Nephrology Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Journal of Nephrology Volume 32 ; 32 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Journal of Nephrology Volume 27 ; 27 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Journal of Nephrology Volume 28 ; 28 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Journal of Nephrology Volume 29 ; 29 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Journal of Nephrology Volume 30 ; 30 ; >
+    au < testing ; exists ; 2018 ; 2018 ; Journal of Nephrology Volume 31 ; 31 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Journal of Nephrology Volume 32 ; 32 ; >
     au < ready ; exists ; 2020 ; 2020 ; Journal of Nephrology Volume 33 ; 33 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Journal of Nephrology Volume 34 ; 34 ; >
     au < frozen ; exists ; 2022 ; 2022 ; Journal of Nephrology Volume 35 ; 35 ; >
@@ -14108,18 +14108,18 @@
     au < exists ; exists ; 2005 ; 2005 ; Reproduction Volume 129-130 ; 129-130 ; >
     au < exists ; exists ; 2006 ; 2006 ; Reproduction Volume 131-132 ; 131-132 ; >
     au < exists ; exists ; 2007 ; 2007 ; Reproduction Volume 133-134 ; 133-134 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Reproduction Volume 135-136 ; 135-136 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Reproduction Volume 137-138 ; 137-138 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Reproduction Volume 139-140 ; 139-140 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Reproduction Volume 141-142 ; 141-142 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Reproduction Volume 143-144 ; 143-144 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Reproduction Volume 145-146 ; 145-146 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Reproduction Volume 147-148 ; 147-148 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Reproduction Volume 149-150 ; 149-150 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Reproduction Volume 151-152 ; 151-152 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Reproduction Volume 153-154 ; 153-154 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Reproduction Volume 155-156 ; 155-156 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Reproduction Volume 157-158 ; 157-158 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Reproduction Volume 135-136 ; 135-136 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Reproduction Volume 137-138 ; 137-138 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Reproduction Volume 139-140 ; 139-140 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Reproduction Volume 141-142 ; 141-142 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Reproduction Volume 143-144 ; 143-144 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Reproduction Volume 145-146 ; 145-146 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Reproduction Volume 147-148 ; 147-148 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Reproduction Volume 149-150 ; 149-150 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Reproduction Volume 151-152 ; 151-152 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Reproduction Volume 153-154 ; 153-154 ; >
+    au < testing ; exists ; 2018 ; 2018 ; Reproduction Volume 155-156 ; 155-156 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Reproduction Volume 157-158 ; 157-158 ; >
     au < ready ; exists ; 2020 ; 2020 ; Reproduction Volume 159-160 ; 159-160 ; >
     au < crawling ; exists ; 2021 ; 2021 ; Reproduction Volume 161-162 ; 161-162 ; >
     au < ready ; exists ; 2022 ; 2022 ; Reproduction Volume 163-164 ; 163-164 ; >
@@ -14637,24 +14637,24 @@
     au < exists ; exists ; 2005 ; 2005 ; Journal of Veterinary Internal Medicine Volume 19 ; 19 ; >
     au < exists ; exists ; 2006 ; 2006 ; Journal of Veterinary Internal Medicine Volume 20 ; 20 ; >
     au < exists ; exists ; 2007 ; 2007 ; Journal of Veterinary Internal Medicine Volume 21 ; 21 ; >
-    au < manifest ; exists ; 2008 ; 2008 ; Journal of Veterinary Internal Medicine Volume 22 ; 22 ; >
-    au < manifest ; exists ; 2009 ; 2009 ; Journal of Veterinary Internal Medicine Volume 23 ; 23 ; >
-    au < manifest ; exists ; 2010 ; 2010 ; Journal of Veterinary Internal Medicine Volume 24 ; 24 ; >
-    au < manifest ; exists ; 2011 ; 2011 ; Journal of Veterinary Internal Medicine Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2012 ; 2012 ; Journal of Veterinary Internal Medicine Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2013 ; 2013 ; Journal of Veterinary Internal Medicine Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2014 ; 2014 ; Journal of Veterinary Internal Medicine Volume 28 ; 28 ; >
-    au < manifest ; exists ; 2015 ; 2015 ; Journal of Veterinary Internal Medicine Volume 29 ; 29 ; >
-    au < manifest ; exists ; 2016 ; 2016 ; Journal of Veterinary Internal Medicine Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2017 ; 2017 ; Journal of Veterinary Internal Medicine Volume 31 ; 31 ; >
-    au < manifest ; exists ; 2018 ; 2018 ; Journal of Veterinary Internal Medicine Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2019 ; 2019 ; Journal of Veterinary Internal Medicine Volume 33 ; 33 ; >
-    au < manifest ; exists ; 2020 ; 2020 ; Journal of Veterinary Internal Medicine Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2021 ; 2021 ; Journal of Veterinary Internal Medicine Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Journal of Veterinary Internal Medicine Volume 36 ; 36 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Journal of Veterinary Internal Medicine Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Journal of Veterinary Internal Medicine Volume 38 ; 38 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Journal of Veterinary Internal Medicine Volume 39 ; 39 ; >
+    au < testing ; exists ; 2008 ; 2008 ; Journal of Veterinary Internal Medicine Volume 22 ; 22 ; >
+    au < testing ; exists ; 2009 ; 2009 ; Journal of Veterinary Internal Medicine Volume 23 ; 23 ; >
+    au < testing ; exists ; 2010 ; 2010 ; Journal of Veterinary Internal Medicine Volume 24 ; 24 ; >
+    au < testing ; exists ; 2011 ; 2011 ; Journal of Veterinary Internal Medicine Volume 25 ; 25 ; >
+    au < testing ; exists ; 2012 ; 2012 ; Journal of Veterinary Internal Medicine Volume 26 ; 26 ; >
+    au < testing ; exists ; 2013 ; 2013 ; Journal of Veterinary Internal Medicine Volume 27 ; 27 ; >
+    au < testing ; exists ; 2014 ; 2014 ; Journal of Veterinary Internal Medicine Volume 28 ; 28 ; >
+    au < testing ; exists ; 2015 ; 2015 ; Journal of Veterinary Internal Medicine Volume 29 ; 29 ; >
+    au < testing ; exists ; 2016 ; 2016 ; Journal of Veterinary Internal Medicine Volume 30 ; 30 ; >
+    au < testing ; exists ; 2017 ; 2017 ; Journal of Veterinary Internal Medicine Volume 31 ; 31 ; >
+    au < testing ; exists ; 2018 ; 2018 ; Journal of Veterinary Internal Medicine Volume 32 ; 32 ; >
+    au < testing ; exists ; 2019 ; 2019 ; Journal of Veterinary Internal Medicine Volume 33 ; 33 ; >
+    au < testing ; exists ; 2020 ; 2020 ; Journal of Veterinary Internal Medicine Volume 34 ; 34 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Journal of Veterinary Internal Medicine Volume 35 ; 35 ; >
+    au < testing ; exists ; 2022 ; 2022 ; Journal of Veterinary Internal Medicine Volume 36 ; 36 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Journal of Veterinary Internal Medicine Volume 37 ; 37 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Journal of Veterinary Internal Medicine Volume 38 ; 38 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Journal of Veterinary Internal Medicine Volume 39 ; 39 ; >
 
   }
 
@@ -23428,7 +23428,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; The Leo Baeck Institute Year Book Volume 66-67 ; 66-67 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; The Leo Baeck Institute Year Book Volume 68 ; 68 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; 2024 ; The Leo Baeck Institute Year Book Volume 69 ; 69 ; reingest4.clockss.org:8082 >
-    au < manifest ; exists ; 2025 ; 2025 ; The Leo Baeck Institute Year Book Volume 70 ; 70 ; >
+    au < testing ; exists ; 2025 ; 2025 ; The Leo Baeck Institute Year Book Volume 70 ; 70 ; >
 
   }
   #Publisher and previous TDB differ on title - The Library vs The Library: The Transactions of the Bibliographical Society

@@ -1438,7 +1438,7 @@
       au < finished ; manifest ; 2022 ; Journal of Information Policy Volume 12 ; 12 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Journal of Information Policy Volume 13 ; 13 ; 2023 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2024 ; Journal of Information Policy Volume 14 ; 14 ; 2024 ; reingest3.clockss.org:8083 >
-      au < manifest ; exists ; 2025 ; Journal of Information Policy Volume 15 ; 15 ; 2025 ; >
+      au < testing ; exists ; 2025 ; Journal of Information Policy Volume 15 ; 15 ; 2025 ; >
       au < expected ; exists ; 2026 ; Journal of Information Policy Volume 16 ; 16 ; 2026 ; >
 
   }
@@ -1622,7 +1622,7 @@
       au < finished ; manifest ; 2022 ; Nathaniel Hawthorne Review Volume 48 ; 48 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Nathaniel Hawthorne Review Volume 49 ; 49 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Nathaniel Hawthorne Review Volume 50 ; 50 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; Nathaniel Hawthorne Review Volume 51 ; 51 ; 2025 ; >
+      au < testing ; exists ; 2025 ; Nathaniel Hawthorne Review Volume 51 ; 51 ; 2025 ; >
       au < expected ; exists ; 2026 ; Nathaniel Hawthorne Review Volume 52 ; 52 ; 2026 ; >
 
   }
@@ -1638,22 +1638,22 @@
 
       param[journal_id] = rals
 
-      au < manifest ; exists ; 1971 ; Resources for American Literary Study Volume 1 ; 1 ; 1971 ; >
-      au < manifest ; exists ; 1972 ; Resources for American Literary Study Volume 2 ; 2 ; 1972 ; >
-      au < manifest ; exists ; 1973 ; Resources for American Literary Study Volume 3 ; 3 ; 1973 ; >
-      au < manifest ; exists ; 1974 ; Resources for American Literary Study Volume 4 ; 4 ; 1974 ; >
-      au < manifest ; exists ; 1975 ; Resources for American Literary Study Volume 5 ; 5 ; 1975 ; >
-      au < manifest ; exists ; 1976 ; Resources for American Literary Study Volume 6 ; 6 ; 1976 ; >
-      au < manifest ; exists ; 1977 ; Resources for American Literary Study Volume 7 ; 7 ; 1977 ; >
-      au < manifest ; exists ; 1978 ; Resources for American Literary Study Volume 8 ; 8 ; 1978 ; >
-      au < manifest ; exists ; 1979 ; Resources for American Literary Study Volume 9 ; 9 ; 1979 ; >
-      au < manifest ; exists ; 1980 ; Resources for American Literary Study Volume 10 ; 10 ; 1980 ; >
-      au < manifest ; exists ; 1981 ; Resources for American Literary Study Volume 11 ; 11 ; 1981 ; >
-      au < manifest ; exists ; 1982 ; Resources for American Literary Study Volume 12 ; 12 ; 1982 ; >
-      au < manifest ; exists ; 1983 ; Resources for American Literary Study Volume 13 ; 13 ; 1983 ; >
-      au < manifest ; exists ; 1984 ; Resources for American Literary Study Volume 14 ; 14 ; 1984 ; >
-      au < manifest ; exists ; 1985 ; Resources for American Literary Study Volume 15 ; 15 ; 1985 ; >
-      au < manifest ; exists ; 1989 ; Resources for American Literary Study Volume 16 ; 16 ; 1989 ; >
+      au < testing ; exists ; 1971 ; Resources for American Literary Study Volume 1 ; 1 ; 1971 ; >
+      au < testing ; exists ; 1972 ; Resources for American Literary Study Volume 2 ; 2 ; 1972 ; >
+      au < testing ; exists ; 1973 ; Resources for American Literary Study Volume 3 ; 3 ; 1973 ; >
+      au < testing ; exists ; 1974 ; Resources for American Literary Study Volume 4 ; 4 ; 1974 ; >
+      au < testing ; exists ; 1975 ; Resources for American Literary Study Volume 5 ; 5 ; 1975 ; >
+      au < testing ; exists ; 1976 ; Resources for American Literary Study Volume 6 ; 6 ; 1976 ; >
+      au < testing ; exists ; 1977 ; Resources for American Literary Study Volume 7 ; 7 ; 1977 ; >
+      au < testing ; exists ; 1978 ; Resources for American Literary Study Volume 8 ; 8 ; 1978 ; >
+      au < testing ; exists ; 1979 ; Resources for American Literary Study Volume 9 ; 9 ; 1979 ; >
+      au < testing ; exists ; 1980 ; Resources for American Literary Study Volume 10 ; 10 ; 1980 ; >
+      au < testing ; exists ; 1981 ; Resources for American Literary Study Volume 11 ; 11 ; 1981 ; >
+      au < testing ; exists ; 1982 ; Resources for American Literary Study Volume 12 ; 12 ; 1982 ; >
+      au < testing ; exists ; 1983 ; Resources for American Literary Study Volume 13 ; 13 ; 1983 ; >
+      au < testing ; exists ; 1984 ; Resources for American Literary Study Volume 14 ; 14 ; 1984 ; >
+      au < testing ; exists ; 1985 ; Resources for American Literary Study Volume 15 ; 15 ; 1985 ; >
+      au < testing ; exists ; 1989 ; Resources for American Literary Study Volume 16 ; 16 ; 1989 ; >
       au < frozen ; exists ; 1990 ; Resources for American Literary Study Volume 17 (1990) ; 17 ; 1990 ; >
       au < ready ; exists ; 1991 ; Resources for American Literary Study Volume 17 (1991) ; 17 ; 1991 ; >
       au < frozen ; exists ; 1992 ; Resources for American Literary Study Volume 18 ; 18 ; 1992 ; >
@@ -1800,7 +1800,7 @@
       au < finished ; manifest ; 2022 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 6 ; 6 ; 2022 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2023 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 7 ; 7 ; 2023 ; >
       au < finished ; manifest ; 2024 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 8 ; 8 ; 2024 ; reingest2.clockss.org:8085 >
-      au < manifest ; exists ; 2025 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 9 ; 9 ; 2025 ; >
+      au < testing ; exists ; 2025 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 9 ; 9 ; 2025 ; >
       au < expected ; exists ; 2026 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 10 ; 10 ; 2026 ; >
 
   }
@@ -2113,31 +2113,31 @@
 
       param[journal_id] = milton-studies
 
-      au < manifest ; exists ; 1969 ; Milton Studies Volume 1 ; 1 ; 1969 ; >
-      au < manifest ; exists ; 1970 ; Milton Studies Volume 2 ; 2 ; 1970 ; >
-      au < manifest ; exists ; 1971 ; Milton Studies Volume 3 ; 3 ; 1971 ; >
-      au < manifest ; exists ; 1972 ; Milton Studies Volume 4 ; 4 ; 1972 ; >
-      au < manifest ; exists ; 1973 ; Milton Studies Volume 5 ; 5 ; 1973 ; >
-      au < manifest ; exists ; 1974 ; Milton Studies Volume 6 ; 6 ; 1974 ; >
-      au < manifest ; exists ; 1975 ; Milton Studies Volume 7 ; 7 ; 1975 ; >
-      au < manifest ; exists ; 1975 ; Milton Studies Volume 8 ; 8 ; 1975 ; >
-      au < manifest ; exists ; 1976 ; Milton Studies Volume 9 ; 9 ; 1976 ; >
-      au < manifest ; exists ; 1977 ; Milton Studies Volume 10 ; 10 ; 1977 ; >
-      au < manifest ; exists ; 1978 ; Milton Studies Volume 11 ; 11 ; 1978 ; >
-      au < manifest ; exists ; 1978 ; Milton Studies Volume 12 ; 12 ; 1978 ; >
-      au < manifest ; exists ; 1979 ; Milton Studies Volume 13 ; 13 ; 1979 ; >
-      au < manifest ; exists ; 1980 ; Milton Studies Volume 14 ; 14 ; 1980 ; >
-      au < manifest ; exists ; 1981 ; Milton Studies Volume 15 ; 15 ; 1981 ; >
-      au < manifest ; exists ; 1982 ; Milton Studies Volume 16 ; 16 ; 1982 ; >
-      au < manifest ; exists ; 1983 ; Milton Studies Volume 17 ; 17 ; 1983 ; >
-      au < manifest ; exists ; 1983 ; Milton Studies Volume 18 ; 18 ; 1983 ; >
-      au < manifest ; exists ; 1984 ; Milton Studies Volume 19 ; 19 ; 1984 ; >
-      au < manifest ; exists ; 1984 ; Milton Studies Volume 20 ; 20 ; 1984 ; >
-      au < manifest ; exists ; 1985 ; Milton Studies Volume 21 ; 21 ; 1985 ; >
-      au < manifest ; exists ; 1986 ; Milton Studies Volume 22 ; 22 ; 1986 ; >
-      au < manifest ; exists ; 1987 ; Milton Studies Volume 23 ; 23 ; 1987 ; >
-      au < manifest ; exists ; 1988 ; Milton Studies Volume 24 ; 24 ; 1988 ; >
-      au < manifest ; exists ; 1989 ; Milton Studies Volume 25 ; 25 ; 1989 ; >
+      au < testing ; exists ; 1969 ; Milton Studies Volume 1 ; 1 ; 1969 ; >
+      au < testing ; exists ; 1970 ; Milton Studies Volume 2 ; 2 ; 1970 ; >
+      au < testing ; exists ; 1971 ; Milton Studies Volume 3 ; 3 ; 1971 ; >
+      au < testing ; exists ; 1972 ; Milton Studies Volume 4 ; 4 ; 1972 ; >
+      au < testing ; exists ; 1973 ; Milton Studies Volume 5 ; 5 ; 1973 ; >
+      au < testing ; exists ; 1974 ; Milton Studies Volume 6 ; 6 ; 1974 ; >
+      au < testing ; exists ; 1975 ; Milton Studies Volume 7 ; 7 ; 1975 ; >
+      au < testing ; exists ; 1975 ; Milton Studies Volume 8 ; 8 ; 1975 ; >
+      au < testing ; exists ; 1976 ; Milton Studies Volume 9 ; 9 ; 1976 ; >
+      au < testing ; exists ; 1977 ; Milton Studies Volume 10 ; 10 ; 1977 ; >
+      au < testing ; exists ; 1978 ; Milton Studies Volume 11 ; 11 ; 1978 ; >
+      au < testing ; exists ; 1978 ; Milton Studies Volume 12 ; 12 ; 1978 ; >
+      au < testing ; exists ; 1979 ; Milton Studies Volume 13 ; 13 ; 1979 ; >
+      au < testing ; exists ; 1980 ; Milton Studies Volume 14 ; 14 ; 1980 ; >
+      au < testing ; exists ; 1981 ; Milton Studies Volume 15 ; 15 ; 1981 ; >
+      au < testing ; exists ; 1982 ; Milton Studies Volume 16 ; 16 ; 1982 ; >
+      au < testing ; exists ; 1983 ; Milton Studies Volume 17 ; 17 ; 1983 ; >
+      au < testing ; exists ; 1983 ; Milton Studies Volume 18 ; 18 ; 1983 ; >
+      au < testing ; exists ; 1984 ; Milton Studies Volume 19 ; 19 ; 1984 ; >
+      au < testing ; exists ; 1984 ; Milton Studies Volume 20 ; 20 ; 1984 ; >
+      au < testing ; exists ; 1985 ; Milton Studies Volume 21 ; 21 ; 1985 ; >
+      au < testing ; exists ; 1986 ; Milton Studies Volume 22 ; 22 ; 1986 ; >
+      au < testing ; exists ; 1987 ; Milton Studies Volume 23 ; 23 ; 1987 ; >
+      au < testing ; exists ; 1988 ; Milton Studies Volume 24 ; 24 ; 1988 ; >
+      au < testing ; exists ; 1989 ; Milton Studies Volume 25 ; 25 ; 1989 ; >
       au < frozen ; exists ; 1990 ; Milton Studies Volume 26 ; 26 ; 1990 ; >
       au < ready ; exists ; 1991 ; Milton Studies Volume 27 ; 27 ; 1991 ; >
       au < ready ; exists ; 1992 ; Milton Studies Volume 28 ; 28 ; 1992 ; >
@@ -2194,9 +2194,9 @@
 
       param[journal_id] = ncs
 
-      au < manifest ; exists ; 1987 ; Nineteenth Century Studies Volume 1 ; 1 ; 1987 ; >
-      au < manifest ; exists ; 1988 ; Nineteenth Century Studies Volume 2 ; 2 ; 1988 ; >
-      au < manifest ; exists ; 1989 ; Nineteenth Century Studies Volume 3 ; 3 ; 1989 ; >
+      au < testing ; exists ; 1987 ; Nineteenth Century Studies Volume 1 ; 1 ; 1987 ; >
+      au < testing ; exists ; 1988 ; Nineteenth Century Studies Volume 2 ; 2 ; 1988 ; >
+      au < testing ; exists ; 1989 ; Nineteenth Century Studies Volume 3 ; 3 ; 1989 ; >
       au < ready ; exists ; 1990 ; Nineteenth Century Studies Volume 4 ; 4 ; 1990 ; >
       au < crawling ; exists ; 1991 ; Nineteenth Century Studies Volume 5 ; 5 ; 1991 ; >
       au < frozen ; exists ; 1992 ; Nineteenth Century Studies Volume 6 ; 6 ; 1992 ; >
@@ -2231,7 +2231,7 @@
       au < finished ; manifest ; 2022 ; Nineteenth Century Studies Volume 34 ; 34 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Nineteenth Century Studies Volume 35 ; 35 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Nineteenth Century Studies Volume 36 ; 36 ; 2024 ; >
-      au < manifest ; exists ; 2025 ; Nineteenth Century Studies Volume 37 ; 37 ; 2025 ; >
+      au < testing ; exists ; 2025 ; Nineteenth Century Studies Volume 37 ; 37 ; 2025 ; >
       au < expected ; exists ; 2026 ; Nineteenth Century Studies Volume 38 ; 38 ; 2026 ; >
 
   }
@@ -2447,7 +2447,7 @@
       au < finished ; manifest ; 2022 ; Restoration and Eighteenth-Century Theatre Research Volume 34 ; 34 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Restoration and Eighteenth-Century Theatre Research Volume 35 ; 35 ; 2023 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2024 ; Restoration and Eighteenth-Century Theatre Research Volume 36 ; 36 ; 2024 ; reingest4.clockss.org:8082 >
-      au < manifest ; exists ; 2025 ; Restoration and Eighteenth-Century Theatre Research Volume 37 ; 37 ; 2025 ; >
+      au < testing ; exists ; 2025 ; Restoration and Eighteenth-Century Theatre Research Volume 37 ; 37 ; 2025 ; >
       au < expected ; exists ; 2026 ; Restoration and Eighteenth-Century Theatre Research Volume 38 ; 38 ; 2026 ; >
 
   }
@@ -2492,23 +2492,23 @@
       param[journal_id] = victorians-institute
       #Published 1972-present
 
-      au < manifest ; exists ; 1972 ; Victorians Institute Journal Volume 1 ; 1 ; 1972 ; >
-      au < manifest ; exists ; 1973 ; Victorians Institute Journal Volume 2 ; 2 ; 1973 ; >
-      au < manifest ; exists ; 1974 ; Victorians Institute Journal Volume 3 ; 3 ; 1974 ; >
-      au < manifest ; exists ; 1975 ; Victorians Institute Journal Volume 4 ; 4 ; 1975 ; >
-      au < manifest ; exists ; 1976 ; Victorians Institute Journal Volume 5 ; 5 ; 1976 ; >
-      au < manifest ; exists ; 1977 ; Victorians Institute Journal Volume 6 ; 6 ; 1977 ; >
-      au < manifest ; exists ; 1978 ; Victorians Institute Journal Volume 7 ; 7 ; 1978 ; >
-      au < manifest ; exists ; 1979 ; Victorians Institute Journal Volume 8 ; 8 ; 1979 ; >
-      au < manifest ; exists ; 1981 ; Victorians Institute Journal Volume 9 ; 9 ; 1981 ; >
-      au < manifest ; exists ; 1982 ; Victorians Institute Journal Volume 10 ; 10 ; 1982 ; >
-      au < manifest ; exists ; 1983 ; Victorians Institute Journal Volume 11 ; 11 ; 1983 ; >
-      au < manifest ; exists ; 1984 ; Victorians Institute Journal Volume 12 ; 12 ; 1984 ; >
-      au < manifest ; exists ; 1985 ; Victorians Institute Journal Volume 13 ; 13 ; 1985 ; >
-      au < manifest ; exists ; 1986 ; Victorians Institute Journal Volume 14 ; 14 ; 1986 ; >
-      au < manifest ; exists ; 1987 ; Victorians Institute Journal Volume 15 ; 15 ; 1987 ; >
-      au < manifest ; exists ; 1988 ; Victorians Institute Journal Volume 16 ; 16 ; 1988 ; >
-      au < manifest ; exists ; 1989 ; Victorians Institute Journal Volume 17 ; 17 ; 1989 ; >
+      au < testing ; exists ; 1972 ; Victorians Institute Journal Volume 1 ; 1 ; 1972 ; >
+      au < testing ; exists ; 1973 ; Victorians Institute Journal Volume 2 ; 2 ; 1973 ; >
+      au < testing ; exists ; 1974 ; Victorians Institute Journal Volume 3 ; 3 ; 1974 ; >
+      au < testing ; exists ; 1975 ; Victorians Institute Journal Volume 4 ; 4 ; 1975 ; >
+      au < testing ; exists ; 1976 ; Victorians Institute Journal Volume 5 ; 5 ; 1976 ; >
+      au < testing ; exists ; 1977 ; Victorians Institute Journal Volume 6 ; 6 ; 1977 ; >
+      au < testing ; exists ; 1978 ; Victorians Institute Journal Volume 7 ; 7 ; 1978 ; >
+      au < testing ; exists ; 1979 ; Victorians Institute Journal Volume 8 ; 8 ; 1979 ; >
+      au < testing ; exists ; 1981 ; Victorians Institute Journal Volume 9 ; 9 ; 1981 ; >
+      au < testing ; exists ; 1982 ; Victorians Institute Journal Volume 10 ; 10 ; 1982 ; >
+      au < testing ; exists ; 1983 ; Victorians Institute Journal Volume 11 ; 11 ; 1983 ; >
+      au < testing ; exists ; 1984 ; Victorians Institute Journal Volume 12 ; 12 ; 1984 ; >
+      au < testing ; exists ; 1985 ; Victorians Institute Journal Volume 13 ; 13 ; 1985 ; >
+      au < testing ; exists ; 1986 ; Victorians Institute Journal Volume 14 ; 14 ; 1986 ; >
+      au < testing ; exists ; 1987 ; Victorians Institute Journal Volume 15 ; 15 ; 1987 ; >
+      au < testing ; exists ; 1988 ; Victorians Institute Journal Volume 16 ; 16 ; 1988 ; >
+      au < testing ; exists ; 1989 ; Victorians Institute Journal Volume 17 ; 17 ; 1989 ; >
       au < ready ; exists ; 1990 ; Victorians Institute Journal Volume 18 ; 18 ; 1990 ; >
       au < frozen ; exists ; 1991 ; Victorians Institute Journal Volume 19 ; 19 ; 1991 ; >
       au < frozen ; exists ; 1992 ; Victorians Institute Journal Volume 20 ; 20 ; 1992 ; >
