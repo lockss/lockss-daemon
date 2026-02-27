@@ -32,23 +32,65 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.escrs;
 
+import java.util.Iterator;
+import java.util.regex.Pattern;
+
 import org.lockss.util.Logger;
 
+import org.lockss.daemon.PluginException;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
+import org.lockss.plugin.SubTreeArticleIteratorBuilder;
+import org.lockss.extractor.MetadataTarget;
+import org.lockss.extractor.ArticleMetadataExtractor;
+import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
 
-/*public class EscrsArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory{
+
+public class EscrsArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory{
 
     protected static Logger log = Logger.getLogger(EscrsArticleIteratorFactory.class);
 
+    /*
+        Example Abstract: https://emiratesscholar.com/directory/index.php/ejbess/article/view/1084
+        Example PDF: https://emiratesscholar.com/directory/index.php/ejbess/article/view/1084/570 
+    */
+
     private static final String ROOT_TEMPLATE = "\"%s\", base_url";
-    private static final String PATTERN_TEMPLATE = "\"%sj/%s/a/[^/]+/(abstract/)?\\?(format=pdf&)?lang=(en|pt|es)\", base_url, journal_id";
+    private static final String PATTERN_TEMPLATE = "\"%sdirectory/index.php/%s/article/view\", base_url, journal_id";
 
-    private static final List<Pattern> PDF_PATTERNS = new ArrayList<Pattern>(); 
-    private static final List<Pattern> ABSTRACT_PATTERNS = new ArrayList<Pattern>(); 
+    private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/article/view/([0-9]+)$",Pattern.CASE_INSENSITIVE);
+    private static final Pattern PDF_PATTERN = Pattern.compile("/article/view/([0-9]+)/([0-9]+)",Pattern.CASE_INSENSITIVE);
 
-    private static final List<String> PDF_REPLACEMENTS = new ArrayList<String>();
-    private static final List<String> ABSTRACTS_REPLACEMENTS = new ArrayList<String>();
+    private static final String ABSTRACT_REPLACEMENT = "/article/view/$1";
+    private static final String PDF_REPLACEMENT = "/article/view/$1/$2";
+
+    @Override
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
+        SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+
+        builder.setSpec(target,
+        ROOT_TEMPLATE,
+        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+
+        builder.addAspect(ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
+        ArticleFiles.ROLE_ABSTRACT);
+
+        builder.addAspect(PDF_PATTERN, PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+        builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT);
+        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+        return builder.getSubTreeArticleIterator();
+    }
+
+
+    @Override
+    public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+        throws PluginException {
+        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    }
     
 }
-*/
