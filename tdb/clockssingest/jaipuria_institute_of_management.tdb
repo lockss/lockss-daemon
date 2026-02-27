@@ -26,14 +26,14 @@
       au < ready ; exists ; 2001 ; Management Dynamics Volume 2 ; 2 ; >
       au < ready ; exists ; 2002 ; Management Dynamics Volume 3 ; 3 ; >
       au < ready ; exists ; 2003 ; Management Dynamics Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2005 ; Management Dynamics Volume 5 ; 5 ; >
+      au < finished ; manifest ; 2005 ; Management Dynamics Volume 5 ; 5 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2006 ; Management Dynamics Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2007 ; Management Dynamics Volume 7 ; 7 ; >
-      au < frozen ; exists ; 2008 ; Management Dynamics Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2009 ; Management Dynamics Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2010 ; Management Dynamics Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2011 ; Management Dynamics Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2012 ; Management Dynamics Volume 12 ; 12 ; >
+      au < finished ; manifest ; 2007 ; Management Dynamics Volume 7 ; 7 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2008 ; Management Dynamics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2009 ; Management Dynamics Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2010 ; Management Dynamics Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2011 ; Management Dynamics Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2012 ; Management Dynamics Volume 12 ; 12 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2013 ; Management Dynamics Volume 13 ; 13 ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2014 ; Management Dynamics Volume 14 ; 14 ; reingest3.clockss.org:8083 >
       au < finished ; crawling ; 2015 ; Management Dynamics Volume 15 ; 15 ; reingest4.clockss.org:8082 >
