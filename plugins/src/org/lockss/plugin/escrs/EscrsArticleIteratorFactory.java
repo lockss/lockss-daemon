@@ -60,9 +60,9 @@ public class EscrsArticleIteratorFactory implements ArticleIteratorFactory, Arti
     private static final String ROOT_TEMPLATE = "\"%s\", base_url";
     private static final String PATTERN_TEMPLATE = "\"%sdirectory/index.php/%s/article/view\", base_url, journal_id";
 
-    private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/article/view/([0-9]+)$",Pattern.CASE_INSENSITIVE);
-    private static final Pattern PDF_PATTERN = Pattern.compile("/article/view/([0-9]+)/([0-9]+)",Pattern.CASE_INSENSITIVE);
-
+    private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/article/view/([0-9]+)()$",Pattern.CASE_INSENSITIVE);
+    private static final Pattern PDF_PATTERN = Pattern.compile("/article/view/([0-9]+)/([0-9]+)$",Pattern.CASE_INSENSITIVE);
+    
     private static final String ABSTRACT_REPLACEMENT = "/article/view/$1";
     private static final String PDF_REPLACEMENT = "/article/view/$1/$2";
 
@@ -74,11 +74,12 @@ public class EscrsArticleIteratorFactory implements ArticleIteratorFactory, Arti
         ROOT_TEMPLATE,
         PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
+        builder.addAspect(PDF_PATTERN, PDF_REPLACEMENT,
+        ArticleFiles.ROLE_FULL_TEXT_PDF);
+
         builder.addAspect(ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT);
 
-        builder.addAspect(PDF_PATTERN, PDF_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT);
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
