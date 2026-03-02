@@ -157,4 +157,13 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.escrs.EscrsArticleIteratorFactory</string>
   </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.escrs.EscrsMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
 </map>
