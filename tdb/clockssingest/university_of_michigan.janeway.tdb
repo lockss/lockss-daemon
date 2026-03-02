@@ -816,13 +816,13 @@
       #published 2014-present
       param[journal_id] = weaveux
 
-      au < doesNotExist ; doesNotExist ; 2014 ; 1 ; Weave: Journal of Library User Experience Volume 2014 ; 2014 ; >
-      au < doesNotExist ; doesNotExist ; 2015 ; 2 ; Weave: Journal of Library User Experience Volume 2015 ; 2015 ; >
-      au < doesNotExist ; doesNotExist ; 2016 ; 3 ; Weave: Journal of Library User Experience Volume 2016 ; 2016 ; >
-      au < doesNotExist ; doesNotExist ; 2017 ; 4 ; Weave: Journal of Library User Experience Volume 2017 ; 2017 ; >
-      au < doesNotExist ; doesNotExist ; 2018 ; 5 ; Weave: Journal of Library User Experience Volume 2018 ; 2018 ; >
-      au < doesNotExist ; doesNotExist ; 2019 ; 6 ; Weave: Journal of Library User Experience Volume 2019 ; 2019 ; >
-      au < doesNotExist ; doesNotExist ; 2020 ; 7 ; Weave: Journal of Library User Experience Volume 2020 ; 2020 ; >
+      au < manifest ; manifest ; 2014 ; 1 ; Weave: Journal of Library User Experience Volume 2014 ; 2014 ; >
+      au < manifest ; manifest ; 2015 ; 2 ; Weave: Journal of Library User Experience Volume 2015 ; 2015 ; >
+      au < manifest ; manifest ; 2016 ; 3 ; Weave: Journal of Library User Experience Volume 2016 ; 2016 ; >
+      au < manifest ; manifest ; 2017 ; 4 ; Weave: Journal of Library User Experience Volume 2017 ; 2017 ; >
+      au < manifest ; manifest ; 2018 ; 5 ; Weave: Journal of Library User Experience Volume 2018 ; 2018 ; >
+      au < manifest ; manifest ; 2019 ; 6 ; Weave: Journal of Library User Experience Volume 2019 ; 2019 ; >
+      au < manifest ; manifest ; 2020 ; 7 ; Weave: Journal of Library User Experience Volume 2020 ; 2020 ; >
       au < manifest ; exists ; 2021 ; 4 ; Weave: Journal of Library User Experience Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 5 ; Weave: Journal of Library User Experience Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 6 ; Weave: Journal of Library User Experience Volume 2023 ; 2023 ; >
