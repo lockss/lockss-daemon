@@ -399,7 +399,7 @@
       au < finished ; manifest ; 2023 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2024 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026 ; International Journal of Accounting, Auditing and Performance Evaluation Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -595,7 +595,7 @@
       au < finished ; crawling ; 2022 ; International Journal of Advanced Operations Management Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023-2024 ; International Journal of Advanced Operations Management Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < manifest ; exists ; 2025-2026 ; International Journal of Advanced Operations Management Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026-2027 ; International Journal of Advanced Operations Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026-2027 ; International Journal of Advanced Operations Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4421,7 +4421,7 @@
       au < finished ; crawling ; 2021-2022 ; International Journal of Environmental Engineering Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023-2024 ; International Journal of Environmental Engineering Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
       au < manifest ; exists ; 2025-2026 ; International Journal of Environmental Engineering Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026-2027 ; International Journal of Environmental Engineering Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026-2027 ; International Journal of Environmental Engineering Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
 
 
     }
@@ -5074,7 +5074,7 @@
       au < finished ; manifest ; 2023 ; International Journal of Green Economics Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; International Journal of Green Economics Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Green Economics Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026 ; International Journal of Green Economics Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026 ; International Journal of Green Economics Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -10018,7 +10018,7 @@
       au < finished ; manifest ; 2023 ; International Journal of Services, Economics and Management Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; International Journal of Services, Economics and Management Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Services, Economics and Management Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026 ; International Journal of Services, Economics and Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026 ; International Journal of Services, Economics and Management Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -10512,7 +10512,7 @@
       au < finished ; manifest ; 2023 ; International Journal of Surface Science and Engineering Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; International Journal of Surface Science and Engineering Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Surface Science and Engineering Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026 ; International Journal of Surface Science and Engineering Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026 ; International Journal of Surface Science and Engineering Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -10676,7 +10676,7 @@
       au < finished ; manifest ; 2023 ; International Journal of Sustainable Society Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; International Journal of Sustainable Society Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Sustainable Society Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026 ; International Journal of Sustainable Society Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026 ; International Journal of Sustainable Society Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -11075,7 +11075,7 @@
       au < deepCrawl ; exists ; 2024 ; International Journal of Technology Management Volume 96 ; 96 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Technology Management Volume 97 ; 97 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Technology Management Volume 98 ; 98 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2025 ; International Journal of Technology Management Volume 99 ; 99 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2025 ; International Journal of Technology Management Volume 99 ; 99 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Technology Management Volume 100 ; 100 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Technology Management Volume 101 ; 101 ; https://www.inderscienceonline.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Technology Management Volume 102 ; 102 ; https://www.inderscienceonline.com/ ; >
@@ -11292,7 +11292,7 @@
       au < finished ; manifest ; 2023 ; International Journal of Tourism Policy Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; International Journal of Tourism Policy Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Tourism Policy Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026 ; International Journal of Tourism Policy Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026 ; International Journal of Tourism Policy Volume 16 ; 16 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -11763,7 +11763,7 @@
       au < finished ; manifest ; 2023 ; International Journal of Web and Grid Services Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; International Journal of Web and Grid Services Volume 20 ; 20 ; https://www.inderscienceonline.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Web and Grid Services Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026 ; International Journal of Web and Grid Services Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026 ; International Journal of Web and Grid Services Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
 
     }
 
