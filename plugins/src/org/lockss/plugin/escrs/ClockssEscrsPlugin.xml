@@ -166,4 +166,8 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
     </map>
   </entry>
+  <entry>
+    <string>plugin_crawl_seed_factory</string>
+    <string>org.lockss.plugin.escrs.EscrsCrawlSeedFactory</string>
+  </entry>
 </map>
