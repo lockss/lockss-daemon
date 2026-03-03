@@ -13,6 +13,7 @@
     implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
     #OJS3
     attr[start_stem] = index.php/
+    #Note this publisher also uses FTP to preserve: European Cells and Materials (formerly published by AO Foundation)
 
   {
 
@@ -47,7 +48,8 @@
       au < deepCrawl ; exists ; 2023 ; Heart Surgery Forum Volume 2023 ; 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Heart Surgery Forum Volume 2024 ; 2024 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Heart Surgery Forum Volume 2025 ; 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; Heart Surgery Forum Volume 2026 ; 2026 ; 2026 ; >
+      au < doNotProcess ; doNotProcess ; 2026 ; Heart Surgery Forum Volume 2026 ; 2026 ; 2026 ; >
+      #Moved to IMR Press FTP delivery
 
   }
 
