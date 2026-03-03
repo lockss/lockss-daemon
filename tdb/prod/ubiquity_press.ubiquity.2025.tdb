@@ -748,17 +748,17 @@
       au < doNotProcess ; 2013 ; 65 ; Tellus B: Chemical and Physical Meteorology Volume 2013 ; 2013 ; 65 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
       au < doNotProcess ; 2014 ; 66 ; Tellus B: Chemical and Physical Meteorology Volume 2014 ; 2014 ; 66 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
       au < doNotProcess ; 2015 ; 67 ; Tellus B: Chemical and Physical Meteorology Volume 2015 ; 2015 ; 67 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
-      au < exists ; 2016 ; 68 ; Tellus B: Chemical and Physical Meteorology Volume 2016 ; 2016 ; 68 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
-      au < exists ; 2017 ; 69 ; Tellus B: Chemical and Physical Meteorology Volume 2017 ; 2017 ; 69 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
-      au < exists ; 2018 ; 70 ; Tellus B: Chemical and Physical Meteorology Volume 2018 ; 2018 ; 70 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
-      au < exists ; 2019 ; 71 ; Tellus B: Chemical and Physical Meteorology Volume 2019 ; 2019 ; 71 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
-      au < exists ; 2020 ; 72 ; Tellus B: Chemical and Physical Meteorology Volume 2020 ; 2020 ; 72 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
-      au < exists ; 2021 ; 73 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; 73 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
-      au < exists ; 2022 ; 74 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; 74 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ > # Lists all volumes.
-      au < exists ; 2023 ; 75 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
-      au < exists ; 2024 ; 76 ; Tellus B: Chemical and Physical Meteorology Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
-      au < exists ; 2025 ; 77 ; Tellus B: Chemical and Physical Meteorology Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
-      au < exists ; 2026 ; 78 ; Tellus B: Chemical and Physical Meteorology Volume 2026 ; 2026 ; 78 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
+      au < manifest ; 2016 ; 68 ; Tellus B: Chemical and Physical Meteorology Volume 2016 ; 2016 ; 68 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
+      au < manifest ; 2017 ; 69 ; Tellus B: Chemical and Physical Meteorology Volume 2017 ; 2017 ; 69 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
+      au < manifest ; 2018 ; 70 ; Tellus B: Chemical and Physical Meteorology Volume 2018 ; 2018 ; 70 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
+      au < manifest ; 2019 ; 71 ; Tellus B: Chemical and Physical Meteorology Volume 2019 ; 2019 ; 71 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
+      au < manifest ; 2020 ; 72 ; Tellus B: Chemical and Physical Meteorology Volume 2020 ; 2020 ; 72 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
+      au < manifest ; 2021 ; 73 ; Tellus B: Chemical and Physical Meteorology Volume 2021 ; 2021 ; 73 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
+      au < manifest ; 2022 ; 74 ; Tellus B: Chemical and Physical Meteorology Volume 2022 ; 2022 ; 74 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ > # Lists all volumes.
+      au < manifest ; 2023 ; 75 ; Tellus B: Chemical and Physical Meteorology Volume 2023 ; 2023 ; 75 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
+      au < manifest ; 2024 ; 76 ; Tellus B: Chemical and Physical Meteorology Volume 2024 ; 2024 ; 76 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
+      au < manifest ; 2025 ; 77 ; Tellus B: Chemical and Physical Meteorology Volume 2025 ; 2025 ; 77 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
+      au < manifest ; 2026 ; 78 ; Tellus B: Chemical and Physical Meteorology Volume 2026 ; 2026 ; 78 ; Stockholm University Press ;  ; https://b.tellusjournals.se/ >
 
   }
 
@@ -1400,7 +1400,7 @@
 
       au < released ; 2023 ; 1 ; Silk Roads Archaeology and Heritage Volume 2023 ; 2023 ; 1 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ >
       au < released ; 2025 ; 2 ; Silk Roads Archaeology and Heritage Volume 2025 ; 2025 ; 2 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ >
-      au < expected ; 2026 ; 3 ; Silk Roads Archaeology and Heritage Volume 2026 ; 2026 ; 3 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ >
+      au < manifest ; 2026 ; 3 ; Silk Roads Archaeology and Heritage Volume 2026 ; 2026 ; 3 ; Ubiquity Press ;  ; https://silkroadsarchaeoheritage.org/ >
 
   }
 
