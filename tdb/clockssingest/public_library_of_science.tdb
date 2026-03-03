@@ -24,8 +24,8 @@
       au < manifest ; exists ; 2004 ; PLOS Biology Volume 2004 ; 2004 ; >
       au < manifest ; exists ; 2005 ; PLOS Biology Volume 2005 ; 2005 ; >
       au < manifest ; exists ; 2006 ; PLOS Biology Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; PLOS Biology Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; PLOS Biology Volume 2008 ; 2008 ; >
+      au < ready ; exists ; 2007 ; PLOS Biology Volume 2007 ; 2007 ; >
+      au < ready ; exists ; 2008 ; PLOS Biology Volume 2008 ; 2008 ; >
       au < crawling ; exists ; 2009 ; PLOS Biology Volume 2009 ; 2009 ; >
       au < ready ; exists ; 2010 ; PLOS Biology Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; PLOS Biology Volume 2011 ; 2011 ; >
@@ -104,9 +104,9 @@
 
       au < manifest ; exists ; 2005 ; PLOS Computational Biology Volume 2005 ; 2005 ; >
       au < manifest ; exists ; 2006 ; PLOS Computational Biology Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; PLOS Computational Biology Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; PLOS Computational Biology Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; PLOS Computational Biology Volume 2009 ; 2009 ; >
+      au < ready ; exists ; 2007 ; PLOS Computational Biology Volume 2007 ; 2007 ; >
+      au < ready ; exists ; 2008 ; PLOS Computational Biology Volume 2008 ; 2008 ; >
+      au < ready ; exists ; 2009 ; PLOS Computational Biology Volume 2009 ; 2009 ; >
       au < ready ; exists ; 2010 ; PLOS Computational Biology Volume 2010 ; 2010 ; >
       au < ready ; exists ; 2011 ; PLOS Computational Biology Volume 2011 ; 2011 ; >
       au < ready ; exists ; 2012 ; PLOS Computational Biology Volume 2012 ; 2012 ; >
@@ -155,12 +155,12 @@
 
       au < manifest ; exists ; 2005 ; PLOS Genetics Volume 2005 ; 2005 ; >
       au < manifest ; exists ; 2006 ; PLOS Genetics Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; PLOS Genetics Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; PLOS Genetics Volume 2008 ; 2008 ; >
+      au < ready ; exists ; 2007 ; PLOS Genetics Volume 2007 ; 2007 ; >
+      au < ready ; exists ; 2008 ; PLOS Genetics Volume 2008 ; 2008 ; >
       au < manifest ; exists ; 2009 ; PLOS Genetics Volume 2009 ; 2009 ; >
       au < crawling ; exists ; 2010 ; PLOS Genetics Volume 2010 ; 2010 ; >
       au < ready ; exists ; 2011 ; PLOS Genetics Volume 2011 ; 2011 ; >
-      au < manifest ; exists ; 2012 ; PLOS Genetics Volume 2012 ; 2012 ; >
+      au < ready ; exists ; 2012 ; PLOS Genetics Volume 2012 ; 2012 ; >
       au < ready ; exists ; 2013 ; PLOS Genetics Volume 2013 ; 2013 ; >
       au < crawling ; exists ; 2014 ; PLOS Genetics Volume 2014 ; 2014 ; >
       au < crawling ; exists ; 2015 ; PLOS Genetics Volume 2015 ; 2015 ; >
@@ -208,9 +208,9 @@
       au < manifest ; exists ; 2004 ; PLOS Medicine Volume 2004 ; 2004 ; >
       au < manifest ; exists ; 2005 ; PLOS Medicine Volume 2005 ; 2005 ; >
       au < manifest ; exists ; 2006 ; PLOS Medicine Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; PLOS Medicine Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; PLOS Medicine Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; PLOS Medicine Volume 2009 ; 2009 ; >
+      au < ready ; exists ; 2007 ; PLOS Medicine Volume 2007 ; 2007 ; >
+      au < ready ; exists ; 2008 ; PLOS Medicine Volume 2008 ; 2008 ; >
+      au < ready ; exists ; 2009 ; PLOS Medicine Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; PLOS Medicine Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; PLOS Medicine Volume 2011 ; 2011 ; >
       au < ready ; exists ; 2012 ; PLOS Medicine Volume 2012 ; 2012 ; >
@@ -255,9 +255,9 @@
 
       param[journal_id] = plosntds
 
-      au < manifest ; exists ; 2007 ; PLOS Neglected Tropical Diseases Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; PLOS Neglected Tropical Diseases Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; PLOS Neglected Tropical Diseases Volume 2009 ; 2009 ; >
+      au < ready ; exists ; 2007 ; PLOS Neglected Tropical Diseases Volume 2007 ; 2007 ; >
+      au < ready ; exists ; 2008 ; PLOS Neglected Tropical Diseases Volume 2008 ; 2008 ; >
+      au < ready ; exists ; 2009 ; PLOS Neglected Tropical Diseases Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; PLOS Neglected Tropical Diseases Volume 2010 ; 2010 ; >
       au < ready ; exists ; 2011 ; PLOS Neglected Tropical Diseases Volume 2011 ; 2011 ; >
       au < ready ; exists ; 2012 ; PLOS Neglected Tropical Diseases Volume 2012 ; 2012 ; >
@@ -322,8 +322,8 @@
       au < manifest ; exists ; 2005 ; PLOS Pathogens Volume 2005 ; 2005 ; >
       au < manifest ; exists ; 2006 ; PLOS Pathogens Volume 2006 ; 2006 ; >
       au < manifest ; exists ; 2007 ; PLOS Pathogens Volume 2007 ; 2007 ; >
-      au < manifest ; exists ; 2008 ; PLOS Pathogens Volume 2008 ; 2008 ; >
-      au < manifest ; exists ; 2009 ; PLOS Pathogens Volume 2009 ; 2009 ; >
+      au < ready ; exists ; 2008 ; PLOS Pathogens Volume 2008 ; 2008 ; >
+      au < ready ; exists ; 2009 ; PLOS Pathogens Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; PLOS Pathogens Volume 2010 ; 2010 ; >
       au < ready ; exists ; 2011 ; PLOS Pathogens Volume 2011 ; 2011 ; >
       au < ready ; exists ; 2012 ; PLOS Pathogens Volume 2012 ; 2012 ; >
@@ -403,6 +403,58 @@
 
       #Published 2006 to present
       param[journal_id] = plosone
+
+      au < exists ; exists ; 2006 ; PLOS ONE Volume Jan 2006 ; 2006 ; January ; >
+      au < exists ; exists ; 2006 ; PLOS ONE Volume Feb 2006 ; 2006 ; February ; >
+      au < exists ; exists ; 2006 ; PLOS ONE Volume Mar 2006 ; 2006 ; March ; >
+      au < exists ; exists ; 2006 ; PLOS ONE Volume Apr 2006 ; 2006 ; April ; >
+      au < exists ; exists ; 2006 ; PLOS ONE Volume May 2006 ; 2006 ; May ; >
+      au < exists ; exists ; 2006 ; PLOS ONE Volume Jun 2006 ; 2006 ; June ; >
+      au < exists ; exists ; 2006 ; PLOS ONE Volume Jul 2006 ; 2006 ; July ; >
+      au < exists ; exists ; 2006 ; PLOS ONE Volume Aug 2006 ; 2006 ; August ; >
+      au < exists ; exists ; 2006 ; PLOS ONE Volume Sep 2006 ; 2006 ; September ; >
+      au < exists ; exists ; 2006 ; PLOS ONE Volume Oct 2006 ; 2006 ; October ; >
+      au < exists ; exists ; 2006 ; PLOS ONE Volume Nov 2006 ; 2006 ; November ; >
+      au < exists ; exists ; 2006 ; PLOS ONE Volume Dec 2006 ; 2006 ; December ; >
+
+      au < exists ; exists ; 2007 ; PLOS ONE Volume Jan 2007 ; 2007 ; January ; >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume Feb 2007 ; 2007 ; February ; >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume Mar 2007 ; 2007 ; March ; >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume Apr 2007 ; 2007 ; April ; >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume May 2007 ; 2007 ; May ; >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume Jun 2007 ; 2007 ; June ; >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume Jul 2007 ; 2007 ; July ; >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume Aug 2007 ; 2007 ; August ; >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume Sep 2007 ; 2007 ; September ; >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume Oct 2007 ; 2007 ; October ; >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume Nov 2007 ; 2007 ; November ; >
+      au < exists ; exists ; 2007 ; PLOS ONE Volume Dec 2007 ; 2007 ; December ; >
+
+      au < exists ; exists ; 2008 ; PLOS ONE Volume Jan 2008 ; 2008 ; January ; >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume Feb 2008 ; 2008 ; February ; >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume Mar 2008 ; 2008 ; March ; >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume Apr 2008 ; 2008 ; April ; >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume May 2008 ; 2008 ; May ; >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume Jun 2008 ; 2008 ; June ; >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume Jul 2008 ; 2008 ; July ; >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume Aug 2008 ; 2008 ; August ; >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume Sep 2008 ; 2008 ; September ; >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume Oct 2008 ; 2008 ; October ; >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume Nov 2008 ; 2008 ; November ; >
+      au < exists ; exists ; 2008 ; PLOS ONE Volume Dec 2008 ; 2008 ; December ; >
+
+      au < exists ; exists ; 2009 ; PLOS ONE Volume Jan 2009 ; 2009 ; January ; >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume Feb 2009 ; 2009 ; February ; >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume Mar 2009 ; 2009 ; March ; >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume Apr 2009 ; 2009 ; April ; >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume May 2009 ; 2009 ; May ; >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume Jun 2009 ; 2009 ; June ; >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume Jul 2009 ; 2009 ; July ; >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume Aug 2009 ; 2009 ; August ; >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume Sep 2009 ; 2009 ; September ; >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume Oct 2009 ; 2009 ; October ; >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume Nov 2009 ; 2009 ; November ; >
+      au < exists ; exists ; 2009 ; PLOS ONE Volume Dec 2009 ; 2009 ; December ; >
 
       au < manifest ; exists ; 2010 ; PLOS ONE Volume Jan 2010 ; 2010 ; January ; >
       au < manifest ; exists ; 2010 ; PLOS ONE Volume Feb 2010 ; 2010 ; February ; >
@@ -534,18 +586,18 @@
       au < crawling ; exists ; 2019 ; PLOS ONE Volume Nov 2019 ; 2019 ; November ; >
       au < frozen ; exists ; 2019 ; PLOS ONE Volume Dec 2019 ; 2019 ; December ; >
 
-      au < manifest ; exists ; 2020 ; PLOS ONE Volume Jan 2020 ; 2020 ; January ; >
+      au < ready ; exists ; 2020 ; PLOS ONE Volume Jan 2020 ; 2020 ; January ; >
       au < crawling ; exists ; 2020 ; PLOS ONE Volume Feb 2020 ; 2020 ; February ; >
-      au < manifest ; exists ; 2020 ; PLOS ONE Volume Mar 2020 ; 2020 ; March ; >
-      au < manifest ; exists ; 2020 ; PLOS ONE Volume Apr 2020 ; 2020 ; April ; >
-      au < manifest ; exists ; 2020 ; PLOS ONE Volume May 2020 ; 2020 ; May ; >
+      au < ready ; exists ; 2020 ; PLOS ONE Volume Mar 2020 ; 2020 ; March ; >
+      au < ready ; exists ; 2020 ; PLOS ONE Volume Apr 2020 ; 2020 ; April ; >
+      au < ready ; exists ; 2020 ; PLOS ONE Volume May 2020 ; 2020 ; May ; >
       au < ready ; exists ; 2020 ; PLOS ONE Volume Jun 2020 ; 2020 ; June ; >
-      au < manifest ; exists ; 2020 ; PLOS ONE Volume Jul 2020 ; 2020 ; July ; >
-      au < manifest ; exists ; 2020 ; PLOS ONE Volume Aug 2020 ; 2020 ; August ; >
-      au < manifest ; exists ; 2020 ; PLOS ONE Volume Sep 2020 ; 2020 ; September ; >
-      au < manifest ; exists ; 2020 ; PLOS ONE Volume Oct 2020 ; 2020 ; October ; >
-      au < manifest ; exists ; 2020 ; PLOS ONE Volume Nov 2020 ; 2020 ; November ; >
-      au < manifest ; exists ; 2020 ; PLOS ONE Volume Dec 2020 ; 2020 ; December ; >
+      au < ready ; exists ; 2020 ; PLOS ONE Volume Jul 2020 ; 2020 ; July ; >
+      au < ready ; exists ; 2020 ; PLOS ONE Volume Aug 2020 ; 2020 ; August ; >
+      au < ready ; exists ; 2020 ; PLOS ONE Volume Sep 2020 ; 2020 ; September ; >
+      au < ready ; exists ; 2020 ; PLOS ONE Volume Oct 2020 ; 2020 ; October ; >
+      au < ready ; exists ; 2020 ; PLOS ONE Volume Nov 2020 ; 2020 ; November ; >
+      au < ready ; exists ; 2020 ; PLOS ONE Volume Dec 2020 ; 2020 ; December ; >
 
       au < ready ; exists ; 2021 ; PLOS ONE Volume Jan 2021 ; 2021 ; January ; >
       au < ready ; exists ; 2021 ; PLOS ONE Volume Feb 2021 ; 2021 ; February ; >
@@ -558,7 +610,7 @@
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Sep 2021 ; 2021 ; September ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Oct 2021 ; 2021 ; October ; >
       au < ready ; exists ; 2021 ; PLOS ONE Volume Nov 2021 ; 2021 ; November ; >
-      au < manifest ; exists ; 2021 ; PLOS ONE Volume Dec 2021 ; 2021 ; December ; >
+      au < ready ; exists ; 2021 ; PLOS ONE Volume Dec 2021 ; 2021 ; December ; >
 
       au < crawling ; exists ; 2022 ; PLOS ONE Volume Jan 2022 ; 2022 ; January ; >
       au < crawling ; exists ; 2022 ; PLOS ONE Volume Feb 2022 ; 2022 ; February ; >
@@ -588,7 +640,7 @@
 
       au < crawling ; exists ; 2024 ; PLOS ONE Volume Jan 2024 ; 2024 ; January ; >
       au < frozen ; exists ; 2024 ; PLOS ONE Volume Feb 2024 ; 2024 ; February ; >
-      au < manifest ; exists ; 2024 ; PLOS ONE Volume Mar 2024 ; 2024 ; March ; >
+      au < ready ; exists ; 2024 ; PLOS ONE Volume Mar 2024 ; 2024 ; March ; >
       au < crawling ; exists ; 2024 ; PLOS ONE Volume Apr 2024 ; 2024 ; April ; >
       au < crawling ; exists ; 2024 ; PLOS ONE Volume May 2024 ; 2024 ; May ; >
       au < crawling ; exists ; 2024 ; PLOS ONE Volume Jun 2024 ; 2024 ; June ; >
@@ -611,6 +663,7 @@
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Oct 2025 ; 2025 ; October ; >
       au < manifest ; exists ; 2025 ; PLOS ONE Volume Nov 2025 ; 2025 ; November ; >
       au < manifest ; exists ; 2025 ; PLOS ONE Volume Dec 2025 ; 2025 ; December ; >
+
       au < manifest ; exists ; 2026 ; PLOS ONE Volume Jan 2026 ; 2026 ; January ; >
       au < manifest ; exists ; 2026 ; PLOS ONE Volume Feb 2026 ; 2026 ; February ; >
       au < manifest ; exists ; 2026 ; PLOS ONE Volume Mar 2026 ; 2026 ; March ; >
