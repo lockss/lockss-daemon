@@ -866,7 +866,7 @@
     #param[journal_issn] = 1465-2609
     #Journeys will cease publication as of 2022
        
-    au < ready ; exists ; 2000 ; Journeys Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2000 ; Journeys Volume 1 ; 1 ; >
     au < crawling ; exists ; 2001 ; Journeys Volume 2 ; 2 ; >
     au < finished ; manifest ; 2002 ; Journeys Volume 3 ; 3 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; Journeys Volume 4 ; 4 ; reingest5.clockss.org:8082 >

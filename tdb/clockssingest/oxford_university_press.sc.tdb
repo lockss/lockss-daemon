@@ -5976,7 +5976,7 @@
     param[journal_id] = eurjhf
     #move from Wiley in 2026
 
-    au < ready ; exists ; 2025 ; 2025 ; European Journal of Heart Failure Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; European Journal of Heart Failure Volume 27 ; 27 ; >
 
   }
 
@@ -12521,7 +12521,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Human Rights Practice Volume 14 ; 14 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Human Rights Practice Volume 15 ; 15 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Human Rights Practice Volume 16 ; 16 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Human Rights Practice Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Human Rights Practice Volume 17 ; 17 ; >
 
   }
 
