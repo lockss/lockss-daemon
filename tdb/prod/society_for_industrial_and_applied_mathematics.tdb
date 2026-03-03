@@ -48,7 +48,7 @@
   {
 
     title <
-      name = Journal on Applied Dynamical Systems ;
+      name = SIAM Journal on Applied Dynamical Systems ;
       eissn = 1536-0040
     >
 
@@ -112,7 +112,7 @@
   {
 
     title <
-      name = Journal on Applied Mathematics ;
+      name = SIAM Journal on Applied Mathematics ;
       issn = 0036-1399 ;
       eissn = 1095-712X
     >
@@ -201,7 +201,7 @@
   {
 
     title <
-      name = Journal on Computing ;
+      name = SIAM Journal on Computing ;
       issn = 0097-5397 ;
       eissn = 1095-7111
     >
@@ -269,7 +269,7 @@
   {
 
     title <
-      name = Journal on Control and Optimization ;
+      name = SIAM Journal on Control and Optimization ;
       issn = 0363-0129 ;
       eissn = 1095-7138
     >
@@ -355,7 +355,7 @@
   {
 
     title <
-      name = Journal on Discrete Mathematics ;
+      name = SIAM Journal on Discrete Mathematics ;
       issn = 0895-4801 ;
       eissn = 1095-7146
     >
@@ -408,7 +408,7 @@
   {
 
     title <
-      name = Journal on Financial Mathematics ;
+      name = SIAM Journal on Financial Mathematics ;
       eissn = 1945-497X
     >
 
@@ -437,7 +437,7 @@
   {
 
     title <
-      name = Journal on Imaging Sciences ;
+      name = SIAM Journal on Imaging Sciences ;
       eissn = 1936-4954
     >
 
@@ -468,7 +468,7 @@
   {
 
     title <
-      name = Journal on Mathematical Analysis ;
+      name = SIAM Journal on Mathematical Analysis ;
       issn =  0036-1410 ;
       eissn = 1095-7154
     >
@@ -539,9 +539,9 @@
    {
 
     title <
-      name = Journal on Matrix Analysis and Application ;
-      issn =  0895-4798 ;
-      eissn = 1095-7162
+      name = SIAM Journal on Algebraic and Discrete Methods ;
+      issn =  0196-5212 ;
+      eissn = 2168-345X
     >
 
     {
@@ -556,6 +556,17 @@
     au < manifest ; 1986 ; Journal on Matrix Analysis and Application Volume 7 ; 7 ; https://epubs.siam.org/ >
     au < manifest ; 1987 ; Journal on Matrix Analysis and Application Volume 8 ; 8 ; https://epubs.siam.org/ >
     }
+
+  }
+
+   {
+
+    title <
+      name = SIAM Journal on Matrix Analysis and Application ;
+      issn =  0895-4798 ;
+      eissn = 1095-7162
+    >
+
     {
     param[journal_id] = sjmael
 
@@ -604,9 +615,9 @@
   {
 
     title <
-      name = Journal on Numerical Analysis ;
-      issn =  0036-1429 ;
-      eissn = 1095-7170
+      name = Journal of the Society for Industrial and Applied Mathematics. Series B, Numerical analysis ;
+      issn =  0887-459X ;
+      eissn = 2168-3581
     >
 
     {
@@ -615,6 +626,16 @@
     au < manifest ; 1964 ; Journal on Numerical Analysis Volume 1 ; 1 ; https://epubs.siam.org/ >
     au < manifest ; 1965 ; Journal on Numerical Analysis Volume 2 ; 2 ; https://epubs.siam.org/ >
     }
+  }
+
+  {
+
+    title <
+      name = SIAM Journal on Numerical Analysis ;
+      issn =  0036-1429 ;
+      eissn = 1095-7170
+    >
+
     {
     param[journal_id] = sjnaam
 
@@ -686,7 +707,7 @@
    {
 
     title <
-      name = Journal on Optimization ;
+      name = SIAM Journal on Optimization ;
       issn =  1052-6234 ;
       eissn = 1095-7189
     >
@@ -735,9 +756,9 @@
   {
 
     title <
-      name = Journal on Scientific Computing ;
-      issn =  1064-8275 ;
-      eissn = 1095-7197
+      name = SIAM Journal on Scientific and Statistical Computing ;
+      issn = 0196-5204 ;
+      eissn = 2168-3417
     >
 
     {
@@ -757,6 +778,17 @@
     au < manifest ; 1991 ; Journal on Scientific Computing Volume 12 ; 12 ; https://epubs.siam.org/ >
     au < manifest ; 1992 ; Journal on Scientific Computing Volume 13 ; 13 ; https://epubs.siam.org/ >
     }
+
+  }
+
+  {
+
+    title <
+      name = SIAM Journal on Scientific Computing ;
+      issn =  1064-8275 ;
+      eissn = 1095-7197
+    >
+
     {
     param[journal_id] = sjoce3
 
@@ -801,7 +833,7 @@
   {
 
     title <
-      name = Journal on Uncertainty Quantification ;
+      name = SIAM Journal on Uncertainty Quantification ;
       eissn = 2166-2525 
         >
 
@@ -992,7 +1024,7 @@
   {
 
     title <
-      name = Journal on Mathematics of Data Science ;
+      name = SIAM Journal on Mathematics of Data Science ;
       eissn = 2577-0187
     >
 
@@ -1012,7 +1044,7 @@
   {
 
     title <
-      name = Journal on Applied Algebra and Geometry ;
+      name = SIAM Journal on Applied Algebra and Geometry ;
       eissn = 2470-6566
     >
 
