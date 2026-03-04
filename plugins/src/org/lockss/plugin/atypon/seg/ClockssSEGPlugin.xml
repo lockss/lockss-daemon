@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <!-- https transition enabled -->  
   <entry>
@@ -41,11 +41,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>41</string>
+    <string>42</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Society of Exploration Geophysicists Journals Plugin (CLOCKSS)</string>
+    <string>Society of Exploration Geophysicists Journals Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -74,7 +74,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Society of Exploration Geophysicists Journals Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+    <string>"Society of Exploration Geophysicists Journals Plugin (Legacy, CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
   </entry>
   <!--  override start url from parent to support http to https conversion -->
   <entry>

@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
   <entry>
     <string>plugin_status</string>
-    <string>ready</string>
+    <string>deprecated</string>
   </entry>
   <!-- https transition enabled -->  
   <entry>
@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Society of Exploration Geophysicists Abstracts Plugin (CLOCKSS)</string>
+    <string>Society of Exploration Geophysicists Abstracts Plugin (Legacy, CLOCKSS)</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -57,7 +57,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Society of Exploration Geophysicists Abstracts Plugin (CLOCKSS), Base URL %s, DOI %s", base_url, item_doi</string>
+    <string>"Society of Exploration Geophysicists Abstracts Plugin (Legacy, CLOCKSS), Base URL %s, DOI %s", base_url, item_doi</string>
   </entry>
   <entry>
     <string>au_url_normalizer</string>
