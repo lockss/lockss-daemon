@@ -48,7 +48,7 @@
     au < doNotProcess ; exists ; 1984 ; 1984 ; Annales de l'Institut Henri Poincaré C Volume 1 ; 1 ; >
     au < ready ; exists ; 1985 ; 1985 ; Annales de l'Institut Henri Poincaré C Volume 2 ; 2 ; >
     au < frozen ; exists ; 1986 ; 1986 ; Annales de l'Institut Henri Poincaré C Volume 3 ; 3 ; >
-    au < ready ; exists ; 1987 ; 1987 ; Annales de l'Institut Henri Poincaré C Volume 4 ; 4 ; >
+    au < crawling ; exists ; 1987 ; 1987 ; Annales de l'Institut Henri Poincaré C Volume 4 ; 4 ; >
     au < frozen ; exists ; 1988 ; 1988 ; Annales de l'Institut Henri Poincaré C Volume 5 ; 5 ; >
     au < ready ; exists ; 1989 ; 1989 ; Annales de l'Institut Henri Poincaré C Volume 6 ; 6 ; >
     au < crawling ; exists ; 1990 ; 1990 ; Annales de l'Institut Henri Poincaré C Volume 7 ; 7 ; >
@@ -830,7 +830,7 @@
     au < frozen ; exists ; 2022 ; 2022 ; Rendiconti Lincei - Matematica e Applicazioni Volume 33 ; 33 ; >
     au < frozen ; exists ; 2023 ; 2023 ; Rendiconti Lincei - Matematica e Applicazioni Volume 34 ; 34 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Rendiconti Lincei - Matematica e Applicazioni Volume 35 ; 35 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Rendiconti Lincei - Matematica e Applicazioni Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Rendiconti Lincei - Matematica e Applicazioni Volume 36 ; 36 ; >
     au < expected ; exists ; 2026 ; 2026 ; Rendiconti Lincei - Matematica e Applicazioni Volume 37 ; 37 ; >
 
   }

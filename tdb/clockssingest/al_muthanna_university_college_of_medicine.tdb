@@ -23,7 +23,7 @@
       param[base_url] = https://muthmj.mu.edu.iq/
       param[journal_abbr] = journal
 
-      au < ready ; exists ; 2014 ; Muthanna Medical Journal Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2014 ; Muthanna Medical Journal Volume 1 ; 1 ; >
       au < frozen ; exists ; 2015 ; Muthanna Medical Journal Volume 2 ; 2 ; >
       au < crawling ; exists ; 2016 ; Muthanna Medical Journal Volume 3 ; 3 ; >
       au < frozen ; exists ; 2017 ; Muthanna Medical Journal Volume 4 ; 4 ; >

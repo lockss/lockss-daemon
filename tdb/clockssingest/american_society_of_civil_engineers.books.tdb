@@ -552,17 +552,17 @@
   
     au < ready ; exists ; 1993 ; 9780872628854 ; 9780784473702 ; 9780872628854 ; STANDARD ANSI/ASCE 2-91 (9780872628854) ; >
     au < ready ; exists ; 1994 ; 9780872629042 ; 9780784479100 ; 9780872629042 ; STANDARD ASCE 7-93 (9780872629042) ; >
-    au < ready ; exists ; 1994 ; 9780872629967 ; 9780784473764 ; 9780872629967 ; STANDARD ANSI/ASCE 12-92, 13-93, 14-93 (9780872629967) ; >
+    au < crawling ; exists ; 1994 ; 9780872629967 ; 9780784473764 ; 9780872629967 ; STANDARD ANSI/ASCE 12-92, 13-93, 14-93 (9780872629967) ; >
     au < ready ; exists ; 1994 ; 9780872629547 ; 9780784473757 ; 9780872629547 ; STANDARD ANSI/ASCE 3-91, 9-91 (9780872629547) ; >
     au < ready ; exists ; 1996 ; 9780784400920 ; 9780784479094 ; 9780784400920 ; STANDARD ANSI/ASCE 7-95 (9780784400920) ; >
     au < ready ; exists ; 1996 ; 9780784400418 ; 9780784470053 ; 9780784400418 ; STANDARD ASCE/AF&PA 16-95 (9780784400418) ; >
     au < ready ; exists ; 1997 ; 9780784401934 ; 9780784470190 ; 9780784401934 ; STANDARD ASCE 21-96 (9780784401934) ; >
-    au < ready ; exists ; 1997 ; 9780784402191 ; 9780784470213 ; 9780784402191 ; STANDARD ASCE 20-96 (9780784402191) ; >
+    au < crawling ; exists ; 1997 ; 9780784402191 ; 9780784470213 ; 9780784402191 ; STANDARD ASCE 20-96 (9780784402191) ; >
     au < ready ; exists ; 1997 ; 9780784401149 ; 9780784470114 ; 9780784401149 ; STANDARD ASCE 18-96 (9780784401149) ; >
     au < ready ; exists ; 1997 ; 9780784402450 ; 9780784470244 ; 9780784402450 ; STANDARD ASCE 19-96 (9780784402450) ; >
     au < ready ; exists ; 1997 ; 9780784401163 ; 9780784479421 ; 9780784401163 ; STANDARD ASCE 17-96 (9780784401163) ; >
     au < ready ; exists ; 1999 ; 9780784403549 ; 9780784470374 ; 9780784403549 ; STANDARD ASCE 25-97 (9780784403549) ; >
-    au < ready ; exists ; 1999 ; 9780784403006 ; 9780784470305 ; 9780784403006 ; STANDARD ASCE/SEI 23-97 (9780784403006) ; >
+    au < crawling ; exists ; 1999 ; 9780784403006 ; 9780784470305 ; 9780784403006 ; STANDARD ASCE/SEI 23-97 (9780784403006) ; >
     au < ready ; exists ; 1999 ; 9780784404478 ; 9780784470558 ; 9780784404478 ; STANDARD ASCE 21-98 (9780784404478) ; >
     au < ready ; exists ; 2000 ; 9780784404454 ; 9780784470534 ; 9780784404454 ; STANDARD ASCE/SEI 7-98 (9780784404454) ; >
     au < ready ; exists ; 2000 ; 9780784403242 ; 9780784470343 ; 9780784403242 ; STANDARD ASCE 10-97 (9780784403242) ; >
@@ -580,7 +580,7 @@
     au < ready ; exists ; 2001 ; 9780784405727 ; 9780784470831 ; 9780784405727 ; STANDARD ASCE/CI 36-01 (9780784405727) ; >
     au < ready ; exists ; 2002 ; 9780784405932 ; 9780784470855 ; 9780784405932 ; STANDARD ASCE/EWRI 35-01 (9780784405932) ; >
     au < ready ; exists ; 2002 ; 9780784406038 ; 9780784470879 ; 9780784406038 ; STANDARD ASCE 21-00 (9780784406038) ; >
-    au < ready ; exists ; 2002 ; 9780784406182 ; 9780784470886 ; 9780784406182 ; STANDARD ASCE/SEI 37-02 (9780784406182) ; >
+    au < crawling ; exists ; 2002 ; 9780784406182 ; 9780784470886 ; 9780784406182 ; STANDARD ASCE/SEI 37-02 (9780784406182) ; >
     au < ready ; exists ; 2002 ; 9780784406458 ; 9780784470947 ; 9780784406458 ; STANDARD ASCE/CI 38-02 (9780784406458) ; >
     au < ready ; exists ; 2002 ; 9780784405567 ; 9780784470800 ; 9780784405567 ; STANDARD ASCE/SEI 8-02 (9780784405567) ; >
     au < ready ; exists ; 2003 ; 9780784406243 ; 9780784470893 ; 9780784406243 ; STANDARD ASCE/SEI 7-02 (9780784406243) ; >
@@ -1417,21 +1417,21 @@
     au < manifest ; exists ; 2019 ;  ; 9780784482650 ; 9780784482650 ; International Conference on Sustainable Infrastructure 2019, Leading Resilient Communities through the 21st Century (9780784482650) ; >
     au < manifest ; exists ; 2019 ;  ; 9780784482742 ; 9780784482742 ; ICTE 2019 (9780784482742) ; >
     au < ready ; exists ; 2020 ;  ; 9780784482810 ; 9780784482810 ; Geo-Congress 2020, Geotechnical Earthquake Engineering and Special Topics, GSP 318 (9780784482810) ; >
-    au < ready ; exists ; 2020 ;  ; 9780784482834 ; 9780784482834 ; Geo-Congress 2020, Biogeotechnics, GSP 320 (9780784482834) ; >
+    au < crawling ; exists ; 2020 ;  ; 9780784482834 ; 9780784482834 ; Geo-Congress 2020, Biogeotechnics, GSP 320 (9780784482834) ; >
     au < ready ; exists ; 2020 ;  ; 9780784482797 ; 9780784482797 ; Geo-Congress 2020, Engineering, Monitoring, and Management of Geotechnical Infrastructure, GSP 316 (9780784482797) ; >
     au < ready ; exists ; 2020 ;  ; 9780784482841 ; 9780784482841 ; Geo-Congress 2020, University of Minnesota 68th Annual Geotechnical Engineering Conference, GSP 321 (9780784482841) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784482827 ; 9780784482827 ; Geo-Congress 2020, Geo-Systems, Sustainability, Geoenvironmental Engineering, and Unsaturated Soil Mechanics, GSP 319 (9780784482827) ; >
-    au < ready ; exists ; 2020 ;  ; 9780784482803 ; 9780784482803 ; Geo-Congress 2020, Modeling, Geomaterials, and Site Characterization, GSP 317 (9780784482803) ; >
+    au < crawling ; exists ; 2020 ;  ; 9780784482803 ; 9780784482803 ; Geo-Congress 2020, Modeling, Geomaterials, and Site Characterization, GSP 317 (9780784482803) ; >
     au < ready ; exists ; 2020 ;  ; 9780784482780 ; 9780784482780 ; Geo-Congress 2020, Foundations, Soil Improvement, and Erosion, GSP 315 (9780784482780) ; >
     au < ready ; exists ; 2020 ;  ; 9780784482896 ; 9780784482896 ; Structures Congress 2020 (9780784482896) ; >
     au < ready ; exists ; 2020 ;  ; 9780784482957 ; 9780784482957 ; World Environmental and Water Resources Congress 2020, Water Resources Planning and Management and Irrigation and Drainage (9780784482957) ; >
-    au < ready ; exists ; 2020 ;  ; 9780784482988 ; 9780784482988 ; World Environmental and Water Resources Congress 2020, Water, Wastewater, and Stormwater and Water Desalination and Reuse (9780784482988) ; >
+    au < crawling ; exists ; 2020 ;  ; 9780784482988 ; 9780784482988 ; World Environmental and Water Resources Congress 2020, Water, Wastewater, and Stormwater and Water Desalination and Reuse (9780784482988) ; >
     au < ready ; exists ; 2020 ;  ; 9780784482995 ; 9780784482995 ; World Environmental and Water Resources Congress 2020, Nevada and California Water History (9780784482995) ; >
     au < ready ; exists ; 2020 ;  ; 9780784482940 ; 9780784482940 ; World Environmental and Water Resources Congress 2020, Emerging and Innovative Technologies and International Perspectives (9780784482940) ; >
-    au < ready ; exists ; 2020 ;  ; 9780784482964 ; 9780784482964 ; World Environmental and Water Resources Congress 2020, Groundwater, Sustainability, Hydro-Climate/Climate Change, and Environmental Engineering (9780784482964) ; >
+    au < crawling ; exists ; 2020 ;  ; 9780784482964 ; 9780784482964 ; World Environmental and Water Resources Congress 2020, Groundwater, Sustainability, Hydro-Climate/Climate Change, and Environmental Engineering (9780784482964) ; >
     au < ready ; exists ; 2020 ;  ; 9780784482971 ; 9780784482971 ; World Environmental and Water Resources Congress 2020, Hydraulics, Waterways, and Water Distribution Systems Analysis (9780784482971) ; >
     au < ready ; exists ; 2020 ;  ; 9780784483077 ; 9780784483077 ; Automated People Movers and Automated Transit Systems 2020, Automated Transit for Smart Mobility (9780784483077) ; >
-    au < ready ; exists ; 2020 ;  ; 9780784482902 ; 9780784482902 ; Resilience and Sustainable Transportation Systems (9780784482902) ; >
+    au < crawling ; exists ; 2020 ;  ; 9780784482902 ; 9780784482902 ; Resilience and Sustainable Transportation Systems (9780784482902) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784483114 ; 9780784483114 ; International Low Impact Development Conference 2020, Setting the Vision for the Next Twenty Years (9780784483114) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784483060 ; 9780784483060 ; Watershed Management 2020, A Clear Vision of Watershed Management (9780784483060) ; >
     au < ready ; exists ; 2020 ;  ; 9780784483213 ; 9780784483213 ; Pipelines 2020, Utility Engineering, Surveying, and Multidisciplinary Topics (9780784483213) ; >
@@ -1451,7 +1451,7 @@
     au < ready ; exists ; 2020 ;  ; 9780784482872 ; 9780784482872 ; Construction Research Congress 2020, Safety, Workforce, and Education (9780784482872) ; >
     au < ready ; exists ; 2020 ;  ; 9780784483053 ; 9780784483053 ; CICTP 2020, Transportation Evolution Impacting Future Mobility (9780784483053) ; >
     au < ready ; exists ; 2020 ;  ; 9780784483305 ; 9780784483305 ; Tran-SET 2020 (9780784483305) ; >
-    au < ready ; exists ; 2020 ;  ; 9780784483268 ; 9780784483268 ; Rocky Mountain Geo-Conference 2021, GPP 13 (9780784483268) ; >
+    au < crawling ; exists ; 2020 ;  ; 9780784483268 ; 9780784483268 ; Rocky Mountain Geo-Conference 2021, GPP 13 (9780784483268) ; >
     au < ready ; exists ; 2021 ;  ; 9780784483381 ; 9780784483381 ; Earth and Space 2021, Materials, Structures, Dynamics, and Control in Extreme Environments (9780784483381) ; >
     au < crawling ; exists ; 2021 ;  ; 9780784483374 ; 9780784483374 ; Earth and Space 2021, Space Exploration, Utilization, Engineering, and Construction in Extreme Environments (9780784483374) ; >
     au < ready ; exists ; 2021 ;  ; 9780784483404 ; 9780784483404 ; IFCEE 2021, Installation, Testing, and Analysis of Deep Foundations, GSP 323 (9780784483404) ; >
@@ -1466,7 +1466,7 @@
     au < ready ; exists ; 2021 ;  ; 9780784483503 ; 9780784483503 ; Airfield and Highway Pavements 2021, Pavement Design, Construction, and Condition Evaluation (9780784483503) ; >
     au < ready ; exists ; 2021 ;  ; 9780784483619 ; 9780784483619 ; Pipelines 2021, Design (9780784483619) ; >
     au < ready ; exists ; 2021 ;  ; 9780784483626 ; 9780784483626 ; Pipelines 2021, Construction and Rehabilitation (9780784483626) ; >
-    au < ready ; exists ; 2021 ;  ; 9780784483602 ; 9780784483602 ; Pipelines 2021, Planning (9780784483602) ; >
+    au < crawling ; exists ; 2021 ;  ; 9780784483602 ; 9780784483602 ; Pipelines 2021, Planning (9780784483602) ; >
     au < ready ; exists ; 2021 ;  ; 9780784483589 ; 9780784483589 ; Permafrost 2021, Merging Permafrost Science and Cold Regions Engineering (9780784483589) ; >
     au < crawling ; exists ; 2021 ;  ; 9780784483695 ; 9780784483695 ; Geo-Extreme 2021, Climatic Extremes and Earthquake Modeling, GSP 329 (9780784483695) ; >
     au < ready ; exists ; 2021 ;  ; 9780784483701 ; 9780784483701 ; Geo-Extreme 2021, Infrastructure Resilience, Big Data, and Risk, GSP 330 (9780784483701) ; >
