@@ -40,6 +40,7 @@ import java.util.Iterator;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import org.lockss.crawler.BaseCrawlSeed;
@@ -70,27 +71,38 @@ public class EscrsCrawlSeedFactory implements CrawlSeedFactory {
         
         @Override
         public Collection<String> doGetStartUrls() throws ConfigurationException, PluginException, IOException {
-
             Collection<String> sUrls = super.doGetStartUrls();
+            Collection<String> uUrls = new ArrayList<String>(sUrls.size());
 
             ArchivalUnit au = cf.getAu();
+            String tdbYear = au.getConfiguration().get("year");
             
             for (Iterator<String> iter = sUrls.iterator(); iter.hasNext();) {
                 String sUrl = iter.next();
                 CachedUrl cu = au.makeCachedUrl(sUrl);
                 InputStream in = cu.getUnfilteredInputStream();
-
                 if (in != null) {
                     try {
                         String year = null;
-
-                        Elements small_element_year;
+                        CachedUrl issueUrl;
+                        Elements articles; 
+                        Elements small_element_date;
                         String url = cu.getUrl();
                         try {
                             Document doc = Jsoup.parse(in, cu.getEncoding(), url); 
-                            small_element_year = doc.select("p[class=\"archived-issue__date\"]>small");
-                            year = checkElement(small_element_year);
-                            log.info("YEAR IS " + small_element_year);
+                            articles = doc.select("article.archived-issue");
+                            for(Element article : articles){
+                                issueUrl = au.makeCachedUrl(article.select("a.issue-summary__link").attr("href").trim());
+                                log.debug3("Current issue url is: " + issueUrl);
+                                small_element_date = article.select("p[class=\"archived-issue__date\"]>small");
+                                year = checkElement(small_element_date);
+                                log.debug3("TDB year is " + tdbYear + " and issue date is " + year);
+                                if(year.contains(tdbYear)){
+                                    log.debug3(issueUrl.getUrl() + " added to list of start URLs.");
+                                    uUrls.add(issueUrl.getUrl());
+                                }
+                            }
+                            return uUrls;
                         } catch (IOException e) {
                             log.debug3("Escrs: Error getting correct AU manifest", e);
                         }
@@ -107,8 +119,7 @@ public class EscrsCrawlSeedFactory implements CrawlSeedFactory {
         protected String checkElement(Elements element) {
             String cleanedUpElement = null;
             if ( element != null){
-                int comma = element.indexOf(",") > -1 ? element.indexOf(",") : 0;
-                cleanedUpElement = element.text().trim().substring(comma);
+                cleanedUpElement = element.text().trim();
                 log.debug3("Escrs: Element is " + element);
                 if (cleanedUpElement != null) {
                     log.debug3("Escrs: Element cleaned is " + cleanedUpElement);
