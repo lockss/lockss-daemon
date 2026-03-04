@@ -52,6 +52,7 @@ public class EscrsHtmlCrawlFilterFactory implements FilterFactory{
 		HtmlNodeFilters.tag("footer"),
 		HtmlNodeFilters.tag("script"),
 		HtmlNodeFilters.tag("nav"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "deskshow"),
         HtmlNodeFilters.tagWithAttributeRegex("ol", "class", "references"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "articlesBySimilarityList"),
         HtmlNodeFilters.tagWithAttributeRegex("div", "id", "articlesBySameAuthorList"),
