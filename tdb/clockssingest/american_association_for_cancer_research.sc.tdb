@@ -247,10 +247,10 @@
       au < ready ; exists ; 2002 ; 2002 ; Cancer Research Volume 62 ; 62 ; >
       au < ready ; exists ; 2003 ; 2003 ; Cancer Research Volume 63 ; 63 ; >
       au < frozen ; exists ; 2004 ; 2004 ; Cancer Research Volume 64 ; 64 ; >
-      au < notReady ; exists ; 2005 ; 2005 ; Cancer Research Volume 65 ; 65 ; > #520 error, login found, 	https://aacrjournals.org/sign-in?returnUrl=https%3A%2F%2Faacrjournals.org%2Fview-large%2Ffigure%2F12004244%2F05-2103f06c.jpeg
+      au < ready ; exists ; 2005 ; 2005 ; Cancer Research Volume 65 ; 65 ; >
       au < crawling ; exists ; 2006 ; 2006 ; Cancer Research Volume 66 ; 66 ; >
       au < crawling ; exists ; 2007 ; 2007 ; Cancer Research Volume 67 ; 67 ; >
-      au < notReady ; exists ; 2008 ; 2008 ; Cancer Research Volume 68 ; 68 ; > #520 error, login found, https://aacrjournals.org/sign-in?returnUrl=%2Fview-large%2Ffigure%2F12329756%2F1809fig03c.jpeg & 	https://aacrjournals.org/institutional-login?returnUrl=https%3A%2F%2Faacrjournals.org%2Fview-large%2Ffigure%2F12302532%2F9087fig06c.jpeg
+      au < ready ; exists ; 2008 ; 2008 ; Cancer Research Volume 68 ; 68 ; >
       au < frozen ; exists ; 2009 ; 2009 ; Cancer Research Volume 69 ; 69 ; >
       au < finished ; manifest ; 2010 ; 2010 ; Cancer Research Volume 70 ; 70 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2011 ; 2011 ; Cancer Research Volume 71 ; 71 ; reingest1.clockss.org:8082 >
