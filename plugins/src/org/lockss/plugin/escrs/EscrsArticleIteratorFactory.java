@@ -53,14 +53,15 @@ public class EscrsArticleIteratorFactory implements ArticleIteratorFactory, Arti
     protected static Logger log = Logger.getLogger(EscrsArticleIteratorFactory.class);
 
     /*
+        Note that this journal is very similar to OJS. 
         Example Abstract: https://emiratesscholar.com/directory/index.php/ejbess/article/view/1084
         Example PDF: https://emiratesscholar.com/directory/index.php/ejbess/article/view/1084/570 
     */
 
-    protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
-    protected static final String PATTERN_TEMPLATE = "\"%sdirectory/index.php/%s/article/view\", base_url, journal_id";
+    protected static final String ROOT_TEMPLATE = "\"%sdirectory/index.php/%s/article/view\", base_url, journal_id";
+    protected static final String PATTERN_TEMPLATE = "\"%sdirectory/index.php/%s/article/view/([0-9]+)(/[0-9]+)?\", base_url, journal_id";
 
-    protected static final Pattern ABSTRACT_PATTERN = Pattern.compile("/article/view/([0-9]+)()$",Pattern.CASE_INSENSITIVE);
+    protected static final Pattern ABSTRACT_PATTERN = Pattern.compile("/article/view/([0-9]+)$",Pattern.CASE_INSENSITIVE);
     protected static final Pattern PDF_PATTERN = Pattern.compile("/article/view/([0-9]+)/([0-9]+)$",Pattern.CASE_INSENSITIVE);
     
     protected static final String ABSTRACT_REPLACEMENT = "/article/view/$1";
@@ -80,10 +81,8 @@ public class EscrsArticleIteratorFactory implements ArticleIteratorFactory, Arti
         builder.addAspect(ABSTRACT_PATTERN, ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT);
 
-
         builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT);
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
-
         return builder.getSubTreeArticleIterator();
     }
 
