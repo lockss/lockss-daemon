@@ -816,13 +816,13 @@
       #published 2014-present
       param[journal_id] = weaveux
 
-      au < manifest ; manifest ; 2014 ; 1 ; Weave: Journal of Library User Experience Volume 2014 ; 2014 ; >
-      au < manifest ; manifest ; 2015 ; 2 ; Weave: Journal of Library User Experience Volume 2015 ; 2015 ; >
-      au < manifest ; manifest ; 2016 ; 3 ; Weave: Journal of Library User Experience Volume 2016 ; 2016 ; >
-      au < manifest ; manifest ; 2017 ; 4 ; Weave: Journal of Library User Experience Volume 2017 ; 2017 ; >
-      au < manifest ; manifest ; 2018 ; 5 ; Weave: Journal of Library User Experience Volume 2018 ; 2018 ; >
-      au < manifest ; manifest ; 2019 ; 6 ; Weave: Journal of Library User Experience Volume 2019 ; 2019 ; >
-      au < manifest ; manifest ; 2020 ; 7 ; Weave: Journal of Library User Experience Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2014 ; 1 ; Weave: Journal of Library User Experience Volume 2014 ; 2014 ; >
+      au < manifest ; exists ; 2015 ; 2 ; Weave: Journal of Library User Experience Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; 3 ; Weave: Journal of Library User Experience Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; 4 ; Weave: Journal of Library User Experience Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; 5 ; Weave: Journal of Library User Experience Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; 6 ; Weave: Journal of Library User Experience Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2020 ; 7 ; Weave: Journal of Library User Experience Volume 2020 ; 2020 ; >
       au < manifest ; exists ; 2021 ; 4 ; Weave: Journal of Library User Experience Volume 2021 ; 2021 ; >
       au < manifest ; exists ; 2022 ; 5 ; Weave: Journal of Library User Experience Volume 2022 ; 2022 ; >
       au < manifest ; exists ; 2023 ; 6 ; Weave: Journal of Library User Experience Volume 2023 ; 2023 ; >
@@ -895,7 +895,7 @@
       au < doesNotExist ; doesNotExist ; 2023 ; 50 ; Journal of the Western Society for French History Volume 2023 ; 2023 ; > #2023 content dated 2024
       au < frozen ; exists ; 2024 ; 51 ; Journal of the Western Society for French History Volume 2024 ; 2024 ; >
       au < doesNotExist ; doesNotExist ; 2025 ; 52 ; Journal of the Western Society for French History Volume 2025 ; 2025 ; >
-      au < expected ; expected ; 2026 ; 53 ; Journal of the Western Society for French History Volume 2026 ; 2026 ; >
+      au < expected ; exists ; 2026 ; 53 ; Journal of the Western Society for French History Volume 2026 ; 2026 ; >
 
   }
 

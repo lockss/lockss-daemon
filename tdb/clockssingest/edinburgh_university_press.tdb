@@ -2054,7 +2054,7 @@
 
     title <
       name = Romanticism ;
-      issn = 1354-991X ;
+      issn = 1354-991X ;  #issn in the ris file has a small x.
       eissn = 1750-0192 ;
       issnl = 1354-991X 
      >
@@ -2092,7 +2092,7 @@
     au < deepCrawl ; exists ; 2023 ; Romanticism Volume 29 ; 29 ; https://www.euppublishing.com/ ; >
     au < deepCrawl ; exists ; 2024 ; Romanticism Volume 30 ; 30 ; https://www.euppublishing.com/ ; >
     au < notReady ; exists ; 2025 ; Romanticism Volume 31 ; 31 ; https://www.euppublishing.com/ ; > #0 mdata, 30 articles
-    au < expected ; exists ; 2026 ; Romanticism Volume 32 ; 32 ; https://www.euppublishing.com/ ; > #0 mdata, 30 articles
+    au < expected ; exists ; 2026 ; Romanticism Volume 32 ; 32 ; https://www.euppublishing.com/ ; >
 
   }
 

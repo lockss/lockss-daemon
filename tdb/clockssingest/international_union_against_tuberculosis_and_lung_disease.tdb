@@ -138,7 +138,7 @@
       issnl = 2220-8372
     >
 
-    plugin = org.lockss.plugin.highwire.ers.ERSScolarisPlugin
+    plugin = org.lockss.plugin.highwire.ers.ClockssERSScolarisPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     param[journal_id] = pha
 
@@ -185,7 +185,7 @@
       issnl = 3005-7590
     >
 
-    plugin = org.lockss.plugin.highwire.ers.ERSScolarisPlugin
+    plugin = org.lockss.plugin.highwire.ers.ClockssERSScolarisPlugin
     implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
     param[journal_id] = ijtldo
 

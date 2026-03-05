@@ -111,7 +111,6 @@ public class EscrsCrawlSeedFactory implements CrawlSeedFactory {
                         e.printStackTrace();
                     }
                 }
-
             }
             return super.doGetStartUrls();
         }

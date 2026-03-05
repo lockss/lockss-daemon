@@ -57,14 +57,14 @@ public class EscrsArticleIteratorFactory implements ArticleIteratorFactory, Arti
         Example PDF: https://emiratesscholar.com/directory/index.php/ejbess/article/view/1084/570 
     */
 
-    private static final String ROOT_TEMPLATE = "\"%s\", base_url";
-    private static final String PATTERN_TEMPLATE = "\"%sdirectory/index.php/%s/article/view\", base_url, journal_id";
+    protected static final String ROOT_TEMPLATE = "\"%s\", base_url";
+    protected static final String PATTERN_TEMPLATE = "\"%sdirectory/index.php/%s/article/view\", base_url, journal_id";
 
-    private static final Pattern ABSTRACT_PATTERN = Pattern.compile("/article/view/([0-9]+)()$",Pattern.CASE_INSENSITIVE);
-    private static final Pattern PDF_PATTERN = Pattern.compile("/article/view/([0-9]+)/([0-9]+)$",Pattern.CASE_INSENSITIVE);
+    protected static final Pattern ABSTRACT_PATTERN = Pattern.compile("/article/view/([0-9]+)()$",Pattern.CASE_INSENSITIVE);
+    protected static final Pattern PDF_PATTERN = Pattern.compile("/article/view/([0-9]+)/([0-9]+)$",Pattern.CASE_INSENSITIVE);
     
-    private static final String ABSTRACT_REPLACEMENT = "/article/view/$1";
-    private static final String PDF_REPLACEMENT = "/article/view/$1/$2";
+    protected static final String ABSTRACT_REPLACEMENT = "/article/view/$1";
+    protected static final String PDF_REPLACEMENT = "/article/view/$1/$2";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
