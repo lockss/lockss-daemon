@@ -1,0 +1,30 @@
+{
+    publisher <
+        name = University of Leeds Open Books ;
+        info[contract] = 2026 ;
+        info[back] = 2025 ;
+        info[tester] = 8 ;
+        info[platform] = Custom
+  >
+
+    plugin = needs.plugin
+    param[base_url] = https://leeds.pressbooks.pub/
+
+    implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[book_id] ; hidden[proxy] >
+
+  {
+    title <
+      name = University of Leeds Open Books ;
+      type = bookSeries
+    >
+
+      au < exists ; exists ; 2025 ;  ; 978-1-918312-01-0 ; Better Together ; bettertogether ; >
+      au < exists ; exists ; 2025 ;  ; 978-1-918312-03-4 ; Learning with AI ; learningwithai ; >
+      au < exists ; exists ; 2025 ;  ; 978-1-918312-04-1 ; EDUC5272M Module Companion ; educ5272m ; >
+      au < exists ; exists ; 2025 ;  ; 978-1-918312-02-7 ; Meraki ; meraki ; >
+      au < exists ; exists ; 2025 ;  ; 978-1-918312-00-3 ; Broadening Blueprint for Jam Pathways ; jamblueprint ; >
+      au < exists ; exists ; 2025 ;  ; 978-1-918312-05-8 ; Broadening Blueprint for Open Pathways ; broadening-blueprint-openpathways ; >
+
+  }
+
+}
