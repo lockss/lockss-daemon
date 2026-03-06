@@ -144,7 +144,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
                 Elements abstracts = article.select("div.article-summary-title>a[href*=article],h4.article__title>a[href*=article],div.obj_article_summary>h3.title>a[href*=article],h3.media-heading>a[href*=article],"+
                     "a.summary_title,span.article-title>a[href*=article],div.obj_article_summary>div.title>a[href*=article],a:has(span.text>h6.article-title),"
                     +"ul.actions>li>a:contains(View Article),div.obj_article_summary>h4.title>a[href*=article],div.obj_article_summary>div.card-body>h3.card-title>a[href*=article],"+
-                    "div.card-body>h4.issue-article-title>a,div.obj_article_summary>div.summary>h2.title>a[href*=article]");
+                    "div.card-body>h4.issue-article-title>a,div.obj_article_summary>div.summary>h2.title>a[href*=article],h2.article__title>a[href*=article]");
                 abstractsUrl = au.makeCachedUrl(abstracts.attr("href").trim());
 
                 /*
