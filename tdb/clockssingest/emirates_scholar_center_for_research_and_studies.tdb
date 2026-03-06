@@ -4,11 +4,11 @@
     name = Emirates Scholar Center for Research and Studies ;
     info[contract] = 2026 ;
     info[back] = 2022 ;
-    info[tester] = 8 ;
+    info[tester] = 4 ;
     info[platform] = Custom OJS3
   >
 
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.ojs3.ClockssEscrsPlugin
   implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
 
   {
@@ -22,11 +22,11 @@
     param[base_url] = https://emiratesscholar.com/
     param[journal_id] = ejbess
 
-    au < exists ; exists ; 2022 ; 2022 ; Emirates Journal of Business, Economics and Social Studies Volume 1 ; 1 ; >
-    au < exists ; exists ; 2023 ; 2023 ; Emirates Journal of Business, Economics and Social Studies Volume 2 ; 2 ; >
-    au < exists ; exists ; 2024 ; 2024 ; Emirates Journal of Business, Economics and Social Studies Volume 3 ; 3 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Emirates Journal of Business, Economics and Social Studies Volume 4 ; 4 ; >
-    au < exists ; exists ; 2026 ; 2026 ; Emirates Journal of Business, Economics and Social Studies Volume 5 ; 5 ; >
+    au < testing ; exists ; 2022 ; 2022 ; Emirates Journal of Business, Economics and Social Studies Volume 1 ; 1 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Emirates Journal of Business, Economics and Social Studies Volume 2 ; 2 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Emirates Journal of Business, Economics and Social Studies Volume 3 ; 3 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Emirates Journal of Business, Economics and Social Studies Volume 4 ; 4 ; >
+    au < testing ; exists ; 2026 ; 2026 ; Emirates Journal of Business, Economics and Social Studies Volume 5 ; 5 ; >
 
   }
 }
