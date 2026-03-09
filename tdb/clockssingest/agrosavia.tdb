@@ -67,7 +67,7 @@
       {
       param[base_url] = https://revistacta.agrosavia.co/
 
-      au < ready ; exists ; 2022 ; Ciencia y Tecnología Agropecuaria Volume 2022 ; 23 ; 2022 ; > #no certificate
+      au < crawling ; exists ; 2022 ; Ciencia y Tecnología Agropecuaria Volume 2022 ; 23 ; 2022 ; > #no certificate
       au < finished ; manifest ; 2023 ; Ciencia y Tecnología Agropecuaria Volume 2023 ; 24 ; 2023 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2024 ; Ciencia y Tecnología Agropecuaria Volume 2024 ; 25 ; 2024 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; Ciencia y Tecnología Agropecuaria Volume 2025 ; 26 ; 2025 ; >
