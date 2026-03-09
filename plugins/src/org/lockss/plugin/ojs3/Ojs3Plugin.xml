@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>71</string>
+    <string>72</string>
   </entry>
    <entry>
     <string>plugin_name</string>
@@ -119,10 +119,11 @@ POSSIBILITY OF SUCH DAMAGE.
       https://www.ride.org.mx/index.php/RIDE/user/setLocale/es_ES?source=%2Findex.php%2FRIDE%2Fgateway%2Flockss%3Fyear%3D2020
       -->
       <string>1,"^https?://%s%s(index\.php/)?(%s/)?user/setLocale/[^?]{5}[?]source=%%2F(index[.]php%%2F)?(%s%%2F)?gateway%%2Fc?lockss%%3Fyear%%3D%d", url_host(base_url), url_path(base_url), journal_id, journal_id, year</string>
-      <string>1,"^https?://%s%s(index\.php/)?(%s/)?gateway/plugin/WebFeedGatewayPlugin/",url_host(base_url), url_path(base_url), journal_id</string>
+      <string>1,"^https?://%s%s(directory/)?(index\.php/)?(%s/)?gateway/plugin/(Web|Announcement)FeedGatewayPlugin/",url_host(base_url), url_path(base_url), journal_id</string>
       <string>1,"^https://docs.lib.purdue.edu/cgi/viewcontent.cgi\?article="</string>
       <string>1,"^https?://%s/.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?|webp)([?]((itok|v)=)?[^&amp;]+)?$", base_url_host</string>
       <string>1,"^https?://%s/.*/css([?]name=((child-)?stylesheet|bootstrap(Theme-%s)?|ojsplus|font))?", base_url_host,journal_id</string>
+      <string>1,"^https?://maxcdn\.bootstrapcdn\.com/bootstrap/.*/(css|js)/bootstrap\.min\.(css|js)"</string>
       <string>1,"^https?://(cdnjs\.cloudflare|(ajax|fonts)\.(googleapis|gstatic))\.com/"</string>
       <string>1,"^https?://cdn\.jsdelivr\.net/.*\.(css|js)"</string>
         <!--  index.php or journals/index.php are an optional attr so allow but do not require -->
@@ -313,6 +314,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>.+\.cloudfront\.net</string>
       <string>cdnjs\.cloudflare\.com</string>   
+      <string>maxcdn\.bootstrapcdn\.com</string>  
       <string>cdn\.jsdelivr\.net</string>   
       <string>.+\.mathjax\.org</string>
       <string>.+\.gstatic\.com</string>
