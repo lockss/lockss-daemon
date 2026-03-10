@@ -452,7 +452,7 @@
       au < released ; 2022 ; 2022 ; Pediatrics in Review Volume 43 ; 43 >
       au < released ; 2023 ; 2023 ; Pediatrics in Review Volume 44 ; 44 >
       au < released ; 2024 ; 2024 ; Pediatrics in Review Volume 45 ; 45 >
-      au < manifest ; 2025 ; 2025 ; Pediatrics in Review Volume 46 ; 46 >
+      au < ready ; 2025 ; 2025 ; Pediatrics in Review Volume 46 ; 46 >
       au < manifest ; 2026 ; 2026 ; Pediatrics in Review Volume 47 ; 47 >
 
     }
@@ -469,7 +469,7 @@
 
       param[journal_id] = pediatricsopenscience
 
-      au < manifest ; 2025 ; 2025 ; Pediatrics Open Science Volume 1 ; 1 >
+      au < ready ; 2025 ; 2025 ; Pediatrics Open Science Volume 1 ; 1 >
       au < manifest ; 2026 ; 2026 ; Pediatrics Open Science Volume 2 ; 2 >
 
   }
