@@ -89,11 +89,11 @@
       au < released ; 2018 ; 2018 ; 36 ; Documenta Volume 2018 >
       au < released ; 2019 ; 2019 ; 37 ; Documenta Volume 2019 >
       au < released ; 2020 ; 2020 ; 38 ; Documenta Volume 2020 >
-      au < manifest ; 2021 ; 2021 ; 39 ; Documenta Volume 2021 >
+      au < ready ; 2021 ; 2021 ; 39 ; Documenta Volume 2021 >
       au < manifest ; 2022 ; 2022 ; 40 ; Documenta Volume 2022 >
-      au < manifest ; 2023 ; 2023 ; 41 ; Documenta Volume 2023 >
+      au < ready ; 2023 ; 2023 ; 41 ; Documenta Volume 2023 >
       au < manifest ; 2024 ; 2024 ; 42 ; Documenta Volume 2024 >
-      au < manifest ; 2025 ; 2025 ; 43 ; Documenta Volume 2025 >
+      au < ready ; 2025 ; 2025 ; 43 ; Documenta Volume 2025 >
       au < manifest ; 2026 ; 2026 ; 44 ; Documenta Volume 2026 >
 
   }
@@ -115,7 +115,7 @@
       au < released ; 2022 ; 2022 ; 2022 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2022 >
       au < released ; 2023 ; 2023 ; 2023 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2023 >
       au < released ; 2024 ; 2024 ; 2024 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2024 >
-      au < manifest ; 2025 ; 2025 ; 2025 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2025 >
+      au < ready ; 2025 ; 2025 ; 2025 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2025 >
       au < manifest ; 2026 ; 2026 ; 2026 ; DiGeSt. Journal of Diversity and Gender Studies Volume 2026 >
 
   }
@@ -137,7 +137,7 @@
       au < released ; 2022 ; 2022 ; 2022 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2022 >
       au < released ; 2023 ; 2023 ; 2023 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2023 >
       au < released ; 2024 ; 2024 ; 2024 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2024 >
-      au < manifest ; 2025 ; 2025 ; 2025 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2025 >
+      au < ready ; 2025 ; 2025 ; 2025 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2025 >
       au < manifest ; 2026 ; 2026 ; 2026 ; Journal of Latin Cosmopolitanism and European Literatures Volume 2026 >
 
   }
@@ -172,21 +172,21 @@
       #param[journal_id] = philosophica
 
       au < manifest ; 2000 ; 2000 ; 2000 ; Philosophica Volume 2000 >
-      au < manifest ; 2001 ; 2001 ; 2001 ; Philosophica Volume 2001 >
+      au < ready ; 2001 ; 2001 ; 2001 ; Philosophica Volume 2001 >
       au < manifest ; 2002 ; 2002 ; 2002 ; Philosophica Volume 2002 >
       au < manifest ; 2003 ; 2003 ; 2003 ; Philosophica Volume 2003 >
       au < manifest ; 2004 ; 2004 ; 2004 ; Philosophica Volume 2004 >
-      au < manifest ; 2005 ; 2005 ; 2005 ; Philosophica Volume 2005 >
+      au < ready ; 2005 ; 2005 ; 2005 ; Philosophica Volume 2005 >
       au < manifest ; 2006 ; 2006 ; 2006 ; Philosophica Volume 2006 >
       au < manifest ; 2007 ; 2007 ; 2007 ; Philosophica Volume 2007 >
-      au < manifest ; 2008 ; 2008 ; 2008 ; Philosophica Volume 2008 >
+      au < ready ; 2008 ; 2008 ; 2008 ; Philosophica Volume 2008 >
       au < released ; 2010 ; 2010 ; 83 ; Philosophica Volume 83 >
       au < released ; 2012 ; 2012 ; 84-87 ; Philosophica Volume 84-87 >
       au < released ; 2013 ; 2013 ; 88 ; Philosophica Volume 88 >
       au < released ; 2014 ; 2014 ; 89 ; Philosophica Volume 89 >
       au < released ; 2015 ; 2015 ; 90 ; Philosophica Volume 90 >
       au < released ; 2017 ; 2017 ; 91-92 ; Philosophica Volume 91-92 >
-      au < manifest ; 2023 ; 2023 ; 93 ; Philosophica Volume 93 >
+      au < ready ; 2023 ; 2023 ; 93 ; Philosophica Volume 93 >
 
   }
 
@@ -1150,7 +1150,7 @@
       au < doNotProcess ; 2022 ; 2022 ; 2022 ; NISE Essays Volume 2022 > #No content
       au < released ; 2023 ; 2023 ; 2023 ; NISE Essays Volume 2023 >
       au < released ; 2024 ; 2024 ; 2024 ; NISE Essays Volume 2024 >
-      au < manifest ; 2025 ; 2025 ; 2025 ; NISE Essays Volume 2025 >
+      au < ready ; 2025 ; 2025 ; 2025 ; NISE Essays Volume 2025 >
       au < expected ; 2026 ; 2026 ; 2026 ; NISE Essays Volume 2026 >
 
   }
@@ -1505,28 +1505,28 @@
       au < manifest ; 1997 ; 1997 ; 1997 ; Tetradio Volume 1997 >
       au < manifest ; 1998 ; 1998 ; 1998 ; Tetradio Volume 1998 >
       au < manifest ; 1999 ; 1999 ; 1999 ; Tetradio Volume 1999 >
-      au < manifest ; 2000 ; 2000 ; 2000 ; Tetradio Volume 2000 >
+      au < ready ; 2000 ; 2000 ; 2000 ; Tetradio Volume 2000 >
       au < manifest ; 2001 ; 2001 ; 2001 ; Tetradio Volume 2001 >
-      au < manifest ; 2002 ; 2002 ; 2002 ; Tetradio Volume 2002 >
+      au < ready ; 2002 ; 2002 ; 2002 ; Tetradio Volume 2002 >
       au < manifest ; 2003 ; 2003 ; 2003 ; Tetradio Volume 2003 >
-      au < manifest ; 2004 ; 2004 ; 2004 ; Tetradio Volume 2004 >
+      au < ready ; 2004 ; 2004 ; 2004 ; Tetradio Volume 2004 >
       au < manifest ; 2005 ; 2005 ; 2005 ; Tetradio Volume 2005 >
-      au < manifest ; 2006 ; 2006 ; 2006 ; Tetradio Volume 2006 >
+      au < ready ; 2006 ; 2006 ; 2006 ; Tetradio Volume 2006 >
       au < manifest ; 2007 ; 2007 ; 2007 ; Tetradio Volume 2007 >
-      au < manifest ; 2008 ; 2008 ; 2008 ; Tetradio Volume 2008 >
+      au < ready ; 2008 ; 2008 ; 2008 ; Tetradio Volume 2008 >
       au < manifest ; 2009 ; 2009 ; 2009 ; Tetradio Volume 2009 >
       au < manifest ; 2010 ; 2010 ; 2010 ; Tetradio Volume 2010 >
-      au < manifest ; 2011 ; 2011 ; 2011 ; Tetradio Volume 2011 >
+      au < ready ; 2011 ; 2011 ; 2011 ; Tetradio Volume 2011 >
       au < manifest ; 2012 ; 2012 ; 2012 ; Tetradio Volume 2012 >
       au < manifest ; 2013 ; 2013 ; 2013 ; Tetradio Volume 2013 >
       au < manifest ; 2014 ; 2014 ; 2014 ; Tetradio Volume 2014 >
       au < manifest ; 2015 ; 2015 ; 2015 ; Tetradio Volume 2015 >
       au < manifest ; 2016 ; 2016 ; 2016 ; Tetradio Volume 2016 >
-      au < manifest ; 2017 ; 2017 ; 2017 ; Tetradio Volume 2017 >
+      au < ready ; 2017 ; 2017 ; 2017 ; Tetradio Volume 2017 >
       au < manifest ; 2018 ; 2018 ; 2018 ; Tetradio Volume 2018 >
       au < manifest ; 2019 ; 2019 ; 2019 ; Tetradio Volume 2019 >
       au < manifest ; 2020 ; 2020 ; 2020 ; Tetradio Volume 2020 >
-      au < manifest ; 2021 ; 2021 ; 2021 ; Tetradio Volume 2021 >
+      au < ready ; 2021 ; 2021 ; 2021 ; Tetradio Volume 2021 >
       au < manifest ; 2022 ; 2022 ; 2022 ; Tetradio Volume 2022 >
       au < manifest ; 2023 ; 2023 ; 2023 ; Tetradio Volume 2023 >
       au < doNotProcess ; 2024 ; 2024 ; 2024 ; Tetradio Volume 2024 > #No content
@@ -1546,11 +1546,11 @@
       param[journal_id] = ts
 
       au < manifest ; 2020 ; 2020 ; 2020 ; Tijdschrift Sociologie Volume 2020 >
-      au < manifest ; 2021 ; 2021 ; 2021 ; Tijdschrift Sociologie Volume 2021 >
-      au < manifest ; 2022 ; 2022 ; 2022 ; Tijdschrift Sociologie Volume 2022 >
-      au < manifest ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 >
-      au < manifest ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 >
-      au < manifest ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 >
+      au < ready ; 2021 ; 2021 ; 2021 ; Tijdschrift Sociologie Volume 2021 >
+      au < ready ; 2022 ; 2022 ; 2022 ; Tijdschrift Sociologie Volume 2022 >
+      au < ready ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 >
+      au < ready ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 >
+      au < ready ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 >
       au < manifest ; 2026 ; 2026 ; 2026 ; Tijdschrift Sociologie Volume 2026 >
 
   }
@@ -1597,7 +1597,7 @@
       au < manifest ; 2000 ; 2000 ; 2000 ; Tijdschrift voor Communicatiewetenschap Volume 2000 >
       au < manifest ; 2001 ; 2001 ; 2001 ; Tijdschrift voor Communicatiewetenschap Volume 2001 >
       au < manifest ; 2002 ; 2002 ; 2002 ; Tijdschrift voor Communicatiewetenschap Volume 2002 >
-      au < manifest ; 2003 ; 2003 ; 2003 ; Tijdschrift voor Communicatiewetenschap Volume 2003 >
+      au < ready ; 2003 ; 2003 ; 2003 ; Tijdschrift voor Communicatiewetenschap Volume 2003 >
       au < manifest ; 2004 ; 2004 ; 2004 ; Tijdschrift voor Communicatiewetenschap Volume 2004 >
 
   }
@@ -1715,7 +1715,7 @@
       au < released ; 2022 ; 2022 ; 2022 ; Vlaams Diergeneeskundig Tijdschrift Volume 2022 >
       au < released ; 2023 ; 2023 ; 2023 ; Vlaams Diergeneeskundig Tijdschrift Volume 2023 >
       au < released ; 2024 ; 2024 ; 2024 ; Vlaams Diergeneeskundig Tijdschrift Volume 2024 >
-      au < manifest ; 2025 ; 2025 ; 2025 ; Vlaams Diergeneeskundig Tijdschrift Volume 2025 >
+      au < ready ; 2025 ; 2025 ; 2025 ; Vlaams Diergeneeskundig Tijdschrift Volume 2025 >
       au < manifest ; 2026 ; 2026 ; 2026 ; Vlaams Diergeneeskundig Tijdschrift Volume 2026 >
 
   }
