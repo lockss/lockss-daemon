@@ -212,7 +212,7 @@
    {
       title <
         name = Liverpool Books ;
-        type = book
+        type = bookSeries
       >
 
     implicit < status ; year ; isbn ; eisbn ; param[book_eisbn] ; name ; param[base_url] >
