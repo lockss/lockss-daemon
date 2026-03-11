@@ -136,7 +136,7 @@ public class MigrateContent extends LockssServlet {
   OpType defaultOpType;
   OpType opType;
   boolean isCompareContent;
-  boolean isSkipFinished = true;
+  boolean isSkipFinished = false;
   boolean isMigratorConfigured;
   List<String> auSelectFilter;
   List<Pattern> auSelectPatterns;
@@ -233,7 +233,11 @@ public class MigrateContent extends LockssServlet {
 
     if (!StringUtil.isNullString(action)) {
       isCompareContent = getParameter(KEY_COMPARE_CONTENT) != null;
-      isSkipFinished = getParameter(KEY_SKIP_FINISHED) != null;
+      if (migrationMgr.isMigrationInDebugMode()) {
+        isSkipFinished = getParameter(KEY_SKIP_FINISHED) != null;
+      } else {
+        isSkipFinished = false;
+      }
 
       auid = getParameter(KEY_AUID);
       pluginId = getParameter(KEY_PLUGINID);
@@ -540,9 +544,11 @@ public class MigrateContent extends LockssServlet {
     tbl.newCell(CENTERED_CELL);
     tbl.add(checkBox("Full content compare", "true", KEY_COMPARE_CONTENT,
                      isCompareContent));
-    tbl.add("&nbsp;&nbsp;");
-    tbl.add(checkBox("Skip already-copied AUs" + addFootnote(SKIP_FINISHED_FOOT),
-                     "true", KEY_SKIP_FINISHED, isSkipFinished));
+    if (migrationMgr.isMigrationInDebugMode()) {
+      tbl.add("&nbsp;&nbsp;");
+      tbl.add(checkBox("Skip already-copied AUs" + addFootnote(SKIP_FINISHED_FOOT),
+                       "true", KEY_SKIP_FINISHED, isSkipFinished));
+    }
 
 
     tbl.newRow();
