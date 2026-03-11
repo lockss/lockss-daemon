@@ -47,7 +47,6 @@ import org.apache.http.impl.io.*;
 import org.lockss.laaws.CuChecker;
 import org.lockss.util.FileUtil;
 import org.lockss.util.Logger;
-import org.springframework.http.HttpHeaders;
 import java.io.*;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;

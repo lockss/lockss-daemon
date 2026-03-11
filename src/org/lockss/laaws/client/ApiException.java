@@ -42,8 +42,7 @@
 
 package org.lockss.laaws.client;
 
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import org.lockss.util.StringUtil;
 
 /**
