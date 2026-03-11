@@ -171,7 +171,7 @@ public class CuChecker extends CuBase {
         artifactData = artifactsApi.getMultipartArtifact(artifact.getUuid(),namespace,"ALWAYS");
         boolean isMatch =
           IOUtils.contentEquals(artifactData.getInputStream(),
-                                cu.getUncompressedInputStream());
+                                cu.getUnfilteredInputStream());
         if (!isMatch) {
           String err = "Artifact content mistmatch between V1 and V2: " +
             cu.getUrl() + " Ver: " + ver + ": " + " in: " + au;
