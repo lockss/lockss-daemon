@@ -1171,6 +1171,8 @@ public class V2AuMover {
       sb.append(StringUtil.numberOfUnits(cArts, "artifact"));
       sb.append(" failed)");
     } else {
+      sb.append(auStat.getAuName());
+      sb.append(": ");
       sb.append(StringUtil.numberOfUnits(vUrls, "URL"));
       sb.append(" failed verification (");
       sb.append(StringUtil.numberOfUnits(vArts, "artifact"));
