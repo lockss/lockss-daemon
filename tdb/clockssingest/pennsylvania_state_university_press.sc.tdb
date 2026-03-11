@@ -1001,7 +1001,7 @@
       au < crawling ; exists ; 2000 ; Bulletin for Biblical Research Volume 10 ; 10 ; 2000 ; >
       au < ready ; exists ; 2001 ; Bulletin for Biblical Research Volume 11 ; 11 ; 2001 ; >
       au < ready ; exists ; 2002 ; Bulletin for Biblical Research Volume 12 ; 12 ; 2002 ; >
-      au < ready ; exists ; 2003 ; Bulletin for Biblical Research Volume 13 ; 13 ; 2003 ; >
+      au < crawling ; exists ; 2003 ; Bulletin for Biblical Research Volume 13 ; 13 ; 2003 ; >
       au < frozen ; exists ; 2004 ; Bulletin for Biblical Research Volume 14 ; 14 ; 2004 ; >
       au < frozen ; exists ; 2005 ; Bulletin for Biblical Research Volume 15 ; 15 ; 2005 ; >
       au < frozen ; exists ; 2006 ; Bulletin for Biblical Research Volume 16 ; 16 ; 2006 ; >
@@ -2142,7 +2142,7 @@
       au < ready ; exists ; 1991 ; Milton Studies Volume 27 ; 27 ; 1991 ; >
       au < ready ; exists ; 1992 ; Milton Studies Volume 28 ; 28 ; 1992 ; >
       au < frozen ; exists ; 1992 ; Milton Studies Volume 29 ; 29 ; 1992 ; >
-      au < ready ; exists ; 1993 ; Milton Studies Volume 30 ; 30 ; 1993 ; >
+      au < crawling ; exists ; 1993 ; Milton Studies Volume 30 ; 30 ; 1993 ; >
       au < frozen ; exists ; 1994 ; Milton Studies Volume 31 ; 31 ; 1994 ; >
       au < crawling ; exists ; 1995 ; Milton Studies Volume 32 ; 32 ; 1995 ; >
       au < frozen ; exists ; 1996 ; Milton Studies Volume 33 ; 33 ; 1996 ; >
@@ -2195,7 +2195,7 @@
       param[journal_id] = ncs
 
       au < ready ; exists ; 1987 ; Nineteenth Century Studies Volume 1 ; 1 ; 1987 ; >
-      au < ready ; exists ; 1988 ; Nineteenth Century Studies Volume 2 ; 2 ; 1988 ; >
+      au < crawling ; exists ; 1988 ; Nineteenth Century Studies Volume 2 ; 2 ; 1988 ; >
       au < ready ; exists ; 1989 ; Nineteenth Century Studies Volume 3 ; 3 ; 1989 ; >
       au < crawling ; exists ; 1990 ; Nineteenth Century Studies Volume 4 ; 4 ; 1990 ; >
       au < crawling ; exists ; 1991 ; Nineteenth Century Studies Volume 5 ; 5 ; 1991 ; >
