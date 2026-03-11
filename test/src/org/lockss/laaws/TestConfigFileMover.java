@@ -54,13 +54,13 @@ public class TestConfigFileMover extends LockssTestCase {
 
   String v2ContentServers =
     "org.lockss.config.fileVersion.content_servers_config=1\n" +
-    "org.lockss.contentui.port=24680\n" +
+    "org.lockss.contentui.port=24640\n" +
     "org.lockss.contentui.start=true\n" +
     "org.lockss.icp.enabled=false\n" +
-    "org.lockss.proxy.audit.port=24672\n" +
+    "org.lockss.proxy.audit.port=24631\n" +
     "org.lockss.proxy.audit.start=true\n" +
-    "org.lockss.proxy.port=24670\n" +
-    "org.lockss.proxy.sslPort=24671\n" +
+    "org.lockss.proxy.port=24630\n" +
+    "org.lockss.proxy.sslPort=24633\n" +
     "org.lockss.proxy.start=true\n";
 
   public void testTransformContentServers() throws IOException {
