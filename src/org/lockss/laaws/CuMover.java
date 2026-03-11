@@ -55,6 +55,7 @@ public class CuMover extends CuBase {
   private static final Logger log = Logger.getLogger(CuMover.class);
 
   private String v2Url;
+  private boolean isUrlError;
 
   protected static StatusLine STATUS_LINE_OK =
     new BasicStatusLine(new ProtocolVersion("HTTP", 1, 1), 200, "OK");
@@ -100,6 +101,9 @@ public class CuMover extends CuBase {
       for (CachedUrl cu : mappedCus.values()) {
         AuUtil.safeRelease(cu);
       }
+      if (isUrlError) {
+        ctrs.incr(CounterType.URLS_FAILED_COPY);
+      }
     }
   }
   
@@ -127,7 +131,7 @@ public class CuMover extends CuBase {
     }
     int onTarget = v1Versions.size() - cuQueue.size();
     log.debug2("Queueing " + cuQueue.size() + " versions, " +
-                 onTarget + " already present on target");
+               onTarget + " already present on target");
     if (log.isDebug3()) {
       log.debug3("Copy queue: " + cuQueue);
     }
@@ -167,19 +171,19 @@ public class CuMover extends CuBase {
     }
     catch (ApiException apie) {
       String err = "Failed to write " + rmsg() + v2Url + cuVersionString(cu) + ": " +
-          apie.getCode() + " - " + apie.getMessage();
+        apie.getCode() + " - " + apie.getMessage();
       log.warning(err);
       // Very elegant: if target ran out of space, preempt decision
       // about recording vs reporting the error and always report it
       if (auMover.isNoSpaceMessage(apie.getMessage())) {
-        task.addError(err);
+        addArtError(err);
         auMover.abortCopy("Aborted because target disk is full");
       } else {
         if (task.isOption(Option.RECORD_ERRORS)) {
           recordFailedCu(auid, cu, v2Url, namespace, collectionDate);
         }
         if (task.isOption(Option.REPORT_ERRORS)) {
-          task.addError(err);
+          addArtError(err);
         }
       }
     }
@@ -190,7 +194,7 @@ public class CuMover extends CuBase {
         recordFailedCu(auid, cu, v2Url, namespace, collectionDate);
       }
       if (task.isOption(Option.REPORT_ERRORS)) {
-        task.addError(err + ": " + e);
+        addArtError(err + ": " + e);
       }
     }
     catch (Exception | Error e) {
@@ -200,7 +204,7 @@ public class CuMover extends CuBase {
         recordFailedCu(auid, cu, v2Url, namespace, collectionDate);
       }
       if (task.isOption(Option.REPORT_ERRORS)) {
-        task.addError(err + ": " + e);
+        addArtError(err + ": " + e);
       }
     }
     finally {
@@ -208,12 +212,14 @@ public class CuMover extends CuBase {
     }
   }
 
+  // Including "(retry) in messages seems more confusing than omitting it
   String rmsg() {
-    return task.isOption(Option.RETRY_PHASE) ? "(retry) " : "";
+    return "";
+    //     return task.isOption(Option.RETRY_PHASE) ? "(retry) " : "";
   }
 
   private void recordFailedCu(String auid, CachedUrl cu, String v2Url,
-                          String namespace, long collectionDate) {
+                              String namespace, long collectionDate) {
     recordFailedCu(auid, cu, v2Url,
                    namespace, collectionDate, FailedCuVer.Type.Copy);
   }
@@ -229,7 +235,7 @@ public class CuMover extends CuBase {
    * @throws ApiException the rest exception thrown should anything fail in the request.
    */
   void copyArtifact(String auid, String v2Url, Long collectionDate,
-      CachedUrl cu, String namespace) throws ApiException {
+                    CachedUrl cu, String namespace) throws ApiException {
     log.debug3("createArtifact("+v2Url+")");
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
     Gson gson = new Gson();
@@ -253,8 +259,8 @@ public class CuMover extends CuBase {
       CIProperties hdr_props = cu.getProperties();
       if (hdr_props != null) {
         ((Set<String>) ((Map) hdr_props).keySet()).forEach(
-          key -> response.addHeader(CuMover.v2CuPropKey(key),
-                                    hdr_props.getProperty(key)));
+                                                           key -> response.addHeader(CuMover.v2CuPropKey(key),
+                                                                                     hdr_props.getProperty(key)));
       }
 
       Artifact uncommitted =
@@ -269,8 +275,8 @@ public class CuMover extends CuBase {
       }
     } finally {
       // Ensure it's removed in case didn't happen in commitArtifact()
-       ctrs.removeInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
-       ctrs.removeInProgressDcu(CounterType.BYTES_MOVED, dcu);
+      ctrs.removeInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
+      ctrs.removeInProgressDcu(CounterType.BYTES_MOVED, dcu);
     }
   }
 
@@ -327,4 +333,11 @@ public class CuMover extends CuBase {
       ctrs.add(CounterType.BYTES_MOVED, dcu.getTotalBytesMoved());
     }
   }
+
+  void addArtError(String msg) {
+    task.addError(msg);
+    ctrs.incr(CounterType.ARTIFACTS_FAILED_COPY);
+    isUrlError = true;
+  }
+
 }

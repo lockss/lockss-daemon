@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2021-2025 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2021-2026 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 import com.google.gson.Gson;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.builder.*;
 import org.apache.commons.lang3.StringUtils;
 import org.lockss.app.LockssDaemon;
@@ -43,9 +44,7 @@ import org.lockss.laaws.MigrationManager.OpType;
 import org.lockss.laaws.api.rs.StreamingArtifactsApi;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.client.V2RestClient;
-import org.lockss.laaws.model.rs.Artifact;
-import org.lockss.laaws.model.rs.ArtifactProperties;
-import org.lockss.laaws.model.rs.AuidPageInfo;
+import org.lockss.laaws.model.rs.*;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.plugin.*;
 import org.lockss.poller.PollManager;
@@ -221,7 +220,7 @@ public class V2AuMover {
    * Maximum number of retries for REST request failures
    */
   public static final String PARAM_MAX_RETRY_COUNT = PREFIX + "max.retries";
-  public static final int DEFAULT_MAX_RETRY_COUNT = 4;
+  public static final int DEFAULT_MAX_RETRY_COUNT = 2;
 
   /**
    * Backoff between REST request retries
@@ -322,6 +321,49 @@ public class V2AuMover {
   public static final String PARAM_INSTRUMENTATION = PREFIX + "instrumentation";
   public static final boolean DEFAULT_INSTRUMENTATION = false;
 
+  /** Curve controlling number of xferred bytes after which free space
+   * will be refetched, as a function of the amount of free space */
+  public static final String PARAM_DISK_SPACE_BYTES_CURVE =
+    PREFIX + "diskSpaceBytesCurve";
+  public static final String DEFAULT_DISK_SPACE_BYTES_CURVE =
+    // below 10K: 1K
+    "[10000,1000]," +
+    // 10K-100K: 10K
+    "[10000,10000],[100000,10000]," +
+    // 100K-1M: 100K
+    "[100000,100000],[1000000,100000]," +
+    // 1M-10M: 1M
+    "[1000000,1000000],[10000000,1000000]," +
+    // 10M0-100M: 10M
+    "[10000000,10000000],[100000000,10000000]," +
+    // 100M0-1G: 100M
+    "[100000000,100000000],[1000000000,100000000]," +
+    // 1G-10G: 200M
+    "[1000000000,200000000],[10000000000,200000000]," +
+    // above 10G: 500M
+    "[10000000000,500000000]";
+
+  /** Curve controlling number of xferred artifacts after which free
+   * space will be refetched, as a function of the amount of free
+   * index space.  (On a machine with typical crawled AUs, each
+   * artifact takes ~860 bytes of index DB space.) */
+  public static final String PARAM_DISK_SPACE_ARTIFACTS_CURVE =
+    PREFIX + "diskSpaceArtifactsCurve";
+  public static final String DEFAULT_DISK_SPACE_ARTIFACTS_CURVE =
+    // below 1M: 100
+    "[1000000,100]," +
+    // 1M-10M: 1K
+    "[1000000,1000],[10000000,1000]," +
+    // 10M-100M: 10K
+    "[10000000,10000],[100000000,10000]," +
+    // above 100M0: 100K
+    "[100000000,100000]";
+
+  /** The interval at which to fetch disk usage stats from V2, if not
+   * triggered by amount of data xferred */
+  public static final String PARAM_DISK_SPACE_INTERVAL =
+    PREFIX + "diskSpaceInterval";
+  public static final long DEFAULT_DISK_SPACE_INTERVAL = 5 * Constants.MINUTE;
 
   //////////////////////////////////////////////////////////////////////
   // Constants
@@ -371,14 +413,18 @@ public class V2AuMover {
   /** V2 repo REST status api client */
   private org.lockss.laaws.api.rs.StatusApi repoStatusApiClient;
 
-  /** V2 repo REST namespace api client */
+  /** V2 repo REST artifacts api client */
   private StreamingArtifactsApi repoArtifactsApiClient;
-  /** V2 repo REST namespace api client with long timeout */
+  /** V2 repo REST artifacts api client with long timeout */
   private StreamingArtifactsApi repoArtifactsApiLongCallClient;
 
+  /** V2 repo REST aus api client */
   private org.lockss.laaws.api.rs.AusApi repoAusApiClient;
-  /** V2 repo REST aus  api client with long timeout */
+  /** V2 repo REST aus api client with long timeout */
   private org.lockss.laaws.api.rs.AusApi repoAusApiLongCallClient;
+
+  /** V2 repo REST repo api client (info, namespaces, etc.) */
+  private org.lockss.laaws.api.rs.RepoApi repoRepoApiClient;
 
   /** Repository service port */
   private int repoPort;
@@ -428,11 +474,20 @@ public class V2AuMover {
   private OpType opType;
 
   private boolean isPartialContent = false;
-  private boolean checkMissingContent;
+  private boolean checkMissingContent = DEFAULT_CHECK_MISSING_CONTENT;
 
   private boolean isCompareBytes;
   private UseFetchUrl useFetchUrl = DEFAULT_USE_FETCH_URL;
   private boolean isShowInstrumentation = DEFAULT_INSTRUMENTATION;
+  private long diskSpaceFetchInterval = DEFAULT_DISK_SPACE_INTERVAL;
+  private CompoundLinearSlope diskSpaceXferBytesCurve;
+  private CompoundLinearSlope diskSpaceXferArtifactsCurve;
+  private long nextDiskSpaceFetchTime;  // next time to fetch disk space
+  private long nextDiskSpaceFetchBytes; // next byte count to fetch disk space
+  private long nextDiskSpaceFetchArtifacts; // next artifact count to fetch disk space
+  private String currentDiskSpace;
+  private long diskFreeContent;
+  private long diskFreeIndex;
 
   private boolean isGenerateTestErrors;
   private boolean isCompareEvenIfVersionMismatch;
@@ -605,6 +660,33 @@ public class V2AuMover {
       miscExecutor = createOrReConfigureExecutor(miscExecutor, config,
                                                  PARAM_MISC_EXECUTOR_SPEC,
                                                  DEFAULT_MISC_EXECUTOR_SPEC);
+
+      if (changedKeys.contains(PARAM_DISK_SPACE_BYTES_CURVE)) {
+        String curve = config.get(PARAM_DISK_SPACE_BYTES_CURVE,
+                                  DEFAULT_DISK_SPACE_BYTES_CURVE);
+        try {
+          diskSpaceXferBytesCurve = new CompoundLinearSlope(curve);
+        } catch (Exception e) {
+          log.warning("Malformed diskSpaceBytesCurve: " + curve, e);
+          diskSpaceXferBytesCurve =
+            new CompoundLinearSlope(DEFAULT_DISK_SPACE_BYTES_CURVE);
+        }
+      }
+      if (changedKeys.contains(PARAM_DISK_SPACE_ARTIFACTS_CURVE)) {
+        String curve = config.get(PARAM_DISK_SPACE_ARTIFACTS_CURVE,
+                                  DEFAULT_DISK_SPACE_ARTIFACTS_CURVE);
+        try {
+          diskSpaceXferArtifactsCurve = new CompoundLinearSlope(curve);
+        } catch (Exception e) {
+          log.warning("Malformed diskSpaceArtifactsCurve: " + curve, e);
+          diskSpaceXferArtifactsCurve =
+            new CompoundLinearSlope(DEFAULT_DISK_SPACE_ARTIFACTS_CURVE);
+        }
+      }
+
+      diskSpaceFetchInterval =
+        config.getTimeInterval(PARAM_DISK_SPACE_INTERVAL,
+                               DEFAULT_DISK_SPACE_INTERVAL);
     }
   }
 
@@ -688,6 +770,7 @@ public class V2AuMover {
       repoArtifactsApiLongCallClient = new StreamingArtifactsApi(repoLongCallClient);
       repoAusApiClient = new org.lockss.laaws.api.rs.AusApi(repoClient);
       repoAusApiLongCallClient = new org.lockss.laaws.api.rs.AusApi(repoLongCallClient);
+      repoRepoApiClient = new org.lockss.laaws.api.rs.RepoApi(repoClient);
     }
     catch (MalformedURLException mue) {
       totalCounters.addError("Error parsing REST Configuration Service URL: " + mue.getMessage());
@@ -765,6 +848,7 @@ public class V2AuMover {
 
   public void executeRequests(List<Args> argsLst)
       throws MigrationTaskFailedException {
+    finalStatus = null;
     if (argsLst.size() > 1) {
       log.debug(argsLst.size() +
                 " operations requested, using client configuration from the first");
@@ -802,7 +886,9 @@ public class V2AuMover {
       log.error(msg, e);
       logReportAndError(msg);
     } finally {
+      fetchDiskSpace();
       running = false;
+      buildFinalStatus();
       closeReports();
       try {
         copyReportsToTarget();
@@ -1008,7 +1094,8 @@ public class V2AuMover {
   }
 
   private void setAuMigrationState(ArchivalUnit au,
-                                   AuState.MigrationState state) {
+                                   AuState.MigrationState state,
+                                   AuStatus auStat) {
     // Do nothing if dry run mode
     if (isDryRun()) {
       return;
@@ -1041,9 +1128,16 @@ public class V2AuMover {
         if (opType.isCopy() && !isDryRun()) {
           try {
             if (migrationMgr.isDeleteMigratedAus()) {
-              // Remove AU from LOCKSS
-              pluginManager.deleteAu(au);
+              if (auHasErrors(auStat)) {
+                log.warning("AU has errors, deactivating instead of deleting: "
+                            + au.getName());
+                pluginManager.deactivateAu(au);
+              } else {
+                pluginManager.deleteAu(au);
+              }
             } else {
+              log.warning("AU has errors, deactivating anyway: "
+                          + au.getName());
               pluginManager.deactivateAu(au);
             }
           } catch (IOException e) {
@@ -1052,6 +1146,39 @@ public class V2AuMover {
         }
     }
   }
+
+  private boolean auHasErrors(AuStatus auStat) {
+    Counters ctrs = auStat.getCounters();
+    return ctrs.getVal(CounterType.URLS_FAILED_COPY) != 0 ||
+      ctrs.getVal(CounterType.URLS_FAILED_VERIFY) != 0;
+  }
+
+  private String auErrorsDetail(AuStatus auStat) {
+    if (!auHasErrors(auStat)) {
+      return null;
+    }
+    Counters ctrs = auStat.getCounters();
+    StringBuilder sb = new StringBuilder();
+    long cUrls = ctrs.getVal(CounterType.URLS_FAILED_COPY);
+    long vUrls = ctrs.getVal(CounterType.URLS_FAILED_VERIFY);
+    long cArts = ctrs.getVal(CounterType.ARTIFACTS_FAILED_COPY);
+    long vArts = ctrs.getVal(CounterType.ARTIFACTS_FAILED_VERIFY);
+    if (cUrls > 0) {
+      sb.append(auStat.getAuName());
+      sb.append(": ");
+      sb.append(StringUtil.numberOfUnits(cUrls, "URL was", "URLS were"));
+      sb.append(" not fully copied (");
+      sb.append(StringUtil.numberOfUnits(cArts, "artifact"));
+      sb.append(" failed)");
+    } else {
+      sb.append(StringUtil.numberOfUnits(vUrls, "URL"));
+      sb.append(" failed verification (");
+      sb.append(StringUtil.numberOfUnits(vArts, "artifact"));
+      sb.append(" failed)");
+    }
+    return sb.toString();
+  }
+
   private void moveDatabase(Args args) throws MigrationTaskFailedException {
     currentStatus = STATUS_MIGRATING_DATABASE;
 
@@ -1133,7 +1260,7 @@ public class V2AuMover {
     String auName = au.getName();
     log.debug("Starting state machine for AU: " + auName);
 
-    setAuMigrationState(au, AuState.MigrationState.InProgress);
+    setAuMigrationState(au, AuState.MigrationState.InProgress, auStat);
     auStat.setPhase(Phase.QUEUE);       // For display purposes only,
                                         // unlikely to be seen.
     switch (opType) {
@@ -1142,12 +1269,12 @@ public class V2AuMover {
         addActiveAu(au, auStat);
         enterPhase(auStat, Phase.VERIFY);
       } catch (Exception ex) {
-        log.error("Unexpect exception starting AU verify", ex);
+        log.error("Unexpected exception starting AU verify", ex);
         updateReport(auStat);
-        totalAusWithErrors++;
-        String err = "Attempt to verify AU failed: " + auName +
-          ": " + ex.getMessage();
+        String err = String.format("Failed to start AU verify phase (%s): %s",
+                                   ex.toString(), auName);
         auStat.addError(err);
+        addAuError(err);
         setFailed(true);
       }
       break;
@@ -1187,10 +1314,10 @@ public class V2AuMover {
       } catch (Exception ex) {
         log.error("Unexpect exception starting AU copy", ex);
         updateReport(auStat);
-        totalAusWithErrors++;
-        String err = "Attempt to move AU failed: " + auName +
-          ": " + ex.getMessage();
+        String err = String.format("Failed to start AU copy phase (%s): %s",
+                                   ex.toString(), auName);
         auStat.addError(err);
+        addAuError(err);
         setFailed(true);
       }
       break;
@@ -1425,12 +1552,18 @@ public class V2AuMover {
       log.debug2("Finishing AU: " + auName);
       removeActiveAu(au);
       updateReport(auStat);
+      if (!auStat.hasV1Content()) {
+        totalAusEmpty++;
+      }
       if (auStat.isAbort()) {
-        setAuMigrationState(au, AuState.MigrationState.Aborted);
+        setAuMigrationState(au, AuState.MigrationState.Aborted, auStat);
         enterPhase(auStat, Phase.ABORT);
       } else {
-        setAuMigrationState(au, AuState.MigrationState.Finished);
+        setAuMigrationState(au, AuState.MigrationState.Finished, auStat);
         totalAusMoved++;
+        if (auHasErrors(auStat)) {
+          addAuError(auErrorsDetail(auStat));
+        }
         if (checkMissingContent && existsInV2(auStat.getAuId())) {
           Counters ctrs = auStat.getCounters();
           if (ctrs != null) {
@@ -1731,6 +1864,7 @@ public class V2AuMover {
       if (cfgStatus == null || !cfgStatus.getReady()) {
         throw new IOException("V2 Configuration Service is not ready");
       }
+      fetchDiskSpace();
     } catch (Exception e) {
       if (checking != null) {
         currentStatus = checking + " not ready";
@@ -1813,7 +1947,7 @@ public class V2AuMover {
       LockssRestHttpException lrhe = null;
       String msgPrefix = "Exceeded retries: ";
       while ((response == null || (!response.isSuccessful()) && tryCount < maxRetryCount)) {
-        if (isAbort()) {
+        if (tryCount > 0 && isAbort()) {
           throw new IOException("Aborted");
         }
         tryCount++;
@@ -2293,6 +2427,7 @@ public class V2AuMover {
   private PrintWriter errorWriter;
 
   private String currentStatus;
+  private String finalStatus;
   private String whichAus;
   private boolean running = true; // init true avoids race while starting
   private boolean hasBeenStarted = false;
@@ -2301,8 +2436,9 @@ public class V2AuMover {
   private long totalAusMoved = 0;
   private long totalAusPartiallyMoved = 0; // also included in totalAusMoved
   private long totalAusSkipped = 0;
-  // XXX s.b. incremented by tasks that get errors, isn't
+  private long totalAusEmpty = 0;
   private long totalAusWithErrors = 0;
+  private StringBuilder auErrorReport = new StringBuilder();
   private OpTimers totalTimers = new OpTimers(this);
   private Counters totalCounters = totalTimers.getCounters();
 
@@ -2372,6 +2508,19 @@ public class V2AuMover {
       }
       res.add(sb.toString());
       res.add(currentStatus);
+    }
+    if (totalCounters.getVal(CounterType.CONTENT_BYTES_MOVED) >
+        nextDiskSpaceFetchBytes ||
+        totalCounters.getVal(CounterType.ARTIFACTS_MOVED) >
+        nextDiskSpaceFetchArtifacts ||
+        TimeBase.nowMs() > nextDiskSpaceFetchTime) {
+      fetchDiskSpace();
+    }
+    if (finalStatus != null) {
+      res.add(finalStatus);
+    }
+    if (currentDiskSpace != null) {
+      res.add(currentDiskSpace);
     }
     return res;
   }
@@ -2520,6 +2669,65 @@ public class V2AuMover {
       auStat.addCounterStatus(sb, opType, ": ");
     }
     return sb.toString();
+  }
+
+  RepositoryInfo getRepoInfo() throws ApiException {
+    RepositoryInfo ri = repoRepoApiClient.getRepositoryInformation();
+    log.debug2("repoinfo: " + ri);
+    return ri;
+  }
+
+  void fetchDiskSpace() {
+    try {
+      RepositoryInfo ri = getRepoInfo();
+      StringBuilder sb = new StringBuilder();
+      StorageInfo data = ri.getStoreInfo();
+      StorageInfo index = ri.getIndexInfo();
+
+      // Record the current free content space and index space
+      diskFreeContent = data.getAvailKB() + 1024;
+      diskFreeIndex = index.getAvailKB() + 1024;
+      // Comp;ute the number of bytes and artifacts at which to next
+      // fetch free space
+      nextDiskSpaceFetchBytes =
+        totalCounters.getVal(CounterType.CONTENT_BYTES_MOVED) +
+        (long)diskSpaceXferBytesCurve.getY(diskFreeContent);
+      nextDiskSpaceFetchArtifacts =
+        totalCounters.getVal(CounterType.ARTIFACTS_MOVED) +
+        (long)diskSpaceXferArtifactsCurve.getY(diskFreeIndex);
+      // And the next time to fetch this data
+      nextDiskSpaceFetchTime = TimeBase.nowMs() + diskSpaceFetchInterval;
+
+      if (areSameStorageArea(data, index)) {
+        currentDiskSpace =
+          String.format("Disk space: %s used, %s free",
+                        data.getPercentUsedString(),
+                        StringUtil.sizeKBToString(data.getAvailKB()));
+      } else {
+        currentDiskSpace =
+          String.format("Disk space: Content: %s used, %s free. Index: %s used, %s free",
+                        data.getPercentUsedString(),
+                        StringUtil.sizeKBToString(data.getAvailKB()),
+                        index.getPercentUsedString(),
+                        StringUtil.sizeKBToString(index.getAvailKB()));
+      }
+    } catch (ApiException e) {
+      log.error("Can't get disk space", e);
+    }
+  }
+
+  /** Determine whether the two StorageInfo actually represent the
+   * same disk.  Can't compare paths because they're
+   * container-relative */
+  boolean areSameStorageArea(StorageInfo si1, StorageInfo si2) {
+    return si1.getAvailKB().equals(si2.getAvailKB()) &&
+      si1.getSizeKB().equals(si2.getSizeKB());
+  }
+
+  private void addAuError(String msg) {
+    totalAusWithErrors++;
+    auErrorReport.append(msg);
+    auErrorReport.append("\n");
   }
 
   public boolean isRunning() {
@@ -2751,49 +2959,66 @@ public class V2AuMover {
     String now = nowTimestamp();
     closeReport(reportWriter, now);
     closeReport(errorWriter, now);
-
   }
 
   void appendTotalSummary(StringBuilder sb) {
     if (opType.isVerifyOnly()) {
-      sb.append(StringUtil.bigNumberOfUnits(totalAusMoved, "AU") + " checked");
+      sb.append("Checked ");
     } else {
-      sb.append(StringUtil.bigNumberOfUnits(totalAusMoved, "AU") + " copied");
-      if (totalAusPartiallyMoved > 0 || totalAusSkipped > 0) {
-        sb.append(" (");
-        if (totalAusSkipped > 0) {
-          sb.append(bigIntFormat(totalAusSkipped));
-          sb.append(" previously");
-          if (totalAusPartiallyMoved > 0) {
-            sb.append(", ");
-          }
-        }
-        if (totalAusPartiallyMoved > 0) {
-          sb.append(bigIntFormat(totalAusPartiallyMoved));
-          sb.append(" partially");
-        }
-        sb.append(")");
-      }
+      sb.append("Copied ");
       if (opType.isVerify()) {
-        sb.append(" and checked");
+        sb.append("and checked ");
       }
+    }
+    sb.append(StringUtil.bigNumberOfUnits(totalAusMoved, "AU"));
+    if (totalAusPartiallyMoved > 0 ||
+        totalAusSkipped > 0 ||
+        totalAusWithErrors > 0) {
+      List<String> lst = new ArrayList<>();
+      if (totalAusSkipped > 0) {
+        lst.add(bigIntFormat(totalAusSkipped) + " previously");
+      }
+      if (totalAusPartiallyMoved > 0) {
+        lst.add(bigIntFormat(totalAusPartiallyMoved) + " partially");
+      }
+      if (totalAusEmpty > 0) {
+        lst.add(bigIntFormat(totalAusEmpty) + " empty");
+      }
+      if (totalAusWithErrors > 0) {
+        lst.add(bigIntFormat(totalAusWithErrors) + " with errors");
+      }
+      StringUtil.separatedString(lst, " (", ", ", ")", sb);
+    }
+  }
+
+  void buildFinalStatus() {
+    if (opType != null) {
+      StringBuilder sb = new StringBuilder();
+      appendTotalSummary(sb);
+      currentStatus = sb.toString();
+
+      sb = new StringBuilder();
+      totalTimers.addCounterStatus(sb, opType);
+      finalStatus = sb.toString();
     }
   }
 
   void closeReport(PrintWriter writer, String now) {
-    StringBuilder sb = new StringBuilder();
-    if (opType != null) {
-      appendTotalSummary(sb);
-      totalTimers.addCounterStatus(sb, opType, ": ");
-      currentStatus = sb.toString();
-    }
     if (writer != null) {
       writer.println("--------------------------------------------------");
-      writer.println((isAbort() ? " Aborted" : "  Finished") + " with " +
+      writer.println((isAbort() ? "Aborted" : "Finished") + " with " +
                      StringUtil.bigNumberOfUnits(totalTimers.getErrorCount(),
                                                  "error") +
                      " at " + now);
       writer.println(currentStatus);
+      writer.println(finalStatus);
+      if (totalAusWithErrors > 0) {
+        writer.println("");
+        writer.print(StringUtil.bigNumberOfUnits(totalAusWithErrors, "AU"));
+        writer.println(" had errors:");
+        writer.println(auErrorReport.toString());
+        writer.println("");
+      }
       writer.println("--------------------------------------------------");
       writer.println("");
       if (writer.checkError()) {
