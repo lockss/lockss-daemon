@@ -40,7 +40,7 @@
 
       au < released ; 2023 ; Geological Society of America Bulletin Volume 1 ; 1 >
       au < released ; 2024 ; Geological Society of America Bulletin Volume 2 ; 2 >
-      au < ready ; 2025 ; Geological Society of America Bulletin Volume 3 ; 3 >
+      au < releasing ; 2025 ; Geological Society of America Bulletin Volume 3 ; 3 >
       au < manifest ; 2026 ; Geological Society of America Bulletin Volume 4 ; 4 >
   }
 
@@ -781,7 +781,7 @@
     au < manifest ; 2026 ; Geological Society of London Special Publications Volume 553 ; 553 >
     au < manifest ; 2026 ; Geological Society of London Special Publications Volume 554 ; 554 >
     au < manifest ; 2026 ; Geological Society of London Special Publications Volume 555 ; 555 >
-    au < ready ; 2025 ; Geological Society of London Special Publications Volume 556 ; 556 >
+    au < releasing ; 2025 ; Geological Society of London Special Publications Volume 556 ; 556 >
     au < manifest ; 2026 ; Geological Society of London Special Publications Volume 557 ; 557 >
     au < manifest ; 2026 ; Geological Society of London Special Publications Volume 558 ; 558 >
     au < manifest ; 2026 ; Geological Society of London Special Publications Volume 559 ; 559 >
@@ -1048,7 +1048,7 @@
       au < released ; 2022 ; Petroleum Geoscience Volume 28 ; 28 >
       au < released ; 2023 ; Petroleum Geoscience Volume 29 ; 29 >
       au < released ; 2024 ; Petroleum Geoscience Volume 30 ; 30 >
-      au < ready ; 2025 ; Petroleum Geoscience Volume 31 ; 31 >
+      au < releasing ; 2025 ; Petroleum Geoscience Volume 31 ; 31 >
       au < manifest ; 2026 ; Petroleum Geoscience Volume 32 ; 32 >
 
   }
@@ -1143,7 +1143,7 @@
       au < released ; 2022 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 55 ; 55 >
       au < released ; 2023 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 56 ; 56 >
       au < released ; 2024 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 57 ; 57 >
-      au < ready ; 2025 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 58 ; 58 >
+      au < releasing ; 2025 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 58 ; 58 >
       au < manifest ; 2026 ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 59 ; 59 >
 
   }
@@ -1410,7 +1410,7 @@
     au < released ; 2022 ; Scottish Journal of Geology Volume 58 ; 58 >
     au < released ; 2023 ; Scottish Journal of Geology Volume 59 ; 59 >
     au < released ; 2024 ; Scottish Journal of Geology Volume 60 ; 60 >
-    au < ready ; 2025 ; Scottish Journal of Geology Volume 61 ; 61 >
+    au < releasing ; 2025 ; Scottish Journal of Geology Volume 61 ; 61 >
     au < manifest ; 2026 ; Scottish Journal of Geology Volume 62 ; 62 >
 
     }
@@ -1427,7 +1427,7 @@
 
     param[journal_id] = egc
 
-    au < ready ; 2025 ; Energy Geoscience Conference Series Volume 1 ; 1 >
+    au < releasing ; 2025 ; Energy Geoscience Conference Series Volume 1 ; 1 >
     au < expected ; 2026 ; Energy Geoscience Conference Series Volume 2 ; 2 >
 
   }
