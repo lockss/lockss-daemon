@@ -75,7 +75,7 @@ public class ImstatXmlMetadataExtractorFactory extends SourceXmlMetadataExtracto
         }
 
         /*
-         * There is a one-to-many relationship between the xml and pdf.
+         * There is a one-to-one relationship between the xml and pdf.
          */
         @Override
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
