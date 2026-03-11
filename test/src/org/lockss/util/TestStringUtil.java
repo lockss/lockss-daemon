@@ -1324,6 +1324,8 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("1 box", StringUtil.numberOfUnits(1, "box", "boxes"));
     assertEquals("2 boxes", StringUtil.numberOfUnits(2, "box", "boxes"));
     assertEquals("-3 boxes", StringUtil.numberOfUnits(-3, "box", "boxes"));
+    assertEquals("3000000000 trees", StringUtil.numberOfUnits(3000000000L, "tree"));
+    assertEquals("3,000,000,000 trees", StringUtil.bigNumberOfUnits(3000000000L, "tree"));
   }
 
   public void testEqualsIgnoreCase() {
