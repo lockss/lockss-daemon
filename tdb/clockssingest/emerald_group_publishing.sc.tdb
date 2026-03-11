@@ -1497,13 +1497,13 @@
     param[journal_id] = ijilt
     #continued_by = 1065-0741
 
-    au < exists ; exists ; 1984 ; 1984 ; Library Workstation Report Volume 1 ; 1 ; >
-    au < exists ; exists ; 1985 ; 1985 ; Library Workstation Report Volume 2 ; 2 ; >
-    au < exists ; exists ; 1986 ; 1986 ; Library Workstation Report Volume 3 ; 3 ; >
-    au < exists ; exists ; 1987 ; 1987 ; Library Workstation Report Volume 4 ; 4 ; >
-    au < exists ; exists ; 1988 ; 1988 ; Library Workstation Report Volume 5 ; 5 ; >
-    au < exists ; exists ; 1989 ; 1989 ; Library Workstation Report Volume 6 ; 6 ; >
-    au < exists ; exists ; 1990 ; 1990 ; Library Workstation Report Volume 7 ; 7 ; >
+    au < doNotProcess ; exists ; 1984 ; 1984 ; Library Workstation Report Volume 1 ; 1 ; >
+    au < doNotProcess ; exists ; 1985 ; 1985 ; Library Workstation Report Volume 2 ; 2 ; >
+    au < doNotProcess ; exists ; 1986 ; 1986 ; Library Workstation Report Volume 3 ; 3 ; >
+    au < doNotProcess ; exists ; 1987 ; 1987 ; Library Workstation Report Volume 4 ; 4 ; >
+    au < doNotProcess ; exists ; 1988 ; 1988 ; Library Workstation Report Volume 5 ; 5 ; >
+    au < doNotProcess ; exists ; 1989 ; 1989 ; Library Workstation Report Volume 6 ; 6 ; >
+    au < doNotProcess ; exists ; 1990 ; 1990 ; Library Workstation Report Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 1991 ; 1991 ; Academic and Library Computing Volume 8 ; 8 ; >
     au < doNotProcess ; doNotProcess ; 1992 ; 1992 ; Academic and Library Computing Volume 9 ; 9 ; >
 
@@ -17411,6 +17411,1099 @@
     au < superseded ; exists ; 2024 ; 2024 ; Archnet-IJAR Volume 18 [superseded] ; 18 ; >
     au < crawling ; exists ; 2025 ; 2025 ; Archnet-IJAR Volume 19 ; 19 ; >
     au < manifest ; exists ; 2026 ; 2026 ; Archnet-IJAR Volume 20 ; 20 ; >
+
+  }
+
+  {
+
+      title <
+        name = 4D printing ;
+        eissn = 3049-9569
+      >
+      param[journal_id] = 4dp
+
+      au < exists ; exists ; 2025 ; 2025 ; 4D printing Volume 1 ; 1 ; >
+      au < expected ; exists ; 2026 ; 2026 ; 4D printing Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+      title <
+        name = Arab Gulf Journal of Scientific Research ;
+        issn = 1985-9899 ;
+        eissn = 2536-0051
+      >
+      param[journal_id] = agjsr
+
+      au < exists ; exists ; 2022 ; 2022 ; Arab Gulf Journal of Scientific Research Volume 40 ; 40 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Arab Gulf Journal of Scientific Research Volume 41 ; 41 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Arab Gulf Journal of Scientific Research Volume 42 ; 42 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Arab Gulf Journal of Scientific Research Volume 43 ; 43 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Arab Gulf Journal of Scientific Research Volume 44 ; 44 ; >
+
+  }
+
+  {
+
+      title <
+        name = Artificial Intelligence in Education ;
+        eissn = 3049-5474
+      >
+      param[journal_id] = aiie
+
+      au < exists ; exists ; 2025 ; 2025 ; Artificial Intelligence in Education Volume 1 ; 1 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Artificial Intelligence in Education Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+      title <
+        name = Business Analyst Journal ;
+        issn = 0973-211X ;
+        eissn = 2754-6721
+      >
+      param[journal_id] = baj
+
+      au < exists ; exists ; 2022 ; 2022 ; Business Analyst Journal Volume 43 ; 43 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Business Analyst Journal Volume 44 ; 44 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Business Analyst Journal Volume 45 ; 45 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Business Analyst Journal Volume 46 ; 46 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Business Analyst Journal Volume 47 ; 47 ; >
+
+  }
+
+  {
+
+      title <
+        name = Central European Management Journal ;
+        issn = 2658-0845 ;
+        eissn = 2658-2430
+      >
+      param[journal_id] = cemj
+
+      au < exists ; exists ; 2023 ; 2023 ; Central European Management Journal Volume 31 ; 31 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Central European Management Journal Volume 32 ; 32 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Central European Management Journal Volume 33 ; 33 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Central European Management Journal Volume 34 ; 34 ; >
+
+  }
+
+  {
+
+      title <
+        name = China Accounting and Finance Review ;
+        issn = 1029-807X ;
+        eissn = 2307-3055
+      >
+      param[journal_id] = cafr
+
+      au < exists ; exists ; 2022 ; 2022 ; China Accounting and Finance Review Volume 24 ; 24 ; >
+      au < exists ; exists ; 2023 ; 2023 ; China Accounting and Finance Review Volume 25 ; 25 ; >
+      au < exists ; exists ; 2024 ; 2024 ; China Accounting and Finance Review Volume 26 ; 26 ; >
+      au < exists ; exists ; 2025 ; 2025 ; China Accounting and Finance Review Volume 27 ; 27 ; >
+      au < expected ; exists ; 2026 ; 2026 ; China Accounting and Finance Review Volume 28 ; 28 ; >
+
+  }
+
+  {
+
+      title <
+        name = Digital Transformation and Society ;
+        issn = 2755-0761 ;
+        eissn = 2755-077X
+      >
+      param[journal_id] = dts
+
+      au < exists ; exists ; 2022 ; 2022 ; Digital Transformation and Society Volume 1 ; 1 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Digital Transformation and Society Volume 2 ; 2 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Digital Transformation and Society Volume 3 ; 3 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Digital Transformation and Society Volume 4 ; 4 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Digital Transformation and Society Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+      title <
+        name = EconomiA ;
+        issn = 1517-7580 ;
+        eissn = 2358-2820
+      >
+      param[journal_id] = econ
+
+      au < exists ; exists ; 2022 ; 2022 ; EconomiA Volume 23 ; 23 ; >
+      au < exists ; exists ; 2023 ; 2023 ; EconomiA Volume 24 ; 24 ; >
+      au < exists ; exists ; 2024 ; 2024 ; EconomiA Volume 25 ; 25 ; >
+      au < exists ; exists ; 2025 ; 2025 ; EconomiA Volume 26 ; 26 ; >
+      au < expected ; exists ; 2026 ; 2026 ; EconomiA Volume 27 ; 27 ; >
+
+  }
+
+  {
+
+      title <
+        name = Emerald Open Research ;
+        eissn = 2631-3952
+      >
+      param[journal_id] = eor
+
+      au < exists ; exists ; 2023 ; 2023 ; Emerald Open Research Volume 1 ; 1 ; >
+      au < expected ; exists ; 2024 ; 2024 ; Emerald Open Research Volume 2 ; 2 ; >
+      au < expected ; exists ; 2025 ; 2025 ; Emerald Open Research Volume 3 ; 3 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Emerald Open Research Volume 4 ; 4 ; >
+
+  }
+
+  {
+
+      title <
+        name = European Journal of Management Studies ;
+        issn = 2183-4172 ;
+        eissn = 2635-2648
+      >
+      param[journal_id] = ejms
+
+      au < exists ; exists ; 2020 ; 2020 ; European Journal of Management Studies Volume 25 ; 25 ; >
+      au < exists ; exists ; 2021 ; 2021 ; European Journal of Management Studies Volume 26 ; 26 ; >
+      au < exists ; exists ; 2022 ; 2022 ; European Journal of Management Studies Volume 27 ; 27 ; >
+      au < exists ; exists ; 2023 ; 2023 ; European Journal of Management Studies Volume 28 ; 28 ; >
+      au < exists ; exists ; 2024 ; 2024 ; European Journal of Management Studies Volume 29 ; 29 ; >
+      au < exists ; exists ; 2025 ; 2025 ; European Journal of Management Studies Volume 30 ; 30 ; >
+      au < expected ; exists ; 2026 ; 2026 ; European Journal of Management Studies Volume 31 ; 31 ; >
+
+  }
+
+  {
+
+      title <
+        name = Fintech and Digital Accounting Review ;
+        issn = 2977-7631 ;
+        eissn = 2977-7631
+      >
+      param[journal_id] = fdar
+
+      au < exists ; exists ; 2025 ; 2025 ; Fintech and Digital Accounting Review Volume 1 ; 1 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Fintech and Digital Accounting Review Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+      title <
+        name = Frontiers in Engineering and Built Environment ;
+        issn = 2634-2499 ;
+        eissn = 2634-2502
+      >
+      param[journal_id] = febe
+
+      au < exists ; exists ; 2021 ; 2021 ; Frontiers in Engineering and Built Environment Volume 1 ; 1 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Frontiers in Engineering and Built Environment Volume 2 ; 2 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Frontiers in Engineering and Built Environment Volume 3 ; 3 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Frontiers in Engineering and Built Environment Volume 4 ; 4 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Frontiers in Engineering and Built Environment Volume 5 ; 5 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Frontiers in Engineering and Built Environment Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+      title <
+        name = Fulbright Review of Economics and Policy ;
+        issn = 2635-0173 ;
+        eissn = 2635-0181
+      >
+      param[journal_id] = frep
+
+      au < exists ; exists ; 2021 ; 2021 ; Fulbright Review of Economics and Policy Volume 1 ; 1 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Fulbright Review of Economics and Policy Volume 2 ; 2 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Fulbright Review of Economics and Policy Volume 3 ; 3 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Fulbright Review of Economics and Policy Volume 4 ; 4 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Fulbright Review of Economics and Policy Volume 5 ; 5 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Fulbright Review of Economics and Policy Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+      title <
+        name = IIM Ranchi Journal of Management Studies ;
+        issn = 2754-0138 ;
+        eissn = 2754-0146
+      >
+      param[journal_id] = irjms
+
+      au < exists ; exists ; 2022 ; 2022 ; IIM Ranchi Journal of Management Studies Volume 1 ; 1 ; >
+      au < exists ; exists ; 2023 ; 2023 ; IIM Ranchi Journal of Management Studies Volume 2 ; 2 ; >
+      au < exists ; exists ; 2024 ; 2024 ; IIM Ranchi Journal of Management Studies Volume 3 ; 3 ; >
+      au < exists ; exists ; 2025 ; 2025 ; IIM Ranchi Journal of Management Studies Volume 4 ; 4 ; >
+      au < expected ; exists ; 2026 ; 2026 ; IIM Ranchi Journal of Management Studies Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+      title <
+        name = IIMBG Journal of Sustainable Business and Innovation ;
+        issn = 2976-8500 ;
+        eissn = 2753-4022
+      >
+      param[journal_id] = ijsbi
+
+      au < exists ; exists ; 2023 ; 2023 ; IIMBG Journal of Sustainable Business and Innovation Volume 1 ; 1 ; >
+      au < exists ; exists ; 2024 ; 2024 ; IIMBG Journal of Sustainable Business and Innovation Volume 2 ; 2 ; >
+      au < exists ; exists ; 2025 ; 2025 ; IIMBG Journal of Sustainable Business and Innovation Volume 3 ; 3 ; >
+      au < expected ; exists ; 2026 ; 2026 ; IIMBG Journal of Sustainable Business and Innovation Volume 4 ; 4 ; >
+
+  }
+
+  {
+
+      title <
+        name = IIMT Journal of Management ;
+        issn = 2976-7261 ;
+        eissn = 2976-727X
+      >
+      param[journal_id] = iimtjm
+
+      au < exists ; exists ; 2024 ; 2024 ; IIMT Journal of Management Volume 1 ; 1 ; >
+      au < exists ; exists ; 2025 ; 2025 ; IIMT Journal of Management Volume 2 ; 2 ; >
+      au < expected ; exists ; 2026 ; 2026 ; IIMT Journal of Management Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+      title <
+        name = IMP Journal ;
+        issn = 2059-1403 ;
+        eissn = 0809-7259
+      >
+      param[journal_id] = imp
+
+      au < exists ; exists ; 2015 ; 2015 ; IMP Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 2016 ; 2016 ; IMP Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 2017 ; 2017 ; IMP Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 2018 ; 2018 ; IMP Journal Volume 12 ; 12 ; >
+
+  }
+
+  {
+
+      title <
+        name = Industrial Management ;
+        issn = 0007-6929
+      >
+      param[journal_id] = im
+
+      au < exists ; exists ; 1970 ; 1970 ; Industrial Management Volume 70 ; 70 ; >
+      au < exists ; exists ; 1971 ; 1971 ; Industrial Management Volume 71 ; 71 ; >
+      au < exists ; exists ; 1972 ; 1972 ; Industrial Management Volume 72 ; 72 ; >
+      au < exists ; exists ; 1973 ; 1973 ; Industrial Management Volume 73 ; 73 ; >
+      au < exists ; exists ; 1974 ; 1974 ; Industrial Management Volume 74 ; 74 ; >
+      au < exists ; exists ; 1975 ; 1975 ; Industrial Management Volume 75 ; 75 ; >
+      au < exists ; exists ; 1976 ; 1976 ; Industrial Management Volume 76 ; 76 ; >
+      au < exists ; exists ; 1977 ; 1977 ; Industrial Management Volume 77 ; 77 ; >
+      au < exists ; exists ; 1978 ; 1978 ; Industrial Management Volume 78 ; 78 ; >
+      au < exists ; exists ; 1979 ; 1979 ; Industrial Management Volume 79 ; 79 ; >
+      au < exists ; exists ; 1980 ; 1980 ; Industrial Management Volume 80 ; 80 ; >
+
+  }
+
+  {
+
+      title <
+        name = International Journal of Industrial Engineering and Operations Management ;
+        issn = 2690-6090 ;
+        eissn = 2690-6104
+      >
+      param[journal_id] = ijieom
+
+      au < exists ; exists ; 2022 ; 2022 ; International Journal of Industrial Engineering and Operations Management Volume 6 ; 6 ; >
+      au < exists ; exists ; 2023 ; 2023 ; International Journal of Industrial Engineering and Operations Management Volume 7 ; 7 ; >
+      au < exists ; exists ; 2024 ; 2024 ; International Journal of Industrial Engineering and Operations Management Volume 8 ; 8 ; >
+      au < exists ; exists ; 2025 ; 2025 ; International Journal of Industrial Engineering and Operations Management Volume 9 ; 9 ; >
+      au < expected ; exists ; 2026 ; 2026 ; International Journal of Industrial Engineering and Operations Management Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+      title <
+        name = International Perspectives on Health Equity ;
+        eissn = 2977-0246
+      >
+      param[journal_id] = iphee
+
+      au < exists ; exists ; 2025 ; 2025 ; International Perspectives on Health Equity Volume 1 ; 1 ; >
+      au < expected ; exists ; 2026 ; 2026 ; International Perspectives on Health Equity Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Accounting Literature ;
+        issn = 0737-4607 ;
+        eissn = 2452-1469
+      >
+      param[journal_id] = jal
+
+      au < exists ; exists ; 2013 ; 2013 ; Journal of Accounting Literature Volume 31 ; 31 ; >
+      au < exists ; exists ; 2014 ; 2014 ; Journal of Accounting Literature Volume 32 ; 32 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Journal of Accounting Literature Volume 33 ; 33 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Journal of Accounting Literature Volume 34 ; 34 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Journal of Accounting Literature Volume 35 ; 35 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Journal of Accounting Literature Volume 36 ; 36 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Journal of Accounting Literature Volume 37 ; 37 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Journal of Accounting Literature Volume 38 ; 38 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Journal of Accounting Literature Volume 39 ; 39 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Journal of Accounting Literature Volume 40 ; 40 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Journal of Accounting Literature Volume 41 ; 41 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Accounting Literature Volume 42 ; 42 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Accounting Literature Volume 43 ; 43 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Accounting Literature Volume 44 ; 44 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Blood Service Economics ;
+        issn = 2769-4054 ;
+        eissn = 2769-4062
+      >
+      param[journal_id] = jbse
+
+      au < exists ; exists ; 2023 ; 2023 ; Journal of Blood Service Economics Volume 2 ; 2 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Blood Service Economics Volume 3 ; 3 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Blood Service Economics Volume 4 ; 4 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Blood Service Economics Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Character Education ;
+        issn = 2995-6196 ;
+        eissn = 2995-6218
+      >
+      param[journal_id] = jced
+
+      au < exists ; exists ; 2003 ; 2003 ; Journal of Character Education Volume 1 ; 1 ; >
+      au < exists ; exists ; 2004 ; 2004 ; Journal of Character Education Volume 2 ; 2 ; >
+      au < exists ; exists ; 2005 ; 2005 ; Journal of Character Education Volume 3 ; 3 ; >
+      au < exists ; exists ; 2006 ; 2006 ; Journal of Character Education Volume 4 ; 4 ; >
+      au < exists ; exists ; 2007 ; 2007 ; Journal of Character Education Volume 5 ; 5 ; >
+      au < exists ; exists ; 2008 ; 2008 ; Journal of Character Education Volume 6 ; 6 ; >
+      au < exists ; exists ; 2009 ; 2009 ; Journal of Character Education Volume 7 ; 7 ; >
+      au < exists ; exists ; 2010 ; 2010 ; Journal of Character Education Volume 8 ; 8 ; >
+      au < exists ; exists ; 2011 ; 2011 ; Journal of Character Education Volume 9 ; 9 ; >
+      au < exists ; exists ; 2012 ; 2012 ; Journal of Character Education Volume 10 ; 10 ; >
+      au < exists ; exists ; 2013 ; 2013 ; Journal of Character Education Volume 11 ; 11 ; >
+      au < exists ; exists ; 2014 ; 2014 ; Journal of Character Education Volume 12 ; 12 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Journal of Character Education Volume 13 ; 13 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Journal of Character Education Volume 14 ; 14 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Journal of Character Education Volume 15 ; 15 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Journal of Character Education Volume 16 ; 16 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Journal of Character Education Volume 17 ; 17 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Journal of Character Education Volume 18 ; 18 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Journal of Character Education Volume 19 ; 19 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Journal of Character Education Volume 20 ; 20 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Journal of Character Education Volume 21 ; 21 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Character Education Volume 22 ; 22 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Character Education Volume 23 ; 23 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Character Education Volume 24 ; 24 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Economics and Development ;
+        issn = 1859-0020 ;
+        eissn = 2632-5330
+      >
+      param[journal_id] = jed
+
+      au < exists ; exists ; 2019 ; 2019 ; Journal of Economics and Development Volume 21 ; 21 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Journal of Economics and Development Volume 22 ; 22 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Journal of Economics and Development Volume 23 ; 23 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Journal of Economics and Development Volume 24 ; 24 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Journal of Economics and Development Volume 25 ; 25 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Economics and Development Volume 26 ; 26 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Economics and Development Volume 27 ; 27 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Economics and Development Volume 28 ; 28 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Electronic Business & Digital Economics ;
+        issn = 2754-4214 ;
+        eissn = 2754-4222
+      >
+      param[journal_id] = jebde
+
+      au < exists ; exists ; 2022 ; 2022 ; Journal of Electronic Business & Digital Economics Volume 1 ; 1 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Journal of Electronic Business & Digital Economics Volume 2 ; 2 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Electronic Business & Digital Economics Volume 3 ; 3 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Electronic Business & Digital Economics Volume 4 ; 4 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Electronic Business & Digital Economics Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Innovative Digital Transformation ;
+        issn = 2976-9051 ;
+        eissn = 2976-906X
+      >
+      param[journal_id] = jidt
+
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Innovative Digital Transformation Volume 1 ; 1 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Innovative Digital Transformation Volume 2 ; 2 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Innovative Digital Transformation Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of International Cooperation in Education ;
+        issn = 2755-029X ;
+        eissn = 2755-0303
+      >
+      param[journal_id] = jice
+
+      au < exists ; exists ; 2023 ; 2023 ; Journal of International Cooperation in Education Volume 25 ; 25 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of International Cooperation in Education Volume 26 ; 26 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of International Cooperation in Education Volume 27 ; 27 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of International Cooperation in Education Volume 28 ; 28 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of International Economics and Management ;
+        issn = 2615-9856 ;
+        eissn = 2977-6104
+      >
+      param[journal_id] = jiem
+
+      au < exists ; exists ; 2025 ; 2025 ; Journal of International Economics and Management Volume 25 ; 25 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of International Economics and Management Volume 26 ; 26 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of International Logistics and Trade ;
+        issn = 1738-2122 ;
+        eissn = 2508-7592
+      >
+      param[journal_id] = jilt
+
+      au < exists ; exists ; 2003 ; 2003 ; Journal of International Logistics and Trade Volume 1 ; 1 ; >
+      au < exists ; exists ; 2004 ; 2004 ; Journal of International Logistics and Trade Volume 2 ; 2 ; >
+      au < exists ; exists ; 2005 ; 2005 ; Journal of International Logistics and Trade Volume 3 ; 3 ; >
+      au < exists ; exists ; 2006 ; 2006 ; Journal of International Logistics and Trade Volume 4 ; 4 ; >
+      au < exists ; exists ; 2007 ; 2007 ; Journal of International Logistics and Trade Volume 5 ; 5 ; >
+      au < exists ; exists ; 2008 ; 2008 ; Journal of International Logistics and Trade Volume 6 ; 6 ; >
+      au < exists ; exists ; 2009 ; 2009 ; Journal of International Logistics and Trade Volume 7 ; 7 ; >
+      au < exists ; exists ; 2010 ; 2010 ; Journal of International Logistics and Trade Volume 8 ; 8 ; >
+      au < exists ; exists ; 2011 ; 2011 ; Journal of International Logistics and Trade Volume 9 ; 9 ; >
+      au < exists ; exists ; 2012 ; 2012 ; Journal of International Logistics and Trade Volume 10 ; 10 ; >
+      au < exists ; exists ; 2013 ; 2013 ; Journal of International Logistics and Trade Volume 11 ; 11 ; >
+      au < exists ; exists ; 2014 ; 2014 ; Journal of International Logistics and Trade Volume 12 ; 12 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Journal of International Logistics and Trade Volume 13 ; 13 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Journal of International Logistics and Trade Volume 14 ; 14 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Journal of International Logistics and Trade Volume 15 ; 15 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Journal of International Logistics and Trade Volume 16 ; 16 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Journal of International Logistics and Trade Volume 17 ; 17 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Journal of International Logistics and Trade Volume 18 ; 18 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Journal of International Logistics and Trade Volume 19 ; 19 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Journal of International Logistics and Trade Volume 20 ; 20 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Journal of International Logistics and Trade Volume 21 ; 21 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of International Logistics and Trade Volume 22 ; 22 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of International Logistics and Trade Volume 23 ; 23 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of International Logistics and Trade Volume 24 ; 24 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Internet and Digital Economics ;
+        issn = 2752-6356 ;
+        eissn = 2752-6364
+      >
+      param[journal_id] = jide
+
+      au < exists ; exists ; 2021 ; 2021 ; Journal of Internet and Digital Economics Volume 1 ; 1 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Journal of Internet and Digital Economics Volume 2 ; 2 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Journal of Internet and Digital Economics Volume 3 ; 3 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Internet and Digital Economics Volume 4 ; 4 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Internet and Digital Economics Volume 5 ; 5 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Internet and Digital Economics Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Korea Trade ;
+        eissn = 1229-828X
+      >
+      param[journal_id] = jkt
+
+      au < exists ; exists ; 2016 ; 2016 ; Journal of Korea Trade Volume 20 ; 20 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Journal of Korea Trade Volume 21 ; 21 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Journal of Korea Trade Volume 22 ; 22 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Journal of Korea Trade Volume 23 ; 23 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Leadership Education ;
+        eissn = 1552-9045
+      >
+      param[journal_id] = jole
+
+      au < exists ; exists ; 2002 ; 2002 ; Journal of Leadership Education Volume 1 ; 1 ; >
+      au < exists ; exists ; 2003 ; 2003 ; Journal of Leadership Education Volume 2 ; 2 ; >
+      au < exists ; exists ; 2004 ; 2004 ; Journal of Leadership Education Volume 3 ; 3 ; >
+      au < exists ; exists ; 2005 ; 2005 ; Journal of Leadership Education Volume 4 ; 4 ; >
+      au < exists ; exists ; 2006 ; 2006 ; Journal of Leadership Education Volume 5 ; 5 ; >
+      au < exists ; exists ; 2007 ; 2007 ; Journal of Leadership Education Volume 6 ; 6 ; >
+      au < exists ; exists ; 2008 ; 2008 ; Journal of Leadership Education Volume 7 ; 7 ; >
+      au < exists ; exists ; 2009 ; 2009 ; Journal of Leadership Education Volume 8 ; 8 ; >
+      au < exists ; exists ; 2010 ; 2010 ; Journal of Leadership Education Volume 9 ; 9 ; >
+      au < exists ; exists ; 2011 ; 2011 ; Journal of Leadership Education Volume 10 ; 10 ; >
+      au < exists ; exists ; 2012 ; 2012 ; Journal of Leadership Education Volume 11 ; 11 ; >
+      au < exists ; exists ; 2013 ; 2013 ; Journal of Leadership Education Volume 12 ; 12 ; >
+      au < exists ; exists ; 2014 ; 2014 ; Journal of Leadership Education Volume 13 ; 13 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Journal of Leadership Education Volume 14 ; 14 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Journal of Leadership Education Volume 15 ; 15 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Journal of Leadership Education Volume 16 ; 16 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Journal of Leadership Education Volume 17 ; 17 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Journal of Leadership Education Volume 18 ; 18 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Journal of Leadership Education Volume 19 ; 19 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Journal of Leadership Education Volume 20 ; 20 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Journal of Leadership Education Volume 21 ; 21 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Journal of Leadership Education Volume 22 ; 22 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Leadership Education Volume 23 ; 23 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Leadership Education Volume 24 ; 24 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Leadership Education Volume 25 ; 25 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Money and Business ;
+        issn = 2634-2596 ;
+        eissn = 2634-260X
+      >
+      param[journal_id] = jmb
+
+      au < exists ; exists ; 2021 ; 2021 ; Journal of Money and Business Volume 1 ; 1 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Journal of Money and Business Volume 2 ; 2 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Journal of Money and Business Volume 3 ; 3 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Money and Business Volume 4 ; 4 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Money and Business Volume 5 ; 5 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Money and Business Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Responsible Production and Consumption ;
+        eissn = 2977-0114
+      >
+      param[journal_id] = jrpc
+
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Responsible Production and Consumption Volume 1 ; 1 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Responsible Production and Consumption Volume 2 ; 2 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Responsible Production and Consumption Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Responsible Tourism Management ;
+        eissn = 2773-5796
+      >
+      param[journal_id] = jrtm
+
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Responsible Tourism Management Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Social Impact in Business Research ;
+        eissn = 3049-4877
+      >
+      param[journal_id] = jsibr
+
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Social Impact in Business Research Volume 1 ; 1 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Social Impact in Business Research Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Trade Science ;
+        issn = 2815-5793 ;
+        eissn = 2755-3957
+      >
+      param[journal_id] = jts
+
+      au < exists ; exists ; 2023 ; 2023 ; Journal of Trade Science Volume 11 ; 11 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Trade Science Volume 12 ; 12 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Trade Science Volume 13 ; 13 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Trade Science Volume 14 ; 14 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Transport and Sustainability ;
+        eissn = 3049-852X
+      >
+      param[journal_id] = jtas
+
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Transport and Sustainability Volume 1 ; 1 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Transport and Sustainability Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+      title <
+        name = LBS Journal of Management & Research ;
+        issn = 0972-8031 ;
+        eissn = 0974-1852
+      >
+      param[journal_id] = lbsjmr
+
+      au < exists ; exists ; 2022 ; 2022 ; LBS Journal of Management & Research Volume 20 ; 20 ; >
+      au < exists ; exists ; 2023 ; 2023 ; LBS Journal of Management & Research Volume 21 ; 21 ; >
+      au < exists ; exists ; 2024 ; 2024 ; LBS Journal of Management & Research Volume 22 ; 22 ; >
+      au < exists ; exists ; 2025 ; 2025 ; LBS Journal of Management & Research Volume 23 ; 23 ; >
+      au < expected ; exists ; 2026 ; 2026 ; LBS Journal of Management & Research Volume 24 ; 24 ; >
+
+  }
+
+  {
+
+      title <
+        name = Library Workstation Report ;
+        issn = 1041-7923 ;
+        eissn = 2575-565X
+      >
+      param[journal_id] = lwr
+
+      au < exists ; exists ; 1987 ; 1987 ; Library Workstation Report Volume 4 ; 4 ; >
+      au < exists ; exists ; 1988 ; 1988 ; Library Workstation Report Volume 5 ; 5 ; >
+      au < exists ; exists ; 1989 ; 1989 ; Library Workstation Report Volume 6 ; 6 ; >
+      au < exists ; exists ; 1990 ; 1990 ; Library Workstation Report Volume 7 ; 7 ; >
+      au < exists ; exists ; 1991 ; 1991 ; Library Workstation Report Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+      title <
+        name = Logistics Research ;
+        issn = 1865-035X ;
+        eissn = 1865-0368
+      >
+      param[journal_id] = lore
+
+      au < exists ; exists ; 2025 ; 2025 ; Logistics Research Volume 18 ; 18 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Logistics Research Volume 19 ; 19 ; >
+
+  }
+
+  {
+
+      title <
+        name = M300 and PC Report ;
+        issn = 0743-7633 ;
+        eissn = 2575-6788
+      >
+      param[journal_id] = mpr
+
+      au < exists ; exists ; 1984 ; 1984 ; M300 and PC Report Volume 1 ; 1 ; >
+      au < exists ; exists ; 1985 ; 1985 ; M300 and PC Report Volume 2 ; 2 ; >
+      au < exists ; exists ; 1986 ; 1986 ; M300 and PC Report Volume 3 ; 3 ; >
+      au < exists ; exists ; 1987 ; 1987 ; M300 and PC Report Volume 4 ; 4 ; >
+
+  }
+
+  {
+
+      title <
+        name = Machine Learning and Data Science in Geotechnics ;
+        issn = 3029-0414 ;
+        eissn = 3029-0422
+      >
+      param[journal_id] = mlag
+
+      au < exists ; exists ; 2025 ; 2025 ; Machine Learning and Data Science in Geotechnics Volume 1 ; 1 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Machine Learning and Data Science in Geotechnics Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+      title <
+        name = Management & Sustainability: An Arab Review ;
+        issn = 2752-9819 ;
+        eissn = 2752-9827
+      >
+      param[journal_id] = msar
+
+      au < exists ; exists ; 2022 ; 2022 ; Management & Sustainability: An Arab Review Volume 1 ; 1 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Management & Sustainability: An Arab Review Volume 2 ; 2 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Management & Sustainability: An Arab Review Volume 3 ; 3 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Management & Sustainability: An Arab Review Volume 4 ; 4 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Management & Sustainability: An Arab Review Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+      title <
+        name = Management Matters ;
+        issn = 2279-0187 ;
+        eissn = 2752-8359
+      >
+      param[journal_id] = manm
+
+      au < exists ; exists ; 2022 ; 2022 ; Management Matters Volume 19 ; 19 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Management Matters Volume 20 ; 20 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Management Matters Volume 21 ; 21 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Management Matters Volume 22 ; 22 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Management Matters Volume 23 ; 23 ; >
+
+  }
+
+  {
+
+      title <
+        name = Mental Health and Digital Technologies
+ ;
+        eissn = 2976-8756
+      >
+      param[journal_id] = mhdt
+
+      au < exists ; exists ; 2024 ; 2024 ; Mental Health and Digital Technologies Volume 1 ; 1 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Mental Health and Digital Technologies Volume 2 ; 2 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Mental Health and Digital Technologies Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+      title <
+        name = Middle Grades Research Journal ;
+        issn = 1937-0814 ;
+        eissn = 1937-0822
+      >
+      param[journal_id] = mgrj
+
+      au < exists ; exists ; 2006 ; 2006 ; Middle Grades Research Journal Volume 1 ; 1 ; >
+      au < exists ; exists ; 2007 ; 2007 ; Middle Grades Research Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 2008 ; 2008 ; Middle Grades Research Journal Volume 3 ; 3 ; >
+      au < exists ; exists ; 2009 ; 2009 ; Middle Grades Research Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 2010 ; 2010 ; Middle Grades Research Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 2011 ; 2011 ; Middle Grades Research Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 2012 ; 2012 ; Middle Grades Research Journal Volume 7 ; 7 ; >
+      au < exists ; exists ; 2013 ; 2013 ; Middle Grades Research Journal Volume 8 ; 8 ; >
+      au < exists ; exists ; 2014 ; 2014 ; Middle Grades Research Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Middle Grades Research Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Middle Grades Research Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Middle Grades Research Journal Volume 12 ; 12 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Middle Grades Research Journal Volume 13 ; 13 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Middle Grades Research Journal Volume 14 ; 14 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Middle Grades Research Journal Volume 15 ; 15 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Middle Grades Research Journal Volume 16 ; 16 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Middle Grades Research Journal Volume 17 ; 17 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Middle Grades Research Journal Volume 18 ; 18 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Middle Grades Research Journal Volume 19 ; 19 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Middle Grades Research Journal Volume 20 ; 20 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Middle Grades Research Journal Volume 21 ; 21 ; >
+
+  }
+
+  {
+
+      title <
+        name = Organizational Cybersecurity Journal: Practice, Process and People ;
+        issn = 2635-0270 ;
+        eissn = 2635-0289
+      >
+      param[journal_id] = ocj
+
+      au < exists ; exists ; 2021 ; 2021 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 1 ; 1 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 2 ; 2 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 3 ; 3 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 4 ; 4 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 5 ; 5 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Organizational Cybersecurity Journal: Practice, Process and People Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+      title <
+        name = PDS Partners: Bridging Research to Practice ;
+        issn = 2833-2040 ;
+        eissn = 2833-2059
+      >
+      param[journal_id] = pdsp
+
+      au < exists ; exists ; 2023 ; 2023 ; PDS Partners: Bridging Research to Practice Volume 18 ; 18 ; >
+      au < exists ; exists ; 2024 ; 2024 ; PDS Partners: Bridging Research to Practice Volume 19 ; 19 ; >
+      au < exists ; exists ; 2025 ; 2025 ; PDS Partners: Bridging Research to Practice Volume 20 ; 20 ; >
+      au < expected ; exists ; 2026 ; 2026 ; PDS Partners: Bridging Research to Practice Volume 21 ; 21 ; >
+
+  }
+
+  {
+
+      title <
+        name = Quality Education for All ;
+        eissn = 2976-9310
+      >
+      param[journal_id] = qea
+
+      au < exists ; exists ; 2024 ; 2024 ; Quality Education for All Volume 1 ; 1 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Quality Education for All Volume 2 ; 2 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Quality Education for All Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+      title <
+        name = Quarterly Review of Education ;
+        issn = 1528-3518 ;
+        eissn = 2169-1266
+      >
+      param[journal_id] = qrde
+
+      au < exists ; exists ; 2000 ; 2000 ; Quarterly Review of Education Volume 1 ; 1 ; >
+      au < exists ; exists ; 2001 ; 2001 ; Quarterly Review of Education Volume 2 ; 2 ; >
+      au < exists ; exists ; 2002 ; 2002 ; Quarterly Review of Education Volume 3 ; 3 ; >
+      au < exists ; exists ; 2003 ; 2003 ; Quarterly Review of Education Volume 4 ; 4 ; >
+      au < exists ; exists ; 2004 ; 2004 ; Quarterly Review of Education Volume 5 ; 5 ; >
+      au < exists ; exists ; 2005 ; 2005 ; Quarterly Review of Education Volume 6 ; 6 ; >
+      au < exists ; exists ; 2006 ; 2006 ; Quarterly Review of Education Volume 7 ; 7 ; >
+      au < exists ; exists ; 2007 ; 2007 ; Quarterly Review of Education Volume 8 ; 8 ; >
+      au < exists ; exists ; 2008 ; 2008 ; Quarterly Review of Education Volume 9 ; 9 ; >
+      au < exists ; exists ; 2009 ; 2009 ; Quarterly Review of Education Volume 10 ; 10 ; >
+      au < exists ; exists ; 2010 ; 2010 ; Quarterly Review of Education Volume 11 ; 11 ; >
+      au < exists ; exists ; 2011 ; 2011 ; Quarterly Review of Education Volume 12 ; 12 ; >
+      au < exists ; exists ; 2012 ; 2012 ; Quarterly Review of Education Volume 13 ; 13 ; >
+      au < exists ; exists ; 2013 ; 2013 ; Quarterly Review of Education Volume 14 ; 14 ; >
+      au < exists ; exists ; 2014 ; 2014 ; Quarterly Review of Education Volume 15 ; 15 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Quarterly Review of Education Volume 16 ; 16 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Quarterly Review of Education Volume 17 ; 17 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Quarterly Review of Education Volume 18 ; 18 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Quarterly Review of Education Volume 19 ; 19 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Quarterly Review of Education Volume 20 ; 20 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Quarterly Review of Education Volume 21 ; 21 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Quarterly Review of Education Volume 22 ; 22 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Quarterly Review of Education Volume 23 ; 23 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Quarterly Review of Education Volume 24 ; 24 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Quarterly Review of Education Volume 25 ; 25 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Quarterly Review of Education Volume 26 ; 26 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Quarterly Review of Education Volume 27 ; 27 ; >
+
+  }
+
+  {
+
+      title <
+        name = Railway Sciences ;
+        issn = 2755-0907 ;
+        eissn = 2755-0915
+      >
+      param[journal_id] = rs
+
+      au < exists ; exists ; 2022 ; 2022 ; Railway Sciences Volume 1 ; 1 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Railway Sciences Volume 2 ; 2 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Railway Sciences Volume 3 ; 3 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Railway Sciences Volume 4 ; 4 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Railway Sciences Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+      title <
+        name = SAM Advanced Management Journal ;
+        eissn = 2996-6078
+      >
+      param[journal_id] = samamj
+
+      au < exists ; exists ; 2024 ; 2024 ; SAM Advanced Management Journal Volume 89 ; 89 ; >
+      au < exists ; exists ; 2025 ; 2025 ; SAM Advanced Management Journal Volume 90 ; 90 ; >
+      au < expected ; exists ; 2026 ; 2026 ; SAM Advanced Management Journal Volume 91 ; 91 ; >
+
+  }
+
+  {
+
+      title <
+        name = Saudi Journal of Language Studies ;
+        issn = 2634-243X ;
+        eissn = 2634-2448
+      >
+      param[journal_id] = sjls
+
+      au < exists ; exists ; 2021 ; 2021 ; Saudi Journal of Language Studies Volume 1 ; 1 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Saudi Journal of Language Studies Volume 2 ; 2 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Saudi Journal of Language Studies Volume 3 ; 3 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Saudi Journal of Language Studies Volume 4 ; 4 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Saudi Journal of Language Studies Volume 5 ; 5 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Saudi Journal of Language Studies Volume 6 ; 6 ; >
+
+  }
+
+  {
+
+      title <
+        name = School-University Partnerships ;
+        issn = 1935-7125 ;
+        eissn = 2833-2075
+      >
+      param[journal_id] = sup
+
+      au < exists ; exists ; 2023 ; 2023 ; School-University Partnerships Volume 16 ; 16 ; >
+      au < exists ; exists ; 2024 ; 2024 ; School-University Partnerships Volume 17 ; 17 ; >
+      au < exists ; exists ; 2025 ; 2025 ; School-University Partnerships Volume 18 ; 18 ; >
+      au < expected ; exists ; 2026 ; 2026 ; School-University Partnerships Volume 19 ; 19 ; >
+
+  }
+
+  {
+
+      title <
+        name = Southeast Asia: A Multidisciplinary Journal ;
+        issn = 1819-5091 ;
+        eissn = 2948-0426
+      >
+      param[journal_id] = seamj
+
+      au < exists ; exists ; 2020 ; 2020 ; Southeast Asia: A Multidisciplinary Journal Volume 20 ; 20 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Southeast Asia: A Multidisciplinary Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Southeast Asia: A Multidisciplinary Journal Volume 22 ; 22 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Southeast Asia: A Multidisciplinary Journal Volume 23 ; 23 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Southeast Asia: A Multidisciplinary Journal Volume 24 ; 24 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Southeast Asia: A Multidisciplinary Journal Volume 25 ; 25 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Southeast Asia: A Multidisciplinary Journal Volume 26 ; 26 ; >
+
+  }
+
+  {
+
+      title <
+        name = Sustainable Finance Review ;
+        eissn = 2977-7542
+      >
+      param[journal_id] = sfr
+
+      au < expected ; exists ; 2026 ; 2026 ; Sustainable Finance Review Volume 1 ; 1 ; >
+
+  }
+
+  {
+
+      title <
+        name = The CASE Journal ;
+        eissn = 1544-9106
+      >
+      param[journal_id] = tcj
+
+      au < exists ; exists ; 2004 ; 2004 ; The CASE Journal Volume 1 ; 1 ; >
+      au < exists ; exists ; 2005 ; 2005 ; The CASE Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 2006 ; 2006 ; The CASE Journal Volume 3 ; 3 ; >
+      au < exists ; exists ; 2007 ; 2007 ; The CASE Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 2008 ; 2008 ; The CASE Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 2009 ; 2009 ; The CASE Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 2010 ; 2010 ; The CASE Journal Volume 7 ; 7 ; >
+      au < exists ; exists ; 2011 ; 2011 ; The CASE Journal Volume 8 ; 8 ; >
+      au < exists ; exists ; 2012 ; 2012 ; The CASE Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 2013 ; 2013 ; The CASE Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 2014 ; 2014 ; The CASE Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 2015 ; 2015 ; The CASE Journal Volume 12 ; 12 ; >
+      au < exists ; exists ; 2016 ; 2016 ; The CASE Journal Volume 13 ; 13 ; >
+      au < exists ; exists ; 2017 ; 2017 ; The CASE Journal Volume 14 ; 14 ; >
+      au < exists ; exists ; 2018 ; 2018 ; The CASE Journal Volume 15 ; 15 ; >
+      au < exists ; exists ; 2019 ; 2019 ; The CASE Journal Volume 16 ; 16 ; >
+      au < exists ; exists ; 2020 ; 2020 ; The CASE Journal Volume 17 ; 17 ; >
+      au < exists ; exists ; 2021 ; 2021 ; The CASE Journal Volume 18 ; 18 ; >
+      au < exists ; exists ; 2022 ; 2022 ; The CASE Journal Volume 19 ; 19 ; >
+      au < exists ; exists ; 2023 ; 2023 ; The CASE Journal Volume 20 ; 20 ; >
+      au < exists ; exists ; 2024 ; 2024 ; The CASE Journal Volume 21 ; 21 ; >
+      au < exists ; exists ; 2025 ; 2025 ; The CASE Journal Volume 22 ; 22 ; >
+      au < expected ; exists ; 2026 ; 2026 ; The CASE Journal Volume 23 ; 23 ; >
+
+  }
+
+  {
+
+      title <
+        name = The SoJo Journal ;
+        issn = 2381-5213 ;
+        eissn = 2381-5213
+      >
+      param[journal_id] = sojo
+
+      au < exists ; exists ; 2015 ; 2015 ; The SoJo Journal Volume 1 ; 1 ; >
+      au < exists ; exists ; 2016 ; 2016 ; The SoJo Journal Volume 2 ; 2 ; >
+      au < exists ; exists ; 2017 ; 2017 ; The SoJo Journal Volume 3 ; 3 ; >
+      au < exists ; exists ; 2018 ; 2018 ; The SoJo Journal Volume 4 ; 4 ; >
+      au < exists ; exists ; 2019 ; 2019 ; The SoJo Journal Volume 5 ; 5 ; >
+      au < exists ; exists ; 2020 ; 2020 ; The SoJo Journal Volume 6 ; 6 ; >
+      au < exists ; exists ; 2021 ; 2021 ; The SoJo Journal Volume 7 ; 7 ; >
+      au < exists ; exists ; 2022 ; 2022 ; The SoJo Journal Volume 8 ; 8 ; >
+      au < exists ; exists ; 2023 ; 2023 ; The SoJo Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 2024 ; 2024 ; The SoJo Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 2025 ; 2025 ; The SoJo Journal Volume 11 ; 11 ; >
+      au < expected ; exists ; 2026 ; 2026 ; The SoJo Journal Volume 12 ; 12 ; >
+
+  }
+
+  {
+
+      title <
+        name = Urbanization, Sustainability and Society ;
+        eissn = 2976-8993
+      >
+      param[journal_id] = uss
+
+      au < exists ; exists ; 2024 ; 2024 ; Urbanization, Sustainability and Society Volume 1 ; 1 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Urbanization, Sustainability and Society Volume 2 ; 2 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Urbanization, Sustainability and Society Volume 3 ; 3 ; >
 
   }
 
