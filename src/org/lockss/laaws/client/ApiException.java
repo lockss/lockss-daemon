@@ -193,18 +193,19 @@ public class ApiException extends Exception {
   public String getMessage() {
     StringBuilder sb = new StringBuilder();
     sb.append(super.getMessage());
+    List<String> details = new ArrayList<>();
     if (this.getCode() > 0) {
-      sb.append(", HTTP response code: ");
-      sb.append(this.getCode());
+      details.add("HTTP response code: " + this.getCode());
     }
     if (!StringUtil.isNullString(getResponseBody())) {
-      sb.append(", HTTP response body: ");
-      sb.append(getResponseBody());
+      details.add("HTTP response body: " + getResponseBody());
     }
     if (getResponseHeaders() != null &&
         !getResponseHeaders().isEmpty()) {
-      sb.append(", HTTP response headers: ");
-      sb.append(getResponseHeaders());
+      details.add("HTTP response headers: " + getResponseHeaders());
+    }
+    if (!details.isEmpty()) {
+      StringUtil.separatedString(details, ". ", ", ", "", sb);
     }
     return sb.toString();
   }
