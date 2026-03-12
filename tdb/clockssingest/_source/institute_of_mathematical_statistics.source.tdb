@@ -3,7 +3,7 @@
   publisher <
     name = Institute of Mathematical Statistics ;
     info[contract] = 2026 ;
-    info[tester] = S ;
+    info[tester] = 4 ;
     info[platform] = Source
   >
   hidden[proxy] = DIRECT
@@ -13,12 +13,12 @@
       name = Institute of Mathematical Statistics Source Content
     >
 
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.clockss.imstat.ClockssImstatSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
     #TESTING
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/XXXXXX-released/
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/imstat-released/
 
-    au < expected ; exists ; 2026 ; Institute of Mathematical Statistics Source Content 2026 ; 2026 >
+    au < testing ; exists ; 2026 ; Institute of Mathematical Statistics Source Content 2026 ; 2026 >
 
   }
 
