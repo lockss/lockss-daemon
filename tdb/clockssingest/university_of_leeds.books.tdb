@@ -1,0 +1,26 @@
+{
+  publisher <
+    name =  University of Leeds;
+    info[contract] = 2026
+    #info[back] = 1975 ;
+    #info[tester] = 8 ;
+    #info[platform] = Custom
+  >
+    
+    provider = OAPEN
+    plugin = org.lockss.plugin.universityofleeds.ClockssUniversityOfLeedsBooksPlugin
+    implicit < status ; status2 ; year ; isbn_string ; name ;  param[resource_id] ; hidden[proxy] >
+    param[base_url] = https://leeds.pressbooks.pub/
+
+  {
+     title <
+        name = University of Leeds Books
+      >
+
+    au < testing ; exists ; 2025 ; 9781918312010 ; Better Together: How We Build Economic, Political, And Environmental Sustainability ; bettertogether ;  >
+    au < testing ; exists ; 2025 ; 9781918312041 ;  EDUC5272M Module Companion ; educ5272m ;  >
+
+  }
+
+}
+
