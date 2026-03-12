@@ -1163,18 +1163,21 @@ public class V2AuMover {
     long vUrls = ctrs.getVal(CounterType.URLS_FAILED_VERIFY);
     long cArts = ctrs.getVal(CounterType.ARTIFACTS_FAILED_COPY);
     long vArts = ctrs.getVal(CounterType.ARTIFACTS_FAILED_VERIFY);
-    if (cUrls > 0) {
+    if (cUrls > 0 || vArts > 0) {
       sb.append(auStat.getAuName());
       sb.append(": ");
-      sb.append(StringUtil.numberOfUnits(cUrls, "URL was", "URLS were"));
-      sb.append(" not fully copied (");
-      sb.append(StringUtil.numberOfUnits(cArts, "artifact"));
-      sb.append(" failed)");
-    } else {
-      sb.append(StringUtil.numberOfUnits(vUrls, "URL"));
-      sb.append(" failed verification (");
-      sb.append(StringUtil.numberOfUnits(vArts, "artifact"));
-      sb.append(" failed)");
+      List<String> lst = new ArrayList<>();
+      if (cUrls > 0) {
+        lst.add(String.format("%s of %s failed copy",
+                              StringUtil.numberOfUnits(cArts, "version"),
+                              StringUtil.numberOfUnits(cUrls, "URL")));
+      }
+      if (vUrls > 0) {
+        lst.add(String.format("%s of %s failed verify",
+                              StringUtil.numberOfUnits(vArts, "version"),
+                              StringUtil.numberOfUnits(vUrls, "URL")));
+      }
+      StringUtil.separatedString(lst, "", ", ", "", sb);
     }
     return sb.toString();
   }
@@ -2698,30 +2701,30 @@ public class V2AuMover {
       // And the next time to fetch this data
       nextDiskSpaceFetchTime = TimeBase.nowMs() + diskSpaceFetchInterval;
 
-      if (areSameStorageArea(data, index)) {
-        currentDiskSpace =
-          String.format("Disk space: %s used, %s free",
-                        data.getPercentUsedString(),
-                        StringUtil.sizeKBToString(data.getAvailKB()));
+      // We have no good way to determine whether content & index are
+      // on the same device, so we resort to guessing that if the two
+      // StorageInfos are the same, they're the same device.  But,
+      // while migration is in progress, the two StorageInfos may
+      // differ slightly as they recorded a few milliseconds apart, so
+      // we compare the string representations, which usually use much
+      // larger units.
+      String contentStr =
+        String.format("%s used, %s free",
+                      data.getPercentUsedString(),
+                      StringUtil.sizeKBToString(data.getAvailKB()));
+      String indexStr =
+        String.format("%s used, %s free",
+                      index.getPercentUsedString(),
+                      StringUtil.sizeKBToString(index.getAvailKB()));
+      if (contentStr.equals(indexStr)) {
+        currentDiskSpace = String.format("Disk space: %s", contentStr);
       } else {
-        currentDiskSpace =
-          String.format("Disk space: Content: %s used, %s free. Index: %s used, %s free",
-                        data.getPercentUsedString(),
-                        StringUtil.sizeKBToString(data.getAvailKB()),
-                        index.getPercentUsedString(),
-                        StringUtil.sizeKBToString(index.getAvailKB()));
+        currentDiskSpace = String.format("Disk space: Content :%s, Index: %s",
+                                         contentStr, indexStr);
       }
     } catch (ApiException e) {
       log.error("Can't get disk space", e);
     }
-  }
-
-  /** Determine whether the two StorageInfo actually represent the
-   * same disk.  Can't compare paths because they're
-   * container-relative */
-  boolean areSameStorageArea(StorageInfo si1, StorageInfo si2) {
-    return si1.getAvailKB().equals(si2.getAvailKB()) &&
-      si1.getSizeKB().equals(si2.getSizeKB());
   }
 
   private void addAuError(String msg) {
