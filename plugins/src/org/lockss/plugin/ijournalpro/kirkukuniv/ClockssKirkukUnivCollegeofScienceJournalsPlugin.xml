@@ -100,8 +100,12 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
     </map>
   </entry>
+    <entry>
+        <string>au_start_url</string>
+        <string>1, "%slockss-generated/%s", base_url, volume</string>
+    </entry>
   <entry>
-    <string>au_start_url</string>
+  <string>au_permission_url</string>
     <!--
     Issue number are not sequantial, for example year 2023:
       https://kujss.uokirkuk.edu.iq/issue_14485_14816.html
@@ -126,8 +130,13 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>1, "%s(themes|inc|data)/", base_url</string>
         <string>1, "%sarticle", base_url</string>
         <string>1, "%s\?_action=export&amp;rf=",base_url</string>
+        <string>1, "%slockss-generated/%s", base_url, volume</string>
     </list>
   </entry>
+    <entry>
+        <string>plugin_crawl_seed_factory</string>
+        <string>org.lockss.plugin.ijournalpro.kirkukuniv.KirkukUnivCollegeofScienceCrawlSeedFactory</string>
+    </entry>
   <entry>
       <string>text/html_crawl_filter_factory</string>
       <string>org.lockss.plugin.ijournalpro.kirkukuniv.KirkukUnivCollegeofScienceHtmlCrawlFilterFactory</string>
@@ -135,10 +144,6 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
       <string>text/html_filter_factory</string>
       <string>org.lockss.plugin.ijournalpro.kirkukuniv.KirkukUnivCollegeofScienceHtmlHashFilterFactory</string>
-  </entry>
-  <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.ijournalpro.kirkukuniv.KirkukUnivCollegeofScienceHtmlLinkExtractorFactory</string>
   </entry>
     <entry>
         <string>text/javascript_link_extractor_factory</string>
