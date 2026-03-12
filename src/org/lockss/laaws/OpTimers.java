@@ -205,9 +205,9 @@ public class OpTimers {
   CounterType errorCounter(Phase phase) {
     switch (phase) {
     case COPY:
-      return CounterType.URLS_FAILED_COPY;
+      return CounterType.ARTIFACTS_FAILED_COPY;
     case VERIFY:
-      return CounterType.URLS_FAILED_VERIFY;
+      return CounterType.ARTIFACTS_FAILED_VERIFY;
     }
     return null;
   }
