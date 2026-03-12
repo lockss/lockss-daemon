@@ -36,6 +36,10 @@ import org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory;
 import java.util.regex.Pattern;
 
 public class ImstatSourceZipXmlArticleIteratorFactory extends SourceZipXmlArticleIteratorFactory {
+    //There is an issue-level metadata page with no pdf attached. It seems to not indlude
+    //SendAll in its filename, so check for that before counting as an article. 
+    protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE = 
+      "\"%s[^/]+/.*\\.zip!/.*SendAll.*\\.xml$\", base_url";
 
     protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN = 
         Pattern.compile(".*/[^/]+\\.zip!/.+\\.(tar|gz|tgz|tar\\.gz)$", 
@@ -46,4 +50,8 @@ public class ImstatSourceZipXmlArticleIteratorFactory extends SourceZipXmlArticl
         return SUB_NESTED_ARCHIVE_PATTERN;
     }
     
+    @Override
+    protected String getIncludePatternTemplate() {
+        return ALL_ZIP_XML_PATTERN_TEMPLATE;
+    }
 }

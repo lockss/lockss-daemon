@@ -88,6 +88,12 @@ public class ImstatXmlMetadataExtractorFactory extends SourceXmlMetadataExtracto
             returnList.add(pdfName);
             return returnList;
         }
-
+        @Override
+        protected void postCookProcess(SourceXmlSchemaHelper schemaHelper, 
+            CachedUrl cu, ArticleMetadata thisAM) {
+            log.debug("In Institute of Mathematical Statistics postcook");
+            thisAM.put(MetadataField.FIELD_PUBLICATION_TYPE,MetadataField.PUBLICATION_TYPE_JOURNAL);
+  	        thisAM.put(MetadataField.FIELD_ARTICLE_TYPE,MetadataField.ARTICLE_TYPE_JOURNALARTICLE);
+        }
     }
 }
