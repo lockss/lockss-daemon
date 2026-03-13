@@ -130,10 +130,10 @@
       au < doesNotExist ; doesNotExist ; 2018 ; 124 ; Absinthe: World Literature in Translation Volume 2018 ; 2018 ; >
       au < doesNotExist ; doesNotExist ; 2019 ; 125 ; Absinthe: World Literature in Translation Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 126 ; Absinthe: World Literature in Translation Volume 2020 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; 127 ; Absinthe: World Literature in Translation Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 128 ; Absinthe: World Literature in Translation Volume 2022 ; 2022 ; >
+      au < finished ; manifest ; 2021 ; 127 ; Absinthe: World Literature in Translation Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 128 ; Absinthe: World Literature in Translation Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2023 ; 129 ; Absinthe: World Literature in Translation Volume 2023 ; 2023 ; > # Volumes actually published in 2024.
-      au < frozen ; exists ; 2024 ; 130 ; Absinthe: World Literature in Translation Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2024 ; 130 ; Absinthe: World Literature in Translation Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2025 ; 131 ; Absinthe: World Literature in Translation Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; 132 ; Absinthe: World Literature in Translation Volume 2026 ; 2026 ; >
 
@@ -151,8 +151,8 @@
       param[journal_id] = ars
 
       au < doNotProcess ; exists ; 2022 ; 53 ; Ars Orientalis Volume 2022 ; 2022 ; > #2022 content has dates from 2023
-      au < frozen ; exists ; 2023 ; 54 ; Ars Orientalis Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 55 ; Ars Orientalis Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2023 ; 54 ; Ars Orientalis Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 55 ; Ars Orientalis Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
       au < expected ; exists ; 2025 ; 56 ; Ars Orientalis Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; 57 ; Ars Orientalis Volume 2026 ; 2026 ; >
 
@@ -169,9 +169,9 @@
       #published 2022-present
       param[journal_id] = circus
 
-      au < frozen ; exists ; 2022 ; 1 ; Circus: Arts, Life and Sciences Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 2 ; Circus: Arts, Life and Sciences Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 3 ; Circus: Arts, Life and Sciences Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2022 ; 1 ; Circus: Arts, Life and Sciences Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; 2 ; Circus: Arts, Life and Sciences Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 3 ; Circus: Arts, Life and Sciences Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 4 ; Circus: Arts, Life and Sciences Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 5 ; Circus: Arts, Life and Sciences Volume 2026 ; 2026 ; >
 
@@ -201,9 +201,9 @@
       au < doesNotExist ; doesNotExist ; 2018 ; 38 ; Conversations Across the Field of Dance Volume 2018 ; 2018 ; >
       au < doesNotExist ; doesNotExist ; 2019 ; 39 ; Conversations Across the Field of Dance Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 40 ; Conversations Across the Field of Dance Volume 2020 ; 2020 ; >
-      au < frozen ; exists ; 2022 ; 41 ; Conversations Across the Field of Dance Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 42 ; Conversations Across the Field of Dance Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 43 ; Conversations Across the Field of Dance Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2022 ; 41 ; Conversations Across the Field of Dance Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 42 ; Conversations Across the Field of Dance Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2024 ; 43 ; Conversations Across the Field of Dance Volume 2024 ; 2024 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2025 ; 44 ; Conversations Across the Field of Dance Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 45 ; Conversations Across the Field of Dance Volume 2026 ; 2026 ; >
 
@@ -220,8 +220,8 @@
       param[journal_id] = currents
 
       au < doesNotExist ; doesNotExist ; 2019 ; 1 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2019 ; 2019 ; >
-      au < frozen ; exists ; 2022 ; 2 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 3 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2023 ; 2023 ; >
+      au < finished ; manifest ; 2022 ; 2 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 3 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2024 ; 4 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2024 ; 2024 ; >
       au < expected ; exists ; 2025 ; 5 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 6 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2026 ; 2026 ; >
@@ -264,7 +264,7 @@
       au < doesNotExist ; doesNotExist ; 2020 ; 4 ; Dialectic Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 5 ; Dialectic Volume 2021 ; 2021 ; >
       au < doesNotExist ; doesNotExist ; 2022 ; 6 ; Dialectic Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 7 ; Dialectic Volume 2023 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; 7 ; Dialectic Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
       au < doesNotExist ; doesNotExist ; 2024 ; 8 ; Dialectic Volume 2024 ; 2024 ; >
       au < doNotProcess ; doNotProcess ; 2025 ; 9 ; Dialectic Volume 2025 ; 2025 ; > #erratum for 2023 was published in 2025, but is not substantial
 
@@ -287,10 +287,10 @@
       au < doesNotExist ; doesNotExist ; 2018 ; 5 ; Ergo Volume 2018 ; 2018 ; >
       au < doesNotExist ; doesNotExist ; 2019 ; 6 ; Ergo Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 7 ; Ergo Volume 2020 ; 2020 ; > #Articles for 2020 are dated 2021
-      au < frozen ; exists ; 2021 ; 8 ; Ergo Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 9 ; Ergo Volume 2022 ; 2022 ; >
+      au < finished ; manifest ; 2021 ; 8 ; Ergo Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 9 ; Ergo Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
       au < manifest ; exists ; 2023 ; 10 ; Ergo Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 11 ; Ergo Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2024 ; 11 ; Ergo Volume 2024 ; 2024 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 12 ; Ergo Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; 13 ; Ergo Volume 2026 ; 2026 ; >
 
@@ -351,9 +351,9 @@
       au < doesNotExist ; doesNotExist ; 2019 ; 22 ; Journal of Electronic Publishing Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 23 ; Journal of Electronic Publishing Volume 2020 ; 2020 ; >
       au < manifest ; exists ; 2021 ; 24 ; Journal of Electronic Publishing Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 25 ; Journal of Electronic Publishing Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 26 ; Journal of Electronic Publishing Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 27 ; Journal of Electronic Publishing Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2022 ; 25 ; Journal of Electronic Publishing Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2023 ; 26 ; Journal of Electronic Publishing Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 27 ; Journal of Electronic Publishing Volume 2024 ; 2024 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; 28 ; Journal of Electronic Publishing Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 29 ; Journal of Electronic Publishing Volume 2026 ; 2026 ; >
 
@@ -369,10 +369,10 @@
       #published 2021-present
       param[journal_id] = mij
 
-      au < frozen ; exists ; 2021 ; 8 ; Media Industries Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 9 ; Media Industries Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 10 ; Media Industries Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 11 ; Media Industries Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2021 ; 8 ; Media Industries Volume 2021 ; 2021 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 9 ; Media Industries Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 10 ; Media Industries Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 11 ; Media Industries Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 12 ; Media Industries Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 13 ; Media Industries Volume 2026 ; 2026 ; >
 
@@ -416,9 +416,9 @@
       au < doesNotExist ; doesNotExist ; 2019 ; 25 ; Michigan Journal of Community Service Learning Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 26 ; Michigan Journal of Community Service Learning Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 27 ; Michigan Journal of Community Service Learning Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 28 ; Michigan Journal of Community Service Learning Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 29 ; Michigan Journal of Community Service Learning Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 30 ; Michigan Journal of Community Service Learning Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2022 ; 28 ; Michigan Journal of Community Service Learning Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2023 ; 29 ; Michigan Journal of Community Service Learning Volume 2023 ; 2023 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2024 ; 30 ; Michigan Journal of Community Service Learning Volume 2024 ; 2024 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 31 ; Michigan Journal of Community Service Learning Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 32 ; Michigan Journal of Community Service Learning Volume 2026 ; 2026 ; >
 
@@ -434,10 +434,10 @@
       #published 2023-present
       param[journal_id] = mjm
 
-      au < frozen ; exists ; 2021 ; 5 ; Michigan Journal of Medicine Volume 2021 ; 2021 ; >
+      au < finished ; manifest ; 2021 ; 5 ; Michigan Journal of Medicine Volume 2021 ; 2021 ; reingest5.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2022 ; 6 ; Michigan Journal of Medicine Volume 2022 ; 2022 ; > #2022 content is dated 2023
-      au < frozen ; exists ; 2023 ; 7 ; Michigan Journal of Medicine Volume 2023 ; 2023 ; > #2023 content is dated 2024
-      au < frozen ; exists ; 2024 ; 8 ; Michigan Journal of Medicine Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2023 ; 7 ; Michigan Journal of Medicine Volume 2023 ; 2023 ; reingest1.clockss.org:8082 > #2023 content is dated 2024
+      au < finished ; manifest ; 2024 ; 8 ; Michigan Journal of Medicine Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; 8 ; Michigan Journal of Medicine Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; 9 ; Michigan Journal of Medicine Volume 2026 ; 2026 ; >
 
@@ -468,9 +468,9 @@
       au < doesNotExist ; doesNotExist ; 2019 ; 13 ; Music & Politics Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 14 ; Music & Politics Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 15 ; Music & Politics Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 16 ; Music & Politics Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 17 ; Music & Politics Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 18 ; Music & Politics Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2022 ; 16 ; Music & Politics Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 17 ; Music & Politics Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 18 ; Music & Politics Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; 19 ; Music & Politics Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 20 ; Music & Politics Volume 2026 ; 2026 ; >
 
@@ -523,8 +523,8 @@
       au < doesNotExist ; doesNotExist ; 2020 ; 35 ; NASIG Proceedings Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 36 ; NASIG Proceedings Volume 2021 ; 2021 ; >
       au < doesNotExist ; doesNotExist ; 2022 ; 37 ; NASIG Proceedings Volume 2022 ; 2022 ; > #2022 content dated 2023
-      au < frozen ; exists ; 2023 ; 38 ; NASIG Proceedings Volume 2023 ; 2023 ; > #2023 content dated 2024
-      au < frozen ; exists ; 2024 ; 39 ; NASIG Proceedings Volume 2024 ; 2024 ; > #2024 content dated 2025
+      au < finished ; manifest ; 2023 ; 38 ; NASIG Proceedings Volume 2023 ; 2023 ; reingest3.clockss.org:8083 > #2023 content dated 2024
+      au < finished ; manifest ; 2024 ; 39 ; NASIG Proceedings Volume 2024 ; 2024 ; reingest1.clockss.org:8082 > #2024 content dated 2025
       au < crawling ; exists ; 2025 ; 40 ; NASIG Proceedings Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 41 ; NASIG Proceedings Volume 2026 ; 2026 ; >
 
@@ -540,7 +540,7 @@
       #published 2024-present
       param[journal_id] = par
 
-      au < frozen ; exists ; 2024 ; 36 ; Performing Arts Resources Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2024 ; 36 ; Performing Arts Resources Volume 2024 ; 2024 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; 37 ; Performing Arts Resources Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 38 ; Performing Arts Resources Volume 2026 ; 2026 ; >
 
@@ -577,9 +577,9 @@
       au < doesNotExist ; doesNotExist ; 2019 ; 19 ; Philosophers' Imprint Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 20 ; Philosophers' Imprint Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 21 ; Philosophers' Imprint Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 22 ; Philosophers' Imprint Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 23 ; Philosophers' Imprint Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 24 ; Philosophers' Imprint Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2022 ; 22 ; Philosophers' Imprint Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; 23 ; Philosophers' Imprint Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2024 ; 24 ; Philosophers' Imprint Volume 2024 ; 2024 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; 25 ; Philosophers' Imprint Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; 26 ; Philosophers' Imprint Volume 2026 ; 2026 ; >
 
@@ -609,9 +609,9 @@
       au < doesNotExist ; doesNotExist ; 2019 ; 11 ; Philosophy, Theory, and Practice in Biology Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 12 ; Philosophy, Theory, and Practice in Biology Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 13 ; Philosophy, Theory, and Practice in Biology Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 14 ; Philosophy, Theory, and Practice in Biology Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 15 ; Philosophy, Theory, and Practice in Biology Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 16 ; Philosophy, Theory, and Practice in Biology Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2022 ; 14 ; Philosophy, Theory, and Practice in Biology Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 15 ; Philosophy, Theory, and Practice in Biology Volume 2023 ; 2023 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 16 ; Philosophy, Theory, and Practice in Biology Volume 2024 ; 2024 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 17 ; Philosophy, Theory, and Practice in Biology Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; 18 ; Philosophy, Theory, and Practice in Biology Volume 2026 ; 2026 ; >
 
@@ -655,8 +655,8 @@
       au < doesNotExist ; doesNotExist ; 2020 ; 25 ; Saksaha: A Journal of Manchu Studies Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 26 ; Saksaha: A Journal of Manchu Studies Volume 2021 ; 2021 ; >
       au < doesNotExist ; doesNotExist ; 2022 ; 27 ; Saksaha: A Journal of Manchu Studies Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 28 ; Saksaha: A Journal of Manchu Studies Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 29 ; Saksaha: A Journal of Manchu Studies Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2023 ; 28 ; Saksaha: A Journal of Manchu Studies Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 29 ; Saksaha: A Journal of Manchu Studies Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 30 ; Saksaha: A Journal of Manchu Studies Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 31 ; Saksaha: A Journal of Manchu Studies Volume 2026 ; 2026 ; >
 
@@ -672,8 +672,8 @@
       #published 2021-present
       param[journal_id] = ticker
 
-      au < frozen ; exists ; 2021 ; 6 ; Ticker: The Academic Business Librarianship Review Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 7 ; Ticker: The Academic Business Librarianship Review Volume 2022 ; 2022 ; >
+      au < finished ; manifest ; 2021 ; 6 ; Ticker: The Academic Business Librarianship Review Volume 2021 ; 2021 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 7 ; Ticker: The Academic Business Librarianship Review Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
       au < manifest ; exists ; 2023 ; 8 ; Ticker: The Academic Business Librarianship Review Volume 2023 ; 2023 ; >
       au < manifest ; exists ; 2024 ; 9 ; Ticker: The Academic Business Librarianship Review Volume 2024 ; 2024 ; >
       au < manifest ; exists ; 2025 ; 10 ; Ticker: The Academic Business Librarianship Review Volume 2025 ; 2025 ; >
@@ -731,10 +731,10 @@
       au < doesNotExist ; doesNotExist ; 2018 ; 37 ; To Improve the Academy: A Journal of Educational Development Volume 2018 ; 2018 ; >
       au < doesNotExist ; doesNotExist ; 2019 ; 38 ; To Improve the Academy: A Journal of Educational Development Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 39 ; To Improve the Academy: A Journal of Educational Development Volume 2020 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; 40 ; To Improve the Academy: A Journal of Educational Development Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 41 ; To Improve the Academy: A Journal of Educational Development Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 42 ; To Improve the Academy: A Journal of Educational Development Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 43 ; To Improve the Academy: A Journal of Educational Development Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2021 ; 40 ; To Improve the Academy: A Journal of Educational Development Volume 2021 ; 2021 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 41 ; To Improve the Academy: A Journal of Educational Development Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 42 ; To Improve the Academy: A Journal of Educational Development Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 43 ; To Improve the Academy: A Journal of Educational Development Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; 44 ; To Improve the Academy: A Journal of Educational Development Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 45 ; To Improve the Academy: A Journal of Educational Development Volume 2026 ; 2026 ; >
 
@@ -777,9 +777,9 @@
       #published 2024-present
       param[journal_id] = ujph
 
-      au < frozen ; exists ; 2022 ; 6 ; Undergraduate Journal of Public Health Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 7 ; Undergraduate Journal of Public Health Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 8 ; Undergraduate Journal of Public Health Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2022 ; 6 ; Undergraduate Journal of Public Health Volume 2022 ; 2022 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; 7 ; Undergraduate Journal of Public Health Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2024 ; 8 ; Undergraduate Journal of Public Health Volume 2024 ; 2024 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 9 ; Undergraduate Journal of Public Health Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 10 ; Undergraduate Journal of Public Health Volume 2026 ; 2026 ; >
 
@@ -797,10 +797,10 @@
 
       au < doesNotExist ; doesNotExist ; 2019 ; 13 ; University of Michigan Undergraduate Research Journal Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 14 ; University of Michigan Undergraduate Research Journal Volume 2020 ; 2020 ; >
-      au < frozen ; exists ; 2021 ; 15 ; University of Michigan Undergraduate Research Journal Volume 2021 ; 2021 ; >
+      au < finished ; manifest ; 2021 ; 15 ; University of Michigan Undergraduate Research Journal Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
       au < doesNotExist ; doesNotExist ; 2022 ; 16 ; University of Michigan Undergraduate Research Journal Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 16 ; University of Michigan Undergraduate Research Journal Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 17 ; University of Michigan Undergraduate Research Journal Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2023 ; 16 ; University of Michigan Undergraduate Research Journal Volume 2023 ; 2023 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2024 ; 17 ; University of Michigan Undergraduate Research Journal Volume 2024 ; 2024 ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2025 ; 18 ; University of Michigan Undergraduate Research Journal Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 19 ; University of Michigan Undergraduate Research Journal Volume 2026 ; 2026 ; >
 
@@ -893,7 +893,7 @@
       au < doesNotExist ; doesNotExist ; 2021 ; 48 ; Journal of the Western Society for French History Volume 2021 ; 2021 ; >
       au < doesNotExist ; doesNotExist ; 2022 ; 49 ; Journal of the Western Society for French History Volume 2022 ; 2022 ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 50 ; Journal of the Western Society for French History Volume 2023 ; 2023 ; > #2023 content dated 2024
-      au < frozen ; exists ; 2024 ; 51 ; Journal of the Western Society for French History Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2024 ; 51 ; Journal of the Western Society for French History Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
       au < doesNotExist ; doesNotExist ; 2025 ; 52 ; Journal of the Western Society for French History Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 53 ; Journal of the Western Society for French History Volume 2026 ; 2026 ; >
 
@@ -910,10 +910,10 @@
       #published 2021-present
       param[journal_id] = gs
 
-      au < frozen ; exists ; 2021 ; 1 ; Global Storytelling: Journal of Digital and Moving Images Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 2 ; Global Storytelling: Journal of Digital and Moving Images Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 3 ; Global Storytelling: Journal of Digital and Moving Images Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 4 ; Global Storytelling: Journal of Digital and Moving Images Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2021 ; 1 ; Global Storytelling: Journal of Digital and Moving Images Volume 2021 ; 2021 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 2 ; Global Storytelling: Journal of Digital and Moving Images Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 3 ; Global Storytelling: Journal of Digital and Moving Images Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 4 ; Global Storytelling: Journal of Digital and Moving Images Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 5 ; Global Storytelling: Journal of Digital and Moving Images Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 6 ; Global Storytelling: Journal of Digital and Moving Images Volume 2026 ; 2026 ; >
 
@@ -930,9 +930,9 @@
       #published 2022-present
       param[journal_id] = glbot
 
-      au < frozen ; exists ; 2022 ; 61 ; The Great Lakes Botanist Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 62 ; The Great Lakes Botanist Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 63 ; The Great Lakes Botanist Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2022 ; 61 ; The Great Lakes Botanist Volume 2022 ; 2022 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 62 ; The Great Lakes Botanist Volume 2023 ; 2023 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2024 ; 63 ; The Great Lakes Botanist Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; 64 ; The Great Lakes Botanist Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 65 ; The Great Lakes Botanist Volume 2026 ; 2026 ; >
 
@@ -966,10 +966,10 @@
       #published 2021-present
       param[journal_id] = jmmh
 
-      au < frozen ; exists ; 2021 ; 15 ; Journal of Muslim Mental Health Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 16 ; Journal of Muslim Mental Health Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 17 ; Journal of Muslim Mental Health Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 18 ; Journal of Muslim Mental Health Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2021 ; 15 ; Journal of Muslim Mental Health Volume 2021 ; 2021 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2022 ; 16 ; Journal of Muslim Mental Health Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2023 ; 17 ; Journal of Muslim Mental Health Volume 2023 ; 2023 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2024 ; 18 ; Journal of Muslim Mental Health Volume 2024 ; 2024 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 19 ; Journal of Muslim Mental Health Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; 20 ; Journal of Muslim Mental Health Volume 2026 ; 2026 ; >
 
@@ -986,10 +986,10 @@
       #published 2021-present
       param[journal_id] = jpe
 
-      au < frozen ; exists ; 2021 ; 9 ; Journal of Practical Ethics Volume 2021 ; 2021 ; >
-      au < frozen ; exists ; 2022 ; 10 ; Journal of Practical Ethics Volume 2022 ; 2022 ; >
-      au < frozen ; exists ; 2023 ; 11 ; Journal of Practical Ethics Volume 2023 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; 12 ; Journal of Practical Ethics Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2021 ; 9 ; Journal of Practical Ethics Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; 10 ; Journal of Practical Ethics Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; 11 ; Journal of Practical Ethics Volume 2023 ; 2023 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; 12 ; Journal of Practical Ethics Volume 2024 ; 2024 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 13 ; Journal of Practical Ethics Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 14 ; Journal of Practical Ethics Volume 2026 ; 2026 ; >
 
