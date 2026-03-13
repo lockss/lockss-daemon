@@ -111,6 +111,7 @@ public class TestCfgModelSerialization extends LockssTestCase {
     s.setReady(true);
     s.setServiceName("config");
     s.setReason("OK");
+    s.setStartupStatus(ApiStatus.StartupStatusEnum.PLUGINS_LOADED);
     return s;
   }
 
@@ -131,7 +132,7 @@ public class TestCfgModelSerialization extends LockssTestCase {
     AuWsResult r = new AuWsResult();
     r.setAuId("au:test");
     return r;
-  }
+    }
 
   private CheckSubstanceResult createCheckSubstanceResult() {
     CheckSubstanceResult r = new CheckSubstanceResult();
@@ -166,6 +167,7 @@ public class TestCfgModelSerialization extends LockssTestCase {
     r.setDefinition(createStringMap("base_url", "http://example.com/"));
     r.setRegistry("local");
     r.setUrl("http://example.com/plugin.jar");
+    r.setAuCount(3);
     r.setPublishingPlatform("platformX");
     return r;
   }

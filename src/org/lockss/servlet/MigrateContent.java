@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2022 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2025 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,6 +48,7 @@ import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.laaws.*;
 import org.lockss.laaws.MigrationManager.OpType;
+import org.lockss.jetty.*;
 import org.mortbay.html.Block;
 import org.mortbay.html.Composite;
 import org.mortbay.html.Element;
@@ -81,7 +82,12 @@ public class MigrateContent extends LockssServlet {
     Collections.emptyList();
 
   public static final String PARAM_DEFAULT_OPTYPE = PREFIX + "defaultOpType";
-  static final OpType DEFAULT_DEFAULT_OPTYPE = OpType.CopyOnly;
+  static final OpType DEFAULT_DEFAULT_OPTYPE = OpType.CopyAndVerify;
+
+  public static final String PARAM_ALLOW_MISSING_AUIDS =
+    PREFIX + "allowMissingAuids";
+  static final boolean DEFAULT_ALLOW_MISSING_AUIDS = false;
+
   static final String BUTTON_SPACE = "&nbsp;";
 
   /**
@@ -100,6 +106,7 @@ public class MigrateContent extends LockssServlet {
   static final String KEY_AUID = "auid";
   static final String KEY_HOSTNAME = "hostname";
   static final String KEY_PLUGINID = "pluginid";
+  static final String KEY_AUIDS_UPLOAD = "auidsUpload";
   static final String KEY_USER_NAME="username";
   static final String KEY_PASSWD="password";
   static final String KEY_OP_TYPE = "op_type";
@@ -120,44 +127,72 @@ public class MigrateContent extends LockssServlet {
 
   String auid;
   String pluginId;
+  String auidsFilename;
+  Collection<String> auids;
+  List<ArchivalUnit> aus;
   String userName;
   String userPass;
-  String hostName=DEFAULT_HOSTNAME;
-  OpType defaultOpType = DEFAULT_DEFAULT_OPTYPE;
-  boolean defaultCompare = DEFAULT_DEFAULT_COMPARE;
+  String hostName;
+  OpType defaultOpType;
   OpType opType;
   boolean isCompareContent;
-  boolean isSkipFinished = true;
+  boolean isSkipFinished = false;
   boolean isMigratorConfigured;
   List<String> auSelectFilter;
   List<Pattern> auSelectPatterns;
+  boolean allowMissingAuids;
+
+  protected void resetState() {
+    super.resetState();
+  }
 
   protected void resetLocals() {
     auid = null;
-    errMsg = null;
-    statusMsg = null;
+    pluginId = null;
+    auidsFilename = null;
+    auids = null;
+    aus = null;
     userName = null;
     userPass = null;
+    hostName = null;
+    defaultOpType = null;
     opType = null;
-    super.resetLocals();
-  }
+    auSelectFilter = null;
+    auSelectPatterns = null;
 
-  void initParams() {
-    Configuration config = ConfigManager.getCurrentConfig();
-    isMigratorConfigured = config.getBoolean(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED,
-        MigrationManager.DEFAULT_IS_MIGRATOR_CONFIGURED);
-    hostName = config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
-    auSelectFilter =
-      config.getList(PARAM_AU_SELECT_FILTER, DEFAULT_AU_SELECT_FILTER);
-    if(auSelectFilter != DEFAULT_AU_SELECT_FILTER) {
-      auSelectPatterns = compileRegexps(auSelectFilter);
-    }
+    errMsg = null;
+    statusMsg = null;
+
+    super.resetLocals();
   }
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     pluginMgr = getLockssDaemon().getPluginManager();
     migrationMgr = getLockssDaemon().getMigrationManager();
+  }
+
+  void initParams() {
+    // Set state from current config, incorporating defaults.  May be
+    // replaced by values from form submission
+    Configuration config = ConfigManager.getCurrentConfig();
+    isMigratorConfigured = config.getBoolean(MigrationManager.PARAM_IS_MIGRATOR_CONFIGURED,
+        MigrationManager.DEFAULT_IS_MIGRATOR_CONFIGURED);
+    hostName = config.get(PARAM_HOSTNAME, DEFAULT_HOSTNAME);
+    userName = config.get(PARAM_USERNAME);
+    userPass = config.get(PARAM_PASSWORD);
+    auSelectFilter =
+      config.getList(PARAM_AU_SELECT_FILTER, DEFAULT_AU_SELECT_FILTER);
+    if(auSelectFilter != DEFAULT_AU_SELECT_FILTER) {
+      auSelectPatterns = compileRegexps(auSelectFilter);
+    }
+    allowMissingAuids = config.getBoolean(PARAM_ALLOW_MISSING_AUIDS,
+                                          DEFAULT_ALLOW_MISSING_AUIDS);
+    defaultOpType = config.getEnum(OpType.class,
+                                   PARAM_DEFAULT_OPTYPE,
+                                   DEFAULT_DEFAULT_OPTYPE);
+    isCompareContent = config.getBoolean(PARAM_DEFAULT_COMPARE,
+                                         DEFAULT_DEFAULT_COMPARE);
   }
 
   public void lockssHandleRequest() throws IOException {
@@ -167,6 +202,7 @@ public class MigrateContent extends LockssServlet {
     if (!isMigratorConfigured) {
       String redir = srvURL(AdminServletManager.SERVLET_MIGRATE_CONTENT_SETTINGS);
       resp.sendRedirect(redir);
+      return;
     }
 
     // Is this a status request?
@@ -185,25 +221,39 @@ public class MigrateContent extends LockssServlet {
       return;
     }
 
-    Configuration config = ConfigManager.getCurrentConfig();
-    defaultOpType = config.getEnum(OpType.class,
-                                   PARAM_DEFAULT_OPTYPE,
-                                   DEFAULT_DEFAULT_OPTYPE);
-    // default, if no value from form
-    isCompareContent = config.getBoolean(PARAM_DEFAULT_COMPARE,
-                                         DEFAULT_DEFAULT_COMPARE);
+    String action = null;
+    try {
+      getMultiPartRequest();
+      action = getParameter(KEY_ACTION);
+    } catch (FormDataTooLongException e) {
+      errMsg = "Uploaded file too large: " + e.getMessage();
+      action = null;
+    }
+    log.debug(KEY_ACTION + " = " + action);
 
-    String action = getParameter(KEY_ACTION);
     if (!StringUtil.isNullString(action)) {
-      userName = config.get(PARAM_USERNAME);
-      userPass = config.get(PARAM_PASSWORD);
-      hostName = config.get(PARAM_HOSTNAME);
-      if(hostName==null) hostName="localhost";
       isCompareContent = getParameter(KEY_COMPARE_CONTENT) != null;
-      isSkipFinished = getParameter(KEY_SKIP_FINISHED) != null;
+      if (migrationMgr.isMigrationInDebugMode()) {
+        isSkipFinished = getParameter(KEY_SKIP_FINISHED) != null;
+      } else {
+        isSkipFinished = false;
+      }
 
       auid = getParameter(KEY_AUID);
       pluginId = getParameter(KEY_PLUGINID);
+      if (multiReq != null) {
+        auidsFilename = multiReq.getFilename(KEY_AUIDS_UPLOAD);
+        String auidstr = multiReq.getString(KEY_AUIDS_UPLOAD);
+        auids = new ArrayList<>();
+        for (String auid : auidstr.split("\\r?\\n")) {
+          log.debug3("auidline: " + auid);
+          auid = auid.trim();
+          if (auid.length() == 0 || auid.startsWith("#")) continue;
+          auids.add(auid);
+        }
+        log.debug2("auids(" + auids.size() + "): " + auids);
+      }
+      log.debug("filename: " + auidsFilename);
 
       String opTypeStr = getParameter(KEY_OP_TYPE);
       if (!StringUtil.isNullString(opTypeStr)) {
@@ -215,10 +265,12 @@ public class MigrateContent extends LockssServlet {
       }
 
       if (ACTION_START.equals(action)) {
-        if (!StringUtil.isNullString(pluginId)) {
+        if (!StringUtil.isNullString(pluginId) && auids.size() != 0) {
+          errMsg = "Please choose either plugin(s) *or* a list of AUIDs";
+        } else if (!StringUtil.isNullString(pluginId) || auids.size() != 0) {
           doBuildArgsAndRun();
         } else {
-          errMsg = "Please select a plugin";
+          errMsg = "Please select plugin(s) or upload a list of AUIDs";
         }
       } else if (ACTION_ABORT.equals(action)) {
         doAbort();
@@ -306,11 +358,14 @@ public class MigrateContent extends LockssServlet {
 
   private void doBuildArgsAndRun() {
     try {
-      startRunner(ListUtil.list(
-          getArgsToMigrateSystemSettings(),
-          getArgsToMigrateDatabase(),
-          getArgsToMigrateConfig(),
-          getArgsToMigratePluginAus()));
+      List <V2AuMover.Args> argses = new ArrayList<>();
+      argses.add(getArgsToMigrateSystemSettings());
+      if (!migrationMgr.isDryRun()) {
+        argses.add(getArgsToMigrateDatabase());
+      }
+      argses.add(getArgsToMigrateConfig());
+      argses.add(getArgsToMigrateAus());
+      startRunner(argses);
     } catch (Exception e) {
       log.error("Could not start runner", e);
     }
@@ -350,26 +405,61 @@ public class MigrateContent extends LockssServlet {
       .setOpType(OpType.CopyConfig);
   }
 
-  private V2AuMover.Args getArgsToMigratePluginAus() {
+  private V2AuMover.Args getArgsToMigrateAus() {
     V2AuMover.Args args = getCommonFormArgs();
 
-    if (ALL_PLUGINS_ID.equals(pluginId)) {
-      args.setPlugins(null);
-    } else {
-      Plugin plug = pluginMgr.getPluginFromId(pluginId);
-      if (plug == null) {
-        errMsg = "No plugin with ID: " + pluginId;
+    if (pluginId != null) {
+      if (ALL_PLUGINS_ID.equals(pluginId)) {
+        args.setPlugins(null);
+      } else {
+        Plugin plug = pluginMgr.getPluginFromId(pluginId);
+        if (plug == null) {
+          errMsg = "No plugin with ID: " + pluginId;
+          throw new IllegalArgumentException(errMsg);
+        }
+        args.setPlugins(Collections.singletonList(plug));
+      }
+    } else if (auids != null) {
+      List<ArchivalUnit> aus = new ArrayList<>();
+      for (String auid : auids) {
+        if (!StringUtil.maybeAuid(auid)) {
+          log.debug2("not auid: " + auid);
+          errMsg = "File: " + auidsFilename + " does not appear to contain a list of AUIDs";
+          throw new IllegalArgumentException(errMsg);
+        }
+        ArchivalUnit au = pluginMgr.getAuFromId(auid);
+        if (au != null) {
+          aus.add(au);
+        } else {
+          if (allowMissingAuids) {
+            log.debug2("Skipped auid: " + auid);
+            args.addSkippedAuid(auid);
+          } else {
+            errMsg = "AUID doesn't exist: " + auid;
+            throw new IllegalArgumentException(errMsg);
+          }
+        }
+      }
+      if (aus.isEmpty()) {
+        if (allowMissingAuids) {
+          errMsg = "No AUIDs matching active AUs found in " + auidsFilename;
+        } else {
+          errMsg = "No AUIDs found in " + auidsFilename;
+        }
         throw new IllegalArgumentException(errMsg);
       }
-      args.setPlugins(Collections.singletonList(plug));
+      args.setAuids(auids);
+      args.setAus(aus);
+      args.setAuidsFilename(auidsFilename);
+    } else {
+      errMsg = "Please select a plugin or upload a list of AUIDs";
     }
-
     return args;
   }
 
   private void doAbort() {
     try {
-      migrationMgr.abortCopy();
+      migrationMgr.abortCopy("Aborted due to user request");
       statusMsg = "Abort requested";
     } catch (Exception e) {
       log.error("Couldn't abort", e);
@@ -420,6 +510,7 @@ public class MigrateContent extends LockssServlet {
     Composite comp = new Composite();
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
+    frm.attribute("enctype", "multipart/form-data");
     Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=0");
     if (migrationMgr.isDryRun()) {
       tbl.newCell(CENTERED_CELL);
@@ -433,6 +524,8 @@ public class MigrateContent extends LockssServlet {
     }
 
     addSelToTable(tbl);
+    addAuidUploadToTable(tbl);
+    tbl.newRow("style=\"height:5px\"");
 
     tbl.newRow();
     tbl.newCell();
@@ -451,9 +544,11 @@ public class MigrateContent extends LockssServlet {
     tbl.newCell(CENTERED_CELL);
     tbl.add(checkBox("Full content compare", "true", KEY_COMPARE_CONTENT,
                      isCompareContent));
-    tbl.add("&nbsp;&nbsp;");
-    tbl.add(checkBox("Skip already-copied AUs" + addFootnote(SKIP_FINISHED_FOOT),
-                     "true", KEY_SKIP_FINISHED, isSkipFinished));
+    if (migrationMgr.isMigrationInDebugMode()) {
+      tbl.add("&nbsp;&nbsp;");
+      tbl.add(checkBox("Skip already-copied AUs" + addFootnote(SKIP_FINISHED_FOOT),
+                       "true", KEY_SKIP_FINISHED, isSkipFinished));
+    }
 
 
     tbl.newRow();
@@ -542,6 +637,7 @@ public class MigrateContent extends LockssServlet {
     return res;
   }
 
+  // Add a dropdown with list of plugins, and "all plugins"
   private void addPluginSelToTable(Table tbl, String key, String preselId) {
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
@@ -572,6 +668,24 @@ public class MigrateContent extends LockssServlet {
                               ent.getKey().getPluginId()));
     tbl.add(sel);
     setTabOrder(sel);
+  }
+
+  static String ID_FILENAME = "fileName";
+
+  // Add a File input to upload a file of AUIDs, and a Clear button to clear it
+  private void addAuidUploadToTable(Table tbl) {
+    tbl.newRow("style=\"height:5px\"");
+    tbl.newRow();
+    tbl.newCell(CENTERED_CELL);
+    tbl.add("or upload list of AUIDs:&nbsp;");
+    Button clearButton = new Button("", "", "button", "Clear");
+    clearButton.attribute("onclick",
+                          "document.getElementById('" + ID_FILENAME +
+                          "').value = ''");
+    tbl.add(clearButton);
+    Input fileInput = new Input(Input.File, KEY_AUIDS_UPLOAD, auidsFilename);
+    fileInput.attribute("id", ID_FILENAME);
+    tbl.add(fileInput);
   }
 
 }

@@ -1,6 +1,6 @@
 /*
 
-  Copyright (c) 2021-2022 Board of Trustees of Leland Stanford Jr. University,
+  Copyright (c) 2021-2025 Board of Trustees of Leland Stanford Jr. University,
   all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,11 +48,14 @@ import org.lockss.util.UrlUtil;
 import java.util.*;
 
 import static org.lockss.laaws.Counters.CounterType;
+import static org.lockss.laaws.V2AuMover.FailedCuVer;
+import static org.lockss.laaws.MigrationTask.Option;
 
 public class CuMover extends CuBase {
   private static final Logger log = Logger.getLogger(CuMover.class);
 
   private String v2Url;
+  private boolean isUrlError;
 
   protected static StatusLine STATUS_LINE_OK =
     new BasicStatusLine(new ProtocolVersion("HTTP", 1, 1), 200, "OK");
@@ -62,59 +65,44 @@ public class CuMover extends CuBase {
     super(auMover, task);
   }
 
-  // This causes an InputStream to be opened on each CU, which 1) may
-  // take some time, and 2) consumes a number of File Descriptors
-  // equal to the number of versions.  The time to open the files
-  // shouldn't be much of an issue as this is running concurrently
-  // with several other CU copies.  If the FD consumption is a
-  // problem, that would require a not-simple refactoring, or might be
-  // more easily dealt with by limiting the number of versions that
-  // are copied (with a config param?)
-  void buildCompatMap(CachedUrl cu) {
-    CachedUrl[] v1Versions = cu.getCuVersions();
-    for (CachedUrl cuVer : v1Versions) {
-      CIProperties verProps = cuVer.getProperties();
-      String nodeUrl = verProps.getProperty(CachedUrl.PROPERTY_NODE_URL);
-      String redirTo = verProps.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
-      if (UrlUtil.isDirectoryRedirection(v1Url, nodeUrl)) {
-        // This was collected as "foo/", not the result of a redirect.
-        // Copy it only as "foo/"
-        V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, nodeUrl);
-        mappedCus.put(nodeUrl, v2cuVer);
-      } else if (UrlUtil.isDirectoryRedirection(v1Url, redirTo)) {
-        // This was redirected from "foo" to "foo/".  Copy as both
-        // "foo" and "foo/" to match what V2 would have collected
-        V2CompatCachedUrl v2cuVer = new V2CompatCachedUrl(cuVer, redirTo);
-        mappedCus.put(v1Url, cuVer);
-        mappedCus.put(redirTo, v2cuVer);
-      } else {
-        // No slash - V2 name is the same
-        mappedCus.put(v1Url, cuVer);
-      }
-    }
-  }
-
   public void run() {
     if (isAbort()) {
       return;
     }
     try {
-      log.debug2("Starting CuMover: " + au + ", " + cu);
-      buildCompatMap(cu);
+      log.debug2("Starting CuMover: " + au + ", " + cu0);
+      buildCompatMap(cu0);
+      if (mappedCus.isEmpty()) {
+        log.warning("No active versions of " + cu0 + " found.");
+      }
       for (String v2Url : mappedCus.keySet()) {
-        try {
-          List<Artifact> v2Arts = getV2ArtifactsForUrl(auid, v2Url);
-          moveCuVersions(v2Url, mappedCus.get(v2Url), v2Arts);
-        } catch (ApiException e) {
-          log.warning("Can't get list of existing V2 artifacts for " +
-                      v2Url + ", continuing.");
+        // Skip fetching the existing V2 artifects if we know no
+        // artifacts of this AU were present on target when operation
+        // started
+        Map<Integer,Artifact> v2Artifacts = Collections.emptyMap();
+        // Must check for existing artifacts on target if any part of
+        // this AU existed on the target when we started, OR this is a
+        // retry phase
+        if (task.isOption(Option.RETRY_PHASE) ||
+            auMover.existsInV2(au.getAuId())) {
+          try {
+            v2Artifacts = getV2ArtifactsForUrl(auid, v2Url);
+          } catch (ApiException e) {
+            // XXX FATAL?
+            log.warning("Can't get list of existing V2 artifacts for " +
+                        v2Url + ", continuing.");
+          }
         }
+        moveCuVersions(v2Url, mappedCus.get(v2Url), v2Artifacts);
       }
 
       ctrs.add(CounterType.URLS_MOVED, mappedCus.keySet().size());
     } finally {
       for (CachedUrl cu : mappedCus.values()) {
         AuUtil.safeRelease(cu);
+      }
+      if (isUrlError) {
+        ctrs.incr(CounterType.URLS_FAILED_COPY);
       }
     }
   }
@@ -123,32 +111,29 @@ public class CuMover extends CuBase {
    * Move all versions of one v2 URL for a cachedUrl.
    *
    * @param v2Url       The uri for the current cached url.
-   * @param cachedUrl   The cachedUrl we which to move
+   * @param v1Versions  V1 CUs
    * @param v2Artifacts The list of artifacts which already match this cachedUrl uri.
    */
-  void moveCuVersions(String v2Url, List<CachedUrl> localVersions,
-                      List<Artifact> v2Artifacts) {
+  void moveCuVersions(String v2Url, List<CachedUrl> v1Versions,
+                      Map<Integer,Artifact> v2Artifacts) {
     log.debug3("moveCuVersions("+v2Url+")");
-    Queue<CachedUrl> cuQueue = new ArrayDeque<>();
-    int v2Count = v2Artifacts.size();
-    //If we have more v1 versions than the v2 repo - copy the missing items
-    int v1Count = localVersions.size();
-    if (v2Count > 0) {
-      log.debug3("v2 versions available=" + v2Count + " v1 versions available="
-                 + v1Count);
+    // Will be sorted in ascending version order (which isn't really
+    // necessary now that we're explicitly setting version numbers)
+    Deque<CachedUrl> cuQueue = new ArrayDeque<>();
+    // Queue all CU versions that don't already exist on target
+    for (CachedUrl v1Ver : v1Versions) {
+      Artifact v2Ver = v2Artifacts.get(v1Ver.getVersion());
+      if (v2Ver == null) {
+        cuQueue.addFirst(v1Ver);
+      } else {
+        AuUtil.safeRelease(v1Ver);
+      }
     }
-    // if the v2 repository has fewer versions than the v1 repository
-    // then move the missing versions or release the cu version.
-    int vers_to_move = v1Count - v2Count;
-    log.debug3("Queueing " + vers_to_move + "/" + v1Count + " versions...");
-    for (int vx = v1Count - 1; vx >= 0; vx--) {
-      CachedUrl ver = localVersions.get(vx);
-      if (vx < vers_to_move) {
-        cuQueue.add(ver);
-      }
-      else {
-        AuUtil.safeRelease(ver);
-      }
+    int onTarget = v1Versions.size() - cuQueue.size();
+    log.debug2("Queueing " + cuQueue.size() + " versions, " +
+               onTarget + " already present on target");
+    if (log.isDebug3()) {
+      log.debug3("Copy queue: " + cuQueue);
     }
     while(!isAbort() && cuQueue.peek() != null) {
       moveNextCuVersion(auid, v2Url, cuQueue);
@@ -185,24 +170,58 @@ public class CuMover extends CuBase {
       log.debug3("copyArtifact returned");
     }
     catch (ApiException apie) {
-      String err = "Failed to write " + v2Url + cuVersionString(cu) + ": " +
-          apie.getCode() + " - " + apie.getMessage();
+      String err = "Failed to write " + rmsg() + v2Url + cuVersionString(cu) + ": " +
+        apie.getCode() + " - " + apie.getMessage();
       log.warning(err);
-      task.addError(err);
+      // Very elegant: if target ran out of space, preempt decision
+      // about recording vs reporting the error and always report it
+      if (auMover.isNoSpaceMessage(apie.getMessage())) {
+        addArtError(err);
+        auMover.abortCopy("Aborted because target disk is full");
+      } else {
+        if (task.isOption(Option.RECORD_ERRORS)) {
+          recordFailedCu(auid, cu, v2Url, namespace, collectionDate);
+        }
+        if (task.isOption(Option.REPORT_ERRORS)) {
+          addArtError(err);
+        }
+      }
     }
     catch (LockssRepository.RepositoryStateException e) {
-      String err = "V1 repository error reading " + v1Url + cuVersionString(cu);
+      String err = "V1 repository error reading " + rmsg() + v1Url + cuVersionString(cu);
       log.warning(err, e);
-      task.addError(err + ": " + e);
+      if (task.isOption(Option.RECORD_ERRORS)) {
+        recordFailedCu(auid, cu, v2Url, namespace, collectionDate);
+      }
+      if (task.isOption(Option.REPORT_ERRORS)) {
+        addArtError(err + ": " + e);
+      }
     }
     catch (Exception | Error e) {
-      String err = "Unexpected Error copying " + v1Url + cuVersionString(cu);
+      String err = "Unexpected Error copying " + rmsg() + v1Url + cuVersionString(cu);
       log.warning(err, e);
-      task.addError(err + ": " + e);
+      if (task.isOption(Option.RECORD_ERRORS)) {
+        recordFailedCu(auid, cu, v2Url, namespace, collectionDate);
+      }
+      if (task.isOption(Option.REPORT_ERRORS)) {
+        addArtError(err + ": " + e);
+      }
     }
     finally {
       AuUtil.safeRelease(cu);
     }
+  }
+
+  // Including "(retry) in messages seems more confusing than omitting it
+  String rmsg() {
+    return "";
+    //     return task.isOption(Option.RETRY_PHASE) ? "(retry) " : "";
+  }
+
+  private void recordFailedCu(String auid, CachedUrl cu, String v2Url,
+                              String namespace, long collectionDate) {
+    recordFailedCu(auid, cu, v2Url,
+                   namespace, collectionDate, FailedCuVer.Type.Copy);
   }
 
   /**
@@ -216,7 +235,7 @@ public class CuMover extends CuBase {
    * @throws ApiException the rest exception thrown should anything fail in the request.
    */
   void copyArtifact(String auid, String v2Url, Long collectionDate,
-      CachedUrl cu, String namespace) throws ApiException {
+                    CachedUrl cu, String namespace) throws ApiException {
     log.debug3("createArtifact("+v2Url+")");
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
     Gson gson = new Gson();
@@ -229,6 +248,8 @@ public class CuMover extends CuBase {
       props.put(ArtifactProperties.SERIALIZED_NAME_NAMESPACE,namespace);
       props.put(ArtifactProperties.SERIALIZED_NAME_AUID, auid);
       props.put(ArtifactProperties.SERIALIZED_NAME_URI, v2Url);
+      props.put(ArtifactProperties.SERIALIZED_NAME_VERSION,
+                Integer.toString(cu.getVersion()));
       props.put(ArtifactProperties.SERIALIZED_NAME_COLLECTION_DATE, String.valueOf(collectionDate));
       String prop_str = gson.toJson(props);
 
@@ -238,13 +259,13 @@ public class CuMover extends CuBase {
       CIProperties hdr_props = cu.getProperties();
       if (hdr_props != null) {
         ((Set<String>) ((Map) hdr_props).keySet()).forEach(
-          key -> response.addHeader(CuMover.v2CuPropKey(key),
-                                    hdr_props.getProperty(key)));
+                                                           key -> response.addHeader(CuMover.v2CuPropKey(key),
+                                                                                     hdr_props.getProperty(key)));
       }
 
       Artifact uncommitted =
-        artifactsApi.createArtifact(prop_str, dcu,
-                                    respHeadersToString(response));
+        artifactsApiLongCall.createArtifact(prop_str, dcu,
+                                            respHeadersToString(response));
       if (uncommitted != null) {
         if (log.isDebug3()) {
           log.debug3("createArtifact returned,  content bytes: " +
@@ -254,8 +275,8 @@ public class CuMover extends CuBase {
       }
     } finally {
       // Ensure it's removed in case didn't happen in commitArtifact()
-       ctrs.removeInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
-       ctrs.removeInProgressDcu(CounterType.BYTES_MOVED, dcu);
+      ctrs.removeInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
+      ctrs.removeInProgressDcu(CounterType.BYTES_MOVED, dcu);
     }
   }
 
@@ -313,6 +334,10 @@ public class CuMover extends CuBase {
     }
   }
 
-
+  void addArtError(String msg) {
+    task.addError(msg);
+    ctrs.incr(CounterType.ARTIFACTS_FAILED_COPY);
+    isUrlError = true;
+  }
 
 }

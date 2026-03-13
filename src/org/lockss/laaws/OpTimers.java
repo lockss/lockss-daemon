@@ -150,6 +150,11 @@ public class OpTimers {
       sb.append(", ");
       sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(byteCounter(phase)),
                                             "byte"));
+      CounterType errorCt = errorCounter(phase);
+      if (errorCt != null && ctrs.getVal(errorCt) > 0) {
+        sb.append(", ");
+        sb.append(StringUtil.numberOfUnits(ctrs.getVal(errorCt), "error"));
+      }
       sb.append(", in ");
       sb.append(StringUtil.timeIntervalToString(getElapsedTime(phase)));
       if (ctrs.getVal(byteCounter(phase)) > 0) {
@@ -195,6 +200,16 @@ public class OpTimers {
       return CounterType.CONTENT_BYTES_VERIFIED;
     }
     return CounterType.CONTENT_BYTES_MOVED;
+  }
+
+  CounterType errorCounter(Phase phase) {
+    switch (phase) {
+    case COPY:
+      return CounterType.ARTIFACTS_FAILED_COPY;
+    case VERIFY:
+      return CounterType.ARTIFACTS_FAILED_VERIFY;
+    }
+    return null;
   }
 
   public void addCounterStatus(StringBuilder sb, OpType opType,
