@@ -3,7 +3,7 @@
   publisher <
     name = Institute of Mathematical Statistics ;
     info[contract] = 2026 ;
-    info[tester] = 4 ;
+    info[tester] = 8 ;
     info[platform] = Source
   >
   hidden[proxy] = DIRECT
@@ -18,7 +18,7 @@
     #TESTING
     param[base_url] = https://clockss-test.lockss.org/sourcefiles/imstat-released/
 
-    au < testing ; exists ; 2026 ; Institute of Mathematical Statistics Source Content 2026_01 ; 2026_01 >
+    au < ready ; exists ; 2026 ; Institute of Mathematical Statistics Source Content 2026_01 ; 2026_01 >
 
   }
 
