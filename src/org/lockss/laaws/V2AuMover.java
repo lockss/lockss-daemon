@@ -3018,7 +3018,11 @@ public class V2AuMover {
       if (totalAusWithErrors > 0) {
         writer.println("");
         writer.print(StringUtil.bigNumberOfUnits(totalAusWithErrors, "AU"));
-        writer.println(" had errors:");
+        writer.print(" had errors");
+        if (migrationMgr.isDeleteMigratedAus()) {
+          writer.print(" and were not deleted");
+        }
+        writer.println(":");
         writer.println(auErrorReport.toString());
         writer.println("");
       }
