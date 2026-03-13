@@ -391,7 +391,7 @@
 #      param[base_url] = http://openhealthdata.metajnl.com/
       # continued by Journal of Open Health Data
 
-      au < down ; 2013 ; 1 ; Journal of Open Public Health Data Volume 2013 ; 2013 ; https://openhealthdata.metajnl.com/ >
+      au < down ; 2013 ; 1 ; Journal of Open Public Health Data Volume 1 ; 2013 ; https://openhealthdata.metajnl.com/ >
 
   }
 
@@ -406,15 +406,14 @@
 #      param[base_url] = http://openhealthdata.metajnl.com/
       # continues Journal of Open Public Health Data
 
-      au < down ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; http://openhealthdata.metajnl.com/ >
-      au < down ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 ; http://openhealthdata.metajnl.com/ >
-      au < down ; 2016 ; 4 ; Open Health Data Volume 2016 ; 2016 ; http://openhealthdata.metajnl.com/ >
-      au < down ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; https://openhealthdata.metajnl.com/ >
-      au < down ; 2019 ; 6 ; Open Health Data Volume 2019 ; 2019 ; https://openhealthdata.metajnl.com/ >
-      au < down ; 2020 ; 7 ; Open Health Data Volume 2020 ; 2020 ; https://openhealthdata.metajnl.com/ >
-      au < down ; 2021 ; 8 ; Open Health Data Volume 2021 ; 2021 ; https://openhealthdata.metajnl.com/ >
-      au < doNotProcess ; 2022 ; 9 ; Open Health Data Volume 2022 ; 2022 ; https://openhealthdata.metajnl.com/ >
-      au < doNotProcess ; 2023 ; 10 ; Open Health Data Volume 2023 ; 2023 ; https://openhealthdata.metajnl.com/ >
+      au < down ; 2014 ; 2 ; Open Health Data Volume 2 ; 2014 ; http://openhealthdata.metajnl.com/ >
+      au < down ; 2015 ; 3 ; Open Health Data Volume 3 ; 2015 ; http://openhealthdata.metajnl.com/ >
+      au < down ; 2016 ; 4 ; Open Health Data Volume 4 ; 2016 ; http://openhealthdata.metajnl.com/ >
+      au < down ; 2018 ; 5 ; Open Health Data Volume 5 ; 2018 ; https://openhealthdata.metajnl.com/ >
+      au < down ; 2019 ; 6 ; Open Health Data Volume 6 ; 2019 ; https://openhealthdata.metajnl.com/ >
+      au < down ; 2020 ; 7 ; Open Health Data Volume 7 ; 2020 ; https://openhealthdata.metajnl.com/ >
+      au < down ; 2021 ; 8 ; Open Health Data Volume 8 ; 2021 ; https://openhealthdata.metajnl.com/ >
+      au < doNotProcess ; 2022 ; 9 ; Open Health Data Volume 9 ; 2022 ; https://openhealthdata.metajnl.com/ >
       #Closed. Available at https://up-j-ohd.ubiquityjournal.website/
   }
 

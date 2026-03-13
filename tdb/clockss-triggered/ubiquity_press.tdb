@@ -206,13 +206,15 @@
       nondefparam[journal_id] = nondefparam
       #LXQUEUE-2158
 
-      au < exists ; 2014 ; 2 ; Open Health Data Volume 2014 ; 2014 ; 2 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
-      au < exists ; 2015 ; 3 ; Open Health Data Volume 2015 ; 2015 ; 3 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
-      au < exists ; 2016 ; 4 ; Open Health Data Volume 2016 ; 2016 ; 4 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
-      au < exists ; 2018 ; 5 ; Open Health Data Volume 2018 ; 2018 ; 5 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
-      au < exists ; 2019 ; 6 ; Open Health Data Volume 2019 ; 2019 ; 6 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
-      au < exists ; 2020 ; 7 ; Open Health Data Volume 2020 ; 2020 ; 7 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
-      au < exists ; 2021 ; 8 ; Open Health Data Volume 2021 ; 2021 ; 8 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
+      # Volume 1: see ubiquity_press.ojs.tdb
+      au < exists ; 2014 ; 2 ; Open Health Data Volume 2 ; 2014 ; 2 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
+      au < exists ; 2015 ; 3 ; Open Health Data Volume 3 ; 2015 ; 3 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
+      au < exists ; 2016 ; 4 ; Open Health Data Volume 4 ; 2016 ; 4 ; Ubiquity Press ; http://openhealthdata.metajnl.com/ >
+      au < exists ; 2018 ; 5 ; Open Health Data Volume 5 ; 2018 ; 5 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
+      au < exists ; 2019 ; 6 ; Open Health Data Volume 6 ; 2019 ; 6 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
+      au < exists ; 2020 ; 7 ; Open Health Data Volume 7 ; 2020 ; 7 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
+      au < exists ; 2021 ; 8 ; Open Health Data Volume 8 ; 2021 ; 8 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ >
+      # Volume 9: see ubiquity_press.ojs.tdb
 
   }
 

@@ -198,8 +198,8 @@
     param[base_url] = http://openhealthdata.metajnl.com/
     param[journal_id] = jophd
     
-    au < down ; 2013 ; Journal of Open Public Health Data Volume 1 ; 1 ; 2013 >
-    au < doNotProcess ; 2014 ; Journal of Open Public Health Data Volume 2 ; 2 ; 2014 >
+    au < superseded ; 2013 ; Journal of Open Public Health Data Volume 1 [OJS 2.x] ; 1 ; 2013 >
+    au < doNotProcess ; 2014 ; Journal of Open Public Health Data Volume 2 [OJS 2.x] ; 2 ; 2014 >
 
   }
   
