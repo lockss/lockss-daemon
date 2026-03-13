@@ -302,7 +302,7 @@
       param[journal_abbr] = math
 
       au < crawling ; exists ; 1996 ; Turkish Journal of Mathematics Volume 20 ; 20 ; >
-      au < ready ; exists ; 1997 ; Turkish Journal of Mathematics Volume 21 ; 21 ; >
+      au < crawling ; exists ; 1997 ; Turkish Journal of Mathematics Volume 21 ; 21 ; >
       au < ready ; exists ; 1998 ; Turkish Journal of Mathematics Volume 22 ; 22 ; >
       au < crawling ; exists ; 1999 ; Turkish Journal of Mathematics Volume 23 ; 23 ; >
       au < ready ; exists ; 2000 ; Turkish Journal of Mathematics Volume 24 ; 24 ; >
@@ -486,7 +486,7 @@
       param[journal_abbr] = zoology
 
       au < ready ; exists ; 1996 ; Turkish Journal of Zoology Volume 20 ; 20 ; >
-      au < ready ; exists ; 1997 ; Turkish Journal of Zoology Volume 21 ; 21 ; >
+      au < crawling ; exists ; 1997 ; Turkish Journal of Zoology Volume 21 ; 21 ; >
       au < ready ; exists ; 1998 ; Turkish Journal of Zoology Volume 22 ; 22 ; >
       au < ready ; exists ; 1999 ; Turkish Journal of Zoology Volume 23 ; 23 ; >
       au < frozen ; exists ; 2000 ; Turkish Journal of Zoology Volume 24 ; 24 ; >

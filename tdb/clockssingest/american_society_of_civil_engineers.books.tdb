@@ -228,7 +228,7 @@
     au < finished ; manifest ; 1994 ; 9780872629035 ; 9780784473719 ; 9780872629035 ; Dispute Avoidance and Resolution for Consulting Engineers (9780872629035) ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1994 ; 9780872629325 ; 9780784473733 ; 9780872629325 ; Technological Advance in Japanese Building Design and Construction (9780872629325) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1995 ; 9780784400739 ; 9780784473832 ; 9780784400739 ; Guidelines for Design of Intakes for Hydroelectric Plants (9780784400739) ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 1995 ; 9780784400944 ; 9780784470084 ; 9780784400944 ; Research Transformed into Practice : Implementation of NSF Research (9780784400944) ; >
+    au < crawling ; exists ; 1995 ; 9780784400944 ; 9780784470084 ; 9780784400944 ; Research Transformed into Practice : Implementation of NSF Research (9780784400944) ; >
     au < finished ; manifest ; 1995 ; 9780784401040 ; 9780784470107 ; 9780784401040 ; The Day the House Fell (9780784401040) ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1995 ; 9780784401125 ; 9780784477953 ; 9780784401125 ; The Structural Design of Air and Gas Ducts for Power Stations and Industrial Boiler Applications (9780784401125) ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1996 ; 9780784401002 ; 9780784470091 ; 9780784401002 ; Marketing and Selling A/E and Other Engineering Services (9780784401002) ; reingest1.clockss.org:8082 >
@@ -585,7 +585,7 @@
     au < crawling ; exists ; 2002 ; 9780784405567 ; 9780784470800 ; 9780784405567 ; STANDARD ASCE/SEI 8-02 (9780784405567) ; >
     au < crawling ; exists ; 2003 ; 9780784406243 ; 9780784470893 ; 9780784406243 ; STANDARD ASCE/SEI 7-02 (9780784406243) ; >
     au < crawling ; exists ; 2003 ; 9780784406519 ; 9780784470978 ; 9780784406519 ; STANDARD ASCE 39-03 (9780784406519) ; >
-    au < ready ; exists ; 2003 ; 9780784406496 ; 9780784470961 ; 9780784406496 ; STANDARD ASCE/SEI/SFPE 29-99 (9780784406496) ; >
+    au < crawling ; exists ; 2003 ; 9780784406496 ; 9780784470961 ; 9780784406496 ; STANDARD ASCE/SEI/SFPE 29-99 (9780784406496) ; >
     au < crawling ; exists ; 2003 ; 9780784406700 ; 9780784470992 ; 9780784406700 ; STANDARD ASCE/SEI 31-03 (9780784406700) ; >
     au < manifest ; exists ; 2004 ; 9780784406816 ; 9780784471036 ; 9780784406816 ; STANDARD ASCE/EWRI 40-03 (9780784406816) ; >
     au < manifest ; exists ; 2004 ; 9780784407141 ; 9780784471067 ; 9780784407141 ; STANDARD ASCE/EWRI 42-04 (9780784407141) ; >
@@ -1418,12 +1418,12 @@
     au < manifest ; exists ; 2019 ;  ; 9780784482742 ; 9780784482742 ; ICTE 2019 (9780784482742) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784482810 ; 9780784482810 ; Geo-Congress 2020, Geotechnical Earthquake Engineering and Special Topics, GSP 318 (9780784482810) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784482834 ; 9780784482834 ; Geo-Congress 2020, Biogeotechnics, GSP 320 (9780784482834) ; >
-    au < ready ; exists ; 2020 ;  ; 9780784482797 ; 9780784482797 ; Geo-Congress 2020, Engineering, Monitoring, and Management of Geotechnical Infrastructure, GSP 316 (9780784482797) ; >
+    au < crawling ; exists ; 2020 ;  ; 9780784482797 ; 9780784482797 ; Geo-Congress 2020, Engineering, Monitoring, and Management of Geotechnical Infrastructure, GSP 316 (9780784482797) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784482841 ; 9780784482841 ; Geo-Congress 2020, University of Minnesota 68th Annual Geotechnical Engineering Conference, GSP 321 (9780784482841) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784482827 ; 9780784482827 ; Geo-Congress 2020, Geo-Systems, Sustainability, Geoenvironmental Engineering, and Unsaturated Soil Mechanics, GSP 319 (9780784482827) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784482803 ; 9780784482803 ; Geo-Congress 2020, Modeling, Geomaterials, and Site Characterization, GSP 317 (9780784482803) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784482780 ; 9780784482780 ; Geo-Congress 2020, Foundations, Soil Improvement, and Erosion, GSP 315 (9780784482780) ; >
-    au < ready ; exists ; 2020 ;  ; 9780784482896 ; 9780784482896 ; Structures Congress 2020 (9780784482896) ; >
+    au < crawling ; exists ; 2020 ;  ; 9780784482896 ; 9780784482896 ; Structures Congress 2020 (9780784482896) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784482957 ; 9780784482957 ; World Environmental and Water Resources Congress 2020, Water Resources Planning and Management and Irrigation and Drainage (9780784482957) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784482988 ; 9780784482988 ; World Environmental and Water Resources Congress 2020, Water, Wastewater, and Stormwater and Water Desalination and Reuse (9780784482988) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784482995 ; 9780784482995 ; World Environmental and Water Resources Congress 2020, Nevada and California Water History (9780784482995) ; >
@@ -1441,14 +1441,14 @@
     au < crawling ; exists ; 2020 ;  ; 9780784483169 ; 9780784483169 ; International Conference on Transportation and Development 2020, Planning and Development (9780784483169) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784483176 ; 9780784483176 ; International Conference on Transportation and Development 2020, Rail and Public Transport (9780784483176) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784483145 ; 9780784483145 ; International Conference on Transportation and Development 2020, Transportation Safety (9780784483145) ; >
-    au < ready ; exists ; 2020 ;  ; 9780784483152 ; 9780784483152 ; International Conference on Transportation and Development 2020, Traffic and Bike/Pedestrian Operations (9780784483152) ; >
+    au < crawling ; exists ; 2020 ;  ; 9780784483152 ; 9780784483152 ; International Conference on Transportation and Development 2020, Traffic and Bike/Pedestrian Operations (9780784483152) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784483138 ; 9780784483138 ; International Conference on Transportation and Development 2020, Emerging Technologies and Their Impact (9780784483138) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784483183 ; 9780784483183 ; International Conference on Transportation and Development 2020, Highway and Airfield Pavements (9780784483183) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784483237 ; 9780784483237 ; ICCREM 2020, Intelligent Construction and Sustainable Buildings (9780784483237) ; >
     au < ready ; exists ; 2020 ;  ; 9780784482858 ; 9780784482858 ; Construction Research Congress 2020, Infrastructure Systems and Sustainability (9780784482858) ; >
     au < ready ; exists ; 2020 ;  ; 9780784482865 ; 9780784482865 ; Construction Research Congress 2020, Computer Applications (9780784482865) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784482889 ; 9780784482889 ; Construction Research Congress 2020, Project Management and Controls, Materials, and Contracts (9780784482889) ; >
-    au < ready ; exists ; 2020 ;  ; 9780784482872 ; 9780784482872 ; Construction Research Congress 2020, Safety, Workforce, and Education (9780784482872) ; >
+    au < crawling ; exists ; 2020 ;  ; 9780784482872 ; 9780784482872 ; Construction Research Congress 2020, Safety, Workforce, and Education (9780784482872) ; >
     au < ready ; exists ; 2020 ;  ; 9780784483053 ; 9780784483053 ; CICTP 2020, Transportation Evolution Impacting Future Mobility (9780784483053) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784483305 ; 9780784483305 ; Tran-SET 2020 (9780784483305) ; >
     au < crawling ; exists ; 2020 ;  ; 9780784483268 ; 9780784483268 ; Rocky Mountain Geo-Conference 2021, GPP 13 (9780784483268) ; >
@@ -1467,7 +1467,7 @@
     au < crawling ; exists ; 2021 ;  ; 9780784483619 ; 9780784483619 ; Pipelines 2021, Design (9780784483619) ; >
     au < crawling ; exists ; 2021 ;  ; 9780784483626 ; 9780784483626 ; Pipelines 2021, Construction and Rehabilitation (9780784483626) ; >
     au < crawling ; exists ; 2021 ;  ; 9780784483602 ; 9780784483602 ; Pipelines 2021, Planning (9780784483602) ; >
-    au < ready ; exists ; 2021 ;  ; 9780784483589 ; 9780784483589 ; Permafrost 2021, Merging Permafrost Science and Cold Regions Engineering (9780784483589) ; >
+    au < crawling ; exists ; 2021 ;  ; 9780784483589 ; 9780784483589 ; Permafrost 2021, Merging Permafrost Science and Cold Regions Engineering (9780784483589) ; >
     au < crawling ; exists ; 2021 ;  ; 9780784483695 ; 9780784483695 ; Geo-Extreme 2021, Climatic Extremes and Earthquake Modeling, GSP 329 (9780784483695) ; >
     au < crawling ; exists ; 2021 ;  ; 9780784483701 ; 9780784483701 ; Geo-Extreme 2021, Infrastructure Resilience, Big Data, and Risk, GSP 330 (9780784483701) ; >
     au < crawling ; exists ; 2021 ;  ; 9780784483688 ; 9780784483688 ; Geo-Extreme 2021, Case Histories and Best Practices, GSP 328 (9780784483688) ; >
