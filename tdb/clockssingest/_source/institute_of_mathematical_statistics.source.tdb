@@ -15,10 +15,11 @@
 
     plugin = org.lockss.plugin.clockss.imstat.ClockssImstatSourcePlugin
     implicit < status ; status2 ; year ; name ; param[directory] >
-    #TESTING
-    param[base_url] = https://clockss-test.lockss.org/sourcefiles/imstat-released/
-
-    au < ready ; exists ; 2026 ; Institute of Mathematical Statistics Source Content 2026_01 ; 2026_01 >
+    #PRODUCTION
+    param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/imstat-released/
+    #TESTED and Ready. Waiting for production bucket
+    
+    au < exists ; exists ; 2026 ; Institute of Mathematical Statistics Source Content 2026_01 ; 2026_01 >
 
   }
 
