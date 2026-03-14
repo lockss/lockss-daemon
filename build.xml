@@ -626,7 +626,6 @@ Args:
     <pathelement path="${jackson-annotations.jar}" />
     <pathelement path="${jackson-core.jar}" />
     <pathelement path="${jackson-databind.jar}" />
-    <pathelement path="${jackson-datatype-jsr310.jar}" />
     <pathelement path="${lucene-analyzers-common.jar}" />
     <pathelement path="${lucene-core.jar}" />
     <!-- Jersey jars -->
@@ -690,6 +689,7 @@ Args:
     <pathelement path="${objenesis.jar}" />
     <pathelement path="${js.jar}" />
     <pathelement path="${xmlunit.jar}" />
+    <pathelement path="${jackson-datatype-jsr310.jar}" />
   </path>
 
   <path id="test.run.classpath">
