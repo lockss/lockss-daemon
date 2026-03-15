@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -119,6 +119,10 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1, "%sapp/", base_url</string>
             <string>1, "%s%s/(chapter|part|wp-json|front-matter|open|wp-includes|wp-admin)", base_url, resource_id</string>
         </list>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.universityofleeds.UniversityOfLeedsBooksHtmlHashFilterFactory</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
