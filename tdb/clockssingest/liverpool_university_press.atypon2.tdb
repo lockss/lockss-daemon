@@ -1295,8 +1295,35 @@
     >
 
     param[journal_id] = library
-    #move from OUP in 2026, Volume 27
+    #move from OUP in 2026, Volume 27. Processed at OUP 2008-2024
 
+    au < manifest ; exists ; 1999 ; The Library Volume s6-21 ; s6-21 ; >
+    au < manifest ; exists ; 2000 ; The Library Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2001 ; The Library Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2002 ; The Library Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2003 ; The Library Volume 4 ; 4 ; >
+    au < manifest ; exists ; 2004 ; The Library Volume 5 ; 5 ; >
+    au < manifest ; exists ; 2005 ; The Library Volume 6 ; 6 ; >
+    au < manifest ; exists ; 2006 ; The Library Volume 7 ; 7 ; >
+    au < manifest ; exists ; 2007 ; The Library Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2008 ; The Library Volume 9 ; 9 ; >
+    au < doNotProcess ; exists ; 2009 ; The Library Volume 10 ; 10 ; >
+    au < doNotProcess ; exists ; 2010 ; The Library Volume 11 ; 11 ; >
+    au < doNotProcess ; exists ; 2011 ; The Library Volume 12 ; 12 ; >
+    au < doNotProcess ; exists ; 2012 ; The Library Volume 13 ; 13 ; >
+    au < doNotProcess ; exists ; 2013 ; The Library Volume 14 ; 14 ; >
+    au < doNotProcess ; exists ; 2014 ; The Library Volume 15 ; 15 ; >
+    au < doNotProcess ; exists ; 2015 ; The Library Volume 16 ; 16 ; >
+    au < doNotProcess ; exists ; 2016 ; The Library Volume 17 ; 17 ; >
+    au < doNotProcess ; exists ; 2017 ; The Library Volume 18 ; 18 ; >
+    au < doNotProcess ; exists ; 2018 ; The Library Volume 19 ; 19 ; >
+    au < doNotProcess ; exists ; 2019 ; The Library Volume 20 ; 20 ; >
+    au < doNotProcess ; exists ; 2020 ; The Library Volume 21 ; 21 ; >
+    au < doNotProcess ; exists ; 2021 ; The Library Volume 22 ; 22 ; >
+    au < doNotProcess ; exists ; 2022 ; The Library Volume 23 ; 23 ; >
+    au < doNotProcess ; exists ; 2023 ; The Library Volume 24 ; 24 ; >
+    au < doNotProcess ; exists ; 2024 ; The Library Volume 25 ; 25 ; >
+    au < manifest ; exists ; 2025 ; The Library Volume 26 ; 26 ; >
     au < expected ; exists ; 2026 ; The Library Volume 27 ; 27 ; >
 
   }
