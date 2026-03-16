@@ -56,7 +56,7 @@ import java.util.regex.Pattern;
 
 public class ElifeSciencesPreprintXmlSourceArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
 
-    private static final Logger log = Logger.getLogger(ElifeSciencesPreprintXmlSourceArticleIteratorFactory2.class);
+    private static final Logger log = Logger.getLogger(ElifeSciencesPreprintXmlSourceArticleIteratorFactory.class);
     protected static final String MANIFEST_FILE = "manifest.xml";
 
     protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
