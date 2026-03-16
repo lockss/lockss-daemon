@@ -30,9 +30,10 @@
     >
 
       plugin = org.lockss.plugin.clockss.oxforduniversitypress.ClockssOxfordUniversityPressJournalsSourcePlugin
-      param[base_url] = https://clockss-test.lockss.org/sourcefiles/oup-released/
-
-      au < ready ; exists ; 2026 ; Oxford University Press Journal Source Content 2026_01 ; 2026_01 >
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/oup-released/
+      
+      #Testing passed. Waiting for production bucket.
+      au < exists ; exists ; 2026 ; Oxford University Press Journal Source Content 2026_01 ; 2026_01 >
 
   }
 
