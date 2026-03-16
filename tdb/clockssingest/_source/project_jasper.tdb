@@ -106,12 +106,36 @@
   {
 
     title <
+      name = Brazilian Journal of Radiation Sciences ;
+      eissn = 2319-0612
+    >
+    provider = Brazilian Radiation Protection Society
+
+    au < expected ; exists ; 2026 ; Brazilian Journal of Radiation Sciences ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
       name = Language Development Research ;
       eissn = 2771-7976
     >
     provider = Carnegie Mellon University Library Publishing Service
 
     au < readySource ; crawling ; 2024-2026 ; Language Development Research ; language_development_research_2771-7976 >
+  }
+
+  {
+
+    title <
+      name = Mizan Law Review ;
+      issn = 1998-9881
+      eissn = 2309-902X
+    >
+    provider = Center for Law in Sustainable Development, St. Mary’s University
+
+    au < expected ; exists ; 2026 ; Mizan Law Review ; UNKNOWN >
   }
 
   {
