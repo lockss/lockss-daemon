@@ -61,6 +61,7 @@ public class UniversityOfLeedsBooksHtmlHashFilterFactory implements FilterFactor
      new TagNameFilter("header"),
      new TagNameFilter("footer"),
      new TagNameFilter("aside"),
+     new TagNameFilter("iframe"),
      HtmlNodeFilters.comment(),
 
     };
