@@ -57,64 +57,110 @@ public class KirkukUnivCollegeofScienceVolumeIssueLinkExtractor implements LinkE
     public KirkukUnivCollegeofScienceVolumeIssueLinkExtractor(LinkExtractor defaultExtractor) {
         this.defaultExtractor = defaultExtractor;
     }
+    /*
+    <div class="accordion mb-2" id="">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="pVol_15176">
+             <button class="accordion-button bg-body collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#pVol_15176_" aria-expanded="true" aria-controls="pVol_15176_"><b><i class="fa-regular fa-file-lines me-2"></i>Volume 20 (2025)</b></button>
+          </h2>
+          <div id="pVol_15176_" class="accordion-collapse collapse" aria-labelledby="pVol_15176">
+             <div class="accordion-body p-2 row">
+                <div class="col-md-3 col-lg-3">
+                   <div>
+                      <a class="js_click pointer_cursor" data-handler="loadModal"  data-param_a="Kirkuk Journal of Science" data-param_b="./data/kscis/coversheet/cover_en.jpg">
+                      <img src="data/kscis/coversheet/cover_en.jpg" alt="Kirkuk Journal of Science" class="col-12 shadow-sm"/>
+                      </a>
+                   </div>
+                   <div>
+                      <h5 class="text-center mt-3"><a href="issue_15176_15451.html">Issue 4</a></h5>
+                   </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                   <div>
+                      <a class="js_click pointer_cursor" data-handler="loadModal"  data-param_a="Kirkuk Journal of Science" data-param_b="./data/kscis/coversheet/cover_en.jpg">
+                      <img src="data/kscis/coversheet/cover_en.jpg" alt="Kirkuk Journal of Science" class="col-12 shadow-sm"/>
+                      </a>
+                   </div>
+                <div>
+                      <h5 class="text-center mt-3"><a href="issue_15176_15403.html">Issue 3</a></h5>
+                   </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                   <div>
+                      <a class="js_click pointer_cursor" data-handler="loadModal"  data-param_a="Kirkuk Journal of Science" data-param_b="./data/kscis/coversheet/cover_en.jpg">
+                      <img src="data/kscis/coversheet/cover_en.jpg" alt="Kirkuk Journal of Science" class="col-12 shadow-sm"/>
+                      </a>
+                   </div>
+                   <div>
+                      <h5 class="text-center mt-3"><a href="issue_15176_15376.html">Issue 2</a></h5>
+                   </div>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                   <div>
+                      <a class="js_click pointer_cursor" data-handler="loadModal"  data-param_a="Kirkuk Journal of Science" data-param_b="./data/kscis/coversheet/cover_en.jpg">
+                      <img src="data/kscis/coversheet/cover_en.jpg" alt="Kirkuk Journal of Science" class="col-12 shadow-sm"/>
+                      </a>
+                   </div>
+                   <div>
+                      <h5 class="text-center mt-3"><a href="issue_15176_15177.html">Issue 1</a></h5>
+                   </div>
+                </div>
+             </div>
+          </div>
+        </div>
+    </div>
+     */
 
     @Override
     public void extractUrls(ArchivalUnit au, InputStream in, String encoding,
                             String srcUrl, Callback cb) throws IOException, PluginException {
 
-        // Read the entire stream into memory once
         byte[] content = IOUtils.toByteArray(in);
 
         if (au.getTdbAu() != null) {
-
-            if (srcUrl.contains("browse?_action=issue")) {
+            // Updated check for the new URL structure if necessary
+            if (srcUrl.contains("browse?_action=issue") || srcUrl.contains("archive.html")) {
 
                 String targetVolume = au.getTdbAu().getVolume();
-
-                log.debug3(String.format("targetVolume: %s", targetVolume));
-
                 Document doc = Jsoup.parse(new ByteArrayInputStream(content), encoding, srcUrl);
 
-                Elements volumeLabels = doc.select("div.toggle label");
+                // 1. Find all accordion headers (e.g., "Volume 20 (2025)")
+                Elements accordionItems = doc.select("div.accordion-item");
 
-                for (Element label : volumeLabels) {
-                    String volumeName = label.text().trim();
+                for (Element item : accordionItems) {
+                    Element header = item.selectFirst("h2.accordion-header button");
+                    if (header == null) continue;
 
-                    Matcher m = java.util.regex.Pattern.compile("Volume\\s+(\\d+)").matcher(volumeName);
+                    String volumeText = header.text().trim();
+                    // Pattern matches "Volume 20"
+                    Matcher m = java.util.regex.Pattern.compile("Volume\\s+(\\d+)").matcher(volumeText);
 
                     if (m.find() && m.group(1).equals(targetVolume)) {
 
-                        Element toggleParent = label.parent();
-                        if (toggleParent == null) continue;
+                        // 2. Find the corresponding body for this specific volume
+                        Element body = item.selectFirst("div.accordion-body");
+                        if (body == null) continue;
 
-                        Elements issueBoxes = toggleParent.select("div.item-box");
-                        for (Element box : issueBoxes) {
-                            Element issueTitleElement = box.selectFirst("div.item-box-desc h3 a");
-                            if (issueTitleElement != null) {
-                                String issueLink = issueTitleElement.absUrl("href");
-                                String issueName = issueTitleElement.text().trim();
+                        // 3. Extract all links inside the h5 tags
+                        Elements issueLinks = body.select("h5 a[href]");
+                        for (Element link : issueLinks) {
+                            String issueUrl = link.absUrl("href");
+                            String issueName = link.text().trim();
 
-                                log.debug3(String.format("Found - Volume Match: %s, Issue: %s, Link: %s, targetVolume: %s",
-                                        volumeName, issueName, issueLink, targetVolume));
+                            log.debug3(String.format("Found Match - Vol: %s, Issue: %s, Link: %s",
+                                    targetVolume, issueName, issueUrl));
 
-                                if (!issueLink.isEmpty()) {
-                                    cb.foundLink(issueLink);
-                                }
+                            if (!issueUrl.isEmpty()) {
+                                cb.foundLink(issueUrl);
                             }
                         }
-                    } else {
-                        log.debug3(String.format("Skipping - Volume: %s does not match target: %s",
-                                volumeName, targetVolume));
                     }
                 }
             } else {
-                log.debug3(String.format("All other urls - %s", srcUrl));
                 if (defaultExtractor != null) {
                     defaultExtractor.extractUrls(au, new ByteArrayInputStream(content), encoding, srcUrl, cb);
                 }
             }
-        } else {
-            log.debug3(String.format("tdbAu is null: %s", au.getAuId()));
         }
     }
 }

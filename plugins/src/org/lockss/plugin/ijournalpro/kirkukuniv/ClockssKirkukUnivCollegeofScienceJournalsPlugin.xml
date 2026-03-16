@@ -124,7 +124,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_crawlrules</string>
     <list>
         <!--Need to exclude those urls since they are followed by u=real_article full url or url=real_article full url or other format -->
-        <string>2, "https?://(www\.)?(facebook\.com|linkedin\.com|mendeley\.com|mix\.com|orcid\.org|pinterest\.com|twitter\.com|web\.skype\.com|academia\.edu|blogger\.com|digg\.com|google\.com|instagram\.com|reddit\.com|refworks\.com|researchgate\.net|semanticscholar\.org|del\.icio\.us)/"</string>
+        <string>2, "https?://(www\.)?(facebook\.com|linkedin\.com|mendeley\.com|mix\.com|orcid\.org|pinterest\.com|twitter\.com|x\.com|web\.skype\.com|academia\.edu|blogger\.com|digg\.com|google\.com|instagram\.com|reddit\.com|refworks\.com|researchgate\.net|semanticscholar\.org|del\.icio\.us)/"</string>
         <string>1, "https://crossmark-cdn.crossref.org/widget/"</string>
         <string>1, "%sissue_\d+_\d+\.html", base_url</string>
         <string>1, "%s(themes|inc|data)/", base_url</string>
@@ -193,12 +193,6 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>au_url_poll_result_weight</string>
     <list>
       <string>.*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+), 0</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_permitted_host_pattern</string>
-    <list>
-      <string>"crossmark-cdn\.crossref\.org"</string>
     </list>
   </entry>
 </map>
