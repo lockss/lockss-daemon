@@ -21,9 +21,9 @@
       param[base_url] = https://ijsu.researchcommons.org/
       param[journal_abbr] = ijsu
 
-      au < crawling ; exists ; 2021 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 0 ; 0 ; >
+      au < frozen ; exists ; 2021 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 0 ; 0 ; >
       au < ready ; exists ; 2021 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2022 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2022 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 2 ; 2 ; >
       au < finished ; manifest ; 2023 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 3 ; 3 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 4 ; 4 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; Imam Ja'afar Al-Sadiq University Journal of Legal Studies Volume 5 ; 5 ; >
