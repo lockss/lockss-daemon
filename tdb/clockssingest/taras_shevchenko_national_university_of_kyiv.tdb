@@ -24,12 +24,43 @@
     param[base_url] = https://apultp.knu.ua/uk/
     param[journal_id] = apultp
 
-    au < exists ; exists ; 2020 ; 2020 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 40-41 ; 40-41 ; >
+    au < manifest ; exists ; 2017 ; 2017 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 34-35 ; 34-35 ; >
+    au < manifest ; exists ; 2018 ; 2018 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 36-37 ; 36-37 ; >
+    au < manifest ; exists ; 2019 ; 2019 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 38-39 ; 38-39 ; >
+    au < manifest ; exists ; 2020 ; 2020 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 40-41 ; 40-41 ; >
     au < exists ; exists ; 2021 ; 2021 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 42-43 ; 42-43 ; >
     au < exists ; exists ; 2022 ; 2022 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 44-45 ; 44-45 ; >
     au < exists ; exists ; 2023 ; 2023 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 46-47 ; 46-47 ; >
     au < exists ; exists ; 2024 ; 2024 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 48-49 ; 48-49 ; >
     au < exists ; exists ; 2025 ; 2025 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 50-51 ; 50-51 ; >
+    au < exists ; exists ; 2026 ; 2026 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 52-53 ; 52-53 ; >
+
+  }
+
+  {
+ 
+    title <
+      name = Linguistic and Conceptual Worldviews ;
+      issn = 2520-6397 ;
+      eissn = 2520-6400 ;
+      issnl = 2520-6397
+    >
+    
+    param[base_url] = https://mova.knu.ua/uk/
+    param[journal_id] = mova
+
+    au < exists ; exists ; 2014 ; 2014 ; Linguistic and Conceptual Worldviews Volume 2014 ; 2014 ; >
+    au < exists ; exists ; 2015 ; 2015 ; Linguistic and Conceptual Worldviews Volume 2015 ; 2015 ; >
+    au < exists ; exists ; 2016 ; 2016 ; Linguistic and Conceptual Worldviews Volume 2016 ; 2016 ; >
+    au < exists ; exists ; 2017 ; 2017 ; Linguistic and Conceptual Worldviews Volume 2017 ; 2017 ; >
+    au < exists ; exists ; 2018 ; 2018 ; Linguistic and Conceptual Worldviews Volume 2018 ; 2018 ; >
+    au < exists ; exists ; 2019 ; 2019 ; Linguistic and Conceptual Worldviews Volume 2019 ; 2019 ; >
+    au < exists ; exists ; 2020 ; 2020 ; Linguistic and Conceptual Worldviews Volume 2020 ; 2020 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Linguistic and Conceptual Worldviews Volume 2021 ; 2021 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Linguistic and Conceptual Worldviews Volume 2022 ; 2022 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Linguistic and Conceptual Worldviews Volume 2023 ; 2023 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Linguistic and Conceptual Worldviews Volume 2024 ; 2024 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Linguistic and Conceptual Worldviews Volume 2025 ; 2025 ; >
 
   }
 }
