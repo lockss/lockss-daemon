@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = Taras Shevchenko National University of Kyiv ;
+    info[contract] = 2026 ;
+    info[back] = 2017 ;
+    info[tester] = 8 ;
+    info[platform] = OJS3
+  >
+
+  implicit < status ; status2 ; year ; param[year] ; name ; volume ; hidden[proxy] >
+  plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+  #attr[start_stem] = index.php/
+
+  {
+ 
+    title <
+      name = Current Issues of Ukrainian Linguistics: Theory and Practice ;
+      issn = 2311-2697 ;
+      eissn = 2523-4870 ;
+      issnl = 2311-2697
+    >
+    
+    param[base_url] = https://apultp.knu.ua/uk/
+    param[journal_id] = apultp
+
+    au < exists ; exists ; 2020 ; 2020 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 40-41 ; 40-41 ; >
+    au < exists ; exists ; 2021 ; 2021 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 42-43 ; 42-43 ; >
+    au < exists ; exists ; 2022 ; 2022 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 44-45 ; 44-45 ; >
+    au < exists ; exists ; 2023 ; 2023 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 46-47 ; 46-47 ; >
+    au < exists ; exists ; 2024 ; 2024 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 48-49 ; 48-49 ; >
+    au < exists ; exists ; 2025 ; 2025 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 50-51 ; 50-51 ; >
+
+  }
+}

@@ -1324,6 +1324,9 @@ while (my $line = <>) {
         } elsif (uri_unescape($param{base_url}) =~ m/aut\.ac\.nz/) {
             $url = sprintf("%s%s/gateway/clockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
+        } elsif (uri_unescape($param{base_url}) =~ m/\.knu\.ua/) {
+            $url = sprintf("%s/gateway/clockss?year=%d",
+            $param{base_url}, $param{year});
         } elsif (uri_unescape($param{base_url}) =~ m/talenta\.usu\.ac\.id/) {  #https://talenta.usu.ac.id
             $url = sprintf("%s%s/gateway/clockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
