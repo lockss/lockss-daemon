@@ -1807,6 +1807,30 @@ while (my $line = <>) {
         }
         sleep(4);
 
+  } elsif ($plugin eq "ClockssKirkukUnivCollegeofScienceJournalsPlugin") {
+        $url = sprintf("%sbrowse?_action=issue",
+          $param{base_url});
+        $man_url = uri_unescape($url);
+        my $req = HTTP::Request->new(GET, $man_url);
+        my $resp = $ua->request($req);
+        if ($resp->is_success) { 
+            my $man_contents = $resp->content;
+            if ($req->url ne $resp->request->uri) {
+              $vol_title = $resp->request->uri;
+              $result = "Redirected";
+            } elsif (defined($man_contents) && ($man_contents =~ m/Volume $param{volume} \($param{year}\)/)) { 
+                if ($man_contents =~ m/(Volume $param{volume} \($param{year}\))/si) {
+                    $vol_title = $1
+                }
+                $result = "Manifest"
+            } else {
+                $result = "--"
+            }
+        } else {
+            $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
+        }
+        sleep(4);
+
   } elsif ($plugin eq "ClockssDoveMedicalPressPlugin") {
         $url = sprintf("%slockss.php?t=clockss&pa=issue&j_id=%s&year=%d",
           $param{base_url}, $param{journal_id}, $param{year});
