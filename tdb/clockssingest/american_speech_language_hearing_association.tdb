@@ -25,24 +25,24 @@
       param[journal_id] = aja
       param[base_url] = https://pubs.asha.org/
 
-      au < frozen ; exists ; 1991-1992 ; American Journal of Audiology Volume 1 ; 1 ; >
-      au < frozen ; exists ; 1993 ; American Journal of Audiology Volume 2 ; 2 ; >
-      au < frozen ; exists ; 1994 ; American Journal of Audiology Volume 3 ; 3 ; >
-      au < frozen ; exists ; 1995 ; American Journal of Audiology Volume 4 ; 4 ; >
-      au < frozen ; exists ; 1996 ; American Journal of Audiology Volume 5 ; 5 ; >
-      au < frozen ; exists ; 1997 ; American Journal of Audiology Volume 6 ; 6 ; >
-      au < frozen ; exists ; 1998 ; American Journal of Audiology Volume 7 ; 7 ; >
-      au < frozen ; exists ; 1999 ; American Journal of Audiology Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2000 ; American Journal of Audiology Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2001 ; American Journal of Audiology Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2002 ; American Journal of Audiology Volume 11 ; 11 ; >
-      au < frozen ; exists ; 2003 ; American Journal of Audiology Volume 12 ; 12 ; >
-      au < frozen ; exists ; 2004 ; American Journal of Audiology Volume 13 ; 13 ; >
-      au < frozen ; exists ; 2005 ; American Journal of Audiology Volume 14 ; 14 ; >
-      au < frozen ; exists ; 2006 ; American Journal of Audiology Volume 15 ; 15 ; >
-      au < frozen ; exists ; 2007 ; American Journal of Audiology Volume 16 ; 16 ; >
-      au < frozen ; exists ; 2008 ; American Journal of Audiology Volume 17 ; 17 ; >
-      au < frozen ; exists ; 2009 ; American Journal of Audiology Volume 18 ; 18 ; >
+      au < finished ; manifest ; 1991-1992 ; American Journal of Audiology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1993 ; American Journal of Audiology Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1994 ; American Journal of Audiology Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; American Journal of Audiology Volume 4 ; 4 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; American Journal of Audiology Volume 5 ; 5 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; American Journal of Audiology Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1998 ; American Journal of Audiology Volume 7 ; 7 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1999 ; American Journal of Audiology Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; American Journal of Audiology Volume 9 ; 9 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; American Journal of Audiology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; American Journal of Audiology Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2003 ; American Journal of Audiology Volume 12 ; 12 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2004 ; American Journal of Audiology Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; American Journal of Audiology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; American Journal of Audiology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; American Journal of Audiology Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2008 ; American Journal of Audiology Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2009 ; American Journal of Audiology Volume 18 ; 18 ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2010 ; American Journal of Audiology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
       au < finished ; finished ; 2011 ; American Journal of Audiology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2012 ; American Journal of Audiology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
@@ -55,8 +55,8 @@
       au < finished ; finished ; 2019 ; American Journal of Audiology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2020 ; American Journal of Audiology Volume 29 ; 29 ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2021 ; American Journal of Audiology Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2022 ; American Journal of Audiology Volume 31 ; 31 ; >
-      au < frozen ; exists ; 2023 ; American Journal of Audiology Volume 32 ; 32 ; >
+      au < finished ; manifest ; 2022 ; American Journal of Audiology Volume 31 ; 31 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2023 ; American Journal of Audiology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2024 ; American Journal of Audiology Volume 33 ; 33 ; >
       au < crawling ; exists ; 2025 ; American Journal of Audiology Volume 34 ; 34 ; >
       au < manifest ; exists ; 2026 ; American Journal of Audiology Volume 35 ; 35 ; >

@@ -25,30 +25,30 @@
 
     param[journal_abbr] = alr
   
-    au < frozen ; exists ; 1984 ; Alaska Law Review Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1985 ; Alaska Law Review Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1984 ; Alaska Law Review Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1985 ; Alaska Law Review Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 1986 ; Alaska Law Review Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1987 ; Alaska Law Review Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1987 ; Alaska Law Review Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 1988 ; Alaska Law Review Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1989 ; Alaska Law Review Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1990 ; Alaska Law Review Volume 7 ; 7 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1991 ; Alaska Law Review Volume 8 ; 8 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1989 ; Alaska Law Review Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1990 ; Alaska Law Review Volume 7 ; 7 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1991 ; Alaska Law Review Volume 8 ; 8 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 1992 ; Alaska Law Review Volume 9 ; 9 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1993 ; Alaska Law Review Volume 10 ; 10 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1993 ; Alaska Law Review Volume 10 ; 10 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 1994 ; Alaska Law Review Volume 11 ; 11 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1995 ; Alaska Law Review Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1996 ; Alaska Law Review Volume 13 ; 13 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1995 ; Alaska Law Review Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1996 ; Alaska Law Review Volume 13 ; 13 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 1997 ; Alaska Law Review Volume 14 ; 14 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1998 ; Alaska Law Review Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1999 ; Alaska Law Review Volume 16 ; 16 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1998 ; Alaska Law Review Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1999 ; Alaska Law Review Volume 16 ; 16 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2000 ; Alaska Law Review Volume 17 ; 17 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 2001 ; Alaska Law Review Volume 18 ; 18 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2002 ; Alaska Law Review Volume 19 ; 19 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2002 ; Alaska Law Review Volume 19 ; 19 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 2003 ; Alaska Law Review Volume 20 ; 20 ; https://scholarship.law.duke.edu/ ; >
     au < crawling ; exists ; 2004 ; Alaska Law Review Volume 21 ; 21 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2005 ; Alaska Law Review Volume 22 ; 22 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; manifest ; 2006 ; Alaska Law Review Volume 23 ; 23 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2007 ; Alaska Law Review Volume 24 ; 24 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2007 ; Alaska Law Review Volume 24 ; 24 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; Alaska Law Review Volume 25 ; 25 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Alaska Law Review Volume 26 ; 26 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; Alaska Law Review Volume 27 ; 27 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
@@ -80,22 +80,22 @@
 
     param[journal_abbr] = delpf
   
-    au < frozen ; exists ; 1991 ; Duke Environmental Law & Policy Forum Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1992 ; Duke Environmental Law & Policy Forum Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1991 ; Duke Environmental Law & Policy Forum Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1992 ; Duke Environmental Law & Policy Forum Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 1993 ; Duke Environmental Law & Policy Forum Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1994 ; Duke Environmental Law & Policy Forum Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1995 ; Duke Environmental Law & Policy Forum Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1996 ; Duke Environmental Law & Policy Forum Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1994 ; Duke Environmental Law & Policy Forum Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1995 ; Duke Environmental Law & Policy Forum Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1996 ; Duke Environmental Law & Policy Forum Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 1997 ; Duke Environmental Law & Policy Forum Volume 7 ; 7 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1998 ; Duke Environmental Law & Policy Forum Volume 8 ; 8 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1998 ; Duke Environmental Law & Policy Forum Volume 8 ; 8 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 1999 ; Duke Environmental Law & Policy Forum Volume 9 ; 9 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2000 ; Duke Environmental Law & Policy Forum Volume 10 ; 10 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2001 ; Duke Environmental Law & Policy Forum Volume 11 ; 11 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2000 ; Duke Environmental Law & Policy Forum Volume 10 ; 10 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; Duke Environmental Law & Policy Forum Volume 11 ; 11 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2002 ; Duke Environmental Law & Policy Forum Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2003 ; Duke Environmental Law & Policy Forum Volume 13 ; 13 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2004 ; Duke Environmental Law & Policy Forum Volume 14 ; 14 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2005 ; Duke Environmental Law & Policy Forum Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2006 ; Duke Environmental Law & Policy Forum Volume 16 ; 16 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2004 ; Duke Environmental Law & Policy Forum Volume 14 ; 14 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2005 ; Duke Environmental Law & Policy Forum Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2006 ; Duke Environmental Law & Policy Forum Volume 16 ; 16 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; Duke Environmental Law & Policy Forum Volume 17 ; 17 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2008 ; Duke Environmental Law & Policy Forum Volume 18 ; 18 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Duke Environmental Law & Policy Forum Volume 19 ; 19 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
@@ -154,15 +154,15 @@
     au < ready ; exists ; 1993 ; Duke Journal of Comparative and International Law Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1994 ; Duke Journal of Comparative and International Law Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1995 ; Duke Journal of Comparative and International Law Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1996 ; Duke Journal of Comparative and International Law Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1997 ; Duke Journal of Comparative and International Law Volume 7 ; 7 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1996 ; Duke Journal of Comparative and International Law Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1997 ; Duke Journal of Comparative and International Law Volume 7 ; 7 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 1998 ; Duke Journal of Comparative and International Law Volume 8 ; 8 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1999 ; Duke Journal of Comparative and International Law Volume 9 ; 9 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2000 ; Duke Journal of Comparative and International Law Volume 10 ; 10 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2001 ; Duke Journal of Comparative and International Law Volume 11 ; 11 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2000 ; Duke Journal of Comparative and International Law Volume 10 ; 10 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2001 ; Duke Journal of Comparative and International Law Volume 11 ; 11 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2002 ; Duke Journal of Comparative and International Law Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2003 ; Duke Journal of Comparative and International Law Volume 13 ; 13 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2004 ; Duke Journal of Comparative and International Law Volume 14 ; 14 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2004 ; Duke Journal of Comparative and International Law Volume 14 ; 14 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2005 ; Duke Journal of Comparative and International Law Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 2006 ; Duke Journal of Comparative and International Law Volume 16 ; 16 ; https://scholarship.law.duke.edu/ ; >
     au < crawling ; exists ; 2007 ; Duke Journal of Comparative and International Law Volume 17 ; 17 ; https://scholarship.law.duke.edu/ ; >
@@ -197,7 +197,7 @@
 
     param[journal_abbr] = djclpp
   
-    au < frozen ; exists ; 2006 ; Duke Journal of Constitutional Law and Public Policy Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2006 ; Duke Journal of Constitutional Law and Public Policy Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2007 ; Duke Journal of Constitutional Law and Public Policy Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; Duke Journal of Constitutional Law and Public Policy Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Duke Journal of Constitutional Law and Public Policy Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
@@ -230,19 +230,19 @@
 
     param[journal_abbr] = djglp
   
-    au < frozen ; exists ; 1994 ; Duke Journal of Gender Law & Policy Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1995 ; Duke Journal of Gender Law & Policy Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1996 ; Duke Journal of Gender Law & Policy Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1997 ; Duke Journal of Gender Law & Policy Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1998 ; Duke Journal of Gender Law & Policy Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1999 ; Duke Journal of Gender Law & Policy Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2000 ; Duke Journal of Gender Law & Policy Volume 7 ; 7 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2001 ; Duke Journal of Gender Law & Policy Volume 8 ; 8 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2002 ; Duke Journal of Gender Law & Policy Volume 9 ; 9 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1994 ; Duke Journal of Gender Law & Policy Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1995 ; Duke Journal of Gender Law & Policy Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1996 ; Duke Journal of Gender Law & Policy Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1997 ; Duke Journal of Gender Law & Policy Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1998 ; Duke Journal of Gender Law & Policy Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1999 ; Duke Journal of Gender Law & Policy Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2000 ; Duke Journal of Gender Law & Policy Volume 7 ; 7 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2001 ; Duke Journal of Gender Law & Policy Volume 8 ; 8 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2002 ; Duke Journal of Gender Law & Policy Volume 9 ; 9 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2003 ; Duke Journal of Gender Law & Policy Volume 10 ; 10 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2004 ; Duke Journal of Gender Law & Policy Volume 11 ; 11 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2005 ; Duke Journal of Gender Law & Policy Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2006 ; Duke Journal of Gender Law & Policy Volume 13 ; 13 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2004 ; Duke Journal of Gender Law & Policy Volume 11 ; 11 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2005 ; Duke Journal of Gender Law & Policy Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2006 ; Duke Journal of Gender Law & Policy Volume 13 ; 13 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 2007 ; Duke Journal of Gender Law & Policy Volume 14 ; 14 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; manifest ; 2008 ; Duke Journal of Gender Law & Policy Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2009 ; Duke Journal of Gender Law & Policy Volume 16 ; 16 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
@@ -269,11 +269,11 @@
 
     param[journal_abbr] = dltr
   
-    au < frozen ; exists ; 2001-2003 ; Duke Law and Technology Review Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2003-2004 ; Duke Law and Technology Review Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2001-2003 ; Duke Law and Technology Review Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 2003-2004 ; Duke Law and Technology Review Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 2004-2005 ; Duke Law and Technology Review Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2005-2006 ; Duke Law and Technology Review Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2006-2007 ; Duke Law and Technology Review Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2006-2007 ; Duke Law and Technology Review Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2007-2008 ; Duke Law and Technology Review Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2008-2009 ; Duke Law and Technology Review Volume 7  ; 7 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2009-2010 ; Duke Law and Technology Review Volume 8  ; 8 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
@@ -293,7 +293,7 @@
     au < finished ; manifest ; 2023 ; Duke Law and Technology Review Volume 22 ; 22 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Duke Law and Technology Review Volume 23 ; 23 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Duke Law and Technology Review Volume 24 ; 24 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2024 ; Duke Law and Technology Review Volume 25 ; 25 ; https://scholarship.law.duke.edu/ ; > #article count unmatched on ingest machines
+    au < finished ; manifest ; 2024 ; Duke Law and Technology Review Volume 25 ; 25 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 > #article count unmatched on ingest machines
     au < manifest ; exists ; 2025 ; Duke Law and Technology Review Volume 26 ; 26 ; https://scholarship.law.duke.edu/ ; >
     au < expected ; exists ; 2025 ; Duke Law and Technology Review Volume 27 ; 27 ; https://scholarship.law.duke.edu/ ; >
     au < expected ; exists ; 2026 ; Duke Law and Technology Review Volume 28 ; 28 ; https://scholarship.law.duke.edu/ ; >
@@ -321,14 +321,14 @@
     au < manifest ; exists ; 1959 ; Duke Law Journal Volume 9 ; 9 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1960 ; Duke Law Journal Volume 10 ; 10 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1961 ; Duke Law Journal Volume 11 ; 11 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1962 ; Duke Law Journal Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1962 ; Duke Law Journal Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 1963 ; Duke Law Journal Volume 13 ; 13 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1964 ; Duke Law Journal Volume 14 ; 14 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1965 ; Duke Law Journal Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1964 ; Duke Law Journal Volume 14 ; 14 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 1965 ; Duke Law Journal Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 1966 ; Duke Law Journal Volume 16 ; 16 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1967 ; Duke Law Journal Volume 17 ; 17 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1968 ; Duke Law Journal Volume 18 ; 18 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1969 ; Duke Law Journal Volume 19 ; 19 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1967 ; Duke Law Journal Volume 17 ; 17 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1968 ; Duke Law Journal Volume 18 ; 18 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1969 ; Duke Law Journal Volume 19 ; 19 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 1970 ; Duke Law Journal Volume 20 ; 20 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1971 ; Duke Law Journal Volume 21 ; 21 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1972 ; Duke Law Journal Volume 22 ; 22 ; https://scholarship.law.duke.edu/ ; >
@@ -337,33 +337,33 @@
     au < ready ; exists ; 1975 ; Duke Law Journal Volume 25 ; 25 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1976 ; Duke Law Journal Volume 26 ; 26 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1977 ; Duke Law Journal Volume 27 ; 27 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1978 ; Duke Law Journal Volume 28 ; 28 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1978 ; Duke Law Journal Volume 28 ; 28 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 1979 ; Duke Law Journal Volume 29 ; 29 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1980 ; Duke Law Journal Volume 30 ; 30 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1981 ; Duke Law Journal Volume 31 ; 31 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1982 ; Duke Law Journal Volume 32 ; 32 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1980 ; Duke Law Journal Volume 30 ; 30 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1981 ; Duke Law Journal Volume 31 ; 31 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1982 ; Duke Law Journal Volume 32 ; 32 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 1983 ; Duke Law Journal Volume 33 ; 33 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1984 ; Duke Law Journal Volume 34 ; 34 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1985 ; Duke Law Journal Volume 35 ; 35 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1986 ; Duke Law Journal Volume 36 ; 36 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1987 ; Duke Law Journal Volume 37 ; 37 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1987 ; Duke Law Journal Volume 37 ; 37 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 1988 ; Duke Law Journal Volume 38 ; 38 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1989 ; Duke Law Journal Volume 39 ; 39 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1989 ; Duke Law Journal Volume 39 ; 39 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 1990 ; Duke Law Journal Volume 40 ; 40 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1991 ; Duke Law Journal Volume 41 ; 41 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1992 ; Duke Law Journal Volume 42 ; 42 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1993 ; Duke Law Journal Volume 43 ; 43 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1992 ; Duke Law Journal Volume 42 ; 42 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1993 ; Duke Law Journal Volume 43 ; 43 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 1994 ; Duke Law Journal Volume 44 ; 44 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1995 ; Duke Law Journal Volume 45 ; 45 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1996 ; Duke Law Journal Volume 46 ; 46 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1996 ; Duke Law Journal Volume 46 ; 46 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 1997 ; Duke Law Journal Volume 47 ; 47 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1998 ; Duke Law Journal Volume 48 ; 48 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1999 ; Duke Law Journal Volume 49 ; 49 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2000 ; Duke Law Journal Volume 50 ; 50 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2001 ; Duke Law Journal Volume 51 ; 51 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2002 ; Duke Law Journal Volume 52 ; 52 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2002 ; Duke Law Journal Volume 52 ; 52 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2003 ; Duke Law Journal Volume 53 ; 53 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2004 ; Duke Law Journal Volume 54 ; 54 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2004 ; Duke Law Journal Volume 54 ; 54 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 2005 ; Duke Law Journal Volume 55 ; 55 ; https://scholarship.law.duke.edu/ ; >
     au < crawling ; exists ; 2006 ; Duke Law Journal Volume 56 ; 56 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 2007 ; Duke Law Journal Volume 57 ; 57 ; https://scholarship.law.duke.edu/ ; >
@@ -421,18 +421,18 @@
     au < manifest ; exists ; 1957 ; Law and Contemporary Problems Volume 22 ; 22 ; https://scholarship.law.duke.edu/ ; >
     au < manifest ; exists ; 1958 ; Law and Contemporary Problems Volume 23 ; 23 ; https://scholarship.law.duke.edu/ ; >
     au < manifest ; exists ; 1959 ; Law and Contemporary Problems Volume 24 ; 24 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1960 ; Law and Contemporary Problems Volume 25 ; 25 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1961 ; Law and Contemporary Problems Volume 26 ; 26 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1960 ; Law and Contemporary Problems Volume 25 ; 25 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1961 ; Law and Contemporary Problems Volume 26 ; 26 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 1962 ; Law and Contemporary Problems Volume 27 ; 27 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1963 ; Law and Contemporary Problems Volume 28 ; 28 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1963 ; Law and Contemporary Problems Volume 28 ; 28 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 1964 ; Law and Contemporary Problems Volume 29 ; 29 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1965 ; Law and Contemporary Problems Volume 30 ; 30 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1966 ; Law and Contemporary Problems Volume 31 ; 31 ; https://scholarship.law.duke.edu/ ; >
     au < crawling ; exists ; 1967 ; Law and Contemporary Problems Volume 32 ; 32 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1968 ; Law and Contemporary Problems Volume 33 ; 33 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1968 ; Law and Contemporary Problems Volume 33 ; 33 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 1969 ; Law and Contemporary Problems Volume 34 ; 34 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1970 ; Law and Contemporary Problems Volume 35 ; 35 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1971 ; Law and Contemporary Problems Volume 36 ; 36 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1971 ; Law and Contemporary Problems Volume 36 ; 36 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < ready ; exists ; 1972 ; Law and Contemporary Problems Volume 37 ; 37 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1973-1974 ; Law and Contemporary Problems Volume 38 ; 38 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1975 ; Law and Contemporary Problems Volume 39 ; 39 ; https://scholarship.law.duke.edu/ ; >
@@ -442,31 +442,31 @@
     au < ready ; exists ; 1979-1980 ; Law and Contemporary Problems Volume 43 ; 43 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1981 ; Law and Contemporary Problems Volume 44 ; 44 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1982 ; Law and Contemporary Problems Volume 45 ; 45 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1983 ; Law and Contemporary Problems Volume 46 ; 46 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1983 ; Law and Contemporary Problems Volume 46 ; 46 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 1984 ; Law and Contemporary Problems Volume 47 ; 47 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1985 ; Law and Contemporary Problems Volume 48 ; 48 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1985 ; Law and Contemporary Problems Volume 48 ; 48 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 1986 ; Law and Contemporary Problems Volume 49 ; 49 ; https://scholarship.law.duke.edu/ ; >
     au < crawling ; exists ; 1987 ; Law and Contemporary Problems Volume 50 ; 50 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1988 ; Law and Contemporary Problems Volume 51 ; 51 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1989 ; Law and Contemporary Problems Volume 52 ; 52 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1989 ; Law and Contemporary Problems Volume 52 ; 52 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 1990 ; Law and Contemporary Problems Volume 53 ; 53 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1991 ; Law and Contemporary Problems Volume 54 ; 54 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1992 ; Law and Contemporary Problems Volume 55 ; 55 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1992 ; Law and Contemporary Problems Volume 55 ; 55 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
     au < ready ; exists ; 1993 ; Law and Contemporary Problems Volume 56 ; 56 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1994 ; Law and Contemporary Problems Volume 57 ; 57 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1994 ; Law and Contemporary Problems Volume 57 ; 57 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < crawling ; exists ; 1995 ; Law and Contemporary Problems Volume 58 ; 58 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1996 ; Law and Contemporary Problems Volume 59 ; 59 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1997 ; Law and Contemporary Problems Volume 60 ; 60 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 1998 ; Law and Contemporary Problems Volume 61 ; 61 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 1997 ; Law and Contemporary Problems Volume 60 ; 60 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
+    au < finished ; manifest ; 1998 ; Law and Contemporary Problems Volume 61 ; 61 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 1999 ; Law and Contemporary Problems Volume 62 ; 62 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2000 ; Law and Contemporary Problems Volume 63 ; 63 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2001 ; Law and Contemporary Problems Volume 64 ; 64 ; https://scholarship.law.duke.edu/ ; >
-    au < frozen ; exists ; 2002 ; Law and Contemporary Problems Volume 65 ; 65 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2000 ; Law and Contemporary Problems Volume 63 ; 63 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2001 ; Law and Contemporary Problems Volume 64 ; 64 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2002 ; Law and Contemporary Problems Volume 65 ; 65 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2003 ; Law and Contemporary Problems Volume 66 ; 66 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2004 ; Law and Contemporary Problems Volume 67 ; 67 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2004 ; Law and Contemporary Problems Volume 67 ; 67 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2004-2005 ; Law and Contemporary Problems Volume 68 ; 68 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; manifest ; 2006 ; Law and Contemporary Problems Volume 69 ; 69 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2007 ; Law and Contemporary Problems Volume 70 ; 70 ; https://scholarship.law.duke.edu/ ; >
+    au < finished ; manifest ; 2007 ; Law and Contemporary Problems Volume 70 ; 70 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2008 ; Law and Contemporary Problems Volume 71 ; 71 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Law and Contemporary Problems Volume 72 ; 72 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2010 ; Law and Contemporary Problems Volume 73 ; 73 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
