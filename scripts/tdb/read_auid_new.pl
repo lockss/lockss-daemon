@@ -1311,6 +1311,7 @@ while (my $line = <>) {
 
 # thin child of ClockssOJS2 but with a different start_url and no permission_url
   } elsif (($plugin eq "ClockssJidcOJS2Plugin") || 
+           ($plugin eq "ClockssEscrsPlugin") || 
            ($plugin eq "ClockssOjs3Plugin" && $param{base_url} !~ "talenta") || 
            ($plugin eq "ClockssUbiquityPartnerNetworkPlugin")) {
     #OJS3 allows an attr to define variants for location of manifest
@@ -1318,6 +1319,9 @@ while (my $line = <>) {
         if ($param{base_url} =~ m/scholarworks/) {
             $url = sprintf("%sjournals/index.php/%s/gateway/clockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
+        } elsif (uri_unescape($param{base_url}) =~ m/emiratesscholar/) {
+            $url = sprintf("%sdirectory/index.php/%s/issue/archive",
+            $param{base_url}, $param{journal_id});
         } elsif (uri_unescape($param{journal_id}) =~ m/tekaharoa/) {
             $url = sprintf("%sindex.php/%s/gateway/clockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
@@ -1325,7 +1329,7 @@ while (my $line = <>) {
             $url = sprintf("%s%s/gateway/clockss?year=%d",
             $param{base_url}, $param{journal_id}, $param{year});
         } elsif (uri_unescape($param{base_url}) =~ m/\.knu\.ua/) {
-            $url = sprintf("%s/gateway/clockss?year=%d",
+            $url = sprintf("%sgateway/clockss?year=%d",
             $param{base_url}, $param{year});
         } elsif (uri_unescape($param{base_url}) =~ m/talenta\.usu\.ac\.id/) {  #https://talenta.usu.ac.id
             $url = sprintf("%s%s/gateway/clockss?year=%d",
