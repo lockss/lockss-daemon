@@ -5,7 +5,7 @@
     info[contract] = 2013 ;
     info[back] = 2005 ;
     info[tester] = 8 ;
-    info[poller] = 6
+    info[platform] = Custom
   >
 
   plugin = org.lockss.plugin.illiesia.ClockssIlliesiaPlugin

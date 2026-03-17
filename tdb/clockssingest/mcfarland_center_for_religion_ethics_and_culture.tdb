@@ -2,8 +2,9 @@
   publisher <
     name = McFarland Center for Religion Ethics and Culture ;
     info[contract] = 2008 ;
+    info[back] = 2008 ;
     info[tester] = 5 ;
-    info[poller] = 6
+    info[platform] = bepress
   >
   provider = bepress
   # Do not add any titles with the DigitalCommons/BePress Plugin without approval. Document approval in PD-36.
