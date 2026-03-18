@@ -25,7 +25,7 @@
     param[journal_abbr] = jleg
 
     au < crawling ; exists ; 1974 ; Journal of Legislation Volume 1 ; 1 ; https://scholarship.law.nd.edu/ ; >
-    au < ready ; exists ; 1975 ; Journal of Legislation Volume 2 ; 2 ; https://scholarship.law.nd.edu/ ; >
+    au < crawling ; exists ; 1975 ; Journal of Legislation Volume 2 ; 2 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1976 ; Journal of Legislation Volume 3 ; 3 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1977 ; Journal of Legislation Volume 4 ; 4 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1978 ; Journal of Legislation Volume 5 ; 5 ; https://scholarship.law.nd.edu/ ; >
