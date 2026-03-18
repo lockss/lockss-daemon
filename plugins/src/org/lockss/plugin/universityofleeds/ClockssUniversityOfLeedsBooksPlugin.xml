@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>3</string>
+        <string>4</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -112,12 +112,12 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_crawlrules</string>
         <list>
-            <!--Exclude https://leeds.pressbooks.pub/educ5272m/xmlrpc.php 403 Error-->
             <string>2, "%s%s/(xmlrpc.php|wp-login.php|\?p=)", base_url, resource_id</string>
+            <string>2, "%s%s/wp-json", base_url, resource_id</string>
             <string>1,"^https?://(fonts|ajax)\.(googleapis|gstatic)\.com/"</string>
             <string>1, "%s%s/", base_url, resource_id</string>
             <string>1, "%sapp/", base_url</string>
-            <string>1, "%s%s/(chapter|part|wp-json|front-matter|open|wp-includes|wp-admin)", base_url, resource_id</string>
+            <string>1, "%s%s/(chapter|part|front-matter|open|wp-includes|wp-admin)", base_url, resource_id</string>
         </list>
     </entry>
     <entry>
