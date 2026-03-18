@@ -32,6 +32,7 @@ def resolve_redirects(url):
     return None
 
 def update_csv_with_redirected_urls(input_csv, url_column):
+    logging.debug("**********")
     output_csv = input_csv.replace('.csv', '_with_redirected_urls.csv')
 
     with open(input_csv, 'r', encoding='utf-8-sig') as infile, open(output_csv, 'w', newline='') as outfile:
