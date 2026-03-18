@@ -39,6 +39,7 @@ import java.util.regex.Matcher;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.apache.commons.lang3.StringUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -104,6 +105,14 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
       log.debug3("Metadata - cachedurl cu:" + cu.getUrl());
       
       ArticleMetadata am = super.extract(target, cu);
+      ArchivalUnit au = cu.getArchivalUnit();
+      //There was an overcrawl in  Journal of Long-Term Care 2025 so a year check is being put in place. 
+      String year = am.getRaw("citation_publication_date").substring(0,4);
+      String auYear    = Integer.toString(au.getProperties().getInt(ConfigParamDescr.YEAR.getKey()));
+      if (!StringUtils.isEmpty(year) && !StringUtils.isEmpty(auYear) && !year.equals(auYear)) {
+        log.debug3("Found year is " + year + ", auYear is " + auYear + ". No match, do not emit metadata.");
+        return null;
+      }
       am.cook(tagMap);
       String url = am.get(MetadataField.FIELD_ACCESS_URL);
       String doi = am.getRaw("DC.Identifier");
@@ -113,7 +122,6 @@ public class UbiquityPartnerNetworkHtmlMetadataExtractorFactory implements
           am.put(MetadataField.FIELD_DOI, doi);
         }
       }
-      ArchivalUnit au = cu.getArchivalUnit();
       if (url == null || url.isEmpty() || !au.makeCachedUrl(url).hasContent()) {
         url = cu.getUrl();
       }
