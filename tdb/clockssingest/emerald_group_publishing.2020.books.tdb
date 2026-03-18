@@ -5,7 +5,7 @@
     info[back] = 1990 ;
     info[contract] = 2015 ;
     info[tester] = 8 ;
-    info[poller] = 3
+    info[platform] = Custom
   >
 
   plugin = org.lockss.plugin.emerald.ClockssEmerald2020BooksPlugin

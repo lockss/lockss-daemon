@@ -3779,8 +3779,9 @@ while (my $line = <>) {
     }
     sleep(4);
 
-# GSW Books Silverchair CLOCKSS
+# Books Silverchair CLOCKSS
   } elsif (($plugin eq "ClockssGeoscienceWorldSilverchairBooksPlugin") ||
+           ($plugin eq "ClockssEmeraldSilverchairBooksPlugin") ||
            ($plugin eq "ClockssIwapSilverchairBooksPlugin") ||
            ($plugin eq "ClockssRoyalSocietyChemistrySilverchairBooksPlugin")) {
     $url = sprintf("%s%s",
@@ -3811,8 +3812,9 @@ while (my $line = <>) {
     }
     sleep(4);
 
-# GSW Books Silverchair GLN
+# Books Silverchair GLN
   } elsif (($plugin eq "GeoscienceWorldSilverchairBooksPlugin") ||
+           ($plugin eq "EmeraldSilverchairBooksPlugin") ||
            ($plugin eq "IwapSilverchairBooksPlugin") ||
            ($plugin eq "RoyalSocietyChemistrySilverchairBooksPlugin")) {
     $url = sprintf("%s%s",

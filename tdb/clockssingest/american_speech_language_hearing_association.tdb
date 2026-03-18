@@ -74,9 +74,9 @@
       param[journal_id] = ajslp
       param[base_url] = https://pubs.asha.org/
 
-      au < frozen ; exists ; 1992 ; American Journal of Speech-Language Pathology Volume 1 ; 1 ; >
-      au < frozen ; exists ; 1993 ; American Journal of Speech-Language Pathology Volume 2 ; 2 ; >
-      au < frozen ; exists ; 1994 ; American Journal of Speech-Language Pathology Volume 3 ; 3 ; >
+      au < finished ; manifest ; 1992 ; American Journal of Speech-Language Pathology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; American Journal of Speech-Language Pathology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1994 ; American Journal of Speech-Language Pathology Volume 3 ; 3 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 1995 ; American Journal of Speech-Language Pathology Volume 4 ; 4 ; >
       au < frozen ; exists ; 1996 ; American Journal of Speech-Language Pathology Volume 5 ; 5 ; >
       au < frozen ; exists ; 1997 ; American Journal of Speech-Language Pathology Volume 6 ; 6 ; >
