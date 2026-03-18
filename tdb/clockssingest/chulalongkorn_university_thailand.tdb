@@ -25,8 +25,8 @@
     param[journal_abbr] = jhr
     #move from Emerald, 2023
 
-    au < deepCrawl ; exists ; 2023 ; Journal of Health Research Volume 37 ; 37 ; >
-    au < frozen ; exists ; 2024 ; Journal of Health Research Volume 38 ; 38 ; >
+    au < finished ; manifest ; 2023 ; Journal of Health Research Volume 37 ; 37 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2024 ; Journal of Health Research Volume 38 ; 38 ; reingest4.clockss.org:8082 >
     au < crawling ; exists ; 2025 ; Journal of Health Research Volume 39 ; 39 ; >
     au < manifest ; exists ; 2026 ; Journal of Health Research Volume 40 ; 40 ; >
 
