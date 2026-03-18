@@ -21,9 +21,9 @@
       param[base_url] = https://mmj.mans.edu.eg/
       param[journal_abbr] = home
 
-      au < manifest ; exists ; 1990 ; Mansoura Medical Journal Volume 19 ; 19 ; >
-      au < manifest ; exists ; 1991 ; Mansoura Medical Journal Volume 20 ; 20 ; >
-      au < manifest ; exists ; 1992 ; Mansoura Medical Journal Volume 21 ; 21 ; >
+      au < testing ; exists ; 1990 ; Mansoura Medical Journal Volume 19 ; 19 ; >
+      au < testing ; exists ; 1991 ; Mansoura Medical Journal Volume 20 ; 20 ; >
+      au < testing ; exists ; 1992 ; Mansoura Medical Journal Volume 21 ; 21 ; >
       au < doesNotExist ; doesNotExist ; 1993 ; Mansoura Medical Journal Volume 22 ; 22 ; >
       au < doesNotExist ; doesNotExist ; 1994 ; Mansoura Medical Journal Volume 23 ; 23 ; >
       au < doesNotExist ; doesNotExist ; 1995 ; Mansoura Medical Journal Volume 24 ; 24 ; >
@@ -31,14 +31,14 @@
       au < doesNotExist ; doesNotExist ; 1997 ; Mansoura Medical Journal Volume 26 ; 26 ; >
       au < doesNotExist ; doesNotExist ; 1998 ; Mansoura Medical Journal Volume 27 ; 27 ; >
       au < doesNotExist ; doesNotExist ; 1999 ; Mansoura Medical Journal Volume 28 ; 28 ; >
-      au < manifest ; exists ; 2000 ; Mansoura Medical Journal Volume 29 ; 29 ; >
-      au < manifest ; exists ; 2001 ; Mansoura Medical Journal Volume 30 ; 30 ; >
-      au < manifest ; exists ; 2002 ; Mansoura Medical Journal Volume 31 ; 31 ; >
-      au < manifest ; exists ; 2003 ; Mansoura Medical Journal Volume 32 ; 32 ; >
-      au < manifest ; exists ; 2004 ; Mansoura Medical Journal Volume 33 ; 33 ; >
-      au < manifest ; exists ; 2005 ; Mansoura Medical Journal Volume 34 ; 34 ; >
-      au < manifest ; exists ; 2006 ; Mansoura Medical Journal Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2007 ; Mansoura Medical Journal Volume 36 ; 36 ; >
+      au < testing ; exists ; 2000 ; Mansoura Medical Journal Volume 29 ; 29 ; >
+      au < testing ; exists ; 2001 ; Mansoura Medical Journal Volume 30 ; 30 ; >
+      au < testing ; exists ; 2002 ; Mansoura Medical Journal Volume 31 ; 31 ; >
+      au < testing ; exists ; 2003 ; Mansoura Medical Journal Volume 32 ; 32 ; >
+      au < testing ; exists ; 2004 ; Mansoura Medical Journal Volume 33 ; 33 ; >
+      au < testing ; exists ; 2005 ; Mansoura Medical Journal Volume 34 ; 34 ; >
+      au < testing ; exists ; 2006 ; Mansoura Medical Journal Volume 35 ; 35 ; >
+      au < testing ; exists ; 2007 ; Mansoura Medical Journal Volume 36 ; 36 ; >
       au < crawling ; exists ; 2008 ; Mansoura Medical Journal Volume 37 ; 37 ; >
       au < ready ; exists ; 2009 ; Mansoura Medical Journal Volume 38 ; 38 ; >
       au < doesNotExist ; doesNotExist ; 2010 ; Mansoura Medical Journal Volume 39 ; 39 ; >

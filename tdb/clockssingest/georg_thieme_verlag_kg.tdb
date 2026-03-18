@@ -418,16 +418,16 @@
     param[journal_id] = 10.1055/s-00000008
     comment[years] = 1948-current
 
-    au < manifest ; exists ; 1970 ; 1970 ; Allgemeine Homöopathische Zeitung Volume 205 ; 205 ; >
-    au < manifest ; exists ; 1971 ; 1971 ; Allgemeine Homöopathische Zeitung Volume 206 ; 206 ; >
-    au < manifest ; exists ; 1972 ; 1972 ; Allgemeine Homöopathische Zeitung Volume 207 ; 207 ; >
-    au < manifest ; exists ; 1973 ; 1973 ; Allgemeine Homöopathische Zeitung Volume 208 ; 208 ; >
-    au < manifest ; exists ; 1974 ; 1974 ; Allgemeine Homöopathische Zeitung Volume 209 ; 209 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; Allgemeine Homöopathische Zeitung Volume 210 ; 210 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; Allgemeine Homöopathische Zeitung Volume 211 ; 211 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; Allgemeine Homöopathische Zeitung Volume 212 ; 212 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; Allgemeine Homöopathische Zeitung Volume 213 ; 213 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; Allgemeine Homöopathische Zeitung Volume 214 ; 214 ; >
+    au < testing ; exists ; 1970 ; 1970 ; Allgemeine Homöopathische Zeitung Volume 205 ; 205 ; >
+    au < testing ; exists ; 1971 ; 1971 ; Allgemeine Homöopathische Zeitung Volume 206 ; 206 ; >
+    au < testing ; exists ; 1972 ; 1972 ; Allgemeine Homöopathische Zeitung Volume 207 ; 207 ; >
+    au < testing ; exists ; 1973 ; 1973 ; Allgemeine Homöopathische Zeitung Volume 208 ; 208 ; >
+    au < testing ; exists ; 1974 ; 1974 ; Allgemeine Homöopathische Zeitung Volume 209 ; 209 ; >
+    au < testing ; exists ; 1975 ; 1975 ; Allgemeine Homöopathische Zeitung Volume 210 ; 210 ; >
+    au < testing ; exists ; 1976 ; 1976 ; Allgemeine Homöopathische Zeitung Volume 211 ; 211 ; >
+    au < testing ; exists ; 1977 ; 1977 ; Allgemeine Homöopathische Zeitung Volume 212 ; 212 ; >
+    au < testing ; exists ; 1978 ; 1978 ; Allgemeine Homöopathische Zeitung Volume 213 ; 213 ; >
+    au < testing ; exists ; 1979 ; 1979 ; Allgemeine Homöopathische Zeitung Volume 214 ; 214 ; >
     au < finished ; finished ; 1980 ; 1980 ; Allgemeine Homöopathische Zeitung Volume 215 ; 215 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1981 ; 1981 ; Allgemeine Homöopathische Zeitung Volume 216 ; 216 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1982 ; 1982 ; Allgemeine Homöopathische Zeitung Volume 217 ; 217 ; reingest3.clockss.org:8083 >
@@ -1400,16 +1400,16 @@
    au < manifest ; exists ; 1967 ; 1967 ; DMW - Deutsche Medizinische Wochenschrift Volume 93 ; 93 ; >
    au < manifest ; exists ; 1968 ; 1968 ; DMW - Deutsche Medizinische Wochenschrift Volume 94 ; 94 ; >
    au < manifest ; exists ; 1969 ; 1969 ; DMW - Deutsche Medizinische Wochenschrift Volume 95 ; 95 ; >
-   au < manifest ; exists ; 1970 ; 1970 ; DMW - Deutsche Medizinische Wochenschrift Volume 96 ; 96 ; >
-   au < manifest ; exists ; 1971 ; 1971 ; DMW - Deutsche Medizinische Wochenschrift Volume 97 ; 97 ; >
-   au < manifest ; exists ; 1972 ; 1972 ; DMW - Deutsche Medizinische Wochenschrift Volume 98 ; 98 ; >
-   au < manifest ; exists ; 1973 ; 1973 ; DMW - Deutsche Medizinische Wochenschrift Volume 99 ; 99 ; >
-   au < manifest ; exists ; 1974 ; 1974 ; DMW - Deutsche Medizinische Wochenschrift Volume 100 ; 100 ; >
-   au < manifest ; exists ; 1975 ; 1975 ; DMW - Deutsche Medizinische Wochenschrift Volume 101 ; 101 ; >
-   au < manifest ; exists ; 1976 ; 1976 ; DMW - Deutsche Medizinische Wochenschrift Volume 102 ; 102 ; >
-   au < manifest ; exists ; 1977 ; 1977 ; DMW - Deutsche Medizinische Wochenschrift Volume 103 ; 103 ; >
-   au < manifest ; exists ; 1978 ; 1978 ; DMW - Deutsche Medizinische Wochenschrift Volume 104 ; 104 ; >
-   au < manifest ; exists ; 1979 ; 1979 ; DMW - Deutsche Medizinische Wochenschrift Volume 105 ; 105 ; >
+   au < testing ; exists ; 1970 ; 1970 ; DMW - Deutsche Medizinische Wochenschrift Volume 96 ; 96 ; >
+   au < testing ; exists ; 1971 ; 1971 ; DMW - Deutsche Medizinische Wochenschrift Volume 97 ; 97 ; >
+   au < testing ; exists ; 1972 ; 1972 ; DMW - Deutsche Medizinische Wochenschrift Volume 98 ; 98 ; >
+   au < testing ; exists ; 1973 ; 1973 ; DMW - Deutsche Medizinische Wochenschrift Volume 99 ; 99 ; >
+   au < testing ; exists ; 1974 ; 1974 ; DMW - Deutsche Medizinische Wochenschrift Volume 100 ; 100 ; >
+   au < testing ; exists ; 1975 ; 1975 ; DMW - Deutsche Medizinische Wochenschrift Volume 101 ; 101 ; >
+   au < testing ; exists ; 1976 ; 1976 ; DMW - Deutsche Medizinische Wochenschrift Volume 102 ; 102 ; >
+   au < testing ; exists ; 1977 ; 1977 ; DMW - Deutsche Medizinische Wochenschrift Volume 103 ; 103 ; >
+   au < testing ; exists ; 1978 ; 1978 ; DMW - Deutsche Medizinische Wochenschrift Volume 104 ; 104 ; >
+   au < testing ; exists ; 1979 ; 1979 ; DMW - Deutsche Medizinische Wochenschrift Volume 105 ; 105 ; >
    au < finished ; finished ; 1980 ; 1980 ; DMW - Deutsche Medizinische Wochenschrift Volume 106 ; 106 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1981 ; 1981 ; DMW - Deutsche Medizinische Wochenschrift Volume 107 ; 107 ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 1982 ; 1982 ; DMW - Deutsche Medizinische Wochenschrift Volume 108 ; 108 ; reingest4.clockss.org:8082 >
@@ -1548,16 +1548,16 @@
 
 
    au < manifest ; exists ; 1969 ; 1969 ; Endoscopy Volume 1 ; 1 ; >
-   au < manifest ; exists ; 1970 ; 1970 ; Endoscopy Volume 2 ; 2 ; >
-   au < manifest ; exists ; 1971 ; 1971 ; Endoscopy Volume 3 ; 3 ; >
-   au < manifest ; exists ; 1972 ; 1972 ; Endoscopy Volume 4 ; 4 ; >
-   au < manifest ; exists ; 1973 ; 1973 ; Endoscopy Volume 5 ; 5 ; >
-   au < manifest ; exists ; 1974 ; 1974 ; Endoscopy Volume 6 ; 6 ; >
-   au < manifest ; exists ; 1975 ; 1975 ; Endoscopy Volume 7 ; 7 ; >
-   au < manifest ; exists ; 1976 ; 1976 ; Endoscopy Volume 8 ; 8 ; >
-   au < manifest ; exists ; 1977 ; 1977 ; Endoscopy Volume 9 ; 9 ; >
-   au < manifest ; exists ; 1978 ; 1978 ; Endoscopy Volume 10 ; 10 ; >
-   au < manifest ; exists ; 1979 ; 1979 ; Endoscopy Volume 11 ; 11 ; >
+   au < testing ; exists ; 1970 ; 1970 ; Endoscopy Volume 2 ; 2 ; >
+   au < testing ; exists ; 1971 ; 1971 ; Endoscopy Volume 3 ; 3 ; >
+   au < testing ; exists ; 1972 ; 1972 ; Endoscopy Volume 4 ; 4 ; >
+   au < testing ; exists ; 1973 ; 1973 ; Endoscopy Volume 5 ; 5 ; >
+   au < testing ; exists ; 1974 ; 1974 ; Endoscopy Volume 6 ; 6 ; >
+   au < testing ; exists ; 1975 ; 1975 ; Endoscopy Volume 7 ; 7 ; >
+   au < testing ; exists ; 1976 ; 1976 ; Endoscopy Volume 8 ; 8 ; >
+   au < testing ; exists ; 1977 ; 1977 ; Endoscopy Volume 9 ; 9 ; >
+   au < testing ; exists ; 1978 ; 1978 ; Endoscopy Volume 10 ; 10 ; >
+   au < testing ; exists ; 1979 ; 1979 ; Endoscopy Volume 11 ; 11 ; >
    au < finished ; frozen ; 1980 ; 1980 ; Endoscopy Volume 12 ; 12 ; reingest4.clockss.org:8082 >
    au < finished ; finished ; 1981 ; 1981 ; Endoscopy Volume 13 ; 13 ; reingest3.clockss.org:8083 >
    au < finished ; frozen ; 1982 ; 1982 ; Endoscopy Volume 14 ; 14 ; reingest4.clockss.org:8082 >
@@ -2579,16 +2579,16 @@
     comment[years] = 1969
 
    au < manifest ; exists ; 1969 ; 1969 ; Hormone and Metabolic Research Volume 1 ; 1 ; >
-   au < manifest ; exists ; 1970 ; 1970 ; Hormone and Metabolic Research Volume 2 ; 2 ; >
-   au < manifest ; exists ; 1971 ; 1971 ; Hormone and Metabolic Research Volume 3 ; 3 ; >
-   au < manifest ; exists ; 1972 ; 1972 ; Hormone and Metabolic Research Volume 4 ; 4 ; >
-   au < manifest ; exists ; 1973 ; 1973 ; Hormone and Metabolic Research Volume 5 ; 5 ; >
-   au < manifest ; exists ; 1974 ; 1974 ; Hormone and Metabolic Research Volume 6 ; 6 ; >
-   au < manifest ; exists ; 1975 ; 1975 ; Hormone and Metabolic Research Volume 7 ; 7 ; >
-   au < manifest ; exists ; 1976 ; 1976 ; Hormone and Metabolic Research Volume 8 ; 8 ; >
-   au < manifest ; exists ; 1977 ; 1977 ; Hormone and Metabolic Research Volume 9 ; 9 ; >
-   au < manifest ; exists ; 1978 ; 1978 ; Hormone and Metabolic Research Volume 10 ; 10 ; >
-   au < manifest ; exists ; 1979 ; 1979 ; Hormone and Metabolic Research Volume 11 ; 11 ; >
+   au < testing ; exists ; 1970 ; 1970 ; Hormone and Metabolic Research Volume 2 ; 2 ; >
+   au < testing ; exists ; 1971 ; 1971 ; Hormone and Metabolic Research Volume 3 ; 3 ; >
+   au < testing ; exists ; 1972 ; 1972 ; Hormone and Metabolic Research Volume 4 ; 4 ; >
+   au < testing ; exists ; 1973 ; 1973 ; Hormone and Metabolic Research Volume 5 ; 5 ; >
+   au < testing ; exists ; 1974 ; 1974 ; Hormone and Metabolic Research Volume 6 ; 6 ; >
+   au < testing ; exists ; 1975 ; 1975 ; Hormone and Metabolic Research Volume 7 ; 7 ; >
+   au < testing ; exists ; 1976 ; 1976 ; Hormone and Metabolic Research Volume 8 ; 8 ; >
+   au < testing ; exists ; 1977 ; 1977 ; Hormone and Metabolic Research Volume 9 ; 9 ; >
+   au < testing ; exists ; 1978 ; 1978 ; Hormone and Metabolic Research Volume 10 ; 10 ; >
+   au < testing ; exists ; 1979 ; 1979 ; Hormone and Metabolic Research Volume 11 ; 11 ; >
    au < finished ; manifest ; 1980 ; 1980 ; Hormone and Metabolic Research Volume 12 ; 12 ; reingest1.clockss.org:8082 >
    au < finished ; manifest ; 1981 ; 1981 ; Hormone and Metabolic Research Volume 13 ; 13 ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 1982 ; 1982 ; Hormone and Metabolic Research Volume 14 ; 14 ; reingest3.clockss.org:8083 >
@@ -4384,16 +4384,16 @@
     au < manifest ; exists ; 1967 ; 1967 ; min - Minimally Invasive Neurosurgery Volume 10 ; 10 ; >
     au < manifest ; exists ; 1968 ; 1968 ; min - Minimally Invasive Neurosurgery Volume 11 ; 11 ; >
     au < manifest ; exists ; 1969 ; 1969 ; min - Minimally Invasive Neurosurgery Volume 12 ; 12 ; >
-    au < manifest ; exists ; 1970 ; 1970 ; min - Minimally Invasive Neurosurgery Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1971 ; 1971 ; min - Minimally Invasive Neurosurgery Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1972 ; 1972 ; min - Minimally Invasive Neurosurgery Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1973 ; 1973 ; min - Minimally Invasive Neurosurgery Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1974 ; 1974 ; min - Minimally Invasive Neurosurgery Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; min - Minimally Invasive Neurosurgery Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; min - Minimally Invasive Neurosurgery Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; min - Minimally Invasive Neurosurgery Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; min - Minimally Invasive Neurosurgery Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; min - Minimally Invasive Neurosurgery Volume 22 ; 22 ; >
+    au < testing ; exists ; 1970 ; 1970 ; min - Minimally Invasive Neurosurgery Volume 13 ; 13 ; >
+    au < testing ; exists ; 1971 ; 1971 ; min - Minimally Invasive Neurosurgery Volume 14 ; 14 ; >
+    au < testing ; exists ; 1972 ; 1972 ; min - Minimally Invasive Neurosurgery Volume 15 ; 15 ; >
+    au < testing ; exists ; 1973 ; 1973 ; min - Minimally Invasive Neurosurgery Volume 16 ; 16 ; >
+    au < testing ; exists ; 1974 ; 1974 ; min - Minimally Invasive Neurosurgery Volume 17 ; 17 ; >
+    au < testing ; exists ; 1975 ; 1975 ; min - Minimally Invasive Neurosurgery Volume 18 ; 18 ; >
+    au < testing ; exists ; 1976 ; 1976 ; min - Minimally Invasive Neurosurgery Volume 19 ; 19 ; >
+    au < testing ; exists ; 1977 ; 1977 ; min - Minimally Invasive Neurosurgery Volume 20 ; 20 ; >
+    au < testing ; exists ; 1978 ; 1978 ; min - Minimally Invasive Neurosurgery Volume 21 ; 21 ; >
+    au < testing ; exists ; 1979 ; 1979 ; min - Minimally Invasive Neurosurgery Volume 22 ; 22 ; >
     au < finished ; manifest ; 1980 ; 1980 ; min - Minimally Invasive Neurosurgery Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1981 ; 1981 ; min - Minimally Invasive Neurosurgery Volume 24 ; 24 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1982 ; 1982 ; min - Minimally Invasive Neurosurgery Volume 25 ; 25 ; reingest4.clockss.org:8082 >
@@ -5039,16 +5039,16 @@
 
     au < manifest ; exists ; 1968 ; 1968 ; Pharmacopsychiatry Volume 1 ; 1 ; >
     au < manifest ; exists ; 1969 ; 1969 ; Pharmacopsychiatry Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1970 ; 1970 ; Pharmacopsychiatry Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1971 ; 1971 ; Pharmacopsychiatry Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1972 ; 1972 ; Pharmacopsychiatry Volume 5 ; 5 ; >
-    au < manifest ; exists ; 1973 ; 1973 ; Pharmacopsychiatry Volume 6 ; 6 ; >
-    au < manifest ; exists ; 1974 ; 1974 ; Pharmacopsychiatry Volume 7 ; 7 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; Pharmacopsychiatry Volume 8 ; 8 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; Pharmacopsychiatry Volume 9 ; 9 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; Pharmacopsychiatry Volume 10 ; 10 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; Pharmacopsychiatry Volume 11 ; 11 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; Pharmacopsychiatry Volume 12 ; 12 ; >
+    au < testing ; exists ; 1970 ; 1970 ; Pharmacopsychiatry Volume 3 ; 3 ; >
+    au < testing ; exists ; 1971 ; 1971 ; Pharmacopsychiatry Volume 4 ; 4 ; >
+    au < testing ; exists ; 1972 ; 1972 ; Pharmacopsychiatry Volume 5 ; 5 ; >
+    au < testing ; exists ; 1973 ; 1973 ; Pharmacopsychiatry Volume 6 ; 6 ; >
+    au < testing ; exists ; 1974 ; 1974 ; Pharmacopsychiatry Volume 7 ; 7 ; >
+    au < testing ; exists ; 1975 ; 1975 ; Pharmacopsychiatry Volume 8 ; 8 ; >
+    au < testing ; exists ; 1976 ; 1976 ; Pharmacopsychiatry Volume 9 ; 9 ; >
+    au < testing ; exists ; 1977 ; 1977 ; Pharmacopsychiatry Volume 10 ; 10 ; >
+    au < testing ; exists ; 1978 ; 1978 ; Pharmacopsychiatry Volume 11 ; 11 ; >
+    au < testing ; exists ; 1979 ; 1979 ; Pharmacopsychiatry Volume 12 ; 12 ; >
     au < finished ; manifest ; 1980 ; 1980 ; Pharmacopsychiatry Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1981 ; 1981 ; Pharmacopsychiatry Volume 14 ; 14 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1982 ; 1982 ; Pharmacopsychiatry Volume 15 ; 15 ; reingest4.clockss.org:8082 >
@@ -5317,16 +5317,16 @@
    au < manifest ; exists ; 1967 ; 1967 ; Planta Medica Volume 15 ; 15 ; >
    au < manifest ; exists ; 1968 ; 1968 ; Planta Medica Volume 16 ; 16 ; >
    au < manifest ; exists ; 1969 ; 1969 ; Planta Medica Volume 17 ; 17 ; >
-   au < manifest ; exists ; 1970 ; 1970 ; Planta Medica Volume 18-19 ; 18-19 ; >
-   au < manifest ; exists ; 1971 ; 1971 ; Planta Medica Volume 19-20 ; 19-20 ; >
-   au < manifest ; exists ; 1972 ; 1972 ; Planta Medica Volume 21-22 ; 21-22 ; >
-   au < manifest ; exists ; 1973 ; 1973 ; Planta Medica Volume 23-24 ; 23-24 ; >
-   au < manifest ; exists ; 1974 ; 1974 ; Planta Medica Volume 25-26 ; 25-26 ; >
-   au < manifest ; exists ; 1975 ; 1975 ; Planta Medica Volume 27-28 ; 27-28 ; >
-   au < manifest ; exists ; 1976 ; 1976 ; Planta Medica Volume 29-30 ; 29-30 ; >
-   au < manifest ; exists ; 1977 ; 1977 ; Planta Medica Volume 31-32 ; 31-32 ; >
-   au < manifest ; exists ; 1978 ; 1978 ; Planta Medica Volume 33-34 ; 33-34 ; >
-   au < manifest ; exists ; 1979 ; 1979 ; Planta Medica Volume 35-37 ; 35-37 ; >
+   au < testing ; exists ; 1970 ; 1970 ; Planta Medica Volume 18-19 ; 18-19 ; >
+   au < testing ; exists ; 1971 ; 1971 ; Planta Medica Volume 19-20 ; 19-20 ; >
+   au < testing ; exists ; 1972 ; 1972 ; Planta Medica Volume 21-22 ; 21-22 ; >
+   au < testing ; exists ; 1973 ; 1973 ; Planta Medica Volume 23-24 ; 23-24 ; >
+   au < testing ; exists ; 1974 ; 1974 ; Planta Medica Volume 25-26 ; 25-26 ; >
+   au < testing ; exists ; 1975 ; 1975 ; Planta Medica Volume 27-28 ; 27-28 ; >
+   au < testing ; exists ; 1976 ; 1976 ; Planta Medica Volume 29-30 ; 29-30 ; >
+   au < testing ; exists ; 1977 ; 1977 ; Planta Medica Volume 31-32 ; 31-32 ; >
+   au < testing ; exists ; 1978 ; 1978 ; Planta Medica Volume 33-34 ; 33-34 ; >
+   au < testing ; exists ; 1979 ; 1979 ; Planta Medica Volume 35-37 ; 35-37 ; >
    au < finished ; manifest ; 1980 ; 1980 ; Planta Medica Volume 38-40 ; 38-40 ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 1981 ; 1981 ; Planta Medica Volume 41-43 ; 41-43 ; reingest2.clockss.org:8085 >
    au < finished ; manifest ; 1982 ; 1982 ; Planta Medica Volume 44-46 ; 44-46 ; reingest3.clockss.org:8083 >
@@ -5885,16 +5885,16 @@
     au < manifest ; exists ; 1967 ; 1967 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 139 ; 139 ; >
     au < manifest ; exists ; 1968 ; 1968 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 140 ; 140 ; >
     au < manifest ; exists ; 1969 ; 1969 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 141 ; 141 ; >
-    au < manifest ; exists ; 1970 ; 1970 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 142 ; 142 ; >
-    au < manifest ; exists ; 1971 ; 1971 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 143 ; 143 ; >
-    au < manifest ; exists ; 1972 ; 1972 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 144 ; 144 ; >
-    au < manifest ; exists ; 1973 ; 1973 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 145 ; 145 ; >
-    au < manifest ; exists ; 1974 ; 1974 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 146 ; 146 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 147 ; 147 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 148 ; 148 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 149 ; 149 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 150 ; 150 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 151 ; 151 ; >
+    au < testing ; exists ; 1970 ; 1970 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 142 ; 142 ; >
+    au < testing ; exists ; 1971 ; 1971 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 143 ; 143 ; >
+    au < testing ; exists ; 1972 ; 1972 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 144 ; 144 ; >
+    au < testing ; exists ; 1973 ; 1973 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 145 ; 145 ; >
+    au < testing ; exists ; 1974 ; 1974 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 146 ; 146 ; >
+    au < testing ; exists ; 1975 ; 1975 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 147 ; 147 ; >
+    au < testing ; exists ; 1976 ; 1976 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 148 ; 148 ; >
+    au < testing ; exists ; 1977 ; 1977 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 149 ; 149 ; >
+    au < testing ; exists ; 1978 ; 1978 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 150 ; 150 ; >
+    au < testing ; exists ; 1979 ; 1979 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 151 ; 151 ; >
     au < finished ; manifest ; 1980 ; 1980 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 152 ; 152 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1981 ; 1981 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 153 ; 153 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1982 ; 1982 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 154 ; 154 ; reingest2.clockss.org:8085 >
@@ -6480,12 +6480,12 @@
     param[journal_id] = 10.1055/s-00000077
     comment[years] = 1974-current
 
-    au < manifest ; exists ; 1974 ; 1974 ; Seminars in Thrombosis and Hemostasis Volume 1 (1974) ; 1 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; Seminars in Thrombosis and Hemostasis Volume 1 (1975) ; 1 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; Seminars in Thrombosis and Hemostasis Volume 2 ; 2 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; Seminars in Thrombosis and Hemostasis Volume 3 ; 3 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; Seminars in Thrombosis and Hemostasis Volume 4 ; 4 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; Seminars in Thrombosis and Hemostasis Volume 5 ; 5 ; >
+    au < testing ; exists ; 1974 ; 1974 ; Seminars in Thrombosis and Hemostasis Volume 1 (1974) ; 1 ; >
+    au < testing ; exists ; 1975 ; 1975 ; Seminars in Thrombosis and Hemostasis Volume 1 (1975) ; 1 ; >
+    au < testing ; exists ; 1976 ; 1976 ; Seminars in Thrombosis and Hemostasis Volume 2 ; 2 ; >
+    au < testing ; exists ; 1977 ; 1977 ; Seminars in Thrombosis and Hemostasis Volume 3 ; 3 ; >
+    au < testing ; exists ; 1978 ; 1978 ; Seminars in Thrombosis and Hemostasis Volume 4 ; 4 ; >
+    au < testing ; exists ; 1979 ; 1979 ; Seminars in Thrombosis and Hemostasis Volume 5 ; 5 ; >
     au < finished ; manifest ; 1980 ; 1980 ; Seminars in Thrombosis and Hemostasis Volume 6 ; 6 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1981 ; 1981 ; Seminars in Thrombosis and Hemostasis Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1982 ; 1982 ; Seminars in Thrombosis and Hemostasis Volume 8 ; 8 ; reingest1.clockss.org:8082 >
@@ -7111,7 +7111,7 @@
    comment[years] = 1979-current
 
     #10.1055/s-002-13370
-    au < manifest ; exists ; 1979 ; 1979 ; The Thoracic and Cardiovascular Surgeon Volume 27 ; 27 ; >
+    au < testing ; exists ; 1979 ; 1979 ; The Thoracic and Cardiovascular Surgeon Volume 27 ; 27 ; >
     au < finished ; manifest ; 1980 ; 1980 ; The Thoracic and Cardiovascular Surgeon Volume 28 ; 28 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1981 ; 1981 ; The Thoracic and Cardiovascular Surgeon Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1982 ; 1982 ; The Thoracic and Cardiovascular Surgeon Volume 30 ; 30 ; reingest3.clockss.org:8083 >
@@ -7697,16 +7697,16 @@
     au < manifest ; exists ; 1967 ; 1967 ; Zeitschrift für Klassische Homöopathie Volume 11 ; 11 ; >
     au < manifest ; exists ; 1968 ; 1968 ; Zeitschrift für Klassische Homöopathie Volume 12 ; 12 ; >
     au < manifest ; exists ; 1969 ; 1969 ; Zeitschrift für Klassische Homöopathie Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1970 ; 1970 ; Zeitschrift für Klassische Homöopathie Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1971 ; 1971 ; Zeitschrift für Klassische Homöopathie Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1972 ; 1972 ; Zeitschrift für Klassische Homöopathie Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1973 ; 1973 ; Zeitschrift für Klassische Homöopathie Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1974 ; 1974 ; Zeitschrift für Klassische Homöopathie Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; Zeitschrift für Klassische Homöopathie Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; Zeitschrift für Klassische Homöopathie Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; Zeitschrift für Klassische Homöopathie Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; Zeitschrift für Klassische Homöopathie Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; Zeitschrift für Klassische Homöopathie Volume 23 ; 23 ; >
+    au < testing ; exists ; 1970 ; 1970 ; Zeitschrift für Klassische Homöopathie Volume 14 ; 14 ; >
+    au < testing ; exists ; 1971 ; 1971 ; Zeitschrift für Klassische Homöopathie Volume 15 ; 15 ; >
+    au < testing ; exists ; 1972 ; 1972 ; Zeitschrift für Klassische Homöopathie Volume 16 ; 16 ; >
+    au < testing ; exists ; 1973 ; 1973 ; Zeitschrift für Klassische Homöopathie Volume 17 ; 17 ; >
+    au < testing ; exists ; 1974 ; 1974 ; Zeitschrift für Klassische Homöopathie Volume 18 ; 18 ; >
+    au < testing ; exists ; 1975 ; 1975 ; Zeitschrift für Klassische Homöopathie Volume 19 ; 19 ; >
+    au < testing ; exists ; 1976 ; 1976 ; Zeitschrift für Klassische Homöopathie Volume 20 ; 20 ; >
+    au < testing ; exists ; 1977 ; 1977 ; Zeitschrift für Klassische Homöopathie Volume 21 ; 21 ; >
+    au < testing ; exists ; 1978 ; 1978 ; Zeitschrift für Klassische Homöopathie Volume 22 ; 22 ; >
+    au < testing ; exists ; 1979 ; 1979 ; Zeitschrift für Klassische Homöopathie Volume 23 ; 23 ; >
     au < finished ; manifest ; 1980 ; 1980 ; Zeitschrift für Klassische Homöopathie Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1981 ; 1981 ; Zeitschrift für Klassische Homöopathie Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1982 ; 1982 ; Zeitschrift für Klassische Homöopathie Volume 26 ; 26 ; reingest1.clockss.org:8082 >
@@ -9007,16 +9007,16 @@
     au < manifest ; exists ; 1967 ; 1967 ; British Homeopathic Journal Volume 57 ; 57 ; >
     au < manifest ; exists ; 1968 ; 1968 ; British Homeopathic Journal Volume 58 ; 58 ; >
     au < manifest ; exists ; 1969 ; 1969 ; British Homeopathic Journal Volume 59 ; 59 ; >
-    au < manifest ; exists ; 1970 ; 1970 ; British Homeopathic Journal Volume 60 ; 60 ; >
-    au < manifest ; exists ; 1971 ; 1971 ; British Homeopathic Journal Volume 61 ; 61 ; >
-    au < manifest ; exists ; 1972 ; 1972 ; British Homeopathic Journal Volume 62 ; 62 ; >
-    au < manifest ; exists ; 1973 ; 1973 ; British Homeopathic Journal Volume 63 ; 63 ; >
-    au < manifest ; exists ; 1974 ; 1974 ; British Homeopathic Journal Volume 64 ; 64 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; British Homeopathic Journal Volume 65 ; 65 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; British Homeopathic Journal Volume 66 ; 66 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; British Homeopathic Journal Volume 67 ; 67 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; British Homeopathic Journal Volume 68 ; 68 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; British Homeopathic Journal Volume 69 ; 69 ; >
+    au < testing ; exists ; 1970 ; 1970 ; British Homeopathic Journal Volume 60 ; 60 ; >
+    au < testing ; exists ; 1971 ; 1971 ; British Homeopathic Journal Volume 61 ; 61 ; >
+    au < testing ; exists ; 1972 ; 1972 ; British Homeopathic Journal Volume 62 ; 62 ; >
+    au < testing ; exists ; 1973 ; 1973 ; British Homeopathic Journal Volume 63 ; 63 ; >
+    au < testing ; exists ; 1974 ; 1974 ; British Homeopathic Journal Volume 64 ; 64 ; >
+    au < testing ; exists ; 1975 ; 1975 ; British Homeopathic Journal Volume 65 ; 65 ; >
+    au < testing ; exists ; 1976 ; 1976 ; British Homeopathic Journal Volume 66 ; 66 ; >
+    au < testing ; exists ; 1977 ; 1977 ; British Homeopathic Journal Volume 67 ; 67 ; >
+    au < testing ; exists ; 1978 ; 1978 ; British Homeopathic Journal Volume 68 ; 68 ; >
+    au < testing ; exists ; 1979 ; 1979 ; British Homeopathic Journal Volume 69 ; 69 ; >
     au < finished ; manifest ; 1980 ; 1980 ; British Homeopathic Journal Volume 70 ; 70 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1981 ; 1981 ; British Homeopathic Journal Volume 71 ; 71 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1982 ; 1982 ; British Homeopathic Journal Volume 72 ; 72 ; reingest1.clockss.org:8082 >
@@ -9837,16 +9837,16 @@
     au < manifest ; exists ; 1967 ; 1967 ; Thrombosis and Haemostasis Volume 11 ; 11 ; >
     au < manifest ; exists ; 1968 ; 1968 ; Thrombosis and Haemostasis Volume 12 ; 12 ; >
     au < manifest ; exists ; 1969 ; 1969 ; Thrombosis and Haemostasis Volume 13 ; 13 ; >
-    au < manifest ; exists ; 1970 ; 1970 ; Thrombosis and Haemostasis Volume 14 ; 14 ; >
-    au < manifest ; exists ; 1971 ; 1971 ; Thrombosis and Haemostasis Volume 15 ; 15 ; >
-    au < manifest ; exists ; 1972 ; 1972 ; Thrombosis and Haemostasis Volume 16 ; 16 ; >
-    au < manifest ; exists ; 1973 ; 1973 ; Thrombosis and Haemostasis Volume 17 ; 17 ; >
-    au < manifest ; exists ; 1974 ; 1974 ; Thrombosis and Haemostasis Volume 18 ; 18 ; >
-    au < manifest ; exists ; 1975 ; 1975 ; Thrombosis and Haemostasis Volume 19 ; 19 ; >
-    au < manifest ; exists ; 1976 ; 1976 ; Thrombosis and Haemostasis Volume 20 ; 20 ; >
-    au < manifest ; exists ; 1977 ; 1977 ; Thrombosis and Haemostasis Volume 21 ; 21 ; >
-    au < manifest ; exists ; 1978 ; 1978 ; Thrombosis and Haemostasis Volume 22 ; 22 ; >
-    au < manifest ; exists ; 1979 ; 1979 ; Thrombosis and Haemostasis Volume 23 ; 23 ; >
+    au < testing ; exists ; 1970 ; 1970 ; Thrombosis and Haemostasis Volume 14 ; 14 ; >
+    au < testing ; exists ; 1971 ; 1971 ; Thrombosis and Haemostasis Volume 15 ; 15 ; >
+    au < testing ; exists ; 1972 ; 1972 ; Thrombosis and Haemostasis Volume 16 ; 16 ; >
+    au < testing ; exists ; 1973 ; 1973 ; Thrombosis and Haemostasis Volume 17 ; 17 ; >
+    au < testing ; exists ; 1974 ; 1974 ; Thrombosis and Haemostasis Volume 18 ; 18 ; >
+    au < testing ; exists ; 1975 ; 1975 ; Thrombosis and Haemostasis Volume 19 ; 19 ; >
+    au < testing ; exists ; 1976 ; 1976 ; Thrombosis and Haemostasis Volume 20 ; 20 ; >
+    au < testing ; exists ; 1977 ; 1977 ; Thrombosis and Haemostasis Volume 21 ; 21 ; >
+    au < testing ; exists ; 1978 ; 1978 ; Thrombosis and Haemostasis Volume 22 ; 22 ; >
+    au < testing ; exists ; 1979 ; 1979 ; Thrombosis and Haemostasis Volume 23 ; 23 ; >
     au < finished ; manifest ; 1980 ; 1980 ; Thrombosis and Haemostasis Volume 24 ; 24 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1981 ; 1981 ; Thrombosis and Haemostasis Volume 25 ; 25 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1982 ; 1982 ; Thrombosis and Haemostasis Volume 26 ; 26 ; reingest1.clockss.org:8082 >
