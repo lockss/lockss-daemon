@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>55</string>
+    <string>56</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -52,11 +52,11 @@ POSSIBILITY OF SUCH DAMAGE.
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>5</string>
+        <string>6</string>
       </entry>
       <entry>
         <string>Substance</string>
-        <string>1</string>
+        <string>2</string>
       </entry>
     </map>
   </entry>
@@ -264,7 +264,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <!-- manifest to articles -->
     <string>au_refetch_depth</string>
-    <int>1</int>
+    <int>2</int>
   </entry>
   <entry>
     <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
