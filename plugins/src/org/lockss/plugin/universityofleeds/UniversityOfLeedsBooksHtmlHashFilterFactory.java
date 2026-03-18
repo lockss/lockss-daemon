@@ -37,6 +37,7 @@ import org.htmlparser.NodeFilter;
 import org.htmlparser.filters.OrFilter;
 import org.htmlparser.filters.TagNameFilter;
 import org.lockss.filter.FilterUtil;
+import org.lockss.filter.WhiteSpaceFilter;
 import org.lockss.filter.html.HtmlFilterInputStream;
 import org.lockss.filter.html.HtmlNodeFilterTransform;
 import org.lockss.filter.html.HtmlNodeFilters;
@@ -62,14 +63,24 @@ public class UniversityOfLeedsBooksHtmlHashFilterFactory implements FilterFactor
      new TagNameFilter("footer"),
      new TagNameFilter("aside"),
      new TagNameFilter("iframe"),
+     new TagNameFilter("meta"),
+
      HtmlNodeFilters.comment(),
+
      HtmlNodeFilters.tagWithAttributeRegex("nav", "class", "nav-reading"),
      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "license-attribution"),
      HtmlNodeFilters.tagWithAttributeRegex("div","class", "block-reading-meta__subsection"),
+     HtmlNodeFilters.tagWithAttributeRegex("div", "id", "wpadminbar"), HtmlNodeFilters.tagWithAttributeRegex("link", "rel", "https://api.w.org"),
     };
-    InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
-        HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
-    Reader httpFilter = FilterUtil.getReader(filteredStream, encoding);
-    return new ReaderInputStream(httpFilter);
+
+      InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
+              HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+
+      Reader reader = FilterUtil.getReader(filteredStream, encoding);
+
+      Reader whiteSpaceFilter = new WhiteSpaceFilter(reader);
+
+      return new ReaderInputStream(whiteSpaceFilter);
+
   }
 }
