@@ -31,6 +31,18 @@
   {
 
     title <
+      name = Journal of Interventional Epidemiology and Public Health ;
+      eissn = 2664-2824
+    >
+    provider = African Field Epidemiology Network
+
+    au < expected ; exists ; 2026 ; Journal of Interventional Epidemiology and Public Health ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
       name = Alphaville: Journal of Film and Screen Media ;
       eissn = 2009-4078
     >
@@ -141,23 +153,34 @@
   {
 
     title <
+      name = Geopauta ;
+      eissn = 2594-5033
+    >
+    provider = Edições UESB
+
+    au < expected ; exists ; 2025 ; Geopauta ; UNKNOWN >
+  }
+
+  {
+
+    title <
+      name = Democrazia e Diritti Sociali ;
+      eissn = 2610-9166
+    >
+    provider = Edizioni Università di Cassino 
+
+    au < expected ; exists ; 2026 ; Democrazia e Diritti Sociali ; UNKNOWN >
+  }
+
+  {
+
+    title <
       name = Educational Journal of Living Theories ;
       eissn = 2009-1788
     >
     provider = Educational Journal of Living Theories
 
     au < readySource ; crawling ; 2023-2026 ; Educational Journal of Living Theories ; Educational_Journal_of_Living_Theories__ISSN_2009-1788 >
-  }
-
-  {
-
-    title <
-      name = Geopauta ;
-      eissn = 2594-5033
-    >
-    provider = Edições UESB
-
-    au < expected ; exists ; 2026 ; Geopauta ; UNKNOWN >
   }
 
   {
@@ -205,7 +228,7 @@
     >
     provider = Facultad de Ciencias Jurídicas de la Universidad Católica del Norte, Facultades de Derecho de Antofagasta y Coquimbo
 
-    au < expected ; exists ; 2026 ; Revista de Derecho (Coquimbo) ; UNKNOWN >
+    au < expected ; exists ; 2024 ; Revista de Derecho (Coquimbo) ; UNKNOWN >
 
   }
 
@@ -277,7 +300,7 @@
     >
     provider = Institute of Religious Sciences and Philosophy of the Universidad Católica del Norte
 
-    au < expected ; exists ; 2026 ; Cuadernos de teología - Universidad Católica del Norte ; UNKNOWN >
+    au < expected ; exists ; 2024 ; Cuadernos de teología - Universidad Católica del Norte ; UNKNOWN >
 
   }
 
@@ -326,7 +349,19 @@
     >
     provider = Instituto Mexicano de Tecnología del Agua, Tecnología y ciencias del agua
 
-    au < expected ; exists ; 2026 ; Tecnología y ciencias del agua ; UNKNOWN >
+    au < expected ; exists ; 2025 ; Tecnología y ciencias del agua ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Management and Data Analytics ;
+      eissn = 2816-9395
+    >
+    provider = International Journal of Management and Data Analytics
+
+    au < expected ; exists ; 2026 ; International Journal of Management and Data Analytics ; UNKNOWN >
 
   }
 
@@ -350,7 +385,7 @@
     >
     provider = Krishna Vishwa Vidyapeeth, Karad
 
-    au < expected ; exists ; 2026 ; Journal of Krishna Institute of Medical Sciences University ; UNKNOWN >
+    au < expected ; exists ; 2024 ; Journal of Krishna Institute of Medical Sciences University ; UNKNOWN >
 
   }
 
@@ -548,6 +583,32 @@
     provider = Universidad de Cantabria
 
     au < readySource ; crawling ; 2023-2026 ; Santander, Estudios de Patrimonio ; santander_estudios_de_patrimonio_2605-5317 >
+
+  }
+
+  {
+
+    title <
+      name = Batulis Civil Law Review ;
+      issn = 2722-4465 ;
+      eissn = 2746-8151
+    >
+    provider = Universitas Pattimura, Faculty of Law
+
+    au < expected ; exists ; 2026 ; Batulis Civil Law Review ; UNKNOWN >
+
+  }
+
+  {
+
+    title <
+      name = Kosova Anthropologica ;
+      issn = 3027-5172 ;
+      eissn = 3027-5024
+    >
+    provider = University of Prishtina, Kosova, Department of Anthropology, Faculty of Philosophy
+
+    au < expected ; exists ; 2026 ; Kosova Anthropologica ; UNKNOWN >
 
   }
 
