@@ -549,6 +549,7 @@
     au < released ; 2023 ; Congressionally Mandated Reports 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Congressionally Mandated Reports 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < ready ; 2025 ; Congressionally Mandated Reports 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Congressionally Mandated Reports 2026 ; 2026 ; https://www.govinfo.gov/ >
 
   }
 
@@ -587,8 +588,10 @@
     param[collection_id] = CPRT
 
     au < released ; 1923 ; Congressional Committee Prints 1923 ; 1923 ; https://www.govinfo.gov/ >
+    au < manifest ; 1936 ; Congressional Committee Prints 1936 ; 1936 ; https://www.govinfo.gov/ >
     au < released ; 1941 ; Congressional Committee Prints 1941 ; 1941 ; https://www.govinfo.gov/ >
     au < released ; 1944 ; Congressional Committee Prints 1944 ; 1944 ; https://www.govinfo.gov/ >
+    au < manifest ; 1948 ; Congressional Committee Prints 1948 ; 1948 ; https://www.govinfo.gov/ >
     au < released ; 1949 ; Congressional Committee Prints 1949 ; 1949 ; https://www.govinfo.gov/ >
     au < released ; 1950 ; Congressional Committee Prints 1950 ; 1950 ; https://www.govinfo.gov/ >
     au < released ; 1951 ; Congressional Committee Prints 1951 ; 1951 ; https://www.govinfo.gov/ >
@@ -623,8 +626,12 @@
     au < released ; 1980 ; Congressional Committee Prints 1980 ; 1980 ; https://www.govinfo.gov/ >
     au < released ; 1981 ; Congressional Committee Prints 1981 ; 1981 ; https://www.govinfo.gov/ >
     au < released ; 1982 ; Congressional Committee Prints 1982 ; 1982 ; https://www.govinfo.gov/ >
+    au < manifest ; 1983 ; Congressional Committee Prints 1983 ; 1983 ; https://www.govinfo.gov/ >
+    au < manifest ; 1984 ; Congressional Committee Prints 1984 ; 1984 ; https://www.govinfo.gov/ >
+    au < manifest ; 1985 ; Congressional Committee Prints 1985 ; 1985 ; https://www.govinfo.gov/ >
     au < released ; 1986 ; Congressional Committee Prints 1986 ; 1986 ; https://www.govinfo.gov/ >
     au < released ; 1987 ; Congressional Committee Prints 1987 ; 1987 ; https://www.govinfo.gov/ >
+    au < manifest ; 1988 ; Congressional Committee Prints 1988 ; 1988 ; https://www.govinfo.gov/ >
     au < released ; 1990 ; Congressional Committee Prints 1990 ; 1990 ; https://www.govinfo.gov/ >
     au < released ; 1991 ; Congressional Committee Prints 1991 ; 1991 ; https://www.govinfo.gov/ >
     au < released ; 1992 ; Congressional Committee Prints 1992 ; 1992 ; https://www.govinfo.gov/ >
@@ -645,6 +652,7 @@
     au < released ; 2023 ; Congressional Committee Prints 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Congressional Committee Prints 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < ready ; 2025 ; Congressional Committee Prints 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Congressional Committee Prints 2026 ; 2026 ; https://www.govinfo.gov/ >
 
 
   }
@@ -768,14 +776,15 @@
     au < released ; 1991 ; Congressional Directory 1991 ; 1991 ; https://www.govinfo.gov/ >
     au < released ; 1993 ; Congressional Directory 1993 ; 1993 ; https://www.govinfo.gov/ >
     au < released ; 1995 ; Congressional Directory 1995 ; 1995 ; https://www.govinfo.gov/ >
+    au < released ; 1997 ; Congressional Directory 1997 ; 1997 ; https://www.govinfo.gov/ >
+    au < released ; 1999 ; Congressional Directory 1999 ; 1999 ; https://www.govinfo.gov/ >
     au < released ; 2016 ; Congressional Directory 2016 ; 2016 ; https://www.govinfo.gov/ >
     au < released ; 2018 ; Congressional Directory 2018 ; 2018 ; https://www.govinfo.gov/ >
     au < released ; 2020 ; Congressional Directory 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2022 ; Congressional Directory 2022 ; 2022 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Congressional Directory 2024 ; 2024 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Congressional Directory 2026 ; 2026 ; https://www.govinfo.gov/ >
 
-    au < released ; 1997 ; Congressional Directory 1997 ; 1997 ; https://www.govinfo.gov/ >
-    au < released ; 1999 ; Congressional Directory 1999 ; 1999 ; https://www.govinfo.gov/ >
  
   }
 
@@ -901,6 +910,7 @@
     au < released ; 2023 ; Congressional Hearings 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Congressional Hearings 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < ready ; 2025 ; Congressional Hearings 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Congressional Hearings 2026 ; 2026 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1087,6 +1097,7 @@
     au < released ; 2023 ; Statute Compilations 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Statute Compilations 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < ready ; 2025 ; Statute Compilations 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Statute Compilations 2026 ; 2026 ; https://www.govinfo.gov/ >
 
   }
 
@@ -1213,6 +1224,7 @@
     au < released ; 2023 ; Economic Indicators 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Economic Indicators 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < ready ; 2025 ; Economic Indicators 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Economic Indicators 2026 ; 2026 ; https://www.govinfo.gov/ >
 
  
   }
@@ -1488,6 +1500,8 @@
     au < released ; 2023 ; List of CFR Sections Affected 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; List of CFR Sections Affected 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < ready ; 2025 ; List of CFR Sections Affected 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; List of CFR Sections Affected 2026 ; 2026 ; https://www.govinfo.gov/ >
+
   }
 
   {
