@@ -773,19 +773,19 @@
     param[journal_id] = sijcd4
     #no metadata for these AUs. However, testing was successful on one machine.
 
-    au < notReady ; exists ; 1980 ; Journal on Scientific Computing Volume 1 ; 1 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1981 ; Journal on Scientific Computing Volume 2 ; 2 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1982 ; Journal on Scientific Computing Volume 3 ; 3 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1983 ; Journal on Scientific Computing Volume 4 ; 4 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1984 ; Journal on Scientific Computing Volume 5 ; 5 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1985 ; Journal on Scientific Computing Volume 6 ; 6 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1986 ; Journal on Scientific Computing Volume 7 ; 7 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1987 ; Journal on Scientific Computing Volume 8 ; 8 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1988 ; Journal on Scientific Computing Volume 9 ; 9 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1989 ; Journal on Scientific Computing Volume 10 ; 10 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1990 ; Journal on Scientific Computing Volume 11 ; 11 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1991 ; Journal on Scientific Computing Volume 12 ; 12 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1992 ; Journal on Scientific Computing Volume 13 ; 13 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1980 ; Journal on Scientific Computing Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1981 ; Journal on Scientific Computing Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1982 ; Journal on Scientific Computing Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1983 ; Journal on Scientific Computing Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1984 ; Journal on Scientific Computing Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1985 ; Journal on Scientific Computing Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1986 ; Journal on Scientific Computing Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1987 ; Journal on Scientific Computing Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1988 ; Journal on Scientific Computing Volume 9 ; 9 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1989 ; Journal on Scientific Computing Volume 10 ; 10 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1990 ; Journal on Scientific Computing Volume 11 ; 11 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1991 ; Journal on Scientific Computing Volume 12 ; 12 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1992 ; Journal on Scientific Computing Volume 13 ; 13 ; https://epubs.siam.org/ ; >
     }
 
   }

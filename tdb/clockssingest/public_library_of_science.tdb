@@ -321,7 +321,7 @@
 
       au < manifest ; exists ; 2005 ; PLOS Pathogens Volume 2005 ; 2005 ; >
       au < manifest ; exists ; 2006 ; PLOS Pathogens Volume 2006 ; 2006 ; >
-      au < manifest ; exists ; 2007 ; PLOS Pathogens Volume 2007 ; 2007 ; >
+      au < ready ; exists ; 2007 ; PLOS Pathogens Volume 2007 ; 2007 ; >
       au < ready ; exists ; 2008 ; PLOS Pathogens Volume 2008 ; 2008 ; >
       au < ready ; exists ; 2009 ; PLOS Pathogens Volume 2009 ; 2009 ; >
       au < manifest ; exists ; 2010 ; PLOS Pathogens Volume 2010 ; 2010 ; >
@@ -567,11 +567,11 @@
       au < manifest ; exists ; 2018 ; PLOS ONE Volume May 2018 ; 2018 ; May ; >
       au < manifest ; exists ; 2018 ; PLOS ONE Volume Jun 2018 ; 2018 ; June ; >
       au < manifest ; exists ; 2018 ; PLOS ONE Volume Jul 2018 ; 2018 ; July ; >
-      au < manifest ; exists ; 2018 ; PLOS ONE Volume Aug 2018 ; 2018 ; August ; >
+      au < ready ; exists ; 2018 ; PLOS ONE Volume Aug 2018 ; 2018 ; August ; >
       au < manifest ; exists ; 2018 ; PLOS ONE Volume Sep 2018 ; 2018 ; September ; >
       au < manifest ; exists ; 2018 ; PLOS ONE Volume Oct 2018 ; 2018 ; October ; >
       au < manifest ; exists ; 2018 ; PLOS ONE Volume Nov 2018 ; 2018 ; November ; >
-      au < manifest ; exists ; 2018 ; PLOS ONE Volume Dec 2018 ; 2018 ; December ; >
+      au < ready ; exists ; 2018 ; PLOS ONE Volume Dec 2018 ; 2018 ; December ; >
 
       au < crawling ; exists ; 2019 ; PLOS ONE Volume Jan 2019 ; 2019 ; January ; >
       au < frozen ; exists ; 2019 ; PLOS ONE Volume Feb 2019 ; 2019 ; February ; >
@@ -620,9 +620,9 @@
       au < crawling ; exists ; 2022 ; PLOS ONE Volume Jun 2022 ; 2022 ; June ; >
       au < crawling ; exists ; 2022 ; PLOS ONE Volume Jul 2022 ; 2022 ; July ; >
       au < ready ; exists ; 2022 ; PLOS ONE Volume Aug 2022 ; 2022 ; August ; >
-      au < manifest ; exists ; 2022 ; PLOS ONE Volume Sep 2022 ; 2022 ; September ; >
+      au < ready ; exists ; 2022 ; PLOS ONE Volume Sep 2022 ; 2022 ; September ; >
       au < manifest ; exists ; 2022 ; PLOS ONE Volume Oct 2022 ; 2022 ; October ; >
-      au < manifest ; exists ; 2022 ; PLOS ONE Volume Nov 2022 ; 2022 ; November ; >
+      au < ready ; exists ; 2022 ; PLOS ONE Volume Nov 2022 ; 2022 ; November ; >
       au < manifest ; exists ; 2022 ; PLOS ONE Volume Dec 2022 ; 2022 ; December ; >
 
       au < crawling ; exists ; 2023 ; PLOS ONE Volume Jan 2023 ; 2023 ; January ; >
@@ -656,7 +656,7 @@
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Mar 2025 ; 2025 ; March ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Apr 2025 ; 2025 ; April ; >
       au < ready ; exists ; 2025 ; PLOS ONE Volume May 2025 ; 2025 ; May ; >
-      au < manifest ; exists ; 2025 ; PLOS ONE Volume Jun 2025 ; 2025 ; June ; >
+      au < ready ; exists ; 2025 ; PLOS ONE Volume Jun 2025 ; 2025 ; June ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Jul 2025 ; 2025 ; July ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Aug 2025 ; 2025 ; August ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Sep 2025 ; 2025 ; September ; >
