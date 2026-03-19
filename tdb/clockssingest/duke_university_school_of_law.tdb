@@ -294,7 +294,7 @@
     au < finished ; manifest ; 2023 ; Duke Law and Technology Review Volume 23 ; 23 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Duke Law and Technology Review Volume 24 ; 24 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Duke Law and Technology Review Volume 25 ; 25 ; https://scholarship.law.duke.edu/ ; reingest1.clockss.org:8082 > #article count unmatched on ingest machines
-    au < testing ; exists ; 2025 ; Duke Law and Technology Review Volume 26 ; 26 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 2025 ; Duke Law and Technology Review Volume 26 ; 26 ; https://scholarship.law.duke.edu/ ; >
     au < expected ; exists ; 2025 ; Duke Law and Technology Review Volume 27 ; 27 ; https://scholarship.law.duke.edu/ ; >
     au < expected ; exists ; 2026 ; Duke Law and Technology Review Volume 28 ; 28 ; https://scholarship.law.duke.edu/ ; >
     au < expected ; exists ; 2026 ; Duke Law and Technology Review Volume 29 ; 29 ; https://scholarship.law.duke.edu/ ; >
@@ -310,15 +310,15 @@
 
     param[journal_abbr] = dlj
   
-    au < testing ; exists ; 1951 ; Duke Law Journal Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1952 ; Duke Law Journal Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1953 ; Duke Law Journal Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1954 ; Duke Law Journal Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1955 ; Duke Law Journal Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1956 ; Duke Law Journal Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1957 ; Duke Law Journal Volume 7 ; 7 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1958 ; Duke Law Journal Volume 8 ; 8 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1959 ; Duke Law Journal Volume 9 ; 9 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1951 ; Duke Law Journal Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1952 ; Duke Law Journal Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1953 ; Duke Law Journal Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1954 ; Duke Law Journal Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1955 ; Duke Law Journal Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1956 ; Duke Law Journal Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1957 ; Duke Law Journal Volume 7 ; 7 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1958 ; Duke Law Journal Volume 8 ; 8 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1959 ; Duke Law Journal Volume 9 ; 9 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1960 ; Duke Law Journal Volume 10 ; 10 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1961 ; Duke Law Journal Volume 11 ; 11 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; manifest ; 1962 ; Duke Law Journal Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; reingest2.clockss.org:8085 >
@@ -397,20 +397,20 @@
 
     param[journal_abbr] = lcp
 
-    au < testing ; exists ; 1933-1934 ; Law and Contemporary Problems Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1935 ; Law and Contemporary Problems Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1936 ; Law and Contemporary Problems Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1937 ; Law and Contemporary Problems Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1938 ; Law and Contemporary Problems Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1939 ; Law and Contemporary Problems Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1940 ; Law and Contemporary Problems Volume 7 ; 7 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1941 ; Law and Contemporary Problems Volume 8 ; 8 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1942 ; Law and Contemporary Problems Volume 9 ; 9 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1943-1944 ; Law and Contemporary Problems Volume 10 ; 10 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1933-1934 ; Law and Contemporary Problems Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1935 ; Law and Contemporary Problems Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1936 ; Law and Contemporary Problems Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1937 ; Law and Contemporary Problems Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1938 ; Law and Contemporary Problems Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1939 ; Law and Contemporary Problems Volume 6 ; 6 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1940 ; Law and Contemporary Problems Volume 7 ; 7 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1941 ; Law and Contemporary Problems Volume 8 ; 8 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1942 ; Law and Contemporary Problems Volume 9 ; 9 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1943-1944 ; Law and Contemporary Problems Volume 10 ; 10 ; https://scholarship.law.duke.edu/ ; >
     au < testing ; exists ; 1945-1946 ; Law and Contemporary Problems Volume 11 ; 11 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1947 ; Law and Contemporary Problems Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1947 ; Law and Contemporary Problems Volume 12 ; 12 ; https://scholarship.law.duke.edu/ ; >
     au < testing ; exists ; 1948 ; Law and Contemporary Problems Volume 13 ; 13 ; https://scholarship.law.duke.edu/ ; >
-    au < testing ; exists ; 1949 ; Law and Contemporary Problems Volume 14 ; 14 ; https://scholarship.law.duke.edu/ ; >
+    au < ready ; exists ; 1949 ; Law and Contemporary Problems Volume 14 ; 14 ; https://scholarship.law.duke.edu/ ; >
     au < testing ; exists ; 1950 ; Law and Contemporary Problems Volume 15 ; 15 ; https://scholarship.law.duke.edu/ ; >
     au < testing ; exists ; 1951 ; Law and Contemporary Problems Volume 16 ; 16 ; https://scholarship.law.duke.edu/ ; >
     au < testing ; exists ; 1952 ; Law and Contemporary Problems Volume 17 ; 17 ; https://scholarship.law.duke.edu/ ; >
