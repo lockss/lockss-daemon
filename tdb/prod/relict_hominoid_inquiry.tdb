@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Relict Hominoid Inquiry ;
+    info[platform] = Custom
+  >
+
+  param[base_url] = https://www.isu.edu/
+  plugin = org.lockss.plugin.rhi.RelictHominoidInquiryJournalsPlugin
+  implicit < status ; year ; name ; collection ; param[collection_name] >
+
+  {
+
+    title <
+      name = Relict Hominoid Inquiry Journal ;
+      issn = 2165-770X
+    >
+
+    param[journal_id] = rhi
+
+    au < testing ; 2026 ; Relict Hominoid Inquiry From the Editor ; From the Editor ; from-the-editor >
+    au < testing ; 2026 ; Relict Hominoid Inquiry Research Papers ; Research Papers ; research-papers >
+    au < testing ; 2026 ; Relict Hominoid Inquiry Comments & Responses ; Comments & Responses ; comments--responses >
+    au < testing ; 2026 ; Relict Hominoid Inquiry Brief Communications ; Brief Communications ; brief-communications >
+    au < testing ; 2026 ; Relict Hominoid Inquiry Essays ; Essays ; essays >
+    au < testing ; 2026 ; Relict Hominoid Inquiry News & Views ; News & Views ; news--views >
+    au < testing ; 2026 ; Relict Hominoid Inquiry Book Reviews ; Book Reviews ; book-reviews >
+
+
+    }
+ }

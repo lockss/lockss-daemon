@@ -1,0 +1,177 @@
+<!--
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.rhi.RelictHominoidInquiryJournalsPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Relict Hominoid Inquiry Journals Plugin</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>journal_id</key>
+                <displayName>Journal Identifier</displayName>
+                <description>Identifier for journal</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>collection_name</key>
+                <displayName>Collection Name</displayName>
+                <description>Identifier for Collection Name</description>
+                <type>1</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Relict Hominoid Inquiry Journals Plugin, Base URL %s, Journal ID %s, Collection Name %s", base_url, journal_id, collection_name</string>
+    </entry>
+    <entry>
+        <!--https://www.isu.edu/rhi/-->
+        <string>au_start_url</string>
+        <list>
+            <string>"%s%s/%s/", base_url, journal_id, collection_name</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <string>1,"fonts[.]://googleapis.com?(css|js)([?].*)?$"</string>
+            <string>1,"cdn\.jsdelivr\.net/.+\.(css|js)([?].*)?$"</string>
+            <string>1,"ajax\.googleapis\.com/ajax"</string>
+            <string>1, "%s", base_url</string>
+            <string>1, "%s%s/%s/", base_url, journal_id, collection_name</string>
+            <string>1, "%smedia/", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_refetch_depth</string>
+        <int>2</int>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <!--https://www.isu.edu/media/libraries/rhi/research-papers/Mayak-Datat-Hairy-Man-Pictographs-1.pdf-->
+            <string>"https://www.isu.edu/media/.*\.pdf$", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>text/html_link_rewriter_factory</string>
+        <string>org.lockss.plugin.rhi.RelictHominoidInquiryHtmlLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.rhi.RelictHominoidInquiryArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.rhi.RelictHominoidInquiryArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>au_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.rhi.RelictHominoidInquiryMetadataExtractorFactory</string>
+    </entry>
+    <entry>
+        <string>au_repair_from_peer_if_missing_url_pattern</string>
+        <list>
+            <string>.+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_url_poll_result_weight</string>
+        <list>
+            <string>".+[.](bmp|css|dfont|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttc|ttf|woff.?)(\?.*)?$", 0</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>"fonts\.googleapis\.com"</string>
+            <string>"cdn\.jsdelivr\.net"</string>
+            <string>"www\.isu\.edu"</string>
+            <string>"ajax\.googleapis\.com"</string>
+        </list>
+    </entry>
+    <entry>
+        <string>clockss_override</string>
+        <map>
+            <entry>
+                <string>au_def_pause_time</string>
+                <long>100</long>
+            </entry>
+        </map>
+    </entry>
+</map>
