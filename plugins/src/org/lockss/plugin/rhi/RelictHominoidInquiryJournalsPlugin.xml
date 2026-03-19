@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>2</string>
+        <string>3</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -112,8 +112,8 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>1,"fonts[.]://googleapis.com?(css|js)([?].*)?$"</string>
             <string>1,"cdn\.jsdelivr\.net/.+\.(css|js)([?].*)?$"</string>
             <string>1,"ajax\.googleapis\.com/ajax"</string>
-            <string>1, "%s", base_url</string>
-            <string>1, "%s%s/%s/", base_url, journal_id, collection_name</string>
+            <string>1, "^%s$", base_url</string>
+            <string>1, "%s%s/.*", base_url, journal_id</string>
             <string>1, "%smedia/", base_url</string>
         </list>
     </entry>
@@ -125,7 +125,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>au_substance_url_pattern</string>
         <list>
             <!--https://www.isu.edu/media/libraries/rhi/research-papers/Mayak-Datat-Hairy-Man-Pictographs-1.pdf-->
-            <string>"https://www.isu.edu/media/.*\.pdf$", base_url</string>
+            <string>"%smedia/.*\.pdf$", base_url</string>
         </list>
     </entry>
     <entry>
