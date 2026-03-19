@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>1</string>
+        <string>2</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -127,10 +127,6 @@ POSSIBILITY OF SUCH DAMAGE.
             <!--https://www.isu.edu/media/libraries/rhi/research-papers/Mayak-Datat-Hairy-Man-Pictographs-1.pdf-->
             <string>"https://www.isu.edu/media/.*\.pdf$", base_url</string>
         </list>
-    </entry>
-    <entry>
-        <string>text/html_link_rewriter_factory</string>
-        <string>org.lockss.plugin.rhi.RelictHominoidInquiryHtmlLinkRewriterFactory</string>
     </entry>
     <entry>
         <string>plugin_article_iterator_factory</string>
