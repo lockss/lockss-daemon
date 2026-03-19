@@ -3296,8 +3296,10 @@ while (my $line = <>) {
               $result = "Redirected";
       } elsif (defined($man_contents) && ($man_contents =~ m/$clockss_tag/) && ($man_contents =~ m/\/content\/journals\/$param{journal_id}\/$param{volume_name}\//)) {
         $result = "Manifest"
-      } else {
+      } elsif (defined($man_contents) && ($man_contents !~ m/$clockss_tag/)) {
         $result = "--NO_TAG--"
+      } else {
+        $result = "--NO_CONTENT--"
       }
     } else {
       $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();

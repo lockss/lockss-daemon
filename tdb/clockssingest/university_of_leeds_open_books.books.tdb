@@ -7,10 +7,11 @@
         info[platform] = Custom
   >
 
-    plugin = needs.plugin
+    plugin = org.lockss.plugin.universityofleeds.ClockssUniversityOfLeedsBooksPlugin
     param[base_url] = https://leeds.pressbooks.pub/
 
     implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[book_id] ; hidden[proxy] >
+    #implicit < status ; status2 ; year ; isbn_string ; name ;  param[resource_id] ; hidden[proxy] >
 
   {
     title <
@@ -18,12 +19,15 @@
       type = bookSeries
     >
 
-      au < exists ; exists ; 2025 ;  ; 978-1-918312-01-0 ; Better Together ; bettertogether ; >
-      au < exists ; exists ; 2025 ;  ; 978-1-918312-03-4 ; Learning with AI ; learningwithai ; >
-      au < exists ; exists ; 2025 ;  ; 978-1-918312-04-1 ; EDUC5272M Module Companion ; educ5272m ; >
-      au < exists ; exists ; 2025 ;  ; 978-1-918312-02-7 ; Meraki ; meraki ; >
-      au < exists ; exists ; 2025 ;  ; 978-1-918312-00-3 ; Broadening Blueprint for Jam Pathways ; jamblueprint ; >
-      au < exists ; exists ; 2025 ;  ; 978-1-918312-05-8 ; Broadening Blueprint for Open Pathways ; broadening-blueprint-openpathways ; >
+      au < manifest ; exists ; 2025 ;  ; 9781918312010 ; Better Together ; bettertogether ; >
+      au < manifest ; exists ; 2025 ;  ; 9781918312034 ; Learning with AI ; learningwithai ; >
+      au < manifest ; exists ; 2025 ;  ; 9781918312041 ; EDUC5272M Module Companion ; educ5272m ; >
+      au < manifest ; exists ; 2025 ;  ; 9781918312027 ; Meraki ; meraki ; >
+      au < manifest ; exists ; 2025 ;  ; 9781918312003 ; Broadening Blueprint for Jam Pathways ; jamblueprint ; >
+      au < manifest ; exists ; 2025 ;  ; 9781918312058 ; Broadening Blueprint for Open Pathways ; broadening-blueprint-openpathways ; >
+
+      #au < ready ; exists ; 2025 ; 9781918312010 ; Better Together: How We Build Economic, Political, And Environmental Sustainability ; bettertogether ;  >
+      #au < ready ; exists ; 2025 ; 9781918312041 ;  EDUC5272M Module Companion ; educ5272m ;  >
 
   }
 
