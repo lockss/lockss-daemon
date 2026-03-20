@@ -418,16 +418,16 @@
     param[journal_id] = 10.1055/s-00000008
     comment[years] = 1948-current
 
-    au < testing ; exists ; 1970 ; 1970 ; Allgemeine Homöopathische Zeitung Volume 205 ; 205 ; >
-    au < testing ; exists ; 1971 ; 1971 ; Allgemeine Homöopathische Zeitung Volume 206 ; 206 ; >
-    au < testing ; exists ; 1972 ; 1972 ; Allgemeine Homöopathische Zeitung Volume 207 ; 207 ; >
-    au < testing ; exists ; 1973 ; 1973 ; Allgemeine Homöopathische Zeitung Volume 208 ; 208 ; >
-    au < testing ; exists ; 1974 ; 1974 ; Allgemeine Homöopathische Zeitung Volume 209 ; 209 ; >
-    au < testing ; exists ; 1975 ; 1975 ; Allgemeine Homöopathische Zeitung Volume 210 ; 210 ; >
-    au < testing ; exists ; 1976 ; 1976 ; Allgemeine Homöopathische Zeitung Volume 211 ; 211 ; >
-    au < testing ; exists ; 1977 ; 1977 ; Allgemeine Homöopathische Zeitung Volume 212 ; 212 ; >
-    au < testing ; exists ; 1978 ; 1978 ; Allgemeine Homöopathische Zeitung Volume 213 ; 213 ; >
-    au < testing ; exists ; 1979 ; 1979 ; Allgemeine Homöopathische Zeitung Volume 214 ; 214 ; >
+    au < notReady ; exists ; 1970 ; 1970 ; Allgemeine Homöopathische Zeitung Volume 205 ; 205 ; > #0 metadata
+    au < notReady ; exists ; 1971 ; 1971 ; Allgemeine Homöopathische Zeitung Volume 206 ; 206 ; > #0 metadata
+    au < notReady ; exists ; 1972 ; 1972 ; Allgemeine Homöopathische Zeitung Volume 207 ; 207 ; > #0 metadata
+    au < notReady ; exists ; 1973 ; 1973 ; Allgemeine Homöopathische Zeitung Volume 208 ; 208 ; > #0 metadata
+    au < notReady ; exists ; 1974 ; 1974 ; Allgemeine Homöopathische Zeitung Volume 209 ; 209 ; > #0 metadata
+    au < notReady ; exists ; 1975 ; 1975 ; Allgemeine Homöopathische Zeitung Volume 210 ; 210 ; > #0 metadata
+    au < notReady ; exists ; 1976 ; 1976 ; Allgemeine Homöopathische Zeitung Volume 211 ; 211 ; > #0 metadata
+    au < notReady ; exists ; 1977 ; 1977 ; Allgemeine Homöopathische Zeitung Volume 212 ; 212 ; > #0 metadata
+    au < notReady ; exists ; 1978 ; 1978 ; Allgemeine Homöopathische Zeitung Volume 213 ; 213 ; > #0 metadata
+    au < notReady ; exists ; 1979 ; 1979 ; Allgemeine Homöopathische Zeitung Volume 214 ; 214 ; > #0 metadata
     au < finished ; finished ; 1980 ; 1980 ; Allgemeine Homöopathische Zeitung Volume 215 ; 215 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 1981 ; 1981 ; Allgemeine Homöopathische Zeitung Volume 216 ; 216 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 1982 ; 1982 ; Allgemeine Homöopathische Zeitung Volume 217 ; 217 ; reingest3.clockss.org:8083 >
@@ -1400,16 +1400,16 @@
    au < manifest ; exists ; 1967 ; 1967 ; DMW - Deutsche Medizinische Wochenschrift Volume 93 ; 93 ; >
    au < manifest ; exists ; 1968 ; 1968 ; DMW - Deutsche Medizinische Wochenschrift Volume 94 ; 94 ; >
    au < manifest ; exists ; 1969 ; 1969 ; DMW - Deutsche Medizinische Wochenschrift Volume 95 ; 95 ; >
-   au < testing ; exists ; 1970 ; 1970 ; DMW - Deutsche Medizinische Wochenschrift Volume 96 ; 96 ; >
-   au < testing ; exists ; 1971 ; 1971 ; DMW - Deutsche Medizinische Wochenschrift Volume 97 ; 97 ; >
-   au < testing ; exists ; 1972 ; 1972 ; DMW - Deutsche Medizinische Wochenschrift Volume 98 ; 98 ; >
-   au < testing ; exists ; 1973 ; 1973 ; DMW - Deutsche Medizinische Wochenschrift Volume 99 ; 99 ; >
-   au < testing ; exists ; 1974 ; 1974 ; DMW - Deutsche Medizinische Wochenschrift Volume 100 ; 100 ; >
-   au < testing ; exists ; 1975 ; 1975 ; DMW - Deutsche Medizinische Wochenschrift Volume 101 ; 101 ; >
-   au < testing ; exists ; 1976 ; 1976 ; DMW - Deutsche Medizinische Wochenschrift Volume 102 ; 102 ; >
-   au < testing ; exists ; 1977 ; 1977 ; DMW - Deutsche Medizinische Wochenschrift Volume 103 ; 103 ; >
-   au < testing ; exists ; 1978 ; 1978 ; DMW - Deutsche Medizinische Wochenschrift Volume 104 ; 104 ; >
-   au < testing ; exists ; 1979 ; 1979 ; DMW - Deutsche Medizinische Wochenschrift Volume 105 ; 105 ; >
+   au < notReady ; exists ; 1970 ; 1970 ; DMW - Deutsche Medizinische Wochenschrift Volume 96 ; 96 ; > #0 metadata
+   au < notReady ; exists ; 1971 ; 1971 ; DMW - Deutsche Medizinische Wochenschrift Volume 97 ; 97 ; > #0 metadata
+   au < notReady ; exists ; 1972 ; 1972 ; DMW - Deutsche Medizinische Wochenschrift Volume 98 ; 98 ; > #0 metadata
+   au < notReady ; exists ; 1973 ; 1973 ; DMW - Deutsche Medizinische Wochenschrift Volume 99 ; 99 ; > #0 metadata
+   au < notReady ; exists ; 1974 ; 1974 ; DMW - Deutsche Medizinische Wochenschrift Volume 100 ; 100 ; > #0 metadata
+   au < notReady ; exists ; 1975 ; 1975 ; DMW - Deutsche Medizinische Wochenschrift Volume 101 ; 101 ; > #0 metadata
+   au < notReady ; exists ; 1976 ; 1976 ; DMW - Deutsche Medizinische Wochenschrift Volume 102 ; 102 ; > #0 metadata
+   au < notReady ; exists ; 1977 ; 1977 ; DMW - Deutsche Medizinische Wochenschrift Volume 103 ; 103 ; > #0 metadata
+   au < notReady ; exists ; 1978 ; 1978 ; DMW - Deutsche Medizinische Wochenschrift Volume 104 ; 104 ; > #0 metadata
+   au < notReady ; exists ; 1979 ; 1979 ; DMW - Deutsche Medizinische Wochenschrift Volume 105 ; 105 ; > #0 metadata
    au < finished ; finished ; 1980 ; 1980 ; DMW - Deutsche Medizinische Wochenschrift Volume 106 ; 106 ; reingest1.clockss.org:8082 >
    au < finished ; finished ; 1981 ; 1981 ; DMW - Deutsche Medizinische Wochenschrift Volume 107 ; 107 ; reingest2.clockss.org:8085 >
    au < finished ; frozen ; 1982 ; 1982 ; DMW - Deutsche Medizinische Wochenschrift Volume 108 ; 108 ; reingest4.clockss.org:8082 >
@@ -8864,7 +8864,7 @@
     au < deepCrawl ; exists ; 2023 ; 2023 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 22 ; 22 ; >
     au < notReady ; exists ; 2025 ; 2025 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 23 ; 23 ; > #0 mdata, 113 article
-    au < manifest ; exists ; 2026 ; 2026 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 24 ; 24 ; > #0 mdata, 113 article
+    au < manifest ; exists ; 2026 ; 2026 ; Tierärztliche Praxis K: Kleintiere/Heimtiere Volume 24 ; 24 ; >
 
   }
 
