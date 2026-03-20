@@ -1,16 +1,42 @@
+/*
+
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
 package org.lockss.plugin.rhi;
 
-import org.lockss.config.Configuration;
-import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
-import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.ArticleFiles;
-import org.lockss.plugin.ArticleIteratorFactory;
-import org.lockss.plugin.SubTreeArticleIteratorBuilder;
+import org.lockss.plugin.*;
 import org.lockss.util.Logger;
 
 import java.util.Iterator;
@@ -18,9 +44,6 @@ import java.util.regex.Pattern;
 
 public class RelictHominoidInquiryArticleIteratorFactory implements ArticleIteratorFactory,
         ArticleMetadataExtractorFactory {
-
-    protected static Logger log = Logger.getLogger(RelictHominoidInquiryArticleIteratorFactory.class);
-
     /*
     The website has no individual article page, only a summary page
     https://www.isu.edu/rhi/book-reviews
@@ -33,7 +56,7 @@ public class RelictHominoidInquiryArticleIteratorFactory implements ArticleItera
 
      https://www.isu.edu/rhi/comments--responses
      https://www.isu.edu/media/libraries/rhi/comments-amp-responses/Commentary-on-Sykes.pdf
-    https://www.isu.edu/media/libraries/rhi/comments-amp-responses/Forth-Comment_final.pdf
+     https://www.isu.edu/media/libraries/rhi/comments-amp-responses/Forth-Comment_final.pdf
 
     https://www.isu.edu/rhi/essays
     https://www.isu.edu/media/libraries/rhi/essays/BAADE_Essay_2021_final.pdf
@@ -52,40 +75,44 @@ public class RelictHominoidInquiryArticleIteratorFactory implements ArticleItera
     https://www.isu.edu/media/libraries/rhi/research-papers/ARGUE_Yahoos.pdf
      */
 
-    // 1. Loosen the template to find PDFs in any media library subdirectory
-    protected static final String PATTERN_TEMPLATE = "^%smedia/libraries/%s/[^/]+/.+\\.pdf$";
+    protected static Logger log = Logger.getLogger(RelictHominoidInquiryArticleIteratorFactory.class);
 
-    // 2. Update the PDF_PATTERN to match the structure found by PATTERN_TEMPLATE
-// We use [^/]+ twice: once for the category (research-papers, etc) and once for the filename
-    // Add .* to the front to catch the base_url part of the string
-    // 1. Updated Regex: Captures the directory name (Group 1) and filename (Group 2)
-// This pattern is more resilient to the start of the URL.
+    private static final String ROOT_TEMPLATE = "\"%s\", base_url";
+    private static final String PATTERN_TEMPLATE =
+            "\"^%smedia/libraries/%s/[^/]+/.+\\.pdf$\", base_url, journal_id";
+
     private static final Pattern PDF_PATTERN = Pattern.compile(
-            ".*/media/libraries/[^/]+/([^/]+)/([^/]+\\.pdf)$",
-            Pattern.CASE_INSENSITIVE);
+            "/([^/]+)/([^/]+\\.pdf)$", Pattern.CASE_INSENSITIVE);
+
+    // Template strings for replacements
+    private static final String PDF_REPLACEMENT_TEMPLATE = "/media/libraries/%s/$1/$2";
+    private static final String METADATA_REPLACEMENT_TEMPLATE = "/%s/$1";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target)
             throws PluginException {
 
-        Configuration config = au.getConfiguration();
-        String base = config.get(ConfigParamDescr.BASE_URL.getKey());
-        String jId = config.get("journal_id");
+        // 1. Fetch the actual journal ID from the AU config
+        String journalId = au.getConfiguration().get("journal_id");
+
+        // 2. Perform the formatting outside the builder's fluent calls
+        String pdfReplacement = String.format(PDF_REPLACEMENT_TEMPLATE, journalId);
+        String metadataReplacement = String.format(METADATA_REPLACEMENT_TEMPLATE, journalId);
 
         SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
-        builder.setSpec(target, base,
-                String.format(PATTERN_TEMPLATE, base, jId),
+        builder.setSpec(target,
+                ROOT_TEMPLATE,
+                PATTERN_TEMPLATE,
                 Pattern.CASE_INSENSITIVE);
 
+        // 3. Use the pre-formatted strings
         builder.addAspect(PDF_PATTERN,
-                base + "media/libraries/" + jId + "/$1/$2",
+                pdfReplacement,
                 ArticleFiles.ROLE_FULL_TEXT_PDF);
 
-        // 3. METADATA: Point this to the HTML landing page
-        // Example: https://www.isu.edu
         builder.addAspect(PDF_PATTERN,
-                base + jId + "/$1",
+                metadataReplacement,
                 ArticleFiles.ROLE_ARTICLE_METADATA);
 
         builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF);
@@ -97,5 +124,3 @@ public class RelictHominoidInquiryArticleIteratorFactory implements ArticleItera
         return new RelictHominoidInquiryMetadataExtractorFactory.RelictHominoidMetadataExtractor();
     }
 }
-
-

@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -100,7 +100,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <string>"Relict Hominoid Inquiry Journals Plugin, Base URL %s, Journal ID %s, Collection Name %s", base_url, journal_id, collection_name</string>
     </entry>
     <entry>
-        <!--https://www.isu.edu/rhi/-->
+        <!--https://www.isu.edu/rhi/book-reviews/-->
         <string>au_start_url</string>
         <list>
             <string>"%s%s/%s/", base_url, journal_id, collection_name</string>
@@ -160,14 +160,5 @@ POSSIBILITY OF SUCH DAMAGE.
             <string>"www\.isu\.edu"</string>
             <string>"ajax\.googleapis\.com"</string>
         </list>
-    </entry>
-    <entry>
-        <string>clockss_override</string>
-        <map>
-            <entry>
-                <string>au_def_pause_time</string>
-                <long>100</long>
-            </entry>
-        </map>
     </entry>
 </map>

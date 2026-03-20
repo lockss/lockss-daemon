@@ -1,3 +1,35 @@
+/*
+
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+*/
+
 package org.lockss.plugin.rhi;
 
 import org.lockss.config.Configuration;
@@ -28,7 +60,6 @@ public class RelictHominoidInquiryMetadataExtractorFactory implements ArticleMet
     public static class RelictHominoidMetadataExtractor implements ArticleMetadataExtractor {
         private static final Logger log = Logger.getLogger(RelictHominoidMetadataExtractor.class);
 
-        // Updated Regex: Handles multiple spaces and is non-greedy on the title
         private static final Pattern TITLE_RE = Pattern.compile(
                 "^(.*?)\\s+(\\d+):(\\d+)(?:-(\\d+))?\\s+\\((\\d{4})\\)$",
                 Pattern.CASE_INSENSITIVE);
@@ -44,7 +75,6 @@ public class RelictHominoidInquiryMetadataExtractorFactory implements ArticleMet
             ArchivalUnit au = fullTextCu.getArchivalUnit();
             TdbAu tdbau = au.getTdbAu();
 
-            // Populate standard TDB fields
             am.putIfBetter(MetadataField.FIELD_PUBLICATION_TITLE, au.getName());
             if (tdbau != null) {
                 am.putIfBetter(MetadataField.FIELD_ISSN, tdbau.getIssn());
@@ -54,7 +84,6 @@ public class RelictHominoidInquiryMetadataExtractorFactory implements ArticleMet
             String pdfUrl = af.getFullTextUrl();
             CachedUrl summaryCu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
 
-            // Logic for missing summary page (e.g., -amp- vs -- folder names)
             if (summaryCu == null || !summaryCu.hasContent()) {
                 AuUtil.safeRelease(summaryCu);
                 Configuration config = au.getConfiguration();
@@ -106,14 +135,12 @@ public class RelictHominoidInquiryMetadataExtractorFactory implements ArticleMet
                     if (line.contains(pdfFileName)) {
                         log.debug3("Found line matching filename: " + line.trim());
 
-                        // Regex captures text inside the <a> tag that links to our PDF
                         String regex = "href=\"[^\"]*" + Pattern.quote(pdfFileName) + "[^\"]*\".*?>(.*?)</a>";
                         Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
                         Matcher m = p.matcher(line);
 
                         if (m.find()) {
                             String rawTitle = m.group(1).trim();
-                            // Strip tags, normalize &nbsp; and whitespace
                             String cleaned = rawTitle.replaceAll("<[^>]*>", " ")
                                     .replace("&nbsp;", " ")
                                     .replaceAll("\\s+", " ")
