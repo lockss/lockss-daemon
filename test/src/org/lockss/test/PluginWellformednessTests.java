@@ -160,15 +160,15 @@ public final class PluginWellformednessTests extends LockssTestCase {
 	resetAndTest(pluginName);
       } catch (PluginFailedToLoadException e) {
 	log.error("Plugin " + pluginName + " failed");
-	failed.add(new ImmutablePair(pluginName, e.toString()));
+	failed.add(Pair.of(pluginName, e.toString()));
       } catch (Exception | ExceptionInInitializerError e) {
 	log.error("Plugin " + pluginName + " failed", e);
-	failed.add(new ImmutablePair(pluginName, e.getMessage()));
+	failed.add(Pair.of(pluginName, e.getMessage()));
       }
     }
     if (!failed.isEmpty()) {
       StringBuilder sb = new StringBuilder();
-      sb.append(StringUtil.numberOfUnits(failed.size(), "plugin") + " failed:");
+      sb.append(StringUtil.numberOfUnits(failed.size(), "plugin") + " failed.  Look for plugin name(s) above for more detail:");
       for (Pair<String,String> f : failed) {
 	sb.append("\n  ");
 	sb.append(f.getLeft());
