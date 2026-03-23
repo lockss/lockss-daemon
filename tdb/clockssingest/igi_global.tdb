@@ -22,18 +22,18 @@
     >
     param[journal_issn] = 1040-1628 
 
-    au < testing ; exists ; 1988 ; Information Resources Management Journal (IRMJ) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 1989 ; Information Resources Management Journal (IRMJ) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 1990 ; Information Resources Management Journal (IRMJ) Volume 3 ; 3 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 1991 ; Information Resources Management Journal (IRMJ) Volume 4 ; 4 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 1992 ; Information Resources Management Journal (IRMJ) Volume 5 ; 5 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 1993 ; Information Resources Management Journal (IRMJ) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 1995 ; Information Resources Management Journal (IRMJ) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 1996 ; Information Resources Management Journal (IRMJ) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 1997 ; Information Resources Management Journal (IRMJ) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 ; https://www.igi-global.com/ ; > 
-    au < testing ; exists ; 1999 ; Information Resources Management Journal (IRMJ) Volume 12 ; 12 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1988 ; Information Resources Management Journal (IRMJ) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1989 ; Information Resources Management Journal (IRMJ) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1990 ; Information Resources Management Journal (IRMJ) Volume 3 ; 3 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1991 ; Information Resources Management Journal (IRMJ) Volume 4 ; 4 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1992 ; Information Resources Management Journal (IRMJ) Volume 5 ; 5 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1993 ; Information Resources Management Journal (IRMJ) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1994 ; Information Resources Management Journal (IRMJ) Volume 7 ; 7 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1995 ; Information Resources Management Journal (IRMJ) Volume 8 ; 8 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1996 ; Information Resources Management Journal (IRMJ) Volume 9 ; 9 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1997 ; Information Resources Management Journal (IRMJ) Volume 10 ; 10 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1998 ; Information Resources Management Journal (IRMJ) Volume 11 ; 11 ; https://www.igi-global.com/ ; > 
+    au < ready ; exists ; 1999 ; Information Resources Management Journal (IRMJ) Volume 12 ; 12 ; https://www.igi-global.com/ ; > 
     au < finished ; manifest ; 2000 ; Information Resources Management Journal (IRMJ) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < finished ; manifest ; 2001 ; Information Resources Management Journal (IRMJ) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 > 
     au < finished ; manifest ; 2002 ; Information Resources Management Journal (IRMJ) Volume 15 ; 15 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 > 
@@ -2357,7 +2357,7 @@
     au < deepCrawl ; exists ; 2022 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2023 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 15 ; 15 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 2025 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2026 ; International Journal of Innovation in the Digital Economy (IJIDE) Volume 17 ; 17 ; https://www.igi-global.com/ ; >
 
   }
@@ -2879,7 +2879,7 @@
     au < deepCrawl ; exists ; 2022 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2023 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 15 ; 15 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 2025 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 2025 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2026 ; International Journal of Multimedia Data Engineering and Management (IJMDEM) Volume 17 ; 17 ; https://www.igi-global.com/ ; >
 
   }
@@ -4153,7 +4153,7 @@
     >
     param[journal_issn] = 1548-7717
 
-    au < testing ; exists ; 1999 ; Journal of Cases on Information Technology (JCIT) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1999 ; Journal of Cases on Information Technology (JCIT) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2000 ; Journal of Cases on Information Technology (JCIT) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Journal of Cases on Information Technology (JCIT) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2002 ; Journal of Cases on Information Technology (JCIT) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
@@ -4194,16 +4194,16 @@
     >
     param[journal_issn] = 1063-8016
 
-    au < testing ; exists ; 1990 ; Journal of Database Management (JDM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1991 ; Journal of Database Management (JDM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1992 ; Journal of Database Management (JDM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1993 ; Journal of Database Management (JDM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1994 ; Journal of Database Management (JDM) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1995 ; Journal of Database Management (JDM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1996 ; Journal of Database Management (JDM) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1997 ; Journal of Database Management (JDM) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1998 ; Journal of Database Management (JDM) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1999 ; Journal of Database Management (JDM) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1990 ; Journal of Database Management (JDM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1991 ; Journal of Database Management (JDM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1992 ; Journal of Database Management (JDM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1993 ; Journal of Database Management (JDM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1994 ; Journal of Database Management (JDM) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1995 ; Journal of Database Management (JDM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1996 ; Journal of Database Management (JDM) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1997 ; Journal of Database Management (JDM) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1998 ; Journal of Database Management (JDM) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1999 ; Journal of Database Management (JDM) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2000 ; Journal of Database Management (JDM) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Journal of Database Management (JDM) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; Journal of Database Management (JDM) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
@@ -4281,13 +4281,13 @@
     >
     param[journal_issn] = 1062-7375
 
-    au < testing ; exists ; 1993 ; Journal of Global Information Management (JGIM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1994 ; Journal of Global Information Management (JGIM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1995 ; Journal of Global Information Management (JGIM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1996 ; Journal of Global Information Management (JGIM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1997 ; Journal of Global Information Management (JGIM) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1998 ; Journal of Global Information Management (JGIM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1999 ; Journal of Global Information Management (JGIM) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1993 ; Journal of Global Information Management (JGIM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1994 ; Journal of Global Information Management (JGIM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1995 ; Journal of Global Information Management (JGIM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1996 ; Journal of Global Information Management (JGIM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1997 ; Journal of Global Information Management (JGIM) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1998 ; Journal of Global Information Management (JGIM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1999 ; Journal of Global Information Management (JGIM) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2000 ; Journal of Global Information Management (JGIM) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2001 ; Journal of Global Information Management (JGIM) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2002 ; Journal of Global Information Management (JGIM) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
@@ -4356,17 +4356,17 @@
     >
     param[journal_issn] = 1546-2234
 
-    au < testing ; exists ; 1989 ; Journal of Organizational and End User Computing (JOEUC) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1990 ; Journal of Organizational and End User Computing (JOEUC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1991 ; Journal of Organizational and End User Computing (JOEUC) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1992 ; Journal of Organizational and End User Computing (JOEUC) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1993 ; Journal of Organizational and End User Computing (JOEUC) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1994 ; Journal of Organizational and End User Computing (JOEUC) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1995 ; Journal of Organizational and End User Computing (JOEUC) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1996 ; Journal of Organizational and End User Computing (JOEUC) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1997 ; Journal of Organizational and End User Computing (JOEUC) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1998 ; Journal of Organizational and End User Computing (JOEUC) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
-    au < testing ; exists ; 1999 ; Journal of Organizational and End User Computing (JOEUC) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1989 ; Journal of Organizational and End User Computing (JOEUC) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1990 ; Journal of Organizational and End User Computing (JOEUC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1991 ; Journal of Organizational and End User Computing (JOEUC) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1992 ; Journal of Organizational and End User Computing (JOEUC) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1993 ; Journal of Organizational and End User Computing (JOEUC) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1994 ; Journal of Organizational and End User Computing (JOEUC) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1995 ; Journal of Organizational and End User Computing (JOEUC) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1996 ; Journal of Organizational and End User Computing (JOEUC) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1997 ; Journal of Organizational and End User Computing (JOEUC) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1998 ; Journal of Organizational and End User Computing (JOEUC) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+    au < ready ; exists ; 1999 ; Journal of Organizational and End User Computing (JOEUC) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2000 ; Journal of Organizational and End User Computing (JOEUC) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Journal of Organizational and End User Computing (JOEUC) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2002 ; Journal of Organizational and End User Computing (JOEUC) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
