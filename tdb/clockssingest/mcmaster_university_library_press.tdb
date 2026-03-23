@@ -48,7 +48,7 @@
       param[journal_id] = earlytheatre
 
       au < crawling ; exists ; 1998 ; Early Theatre Volume 1 ; 1 ; 1998 ; > 
-      au < ready ; exists ; 1999 ; Early Theatre Volume 2 ; 2 ; 1999 ; > 
+      au < crawling ; exists ; 1999 ; Early Theatre Volume 2 ; 2 ; 1999 ; > 
       au < finished ; finished ; 2000 ; Early Theatre Volume 3 ; 3 ; 2000 ; reingest4.clockss.org:8082 > 
       au < finished ; finished ; 2001 ; Early Theatre Volume 4 ; 4 ; 2001 ; reingest5.clockss.org:8082 > 
       au < finished ; finished ; 2002 ; Early Theatre Volume 5 ; 5 ; 2002 ; reingest1.clockss.org:8082 > 
@@ -320,7 +320,7 @@
       au < crawling ; exists ; 1994 ; Russell: the Journal of Bertrand Russell Studies Volume 14 ; 14 ; 1994 ; >
       au < frozen ; exists ; 1995 ; Russell: the Journal of Bertrand Russell Studies Volume 15 ; 15 ; 1995 ; >
       au < crawling ; exists ; 1996 ; Russell: the Journal of Bertrand Russell Studies Volume 16 ; 16 ; 1996 ; >
-      au < ready ; exists ; 1997 ; Russell: the Journal of Bertrand Russell Studies Volume 17 ; 17 ; 1997 ; >
+      au < crawling ; exists ; 1997 ; Russell: the Journal of Bertrand Russell Studies Volume 17 ; 17 ; 1997 ; >
       au < crawling ; exists ; 1998 ; Russell: the Journal of Bertrand Russell Studies Volume 18 ; 18 ; 1998 ; >
       au < crawling ; exists ; 1999 ; Russell: the Journal of Bertrand Russell Studies Volume 19 ; 19 ; 1999 ; >
       au < finished ; finished ; 2000 ; Russell: the Journal of Bertrand Russell Studies Volume 20 ; 20 ; 2000 ; reingest2.clockss.org:8085 >
