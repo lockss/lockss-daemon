@@ -17,6 +17,21 @@
     {
 
         title <
+            name = Research in Special Education ;
+            eissn = 3068-983X
+        >
+
+        param[base_url] = https://riseopenjournal.org/
+
+        au < exists ; exists ; 2024 ; 2024 ; 1 ; Research in Special Education Volume 1 ; >
+        au < exists ; exists ; 2025 ; 2025 ; 2 ; Research in Special Education Volume 2 ; >
+        au < exists ; exists ; 2026 ; 2026 ; 3 ; Research in Special Education Volume 3 ; >
+
+    }
+
+    {
+
+        title <
             name = Journal of Modern Philosophy ;
             eissn = 2644-0652
         >
