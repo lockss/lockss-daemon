@@ -62,7 +62,7 @@
       param[journal_id] = javma
 
       au < frozen ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 216 ; 216 ; >
-      au < ready ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 217 ; 217 ; >
+      au < crawling ; exists ; 2000 ; Journal of the American Veterinary Medical Association Volume 217 ; 217 ; >
       au < frozen ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 218 ; 218 ; >
       au < ready ; exists ; 2001 ; Journal of the American Veterinary Medical Association Volume 219 ; 219 ; >
       au < ready ; exists ; 2002 ; Journal of the American Veterinary Medical Association Volume 220 ; 220 ; >
