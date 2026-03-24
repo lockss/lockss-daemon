@@ -232,14 +232,14 @@
       au < ready ; exists ; 1987 ; 1987 ; Cancer Research Volume 47 ; 47 ; >
       au < ready ; exists ; 1988 ; 1988 ; Cancer Research Volume 48 ; 48 ; >
       au < ready ; exists ; 1989 ; 1989 ; Cancer Research Volume 49 ; 49 ; >
-      au < testing ; exists ; 1990 ; 1990 ; Cancer Research Volume 50 ; 50 ; >
-      au < testing ; exists ; 1991 ; 1991 ; Cancer Research Volume 51 ; 51 ; >
-      au < testing ; exists ; 1992 ; 1992 ; Cancer Research Volume 52 ; 52 ; >
-      au < testing ; exists ; 1993 ; 1993 ; Cancer Research Volume 53 ; 53 ; >
-      au < testing ; exists ; 1994 ; 1994 ; Cancer Research Volume 54 ; 54 ; >
-      au < testing ; exists ; 1995 ; 1995 ; Cancer Research Volume 55 ; 55 ; >
-      au < testing ; exists ; 1996 ; 1996 ; Cancer Research Volume 56 ; 56 ; >
-      au < testing ; exists ; 1997 ; 1997 ; Cancer Research Volume 57 ; 57 ; >
+      au < ready ; exists ; 1990 ; 1990 ; Cancer Research Volume 50 ; 50 ; >
+      au < ready ; exists ; 1991 ; 1991 ; Cancer Research Volume 51 ; 51 ; >
+      au < ready ; exists ; 1992 ; 1992 ; Cancer Research Volume 52 ; 52 ; >
+      au < ready ; exists ; 1993 ; 1993 ; Cancer Research Volume 53 ; 53 ; >
+      au < ready ; exists ; 1994 ; 1994 ; Cancer Research Volume 54 ; 54 ; >
+      au < ready ; exists ; 1995 ; 1995 ; Cancer Research Volume 55 ; 55 ; >
+      au < ready ; exists ; 1996 ; 1996 ; Cancer Research Volume 56 ; 56 ; >
+      au < ready ; exists ; 1997 ; 1997 ; Cancer Research Volume 57 ; 57 ; >
       au < testing ; exists ; 1998 ; 1998 ; Cancer Research Volume 58 ; 58 ; >
       au < testing ; exists ; 1999 ; 1999 ; Cancer Research Volume 59 ; 59 ; >
       au < ready ; exists ; 2000 ; 2000 ; Cancer Research Volume 60 ; 60 ; >
@@ -301,8 +301,8 @@
 
       param[journal_id] = clincancerres
 
-      au < testing ; exists ; 1995 ; 1995 ; Clinical Cancer Research Volume 1 ; 1 ; >
-      au < testing ; exists ; 1996 ; 1996 ; Clinical Cancer Research Volume 2 ; 2 ; >
+      au < ready ; exists ; 1995 ; 1995 ; Clinical Cancer Research Volume 1 ; 1 ; >
+      au < ready ; exists ; 1996 ; 1996 ; Clinical Cancer Research Volume 2 ; 2 ; >
       au < testing ; exists ; 1997 ; 1997 ; Clinical Cancer Research Volume 3 ; 3 ; >
       au < testing ; exists ; 1998 ; 1998 ; Clinical Cancer Research Volume 4 ; 4 ; >
       au < testing ; exists ; 1999 ; 1999 ; Clinical Cancer Research Volume 5 ; 5 ; >
