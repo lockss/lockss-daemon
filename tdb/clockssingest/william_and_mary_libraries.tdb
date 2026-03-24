@@ -1,0 +1,145 @@
+{
+  publisher <
+    name = William & Mary Libraries
+    info[contract] = 2013 ;
+    info[back] = 1991 ;
+    info[tester] = 8 ;
+    info[platform] = OJS3
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://journal.libraries.wm.edu/
+    implicit < status ; status2 ; year ; name ; param[year] ; volume ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+
+  {
+
+      title <
+        name = Journal of Global Higher Education ;
+        eissn = 3069-0951
+      >
+
+      param[journal_id] = global_higher_education
+
+      au < manifest ; exists ; 2025 ; Journal of Global Higher Education Volume 2025 ; 2025 ; 1 ; >
+      au < exists ; exists ; 2026 ; Journal of Global Higher Education Volume 2026 ; 2026 ; 2 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of School-Based Counseling Policy and Evaluation ;
+        eissn = 2688-6189
+      >
+
+      param[journal_id] = jscpe
+
+      au < manifest ; exists ; 2018 ; Journal of School-Based Counseling Policy and Evaluation Volume 2018 ; 2018 ; 1 ; >
+      au < manifest ; exists ; 2019 ; Journal of School-Based Counseling Policy and Evaluation Volume 2019 ; 2019 ; 1 ; >
+      au < manifest ; exists ; 2020 ; Journal of School-Based Counseling Policy and Evaluation Volume 2020 ; 2020 ; 2 ; >
+      au < manifest ; exists ; 2021 ; Journal of School-Based Counseling Policy and Evaluation Volume 2021 ; 2021 ; 3 ; >
+      au < manifest ; exists ; 2022 ; Journal of School-Based Counseling Policy and Evaluation Volume 2022 ; 2022 ; 4 ; >
+      au < manifest ; exists ; 2023 ; Journal of School-Based Counseling Policy and Evaluation Volume 2023 ; 2023 ; 5 ; >
+      au < manifest ; exists ; 2024 ; Journal of School-Based Counseling Policy and Evaluation Volume 2024 ; 2024 ; 6 ; >
+      au < manifest ; exists ; 2025 ; Journal of School-Based Counseling Policy and Evaluation Volume 2025 ; 2025 ; 7 ; >
+      au < exists ; exists ; 2026 ; Journal of School-Based Counseling Policy and Evaluation Volume 2026 ; 2026 ; 8 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Sorority and Fraternity Life Research and Practice ;
+        eissn = 3070-9458
+      >
+
+      param[journal_id] = jsflrp
+
+      au < manifest ; exists ; 2008 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2008 ; 2008 ; 3 ; >
+      au < manifest ; exists ; 2009 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2009 ; 2009 ; 4 ; >
+      au < manifest ; exists ; 2010 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2010 ; 2010 ; 5 ; >
+      au < manifest ; exists ; 2011 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2011 ; 2011 ; 6 ; >
+      au < manifest ; exists ; 2012 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2012 ; 2012 ; 7 ; >
+      au < manifest ; exists ; 2013 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2013 ; 2013 ; 8 ; >
+      au < manifest ; exists ; 2014 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2014 ; 2014 ; 9 ; >
+      au < manifest ; exists ; 2015 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2015 ; 2015 ; 10 ; >
+      au < manifest ; exists ; 2016 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2016 ; 2016 ; 11 ; >
+      au < manifest ; exists ; 2017 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2017 ; 2017 ; 12 ; >
+      au < manifest ; exists ; 2018 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2018 ; 2018 ; 13 ; >
+      au < manifest ; exists ; 2019 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2019 ; 2019 ; 14 ; >
+      au < manifest ; exists ; 2020 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2020 ; 2020 ; 15 ; >
+      au < manifest ; exists ; 2021 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2021 ; 2021 ; 16 ; >
+      au < manifest ; exists ; 2022 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2022 ; 2022 ; 17 ; >
+      au < manifest ; exists ; 2023 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2023 ; 2023 ; 18 ; >
+      au < manifest ; exists ; 2024 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2024 ; 2024 ; 19 ; >
+      au < manifest ; exists ; 2025 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2025 ; 2025 ; 20 ; >
+      au < exists ; exists ; 2026 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2026 ; 2026 ; 21 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of Textual Reasoning ;
+        eissn = 1939-7518
+      >
+
+      param[journal_id] = jtr
+
+      au < manifest ; exists ; 1991 ; Journal of Textual Reasoning Volume 1991 ; 1991 ; 1 ; >
+      au < exists ; exists ; 1992 ; Journal of Textual Reasoning Volume 1992 ; 1992 ; 1 ; >
+      au < exists ; exists ; 1993 ; Journal of Textual Reasoning Volume 1993 ; 1993 ; 1 ; >
+      au < exists ; exists ; 1994 ; Journal of Textual Reasoning Volume 1994 ; 1994 ; 1 ; >
+      au < exists ; exists ; 1995 ; Journal of Textual Reasoning Volume 1995 ; 1995 ; 1 ; >
+      au < exists ; exists ; 1996 ; Journal of Textual Reasoning Volume 1996 ; 1996 ; 1 ; >
+      au < exists ; exists ; 1997 ; Journal of Textual Reasoning Volume 1997 ; 1997 ; 1 ; >
+      au < exists ; exists ; 1998 ; Journal of Textual Reasoning Volume 1998 ; 1998 ; 1 ; >
+      au < exists ; exists ; 1999 ; Journal of Textual Reasoning Volume 1999 ; 1999 ; 1 ; >
+      au < exists ; exists ; 2000 ; Journal of Textual Reasoning Volume 2000 ; 2000 ; 1 ; >
+      au < exists ; exists ; 2001 ; Journal of Textual Reasoning Volume 2001 ; 2001 ; 1 ; >
+      au < exists ; exists ; 2002 ; Journal of Textual Reasoning Volume 2002 ; 2002 ; 1 ; >
+      au < exists ; exists ; 2003 ; Journal of Textual Reasoning Volume 2003 ; 2003 ; 2 ; >
+      au < exists ; exists ; 2004 ; Journal of Textual Reasoning Volume 2004 ; 2004 ; 3 ; >
+      au < exists ; exists ; 2005 ; Journal of Textual Reasoning Volume 2005 ; 2005 ; 4 ; >
+      au < exists ; exists ; 2006 ; Journal of Textual Reasoning Volume 2006 ; 2006 ; 4 ; >
+      au < exists ; exists ; 2007 ; Journal of Textual Reasoning Volume 2007 ; 2007 ; 5 ; >
+      au < exists ; exists ; 2010 ; Journal of Textual Reasoning Volume 2010 ; 2010 ; 6 ; >
+      au < exists ; exists ; 2011 ; Journal of Textual Reasoning Volume 2011 ; 2011 ; 6 ; >
+      au < exists ; exists ; 2012 ; Journal of Textual Reasoning Volume 2012 ; 2012 ; 7 ; >
+      au < exists ; exists ; 2014 ; Journal of Textual Reasoning Volume 2014 ; 2014 ; 8 ; >
+      au < exists ; exists ; 2016 ; Journal of Textual Reasoning Volume 2016 ; 2016 ; 9 ; >
+      au < exists ; exists ; 2018 ; Journal of Textual Reasoning Volume 2018 ; 2018 ; 10 ; >
+      au < exists ; exists ; 2020 ; Journal of Textual Reasoning Volume 2020 ; 2020 ; 11 ; >
+      au < exists ; exists ; 2021 ; Journal of Textual Reasoning Volume 2021 ; 2021 ; 12 ; >
+      au < exists ; exists ; 2022 ; Journal of Textual Reasoning Volume 2022 ; 2022 ; 13 ; >
+      au < exists ; exists ; 2023 ; Journal of Textual Reasoning Volume 2023 ; 2023 ; 14 ; >
+      au < exists ; exists ; 2024 ; Journal of Textual Reasoning Volume 2024 ; 2024 ; 15 ; >
+      au < exists ; exists ; 2025 ; Journal of Textual Reasoning Volume 2025 ; 2025 ; 16 ; >
+      au < exists ; exists ; 2026 ; Journal of Textual Reasoning Volume 2026 ; 2026 ; 17 ; >
+
+  }
+
+  {
+
+      title <
+        name = William & Mary Education Review ;
+        eissn = 2330-7498
+      >
+
+      param[journal_id] = wmer
+
+      au < exists ; exists ; 2013 ; William & Mary Education Review Volume 2013 ; 2013 ; 1-2 ; >
+      au < exists ; exists ; 2014 ; William & Mary Education Review Volume 2014 ; 2014 ; 2-3 ; >
+      au < exists ; exists ; 2015 ; William & Mary Education Review Volume 2015 ; 2015 ; 3-4 ; >
+      au < exists ; exists ; 2016 ; William & Mary Education Review Volume 2016 ; 2016 ; 4 ; >
+      au < exists ; exists ; 2018 ; William & Mary Education Review Volume 2018 ; 2018 ; 5-6 ; >
+      au < exists ; exists ; 2020 ; William & Mary Education Review Volume 2020 ; 2020 ; 7 ; >
+      au < exists ; exists ; 2022 ; William & Mary Education Review Volume 2022 ; 2022 ; 8 ; >
+      au < exists ; exists ; 2024 ; William & Mary Education Review Volume 2024 ; 2024 ; 9 ; >
+      au < expected ; exists ; 2026 ; William & Mary Education Review Volume 2026 ; 2026 ; 10 ; >
+
+  }
+
+}
