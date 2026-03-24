@@ -29,16 +29,24 @@ POSSIBILITY OF SUCH DAMAGE.
 */
 package org.lockss.plugin.ojs3;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.ContentValidationException.WrongLength;
 import org.lockss.util.Logger;
 import org.lockss.util.urlconn.CacheException;
 import org.lockss.util.urlconn.CacheResultHandler;
 import org.lockss.util.urlconn.CacheResultMap;
+import org.lockss.util.urlconn.CacheException.WarningOnly;
 
 
 public class Ojs3HttpResponseHandler implements CacheResultHandler {
   private static final Logger logger = Logger.getLogger(Ojs3HttpResponseHandler.class);
 
+  //Some Wasit Journal of Engineering Sciences AUs have file content-length header errors,
+  //so we are downgrading these to a warning. 
+  protected static final Pattern WASIT_PAT = Pattern.compile("ejuow[.]uowasit[.]edu[.]iq");
 
   @Override
   public void init(CacheResultMap crmap) {
@@ -79,6 +87,16 @@ public class Ojs3HttpResponseHandler implements CacheResultHandler {
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
                                      Exception ex) {
+    if(ex instanceof WrongLength){
+      Matcher wasitMat = WASIT_PAT.matcher(url);
+      if(wasitMat.find()){
+        return new WarningOnly(ex.getMessage());
+        //may eventually need to replace with RetryableNoFailException_2_10S(ex) 
+      }
+      else{
+        return (CacheException)ex;
+      }
+    }
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
     throw new UnsupportedOperationException("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
   }
