@@ -16425,8 +16425,6 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; Islamic Economic Studies Volume 30 ; 30 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; Islamic Economic Studies Volume 31 ; 31 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; Islamic Economic Studies Volume 32 ; 32 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Islamic Economic Studies Volume 33 ; 33 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Islamic Economic Studies Volume 34 ; 34 ; >
 
   }
 
@@ -17031,8 +17029,6 @@
     au < doNotProcess ; doNotProcess ; 2022 ; 2022 ; PSU Research Review Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; PSU Research Review Volume 7 ; 7 ; >
     au < doNotProcess ; doNotProcess ; 2024 ; 2024 ; PSU Research Review Volume 8 ; 8 ; >
-    au < expected ; exists ; 2025 ; 2025 ; PSU Research Review Volume 9 ; 9 ; >
-    au < expected ; exists ; 2026 ; 2026 ; PSU Research Review Volume 10 ; 10 ; >
 
   }
 
@@ -17550,9 +17546,6 @@
       param[journal_id] = eor
 
       au < manifest ; exists ; 2023 ; 2023 ; Emerald Open Research Volume 1 ; 1 ; >
-      au < expected ; exists ; 2024 ; 2024 ; Emerald Open Research Volume 2 ; 2 ; >
-      au < expected ; exists ; 2025 ; 2025 ; Emerald Open Research Volume 3 ; 3 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Emerald Open Research Volume 4 ; 4 ; >
 
   }
 
@@ -17620,8 +17613,6 @@
       au < manifest ; exists ; 2022 ; 2022 ; Fulbright Review of Economics and Policy Volume 2 ; 2 ; >
       au < manifest ; exists ; 2023 ; 2023 ; Fulbright Review of Economics and Policy Volume 3 ; 3 ; >
       au < manifest ; exists ; 2024 ; 2024 ; Fulbright Review of Economics and Policy Volume 4 ; 4 ; >
-      au < exists ; exists ; 2025 ; 2025 ; Fulbright Review of Economics and Policy Volume 5 ; 5 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Fulbright Review of Economics and Policy Volume 6 ; 6 ; >
 
   }
 
@@ -17720,11 +17711,11 @@
       >
       param[journal_id] = ijieom
 
-      au < exists ; exists ; 2022 ; 2022 ; International Journal of Industrial Engineering and Operations Management Volume 6 ; 6 ; >
-      au < exists ; exists ; 2023 ; 2023 ; International Journal of Industrial Engineering and Operations Management Volume 7 ; 7 ; >
-      au < exists ; exists ; 2024 ; 2024 ; International Journal of Industrial Engineering and Operations Management Volume 8 ; 8 ; >
-      au < exists ; exists ; 2025 ; 2025 ; International Journal of Industrial Engineering and Operations Management Volume 9 ; 9 ; >
-      au < expected ; exists ; 2026 ; 2026 ; International Journal of Industrial Engineering and Operations Management Volume 10 ; 10 ; >
+      au < exists ; exists ; 2022 ; 2022 ; International Journal of Industrial Engineering and Operations Management Volume 4 ; 4 ; >
+      au < exists ; exists ; 2023 ; 2023 ; International Journal of Industrial Engineering and Operations Management Volume 5 ; 5 ; >
+      au < exists ; exists ; 2024 ; 2024 ; International Journal of Industrial Engineering and Operations Management Volume 6 ; 6 ; >
+      au < exists ; exists ; 2025 ; 2025 ; International Journal of Industrial Engineering and Operations Management Volume 7 ; 7 ; >
+      au < expected ; exists ; 2026 ; 2026 ; International Journal of Industrial Engineering and Operations Management Volume 8 ; 8 ; >
 
   }
 
@@ -17805,20 +17796,21 @@
       au < manifest ; exists ; 2009 ; 2009 ; Journal of Character Education Volume 7 ; 7 ; >
       au < manifest ; exists ; 2010 ; 2010 ; Journal of Character Education Volume 8 ; 8 ; >
       au < manifest ; exists ; 2011 ; 2011 ; Journal of Character Education Volume 9 ; 9 ; >
-      au < exists ; exists ; 2012 ; 2012 ; Journal of Character Education Volume 10 ; 10 ; >
-      au < exists ; exists ; 2013 ; 2013 ; Journal of Character Education Volume 11 ; 11 ; >
-      au < exists ; exists ; 2014 ; 2014 ; Journal of Character Education Volume 12 ; 12 ; >
-      au < exists ; exists ; 2015 ; 2015 ; Journal of Character Education Volume 13 ; 13 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Journal of Character Education Volume 14 ; 14 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Journal of Character Education Volume 15 ; 15 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Journal of Character Education Volume 16 ; 16 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Journal of Character Education Volume 17 ; 17 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Journal of Character Education Volume 18 ; 18 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Journal of Character Education Volume 19 ; 19 ; >
-      au < exists ; exists ; 2022 ; 2022 ; Journal of Character Education Volume 20 ; 20 ; >
-      au < exists ; exists ; 2023 ; 2023 ; Journal of Character Education Volume 21 ; 21 ; >
-      au < exists ; exists ; 2024 ; 2024 ; Journal of Character Education Volume 22 ; 22 ; >
-      au < exists ; exists ; 2025 ; 2025 ; Journal of Character Education Volume 23 ; 23 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Journal of Character Education Volume 10 [2015] ; 10 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Journal of Character Education Volume 11 [2015] ; 11 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Journal of Character Education Volume 11 [2016] ; 11 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Journal of Character Education Volume 12 [2017] ; 12 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Journal of Character Education Volume 13 [2017] ; 13 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Journal of Character Education Volume 13 [2018] ; 13 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Journal of Character Education Volume 14 [2018] ; 14 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Journal of Character Education Volume 15 [2019] ; 15 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Journal of Character Education Volume 16 [2020] ; 16 ; >
+      au < exists ; exists ; 2021 ; 2021 ; Journal of Character Education Volume 17 [2021] ; 17 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Journal of Character Education Volume 18 [2022] ; 18 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Journal of Character Education Volume 18 [2023] ; 18 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Character Education Volume 19 [2024] ; 19 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Character Education Volume 20 [2024] ; 20 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Character Education Volume 21 [2025] ; 21 ; >
       au < expected ; exists ; 2026 ; 2026 ; Journal of Character Education Volume 24 ; 24 ; >
 
   }
@@ -18050,7 +18042,7 @@
       >
       param[journal_id] = jrtm
 
-      au < expected ; exists ; 2026 ; 2026 ; Journal of Responsible Tourism Management Volume 1 ; 1 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Responsible Tourism Management Volume 6 ; 6 ; >
 
   }
 
@@ -18241,18 +18233,14 @@
       au < manifest ; exists ; 2012 ; 2012 ; Middle Grades Research Journal Volume 7 ; 7 ; >
       au < manifest ; exists ; 2013 ; 2013 ; Middle Grades Research Journal Volume 8 ; 8 ; >
       au < manifest ; exists ; 2014 ; 2014 ; Middle Grades Research Journal Volume 9 ; 9 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; Middle Grades Research Journal Volume 10 ; 10 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Middle Grades Research Journal Volume 11 ; 11 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Middle Grades Research Journal Volume 12 ; 12 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Middle Grades Research Journal Volume 13 ; 13 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Middle Grades Research Journal Volume 14 ; 14 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Middle Grades Research Journal Volume 15 ; 15 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Middle Grades Research Journal Volume 16 ; 16 ; >
-      au < exists ; exists ; 2022 ; 2022 ; Middle Grades Research Journal Volume 17 ; 17 ; >
-      au < exists ; exists ; 2023 ; 2023 ; Middle Grades Research Journal Volume 18 ; 18 ; >
-      au < exists ; exists ; 2024 ; 2024 ; Middle Grades Research Journal Volume 19 ; 19 ; >
-      au < exists ; exists ; 2025 ; 2025 ; Middle Grades Research Journal Volume 20 ; 20 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Middle Grades Research Journal Volume 21 ; 21 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Middle Grades Research Journal Volume 10 [2015] ; 10 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Middle Grades Research Journal Volume 10 [2016] ; 10 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Middle Grades Research Journal Volume 11 [2017] ; 11 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Middle Grades Research Journal Volume 11 [2018] ; 11 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Middle Grades Research Journal Volume 12 [2019] ; 12 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Middle Grades Research Journal Volume 13 [2022] ; 13 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Middle Grades Research Journal Volume 13 [2023] ; 13 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Middle Grades Research Journal Volume 13 [2024] ; 13 ; >
 
   }
 
@@ -18328,16 +18316,25 @@
       au < manifest ; exists ; 2012 ; 2012 ; Quarterly Review of Education Volume 13 ; 13 ; >
       au < manifest ; exists ; 2013 ; 2013 ; Quarterly Review of Education Volume 14 ; 14 ; >
       au < manifest ; exists ; 2014 ; 2014 ; Quarterly Review of Education Volume 15 ; 15 ; >
-      au < manifest ; exists ; 2015 ; 2015 ; Quarterly Review of Education Volume 16 ; 16 ; >
-      au < manifest ; exists ; 2016 ; 2016 ; Quarterly Review of Education Volume 17 ; 17 ; >
-      au < manifest ; exists ; 2017 ; 2017 ; Quarterly Review of Education Volume 18 ; 18 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; Quarterly Review of Education Volume 19 ; 19 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; Quarterly Review of Education Volume 20 ; 20 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Quarterly Review of Education Volume 21 ; 21 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; Quarterly Review of Education Volume 22 ; 22 ; >
-      au < manifest ; exists ; 2022 ; 2022 ; Quarterly Review of Education Volume 23 ; 23 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; Quarterly Review of Education Volume 24 ; 24 ; >
-      au < manifest ; exists ; 2024 ; 2024 ; Quarterly Review of Education Volume 25 ; 25 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Quarterly Review of Education Volume 15 [2015] ; 15 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; Quarterly Review of Education Volume 16 [2015] ; 16 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Quarterly Review of Education Volume 16 [2016] ; 16 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; Quarterly Review of Education Volume 17 [2016] ; 17 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Quarterly Review of Education Volume 17 [2017] ; 17 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; Quarterly Review of Education Volume 18 [2017] ; 18 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Quarterly Review of Education Volume 18 [2018] ; 18 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; Quarterly Review of Education Volume 19 [2018] ; 19 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Quarterly Review of Education Volume 19 [2019] ; 19 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; Quarterly Review of Education Volume 20 [2019] ; 20 ; >
+      au < exists ; exists ; 2020 ; 2020 ; Quarterly Review of Education Volume 20 [2020] ; 20 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Quarterly Review of Education Volume 21 [2021] ; 21 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; Quarterly Review of Education Volume 22 [2021] ; 22 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Quarterly Review of Education Volume 22 [2022] ; 22 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; Quarterly Review of Education Volume 23 [2022] ; 23 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Quarterly Review of Education Volume 23 [2023] ; 23 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; Quarterly Review of Education Volume 24 [2023] ; 24 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Quarterly Review of Education Volume 24 [2024] ; 24 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; Quarterly Review of Education Volume 25 [2024] ; 25 ; >
       au < manifest ; exists ; 2025 ; 2025 ; Quarterly Review of Education Volume 26 ; 26 ; >
       au < manifest ; exists ; 2026 ; 2026 ; Quarterly Review of Education Volume 27 ; 27 ; >
 
@@ -18448,28 +18445,36 @@
       param[journal_id] = tcj
 
       au < manifest ; exists ; 2004 ; 2004 ; The CASE Journal Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2005 ; 2005 ; The CASE Journal Volume 2 ; 2 ; >
-      au < manifest ; exists ; 2006 ; 2006 ; The CASE Journal Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2007 ; 2007 ; The CASE Journal Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2008 ; 2008 ; The CASE Journal Volume 5 ; 5 ; >
-      au < manifest ; exists ; 2009 ; 2009 ; The CASE Journal Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2010 ; 2010 ; The CASE Journal Volume 7 ; 7 ; >
-      au < manifest ; exists ; 2011 ; 2011 ; The CASE Journal Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2012 ; 2012 ; The CASE Journal Volume 9 ; 9 ; >
-      au < exists ; exists ; 2013 ; 2013 ; The CASE Journal Volume 10 ; 10 ; >
-      au < exists ; exists ; 2014 ; 2014 ; The CASE Journal Volume 11 ; 11 ; >
-      au < exists ; exists ; 2015 ; 2015 ; The CASE Journal Volume 12 ; 12 ; >
-      au < exists ; exists ; 2016 ; 2016 ; The CASE Journal Volume 13 ; 13 ; >
-      au < exists ; exists ; 2017 ; 2017 ; The CASE Journal Volume 14 ; 14 ; >
-      au < exists ; exists ; 2018 ; 2018 ; The CASE Journal Volume 15 ; 15 ; >
-      au < exists ; exists ; 2019 ; 2019 ; The CASE Journal Volume 16 ; 16 ; >
-      au < exists ; exists ; 2020 ; 2020 ; The CASE Journal Volume 17 ; 17 ; >
-      au < exists ; exists ; 2021 ; 2021 ; The CASE Journal Volume 18 ; 18 ; >
-      au < exists ; exists ; 2022 ; 2022 ; The CASE Journal Volume 19 ; 19 ; >
-      au < exists ; exists ; 2023 ; 2023 ; The CASE Journal Volume 20 ; 20 ; >
-      au < exists ; exists ; 2024 ; 2024 ; The CASE Journal Volume 21 ; 21 ; >
-      au < exists ; exists ; 2025 ; 2025 ; The CASE Journal Volume 22 ; 22 ; >
-      au < expected ; exists ; 2026 ; 2026 ; The CASE Journal Volume 23 ; 23 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; The CASE Journal Volume 1 [2005] ; 1 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; The CASE Journal Volume 2 [2005] ; 2 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; The CASE Journal Volume 2 [2006] ; 2 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; The CASE Journal Volume 3 [2006] ; 3 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; The CASE Journal Volume 3 [2007] ; 3 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; The CASE Journal Volume 4 [2007] ; 4 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; The CASE Journal Volume 4 [2008] ; 4 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; The CASE Journal Volume 5 [2008] ; 5 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; The CASE Journal Volume 5 [2009] ; 5 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; The CASE Journal Volume 6 [2009] ; 6 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; The CASE Journal Volume 6 [2010] ; 6 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; The CASE Journal Volume 7 [2010] ; 7 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; The CASE Journal Volume 7 [2011] ; 7 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; The CASE Journal Volume 8 [2011] ; 8 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; The CASE Journal Volume 8 [2012] ; 8 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; The CASE Journal Volume 9 [2012] ; 9 ; >
+      au < exists ; exists ; 2013 ; 2013 ; The CASE Journal Volume 9 ; 9 ; >
+      au < exists ; exists ; 2014 ; 2014 ; The CASE Journal Volume 10 ; 10 ; >
+      au < exists ; exists ; 2015 ; 2015 ; The CASE Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 2016 ; 2016 ; The CASE Journal Volume 12 ; 12 ; >
+      au < exists ; exists ; 2017 ; 2017 ; The CASE Journal Volume 13 ; 13 ; >
+      au < exists ; exists ; 2018 ; 2018 ; The CASE Journal Volume 14 ; 14 ; >
+      au < exists ; exists ; 2019 ; 2019 ; The CASE Journal Volume 15 ; 15 ; >
+      au < exists ; exists ; 2020 ; 2020 ; The CASE Journal Volume 16 ; 16 ; >
+      au < exists ; exists ; 2021 ; 2021 ; The CASE Journal Volume 17 ; 17 ; >
+      au < exists ; exists ; 2022 ; 2022 ; The CASE Journal Volume 18 ; 18 ; >
+      au < exists ; exists ; 2023 ; 2023 ; The CASE Journal Volume 19 ; 19 ; >
+      au < exists ; exists ; 2024 ; 2024 ; The CASE Journal Volume 20 ; 20 ; >
+      au < exists ; exists ; 2025 ; 2025 ; The CASE Journal Volume 21 ; 21 ; >
+      au < expected ; exists ; 2026 ; 2026 ; The CASE Journal Volume 22 ; 22 ; >
 
   }
 
@@ -18482,17 +18487,19 @@
       >
       param[journal_id] = sojo
 
-      au < manifest ; exists ; 2015 ; 2015 ; The SoJo Journal Volume 1 ; 1 ; >
-      au < exists ; exists ; 2016 ; 2016 ; The SoJo Journal Volume 2 ; 2 ; >
-      au < exists ; exists ; 2017 ; 2017 ; The SoJo Journal Volume 3 ; 3 ; >
-      au < manifest ; exists ; 2018 ; 2018 ; The SoJo Journal Volume 4 ; 4 ; >
-      au < manifest ; exists ; 2019 ; 2019 ; The SoJo Journal Volume 5 ; 5 ; >
-      au < exists ; exists ; 2020 ; 2020 ; The SoJo Journal Volume 6 ; 6 ; >
-      au < manifest ; exists ; 2021 ; 2021 ; The SoJo Journal Volume 7 ; 7 ; >
-      au < exists ; exists ; 2022 ; 2022 ; The SoJo Journal Volume 8 ; 8 ; >
-      au < manifest ; exists ; 2023 ; 2023 ; The SoJo Journal Volume 9 ; 9 ; >
-      au < exists ; exists ; 2024 ; 2024 ; The SoJo Journal Volume 10 ; 10 ; >
-      au < manifest ; exists ; 2025 ; 2025 ; The SoJo Journal Volume 11 ; 11 ; >
+      au < exists ; exists ; 2015 ; 2015 ; The SoJo Journal Volume 1 [2015] ; 1 ; >
+      au < exists ; exists ; 2016 ; 2016 ; The SoJo Journal Volume 1 [2016] ; 1 ; >
+      au < exists ; exists ; 2017 ; 2017 ; The SoJo Journal Volume 2 [2017] ; 2 ; >
+      au < exists ; exists ; 2018 ; 2018 ; The SoJo Journal Volume 3 [2018] ; 3 ; >
+      au < exists ; exists ; 2018 ; 2018 ; The SoJo Journal Volume 4 [2018] ; 4 ; >
+      au < exists ; exists ; 2019 ; 2019 ; The SoJo Journal Volume 4 [2019] ; 4 ; >
+      au < exists ; exists ; 2019 ; 2019 ; The SoJo Journal Volume 5 [2019] ; 5 ; >
+      au < exists ; exists ; 2021 ; 2021 ; The SoJo Journal Volume 6 [2021] ; 6 ; >
+      au < exists ; exists ; 2021 ; 2021 ; The SoJo Journal Volume 7 [2021] ; 7 ; >
+      au < exists ; exists ; 2022 ; 2022 ; The SoJo Journal Volume 7 [2022] ; 7 ; >
+      au < exists ; exists ; 2023 ; 2023 ; The SoJo Journal Volume 9 [2023] ; 9 ; >
+      au < exists ; exists ; 2024 ; 2024 ; The SoJo Journal Volume 9 [2024] ; 9 ; >
+      au < exists ; exists ; 2025 ; 2025 ; The SoJo Journal Volume 11 ; 11 ; >
       au < expected ; exists ; 2026 ; 2026 ; The SoJo Journal Volume 12 ; 12 ; >
 
   }
