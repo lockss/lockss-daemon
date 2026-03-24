@@ -4531,6 +4531,7 @@ while (my $line = <>) {
           ($plugin eq "ClockssDeepBlueOaiPlugin") ||
           ($plugin eq "ClockssEuropeanJournalBusinessScienceTechnologyPlugin") ||
           ($plugin eq "ClockssGhentUniversityLibraryDomainModeJournalsPlugin") ||
+          ($plugin eq "ClockssUniversityOfLeedsBooksPlugin") ||
           ($plugin eq "GhentUniversityLibraryDomainModeJournalsPlugin") ||
           ($plugin eq "ClockssSciELO2024Plugin") ||
           ($plugin eq "BMCRPlugin") ||
