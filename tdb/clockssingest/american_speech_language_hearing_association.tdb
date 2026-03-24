@@ -124,18 +124,18 @@
       param[journal_id] = jsd
       param[base_url] = https://pubs.asha.org/
 
-      au < frozen ; exists ; 1936 ; Journal of Speech Disorders Volume 1 ; 1 ; >
-      au < frozen ; exists ; 1937 ; Journal of Speech Disorders Volume 2 ; 2 ; >
-      au < frozen ; exists ; 1938 ; Journal of Speech Disorders Volume 3 ; 3 ; >
-      au < frozen ; exists ; 1939 ; Journal of Speech Disorders Volume 4 ; 4 ; >
-      au < frozen ; exists ; 1940 ; Journal of Speech Disorders Volume 5 ; 5 ; >
-      au < frozen ; exists ; 1941 ; Journal of Speech Disorders Volume 6 ; 6 ; >
-      au < frozen ; exists ; 1942 ; Journal of Speech Disorders Volume 7 ; 7 ; >
-      au < frozen ; exists ; 1943 ; Journal of Speech Disorders Volume 8 ; 8 ; >
-      au < frozen ; exists ; 1944 ; Journal of Speech Disorders Volume 9 ; 9 ; >
-      au < frozen ; exists ; 1945 ; Journal of Speech Disorders Volume 10 ; 10 ; >
-      au < frozen ; exists ; 1946 ; Journal of Speech Disorders Volume 11 ; 11 ; >
-      au < frozen ; exists ; 1947 ; Journal of Speech Disorders Volume 12 ; 12 ; >
+      au < finished ; manifest ; 1936 ; Journal of Speech Disorders Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1937 ; Journal of Speech Disorders Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1938 ; Journal of Speech Disorders Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1939 ; Journal of Speech Disorders Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1940 ; Journal of Speech Disorders Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1941 ; Journal of Speech Disorders Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1942 ; Journal of Speech Disorders Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1943 ; Journal of Speech Disorders Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1944 ; Journal of Speech Disorders Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1945 ; Journal of Speech Disorders Volume 10 ; 10 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1946 ; Journal of Speech Disorders Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1947 ; Journal of Speech Disorders Volume 12 ; 12 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -153,16 +153,16 @@
       param[journal_id] = jshd
       param[base_url] = https://pubs.asha.org/
 
-      au < frozen ; exists ; 1948 ; Journal of Speech and Hearing Disorders Volume 13 ; 13 ; >
-      au < frozen ; exists ; 1949 ; Journal of Speech and Hearing Disorders Volume 14 ; 14 ; >
-      au < frozen ; exists ; 1950 ; Journal of Speech and Hearing Disorders Volume 15 ; 15 ; >
-      au < frozen ; exists ; 1951 ; Journal of Speech and Hearing Disorders Volume 16 ; 16 ; >
-      au < frozen ; exists ; 1952 ; Journal of Speech and Hearing Disorders Volume 17 ; 17 ; >
-      au < frozen ; exists ; 1953 ; Journal of Speech and Hearing Disorders Volume 18 ; 18 ; >
-      au < frozen ; exists ; 1954 ; Journal of Speech and Hearing Disorders Volume 19 ; 19 ; >
-      au < frozen ; exists ; 1955 ; Journal of Speech and Hearing Disorders Volume 20 ; 20 ; >
-      au < frozen ; exists ; 1956 ; Journal of Speech and Hearing Disorders Volume 21 ; 21 ; >
-      au < frozen ; exists ; 1957 ; Journal of Speech and Hearing Disorders Volume 22 ; 22 ; >
+      au < finished ; manifest ; 1948 ; Journal of Speech and Hearing Disorders Volume 13 ; 13 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1949 ; Journal of Speech and Hearing Disorders Volume 14 ; 14 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1950 ; Journal of Speech and Hearing Disorders Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1951 ; Journal of Speech and Hearing Disorders Volume 16 ; 16 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1952 ; Journal of Speech and Hearing Disorders Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1953 ; Journal of Speech and Hearing Disorders Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1954 ; Journal of Speech and Hearing Disorders Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1955 ; Journal of Speech and Hearing Disorders Volume 20 ; 20 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1956 ; Journal of Speech and Hearing Disorders Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1957 ; Journal of Speech and Hearing Disorders Volume 22 ; 22 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 1958 ; Journal of Speech and Hearing Disorders Volume 23 ; 23 ; >
       au < frozen ; exists ; 1959 ; Journal of Speech and Hearing Disorders Volume 24 ; 24 ; >
       au < frozen ; exists ; 1960 ; Journal of Speech and Hearing Disorders Volume 25 ; 25 ; >
