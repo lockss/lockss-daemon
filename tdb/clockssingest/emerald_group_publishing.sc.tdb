@@ -17750,20 +17750,24 @@
       >
       param[journal_id] = jal
 
-      au < manifest ; exists ; 2013 ; 2013 ; Journal of Accounting Literature Volume 31 ; 31 ; >
-      au < exists ; exists ; 2014 ; 2014 ; Journal of Accounting Literature Volume 32 ; 32 ; >
-      au < exists ; exists ; 2015 ; 2015 ; Journal of Accounting Literature Volume 33 ; 33 ; >
-      au < exists ; exists ; 2016 ; 2016 ; Journal of Accounting Literature Volume 34 ; 34 ; >
-      au < exists ; exists ; 2017 ; 2017 ; Journal of Accounting Literature Volume 35 ; 35 ; >
-      au < exists ; exists ; 2018 ; 2018 ; Journal of Accounting Literature Volume 36 ; 36 ; >
-      au < exists ; exists ; 2019 ; 2019 ; Journal of Accounting Literature Volume 37 ; 37 ; >
-      au < exists ; exists ; 2020 ; 2020 ; Journal of Accounting Literature Volume 38 ; 38 ; >
-      au < exists ; exists ; 2021 ; 2021 ; Journal of Accounting Literature Volume 39 ; 39 ; >
-      au < exists ; exists ; 2022 ; 2022 ; Journal of Accounting Literature Volume 40 ; 40 ; >
-      au < exists ; exists ; 2023 ; 2023 ; Journal of Accounting Literature Volume 41 ; 41 ; >
-      au < exists ; exists ; 2024 ; 2024 ; Journal of Accounting Literature Volume 42 ; 42 ; >
-      au < exists ; exists ; 2025 ; 2025 ; Journal of Accounting Literature Volume 43 ; 43 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Journal of Accounting Literature Volume 44 ; 44 ; >
+      au < exists ; exists ; 2013 ; 2013 ; Journal of Accounting Literature Volume 31 [2013] ; 31 ; >
+      au < exists ; exists ; 2013 ; 2013 ; Journal of Accounting Literature Volume 32 [2013] ; 32 ; >
+      au < exists ; exists ; 2014 ; 2014 ; Journal of Accounting Literature Volume 33 [2014] ; 33 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Journal of Accounting Literature Volume 34 [2015] ; 34 ; >
+      au < exists ; exists ; 2015 ; 2015 ; Journal of Accounting Literature Volume 35 [2015] ; 35 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Journal of Accounting Literature Volume 36 [2016] ; 36 ; >
+      au < exists ; exists ; 2016 ; 2016 ; Journal of Accounting Literature Volume 37 [2016] ; 37 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Journal of Accounting Literature Volume 38 [2017] ; 38 ; >
+      au < exists ; exists ; 2017 ; 2017 ; Journal of Accounting Literature Volume 39 [2017] ; 39 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Journal of Accounting Literature Volume 40 [2018] ; 40 ; >
+      au < exists ; exists ; 2018 ; 2018 ; Journal of Accounting Literature Volume 41 [2018] ; 41 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Journal of Accounting Literature Volume 42 [2019] ; 42 ; >
+      au < exists ; exists ; 2019 ; 2019 ; Journal of Accounting Literature Volume 43 [2019] ; 43 ; >
+      au < exists ; exists ; 2022 ; 2022 ; Journal of Accounting Literature Volume 44 ; 44 ; >
+      au < exists ; exists ; 2023 ; 2023 ; Journal of Accounting Literature Volume 45 ; 41 ; >
+      au < exists ; exists ; 2024 ; 2024 ; Journal of Accounting Literature Volume 46 ; 42 ; >
+      au < exists ; exists ; 2025 ; 2025 ; Journal of Accounting Literature Volume 47 ; 43 ; >
+      au < expected ; exists ; 2026 ; 2026 ; Journal of Accounting Literature Volume 48 ; 44 ; >
 
   }
 
