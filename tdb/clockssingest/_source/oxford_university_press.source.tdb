@@ -33,7 +33,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/oup-released/
       
       #Testing passed. Waiting for production bucket.
-      au < exists ; exists ; 2026 ; Oxford University Press Journal Source Content 2026_01 ; 2026_01 >
+      au < manifest ; exists ; 2026 ; Oxford University Press Journal Source Content 2026_01 ; 2026_01 >
 
   }
 
