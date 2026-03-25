@@ -78,7 +78,7 @@
     au < finished ; manifest ; 2022 ; Anthropology in Action Volume 29 ; 29 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; Anthropology in Action Volume 30 ; 30 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; Anthropology in Action Volume 31 ; 31 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; Anthropology in Action Volume 32 ; 32 ; >
+    au < crawling ; exists ; 2025 ; Anthropology in Action Volume 32 ; 32 ; >
     au < expected ; exists ; 2026 ; Anthropology in Action Volume 33 ; 33 ; >
 
   }
@@ -587,7 +587,7 @@
     #param[journal_issn] = 1537-6370
 
     au < finished ; manifest ; 1999 ; French Politics, Culture & Society Volume 17 ; 17 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2000 ; French Politics, Culture & Society Volume 18 ; 18 ; >
     au < crawling ; exists ; 2001 ; French Politics, Culture & Society Volume 19 ; 19 ; >
     au < finished ; manifest ; 2002 ; French Politics, Culture & Society Volume 20 ; 20 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2003 ; French Politics, Culture & Society Volume 21 ; 21 ; reingest4.clockss.org:8082 >

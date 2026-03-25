@@ -4282,7 +4282,7 @@
     param[journal_issn] = 1062-7375
 
     au < ready ; exists ; 1993 ; Journal of Global Information Management (JGIM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 1994 ; Journal of Global Information Management (JGIM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 1994 ; Journal of Global Information Management (JGIM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1995 ; Journal of Global Information Management (JGIM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1996 ; Journal of Global Information Management (JGIM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1997 ; Journal of Global Information Management (JGIM) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
@@ -4525,7 +4525,7 @@
 
       au < frozen ; exists ; 2016 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2017 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2018 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2018 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2019 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2020 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2021 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
@@ -5300,7 +5300,7 @@
       param[journal_issn] = 2771-5612
 
       au < ready ; exists ; 2022 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2023 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2023 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2024 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2025 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >

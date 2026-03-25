@@ -403,7 +403,7 @@
       param[base_url] = https://mulpress.mcmaster.ca/
       param[journal_id] = texttechnology
 
-      au < ready ; exists ; 1991 ; TEXT Technology Volume 1 ; 1 ; 1991 ; > 
+      au < crawling ; exists ; 1991 ; TEXT Technology Volume 1 ; 1 ; 1991 ; > 
 
     }
 
