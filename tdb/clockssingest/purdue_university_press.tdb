@@ -101,7 +101,7 @@
     au < finished ; finished ; 2018 ; CLCWeb: Comparative Literature and Culture Volume 20 ; 20 ; https://docs.lib.purdue.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2019 ; CLCWeb: Comparative Literature and Culture Volume 21 ; 21 ; https://docs.lib.purdue.edu/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2020 ; CLCWeb: Comparative Literature and Culture Volume 22 ; 22 ; https://docs.lib.purdue.edu/ ; reingest2.clockss.org:8085 >
-    au < frozen ; exists ; 2021 ; CLCWeb: Comparative Literature and Culture Volume 23 ; 23 ; https://docs.lib.purdue.edu/ ; >
+    au < finished ; manifest ; 2021 ; CLCWeb: Comparative Literature and Culture Volume 23 ; 23 ; https://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; CLCWeb: Comparative Literature and Culture Volume 24 ; 24 ; https://docs.lib.purdue.edu/ ; >
     au < deepCrawl ; exists ; 2023 ; CLCWeb: Comparative Literature and Culture Volume 25 ; 25 ; https://docs.lib.purdue.edu/ ; >
     au < deepCrawl ; exists ; 2024 ; CLCWeb: Comparative Literature and Culture Volume 26 ; 26 ; https://docs.lib.purdue.edu/ ; >
@@ -209,7 +209,7 @@
     au < finished ; frozen ; 2022 ; Journal of Aviation Technology and Engineering Volume 11 ; 11 ; https://docs.lib.purdue.edu/ ; reingest4.clockss.org:8082 >
     au < finished ; crawling ; 2023 ; Journal of Aviation Technology and Engineering Volume 12 ; 12 ; https://docs.lib.purdue.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; Journal of Aviation Technology and Engineering Volume 13 ; 13 ; https://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2025 ; Journal of Aviation Technology and Engineering Volume 14 ; 14 ; https://docs.lib.purdue.edu/ ; >
+    au < finished ; manifest ; 2025 ; Journal of Aviation Technology and Engineering Volume 14 ; 14 ; https://docs.lib.purdue.edu/ ; reingest2.clockss.org:8085 >
     au < manifest ; exists ; 2026 ; Journal of Aviation Technology and Engineering Volume 15 ; 15 ; https://docs.lib.purdue.edu/ ; >
 
   }
@@ -259,7 +259,7 @@
     param[journal_abbr] = jpeer
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < frozen ; exists ; 2011 ; Journal of Pre-College Engineering Education Research Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; >
+    au < finished ; manifest ; 2011 ; Journal of Pre-College Engineering Education Research Volume 1 ; 1 ; https://docs.lib.purdue.edu/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2012 ; Journal of Pre-College Engineering Education Research Volume 2 ; 2 ; http://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2013 ; Journal of Pre-College Engineering Education Research Volume 3 ; 3 ; http://docs.lib.purdue.edu/ ; >
     au < finished ; finished ; 2014 ; Journal of Pre-College Engineering Education Research Volume 4 ; 4 ; http://docs.lib.purdue.edu/ ; >
@@ -269,7 +269,7 @@
     au < finished ; finished ; 2018 ; Journal of Pre-College Engineering Education Research Volume 8 ; 8 ; https://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2019 ; Journal of Pre-College Engineering Education Research Volume 9 ; 9 ; https://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Pre-College Engineering Education Research Volume 10 ; 10 ; https://docs.lib.purdue.edu/ ; reingest3.clockss.org:8083 >
-    au < frozen ; exists ; 2021 ; Journal of Pre-College Engineering Education Research Volume 11 ; 11 ; https://docs.lib.purdue.edu/ ; >
+    au < finished ; manifest ; 2021 ; Journal of Pre-College Engineering Education Research Volume 11 ; 11 ; https://docs.lib.purdue.edu/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Journal of Pre-College Engineering Education Research Volume 12 ; 12 ; https://docs.lib.purdue.edu/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Pre-College Engineering Education Research Volume 13 ; 13 ; https://docs.lib.purdue.edu/ ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Pre-College Engineering Education Research Volume 14 ; 14 ; https://docs.lib.purdue.edu/ ; >
@@ -333,7 +333,7 @@
     au < finished ; finished ; 2018 ; Journal of Southeast Asian American Education and Advancement Volume 13 ; 13 ; https://docs.lib.purdue.edu/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; Journal of Southeast Asian American Education and Advancement Volume 14 ; 14 ; https://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Southeast Asian American Education and Advancement Volume 15 ; 15 ; https://docs.lib.purdue.edu/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2021 ; Journal of Southeast Asian American Education and Advancement Volume 16 ; 16 ; https://docs.lib.purdue.edu/ ; >
+    au < finished ; manifest ; 2021 ; Journal of Southeast Asian American Education and Advancement Volume 16 ; 16 ; https://docs.lib.purdue.edu/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Southeast Asian American Education and Advancement Volume 17 ; 17 ; https://docs.lib.purdue.edu/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Southeast Asian American Education and Advancement Volume 18 ; 18 ; https://docs.lib.purdue.edu/ ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Southeast Asian American Education and Advancement Volume 19 ; 19 ; https://docs.lib.purdue.edu/ ; >
