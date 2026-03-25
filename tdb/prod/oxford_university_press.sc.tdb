@@ -2881,7 +2881,7 @@
     au < released ; 2023 ; 2023 ; Biostatistics Volume 24 ; 24 >
     au < released ; 2024 ; 2024 ; Biostatistics Volume 25 ; 25 >
     au < ready ; 2025 ; 2025 ; Biostatistics Volume 26 ; 26 >
-    au < exists ; 2026 ; 2026 ; Biostatistics Volume 27 ; 27 >
+    au < manifest ; 2026 ; 2026 ; Biostatistics Volume 27 ; 27 >
 
   }
 
@@ -10479,7 +10479,7 @@
     au < released ; 2023 ; 2023 ; International Journal of Public Opinion Research Volume 35 ; 35 >
     au < released ; 2024 ; 2024 ; International Journal of Public Opinion Research Volume 36 ; 36 >
     au < manifest ; 2025 ; 2025 ; International Journal of Public Opinion Research Volume 37 ; 37 >
-    au < expected ; 2026 ; 2026 ; International Journal of Public Opinion Research Volume 38 ; 38 >
+    au < manifest ; 2026 ; 2026 ; International Journal of Public Opinion Research Volume 38 ; 38 >
 
   }
 
@@ -18050,7 +18050,7 @@
     au < released ; 2023 ; 2023 ; Oxford Art Journal Volume 45-46 ; 45-46 >
     au < released ; 2024 ; 2024 ; Oxford Art Journal Volume 46-47 ; 46-47 >
     au < released ; 2025 ; 2025 ; Oxford Art Journal Volume 48 ; 48 >
-    au < expected ; 2026 ; 2026 ; Oxford Art Journal Volume 49 ; 49 >
+    au < manifest ; 2026 ; 2026 ; Oxford Art Journal Volume 49 ; 49 >
 
   }
 
@@ -20544,7 +20544,7 @@
     param[journal_id] = sd
     #move from Sage in 2026
 
-    au < expected ; 2026 ; 2026 ; Security Dialogue Volume 57 ; 57 >
+    au < manifest ; 2026 ; 2026 ; Security Dialogue Volume 57 ; 57 >
 
   }
 
