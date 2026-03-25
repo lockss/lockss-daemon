@@ -2,8 +2,16 @@
 # Script that creates a list of AUs by collection_id and year, that are missing from the USDocs tdb files.
 #
 
+# Define the path to the CSV file
+acronym_file="scripts/tdb/usdocs_acronyms.txt"
 tpath="/home/$LOGNAME/tmp"
 #mkdir -p $tpath
+
+# Read the CSV file and store mappings in an associative array
+declare -A acronym_map
+while IFS=',' read -r acronym name; do
+    acronym_map["$acronym"]="$name"
+done < <(tail -n +2 "$acronym_file")  # Skip the header
 
 #list of Down AUs in old tdb file.
 tdbout -Dc param[collection_id],param[year] tdb/usdocspln/united_states_government_publishing_office.fdsys.tdb | sort > $tpath/list1a 
@@ -22,10 +30,39 @@ comm -23 $tpath/list1c $tpath/list1d #output. duplicate aus in new and old tdb f
 #output. AUs missing from the new tdb file.
 echo "**AUs missing from the combined tdb files. Add to the new tdb file."
 perl scripts/tdb/check_usdocs_manifest_pages.pl | sort | uniq > $tpath/list2a #list of AUs on website
+
+#JIC
+if [[ ! -f "$tpath/list1d" || ! -f "$tpath/list2a" ]]; then
+    echo "Error: One or both input files do not exist."
+    exit 1
+fi
+
 #NOT USCOURTS
-comm -13 $tpath/list1d $tpath/list2a | grep -v 'USCOURTS_' | sed 's/^/    au < manifest ; /' | sed 's/\([A-Z]*\),\([12][67890][0-9][0-9]\)/\2 ; \1 \2 ; \2 ; https:\/\/www.govinfo.gov\/ >/'
+not_uscourts=$(comm -13 $tpath/list1d $tpath/list2a | \
+        grep -v 'USCOURTS_' | \
+        sed 's/^/    au < manifest ; /' | \
+        sed 's/\([A-Z]*\),\([12][67890][0-9][0-9]\)/\2 ; \1 \2 ; \2 ; https:\/\/www.govinfo.gov\/ >/')
+for acronym in "${!acronym_map[@]}"; do
+    #echo "Processing acronym: $acronym" #debug
+    name="${acronym_map[$acronym]}"
+    # Use sed to perform the replacement on the entire variable
+    not_uscourts=$(echo "$not_uscourts" | sed "s/; $acronym \([[:digit:]]\{4\}\) ;/; $name \1 ;/g")
+done
+printf "%s\n" "$not_uscourts"
+
 #USCOURTS
-comm -13 $tpath/list1d $tpath/list2a | grep 'USCOURTS_' | grep -v 'USCOURTS_.*,200' | sed 's/^/    au < manifest ; /' | sed 's/\USCOURTS_\([a-zA-Z0-9]*\),\([12][67890][0-9][0-9]\)/\2 ; USCOURTS_\1 ; USCOURTS_\1 \2 ; USCOURTS ; \1 ; \2 >/'
+uscourts=$(comm -13 $tpath/list1d $tpath/list2a | \
+        grep 'USCOURTS_' | \
+        grep -v 'USCOURTS_.*,200' | \
+        sed 's/^/    au < manifest ; /' | \
+        sed 's/\USCOURTS_\([a-zA-Z0-9]*\),\([12][67890][0-9][0-9]\)/\2 ; USCOURTS_\1 ; USCOURTS_\1 \2 ; USCOURTS ; \1 ; \2 >/')
+# Process each line to replace acronyms with corresponding names
+for acronym in "${!acronym_map[@]}"; do
+    name="${acronym_map[$acronym]}"
+    # Use sed to perform the replacement on the entire variable
+    uscourts=$(echo "$uscourts" | sed "s/; USCOURTS_$acronym ;/; $name ;/g")
+done
+printf "%s\n" "$uscourts"
 
 #output. AUs in the new tdb file, which are not on the website
 echo "**Extra AUs in the new tdb file."

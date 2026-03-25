@@ -8,13 +8,15 @@ alnd,United States District Court for the Northern District of Alabama
 alsb,United States Bankruptcy Court for the Southern District of Alabama
 alsd,United States District Court for the Southern District of Alabama
 ared,United States District Court for the Eastern District of Arkansas
-arwb,United States Bankruptcy Court for the Eastern & Western Districts of Arkansas
+arwb,United States Bankruptcy Court for the Eastern and Western Districts of Arkansas
 arwd,United States District Court for the Western District of Arkansas
 azb,United States Bankruptcy Court for the District of Arizona
 azd,United States District Court for the District of Arizona
 ca1,United States Court of Appeals for the First Circuit
 ca10,United States Court of Appeals for the Tenth Circuit
 ca11,United States Court of Appeals for the Eleventh Circuit
+ca13,United States Court of Appeals for the Federal Circuit
+caDC,United States Court of Appeals for the District of Columbia Circuit
 ca2,United States Court of Appeals for the Second Circuit
 ca3,United States Court of Appeals for the Third Circuit
 ca4,United States Court of Appeals for the Fourth Circuit
@@ -47,8 +49,8 @@ flmb,United States Bankruptcy Court for the Middle District of Florida
 flmd,United States District Court for the Middle District of Florida
 flnb,United States Bankruptcy Court for the Northern District of Florida
 flnd,United States District Court for the Northern District of Florida
-flsb,United States Bankruptcy Court for the Southern District of Florida 
-flsd,United States District Court for the Southern District of Florida 
+flsb,United States Bankruptcy Court for the Southern District of Florida
+flsd,United States District Court for the Southern District of Florida
 gamb,United States Bankruptcy Court for the Middle District of Georgia
 gamd,United States District Court for the Middle District of Georgia
 ganb,United States Bankruptcy Court for the Northern District of Georgia
@@ -62,7 +64,7 @@ ianb,United States Bankruptcy Court for the Northern District of Iowa
 iand,United States District Court for the Northern District of Iowa
 iasb,United States Bankruptcy Court for the Southern District of Iowa
 iasd,United States District Court for the Southern District of Iowa
-idd,United States District & Bankruptcy Courts for the District of Idaho
+idd,United States District and Bankruptcy Courts for the District of Idaho
 ilcb,United States Bankruptcy Court for the District of Central Illinois
 ilcd,United States District Court for the District of Central Illinois
 ilnb,United States Bankruptcy Court for the District of Northern Illinois
@@ -184,10 +186,10 @@ vawd,United States District Court for the Western District of Virginia
 vid,United States District Court for the District of the Virgin Islands
 vtb,United States Bankruptcy Court for the District of Vermont
 vtd,United States District Court for the District of Vermont
-waeb,United States Bankruptcy Court for the Eastern District of Washington 
-waed,United States District Court for the Eastern District of Washington 
-wawb,United States Bankruptcy Court for the Western District of Washington 
-wawd,United States District Court for the Western District of Washington 
+waeb,United States Bankruptcy Court for the Eastern District of Washington
+waed,United States District Court for the Eastern District of Washington
+wawb,United States Bankruptcy Court for the Western District of Washington
+wawd,United States District Court for the Western District of Washington
 wieb,United States Bankruptcy Court for the Eastern District of Wisconsin
 wied,United States District Court for the Eastern District of Wisconsin
 wiwb,United States Bankruptcy Court for the Western District of Wisconsin
@@ -198,3 +200,41 @@ wvsb,United States Bankruptcy Court for the Southern District of West Virginia
 wvsd,United States District Court for the Southern District of West Virginia
 wyb,United States Bankruptcy Court for the District of Wyoming
 wyd,United States District Court for the District of Wyoming
+BILLS,Congressional Bills
+BUDGET,Budget of the United States Government
+CCAL,Congressional Calendars
+CDIR,Congressional Directory
+CDOC,Congressional Documents
+CFR,Code of Federal Regulations
+CHRG,Congressional Hearings
+CMR,Congressionally Mandated Reports
+COMPS,Statute Compilations
+CPRT,Congressional Committee Prints
+CRECB,Congressional Record (Bound)
+CREC,Congressional Record
+CRI,Congressional Record Index
+CRPT,Congressional Reports
+CZIC,Coastal Zone Information Center
+DCPD,Daily Compilation of Presidential Documents
+ECONI,Economic Indicators
+ERIC,Education Report from ERIC
+ERP,Economic Report of the President
+FR,Federal Register
+GAOREPORTS,Government Accountability Office Reports and Comptroller General Decisions
+GOVMAN,United States Government Manual
+GOVPUB,Account of the Receipts and Expenditures of the United States
+GPO,Additional Government Publications and Archives
+HJOURNAL,Journal of the House of Representatives
+HMAN,House Rules and Manual
+HOB,History of Bills
+LSA,List of CFR Sections Affected
+PAI,Privacy Act Issuances
+PLAW,Public and Private Laws
+PPP,Public Papers of the Presidents of the United States
+SERIALSET,U.S. Congressional Serial Set
+SMAN,Senate Manual
+STATUTE,United States Statutes at Large
+USCODE,United States Code
+USCOURTS,United States Courts
+USREPORTS,United States Reports
+WCPD,Weekly Compilation of Presidential Documents
