@@ -84,7 +84,7 @@ public class LusailUniversityPressXmlMetadataExtractorFactory extends SourceXmlM
             log.debug3("CU Base is: " + cuBase);
             String id = oneAM.getRaw(helper.getFilenameXPathKey());
             int slashChar = id.indexOf("/");
-            String pdfName = cuBase.substring(0, lastDirectory) + "/Full-text%20doi.org" + 
+            String pdfName = cuBase.substring(0, lastDirectory) + "/Full-text%20httpsdoi.org" + 
                 id.substring(0,slashChar) + id.substring(slashChar+1).toLowerCase() + ".pdf";
             log.debug3("The pdf is: " + pdfName);
             List<String> returnList = new ArrayList<String>();
