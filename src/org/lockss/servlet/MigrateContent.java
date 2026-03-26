@@ -655,15 +655,16 @@ public class MigrateContent extends LockssServlet {
       .map(Map.Entry::getValue)
       .reduce(0, Integer::sum);;
     // Add "All plugins" menu item
-    sel.add(String.format("%s (%d)", "All plugins", totalAus),
+    sel.add(String.format("%s (%s)", "All plugins",
+                          StringUtil.numberOfUnits(totalAus, "AU")),
             ALL_PLUGINS_ID.equals(preselId), ALL_PLUGINS_ID);
     // Add menu item for each plugin
     plugs.entrySet().stream()
       .filter(ent -> ent.getValue() > 0)
       .sorted((ent1, ent2) -> ent1.getKey().getPluginName().compareToIgnoreCase(ent2.getKey().getPluginName()))
-      .forEach(ent -> sel.add(String.format("%s (%d)",
+      .forEach(ent -> sel.add(String.format("%s (%s)",
                                             encodeAttr(ent.getKey().getPluginName()),
-                                          ent.getValue()),
+                                            StringUtil.numberOfUnits(ent.getValue(), "AU")),
                               ent.getKey().getPluginId().equals(preselId),
                               ent.getKey().getPluginId()));
     tbl.add(sel);

@@ -2717,9 +2717,9 @@ public class V2AuMover {
                       index.getPercentUsedString(),
                       StringUtil.sizeKBToString(index.getAvailKB()));
       if (contentStr.equals(indexStr)) {
-        currentDiskSpace = String.format("Disk space: %s", contentStr);
+        currentDiskSpace = String.format("Target disk space: %s", contentStr);
       } else {
-        currentDiskSpace = String.format("Disk space: Content :%s, Index: %s",
+        currentDiskSpace = String.format("Target disk space: Content: %s, Index: %s",
                                          contentStr, indexStr);
       }
     } catch (ApiException e) {
