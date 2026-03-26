@@ -149,6 +149,18 @@ public class V2AuMover {
   public static final String DEFAULT_COPY_ITER_EXECUTOR_SPEC = "2;10";
 
   /**
+   * Retry CU iterators run in this Executor.  Separate from
+   * copyIterExecutor to prevent deadlock: if COPY and RETRY shared
+   * the same pool, the COPY phase-ending latch's runAtZero callback
+   * would try to submit RETRY work back into the pool it's running
+   * on, blocking on queue.put() inside its own task when the queue
+   * is full.
+   */
+  public static final String PARAM_RETRY_ITER_EXECUTOR_SPEC =
+    EXEC_PREFIX + "retryIter.spec";
+  public static final String DEFAULT_RETRY_ITER_EXECUTOR_SPEC = "2;10";
+
+  /**
    * Verify CU iterators run in this Executor.  Controls the number of
    * AUs running iterators
    */
@@ -516,6 +528,7 @@ public class V2AuMover {
 
   // Thread pool for each activity, each with its own queue.
   private ThreadPoolExecutor copyIterExecutor;
+  private ThreadPoolExecutor retryIterExecutor;
   private ThreadPoolExecutor verifyIterExecutor;
   private ThreadPoolExecutor copyExecutor;
   private ThreadPoolExecutor verifyExecutor;
@@ -636,6 +649,10 @@ public class V2AuMover {
         createOrReConfigureExecutor(copyIterExecutor, config,
                                     PARAM_COPY_ITER_EXECUTOR_SPEC,
                                     DEFAULT_COPY_ITER_EXECUTOR_SPEC);
+      retryIterExecutor =
+        createOrReConfigureExecutor(retryIterExecutor, config,
+                                    PARAM_RETRY_ITER_EXECUTOR_SPEC,
+                                    DEFAULT_RETRY_ITER_EXECUTOR_SPEC);
       verifyIterExecutor =
         createOrReConfigureExecutor(verifyIterExecutor, config,
                                     PARAM_VERIFY_ITER_EXECUTOR_SPEC,
@@ -1406,7 +1423,7 @@ public class V2AuMover {
       map(
 //           Phase.COPY, new PD(Action.EnqCopy, copyIterExecutor, Phase.INDEX),
           Phase.COPY, new PD(Action.EnqCopy, copyIterExecutor, Phase.RETRY),
-          Phase.RETRY, new PD(Action.EnqRetry, copyIterExecutor, Phase.INDEX),
+          Phase.RETRY, new PD(Action.EnqRetry, retryIterExecutor, Phase.INDEX),
           Phase.INDEX, new PD(Action.EnqIndex, null/*indexExecutor*/,
                               opType.isVerify() ? Phase.VERIFY : firstStatePhase()),
           Phase.VERIFY, new PD(Action.EnqVerify, verifyIterExecutor,
@@ -2384,6 +2401,7 @@ public class V2AuMover {
   public List<String> getInstruments() {
     List<String> res = new ArrayList<>();
     res.add(getExecutorStats("CopyIter", copyIterExecutor));
+    res.add(getExecutorStats("RetryIter", retryIterExecutor));
     res.add(getExecutorStats("VerifyIter", verifyIterExecutor));
     res.add(getExecutorStats("Copy", copyExecutor));
     res.add(getExecutorStats("Verify", verifyExecutor));
