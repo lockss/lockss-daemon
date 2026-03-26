@@ -1424,7 +1424,7 @@ public class V2AuMover {
 //           Phase.COPY, new PD(Action.EnqCopy, copyIterExecutor, Phase.INDEX),
           Phase.COPY, new PD(Action.EnqCopy, copyIterExecutor, Phase.RETRY),
           Phase.RETRY, new PD(Action.EnqRetry, retryIterExecutor, Phase.INDEX),
-          Phase.INDEX, new PD(Action.EnqIndex, null/*indexExecutor*/,
+          Phase.INDEX, new PD(Action.EnqIndex, null,
                               opType.isVerify() ? Phase.VERIFY : firstStatePhase()),
           Phase.VERIFY, new PD(Action.EnqVerify, verifyIterExecutor,
                                firstStatePhase()),
