@@ -3,7 +3,7 @@
     name = William & Mary Libraries ;
     info[contract] = 2013 ;
     info[back] = 1991 ;
-    info[tester] = 8 ;
+    info[tester] = 4 ;
     info[platform] = OJS3
   >
 
@@ -22,7 +22,7 @@
 
       param[journal_id] = global_higher_education
 
-      au < manifest ; exists ; 2025 ; Journal of Global Higher Education Volume 2025 ; 2025 ; 1 ; >
+      au < testing ; exists ; 2025 ; Journal of Global Higher Education Volume 2025 ; 2025 ; 1 ; >
       au < exists ; exists ; 2026 ; Journal of Global Higher Education Volume 2026 ; 2026 ; 2 ; >
 
   }
@@ -38,7 +38,7 @@
 
       au < manifest ; exists ; 2018 ; Journal of School-Based Counseling Policy and Evaluation Volume 2018 ; 2018 ; 1 ; >
       au < manifest ; exists ; 2019 ; Journal of School-Based Counseling Policy and Evaluation Volume 2019 ; 2019 ; 1 ; >
-      au < manifest ; exists ; 2020 ; Journal of School-Based Counseling Policy and Evaluation Volume 2020 ; 2020 ; 2 ; >
+      au < testing ; exists ; 2020 ; Journal of School-Based Counseling Policy and Evaluation Volume 2020 ; 2020 ; 2 ; >
       au < manifest ; exists ; 2021 ; Journal of School-Based Counseling Policy and Evaluation Volume 2021 ; 2021 ; 3 ; >
       au < manifest ; exists ; 2022 ; Journal of School-Based Counseling Policy and Evaluation Volume 2022 ; 2022 ; 4 ; >
       au < manifest ; exists ; 2023 ; Journal of School-Based Counseling Policy and Evaluation Volume 2023 ; 2023 ; 5 ; >
@@ -65,7 +65,7 @@
       au < manifest ; exists ; 2013 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2013 ; 2013 ; 8 ; >
       au < manifest ; exists ; 2014 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2014 ; 2014 ; 9 ; >
       au < manifest ; exists ; 2015 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2015 ; 2015 ; 10 ; >
-      au < manifest ; exists ; 2016 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2016 ; 2016 ; 11 ; >
+      au < testing ; exists ; 2016 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2016 ; 2016 ; 11 ; >
       au < manifest ; exists ; 2017 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2017 ; 2017 ; 12 ; >
       au < manifest ; exists ; 2018 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2018 ; 2018 ; 13 ; >
       au < manifest ; exists ; 2019 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2019 ; 2019 ; 14 ; >
@@ -91,7 +91,7 @@
       au < manifest ; exists ; 1991 ; Journal of Textual Reasoning Volume 1991 ; 1991 ; 1 ; >
       au < exists ; exists ; 1992 ; Journal of Textual Reasoning Volume 1992 ; 1992 ; 1 ; >
       au < manifest ; exists ; 1993 ; Journal of Textual Reasoning Volume 1993 ; 1993 ; 1 ; >
-      au < manifest ; exists ; 1994 ; Journal of Textual Reasoning Volume 1994 ; 1994 ; 1 ; >
+      au < testing ; exists ; 1994 ; Journal of Textual Reasoning Volume 1994 ; 1994 ; 1 ; >
       au < manifest ; exists ; 1995 ; Journal of Textual Reasoning Volume 1995 ; 1995 ; 1 ; >
       au < manifest ; exists ; 1996 ; Journal of Textual Reasoning Volume 1996 ; 1996 ; 1 ; >
       au < manifest ; exists ; 1997 ; Journal of Textual Reasoning Volume 1997 ; 1997 ; 1 ; >
@@ -136,7 +136,7 @@
       au < manifest ; exists ; 2016 ; William & Mary Education Review Volume 2016 ; 2016 ; 4 ; >
       au < manifest ; exists ; 2018 ; William & Mary Education Review Volume 2018 ; 2018 ; 5-6 ; >
       au < manifest ; exists ; 2020 ; William & Mary Education Review Volume 2020 ; 2020 ; 7 ; >
-      au < manifest ; exists ; 2022 ; William & Mary Education Review Volume 2022 ; 2022 ; 8 ; >
+      au < testing ; exists ; 2022 ; William & Mary Education Review Volume 2022 ; 2022 ; 8 ; >
       au < manifest ; exists ; 2024 ; William & Mary Education Review Volume 2024 ; 2024 ; 9 ; >
       au < expected ; exists ; 2026 ; William & Mary Education Review Volume 2026 ; 2026 ; 10 ; >
 
