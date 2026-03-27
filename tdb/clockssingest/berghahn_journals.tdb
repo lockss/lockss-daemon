@@ -95,7 +95,7 @@
     param[journal_id] = ame
     #param[journal_issn] = 1746-0719
     
-    au < ready ; exists ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2006 ; Anthropology of the Middle East Volume 1 ; 1 ; >
     au < crawling ; exists ; 2007 ; Anthropology of the Middle East Volume 2 ; 2 ; >
     au < finished ; manifest ; 2008 ; Anthropology of the Middle East Volume 3 ; 3 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; Anthropology of the Middle East Volume 4 ; 4 ; reingest1.clockss.org:8082 >
