@@ -1829,6 +1829,7 @@
     >
 
     param[journal_id] = ppscfx
+    #continued_by = 2996-5136
 
     au < frozen ; exists ; 1996 ; Practice Periodical on Structural Design & Construction Volume 1 ; 1 ; https://ascelibrary.org/ ; >
     au < frozen ; exists ; 1997 ; Practice Periodical on Structural Design & Construction Volume 2 ; 2 ; https://ascelibrary.org/ ; >
@@ -1859,8 +1860,22 @@
     au < deepCrawl ; exists ; 2022 ; Practice Periodical on Structural Design & Construction Volume 27 ; 27 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Practice Periodical on Structural Design & Construction Volume 28 ; 28 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2024 ; Practice Periodical on Structural Design & Construction Volume 29 ; 29 ; https://ascelibrary.org/ ; >
-    au < expected ; exists ; 2025 ; Practice Periodical on Structural Design & Construction Volume 30 ; 30 ; https://ascelibrary.org/ ; >
-    au < expected ; exists ; 2026 ; Practice Periodical on Structural Design & Construction Volume 31 ; 31 ; https://ascelibrary.org/ ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Structural Design and Construction Practice ;
+      issn = 2996-5136 ;
+      eissn = 2996-5144
+    >
+
+    param[journal_id] = jsdccc
+    #continues = 1084-0680
+
+    au < exists ; exists ; 2025 ; Journal of Structural Design and Construction Practice Volume 30 ; 30 ; https://ascelibrary.org/ ; >
+    au < exists ; exists ; 2026 ; Journal of Structural Design and Construction Practice Volume 31 ; 31 ; https://ascelibrary.org/ ; >
 
   }
 
