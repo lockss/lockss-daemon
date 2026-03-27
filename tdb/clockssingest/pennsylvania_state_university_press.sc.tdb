@@ -29,7 +29,7 @@
 
       au < ready ; exists ; 2005 ; The Chaucer Review Volume 40 ; 40 ; 2005 ; >
       au < ready ; exists ; 2006 ; The Chaucer Review Volume 41 ; 41 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 ; >
+      au < finished ; manifest ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; The Chaucer Review Volume 43 ; 43 ; 2008 ; reingest3.clockss.org:8083 >
       au < doNotProcess ; doNotProcess ; 2009 ; The Chaucer Review Volume 44 ; 44 ; 2009 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; The Chaucer Review Volume 45 ; 45 ; 2010 ; >
@@ -45,7 +45,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Chaucer Review Volume 55 ; 55 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Chaucer Review Volume 56 ; 56 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Chaucer Review Volume 57 ; 57 ; 2022 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; The Chaucer Review Volume 58 ; 58 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Chaucer Review Volume 58 ; 58 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; The Chaucer Review Volume 59 ; 59 ; 2024 ; >
       au < crawling ; exists ; 2025 ; The Chaucer Review Volume 60 ; 60 ; 2025 ; >
       au < manifest ; exists ; 2026 ; The Chaucer Review Volume 61 ; 61 ; 2026 ; >
@@ -75,7 +75,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Comparative Literature Studies Volume 57 ; 57 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Comparative Literature Studies Volume 58 ; 58 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Comparative Literature Studies Volume 59 ; 59 ; 2022 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Comparative Literature Studies Volume 60 ; 60 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Comparative Literature Studies Volume 60 ; 60 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Comparative Literature Studies Volume 61 ; 61 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Comparative Literature Studies Volume 62 ; 62 ; 2025 ; >
       au < manifest ; exists ; 2026 ; Comparative Literature Studies Volume 63 ; 63 ; 2026 ; >
@@ -103,7 +103,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Critical Philosophy of Race Volume 8 ; 8 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Critical Philosophy of Race Volume 9 ; 9 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Critical Philosophy of Race Volume 10 ; 10 ; 2022 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Critical Philosophy of Race Volume 11 ; 11 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Critical Philosophy of Race Volume 11 ; 11 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Critical Philosophy of Race Volume 12 ; 12 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Critical Philosophy of Race Volume 13 ; 13 ; 2025 ; >
       au < expected ; exists ; 2026 ; Critical Philosophy of Race Volume 14 ; 14 ; 2026 ; >
@@ -133,7 +133,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Edgar Allan Poe Review Volume 21 ; 21 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Edgar Allan Poe Review Volume 22 ; 22 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Edgar Allan Poe Review Volume 23 ; 23 ; 2022 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; The Edgar Allan Poe Review Volume 24 ; 24 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Edgar Allan Poe Review Volume 24 ; 24 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; The Edgar Allan Poe Review Volume 25 ; 25 ; 2024 ; >
       au < crawling ; exists ; 2025 ; The Edgar Allan Poe Review Volume 26 ; 26 ; 2025 ; >
       au < expected ; exists ; 2026 ; The Edgar Allan Poe Review Volume 27 ; 27 ; 2026 ; >
@@ -162,7 +162,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Eugene O'Neill Review Volume 41 ; 41 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Eugene O'Neill Review Volume 42 ; 42 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Eugene O'Neill Review Volume 43 ; 43 ; 2022 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2023 ; The Eugene O'Neill Review Volume 44 ; 44 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Eugene O'Neill Review Volume 44 ; 44 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; The Eugene O'Neill Review Volume 45 ; 45 ; 2024 ; >
       au < crawling ; exists ; 2025 ; The Eugene O'Neill Review Volume 46 ; 46 ; 2025 ; >
       au < manifest ; exists ; 2026 ; The Eugene O'Neill Review Volume 47 ; 47 ; 2026 ; >
@@ -195,7 +195,7 @@
       au < finished ; manifest ; 2021 ; The F. Scott Fitzgerald Review Volume 19 ; 19 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; The F. Scott Fitzgerald Review Volume 20 ; 20 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; The F. Scott Fitzgerald Review Volume 21 ; 21 ; 2023 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2024 ; The F. Scott Fitzgerald Review Volume 22 ; 22 ; 2024 ; >
+      au < finished ; manifest ; 2024 ; The F. Scott Fitzgerald Review Volume 22 ; 22 ; 2024 ; reingest1.clockss.org:8082 >
       au < expected ; exists ; 2025 ; The F. Scott Fitzgerald Review Volume 23 ; 23 ; 2025 ; >
       au < expected ; exists ; 2026 ; The F. Scott Fitzgerald Review Volume 24 ; 24 ; 2026 ; >
 
@@ -241,8 +241,8 @@
       param[journal_id] = ils
       # 2009, 2010 volume numbers don't line up with years
 
-      au < frozen ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 8 (2007) ; 8 ; 2007 ; >
-      au < frozen ; exists ; 2007 ; Interdisciplinary Literary Studies Volume 9 (2007) ; 9 ; 2007 ; >
+      au < finished ; manifest ; 2007 ; Interdisciplinary Literary Studies Volume 8 (2007) ; 8 ; 2007 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Interdisciplinary Literary Studies Volume 9 (2007) ; 9 ; 2007 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2008 ; Interdisciplinary Literary Studies Volume 9 (2008) ; 9 ; 2008 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Interdisciplinary Literary Studies Volume 10 (2008) ; 10 ; 2008 ; reingest5.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2009 ; Interdisciplinary Literary Studies Volume 10-11 ; 10-11 ; 2009 ; >
@@ -259,7 +259,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Interdisciplinary Literary Studies Volume 22 ; 22 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Interdisciplinary Literary Studies Volume 23 ; 23 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Interdisciplinary Literary Studies Volume 24 ; 24 ; 2022 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Interdisciplinary Literary Studies Volume 25 ; 25 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Interdisciplinary Literary Studies Volume 25 ; 25 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Interdisciplinary Literary Studies Volume 26 ; 26 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Interdisciplinary Literary Studies Volume 27 ; 27 ; 2025 ; >
       au < manifest ; exists ; 2026 ; Interdisciplinary Literary Studies Volume 28 ; 28 ; 2026 ; >
@@ -287,7 +287,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of Africana Religions Volume 8 ; 8 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Africana Religions Volume 9 ; 9 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Journal of Africana Religions Volume 10 ; 10 ; 2022 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2023 ; Journal of Africana Religions Volume 11 ; 11 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Journal of Africana Religions Volume 11 ; 11 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Journal of Africana Religions Volume 12 ; 12 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Journal of Africana Religions Volume 13 ; 13 ; 2025 ; >
       au < expected ; exists ; 2026 ; Journal of Africana Religions Volume 14 ; 14 ; 2026 ; >
@@ -330,7 +330,7 @@
 
       param[journal_id] = ayn-rand
 
-      au < frozen ; exists ; 2007 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2007 ; >
+      au < finished ; manifest ; 2007 ; The Journal of Ayn Rand Studies Volume 8 ; 8 ; 2007 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2007 ; The Journal of Ayn Rand Studies Volume 9 (2007) ; 9 ; 2007 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; The Journal of Ayn Rand Studies Volume 9 (2008) ; 9 ; 2008 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; The Journal of Ayn Rand Studies Volume 10 (2008) ; 10 ; 2008 ; reingest1.clockss.org:8082 >
@@ -347,7 +347,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Journal of Ayn Rand Studies Volume 20 ; 20 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Journal of Ayn Rand Studies Volume 21 ; 21 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Journal of Ayn Rand Studies Volume 22 ; 22 ; 2022 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; The Journal of Ayn Rand Studies Volume 23 ; 23 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Journal of Ayn Rand Studies Volume 23 ; 23 ; 2023 ; reingest3.clockss.org:8083 >
       #Last volume V23 2023
 
   }
@@ -373,7 +373,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 8 ; 8 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 9 ; 9 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 10 ; 10 ; 2022 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 11 ; 11 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 11 ; 11 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 12 ; 12 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 13 ; 13 ; 2025 ; >
       au < expected ; exists ; 2026 ; Journal of Eastern Mediterranean Archaeology & Heritage Studies Volume 14 ; 14 ; 2026 ; >
@@ -431,7 +431,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Journal of Medieval Religious Cultures Volume 46 ; 46 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Journal of Medieval Religious Cultures Volume 47 ; 47 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Journal of Medieval Religious Cultures Volume 48 ; 48 ; 2022 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; The Journal of Medieval Religious Cultures Volume 49 ; 49 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Journal of Medieval Religious Cultures Volume 49 ; 49 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; The Journal of Medieval Religious Cultures Volume 50 ; 50 ; 2024 ; >
       au < crawling ; exists ; 2025 ; The Journal of Medieval Religious Cultures Volume 51 ; 51 ; 2025 ; >
       au < manifest ; exists ; 2026 ; The Journal of Medieval Religious Cultures Volume 52 ; 52 ; 2026 ; >
@@ -463,7 +463,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Journal of Modern Periodical Studies Volume 11 ; 11 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Journal of Modern Periodical Studies Volume 12 ; 12 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Journal of Modern Periodical Studies Volume 13 ; 13 ; 2022 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; The Journal of Modern Periodical Studies Volume 14 ; 14 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Journal of Modern Periodical Studies Volume 14 ; 14 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; The Journal of Modern Periodical Studies Volume 15 ; 15 ; 2024 ; >
       au < crawling ; exists ; 2025 ; The Journal of Modern Periodical Studies Volume 16 ; 16 ; 2025 ; >
       au < expected ; exists ; 2026 ; The Journal of Modern Periodical Studies Volume 17 ; 17 ; 2026 ; >
@@ -482,7 +482,7 @@
       param[journal_id] = moravian-history
 
       au < ready ; exists ; 2007 ; Journal of Moravian History Volume 2 ; 2 ; 2007 ; >
-      au < frozen ; exists ; 2007 ; Journal of Moravian History Volume 3 ; 3 ; 2007 ; >
+      au < finished ; manifest ; 2007 ; Journal of Moravian History Volume 3 ; 3 ; 2007 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Journal of Moravian History Volume 4 ; 4 ; 2008 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Journal of Moravian History Volume 5 ; 5 ; 2008 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2009 ; Journal of Moravian History Volume 2009 ; 2009 ; 2009 ; >
@@ -499,7 +499,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of Moravian History Volume 20 ; 20 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Moravian History Volume 21 ; 21 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Journal of Moravian History Volume 22 ; 22 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; Journal of Moravian History Volume 23 ; 23 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Journal of Moravian History Volume 23 ; 23 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Journal of Moravian History Volume 24 ; 24 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Journal of Moravian History Volume 25 ; 25 ; 2025 ; >
       au < expected ; exists ; 2026 ; Journal of Moravian History Volume 26 ; 26 ; 2026 ; >
@@ -529,7 +529,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Journal of Nietzsche Studies Volume 51 ; 51 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Journal of Nietzsche Studies Volume 52 ; 52 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Journal of Nietzsche Studies Volume 53 ; 53 ; 2022 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2023 ; The Journal of Nietzsche Studies Volume 54 ; 54 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Journal of Nietzsche Studies Volume 54 ; 54 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; The Journal of Nietzsche Studies Volume 55 ; 55 ; 2024 ; >
       au < crawling ; exists ; 2025 ; The Journal of Nietzsche Studies Volume 56 ; 56 ; 2025 ; >
       au < expected ; exists ; 2026 ; The Journal of Nietzsche Studies Volume 57 ; 57 ; 2026 ; >
@@ -560,7 +560,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Journal of Speculative Philosophy Volume 34 ; 34 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Journal of Speculative Philosophy Volume 35 ; 35 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Journal of Speculative Philosophy Volume 36 ; 36 ; 2022 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; The Journal of Speculative Philosophy Volume 37 ; 37 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Journal of Speculative Philosophy Volume 37 ; 37 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; The Journal of Speculative Philosophy Volume 38 ; 38 ; 2024 ; >
       au < crawling ; exists ; 2025 ; The Journal of Speculative Philosophy Volume 39 ; 39 ; 2025 ; >
       au < manifest ; exists ; 2026 ; The Journal of Speculative Philosophy Volume 40 ; 40 ; 2026 ; >
@@ -624,7 +624,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Mediterranean Studies Volume 28 ; 28 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Mediterranean Studies Volume 29 ; 29 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Mediterranean Studies Volume 30 ; 30 ; 2022 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Mediterranean Studies Volume 31 ; 31 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Mediterranean Studies Volume 31 ; 31 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Mediterranean Studies Volume 32 ; 32 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Mediterranean Studies Volume 33 ; 33 ; 2025 ; >
       au < expected ; exists ; 2026 ; Mediterranean Studies Volume 34 ; 34 ; 2026 ; >
@@ -680,7 +680,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 87 ; 87 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 88 ; 88 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 89 ; 89 ; 2022 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 90 ; 90 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 90 ; 90 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 91 ; 91 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 92 ; 92 ; 2025 ; >
       au < manifest ; exists ; 2026 ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 93 ; 93 ; 2026 ; >
@@ -711,7 +711,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Philosophy and Rhetoric Volume 53 ; 53 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Philosophy and Rhetoric Volume 54 ; 54 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Philosophy and Rhetoric Volume 55 ; 55 ; 2022 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Philosophy and Rhetoric Volume 56 ; 56 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Philosophy and Rhetoric Volume 56 ; 56 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Philosophy and Rhetoric Volume 57 ; 57 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Philosophy and Rhetoric Volume 58 ; 58 ; 2025 ; >
       au < expected ; exists ; 2026 ; Philosophy and Rhetoric Volume 59 ; 59 ; 2026 ; >
@@ -740,7 +740,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Preternature: Critical and Historical Studies on the Preternatural Volume 9 ; 9 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Preternature: Critical and Historical Studies on the Preternatural Volume 10 ; 10 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Preternature: Critical and Historical Studies on the Preternatural Volume 11 ; 11 ; 2022 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2023 ; Preternature: Critical and Historical Studies on the Preternatural Volume 12 ; 12 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Preternature: Critical and Historical Studies on the Preternatural Volume 12 ; 12 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Preternature: Critical and Historical Studies on the Preternatural Volume 13 ; 13 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Preternature: Critical and Historical Studies on the Preternatural Volume 14 ; 14 ; 2025 ; >
       au < expected ; exists ; 2026 ; Preternature: Critical and Historical Studies on the Preternatural Volume 15 ; 15 ; 2026 ; >
@@ -772,7 +772,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Reception: Texts, Readers, Audiences, History Volume 12 ; 12 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Reception: Texts, Readers, Audiences, History Volume 13 ; 13 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Reception: Texts, Readers, Audiences, History Volume 14 ; 14 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; Reception: Texts, Readers, Audiences, History Volume 15 ; 15 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Reception: Texts, Readers, Audiences, History Volume 15 ; 15 ; 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; Reception: Texts, Readers, Audiences, History Volume 16 ; 16 ; 2024 ; reingest2.clockss.org:8085 >
       au < expected ; exists ; 2025 ; Reception: Texts, Readers, Audiences, History Volume 17 ; 17 ; 2025 ; >
       au < expected ; exists ; 2026 ; Reception: Texts, Readers, Audiences, History Volume 18 ; 18 ; 2026 ; >
@@ -804,7 +804,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; SHAW: The Journal of Bernard Shaw Studies Volume 40 ; 40 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; SHAW: The Journal of Bernard Shaw Studies Volume 41 ; 41 ; 2021 ; >
       au < finished ; manifest ; 2022 ; SHAW: The Journal of Bernard Shaw Studies Volume 42 ; 42 ; 2022 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; SHAW: The Journal of Bernard Shaw Studies Volume 43 ; 43 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; SHAW: The Journal of Bernard Shaw Studies Volume 43 ; 43 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; SHAW: The Journal of Bernard Shaw Studies Volume 44 ; 44 ; 2024 ; >
       au < crawling ; exists ; 2025 ; SHAW: The Journal of Bernard Shaw Studies Volume 45 ; 45 ; 2025 ; >
       au < expected ; exists ; 2026 ; SHAW: The Journal of Bernard Shaw Studies Volume 46 ; 46 ; 2026 ; >
@@ -893,7 +893,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Studies in American Jewish Literature Volume 39 ; 39 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Studies in American Jewish Literature Volume 40 ; 40 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Studies in American Jewish Literature Volume 41 ; 41 ; 2022 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2023 ; Studies in American Jewish Literature Volume 42 ; 42 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Studies in American Jewish Literature Volume 42 ; 42 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Studies in American Jewish Literature Volume 43 ; 43 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Studies in American Jewish Literature Volume 44 ; 44 ; 2025 ; >
       au < expected ; exists ; 2026 ; Studies in American Jewish Literature Volume 45 ; 45 ; 2026 ; >
@@ -924,7 +924,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Transportation Journal Volume 59 ; 59 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Transportation Journal Volume 60 ; 60 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Transportation Journal Volume 61 ; 61 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; Transportation Journal Volume 62 ; 62 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Transportation Journal Volume 62 ; 62 ; 2023 ; reingest5.clockss.org:8082 >
 
   }
 
@@ -989,23 +989,23 @@
 
       param[journal_id] = biblical-research
 
-      au < frozen ; exists ; 1991 ; Bulletin for Biblical Research Volume 1 ; 1 ; 1991 ; >
+      au < finished ; manifest ; 1991 ; Bulletin for Biblical Research Volume 1 ; 1 ; 1991 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1992 ; Bulletin for Biblical Research Volume 2 ; 2 ; 1992 ; >
-      au < frozen ; exists ; 1993 ; Bulletin for Biblical Research Volume 3 ; 3 ; 1993 ; >
-      au < frozen ; exists ; 1994 ; Bulletin for Biblical Research Volume 4 ; 4 ; 1994 ; >
+      au < finished ; manifest ; 1993 ; Bulletin for Biblical Research Volume 3 ; 3 ; 1993 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1994 ; Bulletin for Biblical Research Volume 4 ; 4 ; 1994 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1995 ; Bulletin for Biblical Research Volume 5 ; 5 ; 1995 ; >
-      au < frozen ; exists ; 1996 ; Bulletin for Biblical Research Volume 6 ; 6 ; 1996 ; >
-      au < frozen ; exists ; 1997 ; Bulletin for Biblical Research Volume 7 ; 7 ; 1997 ; >
-      au < frozen ; exists ; 1998 ; Bulletin for Biblical Research Volume 8 ; 8 ; 1998 ; >
+      au < finished ; manifest ; 1996 ; Bulletin for Biblical Research Volume 6 ; 6 ; 1996 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; Bulletin for Biblical Research Volume 7 ; 7 ; 1997 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; Bulletin for Biblical Research Volume 8 ; 8 ; 1998 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 1999 ; Bulletin for Biblical Research Volume 9 ; 9 ; 1999 ; >
-      au < frozen ; exists ; 2000 ; Bulletin for Biblical Research Volume 10 ; 10 ; 2000 ; >
+      au < finished ; manifest ; 2000 ; Bulletin for Biblical Research Volume 10 ; 10 ; 2000 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2001 ; Bulletin for Biblical Research Volume 11 ; 11 ; 2001 ; >
       au < ready ; exists ; 2002 ; Bulletin for Biblical Research Volume 12 ; 12 ; 2002 ; >
-      au < frozen ; exists ; 2003 ; Bulletin for Biblical Research Volume 13 ; 13 ; 2003 ; >
-      au < frozen ; exists ; 2004 ; Bulletin for Biblical Research Volume 14 ; 14 ; 2004 ; >
-      au < frozen ; exists ; 2005 ; Bulletin for Biblical Research Volume 15 ; 15 ; 2005 ; >
-      au < frozen ; exists ; 2006 ; Bulletin for Biblical Research Volume 16 ; 16 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Bulletin for Biblical Research Volume 17 ; 17 ; 2007 ; >
+      au < finished ; manifest ; 2003 ; Bulletin for Biblical Research Volume 13 ; 13 ; 2003 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2004 ; Bulletin for Biblical Research Volume 14 ; 14 ; 2004 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Bulletin for Biblical Research Volume 15 ; 15 ; 2005 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Bulletin for Biblical Research Volume 16 ; 16 ; 2006 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Bulletin for Biblical Research Volume 17 ; 17 ; 2007 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2008 ; Bulletin for Biblical Research Volume 18 ; 18 ; 2008 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Bulletin for Biblical Research Volume 19 ; 19 ; 2009 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Bulletin for Biblical Research Volume 20 ; 20 ; 2010 ; reingest1.clockss.org:8082 >
@@ -1021,7 +1021,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Bulletin for Biblical Research Volume 30 ; 30 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Bulletin for Biblical Research Volume 31 ; 31 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Bulletin for Biblical Research Volume 32 ; 32 ; 2022 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Bulletin for Biblical Research Volume 33 ; 33 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Bulletin for Biblical Research Volume 33 ; 33 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Bulletin for Biblical Research Volume 34 ; 34 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Bulletin for Biblical Research Volume 35 ; 35 ; 2025 ; >
       au < expected ; exists ; 2026 ; Bulletin for Biblical Research Volume 36 ; 36 ; 2026 ; >
@@ -1087,7 +1087,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Arthur Miller Journal Volume 15 ; 15 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Arthur Miller Journal Volume 16 ; 16 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Arthur Miller Journal Volume 17 ; 17 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; The Arthur Miller Journal Volume 18 ; 18 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Arthur Miller Journal Volume 18 ; 18 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; The Arthur Miller Journal Volume 19 ; 19 ; 2024 ; >
       au < crawling ; exists ; 2025 ; The Arthur Miller Journal Volume 20 ; 20 ; 2025 ; >
       au < expected ; exists ; 2026 ; The Arthur Miller Journal Volume 21 ; 21 ; 2026 ; >
@@ -1105,19 +1105,19 @@
 
       param[journal_id] = caliope
 
-      au < frozen ; exists ; 1995 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 1 ; 1 ; 1995 ; >
-      au < frozen ; exists ; 1996 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 2 ; 2 ; 1996 ; >
-      au < frozen ; exists ; 1997 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 3 ; 3 ; 1997 ; >
-      au < frozen ; exists ; 1998 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 4 ; 4 ; 1998 ; >
-      au < frozen ; exists ; 1999 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 5 ; 5 ; 1999 ; >
-      au < frozen ; exists ; 2000 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 6 ; 6 ; 2000 ; >
+      au < finished ; manifest ; 1995 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 1 ; 1 ; 1995 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 2 ; 2 ; 1996 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1997 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 3 ; 3 ; 1997 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 4 ; 4 ; 1998 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1999 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 5 ; 5 ; 1999 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2000 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 6 ; 6 ; 2000 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 2001 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 7 ; 7 ; 2001 ; >
       au < ready ; exists ; 2002 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 8 ; 8 ; 2002 ; >
-      au < frozen ; exists ; 2003 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 9 ; 9 ; 2003 ; >
+      au < finished ; manifest ; 2003 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 9 ; 9 ; 2003 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2004 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 10 ; 10 ; 2004 ; >
-      au < frozen ; exists ; 2005 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 11 ; 11 ; 2005 ; >
-      au < frozen ; exists ; 2006 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 12 ; 12 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 13 ; 13 ; 2007 ; >
+      au < finished ; manifest ; 2005 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 11 ; 11 ; 2005 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 12 ; 12 ; 2006 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 13 ; 13 ; 2007 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 14 ; 14 ; 2008 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 15 ; 15 ; 2009 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 16 ; 16 ; 2010 ; reingest1.clockss.org:8082 >
@@ -1133,7 +1133,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 25 ; 25 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 26 ; 26 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 27 ; 27 ; 2022 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 28 ; 28 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 28 ; 28 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 29 ; 29 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 30 ; 30 ; 2025 ; >
       au < expected ; exists ; 2026 ; Calíope: Journal of the Society for Renaissance and Baroque Hispanic Poetry Volume 31 ; 31 ; 2026 ; >
@@ -1152,9 +1152,9 @@
       param[journal_id] = comedia-performance
 
       au < ready ; exists ; 2004 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 1 ; 1 ; 2004 ; >
-      au < frozen ; exists ; 2005 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2 ; 2 ; 2005 ; >
-      au < frozen ; exists ; 2006 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 3 ; 3 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 4 ; 4 ; 2007 ; >
+      au < finished ; manifest ; 2005 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2 ; 2 ; 2005 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 3 ; 3 ; 2006 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 4 ; 4 ; 2007 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2008 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 5 ; 5 ; 2008 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 6 ; 6 ; 2009 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 7 ; 7 ; 2010 ; reingest3.clockss.org:8083 >
@@ -1170,7 +1170,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 17 ; 17 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 18 ; 18 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 19 ; 19 ; 2022 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2023 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 20 ; 20 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 20 ; 20 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 21 ; 21 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 22 ; 22 ; 2025 ; >
       au < expected ; exists ; 2026 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 23 ; 23 ; 2026 ; >
@@ -1194,7 +1194,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 51 ; 51 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 52 ; 52 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 53 ; 53 ; 2022 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2023 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 54 ; 54 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 54 ; 54 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 55 ; 55 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 56 ; 56 ; 2025 ; >
       au < expected ; exists ; 2026 ; Dickens Studies Annual: Essays on Victorian Fiction Volume 57 ; 57 ; 2026 ; >
@@ -1227,7 +1227,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Ecumenica: Performance and Religion Volume 13 ; 13 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Ecumenica: Performance and Religion Volume 14 ; 14 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Ecumenica: Performance and Religion Volume 15 ; 15 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; Ecumenica: Performance and Religion Volume 16 ; 16 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Ecumenica: Performance and Religion Volume 16 ; 16 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Ecumenica: Performance and Religion Volume 17 ; 17 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Ecumenica: Performance and Religion Volume 18 ; 18 ; 2025 ; >
       au < expected ; exists ; 2026 ; Ecumenica: Performance and Religion Volume 19 ; 19 ; 2026 ; >
@@ -1306,9 +1306,9 @@
 
       param[journal_id] = gestalt-review
 
-      au < frozen ; exists ; 1997 ; Gestalt Review Volume 1 ; 1 ; 1997 ; >
+      au < finished ; manifest ; 1997 ; Gestalt Review Volume 1 ; 1 ; 1997 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 1998 ; Gestalt Review Volume 2 ; 2 ; 1998 ; >
-      au < frozen ; exists ; 1999 ; Gestalt Review Volume 3 ; 3 ; 1999 ; >
+      au < finished ; manifest ; 1999 ; Gestalt Review Volume 3 ; 3 ; 1999 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2000 ; Gestalt Review Volume 4 ; 4 ; 2000 ; >
       au < ready ; exists ; 2001 ; Gestalt Review Volume 5 ; 5 ; 2001 ; >
       au < ready ; exists ; 2002 ; Gestalt Review Volume 6 ; 6 ; 2002 ; >
@@ -1316,7 +1316,7 @@
       au < ready ; exists ; 2004 ; Gestalt Review Volume 8 ; 8 ; 2004 ; >
       au < ready ; exists ; 2005 ; Gestalt Review Volume 9 ; 9 ; 2005 ; >
       au < ready ; exists ; 2006 ; Gestalt Review Volume 10 ; 10 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Gestalt Review Volume 11 ; 11 ; 2007 ; >
+      au < finished ; manifest ; 2007 ; Gestalt Review Volume 11 ; 11 ; 2007 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2008 ; Gestalt Review Volume 12 ; 12 ; 2008 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; Gestalt Review Volume 13 ; 13 ; 2009 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; Gestalt Review Volume 14 ; 14 ; 2010 ; reingest3.clockss.org:8083 >
@@ -1332,7 +1332,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Gestalt Review Volume 24 ; 24 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Gestalt Review Volume 25 ; 25 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Gestalt Review Volume 26 ; 26 ; 2022 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2023 ; Gestalt Review Volume 27 ; 27 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Gestalt Review Volume 27 ; 27 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Gestalt Review Volume 28 ; 28 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Gestalt Review Volume 29 ; 29 ; 2025 ; >
       au < expected ; exists ; 2026 ; Gestalt Review Volume 30 ; 30 ; 2026 ; >
@@ -1406,7 +1406,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of Asia-Pacific Pop Culture Volume 2020 ; 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Asia-Pacific Pop Culture Volume 2021 ; 2021 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Journal of Asia-Pacific Pop Culture Volume 7 ; 7 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; Journal of Asia-Pacific Pop Culture Volume 8 ; 8 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Journal of Asia-Pacific Pop Culture Volume 8 ; 8 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Journal of Asia-Pacific Pop Culture Volume 9 ; 9 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Journal of Asia-Pacific Pop Culture Volume 10 ; 10 ; 2025 ; >
       au < expected ; exists ; 2026 ; Journal of Asia-Pacific Pop Culture Volume 11 ; 11 ; 2026 ; >
@@ -1553,7 +1553,7 @@
 
       param[journal_id] = theological-interpretation
 
-      au < frozen ; exists ; 2007 ; Journal of Theological Interpretation Volume 1 ; 1 ; 2007 ; >
+      au < finished ; manifest ; 2007 ; Journal of Theological Interpretation Volume 1 ; 1 ; 2007 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Journal of Theological Interpretation Volume 2 ; 2 ; 2008 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; Journal of Theological Interpretation Volume 3 ; 3 ; 2009 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2010 ; Journal of Theological Interpretation Volume 4 ; 4 ; 2010 ; reingest4.clockss.org:8082 >
@@ -1569,7 +1569,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of Theological Interpretation Volume 14 ; 14 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Theological Interpretation Volume 15 ; 15 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Journal of Theological Interpretation Volume 16 ; 16 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; Journal of Theological Interpretation Volume 17 ; 17 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Journal of Theological Interpretation Volume 17 ; 17 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Journal of Theological Interpretation Volume 18 ; 18 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Journal of Theological Interpretation Volume 19 ; 19 ; 2025 ; >
       au < expected ; exists ; 2026 ; Journal of Theological Interpretation Volume 20 ; 20 ; 2026 ; >
@@ -1593,7 +1593,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Libraries: Culture, History, and Society Volume 4 ; 4 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Libraries: Culture, History, and Society Volume 5 ; 5 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Libraries: Culture, History, and Society Volume 6 ; 6 ; 2022 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2023 ; Libraries: Culture, History, and Society Volume 7 ; 7 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Libraries: Culture, History, and Society Volume 7 ; 7 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Libraries: Culture, History, and Society Volume 8 ; 8 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Libraries: Culture, History, and Society Volume 9 ; 9 ; 2025 ; >
       au < manifest ; exists ; 2026 ; Libraries: Culture, History, and Society Volume 10 ; 10 ; 2026 ; >
@@ -1638,39 +1638,39 @@
 
       param[journal_id] = rals
 
-      au < frozen ; exists ; 1971 ; Resources for American Literary Study Volume 1 ; 1 ; 1971 ; >
+      au < finished ; manifest ; 1971 ; Resources for American Literary Study Volume 1 ; 1 ; 1971 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 1972 ; Resources for American Literary Study Volume 2 ; 2 ; 1972 ; >
       au < ready ; exists ; 1973 ; Resources for American Literary Study Volume 3 ; 3 ; 1973 ; >
       au < ready ; exists ; 1974 ; Resources for American Literary Study Volume 4 ; 4 ; 1974 ; >
       au < crawling ; exists ; 1975 ; Resources for American Literary Study Volume 5 ; 5 ; 1975 ; >
-      au < frozen ; exists ; 1976 ; Resources for American Literary Study Volume 6 ; 6 ; 1976 ; >
+      au < finished ; manifest ; 1976 ; Resources for American Literary Study Volume 6 ; 6 ; 1976 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1977 ; Resources for American Literary Study Volume 7 ; 7 ; 1977 ; >
       au < crawling ; exists ; 1978 ; Resources for American Literary Study Volume 8 ; 8 ; 1978 ; >
       au < ready ; exists ; 1979 ; Resources for American Literary Study Volume 9 ; 9 ; 1979 ; >
-      au < frozen ; exists ; 1980 ; Resources for American Literary Study Volume 10 ; 10 ; 1980 ; >
+      au < finished ; manifest ; 1980 ; Resources for American Literary Study Volume 10 ; 10 ; 1980 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1981 ; Resources for American Literary Study Volume 11 ; 11 ; 1981 ; >
       au < ready ; exists ; 1982 ; Resources for American Literary Study Volume 12 ; 12 ; 1982 ; >
       au < ready ; exists ; 1983 ; Resources for American Literary Study Volume 13 ; 13 ; 1983 ; >
       au < ready ; exists ; 1984 ; Resources for American Literary Study Volume 14 ; 14 ; 1984 ; >
       au < ready ; exists ; 1985 ; Resources for American Literary Study Volume 15 ; 15 ; 1985 ; >
       au < ready ; exists ; 1989 ; Resources for American Literary Study Volume 16 ; 16 ; 1989 ; >
-      au < frozen ; exists ; 1990 ; Resources for American Literary Study Volume 17 (1990) ; 17 ; 1990 ; >
+      au < finished ; manifest ; 1990 ; Resources for American Literary Study Volume 17 (1990) ; 17 ; 1990 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1991 ; Resources for American Literary Study Volume 17 (1991) ; 17 ; 1991 ; >
-      au < frozen ; exists ; 1992 ; Resources for American Literary Study Volume 18 ; 18 ; 1992 ; >
+      au < finished ; manifest ; 1992 ; Resources for American Literary Study Volume 18 ; 18 ; 1992 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1993 ; Resources for American Literary Study Volume 19 ; 19 ; 1993 ; >
       au < crawling ; exists ; 1994 ; Resources for American Literary Study Volume 20 ; 20 ; 1994 ; >
-      au < frozen ; exists ; 1995 ; Resources for American Literary Study Volume 21 ; 21 ; 1995 ; >
+      au < finished ; manifest ; 1995 ; Resources for American Literary Study Volume 21 ; 21 ; 1995 ; reingest1.clockss.org:8082 >
 
       au < ready ; exists ; 1997 ; Resources for American Literary Study Volume 23 ; 23 ; 1997 ; >
-      au < frozen ; exists ; 1998 ; Resources for American Literary Study Volume 24 ; 24 ; 1998 ; >
-      au < frozen ; exists ; 1999 ; Resources for American Literary Study Volume 25 ; 25 ; 1999 ; >
+      au < finished ; manifest ; 1998 ; Resources for American Literary Study Volume 24 ; 24 ; 1998 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1999 ; Resources for American Literary Study Volume 25 ; 25 ; 1999 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2000 ; Resources for American Literary Study Volume 26 ; 26 ; 2000 ; >
-      au < frozen ; exists ; 2001 ; Resources for American Literary Study Volume 27 ; 27 ; 2001 ; >
-      au < frozen ; exists ; 2002 ; Resources for American Literary Study Volume 28 ; 28 ; 2002 ; >
-      au < frozen ; exists ; 2004 ; Resources for American Literary Study Volume 29 ; 29 ; 2004 ; >
-      au < frozen ; exists ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 ; >
+      au < finished ; manifest ; 2001 ; Resources for American Literary Study Volume 27 ; 27 ; 2001 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Resources for American Literary Study Volume 28 ; 28 ; 2002 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Resources for American Literary Study Volume 29 ; 29 ; 2004 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Resources for American Literary Study Volume 30 ; 30 ; 2005 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2006 ; Resources for American Literary Study Volume 31 ; 31 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 ; >
+      au < finished ; manifest ; 2007 ; Resources for American Literary Study Volume 32 ; 32 ; 2007 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Resources for American Literary Study Volume 33 ; 33 ; 2008 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; Resources for American Literary Study Volume 34 ; 34 ; 2009 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2010 ; Resources for American Literary Study Volume 35 ; 35 ; 2010 ; reingest2.clockss.org:8085 >
@@ -1712,7 +1712,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Studies in American Humor Volume 6 ; 6 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Studies in American Humor Volume 7 ; 7 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Studies in American Humor Volume 8 ; 8 ; 2022 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Studies in American Humor Volume 9 ; 9 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Studies in American Humor Volume 9 ; 9 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Studies in American Humor Volume 10 ; 10 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Studies in American Humor Volume 11 ; 11 ; 2025 ; >
       au < expected ; exists ; 2026 ; Studies in American Humor Volume 12 ; 12 ; 2026 ; >
@@ -1744,7 +1744,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Style Volume 2020 ; 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Style Volume 2021 ; 2021 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Style Volume 56 ; 56 ; 2022 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Style Volume 57 ; 57 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Style Volume 57 ; 57 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Style Volume 58 ; 58 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Style Volume 59 ; 59 ; 2025 ; >
       au < expected ; exists ; 2026 ; Style Volume 60 ; 60 ; 2026 ; >
@@ -1774,7 +1774,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Cormac McCarthy Journal Volume 18 ; 18 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Cormac McCarthy Journal Volume 19 ; 19 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Cormac McCarthy Journal Volume 20 ; 20 ; 2022 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2023 ; The Cormac McCarthy Journal Volume 21 ; 21 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Cormac McCarthy Journal Volume 21 ; 21 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; The Cormac McCarthy Journal Volume 22 ; 22 ; 2024 ; >
       au < crawling ; exists ; 2025 ; The Cormac McCarthy Journal Volume 23 ; 23 ; 2025 ; >
       au < expected ; exists ; 2026 ; The Cormac McCarthy Journal Volume 24 ; 24 ; 2026 ; >
@@ -1798,7 +1798,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2020 ; 2020 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 2021 ; 2021 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 6 ; 6 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 7 ; 7 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 7 ; 7 ; 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 8 ; 8 ; 2024 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2025 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 9 ; 9 ; 2025 ; >
       au < expected ; exists ; 2026 ; The Harold Pinter Review: Essays on Contemporary Drama Volume 10 ; 10 ; 2026 ; >
@@ -1842,7 +1842,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of World Christianity Volume 10 ; 10 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of World Christianity Volume 11 ; 11 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Journal of World Christianity Volume 12 ; 12 ; 2022 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Journal of World Christianity Volume 13 ; 13 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Journal of World Christianity Volume 13 ; 13 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Journal of World Christianity Volume 14 ; 14 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Journal of World Christianity Volume 15 ; 15 ; 2025 ; >
       au < expected ; exists ; 2026 ; Journal of World Christianity Volume 16 ; 16 ; 2026 ; >
@@ -1891,7 +1891,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; The Langston Hughes Review Volume 26 ; 26 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; The Langston Hughes Review Volume 27 ; 27 ; 2021 ; >
       au < finished ; manifest ; 2022 ; The Langston Hughes Review Volume 28 ; 28 ; 2022 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; The Langston Hughes Review Volume 29 ; 29 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; The Langston Hughes Review Volume 29 ; 29 ; 2023 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; The Langston Hughes Review Volume 30 ; 30 ; 2024 ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2025 ; The Langston Hughes Review Volume 31 ; 31 ; 2025 ; >
       au < expected ; exists ; 2026 ; The Langston Hughes Review Volume 32 ; 32 ; 2026 ; >
@@ -1943,7 +1943,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Wesley and Methodist Studies Volume 12 ; 12 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Wesley and Methodist Studies Volume 13 ; 13 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Wesley and Methodist Studies Volume 14 ; 14 ; 2022 ; reingest2.clockss.org:8085 >
-      au < frozen ; exists ; 2023 ; Wesley and Methodist Studies Volume 15 ; 15 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Wesley and Methodist Studies Volume 15 ; 15 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Wesley and Methodist Studies Volume 16 ; 16 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Wesley and Methodist Studies Volume 17 ; 17 ; 2025 ; >
       au < manifest ; exists ; 2026 ; Wesley and Methodist Studies Volume 18 ; 18 ; 2026 ; >
@@ -1971,7 +1971,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; William Carlos Williams Review Volume 37 ; 37 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; William Carlos Williams Review Volume 38 ; 38 ; 2021 ; >
       au < finished ; manifest ; 2022 ; William Carlos Williams Review Volume 39 ; 39 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; William Carlos Williams Review Volume 40 ; 40 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; William Carlos Williams Review Volume 40 ; 40 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; William Carlos Williams Review Volume 41 ; 41 ; 2024 ; >
       au < crawling ; exists ; 2025 ; William Carlos Williams Review Volume 42 ; 42 ; 2025 ; >
       au < expected ; exists ; 2026 ; William Carlos Williams Review Volume 43 ; 43 ; 2026 ; >
@@ -1999,7 +1999,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Hiperboreea Volume 7 ; 7 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Hiperboreea Volume 8 ; 8 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Hiperboreea Volume 9 ; 9 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; Hiperboreea Volume 10 ; 10 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Hiperboreea Volume 10 ; 10 ; 2023 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Hiperboreea Volume 11 ; 11 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Hiperboreea Volume 12 ; 12 ; 2025 ; >
       au < expected ; exists ; 2026 ; Hiperboreea Volume 13 ; 13 ; 2026 ; >
@@ -2042,7 +2042,7 @@
 
       au < ready ; exists ; 2005 ; Journal of African Development Volume 7 ; 7 ; 2005 ; >
       au < ready ; exists ; 2006 ; Journal of African Development Volume 8 ; 8 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Journal of African Development Volume 9 ; 9 ; 2007 ; >
+      au < finished ; manifest ; 2007 ; Journal of African Development Volume 9 ; 9 ; 2007 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Journal of African Development Volume 10 ; 10 ; 2008 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2009 ; Journal of African Development Volume 11 ; 11 ; 2009 ; reingest2.clockss.org:8085 >
       au < doNotProcess ; doNotProcess ; 2010 ; Journal of African Development Volume 12 ; 12 ; 2010 ; >
@@ -2057,7 +2057,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Journal of African Development Volume 21 ; 21 ; 2020 ; >
       au < finished ; manifest ; 2021 ; Journal of African Development Volume 22 ; 22 ; 2021 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; Journal of African Development Volume 23 ; 23 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; Journal of African Development Volume 24 ; 24 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Journal of African Development Volume 24 ; 24 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Journal of African Development Volume 25 ; 25 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Journal of African Development Volume 26 ; 26 ; 2025 ; >
       au < manifest ; exists ; 2026 ; Journal of African Development Volume 27 ; 27 ; 2026 ; >
@@ -2113,52 +2113,52 @@
 
       param[journal_id] = milton-studies
 
-      au < frozen ; exists ; 1969 ; Milton Studies Volume 1 ; 1 ; 1969 ; >
+      au < finished ; manifest ; 1969 ; Milton Studies Volume 1 ; 1 ; 1969 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1970 ; Milton Studies Volume 2 ; 2 ; 1970 ; >
       au < ready ; exists ; 1971 ; Milton Studies Volume 3 ; 3 ; 1971 ; >
-      au < frozen ; exists ; 1972 ; Milton Studies Volume 4 ; 4 ; 1972 ; >
+      au < finished ; manifest ; 1972 ; Milton Studies Volume 4 ; 4 ; 1972 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1973 ; Milton Studies Volume 5 ; 5 ; 1973 ; >
       au < ready ; exists ; 1974 ; Milton Studies Volume 6 ; 6 ; 1974 ; >
       au < crawling ; exists ; 1975 ; Milton Studies Volume 7 ; 7 ; 1975 ; >
-      au < frozen ; exists ; 1975 ; Milton Studies Volume 8 ; 8 ; 1975 ; >
-      au < frozen ; exists ; 1976 ; Milton Studies Volume 9 ; 9 ; 1976 ; >
-      au < frozen ; exists ; 1977 ; Milton Studies Volume 10 ; 10 ; 1977 ; >
+      au < finished ; manifest ; 1975 ; Milton Studies Volume 8 ; 8 ; 1975 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1976 ; Milton Studies Volume 9 ; 9 ; 1976 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1977 ; Milton Studies Volume 10 ; 10 ; 1977 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1978 ; Milton Studies Volume 11 ; 11 ; 1978 ; >
       au < crawling ; exists ; 1978 ; Milton Studies Volume 12 ; 12 ; 1978 ; >
       au < ready ; exists ; 1979 ; Milton Studies Volume 13 ; 13 ; 1979 ; >
       au < ready ; exists ; 1980 ; Milton Studies Volume 14 ; 14 ; 1980 ; >
-      au < frozen ; exists ; 1981 ; Milton Studies Volume 15 ; 15 ; 1981 ; >
+      au < finished ; manifest ; 1981 ; Milton Studies Volume 15 ; 15 ; 1981 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 1982 ; Milton Studies Volume 16 ; 16 ; 1982 ; >
       au < crawling ; exists ; 1983 ; Milton Studies Volume 17 ; 17 ; 1983 ; >
-      au < frozen ; exists ; 1983 ; Milton Studies Volume 18 ; 18 ; 1983 ; >
+      au < finished ; manifest ; 1983 ; Milton Studies Volume 18 ; 18 ; 1983 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1984 ; Milton Studies Volume 19 ; 19 ; 1984 ; >
       au < ready ; exists ; 1984 ; Milton Studies Volume 20 ; 20 ; 1984 ; >
       au < ready ; exists ; 1985 ; Milton Studies Volume 21 ; 21 ; 1985 ; >
       au < ready ; exists ; 1986 ; Milton Studies Volume 22 ; 22 ; 1986 ; >
       au < ready ; exists ; 1987 ; Milton Studies Volume 23 ; 23 ; 1987 ; >
-      au < frozen ; exists ; 1988 ; Milton Studies Volume 24 ; 24 ; 1988 ; >
-      au < frozen ; exists ; 1989 ; Milton Studies Volume 25 ; 25 ; 1989 ; >
-      au < frozen ; exists ; 1990 ; Milton Studies Volume 26 ; 26 ; 1990 ; >
+      au < finished ; manifest ; 1988 ; Milton Studies Volume 24 ; 24 ; 1988 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1989 ; Milton Studies Volume 25 ; 25 ; 1989 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1990 ; Milton Studies Volume 26 ; 26 ; 1990 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1991 ; Milton Studies Volume 27 ; 27 ; 1991 ; >
       au < ready ; exists ; 1992 ; Milton Studies Volume 28 ; 28 ; 1992 ; >
-      au < frozen ; exists ; 1992 ; Milton Studies Volume 29 ; 29 ; 1992 ; >
-      au < frozen ; exists ; 1993 ; Milton Studies Volume 30 ; 30 ; 1993 ; >
-      au < frozen ; exists ; 1994 ; Milton Studies Volume 31 ; 31 ; 1994 ; >
-      au < frozen ; exists ; 1995 ; Milton Studies Volume 32 ; 32 ; 1995 ; >
-      au < frozen ; exists ; 1996 ; Milton Studies Volume 33 ; 33 ; 1996 ; >
+      au < finished ; manifest ; 1992 ; Milton Studies Volume 29 ; 29 ; 1992 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1993 ; Milton Studies Volume 30 ; 30 ; 1993 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1994 ; Milton Studies Volume 31 ; 31 ; 1994 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1995 ; Milton Studies Volume 32 ; 32 ; 1995 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; Milton Studies Volume 33 ; 33 ; 1996 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1996 ; Milton Studies Volume 34 ; 34 ; 1996 ; >
       au < ready ; exists ; 1997 ; Milton Studies Volume 35 ; 35 ; 1997 ; >
-      au < frozen ; exists ; 1998 ; Milton Studies Volume 36 ; 36 ; 1998 ; >
+      au < finished ; manifest ; 1998 ; Milton Studies Volume 36 ; 36 ; 1998 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1999 ; Milton Studies Volume 37 ; 37 ; 1999 ; >
-      au < frozen ; exists ; 2000 ; Milton Studies Volume 38 ; 38 ; 2000 ; >
-      au < frozen ; exists ; 2000 ; Milton Studies Volume 39 ; 39 ; 2000 ; >
+      au < finished ; manifest ; 2000 ; Milton Studies Volume 38 ; 38 ; 2000 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2000 ; Milton Studies Volume 39 ; 39 ; 2000 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 2001 ; Milton Studies Volume 40 ; 40 ; 2001 ; >
-      au < frozen ; exists ; 2002 ; Milton Studies Volume 41 ; 41 ; 2002 ; >
-      au < frozen ; exists ; 2002 ; Milton Studies Volume 42 ; 42 ; 2002 ; >
-      au < frozen ; exists ; 2004 ; Milton Studies Volume 43 ; 43 ; 2004 ; >
+      au < finished ; manifest ; 2002 ; Milton Studies Volume 41 ; 41 ; 2002 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Milton Studies Volume 42 ; 42 ; 2002 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2004 ; Milton Studies Volume 43 ; 43 ; 2004 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2005 ; Milton Studies Volume 44 ; 44 ; 2005 ; >
-      au < frozen ; exists ; 2006 ; Milton Studies Volume 45 ; 45 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Milton Studies Volume 46 ; 46 ; 2007 ; >
+      au < finished ; manifest ; 2006 ; Milton Studies Volume 45 ; 45 ; 2006 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2007 ; Milton Studies Volume 46 ; 46 ; 2007 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Milton Studies Volume 47 ; 47 ; 2008 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Milton Studies Volume 48 ; 48 ; 2008 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; Milton Studies Volume 49 ; 49 ; 2009 ; reingest2.clockss.org:8085 >
@@ -2177,7 +2177,7 @@
       au < doNotProcess ; doNotProcess ; 2020 ; Milton Studies Volume 62 ; 62 ; 2020 ; >
       au < doNotProcess ; doNotProcess ; 2021 ; Milton Studies Volume 63 ; 63 ; 2021 ; >
       au < finished ; manifest ; 2022 ; Milton Studies Volume 64 ; 64 ; 2022 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2023 ; Milton Studies Volume 65 ; 65 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Milton Studies Volume 65 ; 65 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Milton Studies Volume 66 ; 66 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Milton Studies Volume 67 ; 67 ; 2025 ; >
       au < expected ; exists ; 2026 ; Milton Studies Volume 68 ; 68 ; 2026 ; >
@@ -2195,24 +2195,24 @@
       param[journal_id] = ncs
 
       au < ready ; exists ; 1987 ; Nineteenth Century Studies Volume 1 ; 1 ; 1987 ; >
-      au < frozen ; exists ; 1988 ; Nineteenth Century Studies Volume 2 ; 2 ; 1988 ; >
+      au < finished ; manifest ; 1988 ; Nineteenth Century Studies Volume 2 ; 2 ; 1988 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1989 ; Nineteenth Century Studies Volume 3 ; 3 ; 1989 ; >
-      au < frozen ; exists ; 1990 ; Nineteenth Century Studies Volume 4 ; 4 ; 1990 ; >
-      au < frozen ; exists ; 1991 ; Nineteenth Century Studies Volume 5 ; 5 ; 1991 ; >
-      au < frozen ; exists ; 1992 ; Nineteenth Century Studies Volume 6 ; 6 ; 1992 ; >
-      au < frozen ; exists ; 1993 ; Nineteenth Century Studies Volume 7 ; 7 ; 1993 ; >
-      au < frozen ; exists ; 1994 ; Nineteenth Century Studies Volume 8 ; 8 ; 1994 ; >
-      au < frozen ; exists ; 1995 ; Nineteenth Century Studies Volume 9 ; 9 ; 1995 ; >
+      au < finished ; manifest ; 1990 ; Nineteenth Century Studies Volume 4 ; 4 ; 1990 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 1991 ; Nineteenth Century Studies Volume 5 ; 5 ; 1991 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; Nineteenth Century Studies Volume 6 ; 6 ; 1992 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; Nineteenth Century Studies Volume 7 ; 7 ; 1993 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1994 ; Nineteenth Century Studies Volume 8 ; 8 ; 1994 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1995 ; Nineteenth Century Studies Volume 9 ; 9 ; 1995 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 1996 ; Nineteenth Century Studies Volume 10 ; 10 ; 1996 ; >
-      au < frozen ; exists ; 1997 ; Nineteenth Century Studies Volume 11 ; 11 ; 1997 ; >
-      au < frozen ; exists ; 1998 ; Nineteenth Century Studies Volume 12 ; 12 ; 1998 ; >
+      au < finished ; manifest ; 1997 ; Nineteenth Century Studies Volume 11 ; 11 ; 1997 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1998 ; Nineteenth Century Studies Volume 12 ; 12 ; 1998 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1999 ; Nineteenth Century Studies Volume 13 ; 13 ; 1999 ; >
-      au < frozen ; exists ; 2000 ; Nineteenth Century Studies Volume 14 ; 14 ; 2000 ; >
-      au < frozen ; exists ; 2001 ; Nineteenth Century Studies Volume 15 ; 15 ; 2001 ; >
-      au < frozen ; exists ; 2002 ; Nineteenth Century Studies Volume 16 ; 16 ; 2002 ; >
+      au < finished ; manifest ; 2000 ; Nineteenth Century Studies Volume 14 ; 14 ; 2000 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; Nineteenth Century Studies Volume 15 ; 15 ; 2001 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2002 ; Nineteenth Century Studies Volume 16 ; 16 ; 2002 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2003 ; Nineteenth Century Studies Volume 17 ; 17 ; 2003 ; >
       au < ready ; exists ; 2004 ; Nineteenth Century Studies Volume 18 ; 18 ; 2004 ; >
-      au < frozen ; exists ; 2005 ; Nineteenth Century Studies Volume 19 ; 19 ; 2005 ; >
+      au < finished ; manifest ; 2005 ; Nineteenth Century Studies Volume 19 ; 19 ; 2005 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 2006 ; Nineteenth Century Studies Volume 20 ; 20 ; 2006 ; >
       au < ready ; exists ; 2007 ; Nineteenth Century Studies Volume 21 ; 21 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Nineteenth Century Studies Volume 22 ; 22 ; 2008 ; reingest4.clockss.org:8082 >
@@ -2340,13 +2340,13 @@
 
       param[journal_id] = jhr
 
-      au < frozen ; exists ; 1998 ; Journal for the History of Rhetoric Volume 1 ; 1 ; 1998 ; >
+      au < finished ; manifest ; 1998 ; Journal for the History of Rhetoric Volume 1 ; 1 ; 1998 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1999 ; Journal for the History of Rhetoric Volume 2 ; 2 ; 1999 ; >
-      au < frozen ; exists ; 2000 ; Journal for the History of Rhetoric Volume 3 ; 3 ; 2000 ; >
-      au < frozen ; exists ; 2001 ; Journal for the History of Rhetoric Volume 4 ; 4 ; 2001 ; >
-      au < frozen ; exists ; 2002 ; Journal for the History of Rhetoric Volume 5 ; 5 ; 2002 ; >
-      au < frozen ; exists ; 2003 ; Journal for the History of Rhetoric Volume 6 ; 6 ; 2003 ; >
-      au < frozen ; exists ; 2004 ; Journal for the History of Rhetoric Volume 7 ; 7 ; 2004 ; >
+      au < finished ; manifest ; 2000 ; Journal for the History of Rhetoric Volume 3 ; 3 ; 2000 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2001 ; Journal for the History of Rhetoric Volume 4 ; 4 ; 2001 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2002 ; Journal for the History of Rhetoric Volume 5 ; 5 ; 2002 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2003 ; Journal for the History of Rhetoric Volume 6 ; 6 ; 2003 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Journal for the History of Rhetoric Volume 7 ; 7 ; 2004 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2005 ; Journal for the History of Rhetoric Volume 8 ; 8 ; 2005 ; >
       au < ready ; exists ; 2006 ; Journal for the History of Rhetoric Volume 9 ; 9 ; 2006 ; >
       au < ready ; exists ; 2007 ; Journal for the History of Rhetoric Volume 10 ; 10 ; 2007 ; >
@@ -2364,7 +2364,7 @@
       au < finished ; manifest ; 2020 ; Journal for the History of Rhetoric Volume 23 ; 23 ; 2020 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2021 ; Journal for the History of Rhetoric Volume 24 ; 24 ; 2021 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Journal for the History of Rhetoric Volume 25 ; 25 ; 2022 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Journal for the History of Rhetoric Volume 26 ; 26 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Journal for the History of Rhetoric Volume 26 ; 26 ; 2023 ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Journal for the History of Rhetoric Volume 27 ; 27 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Journal for the History of Rhetoric Volume 28 ; 28 ; 2025 ; >
       au < expected ; exists ; 2026 ; Journal for the History of Rhetoric Volume 29 ; 29 ; 2026 ; >
@@ -2387,7 +2387,7 @@
       au < finished ; manifest ; 2020 ; Methodist History Volume 58 ; 58 ; 2020 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; Methodist History Volume 59 ; 59 ; 2021 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Methodist History Volume 60 ; 60 ; 2022 ; reingest1.clockss.org:8082 >
-      au < frozen ; exists ; 2023 ; Methodist History Volume 61 ; 61 ; 2023 ; >
+      au < finished ; manifest ; 2023 ; Methodist History Volume 61 ; 61 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; Methodist History Volume 62 ; 62 ; 2024 ; >
       au < crawling ; exists ; 2025 ;Methodist History Volume 63 ; 63 ; 2025 ; >
       au < expected ; exists ; 2026 ;Methodist History Volume 64 ; 64 ; 2026 ; >
@@ -2405,12 +2405,12 @@
       param[journal_id] = philosophia-africana
 
       au < ready ; exists ; 2001 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 4 ; 4 ; 2001 ; >
-      au < frozen ; exists ; 2002 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 5 ; 5 ; 2002 ; >
-      au < frozen ; exists ; 2003 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 6 ; 6 ; 2003 ; >
-      au < frozen ; exists ; 2004 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 7 ; 7 ; 2004 ; >
-      au < frozen ; exists ; 2005 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 8 ; 8 ; 2005 ; >
-      au < frozen ; exists ; 2006 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 9 ; 9 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 10 ; 10 ; 2007 ; >
+      au < finished ; manifest ; 2002 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 5 ; 5 ; 2002 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2003 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 6 ; 6 ; 2003 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 7 ; 7 ; 2004 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 8 ; 8 ; 2005 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2006 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 9 ; 9 ; 2006 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2007 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 10 ; 10 ; 2007 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2008 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 11 ; 11 ; 2008 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 12 ; 12 ; 2009 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2010 ; Philosophia Africana: Analysis of Philosophy and Issues in Africa and the Black Diaspora Volume 13 (2010) ; 13 ; 2010 ; reingest4.clockss.org:8082 >
@@ -2447,7 +2447,7 @@
       au < finished ; manifest ; 2022 ; Restoration and Eighteenth-Century Theatre Research Volume 34 ; 34 ; 2022 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; Restoration and Eighteenth-Century Theatre Research Volume 35 ; 35 ; 2023 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2024 ; Restoration and Eighteenth-Century Theatre Research Volume 36 ; 36 ; 2024 ; reingest4.clockss.org:8082 >
-      au < frozen ; exists ; 2025 ; Restoration and Eighteenth-Century Theatre Research Volume 37 ; 37 ; 2025 ; >
+      au < finished ; manifest ; 2025 ; Restoration and Eighteenth-Century Theatre Research Volume 37 ; 37 ; 2025 ; reingest4.clockss.org:8082 >
       au < expected ; exists ; 2026 ; Restoration and Eighteenth-Century Theatre Research Volume 38 ; 38 ; 2026 ; >
 
   }
@@ -2494,15 +2494,15 @@
 
       au < ready ; exists ; 1972 ; Victorians Institute Journal Volume 1 ; 1 ; 1972 ; >
       au < ready ; exists ; 1973 ; Victorians Institute Journal Volume 2 ; 2 ; 1973 ; >
-      au < frozen ; exists ; 1974 ; Victorians Institute Journal Volume 3 ; 3 ; 1974 ; >
+      au < finished ; manifest ; 1974 ; Victorians Institute Journal Volume 3 ; 3 ; 1974 ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 1975 ; Victorians Institute Journal Volume 4 ; 4 ; 1975 ; >
       au < ready ; exists ; 1976 ; Victorians Institute Journal Volume 5 ; 5 ; 1976 ; >
       au < crawling ; exists ; 1977 ; Victorians Institute Journal Volume 6 ; 6 ; 1977 ; >
-      au < frozen ; exists ; 1978 ; Victorians Institute Journal Volume 7 ; 7 ; 1978 ; >
-      au < frozen ; exists ; 1979 ; Victorians Institute Journal Volume 8 ; 8 ; 1979 ; >
-      au < frozen ; exists ; 1981 ; Victorians Institute Journal Volume 9 ; 9 ; 1981 ; >
+      au < finished ; manifest ; 1978 ; Victorians Institute Journal Volume 7 ; 7 ; 1978 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1979 ; Victorians Institute Journal Volume 8 ; 8 ; 1979 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1981 ; Victorians Institute Journal Volume 9 ; 9 ; 1981 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1982 ; Victorians Institute Journal Volume 10 ; 10 ; 1982 ; >
-      au < frozen ; exists ; 1983 ; Victorians Institute Journal Volume 11 ; 11 ; 1983 ; >
+      au < finished ; manifest ; 1983 ; Victorians Institute Journal Volume 11 ; 11 ; 1983 ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 1984 ; Victorians Institute Journal Volume 12 ; 12 ; 1984 ; >
       au < ready ; exists ; 1985 ; Victorians Institute Journal Volume 13 ; 13 ; 1985 ; >
       au < ready ; exists ; 1986 ; Victorians Institute Journal Volume 14 ; 14 ; 1986 ; >
@@ -2510,23 +2510,23 @@
       au < ready ; exists ; 1988 ; Victorians Institute Journal Volume 16 ; 16 ; 1988 ; >
       au < ready ; exists ; 1989 ; Victorians Institute Journal Volume 17 ; 17 ; 1989 ; >
       au < ready ; exists ; 1990 ; Victorians Institute Journal Volume 18 ; 18 ; 1990 ; >
-      au < frozen ; exists ; 1991 ; Victorians Institute Journal Volume 19 ; 19 ; 1991 ; >
-      au < frozen ; exists ; 1992 ; Victorians Institute Journal Volume 20 ; 20 ; 1992 ; >
-      au < frozen ; exists ; 1993 ; Victorians Institute Journal Volume 21 ; 21 ; 1993 ; >
+      au < finished ; manifest ; 1991 ; Victorians Institute Journal Volume 19 ; 19 ; 1991 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1992 ; Victorians Institute Journal Volume 20 ; 20 ; 1992 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1993 ; Victorians Institute Journal Volume 21 ; 21 ; 1993 ; reingest1.clockss.org:8082 >
       au < ready ; exists ; 1994 ; Victorians Institute Journal Volume 22 ; 22 ; 1994 ; >
-      au < frozen ; exists ; 1995 ; Victorians Institute Journal Volume 23 ; 23 ; 1995 ; >
-      au < frozen ; exists ; 1996 ; Victorians Institute Journal Volume 24 ; 24 ; 1996 ; >
+      au < finished ; manifest ; 1995 ; Victorians Institute Journal Volume 23 ; 23 ; 1995 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1996 ; Victorians Institute Journal Volume 24 ; 24 ; 1996 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1997 ; Victorians Institute Journal Volume 25 ; 25 ; 1997 ; >
       au < ready ; exists ; 1998 ; Victorians Institute Journal Volume 26 ; 26 ; 1998 ; >
       au < ready ; exists ; 1999 ; Victorians Institute Journal Volume 27 ; 27 ; 1999 ; >
-      au < frozen ; exists ; 2000 ; Victorians Institute Journal Volume 28 ; 28 ; 2000 ; >
-      au < frozen ; exists ; 2001 ; Victorians Institute Journal Volume 29 ; 29 ; 2001 ; >
-      au < frozen ; exists ; 2002 ; Victorians Institute Journal Volume 30 ; 30 ; 2002 ; >
-      au < frozen ; exists ; 2003 ; Victorians Institute Journal Volume 31 ; 31 ; 2003 ; >
-      au < frozen ; exists ; 2004 ; Victorians Institute Journal Volume 32 ; 32 ; 2004 ; >
-      au < frozen ; exists ; 2005 ; Victorians Institute Journal Volume 33 ; 33 ; 2005 ; >
+      au < finished ; manifest ; 2000 ; Victorians Institute Journal Volume 28 ; 28 ; 2000 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2001 ; Victorians Institute Journal Volume 29 ; 29 ; 2001 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2002 ; Victorians Institute Journal Volume 30 ; 30 ; 2002 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2003 ; Victorians Institute Journal Volume 31 ; 31 ; 2003 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2004 ; Victorians Institute Journal Volume 32 ; 32 ; 2004 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2005 ; Victorians Institute Journal Volume 33 ; 33 ; 2005 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2006 ; Victorians Institute Journal Volume 34 ; 34 ; 2006 ; >
-      au < frozen ; exists ; 2007 ; Victorians Institute Journal Volume 35 ; 35 ; 2007 ; >
+      au < finished ; manifest ; 2007 ; Victorians Institute Journal Volume 35 ; 35 ; 2007 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Victorians Institute Journal Volume 36 ; 36 ; 2008 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2009 ; Victorians Institute Journal Volume 37 ; 37 ; 2009 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2010 ; Victorians Institute Journal Volume 38 ; 38 ; 2010 ; reingest4.clockss.org:8082 >
@@ -2606,8 +2606,8 @@
       param[journal_id] = mediaevalia
       #move from SUNY Press in 2025
 
-      au < frozen ; exists ; 2023 ; Mediaevalia Volume 44 ; 44 ; 2023 ; >
-      au < frozen ; exists ; 2024 ; Mediaevalia Volume 45 ; 45 ; 2024 ; >
+      au < finished ; manifest ; 2023 ; Mediaevalia Volume 44 ; 44 ; 2023 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2024 ; Mediaevalia Volume 45 ; 45 ; 2024 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2025 ;Mediaevalia Volume 46 ; 46 ; 2025 ; >
       au < expected ; exists ; 2026 ;Mediaevalia Volume 47 ; 47 ; 2026 ; >
 
