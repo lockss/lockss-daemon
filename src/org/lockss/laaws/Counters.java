@@ -64,6 +64,8 @@ public class Counters {
   MultiValuedMap<CounterType,DigestCachedUrl> inProgressDcuMap =
     new ArrayListValuedHashMap<>();
   private List<String> errors = new ArrayList<>();
+  private int errorCnt = 0;
+  private int warningCnt = 0;
   private Counters parent;
 
 
@@ -126,6 +128,7 @@ public class Counters {
     if (parent != null) {
       parent.addError(msg);
     }
+    errorCnt++;
   }
 
   public List<String> getErrors() {
@@ -141,6 +144,27 @@ public class Counters {
     synchronized (errors) {
       errors.addAll(ctrs.errors);
     }
+  }
+
+  public void addWarning(String msg) {
+    if (!msg.startsWith("Warn")) {
+      msg = "Warning: " + msg;
+    }
+    synchronized (errors) {
+      errors.add(msg);
+    }
+    if (parent != null) {
+      parent.addWarning(msg);
+    }
+    warningCnt++;
+  }
+
+  public int getErrorCount() {
+    return errorCnt;
+  }
+
+  public int getWarningCount() {
+    return warningCnt;
   }
 
   public synchronized void addInProgressDcu(CounterType type,

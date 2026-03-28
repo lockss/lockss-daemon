@@ -264,7 +264,7 @@ public class CuChecker extends CuBase {
                                  Long.toString(v1CollectionDate),
                                  Long.toString(artifact.getCollectionDate()));
       log.warning(msg);
-      task.addError(msg);
+      task.addWarning(msg);
     }
     if (!artifact.getCommitted()) {
       String msg = mdMismatchMsg(au, cu, ver, "Committed", "true", "false");

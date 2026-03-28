@@ -69,6 +69,10 @@ public abstract class Worker {
     task.addError(msg);
   }
 
+  protected void addWarning(String msg) {
+    task.addWarning(msg);
+  }
+
   protected boolean isAbort() {
     return auMover.isAbort();
   }

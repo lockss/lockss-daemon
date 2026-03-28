@@ -2571,8 +2571,16 @@ public class V2AuMover {
   }
 
   String getErrorStatus() {
-    int n = getErrors().size();
-    return n == 0 ? "" : StringUtil.numberOfUnits(n, "error");
+    int errors = totalCounters.getErrorCount();
+    int warnings = totalCounters.getWarningCount();
+    List<String> lst = new ArrayList<>(2);
+    if (errors != 0) {
+      lst.add(StringUtil.numberOfUnits(errors, "error"));
+    }
+    if (warnings != 0) {
+      lst.add(StringUtil.numberOfUnits(warnings, "warning"));
+    }
+    return StringUtil.separatedString(lst, ", ");
   }
 
   public List<String> getActiveStatusList() {

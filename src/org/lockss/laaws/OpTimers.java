@@ -115,14 +115,20 @@ public class OpTimers {
   }
 
   public int getErrorCount() {
-    return ctrs.getErrors().size();
+    return ctrs.getErrorCount();
+  }
+
+  public int getWarningCount() {
+    return ctrs.getWarningCount();
   }
 
   public void addError(String msg) {
     ctrs.addError(msg);
   }
 
-
+  public void addWarning(String msg) {
+    ctrs.addWarning(msg);
+  }
 
   private void addPhaseCounterStatus(StringBuilder sb, OpType opType,
                                      Phase phase) {

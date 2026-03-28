@@ -221,6 +221,10 @@ public class MigrationTask {
     this.auStat.addError(msg);
   }
 
+  public void addWarning(String msg) {
+    this.auStat.addWarning(msg);
+  }
+
   public Counters getCounters() {
     return counters;
   }
