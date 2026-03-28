@@ -264,6 +264,9 @@ public class MigrateSettings extends LockssServlet {
 
     if (requestMethod.equals(HttpRequest.__POST)) {
       String action = getParameter(KEY_ACTION);
+      if (StringUtil.isNullString(action)) {
+        action = getParameter(ACTION_TAG);
+      }
       switch (action) {
         case ACTION_LOAD_V2_CFG:
           try {
@@ -418,6 +421,7 @@ public class MigrateSettings extends LockssServlet {
     Composite comp = new Composite();
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
+    frm.add(new Input(Input.Hidden, ACTION_TAG));
     Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=0");
 
     addSection(tbl, "Migration Target");
@@ -437,7 +441,7 @@ public class MigrateSettings extends LockssServlet {
 
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
-    tbl.add(new Input(Input.Submit, KEY_ACTION, ACTION_LOAD_V2_CFG));
+    tbl.add(submitButton(ACTION_LOAD_V2_CFG, ACTION_LOAD_V2_CFG));
 
     if (!StringUtil.isNullString(fetchError)) {
       displayInputError(tbl, fetchError);
