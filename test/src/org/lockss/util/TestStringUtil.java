@@ -130,6 +130,8 @@ public class TestStringUtil extends LockssTestCase {
   }
 
   public void testSeparatedString() {
+    assertEquals("", StringUtil.separatedString(Collections.emptyList()));
+    assertEquals("", StringUtil.separatedString(Collections.emptyList(), ", "));
     assertEquals("1, 2, 3",
 		 StringUtil.separatedString(ListUtil.list("1","2","3")));
     assertEquals("1,2,3",
