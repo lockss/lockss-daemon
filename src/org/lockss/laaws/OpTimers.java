@@ -146,6 +146,9 @@ public class OpTimers {
         sb.append(" skipped)");
       }
       sb.append(", ");
+      if (phase == Phase.COPY) {
+        sb.append("copied ");
+      }
       sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(versionCounter(phase)),
                                             "version"));
       if (phase == Phase.COPY && ctrs.isNonZero(CounterType.ARTIFACTS_SKIPPED)) {

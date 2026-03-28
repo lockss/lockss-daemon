@@ -1370,7 +1370,7 @@ public class V2AuMover {
   enum Phase {
     QUEUE("Queued"),                    // First phase
     START("Starting"),
-    COPY("Copying", "Copied"),
+    COPY("Copying", "Examined"),
     RETRY("Retrying failed copies", "Retried"),
     INDEX("Indexing"),
     VERIFY("Checking", "Checked"),
