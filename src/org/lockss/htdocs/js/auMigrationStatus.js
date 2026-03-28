@@ -208,7 +208,7 @@ class AuMigrationStatus extends React.Component {
 
           this.setState({
             fetchError: true,
-            statusList: [ "Status source (LOCKSS 1.0 daemon) not responding" ],
+            statusList: [ "Waiting for status from LOCKSS 1.0 daemon" ],
             delay: 5000,
           });
         }
