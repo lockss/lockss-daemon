@@ -4009,6 +4009,7 @@ while (my $line = <>) {
            ($plugin eq "EmeraldSilverchairPlugin") || 
            ($plugin eq "PortlandPressSilverchairPlugin") || 
            ($plugin eq "RockefellerUniversityPressSilverchairPlugin") || 
+           ($plugin eq "RoyalSocietyPublishingSilverchairJournalsPlugin") || 
            ($plugin eq "UCPressSilverchairPlugin")) {
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
@@ -4043,8 +4044,9 @@ while (my $line = <>) {
            ($plugin eq "ClockssAmericanDiabetesAssociationSilverchairPlugin") || 
            ($plugin eq "ClockssCompanyBiologistsSilverchairPlugin") || 
            ($plugin eq "ClockssEmeraldSilverchairPlugin") || 
+           ($plugin eq "ClockssPortlandPressSilverchairPlugin") || 
            ($plugin eq "ClockssRockefellerUniversityPressSilverchairPlugin") || 
-           ($plugin eq "ClockssPortlandPressSilverchairPlugin")) { 
+           ($plugin eq "ClockssRoyalSocietyPublishingSilverchairJournalsPlugin")) { 
     $url = sprintf("%s%s/issue/browse-by-year/%d",
       $param{base_url}, $param{journal_id}, $param{year});
     $man_url = uri_unescape($url);
@@ -4152,7 +4154,7 @@ while (my $line = <>) {
         $result = "--NOT_DEF--";
     } elsif ($man_contents !~ m/$clockss_tag/) {
         $result = "--NO_TAG--";
-    } elsif ($man_contents !~ m/href=\"\/$param{journal_id}\/issue\/\d/) {
+    } elsif ($man_contents !~ m/href=\"\/$param{journal_id}\/issue(\/volume)?\/\d/) {
         $result = "--NO_VOL--";
     } else {
         $result = "Manifest";
