@@ -24,7 +24,7 @@
     param[journal_id] = ajec
     #param[journal_issn] = 1755-2923
     
-    au < ready ; exists ; 2008 ; Anthropological Journal of European Cultures Volume 17 ; 17 ; >
+    au < crawling ; exists ; 2008 ; Anthropological Journal of European Cultures Volume 17 ; 17 ; >
     au < ready ; exists ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 ; >
     au < finished ; manifest ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 ; >
@@ -709,7 +709,7 @@
       
     au < finished ; manifest ; 2008 ; Historical Reflections/Reflexions Historiques Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2009 ; Historical Reflections/Reflexions Historiques Volume 35 ; 35 ; >
-    au < ready ; exists ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2010 ; Historical Reflections/Reflexions Historiques Volume 36 ; 36 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Historical Reflections/Reflexions Historiques Volume 37 ; 37 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Historical Reflections/Reflexions Historiques Volume 38 ; 38 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; Historical Reflections/Reflexions Historiques Volume 39 ; 39 ; >
