@@ -5,7 +5,7 @@
     info[contract] = 2018 ;
     info[back] = 2017 ;
     info[tester] = 8 ;
-    info[poller] = 8
+    info[platform] = OJS3
   >
 
     plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
