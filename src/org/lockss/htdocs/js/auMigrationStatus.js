@@ -154,7 +154,9 @@ class AuMigrationStatus extends React.Component {
            ((e.scrollHeight <= e.clientHeight) ||
             (e.scrollHeight - e.clientHeight) <= e.scrollTop + 5));
 
-    this.setState({
+    const startTimeChanged = prevStartTime != result.start_time;
+
+    this.setState((prevState) => ({
       running: result.running,
       fetchError: false,
       statusList: result.status_list,
@@ -165,33 +167,27 @@ class AuMigrationStatus extends React.Component {
       delay: result.running ? 1000 : 5000,
       startTime: result.start_time,
       wasAtBottom: wasAtBottom,
+      finishedData: startTimeChanged ? [] : prevState.finishedData,
+    }), () => {
+      if (this.state.finishedCount != this.state.finishedData.length) {
+        fetch("/MigrateContent?reqfreq=high&output=json&status=finished" +
+              "&index=" + this.state.finishedData.length +
+              "&size=" + (this.state.finishedCount - this.state.finishedData.length))
+          .then(response => response.json())
+          .then(
+            (result) => {
+              this.setState((prevState) => ({
+                finishedData: addFinishedPage(prevState.finishedData,
+                                              result.finished_page,
+                                              result.finished_index),
+              }));
+            },
+            (error) => {
+              console.error("Could not fetch finished AU page: " + error);
+            }
+          );
+      }
     });
-    if (prevStartTime != this.state.startTime) {
-      this.setState({
-        finishedData: [],
-      });
-    }
-
-    if (this.state.finishedCount != this.state.finishedData.length) {
-      fetch("/MigrateContent?reqfreq=high&output=json&status=finished" +
-            "&index=" + this.state.finishedData.length +
-            "&size=" + (this.state.finishedCount - this.state.finishedData.length))
-        .then(response => response.json())
-        .then(
-          (result) => {
-            this.setState({
-              finishedData: addFinishedPage(this.state.finishedData,
-                                            result.finished_page,
-                                            result.finished_index),
-            });
-
-          },
-          (error) => {
-            console.error("Could not fetch finished AU page: " + error);
-          }
-        );
-
-    }
   }
 
   __loadStatus = () => {
