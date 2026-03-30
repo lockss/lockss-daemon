@@ -2893,7 +2893,9 @@ public class V2AuMover {
     if (reportWriter == null) {
       deferredReports.add(msg);
     } else {
-      reportWriter.println(msg);
+      synchronized (reportWriter) {
+        reportWriter.println(msg);
+      }
     }
   }
 
@@ -2901,7 +2903,9 @@ public class V2AuMover {
     if (errorWriter == null) {
       deferredErrorReports.add(msg);
     } else {
-      errorWriter.println(msg);
+      synchronized (reportWriter) {
+        errorWriter.println(msg);
+      }
     }
   }
 
@@ -2924,49 +2928,34 @@ public class V2AuMover {
                 new Throwable());
       return;
     }
-    if (auStat == null) {
-      log.error("updateReport called with AU that's not running: " +
-                auStat.getAuName(),
-                new Throwable());
-      reportWriter.println("updateReport called with AU that's not running: " +
-                           auStat.getAuName());
-      return;
-    }
-    StringBuilder sb = new StringBuilder();
-    auStat.addCounterStatus(sb, opType);
-    String auData = sb.toString();
-    reportWriter.println("AU Name: " + auStat.getAuName());
-    reportWriter.println("AU ID: " + auStat.getAuId());
-    if (auStat.isAbort()) {
-      reportWriter.print("Aborted after ");
-    }
-    reportWriter.println(auData);
-//       else {
-//         if (isPartialContent) {
-//           if (auArtifactsMoved > 0) {// if we moved something
-//             reportWriter.println("Moved remaining unmigrated au content.");
-//             reportWriter.println(auData);
-//           }
-//           else {
-//             reportWriter.println("All au content already migrated.");
-//             reportWriter.println(auData);
-//           }
-//         }
-//         else {
-//           reportWriter.println(auData);
-//         }
-//       }
-    if (!auStat.getErrors().isEmpty()) {
-      writeErrors(reportWriter, auStat);
-      errorWriter.println("Errors in AU: " + auStat.getAuName());
-      errorWriter.println("AU ID: " + auStat.getAuId());
-      writeErrors(errorWriter, auStat);
-    }
-    if (auStat.getErrorCount() > 0) {
-    }
-    reportWriter.println();
-    if (reportWriter.checkError()) {
-      log.warning("Error writing report file.");
+    synchronized (reportWriter) {
+      if (auStat == null) {
+        log.error("updateReport called with AU that's not running: " +
+                  auStat.getAuName(),
+                  new Throwable());
+        reportWriter.println("updateReport called with AU that's not running: " +
+                             auStat.getAuName());
+        return;
+      }
+      StringBuilder sb = new StringBuilder();
+      auStat.addCounterStatus(sb, opType);
+      String auData = sb.toString();
+      reportWriter.println("AU Name: " + auStat.getAuName());
+      reportWriter.println("AU ID: " + auStat.getAuId());
+      if (auStat.isAbort()) {
+        reportWriter.print("Aborted after ");
+      }
+      reportWriter.println(auData);
+      if (!auStat.getErrors().isEmpty()) {
+        writeErrors(reportWriter, auStat);
+        errorWriter.println("Errors in AU: " + auStat.getAuName());
+        errorWriter.println("AU ID: " + auStat.getAuId());
+        writeErrors(errorWriter, auStat);
+      }
+      reportWriter.println();
+      if (reportWriter.checkError()) {
+        log.warning("Error writing report file.");
+      }
     }
   }
 
