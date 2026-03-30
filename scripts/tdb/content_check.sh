@@ -155,7 +155,7 @@ echo " "
 echo "---------------------"
 echo "---------------------"
 echo "GLN. tdb files ready to retire?"
-grep -L -e exists -e released -e manifest -e testing -e expected tdb/prod/*.tdb
+grep -L -e exists -e released -e manifest -e testing -e expected -e ready tdb/prod/*.tdb
 echo "---------------------"
 echo "---------------------"
 echo "GLN. tdb files need first processing."
@@ -163,11 +163,11 @@ grep -L -e ready -e released tdb/prod/*.tdb | xargs grep -l "manifest"
 echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. tdb files ready to retire?"
-grep -L -e exists -e crawling -e manifest -e testing -e expected tdb/clockssingest/*.tdb
+grep -L -e exists -e crawling -e manifest -e testing -e expected -e ready tdb/clockssingest/*.tdb
 echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. tdb files need first processing."
-grep -L -e crawling -e frozen -e deepCrawl -e finished tdb/clockssingest/*.tdb | xargs grep -l "manifest"
+grep -L -e crawling -e frozen -e deepCrawl -e finished -e ready tdb/clockssingest/*.tdb | xargs grep -l "manifest"
 echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. tdb files not assigned to content testing"
