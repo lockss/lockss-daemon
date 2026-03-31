@@ -35,6 +35,7 @@ import com.google.gson.Gson;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.builder.*;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
@@ -3102,6 +3103,16 @@ public class V2AuMover {
 
   public static String percentFormat(double x) {
     return TH_PERCENT_FMT.get().format(x);
+  }
+
+  public static final Format mdDateFmt =
+    FastDateFormat.getInstance("MM/dd/yyyy HH:mm:ss.SSS");
+
+  public static String dateStr(long val) {
+    if (val < 1000L) {
+      return Long.toString(val);
+    }
+    return mdDateFmt.format(val);
   }
 
   long now() {

@@ -261,8 +261,8 @@ public class CuChecker extends CuBase {
     if (v1CollectionDate != null &&
         !artifact.getCollectionDate().equals(v1CollectionDate)) {
       String msg = mdMismatchMsg(au, cu, ver, "Collection date",
-                                 Long.toString(v1CollectionDate),
-                                 Long.toString(artifact.getCollectionDate()));
+                                 V2AuMover.dateStr(v1CollectionDate),
+                                 V2AuMover.dateStr(artifact.getCollectionDate()));
       log.warning(msg);
       task.addWarning(msg);
     }
