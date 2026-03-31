@@ -809,7 +809,7 @@ public class V2AuMover {
     // Must be called after config & args are processed
     initPhaseMap();
     if (whichAus != null) {
-      logReport("Moving: " + whichAus);
+      logReport("Selected: " + whichAus);
     }
     if (args.skippedAuids != null && !args.skippedAuids.isEmpty()) {
       logReport("AUIDs requested but not found, skipped: " + args.skippedAuids);
@@ -1092,7 +1092,7 @@ public class V2AuMover {
     ausLatch = new CountUpDownLatch(1, "AU");
     currentStatus = STATUS_RUNNING;
     totalAusToMove = auMoveQueue.size();
-    String msg = "Copying " + StringUtil.numberOfUnits(totalAusToMove, "AU");
+    String msg = "Processing " + StringUtil.numberOfUnits(totalAusToMove, "AU");
     log.debug(msg);
     logReport(msg + "\n");
 
@@ -2994,7 +2994,7 @@ public class V2AuMover {
         totalAusSkipped > 0 ||
         totalAusWithErrors > 0) {
       List<String> lst = new ArrayList<>();
-      if (totalAusSkipped > 0) {
+      if (totalAusSkipped > 0 && opType.isCopy()) {
         lst.add(bigIntFormat(totalAusSkipped) + " previously");
       }
       if (totalAusPartiallyMoved > 0) {
@@ -3004,7 +3004,7 @@ public class V2AuMover {
         lst.add(bigIntFormat(totalAusEmpty) + " empty");
       }
       if (totalAusWithErrors > 0) {
-        lst.add(bigIntFormat(totalAusWithErrors) + " with errors");
+        lst.add(bigIntFormat(totalAusWithErrors) + " had errors");
       }
       StringUtil.separatedString(lst, " (", ", ", ")", sb);
     }

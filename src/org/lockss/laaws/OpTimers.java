@@ -139,41 +139,39 @@ public class OpTimers {
     sb.append(" ");
     sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(urlCounter(phase)),
                                           "URL"));
-    if (opType.isCopy() || (opType.isVerify() && auMover.isCompareBytes())) {
-      if (phase == Phase.COPY && ctrs.isNonZero(CounterType.URLS_SKIPPED)) {
-        sb.append(" (");
-        sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.URLS_SKIPPED), "URL"));
-        sb.append(" skipped)");
-      }
-      sb.append(", ");
-      if (phase == Phase.COPY) {
-        sb.append("copied ");
-      }
-      sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(versionCounter(phase)),
-                                            "version"));
-      if (phase == Phase.COPY && ctrs.isNonZero(CounterType.ARTIFACTS_SKIPPED)) {
-        sb.append(" (");
-        sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.ARTIFACTS_SKIPPED), "version"));
-        sb.append(" skipped)");
-      }
+    if (phase == Phase.COPY && ctrs.isNonZero(CounterType.URLS_SKIPPED)) {
+      sb.append(" (");
+      sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.URLS_SKIPPED), "URL"));
+      sb.append(" skipped)");
+    }
+    sb.append(", ");
+    if (phase == Phase.COPY) {
+      sb.append("copied ");
+    }
+    sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(versionCounter(phase)),
+                                          "version"));
+    if (phase == Phase.COPY && ctrs.isNonZero(CounterType.ARTIFACTS_SKIPPED)) {
+      sb.append(" (");
+      sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(CounterType.ARTIFACTS_SKIPPED), "version"));
+      sb.append(" skipped)");
+    }
+    if (phase == Phase.COPY ||
+        (phase == Phase.VERIFY && auMover.isCompareBytes())) {
       sb.append(", ");
       sb.append(StringUtil.bigNumberOfUnits(ctrs.getVal(byteCounter(phase)),
                                             "byte"));
-      CounterType errorCt = errorCounter(phase);
-      if (errorCt != null && ctrs.getVal(errorCt) > 0) {
-        sb.append(", ");
-        sb.append(StringUtil.numberOfUnits(ctrs.getVal(errorCt), "error"));
-      }
-      sb.append(", in ");
-      sb.append(StringUtil.timeIntervalToString(getElapsedTime(phase)));
-      if (ctrs.getVal(byteCounter(phase)) > 0) {
-        sb.append(", at ");
-        sb.append(StringUtil.byteRateToString(ctrs.getVal(byteCounter(phase)),
-                                              getElapsedTime(phase)));
-      }
-    } else {
-      sb.append(" in ");
-      sb.append(StringUtil.timeIntervalToString(getElapsedTime(phase)));
+    }
+    CounterType errorCt = errorCounter(phase);
+    if (errorCt != null && ctrs.getVal(errorCt) > 0) {
+      sb.append(", ");
+      sb.append(StringUtil.numberOfUnits(ctrs.getVal(errorCt), "error"));
+    }
+    sb.append(", in ");
+    sb.append(StringUtil.timeIntervalToString(getElapsedTime(phase)));
+    if (ctrs.getVal(byteCounter(phase)) > 0) {
+      sb.append(", at ");
+      sb.append(StringUtil.byteRateToString(ctrs.getVal(byteCounter(phase)),
+                                            getElapsedTime(phase)));
     }
   }
 
