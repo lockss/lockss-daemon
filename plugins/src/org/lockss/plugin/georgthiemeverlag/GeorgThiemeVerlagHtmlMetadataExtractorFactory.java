@@ -113,8 +113,6 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
     /*
      * Do some checking against the collected metadata
      * If we can get issn/eissn  isbn/eisbn info then check against that
-     * We can't check volume name for Thieme because the AU uses year as param[volume_name]
-     * not the known volume number
      */
     private static boolean metadataMatchesTdb(CachedUrl cu, ArchivalUnit au, 
   		  ArticleMetadata am) { 
@@ -173,13 +171,26 @@ public class GeorgThiemeVerlagHtmlMetadataExtractorFactory implements FileMetada
   	  if (StringUtils.isEmpty(foundVolume)) {
   		  return isInAu; //return true, we have no way of knowing
   	  }
-  	  String AU_volume = au.getTdbAu().getVolume();;
-	  if (isInAu && !(StringUtils.isEmpty(foundVolume))) {
-            isInAu =  ( (AU_volume != null) && (foundVolume.contains(AU_volume)));
-            log.debug3("After volume check, isInAu :" + isInAu + ", foundDate = " + foundVolume + ", AU_volume =" + AU_volume);
+  	  String AU_volume = au.getTdbAu().getVolume();
+      if (isInAu && !(StringUtils.isEmpty(foundVolume))) {
+        if(AU_volume != null && AU_volume.contains("-")){
+          String[] au_volumes = AU_volume.split("-");
+          boolean multiVolCheck = false;
+          for(String vol : au_volumes){
+            if(vol.equals(foundVolume)){
+              multiVolCheck = true;
+            }
+          }
+          isInAu = multiVolCheck;
+          log.debug3("After multivolume check, isInAu :" + isInAu + ", foundVolume = " + foundVolume + ", AU_volumes =" + AU_volume);
         }
-  	  return isInAu;
-    }
+        else{
+          isInAu =  ( (AU_volume != null) && (foundVolume.equals(AU_volume)));
+          log.debug3("After volume check, isInAu :" + isInAu + ", foundVolume = " + foundVolume + ", AU_volume =" + AU_volume);
+        }
+      }
+      return isInAu;
+      }
 
     public static String normalize_id(String id) {
   	  if (id == null) {return null;}
