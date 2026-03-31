@@ -24,37 +24,37 @@
     #param[base_url] = http://scholarship.law.nd.edu/
     param[journal_abbr] = jleg
 
-    au < crawling ; exists ; 1974 ; Journal of Legislation Volume 1 ; 1 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 1975 ; Journal of Legislation Volume 2 ; 2 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 1974 ; Journal of Legislation Volume 1 ; 1 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 1975 ; Journal of Legislation Volume 2 ; 2 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1976 ; Journal of Legislation Volume 3 ; 3 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1977 ; Journal of Legislation Volume 4 ; 4 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1978 ; Journal of Legislation Volume 5 ; 5 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1979 ; Journal of Legislation Volume 6 ; 6 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1980 ; Journal of Legislation Volume 7 ; 7 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1981 ; Journal of Legislation Volume 8 ; 8 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 1982 ; Journal of Legislation Volume 9 ; 9 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 1982 ; Journal of Legislation Volume 9 ; 9 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1983 ; Journal of Legislation Volume 10 ; 10 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 1984 ; Journal of Legislation Volume 11 ; 11 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 1985 ; Journal of Legislation Volume 12 ; 12 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 1984 ; Journal of Legislation Volume 11 ; 11 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 1985 ; Journal of Legislation Volume 12 ; 12 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1986 ; Journal of Legislation Volume 13 ; 13 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1987 ; Journal of Legislation Volume 14 ; 14 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 1989 ; Journal of Legislation Volume 15 ; 15 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 1989 ; Journal of Legislation Volume 15 ; 15 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1990 ; Journal of Legislation Volume 16 ; 16 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1991 ; Journal of Legislation Volume 17 ; 17 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1992 ; Journal of Legislation Volume 18 ; 18 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 1993 ; Journal of Legislation Volume 19 ; 19 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 1993 ; Journal of Legislation Volume 19 ; 19 ; https://scholarship.law.nd.edu/ ; >
     au < frozen ; exists ; 1994 ; Journal of Legislation Volume 20 ; 20 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 1995 ; Journal of Legislation Volume 21 ; 21 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 1995 ; Journal of Legislation Volume 21 ; 21 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1996 ; Journal of Legislation Volume 22 ; 22 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 1997 ; Journal of Legislation Volume 23 ; 23 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 1998 ; Journal of Legislation Volume 24 ; 24 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 1998 ; Journal of Legislation Volume 24 ; 24 ; https://scholarship.law.nd.edu/ ; >
     au < frozen ; exists ; 1999 ; Journal of Legislation Volume 25 ; 25 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 2000 ; Journal of Legislation Volume 26 ; 26 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 2001 ; Journal of Legislation Volume 27 ; 27 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 2001 ; Journal of Legislation Volume 27 ; 27 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 2002 ; Journal of Legislation Volume 28 ; 28 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 2003 ; Journal of Legislation Volume 29 ; 29 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 2004 ; Journal of Legislation Volume 30 ; 30 ; https://scholarship.law.nd.edu/ ; >
-    au < crawling ; exists ; 2005 ; Journal of Legislation Volume 31 ; 31 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 2003 ; Journal of Legislation Volume 29 ; 29 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 2004 ; Journal of Legislation Volume 30 ; 30 ; https://scholarship.law.nd.edu/ ; >
+    au < frozen ; exists ; 2005 ; Journal of Legislation Volume 31 ; 31 ; https://scholarship.law.nd.edu/ ; >
     au < ready ; exists ; 2006 ; Journal of Legislation Volume 32 ; 32 ; https://scholarship.law.nd.edu/ ; >
     au < frozen ; exists ; 2007 ; Journal of Legislation Volume 33 ; 33 ; https://scholarship.law.nd.edu/ ; >
     au < frozen ; exists ; 2008 ; Journal of Legislation Volume 34 ; 34 ; https://scholarship.law.nd.edu/ ; >
@@ -122,26 +122,26 @@
       implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
       param[journal_abbr] = ndjlepp
 
-      au < crawling ; exists ; 1985 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 1 ; 1 ; >
-      au < crawling ; exists ; 1987 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 2 ; 2 ; >
+      au < frozen ; exists ; 1985 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 1 ; 1 ; >
+      au < frozen ; exists ; 1987 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 2 ; 2 ; >
       au < ready ; exists ; 1988 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 3 ; 3 ; >
       au < frozen ; exists ; 1990 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 4 ; 4 ; >
-      au < crawling ; exists ; 1991 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 5 ; 5 ; >
+      au < frozen ; exists ; 1991 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 5 ; 5 ; >
       au < frozen ; exists ; 1992 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 6 ; 6 ; >
-      au < crawling ; exists ; 1993 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 7 ; 7 ; >
-      au < crawling ; exists ; 1994 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 8 ; 8 ; >
+      au < frozen ; exists ; 1993 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 7 ; 7 ; >
+      au < frozen ; exists ; 1994 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 8 ; 8 ; >
       au < frozen ; exists ; 1995 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 9 ; 9 ; >
       au < frozen ; exists ; 1996 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 10 ; 10 ; >
       au < ready ; exists ; 1997 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 11 ; 11 ; >
       au < ready ; exists ; 1998 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 12 ; 12 ; >
-      au < crawling ; exists ; 1999 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 13 ; 13 ; >
+      au < frozen ; exists ; 1999 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 13 ; 13 ; >
       au < frozen ; exists ; 2000 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 14 ; 14 ; >
       au < frozen ; exists ; 2001 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 15 ; 15 ; >
-      au < crawling ; exists ; 2002 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 16 ; 16 ; >
+      au < frozen ; exists ; 2002 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 16 ; 16 ; >
       au < frozen ; exists ; 2003 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 17 ; 17 ; >
       au < ready ; exists ; 2004 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 18 ; 18 ; >
       au < ready ; exists ; 2005 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2006 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2006 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 20 ; 20 ; >
       au < frozen ; exists ; 2007 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 21 ; 21 ; >
       au < frozen ; exists ; 2008 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 22 ; 22 ; >
       au < frozen ; exists ; 2009 ; Notre Dame Journal of Law, Ethics & Public Policy Volume 23 ; 23 ; >
@@ -168,50 +168,50 @@
       param[base_url] = https://scholarship.law.nd.edu/
       param[journal_abbr] = ndlr
 
-      au < crawling ; exists ; 1926 ; Notre Dame Law Review Volume 1 ; 1 ; >
-      au < crawling ; exists ; 1927 ; Notre Dame Law Review Volume 2 ; 2 ; >
-      au < crawling ; exists ; 1928 ; Notre Dame Law Review Volume 3 ; 3 ; >
-      au < crawling ; exists ; 1929 ; Notre Dame Law Review Volume 4 ; 4 ; >
+      au < frozen ; exists ; 1926 ; Notre Dame Law Review Volume 1 ; 1 ; >
+      au < frozen ; exists ; 1927 ; Notre Dame Law Review Volume 2 ; 2 ; >
+      au < frozen ; exists ; 1928 ; Notre Dame Law Review Volume 3 ; 3 ; >
+      au < frozen ; exists ; 1929 ; Notre Dame Law Review Volume 4 ; 4 ; >
       au < ready ; exists ; 1930 ; Notre Dame Law Review Volume 5 ; 5 ; >
       au < ready ; exists ; 1931 ; Notre Dame Law Review Volume 6 ; 6 ; >
       au < ready ; exists ; 1932 ; Notre Dame Law Review Volume 7 ; 7 ; >
-      au < crawling ; exists ; 1933 ; Notre Dame Law Review Volume 8 ; 8 ; >
-      au < crawling ; exists ; 1934 ; Notre Dame Law Review Volume 9 ; 9 ; >
+      au < frozen ; exists ; 1933 ; Notre Dame Law Review Volume 8 ; 8 ; >
+      au < frozen ; exists ; 1934 ; Notre Dame Law Review Volume 9 ; 9 ; >
       au < ready ; exists ; 1935 ; Notre Dame Law Review Volume 10 ; 10 ; >
       au < ready ; exists ; 1936 ; Notre Dame Law Review Volume 11 ; 11 ; >
       au < ready ; exists ; 1937 ; Notre Dame Law Review Volume 12 ; 12 ; >
-      au < crawling ; exists ; 1938 ; Notre Dame Law Review Volume 13 ; 13 ; >
-      au < crawling ; exists ; 1939 ; Notre Dame Law Review Volume 14 ; 14 ; >
+      au < frozen ; exists ; 1938 ; Notre Dame Law Review Volume 13 ; 13 ; >
+      au < frozen ; exists ; 1939 ; Notre Dame Law Review Volume 14 ; 14 ; >
       au < ready ; exists ; 1940 ; Notre Dame Law Review Volume 15 ; 15 ; >
       au < ready ; exists ; 1941 ; Notre Dame Law Review Volume 16 ; 16 ; >
       au < ready ; exists ; 1942 ; Notre Dame Law Review Volume 17 ; 17 ; >
-      au < crawling ; exists ; 1943 ; Notre Dame Law Review Volume 18 ; 18 ; >
+      au < frozen ; exists ; 1943 ; Notre Dame Law Review Volume 18 ; 18 ; >
       au < ready ; exists ; 1944 ; Notre Dame Law Review Volume 19 ; 19 ; >
       au < ready ; exists ; 1945 ; Notre Dame Law Review Volume 20 ; 20 ; >
-      au < crawling ; exists ; 1946 ; Notre Dame Law Review Volume 21 ; 21 ; >
+      au < frozen ; exists ; 1946 ; Notre Dame Law Review Volume 21 ; 21 ; >
       au < ready ; exists ; 1947 ; Notre Dame Law Review Volume 22 ; 22 ; >
-      au < crawling ; exists ; 1948 ; Notre Dame Law Review Volume 23 ; 23 ; >
+      au < frozen ; exists ; 1948 ; Notre Dame Law Review Volume 23 ; 23 ; >
       au < ready ; exists ; 1949 ; Notre Dame Law Review Volume 24 ; 24 ; >
       au < ready ; exists ; 1950 ; Notre Dame Law Review Volume 25 ; 25 ; >
       au < ready ; exists ; 1951 ; Notre Dame Law Review Volume 26 ; 26 ; >
-      au < crawling ; exists ; 1952 ; Notre Dame Law Review Volume 27 ; 27 ; >
+      au < frozen ; exists ; 1952 ; Notre Dame Law Review Volume 27 ; 27 ; >
       au < ready ; exists ; 1953 ; Notre Dame Law Review Volume 28 ; 28 ; >
       au < ready ; exists ; 1954 ; Notre Dame Law Review Volume 29 ; 29 ; >
       au < ready ; exists ; 1955 ; Notre Dame Law Review Volume 30 ; 30 ; >
-      au < crawling ; exists ; 1956 ; Notre Dame Law Review Volume 31 ; 31 ; >
+      au < frozen ; exists ; 1956 ; Notre Dame Law Review Volume 31 ; 31 ; >
       au < ready ; exists ; 1957 ; Notre Dame Law Review Volume 32 ; 32 ; >
-      au < crawling ; exists ; 1958 ; Notre Dame Law Review Volume 33 ; 33 ; >
-      au < crawling ; exists ; 1959 ; Notre Dame Law Review Volume 34 ; 34 ; >
+      au < frozen ; exists ; 1958 ; Notre Dame Law Review Volume 33 ; 33 ; >
+      au < frozen ; exists ; 1959 ; Notre Dame Law Review Volume 34 ; 34 ; >
       au < ready ; exists ; 1960 ; Notre Dame Law Review Volume 35 ; 35 ; >
-      au < crawling ; exists ; 1961 ; Notre Dame Law Review Volume 36 ; 36 ; >
-      au < crawling ; exists ; 1962 ; Notre Dame Law Review Volume 37 ; 37 ; >
+      au < frozen ; exists ; 1961 ; Notre Dame Law Review Volume 36 ; 36 ; >
+      au < frozen ; exists ; 1962 ; Notre Dame Law Review Volume 37 ; 37 ; >
       au < ready ; exists ; 1963 ; Notre Dame Law Review Volume 38 ; 38 ; >
       au < ready ; exists ; 1964 ; Notre Dame Law Review Volume 39 ; 39 ; >
-      au < crawling ; exists ; 1965 ; Notre Dame Law Review Volume 40 ; 40 ; >
+      au < frozen ; exists ; 1965 ; Notre Dame Law Review Volume 40 ; 40 ; >
       au < ready ; exists ; 1966 ; Notre Dame Law Review Volume 41 ; 41 ; >
       au < ready ; exists ; 1967 ; Notre Dame Law Review Volume 42 ; 42 ; >
       au < ready ; exists ; 1968 ; Notre Dame Law Review Volume 43 ; 43 ; >
-      au < crawling ; exists ; 1969 ; Notre Dame Law Review Volume 44 ; 44 ; >
+      au < frozen ; exists ; 1969 ; Notre Dame Law Review Volume 44 ; 44 ; >
       au < ready ; exists ; 1970 ; Notre Dame Law Review Volume 45 ; 45 ; >
       au < ready ; exists ; 1971 ; Notre Dame Law Review Volume 46 ; 46 ; >
       au < ready ; exists ; 1972 ; Notre Dame Law Review Volume 47 ; 47 ; >
@@ -220,32 +220,32 @@
       au < ready ; exists ; 1975 ; Notre Dame Law Review Volume 50 ; 50 ; >
       au < ready ; exists ; 1976 ; Notre Dame Law Review Volume 51 ; 51 ; >
       au < ready ; exists ; 1977 ; Notre Dame Law Review Volume 52 ; 52 ; >
-      au < crawling ; exists ; 1978 ; Notre Dame Law Review Volume 53 ; 53 ; >
-      au < crawling ; exists ; 1979 ; Notre Dame Law Review Volume 54 ; 54 ; >
-      au < crawling ; exists ; 1980 ; Notre Dame Law Review Volume 55 ; 55 ; >
+      au < frozen ; exists ; 1978 ; Notre Dame Law Review Volume 53 ; 53 ; >
+      au < frozen ; exists ; 1979 ; Notre Dame Law Review Volume 54 ; 54 ; >
+      au < frozen ; exists ; 1980 ; Notre Dame Law Review Volume 55 ; 55 ; >
       au < ready ; exists ; 1981 ; Notre Dame Law Review Volume 56 ; 56 ; >
       au < ready ; exists ; 1982 ; Notre Dame Law Review Volume 57 ; 57 ; >
-      au < crawling ; exists ; 1983 ; Notre Dame Law Review Volume 58 ; 58 ; >
+      au < frozen ; exists ; 1983 ; Notre Dame Law Review Volume 58 ; 58 ; >
       au < ready ; exists ; 1984 ; Notre Dame Law Review Volume 59 ; 59 ; >
       au < ready ; exists ; 1985 ; Notre Dame Law Review Volume 60 ; 60 ; >
-      au < crawling ; exists ; 1986 ; Notre Dame Law Review Volume 61 ; 61 ; >
-      au < crawling ; exists ; 1987 ; Notre Dame Law Review Volume 62 ; 62 ; >
-      au < crawling ; exists ; 1988 ; Notre Dame Law Review Volume 63 ; 63 ; >
+      au < frozen ; exists ; 1986 ; Notre Dame Law Review Volume 61 ; 61 ; >
+      au < frozen ; exists ; 1987 ; Notre Dame Law Review Volume 62 ; 62 ; >
+      au < frozen ; exists ; 1988 ; Notre Dame Law Review Volume 63 ; 63 ; >
       au < ready ; exists ; 1989 ; Notre Dame Law Review Volume 64 ; 64 ; >
       au < frozen ; exists ; 1990 ; Notre Dame Law Review Volume 65 ; 65 ; >
       au < frozen ; exists ; 1991 ; Notre Dame Law Review Volume 66 ; 66 ; >
       au < frozen ; exists ; 1992 ; Notre Dame Law Review Volume 67 ; 67 ; >
-      au < crawling ; exists ; 1993 ; Notre Dame Law Review Volume 68 ; 68 ; >
+      au < frozen ; exists ; 1993 ; Notre Dame Law Review Volume 68 ; 68 ; >
       au < frozen ; exists ; 1994 ; Notre Dame Law Review Volume 69 ; 69 ; >
-      au < crawling ; exists ; 1995 ; Notre Dame Law Review Volume 70 ; 70 ; >
+      au < frozen ; exists ; 1995 ; Notre Dame Law Review Volume 70 ; 70 ; >
       au < frozen ; exists ; 1996 ; Notre Dame Law Review Volume 71 ; 71 ; >
       au < frozen ; exists ; 1997 ; Notre Dame Law Review Volume 72 ; 72 ; >
-      au < crawling ; exists ; 1998 ; Notre Dame Law Review Volume 73 ; 73 ; >
-      au < crawling ; exists ; 1999 ; Notre Dame Law Review Volume 74 ; 74 ; >
-      au < crawling ; exists ; 2000 ; Notre Dame Law Review Volume 75 ; 75 ; >
+      au < frozen ; exists ; 1998 ; Notre Dame Law Review Volume 73 ; 73 ; >
+      au < frozen ; exists ; 1999 ; Notre Dame Law Review Volume 74 ; 74 ; >
+      au < frozen ; exists ; 2000 ; Notre Dame Law Review Volume 75 ; 75 ; >
       au < ready ; exists ; 2001 ; Notre Dame Law Review Volume 76 ; 76 ; >
       au < frozen ; exists ; 2002 ; Notre Dame Law Review Volume 77 ; 77 ; >
-      au < crawling ; exists ; 2003 ; Notre Dame Law Review Volume 78 ; 78 ; >
+      au < frozen ; exists ; 2003 ; Notre Dame Law Review Volume 78 ; 78 ; >
       au < ready ; exists ; 2004 ; Notre Dame Law Review Volume 79 ; 79 ; >
       au < frozen ; exists ; 2005 ; Notre Dame Law Review Volume 80 ; 80 ; >
       au < ready ; exists ; 2006 ; Notre Dame Law Review Volume 81 ; 81 ; >
