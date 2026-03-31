@@ -21,7 +21,7 @@
       param[base_url] = https://mmj.mans.edu.eg/
       param[journal_abbr] = home
 
-      au < ready ; exists ; 1990 ; Mansoura Medical Journal Volume 19 ; 19 ; >
+      au < crawling ; exists ; 1990 ; Mansoura Medical Journal Volume 19 ; 19 ; >
       au < ready ; exists ; 1991 ; Mansoura Medical Journal Volume 20 ; 20 ; >
       au < ready ; exists ; 1992 ; Mansoura Medical Journal Volume 21 ; 21 ; >
       au < doesNotExist ; doesNotExist ; 1993 ; Mansoura Medical Journal Volume 22 ; 22 ; >
@@ -54,7 +54,7 @@
       au < doesNotExist ; doesNotExist ; 2020 ; Mansoura Medical Journal Volume 49 ; 49 ; >
       au < ready ; exists ; 2021 ; Mansoura Medical Journal Volume 50 ; 50 ; >
       au < ready ; exists ; 2022 ; Mansoura Medical Journal Volume 51 ; 51 ; >
-      au < ready ; exists ; 2023 ; Mansoura Medical Journal Volume 52 ; 52 ; >
+      au < crawling ; exists ; 2023 ; Mansoura Medical Journal Volume 52 ; 52 ; >
       au < ready ; exists ; 2024 ; Mansoura Medical Journal Volume 53 ; 53 ; >
       au < crawling ; exists ; 2025 ; Mansoura Medical Journal Volume 54 ; 54 ; >
       au < manifest ; exists ; 2026 ; Mansoura Medical Journal Volume 55 ; 55 ; >
