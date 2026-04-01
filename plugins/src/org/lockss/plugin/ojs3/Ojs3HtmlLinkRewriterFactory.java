@@ -36,6 +36,7 @@ import org.lockss.daemon.ConfigParamDescr;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.HtmlTags.Iframe;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.CachedUrl;
 import org.lockss.rewriter.LinkRewriterFactory;
 import org.lockss.rewriter.NodeFilterHtmlLinkRewriterFactory;
 import org.lockss.servlet.ServletUtil;
@@ -43,18 +44,21 @@ import org.lockss.servlet.ServletUtil.LinkTransform;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.util.UrlUtil;
-import org.lockss.util.urlconn.CacheException.MalformedURLException;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.util.Collection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.htmlparser.*;
+import org.htmlparser.nodes.TextNode;
 import org.htmlparser.tags.Div;
+import org.htmlparser.tags.HeadingTag;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.tags.ScriptTag;
+import org.htmlparser.util.NodeList;
 
 public class Ojs3HtmlLinkRewriterFactory implements LinkRewriterFactory{
     private final static Logger log = Logger.getLogger(Ojs3HtmlLinkRewriterFactory.class);
@@ -138,6 +142,42 @@ public class Ojs3HtmlLinkRewriterFactory implements LinkRewriterFactory{
                                     //add request_disposition=inline to display pdf in browser's default browser
                                     iframe.setAttribute("src",pdfhref+"&requested_disposition=inline");
                                 }
+                        }
+                    }
+                    else if(node instanceof HeadingTag){
+                        HeadingTag heading = (HeadingTag)node;
+                        Node parent = heading.getParent();
+                        if(heading.getTagName().equalsIgnoreCase("h3") && parent instanceof Div){
+                            Div parentDiv = (Div)parent;
+                            if("obj_article_summary".equals(parentDiv.getAttribute("class"))){
+                                NodeList children = heading.getChildren();
+                                if(children.size() == 3 && children.elementAt(0) instanceof TextNode && children.elementAt(2) instanceof TextNode){
+                                    Node child = children.elementAt(1);
+                                    if(child instanceof LinkTag){
+                                        LinkTag childTag = (LinkTag)child;
+                                        String id = childTag.getAttribute("id");
+                                        if(id != null && id.startsWith("article-")){
+                                            String href = childTag.getAttribute("href");
+                                            try{
+                                                String target = UrlUtil.resolveUri(url, href);
+                                                CachedUrl cu = au.makeCachedUrl(target);
+                                                try{
+                                                    if(!cu.hasContent()){
+                                                        String childText = childTag.getLinkText();
+                                                        children.removeAll();
+                                                        children.add(new TextNode(childText));
+                                                    }
+                                                }
+                                                finally{
+                                                    cu.release();
+                                                }
+                                            }catch(MalformedURLException mue){
+                                                log.debug("Unexpected malformed URL",mue);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                     return false;
