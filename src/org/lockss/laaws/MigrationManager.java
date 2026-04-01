@@ -119,6 +119,7 @@ public class MigrationManager extends BaseLockssDaemonManager
 
   private V2AuMover mover;
   private Runner runner;
+  private List<V2AuMover.Args> moverArgs;
   LockssUrlConnectionPool connectionPool;
   private String idleError;
   private long startTime = 0;
@@ -327,6 +328,13 @@ public class MigrationManager extends BaseLockssDaemonManager
     return mover != null && mover.isRunning();
   }
 
+  public List<V2AuMover.Args> getMoverArgs() {
+    if (mover != null) {
+      return moverArgs;
+    }
+    return null;
+  }
+
   public synchronized void startRunner(List<V2AuMover.Args> args)
       throws IOException, IllegalStateException {
     if (isRunning()) {
@@ -495,6 +503,7 @@ public class MigrationManager extends BaseLockssDaemonManager
       idleError = null;
       try {
         if (args.size() > 0) {
+          moverArgs = args;
           log.debug("Starting mover");
           mover.executeRequests(args);
           log.debug("Mover returned");

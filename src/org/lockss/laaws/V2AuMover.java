@@ -2224,10 +2224,14 @@ public class V2AuMover {
     Collection<String> auids;
     Collection<String> skippedAuids;
     String auidsFilename;
+    String pluginSel;
 
     public Args setHost(String host) {
       this.host = host;
       return this;
+    }
+    public String getHost() {
+      return host;
     }
     public Args setUname(String uname) {
       this.uname = uname;
@@ -2241,18 +2245,34 @@ public class V2AuMover {
       this.opType = type;
       return this;
     }
+    public OpType getOpType() {
+      return opType;
+    }
     public Args setCompareContent(boolean val) {
       this.isCompareContent = val;
       return this;
+    }
+    public boolean getCompareContent() {
+      return isCompareContent;
     }
     public Args setSkipFinished(boolean val) {
       this.isSkipFinished = val;
       return this;
     }
+    public boolean getSkipFinished() {
+      return isSkipFinished;
+    }
     public Args setPlugins(Collection<Plugin> plugs) {
       this.plugins = plugs;
       this.selPatterns = null;
       return this;
+    }
+    public Args setPluginSel(String pluginSel) {
+      this.pluginSel = pluginSel;
+      return this;
+    }
+    public String getPluginSel() {
+      return pluginSel;
     }
     public Args setSelPatterns(List<Pattern> selPatterns) {
       this.selPatterns = selPatterns;

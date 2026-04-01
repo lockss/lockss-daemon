@@ -120,6 +120,8 @@ public class MigrateContent extends LockssServlet {
   public static final String ACTION_COPY_CONFIG= "CopyConfig";
 
   private static String ALL_PLUGINS_ID = "_allplugs_";
+  private static String BLANK_ENTRY_ID = "_blankentry_";
+
 
   private PluginManager pluginMgr;
   private MigrationManager migrationMgr;
@@ -231,7 +233,12 @@ public class MigrateContent extends LockssServlet {
     }
     log.debug(KEY_ACTION + " = " + action);
 
-    if (!StringUtil.isNullString(action)) {
+    if (StringUtil.isNullString(action)) {
+      // Set form params to currently running values, if any, so
+      // initial page display will be in correct state
+      getCommonArgs();
+    } else {
+      // Read params from form.
       isCompareContent = getParameter(KEY_COMPARE_CONTENT) != null;
       if (migrationMgr.isMigrationInDebugMode()) {
         isSkipFinished = getParameter(KEY_SKIP_FINISHED) != null;
@@ -241,6 +248,9 @@ public class MigrateContent extends LockssServlet {
 
       auid = getParameter(KEY_AUID);
       pluginId = getParameter(KEY_PLUGINID);
+      if (BLANK_ENTRY_ID.equals(pluginId)) {
+        pluginId = "";
+      }
       if (multiReq != null) {
         auidsFilename = multiReq.getFilename(KEY_AUIDS_UPLOAD);
         String auidstr = multiReq.getString(KEY_AUIDS_UPLOAD);
@@ -337,14 +347,42 @@ public class MigrateContent extends LockssServlet {
     return migrationMgr.getStatus();
   }
 
-  V2AuMover.Args getCommonFormArgs() {
+  V2AuMover.Args setCommonArgs() {
     return new V2AuMover.Args()
       .setHost(hostName)
       .setUname(userName)
       .setUpass(userPass)
       .setCompareContent(isCompareContent)
       .setSkipFinished(isSkipFinished)
-      .setOpType(opType);
+      .setOpType(opType)
+      // not used by all but handy to stash it here
+      .setPluginSel(pluginId);
+
+  }
+
+  // The complement of the above, to load local vars from a running
+  // migration, in order to prime the form
+  void getCommonArgs() {
+    List<V2AuMover.Args> argses = migrationMgr.getMoverArgs();
+    if (argses != null && !argses.isEmpty()) {
+      V2AuMover.Args anArgs = argses.get(0);
+      for (V2AuMover.Args args : argses) {
+        switch (args.getOpType()) {
+        case CopyOnly:
+        case CopyAndVerify:
+        case VerifyOnly:
+          anArgs = args;
+          break;
+        }
+      }
+      if (anArgs != null) {
+        hostName = anArgs.getHost();
+        pluginId = anArgs.getPluginSel();
+        isCompareContent = anArgs.getCompareContent();
+        isSkipFinished = anArgs.getSkipFinished();
+        opType = anArgs.getOpType();
+      }
+    }
   }
 
   private void startRunner(List<V2AuMover.Args> args) {
@@ -388,27 +426,28 @@ public class MigrateContent extends LockssServlet {
   }
 
   private V2AuMover.Args getArgsToMigrateSystemSettings() {
-    return getCommonFormArgs()
+    return setCommonArgs()
       .setCompareContent(false)
       .setOpType(OpType.CopySystemSettings);
   }
 
   private V2AuMover.Args getArgsToMigrateDatabase() {
-    return getCommonFormArgs()
+    return setCommonArgs()
       .setCompareContent(false)
       .setOpType(OpType.CopyDatabase);
   }
 
   private V2AuMover.Args getArgsToMigrateConfig() {
-    return getCommonFormArgs()
+    return setCommonArgs()
       .setCompareContent(false)
       .setOpType(OpType.CopyConfig);
   }
 
   private V2AuMover.Args getArgsToMigrateAus() {
-    V2AuMover.Args args = getCommonFormArgs();
+    V2AuMover.Args args = setCommonArgs();
 
     if (pluginId != null) {
+      args.setPluginSel(pluginId);
       if (ALL_PLUGINS_ID.equals(pluginId)) {
         args.setPlugins(null);
       } else {
@@ -643,7 +682,7 @@ public class MigrateContent extends LockssServlet {
     tbl.newCell(CENTERED_CELL);
     tbl.add("Select Plugin<br>");
     final Select sel = new Select(key, false);
-    sel.add("", preselId == null, "");
+    sel.add("--No selection--", preselId == null, BLANK_ENTRY_ID);
     // Build plugin -> #AUs map
     Map<Plugin,Integer> plugs = pluginMgr.getRegisteredPlugins().stream()
       // Filter out registry AUs
