@@ -2904,7 +2904,7 @@ public class V2AuMover {
     if (errorWriter == null) {
       deferredErrorReports.add(msg);
     } else {
-      synchronized (reportWriter) {
+      synchronized (errorWriter) {
         errorWriter.println(msg);
       }
     }
