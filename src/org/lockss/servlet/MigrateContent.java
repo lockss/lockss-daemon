@@ -249,7 +249,7 @@ public class MigrateContent extends LockssServlet {
       auid = getParameter(KEY_AUID);
       pluginId = getParameter(KEY_PLUGINID);
       if (BLANK_ENTRY_ID.equals(pluginId)) {
-        pluginId = "";
+        pluginId = null;
       }
       if (multiReq != null) {
         auidsFilename = multiReq.getFilename(KEY_AUIDS_UPLOAD);
@@ -357,7 +357,6 @@ public class MigrateContent extends LockssServlet {
       .setOpType(opType)
       // not used by all but handy to stash it here
       .setPluginSel(pluginId);
-
   }
 
   // The complement of the above, to load local vars from a running
@@ -463,7 +462,7 @@ public class MigrateContent extends LockssServlet {
       for (String auid : auids) {
         if (!StringUtil.maybeAuid(auid)) {
           log.debug2("not auid: " + auid);
-          errMsg = "File: " + auidsFilename + " does not appear to contain a list of AUIDs";
+          errMsg = "File: " + auidsFilename + " does not appear to contain a list of AUIDs. (\"" + auid + "\" is not an AUID";
           throw new IllegalArgumentException(errMsg);
         }
         ArchivalUnit au = pluginMgr.getAuFromId(auid);
