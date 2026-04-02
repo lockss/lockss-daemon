@@ -106,6 +106,7 @@ public class IUMJArticleIteratorFactory
     builder.addAspect(
         OIA_CITE_REPLACEMENT,
         ArticleFiles.ROLE_CITATION);
+
     
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
@@ -114,7 +115,7 @@ public class IUMJArticleIteratorFactory
     builder.setFullTextFromRoles(
         ArticleFiles.ROLE_FULL_TEXT_PDF, 
         ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE);
-    
+
     return builder.getSubTreeArticleIterator();
   }
   

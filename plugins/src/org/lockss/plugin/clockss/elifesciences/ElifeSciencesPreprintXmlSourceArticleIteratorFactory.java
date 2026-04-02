@@ -81,16 +81,14 @@ public class ElifeSciencesPreprintXmlSourceArticleIteratorFactory implements Art
 
         SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
 
-        String MANIFEST_PATTERN = "\"%s%d/.*\\.zip!/manifest\\.xml$\", base_url, year";
+        String MANIFEST_PATTERN = "\"%s%s/.*\\.zip!/manifest\\.xml$\", base_url, directory";
 
         builder.setSpec(builder.newSpec()
                 .setTarget(target)
-                .setRootTemplate("\"%s%d/\", base_url, year")
+                .setRootTemplate("\"%s%s/\", base_url, directory")
                 .setPatternTemplate(MANIFEST_PATTERN, Pattern.CASE_INSENSITIVE)
                 .setVisitArchiveMembers(true));
 
-        // 2. THIS IS THE KEY: Manually map the "!" path as a role
-        // This often forces the builder to accept the URL into the result set
         builder.addAspect(
                 Pattern.compile(".*\\.zip!/manifest\\.xml$", Pattern.CASE_INSENSITIVE),
                 "manifest_file", // arbitrary role name
@@ -181,12 +179,14 @@ public class ElifeSciencesPreprintXmlSourceArticleIteratorFactory implements Art
                     if (pdfUrl != null) {
                         CachedUrl pdfCu = au.makeCachedUrl(pdfUrl);
                         if (pdfCu != null && pdfCu.hasContent()) {
-                            af.setFullTextCu(pdfCu);
+                            af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
                         }
                     }
+
                     log.debug3("SUCCESS: Processed manifest for " + xmlUrl);
                     return af;
                 }
+
             } catch (Exception e) {
                 log.error("Parsing failed for " + manifestCu.getUrl(), e);
             }
