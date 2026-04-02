@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = University of Anbar;
+    info[contract] = 2025 ;
+    info[platform] = Custom
+  >
+    plugin = org.lockss.plugin.ijournalpro.univofanbar.ClockssUnivofAnbarJournalsPlugin
+    implicit < status ; status2 ; param[volume] ; name ; param[year] ; hidden[proxy] >
+
+  {
+      title <
+        name = College of Agriculture ;
+        issn = 1992-7471 ;
+        eissn = 2707-0603
+      >
+
+      param[base_url] = https://ajas.uoanbar.edu.iq/
+
+      au < testing ; exists ; 12 ; Journal of College of Agriculture Volume 18 ; 2020 ; >
+      au < testing ; exists ; 19 ; Journal of College of Agriculture Volume 19 ; 2021 ; >
+      au < testing ; exists ; 20 ; Journal of College of Agriculture Volume 20 ; 2022 ; >
+      au < testing ; exists ; 21 ; Journal of College of Agriculture Volume 21 ; 2023 ; >
+      au < testing ; exists ; 22 ; Journal of College of Agriculture Volume 22 ; 2024 ; >
+      au < testing ; exists ; 23 ; Journal of College of Agriculture Volume 23 ; 2025 ; >
+  }
+}
