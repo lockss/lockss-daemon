@@ -464,22 +464,22 @@
       #continued_by = 0895-1942
 
 
-      au < testing ; exists ; 1962 ; Neurospora Newsletter Volume 1 ; 1 ; >
-      au < testing ; exists ; 1962 ; Neurospora Newsletter Volume 2 ; 2 ; >
-      au < testing ; exists ; 1963 ; Neurospora Newsletter Volume 3 ; 3 ; >
-      au < testing ; exists ; 1963 ; Neurospora Newsletter Volume 4 ; 4 ; >
+      au < ready ; exists ; 1962 ; Neurospora Newsletter Volume 1 ; 1 ; >
+      au < ready ; exists ; 1962 ; Neurospora Newsletter Volume 2 ; 2 ; >
+      au < ready ; exists ; 1963 ; Neurospora Newsletter Volume 3 ; 3 ; >
+      au < ready ; exists ; 1963 ; Neurospora Newsletter Volume 4 ; 4 ; >
       au < doesNotExist ; doesNotExist ; 1964 ; Neurospora Newsletter Volume 5 ; 5 ; >
-      au < testing ; exists ; 1964 ; Neurospora Newsletter Volume 6 ; 6 ; >
-      au < testing ; exists ; 1965 ; Neurospora Newsletter Volume 7 ; 7 ; >
-      au < testing ; exists ; 1965 ; Neurospora Newsletter Volume 8 ; 8 ; >
-      au < testing ; exists ; 1966 ; Neurospora Newsletter Volume 9 ; 9 ; >
-      au < testing ; exists ; 1966 ; Neurospora Newsletter Volume 10 ; 10 ; >
-      au < testing ; exists ; 1967 ; Neurospora Newsletter Volume 11 ; 11 ; >
-      au < testing ; exists ; 1967 ; Neurospora Newsletter Volume 12 ; 12 ; >
-      au < testing ; exists ; 1968 ; Neurospora Newsletter Volume 13 ; 13 ; >
-      au < testing ; exists ; 1969 ; Neurospora Newsletter Volume 14 ; 14 ; >
-      au < testing ; exists ; 1969 ; Neurospora Newsletter Volume 15 ; 15 ; >
-      au < testing ; exists ; 1969 ; Neurospora Newsletter Volume 16 ; 16 ; >
+      au < ready ; exists ; 1964 ; Neurospora Newsletter Volume 6 ; 6 ; >
+      au < ready ; exists ; 1965 ; Neurospora Newsletter Volume 7 ; 7 ; >
+      au < ready ; exists ; 1965 ; Neurospora Newsletter Volume 8 ; 8 ; >
+      au < ready ; exists ; 1966 ; Neurospora Newsletter Volume 9 ; 9 ; >
+      au < ready ; exists ; 1966 ; Neurospora Newsletter Volume 10 ; 10 ; >
+      au < ready ; exists ; 1967 ; Neurospora Newsletter Volume 11 ; 11 ; >
+      au < ready ; exists ; 1967 ; Neurospora Newsletter Volume 12 ; 12 ; >
+      au < ready ; exists ; 1968 ; Neurospora Newsletter Volume 13 ; 13 ; >
+      au < ready ; exists ; 1969 ; Neurospora Newsletter Volume 14 ; 14 ; >
+      au < ready ; exists ; 1969 ; Neurospora Newsletter Volume 15 ; 15 ; >
+      au < ready ; exists ; 1969 ; Neurospora Newsletter Volume 16 ; 16 ; >
       au < doesNotExist ; doesNotExist ; 1970 ; Neurospora Newsletter Volume 17 ; 17 ; >
       au < ready ; exists ; 1971 ; Neurospora Newsletter Volume 18 ; 18 ; >
       au < ready ; exists ; 1972 ; Neurospora Newsletter Volume 19 ; 19 ; >
@@ -674,7 +674,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = jac
 
-      au < testing ; exists ; 1969 ; Journal of Applied Communications Volume 52 ; 52 ; >
+      au < ready ; exists ; 1969 ; Journal of Applied Communications Volume 52 ; 52 ; >
       au < crawling ; exists ; 1970 ; Journal of Applied Communications Volume 53 ; 53 ; >
       au < ready ; exists ; 1971 ; Journal of Applied Communications Volume 54 ; 54 ; >
       au < ready ; exists ; 1972 ; Journal of Applied Communications Volume 55 ; 55 ; >

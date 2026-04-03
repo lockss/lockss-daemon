@@ -20,37 +20,37 @@
       param[journal_id] = tpmd
       implicit < status ; status2 ; year ; name ; param[volume_name] ; hidden[proxy] >
 
-      au < testing ; exists ; 1921 ; The American Journal of Tropical Medicine and Hygiene Volume s1-1 ; s1-1 ; >
-      au < testing ; exists ; 1922 ; The American Journal of Tropical Medicine and Hygiene Volume s1-2 ; s1-2 ; >
-      au < testing ; exists ; 1923 ; The American Journal of Tropical Medicine and Hygiene Volume s1-3 ; s1-3 ; >
-      au < testing ; exists ; 1924 ; The American Journal of Tropical Medicine and Hygiene Volume s1-4 ; s1-4 ; >
-      au < testing ; exists ; 1925 ; The American Journal of Tropical Medicine and Hygiene Volume s1-5 ; s1-5 ; >
-      au < testing ; exists ; 1926 ; The American Journal of Tropical Medicine and Hygiene Volume s1-6 ; s1-6 ; >
-      au < testing ; exists ; 1927 ; The American Journal of Tropical Medicine and Hygiene Volume s1-7 ; s1-7 ; >
-      au < testing ; exists ; 1928 ; The American Journal of Tropical Medicine and Hygiene Volume s1-8 ; s1-8 ; >
-      au < testing ; exists ; 1929 ; The American Journal of Tropical Medicine and Hygiene Volume s1-9 ; s1-9 ; >
-      au < testing ; exists ; 1930 ; The American Journal of Tropical Medicine and Hygiene Volume s1-10 ; s1-10 ; >
-      au < testing ; exists ; 1931 ; The American Journal of Tropical Medicine and Hygiene Volume s1-11 ; s1-11 ; >
-      au < testing ; exists ; 1932 ; The American Journal of Tropical Medicine and Hygiene Volume s1-12 ; s1-12 ; >
-      au < testing ; exists ; 1933 ; The American Journal of Tropical Medicine and Hygiene Volume s1-13 ; s1-13 ; >
-      au < testing ; exists ; 1934 ; The American Journal of Tropical Medicine and Hygiene Volume s1-14 ; s1-14 ; >
-      au < testing ; exists ; 1935 ; The American Journal of Tropical Medicine and Hygiene Volume s1-15 ; s1-15 ; >
-      au < testing ; exists ; 1936 ; The American Journal of Tropical Medicine and Hygiene Volume s1-16 ; s1-16 ; >
-      au < testing ; exists ; 1937 ; The American Journal of Tropical Medicine and Hygiene Volume s1-17 ; s1-17 ; >
-      au < testing ; exists ; 1938 ; The American Journal of Tropical Medicine and Hygiene Volume s1-18 ; s1-18 ; >
-      au < testing ; exists ; 1939 ; The American Journal of Tropical Medicine and Hygiene Volume s1-19 ; s1-19 ; >
-      au < testing ; exists ; 1940 ; The American Journal of Tropical Medicine and Hygiene Volume s1-20 ; s1-20 ; >
-      au < testing ; exists ; 1941 ; The American Journal of Tropical Medicine and Hygiene Volume s1-21 ; s1-21 ; >
-      au < testing ; exists ; 1942 ; The American Journal of Tropical Medicine and Hygiene Volume s1-22 ; s1-22 ; >
-      au < testing ; exists ; 1943 ; The American Journal of Tropical Medicine and Hygiene Volume s1-23 ; s1-23 ; >
-      au < testing ; exists ; 1944 ; The American Journal of Tropical Medicine and Hygiene Volume s1-24 ; s1-24 ; >
-      au < testing ; exists ; 1945 ; The American Journal of Tropical Medicine and Hygiene Volume s1-25 ; s1-25 ; >
-      au < testing ; exists ; 1946 ; The American Journal of Tropical Medicine and Hygiene Volume s1-26 ; s1-26 ; >
-      au < testing ; exists ; 1947 ; The American Journal of Tropical Medicine and Hygiene Volume s1-27 ; s1-27 ; >
-      au < testing ; exists ; 1948 ; The American Journal of Tropical Medicine and Hygiene Volume s1-28 ; s1-28 ; >
-      au < testing ; exists ; 1949 ; The American Journal of Tropical Medicine and Hygiene Volume s1-29 ; s1-29 ; >
-      au < testing ; exists ; 1950 ; The American Journal of Tropical Medicine and Hygiene Volume s1-30 ; s1-30 ; >
-      au < testing ; exists ; 1951 ; The American Journal of Tropical Medicine and Hygiene Volume s1-31 ; s1-31 ; >
+      au < ready ; exists ; 1921 ; The American Journal of Tropical Medicine and Hygiene Volume s1-1 ; s1-1 ; >
+      au < ready ; exists ; 1922 ; The American Journal of Tropical Medicine and Hygiene Volume s1-2 ; s1-2 ; >
+      au < ready ; exists ; 1923 ; The American Journal of Tropical Medicine and Hygiene Volume s1-3 ; s1-3 ; >
+      au < ready ; exists ; 1924 ; The American Journal of Tropical Medicine and Hygiene Volume s1-4 ; s1-4 ; >
+      au < ready ; exists ; 1925 ; The American Journal of Tropical Medicine and Hygiene Volume s1-5 ; s1-5 ; >
+      au < ready ; exists ; 1926 ; The American Journal of Tropical Medicine and Hygiene Volume s1-6 ; s1-6 ; >
+      au < ready ; exists ; 1927 ; The American Journal of Tropical Medicine and Hygiene Volume s1-7 ; s1-7 ; >
+      au < ready ; exists ; 1928 ; The American Journal of Tropical Medicine and Hygiene Volume s1-8 ; s1-8 ; >
+      au < ready ; exists ; 1929 ; The American Journal of Tropical Medicine and Hygiene Volume s1-9 ; s1-9 ; >
+      au < ready ; exists ; 1930 ; The American Journal of Tropical Medicine and Hygiene Volume s1-10 ; s1-10 ; >
+      au < ready ; exists ; 1931 ; The American Journal of Tropical Medicine and Hygiene Volume s1-11 ; s1-11 ; >
+      au < ready ; exists ; 1932 ; The American Journal of Tropical Medicine and Hygiene Volume s1-12 ; s1-12 ; >
+      au < ready ; exists ; 1933 ; The American Journal of Tropical Medicine and Hygiene Volume s1-13 ; s1-13 ; >
+      au < ready ; exists ; 1934 ; The American Journal of Tropical Medicine and Hygiene Volume s1-14 ; s1-14 ; >
+      au < ready ; exists ; 1935 ; The American Journal of Tropical Medicine and Hygiene Volume s1-15 ; s1-15 ; >
+      au < ready ; exists ; 1936 ; The American Journal of Tropical Medicine and Hygiene Volume s1-16 ; s1-16 ; >
+      au < ready ; exists ; 1937 ; The American Journal of Tropical Medicine and Hygiene Volume s1-17 ; s1-17 ; >
+      au < ready ; exists ; 1938 ; The American Journal of Tropical Medicine and Hygiene Volume s1-18 ; s1-18 ; >
+      au < ready ; exists ; 1939 ; The American Journal of Tropical Medicine and Hygiene Volume s1-19 ; s1-19 ; >
+      au < ready ; exists ; 1940 ; The American Journal of Tropical Medicine and Hygiene Volume s1-20 ; s1-20 ; >
+      au < ready ; exists ; 1941 ; The American Journal of Tropical Medicine and Hygiene Volume s1-21 ; s1-21 ; >
+      au < ready ; exists ; 1942 ; The American Journal of Tropical Medicine and Hygiene Volume s1-22 ; s1-22 ; >
+      au < ready ; exists ; 1943 ; The American Journal of Tropical Medicine and Hygiene Volume s1-23 ; s1-23 ; >
+      au < ready ; exists ; 1944 ; The American Journal of Tropical Medicine and Hygiene Volume s1-24 ; s1-24 ; >
+      au < ready ; exists ; 1945 ; The American Journal of Tropical Medicine and Hygiene Volume s1-25 ; s1-25 ; >
+      au < ready ; exists ; 1946 ; The American Journal of Tropical Medicine and Hygiene Volume s1-26 ; s1-26 ; >
+      au < ready ; exists ; 1947 ; The American Journal of Tropical Medicine and Hygiene Volume s1-27 ; s1-27 ; >
+      au < ready ; exists ; 1948 ; The American Journal of Tropical Medicine and Hygiene Volume s1-28 ; s1-28 ; >
+      au < ready ; exists ; 1949 ; The American Journal of Tropical Medicine and Hygiene Volume s1-29 ; s1-29 ; >
+      au < ready ; exists ; 1950 ; The American Journal of Tropical Medicine and Hygiene Volume s1-30 ; s1-30 ; >
+      au < ready ; exists ; 1951 ; The American Journal of Tropical Medicine and Hygiene Volume s1-31 ; s1-31 ; >
 
       au < ready ; exists ; 1952 ; The American Journal of Tropical Medicine and Hygiene Volume 1 ; 1 ; >
       au < ready ; exists ; 1953 ; The American Journal of Tropical Medicine and Hygiene Volume 2 ; 2 ; >
