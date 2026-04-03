@@ -404,28 +404,28 @@
     param[journal_id] = 10.1055/s-00000008
     comment[years] = 1948-current
 
-    au < exists ; 1948 ; 1948 ; Allgemeine Homöopathische Zeitung Volume 193 ; 193 >
-    au < exists ; 1949 ; 1949 ; Allgemeine Homöopathische Zeitung Volume 194 ; 194 >
-    au < exists ; 1950 ; 1950 ; Allgemeine Homöopathische Zeitung Volume 195 ; 195 >
-    au < exists ; 1951 ; 1951 ; Allgemeine Homöopathische Zeitung Volume 196 ; 196 >
-    au < exists ; 1952 ; 1952 ; Allgemeine Homöopathische Zeitung Volume 197 ; 197 >
-    au < exists ; 1953 ; 1953 ; Allgemeine Homöopathische Zeitung Volume 198 ; 198 >
-    au < exists ; 1954 ; 1954 ; Allgemeine Homöopathische Zeitung Volume 199 ; 199 >
-    au < exists ; 1955 ; 1955 ; Allgemeine Homöopathische Zeitung Volume 200 ; 200 >
-    au < exists ; 1956 ; 1956 ; Allgemeine Homöopathische Zeitung Volume 201 ; 201 >
-    au < exists ; 1957 ; 1957 ; Allgemeine Homöopathische Zeitung Volume 202 ; 202 >
-    au < exists ; 1958 ; 1958 ; Allgemeine Homöopathische Zeitung Volume 203 ; 203 >
-    au < exists ; 1959 ; 1959 ; Allgemeine Homöopathische Zeitung Volume 204 ; 204 >
-    au < exists ; 1960 ; 1960 ; Allgemeine Homöopathische Zeitung Volume 205 ; 205 >
-    au < exists ; 1961 ; 1961 ; Allgemeine Homöopathische Zeitung Volume 206 ; 206 >
-    au < exists ; 1962 ; 1962 ; Allgemeine Homöopathische Zeitung Volume 207 ; 207 >
-    au < exists ; 1963 ; 1963 ; Allgemeine Homöopathische Zeitung Volume 208 ; 208 >
-    au < exists ; 1964 ; 1964 ; Allgemeine Homöopathische Zeitung Volume 209 ; 209 >
-    au < exists ; 1965 ; 1965 ; Allgemeine Homöopathische Zeitung Volume 210 ; 210 >
-    au < exists ; 1966 ; 1966 ; Allgemeine Homöopathische Zeitung Volume 211 ; 211 >
-    au < exists ; 1967 ; 1967 ; Allgemeine Homöopathische Zeitung Volume 212 ; 212 >
-    au < exists ; 1968 ; 1968 ; Allgemeine Homöopathische Zeitung Volume 213 ; 213 >
-    au < exists ; 1969 ; 1969 ; Allgemeine Homöopathische Zeitung Volume 214 ; 214 >
+    au < manifest ; 1948 ; 1948 ; Allgemeine Homöopathische Zeitung Volume 193 ; 193 >
+    au < manifest ; 1949 ; 1949 ; Allgemeine Homöopathische Zeitung Volume 194 ; 194 >
+    au < manifest ; 1950 ; 1950 ; Allgemeine Homöopathische Zeitung Volume 195 ; 195 >
+    au < manifest ; 1951 ; 1951 ; Allgemeine Homöopathische Zeitung Volume 196 ; 196 >
+    au < manifest ; 1952 ; 1952 ; Allgemeine Homöopathische Zeitung Volume 197 ; 197 >
+    au < manifest ; 1953 ; 1953 ; Allgemeine Homöopathische Zeitung Volume 198 ; 198 >
+    au < manifest ; 1954 ; 1954 ; Allgemeine Homöopathische Zeitung Volume 199 ; 199 >
+    au < manifest ; 1955 ; 1955 ; Allgemeine Homöopathische Zeitung Volume 200 ; 200 >
+    au < manifest ; 1956 ; 1956 ; Allgemeine Homöopathische Zeitung Volume 201 ; 201 >
+    au < manifest ; 1957 ; 1957 ; Allgemeine Homöopathische Zeitung Volume 202 ; 202 >
+    au < manifest ; 1958 ; 1958 ; Allgemeine Homöopathische Zeitung Volume 203 ; 203 >
+    au < manifest ; 1959 ; 1959 ; Allgemeine Homöopathische Zeitung Volume 204 ; 204 >
+    au < manifest ; 1960 ; 1960 ; Allgemeine Homöopathische Zeitung Volume 205 ; 205 >
+    au < manifest ; 1961 ; 1961 ; Allgemeine Homöopathische Zeitung Volume 206 ; 206 >
+    au < manifest ; 1962 ; 1962 ; Allgemeine Homöopathische Zeitung Volume 207 ; 207 >
+    au < manifest ; 1963 ; 1963 ; Allgemeine Homöopathische Zeitung Volume 208 ; 208 >
+    au < manifest ; 1964 ; 1964 ; Allgemeine Homöopathische Zeitung Volume 209 ; 209 >
+    au < manifest ; 1965 ; 1965 ; Allgemeine Homöopathische Zeitung Volume 210 ; 210 >
+    au < manifest ; 1966 ; 1966 ; Allgemeine Homöopathische Zeitung Volume 211 ; 211 >
+    au < manifest ; 1967 ; 1967 ; Allgemeine Homöopathische Zeitung Volume 212 ; 212 >
+    au < manifest ; 1968 ; 1968 ; Allgemeine Homöopathische Zeitung Volume 213 ; 213 >
+    au < manifest ; 1969 ; 1969 ; Allgemeine Homöopathische Zeitung Volume 214 ; 214 >
     au < doNotProcess ; 1970 ; 1970 ; Allgemeine Homöopathische Zeitung Volume 215 ; 215 >
     au < doNotProcess ; 1971 ; 1971 ; Allgemeine Homöopathische Zeitung Volume 216 ; 216 >
     au < doNotProcess ; 1972 ; 1972 ; Allgemeine Homöopathische Zeitung Volume 217 ; 217 >
@@ -2725,7 +2725,7 @@
    au < released ; 2023 ; 2023 ; Indian Journal of Neurosurgery Volume 12 ; 12 >
    au < released ; 2024 ; 2024 ; Indian Journal of Neurosurgery Volume 13 ; 13 >
    au < manifest ; 2025 ; 2025 ; Indian Journal of Neurosurgery Volume 14 ; 14 >
-   au < expected ; 2026 ; 2026 ; Indian Journal of Neurosurgery Volume 15 ; 15 >
+   au < manifest ; 2026 ; 2026 ; Indian Journal of Neurosurgery Volume 15 ; 15 >
 
   }
 
@@ -4445,7 +4445,7 @@
     param[journal_id] = 10.1055/s-00023625
     comment[years] = 2012-current
 
-    au < exists ; 2012 ; 2012 ; Neonatologie Scan Volume 1 ; 1 >
+    au < manifest ; 2012 ; 2012 ; Neonatologie Scan Volume 1 ; 1 >
     au < released ; 2013 ; 2013 ; Neonatologie Scan Volume 2 ; 2 >
     au < released ; 2014 ; 2014 ; Neonatologie Scan Volume 3 ; 3 >
     au < released ; 2015 ; 2015 ; Neonatologie Scan Volume 4 ; 4 >
