@@ -1,7 +1,7 @@
 {
   publisher <
     name = William & Mary Libraries ;
-    info[contract] = 2013 ;
+    info[contract] = 2026 ;
     info[back] = 1991 ;
     info[tester] = 8 ;
     info[platform] = OJS3
@@ -89,7 +89,7 @@
       param[journal_id] = jtr
 
       au < manifest ; exists ; 1991 ; Journal of Textual Reasoning Volume 1991 ; 1991 ; 1 ; >
-      au < exists ; exists ; 1992 ; Journal of Textual Reasoning Volume 1992 ; 1992 ; 1 ; >
+      au < doesNotExist ; doesNotExist ; 1992 ; Journal of Textual Reasoning Volume 1992 ; 1992 ; 1 ; >
       au < manifest ; exists ; 1993 ; Journal of Textual Reasoning Volume 1993 ; 1993 ; 1 ; >
       au < ready ; exists ; 1994 ; Journal of Textual Reasoning Volume 1994 ; 1994 ; 1 ; >
       au < manifest ; exists ; 1995 ; Journal of Textual Reasoning Volume 1995 ; 1995 ; 1 ; >
@@ -100,9 +100,9 @@
       au < manifest ; exists ; 2000 ; Journal of Textual Reasoning Volume 2000 ; 2000 ; 1 ; >
       au < manifest ; exists ; 2001 ; Journal of Textual Reasoning Volume 2001 ; 2001 ; 1 ; >
       au < manifest ; exists ; 2002 ; Journal of Textual Reasoning Volume 2002 ; 2002 ; 1 ; >
-      au < manifest ; exists ; 2003 ; Journal of Textual Reasoning Volume 2003 ; 2003 ; 2 ; >
-      au < manifest ; exists ; 2004 ; Journal of Textual Reasoning Volume 2004 ; 2004 ; 3 ; >
-      au < manifest ; exists ; 2005 ; Journal of Textual Reasoning Volume 2005 ; 2005 ; 4 ; >
+      au < manifest ; exists ; 2003 ; Journal of Textual Reasoning Volume 2003 ; 2003 ; 1 ; >
+      au < manifest ; exists ; 2004 ; Journal of Textual Reasoning Volume 2004 ; 2004 ; 2 ; >
+      au < manifest ; exists ; 2005 ; Journal of Textual Reasoning Volume 2005 ; 2005 ; 3 ; >
       au < manifest ; exists ; 2006 ; Journal of Textual Reasoning Volume 2006 ; 2006 ; 4 ; >
       au < manifest ; exists ; 2007 ; Journal of Textual Reasoning Volume 2007 ; 2007 ; 5 ; >
       au < manifest ; exists ; 2010 ; Journal of Textual Reasoning Volume 2010 ; 2010 ; 6 ; >
