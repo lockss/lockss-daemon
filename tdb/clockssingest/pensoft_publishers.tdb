@@ -115,7 +115,7 @@
     au < finished ; manifest ; 2023 ; 2 ; Caucasiana Volume 2023 ; 2023 ; https://caucasiana.pensoft.net/ ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 3 ; Caucasiana Volume 2024 ; 2024 ; https://caucasiana.pensoft.net/ ; >
     au < crawling ; exists ; 2025 ; 4 ; Caucasiana Volume 2025 ; 2025 ; https://caucasiana.pensoft.net/ ; >
-    au < expected ; exists ; 2026 ; 5 ; Caucasiana Volume 2026 ; 2026 ; https://caucasiana.pensoft.net/ ; >
+    au < manifest ; exists ; 2026 ; 5 ; Caucasiana Volume 2026 ; 2026 ; https://caucasiana.pensoft.net/ ; >
 
    }
   
@@ -967,7 +967,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Russian Journal of Economics Volume 2023 ; 2023 ; https://rujec.org/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Russian Journal of Economics Volume 2024 ; 2024 ; https://rujec.org/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Russian Journal of Economics Volume 2025 ; 2025 ; https://rujec.org/ ; >
-      au < expected ; exists ; 2026 ; 2026 ; Russian Journal of Economics Volume 2026 ; 2026 ; https://rujec.org/ ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Russian Journal of Economics Volume 2026 ; 2026 ; https://rujec.org/ ; >
 
   }
 
@@ -1737,7 +1737,7 @@
 
       au < finished ; manifest ; 2024 ; 2024 ; GeoStudies Volume 2024 ; 2024 ; https://geostudies.net/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 2025 ; GeoStudies Volume 2025 ; 2025 ; https://geostudies.net/ ; >
-      au < expected ; exists ; 2026 ; 2026 ; GeoStudies Volume 2026 ; 2026 ; https://geostudies.net/ ; >
+      au < manifest ; exists ; 2026 ; 2026 ; GeoStudies Volume 2026 ; 2026 ; https://geostudies.net/ ; >
 
   }
 
