@@ -365,6 +365,8 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                       if(jsonStrWithDigitsMat.group(1).endsWith(":")){
                         jsonPaths = Arrays.asList("$..pageUrl",
                                                   "$..link",
+                                                  "$..url",
+                                                  "$..path",
                                                   "$..thumb",
                                                   "$..href",
                                                   "$..src",
@@ -372,8 +374,8 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                                                   "$..children[?(@[3].href)][2]",
                                                   "$..[?(@.content=~/https?:\\/\\/.*/)].content");
                       }else{
-                        jsonPaths = Arrays.asList("$[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]",
-                                                  "$..*[?(@=~/(https?:\\/\\/|static\\/chunks\\/).*/)]");
+                        jsonPaths = Arrays.asList("$[?(@=~/(https?:\\/\\/|(\\/_next\\/)?static\\/(chunks|media)\\/).*/)]",
+                                                  "$..*[?(@=~/(https?:\\/\\/|(\\/_next\\/)?static\\/(chunks|media)\\/).*/)]");
                       }
                       for(String jsonPath : jsonPaths){
                         log.debug3(String.format("Applying JSON Path: %s", jsonPath));
