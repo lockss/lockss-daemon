@@ -22,7 +22,7 @@
       param[journal_abbr] = journal
 
       au < finished ; manifest ; 2024 ; AUIQ Complementary Biological System Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; AUIQ Complementary Biological System Volume 2 ; 2 ; >
+      au < deepCrawl ; exists ; 2025 ; AUIQ Complementary Biological System Volume 2 ; 2 ; >
       au < manifest ; exists ; 2026 ; AUIQ Complementary Biological System Volume 3 ; 3 ; >
 
   }
@@ -53,7 +53,7 @@
       param[journal_abbr] = home
 
       au < finished ; manifest ; 2024 ; AUIQ Technical Engineering Science Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; AUIQ Technical Engineering Science Volume 2 ; 2 ; >
+      au < deepCrawl ; exists ; 2025 ; AUIQ Technical Engineering Science Volume 2 ; 2 ; >
       au < manifest ; exists ; 2026 ; AUIQ Technical Engineering Science Volume 3 ; 3 ; >
 
   }
