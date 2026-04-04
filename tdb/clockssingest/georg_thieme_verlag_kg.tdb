@@ -5897,16 +5897,16 @@
     au < manifest ; exists ; 1967 ; 1967 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 106-107 ; 106-107 ; >
     au < manifest ; exists ; 1968 ; 1968 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 108-109 ; 108-109 ; >
     au < manifest ; exists ; 1969 ; 1969 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 110-111 ; 110-111 ; >
-    au < testing ; exists ; 1970 ; 1970 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 112-113 ; 112-113 ; >
-    au < testing ; exists ; 1971 ; 1971 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 114-115 ; 114-115 ; >
-    au < testing ; exists ; 1972 ; 1972 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 116-117 ; 116-117 ; >
-    au < testing ; exists ; 1973 ; 1973 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 118-119 ; 118-119 ; >
-    au < testing ; exists ; 1974 ; 1974 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 120-121 ; 120-121 ; >
-    au < testing ; exists ; 1975 ; 1975 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 122-123 ; 122-123 ; >
-    au < testing ; exists ; 1976 ; 1976 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 124-125 ; 124-125 ; >
+    au < ready ; exists ; 1970 ; 1970 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 112-113 ; 112-113 ; >
+    au < ready ; exists ; 1971 ; 1971 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 114-115 ; 114-115 ; >
+    au < ready ; exists ; 1972 ; 1972 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 116-117 ; 116-117 ; >
+    au < ready ; exists ; 1973 ; 1973 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 118-119 ; 118-119 ; >
+    au < ready ; exists ; 1974 ; 1974 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 120-121 ; 120-121 ; >
+    au < ready ; exists ; 1975 ; 1975 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 122-123 ; 122-123 ; >
+    au < ready ; exists ; 1976 ; 1976 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 124-125 ; 124-125 ; >
     au < testing ; exists ; 1977 ; 1977 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 126-127 ; 126-127 ; >
     au < testing ; exists ; 1978 ; 1978 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 128-129 ; 128-129 ; >
-    au < testing ; exists ; 1979 ; 1979 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 130-131 ; 130-131 ; >
+    au < ready ; exists ; 1979 ; 1979 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 130-131 ; 130-131 ; >
     au < finished ; manifest ; 1980 ; 1980 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 132-133 ; 132-133 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1981 ; 1981 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 134-135 ; 134-135 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1982 ; 1982 ; RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren Volume 136-137 ; 136-137 ; reingest2.clockss.org:8085 >
@@ -8516,7 +8516,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Methods of Information in Medicine Volume 61 ; 61 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Methods of Information in Medicine Volume 62 ; 62 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Methods of Information in Medicine Volume 63 ; 63 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Methods of Information in Medicine Volume 64 ; 64 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Methods of Information in Medicine Volume 64 ; 64 ; >
     au < expected ; exists ; 2026 ; 2026 ; Methods of Information in Medicine Volume 65 ; 65 ; >
 
   }
