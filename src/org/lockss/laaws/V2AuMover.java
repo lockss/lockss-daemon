@@ -1638,19 +1638,19 @@ public class V2AuMover {
           if (auStat.isAbort()) {
             break;
           }
-          log.debug2("Moving CU: " + task.getCu());
+          log.debug3("Moving CU: " + task.getCu());
           long startC = now();
           CuMover mover = new CuMover(v2Mover, task);
           mover.run();
           task.getCounters().add(CounterType.COPY_TIME, now() - startC);
 
-          log.debug2("Moved CU: " + task.getCu());
+          log.debug3("Moved CU: " + task.getCu());
           break;
         case CHECK_CU_VERSIONS:
           if (auStat.isAbort()) {
             break;
           }
-          log.debug2("Checking CU: " + task.getCu());
+          log.debug3("Checking CU: " + task.getCu());
           long startCh = now();
           CuChecker checker = new CuChecker(v2Mover, task);
           checker.run();
@@ -1658,7 +1658,7 @@ public class V2AuMover {
           if (isGenerateTestErrors) {
             task.addError("No error on " + task.getCu());
           }
-          log.debug2("Checked CU: " + task.getCu());
+          log.debug3("Checked CU: " + task.getCu());
           break;
         case FINISH_AU_BULK:
           // Currently don't check for abort here, as want to return
@@ -1737,7 +1737,7 @@ public class V2AuMover {
 //       return;
 //     }
     Phase phase = task.getTaskPhase();
-    log.debug2("enqueueTask "+task.getType() + ", phase: " + phase);
+    log.debug3("enqueueTask "+task.getType() + ", phase: " + phase);
     CountUpDownLatch latch = null;
     if (phase != null) {
       if (auStat.getLatch(phase) == null) {
@@ -2731,7 +2731,7 @@ public class V2AuMover {
 
   RepositoryInfo getRepoInfo() throws ApiException {
     RepositoryInfo ri = repoRepoApiClient.getRepositoryInformation();
-    log.debug2("repoinfo: " + ri);
+    log.debug3("repoinfo: " + ri);
     return ri;
   }
 
@@ -3188,10 +3188,10 @@ public class V2AuMover {
       }
       if (!StringUtil.equalStrings(v2Url, v1Url)) {
         if (isEqualUpToFinalSlash(v1Url, v2Url)) {
-          log.debug2("Using fetch URL with slash (" + v2Url +
+          log.debug3("Using fetch URL with slash (" + v2Url +
                      ") in place of CU URL (" + v1Url + ")");
         } else {
-          log.debug2("Using fetch URL (" + v2Url +
+          log.debug3("Using fetch URL (" + v2Url +
                      ") in place of CU URL (" + v1Url + ")");
         }
       }
