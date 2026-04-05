@@ -2611,7 +2611,7 @@ public class V2AuMover {
     }
     List<String> res = new ArrayList<>();
     for (AuStatus auStat : auStats.values()) {
-      String one = getOneAuStatus(auStat);
+      String one = getOneAuStatus(auStat, true);
       if (one != null) {
         res.add(one);
       }
@@ -2626,7 +2626,7 @@ public class V2AuMover {
 //     }
 //     List<String> res = new ArrayList<>();
 //     for (AuStatus auStat : auStats.values()) {
-//       String one = getOneAuStatus(auStat);
+//       String one = getOneAuStatus(auStat, true);
 //       if (one != null) {
 //         res.add(one);
 //       }
@@ -2666,7 +2666,7 @@ public class V2AuMover {
           break;
         }
         if (ix++ >= index) {
-          String one = getOneAuStatus(auStat);
+          String one = getOneAuStatus(auStat, false);
           if (one != null) {
             res.add(one);
             ctr++;
@@ -2678,7 +2678,7 @@ public class V2AuMover {
   }
 
   // XXX need to enhance to account for verify phase
-  private String getOneAuStatus(AuStatus auStat) {
+  private String getOneAuStatus(AuStatus auStat, boolean excludeQueued) {
     Counters ctrs = auStat.getCounters();
     StringBuilder sb = new StringBuilder();
     Phase phase = auStat.getPhase();
@@ -2693,6 +2693,9 @@ public class V2AuMover {
       case VERIFY:
       case INDEX:
         if (!auStat.hasStarted(phase)) {
+          if (excludeQueued) {
+            return null;
+          }
           phaseName = phase.verb() + " queued";
         }
         break;
@@ -2715,6 +2718,11 @@ public class V2AuMover {
         sb.append(": No V1 content");
         break;
       }
+    case QUEUE:
+      if (excludeQueued) {
+        return null;
+      }
+      // fall through
     default:
       auStat.addCounterStatus(sb, opType, ": ");
     }
