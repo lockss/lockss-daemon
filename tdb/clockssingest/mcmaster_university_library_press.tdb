@@ -69,9 +69,9 @@
       au < finished ; finished ; 2017 ; Early Theatre Volume 20 ; 20 ; 2017 ; reingest1.clockss.org:8082 > 
       au < finished ; finished ; 2018 ; Early Theatre Volume 21 ; 21 ; 2018 ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2019 ; Early Theatre Volume 22 ; 22 ; 2019 ; reingest3.clockss.org:8083 >
-      au < frozen ; exists ; 2020 ; Early Theatre Volume 23 ; 23 ; 2020 ; >
+      au < finished ; manifest ; 2020 ; Early Theatre Volume 23 ; 23 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; Early Theatre Volume 24 ; 24 ; 2021 ; reingest5.clockss.org:8082 >
-      au < frozen ; exists ; 2022 ; Early Theatre Volume 25 ; 25 ; 2022 ; >
+      au < finished ; manifest ; 2022 ; Early Theatre Volume 25 ; 25 ; 2022 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2023 ; Early Theatre Volume 26 ; 26 ; 2023 ; >
       au < notReady ; exists ; 2024 ; Early Theatre Volume 27 ; 27 ; 2024 ; >#subscription for a year. Wait till 2026
       au < notReady ; exists ; 2025 ; Early Theatre Volume 28 ; 28 ; 2025 ; >#subscription for a year. Wait till 2027
@@ -89,11 +89,11 @@
       param[base_url] = https://energystudiesreview.ca/
       param[journal_id] = esr
 
-      au < frozen ; exists ; 1989 ; Energy Studies Review Volume 1 ; 1 ; 1989 ; > 
-      au < frozen ; exists ; 1990 ; Energy Studies Review Volume 2 ; 2 ; 1990 ; > 
+      au < finished ; manifest ; 1989 ; Energy Studies Review Volume 1 ; 1 ; 1989 ; reingest5.clockss.org:8082 > 
+      au < finished ; manifest ; 1990 ; Energy Studies Review Volume 2 ; 2 ; 1990 ; reingest1.clockss.org:8082 > 
       au < ready ; exists ; 1991 ; Energy Studies Review Volume 3 ; 3 ; 1991 ; > 
-      au < frozen ; exists ; 1992 ; Energy Studies Review Volume 4 ; 4 ; 1992 ; > 
-      au < frozen ; exists ; 1993 ; Energy Studies Review Volume 5 ; 5 ; 1993 ; > 
+      au < finished ; manifest ; 1992 ; Energy Studies Review Volume 4 ; 4 ; 1992 ; reingest2.clockss.org:8085 > 
+      au < finished ; manifest ; 1993 ; Energy Studies Review Volume 5 ; 5 ; 1993 ; reingest3.clockss.org:8083 > 
       au < crawling ; exists ; 1994 ; Energy Studies Review Volume 6 ; 6 ; 1994 ; > 
       au < ready ; exists ; 1995 ; Energy Studies Review Volume 7 ; 7 ; 1995 ; > 
       au < ready ; exists ; 1996 ; Energy Studies Review Volume 8 ; 8 ; 1996 ; > 
@@ -295,30 +295,30 @@
       plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
 
       au < crawling ; exists ; 1971 ; Russell: the Journal of Bertrand Russell Studies Number 1-4 ; 1-4 ; 1971 ; >
-      au < frozen ; exists ; 1972 ; Russell: the Journal of Bertrand Russell Studies Number 5-8 ; 5-8 ; 1972 ; >
-      au < frozen ; exists ; 1973 ; Russell: the Journal of Bertrand Russell Studies Number 9-12 ; 9-12 ; 1973 ; >
-      au < frozen ; exists ; 1974 ; Russell: the Journal of Bertrand Russell Studies Number 13-16 ; 13-16 ; 1974 ; >
-      au < frozen ; exists ; 1975 ; Russell: the Journal of Bertrand Russell Studies Number 17-20 ; 17-20 ; 1975 ; >
+      au < finished ; manifest ; 1972 ; Russell: the Journal of Bertrand Russell Studies Number 5-8 ; 5-8 ; 1972 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1973 ; Russell: the Journal of Bertrand Russell Studies Number 9-12 ; 9-12 ; 1973 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1974 ; Russell: the Journal of Bertrand Russell Studies Number 13-16 ; 13-16 ; 1974 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1975 ; Russell: the Journal of Bertrand Russell Studies Number 17-20 ; 17-20 ; 1975 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 1976 ; Russell: the Journal of Bertrand Russell Studies Number 21-24 ; 21-24 ; 1976 ; >
       au < ready ; exists ; 1977 ; Russell: the Journal of Bertrand Russell Studies Number 25-28 ; 25-28 ; 1977 ; >
       au < crawling ; exists ; 1978 ; Russell: the Journal of Bertrand Russell Studies Number 29-32 ; 29-32 ; 1978 ; >
-      au < frozen ; exists ; 1979 ; Russell: the Journal of Bertrand Russell Studies Number 33-36 ; 33-36 ; 1979 ; >
+      au < finished ; manifest ; 1979 ; Russell: the Journal of Bertrand Russell Studies Number 33-36 ; 33-36 ; 1979 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 1980 ; Russell: the Journal of Bertrand Russell Studies Number 37-40 ; 37-40 ; 1980 ; >
       au < ready ; exists ; 1981 ; Russell: the Journal of Bertrand Russell Studies Volume 1 ; 1 ; 1981 ; >
       au < ready ; exists ; 1982 ; Russell: the Journal of Bertrand Russell Studies Volume 2 ; 2 ; 1982 ; >
       au < crawling ; exists ; 1983 ; Russell: the Journal of Bertrand Russell Studies Volume 3 ; 3 ; 1983 ; >
       au < ready ; exists ; 1984 ; Russell: the Journal of Bertrand Russell Studies Volume 4 ; 4 ; 1984 ; >
-      au < frozen ; exists ; 1985 ; Russell: the Journal of Bertrand Russell Studies Volume 5 ; 5 ; 1985 ; >
-      au < frozen ; exists ; 1986 ; Russell: the Journal of Bertrand Russell Studies Volume 6 ; 6 ; 1986 ; >
-      au < frozen ; exists ; 1987 ; Russell: the Journal of Bertrand Russell Studies Volume 7 ; 7 ; 1987 ; >
-      au < frozen ; exists ; 1988 ; Russell: the Journal of Bertrand Russell Studies Volume 8 ; 8 ; 1988 ; >
-      au < frozen ; exists ; 1989 ; Russell: the Journal of Bertrand Russell Studies Volume 9 ; 9 ; 1989 ; >
+      au < finished ; manifest ; 1985 ; Russell: the Journal of Bertrand Russell Studies Volume 5 ; 5 ; 1985 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 1986 ; Russell: the Journal of Bertrand Russell Studies Volume 6 ; 6 ; 1986 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 1987 ; Russell: the Journal of Bertrand Russell Studies Volume 7 ; 7 ; 1987 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 1988 ; Russell: the Journal of Bertrand Russell Studies Volume 8 ; 8 ; 1988 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 1989 ; Russell: the Journal of Bertrand Russell Studies Volume 9 ; 9 ; 1989 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 1990 ; Russell: the Journal of Bertrand Russell Studies Volume 10 ; 10 ; 1990 ; >
-      au < frozen ; exists ; 1991 ; Russell: the Journal of Bertrand Russell Studies Volume 11 ; 11 ; 1991 ; >
+      au < finished ; manifest ; 1991 ; Russell: the Journal of Bertrand Russell Studies Volume 11 ; 11 ; 1991 ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 1992 ; Russell: the Journal of Bertrand Russell Studies Volume 12 ; 12 ; 1992 ; >
       au < crawling ; exists ; 1993 ; Russell: the Journal of Bertrand Russell Studies Volume 13 ; 13 ; 1993 ; >
       au < crawling ; exists ; 1994 ; Russell: the Journal of Bertrand Russell Studies Volume 14 ; 14 ; 1994 ; >
-      au < frozen ; exists ; 1995 ; Russell: the Journal of Bertrand Russell Studies Volume 15 ; 15 ; 1995 ; >
+      au < finished ; manifest ; 1995 ; Russell: the Journal of Bertrand Russell Studies Volume 15 ; 15 ; 1995 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 1996 ; Russell: the Journal of Bertrand Russell Studies Volume 16 ; 16 ; 1996 ; >
       au < crawling ; exists ; 1997 ; Russell: the Journal of Bertrand Russell Studies Volume 17 ; 17 ; 1997 ; >
       au < crawling ; exists ; 1998 ; Russell: the Journal of Bertrand Russell Studies Volume 18 ; 18 ; 1998 ; >
@@ -379,7 +379,7 @@
       au < finished ; finished ; 2012 ; The Sophie Journal Volume 2 ; 2 ; 2012 ; reingest1.clockss.org:8082 > 
       au < doNotProcess ; exists ; 2015 ; The Sophie Journal Volume 3 ; 3 ; 2015 ; > 
       au < doNotProcess ; exists ; 2017 ; The Sophie Journal Volume 4 ; 4 ; 2017 ; > 
-      au < frozen ; exists ; 2020 ; The Sophie Journal Volume 5 ; 5 ; 2020 ; >
+      au < finished ; manifest ; 2020 ; The Sophie Journal Volume 5 ; 5 ; 2020 ; reingest4.clockss.org:8082 >
 
       }
 

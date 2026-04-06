@@ -80,7 +80,7 @@
     au < finished ; crawling ; 2016 ; AIAA Journal Volume 54 ; 54 ; http://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; crawling ; 2017 ; AIAA Journal Volume 55 ; 55 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2018 ; AIAA Journal Volume 56 ; 56 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; AIAA Journal Volume 57 ; 57 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2019 ; AIAA Journal Volume 57 ; 57 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; AIAA Journal Volume 58 ; 58 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < notReady ; exists ; 2021 ; AIAA Journal Volume 59 ; 59 ; https://arc.aiaa.org/ ; > #500 Internal Server Error, https://arc.aiaa.org/cms/10.2514/1.J059425/asset/images/medium/figure20.gif
     au < finished ; manifest ; 2022 ; AIAA Journal Volume 60 ; 60 ; https://arc.aiaa.org/ ; reingest3.clockss.org:8083 >
@@ -267,7 +267,7 @@
     au < finished ; crawling ; 2016 ; Journal of Aircraft Volume 53 ; 53 ; http://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2017 ; Journal of Aircraft Volume 54 ; 54 ; http://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2018 ; Journal of Aircraft Volume 55 ; 55 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Journal of Aircraft Volume 56 ; 56 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2019 ; Journal of Aircraft Volume 56 ; 56 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Aircraft Volume 57 ; 57 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; Journal of Aircraft Volume 58 ; 58 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2022 ; Journal of Aircraft Volume 59 ; 59 ; https://arc.aiaa.org/ ; >
@@ -366,8 +366,8 @@
     au < finished ; crawling ; 2016 ; Journal of Guidance, Control, and Dynamics Volume 39 ; 39 ; http://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; crawling ; 2017 ; Journal of Guidance, Control, and Dynamics Volume 40 ; 40 ; http://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; crawling ; 2018 ; Journal of Guidance, Control, and Dynamics Volume 41 ; 41 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
-    au < frozen ; exists ; 2019 ; Journal of Guidance, Control, and Dynamics Volume 42 ; 42 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 2020 ; Journal of Guidance, Control, and Dynamics Volume 43 ; 43 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2019 ; Journal of Guidance, Control, and Dynamics Volume 42 ; 42 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2020 ; Journal of Guidance, Control, and Dynamics Volume 43 ; 43 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2021 ; Journal of Guidance, Control, and Dynamics Volume 44 ; 44 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2022 ; Journal of Guidance, Control, and Dynamics Volume 45 ; 45 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2023 ; Journal of Guidance, Control, and Dynamics Volume 46 ; 46 ; https://arc.aiaa.org/ ; >
@@ -527,7 +527,7 @@
     au < finished ; finished ; 2018 ; Journal of Spacecraft and Rockets Volume 55 ; 55 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2019 ; Journal of Spacecraft and Rockets Volume 56 ; 56 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; Journal of Spacecraft and Rockets Volume 57 ; 57 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 2021 ; Journal of Spacecraft and Rockets Volume 58 ; 58 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 2021 ; Journal of Spacecraft and Rockets Volume 58 ; 58 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; Journal of Spacecraft and Rockets Volume 59 ; 59 ; https://arc.aiaa.org/ ; >
     au < deepCrawl ; exists ; 2023 ; Journal of Spacecraft and Rockets Volume 60 ; 60 ; https://arc.aiaa.org/ ; >
     au < finished ; manifest ; 2024 ; Journal of Spacecraft and Rockets Volume 61 ; 61 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
@@ -713,7 +713,7 @@
     au < finished ; manifest ; 1959 ; Journal of the Aerospace Sciences Volume 26 ; 26 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1960 ; Journal of the Aerospace Sciences Volume 27 ; 27 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 1961 ; Journal of the Aerospace Sciences Volume 28 ; 28 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
-    au < frozen ; exists ; 1962 ; Journal of the Aerospace Sciences Volume 29 ; 29 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1962 ; Journal of the Aerospace Sciences Volume 29 ; 29 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
 
   }
   {
@@ -726,10 +726,10 @@
     param[journal_id] = jars
     #Journal of the American Rocket Society, 1945-1953, param[journal_id] = jars
 
-    au < frozen ; exists ; 1945-1950 ; Journal of the American Rocket Society Volume 00 ; 00 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1951 ; Journal of the American Rocket Society Volume 21 ; 21 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1952 ; Journal of the American Rocket Society Volume 22 ; 22 ; https://arc.aiaa.org/ ; >
-    au < frozen ; exists ; 1953 ; Journal of the American Rocket Society Volume 23 ; 23 ; https://arc.aiaa.org/ ; >
+    au < finished ; manifest ; 1945-1950 ; Journal of the American Rocket Society Volume 00 ; 00 ; https://arc.aiaa.org/ ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 1951 ; Journal of the American Rocket Society Volume 21 ; 21 ; https://arc.aiaa.org/ ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 1952 ; Journal of the American Rocket Society Volume 22 ; 22 ; https://arc.aiaa.org/ ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 1953 ; Journal of the American Rocket Society Volume 23 ; 23 ; https://arc.aiaa.org/ ; reingest4.clockss.org:8082 >
 
   }
 }
