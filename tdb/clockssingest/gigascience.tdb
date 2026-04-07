@@ -4,7 +4,7 @@
     name = GigaScience ;
     info[contract] = 2019 ;
     info[back] = 2018 ;
-    info[tester] = 4 ;
+    info[tester] = 8 ;
     info[platform] = Custom
   >
   
@@ -30,9 +30,9 @@
     {
     param[base_url] = https://gigadb.org/
 
-    au < testing ; exists ; 2024 ; GigaDB 2024 ; 2024 ; >
-    au < testing ; exists ; 2025 ; GigaDB 2025 ; 2025 ; >
-    au < expected ; exists ; 2026 ; GigaDB 2026 ; 2026 ; >
+    au < doNotProcess ; exists ; 2024 ; GigaDB 2024 ; 2024 ; >
+    au < doNotProcess ; exists ; 2025 ; GigaDB 2025 ; 2025 ; >
+    au < doNotProcess ; exists ; 2026 ; GigaDB 2026 ; 2026 ; >
     }
   }
 
