@@ -7,28 +7,24 @@
     info[tester] = 5 ;
     info[platform] = Custom
   >
+    plugin = org.lockss.plugin.ijournalpro.univofanbar.ClockssUnivofAnbarJournalsPlugin
+    implicit < status ; status2 ; year ; param[year] ; name ; param[volume] ; hidden[proxy] >
 
   {
-  
-    title <
-      name = Anbar Journal of Agricultural Sciences ;
-      issn = 1992-7479 ;
-      eissn = 2617-6211
-    >
-    
-    plugin = needs.plugin
-    param[base_url] = https://ajas.uoanbar.edu.iq/
-    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+      title <
+          name = Anbar Journal of Agricultural Sciences ;
+          issn = 1992-7479 ;
+          eissn = 2617-6211
+      >
 
-    au < exists ; exists ; 2019 ; Anbar Journal of Agricultural Sciences Volume 17 ; 17 ; >
-    au < exists ; exists ; 2020 ; Anbar Journal of Agricultural Sciences Volume 18 ; 18 ; >
-    au < exists ; exists ; 2021 ; Anbar Journal of Agricultural Sciences Volume 19 ; 19 ; >
-    au < exists ; exists ; 2022 ; Anbar Journal of Agricultural Sciences Volume 20 ; 20 ; >
-    au < exists ; exists ; 2023 ; Anbar Journal of Agricultural Sciences Volume 21 ; 21 ; >
-    au < exists ; exists ; 2024 ; Anbar Journal of Agricultural Sciences Volume 22 ; 22 ; >
-    au < exists ; exists ; 2025 ; Anbar Journal of Agricultural Sciences Volume 23 ; 23 ; >
-    au < expected ; exists ; 2026 ; Anbar Journal of Agricultural Sciences Volume 24 ; 24 ; >
+      param[base_url] = https://ajas.uoanbar.edu.iq/
 
+      au < exists ; exists ; 2019 ; 2019 ; Journal of College of Agriculture Volume 17 ; 17 ; >
+      au < testing ; exists ; 2020 ; 2020 ; Journal of College of Agriculture Volume 18 ; 18 ; >
+      au < testing ; exists ; 2021 ; 2021 ; Journal of College of Agriculture Volume 19 ; 19 ; >
+      au < testing ; exists ; 2022 ; 2022 ; Journal of College of Agriculture Volume 20 ; 20 ; >
+      au < testing ; exists ; 2023 ; 2023 ; Journal of College of Agriculture Volume 21 ; 21 ; >
+      au < testing ; exists ; 2024 ; 2024 ; Journal of College of Agriculture Volume 22 ; 22 ; >
+      au < testing ; exists ; 2025 ; 2025 ; Journal of College of Agriculture Volume 23 ; 23 ; >
   }
-
 }
