@@ -76,8 +76,8 @@
       au < superseded ; exists ; 2017 ; Biochemistry and Cell Biology Volume 95 [superseded] ; 95 ; http://www.nrcresearchpress.com/ ; >
       au < superseded ; exists ; 2018 ; Biochemistry and Cell Biology Volume 96 [superseded] ; 96 ; http://www.nrcresearchpress.com/ ; >
 
-      au < manifest ; exists ; 1986 ; Biochemistry and Cell Biology Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1987 ; Biochemistry and Cell Biology Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1986 ; Biochemistry and Cell Biology Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1987 ; Biochemistry and Cell Biology Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 1988 ; Biochemistry and Cell Biology Volume 66 ; 66 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1989 ; Biochemistry and Cell Biology Volume 67 ; 67 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1990 ; Biochemistry and Cell Biology Volume 68 ; 68 ; https://cdnsciencepub.com/ ; >
@@ -185,9 +185,9 @@
       au < manifest ; exists ; 1977 ; Canadian Journal of Biochemistry Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 1978 ; Canadian Journal of Biochemistry Volume 56 ; 56 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 1979 ; Canadian Journal of Biochemistry Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1980 ; Canadian Journal of Biochemistry Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1981 ; Canadian Journal of Biochemistry Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1982 ; Canadian Journal of Biochemistry Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1980 ; Canadian Journal of Biochemistry Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1981 ; Canadian Journal of Biochemistry Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1982 ; Canadian Journal of Biochemistry Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
       
     }
     
@@ -209,9 +209,9 @@
       
       param[journal_id] = cbc
 
-      au < manifest ; exists ; 1983 ; Canadian Journal of Biochemistry and Cell Biology Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1984 ; Canadian Journal of Biochemistry and Cell Biology Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1985 ; Canadian Journal of Biochemistry and Cell Biology Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1983 ; Canadian Journal of Biochemistry and Cell Biology Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1984 ; Canadian Journal of Biochemistry and Cell Biology Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1985 ; Canadian Journal of Biochemistry and Cell Biology Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
       
     }
     
@@ -305,14 +305,14 @@
       au < manifest ; exists ; 1977 ; Canadian Journal of Botany Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 1978 ; Canadian Journal of Botany Volume 56 ; 56 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 1979 ; Canadian Journal of Botany Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1980 ; Canadian Journal of Botany Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1981 ; Canadian Journal of Botany Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1982 ; Canadian Journal of Botany Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1983 ; Canadian Journal of Botany Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1984 ; Canadian Journal of Botany Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1985 ; Canadian Journal of Botany Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1986 ; Canadian Journal of Botany Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1987 ; Canadian Journal of Botany Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1980 ; Canadian Journal of Botany Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1981 ; Canadian Journal of Botany Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1982 ; Canadian Journal of Botany Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1983 ; Canadian Journal of Botany Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1984 ; Canadian Journal of Botany Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1985 ; Canadian Journal of Botany Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1986 ; Canadian Journal of Botany Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1987 ; Canadian Journal of Botany Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 1988 ; Canadian Journal of Botany Volume 66 ; 66 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1989 ; Canadian Journal of Botany Volume 67 ; 67 ; https://cdnsciencepub.com/ ; >
       au < frozen ; exists ; 1990 ; Canadian Journal of Botany Volume 68 ; 68 ; https://cdnsciencepub.com/ ; >
@@ -369,14 +369,14 @@
     au < manifest ; exists ; 1977 ; Canadian Geotechnical Journal Volume 14 ; 14 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1978 ; Canadian Geotechnical Journal Volume 15 ; 15 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1979 ; Canadian Geotechnical Journal Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1980 ; Canadian Geotechnical Journal Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1981 ; Canadian Geotechnical Journal Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1982 ; Canadian Geotechnical Journal Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1983 ; Canadian Geotechnical Journal Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1984 ; Canadian Geotechnical Journal Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1985 ; Canadian Geotechnical Journal Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1986 ; Canadian Geotechnical Journal Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1987 ; Canadian Geotechnical Journal Volume 24 ; 24 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1980 ; Canadian Geotechnical Journal Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1981 ; Canadian Geotechnical Journal Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1982 ; Canadian Geotechnical Journal Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1983 ; Canadian Geotechnical Journal Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1984 ; Canadian Geotechnical Journal Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1985 ; Canadian Geotechnical Journal Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1986 ; Canadian Geotechnical Journal Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1987 ; Canadian Geotechnical Journal Volume 24 ; 24 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1988 ; Canadian Geotechnical Journal Volume 25 ; 25 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1989 ; Canadian Geotechnical Journal Volume 26 ; 26 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1990 ; Canadian Geotechnical Journal Volume 27 ; 27 ; https://cdnsciencepub.com/ ; >
@@ -491,14 +491,14 @@
     au < manifest ; exists ; 1977 ; Canadian Journal of Chemistry Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1978 ; Canadian Journal of Chemistry Volume 56 ; 56 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1979 ; Canadian Journal of Chemistry Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1980 ; Canadian Journal of Chemistry Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1981 ; Canadian Journal of Chemistry Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1982 ; Canadian Journal of Chemistry Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1983 ; Canadian Journal of Chemistry Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1984 ; Canadian Journal of Chemistry Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1985 ; Canadian Journal of Chemistry Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1986 ; Canadian Journal of Chemistry Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1987 ; Canadian Journal of Chemistry Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1980 ; Canadian Journal of Chemistry Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1981 ; Canadian Journal of Chemistry Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1982 ; Canadian Journal of Chemistry Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1983 ; Canadian Journal of Chemistry Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1984 ; Canadian Journal of Chemistry Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1985 ; Canadian Journal of Chemistry Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1986 ; Canadian Journal of Chemistry Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1987 ; Canadian Journal of Chemistry Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1988 ; Canadian Journal of Chemistry Volume 66 ; 66 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1989 ; Canadian Journal of Chemistry Volume 67 ; 67 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1990 ; Canadian Journal of Chemistry Volume 68 ; 68 ; https://cdnsciencepub.com/ ; >
@@ -562,14 +562,14 @@
     au < manifest ; exists ; 1977 ; Canadian Journal of Civil Engineering Volume 4 ; 4 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1978 ; Canadian Journal of Civil Engineering Volume 5 ; 5 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1979 ; Canadian Journal of Civil Engineering Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1980 ; Canadian Journal of Civil Engineering Volume 7 ; 7 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1981 ; Canadian Journal of Civil Engineering Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1982 ; Canadian Journal of Civil Engineering Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1983 ; Canadian Journal of Civil Engineering Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1984 ; Canadian Journal of Civil Engineering Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1985 ; Canadian Journal of Civil Engineering Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1986 ; Canadian Journal of Civil Engineering Volume 13 ; 13 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1987 ; Canadian Journal of Civil Engineering Volume 14 ; 14 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1980 ; Canadian Journal of Civil Engineering Volume 7 ; 7 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1981 ; Canadian Journal of Civil Engineering Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1982 ; Canadian Journal of Civil Engineering Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1983 ; Canadian Journal of Civil Engineering Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1984 ; Canadian Journal of Civil Engineering Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1985 ; Canadian Journal of Civil Engineering Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1986 ; Canadian Journal of Civil Engineering Volume 13 ; 13 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1987 ; Canadian Journal of Civil Engineering Volume 14 ; 14 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1988 ; Canadian Journal of Civil Engineering Volume 15 ; 15 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1989 ; Canadian Journal of Civil Engineering Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1990 ; Canadian Journal of Civil Engineering Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
@@ -643,13 +643,13 @@
     au < manifest ; exists ; 1977 ; Canadian Journal of Earth Sciences Volume 14 ; 14 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1978 ; Canadian Journal of Earth Sciences Volume 15 ; 15 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1979 ; Canadian Journal of Earth Sciences Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1980 ; Canadian Journal of Earth Sciences Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1981 ; Canadian Journal of Earth Sciences Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1982 ; Canadian Journal of Earth Sciences Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1983 ; Canadian Journal of Earth Sciences Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1984 ; Canadian Journal of Earth Sciences Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1985 ; Canadian Journal of Earth Sciences Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1986 ; Canadian Journal of Earth Sciences Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1980 ; Canadian Journal of Earth Sciences Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1981 ; Canadian Journal of Earth Sciences Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1982 ; Canadian Journal of Earth Sciences Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1983 ; Canadian Journal of Earth Sciences Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1984 ; Canadian Journal of Earth Sciences Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1985 ; Canadian Journal of Earth Sciences Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1986 ; Canadian Journal of Earth Sciences Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1987 ; Canadian Journal of Earth Sciences Volume 24 ; 24 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1988 ; Canadian Journal of Earth Sciences Volume 25 ; 25 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1989 ; Canadian Journal of Earth Sciences Volume 26 ; 26 ; https://cdnsciencepub.com/ ; >
@@ -716,13 +716,13 @@
     au < superseded ; exists ; 2018 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 75 [superseded] ; 75 ; http://www.nrcresearchpress.com/ ; >
     au < superseded ; exists ; 2019 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 76 [superseded] ; 76 ; https://www.nrcresearchpress.com/ ; >
 
-    au < manifest ; exists ; 1980 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1981 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1982 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1983 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1984 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1985 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 42 ; 42 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1986 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 43 ; 43 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1980 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 37 ; 37 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1981 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 38 ; 38 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1982 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 39 ; 39 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1983 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 40 ; 40 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1984 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 41 ; 41 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1985 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 42 ; 42 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1986 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 43 ; 43 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1987 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 44 ; 44 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1988 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 45 ; 45 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1989 ; Canadian Journal of Fisheries and Aquatic Sciences Volume 46 ; 46 ; https://cdnsciencepub.com/ ; >
@@ -924,13 +924,13 @@
     au < manifest ; exists ; 1977 ; Canadian Journal of Forest Research Volume 7 ; 7 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1978 ; Canadian Journal of Forest Research Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1979 ; Canadian Journal of Forest Research Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1980 ; Canadian Journal of Forest Research Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1981 ; Canadian Journal of Forest Research Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1982 ; Canadian Journal of Forest Research Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1983 ; Canadian Journal of Forest Research Volume 13 ; 13 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1984 ; Canadian Journal of Forest Research Volume 14 ; 14 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1985 ; Canadian Journal of Forest Research Volume 15 ; 15 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1986 ; Canadian Journal of Forest Research Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1980 ; Canadian Journal of Forest Research Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1981 ; Canadian Journal of Forest Research Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1982 ; Canadian Journal of Forest Research Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1983 ; Canadian Journal of Forest Research Volume 13 ; 13 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1984 ; Canadian Journal of Forest Research Volume 14 ; 14 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1985 ; Canadian Journal of Forest Research Volume 15 ; 15 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1986 ; Canadian Journal of Forest Research Volume 16 ; 16 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1987 ; Canadian Journal of Forest Research Volume 17 ; 17 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1988 ; Canadian Journal of Forest Research Volume 18 ; 18 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1989 ; Canadian Journal of Forest Research Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
@@ -1018,13 +1018,13 @@
     au < manifest ; exists ; 1977 ; Canadian Journal of Microbiology Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1978 ; Canadian Journal of Microbiology Volume 24 ; 24 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1979 ; Canadian Journal of Microbiology Volume 25 ; 25 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1980 ; Canadian Journal of Microbiology Volume 26 ; 26 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1981 ; Canadian Journal of Microbiology Volume 27 ; 27 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1982 ; Canadian Journal of Microbiology Volume 28 ; 28 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1983 ; Canadian Journal of Microbiology Volume 29 ; 29 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1984 ; Canadian Journal of Microbiology Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1985 ; Canadian Journal of Microbiology Volume 31 ; 31 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1986 ; Canadian Journal of Microbiology Volume 32 ; 32 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1980 ; Canadian Journal of Microbiology Volume 26 ; 26 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1981 ; Canadian Journal of Microbiology Volume 27 ; 27 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1982 ; Canadian Journal of Microbiology Volume 28 ; 28 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1983 ; Canadian Journal of Microbiology Volume 29 ; 29 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1984 ; Canadian Journal of Microbiology Volume 30 ; 30 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1985 ; Canadian Journal of Microbiology Volume 31 ; 31 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1986 ; Canadian Journal of Microbiology Volume 32 ; 32 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1987 ; Canadian Journal of Microbiology Volume 33 ; 33 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1988 ; Canadian Journal of Microbiology Volume 34 ; 34 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1989 ; Canadian Journal of Microbiology Volume 35 ; 35 ; https://cdnsciencepub.com/ ; >
@@ -1116,13 +1116,13 @@
     au < manifest ; exists ; 1977 ; Canadian Journal of Physics Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1978 ; Canadian Journal of Physics Volume 56 ; 56 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1979 ; Canadian Journal of Physics Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1980 ; Canadian Journal of Physics Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1981 ; Canadian Journal of Physics Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1982 ; Canadian Journal of Physics Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1983 ; Canadian Journal of Physics Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1984 ; Canadian Journal of Physics Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1985 ; Canadian Journal of Physics Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1986 ; Canadian Journal of Physics Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1980 ; Canadian Journal of Physics Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1981 ; Canadian Journal of Physics Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1982 ; Canadian Journal of Physics Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1983 ; Canadian Journal of Physics Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1984 ; Canadian Journal of Physics Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1985 ; Canadian Journal of Physics Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1986 ; Canadian Journal of Physics Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1987 ; Canadian Journal of Physics Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1988 ; Canadian Journal of Physics Volume 66 ; 66 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1989 ; Canadian Journal of Physics Volume 67 ; 67 ; https://cdnsciencepub.com/ ; >
@@ -1200,13 +1200,13 @@
     au < manifest ; exists ; 1977 ; Canadian Journal of Physiology and Pharmacology Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1978 ; Canadian Journal of Physiology and Pharmacology Volume 56 ; 56 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1979 ; Canadian Journal of Physiology and Pharmacology Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1980 ; Canadian Journal of Physiology and Pharmacology Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1981 ; Canadian Journal of Physiology and Pharmacology Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1982 ; Canadian Journal of Physiology and Pharmacology Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1983 ; Canadian Journal of Physiology and Pharmacology Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1984 ; Canadian Journal of Physiology and Pharmacology Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1985 ; Canadian Journal of Physiology and Pharmacology Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1986 ; Canadian Journal of Physiology and Pharmacology Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1980 ; Canadian Journal of Physiology and Pharmacology Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1981 ; Canadian Journal of Physiology and Pharmacology Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1982 ; Canadian Journal of Physiology and Pharmacology Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1983 ; Canadian Journal of Physiology and Pharmacology Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1984 ; Canadian Journal of Physiology and Pharmacology Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1985 ; Canadian Journal of Physiology and Pharmacology Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1986 ; Canadian Journal of Physiology and Pharmacology Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1987 ; Canadian Journal of Physiology and Pharmacology Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1988 ; Canadian Journal of Physiology and Pharmacology Volume 66 ; 66 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1989 ; Canadian Journal of Physiology and Pharmacology Volume 67 ; 67 ; https://cdnsciencepub.com/ ; >
@@ -1383,13 +1383,13 @@
     au < manifest ; exists ; 1977 ; Canadian Journal of Zoology Volume 55 ; 55 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1978 ; Canadian Journal of Zoology Volume 56 ; 56 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1979 ; Canadian Journal of Zoology Volume 57 ; 57 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1980 ; Canadian Journal of Zoology Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1981 ; Canadian Journal of Zoology Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1982 ; Canadian Journal of Zoology Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1983 ; Canadian Journal of Zoology Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1984 ; Canadian Journal of Zoology Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1985 ; Canadian Journal of Zoology Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1986 ; Canadian Journal of Zoology Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1980 ; Canadian Journal of Zoology Volume 58 ; 58 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1981 ; Canadian Journal of Zoology Volume 59 ; 59 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1982 ; Canadian Journal of Zoology Volume 60 ; 60 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1983 ; Canadian Journal of Zoology Volume 61 ; 61 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1984 ; Canadian Journal of Zoology Volume 62 ; 62 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1985 ; Canadian Journal of Zoology Volume 63 ; 63 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1986 ; Canadian Journal of Zoology Volume 64 ; 64 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1987 ; Canadian Journal of Zoology Volume 65 ; 65 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1988 ; Canadian Journal of Zoology Volume 66 ; 66 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1989 ; Canadian Journal of Zoology Volume 67 ; 67 ; https://cdnsciencepub.com/ ; >
@@ -1587,13 +1587,13 @@
       au < manifest ; exists ; 1977 ; Canadian Journal of Genetics and Cytology Volume 19 ; 19 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 1978 ; Canadian Journal of Genetics and Cytology Volume 20 ; 20 ; https://cdnsciencepub.com/ ; >
       au < manifest ; exists ; 1979 ; Canadian Journal of Genetics and Cytology Volume 21 ; 21 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1980 ; Canadian Journal of Genetics and Cytology Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1981 ; Canadian Journal of Genetics and Cytology Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1982 ; Canadian Journal of Genetics and Cytology Volume 24 ; 24 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1983 ; Canadian Journal of Genetics and Cytology Volume 25 ; 25 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1984 ; Canadian Journal of Genetics and Cytology Volume 26 ; 26 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1985 ; Canadian Journal of Genetics and Cytology Volume 27 ; 27 ; https://cdnsciencepub.com/ ; >
-      au < manifest ; exists ; 1986 ; Canadian Journal of Genetics and Cytology Volume 28 ; 28 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1980 ; Canadian Journal of Genetics and Cytology Volume 22 ; 22 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1981 ; Canadian Journal of Genetics and Cytology Volume 23 ; 23 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1982 ; Canadian Journal of Genetics and Cytology Volume 24 ; 24 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1983 ; Canadian Journal of Genetics and Cytology Volume 25 ; 25 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1984 ; Canadian Journal of Genetics and Cytology Volume 26 ; 26 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1985 ; Canadian Journal of Genetics and Cytology Volume 27 ; 27 ; https://cdnsciencepub.com/ ; >
+      au < ready ; exists ; 1986 ; Canadian Journal of Genetics and Cytology Volume 28 ; 28 ; https://cdnsciencepub.com/ ; >
       
     }
     
@@ -1888,11 +1888,11 @@
     au < manifest ; exists ; 1974 ; Transactions of the Canadian Society for Mechanical Engineering Volume 3 ; 3 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1975 ; Transactions of the Canadian Society for Mechanical Engineering Volume 4 ; 4 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1976 ; Transactions of the Canadian Society for Mechanical Engineering Volume 5 ; 5 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1980 ; Transactions of the Canadian Society for Mechanical Engineering Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1983 ; Transactions of the Canadian Society for Mechanical Engineering Volume 7 ; 7 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1984 ; Transactions of the Canadian Society for Mechanical Engineering Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1985 ; Transactions of the Canadian Society for Mechanical Engineering Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
-    au < manifest ; exists ; 1986 ; Transactions of the Canadian Society for Mechanical Engineering Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1980 ; Transactions of the Canadian Society for Mechanical Engineering Volume 6 ; 6 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1983 ; Transactions of the Canadian Society for Mechanical Engineering Volume 7 ; 7 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1984 ; Transactions of the Canadian Society for Mechanical Engineering Volume 8 ; 8 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1985 ; Transactions of the Canadian Society for Mechanical Engineering Volume 9 ; 9 ; https://cdnsciencepub.com/ ; >
+    au < ready ; exists ; 1986 ; Transactions of the Canadian Society for Mechanical Engineering Volume 10 ; 10 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1987 ; Transactions of the Canadian Society for Mechanical Engineering Volume 11 ; 11 ; https://cdnsciencepub.com/ ; >
     au < manifest ; exists ; 1988 ; Transactions of the Canadian Society for Mechanical Engineering Volume 12 ; 12 ; https://cdnsciencepub.com/ ; >
     au < frozen ; exists ; 1989 ; Transactions of the Canadian Society for Mechanical Engineering Volume 13 ; 13 ; https://cdnsciencepub.com/ ; >
