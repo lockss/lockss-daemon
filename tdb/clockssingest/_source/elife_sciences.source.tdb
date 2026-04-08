@@ -14,7 +14,7 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/elifepreprint-released/
 
     {
-      ### HTTPS YEAR 
+      ### HTTPS Journals Format YEAR 
       plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesSourcePlugin
       implicit < status ; status2 ; year ; name ; param[year] >
 
@@ -23,8 +23,16 @@
       #No more AUs. Moved to directories.
     }
     {
-      ### HTTPS DIR 
-      plugin = needs.plugin
+      ### HTTPS Journals Format DIR 
+      plugin = needs.plugin #eLife Sciences Journals Directory Plugin
+      implicit < status ; status2 ; year ; name ; param[directory] >
+
+      au < expected ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025_01 ; 2025_01 > #bucket 2025_01 has 7 Preprint zip files in journal format
+      #No more AUs. Moved to Preprint format
+    }
+    {
+      ### HTTPS Preprint Format DIR 
+      plugin = needs.plugin #eLife Sciences PrePrints Directory Plugin
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < expected ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025_02 ; 2025_02 > #bucket 2025_02 has 7609 Preprint zip files in preprint format
@@ -37,39 +45,38 @@
 
   {
     title <
-       name = eLife Sciences Source Content
+       name = eLife Sciences Journals Source Content
     >
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elife-released/
 
     { 
-      ### HTTP YEAR 
+      ### HTTP Journals Format YEAR 
       plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesSourcePlugin
       implicit < status ; status2 ; year ; name ; param[year] >
 
-      au < zapped ; finished ; 2020 ; eLife Sciences Source Content 2020 ; 2020 >
-      au < zapped ; finished ; 2021 ; eLife Sciences Source Content 2021 ; 2021 >
-      au < readySource ; finished ; 2022 ; eLife Sciences Source Content 2022 ; 2022 >
+      au < zapped ; finished ; 2020 ; eLife Sciences Journals Source Content 2020 ; 2020 >
+      au < zapped ; finished ; 2021 ; eLife Sciences Journals Source Content 2021 ; 2021 >
+      au < readySource ; finished ; 2022 ; eLife Sciences Journals Source Content 2022 ; 2022 >
       #No more AUs. Moved to https.
     }
     {
-      ### HTTPS YEAR 
+      ### HTTPS Journals Format YEAR 
       plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesSourcePlugin
       implicit < status ; status2 ; year ; name ; param[year] >
 
-      au < readySource ; finished ; 2023 ; eLife Sciences Source Content 2023 ; 2023 >
-      au < readySource ; crawling ; 2024 ; eLife Sciences Source Content 2024 ; 2024 >
-      au < readySource ; crawling ; 2025 ; eLife Sciences Source Content 2025 ; 2025 >
-      au < readySource ; crawling ; 2026 ; eLife Sciences Source Content 2026 ; 2026 >
+      au < readySource ; finished ; 2023 ; eLife Sciences Journals Source Content 2023 ; 2023 >
+      au < readySource ; crawling ; 2024 ; eLife Sciences Journals Source Content 2024 ; 2024 >
+      au < readySource ; crawling ; 2025 ; eLife Sciences Journals Source Content 2025 ; 2025 >
+      au < readySource ; crawling ; 2026 ; eLife Sciences Journals Source Content 2026 ; 2026 >
       #No more AUs. Moved to directories
     }
 
     {
-      ### HTTPS DIR 
+      ### HTTPS Journals Format DIR 
       plugin = needs.plugin
       implicit < status ; status2 ; year ; name ; param[year] >
 
-      au < expected ; exists ; 2025 ; eLife Sciences Source Content 2025_01 ; 2025_01 >
-      au < expected ; exists ; 2027 ; eLife Sciences Source Content 2027_01 ; 2027_01 >
+      au < expected ; exists ; 2027 ; eLife Sciences Journals Source Content 2027_01 ; 2027_01 >
 
     }
 
