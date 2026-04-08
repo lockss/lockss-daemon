@@ -242,7 +242,8 @@ while (my $line = <>) {
     my $man_contents = $resp->is_success ? $resp->content : "";
     if (! $resp->is_success) {
         $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    } elsif ($req->url ne $resp->request->uri) {
+    #} elsif ($req->url ne $resp->request->uri) {
+    } elsif (($req->url ne $resp->request->uri) && ($resp->request->uri !~ m/\?implicit-login=true/)) {
         $vol_title = $resp->request->uri;
         $result = "Redirected";
     } elsif (! defined($man_contents)) {
@@ -323,7 +324,7 @@ while (my $line = <>) {
     my $man_contents = $resp->is_success ? $resp->content : "";
     if (! $resp->is_success) {
         $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    } elsif ($req->url ne $resp->request->uri) {
+    } elsif (($req->url ne $resp->request->uri) && ($resp->request->uri !~ m/\?implicit-login=true/)) {
         $vol_title = $resp->request->uri;
         $result = "Redirected";
     } elsif (! defined($man_contents)) {
@@ -405,7 +406,8 @@ while (my $line = <>) {
     my $man_contents = $resp->is_success ? $resp->content : "";
     if (! $resp->is_success) {
         $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    } elsif ($req->url ne $resp->request->uri) {
+    } elsif (($req->url ne $resp->request->uri) && ($resp->request->uri !~ m/\?implicit-login=true/)) {
+    #} elsif ($req->url ne $resp->request->uri) {
         $vol_title = $resp->request->uri;
         $result = "Redirected";
     } elsif (! defined($man_contents)) {
@@ -485,7 +487,8 @@ while (my $line = <>) {
     my $man_contents = $resp->is_success ? $resp->content : "";
     if (! $resp->is_success) {
         $result = "--REQ_FAIL--" . $resp->code() . " " . $resp->message();
-    } elsif ($req->url ne $resp->request->uri) {
+    } elsif (($req->url ne $resp->request->uri) && ($resp->request->uri !~ m/\?implicit-login=true/)) {
+    #} elsif ($req->url ne $resp->request->uri) {
         $vol_title = $resp->request->uri;
         $result = "Redirected";
     } elsif (! defined($man_contents)) {
