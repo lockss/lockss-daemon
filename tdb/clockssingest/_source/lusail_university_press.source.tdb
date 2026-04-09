@@ -18,7 +18,7 @@
 
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/lusail-released/
 
-    au < manifest ; exists ; 2026 ; Lusail University Press Source Content 2026_01 ; 2026_01 >
+    au < readySource ; crawling ; 2026 ; Lusail University Press Source Content 2026_01 ; 2026_01 >
 
 
   }
