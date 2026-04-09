@@ -2851,9 +2851,10 @@
       #param[base_url] = https://sustainability-journal.com/
       nondefparam[base_url2] = https://account.sustainability-journal.com/
       nondefparam[journal_id] = up-j-rrs
+      #Moved to OJS
 
-      au < released ; 2025 ; 1 ; Research and Reviews in Sustainability Volume 2025 ; 2025 ; 1 ; Ubiquity Press ;  ; https://sustainability-journal.com/ >
-      au < expected ; 2026 ; 2 ; Research and Reviews in Sustainability Volume 2026 ; 2026 ; 2 ; Ubiquity Press ;  ; https://sustainability-journal.com/ >
+      au < down ; 2025 ; 1 ; Research and Reviews in Sustainability Volume 2025 ; 2025 ; 1 ; Ubiquity Press ;  ; https://sustainability-journal.com/ >
+      au < doNotProcess ; 2026 ; 2 ; Research and Reviews in Sustainability Volume 2026 ; 2026 ; 2 ; Ubiquity Press ;  ; https://sustainability-journal.com/ >
 
   }
 
