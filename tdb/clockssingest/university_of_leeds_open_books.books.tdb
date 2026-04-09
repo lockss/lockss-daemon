@@ -10,7 +10,7 @@
     plugin = org.lockss.plugin.universityofleeds.ClockssUniversityOfLeedsBooksPlugin
     param[base_url] = https://leeds.pressbooks.pub/
 
-    implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[book_id] ; hidden[proxy] >
+    implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[resource_id] ; hidden[proxy] >
 
   {
     title <
