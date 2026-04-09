@@ -11,10 +11,10 @@
     title <
        name = eLife Sciences Preprint Source Content
     >
-      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/elifepreprint-released/
 
     {
       ### HTTPS Journals Format YEAR 
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/elifepreprint-released/
       plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesSourcePlugin
       implicit < status ; status2 ; year ; name ; param[year] >
 
@@ -24,7 +24,8 @@
     }
     {
       ### HTTPS Journals Format DIR 
-      plugin = needs.plugin #eLife Sciences Journals Directory Plugin
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/elifepreprint-released/
+      plugin = needs.plugin #..................eLife Sciences Journals Directory Plugin
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < expected ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025_01 ; 2025_01 > #bucket 2025_01 has 7 Preprint zip files in journal format
@@ -32,7 +33,8 @@
     }
     {
       ### HTTPS Preprint Format DIR 
-      plugin = needs.plugin #eLife Sciences PrePrints Directory Plugin
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/elifepreprint-released/
+      plugin = needs.plugin #..................eLife Sciences PrePrints Directory Plugin
       implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < expected ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025_02 ; 2025_02 > #bucket 2025_02 has 7609 Preprint zip files in preprint format
@@ -47,10 +49,10 @@
     title <
        name = eLife Sciences Journals Source Content
     >
-      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elife-released/
 
     { 
       ### HTTP Journals Format YEAR 
+      param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/elife-released/
       plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesSourcePlugin
       implicit < status ; status2 ; year ; name ; param[year] >
 
@@ -61,6 +63,7 @@
     }
     {
       ### HTTPS Journals Format YEAR 
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/elife-released/
       plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesSourcePlugin
       implicit < status ; status2 ; year ; name ; param[year] >
 
@@ -73,8 +76,9 @@
 
     {
       ### HTTPS Journals Format DIR 
-      plugin = needs.plugin
-      implicit < status ; status2 ; year ; name ; param[year] >
+      param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/elife-released/
+      plugin = needs.plugin #..................eLife Sciences Journal Directory Plugin
+      implicit < status ; status2 ; year ; name ; param[directory] >
 
       au < expected ; exists ; 2027 ; eLife Sciences Journals Source Content 2027_01 ; 2027_01 >
 
