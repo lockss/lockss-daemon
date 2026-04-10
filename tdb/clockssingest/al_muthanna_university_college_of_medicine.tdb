@@ -23,17 +23,17 @@
       param[base_url] = https://muthmj.mu.edu.iq/
       param[journal_abbr] = journal
 
-      au < frozen ; exists ; 2014 ; Muthanna Medical Journal Volume 1 ; 1 ; >
-      au < frozen ; exists ; 2015 ; Muthanna Medical Journal Volume 2 ; 2 ; >
-      au < frozen ; exists ; 2016 ; Muthanna Medical Journal Volume 3 ; 3 ; >
-      au < frozen ; exists ; 2017 ; Muthanna Medical Journal Volume 4 ; 4 ; >
-      au < frozen ; exists ; 2018 ; Muthanna Medical Journal Volume 5 ; 5 ; >
-      au < frozen ; exists ; 2019 ; Muthanna Medical Journal Volume 6 ; 6 ; >
-      au < frozen ; exists ; 2020 ; Muthanna Medical Journal Volume 7 ; 7 ; >
+      au < finished ; manifest ; 2014 ; Muthanna Medical Journal Volume 1 ; 1 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2015 ; Muthanna Medical Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2016 ; Muthanna Medical Journal Volume 3 ; 3 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2017 ; Muthanna Medical Journal Volume 4 ; 4 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2018 ; Muthanna Medical Journal Volume 5 ; 5 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Muthanna Medical Journal Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Muthanna Medical Journal Volume 7 ; 7 ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2021 ; Muthanna Medical Journal Volume 8 ; 8 ; >
-      au < frozen ; exists ; 2022 ; Muthanna Medical Journal Volume 9 ; 9 ; >
-      au < frozen ; exists ; 2023 ; Muthanna Medical Journal Volume 10 ; 10 ; >
-      au < frozen ; exists ; 2024 ; Muthanna Medical Journal Volume 11 ; 11 ; >
+      au < finished ; manifest ; 2022 ; Muthanna Medical Journal Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; Muthanna Medical Journal Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; Muthanna Medical Journal Volume 11 ; 11 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2025 ; Muthanna Medical Journal Volume 12 ; 12 ; >
       au < manifest ; exists ; 2026 ; Muthanna Medical Journal Volume 13 ; 13 ; >
 
