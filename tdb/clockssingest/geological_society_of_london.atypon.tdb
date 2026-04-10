@@ -1429,4 +1429,17 @@
 
   }
 
+  {
+
+    title <
+      name = GeoHorizons ;
+      eissn = 2977-4101
+    >
+
+    param[journal_id] = geohorizons
+
+    au < manifest ; exists ; 2026 ; GeoHorizons Volume 1 ; 1 ; >
+
+  }
+
 }
