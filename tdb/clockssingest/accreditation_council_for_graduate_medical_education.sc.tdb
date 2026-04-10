@@ -36,11 +36,11 @@
     au < doNotProcess ; exists ; 2017 ; 2017 ; Journal of Graduate Medical Education Volume 9 ; 9 ; >
     au < doNotProcess ; exists ; 2018 ; 2018 ; Journal of Graduate Medical Education Volume 10 ; 10 ; >
     au < doNotProcess ; exists ; 2019 ; 2019 ; Journal of Graduate Medical Education Volume 11 ; 11 ; >
-    au < frozen ; exists ; 2020 ; 2020 ; Journal of Graduate Medical Education Volume 12 ; 12 ; >
-    au < frozen ; exists ; 2021 ; 2021 ; Journal of Graduate Medical Education Volume 13 ; 13 ; >
-    au < frozen ; exists ; 2022 ; 2022 ; Journal of Graduate Medical Education Volume 14 ; 14 ; >
-    au < frozen ; exists ; 2023 ; 2023 ; Journal of Graduate Medical Education Volume 15 ; 15 ; >
-    au < frozen ; exists ; 2024 ; 2024 ; Journal of Graduate Medical Education Volume 16 ; 16 ; >
+    au < finished ; manifest ; 2020 ; 2020 ; Journal of Graduate Medical Education Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < finished ; manifest ; 2021 ; 2021 ; Journal of Graduate Medical Education Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < finished ; manifest ; 2022 ; 2022 ; Journal of Graduate Medical Education Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < finished ; manifest ; 2023 ; 2023 ; Journal of Graduate Medical Education Volume 15 ; 15 ; reingest5.clockss.org:8082 >
+    au < finished ; manifest ; 2024 ; 2024 ; Journal of Graduate Medical Education Volume 16 ; 16 ; reingest4.clockss.org:8082 >
     au < superseded ; exists ; 2025 ; 2025 ; Journal of Graduate Medical Education Volume 17 [superseded] ; 17 ; >
 
     }
