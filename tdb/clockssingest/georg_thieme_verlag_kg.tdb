@@ -1416,7 +1416,7 @@
    au < ready ; exists ; 1972 ; 1972 ; DMW - Deutsche Medizinische Wochenschrift Volume 97 ; 97 ; >
    au < ready ; exists ; 1973 ; 1973 ; DMW - Deutsche Medizinische Wochenschrift Volume 98 ; 98 ; >
    au < ready ; exists ; 1974 ; 1974 ; DMW - Deutsche Medizinische Wochenschrift Volume 99 ; 99 ; >
-   au < ready ; exists ; 1975 ; 1975 ; DMW - Deutsche Medizinische Wochenschrift Volume 100 ; 100 ; >
+   au < crawling ; exists ; 1975 ; 1975 ; DMW - Deutsche Medizinische Wochenschrift Volume 100 ; 100 ; >
    au < ready ; exists ; 1976 ; 1976 ; DMW - Deutsche Medizinische Wochenschrift Volume 101 ; 101 ; >
    au < ready ; exists ; 1977 ; 1977 ; DMW - Deutsche Medizinische Wochenschrift Volume 102 ; 102 ; >
    au < ready ; exists ; 1978 ; 1978 ; DMW - Deutsche Medizinische Wochenschrift Volume 103 ; 103 ; >
@@ -1565,7 +1565,7 @@
    au < ready ; exists ; 1973 ; 1973 ; Endoscopy Volume 5 ; 5 ; >
    au < ready ; exists ; 1974 ; 1974 ; Endoscopy Volume 6 ; 6 ; >
    au < ready ; exists ; 1975 ; 1975 ; Endoscopy Volume 7 ; 7 ; >
-   au < ready ; exists ; 1976 ; 1976 ; Endoscopy Volume 8 ; 8 ; >
+   au < crawling ; exists ; 1976 ; 1976 ; Endoscopy Volume 8 ; 8 ; >
    au < ready ; exists ; 1977 ; 1977 ; Endoscopy Volume 9 ; 9 ; >
    au < ready ; exists ; 1978 ; 1978 ; Endoscopy Volume 10 ; 10 ; >
    au < ready ; exists ; 1979 ; 1979 ; Endoscopy Volume 11 ; 11 ; >
@@ -6492,7 +6492,7 @@
     param[journal_id] = 10.1055/s-00000077
     comment[years] = 1974-current
 
-    au < ready ; exists ; 1974 ; 1974 ; Seminars in Thrombosis and Hemostasis Volume 1 (1974) ; 1 ; >
+    au < crawling ; exists ; 1974 ; 1974 ; Seminars in Thrombosis and Hemostasis Volume 1 (1974) ; 1 ; >
     au < ready ; exists ; 1975 ; 1975 ; Seminars in Thrombosis and Hemostasis Volume 1 (1975) ; 1 ; >
     au < ready ; exists ; 1976 ; 1976 ; Seminars in Thrombosis and Hemostasis Volume 2 ; 2 ; >
     au < ready ; exists ; 1977 ; 1977 ; Seminars in Thrombosis and Hemostasis Volume 3 ; 3 ; >
@@ -7712,7 +7712,7 @@
     au < ready ; exists ; 1970 ; 1970 ; Zeitschrift für Klassische Homöopathie Volume 14 ; 14 ; >
     au < ready ; exists ; 1971 ; 1971 ; Zeitschrift für Klassische Homöopathie Volume 15 ; 15 ; >
     au < ready ; exists ; 1972 ; 1972 ; Zeitschrift für Klassische Homöopathie Volume 16 ; 16 ; >
-    au < ready ; exists ; 1973 ; 1973 ; Zeitschrift für Klassische Homöopathie Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1973 ; 1973 ; Zeitschrift für Klassische Homöopathie Volume 17 ; 17 ; >
     au < ready ; exists ; 1974 ; 1974 ; Zeitschrift für Klassische Homöopathie Volume 18 ; 18 ; >
     au < ready ; exists ; 1975 ; 1975 ; Zeitschrift für Klassische Homöopathie Volume 19 ; 19 ; >
     au < ready ; exists ; 1976 ; 1976 ; Zeitschrift für Klassische Homöopathie Volume 20 ; 20 ; >
