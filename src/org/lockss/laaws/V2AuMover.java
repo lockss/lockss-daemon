@@ -378,6 +378,15 @@ public class V2AuMover {
     PREFIX + "diskSpaceInterval";
   public static final long DEFAULT_DISK_SPACE_INTERVAL = 5 * Constants.MINUTE;
 
+  /** If true, exclude from the active task list tasks that have been
+   * created and queued but haven't started executing.  With large
+   * executor queues there can be 100s of these which pollute the
+   * status display.  But they're sometimes useful for diagnostics. */
+  public static final String PARAM_EXCLUDE_QUEUED_TASKS =
+    PREFIX + "excludeQueuedTasks";
+  public static final boolean DEFAULT_EXCLUDE_QUEUED_TASKS = true;
+
+
   //////////////////////////////////////////////////////////////////////
   // Constants
   //////////////////////////////////////////////////////////////////////
@@ -493,6 +502,7 @@ public class V2AuMover {
   private UseFetchUrl useFetchUrl = DEFAULT_USE_FETCH_URL;
   private boolean isShowInstrumentation = DEFAULT_INSTRUMENTATION;
   private long diskSpaceFetchInterval = DEFAULT_DISK_SPACE_INTERVAL;
+  private boolean excludeQueuedTasks = DEFAULT_EXCLUDE_QUEUED_TASKS;
   private CompoundLinearSlope diskSpaceXferBytesCurve;
   private CompoundLinearSlope diskSpaceXferArtifactsCurve;
   private long nextDiskSpaceFetchTime;  // next time to fetch disk space
@@ -705,6 +715,11 @@ public class V2AuMover {
       diskSpaceFetchInterval =
         config.getTimeInterval(PARAM_DISK_SPACE_INTERVAL,
                                DEFAULT_DISK_SPACE_INTERVAL);
+
+      excludeQueuedTasks =
+        config.getBoolean(PARAM_EXCLUDE_QUEUED_TASKS,
+                          DEFAULT_EXCLUDE_QUEUED_TASKS);
+
     }
   }
 
@@ -2611,7 +2626,7 @@ public class V2AuMover {
     }
     List<String> res = new ArrayList<>();
     for (AuStatus auStat : auStats.values()) {
-      String one = getOneAuStatus(auStat, true);
+      String one = getOneAuStatus(auStat, excludeQueuedTasks);
       if (one != null) {
         res.add(one);
       }
