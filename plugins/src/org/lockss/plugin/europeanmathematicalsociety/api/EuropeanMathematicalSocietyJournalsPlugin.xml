@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -101,7 +101,7 @@ POSSIBILITY OF SUCH DAMAGE.
         <map>
             <entry>
                 <string>Substance</string>
-                <string>1</string>
+                <string>2</string>
             </entry>
             <entry>
                 <string>Poll</string>
@@ -138,7 +138,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <entry>
         <string>au_substance_url_pattern</string>
         <list>
-            <string>"%scontent/serial-article-files/\d+", base_url</string>
+            <string>"%scontent/serial-(article|issue)-files/\d+", base_url</string>
         </list>
     </entry>
     <entry>
@@ -161,7 +161,7 @@ POSSIBILITY OF SUCH DAMAGE.
             https://ems.press/content/serial-article-files/32990
             https://ems.press/content/serial-article-files/32816
             -->
-            <string>1, "%s(content/)?serial-article-files/", base_url</string>
+            <string>1, "%s(content/)?serial-(article|issue)-files/", base_url</string>
             <!--
             https://ems.press/_next/static/chunks/pages/_app-bd6f5c5d6ca0fffb.js
             https://ems.press/_next/static/chunks/463-9fb302e5e0590873.js
