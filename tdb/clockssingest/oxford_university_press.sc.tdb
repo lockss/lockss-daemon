@@ -3888,7 +3888,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Chemical Senses Volume 47 ; 47 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Chemical Senses Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; Chemical Senses Volume 49 ; 49 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2025 ; 2025 ; Chemical Senses Volume 50 ; 50 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Chemical Senses Volume 50 ; 50 ; >
 
   }
 
@@ -4868,8 +4868,8 @@
     au < finished ; manifest ; 2021 ; 2021 ; Database Volume 2021 ; 2021 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; 2022 ; Database Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Database Volume 2023 ; 2023 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2024 ; 2024 ; Database Volume 2024 ; 2024 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Database Volume 2025 ; 2025 ; >
+    au < ready ; exists ; 2024 ; 2024 ; Database Volume 2024 ; 2024 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Database Volume 2025 ; 2025 ; >
 
   }
 
@@ -6995,7 +6995,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; FEMS Microbiology Letters Volume 368-369 ; 368-369 ; >
     au < finished ; manifest ; 2023 ; 2023 ; FEMS Microbiology Letters Volume 370 ; 370 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; 2024 ; FEMS Microbiology Letters Volume 371 ; 371 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2025 ; 2025 ; FEMS Microbiology Letters Volume 372 ; 372 ; >
+    au < ready ; exists ; 2025 ; 2025 ; FEMS Microbiology Letters Volume 372 ; 372 ; >
 
   }
 
@@ -7050,7 +7050,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; FEMS Microbiology Reviews Volume 46 ; 46 ; >
     au < finished ; manifest ; 2023 ; 2023 ; FEMS Microbiology Reviews Volume 47 ; 47 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; FEMS Microbiology Reviews Volume 48 ; 48 ; >
-    au < testing ; exists ; 2025 ; 2025 ; FEMS Microbiology Reviews Volume 49 ; 49 ; >
+    au < ready ; exists ; 2025 ; 2025 ; FEMS Microbiology Reviews Volume 49 ; 49 ; >
 
   }
 
@@ -7084,7 +7084,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; FEMS Yeast Research Volume 22 ; 22 ; >
     au < finished ; manifest ; 2023 ; 2023 ; FEMS Yeast Research Volume 23 ; 23 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; FEMS Yeast Research Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; FEMS Yeast Research Volume 25 ; 25 ; >
+    au < ready ; exists ; 2025 ; 2025 ; FEMS Yeast Research Volume 25 ; 25 ; >
 
   }
 
@@ -8136,7 +8136,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; GigaScience Volume 10 [OUP] ; 10 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; GigaScience Volume 11-12 [OUP] ; 11-12 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; GigaScience Volume 13 [OUP] ; 13 ; >
-    au < testing ; exists ; 2025 ; 2025 ; GigaScience Volume 14 [OUP] ; 14 ; >
+    au < ready ; exists ; 2025 ; 2025 ; GigaScience Volume 14 [OUP] ; 14 ; >
 
   }
 
@@ -9611,7 +9611,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Integrative Biology Volume 14 ; 14 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Integrative Biology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Integrative Biology Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; Integrative Biology Volume 17 ; 17 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Integrative Biology Volume 17 ; 17 ; >
 
   }
 
@@ -10180,7 +10180,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; International Journal of Low-Carbon Technologies Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Low-Carbon Technologies Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; International Journal of Low-Carbon Technologies Volume 19 ; 19 ; reingest3.clockss.org:8083 >
-    au < testing ; exists ; 2025 ; 2025 ; International Journal of Low-Carbon Technologies Volume 20 ; 20 ; >
+    au < ready ; exists ; 2025 ; 2025 ; International Journal of Low-Carbon Technologies Volume 20 ; 20 ; >
 
   }
 
@@ -18312,7 +18312,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Pathogens and Disease Volume 80 ; 80 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Pathogens and Disease Volume 81 ; 81 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; 2024 ; Pathogens and Disease Volume 82 ; 82 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; Pathogens and Disease Volume 83 ; 83 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Pathogens and Disease Volume 83 ; 83 ; >
 
   }
 
@@ -18665,7 +18665,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Policing: A Journal of Policy and Practice Volume 16 ; 16 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Policing: A Journal of Policy and Practice Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; Policing: A Journal of Policy and Practice Volume 18 ; 18 ; reingest4.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; Policing: A Journal of Policy and Practice Volume 19 ; 19 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Policing: A Journal of Policy and Practice Volume 19 ; 19 ; >
 
   }
 
@@ -19172,7 +19172,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Protein Engineering, Design and Selection (PEDS) Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Protein Engineering, Design and Selection (PEDS) Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Protein Engineering, Design and Selection (PEDS) Volume 37 ; 37 ; reingest1.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; Protein Engineering, Design and Selection (PEDS) Volume 38 ; 38 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Protein Engineering, Design and Selection (PEDS) Volume 38 ; 38 ; >
 
   }
 
@@ -19707,7 +19707,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Regenerative Biomaterials Volume 9 ; 9 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Regenerative Biomaterials Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; 2024 ; Regenerative Biomaterials Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < testing ; exists ; 2025 ; 2025 ; Regenerative Biomaterials Volume 12 ; 12 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Regenerative Biomaterials Volume 12 ; 12 ; >
 
   }
 
@@ -21997,7 +21997,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The Chinese Journal of Comparative Law Volume 10 ; 10 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The Chinese Journal of Comparative Law Volume 11 ; 11 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Chinese Journal of Comparative Law Volume 12 ; 12 ; >
-    au < testing ; exists ; 2025 ; 2025 ; The Chinese Journal of Comparative Law Volume 13 ; 13 ; >
+    au < ready ; exists ; 2025 ; 2025 ; The Chinese Journal of Comparative Law Volume 13 ; 13 ; >
 
   }
 
@@ -23019,7 +23019,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Mechanics Volume 37-38 ; 37-38 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Mechanics Volume 39 ; 39 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; 2024 ; Journal of Mechanics Volume 40 ; 40 ; reingest5.clockss.org:8082 >
-    au < testing ; exists ; 2025 ; 2025 ; Journal of Mechanics Volume 41 ; 41 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Journal of Mechanics Volume 41 ; 41 ; >
 
   }
 
@@ -23801,7 +23801,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; The Opera Quarterly Volume 37 (2022) ; 37 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; 2023 ; The Opera Quarterly Volume 38 (2023) ; 38 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Opera Quarterly Volume 39 (2024) ; 39 ; >
-    au < testing ; exists ; 2025 ; 2025 ; The Opera Quarterly Volume 40 (2025) ; 40 ; >
+    au < ready ; exists ; 2025 ; 2025 ; The Opera Quarterly Volume 40 (2025) ; 40 ; >
 
   }
 
@@ -25146,7 +25146,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Translational Animal Science Volume 6 ; 6 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Translational Animal Science Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Translational Animal Science Volume 8 ; 8 ; >
-    au < testing ; exists ; 2025 ; 2025 ; Translational Animal Science Volume 9 ; 9 ; >
+    au < ready ; exists ; 2025 ; 2025 ; Translational Animal Science Volume 9 ; 9 ; >
 
   }
 
