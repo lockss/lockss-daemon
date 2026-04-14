@@ -120,7 +120,7 @@ public class BaseAtyponMetadataUtil {
       checkedISSN = true;
       // don't go crazy. If the EISSN is there and matches, just move on
       if (foundEISSN != null) {
-        if (!(foundEISSN.equals(AU_EISSN) || foundEISSN.equals(AU_ISSN)) ) {
+        if (!(foundEISSN.equalsIgnoreCase(AU_EISSN) || foundEISSN.equalsIgnoreCase(AU_ISSN)) ) {
           log.debug3("Exiting early due to failed ISSN check. AU_ISSN: " + AU_ISSN +
                   ", AU_EISSN: " + AU_EISSN + ", foundEISSN: " + foundEISSN +
                   ", foundISSN: " + foundISSN);
@@ -128,7 +128,7 @@ public class BaseAtyponMetadataUtil {
         }
       } else if (foundISSN != null) {
         // there wasn't an EISSN, so let's check the ISSN
-        if (!(foundISSN.equals(AU_ISSN) || foundISSN.equals(AU_EISSN)) ) {
+        if (!(foundISSN.equalsIgnoreCase(AU_ISSN) || foundISSN.equalsIgnoreCase(AU_EISSN)) ) {
           log.debug3("Exiting early due to failed ISSN check. AU_ISSN: " + AU_ISSN +
                   ", AU_EISSN: " + AU_EISSN + ", foundEISSN: " + foundEISSN +
                   ", foundISSN: " + foundISSN);

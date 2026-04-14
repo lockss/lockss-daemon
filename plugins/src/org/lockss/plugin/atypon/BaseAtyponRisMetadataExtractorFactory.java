@@ -152,10 +152,10 @@ implements FileMetadataExtractorFactory {
       if (am.get(MetadataField.FIELD_DATE) == null) {
         if (am.getRaw("Y1") != null) { // if DA wasn't there, use Y1
           am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
-          log.debug3("Seg date check: seg_date is set by Y1 field in ris file");
+          log.debug3("Metadata Date check: seg_date is set by Y1 field in ris file");
         }
       } else {
-        log.debug3("Seg date check: seg_date already being set : " + am.get(MetadataField.FIELD_DATE));
+        log.debug3("Metadata Date check: seg_date already being set : " + am.get(MetadataField.FIELD_DATE));
       }
 
       /*
@@ -187,10 +187,10 @@ implements FileMetadataExtractorFactory {
       } else {
         // JOURNAL default is to assume it's a journal for backwards compatibility
         if (!BaseAtyponMetadataUtil.metadataMatchesTdb(au, am)) {
-          log.debug3("Sage Check: emitting from RisMetadata side, failed metadataMatchesTdb url = " + cu.getUrl());
+          log.debug3("Metadata Check: emitting from RisMetadata side, failed metadataMatchesTdb url = " + cu.getUrl());
           return;
         } else {
-          log.debug3("Sage Check: emitting from RisMetadata side, passed metadataMatchesTdb url = " + cu.getUrl());
+          log.debug3("Metadata Check: emitting from RisMetadata side, passed metadataMatchesTdb url = " + cu.getUrl());
         }
       }
 
@@ -200,7 +200,7 @@ implements FileMetadataExtractorFactory {
        * CORRECT the access.url if it is not in the AU
        */
       BaseAtyponMetadataUtil.completeMetadata(cu, am);
-      log.debug3("Sage Check: emitting from RisMetadata side, url = " + cu.getUrl());
+      log.debug3("Metadata Check: emitting from RisMetadata side, url = " + cu.getUrl());
       emitter.emitMetadata(cu, am);
     }
     
@@ -220,9 +220,19 @@ implements FileMetadataExtractorFactory {
         if (am.getRaw("Y1") != null) { // if DA wasn't there, use Y1
           am.put(MetadataField.FIELD_DATE, am.getRaw("Y1"));
         }
-      }      
+      }
 
-      /*
+    // Replace lowwercase "x" with "Uppercase X" since publisher sent the lowercase "x"
+    if ( (am.get(MetadataField.FIELD_ISSN) != null) && (am.get(MetadataField.FIELD_ISSN).contains("x")))  {
+        log.debug3("Metadata check- ISSN: replacing lowercase_x  uppercase_X");
+        am.replace(MetadataField.FIELD_ISSN, am.get(MetadataField.FIELD_ISSN).replace("x", "X"));
+    }
+
+    if ( (am.get(MetadataField.FIELD_EISSN) != null) && (am.get(MetadataField.FIELD_EISSN).contains("x")))  {
+        log.debug3("Metadata check- EISSN: replacing lowercase_x  uppercase_X");
+        am.replace(MetadataField.FIELD_EISSN, am.get(MetadataField.FIELD_EISSN).replace("x", "X"));
+    }
+        /*
        * There are differences between books and journals, so fork for titles
        * and metadata check
        */ 
