@@ -1151,7 +1151,7 @@
 
       param[journal_id] = comedia-performance
 
-      au < ready ; exists ; 2004 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 1 ; 1 ; 2004 ; >
+      au < crawling ; exists ; 2004 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 1 ; 1 ; 2004 ; >
       au < finished ; manifest ; 2005 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 2 ; 2 ; 2005 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2006 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 3 ; 3 ; 2006 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2007 ; Comedia Performance: Journal of the Association for Hispanic Classical Theater Volume 4 ; 4 ; 2007 ; reingest2.clockss.org:8085 >
