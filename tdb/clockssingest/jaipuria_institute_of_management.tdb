@@ -22,7 +22,7 @@
       param[base_url] = https://managementdynamics.researchcommons.org/
       param[journal_abbr] = journal
 
-      au < crawling ; exists ; 2000 ; Management Dynamics Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2000 ; Management Dynamics Volume 1 ; 1 ; >
       au < ready ; exists ; 2001 ; Management Dynamics Volume 2 ; 2 ; >
       au < ready ; exists ; 2002 ; Management Dynamics Volume 3 ; 3 ; >
       au < ready ; exists ; 2003 ; Management Dynamics Volume 4 ; 4 ; >

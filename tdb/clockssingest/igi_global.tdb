@@ -4950,7 +4950,7 @@
       au < ready ; exists ; 2021 ; International Journal of Political Activism and Engagement (IJPAE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2022 ; International Journal of Political Activism and Engagement (IJPAE) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; International Journal of Political Activism and Engagement (IJPAE) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2024 ; International Journal of Political Activism and Engagement (IJPAE) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2024 ; International Journal of Political Activism and Engagement (IJPAE) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Political Activism and Engagement (IJPAE) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Political Activism and Engagement (IJPAE) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
 
@@ -5011,7 +5011,7 @@
       au < finished ; manifest ; 2018 ; International Journal of Public and Private Perspectives on Healthcare, Culture, and the Environment (IJPPPHCE) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2019 ; International Journal of Public and Private Perspectives on Healthcare, Culture, and the Environment (IJPPPHCE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2020 ; International Journal of Public and Private Perspectives on Healthcare, Culture, and the Environment (IJPPPHCE) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2021 ; International Journal of Public and Private Perspectives on Healthcare, Culture, and the Environment (IJPPPHCE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2021 ; International Journal of Public and Private Perspectives on Healthcare, Culture, and the Environment (IJPPPHCE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2022 ; International Journal of Public and Private Perspectives on Healthcare, Culture, and the Environment (IJPPPHCE) Volume 6 ; 6 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
       au < crawling ; exists ; 2023 ; International Journal of Public and Private Perspectives on Healthcare, Culture, and the Environment (IJPPPHCE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2024 ; International Journal of Public and Private Perspectives on Healthcare, Culture, and the Environment (IJPPPHCE) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
@@ -5242,7 +5242,7 @@
 
       param[journal_issn] = 3066-6392
 
-      au < crawling ; exists ; 2025 ; International Journal of Strategic Management and Innovation (IJSMI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2025 ; International Journal of Strategic Management and Innovation (IJSMI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Strategic Management and Innovation (IJSMI) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
 
   }
