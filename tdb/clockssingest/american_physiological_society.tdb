@@ -1282,7 +1282,7 @@
     param[journal_id] = function
 
       au < crawling ; exists ; 2020 ; Function Volume 1 ; 1 ; https://journals.physiology.org/ ; >
-      au < ready ; exists ; 2021 ; Function Volume 2 ; 2 ; https://journals.physiology.org/ ; >
+      au < crawling ; exists ; 2021 ; Function Volume 2 ; 2 ; https://journals.physiology.org/ ; >
       au < crawling ; exists ; 2022 ; Function Volume 3 ; 3 ; https://journals.physiology.org/ ; >
       au < ready ; exists ; 2023 ; Function Volume 4 ; 4 ; https://journals.physiology.org/ ; >
       au < ready ; exists ; 2024 ; Function Volume 5 ; 5 ; https://journals.physiology.org/ ; >

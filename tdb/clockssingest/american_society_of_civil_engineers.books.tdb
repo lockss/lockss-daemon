@@ -607,8 +607,8 @@
     au < manifest ; exists ; 2008 ; 9780784409930 ; 9780784472484 ; 9780784409930 ; STANDARD ANSI/ASCE/EWRI 50-08(R2022), 51-08(R2022) (9780784409930) ; >
     au < manifest ; exists ; 2009 ; 9780784410196 ; 9780784472699 ; 9780784410196 ; STANDARD ASCE/EWRI 33-09 (9780784410196) ; >
     au < ready ; exists ; 2010 ; 9780784410561 ; 9780784473030 ; 9780784410561 ; STANDARD ASCE/SEI 52-10 (9780784410561) ; >
-    au < ready ; exists ; 2010 ; 9780784410943 ; 9780784473344 ; 9780784410943 ; STANDARD ASCE/G-I 53-10 (9780784410943) ; >
-    au < ready ; exists ; 2010 ; 9780784410929 ; 9780784473320 ; 9780784410929 ; STANDARD ANSI/ASCE/EWRI 54-10(R2022) (9780784410929) ; >
+    au < crawling ; exists ; 2010 ; 9780784410943 ; 9780784473344 ; 9780784410943 ; STANDARD ASCE/G-I 53-10 (9780784410943) ; >
+    au < crawling ; exists ; 2010 ; 9780784410929 ; 9780784473320 ; 9780784410929 ; STANDARD ANSI/ASCE/EWRI 54-10(R2022) (9780784410929) ; >
     au < ready ; exists ; 2010 ; 9780784411254 ; 9780784473252 ; 9780784411254 ; STANDARD ASCE/T&DI 58-10 (9780784411254) ; >
     au < ready ; exists ; 2010 ; 9780784410974 ; 9780784473245 ; 9780784410974 ; STANDARD ASCE/SEI 55-10 (9780784410974) ; >
     au < ready ; exists ; 2010 ; 9780784411247 ; 9780784476802 ; 9780784411247 ; STANDARD ASCE/SEI 19-10 (9780784411247) ; >
@@ -625,7 +625,7 @@
     au < ready ; exists ; 2014 ; 9780784413258 ; 9780784478271 ; 9780784413258 ; STANDARD ASCE/SEI 30-14 (9780784413258) ; >
     au < ready ; exists ; 2014 ; 9780784413487 ; 9780784478349 ; 9780784413487 ; STANDARD ASCE/COPRI 61-14 (9780784413487) ; >
     au < crawling ; exists ; 2015 ; 9780784413791 ; 9780784478721 ; 9780784413791 ; STANDARD ASCE/SEI 24-14 (9780784413791) ; >
-    au < ready ; exists ; 2015 ; 9780784413630 ; 9780784478578 ; 9780784413630 ; STANDARD ASCE/CI 36-15 (9780784413630) ; >
+    au < crawling ; exists ; 2015 ; 9780784413630 ; 9780784478578 ; 9780784413630 ; STANDARD ASCE/CI 36-15 (9780784413630) ; >
     au < crawling ; exists ; 2015 ; 9780784413760 ; 9780784478707 ; 9780784413760 ; STANDARD ASCE/SEI 10-15 (9780784413760) ; >
     au < ready ; exists ; 2015 ; 9780784413562 ; 9780784479148 ; 9780784413562 ; STANDARD ANSI/ASCE/EWRI 39-15 (9780784413562) ; >
     au < ready ; exists ; 2015 ; 9780784413098 ; 9780784478691 ; 9780784413098 ; STANDARD ASCE/SEI 37-14(R2019) (9780784413098) ; >
@@ -636,7 +636,7 @@
     au < crawling ; exists ; 2016 ; 9780784413890 ; 9780784478936 ; 9780784413890 ; STANDARD ANSI/ASCE/SEI 25-16 (9780784413890) ; >
     au < ready ; exists ; 2017 ; 9780784413937 ; 9780784479988 ; 9780784413937 ; STANDARD ASCE/SEI 4-16 (9780784413937) ; >
     au < ready ; exists ; 2017 ; 9780784414262 ; 9780784480205 ; 9780784414262 ; STANDARD ANSI/ASCE/EWRI 62-16, 63-16, 64-16 (9780784414262) ; >
-    au < ready ; exists ; 2017 ; 9780784413319 ; 9780784480199 ; 9780784413319 ; STANDARD ANSI/ASCE/EWRI 45-16, 46-16, 47-16 (9780784413319) ; >
+    au < crawling ; exists ; 2017 ; 9780784413319 ; 9780784480199 ; 9780784413319 ; STANDARD ANSI/ASCE/EWRI 45-16, 46-16, 47-16 (9780784413319) ; >
     au < crawling ; exists ; 2017 ; 9780784414408 ; 9780784479766 ; 9780784414408 ; STANDARD ANSI/ASCE/EWRI 42-17 (9780784414408) ; >
     au < ready ; exists ; 2017 ; 9780784414347 ; 9780784480496 ; 9780784414347 ; STANDARD ANSI/ASCE/EWRI 65-17 (9780784414347) ; >
     au < ready ; exists ; 2017 ; 9780784414248 ; 9780784479964 ; 9780784414248 ; STANDARD ASCE/SEI 7-16 (9780784414248) ; >
@@ -1397,7 +1397,7 @@
     au < crawling ; exists ; 2019 ;  ; 9780784482353 ; 9780784482353 ; World Environmental and Water Resources Congress 2019, Hydraulics, Waterways, and Water Distribution Systems Analysis (9780784482353) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482339 ; 9780784482339 ; World Environmental and Water Resources Congress 2019, Watershed Management, Irrigation and Drainage, and Water Resources Planning and Management (9780784482339) ; >
     au < testing ; exists ; 2019 ;  ; 9780784482377 ; 9780784482377 ; World Environmental and Water Resources Congress 2019, EWRI History and Heritage Symposium (9780784482377) ; >
-    au < ready ; exists ; 2019 ;  ; 9780784482445 ; 9780784482445 ; Computing in Civil Engineering 2019, Smart Cities, Sustainability, and Resilience (9780784482445) ; >
+    au < crawling ; exists ; 2019 ;  ; 9780784482445 ; 9780784482445 ; Computing in Civil Engineering 2019, Smart Cities, Sustainability, and Resilience (9780784482445) ; >
     au < testing ; exists ; 2019 ;  ; 9780784482421 ; 9780784482421 ; Computing in Civil Engineering 2019, Visualization, Information Modeling, and Simulation (9780784482421) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482438 ; 9780784482438 ; Computing in Civil Engineering 2019, Data, Sensing, and Analytics (9780784482438) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482292 ; 9780784482292 ; CICTP 2019, Transportation in China--Connecting the World (9780784482292) ; >
@@ -1415,7 +1415,7 @@
     au < ready ; exists ; 2019 ;  ; 9780784482629 ; 9780784482629 ; Ports 2019, Port Planning and Development (9780784482629) ; >
     au < crawling ; exists ; 2019 ;  ; 9780784482513 ; 9780784482513 ; Transportation Research Congress 2017, Sustainable, Smart, and Resilient Transportation (9780784482513) ; >
     au < testing ; exists ; 2019 ;  ; 9780784482650 ; 9780784482650 ; International Conference on Sustainable Infrastructure 2019, Leading Resilient Communities through the 21st Century (9780784482650) ; >
-    au < ready ; exists ; 2019 ;  ; 9780784482742 ; 9780784482742 ; ICTE 2019 (9780784482742) ; >
+    au < crawling ; exists ; 2019 ;  ; 9780784482742 ; 9780784482742 ; ICTE 2019 (9780784482742) ; >
     au < frozen ; exists ; 2020 ;  ; 9780784482810 ; 9780784482810 ; Geo-Congress 2020, Geotechnical Earthquake Engineering and Special Topics, GSP 318 (9780784482810) ; >
     au < frozen ; exists ; 2020 ;  ; 9780784482834 ; 9780784482834 ; Geo-Congress 2020, Biogeotechnics, GSP 320 (9780784482834) ; >
     au < frozen ; exists ; 2020 ;  ; 9780784482797 ; 9780784482797 ; Geo-Congress 2020, Engineering, Monitoring, and Management of Geotechnical Infrastructure, GSP 316 (9780784482797) ; >
@@ -1547,7 +1547,7 @@
     #au < exists ; exists ; 2012 ; 9780784412435 ;  ; 9780784412435 ; Civil Engineering and Urban Planning 2012 (9780784412435) ; > #duplicate
     au < crawling ; exists ; 2025 ;  ; 9780784486214 ; 9780784486214 ; Airfield and Highway Pavements 2025 (9780784486214) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784486221 ; 9780784486221 ; Airfield and Highway Pavements 2025 (9780784486221) ; >
-    au < ready ; exists ; 2025 ;  ; 9780784486238 ; 9780784486238 ; Airfield and Highway Pavements 2025 (9780784486238) ; >
+    au < crawling ; exists ; 2025 ;  ; 9780784486238 ; 9780784486238 ; Airfield and Highway Pavements 2025 (9780784486238) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486269 ; 9780784486269 ; CICTP 2025 (9780784486269) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784486481 ; 9780784486481 ; CISSC 2025 (9780784486481) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486115 ; 9780784486115 ; Computing in Civil Engineering 2024 (9780784486115) ; >
