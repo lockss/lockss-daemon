@@ -204,6 +204,13 @@ public class V2AuMover {
   public static final long DEFAULT_THREAD_TIMEOUT = 30 * Constants.SECOND;
 
   /**
+   * Full Executor retry interval
+   */
+  public static final String PARAM_EXECUTOR_RETRY_INTERVAL =
+    PREFIX + "executorRetryInterval";
+  public static final long DEFAULT_EXECUTOR_RETRY_INTERVAL = Constants.SECOND;
+
+  /**
    * V2 namespace to migrate into
    */
   public static final String V2_PARAM_NAMESPACE
@@ -547,6 +554,7 @@ public class V2AuMover {
   private ThreadPoolExecutor stateVerifyExecutor;
   private ThreadPoolExecutor miscExecutor;
   private ThreadPoolExecutor indexExecutor;
+  private long executorRetryInterval;
 
   //////////////////////////////////////////////////////////////////////
   // State vars
@@ -688,6 +696,10 @@ public class V2AuMover {
       miscExecutor = createOrReConfigureExecutor(miscExecutor, config,
                                                  PARAM_MISC_EXECUTOR_SPEC,
                                                  DEFAULT_MISC_EXECUTOR_SPEC);
+
+      executorRetryInterval =
+        config.getTimeInterval(PARAM_EXECUTOR_RETRY_INTERVAL,
+                               DEFAULT_EXECUTOR_RETRY_INTERVAL);
 
       if (changedKeys.contains(PARAM_DISK_SPACE_BYTES_CURVE)) {
         String curve = config.get(PARAM_DISK_SPACE_BYTES_CURVE,
@@ -2402,28 +2414,54 @@ public class V2AuMover {
   public ThreadPoolExecutor makeExecutor(int queueMax, long threadTimeout,
                                          int coreThreads, int maxThreads) {
     ThreadPoolExecutor exec =
-      new ThreadPoolExecutor(coreThreads, maxThreads,
-                             threadTimeout, TimeUnit.MILLISECONDS,
-                             new LinkedBlockingQueue<>(queueMax));
+      new BlockingThreadPoolExecutor(coreThreads, maxThreads,
+                                     threadTimeout, TimeUnit.MILLISECONDS,
+                                     new LinkedBlockingQueue<>(queueMax));
     exec.allowCoreThreadTimeOut(true);
-    exec.setRejectedExecutionHandler(new RejectedExecutionHandler() {
-        @Override
-        public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
+    return exec;
+  }
+
+  /** A ThreadPoolExecutor that blocks submitters until their request
+   * can be accepted (i.e., there is room in the queue), by sleeping
+   * and looping until execute() succeeds.  The Semaphore ensures that
+   * execute() calls succeed in the order they were made.  Without it,
+   * threads in the retry loop could get stuck artibrarily long
+   * repeatedly sleep()ing while others make successful requests
+   * (either initially or as retries) and refill the queue.
+   */
+  class BlockingThreadPoolExecutor extends ThreadPoolExecutor {
+    Semaphore sem = new Semaphore(1, true);
+
+    public BlockingThreadPoolExecutor(int corePoolSize,
+                                      int maximumPoolSize,
+                                      long keepAliveTime,
+                                      TimeUnit unit,
+                                      BlockingQueue<Runnable> workQueue) {
+      super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue);
+    }
+
+    @Override
+    public void execute(Runnable command) {
+      try {
+        while (true) {
           try {
-            // block until there's room
-            executor.getQueue().put(r);
-            // check afterwards and throw if pool shutdown
-            if (executor.isShutdown()) {
-              throw new RejectedExecutionException("Task " + r +
-                                                   " rejected from because shutdown");
+            super.execute(command);
+            return;
+          } catch (RejectedExecutionException e) {
+            if (isShutdown()) {
+              throw e;
             }
-          } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            throw new RejectedExecutionException("Producer interrupted", e);
+            Thread.sleep(executorRetryInterval);
+            if (isShutdown()) {
+              throw e;
+            }
           }
         }
-      });
-    return exec;
+      } catch (InterruptedException ie) {
+        Thread.currentThread().interrupt();
+        throw new RejectedExecutionException("Producer interrupted", ie);
+      }
+    }
   }
 
   //////////////////////////////////////////////////////////////////////
