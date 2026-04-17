@@ -510,7 +510,7 @@
       param[journal_id] = JMTT
 
       au < finished ; finished ; 2008 ; Jurnal Manajemen Teori dan Terapan Volume 1 ; 1 ; 2008 ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2009 ; Jurnal Manajemen Teori dan Terapan Volume 2 ; 2 ; 2009 ; >
+      au < crawling ; exists ; 2009 ; Jurnal Manajemen Teori dan Terapan Volume 2 ; 2 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Jurnal Manajemen Teori dan Terapan Volume 3 ; 3 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Jurnal Manajemen Teori dan Terapan Volume 4 ; 4 ; 2011 ; >
       au < finished ; frozen ; 2012 ; Jurnal Manajemen Teori dan Terapan Volume 5 ; 5 ; 2012 ; reingest5.clockss.org:8082 >
@@ -2323,7 +2323,7 @@
 
       param[journal_id] = jju
 
-      au < ready ; exists ; 2019 ; Japanology: The Journal of Japanese Studies Volume 8 (2019) ; 8 ; 2019 ; >
+      au < crawling ; exists ; 2019 ; Japanology: The Journal of Japanese Studies Volume 8 (2019) ; 8 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Japanology: The Journal of Japanese Studies Volume 8 (2020) ; 8 ; 2020 ; >
       au < ready ; exists ; 2022 ; Japanology: The Journal of Japanese Studies Volume 9 ; 9 ; 2022 ; >
       au < ready ; exists ; 2023 ; Japanology: The Journal of Japanese Studies Volume 10 ; 10 ; 2023 ; >

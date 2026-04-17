@@ -618,7 +618,7 @@
     au < ready ; exists ; 2012 ; 9780784412282 ; 9780784476901 ; 9780784412282 ; STANDARD ASCE/SEI 49-12 (9780784412282) ; >
     au < ready ; exists ; 2012 ; 9780784412305 ; 9780784476918 ; 9780784412305 ; STANDARD ASCE/EWRI 60-12 (9780784412305) ; >
     au < ready ; exists ; 2013 ; 9780784412985 ; 9780784477878 ; 9780784412985 ; STANDARD ANSI/ASCE/T&DI 21-13 (9780784412985) ; >
-    au < ready ; exists ; 2013 ; 9780784412916 ; 9780784477854 ; 9780784412916 ; STANDARD ASCE/SEI 7-10 (9780784412916) ; >
+    au < crawling ; exists ; 2013 ; 9780784412916 ; 9780784477854 ; 9780784412916 ; STANDARD ASCE/SEI 7-10 (9780784412916) ; >
     au < ready ; exists ; 2013 ; 9780784413104 ; 9780784477984 ; 9780784413104 ; STANDARD ANSI/ASCE/EWRI 44-13 (9780784413104) ; >
     au < crawling ; exists ; 2013 ; 9780784413050 ; 9780784477939 ; 9780784413050 ; STANDARD ANSI/ASCE/EWRI 12-13, 13-13, 14-13 (9780784413050) ; >
     au < ready ; exists ; 2014 ; 9780784412855 ; 9780784477915 ; 9780784412855 ; STANDARD ASCE/SEI 41-13 (9780784412855) ; >
@@ -628,10 +628,10 @@
     au < crawling ; exists ; 2015 ; 9780784413630 ; 9780784478578 ; 9780784413630 ; STANDARD ASCE/CI 36-15 (9780784413630) ; >
     au < crawling ; exists ; 2015 ; 9780784413760 ; 9780784478707 ; 9780784413760 ; STANDARD ASCE/SEI 10-15 (9780784413760) ; >
     au < ready ; exists ; 2015 ; 9780784413562 ; 9780784479148 ; 9780784413562 ; STANDARD ANSI/ASCE/EWRI 39-15 (9780784413562) ; >
-    au < ready ; exists ; 2015 ; 9780784413098 ; 9780784478691 ; 9780784413098 ; STANDARD ASCE/SEI 37-14(R2019) (9780784413098) ; >
+    au < crawling ; exists ; 2015 ; 9780784413098 ; 9780784478691 ; 9780784413098 ; STANDARD ASCE/SEI 37-14(R2019) (9780784413098) ; >
     au < crawling ; exists ; 2015 ;  ; 9780784478660 ; 9780784478660 ; Fillable Forms for Standard ASCE/SEI 41-13 (9780784478660) ; >
     au < crawling ; exists ; 2016 ; 9780784414392 ; 9780784479759 ; 9780784414392 ; STANDARD ASCE/SEI 19-16 (9780784414392) ; >
-    au < ready ; exists ; 2016 ; 9780784414378 ; 9780784479995 ; 9780784414378 ; STANDARD ASCE/SEI 55-16 (9780784414378) ; >
+    au < crawling ; exists ; 2016 ; 9780784414378 ; 9780784479995 ; 9780784414378 ; STANDARD ASCE/SEI 55-16 (9780784414378) ; >
     au < crawling ; exists ; 2016 ; 9780784414507 ; 9780784480281 ; 9780784414507 ; STANDARD ASCE/T&DI/ICPI 58-16 (9780784414507) ; >
     au < crawling ; exists ; 2016 ; 9780784413890 ; 9780784478936 ; 9780784413890 ; STANDARD ANSI/ASCE/SEI 25-16 (9780784413890) ; >
     au < ready ; exists ; 2017 ; 9780784413937 ; 9780784479988 ; 9780784413937 ; STANDARD ASCE/SEI 4-16 (9780784413937) ; >
@@ -676,7 +676,7 @@
     au < frozen ; exists ; 2024 ; 9780784414989 ; 9780784481226 ; 9780784414989 ; STANDARD ASCE/EWRI 33-23 (9780784414989) ; >
 
     #au < exists ; exists ; 1900 ;  ; 9780784470824 ; 9780784405642 ; Design and Construction of Frost-Protected Shallow Foundations (9780784405642) ; >
-    au < ready ; exists ; 1983 ; 9780872623750 ; 9780784473566 ; 9780872623750 ; N-725 Guideline for Design and Analysis of Nuclear Safety Related Earth Structures (9780872623750) ; >
+    au < crawling ; exists ; 1983 ; 9780872623750 ; 9780784473566 ; 9780872623750 ; N-725 Guideline for Design and Analysis of Nuclear Safety Related Earth Structures (9780872623750) ; >
     au < exists ; exists ; 1990 ; 9780872627420 ; 9780784473627 ; 9780872627420 ; Minimum Design Loads for Buildings and Other Structures (9780872627420) ; >
     #au < exists ; exists ; 1993 ; 9780872628854 ; 9780784473702 ; 9780872628854 ; Measurement of Oxygen Transfer in Clean Water (9780872628854) ; >
     #au < exists ; exists ; 1994 ; 9780872629042 ; 9780784479100 ; 9780872629042 ; Minimum Design Loads for Buildings and Other Structures, (9780872629042) ; >
@@ -1553,7 +1553,7 @@
     au < ready ; exists ; 2025 ;  ; 9780784486115 ; 9780784486115 ; Computing in Civil Engineering 2024 (9780784486115) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486122 ; 9780784486122 ; Computing in Civil Engineering 2024 (9780784486122) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486139 ; 9780784486139 ; Computing in Civil Engineering 2024 (9780784486139) ; >
-    au < ready ; exists ; 2025 ;  ; 9780784486542 ; 9780784486542 ; Electrical Transmission and Substation Structures 2025 (9780784486542) ; >
+    au < crawling ; exists ; 2025 ;  ; 9780784486542 ; 9780784486542 ; Electrical Transmission and Substation Structures 2025 (9780784486542) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784485682 ; 9780784485682 ; Geo-EnvironMeet 2025 (9780784485682) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784485699 ; 9780784485699 ; Geo-EnvironMeet 2025 (9780784485699) ; >
     au < ready ; exists ; 2025 ;  ; 9780784485705 ; 9780784485705 ; Geo-EnvironMeet 2025 (9780784485705) ; >
@@ -1566,7 +1566,7 @@
     au < crawling ; exists ; 2025 ;  ; 9780784485965 ; 9780784485965 ; Geotechnical Frontiers 2025 (9780784485965) ; >
     au < ready ; exists ; 2025 ;  ; 9780784485972 ; 9780784485972 ; Geotechnical Frontiers 2025 (9780784485972) ; >
     au < ready ; exists ; 2025 ;  ; 9780784485989 ; 9780784485989 ; Geotechnical Frontiers 2025 (9780784485989) ; >
-    au < ready ; exists ; 2025 ;  ; 9780784485996 ; 9780784485996 ; Geotechnical Frontiers 2025 (9780784485996) ; >
+    au < crawling ; exists ; 2025 ;  ; 9780784485996 ; 9780784485996 ; Geotechnical Frontiers 2025 (9780784485996) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784486009 ; 9780784486009 ; Geotechnical Frontiers 2025 (9780784486009) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486016 ; 9780784486016 ; Geotechnical Frontiers 2025 (9780784486016) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486047 ; 9780784486047 ; ICCESP 2024 (9780784486047) ; >
