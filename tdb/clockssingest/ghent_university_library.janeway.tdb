@@ -149,6 +149,70 @@
   {
 
       title <
+        name = Akkadica ;
+        eissn = 3041-2854
+      >
+
+      #published 2024-2025
+      param[base_url] = https://akkadica.ugent.be/
+      #param[journal_id] = akkadica
+
+      au < manifest ; exists ; 1977 ; 1977 ; 1977 ; Akkadica Volume 1977 ; >
+      au < manifest ; exists ; 1978 ; 1978 ; 1978 ; Akkadica Volume 1978 ; >
+      au < manifest ; exists ; 1979 ; 1979 ; 1979 ; Akkadica Volume 1979 ; >
+      au < manifest ; exists ; 1980 ; 1980 ; 1980 ; Akkadica Volume 1980 ; >
+      au < manifest ; exists ; 1981 ; 1981 ; 1981 ; Akkadica Volume 1981 ; >
+      au < manifest ; exists ; 1982 ; 1982 ; 1982 ; Akkadica Volume 1982 ; >
+      au < manifest ; exists ; 1983 ; 1983 ; 1983 ; Akkadica Volume 1983 ; >
+      au < manifest ; exists ; 1984 ; 1984 ; 1984 ; Akkadica Volume 1984 ; >
+      au < manifest ; exists ; 1985 ; 1985 ; 1985 ; Akkadica Volume 1985 ; >
+      au < manifest ; exists ; 1986 ; 1986 ; 1986 ; Akkadica Volume 1986 ; >
+      au < manifest ; exists ; 1987 ; 1987 ; 1987 ; Akkadica Volume 1987 ; >
+      au < manifest ; exists ; 1988 ; 1988 ; 1988 ; Akkadica Volume 1988 ; >
+      au < manifest ; exists ; 1989 ; 1989 ; 1989 ; Akkadica Volume 1989 ; >
+      au < manifest ; exists ; 1990 ; 1990 ; 1990 ; Akkadica Volume 1990 ; >
+      au < manifest ; exists ; 1991 ; 1991 ; 1991 ; Akkadica Volume 1991 ; >
+      au < manifest ; exists ; 1992 ; 1992 ; 1992 ; Akkadica Volume 1992 ; >
+      au < manifest ; exists ; 1993 ; 1993 ; 1993 ; Akkadica Volume 1993 ; >
+      au < manifest ; exists ; 1994 ; 1994 ; 1994 ; Akkadica Volume 1994 ; >
+      au < manifest ; exists ; 1995 ; 1995 ; 1995 ; Akkadica Volume 1995 ; >
+      au < manifest ; exists ; 1996 ; 1996 ; 1996 ; Akkadica Volume 1996 ; >
+      au < manifest ; exists ; 1997 ; 1997 ; 1997 ; Akkadica Volume 1997 ; >
+      au < manifest ; exists ; 1998 ; 1998 ; 1998 ; Akkadica Volume 1998 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; 1999 ; Akkadica Volume 1999 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Akkadica Volume 2000 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Akkadica Volume 2001 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Akkadica Volume 2002 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Akkadica Volume 2003 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Akkadica Volume 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Akkadica Volume 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Akkadica Volume 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Akkadica Volume 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Akkadica Volume 2008 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Akkadica Volume 2009 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Akkadica Volume 2010 ; >
+      au < manifest ; exists ; 2011 ; 2011 ; 2011 ; Akkadica Volume 2011 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Akkadica Volume 2012 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Akkadica Volume 2013 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Akkadica Volume 2014 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Akkadica Volume 2015 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Akkadica Volume 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Akkadica Volume 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Akkadica Volume 2018 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Akkadica Volume 2019 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Akkadica Volume 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Akkadica Volume 2021 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Akkadica Volume 2022 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Akkadica Volume 2023 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Akkadica Volume 2024 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Akkadica Volume 2025 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; 2026 ; Akkadica Volume 2026 ; >
+
+  }
+
+  {
+
+      title <
         name = Law & Criminology Journal ;
         eissn = 3041-2854
       >
@@ -1690,6 +1754,48 @@
       au < finished ; manifest ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 ; reingest2.clockss.org:8085 >
       au < crawling ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 ; >
       au < manifest ; exists ; 2026 ; 2026 ; 2026 ; Tijdschrift Sociologie Volume 2026 ; >
+
+  }
+
+  {
+
+      title <
+        name = Ethiek & Maatschappij ;
+        eissn = 1373-0975
+      >
+
+      #published 1998-present
+      param[journal_id] = em
+
+      au < manifest ; exists ; 1998 ; 1998 ; 1998 ; Tijdschrift Sociologie Volume 1998 ; >
+      au < manifest ; exists ; 1999 ; 1999 ; 1999 ; Tijdschrift Sociologie Volume 1999 ; >
+      au < manifest ; exists ; 2000 ; 2000 ; 2000 ; Tijdschrift Sociologie Volume 2000 ; >
+      au < manifest ; exists ; 2001 ; 2001 ; 2001 ; Tijdschrift Sociologie Volume 2001 ; >
+      au < manifest ; exists ; 2002 ; 2002 ; 2002 ; Tijdschrift Sociologie Volume 2002 ; >
+      au < manifest ; exists ; 2003 ; 2003 ; 2003 ; Tijdschrift Sociologie Volume 2003 ; >
+      au < manifest ; exists ; 2004 ; 2004 ; 2004 ; Tijdschrift Sociologie Volume 2004 ; >
+      au < manifest ; exists ; 2005 ; 2005 ; 2005 ; Tijdschrift Sociologie Volume 2005 ; >
+      au < manifest ; exists ; 2006 ; 2006 ; 2006 ; Tijdschrift Sociologie Volume 2006 ; >
+      au < manifest ; exists ; 2007 ; 2007 ; 2007 ; Tijdschrift Sociologie Volume 2007 ; >
+      au < manifest ; exists ; 2008 ; 2008 ; 2008 ; Tijdschrift Sociologie Volume 2008 ; >
+      au < manifest ; exists ; 2009 ; 2009 ; 2009 ; Tijdschrift Sociologie Volume 2009 ; >
+      au < manifest ; exists ; 2010 ; 2010 ; 2010 ; Tijdschrift Sociologie Volume 2010 ; >
+      au < exists ; exists ; 2011 ; 2011 ; 2011 ; Tijdschrift Sociologie Volume 2011 ; >
+      au < manifest ; exists ; 2012 ; 2012 ; 2012 ; Tijdschrift Sociologie Volume 2012 ; >
+      au < manifest ; exists ; 2013 ; 2013 ; 2013 ; Tijdschrift Sociologie Volume 2013 ; >
+      au < manifest ; exists ; 2014 ; 2014 ; 2014 ; Tijdschrift Sociologie Volume 2014 ; >
+      au < manifest ; exists ; 2015 ; 2015 ; 2015 ; Tijdschrift Sociologie Volume 2015 ; >
+      au < manifest ; exists ; 2016 ; 2016 ; 2016 ; Tijdschrift Sociologie Volume 2016 ; >
+      au < manifest ; exists ; 2017 ; 2017 ; 2017 ; Tijdschrift Sociologie Volume 2017 ; >
+      au < manifest ; exists ; 2018 ; 2018 ; 2018 ; Tijdschrift Sociologie Volume 2018 ; >
+      au < manifest ; exists ; 2019 ; 2019 ; 2019 ; Tijdschrift Sociologie Volume 2019 ; >
+      au < manifest ; exists ; 2020 ; 2020 ; 2020 ; Tijdschrift Sociologie Volume 2020 ; >
+      au < manifest ; exists ; 2021 ; 2021 ; 2021 ; Tijdschrift Sociologie Volume 2021 ; >
+      au < manifest ; exists ; 2022 ; 2022 ; 2022 ; Tijdschrift Sociologie Volume 2022 ; >
+      au < manifest ; exists ; 2023 ; 2023 ; 2023 ; Tijdschrift Sociologie Volume 2023 ; >
+      au < manifest ; exists ; 2024 ; 2024 ; 2024 ; Tijdschrift Sociologie Volume 2024 ; >
+      au < manifest ; exists ; 2025 ; 2025 ; 2025 ; Tijdschrift Sociologie Volume 2025 ; >
+      au < expected ; exists ; 2026 ; 2026 ; 2026 ; Tijdschrift Sociologie Volume 2026 ; >
 
   }
 
