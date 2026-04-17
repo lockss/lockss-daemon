@@ -38,7 +38,7 @@
       param[journal_id] = jophd
       #LXQUEUE-2158
       
-      au < ojs2.ClockssOJS2Plugin ; manifest ; 2013 ; 1 ; Journal of Open Public Health Data Volume 1 ; 2013 >
+      au < ojs2.ClockssOJS2Plugin ; released ; 2013 ; 1 ; Journal of Open Public Health Data Volume 1 ; 2013 >
 
   }
 
@@ -54,7 +54,7 @@
       param[journal_id] = up-j-ohd
       #LXQUEUE-2158
       
-      au < ojs3.ClockssOjs3Plugin ; manifest ; 2022 ; 9 ; Open Health Data Volume 9 ; 2022 >
+      au < ojs3.ClockssOjs3Plugin ; released ; 2022 ; 9 ; Open Health Data Volume 9 ; 2022 >
 
   }
 
