@@ -869,7 +869,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = oz
 
-      au < ready ; exists ; 1979 ; Oz Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1979 ; Oz Volume 1 ; 1 ; >
       au < finished ; manifest ; 1980 ; Oz Volume 2 ; 2 ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 1981 ; Oz Volume 3 ; 3 ; >
       au < finished ; manifest ; 1982 ; Oz Volume 4 ; 4 ; reingest5.clockss.org:8082 >

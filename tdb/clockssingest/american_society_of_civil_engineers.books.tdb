@@ -619,7 +619,7 @@
     au < ready ; exists ; 2012 ; 9780784412305 ; 9780784476918 ; 9780784412305 ; STANDARD ASCE/EWRI 60-12 (9780784412305) ; >
     au < ready ; exists ; 2013 ; 9780784412985 ; 9780784477878 ; 9780784412985 ; STANDARD ANSI/ASCE/T&DI 21-13 (9780784412985) ; >
     au < crawling ; exists ; 2013 ; 9780784412916 ; 9780784477854 ; 9780784412916 ; STANDARD ASCE/SEI 7-10 (9780784412916) ; >
-    au < ready ; exists ; 2013 ; 9780784413104 ; 9780784477984 ; 9780784413104 ; STANDARD ANSI/ASCE/EWRI 44-13 (9780784413104) ; >
+    au < crawling ; exists ; 2013 ; 9780784413104 ; 9780784477984 ; 9780784413104 ; STANDARD ANSI/ASCE/EWRI 44-13 (9780784413104) ; >
     au < crawling ; exists ; 2013 ; 9780784413050 ; 9780784477939 ; 9780784413050 ; STANDARD ANSI/ASCE/EWRI 12-13, 13-13, 14-13 (9780784413050) ; >
     au < ready ; exists ; 2014 ; 9780784412855 ; 9780784477915 ; 9780784412855 ; STANDARD ASCE/SEI 41-13 (9780784412855) ; >
     au < ready ; exists ; 2014 ; 9780784413258 ; 9780784478271 ; 9780784413258 ; STANDARD ASCE/SEI 30-14 (9780784413258) ; >
@@ -640,7 +640,7 @@
     au < crawling ; exists ; 2017 ; 9780784414408 ; 9780784479766 ; 9780784414408 ; STANDARD ANSI/ASCE/EWRI 42-17 (9780784414408) ; >
     au < ready ; exists ; 2017 ; 9780784414347 ; 9780784480496 ; 9780784414347 ; STANDARD ANSI/ASCE/EWRI 65-17 (9780784414347) ; >
     au < ready ; exists ; 2017 ; 9780784414248 ; 9780784479964 ; 9780784414248 ; STANDARD ASCE/SEI 7-16 (9780784414248) ; >
-    au < ready ; exists ; 2017 ;  ; 9780784480748 ; 9780784480748 ; Zone Maps for STANDARD ASCE 7-16  (9780784480748) ; >
+    au < crawling ; exists ; 2017 ;  ; 9780784480748 ; 9780784480748 ; Zone Maps for STANDARD ASCE 7-16  (9780784480748) ; >
     au < ready ; exists ; 2017 ; 9780784413074 ; 9780784480335 ; 9780784413074 ; STANDARD ASCE/CI 15-17 (9780784413074) ; >
     au < ready ; exists ; 2017 ; 9780784413081 ; 9780784480373 ; 9780784413081 ; STANDARD ASCE/CI 27-17 (9780784413081) ; >
     au < ready ; exists ; 2017 ; 9780784414224 ; 9780784479407 ; 9780784414224 ; STANDARD ANSI/ASCE/EWRI 66-17 (9780784414224) ; >
@@ -648,7 +648,7 @@
     au < ready ; exists ; 2017 ; 9780784414859 ; 9780784480816 ; 9780784414859 ; STANDARD ASCE/SEI 41-17 (9780784414859) ; >
     au < crawling ; exists ; 2018 ; 9780784414958 ; 9780784481868 ; 9780784414958 ; STANDARD ASCE/EWRI 18-18 (9780784414958) ; >
     au < crawling ; exists ; 2018 ; 9780784415009 ; 9780784481929 ; 9780784415009 ; STANDARD ASCE/T&DI/ICPI 68-18 (9780784415009) ; >
-    au < ready ; exists ; 2018 ; 9780784414682 ; 9780784480366 ; 9780784414682 ; STANDARD ASCE/EWRI 40-18 (9780784414682) ; >
+    au < crawling ; exists ; 2018 ; 9780784414682 ; 9780784480366 ; 9780784414682 ; STANDARD ASCE/EWRI 40-18 (9780784414682) ; >
     au < crawling ; exists ; 2019 ; 9780784415030 ; 9780784482391 ; 9780784415030 ; STANDARD ASCE/G-I 53-19 (9780784415030) ; >
     au < frozen ; exists ; 2020 ; 9780784415412 ; 9780784482520 ; 9780784415412 ; STANDARD ANSI/ASCE/EWRI 70-19 (9780784415412) ; >
     au < frozen ; exists ; 2020 ; 9780784415078 ; 9780784482254 ; 9780784415078 ; STANDARD ASCE/SEI 48-19 (9780784415078) ; >
@@ -1380,9 +1380,9 @@
     au < testing ; exists ; 2019 ;  ; 9780784482124 ; 9780784482124 ; Geo-Congress 2019, Geotechnical Materials, Modeling, and Testing, GSP 310 (9780784482124) ; >
     au < testing ; exists ; 2019 ;  ; 9780784482070 ; 9780784482070 ; Geo-Congress 2019, Embankments, Dams, and Slopes, GSP 305 (9780784482070) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482094 ; 9780784482094 ; Geo-Congress 2019, Foundations, GSP 307 (9780784482094) ; >
-    au < ready ; exists ; 2019 ;  ; 9780784482162 ; 9780784482162 ; Geo-Congress 2019, Data, Software, Education, and a Tribute to Ralph Peck, GSP 314 (9780784482162) ; >
+    au < crawling ; exists ; 2019 ;  ; 9780784482162 ; 9780784482162 ; Geo-Congress 2019, Data, Software, Education, and a Tribute to Ralph Peck, GSP 314 (9780784482162) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482117 ; 9780784482117 ; Geo-Congress 2019, Soil Improvement, GSP 309 (9780784482117) ; >
-    au < ready ; exists ; 2019 ;  ; 9780784482148 ; 9780784482148 ; Geo-Congress 2019, Geoenvironmental Engineering and Sustainability, GSP 312 (9780784482148) ; >
+    au < crawling ; exists ; 2019 ;  ; 9780784482148 ; 9780784482148 ; Geo-Congress 2019, Geoenvironmental Engineering and Sustainability, GSP 312 (9780784482148) ; >
     au < crawling ; exists ; 2019 ;  ; 9780784482155 ; 9780784482155 ; Geo-Congress 2019, Soil Erosion, Underground Engineering, and Risk Assessment, GSP 313 (9780784482155) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482100 ; 9780784482100 ; Geo-Congress 2019, Earthquake Engineering and Soil Dynamics, GSP 308 (9780784482100) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482131 ; 9780784482131 ; Geo-Congress 2019, Engineering Geology, Site Characterization, and Geophysics, GSP 311 (9780784482131) ; >
@@ -1402,13 +1402,13 @@
     au < ready ; exists ; 2019 ;  ; 9780784482438 ; 9780784482438 ; Computing in Civil Engineering 2019, Data, Sensing, and Analytics (9780784482438) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482292 ; 9780784482292 ; CICTP 2019, Transportation in China--Connecting the World (9780784482292) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482483 ; 9780784482483 ; Pipelines 2019, Planning and Design (9780784482483) ; >
-    au < ready ; exists ; 2019 ;  ; 9780784482506 ; 9780784482506 ; Pipelines 2019, Multidisciplinary Topics, Utility Engineering, and Surveying (9780784482506) ; >
+    au < crawling ; exists ; 2019 ;  ; 9780784482506 ; 9780784482506 ; Pipelines 2019, Multidisciplinary Topics, Utility Engineering, and Surveying (9780784482506) ; >
     au < testing ; exists ; 2019 ;  ; 9780784482452 ; 9780784482452 ; Airfield and Highway Pavements 2019 (9780784482452) ; >
     au < crawling ; exists ; 2019 ;  ; 9780784482469 ; 9780784482469 ; Airfield and Highway Pavements 2019, Testing and Characterization of Pavement Materials (9780784482469) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482476 ; 9780784482476 ; Airfield and Highway Pavements 2019, Innovation and Sustainability in Highway and Airfield Pavement Technology (9780784482476) ; >
     au < crawling ; exists ; 2019 ;  ; 9780784482490 ; 9780784482490 ; Pipelines 2019, Condition Assessment, Construction, and Rehabilitation (9780784482490) ; >
     au < testing ; exists ; 2019 ;  ; 9780784482599 ; 9780784482599 ; Cold Regions Engineering 2019 (9780784482599) ; >
-    au < ready ; exists ; 2019 ;  ; 9780784482575 ; 9780784482575 ; International Conference on Transportation and Development 2019, Smarter and Safer Mobility and Cities (9780784482575) ; >
+    au < crawling ; exists ; 2019 ;  ; 9780784482575 ; 9780784482575 ; International Conference on Transportation and Development 2019, Smarter and Safer Mobility and Cities (9780784482575) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482582 ; 9780784482582 ; International Conference on Transportation and Development 2019, Innovation and Sustainability in Smart Mobility and Smart Cities (9780784482582) ; >
     au < crawling ; exists ; 2019 ;  ; 9780784482308 ; 9780784482308 ; ICCREM 2019, Innovative Construction Project Management and Construction Industrialization (9780784482308) ; >
     au < testing ; exists ; 2019 ;  ; 9780784482612 ; 9780784482612 ; Ports 2019, Port Engineering (9780784482612) ; >
@@ -1548,7 +1548,7 @@
     au < crawling ; exists ; 2025 ;  ; 9780784486214 ; 9780784486214 ; Airfield and Highway Pavements 2025 (9780784486214) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784486221 ; 9780784486221 ; Airfield and Highway Pavements 2025 (9780784486221) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784486238 ; 9780784486238 ; Airfield and Highway Pavements 2025 (9780784486238) ; >
-    au < ready ; exists ; 2025 ;  ; 9780784486269 ; 9780784486269 ; CICTP 2025 (9780784486269) ; >
+    au < crawling ; exists ; 2025 ;  ; 9780784486269 ; 9780784486269 ; CICTP 2025 (9780784486269) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784486481 ; 9780784486481 ; CISSC 2025 (9780784486481) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486115 ; 9780784486115 ; Computing in Civil Engineering 2024 (9780784486115) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486122 ; 9780784486122 ; Computing in Civil Engineering 2024 (9780784486122) ; >
@@ -1559,17 +1559,17 @@
     au < ready ; exists ; 2025 ;  ; 9780784485705 ; 9780784485705 ; Geo-EnvironMeet 2025 (9780784485705) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784486498 ; 9780784486498 ; Geo-Extreme 2025 (9780784486498) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486504 ; 9780784486504 ; Geo-Extreme 2025 (9780784486504) ; >
-    au < ready ; exists ; 2025 ;  ; 9780784486511 ; 9780784486511 ; Geo-Extreme 2025 (9780784486511) ; >
+    au < crawling ; exists ; 2025 ;  ; 9780784486511 ; 9780784486511 ; Geo-Extreme 2025 (9780784486511) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486528 ; 9780784486528 ; Geo-Extreme 2025 (9780784486528) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784486535 ; 9780784486535 ; Geo-Extreme 2025 (9780784486535) ; >
     au < ready ; exists ; 2025 ;  ; 9780784485880 ; 9780784485880 ; Geoenvironmental Engineering (9780784485880) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784485965 ; 9780784485965 ; Geotechnical Frontiers 2025 (9780784485965) ; >
     au < ready ; exists ; 2025 ;  ; 9780784485972 ; 9780784485972 ; Geotechnical Frontiers 2025 (9780784485972) ; >
-    au < ready ; exists ; 2025 ;  ; 9780784485989 ; 9780784485989 ; Geotechnical Frontiers 2025 (9780784485989) ; >
+    au < crawling ; exists ; 2025 ;  ; 9780784485989 ; 9780784485989 ; Geotechnical Frontiers 2025 (9780784485989) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784485996 ; 9780784485996 ; Geotechnical Frontiers 2025 (9780784485996) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784486009 ; 9780784486009 ; Geotechnical Frontiers 2025 (9780784486009) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486016 ; 9780784486016 ; Geotechnical Frontiers 2025 (9780784486016) ; >
-    au < ready ; exists ; 2025 ;  ; 9780784486047 ; 9780784486047 ; ICCESP 2024 (9780784486047) ; >
+    au < crawling ; exists ; 2025 ;  ; 9780784486047 ; 9780784486047 ; ICCESP 2024 (9780784486047) ; >
     au < ready ; exists ; 2025 ;  ; 9780784485910 ; 9780784485910 ; ICCREM 2024 (9780784485910) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784486627 ; 9780784486627 ; ICCREM 2025 (9780784486627) ; >
     au < ready ; exists ; 2025 ;  ; 9780784485941 ; 9780784485941 ; ICRT 2024 (9780784485941) ; >
