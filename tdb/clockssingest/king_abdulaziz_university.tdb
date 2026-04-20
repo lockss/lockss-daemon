@@ -1,0 +1,152 @@
+{
+  publisher <
+    name = King Abdulaziz University ;
+    info[contract] = 2008 ;
+    info[tester] = 5
+  >
+  provider = bepress
+
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
+    param[base_url] = https://kauj.researchcommons.org/
+
+  {
+
+      title <
+        name = Journal of King Abdulaziz University: Computing and Information Technology Sciences ;
+        eissn = 1658-6336
+      >
+
+      comment[publisher] = King Abdulaziz University
+      param[journal_abbr] = jcits
+
+      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Computing and Information Technology Sciences Volume 14 ; 14 ; >
+      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Computing and Information Technology Sciences Volume 15 ; 15 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of King Abdulaziz University: Economics and Administration ;
+        eissn = 1658-4236
+      >
+
+      comment[publisher] = King Abdulaziz University
+      param[journal_abbr] = jea
+
+      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Economics and Administration Volume 39 ; 39 ; >
+      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Economics and Administration Volume 40 ; 40 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of King Abdulaziz University: Engineering Sciences ;
+        eissn = 1658-4260
+      >
+
+      comment[publisher] = King Abdulaziz University
+      param[journal_abbr] = jengs
+
+      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Engineering Sciences Volume 35 ; 35 ; >
+      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Engineering Sciences Volume 36 ; 36 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of King Abdulaziz University: Islamic Economics ;
+        eissn = 1658-4244
+      >
+
+      comment[publisher] = King Abdulaziz University
+      param[journal_abbr] = jie
+
+      au < exists ; exists ; 2022 ; Journal of King Abdulaziz University: Islamic Economics Volume 35 ; 35 ; >
+      au < exists ; exists ; 2023 ; Journal of King Abdulaziz University: Islamic Economics Volume 36 ; 36 ; >
+      au < exists ; exists ; 2024 ; Journal of King Abdulaziz University: Islamic Economics Volume 37 ; 37 ; >
+      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Islamic Economics Volume 38 ; 38 ; >
+      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Islamic Economics Volume 39 ; 39 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of King Abdulaziz University: Marine Science ;
+        eissn = 1658-4325
+      >
+
+      comment[publisher] = King Abdulaziz University
+      param[journal_abbr] = jmars
+
+      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Marine Science Volume 35 ; 35 ; >
+      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Marine Science Volume 36 ; 36 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of King Abdulaziz University: Medical Sciences ;
+        eissn = 1658-4279
+      >
+
+      comment[publisher] = King Abdulaziz University
+      param[journal_abbr] = jmeds
+
+      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Medical Sciences Volume 32 ; 32 ; >
+      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Medical Sciences Volume 33 ; 33 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture ;
+        eissn = 1319-1039
+      >
+
+      comment[publisher] = King Abdulaziz University
+      param[journal_abbr] = jmealas
+
+      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 34 ; 34 ; >
+      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 35 ; 35 ; >
+
+  }
+
+  {
+
+      title <
+        name = Journal of King Abdulaziz University: Science ;
+        eissn = 3122-3370
+      >
+
+      comment[publisher] = King Abdulaziz University
+      param[journal_abbr] = jsci
+
+      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Science Volume 35 ; 35 ; >
+      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Science Volume 36 ; 36 ; >
+
+  }
+
+  {
+
+      title <
+        name = The Journal of Medical Rehabilitation Science ;
+        eissn = 1658-4252
+      >
+
+      comment[publisher] = King Abdulaziz University
+      param[journal_abbr] = jmrs
+
+      au < manifest ; exists ; 2024 ; The Journal of Medical Rehabilitation Science Volume 1 ; 1 ; >
+      au < exists ; exists ; 2025 ; The Journal of Medical Rehabilitation Science Volume 2 ; 2 ; >
+      au < expected ; exists ; 2026 ; The Journal of Medical Rehabilitation Science Volume 3 ; 3 ; >
+
+  }
+
+}
