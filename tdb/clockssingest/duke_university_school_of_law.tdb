@@ -397,7 +397,7 @@
 
     param[journal_abbr] = lcp
 
-    au < ready ; exists ; 1933-1934 ; Law and Contemporary Problems Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
+    au < crawling ; exists ; 1933-1934 ; Law and Contemporary Problems Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
     au < crawling ; exists ; 1935 ; Law and Contemporary Problems Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1936 ; Law and Contemporary Problems Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1937 ; Law and Contemporary Problems Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >

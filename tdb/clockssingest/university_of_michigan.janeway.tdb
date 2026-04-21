@@ -307,7 +307,7 @@
       param[journal_id] = fc
       #https://journals.publishing.umich.edu/fc/issues/
 
-      au < ready ; exists ; 2021 ; 45 ; Film Criticism Volume 2021 ; 2021 ; >
+      au < crawling ; exists ; 2021 ; 45 ; Film Criticism Volume 2021 ; 2021 ; >
       au < ready ; exists ; 2022 ; 46 ; Film Criticism Volume 2022 ; 2022 ; >
       au < ready ; exists ; 2023 ; 47 ; Film Criticism Volume 2023 ; 2023 ; >
       au < ready ; exists ; 2024 ; 48 ; Film Criticism Volume 2024 ; 2024 ; >
