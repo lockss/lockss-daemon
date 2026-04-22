@@ -154,23 +154,6 @@
 
   {
     title <
-      name = Personality Science ;
-      eissn = 2700-0710 
-    >
-      #param[base_url] = https://ps.psychopen.eu/
-
-      param[journal_id] = ps
-      #move to Sage
-
-      au < ojs3.Ojs3Plugin ; down ; 2020 ; Personality Science Volume 1 ; 1 ; 2020 ; https://ps.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; down ; 2021 ; Personality Science Volume 2 ; 2 ; 2021 ; https://ps.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; down ; 2022 ; Personality Science Volume 3 ; 3 ; 2022 ; https://ps.psychopen.eu/ >
-      au < ojs3.Ojs3Plugin ; down ; 2023 ; Personality Science Volume 4 ; 4 ; 2023 ; https://ps.psychopen.eu/ >
-
-  }
-
-  {
-    title <
       name = Quantitative and Computational Methods in Behavioral Sciences ;
       eissn = 2699-8432 
     >
@@ -303,6 +286,23 @@
       au < ojs2.OJS2Plugin ; down ; 2017 ; The European Journal of Counselling Psychology Volume 6 ; 6 ; 2017 ; https://ejcop.psychopen.eu/ >
       au < ojs2.OJS2Plugin ; down ; 2018 ; The European Journal of Counselling Psychology Volume 7 ; 7 ; 2018 ; https://ejcop.psychopen.eu/ >
       #MOVED. Changed platform. See https://ejcop.psychopen.eu/index.php/ejcop See https://ejcop.scholasticahq.com/
+
+  }
+
+  {
+    title <
+      name = Personality Science ;
+      eissn = 2700-0710 
+    >
+      #param[base_url] = https://ps.psychopen.eu/
+
+      param[journal_id] = ps
+      #moved to Sage
+
+      au < ojs3.Ojs3Plugin ; down ; 2020 ; Personality Science Volume 1 ; 1 ; 2020 ; https://ps.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; down ; 2021 ; Personality Science Volume 2 ; 2 ; 2021 ; https://ps.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; down ; 2022 ; Personality Science Volume 3 ; 3 ; 2022 ; https://ps.psychopen.eu/ >
+      au < ojs3.Ojs3Plugin ; down ; 2023 ; Personality Science Volume 4 ; 4 ; 2023 ; https://ps.psychopen.eu/ >
 
   }
 
