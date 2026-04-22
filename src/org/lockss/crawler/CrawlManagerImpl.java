@@ -1509,7 +1509,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	cmStatus.incrFinished(crawlSuccessful);
 	CrawlerStatus cs = crawler.getCrawlerStatus();
 	cmStatus.touchCrawlStatus(cs);
-	signalAuEvent(crawler, cs);
+	signalAuEvent(crawler, cs, this);
 	// must call callback before sealing counters.  V3Poller relies
 	// on fetched URL list
 	callCallback(cb, cookie, crawlSuccessful, cs);
@@ -1519,7 +1519,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  private void signalAuEvent(Crawler crawler, CrawlerStatus cs) {
+  private void signalAuEvent(Crawler crawler, CrawlerStatus cs,
+                             LockssWatchdog wdog) {
     final ArchivalUnit au = crawler.getAu();
     final AuEventHandler.ChangeInfo chInfo = new AuEventHandler.ChangeInfo();
     Collection<String> mimeTypes = cs.getMimeTypes();
@@ -1541,13 +1542,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     chInfo.setAu(au);
     chInfo.setComplete(!cs.isCrawlError());
     pluginMgr.applyAuEvent(new PluginManager.AuEventClosure() {
-			     public void execute(AuEventHandler hand) {
-			       hand.auContentChanged(new AuEvent(AuEvent.Type.
-			                                         ContentChanged,
-			                                         false),
-						     au, chInfo);
-			     }
-			   });
+        public void execute(AuEventHandler hand) {
+          hand.auContentChanged(new AuEvent(AuEvent.Type.ContentChanged,
+                                            false).setWatchdog(wdog),
+                                au, chInfo);
+        }
+      });
   }
 
   // For testing only.  See TestCrawlManagerImpl

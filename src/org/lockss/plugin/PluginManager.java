@@ -1102,7 +1102,7 @@ public class PluginManager
     @Override public void auContentChanged(AuEvent event, ArchivalUnit au,
 					   AuEventHandler.ChangeInfo info) {
       if (loadablePluginsReady && isRegistryAu(au)) {
-	processRegistryAus(ListUtil.list(au), true);
+	processRegistryAus(ListUtil.list(au), true, event.getWatchDog());
       }
       if (shouldFlush404Cache(au, info)) {
 	flush404Cache(au);
@@ -1501,7 +1501,7 @@ public class PluginManager
   // version of their plugin.  Waits a little while between stopping and
   // starting to allow existing processes to exit.  It's expected that this
   // will cause lots of errors to be logged
-  void restartAus(Collection<ArchivalUnit> aus) {
+  void restartAus(Collection<ArchivalUnit> aus, LockssWatchdog wdog) {
     if (paramRestartAus) {
       log.info("Restarting " + aus.size() + " AUs to use updated plugins.  Exiting processes may log errors; they should be harmless");
       synchronized (auAddDelLock) {
@@ -1513,6 +1513,9 @@ public class PluginManager
 	  configMap.put(auid, auConf);
 	  numAusRestarting++;
 	  stopAu(au, new AuEvent(AuEvent.Type.RestartDelete, false));
+          if (wdog != null) {
+            wdog.pokeWDog();
+          }
 	}
 	try {
 	  Deadline.in(auRestartSleep(aus.size())).sleep();
@@ -1556,6 +1559,9 @@ public class PluginManager
 	  try {
 	    newAu = createAu(plug, auConf, auEvent);
 	    numAusRestarting--;
+            if (wdog != null) {
+              wdog.pokeWDog();
+            }
 	  } catch (ArchivalUnit.ConfigurationException e) {
 	    log.error("Failed to restart: " + auid);
 
@@ -3118,7 +3124,7 @@ public class PluginManager
   }
 
   public synchronized void processRegistryAus(List registryAus) {
-    processRegistryAus(registryAus, false);
+    processRegistryAus(registryAus, false, null);
   }
 
   /**
@@ -3126,7 +3132,8 @@ public class PluginManager
    * that need to be loaded.
    */
   public synchronized void processRegistryAus(List registryAus,
-					      boolean startAus) {
+                                              boolean startAus,
+                                              LockssWatchdog wdog) {
 
     if (jarValidator == null) {
       jarValidator = new JarValidator(keystore, pluginDir);
@@ -3190,7 +3197,7 @@ public class PluginManager
     tmpMap = null;
 
     if (!needRestartAus.isEmpty()) {
-      restartAus(needRestartAus);
+      restartAus(needRestartAus, wdog);
     }
 
     if (startAus && !changedPluginKeys.isEmpty()) {

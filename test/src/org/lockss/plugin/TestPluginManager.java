@@ -2045,7 +2045,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau1 =
       new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar));
     assertNull(mgr.getPlugin(pluginKey));
-    mgr.processRegistryAus(ListUtil.list(mmau1), true);
+    mgr.processRegistryAus(ListUtil.list(mmau1), true, null);
     Plugin plugin1 = mgr.getPlugin(pluginKey);
     assertNotNull(plugin1);
     assertTrue(mgr.isLoadablePlugin(plugin1));
