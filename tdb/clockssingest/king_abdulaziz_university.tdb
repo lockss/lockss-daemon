@@ -50,7 +50,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jengs
 
-      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Engineering Sciences Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Engineering Sciences Volume 35 ; 35 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Engineering Sciences Volume 36 ; 36 ; >
 
   }
@@ -65,11 +65,11 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jie
 
-      au < exists ; exists ; 2022 ; Journal of King Abdulaziz University: Islamic Economics Volume 35 ; 35 ; >
-      au < exists ; exists ; 2023 ; Journal of King Abdulaziz University: Islamic Economics Volume 36 ; 36 ; >
-      au < exists ; exists ; 2024 ; Journal of King Abdulaziz University: Islamic Economics Volume 37 ; 37 ; >
-      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Islamic Economics Volume 38 ; 38 ; >
-      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Islamic Economics Volume 39 ; 39 ; >
+      au < manifest ; exists ; 2022 ; Journal of King Abdulaziz University: Islamic Economics Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2023 ; Journal of King Abdulaziz University: Islamic Economics Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2024 ; Journal of King Abdulaziz University: Islamic Economics Volume 37 ; 37 ; >
+      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Islamic Economics Volume 38 ; 38 ; >
+      au < manifest ; exists ; 2026 ; Journal of King Abdulaziz University: Islamic Economics Volume 39 ; 39 ; >
 
   }
 
@@ -83,7 +83,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmars
 
-      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Marine Science Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Marine Science Volume 35 ; 35 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Marine Science Volume 36 ; 36 ; >
 
   }
@@ -98,7 +98,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmeds
 
-      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Medical Sciences Volume 32 ; 32 ; >
+      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Medical Sciences Volume 32 ; 32 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Medical Sciences Volume 33 ; 33 ; >
 
   }
@@ -113,8 +113,8 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmealas
 
-      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 34 ; 34 ; >
-      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 34 ; 34 ; >
+      au < manifest ; exists ; 2026 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 35 ; 35 ; >
 
   }
 
@@ -128,8 +128,8 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jsci
 
-      au < exists ; exists ; 2025 ; Journal of King Abdulaziz University: Science Volume 35 ; 35 ; >
-      au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Science Volume 36 ; 36 ; >
+      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Science Volume 35 ; 35 ; >
+      au < manifest ; exists ; 2026 ; Journal of King Abdulaziz University: Science Volume 36 ; 36 ; >
 
   }
 
@@ -144,7 +144,7 @@
       param[journal_abbr] = jmrs
 
       au < manifest ; exists ; 2024 ; The Journal of Medical Rehabilitation Science Volume 1 ; 1 ; >
-      au < exists ; exists ; 2025 ; The Journal of Medical Rehabilitation Science Volume 2 ; 2 ; >
+      au < manifest ; exists ; 2025 ; The Journal of Medical Rehabilitation Science Volume 2 ; 2 ; >
       au < expected ; exists ; 2026 ; The Journal of Medical Rehabilitation Science Volume 3 ; 3 ; >
 
   }
