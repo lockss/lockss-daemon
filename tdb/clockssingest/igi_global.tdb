@@ -4665,7 +4665,7 @@
       param[journal_issn] = 2334-4628
 
       au < finished ; manifest ; 2014 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2015 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2015 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2016 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2017 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2018 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
@@ -4830,7 +4830,7 @@
 
       param[journal_issn] = 2577-4794
 
-      au < ready ; exists ; 2019 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2019 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2020 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
@@ -4895,7 +4895,7 @@
       au < finished ; manifest ; 2021 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2022 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2023 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 7 ; 7 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2024 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2024 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2025 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Hyperconnectivity and the Internet of Things (IJHIoT) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
 
@@ -5299,7 +5299,7 @@
 
       param[journal_issn] = 2771-5612
 
-      au < ready ; exists ; 2022 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2022 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2023 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2024 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2025 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
@@ -5512,7 +5512,7 @@
       param[journal_issn] = 2771-1986
       #continues = 2691-9273
 
-      au < ready ; exists ; 2022 ; International Journal of eSports Multidisciplinary Research (IJEMR) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2022 ; International Journal of eSports Multidisciplinary Research (IJEMR) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
 
   }
 

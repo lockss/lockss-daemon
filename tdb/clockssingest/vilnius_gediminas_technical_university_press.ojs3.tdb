@@ -216,7 +216,7 @@
       param[journal_id] = GAC
 
       au < finished ; frozen ; 2004 ; Geodesy and Cartography Volume 2004 ; 1 ; 2004 ; https://journals.vilniustech.lt/ ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2005 ; Geodesy and Cartography Volume 2005 ; 2 ; 2005 ; https://journals.vilniustech.lt/ ; >
+      au < crawling ; exists ; 2005 ; Geodesy and Cartography Volume 2005 ; 2 ; 2005 ; https://journals.vilniustech.lt/ ; >
       au < finished ; finished ; 2006 ; Geodesy and Cartography Volume 2006 ; 3 ; 2006 ; https://journals.vgtu.lt/ ; reingest3.clockss.org:8083 >
       au < finished ; frozen ; 2007 ; Geodesy and Cartography Volume 2007 ; 4 ; 2007 ; https://journals.vgtu.lt/ ; reingest1.clockss.org:8082 >
       au < finished ; frozen ; 2008 ; Geodesy and Cartography Volume 2008 ; 5 ; 2008 ; https://journals.vgtu.lt/ ; reingest2.clockss.org:8085 >
