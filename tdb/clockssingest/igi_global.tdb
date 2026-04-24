@@ -4194,7 +4194,7 @@
     >
     param[journal_issn] = 1063-8016
 
-    au < ready ; exists ; 1990 ; Journal of Database Management (JDM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 1990 ; Journal of Database Management (JDM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1991 ; Journal of Database Management (JDM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1992 ; Journal of Database Management (JDM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1993 ; Journal of Database Management (JDM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
@@ -4286,7 +4286,7 @@
     au < ready ; exists ; 1995 ; Journal of Global Information Management (JGIM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 1996 ; Journal of Global Information Management (JGIM) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1997 ; Journal of Global Information Management (JGIM) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 1998 ; Journal of Global Information Management (JGIM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 1998 ; Journal of Global Information Management (JGIM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 1999 ; Journal of Global Information Management (JGIM) Volume 7 ; 7 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2000 ; Journal of Global Information Management (JGIM) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2001 ; Journal of Global Information Management (JGIM) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
@@ -4357,14 +4357,14 @@
     param[journal_issn] = 1546-2234
 
     au < finished ; manifest ; 1989 ; Journal of Organizational and End User Computing (JOEUC) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 1990 ; Journal of Organizational and End User Computing (JOEUC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 1990 ; Journal of Organizational and End User Computing (JOEUC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 1991 ; Journal of Organizational and End User Computing (JOEUC) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1992 ; Journal of Organizational and End User Computing (JOEUC) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 1993 ; Journal of Organizational and End User Computing (JOEUC) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1994 ; Journal of Organizational and End User Computing (JOEUC) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1995 ; Journal of Organizational and End User Computing (JOEUC) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1996 ; Journal of Organizational and End User Computing (JOEUC) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 1997 ; Journal of Organizational and End User Computing (JOEUC) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 1997 ; Journal of Organizational and End User Computing (JOEUC) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1998 ; Journal of Organizational and End User Computing (JOEUC) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1999 ; Journal of Organizational and End User Computing (JOEUC) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2000 ; Journal of Organizational and End User Computing (JOEUC) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
@@ -4794,7 +4794,7 @@
 
       au < finished ; manifest ; 2018 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
       au < ready ; exists ; 2019 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2020 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2020 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2021 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2022 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2023 ; International Journal of Disaster Response and Emergency Management (IJDREM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
@@ -5222,7 +5222,7 @@
       au < finished ; manifest ; 2017 ; International Journal of Software Innovation (IJSI) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
       au < ready ; exists ; 2018 ; International Journal of Software Innovation (IJSI) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2019 ; International Journal of Software Innovation (IJSI) Volume 7 ; 7 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2020 ; International Journal of Software Innovation (IJSI) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2020 ; International Journal of Software Innovation (IJSI) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2021 ; International Journal of Software Innovation (IJSI) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; International Journal of Software Innovation (IJSI) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; International Journal of Software Innovation (IJSI) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
@@ -5301,7 +5301,7 @@
 
       au < crawling ; exists ; 2022 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2023 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2024 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2024 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2025 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Technology-Enhanced Education (IJTEE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
 

@@ -10180,7 +10180,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; International Journal of Low-Carbon Technologies Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; International Journal of Low-Carbon Technologies Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; International Journal of Low-Carbon Technologies Volume 19 ; 19 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2025 ; 2025 ; International Journal of Low-Carbon Technologies Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; International Journal of Low-Carbon Technologies Volume 20 ; 20 ; >
 
   }
 
@@ -12558,7 +12558,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Insect Science Volume 22 ; 22 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Insect Science Volume 23 ; 23 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Insect Science Volume 24 ; 24 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Insect Science Volume 25 ; 25 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Insect Science Volume 25 ; 25 ; >
 
   }
 
@@ -18556,7 +18556,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Plant and Cell Physiology Volume 63 ; 63 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Plant and Cell Physiology Volume 64 ; 64 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Plant and Cell Physiology Volume 65 ; 65 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Plant and Cell Physiology Volume 66 ; 66 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Plant and Cell Physiology Volume 66 ; 66 ; >
 
   }
 

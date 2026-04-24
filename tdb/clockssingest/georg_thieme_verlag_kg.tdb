@@ -1560,7 +1560,7 @@
 
    au < manifest ; exists ; 1969 ; 1969 ; Endoscopy Volume 1 ; 1 ; >
    au < ready ; exists ; 1970 ; 1970 ; Endoscopy Volume 2 ; 2 ; >
-   au < ready ; exists ; 1971 ; 1971 ; Endoscopy Volume 3 ; 3 ; >
+   au < crawling ; exists ; 1971 ; 1971 ; Endoscopy Volume 3 ; 3 ; >
    au < ready ; exists ; 1972 ; 1972 ; Endoscopy Volume 4 ; 4 ; >
    au < ready ; exists ; 1973 ; 1973 ; Endoscopy Volume 5 ; 5 ; >
    au < ready ; exists ; 1974 ; 1974 ; Endoscopy Volume 6 ; 6 ; >
@@ -4021,7 +4021,7 @@
     comment[1] = EEG, EMG published from 1980-1997 under the same eissn
     #continued_by = 1434-0275
 
-    au < ready ; exists ; 1980 ; 1980 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 11 ; 11 ; >
+    au < crawling ; exists ; 1980 ; 1980 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 11 ; 11 ; >
     au < ready ; exists ; 1981 ; 1981 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 12 ; 12 ; >
     au < ready ; exists ; 1982 ; 1982 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 13 ; 13 ; >
     au < ready ; exists ; 1983 ; 1983 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 14 ; 14 ; >
@@ -4397,7 +4397,7 @@
     au < manifest ; exists ; 1969 ; 1969 ; min - Minimally Invasive Neurosurgery Volume 12 ; 12 ; >
     au < ready ; exists ; 1970 ; 1970 ; min - Minimally Invasive Neurosurgery Volume 13 ; 13 ; >
     au < frozen ; exists ; 1971 ; 1971 ; min - Minimally Invasive Neurosurgery Volume 14 ; 14 ; >
-    au < ready ; exists ; 1972 ; 1972 ; min - Minimally Invasive Neurosurgery Volume 15 ; 15 ; >
+    au < crawling ; exists ; 1972 ; 1972 ; min - Minimally Invasive Neurosurgery Volume 15 ; 15 ; >
     au < ready ; exists ; 1973 ; 1973 ; min - Minimally Invasive Neurosurgery Volume 16 ; 16 ; >
     au < ready ; exists ; 1974 ; 1974 ; min - Minimally Invasive Neurosurgery Volume 17 ; 17 ; >
     au < ready ; exists ; 1975 ; 1975 ; min - Minimally Invasive Neurosurgery Volume 18 ; 18 ; >
@@ -5054,7 +5054,7 @@
     au < ready ; exists ; 1970 ; 1970 ; Pharmacopsychiatry Volume 3 ; 3 ; >
     au < ready ; exists ; 1971 ; 1971 ; Pharmacopsychiatry Volume 4 ; 4 ; >
     au < crawling ; exists ; 1972 ; 1972 ; Pharmacopsychiatry Volume 5 ; 5 ; >
-    au < ready ; exists ; 1973 ; 1973 ; Pharmacopsychiatry Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1973 ; 1973 ; Pharmacopsychiatry Volume 6 ; 6 ; >
     au < ready ; exists ; 1974 ; 1974 ; Pharmacopsychiatry Volume 7 ; 7 ; >
     au < ready ; exists ; 1975 ; 1975 ; Pharmacopsychiatry Volume 8 ; 8 ; >
     au < ready ; exists ; 1976 ; 1976 ; Pharmacopsychiatry Volume 9 ; 9 ; >
@@ -6494,7 +6494,7 @@
 
     au < crawling ; exists ; 1974 ; 1974 ; Seminars in Thrombosis and Hemostasis Volume 1 (1974) ; 1 ; >
     au < ready ; exists ; 1975 ; 1975 ; Seminars in Thrombosis and Hemostasis Volume 1 (1975) ; 1 ; >
-    au < ready ; exists ; 1976 ; 1976 ; Seminars in Thrombosis and Hemostasis Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1976 ; 1976 ; Seminars in Thrombosis and Hemostasis Volume 2 ; 2 ; >
     au < ready ; exists ; 1977 ; 1977 ; Seminars in Thrombosis and Hemostasis Volume 3 ; 3 ; >
     au < ready ; exists ; 1978 ; 1978 ; Seminars in Thrombosis and Hemostasis Volume 4 ; 4 ; >
     au < ready ; exists ; 1979 ; 1979 ; Seminars in Thrombosis and Hemostasis Volume 5 ; 5 ; >
@@ -8713,7 +8713,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Phlebologie Volume 51 ; 51 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Phlebologie Volume 52 ; 52 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Phlebologie Volume 53 ; 53 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Phlebologie Volume 54 ; 54 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Phlebologie Volume 54 ; 54 ; >
     au < manifest ; exists ; 2026 ; 2026 ; Phlebologie Volume 55 ; 55 ; >
 
   }
@@ -9858,7 +9858,7 @@
     au < ready ; exists ; 1976 ; 1976 ; Thrombosis and Haemostasis Volume 35-36 ; 35-36 ; >
     au < ready ; exists ; 1977 ; 1977 ; Thrombosis and Haemostasis Volume 37-38 ; 37-38 ; >
     au < crawling ; exists ; 1978 ; 1978 ; Thrombosis and Haemostasis Volume 39-40 ; 39-40 ; >
-    au < ready ; exists ; 1979 ; 1979 ; Thrombosis and Haemostasis Volume 41-42 ; 41-42 ; >
+    au < crawling ; exists ; 1979 ; 1979 ; Thrombosis and Haemostasis Volume 41-42 ; 41-42 ; >
     au < finished ; manifest ; 1980 ; 1980 ; Thrombosis and Haemostasis Volume 43-44 ; 43-44 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1981 ; 1981 ; Thrombosis and Haemostasis Volume 45-46 ; 45-46 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1982 ; 1982 ; Thrombosis and Haemostasis Volume 47-48 ; 47-48 ; reingest1.clockss.org:8082 >

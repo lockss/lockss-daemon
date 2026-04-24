@@ -24,7 +24,7 @@
     param[journal_abbr] = jhcs
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < ready ; exists ; 1988 ; Journal of Hindu-Christian Studies Volume 1 ; 1 ; https://digitalcommons.butler.edu/ ; >
+    au < crawling ; exists ; 1988 ; Journal of Hindu-Christian Studies Volume 1 ; 1 ; https://digitalcommons.butler.edu/ ; >
     au < ready ; exists ; 1989 ; Journal of Hindu-Christian Studies Volume 2 ; 2 ; https://digitalcommons.butler.edu/ ; >
     au < frozen ; exists ; 1990 ; Journal of Hindu-Christian Studies Volume 3 ; 3 ; https://digitalcommons.butler.edu/ ; >
     au < ready ; exists ; 1991 ; Journal of Hindu-Christian Studies Volume 4 ; 4 ; https://digitalcommons.butler.edu/ ; >
