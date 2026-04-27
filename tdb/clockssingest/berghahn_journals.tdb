@@ -349,7 +349,7 @@
       au < crawling ; exists ; 1998 ; Critical Survey Volume 10 ; 10 ; >
       au < crawling ; exists ; 1999 ; Critical Survey Volume 11 ; 11 ; >
       au < ready ; exists ; 2000 ; Critical Survey Volume 12 ; 12 ; >
-      au < ready ; exists ; 2001 ; Critical Survey Volume 13 ; 13 ; >
+      au < crawling ; exists ; 2001 ; Critical Survey Volume 13 ; 13 ; >
       au < ready ; exists ; 2002 ; Critical Survey Volume 14 ; 14 ; >
       au < finished ; manifest ; 2003 ; Critical Survey Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Critical Survey Volume 16 ; 16 ; reingest5.clockss.org:8082 >
@@ -505,7 +505,7 @@
     param[journal_id] = european-judaism
     #param[journal_issn] = 0014-3006
    
-    au < ready ; exists ; 1999 ; European Judaism Volume 32 ; 32 ; >
+    au < crawling ; exists ; 1999 ; European Judaism Volume 32 ; 32 ; >
     au < ready ; exists ; 2000 ; European Judaism Volume 33 ; 33 ; >
     au < crawling ; exists ; 2001 ; European Judaism Volume 34 ; 34 ; >
     au < finished ; manifest ; 2002 ; European Judaism Volume 35 ; 35 ; reingest5.clockss.org:8082 >
@@ -904,7 +904,7 @@
        
     au < finished ; manifest ; 2008 ; Learning and Teaching (LATISS) Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < ready ; exists ; 2009 ; Learning and Teaching (LATISS) Volume 2 ; 2 ; >
-    au < ready ; exists ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2010 ; Learning and Teaching (LATISS) Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; Learning and Teaching (LATISS) Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Learning and Teaching (LATISS) Volume 5 ; 5 ; >
     au < finished ; finished ; 2013 ; Learning and Teaching (LATISS) Volume 6 ; 6 ; reingest1.clockss.org:8082 >

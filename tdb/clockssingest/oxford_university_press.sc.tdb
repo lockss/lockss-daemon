@@ -4868,7 +4868,7 @@
     au < finished ; manifest ; 2021 ; 2021 ; Database Volume 2021 ; 2021 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2022 ; 2022 ; Database Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Database Volume 2023 ; 2023 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2024 ; 2024 ; Database Volume 2024 ; 2024 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Database Volume 2024 ; 2024 ; >
     au < ready ; exists ; 2025 ; 2025 ; Database Volume 2025 ; 2025 ; >
 
   }
@@ -11546,7 +11546,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Journal of Computational Design and Engineering Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Computational Design and Engineering Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Computational Design and Engineering Volume 11 ; 11 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Computational Design and Engineering Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Computational Design and Engineering Volume 12 ; 12 ; >
 
   }
 
@@ -14120,7 +14120,7 @@
     au < frozen ; exists ; 2017 ; 2017 ; Reproduction Volume 153-154 ; 153-154 ; >
     au < ready ; exists ; 2018 ; 2018 ; Reproduction Volume 155-156 ; 155-156 ; >
     au < ready ; exists ; 2019 ; 2019 ; Reproduction Volume 157-158 ; 157-158 ; >
-    au < ready ; exists ; 2020 ; 2020 ; Reproduction Volume 159-160 ; 159-160 ; >
+    au < crawling ; exists ; 2020 ; 2020 ; Reproduction Volume 159-160 ; 159-160 ; >
     au < frozen ; exists ; 2021 ; 2021 ; Reproduction Volume 161-162 ; 161-162 ; >
     au < crawling ; exists ; 2022 ; 2022 ; Reproduction Volume 163-164 ; 163-164 ; >
     au < ready ; exists ; 2023 ; 2023 ; Reproduction Volume 165-166 ; 165-166 ; >
@@ -19172,7 +19172,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Protein Engineering, Design and Selection (PEDS) Volume 35 ; 35 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Protein Engineering, Design and Selection (PEDS) Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; Protein Engineering, Design and Selection (PEDS) Volume 37 ; 37 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; 2025 ; Protein Engineering, Design and Selection (PEDS) Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Protein Engineering, Design and Selection (PEDS) Volume 38 ; 38 ; >
 
   }
 
@@ -24363,7 +24363,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The Review of Corporate Finance Studies Volume 11 ; 11 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The Review of Corporate Finance Studies Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; The Review of Corporate Finance Studies Volume 13 ; 13 ; >
-    au < ready ; exists ; 2025 ; 2025 ; The Review of Corporate Finance Studies Volume 14 ; 14 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; The Review of Corporate Finance Studies Volume 14 ; 14 ; >
 
   }
 
@@ -25146,7 +25146,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Translational Animal Science Volume 6 ; 6 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Translational Animal Science Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Translational Animal Science Volume 8 ; 8 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Translational Animal Science Volume 9 ; 9 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Translational Animal Science Volume 9 ; 9 ; >
 
   }
 
