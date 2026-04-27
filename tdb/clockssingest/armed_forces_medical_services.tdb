@@ -23,33 +23,33 @@
     param[journal_abbr] = journal
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < exists ; exists ; 2000 ; Saudi Medical Journal Volume 21 ; 21 ; > 
-    au < exists ; exists ; 2001 ; Saudi Medical Journal Volume 22 ; 22 ; > 
-    au < exists ; exists ; 2002 ; Saudi Medical Journal Volume 23 ; 23 ; > 
-    au < exists ; exists ; 2003 ; Saudi Medical Journal Volume 24 ; 24 ; > 
-    au < exists ; exists ; 2004 ; Saudi Medical Journal Volume 25 ; 25 ; > 
-    au < exists ; exists ; 2005 ; Saudi Medical Journal Volume 26 ; 26 ; > 
-    au < exists ; exists ; 2006 ; Saudi Medical Journal Volume 27 ; 27 ; > 
-    au < exists ; exists ; 2007 ; Saudi Medical Journal Volume 28 ; 28 ; > 
-    au < exists ; exists ; 2008 ; Saudi Medical Journal Volume 29 ; 29 ; > 
-    au < exists ; exists ; 2009 ; Saudi Medical Journal Volume 30 ; 30 ; > 
-    au < exists ; exists ; 2010 ; Saudi Medical Journal Volume 31 ; 31 ; > 
-    au < exists ; exists ; 2011 ; Saudi Medical Journal Volume 32 ; 32 ; > 
-    au < exists ; exists ; 2012 ; Saudi Medical Journal Volume 33 ; 33 ; > 
-    au < exists ; exists ; 2013 ; Saudi Medical Journal Volume 34 ; 34 ; > 
+    au < manifest ; exists ; 2000 ; Saudi Medical Journal Volume 21 ; 21 ; > 
+    au < manifest ; exists ; 2001 ; Saudi Medical Journal Volume 22 ; 22 ; > 
+    au < manifest ; exists ; 2002 ; Saudi Medical Journal Volume 23 ; 23 ; > 
+    au < manifest ; exists ; 2003 ; Saudi Medical Journal Volume 24 ; 24 ; > 
+    au < manifest ; exists ; 2004 ; Saudi Medical Journal Volume 25 ; 25 ; > 
+    au < manifest ; exists ; 2005 ; Saudi Medical Journal Volume 26 ; 26 ; > 
+    au < manifest ; exists ; 2006 ; Saudi Medical Journal Volume 27 ; 27 ; > 
+    au < manifest ; exists ; 2007 ; Saudi Medical Journal Volume 28 ; 28 ; > 
+    au < manifest ; exists ; 2008 ; Saudi Medical Journal Volume 29 ; 29 ; > 
+    au < manifest ; exists ; 2009 ; Saudi Medical Journal Volume 30 ; 30 ; > 
+    au < manifest ; exists ; 2010 ; Saudi Medical Journal Volume 31 ; 31 ; > 
+    au < manifest ; exists ; 2011 ; Saudi Medical Journal Volume 32 ; 32 ; > 
+    au < manifest ; exists ; 2012 ; Saudi Medical Journal Volume 33 ; 33 ; > 
+    au < manifest ; exists ; 2013 ; Saudi Medical Journal Volume 34 ; 34 ; > 
     au < manifest ; exists ; 2014 ; Saudi Medical Journal Volume 35 ; 35 ; > 
-    au < exists ; exists ; 2015 ; Saudi Medical Journal Volume 36 ; 36 ; > 
-    au < exists ; exists ; 2016 ; Saudi Medical Journal Volume 37 ; 37 ; > 
-    au < exists ; exists ; 2017 ; Saudi Medical Journal Volume 38 ; 38 ; > 
-    au < exists ; exists ; 2018 ; Saudi Medical Journal Volume 39 ; 39 ; > 
-    au < exists ; exists ; 2019 ; Saudi Medical Journal Volume 40 ; 40 ; > 
-    au < exists ; exists ; 2020 ; Saudi Medical Journal Volume 41 ; 41 ; > 
-    au < exists ; exists ; 2021 ; Saudi Medical Journal Volume 42 ; 42 ; > 
-    au < exists ; exists ; 2022 ; Saudi Medical Journal Volume 43 ; 43 ; > 
-    au < exists ; exists ; 2023 ; Saudi Medical Journal Volume 44 ; 44 ; > 
+    au < manifest ; exists ; 2015 ; Saudi Medical Journal Volume 36 ; 36 ; > 
+    au < manifest ; exists ; 2016 ; Saudi Medical Journal Volume 37 ; 37 ; > 
+    au < manifest ; exists ; 2017 ; Saudi Medical Journal Volume 38 ; 38 ; > 
+    au < manifest ; exists ; 2018 ; Saudi Medical Journal Volume 39 ; 39 ; > 
+    au < manifest ; exists ; 2019 ; Saudi Medical Journal Volume 40 ; 40 ; > 
+    au < manifest ; exists ; 2020 ; Saudi Medical Journal Volume 41 ; 41 ; > 
+    au < manifest ; exists ; 2021 ; Saudi Medical Journal Volume 42 ; 42 ; > 
+    au < manifest ; exists ; 2022 ; Saudi Medical Journal Volume 43 ; 43 ; > 
+    au < manifest ; exists ; 2023 ; Saudi Medical Journal Volume 44 ; 44 ; > 
     au < manifest ; exists ; 2024 ; Saudi Medical Journal Volume 45 ; 45 ; >
-    au < exists ; exists ; 2025 ; Saudi Medical Journal Volume 46 ; 46 ; >
-    au < exists ; exists ; 2026 ; Saudi Medical Journal Volume 47 ; 47 ; >
+    au < manifest ; exists ; 2025 ; Saudi Medical Journal Volume 46 ; 46 ; >
+    au < manifest ; exists ; 2026 ; Saudi Medical Journal Volume 47 ; 47 ; >
 
   }
 
@@ -65,33 +65,33 @@
     param[journal_abbr] = journal
     implicit < status ; status2 ; year ; name ; param[volume] ; hidden[proxy] >
 
-    au < exists ; exists ; 2000 ; Neurosciences Journal Volume 5 ; 5 ; > 
-    au < exists ; exists ; 2001 ; Neurosciences Journal Volume 6 ; 6 ; > 
-    au < exists ; exists ; 2002 ; Neurosciences Journal Volume 7 ; 7 ; > 
-    au < exists ; exists ; 2003 ; Neurosciences Journal Volume 8 ; 8 ; > 
-    au < exists ; exists ; 2004 ; Neurosciences Journal Volume 9 ; 9 ; > 
-    au < exists ; exists ; 2005 ; Neurosciences Journal Volume 10 ; 10 ; > 
-    au < exists ; exists ; 2006 ; Neurosciences Journal Volume 11 ; 11 ; > 
-    au < exists ; exists ; 2007 ; Neurosciences Journal Volume 12 ; 12 ; > 
-    au < exists ; exists ; 2008 ; Neurosciences Journal Volume 13 ; 13 ; > 
-    au < exists ; exists ; 2009 ; Neurosciences Journal Volume 14 ; 14 ; > 
-    au < exists ; exists ; 2010 ; Neurosciences Journal Volume 15 ; 15 ; > 
+    au < manifest ; exists ; 2000 ; Neurosciences Journal Volume 5 ; 5 ; > 
+    au < manifest ; exists ; 2001 ; Neurosciences Journal Volume 6 ; 6 ; > 
+    au < manifest ; exists ; 2002 ; Neurosciences Journal Volume 7 ; 7 ; > 
+    au < manifest ; exists ; 2003 ; Neurosciences Journal Volume 8 ; 8 ; > 
+    au < manifest ; exists ; 2004 ; Neurosciences Journal Volume 9 ; 9 ; > 
+    au < manifest ; exists ; 2005 ; Neurosciences Journal Volume 10 ; 10 ; > 
+    au < manifest ; exists ; 2006 ; Neurosciences Journal Volume 11 ; 11 ; > 
+    au < manifest ; exists ; 2007 ; Neurosciences Journal Volume 12 ; 12 ; > 
+    au < manifest ; exists ; 2008 ; Neurosciences Journal Volume 13 ; 13 ; > 
+    au < manifest ; exists ; 2009 ; Neurosciences Journal Volume 14 ; 14 ; > 
+    au < manifest ; exists ; 2010 ; Neurosciences Journal Volume 15 ; 15 ; > 
     au < manifest ; exists ; 2011 ; Neurosciences Journal Volume 16 ; 16 ; > 
-    au < exists ; exists ; 2012 ; Neurosciences Journal Volume 17 ; 17 ; > 
-    au < exists ; exists ; 2013 ; Neurosciences Journal Volume 18 ; 18 ; > 
-    au < exists ; exists ; 2014 ; Neurosciences Journal Volume 19 ; 19 ; > 
-    au < exists ; exists ; 2015 ; Neurosciences Journal Volume 20 ; 20 ; > 
-    au < exists ; exists ; 2016 ; Neurosciences Journal Volume 21 ; 21 ; > 
-    au < exists ; exists ; 2017 ; Neurosciences Journal Volume 22 ; 22 ; > 
-    au < exists ; exists ; 2018 ; Neurosciences Journal Volume 23 ; 23 ; > 
-    au < exists ; exists ; 2019 ; Neurosciences Journal Volume 24 ; 24 ; > 
-    au < exists ; exists ; 2020 ; Neurosciences Journal Volume 25 ; 25 ; > 
+    au < manifest ; exists ; 2012 ; Neurosciences Journal Volume 17 ; 17 ; > 
+    au < manifest ; exists ; 2013 ; Neurosciences Journal Volume 18 ; 18 ; > 
+    au < manifest ; exists ; 2014 ; Neurosciences Journal Volume 19 ; 19 ; > 
+    au < manifest ; exists ; 2015 ; Neurosciences Journal Volume 20 ; 20 ; > 
+    au < manifest ; exists ; 2016 ; Neurosciences Journal Volume 21 ; 21 ; > 
+    au < manifest ; exists ; 2017 ; Neurosciences Journal Volume 22 ; 22 ; > 
+    au < manifest ; exists ; 2018 ; Neurosciences Journal Volume 23 ; 23 ; > 
+    au < manifest ; exists ; 2019 ; Neurosciences Journal Volume 24 ; 24 ; > 
+    au < manifest ; exists ; 2020 ; Neurosciences Journal Volume 25 ; 25 ; > 
     au < manifest ; exists ; 2021 ; Neurosciences Journal Volume 26 ; 26 ; > 
-    au < exists ; exists ; 2022 ; Neurosciences Journal Volume 27 ; 27 ; > 
-    au < exists ; exists ; 2023 ; Neurosciences Journal Volume 28 ; 28 ; > 
-    au < exists ; exists ; 2024 ; Neurosciences Journal Volume 29 ; 29 ; >
-    au < exists ; exists ; 2025 ; Neurosciences Journal Volume 30 ; 30 ; >
-    au < exists ; exists ; 2026 ; Neurosciences Journal Volume 31 ; 31 ; >
+    au < manifest ; exists ; 2022 ; Neurosciences Journal Volume 27 ; 27 ; > 
+    au < manifest ; exists ; 2023 ; Neurosciences Journal Volume 28 ; 28 ; > 
+    au < manifest ; exists ; 2024 ; Neurosciences Journal Volume 29 ; 29 ; >
+    au < manifest ; exists ; 2025 ; Neurosciences Journal Volume 30 ; 30 ; >
+    au < manifest ; exists ; 2026 ; Neurosciences Journal Volume 31 ; 31 ; >
 
   }
 
