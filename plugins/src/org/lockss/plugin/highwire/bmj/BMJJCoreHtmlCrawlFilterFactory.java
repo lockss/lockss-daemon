@@ -46,6 +46,8 @@ public class BMJJCoreHtmlCrawlFilterFactory extends HighWireJCoreHtmlCrawlFilter
     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "pager"),
     HtmlNodeFilters.tagWithAttributeRegex("span", "class", "prev"),
     HtmlNodeFilters.tagWithAttributeRegex("span", "class", "next"),
+    HtmlNodeFilters.tagWithAttributeRegex("a", "data-test-id", "previous-arrow"),
+    HtmlNodeFilters.tagWithAttributeRegex("a", "data-test-id", "next-arrow"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "section notes"),
     HtmlNodeFilters.tagWithAttribute("div", "class", "section fn-group"),
     // leave data supplement links for pages like http://www.bmj.com/content/332/7532/11/related
