@@ -237,6 +237,107 @@
       au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2026 ; Social Psychological Bulletin Volume 2026 ; 2026 ; 2026 ; https://spb.psychopen.eu/ ; >
 
   }
+
+  {
+
+      title <
+        name = Biolinquistics ;
+        eissn = 1450-3417
+      >
+
+      param[journal_id] = bioling
+
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2007 ; Biolinquistics Volume 2007 ; 2007 ; 2007 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2008 ; Biolinquistics Volume 2008 ; 2008 ; 2008 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2009 ; Biolinquistics Volume 2009 ; 2009 ; 2009 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2010 ; Biolinquistics Volume 2010 ; 2010 ; 2010 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2011 ; Biolinquistics Volume 2011 ; 2011 ; 2011 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2012 ; Biolinquistics Volume 2012 ; 2012 ; 2012 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2013 ; Biolinquistics Volume 2013 ; 2013 ; 2013 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2014 ; Biolinquistics Volume 2014 ; 2014 ; 2014 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2015 ; Biolinquistics Volume 2015 ; 2015 ; 2015 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2016 ; Biolinquistics Volume 2016 ; 2016 ; 2016 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2017 ; Biolinquistics Volume 2017 ; 2017 ; 2017 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2018 ; Biolinquistics Volume 2018 ; 2018 ; 2018 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2019 ; Biolinquistics Volume 2019 ; 2019 ; 2019 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2020 ; Biolinquistics Volume 2020 ; 2020 ; 2020 ; https://bioling.psychopen.eu/ ; > 
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Biolinquistics Volume 2021 ; 2021 ; 2021 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2022 ; Biolinquistics Volume 2022 ; 2022 ; 2022 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2023 ; Biolinquistics Volume 2023 ; 2023 ; 2023 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2024 ; Biolinquistics Volume 2024 ; 2024 ; 2024 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2025 ; Biolinquistics Volume 2025 ; 2025 ; 2025 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2026 ; Biolinquistics Volume 2026 ; 2026 ; 2026 ; https://bioling.psychopen.eu/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Global Environmental Psychology ;
+        eissn = 2750-6630
+      >
+
+      param[journal_id] = gep
+
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2023 ; Global Environmental Psychology Volume 2023 ; 2023 ; 2023 ; https://gep.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2024 ; Global Environmental Psychology Volume 2024 ; 2024 ; 2024 ; https://gep.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2025 ; Global Environmental Psychology Volume 2025 ; 2025 ; 2025 ; https://gep.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2026 ; Global Environmental Psychology Volume 2026 ; 2026 ; 2026 ; https://gep.psychopen.eu/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Measurement Instruments for the Social Sciences ;
+        eissn = 2523-8930
+      >
+
+      param[journal_id] = miss
+
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2019 ; Measurement Instruments for the Social Sciences Volume 2019 ; 2019 ; 2019 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2020 ; Measurement Instruments for the Social Sciences Volume 2020 ; 2020 ; 2020 ; https://miss.psychopen.eu/ ; > 
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2021 ; Measurement Instruments for the Social Sciences Volume 2021 ; 2021 ; 2021 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2022 ; Measurement Instruments for the Social Sciences Volume 2022 ; 2022 ; 2022 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2023 ; Measurement Instruments for the Social Sciences Volume 2023 ; 2023 ; 2023 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2024 ; Measurement Instruments for the Social Sciences Volume 2024 ; 2024 ; 2024 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2025 ; Measurement Instruments for the Social Sciences Volume 2025 ; 2025 ; 2025 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2026 ; Measurement Instruments for the Social Sciences Volume 2026 ; 2026 ; 2026 ; https://miss.psychopen.eu/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Psychology of Human-Animal Intergroup Relations ;
+        eissn = 2750-6649
+      >
+
+      param[journal_id] = phair
+
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2022 ; Psychology of Human-Animal Intergroup Relations Volume 2022 ; 2022 ; 2022 ; https://phair.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2023 ; Psychology of Human-Animal Intergroup Relations Volume 2023 ; 2023 ; 2023 ; https://phair.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2024 ; Psychology of Human-Animal Intergroup Relations Volume 2024 ; 2024 ; 2024 ; https://phair.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2025 ; Psychology of Human-Animal Intergroup Relations Volume 2025 ; 2025 ; 2025 ; https://phair.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2026 ; Psychology of Human-Animal Intergroup Relations Volume 2026 ; 2026 ; 2026 ; https://phair.psychopen.eu/ ; >
+
+  }
+
+  {
+
+      title <
+        name = Research for People in Organizations ;
+        eissn = 2523-8930
+      >
+
+      param[journal_id] = rpio
+
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2025 ; Research for People in Organizations Volume 2025 ; 2025 ; 2025 ; https://rpio.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2026 ; Research for People in Organizations Volume 2026 ; 2026 ; 2026 ; https://rpio.psychopen.eu/ ; >
+
+  }
+
+
 ############MOVED below this line
   {
     title <
