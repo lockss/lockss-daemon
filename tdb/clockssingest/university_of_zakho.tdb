@@ -1,0 +1,43 @@
+{
+  publisher <
+    name = University of Zakho ;
+    info[contract] = 2026 ;
+    info[back] = 2013 ;
+    info[tester] = 5 ;
+    info[platform] = OJS3
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    param[base_url] = https://sjuoz.uoz.edu.krd/
+    implicit < status ; status2 ; year ; name ; param[year] ; volume ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+
+  {
+
+      title <
+        name = Science Journal of University of Zakho ;
+        issn = 2663-628X ;
+        eissn = 2663-6298
+      >
+
+      param[journal_id] = sjuoz 
+
+      au < manifest ; exists ; 2013 ; Science Journal of University of Zakho Volume 2013 ; 2013 ; 1 ; >
+      au < manifest ; exists ; 2014 ; Science Journal of University of Zakho Volume 2014 ; 2014 ; 2 ; >
+      au < manifest ; exists ; 2015 ; Science Journal of University of Zakho Volume 2015 ; 2015 ; 3 ; >
+      au < manifest ; exists ; 2016 ; Science Journal of University of Zakho Volume 2016 ; 2016 ; 4 ; >
+      au < manifest ; exists ; 2017 ; Science Journal of University of Zakho Volume 2017 ; 2017 ; 5 ; >
+      au < manifest ; exists ; 2018 ; Science Journal of University of Zakho Volume 2018 ; 2018 ; 6 ; >
+      au < manifest ; exists ; 2019 ; Science Journal of University of Zakho Volume 2019 ; 2019 ; 7 ; >
+      au < manifest ; exists ; 2020 ; Science Journal of University of Zakho Volume 2020 ; 2020 ; 8 ; >
+      au < manifest ; exists ; 2021 ; Science Journal of University of Zakho Volume 2021 ; 2021 ; 9 ; >
+      au < manifest ; exists ; 2022 ; Science Journal of University of Zakho Volume 2022 ; 2022 ; 10 ; >
+      au < manifest ; exists ; 2023 ; Science Journal of University of Zakho Volume 2023 ; 2023 ; 11 ; >
+      au < manifest ; exists ; 2024 ; Science Journal of University of Zakho Volume 2024 ; 2024 ; 12 ; >
+      au < manifest ; exists ; 2025 ; Science Journal of University of Zakho Volume 2025 ; 2025 ; 13 ; >
+      au < manifest ; exists ; 2026 ; Science Journal of University of Zakho Volume 2026 ; 2026 ; 14 ; >
+
+  }
+
+}
