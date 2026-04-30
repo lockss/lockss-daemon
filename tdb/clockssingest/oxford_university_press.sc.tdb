@@ -13617,7 +13617,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Plankton Research Volume 44 ; 44 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Plankton Research Volume 45 ; 45 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Plankton Research Volume 46 ; 46 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Plankton Research Volume 47 ; 47 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Plankton Research Volume 47 ; 47 ; >
 
   }
 
@@ -14637,7 +14637,7 @@
     au < doNotProcess ; exists ; 2005 ; 2005 ; Journal of Veterinary Internal Medicine Volume 19 ; 19 ; >
     au < doNotProcess ; exists ; 2006 ; 2006 ; Journal of Veterinary Internal Medicine Volume 20 ; 20 ; >
     au < doNotProcess ; exists ; 2007 ; 2007 ; Journal of Veterinary Internal Medicine Volume 21 ; 21 ; >
-    au < ready ; exists ; 2008 ; 2008 ; Journal of Veterinary Internal Medicine Volume 22 ; 22 ; >
+    au < crawling ; exists ; 2008 ; 2008 ; Journal of Veterinary Internal Medicine Volume 22 ; 22 ; >
     au < frozen ; exists ; 2009 ; 2009 ; Journal of Veterinary Internal Medicine Volume 23 ; 23 ; >
     au < ready ; exists ; 2010 ; 2010 ; Journal of Veterinary Internal Medicine Volume 24 ; 24 ; >
     au < ready ; exists ; 2011 ; 2011 ; Journal of Veterinary Internal Medicine Volume 25 ; 25 ; >
@@ -14653,8 +14653,8 @@
     au < ready ; exists ; 2021 ; 2021 ; Journal of Veterinary Internal Medicine Volume 35 ; 35 ; >
     au < ready ; exists ; 2022 ; 2022 ; Journal of Veterinary Internal Medicine Volume 36 ; 36 ; >
     au < ready ; exists ; 2023 ; 2023 ; Journal of Veterinary Internal Medicine Volume 37 ; 37 ; >
-    au < ready ; exists ; 2024 ; 2024 ; Journal of Veterinary Internal Medicine Volume 38 ; 38 ; >
-    au < ready ; exists ; 2025 ; 2025 ; Journal of Veterinary Internal Medicine Volume 39 ; 39 ; >
+    au < crawling ; exists ; 2024 ; 2024 ; Journal of Veterinary Internal Medicine Volume 38 ; 38 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Journal of Veterinary Internal Medicine Volume 39 ; 39 ; >
 
   }
 
@@ -18609,7 +18609,7 @@
       au < deepCrawl ; exists ; 2022 ; 2022 ; The Plant Cell Volume 34 ; 34 ; >
       au < finished ; manifest ; 2023 ; 2023 ; The Plant Cell Volume 35 ; 35 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; The Plant Cell Volume 36 ; 36 ; >
-      au < ready ; exists ; 2025 ; 2025 ; The Plant Cell Volume 37 ; 37 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; The Plant Cell Volume 37 ; 37 ; >
 
   }
 
