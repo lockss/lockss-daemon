@@ -630,7 +630,7 @@
     {
     param[journal_id] = sjnaam.1
     
-    #no metadata for these two AUs.
+    #no metadata for these two AUs. ISSN in RIS file is 0887459X. See LXPLUG-2751
     au < notReady ; exists ; 1964 ; Journal on Numerical Analysis Volume 1 ; 1 ; https://epubs.siam.org/ ; >
     au < notReady ; exists ; 1965 ; Journal on Numerical Analysis Volume 2 ; 2 ; https://epubs.siam.org/ ; >
     }
