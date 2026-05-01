@@ -32,8 +32,8 @@
       au < doesNotExist ; doesNotExist ; 1967 ; Chemical Engineering Education Volume 1967 ; 1967 ; 1967 ; >
       au < crawling ; exists ; 1968 ; Chemical Engineering Education Volume 1968 ; 1968 ; 1968 ; >
       au < crawling ; exists ; 1969 ; Chemical Engineering Education Volume 1969 ; 1969 ; 1969 ; >
-      au < ready ; exists ; 1970 ; Chemical Engineering Education Volume 1970 ; 1970 ; 1970 ; >
-      au < ready ; exists ; 1971 ; Chemical Engineering Education Volume 1971 ; 1971 ; 1971 ; >
+      au < crawling ; exists ; 1970 ; Chemical Engineering Education Volume 1970 ; 1970 ; 1970 ; >
+      au < crawling ; exists ; 1971 ; Chemical Engineering Education Volume 1971 ; 1971 ; 1971 ; >
       au < ready ; exists ; 1972 ; Chemical Engineering Education Volume 1972 ; 1972 ; 1972 ; >
       au < ready ; exists ; 1973 ; Chemical Engineering Education Volume 1973 ; 1973 ; 1973 ; >
       au < ready ; exists ; 1974 ; Chemical Engineering Education Volume 1974 ; 1974 ; 1974 ; >
@@ -68,7 +68,7 @@
       au < frozen ; exists ; 2003 ; Chemical Engineering Education Volume 2003 ; 2003 ; 2003 ; >
       au < ready ; exists ; 2004 ; Chemical Engineering Education Volume 2004 ; 2004 ; 2004 ; >
       au < frozen ; exists ; 2005 ; Chemical Engineering Education Volume 2005 ; 2005 ; 2005 ; >
-      au < ready ; exists ; 2006 ; Chemical Engineering Education Volume 2006 ; 2006 ; 2006 ; >
+      au < crawling ; exists ; 2006 ; Chemical Engineering Education Volume 2006 ; 2006 ; 2006 ; >
       au < frozen ; exists ; 2007 ; Chemical Engineering Education Volume 2007 ; 2007 ; 2007 ; >
       au < ready ; exists ; 2008 ; Chemical Engineering Education Volume 2008 ; 2008 ; 2008 ; >
       au < crawling ; exists ; 2009 ; Chemical Engineering Education Volume 2009 ; 2009 ; 2009 ; >
@@ -124,7 +124,7 @@
       au < ready ; exists ; 1920 ; Florida Entomologist Volume 4 ; 4 ; 1920 ; >
       au < crawling ; exists ; 1921 ; Florida Entomologist Volume 5 ; 5 ; 1921 ; >
       au < ready ; exists ; 1922 ; Florida Entomologist Volume 6 ; 6 ; 1922 ; >
-      au < ready ; exists ; 1923 ; Florida Entomologist Volume 7 ; 7 ; 1923 ; >
+      au < crawling ; exists ; 1923 ; Florida Entomologist Volume 7 ; 7 ; 1923 ; >
       au < ready ; exists ; 1924 ; Florida Entomologist Volume 8 ; 8 ; 1924 ; >
       au < ready ; exists ; 1925 ; Florida Entomologist Volume 9 ; 9 ; 1925 ; >
       au < ready ; exists ; 1926 ; Florida Entomologist Volume 10 ; 10 ; 1926 ; >
@@ -177,8 +177,8 @@
       au < ready ; exists ; 1973 ; Florida Entomologist Volume 57 ; 57 ; 1973 ; >
       au < ready ; exists ; 1974 ; Florida Entomologist Volume 58 ; 58 ; 1974 ; >
       au < crawling ; exists ; 1975 ; Florida Entomologist Volume 59 ; 59 ; 1975 ; >
-      au < ready ; exists ; 1976 ; Florida Entomologist Volume 60 ; 60 ; 1976 ; >
-      au < ready ; exists ; 1977 ; Florida Entomologist Volume 61 ; 61 ; 1977 ; >
+      au < crawling ; exists ; 1976 ; Florida Entomologist Volume 60 ; 60 ; 1976 ; >
+      au < crawling ; exists ; 1977 ; Florida Entomologist Volume 61 ; 61 ; 1977 ; >
       au < crawling ; exists ; 1978 ; Florida Entomologist Volume 62 ; 62 ; 1978 ; >
       au < ready ; exists ; 1979 ; Florida Entomologist Volume 63 ; 63 ; 1979 ; >
       au < ready ; exists ; 1980 ; Florida Entomologist Volume 64 ; 64 ; 1980 ; >
@@ -204,7 +204,7 @@
       au < frozen ; exists ; 2000 ; Florida Entomologist Volume 84 ; 84 ; 2000 ; >
       au < frozen ; exists ; 2001 ; Florida Entomologist Volume 85 ; 85 ; 2001 ; >
       au < frozen ; exists ; 2002 ; Florida Entomologist Volume 86 ; 86 ; 2002 ; >
-      au < ready ; exists ; 2003 ; Florida Entomologist Volume 87 ; 87 ; 2003 ; >
+      au < crawling ; exists ; 2003 ; Florida Entomologist Volume 87 ; 87 ; 2003 ; >
       au < frozen ; exists ; 2004 ; Florida Entomologist Volume 88 ; 88 ; 2004 ; >
       au < ready ; exists ; 2005 ; Florida Entomologist Volume 89 ; 89 ; 2005 ; >
       au < ready ; exists ; 2006 ; Florida Entomologist Volume 90 ; 90 ; 2006 ; >
@@ -246,7 +246,7 @@
       au < doesNotExist ; doesNotExist ; 1994 ; The International FLAIRS Conference Proceedings Volume 7 ; 7 ; 1994 ; >
       au < frozen ; exists ; 1995 ; The International FLAIRS Conference Proceedings Volume 8 ; 8 ; 1995 ; >
       au < ready ; exists ; 1996 ; The International FLAIRS Conference Proceedings Volume 9 ; 9 ; 1996 ; >
-      au < ready ; exists ; 1997 ; The International FLAIRS Conference Proceedings Volume 10 ; 10 ; 1997 ; >
+      au < crawling ; exists ; 1997 ; The International FLAIRS Conference Proceedings Volume 10 ; 10 ; 1997 ; >
       #No issues between 1998 and 2019
       au < finished ; manifest ; 2020 ; The International FLAIRS Conference Proceedings Volume 33 ; 33 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; The International FLAIRS Conference Proceedings Volume 34 ; 34 ; 2021 ; reingest3.clockss.org:8083 >
@@ -453,11 +453,11 @@
       au < frozen ; exists ; 1981 ; Studies in African Linguistics Volume 12 ; 12 ; 1981 ; >
       au < ready ; exists ; 1982 ; Studies in African Linguistics Volume 13 ; 13 ; 1982 ; >
       au < crawling ; exists ; 1983 ; Studies in African Linguistics Volume 14 ; 14 ; 1983 ; >
-      au < ready ; exists ; 1984 ; Studies in African Linguistics Volume 15 ; 15 ; 1984 ; >
+      au < crawling ; exists ; 1984 ; Studies in African Linguistics Volume 15 ; 15 ; 1984 ; >
       au < crawling ; exists ; 1985 ; Studies in African Linguistics Volume 16 ; 16 ; 1985 ; >
       au < ready ; exists ; 1986 ; Studies in African Linguistics Volume 17 ; 17 ; 1986 ; >
       au < frozen ; exists ; 1987 ; Studies in African Linguistics Volume 18 ; 18 ; 1987 ; >
-      au < ready ; exists ; 1988 ; Studies in African Linguistics Volume 19 ; 19 ; 1988 ; >
+      au < crawling ; exists ; 1988 ; Studies in African Linguistics Volume 19 ; 19 ; 1988 ; >
       au < crawling ; exists ; 1989 ; Studies in African Linguistics Volume 20 ; 20 ; 1989 ; >
       au < ready ; exists ; 1990 ; Studies in African Linguistics Volume 21 ; 21 ; 1990 ; >
       au < ready ; exists ; 1991 ; Studies in African Linguistics Volume 22 ; 22 ; 1991 ; >
@@ -635,13 +635,13 @@
       au < frozen ; exists ; 1962 ; Proceedings of the Florida State Horticultural Society Volume 75 ; 75 ; 1962 ; >
       au < frozen ; exists ; 1963 ; Proceedings of the Florida State Horticultural Society Volume 76 ; 76 ; 1963 ; >
       au < ready ; exists ; 1964 ; Proceedings of the Florida State Horticultural Society Volume 77 ; 77 ; 1964 ; >
-      au < ready ; exists ; 1965 ; Proceedings of the Florida State Horticultural Society Volume 78 ; 78 ; 1965 ; >
+      au < crawling ; exists ; 1965 ; Proceedings of the Florida State Horticultural Society Volume 78 ; 78 ; 1965 ; >
       au < ready ; exists ; 1966 ; Proceedings of the Florida State Horticultural Society Volume 79 ; 79 ; 1966 ; >
       au < crawling ; exists ; 1967 ; Proceedings of the Florida State Horticultural Society Volume 80 ; 80 ; 1967 ; >
       au < crawling ; exists ; 1968 ; Proceedings of the Florida State Horticultural Society Volume 81 ; 81 ; 1968 ; >
       au < ready ; exists ; 1969 ; Proceedings of the Florida State Horticultural Society Volume 82 ; 82 ; 1969 ; >
       au < frozen ; exists ; 1970 ; Proceedings of the Florida State Horticultural Society Volume 83 ; 83 ; 1970 ; >
-      au < ready ; exists ; 1971 ; Proceedings of the Florida State Horticultural Society Volume 84 ; 84 ; 1971 ; >
+      au < crawling ; exists ; 1971 ; Proceedings of the Florida State Horticultural Society Volume 84 ; 84 ; 1971 ; >
       au < frozen ; exists ; 1972 ; Proceedings of the Florida State Horticultural Society Volume 85 ; 85 ; 1972 ; >
       au < frozen ; exists ; 1973 ; Proceedings of the Florida State Horticultural Society Volume 86 ; 86 ; 1973 ; >
       au < ready ; exists ; 1974 ; Proceedings of the Florida State Horticultural Society Volume 87 ; 87 ; 1974 ; >

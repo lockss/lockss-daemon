@@ -150,7 +150,7 @@
     param[journal_abbr] = djcil
     
     au < ready ; exists ; 1991 ; Duke Journal of Comparative and International Law Volume 1 ; 1 ; https://scholarship.law.duke.edu/ ; >
-    au < ready ; exists ; 1992 ; Duke Journal of Comparative and International Law Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
+    au < crawling ; exists ; 1992 ; Duke Journal of Comparative and International Law Volume 2 ; 2 ; https://scholarship.law.duke.edu/ ; >
     au < crawling ; exists ; 1993 ; Duke Journal of Comparative and International Law Volume 3 ; 3 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1994 ; Duke Journal of Comparative and International Law Volume 4 ; 4 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; manifest ; 1995 ; Duke Journal of Comparative and International Law Volume 5 ; 5 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
@@ -443,7 +443,7 @@
     au < ready ; exists ; 1981 ; Law and Contemporary Problems Volume 44 ; 44 ; https://scholarship.law.duke.edu/ ; >
     au < ready ; exists ; 1982 ; Law and Contemporary Problems Volume 45 ; 45 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; manifest ; 1983 ; Law and Contemporary Problems Volume 46 ; 46 ; https://scholarship.law.duke.edu/ ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 1984 ; Law and Contemporary Problems Volume 47 ; 47 ; https://scholarship.law.duke.edu/ ; >
+    au < crawling ; exists ; 1984 ; Law and Contemporary Problems Volume 47 ; 47 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; manifest ; 1985 ; Law and Contemporary Problems Volume 48 ; 48 ; https://scholarship.law.duke.edu/ ; reingest5.clockss.org:8082 >
     au < ready ; exists ; 1986 ; Law and Contemporary Problems Volume 49 ; 49 ; https://scholarship.law.duke.edu/ ; >
     au < finished ; manifest ; 1987 ; Law and Contemporary Problems Volume 50 ; 50 ; https://scholarship.law.duke.edu/ ; reingest3.clockss.org:8083 >

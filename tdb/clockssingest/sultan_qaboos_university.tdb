@@ -155,7 +155,7 @@
       param[base_url] = https://tjer.squ.edu.om/
       param[journal_abbr] = journal
 
-      au < ready ; exists ; 2004 ; The Journal of Engineering Research Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2004 ; The Journal of Engineering Research Volume 1 ; 1 ; >
       au < crawling ; exists ; 2005 ; The Journal of Engineering Research Volume 2 ; 2 ; >
       au < crawling ; exists ; 2006 ; The Journal of Engineering Research Volume 3 ; 3 ; >
       au < ready ; exists ; 2007 ; The Journal of Engineering Research Volume 4 ; 4 ; >

@@ -25,7 +25,7 @@
     #param[journal_issn] = 1755-2923
     
     au < frozen ; exists ; 2008 ; Anthropological Journal of European Cultures Volume 17 ; 17 ; >
-    au < ready ; exists ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2009 ; Anthropological Journal of European Cultures Volume 18 ; 18 ; >
     au < finished ; manifest ; 2010 ; Anthropological Journal of European Cultures Volume 19 ; 19 ; reingest2.clockss.org:8085 >
     au < doNotProcess ; doNotProcess ; 2011 ; Anthropological Journal of European Cultures Volume 20 ; 20 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; Anthropological Journal of European Cultures Volume 21 ; 21 ; >
@@ -473,7 +473,7 @@
      
     au < finished ; manifest ; 2008 ; European Comic Art Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2009 ; European Comic Art Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2010 ; European Comic Art Volume 3 ; 3 ; >
+    au < crawling ; exists ; 2010 ; European Comic Art Volume 3 ; 3 ; >
     au < doNotProcess ; doNotProcess ; 2011 ; European Comic Art Volume 4 ; 4 ; >
     au < doNotProcess ; doNotProcess ; 2012 ; European Comic Art Volume 5 ; 5 ; >
     au < doNotProcess ; doNotProcess ; 2013 ; European Comic Art Volume 6 ; 6 ; >

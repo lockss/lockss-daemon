@@ -3888,7 +3888,7 @@
     au < finished ; manifest ; 2022 ; 2022 ; Chemical Senses Volume 47 ; 47 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; 2023 ; Chemical Senses Volume 48 ; 48 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; Chemical Senses Volume 49 ; 49 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2025 ; 2025 ; Chemical Senses Volume 50 ; 50 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; Chemical Senses Volume 50 ; 50 ; >
 
   }
 
@@ -8495,7 +8495,7 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; History Workshop Journal Volume 93-94 ; 93-94 ; >
     au < finished ; manifest ; 2023 ; 2023 ; History Workshop Journal Volume 95-96 ; 95-96 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; 2024 ; History Workshop Journal Volume 97-98 ; 97-98 ; reingest3.clockss.org:8083 >
-    au < ready ; exists ; 2025 ; 2025 ; History Workshop Journal Volume 99-100 ; 99-100 ; >
+    au < crawling ; exists ; 2025 ; 2025 ; History Workshop Journal Volume 99-100 ; 99-100 ; >
 
   }
 
@@ -13279,7 +13279,7 @@
     param[journal_id] = joneph
 
     au < ready ; exists ; 2014 ; 2014 ; Journal of Nephrology Volume 27 ; 27 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Journal of Nephrology Volume 28 ; 28 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Journal of Nephrology Volume 28 ; 28 ; >
     au < ready ; exists ; 2016 ; 2016 ; Journal of Nephrology Volume 29 ; 29 ; >
     au < frozen ; exists ; 2017 ; 2017 ; Journal of Nephrology Volume 30 ; 30 ; >
     au < frozen ; exists ; 2018 ; 2018 ; Journal of Nephrology Volume 31 ; 31 ; >

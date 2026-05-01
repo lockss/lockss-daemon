@@ -4688,7 +4688,7 @@
       param[journal_issn] = 2644-1721
 
       au < finished ; manifest ; 2020 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2021 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2021 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2022 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < ready ; exists ; 2023 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2024 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
@@ -5200,7 +5200,7 @@
 
       param[journal_issn] = 3066-3784
 
-      au < ready ; exists ; 2025 ; International Journal of SME Research and Innovation (IJSMERI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2025 ; International Journal of SME Research and Innovation (IJSMERI) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2026 ; International Journal of SME Research and Innovation (IJSMERI) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
 
   }
