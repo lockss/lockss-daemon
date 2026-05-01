@@ -106,11 +106,12 @@ public class MigrateSettings extends LockssServlet {
   static final String LABEL_DELETE_EACH_AU = "Delete each AU after migration";
 
   static final String POPUP_DELETE_EACH_AU =
-      "The \"" + LABEL_DELETE_EACH_AU + "\" option should be used only " +
-      "when performing a same-host migration with incremental reclamation. " +
-      "In that scenario, this option will reclaim space for LOCKSS 2.x as " +
-      "the migration progresses by deleting each AU from LOCKSS 1.x after it " +
-      "is migrated. See the LOCKSS 1.x to 2.x Migration Guide for details.";
+      "The \"" + LABEL_DELETE_EACH_AU + "\" option causes content to be " +
+      "permanently deleted from LOCKSS 1.x as the migration progresses. It " +
+      "should only be used in a same-host migration with insufficient " +
+      "storage space to hold two copies of the content. See \"Same-Host " +
+      "Migration With Incremental Reclamation\" in the LOCKSS 1.x to 2.x " +
+      "Migration Guide.";
   
   LockssDaemon theDaemon;
   MigrationManager migrationMgr;
