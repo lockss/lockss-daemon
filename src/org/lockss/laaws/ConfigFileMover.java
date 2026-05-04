@@ -235,7 +235,7 @@ public class ConfigFileMover extends Worker {
         break;
       }
     } catch (ApiException | IOException e) {
-      logError("Couldn't store LOCKSS 2.0 config section: " + section, e);
+      logError("Couldn't store LOCKSS 2.x config section: " + section, e);
     }
   }
 
@@ -351,12 +351,12 @@ public class ConfigFileMover extends Worker {
       return res;
     } catch (ApiException e) {
       if (e.getCode() == 404) {
-        log.debug("LOCKSS 2.0 config file not found: " + section);
+        log.debug("LOCKSS 2.x config file not found: " + section);
         return null;
       }
       return null;
     } catch (IOException e) {
-      logError("Couldn't read LOCKSS 2.0 config file: " + section, e);
+      logError("Couldn't read LOCKSS 2.x config file: " + section, e);
       return null;
     }
   }

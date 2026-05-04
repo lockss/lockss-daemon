@@ -332,10 +332,10 @@ public class DebugPanel extends LockssServlet {
     AuState aus = AuUtil.getAuState(au);
     switch (aus.getMigrationState()) {
     case InProgress:
-      errMsg = "Can't start crawl: AU is being migrated to LOCKSS 2.0";
+      errMsg = "Can't start crawl: AU is being migrated to LOCKSS 2.x";
       break;
     case Finished:
-      errMsg = "Can't start crawl: AU has been migrated to LOCKSS 2.0";
+      errMsg = "Can't start crawl: AU has been migrated to LOCKSS 2.x";
       break;
     default:
       try {
@@ -597,7 +597,7 @@ public class DebugPanel extends LockssServlet {
     case InProgress:
       throw new PollManager.NotEligibleException("AU is being migrated, cannot start poll");
     case Finished:
-      throw new PollManager.NotEligibleException("AU has been migrated to LOCKSS 2.0, can't poll in LOCKSS 1.0");
+      throw new PollManager.NotEligibleException("AU has been migrated to LOCKSS 2.x, can't poll in LOCKSS 1.x");
     default:
     }
     log.debug("Enqueuing a V3 Content Poll on " + au.getName());
