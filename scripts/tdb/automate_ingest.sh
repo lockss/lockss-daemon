@@ -5,8 +5,8 @@ year=`date +%Y`
 #Ready
 
 #Highwire
-echo "###Ready highwire" > $t/tmp_HW  #clear out file.
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "highwire" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v oxfordjournals | shuf >> $t/tmp_HW
+#echo "###Ready highwire" > $t/tmp_HW  #clear out file.
+#./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "highwire" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v oxfordjournals | shuf >> $t/tmp_HW
 
 #Atypon (Sage), in order by year
 echo "###Ready Sage $year" > $t/tmp_Sage  #clear out file
@@ -15,10 +15,10 @@ echo "###Ready Sage not $year" >> $t/tmp_Sage
 ./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssSageAtyponJournals" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Sage
 
 #Atypon (not Sage), in order by year
-echo "###Ready Atypon $year" > $t/tmp_Atypon  #clear out file
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and plugin !~ "SageAtyponJournals" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
-echo "###Ready Atypon not $year" >> $t/tmp_Atypon
-./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and plugin !~ "SageAtyponJournals" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
+#echo "###Ready Atypon $year" > $t/tmp_Atypon  #clear out file
+#./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and plugin !~ "SageAtyponJournals" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
+#echo "###Ready Atypon not $year" >> $t/tmp_Atypon
+#./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "typon" and plugin !~ "SageAtyponJournals" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Atypon
 
 #Emerald Journals in order by year
 echo "###Ready Emerald Journals $year" > $t/tmp_EmeraldJ  #clear out file
@@ -57,12 +57,14 @@ echo "###Ready Emerald Journals not $year" >> $t/tmp_EmeraldJ
 #echo "###Ready T&F not 2017" >> $t/tmp_TnF
 #./scripts/tdb/tdbout -Y -a -Q 'plugin ~ "ClockssTaylorAndFrancisPlugin" and year is not "2017" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_TnF
 
-#Misc: all but Highwire, T&F, Atypon (incl Sage), Emerald
+#Misc: all but Sage and Emerald
 #Ready
+echo "###Ready New Contract for $year" > $t/tmp_New_Contract  #clear out file
+./scripts/tdb/tdbout -Y -a -Q 'publisher:info[contract] is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | shuf >> $t/tmp_New_Contract
 echo "###Ready Misc $year" > $t/tmp_Misc  #clear out file
-./scripts/tdb/tdbout -Y -a -Q 'year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssEmeraldSilverchairPlugin | shuf >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'publisher:info[contract] is not "'$year'" and year is "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v ClockssSageAtyponJournals | grep -v ClockssEmeraldSilverchairPlugin | shuf >> $t/tmp_Misc
 echo "###Ready Misc not $year" >> $t/tmp_Misc
-./scripts/tdb/tdbout -Y -a -Q 'year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v highwire | grep -v typon | grep -v ClockssEmeraldSilverchairPlugin | shuf >> $t/tmp_Misc
+./scripts/tdb/tdbout -Y -a -Q 'publisher:info[contract] is not "'$year'" and year is not "'$year'" and (au:hidden[proxy] is not set or au:hidden[proxy] is "")' tdb/clockssingest/*.tdb | grep -v ClockssSageAtyponJournals | grep -v ClockssEmeraldSilverchairPlugin | shuf >> $t/tmp_Misc
 #Single Ingest Machines: all publishers
 echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest1" >> $t/tmp_Misc
@@ -80,11 +82,10 @@ echo "*********************" >> $t/tmp_Misc
 echo "###Ready Misc Ingest5" >> $t/tmp_Misc
 ./scripts/tdb/tdbout -Y -a -Q 'au:hidden[proxy] is "reingest5.clockss.org:8082"' tdb/clockssingest/*.tdb | shuf >> $t/tmp_Misc
 
-head -n10 $t/tmp_HW | grep -v ClockssHWDrupalPlugin > $t/tmp_All
-head -n10 $t/tmp_Sage >> $t/tmp_All
-head -n10 $t/tmp_Atypon >> $t/tmp_All
+head -n20 $t/tmp_Sage > $t/tmp_All
 head -n10 $t/tmp_EmeraldJ >> $t/tmp_All
-head -n80 $t/tmp_Misc | grep -v HWDrupalPlugin >> $t/tmp_All
+head -n30 $t/tmp_New_Contract >> $t/tmp_All
+head -n90 $t/tmp_Misc | grep -v HWDrupalPlugin >> $t/tmp_All
 
 exit 0
 
