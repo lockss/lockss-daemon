@@ -282,7 +282,7 @@
       au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2023 ; Global Environmental Psychology Volume 2023 ; 2023 ; 2023 ; https://gep.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2024 ; Global Environmental Psychology Volume 2024 ; 2024 ; 2024 ; https://gep.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2025 ; Global Environmental Psychology Volume 2025 ; 2025 ; 2025 ; https://gep.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2026 ; Global Environmental Psychology Volume 2026 ; 2026 ; 2026 ; https://gep.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2026 ; Global Environmental Psychology Volume 2026 ; 2026 ; 2026 ; https://gep.psychopen.eu/ ; >
 
   }
 
@@ -315,11 +315,11 @@
 
       param[journal_id] = phair
 
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2022 ; Psychology of Human-Animal Intergroup Relations Volume 2022 ; 2022 ; 2022 ; https://phair.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2023 ; Psychology of Human-Animal Intergroup Relations Volume 2023 ; 2023 ; 2023 ; https://phair.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2024 ; Psychology of Human-Animal Intergroup Relations Volume 2024 ; 2024 ; 2024 ; https://phair.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2025 ; Psychology of Human-Animal Intergroup Relations Volume 2025 ; 2025 ; 2025 ; https://phair.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2026 ; Psychology of Human-Animal Intergroup Relations Volume 2026 ; 2026 ; 2026 ; https://phair.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2022 ; Psychology of Human-Animal Intergroup Relations Volume 2022 ; 2022 ; 2022 ; https://phair.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2023 ; Psychology of Human-Animal Intergroup Relations Volume 2023 ; 2023 ; 2023 ; https://phair.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2024 ; Psychology of Human-Animal Intergroup Relations Volume 2024 ; 2024 ; 2024 ; https://phair.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2025 ; Psychology of Human-Animal Intergroup Relations Volume 2025 ; 2025 ; 2025 ; https://phair.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2026 ; Psychology of Human-Animal Intergroup Relations Volume 2026 ; 2026 ; 2026 ; https://phair.psychopen.eu/ ; >
 
   }
 
@@ -332,8 +332,8 @@
 
       param[journal_id] = rpio
 
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2025 ; Research for People in Organizations Volume 2025 ; 2025 ; 2025 ; https://rpio.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2026 ; Research for People in Organizations Volume 2026 ; 2026 ; 2026 ; https://rpio.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2025 ; Research for People in Organizations Volume 2025 ; 2025 ; 2025 ; https://rpio.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2026 ; Research for People in Organizations Volume 2026 ; 2026 ; 2026 ; https://rpio.psychopen.eu/ ; >
 
   }
 
