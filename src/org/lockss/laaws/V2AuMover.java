@@ -565,7 +565,9 @@ public class V2AuMover {
 
   /** All AUIDs known to V2 repo at start of execution */
   private final ArrayList<String> v2Aus = new ArrayList<>();
-  private final LinkedHashSet<ArchivalUnit> auMoveQueue = new LinkedHashSet<>();
+  // Primary AU move queue.  Holds AUIDs not AUs to make plugin-reload
+  // AU restart less disruptive
+  private final LinkedHashSet<String> auMoveQueue = new LinkedHashSet<>();
 
   /** Counts down to zero when all AUs in request are finished */
   private CountUpDownLatch ausLatch;
@@ -1025,7 +1027,7 @@ public class V2AuMover {
     initAuRequest(args, ("AU: " + args.au.getName()));
     // get the aus known to the v2 repository
     getV2Aus();
-    auMoveQueue.add(args.au);
+    addToAuMoveQueue(args.au);
     moveQueuedAus();
   }
 
@@ -1054,7 +1056,7 @@ public class V2AuMover {
       if (isSkipFinished(args, au)) {
         continue;
       }
-      auMoveQueue.add(au);
+      addToAuMoveQueue(au);
     }
     moveQueuedAus();
   }
@@ -1081,16 +1083,20 @@ public class V2AuMover {
       // Don't copy internal AUs (test probably unnecessary here)
       .filter(au -> !pluginManager.isInternalAu(au))
       .filter(au -> !isSkipFinished(args, au))
-      .forEach(au -> auMoveQueue.add(au));
+      .forEach(au -> addToAuMoveQueue(au));
 
     moveQueuedAus();
+  }
+
+  private void addToAuMoveQueue(ArchivalUnit au) {
+    auMoveQueue.add(au.getAuId());
   }
 
   /** Move all AUs specified by uploaded AUIDs file */
   public void moveAus(Args args) throws IOException {
     startTotalTimers();
     for (ArchivalUnit au : args.aus) {
-      auMoveQueue.add(au);
+      addToAuMoveQueue(au);
     }
     initAuRequest(args, "AUIDs from file: " + args.auidsFilename);
     // get the aus known to the v2 repo
@@ -1123,7 +1129,12 @@ public class V2AuMover {
     log.debug(msg);
     logReport(msg + "\n");
 
-    for (ArchivalUnit au : auMoveQueue) {
+    for (String auid : auMoveQueue) {
+      ArchivalUnit au = pluginManager.getAuFromId(auid);
+      if (au == null) {
+        log.warning("AU has been deleted/deactivated: " + auid);
+        continue;
+      }
       if (isAbort()) {
         break;
       }
@@ -1517,7 +1528,25 @@ public class V2AuMover {
   void enterPhase(AuStatus auStat, Phase phase) {
     if (getEnterExecutor(phase) != null) {
       log.debug2("enqueueEnterPhase("+phase+")");
-      getEnterExecutor(phase).execute(() -> doEnterPhase(auStat, phase));
+      getEnterExecutor(phase).execute(() -> {
+          try {
+            doEnterPhase(auStat, phase);
+          } catch (Exception | OutOfMemoryError e) {
+            auStat.abortAu();
+            log.error("Exception entering phase " + phase +
+                      " for " + auStat.getAuName(), e);
+            auStat.addError("Failed entering phase " + phase +
+                            ": " + e.toString());
+            // Ensure the AU doesn't get stuck -- advance to FINISH/ABORT
+            try {
+              auStat.abortAu();
+              enterPhase(auStat, Phase.FINISH);
+            } catch (Exception e2) {
+              log.error("Failed to abort AU after phase entry failure", e2);
+              ausLatch.countDown(); // last resort: unblock the global latch
+            }
+          }
+        });
     } else {
       doEnterPhase(auStat, phase);
     }
@@ -3318,7 +3347,7 @@ public class V2AuMover {
 //     totalErrorCount = errors;
   }
 
-  LinkedHashSet<ArchivalUnit> getAuMoveQueue() {
+  LinkedHashSet<String> getAuMoveQueue() {
     return auMoveQueue;
   }
 
