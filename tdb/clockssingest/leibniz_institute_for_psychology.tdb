@@ -92,12 +92,11 @@
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2019 ; Interpersona: An International Journal on Personal Relationships Volume 13 ; 13 ; 2019 ; https://interpersona.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2020 ; Interpersona: An International Journal on Personal Relationships Volume 14 ; 14 ; 2020 ; https://interpersona.psychopen.eu/ ; > #no substance urls
       au < ojs3.ClockssOjs3Plugin ; finished ; manifest ; 2021 ; Interpersona: An International Journal on Personal Relationships Volume 15 ; 15 ; 2021 ; https://interpersona.psychopen.eu/ ; reingest1.clockss.org:8082 >
-      au < ojs3.ClockssOjs3Plugin ; deepCrawl ; exists ; 2022 ; Interpersona: An International Journal on Personal Relationships Volume 16 ; 16 ; 2022 ; https://interpersona.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; deepCrawl ; exists ; 2023 ; Interpersona: An International Journal on Personal Relationships Volume 17 ; 17 ; 2023 ; https://interpersona.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; deepCrawl ; exists ; 2024 ; Interpersona: An International Journal on Personal Relationships Volume 18 ; 18 ; 2024 ; https://interpersona.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2025 ; Interpersona: An International Journal on Personal Relationships Volume 19 ; 19 ; 2025 ; https://interpersona.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; expected ; exists ; 2026 ; Interpersona: An International Journal on Personal Relationships Volume 20 ; 20 ; 2026 ; https://interpersona.psychopen.eu/ ; >
-
+      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2022 ; Interpersona: An International Journal on Personal Relationships Volume 16 ; 16 ; 2022 ; https://interpersona.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2023 ; Interpersona: An International Journal on Personal Relationships Volume 17 ; 17 ; 2023 ; https://interpersona.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2024 ; Interpersona: An International Journal on Personal Relationships Volume 18 ; 18 ; 2024 ; https://interpersona.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; superseded ; exists ; 2025 ; Interpersona: An International Journal on Personal Relationships Volume 19 [superseded] ; 19 ; 2025 ; https://interpersona.psychopen.eu/ ; >
+      #Moved to new publisher
   }
 
   {
@@ -295,14 +294,14 @@
 
       param[journal_id] = miss
 
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2019 ; Measurement Instruments for the Social Sciences Volume 2019 ; 2019 ; 2019 ; https://miss.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2020 ; Measurement Instruments for the Social Sciences Volume 2020 ; 2020 ; 2020 ; https://miss.psychopen.eu/ ; > 
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2021 ; Measurement Instruments for the Social Sciences Volume 2021 ; 2021 ; 2021 ; https://miss.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2022 ; Measurement Instruments for the Social Sciences Volume 2022 ; 2022 ; 2022 ; https://miss.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2023 ; Measurement Instruments for the Social Sciences Volume 2023 ; 2023 ; 2023 ; https://miss.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2024 ; Measurement Instruments for the Social Sciences Volume 2024 ; 2024 ; 2024 ; https://miss.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2025 ; Measurement Instruments for the Social Sciences Volume 2025 ; 2025 ; 2025 ; https://miss.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; exists ; exists ; 2026 ; Measurement Instruments for the Social Sciences Volume 2026 ; 2026 ; 2026 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2019 ; Measurement Instruments for the Social Sciences Volume 2019 ; 2019 ; 2019 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2020 ; Measurement Instruments for the Social Sciences Volume 2020 ; 2020 ; 2020 ; https://miss.psychopen.eu/ ; > 
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2021 ; Measurement Instruments for the Social Sciences Volume 2021 ; 2021 ; 2021 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2022 ; Measurement Instruments for the Social Sciences Volume 2022 ; 2022 ; 2022 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2023 ; Measurement Instruments for the Social Sciences Volume 2023 ; 2023 ; 2023 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2024 ; Measurement Instruments for the Social Sciences Volume 2024 ; 2024 ; 2024 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2025 ; Measurement Instruments for the Social Sciences Volume 2025 ; 2025 ; 2025 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2026 ; Measurement Instruments for the Social Sciences Volume 2026 ; 2026 ; 2026 ; https://miss.psychopen.eu/ ; >
 
   }
 
