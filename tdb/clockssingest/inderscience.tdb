@@ -2146,7 +2146,7 @@
       au < finished ; crawling ; 2020-2021 ; International Journal of Business Process Integration and Management Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022-2024 ; International Journal of Business Process Integration and Management Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < manifest ; exists ; 2025-2026 ; International Journal of Business Process Integration and Management Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026-2027 ; International Journal of Business Process Integration and Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026-2027 ; International Journal of Business Process Integration and Management Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -2338,7 +2338,7 @@
       param[journal_id] = ijcast
 
       au < finished ; crawling ; 2016-2025 ; International Journal of Complexity in Applied Science and Engineering Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < exists ; exists ; 2026 ; International Journal of Complexity in Applied Science and Engineering Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026 ; International Journal of Complexity in Applied Science and Engineering Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4396,7 +4396,7 @@
       au < finished ; manifest ; 2023 ; International Journal of Environment, Workplace and Employment Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; International Journal of Environment, Workplace and Employment Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; International Journal of Environment, Workplace and Employment Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026 ; International Journal of Environment, Workplace and Employment Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
+      au < manifest ; exists ; 2026 ; International Journal of Environment, Workplace and Employment Volume 10 ; 10 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -12546,7 +12546,7 @@
       au < finished ; manifest ; 2023 ; International Journal of Sustainable Aviation Volume 9 ; 9 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; International Journal of Sustainable Aviation Volume 10 ; 10 ; https://www.inderscienceonline.com/ ;  >
       au < crawling ; exists ; 2025 ; International Journal of Sustainable Aviation Volume 11 ; 11 ; https://www.inderscienceonline.com/ ;  >
-      au < expected ; exists ; 2026 ; International Journal of Sustainable Aviation Volume 12 ; 12 ; https://www.inderscienceonline.com/ ;  >
+      au < manifest ; exists ; 2026 ; International Journal of Sustainable Aviation Volume 12 ; 12 ; https://www.inderscienceonline.com/ ;  >
 
   }
 
