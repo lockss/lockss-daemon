@@ -417,7 +417,7 @@
     au < released ; 2022 ; 1080-1150 ; ZooKeys Volume 2022 ; 2022 ; https://zookeys.pensoft.net/ >
     au < released ; 2023 ; 1138-1187 ; ZooKeys Volume 2023 ; 2023 ; https://zookeys.pensoft.net/ >
     au < released ; 2024 ; 1188-1221 ; ZooKeys Volume 2024 ; 2024 ; https://zookeys.pensoft.net/ >
-    au < manifest ; 2025 ; 1222-1265 ; ZooKeys Volume 2025 ; 2025 ; https://zookeys.pensoft.net/ >
+    au < ready ; 2025 ; 1222-1265 ; ZooKeys Volume 2025 ; 2025 ; https://zookeys.pensoft.net/ >
     au < manifest ; 2026 ; 1266-1309 ; ZooKeys Volume 2026 ; 2026 ; https://zookeys.pensoft.net/ >
 
    }
@@ -445,7 +445,7 @@
     au < released ; 2022 ; 96 ; Zoosystematics and Evolution Volume 2022 ; 2022 ; https://zse.pensoft.net/ >
     au < released ; 2023 ; 97 ; Zoosystematics and Evolution Volume 2023 ; 2023 ; https://zse.pensoft.net/ >
     au < released ; 2024 ; 98 ; Zoosystematics and Evolution Volume 2024 ; 2024 ; https://zse.pensoft.net/ >
-    au < manifest ; 2025 ; 99 ; Zoosystematics and Evolution Volume 2025 ; 2025 ; https://zse.pensoft.net/ >
+    au < ready ; 2025 ; 99 ; Zoosystematics and Evolution Volume 2025 ; 2025 ; https://zse.pensoft.net/ >
     au < manifest ; 2026 ; 100 ; Zoosystematics and Evolution Volume 2026 ; 2026 ; https://zse.pensoft.net/ >
 
     }
@@ -1260,7 +1260,7 @@
       au < released ; 2022 ; 2022 ; Vegetation Classification and Survey Volume 2022 ; 2022 ; https://vcs.pensoft.net/ >
       au < released ; 2023 ; 2023 ; Vegetation Classification and Survey Volume 2023 ; 2023 ; https://vcs.pensoft.net/ >
       au < released ; 2024 ; 2024 ; Vegetation Classification and Survey Volume 2024 ; 2024 ; https://vcs.pensoft.net/ >
-      au < manifest ; 2025 ; 2025 ; Vegetation Classification and Survey Volume 2025 ; 2025 ; https://vcs.pensoft.net/ >
+      au < ready ; 2025 ; 2025 ; Vegetation Classification and Survey Volume 2025 ; 2025 ; https://vcs.pensoft.net/ >
       au < manifest ; 2026 ; 2026 ; Vegetation Classification and Survey Volume 2026 ; 2026 ; https://vcs.pensoft.net/ >
 
   }
@@ -1399,7 +1399,7 @@
       param[au_oai_set] = ved
       #Moved from Plant Sociology
 
-      au < manifest ; 2025 ; 2025 ; Vegetation Ecology and Diversity Volume 2025 ; 2025 ; https://ved.arphahub.com/ >
+      au < ready ; 2025 ; 2025 ; Vegetation Ecology and Diversity Volume 2025 ; 2025 ; https://ved.arphahub.com/ >
       au < manifest ; 2026 ; 2026 ; Vegetation Ecology and Diversity Volume 2026 ; 2026 ; https://ved.arphahub.com/ >
 
   }
@@ -1461,7 +1461,7 @@
       au < released ; 2022 ; 2022 ; Zitteliana Volume 2022 ; 2022 ; https://zitteliana.pensoft.net/ >
       au < released ; 2023 ; 2023 ; Zitteliana Volume 2023 ; 2023 ; https://zitteliana.pensoft.net/ >
       au < released ; 2024 ; 2024 ; Zitteliana Volume 2024 ; 2024 ; https://zitteliana.pensoft.net/ >
-      au < manifest ; 2025 ; 2025 ; Zitteliana Volume 2025 ; 2025 ; https://zitteliana.pensoft.net/ >
+      au < ready ; 2025 ; 2025 ; Zitteliana Volume 2025 ; 2025 ; https://zitteliana.pensoft.net/ >
       au < manifest ; 2026 ; 2026 ; Zitteliana Volume 2026 ; 2026 ; https://zitteliana.pensoft.net/ >
 
   }
@@ -1684,7 +1684,7 @@
       au < released ; 2022 ; 2022 ; Tuhinga Volume 2022 ; 2022 ; https://tuhinga.arphahub.com/ >
       au < released ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ >
       au < released ; 2024 ; 2024 ; Tuhinga Volume 2024 ; 2024 ; https://tuhinga.arphahub.com/ >
-      au < manifest ; 2025 ; 2025 ; Tuhinga Volume 2025 ; 2025 ; https://tuhinga.arphahub.com/ >
+      au < ready ; 2025 ; 2025 ; Tuhinga Volume 2025 ; 2025 ; https://tuhinga.arphahub.com/ >
       au < expected ; 2026 ; 2026 ; Tuhinga Volume 2026 ; 2026 ; https://tuhinga.arphahub.com/ >
 
   }
