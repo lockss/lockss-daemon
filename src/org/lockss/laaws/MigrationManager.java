@@ -524,7 +524,7 @@ public class MigrationManager extends BaseLockssDaemonManager
     CopyDatabase("Copy Metadata & Subscription Databases", COPY_BIT),
     CopyConfig("Copy Misc. Config", COPY_BIT),
     CopySystemSettings("Copy System Settings", COPY_BIT),
-    CopyOnly("Copy Content", COPY_BIT),
+    CopyOnly("Copy Only", COPY_BIT),
     CopyAndVerify("Copy and Verify", COPY_BIT | VERIFY_BIT),
     VerifyOnly("Verify Only", VERIFY_BIT);
 
