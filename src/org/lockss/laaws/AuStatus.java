@@ -47,6 +47,7 @@ public class AuStatus extends OpTimers {
   protected Map<Phase,CountUpDownLatch> latchMap = new HashMap<>();
   boolean abortAu;
   boolean hasV1Content;
+  private V2AuMover.BatchLockToken batchToken;
 
   public AuStatus(V2AuMover auMover, ArchivalUnit au) {
     super(auMover);
@@ -111,6 +112,14 @@ public class AuStatus extends OpTimers {
 
   public boolean isAbort() {
     return abortAu || auMover.isAbort();
+  }
+
+  public void setBatchToken(V2AuMover.BatchLockToken t) {
+    this.batchToken = t;
+  }
+
+  public V2AuMover.BatchLockToken getBatchToken() {
+    return batchToken;
   }
 
   public int hashCode() {
