@@ -22,7 +22,7 @@
 
       param[journal_id] = global_higher_education
 
-      au < ready ; exists ; 2025 ; Journal of Global Higher Education Volume 2025 ; 2025 ; 1 ; >
+      au < crawling ; exists ; 2025 ; Journal of Global Higher Education Volume 2025 ; 2025 ; 1 ; >
       au < exists ; exists ; 2026 ; Journal of Global Higher Education Volume 2026 ; 2026 ; 2 ; >
 
   }
@@ -36,9 +36,9 @@
 
       param[journal_id] = jscpe
 
-      au < ready ; exists ; 2018 ; Journal of School-Based Counseling Policy and Evaluation Volume 2018 ; 2018 ; 1 ; >
-      au < ready ; exists ; 2019 ; Journal of School-Based Counseling Policy and Evaluation Volume 2019 ; 2019 ; 1 ; >
-      au < ready ; exists ; 2020 ; Journal of School-Based Counseling Policy and Evaluation Volume 2020 ; 2020 ; 2 ; >
+      au < crawling ; exists ; 2018 ; Journal of School-Based Counseling Policy and Evaluation Volume 2018 ; 2018 ; 1 ; >
+      au < crawling ; exists ; 2019 ; Journal of School-Based Counseling Policy and Evaluation Volume 2019 ; 2019 ; 1 ; >
+      au < crawling ; exists ; 2020 ; Journal of School-Based Counseling Policy and Evaluation Volume 2020 ; 2020 ; 2 ; >
       au < ready ; exists ; 2021 ; Journal of School-Based Counseling Policy and Evaluation Volume 2021 ; 2021 ; 3 ; >
       au < ready ; exists ; 2022 ; Journal of School-Based Counseling Policy and Evaluation Volume 2022 ; 2022 ; 4 ; >
       au < crawling ; exists ; 2023 ; Journal of School-Based Counseling Policy and Evaluation Volume 2023 ; 2023 ; 5 ; >
@@ -61,19 +61,19 @@
       au < crawling ; exists ; 2009 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2009 ; 2009 ; 4 ; >
       au < ready ; exists ; 2010 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2010 ; 2010 ; 5 ; >
       au < ready ; exists ; 2011 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2011 ; 2011 ; 6 ; >
-      au < ready ; exists ; 2012 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2012 ; 2012 ; 7 ; >
+      au < crawling ; exists ; 2012 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2012 ; 2012 ; 7 ; >
       au < ready ; exists ; 2013 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2013 ; 2013 ; 8 ; >
-      au < ready ; exists ; 2014 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2014 ; 2014 ; 9 ; >
+      au < crawling ; exists ; 2014 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2014 ; 2014 ; 9 ; >
       au < ready ; exists ; 2015 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2015 ; 2015 ; 10 ; >
-      au < ready ; exists ; 2016 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2016 ; 2016 ; 11 ; >
+      au < crawling ; exists ; 2016 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2016 ; 2016 ; 11 ; >
       au < ready ; exists ; 2017 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2017 ; 2017 ; 12 ; >
       au < crawling ; exists ; 2018 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2018 ; 2018 ; 13 ; >
       au < crawling ; exists ; 2019 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2019 ; 2019 ; 14 ; >
       au < ready ; exists ; 2020 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2020 ; 2020 ; 15 ; >
-      au < ready ; exists ; 2021 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2021 ; 2021 ; 16 ; >
+      au < crawling ; exists ; 2021 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2021 ; 2021 ; 16 ; >
       au < ready ; exists ; 2022 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2022 ; 2022 ; 17 ; >
       au < crawling ; exists ; 2023 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2023 ; 2023 ; 18 ; >
-      au < ready ; exists ; 2024 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2024 ; 2024 ; 19 ; >
+      au < crawling ; exists ; 2024 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2024 ; 2024 ; 19 ; >
       au < ready ; exists ; 2025 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2025 ; 2025 ; 20 ; >
       au < exists ; exists ; 2026 ; Journal of Sorority and Fraternity Life Research and Practice Volume 2026 ; 2026 ; 21 ; >
 
@@ -95,8 +95,8 @@
       au < crawling ; exists ; 1995 ; Journal of Textual Reasoning Volume 1995 ; 1995 ; 1 ; >
       au < ready ; exists ; 1996 ; Journal of Textual Reasoning Volume 1996 ; 1996 ; 1 ; >
       au < crawling ; exists ; 1997 ; Journal of Textual Reasoning Volume 1997 ; 1997 ; 1 ; >
-      au < ready ; exists ; 1998 ; Journal of Textual Reasoning Volume 1998 ; 1998 ; 1 ; >
-      au < ready ; exists ; 1999 ; Journal of Textual Reasoning Volume 1999 ; 1999 ; 1 ; >
+      au < crawling ; exists ; 1998 ; Journal of Textual Reasoning Volume 1998 ; 1998 ; 1 ; >
+      au < crawling ; exists ; 1999 ; Journal of Textual Reasoning Volume 1999 ; 1999 ; 1 ; >
       au < crawling ; exists ; 2000 ; Journal of Textual Reasoning Volume 2000 ; 2000 ; 1 ; >
       au < crawling ; exists ; 2001 ; Journal of Textual Reasoning Volume 2001 ; 2001 ; 1 ; >
       au < ready ; exists ; 2002 ; Journal of Textual Reasoning Volume 2002 ; 2002 ; 1 ; >
@@ -104,7 +104,7 @@
       au < ready ; exists ; 2004 ; Journal of Textual Reasoning Volume 2004 ; 2004 ; 2 ; >
       au < ready ; exists ; 2005 ; Journal of Textual Reasoning Volume 2005 ; 2005 ; 3 ; >
       au < ready ; exists ; 2006 ; Journal of Textual Reasoning Volume 2006 ; 2006 ; 4 ; >
-      au < ready ; exists ; 2007 ; Journal of Textual Reasoning Volume 2007 ; 2007 ; 5 ; >
+      au < crawling ; exists ; 2007 ; Journal of Textual Reasoning Volume 2007 ; 2007 ; 5 ; >
       au < ready ; exists ; 2010 ; Journal of Textual Reasoning Volume 2010 ; 2010 ; 6 ; >
       au < ready ; exists ; 2011 ; Journal of Textual Reasoning Volume 2011 ; 2011 ; 6 ; >
       au < ready ; exists ; 2012 ; Journal of Textual Reasoning Volume 2012 ; 2012 ; 7 ; >
@@ -116,7 +116,7 @@
       au < ready ; exists ; 2022 ; Journal of Textual Reasoning Volume 2022 ; 2022 ; 13 ; >
       au < ready ; exists ; 2023 ; Journal of Textual Reasoning Volume 2023 ; 2023 ; 14 ; >
       au < crawling ; exists ; 2024 ; Journal of Textual Reasoning Volume 2024 ; 2024 ; 15 ; >
-      au < ready ; exists ; 2025 ; Journal of Textual Reasoning Volume 2025 ; 2025 ; 16 ; >
+      au < crawling ; exists ; 2025 ; Journal of Textual Reasoning Volume 2025 ; 2025 ; 16 ; >
       au < exists ; exists ; 2026 ; Journal of Textual Reasoning Volume 2026 ; 2026 ; 17 ; >
 
   }
@@ -134,10 +134,10 @@
       au < crawling ; exists ; 2014 ; William & Mary Education Review Volume 2014 ; 2014 ; 2-3 ; >
       au < crawling ; exists ; 2015 ; William & Mary Education Review Volume 2015 ; 2015 ; 3-4 ; >
       au < ready ; exists ; 2016 ; William & Mary Education Review Volume 2016 ; 2016 ; 4 ; >
-      au < ready ; exists ; 2018 ; William & Mary Education Review Volume 2018 ; 2018 ; 5-6 ; >
+      au < crawling ; exists ; 2018 ; William & Mary Education Review Volume 2018 ; 2018 ; 5-6 ; >
       au < crawling ; exists ; 2020 ; William & Mary Education Review Volume 2020 ; 2020 ; 7 ; >
       au < ready ; exists ; 2022 ; William & Mary Education Review Volume 2022 ; 2022 ; 8 ; >
-      au < ready ; exists ; 2024 ; William & Mary Education Review Volume 2024 ; 2024 ; 9 ; >
+      au < crawling ; exists ; 2024 ; William & Mary Education Review Volume 2024 ; 2024 ; 9 ; >
       au < expected ; exists ; 2026 ; William & Mary Education Review Volume 2026 ; 2026 ; 10 ; >
 
   }
