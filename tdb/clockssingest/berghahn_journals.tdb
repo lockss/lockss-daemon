@@ -289,7 +289,7 @@
     au < finished ; manifest ; 2023 ; Contention Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Contention Volume 12 ; 12 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Contention Volume 13 ; 13 ; >
-    au < expected ; exists ; 2026 ; Contention Volume 14 ; 14 ; >
+    au < manifest ; exists ; 2026 ; Contention Volume 14 ; 14 ; >
 
   }
 
