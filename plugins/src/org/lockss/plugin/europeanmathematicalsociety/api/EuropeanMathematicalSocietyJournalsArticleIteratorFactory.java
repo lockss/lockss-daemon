@@ -69,7 +69,7 @@ public class EuropeanMathematicalSocietyJournalsArticleIteratorFactory
 
   // various aspects of an article
   protected static final Pattern ARTICLE_LANDING_PAGE_PATTERN = Pattern.compile(
-      "/(journals/[^/]+/articles/\\d+)$", Pattern.CASE_INSENSITIVE);
+      "/(journals/[^/]+/(articles|issues)/\\d+)$", Pattern.CASE_INSENSITIVE);
 
   protected static final Pattern PDF_PATTERN = Pattern.compile(
       "/(content/serial-article-files/\\d+)$", Pattern.CASE_INSENSITIVE);

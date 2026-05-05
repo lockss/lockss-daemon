@@ -84,6 +84,8 @@ public class EuropeanMathematicalSocietyHtmlMetadataExtractorFactory implements 
       tagMap.put("citation_pdf_url", MetadataField.FIELD_ACCESS_URL);
       // The following is/are for books
       tagMap.put("citation_isbn", MetadataField.FIELD_ISBN);
+     // The following is 2015 and earlier back content issue pages, theyu do not have article page.
+      tagMap.put("description", MetadataField.FIELD_ARTICLE_TITLE);
     }
     
     @Override
