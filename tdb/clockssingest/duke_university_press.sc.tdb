@@ -1361,7 +1361,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Theater Volume 53 ; 53 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Theater Volume 54 ; 54 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; Theater Volume 55 ; 55 ; >
-      au < expected ; exists ; 2026 ; 2026 ; Theater Volume 56 ; 56 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Theater Volume 56 ; 56 ; >
 
     }
 
@@ -1585,10 +1585,10 @@
       au < frozen ; exists ; 2020 ; 2020 ; New Political Science: A Journal of Politics and Culture Volume 42 ; 42 ; >
       au < frozen ; exists ; 2021 ; 2021 ; New Political Science: A Journal of Politics and Culture Volume 43 ; 43 ; >
       au < frozen ; exists ; 2022 ; 2022 ; New Political Science: A Journal of Politics and Culture Volume 44 ; 44 ; >
-      au < crawling ; exists ; 2023 ; 2023 ; New Political Science: A Journal of Politics and Culture Volume 45 ; 45 ; >
+      au < frozen ; exists ; 2023 ; 2023 ; New Political Science: A Journal of Politics and Culture Volume 45 ; 45 ; >
       au < frozen ; exists ; 2024 ; 2024 ; New Political Science: A Journal of Politics and Culture Volume 46 ; 46 ; >
       au < deepCrawl ; exists ; 2025 ; 2025 ; New Political Science: A Journal of Politics and Culture Volume 47 ; 47 ; >
-      au < expected ; exists ; 2026 ; 2026 ; New Political Science: A Journal of Politics and Culture Volume 48 ; 48 ; >
+      au < manifest ; exists ; 2026 ; 2026 ; New Political Science: A Journal of Politics and Culture Volume 48 ; 48 ; >
 
   }
 

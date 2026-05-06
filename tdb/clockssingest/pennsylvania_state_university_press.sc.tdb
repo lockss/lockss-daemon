@@ -1893,7 +1893,7 @@
       au < finished ; manifest ; 2022 ; The Langston Hughes Review Volume 28 ; 28 ; 2022 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; The Langston Hughes Review Volume 29 ; 29 ; 2023 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; The Langston Hughes Review Volume 30 ; 30 ; 2024 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2025 ; The Langston Hughes Review Volume 31 ; 31 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; The Langston Hughes Review Volume 31 ; 31 ; 2025 ; >
       au < expected ; exists ; 2026 ; The Langston Hughes Review Volume 32 ; 32 ; 2026 ; >
 
   }
@@ -2083,7 +2083,7 @@
       au < finished ; manifest ; 2023 ; Journal of Austrian-American History Volume 7 ; 7 ; 2023 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Journal of Austrian-American History Volume 8 ; 8 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Journal of Austrian-American History Volume 9 ; 9 ; 2025 ; >
-      au < expected ; exists ; 2026 ; Journal of Austrian-American History Volume 10 ; 10 ; 2026 ; >
+      au < manifest ; exists ; 2026 ; Journal of Austrian-American History Volume 10 ; 10 ; 2026 ; >
 
   }
 
