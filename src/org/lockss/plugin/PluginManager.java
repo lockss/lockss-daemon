@@ -381,7 +381,7 @@ public class PluginManager
   // called from auContentChanged on a crawler thread, which must not block
   // on a long-held per-plugin coord lock.  The 10s busy-loop runs here.
   private final ExecutorService pluginRestartExecutor =
-      Executors.newSingleThreadExecutor(r -> {
+      Executors.newCachedThreadPool(r -> {
         Thread t = new Thread(r, "PluginRestartScheduler");
         t.setDaemon(true);
         return t;
@@ -3115,7 +3115,7 @@ public class PluginManager
     jarValidator.checkAllEntries(validateAllJarEntries);
 
     // Create temporary plugin and classloader maps
-    HashMap<String,PluginInfo> tmpMap = new HashMap<String,PluginInfo>();
+    HashMap<String,PluginInfo> tmpMap = new LinkedHashMap<String,PluginInfo>();
 
     for (Iterator iter = registryAus.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
