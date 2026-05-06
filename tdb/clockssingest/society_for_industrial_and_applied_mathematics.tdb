@@ -554,14 +554,14 @@
     param[journal_id] = sjamdu
     #no metadata collected for these AUs
 
-    au < notReady ; exists ; 1980 ; Journal on Matrix Analysis and Application Volume 1 ; 1 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1981 ; Journal on Matrix Analysis and Application Volume 2 ; 2 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1982 ; Journal on Matrix Analysis and Application Volume 3 ; 3 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1983 ; Journal on Matrix Analysis and Application Volume 4 ; 4 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1984 ; Journal on Matrix Analysis and Application Volume 5 ; 5 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1985 ; Journal on Matrix Analysis and Application Volume 6 ; 6 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1986 ; Journal on Matrix Analysis and Application Volume 7 ; 7 ; https://epubs.siam.org/ ; >
-    au < notReady ; exists ; 1987 ; Journal on Matrix Analysis and Application Volume 8 ; 8 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1980 ; Journal on Matrix Analysis and Application Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1981 ; Journal on Matrix Analysis and Application Volume 2 ; 2 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1982 ; Journal on Matrix Analysis and Application Volume 3 ; 3 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1983 ; Journal on Matrix Analysis and Application Volume 4 ; 4 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1984 ; Journal on Matrix Analysis and Application Volume 5 ; 5 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1985 ; Journal on Matrix Analysis and Application Volume 6 ; 6 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1986 ; Journal on Matrix Analysis and Application Volume 7 ; 7 ; https://epubs.siam.org/ ; >
+    au < ready ; exists ; 1987 ; Journal on Matrix Analysis and Application Volume 8 ; 8 ; https://epubs.siam.org/ ; >
     }
 
   }
