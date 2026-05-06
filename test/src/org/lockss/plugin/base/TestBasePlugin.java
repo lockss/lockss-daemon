@@ -121,6 +121,8 @@ public class TestBasePlugin extends LockssTestCase {
     p2.put("param.2.value", "2021");
     p2.put("param.3.key", "base_url_nondef");
     p2.put("param.3.value", "http://example.com/a2/u2/");
+    p2.put("param.4.key", "pub_down");
+    p2.put("param.4.value", "false");
 
     // populate the title database from the properties
     Tdb tdb = new Tdb();
@@ -138,7 +140,8 @@ public class TestBasePlugin extends LockssTestCase {
       .setKey("base_url_nondef")
       .setType(ConfigParamDescr.TYPE_URL);
 
-    mbp.setConfigDescrs(ListUtil.list(PD_URL, PD_YEAR, nondefDesc));
+    mbp.setConfigDescrs(ListUtil.list(PD_URL, PD_YEAR, nondefDesc,
+                                      ConfigParamDescr.PUB_DOWN));
     setupNonDefTdb(plugName);
     assertSameElements(ListUtil.list("It's", "Howl"),
 		       mbp.getSupportedTitles());
@@ -148,7 +151,11 @@ public class TestBasePlugin extends LockssTestCase {
     assertEquals("hj", tc.getJournalTitle());
     assertEquals("4", tc.getPluginVersion());
     assertEquals(plugName, tc.getPluginName());
+    ConfigParamAssignment pubcpa = tc.findCpa(ConfigParamDescr.PUB_DOWN);
+    // Ensure defaultOnly param is present
+    assertEquals("false", pubcpa.getValue());
     Configuration tcConf = tc.getConfig();
+    // and doesn't show up in resulting config
     assertEquals(SetUtil.set(AUPARAM_URL, AUPARAM_YEAR, "base_url_nondef"),
                  tcConf.keySet());
 
