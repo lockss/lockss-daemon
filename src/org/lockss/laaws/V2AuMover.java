@@ -64,6 +64,7 @@ import java.nio.file.Files;
 import java.text.*;
 import java.util.*;
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -1131,7 +1132,7 @@ public class V2AuMover {
     ausLatch = new CountUpDownLatch(1, "AU");
     currentStatus = STATUS_RUNNING;
     totalAusToMove = auMoveQueueByPlugin.values().stream()
-        .mapToInt(java.util.Set::size).sum();
+        .mapToInt(Set::size).sum();
     String msg = "Processing " + StringUtil.numberOfUnits(totalAusToMove, "AU");
     log.debug(msg);
     logReport(msg + "\n");
@@ -1143,20 +1144,31 @@ public class V2AuMover {
     // currently free.
     List<Map.Entry<String, LinkedHashSet<String>>> remaining =
         new ArrayList<>(auMoveQueueByPlugin.entrySet());
+    int restartAttempts = 0;
     while (!remaining.isEmpty() && !isAbort()) {
-      boolean made = false;
+      boolean processedSome = false;
       for (Iterator<Map.Entry<String, LinkedHashSet<String>>> it =
                remaining.iterator(); it.hasNext(); ) {
         Map.Entry<String, LinkedHashSet<String>> e = it.next();
         SemaphoreMap<String>.SemaphoreLock lock =
             pluginManager.getPluginRestartCoordLocks().tryGetLock(e.getKey());
         if (lock != null) {
+          if (restartAttempts > 0) {
+            log.info("Got plugin lock for: " + PluginManager.pluginNameFromKey(e.getKey()));
+          }
           scheduleMigrationBatch(e.getKey(), e.getValue(), lock);
           it.remove();
-          made = true;
+          processedSome = true;
         }
       }
-      if (!made && !remaining.isEmpty() && !isAbort()) {
+      // Pause then retry to get remaining locks
+      if (!processedSome && !remaining.isEmpty() && !isAbort()) {
+        if (restartAttempts++ % 1000 == 0) {
+          List<String> waitingForPlugins = remaining.stream()
+              .map((ent) -> PluginManager.pluginNameFromKey(ent.getKey()))
+              .collect(Collectors.toList());
+          log.info("Waiting for plugins locked by PluginManager: " + waitingForPlugins);
+        }
         try { Thread.sleep(10_000); }
         catch (InterruptedException ie) {
           Thread.currentThread().interrupt(); break;
@@ -1196,7 +1208,7 @@ public class V2AuMover {
     } finally {
       // Drop the scheduler's self-ref.  If no AUs were scheduled this
       // also releases the underlying lock immediately.
-      token.release();
+      token.decrement();
     }
   }
 
@@ -1363,13 +1375,6 @@ public class V2AuMover {
 // //       auMover.logReportAndError(msg + ": " + e);
 // //     }
 // //   }
-
-  /**
-   * Start the state machine for an AU
-   */
-  protected void moveAu(ArchivalUnit au) {
-    moveAu(au, null);
-  }
 
   /**
    * Start the state machine for an AU, attaching the per-plugin batch
@@ -1693,7 +1698,7 @@ public class V2AuMover {
       log.debug2("Finishing AU: " + auName);
       removeActiveAu(au);
       BatchLockToken bt = auStat.getBatchToken();
-      if (bt != null) bt.release();
+      if (bt != null) bt.decrement();
       updateReport(auStat);
       if (!auStat.hasV1Content()) {
         totalAusEmpty++;
@@ -2335,8 +2340,8 @@ public class V2AuMover {
    * Reference-counted holder for a per-plugin restart-coordination lock.
    * Created by the batch scheduler with an initial count of 1 (the
    * scheduler's own ref) and one additional increment per AU scheduled.
-   * Each AU's {@code Action.FinishAu} calls {@link #release()}; the
-   * scheduler also calls {@link #release()} once after enqueuing its
+   * Each AU's {@code Action.FinishAu} calls {@link #decrement()}; the
+   * scheduler also calls {@link #decrement()} once after enqueuing its
    * batch.  When the count hits 0 the underlying
    * {@link SemaphoreMap.SemaphoreLock} is closed, releasing the
    * per-plugin lock so plugin reload (or another batch on the same
@@ -2345,18 +2350,29 @@ public class V2AuMover {
   public static class BatchLockToken {
     private final String pkey;
     private final SemaphoreMap<String>.SemaphoreLock lock;
-    private final java.util.concurrent.atomic.AtomicInteger count =
-        new java.util.concurrent.atomic.AtomicInteger(1);
-    public BatchLockToken(String pkey,
-                          SemaphoreMap<String>.SemaphoreLock lock) {
-      this.pkey = pkey; this.lock = lock;
+    private final AtomicInteger count = new AtomicInteger(1);
+
+    public BatchLockToken(String pkey, SemaphoreMap<String>.SemaphoreLock lock) {
+      this.pkey = pkey;
+      this.lock = lock;
     }
-    public String getPkey() { return pkey; }
-    public void increment() { count.incrementAndGet(); }
-    /** Decrement; release the underlying lock when count reaches 0. */
-    public void release() {
+
+    public String getPkey() {
+      return pkey;
+    }
+
+    public void increment() {
+      count.incrementAndGet();
+    }
+
+    /**
+     * Decrement; release the underlying lock when count reaches 0.
+     */
+    public void decrement() {
       if (count.decrementAndGet() == 0) {
-        try { lock.close(); } catch (java.io.IOException e) { /* never */ }
+        try {
+          lock.close();
+        } catch (IOException e) { /* never */ }
       }
     }
   }

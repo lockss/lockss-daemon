@@ -39,6 +39,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.jar.*;
 import java.util.regex.*;
+import java.util.stream.Collectors;
+
 import org.apache.commons.collections.map.*;
 import org.lockss.alert.*;
 import org.lockss.app.*;
@@ -1130,7 +1132,7 @@ public class PluginManager
     @Override public void auContentChanged(AuEvent event, ArchivalUnit au,
 					   AuEventHandler.ChangeInfo info) {
       if (loadablePluginsReady && isRegistryAu(au)) {
-	processRegistryAus(ListUtil.list(au), true, event.getWatchDog());
+	processRegistryAus(ListUtil.list(au), true, null);
       }
       if (shouldFlush404Cache(au, info)) {
 	flush404Cache(au);
@@ -1523,92 +1525,6 @@ public class PluginManager
   public boolean isRemoveStoppedAus() {
     return CurrentConfig.getBooleanParam(PARAM_REMOVE_STOPPED_AUS,
 					 DEFAULT_REMOVE_STOPPED_AUS);
-  }
-
-  // Stops and restarts a single plugin's set of AUs so that they start using
-  // the current version of their plugin.  Waits a little while between
-  // stopping and starting to allow existing processes to exit.  It's
-  // expected that this will cause lots of errors to be logged.  Called from
-  // runRestartBatch() while holding the per-plugin coord lock for pkey.
-  void restartAusForPlugin(String pkey,
-                           Collection<ArchivalUnit> aus,
-                           LockssWatchdog wdog) {
-    if (paramRestartAus) {
-      log.info("Restarting " + aus.size() + " AUs of plugin " + pkey
-               + " to use updated plugin.  Exiting processes may log errors;"
-               + " they should be harmless");
-      synchronized (auAddDelLock) {
-	Map<String, Configuration> configMap =
-	    new HashMap<String, Configuration>();
-	for (ArchivalUnit au : aus) {
-	  String auid = au.getAuId();
-	  Configuration auConf = au.getConfiguration();
-	  configMap.put(auid, auConf);
-	  numAusRestarting++;
-	  stopAu(au, new AuEvent(AuEvent.Type.RestartDelete, false));
-          if (wdog != null) {
-            wdog.pokeWDog();
-          }
-	}
-	try {
-	  Deadline.in(auRestartSleep(aus.size())).sleep();
-	} catch (InterruptedException ex) {
-	}
-
-	// The number of remaining AUs to be processed.
-	int remainingAus = configMap.entrySet().size();
-
-	// The event used to signal that an AU needs to be added to the batch of
-	// AUs to be marked for re-indexing.
-	AuEvent batchEvent = new AuEvent(AuEvent.Type.RestartCreate, true);
-
-	// The event used to signal that an AU needs to be added to the batch of
-	// AUs to be marked for re-indexing and the current batch needs to be
-	// executed afterwards.
-	AuEvent executeEvent = new AuEvent(AuEvent.Type.RestartCreate, false);
-
-	AuEvent auEvent = null;
-	ArchivalUnit newAu = null;
-	Plugin plug = getPlugin(pkey);
-
-	for (Map.Entry<String,Configuration> ent : configMap.entrySet()) {
-	  String auid = ent.getKey();
-	  Configuration auConf = ent.getValue();
-
-	  // To find the last AU.
-	  remainingAus--;
-
-	  // Check whether this is the last AU and therefore the batch of AUs to
-	  // be marked for re-indexing needs to be executed.
-	  if (remainingAus <= 0) {
-	    // Yes.
-	    auEvent = executeEvent;
-	  } else {
-	    // No.
-	    auEvent = batchEvent;
-	  }
-
-	  try {
-	    newAu = createAu(plug, auConf, auEvent);
-	    numAusRestarting--;
-            if (wdog != null) {
-              wdog.pokeWDog();
-            }
-	  } catch (ArchivalUnit.ConfigurationException e) {
-	    log.error("Failed to restart: " + auid);
-
-	    // Check whether the failure happened when trying to execute the
-	    // batch.
-	    if (!auEvent.isInBatch()) {
-	      // Yes: Execute the batch with the last successfully-created AU.
-	      signalAuEvent(newAu, auEvent, null);
-	    }
-	  }
-	}
-	numFailedAuRestarts += numAusRestarting;
-	numAusRestarting = 0;
-      }
-    }
   }
 
   long auRestartSleep(int n) {
@@ -3220,9 +3136,9 @@ public class PluginManager
     // held by V2AuMover for the duration of a migration.
     final boolean fStartAus = startAus;
     final LockssWatchdog fWdog = wdog;
-    pluginRestartExecutor.submit(new Runnable() {
+    pluginRestartExecutor.submit(new LockssRunnable("AU Restarter") {
       @Override
-      public void run() {
+      public void lockssRun() {
         runRestartScheduler(batches, fWdog, fStartAus);
       }
     });
@@ -3239,6 +3155,10 @@ public class PluginManager
       this.pkey = pkey;
       this.newInfo = newInfo;
     }
+
+    public String getPluginKey() {
+      return pkey;
+    }
   }
 
   /** Non-blocking-first scheduler for plugin restart batches.  Runs on
@@ -3249,20 +3169,26 @@ public class PluginManager
   void runRestartScheduler(List<PendingPluginBatch> batches,
                            LockssWatchdog wdog, boolean startAus) {
     if (log.isDebug()) {
-      List<String> keys = new ArrayList<>();
+      List<String> pids = new ArrayList<>();
       for (PendingPluginBatch b : batches) {
-        keys.add(b.pkey);
+        pids.add(PluginManager.pluginNameFromKey(b.pkey));
       }
-      log.debug("runRestartScheduler start, batches=" + keys);
+      log.debug("runRestartScheduler start, batches=" + pids);
     }
+
     List<String> changedPluginKeys = new ArrayList<>();
+    int restartAttempts = 0;
+
     while (!batches.isEmpty()) {
-      boolean made = false;
+      boolean processedSome = false;
       for (Iterator<PendingPluginBatch> it = batches.iterator();
            it.hasNext(); ) {
         PendingPluginBatch b = it.next();
         SemaphoreLock lock = pluginRestartCoordLocks.tryGetLock(b.pkey);
         if (lock != null) {
+          if (restartAttempts > 0) {
+            log.info("Got plugin lock for: " + PluginManager.pluginNameFromKey(b.pkey));
+          }
           try {
             runRestartBatch(b, wdog, startAus, changedPluginKeys);
           } finally {
@@ -3275,12 +3201,20 @@ public class PluginManager
             }
           }
           it.remove();
-          made = true;
+          processedSome = true;
         }
       }
-      if (!made && !batches.isEmpty()) {
+
+      // Pause then retry to get remaining locks
+      if (!processedSome && !batches.isEmpty()) {
         if (wdog != null) {
           wdog.pokeWDog();
+        }
+        if (restartAttempts++ % 1000 == 0) {
+          List<String> waitingForPlugins = batches.stream()
+              .map((b) -> PluginManager.pluginNameFromKey(b.pkey))
+              .collect(Collectors.toList());
+          log.info("Waiting for plugins locked by migrator: " + waitingForPlugins);
         }
         try {
           Thread.sleep(10_000L);
@@ -3297,8 +3231,11 @@ public class PluginManager
       configurePlugins(changedPluginKeys);
     }
     if (log.isDebug()) {
+      List<String> changedPluginNames = changedPluginKeys.stream()
+          .map(PluginManager::pluginNameFromKey)
+          .collect(Collectors.toList());
       log.debug("runRestartScheduler end, changedPluginKeys="
-                + changedPluginKeys);
+                + changedPluginNames);
     }
   }
 
@@ -3327,6 +3264,92 @@ public class PluginManager
     }
     if (!oldAus.isEmpty()) {
       restartAusForPlugin(pkey, oldAus, wdog);
+    }
+  }
+
+  // Stops and restarts a single plugin's set of AUs so that they start using
+  // the current version of their plugin.  Waits a little while between
+  // stopping and starting to allow existing processes to exit.  It's
+  // expected that this will cause lots of errors to be logged.  Called from
+  // runRestartBatch() while holding the per-plugin coord lock for pkey.
+  void restartAusForPlugin(String pkey,
+                           Collection<ArchivalUnit> aus,
+                           LockssWatchdog wdog) {
+    if (paramRestartAus) {
+      log.info("Restarting " + aus.size() + " AUs of plugin " + PluginManager.pluginNameFromKey(pkey)
+          + " to use updated plugin.  Exiting processes may log errors;"
+          + " they should be harmless");
+      synchronized (auAddDelLock) {
+        Map<String, Configuration> configMap =
+            new HashMap<String, Configuration>();
+        for (ArchivalUnit au : aus) {
+          String auid = au.getAuId();
+          Configuration auConf = au.getConfiguration();
+          configMap.put(auid, auConf);
+          numAusRestarting++;
+          stopAu(au, new AuEvent(AuEvent.Type.RestartDelete, false));
+          if (wdog != null) {
+            wdog.pokeWDog();
+          }
+        }
+        try {
+          Deadline.in(auRestartSleep(aus.size())).sleep();
+        } catch (InterruptedException ex) {
+        }
+
+        // The number of remaining AUs to be processed.
+        int remainingAus = configMap.entrySet().size();
+
+        // The event used to signal that an AU needs to be added to the batch of
+        // AUs to be marked for re-indexing.
+        AuEvent batchEvent = new AuEvent(AuEvent.Type.RestartCreate, true);
+
+        // The event used to signal that an AU needs to be added to the batch of
+        // AUs to be marked for re-indexing and the current batch needs to be
+        // executed afterwards.
+        AuEvent executeEvent = new AuEvent(AuEvent.Type.RestartCreate, false);
+
+        AuEvent auEvent = null;
+        ArchivalUnit newAu = null;
+        Plugin plug = getPlugin(pkey);
+
+        for (Map.Entry<String,Configuration> ent : configMap.entrySet()) {
+          String auid = ent.getKey();
+          Configuration auConf = ent.getValue();
+
+          // To find the last AU.
+          remainingAus--;
+
+          // Check whether this is the last AU and therefore the batch of AUs to
+          // be marked for re-indexing needs to be executed.
+          if (remainingAus <= 0) {
+            // Yes.
+            auEvent = executeEvent;
+          } else {
+            // No.
+            auEvent = batchEvent;
+          }
+
+          try {
+            newAu = createAu(plug, auConf, auEvent);
+            numAusRestarting--;
+            if (wdog != null) {
+              wdog.pokeWDog();
+            }
+          } catch (ArchivalUnit.ConfigurationException e) {
+            log.error("Failed to restart: " + auid);
+
+            // Check whether the failure happened when trying to execute the
+            // batch.
+            if (!auEvent.isInBatch()) {
+              // Yes: Execute the batch with the last successfully-created AU.
+              signalAuEvent(newAu, auEvent, null);
+            }
+          }
+        }
+        numFailedAuRestarts += numAusRestarting;
+        numAusRestarting = 0;
+      }
     }
   }
 
