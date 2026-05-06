@@ -390,6 +390,7 @@
     au < released ; 2023 ; Additional Government Publications and Archives 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Additional Government Publications and Archives 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < ready ; 2025 ; Additional Government Publications and Archives 2025 ; 2025 ; https://www.govinfo.gov/ >
+    au < manifest ; 2026 ; Additional Government Publications and Archives 2026 ; 2026 ; https://www.govinfo.gov/ >
 
   }
 
@@ -420,7 +421,8 @@
     au < released ; 2023 ; Budget of the United States Government 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Budget of the United States Government 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < ready ; 2025 ; Budget of the United States Government 2025 ; 2025 ; https://www.govinfo.gov/ >
- 
+    au < manifest ; 2026 ; Budget of the United States Government 2026 ; 2026 ; https://www.govinfo.gov/ >
+
   }
 
   {
@@ -1252,7 +1254,7 @@
     au < released ; 2023 ; Economic Report of the President 2023 ; 2023 ; https://www.govinfo.gov/ >
     au < released ; 2024 ; Economic Report of the President 2024 ; 2024 ; https://www.govinfo.gov/ >
     au < ready ; 2025 ; Economic Report of the President 2025 ; 2025 ; https://www.govinfo.gov/ >
-
+    au < manifest ; 2026 ; Economic Report of the President 2026 ; 2026 ; https://www.govinfo.gov/ >
   }
 
   {
@@ -2249,6 +2251,8 @@
     au < released ; 2020 ; United States Statutes at Large 2020 ; 2020 ; https://www.govinfo.gov/ >
     au < released ; 2021 ; United States Statutes at Large 2021 ; 2021 ; https://www.govinfo.gov/ >
     au < ready ; 2022 ; United States Statutes at Large 2022 ; 2022 ; https://www.govinfo.gov/ >
+    au < manifest ; 2023 ; United States Statutes at Large 2023 ; 2023 ; https://www.govinfo.gov/ >
+    au < manifest ; 2024 ; United States Statutes at Large 2024 ; 2024 ; https://www.govinfo.gov/ >
 
   }
 
