@@ -570,10 +570,10 @@
       au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Volume 385 ; 385 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Volume 386 ; 386 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Volume 387 ; 387 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 388 ; 388 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 389 ; 389 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 390 ; 390 ; https://www.bmj.com/ >
-      au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Volume 391 ; 391 ; https://www.bmj.com/ >
+      au < bmj.BMJDrupalPlugin ; notReady ; 2025 ; BMJ Volume 388 ; 388 ; https://www.bmj.com/ > #LXQUEUE-2212
+      au < bmj.BMJDrupalPlugin ; notReady ; 2025 ; BMJ Volume 389 ; 389 ; https://www.bmj.com/ > #LXQUEUE-2212
+      au < bmj.BMJDrupalPlugin ; notReady ; 2025 ; BMJ Volume 390 ; 390 ; https://www.bmj.com/ > #LXQUEUE-2212
+      au < bmj.BMJDrupalPlugin ; notReady ; 2025 ; BMJ Volume 391 ; 391 ; https://www.bmj.com/ > #LXQUEUE-2212
       au < bmj.BMJDrupalPlugin ; manifest ; 2026 ; BMJ Volume 392 ; 392 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; manifest ; 2026 ; BMJ Volume 393 ; 393 ; https://www.bmj.com/ >
       au < bmj.BMJDrupalPlugin ; expected ; 2026 ; BMJ Volume 394 ; 394 ; https://www.bmj.com/ >
@@ -602,7 +602,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Health & Care Informatics Volume 29 ; 29 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Health & Care Informatics Volume 30 ; 30 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Health & Care Informatics Volume 31 ; 31 ; https://informatics.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Health & Care Informatics Volume 32 ; 32 ; https://informatics.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2025 ; BMJ Health & Care Informatics Volume 32 ; 32 ; https://informatics.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2026 ; BMJ Health & Care Informatics Volume 33 ; 33 ; https://informatics.bmj.com/ >
 
   }
@@ -651,8 +651,8 @@
     au < bmj.BMJDrupalPlugin ; released ; 2021 ; BMJ Open Volume 11 ; 11 ; https://bmjopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Open Volume 12 ; 12 ; https://bmjopen.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Open Volume 13 ; 13 ; https://bmjopen.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; notReady ; 2024 ; BMJ Open Volume 14 ; 14 ; https://bmjopen.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Open Volume 15 ; 15 ; https://bmjopen.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2024 ; BMJ Open Volume 14 ; 14 ; https://bmjopen.bmj.com/ > #LXQUEUE-2212
+    au < bmj.BMJDrupalPlugin ; notReady ; 2025 ; BMJ Open Volume 15 ; 15 ; https://bmjopen.bmj.com/ > #LXQUEUE-2212
     au < bmj.BMJDrupalPlugin ; expected ; 2026 ; BMJ Open Volume 16 ; 16 ; https://bmjopen.bmj.com/ >
 
   }
@@ -699,7 +699,7 @@
     au < bmj.BMJDrupalPlugin ; notReady ; 2022 ; BMJ Open Ophthalmology Volume 7 ; 7 ; https://bmjophth.bmj.com/ > #Access Denied ~ https://bmjophth.bmj.com/content/7/Suppl_1
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Open Ophthalmology Volume 8 ; 8 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Open Ophthalmology Volume 9 ; 9 ; https://bmjophth.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Open Ophthalmology Volume 10 ; 10 ; https://bmjophth.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; ready ; 2025 ; BMJ Open Ophthalmology Volume 10 ; 10 ; https://bmjophth.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; expected ; 2026 ; BMJ Open Ophthalmology Volume 11 ; 11 ; https://bmjophth.bmj.com/ >
 
   }
@@ -722,7 +722,7 @@
     au < bmj.BMJDrupalPlugin ; released ; 2022 ; BMJ Open Respiratory Research Volume 9 ; 9 ; https://bmjopenrespres.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2023 ; BMJ Open Respiratory Research Volume 10 ; 10 ; https://bmjopenrespres.bmj.com/ >
     au < bmj.BMJDrupalPlugin ; released ; 2024 ; BMJ Open Respiratory Research Volume 11 ; 11 ; https://bmjopenrespres.bmj.com/ >
-    au < bmj.BMJDrupalPlugin ; manifest ; 2025 ; BMJ Open Respiratory Research Volume 12 ; 12 ; https://bmjopenrespres.bmj.com/ >
+    au < bmj.BMJDrupalPlugin ; notReady ; 2025 ; BMJ Open Respiratory Research Volume 12 ; 12 ; https://bmjopenrespres.bmj.com/ > #LXQUEUE-2212
     au < bmj.BMJDrupalPlugin ; expected ; 2026 ; BMJ Open Respiratory Research Volume 13 ; 13 ; https://bmjopenrespres.bmj.com/ >
 
   }
