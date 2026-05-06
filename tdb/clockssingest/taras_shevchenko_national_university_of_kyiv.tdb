@@ -28,10 +28,10 @@
 
     au < crawling ; exists ; 2017 ; 2017 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 34-35 [uk] ; 34-35 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 36-37 [uk] ; 36-37 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 38-39 [uk] ; 38-39 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 38-39 [uk] ; 38-39 ; >
     au < ready ; exists ; 2020 ; 2020 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 40-41 [uk] ; 40-41 ; >
     au < ready ; exists ; 2021 ; 2021 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 42-43 [uk] ; 42-43 ; >
-    au < ready ; exists ; 2022 ; 2022 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 44-45 [uk] ; 44-45 ; >
+    au < crawling ; exists ; 2022 ; 2022 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 44-45 [uk] ; 44-45 ; >
     au < crawling ; exists ; 2023 ; 2023 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 46-47 [uk] ; 46-47 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 48-49 [uk] ; 48-49 ; >
     au < ready ; exists ; 2025 ; 2025 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 50-51 [uk] ; 50-51 ; >
@@ -40,13 +40,13 @@
     {
     param[journal_id] = en
 
-    au < ready ; exists ; 2017 ; 2017 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 34-35 [en] ; 34-35 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 34-35 [en] ; 34-35 ; >
     au < ready ; exists ; 2018 ; 2018 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 36-37 [en] ; 36-37 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 38-39 [en] ; 38-39 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 38-39 [en] ; 38-39 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 40-41 [en] ; 40-41 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 42-43 [en] ; 42-43 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 42-43 [en] ; 42-43 ; >
     au < ready ; exists ; 2022 ; 2022 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 44-45 [en] ; 44-45 ; >
-    au < ready ; exists ; 2023 ; 2023 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 46-47 [en] ; 46-47 ; >
+    au < crawling ; exists ; 2023 ; 2023 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 46-47 [en] ; 46-47 ; >
     au < ready ; exists ; 2024 ; 2024 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 48-49 [en] ; 48-49 ; >
     au < ready ; exists ; 2025 ; 2025 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 50-51 [en] ; 50-51 ; >
     au < exists ; exists ; 2026 ; 2026 ; Current Issues of Ukrainian Linguistics: Theory and Practice Volume 52-53 [en] ; 52-53 ; >
@@ -71,11 +71,11 @@
     au < crawling ; exists ; 2014 ; 2014 ; Linguistic and Conceptual Worldviews Volume 2014 [uk] ; 2014 ; >
     au < ready ; exists ; 2015 ; 2015 ; Linguistic and Conceptual Worldviews Volume 2015 [uk] ; 2015 ; >
     au < notReady ; exists ; 2016 ; 2016 ; Linguistic and Conceptual Worldviews Volume 2016 [uk] ; 2016 ; > #See LXPUB-1504
-    au < ready ; exists ; 2017 ; 2017 ; Linguistic and Conceptual Worldviews Volume 2017 [uk] ; 2017 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Linguistic and Conceptual Worldviews Volume 2017 [uk] ; 2017 ; >
     au < crawling ; exists ; 2018 ; 2018 ; Linguistic and Conceptual Worldviews Volume 2018 [uk] ; 2018 ; >
-    au < ready ; exists ; 2019 ; 2019 ; Linguistic and Conceptual Worldviews Volume 2019 [uk] ; 2019 ; >
+    au < crawling ; exists ; 2019 ; 2019 ; Linguistic and Conceptual Worldviews Volume 2019 [uk] ; 2019 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Linguistic and Conceptual Worldviews Volume 2020 [uk] ; 2020 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Linguistic and Conceptual Worldviews Volume 2021 [uk] ; 2021 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Linguistic and Conceptual Worldviews Volume 2021 [uk] ; 2021 ; >
     au < ready ; exists ; 2022 ; 2022 ; Linguistic and Conceptual Worldviews Volume 2022 [uk] ; 2022 ; >
     au < ready ; exists ; 2023 ; 2023 ; Linguistic and Conceptual Worldviews Volume 2023 [uk] ; 2023 ; >
     au < crawling ; exists ; 2024 ; 2024 ; Linguistic and Conceptual Worldviews Volume 2024 [uk] ; 2024 ; >
@@ -87,13 +87,13 @@
     au < notReady ; exists ; 2012 ; 2012 ; Linguistic and Conceptual Worldviews Volume 2012 [en] ; 2012 ; > #See LXPUB-1504
     au < crawling ; exists ; 2013 ; 2013 ; Linguistic and Conceptual Worldviews Volume 2013 [en] ; 2013 ; >
     au < ready ; exists ; 2014 ; 2014 ; Linguistic and Conceptual Worldviews Volume 2014 [en] ; 2014 ; >
-    au < ready ; exists ; 2015 ; 2015 ; Linguistic and Conceptual Worldviews Volume 2015 [en] ; 2015 ; >
+    au < crawling ; exists ; 2015 ; 2015 ; Linguistic and Conceptual Worldviews Volume 2015 [en] ; 2015 ; >
     au < notReady ; exists ; 2016 ; 2016 ; Linguistic and Conceptual Worldviews Volume 2016 [en] ; 2016 ; > #See LXPUB-1504
-    au < ready ; exists ; 2017 ; 2017 ; Linguistic and Conceptual Worldviews Volume 2017 [en] ; 2017 ; >
-    au < ready ; exists ; 2018 ; 2018 ; Linguistic and Conceptual Worldviews Volume 2018 [en] ; 2018 ; >
+    au < crawling ; exists ; 2017 ; 2017 ; Linguistic and Conceptual Worldviews Volume 2017 [en] ; 2017 ; >
+    au < crawling ; exists ; 2018 ; 2018 ; Linguistic and Conceptual Worldviews Volume 2018 [en] ; 2018 ; >
     au < ready ; exists ; 2019 ; 2019 ; Linguistic and Conceptual Worldviews Volume 2019 [en] ; 2019 ; >
     au < crawling ; exists ; 2020 ; 2020 ; Linguistic and Conceptual Worldviews Volume 2020 [en] ; 2020 ; >
-    au < ready ; exists ; 2021 ; 2021 ; Linguistic and Conceptual Worldviews Volume 2021 [en] ; 2021 ; >
+    au < crawling ; exists ; 2021 ; 2021 ; Linguistic and Conceptual Worldviews Volume 2021 [en] ; 2021 ; >
     au < ready ; exists ; 2022 ; 2022 ; Linguistic and Conceptual Worldviews Volume 2022 [en] ; 2022 ; >
     au < ready ; exists ; 2023 ; 2023 ; Linguistic and Conceptual Worldviews Volume 2023 [en] ; 2023 ; >
     au < ready ; exists ; 2024 ; 2024 ; Linguistic and Conceptual Worldviews Volume 2024 [en] ; 2024 ; >

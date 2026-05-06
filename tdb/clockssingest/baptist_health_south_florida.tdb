@@ -21,7 +21,7 @@
       param[base_url] = https://scholarlycommons.baptisthealth.net/
       param[journal_abbr] = nhsrj
 
-      au < ready ; exists ; 2018 ; Nursing & Health Sciences Research Journal Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2018 ; Nursing & Health Sciences Research Journal Volume 1 ; 1 ; >
       au < frozen ; exists ; 2019 ; Nursing & Health Sciences Research Journal Volume 2 ; 2 ; >
       au < ready ; exists ; 2020 ; Nursing & Health Sciences Research Journal Volume 3 ; 3 ; >
       au < frozen ; exists ; 2021 ; Nursing & Health Sciences Research Journal Volume 4 ; 4 ; >

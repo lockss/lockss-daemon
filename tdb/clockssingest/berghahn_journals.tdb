@@ -345,7 +345,7 @@
       #they moved to eissn just before going offline
       #param[journal_issn] = 1752-2293
             
-      au < ready ; exists ; 1997 ; Critical Survey Volume 9 ; 9 ; >
+      au < crawling ; exists ; 1997 ; Critical Survey Volume 9 ; 9 ; >
       au < crawling ; exists ; 1998 ; Critical Survey Volume 10 ; 10 ; >
       au < crawling ; exists ; 1999 ; Critical Survey Volume 11 ; 11 ; >
       au < ready ; exists ; 2000 ; Critical Survey Volume 12 ; 12 ; >
@@ -804,7 +804,7 @@
     au < finished ; manifest ; 2002 ; Italian Politics Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < ready ; exists ; 2003 ; Italian Politics Volume 18 ; 18 ; >
     au < frozen ; exists ; 2004 ; Italian Politics Volume 19 ; 19 ; >
-    au < ready ; exists ; 2005 ; Italian Politics Volume 20 ; 20 ; >
+    au < crawling ; exists ; 2005 ; Italian Politics Volume 20 ; 20 ; >
     au < frozen ; exists ; 2006 ; Italian Politics Volume 21 ; 21 ; >
     au < crawling ; exists ; 2007 ; Italian Politics Volume 22 ; 22 ; >
     au < frozen ; exists ; 2008 ; Italian Politics Volume 23 ; 23 ; >
