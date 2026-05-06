@@ -1132,7 +1132,7 @@ public class PluginManager
     @Override public void auContentChanged(AuEvent event, ArchivalUnit au,
 					   AuEventHandler.ChangeInfo info) {
       if (loadablePluginsReady && isRegistryAu(au)) {
-	processRegistryAus(ListUtil.list(au), true, null);
+	processRegistryAusAsync(ListUtil.list(au), true, null);
       }
       if (shouldFlush404Cache(au, info)) {
 	flush404Cache(au);
@@ -2787,7 +2787,7 @@ public class PluginManager
 		  "Remaining registry URL list: " + regCallback.getRegistryUrls());
     }
 
-    processRegistryAus(loadAus);
+    processRegistryAusSync(loadAus);
   }
 
   RegistryPlugin getRegistryPlugin() {
@@ -3071,17 +3071,42 @@ public class PluginManager
     return plugins;
   }
 
-  public synchronized void processRegistryAus(List registryAus) {
-    processRegistryAus(registryAus, false, null);
+  /** Synchronous entry point: dispatches the work off-thread to
+   *  pluginRestartExecutor and waits on the returned semaphore so that on
+   *  return the new plugins/AUs are installed and visible. */
+  public void processRegistryAusSync(List registryAus) {
+    processRegistryAusSync(registryAus, false);
+  }
+
+  public void processRegistryAusSync(List registryAus, boolean startAus) {
+    BinarySemaphore done = processRegistryAusAsync(registryAus, startAus, null);
+    if (done == null) {
+      return;
+    }
+    try {
+      done.take(Deadline.MAX);
+    } catch (InterruptedException ie) {
+      Thread.currentThread().interrupt();
+      log.warning("Interrupted waiting for plugin restart batch", ie);
+    }
   }
 
   /**
    * Run through the list of Registry AUs and verify and load any JARs
-   * that need to be loaded.
+   * that need to be loaded.  Dispatches the per-plugin restart work
+   * off-thread to {@link #pluginRestartExecutor} and returns immediately.
+   * The returned BinarySemaphore is given when the scheduler completes;
+   * callers that need synchronous semantics should call
+   * {@link BinarySemaphore#take} on it.  Crawler-thread callers (e.g.
+   * auContentChanged) must <i>not</i> wait, since the per-plugin coord
+   * locks may be held by V2AuMover for the duration of a migration.
+   *
+   * @return a BinarySemaphore signaled when the dispatched work
+   *         completes, or null if no work was dispatched.
    */
-  public synchronized void processRegistryAus(List registryAus,
-                                              boolean startAus,
-                                              LockssWatchdog wdog) {
+  public synchronized BinarySemaphore processRegistryAusAsync(List registryAus,
+                                                              boolean startAus,
+                                                              LockssWatchdog wdog) {
 
     if (jarValidator == null) {
       jarValidator = new JarValidator(keystore, pluginDir);
@@ -3127,21 +3152,28 @@ public class PluginManager
     tmpMap = null;
 
     if (batches.isEmpty()) {
-      return;
+      return null;
     }
 
     // Hand the batches off to the single-threaded restart executor and
     // return immediately.  The caller (e.g. auContentChanged on a crawler
     // thread) must not block on the per-plugin coord locks, which may be
-    // held by V2AuMover for the duration of a migration.
+    // held by V2AuMover for the duration of a migration.  Sync callers
+    // wait on the returned semaphore.
     final boolean fStartAus = startAus;
     final LockssWatchdog fWdog = wdog;
+    final BinarySemaphore done = new BinarySemaphore();
     pluginRestartExecutor.submit(new LockssRunnable("AU Restarter") {
       @Override
       public void lockssRun() {
-        runRestartScheduler(batches, fWdog, fStartAus);
+        try {
+          runRestartScheduler(batches, fWdog, fStartAus);
+        } finally {
+          done.give();
+        }
       }
     });
+    return done;
   }
 
   /** Pending plugin reload batch: identifies the plugin and the new

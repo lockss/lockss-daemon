@@ -1728,7 +1728,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau = new MyMockRegistryArchivalUnit(plugins);
     List registryAus = ListUtil.list(mmau);
     assertNull(mgr.getPlugin(pluginKey));
-    mgr.processRegistryAus(registryAus);
+    mgr.processRegistryAusSync(registryAus);
     Plugin mockPlugin = mgr.getPlugin(pluginKey);
     assertNotNull(mockPlugin);
     assertEquals(preferLoadable, mgr.isLoadablePlugin(mockPlugin));
@@ -1766,7 +1766,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau2 =
       new MyMockRegistryArchivalUnit(ListUtil.list(badplug, pluginJar));
     assertNull(mgr.getPlugin(pluginKey));
-    mgr.processRegistryAus(ListUtil.list(mmau1, mmau2));
+    mgr.processRegistryAusSync(ListUtil.list(mmau1, mmau2));
     // ensure that the one plugin was still loaded
     Plugin mockPlugin = mgr.getPlugin(pluginKey);
     assertNotNull(mockPlugin);
@@ -1803,7 +1803,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau1 =
       new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar));
     assertNull(mgr.getPlugin(pluginKey));
-    mgr.processRegistryAus(ListUtil.list(mmau1));
+    mgr.processRegistryAusSync(ListUtil.list(mmau1));
     Plugin plugin1 = mgr.getPlugin(pluginKey);
     assertNotNull(plugin1);
     assertTrue(mgr.isLoadablePlugin(plugin1));
@@ -1829,7 +1829,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau2 =
       new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar, pluginJarV2));
     assertSame(au1, mgr.getAuFromId(auid));
-    mgr.processRegistryAus(ListUtil.list(mmau2));
+    mgr.processRegistryAusSync(ListUtil.list(mmau2));
 
     // Ensure the new plugin was installed, the AU is now running as part
     // of that plugin, and the AU's definition has changed appropriately
@@ -1863,7 +1863,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau1 =
       new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar));
     assertNull(mgr.getPlugin(pluginKey));
-    mgr.processRegistryAus(ListUtil.list(mmau1));
+    mgr.processRegistryAusSync(ListUtil.list(mmau1));
     Plugin plugin1 = mgr.getPlugin(pluginKey);
     assertNotNull(plugin1);
     assertTrue(mgr.isLoadablePlugin(plugin1));
@@ -1893,7 +1893,7 @@ public class TestPluginManager extends LockssTestCase {
       new MyMockRegistryArchivalUnit(ListUtil.list(pluginJarV3, pluginJarV2),
                                      2);
     assertSame(au1, mgr.getAuFromId(auid));
-    mgr.processRegistryAus(ListUtil.list(mmau2));
+    mgr.processRegistryAusSync(ListUtil.list(mmau2));
 
     // Ensure the new plugin was installed, the AU is now running as part
     // of that plugin, and the AU's definition has changed appropriately
@@ -2045,7 +2045,7 @@ public class TestPluginManager extends LockssTestCase {
     MyMockRegistryArchivalUnit mmau1 =
       new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar));
     assertNull(mgr.getPlugin(pluginKey));
-    mgr.processRegistryAus(ListUtil.list(mmau1), true, null);
+    mgr.processRegistryAusSync(ListUtil.list(mmau1), true);
     Plugin plugin1 = mgr.getPlugin(pluginKey);
     assertNotNull(plugin1);
     assertTrue(mgr.isLoadablePlugin(plugin1));
