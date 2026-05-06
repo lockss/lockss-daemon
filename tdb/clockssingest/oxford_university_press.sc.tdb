@@ -2843,9 +2843,9 @@
     au < finished ; crawling ; 2019 ; 2019 ; Biostatistics Volume 20 ; 20 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Biostatistics Volume 21 ; 21 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Biostatistics Volume 22 ; 22 ; reingest3.clockss.org:8083 >
-    au < deepCrawl ; exists ; 2022 ; 2022 ; Biostatistics Volume 23 ; 23 ; >
-    au < finished ; manifest ; 2023 ; 2023 ; Biostatistics Volume 24 ; 24 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2024 ; 2024 ; Biostatistics Volume 25 ; 25 ; >
+    au < deepCrawl ; exists ; 2022 ; 2022 ; Biostatistics Volume 23-24 ; 23-24 ; >
+    au < finished ; manifest ; 2023 ; 2023 ; Biostatistics Volume 24-25 ; 24-25 ; reingest5.clockss.org:8082 >
+    au < deepCrawl ; exists ; 2024 ; 2024 ; Biostatistics Volume 25-26 ; 25-26 ; >
     au < notReady ; exists ; 2025 ; 2025 ; Biostatistics Volume 26 ; 26 ; > #no link on manifest page
 
   }
