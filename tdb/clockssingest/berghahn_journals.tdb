@@ -306,7 +306,7 @@
     #param[journal_issn] = 1807-9326
 
     au < finished ; manifest ; 2005 ; Contributions to the History of Concepts Volume 1 ; 1 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 ; >
+    au < crawling ; exists ; 2006 ; Contributions to the History of Concepts Volume 2 ; 2 ; >
     au < ready ; exists ; 2007 ; Contributions to the History of Concepts Volume 3 ; 3 ; >
     au < frozen ; exists ; 2008 ; Contributions to the History of Concepts Volume 4 ; 4 ; >
     au < finished ; manifest ; 2009 ; Contributions to the History of Concepts Volume 5 ; 5 ; reingest1.clockss.org:8082 >
@@ -411,7 +411,7 @@
     #param[journal_issn] = 1362-024X
       
     au < finished ; manifest ; 2003 ; Durkheimian Studies Volume 9 ; 9 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2004 ; Durkheimian Studies Volume 10 ; 10 ; >
+    au < crawling ; exists ; 2004 ; Durkheimian Studies Volume 10 ; 10 ; >
     au < finished ; manifest ; 2005 ; Durkheimian Studies Volume 11 ; 11 ; reingest3.clockss.org:8083 >
     au < frozen ; exists ; 2006 ; Durkheimian Studies Volume 12 ; 12 ; >
     au < finished ; manifest ; 2007 ; Durkheimian Studies Volume 13 ; 13 ; reingest4.clockss.org:8082 >

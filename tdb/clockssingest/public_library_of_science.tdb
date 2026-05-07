@@ -256,7 +256,7 @@
       param[journal_id] = plosntds
 
       au < ready ; exists ; 2007 ; PLOS Neglected Tropical Diseases Volume 2007 ; 2007 ; >
-      au < ready ; exists ; 2008 ; PLOS Neglected Tropical Diseases Volume 2008 ; 2008 ; >
+      au < crawling ; exists ; 2008 ; PLOS Neglected Tropical Diseases Volume 2008 ; 2008 ; >
       au < ready ; exists ; 2009 ; PLOS Neglected Tropical Diseases Volume 2009 ; 2009 ; >
       au < ready ; exists ; 2010 ; PLOS Neglected Tropical Diseases Volume 2010 ; 2010 ; >
       au < crawling ; exists ; 2011 ; PLOS Neglected Tropical Diseases Volume 2011 ; 2011 ; >

@@ -24,7 +24,7 @@
 
     au < crawling ; exists ; 1988 ; Information Resources Management Journal (IRMJ) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
     au < ready ; exists ; 1989 ; Information Resources Management Journal (IRMJ) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 1990 ; Information Resources Management Journal (IRMJ) Volume 3 ; 3 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 1990 ; Information Resources Management Journal (IRMJ) Volume 3 ; 3 ; https://www.igi-global.com/ ; > 
     au < crawling ; exists ; 1991 ; Information Resources Management Journal (IRMJ) Volume 4 ; 4 ; https://www.igi-global.com/ ; > 
     au < crawling ; exists ; 1992 ; Information Resources Management Journal (IRMJ) Volume 5 ; 5 ; https://www.igi-global.com/ ; > 
     au < ready ; exists ; 1993 ; Information Resources Management Journal (IRMJ) Volume 6 ; 6 ; https://www.igi-global.com/ ; > 
@@ -4666,7 +4666,7 @@
 
       au < finished ; manifest ; 2014 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2015 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2016 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2016 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < crawling ; exists ; 2017 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2018 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2019 ; International Journal of Corporate Finance and Accounting (IJCFA) Volume 6 ; 6 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
@@ -4873,7 +4873,7 @@
       param[journal_issn] = 2691-9176
 
       au < finished ; manifest ; 2021 ; International Journal of Health Systems and Translational Medicine (IJHSTM) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2022 ; International Journal of Health Systems and Translational Medicine (IJHSTM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2022 ; International Journal of Health Systems and Translational Medicine (IJHSTM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < crawling ; exists ; 2023 ; International Journal of Health Systems and Translational Medicine (IJHSTM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
 
   }

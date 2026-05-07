@@ -545,7 +545,7 @@
     au < finished ; manifest ; 2022 ; Model Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; Model Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2024 ; Model Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ ; >
-    au < ready ; exists ; 2025 ; Model Theory Volume 4 ; 4 ; 2025 ; https://msp.org/ ; >
+    au < crawling ; exists ; 2025 ; Model Theory Volume 4 ; 4 ; 2025 ; https://msp.org/ ; >
     au < expected ; exists ; 2026 ; Model Theory Volume 5 ; 5 ; 2026 ; https://msp.org/ ; >
 
   }
