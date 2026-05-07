@@ -30,6 +30,7 @@
 
  */
 package org.lockss.plugin;
+import org.lockss.daemon.LockssWatchdog;
 
 public class AuEvent {
 
@@ -59,6 +60,7 @@ public class AuEvent {
 
   private Type type;
   private boolean inBatch;
+  private LockssWatchdog wdog;
 
   public AuEvent(Type type, boolean inBatch) {
     this.type = type;
@@ -71,5 +73,14 @@ public class AuEvent {
 
   public boolean isInBatch() {
     return inBatch;
+  }
+
+  public AuEvent setWatchdog(LockssWatchdog wdog) {
+    this.wdog = wdog;
+    return this;
+  }
+
+  public LockssWatchdog getWatchDog() {
+    return wdog;
   }
 }

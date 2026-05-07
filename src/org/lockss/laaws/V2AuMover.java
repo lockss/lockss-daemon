@@ -64,6 +64,7 @@ import java.nio.file.Files;
 import java.text.*;
 import java.util.*;
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -202,6 +203,13 @@ public class V2AuMover {
    */
   public static final String PARAM_THREAD_TIMEOUT = PREFIX + "thread.timeout";
   public static final long DEFAULT_THREAD_TIMEOUT = 30 * Constants.SECOND;
+
+  /**
+   * Full Executor retry interval
+   */
+  public static final String PARAM_EXECUTOR_RETRY_INTERVAL =
+    PREFIX + "executorRetryInterval";
+  public static final long DEFAULT_EXECUTOR_RETRY_INTERVAL = Constants.SECOND;
 
   /**
    * V2 namespace to migrate into
@@ -547,6 +555,7 @@ public class V2AuMover {
   private ThreadPoolExecutor stateVerifyExecutor;
   private ThreadPoolExecutor miscExecutor;
   private ThreadPoolExecutor indexExecutor;
+  private long executorRetryInterval;
 
   //////////////////////////////////////////////////////////////////////
   // State vars
@@ -557,7 +566,11 @@ public class V2AuMover {
 
   /** All AUIDs known to V2 repo at start of execution */
   private final ArrayList<String> v2Aus = new ArrayList<>();
-  private final LinkedHashSet<ArchivalUnit> auMoveQueue = new LinkedHashSet<>();
+  // Primary AU move queue.  Holds AUIDs not AUs to make plugin-reload
+  // AU restart less disruptive.  Grouped by plugin key so the scheduler
+  // can take per-plugin restart-coordination locks one plugin at a time.
+  private final LinkedHashMap<String, LinkedHashSet<String>>
+      auMoveQueueByPlugin = new LinkedHashMap<>();
 
   /** Counts down to zero when all AUs in request are finished */
   private CountUpDownLatch ausLatch;
@@ -688,6 +701,10 @@ public class V2AuMover {
       miscExecutor = createOrReConfigureExecutor(miscExecutor, config,
                                                  PARAM_MISC_EXECUTOR_SPEC,
                                                  DEFAULT_MISC_EXECUTOR_SPEC);
+
+      executorRetryInterval =
+        config.getTimeInterval(PARAM_EXECUTOR_RETRY_INTERVAL,
+                               DEFAULT_EXECUTOR_RETRY_INTERVAL);
 
       if (changedKeys.contains(PARAM_DISK_SPACE_BYTES_CURVE)) {
         String curve = config.get(PARAM_DISK_SPACE_BYTES_CURVE,
@@ -1013,7 +1030,7 @@ public class V2AuMover {
     initAuRequest(args, ("AU: " + args.au.getName()));
     // get the aus known to the v2 repository
     getV2Aus();
-    auMoveQueue.add(args.au);
+    addToAuMoveQueue(args.au);
     moveQueuedAus();
   }
 
@@ -1042,7 +1059,7 @@ public class V2AuMover {
       if (isSkipFinished(args, au)) {
         continue;
       }
-      auMoveQueue.add(au);
+      addToAuMoveQueue(au);
     }
     moveQueuedAus();
   }
@@ -1069,16 +1086,24 @@ public class V2AuMover {
       // Don't copy internal AUs (test probably unnecessary here)
       .filter(au -> !pluginManager.isInternalAu(au))
       .filter(au -> !isSkipFinished(args, au))
-      .forEach(au -> auMoveQueue.add(au));
+      .forEach(au -> addToAuMoveQueue(au));
 
     moveQueuedAus();
+  }
+
+  private void addToAuMoveQueue(ArchivalUnit au) {
+    String auid = au.getAuId();
+    String pkey = PluginManager.pluginKeyFromId(
+                    PluginManager.pluginIdFromAuId(auid));
+    auMoveQueueByPlugin.computeIfAbsent(pkey, k -> new LinkedHashSet<>())
+                       .add(auid);
   }
 
   /** Move all AUs specified by uploaded AUIDs file */
   public void moveAus(Args args) throws IOException {
     startTotalTimers();
     for (ArchivalUnit au : args.aus) {
-      auMoveQueue.add(au);
+      addToAuMoveQueue(au);
     }
     initAuRequest(args, "AUIDs from file: " + args.auidsFilename);
     // get the aus known to the v2 repo
@@ -1101,25 +1126,92 @@ public class V2AuMover {
     totalTimers.start(Phase.VERIFY);
   }
 
-  /** Start/enqueue all AUs in auMoveQueue */
+  /** Start/enqueue all AUs in auMoveQueueByPlugin */
   private void moveQueuedAus() throws IOException {
     migrationMgr.setInMigrationMode(true);
     ausLatch = new CountUpDownLatch(1, "AU");
     currentStatus = STATUS_RUNNING;
-    totalAusToMove = auMoveQueue.size();
+    totalAusToMove = auMoveQueueByPlugin.values().stream()
+        .mapToInt(Set::size).sum();
     String msg = "Processing " + StringUtil.numberOfUnits(totalAusToMove, "AU");
     log.debug(msg);
     logReport(msg + "\n");
 
-    for (ArchivalUnit au : auMoveQueue) {
-      if (isAbort()) {
-        break;
+    // Schedule batches per plugin, taking the per-plugin restart-coord
+    // lock first so that all AUs of one plugin migrate as a group while
+    // a plugin reload is held off.  Use tryGetLock to avoid blocking on
+    // any one plugin and prefer making progress on whichever plugins are
+    // currently free.
+    List<Map.Entry<String, LinkedHashSet<String>>> remaining =
+        new ArrayList<>(auMoveQueueByPlugin.entrySet());
+    int restartAttempts = 0;
+    while (!remaining.isEmpty() && !isAbort()) {
+      boolean processedSome = false;
+      for (Iterator<Map.Entry<String, LinkedHashSet<String>>> it =
+               remaining.iterator(); it.hasNext(); ) {
+        Map.Entry<String, LinkedHashSet<String>> e = it.next();
+        SemaphoreMap<String>.SemaphoreLock lock =
+            pluginManager.getPluginRestartCoordLocks().tryGetLock(e.getKey());
+        if (lock != null) {
+          waitingMsg = null;
+          if (restartAttempts > 0) {
+            log.info("Got plugin lock for: " + PluginManager.pluginNameFromKey(e.getKey()));
+          }
+          scheduleMigrationBatch(e.getKey(), e.getValue(), lock);
+          it.remove();
+          processedSome = true;
+        }
       }
-      ausLatch.countUp();
-      moveAu(au);
+      // Pause then retry to get remaining locks
+      if (!processedSome && !remaining.isEmpty() && !isAbort()) {
+        waitingMsg = "Waiting for plugin reloading to complete";
+        if (restartAttempts++ % 1000 == 0) {
+          List<String> waitingForPlugins = remaining.stream()
+              .map((ent) -> PluginManager.pluginNameFromKey(ent.getKey()))
+              .collect(Collectors.toList());
+          log.info("Waiting for plugins locked by PluginManager: " + waitingForPlugins);
+        }
+        try { Thread.sleep(10_000); }
+        catch (InterruptedException ie) {
+          Thread.currentThread().interrupt(); break;
+        }
+      }
     }
     ausLatch.countDown();
     enqueueFinishAll();
+  }
+
+  /**
+   * Schedule all AUs in one per-plugin batch.  The supplied lock is
+   * wrapped in a {@link BatchLockToken} whose ref-count starts at 1
+   * (the scheduler's own ref).  Each scheduled AU bumps the count, and
+   * the corresponding {@code Action.FinishAu} drops it.  After
+   * scheduling all AUs we release the scheduler's ref so the lock is
+   * freed when the last AU finishes (or immediately if none were
+   * scheduled).
+   */
+  private void scheduleMigrationBatch(String pkey, Set<String> auids,
+      SemaphoreMap<String>.SemaphoreLock lock) {
+    BatchLockToken token = new BatchLockToken(pkey, lock);
+    try {
+      for (String auid : auids) {
+        if (isAbort()) {
+          break;
+        }
+        ArchivalUnit au = pluginManager.getAuFromId(auid);
+        if (au == null) {
+          log.warning("AU has been deleted/deactivated: " + auid);
+          continue;
+        }
+        token.increment();
+        ausLatch.countUp();
+        moveAu(au, token);
+      }
+    } finally {
+      // Drop the scheduler's self-ref.  If no AUs were scheduled this
+      // also releases the underlying lock immediately.
+      token.decrement();
+    }
   }
 
   public boolean isDryRun() {
@@ -1287,11 +1379,13 @@ public class V2AuMover {
 // //   }
 
   /**
-   * Start the state machine for an AU
+   * Start the state machine for an AU, attaching the per-plugin batch
+   * lock token so the lock survives until the AU's FinishAu action.
    */
-  protected void moveAu(ArchivalUnit au) {
+  protected void moveAu(ArchivalUnit au, BatchLockToken token) {
     log.debug2("Starting " + au.getName());
     AuStatus auStat = new AuStatus(this, au);
+    auStat.setBatchToken(token);
     auStat.getCounters().setParent(totalCounters);
     String auName = au.getName();
     log.debug("Starting state machine for AU: " + auName);
@@ -1505,7 +1599,25 @@ public class V2AuMover {
   void enterPhase(AuStatus auStat, Phase phase) {
     if (getEnterExecutor(phase) != null) {
       log.debug2("enqueueEnterPhase("+phase+")");
-      getEnterExecutor(phase).execute(() -> doEnterPhase(auStat, phase));
+      getEnterExecutor(phase).execute(() -> {
+          try {
+            doEnterPhase(auStat, phase);
+          } catch (Exception | OutOfMemoryError e) {
+            auStat.abortAu();
+            log.error("Exception entering phase " + phase +
+                      " for " + auStat.getAuName(), e);
+            auStat.addError("Failed entering phase " + phase +
+                            ": " + e.toString());
+            // Ensure the AU doesn't get stuck -- advance to FINISH/ABORT
+            try {
+              auStat.abortAu();
+              enterPhase(auStat, Phase.FINISH);
+            } catch (Exception e2) {
+              log.error("Failed to abort AU after phase entry failure", e2);
+              ausLatch.countDown(); // last resort: unblock the global latch
+            }
+          }
+        });
     } else {
       doEnterPhase(auStat, phase);
     }
@@ -1587,6 +1699,8 @@ public class V2AuMover {
     case FinishAu:
       log.debug2("Finishing AU: " + auName);
       removeActiveAu(au);
+      BatchLockToken bt = auStat.getBatchToken();
+      if (bt != null) bt.decrement();
       updateReport(auStat);
       if (!auStat.hasV1Content()) {
         totalAusEmpty++;
@@ -2224,6 +2338,47 @@ public class V2AuMover {
   // Utility classes
   //////////////////////////////////////////////////////////////////////
 
+  /**
+   * Reference-counted holder for a per-plugin restart-coordination lock.
+   * Created by the batch scheduler with an initial count of 1 (the
+   * scheduler's own ref) and one additional increment per AU scheduled.
+   * Each AU's {@code Action.FinishAu} calls {@link #decrement()}; the
+   * scheduler also calls {@link #decrement()} once after enqueuing its
+   * batch.  When the count hits 0 the underlying
+   * {@link SemaphoreMap.SemaphoreLock} is closed, releasing the
+   * per-plugin lock so plugin reload (or another batch on the same
+   * plugin) can proceed.
+   */
+  public static class BatchLockToken {
+    private final String pkey;
+    private final SemaphoreMap<String>.SemaphoreLock lock;
+    private final AtomicInteger count = new AtomicInteger(1);
+
+    public BatchLockToken(String pkey, SemaphoreMap<String>.SemaphoreLock lock) {
+      this.pkey = pkey;
+      this.lock = lock;
+    }
+
+    public String getPkey() {
+      return pkey;
+    }
+
+    public void increment() {
+      count.incrementAndGet();
+    }
+
+    /**
+     * Decrement; release the underlying lock when count reaches 0.
+     */
+    public void decrement() {
+      if (count.decrementAndGet() == 0) {
+        try {
+          lock.close();
+        } catch (IOException e) { /* never */ }
+      }
+    }
+  }
+
   /** Argument block from MigrateContent servlet */
   public static class Args {
     String host;
@@ -2402,28 +2557,54 @@ public class V2AuMover {
   public ThreadPoolExecutor makeExecutor(int queueMax, long threadTimeout,
                                          int coreThreads, int maxThreads) {
     ThreadPoolExecutor exec =
-      new ThreadPoolExecutor(coreThreads, maxThreads,
-                             threadTimeout, TimeUnit.MILLISECONDS,
-                             new LinkedBlockingQueue<>(queueMax));
+      new BlockingThreadPoolExecutor(coreThreads, maxThreads,
+                                     threadTimeout, TimeUnit.MILLISECONDS,
+                                     new LinkedBlockingQueue<>(queueMax));
     exec.allowCoreThreadTimeOut(true);
-    exec.setRejectedExecutionHandler(new RejectedExecutionHandler() {
-        @Override
-        public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
+    return exec;
+  }
+
+  /** A ThreadPoolExecutor that blocks submitters until their request
+   * can be accepted (i.e., there is room in the queue), by sleeping
+   * and looping until execute() succeeds.  The Semaphore ensures that
+   * execute() calls succeed in the order they were made.  Without it,
+   * threads in the retry loop could get stuck artibrarily long
+   * repeatedly sleep()ing while others make successful requests
+   * (either initially or as retries) and refill the queue.
+   */
+  class BlockingThreadPoolExecutor extends ThreadPoolExecutor {
+    Semaphore sem = new Semaphore(1, true);
+
+    public BlockingThreadPoolExecutor(int corePoolSize,
+                                      int maximumPoolSize,
+                                      long keepAliveTime,
+                                      TimeUnit unit,
+                                      BlockingQueue<Runnable> workQueue) {
+      super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue);
+    }
+
+    @Override
+    public void execute(Runnable command) {
+      try {
+        while (true) {
           try {
-            // block until there's room
-            executor.getQueue().put(r);
-            // check afterwards and throw if pool shutdown
-            if (executor.isShutdown()) {
-              throw new RejectedExecutionException("Task " + r +
-                                                   " rejected from because shutdown");
+            super.execute(command);
+            return;
+          } catch (RejectedExecutionException e) {
+            if (isShutdown()) {
+              throw e;
             }
-          } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            throw new RejectedExecutionException("Producer interrupted", e);
+            Thread.sleep(executorRetryInterval);
+            if (isShutdown()) {
+              throw e;
+            }
           }
         }
-      });
-    return exec;
+      } catch (InterruptedException ie) {
+        Thread.currentThread().interrupt();
+        throw new RejectedExecutionException("Producer interrupted", ie);
+      }
+    }
   }
 
   //////////////////////////////////////////////////////////////////////
@@ -2484,6 +2665,7 @@ public class V2AuMover {
   private PrintWriter errorWriter;
 
   private String currentStatus;
+  private String waitingMsg;
   private String finalStatus;
   private String whichAus;
   private boolean running = true; // init true avoids race while starting
@@ -2554,6 +2736,9 @@ public class V2AuMover {
         sb.append(errstat);
       }
       res.add(sb.toString());
+      if (waitingMsg != null) {
+        res.add(waitingMsg);
+      }      
       sb = new StringBuilder();
       totalTimers.addCounterStatus(sb, opType);
       res.add(sb.toString());
@@ -3280,8 +3465,8 @@ public class V2AuMover {
 //     totalErrorCount = errors;
   }
 
-  LinkedHashSet<ArchivalUnit> getAuMoveQueue() {
-    return auMoveQueue;
+  LinkedHashMap<String, LinkedHashSet<String>> getAuMoveQueueByPlugin() {
+    return auMoveQueueByPlugin;
   }
 
   String getUserName() {
