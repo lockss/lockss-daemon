@@ -1153,6 +1153,7 @@ public class V2AuMover {
         SemaphoreMap<String>.SemaphoreLock lock =
             pluginManager.getPluginRestartCoordLocks().tryGetLock(e.getKey());
         if (lock != null) {
+          waitingMsg = null;
           if (restartAttempts > 0) {
             log.info("Got plugin lock for: " + PluginManager.pluginNameFromKey(e.getKey()));
           }
@@ -1163,6 +1164,7 @@ public class V2AuMover {
       }
       // Pause then retry to get remaining locks
       if (!processedSome && !remaining.isEmpty() && !isAbort()) {
+        waitingMsg = "Waiting for plugin reloading to complete";
         if (restartAttempts++ % 1000 == 0) {
           List<String> waitingForPlugins = remaining.stream()
               .map((ent) -> PluginManager.pluginNameFromKey(ent.getKey()))
@@ -2663,6 +2665,7 @@ public class V2AuMover {
   private PrintWriter errorWriter;
 
   private String currentStatus;
+  private String waitingMsg;
   private String finalStatus;
   private String whichAus;
   private boolean running = true; // init true avoids race while starting
@@ -2733,6 +2736,9 @@ public class V2AuMover {
         sb.append(errstat);
       }
       res.add(sb.toString());
+      if (waitingMsg != null) {
+        res.add(waitingMsg);
+      }      
       sb = new StringBuilder();
       totalTimers.addCounterStatus(sb, opType);
       res.add(sb.toString());
