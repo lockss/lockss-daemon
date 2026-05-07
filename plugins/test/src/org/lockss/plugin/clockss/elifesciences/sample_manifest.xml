@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE manifest SYSTEM "http://schema.highwire.org/public/MECA/v0.9/Manifest/Manifest.dtd">
+<manifest xmlns="http://manuscriptexchange.org" version="1.0">
+<item type="article">
+<title>Multi-talker speech comprehension at different temporal scales in listeners with normal and impaired hearing</title>
+<instance media-type="application/xml" href="content/599315.xml"/>
+<instance href="content/elife-preprint-100056-v3.pdf" media-type="application/pdf"/>
+</item>
+<item id="transfer" type="transfer-details">
+<title>MECA Transfer Info</title>
+<instance media-type="application/meca-xfer+xml" href="transfer.xml"/>
+</item>
+<item id="fig1" type="figure">
+<title>Figure 1</title>
+<instance media-type="image/tiff" href="content/599315v3_fig1.tif"/>
+</item>
+<item id="fig2" type="figure">
+<title>Figure 2</title>
+<instance media-type="image/tiff" href="content/599315v3_fig2.tif"/>
+</item>
+<item id="fig3" type="figure">
+<title>Figure 3</title>
+<instance media-type="image/tiff" href="content/599315v3_fig3.tif"/>
+</item>
+<item id="fig4" type="figure">
+<title>Figure 4</title>
+<instance media-type="image/tiff" href="content/599315v3_fig4.tif"/>
+</item>
+<item id="fig5" type="figure">
+<title>Figure 5</title>
+<instance media-type="image/tiff" href="content/599315v3_fig5.tif"/>
+</item>
+<item id="fig6" type="figure">
+<title>Figure 6</title>
+<instance media-type="image/tiff" href="content/599315v3_fig6.tif"/>
+</item>
+<item id="figS1" type="figure">
+<title>Figure S1</title>
+<instance media-type="image/tiff" href="content/599315v3_figS1.tif"/>
+</item>
+<item id="figS2" type="figure">
+<title>Figure S2</title>
+<instance media-type="image/tiff" href="content/599315v3_figS2.tif"/>
+</item>
+<item id="figS3" type="figure">
+<title>Figure S3</title>
+<instance media-type="image/tiff" href="content/599315v3_figS3.tif"/>
+</item>
+<item id="tblS1" type="table">
+<title>Table S1</title>
+<instance media-type="image/tiff" href="content/599315v3_tblS1.tif"/>
+</item>
+</manifest>
