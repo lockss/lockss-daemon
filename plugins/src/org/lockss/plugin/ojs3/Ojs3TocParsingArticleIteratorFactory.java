@@ -116,7 +116,7 @@ public class Ojs3TocParsingArticleIteratorFactory implements ArticleIteratorFact
 
         try{
             Document doc = Jsoup.parse(tocCU.getUncompressedInputStream(), AuUtil.getCharsetOrDefault(tocCU.getProperties()), tocCU.getUrl());
-            Elements articles = doc.select("div.article-summary,article.article,ul.articles>li,div.one-article-intoc,article.article_summary,div.article-sum,"
+            Elements articles = doc.select("div.article-summary,article.article,ul.articles>li:not(:has(div.article-summary)),div.one-article-intoc,article.article_summary,div.article-sum,"
                 +"ul.it-list>li>div.it-right-zone,article.equal,div.grid-child:has(div>div.media-body),ul.row>li.issue__article,div.page-issue-galleys:has(div.h3:contains(Número completo)),"
                 +"div.galleys:has(h2:contains(Número completo)),div.galleys:has(h2:contains(Full Issue)),div.galleys:has(h2:contains(Весь випуск)),div.altex-issue-article,div.altex-issue-editorial," 
                 +"div.media-list>li");
