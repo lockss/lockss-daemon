@@ -104,9 +104,9 @@ private static final Pattern origPat = Pattern.compile(ORIG_FILE_STRING, Pattern
     @Override
     public boolean shouldStoreAtOrigUrl() {
       boolean should = super.shouldStoreAtOrigUrl();
-      log.info("in url consumer factory, should boolean = " + should);
-      log.info("original url = " + fud.origUrl);
-      log.info("fetch url = " + fud.fetchUrl);
+      log.debug3("in url consumer factory, should boolean = " + should);
+      log.debug3("original url = " + fud.origUrl);
+      log.debug3("fetch url = " + fud.fetchUrl);
       if (!should && fud != null && fud.redirectUrls != null) {
         if (fud.origUrl.contains(MANIFEST_STR) &&
             fud.fetchUrl.contains(MANIFEST_STR) && fud.fetchUrl.endsWith(CHECKED_STR)) {
@@ -118,9 +118,9 @@ private static final Pattern origPat = Pattern.compile(ORIG_FILE_STRING, Pattern
             should =  origMat.group(1).equals(destMat.group(1));
           }
         }
-        log.info("after check, url consumer factory, should boolean = " + should);
+        log.debug3("after check, url consumer factory, should boolean = " + should);
         if (!should) {
-          log.info("Authorization redirect: " + should + ": " + fud.redirectUrls.size()  + ": " + fud.origUrl + ": " + fud.redirectUrls.toString());
+          log.debug3("Authorization redirect: " + should + ": " + fud.redirectUrls.size()  + ": " + fud.origUrl + ": " + fud.redirectUrls.toString());
         }
       }
       return should;
