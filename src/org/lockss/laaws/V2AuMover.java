@@ -2906,6 +2906,8 @@ public class V2AuMover {
         break;
       case COPY:
       case VERIFY:
+      case COPY_STATE:
+      case CHECK_STATE:
       case INDEX:
         if (!auStat.hasStarted(phase)) {
           if (excludeQueued) {
