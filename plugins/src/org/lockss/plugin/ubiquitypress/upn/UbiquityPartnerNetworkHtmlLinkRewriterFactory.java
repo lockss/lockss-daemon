@@ -47,8 +47,11 @@ import com.jayway.jsonpath.Option;
 import org.apache.commons.lang.StringUtils;
 import org.htmlparser.*;
 import org.htmlparser.tags.*;
+import org.htmlparser.nodes.TextNode;
+import org.htmlparser.util.NodeList;
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.ubiquitypress.upn.UbiquityPartnerNetworkHtmlLinkExtractorFactory.UbiquityPartnerNetworkHtmlLinkExtractor;
 import org.lockss.rewriter.*;
 import org.lockss.servlet.ServletUtil.LinkTransform;
@@ -497,6 +500,20 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
     log.debug3("Xforms: " + xforms);
 
     fact.addPreXform(baseProc);
+    fact.addPostXform(new NodeFilter(){
+      @Override
+      public boolean accept(Node node) {
+        if (node instanceof Div) {
+          Div parentDiv = (Div)node;
+          if(parentDiv.getAttribute("class") != null && parentDiv.getAttribute("class").contains("clockss")){
+            log.debug3("I FOUND THE RIGHT DIV");
+            NodeList children = heading.getChildren();
+          }
+        }
+        return false;
+      }
+    }
+    );
     for (NodeFilter filt : xforms) {
       fact.addPreXform(filt);
     }
