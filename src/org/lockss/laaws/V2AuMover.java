@@ -1263,9 +1263,11 @@ public class V2AuMover {
                 pluginManager.deleteAuWithJournal(au);
               }
             } else {
-              log.warning("AU has errors, deactivating anyway: "
-                          + au.getName());
-              pluginManager.deactivateAuWithJournal(au);
+              if (auHasErrors(auStat)) {
+                log.warning("AU has errors, deactivating anyway: "
+                            + au.getName());
+              }
+              pluginManager.deactivateAu(au);
             }
           } catch (IOException e) {
             throw new RuntimeException(e);
