@@ -37,6 +37,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.net.*;
 
+import org.apache.commons.csv.*;
 import org.apache.commons.collections.Predicate;
 import org.apache.commons.io.*;
 import org.apache.commons.lang3.StringUtils;
@@ -388,6 +389,7 @@ public class ConfigManager implements LockssManager {
     "proxy_ip_access.txt";
   public static final String CONFIG_FILE_PLUGIN_CONFIG = "plugin.txt";
   public static final String CONFIG_FILE_AU_CONFIG = "au.txt";
+  public static final String CONFIG_FILE_AU_CONFIG_JOURNAL = "au-journal.txt";
   public static final String CONFIG_FILE_BUNDLED_TITLE_DB = "titledb.xml";
   public static final String CONFIG_FILE_CONTENT_SERVERS =
     "content_servers_config.txt";
@@ -723,6 +725,7 @@ public class ConfigManager implements LockssManager {
     configUrlList = null;
     cacheConfigInited = false;
     cacheConfigDir = null;
+    didStartupAuTxtJournalCheck = false;
     // Reset the config cache.
     configCache = null;
     stopHandler();
@@ -1146,6 +1149,10 @@ public class ConfigManager implements LockssManager {
     res.addAll(getConfigGenerations(userTitledbUrlList, false, reload,
 				    "user title DBs", titleDbOnlyPred));
     initCacheConfig(configGens);
+    if (!didStartupAuTxtJournalCheck) {
+      didStartupAuTxtJournalCheck = true;
+      processAuTxtJournal();
+    }
     res.addAll(getCacheConfigGenerations(reload));
     return res;
   }
@@ -2253,6 +2260,7 @@ public class ConfigManager implements LockssManager {
   }
 
   private boolean didWarnNoAuConfig = false;
+  private boolean didStartupAuTxtJournalCheck = false;
 
   /**
    * Return the contents of the local AU config file.
@@ -2272,6 +2280,81 @@ public class ConfigManager implements LockssManager {
       auConfig = newConfiguration();
     }
     return auConfig;
+  }
+
+  /**
+   * Apply pending journaled AU delete/deactivate operations to au.txt.
+   * This is called during startup before au.txt is included in the current
+   * configuration, and may also be called explicitly after migration.
+   *
+   * @return true if a journal was found and applied
+   * @throws IOException if the journal or au.txt could not be processed
+   */
+  public synchronized boolean processAuTxtJournal() throws IOException {
+    if (cacheConfigDir == null) {
+      log.debug("Not processing AU config journal; no cache config dir exists");
+      return false;
+    }
+    File journal = getCacheConfigFile(CONFIG_FILE_AU_CONFIG_JOURNAL);
+    if (!journal.exists()) {
+      return false;
+    }
+
+    Configuration fileConfig;
+    try {
+      fileConfig = readCacheConfigFile(CONFIG_FILE_AU_CONFIG);
+    } catch (FileNotFoundException e) {
+      fileConfig = newConfiguration();
+    }
+    if (fileConfig.isSealed()) {
+      fileConfig = fileConfig.copy();
+    }
+
+    int cnt = 0;
+    try (Reader rdr = new FileReader(journal);
+         CSVParser parser = CSVFormat.DEFAULT.parse(rdr)) {
+      for (CSVRecord rec : parser) {
+        if (rec.size() == 0 ||
+            (rec.size() == 1 && StringUtil.isNullString(rec.get(0)))) {
+          continue;
+        }
+        if (rec.size() < 2) {
+          log.warning("Ignoring malformed AU config journal line: " + rec);
+          continue;
+        }
+        String action = rec.get(0);
+        String auid = rec.get(1);
+        String prefix = PluginManager.auConfigPrefix(auid);
+
+        switch (action) {
+          case "DELETE":
+            fileConfig.removeConfigTree(prefix);
+            cnt++;
+            break;
+
+          case "DEACTIVATE":
+            if (!fileConfig.getConfigTree(prefix).isEmpty()) {
+              fileConfig.put(prefix + "." + PluginManager.AU_PARAM_DISABLED,
+                  "true");
+              cnt++;
+            } else {
+              log.debug("Ignoring deactivate journal entry for missing AU: " + auid);
+            }
+            break;
+
+          default:
+            log.warning("Ignoring unknown AU config journal action: " + action);
+        }
+      }
+    }
+
+    writeCacheConfigFile(fileConfig, CONFIG_FILE_AU_CONFIG, "AU Configuration");
+
+    if (!FileUtil.safeDeleteFile(journal)) {
+      log.warning("Couldn't delete AU config journal: " + journal);
+    }
+    log.info("Processed " + cnt + " AU config journal entries");
+    return true;
   }
 
   /** Write the named local cache config file into the previously determined

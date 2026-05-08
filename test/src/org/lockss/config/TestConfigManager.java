@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+import org.apache.commons.csv.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -1304,6 +1305,46 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("111", c2.get("org.lockss.au.fooauid.foo"));
     assertEquals("222", c2.get("org.lockss.au.fooauid.bar"));
     assertEquals("333", c2.get("org.lockss.au.fooauid.baz"));
+  }
+
+  public void testProcessAuTxtJournal() throws Exception {
+    String tmpdir = getTempDir().toString();
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+
+    String pluginKey = "org|lockss|test|Plugin";
+    String deactAuid = PluginManager.generateAuId(pluginKey,
+            PropUtil.fromArgs("one", "1", "two", "2"));
+    String deleteAuid = PluginManager.generateAuId(pluginKey,
+            PropUtil.fromArgs("one", "3", "two", "4"));
+    String deactPrefix = PluginManager.auConfigPrefix(deactAuid);
+    String deletePrefix = PluginManager.auConfigPrefix(deleteAuid);
+
+    Properties p = new Properties();
+    p.put(deactPrefix + ".foo", "111");
+    p.put(deletePrefix + ".foo", "222");
+    mgr.updateAuConfigFile(p, null);
+
+    File journal = mgr.getCacheConfigFile(CONFIG_FILE_AU_CONFIG_JOURNAL);
+    assertEquals("au-journal.txt", journal.getName());
+    try (Writer writer = new FileWriter(journal);
+         CSVPrinter printer = new CSVPrinter(writer, CSVFormat.DEFAULT)) {
+      printer.printRecord("DEACTIVATE", deactAuid);
+      printer.printRecord("DELETE", deleteAuid);
+    }
+
+    assertTrue(mgr.processAuTxtJournal());
+    assertFalse(journal.exists());
+
+    Configuration config = mgr.readAuConfigFile();
+    assertEquals("111", config.get(deactPrefix + ".foo"));
+    assertEquals("true", config.get(deactPrefix + "." + PluginManager.AU_PARAM_DISABLED));
+    assertTrue(config.getConfigTree(deletePrefix).isEmpty());
+  }
+
+  public void testProcessAuTxtJournalNoJournal() throws Exception {
+    String tmpdir = getTempDir().toString();
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
+    assertFalse(mgr.processAuTxtJournal());
   }
 
   public void testLoadTitleDb() throws IOException {

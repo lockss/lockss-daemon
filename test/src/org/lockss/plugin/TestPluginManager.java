@@ -688,6 +688,76 @@ public class TestPluginManager extends LockssTestCase {
     }
   }
 
+  public void testDeactivateAuWithJournal() throws Exception {
+    mgr.startService();
+    minimalConfig();
+    String pid = new ThrowingMockPlugin().getPluginId();
+    String key = PluginManager.pluginKeyFromId(pid);
+
+    assertTrue(mgr.ensurePluginLoaded(key));
+    ThrowingMockPlugin plugin = (ThrowingMockPlugin) mgr.getPlugin(key);
+    Properties props = new Properties();
+    props.put("a", "journal-deactivate");
+
+    ArchivalUnit au = mgr.createAndSaveAuConfiguration(plugin, props);
+    assertTrue(mgr.isActiveAu(au));
+    String auid = au.getAuId();
+    String prefix = PluginManager.auConfigPrefix(auid);
+
+    mgr.deactivateAuWithJournal(au);
+
+    // Assert state pre-processAuTextJournal()
+    assertFalse(mgr.isActiveAu(au));
+    assertTrue(mgr.isInactiveAuId(auid));
+    assertEquals("journal-deactivate",
+        mgr.getStoredAuConfiguration(auid).get("a"));
+    assertFalse(mgr.getStoredAuConfiguration(auid)
+        .getBoolean(PluginManager.AU_PARAM_DISABLED, true));
+    assertTrue(new File(theDaemon.getConfigManager().getCacheConfigDir(),
+        ConfigManager.CONFIG_FILE_AU_CONFIG_JOURNAL).exists());
+
+    assertTrue(mgr.processAuTxtJournal());
+
+    // Assert state post-processAuTextJournal()
+    Configuration config = theDaemon.getConfigManager().readAuConfigFile();
+    assertEquals("journal-deactivate", config.get(prefix + ".a"));
+    assertEquals("true",
+        config.get(prefix + "." + PluginManager.AU_PARAM_DISABLED));
+    assertFalse(new File(theDaemon.getConfigManager().getCacheConfigDir(),
+        ConfigManager.CONFIG_FILE_AU_CONFIG_JOURNAL).exists());
+  }
+
+  public void testDeleteAuWithJournal() throws Exception {
+    mgr.startService();
+    minimalConfig();
+    String pid = new ThrowingMockPlugin().getPluginId();
+    String key = PluginManager.pluginKeyFromId(pid);
+
+    assertTrue(mgr.ensurePluginLoaded(key));
+    ThrowingMockPlugin plugin = (ThrowingMockPlugin) mgr.getPlugin(key);
+    Properties props = new Properties();
+    props.put("a", "journal-delete");
+
+    ArchivalUnit au = mgr.createAndSaveAuConfiguration(plugin, props);
+    assertTrue(mgr.isActiveAu(au));
+    String auid = au.getAuId();
+    String prefix = PluginManager.auConfigPrefix(auid);
+
+    mgr.deleteAuWithJournal(au);
+
+    // Assert state pre-processAuTextJournal()
+    assertFalse(mgr.isActiveAu(au));
+    assertFalse(mgr.isInactiveAuId(auid));
+    assertEquals("journal-delete",
+        mgr.getStoredAuConfiguration(auid).get("a"));
+
+    assertTrue(mgr.processAuTxtJournal());
+
+    // Assert state post-processAuTextJournal()
+    Configuration config = theDaemon.getConfigManager().readAuConfigFile();
+    assertTrue(config.getConfigTree(prefix).isEmpty());
+  }
+
   // ensure getAllAus() returns AUs in title sorted order
   public void testGetAllAus() throws Exception {
     mgr.startService();

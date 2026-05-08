@@ -41,6 +41,7 @@ import java.util.jar.*;
 import java.util.regex.*;
 import java.util.stream.Collectors;
 
+import org.apache.commons.csv.*;
 import org.apache.commons.collections.map.*;
 import org.lockss.alert.*;
 import org.lockss.app.*;
@@ -457,6 +458,15 @@ public class PluginManager
   public void startLoadablePlugins() {
     if (loadablePluginsReady) {
       return;
+    }
+
+    try {
+      if (processAuTxtJournal()) {
+        configMgr.reloadAndWait();
+      }
+    } catch (IOException e) {
+      // Q: What else can we do?
+      log.error("Couldn't process AU config journal", e);
     }
 
     Configuration config = CurrentConfig.getCurrentConfig();
@@ -1519,6 +1529,62 @@ public class PluginManager
 	stopAu(au, new AuEvent(AuEvent.Type.Deactivate, false));
 	inactiveAuIds.add(auid);
       }
+    }
+  }
+
+  /**
+   * Delete an AU from the running daemon and journal the au.txt update for
+   * later batch processing.
+   * @param au the ArchivalUnit to be deleted
+   * @throws IOException
+   */
+  public void deleteAuWithJournal(ArchivalUnit au) throws IOException {
+    synchronized (auAddDelLock) {
+      log.debug("Journal deleting AU: " + au);
+      String auid = au.getAuId();
+      stopAu(au, new AuEvent(AuEvent.Type.Delete, false));
+      inactiveAuIds.remove(auid);
+      appendAuTxtJournal("DELETE", auid);
+    }
+  }
+
+  /**
+   * Deactivate an AU from the running daemon and journal the au.txt update for
+   * later batch processing.
+   * @param au the ArchivalUnit to be deactivated
+   * @throws IOException
+   */
+  public void deactivateAuWithJournal(ArchivalUnit au) throws IOException {
+    synchronized (auAddDelLock) {
+      log.debug("Journal deactivating AU: " + au);
+      String auid = au.getAuId();
+      stopAu(au, new AuEvent(AuEvent.Type.Deactivate, false));
+      inactiveAuIds.add(auid);
+      appendAuTxtJournal("DEACTIVATE", auid);
+    }
+  }
+
+  private void appendAuTxtJournal(String action, String auid)
+      throws IOException {
+    File journal =
+        configMgr.getCacheConfigFile(ConfigManager.CONFIG_FILE_AU_CONFIG_JOURNAL);
+    try (FileOutputStream fos = new FileOutputStream(journal, true);
+         OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
+         CSVPrinter printer = new CSVPrinter(osw, CSVFormat.DEFAULT)) {
+      printer.printRecord(action, auid);
+      printer.flush();
+      fos.getFD().sync();
+    }
+  }
+
+  /**
+   * Apply and remove the AU config journal, if present.
+   * @return true if a journal was found and applied
+   * @throws IOException
+   */
+  public boolean processAuTxtJournal() throws IOException {
+    synchronized (auAddDelLock) {
+      return configMgr.processAuTxtJournal();
     }
   }
 

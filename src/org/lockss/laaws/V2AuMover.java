@@ -906,6 +906,7 @@ public class V2AuMover {
     Args firstArgs = argsLst.get(0);
     initBatch(firstArgs);
     currentStatus = "Checking V2 services";
+
     try {
       checkV2ServicesAvailable();
       openReportFiles(firstArgs); // must follow checkV2ServicesAvailable
@@ -936,6 +937,7 @@ public class V2AuMover {
       log.error(msg, e);
       logReportAndError(msg);
     } finally {
+      processAuTxtJournal();
       fetchDiskSpace();
       running = false;
       buildFinalStatus();
@@ -1256,14 +1258,14 @@ public class V2AuMover {
               if (auHasErrors(auStat)) {
                 log.warning("AU has errors, deactivating instead of deleting: "
                             + au.getName());
-                pluginManager.deactivateAu(au);
+                pluginManager.deactivateAuWithJournal(au);
               } else {
-                pluginManager.deleteAu(au);
+                pluginManager.deleteAuWithJournal(au);
               }
             } else {
               log.warning("AU has errors, deactivating anyway: "
                           + au.getName());
-              pluginManager.deactivateAu(au);
+              pluginManager.deactivateAuWithJournal(au);
             }
           } catch (IOException e) {
             throw new RuntimeException(e);
@@ -1276,6 +1278,17 @@ public class V2AuMover {
     Counters ctrs = auStat.getCounters();
     return ctrs.getVal(CounterType.URLS_FAILED_COPY) != 0 ||
       ctrs.getVal(CounterType.URLS_FAILED_VERIFY) != 0;
+  }
+
+  private void processAuTxtJournal() {
+    try {
+      if (pluginManager.processAuTxtJournal()) {
+        cfgManager.reloadAndWait();
+      }
+    } catch (IOException e) {
+      log.error("Failed to process AU config journal", e);
+      addError("Failed to process AU config journal: " + e);
+    }
   }
 
   private String auErrorsDetail(AuStatus auStat) {
