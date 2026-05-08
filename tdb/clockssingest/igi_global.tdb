@@ -4196,7 +4196,7 @@
 
     au < crawling ; exists ; 1990 ; Journal of Database Management (JDM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1991 ; Journal of Database Management (JDM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
-    au < ready ; exists ; 1992 ; Journal of Database Management (JDM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+    au < crawling ; exists ; 1992 ; Journal of Database Management (JDM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < crawling ; exists ; 1993 ; Journal of Database Management (JDM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1994 ; Journal of Database Management (JDM) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
     au < ready ; exists ; 1995 ; Journal of Database Management (JDM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
@@ -4589,7 +4589,7 @@
       param[journal_issn] = 2771-5817
 
       au < crawling ; exists ; 2023 ; International Journal of Blockchain Applications and Secure Computing (IJBASC) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2024 ; International Journal of Blockchain Applications and Secure Computing (IJBASC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2024 ; International Journal of Blockchain Applications and Secure Computing (IJBASC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < crawling ; exists ; 2025 ; International Journal of Blockchain Applications and Secure Computing (IJBASC) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Blockchain Applications and Secure Computing (IJBASC) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
 
@@ -4911,7 +4911,7 @@
 
       param[journal_issn] = 2771-5647
 
-      au < ready ; exists ; 2022 ; International Journal of Imaging and Sensing Technologies and Applications (IJISTA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2022 ; International Journal of Imaging and Sensing Technologies and Applications (IJISTA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -5146,7 +5146,7 @@
       param[journal_issn] = 2574-8254
 
       au < ready ; exists ; 2018 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2019 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2019 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2020 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2021 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
@@ -5258,7 +5258,7 @@
       param[journal_issn] = 2379-7398
 
       au < crawling ; exists ; 2016 ; International Journal of Sustainable Entrepreneurship and Corporate Social Responsibility (IJSECSR) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2017 ; International Journal of Sustainable Entrepreneurship and Corporate Social Responsibility (IJSECSR) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2017 ; International Journal of Sustainable Entrepreneurship and Corporate Social Responsibility (IJSECSR) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < crawling ; exists ; 2018 ; International Journal of Sustainable Entrepreneurship and Corporate Social Responsibility (IJSECSR) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2019 ; International Journal of Sustainable Entrepreneurship and Corporate Social Responsibility (IJSECSR) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; International Journal of Sustainable Entrepreneurship and Corporate Social Responsibility (IJSECSR) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
@@ -5318,7 +5318,7 @@
       param[journal_issn] = 2473-5361
 
       au < finished ; manifest ; 2017 ; International Journal of Tourism and Hospitality Management in the Digital Age (IJTHMDA) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
-      au < ready ; exists ; 2018 ; International Journal of Tourism and Hospitality Management in the Digital Age (IJTHMDA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2018 ; International Journal of Tourism and Hospitality Management in the Digital Age (IJTHMDA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2019 ; International Journal of Tourism and Hospitality Management in the Digital Age (IJTHMDA) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 2020 ; International Journal of Tourism and Hospitality Management in the Digital Age (IJTHMDA) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2021 ; International Journal of Tourism and Hospitality Management in the Digital Age (IJTHMDA) Volume 5 ; 5 ; https://www.igi-global.com/ ; >

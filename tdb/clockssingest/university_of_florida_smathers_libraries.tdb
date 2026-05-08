@@ -43,8 +43,8 @@
       au < ready ; exists ; 1978 ; Chemical Engineering Education Volume 1978 ; 1978 ; 1978 ; >
       au < crawling ; exists ; 1979 ; Chemical Engineering Education Volume 1979 ; 1979 ; 1979 ; >
       au < ready ; exists ; 1980 ; Chemical Engineering Education Volume 1980 ; 1980 ; 1980 ; >
-      au < ready ; exists ; 1981 ; Chemical Engineering Education Volume 1981 ; 1981 ; 1981 ; >
-      au < ready ; exists ; 1982 ; Chemical Engineering Education Volume 1982 ; 1982 ; 1982 ; >
+      au < crawling ; exists ; 1981 ; Chemical Engineering Education Volume 1981 ; 1981 ; 1981 ; >
+      au < crawling ; exists ; 1982 ; Chemical Engineering Education Volume 1982 ; 1982 ; 1982 ; >
       au < frozen ; exists ; 1983 ; Chemical Engineering Education Volume 1983 ; 1983 ; 1983 ; >
       au < ready ; exists ; 1984 ; Chemical Engineering Education Volume 1984 ; 1984 ; 1984 ; >
       au < ready ; exists ; 1985 ; Chemical Engineering Education Volume 1985 ; 1985 ; 1985 ; >
@@ -125,7 +125,7 @@
       au < crawling ; exists ; 1921 ; Florida Entomologist Volume 5 ; 5 ; 1921 ; >
       au < ready ; exists ; 1922 ; Florida Entomologist Volume 6 ; 6 ; 1922 ; >
       au < crawling ; exists ; 1923 ; Florida Entomologist Volume 7 ; 7 ; 1923 ; >
-      au < ready ; exists ; 1924 ; Florida Entomologist Volume 8 ; 8 ; 1924 ; >
+      au < crawling ; exists ; 1924 ; Florida Entomologist Volume 8 ; 8 ; 1924 ; >
       au < ready ; exists ; 1925 ; Florida Entomologist Volume 9 ; 9 ; 1925 ; >
       au < ready ; exists ; 1926 ; Florida Entomologist Volume 10 ; 10 ; 1926 ; >
       au < ready ; exists ; 1927 ; Florida Entomologist Volume 11 ; 11 ; 1927 ; >
@@ -142,7 +142,7 @@
       au < frozen ; exists ; 1938 ; Florida Entomologist Volume 22 ; 22 ; 1938 ; >
       au < crawling ; exists ; 1939 ; Florida Entomologist Volume 23 ; 23 ; 1939 ; >
       au < ready ; exists ; 1940 ; Florida Entomologist Volume 24 ; 24 ; 1940 ; >
-      au < ready ; exists ; 1941 ; Florida Entomologist Volume 25 ; 25 ; 1941 ; >
+      au < crawling ; exists ; 1941 ; Florida Entomologist Volume 25 ; 25 ; 1941 ; >
       au < ready ; exists ; 1942 ; Florida Entomologist Volume 26 ; 26 ; 1942 ; >
       au < frozen ; exists ; 1943 ; Florida Entomologist Volume 27 ; 27 ; 1943 ; >
       au < frozen ; exists ; 1944 ; Florida Entomologist Volume 28 ; 28 ; 1944 ; >
@@ -159,7 +159,7 @@
       au < frozen ; exists ; 1955 ; Florida Entomologist Volume 39 ; 39 ; 1955 ; >
       au < crawling ; exists ; 1956 ; Florida Entomologist Volume 40 ; 40 ; 1956 ; >
       au < crawling ; exists ; 1957 ; Florida Entomologist Volume 41 ; 41 ; 1957 ; >
-      au < ready ; exists ; 1958 ; Florida Entomologist Volume 42 ; 42 ; 1958 ; >
+      au < crawling ; exists ; 1958 ; Florida Entomologist Volume 42 ; 42 ; 1958 ; >
       au < ready ; exists ; 1959 ; Florida Entomologist Volume 43 ; 43 ; 1959 ; >
       au < ready ; exists ; 1960 ; Florida Entomologist Volume 44 ; 44 ; 1960 ; >
       au < ready ; exists ; 1961 ; Florida Entomologist Volume 45 ; 45 ; 1961 ; >
@@ -206,8 +206,8 @@
       au < frozen ; exists ; 2002 ; Florida Entomologist Volume 86 ; 86 ; 2002 ; >
       au < crawling ; exists ; 2003 ; Florida Entomologist Volume 87 ; 87 ; 2003 ; >
       au < frozen ; exists ; 2004 ; Florida Entomologist Volume 88 ; 88 ; 2004 ; >
-      au < ready ; exists ; 2005 ; Florida Entomologist Volume 89 ; 89 ; 2005 ; >
-      au < ready ; exists ; 2006 ; Florida Entomologist Volume 90 ; 90 ; 2006 ; >
+      au < crawling ; exists ; 2005 ; Florida Entomologist Volume 89 ; 89 ; 2005 ; >
+      au < crawling ; exists ; 2006 ; Florida Entomologist Volume 90 ; 90 ; 2006 ; >
       au < frozen ; exists ; 2007 ; Florida Entomologist Volume 91 ; 91 ; 2007 ; >
       au < finished ; manifest ; 2008 ; Florida Entomologist Volume 92 ; 92 ; 2008 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2009 ; Florida Entomologist Volume 93 ; 93 ; 2009 ; >
@@ -468,7 +468,7 @@
       au < frozen ; exists ; 1996 ; Studies in African Linguistics Volume 27 ; 27 ; 1996 ; >
       au < frozen ; exists ; 1997 ; Studies in African Linguistics Volume 28 ; 28 ; 1997 ; >
       au < frozen ; exists ; 1998 ; Studies in African Linguistics Volume 29 ; 29 ; 1998 ; >
-      au < ready ; exists ; 1999 ; Studies in African Linguistics Volume 30 ; 30 ; 1999 ; >
+      au < crawling ; exists ; 1999 ; Studies in African Linguistics Volume 30 ; 30 ; 1999 ; >
       au < frozen ; exists ; 2000 ; Studies in African Linguistics Volume 31 ; 31 ; 2000 ; >
       au < frozen ; exists ; 2001 ; Studies in African Linguistics Volume 32 ; 32 ; 2001 ; >
       au < crawling ; exists ; 2002 ; Studies in African Linguistics Volume 33 ; 33 ; 2002 ; >
@@ -559,7 +559,7 @@
       param[journal_id] = fshs
 
       au < ready ; exists ; 1888 ; Proceedings of the Florida State Horticultural Society Volume 1 ; 1 ; 1888 ; >
-      au < ready ; exists ; 1889 ; Proceedings of the Florida State Horticultural Society Volume 2 ; 2 ; 1889 ; >
+      au < crawling ; exists ; 1889 ; Proceedings of the Florida State Horticultural Society Volume 2 ; 2 ; 1889 ; >
       au < crawling ; exists ; 1890 ; Proceedings of the Florida State Horticultural Society Volume 3 ; 3 ; 1890 ; >
       au < crawling ; exists ; 1891 ; Proceedings of the Florida State Horticultural Society Volume 4 ; 4 ; 1891 ; >
       au < doesNotExist ; doesNotExist ; 1892 ; Proceedings of the Florida State Horticultural Society Volume 5 ; 5 ; 1892 ; >
@@ -607,7 +607,7 @@
       au < crawling ; exists ; 1934 ; Proceedings of the Florida State Horticultural Society Volume 47 ; 47 ; 1934 ; >
       au < ready ; exists ; 1935 ; Proceedings of the Florida State Horticultural Society Volume 48 ; 48 ; 1935 ; >
       au < ready ; exists ; 1936 ; Proceedings of the Florida State Horticultural Society Volume 49 ; 49 ; 1936 ; >
-      au < ready ; exists ; 1937 ; Proceedings of the Florida State Horticultural Society Volume 50 ; 50 ; 1937 ; >
+      au < crawling ; exists ; 1937 ; Proceedings of the Florida State Horticultural Society Volume 50 ; 50 ; 1937 ; >
       au < frozen ; exists ; 1938 ; Proceedings of the Florida State Horticultural Society Volume 51 ; 51 ; 1938 ; >
       au < crawling ; exists ; 1939 ; Proceedings of the Florida State Horticultural Society Volume 52 ; 52 ; 1939 ; >
       au < crawling ; exists ; 1940 ; Proceedings of the Florida State Horticultural Society Volume 53 ; 53 ; 1940 ; >

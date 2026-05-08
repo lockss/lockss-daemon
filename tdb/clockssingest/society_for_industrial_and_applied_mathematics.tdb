@@ -554,7 +554,7 @@
     param[journal_id] = sjamdu
     #no metadata collected for these AUs
 
-    au < ready ; exists ; 1980 ; Journal on Matrix Analysis and Application Volume 1 ; 1 ; https://epubs.siam.org/ ; >
+    au < crawling ; exists ; 1980 ; Journal on Matrix Analysis and Application Volume 1 ; 1 ; https://epubs.siam.org/ ; >
     au < ready ; exists ; 1981 ; Journal on Matrix Analysis and Application Volume 2 ; 2 ; https://epubs.siam.org/ ; >
     au < ready ; exists ; 1982 ; Journal on Matrix Analysis and Application Volume 3 ; 3 ; https://epubs.siam.org/ ; >
     au < ready ; exists ; 1983 ; Journal on Matrix Analysis and Application Volume 4 ; 4 ; https://epubs.siam.org/ ; >

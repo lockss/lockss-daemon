@@ -1680,7 +1680,7 @@
       param[home_url] = https://www.proceedings-iodp3.net/
       #year of publication may be out of order with volume number
 
-      au < ready ; exists ; 2025 ; 2025 ; Proceedings of the International Ocean Drilling Programme Volume 501 ; 501 ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Proceedings of the International Ocean Drilling Programme Volume 501 ; 501 ; >
       au < manifest ; exists ; 2026 ; 2026 ; Proceedings of the International Ocean Drilling Programme Volume 502 ; 502 ; >
       au < testing ; exists ; 2025 ; 2025 ; Proceedings of the International Ocean Drilling Programme Volume 503 ; 503 ; >
 
