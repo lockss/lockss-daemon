@@ -48,8 +48,12 @@ public class SilverchairCommonThemeArticleIteratorFactory implements ArticleIter
     private static String ROOT_TEMPLATE = "\"%s\", base_url";
     private static String PATTERN_TEMPLATE =  "\"%s([^/]+/)?%s/(article)/\", base_url, journal_id";
 
-    private static Pattern HTML_PATTERN = Pattern.compile("/article/([^/]+)/(.*)$", Pattern.CASE_INSENSITIVE);
-
+    // Capture the full article path, but enforce structure:
+    // vol/issue/page/id must all be numeric, and slug must be the final segment
+    // since we got doi as relative url as in <div class="comment">doi: <a class="link" href="10.1666/13-053" target="_blank">10.1666/13-053</a>.</div>
+    private static Pattern HTML_PATTERN = Pattern.compile(
+            "/article/(\\d+/\\d+/\\d+/\\d+)/([A-Z][A-Z0-9-]*)$",
+            Pattern.CASE_INSENSITIVE);
 
     private static String HTML_REPLACEMENT = "/article/$1/$2";
     private static String CITATION_REPLACEMENT = "/downloadcitation/$1?format=ris";

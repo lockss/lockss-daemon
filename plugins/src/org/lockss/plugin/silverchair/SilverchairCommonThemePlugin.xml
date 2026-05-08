@@ -10,7 +10,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>37</string>
+        <string>38</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -147,6 +147,11 @@
             <string>1,"https?://movie-usa.glencoesoftware.com/metadata/.*"</string>
             <string>1,"^https?://(trs\.silverchair-cdn\.com)/"</string>
             <string>1,"^https?://(%s|[^.]+\.(silverchair-?cdn\.com/|cloudfront\.net/|brightcove\.net/)).*\.(bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff)(\?.*)?$", url_host(base_url)</string>
+            <!--
+            Exclude bad url comes from
+            <div class="comment">doi: <a class="link" href="10.1666/13-053" target="_blank">10.1666/13-053</a>.</div>
+            -->
+            <string>2,"%s([^/]+/)?%s/(issue|article|article-abstract|article-standard)/%s/[^/]+/[^/]+/10\.\d{4,}/", base_url, journal_id, volume_name</string>
             <!--
             https://pubs.geoscienceworld.org/gsabulletin/article/132/1-2/48/570322/Multiproxy-lacustrine-records-of-post-glacial
             Redirected to excluded URL:
