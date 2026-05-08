@@ -575,8 +575,10 @@ public class MigrateContent extends LockssServlet {
     tbl.add(opRadioBtn(OpType.CopyAndVerify, selOpType));
     tbl.add("&nbsp;&nbsp;");
     tbl.add(opRadioBtn(OpType.CopyOnly, selOpType));
-    tbl.add("&nbsp;&nbsp;");
-    tbl.add(opRadioBtn(OpType.VerifyOnly, selOpType));
+    if (migrationMgr.isMigrationInDebugMode()) {
+      tbl.add("&nbsp;&nbsp;");
+      tbl.add(opRadioBtn(OpType.VerifyOnly, selOpType));
+    }
 
     tbl.newRow();
     tbl.newCell(CENTERED_CELL);
