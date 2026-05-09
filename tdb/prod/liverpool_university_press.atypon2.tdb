@@ -198,16 +198,16 @@
     #Published 1923-present
     #journal_num = 60
 
-    au < manifest ; 1975 ; Bulletin of Hispanic Studies Volume 52 ; 52 >
-    au < manifest ; 1976 ; Bulletin of Hispanic Studies Volume 53 ; 53 >
-    au < manifest ; 1977 ; Bulletin of Hispanic Studies Volume 54 ; 54 >
-    au < manifest ; 1978 ; Bulletin of Hispanic Studies Volume 55 ; 55 >
-    au < manifest ; 1979 ; Bulletin of Hispanic Studies Volume 56 ; 56 >
-    au < manifest ; 1980 ; Bulletin of Hispanic Studies Volume 57 ; 57 >
-    au < manifest ; 1981 ; Bulletin of Hispanic Studies Volume 58 ; 58 >
-    au < manifest ; 1982 ; Bulletin of Hispanic Studies Volume 59 ; 59 >
-    au < manifest ; 1983 ; Bulletin of Hispanic Studies Volume 60 ; 60 >
-    au < manifest ; 1984 ; Bulletin of Hispanic Studies Volume 61 ; 61 >
+    au < wanted ; 1975 ; Bulletin of Hispanic Studies Volume 52 ; 52 >
+    au < wanted ; 1976 ; Bulletin of Hispanic Studies Volume 53 ; 53 >
+    au < wanted ; 1977 ; Bulletin of Hispanic Studies Volume 54 ; 54 >
+    au < wanted ; 1978 ; Bulletin of Hispanic Studies Volume 55 ; 55 >
+    au < wanted ; 1979 ; Bulletin of Hispanic Studies Volume 56 ; 56 >
+    au < wanted ; 1980 ; Bulletin of Hispanic Studies Volume 57 ; 57 >
+    au < wanted ; 1981 ; Bulletin of Hispanic Studies Volume 58 ; 58 >
+    au < wanted ; 1982 ; Bulletin of Hispanic Studies Volume 59 ; 59 >
+    au < wanted ; 1983 ; Bulletin of Hispanic Studies Volume 60 ; 60 >
+    au < wanted ; 1984 ; Bulletin of Hispanic Studies Volume 61 ; 61 >
     au < doNotProcess ; 1985 ; Bulletin of Hispanic Studies Volume 62 ; 62 >
     au < doNotProcess ; 1986 ; Bulletin of Hispanic Studies Volume 63 ; 63 >
     au < doNotProcess ; 1987 ; Bulletin of Hispanic Studies Volume 64 ; 64 >
@@ -430,26 +430,26 @@
     param[journal_id] = cont
     #Move from Cambridge University Press (2026)
 
-   au < manifest ; 1986 ; Continuity and Change Volume 1 ; 1 >
-   au < manifest ; 1987 ; Continuity and Change Volume 2 ; 2 >
-   au < manifest ; 1988 ; Continuity and Change Volume 3 ; 3 >
-   au < manifest ; 1989 ; Continuity and Change Volume 4 ; 4 >
-   au < manifest ; 1990 ; Continuity and Change Volume 5 ; 5 >
-   au < manifest ; 1991 ; Continuity and Change Volume 6 ; 6 >
-   au < manifest ; 1992 ; Continuity and Change Volume 7 ; 7 >
-   au < manifest ; 1993 ; Continuity and Change Volume 8 ; 8 >
-   au < manifest ; 1994 ; Continuity and Change Volume 9 ; 9 >
-   au < manifest ; 1995 ; Continuity and Change Volume 10 ; 10 >
-   au < manifest ; 1996 ; Continuity and Change Volume 11 ; 11 >
-   au < manifest ; 1997 ; Continuity and Change Volume 12 ; 12 >
-   au < manifest ; 1998 ; Continuity and Change Volume 13 ; 13 >
-   au < manifest ; 1999 ; Continuity and Change Volume 14 ; 14 >
+   au < wanted ; 1986 ; Continuity and Change Volume 1 ; 1 >
+   au < wanted ; 1987 ; Continuity and Change Volume 2 ; 2 >
+   au < wanted ; 1988 ; Continuity and Change Volume 3 ; 3 >
+   au < wanted ; 1989 ; Continuity and Change Volume 4 ; 4 >
+   au < wanted ; 1990 ; Continuity and Change Volume 5 ; 5 >
+   au < wanted ; 1991 ; Continuity and Change Volume 6 ; 6 >
+   au < wanted ; 1992 ; Continuity and Change Volume 7 ; 7 >
+   au < wanted ; 1993 ; Continuity and Change Volume 8 ; 8 >
+   au < wanted ; 1994 ; Continuity and Change Volume 9 ; 9 >
+   au < wanted ; 1995 ; Continuity and Change Volume 10 ; 10 >
+   au < wanted ; 1996 ; Continuity and Change Volume 11 ; 11 >
+   au < wanted ; 1997 ; Continuity and Change Volume 12 ; 12 >
+   au < wanted ; 1998 ; Continuity and Change Volume 13 ; 13 >
+   au < wanted ; 1999 ; Continuity and Change Volume 14 ; 14 >
    au < released ; 2000 ; Continuity and Change Volume 15 ; 15 >
    au < released ; 2001 ; Continuity and Change Volume 16 ; 16 >
-   au < manifest ; 2002 ; Continuity and Change Volume 17 ; 17 >
+   au < wanted ; 2002 ; Continuity and Change Volume 17 ; 17 >
    au < released ; 2003 ; Continuity and Change Volume 18 ; 18 >
    au < released ; 2004 ; Continuity and Change Volume 19 ; 19 >
-   au < manifest ; 2005 ; Continuity and Change Volume 20 ; 20 >
+   au < wanted ; 2005 ; Continuity and Change Volume 20 ; 20 >
    au < released ; 2006 ; Continuity and Change Volume 21 ; 21 >
    au < released ; 2007 ; Continuity and Change Volume 22 ; 22 >
    au < released ; 2008 ; Continuity and Change Volume 23 ; 23 >
@@ -458,18 +458,18 @@
    au < released ; 2011 ; Continuity and Change Volume 26 ; 26 >
    au < released ; 2012 ; Continuity and Change Volume 27 ; 27 >
    au < released ; 2013 ; Continuity and Change Volume 28 ; 28 >
-   au < manifest ; 2014 ; Continuity and Change Volume 29 ; 29 >
+   au < wanted ; 2014 ; Continuity and Change Volume 29 ; 29 >
    au < released ; 2015 ; Continuity and Change Volume 30 ; 30 >
    au < released ; 2016 ; Continuity and Change Volume 31 ; 31 >
    au < released ; 2017 ; Continuity and Change Volume 32 ; 32 >
-   au < manifest ; 2018 ; Continuity and Change Volume 33 ; 33 >
+   au < wanted ; 2018 ; Continuity and Change Volume 33 ; 33 >
    au < released ; 2019 ; Continuity and Change Volume 34 ; 34 >
    au < released ; 2020 ; Continuity and Change Volume 35 ; 35 >
    au < released ; 2021 ; Continuity and Change Volume 36 ; 36 >
    au < released ; 2022 ; Continuity and Change Volume 37 ; 37 >
-   au < manifest ; 2023 ; Continuity and Change Volume 38 ; 38 >
+   au < wanted ; 2023 ; Continuity and Change Volume 38 ; 38 >
    au < released ; 2024 ; Continuity and Change Volume 39 ; 39 >
-   au < manifest ; 2025 ; Continuity and Change Volume 40 ; 40 >
+   au < wanted ; 2025 ; Continuity and Change Volume 40 ; 40 >
    au < expected ; 2026 ; Continuity and Change Volume 41 ; 41 >
 
   }
@@ -508,20 +508,20 @@
     #Published 1986-present
     #journal_num = 95
 
-    au < manifest ; 1986 ; Eighteenth-Century Ireland Volume 1 ; 1 >
-    au < manifest ; 1987 ; Eighteenth-Century Ireland Volume 2 ; 2 >
-    au < manifest ; 1988 ; Eighteenth-Century Ireland Volume 3 ; 3 >
-    au < manifest ; 1989 ; Eighteenth-Century Ireland Volume 4 ; 4 >
-    au < manifest ; 1990 ; Eighteenth-Century Ireland Volume 5 ; 5 >
-    au < manifest ; 1991 ; Eighteenth-Century Ireland Volume 6 ; 6 >
-    au < manifest ; 1992 ; Eighteenth-Century Ireland Volume 7 ; 7 >
-    au < manifest ; 1993 ; Eighteenth-Century Ireland Volume 8 ; 8 >
-    au < manifest ; 1994 ; Eighteenth-Century Ireland Volume 9 ; 9 >
-    au < manifest ; 1995 ; Eighteenth-Century Ireland Volume 10 ; 10 >
-    au < manifest ; 1996 ; Eighteenth-Century Ireland Volume 11 ; 11 >
-    au < manifest ; 1997 ; Eighteenth-Century Ireland Volume 12 ; 12 >
-    au < manifest ; 1998 ; Eighteenth-Century Ireland Volume 13 ; 13 >
-    au < manifest ; 1999 ; Eighteenth-Century Ireland Volume 14 ; 14 >
+    au < wanted ; 1986 ; Eighteenth-Century Ireland Volume 1 ; 1 >
+    au < wanted ; 1987 ; Eighteenth-Century Ireland Volume 2 ; 2 >
+    au < wanted ; 1988 ; Eighteenth-Century Ireland Volume 3 ; 3 >
+    au < wanted ; 1989 ; Eighteenth-Century Ireland Volume 4 ; 4 >
+    au < wanted ; 1990 ; Eighteenth-Century Ireland Volume 5 ; 5 >
+    au < wanted ; 1991 ; Eighteenth-Century Ireland Volume 6 ; 6 >
+    au < wanted ; 1992 ; Eighteenth-Century Ireland Volume 7 ; 7 >
+    au < wanted ; 1993 ; Eighteenth-Century Ireland Volume 8 ; 8 >
+    au < wanted ; 1994 ; Eighteenth-Century Ireland Volume 9 ; 9 >
+    au < wanted ; 1995 ; Eighteenth-Century Ireland Volume 10 ; 10 >
+    au < wanted ; 1996 ; Eighteenth-Century Ireland Volume 11 ; 11 >
+    au < wanted ; 1997 ; Eighteenth-Century Ireland Volume 12 ; 12 >
+    au < wanted ; 1998 ; Eighteenth-Century Ireland Volume 13 ; 13 >
+    au < wanted ; 1999 ; Eighteenth-Century Ireland Volume 14 ; 14 >
     au < released ; 2000 ; Eighteenth-Century Ireland Volume 15 ; 15 >
     au < released ; 2001 ; Eighteenth-Century Ireland Volume 16 ; 16 >
     au < released ; 2002 ; Eighteenth-Century Ireland Volume 17 ; 17 >
@@ -548,7 +548,7 @@
     au < released ; 2022 ; Eighteenth-Century Ireland Volume 37 ; 37 >
     au < released ; 2023 ; Eighteenth-Century Ireland Volume 38 ; 38 >
     au < released ; 2024 ; Eighteenth-Century Ireland Volume 39 ; 39 >
-    au < manifest ; 2025 ; Eighteenth-Century Ireland Volume 40 ; 40 >
+    au < wanted ; 2025 ; Eighteenth-Century Ireland Volume 40 ; 40 >
     au < expected ; 2026 ; Eighteenth-Century Ireland Volume 41 ; 41 >
 
   }
@@ -566,12 +566,12 @@
     #Published 1994-present
     #journal_num = 79
 
-    au < manifest ; 1993 ; Essays in Romanticism Volume 1 ; 1 >
-    au < manifest ; 1994 ; Essays in Romanticism Volume 2 ; 2 >
-    au < manifest ; 1995 ; Essays in Romanticism Volume 3 ; 3 >
-    au < manifest ; 1996 ; Essays in Romanticism Volume 4 ; 4 >
-    au < manifest ; 1997 ; Essays in Romanticism Volume 5 ; 5 >
-    au < manifest ; 1998 ; Essays in Romanticism Volume 6 ; 6 >
+    au < wanted ; 1993 ; Essays in Romanticism Volume 1 ; 1 >
+    au < wanted ; 1994 ; Essays in Romanticism Volume 2 ; 2 >
+    au < wanted ; 1995 ; Essays in Romanticism Volume 3 ; 3 >
+    au < wanted ; 1996 ; Essays in Romanticism Volume 4 ; 4 >
+    au < wanted ; 1997 ; Essays in Romanticism Volume 5 ; 5 >
+    au < wanted ; 1998 ; Essays in Romanticism Volume 6 ; 6 >
     au < doNotProcess ; 1999 ; Essays in Romanticism Volume 7 ; 7 >
     au < released ; 2000 ; Essays in Romanticism Volume 8 ; 8 >
     au < released ; 2001 ; Essays in Romanticism Volume 9 ; 9 >
@@ -744,14 +744,14 @@
     #Back content, not yet processed 1996-2005, first half of 2006, 2008.
     #Unexpected journal number in the issue links on the manifest pages. See https://www.liverpooluniversitypress.co.uk/lockss/hsir/2/index.html
 
-    au < manifest ; 1996 ; Historical Studies in Industrial Relations Volume 1 ; 1 >
-    au < manifest ; 1996 ; Historical Studies in Industrial Relations Volume 2 ; 2 >
-    au < manifest ; 1997 ; Historical Studies in Industrial Relations Volume 3 ; 3 >
-    au < manifest ; 1997 ; Historical Studies in Industrial Relations Volume 4 ; 4 >
-    au < manifest ; 1998 ; Historical Studies in Industrial Relations Volume 5 ; 5 >
-    au < manifest ; 1998 ; Historical Studies in Industrial Relations Volume 6 ; 6 >
-    au < manifest ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 >
-    au < manifest ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 >
+    au < wanted ; 1996 ; Historical Studies in Industrial Relations Volume 1 ; 1 >
+    au < wanted ; 1996 ; Historical Studies in Industrial Relations Volume 2 ; 2 >
+    au < wanted ; 1997 ; Historical Studies in Industrial Relations Volume 3 ; 3 >
+    au < wanted ; 1997 ; Historical Studies in Industrial Relations Volume 4 ; 4 >
+    au < wanted ; 1998 ; Historical Studies in Industrial Relations Volume 5 ; 5 >
+    au < wanted ; 1998 ; Historical Studies in Industrial Relations Volume 6 ; 6 >
+    au < wanted ; 1999 ; Historical Studies in Industrial Relations Volume 7 ; 7 >
+    au < wanted ; 1999 ; Historical Studies in Industrial Relations Volume 8 ; 8 >
     au < released ; 2000 ; Historical Studies in Industrial Relations Volume 9 ; 9 >
     au < released ; 2000 ; Historical Studies in Industrial Relations Volume 10 ; 10 >
     au < released ; 2001 ; Historical Studies in Industrial Relations Volume 11 ; 11 >
@@ -802,11 +802,11 @@
     #Published 1958-present
     #journal_num = 87
 
-    au < manifest ; 1990 ; The Indexer: The International Journal of Indexing Volume 17 ; 17 >
-    au < manifest ; 1992 ; The Indexer: The International Journal of Indexing Volume 18 ; 18 >
-    au < manifest ; 1994 ; The Indexer: The International Journal of Indexing Volume 19 ; 19 >
-    au < manifest ; 1996 ; The Indexer: The International Journal of Indexing Volume 20 ; 20 >
-    au < manifest ; 1998 ; The Indexer: The International Journal of Indexing Volume 21 ; 21 >
+    au < wanted ; 1990 ; The Indexer: The International Journal of Indexing Volume 17 ; 17 >
+    au < wanted ; 1992 ; The Indexer: The International Journal of Indexing Volume 18 ; 18 >
+    au < wanted ; 1994 ; The Indexer: The International Journal of Indexing Volume 19 ; 19 >
+    au < wanted ; 1996 ; The Indexer: The International Journal of Indexing Volume 20 ; 20 >
+    au < wanted ; 1998 ; The Indexer: The International Journal of Indexing Volume 21 ; 21 >
     au < released ; 2000 ; The Indexer: The International Journal of Indexing Volume 22 ; 22 >
     au < released ; 2002 ; The Indexer: The International Journal of Indexing Volume 23 ; 23 >
     au < released ; 2004 ; The Indexer: The International Journal of Indexing Volume 24 ; 24 >
@@ -891,7 +891,7 @@
     au < released ; 2022 ; International Journal of English for Academic Purposes: Research and Practice Volume 2022 ; 2022 >
     au < released ; 2023 ; International Journal of English for Academic Purposes: Research and Practice Volume 3 ; 3 >
     au < released ; 2024 ; International Journal of English for Academic Purposes: Research and Practice Volume 4 ; 4 >
-    au < manifest ; 2025 ; International Journal of English for Academic Purposes: Research and Practice Volume 5 ; 5 >
+    au < wanted ; 2025 ; International Journal of English for Academic Purposes: Research and Practice Volume 5 ; 5 >
     au < manifest ; 2026 ; International Journal of English for Academic Purposes: Research and Practice Volume 6 ; 6 >
   }
 
@@ -960,56 +960,56 @@
     param[journal_id] = jjs
     #Published 1948-present
 
-    au < manifest ; 1949 ; Journal of Jewish Studies Volume 1 ; 1 >
-    au < manifest ; 1951 ; Journal of Jewish Studies Volume 2 ; 2 >
-    au < manifest ; 1952 ; Journal of Jewish Studies Volume 3 ; 3 >
-    au < manifest ; 1953 ; Journal of Jewish Studies Volume 4 ; 4 >
-    au < manifest ; 1954 ; Journal of Jewish Studies Volume 5 ; 5 >
-    au < manifest ; 1955 ; Journal of Jewish Studies Volume 6 ; 6 >
-    au < manifest ; 1956 ; Journal of Jewish Studies Volume 7 ; 7 >
-    au < manifest ; 1957 ; Journal of Jewish Studies Volume 8 ; 8 >
-    au < manifest ; 1958 ; Journal of Jewish Studies Volume 9 ; 9 >
-    au < manifest ; 1959 ; Journal of Jewish Studies Volume 10 ; 10 >
-    au < manifest ; 1960 ; Journal of Jewish Studies Volume 11 ; 11 >
-    au < manifest ; 1961 ; Journal of Jewish Studies Volume 12 ; 12 >
-    au < manifest ; 1962 ; Journal of Jewish Studies Volume 13 ; 13 >
-    au < manifest ; 1963 ; Journal of Jewish Studies Volume 14 ; 14 >
-    au < manifest ; 1964 ; Journal of Jewish Studies Volume 15 ; 15 >
-    au < manifest ; 1965 ; Journal of Jewish Studies Volume 16 ; 16 >
-    au < manifest ; 1966 ; Journal of Jewish Studies Volume 17 ; 17 >
-    au < manifest ; 1967 ; Journal of Jewish Studies Volume 18 ; 18 >
-    au < manifest ; 1968 ; Journal of Jewish Studies Volume 19 ; 19 >
-    au < manifest ; 1969 ; Journal of Jewish Studies Volume 20 ; 20 >
-    au < manifest ; 1970 ; Journal of Jewish Studies Volume 21 ; 21 >
-    au < manifest ; 1971 ; Journal of Jewish Studies Volume 22 ; 22 >
-    au < manifest ; 1972 ; Journal of Jewish Studies Volume 23 ; 23 >
-    au < manifest ; 1973 ; Journal of Jewish Studies Volume 24 ; 24 >
-    au < manifest ; 1974 ; Journal of Jewish Studies Volume 25 ; 25 >
-    au < manifest ; 1975 ; Journal of Jewish Studies Volume 26 ; 26 >
-    au < manifest ; 1976 ; Journal of Jewish Studies Volume 27 ; 27 >
-    au < manifest ; 1977 ; Journal of Jewish Studies Volume 28 ; 28 >
-    au < manifest ; 1978 ; Journal of Jewish Studies Volume 29 ; 29 >
-    au < manifest ; 1979 ; Journal of Jewish Studies Volume 30 ; 30 >
-    au < manifest ; 1980 ; Journal of Jewish Studies Volume 31 ; 31 >
-    au < manifest ; 1981 ; Journal of Jewish Studies Volume 32 ; 32 >
-    au < manifest ; 1982 ; Journal of Jewish Studies Volume 33 ; 33 >
-    au < manifest ; 1983 ; Journal of Jewish Studies Volume 34 ; 34 >
-    au < manifest ; 1984 ; Journal of Jewish Studies Volume 35 ; 35 >
-    au < manifest ; 1985 ; Journal of Jewish Studies Volume 36 ; 36 >
-    au < manifest ; 1986 ; Journal of Jewish Studies Volume 37 ; 37 >
-    au < manifest ; 1987 ; Journal of Jewish Studies Volume 38 ; 38 >
-    au < manifest ; 1988 ; Journal of Jewish Studies Volume 39 ; 39 >
-    au < manifest ; 1989 ; Journal of Jewish Studies Volume 40 ; 40 >
-    au < manifest ; 1990 ; Journal of Jewish Studies Volume 41 ; 41 >
-    au < manifest ; 1991 ; Journal of Jewish Studies Volume 42 ; 42 >
-    au < manifest ; 1992 ; Journal of Jewish Studies Volume 43 ; 43 >
-    au < manifest ; 1993 ; Journal of Jewish Studies Volume 44 ; 44 >
-    au < manifest ; 1994 ; Journal of Jewish Studies Volume 45 ; 45 >
-    au < manifest ; 1995 ; Journal of Jewish Studies Volume 46 ; 46 >
-    au < manifest ; 1996 ; Journal of Jewish Studies Volume 47 ; 47 >
-    au < manifest ; 1997 ; Journal of Jewish Studies Volume 48 ; 48 >
-    au < manifest ; 1998 ; Journal of Jewish Studies Volume 49 ; 49 >
-    au < manifest ; 1999 ; Journal of Jewish Studies Volume 50 ; 50 >
+    au < wanted ; 1949 ; Journal of Jewish Studies Volume 1 ; 1 >
+    au < wanted ; 1951 ; Journal of Jewish Studies Volume 2 ; 2 >
+    au < wanted ; 1952 ; Journal of Jewish Studies Volume 3 ; 3 >
+    au < wanted ; 1953 ; Journal of Jewish Studies Volume 4 ; 4 >
+    au < wanted ; 1954 ; Journal of Jewish Studies Volume 5 ; 5 >
+    au < wanted ; 1955 ; Journal of Jewish Studies Volume 6 ; 6 >
+    au < wanted ; 1956 ; Journal of Jewish Studies Volume 7 ; 7 >
+    au < wanted ; 1957 ; Journal of Jewish Studies Volume 8 ; 8 >
+    au < wanted ; 1958 ; Journal of Jewish Studies Volume 9 ; 9 >
+    au < wanted ; 1959 ; Journal of Jewish Studies Volume 10 ; 10 >
+    au < wanted ; 1960 ; Journal of Jewish Studies Volume 11 ; 11 >
+    au < wanted ; 1961 ; Journal of Jewish Studies Volume 12 ; 12 >
+    au < wanted ; 1962 ; Journal of Jewish Studies Volume 13 ; 13 >
+    au < wanted ; 1963 ; Journal of Jewish Studies Volume 14 ; 14 >
+    au < wanted ; 1964 ; Journal of Jewish Studies Volume 15 ; 15 >
+    au < wanted ; 1965 ; Journal of Jewish Studies Volume 16 ; 16 >
+    au < wanted ; 1966 ; Journal of Jewish Studies Volume 17 ; 17 >
+    au < wanted ; 1967 ; Journal of Jewish Studies Volume 18 ; 18 >
+    au < wanted ; 1968 ; Journal of Jewish Studies Volume 19 ; 19 >
+    au < wanted ; 1969 ; Journal of Jewish Studies Volume 20 ; 20 >
+    au < wanted ; 1970 ; Journal of Jewish Studies Volume 21 ; 21 >
+    au < wanted ; 1971 ; Journal of Jewish Studies Volume 22 ; 22 >
+    au < wanted ; 1972 ; Journal of Jewish Studies Volume 23 ; 23 >
+    au < wanted ; 1973 ; Journal of Jewish Studies Volume 24 ; 24 >
+    au < wanted ; 1974 ; Journal of Jewish Studies Volume 25 ; 25 >
+    au < wanted ; 1975 ; Journal of Jewish Studies Volume 26 ; 26 >
+    au < wanted ; 1976 ; Journal of Jewish Studies Volume 27 ; 27 >
+    au < wanted ; 1977 ; Journal of Jewish Studies Volume 28 ; 28 >
+    au < wanted ; 1978 ; Journal of Jewish Studies Volume 29 ; 29 >
+    au < wanted ; 1979 ; Journal of Jewish Studies Volume 30 ; 30 >
+    au < wanted ; 1980 ; Journal of Jewish Studies Volume 31 ; 31 >
+    au < wanted ; 1981 ; Journal of Jewish Studies Volume 32 ; 32 >
+    au < wanted ; 1982 ; Journal of Jewish Studies Volume 33 ; 33 >
+    au < wanted ; 1983 ; Journal of Jewish Studies Volume 34 ; 34 >
+    au < wanted ; 1984 ; Journal of Jewish Studies Volume 35 ; 35 >
+    au < wanted ; 1985 ; Journal of Jewish Studies Volume 36 ; 36 >
+    au < wanted ; 1986 ; Journal of Jewish Studies Volume 37 ; 37 >
+    au < wanted ; 1987 ; Journal of Jewish Studies Volume 38 ; 38 >
+    au < wanted ; 1988 ; Journal of Jewish Studies Volume 39 ; 39 >
+    au < wanted ; 1989 ; Journal of Jewish Studies Volume 40 ; 40 >
+    au < wanted ; 1990 ; Journal of Jewish Studies Volume 41 ; 41 >
+    au < wanted ; 1991 ; Journal of Jewish Studies Volume 42 ; 42 >
+    au < wanted ; 1992 ; Journal of Jewish Studies Volume 43 ; 43 >
+    au < wanted ; 1993 ; Journal of Jewish Studies Volume 44 ; 44 >
+    au < wanted ; 1994 ; Journal of Jewish Studies Volume 45 ; 45 >
+    au < wanted ; 1995 ; Journal of Jewish Studies Volume 46 ; 46 >
+    au < wanted ; 1996 ; Journal of Jewish Studies Volume 47 ; 47 >
+    au < wanted ; 1997 ; Journal of Jewish Studies Volume 48 ; 48 >
+    au < wanted ; 1998 ; Journal of Jewish Studies Volume 49 ; 49 >
+    au < wanted ; 1999 ; Journal of Jewish Studies Volume 50 ; 50 >
     au < released ; 2000 ; Journal of Jewish Studies Volume 51 ; 51 >
     au < released ; 2001 ; Journal of Jewish Studies Volume 52 ; 52 >
     au < released ; 2002 ; Journal of Jewish Studies Volume 53 ; 53 >
@@ -1153,80 +1153,80 @@
     #Published 1963-present
     #journal_num = 55
 
-    au < manifest ; 1963 ; Labour History: A Journal of Labour and Social History Volume 4 ; 4 >
-    au < manifest ; 1963 ; Labour History: A Journal of Labour and Social History Volume 5 ; 5 >
-    au < manifest ; 1964 ; Labour History: A Journal of Labour and Social History Volume 6 ; 6 >
-    au < manifest ; 1964 ; Labour History: A Journal of Labour and Social History Volume 7 ; 7 >
+    au < wanted ; 1963 ; Labour History: A Journal of Labour and Social History Volume 4 ; 4 >
+    au < wanted ; 1963 ; Labour History: A Journal of Labour and Social History Volume 5 ; 5 >
+    au < wanted ; 1964 ; Labour History: A Journal of Labour and Social History Volume 6 ; 6 >
+    au < wanted ; 1964 ; Labour History: A Journal of Labour and Social History Volume 7 ; 7 >
     au < doesNotExist ; 1965 ; Labour History: A Journal of Labour and Social History Volume 8 ; 8 >
     au < doesNotExist ; 1965 ; Labour History: A Journal of Labour and Social History Volume 9 ; 9 >
-    au < manifest ; 1966 ; Labour History: A Journal of Labour and Social History Volume 10 ; 10 >
-    au < manifest ; 1966 ; Labour History: A Journal of Labour and Social History Volume 11 ; 11 >
-    au < manifest ; 1967 ; Labour History: A Journal of Labour and Social History Volume 12 ; 12 >
-    au < manifest ; 1967 ; Labour History: A Journal of Labour and Social History Volume 13 ; 13 >
-    au < manifest ; 1968 ; Labour History: A Journal of Labour and Social History Volume 14 ; 14 >
-    au < manifest ; 1968 ; Labour History: A Journal of Labour and Social History Volume 15 ; 15 >
-    au < manifest ; 1969 ; Labour History: A Journal of Labour and Social History Volume 16 ; 16 >
-    au < manifest ; 1969 ; Labour History: A Journal of Labour and Social History Volume 17 ; 17 >
-    au < manifest ; 1970 ; Labour History: A Journal of Labour and Social History Volume 18 ; 18 >
-    au < manifest ; 1970 ; Labour History: A Journal of Labour and Social History Volume 19 ; 19 >
-    au < manifest ; 1971 ; Labour History: A Journal of Labour and Social History Volume 20 ; 20 >
-    au < manifest ; 1971 ; Labour History: A Journal of Labour and Social History Volume 21 ; 21 >
-    au < manifest ; 1972 ; Labour History: A Journal of Labour and Social History Volume 22 ; 22 >
-    au < manifest ; 1972 ; Labour History: A Journal of Labour and Social History Volume 23 ; 23 >
-    au < manifest ; 1973 ; Labour History: A Journal of Labour and Social History Volume 24 ; 24 >
-    au < manifest ; 1973 ; Labour History: A Journal of Labour and Social History Volume 25 ; 25 >
-    au < manifest ; 1974 ; Labour History: A Journal of Labour and Social History Volume 26 ; 26 >
-    au < manifest ; 1974 ; Labour History: A Journal of Labour and Social History Volume 27 ; 27 >
-    au < manifest ; 1975 ; Labour History: A Journal of Labour and Social History Volume 28 ; 28 >
-    au < manifest ; 1975 ; Labour History: A Journal of Labour and Social History Volume 29 ; 29 >
-    au < manifest ; 1976 ; Labour History: A Journal of Labour and Social History Volume 30 ; 30 >
-    au < manifest ; 1976 ; Labour History: A Journal of Labour and Social History Volume 31 ; 31 >
-    au < manifest ; 1977 ; Labour History: A Journal of Labour and Social History Volume 32 ; 32 >
-    au < manifest ; 1977 ; Labour History: A Journal of Labour and Social History Volume 33 ; 33 >
-    au < manifest ; 1978 ; Labour History: A Journal of Labour and Social History Volume 34 ; 34 >
-    au < manifest ; 1978 ; Labour History: A Journal of Labour and Social History Volume 35 ; 35 >
-    au < manifest ; 1979 ; Labour History: A Journal of Labour and Social History Volume 36 ; 36 >
-    au < manifest ; 1979 ; Labour History: A Journal of Labour and Social History Volume 37 ; 37 >
-    au < manifest ; 1980 ; Labour History: A Journal of Labour and Social History Volume 38 ; 38 >
-    au < manifest ; 1980 ; Labour History: A Journal of Labour and Social History Volume 39 ; 39 >
-    au < manifest ; 1981 ; Labour History: A Journal of Labour and Social History Volume 40 ; 40 >
-    au < manifest ; 1981 ; Labour History: A Journal of Labour and Social History Volume 41 ; 41 >
-    au < manifest ; 1982 ; Labour History: A Journal of Labour and Social History Volume 42 ; 42 >
-    au < manifest ; 1982 ; Labour History: A Journal of Labour and Social History Volume 43 ; 43 >
-    au < manifest ; 1983 ; Labour History: A Journal of Labour and Social History Volume 44 ; 44 >
-    au < manifest ; 1983 ; Labour History: A Journal of Labour and Social History Volume 45 ; 45 >
-    au < manifest ; 1984 ; Labour History: A Journal of Labour and Social History Volume 46 ; 46 >
-    au < manifest ; 1984 ; Labour History: A Journal of Labour and Social History Volume 47 ; 47 >
-    au < manifest ; 1985 ; Labour History: A Journal of Labour and Social History Volume 48 ; 48 >
-    au < manifest ; 1985 ; Labour History: A Journal of Labour and Social History Volume 49 ; 49 >
-    au < manifest ; 1986 ; Labour History: A Journal of Labour and Social History Volume 50 ; 50 >
-    au < manifest ; 1986 ; Labour History: A Journal of Labour and Social History Volume 51 ; 51 >
-    au < manifest ; 1987 ; Labour History: A Journal of Labour and Social History Volume 52 ; 52 >
-    au < manifest ; 1987 ; Labour History: A Journal of Labour and Social History Volume 53 ; 53 >
-    au < manifest ; 1988 ; Labour History: A Journal of Labour and Social History Volume 54 ; 54 >
-    au < manifest ; 1988 ; Labour History: A Journal of Labour and Social History Volume 55 ; 55 >
-    au < manifest ; 1989 ; Labour History: A Journal of Labour and Social History Volume 56 ; 56 >
-    au < manifest ; 1989 ; Labour History: A Journal of Labour and Social History Volume 57 ; 57 >
-    au < manifest ; 1990 ; Labour History: A Journal of Labour and Social History Volume 58 ; 58 >
-    au < manifest ; 1990 ; Labour History: A Journal of Labour and Social History Volume 59 ; 59 >
-    au < manifest ; 1991 ; Labour History: A Journal of Labour and Social History Volume 60 ; 60 >
-    au < manifest ; 1991 ; Labour History: A Journal of Labour and Social History Volume 61 ; 61 >
-    au < manifest ; 1992 ; Labour History: A Journal of Labour and Social History Volume 62 ; 62 >
-    au < manifest ; 1992 ; Labour History: A Journal of Labour and Social History Volume 63 ; 63 >
-    au < manifest ; 1993 ; Labour History: A Journal of Labour and Social History Volume 64 ; 64 >
-    au < manifest ; 1993 ; Labour History: A Journal of Labour and Social History Volume 65 ; 65 >
-    au < manifest ; 1994 ; Labour History: A Journal of Labour and Social History Volume 66 ; 66 >
-    au < manifest ; 1994 ; Labour History: A Journal of Labour and Social History Volume 67 ; 67 >
-    au < manifest ; 1995 ; Labour History: A Journal of Labour and Social History Volume 68 ; 68 >
-    au < manifest ; 1995 ; Labour History: A Journal of Labour and Social History Volume 69 ; 69 >
-    au < manifest ; 1996 ; Labour History: A Journal of Labour and Social History Volume 70 ; 70 >
-    au < manifest ; 1996 ; Labour History: A Journal of Labour and Social History Volume 71 ; 71 >
-    au < manifest ; 1997 ; Labour History: A Journal of Labour and Social History Volume 72 ; 72 >
-    au < manifest ; 1997 ; Labour History: A Journal of Labour and Social History Volume 73 ; 73 >
-    au < manifest ; 1998 ; Labour History: A Journal of Labour and Social History Volume 74 ; 74 >
-    au < manifest ; 1998 ; Labour History: A Journal of Labour and Social History Volume 75 ; 75 >
-    au < manifest ; 1999 ; Labour History: A Journal of Labour and Social History Volume 76 ; 76 >
-    au < manifest ; 1999 ; Labour History: A Journal of Labour and Social History Volume 77 ; 77 >
+    au < wanted ; 1966 ; Labour History: A Journal of Labour and Social History Volume 10 ; 10 >
+    au < wanted ; 1966 ; Labour History: A Journal of Labour and Social History Volume 11 ; 11 >
+    au < wanted ; 1967 ; Labour History: A Journal of Labour and Social History Volume 12 ; 12 >
+    au < wanted ; 1967 ; Labour History: A Journal of Labour and Social History Volume 13 ; 13 >
+    au < wanted ; 1968 ; Labour History: A Journal of Labour and Social History Volume 14 ; 14 >
+    au < wanted ; 1968 ; Labour History: A Journal of Labour and Social History Volume 15 ; 15 >
+    au < wanted ; 1969 ; Labour History: A Journal of Labour and Social History Volume 16 ; 16 >
+    au < wanted ; 1969 ; Labour History: A Journal of Labour and Social History Volume 17 ; 17 >
+    au < wanted ; 1970 ; Labour History: A Journal of Labour and Social History Volume 18 ; 18 >
+    au < wanted ; 1970 ; Labour History: A Journal of Labour and Social History Volume 19 ; 19 >
+    au < wanted ; 1971 ; Labour History: A Journal of Labour and Social History Volume 20 ; 20 >
+    au < wanted ; 1971 ; Labour History: A Journal of Labour and Social History Volume 21 ; 21 >
+    au < wanted ; 1972 ; Labour History: A Journal of Labour and Social History Volume 22 ; 22 >
+    au < wanted ; 1972 ; Labour History: A Journal of Labour and Social History Volume 23 ; 23 >
+    au < wanted ; 1973 ; Labour History: A Journal of Labour and Social History Volume 24 ; 24 >
+    au < wanted ; 1973 ; Labour History: A Journal of Labour and Social History Volume 25 ; 25 >
+    au < wanted ; 1974 ; Labour History: A Journal of Labour and Social History Volume 26 ; 26 >
+    au < wanted ; 1974 ; Labour History: A Journal of Labour and Social History Volume 27 ; 27 >
+    au < wanted ; 1975 ; Labour History: A Journal of Labour and Social History Volume 28 ; 28 >
+    au < wanted ; 1975 ; Labour History: A Journal of Labour and Social History Volume 29 ; 29 >
+    au < wanted ; 1976 ; Labour History: A Journal of Labour and Social History Volume 30 ; 30 >
+    au < wanted ; 1976 ; Labour History: A Journal of Labour and Social History Volume 31 ; 31 >
+    au < wanted ; 1977 ; Labour History: A Journal of Labour and Social History Volume 32 ; 32 >
+    au < wanted ; 1977 ; Labour History: A Journal of Labour and Social History Volume 33 ; 33 >
+    au < wanted ; 1978 ; Labour History: A Journal of Labour and Social History Volume 34 ; 34 >
+    au < wanted ; 1978 ; Labour History: A Journal of Labour and Social History Volume 35 ; 35 >
+    au < wanted ; 1979 ; Labour History: A Journal of Labour and Social History Volume 36 ; 36 >
+    au < wanted ; 1979 ; Labour History: A Journal of Labour and Social History Volume 37 ; 37 >
+    au < wanted ; 1980 ; Labour History: A Journal of Labour and Social History Volume 38 ; 38 >
+    au < wanted ; 1980 ; Labour History: A Journal of Labour and Social History Volume 39 ; 39 >
+    au < wanted ; 1981 ; Labour History: A Journal of Labour and Social History Volume 40 ; 40 >
+    au < wanted ; 1981 ; Labour History: A Journal of Labour and Social History Volume 41 ; 41 >
+    au < wanted ; 1982 ; Labour History: A Journal of Labour and Social History Volume 42 ; 42 >
+    au < wanted ; 1982 ; Labour History: A Journal of Labour and Social History Volume 43 ; 43 >
+    au < wanted ; 1983 ; Labour History: A Journal of Labour and Social History Volume 44 ; 44 >
+    au < wanted ; 1983 ; Labour History: A Journal of Labour and Social History Volume 45 ; 45 >
+    au < wanted ; 1984 ; Labour History: A Journal of Labour and Social History Volume 46 ; 46 >
+    au < wanted ; 1984 ; Labour History: A Journal of Labour and Social History Volume 47 ; 47 >
+    au < wanted ; 1985 ; Labour History: A Journal of Labour and Social History Volume 48 ; 48 >
+    au < wanted ; 1985 ; Labour History: A Journal of Labour and Social History Volume 49 ; 49 >
+    au < wanted ; 1986 ; Labour History: A Journal of Labour and Social History Volume 50 ; 50 >
+    au < wanted ; 1986 ; Labour History: A Journal of Labour and Social History Volume 51 ; 51 >
+    au < wanted ; 1987 ; Labour History: A Journal of Labour and Social History Volume 52 ; 52 >
+    au < wanted ; 1987 ; Labour History: A Journal of Labour and Social History Volume 53 ; 53 >
+    au < wanted ; 1988 ; Labour History: A Journal of Labour and Social History Volume 54 ; 54 >
+    au < wanted ; 1988 ; Labour History: A Journal of Labour and Social History Volume 55 ; 55 >
+    au < wanted ; 1989 ; Labour History: A Journal of Labour and Social History Volume 56 ; 56 >
+    au < wanted ; 1989 ; Labour History: A Journal of Labour and Social History Volume 57 ; 57 >
+    au < wanted ; 1990 ; Labour History: A Journal of Labour and Social History Volume 58 ; 58 >
+    au < wanted ; 1990 ; Labour History: A Journal of Labour and Social History Volume 59 ; 59 >
+    au < wanted ; 1991 ; Labour History: A Journal of Labour and Social History Volume 60 ; 60 >
+    au < wanted ; 1991 ; Labour History: A Journal of Labour and Social History Volume 61 ; 61 >
+    au < wanted ; 1992 ; Labour History: A Journal of Labour and Social History Volume 62 ; 62 >
+    au < wanted ; 1992 ; Labour History: A Journal of Labour and Social History Volume 63 ; 63 >
+    au < wanted ; 1993 ; Labour History: A Journal of Labour and Social History Volume 64 ; 64 >
+    au < wanted ; 1993 ; Labour History: A Journal of Labour and Social History Volume 65 ; 65 >
+    au < wanted ; 1994 ; Labour History: A Journal of Labour and Social History Volume 66 ; 66 >
+    au < wanted ; 1994 ; Labour History: A Journal of Labour and Social History Volume 67 ; 67 >
+    au < wanted ; 1995 ; Labour History: A Journal of Labour and Social History Volume 68 ; 68 >
+    au < wanted ; 1995 ; Labour History: A Journal of Labour and Social History Volume 69 ; 69 >
+    au < wanted ; 1996 ; Labour History: A Journal of Labour and Social History Volume 70 ; 70 >
+    au < wanted ; 1996 ; Labour History: A Journal of Labour and Social History Volume 71 ; 71 >
+    au < wanted ; 1997 ; Labour History: A Journal of Labour and Social History Volume 72 ; 72 >
+    au < wanted ; 1997 ; Labour History: A Journal of Labour and Social History Volume 73 ; 73 >
+    au < wanted ; 1998 ; Labour History: A Journal of Labour and Social History Volume 74 ; 74 >
+    au < wanted ; 1998 ; Labour History: A Journal of Labour and Social History Volume 75 ; 75 >
+    au < wanted ; 1999 ; Labour History: A Journal of Labour and Social History Volume 76 ; 76 >
+    au < wanted ; 1999 ; Labour History: A Journal of Labour and Social History Volume 77 ; 77 >
     au < released ; 2000 ; Labour History: A Journal of Labour and Social History Volume 78 ; 78 >
     au < released ; 2000 ; Labour History: A Journal of Labour and Social History Volume 79 ; 79 >
     au < released ; 2001 ; Labour History: A Journal of Labour and Social History Volume 80 ; 80 >
@@ -1494,57 +1494,57 @@
     #Published 1957-1969
     #journal_num = 100
 
-    au < manifest ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 1 ; 1 >
-    au < manifest ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 2 ; 2 >
-    au < manifest ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 3 ; 3 >
-    au < manifest ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 4 ; 4 >
-    au < manifest ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 5 ; 5 >
-    au < manifest ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 6 ; 6 >
-    au < manifest ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 7 ; 7 >
-    au < manifest ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 8 ; 8 >
-    au < manifest ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 9 ; 9 >
-    au < manifest ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 10 ; 10 >
-    au < manifest ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 11 ; 11 >
-    au < manifest ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 12 ; 12 >
-    au < manifest ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 13 ; 13 >
-    au < manifest ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 14 ; 14 >
-    au < manifest ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 15 ; 15 >
-    au < manifest ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 16 ; 16 >
-    au < manifest ; 1961 ; Marx Memorial Library Quarterly Bulletin Volume 17 ; 17 >
+    au < wanted ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 1 ; 1 >
+    au < wanted ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 2 ; 2 >
+    au < wanted ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 3 ; 3 >
+    au < wanted ; 1957 ; Marx Memorial Library Quarterly Bulletin Volume 4 ; 4 >
+    au < wanted ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 5 ; 5 >
+    au < wanted ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 6 ; 6 >
+    au < wanted ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 7 ; 7 >
+    au < wanted ; 1958 ; Marx Memorial Library Quarterly Bulletin Volume 8 ; 8 >
+    au < wanted ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 9 ; 9 >
+    au < wanted ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 10 ; 10 >
+    au < wanted ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 11 ; 11 >
+    au < wanted ; 1959 ; Marx Memorial Library Quarterly Bulletin Volume 12 ; 12 >
+    au < wanted ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 13 ; 13 >
+    au < wanted ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 14 ; 14 >
+    au < wanted ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 15 ; 15 >
+    au < wanted ; 1960 ; Marx Memorial Library Quarterly Bulletin Volume 16 ; 16 >
+    au < wanted ; 1961 ; Marx Memorial Library Quarterly Bulletin Volume 17 ; 17 >
     au < doesNotExist ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 18 ; 18 >
-    au < manifest ; 1961 ; Marx Memorial Library Quarterly Bulletin Volume 19 ; 19 >
-    au < manifest ; 1961 ; Marx Memorial Library Quarterly Bulletin Volume 20 ; 20 >
-    au < manifest ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 21 ; 21 >
-    au < manifest ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 22 ; 22 >
-    au < manifest ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 23 ; 23 >
-    au < manifest ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 24 ; 24 >
-    au < manifest ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 25 ; 25 >
-    au < manifest ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 26 ; 26 >
-    au < manifest ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 27 ; 27 >
-    au < manifest ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 28 ; 28 >
-    au < manifest ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 29 ; 29 >
-    au < manifest ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 30 ; 30 >
-    au < manifest ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 31 ; 31 >
-    au < manifest ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 32 ; 32 >
-    au < manifest ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 33 ; 33 >
-    au < manifest ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 34 ; 34 >
-    au < manifest ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 35 ; 35 >
-    au < manifest ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 36 ; 36 >
-    au < manifest ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 37 ; 37 >
-    au < manifest ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 38 ; 38 >
-    au < manifest ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 39 ; 39 >
-    au < manifest ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 40 ; 40 >
+    au < wanted ; 1961 ; Marx Memorial Library Quarterly Bulletin Volume 19 ; 19 >
+    au < wanted ; 1961 ; Marx Memorial Library Quarterly Bulletin Volume 20 ; 20 >
+    au < wanted ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 21 ; 21 >
+    au < wanted ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 22 ; 22 >
+    au < wanted ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 23 ; 23 >
+    au < wanted ; 1962 ; Marx Memorial Library Quarterly Bulletin Volume 24 ; 24 >
+    au < wanted ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 25 ; 25 >
+    au < wanted ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 26 ; 26 >
+    au < wanted ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 27 ; 27 >
+    au < wanted ; 1963 ; Marx Memorial Library Quarterly Bulletin Volume 28 ; 28 >
+    au < wanted ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 29 ; 29 >
+    au < wanted ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 30 ; 30 >
+    au < wanted ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 31 ; 31 >
+    au < wanted ; 1964 ; Marx Memorial Library Quarterly Bulletin Volume 32 ; 32 >
+    au < wanted ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 33 ; 33 >
+    au < wanted ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 34 ; 34 >
+    au < wanted ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 35 ; 35 >
+    au < wanted ; 1965 ; Marx Memorial Library Quarterly Bulletin Volume 36 ; 36 >
+    au < wanted ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 37 ; 37 >
+    au < wanted ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 38 ; 38 >
+    au < wanted ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 39 ; 39 >
+    au < wanted ; 1966 ; Marx Memorial Library Quarterly Bulletin Volume 40 ; 40 >
     au < doesNotExist ; 1967 ; Marx Memorial Library Quarterly Bulletin Volume 41 ; 41 >
     au < doesNotExist ; 1967 ; Marx Memorial Library Quarterly Bulletin Volume 42 ; 42 >
     au < doesNotExist ; 1967 ; Marx Memorial Library Quarterly Bulletin Volume 43 ; 43 >
-    au < manifest ; 1967 ; Marx Memorial Library Quarterly Bulletin Volume 44 ; 44 >
-    au < manifest ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 45 ; 45 >
-    au < manifest ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 46 ; 46 >
-    au < manifest ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 47 ; 47 >
-    au < manifest ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 48 ; 48 >
-    au < manifest ; 1969 ; Marx Memorial Library Quarterly Bulletin Volume 49 ; 49 >
-    au < manifest ; 1969 ; Marx Memorial Library Quarterly Bulletin Volume 50 ; 50 >
-    au < manifest ; 1969 ; Marx Memorial Library Quarterly Bulletin Volume 51 ; 51 >
+    au < wanted ; 1967 ; Marx Memorial Library Quarterly Bulletin Volume 44 ; 44 >
+    au < wanted ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 45 ; 45 >
+    au < wanted ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 46 ; 46 >
+    au < wanted ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 47 ; 47 >
+    au < wanted ; 1968 ; Marx Memorial Library Quarterly Bulletin Volume 48 ; 48 >
+    au < wanted ; 1969 ; Marx Memorial Library Quarterly Bulletin Volume 49 ; 49 >
+    au < wanted ; 1969 ; Marx Memorial Library Quarterly Bulletin Volume 50 ; 50 >
+    au < wanted ; 1969 ; Marx Memorial Library Quarterly Bulletin Volume 51 ; 51 >
 
   }
 
@@ -1564,10 +1564,10 @@
 
     au < doNotProcess ; 1982 ; The Quarterly Bulletin of the Marx Memorial Library Volume 100 ; 100 >
 
-    au < manifest ; 2003 ; The Quarterly Bulletin of the Marx Memorial Library Volume 137 ; 137 >
-    au < manifest ; 2003 ; The Quarterly Bulletin of the Marx Memorial Library Volume 138 ; 138 >
-    au < manifest ; 2004 ; The Quarterly Bulletin of the Marx Memorial Library Volume 139 ; 139 >
-    au < manifest ; 2004 ; The Quarterly Bulletin of the Marx Memorial Library Volume 140 ; 140 >
+    au < wanted ; 2003 ; The Quarterly Bulletin of the Marx Memorial Library Volume 137 ; 137 >
+    au < wanted ; 2003 ; The Quarterly Bulletin of the Marx Memorial Library Volume 138 ; 138 >
+    au < wanted ; 2004 ; The Quarterly Bulletin of the Marx Memorial Library Volume 139 ; 139 >
+    au < wanted ; 2004 ; The Quarterly Bulletin of the Marx Memorial Library Volume 140 ; 140 >
 
   }
 
@@ -1627,40 +1627,40 @@
     comment[continued_by] = Modern Believing
     #journal_num = 86
 
-    au < manifest ; 1957-1958 ; The Modern Churchman Volume 1 ; 1 >
-    au < manifest ; 1958-1959 ; The Modern Churchman Volume 2 ; 2 >
-    au < manifest ; 1959-1960 ; The Modern Churchman Volume 3 ; 3 >
-    au < manifest ; 1960-1961 ; The Modern Churchman Volume 4 ; 4 >
-    au < manifest ; 1961-1962 ; The Modern Churchman Volume 5 ; 5 >
-    au < manifest ; 1962-1963 ; The Modern Churchman Volume 6 ; 6 >
-    au < manifest ; 1963-1964 ; The Modern Churchman Volume 7 ; 7 >
-    au < manifest ; 1964-1965 ; The Modern Churchman Volume 8 ; 8 >
-    au < manifest ; 1965-1966 ; The Modern Churchman Volume 9 ; 9 >
-    au < manifest ; 1966-1967 ; The Modern Churchman Volume 10 ; 10 >
-    au < manifest ; 1967-1968 ; The Modern Churchman Volume 11 ; 11 >
-    au < manifest ; 1968-1969 ; The Modern Churchman Volume 12 ; 12 >
-    au < manifest ; 1969-1970 ; The Modern Churchman Volume 13 ; 13 >
-    au < manifest ; 1970-1971 ; The Modern Churchman Volume 14 ; 14 >
-    au < manifest ; 1971-1972 ; The Modern Churchman Volume 15 ; 15 >
-    au < manifest ; 1972-1973 ; The Modern Churchman Volume 16 ; 16 >
-    au < manifest ; 1973-1974 ; The Modern Churchman Volume 17 ; 17 >
-    au < manifest ; 1974-1975 ; The Modern Churchman Volume 18 ; 18 >
-    au < manifest ; 1975-1976 ; The Modern Churchman Volume 19 ; 19 >
-    au < manifest ; 1977 ; The Modern Churchman Volume 20 ; 20 >
-    au < manifest ; 1977-1978 ; The Modern Churchman Volume 21 ; 21 >
-    au < manifest ; 1978-1979 ; The Modern Churchman Volume 22 ; 22 >
-    au < manifest ; 1980 ; The Modern Churchman Volume 23 ; 23 >
-    au < manifest ; 1981 ; The Modern Churchman Volume 24 ; 24 >
-    au < manifest ; 1982-1983 ; The Modern Churchman Volume 25 ; 25 >
-    au < manifest ; 1983-1984 ; The Modern Churchman Volume 26 ; 26 >
-    au < manifest ; 1984-1985 ; The Modern Churchman Volume 27 ; 27 >
-    au < manifest ; 1985-1986 ; The Modern Churchman Volume 28 ; 28 >
-    au < manifest ; 1986-1987 ; The Modern Churchman Volume 29 ; 29 >
-    au < manifest ; 1988-1989 ; The Modern Churchman Volume 30 ; 30 >
-    au < manifest ; 1989-1990 ; The Modern Churchman Volume 31 ; 31 >
-    au < manifest ; 1990-1991 ; The Modern Churchman Volume 32 ; 32 >
-    au < manifest ; 1991-1992 ; The Modern Churchman Volume 33 ; 33 >
-    au < manifest ; 1992-1993 ; The Modern Churchman Volume 34 ; 34 >
+    au < wanted ; 1957-1958 ; The Modern Churchman Volume 1 ; 1 >
+    au < wanted ; 1958-1959 ; The Modern Churchman Volume 2 ; 2 >
+    au < wanted ; 1959-1960 ; The Modern Churchman Volume 3 ; 3 >
+    au < wanted ; 1960-1961 ; The Modern Churchman Volume 4 ; 4 >
+    au < wanted ; 1961-1962 ; The Modern Churchman Volume 5 ; 5 >
+    au < wanted ; 1962-1963 ; The Modern Churchman Volume 6 ; 6 >
+    au < wanted ; 1963-1964 ; The Modern Churchman Volume 7 ; 7 >
+    au < wanted ; 1964-1965 ; The Modern Churchman Volume 8 ; 8 >
+    au < wanted ; 1965-1966 ; The Modern Churchman Volume 9 ; 9 >
+    au < wanted ; 1966-1967 ; The Modern Churchman Volume 10 ; 10 >
+    au < wanted ; 1967-1968 ; The Modern Churchman Volume 11 ; 11 >
+    au < wanted ; 1968-1969 ; The Modern Churchman Volume 12 ; 12 >
+    au < wanted ; 1969-1970 ; The Modern Churchman Volume 13 ; 13 >
+    au < wanted ; 1970-1971 ; The Modern Churchman Volume 14 ; 14 >
+    au < wanted ; 1971-1972 ; The Modern Churchman Volume 15 ; 15 >
+    au < wanted ; 1972-1973 ; The Modern Churchman Volume 16 ; 16 >
+    au < wanted ; 1973-1974 ; The Modern Churchman Volume 17 ; 17 >
+    au < wanted ; 1974-1975 ; The Modern Churchman Volume 18 ; 18 >
+    au < wanted ; 1975-1976 ; The Modern Churchman Volume 19 ; 19 >
+    au < wanted ; 1977 ; The Modern Churchman Volume 20 ; 20 >
+    au < wanted ; 1977-1978 ; The Modern Churchman Volume 21 ; 21 >
+    au < wanted ; 1978-1979 ; The Modern Churchman Volume 22 ; 22 >
+    au < wanted ; 1980 ; The Modern Churchman Volume 23 ; 23 >
+    au < wanted ; 1981 ; The Modern Churchman Volume 24 ; 24 >
+    au < wanted ; 1982-1983 ; The Modern Churchman Volume 25 ; 25 >
+    au < wanted ; 1983-1984 ; The Modern Churchman Volume 26 ; 26 >
+    au < wanted ; 1984-1985 ; The Modern Churchman Volume 27 ; 27 >
+    au < wanted ; 1985-1986 ; The Modern Churchman Volume 28 ; 28 >
+    au < wanted ; 1986-1987 ; The Modern Churchman Volume 29 ; 29 >
+    au < wanted ; 1988-1989 ; The Modern Churchman Volume 30 ; 30 >
+    au < wanted ; 1989-1990 ; The Modern Churchman Volume 31 ; 31 >
+    au < wanted ; 1990-1991 ; The Modern Churchman Volume 32 ; 32 >
+    au < wanted ; 1991-1992 ; The Modern Churchman Volume 33 ; 33 >
+    au < wanted ; 1992-1993 ; The Modern Churchman Volume 34 ; 34 >
 
   }
 
@@ -1896,7 +1896,7 @@
     au < released ; 2022 ; Science Fiction Film and Television Volume 15 ; 15 >
     au < released ; 2023 ; Science Fiction Film and Television Volume 16 ; 16 >
     au < released ; 2024 ; Science Fiction Film and Television Volume 17 ; 17 >
-    au < manifest ; 2025 ; Science Fiction Film and Television Volume 18 ; 18 >
+    au < wanted ; 2025 ; Science Fiction Film and Television Volume 18 ; 18 >
     au < manifest ; 2026 ; Science Fiction Film and Television Volume 19 ; 19 >
 
   }
@@ -1955,12 +1955,12 @@
     #Published 1961-present. Volumes and years don't align well
     #journal_num = 62
 
-    au < manifest ; 1990 ; Studia Hibernica Volume 25 ; 25 >
-    au < manifest ; 1992 ; Studia Hibernica Volume 26 ; 26 >
-    au < manifest ; 1993 ; Studia Hibernica Volume 27 ; 27 >
-    au < manifest ; 1994 ; Studia Hibernica Volume 28 ; 28 >
-    au < manifest ; 1997 ; Studia Hibernica Volume 29 ; 29 >
-    au < manifest ; 1999 ; Studia Hibernica Volume 30 ; 30 >
+    au < wanted ; 1990 ; Studia Hibernica Volume 25 ; 25 >
+    au < wanted ; 1992 ; Studia Hibernica Volume 26 ; 26 >
+    au < wanted ; 1993 ; Studia Hibernica Volume 27 ; 27 >
+    au < wanted ; 1994 ; Studia Hibernica Volume 28 ; 28 >
+    au < wanted ; 1997 ; Studia Hibernica Volume 29 ; 29 >
+    au < wanted ; 1999 ; Studia Hibernica Volume 30 ; 30 >
     au < released ; 2001 ; Studia Hibernica Volume 31 ; 31 >
     au < released ; 2003 ; Studia Hibernica Volume 32 ; 32 >
     au < released ; 2005 ; Studia Hibernica Volume 33 ; 33 >
@@ -2269,71 +2269,71 @@
 
     param[journal_id] = revista
 
-    au < manifest ; 1939 ; Revista Iberoamericana Volume 1 ; 1 >
-    au < manifest ; 1940 ; Revista Iberoamericana Volume 2 ; 2 >
-    au < manifest ; 1941 ; Revista Iberoamericana Volume 3 ; 3 >
-    au < manifest ; 1941-1942 ; Revista Iberoamericana Volume 4 ; 4 >
-    au < manifest ; 1942 ; Revista Iberoamericana Volume 5 ; 5 >
-    au < manifest ; 1943 ; Revista Iberoamericana Volume 6 ; 6 >
-    au < manifest ; 1943-1944 ; Revista Iberoamericana Volume 7 ; 7 >
-    au < manifest ; 1944 ; Revista Iberoamericana Volume 8 ; 8 >
-    au < manifest ; 1945 ; Revista Iberoamericana Volume 9 ; 9 >
-    au < manifest ; 1945 ; Revista Iberoamericana Volume 10 ; 10 >
-    au < manifest ; 1946 ; Revista Iberoamericana Volume 11 ; 11 >
-    au < manifest ; 1947 ; Revista Iberoamericana Volume 12 ; 12 >
-    au < manifest ; 1948 ; Revista Iberoamericana Volume 13 ; 13 >
-    au < manifest ; 1948 ; Revista Iberoamericana Volume 14 ; 14 >
-    au < manifest ; 1949-1950 ; Revista Iberoamericana Volume 15 ; 15 >
-    au < manifest ; 1951 ; Revista Iberoamericana Volume 16 ; 16 >
-    au < manifest ; 1951-1952 ; Revista Iberoamericana Volume 17 ; 17 >
-    au < manifest ; 1952-1953 ; Revista Iberoamericana Volume 18 ; 18 >
-    au < manifest ; 1953-1954 ; Revista Iberoamericana Volume 19 ; 19 >
-    au < manifest ; 1955 ; Revista Iberoamericana Volume 20 ; 20 >
-    au < manifest ; 1956 ; Revista Iberoamericana Volume 21 ; 21 >
-    au < manifest ; 1957 ; Revista Iberoamericana Volume 22 ; 22 >
-    au < manifest ; 1958 ; Revista Iberoamericana Volume 23 ; 23 >
-    au < manifest ; 1959 ; Revista Iberoamericana Volume 24 ; 24 >
-    au < manifest ; 1960 ; Revista Iberoamericana Volume 25 ; 25 >
-    au < manifest ; 1961 ; Revista Iberoamericana Volume 26 ; 26 >
-    au < manifest ; 1961 ; Revista Iberoamericana Volume 27 ; 27 >
-    au < manifest ; 1962 ; Revista Iberoamericana Volume 28 ; 28 >
-    au < manifest ; 1963 ; Revista Iberoamericana Volume 29 ; 29 >
-    au < manifest ; 1964 ; Revista Iberoamericana Volume 30 ; 30 >
-    au < manifest ; 1965 ; Revista Iberoamericana Volume 31 ; 31 >
-    au < manifest ; 1966 ; Revista Iberoamericana Volume 32 ; 32 >
-    au < manifest ; 1967 ; Revista Iberoamericana Volume 33 ; 33 >
-    au < manifest ; 1968 ; Revista Iberoamericana Volume 34 ; 34 >
-    au < manifest ; 1969 ; Revista Iberoamericana Volume 35 ; 35 >
-    au < manifest ; 1970 ; Revista Iberoamericana Volume 36 ; 36 >
-    au < manifest ; 1971 ; Revista Iberoamericana Volume 37 ; 37 >
-    au < manifest ; 1972 ; Revista Iberoamericana Volume 38 ; 38 >
-    au < manifest ; 1973 ; Revista Iberoamericana Volume 39 ; 39 >
-    au < manifest ; 1974 ; Revista Iberoamericana Volume 40 ; 40 >
-    au < manifest ; 1975 ; Revista Iberoamericana Volume 41 ; 41 >
-    au < manifest ; 1976 ; Revista Iberoamericana Volume 42 ; 42 >
-    au < manifest ; 1977 ; Revista Iberoamericana Volume 43 ; 43 >
-    au < manifest ; 1978 ; Revista Iberoamericana Volume 44 ; 44 >
-    au < manifest ; 1979 ; Revista Iberoamericana Volume 45 ; 45 >
-    au < manifest ; 1980 ; Revista Iberoamericana Volume 46 ; 46 >
-    au < manifest ; 1981 ; Revista Iberoamericana Volume 47 ; 47 >
-    au < manifest ; 1982 ; Revista Iberoamericana Volume 48 ; 48 >
-    au < manifest ; 1983 ; Revista Iberoamericana Volume 49 ; 49 >
-    au < manifest ; 1984 ; Revista Iberoamericana Volume 50 ; 50 >
-    au < manifest ; 1985 ; Revista Iberoamericana Volume 51 ; 51 >
-    au < manifest ; 1986 ; Revista Iberoamericana Volume 52 ; 52 >
-    au < manifest ; 1987 ; Revista Iberoamericana Volume 53 ; 53 >
-    au < manifest ; 1988 ; Revista Iberoamericana Volume 54 ; 54 >
-    au < manifest ; 1989 ; Revista Iberoamericana Volume 55 ; 55 >
-    au < manifest ; 1990 ; Revista Iberoamericana Volume 56 ; 56 >
-    au < manifest ; 1991 ; Revista Iberoamericana Volume 57 ; 57 >
-    au < manifest ; 1992 ; Revista Iberoamericana Volume 58 ; 58 >
-    au < manifest ; 1993 ; Revista Iberoamericana Volume 59 ; 59 >
-    au < manifest ; 1994 ; Revista Iberoamericana Volume 60 ; 60 >
-    au < manifest ; 1995 ; Revista Iberoamericana Volume 61 ; 61 >
-    au < manifest ; 1996 ; Revista Iberoamericana Volume 62 ; 62 >
-    au < manifest ; 1997 ; Revista Iberoamericana Volume 63 ; 63 >
-    au < manifest ; 1998 ; Revista Iberoamericana Volume 64 ; 64 >
-    au < manifest ; 1999 ; Revista Iberoamericana Volume 65 ; 65 >
+    au < wanted ; 1939 ; Revista Iberoamericana Volume 1 ; 1 >
+    au < wanted ; 1940 ; Revista Iberoamericana Volume 2 ; 2 >
+    au < wanted ; 1941 ; Revista Iberoamericana Volume 3 ; 3 >
+    au < wanted ; 1941-1942 ; Revista Iberoamericana Volume 4 ; 4 >
+    au < wanted ; 1942 ; Revista Iberoamericana Volume 5 ; 5 >
+    au < wanted ; 1943 ; Revista Iberoamericana Volume 6 ; 6 >
+    au < wanted ; 1943-1944 ; Revista Iberoamericana Volume 7 ; 7 >
+    au < wanted ; 1944 ; Revista Iberoamericana Volume 8 ; 8 >
+    au < wanted ; 1945 ; Revista Iberoamericana Volume 9 ; 9 >
+    au < wanted ; 1945 ; Revista Iberoamericana Volume 10 ; 10 >
+    au < wanted ; 1946 ; Revista Iberoamericana Volume 11 ; 11 >
+    au < wanted ; 1947 ; Revista Iberoamericana Volume 12 ; 12 >
+    au < wanted ; 1948 ; Revista Iberoamericana Volume 13 ; 13 >
+    au < wanted ; 1948 ; Revista Iberoamericana Volume 14 ; 14 >
+    au < wanted ; 1949-1950 ; Revista Iberoamericana Volume 15 ; 15 >
+    au < wanted ; 1951 ; Revista Iberoamericana Volume 16 ; 16 >
+    au < wanted ; 1951-1952 ; Revista Iberoamericana Volume 17 ; 17 >
+    au < wanted ; 1952-1953 ; Revista Iberoamericana Volume 18 ; 18 >
+    au < wanted ; 1953-1954 ; Revista Iberoamericana Volume 19 ; 19 >
+    au < wanted ; 1955 ; Revista Iberoamericana Volume 20 ; 20 >
+    au < wanted ; 1956 ; Revista Iberoamericana Volume 21 ; 21 >
+    au < wanted ; 1957 ; Revista Iberoamericana Volume 22 ; 22 >
+    au < wanted ; 1958 ; Revista Iberoamericana Volume 23 ; 23 >
+    au < wanted ; 1959 ; Revista Iberoamericana Volume 24 ; 24 >
+    au < wanted ; 1960 ; Revista Iberoamericana Volume 25 ; 25 >
+    au < wanted ; 1961 ; Revista Iberoamericana Volume 26 ; 26 >
+    au < wanted ; 1961 ; Revista Iberoamericana Volume 27 ; 27 >
+    au < wanted ; 1962 ; Revista Iberoamericana Volume 28 ; 28 >
+    au < wanted ; 1963 ; Revista Iberoamericana Volume 29 ; 29 >
+    au < wanted ; 1964 ; Revista Iberoamericana Volume 30 ; 30 >
+    au < wanted ; 1965 ; Revista Iberoamericana Volume 31 ; 31 >
+    au < wanted ; 1966 ; Revista Iberoamericana Volume 32 ; 32 >
+    au < wanted ; 1967 ; Revista Iberoamericana Volume 33 ; 33 >
+    au < wanted ; 1968 ; Revista Iberoamericana Volume 34 ; 34 >
+    au < wanted ; 1969 ; Revista Iberoamericana Volume 35 ; 35 >
+    au < wanted ; 1970 ; Revista Iberoamericana Volume 36 ; 36 >
+    au < wanted ; 1971 ; Revista Iberoamericana Volume 37 ; 37 >
+    au < wanted ; 1972 ; Revista Iberoamericana Volume 38 ; 38 >
+    au < wanted ; 1973 ; Revista Iberoamericana Volume 39 ; 39 >
+    au < wanted ; 1974 ; Revista Iberoamericana Volume 40 ; 40 >
+    au < wanted ; 1975 ; Revista Iberoamericana Volume 41 ; 41 >
+    au < wanted ; 1976 ; Revista Iberoamericana Volume 42 ; 42 >
+    au < wanted ; 1977 ; Revista Iberoamericana Volume 43 ; 43 >
+    au < wanted ; 1978 ; Revista Iberoamericana Volume 44 ; 44 >
+    au < wanted ; 1979 ; Revista Iberoamericana Volume 45 ; 45 >
+    au < wanted ; 1980 ; Revista Iberoamericana Volume 46 ; 46 >
+    au < wanted ; 1981 ; Revista Iberoamericana Volume 47 ; 47 >
+    au < wanted ; 1982 ; Revista Iberoamericana Volume 48 ; 48 >
+    au < wanted ; 1983 ; Revista Iberoamericana Volume 49 ; 49 >
+    au < wanted ; 1984 ; Revista Iberoamericana Volume 50 ; 50 >
+    au < wanted ; 1985 ; Revista Iberoamericana Volume 51 ; 51 >
+    au < wanted ; 1986 ; Revista Iberoamericana Volume 52 ; 52 >
+    au < wanted ; 1987 ; Revista Iberoamericana Volume 53 ; 53 >
+    au < wanted ; 1988 ; Revista Iberoamericana Volume 54 ; 54 >
+    au < wanted ; 1989 ; Revista Iberoamericana Volume 55 ; 55 >
+    au < wanted ; 1990 ; Revista Iberoamericana Volume 56 ; 56 >
+    au < wanted ; 1991 ; Revista Iberoamericana Volume 57 ; 57 >
+    au < wanted ; 1992 ; Revista Iberoamericana Volume 58 ; 58 >
+    au < wanted ; 1993 ; Revista Iberoamericana Volume 59 ; 59 >
+    au < wanted ; 1994 ; Revista Iberoamericana Volume 60 ; 60 >
+    au < wanted ; 1995 ; Revista Iberoamericana Volume 61 ; 61 >
+    au < wanted ; 1996 ; Revista Iberoamericana Volume 62 ; 62 >
+    au < wanted ; 1997 ; Revista Iberoamericana Volume 63 ; 63 >
+    au < wanted ; 1998 ; Revista Iberoamericana Volume 64 ; 64 >
+    au < wanted ; 1999 ; Revista Iberoamericana Volume 65 ; 65 >
     au < released ; 2000 ; Revista Iberoamericana Volume 66 ; 66 >
     au < released ; 2001 ; Revista Iberoamericana Volume 67 ; 67 >
     au < released ; 2002 ; Revista Iberoamericana Volume 68 ; 68 >
@@ -2374,30 +2374,30 @@
 
     param[journal_id] = blr
 
-    au < manifest ; 1914-1916 ; The Bodleian Library Record Volume I ; I >
-    au < manifest ; 1917-1919 ; The Bodleian Library Record Volume II ; II >
-    au < manifest ; 1920-1922 ; The Bodleian Library Record Volume III ; III >
-    au < manifest ; 1923-1925 ; The Bodleian Library Record Volume IV ; IV >
-    au < manifest ; 1926-1928 ; The Bodleian Library Record Volume V ; V >
-    au < manifest ; 1929-1931 ; The Bodleian Library Record Volume VI ; VI >
-    au < manifest ; 1932-1934 ; The Bodleian Library Record Volume VII ; VII >
-    au < manifest ; 1935-1937 ; The Bodleian Library Record Volume VIII ; VIII >
-    au < manifest ; 1938-1941 ; The Bodleian Library Record Volume 1 ; 1 >
-    au < manifest ; 1941-1949 ; The Bodleian Library Record Volume 2 ; 2 >
-    au < manifest ; 1950-1951 ; The Bodleian Library Record Volume 3 ; 3 >
-    au < manifest ; 1952-1953 ; The Bodleian Library Record Volume 4 ; 4 >
-    au < manifest ; 1954-1956 ; The Bodleian Library Record Volume 5 ; 5 >
-    au < manifest ; 1957-1961 ; The Bodleian Library Record Volume 6 ; 6 >
-    au < manifest ; 1962-1967 ; The Bodleian Library Record Volume 7 ; 7 >
-    au < manifest ; 1967-1972 ; The Bodleian Library Record Volume 8 ; 8 >
-    au < manifest ; 1973-1978 ; The Bodleian Library Record Volume 9 ; 9 >
-    au < manifest ; 1978-1982 ; The Bodleian Library Record Volume 10 ; 10 >
-    au < manifest ; 1982-1985 ; The Bodleian Library Record Volume 11 ; 11 >
-    au < manifest ; 1985-1988 ; The Bodleian Library Record Volume 12 ; 12 >
-    au < manifest ; 1988-1991 ; The Bodleian Library Record Volume 13 ; 13 >
-    au < manifest ; 1991-1994 ; The Bodleian Library Record Volume 14 ; 14 >
-    au < manifest ; 1994-1996 ; The Bodleian Library Record Volume 15 ; 15 >
-    au < manifest ; 1997-1999 ; The Bodleian Library Record Volume 16 ; 16 >
+    au < wanted ; 1914-1916 ; The Bodleian Library Record Volume I ; I >
+    au < wanted ; 1917-1919 ; The Bodleian Library Record Volume II ; II >
+    au < wanted ; 1920-1922 ; The Bodleian Library Record Volume III ; III >
+    au < wanted ; 1923-1925 ; The Bodleian Library Record Volume IV ; IV >
+    au < wanted ; 1926-1928 ; The Bodleian Library Record Volume V ; V >
+    au < wanted ; 1929-1931 ; The Bodleian Library Record Volume VI ; VI >
+    au < wanted ; 1932-1934 ; The Bodleian Library Record Volume VII ; VII >
+    au < wanted ; 1935-1937 ; The Bodleian Library Record Volume VIII ; VIII >
+    au < wanted ; 1938-1941 ; The Bodleian Library Record Volume 1 ; 1 >
+    au < wanted ; 1941-1949 ; The Bodleian Library Record Volume 2 ; 2 >
+    au < wanted ; 1950-1951 ; The Bodleian Library Record Volume 3 ; 3 >
+    au < wanted ; 1952-1953 ; The Bodleian Library Record Volume 4 ; 4 >
+    au < wanted ; 1954-1956 ; The Bodleian Library Record Volume 5 ; 5 >
+    au < wanted ; 1957-1961 ; The Bodleian Library Record Volume 6 ; 6 >
+    au < wanted ; 1962-1967 ; The Bodleian Library Record Volume 7 ; 7 >
+    au < wanted ; 1967-1972 ; The Bodleian Library Record Volume 8 ; 8 >
+    au < wanted ; 1973-1978 ; The Bodleian Library Record Volume 9 ; 9 >
+    au < wanted ; 1978-1982 ; The Bodleian Library Record Volume 10 ; 10 >
+    au < wanted ; 1982-1985 ; The Bodleian Library Record Volume 11 ; 11 >
+    au < wanted ; 1985-1988 ; The Bodleian Library Record Volume 12 ; 12 >
+    au < wanted ; 1988-1991 ; The Bodleian Library Record Volume 13 ; 13 >
+    au < wanted ; 1991-1994 ; The Bodleian Library Record Volume 14 ; 14 >
+    au < wanted ; 1994-1996 ; The Bodleian Library Record Volume 15 ; 15 >
+    au < wanted ; 1997-1999 ; The Bodleian Library Record Volume 16 ; 16 >
     au < released ; 2000-2002 ; The Bodleian Library Record Volume 17 ; 17 >
     au < released ; 2003-2005 ; The Bodleian Library Record Volume 18 ; 18 >
     au < released ; 2006 ; The Bodleian Library Record Volume 19 ; 19 >
@@ -2457,59 +2457,59 @@
 
     param[journal_id] = fs
 
-    au < manifest ; 1947 ; French Studies Volume 1 ; 1 >
-    au < manifest ; 1948 ; French Studies Volume 2 ; 2 >
-    au < manifest ; 1949 ; French Studies Volume 3 ; 3 >
-    au < manifest ; 1950 ; French Studies Volume 4 ; 4 >
-    au < manifest ; 1951 ; French Studies Volume 5 ; 5 >
-    au < manifest ; 1952 ; French Studies Volume VI ; VI >
-    au < manifest ; 1953 ; French Studies Volume 7 ; 7 >
-    au < manifest ; 1954 ; French Studies Volume 8 ; 8 >
-    au < manifest ; 1955 ; French Studies Volume 9 ; 9 >
-    au < manifest ; 1956 ; French Studies Volume 10 ; 10 >
-    au < manifest ; 1957 ; French Studies Volume 11 ; 11 >
-    au < manifest ; 1958 ; French Studies Volume 12 ; 12 >
-    au < manifest ; 1959 ; French Studies Volume 13 ; 13 >
-    au < manifest ; 1960 ; French Studies Volume 14 ; 14 >
-    au < manifest ; 1961 ; French Studies Volume 15 ; 15 >
-    au < manifest ; 1962 ; French Studies Volume 16 ; 16 >
-    au < manifest ; 1963 ; French Studies Volume 17 ; 17 >
-    au < manifest ; 1964 ; French Studies Volume 18 ; 18 >
-    au < manifest ; 1965 ; French Studies Volume 19 ; 19 >
-    au < manifest ; 1966 ; French Studies Volume 20 ; 20 >
-    au < manifest ; 1967 ; French Studies Volume 21 ; 21 >
-    au < manifest ; 1968 ; French Studies Volume 22 ; 22 >
-    au < manifest ; 1969 ; French Studies Volume 23 ; 23 >
-    au < manifest ; 1970 ; French Studies Volume 24 ; 24 >
-    au < manifest ; 1971 ; French Studies Volume 25 ; 25 >
-    au < manifest ; 1972 ; French Studies Volume 26 ; 26 >
-    au < manifest ; 1973 ; French Studies Volume 27 ; 27 >
-    au < manifest ; 1974 ; French Studies Volume 28 ; 28 >
-    au < manifest ; 1975 ; French Studies Volume 29 ; 29 >
-    au < manifest ; 1976 ; French Studies Volume 30 ; 30 >
-    au < manifest ; 1977 ; French Studies Volume 31 ; 31 >
-    au < manifest ; 1978 ; French Studies Volume 32 ; 32 >
-    au < manifest ; 1979 ; French Studies Volume 33 ; 33 >
-    au < manifest ; 1980 ; French Studies Volume 34 ; 34 >
-    au < manifest ; 1981 ; French Studies Volume 35 ; 35 >
-    au < manifest ; 1982 ; French Studies Volume 36 ; 36 >
-    au < manifest ; 1983 ; French Studies Volume 37 ; 37 >
-    au < manifest ; 1984 ; French Studies Volume 38 ; 38 >
-    au < manifest ; 1985 ; French Studies Volume 39 ; 39 >
-    au < manifest ; 1986 ; French Studies Volume 40 ; 40 >
-    au < manifest ; 1987 ; French Studies Volume 41 ; 41 >
-    au < manifest ; 1988 ; French Studies Volume 42 ; 42 >
-    au < manifest ; 1989 ; French Studies Volume 43 ; 43 >
-    au < manifest ; 1990 ; French Studies Volume 44 ; 44 >
-    au < manifest ; 1991 ; French Studies Volume 45 ; 45 >
-    au < manifest ; 1992 ; French Studies Volume 46 ; 46 >
-    au < manifest ; 1993 ; French Studies Volume 47 ; 47 >
-    au < manifest ; 1994 ; French Studies Volume 48 ; 48 >
-    au < manifest ; 1995 ; French Studies Volume 49 ; 49 >
-    au < manifest ; 1996 ; French Studies Volume 50 ; 50 >
-    au < manifest ; 1997 ; French Studies Volume 51 ; 51 >
-    au < manifest ; 1998 ; French Studies Volume 52 ; 52 >
-    au < manifest ; 1999 ; French Studies Volume 53 ; 53 >
+    au < wanted ; 1947 ; French Studies Volume 1 ; 1 >
+    au < wanted ; 1948 ; French Studies Volume 2 ; 2 >
+    au < wanted ; 1949 ; French Studies Volume 3 ; 3 >
+    au < wanted ; 1950 ; French Studies Volume 4 ; 4 >
+    au < wanted ; 1951 ; French Studies Volume 5 ; 5 >
+    au < wanted ; 1952 ; French Studies Volume VI ; VI >
+    au < wanted ; 1953 ; French Studies Volume 7 ; 7 >
+    au < wanted ; 1954 ; French Studies Volume 8 ; 8 >
+    au < wanted ; 1955 ; French Studies Volume 9 ; 9 >
+    au < wanted ; 1956 ; French Studies Volume 10 ; 10 >
+    au < wanted ; 1957 ; French Studies Volume 11 ; 11 >
+    au < wanted ; 1958 ; French Studies Volume 12 ; 12 >
+    au < wanted ; 1959 ; French Studies Volume 13 ; 13 >
+    au < wanted ; 1960 ; French Studies Volume 14 ; 14 >
+    au < wanted ; 1961 ; French Studies Volume 15 ; 15 >
+    au < wanted ; 1962 ; French Studies Volume 16 ; 16 >
+    au < wanted ; 1963 ; French Studies Volume 17 ; 17 >
+    au < wanted ; 1964 ; French Studies Volume 18 ; 18 >
+    au < wanted ; 1965 ; French Studies Volume 19 ; 19 >
+    au < wanted ; 1966 ; French Studies Volume 20 ; 20 >
+    au < wanted ; 1967 ; French Studies Volume 21 ; 21 >
+    au < wanted ; 1968 ; French Studies Volume 22 ; 22 >
+    au < wanted ; 1969 ; French Studies Volume 23 ; 23 >
+    au < wanted ; 1970 ; French Studies Volume 24 ; 24 >
+    au < wanted ; 1971 ; French Studies Volume 25 ; 25 >
+    au < wanted ; 1972 ; French Studies Volume 26 ; 26 >
+    au < wanted ; 1973 ; French Studies Volume 27 ; 27 >
+    au < wanted ; 1974 ; French Studies Volume 28 ; 28 >
+    au < wanted ; 1975 ; French Studies Volume 29 ; 29 >
+    au < wanted ; 1976 ; French Studies Volume 30 ; 30 >
+    au < wanted ; 1977 ; French Studies Volume 31 ; 31 >
+    au < wanted ; 1978 ; French Studies Volume 32 ; 32 >
+    au < wanted ; 1979 ; French Studies Volume 33 ; 33 >
+    au < wanted ; 1980 ; French Studies Volume 34 ; 34 >
+    au < wanted ; 1981 ; French Studies Volume 35 ; 35 >
+    au < wanted ; 1982 ; French Studies Volume 36 ; 36 >
+    au < wanted ; 1983 ; French Studies Volume 37 ; 37 >
+    au < wanted ; 1984 ; French Studies Volume 38 ; 38 >
+    au < wanted ; 1985 ; French Studies Volume 39 ; 39 >
+    au < wanted ; 1986 ; French Studies Volume 40 ; 40 >
+    au < wanted ; 1987 ; French Studies Volume 41 ; 41 >
+    au < wanted ; 1988 ; French Studies Volume 42 ; 42 >
+    au < wanted ; 1989 ; French Studies Volume 43 ; 43 >
+    au < wanted ; 1990 ; French Studies Volume 44 ; 44 >
+    au < wanted ; 1991 ; French Studies Volume 45 ; 45 >
+    au < wanted ; 1992 ; French Studies Volume 46 ; 46 >
+    au < wanted ; 1993 ; French Studies Volume 47 ; 47 >
+    au < wanted ; 1994 ; French Studies Volume 48 ; 48 >
+    au < wanted ; 1995 ; French Studies Volume 49 ; 49 >
+    au < wanted ; 1996 ; French Studies Volume 50 ; 50 >
+    au < wanted ; 1997 ; French Studies Volume 51 ; 51 >
+    au < wanted ; 1998 ; French Studies Volume 52 ; 52 >
+    au < wanted ; 1999 ; French Studies Volume 53 ; 53 >
     au < released ; 2000 ; French Studies Volume 54 ; 54 >
     au < released ; 2001 ; French Studies Volume 55 ; 55 >
     au < released ; 2002 ; French Studies Volume 56 ; 56 >
@@ -2550,25 +2550,25 @@
 
     param[journal_id] = fsb
 
-    au < manifest ; 1981 ; French Studies Bulletin Volume 1 ; 1 >
-    au < manifest ; 1982 ; French Studies Bulletin Volume 2 ; 2 >
-    au < manifest ; 1983 ; French Studies Bulletin Volume 3 ; 3 >
-    au < manifest ; 1984 ; French Studies Bulletin Volume 4 ; 4 >
-    au < manifest ; 1985 ; French Studies Bulletin Volume 5 ; 5 >
-    au < manifest ; 1986 ; French Studies Bulletin Volume 6 ; 6 >
-    au < manifest ; 1987 ; French Studies Bulletin Volume 7 ; 7 >
-    au < manifest ; 1988 ; French Studies Bulletin Volume 8 ; 8 >
-    au < manifest ; 1989 ; French Studies Bulletin Volume 9 ; 9 >
-    au < manifest ; 1990 ; French Studies Bulletin Volume 10 ; 10 >
-    au < manifest ; 1991 ; French Studies Bulletin Volume 11 ; 11 >
-    au < manifest ; 1992 ; French Studies Bulletin Volume 12 ; 12 >
-    au < manifest ; 1993 ; French Studies Bulletin Volume 13 ; 13 >
-    au < manifest ; 1994 ; French Studies Bulletin Volume 15 ; 15 >
-    au < manifest ; 1995 ; French Studies Bulletin Volume 16 ; 16 >
-    au < manifest ; 1996 ; French Studies Bulletin Volume 17 ; 17 >
-    au < manifest ; 1997 ; French Studies Bulletin Volume 18 ; 18 >
-    au < manifest ; 1998 ; French Studies Bulletin Volume 19 ; 19 >
-    au < manifest ; 1999 ; French Studies Bulletin Volume 20 ; 20 >
+    au < wanted ; 1981 ; French Studies Bulletin Volume 1 ; 1 >
+    au < wanted ; 1982 ; French Studies Bulletin Volume 2 ; 2 >
+    au < wanted ; 1983 ; French Studies Bulletin Volume 3 ; 3 >
+    au < wanted ; 1984 ; French Studies Bulletin Volume 4 ; 4 >
+    au < wanted ; 1985 ; French Studies Bulletin Volume 5 ; 5 >
+    au < wanted ; 1986 ; French Studies Bulletin Volume 6 ; 6 >
+    au < wanted ; 1987 ; French Studies Bulletin Volume 7 ; 7 >
+    au < wanted ; 1988 ; French Studies Bulletin Volume 8 ; 8 >
+    au < wanted ; 1989 ; French Studies Bulletin Volume 9 ; 9 >
+    au < wanted ; 1990 ; French Studies Bulletin Volume 10 ; 10 >
+    au < wanted ; 1991 ; French Studies Bulletin Volume 11 ; 11 >
+    au < wanted ; 1992 ; French Studies Bulletin Volume 12 ; 12 >
+    au < wanted ; 1993 ; French Studies Bulletin Volume 13 ; 13 >
+    au < wanted ; 1994 ; French Studies Bulletin Volume 15 ; 15 >
+    au < wanted ; 1995 ; French Studies Bulletin Volume 16 ; 16 >
+    au < wanted ; 1996 ; French Studies Bulletin Volume 17 ; 17 >
+    au < wanted ; 1997 ; French Studies Bulletin Volume 18 ; 18 >
+    au < wanted ; 1998 ; French Studies Bulletin Volume 19 ; 19 >
+    au < wanted ; 1999 ; French Studies Bulletin Volume 20 ; 20 >
     au < released ; 2000 ; French Studies Bulletin Volume 21 ; 21 >
     au < released ; 2001 ; French Studies Bulletin Volume 22 ; 22 >
     au < released ; 2002 ; French Studies Bulletin Volume 23 ; 23 >
@@ -2609,33 +2609,33 @@
 
     param[journal_id] = huguenot
 
-    au < manifest ; 1885-1886 ; The Huguenot Society Journal Volume 1 ; 1 >
-    au < manifest ; 1886-1888 ; The Huguenot Society Journal Volume 2 ; 2 >
-    au < manifest ; 1888-1891 ; The Huguenot Society Journal Volume 3 ; 3 >
-    au < manifest ; 1891-1893 ; The Huguenot Society Journal Volume 4 ; 4 >
-    au < manifest ; 1894-1897 ; The Huguenot Society Journal Volume 5 ; 5 >
-    au < manifest ; 1898-1901 ; The Huguenot Society Journal Volume 6 ; 6 >
-    au < manifest ; 1902-1904 ; The Huguenot Society Journal Volume 7 ; 7 >
-    au < manifest ; 1905-1908 ; The Huguenot Society Journal Volume 8 ; 8 >
-    au < manifest ; 1909-1911 ; The Huguenot Society Journal Volume 9 ; 9 >
-    au < manifest ; 1912-1914 ; The Huguenot Society Journal Volume 10 ; 10 >
-    au < manifest ; 1915-1917 ; The Huguenot Society Journal Volume 11 ; 11 >
-    au < manifest ; 1918-1923 ; The Huguenot Society Journal Volume 12 ; 12 >
-    au < manifest ; 1924-1929 ; The Huguenot Society Journal Volume 13 ; 13 >
-    au < manifest ; 1930-1933 ; The Huguenot Society Journal Volume 14 ; 14 >
-    au < manifest ; 1934-1937 ; The Huguenot Society Journal Volume 15 ; 15 >
-    au < manifest ; 1938-1941 ; The Huguenot Society Journal Volume 16 ; 16 >
-    au < manifest ; 1942-1946 ; The Huguenot Society Journal Volume 17 ; 17 >
-    au < manifest ; 1947-1952 ; The Huguenot Society Journal Volume 18 ; 18 >
-    au < manifest ; 1953-1958 ; The Huguenot Society Journal Volume 19 ; 19 >
-    au < manifest ; 1959-1964 ; The Huguenot Society Journal Volume 20 ; 20 >
-    au < manifest ; 1965-1970 ; The Huguenot Society Journal Volume 21 ; 21 >
-    au < manifest ; 1971-1976 ; The Huguenot Society Journal Volume 22 ; 22 >
-    au < manifest ; 1977-1982 ; The Huguenot Society Journal Volume 23 ; 23 >
-    au < manifest ; 1983-1988 ; The Huguenot Society Journal Volume 24 ; 24 >
-    au < manifest ; 1989-1993 ; The Huguenot Society Journal Volume 25 ; 25 >
-    au < manifest ; 1994-1997 ; The Huguenot Society Journal Volume 26 ; 26 >
-    au < manifest ; 1998-2002 ; The Huguenot Society Journal Volume 27 ; 27 >
+    au < wanted ; 1885-1886 ; The Huguenot Society Journal Volume 1 ; 1 >
+    au < wanted ; 1886-1888 ; The Huguenot Society Journal Volume 2 ; 2 >
+    au < wanted ; 1888-1891 ; The Huguenot Society Journal Volume 3 ; 3 >
+    au < wanted ; 1891-1893 ; The Huguenot Society Journal Volume 4 ; 4 >
+    au < wanted ; 1894-1897 ; The Huguenot Society Journal Volume 5 ; 5 >
+    au < wanted ; 1898-1901 ; The Huguenot Society Journal Volume 6 ; 6 >
+    au < wanted ; 1902-1904 ; The Huguenot Society Journal Volume 7 ; 7 >
+    au < wanted ; 1905-1908 ; The Huguenot Society Journal Volume 8 ; 8 >
+    au < wanted ; 1909-1911 ; The Huguenot Society Journal Volume 9 ; 9 >
+    au < wanted ; 1912-1914 ; The Huguenot Society Journal Volume 10 ; 10 >
+    au < wanted ; 1915-1917 ; The Huguenot Society Journal Volume 11 ; 11 >
+    au < wanted ; 1918-1923 ; The Huguenot Society Journal Volume 12 ; 12 >
+    au < wanted ; 1924-1929 ; The Huguenot Society Journal Volume 13 ; 13 >
+    au < wanted ; 1930-1933 ; The Huguenot Society Journal Volume 14 ; 14 >
+    au < wanted ; 1934-1937 ; The Huguenot Society Journal Volume 15 ; 15 >
+    au < wanted ; 1938-1941 ; The Huguenot Society Journal Volume 16 ; 16 >
+    au < wanted ; 1942-1946 ; The Huguenot Society Journal Volume 17 ; 17 >
+    au < wanted ; 1947-1952 ; The Huguenot Society Journal Volume 18 ; 18 >
+    au < wanted ; 1953-1958 ; The Huguenot Society Journal Volume 19 ; 19 >
+    au < wanted ; 1959-1964 ; The Huguenot Society Journal Volume 20 ; 20 >
+    au < wanted ; 1965-1970 ; The Huguenot Society Journal Volume 21 ; 21 >
+    au < wanted ; 1971-1976 ; The Huguenot Society Journal Volume 22 ; 22 >
+    au < wanted ; 1977-1982 ; The Huguenot Society Journal Volume 23 ; 23 >
+    au < wanted ; 1983-1988 ; The Huguenot Society Journal Volume 24 ; 24 >
+    au < wanted ; 1989-1993 ; The Huguenot Society Journal Volume 25 ; 25 >
+    au < wanted ; 1994-1997 ; The Huguenot Society Journal Volume 26 ; 26 >
+    au < wanted ; 1998-2002 ; The Huguenot Society Journal Volume 27 ; 27 >
     au < released ; 2003-2007 ; The Huguenot Society Journal Volume 28 ; 28 >
     au < released ; 2008-2012 ; The Huguenot Society Journal Volume 29 ; 29 >
     au < released ; 2013-2017 ; The Huguenot Society Journal Volume 30 ; 30 >
@@ -2661,18 +2661,18 @@
 
     param[journal_id] = polin
 
-    au < manifest ; 1986 ; Polin: Studies in Polish Jewry Volume 1 ; 1 >
-    au < manifest ; 1987 ; Polin: Studies in Polish Jewry Volume 2 ; 2 >
-    au < manifest ; 1988 ; Polin: Studies in Polish Jewry Volume 3 ; 3 >
-    au < manifest ; 1989 ; Polin: Studies in Polish Jewry Volume 4 ; 4 >
-    au < manifest ; 1990 ; Polin: Studies in Polish Jewry Volume 5 ; 5 >
-    au < manifest ; 1991 ; Polin: Studies in Polish Jewry Volume 6 ; 6 >
-    au < manifest ; 1992 ; Polin: Studies in Polish Jewry Volume 7 ; 7 >
-    au < manifest ; 1994 ; Polin: Studies in Polish Jewry Volume 8 ; 8 >
-    au < manifest ; 1996 ; Polin: Studies in Polish Jewry Volume 9 ; 9 >
-    au < manifest ; 1997 ; Polin: Studies in Polish Jewry Volume 10 ; 10 >
-    au < manifest ; 1998 ; Polin: Studies in Polish Jewry Volume 11 ; 11 >
-    au < manifest ; 1999 ; Polin: Studies in Polish Jewry Volume 12 ; 12 >
+    au < wanted ; 1986 ; Polin: Studies in Polish Jewry Volume 1 ; 1 >
+    au < wanted ; 1987 ; Polin: Studies in Polish Jewry Volume 2 ; 2 >
+    au < wanted ; 1988 ; Polin: Studies in Polish Jewry Volume 3 ; 3 >
+    au < wanted ; 1989 ; Polin: Studies in Polish Jewry Volume 4 ; 4 >
+    au < wanted ; 1990 ; Polin: Studies in Polish Jewry Volume 5 ; 5 >
+    au < wanted ; 1991 ; Polin: Studies in Polish Jewry Volume 6 ; 6 >
+    au < wanted ; 1992 ; Polin: Studies in Polish Jewry Volume 7 ; 7 >
+    au < wanted ; 1994 ; Polin: Studies in Polish Jewry Volume 8 ; 8 >
+    au < wanted ; 1996 ; Polin: Studies in Polish Jewry Volume 9 ; 9 >
+    au < wanted ; 1997 ; Polin: Studies in Polish Jewry Volume 10 ; 10 >
+    au < wanted ; 1998 ; Polin: Studies in Polish Jewry Volume 11 ; 11 >
+    au < wanted ; 1999 ; Polin: Studies in Polish Jewry Volume 12 ; 12 >
     au < released ; 2000 ; Polin: Studies in Polish Jewry Volume 13 ; 13 >
     au < released ; 2001 ; Polin: Studies in Polish Jewry Volume 14 ; 14 >
     au < released ; 2002 ; Polin: Studies in Polish Jewry Volume 15 ; 15 >
@@ -2733,15 +2733,15 @@
     param[journal_id] = asp
     #move from Cambridge University Press in 2026, Volume 36
 
-    au < manifest ; 1991 ; Arabic Sciences & Philosophy Volume 1 ; 1 >
-    au < manifest ; 1992 ; Arabic Sciences & Philosophy Volume 2 ; 2 >
-    au < manifest ; 1993 ; Arabic Sciences & Philosophy Volume 3 ; 3 >
-    au < manifest ; 1994 ; Arabic Sciences & Philosophy Volume 4 ; 4 >
-    au < manifest ; 1995 ; Arabic Sciences & Philosophy Volume 5 ; 5 >
-    au < manifest ; 1996 ; Arabic Sciences & Philosophy Volume 6 ; 6 >
-    au < manifest ; 1997 ; Arabic Sciences & Philosophy Volume 7 ; 7 >
-    au < manifest ; 1998 ; Arabic Sciences & Philosophy Volume 8 ; 8 >
-    au < manifest ; 1999 ; Arabic Sciences & Philosophy Volume 9 ; 9 >
+    au < wanted ; 1991 ; Arabic Sciences & Philosophy Volume 1 ; 1 >
+    au < wanted ; 1992 ; Arabic Sciences & Philosophy Volume 2 ; 2 >
+    au < wanted ; 1993 ; Arabic Sciences & Philosophy Volume 3 ; 3 >
+    au < wanted ; 1994 ; Arabic Sciences & Philosophy Volume 4 ; 4 >
+    au < wanted ; 1995 ; Arabic Sciences & Philosophy Volume 5 ; 5 >
+    au < wanted ; 1996 ; Arabic Sciences & Philosophy Volume 6 ; 6 >
+    au < wanted ; 1997 ; Arabic Sciences & Philosophy Volume 7 ; 7 >
+    au < wanted ; 1998 ; Arabic Sciences & Philosophy Volume 8 ; 8 >
+    au < wanted ; 1999 ; Arabic Sciences & Philosophy Volume 9 ; 9 >
     au < released ; 2000 ; Arabic Sciences & Philosophy Volume 10 ; 10 >
     au < released ; 2001 ; Arabic Sciences & Philosophy Volume 11 ; 11 >
     au < released ; 2002 ; Arabic Sciences & Philosophy Volume 12 ; 12 >
@@ -2767,7 +2767,7 @@
     au < released ; 2022 ; Arabic Sciences & Philosophy Volume 32 ; 32 >
     au < released ; 2023 ; Arabic Sciences & Philosophy Volume 33 ; 33 >
     au < released ; 2024 ; Arabic Sciences & Philosophy Volume 34 ; 34 >
-    au < manifest ; 2025 ; Arabic Sciences & Philosophy Volume 35 ; 35 >
+    au < wanted ; 2025 ; Arabic Sciences & Philosophy Volume 35 ; 35 >
     au < manifest ; 2026 ; Arabic Sciences & Philosophy Volume 36 ; 36 >
 
   }
@@ -2783,9 +2783,9 @@
     param[journal_id] = arq
     #move from Cambridge University Press in 2026, Volume 30
 
-    au < manifest ; 1995-1996 ; Architectural Research Quarterly Volume 1 ; 1 >
-    au < manifest ; 1996-1997 ; Architectural Research Quarterly Volume 2 ; 2 >
-    au < manifest ; 1999 ; Architectural Research Quarterly Volume 3 ; 3 >
+    au < wanted ; 1995-1996 ; Architectural Research Quarterly Volume 1 ; 1 >
+    au < wanted ; 1996-1997 ; Architectural Research Quarterly Volume 2 ; 2 >
+    au < wanted ; 1999 ; Architectural Research Quarterly Volume 3 ; 3 >
     au < released ; 2000 ; Architectural Research Quarterly Volume 4 ; 4 >
     au < released ; 2001 ; Architectural Research Quarterly Volume 5 ; 5 >
     au < released ; 2002 ; Architectural Research Quarterly Volume 6 ; 6 >
