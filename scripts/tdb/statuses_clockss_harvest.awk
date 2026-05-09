@@ -35,9 +35,12 @@ BEGIN {
   }
 
   if (backcontent == 1) {
-    nn = split($2,na,/\./)
-    lp2 = na[nn]
-    if (!(($1,lp2,$4) in b)) {
+    stage[pn] = 0
+    file[pn] = $8
+    tester[pn] = $4
+    platform[pn] = $7
+
+    if (!(($8,$4,$7) in b)) {
       p[pn] = $1
       n[pn] = lp2
   #    n[pn] = $2
@@ -63,43 +66,11 @@ BEGIN {
 }
 
 END {
-#  s[0] = "expected"
-#  s[1] = "exists"
-#  s[2] = "manifest"
-#  s[3] = "wanted"
-#  s[4] = "testing"
-#  s[5] = "notReady"
-#  s[6] = "ready"
-#  s[7] = "crawling"
-#  s[8] = "deepCrawl"
-#  s[9] = "frozen"
-#  s[10] = "ingNotReady"
-#  s[11] = "finished"
-#  s[12] = "down"
-#  s[13] = "superseded"
-#  s[14] = "zapped"
-#  s[15] = "doNotProcess"
-#  s[16] = "readySource"
-#  sn = 17
-#  
-#  sc[0] = "expe"
-#  sc[1] = "exis"
-#  sc[2] = "mani"
-#  sc[3] = "want"
-#  sc[4] = "test"
-#  sc[5] = "notR"
-#  sc[6] = "read"
-#  sc[7] = "craw"
-#  sc[8] = "deep"
-#  sc[9] = "froz"
-#  sc[10] = "ingN"
-#  sc[11] = "fini"
-#  sc[12] = "down"
-#  sc[13] = "supe"
-#  sc[14] = "zapp"
-#  sc[15] = "doNP"
-#  sc[16] = "rdSc"
-#  scn = 17
+  s[0] = "Undefined"
+  s[1] = "Development"
+  s[2] = "Production"
+  s[3] = "Ready to Bill"
+  sn = 4
 
   #print out header
   # OUTPUT: publisher, plugin, contract, back, min_year, M year<back, M year>=back, platform
@@ -114,6 +85,21 @@ END {
   #print out publisher, plugin, contract year, back, min_year, M year<back, M year>=back, platform
   for (i = 0 ; i < pn ; i++) {
     printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%d", p[i], n[i], t[i], k[i], d[i], r1[i], r2[i], b[p[i],n[i],d[i]]
+    for (j = 0 ; j < sn ; j++) {
+      if (x[s[j]] > 0){
+      if (c[p[i],n[i],d[i],s[j]] == 0) {
+        printf "\t.." 
+      } else {
+        printf "\t%d", c[p[i],n[i],d[i],s[j]]
+      }
+    }
+    }
+    printf "\n"
+  }
+
+  #print out stage, file, tester, platform
+  for (i = 0 ; i < pn ; i++) {
+    printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%d", s[i], n[i], t[i], k[i], d[i], r1[i], r2[i], b[p[i],n[i],d[i]]
     for (j = 0 ; j < sn ; j++) {
       if (x[s[j]] > 0){
       if (c[p[i],n[i],d[i],s[j]] == 0) {
