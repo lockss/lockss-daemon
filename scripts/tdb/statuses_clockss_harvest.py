@@ -3,7 +3,8 @@
 TDB Development Stage Report Generator
 
 Processes tab-separated tdb data and generates a report showing development 
-stage by filename, tester, and platform for a specific contract year.
+stage by contract year, filename, tester, and platform for all contract years 
+found in the input.
 """
 
 import sys
@@ -12,6 +13,7 @@ from collections import defaultdict, namedtuple
 
 # Constants
 PLACEHOLDER = ".."
+NO_VALID_ITEMS = "No valid input to consider"
 
 VALID_STATUSES = {
     'exists', 'expected', 'down', 'ingNotReady', 'notReady',
@@ -44,29 +46,31 @@ def parse_year(year_str):
         return None
 
 
-def should_include_item(year, contract, contract_year_input, status):
+def should_include_item(year, contract, status):
     """
     Determine if an item should be included in processing.
     Returns (True/False, error_message).
+    Only filters by status and year comparison.
+    Items with missing fields are kept (handled in stage calculation).
     """
-    if is_empty(contract):
-        return False, "missing contract year"
-    
-    if contract != contract_year_input:
-        return False, "contract year mismatch"
-    
-    parsed_year = parse_year(year)
-    if parsed_year is None:
-        return False, "invalid year"
-    
-    try:
-        if parsed_year >= int(contract):
-            return False, "year >= contract year"
-    except ValueError:
-        return False, "invalid contract year format"
-    
+    # Filter by status
     if status not in VALID_STATUSES:
         return False, "invalid status"
+    
+    # If contract_year or year is missing/invalid, keep the item
+    # (will be handled in stage calculation)
+    if is_empty(contract) or is_empty(year):
+        return True, None
+    
+    parsed_year = parse_year(year)
+    parsed_contract = parse_year(contract)
+    
+    if parsed_year is None or parsed_contract is None:
+        return True, None
+    
+    # Filter if year >= contract_year
+    if parsed_year >= parsed_contract:
+        return False, "year >= contract year"
     
     return True, None
 
@@ -90,20 +94,27 @@ def all_statuses_in(item_statuses, valid_set):
     return item_statuses and item_statuses <= valid_set
 
 
-def calculate_stage(items, tester, platform):
+def calculate_stage(items, contract_year, tester, platform):
     """
     Calculate development stage for a group of items.
     Returns stage number (0-3).
     """
+    # 0. Check for missing contract_year
+    if contract_year == PLACEHOLDER:
+        return 0
+    
     # 1. Check platform override
     override = check_platform_override(platform)
     if override is not None:
         return override
     
-    # 2. Check critical missing fields
+    # 2. Check critical missing fields (year or tester)
     for item in items:
-        if is_empty(item.year) or is_empty(item.contract_year):
+        if is_empty(item.year):
             return 1
+    
+    if tester == PLACEHOLDER:
+        return 1
     
     # 3. Check tester validity
     if tester != "5" and tester != "8":
@@ -135,18 +146,10 @@ def calculate_stage(items, tester, platform):
 
 def main():
     """Main processing function."""
-    # Check command-line arguments
-    if len(sys.argv) != 2:
-        print("Usage: python3 script.py <contract_year>", file=sys.stderr)
-        print("Example: python3 script.py 2025", file=sys.stderr)
-        sys.exit(1)
-    
-    contract_year_input = sys.argv[1]
-    
     # Data structures
-    groups = defaultdict(list)  # (filename, tester, platform) -> [Item, ...]
-    all_filenames = set()
-    filenames_with_items = set()
+    groups = defaultdict(list)  # (contract, filename, tester, platform) -> [Item, ...]
+    all_contract_year_filename_pairs = set()  # All (contract_year, filename) seen
+    valid_contract_year_filename_pairs = set()  # Pairs with valid items
     
     # Process input from stdin
     for line_num, line in enumerate(sys.stdin, start=1):
@@ -164,14 +167,21 @@ def main():
                   file=sys.stderr)
             continue
         
-        all_filenames.add(filename)
+        # Normalize contract_year for tracking
+        contract_for_tracking = contract if not is_empty(contract) else PLACEHOLDER
+        all_contract_year_filename_pairs.add((contract_for_tracking, filename))
         
         # Filter item
-        should_include, reason = should_include_item(year, contract, contract_year_input, status)
+        should_include, reason = should_include_item(year, contract, status)
         if not should_include:
             continue
         
+        # Mark this pair as having valid items
+        valid_contract_year_filename_pairs.add((contract_for_tracking, filename))
+        
         # Normalize empty fields to placeholder
+        if is_empty(contract):
+            contract = PLACEHOLDER
         if is_empty(tester):
             tester = PLACEHOLDER
         if is_empty(platform):
@@ -179,32 +189,31 @@ def main():
         
         # Create item and add to group
         item = Item(plugin, year, status, contract)
-        key = (filename, tester, platform)
+        key = (contract, filename, tester, platform)
         groups[key].append(item)
-        filenames_with_items.add(filename)
     
     # Build results
     results = []
     
     # Process all groups
-    for (filename, tester, platform), items in groups.items():
-        stage = calculate_stage(items, tester, platform)
-        results.append((stage, filename, tester, platform))
+    for (contract, filename, tester, platform), items in groups.items():
+        stage = calculate_stage(items, contract, tester, platform)
+        results.append((contract, stage, filename, tester, platform))
     
-    # Add stage 0 for filenames with no items
-    stage0_filenames = all_filenames - filenames_with_items
-    for filename in stage0_filenames:
-        results.append((0, filename, PLACEHOLDER, PLACEHOLDER))
+    # Add "No valid input to consider" entries for filtered-out items
+    filtered_out_pairs = all_contract_year_filename_pairs - valid_contract_year_filename_pairs
+    for contract, filename in filtered_out_pairs:
+        results.append((contract, 0, filename, PLACEHOLDER, NO_VALID_ITEMS))
     
-    # Sort by stage, filename, tester, platform
-    results.sort(key=lambda x: (x[0], x[1], x[2], x[3]))
+    # Sort by contract_year, stage, filename, tester, platform
+    results.sort(key=lambda x: (x[0], x[1], x[2], x[3], x[4]))
     
     # Output header
-    print(f"Stage-{contract_year_input}\tFilename\tTester\tNote")
+    print("Contract\tStage\tFilename\tTester\tNote")
     
     # Output results
-    for stage, filename, tester, platform in results:
-        print(f"{stage}\t{filename}\t{tester}\t{platform}")
+    for contract, stage, filename, tester, platform in results:
+        print(f"{contract}\t{stage}\t{filename}\t{tester}\t{platform}")
     
     # Output timestamp
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
