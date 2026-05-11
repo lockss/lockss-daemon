@@ -3,7 +3,7 @@
   publisher <
     name = Georg Thieme Verlag KG ;
     info[contract] = 2009 ;
-    info[back] = 1970 ;
+    info[back] = 1940 ;
     #info[back] = 1870 ;
     info[tester] = 5 ;
     info[platform] = Custom
@@ -9667,6 +9667,7 @@
 
     param[journal_id] = 10.1055/s-00043001
     comment[years] = 2019-current
+    #Discontinued
 
     au < finished ; manifest ; 2019 ; 2019 ; Notaufnahme up2date Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Notaufnahme up2date Volume 2 ; 2 ; reingest4.clockss.org:8082 >
@@ -9676,6 +9677,7 @@
     au < deepCrawl ; exists ; 2024 ; 2024 ; Notaufnahme up2date Volume 6 ; 6 ; >
     au < frozen ; exists ; 2025 ; 2025 ; Notaufnahme up2date Volume 7 ; 7 ; >
     au < manifest ; exists ; 2026 ; 2026 ; Notaufnahme up2date Volume 8 ; 8 ; >
+    au < doNotProcess ; exists ; 2027 ; 2027 ; Notaufnahme up2date Volume 9 ; 9 ; >
 
   }
 
