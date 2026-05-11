@@ -507,7 +507,7 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
           Div parentDiv = (Div)node;
           if(parentDiv.getAttribute("class") != null && parentDiv.getAttribute("class").contains("clockss")){
             log.debug3("I FOUND THE RIGHT DIV");
-            NodeList children = heading.getChildren();
+            NodeList children = parentDiv.getChildren();
           }
         }
         return false;
