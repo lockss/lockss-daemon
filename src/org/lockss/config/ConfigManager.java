@@ -1810,7 +1810,7 @@ public class ConfigManager implements LockssManager {
     // keys includes param name prefixes that aren't actual params, so
     // numDiffs is inflated by several.
     for (String key : keys) {
-      if (numDiffs <= 40 || log.isDebug3() || shouldParamBeLogged(key)) {
+      if ((numDiffs <= 100 || log.isDebug3()) && shouldParamBeLogged(key)) {
 	if (config.containsKey(key)) {
 	  String val = config.get(key);
 	  log.debug("  " +key + " = " + StringUtils.abbreviate(val, maxLogValLen));
