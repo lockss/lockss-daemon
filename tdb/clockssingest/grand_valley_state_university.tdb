@@ -125,7 +125,7 @@
     au < finished ; manifest ; 2022 ; The Foundation Review Volume 14 ; 14 ; https://scholarworks.gvsu.edu/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; The Foundation Review Volume 15 ; 15 ; https://scholarworks.gvsu.edu/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; The Foundation Review Volume 16 ; 16 ; https://scholarworks.gvsu.edu/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2025 ; The Foundation Review Volume 17 ; 17 ; https://scholarworks.gvsu.edu/ ; >
+    au < deepCrawl ; exists ; 2025 ; The Foundation Review Volume 17 ; 17 ; https://scholarworks.gvsu.edu/ ; >
     au < manifest ; exists ; 2026 ; The Foundation Review Volume 18 ; 18 ; https://scholarworks.gvsu.edu/ ; >
 
   }
