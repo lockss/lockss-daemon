@@ -36,7 +36,6 @@ package org.lockss.plugin.clockss.edituraase;
 import org.lockss.extractor.*;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorTest;
-import org.lockss.plugin.clockss.isecs.InternationalStructuralEngineeringConstructionSocietySourceXmlMetadataExtractorFactory;
 import org.lockss.test.MockArchivalUnit;
 import org.lockss.test.MockCachedUrl;
 import org.lockss.util.CIProperties;
