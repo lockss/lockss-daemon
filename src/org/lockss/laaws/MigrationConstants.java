@@ -2,7 +2,6 @@ package org.lockss.laaws;
 
 import org.apache.derby.jdbc.EmbeddedDataSource;
 import org.lockss.config.*;
-import org.lockss.db.DbManager;
 import org.lockss.proxy.*;
 import org.lockss.servlet.ContentServletManager;
 
@@ -62,11 +61,6 @@ public class MigrationConstants {
   public static final String V2_PARAM_ACTUAL_V3_LCAP_PORT =
     Configuration.PREFIX + "config.actualV3LcapPort";
 
-  public static final String V2_PARAM_DB_WAIT_FOR_EXTERNAL_SETUP =
-    DbManager.PREFIX + ".waitForExternalSetup";
-
-  public static final String V2_PARAM_V2_TARGET_DB_VERSION =
-    DbManager.PREFIX + ".targetDbVersion";
   public static final String V2_TARGET_DB_VERSION = "29";
 
   public static final boolean V2_DEFAULT_PROXYMANAGER_START = false;

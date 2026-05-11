@@ -821,8 +821,8 @@ public class MigrateSettings extends LockssServlet {
     }
 
     // DbManager configuration
-    v2Cfg.put(V2_PARAM_DB_WAIT_FOR_EXTERNAL_SETUP, "true");
-    v2Cfg.put(V2_PARAM_V2_TARGET_DB_VERSION, V2_TARGET_DB_VERSION);
+    v2Cfg.put(DbManager.PARAM_WAIT_FOR_EXTERNAL_SETUP, "true");
+    v2Cfg.put(DbManager.PARAM_TARGET_DB_VERSION, V2_TARGET_DB_VERSION);
 
     // Datasource configuration
     Configuration dsCfg = ConfigManager.newConfiguration();
