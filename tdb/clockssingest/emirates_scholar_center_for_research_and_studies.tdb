@@ -23,7 +23,7 @@
     param[journal_id] = ejbess
 
     au < frozen ; exists ; 2022 ; 2022 ; Emirates Journal of Business, Economics and Social Studies Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2023 ; 2023 ; Emirates Journal of Business, Economics and Social Studies Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2023 ; 2023 ; Emirates Journal of Business, Economics and Social Studies Volume 2 ; 2 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Emirates Journal of Business, Economics and Social Studies Volume 3 ; 3 ; >
     au < frozen ; exists ; 2025 ; 2025 ; Emirates Journal of Business, Economics and Social Studies Volume 4 ; 4 ; >
     au < expected ; exists ; 2026 ; 2026 ; Emirates Journal of Business, Economics and Social Studies Volume 5 ; 5 ; >
