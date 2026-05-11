@@ -820,6 +820,10 @@ public class MigrateSettings extends LockssServlet {
       log.error("Target didn't supply " + V2_PARAM_ACTUAL_V3_LCAP_PORT);
     }
 
+    // DbManager configuration
+    v2Cfg.put(V2_PARAM_DB_WAIT_FOR_EXTERNAL_SETUP, "true");
+    v2Cfg.put(V2_PARAM_V2_TARGET_DB_VERSION, V2_TARGET_DB_VERSION);
+
     // Datasource configuration
     Configuration dsCfg = ConfigManager.newConfiguration();
     dsCfg.copyFrom(targetCfg.getConfigTree(V2_PARAM_METADATADBMANAGER_DATASOURCE_ROOT));

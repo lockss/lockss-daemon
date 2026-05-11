@@ -58,7 +58,7 @@ public class DbManager extends BaseLockssDaemonManager
   private static final Logger log = Logger.getLogger(DbManager.class);
 
   // Prefix for the database manager configuration entries.
-  private static final String PREFIX = Configuration.PREFIX + "dbManager.";
+  public static final String PREFIX = Configuration.PREFIX + "dbManager.";
 
   // Prefix for the Derby configuration entries.
   private static final String DERBY_ROOT = PREFIX + "derby";
