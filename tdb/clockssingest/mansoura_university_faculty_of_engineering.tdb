@@ -22,7 +22,7 @@
       param[journal_abbr] = home
 
       au < ready ; exists ; 1977 ; Mansoura Engineering Journal Volume 2 ; 2 ; >
-      au < ready ; exists ; 1978 ; Mansoura Engineering Journal Volume 3 ; 3 ; >
+      au < crawling ; exists ; 1978 ; Mansoura Engineering Journal Volume 3 ; 3 ; >
       au < frozen ; exists ; 1979 ; Mansoura Engineering Journal Volume 4 ; 4 ; >
       au < frozen ; exists ; 1980 ; Mansoura Engineering Journal Volume 5 ; 5 ; >
       au < ready ; exists ; 1981 ; Mansoura Engineering Journal Volume 6 ; 6 ; >
@@ -64,7 +64,7 @@
       au < frozen ; exists ; 2017 ; Mansoura Engineering Journal Volume 42 ; 42 ; >
       au < ready ; exists ; 2018 ; Mansoura Engineering Journal Volume 43 ; 43 ; >
       au < crawling ; exists ; 2019 ; Mansoura Engineering Journal Volume 44 ; 44 ; >
-      au < ready ; exists ; 2020 ; Mansoura Engineering Journal Volume 45 ; 45 ; >
+      au < crawling ; exists ; 2020 ; Mansoura Engineering Journal Volume 45 ; 45 ; >
       au < ready ; exists ; 2021 ; Mansoura Engineering Journal Volume 46 ; 46 ; >
       au < ready ; exists ; 2022 ; Mansoura Engineering Journal Volume 47 ; 47 ; >
       au < crawling ; exists ; 2023 ; Mansoura Engineering Journal Volume 48 ; 48 ; >

@@ -27,7 +27,7 @@
       param[base_url] = https://www.ingentaconnect.com/
       param[api_url] = https://api.ingentaconnect.com/
     
-       au < ready ; exists ; 1992 ; GAIA - Ecological Perspectives for Science and Society Volume 1 ; 1 ; >
+       au < crawling ; exists ; 1992 ; GAIA - Ecological Perspectives for Science and Society Volume 1 ; 1 ; >
        au < crawling ; exists ; 1993 ; GAIA - Ecological Perspectives for Science and Society Volume 2 ; 2 ; >
        au < frozen ; exists ; 1994 ; GAIA - Ecological Perspectives for Science and Society Volume 3 ; 3 ; >
        au < frozen ; exists ; 1995 ; GAIA - Ecological Perspectives for Science and Society Volume 4 ; 4 ; >

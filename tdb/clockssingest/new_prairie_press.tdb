@@ -989,7 +989,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = sttcl
 
-      au < ready ; exists ; 1976-1977 ; Studies in 20th & 21st Century Literature Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1976-1977 ; Studies in 20th & 21st Century Literature Volume 1 ; 1 ; >
       au < ready ; exists ; 1977-1978 ; Studies in 20th & 21st Century Literature Volume 2 ; 2 ; >
       au < crawling ; exists ; 1978-1979 ; Studies in 20th & 21st Century Literature Volume 3 ; 3 ; >
       au < ready ; exists ; 1979-1980 ; Studies in 20th & 21st Century Literature Volume 4 ; 4 ; >
