@@ -63,6 +63,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
+import org.lockss.laaws.MigrationManager;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.util.FileUtil;
 import org.lockss.util.Logger;
@@ -567,6 +568,14 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     }
 
     if (!success) {
+      return;
+    }
+
+    // Do not schedule COUNTER aggregation in migration mode.
+    if (getDaemon().getMigrationManager().isInMigrationMode()) {
+      log.debug2(DEBUG_HEADER
+	  + "Not scheduling CounterReportsRequestAggregator in migration mode.");
+      ready = true;
       return;
     }
 

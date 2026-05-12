@@ -47,6 +47,7 @@ import org.lockss.config.CurrentConfig;
 import org.lockss.daemon.Cron;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
+import org.lockss.laaws.MigrationManager;
 import org.lockss.util.Logger;
 
 /**
@@ -1778,6 +1779,9 @@ public class CounterReportsRequestAggregator {
      */
     @Override
     public boolean execute() {
+      if (daemon.getMigrationManager().isInMigrationMode()) {
+        return true;
+      }
       return aggregate();
     }
 
