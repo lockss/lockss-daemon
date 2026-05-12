@@ -39,6 +39,13 @@ public class SilverchairCommonThemeArticleIteratorFactory implements ArticleIter
     //https://research.aota.org/ajot/article/74/1/7401090010p1/ajot
     //https://research.aota.org/ajot/article/74/1/7401090010p1/contact-us
 
+    //May/2026
+    //https://pubs.geoscienceworld.org/seg/interpretation/article/14/1/B1/669191/Investigating-copper-molybdenum-polymetallic
+    //https://pubs.geoscienceworld.org/seg/interpretation/article/14/1/B31/669196/Uncertainty-quantification-of-well-log-predictions
+    //https://pubs.geoscienceworld.org/seg/interpretation/article/14/1/D1/669198/Characterization-of-seismic-patterns-of-cave
+    //https://pubs.geoscienceworld.org/seg/interpretation/article/14/1/D19/669200/Hydrocarbon-source-correlation-and-multiphase
+    //https://pubs.geoscienceworld.org/seg/interpretation/article/14/1/SA1/653738/Impact-of-in-situ-stress-perturbation-and-weak
+
     /*
     Silverchair confirmed in Jira ticket - SCS-77294, that we can use "article" only, since article-abstract
     and article-standard have been stopped around 05/2023.
@@ -52,7 +59,7 @@ public class SilverchairCommonThemeArticleIteratorFactory implements ArticleIter
     // vol/issue/page/id must all be numeric, and slug must be the final segment
     // since we got doi as relative url as in <div class="comment">doi: <a class="link" href="10.1666/13-053" target="_blank">10.1666/13-053</a>.</div>
     private static Pattern HTML_PATTERN = Pattern.compile(
-            "/article/(\\d+/\\d+/\\d+/\\d+)/([A-Z][A-Z0-9-]*)$",
+            "/article/(\\d+/\\d+/[^/]+/\\d+)/([A-Z][A-Z0-9-]*)$",
             Pattern.CASE_INSENSITIVE);
 
     private static String HTML_REPLACEMENT = "/article/$1/$2";
