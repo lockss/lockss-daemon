@@ -49,7 +49,7 @@
         au < finished ; manifest ; 2022 ; Agri Journal Volume 34 ; 34 ; reingest4.clockss.org:8082 >
         au < finished ; manifest ; 2023 ; Agri Journal Volume 35 ; 35 ; reingest5.clockss.org:8082 >
         au < finished ; manifest ; 2024 ; Agri Journal Volume 36 ; 36 ; reingest1.clockss.org:8082 >
-        au < crawling ; exists ; 2025 ; Agri Journal Volume 37 ; 37 ; >
-        au < manifest ; exists ; 2026 ; Agri Journal Volume 38 ; 38 ; >
+        au < superseded ; exists ; 2025 ; Agri Journal Volume 37 [superseded] ; 37 ; >
+        au < doNotProcess ; exists ; 2026 ; Agri Journal Volume 38 ; 38 ; >
   }
  }
