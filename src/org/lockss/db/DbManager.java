@@ -35,6 +35,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Savepoint;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -219,7 +220,7 @@ public class DbManager extends BaseLockssDaemonManager
    */
   public static final String PARAM_TARGET_DB_VERSION =
       PREFIX + "targetDbVersion";
-  public static final int DEFAULT_TARGET_DB_VERSION = 28;
+  public static final int DEFAULT_TARGET_DB_VERSION = 29;
 
   // Interval between polls when waiting for external DB setup.
   static final long WAIT_FOR_EXTERNAL_SETUP_INTERVAL = 15 * Constants.SECOND;
@@ -532,6 +533,73 @@ public class DbManager extends BaseLockssDaemonManager
       logger.error(message, re);
       DbManagerSql.safeRollbackAndClose(conn);
       throw new DbException(message, re);
+    }
+  }
+
+  /**
+   * SQL state code defined by the SQL standard (and implemented by Derby,
+   * PostgreSQL, and MySQL) for a unique-constraint / duplicate-key violation.
+   */
+  public static final String SQLSTATE_DUPLICATE_KEY = "23505";
+
+  /**
+   * Returns true if the throwable (or any cause in its chain) represents a
+   * duplicate-key / unique-constraint violation (SQL state 23505).
+   */
+  public static boolean isDuplicateKey(Throwable t) {
+    for (Throwable cause = t; cause != null; cause = cause.getCause()) {
+      if (cause instanceof SQLException
+          && SQLSTATE_DUPLICATE_KEY.equals(((SQLException) cause).getSQLState())) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  /**
+   * Sets a savepoint on the given connection.
+   *
+   * @param conn A Connection with the database connection.
+   * @return the Savepoint.
+   * @throws DbException if any problem occurred accessing the database.
+   */
+  public static Savepoint setSavepoint(Connection conn) throws DbException {
+    try {
+      return conn.setSavepoint();
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot set savepoint", sqle);
+    }
+  }
+
+  /**
+   * Rolls back to a savepoint.
+   *
+   * @param conn A Connection with the database connection.
+   * @param sp   The Savepoint to roll back to.
+   * @throws DbException if any problem occurred accessing the database.
+   */
+  public static void rollbackToSavepoint(Connection conn, Savepoint sp)
+      throws DbException {
+    try {
+      conn.rollback(sp);
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot rollback to savepoint", sqle);
+    }
+  }
+
+  /**
+   * Releases a savepoint.
+   *
+   * @param conn A Connection with the database connection.
+   * @param sp   The Savepoint to release.
+   * @throws DbException if any problem occurred accessing the database.
+   */
+  public static void releaseSavepoint(Connection conn, Savepoint sp)
+      throws DbException {
+    try {
+      conn.releaseSavepoint(sp);
+    } catch (SQLException sqle) {
+      throw new DbException("Cannot release savepoint", sqle);
     }
   }
 
@@ -2062,6 +2130,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  dbManagerSql.updateDatabaseFrom26To27(conn);
 	} else if (from == 27) {
 	  dbManagerSql.updateDatabaseFrom27To28(conn);
+	} else if (from == 28) {
+	  dbManagerSql.updateDatabaseFrom28To29(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");

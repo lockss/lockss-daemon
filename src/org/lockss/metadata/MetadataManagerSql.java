@@ -34,6 +34,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Savepoint;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -2270,12 +2271,18 @@ public class MetadataManagerSql {
     Long pluginSeq = findPlugin(conn, pluginId);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "pluginSeq = " + pluginSeq);
 
-    // Check whether it is a new plugin.
     if (pluginSeq == null) {
-      // Yes: Add to the database the new plugin.
-      pluginSeq = addPlugin(conn, pluginId, platformSeq, isBulkContent);
+      Savepoint sp = DbManager.setSavepoint(conn);
+      try {
+        pluginSeq = addPlugin(conn, pluginId, platformSeq, isBulkContent);
+        DbManager.releaseSavepoint(conn, sp);
+      } catch (DbException de) {
+        DbManager.rollbackToSavepoint(conn, sp);
+        if (!DbManager.isDuplicateKey(de)) throw de;
+        pluginSeq = findPlugin(conn, pluginId);
+      }
       if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "new pluginSeq = " + pluginSeq);
+        log.debug3(DEBUG_HEADER + "new pluginSeq = " + pluginSeq);
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "pluginSeq = " + pluginSeq);
@@ -2284,7 +2291,7 @@ public class MetadataManagerSql {
 
   /**
    * Provides the identifier of a plugin.
-   * 
+   *
    * @param conn
    *          A Connection with the database connection to be used.
    * @param pluginId

@@ -29,6 +29,7 @@ package org.lockss.metadata;
 
 import static org.lockss.db.SqlConstants.*;
 import java.sql.Connection;
+import java.sql.Savepoint;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -1247,11 +1248,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     Long auSeq = mdManagerSql.findAu(conn, pluginSeq, auKey);
     log.debug3(DEBUG_HEADER + "auSeq = " + auSeq);
 
-    // Check whether it is a new AU.
     if (auSeq == null) {
-      // Yes: Add to the database the new AU.
-      auSeq = mdManagerSql.addAu(conn, pluginSeq, auKey);
-      log.debug3(DEBUG_HEADER + "new auSeq = " + auSeq);
+      Savepoint sp = DbManager.setSavepoint(conn);
+      try {
+        auSeq = mdManagerSql.addAu(conn, pluginSeq, auKey);
+        DbManager.releaseSavepoint(conn, sp);
+        log.debug3(DEBUG_HEADER + "new auSeq = " + auSeq);
+      } catch (DbException de) {
+        DbManager.rollbackToSavepoint(conn, sp);
+        if (!DbManager.isDuplicateKey(de)) throw de;
+        auSeq = mdManagerSql.findAu(conn, pluginSeq, auKey);
+      }
     }
 
     return auSeq;
@@ -3200,11 +3207,17 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     Long platformSeq = findPlatform(conn, platformName);
     log.debug3(DEBUG_HEADER + "platformSeq = " + platformSeq);
 
-    // Check whether it is a new platform.
     if (platformSeq == null) {
-      // Yes: Add to the database the new platform.
-      platformSeq = mdManagerSql.addPlatform(conn, platformName);
-      log.debug3(DEBUG_HEADER + "new platformSeq = " + platformSeq);
+      Savepoint sp = DbManager.setSavepoint(conn);
+      try {
+        platformSeq = mdManagerSql.addPlatform(conn, platformName);
+        DbManager.releaseSavepoint(conn, sp);
+        log.debug3(DEBUG_HEADER + "new platformSeq = " + platformSeq);
+      } catch (DbException de) {
+        DbManager.rollbackToSavepoint(conn, sp);
+        if (!DbManager.isDuplicateKey(de)) throw de;
+        platformSeq = findPlatform(conn, platformName);
+      }
     }
 
     return platformSeq;
@@ -4734,12 +4747,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     Long mdKeySeq = findMdKey(conn, keyName);
     if (log.isDebug3()) log.debug3(DEBUG_HEADER + "mdKeySeq = " + mdKeySeq);
 
-    // Check whether it is a new key.
     if (mdKeySeq == null) {
-      // Yes: Add to the database the new key.
-      mdKeySeq = mdManagerSql.addMdKey(conn, keyName);
-      if (log.isDebug3())
-	log.debug3(DEBUG_HEADER + "new mdKeySeq = " + mdKeySeq);
+      Savepoint sp = DbManager.setSavepoint(conn);
+      try {
+        mdKeySeq = mdManagerSql.addMdKey(conn, keyName);
+        DbManager.releaseSavepoint(conn, sp);
+        if (log.isDebug3())
+          log.debug3(DEBUG_HEADER + "new mdKeySeq = " + mdKeySeq);
+      } catch (DbException de) {
+        DbManager.rollbackToSavepoint(conn, sp);
+        if (!DbManager.isDuplicateKey(de)) throw de;
+        mdKeySeq = findMdKey(conn, keyName);
+      }
     }
 
     return mdKeySeq;

@@ -33,6 +33,7 @@ import java.sql.DatabaseMetaData;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Savepoint;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8115,10 +8116,16 @@ public class DbManagerSql {
     if (log.isDebug3())
       log.debug3(DEBUG_HEADER + "publisherSeq = " + publisherSeq);
 
-    // Check whether it is a new publisher.
     if (publisherSeq == null) {
-      // Yes: Add to the database the new publisher.
-      publisherSeq = addPublisher(conn, publisherName);
+      Savepoint sp = conn.setSavepoint();
+      try {
+        publisherSeq = addPublisher(conn, publisherName);
+        conn.releaseSavepoint(sp);
+      } catch (SQLException sqle) {
+        conn.rollback(sp);
+        if (!DbManager.isDuplicateKey(sqle)) throw sqle;
+        publisherSeq = findPublisher(conn, publisherName);
+      }
       if (log.isDebug3())
 	log.debug3(DEBUG_HEADER + "new publisherSeq = " + publisherSeq);
     }
@@ -8130,7 +8137,7 @@ public class DbManagerSql {
 
   /**
    * Provides the identifier of a publisher.
-   * 
+   *
    * @param conn
    *          A Connection with the database connection to be used.
    * @param publisherName
@@ -9173,6 +9180,52 @@ public class DbManagerSql {
 
     // Add the new metadata item type foe files.
     addMetadataItemType(conn, MD_ITEM_TYPE_FILE);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 28 to version 29.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom28To29(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom28To29(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    // Add unique index on au(plugin_seq, au_key).
+    if (isTypeMysql()) {
+      executeDdlQuery(conn, "create unique index idx2_" + AU_TABLE
+          + " on " + AU_TABLE
+          + "(" + PLUGIN_SEQ_COLUMN + "," + AU_KEY_COLUMN + "(255))");
+    } else {
+      executeDdlQuery(conn, "create unique index idx2_" + AU_TABLE
+          + " on " + AU_TABLE
+          + "(" + PLUGIN_SEQ_COLUMN + "," + AU_KEY_COLUMN + ")");
+    }
+
+    // Add unique index on platform(platform_name).
+    executeDdlQuery(conn, "create unique index idx1_" + PLATFORM_TABLE
+        + " on " + PLATFORM_TABLE
+        + "(" + PLATFORM_NAME_COLUMN + ")");
+
+    // Add unique index on md_key(key_name).
+    if (isTypeMysql()) {
+      executeDdlQuery(conn, "create unique index idx1_" + MD_KEY_TABLE
+          + " on " + MD_KEY_TABLE
+          + "(" + KEY_NAME_COLUMN + "(255))");
+    } else {
+      executeDdlQuery(conn, "create unique index idx1_" + MD_KEY_TABLE
+          + " on " + MD_KEY_TABLE
+          + "(" + KEY_NAME_COLUMN + ")");
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
