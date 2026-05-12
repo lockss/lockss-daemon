@@ -4453,7 +4453,7 @@
 
       au < ready ; exists ; 2019 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2020 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2021 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2021 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2022 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2023 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
@@ -4851,12 +4851,12 @@
 
       param[journal_issn] = 2572-4908
 
-      au < crawling ; exists ; 2018 ; International Journal of Fog Computing (IJFC) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2018 ; International Journal of Fog Computing (IJFC) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2019 ; International Journal of Fog Computing (IJFC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2020 ; International Journal of Fog Computing (IJFC) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2021 ; International Journal of Fog Computing (IJFC) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2022 ; International Journal of Fog Computing (IJFC) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
-      au < crawling ; exists ; 2023 ; International Journal of Fog Computing (IJFC) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2023 ; International Journal of Fog Computing (IJFC) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < deepCrawl ; exists ; 2025 ; International Journal of Fog Computing (IJFC) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Fog Computing (IJFC) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
 
