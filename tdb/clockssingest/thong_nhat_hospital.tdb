@@ -1,0 +1,42 @@
+{
+
+  publisher <
+    name = Thong Nhat Hospital ;
+    info[contract] = 2026 ;
+    info[back] = 2025 ;
+    info[tester] = 8 ;
+    info[platform] = OJS3
+  >
+
+    plugin = org.lockss.plugin.ojs3.ClockssOjs3Plugin
+    implicit < status ; status2 ; year ; name ; volume ; param[year] ; hidden[proxy] >
+    #OJS3
+    attr[start_stem] = index.php/
+
+  {
+  
+    title < 
+      name = Journal of Health and Aging ;
+      issn = 3093-3102 ;
+      eissn = 3093-3110
+    >
+       #Certificate problem with HTTPS. Moving to HTTP. Manifest page redirects. Moving back to HTTPS.
+      
+      #published 2025 to present
+      param[base_url] = https://tcsuckhoelaohoa.vn/
+    {
+      param[journal_id] = bvtn/en
+
+      au < exists ; exists ; 2025 ; Journal of Health and Aging Volume 2025 ; 1 ; 2025 ; >
+      au < expected ; exists ; 2026 ; Journal of Health and Aging Volume 2026 ; 2 ; 2026 ; >
+    }
+
+    {
+      param[journal_id] = bvtn/vi
+
+      au < exists ; exists ; 2025 ; Journal of Health and Aging Volume 2025 ; 1 ; 2025 ; >
+      au < expected ; exists ; 2026 ; Journal of Health and Aging Volume 2026 ; 2 ; 2026 ; >
+    }
+  }
+
+}
