@@ -32,13 +32,14 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.iumj;
 
-import java.util.Iterator;
-import java.util.regex.*;
-
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
+
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.regex.Pattern;
 
 public class IUMJArticleIteratorFactory
     implements ArticleIteratorFactory,
@@ -101,13 +102,14 @@ public class IUMJArticleIteratorFactory
     builder.addAspect(
         METADATA_REPLACEMENT,
         ArticleFiles.ROLE_ARTICLE_METADATA);
-    
-    // set up oia metadata to be an aspect
-    builder.addAspect(
-        OIA_CITE_REPLACEMENT,
-        ArticleFiles.ROLE_CITATION);
 
-    
+
+    // OAI citation file - citation role ONLY, not metadata
+      builder.addAspect(
+              OIA_CITE_REPLACEMENT,
+              ArticleFiles.ROLE_CITATION);
+
+
     // The order in which we want to define full_text_cu.
     // First one that exists will get the job
     // In this case, there are two jobs, one for counting articles (abstract is 
@@ -118,11 +120,47 @@ public class IUMJArticleIteratorFactory
 
     return builder.getSubTreeArticleIterator();
   }
-  
-  @Override
-  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-      throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
-  }
-  
+
+    @Override
+    public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+            throws PluginException {
+        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA) {
+            @Override
+            public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
+                    throws IOException, PluginException {
+
+                CachedUrl metaCu = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
+                CachedUrl citeCu = af.getRoleCu(ArticleFiles.ROLE_CITATION);
+
+                log.debug3("metaCu: " + (metaCu == null ? "NULL" : metaCu.getUrl()));
+                log.debug3("metaCu hasContent: " + (metaCu != null && metaCu.hasContent()));
+                log.debug3("citeCu: " + (citeCu == null ? "NULL" : citeCu.getUrl()));
+                log.debug3("citeCu hasContent: " + (citeCu != null && citeCu.hasContent()));
+
+                // Wrap the ArticleMetadataExtractor.Emitter into a FileMetadataExtractor.Emitter
+                FileMetadataExtractor.Emitter fileEmitter =
+                        (cu, am) -> emitter.emitMetadata(af, am);
+
+                try {
+                    if (metaCu != null && metaCu.hasContent()) {
+                        new IUMJXmlMetadataExtractorFactory()
+                                .createFileMetadataExtractor(target, "text/xml")
+                                .extract(target, metaCu, fileEmitter);
+                    } else if (citeCu != null && citeCu.hasContent()) {
+                        new HtmlBibtexMetadataExtractor()
+                                .extract(target, citeCu, fileEmitter);
+                    } else if (citeCu != null && citeCu.hasContent()) {
+                    log.debug3("Using HtmlBibtexMetadataExtractor for: " + citeCu.getUrl());
+                    new HtmlBibtexMetadataExtractor()
+                            .extract(target, citeCu, fileEmitter);
+                    } else {
+                        log.debug3("No metadata CU available for: " + af.getFullTextUrl());
+                    }
+                } finally {
+                    AuUtil.safeRelease(metaCu);
+                    AuUtil.safeRelease(citeCu);
+                }
+            }
+        };
+    }
 }
