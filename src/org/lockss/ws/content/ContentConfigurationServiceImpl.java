@@ -35,6 +35,7 @@ import javax.jws.WebService;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.TitleConfig;
+import org.lockss.laaws.MigrationManager;
 import org.lockss.remote.RemoteApi;
 import org.lockss.remote.RemoteApi.BatchAuStatus;
 import org.lockss.util.Logger;
@@ -91,6 +92,10 @@ public class ContentConfigurationServiceImpl implements
       throws LockssWebServicesFault {
     final String DEBUG_HEADER = "addAusByIdList(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    if (migrationManager().isRealMigrationMode()) {
+      return disallowedInMigration(auIds);
+    }
 
     List<ContentConfigurationResult> results =
 	new ArrayList<ContentConfigurationResult>(auIds.size());
@@ -191,6 +196,10 @@ public class ContentConfigurationServiceImpl implements
     final String DEBUG_HEADER = "deleteAusByIdList(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
 
+    if (migrationManager().isRealMigrationMode()) {
+      return disallowedInMigration(auIds);
+    }
+
     List<ContentConfigurationResult> results =
 	new ArrayList<ContentConfigurationResult>(auIds.size());
 
@@ -273,6 +282,10 @@ public class ContentConfigurationServiceImpl implements
       List<String> auIds) throws LockssWebServicesFault {
     final String DEBUG_HEADER = "reactivateAusByIdList(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
+
+    if (migrationManager().isRealMigrationMode()) {
+      return disallowedInMigration(auIds);
+    }
 
     List<ContentConfigurationResult> results =
 	new ArrayList<ContentConfigurationResult>(auIds.size());
@@ -357,6 +370,10 @@ public class ContentConfigurationServiceImpl implements
     final String DEBUG_HEADER = "deactivateAusByIdList(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "auIds = " + auIds);
 
+    if (migrationManager().isRealMigrationMode()) {
+      return disallowedInMigration(auIds);
+    }
+
     List<ContentConfigurationResult> results =
 	new ArrayList<ContentConfigurationResult>(auIds.size());
 
@@ -398,6 +415,19 @@ public class ContentConfigurationServiceImpl implements
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "results = " + results);
+    return results;
+  }
+
+  private MigrationManager migrationManager() {
+    return LockssDaemon.getLockssDaemon().getMigrationManager();
+  }
+
+  private List<ContentConfigurationResult> disallowedInMigration(List<String> auIds) {
+    List<ContentConfigurationResult> results = new ArrayList<>(auIds.size());
+    for (String auId : auIds) {
+      results.add(new ContentConfigurationResult(auId, null, Boolean.FALSE,
+          "AU configuration changes are not allowed during migration"));
+    }
     return results;
   }
 }

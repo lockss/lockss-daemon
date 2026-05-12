@@ -153,6 +153,11 @@ public class MigrationManager extends BaseLockssDaemonManager
     return isInMigrationMode;
   }
 
+  /** True iff a real (non-dry-run) migration is active. */
+  public boolean isRealMigrationMode() {
+    return isInMigrationMode && !isDryRun;
+  }
+
   public boolean isMigrationInDebugMode() {
     return isMigrationInDebugMode;
   }

@@ -1779,7 +1779,7 @@ public class CounterReportsRequestAggregator {
      */
     @Override
     public boolean execute() {
-      if (daemon.getMigrationManager().isInMigrationMode()) {
+      if (daemon.getMigrationManager().isRealMigrationMode()) {
         return true;
       }
       return aggregate();

@@ -572,7 +572,7 @@ public class CounterReportsManager extends BaseLockssDaemonManager {
     }
 
     // Do not schedule COUNTER aggregation in migration mode.
-    if (getDaemon().getMigrationManager().isInMigrationMode()) {
+    if (getDaemon().getMigrationManager().isRealMigrationMode()) {
       log.debug2(DEBUG_HEADER
 	  + "Not scheduling CounterReportsRequestAggregator in migration mode.");
       ready = true;

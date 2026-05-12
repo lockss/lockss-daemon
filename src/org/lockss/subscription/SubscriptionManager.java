@@ -529,7 +529,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     }
 
     if (isDaemonInited()) {
-      if (!migrationMgr.isInMigrationMode()) {
+      if (!migrationMgr.isRealMigrationMode()) {
         // Don't instantiate subscriptions when in migration mode
 
         // Check whether the handling of configuration changes should be done in a

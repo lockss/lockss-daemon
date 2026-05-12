@@ -177,7 +177,7 @@ public class SubscriptionStarter extends LockssRunnable {
     migrationMgr = daemon.getMigrationManager();
     pluginManager = daemon.getPluginManager();
 
-    if (migrationMgr.isInMigrationMode()) {
+    if (migrationMgr.isRealMigrationMode()) {
       log.debug2("Not starting starter because in migration mode");
       return;
     }
@@ -351,7 +351,7 @@ public class SubscriptionStarter extends LockssRunnable {
 
 	configureAuRateLimiter.waitUntilEventOk();
 
-        if (migrationMgr.isInMigrationMode()) {
+        if (migrationMgr.isRealMigrationMode()) {
           log.debug2("Existing starter because in migration mode");
           return;
         }

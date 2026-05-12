@@ -458,7 +458,7 @@ public class MigrateSettings extends LockssServlet {
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
     page.add(!migrationMgr.isMigrationInDebugMode() &&
-             (!dryRunEnabled && migrationMgr.isInMigrationMode()) ?
+             migrationMgr.isRealMigrationMode() ?
         makeDisplayCfg() : makeForm());
     endPage(page);
   }
@@ -535,7 +535,7 @@ public class MigrateSettings extends LockssServlet {
 
     if (!migrationMgr.isMigrationInDebugMode()) {
       // Do not allow user to select dry run once migration has started
-      if (!dryRunEnabled && migrationMgr.isInMigrationMode()) {
+      if (migrationMgr.isRealMigrationMode()) {
         dryRunCheckbox.attribute("disabled");
       }
     }
