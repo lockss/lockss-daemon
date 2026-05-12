@@ -21,9 +21,9 @@
       param[journal_id] = plosbiology
 
       au < frozen ; exists ; 2003 ; PLOS Biology Volume 2003 ; 2003 ; >
-      au < ready ; exists ; 2004 ; PLOS Biology Volume 2004 ; 2004 ; >
+      au < crawling ; exists ; 2004 ; PLOS Biology Volume 2004 ; 2004 ; >
       au < crawling ; exists ; 2005 ; PLOS Biology Volume 2005 ; 2005 ; >
-      au < ready ; exists ; 2006 ; PLOS Biology Volume 2006 ; 2006 ; >
+      au < crawling ; exists ; 2006 ; PLOS Biology Volume 2006 ; 2006 ; >
       au < ready ; exists ; 2007 ; PLOS Biology Volume 2007 ; 2007 ; >
       au < ready ; exists ; 2008 ; PLOS Biology Volume 2008 ; 2008 ; >
       au < crawling ; exists ; 2009 ; PLOS Biology Volume 2009 ; 2009 ; >
@@ -154,7 +154,7 @@
       param[journal_id] = plosgenetics
 
       au < crawling ; exists ; 2005 ; PLOS Genetics Volume 2005 ; 2005 ; >
-      au < ready ; exists ; 2006 ; PLOS Genetics Volume 2006 ; 2006 ; >
+      au < crawling ; exists ; 2006 ; PLOS Genetics Volume 2006 ; 2006 ; >
       au < crawling ; exists ; 2007 ; PLOS Genetics Volume 2007 ; 2007 ; >
       au < ready ; exists ; 2008 ; PLOS Genetics Volume 2008 ; 2008 ; >
       au < ready ; exists ; 2009 ; PLOS Genetics Volume 2009 ; 2009 ; >
@@ -586,7 +586,7 @@
       au < crawling ; exists ; 2019 ; PLOS ONE Volume Nov 2019 ; 2019 ; November ; >
       au < frozen ; exists ; 2019 ; PLOS ONE Volume Dec 2019 ; 2019 ; December ; >
 
-      au < ready ; exists ; 2020 ; PLOS ONE Volume Jan 2020 ; 2020 ; January ; >
+      au < crawling ; exists ; 2020 ; PLOS ONE Volume Jan 2020 ; 2020 ; January ; >
       au < crawling ; exists ; 2020 ; PLOS ONE Volume Feb 2020 ; 2020 ; February ; >
       au < ready ; exists ; 2020 ; PLOS ONE Volume Mar 2020 ; 2020 ; March ; >
       au < crawling ; exists ; 2020 ; PLOS ONE Volume Apr 2020 ; 2020 ; April ; >
@@ -600,7 +600,7 @@
       au < ready ; exists ; 2020 ; PLOS ONE Volume Dec 2020 ; 2020 ; December ; >
 
       au < ready ; exists ; 2021 ; PLOS ONE Volume Jan 2021 ; 2021 ; January ; >
-      au < ready ; exists ; 2021 ; PLOS ONE Volume Feb 2021 ; 2021 ; February ; >
+      au < crawling ; exists ; 2021 ; PLOS ONE Volume Feb 2021 ; 2021 ; February ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Mar 2021 ; 2021 ; March ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Apr 2021 ; 2021 ; April ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume May 2021 ; 2021 ; May ; >
