@@ -506,8 +506,15 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
         if (node instanceof Div) {
           Div parentDiv = (Div)node;
           if(parentDiv.getAttribute("class") != null && parentDiv.getAttribute("class").contains("clockss")){
-            log.debug3("I FOUND THE RIGHT DIV");
             NodeList children = parentDiv.getChildren();
+            for(int i = 0; i < children.size(); i++){
+              if(children.elementAt(i) instanceof HeadingTag){
+                log.debug3("text is " + children.elementAt(i).toPlainTextString() + " and position is " + i);
+                if("Front Matter".equals(children.elementAt(i).getText())){
+                  //TODO
+                }
+              }
+            }
           }
         }
         return false;
