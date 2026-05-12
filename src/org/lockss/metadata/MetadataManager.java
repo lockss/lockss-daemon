@@ -578,6 +578,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     return cancelAuTask(au.getAuId());
   }
 
+  boolean isRealMigrationMode() {
+    return getDaemon().getMigrationManager().isRealMigrationMode();
+  }
+
   /**
    * Removes an AU from the pending reindexing queue without deleting its
    * metadata. Intended for use when an AU is removed via migration.
@@ -3985,6 +3989,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   void persistUnconfiguredAu(ArchivalUnit au) {
     final String DEBUG_HEADER = "persistUnconfiguredAu(): ";
+    if (isRealMigrationMode()) {
+      log.debug2(DEBUG_HEADER + "Skipping unconfigured AU write in migration mode: " + au);
+      return;
+    }
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);
 
     Connection conn = null;

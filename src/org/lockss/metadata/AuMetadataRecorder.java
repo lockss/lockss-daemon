@@ -360,8 +360,8 @@ public class AuMetadataRecorder {
     } else {
       // No: Check whether there is data obtained when the publisher was unknown
       // that needs to be merged.
-      if (problems.size() > 0) {
-	// Yes: Merge it.
+      if (problems.size() > 0 && !mdManager.isRealMigrationMode()) {
+	// Yes: Merge it. (Skipped in migration mode to avoid deleting shared rows.)
 	fixUnknownPublishersAuData(conn, problems);
       }
     }

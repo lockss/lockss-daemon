@@ -352,7 +352,7 @@ public class SubscriptionStarter extends LockssRunnable {
 	configureAuRateLimiter.waitUntilEventOk();
 
         if (migrationMgr.isRealMigrationMode()) {
-          log.debug2("Existing starter because in migration mode");
+          log.debug2("Exiting starter because in migration mode");
           return;
         }
       } catch (InterruptedException ie) {
