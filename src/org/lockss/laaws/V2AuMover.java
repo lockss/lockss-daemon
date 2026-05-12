@@ -285,6 +285,12 @@ public class V2AuMover {
   public static final long DEFAULT_STATUS_READ_TIMEOUT =  19 * Constants.SECOND;
 
   /**
+   * API status Read/write timeout
+   */
+  public static final String PARAM_DB_COPY_TIMEOUT = PREFIX + "dbCopy.timeout";
+  public static final long DEFAULT_DB_COPY_TIMEOUT = 3*Constants.DAY;
+
+  /**
    * Path to directory holding daemon logs
    */
   public static final String PARAM_REPORT_DIR =
@@ -326,8 +332,9 @@ public class V2AuMover {
    */
   public static final String PARAM_DETAILED_STATS = PREFIX + "detailedStats";
   public static final boolean DEFAULT_DETAILED_STATS = true;
-  long dbBytesCopied;
-  long dbBytesTotal;
+  volatile long dbCopyTimeout;
+  volatile long dbBytesCopied;
+  volatile long dbBytesTotal;
 
   enum UseFetchUrl {
     NONE,
@@ -650,6 +657,8 @@ public class V2AuMover {
                                               DEFAULT_STATUS_CONNECTION_TIMEOUT);
       statusReadTimeout = config.getTimeInterval(PARAM_STATUS_READ_TIMEOUT,
                                            DEFAULT_STATUS_READ_TIMEOUT);
+      dbCopyTimeout = config.getTimeInterval(PARAM_DB_COPY_TIMEOUT,
+        DEFAULT_DB_COPY_TIMEOUT);
 
       maxRetryCount = config.getInt(PARAM_MAX_RETRY_COUNT,
                                     DEFAULT_MAX_RETRY_COUNT);
@@ -2349,6 +2358,10 @@ public class V2AuMover {
     return v2Aus;
   }
 
+  public long getDbCopyTimeout() {
+    return dbCopyTimeout;
+  }
+
   //////////////////////////////////////////////////////////////////////
   // Utility classes
   //////////////////////////////////////////////////////////////////////
@@ -2753,7 +2766,7 @@ public class V2AuMover {
       res.add(sb.toString());
       if (waitingMsg != null) {
         res.add(waitingMsg);
-      }      
+      }
       sb = new StringBuilder();
       totalTimers.addCounterStatus(sb, opType);
       res.add(sb.toString());
