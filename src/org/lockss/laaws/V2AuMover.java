@@ -1258,16 +1258,16 @@ public class V2AuMover {
               if (auHasErrors(auStat)) {
                 log.warning("AU has errors, deactivating instead of deleting: "
                             + au.getName());
-                pluginManager.deactivateAuWithJournal(au);
+                pluginManager.deactivateAuForMigration(au);
               } else {
-                pluginManager.deleteAuWithJournal(au);
+                pluginManager.deleteAuForMigration(au);
               }
             } else {
               if (auHasErrors(auStat)) {
                 log.warning("AU has errors, deactivating anyway: "
                             + au.getName());
               }
-              pluginManager.deactivateAuWithJournal(au);
+              pluginManager.deactivateAuForMigration(au);
             }
           } catch (IOException e) {
             throw new RuntimeException(e);

@@ -351,6 +351,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     auEventHandler = new AuEventHandler.Base() {
       @Override
       public void auDeleted(AuEvent event, ArchivalUnit au) {
+	if (event.isMigration()) {
+	  return;
+	}
+
 	Connection conn = null;
 
 	try {

@@ -579,6 +579,19 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Removes an AU from the pending reindexing queue without deleting its
+   * metadata. Intended for use when an AU is removed via migration.
+   *
+   * @param conn  A Connection with the database connection to be used.
+   * @param auId  A String with the AU identifier.
+   * @throws DbException if any problem occurred accessing the database.
+   */
+  public void removeAuFromPendingQueue(Connection conn, String auId)
+      throws DbException {
+    pendingAusCount = mdManagerSql.removeFromPendingAus(conn, auId);
+  }
+
+  /**
    * Cancels the reindexing task for the specified AU.
    * 
    * @param auId

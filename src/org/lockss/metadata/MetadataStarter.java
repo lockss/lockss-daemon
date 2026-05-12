@@ -273,6 +273,21 @@ public class MetadataStarter extends LockssRunnable {
     @Override
     public void auDeleted(AuEvent event, ArchivalUnit au) {
       final String DEBUG_HEADER = "auDeleted(): ";
+      if (event.isMigration()) {
+        log.debug2(DEBUG_HEADER + "Removing migrated AU from pending queue: " + au);
+        Connection conn = null;
+        try {
+          conn = dbManager.getConnection();
+          mdManager.removeAuFromPendingQueue(conn, au.getAuId());
+          DbManager.commitOrRollback(conn, log);
+        } catch (DbException dbe) {
+          log.error("Cannot remove migrated AU from pending queue: "
+              + au.getName(), dbe);
+        } finally {
+          DbManager.safeRollbackAndClose(conn);
+        }
+        return;
+      }
       switch (event.getType()) {
 	case Delete:
 	  // This case occurs when the AU is being deleted.
