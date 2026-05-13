@@ -19,7 +19,7 @@
       implicit < status ; status2 ; year ; name ; param[year] >
 
       #To be deleted from production machines
-      au < readySource ; superseded ; 2025 ; eLife Sciences Preprint Source Content 2025 [superseded] ; 2025 >
+      au < zapped ; superseded ; 2025 ; eLife Sciences Preprint Source Content 2025 [superseded] ; 2025 >
       #No more AUs. Moved to directories.
     }
     {
@@ -28,7 +28,7 @@
       plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesJournalsSourcePlugin
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < ready ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025_01 ; 2025_01 > #bucket 2025_01 has 7 Preprint zip files in journal format
+      au < testing ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025_01 ; 2025_01 > #bucket 2025_01 has 7 Preprint zip files in journal format
       #No more AUs. Moved to Preprint format
     }
     {
@@ -37,8 +37,8 @@
       plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesPreprintSourcePlugin
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < ready ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025_02 ; 2025_02 > #bucket 2025_02 has 7609 Preprint zip files in preprint format
-      au < ready ; exists ; 2026 ; eLife Sciences Preprint Source Content 2026_01 ; 2026_01 >
+      au < testing ; exists ; 2025 ; eLife Sciences Preprint Source Content 2025_02 ; 2025_02 > #bucket 2025_02 has 7609 Preprint zip files in preprint format
+      au < testing ; exists ; 2026 ; eLife Sciences Preprint Source Content 2026_01 ; 2026_01 >
       au < expected ; exists ; 2027 ; eLife Sciences Preprint Source Content 2027_01 ; 2027_01 >
 
     }

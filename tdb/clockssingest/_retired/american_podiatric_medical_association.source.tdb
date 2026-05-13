@@ -20,8 +20,8 @@
     {
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/apma-released/
 
-      au < readySource ; finished ; 2020 ; American Podiatric Medical Association Source Content 2020 ; 2020 >
-      au < readySource ; finished ; 2021 ; American Podiatric Medical Association Source Content 2021 ; 2021 >
+      au < zapped ; finished ; 2020 ; American Podiatric Medical Association Source Content 2020 ; 2020 >
+      au < zapped ; finished ; 2021 ; American Podiatric Medical Association Source Content 2021 ; 2021 >
       #No more AUs.  Moved to harvest.
     }
 
