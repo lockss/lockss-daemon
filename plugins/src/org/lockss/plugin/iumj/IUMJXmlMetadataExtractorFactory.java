@@ -51,7 +51,11 @@ import org.lockss.plugin.*;
 
 
 /**
- * This class implements a FileMetadataExtractorFactory for IUMJ content
+ * This class implements a FileMetadataExtractorFactory for IUMJ content.
+ * It is called only when a META XML file exists for the article. For articles
+ * where the publisher did not provide a META XML file, dispatch is handled
+ * upstream in IUMJArticleIteratorFactory, which routes to
+ * IUMJHtmlMetadataExtractorFactory instead.
  */
 public class IUMJXmlMetadataExtractorFactory
 implements FileMetadataExtractorFactory {
@@ -69,7 +73,6 @@ implements FileMetadataExtractorFactory {
   public static class IUMJXmlMetadataExtractor 
   implements FileMetadataExtractor {
     
-    
     // Indices for volume, start page, and end page
     // Format: 48 (1999) 139 - 154
     static private final Pattern exPat = Pattern.compile(
@@ -85,13 +88,11 @@ implements FileMetadataExtractorFactory {
       }
     };
     
-    
     /*  The following Map maps raw xpath keys to raw node values 
      *  the first value in the put are XPath expressions that search the XML  
      *  file for the named metadata, for example:
      *  "//*[name()='dc:title']" select all nodes whose name='dc:title'
      */
-    
     static private final Map<String,XPathValue> nodeMap = 
         new HashMap<String,XPathValue>();
     static {
@@ -146,27 +147,19 @@ implements FileMetadataExtractorFactory {
       xpathMap.put("//*[name()='dc:relation']", new MetadataField(
           MetadataField.FIELD_END_PAGE, MetadataField.extract(exPat, 3)));
     }
-    
-    /**
-     * Use XmlMetadataExtractor to extract raw metadata, map
-     * to cooked fields, then extract extra tags by reading the file.
-     * 
-     * @param target the MetadataTarget
-     * @param cu the CachedUrl from which to read input
-     * @param emitter the emitter to output the resulting ArticleMetadata
-     */
+
+    private static final Pattern META_URL_PATTERN = Pattern.compile(
+        "META/(.+)/([0-9]+)([0-9]{3})[.]xml");
+
     @Override
     public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
         throws IOException, PluginException {
       try {
         ArticleMetadata am = null;
-        Pattern patternUrl = Pattern.compile(
-            "META/(.+)/([0-9]+)([0-9]{3})[.]xml");
-        Matcher urlmat = patternUrl.matcher(cu.getUrl());
+        Matcher urlmat = META_URL_PATTERN.matcher(cu.getUrl());
         if (!urlmat.find()) {
-          Exception ex = new Exception(
-              "Error: metatdata pattern does not match " + cu.getUrl());
-          throw ex;
+          log.debug("Metadata URL did not match expected pattern: " + cu.getUrl());
+          return;
         }
         String citeUrl = urlmat.replaceFirst("oai/$1/$2/$2$3/$2$3.html");
         CachedUrl citeCu = cu.getArchivalUnit().makeCachedUrl(citeUrl); 

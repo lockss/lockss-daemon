@@ -243,13 +243,13 @@ public class TestIUMJArticleIteratorFactory extends ArticleIteratorTestCase {
         BASE_URL + "IUMJ/FULLTEXT/2006/55/55003",
         null,
         null};
-    
-    String [] af4 = {
-        BASE_URL + "IUMJ/FTDLOAD/2006/55/55008/pdf",
-        null,
-        BASE_URL + "IUMJ/FULLTEXT/2006/55/55008",
-        BASE_URL + "IUMJ/ABS/2006/55008",
-        BASE_URL + "oai/2006/55/55008/55008.html"};
+
+      String [] af4 = {
+              BASE_URL + "IUMJ/FTDLOAD/2006/55/55008/pdf",
+              BASE_URL + "oai/2006/55/55008/55008.html",      // ROLE_ARTICLE_METADATA fallback
+              BASE_URL + "IUMJ/FULLTEXT/2006/55/55008",
+              BASE_URL + "IUMJ/ABS/2006/55008",
+              BASE_URL + "oai/2006/55/55008/55008.html"};
     
     expStack.push(af4);
     expStack.push(af3);
