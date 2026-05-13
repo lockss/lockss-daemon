@@ -297,8 +297,9 @@
         eissn = 2052-3629
       >
 
-      param[base_url] = https://journals.ed.ac.uk/
       param[journal_id] = ScottishStudies
+    {
+      param[base_url] = https://journals.ed.ac.uk/
 
       au < finished ; manifest ; 2006 ; Scottish Studies Volume 2006 ; 34 ; 2006 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2010 ; Scottish Studies Volume 2010 ; 35 ; 2010 ; reingest3.clockss.org:8083 >
@@ -306,10 +307,23 @@
       au < finished ; manifest ; 2014 ; Scottish Studies Volume 2014 ; 37 ; 2014 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; Scottish Studies Volume 2018 ; 38 ; 2018 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; Scottish Studies Volume 2022 ; 39 ; 2022 ; reingest5.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2024 ; Scottish Studies Volume 2024 ; 40 ; 2024 ; >
+      au < superseded ; exists ; 2024 ; Scottish Studies Volume 2024 [superseded] ; 40 ; 2024 ; >
+      au < doNotProcess ; exists ; 2025 ; Scottish Studies Volume 2025 ; 41 ; 2025 ; >
+      au < doNotProcess ; exists ; 2026 ; Scottish Studies Volume 2026 ; 42 ; 2026 ; >
+    }
+    {
+      param[base_url] = https://open.journals.ed.ac.uk/
+
+      au < doNotProcess ; exists ; 2006 ; Scottish Studies Volume 2006 ; 34 ; 2006 ; reingest2.clockss.org:8085 >
+      au < doNotProcess ; exists ; 2010 ; Scottish Studies Volume 2010 ; 35 ; 2010 ; reingest3.clockss.org:8083 >
+      au < doNotProcess ; exists ; 2013 ; Scottish Studies Volume 2013 ; 36 ; 2013 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2014 ; Scottish Studies Volume 2014 ; 37 ; 2014 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2018 ; Scottish Studies Volume 2018 ; 38 ; 2018 ; reingest4.clockss.org:8082 >
+      au < doNotProcess ; exists ; 2022 ; Scottish Studies Volume 2022 ; 39 ; 2022 ; reingest5.clockss.org:8082 >
+      au < expected ; exists ; 2024 ; Scottish Studies Volume 2024 ; 40 ; 2024 ; >
       au < expected ; exists ; 2025 ; Scottish Studies Volume 2025 ; 41 ; 2025 ; >
       au < expected ; exists ; 2026 ; Scottish Studies Volume 2026 ; 42 ; 2026 ; >
-
+    }
   }
 
   {
