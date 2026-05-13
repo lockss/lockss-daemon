@@ -1120,6 +1120,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *         database.
    */
   public long getArticleCount() {
+    if (isRealMigrationMode()) {
+      try {
+        return mdManagerSql.getArticleCount();
+      } catch (DbException ex) {
+        log.error("getArticleCount", ex);
+        return 0;
+      }
+    }
     return metadataArticleCount;
   }
   
@@ -1129,7 +1137,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return the number of distinct publications in the metadata database
    */
   public long getPublicationCount() {
-    if (metadataPublicationCount < 0) {
+    if (isRealMigrationMode() || metadataPublicationCount < 0) {
       try {
         metadataPublicationCount = mdManagerSql.getPublicationCount();
       } catch (DbException ex) {
@@ -1145,7 +1153,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return the number of distinct publishers in the metadata database
    */
   public long getPublisherCount() {
-    if (metadataPublisherCount < 0) {
+    if (isRealMigrationMode() || metadataPublisherCount < 0) {
       try {
         metadataPublisherCount = mdManagerSql.getPublisherCount();
       } catch (DbException ex) {
@@ -1161,7 +1169,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return the number of distinct providers in the metadata database
    */
   public long getProviderCount() {
-    if (metadataProviderCount < 0) {
+    if (isRealMigrationMode() || metadataProviderCount < 0) {
       try {
         metadataProviderCount = mdManagerSql.getProviderCount();
       } catch (DbException ex) {
