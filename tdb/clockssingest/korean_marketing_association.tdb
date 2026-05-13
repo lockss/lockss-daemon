@@ -25,8 +25,8 @@
     param[journal_abbr] = journal
 
     au < frozen ; exists ; 1998 ; Asia Marketing Journal Volume 1 ; 1 ; >
-    au < crawling ; exists ; 2000 ; Asia Marketing Journal Volume 2 ; 2 ; >
-    au < crawling ; exists ; 2001 ; Asia Marketing Journal Volume 3 ; 3 ; >
+    au < frozen ; exists ; 2000 ; Asia Marketing Journal Volume 2 ; 2 ; >
+    au < frozen ; exists ; 2001 ; Asia Marketing Journal Volume 3 ; 3 ; >
     au < frozen ; exists ; 2002 ; Asia Marketing Journal Volume 4 ; 4 ; >
     au < crawling ; exists ; 2003 ; Asia Marketing Journal Volume 5 ; 5 ; >
     au < crawling ; exists ; 2004 ; Asia Marketing Journal Volume 6 ; 6 ; >
