@@ -21,22 +21,21 @@
       issn = 3093-3102 ;
       eissn = 3093-3110
     >
-       #Certificate problem with HTTPS. Moving to HTTP. Manifest page redirects. Moving back to HTTPS.
       
       #published 2025 to present
       param[base_url] = https://tcsuckhoelaohoa.vn/
     {
       param[journal_id] = bvtn/en
 
-      au < testing ; exists ; 2025 ; Journal of Health and Aging Volume 2025 ; 1 ; 2025 ; >
-      au < testing ; exists ; 2026 ; Journal of Health and Aging Volume 2026 ; 2 ; 2026 ; >
+      au < testing ; exists ; 2025 ; Journal of Health and Aging Volume 2025 [English] ; 1 ; 2025 ; >
+      au < testing ; exists ; 2026 ; Journal of Health and Aging Volume 2026 [English] ; 2 ; 2026 ; >
     }
 
     {
       param[journal_id] = bvtn/vi
 
-      au < testing ; exists ; 2025 ; Journal of Health and Aging Volume 2025 ; 1 ; 2025 ; >
-      au < testing ; exists ; 2026 ; Journal of Health and Aging Volume 2026 ; 2 ; 2026 ; >
+      au < testing ; exists ; 2025 ; Journal of Health and Aging Volume 2025 [Vietnamese] ; 1 ; 2025 ; >
+      au < testing ; exists ; 2026 ; Journal of Health and Aging Volume 2026 [Vietnamese] ; 2 ; 2026 ; >
     }
   }
 
