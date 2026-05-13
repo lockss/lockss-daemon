@@ -265,7 +265,7 @@ public class DbManager extends BaseLockssDaemonManager
   // After this service has started successfully, this is the version of the
   // database that will be in place, as long as the database version prior to
   // starting the service was not higher already.
-  private int targetDatabaseVersion = 28;
+  private int targetDatabaseVersion = 29;
 
   // The database version updates that are performed asynchronously.
   private int[] asynchronousUpdates = new int[] {10, 15, 17, 20, 22};
@@ -2062,6 +2062,8 @@ public class DbManager extends BaseLockssDaemonManager
 	  dbManagerSql.updateDatabaseFrom26To27(conn);
 	} else if (from == 27) {
 	  dbManagerSql.updateDatabaseFrom27To28(conn);
+	} else if (from == 28) {
+	  dbManagerSql.updateDatabaseFrom28To29(conn);
 	} else {
 	  throw new DbException("Non-existent method to update the database "
 	      + "from version " + from + ".");

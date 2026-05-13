@@ -594,6 +594,16 @@ public class DbManagerSql {
       + PROBLEM_COLUMN + " varchar(" + MAX_PROBLEM_COLUMN + ") not null"
       + ")";
 
+  // Query to create the metadata write lock table.
+  static final String CREATE_METADATA_WRITE_LOCK_TABLE_QUERY =
+      "create table " + METADATA_WRITE_LOCK_TABLE
+      + " (" + LOCK_ID_COLUMN + " integer not null)";
+
+  // Query to insert the initial lock row.
+  private static final String INSERT_METADATA_WRITE_LOCK_QUERY =
+      "insert into " + METADATA_WRITE_LOCK_TABLE
+      + " (" + LOCK_ID_COLUMN + ") values (?)";
+
   // Query to create the table for identifying the last run of incremental
   // tasks.
   private static final String CREATE_LAST_RUN_TABLE_QUERY = "create table "
@@ -9173,6 +9183,48 @@ public class DbManagerSql {
 
     // Add the new metadata item type foe files.
     addMetadataItemType(conn, MD_ITEM_TYPE_FILE);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 28 to version 29.
+   *
+   * Creates the metadata_write_lock table used to serialize concurrent
+   * metadata database writes.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom28To29(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom28To29(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    executeDdlQuery(conn, CREATE_METADATA_WRITE_LOCK_TABLE_QUERY);
+
+    PreparedStatement insertLock = null;
+
+    try {
+      insertLock = prepareStatement(conn, INSERT_METADATA_WRITE_LOCK_QUERY);
+      insertLock.setInt(1, 1);
+      executeUpdate(insertLock);
+    } catch (SQLException sqle) {
+      log.error("Cannot insert metadata write lock row", sqle);
+      log.error("SQL = '" + INSERT_METADATA_WRITE_LOCK_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot insert metadata write lock row", re);
+      log.error("SQL = '" + INSERT_METADATA_WRITE_LOCK_QUERY + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(insertLock);
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }
