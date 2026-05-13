@@ -704,7 +704,7 @@ public class TestPluginManager extends LockssTestCase {
     String auid = au.getAuId();
     String prefix = PluginManager.auConfigPrefix(auid);
 
-    mgr.deactivateAuWithJournal(au);
+    mgr.deactivateAuForMigration(au);
 
     // Assert state pre-processAuTextJournal()
     assertFalse(mgr.isActiveAu(au));
@@ -743,7 +743,7 @@ public class TestPluginManager extends LockssTestCase {
     String auid = au.getAuId();
     String prefix = PluginManager.auConfigPrefix(auid);
 
-    mgr.deleteAuWithJournal(au);
+    mgr.deleteAuForMigration(au);
 
     // Assert state pre-processAuTextJournal()
     assertFalse(mgr.isActiveAu(au));
