@@ -307,11 +307,11 @@
       param[journal_id] = fc
       #https://journals.publishing.umich.edu/fc/issues/
 
-      au < crawling ; exists ; 2021 ; 45 ; Film Criticism Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 46 ; Film Criticism Volume 2022 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; 47 ; Film Criticism Volume 2023 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; 48 ; Film Criticism Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; 48 ; Film Criticism Volume 2025 ; 2025 ; >
+      au < finished ; manifest ; 2021 ; 45 ; Film Criticism Volume 2021 ; 2021 ; >
+      au < finished ; manifest ; 2022 ; 46 ; Film Criticism Volume 2022 ; 2022 ; >
+      au < finished ; manifest ; 2023 ; 47 ; Film Criticism Volume 2023 ; 2023 ; >
+      au < finished ; manifest ; 2024 ; 48 ; Film Criticism Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2025 ; 48 ; Film Criticism Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; 49 ; Film Criticism Volume 2026 ; 2026 ; >
 
   }
@@ -350,7 +350,7 @@
       au < doesNotExist ; doesNotExist ; 2018 ; 21 ; Journal of Electronic Publishing Volume 2018 ; 2018 ; >
       au < doesNotExist ; doesNotExist ; 2019 ; 22 ; Journal of Electronic Publishing Volume 2019 ; 2019 ; >
       au < doesNotExist ; doesNotExist ; 2020 ; 23 ; Journal of Electronic Publishing Volume 2020 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; 24 ; Journal of Electronic Publishing Volume 2021 ; 2021 ; >
+      au < finished ; manifest ; 2021 ; 24 ; Journal of Electronic Publishing Volume 2021 ; 2021 ; >
       au < finished ; manifest ; 2022 ; 25 ; Journal of Electronic Publishing Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; 26 ; Journal of Electronic Publishing Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 27 ; Journal of Electronic Publishing Volume 2024 ; 2024 ; reingest3.clockss.org:8083 >
@@ -674,9 +674,9 @@
 
       au < finished ; manifest ; 2021 ; 6 ; Ticker: The Academic Business Librarianship Review Volume 2021 ; 2021 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; 7 ; Ticker: The Academic Business Librarianship Review Volume 2022 ; 2022 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2023 ; 8 ; Ticker: The Academic Business Librarianship Review Volume 2023 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; 9 ; Ticker: The Academic Business Librarianship Review Volume 2024 ; 2024 ; >
-      au < ready ; exists ; 2025 ; 10 ; Ticker: The Academic Business Librarianship Review Volume 2025 ; 2025 ; >
+      au < finished ; manifest ; 2023 ; 8 ; Ticker: The Academic Business Librarianship Review Volume 2023 ; 2023 ; >
+      au < finished ; manifest ; 2024 ; 9 ; Ticker: The Academic Business Librarianship Review Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2025 ; 10 ; Ticker: The Academic Business Librarianship Review Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; 11 ; Ticker: The Academic Business Librarianship Review Volume 2026 ; 2026 ; >
 
   }
@@ -822,12 +822,12 @@
       au < manifest ; exists ; 2017 ; 4 ; Weave: Journal of Library User Experience Volume 2017 ; 2017 ; >
       au < manifest ; exists ; 2018 ; 5 ; Weave: Journal of Library User Experience Volume 2018 ; 2018 ; >
       au < manifest ; exists ; 2019 ; 6 ; Weave: Journal of Library User Experience Volume 2019 ; 2019 ; >
-      au < crawling ; exists ; 2020 ; 7 ; Weave: Journal of Library User Experience Volume 2020 ; 2020 ; >
-      au < crawling ; exists ; 2021 ; 4 ; Weave: Journal of Library User Experience Volume 2021 ; 2021 ; >
-      au < crawling ; exists ; 2022 ; 5 ; Weave: Journal of Library User Experience Volume 2022 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; 6 ; Weave: Journal of Library User Experience Volume 2023 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; 7 ; Weave: Journal of Library User Experience Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; 8 ; Weave: Journal of Library User Experience Volume 2025 ; 2025 ; >
+      au < finished ; manifest ; 2020 ; 7 ; Weave: Journal of Library User Experience Volume 2020 ; 2020 ; >
+      au < finished ; manifest ; 2021 ; 4 ; Weave: Journal of Library User Experience Volume 2021 ; 2021 ; >
+      au < finished ; manifest ; 2022 ; 5 ; Weave: Journal of Library User Experience Volume 2022 ; 2022 ; >
+      au < finished ; manifest ; 2023 ; 6 ; Weave: Journal of Library User Experience Volume 2023 ; 2023 ; >
+      au < finished ; manifest ; 2024 ; 7 ; Weave: Journal of Library User Experience Volume 2024 ; 2024 ; >
+      au < finished ; manifest ; 2025 ; 8 ; Weave: Journal of Library User Experience Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; 9 ; Weave: Journal of Library User Experience Volume 2026 ; 2026 ; >
 
   }
