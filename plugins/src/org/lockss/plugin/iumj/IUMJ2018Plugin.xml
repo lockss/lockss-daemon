@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -24,7 +24,7 @@
       </entry>
       <entry>
         <string>Metadata</string>
-        <string>2</string>
+        <string>3</string>
       </entry>
     </map>
   </entry>
@@ -131,15 +131,15 @@
       </entry>
     </map>
   </entry>
-    <entry>
-        <string>text/html_metadata_extractor_factory_map</string>
-        <map>
-            <entry>
-                <string>*</string>
-                <string>org.lockss.plugin.iumj.IUMJXmlMetadataExtractorFactory</string>
-            </entry>
-        </map>
-    </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.iumj.IUMJHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
   <entry>
     <string>au_def_pause_time</string>
     <long>1000</long>
