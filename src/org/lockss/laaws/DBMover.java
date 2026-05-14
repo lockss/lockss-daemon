@@ -113,6 +113,8 @@ public class DBMover extends Worker {
         log.info("v1 db size = " + srcSize + ", v2 db size = " + dstSize);
         auMover.dbBytesCopied = 0;
         auMover.dbBytesTotal = srcSize;
+        long waitDeadlineMs = TimeBase.nowMs() + auMover.getDbCopyTimeout();
+        waitForV2DbReady(waitDeadlineMs);
         copyPostgresDb();
       }
       else {
@@ -465,6 +467,138 @@ public class DBMover extends Worker {
     } catch (SQLException ex) {
       throw new MigrationTaskFailedException(
           "PostgreSQL connection failed or error querying database size", ex);
+    }
+  }
+
+  // -----------------------------------------------------------------------
+  // V2 DB readiness waits
+  //
+  // These mirror the private waitFor* methods in DbManager but operate on a
+  // direct JDBC connection to V2's PostgreSQL.  String literals mirror the
+  // package-private constants in DbManager / DbManagerSql that are not
+  // accessible from this package.
+  // -----------------------------------------------------------------------
+
+  private static final long   WAIT_FOR_V2_DB_INTERVAL = 15 * Constants.SECOND;
+  private static final String V2_DB_VERSION_TABLE     = "version";   // table name
+  private static final String V2_DB_SUBSYSTEM_COL     = "subsystem";
+  private static final String V2_DB_SUBSYSTEM         = "MetadataDbManager";
+  private static final String V2_DB_SYSTEM_COL        = "system";
+  private static final String V2_DB_SYSTEM_VALUE      = "database";
+  private static final String V2_DB_VERSION_COL       = "version";   // column in version table
+
+  Connection openV2Connection() throws SQLException {
+    PGSimpleDataSource ds = new PGSimpleDataSource();
+    ds.setServerName(ensureIPv4Host(v2dbhost));
+    ds.setPortNumber(Integer.parseInt(v2dbport));
+    ds.setDatabaseName(v2dbname);
+    ds.setUser(v2dbuser);
+    ds.setPassword(v2dbpassword);
+    return ds.getConnection();
+  }
+
+  /**
+   * Blocks until V2's PostgreSQL schema is fully initialized: the version
+   * table exists, has a subsystem column, and has been migrated to the
+   * configured target version.  Throws if the deadline passes before any
+   * condition is met.
+   */
+  void waitForV2DbReady(long deadlineMs) throws MigrationTaskFailedException {
+    int targetVersion = Integer.parseInt(V2_TARGET_DB_VERSION);
+    log.info("Waiting for V2 database to reach schema version " + targetVersion);
+    try (Connection conn = openV2Connection()) {
+      waitForVersionTable(conn, deadlineMs);
+      waitForVersionSubsystemColumn(conn, deadlineMs);
+      waitForDatabaseUpdate(conn, targetVersion, deadlineMs);
+    } catch (SQLException e) {
+      throw new MigrationTaskFailedException(
+          "V2 database error while waiting for readiness", e);
+    }
+    log.info("V2 database is ready.");
+  }
+
+  private void waitForVersionTable(Connection conn, long deadlineMs)
+      throws SQLException, MigrationTaskFailedException {
+    while (!v2TableExists(conn, V2_DB_VERSION_TABLE)) {
+      log.debug("V2 version table does not exist yet, waiting...");
+      sleepUntilDeadline(deadlineMs, "Timed out waiting for V2 version table to be created");
+    }
+    log.debug2("V2 version table exists.");
+  }
+
+  private void waitForVersionSubsystemColumn(Connection conn, long deadlineMs)
+      throws SQLException, MigrationTaskFailedException {
+    while (!v2ColumnExists(conn, V2_DB_VERSION_TABLE, V2_DB_SUBSYSTEM_COL)) {
+      log.debug("V2 version." + V2_DB_SUBSYSTEM_COL + " column does not exist yet, waiting...");
+      sleepUntilDeadline(deadlineMs,
+          "Timed out waiting for V2 version table subsystem column");
+    }
+    log.debug2("V2 version." + V2_DB_SUBSYSTEM_COL + " column exists.");
+  }
+
+  private void waitForDatabaseUpdate(Connection conn, int targetVersion, long deadlineMs)
+      throws SQLException, MigrationTaskFailedException {
+    int currentVersion = getV2DbVersion(conn);
+    while (currentVersion < targetVersion) {
+      log.debug("V2 DB at version " + currentVersion +
+                ", target is " + targetVersion + ", waiting...");
+      sleepUntilDeadline(deadlineMs,
+          "Timed out waiting for V2 database to reach version " + targetVersion);
+      currentVersion = getV2DbVersion(conn);
+    }
+    log.debug2("V2 database at version " + currentVersion);
+  }
+
+  private boolean v2TableExists(Connection conn, String tableName) throws SQLException {
+    try (ResultSet rs = conn.getMetaData().getTables(
+             null, v2dbuser.toLowerCase(), tableName.toLowerCase(), null)) {
+      return rs.next();
+    }
+  }
+
+  private boolean v2ColumnExists(Connection conn, String tableName, String columnName)
+      throws SQLException {
+    try (ResultSet rs = conn.getMetaData().getColumns(
+             null, v2dbuser.toLowerCase(), tableName.toLowerCase(),
+             columnName.toLowerCase())) {
+      return rs.next();
+    }
+  }
+
+  private int getV2DbVersion(Connection conn) throws SQLException {
+    String sql = "SELECT " + V2_DB_VERSION_COL
+        + " FROM " + V2_DB_VERSION_TABLE
+        + " WHERE " + V2_DB_SYSTEM_COL + " = '" + V2_DB_SYSTEM_VALUE + "'"
+        + " AND " + V2_DB_SUBSYSTEM_COL + " = ?"
+        + " ORDER BY " + V2_DB_VERSION_COL + " DESC ";
+    try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+      stmt.setString(1, V2_DB_SUBSYSTEM);
+      try (ResultSet rs = stmt.executeQuery()) {
+        int version = 0;
+        while (rs.next()) {
+          version = rs.getInt(V2_DB_VERSION_COL);
+        }
+        return version;
+      }
+    }
+  }
+
+  // Sleeps for up to WAIT_FOR_V2_DB_INTERVAL, or throws if the deadline has
+  // passed (before or after the sleep).
+  void sleepUntilDeadline(long deadlineMs, String timeoutMsg)
+      throws MigrationTaskFailedException {
+    long remaining = deadlineMs - TimeBase.nowMs();
+    if (remaining <= 0) {
+      throw new MigrationTaskFailedException(timeoutMsg);
+    }
+    try {
+      Thread.sleep(Math.min(WAIT_FOR_V2_DB_INTERVAL, remaining));
+    } catch (InterruptedException ie) {
+      Thread.currentThread().interrupt();
+      throw new MigrationTaskFailedException(timeoutMsg + " (interrupted)");
+    }
+    if (TimeBase.nowMs() >= deadlineMs) {
+      throw new MigrationTaskFailedException(timeoutMsg);
     }
   }
 

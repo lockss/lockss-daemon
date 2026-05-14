@@ -40,8 +40,14 @@ import org.mockito.Mockito;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
+import org.lockss.util.TimeBase;
 
 import static org.mockito.Mockito.*;
 
@@ -56,6 +62,10 @@ import static org.mockito.Mockito.*;
  *   <li>{@code copyPostgresDb()} — package-private; tested with a subclass
  *       that replaces {@code pg_dump}/{@code psql} with shell-script stubs so
  *       the actual pipe/thread mechanism runs against controlled SQL data</li>
+ *   <li>{@code openV2Connection()} — package-private; overridden in tests to
+ *       return a mock {@link java.sql.Connection}, avoiding real PG connections</li>
+ *   <li>{@code sleepUntilDeadline()} — package-private; overridden in tests to
+ *       check the deadline without sleeping, so timeout tests run instantly</li>
  * </ul>
  */
 public class TestDBMover extends LockssTestCase {
@@ -701,5 +711,258 @@ public class TestDBMover extends LockssTestCase {
 
     verify(mockMetadataMgr).setIndexingEnabled(false);
     verify(mockMetadataMgr, never()).setIndexingEnabled(true);
+  }
+
+  // -------------------------------------------------------------------------
+  // waitForV2DbReady
+  // -------------------------------------------------------------------------
+
+  /**
+   * Returns a DBMover subclass that uses the supplied mock Connection instead
+   * of a real PG connection, and overrides sleepUntilDeadline() so tests run
+   * without actual Thread.sleep delays while still enforcing the deadline.
+   */
+  private DBMover newWaitMover(Connection conn) {
+    DBMover mover = new DBMover(mockAuMover, task) {
+      @Override
+      Connection openV2Connection() throws SQLException {
+        return conn;
+      }
+      @Override
+      void sleepUntilDeadline(long deadlineMs, String msg)
+          throws MigrationTaskFailedException {
+        if (TimeBase.nowMs() >= deadlineMs) {
+          throw new MigrationTaskFailedException(msg);
+        }
+      }
+    };
+    mover.v2dbhost     = "v2host.example.com";
+    mover.v2dbport     = "5432";
+    mover.v2dbuser     = "v2user";
+    mover.v2dbpassword = "v2pass";
+    mover.v2dbname     = "lockssdb";
+    return mover;
+  }
+
+  /**
+   * Returns a mock Connection where version table, subsystem column, and DB
+   * version are all already present/correct on the first check.
+   */
+  private Connection readyV2Connection(int version) throws SQLException {
+    Connection conn     = mock(Connection.class);
+    DatabaseMetaData meta = mock(DatabaseMetaData.class);
+    when(conn.getMetaData()).thenReturn(meta);
+
+    ResultSet tableRs = mock(ResultSet.class);
+    when(meta.getTables(any(), any(), any(), any())).thenReturn(tableRs);
+    when(tableRs.next()).thenReturn(true);
+
+    ResultSet colRs = mock(ResultSet.class);
+    when(meta.getColumns(any(), any(), any(), any())).thenReturn(colRs);
+    when(colRs.next()).thenReturn(true);
+
+    PreparedStatement stmt = mock(PreparedStatement.class);
+    ResultSet versionRs = mock(ResultSet.class);
+    when(conn.prepareStatement(anyString())).thenReturn(stmt);
+    when(stmt.executeQuery()).thenReturn(versionRs);
+    when(versionRs.next()).thenReturn(true, false);
+    when(versionRs.getInt("version")).thenReturn(version);
+
+    return conn;
+  }
+
+  /** All three conditions met on the first check — must return without throwing. */
+  public void testWaitForV2DbReady_alreadyReady() throws Exception {
+    Connection conn = readyV2Connection(DbManager.DEFAULT_TARGET_DB_VERSION);
+    newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
+  }
+
+  /** Version table absent on first poll, present on second — must succeed and poll twice. */
+  public void testWaitForV2DbReady_pollsUntilTableAppears() throws Exception {
+    Connection conn = mock(Connection.class);
+    DatabaseMetaData meta = mock(DatabaseMetaData.class);
+    when(conn.getMetaData()).thenReturn(meta);
+
+    ResultSet tableRs1 = mock(ResultSet.class);
+    ResultSet tableRs2 = mock(ResultSet.class);
+    when(meta.getTables(any(), any(), any(), any()))
+        .thenReturn(tableRs1).thenReturn(tableRs2);
+    when(tableRs1.next()).thenReturn(false);
+    when(tableRs2.next()).thenReturn(true);
+
+    ResultSet colRs = mock(ResultSet.class);
+    when(meta.getColumns(any(), any(), any(), any())).thenReturn(colRs);
+    when(colRs.next()).thenReturn(true);
+
+    PreparedStatement stmt = mock(PreparedStatement.class);
+    ResultSet versionRs = mock(ResultSet.class);
+    when(conn.prepareStatement(anyString())).thenReturn(stmt);
+    when(stmt.executeQuery()).thenReturn(versionRs);
+    when(versionRs.next()).thenReturn(true, false);
+    when(versionRs.getInt("version")).thenReturn(DbManager.DEFAULT_TARGET_DB_VERSION);
+
+    newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
+
+    verify(meta, times(2)).getTables(any(), any(), any(), any());
+  }
+
+  /** Subsystem column absent on first poll, present on second — must succeed and poll twice. */
+  public void testWaitForV2DbReady_pollsUntilColumnAppears() throws Exception {
+    Connection conn = mock(Connection.class);
+    DatabaseMetaData meta = mock(DatabaseMetaData.class);
+    when(conn.getMetaData()).thenReturn(meta);
+
+    ResultSet tableRs = mock(ResultSet.class);
+    when(meta.getTables(any(), any(), any(), any())).thenReturn(tableRs);
+    when(tableRs.next()).thenReturn(true);
+
+    ResultSet colRs1 = mock(ResultSet.class);
+    ResultSet colRs2 = mock(ResultSet.class);
+    when(meta.getColumns(any(), any(), any(), any()))
+        .thenReturn(colRs1).thenReturn(colRs2);
+    when(colRs1.next()).thenReturn(false);
+    when(colRs2.next()).thenReturn(true);
+
+    PreparedStatement stmt = mock(PreparedStatement.class);
+    ResultSet versionRs = mock(ResultSet.class);
+    when(conn.prepareStatement(anyString())).thenReturn(stmt);
+    when(stmt.executeQuery()).thenReturn(versionRs);
+    when(versionRs.next()).thenReturn(true, false);
+    when(versionRs.getInt("version")).thenReturn(DbManager.DEFAULT_TARGET_DB_VERSION);
+
+    newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
+
+    verify(meta, times(2)).getColumns(any(), any(), any(), any());
+  }
+
+  /** DB version below target on first poll, at target on second — must succeed and query twice. */
+  public void testWaitForV2DbReady_pollsUntilVersionReady() throws Exception {
+    Connection conn = mock(Connection.class);
+    DatabaseMetaData meta = mock(DatabaseMetaData.class);
+    when(conn.getMetaData()).thenReturn(meta);
+
+    ResultSet tableRs = mock(ResultSet.class);
+    when(meta.getTables(any(), any(), any(), any())).thenReturn(tableRs);
+    when(tableRs.next()).thenReturn(true);
+
+    ResultSet colRs = mock(ResultSet.class);
+    when(meta.getColumns(any(), any(), any(), any())).thenReturn(colRs);
+    when(colRs.next()).thenReturn(true);
+
+    // First version query returns 0 rows (version 0); second returns target version.
+    PreparedStatement stmt = mock(PreparedStatement.class);
+    ResultSet versionRs1 = mock(ResultSet.class);
+    ResultSet versionRs2 = mock(ResultSet.class);
+    when(conn.prepareStatement(anyString())).thenReturn(stmt);
+    when(stmt.executeQuery()).thenReturn(versionRs1).thenReturn(versionRs2);
+    when(versionRs1.next()).thenReturn(false);
+    when(versionRs2.next()).thenReturn(true, false);
+    when(versionRs2.getInt("version")).thenReturn(DbManager.DEFAULT_TARGET_DB_VERSION);
+
+    newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
+
+    verify(stmt, times(2)).executeQuery();
+  }
+
+  /** Version table never appears before the deadline — must throw with an informative message. */
+  public void testWaitForV2DbReady_timeoutWaitingForVersionTable() throws Exception {
+    Connection conn = mock(Connection.class);
+    DatabaseMetaData meta = mock(DatabaseMetaData.class);
+    ResultSet tableRs = mock(ResultSet.class);
+    when(conn.getMetaData()).thenReturn(meta);
+    when(meta.getTables(any(), any(), any(), any())).thenReturn(tableRs);
+    when(tableRs.next()).thenReturn(false);
+
+    try {
+      newWaitMover(conn).waitForV2DbReady(0L);
+      fail("Expected MigrationTaskFailedException on timeout");
+    } catch (MigrationTaskFailedException e) {
+      assertTrue("Error should mention version table: " + e.getMessage(),
+                 e.getMessage().contains("version table"));
+    }
+  }
+
+  /** Subsystem column never appears before the deadline — must throw with an informative message. */
+  public void testWaitForV2DbReady_timeoutWaitingForSubsystemColumn() throws Exception {
+    Connection conn = mock(Connection.class);
+    DatabaseMetaData meta = mock(DatabaseMetaData.class);
+    when(conn.getMetaData()).thenReturn(meta);
+
+    ResultSet tableRs = mock(ResultSet.class);
+    when(meta.getTables(any(), any(), any(), any())).thenReturn(tableRs);
+    when(tableRs.next()).thenReturn(true);
+
+    ResultSet colRs = mock(ResultSet.class);
+    when(meta.getColumns(any(), any(), any(), any())).thenReturn(colRs);
+    when(colRs.next()).thenReturn(false);
+
+    try {
+      newWaitMover(conn).waitForV2DbReady(0L);
+      fail("Expected MigrationTaskFailedException on timeout");
+    } catch (MigrationTaskFailedException e) {
+      assertTrue("Error should mention subsystem column: " + e.getMessage(),
+                 e.getMessage().contains("subsystem column"));
+    }
+  }
+
+  /** DB version never reaches target before the deadline — must throw with an informative message. */
+  public void testWaitForV2DbReady_timeoutWaitingForVersionUpdate() throws Exception {
+    Connection conn = mock(Connection.class);
+    DatabaseMetaData meta = mock(DatabaseMetaData.class);
+    when(conn.getMetaData()).thenReturn(meta);
+
+    ResultSet tableRs = mock(ResultSet.class);
+    when(meta.getTables(any(), any(), any(), any())).thenReturn(tableRs);
+    when(tableRs.next()).thenReturn(true);
+
+    ResultSet colRs = mock(ResultSet.class);
+    when(meta.getColumns(any(), any(), any(), any())).thenReturn(colRs);
+    when(colRs.next()).thenReturn(true);
+
+    PreparedStatement stmt = mock(PreparedStatement.class);
+    ResultSet versionRs = mock(ResultSet.class);
+    when(conn.prepareStatement(anyString())).thenReturn(stmt);
+    when(stmt.executeQuery()).thenReturn(versionRs);
+    when(versionRs.next()).thenReturn(false);  // always version 0
+
+    try {
+      newWaitMover(conn).waitForV2DbReady(0L);
+      fail("Expected MigrationTaskFailedException on timeout");
+    } catch (MigrationTaskFailedException e) {
+      assertTrue("Error should mention 'reach version': " + e.getMessage(),
+                 e.getMessage().contains("reach version"));
+    }
+  }
+
+  /** openV2Connection() failure is wrapped in a MigrationTaskFailedException. */
+  public void testWaitForV2DbReady_sqlExceptionOnConnect() throws Exception {
+    DBMover mover = new DBMover(mockAuMover, task) {
+      @Override
+      Connection openV2Connection() throws SQLException {
+        throw new SQLException("Connection refused");
+      }
+    };
+    mover.v2dbhost     = "v2host.example.com";
+    mover.v2dbport     = "5432";
+    mover.v2dbuser     = "v2user";
+    mover.v2dbpassword = "v2pass";
+    mover.v2dbname     = "lockssdb";
+
+    try {
+      mover.waitForV2DbReady(TimeBase.nowMs() + 60_000L);
+      fail("Expected MigrationTaskFailedException on SQL error");
+    } catch (MigrationTaskFailedException e) {
+      assertTrue("Error should mention V2 database: " + e.getMessage(),
+                 e.getMessage().contains("V2 database"));
+    }
+  }
+
+  /** PARAM_TARGET_DB_VERSION config overrides the default target version. */
+  public void testWaitForV2DbReady_respectsConfiguredTargetVersion() throws Exception {
+    ConfigurationUtil.addFromArgs(DbManager.PARAM_TARGET_DB_VERSION, "5");
+    // Mock returns version 5, which satisfies the configured target of 5
+    // but would loop forever against the default target of 28.
+    Connection conn = readyV2Connection(5);
+    newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
   }
 }
