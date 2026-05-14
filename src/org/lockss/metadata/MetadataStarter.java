@@ -280,6 +280,7 @@ public class MetadataStarter extends LockssRunnable {
           conn = dbManager.getConnection();
           mdManager.removeAuFromPendingQueue(conn, au.getAuId());
           DbManager.commitOrRollback(conn, log);
+          mdManager.abortAuIndexing(au);
         } catch (DbException dbe) {
           log.error("Cannot remove migrated AU from pending queue: "
               + au.getName(), dbe);
