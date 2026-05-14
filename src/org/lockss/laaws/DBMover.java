@@ -56,6 +56,7 @@ public class DBMover extends Worker {
   // Number of stderr/stdout lines retained per process for error reporting.
   // Older lines are silently discarded once the buffer is full.
   private static final int ERR_LINE_BUF_SIZE = 100;
+  private static final long V2_DB_WAIT_TIMEOUT = 5*Constants.MINUTE;
   private final Logger log = Logger.getLogger(DBMover.class);
 
   // v1 connection parameters
@@ -102,7 +103,7 @@ public class DBMover extends Worker {
       }
       disableMdIndexing();
       initParams();
-      long waitDeadlineMs = TimeBase.nowMs() + auMover.getDbCopyTimeout();
+      long waitDeadlineMs = TimeBase.nowMs() + V2_DB_WAIT_TIMEOUT;
       waitForV2DbReady(waitDeadlineMs);
       if (dbManager.isTypeDerby()) {
         log.info("Migrating Derby DB Content");
@@ -553,7 +554,7 @@ public class DBMover extends Worker {
 
   private boolean v2TableExists(Connection conn, String tableName) throws SQLException {
     try (ResultSet rs = conn.getMetaData().getTables(
-             null, v2dbuser.toLowerCase(), tableName.toLowerCase(), null)) {
+             null, v2dbuser, tableName.toLowerCase(), null)) {
       return rs.next();
     }
   }
@@ -561,7 +562,7 @@ public class DBMover extends Worker {
   private boolean v2ColumnExists(Connection conn, String tableName, String columnName)
       throws SQLException {
     try (ResultSet rs = conn.getMetaData().getColumns(
-             null, v2dbuser.toLowerCase(), tableName.toLowerCase(),
+             null, v2dbuser, tableName.toLowerCase(),
              columnName.toLowerCase())) {
       return rs.next();
     }
@@ -572,7 +573,7 @@ public class DBMover extends Worker {
         + " FROM " + V2_DB_VERSION_TABLE
         + " WHERE " + V2_DB_SYSTEM_COL + " = '" + V2_DB_SYSTEM_VALUE + "'"
         + " AND " + V2_DB_SUBSYSTEM_COL + " = ?"
-        + " ORDER BY " + V2_DB_VERSION_COL + " DESC ";
+        + " ORDER BY " + V2_DB_VERSION_COL + " ASC ";
     try (PreparedStatement stmt = conn.prepareStatement(sql)) {
       stmt.setString(1, V2_DB_SUBSYSTEM);
       try (ResultSet rs = stmt.executeQuery()) {

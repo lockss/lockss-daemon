@@ -785,7 +785,7 @@ public class TestDBMover extends LockssTestCase {
 
   /** All three conditions met on the first check — must return without throwing. */
   public void testWaitForV2DbReady_alreadyReady() throws Exception {
-    Connection conn = readyV2Connection(DbManager.DEFAULT_TARGET_DB_VERSION);
+    Connection conn = readyV2Connection(Integer.parseInt(MigrationConstants.V2_TARGET_DB_VERSION));
     newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
   }
 
@@ -811,7 +811,7 @@ public class TestDBMover extends LockssTestCase {
     when(conn.prepareStatement(anyString())).thenReturn(stmt);
     when(stmt.executeQuery()).thenReturn(versionRs);
     when(versionRs.next()).thenReturn(true, false);
-    when(versionRs.getInt("version")).thenReturn(DbManager.DEFAULT_TARGET_DB_VERSION);
+    when(versionRs.getInt("version")).thenReturn(Integer.parseInt(MigrationConstants.V2_TARGET_DB_VERSION));
 
     mockEmptyMetadataTable(conn);
     newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
@@ -841,7 +841,7 @@ public class TestDBMover extends LockssTestCase {
     when(conn.prepareStatement(anyString())).thenReturn(stmt);
     when(stmt.executeQuery()).thenReturn(versionRs);
     when(versionRs.next()).thenReturn(true, false);
-    when(versionRs.getInt("version")).thenReturn(DbManager.DEFAULT_TARGET_DB_VERSION);
+    when(versionRs.getInt("version")).thenReturn(Integer.parseInt(MigrationConstants.V2_TARGET_DB_VERSION));
 
     mockEmptyMetadataTable(conn);
     newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
@@ -871,7 +871,7 @@ public class TestDBMover extends LockssTestCase {
     when(stmt.executeQuery()).thenReturn(versionRs1).thenReturn(versionRs2);
     when(versionRs1.next()).thenReturn(false);
     when(versionRs2.next()).thenReturn(true, false);
-    when(versionRs2.getInt("version")).thenReturn(DbManager.DEFAULT_TARGET_DB_VERSION);
+    when(versionRs2.getInt("version")).thenReturn(Integer.parseInt(MigrationConstants.V2_TARGET_DB_VERSION));
 
     mockEmptyMetadataTable(conn);
     newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
@@ -972,12 +972,10 @@ public class TestDBMover extends LockssTestCase {
     }
   }
 
-  /** PARAM_TARGET_DB_VERSION config overrides the default target version. */
-  public void testWaitForV2DbReady_respectsConfiguredTargetVersion() throws Exception {
-    ConfigurationUtil.addFromArgs(DbManager.PARAM_TARGET_DB_VERSION, "5");
-    // Mock returns version 5, which satisfies the configured target of 5
-    // but would loop forever against the default target of 28.
-    Connection conn = readyV2Connection(5);
+  /** waitForV2DbReady uses V2_TARGET_DB_VERSION as the required schema version. */
+  public void testWaitForV2DbReady_usesV2TargetDbVersion() throws Exception {
+    // A connection at exactly V2_TARGET_DB_VERSION must succeed immediately.
+    Connection conn = readyV2Connection(Integer.parseInt(MigrationConstants.V2_TARGET_DB_VERSION));
     newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
   }
 
@@ -1000,7 +998,7 @@ public class TestDBMover extends LockssTestCase {
     when(conn.prepareStatement(anyString())).thenReturn(pStmt);
     when(pStmt.executeQuery()).thenReturn(versionRs);
     when(versionRs.next()).thenReturn(true, false);
-    when(versionRs.getInt("version")).thenReturn(DbManager.DEFAULT_TARGET_DB_VERSION);
+    when(versionRs.getInt("version")).thenReturn(Integer.parseInt(MigrationConstants.V2_TARGET_DB_VERSION));
 
     // Metadata table is not empty
     Statement mdStmt = mock(Statement.class);
