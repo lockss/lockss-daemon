@@ -6,8 +6,7 @@ This script fetches XML sitemaps from government websites and generates
 HTML manifest pages for LOCKSS archival units.
 
 Usage:
-    python3 start_page_generate.py --input start_page_input.csv --acronyms usdocs_acronyms.txt 
-           --output /var/www/html/usdocs_start_urls --server http://uslockss-v1.rice.edu:24680
+    python3 ./scripts/tdb/start_page_generate.py --input scripts/tdb/start_page_input.csv --acronyms scripts/tdb/usdocs_acronyms.txt --output /var/www/html/usdocs_start_urls --server http://uslockss-v1.rice.edu:24680
 """
 
 import argparse
@@ -98,7 +97,7 @@ def create_transformed_url(server_base, auid, original_url):
     """Create transformed URL for LOCKSS archive server."""
     encoded_auid = quote(auid, safe='')
     encoded_url = quote(original_url, safe='')
-    return f"{server_base}/ServeContent?auid={encoded_auid}&url={encoded_url}"
+    return f"{server_base}/ServeContent?auid={encoded_auid}&url={encoded_url}/context"
 
 
 def generate_html_page(collection_name, year, urls, server_base, auid, output_file):
@@ -108,7 +107,8 @@ def generate_html_page(collection_name, year, urls, server_base, auid, output_fi
     html = f"""<!DOCTYPE html>
 <html>
 <head>
-    <title>{collection_name} {year} LOCKSS Manifest Page</title>
+    <title>{collection_name} {year} 
+    LOCKSS Manifest Page</title>
 </head>
 <body>
     <h1>{collection_name} {year} LOCKSS Manifest Page</h1>
