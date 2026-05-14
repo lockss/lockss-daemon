@@ -4599,6 +4599,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   public boolean deletePublicationIssn(Long mdItemSeq, String issn,
       String issnType) throws DbException {
+    if (isRealMigrationMode()) {
+      throw new DbException(
+          "Metadata control operations are disabled in migration mode");
+    }
     return getMetadataManagerSql().deletePublicationIssn(mdItemSeq, issn,
 	issnType);
   }
@@ -4715,6 +4719,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *           if any problem occurred accessing the database.
    */
   public boolean deleteDbAu(Long auSeq, String auKey) throws DbException {
+    if (isRealMigrationMode()) {
+      throw new DbException(
+          "Metadata control operations are disabled in migration mode");
+    }
     return getMetadataManagerSql().removeAu(auSeq, auKey);
   }
 

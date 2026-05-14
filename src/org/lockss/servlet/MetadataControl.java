@@ -31,6 +31,7 @@ import static org.lockss.servlet.MetadataMonitor.*;
 import java.io.IOException;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import org.mortbay.http.HttpResponse;
 import org.lockss.db.DbException;
 import org.lockss.db.DbManager;
 import org.lockss.metadata.MetadataManager;
@@ -79,6 +80,12 @@ public class MetadataControl extends LockssServlet {
     // If the database is not available, display a warning message.
     if (!dbManager.isReady()) {
       displayNotStarted();
+      return;
+    }
+
+    if (isInMigrationMode()) {
+      displayWarningInLieuOfPage("Metadata control operations are disabled in migration mode.");
+      resp.setStatus(HttpResponse.__503_Service_Unavailable, "Disabled");
       return;
     }
 
