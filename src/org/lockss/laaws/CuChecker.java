@@ -90,7 +90,7 @@ public class CuChecker extends CuBase {
    * Check all V2 artifacts for a cachedUrl.
    *
    * @param v2Url       The uri for the current cached url.
-   * @param cachedUrl   The cachedUrl we which to move
+   * @param v1Versions  The list of V1 CachedUrl versions to check
    * @param v2Artifacts The list of artifacts which already match this cachedUrl uri.
    */
   void checkCuVersions(String v2Url, List<CachedUrl> v1Versions,
@@ -232,7 +232,6 @@ public class CuChecker extends CuBase {
       throw ex;
     }
     finally {
-      AuUtil.safeRelease(cu);
       if(artifactData !=null) {
         artifactData.release();
       }
