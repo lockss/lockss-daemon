@@ -1413,7 +1413,7 @@
    au < manifest ; exists ; 1969 ; 1969 ; DMW - Deutsche Medizinische Wochenschrift Volume 94 ; 94 ; >
    au < crawling ; exists ; 1970 ; 1970 ; DMW - Deutsche Medizinische Wochenschrift Volume 95 ; 95 ; >
    au < crawling ; exists ; 1971 ; 1971 ; DMW - Deutsche Medizinische Wochenschrift Volume 96 ; 96 ; >
-   au < ready ; exists ; 1972 ; 1972 ; DMW - Deutsche Medizinische Wochenschrift Volume 97 ; 97 ; >
+   au < crawling ; exists ; 1972 ; 1972 ; DMW - Deutsche Medizinische Wochenschrift Volume 97 ; 97 ; >
    au < crawling ; exists ; 1973 ; 1973 ; DMW - Deutsche Medizinische Wochenschrift Volume 98 ; 98 ; >
    au < crawling ; exists ; 1974 ; 1974 ; DMW - Deutsche Medizinische Wochenschrift Volume 99 ; 99 ; >
    au < crawling ; exists ; 1975 ; 1975 ; DMW - Deutsche Medizinische Wochenschrift Volume 100 ; 100 ; >
@@ -1559,7 +1559,7 @@
 
 
    au < manifest ; exists ; 1969 ; 1969 ; Endoscopy Volume 1 ; 1 ; >
-   au < ready ; exists ; 1970 ; 1970 ; Endoscopy Volume 2 ; 2 ; >
+   au < crawling ; exists ; 1970 ; 1970 ; Endoscopy Volume 2 ; 2 ; >
    au < crawling ; exists ; 1971 ; 1971 ; Endoscopy Volume 3 ; 3 ; >
    au < crawling ; exists ; 1972 ; 1972 ; Endoscopy Volume 4 ; 4 ; >
    au < ready ; exists ; 1973 ; 1973 ; Endoscopy Volume 5 ; 5 ; >
@@ -2596,7 +2596,7 @@
    au < crawling ; exists ; 1973 ; 1973 ; Hormone and Metabolic Research Volume 5 ; 5 ; >
    au < crawling ; exists ; 1974 ; 1974 ; Hormone and Metabolic Research Volume 6 ; 6 ; >
    au < crawling ; exists ; 1975 ; 1975 ; Hormone and Metabolic Research Volume 7 ; 7 ; >
-   au < ready ; exists ; 1976 ; 1976 ; Hormone and Metabolic Research Volume 8 ; 8 ; >
+   au < crawling ; exists ; 1976 ; 1976 ; Hormone and Metabolic Research Volume 8 ; 8 ; >
    au < ready ; exists ; 1977 ; 1977 ; Hormone and Metabolic Research Volume 9 ; 9 ; >
    au < crawling ; exists ; 1978 ; 1978 ; Hormone and Metabolic Research Volume 10 ; 10 ; >
    au < ready ; exists ; 1979 ; 1979 ; Hormone and Metabolic Research Volume 11 ; 11 ; >
@@ -4033,8 +4033,8 @@
     au < ready ; exists ; 1989 ; 1989 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 20 ; 20 ; >
     au < ready ; exists ; 1990 ; 1990 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 21 ; 21 ; >
     au < ready ; exists ; 1991 ; 1991 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 22 ; 22 ; >
-    au < ready ; exists ; 1992 ; 1992 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 23 ; 23 ; >
-    au < ready ; exists ; 1993 ; 1993 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 24 ; 24 ; >
+    au < crawling ; exists ; 1992 ; 1992 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 23 ; 23 ; >
+    au < crawling ; exists ; 1993 ; 1993 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 24 ; 24 ; >
     au < ready ; exists ; 1994 ; 1994 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 25 ; 25 ; >
     au < ready ; exists ; 1995 ; 1995 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 26 ; 26 ; >
     au < crawling ; exists ; 1996 ; 1996 ; EEG-EMG Zeitschrift für Elektroenzephalographie, Elektromyographie und verwandte Gebiete Volume 27 ; 27 ; >
@@ -5056,7 +5056,7 @@
     au < crawling ; exists ; 1972 ; 1972 ; Pharmacopsychiatry Volume 5 ; 5 ; >
     au < crawling ; exists ; 1973 ; 1973 ; Pharmacopsychiatry Volume 6 ; 6 ; >
     au < crawling ; exists ; 1974 ; 1974 ; Pharmacopsychiatry Volume 7 ; 7 ; >
-    au < ready ; exists ; 1975 ; 1975 ; Pharmacopsychiatry Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1975 ; 1975 ; Pharmacopsychiatry Volume 8 ; 8 ; >
     au < ready ; exists ; 1976 ; 1976 ; Pharmacopsychiatry Volume 9 ; 9 ; >
     au < crawling ; exists ; 1977 ; 1977 ; Pharmacopsychiatry Volume 10 ; 10 ; >
     au < crawling ; exists ; 1978 ; 1978 ; Pharmacopsychiatry Volume 11 ; 11 ; >
@@ -5331,7 +5331,7 @@
    au < crawling ; exists ; 1969 ; 1969 ; Planta Medica Volume 17 ; 17 ; >
    au < crawling ; exists ; 1970 ; 1970 ; Planta Medica Volume 18-19 ; 18-19 ; >
    au < ready ; exists ; 1971 ; 1971 ; Planta Medica Volume 19-20 ; 19-20 ; >
-   au < ready ; exists ; 1972 ; 1972 ; Planta Medica Volume 21-22 ; 21-22 ; >
+   au < crawling ; exists ; 1972 ; 1972 ; Planta Medica Volume 21-22 ; 21-22 ; >
    au < crawling ; exists ; 1973 ; 1973 ; Planta Medica Volume 23-24 ; 23-24 ; >
    au < crawling ; exists ; 1974 ; 1974 ; Planta Medica Volume 25-26 ; 25-26 ; >
    au < ready ; exists ; 1975 ; 1975 ; Planta Medica Volume 27-28 ; 27-28 ; >
@@ -9019,7 +9019,7 @@
     au < manifest ; exists ; 1967 ; 1967 ; British Homeopathic Journal Volume 57 ; 57 ; >
     au < manifest ; exists ; 1968 ; 1968 ; British Homeopathic Journal Volume 58 ; 58 ; >
     au < manifest ; exists ; 1969 ; 1969 ; British Homeopathic Journal Volume 59 ; 59 ; >
-    au < ready ; exists ; 1970 ; 1970 ; British Homeopathic Journal Volume 60 ; 60 ; >
+    au < crawling ; exists ; 1970 ; 1970 ; British Homeopathic Journal Volume 60 ; 60 ; >
     au < crawling ; exists ; 1971 ; 1971 ; British Homeopathic Journal Volume 61 ; 61 ; >
     au < ready ; exists ; 1972 ; 1972 ; British Homeopathic Journal Volume 62 ; 62 ; >
     au < ready ; exists ; 1973 ; 1973 ; British Homeopathic Journal Volume 63 ; 63 ; >

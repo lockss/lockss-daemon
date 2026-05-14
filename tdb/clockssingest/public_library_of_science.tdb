@@ -24,7 +24,7 @@
       au < crawling ; exists ; 2004 ; PLOS Biology Volume 2004 ; 2004 ; >
       au < crawling ; exists ; 2005 ; PLOS Biology Volume 2005 ; 2005 ; >
       au < crawling ; exists ; 2006 ; PLOS Biology Volume 2006 ; 2006 ; >
-      au < ready ; exists ; 2007 ; PLOS Biology Volume 2007 ; 2007 ; >
+      au < crawling ; exists ; 2007 ; PLOS Biology Volume 2007 ; 2007 ; >
       au < ready ; exists ; 2008 ; PLOS Biology Volume 2008 ; 2008 ; >
       au < crawling ; exists ; 2009 ; PLOS Biology Volume 2009 ; 2009 ; >
       au < ready ; exists ; 2010 ; PLOS Biology Volume 2010 ; 2010 ; >
@@ -103,7 +103,7 @@
       param[journal_id] = ploscompbiol
 
       au < ready ; exists ; 2005 ; PLOS Computational Biology Volume 2005 ; 2005 ; >
-      au < ready ; exists ; 2006 ; PLOS Computational Biology Volume 2006 ; 2006 ; >
+      au < crawling ; exists ; 2006 ; PLOS Computational Biology Volume 2006 ; 2006 ; >
       au < crawling ; exists ; 2007 ; PLOS Computational Biology Volume 2007 ; 2007 ; >
       au < ready ; exists ; 2008 ; PLOS Computational Biology Volume 2008 ; 2008 ; >
       au < ready ; exists ; 2009 ; PLOS Computational Biology Volume 2009 ; 2009 ; >
@@ -560,7 +560,7 @@
       au < manifest ; exists ; 2017 ; PLOS ONE Volume Nov 2017 ; 2017 ; November ; >
       au < manifest ; exists ; 2017 ; PLOS ONE Volume Dec 2017 ; 2017 ; December ; >
 
-      au < ready ; exists ; 2018 ; PLOS ONE Volume Jan 2018 ; 2018 ; January ; >
+      au < crawling ; exists ; 2018 ; PLOS ONE Volume Jan 2018 ; 2018 ; January ; >
       au < ready ; exists ; 2018 ; PLOS ONE Volume Feb 2018 ; 2018 ; February ; >
       au < ready ; exists ; 2018 ; PLOS ONE Volume Mar 2018 ; 2018 ; March ; >
       au < manifest ; exists ; 2018 ; PLOS ONE Volume Apr 2018 ; 2018 ; April ; >
@@ -604,12 +604,12 @@
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Mar 2021 ; 2021 ; March ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Apr 2021 ; 2021 ; April ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume May 2021 ; 2021 ; May ; >
-      au < ready ; exists ; 2021 ; PLOS ONE Volume Jun 2021 ; 2021 ; June ; >
+      au < crawling ; exists ; 2021 ; PLOS ONE Volume Jun 2021 ; 2021 ; June ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Jul 2021 ; 2021 ; July ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Aug 2021 ; 2021 ; August ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Sep 2021 ; 2021 ; September ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Oct 2021 ; 2021 ; October ; >
-      au < ready ; exists ; 2021 ; PLOS ONE Volume Nov 2021 ; 2021 ; November ; >
+      au < crawling ; exists ; 2021 ; PLOS ONE Volume Nov 2021 ; 2021 ; November ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Dec 2021 ; 2021 ; December ; >
 
       au < crawling ; exists ; 2022 ; PLOS ONE Volume Jan 2022 ; 2022 ; January ; >
@@ -622,7 +622,7 @@
       au < crawling ; exists ; 2022 ; PLOS ONE Volume Aug 2022 ; 2022 ; August ; >
       au < crawling ; exists ; 2022 ; PLOS ONE Volume Sep 2022 ; 2022 ; September ; >
       au < manifest ; exists ; 2022 ; PLOS ONE Volume Oct 2022 ; 2022 ; October ; >
-      au < ready ; exists ; 2022 ; PLOS ONE Volume Nov 2022 ; 2022 ; November ; >
+      au < crawling ; exists ; 2022 ; PLOS ONE Volume Nov 2022 ; 2022 ; November ; >
       au < manifest ; exists ; 2022 ; PLOS ONE Volume Dec 2022 ; 2022 ; December ; >
 
       au < crawling ; exists ; 2023 ; PLOS ONE Volume Jan 2023 ; 2023 ; January ; >

@@ -58,7 +58,7 @@
     param[journal_id] = aia
     #param[journal_issn] = 0967-201X
      
-    au < ready ; exists ; 2005 ; Anthropology in Action Volume 12 ; 12 ; >
+    au < crawling ; exists ; 2005 ; Anthropology in Action Volume 12 ; 12 ; >
     au < crawling ; exists ; 2006 ; Anthropology in Action Volume 13 ; 13 ; >
     au < frozen ; exists ; 2007 ; Anthropology in Action Volume 14 ; 14 ; >
     au < finished ; manifest ; 2008 ; Anthropology in Action Volume 15 ; 15 ; reingest3.clockss.org:8083 >
@@ -350,7 +350,7 @@
       au < crawling ; exists ; 1999 ; Critical Survey Volume 11 ; 11 ; >
       au < ready ; exists ; 2000 ; Critical Survey Volume 12 ; 12 ; >
       au < crawling ; exists ; 2001 ; Critical Survey Volume 13 ; 13 ; >
-      au < ready ; exists ; 2002 ; Critical Survey Volume 14 ; 14 ; >
+      au < crawling ; exists ; 2002 ; Critical Survey Volume 14 ; 14 ; >
       au < finished ; manifest ; 2003 ; Critical Survey Volume 15 ; 15 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Critical Survey Volume 16 ; 16 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; Critical Survey Volume 17 ; 17 ; reingest1.clockss.org:8082 >
