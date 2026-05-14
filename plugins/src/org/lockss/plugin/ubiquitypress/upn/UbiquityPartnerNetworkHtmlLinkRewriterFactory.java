@@ -510,8 +510,12 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
             for(int i = 0; i < children.size(); i++){
               if(children.elementAt(i) instanceof HeadingTag){
                 log.debug3("text is " + children.elementAt(i).toPlainTextString() + " and position is " + i);
-                if("Front Matter".equals(children.elementAt(i).getText())){
-                  //TODO
+                if("Front Matter".equals(children.elementAt(i).toPlainTextString())){
+                  for(int j = 0; j < 3; j++){
+                    int temp = i + j;
+                    log.debug3("Removing node " + temp);
+                    children.remove(temp);
+                  }
                 }
               }
             }
