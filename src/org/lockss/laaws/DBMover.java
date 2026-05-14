@@ -102,6 +102,8 @@ public class DBMover extends Worker {
       }
       disableMdIndexing();
       initParams();
+      long waitDeadlineMs = TimeBase.nowMs() + auMover.getDbCopyTimeout();
+      waitForV2DbReady(waitDeadlineMs);
       if (dbManager.isTypeDerby()) {
         log.info("Migrating Derby DB Content");
         copyDerbyDb();
@@ -113,8 +115,6 @@ public class DBMover extends Worker {
         log.info("v1 db size = " + srcSize + ", v2 db size = " + dstSize);
         auMover.dbBytesCopied = 0;
         auMover.dbBytesTotal = srcSize;
-        long waitDeadlineMs = TimeBase.nowMs() + auMover.getDbCopyTimeout();
-        waitForV2DbReady(waitDeadlineMs);
         copyPostgresDb();
       }
       else {
@@ -486,6 +486,7 @@ public class DBMover extends Worker {
   private static final String V2_DB_SYSTEM_COL        = "system";
   private static final String V2_DB_SYSTEM_VALUE      = "database";
   private static final String V2_DB_VERSION_COL       = "version";   // column in version table
+  private static final String V2_MD_ITEM_TABLE         = "md_item";
 
   Connection openV2Connection() throws SQLException {
     PGSimpleDataSource ds = new PGSimpleDataSource();
@@ -510,6 +511,7 @@ public class DBMover extends Worker {
       waitForVersionTable(conn, deadlineMs);
       waitForVersionSubsystemColumn(conn, deadlineMs);
       waitForDatabaseUpdate(conn, targetVersion, deadlineMs);
+      checkV2MetadataTableEmpty(conn);
     } catch (SQLException e) {
       throw new MigrationTaskFailedException(
           "V2 database error while waiting for readiness", e);
@@ -581,6 +583,24 @@ public class DBMover extends Worker {
         return version;
       }
     }
+  }
+
+  boolean isV2MetadataTableEmpty(Connection conn) throws SQLException {
+    try (Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery(
+             "SELECT 1 FROM " + V2_MD_ITEM_TABLE + " LIMIT 1")) {
+      return !rs.next();
+    }
+  }
+
+  private void checkV2MetadataTableEmpty(Connection conn)
+      throws SQLException, MigrationTaskFailedException {
+    if (!isV2MetadataTableEmpty(conn)) {
+      throw new MigrationTaskFailedException(
+          "V2 metadata table '" + V2_MD_ITEM_TABLE + "' is not empty; " +
+          "aborting copy to avoid duplicate data");
+    }
+    log.debug2("V2 metadata table '" + V2_MD_ITEM_TABLE + "' is empty.");
   }
 
   // Sleeps for up to WAIT_FOR_V2_DB_INTERVAL, or throws if the deadline has

@@ -45,6 +45,7 @@ import java.sql.DatabaseMetaData;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Arrays;
 import java.util.List;
 import org.lockss.util.TimeBase;
@@ -746,7 +747,8 @@ public class TestDBMover extends LockssTestCase {
 
   /**
    * Returns a mock Connection where version table, subsystem column, and DB
-   * version are all already present/correct on the first check.
+   * version are all already present/correct on the first check, and the
+   * md_item metadata table is empty.
    */
   private Connection readyV2Connection(int version) throws SQLException {
     Connection conn     = mock(Connection.class);
@@ -768,7 +770,17 @@ public class TestDBMover extends LockssTestCase {
     when(versionRs.next()).thenReturn(true, false);
     when(versionRs.getInt("version")).thenReturn(version);
 
+    mockEmptyMetadataTable(conn);
     return conn;
+  }
+
+  /** Configures a mock Connection to return an empty ResultSet for the md_item query. */
+  private void mockEmptyMetadataTable(Connection conn) throws SQLException {
+    Statement mdStmt = mock(Statement.class);
+    ResultSet mdRs   = mock(ResultSet.class);
+    when(conn.createStatement()).thenReturn(mdStmt);
+    when(mdStmt.executeQuery(anyString())).thenReturn(mdRs);
+    when(mdRs.next()).thenReturn(false);
   }
 
   /** All three conditions met on the first check — must return without throwing. */
@@ -801,6 +813,7 @@ public class TestDBMover extends LockssTestCase {
     when(versionRs.next()).thenReturn(true, false);
     when(versionRs.getInt("version")).thenReturn(DbManager.DEFAULT_TARGET_DB_VERSION);
 
+    mockEmptyMetadataTable(conn);
     newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
 
     verify(meta, times(2)).getTables(any(), any(), any(), any());
@@ -830,6 +843,7 @@ public class TestDBMover extends LockssTestCase {
     when(versionRs.next()).thenReturn(true, false);
     when(versionRs.getInt("version")).thenReturn(DbManager.DEFAULT_TARGET_DB_VERSION);
 
+    mockEmptyMetadataTable(conn);
     newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
 
     verify(meta, times(2)).getColumns(any(), any(), any(), any());
@@ -859,6 +873,7 @@ public class TestDBMover extends LockssTestCase {
     when(versionRs2.next()).thenReturn(true, false);
     when(versionRs2.getInt("version")).thenReturn(DbManager.DEFAULT_TARGET_DB_VERSION);
 
+    mockEmptyMetadataTable(conn);
     newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
 
     verify(stmt, times(2)).executeQuery();
@@ -964,5 +979,87 @@ public class TestDBMover extends LockssTestCase {
     // but would loop forever against the default target of 28.
     Connection conn = readyV2Connection(5);
     newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
+  }
+
+  /** waitForV2DbReady fails when md_item has rows — prevents overwriting existing data. */
+  public void testWaitForV2DbReady_failsWhenMetadataTableNotEmpty() throws Exception {
+    Connection conn = mock(Connection.class);
+    DatabaseMetaData meta = mock(DatabaseMetaData.class);
+    when(conn.getMetaData()).thenReturn(meta);
+
+    ResultSet tableRs = mock(ResultSet.class);
+    when(meta.getTables(any(), any(), any(), any())).thenReturn(tableRs);
+    when(tableRs.next()).thenReturn(true);
+
+    ResultSet colRs = mock(ResultSet.class);
+    when(meta.getColumns(any(), any(), any(), any())).thenReturn(colRs);
+    when(colRs.next()).thenReturn(true);
+
+    PreparedStatement pStmt = mock(PreparedStatement.class);
+    ResultSet versionRs = mock(ResultSet.class);
+    when(conn.prepareStatement(anyString())).thenReturn(pStmt);
+    when(pStmt.executeQuery()).thenReturn(versionRs);
+    when(versionRs.next()).thenReturn(true, false);
+    when(versionRs.getInt("version")).thenReturn(DbManager.DEFAULT_TARGET_DB_VERSION);
+
+    // Metadata table is not empty
+    Statement mdStmt = mock(Statement.class);
+    ResultSet mdRs   = mock(ResultSet.class);
+    when(conn.createStatement()).thenReturn(mdStmt);
+    when(mdStmt.executeQuery(anyString())).thenReturn(mdRs);
+    when(mdRs.next()).thenReturn(true);
+
+    try {
+      newWaitMover(conn).waitForV2DbReady(TimeBase.nowMs() + 60_000L);
+      fail("Expected MigrationTaskFailedException when metadata table is not empty");
+    } catch (MigrationTaskFailedException e) {
+      assertTrue("Error should mention md_item: " + e.getMessage(),
+                 e.getMessage().contains("md_item"));
+      assertTrue("Error should mention 'not empty': " + e.getMessage(),
+                 e.getMessage().contains("not empty"));
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // isV2MetadataTableEmpty
+  // -------------------------------------------------------------------------
+
+  public void testIsV2MetadataTableEmpty_trueWhenNoRows() throws Exception {
+    DBMover mover = new DBMover(mockAuMover, task);
+    Connection conn = mock(Connection.class);
+    Statement stmt  = mock(Statement.class);
+    ResultSet rs    = mock(ResultSet.class);
+    when(conn.createStatement()).thenReturn(stmt);
+    when(stmt.executeQuery(anyString())).thenReturn(rs);
+    when(rs.next()).thenReturn(false);
+
+    assertTrue(mover.isV2MetadataTableEmpty(conn));
+  }
+
+  public void testIsV2MetadataTableEmpty_falseWhenRowsExist() throws Exception {
+    DBMover mover = new DBMover(mockAuMover, task);
+    Connection conn = mock(Connection.class);
+    Statement stmt  = mock(Statement.class);
+    ResultSet rs    = mock(ResultSet.class);
+    when(conn.createStatement()).thenReturn(stmt);
+    when(stmt.executeQuery(anyString())).thenReturn(rs);
+    when(rs.next()).thenReturn(true);
+
+    assertFalse(mover.isV2MetadataTableEmpty(conn));
+  }
+
+  public void testIsV2MetadataTableEmpty_propagatesSqlException() throws Exception {
+    DBMover mover = new DBMover(mockAuMover, task);
+    Connection conn = mock(Connection.class);
+    Statement stmt  = mock(Statement.class);
+    when(conn.createStatement()).thenReturn(stmt);
+    when(stmt.executeQuery(anyString())).thenThrow(new SQLException("query failed"));
+
+    try {
+      mover.isV2MetadataTableEmpty(conn);
+      fail("Expected SQLException");
+    } catch (SQLException e) {
+      assertTrue(e.getMessage().contains("query failed"));
+    }
   }
 }
