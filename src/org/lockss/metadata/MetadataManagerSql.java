@@ -1596,11 +1596,6 @@ public class MetadataManagerSql {
       + "," + MD_VALUE_COLUMN
       + ") values (?,?,?)";
 
-  // Query to acquire an exclusive lock on the metadata write lock row.
-  private static final String LOCK_METADATA_WRITE_QUERY = "update "
-      + METADATA_WRITE_LOCK_TABLE
-      + " set " + LOCK_ID_COLUMN + " = " + LOCK_ID_COLUMN;
-
   private DbManager dbManager;
   private MetadataManager metadataManager;
 
@@ -7383,30 +7378,5 @@ public class MetadataManagerSql {
     }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-  }
-
-  /**
-   * Acquires an exclusive database lock to serialize metadata write operations.
-   * Blocks until no other transaction holds the lock. The lock is released when
-   * the connection's transaction is committed or rolled back.
-   *
-   * @param conn
-   *          A Connection with the database connection to be used.
-   * @throws DbException
-   *           if any problem occurred accessing the database.
-   */
-  void lockMetadataWrite(Connection conn) throws DbException {
-    final String DEBUG_HEADER = "lockMetadataWrite(): ";
-    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
-
-    PreparedStatement stmt = null;
-
-    try {
-      stmt = dbManager.prepareStatement(conn, LOCK_METADATA_WRITE_QUERY);
-      dbManager.executeUpdate(stmt);
-      if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
-    } finally {
-      DbManager.safeCloseStatement(stmt);
-    }
   }
 }

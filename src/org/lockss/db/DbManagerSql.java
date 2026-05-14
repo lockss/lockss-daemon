@@ -604,6 +604,11 @@ public class DbManagerSql {
       "insert into " + METADATA_WRITE_LOCK_TABLE
       + " (" + LOCK_ID_COLUMN + ") values (?)";
 
+  // Query to acquire an exclusive lock on the metadata write lock row.
+  static final String LOCK_METADATA_WRITE_QUERY = "update "
+      + METADATA_WRITE_LOCK_TABLE
+      + " set " + LOCK_ID_COLUMN + " = " + LOCK_ID_COLUMN;
+
   // Query to create the table for identifying the last run of incremental
   // tasks.
   private static final String CREATE_LAST_RUN_TABLE_QUERY = "create table "
