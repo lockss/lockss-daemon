@@ -37,7 +37,6 @@ import org.apache.http.*;
 import org.lockss.laaws.client.ApiException;
 import org.lockss.laaws.model.rs.Artifact;
 import org.lockss.laaws.model.rs.ArtifactData;
-import org.lockss.laaws.model.rs.ArtifactPageInfo;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.CachedUrl;
@@ -97,9 +96,8 @@ public class CuChecker extends CuBase {
   void checkCuVersions(String v2Url, List<CachedUrl> v1Versions,
                        Map<Integer,Artifact> v2Artifacts) {
     log.debug3("checkCuVersions("+v2Url+")");
-    List<Integer> missingVers = new ArrayList();
-    Set<Integer> remainingV2 = new TreeSet(v2Artifacts.keySet());
-    int v2Count = v2Artifacts.size();
+    List<Integer> missingVers = new ArrayList<>();
+    Set<Integer> remainingV2 = new TreeSet<>(v2Artifacts.keySet());
     for (CachedUrl v1Ver : v1Versions) {
       if (isAbort()) {
         break;
@@ -122,7 +120,6 @@ public class CuChecker extends CuBase {
       } finally {
         AuUtil.safeRelease(v1Ver);
       }
-      ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
     }
     if (!missingVers.isEmpty()) {
       StringBuilder sb = new StringBuilder();
@@ -197,20 +194,18 @@ public class CuChecker extends CuBase {
           if (v2Hdr == null) {
             contentErr = true;
             task.addError(cu.getUrl() + " V1 header " + v2Key + " = " + v1Val +
-                          " missing from V2.");
+                        " missing from V2.");
           } else if (!StringUtil.equalStrings(v2Hdr.getValue(), v1Val)) {
             contentErr = true;
             task.addError(cu.getUrl() + " V1 header " + v1Key
-                          + " value mismatch, V1: " + v1Val
-                          + ", V2: " + v2Hdr.getValue());
+                        + " value mismatch, V1: " + v1Val
+                        + ", V2: " + v2Hdr.getValue());
           }
         }
         if (contentErr) {
           ctrs.incr(CounterType.ARTIFACTS_FAILED_VERIFY);
           isUrlError = true;
         }
-        ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
-        // stats to update when available
         ctrs.add(CounterType.CONTENT_BYTES_VERIFIED, artifactData.getContentLength());
         ctrs.add(CounterType.BYTES_VERIFIED, artifactData.getSize()); // http response total bytes
         if (log.isDebug3()) {
@@ -218,12 +213,19 @@ public class CuChecker extends CuBase {
                      ", vbytes + " + artifactData.getSize());
         }
       }
+      // Increment once here, after all checks, so the counter covers
+      // both the metadata-only path and the byte-compare path without
+      // double-counting. Missing versions never reach this method, so
+      // they are correctly excluded.
+      ctrs.incr(CounterType.ARTIFACTS_VERIFIED);
     }
     catch (ApiException | IOException ex) {
       String err = "Error checking cu: " + cu.getUrl() + " in " + au + ": " + ex.getMessage();
       log.error(err, ex);
-      task.addError(err);
-      // change to failed check counter
+      // Use addArtError() so the failure is counted in ARTIFACTS_FAILED_VERIFY.
+      // Set terminated so the caller stops issuing further REST calls to a
+      // target that appears to be unreachable or broken.
+      addArtError(err);
       terminated = true;
     } catch (Exception ex) {
       log.error("Unexpected exception", ex);
@@ -257,9 +259,11 @@ public class CuChecker extends CuBase {
       task.addError(msg);
       res = true;
     }
-    // Don't compare collection date if V1 has none
+    // Don't compare collection date if V1 has none.
+    // v1CollectionDate is the non-null receiver to avoid NPE when the
+    // artifact has no collection date stored on the V2 side.
     if (v1CollectionDate != null &&
-        !artifact.getCollectionDate().equals(v1CollectionDate)) {
+        !v1CollectionDate.equals(artifact.getCollectionDate())) {
       String msg = mdMismatchMsg(au, cu, ver, "Collection date",
                                  V2AuMover.dateStr(v1CollectionDate),
                                  V2AuMover.dateStr(artifact.getCollectionDate()));
@@ -279,37 +283,6 @@ public class CuChecker extends CuBase {
                                String field, String v1, String v2) {
     return "Metadata mismatch: " + au.getName() + ", url: " + cu.getUrl() + ", ver: " + ver + ", " + field  +
       ": V1: " + v1 + ", V2: " + v2;
-  }
-
-  /**
-   * Retrieve all artifact versions for a URL in an AU
-   * @param au
-   * @param url
-   * @return Map of version -> artifact
-   */
-  Map<Integer,Artifact>  getArtifactVersions(ArchivalUnit au, String url) {
-    Map<Integer,Artifact> artMap = new HashMap<>();
-    String token = null;
-    do {
-      try {
-        ArtifactPageInfo pageInfo =
-          artifactsApi.getArtifacts(au.getAuId(), namespace, url,
-                                    null, "all", false, null, token);
-        for (Artifact art : pageInfo.getArtifacts()) {
-          artMap.put(art.getVersion(), art);
-        }
-        token = pageInfo.getPageInfo().getContinuationToken();
-      } catch (ApiException e) {
-        String msg = e.getCode() == 0
-          ? e.getMessage() : e.getCode() + " - " + e.getMessage();
-        String err = "Error retrieving from target artifacts for: " + url +
-          " in " + au + ": " + msg;
-        task.addError(err);
-        log.error(err, e);
-        terminated = true;
-      }
-    } while (!terminated && !StringUtil.isNullString(token));
-    return artMap;
   }
 
   void addArtError(String msg) {

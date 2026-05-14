@@ -53,13 +53,12 @@ import static org.lockss.laaws.MigrationTask.Option;
 
 public class CuMover extends CuBase {
   private static final Logger log = Logger.getLogger(CuMover.class);
+  // Gson is thread-safe and expensive to construct (builds internal reflection
+  // caches on first use). A static singleton avoids repeated allocation across
+  // millions of artifacts over the lifetime of a migration.
+  private static final Gson GSON = new Gson();
 
-  private String v2Url;
   private boolean isUrlError;
-
-  protected static StatusLine STATUS_LINE_OK =
-    new BasicStatusLine(new ProtocolVersion("HTTP", 1, 1), 200, "OK");
-
 
   public CuMover(V2AuMover auMover, MigrationTask task) {
     super(auMover, task);
@@ -106,7 +105,7 @@ public class CuMover extends CuBase {
       }
     }
   }
-  
+
   /**
    * Move all versions of one v2 URL for a cachedUrl.
    *
@@ -147,7 +146,11 @@ public class CuMover extends CuBase {
    * @param cuQueue The queue of cached url versions.
    */
   void moveNextCuVersion(String auid, String v2Url, Queue<CachedUrl> cuQueue) {
-    Long collectionDate = null;
+    // Primitive long (not Long) so that passing collectionDate to
+    // recordFailedCu() in the catch blocks cannot throw NullPointerException
+    // when PROPERTY_FETCH_TIME is absent. A boxed null Long would unbox and
+    // NPE inside the catch, silently swallowing the original error.
+    long collectionDate = 0L;
     CachedUrl cu = cuQueue.poll();
     if (cu == null) {
       if (log.isDebug3()) {
@@ -234,11 +237,10 @@ public class CuMover extends CuBase {
    * @param namespace   the v2 namespace we are moving to
    * @throws ApiException the rest exception thrown should anything fail in the request.
    */
-  void copyArtifact(String auid, String v2Url, Long collectionDate,
+  void copyArtifact(String auid, String v2Url, long collectionDate,
                     CachedUrl cu, String namespace) throws ApiException {
     log.debug3("createArtifact("+v2Url+")");
     DigestCachedUrl dcu = new DigestCachedUrl(cu);
-    Gson gson = new Gson();
     try {
       ctrs.addInProgressDcu(CounterType.CONTENT_BYTES_MOVED, dcu);
       ctrs.addInProgressDcu(CounterType.BYTES_MOVED, dcu);
@@ -251,7 +253,7 @@ public class CuMover extends CuBase {
       props.put(ArtifactProperties.SERIALIZED_NAME_VERSION,
                 Integer.toString(cu.getVersion()));
       props.put(ArtifactProperties.SERIALIZED_NAME_COLLECTION_DATE, String.valueOf(collectionDate));
-      String prop_str = gson.toJson(props);
+      String prop_str = GSON.toJson(props);
 
       // Build the httpResponseHeader part, consisting of HTTP status
       // line and response headers
@@ -266,12 +268,25 @@ public class CuMover extends CuBase {
       Artifact uncommitted =
         artifactsApiLongCall.createArtifact(prop_str, dcu,
                                             respHeadersToString(response));
+      // createArtifact() can return null (API contract does not forbid it).
+      // Without this guard the version is silently skipped: no counter, no
+      // error, and the uncommitted artifact lingers in V2 invisibly (future
+      // checks use includeUncommitted=false, so they won't detect it either).
       if (uncommitted != null) {
         if (log.isDebug3()) {
           log.debug3("createArtifact returned,  content bytes: " +
                      cu.getContentSize() + ", total: " + dcu.getContentBytesRead());
         }
-        commitArtifact(uncommitted, dcu);
+        commitArtifact(uncommitted, dcu, v2Url, collectionDate);
+      } else {
+        String err = "createArtifact returned null for " + v2Url + cuVersionString(cu);
+        log.warning(err);
+        if (task.isOption(Option.RECORD_ERRORS)) {
+          recordFailedCu(auid, cu, v2Url, namespace, collectionDate);
+        }
+        if (task.isOption(Option.REPORT_ERRORS)) {
+          addArtError(err);
+        }
       }
     } finally {
       // Ensure it's removed in case didn't happen in commitArtifact()
@@ -310,16 +325,27 @@ public class CuMover extends CuBase {
    * @param dcu the DigestCachedUrl with the commutted digest added to CachedUrl
    * @throws ApiException the rest exception thrown should anything fail in the request.
    */
-  void commitArtifact(Artifact uncommitted, DigestCachedUrl dcu) throws ApiException {
+  void commitArtifact(Artifact uncommitted, DigestCachedUrl dcu,
+                      String v2Url, long collectionDate) throws ApiException {
     Artifact committed;
     log.debug3("committing artifact " + uncommitted.getUuid());
     committed = artifactsApi.updateArtifact(uncommitted.getUuid(),true, uncommitted.getNamespace());
     String contentDigest = dcu.getContentDigest();
     if (!committed.getContentDigest().equals(contentDigest)) {
-      String err="Error in commit of " + dcu.getCu().getUrl() + " content digest do not match";
+      String err = "Error in commit of " + dcu.getCu().getUrl() + cuVersionString(dcu.getCu()) +
+          " content digest does not match" +
+          " (v1: " + dcu.getContentDigest() + ", v2: " + committed.getContentDigest() + ")";
       log.error(err);
-      log.debug("v1 digest: " +dcu.getContentDigest()+  " v2 digest: " + committed.getContentDigest());
-      task.addError(err);
+      // Use addArtError() (not task.addError()) so ARTIFACTS_FAILED_COPY is
+      // incremented and isUrlError is set. Call recordFailedCu() so the version
+      // is queued for retry; without it the artifact stays committed in V2 with
+      // corrupt content and no remediation path.
+      if(task.isOption(Option.REPORT_ERRORS)) {
+        addArtError(err);
+      }
+      if (task.isOption(Option.RECORD_ERRORS)) {
+        recordFailedCu(auid, dcu.getCu(), v2Url, namespace, collectionDate);
+      }
     }
     else {
       if (log.isDebug2()) {
