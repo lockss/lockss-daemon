@@ -680,7 +680,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	  if (log.isDebug3()) log.debug3("au = " + au);
 
           // Check whether it does not exist.
-          if (au == null) {
+          if (au == null  && !isRealMigrationMode()) {
 	    // Yes: Cancel any running tasks associated with the AU and delete
 	    // the AU metadata.
             try {
