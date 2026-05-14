@@ -689,7 +689,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	      log.error("Error removing AU for auId " + auIdToReindex.auId
 		  + " from the database", dbe);
             }
-          } else {
+          } else if (au != null) {
             // No: Get the metadata extractor.
             ArticleMetadataExtractor ae = getMetadataExtractor(au);
 
