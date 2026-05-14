@@ -273,6 +273,10 @@ public class FetchTimeExporter {
     return new FetchTimeExporterCronTask();
   }
 
+  boolean isRealMigrationMode() {
+    return exportManager.isRealMigrationMode();
+  }
+
   /**
    * Performs the periodic task of exporting the fetch time data.
    * 
@@ -655,6 +659,9 @@ public class FetchTimeExporter {
 
       // Get the data to be exported.
       results = dbManager.executeQuery(getExportData);
+      if (isRealMigrationMode()) {
+        return lastMdItemSeq;
+      }
 
       // Loop through all the data to be exported.
       while (results.next()) {
@@ -784,6 +791,9 @@ public class FetchTimeExporter {
 	    log.debug3(DEBUG_HEADER + "lastMdItemSeq = " + lastMdItemSeq);
 	}
       }
+      if (isRealMigrationMode()) {
+        return lastMdItemSeq;
+      }
     } catch (SQLException sqle) {
       log.error(message, sqle);
       log.error("SQL = '" + sql + "'.");
@@ -895,6 +905,9 @@ public class FetchTimeExporter {
      */
     @Override
     public boolean execute() {
+      if (isRealMigrationMode()) {
+        return true;
+      }
       return export();
     }
 
