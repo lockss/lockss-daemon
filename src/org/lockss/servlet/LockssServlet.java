@@ -617,7 +617,7 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected boolean isInMigrationMode() {
-    return migrationMgr.isInMigrationMode() && !migrationMgr.isDryRun();
+    return migrationMgr.isRealMigrationMode();
   }
 
   protected boolean isDisallowInMigration() {

@@ -931,6 +931,7 @@ public class V2AuMover {
         currentStatus = "Failed - target is not in migration mode";
         failed = true;
       } else {
+        migrationMgr.setInMigrationMode(true);
         for (Args args : argsLst) {
           try {
             executeRequest(args);
@@ -1001,7 +1002,7 @@ public class V2AuMover {
       default:
         log.error("Unknown OpType: " + args.opType + ", ignored");
       }
-      } catch (IOException e) {
+    } catch (IOException e) {
       log.error("Unexpected exception", e);
       currentStatus = e.getMessage();
     }
@@ -1139,7 +1140,6 @@ public class V2AuMover {
 
   /** Start/enqueue all AUs in auMoveQueueByPlugin */
   private void moveQueuedAus() throws IOException {
-    migrationMgr.setInMigrationMode(true);
     ausLatch = new CountUpDownLatch(1, "AU");
     currentStatus = STATUS_RUNNING;
     totalAusToMove = auMoveQueueByPlugin.values().stream()
@@ -1267,16 +1267,16 @@ public class V2AuMover {
               if (auHasErrors(auStat)) {
                 log.warning("AU has errors, deactivating instead of deleting: "
                             + au.getName());
-                pluginManager.deactivateAuWithJournal(au);
+                pluginManager.deactivateAuForMigration(au);
               } else {
-                pluginManager.deleteAuWithJournal(au);
+                pluginManager.deleteAuForMigration(au);
               }
             } else {
               if (auHasErrors(auStat)) {
                 log.warning("AU has errors, deactivating anyway: "
                             + au.getName());
               }
-              pluginManager.deactivateAuWithJournal(au);
+              pluginManager.deactivateAuForMigration(au);
             }
           } catch (IOException e) {
             throw new RuntimeException(e);

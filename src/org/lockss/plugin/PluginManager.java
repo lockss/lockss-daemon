@@ -1538,11 +1538,11 @@ public class PluginManager
    * @param au the ArchivalUnit to be deleted
    * @throws IOException
    */
-  public void deleteAuWithJournal(ArchivalUnit au) throws IOException {
+  public void deleteAuForMigration(ArchivalUnit au) throws IOException {
     synchronized (auAddDelLock) {
       log.debug("Journal deleting AU: " + au);
       String auid = au.getAuId();
-      stopAu(au, new AuEvent(AuEvent.Type.Delete, false));
+      stopAu(au, new AuEvent(AuEvent.Type.Delete, false).setMigration(true));
       inactiveAuIds.remove(auid);
       appendAuTxtJournal("DELETE", auid);
     }
@@ -1554,11 +1554,11 @@ public class PluginManager
    * @param au the ArchivalUnit to be deactivated
    * @throws IOException
    */
-  public void deactivateAuWithJournal(ArchivalUnit au) throws IOException {
+  public void deactivateAuForMigration(ArchivalUnit au) throws IOException {
     synchronized (auAddDelLock) {
       log.debug("Journal deactivating AU: " + au);
       String auid = au.getAuId();
-      stopAu(au, new AuEvent(AuEvent.Type.Deactivate, false));
+      stopAu(au, new AuEvent(AuEvent.Type.Deactivate, false).setMigration(true));
       inactiveAuIds.add(auid);
       appendAuTxtJournal("DEACTIVATE", auid);
     }

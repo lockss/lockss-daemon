@@ -458,7 +458,7 @@ public class MigrateSettings extends LockssServlet {
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
     page.add(!migrationMgr.isMigrationInDebugMode() &&
-             (!dryRunEnabled && migrationMgr.isInMigrationMode()) ?
+             migrationMgr.isRealMigrationMode() ?
         makeDisplayCfg() : makeForm());
     endPage(page);
   }
@@ -535,7 +535,7 @@ public class MigrateSettings extends LockssServlet {
 
     if (!migrationMgr.isMigrationInDebugMode()) {
       // Do not allow user to select dry run once migration has started
-      if (!dryRunEnabled && migrationMgr.isInMigrationMode()) {
+      if (migrationMgr.isRealMigrationMode()) {
         dryRunCheckbox.attribute("disabled");
       }
     }
@@ -819,6 +819,10 @@ public class MigrateSettings extends LockssServlet {
     } else {
       log.error("Target didn't supply " + V2_PARAM_ACTUAL_V3_LCAP_PORT);
     }
+
+    // DbManager configuration
+    v2Cfg.put(DbManager.PARAM_WAIT_FOR_EXTERNAL_SETUP, "true");
+    v2Cfg.put(DbManager.PARAM_TARGET_DB_VERSION, V2_TARGET_DB_VERSION);
 
     // Datasource configuration
     Configuration dsCfg = ConfigManager.newConfiguration();

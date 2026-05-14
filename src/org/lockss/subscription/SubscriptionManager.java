@@ -351,6 +351,10 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     auEventHandler = new AuEventHandler.Base() {
       @Override
       public void auDeleted(AuEvent event, ArchivalUnit au) {
+	if (event.isMigration()) {
+	  return;
+	}
+
 	Connection conn = null;
 
 	try {
@@ -525,7 +529,7 @@ public class SubscriptionManager extends BaseLockssDaemonManager implements
     }
 
     if (isDaemonInited()) {
-      if (!migrationMgr.isInMigrationMode()) {
+      if (!migrationMgr.isRealMigrationMode()) {
         // Don't instantiate subscriptions when in migration mode
 
         // Check whether the handling of configuration changes should be done in a

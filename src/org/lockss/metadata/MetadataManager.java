@@ -578,6 +578,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     return cancelAuTask(au.getAuId());
   }
 
+  boolean isRealMigrationMode() {
+    return getDaemon().getMigrationManager().isRealMigrationMode();
+  }
+
+  /**
+   * Removes an AU from the pending reindexing queue without deleting its
+   * metadata. Intended for use when an AU is removed via migration.
+   *
+   * @param conn  A Connection with the database connection to be used.
+   * @param auId  A String with the AU identifier.
+   * @throws DbException if any problem occurred accessing the database.
+   */
+  public void removeAuFromPendingQueue(Connection conn, String auId)
+      throws DbException {
+    pendingAusCount = mdManagerSql.removeFromPendingAus(conn, auId);
+  }
+
   /**
    * Cancels the reindexing task for the specified AU.
    * 
@@ -1103,6 +1120,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    *         database.
    */
   public long getArticleCount() {
+    if (isRealMigrationMode()) {
+      try {
+        return mdManagerSql.getArticleCount();
+      } catch (DbException ex) {
+        log.error("getArticleCount", ex);
+        return 0;
+      }
+    }
     return metadataArticleCount;
   }
   
@@ -1112,7 +1137,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return the number of distinct publications in the metadata database
    */
   public long getPublicationCount() {
-    if (metadataPublicationCount < 0) {
+    if (isRealMigrationMode() || metadataPublicationCount < 0) {
       try {
         metadataPublicationCount = mdManagerSql.getPublicationCount();
       } catch (DbException ex) {
@@ -1128,7 +1153,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return the number of distinct publishers in the metadata database
    */
   public long getPublisherCount() {
-    if (metadataPublisherCount < 0) {
+    if (isRealMigrationMode() || metadataPublisherCount < 0) {
       try {
         metadataPublisherCount = mdManagerSql.getPublisherCount();
       } catch (DbException ex) {
@@ -1144,7 +1169,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @return the number of distinct providers in the metadata database
    */
   public long getProviderCount() {
-    if (metadataProviderCount < 0) {
+    if (isRealMigrationMode() || metadataProviderCount < 0) {
       try {
         metadataProviderCount = mdManagerSql.getProviderCount();
       } catch (DbException ex) {
@@ -3972,6 +3997,10 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   void persistUnconfiguredAu(ArchivalUnit au) {
     final String DEBUG_HEADER = "persistUnconfiguredAu(): ";
+    if (isRealMigrationMode()) {
+      log.debug2(DEBUG_HEADER + "Skipping unconfigured AU write in migration mode: " + au);
+      return;
+    }
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "au = " + au);
 
     Connection conn = null;

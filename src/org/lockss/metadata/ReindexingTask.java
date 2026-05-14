@@ -764,6 +764,7 @@ public class ReindexingTask extends StepTask {
 
             // Get a connection to the database.
             conn = dbManager.getConnection();
+            mdManagerSql.lockMetadataWrite(conn);
 
             if (log.isDebug3())
               log.debug3(DEBUG_HEADER + "needFullReindex = " + needFullReindex);
@@ -807,7 +808,7 @@ public class ReindexingTask extends StepTask {
             mdManagerSql.removeFromPendingAus(conn, auId);
             mdManager.updatePendingAusCount(conn);
 
-            // Complete the database transaction.
+            // Complete the database transaction and release the exclusivity lock
             DbManager.commitOrRollback(conn, log);
 
             // Update the successful re-indexing count.

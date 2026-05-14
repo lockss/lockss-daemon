@@ -61,6 +61,8 @@ public class MigrationConstants {
   public static final String V2_PARAM_ACTUAL_V3_LCAP_PORT =
     Configuration.PREFIX + "config.actualV3LcapPort";
 
+  public static final String V2_TARGET_DB_VERSION = "30";
+
   public static final boolean V2_DEFAULT_PROXYMANAGER_START = false;
   public static final boolean V2_DEFAULT_CONTENTSERVLETMANAGER_START = false;
 

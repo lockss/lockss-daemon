@@ -594,6 +594,16 @@ public class DbManagerSql {
       + PROBLEM_COLUMN + " varchar(" + MAX_PROBLEM_COLUMN + ") not null"
       + ")";
 
+  // Query to create the metadata write lock table.
+  static final String CREATE_METADATA_WRITE_LOCK_TABLE_QUERY =
+      "create table " + METADATA_WRITE_LOCK_TABLE
+      + " (" + LOCK_ID_COLUMN + " integer not null)";
+
+  // Query to insert the initial lock row.
+  private static final String INSERT_METADATA_WRITE_LOCK_QUERY =
+      "insert into " + METADATA_WRITE_LOCK_TABLE
+      + " (" + LOCK_ID_COLUMN + ") values (?)";
+
   // Query to create the table for identifying the last run of incremental
   // tasks.
   private static final String CREATE_LAST_RUN_TABLE_QUERY = "create table "
@@ -667,6 +677,15 @@ public class DbManagerSql {
       + " from " + VERSION_TABLE
       + " where " + SYSTEM_COLUMN + " = '" + DATABASE_VERSION_TABLE_SYSTEM
       + "' order by " + VERSION_COLUMN + " asc";
+
+  // Query to get the database versions for a specific subsystem, sorted
+  // ascending. Used when waiting for an external process to finish DB setup.
+  private static final String GET_SORTED_DATABASE_VERSIONS_FOR_SUBSYSTEM_QUERY =
+      "select " + VERSION_COLUMN
+      + " from " + VERSION_TABLE
+      + " where " + SYSTEM_COLUMN + " = '" + DATABASE_VERSION_TABLE_SYSTEM
+      + "' and subsystem = ?"
+      + " order by " + VERSION_COLUMN + " asc";
 
   // SQL statement that creates a database in PostgreSQL.
   private static final String CREATE_DATABASE_QUERY_PG =
@@ -2862,6 +2881,50 @@ public class DbManagerSql {
     return result;
   }
 
+  boolean columnExists(Connection conn, String tableName, String columnName)
+      throws SQLException {
+    final String DEBUG_HEADER = "columnExists(): ";
+    if (log.isDebug2()) {
+      log.debug2(DEBUG_HEADER + "tableName = '" + tableName + "'");
+      log.debug2(DEBUG_HEADER + "columnName = '" + columnName + "'");
+    }
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    boolean result = false;
+    ResultSet resultSet = null;
+
+    try {
+      if (isTypeDerby()) {
+        resultSet = JdbcBridge.getColumns(conn, null, dataSourceUser,
+            tableName.toUpperCase(), columnName.toUpperCase());
+      } else if (isTypePostgresql()) {
+        resultSet = JdbcBridge.getColumns(conn, null, dataSourceUser,
+            tableName.toLowerCase(), columnName.toLowerCase());
+      } else if (isTypeMysql()) {
+        resultSet = JdbcBridge.getColumns(conn, null, dataSourceUser,
+            tableName, columnName);
+      }
+
+      result = resultSet.next();
+    } catch (SQLException sqle) {
+      log.error("Cannot determine whether column '" + columnName
+          + "' in table '" + tableName + "' exists", sqle);
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot determine whether column '" + columnName
+          + "' in table '" + tableName + "' exists", re);
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseResultSet(resultSet);
+    }
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "result = " + result);
+    return result;
+  }
+
   /**
    * Prepares a statement, retrying the preparation in the default manner in
    * case of transient failures.
@@ -3172,9 +3235,49 @@ public class DbManagerSql {
     return version;
   }
 
+  int getHighestNumberedDatabaseVersionForSubsystem(Connection conn,
+                                                    String subsystem) throws SQLException {
+    final String DEBUG_HEADER = "getHighestNumberedDatabaseVersionForSubsystem(): ";
+    log.debug2(DEBUG_HEADER + "subsystem = " + subsystem);
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    int version = 0;
+    PreparedStatement stmt = null;
+    ResultSet resultSet = null;
+
+    try {
+      stmt = prepareStatement(conn,
+          GET_SORTED_DATABASE_VERSIONS_FOR_SUBSYSTEM_QUERY);
+      stmt.setString(1, subsystem);
+      resultSet = executeQuery(stmt);
+
+      while (resultSet.next()) {
+        version = resultSet.getShort(VERSION_COLUMN);
+        log.debug3(DEBUG_HEADER + "version = " + version);
+      }
+    } catch (SQLException sqle) {
+      log.error("Cannot get the database version for subsystem '"
+          + subsystem + "'", sqle);
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot get the database version for subsystem '"
+          + subsystem + "'", re);
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseResultSet(resultSet);
+      JdbcBridge.safeCloseStatement(stmt);
+    }
+
+    log.debug2(DEBUG_HEADER + "version = " + version);
+    return version;
+  }
+
   /**
    * Adds to the database the database version.
-   * 
+   *
    * @param conn
    *          A Connection with the database connection to be used.
    * @param version
@@ -9080,6 +9183,48 @@ public class DbManagerSql {
 
     // Add the new metadata item type foe files.
     addMetadataItemType(conn, MD_ITEM_TYPE_FILE);
+
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
+  }
+
+  /**
+   * Updates the database from version 28 to version 29.
+   *
+   * Creates the metadata_write_lock table used to serialize concurrent
+   * metadata database writes.
+   *
+   * @param conn
+   *          A Connection with the database connection to be used.
+   * @throws SQLException
+   *           if any problem occurred updating the database.
+   */
+  void updateDatabaseFrom28To29(Connection conn) throws SQLException {
+    final String DEBUG_HEADER = "updateDatabaseFrom28To29(): ";
+    if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+
+    if (conn == null) {
+      throw new IllegalArgumentException("Null connection");
+    }
+
+    executeDdlQuery(conn, CREATE_METADATA_WRITE_LOCK_TABLE_QUERY);
+
+    PreparedStatement insertLock = null;
+
+    try {
+      insertLock = prepareStatement(conn, INSERT_METADATA_WRITE_LOCK_QUERY);
+      insertLock.setInt(1, 1);
+      executeUpdate(insertLock);
+    } catch (SQLException sqle) {
+      log.error("Cannot insert metadata write lock row", sqle);
+      log.error("SQL = '" + INSERT_METADATA_WRITE_LOCK_QUERY + "'.");
+      throw sqle;
+    } catch (RuntimeException re) {
+      log.error("Cannot insert metadata write lock row", re);
+      log.error("SQL = '" + INSERT_METADATA_WRITE_LOCK_QUERY + "'.");
+      throw re;
+    } finally {
+      JdbcBridge.safeCloseStatement(insertLock);
+    }
 
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
   }

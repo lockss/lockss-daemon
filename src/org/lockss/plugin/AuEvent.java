@@ -60,6 +60,7 @@ public class AuEvent {
 
   private Type type;
   private boolean inBatch;
+  private boolean migration;
   private LockssWatchdog wdog;
 
   public AuEvent(Type type, boolean inBatch) {
@@ -73,6 +74,15 @@ public class AuEvent {
 
   public boolean isInBatch() {
     return inBatch;
+  }
+
+  public AuEvent setMigration(boolean migration) {
+    this.migration = migration;
+    return this;
+  }
+
+  public boolean isMigration() {
+    return migration;
   }
 
   public AuEvent setWatchdog(LockssWatchdog wdog) {
