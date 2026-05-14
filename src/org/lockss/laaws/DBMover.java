@@ -42,6 +42,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.LockssThread;
 import org.lockss.db.DbManager;
+import org.lockss.db.SqlConstants;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.remote.*;
 import org.lockss.servlet.MigrateContent;
@@ -116,7 +117,13 @@ public class DBMover extends Worker {
         log.info("v1 db size = " + srcSize + ", v2 db size = " + dstSize);
         auMover.dbBytesCopied = 0;
         auMover.dbBytesTotal = srcSize;
-        copyPostgresDb();
+        Connection conn = openV2Connection();
+        try {
+          dbManager.lockMetadataWrite(conn);
+          copyPostgresDb();
+        } finally {
+          DbManager.safeRollbackAndClose(conn);
+        }
       }
       else {
         throw new MigrationTaskFailedException("Unable to move database of unsupported type");
@@ -278,7 +285,9 @@ public class DBMover extends Worker {
   /** Returns the pg_dump command to use for copying the source database. */
   List<String> buildDumpCommand() {
     return Arrays.asList(
-        "pg_dump", "-a", "--disable-triggers", "--exclude-table=version",
+        "pg_dump", "-a", "--disable-triggers",
+        "--exclude-table=version",
+        "--exclude-table=" + SqlConstants.METADATA_WRITE_LOCK_TABLE,
         "-S", v2dbuser,
         "-h", ensureIPv4Host(v1host), "-p", v1port,
         "-U", v1user, "-d", v1dbname);
