@@ -104,10 +104,10 @@ def extract_package_id(url):
     return None
 
 
-def fetch_title_from_mods(package_id):
-    """Fetch title from MODS metadata file."""
+def fetch_metadata_from_mods(package_id):
+    """Fetch title and publisher from MODS metadata file."""
     if not package_id:
-        return None
+        return None, None
     
     mods_url = f"https://www.govinfo.gov/metadata/pkg/{package_id}/mods.xml"
     
@@ -122,18 +122,28 @@ def fetch_title_from_mods(package_id):
         # MODS namespace
         ns = {'mods': 'http://www.loc.gov/mods/v3'}
         
-        # Try to find title in titleInfo/title
-        title_elem = root.find('.//mods:titleInfo/mods:title', ns)
+        # Extract title from top-level titleInfo only (direct child of root)
+        title = None
+        title_info = root.find('mods:titleInfo', ns)
+        if title_info is not None:
+            title_parts = []
+            for child in title_info:
+                if child.text and child.text.strip():
+                    title_parts.append(child.text.strip())
+            if title_parts:
+                title = html.escape(' '.join(title_parts))
         
-        if title_elem is not None and title_elem.text:
-            # HTML-escape the title to handle special characters
-            return html.escape(title_elem.text.strip())
+        # Extract publisher
+        publisher = None
+        publisher_elem = root.find('.//mods:publisher', ns)
+        if publisher_elem is not None and publisher_elem.text:
+            publisher = html.escape(publisher_elem.text.strip())
         
-        return None
+        return title, publisher
         
     except Exception as e:
         print(f"  Warning: Could not fetch MODS for {package_id}: {e}", file=sys.stderr)
-        return None
+        return None, None
 
 
 def create_transformed_url(server_base, auid, original_url):
@@ -161,9 +171,9 @@ def generate_html_page(collection_name, year, urls, server_base, auid, output_fi
     for idx, url in enumerate(urls, 1):
         transformed_url = create_transformed_url(server_base, auid, url)
         
-        # Try to fetch title from MODS
+        # Try to fetch title and publisher from MODS
         package_id = extract_package_id(url)
-        title = fetch_title_from_mods(package_id)
+        title, publisher = fetch_metadata_from_mods(package_id)
         
         # Use title if found, otherwise fall back to default format
         if title:
@@ -171,7 +181,11 @@ def generate_html_page(collection_name, year, urls, server_base, auid, output_fi
         else:
             link_text = f"{collection_id} {year} URL {idx}"
         
-        html_content += f'        <li><a href="{transformed_url}">{link_text}</a></li>\n'
+        # Build list item with link and optional publisher
+        if publisher:
+            html_content += f'        <li><a href="{transformed_url}">{link_text}</a><br>\n        {publisher}</li>\n'
+        else:
+            html_content += f'        <li><a href="{transformed_url}">{link_text}</a></li>\n'
     
     html_content += """    </ul>
 
