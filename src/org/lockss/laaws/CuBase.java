@@ -137,6 +137,11 @@ public class CuBase extends Worker {
           String err = "Couldn't read props for " + cuVer + ", skipping";
           log.warning(err, e);
           task.addError(err);
+          // Without this, a CU whose properties cannot be read is neither
+          // added to mappedCus nor to toRelease, so its file descriptor is
+          // never closed. Over weeks of operation across millions of CUs
+          // this can exhaust the process FD limit.
+          toRelease.add(cuVer);
         }
       }
     } finally {
@@ -182,7 +187,9 @@ public class CuBase extends Worker {
       for (Artifact art : pageInfo.getArtifacts()) {
         verMap.put(art.getVersion(), art);
       }
-      token = pageInfo.getPageInfo().getContinuationToken();
+      token = (pageInfo.getPageInfo() != null)
+        ? pageInfo.getPageInfo().getContinuationToken()
+        : null;
     } while (!isAbort() && !StringUtil.isNullString(token));
     log.debug3("Found " + verMap.size() + " artifacts for " + v2Url);
     return verMap;
