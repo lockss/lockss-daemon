@@ -4690,7 +4690,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2022 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 2023 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2023 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2024 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2025 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Curriculum Development and Learning Measurement (IJCDLM) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
@@ -4711,7 +4711,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Cyber Research and Education (IJCRE) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; International Journal of Cyber Research and Education (IJCRE) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2022 ; International Journal of Cyber Research and Education (IJCRE) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2024 ; International Journal of Cyber Research and Education (IJCRE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2024 ; International Journal of Cyber Research and Education (IJCRE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4926,7 +4926,7 @@
       param[journal_issn] = 2644-1624
 
       au < frozen ; exists ; 2020 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2021 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2021 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2022 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2023 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2024 ; International Journal of Innovative Teaching and Learning in Higher Education (IJITLHE) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
@@ -4947,7 +4947,7 @@
 
       au < finished ; manifest ; 2019 ; International Journal of Political Activism and Engagement (IJPAE) Volume 6 ; 6 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; International Journal of Political Activism and Engagement (IJPAE) Volume 7 ; 7 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 2021 ; International Journal of Political Activism and Engagement (IJPAE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2021 ; International Journal of Political Activism and Engagement (IJPAE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2022 ; International Journal of Political Activism and Engagement (IJPAE) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; International Journal of Political Activism and Engagement (IJPAE) Volume 10 ; 10 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2024 ; International Journal of Political Activism and Engagement (IJPAE) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
@@ -5376,7 +5376,7 @@
       param[journal_issn] = 2473-537X
 
       au < crawling ; exists ; 2017 ; International Journal of Virtual and Augmented Reality (IJVAR) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2018 ; International Journal of Virtual and Augmented Reality (IJVAR) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2018 ; International Journal of Virtual and Augmented Reality (IJVAR) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2019 ; International Journal of Virtual and Augmented Reality (IJVAR) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; International Journal of Virtual and Augmented Reality (IJVAR) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; International Journal of Virtual and Augmented Reality (IJVAR) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
@@ -5400,7 +5400,7 @@
       au < finished ; manifest ; 2021 ; Journal of Business Ecosystems (JBE) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
       au < ready ; exists ; 2022 ; Journal of Business Ecosystems (JBE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2023 ; Journal of Business Ecosystems (JBE) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2024 ; Journal of Business Ecosystems (JBE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2024 ; Journal of Business Ecosystems (JBE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2025 ; Journal of Business Ecosystems (JBE) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2026 ; Journal of Business Ecosystems (JBE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
 
