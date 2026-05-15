@@ -104,6 +104,21 @@ def extract_package_id(url):
     return None
 
 
+def extract_title_from_titleinfo(title_info_elem):
+    """Extract and concatenate all child elements from a titleInfo element."""
+    if title_info_elem is None:
+        return None
+    
+    title_parts = []
+    for child in title_info_elem:
+        if child.text and child.text.strip():
+            title_parts.append(child.text.strip())
+    
+    if title_parts:
+        return ' '.join(title_parts)
+    return None
+
+
 def fetch_metadata_from_mods(package_id):
     """Fetch title and publisher from MODS metadata file."""
     if not package_id:
@@ -122,16 +137,38 @@ def fetch_metadata_from_mods(package_id):
         # MODS namespace
         ns = {'mods': 'http://www.loc.gov/mods/v3'}
         
-        # Extract title from top-level titleInfo only (direct child of root)
+        # Priority 1: Check for displayTitle in extension (direct child of root)
         title = None
-        title_info = root.find('mods:titleInfo', ns)
-        if title_info is not None:
-            title_parts = []
-            for child in title_info:
-                if child.text and child.text.strip():
-                    title_parts.append(child.text.strip())
-            if title_parts:
-                title = html.escape(' '.join(title_parts))
+        extension_elem = root.find('mods:extension', ns)
+        if extension_elem is not None:
+            display_title_elem = extension_elem.find('displayTitle')
+            if display_title_elem is not None and display_title_elem.text:
+                title = html.escape(display_title_elem.text.strip())
+        
+        # Priority 2: If no displayTitle, check for titleInfo elements
+        if title is None:
+            # Find regular titleInfo (no type attribute) - direct child of root
+            regular_title_info = None
+            alternative_title_info = None
+            
+            for title_info in root.findall('mods:titleInfo', ns):
+                type_attr = title_info.get('type')
+                if type_attr == 'alternative':
+                    alternative_title_info = title_info
+                elif type_attr is None:
+                    regular_title_info = title_info
+            
+            # Extract titles from titleInfo elements
+            regular_title = extract_title_from_titleinfo(regular_title_info)
+            alternative_title = extract_title_from_titleinfo(alternative_title_info)
+            
+            # Combine titles based on what's available
+            if alternative_title and regular_title:
+                title = html.escape(f"{alternative_title} - {regular_title}")
+            elif regular_title:
+                title = html.escape(regular_title)
+            elif alternative_title:
+                title = html.escape(alternative_title)
         
         # Extract publisher
         publisher = None
