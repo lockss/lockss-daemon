@@ -138,12 +138,13 @@ def fetch_metadata_from_mods(package_id):
         ns = {'mods': 'http://www.loc.gov/mods/v3'}
         
         # Priority 1: Check for displayTitle in extension (direct child of root)
+        # Loop through all extension blocks to find one with displayTitle
         title = None
-        extension_elem = root.find('mods:extension', ns)
-        if extension_elem is not None:
+        for extension_elem in root.findall('mods:extension', ns):
             display_title_elem = extension_elem.find('displayTitle')
             if display_title_elem is not None and display_title_elem.text:
                 title = html.escape(display_title_elem.text.strip())
+                break  # Found it, stop looking
         
         # Priority 2: If no displayTitle, check for titleInfo elements
         if title is None:
