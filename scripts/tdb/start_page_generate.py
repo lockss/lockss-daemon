@@ -14,6 +14,8 @@ import csv
 import os
 import sys
 import re
+import time
+import html
 from datetime import datetime
 from urllib.parse import quote
 import requests
@@ -93,6 +95,47 @@ def parse_sitemap_urls(xml_content):
     return urls
 
 
+def extract_package_id(url):
+    """Extract package ID from GovInfo details URL."""
+    # Extract everything after the last '/'
+    parts = url.rstrip('/').split('/')
+    if parts:
+        return parts[-1]
+    return None
+
+
+def fetch_title_from_mods(package_id):
+    """Fetch title from MODS metadata file."""
+    if not package_id:
+        return None
+    
+    mods_url = f"https://www.govinfo.gov/metadata/pkg/{package_id}/mods.xml"
+    
+    try:
+        time.sleep(0.5)  # Polite delay between requests
+        response = requests.get(mods_url, timeout=30)
+        response.raise_for_status()
+        
+        # Parse MODS XML
+        root = ET.fromstring(response.text)
+        
+        # MODS namespace
+        ns = {'mods': 'http://www.loc.gov/mods/v3'}
+        
+        # Try to find title in titleInfo/title
+        title_elem = root.find('.//mods:titleInfo/mods:title', ns)
+        
+        if title_elem is not None and title_elem.text:
+            # HTML-escape the title to handle special characters
+            return html.escape(title_elem.text.strip())
+        
+        return None
+        
+    except Exception as e:
+        print(f"  Warning: Could not fetch MODS for {package_id}: {e}", file=sys.stderr)
+        return None
+
+
 def create_transformed_url(server_base, auid, original_url):
     """Create transformed URL for LOCKSS archive server."""
     encoded_auid = quote(auid, safe='')
@@ -104,24 +147,33 @@ def generate_html_page(collection_name, year, urls, server_base, auid, output_fi
     """Generate HTML manifest page."""
     collection_id, _ = parse_auid(auid)
     
-    html = f"""<!DOCTYPE html>
+    html_content = f"""<!DOCTYPE html>
 <html>
 <head>
-    <title>{collection_name} {year} 
-    LOCKSS Manifest Page</title>
+    <title>{collection_name} {year} LOCKSS Manifest Page</title>
 </head>
 <body>
-    <h1>{collection_name} {year} LOCKSS Manifest Page</h1>
+    <h1>{collection_name} {year}<br>LOCKSS Manifest Page</h1>
 
     <ul>
 """
     
     for idx, url in enumerate(urls, 1):
         transformed_url = create_transformed_url(server_base, auid, url)
-        link_text = f"{collection_id} {year} URL {idx}"
-        html += f'        <li><a href="{transformed_url}">{link_text}</a></li>\n'
+        
+        # Try to fetch title from MODS
+        package_id = extract_package_id(url)
+        title = fetch_title_from_mods(package_id)
+        
+        # Use title if found, otherwise fall back to default format
+        if title:
+            link_text = title
+        else:
+            link_text = f"{collection_id} {year} URL {idx}"
+        
+        html_content += f'        <li><a href="{transformed_url}">{link_text}</a></li>\n'
     
-    html += """    </ul>
+    html_content += """    </ul>
 
     <p>LOCKSS system has permission to collect, preserve, and serve this Archival Unit</p>
 
@@ -132,7 +184,7 @@ def generate_html_page(collection_name, year, urls, server_base, auid, output_fi
     
     try:
         with open(output_file, 'w', encoding='utf-8') as f:
-            f.write(html)
+            f.write(html_content)
         return True
     except Exception as e:
         print(f"Error writing HTML file {output_file}: {e}", file=sys.stderr)
@@ -143,7 +195,7 @@ def generate_index_page(entries, output_dir):
     """Generate index page with table of all manifest pages."""
     now = datetime.now().strftime("%a %b %d %H:%M:%S %Z %Y")
     
-    html = f"""<!DOCTYPE html>
+    html_content = f"""<!DOCTYPE html>
 <html>
 <head>
     <title>USDocs Start Pages Index</title>
@@ -178,7 +230,7 @@ def generate_index_page(entries, output_dir):
                 file_time_str = file_time.strftime("%Y-%m-%d %H:%M:%S")
                 
                 display_name = f"{entry['name']} {entry['year']}"
-                html += f"""        <tr>
+                html_content += f"""        <tr>
             <td><a href="{entry['filename']}">{display_name}</a></td>
             <td>{file_size}</td>
             <td>{file_time_str}</td>
@@ -188,14 +240,14 @@ def generate_index_page(entries, output_dir):
                 print(f"Error getting file info for {entry['filename']}: {e}", file=sys.stderr)
         else:
             display_name = f"{entry['name']} {entry['year']} (failed to fetch)"
-            html += f"""        <tr>
+            html_content += f"""        <tr>
             <td>{display_name}</td>
             <td>-</td>
             <td>-</td>
         </tr>
 """
     
-    html += """    </table>
+    html_content += """    </table>
 </body>
 </html>
 """
@@ -203,7 +255,7 @@ def generate_index_page(entries, output_dir):
     index_path = os.path.join(output_dir, 'index.html')
     try:
         with open(index_path, 'w', encoding='utf-8') as f:
-            f.write(html)
+            f.write(html_content)
         print(f"Index page created: {index_path}")
     except Exception as e:
         print(f"Error writing index page: {e}", file=sys.stderr)
