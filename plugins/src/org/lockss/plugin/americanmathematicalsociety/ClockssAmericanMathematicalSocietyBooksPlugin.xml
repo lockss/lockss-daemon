@@ -115,7 +115,11 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"^http://www\.ams\.org/books/prb/038/prb038-endmatter\.pdf$"</string>
       <!-- all content from CDN -->
       <string>1,"^https?://((fonts|ajax)\.(googleapis|gstatic)\.com|[^.]+\.(jquery|bootstrapcdn)\.com|cdn\.mathjax\.org)/."</string>
-      <string>1,"%s[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", to_https(base_url)</string>
+      <string>1,"(%s|https?://pubs\.ams\.org/)[^?]+[.](bmp|css|gif|ico|jpe?g|js|png|tif?f|eot|svg|ttf|woff.?)$", to_https(base_url)</string>
+      <string>1,"https?://pubs\.ams\.org/(css|js)/"</string>
+      <string>1,"https?://pubs\.ams\.org/browse\?.*PubSeries=%s&amp;Year=%s", collection_id, year_string</string>
+      <string>1,"https?://pubs\.ams\.org/view\?ProductCode=%s", collection_id</string>
+      <string>1,"https?://pubs\.ams\.org/ebooks/%s/year/%s/?", collection_id, year_string</string>
       <string>4,"%s",to_https(base_url) </string>
       <string>1,"%sbooks/%s/year/%s/?", to_https(base_url), collection_id, year_string</string>
       <string>1,"%sbooks/%s/[0-9.]+", to_https(base_url), collection_id</string>
@@ -195,6 +199,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>.+\.gstatic\.com</string>
       <string>.+\.bootstrapcdn\.com</string>
       <string>.+\.mathjax\.org</string>
+      <string>.+\.ams\.org</string>
     </list>
   </entry>
   <entry>
