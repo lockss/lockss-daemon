@@ -1879,26 +1879,23 @@ public class DbManager extends BaseLockssDaemonManager
     final String DEBUG_HEADER = "waitForDatabaseUpdate(): ";
     log.debug2(DEBUG_HEADER + "targetDbVersion = " + targetDbVersion);
 
-    int currentDbVersion;
+    while (true) {
+      int currentDbVersion =
+        dbManagerSql.getHighestNumberedDatabaseVersionForSubsystem(conn, EXTERNAL_DB_SUBSYSTEM);
 
-    do {
-      currentDbVersion =
-          dbManagerSql.getHighestNumberedDatabaseVersionForSubsystem(
-              conn, EXTERNAL_DB_SUBSYSTEM);
-
-      log.debug(DEBUG_HEADER + "targetDbVersion = "
-          + targetDbVersion + " > currentDbVersion = " + currentDbVersion
-          + ". Waiting for external DB setup...");
-
+      if (currentDbVersion >= targetDbVersion) {
+        log.debug2(DEBUG_HEADER + "currentDbVersion = " + currentDbVersion);
+        return currentDbVersion;
+      }
+      log.debug2(DEBUG_HEADER + "currentDbVersion = "
+                 + currentDbVersion + " < targetDbVersion = " + targetDbVersion
+                 + ". Waiting for external DB setup...");
       try {
         Thread.sleep(WAIT_FOR_EXTERNAL_SETUP_INTERVAL);
       } catch (InterruptedException ie) {
         // Expected.
       }
-    } while (currentDbVersion < targetDbVersion);
-
-    log.debug2(DEBUG_HEADER + "currentDbVersion = " + currentDbVersion);
-    return currentDbVersion;
+    }
   }
 
   /**
