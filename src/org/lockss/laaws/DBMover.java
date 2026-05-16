@@ -81,6 +81,7 @@ public class DBMover extends Worker {
 
   long srcSize;
   long dstSize;
+  long curDstSize;
 
   LockssDaemon daemon;
   DbManager dbManager;
@@ -672,8 +673,10 @@ public class DBMover extends Worker {
     protected void lockssRun() {
       while (goOn) {
         loadCurrentDatabaseSize();
+        long sleep =
+          (long)Math.round(auMover.getDbSizeCheckIntervalCurve().getY(curDstSize));
         try {
-          sleep(DBSIZE_CHECK_INTERVAL);
+          Thread.sleep(sleep);
         } catch (InterruptedException e) {
           // just wakeup and check for exit
         }
@@ -682,9 +685,9 @@ public class DBMover extends Worker {
 
     private void loadCurrentDatabaseSize() {
       try {
-        long curSize = getDatabaseSize(host, port, user, password, dbName);
-        log.info(String.format("Destination database size = %d", curSize));
-        auMover.dbBytesCopied = curSize - dstSize;
+        curDstSize = getDatabaseSize(host, port, user, password, dbName);
+        log.info(String.format("Destination database size = %d", curDstSize));
+        auMover.dbBytesCopied = curDstSize - dstSize;
       } catch (MigrationTaskFailedException e) {
         log.warning("Couldn't get current DB size for progress display", e);
       }
