@@ -642,6 +642,12 @@ public class FetchTimeExporter {
       throw new DbException("Null connection");
     }
 
+    long origLastMdItemSeq = lastMdItemSeq;
+    if (isRealMigrationMode()) {
+      log.debug2(DEBUG_HEADER + "Fetch time exporter skipped in migration mode");
+      return origLastMdItemSeq;
+    }
+
     String message = "Cannot get the data to be exported";
     boolean hasError = false;
 
@@ -659,9 +665,6 @@ public class FetchTimeExporter {
 
       // Get the data to be exported.
       results = dbManager.executeQuery(getExportData);
-      if (isRealMigrationMode()) {
-        return lastMdItemSeq;
-      }
 
       // Loop through all the data to be exported.
       while (results.next()) {
@@ -792,7 +795,7 @@ public class FetchTimeExporter {
 	}
       }
       if (isRealMigrationMode()) {
-        return lastMdItemSeq;
+        return origLastMdItemSeq;
       }
     } catch (SQLException sqle) {
       log.error(message, sqle);
