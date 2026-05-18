@@ -395,9 +395,9 @@ public class V2AuMover {
     // below 1G: 2 sec
     "[1_000_000_000,2s]," +
     // 1G-10G: 10 sec
-    "[1_000_000_000,2s],[10_000_000_000,10s]," +
+    "[1_000_000_000,10s],[10_000_000_000,10s]," +
     // above 10G, 30 sec
-    "[10_000_000_000,20s]";
+    "[10_000_000_000,30s]";
 
   /** The interval at which to fetch disk usage stats from V2, if not
    * triggered by amount of data xferred */

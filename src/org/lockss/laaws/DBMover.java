@@ -52,7 +52,6 @@ import org.lockss.util.urlconn.*;
 import static org.lockss.laaws.MigrationConstants.*;
 
 public class DBMover extends Worker {
-  private static final long DBSIZE_CHECK_INTERVAL = 2*Constants.SECOND;
   private static final int IOBUF_SIZE = 256 * 1024;
   // Number of stderr/stdout lines retained per process for error reporting.
   // Older lines are silently discarded once the buffer is full.
