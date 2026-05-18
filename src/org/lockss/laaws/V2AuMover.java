@@ -387,6 +387,18 @@ public class V2AuMover {
     // above 100M0: 100K
     "[100000000,100000]";
 
+  /** Curve controlling the interval at which to check V2's DB size,
+   * as a function of the amount of current size */
+  public static final String PARAM_DB_SIZE_CHECK_CURVE =
+    PREFIX + "diskSpaceBytesCurve";
+  public static final String DEFAULT_DB_SIZE_CHECK_CURVE =
+    // below 1G: 2 sec
+    "[1_000_000_000,2s]," +
+    // 1G-10G: 10 sec
+    "[1_000_000_000,10s],[10_000_000_000,10s]," +
+    // above 10G, 30 sec
+    "[10_000_000_000,30s]";
+
   /** The interval at which to fetch disk usage stats from V2, if not
    * triggered by amount of data xferred */
   public static final String PARAM_DISK_SPACE_INTERVAL =
@@ -520,6 +532,8 @@ public class V2AuMover {
   private boolean excludeQueuedTasks = DEFAULT_EXCLUDE_QUEUED_TASKS;
   private CompoundLinearSlope diskSpaceXferBytesCurve;
   private CompoundLinearSlope diskSpaceXferArtifactsCurve;
+  private CompoundLinearSlope dbSizeCheckIntervalCurve;
+
   private long nextDiskSpaceFetchTime;  // next time to fetch disk space
   private long nextDiskSpaceFetchBytes; // next byte count to fetch disk space
   private long nextDiskSpaceFetchArtifacts; // next artifact count to fetch disk space
@@ -735,6 +749,17 @@ public class V2AuMover {
           log.warning("Malformed diskSpaceArtifactsCurve: " + curve, e);
           diskSpaceXferArtifactsCurve =
             new CompoundLinearSlope(DEFAULT_DISK_SPACE_ARTIFACTS_CURVE);
+        }
+      }
+      if (changedKeys.contains(PARAM_DB_SIZE_CHECK_CURVE)) {
+        String curve = config.get(PARAM_DB_SIZE_CHECK_CURVE,
+                                  DEFAULT_DB_SIZE_CHECK_CURVE);
+        try {
+          dbSizeCheckIntervalCurve = new CompoundLinearSlope(curve);
+        } catch (Exception e) {
+          log.warning("Malformed diskSpaceBytesCurve: " + curve, e);
+          diskSpaceXferBytesCurve =
+            new CompoundLinearSlope(DEFAULT_DB_SIZE_CHECK_CURVE);
         }
       }
 
@@ -2360,6 +2385,10 @@ public class V2AuMover {
 
   public long getDbCopyTimeout() {
     return dbCopyTimeout;
+  }
+
+  public CompoundLinearSlope getDbSizeCheckIntervalCurve() {
+    return dbSizeCheckIntervalCurve;
   }
 
   //////////////////////////////////////////////////////////////////////
