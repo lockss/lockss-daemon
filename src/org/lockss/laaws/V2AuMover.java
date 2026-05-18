@@ -393,11 +393,11 @@ public class V2AuMover {
     PREFIX + "diskSpaceBytesCurve";
   public static final String DEFAULT_DB_SIZE_CHECK_CURVE =
     // below 1G: 2 sec
-    "[1_000_000_000,2s]," +
+    "[1000000000,2s]," +
     // 1G-10G: 10 sec
-    "[1_000_000_000,10s],[10_000_000_000,10s]," +
+    "[1000000000,10s],[10000000000,10s]," +
     // above 10G, 30 sec
-    "[10_000_000_000,30s]";
+    "[10000000000,30s]";
 
   /** The interval at which to fetch disk usage stats from V2, if not
    * triggered by amount of data xferred */
