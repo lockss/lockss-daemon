@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = SAGE IOS ;
+    info[tester] = 4 ;
+    info[platform] = Source
+  >
+    hidden[proxy] = DIRECT
+
+  {
+
+    title <
+      name = SAGE IOS Publications Books Source Content
+    >
+
+    plugin = org.lockss.plugin.clockss.sageios.ClockssSageIosBooksSourcePlugin
+    implicit < status ; status2 ; year ; name ; param[year] >
+    {
+    param[base_url] = https://clockss-test.lockss.org/sourcefiles/sage-iosbooks-released/
+
+    au < expected ; exists ; 2026 ; SAGE IOS Books Source Content 2026_01 ; 2026_01 >
+
+    }
+  }
+}
