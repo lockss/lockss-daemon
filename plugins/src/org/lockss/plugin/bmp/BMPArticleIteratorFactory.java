@@ -58,13 +58,13 @@ public class BMPArticleIteratorFactory implements ArticleIteratorFactory, Articl
     protected static Logger log = Logger.getLogger(BMPArticleIteratorFactory.class);
 
     private static final String ROOT_TEMPLATE = "\"%s\", base_url";
-    private static final String PATTERN_TEMPLATE = "\"%s\", base_url";
+    private static final String PATTERN_TEMPLATE = "\"%s(abstract|full-text-pdf)/[0-9]+/(eng|tur)\", base_url";
 
-    protected static final Pattern PDF_PATTERN = Pattern.compile("/content/pdf/([\\d]+-[\\dXx]+)-([\\d]+)-([\\dS]+)(-([\\dA-Z]+))?\\.pdf$", Pattern.CASE_INSENSITIVE);
-    protected static final Pattern ABSTRACT_PATTERN = Pattern.compile("/content/pdf/([\\d]+-[\\dXx]+)-([\\d]+)-([\\dS]+)(-([\\dA-Z]+))?\\.pdf$", Pattern.CASE_INSENSITIVE);
+    protected static final Pattern PDF_PATTERN = Pattern.compile("/full-text-pdf/([0-9]+)/(eng|tur)$", Pattern.CASE_INSENSITIVE);
+    protected static final Pattern ABSTRACT_PATTERN = Pattern.compile("/abstract/([0-9]+)/(eng|tur)$", Pattern.CASE_INSENSITIVE);
 
-    private static final List<String> PDF_REPLACEMENTS = new ArrayList<String>();
-    private static final List<String> ABSTRACTS_REPLACEMENTS = new ArrayList<String>();
+    private static final String PDF_REPLACEMENT ="/full-text-pdf/$1/$2";
+    private static final String ABSTRACT_REPLACEMENT = "/abstract/$1/$2";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
@@ -75,15 +75,15 @@ public class BMPArticleIteratorFactory implements ArticleIteratorFactory, Articl
         PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
 
         builder.addAspect(PDF_PATTERN,
-        PDF_REPLACEMENTS,
+        PDF_REPLACEMENT,
         ArticleFiles.ROLE_FULL_TEXT_PDF);
 
         builder.addAspect(ABSTRACT_PATTERN,
-        ABSTRACTS_REPLACEMENTS,
+        ABSTRACT_REPLACEMENT,
         ArticleFiles.ROLE_ABSTRACT);
 
-        builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT, ArticleFiles.ROLE_FULL_TEXT_HTML);
-        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_HTML, ArticleFiles.ROLE_FULL_TEXT_PDF, ArticleFiles.ROLE_ABSTRACT);
+        builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT);
+        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF, ArticleFiles.ROLE_ABSTRACT);
 
         return builder.getSubTreeArticleIterator();
     }

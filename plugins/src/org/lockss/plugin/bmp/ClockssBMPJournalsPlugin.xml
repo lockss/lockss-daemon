@@ -59,8 +59,8 @@ POSSIBILITY OF SUCH DAMAGE.
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
       <org.lockss.daemon.ConfigParamDescr>
-        <key>volume</key>
-        <displayName>Volume Number</displayName>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
         <type>1</type>
         <size>20</size>
         <definitional>true</definitional>
@@ -70,7 +70,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_name</string>
-    <string>"Baycinar Medical Publishing Journals Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume</string>
+    <string>"Baycinar Medical Publishing Journals Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -79,7 +79,8 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>4,"^%s", base_url</string>
       <!--Exclude issue level pages found on site, we will only be using manifest issue page. Otherwise, we risk overcrawling.-->
       <string>2,"^%sissue/[0-9]+", base_url</string>
-      <string>1,"^%smanifest/%s$", base_url, volume</string>
+      <string>2,"^%ssimilar-articles/[0-9]+", base_url</string>
+      <string>1,"^%smanifest/%s$", base_url, volume_name</string>
       <string>1,"^%smanifest/issue/[0-9]+$", base_url</string>
       <string>1,"^%sabstract/[0-9]+/(eng|tur)$", base_url</string>
       <string>1,"^%sfull-text-pdf/[0-9]+/(eng|tur)", base_url</string>
@@ -87,14 +88,14 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>"%smanifest/%s", base_url, volume</string>
+    <string>"%smanifest/%s", base_url, volume_name</string>
   </entry>
   <entry>
   	<string>au_feature_urls</string>
   	<map>
 	  <entry>
 	    <string>au_volume</string>
-	    <string>"%smanifest/%s", base_url, volume</string>
+	    <string>"%smanifest/%s", base_url, volume_name</string>
 	  </entry>
       <entry>
 	    <string>au_issue</string>
@@ -107,6 +108,27 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>"^%sfull-text-pdf/[0-9]+/(eng|tur)", to_https(base_url)</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.bmp.BMPHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bmp.BMPArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.bmp.BMPArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.bmp.BMPHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
