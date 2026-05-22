@@ -75,7 +75,7 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,"^%s.*\.(bmp|css|pdf|jpg|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)$", base_url</string>
+      <string>1,"^%s.*\.(bmp|css|pdf|jpg|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)(\?v=[0-9\.]+)?$", base_url</string>
       <string>4,"^%s", base_url</string>
       <!--Exclude issue level pages found on site, we will only be using manifest issue page. Otherwise, we risk overcrawling.-->
       <string>2,"^%sissue/[0-9]+", base_url</string>
