@@ -509,7 +509,6 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
             NodeList children = parentDiv.getChildren();
             for(int i = 0; i < children.size(); i++){
               if(children.elementAt(i) instanceof HeadingTag){
-                log.debug3("text is " + children.elementAt(i).toPlainTextString() + " and position is " + i);
                 if("Front Matter".equals(children.elementAt(i).toPlainTextString())){
                   for(int j = 0; j < 3; j++){
                     int temp = i + j;
@@ -517,6 +516,17 @@ public class UbiquityPartnerNetworkHtmlLinkRewriterFactory implements LinkRewrit
                     children.remove(temp);
                   }
                 }
+              }else if(children.elementAt(i) instanceof TableTag){
+                TableTag table = (TableTag)children.elementAt(i);
+                for(int j = 0; j < table.getChildCount(); j++){
+                  if(table.getChild(j).toPlainTextString().contains("Journal URL") || table.getChild(j).toPlainTextString().contains("Publisher Email")){
+                    log.debug3("Removing row: " + table.getChild(j).toPlainTextString());
+                    table.removeChild(j);
+                  }
+                }
+              }
+              else{
+
               }
             }
           }
