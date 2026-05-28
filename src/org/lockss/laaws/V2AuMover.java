@@ -119,6 +119,26 @@ public class V2AuMover {
 
   public static final String EXEC_PREFIX = PREFIX + "executor.";
 
+  /** Select which AUs to use bulk mode for index updates. */
+  enum UseBulkMode {
+    NEVER,
+    ALWAYS,
+    NON_SOURCE;        // only for non-source AUs
+  }
+
+  /**
+   * Use Buik mode ALWAYS, NEVER, or only for NON_SOURCE content.
+   * Source AUs typically have a relatively small number of huge files.
+   * The benefits of bulk mode are much less because the index update
+   * time isn't significant, but the aggregate transfer rate is much
+   * higher than typical harvest AUs, which can cause the repo's
+   * background temp -> perm WARC copies to fall behind on a slow (e.g.,
+   * network) filesystem, causing finishBulk to block for a long time
+   * (days).
+   */
+  public static final String PARAM_USE_BULK_MODE = PREFIX + "useBulkMode";
+  public static final UseBulkMode DEFAULT_USE_BULK_MODE = UseBulkMode.NON_SOURCE;
+
   /**
    * Executor Spec:
    * <tt><i>queue-max</i>;<i>thread-max</i></tt> or
@@ -528,6 +548,7 @@ public class V2AuMover {
 
   private boolean isCompareBytes;
   private UseFetchUrl useFetchUrl = DEFAULT_USE_FETCH_URL;
+  private UseBulkMode useBulkMode = DEFAULT_USE_BULK_MODE;
   private boolean isShowInstrumentation = DEFAULT_INSTRUMENTATION;
   private long diskSpaceFetchInterval = DEFAULT_DISK_SPACE_INTERVAL;
   private boolean excludeQueuedTasks = DEFAULT_EXCLUDE_QUEUED_TASKS;
@@ -685,6 +706,9 @@ public class V2AuMover {
       useFetchUrl = config.getEnumIgnoreCase(UseFetchUrl.class,
                                              PARAM_USE_FETCH_URL,
                                              DEFAULT_USE_FETCH_URL);
+      useBulkMode = config.getEnumIgnoreCase(UseBulkMode.class,
+                                             PARAM_USE_BULK_MODE,
+                                             DEFAULT_USE_BULK_MODE);
       isShowInstrumentation =
         config.getBoolean(PARAM_INSTRUMENTATION, DEFAULT_INSTRUMENTATION);
 
@@ -1476,7 +1500,7 @@ public class V2AuMover {
         log.debug("Enqueueing: " + auName);
         // Bulk mode works correctly only if the AU is completely absent
         // from the V2 repo
-        if (!existsInV2(au)) {
+        if (useBulkMode(au)) {
           // Might be better to delay startBulk() until first copy task runs
           try {
             startBulk(namespace, auStat.getAuId());
@@ -1501,6 +1525,18 @@ public class V2AuMover {
         setFailed(true);
       }
       break;
+    }
+  }
+
+  boolean useBulkMode(ArchivalUnit au) {
+    if (existsInV2(au)) {
+      return false;
+    }
+    switch (useBulkMode) {
+    case NEVER: return false;
+    case ALWAYS: return true;
+    case NON_SOURCE: return !au.isBulkContent();
+    default: return false;
     }
   }
 
