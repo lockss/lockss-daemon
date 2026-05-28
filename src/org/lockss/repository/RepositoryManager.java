@@ -203,6 +203,8 @@ public class RepositoryManager
 	  moveAuDir(event, au);
 	}};
     pluginMgr.registerAuEventHandler(auEventHandler);
+
+    resetConfig();        // ensure migration-related params processed
   }
 
   /** Optionally rename the repository dir(s) belonging to a deleted AU to
@@ -443,20 +445,22 @@ public class RepositoryManager
         deleteThreadDeadline.expire();
       }
 
-      if (changedKeys.contains(MigrationManager.PARAM_IS_IN_MIGRATION_MODE) ||
-          changedKeys.contains(MigrateContent.PARAM_DELETE_AFTER_MIGRATION) ||
-          changedKeys.contains(PARAM_MOVE_DELETED_AUS_TO)) {
+      if (isInited()) {
+        if (changedKeys.contains(MigrationManager.PARAM_IS_IN_MIGRATION_MODE) ||
+            changedKeys.contains(MigrateContent.PARAM_DELETE_AFTER_MIGRATION) ||
+            changedKeys.contains(PARAM_MOVE_DELETED_AUS_TO)) {
 
-        boolean deleteAusAfterMigration = config.getBoolean(
-            MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
-            MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
+          boolean deleteAusAfterMigration =
+            config.getBoolean(MigrateContent.PARAM_DELETE_AFTER_MIGRATION,
+                              MigrateContent.DEFAULT_DELETE_AFTER_MIGRATION);
 
-        if (getDaemon().getMigrationManager().isRealMigrationMode()
-            && deleteAusAfterMigration
-            && !StringUtil.isNullString(paramMoveDeletedAusTo)) {
-          startOrKickDeleteAusThread();
-        } else {
-          stopDeleteAusThread();
+          if (getDaemon().getMigrationManager().isRealMigrationMode()
+              && deleteAusAfterMigration
+              && !StringUtil.isNullString(paramMoveDeletedAusTo)) {
+            startOrKickDeleteAusThread();
+          } else {
+            stopDeleteAusThread();
+          }
         }
       }
     }
