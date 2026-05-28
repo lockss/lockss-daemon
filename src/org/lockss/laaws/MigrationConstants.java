@@ -60,6 +60,12 @@ public class MigrationConstants {
   public static final boolean V2_DEFAULT_IS_IN_MIGRATION_MODE = false;
   public static final String V2_PARAM_ACTUAL_V3_LCAP_PORT =
     Configuration.PREFIX + "config.actualV3LcapPort";
+  public static final String V2_PARAM_PROXY_IN_MIGRATION_MODE =
+    Configuration.PREFIX + "config.proxyInMigrationMode";
+  public static final boolean V2_DEFAULT_PROXY_IN_MIGRATION_MODE = false;
+  public static final String V2_PARAM_MIGRATION_PROXY_PORT =
+    Configuration.PREFIX + "config.migrationProxyPort";
+  public static final int V2_DEFAULT_MIGRATION_PROXY_PORT = 8083;
 
   public static final String V2_TARGET_DB_VERSION = "30";
 

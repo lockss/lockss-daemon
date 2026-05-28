@@ -53,6 +53,7 @@ import org.mortbay.http.HttpRequest;
 import javax.servlet.ServletException;
 import java.io.*;
 import java.net.*;
+import java.util.*;
 
 import static org.lockss.laaws.MigrationConstants.*;
 
@@ -808,16 +809,47 @@ public class MigrateSettings extends LockssServlet {
                                V2_DEFAULT_CONTENTSERVLET_PORT));
 
     // LCAP forwarding settings
+    String targetIdentity = targetCfg.get(V2_PARAM_LOCAL_V3_IDENTITY);
+    String targetIp = null;
     int targetLcapPort = targetCfg.getInt(V2_PARAM_ACTUAL_V3_LCAP_PORT, -1);
     if (targetLcapPort > 0) {
-      String targetIdentity = targetCfg.get(V2_PARAM_LOCAL_V3_IDENTITY);      
-      String targetIp = getLcapForwardAddr(targetHost, targetIdentity,
-                                           targetCfg);
+      targetIp = getLcapForwardAddr(targetHost, targetIdentity, targetCfg);
       String migTo = IDUtil.ipAddrToKey(targetIp, targetLcapPort);
       v2Cfg.put(LcapRouter.PARAM_MIGRATE_TO, migTo);
       log.info("Configuring to forward LCAP to: " + migTo);
     } else {
       log.error("Target didn't supply " + V2_PARAM_ACTUAL_V3_LCAP_PORT);
+    }
+
+    // If V2 will route crawls back through V1's HTTP proxy during
+    // migration (so publisher allowlists keep recognizing V1's IP),
+    // ensure V1's proxy is started on the agreed port and that V2's IP
+    // is on the access list.  These v2.* keys are promoted to the
+    // unprefixed params when V1 enters migration mode (see
+    // ConfigManager.setMigrationParams).
+    if (targetCfg.getBoolean(V2_PARAM_PROXY_IN_MIGRATION_MODE,
+                             V2_DEFAULT_PROXY_IN_MIGRATION_MODE)) {
+      int proxyPort = targetCfg.getInt(V2_PARAM_MIGRATION_PROXY_PORT,
+                                       V2_DEFAULT_MIGRATION_PROXY_PORT);
+      v2Cfg.put(ProxyManager.PARAM_START, "true");
+      v2Cfg.put(ProxyManager.PARAM_PORT, String.valueOf(proxyPort));
+
+      if (targetIp == null) {
+        try {
+          targetIp = getLcapForwardAddr(targetHost, targetIdentity, targetCfg);
+        } catch (IllegalArgumentException e) {
+          log.warning("Couldn't determine V2 IP for proxy access list: " +
+                      e.getMessage());
+        }
+      }
+      if (targetIp != null) {
+        Configuration currentCfg = ConfigManager.getCurrentConfig();
+        java.util.List<String> ips = new ArrayList<String>(
+            currentCfg.getList(ProxyManager.PARAM_IP_INCLUDE));
+        ips.add(targetIp);
+        v2Cfg.put(ProxyManager.PARAM_IP_INCLUDE,
+                  StringUtil.separatedString(ips, Constants.LIST_DELIM));
+      }
     }
 
     // DbManager configuration
