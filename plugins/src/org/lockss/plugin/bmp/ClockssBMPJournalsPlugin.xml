@@ -78,7 +78,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>1,"^%s.*\.(bmp|css|pdf|jpg|gif|ico|js|jpe?g|png|tif?f|eot|svg|ttf|woff.?)(\?v=[0-9\.]+)?$", base_url</string>
       <string>4,"^%s", base_url</string>
       <!--Exclude issue level pages found on site, we will only be using manifest issue page. Otherwise, we risk overcrawling.-->
-      <string>2,"^%sissue/[0-9]+", base_url</string>
+      <string>1,"^%sissue/[0-9]+", base_url</string>
       <string>2,"^%ssimilar-articles/[0-9]+", base_url</string>
       <string>1,"^%smanifest/%s$", base_url, volume_name</string>
       <string>1,"^%smanifest/issue/[0-9]+$", base_url</string>
@@ -108,6 +108,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>"^%sfull-text-pdf/[0-9]+/(eng|tur)", to_https(base_url)</string>
     </list>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.bmp.BMPHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
