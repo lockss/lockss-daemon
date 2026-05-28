@@ -110,7 +110,8 @@ public class V2AuMover {
   public static final boolean DEFAULT_GENERATE_TEST_ERRORS = false;
 
   /**
-   * If true, lots of errors will be recorded (for testing UI)
+   * If true, compare content (if so configured) even if versions
+   * don't line up
    */
   public static final String PARAM_COMPARE_EVEN_IF_VERSION_MISMATCH = PREFIX +
     "compare_even_if_version_mismatch";
