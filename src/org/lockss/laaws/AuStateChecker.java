@@ -87,14 +87,7 @@ public class AuStateChecker extends Worker {
     try {
       String auName = au.getName();
       log.debug2("Starting AU State Check: " + auName);
-      log.info("Checking AU Agreements: " + auName);
-      checkAuAgreements(au);
-      log.info("Checking AU Suspect Urls: " + auName);
-      checkAuSuspectUrlVersions(au);
-      log.info("Checking No AU Peer Set: " + auName);
-      checkNoAuPeerSet(au);
-      log.info("Checking AU State: " + auName);
-      checkAuState(au);
+      checkAuStateObjects(au);
       log.info("Checking AU Configuration: " + auName);
       checkAuConfig(au);
     }
@@ -102,6 +95,65 @@ public class AuStateChecker extends Worker {
       String msg = "AU State Check failed: " + ex.getMessage();
       log.error(msg, ex);
       task.addError(msg);
+    }
+  }
+
+  /**
+   * Check the AU state objects that must be validated before the AU config.
+   */
+  void checkAuStateObjects(ArchivalUnit au) {
+    log.info("Checking AU Agreements: " + au.getName());
+    checkAuAgreements(au);
+    log.info("Checking AU Suspect Urls: " + au.getName());
+    checkAuSuspectUrlVersions(au);
+    log.info("Checking No AU Peer Set: " + au.getName());
+    checkNoAuPeerSet(au);
+    log.info("Checking AU State: " + au.getName());
+    checkAuState(au);
+  }
+
+  /**
+   * Check the AU configuration after the other AU state objects have been verified.
+   */
+  void checkAuConfig(ArchivalUnit au) {
+    AuConfiguration v2Config;
+    String auName = au.getName();
+    String err = null;
+    Configuration v1 = au.getConfiguration().copy();
+    v1.remove(PluginManager.AU_PARAM_REPOSITORY);
+    AuConfiguration v1Config = new AuConfiguration().auId(au.getAuId());
+    try {
+      if (v1 != null) {
+        v1.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
+            .forEach(key -> v1Config.putAuConfigItem(key, v1.get(key)));
+        v2Config = cfgAusApiClient.getAuConfig(au.getAuId());
+        v2Config.getAuConfig().remove(PluginManager.AU_PARAM_REPOSITORY);
+        if (v2Config == null) {
+          if (!v1Config.getAuConfig().isEmpty()) {
+            err = "AU not configured in V2: " + auName;
+            log.error(err);
+          }
+        } else if (v2Config.equals(v1Config)) {
+          log.info("AU Config is the same");
+        } else {
+          if (log.isDebug()) {
+            log.debug("AuConfiguration v1Bean: " + v1Config.toString());
+            log.debug("AuConfiguration v2Bean: "+ v2Config.toString());
+          }
+          err = "AU Configuration mismatch: " + auName +
+            ": V1: " + v1Config + ", V2: " + v2Config;
+          log.error(err);
+        }
+      }
+    }
+    catch (Exception ex) {
+      err = "Attempt to check v2 AU configuration failed: " + auName +
+        ": " + ex.getMessage();
+      log.error(err, ex);
+    }
+    if (err != null) {
+      task.addError(err);
+      //what should we do to propagate this up.
     }
   }
 
@@ -221,49 +273,6 @@ public class AuStateChecker extends Worker {
       task.addError(err);
     }
   }
-
-  private void checkAuConfig(ArchivalUnit au) {
-    AuConfiguration v2Config;
-    String auName = au.getName();
-    String err = null;
-    Configuration v1 = au.getConfiguration().copy();
-    v1.remove(PluginManager.AU_PARAM_REPOSITORY);
-    AuConfiguration v1Config = new AuConfiguration().auId(au.getAuId());
-    try {
-      if (v1 != null) {
-        v1.keySet().stream().filter(key -> !key.equalsIgnoreCase("reserved.repository"))
-            .forEach(key -> v1Config.putAuConfigItem(key, v1.get(key)));
-        v2Config = cfgAusApiClient.getAuConfig(au.getAuId());
-        v2Config.getAuConfig().remove(PluginManager.AU_PARAM_REPOSITORY);
-        if (v2Config == null) {
-          if (!v1Config.getAuConfig().isEmpty()) {
-            err = "AU not configured in V2: " + auName;
-            log.error(err);
-          }
-        } else if (v2Config.equals(v1Config)) {
-          log.info("AU Config is the same");
-        } else {
-          if (log.isDebug()) {
-            log.debug("AuConfiguration v1Bean: " + v1Config.toString());
-            log.debug("AuConfiguration v2Bean: "+ v2Config.toString());
-          }
-          err = "AU Configuration mismatch: " + auName +
-            ": V1: " + v1Config + ", V2: " + v2Config;
-          log.error(err);
-        }
-      }
-    }
-    catch (Exception ex) {
-      err = "Attempt to check v2 AU configuration failed: " + auName +
-        ": " + ex.getMessage();
-      log.error(err, ex);
-    }
-    if (err != null) {
-      task.addError(err);
-      //what should we do to propagate this up.
-    }
-  }
-
 
   private void checkAuState(ArchivalUnit au) {
     AuState v1 = AuUtil.getAuState(au);

@@ -47,7 +47,6 @@ public class MigrationTask {
     COPY_CU_VERSIONS,
     CHECK_CU_VERSIONS,
     COPY_AU_STATE,
-    CHECK_AU_STATE,
     FINISH_AU_BULK,
     FINISH_ALL;
 
@@ -57,7 +56,6 @@ public class MigrationTask {
       COPY_CU_VERSIONS.phase = V2AuMover.Phase.COPY;
       CHECK_CU_VERSIONS.phase = V2AuMover.Phase.VERIFY;
       COPY_AU_STATE.phase = V2AuMover.Phase.COPY_STATE;
-      CHECK_AU_STATE.phase = V2AuMover.Phase.CHECK_STATE;
       FINISH_AU_BULK.phase = V2AuMover.Phase.INDEX;
     }
 
@@ -91,9 +89,7 @@ public class MigrationTask {
     case CHECK_CU_VERSIONS:
       return "Verify " + cu.getUrl();
     case COPY_AU_STATE:
-      return "Copy state " + au.getName();
-    case CHECK_AU_STATE:
-      return "Verify state " + au.getName();
+      return "Copy/check state " + au.getName();
     case FINISH_AU_BULK:
       return "Finish bulk " + au.getName();
     case FINISH_ALL:
@@ -156,11 +152,6 @@ public class MigrationTask {
   public static MigrationTask copyAuState(V2AuMover mover, ArchivalUnit au) {
     return new MigrationTask(mover, TaskType.COPY_AU_STATE)
       .setAu(au);
-  }
-
-  public static MigrationTask checkAuState(V2AuMover mover, ArchivalUnit au) {
-    return new MigrationTask(mover, TaskType.CHECK_AU_STATE)
-        .setAu(au);
   }
 
   public static MigrationTask finishAuBulk(V2AuMover mover, ArchivalUnit au) {

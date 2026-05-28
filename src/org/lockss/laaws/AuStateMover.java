@@ -70,16 +70,23 @@ public class AuStateMover extends Worker {
     log.debug2("Starting AU State Mover: ");
     String auName = au.getName();
     log.info("Moving AU State: " + auName);
-    moveAuState(au);
-    log.info("Moving AU Agreements: " + auName);
-    moveAuAgreements(au);
-    log.info("Moving AU Suspect Urls: " + auName);
-    moveAuSuspectUrlVersions(au);
-    log.info("Moving No AU Peer Set: " + auName);
-    moveNoAuPeerSet(au);
-    //This needs to be last
+    moveAuStateObjects(au);
     log.info("Moving AU Configuration: " + auName);
     moveAuConfig(au);
+  }
+
+  /**
+   * Copy the AU state objects that must be stored before the AU config.
+   */
+  void moveAuStateObjects(ArchivalUnit au) {
+    log.info("Moving AU Agreements: " + au.getName());
+    moveAuAgreements(au);
+    log.info("Moving AU Suspect Urls: " + au.getName());
+    moveAuSuspectUrlVersions(au);
+    log.info("Moving No AU Peer Set: " + au.getName());
+    moveNoAuPeerSet(au);
+    log.info("Moving AU State: " + au.getName());
+    moveAuState(au);
   }
 
   /**
@@ -87,7 +94,7 @@ public class AuStateMover extends Worker {
    *
    * @param au The ArchivalUnit whose configuration is to be move
    */
-  private void moveAuConfig(ArchivalUnit au) {
+  void moveAuConfig(ArchivalUnit au) {
     Configuration v1config = au.getConfiguration();
     AuConfiguration v2config = new AuConfiguration().auId(au.getAuId());
     String auName = au.getName();

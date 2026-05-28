@@ -178,18 +178,11 @@ public class V2AuMover {
   public static final String DEFAULT_INDEX_EXECUTOR_SPEC = "50;5";
 
   /**
-   * State copy Executor, runs AU State copy.
+   * State Executor, runs AU state processing.
    */
   public static final String PARAM_STATE_COPY_EXECUTOR_SPEC =
     EXEC_PREFIX + "stateCopy.spec";
   public static final String DEFAULT_STATE_COPY_EXECUTOR_SPEC = "50;10";
-
-  /**
-   * State verify Executor, runs AU State verify.
-   */
-  public static final String PARAM_STATE_VERIFY_EXECUTOR_SPEC =
-    EXEC_PREFIX + "stateVerify.spec";
-  public static final String DEFAULT_STATE_VERIFY_EXECUTOR_SPEC = "50;10";
 
   /**
    * Misc Executor, runs finishall.
@@ -573,7 +566,6 @@ public class V2AuMover {
   private ThreadPoolExecutor copyExecutor;
   private ThreadPoolExecutor verifyExecutor;
   private ThreadPoolExecutor stateCopyExecutor;
-  private ThreadPoolExecutor stateVerifyExecutor;
   private ThreadPoolExecutor miscExecutor;
   private ThreadPoolExecutor indexExecutor;
   private long executorRetryInterval;
@@ -717,10 +709,6 @@ public class V2AuMover {
         createOrReConfigureExecutor(stateCopyExecutor, config,
                                     PARAM_STATE_COPY_EXECUTOR_SPEC,
                                     DEFAULT_STATE_COPY_EXECUTOR_SPEC);
-      stateVerifyExecutor =
-        createOrReConfigureExecutor(stateVerifyExecutor, config,
-                                    PARAM_STATE_VERIFY_EXECUTOR_SPEC,
-                                    DEFAULT_STATE_VERIFY_EXECUTOR_SPEC);
       miscExecutor = createOrReConfigureExecutor(miscExecutor, config,
                                                  PARAM_MISC_EXECUTOR_SPEC,
                                                  DEFAULT_MISC_EXECUTOR_SPEC);
@@ -1533,8 +1521,7 @@ public class V2AuMover {
     RETRY("Retrying failed copies", "Retried"),
     INDEX("Indexing"),
     VERIFY("Checking", "Checked"),
-    COPY_STATE("Copying State"),
-    CHECK_STATE("Checking State"),
+    COPY_STATE("Processing State", "Processed"),
     FINISH("Finishing"),
     DONE(""),                           // Last phase
     ABORT("Aborted"),
@@ -1573,7 +1560,7 @@ public class V2AuMover {
   Map<Phase,PD> pdMap;
 
   Phase firstStatePhase() {
-    return opType.isCopy() ? Phase.COPY_STATE : Phase.CHECK_STATE;
+    return Phase.COPY_STATE;
   }
 
   void initPhaseMap() {
@@ -1587,8 +1574,7 @@ public class V2AuMover {
                               opType.isVerify() ? Phase.VERIFY : firstStatePhase()),
           Phase.VERIFY, new PD(Action.EnqVerify, verifyIterExecutor,
                                firstStatePhase()),
-          Phase.COPY_STATE, new PD(Action.EnqCopyState, null, Phase.CHECK_STATE),
-          Phase.CHECK_STATE, new PD(Action.EnqCheckState, null, Phase.FINISH),
+          Phase.COPY_STATE, new PD(Action.EnqCopyState, null, Phase.FINISH),
           Phase.FINISH, new PD(Action.FinishAu, null, Phase.DONE)
           );
   }
@@ -1704,7 +1690,7 @@ public class V2AuMover {
 
   enum Action {
     EnqCopy, EnqRetry, EnqVerify,
-    EnqCopyState, EnqCheckState,
+    EnqCopyState,
     EnqIndex, FinishAu
   }
 
@@ -1730,12 +1716,8 @@ public class V2AuMover {
       }
       break;
     case EnqCopyState:
-      log.debug2("Enqueueing copy AU state: " + auName);
+      log.debug2("Enqueueing AU state processing: " + auName);
       enqueueTask(MigrationTask.copyAuState(this, au), auStat, stateCopyExecutor);
-      break;
-    case EnqCheckState:
-      log.debug2("Enqueueing check AU state: " + auName);
-      enqueueTask(MigrationTask.checkAuState(this, au), auStat, stateVerifyExecutor);
       break;
     case EnqIndex:
       if (auStat.isBulk()) {
@@ -1861,23 +1843,16 @@ public class V2AuMover {
           if (auStat.isAbort()) {
             break;
           }
-          log.debug2("Moving AU state: " + auStat.getAuName());
+          log.debug2("Processing AU state: " + auStat.getAuName());
           long startS = now();
           AuStateMover stateMover = new AuStateMover(v2Mover, task);
-          stateMover.run();
+          AuStateChecker stateChecker = new AuStateChecker(v2Mover, task);
+          stateMover.moveAuStateObjects(auStat.getAu());
+          stateChecker.checkAuStateObjects(auStat.getAu());
+          stateMover.moveAuConfig(auStat.getAu());
+          stateChecker.checkAuConfig(auStat.getAu());
           task.getCounters().add(CounterType.STATE_TIME, now() - startS);
-          log.debug2("Moved AU state: " + auStat.getAuName());
-          break;
-        case CHECK_AU_STATE:
-          if (auStat.isAbort()) {
-            break;
-          }
-          log.debug2("Checking AU state: " + auStat.getAuName());
-          long startCH = now();
-          AuStateChecker asChecker = new AuStateChecker(v2Mover, task);
-          asChecker.run();
-          task.getCounters().add(CounterType.STATE_TIME, now() - startCH);
-          log.debug2("Checked AU state: " + auStat.getAuName());
+          log.debug2("Processed AU state: " + auStat.getAuName());
           break;
         case FINISH_ALL:
           log.debug2("FINISH_ALL: wait");
@@ -2681,7 +2656,6 @@ public class V2AuMover {
     res.add(getExecutorStats("Verify", verifyExecutor));
     res.add(getExecutorStats("Index", indexExecutor));
     res.add(getExecutorStats("StateCopy", stateCopyExecutor));
-    res.add(getExecutorStats("StateVerify", stateVerifyExecutor));
     res.add(getExecutorStats("Misc", miscExecutor));
     return res;
   }
@@ -2949,7 +2923,6 @@ public class V2AuMover {
       case COPY:
       case VERIFY:
       case COPY_STATE:
-      case CHECK_STATE:
       case INDEX:
         if (!auStat.hasStarted(phase)) {
           if (excludeQueued) {
