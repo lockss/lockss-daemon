@@ -28,7 +28,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/memoirs-of-museum-victoria-released/
 
     au < zapped ; finished ; 2023 ; Memoirs of Museum Victoria WARC Content 2023 ; 2023 > #New content exists
-    au < expected ; exists ; 2026 ; Memoirs of Museum Victoria WARC Content 2026 ; 2026 >
+    au < ready ; exists ; 2026 ; Memoirs of Museum Victoria WARC Content 2026 ; 2026 >
 
     }
   }
