@@ -1642,7 +1642,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Tuhinga Volume 2023 ; 2023 ; https://tuhinga.arphahub.com/ ; reingest1.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; 2024 ; Tuhinga Volume 2024 ; 2024 ; https://tuhinga.arphahub.com/ ; >
       au < crawling ; exists ; 2025 ; 2025 ; Tuhinga Volume 2025 ; 2025 ; https://tuhinga.arphahub.com/ ; >
-      au < expected ; exists ; 2026 ; 2026 ; Tuhinga Volume 2026 ; 2026 ; https://tuhinga.arphahub.com/ ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Tuhinga Volume 2026 ; 2026 ; https://tuhinga.arphahub.com/ ; >
 
   }
 
@@ -1811,7 +1811,7 @@
       au < finished ; manifest ; 2023 ; 2023 ; Journal of Applied Sports Sciences Volume 2023 ; 2023 ; https://journal.nsa.bg/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; 2024 ; Journal of Applied Sports Sciences Volume 2024 ; 2024 ; https://journal.nsa.bg/ ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 2025 ; 2025 ; Journal of Applied Sports Sciences Volume 2025 ; 2025 ; https://journal.nsa.bg/ ; >
-      au < expected ; exists ; 2026 ; 2026 ; Journal of Applied Sports Sciences Volume 2026 ; 2026 ; https://journal.nsa.bg/ ; >
+      au < manifest ; exists ; 2026 ; 2026 ; Journal of Applied Sports Sciences Volume 2026 ; 2026 ; https://journal.nsa.bg/ ; >
 
   }
 
