@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 import org.lockss.plugin.UrlFetcher.FetchResult;
+import org.lockss.plugin.base.DefaultUrlCacher;
 import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
@@ -689,6 +690,9 @@ public abstract class BaseCrawler implements Crawler {
   public UrlCacher makeUrlCacher(UrlData ud) {
     UrlCacher uc = au.makeUrlCacher(ud);
     uc.setWatchdog(wdog);
+    if (uc instanceof DefaultUrlCacher) {
+      ((DefaultUrlCacher)uc).setCrawlFacade(facade);
+    }
     return uc;
   }
   
