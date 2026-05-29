@@ -32,62 +32,121 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.bmp;
 
-
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 import java.util.regex.Pattern;
 
-import org.apache.commons.collections.MultiMap;
-import org.apache.commons.collections.map.MultiValueMap;
+import org.apache.commons.collections4.IteratorUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractorFactory;
 import org.lockss.extractor.BaseArticleMetadataExtractor;
 import org.lockss.extractor.MetadataTarget;
-import org.lockss.filter.html.HtmlTags.Article;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.ArticleIteratorFactory;
-import org.lockss.plugin.SubTreeArticleIteratorBuilder;
+import org.lockss.plugin.AuUtil;
+import org.lockss.plugin.CachedUrl;
+import org.lockss.plugin.SubTreeArticleIterator.Spec;
 import org.lockss.util.Logger;
+import org.lockss.plugin.SubTreeArticleIteratorBuilder;
 
 public class BMPArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory{
     
     protected static Logger log = Logger.getLogger(BMPArticleIteratorFactory.class);
 
-    private static final String ROOT_TEMPLATE = "\"%s\", base_url";
-    private static final String PATTERN_TEMPLATE = "\"%s(abstract|full-text-pdf)/[0-9]+/(eng|tur)\", base_url";
+    protected static Pattern TOC_PATTERN = Pattern.compile("https://agridergisi\\.com/issue/([0-9]+)$", Pattern.CASE_INSENSITIVE);
 
-    protected static final Pattern PDF_PATTERN = Pattern.compile("/full-text-pdf/([0-9]+)/(eng|tur)$", Pattern.CASE_INSENSITIVE);
-    protected static final Pattern ABSTRACT_PATTERN = Pattern.compile("/abstract/([0-9]+)/(eng|tur)$", Pattern.CASE_INSENSITIVE);
+    protected static String TOC_REPLACEMENT = "https://agridergisi\\.com/issue/$1";
 
-    private static final String PDF_REPLACEMENT ="/full-text-pdf/$1/$2";
-    private static final String ABSTRACT_REPLACEMENT = "/abstract/$1/$2";
+    protected static String ROLE_TOC = "TOC";
 
     @Override
     public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
-        SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+        ArrayList<ArticleFiles> articles = new ArrayList<>();
 
-        builder.setSpec(target,
-        ROOT_TEMPLATE,
-        PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-
-        builder.addAspect(PDF_PATTERN,
-        PDF_REPLACEMENT,
-        ArticleFiles.ROLE_FULL_TEXT_PDF);
-
-        builder.addAspect(ABSTRACT_PATTERN,
-        ABSTRACT_REPLACEMENT,
-        ArticleFiles.ROLE_ABSTRACT);
-
-        builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ArticleFiles.ROLE_ABSTRACT);
-        builder.setFullTextFromRoles(ArticleFiles.ROLE_FULL_TEXT_PDF, ArticleFiles.ROLE_ABSTRACT);
-
-        return builder.getSubTreeArticleIterator();
+        /*Find all the TOCs*/
+        SubTreeArticleIteratorBuilder sb = new SubTreeArticleIteratorBuilder(au);
+        Spec spec = new Spec();
+        spec.setPattern(TOC_PATTERN);
+        sb.setSpec(spec);
+        sb.addAspect(TOC_PATTERN, TOC_REPLACEMENT, ROLE_TOC);
+        
+        /*Parse the TOC to find all articles */
+        Iterator<ArticleFiles> tocIterator = sb.getSubTreeArticleIterator();
+        for(ArticleFiles tocAF : IteratorUtils.asIterable(tocIterator)){
+            log.debug3("I found a TOC " + tocAF.getFullTextUrl());
+            CachedUrl tocCU = tocAF.getFullTextCu();
+            parseToc(tocCU, articles, au);
+        }
+        
+        return articles.iterator();
     }
 
+
+    public void parseToc(CachedUrl tocCU, ArrayList<ArticleFiles> results, ArchivalUnit au){
+
+        CachedUrl pdfUrl = null;
+        CachedUrl abstractsUrl = null;
+        CachedUrl doisUrl = null;
+
+        try{
+            Document doc = Jsoup.parse(tocCU.getUncompressedInputStream(), AuUtil.getCharsetOrDefault(tocCU.getProperties()), tocCU.getUrl());
+            Elements articles = doc.select("div.span9>section[id*=cat]>div");
+            ArrayList<String> rolesForMetadata = new ArrayList<>();
+            for (Element article : articles) {
+                ArticleFiles af = new ArticleFiles();
+
+                Elements PDFs = article.select("ul.article-nav-bottom>li>a:contains(PDF)");
+                pdfUrl = au.makeCachedUrl("https://agridergisi.com" + PDFs.attr("href").trim());
+
+                Elements abstracts = article.select("h3>a[href*=abstract]");
+                abstractsUrl = au.makeCachedUrl("https://agridergisi.com" + abstracts.attr("href").trim());
+
+                //needs fixing
+                Elements DOIs = article.select("a[href*=doi]");
+                doisUrl = au.makeCachedUrl(DOIs.attr("href").trim());
+
+                addToListOfRoles(pdfUrl, af, ArticleFiles.ROLE_FULL_TEXT_PDF);
+                addToListOfRoles(abstractsUrl, af, ArticleFiles.ROLE_ABSTRACT);
+                addToListOfRoles(doisUrl, af, ArticleFiles.ROLE_ARTICLE_HANDLE);
+                af.setFullTextCu(pdfUrl);
+
+                if(af.getFullTextCu() == null){
+                    log.debug3("There is no full text. The abstract CU is " + abstractsUrl.toString());
+                }
+
+                if ((abstractsUrl != null) && abstractsUrl.hasContent()) {
+                    log.debug3("Setting metadata role to found abstracts page.");
+                    af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, abstractsUrl);
+                }else{
+                    log.debug3("There is no abstracts page, setting metadata role to TOC.");
+                    af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, tocCU);
+                }
+                results.add(af);
+            }
+        }catch(IOException ioe){
+            log.debug("Error parsing CU", ioe);
+        }finally{
+            AuUtil.safeRelease(pdfUrl);
+            AuUtil.safeRelease(abstractsUrl);
+        }
+        
+    }
+
+    public void addToListOfRoles(CachedUrl cu, ArticleFiles af, String role){
+        if(cu.hasContent()){
+            log.debug3("The cu has content");
+            af.setRole(role,cu);
+            log.debug3("The  URL is " + cu.toString() + " and the role is " + role);
+        } return;
+    }
 
     @Override
     public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
