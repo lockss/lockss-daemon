@@ -31,7 +31,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/sociological-science-released/
 
     au < readySource ; crawling ; 2025 ; Sociological Science WARC Content 2025 ; 2025 >
-    au < ready ; exists ; 2026 ; Sociological Science WARC Content 2026 ; 2026 >
+    au < readySource ; crawling ; 2026 ; Sociological Science WARC Content 2026 ; 2026 >
 
     }
   }
