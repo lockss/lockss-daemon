@@ -110,13 +110,34 @@ public class V2AuMover {
   public static final boolean DEFAULT_GENERATE_TEST_ERRORS = false;
 
   /**
-   * If true, lots of errors will be recorded (for testing UI)
+   * If true, compare content (if so configured) even if versions
+   * don't line up
    */
   public static final String PARAM_COMPARE_EVEN_IF_VERSION_MISMATCH = PREFIX +
     "compare_even_if_version_mismatch";
   public static final boolean DEFAULT_COMPARE_EVEN_IF_VERSION_MISMATCH = true;
 
   public static final String EXEC_PREFIX = PREFIX + "executor.";
+
+  /** Select which AUs to use bulk mode for index updates. */
+  enum UseBulkMode {
+    NEVER,
+    ALWAYS,
+    NON_SOURCE;        // only for non-source AUs
+  }
+
+  /**
+   * Use Buik mode ALWAYS, NEVER, or only for NON_SOURCE content.
+   * Source AUs typically have a relatively small number of huge files.
+   * The benefits of bulk mode are much less because the index update
+   * time isn't significant, but the aggregate transfer rate is much
+   * higher than typical harvest AUs, which can cause the repo's
+   * background temp -> perm WARC copies to fall behind on a slow (e.g.,
+   * network) filesystem, causing finishBulk to block for a long time
+   * (days).
+   */
+  public static final String PARAM_USE_BULK_MODE = PREFIX + "useBulkMode";
+  public static final UseBulkMode DEFAULT_USE_BULK_MODE = UseBulkMode.NON_SOURCE;
 
   /**
    * Executor Spec:
@@ -386,11 +407,11 @@ public class V2AuMover {
     PREFIX + "diskSpaceBytesCurve";
   public static final String DEFAULT_DB_SIZE_CHECK_CURVE =
     // below 1G: 2 sec
-    "[1_000_000_000,2s]," +
+    "[1000000000,2s]," +
     // 1G-10G: 10 sec
-    "[1_000_000_000,10s],[10_000_000_000,10s]," +
+    "[1000000000,10s],[10000000000,10s]," +
     // above 10G, 30 sec
-    "[10_000_000_000,30s]";
+    "[10000000000,30s]";
 
   /** The interval at which to fetch disk usage stats from V2, if not
    * triggered by amount of data xferred */
@@ -520,6 +541,7 @@ public class V2AuMover {
 
   private boolean isCompareBytes;
   private UseFetchUrl useFetchUrl = DEFAULT_USE_FETCH_URL;
+  private UseBulkMode useBulkMode = DEFAULT_USE_BULK_MODE;
   private boolean isShowInstrumentation = DEFAULT_INSTRUMENTATION;
   private long diskSpaceFetchInterval = DEFAULT_DISK_SPACE_INTERVAL;
   private boolean excludeQueuedTasks = DEFAULT_EXCLUDE_QUEUED_TASKS;
@@ -676,6 +698,9 @@ public class V2AuMover {
       useFetchUrl = config.getEnumIgnoreCase(UseFetchUrl.class,
                                              PARAM_USE_FETCH_URL,
                                              DEFAULT_USE_FETCH_URL);
+      useBulkMode = config.getEnumIgnoreCase(UseBulkMode.class,
+                                             PARAM_USE_BULK_MODE,
+                                             DEFAULT_USE_BULK_MODE);
       isShowInstrumentation =
         config.getBoolean(PARAM_INSTRUMENTATION, DEFAULT_INSTRUMENTATION);
 
@@ -1463,7 +1488,7 @@ public class V2AuMover {
         log.debug("Enqueueing: " + auName);
         // Bulk mode works correctly only if the AU is completely absent
         // from the V2 repo
-        if (!existsInV2(au)) {
+        if (useBulkMode(au)) {
           // Might be better to delay startBulk() until first copy task runs
           try {
             startBulk(namespace, auStat.getAuId());
@@ -1488,6 +1513,18 @@ public class V2AuMover {
         setFailed(true);
       }
       break;
+    }
+  }
+
+  boolean useBulkMode(ArchivalUnit au) {
+    if (existsInV2(au)) {
+      return false;
+    }
+    switch (useBulkMode) {
+    case NEVER: return false;
+    case ALWAYS: return true;
+    case NON_SOURCE: return !au.isBulkContent();
+    default: return false;
     }
   }
 

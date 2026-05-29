@@ -41,6 +41,7 @@ import org.apache.commons.lang3.tuple.*;
 import org.lockss.state.*;
 import org.lockss.alert.*;
 import org.lockss.config.*;
+import org.lockss.daemon.Crawler.CrawlerFacade;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
@@ -68,6 +69,7 @@ public class DefaultUrlCacher implements UrlCacher {
   public static final String DEFAULT_CHECKSUM_ALGORITHM = null;
   
   protected final ArchivalUnit au;
+  protected CrawlerFacade crawlFacade;
   protected final String origUrl;   // URL with which I was created
   protected String fetchUrl;		// possibly affected by redirects
   private List<String> redirectUrls;
@@ -98,6 +100,10 @@ public class DefaultUrlCacher implements UrlCacher {
     Plugin plugin = au.getPlugin();
     repository = plugin.getDaemon().getLockssRepository(au);
     resultMap = plugin.getCacheResultMap();
+  }
+
+  public void setCrawlFacade(CrawlerFacade crawlFacade) {
+    this.crawlFacade = crawlFacade;
   }
 
   /**
@@ -271,6 +277,11 @@ public class DefaultUrlCacher implements UrlCacher {
 				CIProperties headers,
 				boolean doValidate, List<String> redirUrls)
       throws IOException {
+    if (crawlFacade != null && crawlFacade.isAborted()) {
+      String msg = "Crawl was aborted; not storing " + url;
+      logger.debug(msg);
+      throw new IOException(msg);
+    }
     OutputStream os = null;
     boolean currentWasSuspect = isCurrentVersionSuspect();
     RepositoryNode leaf = repository.createNewNode(url);
@@ -287,7 +298,7 @@ public class DefaultUrlCacher implements UrlCacher {
       throw ioex instanceof CacheException
 	? ioex : resultMap.mapException(au, url, ioex, null);
     } catch (IOException ex) {
-      logger.debug("storeContentIn1", ex);
+      logger.debug("storeContentIn", ex);
       abandonNewVersion(leaf);
       // XXX some code below here maps the exception
       throw ex instanceof CacheException
@@ -340,6 +351,12 @@ public class DefaultUrlCacher implements UrlCacher {
         }
       }
       os.close();
+      if (crawlFacade != null && crawlFacade.isAborted()) {
+        String msg = "Crawl was aborted; not committing " + url;
+        logger.debug(msg);
+        abandonNewVersion(leaf);
+        throw new IOException(msg);
+      }      
       boolean doStore = true;
       if (doValidate && !fetchFlags.get(SUPPRESS_CONTENT_VALIDATION)) {
 	// Don't modify passed-in headers
