@@ -4,7 +4,7 @@
     name = Baycinar Medical Publishing ;
     info[contract] = 2026 ;
     info[back] = 2000 ;
-    info[tester] = 8 
+    info[tester] = 4 
   >
 
   plugin = org.lockss.plugin.bmp.ClockssBMPJournalsPlugin
