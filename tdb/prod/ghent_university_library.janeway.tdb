@@ -154,7 +154,7 @@
       #param[journal_id] = lcj
 
       au < released ; 2024 ; 2024 ; 2024 ; Law & Criminology Journal Volume 2024 >
-      au < ready ; 2025 ; 2025 ; 2025 ; Law & Criminology Journal Volume 2025 >
+      au < releasing ; 2025 ; 2025 ; 2025 ; Law & Criminology Journal Volume 2025 >
       au < manifest ; 2026 ; 2026 ; 2026 ; Law & Criminology Journal Volume 2026 >
 
   }
@@ -171,10 +171,10 @@
       param[base_url] = https://www.philosophica.ugent.be/
       #param[journal_id] = philosophica
 
-      au < ready ; 2000 ; 2000 ; 2000 ; Philosophica Volume 2000 >
+      au < releasing ; 2000 ; 2000 ; 2000 ; Philosophica Volume 2000 >
       au < released ; 2001 ; 2001 ; 2001 ; Philosophica Volume 2001 >
       au < manifest ; 2002 ; 2002 ; 2002 ; Philosophica Volume 2002 >
-      au < ready ; 2003 ; 2003 ; 2003 ; Philosophica Volume 2003 >
+      au < releasing ; 2003 ; 2003 ; 2003 ; Philosophica Volume 2003 >
       au < released ; 2004 ; 2004 ; 2004 ; Philosophica Volume 2004 >
       au < released ; 2005 ; 2005 ; 2005 ; Philosophica Volume 2005 >
       au < manifest ; 2006 ; 2006 ; 2006 ; Philosophica Volume 2006 >
@@ -870,7 +870,7 @@
 
       au < released ; 2023 ; 2023 ; 2023 ; Journal for Digital Legal History Volume 2023 >
       au < released ; 2024 ; 2024 ; 2024 ; Journal for Digital Legal History Volume 2024 >
-      au < ready ; 2025 ; 2025 ; 2025 ; Journal for Digital Legal History Volume 2025 >
+      au < releasing ; 2025 ; 2025 ; 2025 ; Journal for Digital Legal History Volume 2025 >
       au < expected ; 2026 ; 2026 ; 2026 ; Journal for Digital Legal History Volume 2026 >
 
   }
@@ -905,7 +905,7 @@
       au < released ; 2022 ; 2022 ; 2022 ; EWOP in Practice Volume 2022 >
       au < released ; 2023 ; 2023 ; 2023 ; EWOP in Practice Volume 2023 >
       au < released ; 2024 ; 2024 ; 2024 ; EWOP in Practice Volume 2024 >
-      au < ready ; 2025 ; 2025 ; 2025 ; EWOP in Practice Volume 2025 >
+      au < releasing ; 2025 ; 2025 ; 2025 ; EWOP in Practice Volume 2025 >
       au < manifest ; 2026 ; 2026 ; 2026 ; EWOP in Practice Volume 2026 >
 
   }
@@ -1506,13 +1506,13 @@
       au < manifest ; 1998 ; 1998 ; 1998 ; Tetradio Volume 1998 >
       au < manifest ; 1999 ; 1999 ; 1999 ; Tetradio Volume 1999 >
       au < released ; 2000 ; 2000 ; 2000 ; Tetradio Volume 2000 >
-      au < ready ; 2001 ; 2001 ; 2001 ; Tetradio Volume 2001 >
+      au < releasing ; 2001 ; 2001 ; 2001 ; Tetradio Volume 2001 >
       au < released ; 2002 ; 2002 ; 2002 ; Tetradio Volume 2002 >
       au < released ; 2003 ; 2003 ; 2003 ; Tetradio Volume 2003 >
       au < released ; 2004 ; 2004 ; 2004 ; Tetradio Volume 2004 >
-      au < ready ; 2005 ; 2005 ; 2005 ; Tetradio Volume 2005 >
+      au < releasing ; 2005 ; 2005 ; 2005 ; Tetradio Volume 2005 >
       au < released ; 2006 ; 2006 ; 2006 ; Tetradio Volume 2006 >
-      au < ready ; 2007 ; 2007 ; 2007 ; Tetradio Volume 2007 >
+      au < releasing ; 2007 ; 2007 ; 2007 ; Tetradio Volume 2007 >
       au < released ; 2008 ; 2008 ; 2008 ; Tetradio Volume 2008 >
       au < released ; 2009 ; 2009 ; 2009 ; Tetradio Volume 2009 >
       au < released ; 2010 ; 2010 ; 2010 ; Tetradio Volume 2010 >
@@ -1524,7 +1524,7 @@
       au < released ; 2016 ; 2016 ; 2016 ; Tetradio Volume 2016 >
       au < released ; 2017 ; 2017 ; 2017 ; Tetradio Volume 2017 >
       au < released ; 2018 ; 2018 ; 2018 ; Tetradio Volume 2018 >
-      au < ready ; 2019 ; 2019 ; 2019 ; Tetradio Volume 2019 >
+      au < releasing ; 2019 ; 2019 ; 2019 ; Tetradio Volume 2019 >
       au < manifest ; 2020 ; 2020 ; 2020 ; Tetradio Volume 2020 >
       au < released ; 2021 ; 2021 ; 2021 ; Tetradio Volume 2021 >
       au < manifest ; 2022 ; 2022 ; 2022 ; Tetradio Volume 2022 >
@@ -1596,7 +1596,7 @@
       au < manifest ; 1999 ; 1999 ; 1999 ; Tijdschrift voor Communicatiewetenschap Volume 1999 >
       au < released ; 2000 ; 2000 ; 2000 ; Tijdschrift voor Communicatiewetenschap Volume 2000 >
       au < released ; 2001 ; 2001 ; 2001 ; Tijdschrift voor Communicatiewetenschap Volume 2001 >
-      au < ready ; 2002 ; 2002 ; 2002 ; Tijdschrift voor Communicatiewetenschap Volume 2002 >
+      au < releasing ; 2002 ; 2002 ; 2002 ; Tijdschrift voor Communicatiewetenschap Volume 2002 >
       au < released ; 2003 ; 2003 ; 2003 ; Tijdschrift voor Communicatiewetenschap Volume 2003 >
       au < released ; 2004 ; 2004 ; 2004 ; Tijdschrift voor Communicatiewetenschap Volume 2004 >
 
@@ -1760,7 +1760,7 @@
       au < released ; 2022 ; 2022 ; 2022 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2022 >
       au < released ; 2023 ; 2023 ; 2023 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2023 >
       au < released ; 2024 ; 2024 ; 2024 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2024 >
-      au < ready ; 2025 ; 2025 ; 2025 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2025 >
+      au < releasing ; 2025 ; 2025 ; 2025 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2025 >
       au < manifest ; 2026 ; 2026 ; 2026 ; WT. Tijdschrift over de geschiedenis van de Vlaamse beweging Volume 2026 >
 
   }

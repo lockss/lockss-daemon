@@ -85,7 +85,7 @@ echo "###Ready Misc Ingest5" >> $t/tmp_Misc
 head -n20 $t/tmp_Sage > $t/tmp_All
 head -n10 $t/tmp_EmeraldJ >> $t/tmp_All
 head -n30 $t/tmp_New_Contract >> $t/tmp_All
-head -n90 $t/tmp_Misc | grep -v HWDrupalPlugin >> $t/tmp_All
+head -n50 $t/tmp_Misc | grep -v HWDrupalPlugin >> $t/tmp_All
 
 exit 0
 

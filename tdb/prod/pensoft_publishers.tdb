@@ -384,7 +384,7 @@
     au < released ; 2023 ; 45-47 ; Subterranean Biology Volume 2023 ; 2023 ; https://subtbiol.pensoft.net/ >
     au < released ; 2024 ; 48-50 ; Subterranean Biology Volume 2024 ; 2024 ; https://subtbiol.pensoft.net/ >
     au < released ; 2025 ; 51-54 ; Subterranean Biology Volume 2025 ; 2025 ; https://subtbiol.pensoft.net/ >
-    au < ready ; 2025 ; 55-58 ; Subterranean Biology Volume 2026 ; 2026 ; https://subtbiol.pensoft.net/ >
+    au < releasing ; 2025 ; 55-58 ; Subterranean Biology Volume 2026 ; 2026 ; https://subtbiol.pensoft.net/ >
 
    }
 
@@ -2025,7 +2025,7 @@
       param[au_oai_set] = soils4europe
 
       au < released ; 2024 ; 2024 ; Soils for Europe Volume 2024 ; 2024 ; https://journal.soils4europe.eu/ >
-      au < ready ; 2025 ; 2025 ; Soils for Europe Volume 2025 ; 2025 ; https://journal.soils4europe.eu/ >
+      au < releasing ; 2025 ; 2025 ; Soils for Europe Volume 2025 ; 2025 ; https://journal.soils4europe.eu/ >
       au < expected ; 2026 ; 2026 ; Soils for Europe Volume 2026 ; 2026 ; https://journal.soils4europe.eu/ >
 
   }
