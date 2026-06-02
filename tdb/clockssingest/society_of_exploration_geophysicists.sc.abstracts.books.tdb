@@ -1,0 +1,80 @@
+{
+  publisher <
+    name = Society of Exploration Geophysicists ;
+    info[contract] = 2013 ;
+    info[back] = 1982 ;
+    info[tester] = X ;
+    info[platform] = Atypon Proceedings.
+  >
+  
+    plugin = needs.plugin
+    #plugin = plugin = org.lockss.plugin.silverchair.geoscienceworld.ClockssGeoscienceWorldSilverchairBooksPlugin
+    #implicit < status ; status2 ; year ; isbn ; eisbn ; name ; param[resource_id]; hidden[proxy] >
+    implicit < status ; status2 ; year ; doi ; param[book_id] ; name ; hidden[proxy] >
+    param[base_url] = https://pubs.geoscienceworld.org/
+
+
+  {
+  title <
+   name = SEG Technical Program Expanded Abstracts ;
+   eissn = 1949-4645 ;
+   type = bookSeries
+  >
+
+   #All content at https://pubs.geoscienceworld.org/segeab/pages/archive
+   #Single book landing page at, for example: https://pubs.geoscienceworld.org/segeab/SEGEAB.44/conference/1
+   param[series_id] = segeab
+
+   au < exists ; exists ; 2025 ; 10.1190/SEGEAB.44 ; SEGEAB.44 ; Fifth International Meeting for Applied Geoscience & Energy 2025 ; >
+   au < expected ; exists ; 2026 ; 10.1190/SEGEAB.45 ; SEGEAB.45 ; Sixth International Meeting for Applied Geoscience & Energy 2026 ; >
+
+  }
+ 
+  {
+  title <
+   name = Symposium on the Application of Geophysics to Engineering and Environmental Problems ;
+   eissn = 1554-8015 ;
+   type = bookSeries
+  >
+
+   #All material https://pubs.geoscienceworld.org/sageep/pages/archive
+   #Single book landing page at, for example: https://library.seg.org/doi/book/10.1190/SAGEEP.1
+   param[series_id] = segeep
+   #Collected all 1982-2021 on Atypon platform.
+
+  }
+
+  {
+  title <
+   name = Global Meeting Abstracts ;
+   eissn = 2159-6832 ;
+   type = bookSeries
+  >
+
+   #All content at, https://pubs.geoscienceworld.org/gmalch/pages/archive
+   #Single book landing page at, for example: https://pubs.geoscienceworld.org/workfor/bhgp2025/conference/bhgp2025
+
+   {
+   #Unconventional Resources Technology Conference https://pubs.geoscienceworld.org/gmalch/pages/archive
+   param[series_id] = urtec
+
+   au < exists ; exists ; 2024 ; 10.15530/urtecla2024 ; urtecla2024 ; Unconventional Resources Technology Conference 2024 ; >
+   au < exists ; exists ; 2025 ; 10.15530/urtecla2025 ; urtecla2025 ; Unconventional Resources Technology Conference 2025 ; >
+   }
+   {
+   #ICE https://pubs.geoscienceworld.org/gmalch/pages/archive
+   param[series_id] = ice
+
+   au < exists ; exists ; 2015 ; 10.1190/icemelbourne2015 ; icemelbourne2015 ; International Conference and Exhibition 2015 ; > #no pdf files https://library.seg.org/doi/book/10.1190/ICEMelbourne2015
+   au < exists ; exists ; 2016 ; 10.1190/icebarcelona2016 ; icebarcelona2016 ; International Conference and Exhibition 2016 ; > #no substance
+   }
+   {
+   #Workshops and Forums: https://pubs.geoscienceworld.org/gmalch/pages/archive
+   param[series_id] = workfor
+
+   au < exists ; exists ; 2025 ; 10.15530/sngp-2025 ; sngp-2025 ; SEG Near-Surface Geophysical Exploration and Geo-Disaster Prevention Technology Workshop 2025 ; >
+   au < exists ; exists ; 2025 ; 10.15530/bhgp-2025 ; bhgp-2025 ; Third SEG Borehole Geophysics Technologies Workshop 2025 ; >
+   }
+  }
+
+}

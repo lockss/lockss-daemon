@@ -158,6 +158,8 @@
    au < frozen ; exists ; 2024 ; 10.15530/urtec2024 ; 10.15530/urtec2024 ; Unconventional Resources Technology Conference 2024 ; >
    au < frozen ; exists ; 2021 ; 10.15530/ap-urtec-2021 ; 10.15530/ap-urtec-2021 ; Asia Pacific Unconventional Resources Technology Conference 2021 ; >
    au < frozen ; exists ; 2023 ; 10.15530/urtecla2023 ; 10.15530/urtecla2023 ; Latin America Unconventional Resources Technology Conference 2023 ; >
+   au < doNotProcess ; doNotProcess ; 2024 ; 10.15530/urtecla2024 ; 10.15530/urtecla2024 ; Unconventional Resources Technology Conference 2024 ; >
+   au < doNotProcess ; doNotProcess ; 2025 ; 10.15530/urtecla2025 ; 10.15530/urtecla2025 ; Unconventional Resources Technology Conference 2025 ; >
 
    #International Geophysical Conference https://library.seg.org/topic/gma-series/igc
    au < frozen ; exists ; 2009 ; 10.1190/978-1-56080-284-6.10 ; 10.1190/978-1-56080-284-6.10 ; International Geophysical Conference and Exposition 2009 ; >
@@ -172,29 +174,44 @@
    au < doNotProcess ; exists ; 2015 ; 10.1190/ICEMelbourne2015 ; 10.1190/ICEMelbourne2015 ; International Conference and Exhibition 2015 ; > #no pdf files https://library.seg.org/doi/book/10.1190/ICEMelbourne2015
    au < doNotProcess ; exists ; 2016 ; 10.1190/ICEBarcelona2016 ; 10.1190/ICEBarcelona2016 ; International Conference and Exhibition 2016 ; > #no substance
 
+   #Near Surface
    au < frozen ; exists ; 2013 ; 10.1190/NSGAPC2013 ; 10.1190/NSGAPC2013 ; Near Surface Geophysics Asia Pacific Conference 2013 ; >
-   au < frozen ; exists ; 2015 ; 10.1190/978-1-56080-284-6.15 ; 10.1190/978-1-56080-284-6.15 ; International Workshop on Gravity, Electrical & Magnetic Methods and Their Applications 2015 ; >
    au < frozen ; exists ; 2015 ; 10.1190/NSAPC2015 ; 10.1190/NSAPC2015 ; Near-Surface Asia Pacific Conference 2015 ; >
-   au < frozen ; exists ; 2015 ; 10.1190/GEM2015 ; 10.1190/GEM2015 ; International Workshop and Gravity, Electrical & Magnetic Methods and their Applications 2015 ; >
+
+   #Int WS on Gravity etc
+   au < frozen ; exists ; 2011 ; 10.1190/978-1-56080-284-6.15 ; 10.1190/978-1-56080-284-6.15 ; International Workshop on Gravity, Electrical & Magnetic Methods and Their Applications 2011 ; >
+   au < frozen ; exists ; 2015 ; 10.1190/GEM2015 ; 10.1190/GEM2015 ; International Workshop on Gravity, Electrical & Magnetic Methods and their Applications 2015 ; >
+   au < frozen ; exists ; 2019 ; 10.1190/GEM2019 ; 10.1190/GEM2019 ; International Workshop on Gravity, Electrical & Magnetic Methods and their Applications 2019 ; >
+   au < frozen ; exists ; 2024 ; 10.1190/GEM2024 ; 10.1190/GEM2024 ; International Workshop on Gravity, Electrical & Magnetic Methods and their Applications 2024 ; >
+
+   #ICEG
    au < frozen ; exists ; 2015 ; 10.1190/ICEG2015 ; 10.1190/ICEG2015 ; International Conference on Engineering Geophysics 2015 ; >
+   au < frozen ; exists ; 2017 ; 10.1190/ICEG2017 ; 10.1190/ICEG2017 ; International Conference on Engineering Geophysics 2017 ; >
+   au < frozen ; exists ; 2019 ; 10.1190/iceg2019 ; 10.1190/iceg2019 ; Fifth International Conference on Engineering Geophysics 2019 ; >
+   au < frozen ; exists ; 2021 ; 10.1190/iceg2021 ; 10.1190/iceg2021 ; International Conference on Engineering Geophysics 2021 ; >
+   au < frozen ; exists ; 2023 ; 10.1190/iceg2023 ; 10.1190/iceg2023 ; International Conference on Engineering Geophysics 2023 ; >
+
+   #Energy in Data
+   au < frozen ; exists ; 2022 ; 10.7462/eid2022 ; 10.7462/eid2022 ; Energy in Data Conference, Austin, Texas, 2022 ; >
+
+   #R & D Petroleum (PDPetro)
+   au < frozen ; exists ; 2018 ; 10.1190/RDP2018 ; 10.1190/RDP2018 ; RDPETRO 2018: Research and Development Petroleum Conference and Exhibition ; >
+
+   #Workshops and Forums
+   au < frozen ; exists ; 2015 ; 10.1190/FWI2015 ; 10.1190/FWI2015 ; 2015 Workshop: Depth Model Building: Full-waveform Inversion ; >
    au < frozen ; exists ; 2016 ; 10.1190/RP2016 ; 10.1190/RP2016 ; 2016 Workshop: Rock Physics and Borehole Geophysics ; >
    au < frozen ; exists ; 2016 ; 10.1190/hpc2016 ; 10.1190/hpc2016 ; 2016 Workshop: Workshop High Performance Computing ; >
-   au < frozen ; exists ; 2017 ; 10.1190/ICEG2017 ; 10.1190/ICEG2017 ; International Conference on Engineering Geophysics 2017 ; >
-   au < frozen ; exists ; 2017 ; 10.1190/FWI2015 ; 10.1190/FWI2015 ; 2015 Workshop: Depth Model Building: Full-waveform Inversion ; >
    au < frozen ; exists ; 2017 ; 10.1190/Microseismic2017 ; 10.1190/Microseismic2017 ; 2017 Workshop: Microseismic Technologies and Applications ; >
    au < frozen ; exists ; 2017 ; 10.1190/Foothill2017 ; 10.1190/Foothill2017 ; SEG/SINOPEC Foothill Technical Forum 2017 ; >
    au < frozen ; exists ; 2017 ; 10.1190/carbonate2017 ; 10.1190/carbonate2017 ; SEG 2017 Workshop: Carbonate Reservoir E&P Workshop ; >
    au < frozen ; exists ; 2017 ; 10.1190/FWI2017 ; 10.1190/FWI2017 ; SEG 2017 Workshop: Full-waveform Inversion and Beyond ; >
    au < frozen ; exists ; 2017 ; 10.1190/obnobc2017 ; 10.1190/obnobc2017 ; SEG 2017 Workshop: OBN/OBC Technologies and Applications ; >
-   au < frozen ; exists ; 2018 ; 10.1190/RDP2018 ; 10.1190/RDP2018 ; RDPETRO 2018: Research and Development Petroleum Conference and Exhibition ; >
    au < frozen ; exists ; 2018 ; 10.1190/DPRP2018 ; 10.1190/DPRP2018 ; Rock Physics and Digital Rock Applications Workshop 2018 ; >
    au < frozen ; exists ; 2018 ; 10.1190/REGE2018 ; 10.1190/REGE2018 ; SEG 2018 Workshop: Reservoir Geophysics, Daqing ; >
    au < frozen ; exists ; 2018 ; 10.1190/BHGP2018 ; 10.1190/BHGP2018 ; SEG 2018 Workshop: SEG Borehole Geophysics Workshop ; >
    au < frozen ; exists ; 2018 ; 10.1190/AIML2018 ; 10.1190/AIML2018 ; SEG 2018 Workshop: SEG Maximizing Asset Value through Artificial Intelligence and Machine Learning Workshop ; >
    au < frozen ; exists ; 2018 ; 10.1190/SEIM2018 ; 10.1190/SEIM2018 ; SEG 2018 Workshop: SEG Seismic Imaging Workshop ; >
-   au < frozen ; exists ; 2019 ; 10.1190/iceg2019 ; 10.1190/iceg2019 ; Fifth International Conference on Engineering Geophysics 2019 ; >
    au < frozen ; exists ; 2019 ; 10.1190/FEW2019 ; 10.1190/FEW2019 ; 2nd SEG Foothill Exploration Workshop ; >
-   au < frozen ; exists ; 2019 ; 10.1190/GEM2019 ; 10.1190/GEM2019 ; International Workshop and Gravity, Electrical & Magnetic Methods and their Applications 2019 ; >
    au < frozen ; exists ; 2019 ; 10.1190/frur2019 ; 10.1190/frur2019 ; SEG 2019 Workshop: Fractured Reservoir & Unconventional Resources Forum: Prospects and Challenges in the Era of Big Data ; >
    au < frozen ; exists ; 2019 ; 10.1190/smct2019 ; 10.1190/smct2019 ; SEG 2019 Workshop: Geophysics for Smart City Development ; >
    au < frozen ; exists ; 2019 ; 10.1190/iwmg2019 ; 10.1190/iwmg2019 ; SEG 2019 Workshop: Mathematical Geophysics: Traditional vs Learning ; >
@@ -204,20 +221,17 @@
    au < frozen ; exists ; 2020 ; 10.1190/uwki2020 ; 10.1190/uwki2020 ; SEG 2020 Workshop: Underground Water and Karst Imaging ; >
    au < frozen ; exists ; 2020 ; 10.1190/gpr2020 ; 10.1190/gpr2020 ; 18th International Conference on Ground Penetrating Radar ; >
    au < frozen ; exists ; 2020 ; 10.1190/bwds2020 ; 10.1190/bwds2020 ; SEG 2020 Workshop: Broadband and Wide-azimuth Deepwater Seismic Technology ; >
-   au < frozen ; exists ; 2021 ; 10.1190/iceg2021 ; 10.1190/iceg2021 ; International Conference on Engineering Geophysics 2021 ; >
-   au < frozen ; exists ; 2023 ; 10.1190/iceg2023 ; 10.1190/iceg2023 ; International Conference on Engineering Geophysics 2023 ; >
    au < frozen ; exists ; 2021 ; 10.1190/iwmg2021 ; 10.1190/iwmg2021 ; SEG 2021 Workshop: Mathematical Geophysics: Traditional vs Learning ; >
-   au < frozen ; exists ; 2022 ; 10.7462/eid2022 ; 10.7462/eid2022 ; Energy in Data Conference, Austin, Texas, 2022 ; >
    au < frozen ; exists ; 2022 ; 10.1190/gpr2022 ; 10.1190/gpr2022 ; 19th International Conference on Ground Penetrating Radar ; >
    au < frozen ; exists ; 2023 ; 10.1190/igge2023 ; 10.1190/igge2023 ; SEG Integration of Geophysics, Geology, and Engineering Workshop, Chengdu, China 2023 ; >
    au < frozen ; exists ; 2024 ; 10.15530/ccus-2024 ; 10.15530/ccus-2024 ; Carbon Capture, Utilization, and Storage Conference and Exhibition 2024 ; >
-   au < frozen ; exists ; 2025 ; 10.15530/ccus-2025 ; 10.15530/ccus-2025 ; Carbon Capture, Utilization, and Storage Conference and Exhibition 2025 ; >
    au < frozen ; exists ; 2024 ; 10.1190/Ultra-Deep2024 ; 10.1190/Ultra-Deep2024 ; SEG 1st Tarim Ultra-Deep Oil & Gas Exploration Technology Workshop, Korla, China 2024 ; >
-   au < frozen ; exists ; 2024 ; 10.1190/GEM2024 ; 10.1190/GEM2024 ; International Workshop and Gravity, Electrical & Magnetic Methods and their Applications 2024 ; >
    au < frozen ; exists ; 2024 ; 10.1190/FOSE2024 ; 10.1190/FOSE2024 ; SEG Workshop on Fiber Optics Sensing for Energy Applications, Xi'an, China 2024 ; >
    au < frozen ; exists ; 2024 ; 10.1190/ACCUS-EAP2024 ; 10.1190/ACCUS-EAP2024 ; SEG Advancing Carbon Capture, Utilization, and Storage (CCUS) East Asia Perspective, Qingdao, China 2024 ; >
    au < frozen ; exists ; 2024 ; 10.1190/4D-Forum2024 ; 10.1190/4D-Forum2024 ; 4D Forum - Insight to Actions. A Global Forum, Galveston, Texas 2024 ; >
-   au < doNotProcess ; exists ; 2026 ; 10.15530/ccus-2026 ; 10.15530/ccus-2026 ; Carbon Capture, Utilization, and Storage Conference and Exhibition 2026 ; >
+   au < frozen ; exists ; 2025 ; 10.15530/ccus-2025 ; 10.15530/ccus-2025 ; Carbon Capture, Utilization, and Storage Conference and Exhibition 2025 ; >
+   au < doNotProcess ; doNotProcess ; 2025 ; 10.15530/sngp-2025 ; 10.15530/sngp-2025 ; SEG Near-Surface Geophysical Exploration and Geo-Disaster Prevention Technology Workshop 2025 ; >
+   au < doNotProcess ; doNotProcess ; 2025 ; 10.15530/bhgp-2025 ; 10.15530/bhgp-2025 ; Third SEG Borehole Geophysics Technologies Workshop 2025 ; >
 
   }
 }
