@@ -641,7 +641,7 @@
     au < ready ; exists ; 2017 ; 9780784414347 ; 9780784480496 ; 9780784414347 ; STANDARD ANSI/ASCE/EWRI 65-17 (9780784414347) ; >
     au < ready ; exists ; 2017 ; 9780784414248 ; 9780784479964 ; 9780784414248 ; STANDARD ASCE/SEI 7-16 (9780784414248) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784480748 ; 9780784480748 ; Zone Maps for STANDARD ASCE 7-16  (9780784480748) ; >
-    au < ready ; exists ; 2017 ; 9780784413074 ; 9780784480335 ; 9780784413074 ; STANDARD ASCE/CI 15-17 (9780784413074) ; >
+    au < crawling ; exists ; 2017 ; 9780784413074 ; 9780784480335 ; 9780784413074 ; STANDARD ASCE/CI 15-17 (9780784413074) ; >
     au < frozen ; exists ; 2017 ; 9780784413081 ; 9780784480373 ; 9780784413081 ; STANDARD ASCE/CI 27-17 (9780784413081) ; >
     au < frozen ; exists ; 2017 ; 9780784414224 ; 9780784479407 ; 9780784414224 ; STANDARD ANSI/ASCE/EWRI 66-17 (9780784414224) ; >
     au < frozen ; exists ; 2017 ; 9780784414361 ; 9780784480861 ; 9780784414361 ; STANDARD ANSI/ASCE/CI 67-17 (9780784414361) ; >
@@ -1401,7 +1401,7 @@
     au < testing ; exists ; 2019 ;  ; 9780784482421 ; 9780784482421 ; Computing in Civil Engineering 2019, Visualization, Information Modeling, and Simulation (9780784482421) ; >
     au < ready ; exists ; 2019 ;  ; 9780784482438 ; 9780784482438 ; Computing in Civil Engineering 2019, Data, Sensing, and Analytics (9780784482438) ; >
     au < frozen ; exists ; 2019 ;  ; 9780784482292 ; 9780784482292 ; CICTP 2019, Transportation in China--Connecting the World (9780784482292) ; >
-    au < ready ; exists ; 2019 ;  ; 9780784482483 ; 9780784482483 ; Pipelines 2019, Planning and Design (9780784482483) ; >
+    au < crawling ; exists ; 2019 ;  ; 9780784482483 ; 9780784482483 ; Pipelines 2019, Planning and Design (9780784482483) ; >
     au < frozen ; exists ; 2019 ;  ; 9780784482506 ; 9780784482506 ; Pipelines 2019, Multidisciplinary Topics, Utility Engineering, and Surveying (9780784482506) ; >
     au < testing ; exists ; 2019 ;  ; 9780784482452 ; 9780784482452 ; Airfield and Highway Pavements 2019 (9780784482452) ; >
     au < frozen ; exists ; 2019 ;  ; 9780784482469 ; 9780784482469 ; Airfield and Highway Pavements 2019, Testing and Characterization of Pavement Materials (9780784482469) ; >
@@ -1573,7 +1573,7 @@
     au < frozen ; exists ; 2025 ;  ; 9780784485910 ; 9780784485910 ; ICCREM 2024 (9780784485910) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486627 ; 9780784486627 ; ICCREM 2025 (9780784486627) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784485941 ; 9780784485941 ; ICRT 2024 (9780784485941) ; >
-    au < ready ; exists ; 2025 ;  ; 9780784486191 ; 9780784486191 ; International Conference on Transportation and Development 2025 (9780784486191) ; >
+    au < crawling ; exists ; 2025 ;  ; 9780784486191 ; 9780784486191 ; International Conference on Transportation and Development 2025 (9780784486191) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486207 ; 9780784486207 ; International Conference on Transportation and Development 2025 (9780784486207) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486368 ; 9780784486368 ; Pipelines 2025 (9780784486368) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486375 ; 9780784486375 ; Pipelines 2025 (9780784486375) ; >

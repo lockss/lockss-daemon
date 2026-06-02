@@ -255,7 +255,7 @@
 
       param[journal_id] = plosntds
 
-      au < ready ; exists ; 2007 ; PLOS Neglected Tropical Diseases Volume 2007 ; 2007 ; >
+      au < crawling ; exists ; 2007 ; PLOS Neglected Tropical Diseases Volume 2007 ; 2007 ; >
       au < crawling ; exists ; 2008 ; PLOS Neglected Tropical Diseases Volume 2008 ; 2008 ; >
       au < crawling ; exists ; 2009 ; PLOS Neglected Tropical Diseases Volume 2009 ; 2009 ; >
       au < crawling ; exists ; 2010 ; PLOS Neglected Tropical Diseases Volume 2010 ; 2010 ; >
@@ -599,7 +599,7 @@
       au < crawling ; exists ; 2020 ; PLOS ONE Volume Nov 2020 ; 2020 ; November ; >
       au < crawling ; exists ; 2020 ; PLOS ONE Volume Dec 2020 ; 2020 ; December ; >
 
-      au < ready ; exists ; 2021 ; PLOS ONE Volume Jan 2021 ; 2021 ; January ; >
+      au < crawling ; exists ; 2021 ; PLOS ONE Volume Jan 2021 ; 2021 ; January ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Feb 2021 ; 2021 ; February ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Mar 2021 ; 2021 ; March ; >
       au < crawling ; exists ; 2021 ; PLOS ONE Volume Apr 2021 ; 2021 ; April ; >
@@ -655,7 +655,7 @@
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Feb 2025 ; 2025 ; February ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Mar 2025 ; 2025 ; March ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Apr 2025 ; 2025 ; April ; >
-      au < ready ; exists ; 2025 ; PLOS ONE Volume May 2025 ; 2025 ; May ; >
+      au < crawling ; exists ; 2025 ; PLOS ONE Volume May 2025 ; 2025 ; May ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Jun 2025 ; 2025 ; June ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Jul 2025 ; 2025 ; July ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Aug 2025 ; 2025 ; August ; >

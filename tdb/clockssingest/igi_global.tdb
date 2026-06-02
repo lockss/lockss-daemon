@@ -23,7 +23,7 @@
     param[journal_issn] = 1040-1628 
 
     au < frozen ; exists ; 1988 ; Information Resources Management Journal (IRMJ) Volume 1 ; 1 ; https://www.igi-global.com/ ; > 
-    au < ready ; exists ; 1989 ; Information Resources Management Journal (IRMJ) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
+    au < crawling ; exists ; 1989 ; Information Resources Management Journal (IRMJ) Volume 2 ; 2 ; https://www.igi-global.com/ ; > 
     au < frozen ; exists ; 1990 ; Information Resources Management Journal (IRMJ) Volume 3 ; 3 ; https://www.igi-global.com/ ; > 
     au < frozen ; exists ; 1991 ; Information Resources Management Journal (IRMJ) Volume 4 ; 4 ; https://www.igi-global.com/ ; > 
     au < frozen ; exists ; 1992 ; Information Resources Management Journal (IRMJ) Volume 5 ; 5 ; https://www.igi-global.com/ ; > 
@@ -4451,7 +4451,7 @@
 
       param[journal_issn] = 2639-7692
 
-      au < ready ; exists ; 2019 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2019 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2020 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2021 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2022 ; International Journal of Applied Research on Public Health Management (IJARPHM) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
@@ -4835,7 +4835,7 @@
       au < finished ; manifest ; 2021 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
-      au < ready ; exists ; 2024 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2024 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < deepCrawl ; exists ; 2025 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Extreme Automation and Connectivity in Healthcare (IJEACH) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
 
@@ -5435,7 +5435,7 @@
       param[journal_issn] = 2767-3820
 
       au < frozen ; exists ; 2021 ; Journal of Healthcare Management Standards (JHMS) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
-      au < ready ; exists ; 2022 ; Journal of Healthcare Management Standards (JHMS) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
+      au < crawling ; exists ; 2022 ; Journal of Healthcare Management Standards (JHMS) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2023 ; Journal of Healthcare Management Standards (JHMS) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
 
   }
