@@ -23,13 +23,13 @@
       param[journal_id] = clinical
 
       au < frozen ; exists ; 2001 ; 2001 ; Clinical Diabetes Volume 19 ; 19 ; >
-      au < crawling ; exists ; 2002 ; 2002 ; Clinical Diabetes Volume 20 ; 20 ; >
+      au < frozen ; exists ; 2002 ; 2002 ; Clinical Diabetes Volume 20 ; 20 ; >
       au < frozen ; exists ; 2003 ; 2003 ; Clinical Diabetes Volume 21 ; 21 ; >
       au < frozen ; exists ; 2004 ; 2004 ; Clinical Diabetes Volume 22 ; 22 ; >
       au < frozen ; exists ; 2005 ; 2005 ; Clinical Diabetes Volume 23 ; 23 ; >
       au < frozen ; exists ; 2006 ; 2006 ; Clinical Diabetes Volume 24 ; 24 ; >
       au < frozen ; exists ; 2007 ; 2007 ; Clinical Diabetes Volume 25 ; 25 ; >
-      au < crawling ; exists ; 2008 ; 2008 ; Clinical Diabetes Volume 26 ; 26 ; >
+      au < frozen ; exists ; 2008 ; 2008 ; Clinical Diabetes Volume 26 ; 26 ; >
       au < frozen ; exists ; 2009 ; 2009 ; Clinical Diabetes Volume 27 ; 27 ; >
       au < doNotProcess ; doNotProcess ; 2010 ; 2010 ; Clinical Diabetes Volume 28 ; 28 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; 2011 ; Clinical Diabetes Volume 29 ; 29 ; >
@@ -67,7 +67,7 @@
         au < frozen ; exists ; 1952 ; 1952 ; Diabetes Volume 1 ; 1 ; >
         au < frozen ; exists ; 1953 ; 1953 ; Diabetes Volume 2 ; 2 ; >
         au < ready ; exists ; 1954 ; 1954 ; Diabetes Volume 3 ; 3 ; >
-        au < crawling ; exists ; 1955 ; 1955 ; Diabetes Volume 4 ; 4 ; >
+        au < frozen ; exists ; 1955 ; 1955 ; Diabetes Volume 4 ; 4 ; >
         au < frozen ; exists ; 1956 ; 1956 ; Diabetes Volume 5 ; 5 ; >
         au < frozen ; exists ; 1957 ; 1957 ; Diabetes Volume 6 ; 6 ; >
         au < frozen ; exists ; 1958 ; 1958 ; Diabetes Volume 7 ; 7 ; >
@@ -84,7 +84,7 @@
         au < frozen ; exists ; 1969 ; 1969 ; Diabetes Volume 18 ; 18 ; >
         au < ready ; exists ; 1970 ; 1970 ; Diabetes Volume 19 ; 19 ; >
         au < frozen ; exists ; 1971 ; 1971 ; Diabetes Volume 20 ; 20 ; >
-        au < crawling ; exists ; 1972 ; 1972 ; Diabetes Volume 21 ; 21 ; >
+        au < frozen ; exists ; 1972 ; 1972 ; Diabetes Volume 21 ; 21 ; >
         au < frozen ; exists ; 1973 ; 1973 ; Diabetes Volume 22 ; 22 ; >
         au < frozen ; exists ; 1974 ; 1974 ; Diabetes Volume 23 ; 23 ; >
         au < frozen ; exists ; 1975 ; 1975 ; Diabetes Volume 24 ; 24 ; >
@@ -106,7 +106,7 @@
         au < frozen ; exists ; 1991 ; 1991 ; Diabetes Volume 40 ; 40 ; >
         au < frozen ; exists ; 1992 ; 1992 ; Diabetes Volume 41 ; 41 ; >
         au < frozen ; exists ; 1993 ; 1993 ; Diabetes Volume 42 ; 42 ; >
-        au < crawling ; exists ; 1994 ; 1994 ; Diabetes Volume 43 ; 43 ; >
+        au < frozen ; exists ; 1994 ; 1994 ; Diabetes Volume 43 ; 43 ; >
         au < frozen ; exists ; 1995 ; 1995 ; Diabetes Volume 44 ; 44 ; >
         au < frozen ; exists ; 1996 ; 1996 ; Diabetes Volume 45 ; 45 ; >
         au < frozen ; exists ; 1997 ; 1997 ; Diabetes Volume 46 ; 46 ; >
