@@ -1373,53 +1373,59 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     URI uri = request.getURI();
 
-    if (connectHost == null || connectHost.length() == 0 ||
-        connectPort <= 0) {
-      // Not allowed
-      sendForbid(request, response, uri);
-      logAccess(request, "forbidden method: " + request.getMethod());
-      return;
-    }
-
     try {
-      if (isForbidden(HttpMessage.__SSL_SCHEME, false)) {
+      Socket socket;
+
+      // Is this a request from an IP for which we're supposed to
+      // provide "normal" CONNECT behavior ...
+      if (proxyMgr.isConnectAllowedFrom(request.getRemoteAddr())) {
+        // Find the IP/port to which to connect
+        InetAddrPort addrPort=new InetAddrPort(uri.toString());
+        socket = new Socket(addrPort.getInetAddress(), addrPort.getPort());
+      } else if (StringUtil.isNullString(connectHost) ||
+                 connectPort <= 0) {
+        // Not allowed
+        sendForbid(request, response, uri);
+        logAccess(request, "forbidden method: " + request.getMethod());
+        return;
+      } else if (isForbidden(HttpMessage.__SSL_SCHEME, false)) {
         sendForbid(request, response, uri);
         logAccess(request, "forbidden scheme for CONNECT: " +
-            HttpMessage.__SSL_SCHEME);
+                  HttpMessage.__SSL_SCHEME);
+        return;
       } else {
-        Socket socket = new Socket(connectHost, connectPort);
+        socket = new Socket(connectHost, connectPort);
         if (isLoopbackAddr(connectHost)) {
           recordConnectSource(request, socket);
         }
-
-        // XXX - need to setup semi-busy loop for IE.
-        int timeoutMs = 30000;
-        if (_tunnelTimeoutMs > 0) {
-          socket.setSoTimeout(_tunnelTimeoutMs);
-          Object maybesocket = request.getHttpConnection().getConnection();
-          try {
-            Socket s = (Socket) maybesocket;
-            timeoutMs = s.getSoTimeout();
-            s.setSoTimeout(_tunnelTimeoutMs);
-          } catch (Exception e) {
-            log.warning("Couldn't set socket timeout", e);
-          }
-        }
-
-        customizeConnection(pathInContext, pathParams, request, socket);
-        request.getHttpConnection().setHttpTunnel(new HttpTunnel(socket,
-            timeoutMs));
-        logAccess(request, "200 redirected to " +
-            connectHost + ":" + connectPort);
-
-        response.setStatus(HttpResponse.__200_OK);
-        response.setContentLength(0);
-        request.setHandled(true);
       }
+      // XXX - need to setup semi-busy loop for IE.
+      int timeoutMs = 30000;
+      if (_tunnelTimeoutMs > 0) {
+        socket.setSoTimeout(_tunnelTimeoutMs);
+        Object maybesocket = request.getHttpConnection().getConnection();
+        try {
+          Socket s = (Socket) maybesocket;
+          timeoutMs = s.getSoTimeout();
+          s.setSoTimeout(_tunnelTimeoutMs);
+        } catch (Exception e) {
+          log.warning("Couldn't set socket timeout", e);
+        }
+      }
+
+      customizeConnection(pathInContext, pathParams, request, socket);
+      request.getHttpConnection().setHttpTunnel(new HttpTunnel(socket,
+                                                               timeoutMs));
+      logAccess(request, "200 redirected to " +
+                connectHost + ":" + connectPort);
+
+      response.setStatus(HttpResponse.__200_OK);
+      response.setContentLength(0);
+      request.setHandled(true);
     } catch (Exception e) {
       log.error("Error in CONNECT for " + uri, e);
       response.sendError(HttpResponse.__500_Internal_Server_Error,
-          e.getMessage());
+                         e.getMessage());
     }
 
 //     try {

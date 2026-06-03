@@ -849,6 +849,9 @@ public class MigrateSettings extends LockssServlet {
         ips.add(targetIp);
         v2Cfg.put(ProxyManager.PARAM_IP_INCLUDE,
                   StringUtil.separatedString(ips, Constants.LIST_DELIM));
+
+        // Also allow it to use the CONNECT method
+        v2Cfg.put(ProxyManager.PARAM_CONNECT_ALLOWED_FROM, targetIp);
       }
     }
 
