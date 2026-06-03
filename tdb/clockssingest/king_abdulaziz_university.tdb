@@ -20,7 +20,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jcits
 
-      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Computing and Information Technology Sciences Volume 14 ; 14 ; >
+      au < testing ; exists ; 2025 ; Journal of King Abdulaziz University: Computing and Information Technology Sciences Volume 14 ; 14 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Computing and Information Technology Sciences Volume 15 ; 15 ; >
 
   }
@@ -35,7 +35,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jea
 
-      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Economics and Administration Volume 39 ; 39 ; >
+      au < testing ; exists ; 2025 ; Journal of King Abdulaziz University: Economics and Administration Volume 39 ; 39 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Economics and Administration Volume 40 ; 40 ; >
 
   }
@@ -50,7 +50,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jengs
 
-      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Engineering Sciences Volume 35 ; 35 ; >
+      au < testing ; exists ; 2025 ; Journal of King Abdulaziz University: Engineering Sciences Volume 35 ; 35 ; >
       au < manifest ; exists ; 2026 ; Journal of King Abdulaziz University: Engineering Sciences Volume 36 ; 36 ; >
 
   }
@@ -65,10 +65,10 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jie
 
-      au < manifest ; exists ; 2022 ; Journal of King Abdulaziz University: Islamic Economics Volume 35 ; 35 ; >
-      au < manifest ; exists ; 2023 ; Journal of King Abdulaziz University: Islamic Economics Volume 36 ; 36 ; >
-      au < manifest ; exists ; 2024 ; Journal of King Abdulaziz University: Islamic Economics Volume 37 ; 37 ; >
-      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Islamic Economics Volume 38 ; 38 ; >
+      au < testing ; exists ; 2022 ; Journal of King Abdulaziz University: Islamic Economics Volume 35 ; 35 ; >
+      au < testing ; exists ; 2023 ; Journal of King Abdulaziz University: Islamic Economics Volume 36 ; 36 ; >
+      au < testing ; exists ; 2024 ; Journal of King Abdulaziz University: Islamic Economics Volume 37 ; 37 ; >
+      au < testing ; exists ; 2025 ; Journal of King Abdulaziz University: Islamic Economics Volume 38 ; 38 ; >
       au < manifest ; exists ; 2026 ; Journal of King Abdulaziz University: Islamic Economics Volume 39 ; 39 ; >
 
   }
@@ -83,7 +83,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmars
 
-      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Marine Science Volume 35 ; 35 ; >
+      au < testing ; exists ; 2025 ; Journal of King Abdulaziz University: Marine Science Volume 35 ; 35 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Marine Science Volume 36 ; 36 ; >
 
   }
@@ -98,7 +98,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmeds
 
-      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Medical Sciences Volume 32 ; 32 ; >
+      au < testing ; exists ; 2025 ; Journal of King Abdulaziz University: Medical Sciences Volume 32 ; 32 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Medical Sciences Volume 33 ; 33 ; >
 
   }
@@ -113,7 +113,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmealas
 
-      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 34 ; 34 ; >
+      au < testing ; exists ; 2025 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 34 ; 34 ; >
       au < manifest ; exists ; 2026 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 35 ; 35 ; >
 
   }
@@ -128,7 +128,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jsci
 
-      au < manifest ; exists ; 2025 ; Journal of King Abdulaziz University: Science Volume 35 ; 35 ; >
+      au < testing ; exists ; 2025 ; Journal of King Abdulaziz University: Science Volume 35 ; 35 ; >
       au < manifest ; exists ; 2026 ; Journal of King Abdulaziz University: Science Volume 36 ; 36 ; >
 
   }
@@ -143,8 +143,8 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmrs
 
-      au < manifest ; exists ; 2024 ; The Journal of Medical Rehabilitation Science Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2025 ; The Journal of Medical Rehabilitation Science Volume 2 ; 2 ; >
+      au < testing ; exists ; 2024 ; The Journal of Medical Rehabilitation Science Volume 1 ; 1 ; >
+      au < testing ; exists ; 2025 ; The Journal of Medical Rehabilitation Science Volume 2 ; 2 ; >
       au < manifest ; exists ; 2026 ; The Journal of Medical Rehabilitation Science Volume 3 ; 3 ; >
 
   }
