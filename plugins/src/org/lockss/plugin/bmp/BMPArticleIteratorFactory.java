@@ -94,7 +94,7 @@ public class BMPArticleIteratorFactory implements ArticleIteratorFactory, Articl
 
         CachedUrl pdfUrl = null;
         CachedUrl abstractsUrl = null;
-        CachedUrl doisUrl = null;
+        String doisUrl = null;
 
         try{
             Document doc = Jsoup.parse(tocCU.getUncompressedInputStream(), AuUtil.getCharsetOrDefault(tocCU.getProperties()), tocCU.getUrl());
@@ -104,18 +104,24 @@ public class BMPArticleIteratorFactory implements ArticleIteratorFactory, Articl
                 ArticleFiles af = new ArticleFiles();
 
                 Elements PDFs = article.select("ul.article-nav-bottom>li>a:contains(PDF)");
-                pdfUrl = au.makeCachedUrl("https://agridergisi.com" + PDFs.attr("href").trim());
+                if(PDFs.attr("href") != null){
+                    pdfUrl = au.makeCachedUrl("https://agridergisi.com" + PDFs.attr("href").trim());
+                }
 
                 Elements abstracts = article.select("h3>a[href*=abstract]");
-                abstractsUrl = au.makeCachedUrl("https://agridergisi.com" + abstracts.attr("href").trim());
+                if(abstracts.attr("href") != "#"){
+                    abstractsUrl = au.makeCachedUrl("https://agridergisi.com" + abstracts.attr("href").trim());
+                }
 
                 //needs fixing
-                Elements DOIs = article.select("a[href*=doi]");
-                doisUrl = au.makeCachedUrl(DOIs.attr("href").trim());
+                Elements DOIs = article.select("div.row-fluid>div.span8>a[href*=doi]");
+                log.debug3("doi is " + DOIs.toString());
+                doisUrl = DOIs.attr("href").trim();
 
                 addToListOfRoles(pdfUrl, af, ArticleFiles.ROLE_FULL_TEXT_PDF);
                 addToListOfRoles(abstractsUrl, af, ArticleFiles.ROLE_ABSTRACT);
-                addToListOfRoles(doisUrl, af, ArticleFiles.ROLE_ARTICLE_HANDLE);
+                af.setRole(ArticleFiles.ROLE_ARTICLE_HANDLE, doisUrl);
+                
                 af.setFullTextCu(pdfUrl);
 
                 if(af.getFullTextCu() == null){

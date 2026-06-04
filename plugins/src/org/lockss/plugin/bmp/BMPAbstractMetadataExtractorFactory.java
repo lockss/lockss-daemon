@@ -50,14 +50,14 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
-public class BMPHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
-    static Logger log = Logger.getLogger(BMPHtmlMetadataExtractorFactory.class);
+public class BMPAbstractMetadataExtractorFactory implements FileMetadataExtractorFactory {
+    static Logger log = Logger.getLogger(BMPAbstractMetadataExtractorFactory.class);
 
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target, String contentType) throws PluginException {
-        return new BMPHtmlMetadataExtractor();
+        return new BMPAbstractMetadataExtractor();
     }
 
-    public static class BMPHtmlMetadataExtractor 
+    public static class BMPAbstractMetadataExtractor 
     extends SimpleHtmlMetaTagMetadataExtractor {
 
     private static MultiMap tagMap = new MultiValueMap();
