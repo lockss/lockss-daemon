@@ -1372,6 +1372,8 @@ public class ProxyHandler extends AbstractHttpHandler {
       throws HttpException, IOException {
 
     URI uri = request.getURI();
+    String logConnHost;
+    int logConnPort;
 
     try {
       Socket socket;
@@ -1382,6 +1384,8 @@ public class ProxyHandler extends AbstractHttpHandler {
         // Find the IP/port to which to connect
         InetAddrPort addrPort=new InetAddrPort(uri.toString());
         socket = new Socket(addrPort.getInetAddress(), addrPort.getPort());
+        logConnHost = addrPort.getHost();
+        logConnPort = addrPort.getPort();
       } else if (StringUtil.isNullString(connectHost) ||
                  connectPort <= 0) {
         // Not allowed
@@ -1395,6 +1399,8 @@ public class ProxyHandler extends AbstractHttpHandler {
         return;
       } else {
         socket = new Socket(connectHost, connectPort);
+        logConnHost = connectHost;
+        logConnPort = connectPort;
         if (isLoopbackAddr(connectHost)) {
           recordConnectSource(request, socket);
         }
@@ -1416,8 +1422,8 @@ public class ProxyHandler extends AbstractHttpHandler {
       customizeConnection(pathInContext, pathParams, request, socket);
       request.getHttpConnection().setHttpTunnel(new HttpTunnel(socket,
                                                                timeoutMs));
-      logAccess(request, "200 redirected to " +
-                connectHost + ":" + connectPort);
+      logAccess(request, "200 CONNECT to " +
+                logConnHost + ":" + logConnPort);
 
       response.setStatus(HttpResponse.__200_OK);
       response.setContentLength(0);
