@@ -417,9 +417,10 @@ public class ProxyHandler extends AbstractHttpHandler {
     // TODO -- CTG: we need to determine the mime type and dispatch based on it
     //
     String source = request.getField(Constants.X_LOCKSS_SOURCE);
+    boolean pubOnlyContent = Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source);
     if (HttpRequest.__POST.equals(request.getMethod())
         && proxyMgr.isHandleFormPost()
-        && !Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source)) {
+        && !pubOnlyContent) {
 
       log.debug3("POST request found!");
 
@@ -450,7 +451,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       if (cu != null) {
         request.setMethod(HttpRequest.__GET);
         uri = postUri;
-      } else if (proxyMgr.isMigratingFrom()) {
+      } else if (!pubOnlyContent && proxyMgr.isMigratingFrom()) {
         request.setMethod(HttpRequest.__GET);
         forwardRequest(request, response, postUri.toString());
         return;
@@ -471,13 +472,14 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
 
     String urlString = uri.toString();
-    if (MANIFEST_INDEX_URL_PATH.equals(urlString)) {
-      // FIXME: Doing nothing references AUs from this "migrating-from" machine
-      sendIndexPage(request, response);
-      logAccess(request, "200 index page", TimeBase.msSince(reqStartTime));
-      return;
+    if (!pubOnlyContent) {
+      if (MANIFEST_INDEX_URL_PATH.equals(urlString)) {
+        // FIXME: Doing nothing references AUs from this "migrating-from" machine
+        sendIndexPage(request, response);
+        logAccess(request, "200 index page", TimeBase.msSince(reqStartTime));
+        return;
+      }
     }
-
     // There should be no double encoding issue here when forwarding the proxy
     // request because minimallyEncodeUrl doesn't encode %
     if (proxyMgr.isMinimallyEncodeUrls()) {
@@ -500,59 +502,60 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
 */
 
-    ArchivalUnit au;
-    CachedUrl cu;
+    ArchivalUnit au = null;
+    CachedUrl cu = null;
+    if (!pubOnlyContent) {
 
-    // This supports CLOCKSS Production machines to crawling from the Ingest
-    // machine. The crawler adds the X-Lockss-Auid header to be specific about
-    // which AU it wants a URL from.
-    String auid = request.getField(Constants.X_LOCKSS_AUID);
-    if (!StringUtil.isNullString(auid)) {
-      au = pluginMgr.getAuFromId(auid);
-      if (au == null) {
-        // Requested AU not found.  Return 412, or 503 during startup
-        if (audit503UntilAusStarted && !theDaemon.areAusStarted()) {
-          // TODO - Guesstimate remaining time and add Retry-After header
-          String errmsg =
+      // This supports CLOCKSS Production machines to crawling from the Ingest
+      // machine. The crawler adds the X-Lockss-Auid header to be specific about
+      // which AU it wants a URL from.
+      String auid = request.getField(Constants.X_LOCKSS_AUID);
+      if (!StringUtil.isNullString(auid)) {
+        au = pluginMgr.getAuFromId(auid);
+        if (au == null) {
+          // Requested AU not found.  Return 412, or 503 during startup
+          if (audit503UntilAusStarted && !theDaemon.areAusStarted()) {
+            // TODO - Guesstimate remaining time and add Retry-After header
+            String errmsg =
               "This LOCKSS box is starting.  Please try again in a moment.";
-          response.sendError(HttpResponse.__503_Service_Unavailable, errmsg);
-          request.setHandled(true);
-          logAccess(request, "not present (no AU: " + auid + "), 503",
-              TimeBase.msSince(reqStartTime));
-        } else if (proxyMgr.isMigratingFrom()) {
-          forwardRequest(request, response, urlString);
-        } else {
-          response.sendError(HttpResponse.__412_Precondition_Failed,
-              "AU specified by " + Constants.X_LOCKSS_AUID +
-                  " header not found: " + auid);
-          request.setHandled(true);
-          logAccess(request, "412 AU not found: " + auid,
-              TimeBase.msSince(reqStartTime));
+            response.sendError(HttpResponse.__503_Service_Unavailable, errmsg);
+            request.setHandled(true);
+            logAccess(request, "not present (no AU: " + auid + "), 503",
+                      TimeBase.msSince(reqStartTime));
+          } else if (!pubOnlyContent && proxyMgr.isMigratingFrom()) {
+            forwardRequest(request, response, urlString);
+          } else {
+            response.sendError(HttpResponse.__412_Precondition_Failed,
+                               "AU specified by " + Constants.X_LOCKSS_AUID +
+                               " header not found: " + auid);
+            request.setHandled(true);
+            logAccess(request, "412 AU not found: " + auid,
+                      TimeBase.msSince(reqStartTime));
+          }
+          return;
         }
-        return;
+
+        String normUrl = urlString;
+
+        if (proxyMgr.isNormalizeAuidRequest()) {
+          try {
+            normUrl = UrlUtil.normalizeUrl(urlString, au);
+          } catch (PluginBehaviorException e) {
+            log.siteWarning("Normalizer error: " + urlString, e);
+          }
+        }
+
+        cu = au.makeCachedUrl(normUrl);
+      } else {
+        // No AUID specified
+        cu = pluginMgr.findCachedUrl(urlString);
       }
 
-      String normUrl = urlString;
-
-      if (proxyMgr.isNormalizeAuidRequest()) {
-        try {
-          normUrl = UrlUtil.normalizeUrl(urlString, au);
-        } catch (PluginBehaviorException e) {
-          log.siteWarning("Normalizer error: " + urlString, e);
-        }
-      }
-
-      cu = au.makeCachedUrl(normUrl);
-    } else {
-      // No AUID specified
-      cu = pluginMgr.findCachedUrl(urlString);
-    }
-
-    // Don't allow CLOCKSS to serve local content for unsubscribed AUs
-    // No longer in use?
-    if (cu != null && theDaemon.isDetectClockssSubscription() && !auditProxy) {
-      au = cu.getArchivalUnit();
-      switch (AuUtil.getAuState(au).getClockssSubscriptionStatus()) {
+      // Don't allow CLOCKSS to serve local content for unsubscribed AUs
+      // No longer in use?
+      if (cu != null && theDaemon.isDetectClockssSubscription() && !auditProxy) {
+        au = cu.getArchivalUnit();
+        switch (AuUtil.getAuState(au).getClockssSubscriptionStatus()) {
         case AuState.CLOCKSS_SUB_UNKNOWN:
         case AuState.CLOCKSS_SUB_NO:
         case AuState.CLOCKSS_SUB_INACCESSIBLE:
@@ -561,9 +564,9 @@ public class ProxyHandler extends AbstractHttpHandler {
           break;
         case AuState.CLOCKSS_SUB_YES:
           break;
+        }
       }
     }
-
     try {
       boolean isRepairRequest = proxyMgr.isRepairRequest(request);
       boolean isInCache = cu != null && cu.hasContent();
@@ -603,7 +606,7 @@ public class ProxyHandler extends AbstractHttpHandler {
             request.setHandled(true);
             logAccess(request, "not present, no forward, 503",
                 TimeBase.msSince(reqStartTime));
-          } else if (proxyMgr.isMigratingFrom()) {
+          } else if (!pubOnlyContent && proxyMgr.isMigratingFrom()) {
             // Forward proxy request to migrating-to machine - if we forward to
             // other machine and it doesn't have it either, just forward the
             // error response to client.
@@ -632,12 +635,12 @@ public class ProxyHandler extends AbstractHttpHandler {
       // Support for machines (mainly Content Testing machines) that need to operate
       // on content freshly crawled from the publisher through this proxy
       if (!isInCache
-          && !Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source)
+          && !pubOnlyContent
           && (proxyMgr.getHostDownAction() ==
               ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504)
           && proxyMgr.isHostDown(uri.getHost())) {
 
-        if (proxyMgr.isMigratingFrom()) {
+        if (!pubOnlyContent && proxyMgr.isMigratingFrom()) {
           forwardRequest(request, response, urlString);
         } else {
           // FIXME: Error page will only reflect candidate AUs from this machine
@@ -952,9 +955,9 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     LockssUrlConnection conn = null;
     String source = request.getField(Constants.X_LOCKSS_SOURCE);
-    boolean alwaysProxy = Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source);
+    boolean pubOnlyContent = Constants.X_LOCKSS_SOURCE_PUBLISHER.equals(source);
 
-    if (alwaysProxy) {
+    if (pubOnlyContent) {
       if (isPubNever(cu)) {
         sendErrorPage(request, response, 504,
             hostMsg("Can't connect to", request.getURI().getHost(),
@@ -991,7 +994,7 @@ public class ProxyHandler extends AbstractHttpHandler {
           // calling this method.
           log.error("Shouldn't happen, isInCache && isPubNever: " +
               cu.getUrl());
-        } else if (proxyMgr.isMigratingFrom()) {
+        } else if (!pubOnlyContent && proxyMgr.isMigratingFrom()) {
           forwardRequest(request, response, urlString);
           return;
         } else {
@@ -1017,7 +1020,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       // did not find it in this cache. Let the "migrating to" machine forward
       // a response from the publisher or serve from its cache. It may also
       // return an index or error page.
-      if (proxyMgr.isMigratingFrom() && !isInCache) {
+      if (!pubOnlyContent && proxyMgr.isMigratingFrom() && !isInCache) {
         forwardRequest(request, response, urlString);
         return;
       }
