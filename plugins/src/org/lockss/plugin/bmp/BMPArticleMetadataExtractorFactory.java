@@ -61,24 +61,22 @@ public class BMPArticleMetadataExtractorFactory implements ArticleMetadataExtrac
             throws IOException, PluginException{
                 ArticleMetadata am = new ArticleMetadata();
                 CachedUrl metadataUrl = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
+                FileMetadataExtractor me = null;
                 if(metadataUrl.toString().contains("issue")){
                     String doi = af.getRoleAsString(ArticleFiles.ROLE_ARTICLE_HANDLE);
-                    FileMetadataExtractor me = new BMPTOCMetadataExtractorFactory.BMPTOCMetadataExtractor();
+                    if(!doi.isEmpty()){
+                        me = new BMPTOCMetadataExtractorFactory.BMPTOCMetadataExtractor(doi);
+                    }
                 }else{
-                    if(metadataUrl.toString().contains("abstract")){
-                        log.debug3("setting up metadata extractor");
-                        FileMetadataExtractor me = new BMPAbstractMetadataExtractorFactory.BMPAbstractMetadataExtractor();
-                        me.extract(target, metadataUrl, new FileMetadataExtractor.Emitter() {
+                    me = new BMPAbstractMetadataExtractorFactory.BMPAbstractMetadataExtractor();
+                }
+                if(me != null){
+                    me.extract(target, metadataUrl, new FileMetadataExtractor.Emitter() {
                         public void emitMetadata(CachedUrl cu, ArticleMetadata am) {
                             emitter.emitMetadata(af, am);
                         }
-                });
-                    }
+                    });
                 }
-                log.debug3("metadata url is " + metadataUrl);
-            //from af, get metadata url (cu), if an abstract, pass to abstractmetadataextractorfactory
-            //from af, if metadata url is toc url, then pass to toc metadata extractor factory; be sure to include article handle
         }
-
     } 
 }

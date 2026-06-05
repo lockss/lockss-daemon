@@ -47,6 +47,7 @@ import org.lockss.extractor.FileMetadataExtractorFactory;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.extractor.SimpleHtmlMetaTagMetadataExtractor;
+import org.lockss.plugin.ArticleFiles;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
@@ -54,73 +55,72 @@ public class BMPTOCMetadataExtractorFactory implements FileMetadataExtractorFact
 
     static Logger log = Logger.getLogger(BMPTOCMetadataExtractorFactory.class);
 
-    static String doi;
-
     @Override
     public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target, String contentType) throws PluginException {
-        return new BMPTOCMetadataExtractor();
+        //this is not really used, need to refactor code to remove extraneous factory
+        return new BMPTOCMetadataExtractor(null);
     }
-    public static class BMPTOCMetadataExtractor extends SimpleHtmlMetaTagMetadataExtractor {
-            private static MultiMap tagMap = new MultiValueMap();
 
-            @Override
-            public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
-            throws IOException {
-                ArticleMetadata am = super.extract(target, cu);
-                am.cook(tagMap);
-                getAdditionalMetadata(cu, am);
-                return am;
+    public static class BMPTOCMetadataExtractor implements FileMetadataExtractor {
+            private static MultiMap tagMap = new MultiValueMap();
+            public String doi;
+
+            public BMPTOCMetadataExtractor(String doi){
+                this.doi = doi;
             }
-            //FIX ME
-            private void getAdditionalMetadata(CachedUrl cu, ArticleMetadata am){
-                InputStream in = cu.getUnfilteredInputStream();
+            
+            public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
+                throws IOException, PluginException{
+                InputStream in = cu.getUncompressedInputStream();
+                ArticleMetadata am = new ArticleMetadata();
                 if (in != null) {
                     try {
-                        String title = null;
-                        String publication = null;
-                        String author = null;
-                        String date = null;
 
-                        Elements h1_element_title;
-                        Elements span_element_publication;
-                        Elements span_element_author;
-                        Elements span_element_date;
+                        String title = null;
+                        String author = null;
+
+                        Elements element_title;
+                        Elements element_author;
+                        Elements element_doi;
                         String url = cu.getUrl();
                         try {
                             Document doc = Jsoup.parse(in, cu.getEncoding(), url);
-                            h1_element_title = doc.select("h1[class=\"article\"]");
-                            span_element_publication = doc.select("span[class=\"publication\"]"); 
-                            span_element_author = doc.select("span[class=\"writer\"]");
-                            span_element_date = doc.select("span[class=\"date\"]");
-                            title = checkElement(h1_element_title);
-                            publication = checkElement(span_element_publication);
-                            author = checkElement(span_element_author);
-                            date = checkElement(span_element_date);
+                            Elements article = doc.select("div.span9>section[id*=cat]>div:has(>div>div.span8>a[href=\""+doi+"\"])");
+                            element_title = article.select("h3>a");
+                            element_author = article.select("p");
+                            element_doi = article.select("div.row-fluid>div.span8>a");
+                            author = checkElement(element_author, "Author");
+                            title = checkElement(element_title, "Title");
+                            doi = checkElement(element_doi, "DOI");
                         } catch (IOException e) {
                             log.debug3("Baycinar Medical Publishing: Error getting Metadata", e);
                         }
                         in.close();
+                        am = fillMetadata(doi, MetadataField.FIELD_DOI, am);
                         am = fillMetadata(title, MetadataField.FIELD_ARTICLE_TITLE, am);
-                        am = fillMetadata(publication, MetadataField.FIELD_PUBLICATION_TITLE, am);
                         am = fillMetadata(author, MetadataField.FIELD_AUTHOR, am);
-                        am = fillMetadata(date, MetadataField.FIELD_DATE, am);
-                        return;
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    if(doi != null && doi != ""){
+                        emitter.emitMetadata(cu, am);
+                    } 
                 }
-                return;
             }
 
-            protected String checkElement(Elements element) {
+            protected String checkElement(Elements element, String specifiedMetadata) {
                 String cleanedUpElement = null;
                 if ( element != null){
-                    cleanedUpElement = element.text().trim();
-                    log.debug3("Baycinar Medical Publishing: Element is " + element);
-                    if (cleanedUpElement != null) {
-                        log.debug3("Baycinar Medical Publishing: Element cleaned is " + cleanedUpElement);
-                    } else {
-                        log.debug3("Baycinar Medical Publishing: Element is null");
+                    if( element.size() > 1){
+                        throw new UnsupportedOperationException("Too many elements were found for metadata " + specifiedMetadata);
+                    }else{
+                        cleanedUpElement = element.text().trim();
+                        log.debug3("Baycinar Medical Publishing: Element for " + specifiedMetadata + " is " + element);
+                        if (cleanedUpElement != null) {
+                            log.debug3("Baycinar Medical Publishing: Element cleaned for " + specifiedMetadata + " is " + cleanedUpElement);
+                        } else {
+                            log.debug3("Baycinar Medical Publishing: Element is null");
+                        }
                     }
                 }
                 return cleanedUpElement;
