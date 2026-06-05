@@ -125,16 +125,6 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.bmp.BMPArticleMetadataExtractorFactory</string>
   </entry>
-  <!--look up article_metadata_extractor_factory_map
-  <entry>
-    <string>text/html_metadata_extractor_factory_map</string>
-    <map>
-      <entry>
-        <string>*</string>
-        <string>org.lockss.plugin.bmp.BMPHtmlMetadataExtractorFactory</string>
-      </entry>
-    </map>
-  </entry>-->
   <entry>
     <string>au_def_pause_time</string>
     <long>3000</long>
