@@ -109,11 +109,10 @@ public class BMPArticleIteratorFactory implements ArticleIteratorFactory, Articl
                 }
 
                 Elements abstracts = article.select("h3>a[href*=abstract]");
-                if(abstracts.attr("href") != "#"){
+                if(abstracts.attr("href") != null){
                     abstractsUrl = au.makeCachedUrl("https://agridergisi.com" + abstracts.attr("href").trim());
                 }
 
-                //needs fixing
                 Elements DOIs = article.select("div.row-fluid>div.span8>a[href*=doi]");
                 log.debug3("doi is " + DOIs.toString());
                 doisUrl = DOIs.attr("href").trim();

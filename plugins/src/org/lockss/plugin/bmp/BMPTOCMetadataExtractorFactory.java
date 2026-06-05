@@ -75,7 +75,6 @@ public class BMPTOCMetadataExtractorFactory implements FileMetadataExtractorFact
                 ArticleMetadata am = new ArticleMetadata();
                 if (in != null) {
                     try {
-
                         String title = null;
                         String author = null;
 
@@ -102,6 +101,7 @@ public class BMPTOCMetadataExtractorFactory implements FileMetadataExtractorFact
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    //some content (like Front Matter) don't have dois; don't emit metadata for these articles
                     if(doi != null && doi != ""){
                         emitter.emitMetadata(cu, am);
                     } 
@@ -111,6 +111,7 @@ public class BMPTOCMetadataExtractorFactory implements FileMetadataExtractorFact
             protected String checkElement(Elements element, String specifiedMetadata) {
                 String cleanedUpElement = null;
                 if ( element != null){
+                    //if more than one element is found, throw an error
                     if( element.size() > 1){
                         throw new UnsupportedOperationException("Too many elements were found for metadata " + specifiedMetadata);
                     }else{
