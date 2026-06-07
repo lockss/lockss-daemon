@@ -80,30 +80,53 @@ public class TestRateLimiter extends LockssTestCase {
     RateLimiter lim = new RateLimiter(10, 100);
     assertEquals(10, lim.getLimit());
     assertEquals(100, lim.getInterval());
-    String rate = lim.getRate();
-    assertEquals("10/100ms", rate);
-    assertSame(rate, lim.getRate());
+    assertEquals(10, lim.getEffectiveLimit());
+    assertEquals(100, lim.getEffectiveInterval());
+    assertEquals("10/100ms", lim.getRate());
+    assertEquals("10/100ms", lim.getEffectiveRate());
     assertTrue(lim.isRate(10, 100));
     assertFalse(lim.isRate(1, 100));
     assertFalse(lim.isRate(10, 1000));
     assertTrue(lim.isRate("10/100ms"));
-    assertFalse(lim.isRate("10/100"));
+    assertTrue(lim.isRate("10/100"));
+    assertTrue(lim.isEffectiveRate(10, 100));
+    assertFalse(lim.isEffectiveRate(1, 100));
+    assertFalse(lim.isEffectiveRate(10, 1000));
+    assertTrue(lim.isEffectiveRate("10/100ms"));
+    assertTrue(lim.isEffectiveRate("10/100"));
     assertFalse(lim.isUnlimited());
     assertTrue(lim.isModifiable());
+
+    lim.setMultiplier(0.4);
+    assertEquals(10, lim.getLimit());
+    assertEquals(100, lim.getInterval());
+    assertEquals(4, lim.getEffectiveLimit());
+    assertEquals(100, lim.getEffectiveInterval());
+    assertEquals("10/100ms", lim.getRate());
+    assertEquals("4/100ms", lim.getEffectiveRate());
+    assertTrue(lim.isRate(10, 100));
+    assertFalse(lim.isRate(1, 100));
+    assertFalse(lim.isRate(10, 1000));
+    assertTrue(lim.isRate("10/100ms"));
+    assertTrue(lim.isRate("10/100"));
+    assertTrue(lim.isEffectiveRate(4, 100));
+    assertFalse(lim.isEffectiveRate(10, 100));
+    assertFalse(lim.isEffectiveRate(10, 1000));
+    assertTrue(lim.isEffectiveRate("4/100ms"));
+    assertTrue(lim.isEffectiveRate("4/100"));
+    assertFalse(lim.isUnlimited());
   }
 
   public void testAccessors2() {
     RateLimiter lim = new RateLimiter("10/100");
     assertEquals(10, lim.getLimit());
     assertEquals(100, lim.getInterval());
-    String rate = lim.getRate();
-    assertEquals("10/100", rate);
-    assertSame(rate, lim.getRate());
+    assertEquals("10/100", lim.getRate());
     assertTrue(lim.isRate(10, 100));
     assertFalse(lim.isRate(1, 100));
     assertFalse(lim.isRate(10, 1000));
     assertTrue(lim.isRate("10/100"));
-    assertFalse(lim.isRate("10/100ms"));
+    assertTrue(lim.isRate("10/100ms"));
     assertFalse(lim.isUnlimited());
     assertTrue(lim.isModifiable());
   }
@@ -267,6 +290,7 @@ public class TestRateLimiter extends LockssTestCase {
     TimeBase.step(1);
     assertTrue(lim.isEventOk());
     assertEquals("4/10ms", lim.getRate());
+    assertEquals(0, lim.timeUntilEventOk());
     lim.setRate(2, 20);
     assertEquals(2, lim.getLimit());
     assertEquals(20, lim.getInterval());
@@ -449,18 +473,91 @@ public class TestRateLimiter extends LockssTestCase {
     assertTrue(lim2.isModifiable());
   }
 
+  public void testSimpleWithMult() {
+    TimeBase.setSimulated(1000);
+    RateLimiter lim = new RateLimiter(1, 10).setMultiplier(0.5D);
+    assertEquals(1, lim.getLimit());
+    assertEquals(10, lim.getInterval());
+    assertEquals(20, lim.getEffectiveInterval());
+    // Ensure multiple calls to setMultiplier() aren't cumulative
+    lim.setMultiplier(0.5);
+    assertEquals(1, lim.getLimit());
+    assertEquals(10, lim.getInterval());
+    assertEquals(20, lim.getEffectiveInterval());
+
+    assertTrue(lim.isEventOk());
+    assertEquals(0, lim.timeUntilEventOk());
+    lim.event();
+    assertFalse(lim.isEventOk());
+    assertEquals(20, lim.timeUntilEventOk());
+    TimeBase.step(10);
+    assertEquals(10, lim.timeUntilEventOk());
+    assertFalse(lim.isEventOk());
+    TimeBase.step(10);
+    assertTrue(lim.isEventOk());
+    assertEquals(0, lim.timeUntilEventOk());
+    lim.event();
+    assertFalse(lim.isEventOk());
+    assertEquals(20, lim.timeUntilEventOk());
+
+    lim.unevent();
+    assertTrue(lim.isEventOk());
+    assertEquals(0, lim.timeUntilEventOk());
+    lim.event();
+    assertFalse(lim.isEventOk());
+    assertEquals(20, lim.timeUntilEventOk());
+  }
+
+  public void testLimitWithMult() {
+    TimeBase.setSimulated(1000);
+    RateLimiter lim = new RateLimiter(20, 100).setMultiplier(0.5D);
+    assertEquals(20, lim.getLimit());
+    assertEquals(10, lim.getEffectiveLimit());
+    assertEquals(100, lim.getInterval());
+    assertEquals(100, lim.getEffectiveInterval());
+    assertTrue(lim.isEventOk());
+    assertEquals(0, lim.timeUntilEventOk());
+    lim.event();
+    for (int ix = 1; ix <= 9; ix++) {
+      assertTrue(lim.isEventOk());
+      TimeBase.step(10);
+      lim.event();
+    }
+    assertFalse(lim.isEventOk());
+    TimeBase.step(10);
+    assertTrue(lim.isEventOk());
+    lim.event();
+    assertFalse(lim.isEventOk());
+    assertEquals(10, lim.timeUntilEventOk());
+    TimeBase.step(9);
+    assertFalse(lim.isEventOk());
+    TimeBase.step(1);
+    assertTrue(lim.isEventOk());
+    assertEquals(0, lim.timeUntilEventOk());
+
+    // Ensure the multiplier is re-applied after changing the rate
+    RateLimiter lim2 = RateLimiter.getRateLimiter(lim, "15/80ms", "15/80ms");
+    assertEquals(15, lim.getLimit());
+    assertEquals(8, lim.getEffectiveLimit());
+    assertEquals(80, lim.getInterval());
+    assertEquals(80, lim.getEffectiveInterval());
+  }
+
   public void testRateString() {
     Configuration config = ConfigurationUtil.fromArgs("foo", "7/3s");
     RateLimiter lim = RateLimiter.getConfiguredRateLimiter(config, null,
 							   "foo", "3/2");
-    assertEquals("7/3000ms", lim.rateString());
+    assertEquals("7/3000ms", lim.rateString(3000, 7));
     assertEquals("7/3s", lim.getRate());
+    assertEquals("7/3000ms", lim.getEffectiveRate());
     lim = new RateLimiter("22/33000");
-    assertEquals("22/33s", lim.rateString());
+    assertEquals("22/33s", lim.rateString(33000, 22));
     assertEquals("22/33000", lim.getRate());
+    assertEquals("22/33s", lim.getEffectiveRate());
     lim = new RateLimiter("unlimited");
-    assertEquals("unlimited", lim.rateString());
+    assertEquals("unlimited", lim.rateString(0, 1));
     assertEquals("unlimited", lim.getRate());
+    assertEquals("unlimited", lim.getEffectiveRate());
   }
 
   public void testToString() {
@@ -472,7 +569,7 @@ public class TestRateLimiter extends LockssTestCase {
 
   public void testPool1() {
     String r1 = "7/20s";
-    String r2 = "2/123";
+    String r2 = "2/123ms";
 
     RateLimiter.Pool pool = RateLimiter.getPool();
     assertSame(pool, RateLimiter.getPool());
@@ -571,5 +668,14 @@ public class TestRateLimiter extends LockssTestCase {
     assertEquals("3/4000", lim1.getRate());
     assertEquals("3/4000", lim2.getRate());
     assertEquals("3/4000", lim3.getRate());
+  }
+
+  public void testIsCloseEnough() {
+    RateLimiter lim = new RateLimiter(1, 100);
+    assertTrue(lim.isCloseEnough(1, 1.0d));
+    assertTrue(lim.isCloseEnough(9, 10.0d));
+    assertTrue(lim.isCloseEnough(11, 10.0d));
+    assertFalse(lim.isCloseEnough(12, 10.0d));
+    assertFalse(lim.isCloseEnough(8, 10.0d));
   }
 }

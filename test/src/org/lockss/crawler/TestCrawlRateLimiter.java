@@ -127,6 +127,7 @@ public class TestCrawlRateLimiter extends LockssTestCase {
     CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
     RateLimiter limiter = crl.getRateLimiterFor("url", "text/html");
     assertEquals("10/1m", limiter.getRate());
+    assertEquals("10/1m0s", limiter.getEffectiveRate());
     assertSame(limiter, crl.getRateLimiterFor("url", "text/html"));
     assertSame(limiter, crl.getRateLimiterFor("url",
 					      "text/html; charset=utf-8"));
@@ -143,6 +144,35 @@ public class TestCrawlRateLimiter extends LockssTestCase {
     limiter = crl.getRateLimiterFor("url", "noimage/gif");
     assertEquals("22/23", limiter.getRate());
     assertSame(limiter, crl.getRateLimiterFor("url", "application/*"));
+  }
+
+  public void testMimeWithMultiplier() {
+    RateLimiterInfo rli = new RateLimiterInfo("key1", 50000);
+    Map<String,String> mimes =
+      MapUtil.map("text/html,text/x-html,application/pdf", "10/1m",
+		  "image/*", "5/1s");
+    rli.setMimeRates(mimes);
+    CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli).setMultiplier(0.5);
+    RateLimiter limiter = crl.getRateLimiterFor("url", "text/html");
+    assertEquals("10/1m", limiter.getRate());
+    assertEquals("5/1m0s", limiter.getEffectiveRate());
+    assertSame(limiter, crl.getRateLimiterFor("url",
+					      "text/html; charset=utf-8"));
+    assertSame(limiter, crl.getRateLimiterFor("url", "text/x-html"));
+    assertSame(limiter, crl.getRateLimiterFor("url", "application/pdf"));
+    RateLimiter defLimiter = crl.getRateLimiterFor("url", "text/xml");
+    assertEquals("1/50000", defLimiter.getRate());
+    assertSame(defLimiter, crl.getRateLimiterFor("url", "foo/bar"));
+    assertSame(defLimiter, crl.getRateLimiterFor("url", null));
+
+    limiter = crl.getRateLimiterFor("url", "image/gif");
+    assertEquals("5/1s", limiter.getRate());
+    assertSame(limiter, crl.getRateLimiterFor("url", "image/png"));
+
+    limiter = crl.getRateLimiterFor("url", "noimage/gif");
+    assertEquals("1/50000", limiter.getRate());
+    assertSame(limiter, crl.getRateLimiterFor("url", "application/*"));
+    assertSame(limiter, crl.getRateLimiterFor("url", null));
   }
 
   public void testUrl() {
@@ -233,10 +263,15 @@ public class TestCrawlRateLimiter extends LockssTestCase {
     rli.setCond(map);
     CrawlRateLimiter crl = CrawlRateLimiter.Util.forRli(rli);
 
+    assertClass(ConditionalCrawlRateLimiter.class, crl);
+    ConditionalCrawlRateLimiter ccrl = (ConditionalCrawlRateLimiter)crl;
+
     // win1
     TimeBase.setSimulated("1970/1/1 13:00:00");
     assertEquals("3/300", crl.getRateLimiterFor("foo.pdf", null).getRate());
     assertEquals("3/300", crl.getRateLimiterFor("foo.bar", null).getRate());
+    assertEquals("3/300ms", crl.getRateLimiterFor("foo.pdf", null).getEffectiveRate());
+    assertEquals("3/300ms", crl.getRateLimiterFor("foo.bar", null).getEffectiveRate());
     crl.pauseBeforeFetch("foo.pdf", null);
     assertEquals(1, crl.getPauseCounter());
     crl.pauseBeforeFetch("foo.pdf", null);
@@ -246,6 +281,8 @@ public class TestCrawlRateLimiter extends LockssTestCase {
     TimeBase.setSimulated("1970/1/1 22:00:00");
     assertEquals("10/2s", crl.getRateLimiterFor("foo.pdf", null).getRate());
     assertEquals("4/500", crl.getRateLimiterFor("foo.bar", null).getRate());
+    assertEquals("10/2000ms", crl.getRateLimiterFor("foo.pdf", null).getEffectiveRate());
+    assertEquals("4/500ms", crl.getRateLimiterFor("foo.bar", null).getEffectiveRate());
     crl.pauseBeforeFetch("foo.pdf", null);
     // window change should cause two pauses
     assertEquals(4, crl.getPauseCounter());
@@ -274,6 +311,24 @@ public class TestCrawlRateLimiter extends LockssTestCase {
     crl.pauseBeforeFetch("foo.pdf", null);
     assertEquals(10, crl.getPauseCounter());
     assertEquals("10/2s", crl.getRateLimiterFor("foo.pdf", null).getRate());
+
+    crl.setMultiplier(0.5);
+
+    // reset to win1
+    TimeBase.setSimulated("1970/1/1 13:00:00");
+    assertEquals("3/300", crl.getRateLimiterFor("foo.pdf", null).getRate());
+    assertEquals("3/600ms", crl.getRateLimiterFor("foo.pdf", null).getEffectiveRate());
+    assertEquals("3/300", crl.getRateLimiterFor("foo.pdf", null).getRate());
+    assertEquals("3/600ms", crl.getRateLimiterFor("foo.pdf", null).getEffectiveRate());
+    assertEquals("3/300", crl.getRateLimiterFor("foo.bar", null).getRate());
+    assertEquals("3/600ms", crl.getRateLimiterFor("foo.bar", null).getEffectiveRate());
+
+    // Change to win2
+    TimeBase.setSimulated("1970/1/1 22:00:00");
+    assertEquals("10/2s", crl.getRateLimiterFor("foo.pdf", null).getRate());
+    assertEquals("5/2000ms", crl.getRateLimiterFor("foo.pdf", null).getEffectiveRate());
+    assertEquals("4/500", crl.getRateLimiterFor("foo.bar", null).getRate());
+    assertEquals("2/500ms", crl.getRateLimiterFor("foo.bar", null).getEffectiveRate());
   }
 
   static class MyCrawlRateLimiter extends FileTypeCrawlRateLimiter {

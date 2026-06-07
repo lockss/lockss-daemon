@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
+import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.crawler.*;
@@ -54,6 +55,11 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   public void stopService() {
     scheduledRepairs = new HashMap();
     scheduledCrawls = new HashMap();
+  }
+
+  @Override
+  public double getCrawlRateMultiplier() {
+    return RateLimiter.NO_MULTIPLIER;
   }
 
   public int getAuPriority(ArchivalUnit au) {

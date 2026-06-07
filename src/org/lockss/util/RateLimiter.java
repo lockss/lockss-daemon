@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 import java.util.*;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.lockss.config.*;
 
 /**
@@ -50,15 +51,25 @@ import org.lockss.config.*;
 public class RateLimiter {
   static Logger log = Logger.getLogger("RateLimiter");
 
+  public static int MAX_EVENTS = 10000;  //  Sanity limit on number of events
+
+  public static double NO_MULTIPLIER = 1.0D;
+
+  private static double DEFAULT_MULTIPLIER_TOLERANCE = 0.1D;
+
   /** A RateLimiter that allows events at an unlimited rate. */
   public final static RateLimiter UNLIMITED = new Constant("unlimited");
 
-  private int events;			// limit on events / interval
-  private long interval;
-  private long time[];			// history of (events) event times,
-					// or null if unlimited
+  private int events;                   // defined limit on events / interval
+  private long interval;                // defined interval
+  private int effectiveEvents;          // effective limit on events / interval
+  private long effectiveInterval;       // effective interval
+  private long eventTimes[];            // history of (events) event times,
+                                        // or null if unlimited
   private int count = 0;
   private String rate;
+
+  private double multiplier = NO_MULTIPLIER;
 
   /** Create a RateLimiter according to the specified configuration parameters.
    * @param config the Configuration object
@@ -174,6 +185,7 @@ public class RateLimiter {
   public RateLimiter(int events, long interval) {
     checkRate(events, interval, false);
     init(events, interval);
+    processMultiplier();
   }
 
   /** Create a RateLimiter that limits events to the specified rate
@@ -184,18 +196,72 @@ public class RateLimiter {
     checkRate(ept.events, ept.interval, true);
     init(ept.events, ept.interval);
     this.rate = rate;
+    processMultiplier();
   }
 
   private void init(int events, long interval) {
-    this.events = events;
+    this.events = limitEvents(events);
     this.interval = interval;
     if (interval != 0) {
-      time = new long[events];
-      Arrays.fill(time, 0);
+      eventTimes = new long[events];
+      Arrays.fill(eventTimes, 0);
     } else {
-      time = null;
+      eventTimes = null;
     }
     count = 0;
+  }
+
+  /** Impose a sanity limit on the size of the eventTimes array */
+  private int limitEvents(long n) {
+    int res = Math.min((int)n, MAX_EVENTS);
+    if (n > res) {
+      log.warning("Reducing events from " + n + " to " + res);
+    }
+    return res;
+  }
+
+  /** Multiply the rate by the specified amount.  Values greater than
+   * 1.0 cause the rate to be faster, values less than 1.0 cause the
+   * rate to be slower.
+   */
+  public synchronized RateLimiter setMultiplier(double multiplier) {
+    this.multiplier = multiplier;
+    processMultiplier();
+    return this;
+  }
+
+  private boolean hasMultiplier() {
+    return multiplier != NO_MULTIPLIER;
+  }
+
+  private void processMultiplier() {
+    if (!hasMultiplier()) {
+      effectiveEvents = events;
+      effectiveInterval = interval;
+    } else if (events <= 1) {
+      effectiveEvents = events;
+      effectiveInterval = Math.round(interval / multiplier);
+    } else {
+      double prod = (double)events * multiplier;
+      long adjustedEvents = Math.round(prod);
+      if (isCloseEnough(adjustedEvents, prod)) {
+        effectiveEvents = limitEvents(adjustedEvents);
+        effectiveInterval = interval;
+      } else {
+        effectiveEvents = events;
+        effectiveInterval = Math.round(interval / multiplier);
+      }
+    }
+    if (eventTimes != null && eventTimes.length != effectiveEvents) {
+      resizeEventArray();
+    }
+  }
+
+  private double paramEventsMultiplierTolerance = DEFAULT_MULTIPLIER_TOLERANCE;
+
+  boolean isCloseEnough(long i, double x) {
+    double maxDelta = paramEventsMultiplierTolerance * x;
+    return (double)i <= x + maxDelta && (double)i >= x - maxDelta;
   }
 
   private void checkRate(int events, long interval, boolean allowUnlimited) {
@@ -210,27 +276,70 @@ public class RateLimiter {
     }
   }
 
-  /** Return the limit as a rate string n/interval */
+  /** Return the defined rate limit (independent of any multiplier) as
+   * events/interval.  If the rate was set with an events/interval
+   * string, either initially or with setRate(), it is returned
+   * verbatim.  If the rate was set with individual events and
+   * interval values, a canonical string is returned. */
   public synchronized String getRate() {
-    if (rate == null) {
-      rate = rateString();
+    if (rate != null) {
+      return rate;
     }
-    return rate;
+    return rateString(interval, events);
   }
 
-  /** Return the limit on the number of events */
+  /** Return the effective rate limit as events/interval */
+  public synchronized String getEffectiveRate() {
+    return rateString(effectiveInterval, effectiveEvents);
+  }
+
+  static String rateString(long interval, int events) {
+    if (interval == 0) {
+      return "unlimited";
+    }
+    return events + "/" + StringUtil.timeIntervalToString(interval);
+  }
+
+  /** Return the defined limit on the number of events */
   public int getLimit() {
     return events;
   }
 
-  /** Return the interval over which events are limited */
+  /** Return the defined interval over which events are limited */
   public long getInterval() {
     return interval;
   }
 
+  /** Return the current limit on the number of events (affected by
+   * multiplier) */
+  public int getEffectiveLimit() {
+    return effectiveEvents;
+  }
+
+  /** Rfeturn the current interval over which events are limited
+   * (affected by multiplier) */
+  public long getEffectiveInterval() {
+    return effectiveInterval;
+  }
+
   /** Return true if the rate limiter is of specified rate */
   public boolean isRate(String rate) {
-    return getRate().equals(rate);
+    try {
+      Ept ept = new Ept(rate);
+      return isRate(ept.events, ept.interval);
+    } catch (RuntimeException e) {
+      return false;
+    }
+  }
+
+  /** Return true if the rate limiter's effective rate is of specified rate */
+  public boolean isEffectiveRate(String rate) {
+    try {
+      Ept ept = new Ept(rate);
+      return isEffectiveRate(ept.events, ept.interval);
+    } catch (RuntimeException e) {
+      return false;
+    }
   }
 
   /** Return true if the rate limiter is of specified rate */
@@ -238,9 +347,14 @@ public class RateLimiter {
     return this.events == events && this.interval == interval;
   }
 
+  /** Return true if the rate limiter's effective rate is of specified rate */
+  public boolean isEffectiveRate(int events, long interval) {
+    return this.effectiveEvents == events && this.effectiveInterval == interval;
+  }
+
   /** Return true iff the rate limiter imposes no limit */
   public boolean isUnlimited() {
-    return time == null;
+    return interval == 0;
   }
 
   /** Change the rate */
@@ -249,26 +363,18 @@ public class RateLimiter {
       Ept ept = new Ept(newRate);
       checkRate(ept.events, ept.interval, true);
       setRate0(ept.events, ept.interval);
-      rate = newRate;
     }
+    rate = newRate;
   }
 
   /** Change the rate */
   public synchronized void setRate(String newRate, String dfault) {
-    if (!isRate(newRate)) {
-      Ept ept;
-      try {
-	ept = new Ept(newRate);
-	checkRate(ept.events, ept.interval, true);
-      } catch (RuntimeException e) {
-	log.warning("Configured rate (" + rate +
-		    ") illegal, using default (" + dfault + ")");
-	newRate = dfault;
-	ept = new Ept(newRate);
-	checkRate(ept.events, ept.interval, true);
-      }
-      setRate0(ept.events, ept.interval);
-      rate = newRate;
+    try {
+      setRate(newRate);
+    } catch (RuntimeException e) {
+      log.warning("Configured rate (" + newRate +
+                  ") illegal, using default (" + dfault + ")");
+      setRate(dfault);
     }
   }
 
@@ -277,24 +383,40 @@ public class RateLimiter {
     if (!isRate(newEvents, newInterval)) {
       checkRate(newEvents, newInterval, false);
       setRate0(newEvents, newInterval);
-      rate = null;
     }
+    rate = null;
   }
 
   private void setRate0(int newEvents, long newInterval) {
-    if (newInterval != this.interval) {
-      if (newInterval == 0 || this.interval == 0) {
-	init(newEvents, newInterval);
-	return;
-      } else {
-	this.interval = newInterval;
-      }
+    // If limit either was or now is unlimited, no need to preserve
+    // existing eventTimes
+    if (newInterval == 0 || interval == 0) {
+      init(newEvents, newInterval);
+      processMultiplier();
+      return;
     }
-    if (events != newEvents) {
-      this.time = resizeEventArray(time, count, newEvents);
-      this.events = newEvents;
-      count = 0;
+    if (newEvents != this.events) {
+      // If events size has changed, resize it
+      this.events = limitEvents(newEvents);
+      this.interval = newInterval;
+      processMultiplier();
+    } else if (newInterval != this.interval) {
+      // else just update interval
+      this.interval = newInterval;
+      processMultiplier();
     }
+  }
+
+  void logEventArray() {
+    log.debug("eventTimes: " + Arrays.asList(ArrayUtils.toObject(eventTimes)));
+  }
+
+  void resizeEventArray() {
+    if (eventTimes.length == effectiveEvents) {
+      return;
+    }
+    eventTimes = resizeEventArray(eventTimes, count, effectiveEvents);
+    count = 0;
   }
 
   /** Return an array of size newEvents with all, or the logically last
@@ -304,6 +426,7 @@ public class RateLimiter {
    * tested.  It is static to ensure that it's functional. */
   static long[] resizeEventArray(long[] arr, int ptr, int newEvents) {
     int oldEvents = arr.length;
+    log.debug2("Resizing eventTimes from " + oldEvents + " to " + newEvents);
     long res[] = new long[newEvents];
     int p = newEvents;
     if (ptr != 0) {
@@ -323,8 +446,8 @@ public class RateLimiter {
   /** Record an occurrence of the event */
   public synchronized void event() {
     if (!isUnlimited()) {
-      time[count] = TimeBase.nowMs();
-      count = (count + 1) % events;
+      eventTimes[count] = TimeBase.nowMs();
+      count = (count + 1) % effectiveEvents;
     }
   }
 
@@ -333,7 +456,7 @@ public class RateLimiter {
   public synchronized void unevent() {
     if (!isUnlimited()) {
       count = (count == 0) ? events - 1 : count - 1;
-      time[count] = 0;
+      eventTimes[count] = 0;
     }
   }
 
@@ -342,7 +465,8 @@ public class RateLimiter {
     if (isUnlimited()) {
       return true;
     }
-    return time[count] == 0 || TimeBase.msSince(time[count]) >= interval;
+    return eventTimes[count] == 0 ||
+                 TimeBase.msSince(eventTimes[count]) >= effectiveInterval;
   }
 
   /** Return the amount of time until the next event is allowed */
@@ -350,7 +474,7 @@ public class RateLimiter {
     if (isUnlimited()) {
       return 0;
     }
-    long res = TimeBase.msUntil(time[count] + interval);
+    long res = TimeBase.msUntil(eventTimes[count] + effectiveInterval);
     return (res > 0) ? res : 0;
   }
 
@@ -370,7 +494,7 @@ public class RateLimiter {
   /** Wait until event is allowed, signal an event and return.  This
    * version guarantees that threads will wake up in the order they entered
    * (<i>ie<i>, no thread will wait inordinately long).  Calls to this
-   * should <b>not</b> synchronize on the RateLimiter. */
+   * should <b>not</b> synchronized on the RateLimiter. */
   public boolean fifoWaitAndSignalEvent() throws InterruptedException {
     waitQueue.acquire();
     synchronized (this) {
@@ -385,15 +509,12 @@ public class RateLimiter {
     return true;
   }
 
-  public String rateString() {
-    if (isUnlimited()) {
-      return "unlimited";
-    }
-    return events + "/" + StringUtil.timeIntervalToString(interval);
-  }
-
   public String toString() {
-    return "[RL: " + getRate() + "]";
+    if (hasMultiplier()) {
+      return "[RL: " + getRate() + " * " + multiplier + "]";
+    } else {
+      return "[RL: " + getRate() + "]";
+    }
   }
 
   /** A RateLimiter whose rate cannot be reset */
@@ -438,10 +559,10 @@ public class RateLimiter {
   /** A pool of named RateLimiters, to facilitate sharing between,
    * <i>eg</i>, AUs */
   public static class Pool {
-    private Map limiterMap;
+    private Map<Object,RateLimiter> limiterMap;
 
     Pool() {
-      limiterMap = new HashMap();
+      limiterMap = new HashMap<>();
     }
 
     /** Find or create a new RateLimiter associated with the key.
@@ -467,7 +588,7 @@ public class RateLimiter {
     public synchronized RateLimiter findNamedRateLimiter(Object key,
 							 String rate,
 							 String dfault) {
-      RateLimiter limiter = (RateLimiter)limiterMap.get(key);
+      RateLimiter limiter = limiterMap.get(key);
       if (limiter == null) {
 	limiter = RateLimiter.makeRateLimiter(rate, dfault);
 	limiterMap.put(key, limiter);
@@ -489,7 +610,7 @@ public class RateLimiter {
     public synchronized RateLimiter findNamedRateLimiter(Object key,
 							 int events,
 							 long interval) {
-      RateLimiter limiter = (RateLimiter)limiterMap.get(key);
+      RateLimiter limiter = limiterMap.get(key);
       if (limiter == null) {
 	limiter = new RateLimiter(events, interval);
 	limiterMap.put(key, limiter);

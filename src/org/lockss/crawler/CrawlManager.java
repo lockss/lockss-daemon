@@ -126,6 +126,9 @@ public interface CrawlManager {
    * host */
   public boolean isAllowedPluginPermittedHost(String host);
 
+  /** Return the current crawl rate multiplier */
+  public double getCrawlRateMultiplier();
+
   public interface Callback {
     /**
      * Called when the crawl is completed
