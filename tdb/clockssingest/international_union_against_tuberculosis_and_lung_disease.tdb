@@ -145,8 +145,8 @@
     {
     param[base_url] = https://journals.theunion.org/
 
-    au < exists ; exists ; 2025 ; Public Health Action Volume 15 ; 15 ; >
-    au < exists ; exists ; 2026 ; Public Health Action Volume 16 ; 16 ; >
+    au < manifest ; exists ; 2025 ; Public Health Action Volume 15 ; 15 ; >
+    au < manifest ; exists ; 2026 ; Public Health Action Volume 16 ; 16 ; >
 
     }
 
@@ -184,8 +184,8 @@
     param[base_url] = https://journals.theunion.org/
 
     au < doNotProcess ; exists ; 2024 ; IJTLD OPEN Volume 1 ; 1 ; >
-    au < exists ; exists ; 2025 ; IJTLD OPEN Volume 2 ; 2 ; >
-    au < exists ; exists ; 2026 ; IJTLD OPEN Volume 3 ; 3 ; >
+    au < manifest ; exists ; 2025 ; IJTLD OPEN Volume 2 ; 2 ; >
+    au < manifest ; exists ; 2026 ; IJTLD OPEN Volume 3 ; 3 ; >
 
     }
 
