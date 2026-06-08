@@ -842,11 +842,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  @Override
-  public double getCrawlRateMultiplier() {
-    return paramCrawlRateMultiplier;
-  }
-
   protected CrawlRateLimiter newCrawlRateLimiter(ArchivalUnit au) {
     return CrawlRateLimiter.Util.forAu(au)
       .setMultiplier(paramCrawlRateMultiplier);
