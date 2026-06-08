@@ -3185,7 +3185,7 @@
     au < finished ; manifest ; 2019 ; 2019 ; The British Journal of Radiology Volume 92 ; 92 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; 2020 ; The British Journal of Radiology Volume 93 ; 93 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; The British Journal of Radiology Volume 94 ; 94 ; reingest2.clockss.org:8085 >
-    au < ready ; exists ; 2022 ; 2022 ; The British Journal of Radiology Volume 95 ; 95 ; > #No permission from publisher
+    au < ready ; exists ; 2022 ; 2022 ; The British Journal of Radiology Volume 95 ; 95 ; >
     au < finished ; manifest ; 2023 ; 2023 ; The British Journal of Radiology Volume 96 ; 96 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; The British Journal of Radiology Volume 97 ; 97 ; reingest2.clockss.org:8085 >
     au < crawling ; exists ; 2025 ; 2025 ; The British Journal of Radiology Volume 98 ; 98 ; >
@@ -7885,7 +7885,7 @@
     au < doNotProcess ; doNotProcess ; 2014 ; 2014 ; Genome Biology and Evolution Volume 6 ; 6 ; >
     au < doNotProcess ; doNotProcess ; 2015 ; 2015 ; Genome Biology and Evolution Volume 7 ; 7 ; >
     au < finished ; crawling ; 2016 ; 2016 ; Genome Biology and Evolution Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-    au < ready ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ; > # 403 error on https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/gbe/PAP/10.1093_gbe_evx190/1/evx190_Supp1.pdf?Expires=1506012303&Signature=KJSlDl5h6Z8l9hTgBaG3IAm6SOtwhW1vz5IoPVF~by-kibVitre8n0E-kVeAvZqDsN-q1ybWR3RaPzZK57OpAiHye127cQ18okNX1g8GrIboyIfILXaZpBnpt4yce2G6YkwLEsPBpVS64-ZxH8x-77XzOWhoa3fmWOu5Fr0dKdBw3AVFYMceInTqo3FyCciAACTA7qz6DqwFmyf0vhY0KbMtNYDcPyVhK9ZV~tNhMFZTuhe9-IdTVzNrqnZ9b594dGRlUZ9cOebllSRA71W2syq60IU705ritc30FaB2DEWLEghq8P5QbS0Ts-SawUHPPnKzcUlJiq8ULL3d-jAHgg__&Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q
+    au < ready ; exists ; 2017 ; 2017 ; Genome Biology and Evolution Volume 9 ; 9 ; >
     au < finished ; crawling ; 2018 ; 2018 ; Genome Biology and Evolution Volume 10 ; 10 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2019 ; 2019 ; Genome Biology and Evolution Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2020 ; 2020 ; Genome Biology and Evolution Volume 12 ; 12 ; reingest5.clockss.org:8082 >
@@ -22369,11 +22369,11 @@
     au < finished ; manifest ; 2014 ; 2014 ; The ISME Journal Volume 8 ; 8 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2015 ; 2015 ; The ISME Journal Volume 9 ; 9 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2016 ; 2016 ; The ISME Journal Volume 10 ; 10 ; reingest3.clockss.org:8083 >
-    au < crawling ; exists ; 2017 ; 2017 ; The ISME Journal Volume 11 ; 11 ; > #403 Forbidden, LXQUEUE-2052
+    au < crawling ; exists ; 2017 ; 2017 ; The ISME Journal Volume 11 ; 11 ; >
     au < finished ; manifest ; 2018 ; 2018 ; The ISME Journal Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2019 ; 2019 ; The ISME Journal Volume 13 ; 13 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; 2020 ; The ISME Journal Volume 14 ; 14 ; reingest5.clockss.org:8082 >
-    au < ready ; exists ; 2021 ; 2021 ; The ISME Journal Volume 15 ; 15 ; > #403 Forbidden error
+    au < ready ; exists ; 2021 ; 2021 ; The ISME Journal Volume 15 ; 15 ; >
     au < finished ; manifest ; 2022 ; 2022 ; The ISME Journal Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2023 ; 2023 ; The ISME Journal Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; 2024 ; The ISME Journal Volume 18 ; 18 ; reingest1.clockss.org:8082 >
