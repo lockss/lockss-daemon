@@ -347,7 +347,7 @@
       param[base_url] = https://journals.tubitak.gov.tr/
       param[journal_abbr] = medical
 
-      au < ready ; exists ; 1996 ; Turkish Journal of Medical Sciences Volume 26 ; 26 ; >
+      au < crawling ; exists ; 1996 ; Turkish Journal of Medical Sciences Volume 26 ; 26 ; >
       au < crawling ; exists ; 1997 ; Turkish Journal of Medical Sciences Volume 27 ; 27 ; >
       au < crawling ; exists ; 1998 ; Turkish Journal of Medical Sciences Volume 28 ; 28 ; >
       au < crawling ; exists ; 1999 ; Turkish Journal of Medical Sciences Volume 29 ; 29 ; >

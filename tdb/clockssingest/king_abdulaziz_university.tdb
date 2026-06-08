@@ -66,9 +66,9 @@
       param[journal_abbr] = jie
 
       au < ready ; exists ; 2022 ; Journal of King Abdulaziz University: Islamic Economics Volume 35 ; 35 ; >
-      au < ready ; exists ; 2023 ; Journal of King Abdulaziz University: Islamic Economics Volume 36 ; 36 ; >
+      au < crawling ; exists ; 2023 ; Journal of King Abdulaziz University: Islamic Economics Volume 36 ; 36 ; >
       au < ready ; exists ; 2024 ; Journal of King Abdulaziz University: Islamic Economics Volume 37 ; 37 ; >
-      au < ready ; exists ; 2025 ; Journal of King Abdulaziz University: Islamic Economics Volume 38 ; 38 ; >
+      au < crawling ; exists ; 2025 ; Journal of King Abdulaziz University: Islamic Economics Volume 38 ; 38 ; >
       au < manifest ; exists ; 2026 ; Journal of King Abdulaziz University: Islamic Economics Volume 39 ; 39 ; >
 
   }

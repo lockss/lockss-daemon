@@ -348,7 +348,7 @@
 #     nothing published in 1995.
 
       au < frozen ; exists ; 1993 ; 1993 ; Theoretical Roman Archaeology Conference Volume 1993 ; 1993 ; ># 1991 articles
-      au < ready ; exists ; 1995 ; 1995 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; ># 1992 and 1994 articles
+      au < crawling ; exists ; 1995 ; 1995 ; Theoretical Roman Archaeology Conference Volume 1995 ; 1995 ; ># 1992 and 1994 articles
       au < ready ; exists ; 1997 ; 1997 ; Theoretical Roman Archaeology Conference Volume 1997 ; 1997 ; ># 1996 articles
       au < frozen ; exists ; 1998 ; 1998 ; Theoretical Roman Archaeology Conference Volume 1998 ; 1998 ; >
       au < frozen ; exists ; 1999 ; 1999 ; Theoretical Roman Archaeology Conference Volume 1999 ; 1999 ; >
@@ -418,7 +418,7 @@
       au < ready ; exists ; 2014 ; 2 ; The Parish Review Volume 2014 ; 2014 ; >
       au < frozen ; exists ; 2015 ; 3 ; The Parish Review Volume 2015 ; 2015 ; >
       au < frozen ; exists ; 2016 ; 3 ; The Parish Review Volume 2016 ; 2016 ; >
-      au < ready ; exists ; 2018 ; 4 ; The Parish Review Volume 2018 ; 2018 ; >
+      au < crawling ; exists ; 2018 ; 4 ; The Parish Review Volume 2018 ; 2018 ; >
       au < finished ; crawling ; 2020 ; 4 ; The Parish Review Volume 2020 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; 5 ; The Parish Review Volume 2021 ; 2021 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2022 ; 6 ; The Parish Review Volume 2022 ; 2022 ; >

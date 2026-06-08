@@ -394,7 +394,7 @@
       param[base_url] = https://newprairiepress.org/
       param[journal_abbr] = edconsiderations
 
-      au < ready ; exists ; 1973-1974 ; Educational Considerations Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1973-1974 ; Educational Considerations Volume 1 ; 1 ; >
       au < frozen ; exists ; 1974-1975 ; Educational Considerations Volume 2 ; 2 ; >
       au < ready ; exists ; 1975-1976 ; Educational Considerations Volume 3 ; 3 ; >
       au < crawling ; exists ; 1976-1977 ; Educational Considerations Volume 4 ; 4 ; >
@@ -485,7 +485,7 @@
       au < crawling ; exists ; 1972 ; Neurospora Newsletter Volume 19 ; 19 ; >
       au < crawling ; exists ; 1973 ; Neurospora Newsletter Volume 20 ; 20 ; >
       au < crawling ; exists ; 1974 ; Neurospora Newsletter Volume 21 ; 21 ; >
-      au < ready ; exists ; 1975 ; Neurospora Newsletter Volume 22 ; 22 ; >
+      au < crawling ; exists ; 1975 ; Neurospora Newsletter Volume 22 ; 22 ; >
       au < ready ; exists ; 1976 ; Neurospora Newsletter Volume 23 ; 23 ; >
       au < finished ; manifest ; 1977 ; Neurospora Newsletter Volume 24 ; 24 ; reingest5.clockss.org:8082 >
       au < crawling ; exists ; 1978 ; Neurospora Newsletter Volume 25 ; 25 ; >
@@ -550,7 +550,7 @@
 
 
       au < finished ; manifest ; 1986 ; Fungal Genetics Newsletter Volume 33 ; 33 ; reingest5.clockss.org:8082 >
-      au < ready ; exists ; 1987 ; Fungal Genetics Newsletter Volume 34 ; 34 ; >
+      au < crawling ; exists ; 1987 ; Fungal Genetics Newsletter Volume 34 ; 34 ; >
       au < finished ; manifest ; 1988 ; Fungal Genetics Newsletter Volume 35 ; 35 ; reingest1.clockss.org:8082 >
       au < crawling ; exists ; 1989 ; Fungal Genetics Newsletter Volume 36 ; 36 ; >
       au < finished ; finished ; 1990 ; Fungal Genetics Newsletter Volume 37 ; 37 ; reingest2.clockss.org:8085 >
