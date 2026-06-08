@@ -531,6 +531,7 @@ public class TestRateLimiter extends LockssTestCase {
     assertEquals(10, lim.timeUntilEventOk());
     TimeBase.step(9);
     assertFalse(lim.isEventOk());
+    assertEquals(1, lim.timeUntilEventOk());
     TimeBase.step(1);
     assertTrue(lim.isEventOk());
     assertEquals(0, lim.timeUntilEventOk());
@@ -565,6 +566,8 @@ public class TestRateLimiter extends LockssTestCase {
     RateLimiter lim = RateLimiter.getConfiguredRateLimiter(config, null,
 							   "foo", "3/2");
     assertEquals("[RL: 7/3s]", lim.toString());
+    lim.setMultiplier(0.5);
+    assertEquals("[RL: 7/3s * 0.5]", lim.toString());
   }
 
   public void testPool1() {
