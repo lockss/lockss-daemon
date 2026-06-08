@@ -174,6 +174,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     ODC_PREFIX + "favorUnsharedRateThreads";
   static final int DEFAULT_FAVOR_UNSHARED_RATE_THREADS = 1;
 
+  public static final String PARAM_CRAWL_RATE_MULTIPLIER =
+    PREFIX + "crawlRateMultiplier";
+  public static final double DEFAULT_CRAWL_RATE_MULTIPLIER =
+    RateLimiter.NO_MULTIPLIER;
+
   enum CrawlOrder {CrawlDate, CreationDate};
 
   /** Determines how the crawl queues are sorted.  <code>CrawlDate</code>:
@@ -512,6 +517,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	config.getInt(PARAM_FAVOR_UNSHARED_RATE_THREADS,
 		      DEFAULT_FAVOR_UNSHARED_RATE_THREADS);
 
+      paramCrawlRateMultiplier = config.getDouble(PARAM_CRAWL_RATE_MULTIPLIER,
+                                                  DEFAULT_CRAWL_RATE_MULTIPLIER);
+
       paramCrawlOrder = (CrawlOrder)config.getEnum(CrawlOrder.class,
 						   PARAM_CRAWL_ORDER,
 						   DEFAULT_CRAWL_ORDER);
@@ -827,12 +835,16 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	throw new IllegalStateException("No crl available for: " + crawler
 					+ " in pool: " + poolKey);
       }
+      // CrawlRateLimiters can live for a long time in pools.  Ensure
+      // the multiplier value is up to date each time hand one out
+      res.setMultiplier(paramCrawlRateMultiplier);
       return res;
     }
   }
 
   protected CrawlRateLimiter newCrawlRateLimiter(ArchivalUnit au) {
-    return CrawlRateLimiter.Util.forAu(au);
+    return CrawlRateLimiter.Util.forAu(au)
+      .setMultiplier(paramCrawlRateMultiplier);
   }
 
   protected String getPoolKey(ArchivalUnit au) {
@@ -1686,6 +1698,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   int paramUnsharedQueueMax = DEFAULT_UNSHARED_QUEUE_MAX;
   int paramSharedQueueMax = DEFAULT_SHARED_QUEUE_MAX;
   int paramFavorUnsharedRateThreads = DEFAULT_FAVOR_UNSHARED_RATE_THREADS;
+  double paramCrawlRateMultiplier = DEFAULT_CRAWL_RATE_MULTIPLIER;
   CrawlOrder paramCrawlOrder = DEFAULT_CRAWL_ORDER;
 
   Deadline timeToRebuildCrawlQueue = Deadline.in(0);

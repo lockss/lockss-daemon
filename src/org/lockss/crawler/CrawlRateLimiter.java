@@ -67,6 +67,10 @@ public interface CrawlRateLimiter {
    */
   public RateLimiter getRateLimiterFor(String url, String previousContentType);
 
+  /** Increase (> 1.0) or decrease (< 1.0) the rate of this and all
+   * nested rate limiers */
+  public CrawlRateLimiter setMultiplier(double multiplier);
+
   /** Wait until it's time for the next fetch
    * @param url the url about to be fetched
    * @param previousContentType the MIME type or Content-Type of the

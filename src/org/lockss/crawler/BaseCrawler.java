@@ -377,6 +377,8 @@ public abstract class BaseCrawler implements Crawler {
       if (crawlMgr != null) {
         crl = crawlMgr.getCrawlRateLimiter(this);
       } else {
+        // This is only used by tests, not a problem that multiplier
+        // isn't applied
         crl = CrawlRateLimiter.Util.forAu(au);
       }
     }
