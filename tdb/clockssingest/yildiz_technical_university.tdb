@@ -21,7 +21,7 @@
       param[base_url] = https://commons.yildiz.edu.tr/
       param[journal_abbr] = jscmt
 
-      au < ready ; exists ; 2016 ; Journal of Sustainable Construction Materials and Technologies Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2016 ; Journal of Sustainable Construction Materials and Technologies Volume 1 ; 1 ; >
       au < frozen ; exists ; 2017 ; Journal of Sustainable Construction Materials and Technologies Volume 2 ; 2 ; >
       au < crawling ; exists ; 2018 ; Journal of Sustainable Construction Materials and Technologies Volume 3 ; 3 ; >
       au < crawling ; exists ; 2019 ; Journal of Sustainable Construction Materials and Technologies Volume 4 ; 4 ; >
