@@ -48,56 +48,54 @@ import org.lockss.util.Logger;
  */
 
 public class JanewaySubstancePredicate implements SubstancePredicate {
-  static Logger log; 
-  private ArchivalUnit au;
-  private UrlPredicate up = null;
+    static Logger log;
+    private ArchivalUnit au;
+    private UrlPredicate up = null;
 
-  // Both url ends with download, but one is PDF and one is xml
-  //https://www.comicsgrid.com/article/3590/galley/5145/download/
-  //https://www.comicsgrid.com/article/3590/galley/5146/download/
+    private static final String SUBSTANCE_PDF_STRING = "application/pdf";
+    private static final String SUBSTANCE_XML_STRING = "application/xml";
 
-  private static final String SUBSTANCE_STRING = "application/pdf";
+    public JanewaySubstancePredicate(ArchivalUnit au) {
+        log = Logger.getLogger("JanewaySubstancePredicate");
+        this.au = au;
+        // add substance rules to check against
+        try {
+            up = new UrlPredicate(au, au.makeSubstanceUrlPatterns(), au.makeNonSubstanceUrlPatterns());
 
-  public JanewaySubstancePredicate(ArchivalUnit au) {
-    log = Logger.getLogger("JanewaySubstancePredicate");
-    this.au = au;
-    // add substance rules to check against
-    try {
-      up = new UrlPredicate(au, au.makeSubstanceUrlPatterns(), au.makeNonSubstanceUrlPatterns());
+        } catch (ArchivalUnit.ConfigurationException e) {
+            log.error("Error in substance or non-substance pattern for Janeway Plugin", e);
+        }
+    }
 
-    } catch (ArchivalUnit.ConfigurationException e) {
-      log.error("Error in substance or non-substance pattern for Janewy Plugin", e);
+    /* (non-Javadoc)
+     * isSubstanceUrl(String url)
+     * checking that the "substantial" url matches its mime-type
+     * @see org.lockss.plugin.SubstancePredicate#isSubstanceUrl(java.lang.String)
+     * @Return false if the url does not match the substance pattern, or the mime-type does not match
+     * the content type
+     * @Return true when url matches the pattern and the mime-type is PDF or XML and has content
+     */
+    @Override
+    public boolean isSubstanceUrl(String url) {
+        // check url against substance rules for publisher
+        if (log.isDebug3()) log.debug3("isSubstanceURL("+url+")");
+        if ((up == null) || !(up.isMatchSubstancePat(url))) {
+            return false;
+        }
+        CachedUrl cu = au.makeCachedUrl(url);
+        if (cu == null) {
+            return false;
+        }
+        try {
+            String mime = HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
+            boolean res = cu.hasContent() &&
+                    (mime.contains(SUBSTANCE_PDF_STRING) || mime.contains(SUBSTANCE_XML_STRING));
+            if (log.isDebug3()) {
+                log.debug3("MimeType: " + mime + "\t Returning: "+ res);
+            }
+            return res;
+        } finally {
+            AuUtil.safeRelease(cu);
+        }
     }
-  }
-  
-  /* (non-Javadoc)
-   * isSubstanceUrl(String url)
-   * checking that the "substantial" url matches its mime-type
-   * @see org.lockss.plugin.SubstancePredicate#isSubstanceUrl(java.lang.String)
-   * @Return false if the url does not match the substance pattern, or the mime-type does not match 
-   * the content type
-   * @Return true when url matches the pattern and the mime-type matches and has content
-   */
-  @Override
-  public boolean isSubstanceUrl(String url) {
-    // check url against substance rules for publisher
-    if (log.isDebug3()) log.debug3("isSubstanceURL("+url+")");
-    if ((up == null) || !( up.isMatchSubstancePat(url))) {
-      return false;
-    }
-    CachedUrl cu = au.makeCachedUrl(url);
-    if (cu == null) {     
-      return false;
-    }
-    try {
-      String mime = HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
-      boolean res = cu.hasContent() && mime.contains(SUBSTANCE_STRING);
-      if (log.isDebug3()) {
-	    log.debug3("MimeType: " + mime + "\t Returning: "+ res);
-      }
-      return res;
-    } finally {
-      AuUtil.safeRelease(cu);
-    }
-  }
 }
