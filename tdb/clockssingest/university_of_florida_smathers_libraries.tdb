@@ -36,7 +36,7 @@
       au < crawling ; exists ; 1971 ; Chemical Engineering Education Volume 1971 ; 1971 ; 1971 ; >
       au < crawling ; exists ; 1972 ; Chemical Engineering Education Volume 1972 ; 1972 ; 1972 ; >
       au < crawling ; exists ; 1973 ; Chemical Engineering Education Volume 1973 ; 1973 ; 1973 ; >
-      au < ready ; exists ; 1974 ; Chemical Engineering Education Volume 1974 ; 1974 ; 1974 ; >
+      au < crawling ; exists ; 1974 ; Chemical Engineering Education Volume 1974 ; 1974 ; 1974 ; >
       au < crawling ; exists ; 1975 ; Chemical Engineering Education Volume 1975 ; 1975 ; 1975 ; >
       au < frozen ; exists ; 1976 ; Chemical Engineering Education Volume 1976 ; 1976 ; 1976 ; >
       au < frozen ; exists ; 1977 ; Chemical Engineering Education Volume 1977 ; 1977 ; 1977 ; >
@@ -66,7 +66,7 @@
       au < ready ; exists ; 2001 ; Chemical Engineering Education Volume 2001 ; 2001 ; 2001 ; >
       au < finished ; manifest ; 2002 ; Chemical Engineering Education Volume 2002 ; 2002 ; 2002 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2003 ; Chemical Engineering Education Volume 2003 ; 2003 ; 2003 ; >
-      au < ready ; exists ; 2004 ; Chemical Engineering Education Volume 2004 ; 2004 ; 2004 ; >
+      au < crawling ; exists ; 2004 ; Chemical Engineering Education Volume 2004 ; 2004 ; 2004 ; >
       au < frozen ; exists ; 2005 ; Chemical Engineering Education Volume 2005 ; 2005 ; 2005 ; >
       au < crawling ; exists ; 2006 ; Chemical Engineering Education Volume 2006 ; 2006 ; 2006 ; >
       au < frozen ; exists ; 2007 ; Chemical Engineering Education Volume 2007 ; 2007 ; 2007 ; >
@@ -119,7 +119,7 @@
       param[journal_id] = flaent
 
       au < crawling ; exists ; 1917 ; Florida Entomologist Volume 1 ; 1 ; 1917 ; >
-      au < ready ; exists ; 1918 ; Florida Entomologist Volume 2 ; 2 ; 1918 ; >
+      au < crawling ; exists ; 1918 ; Florida Entomologist Volume 2 ; 2 ; 1918 ; >
       au < crawling ; exists ; 1919 ; Florida Entomologist Volume 3 ; 3 ; 1919 ; >
       au < crawling ; exists ; 1920 ; Florida Entomologist Volume 4 ; 4 ; 1920 ; >
       au < crawling ; exists ; 1921 ; Florida Entomologist Volume 5 ; 5 ; 1921 ; >
@@ -617,7 +617,7 @@
       au < frozen ; exists ; 1944 ; Proceedings of the Florida State Horticultural Society Volume 57 ; 57 ; 1944 ; >
       au < crawling ; exists ; 1945 ; Proceedings of the Florida State Horticultural Society Volume 58 ; 58 ; 1945 ; >
       au < ready ; exists ; 1946 ; Proceedings of the Florida State Horticultural Society Volume 59 ; 59 ; 1946 ; >
-      au < ready ; exists ; 1947 ; Proceedings of the Florida State Horticultural Society Volume 60 ; 60 ; 1947 ; >
+      au < crawling ; exists ; 1947 ; Proceedings of the Florida State Horticultural Society Volume 60 ; 60 ; 1947 ; >
       au < crawling ; exists ; 1948 ; Proceedings of the Florida State Horticultural Society Volume 61 ; 61 ; 1948 ; >
       au < frozen ; exists ; 1949 ; Proceedings of the Florida State Horticultural Society Volume 62 ; 62 ; 1949 ; >
       au < crawling ; exists ; 1950 ; Proceedings of the Florida State Horticultural Society Volume 63 ; 63 ; 1950 ; >
