@@ -37,7 +37,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.ijournalpro.univofanbar.ClockssUnivofAnbarJournalsPlugin</string>
+    <string>org.lockss.plugin.ijournalpro.univofanbar.ClockssUnivofAnbarCollegeofAgJournalsPlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -102,33 +102,33 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>au_permission_url</string>
-    <!--
-    Publisher put the 'rel="license"' on this page
-    https://ajas.uoanbar.edu.iq/page_1581.html
-    -->
-    <string>"%spage_1581.html", base_url</string>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
     <string>"%sbrowse?_action=issue", base_url</string>
   </entry>
+    <entry>
+        <string>au_start_url</string>
+        <string>1, "%slockss-generated/%s", base_url, volume</string>
+    </entry>
   <entry>
     <string>au_substance_url_pattern</string>
     <string>"%sarticle.*\.pdf", base_url</string>
   </entry>
   <entry>
-    <string>au_crawlrules</string>
-    <list>
-        <string>2, "https://(www\.)?(facebook|linkedin|mendeley|mix|orcid|pinterest|twitter|web\.skype|academia|blogger|digg|google|instagram|reddit|refworks|researchgate|semanticscholar)\.com/"</string>
-        <string>2, "^https?://(?!%s)", base_url</string>
-      <string>1, "https://crossmark-cdn.crossref.org/widget/"</string>
-      <!--<string>1, "%sbrowse?_action=issue", base_url</string>-->
-      <string>1, "%sissue_\d+_\d+\.html", base_url</string>
-      <string>1, "%s(themes|inc|data)/", base_url</string>
-      <string>1, "%sarticle", base_url</string>
-      <string>1, "%s\?_action=export&amp;rf=",base_url</string>
-    </list>
-  </entry>
+      <string>au_crawlrules</string>
+      <list>
+            <!--Need to exclude those urls since they are followed by u=real_article full url or url=real_article full url or other format -->
+            <string>2, "https?://(www\.)?(facebook\.com|linkedin\.com|mendeley\.com|mix\.com|orcid\.org|pinterest\.com|twitter\.com|x\.com|web\.skype\.com|academia\.edu|blogger\.com|digg\.com|google\.com|instagram\.com|reddit\.com|refworks\.com|researchgate\.net|semanticscholar\.org|del\.icio\.us)/"</string>
+            <string>1, "https://crossmark-cdn.crossref.org/widget/"</string>
+            <string>1, "%sissue_\d+_\d+\.html", base_url</string>
+            <string>1, "%s(themes|inc|data)/", base_url</string>
+            <string>1, "%sarticle", base_url</string>
+            <string>1, "%s\?_action=export&amp;rf=",base_url</string>
+            <string>1, "%slockss-generated/%s", base_url, volume</string>
+        </list>
+    </entry>
+  <entry>
+      <string>plugin_crawl_seed_factory</string>
+      <string>org.lockss.plugin.ijournalpro.univofanbar.UnivofAnbarCollegeofAgCrawlSeedFactory</string>
+   </entry>
   <entry>
       <string>text/html_crawl_filter_factory</string>
       <string>org.lockss.plugin.ijournalpro.univofanbar.UnivofAnbarCollegeofAgHtmlCrawlFilterFactory</string>

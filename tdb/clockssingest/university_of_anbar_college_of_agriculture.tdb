@@ -7,7 +7,7 @@
     info[tester] = 5 ;
     info[platform] = Custom
   >
-    plugin = org.lockss.plugin.ijournalpro.univofanbar.ClockssUnivofAnbarJournalsPlugin
+    plugin = org.lockss.plugin.ijournalpro.univofanbar.ClockssUnivofAnbarCollegeofAgJournalsPlugin
     implicit < status ; status2 ; year ; param[year] ; name ; param[volume] ; hidden[proxy] >
 
   {

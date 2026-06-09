@@ -54,11 +54,9 @@ public class UnivofAnbarCollegeofAgHtmlCrawlFilterFactory implements FilterFacto
                                                String encoding) {
     NodeFilter[] filters = new NodeFilter[] {
 
-     // https://ajas.uoanbar.edu.iq/article_190592.html
      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar_block"),
      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "panel"),
      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ar_info_pnl_share"),
-     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-content"),
 
     };
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
