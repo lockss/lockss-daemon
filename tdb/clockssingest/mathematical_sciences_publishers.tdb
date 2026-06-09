@@ -153,7 +153,7 @@
      au < finished ; manifest ; 2022 ; Communications in Applied Mathematics and Computational Science Volume 17 ; 17 ; 2022 ; https://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; manifest ; 2023 ; Communications in Applied Mathematics and Computational Science Volume 18 ; 18 ; 2023 ; https://msp.org/ ; reingest2.clockss.org:8085 >
      au < frozen ; exists ; 2024 ; Communications in Applied Mathematics and Computational Science Volume 19 ; 19 ; 2024 ; https://msp.org/ ; >
-     au < crawling ; exists ; 2025 ; Communications in Applied Mathematics and Computational Science Volume 20 ; 20 ; 2025 ; https://msp.org/ ; >
+     au < frozen ; exists ; 2025 ; Communications in Applied Mathematics and Computational Science Volume 20 ; 20 ; 2025 ; https://msp.org/ ; >
      au < expected ; exists ; 2026 ; Communications in Applied Mathematics and Computational Science Volume 21 ; 21 ; 2026 ; https://msp.org/ ; >
 
   }
@@ -317,7 +317,7 @@
      au < finished ; manifest ; 2022 ; Journal of Software for Algebra and Geometry Volume 14 ; 14 ; 2022 ; https://msp.org/ ; reingest1.clockss.org:8082 >
      au < finished ; manifest ; 2023 ; Journal of Software for Algebra and Geometry Volume 15 ; 15 ; 2023 ; https://msp.org/ ; reingest2.clockss.org:8085 >
      au < frozen ; exists ; 2024 ; Journal of Software for Algebra and Geometry Volume 16 ; 16 ; 2024 ; https://msp.org/ ; >
-     au < crawling ; exists ; 2025 ; Journal of Software for Algebra and Geometry Volume 17 ; 17 ; 2025 ; https://msp.org/ ; >
+     au < frozen ; exists ; 2025 ; Journal of Software for Algebra and Geometry Volume 17 ; 17 ; 2025 ; https://msp.org/ ; >
      au < expected ; exists ; 2026 ; Journal of Software for Algebra and Geometry Volume 18 ; 18 ; 2026 ; https://msp.org/ ; >
 
   }
@@ -472,7 +472,7 @@
     au < finished ; manifest ; 2022 ; Annals of K-Theory Volume 7 ; 7 ; 2022 ; https://msp.org/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Annals of K-Theory Volume 8 ; 8 ; 2023 ; https://msp.org/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 2024 ; Annals of K-Theory Volume 9 ; 9 ; 2024 ; https://msp.org/ ; >
-    au < crawling ; exists ; 2025 ; Annals of K-Theory Volume 10 ; 10 ; 2025 ; https://msp.org/ ; >
+    au < frozen ; exists ; 2025 ; Annals of K-Theory Volume 10 ; 10 ; 2025 ; https://msp.org/ ; >
     au < expected ; exists ; 2026 ; Annals of K-Theory Volume 11 ; 11 ; 2026 ; https://msp.org/ ; >
 
   }
@@ -545,7 +545,7 @@
     au < finished ; manifest ; 2022 ; Model Theory Volume 1 ; 1 ; 2022 ; https://msp.org/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2023 ; Model Theory Volume 2 ; 2 ; 2023 ; https://msp.org/ ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 2024 ; Model Theory Volume 3 ; 3 ; 2024 ; https://msp.org/ ; >
-    au < crawling ; exists ; 2025 ; Model Theory Volume 4 ; 4 ; 2025 ; https://msp.org/ ; >
+    au < frozen ; exists ; 2025 ; Model Theory Volume 4 ; 4 ; 2025 ; https://msp.org/ ; >
     au < expected ; exists ; 2026 ; Model Theory Volume 5 ; 5 ; 2026 ; https://msp.org/ ; >
 
   }

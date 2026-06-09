@@ -91,12 +91,12 @@
 
       au < finished ; manifest ; 1989 ; Energy Studies Review Volume 1 ; 1 ; 1989 ; reingest5.clockss.org:8082 > 
       au < finished ; manifest ; 1990 ; Energy Studies Review Volume 2 ; 2 ; 1990 ; reingest1.clockss.org:8082 > 
-      au < crawling ; exists ; 1991 ; Energy Studies Review Volume 3 ; 3 ; 1991 ; > 
+      au < frozen ; exists ; 1991 ; Energy Studies Review Volume 3 ; 3 ; 1991 ; > 
       au < finished ; manifest ; 1992 ; Energy Studies Review Volume 4 ; 4 ; 1992 ; reingest2.clockss.org:8085 > 
       au < finished ; manifest ; 1993 ; Energy Studies Review Volume 5 ; 5 ; 1993 ; reingest3.clockss.org:8083 > 
       au < frozen ; exists ; 1994 ; Energy Studies Review Volume 6 ; 6 ; 1994 ; > 
-      au < crawling ; exists ; 1995 ; Energy Studies Review Volume 7 ; 7 ; 1995 ; > 
-      au < crawling ; exists ; 1996 ; Energy Studies Review Volume 8 ; 8 ; 1996 ; > 
+      au < frozen ; exists ; 1995 ; Energy Studies Review Volume 7 ; 7 ; 1995 ; > 
+      au < frozen ; exists ; 1996 ; Energy Studies Review Volume 8 ; 8 ; 1996 ; > 
       au < frozen ; exists ; 1999 ; Energy Studies Review Volume 9 ; 9 ; 1999 ; > 
       au < finished ; finished ; 2002 ; Energy Studies Review Volume 10 ; 10 ; 2002 ; reingest4.clockss.org:8082 > 
       au < finished ; finished ; 2003 ; Energy Studies Review Volume 11 ; 11 ; 2003 ; reingest5.clockss.org:8082 > 
@@ -180,7 +180,7 @@
       au < finished ; finished ; 2019 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 7 ; 7 ; 2019 ; reingest3.clockss.org:8083 > 
       au < finished ; finished ; 2020 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 8 ; 8 ; 2020 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 9 ; 9 ; 2021 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2022 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 10 ; 10 ; 2022 ; > #500 Error https://mulpress.mcmaster.ca/hro-ors/article/view/4691
+      au < frozen ; exists ; 2022 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 10 ; 10 ; 2022 ; > #500 Error https://mulpress.mcmaster.ca/hro-ors/article/view/4691
       au < frozen ; exists ; 2023 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 11 ; 11 ; 2023 ; > #500 Error https://mulpress.mcmaster.ca/hro-ors/article/view/5341
       au < finished ; manifest ; 2024 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 12 ; 12 ; 2024 ; reingest3.clockss.org:8083 >
       au < crawling ; exists ; 2025 ; Health Reform Observer - Observatoire des Réformes de Santé Volume 13 ; 13 ; 2025 ; >
@@ -299,13 +299,13 @@
       au < finished ; manifest ; 1973 ; Russell: the Journal of Bertrand Russell Studies Number 9-12 ; 9-12 ; 1973 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 1974 ; Russell: the Journal of Bertrand Russell Studies Number 13-16 ; 13-16 ; 1974 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 1975 ; Russell: the Journal of Bertrand Russell Studies Number 17-20 ; 17-20 ; 1975 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 1976 ; Russell: the Journal of Bertrand Russell Studies Number 21-24 ; 21-24 ; 1976 ; >
-      au < crawling ; exists ; 1977 ; Russell: the Journal of Bertrand Russell Studies Number 25-28 ; 25-28 ; 1977 ; >
+      au < frozen ; exists ; 1976 ; Russell: the Journal of Bertrand Russell Studies Number 21-24 ; 21-24 ; 1976 ; >
+      au < frozen ; exists ; 1977 ; Russell: the Journal of Bertrand Russell Studies Number 25-28 ; 25-28 ; 1977 ; >
       au < frozen ; exists ; 1978 ; Russell: the Journal of Bertrand Russell Studies Number 29-32 ; 29-32 ; 1978 ; >
       au < finished ; manifest ; 1979 ; Russell: the Journal of Bertrand Russell Studies Number 33-36 ; 33-36 ; 1979 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 1980 ; Russell: the Journal of Bertrand Russell Studies Number 37-40 ; 37-40 ; 1980 ; >
       au < ready ; exists ; 1981 ; Russell: the Journal of Bertrand Russell Studies Volume 1 ; 1 ; 1981 ; >
-      au < crawling ; exists ; 1982 ; Russell: the Journal of Bertrand Russell Studies Volume 2 ; 2 ; 1982 ; >
+      au < frozen ; exists ; 1982 ; Russell: the Journal of Bertrand Russell Studies Volume 2 ; 2 ; 1982 ; >
       au < frozen ; exists ; 1983 ; Russell: the Journal of Bertrand Russell Studies Volume 3 ; 3 ; 1983 ; >
       au < frozen ; exists ; 1984 ; Russell: the Journal of Bertrand Russell Studies Volume 4 ; 4 ; 1984 ; >
       au < finished ; manifest ; 1985 ; Russell: the Journal of Bertrand Russell Studies Volume 5 ; 5 ; 1985 ; reingest4.clockss.org:8082 >
