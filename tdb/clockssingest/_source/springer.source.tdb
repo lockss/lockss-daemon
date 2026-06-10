@@ -106,18 +106,18 @@
       implicit < status ; status2 ; year ; name ; param[directory] >
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/springerjats-released/
 
-      au < readySource ; finished ; 2023 ; Springer Source Content 2023_01 ; 2023_01 >
-      au < readySource ; finished ; 2023 ; Springer Source Content 2023_02 ; 2023_02 >
+      au < zapped ; finished ; 2023 ; Springer Source Content 2023_01 ; 2023_01 >
+      au < zapped ; finished ; 2023 ; Springer Source Content 2023_02 ; 2023_02 >
       au < readySource ; crawling ; 2023 ; Springer Source Content 2023_03 ; 2023_03 >
       au < readySource ; crawling ; 2023 ; Springer Source Content 2023_04 ; 2023_04 >
-      au < readySource ; finished ; 2023 ; Springer Source Content 2023_05 ; 2023_05 >
-      au < readySource ; finished ; 2023 ; Springer Source Content 2023_06 ; 2023_06 >
-      au < readySource ; finished ; 2023 ; Springer Source Content 2023_07 ; 2023_07 >
-      au < readySource ; finished ; 2023 ; Springer Source Content 2023_08 ; 2023_08 >
-      au < readySource ; finished ; 2023 ; Springer Source Content 2023_09 ; 2023_09 >
-      au < readySource ; finished ; 2023 ; Springer Source Content 2023_10 ; 2023_10 >
-      au < readySource ; finished ; 2023 ; Springer Source Content 2023_11 ; 2023_11 >
-      au < readySource ; finished ; 2023 ; Springer Source Content 2023_12 ; 2023_12 >
+      au < zapped ; finished ; 2023 ; Springer Source Content 2023_05 ; 2023_05 >
+      au < zapped ; finished ; 2023 ; Springer Source Content 2023_06 ; 2023_06 >
+      au < zapped ; finished ; 2023 ; Springer Source Content 2023_07 ; 2023_07 >
+      au < zapped ; finished ; 2023 ; Springer Source Content 2023_08 ; 2023_08 >
+      au < zapped ; finished ; 2023 ; Springer Source Content 2023_09 ; 2023_09 >
+      au < zapped ; finished ; 2023 ; Springer Source Content 2023_10 ; 2023_10 >
+      au < zapped ; finished ; 2023 ; Springer Source Content 2023_11 ; 2023_11 >
+      au < zapped ; finished ; 2023 ; Springer Source Content 2023_12 ; 2023_12 >
       au < readySource ; finished ; 2023 ; Springer Source Content 2023_13 ; 2023_13 >
       au < readySource ; crawling ; 2023 ; Springer Source Content 2023_14 ; 2023_14 >
       au < readySource ; crawling ; 2023 ; Springer Source Content 2023_15 ; 2023_15 >

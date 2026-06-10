@@ -52,7 +52,7 @@
       plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksSourcePlugin
       param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
 
-      au < readySource ; finished ; 2022 ; Casalini Books Source Content 2022 ; 2022 >
+      au < zapped ; finished ; 2022 ; Casalini Books Source Content 2022 ; 2022 >
       #No more AUs. Moved to https.
     }
     {
@@ -60,7 +60,7 @@
       plugin = org.lockss.plugin.clockss.casalini.ClockssCasaliniLibriBooksSourcePlugin
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/casalinibooks-released/
 
-      au < readySource ; finished ; 2023 ; Casalini Books Source Content 2023 ; 2023 >
+      au < zapped ; finished ; 2023 ; Casalini Books Source Content 2023 ; 2023 >
       au < readySource ; crawling ; 2024 ; Casalini Books Source Content 2024 ; 2024 > 
       au < readySource ; crawling ; 2026 ; Casalini Books Source Content 2026 ; 2026 >
 
