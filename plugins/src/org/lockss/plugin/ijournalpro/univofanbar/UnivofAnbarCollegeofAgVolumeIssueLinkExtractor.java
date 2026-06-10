@@ -48,11 +48,9 @@ import java.io.InputStream;
 import java.util.regex.Matcher;
 
 public class UnivofAnbarCollegeofAgVolumeIssueLinkExtractor implements LinkExtractor {
-
     private static final Logger log = Logger.getLogger(UnivofAnbarCollegeofAgVolumeIssueLinkExtractor.class.getName());
-    private final LinkExtractor defaultExtractor; // Store the original extractor
+    private final LinkExtractor defaultExtractor;
 
-    // Update constructor to take the default extractor
     public UnivofAnbarCollegeofAgVolumeIssueLinkExtractor(LinkExtractor defaultExtractor) {
         this.defaultExtractor = defaultExtractor;
     }
@@ -60,44 +58,32 @@ public class UnivofAnbarCollegeofAgVolumeIssueLinkExtractor implements LinkExtra
     @Override
     public void extractUrls(ArchivalUnit au, InputStream in, String encoding,
                             String srcUrl, Callback cb) throws IOException, PluginException {
-
-        // Read the entire stream into memory once
         byte[] content = IOUtils.toByteArray(in);
-
         if (au.getTdbAu() != null) {
-
             if (srcUrl.contains("browse?_action=issue")) {
-
                 String targetVolume = au.getTdbAu().getVolume();
-
                 log.debug3(String.format("targetVolume: %s", targetVolume));
-
                 Document doc = Jsoup.parse(new ByteArrayInputStream(content), encoding, srcUrl);
 
-                Elements volumeArticles = doc.select("section#contentList article");
+                // Each volume is now an accordion div
+                Elements accordions = doc.select("div.accordion");
+                for (Element accordion : accordions) {
+                    // Volume name is in the accordion-button text
+                    Element button = accordion.selectFirst("button.accordion-button");
+                    if (button == null) continue;
 
-                for (Element article : volumeArticles) {
-                    // The volume name is inside the h3 tag
-                    String volumeName = article.select("div.title h3").text().trim();
-
+                    String volumeName = button.text().trim();
                     Matcher m = java.util.regex.Pattern.compile("Volume\\s+(\\d+)").matcher(volumeName);
-
                     if (m.find() && m.group(1).equals(targetVolume)) {
-
-                        // Select each issue block within this specific volume article
-                        Elements issueBoxes = article.select("div.content div.issueInfo");
-
-                        for (Element box : issueBoxes) {
-                            // The issue link is inside the h4 tag's anchor
-                            Element issueTitleElement = box.selectFirst("div.issueDetail h4 a");
-
-                            if (issueTitleElement != null) {
-                                String issueLink = issueTitleElement.absUrl("href");
-                                String issueName = issueTitleElement.text().trim();
-
+                        // Each issue is in a col-md-3 div; the link is in h5 > a
+                        Elements issueCols = accordion.select("div.accordion-body div.col-md-3");
+                        for (Element col : issueCols) {
+                            Element issueLinkElement = col.selectFirst("h5 a");
+                            if (issueLinkElement != null) {
+                                String issueLink = issueLinkElement.absUrl("href");
+                                String issueName = issueLinkElement.text().trim();
                                 log.debug3(String.format("Found - Volume Match: %s, Issue: %s, Link: %s, targetVolume: %s",
                                         volumeName, issueName, issueLink, targetVolume));
-
                                 if (!issueLink.isEmpty()) {
                                     cb.foundLink(issueLink);
                                 }
@@ -108,7 +94,6 @@ public class UnivofAnbarCollegeofAgVolumeIssueLinkExtractor implements LinkExtra
                                 volumeName, targetVolume));
                     }
                 }
-
             } else {
                 log.debug3(String.format("All other urls - %s", srcUrl));
                 if (defaultExtractor != null) {
@@ -120,4 +105,3 @@ public class UnivofAnbarCollegeofAgVolumeIssueLinkExtractor implements LinkExtra
         }
     }
 }
-

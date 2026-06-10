@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -189,4 +189,13 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>"crossmark-cdn\.crossref\.org"</string>
     </list>
   </entry>
+    <entry>
+        <string>clockss_override</string>
+        <map>
+            <entry>
+                <string>au_def_pause_time</string>
+                <long>100</long>
+            </entry>
+        </map>
+    </entry>
 </map>

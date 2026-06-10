@@ -43,39 +43,58 @@ https://ajas.uoanbar.edu.iq/browse?_action=issue for each volume
  */
 
 /*
-<section id="contentList" class="issueList">
-	<div class="page-header">
-	   <h1>By Issue</h1>
-	</div>
-	<hr>
-	<div style="margin-bottom: 25px">Click on favorite issue to see related articles.</div>
-	<article>
-	   <div class="title">
-		  <h3 class="pull-left">Volume 23 (2025)</h3>
-		  <i class="pull-right fa fa-angle-down"></i>
-		  <div class="clearfix"></div>
-	   </div>
-	   <div class="content">
-		  <div class="issueInfo">
-			 <img src="data/aagrs/coversheet/731767567945.jpeg" class="img-responsive pull-left">
-			 <div class="issueDetail pull-left">
-				<h4><a href="issue_15363_15506.html"> Issue 2</a></h4>
-				<small></small>
-			 </div>
-			 <div class="clearfix"></div>
-		  </div>
-		  <div class="issueInfo">
-			 <img src="data/aagrs/coversheet/561758229391.jpeg" class="img-responsive pull-left">
-			 <div class="issueDetail pull-left">
-				<h4><a href="issue_15363_15364.html"> Issue 1</a></h4>
-				<small></small>
-			 </div>
-			 <div class="clearfix"></div>
-		  </div>
-	   </div>
-	</article>
-	...
-</<section>
+<div class="accordion mb-2" id="">
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="pVol_15577">
+       <button class="accordion-button bg-body collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#pVol_15577_" aria-expanded="true" aria-controls="pVol_15577_"><b><i class="fa-regular fa-file-lines me-2"></i>Volume 24 (2026)</b></button>
+    </h2>
+    <div id="pVol_15577_" class="accordion-collapse collapse" aria-labelledby="pVol_15577">
+       <div class="accordion-body p-2 row">
+          <div class="col-md-3 col-lg-3">
+             <div>
+                <a class="js_click pointer_cursor" data-handler="loadModal"  data-param_a="Anbar Journal of Agricultural Sciences" data-param_b="./data/aagrs/coversheet/951776116524.jpeg">
+                <img src="data/aagrs/coversheet/951776116524.jpeg" alt="Anbar Journal of Agricultural Sciences" class="col-12 shadow-sm"/>
+                </a>
+             </div>
+             <div>
+                <h5 class="text-center mt-3"><a href="issue_15577_15578.html">Issue 1</a></h5>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+</div>
+<div class="accordion mb-2" id="">
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="pVol_15363">
+       <button class="accordion-button bg-body collapsed text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#pVol_15363_" aria-expanded="true" aria-controls="pVol_15363_"><b><i class="fa-regular fa-file-lines me-2"></i>Volume 23 (2025)</b></button>
+    </h2>
+    <div id="pVol_15363_" class="accordion-collapse collapse" aria-labelledby="pVol_15363">
+       <div class="accordion-body p-2 row">
+          <div class="col-md-3 col-lg-3">
+             <div>
+                <a class="js_click pointer_cursor" data-handler="loadModal"  data-param_a="Anbar Journal of Agricultural Sciences" data-param_b="./data/aagrs/coversheet/731767567945.jpeg">
+                <img src="data/aagrs/coversheet/731767567945.jpeg" alt="Anbar Journal of Agricultural Sciences" class="col-12 shadow-sm"/>
+                </a>
+             </div>
+             <div>
+                <h5 class="text-center mt-3"><a href="issue_15363_15506.html">Issue 2</a></h5>
+             </div>
+          </div>
+          <div class="col-md-3 col-lg-3">
+             <div>
+                <a class="js_click pointer_cursor" data-handler="loadModal"  data-param_a="Anbar Journal of Agricultural Sciences" data-param_b="./data/aagrs/coversheet/561758229391.jpeg">
+                <img src="data/aagrs/coversheet/561758229391.jpeg" alt="Anbar Journal of Agricultural Sciences" class="col-12 shadow-sm"/>
+                </a>
+             </div>
+             <div>
+                <h5 class="text-center mt-3"><a href="issue_15363_15364.html">Issue 1</a></h5>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+</div>
  */
 
 
