@@ -144,4 +144,60 @@
     }
   }
 
+  {
+    title <
+      name = IJTLD OPEN ;
+      eissn = 3005-7590 ;
+      issnl = 3005-7590
+    >
+    {
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = iuatld
+    param[journal_id] = ijtldo
+    param[journal_issn] = 3005-7590
+
+
+    param[base_url] = https://www.ingentaconnect.com/
+    param[api_url] = https://api.ingentaconnect.com/
+
+    au < doNotProcess ; 2024 ; IJTLD OPEN Volume 1 ; 1 >
+    au < doNotProcess ; 2025 ; IJTLD OPEN Volume 2 ; 2 >
+    au < doNotProcess ; 2026 ; IJTLD OPEN Volume 3 ; 3 >
+    #No more content here.
+    }
+
+    {
+    plugin = org.lockss.plugin.highwire.ers.ERSScolarisPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    param[journal_id] = ijtldo
+
+    param[base_url] = https://journals.theunion.org/
+
+    au < manifest ; 2024 ; IJTLD OPEN Volume 1 ; 1 >
+    au < manifest ; 2025 ; IJTLD OPEN Volume 2 ; 2 >
+    au < manifest ; 2026 ; IJTLD OPEN Volume 3 ; 3 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = IJTLD Chronic Respiratory Disease ;
+      eissn = 3107-0361 ;
+      issnl = 3107-0361
+    >
+
+    plugin = org.lockss.plugin.highwire.ers.ERSScolarisPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+    param[journal_id] = ijtld-crd
+
+    param[base_url] = https://journals.theunion.org/
+
+    au < exists ; 2026 ; IJTLD Chronic Respiratory Disease Volume 1 ; 1 >
+
+  }
+
 }

@@ -170,8 +170,8 @@
     param[base_url] = https://www.ingentaconnect.com/
     param[api_url] = https://api.ingentaconnect.com/
 
-    au < frozen ; exists ; 2024 ; IJTLD OPEN Volume 1 ; 1 ; >
-    au < superseded ; exists ; 2025 ; IJTLD OPEN Volume 2 ; 2 ; >
+    au < superseded ; exists ; 2024 ; IJTLD OPEN Volume 1 [superseded] ; 1 ; >
+    au < superseded ; exists ; 2025 ; IJTLD OPEN Volume 2 [superseded] ; 2 ; >
     au < doNotProcess ; exists ; 2026 ; IJTLD OPEN Volume 3 ; 3 ; >
     #No more content here.
     }
@@ -183,7 +183,7 @@
 
     param[base_url] = https://journals.theunion.org/
 
-    au < doNotProcess ; exists ; 2024 ; IJTLD OPEN Volume 1 ; 1 ; >
+    au < manifest ; exists ; 2024 ; IJTLD OPEN Volume 1 ; 1 ; >
     au < manifest ; exists ; 2025 ; IJTLD OPEN Volume 2 ; 2 ; >
     au < manifest ; exists ; 2026 ; IJTLD OPEN Volume 3 ; 3 ; >
 
