@@ -24,15 +24,15 @@
       au < doNotProcess ; 2015 ; Echo Research and Practice Volume 2 ; 2 >
       au < doNotProcess ; 2016 ; Echo Research and Practice Volume 3 ; 3 >
       au < doNotProcess ; 2017 ; Echo Research and Practice Volume 4 ; 4 >
-      au < released ; 2018 ; Echo Research and Practice Volume 5 ; 5 >
-      au < released ; 2019 ; Echo Research and Practice Volume 6 ; 6 >
-      au < released ; 2020 ; Echo Research and Practice Volume 7 ; 7 >
-      au < released ; 2021 ; Echo Research and Practice Volume 8 ; 8 >
-      au < expected ; 2022 ; Echo Research and Practice Volume 9 ; 9 >
-      au < expected ; 2023 ; Echo Research and Practice Volume 10 ; 10 >
-      au < expected ; 2024 ; Echo Research and Practice Volume 11 ; 11 >
-      au < expected ; 2025 ; Echo Research and Practice Volume 12 ; 12 >
-      au < expected ; 2026 ; Echo Research and Practice Volume 13 ; 13 >
+      au < down ; 2018 ; Echo Research and Practice Volume 5 ; 5 >
+      au < down ; 2019 ; Echo Research and Practice Volume 6 ; 6 >
+      au < down ; 2020 ; Echo Research and Practice Volume 7 ; 7 >
+      au < down ; 2021 ; Echo Research and Practice Volume 8 ; 8 >
+      au < doNotProcess ; 2022 ; Echo Research and Practice Volume 9 ; 9 >
+      au < doNotProcess ; 2023 ; Echo Research and Practice Volume 10 ; 10 >
+      au < doNotProcess ; 2024 ; Echo Research and Practice Volume 11 ; 11 >
+      au < doNotProcess ; 2025 ; Echo Research and Practice Volume 12 ; 12 >
+      au < doNotProcess ; 2026 ; Echo Research and Practice Volume 13 ; 13 >
 
   }
   
@@ -181,15 +181,15 @@
       ## http://www.reproduction-online.org/
       #move to OUP, 2026-01-01
 
-      au < released ; 1960 ; Journal of Reproduction and Fertility Volume 1 ; 1 >
-      au < released ; 1961 ; Journal of Reproduction and Fertility Volume 2 ; 2 >
-      au < released ; 1962 ; Journal of Reproduction and Fertility Volume 3 ; 3 >
-      au < released ; 1962 ; Journal of Reproduction and Fertility Volume 4 ; 4 >
-      au < released ; 1963 ; Journal of Reproduction and Fertility Volume 5 ; 5 >
-      au < released ; 1963 ; Journal of Reproduction and Fertility Volume 6 ; 6 >
-      au < released ; 1964 ; Journal of Reproduction and Fertility Volume 7 ; 7 >
-      au < released ; 1964 ; Journal of Reproduction and Fertility Volume 8 ; 8 >
-      au < released ; 1965 ; Journal of Reproduction and Fertility Volume 9 ; 9 >
+      au < down ; 1960 ; Journal of Reproduction and Fertility Volume 1 ; 1 >
+      au < down ; 1961 ; Journal of Reproduction and Fertility Volume 2 ; 2 >
+      au < down ; 1962 ; Journal of Reproduction and Fertility Volume 3 ; 3 >
+      au < down ; 1962 ; Journal of Reproduction and Fertility Volume 4 ; 4 >
+      au < down ; 1963 ; Journal of Reproduction and Fertility Volume 5 ; 5 >
+      au < down ; 1963 ; Journal of Reproduction and Fertility Volume 6 ; 6 >
+      au < down ; 1964 ; Journal of Reproduction and Fertility Volume 7 ; 7 >
+      au < down ; 1964 ; Journal of Reproduction and Fertility Volume 8 ; 8 >
+      au < down ; 1965 ; Journal of Reproduction and Fertility Volume 9 ; 9 >
       au < doNotProcess ; 1965 ; Journal of Reproduction and Fertility Volume 10 ; 10 >
       au < doNotProcess ; 1966 ; Journal of Reproduction and Fertility Volume 11 ; 11 >
       au < doNotProcess ; 1966 ; Journal of Reproduction and Fertility Volume 12 ; 12 >
@@ -335,24 +335,24 @@
       au < doNotProcess ; 2016 ; Reproduction Volume 152 ; 152 >
       au < doNotProcess ; 2017 ; Reproduction Volume 153 ; 153 >
       au < doNotProcess ; 2017 ; Reproduction Volume 154 ; 154 >
-      au < released ; 2018 ; Reproduction Volume 155 ; 155 >
-      au < released ; 2018 ; Reproduction Volume 156 ; 156 >
-      au < released ; 2019 ; Reproduction Volume 157 ; 157 >
-      au < released ; 2019 ; Reproduction Volume 158 ; 158 >
-      au < released ; 2020 ; Reproduction Volume 159 ; 159 >
-      au < released ; 2020 ; Reproduction Volume 160 ; 160 >
-      au < released ; 2021 ; Reproduction Volume 161 ; 161 >
-      au < released ; 2021 ; Reproduction Volume 162 ; 162 >
-      au < released ; 2022 ; Reproduction Volume 163 ; 163 >
-      au < released ; 2022 ; Reproduction Volume 164 ; 164 >
-      au < released ; 2023 ; Reproduction Volume 165 ; 165 >
-      au < released ; 2023 ; Reproduction Volume 166 ; 166 >
-      au < released ; 2024 ; Reproduction Volume 167 ; 167 >
-      au < released ; 2024 ; Reproduction Volume 168 ; 168 >
-      au < manifest ; 2025 ; Reproduction Volume 169 ; 169 >
-      au < manifest ; 2025 ; Reproduction Volume 170 ; 170 >
-      au < expected ; 2026 ; Reproduction Volume 171 ; 171 >
-      au < expected ; 2026 ; Reproduction Volume 172 ; 172 >
+      au < down ; 2018 ; Reproduction Volume 155 ; 155 >
+      au < down ; 2018 ; Reproduction Volume 156 ; 156 >
+      au < down ; 2019 ; Reproduction Volume 157 ; 157 >
+      au < down ; 2019 ; Reproduction Volume 158 ; 158 >
+      au < down ; 2020 ; Reproduction Volume 159 ; 159 >
+      au < down ; 2020 ; Reproduction Volume 160 ; 160 >
+      au < down ; 2021 ; Reproduction Volume 161 ; 161 >
+      au < down ; 2021 ; Reproduction Volume 162 ; 162 >
+      au < down ; 2022 ; Reproduction Volume 163 ; 163 >
+      au < down ; 2022 ; Reproduction Volume 164 ; 164 >
+      au < down ; 2023 ; Reproduction Volume 165 ; 165 >
+      au < down ; 2023 ; Reproduction Volume 166 ; 166 >
+      au < down ; 2024 ; Reproduction Volume 167 ; 167 >
+      au < down ; 2024 ; Reproduction Volume 168 ; 168 >
+      au < doNotProcess ; 2025 ; Reproduction Volume 169 ; 169 >
+      au < doNotProcess ; 2025 ; Reproduction Volume 170 ; 170 >
+      au < doNotProcess ; 2026 ; Reproduction Volume 171 ; 171 >
+      au < doNotProcess ; 2026 ; Reproduction Volume 172 ; 172 >
 
   }
 

@@ -1,0 +1,136 @@
+{
+  publisher <
+    name = Bioscientifica ;
+    info[platform] = silverchair. 12 titles.
+  >
+  #####Moved from highwire to pubfactory to silverchair
+
+      #plugin = needs.plugin
+      plugin = org.lockss.plugin.silverchair.ada.AmericanDiabetesAssociationSilverchairPlugin
+      implicit < status ; year ; param[year] ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = EFORT Open Reviews ;
+      issn = 2396-7544 ;
+      eissn = 2058-5241 ;
+      issnl = 2396-7544
+    >
+
+    param[journal_id] = eor
+    param[base_url] = https://eor.bioscientifica.com/
+    #Moved from Atypon/British Ed Soc BJS
+
+    au < doNotProcess ; 2016 ; 2016 ; EFORT Open Reviews Volume 1 ; 1 >
+    au < doNotProcess ; 2017 ; 2017 ; EFORT Open Reviews Volume 2 ; 2 >
+    au < doNotProcess ; 2018 ; 2018 ; EFORT Open Reviews Volume 3 ; 3 >
+    au < doNotProcess ; 2019 ; 2019 ; EFORT Open Reviews Volume 4 ; 4 >
+    au < doNotProcess ; 2020 ; 2020 ; EFORT Open Reviews Volume 5 ; 5 >
+    au < doNotProcess ; 2021 ; 2021 ; EFORT Open Reviews Volume 6 ; 6 >
+    au < doNotProcess ; 2022 ; 2022 ; EFORT Open Reviews Volume 7 ; 7 >
+    au < doNotProcess ; 2023 ; 2023 ; EFORT Open Reviews Volume 8 ; 8 >
+    au < doNotProcess ; 2024 ; 2024 ; EFORT Open Reviews Volume 9 ; 9 >
+    au < exists ; 2025 ; 2025 ; EFORT Open Reviews Volume 10 ; 10 >
+    au < exists ; 2026 ; 2026 ; EFORT Open Reviews Volume 11 ; 11 >
+
+  }
+
+  {
+    title <
+      name = Endocrine Connections ;
+      issn = 2049-3614 
+      
+    >
+
+      param[journal_id] = ec
+      param[base_url] = https://ec.bioscientifica.com/
+      ## http://www.endocrineconnections.com/
+
+      au < doNotProcess ; 2012 ; 2012 ; Endocrine Connections Volume 1 ; 1 >
+      au < doNotProcess ; 2013 ; 2013 ; Endocrine Connections Volume 2 ; 2 >
+      au < doNotProcess ; 2014 ; 2014 ; Endocrine Connections Volume 3 ; 3 >
+      au < doNotProcess ; 2015 ; 2015 ; Endocrine Connections Volume 4 ; 4 >
+      au < doNotProcess ; 2016 ; 2016 ; Endocrine Connections Volume 5 ; 5 >
+      au < doNotProcess ; 2017 ; 2017 ; Endocrine Connections Volume 6 ; 6 >
+      au < doNotProcess ; 2018 ; 2018 ; Endocrine Connections Volume 7 ; 7 >
+      au < doNotProcess ; 2019 ; 2019 ; Endocrine Connections Volume 8 ; 8 >
+      au < doNotProcess ; 2020 ; 2020 ; Endocrine Connections Volume 9 ; 9 >
+      au < doNotProcess ; 2021 ; 2021 ; Endocrine Connections Volume 10 ; 10 >
+      au < doNotProcess ; 2022 ; 2022 ; Endocrine Connections Volume 11 ; 11 >
+      au < doNotProcess ; 2023 ; 2023 ; Endocrine Connections Volume 12 ; 12 >
+      au < doNotProcess ; 2024 ; 2024 ; Endocrine Connections Volume 13 ; 13 >
+      au < exists ; 2025 ; 2025 ; Endocrine Connections Volume 14 ; 14 >
+      au < exists ; 2026 ; 2026 ; Endocrine Connections Volume 15 ; 15 >
+
+  }
+  
+  {
+
+    title <
+      name = Endocrine Oncology ;
+      eissn = 2634-4793 ;
+      issnl = 2634-4793
+    >
+
+    param[journal_id] = eo
+    param[base_url] = https://eo.bioscientifica.com/
+
+    au < exists ; 2021 ; 2021 ; Endocrine Oncology Volume 1 ; 1 >
+    au < exists ; 2022 ; 2022 ; Endocrine Oncology Volume 2 ; 2 >
+    au < exists ; 2023 ; 2023 ; Endocrine Oncology Volume 3 ; 3 >
+    au < exists ; 2024 ; 2024 ; Endocrine Oncology Volume 4 ; 4 >
+    au < exists ; 2025 ; 2025 ; Endocrine Oncology Volume 5 ; 5 >
+    au < exists ; 2026 ; 2026 ; Endocrine Oncology Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Endocrine-Related Cancer ;
+      issn = 1351-0088 ;
+      eissn = 1479-6821 ;
+      issnl = 1479-6821
+    >
+
+    param[journal_id] = erc
+    param[base_url] = https://erc.bioscientifica.com/
+
+    au < exists ; 1994 ; 1994 ; Endocrine-Related Cancer Volume 1 ; 1 >
+    au < exists ; 1995 ; 1995 ; Endocrine-Related Cancer Volume 2 ; 2 >
+    au < exists ; 1996 ; 1996 ; Endocrine-Related Cancer Volume 3 ; 3 >
+    au < exists ; 1997 ; 1997 ; Endocrine-Related Cancer Volume 4 ; 4 >
+    au < exists ; 1998 ; 1998 ; Endocrine-Related Cancer Volume 5 ; 5 >
+    au < exists ; 1999 ; 1999 ; Endocrine-Related Cancer Volume 6 ; 6 >
+    au < exists ; 2000 ; 2000 ; Endocrine-Related Cancer Volume 7 ; 7 >
+    au < exists ; 2001 ; 2001 ; Endocrine-Related Cancer Volume 8 ; 8 >
+    au < exists ; 2002 ; 2002 ; Endocrine-Related Cancer Volume 9 ; 9 >
+    au < exists ; 2003 ; 2003 ; Endocrine-Related Cancer Volume 10 ; 10 >
+    au < exists ; 2004 ; 2004 ; Endocrine-Related Cancer Volume 11 ; 11 >
+    au < exists ; 2005 ; 2005 ; Endocrine-Related Cancer Volume 12 ; 12 >
+    au < exists ; 2006 ; 2006 ; Endocrine-Related Cancer Volume 13 ; 13 >
+    au < exists ; 2007 ; 2007 ; Endocrine-Related Cancer Volume 14 ; 14 >
+    au < exists ; 2008 ; 2008 ; Endocrine-Related Cancer Volume 15 ; 15 >
+    au < exists ; 2009 ; 2009 ; Endocrine-Related Cancer Volume 16 ; 16 >
+    au < exists ; 2010 ; 2010 ; Endocrine-Related Cancer Volume 17 ; 17 >
+    au < exists ; 2011 ; 2011 ; Endocrine-Related Cancer Volume 18 ; 18 >
+    au < exists ; 2012 ; 2012 ; Endocrine-Related Cancer Volume 19 ; 19 >
+    au < exists ; 2013 ; 2013 ; Endocrine-Related Cancer Volume 20 ; 20 >
+    au < exists ; 2014 ; 2014 ; Endocrine-Related Cancer Volume 21 ; 21 >
+    au < exists ; 2015 ; 2015 ; Endocrine-Related Cancer Volume 22 ; 22 >
+    au < exists ; 2016 ; 2016 ; Endocrine-Related Cancer Volume 23 ; 23 >
+    au < exists ; 2017 ; 2017 ; Endocrine-Related Cancer Volume 24 ; 24 >
+    au < exists ; 2018 ; 2018 ; Endocrine-Related Cancer Volume 25 ; 25 >
+    au < exists ; 2019 ; 2019 ; Endocrine-Related Cancer Volume 26 ; 26 >
+    au < exists ; 2020 ; 2020 ; Endocrine-Related Cancer Volume 27 ; 27 >
+    au < exists ; 2021 ; 2021 ; Endocrine-Related Cancer Volume 28 ; 28 >
+    au < exists ; 2022 ; 2022 ; Endocrine-Related Cancer Volume 29 ; 29 >
+    au < exists ; 2023 ; 2023 ; Endocrine-Related Cancer Volume 30 ; 30 >
+    au < exists ; 2024 ; 2024 ; Endocrine-Related Cancer Volume 31 ; 31 >
+    au < exists ; 2025 ; 2025 ; Endocrine-Related Cancer Volume 32 ; 32 >
+    au < exists ; 2026 ; 2026 ; Endocrine-Related Cancer Volume 33 ; 33 >
+
+  }
+
+}
