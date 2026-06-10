@@ -2999,6 +2999,10 @@ public class V2AuMover {
   }
 
   RepositoryInfo getRepoInfo() throws ApiException {
+    // This can get called early
+    if (repoRepoApiClient == null) {
+      return null;
+    }
     RepositoryInfo ri = repoRepoApiClient.getRepositoryInformation();
     log.debug3("repoinfo: " + ri);
     return ri;
@@ -3007,7 +3011,9 @@ public class V2AuMover {
   void fetchDiskSpace() {
     try {
       RepositoryInfo ri = getRepoInfo();
-      StringBuilder sb = new StringBuilder();
+      if (ri == null) {
+        currentDiskSpace = null;
+      }
       StorageInfo data = ri.getStoreInfo();
       StorageInfo index = ri.getIndexInfo();
 
