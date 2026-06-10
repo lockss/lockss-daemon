@@ -28,7 +28,7 @@
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/jtrp-technical-reports-released/
 
     au < zapped ; finished ; 2023 ; JTRP Technical Reports WARC Content 2023 ; 2023 >
-    au < ready ; exists ; 2026 ; JTRP Technical Reports WARC Content 2026 ; 2026 >
+    au < readySource ; crawling ; 2026 ; JTRP Technical Reports WARC Content 2026 ; 2026 >
 
     }
   }

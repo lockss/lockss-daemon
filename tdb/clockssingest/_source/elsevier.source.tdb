@@ -387,10 +387,10 @@
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_31 ; 2026_31 >
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_32 ; 2026_32 >
         au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_33 ; 2026_33 >
-        au < manifest ; exists ; 2026 ; Elsevier Source Content 2026_34 ; 2026_34 >
-        au < manifest ; exists ; 2026 ; Elsevier Source Content 2026_35 ; 2026_35 >
-        au < manifest ; exists ; 2026 ; Elsevier Source Content 2026_36 ; 2026_36 >
-        au < manifest ; exists ; 2026 ; Elsevier Source Content 2026_37 ; 2026_37 >
+        au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_34 ; 2026_34 >
+        au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_35 ; 2026_35 >
+        au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_36 ; 2026_36 >
+        au < readySource ; crawling ; 2026 ; Elsevier Source Content 2026_37 ; 2026_37 >
         au < expected ; exists ; 2026 ; Elsevier Source Content 2026_38 ; 2026_38 >
         au < expected ; exists ; 2026 ; Elsevier Source Content 2026_39 ; 2026_39 >
         au < expected ; exists ; 2026 ; Elsevier Source Content 2026_40 ; 2026_40 >
