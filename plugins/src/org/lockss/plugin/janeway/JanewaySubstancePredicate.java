@@ -54,6 +54,7 @@ public class JanewaySubstancePredicate implements SubstancePredicate {
 
     private static final String SUBSTANCE_PDF_STRING = "application/pdf";
     private static final String SUBSTANCE_XML_STRING = "application/xml";
+    private static final String SUBSTANCE_XML_STRING_ALT = "text/xml";
 
     public JanewaySubstancePredicate(ArchivalUnit au) {
         log = Logger.getLogger("JanewaySubstancePredicate");
@@ -89,7 +90,7 @@ public class JanewaySubstancePredicate implements SubstancePredicate {
         try {
             String mime = HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
             boolean res = cu.hasContent() &&
-                    (mime.contains(SUBSTANCE_PDF_STRING) || mime.contains(SUBSTANCE_XML_STRING));
+                    (mime.contains(SUBSTANCE_PDF_STRING) || mime.contains(SUBSTANCE_XML_STRING) || mime.contains(SUBSTANCE_XML_STRING_ALT));
             if (log.isDebug3()) {
                 log.debug3("MimeType: " + mime + "\t Returning: "+ res);
             }
