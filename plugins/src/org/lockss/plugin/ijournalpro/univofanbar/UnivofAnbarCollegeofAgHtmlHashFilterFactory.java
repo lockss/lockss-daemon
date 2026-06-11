@@ -66,8 +66,8 @@ public class UnivofAnbarCollegeofAgHtmlHashFilterFactory implements FilterFactor
      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "sidebar_block"),
      HtmlNodeFilters.tagWithAttributeRegex("div", "class", "panel"),
      HtmlNodeFilters.tagWithAttributeRegex("div", "id", "ar_info_pnl_share"),
-     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-content"),
-
+     HtmlNodeFilters.tagWithAttributeRegex("div", "class", "page-content"), HtmlNodeFilters.tagWithAttributeRegex("span", "class", "badge\\s+bg-light\\s+text-dark\\s+px-3"),
+     HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/cdn-cgi/l/email-protection"),
     };
     InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
         HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
