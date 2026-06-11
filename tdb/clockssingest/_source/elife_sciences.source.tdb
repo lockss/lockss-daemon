@@ -28,7 +28,7 @@
       plugin = org.lockss.plugin.clockss.elifesciences.ClockssElifeSciencesJournalsSourcePlugin
       implicit < status ; status2 ; year ; name ; param[directory] >
 
-      au < readySource ; crawling ; 2025 ; eLife Sciences Preprint Source Content 2025_01 ; 2025_01 > #bucket 2025_01 has 7 Preprint zip files in journal format
+      au < readySource ; frozen ; 2025 ; eLife Sciences Preprint Source Content 2025_01 ; 2025_01 > #bucket 2025_01 has 7 Preprint zip files in journal format
       #No more AUs. Moved to Preprint format
     }
     {
