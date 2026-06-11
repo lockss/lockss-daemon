@@ -27,8 +27,8 @@
     param[base_url] = https://clockss-ingest.lockss.org/warcfiles/eurorespsoc-released/
     #Process every year
 
-    au < readySource ; frozen ; 2023 ; European Respiratory Society Books WARC Content 2023 ; 2023 > #See LXPUB-613
-    au < readySource ; frozen ; 2024 ; European Respiratory Society Books WARC Content 2024 ; 2024 > #LXPUB-1102
+    au < readySource ; finished ; 2023 ; European Respiratory Society Books WARC Content 2023 ; 2023 > #See LXPUB-613
+    au < readySource ; finished ; 2024 ; European Respiratory Society Books WARC Content 2024 ; 2024 > #LXPUB-1102
     au < expected ; exists ; 2026 ; European Respiratory Society Books WARC Content 2026 ; 2026 >
 
     }

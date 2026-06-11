@@ -25,8 +25,8 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewbooks-released/
 
       au < readySource ; finished ; 2023 ; East View Information Services Book Source Content 2023_01 ; 2023_01 >
-      au < readySource ; frozen ; 2024 ; East View Information Services Book Source Content 2024_01 ; 2024_01 >
-      au < readySource ; frozen ; 2025 ; East View Information Services Book Source Content 2025_01 ; 2025_01 >
+      au < readySource ; finished ; 2024 ; East View Information Services Book Source Content 2024_01 ; 2024_01 >
+      au < readySource ; finished ; 2025 ; East View Information Services Book Source Content 2025_01 ; 2025_01 >
       au < readySource ; crawling ; 2026 ; East View Information Services Book Source Content 2026_01 ; 2026_01 >
 
     }
@@ -67,11 +67,11 @@
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewudbcom-released/
 
         au < readySource ; frozen ; 2024 ; East View Information Services UDB Source Content 2024_01 ; 2024_01 >
-        au < readySource ; frozen ; 2024 ; East View Information Services UDB Source Content 2024_02 ; 2024_02 >
-        au < readySource ; frozen ; 2024 ; East View Information Services UDB Source Content 2024_03 ; 2024_03 >
+        au < readySource ; finished ; 2024 ; East View Information Services UDB Source Content 2024_02 ; 2024_02 >
+        au < readySource ; finished ; 2024 ; East View Information Services UDB Source Content 2024_03 ; 2024_03 >
         au < readySource ; frozen ; 2024 ; East View Information Services UDB Source Content 2024_04 ; 2024_04 >
-        au < readySource ; frozen ; 2024 ; East View Information Services UDB Source Content 2024_05 ; 2024_05 >
-        au < readySource ; frozen ; 2024 ; East View Information Services UDB Source Content 2024_06 ; 2024_06 >
+        au < readySource ; finished ; 2024 ; East View Information Services UDB Source Content 2024_05 ; 2024_05 >
+        au < readySource ; finished ; 2024 ; East View Information Services UDB Source Content 2024_06 ; 2024_06 >
       }
     }
 
@@ -85,7 +85,7 @@
         #AUs in production
         param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/eastviewdb-released/
 
-        au < readySource ; frozen ; 2025 ; East View Information Services Database Source Content 2025_01 ; 2025_01 >
+        au < readySource ; finished ; 2025 ; East View Information Services Database Source Content 2025_01 ; 2025_01 >
         au < expected ; exists ; 2026 ; East View Information Services Database Source Content 2026_01 ; 2026_01 >
 
     }
