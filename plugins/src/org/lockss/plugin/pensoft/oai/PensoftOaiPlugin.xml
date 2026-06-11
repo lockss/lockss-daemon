@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>25</string>
+    <string>26</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -231,6 +231,8 @@ POSSIBILITY OF SUCH DAMAGE.
     <list>
       <string>(fonts|ajax)\.googleapis\.com</string>
       <string>public\.pensoft\.net</string>
+        <!--This was added to for a particular publisher based on Jira ticket-->
+      <string>ijm\.pensoft\.net</string>
     </list>
   </entry>
 </map>
