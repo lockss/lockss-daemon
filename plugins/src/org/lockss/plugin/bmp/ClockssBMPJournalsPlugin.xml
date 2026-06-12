@@ -122,6 +122,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <string>org.lockss.plugin.bmp.BMPArticleIteratorFactory</string>
   </entry>
   <entry>
+      <!--This is intended, there is a custom article metadata extractor instead of file metadata extractors-->
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.bmp.BMPArticleMetadataExtractorFactory</string>
   </entry>

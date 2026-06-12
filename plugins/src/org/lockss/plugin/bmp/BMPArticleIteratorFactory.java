@@ -92,25 +92,26 @@ public class BMPArticleIteratorFactory implements ArticleIteratorFactory, Articl
 
     public void parseToc(CachedUrl tocCU, ArrayList<ArticleFiles> results, ArchivalUnit au){
 
-        CachedUrl pdfUrl = null;
-        CachedUrl abstractsUrl = null;
-        String doisUrl = null;
-
         try{
             Document doc = Jsoup.parse(tocCU.getUncompressedInputStream(), AuUtil.getCharsetOrDefault(tocCU.getProperties()), tocCU.getUrl());
             Elements articles = doc.select("div.span9>section[id*=cat]>div");
             ArrayList<String> rolesForMetadata = new ArrayList<>();
             for (Element article : articles) {
                 ArticleFiles af = new ArticleFiles();
+                CachedUrl pdfUrl = null;
+                CachedUrl abstractsUrl = null;
+                String doisUrl = null;
 
                 Elements PDFs = article.select("ul.article-nav-bottom>li>a:contains(PDF)");
-                if(PDFs.attr("href") != null){
-                    pdfUrl = au.makeCachedUrl("https://agridergisi.com" + PDFs.attr("href").trim());
+                String pdfHref = PDFs.attr("href").trim();
+                if(!pdfHref.isEmpty()){
+                    pdfUrl = au.makeCachedUrl("https://agridergisi.com" + pdfHref);
                 }
 
                 Elements abstracts = article.select("h3>a[href*=abstract]");
-                if(abstracts.attr("href") != null){
-                    abstractsUrl = au.makeCachedUrl("https://agridergisi.com" + abstracts.attr("href").trim());
+                String abstractHref = abstracts.attr("href").trim();
+                if(!abstractHref.isEmpty()){
+                    abstractsUrl = au.makeCachedUrl("https://agridergisi.com" + abstractHref);
                 }
 
                 Elements DOIs = article.select("div.row-fluid>div.span8>a[href*=doi]");
@@ -119,12 +120,14 @@ public class BMPArticleIteratorFactory implements ArticleIteratorFactory, Articl
 
                 addToListOfRoles(pdfUrl, af, ArticleFiles.ROLE_FULL_TEXT_PDF);
                 addToListOfRoles(abstractsUrl, af, ArticleFiles.ROLE_ABSTRACT);
-                af.setRole(ArticleFiles.ROLE_ARTICLE_HANDLE, doisUrl);
+                if(doisUrl != null && !doisUrl.isEmpty()){
+                    af.setRole(ArticleFiles.ROLE_ARTICLE_HANDLE, doisUrl);
+                }
                 
                 af.setFullTextCu(pdfUrl);
 
                 if(af.getFullTextCu() == null){
-                    log.debug3("There is no full text. The abstract CU is " + abstractsUrl.toString());
+                    log.debug3("There is no full text. The abstract CU is " + abstractsUrl);
                 }
 
                 if ((abstractsUrl != null) && abstractsUrl.hasContent()) {
@@ -134,19 +137,21 @@ public class BMPArticleIteratorFactory implements ArticleIteratorFactory, Articl
                     log.debug3("There is no abstracts page, setting metadata role to TOC.");
                     af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, tocCU);
                 }
+                if(pdfUrl == null && abstractsUrl == null){
+                    log.debug3("Skipping article with no PDF and no abstract.");
+                    continue;
+                }
                 results.add(af);
-            }
-        }catch(IOException ioe){
+                AuUtil.safeRelease(pdfUrl);
+                AuUtil.safeRelease(abstractsUrl);
+            } // end for loop
+        } catch(IOException ioe){
             log.debug("Error parsing CU", ioe);
-        }finally{
-            AuUtil.safeRelease(pdfUrl);
-            AuUtil.safeRelease(abstractsUrl);
         }
-        
     }
 
     public void addToListOfRoles(CachedUrl cu, ArticleFiles af, String role){
-        if(cu.hasContent()){
+        if(cu != null && cu.hasContent()){
             log.debug3("The cu has content");
             af.setRole(role,cu);
             log.debug3("The  URL is " + cu.toString() + " and the role is " + role);
