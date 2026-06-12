@@ -264,7 +264,7 @@
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2022 ; Biolinquistics Volume 2022 ; 2022 ; 2022 ; https://bioling.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2023 ; Biolinquistics Volume 2023 ; 2023 ; 2023 ; https://bioling.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2024 ; Biolinquistics Volume 2024 ; 2024 ; 2024 ; https://bioling.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2025 ; Biolinquistics Volume 2025 ; 2025 ; 2025 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2025 ; Biolinquistics Volume 2025 ; 2025 ; 2025 ; https://bioling.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2026 ; Biolinquistics Volume 2026 ; 2026 ; 2026 ; https://bioling.psychopen.eu/ ; >
 
   }
@@ -314,7 +314,7 @@
 
       param[journal_id] = phair
 
-      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2022 ; Psychology of Human-Animal Intergroup Relations Volume 2022 ; 2022 ; 2022 ; https://phair.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2022 ; Psychology of Human-Animal Intergroup Relations Volume 2022 ; 2022 ; 2022 ; https://phair.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2023 ; Psychology of Human-Animal Intergroup Relations Volume 2023 ; 2023 ; 2023 ; https://phair.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2024 ; Psychology of Human-Animal Intergroup Relations Volume 2024 ; 2024 ; 2024 ; https://phair.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2025 ; Psychology of Human-Animal Intergroup Relations Volume 2025 ; 2025 ; 2025 ; https://phair.psychopen.eu/ ; >
