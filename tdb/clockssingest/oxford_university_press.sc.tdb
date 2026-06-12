@@ -3487,6 +3487,7 @@
     >
 
     param[journal_id] = cesifo
+    # cease publishing after Volume 70, 2024
 
     au < doNotProcess ; exists ; 2003 ; 2003 ; CESifo Economic Studies Volume 49 ; 49 ; >
     au < doNotProcess ; exists ; 2004 ; 2004 ; CESifo Economic Studies Volume 50 ; 50 ; >
@@ -3510,7 +3511,6 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; CESifo Economic Studies Volume 68 ; 68 ; >
     au < finished ; manifest ; 2023 ; 2023 ; CESifo Economic Studies Volume 69 ; 69 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; CESifo Economic Studies Volume 69-70 ; 69-70 ; >
-    au < doesNotExist ; doesNotExist ; 2025 ; 2025 ; CESifo Economic Studies Volume 71 ; 71 ; >
 
   }
 
@@ -7338,6 +7338,7 @@
     >
 
     param[journal_id] = forestscience
+    #Beginning in 2025, the Forest Science will be published by a new publisher
 
     au < doNotProcess ; exists ; 1955 ; 1955 ; Forest Science Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 1956 ; 1956 ; Forest Science Volume 2 ; 2 ; >
@@ -7409,7 +7410,6 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Forest Science Volume 68 ; 68 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Forest Science Volume 69 ; 69 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Forest Science Volume 70 ; 70 ; >
-    au < doesNotExist ; doesNotExist ; 2025 ; 2025 ; Forest Science Volume 71 ; 71 ; >
 
   }
 
@@ -12197,6 +12197,7 @@
 
     param[journal_id] = jof
     #content available from 1909 volume 7 to 1999 volume 97
+    #Beginning in 2025, the Journal of Forestry will be published by a new publisher.
 
     au < doNotProcess ; exists ; 2000 ; 2000 ; Journal of Forestry Volume 98 ; 98 ; >
     au < doNotProcess ; exists ; 2001 ; 2001 ; Journal of Forestry Volume 99 ; 99 ; >
@@ -12223,7 +12224,6 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Forestry Volume 120 ; 120 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Forestry Volume 121 ; 121 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Forestry Volume 122 ; 122 ; >
-    au < doesNotExist ; doesNotExist ; 2025 ; 2025 ; Journal of Forestry Volume 123 ; 123 ; >
 
   }
 
@@ -15311,6 +15311,7 @@
     >
 
     param[journal_id] = litimag
+    #move to John Hopkins University Press
 
     au < doNotProcess ; exists ; 1999 ; 1999 ; Literary Imagination Volume 1 ; 1 ; >
     au < doNotProcess ; exists ; 2000 ; 2000 ; Literary Imagination Volume 2 ; 2 ; >
@@ -15338,7 +15339,6 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Literary Imagination Volume 24 ; 24 ; >
     au < finished ; manifest ; 2023 ; 2023 ; Literary Imagination Volume 25 ; 25 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Literary Imagination Volume 26 ; 26 ; >
-    au < doesNotExist ; doesNotExist ; 2025 ; 2025 ; Literary Imagination Volume 27 ; 27 ; >
 
   }
 
@@ -19814,9 +19814,8 @@
     au < finished ; manifest ; 2020 ; 2020 ; Research Evaluation Volume 29 ; 29 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2021 ; 2021 ; Research Evaluation Volume 30 ; 30 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2022 ; 2022 ; Research Evaluation Volume 31 ; 31 ; >
-    au < finished ; manifest ; 2023 ; 2023 ; Research Evaluation Volume 32 ; 32 ; reingest5.clockss.org:8082 >
-    au < deepCrawl ; exists ; 2024 ; 2024 ; Research Evaluation Volume 33 ; 33 ; >
-    au < exists ; exists ; 2025 ; 2025 ; Research Evaluation Volume 34 ; 34 ; > #content exists. Manifest page is empty.
+    au < deepCrawl ; exists ; 2023 ; 2023 ; Research Evaluation Volume 31-32 ; 31-32 ; >
+    au < deepCrawl ; exists ; 2024 ; 2024 ; Research Evaluation Volume 32-34 ; 32-34 ; >
     au < doNotProcess ; exists ; 2026 ; 2026 ; Research Evaluation Volume 35 ; 35 ; >
 
   }

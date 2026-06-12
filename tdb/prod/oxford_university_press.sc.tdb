@@ -3538,6 +3538,7 @@
     >
 
     param[journal_id] = cesifo
+    # cease publishing after Volume 70, 2024
 
     au < doNotProcess ; 2003 ; 2003 ; CESifo Economic Studies Volume 49 ; 49 >
     au < doNotProcess ; 2004 ; 2004 ; CESifo Economic Studies Volume 50 ; 50 >
@@ -3561,8 +3562,6 @@
     au < released ; 2022 ; 2022 ; CESifo Economic Studies Volume 68 ; 68 >
     au < released ; 2023 ; 2023 ; CESifo Economic Studies Volume 69 ; 69 >
     au < released ; 2024 ; 2024 ; CESifo Economic Studies Volume 69-70 ; 69-70 >
-    au < expected ; 2025 ; 2025 ; CESifo Economic Studies Volume 71 ; 71 >
-    au < expected ; 2026 ; 2026 ; CESifo Economic Studies Volume 72 ; 72 >
 
   }
 
@@ -7203,9 +7202,9 @@
     au < released ; 2021 ; 2021 ; FEMS Yeast Research Volume 21 ; 21 >
     au < released ; 2022 ; 2022 ; FEMS Yeast Research Volume 22 ; 22 >
     au < released ; 2023 ; 2023 ; FEMS Yeast Research Volume 23 ; 23 >
-    au < expected ; 2024 ; 2024 ; FEMS Yeast Research Volume 24 ; 24 >
-    au < expected ; 2025 ; 2025 ; FEMS Yeast Research Volume 25 ; 25 >
-    au < expected ; 2026 ; 2026 ; FEMS Yeast Research Volume 26 ; 26 >
+    au < exists ; 2024 ; 2024 ; FEMS Yeast Research Volume 24 ; 24 >
+    au < exists ; 2025 ; 2025 ; FEMS Yeast Research Volume 25 ; 25 >
+    au < exists ; 2026 ; 2026 ; FEMS Yeast Research Volume 26 ; 26 >
 
   }
 
@@ -7466,6 +7465,7 @@
     >
 
     param[journal_id] = forestscience
+    #Beginning in 2025, the Forest Science will be published by a new publisher
 
     au < doNotProcess ; 1955 ; 1955 ; Forest Science Volume 1 ; 1 >
     au < doNotProcess ; 1956 ; 1956 ; Forest Science Volume 2 ; 2 >
@@ -7537,8 +7537,6 @@
     au < released ; 2022 ; 2022 ; Forest Science Volume 68 ; 68 >
     au < released ; 2023 ; 2023 ; Forest Science Volume 69 ; 69 >
     au < released ; 2024 ; 2024 ; Forest Science Volume 70 ; 70 >
-    au < expected ; 2025 ; 2025 ; Forest Science Volume 71 ; 71 >
-    au < expected ; 2026 ; 2026 ; Forest Science Volume 72 ; 72 >
 
   }
 
@@ -8001,8 +7999,8 @@
     au < released ; 2022 ; 2022 ; Gastroenterology Report Volume 10 ; 10 >
     au < released ; 2023 ; 2023 ; Gastroenterology Report Volume 11 ; 11 >
     au < manifest ; 2024 ; 2024 ; Gastroenterology Report Volume 12 ; 12 >
-    au < expected ; 2025 ; 2025 ; Gastroenterology Report Volume 13 ; 13 >
-    au < expected ; 2026 ; 2026 ; Gastroenterology Report Volume 14 ; 14 >
+    au < exists ; 2025 ; 2025 ; Gastroenterology Report Volume 13 ; 13 >
+    au < exists ; 2026 ; 2026 ; Gastroenterology Report Volume 14 ; 14 >
 
   }
 
@@ -9777,10 +9775,10 @@
     au < released ; 2020 ; 2020 ; Integrative Biology Volume 12 ; 12 >
     au < released ; 2021 ; 2021 ; Integrative Biology Volume 13 ; 13 >
     au < released ; 2022 ; 2022 ; Integrative Biology Volume 14 ; 14 >
-    au < expected ; 2023 ; 2023 ; Integrative Biology Volume 15 ; 15 >
-    au < expected ; 2024 ; 2024 ; Integrative Biology Volume 16 ; 16 >
-    au < expected ; 2025 ; 2025 ; Integrative Biology Volume 17 ; 17 >
-    au < expected ; 2026 ; 2026 ; Integrative Biology Volume 18 ; 18 >
+    au < exists ; 2023 ; 2023 ; Integrative Biology Volume 15 ; 15 >
+    au < exists ; 2024 ; 2024 ; Integrative Biology Volume 16 ; 16 >
+    au < exists ; 2025 ; 2025 ; Integrative Biology Volume 17 ; 17 >
+    au < exists ; 2026 ; 2026 ; Integrative Biology Volume 18 ; 18 >
 
   }
 
@@ -10343,10 +10341,10 @@
     au < released ; 2019 ; 2019 ; International Journal of Low-Carbon Technologies Volume 14 ; 14 >
     au < released ; 2020 ; 2020 ; International Journal of Low-Carbon Technologies Volume 15 ; 15 >
     au < released ; 2021 ; 2021 ; International Journal of Low-Carbon Technologies Volume 16 ; 16 >
-    au < expected ; 2022 ; 2022 ; International Journal of Low-Carbon Technologies Volume 17 ; 17 >
-    au < expected ; 2023 ; 2023 ; International Journal of Low-Carbon Technologies Volume 18 ; 18 >
+    au < exists ; 2022 ; 2022 ; International Journal of Low-Carbon Technologies Volume 17 ; 17 >
+    au < exists ; 2023 ; 2023 ; International Journal of Low-Carbon Technologies Volume 18 ; 18 >
     au < released ; 2024 ; 2024 ; International Journal of Low-Carbon Technologies Volume 19 ; 19 >
-    au < expected ; 2025 ; 2025 ; International Journal of Low-Carbon Technologies Volume 20 ; 20 >
+    au < exists ; 2025 ; 2025 ; International Journal of Low-Carbon Technologies Volume 20 ; 20 >
     au < manifest ; 2026 ; 2026 ; International Journal of Low-Carbon Technologies Volume 21 ; 21 >
 
   }
@@ -12408,6 +12406,7 @@
 
     param[journal_id] = jof
     #content available from 1909 volume 7 to 1999 volume 97
+    #Beginning in 2025, the Journal of Forestry will be published by a new publisher.
 
     au < doNotProcess ; 2000 ; 2000 ; Journal of Forestry Volume 98 ; 98 >
     au < doNotProcess ; 2001 ; 2001 ; Journal of Forestry Volume 99 ; 99 >
@@ -12434,8 +12433,6 @@
     au < released ; 2022 ; 2022 ; Journal of Forestry Volume 120 ; 120 >
     au < released ; 2023 ; 2023 ; Journal of Forestry Volume 121 ; 121 >
     au < released ; 2024 ; 2024 ; Journal of Forestry Volume 122 ; 122 >
-    au < expected ; 2025 ; 2025 ; Journal of Forestry Volume 123 ; 123 >
-    au < expected ; 2026 ; 2026 ; Journal of Forestry Volume 124 ; 124 >
 
   }
 
@@ -15606,6 +15603,7 @@
     >
 
     param[journal_id] = litimag
+    #move to John Hopkins University Press
 
     au < doNotProcess ; 1999 ; 1999 ; Literary Imagination Volume 1 ; 1 >
     au < doNotProcess ; 2000 ; 2000 ; Literary Imagination Volume 2 ; 2 >
@@ -15633,8 +15631,6 @@
     au < released ; 2022 ; 2022 ; Literary Imagination Volume 24 ; 24 >
     au < released ; 2023 ; 2023 ; Literary Imagination Volume 25 ; 25 >
     au < released ; 2024 ; 2024 ; Literary Imagination Volume 26 ; 26 >
-    au < expected ; 2025 ; 2025 ; Literary Imagination Volume 27 ; 27 >
-    au < expected ; 2026 ; 2026 ; Literary Imagination Volume 28 ; 28 >
 
   }
 
@@ -18656,8 +18652,8 @@
     au < released ; 2021 ; 2021 ; Pathogens and Disease Volume 79 ; 79 >
     au < released ; 2022 ; 2022 ; Pathogens and Disease Volume 80 ; 80 >
     au < released ; 2023 ; 2023 ; Pathogens and Disease Volume 81 ; 81 >
-    au < expected ; 2024 ; 2024 ; Pathogens and Disease Volume 82 ; 82 >
-    au < expected ; 2025 ; 2025 ; Pathogens and Disease Volume 83 ; 83 >
+    au < exists ; 2024 ; 2024 ; Pathogens and Disease Volume 82 ; 82 >
+    au < exists ; 2025 ; 2025 ; Pathogens and Disease Volume 83 ; 83 >
     au < expected ; 2026 ; 2026 ; Pathogens and Disease Volume 84 ; 84 >
 
   }
@@ -19530,11 +19526,11 @@
     au < released ; 2019 ; 2019 ; Protein Engineering, Design and Selection (PEDS) Volume 32 ; 32 >
     au < exists ; 2020 ; 2020 ; Protein Engineering, Design and Selection (PEDS) Volume 33 ; 33 >
     au < exists ; 2021 ; 2021 ; Protein Engineering, Design and Selection (PEDS) Volume 34 ; 34 >
-    au < expected ; 2022 ; 2022 ; Protein Engineering, Design and Selection (PEDS) Volume 35 ; 35 >
-    au < expected ; 2023 ; 2023 ; Protein Engineering, Design and Selection (PEDS) Volume 36 ; 36 >
-    au < expected ; 2024 ; 2024 ; Protein Engineering, Design and Selection (PEDS) Volume 37 ; 37 >
-    au < expected ; 2025 ; 2025 ; Protein Engineering, Design and Selection (PEDS) Volume 38 ; 38 >
-    au < expected ; 2026 ; 2026 ; Protein Engineering, Design and Selection (PEDS) Volume 39 ; 39 >
+    au < exists ; 2022 ; 2022 ; Protein Engineering, Design and Selection (PEDS) Volume 35 ; 35 >
+    au < exists ; 2023 ; 2023 ; Protein Engineering, Design and Selection (PEDS) Volume 36 ; 36 >
+    au < exists ; 2024 ; 2024 ; Protein Engineering, Design and Selection (PEDS) Volume 37 ; 37 >
+    au < exists ; 2025 ; 2025 ; Protein Engineering, Design and Selection (PEDS) Volume 38 ; 38 >
+    au < exists ; 2026 ; 2026 ; Protein Engineering, Design and Selection (PEDS) Volume 39 ; 39 >
 
   }
 
@@ -20075,10 +20071,10 @@
     au < released ; 2020 ; 2020 ; Regenerative Biomaterials Volume 7 ; 7 >
     au < released ; 2021 ; 2021 ; Regenerative Biomaterials Volume 8 ; 8 >
     au < released ; 2022 ; 2022 ; Regenerative Biomaterials Volume 9 ; 9 >
-    au < expected ; 2023 ; 2023 ; Regenerative Biomaterials Volume 10 ; 10 >
-    au < expected ; 2024 ; 2024 ; Regenerative Biomaterials Volume 11 ; 11 >
-    au < expected ; 2025 ; 2025 ; Regenerative Biomaterials Volume 12 ; 12 >
-    au < expected ; 2026 ; 2026 ; Regenerative Biomaterials Volume 13 ; 13 >
+    au < exists ; 2023 ; 2023 ; Regenerative Biomaterials Volume 10 ; 10 >
+    au < exists ; 2024 ; 2024 ; Regenerative Biomaterials Volume 11 ; 11 >
+    au < exists ; 2025 ; 2025 ; Regenerative Biomaterials Volume 12 ; 12 >
+    au < exists ; 2026 ; 2026 ; Regenerative Biomaterials Volume 13 ; 13 >
 
   }
 
@@ -20188,8 +20184,7 @@
     au < released ; 2022 ; 2022 ; Research Evaluation Volume 31 ; 31 >
     au < released ; 2023 ; 2023 ; Research Evaluation Volume 31-32 ; 31-32 >
     au < released ; 2024 ; 2024 ; Research Evaluation Volume 32-34 ; 32-34 >
-    au < expected ; 2025 ; 2025 ; Research Evaluation Volume 35 ; 35 >
-    au < expected ; 2026 ; 2026 ; Research Evaluation Volume 36 ; 36 >
+    au < expected ; 2026 ; 2026 ; Research Evaluation Volume 35 ; 35 >
 
   }
 
@@ -25555,8 +25550,8 @@
     au < released ; 2022 ; 2022 ; Translational Animal Science Volume 6 ; 6 >
     au < released ; 2023 ; 2023 ; Translational Animal Science Volume 7 ; 7 >
     au < released ; 2024 ; 2024 ; Translational Animal Science Volume 8 ; 8 >
-    au < expected ; 2025 ; 2025 ; Translational Animal Science Volume 9 ; 9 >
-    au < expected ; 2026 ; 2026 ; Translational Animal Science Volume 10 ; 10 >
+    au < exists ; 2025 ; 2025 ; Translational Animal Science Volume 9 ; 9 >
+    au < exists ; 2026 ; 2026 ; Translational Animal Science Volume 10 ; 10 >
 
   }
 
@@ -25967,9 +25962,9 @@
     au < exists ; 2021 ; 2021 ; Yearbook of European Law Volume 39 (2020) ; 39 >
     au < exists ; 2022 ; 2022 ; Yearbook of European Law Volume 40 (2021) ; 40 >
     au < exists ; 2023 ; 2023 ; Yearbook of European Law Volume 41 (2022) ; 41 >
-    au < exists ; 2024 ; 2024 ; Yearbook of European Law Volume 42 (2023) ; 42 >
-    au < expected ; 2025 ; 2025 ; Yearbook of European Law Volume 43 (2024) ; 43 >
-    au < expected ; 2026 ; 2026 ; Yearbook of European Law Volume 44 (2024) ; 44 >
+    au < exists ; 2024 ; 2024 ; Yearbook of European Law Volume 42-43 (2023) ; 42-43 >
+    au < expected ; 2025 ; 2025 ; Yearbook of European Law Volume 44 (2025) ; 44 >
+    au < expected ; 2026 ; 2026 ; Yearbook of European Law Volume 45 (2026) ; 45 >
 
   }
 
