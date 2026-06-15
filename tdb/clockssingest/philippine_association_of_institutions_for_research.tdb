@@ -45,7 +45,7 @@
       au < finished ; manifest ; 2022 ; JPAIR Multidisciplinary Research Volume 2022 ; 17 ; 2022 ; https://philair.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; JPAIR Multidisciplinary Research Volume 2023 ; 18 ; 2023 ; https://philair.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2024 ; JPAIR Multidisciplinary Research Volume 2024 ; 19 ; 2024 ; https://philair.org/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; JPAIR Multidisciplinary Research Volume 2025 ; 20 ; 2025 ; https://philair.org/ ; >
+      au < deepCrawl ; exists ; 2025 ; JPAIR Multidisciplinary Research Volume 2025 ; 20 ; 2025 ; https://philair.org/ ; >
 
   }
 
@@ -74,7 +74,7 @@
       au < finished ; manifest ; 2022 ; JPAIR Institutional Research Volume 2022 ; 17 ; 2022 ; https://philair.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; JPAIR Institutional Research Volume 2023 ; 18 ; 2023 ; https://philair.org/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2024 ; JPAIR Institutional Research Volume 2024 ; 19 ; 2024 ; https://philair.org/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; JPAIR Institutional Research Volume 2025 ; 20 ; 2025 ; https://philair.org/ ; >
+      au < deepCrawl ; exists ; 2025 ; JPAIR Institutional Research Volume 2025 ; 20 ; 2025 ; https://philair.org/ ; >
       au < manifest ; exists ; 2026 ; JPAIR Institutional Research Volume 2026 ; 21 ; 2026 ; https://philair.org/ ; >
 
   }
