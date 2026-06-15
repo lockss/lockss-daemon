@@ -33,9 +33,9 @@
       au < superseded ; exists ; 2025 ; JPAIR Multidisciplinary Research Volume 2025 [superseded] ; 20 ; 2025 ; https://philair.ph/ ; >
 
       au < finished ; frozen ; 2012 ; JPAIR Multidisciplinary Research Volume 2012 ; 7 ; 2012 ; https://philair.ph/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2013 ; JPAIR Multidisciplinary Research Volume 2013 ; 8 ; 2013 ; https://philair.org/ ; >
+      au < frozen ; exists ; 2013 ; JPAIR Multidisciplinary Research Volume 2013 ; 8 ; 2013 ; https://philair.org/ ; >
       au < finished ; manifest ; 2014 ; JPAIR Multidisciplinary Research Volume 2014 ; 9 ; 2014 ; https://philair.org/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2015 ; JPAIR Multidisciplinary Research Volume 2015 ; 10 ; 2015 ; https://philair.org/ ; >
+      au < frozen ; exists ; 2015 ; JPAIR Multidisciplinary Research Volume 2015 ; 10 ; 2015 ; https://philair.org/ ; >
       au < finished ; frozen ; 2016 ; JPAIR Multidisciplinary Research Volume 2016 ; 11 ; 2016 ; https://philair.ph/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2017 ; JPAIR Multidisciplinary Research Volume 2017 ; 12 ; 2017 ; https://philair.org/ ; reingest5.clockss.org:8082 >
       au < finished ; crawling ; 2018 ; JPAIR Multidisciplinary Research Volume 2018 ; 13 ; 2018 ; https://philair.ph/ ; reingest1.clockss.org:8082 >
@@ -62,7 +62,7 @@
 
       #param[base_url] = https://philair.ph/ (previous) or https://philair.org/ (current)
 
-      au < crawling ; exists ; 2013 ; JPAIR Institutional Research Volume 2013 ; 8 ; 2013 ; https://philair.org/ ; >
+      au < frozen ; exists ; 2013 ; JPAIR Institutional Research Volume 2013 ; 8 ; 2013 ; https://philair.org/ ; >
       au < finished ; manifest ; 2014 ; JPAIR Institutional Research Volume 2014 ; 9 ; 2014 ; https://philair.org/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; JPAIR Institutional Research Volume 2015 ; 10 ; 2015 ; https://philair.org/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2016 ; JPAIR Institutional Research Volume 2016 ; 11 ; 2016 ; https://philair.org/ ; reingest3.clockss.org:8083 >
