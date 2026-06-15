@@ -137,7 +137,7 @@
       param[base_url] = https://squlsj.squ.edu.om/
       param[journal_abbr] = journal
 
-      au < ready ; exists ; 2022 ; Sultan Qaboos University Legal Studies Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2022 ; Sultan Qaboos University Legal Studies Volume 1 ; 1 ; >
       au < crawling ; exists ; 2023 ; Sultan Qaboos University Legal Studies Volume 2 ; 2 ; >
       au < crawling ; exists ; 2024 ; Sultan Qaboos University Legal Studies Volume 3 ; 3 ; >
       au < crawling ; exists ; 2025 ; Sultan Qaboos University Legal Studies Volume 4 ; 4 ; >
@@ -191,13 +191,13 @@
       param[base_url] = https://jams.squ.edu.om/
       param[journal_abbr] = home
 
-      au < ready ; exists ; 1996 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 1 ; 1 ; >
+      au < crawling ; exists ; 1996 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 1 ; 1 ; >
       au < ready ; exists ; 1997 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 2 ; 2 ; >
       au < crawling ; exists ; 1998 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 3 ; 3 ; >
       au < ready ; exists ; 1999 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 4 ; 4 ; >
       au < ready ; exists ; 2000 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 5 ; 5 ; >
       au < ready ; exists ; 2001 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 6 ; 6 ; >
-      au < ready ; exists ; 2002 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 7 ; 7 ; >
+      au < crawling ; exists ; 2002 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 7 ; 7 ; >
       au < ready ; exists ; 2003 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 8 ; 8 ; >
       au < crawling ; exists ; 2004 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 9 ; 9 ; >
       au < ready ; exists ; 2005 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 10 ; 10 ; >
@@ -207,7 +207,7 @@
       au < crawling ; exists ; 2009 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 14 ; 14 ; >
       au < ready ; exists ; 2010 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 15 ; 15 ; >
       au < ready ; exists ; 2011 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 16 ; 16 ; >
-      au < ready ; exists ; 2012 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 17 ; 17 ; >
+      au < crawling ; exists ; 2012 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 17 ; 17 ; >
       au < ready ; exists ; 2013 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 18 ; 18 ; >
       au < ready ; exists ; 2014 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 19 ; 19 ; >
       au < ready ; exists ; 2015 ; Journal of Agricultural and Marine Sciences (JAMS) Volume 20 ; 20 ; >

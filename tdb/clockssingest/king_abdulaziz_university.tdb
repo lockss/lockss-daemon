@@ -83,7 +83,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmars
 
-      au < ready ; exists ; 2025 ; Journal of King Abdulaziz University: Marine Science Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2025 ; Journal of King Abdulaziz University: Marine Science Volume 35 ; 35 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Marine Science Volume 36 ; 36 ; >
 
   }
