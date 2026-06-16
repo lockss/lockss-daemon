@@ -54,7 +54,9 @@ public class BMPHashFilterFactory implements FilterFactory{
             HtmlNodeFilters.tag("style"),
             HtmlNodeFilters.tag("script"),
             
-            HtmlNodeFilters.comment()
+            HtmlNodeFilters.comment(),
+            HtmlNodeFilters.tagWithAttributeRegex("input", "type", "hidden"),
+            HtmlNodeFilters.tagWithAttributeRegex("i", "class", "icon-download-alt"),
         };
         return new HtmlFilterInputStream(inputstream, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
     }
