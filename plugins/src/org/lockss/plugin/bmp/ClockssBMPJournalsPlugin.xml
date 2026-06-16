@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
     <entry>
         <string>plugin_feature_version_map</string>
@@ -142,6 +142,15 @@ POSSIBILITY OF SUCH DAMAGE.
       <!--This is intended, there is a custom article metadata extractor instead of file metadata extractors-->
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.bmp.BMPArticleMetadataExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+        <entry>
+            <string>au_def_pause_time</string>
+            <long>100</long>
+        </entry>
+    </map>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
