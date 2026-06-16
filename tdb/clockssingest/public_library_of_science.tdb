@@ -42,7 +42,7 @@
       au < frozen ; exists ; 2022 ; PLOS Biology Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; PLOS Biology Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; PLOS Biology Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Biology Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Biology Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Biology Volume 2026 ; 2026 ; >
 
   }
@@ -59,7 +59,7 @@
       au < frozen ; exists ; 2022 ; PLOS Climate Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; PLOS Climate Volume 2023 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; PLOS Climate Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Climate Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Climate Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Climate Volume 2026 ; 2026 ; >
 
   }
@@ -88,7 +88,7 @@
       param[journal_id] = complexsystems
 
       au < deepCrawl ; exists ; 2024 ; PLOS Complex Systems Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Complex Systems Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Complex Systems Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Complex Systems Volume 2026 ; 2026 ; >
 
   }
@@ -122,7 +122,7 @@
       au < frozen ; exists ; 2022 ; PLOS Computational Biology Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; PLOS Computational Biology Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; PLOS Computational Biology Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Computational Biology Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Computational Biology Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Computational Biology Volume 2026 ; 2026 ; >
 
   }
@@ -139,7 +139,7 @@
       au < frozen ; exists ; 2022 ; PLOS Digital Health Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; PLOS Digital Health Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; PLOS Digital Health Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Digital Health Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Digital Health Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Digital Health Volume 2026 ; 2026 ; >
 
   }
@@ -173,7 +173,7 @@
       au < frozen ; exists ; 2022 ; PLOS Genetics Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; PLOS Genetics Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; PLOS Genetics Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Genetics Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Genetics Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Genetics Volume 2026 ; 2026 ; >
 
   }
@@ -191,7 +191,7 @@
       au < frozen ; exists ; 2022 ; PLOS Global Public Health Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; PLOS Global Public Health Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; PLOS Global Public Health Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Global Public Health Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Global Public Health Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Global Public Health Volume 2026 ; 2026 ; >
 
   }
@@ -226,7 +226,7 @@
       au < frozen ; exists ; 2022 ; PLOS Medicine Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; PLOS Medicine Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; PLOS Medicine Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Medicine Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Medicine Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Medicine Volume 2026 ; 2026 ; >
 
   }
@@ -241,7 +241,7 @@
       param[journal_id] = mentalhealth
 
       au < deepCrawl ; exists ; 2024 ; PLOS Mental Health Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Mental Health Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Mental Health Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Mental Health Volume 2026 ; 2026 ; >
 
   }
@@ -273,7 +273,7 @@
       au < frozen ; exists ; 2022 ; PLOS Neglected Tropical Diseases Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; PLOS Neglected Tropical Diseases Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; PLOS Neglected Tropical Diseases Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Neglected Tropical Diseases Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Neglected Tropical Diseases Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Neglected Tropical Diseases Volume 2026 ; 2026 ; >
 
   }
@@ -339,7 +339,7 @@
       au < frozen ; exists ; 2022 ; PLOS Pathogens Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; PLOS Pathogens Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; PLOS Pathogens Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Pathogens Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Pathogens Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Pathogens Volume 2026 ; 2026 ; >
 
   }
@@ -356,7 +356,7 @@
       au < frozen ; exists ; 2022 ; PLOS Sustainability and Transformation Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; PLOS Sustainability and Transformation Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; PLOS Sustainability and Transformation Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Sustainability and Transformation Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Sustainability and Transformation Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Sustainability and Transformation Volume 2026 ; 2026 ; >
 
   }
@@ -373,7 +373,7 @@
       au < frozen ; exists ; 2022 ; PLOS Water Volume 2022 ; 2022 ; >
       au < frozen ; exists ; 2023 ; PLOS Water Volume 2023 ; 2023 ; >
       au < frozen ; exists ; 2024 ; PLOS Water Volume 2024 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; PLOS Water Volume 2025 ; 2025 ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS Water Volume 2025 ; 2025 ; >
       au < manifest ; exists ; 2026 ; PLOS Water Volume 2026 ; 2026 ; >
 
   }
@@ -651,16 +651,16 @@
       au < frozen ; exists ; 2024 ; PLOS ONE Volume Nov 2024 ; 2024 ; November ; >
       au < frozen ; exists ; 2024 ; PLOS ONE Volume Dec 2024 ; 2024 ; December ; >
 
-      au < crawling ; exists ; 2025 ; PLOS ONE Volume Jan 2025 ; 2025 ; January ; >
-      au < crawling ; exists ; 2025 ; PLOS ONE Volume Feb 2025 ; 2025 ; February ; >
-      au < crawling ; exists ; 2025 ; PLOS ONE Volume Mar 2025 ; 2025 ; March ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS ONE Volume Jan 2025 ; 2025 ; January ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS ONE Volume Feb 2025 ; 2025 ; February ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS ONE Volume Mar 2025 ; 2025 ; March ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Apr 2025 ; 2025 ; April ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume May 2025 ; 2025 ; May ; >
       au < crawling ; exists ; 2025 ; PLOS ONE Volume Jun 2025 ; 2025 ; June ; >
-      au < crawling ; exists ; 2025 ; PLOS ONE Volume Jul 2025 ; 2025 ; July ; >
-      au < crawling ; exists ; 2025 ; PLOS ONE Volume Aug 2025 ; 2025 ; August ; >
-      au < crawling ; exists ; 2025 ; PLOS ONE Volume Sep 2025 ; 2025 ; September ; >
-      au < crawling ; exists ; 2025 ; PLOS ONE Volume Oct 2025 ; 2025 ; October ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS ONE Volume Jul 2025 ; 2025 ; July ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS ONE Volume Aug 2025 ; 2025 ; August ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS ONE Volume Sep 2025 ; 2025 ; September ; >
+      au < deepCrawl ; exists ; 2025 ; PLOS ONE Volume Oct 2025 ; 2025 ; October ; >
       au < manifest ; exists ; 2025 ; PLOS ONE Volume Nov 2025 ; 2025 ; November ; >
       au < manifest ; exists ; 2025 ; PLOS ONE Volume Dec 2025 ; 2025 ; December ; >
 
