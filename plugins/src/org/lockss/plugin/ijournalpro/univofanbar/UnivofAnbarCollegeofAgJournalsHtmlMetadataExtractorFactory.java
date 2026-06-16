@@ -34,8 +34,10 @@ package org.lockss.plugin.ijournalpro.univofanbar;
 
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.Logger;
 
@@ -105,7 +107,6 @@ public class UnivofAnbarCollegeofAgJournalsHtmlMetadataExtractorFactory
               new SimpleHtmlMetaTagMetadataExtractor().extract(target, cu);
       am.cook(tagMap);
 
-      /*
       ArchivalUnit au = cu.getArchivalUnit();
 
       String tdbVolume = null;
@@ -125,7 +126,6 @@ public class UnivofAnbarCollegeofAgJournalsHtmlMetadataExtractorFactory
         log.debug3("Emit metadata falied maching volume, citationVolume = " + citationVolume + ", tdbVolume = " + tdbVolume);
         return;
       }
-       */
       emitter.emitMetadata(cu, am);
     }
   }
