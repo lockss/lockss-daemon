@@ -1684,7 +1684,7 @@
 
     >
     param[journal_id] = 10.1055/s-00000014
-    comment[years] = 2000-current
+    comment[years] = 2000-2024
 
    au < finished ; finished ; 2000 ; 2000 ; Erfahrungsheilkunde Volume 49 ; 49 ; reingest2.clockss.org:8085 >
    au < finished ; finished ; 2001 ; 2001 ; Erfahrungsheilkunde Volume 50 ; 50 ; reingest3.clockss.org:8083 >
@@ -1711,8 +1711,6 @@
    au < deepCrawl ; exists ; 2022 ; 2022 ; Erfahrungsheilkunde Volume 71 ; 71 ; >
    au < deepCrawl ; exists ; 2023 ; 2023 ; Erfahrungsheilkunde Volume 72 ; 72 ; >
    au < deepCrawl ; exists ; 2024 ; 2024 ; Erfahrungsheilkunde Volume 73 ; 73 ; >
-   au < expected ; exists ; 2025 ; 2025 ; Erfahrungsheilkunde Volume 74 ; 74 ; >
-   au < expected ; exists ; 2026 ; 2026 ; Erfahrungsheilkunde Volume 75 ; 75 ; >
 
   }
 
@@ -3321,7 +3319,8 @@
     >
 
     param[journal_id] = 10.1055/s-00031934 
-    
+    #years = 2017-2024
+
     au < finished ; finished ; 2017 ; 2017 ; The Journal of Hip Surgery Volume 1 ; 1 ; reingest2.clockss.org:8085 >
     au < finished ; frozen ; 2018 ; 2018 ; The Journal of Hip Surgery Volume 2 ; 2 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2019 ; 2019 ; The Journal of Hip Surgery Volume 3 ; 3 ; reingest1.clockss.org:8082 >
@@ -3330,8 +3329,6 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; The Journal of Hip Surgery Volume 6 ; 6 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; The Journal of Hip Surgery Volume 7 ; 7 ; >
     au < frozen ; exists ; 2024 ; 2024 ; The Journal of Hip Surgery Volume 8 ; 8 ; >
-    au < expected ; exists ; 2025 ; 2025 ; The Journal of Hip Surgery Volume 9 ; 9 ; >
-    au < expected ; exists ; 2026 ; 2026 ; The Journal of Hip Surgery Volume 10 ; 10 ; >
 
   }
 
@@ -3501,7 +3498,7 @@
 
     >
     param[journal_id] = 10.1055/s-00029025
-    comment[years] = 2012-current
+    comment[years] = 2012-2024
 
     au < finished ; finished ; 2012 ; 2012 ; Journal of Pediatric Epilepsy Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; Journal of Pediatric Epilepsy Volume 2 ; 2 ; reingest3.clockss.org:8083 >
@@ -3516,8 +3513,6 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Pediatric Epilepsy Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Pediatric Epilepsy Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Pediatric Epilepsy Volume 13 ; 13 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Journal of Pediatric Epilepsy Volume 14 ; 14 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Journal of Pediatric Epilepsy Volume 15 ; 15 ; >
 
   }
 
@@ -3531,7 +3526,7 @@
 
     >
     param[journal_id] = 10.1055/s-00029027
-    comment[years] = 2012-current
+    comment[years] = 2012-2024
 
     au < finished ; finished ; 2012 ; 2012 ; Journal of Pediatric Genetics Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; Journal of Pediatric Genetics Volume 2 ; 2 ; reingest4.clockss.org:8082 >
@@ -3546,8 +3541,6 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Pediatric Genetics Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Pediatric Genetics Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Pediatric Genetics Volume 13 ; 13 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Journal of Pediatric Genetics Volume 14 ; 14 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Journal of Pediatric Genetics Volume 15 ; 15 ; >
 
   }
 
@@ -3561,7 +3554,7 @@
 
     >
     param[journal_id] = 10.1055/s-00029028
-    comment[years] = 2006-current
+    comment[years] = 2006-2024
 
     au < finished ; finished ; 2006 ; 2006 ; Journal of Pediatric Infectious Diseases Volume 1 ; 1 ; reingest5.clockss.org:8082 >
     au < finished ; finished ; 2007 ; 2007 ; Journal of Pediatric Infectious Diseases Volume 2 ; 2 ; reingest5.clockss.org:8082 >
@@ -3582,8 +3575,6 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Pediatric Infectious Diseases Volume 17 ; 17 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Pediatric Infectious Diseases Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Pediatric Infectious Diseases Volume 19 ; 19 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Journal of Pediatric Infectious Diseases Volume 20 ; 20 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Journal of Pediatric Infectious Diseases Volume 21 ; 21 ; >
 
   }
 
@@ -3597,7 +3588,7 @@
 
     >
     param[journal_id] = 10.1055/s-00029029
-    comment[years] = 2012-current
+    comment[years] = 2012-2024
 
     au < finished ; finished ; 2012 ; 2012 ; Journal of Pediatric Intensive Care Volume 1 ; 1 ; reingest4.clockss.org:8082 >
     au < finished ; finished ; 2013 ; 2013 ; Journal of Pediatric Intensive Care Volume 2 ; 2 ; reingest3.clockss.org:8083 >
@@ -3612,8 +3603,6 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Pediatric Intensive Care Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Pediatric Intensive Care Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Pediatric Intensive Care Volume 13 ; 13 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Journal of Pediatric Intensive Care Volume 14 ; 14 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Journal of Pediatric Intensive Care Volume 15 ; 15 ; >
 
   }
 
@@ -3627,7 +3616,7 @@
 
     >
     param[journal_id] = 10.1055/s-00029030
-    comment[years] = 2003-current
+    comment[years] = 2003-2024
 
     au < finished ; finished ; 2003 ; 2003 ; Journal of Pediatric Neurology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < finished ; finished ; 2004 ; 2004 ; Journal of Pediatric Neurology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
@@ -3651,8 +3640,6 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Pediatric Neurology Volume 20 ; 20 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Pediatric Neurology Volume 21 ; 21 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Pediatric Neurology Volume 22 ; 22 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Journal of Pediatric Neurology Volume 23 ; 23 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Journal of Pediatric Neurology Volume 24 ; 24 ; >
 
   }
 
@@ -8432,7 +8419,7 @@
     >
 
     param[journal_id] = 10.1055/s-00033103
-    comment[years] = 2017-current
+    comment[years] = 2017-2024
 
     au < finished ; finished ; 2017 ; 2017 ; Journal of Child Science Volume 7 ; 7 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; Journal of Child Science Volume 8 ; 8 ; reingest1.clockss.org:8082 >
@@ -8442,8 +8429,6 @@
     au < deepCrawl ; exists ; 2022 ; 2022 ; Journal of Child Science Volume 12 ; 12 ; >
     au < deepCrawl ; exists ; 2023 ; 2023 ; Journal of Child Science Volume 13 ; 13 ; >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Child Science Volume 14 ; 14 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Journal of Child Science Volume 15 ; 15 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Journal of Child Science Volume 16 ; 16 ; >
 
   }
 
@@ -8890,7 +8875,7 @@
     >
 
     param[journal_id] = 10.1055/s-00034612
-    comment[years] = 2017-current
+    comment[years] = 2017-2024
 
     au < finished ; crawling ; 2017 ; 2017 ; Yearbook of Medical Informatics Volume 26 ; 26 ; reingest2.clockss.org:8085 >
     au < finished ; finished ; 2018 ; 2018 ; Yearbook of Medical Informatics Volume 27 ; 27 ; reingest2.clockss.org:8085 >
@@ -8900,8 +8885,6 @@
     au < finished ; manifest ; 2022 ; 2022 ; Yearbook of Medical Informatics Volume 31 ; 31 ; reingest2.clockss.org:8085 >
     au < frozen ; exists ; 2023 ; 2023 ; Yearbook of Medical Informatics Volume 32 ; 32 ; >
     au < frozen ; exists ; 2024 ; 2024 ; Yearbook of Medical Informatics Volume 33 ; 33 ; >
-    au < expected ; exists ; 2025 ; 2025 ; Yearbook of Medical Informatics Volume 34 ; 34 ; >
-    au < expected ; exists ; 2026 ; 2026 ; Yearbook of Medical Informatics Volume 35 ; 35 ; >
 
   }
 
