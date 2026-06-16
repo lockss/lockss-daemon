@@ -70,7 +70,7 @@ public class BMPAbstractMetadataExtractorFactory implements FileMetadataExtracto
         tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
         tagMap.put("citation_lastpage", MetadataField.FIELD_END_PAGE);
         tagMap.put("citation_doi", MetadataField.FIELD_DOI);
-        tagMap.put("correct_issn", MetadataField.FIELD_ISSN); 
+        tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
         tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
         tagMap.put("citation_language", MetadataField.FIELD_LANGUAGE);
         tagMap.put("citation_publication_date", MetadataField.FIELD_DATE);
