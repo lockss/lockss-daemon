@@ -62,9 +62,13 @@ public class BMPArticleMetadataExtractorFactory implements ArticleMetadataExtrac
                 ArticleMetadata am = new ArticleMetadata();
                 CachedUrl metadataUrl = af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA);
                 FileMetadataExtractor me = null;
+                if(metadataUrl == null){
+                    log.debug3("No metadata URL found, skipping article.");
+                    return;
+                }
                 if(metadataUrl.toString().contains("issue")){
                     String doi = af.getRoleAsString(ArticleFiles.ROLE_ARTICLE_HANDLE);
-                    if(!doi.isEmpty()){
+                    if(doi != null && !doi.isEmpty()){
                         me = new BMPTOCMetadataExtractorFactory.BMPTOCMetadataExtractor(doi);
                     }
                 }else{
