@@ -4,7 +4,8 @@
     name = Baycinar Medical Publishing ;
     info[contract] = 2026 ;
     info[back] = 2000 ;
-    info[tester] = 4 
+    info[tester] = 4 ;
+    info[platform] = Custom
   >
 
   plugin = org.lockss.plugin.bmp.ClockssBMPJournalsPlugin
@@ -20,8 +21,34 @@
     
     param[base_url] = https://agridergisi.com/
 
-    au < manifest ; exists ; 2021 ; Ağrı Journal Volume 33 ; 33 ; >     
+    au < exists ; exists ; 2000 ; Ağrı Journal Volume 12 ; 12 ; >
+    au < exists ; exists ; 2001 ; Ağrı Journal Volume 13 ; 13 ; >
+    au < exists ; exists ; 2002 ; Ağrı Journal Volume 14 ; 14 ; >
+    au < exists ; exists ; 2003 ; Ağrı Journal Volume 15 ; 15 ; >
+    au < exists ; exists ; 2004 ; Ağrı Journal Volume 16 ; 16 ; >
+    au < exists ; exists ; 2005 ; Ağrı Journal Volume 17 ; 17 ; >
+    au < exists ; exists ; 2006 ; Ağrı Journal Volume 18 ; 18 ; >
+    au < exists ; exists ; 2007 ; Ağrı Journal Volume 19 ; 19 ; >
+    au < exists ; exists ; 2008 ; Ağrı Journal Volume 20 ; 20 ; >
+    au < exists ; exists ; 2009 ; Ağrı Journal Volume 21 ; 21 ; >
+    au < exists ; exists ; 2010 ; Ağrı Journal Volume 22 ; 22 ; >
+    au < exists ; exists ; 2011 ; Ağrı Journal Volume 23 ; 23 ; >
+    au < exists ; exists ; 2012 ; Ağrı Journal Volume 24 ; 24 ; >
+    au < exists ; exists ; 2013 ; Ağrı Journal Volume 25 ; 25 ; >
+    au < exists ; exists ; 2014 ; Ağrı Journal Volume 26 ; 26 ; >
+    au < exists ; exists ; 2015 ; Ağrı Journal Volume 27 ; 27 ; >
+    au < exists ; exists ; 2016 ; Ağrı Journal Volume 28 ; 28 ; >
+    au < exists ; exists ; 2017 ; Ağrı Journal Volume 29 ; 29 ; >
+    au < exists ; exists ; 2018 ; Ağrı Journal Volume 30 ; 30 ; >
+    au < exists ; exists ; 2019 ; Ağrı Journal Volume 31 ; 31 ; >
+    au < doNotProcess ; exists ; 2020 ; Ağrı Journal Volume 32 ; 32 ; >
+    au < doNotProcess ; exists ; 2021 ; Ağrı Journal Volume 33 ; 33 ; >
+    au < doNotProcess ; exists ; 2022 ; Ağrı Journal Volume 34 ; 34 ; >
+    au < doNotProcess ; exists ; 2023 ; Ağrı Journal Volume 35 ; 35 ; >
+    au < doNotProcess ; exists ; 2024 ; Ağrı Journal Volume 36 ; 36 ; >
+
     au < manifest ; exists ; 2025 ; Ağrı Journal Volume 37 ; 37 ; >
+    au < manifest ; exists ; 2026 ; Ağrı Journal Volume 38 ; 38 ; >
 
   }
 
