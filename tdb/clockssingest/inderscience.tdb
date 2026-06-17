@@ -2164,7 +2164,7 @@
       au < finished ; finished ; 2010-2015 ; International Journal of Chinese Culture and Management Volume 3 ; 3 ; http://www.inderscienceonline.com/ ; >
       au < finished ; finished ; 2017 ; International Journal of Chinese Culture and Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021-2024 ; International Journal of Chinese Culture and Management Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2025-2028 ; International Journal of Chinese Culture and Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2026-2028 ; International Journal of Chinese Culture and Management Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -3039,7 +3039,7 @@
       param[journal_id] = ijccps
 
       au < deepCrawl ; exists ; 2021-2024 ; International Journal of Cybernetics and Cyber-Physical Systems Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2025-2028 ; International Journal of Cybernetics and Cyber-Physical Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2026-2028 ; International Journal of Cybernetics and Cyber-Physical Systems Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -4614,7 +4614,7 @@
       au < finished ; finished ; 2013-2014 ; International Journal of Financial Engineering and Risk Management Volume 1 ; 1 ; http://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; finished ; 2015-2018 ; International Journal of Financial Engineering and Risk Management Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; >
       au < finished ; crawling ; 2019-2024 ; International Journal of Financial Engineering and Risk Management Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2025-2028 ; International Journal of Financial Engineering and Risk Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
+      au < expected ; exists ; 2026-2028 ; International Journal of Financial Engineering and Risk Management Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -6296,7 +6296,7 @@
         param[journal_id] = ijimr
 
         au < finished ; manifest ; 2018-2024 ; International Journal of Intelligent Machines and Robotics Volume 1 ; 1 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
-        au < expected ; exists ; 2025-2028 ; International Journal of Intelligent Machines and Robotics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
+        au < expected ; exists ; 2026-2028 ; International Journal of Intelligent Machines and Robotics Volume 2 ; 2 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -11640,8 +11640,6 @@
       au < finished ; finished ; 2019-2020 ; International Journal of Vehicle Safety Volume 11 ; 11 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
       au < finished ; crawling ; 2021-2022 ; International Journal of Vehicle Safety Volume 12 ; 12 ; https://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023-2024 ; International Journal of Vehicle Safety Volume 13 ; 13 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2025-2026 ; International Journal of Vehicle Safety Volume 14 ; 14 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026-2027 ; International Journal of Vehicle Safety Volume 15 ; 15 ; https://www.inderscienceonline.com/ ; >
 
     }
 
@@ -12285,9 +12283,7 @@
       au < finished ; finished ; 2021 ; World Review of Science, Technology and Sustainable Development Volume 17 ; 17 ; https://www.inderscienceonline.com/ ; reingest1.clockss.org:8082 >
       au < finished ; crawling ; 2022 ; World Review of Science, Technology and Sustainable Development Volume 18 ; 18 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2023 ; World Review of Science, Technology and Sustainable Development Volume 19 ; 19 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < deepCrawl ; exists ; 2024 ; World Review of Science, Technology and Sustainable Development Volume 20 [partial] ; 20 ; https://www.inderscienceonline.com/ ; > #issue 2, 3, 4 not online
-      au < expected ; exists ; 2025 ; World Review of Science, Technology and Sustainable Development Volume 21 ; 21 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026 ; World Review of Science, Technology and Sustainable Development Volume 22 ; 22 ; https://www.inderscienceonline.com/ ; >
+      au < crawling ; exists ; 2024-2026 ; World Review of Science, Technology and Sustainable Development Volume 20 [partial] ; 20 ; https://www.inderscienceonline.com/ ; > #issue 3, 4 not online
 
     }
 
@@ -12504,8 +12500,6 @@
       au < finished ; finished ; 2020 ; International Journal of Supply Chain and Operations Resilience Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2021-2022 ; International Journal of Supply Chain and Operations Resilience Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2023-2024 ; International Journal of Supply Chain and Operations Resilience Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2025-2026 ; International Journal of Supply Chain and Operations Resilience Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026-2027 ; International Journal of Supply Chain and Operations Resilience Volume 8 ; 8 ; https://www.inderscienceonline.com/ ; >
 
   }
 
@@ -12823,7 +12817,6 @@
       au < finished ; finished ; 2017-2018 ; International Journal of Earthquake and Impact Engineering Volume 2 ; 2 ; http://www.inderscienceonline.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2020-2021 ; International Journal of Earthquake and Impact Engineering Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022-2024 ; International Journal of Earthquake and Impact Engineering Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest3.clockss.org:8083 >
-      au < expected ; exists ; 2025-2027 ; International Journal of Earthquake and Impact Engineering Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; >
 
   }
 
@@ -12891,8 +12884,6 @@
       au < finished ; finished ; 2020-2021 ; International Journal of Research, Innovation and Commercialisation Volume 3 ; 3 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; crawling ; 2022 ; International Journal of Research, Innovation and Commercialisation Volume 4 ; 4 ; https://www.inderscienceonline.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023-2024 ; International Journal of Research, Innovation and Commercialisation Volume 5 ; 5 ; https://www.inderscienceonline.com/ ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2025-2026 ; International Journal of Research, Innovation and Commercialisation Volume 6 ; 6 ; https://www.inderscienceonline.com/ ; >
-      au < expected ; exists ; 2026-2027 ; International Journal of Research, Innovation and Commercialisation Volume 7 ; 7 ; https://www.inderscienceonline.com/ ; >
 
   }
 
