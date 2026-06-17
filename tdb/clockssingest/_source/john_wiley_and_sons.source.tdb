@@ -27,8 +27,8 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wileybooks-released/
 
       #au < expected ; exists ; 2023 ; Wiley Books Source Content 2023_01 ; 2023_01 >
-      au < readySource ; crawling ; 2024 ; Wiley Books Source Content 2024_01 ; 2024_01 >
-      au < readySource ; crawling ; 2025 ; Wiley Books Source Content 2025_01 ; 2025_01 >
+      au < readySource ; frozen ; 2024 ; Wiley Books Source Content 2024_01 ; 2024_01 >
+      au < readySource ; frozen ; 2025 ; Wiley Books Source Content 2025_01 ; 2025_01 >
       au < readySource ; crawling ; 2026 ; Wiley Books Source Content 2026_01 ; 2026_01 >
 
       }
@@ -87,19 +87,19 @@
       au < readySource ; finished ; 2023 ; Wiley Source Content 2023_01 ; 2023_01 >
       au < readySource ; finished ; 2023 ; Wiley Source Content 2023_02 ; 2023_02 >
       au < readySource ; finished ; 2023 ; Wiley Source Content 2023_03 ; 2023_03 >
-      au < readySource ; crawling ; 2023 ; Wiley Source Content 2023_04 ; 2023_04 >
+      au < readySource ; frozen ; 2023 ; Wiley Source Content 2023_04 ; 2023_04 >
 
-      au < readySource ; crawling ; 2024 ; Wiley Source Content 2024_01 ; 2024_01 >
-      au < readySource ; crawling ; 2024 ; Wiley Source Content 2024_02 ; 2024_02 >
-      au < readySource ; crawling ; 2024 ; Wiley Source Content 2024_03 ; 2024_03 >
-      au < readySource ; crawling ; 2024 ; Wiley Source Content 2024_04 ; 2024_04 >
+      au < readySource ; frozen ; 2024 ; Wiley Source Content 2024_01 ; 2024_01 >
+      au < readySource ; frozen ; 2024 ; Wiley Source Content 2024_02 ; 2024_02 >
+      au < readySource ; frozen ; 2024 ; Wiley Source Content 2024_03 ; 2024_03 >
+      au < readySource ; frozen ; 2024 ; Wiley Source Content 2024_04 ; 2024_04 >
 
-      au < readySource ; crawling ; 2025 ; Wiley Source Content 2025_01 ; 2025_01 >
-      au < readySource ; crawling ; 2025 ; Wiley Source Content 2025_02 ; 2025_02 >
-      au < readySource ; crawling ; 2025 ; Wiley Source Content 2025_03 ; 2025_03 >
-      au < readySource ; crawling ; 2025 ; Wiley Source Content 2025_04 ; 2025_04 >
-      au < readySource ; crawling ; 2025 ; Wiley Source Content 2025_05 ; 2025_05 >
-      au < readySource ; crawling ; 2025 ; Wiley Source Content 2025_06 ; 2025_06 >
+      au < readySource ; frozen ; 2025 ; Wiley Source Content 2025_01 ; 2025_01 >
+      au < readySource ; frozen ; 2025 ; Wiley Source Content 2025_02 ; 2025_02 >
+      au < readySource ; frozen ; 2025 ; Wiley Source Content 2025_03 ; 2025_03 >
+      au < readySource ; frozen ; 2025 ; Wiley Source Content 2025_04 ; 2025_04 >
+      au < readySource ; frozen ; 2025 ; Wiley Source Content 2025_05 ; 2025_05 >
+      au < readySource ; frozen ; 2025 ; Wiley Source Content 2025_06 ; 2025_06 >
 
       au < readySource ; crawling ; 2026 ; Wiley Source Content 2026_01 ; 2026_01 >
       au < readySource ; crawling ; 2026 ; Wiley Source Content 2026_02 ; 2026_02 >
@@ -141,8 +141,8 @@
     {
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/wileymrw-released/
 
-      au < readySource ; crawling ; 2024 ; Wiley MRW Source Content 2024_01 ; 2024_01 >
-      au < readySource ; crawling ; 2025 ; Wiley MRW Source Content 2025_01 ; 2025_01 >
+      au < readySource ; frozen ; 2024 ; Wiley MRW Source Content 2024_01 ; 2024_01 >
+      au < readySource ; frozen ; 2025 ; Wiley MRW Source Content 2025_01 ; 2025_01 >
       au < readySource ; crawling ; 2026 ; Wiley MRW Source Content 2026_01 ; 2026_01 >
 
     }
