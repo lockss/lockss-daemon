@@ -34,6 +34,7 @@
       plugin = edu.nyu.plugin.ejcjs.EJCJS2022Plugin
       param[base_url] = http://www.japanesestudies.org.uk/
       implicit < status ; year ; volume ; name ; param[volume] >
+      #LOCKSS-2183, 0 mdata, 0 article for testing
 
       au < released ; 2001 ; 1 ; Electronic Journal of Contemporary Japanese Studies Volume 1 ; 1 >
       au < released ; 2002 ; 2 ; Electronic Journal of Contemporary Japanese Studies Volume 2 ; 2 >
@@ -59,7 +60,7 @@
       au < released ; 2022 ; 22 ; Electronic Journal of Contemporary Japanese Studies Volume 22 ; 22 >
       au < released ; 2023 ; 23 ; Electronic Journal of Contemporary Japanese Studies Volume 23 ; 23 >
       au < released ; 2024 ; 24 ; Electronic Journal of Contemporary Japanese Studies Volume 24 ; 24 >
-      au < notReady ; 2025 ; 25 ; Electronic Journal of Contemporary Japanese Studies Volume 25 ; 25 > #LOCKSS-5133, 0 mdata, 0 article
+      au < ready ; 2025 ; 25 ; Electronic Journal of Contemporary Japanese Studies Volume 25 ; 25 >
       au < manifest ; 2026 ; 26 ; Electronic Journal of Contemporary Japanese Studies Volume 26 ; 26 >
     }
   
