@@ -295,7 +295,7 @@
       param[journal_id] = miss
 
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2019 ; Measurement Instruments for the Social Sciences Volume 2019 ; 2019 ; 2019 ; https://miss.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2020 ; Measurement Instruments for the Social Sciences Volume 2020 ; 2020 ; 2020 ; https://miss.psychopen.eu/ ; > 
+      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; Measurement Instruments for the Social Sciences Volume 2020 ; 2020 ; 2020 ; https://miss.psychopen.eu/ ; > 
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2021 ; Measurement Instruments for the Social Sciences Volume 2021 ; 2021 ; 2021 ; https://miss.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2022 ; Measurement Instruments for the Social Sciences Volume 2022 ; 2022 ; 2022 ; https://miss.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2023 ; Measurement Instruments for the Social Sciences Volume 2023 ; 2023 ; 2023 ; https://miss.psychopen.eu/ ; >
@@ -331,7 +331,7 @@
 
       param[journal_id] = rpio
 
-      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2025 ; Research for People in Organizations Volume 2025 ; 2025 ; 2025 ; https://rpio.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2025 ; Research for People in Organizations Volume 2025 ; 2025 ; 2025 ; https://rpio.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; manifest ; exists ; 2026 ; Research for People in Organizations Volume 2026 ; 2026 ; 2026 ; https://rpio.psychopen.eu/ ; >
 
   }
