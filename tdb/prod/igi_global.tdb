@@ -4916,6 +4916,26 @@
   {
 
       title <
+        name = International Journal of Civic Engagement and Social Change (IJCESC) ;
+        issn = 2328-5494 ;
+        eissn = 2328-5508
+      >
+
+      param[journal_issn] = 2328-5494
+      #continued_by = 2640-0367
+      #Out of print
+
+      au < exists ; 2014 ; International Journal of Civic Engagement and Social Change (IJCESC) Volume 1 ; 1 ; https://www.igi-global.com/ >
+      au < exists ; 2015 ; International Journal of Civic Engagement and Social Change (IJCESC) Volume 2 ; 2 ; https://www.igi-global.com/ >
+      au < exists ; 2016 ; International Journal of Civic Engagement and Social Change (IJCESC) Volume 3 ; 3 ; https://www.igi-global.com/ >
+      au < exists ; 2017 ; International Journal of Civic Engagement and Social Change (IJCESC) Volume 4 ; 4 ; https://www.igi-global.com/ >
+      au < exists ; 2018 ; International Journal of Civic Engagement and Social Change (IJCESC) Volume 5 ; 5 ; https://www.igi-global.com/ >
+
+  }
+
+  {
+
+      title <
         name = International Journal of Political Activism and Engagement (IJPAE) ;
         issn = 2640-0367 ;
         eissn = 2640-0375
