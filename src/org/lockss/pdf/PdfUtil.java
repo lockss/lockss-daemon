@@ -142,6 +142,7 @@ public class PdfUtil {
       return os.getDeleteOnCloseInputStream();
     }
     catch (PdfException | IOException | RuntimeException e) {
+      IOUtil.safeClose(os);
       os.deleteTempFile();
       throw e;
     }
