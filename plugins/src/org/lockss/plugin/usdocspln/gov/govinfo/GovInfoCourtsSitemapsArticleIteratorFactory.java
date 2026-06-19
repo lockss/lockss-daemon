@@ -50,8 +50,8 @@ public class GovInfoCourtsSitemapsArticleIteratorFactory
         implements ArticleIteratorFactory,
         ArticleMetadataExtractorFactory {
 
-  protected static Logger log =
-          Logger.getLogger(GovInfoCourtsSitemapsArticleIteratorFactory.class);
+    protected static Logger log =
+            Logger.getLogger(GovInfoCourtsSitemapsArticleIteratorFactory.class);
 
   /*
   https://www.govinfo.gov/app/details/USCOURTS-akd-1_11-cv-00016/
@@ -59,41 +59,44 @@ public class GovInfoCourtsSitemapsArticleIteratorFactory
   https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-0.pdf
   https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-1.pdf
   https://www.govinfo.gov/content/pkg/USCOURTS-akd-1_11-cv-00016/pdf/USCOURTS-akd-1_11-cv-00016-2.pdf
+
+  Adding for fix for URL https://www.govinfo.gov/app/details/USCOURTS-njd-3_24-cv-08952/USCOURTS-njd-3_24-cv-08952-0 in USCOURTS_njd 2025 did not match any expected patterns
    */
 
-  protected static final String ROOT_TEMPLATE = "\"%sapp/details/\", base_url";
-  protected static final String PATTERN_TEMPLATE = "\"%sapp/details/([^/]+)/([^/]+)$\", base_url";
+    protected static final String ROOT_TEMPLATE = "\"%sapp/details/\", base_url";
+    protected static final String PATTERN_TEMPLATE = "\"%sapp/details/([^/]+)/([^/]+)$\", base_url";
 
 
-  final Pattern HTML_PATTERN = Pattern.compile("([^/]+)/context$", Pattern.CASE_INSENSITIVE);
-  final String HTML_REPLACEMENT = "$1";
+    final Pattern HTML_PATTERN = Pattern.compile("([^/]+)/context$", Pattern.CASE_INSENSITIVE);
+    final String HTML_REPLACEMENT = "$1/context";
 
-  protected static final String PDF_FILE_LANDING_PAGE = "PDFFileLandingPage";
+    final Pattern DOC_PATTERN = Pattern.compile("([^/]+/(?!context)[^/]+)$", Pattern.CASE_INSENSITIVE);
+    final String DOC_REPLACEMENT = "$1";
 
-
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-                                                      MetadataTarget target)
-          throws PluginException {
+    protected static final String PDF_FILE_LANDING_PAGE = "PDFFileLandingPage";
 
 
-    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
-
-    builder.setSpec(target, ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
-
-    builder.addAspect(
-            HTML_PATTERN,
-            HTML_REPLACEMENT,
-            PDF_FILE_LANDING_PAGE);
-
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, PDF_FILE_LANDING_PAGE);
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+                                                        MetadataTarget target)
+            throws PluginException {
 
 
-    return builder.getSubTreeArticleIterator();
-  }
+        SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+
+        builder.setSpec(target, ROOT_TEMPLATE, PATTERN_TEMPLATE, Pattern.CASE_INSENSITIVE);
+
+        builder.addAspect(HTML_PATTERN, HTML_REPLACEMENT, PDF_FILE_LANDING_PAGE);
+        builder.addAspect(DOC_PATTERN, DOC_REPLACEMENT, PDF_FILE_LANDING_PAGE);
+
+        builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, PDF_FILE_LANDING_PAGE);
 
 
-  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
-          throws PluginException {
-    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
-  }
+        return builder.getSubTreeArticleIterator();
+    }
+
+
+    public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+            throws PluginException {
+        return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
+    }
 }
