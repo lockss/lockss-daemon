@@ -901,6 +901,7 @@ public class DbManager extends BaseLockssDaemonManager
    * @return <code>true</code> if the database was successfully set up,
    *         <code>false</code> otherwise.
    */
+  // Used only by tests
   boolean setUpDatabase(int finalVersion) {
     final String DEBUG_HEADER = "setUpDatabase(): ";
     if (log.isDebug2())
