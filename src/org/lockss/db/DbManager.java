@@ -314,14 +314,13 @@ public class DbManager extends BaseLockssDaemonManager
   }
 
   public void restartService() {
-    Configuration cur = ConfigManager.getCurrentConfig();
-    if (cur.get(PARAM_DATASOURCE_CLASSNAME) == null) {
+    if (dataSourceConfig.get("className") == null) {
       log.debug("Restarting, was default DB");
     } else {
       log.debug("Restarting, was "
-                + cur.get(PARAM_DATASOURCE_CLASSNAME)
-                + ", " + cur.get(PARAM_DATASOURCE_SERVERNAME)
-                + ":" + cur.get(PARAM_DATASOURCE_PORTNUMBER));
+                + dataSourceConfig.get("className")
+                + ", " + dataSourceConfig.get("serverName")
+                + ":" + dataSourceConfig.get("portNumber"));
     }
     stopService();
     resetConfig();
