@@ -405,7 +405,7 @@ public class V2AuMover {
   /** Curve controlling the interval at which to check V2's DB size,
    * as a function of the amount of current size */
   public static final String PARAM_DB_SIZE_CHECK_CURVE =
-    PREFIX + "diskSpaceBytesCurve";
+    PREFIX + "dbSizeCheckCurve";
   public static final String DEFAULT_DB_SIZE_CHECK_CURVE =
     // below 1G: 2 sec
     "[1000000000,2s]," +
