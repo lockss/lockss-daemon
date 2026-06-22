@@ -529,7 +529,7 @@
     #au < manifest ; exists ; 2004 ; 9780784407264 ; 9780784471098 ; 9780784407264 ; Design of Marine Facilities for the Berthing, Mooring, and Repair of Vessels (9780784407264) ; > #duplicate
     au < manifest ; exists ; 2014 ;  ; 9780784477991 ; 9780784477991 ; LEAME Software and User's Manual (9780784477991) ; >
     au < ready ; exists ; 2025 ; 9780784416365 ; 9780784486245 ; 9780784486245 ; Design Snow Loads for Ground Mounted Solar Panels (9780784486245) ; >
-    au < ready ; exists ; 2025 ; 9780784416297 ; 9780784485897 ; 9780784485897 ; Design of Blast-Resistant Buildings in Energy and Industrial Facilities (9780784485897) ; >
+    au < crawling ; exists ; 2025 ; 9780784416297 ; 9780784485897 ; 9780784485897 ; Design of Blast-Resistant Buildings in Energy and Industrial Facilities (9780784485897) ; >
     au < crawling ; exists ; 2025 ;  ; 9780784486276 ; 9780784486276 ; Low Impact Development Hydrologic Modeling (9780784486276) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486399 ; 9780784486399 ; Prestandard for Assessing the Embodied Carbon of Structural Systems for Buildings (9780784486399) ; >
     au < ready ; exists ; 2025 ;  ; 9780784485927 ; 9780784485927 ; SE 2050 Commitment Program (9780784485927) ; >
@@ -606,7 +606,7 @@
     au < manifest ; exists ; 2008 ; 9780784409640 ; 9780784472217 ; 9780784409640 ; STANDARD ANSI/ASCE/T&DI 21.2-08 (9780784409640) ; >
     au < manifest ; exists ; 2008 ; 9780784409930 ; 9780784472484 ; 9780784409930 ; STANDARD ANSI/ASCE/EWRI 50-08(R2022), 51-08(R2022) (9780784409930) ; >
     au < manifest ; exists ; 2009 ; 9780784410196 ; 9780784472699 ; 9780784410196 ; STANDARD ASCE/EWRI 33-09 (9780784410196) ; >
-    au < ready ; exists ; 2010 ; 9780784410561 ; 9780784473030 ; 9780784410561 ; STANDARD ASCE/SEI 52-10 (9780784410561) ; >
+    au < crawling ; exists ; 2010 ; 9780784410561 ; 9780784473030 ; 9780784410561 ; STANDARD ASCE/SEI 52-10 (9780784410561) ; >
     au < frozen ; exists ; 2010 ; 9780784410943 ; 9780784473344 ; 9780784410943 ; STANDARD ASCE/G-I 53-10 (9780784410943) ; >
     au < frozen ; exists ; 2010 ; 9780784410929 ; 9780784473320 ; 9780784410929 ; STANDARD ANSI/ASCE/EWRI 54-10(R2022) (9780784410929) ; >
     au < crawling ; exists ; 2010 ; 9780784411254 ; 9780784473252 ; 9780784411254 ; STANDARD ASCE/T&DI 58-10 (9780784411254) ; >

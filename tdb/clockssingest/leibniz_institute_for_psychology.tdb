@@ -246,7 +246,7 @@
 
       param[journal_id] = bioling
 
-      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2007 ; Biolinquistics Volume 2007 ; 2007 ; 2007 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2007 ; Biolinquistics Volume 2007 ; 2007 ; 2007 ; https://bioling.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2008 ; Biolinquistics Volume 2008 ; 2008 ; 2008 ; https://bioling.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2009 ; Biolinquistics Volume 2009 ; 2009 ; 2009 ; https://bioling.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2010 ; Biolinquistics Volume 2010 ; 2010 ; 2010 ; https://bioling.psychopen.eu/ ; >
@@ -258,7 +258,7 @@
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2016 ; Biolinquistics Volume 2016 ; 2016 ; 2016 ; https://bioling.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2017 ; Biolinquistics Volume 2017 ; 2017 ; 2017 ; https://bioling.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2018 ; Biolinquistics Volume 2018 ; 2018 ; 2018 ; https://bioling.psychopen.eu/ ; >
-      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2019 ; Biolinquistics Volume 2019 ; 2019 ; 2019 ; https://bioling.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2019 ; Biolinquistics Volume 2019 ; 2019 ; 2019 ; https://bioling.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; Biolinquistics Volume 2020 ; 2020 ; 2020 ; https://bioling.psychopen.eu/ ; > 
       au < ojs3.ClockssOjs3Plugin ; frozen ; exists ; 2021 ; Biolinquistics Volume 2021 ; 2021 ; 2021 ; https://bioling.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2022 ; Biolinquistics Volume 2022 ; 2022 ; 2022 ; https://bioling.psychopen.eu/ ; >
@@ -294,7 +294,7 @@
 
       param[journal_id] = miss
 
-      au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2019 ; Measurement Instruments for the Social Sciences Volume 2019 ; 2019 ; 2019 ; https://miss.psychopen.eu/ ; >
+      au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2019 ; Measurement Instruments for the Social Sciences Volume 2019 ; 2019 ; 2019 ; https://miss.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2020 ; Measurement Instruments for the Social Sciences Volume 2020 ; 2020 ; 2020 ; https://miss.psychopen.eu/ ; > 
       au < ojs3.ClockssOjs3Plugin ; crawling ; exists ; 2021 ; Measurement Instruments for the Social Sciences Volume 2021 ; 2021 ; 2021 ; https://miss.psychopen.eu/ ; >
       au < ojs3.ClockssOjs3Plugin ; ready ; exists ; 2022 ; Measurement Instruments for the Social Sciences Volume 2022 ; 2022 ; 2022 ; https://miss.psychopen.eu/ ; >

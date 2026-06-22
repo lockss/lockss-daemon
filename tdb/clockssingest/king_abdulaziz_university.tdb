@@ -50,7 +50,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jengs
 
-      au < ready ; exists ; 2025 ; Journal of King Abdulaziz University: Engineering Sciences Volume 35 ; 35 ; >
+      au < crawling ; exists ; 2025 ; Journal of King Abdulaziz University: Engineering Sciences Volume 35 ; 35 ; >
       au < manifest ; exists ; 2026 ; Journal of King Abdulaziz University: Engineering Sciences Volume 36 ; 36 ; >
 
   }
@@ -143,7 +143,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmrs
 
-      au < ready ; exists ; 2024 ; The Journal of Medical Rehabilitation Science Volume 1 ; 1 ; >
+      au < crawling ; exists ; 2024 ; The Journal of Medical Rehabilitation Science Volume 1 ; 1 ; >
       au < ready ; exists ; 2025 ; The Journal of Medical Rehabilitation Science Volume 2 ; 2 ; >
       au < manifest ; exists ; 2026 ; The Journal of Medical Rehabilitation Science Volume 3 ; 3 ; >
 

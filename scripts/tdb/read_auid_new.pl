@@ -4545,6 +4545,7 @@ while (my $line = <>) {
 
   # Plugins for small publishers. It's not worth it to write a complete manifest page checker
   } elsif (($plugin eq "ClockssArchivesPharmacyPracticeJournalsPlugin") ||
+          ($plugin eq "ClockssBMPJournalsPlugin") ||
           ($plugin eq "ClockssDeepBlueOaiPlugin") ||
           ($plugin eq "ClockssEuropeanJournalBusinessScienceTechnologyPlugin") ||
           ($plugin eq "ClockssGhentUniversityLibraryDomainModeJournalsPlugin") ||
