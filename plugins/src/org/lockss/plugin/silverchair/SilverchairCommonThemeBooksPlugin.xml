@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>15</string>
+        <string>16</string>
     </entry>
     <entry>
         <string>plugin_name</string>
@@ -152,6 +152,7 @@ POSSIBILITY OF SUCH DAMAGE.
             -->
             <string>1,"%s([^/]+/)?(books|edited-volume|monograph|ebooks)(/[^/]+)?(/[^/]+)?/(chapter|book)(-pdf)?/.*", base_url</string>
             <string>1,"%s([a-z]+/)books/(books|edited-volume|monograph|ebooks)(/[1-9]+)(/[^/]+)$", base_url</string>
+            <string>1,"%sbooks/(book|edited-volume|monograph|ebooks)/[0-9]+/[^/?]+$", base_url</string>
         </list>
     </entry>
     <entry>
