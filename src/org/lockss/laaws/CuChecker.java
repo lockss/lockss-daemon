@@ -100,7 +100,7 @@ public class CuChecker extends CuBase {
     Set<Integer> remainingV2 = new TreeSet<>(v2Artifacts.keySet());
     for (CachedUrl v1Ver : v1Versions) {
       if (isAbort()) {
-        break;
+        return;
       }
       int ver = v1Ver.getVersion();
       try {
