@@ -2082,7 +2082,7 @@
 
     param[journal_id] = theory
     #continues = 0969-1154
-    #Published 2014-present
+    #Published 2014-2024
     #journal_num = 69
 
     au < doNotProcess ; doNotProcess ; 2014 ; Theory & Struggle Volume 115 ; 115 ; >
@@ -2096,8 +2096,6 @@
     au < finished ; manifest ; 2022 ; Theory & Struggle Volume 123 ; 123 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Theory & Struggle Volume 124 ; 124 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; Theory & Struggle Volume 125 ; 125 ; reingest4.clockss.org:8082 >
-    au < expected ; exists ; 2025 ; Theory & Struggle Volume 126 ; 126 ; >
-    au < expected ; exists ; 2026 ; Theory & Struggle Volume 127 ; 127 ; >
 
 
   }
