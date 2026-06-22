@@ -81,7 +81,7 @@ import org.lockss.config.*;
  *
  * <li><b>isMigrationInDebugMode</b> - Enables additional UI buttons,
  * allows combinations of actions and state that should normally be
- * prohibited, prevent AUs from being deleted. </li>
+ * prohibited.  Does not otherwise change migrator behavior. </li>
  */
 public class MigrationManager extends BaseLockssDaemonManager
   implements ConfigurableManager  {
@@ -163,7 +163,7 @@ public class MigrationManager extends BaseLockssDaemonManager
   }
 
   public boolean isDeleteMigratedAus() {
-    return !isMigrationInDebugMode && isInMigrationMode && isDeleteMigratedAus;
+    return isInMigrationMode && isDeleteMigratedAus;
   }
 
   public boolean isDeactivateMigratedAus() {
@@ -220,14 +220,6 @@ public class MigrationManager extends BaseLockssDaemonManager
       log.debug("Not setting isDbMoved in dry run mode");
       return;
     }
-    if (isMigrationInDebugMode()) {
-      log.debug("Not setting isDbMoved because in debug mode");
-      return;
-    }
-//     if (isMigrationInDebugMode()) {
-//       log.debug("Not setting isDbMoved because in debug mode");
-//       return;
-//     }
     Configuration mCfg = cfgMgr.newConfiguration();
     mCfg.put(MigrationManager.PARAM_IS_DB_MOVED, String.valueOf(isDbMoved));
     updateMigrationConfigFile(mCfg);

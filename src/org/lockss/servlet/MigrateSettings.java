@@ -373,7 +373,7 @@ public class MigrateSettings extends LockssServlet {
                        migrationMgr.isTargetInMigrationMode(hostname, cfgUiPort,
                                                             userName, userPass)) {
               errMsg = "Dry run migration cannot be performed when target is in migration mode";
-            } else if (!migrationMgr.isInMigrationMode() || migrationMgr.isMigrationInDebugMode()) {
+            } else if (!migrationMgr.isInMigrationMode()) {
               // Populate remaining migration configuration parameters
               mCfg.put(V2_DOT + DbManager.PARAM_DATASOURCE_PASSWORD, dbPass);
               mCfg.put(MigrationManager.PARAM_DRY_RUN_ENABLED,
@@ -458,8 +458,7 @@ public class MigrateSettings extends LockssServlet {
     addCssLocations(page);
     layoutErrorBlock(page);
     ServletUtil.layoutExplanationBlock(page, "");
-    page.add(!migrationMgr.isMigrationInDebugMode() &&
-             migrationMgr.isRealMigrationMode() ?
+    page.add(migrationMgr.isRealMigrationMode() ?
         makeDisplayCfg() : makeForm());
     endPage(page);
   }
@@ -534,11 +533,9 @@ public class MigrateSettings extends LockssServlet {
         KEY_DELETE_AUS, isDeleteAusEnabled);
     deleteAfterCheckbox.attribute("onclick", "if(this.checked){alert(\"" + StringEscapeUtils.escapeEcmaScript(POPUP_DELETE_EACH_AU) + "\")}");
 
-    if (!migrationMgr.isMigrationInDebugMode()) {
-      // Do not allow user to select dry run once migration has started
-      if (migrationMgr.isRealMigrationMode()) {
-        dryRunCheckbox.attribute("disabled");
-      }
+    // Do not allow user to select dry run once migration has started
+    if (migrationMgr.isRealMigrationMode()) {
+      dryRunCheckbox.attribute("disabled");
     }
     if (dryRunEnabled) {
       deleteAfterCheckbox.attribute("disabled");
@@ -865,8 +862,7 @@ public class MigrateSettings extends LockssServlet {
     String dsClassName = dsCfg.get("className");
 
     // Throw if target is using anything other than PostgreSQL
-    if (!migrationMgr.isMigrationInDebugMode() &&
-        !DbManagerSql.isTypePostgresql(dsClassName)) {
+    if (!DbManagerSql.isTypePostgresql(dsClassName)) {
       throw new MigrationManager.UnsupportedConfigurationException("Only PostgreSQL database supported");
     }
 
