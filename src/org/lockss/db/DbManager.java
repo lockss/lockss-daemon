@@ -1679,7 +1679,8 @@ public class DbManager extends BaseLockssDaemonManager
             ConfigManager.getCurrentConfig().getInt(
                 PARAM_TARGET_DB_VERSION,
                 DEFAULT_TARGET_DB_VERSION);
-        log.debug3(DEBUG_HEADER + "externalDbTargetVersion = " + externalDbTargetVersion);
+        log.info("Waiting for externally managed database to be at version " +
+                 externalDbTargetVersion);
 
         // Wait for the version table to be created by the external process.
         waitForVersionTable(conn);
