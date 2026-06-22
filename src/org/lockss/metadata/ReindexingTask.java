@@ -179,6 +179,11 @@ public class ReindexingTask extends StepTask {
    */
   @Override
   public void cancel() {
+    if (log.isDebug2()) {
+      log.debug2("Task canceled: " + au.getName(), new Throwable());
+    } else {
+      log.debug("Task canceled: " + au.getName());
+    }
     if (!isFinished() && (status == ReindexingStatus.Running)) {
       status = ReindexingStatus.Failed;
       super.cancel();
@@ -227,13 +232,19 @@ public class ReindexingTask extends StepTask {
           indexedArticleCount = 0;
         }
       } catch (RuntimeException ex) {
-        log.error(" Caught unexpected Throwable for full text URL: "
+        log.error("Caught unexpected RuntimeException for full text URL: "
                       + af.getFullTextUrl(), ex);
         setFinished();
         if (status == ReindexingStatus.Running) {
           status = ReindexingStatus.Failed;
           indexedArticleCount = 0;
         }
+      } catch (Throwable ex) {
+        log.error("Caught unexpected Throwable for full text URL: "
+                      + af.getFullTextUrl(), ex);
+        setFinished();
+        status = ReindexingStatus.Failed;
+        throw ex;
       }
       
       pokeWDog();
@@ -256,6 +267,11 @@ public class ReindexingTask extends StepTask {
    * Cancels and marks the current task for rescheduling.
    */
   void reschedule() {
+    if (log.isDebug2()) {
+      log.debug2("Task rescheduled: " + au.getName(), new Throwable());
+    } else {
+      log.debug("Task rescheduled: " + au.getName());
+    }
     if (!isFinished() && (status == ReindexingStatus.Running)) {
       status = ReindexingStatus.Rescheduled;
       super.cancel();
