@@ -102,11 +102,11 @@
 
       param[journal_id] = ploscompbiol
 
-      au < crawling ; exists ; 2005 ; PLOS Computational Biology Volume 2005 ; 2005 ; >
+      au < frozen ; exists ; 2005 ; PLOS Computational Biology Volume 2005 ; 2005 ; >
       au < frozen ; exists ; 2006 ; PLOS Computational Biology Volume 2006 ; 2006 ; >
       au < frozen ; exists ; 2007 ; PLOS Computational Biology Volume 2007 ; 2007 ; >
       au < ready ; exists ; 2008 ; PLOS Computational Biology Volume 2008 ; 2008 ; >
-      au < crawling ; exists ; 2009 ; PLOS Computational Biology Volume 2009 ; 2009 ; >
+      au < frozen ; exists ; 2009 ; PLOS Computational Biology Volume 2009 ; 2009 ; >
       au < frozen ; exists ; 2010 ; PLOS Computational Biology Volume 2010 ; 2010 ; >
       au < frozen ; exists ; 2011 ; PLOS Computational Biology Volume 2011 ; 2011 ; >
       au < frozen ; exists ; 2012 ; PLOS Computational Biology Volume 2012 ; 2012 ; >
@@ -208,7 +208,7 @@
       au < frozen ; exists ; 2004 ; PLOS Medicine Volume 2004 ; 2004 ; >
       au < ready ; exists ; 2005 ; PLOS Medicine Volume 2005 ; 2005 ; >
       au < frozen ; exists ; 2006 ; PLOS Medicine Volume 2006 ; 2006 ; >
-      au < crawling ; exists ; 2007 ; PLOS Medicine Volume 2007 ; 2007 ; >
+      au < frozen ; exists ; 2007 ; PLOS Medicine Volume 2007 ; 2007 ; >
       au < frozen ; exists ; 2008 ; PLOS Medicine Volume 2008 ; 2008 ; >
       au < frozen ; exists ; 2009 ; PLOS Medicine Volume 2009 ; 2009 ; >
       au < frozen ; exists ; 2010 ; PLOS Medicine Volume 2010 ; 2010 ; >
@@ -261,9 +261,9 @@
       au < frozen ; exists ; 2010 ; PLOS Neglected Tropical Diseases Volume 2010 ; 2010 ; >
       au < frozen ; exists ; 2011 ; PLOS Neglected Tropical Diseases Volume 2011 ; 2011 ; >
       au < frozen ; exists ; 2012 ; PLOS Neglected Tropical Diseases Volume 2012 ; 2012 ; >
-      au < crawling ; exists ; 2013 ; PLOS Neglected Tropical Diseases Volume 2013 ; 2013 ; >
+      au < frozen ; exists ; 2013 ; PLOS Neglected Tropical Diseases Volume 2013 ; 2013 ; >
       au < frozen ; exists ; 2014 ; PLOS Neglected Tropical Diseases Volume 2014 ; 2014 ; >
-      au < crawling ; exists ; 2015 ; PLOS Neglected Tropical Diseases Volume 2015 ; 2015 ; >
+      au < frozen ; exists ; 2015 ; PLOS Neglected Tropical Diseases Volume 2015 ; 2015 ; >
       au < frozen ; exists ; 2016 ; PLOS Neglected Tropical Diseases Volume 2016 ; 2016 ; >
       au < frozen ; exists ; 2017 ; PLOS Neglected Tropical Diseases Volume 2017 ; 2017 ; >
       au < frozen ; exists ; 2018 ; PLOS Neglected Tropical Diseases Volume 2018 ; 2018 ; >

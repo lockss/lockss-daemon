@@ -27,7 +27,7 @@
       param[journal_id] = chaucer
       # opted to make all viable though vols 46-49 (2012-2014 superset) were collected
 
-      au < crawling ; exists ; 2005 ; The Chaucer Review Volume 40 ; 40 ; 2005 ; >
+      au < frozen ; exists ; 2005 ; The Chaucer Review Volume 40 ; 40 ; 2005 ; >
       au < frozen ; exists ; 2006 ; The Chaucer Review Volume 41 ; 41 ; 2006 ; >
       au < finished ; manifest ; 2007 ; The Chaucer Review Volume 42 ; 42 ; 2007 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; The Chaucer Review Volume 43 ; 43 ; 2008 ; reingest3.clockss.org:8083 >
@@ -1315,7 +1315,7 @@
       au < frozen ; exists ; 2003 ; Gestalt Review Volume 7 ; 7 ; 2003 ; >
       au < frozen ; exists ; 2004 ; Gestalt Review Volume 8 ; 8 ; 2004 ; >
       au < frozen ; exists ; 2005 ; Gestalt Review Volume 9 ; 9 ; 2005 ; >
-      au < crawling ; exists ; 2006 ; Gestalt Review Volume 10 ; 10 ; 2006 ; >
+      au < frozen ; exists ; 2006 ; Gestalt Review Volume 10 ; 10 ; 2006 ; >
       au < finished ; manifest ; 2007 ; Gestalt Review Volume 11 ; 11 ; 2007 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2008 ; Gestalt Review Volume 12 ; 12 ; 2008 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2009 ; Gestalt Review Volume 13 ; 13 ; 2009 ; reingest2.clockss.org:8085 >
@@ -2211,7 +2211,7 @@
       au < finished ; manifest ; 2001 ; Nineteenth Century Studies Volume 15 ; 15 ; 2001 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2002 ; Nineteenth Century Studies Volume 16 ; 16 ; 2002 ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2003 ; Nineteenth Century Studies Volume 17 ; 17 ; 2003 ; >
-      au < crawling ; exists ; 2004 ; Nineteenth Century Studies Volume 18 ; 18 ; 2004 ; >
+      au < frozen ; exists ; 2004 ; Nineteenth Century Studies Volume 18 ; 18 ; 2004 ; >
       au < finished ; manifest ; 2005 ; Nineteenth Century Studies Volume 19 ; 19 ; 2005 ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2006 ; Nineteenth Century Studies Volume 20 ; 20 ; 2006 ; >
       au < frozen ; exists ; 2007 ; Nineteenth Century Studies Volume 21 ; 21 ; 2007 ; >

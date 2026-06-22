@@ -22,7 +22,7 @@
       param[journal_abbr] = home
 
       au < frozen ; exists ; 1990 ; Mansoura Medical Journal Volume 19 ; 19 ; >
-      au < crawling ; exists ; 1991 ; Mansoura Medical Journal Volume 20 ; 20 ; >
+      au < frozen ; exists ; 1991 ; Mansoura Medical Journal Volume 20 ; 20 ; >
       au < frozen ; exists ; 1992 ; Mansoura Medical Journal Volume 21 ; 21 ; >
       au < doesNotExist ; doesNotExist ; 1993 ; Mansoura Medical Journal Volume 22 ; 22 ; >
       au < doesNotExist ; doesNotExist ; 1994 ; Mansoura Medical Journal Volume 23 ; 23 ; >
