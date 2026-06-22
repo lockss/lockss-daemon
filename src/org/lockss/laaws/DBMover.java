@@ -81,6 +81,7 @@ public class DBMover extends Worker {
   long srcSize;
   long dstSize;
   long curDstSize;
+  long startTime;
 
   LockssDaemon daemon;
   DbManager dbManager;
@@ -119,7 +120,7 @@ public class DBMover extends Worker {
         auMover.dbBytesTotal = srcSize;
         Connection conn = openV2Connection();
         try {
-          dbManager.lockMetadataWrite(conn);
+          DbManager.staticLockMetadataWrite(conn);
           copyPostgresDb();
         } finally {
           DbManager.safeRollbackAndClose(conn);
@@ -217,7 +218,7 @@ public class DBMover extends Worker {
   private void copyDerbyDb() throws IOException, MigrationTaskFailedException {
     LockssUrlConnectionPool connectionPool =
       auMover.getMigrationMgr().getConnectionPool();
-    long startTime = TimeBase.nowMs();
+    startTime = TimeBase.nowMs();
     // Dump V1 subscriptions & COUNTER data
     File bakDir = FileUtil.createTempDir("dbtemp", "");
     File bakFile = new File(bakDir, "subscriptions.zip");
@@ -304,7 +305,7 @@ public class DBMover extends Worker {
   void copyPostgresDb() throws MigrationTaskFailedException {
     // Cache frequently retrieved values to avoid multiple method calls
     long dbCopyTimeout = auMover.getDbCopyTimeout();
-    long startTime = TimeBase.nowMs();
+    startTime = TimeBase.nowMs();
     long deadlineMs = startTime + dbCopyTimeout;
 
     // Credentials are passed via PGPASSWORD env vars on each ProcessBuilder
@@ -687,6 +688,8 @@ public class DBMover extends Worker {
         curDstSize = getDatabaseSize(host, port, user, password, dbName);
         log.info(String.format("Destination database size = %d", curDstSize));
         auMover.dbBytesCopied = curDstSize - dstSize;
+        auMover.dbCopyDuration =
+          StringUtil.timeIntervalToString(TimeBase.msSince(startTime));
       } catch (MigrationTaskFailedException e) {
         log.warning("Couldn't get current DB size for progress display", e);
       }

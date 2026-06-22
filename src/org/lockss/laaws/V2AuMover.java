@@ -347,8 +347,9 @@ public class V2AuMover {
   public static final String PARAM_DETAILED_STATS = PREFIX + "detailedStats";
   public static final boolean DEFAULT_DETAILED_STATS = true;
   volatile long dbCopyTimeout;
-  volatile long dbBytesCopied;
+  volatile long dbBytesCopied = 0;
   volatile long dbBytesTotal;
+  volatile String dbCopyDuration;
 
   enum UseFetchUrl {
     NONE,
@@ -2769,6 +2770,8 @@ public class V2AuMover {
       sb.append(StringUtil.sizeToString(dbBytesCopied));
       sb.append( " of ");
       sb.append(StringUtil.sizeToString(dbBytesTotal));
+      sb.append(" in ");
+      sb.append(dbCopyDuration);
       res.add(sb.toString());
     }
     else if (STATUS_RUNNING.equals(currentStatus)) {
