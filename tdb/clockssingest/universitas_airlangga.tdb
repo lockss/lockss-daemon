@@ -59,7 +59,7 @@
       param[journal_id] = YDK
 
       au < finished ; finished ; 1991 ; Yuridika Volume 6 ; 6 ; 1991 ; reingest2.clockss.org:8085 >
-      au < ready ; exists ; 1992 ; Yuridika Volume 7 ; 7 ; 1992 ; >
+      au < crawling ; exists ; 1992 ; Yuridika Volume 7 ; 7 ; 1992 ; >
       au < doesNotExist ; doesNotExist ; 1993 ; Yuridika Volume 8 ; 8 ; 1993 ; >
       au < crawling ; exists ; 1994 ; Yuridika Volume 9 ; 9 ; 1994 ; >
       au < doesNotExist ; doesNotExist ; 1995 ; Yuridika Volume 10 ; 10 ; 1995 ; >
