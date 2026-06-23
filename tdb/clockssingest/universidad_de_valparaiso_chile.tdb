@@ -26,17 +26,17 @@
       param[journal_id] = Panambi
 
       au < finished ; manifest ; 2015 ; Panambí Volume 2015 ; 1 ; 2015 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2016 ; Panambí Volume 2016 ; 2 ; 2016 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2017 ; Panambí Volume 2017 ; 3 ; 2017 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2018 ; Panambí Volume 2018 ; 4 ; 2018 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2019 ; Panambí Volume 2019 ; 5 ; 2019 ; reingest5.clockss.org:8082 >
-      au < finished ; manifest ; 2020 ; Panambí Volume 2020 ; 6 ; 2020 ; reingest1.clockss.org:8082 >
-      au < finished ; manifest ; 2021 ; Panambí Volume 2021 ; 7 ; 2021 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2022 ; Panambí Volume 2022 ; 8 ; 2022 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2023 ; Panambí Volume 2023 ; 9 ; 2023 ; reingest2.clockss.org:8085 >
-      au < finished ; manifest ; 2024 ; Panambí Volume 2024 ; 10 ; 2024 ; reingest4.clockss.org:8082 >
-      au < expected ; exists ; 2025 ; Panambí Volume 2025 ; 11 ; 2025 ; >
-      au < expected ; exists ; 2026 ; Panambí Volume 2026 ; 12 ; 2026 ; >
+      au < finished ; manifest ; 2016 ; Panambí Volume 2016 ; 2-3 ; 2016 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2017 ; Panambí Volume 2017 ; 4-5 ; 2017 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2018 ; Panambí Volume 2018 ; 6-7 ; 2018 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2019 ; Panambí Volume 2019 ; 8-9 ; 2019 ; reingest5.clockss.org:8082 >
+      au < finished ; manifest ; 2020 ; Panambí Volume 2020 ; 10-11 ; 2020 ; reingest1.clockss.org:8082 >
+      au < finished ; manifest ; 2021 ; Panambí Volume 2021 ; 12-13 ; 2021 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2022 ; Panambí Volume 2022 ; 14-15 ; 2022 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2023 ; Panambí Volume 2023 ; 16-17 ; 2023 ; reingest2.clockss.org:8085 >
+      au < finished ; manifest ; 2024 ; Panambí Volume 2024 ; 18-19 ; 2024 ; reingest4.clockss.org:8082 >
+      au < expected ; exists ; 2025 ; Panambí Volume 2025 ; 20-21 ; 2025 ; >
+      au < expected ; exists ; 2026 ; Panambí Volume 2026 ; 22-23 ; 2026 ; >
 
   }
 
