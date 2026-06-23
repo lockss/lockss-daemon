@@ -33,8 +33,8 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/scienceopen-released/
 
       au < readySource ; finished ; 2023 ; ScienceOpen Source Content 2023 ; 2023 >
-      au < readySource ; crawling ; 2024 ; ScienceOpen Source Content 2024 ; 2024 >
-      au < readySource ; crawling ; 2025 ; ScienceOpen Source Content 2025 ; 2025 >
+      au < readySource ; frozen ; 2024 ; ScienceOpen Source Content 2024 ; 2024 >
+      au < readySource ; frozen ; 2025 ; ScienceOpen Source Content 2025 ; 2025 >
       au < readySource ; crawling ; 2026 ; ScienceOpen Source Content 2026 ; 2026 >
 
     }
@@ -57,8 +57,8 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/scienceopenbooks-released/
 
     au < readySource ; finished ; 2023 ; ScienceOpen Books Source Content 2023 ; 2023_01 >
-    au < readySource ; crawling ; 2024 ; ScienceOpen Books Source Content 2024 ; 2024_01 >
-    au < readySource ; crawling ; 2025 ; ScienceOpen Books Source Content 2025 ; 2025_01 >
+    au < readySource ; frozen ; 2024 ; ScienceOpen Books Source Content 2024 ; 2024_01 >
+    au < readySource ; frozen ; 2025 ; ScienceOpen Books Source Content 2025 ; 2025_01 >
     au < readySource ; crawling ; 2026 ; ScienceOpen Books Source Content 2026 ; 2026_01 >
 
     }
