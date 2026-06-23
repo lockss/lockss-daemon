@@ -74,8 +74,22 @@
       au < finished ; manifest ; 2022 ; Pacific Journalism Review Volume 28 ; 28 ; 2022 ; reingest5.clockss.org:8082 >
       au < deepCrawl ; exists ; 2023 ; Pacific Journalism Review Volume 29 ; 29 ; 2023 ; >
       au < deepCrawl ; exists ; 2024 ; Pacific Journalism Review Volume 30 ; 30 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Pacific Journalism Review Volume 31 ; 31 ; 2025 ; >
-      au < expected ; exists ; 2026 ; Pacific Journalism Review Volume 32 ; 32 ; 2026 ; >
+    }
+
+    {
+
+      title <
+        name = Pacific Media ;
+        issn = 3021-2634 ;
+        eissn = 3021-2642
+
+      >
+      param[base_url] = https://ojs.aut.ac.nz/
+      param[journal_id] = pacific-media-monographs
+      attr[start_stem] =
+
+      au < exists ; exists ; 2025 ; Pacific Journalism Review Volume 1 ; 1 ; 2025 ; >
+      au < expected ; exists ; 2026 ; Pacific Journalism Review Volume 2 ; 2 ; 2026 ; >
 
     }
 
@@ -127,9 +141,6 @@
       au < finished ; manifest ; 2021 ; Aotearoa New Zealand Journal of Social Issues Volume 1 ; 1 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; Aotearoa New Zealand Journal of Social Issues Volume 2 ; 2 ; 2022 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; Aotearoa New Zealand Journal of Social Issues Volume 3 ; 3 ; 2023 ; >
-      au < expected ; exists ; 2024 ; Aotearoa New Zealand Journal of Social Issues Volume 4 ; 4 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Aotearoa New Zealand Journal of Social Issues Volume 5 ; 5 ; 2025 ; >
-      au < expected ; exists ; 2026 ; Aotearoa New Zealand Journal of Social Issues Volume 6 ; 6 ; 2026 ; >
 
   }
 
@@ -156,8 +167,6 @@
       au < finished ; manifest ; 2021 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 25 ; 25 ; 2021 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 26 ; 26 ; 2022 ; reingest4.clockss.org:8082 >
       au < deepCrawl ; exists ; 2024 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 27 ; 27 ; 2024 ; >
-      au < expected ; exists ; 2025 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 28 ; 28 ; 2025 ; >
-      au < expected ; exists ; 2026 ; Ata: Journal of Psychotherapy Aotearoa New Zealand Volume 29 ; 29 ; 2026 ; >
 
   }
 
@@ -471,8 +480,6 @@
       au < finished ; crawling ; 2022 ; Link Symposium Abstracts Volume 3 ; 3 ; 2022 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2023 ; Link Symposium Abstracts Volume 4 ; 4 ; 2023 ; >
       au < finished ; manifest ; 2024 ; Link Symposium Abstracts Volume 5 ; 5 ; 2024 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2025 ; Link Symposium Abstracts Volume 6 ; 6 ; 2025 ; >
-      au < expected ; exists ; 2026 ; Link Symposium Abstracts Volume 7 ; 7 ; 2026 ; >
 
   }
 
