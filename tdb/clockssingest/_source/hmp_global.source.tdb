@@ -27,9 +27,9 @@
       param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/hmpglobal-released/
 
       #Production
-      au < readySource ; frozen ; 2024 ; Journal of Invasive Cardiology Source Content 2024_01 ; 2024_01 >
-      au < readySource ; frozen ; 2024 ; Journal of Invasive Cardiology Source Content 2024_02 ; 2024_02 > #diff format
-      au < readySource ; frozen ; 2025 ; Journal of Invasive Cardiology Source Content 2025_01 ; 2025_01 >
+      au < readySource ; finished ; 2024 ; Journal of Invasive Cardiology Source Content 2024_01 ; 2024_01 >
+      au < readySource ; finished ; 2024 ; Journal of Invasive Cardiology Source Content 2024_02 ; 2024_02 > #diff format
+      au < readySource ; finished ; 2025 ; Journal of Invasive Cardiology Source Content 2025_01 ; 2025_01 >
       au < readySource ; crawling ; 2026 ; Journal of Invasive Cardiology Source Content 2026_01 ; 2026_01 >
 
     }

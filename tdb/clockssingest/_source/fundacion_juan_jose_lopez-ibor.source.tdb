@@ -19,8 +19,8 @@
     #param[base_url] = https://clockss-test.lockss.org/sourcefiles/lopezibor-released/
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/lopezibor-released/
 
-    au < readySource ; frozen ; 2024 ; Fundación Juan José López-Ibor Content 2024_01 ; 2024_01 >
-    au < readySource ; frozen ; 2025 ; Fundación Juan José López-Ibor Content 2025_01 ; 2025_01 >
+    au < readySource ; finished ; 2024 ; Fundación Juan José López-Ibor Content 2024_01 ; 2024_01 >
+    au < readySource ; finished ; 2025 ; Fundación Juan José López-Ibor Content 2025_01 ; 2025_01 >
     au < readySource ; crawling ; 2026 ; Fundación Juan José López-Ibor Content 2026_01 ; 2026_01 >
 
   }

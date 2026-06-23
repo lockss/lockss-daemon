@@ -30,8 +30,8 @@
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/permanyer-released/
 
     au < readySource ; finished ; 2023 ; Permanyer Publications Source Content 2023 ; 2023 >
-    au < readySource ; frozen ; 2024 ; Permanyer Publications Source Content 2024 ; 2024 >
-    au < readySource ; frozen ; 2025 ; Permanyer Publications Source Content 2025 ; 2025 >
+    au < readySource ; finished ; 2024 ; Permanyer Publications Source Content 2024 ; 2024 >
+    au < readySource ; finished ; 2025 ; Permanyer Publications Source Content 2025 ; 2025 >
     au < readySource ; crawling ; 2026 ; Permanyer Publications Source Content 2026 ; 2026 >
 
     }

@@ -27,8 +27,8 @@
     {
     param[base_url] = https://clockss-ingest.lockss.org/sourcefiles/scipost-released/
 
-    au < readySource ; frozen ; 2024 ; SciPost Source Content 2024 ; 2024 >
-    au < readySource ; frozen ; 2025 ; SciPost Source Content 2025 ; 2025 >
+    au < readySource ; finished ; 2024 ; SciPost Source Content 2024 ; 2024 >
+    au < readySource ; finished ; 2025 ; SciPost Source Content 2025 ; 2025 >
     au < expected ; exists ; 2026 ; SciPost Source Content 2026 ; 2026 >
 
     }
