@@ -351,7 +351,7 @@
     {
     title <
       name = Journal of Austrian Studies ;
-      issn = 2165-669X  ;
+      issn = 2165-669X ;
       issnl = 2165-669X
 
     >
@@ -377,9 +377,23 @@
 
     {
     title <
+      name = Journal of the Society for Armenian Studies ;
+      issn = 0747-9301 ;
+      eissn = 2667-0038
+
+    >
+
+      attr[journal_id] = 908
+
+        au < manifest ; 2025 ; Journal of the Society for Armenian Studies Volume 30 [2025] ; 20264 >
+
+    }
+
+    {
+    title <
       name = Journal of Black Sexuality and Relationships ;
-      issn = 2334-2668  ;
-      eissn = 2376-7510  ;
+      issn = 2334-2668 ;
+      eissn = 2376-7510 ;
       issnl = 2334-2668
 
     >
