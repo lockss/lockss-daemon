@@ -633,10 +633,15 @@ public class DbManager extends BaseLockssDaemonManager
     if (!ready) {
       throw new DbException("DbManager has not been initialized.");
     }
+    return staticPrepareStatement(conn, sql, maxRetryCount, retryDelay, fetchSize);
+  }
 
+  static  PreparedStatement staticPrepareStatement(Connection conn, String sql,
+                                                   int maxRetryCount, long retryDelay, int fetchSize)
+      throws DbException {
     try {
-      return dbManagerSql.prepareStatement(conn, sql, maxRetryCount,
-	retryDelay);
+      return DbManagerSql.staticPrepareStatement(conn, sql, maxRetryCount,
+                                                 retryDelay, fetchSize);
     } catch (SQLException sqle) {
       String message = "Cannot prepare statement";
       log.error(message, sqle);
@@ -738,9 +743,15 @@ public class DbManager extends BaseLockssDaemonManager
     if (!ready) {
       throw new DbException("DbManager has not been initialized.");
     }
+    return staticExecuteUpdate(statement, maxRetryCount, retryDelay);
+  }
 
+  static int staticExecuteUpdate(PreparedStatement statement,
+                                 int maxRetryCount, long retryDelay)
+      throws DbException {
     try {
-      return dbManagerSql.executeUpdate(statement, maxRetryCount, retryDelay);
+      return DbManagerSql.staticExecuteUpdate(statement, maxRetryCount,
+                                              retryDelay);
     } catch (SQLException sqle) {
       throw new DbException("Cannot execute update", sqle);
     } catch (RuntimeException re) {
@@ -2190,12 +2201,18 @@ public class DbManager extends BaseLockssDaemonManager
   public void lockMetadataWrite(Connection conn) throws DbException {
     final String DEBUG_HEADER = "lockMetadataWrite(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
+    staticLockMetadataWrite(conn, maxRetryCount, retryDelay, fetchSize);
+    return;
+  }
 
+  public static void staticLockMetadataWrite(Connection conn, int maxRetryCount, long retryDelay, int fetchSize)
+      throws DbException {
+    final String DEBUG_HEADER = "lockMetadataWrite(): ";
     PreparedStatement stmt = null;
 
     try {
-      stmt = prepareStatement(conn, DbManagerSql.LOCK_METADATA_WRITE_QUERY);
-      executeUpdate(stmt);
+      stmt = staticPrepareStatement(conn, DbManagerSql.LOCK_METADATA_WRITE_QUERY, maxRetryCount, retryDelay, fetchSize);
+      staticExecuteUpdate(stmt, maxRetryCount, retryDelay);
       if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Done.");
     } finally {
       DbManager.safeCloseStatement(stmt);

@@ -120,7 +120,10 @@ public class DBMover extends Worker {
         auMover.dbBytesTotal = srcSize;
         Connection conn = openV2Connection();
         try {
-          DbManager.staticLockMetadataWrite(conn);
+          DbManager.staticLockMetadataWrite(conn,
+                                            DbManager.DEFAULT_MAX_RETRY_COUNT,
+                                            DbManager.DEFAULT_RETRY_DELAY,
+                                            DbManager.DEFAULT_FETCH_SIZE);
           copyPostgresDb();
         } finally {
           DbManager.safeRollbackAndClose(conn);

@@ -2944,7 +2944,7 @@ public class DbManagerSql {
    */
   PreparedStatement prepareStatement(Connection conn, String sql)
       throws SQLException {
-    return prepareStatement(conn, sql, maxRetryCount, retryDelay);
+    return staticPrepareStatement(conn, sql, maxRetryCount, retryDelay, fetchSize);
   }
 
   /**
@@ -2964,8 +2964,9 @@ public class DbManagerSql {
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  PreparedStatement prepareStatement(Connection conn, String sql,
-      int maxRetryCount, long retryDelay) throws SQLException {
+  static PreparedStatement staticPrepareStatement(Connection conn, String sql,
+                                                  int maxRetryCount, long retryDelay, int fetchSize)
+    throws SQLException {
     final String DEBUG_HEADER = "prepareStatement(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "sql = '" + sql + "'");
 
@@ -3147,7 +3148,7 @@ public class DbManagerSql {
    *           if any problem occurred executing the query.
    */
   int executeUpdate(PreparedStatement statement) throws SQLException {
-    return executeUpdate(statement, maxRetryCount, retryDelay);
+    return staticExecuteUpdate(statement, maxRetryCount, retryDelay);
   }
 
   /**
@@ -3166,7 +3167,7 @@ public class DbManagerSql {
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  int executeUpdate(PreparedStatement statement, int maxRetryCount,
+  static int staticExecuteUpdate(PreparedStatement statement, int maxRetryCount,
       long retryDelay) throws SQLException {
     final String DEBUG_HEADER = "executeUpdate(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Starting...");
