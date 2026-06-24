@@ -76,28 +76,9 @@
       au < superseded ; 2007 ; The Journal of Religion and Film Volume 11 [superseded] ; 11 >
       au < superseded ; 2008 ; The Journal of Religion and Film Volume 12 [superseded] ; 12 >
       au < superseded ; 2009 ; The Journal of Religion and Film Volume 13 [superseded] ; 13 >
-      
+
     }
-    
+
   }
-
-
-    {
-    title <
-      name = Journal of Latino-Latin American Studies (JOLLAS) ;
-      issn = 1549-9502 ;
-      eissn = 3070-4111
-    >
-
-      plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
-      param[base_url] = https://muse.jhu.edu/
-      implicit < status ; year ; name ; param[resource_id] >
-      #publisher_id:582
-      attr[journal_id] = 905
-
-      au < manifest ; 2024 ; Journal of Latino-Latin American Studies (JOLLAS) Volume 13 [2024] ; 20384 >
-      au < manifest ; 2025 ; Journal of Latino-Latin American Studies (JOLLAS) Volume 14 [2025] ; 20385 >
-
-    }
 
 }
