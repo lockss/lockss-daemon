@@ -11,6 +11,8 @@
     plugin = org.lockss.plugin.janeway.uofmichigan.ClockssUofMichiganJournalsPlugin
     implicit < status ; status2 ; year ; volume ; name ; param[year] ; hidden[proxy] >
     param[base_url] = https://journals.publishing.umich.edu/
+    #Each AU has the articles published in that year, not the publication year of the volume
+    #When volumes and years don't line up, the volume field is blank
 
 
   {
@@ -21,121 +23,21 @@
         eissn = 2377-3456
       >
 
-      #published 1915-present
+      #published 2015-present
       param[journal_id] = absinthe
 
-      au < doesNotExist ; doesNotExist ; 1915 ; 21 ; Absinthe: World Literature in Translation Volume 1915 ; 1915 ; >
-      au < doesNotExist ; doesNotExist ; 1916 ; 22 ; Absinthe: World Literature in Translation Volume 1916 ; 1916 ; >
-      au < doesNotExist ; doesNotExist ; 1917 ; 23 ; Absinthe: World Literature in Translation Volume 1917 ; 1917 ; >
-      au < doesNotExist ; doesNotExist ; 1918 ; 24 ; Absinthe: World Literature in Translation Volume 1918 ; 1918 ; >
-      au < doesNotExist ; doesNotExist ; 1919 ; 25 ; Absinthe: World Literature in Translation Volume 1919 ; 1919 ; >
-      au < doesNotExist ; doesNotExist ; 1920 ; 26 ; Absinthe: World Literature in Translation Volume 1920 ; 1920 ; >
-      au < doesNotExist ; doesNotExist ; 1921 ; 27 ; Absinthe: World Literature in Translation Volume 1921 ; 1921 ; >
-      au < doesNotExist ; doesNotExist ; 1922 ; 28 ; Absinthe: World Literature in Translation Volume 1922 ; 1922 ; >
-      au < doesNotExist ; doesNotExist ; 1923 ; 29 ; Absinthe: World Literature in Translation Volume 1923 ; 1923 ; >
-      au < doesNotExist ; doesNotExist ; 1924 ; 30 ; Absinthe: World Literature in Translation Volume 1924 ; 1924 ; >
-      au < doesNotExist ; doesNotExist ; 1925 ; 31 ; Absinthe: World Literature in Translation Volume 1925 ; 1925 ; >
-      au < doesNotExist ; doesNotExist ; 1926 ; 32 ; Absinthe: World Literature in Translation Volume 1926 ; 1926 ; >
-      au < doesNotExist ; doesNotExist ; 1927 ; 33 ; Absinthe: World Literature in Translation Volume 1927 ; 1927 ; >
-      au < doesNotExist ; doesNotExist ; 1928 ; 34 ; Absinthe: World Literature in Translation Volume 1928 ; 1928 ; >
-      au < doesNotExist ; doesNotExist ; 1929 ; 35 ; Absinthe: World Literature in Translation Volume 1929 ; 1929 ; >
-      au < doesNotExist ; doesNotExist ; 1930 ; 36 ; Absinthe: World Literature in Translation Volume 1930 ; 1930 ; >
-      au < doesNotExist ; doesNotExist ; 1931 ; 37 ; Absinthe: World Literature in Translation Volume 1931 ; 1931 ; >
-      au < doesNotExist ; doesNotExist ; 1932 ; 38 ; Absinthe: World Literature in Translation Volume 1932 ; 1932 ; >
-      au < doesNotExist ; doesNotExist ; 1933 ; 39 ; Absinthe: World Literature in Translation Volume 1933 ; 1933 ; >
-      au < doesNotExist ; doesNotExist ; 1934 ; 40 ; Absinthe: World Literature in Translation Volume 1934 ; 1934 ; >
-      au < doesNotExist ; doesNotExist ; 1935 ; 41 ; Absinthe: World Literature in Translation Volume 1935 ; 1935 ; >
-      au < doesNotExist ; doesNotExist ; 1936 ; 42 ; Absinthe: World Literature in Translation Volume 1936 ; 1936 ; >
-      au < doesNotExist ; doesNotExist ; 1937 ; 43 ; Absinthe: World Literature in Translation Volume 1937 ; 1937 ; >
-      au < doesNotExist ; doesNotExist ; 1938 ; 44 ; Absinthe: World Literature in Translation Volume 1938 ; 1938 ; >
-      au < doesNotExist ; doesNotExist ; 1939 ; 45 ; Absinthe: World Literature in Translation Volume 1939 ; 1939 ; >
-      au < doesNotExist ; doesNotExist ; 1940 ; 46 ; Absinthe: World Literature in Translation Volume 1940 ; 1940 ; >
-      au < doesNotExist ; doesNotExist ; 1941 ; 47 ; Absinthe: World Literature in Translation Volume 1941 ; 1941 ; >
-      au < doesNotExist ; doesNotExist ; 1942 ; 48 ; Absinthe: World Literature in Translation Volume 1942 ; 1942 ; >
-      au < doesNotExist ; doesNotExist ; 1943 ; 49 ; Absinthe: World Literature in Translation Volume 1943 ; 1943 ; >
-      au < doesNotExist ; doesNotExist ; 1944 ; 50 ; Absinthe: World Literature in Translation Volume 1944 ; 1944 ; >
-      au < doesNotExist ; doesNotExist ; 1945 ; 51 ; Absinthe: World Literature in Translation Volume 1945 ; 1945 ; >
-      au < doesNotExist ; doesNotExist ; 1946 ; 52 ; Absinthe: World Literature in Translation Volume 1946 ; 1946 ; >
-      au < doesNotExist ; doesNotExist ; 1947 ; 53 ; Absinthe: World Literature in Translation Volume 1947 ; 1947 ; >
-      au < doesNotExist ; doesNotExist ; 1948 ; 54 ; Absinthe: World Literature in Translation Volume 1948 ; 1948 ; >
-      au < doesNotExist ; doesNotExist ; 1949 ; 55 ; Absinthe: World Literature in Translation Volume 1949 ; 1949 ; >
-      au < doesNotExist ; doesNotExist ; 1950 ; 56 ; Absinthe: World Literature in Translation Volume 1950 ; 1950 ; >
-      au < doesNotExist ; doesNotExist ; 1951 ; 57 ; Absinthe: World Literature in Translation Volume 1951 ; 1951 ; >
-      au < doesNotExist ; doesNotExist ; 1952 ; 58 ; Absinthe: World Literature in Translation Volume 1952 ; 1952 ; >
-      au < doesNotExist ; doesNotExist ; 1953 ; 59 ; Absinthe: World Literature in Translation Volume 1953 ; 1953 ; >
-      au < doesNotExist ; doesNotExist ; 1954 ; 60 ; Absinthe: World Literature in Translation Volume 1954 ; 1954 ; >
-      au < doesNotExist ; doesNotExist ; 1955 ; 61 ; Absinthe: World Literature in Translation Volume 1955 ; 1955 ; >
-      au < doesNotExist ; doesNotExist ; 1956 ; 62 ; Absinthe: World Literature in Translation Volume 1956 ; 1956 ; >
-      au < doesNotExist ; doesNotExist ; 1957 ; 63 ; Absinthe: World Literature in Translation Volume 1957 ; 1957 ; >
-      au < doesNotExist ; doesNotExist ; 1958 ; 64 ; Absinthe: World Literature in Translation Volume 1958 ; 1958 ; >
-      au < doesNotExist ; doesNotExist ; 1959 ; 65 ; Absinthe: World Literature in Translation Volume 1959 ; 1959 ; >
-      au < doesNotExist ; doesNotExist ; 1960 ; 66 ; Absinthe: World Literature in Translation Volume 1960 ; 1960 ; >
-      au < doesNotExist ; doesNotExist ; 1961 ; 67 ; Absinthe: World Literature in Translation Volume 1961 ; 1961 ; >
-      au < doesNotExist ; doesNotExist ; 1962 ; 68 ; Absinthe: World Literature in Translation Volume 1962 ; 1962 ; >
-      au < doesNotExist ; doesNotExist ; 1963 ; 69 ; Absinthe: World Literature in Translation Volume 1963 ; 1963 ; >
-      au < doesNotExist ; doesNotExist ; 1964 ; 70 ; Absinthe: World Literature in Translation Volume 1964 ; 1964 ; >
-      au < doesNotExist ; doesNotExist ; 1965 ; 71 ; Absinthe: World Literature in Translation Volume 1965 ; 1965 ; >
-      au < doesNotExist ; doesNotExist ; 1966 ; 72 ; Absinthe: World Literature in Translation Volume 1966 ; 1966 ; >
-      au < doesNotExist ; doesNotExist ; 1967 ; 73 ; Absinthe: World Literature in Translation Volume 1967 ; 1967 ; >
-      au < doesNotExist ; doesNotExist ; 1968 ; 74 ; Absinthe: World Literature in Translation Volume 1968 ; 1968 ; >
-      au < doesNotExist ; doesNotExist ; 1969 ; 75 ; Absinthe: World Literature in Translation Volume 1969 ; 1969 ; >
-      au < doesNotExist ; doesNotExist ; 1970 ; 76 ; Absinthe: World Literature in Translation Volume 1970 ; 1970 ; >
-      au < doesNotExist ; doesNotExist ; 1971 ; 77 ; Absinthe: World Literature in Translation Volume 1971 ; 1971 ; >
-      au < doesNotExist ; doesNotExist ; 1972 ; 78 ; Absinthe: World Literature in Translation Volume 1972 ; 1972 ; >
-      au < doesNotExist ; doesNotExist ; 1973 ; 79 ; Absinthe: World Literature in Translation Volume 1973 ; 1973 ; >
-      au < doesNotExist ; doesNotExist ; 1974 ; 80 ; Absinthe: World Literature in Translation Volume 1974 ; 1974 ; >
-      au < doesNotExist ; doesNotExist ; 1975 ; 81 ; Absinthe: World Literature in Translation Volume 1975 ; 1975 ; >
-      au < doesNotExist ; doesNotExist ; 1976 ; 82 ; Absinthe: World Literature in Translation Volume 1976 ; 1976 ; >
-      au < doesNotExist ; doesNotExist ; 1977 ; 83 ; Absinthe: World Literature in Translation Volume 1977 ; 1977 ; >
-      au < doesNotExist ; doesNotExist ; 1978 ; 84 ; Absinthe: World Literature in Translation Volume 1978 ; 1978 ; >
-      au < doesNotExist ; doesNotExist ; 1979 ; 85 ; Absinthe: World Literature in Translation Volume 1979 ; 1979 ; >
-      au < doesNotExist ; doesNotExist ; 1980 ; 86 ; Absinthe: World Literature in Translation Volume 1980 ; 1980 ; >
-      au < doesNotExist ; doesNotExist ; 1981 ; 87 ; Absinthe: World Literature in Translation Volume 1981 ; 1981 ; >
-      au < doesNotExist ; doesNotExist ; 1982 ; 88 ; Absinthe: World Literature in Translation Volume 1982 ; 1982 ; >
-      au < doesNotExist ; doesNotExist ; 1983 ; 89 ; Absinthe: World Literature in Translation Volume 1983 ; 1983 ; >
-      au < doesNotExist ; doesNotExist ; 1984 ; 90 ; Absinthe: World Literature in Translation Volume 1984 ; 1984 ; >
-      au < doesNotExist ; doesNotExist ; 1985 ; 91 ; Absinthe: World Literature in Translation Volume 1985 ; 1985 ; >
-      au < doesNotExist ; doesNotExist ; 1986 ; 92 ; Absinthe: World Literature in Translation Volume 1986 ; 1986 ; >
-      au < doesNotExist ; doesNotExist ; 1987 ; 93 ; Absinthe: World Literature in Translation Volume 1987 ; 1987 ; >
-      au < doesNotExist ; doesNotExist ; 1988 ; 94 ; Absinthe: World Literature in Translation Volume 1988 ; 1988 ; >
-      au < doesNotExist ; doesNotExist ; 1989 ; 95 ; Absinthe: World Literature in Translation Volume 1989 ; 1989 ; >
-      au < doesNotExist ; doesNotExist ; 1990 ; 96 ; Absinthe: World Literature in Translation Volume 1990 ; 1990 ; >
-      au < doesNotExist ; doesNotExist ; 1991 ; 97 ; Absinthe: World Literature in Translation Volume 1991 ; 1991 ; >
-      au < doesNotExist ; doesNotExist ; 1992 ; 98 ; Absinthe: World Literature in Translation Volume 1992 ; 1992 ; >
-      au < doesNotExist ; doesNotExist ; 1993 ; 99 ; Absinthe: World Literature in Translation Volume 1993 ; 1993 ; >
-      au < doesNotExist ; doesNotExist ; 1994 ; 100 ; Absinthe: World Literature in Translation Volume 1994 ; 1994 ; >
-      au < doesNotExist ; doesNotExist ; 1995 ; 101 ; Absinthe: World Literature in Translation Volume 1995 ; 1995 ; >
-      au < doesNotExist ; doesNotExist ; 1996 ; 102 ; Absinthe: World Literature in Translation Volume 1996 ; 1996 ; >
-      au < doesNotExist ; doesNotExist ; 1997 ; 103 ; Absinthe: World Literature in Translation Volume 1997 ; 1997 ; >
-      au < doesNotExist ; doesNotExist ; 1998 ; 104 ; Absinthe: World Literature in Translation Volume 1998 ; 1998 ; >
-      au < doesNotExist ; doesNotExist ; 1999 ; 105 ; Absinthe: World Literature in Translation Volume 1999 ; 1999 ; >
-      au < doesNotExist ; doesNotExist ; 2000 ; 106 ; Absinthe: World Literature in Translation Volume 2000 ; 2000 ; >
-      au < doesNotExist ; doesNotExist ; 2001 ; 107 ; Absinthe: World Literature in Translation Volume 2001 ; 2001 ; >
-      au < doesNotExist ; doesNotExist ; 2002 ; 108 ; Absinthe: World Literature in Translation Volume 2002 ; 2002 ; >
-      au < doesNotExist ; doesNotExist ; 2003 ; 109 ; Absinthe: World Literature in Translation Volume 2003 ; 2003 ; >
-      au < doesNotExist ; doesNotExist ; 2004 ; 110 ; Absinthe: World Literature in Translation Volume 2004 ; 2004 ; >
-      au < doesNotExist ; doesNotExist ; 2005 ; 111 ; Absinthe: World Literature in Translation Volume 2005 ; 2005 ; >
-      au < doesNotExist ; doesNotExist ; 2006 ; 112 ; Absinthe: World Literature in Translation Volume 2006 ; 2006 ; >
-      au < doesNotExist ; doesNotExist ; 2007 ; 113 ; Absinthe: World Literature in Translation Volume 2007 ; 2007 ; >
-      au < doesNotExist ; doesNotExist ; 2008 ; 114 ; Absinthe: World Literature in Translation Volume 2008 ; 2008 ; >
-      au < doesNotExist ; doesNotExist ; 2009 ; 115 ; Absinthe: World Literature in Translation Volume 2009 ; 2009 ; >
-      au < doesNotExist ; doesNotExist ; 2010 ; 116 ; Absinthe: World Literature in Translation Volume 2010 ; 2010 ; >
-      au < doesNotExist ; doesNotExist ; 2011 ; 117 ; Absinthe: World Literature in Translation Volume 2011 ; 2011 ; >
-      au < doesNotExist ; doesNotExist ; 2012 ; 118 ; Absinthe: World Literature in Translation Volume 2012 ; 2012 ; >
-      au < doesNotExist ; doesNotExist ; 2013 ; 119 ; Absinthe: World Literature in Translation Volume 2013 ; 2013 ; >
-      au < doesNotExist ; doesNotExist ; 2014 ; 120 ; Absinthe: World Literature in Translation Volume 2014 ; 2014 ; >
-      au < doesNotExist ; doesNotExist ; 2015 ; 121 ; Absinthe: World Literature in Translation Volume 2015 ; 2015 ; >
-      au < doesNotExist ; doesNotExist ; 2016 ; 122 ; Absinthe: World Literature in Translation Volume 2016 ; 2016 ; >
-      au < doesNotExist ; doesNotExist ; 2017 ; 123 ; Absinthe: World Literature in Translation Volume 2017 ; 2017 ; >
-      au < doesNotExist ; doesNotExist ; 2018 ; 124 ; Absinthe: World Literature in Translation Volume 2018 ; 2018 ; >
-      au < doesNotExist ; doesNotExist ; 2019 ; 125 ; Absinthe: World Literature in Translation Volume 2019 ; 2019 ; >
-      au < doesNotExist ; doesNotExist ; 2020 ; 126 ; Absinthe: World Literature in Translation Volume 2020 ; 2020 ; >
-      au < finished ; manifest ; 2021 ; 127 ; Absinthe: World Literature in Translation Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2022 ; 128 ; Absinthe: World Literature in Translation Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
-      au < doNotProcess ; doNotProcess ; 2023 ; 129 ; Absinthe: World Literature in Translation Volume 2023 ; 2023 ; > # Volumes actually published in 2024.
-      au < finished ; manifest ; 2024 ; 130 ; Absinthe: World Literature in Translation Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
-      au < expected ; exists ; 2025 ; 131 ; Absinthe: World Literature in Translation Volume 2025 ; 2025 ; >
-      au < manifest ; exists ; 2026 ; 132 ; Absinthe: World Literature in Translation Volume 2026 ; 2026 ; >
+      au < doesNotExist ; doesNotExist ; 2015 ; ; Absinthe: World Literature in Translation Volume 2015 ; 2015 ; >
+      au < manifest ; exists ; 2016 ; ; Absinthe: World Literature in Translation Volume 2016 ; 2016 ; >
+      au < manifest ; exists ; 2017 ; ; Absinthe: World Literature in Translation Volume 2017 ; 2017 ; >
+      au < manifest ; exists ; 2018 ; ; Absinthe: World Literature in Translation Volume 2018 ; 2018 ; >
+      au < manifest ; exists ; 2019 ; ; Absinthe: World Literature in Translation Volume 2019 ; 2019 ; >
+      au < doesNotExist ; doesNotExist ; 2020 ; ; Absinthe: World Literature in Translation Volume 2020 ; 2020 ; >
+      au < finished ; manifest ; 2021 ; ; Absinthe: World Literature in Translation Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; ; Absinthe: World Literature in Translation Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
+      au < doesNotExist ; doesNotExist ; 2023 ; ; Absinthe: World Literature in Translation Volume 2023 ; 2023 ; > # Volumes actually published in 2024.
+      au < finished ; manifest ; 2024 ; ; Absinthe: World Literature in Translation Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
+      au < doesNotExist ; doesNotExist ; 2025 ; ; Absinthe: World Literature in Translation Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2026 ; ; Absinthe: World Literature in Translation Volume 2026 ; 2026 ; >
 
   }
 
@@ -150,11 +52,11 @@
       #published 2022-present
       param[journal_id] = ars
 
-      au < doNotProcess ; exists ; 2022 ; 53 ; Ars Orientalis Volume 2022 ; 2022 ; > #2022 content has dates from 2023
-      au < finished ; manifest ; 2023 ; 54 ; Ars Orientalis Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
-      au < finished ; manifest ; 2024 ; 55 ; Ars Orientalis Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
-      au < expected ; exists ; 2025 ; 56 ; Ars Orientalis Volume 2025 ; 2025 ; >
-      au < manifest ; exists ; 2026 ; 57 ; Ars Orientalis Volume 2026 ; 2026 ; >
+      au < doesNotExist ; doesNotExist ; 2022 ; ; Ars Orientalis Volume 2022 ; 2022 ; > #2022 content has dates from 2023
+      au < finished ; manifest ; 2023 ; ; Ars Orientalis Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
+      au < finished ; manifest ; 2024 ; ; Ars Orientalis Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
+      au < doesNotExist ; doesNotExist ; 2025 ; ; Ars Orientalis Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2026 ; ; Ars Orientalis Volume 2026 ; 2026 ; >
 
   }
 
@@ -222,9 +124,6 @@
       au < doesNotExist ; doesNotExist ; 2019 ; 1 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2019 ; 2019 ; >
       au < finished ; manifest ; 2022 ; 2 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 3 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
-      au < expected ; exists ; 2024 ; 4 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2024 ; 2024 ; >
-      au < expected ; exists ; 2025 ; 5 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 6 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2026 ; 2026 ; >
 
   }
 
@@ -238,11 +137,11 @@
       #published 2014-2020
       param[journal_id] = dsdj
 
-      au < doNotProcess ; exists ; 2009 ; 1 ; Deaf Studies Digital Journal Volume 2009 ; 2009 ; >
-      au < doNotProcess ; exists ; 2010 ; 2 ; Deaf Studies Digital Journal Volume 2010 ; 2010 ; >
-      au < doNotProcess ; exists ; 2012 ; 3 ; Deaf Studies Digital Journal Volume 2012 ; 2012 ; >
-      au < doNotProcess ; exists ; 2014 ; 4 ; Deaf Studies Digital Journal Volume 2014 ; 2014 ; >
-      au < doNotProcess ; exists ; 2020 ; 5 ; Deaf Studies Digital Journal Volume 2020 ; 2020 ; >
+      au < manifest ; exists ; 2009 ; 1 ; Deaf Studies Digital Journal Volume 2009 ; 2009 ; >
+      au < doesNotExist ; doesNotExist ; 2010 ; 2 ; Deaf Studies Digital Journal Volume 2010 ; 2010 ; >
+      au < manifest ; exists ; 2012 ; 3 ; Deaf Studies Digital Journal Volume 2012 ; 2012 ; >
+      au < manifest ; exists ; 2014 ; 4 ; Deaf Studies Digital Journal Volume 2014 ; 2014 ; >
+      au < doesNotExist ; doesNotExist ; 2020 ; 5 ; Deaf Studies Digital Journal Volume 2020 ; 2020 ; >
       au < crawling ; exists ; 2025 ; 6 ; Deaf Studies Digital Journal Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 7 ; Deaf Studies Digital Journal Volume 2026 ; 2026 ; >
 
@@ -280,19 +179,19 @@
       #published 2014-present
       param[journal_id] = ergo
 
-      au < doesNotExist ; doesNotExist ; 2014 ; 1 ; Ergo Volume 2014 ; 2014 ; >
-      au < doesNotExist ; doesNotExist ; 2015 ; 2 ; Ergo Volume 2015 ; 2015 ; >
-      au < doesNotExist ; doesNotExist ; 2016 ; 3 ; Ergo Volume 2016 ; 2016 ; >
-      au < doesNotExist ; doesNotExist ; 2017 ; 4 ; Ergo Volume 2017 ; 2017 ; >
-      au < doesNotExist ; doesNotExist ; 2018 ; 5 ; Ergo Volume 2018 ; 2018 ; >
-      au < doesNotExist ; doesNotExist ; 2019 ; 6 ; Ergo Volume 2019 ; 2019 ; >
-      au < doesNotExist ; doesNotExist ; 2020 ; 7 ; Ergo Volume 2020 ; 2020 ; > #Articles for 2020 are dated 2021
-      au < finished ; manifest ; 2021 ; 8 ; Ergo Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
-      au < finished ; manifest ; 2022 ; 9 ; Ergo Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
-      au < manifest ; exists ; 2023 ; 10 ; Ergo Volume 2023 ; 2023 ; >
-      au < finished ; manifest ; 2024 ; 11 ; Ergo Volume 2024 ; 2024 ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; 12 ; Ergo Volume 2025 ; 2025 ; >
-      au < manifest ; exists ; 2026 ; 13 ; Ergo Volume 2026 ; 2026 ; >
+      au < doesNotExist ; doesNotExist ; 2014 ; ; Ergo Volume 2014 ; 2014 ; >
+      au < doesNotExist ; doesNotExist ; 2015 ; ; Ergo Volume 2015 ; 2015 ; >
+      au < doesNotExist ; doesNotExist ; 2016 ; ; Ergo Volume 2016 ; 2016 ; >
+      au < doesNotExist ; doesNotExist ; 2017 ; ; Ergo Volume 2017 ; 2017 ; >
+      au < doesNotExist ; doesNotExist ; 2018 ; ; Ergo Volume 2018 ; 2018 ; >
+      au < doesNotExist ; doesNotExist ; 2019 ; ; Ergo Volume 2019 ; 2019 ; >
+      au < doesNotExist ; doesNotExist ; 2020 ; ; Ergo Volume 2020 ; 2020 ; > #Articles for 2020 are dated 2021
+      au < finished ; manifest ; 2021 ; ; Ergo Volume 2021 ; 2021 ; reingest3.clockss.org:8083 >
+      au < finished ; manifest ; 2022 ; ; Ergo Volume 2022 ; 2022 ; reingest5.clockss.org:8082 >
+      au < manifest ; exists ; 2023 ; ; Ergo Volume 2023 ; 2023 ; >
+      au < finished ; manifest ; 2024 ; ; Ergo Volume 2024 ; 2024 ; reingest1.clockss.org:8082 >
+      au < crawling ; exists ; 2025 ; ; Ergo Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2026 ; ; Ergo Volume 2026 ; 2026 ; >
 
   }
 
@@ -434,12 +333,12 @@
       #published 2023-present
       param[journal_id] = mjm
 
-      au < finished ; manifest ; 2021 ; 5 ; Michigan Journal of Medicine Volume 2021 ; 2021 ; reingest5.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2022 ; 6 ; Michigan Journal of Medicine Volume 2022 ; 2022 ; > #2022 content is dated 2023
-      au < finished ; manifest ; 2023 ; 7 ; Michigan Journal of Medicine Volume 2023 ; 2023 ; reingest1.clockss.org:8082 > #2023 content is dated 2024
-      au < finished ; manifest ; 2024 ; 8 ; Michigan Journal of Medicine Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2025 ; 8 ; Michigan Journal of Medicine Volume 2025 ; 2025 ; >
-      au < manifest ; exists ; 2026 ; 9 ; Michigan Journal of Medicine Volume 2026 ; 2026 ; >
+      au < finished ; manifest ; 2021 ; ; Michigan Journal of Medicine Volume 2021 ; 2021 ; reingest5.clockss.org:8082 >
+      au < doesNotExist ; doesNotExist ; 2022 ; ; Michigan Journal of Medicine Volume 2022 ; 2022 ; > #2022 content is dated 2023
+      au < finished ; manifest ; 2023 ; ; Michigan Journal of Medicine Volume 2023 ; 2023 ; reingest1.clockss.org:8082 > #2023 content is dated 2024
+      au < finished ; manifest ; 2024 ; ; Michigan Journal of Medicine Volume 2024 ; 2024 ; reingest2.clockss.org:8085 >
+      au < crawling ; exists ; 2025 ; ; Michigan Journal of Medicine Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2026 ; ; Michigan Journal of Medicine Volume 2026 ; 2026 ; >
 
   }
 
@@ -523,10 +422,10 @@
       au < doesNotExist ; doesNotExist ; 2020 ; 35 ; NASIG Proceedings Volume 2020 ; 2020 ; >
       au < doesNotExist ; doesNotExist ; 2021 ; 36 ; NASIG Proceedings Volume 2021 ; 2021 ; >
       au < doesNotExist ; doesNotExist ; 2022 ; 37 ; NASIG Proceedings Volume 2022 ; 2022 ; > #2022 content dated 2023
-      au < finished ; manifest ; 2023 ; 38 ; NASIG Proceedings Volume 2023 ; 2023 ; reingest3.clockss.org:8083 > #2023 content dated 2024
-      au < finished ; manifest ; 2024 ; 39 ; NASIG Proceedings Volume 2024 ; 2024 ; reingest1.clockss.org:8082 > #2024 content dated 2025
-      au < crawling ; exists ; 2025 ; 40 ; NASIG Proceedings Volume 2025 ; 2025 ; >
-      au < expected ; exists ; 2026 ; 41 ; NASIG Proceedings Volume 2026 ; 2026 ; >
+      au < finished ; manifest ; 2023 ; ; NASIG Proceedings Volume 2023 ; 2023 ; reingest3.clockss.org:8083 > #2023 content dated 2024
+      au < finished ; manifest ; 2024 ; ; NASIG Proceedings Volume 2024 ; 2024 ; reingest1.clockss.org:8082 > #2024 content dated 2025
+      au < crawling ; exists ; 2025 ; ; NASIG Proceedings Volume 2025 ; 2025 ; >
+      au < expected ; exists ; 2026 ; ; NASIG Proceedings Volume 2026 ; 2026 ; >
 
   }
 
