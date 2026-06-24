@@ -560,12 +560,21 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         + activeReindexingTasks.size());
 
     // Quit any running reindexing tasks.
+    //
+    // Do NOT clear() activeReindexingTasks here. cancel() only marks each task
+    // Failed/finished; the worker runs on its own thread and may not observe that
+    // for some time (e.g. while blocked in DB/buffer I/O), so the AU is still
+    // being indexed after this returns. activeReindexingTasks is the sole dedup
+    // guard (startReindexing skips AUs already in it) and also enforces the
+    // maxReindexingTasks limit. Clearing it here releases the slot out from under
+    // the still-live worker, so a concurrent crawl-completion can relaunch the
+    // same AU -> two indexers for one AU. Each task already removes its own entry
+    // when it actually finishes (ReindexingTask.handleFinishEvent), which keeps
+    // the AU deduped until the worker truly stops.
     synchronized (activeReindexingTasks) {
       for (ReindexingTask task : activeReindexingTasks.values()) {
         task.cancel();
       }
-
-      activeReindexingTasks.clear();
     }
   }
 
