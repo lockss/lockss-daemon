@@ -41,8 +41,7 @@ import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.LockssThread;
-import org.lockss.db.DbManager;
-import org.lockss.db.SqlConstants;
+import org.lockss.db.*;
 import org.lockss.metadata.MetadataManager;
 import org.lockss.remote.*;
 import org.lockss.servlet.MigrateContent;
@@ -509,7 +508,9 @@ public class DBMover extends Worker {
     ds.setDatabaseName(v2dbname);
     ds.setUser(v2dbuser);
     ds.setPassword(v2dbpassword);
-    return ds.getConnection();
+    return
+      JdbcBridge.getConnection(ds, DbManager.DEFAULT_MAX_RETRY_COUNT,
+                               DbManager.DEFAULT_RETRY_DELAY, false);
   }
 
   /**

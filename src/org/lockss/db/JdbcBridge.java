@@ -73,7 +73,7 @@ public class JdbcBridge {
    * @throws SQLException
    *           if any problem occurred accessing the database.
    */
-  static Connection getConnection(DataSource ds, int maxRetryCount,
+  public static Connection getConnection(DataSource ds, int maxRetryCount,
       long retryDelay, boolean autoCommit) throws SQLException {
     final String DEBUG_HEADER = "getConnection(): ";
     if (log.isDebug2()) {
