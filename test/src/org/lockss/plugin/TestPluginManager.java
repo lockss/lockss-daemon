@@ -462,6 +462,46 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(au1, mgr.getAuFromId(mauauid1));
   }
 
+  // When a plugin is reloaded with a newer version that adds a non-def
+  // param, restarting its running AUs (restartAusForPlugin()) must fill in
+  // the new param from the tdb.  The restart path uses createAu() (not
+  // configureAu(), because of its RestartCreate batch events), so it applies
+  // the params explicitly.
+  public void testRestartAusAddsNonDefParamsFromTdb() throws Exception {
+    mgr.startService();
+    doConfig();
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
+    // The running AU was configured before the plugin knew about nondefp1,
+    // so its config lacks it.
+    ArchivalUnit au = mgr.getAuFromId(mauauid1);
+    assertNotNull(au);
+    assertEquals(null, au.getConfiguration().get("nondefp1"));
+
+    // Simulate reloading the plugin with a newer version that adds a non-def
+    // param, plus a tdb that supplies its value for this AU.
+    ConfigParamDescr nondef =
+      new ConfigParamDescr("nondefp1").setDefinitional(false);
+    mpi.setAuConfigDescrs(ListUtil.list(ConfigParamDescr.BASE_URL,
+					ConfigParamDescr.VOLUME_NUMBER,
+					nondef));
+    TitleConfig tc = new TitleConfig("title1", mpi);
+    tc.setParams(ListUtil.list(
+	new ConfigParamAssignment(ConfigParamDescr.BASE_URL, "val1"),
+	new ConfigParamAssignment(ConfigParamDescr.VOLUME_NUMBER, "val2"),
+	new ConfigParamAssignment(nondef, "barbar")));
+    mpi.setTitleConfigMap(MapUtil.map("title1", tc),
+			  MapUtil.map(mauauid1, tc));
+
+    // Restart the AU as the plugin-reload path does.
+    mgr.restartAusForPlugin(mockPlugKey, ListUtil.list(au), null);
+
+    ArchivalUnit au2 = mgr.getAuFromId(mauauid1);
+    assertNotNull(au2);
+    assertNotSame(au, au2);
+    // The non-def param added by the reloaded plugin is filled in from the tdb.
+    assertEquals("barbar", au2.getConfiguration().get("nondefp1"));
+  }
+
   List createEvents = new ArrayList();
   List deleteEvents = new ArrayList();
   List reconfigEvents = new ArrayList();

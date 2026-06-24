@@ -3365,6 +3365,19 @@ public class PluginManager
     }
   }
 
+  /** Fill in any of the plugin's non-def params that are missing from the AU
+   * config with values from the tdb.  Allows existing AUs to pick up non-def
+   * params added to a plugin after the AU was first configured.  Does nothing
+   * for non-BasePlugin plugins. */
+  Configuration addTdbNonDefParams(Plugin plugin, Configuration auConf,
+				   String auid) {
+    if (plugin instanceof org.lockss.plugin.base.BasePlugin) {
+      return ((org.lockss.plugin.base.BasePlugin)plugin)
+	.addNonDefParams(auConf, auid);
+    }
+    return auConf;
+  }
+
   // Stops and restarts a single plugin's set of AUs so that they start using
   // the current version of their plugin.  Waits a little while between
   // stopping and starting to allow existing processes to exit.  It's
@@ -3414,6 +3427,13 @@ public class PluginManager
         for (Map.Entry<String,Configuration> ent : configMap.entrySet()) {
           String auid = ent.getKey();
           Configuration auConf = ent.getValue();
+
+          // The plugin may have been reloaded with a newer definition that
+          // added non-def params; fill in any that are missing from the tdb.
+          // (This restart path uses createAu() with a RestartCreate batch
+          // event, so it can't go through configureAu() as the startup path
+          // does.)
+          auConf = addTdbNonDefParams(plug, auConf, auid);
 
           // To find the last AU.
           remainingAus--;

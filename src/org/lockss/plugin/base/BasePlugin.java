@@ -409,7 +409,7 @@ public abstract class BasePlugin
   // If any of the plugin's nondef params don't have values, look them
   // up from the TDB.  This allows existing AUs to conform to later
   // changes made to a plugin
-  Configuration addNonDefParams(Configuration auConfig, String auid) {
+  public Configuration addNonDefParams(Configuration auConfig, String auid) {
     List<ConfigParamDescr> nondef = new ArrayList<>();
     for (ConfigParamDescr descr : getLocalAuConfigDescrs()) {
       if (!descr.isDefinitional() && !descr.isDefaultOnly() &&
