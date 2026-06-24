@@ -752,7 +752,7 @@ public class AuState implements LockssSerializable {
 		       cdnStems,
 		       null);
 
-    auState.setMigrationState(migrationState);
+    auState.migrationState = migrationState;
     return auState;
   }
 
