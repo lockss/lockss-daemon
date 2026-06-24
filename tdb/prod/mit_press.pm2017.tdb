@@ -33,6 +33,21 @@
 
     {
     title <
+      name = ARTMargins ;
+      issn = 2162-2574 ;
+      eissn = 2162-2582
+
+    >
+
+      attr[journal_id] = 901
+
+      au < manifest ; 2024 ; ARTMargins Volume 13 [2024] ; 20279 >
+      au < manifest ; 2025 ; ARTMargins Volume 14 [2025] ; 20280 >
+
+    }
+
+    {
+    title <
       name = Computer Music Journal ;
       issn = 0148-9267  ;
       eissn = 1531-5169  ;
