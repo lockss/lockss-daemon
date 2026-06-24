@@ -408,6 +408,20 @@
 
     {
     title <
+      name = The Colosseum ;
+      issn = 3070-8400 ;
+      eissn = 3070-8400
+
+    >
+
+      attr[journal_id] = 910
+
+      au < manifest ; 2026 ; The Colosseum Volume 1 [2026] ; 20491 >
+
+    }
+
+    {
+    title <
       name = The Thomist: A Speculative Quarterly Review ;
       issn = 0040-6325  ;
       eissn = 2473-3725  ;
