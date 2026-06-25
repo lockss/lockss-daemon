@@ -284,7 +284,7 @@
 #      param[base_url] = http://openhealthdata.metajnl.com/
       # continued by Open Health Data
 
-      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data 1 ; 2013 ; 1 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ ; >
+      au < doNotProcess ; exists ; 2013 ; 1 ; Journal of Open Public Health Data Volume 1 ; 2013 ; 1 ; Ubiquity Press ; https://openhealthdata.metajnl.com/ ; >
       #Renamed to Open Health Data. Keep to match GLN.
   }
 
