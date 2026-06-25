@@ -17,7 +17,8 @@
   {
 
     title <
-      name = University of Edinburgh Books
+      name = University of Edinburgh Books ;
+      type = bookSeries
     >
 
       au < frozen ; exists ; 2013 ; 9781907443404 ; 9781907443404 ; ed-9781907443404 ; The Carrying Stream Flows On: Celebrating the Diamond Jubilee of the School of Scottish Studies ; >
