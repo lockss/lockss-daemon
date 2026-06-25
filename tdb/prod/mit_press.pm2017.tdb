@@ -41,8 +41,9 @@
 
       attr[journal_id] = 901
 
-      au < manifest ; 2024 ; ARTMargins Volume 13 [2024] ; 20279 >
-      au < manifest ; 2025 ; ARTMargins Volume 14 [2025] ; 20280 >
+      au < testing ; 2024 ; ARTMargins Volume 13 [2024] ; 20279 >
+      au < testing ; 2025 ; ARTMargins Volume 14 [2025] ; 20280 >
+      au < manifest ; 2026 ; ARTMargins Volume 15 [2026] ; 20540 >
 
     }
 
