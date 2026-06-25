@@ -11887,7 +11887,7 @@
   {
 
     title <
-       name = IET Biometrics ;
+       name = IET Biometrics ;
        issn = 2047-4938 ;
        eissn = 2047-4946
     >
@@ -11895,15 +11895,15 @@
     param[journal_id] = ietbm
     comment[years] = 2023-current
 
-    au < doNotProcess ; 2023 ; IET Biometrics Volume 2023 ; 2023 ; 2023 >
-    au < doNotProcess ; 2024 ; IET Biometrics Volume 2024 ; 2024 ; 2024 >
+    au < doNotProcess ; 2023 ; IET Biometrics Volume 2023 ; 2023 ; 2023 >
+    au < doNotProcess ; 2024 ; IET Biometrics Volume 2024 ; 2024 ; 2024 >
 
   }
 
   {
 
     title <
-       name =  IET Circuits,  Devices & Systems ;
+       name =  IET Circuits, Devices & Systems ;
        issn = 1751-858X ;
        eissn = 1751-8598
     >
@@ -11911,8 +11911,8 @@
     param[journal_id] = ietcds
     comment[years] = 2023-current
 
-    au < doNotProcess ; 2023 ;  IET Circuits,  Devices & Systems Volume 2023 ; 2023 ; 2023 >
-    au < doNotProcess ; 2024 ;  IET Circuits,  Devices & Systems Volume 2024 ; 2024 ; 2024 >
+    au < doNotProcess ; 2023 ;  IET Circuits, Devices & Systems Volume 2023 ; 2023 ; 2023 >
+    au < doNotProcess ; 2024 ;  IET Circuits, Devices & Systems Volume 2024 ; 2024 ; 2024 >
 
   }
 
