@@ -2190,7 +2190,7 @@
 
       param[journal_id] = ncs
 
-      au < ready ; exists ; 1987 ; Nineteenth Century Studies Volume 1 ; 1 ; 1987 ; >
+      au < crawling ; exists ; 1987 ; Nineteenth Century Studies Volume 1 ; 1 ; 1987 ; >
       au < finished ; manifest ; 1988 ; Nineteenth Century Studies Volume 2 ; 2 ; 1988 ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 1989 ; Nineteenth Century Studies Volume 3 ; 3 ; 1989 ; >
       au < finished ; manifest ; 1990 ; Nineteenth Century Studies Volume 4 ; 4 ; 1990 ; reingest3.clockss.org:8083 >
@@ -2499,7 +2499,7 @@
       au < frozen ; exists ; 1985 ; Victorians Institute Journal Volume 13 ; 13 ; 1985 ; >
       au < ready ; exists ; 1986 ; Victorians Institute Journal Volume 14 ; 14 ; 1986 ; >
       au < frozen ; exists ; 1987 ; Victorians Institute Journal Volume 15 ; 15 ; 1987 ; >
-      au < ready ; exists ; 1988 ; Victorians Institute Journal Volume 16 ; 16 ; 1988 ; >
+      au < crawling ; exists ; 1988 ; Victorians Institute Journal Volume 16 ; 16 ; 1988 ; >
       au < frozen ; exists ; 1989 ; Victorians Institute Journal Volume 17 ; 17 ; 1989 ; >
       au < frozen ; exists ; 1990 ; Victorians Institute Journal Volume 18 ; 18 ; 1990 ; >
       au < finished ; manifest ; 1991 ; Victorians Institute Journal Volume 19 ; 19 ; 1991 ; reingest4.clockss.org:8082 >

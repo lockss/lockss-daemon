@@ -281,7 +281,7 @@
     param[journal_id] = mag
     #2015 and before, there are no article pdfs. Only an issue pdf which does not constitute substance.
 
-    au < ready ; exists ; 1991 ; 1991 ; European Mathematical Society Magazine Volume 1991 ; 1991 ; >
+    au < crawling ; exists ; 1991 ; 1991 ; European Mathematical Society Magazine Volume 1991 ; 1991 ; >
     au < frozen ; exists ; 1992 ; 1992 ; European Mathematical Society Magazine Volume 1992 ; 1992 ; >
     au < frozen ; exists ; 1993 ; 1993 ; European Mathematical Society Magazine Volume 1993 ; 1993 ; >
     au < notReady ; exists ; 1994 ; 1994 ; European Mathematical Society Magazine Volume 1994 ; 1994 ; >
