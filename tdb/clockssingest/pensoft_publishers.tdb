@@ -388,7 +388,7 @@
     au < finished ; manifest ; 2023 ; 45-47 ; Subterranean Biology Volume 2023 ; 2023 ; https://subtbiol.pensoft.net/ ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 48-50 ; Subterranean Biology Volume 2024 ; 2024 ; https://subtbiol.pensoft.net/ ; >
     au < deepCrawl ; exists ; 2025 ; 51-54 ; Subterranean Biology Volume 2025 ; 2025 ; https://subtbiol.pensoft.net/ ; >
-    au < ready ; exists ; 2025 ; 55-58 ; Subterranean Biology Volume 2026 ; 2026 ; https://subtbiol.pensoft.net/ ; >
+    au < crawling ; exists ; 2025 ; 55-58 ; Subterranean Biology Volume 2026 ; 2026 ; https://subtbiol.pensoft.net/ ; >
 
    }
   
@@ -2074,7 +2074,7 @@
       au < frozen ; exists ; 2017 ; 2017 ; Swiss Journal of Palaeontology Volume 2017 ; 2017 ; https://sjp.pensoft.net/ ; >
       au < frozen ; exists ; 2018 ; 2018 ; Swiss Journal of Palaeontology Volume 2018 ; 2018 ; https://sjp.pensoft.net/ ; >
       au < frozen ; exists ; 2019 ; 2019 ; Swiss Journal of Palaeontology Volume 2019 ; 2019 ; https://sjp.pensoft.net/ ; >
-      au < ready ; exists ; 2020 ; 2020 ; Swiss Journal of Palaeontology Volume 2020 ; 2020 ; https://sjp.pensoft.net/ ; >
+      au < crawling ; exists ; 2020 ; 2020 ; Swiss Journal of Palaeontology Volume 2020 ; 2020 ; https://sjp.pensoft.net/ ; >
       au < ready ; exists ; 2021 ; 2021 ; Swiss Journal of Palaeontology Volume 2021 ; 2021 ; https://sjp.pensoft.net/ ; >
       au < frozen ; exists ; 2022 ; 2022 ; Swiss Journal of Palaeontology Volume 2022 ; 2022 ; https://sjp.pensoft.net/ ; >
       au < ready ; exists ; 2023 ; 2023 ; Swiss Journal of Palaeontology Volume 2023 ; 2023 ; https://sjp.pensoft.net/ ; >

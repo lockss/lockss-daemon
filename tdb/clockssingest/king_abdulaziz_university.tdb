@@ -35,7 +35,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jea
 
-      au < ready ; exists ; 2025 ; Journal of King Abdulaziz University: Economics and Administration Volume 39 ; 39 ; >
+      au < crawling ; exists ; 2025 ; Journal of King Abdulaziz University: Economics and Administration Volume 39 ; 39 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Economics and Administration Volume 40 ; 40 ; >
 
   }
@@ -98,7 +98,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmeds
 
-      au < ready ; exists ; 2025 ; Journal of King Abdulaziz University: Medical Sciences Volume 32 ; 32 ; >
+      au < crawling ; exists ; 2025 ; Journal of King Abdulaziz University: Medical Sciences Volume 32 ; 32 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Medical Sciences Volume 33 ; 33 ; >
 
   }

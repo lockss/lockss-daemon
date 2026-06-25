@@ -24,7 +24,7 @@
     param[journal_abbr] = lajm
     implicit < status ; status2 ; year ; name ; param[volume] ; param[base_url] ; hidden[proxy] >
 
-    au < ready ; exists ; 1985 ; Language Arts Journal of Michigan Volume 1 ; 1 ; https://scholarworks.gvsu.edu/ ; >
+    au < crawling ; exists ; 1985 ; Language Arts Journal of Michigan Volume 1 ; 1 ; https://scholarworks.gvsu.edu/ ; >
     au < frozen ; exists ; 1986 ; Language Arts Journal of Michigan Volume 2 ; 2 ; https://scholarworks.gvsu.edu/ ; >
     au < frozen ; exists ; 1987 ; Language Arts Journal of Michigan Volume 3 ; 3 ; https://scholarworks.gvsu.edu/ ; >
     au < frozen ; exists ; 1988 ; Language Arts Journal of Michigan Volume 4 ; 4 ; https://scholarworks.gvsu.edu/ ; >

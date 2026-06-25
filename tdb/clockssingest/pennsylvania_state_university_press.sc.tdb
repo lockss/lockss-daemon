@@ -479,7 +479,7 @@
 
       param[journal_id] = moravian-history
 
-      au < ready ; exists ; 2007 ; Journal of Moravian History Volume 2 ; 2 ; 2007 ; >
+      au < crawling ; exists ; 2007 ; Journal of Moravian History Volume 2 ; 2 ; 2007 ; >
       au < finished ; manifest ; 2007 ; Journal of Moravian History Volume 3 ; 3 ; 2007 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Journal of Moravian History Volume 4 ; 4 ; 2008 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2008 ; Journal of Moravian History Volume 5 ; 5 ; 2008 ; reingest2.clockss.org:8085 >
