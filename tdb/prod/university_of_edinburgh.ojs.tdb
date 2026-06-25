@@ -326,6 +326,42 @@
   {
 
       title <
+        name = Drawing On ;
+        eissn = 2059-9978
+      >
+
+      param[journal_id] = drawing-on
+      param[base_url] = https://open.journals.ed.ac.uk/
+
+      au < exists ; 2015 ; 1 ; Drawing On Volume 2015 ; 2015 >
+      au < exists ; 2018 ; 2 ; Drawing On Volume 2018 ; 2018 >
+      au < exists ; 2019 ; 3 ; Drawing On Volume 2019 ; 2019 >
+      au < exists ; 2025 ; 4 ; Drawing On Volume 2025 ; 2025 >
+      au < expected ; 2026 ; 5 ; Drawing On Volume 2026 ; 2026 >
+
+  }
+
+  {
+
+      title <
+        name = Edinburgh Student Literary Journal ;
+        eissn = 2979-1057
+      >
+
+      param[journal_id] = eslj
+      param[base_url] = https://open.journals.ed.ac.uk/
+
+      au < exists ; 2021 ; 1 ; Edinburgh Student Literary Journal Volume 2021 ; 2021 >
+      au < exists ; 2022 ; 2 ; Edinburgh Student Literary Journal Volume 2022 ; 2022 >
+      au < exists ; 2023 ; 3 ; Edinburgh Student Literary Journal Volume 2023 ; 2023 >
+      au < exists ; 2025 ; 4 ; Edinburgh Student Literary Journal Volume 2025 ; 2025 >
+      au < expected ; 2026 ; 5 ; Edinburgh Student Literary Journal Volume 2026 ; 2026 >
+
+  }
+
+  {
+
+      title <
         name = Social Science Protocols ;
         eissn = 2516-8053
       >
