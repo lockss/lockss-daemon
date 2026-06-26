@@ -123,6 +123,7 @@ public class DBMover extends Worker {
                                             DbManager.DEFAULT_MAX_RETRY_COUNT,
                                             DbManager.DEFAULT_RETRY_DELAY,
                                             DbManager.DEFAULT_FETCH_SIZE);
+          checkV2MetadataTableEmpty(conn);
           copyPostgresDb();
         } finally {
           DbManager.safeRollbackAndClose(conn);
