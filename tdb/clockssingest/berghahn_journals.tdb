@@ -358,7 +358,7 @@
       au < finished ; manifest ; 2007 ; Critical Survey Volume 19 ; 19 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2008 ; Critical Survey Volume 20 ; 20 ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2009 ; Critical Survey Volume 21 ; 21 ; >
-      au < ready ; exists ; 2010 ; Critical Survey Volume 22 ; 22 ; >
+      au < crawling ; exists ; 2010 ; Critical Survey Volume 22 ; 22 ; >
       au < doNotProcess ; doNotProcess ; 2011 ; Critical Survey Volume 23 ; 23 ; >
       au < doNotProcess ; doNotProcess ; 2012 ; Critical Survey Volume 24 ; 24 ; >
       au < doNotProcess ; doNotProcess ; 2013 ; Critical Survey Volume 25 ; 25 ; >
@@ -1319,7 +1319,7 @@
 
     au < crawling ; exists ; 1997 ; Theoria Volume 44 ; 44 ; >
     au < crawling ; exists ; 1998 ; Theoria Volume 45 ; 45 ; >
-    au < ready ; exists ; 1999 ; Theoria Volume 46 ; 46 ; >
+    au < crawling ; exists ; 1999 ; Theoria Volume 46 ; 46 ; >
     au < frozen ; exists ; 2000 ; Theoria Volume 47 ; 47 ; >
     au < frozen ; exists ; 2001 ; Theoria Volume 48 ; 48 ; >
     au < ready ; exists ; 2002 ; Theoria Volume 49 ; 49 ; >
