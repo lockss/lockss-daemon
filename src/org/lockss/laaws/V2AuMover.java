@@ -3016,6 +3016,7 @@ public class V2AuMover {
       RepositoryInfo ri = getRepoInfo();
       if (ri == null) {
         currentDiskSpace = null;
+        return;
       }
       StorageInfo data = ri.getStoreInfo();
       StorageInfo index = ri.getIndexInfo();
