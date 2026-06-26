@@ -540,33 +540,33 @@ public class DBMover extends Worker {
   private void waitForVersionTable(Connection conn, long deadlineMs)
       throws SQLException, MigrationTaskFailedException {
     while (!v2TableExists(conn, V2_DB_VERSION_TABLE)) {
-      log.debug("V2 version table does not exist yet, waiting...");
+      log.debug2("V2 version table does not exist yet, waiting...");
       sleepUntilDeadline(deadlineMs, "Timed out waiting for V2 version table to be created");
     }
-    log.debug2("V2 version table exists.");
+    log.debug("V2 version table exists.");
   }
 
   private void waitForVersionSubsystemColumn(Connection conn, long deadlineMs)
       throws SQLException, MigrationTaskFailedException {
     while (!v2ColumnExists(conn, V2_DB_VERSION_TABLE, V2_DB_SUBSYSTEM_COL)) {
-      log.debug("V2 version." + V2_DB_SUBSYSTEM_COL + " column does not exist yet, waiting...");
+      log.debug2("V2 version." + V2_DB_SUBSYSTEM_COL + " column does not exist yet, waiting...");
       sleepUntilDeadline(deadlineMs,
           "Timed out waiting for V2 version table subsystem column");
     }
-    log.debug2("V2 version." + V2_DB_SUBSYSTEM_COL + " column exists.");
+    log.debug("V2 version." + V2_DB_SUBSYSTEM_COL + " column exists.");
   }
 
   private void waitForDatabaseUpdate(Connection conn, int targetVersion, long deadlineMs)
       throws SQLException, MigrationTaskFailedException {
     int currentVersion = getV2DbVersion(conn);
     while (currentVersion < targetVersion) {
-      log.debug("V2 DB at version " + currentVersion +
+      log.debug2("V2 DB at version " + currentVersion +
                 ", target is " + targetVersion + ", waiting...");
       sleepUntilDeadline(deadlineMs,
           "Timed out waiting for V2 database to reach version " + targetVersion);
       currentVersion = getV2DbVersion(conn);
     }
-    log.debug2("V2 database at version " + currentVersion);
+    log.debug("V2 database at version " + currentVersion);
   }
 
   private boolean v2TableExists(Connection conn, String tableName) throws SQLException {
