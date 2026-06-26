@@ -117,16 +117,24 @@ public class DBMover extends Worker {
         log.info("v1 db size = " + srcSize + ", v2 db size = " + dstSize);
         auMover.dbBytesCopied = 0;
         auMover.dbBytesTotal = srcSize;
-        Connection conn = openV2Connection();
+        Connection v2Conn = openV2Connection();
         try {
-          DbManager.staticLockMetadataWrite(conn,
+          // Lock V2 DB
+          DbManager.staticLockMetadataWrite(v2Conn,
                                             DbManager.DEFAULT_MAX_RETRY_COUNT,
                                             DbManager.DEFAULT_RETRY_DELAY,
                                             DbManager.DEFAULT_FETCH_SIZE);
-          checkV2MetadataTableEmpty(conn);
-          copyPostgresDb();
+          checkV2MetadataTableEmpty(v2Conn);
+          Connection v1Conn = openV1Connection();
+          try {
+            // Lock V1 DB
+            dbManager.lockMetadataWrite(v1Conn);
+            copyPostgresDb();
+          } finally {
+            DbManager.safeRollbackAndClose(v1Conn);
+          }
         } finally {
-          DbManager.safeRollbackAndClose(conn);
+          DbManager.safeRollbackAndClose(v2Conn);
         }
       }
       else {
@@ -511,6 +519,18 @@ public class DBMover extends Worker {
     ds.setDatabaseName(v2dbname);
     ds.setUser(v2dbuser);
     ds.setPassword(v2dbpassword);
+    return
+      JdbcBridge.getConnection(ds, DbManager.DEFAULT_MAX_RETRY_COUNT,
+                               DbManager.DEFAULT_RETRY_DELAY, false);
+  }
+
+  Connection openV1Connection() throws SQLException {
+    PGSimpleDataSource ds = new PGSimpleDataSource();
+    ds.setServerName(ensureIPv4Host(ensureIPv4Host(v1host)));
+    ds.setPortNumber(Integer.parseInt(v1port));
+    ds.setDatabaseName(v1dbname);
+    ds.setUser(v1user);
+    ds.setPassword(v1password);
     return
       JdbcBridge.getConnection(ds, DbManager.DEFAULT_MAX_RETRY_COUNT,
                                DbManager.DEFAULT_RETRY_DELAY, false);
