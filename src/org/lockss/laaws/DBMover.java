@@ -292,6 +292,8 @@ public class DBMover extends Worker {
         "pg_dump", "-a", "--disable-triggers",
         "--exclude-table=version",
         "--exclude-table=" + SqlConstants.METADATA_WRITE_LOCK_TABLE,
+        "--exclude-table=" + SqlConstants.MD_ITEM_TYPE_TABLE,
+        "--exclude-table=" + SqlConstants.UNCONFIGURED_AU_TABLE,
         "-S", v2dbuser,
         "-h", ensureIPv4Host(v1host), "-p", v1port,
         "-U", v1user, "-d", v1dbname);
