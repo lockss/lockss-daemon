@@ -59,7 +59,6 @@ import org.lockss.plugin.AuUtil;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.Plugin.Feature;
 import org.lockss.plugin.PluginManager;
-import org.lockss.scheduler.Schedule;
 import org.lockss.util.Constants;
 import org.lockss.util.KeyPair;
 import org.lockss.util.Logger;
@@ -304,7 +303,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     Running, // if the reindexing task is running
     Success, // if the reindexing task was successful
     Failed, // if the reindexing task failed
-    Rescheduled // if the reindexing task was rescheduled
+    Rescheduled, // if the reindexing task was rescheduled to be retried later
+    Cancelled // if the reindexing task was aborted by request without committing
   };
 
   // The SQL code executor.
@@ -561,16 +561,16 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
     // Quit any running reindexing tasks.
     //
-    // Do NOT clear() activeReindexingTasks here. cancel() only marks each task
-    // Failed/finished; the worker runs on its own thread and may not observe that
+    // Do NOT clear() activeReindexingTasks here. cancel() only requests
+    // cancellation; the worker runs on its own thread and may not observe that
     // for some time (e.g. while blocked in DB/buffer I/O), so the AU is still
     // being indexed after this returns. activeReindexingTasks is the sole dedup
     // guard (startReindexing skips AUs already in it) and also enforces the
     // maxReindexingTasks limit. Clearing it here releases the slot out from under
     // the still-live worker, so a concurrent crawl-completion can relaunch the
-    // same AU -> two indexers for one AU. Each task already removes its own entry
-    // when it actually finishes (ReindexingTask.handleFinishEvent), which keeps
-    // the AU deduped until the worker truly stops.
+    // same AU -> two indexers for one AU. Each task removes its own entry when it
+    // actually finishes (ReindexingTask.cleanup), which keeps the AU deduped
+    // until the worker truly stops.
     synchronized (activeReindexingTasks) {
       for (ReindexingTask task : activeReindexingTasks.values()) {
         task.cancel();
@@ -908,8 +908,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   private void runReindexingTask(final ReindexingTask task) {
     /*
-     * Temporarily running task in its own thread rather than using SchedService
-     * 
+     * The task is run directly on its own thread rather than through the
+     * SchedService. ReindexingTask owns its entire lifecycle (setup, metadata
+     * extraction, and the database update); the runnable only provides the
+     * watchdog and thread name.
+     *
      * @todo Update SchedService to handle this case
      */
     LockssRunnable runnable =
@@ -919,14 +922,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 	    startWDog(WDOG_PARAM_INDEXER, WDOG_DEFAULT_INDEXER);
 	    task.setWDog(this);
 
-	    task.handleEvent(Schedule.EventType.START);
-
-	    while (!task.isFinished()) {
-	      task.step(Integer.MAX_VALUE);
+	    try {
+	      task.reindex();
+	    } finally {
+	      stopWDog();
 	    }
-
-	    task.handleEvent(Schedule.EventType.FINISH);
-	    stopWDog();
 	  }
 	};
 

@@ -51,6 +51,7 @@ import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
 import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
+import org.lockss.metadata.MetadataManager.ReindexingStatus;
 import org.lockss.metadata.TestMetadataManager.MySubTreeArticleIteratorFactory;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
@@ -156,6 +157,51 @@ public class TestAuMetadataRecorder extends LockssTestCase {
     runValidateMetadataTest();
     runRecordProceedingsTest();
     runRecordFileTest();
+    runRecordCancelledTask();
+    runReindexingTaskStateTransitionsTest();
+  }
+
+  /**
+   * Verifies the ReindexingTask terminal-state transitions driven by cancel()
+   * and reschedule(), including their precedence. cancel() always wins, which is
+   * what makes cancellation authoritative over a racing reschedule.
+   *
+   * @throws Exception
+   */
+  private void runReindexingTaskStateTransitionsTest() throws Exception {
+    ArticleMetadataExtractor ame = sau0.getPlugin()
+        .getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0);
+
+    // A fresh task is Running and not cancelled.
+    ReindexingTask t1 = newReindexingTask(sau0, ame);
+    assertEquals(ReindexingStatus.Running, t1.getReindexingStatus());
+    assertFalse(t1.isCancelled());
+
+    // reschedule() moves Running -> Rescheduled without marking it cancelled.
+    ReindexingTask t2 = newReindexingTask(sau0, ame);
+    t2.reschedule();
+    assertEquals(ReindexingStatus.Rescheduled, t2.getReindexingStatus());
+    assertFalse(t2.isCancelled());
+
+    // cancel() moves Running -> Cancelled and marks it cancelled.
+    ReindexingTask t3 = newReindexingTask(sau0, ame);
+    t3.cancel();
+    assertEquals(ReindexingStatus.Cancelled, t3.getReindexingStatus());
+    assertTrue(t3.isCancelled());
+
+    // cancel() wins over a subsequent reschedule().
+    ReindexingTask t4 = newReindexingTask(sau0, ame);
+    t4.cancel();
+    t4.reschedule();
+    assertEquals(ReindexingStatus.Cancelled, t4.getReindexingStatus());
+    assertTrue(t4.isCancelled());
+
+    // cancel() also wins over a prior reschedule().
+    ReindexingTask t5 = newReindexingTask(sau0, ame);
+    t5.reschedule();
+    t5.cancel();
+    assertEquals(ReindexingStatus.Cancelled, t5.getReindexingStatus());
+    assertTrue(t5.isCancelled());
   }
 
   ReindexingTask newReindexingTask(ArchivalUnit au,
@@ -252,6 +298,61 @@ public class TestAuMetadataRecorder extends LockssTestCase {
       // Check that nArticles articles for each of the nTitle titles
       assertEquals(nTitles*nArticles, 
                    countAuMetadataItems(conn) - initialArticleCount);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+  }
+
+  /**
+   * Verifies that AuMetadataRecorder aborts without writing anything when the
+   * reindexing task has been cancelled.
+   *
+   * @throws Exception
+   */
+  private void runRecordCancelledTask() throws Exception {
+    Connection conn = null;
+
+    try {
+      conn = dbManager.getConnection();
+
+      // Capture the initial counts.
+      int initialPublisherCount = countPublishers(conn);
+      assertNotEquals(-1, initialPublisherCount);
+      int initialPublicationCount = countPublications(conn);
+      assertNotEquals(-1, initialPublicationCount);
+      int initialAuMdCount = countArchivalUnits(conn);
+      assertNotEquals(-1, initialAuMdCount);
+      int initialArticleCount = countAuMetadataItems(conn);
+      assertNotEquals(-1, initialArticleCount);
+
+      int nTitles = 1;
+      int nArticles = 6;
+      ArticleMetadataBuffer metadata = getJournalMetadata("CancelPublisher",
+          nTitles, nArticles, false, false, null, false);
+
+      ReindexingTask task = newReindexingTask(sau0, sau0.getPlugin()
+          .getArticleMetadataExtractor(MetadataTarget.OpenURL(), sau0));
+
+      // Cancel the task before recording any metadata.
+      task.cancel();
+      assertTrue(task.isCancelled());
+
+      // The recorder must abort with a CancelException rather than write the
+      // metadata.
+      try {
+        new AuMetadataRecorder(task, metadataManager, sau0)
+            .recordMetadata(conn, metadata.iterator());
+        fail("recordMetadata should have aborted with a CancelException");
+      } catch (ReindexingTask.CancelException expected) {
+        // Expected.
+      }
+
+      // Nothing should have been written to the database, not even uncommitted
+      // in this transaction.
+      assertEquals(0, countPublishers(conn) - initialPublisherCount);
+      assertEquals(0, countPublications(conn) - initialPublicationCount);
+      assertEquals(0, countArchivalUnits(conn) - initialAuMdCount);
+      assertEquals(0, countAuMetadataItems(conn) - initialArticleCount);
     } finally {
       DbManager.safeRollbackAndClose(conn);
     }

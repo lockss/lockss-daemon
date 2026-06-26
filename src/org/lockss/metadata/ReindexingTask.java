@@ -42,18 +42,46 @@ import org.lockss.extractor.MetadataException.ValidationException;
 import org.lockss.metadata.ArticleMetadataBuffer.ArticleMetadataInfo;
 import org.lockss.metadata.MetadataManager.ReindexingStatus;
 import org.lockss.plugin.*;
-import org.lockss.scheduler.*;
 import org.lockss.util.*;
 
 /**
- * Implements a reindexing task that extracts metadata from all the articles in
- * the specified AU.
+ * A reindexing task that extracts metadata from all the articles in the
+ * specified AU and records it in the metadata database.
+ * <p>
+ * The task is <b>not</b> scheduled through the {@link
+ * org.lockss.scheduler.TaskRunner}; it is run directly on a dedicated thread by
+ * {@link MetadataManager#runReindexingTask}, which simply calls {@link
+ * #reindex()}. The lifecycle has three phases:
+ * <ol>
+ * <li>{@link #setUp} - build the article iterator and metadata buffer.</li>
+ * <li>{@link #extract} - extract metadata from each article into the buffer
+ *     ("Indexing" phase).</li>
+ * <li>{@link #updateDb} - write the accumulated metadata to the database
+ *     ("Updating" phase).</li>
+ * </ol>
+ * <p>
+ * The task has a single, explicit terminal state, exposed via {@link
+ * #getReindexingStatus}:
+ * <ul>
+ * <li>{@link ReindexingStatus#Success} - metadata extracted and committed.</li>
+ * <li>{@link ReindexingStatus#Failed} - an error prevented completion; the AU
+ *     is re-queued at a low priority so it is not retried until the underlying
+ *     problem is fixed.</li>
+ * <li>{@link ReindexingStatus#Rescheduled} - a transient condition prevented
+ *     completion; the AU is re-queued normally to be retried later.</li>
+ * <li>{@link ReindexingStatus#Cancelled} - the task was aborted by request
+ *     (abort priority, disable indexing, AU deletion, or shutdown). Nothing is
+ *     committed and the pending queue is left untouched, so the caller that
+ *     requested cancellation retains full control over the AU's fate.</li>
+ * </ul>
+ * <p>
+ * Cancellation is authoritative: {@link #cancelRequested} is the master switch
+ * checked by every commit / reschedule / fail-to-pending decision, and by
+ * {@link AuMetadataRecorder} as it writes, so a cancellation that arrives even
+ * in the middle of the database write aborts the write without committing.
  */
-public class ReindexingTask extends StepTask {
+public class ReindexingTask {
   private static Logger log = Logger.getLogger(ReindexingTask.class);
-
-  // The default number of steps for this task.
-  private static final int default_steps = 10;
 
   // The archival unit for this task.
   private final ArchivalUnit au;
@@ -70,15 +98,29 @@ public class ReindexingTask extends StepTask {
 
   // An indication of whether the AU being indexed is new to the index.
   private volatile boolean isNewAu = true;
-  
+
   // An indication of whether the AU being indexed needs a full reindex
   private volatile boolean needFullReindex = false;
 
   // The time from which to extract new metadata.
   private long lastExtractTime = 0;
 
-  // The status of the task: successful if true.
+  // The status of the task.
   private volatile ReindexingStatus status = ReindexingStatus.Running;
+
+  // True once cancellation has been requested. This is the authoritative switch:
+  // when set, no metadata is committed, the AU is not re-queued, and the task
+  // ends in the Cancelled state. Checked by the worker, by the database commit
+  // linearization point, and by AuMetadataRecorder while it writes.
+  private volatile boolean cancelRequested = false;
+
+  // True once the metadata has been committed to the database. Guarded by this.
+  // Once committed, a late cancellation is a no-op (the data is already
+  // persisted) and the task is reported as Success.
+  private boolean committed = false;
+
+  // The exception, if any, that caused the task to fail.
+  private volatile Exception exception = null;
 
   // The number of articles indexed by this task.
   private volatile long indexedArticleCount = 0;
@@ -133,8 +175,20 @@ public class ReindexingTask extends StepTask {
   }
 
   /**
+   * Thrown internally to unwind out of the metadata write when the task has
+   * been cancelled, so that the database transaction is rolled back rather than
+   * committed. It is unchecked so {@link AuMetadataRecorder} can throw it from
+   * deep within the record loop without changing method signatures.
+   */
+  public static class CancelException extends RuntimeException {
+    CancelException() {
+      super("Reindexing task cancelled");
+    }
+  }
+
+  /**
    * Constructor.
-   * 
+   *
    * @param theAu
    *          An ArchivalUnit with the AU for the task.
    * @param theAe
@@ -142,13 +196,6 @@ public class ReindexingTask extends StepTask {
    *          be used.
    */
   public ReindexingTask(ArchivalUnit theAu, ArticleMetadataExtractor theAe) {
-    // NOTE: estimated window time interval duration not currently used.
-    super(
-          new TimeInterval(TimeBase.nowMs(), TimeBase.nowMs() + Constants.HOUR),
-          0, // estimatedDuration.
-          null, // TaskCallback.
-          null); // Object cookie.
-
     this.au = theAu;
     this.ae = theAe;
     this.auName = au.getName();
@@ -160,10 +207,6 @@ public class ReindexingTask extends StepTask {
 
     // The accumulator of article metadata.
     emitter = new ReindexingEmitter();
-
-    // Set the task event handler callback after construction to ensure that the
-    // instance is initialized.
-    callback = new ReindexingEventHandler();
   }
 
   public void setWDog(LockssWatchdog watchDog) {
@@ -174,114 +217,511 @@ public class ReindexingTask extends StepTask {
     watchDog.pokeWDog();
   }
 
+  // ///////////////////////////////////////////////////////////////////////////
+  // Lifecycle
+  // ///////////////////////////////////////////////////////////////////////////
+
   /**
-   * Cancels the current task without rescheduling it.
+   * Runs the complete reindexing lifecycle on the calling thread. Both {@link
+   * #updateDb} and {@link #cleanup} are invoked exactly once, on every path
+   * (normal completion, setup/extraction/commit error, cancellation, or an
+   * unexpected throwable). Running updateDb() unconditionally is what guarantees
+   * that even an unchecked throwable from {@link #setUp} or {@link #extract}
+   * (e.g. the article iterator throwing) still records the "Updating" timestamp
+   * and de-prioritizes the failed AU, rather than leaving it looking like it is
+   * still indexing and immediately respawning it. The watchdog must have been
+   * set with {@link #setWDog} before calling.
    */
-  @Override
-  public void cancel() {
-    if (log.isDebug2()) {
-      log.debug2("Task canceled: " + au.getName(), new Throwable());
-    } else {
-      log.debug("Task canceled: " + au.getName());
-    }
-    if (!isFinished() && (status == ReindexingStatus.Running)) {
-      status = ReindexingStatus.Failed;
-      super.cancel();
-      setFinished();
+  void reindex() {
+    try {
+      try {
+        setUp();
+
+        // Only extract if setUp succeeded and we have not been cancelled.
+        if (status == ReindexingStatus.Running && !cancelRequested) {
+          extract();
+        }
+      } catch (Throwable t) {
+        // An unchecked throwable escaped setUp/extract (e.g. building or
+        // advancing the article iterator). Record it as a failure and fall
+        // through to updateDb()/cleanup() below.
+        log.error("Unexpected error indexing AU '" + auName + "'", t);
+        setStatusIfRunning(ReindexingStatus.Failed,
+            (t instanceof Exception) ? (Exception) t : new RuntimeException(t));
+      }
+
+      // Always run the finish phase so the terminal status, timings, and
+      // pending-queue bookkeeping are consistent for every path.
+      updateDb();
+    } catch (Throwable t) {
+      // updateDb() handles its own errors; this is a last-resort backstop so a
+      // stuck task can never prevent cleanup from running.
+      log.error("Unexpected error finishing reindexing task for AU '" + auName
+          + "'", t);
+    } finally {
+      cleanup();
     }
   }
 
   /**
-   * Extracts the metadata from the next group of articles.
-   * 
-   * @param n
-   *          An int with the amount of work to do.
-   * TODO: figure out what the amount of work means
+   * Sets up the article iterator and metadata buffer ("Indexing" phase begins).
    */
-  @Override
-  public int step(int n) {
-    final String DEBUG_HEADER = "step(): ";
-    int steps = (n <= 0) ? default_steps : n;
-    log.debug3(DEBUG_HEADER + "step: " + steps + ", has articles: "
-        + articleIterator.hasNext());
+  private void setUp() {
+    final String DEBUG_HEADER = "setUp(): ";
 
-    while (!isFinished() && (extractedCount <= steps)
-        && articleIterator.hasNext()) {
-      log.debug3(DEBUG_HEADER + "Getting the next ArticleFiles...");
+    // Record the start times.
+    startCpuTime = threadCpuTime();
+    startUserTime = threadUserTime();
+    startClockTime = TimeBase.nowMs();
+
+    log.info("Starting reindexing task for AU '" + auName + "': isNewAu = "
+        + isNewAu + ", needFullReindex = " + needFullReindex + "...");
+
+    // Notify the start here, before any early return, so it is always paired
+    // with the notifyFinishReindexingAu that cleanup() unconditionally fires.
+    mdManager.notifyStartReindexingAu(au);
+
+    // Don't build the (potentially expensive) iterator if we are already
+    // cancelled; updateDb()/cleanup() will report Cancelled.
+    if (cancelRequested) {
+      return;
+    }
+
+    MetadataTarget target = MetadataTarget.OpenURL();
+
+    // Only allow incremental extraction if the AU is not new and not doing a
+    // full reindex.
+    if (!isNewAu && !needFullReindex) {
+      if (log.isDebug2())
+        log.debug2(DEBUG_HEADER + "lastExtractTime = " + lastExtractTime);
+      // Indicate that only new metadata after the last extraction is to be
+      // included.
+      target.setIncludeFilesChangedAfter(lastExtractTime);
+    }
+
+    // The article iterator won't be null because only AUs with article
+    // iterators are queued for processing.
+    articleIterator = au.getArticleIterator(target);
+
+    if (log.isDebug3()) {
+      long articleIteratorInitTime = TimeBase.nowMs() - startClockTime;
+      log.debug3(DEBUG_HEADER + "Reindexing task for AU '" + auName
+          + "': has articles? " + articleIterator.hasNext()
+          + ", initializing iterator took " + articleIteratorInitTime + "ms");
+    }
+
+    try {
+      articleMetadataInfoBuffer =
+          new ArticleMetadataBuffer(new File(PlatformUtil.getSystemTempDir()));
+    } catch (IOException ioe) {
+      log.error("Failed to set up pending AU '" + auName
+          + "' for re-indexing", ioe);
+      setStatusIfRunning(ReindexingStatus.Rescheduled, ioe);
+    }
+  }
+
+  /**
+   * Extracts the metadata from all the AU's articles into the buffer.
+   */
+  private void extract() {
+    final String DEBUG_HEADER = "extract(): ";
+
+    while (articleIterator.hasNext()) {
+      // Stop promptly if the task is no longer Running, i.e. another thread has
+      // cancelled (status -> Cancelled) or rescheduled (status -> Rescheduled)
+      // it. Keying off status rather than just cancelRequested ensures a
+      // reschedule aborts the extraction immediately instead of letting it run
+      // to completion only to be discarded.
+      if (status != ReindexingStatus.Running) {
+        log.debug2(DEBUG_HEADER + "Stopping extraction of AU '" + auName
+            + "': status = " + status);
+        return;
+      }
+
       ArticleFiles af = articleIterator.next();
       try {
         ae.extract(MetadataTarget.OpenURL(), af, emitter);
       } catch (org.lockss.repository.LockssRepository.RepositoryStateException ex) {
         log.error("Error extracting metadata for full text URL, continuing: "
-                      + af.getFullTextUrl(), ex);
-	errorArticleCount++;
+            + af.getFullTextUrl(), ex);
+        errorArticleCount++;
       } catch (IOException ex) {
         log.error("Failed to index metadata for full text URL: "
-                      + af.getFullTextUrl(), ex);
-        setFinished();
-        if (status == ReindexingStatus.Running) {
-          status = ReindexingStatus.Rescheduled;
-          indexedArticleCount = 0;
-        }
+            + af.getFullTextUrl(), ex);
+        indexedArticleCount = 0;
+        setStatusIfRunning(ReindexingStatus.Rescheduled, ex);
+        return;
       } catch (PluginException ex) {
         log.error("Failed to index metadata for full text URL: "
-                      + af.getFullTextUrl(), ex);
-        setFinished();
-        if (status == ReindexingStatus.Running) {
-          status = ReindexingStatus.Failed;
-          indexedArticleCount = 0;
-        }
+            + af.getFullTextUrl(), ex);
+        indexedArticleCount = 0;
+        setStatusIfRunning(ReindexingStatus.Failed, ex);
+        return;
       } catch (RuntimeException ex) {
         log.error("Caught unexpected RuntimeException for full text URL: "
-                      + af.getFullTextUrl(), ex);
-        setFinished();
-        if (status == ReindexingStatus.Running) {
-          status = ReindexingStatus.Failed;
-          indexedArticleCount = 0;
-        }
+            + af.getFullTextUrl(), ex);
+        indexedArticleCount = 0;
+        setStatusIfRunning(ReindexingStatus.Failed, ex);
+        return;
       } catch (Throwable ex) {
         log.error("Caught unexpected Throwable for full text URL: "
-                      + af.getFullTextUrl(), ex);
-        setFinished();
-        status = ReindexingStatus.Failed;
-        throw ex;
+            + af.getFullTextUrl(), ex);
+        setStatusIfRunning(ReindexingStatus.Failed,
+            (ex instanceof Exception) ? (Exception) ex : new RuntimeException(ex));
+        return;
       }
-      
+
       pokeWDog();
     }
-
-    log.debug3(DEBUG_HEADER + "isFinished() = " + isFinished());
-    if (!isFinished()) {
-      // finished if all articles handled
-      if (!articleIterator.hasNext()) {
-        setFinished();
-        log.debug3(DEBUG_HEADER + "isFinished() = " + isFinished());
-      }
-    }
-
-    log.debug3(DEBUG_HEADER + "extractedCount = " + extractedCount);
-    return extractedCount;
   }
 
   /**
-   * Cancels and marks the current task for rescheduling.
+   * Writes the accumulated metadata to the database ("Updating" phase), or, for
+   * an unsuccessful or cancelled task, performs the appropriate pending-queue
+   * bookkeeping. Never commits if cancellation has been requested.
+   */
+  private void updateDb() {
+    // "Updating" phase begins. Recorded on every path so the UI shows a sane
+    // index/update split even for unsuccessful tasks.
+    startUpdateClockTime = TimeBase.nowMs();
+
+    if (cancelRequested) {
+      // Cancelled during setUp/extract: do not commit and do not touch the
+      // pending queue; the canceller owns the AU's fate.
+      log.debug2("Reindexing task for AU '" + auName
+          + "' was cancelled; not committing.");
+      return;
+    }
+
+    // Extraction completed normally: attempt to commit the metadata.
+    if (status == ReindexingStatus.Running) {
+      commitMetadata();
+    }
+
+    // commitMetadata (or extraction) may have ended in a non-committed,
+    // non-cancelled terminal state; update the pending queue accordingly.
+    if (status == ReindexingStatus.Failed
+        || status == ReindexingStatus.Rescheduled) {
+      updatePendingQueueForUnsuccessful();
+    }
+  }
+
+  /**
+   * Commits the accumulated metadata to the database. On success sets the status
+   * to {@link ReindexingStatus#Success}; on error sets it to {@link
+   * ReindexingStatus#Failed} or {@link ReindexingStatus#Rescheduled} (unless
+   * cancellation intervened). If cancellation is observed at the commit
+   * linearization point, the transaction is rolled back and the status is left
+   * as {@link ReindexingStatus#Cancelled}.
+   */
+  private void commitMetadata() {
+    final String DEBUG_HEADER = "commitMetadata(): ";
+    Connection conn = null;
+    long removedArticleCount = 0L;
+
+    try {
+      // Get a connection to the database.
+      conn = dbManager.getConnection();
+      dbManager.lockMetadataWrite(conn);
+
+      if (log.isDebug3())
+        log.debug3(DEBUG_HEADER + "needFullReindex = " + needFullReindex);
+
+      // For a full reindex, remove the old Archival Unit metadata before adding
+      // the new metadata.
+      if (needFullReindex) {
+        removedArticleCount = mdManagerSql.removeAuMetadataItems(conn, auId);
+        log.info("Reindexing task for AU '" + auName + "' removed "
+            + removedArticleCount + " database items.");
+      }
+
+      Iterator<ArticleMetadataInfo> mditr =
+          articleMetadataInfoBuffer.iterator();
+
+      if (needFullReindex && !mditr.hasNext()) {
+        log.warning("Non-incremental reindexing task for AU '" + auName
+            + "' failed to extract any items.");
+      }
+
+      // Write the AU metadata (or just record the extraction). AuMetadataRecorder
+      // checks isCancelled() as it writes and throws CancelException to abort.
+      if (mditr.hasNext()) {
+        new AuMetadataRecorder(this, mdManager, au).recordMetadata(conn, mditr);
+        pokeWDog();
+      } else {
+        new AuMetadataRecorder(this, mdManager, au)
+            .recordMetadataExtraction(conn);
+      }
+
+      // Remove the AU just re-indexed from the list of AUs pending to be
+      // re-indexed.
+      mdManagerSql.removeFromPendingAus(conn, auId);
+      mdManager.updatePendingAusCount(conn);
+
+      // Commit linearization point: either cancellation has been requested (so
+      // we roll back and remain Cancelled) or we commit and become Success.
+      // Holding the lock across the commit makes a concurrent cancel() either
+      // win (it set cancelRequested before we got here) or become a no-op (it
+      // sees committed == true).
+      synchronized (this) {
+        if (cancelRequested) {
+          throw new CancelException();
+        }
+        DbManager.commitOrRollback(conn, log);
+        committed = true;
+        status = ReindexingStatus.Success;
+      }
+
+      // Update the successful re-indexing count.
+      mdManager.addToSuccessfulReindexingTasks(this);
+
+      // Update the total article count.
+      mdManager.addToMetadataArticleCount(updatedArticleCount
+          - removedArticleCount);
+
+      if (needFullReindex) {
+        log.info("Reindexing task for AU '" + auName + "' added "
+            + updatedArticleCount + " database articles.");
+      } else {
+        log.info("Reindexing task for AU '" + auName + "' updated "
+            + updatedArticleCount + " database articles.");
+      }
+    } catch (CancelException ce) {
+      // Cancelled in the middle of the metadata write: nothing is committed and
+      // the pending queue is left untouched. status is already Cancelled.
+      log.info("Reindexing task for AU '" + auName
+          + "' cancelled during metadata update; rolled back.");
+    } catch (MetadataException me) {
+      log.warning("Error updating metadata at FINISH for " + status
+          + " -- NOT rescheduling", me);
+      log.warning("ArticleMetadataInfo = " + me.getArticleMetadataInfo());
+      setStatusIfRunning(ReindexingStatus.Failed, me);
+    } catch (DbException dbe) {
+      log.warning("Error updating metadata at FINISH for " + status
+          + " -- rescheduling", dbe);
+      setStatusIfRunning(ReindexingStatus.Rescheduled, dbe);
+    } catch (RuntimeException re) {
+      log.warning("Error updating metadata at FINISH for " + status
+          + " -- NOT rescheduling", re);
+      setStatusIfRunning(ReindexingStatus.Failed, re);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+  }
+
+  /**
+   * Updates the pending-AUs queue for a task that did not complete and was not
+   * cancelled: failed tasks are re-queued at a low priority (so they are not
+   * retried until the underlying problem is fixed); rescheduled tasks are
+   * re-queued normally to be retried later.
+   */
+  private void updatePendingQueueForUnsuccessful() {
+    final String DEBUG_HEADER = "updatePendingQueueForUnsuccessful(): ";
+    if (log.isDebug3()) log.debug3(DEBUG_HEADER + "Reindexing task for AU '"
+        + auName + "' was unsuccessful: status = " + status);
+
+    mdManager.addToFailedReindexingTasks(this);
+
+    Connection conn = null;
+    try {
+      conn = dbManager.getConnection();
+
+      mdManagerSql.removeFromPendingAus(conn, auId);
+      mdManager.updatePendingAusCount(conn);
+
+      if (status == ReindexingStatus.Failed) {
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER
+            + "Marking as failed the reindexing task for AU '" + auName + "'");
+
+        // Add the failed AU to the pending list with the right priority to
+        // avoid processing it again before the underlying problem is fixed.
+        mdManagerSql.addFailedIndexingAuToPendingAus(conn, auId);
+      } else if (status == ReindexingStatus.Rescheduled) {
+        if (log.isDebug3()) log.debug3(DEBUG_HEADER
+            + "Rescheduling the reindexing task AU '" + auName + "'");
+
+        // Add the re-schedulable AU to the end of the pending list.
+        mdManager.addToPendingAusIfNotThere(conn,
+            Collections.singleton(au), needFullReindex);
+      }
+
+      // Commit the pending-queue changes, unless cancellation has intervened
+      // since updateDb() decided this task was unsuccessful. A cancel must leave
+      // the pending queue untouched (the canceller owns the AU's fate), so we
+      // roll back rather than re-queue. This mirrors the commit linearization
+      // in commitMetadata and acquires only this task's monitor, never
+      // activeReindexingTasks, so the lock order is preserved.
+      synchronized (this) {
+        if (cancelRequested) {
+          log.debug2("Reindexing task for AU '" + auName
+              + "' cancelled before re-queue committed; pending queue left"
+              + " untouched.");
+          return;
+        }
+        // Complete the database transaction.
+        DbManager.commitOrRollback(conn, log);
+      }
+    } catch (DbException dbe) {
+      log.warning("Error updating pending queue at FINISH for AU '" + auName
+          + "', status = " + status, dbe);
+    } finally {
+      DbManager.safeRollbackAndClose(conn);
+    }
+  }
+
+  /**
+   * Finalizes the task: records timings, releases resources, removes the task
+   * from the active set, notifies listeners of the terminal status, and starts
+   * the next pending task. Runs exactly once per task, on every path.
+   */
+  private void cleanup() {
+    articleIterator = null;
+    endClockTime = TimeBase.nowMs();
+    endCpuTime = threadCpuTime();
+    endUserTime = threadUserTime();
+
+    // Display timings.
+    long elapsedCpuTime = endCpuTime - startCpuTime;
+    long elapsedUserTime = endUserTime - startUserTime;
+    long elapsedClockTime = endClockTime - startClockTime;
+
+    log.info("Finished reindexing task for AU '" + auName + "': status = "
+        + status + ", CPU time: " + elapsedCpuTime / 1.0e9 + " ("
+        + endCpuTime / 1.0e9 + "), User time: " + elapsedUserTime / 1.0e9
+        + " (" + endUserTime / 1.0e9 + "), Clock time: "
+        + elapsedClockTime / 1.0e3 + " (" + endClockTime / 1.0e3 + ")");
+
+    // Release collected metadata info once finished. Null-safe: the buffer may
+    // never have been created (e.g. setUp failed or the task was cancelled
+    // before setUp built it).
+    if (articleMetadataInfoBuffer != null) {
+      articleMetadataInfoBuffer.close();
+      articleMetadataInfoBuffer = null;
+    }
+
+    synchronized (mdManager.activeReindexingTasks) {
+      // Only remove our own mapping. If the slot was freed early (e.g. by
+      // disableAuIndexing) and a successor task for the same AU was started,
+      // remove(auId) would evict that live successor and leave it untracked;
+      // remove(auId, this) removes the entry only if it still maps to us.
+      mdManager.activeReindexingTasks.remove(auId, this);
+      mdManager.notifyFinishReindexingAu(au, status);
+
+      Connection conn = null;
+      try {
+        // Get a connection to the database.
+        conn = dbManager.getConnection();
+
+        // Schedule another task if available.
+        mdManager.startReindexing(conn);
+
+        // Complete the database transaction.
+        DbManager.commitOrRollback(conn, log);
+      } catch (DbException dbe) {
+        log.error("Cannot restart indexing", dbe);
+      } finally {
+        DbManager.safeRollbackAndClose(conn);
+      }
+    }
+  }
+
+  // ///////////////////////////////////////////////////////////////////////////
+  // State control
+  // ///////////////////////////////////////////////////////////////////////////
+
+  /**
+   * Requests cancellation of this task. Unless the metadata has already been
+   * committed, the task ends in the {@link ReindexingStatus#Cancelled} state,
+   * does not commit any metadata, and leaves the pending queue untouched. May be
+   * called from any thread at any point in the task's life.
+   */
+  public void cancel() {
+    if (log.isDebug2()) {
+      log.debug2("Task cancel requested: " + auName, new Throwable());
+    } else {
+      log.debug("Task cancel requested: " + auName);
+    }
+
+    synchronized (this) {
+      cancelRequested = true;
+      // If the metadata has already been committed, the work is durably done;
+      // leave the (Success) status alone. Otherwise this is an abort.
+      if (!committed) {
+        status = ReindexingStatus.Cancelled;
+      }
+    }
+  }
+
+  /**
+   * Requests that this task be cancelled and the AU re-queued to be reindexed
+   * later. Has no effect if the task has already been cancelled or committed.
    */
   void reschedule() {
     if (log.isDebug2()) {
-      log.debug2("Task rescheduled: " + au.getName(), new Throwable());
+      log.debug2("Task reschedule requested: " + auName, new Throwable());
     } else {
-      log.debug("Task rescheduled: " + au.getName());
+      log.debug("Task reschedule requested: " + auName);
     }
-    if (!isFinished() && (status == ReindexingStatus.Running)) {
-      status = ReindexingStatus.Rescheduled;
-      super.cancel();
-      setFinished();
+
+    synchronized (this) {
+      if (committed || cancelRequested) {
+        return;
+      }
+      if (status == ReindexingStatus.Running) {
+        status = ReindexingStatus.Rescheduled;
+      }
     }
   }
 
   /**
+   * Provides an indication of whether cancellation of this task has been
+   * requested. Consulted by {@link AuMetadataRecorder} so a long database write
+   * can be abandoned promptly without committing.
+   *
+   * @return <code>true</code> if cancellation has been requested.
+   */
+  public boolean isCancelled() {
+    return cancelRequested;
+  }
+
+  /**
+   * Transitions to the given terminal status only if the task is still running
+   * and has not been cancelled. Cancellation always wins, so this never
+   * overwrites a Cancelled status with Failed/Rescheduled (which would, e.g.,
+   * wrongly re-queue a cancelled or already-deleted AU).
+   *
+   * @param newStatus
+   *          the terminal status to set.
+   * @param ex
+   *          the causing exception, or <code>null</code>.
+   */
+  private synchronized void setStatusIfRunning(ReindexingStatus newStatus,
+      Exception ex) {
+    if (status == ReindexingStatus.Running && !cancelRequested) {
+      status = newStatus;
+      if (ex != null) {
+        exception = ex;
+      }
+    }
+  }
+
+  private static long threadCpuTime() {
+    return tmxb.isCurrentThreadCpuTimeSupported()
+        ? tmxb.getCurrentThreadCpuTime() : 0;
+  }
+
+  private static long threadUserTime() {
+    return tmxb.isCurrentThreadCpuTimeSupported()
+        ? tmxb.getCurrentThreadUserTime() : 0;
+  }
+
+  // ///////////////////////////////////////////////////////////////////////////
+  // Accessors
+  // ///////////////////////////////////////////////////////////////////////////
+
+  /**
    * Returns the task AU.
-   * 
+   *
    * @return an ArchivalUnit with the AU of this task.
    */
   ArchivalUnit getAu() {
@@ -290,7 +730,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Returns the name of the task AU.
-   * 
+   *
    * @return a String with the name of the task AU.
    */
   String getAuName() {
@@ -299,7 +739,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Returns the auid of the task AU.
-   * 
+   *
    * @return a String with the auid of the task AU.
    */
   String getAuId() {
@@ -308,7 +748,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Returns the substance state of the task AU.
-   * 
+   *
    * @return <code>true</code> if AU has no substance, <code>false</code>
    *         otherwise.
    */
@@ -318,7 +758,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Returns an indication of whether the AU has not yet been indexed.
-   * 
+   *
    * @return <code>true</code> if the AU has not yet been indexed,
    * <code>false</code> otherwise.
    */
@@ -328,7 +768,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Returns an indication of whether the AU needs a full reindex.
-   * 
+   *
    * @return <code>true</code> if the AU needs a full reindex,
    * <code>false</code> otherwise.
    */
@@ -338,7 +778,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Provides the start time for indexing.
-   * 
+   *
    * @return a long with the start time in miliseconds since epoch (0 if not
    *         started).
    */
@@ -348,7 +788,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Provides the update start time.
-   * 
+   *
    * @return a long with the update start time in miliseconds since epoch (0 if
    *         not started).
    */
@@ -358,7 +798,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Provides the end time for indexing.
-   * 
+   *
    * @return a long with the end time in miliseconds since epoch (0 if not
    *         finished).
    */
@@ -368,7 +808,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Returns the reindexing status of this task.
-   * 
+   *
    * @return a ReindexingStatus with the reindexing status.
    */
   ReindexingStatus getReindexingStatus() {
@@ -376,8 +816,17 @@ public class ReindexingTask extends StepTask {
   }
 
   /**
+   * Returns the exception, if any, that caused this task to fail.
+   *
+   * @return an Exception, or <code>null</code> if the task did not fail.
+   */
+  public Exception getException() {
+    return exception;
+  }
+
+  /**
    * Returns the number of articles extracted by this task.
-   * 
+   *
    * @return a long with the number of articles extracted by this task.
    */
   long getIndexedArticleCount() {
@@ -395,7 +844,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Returns the number of articles updated by this task.
-   * 
+   *
    * @return a long with the number of articles updated by this task.
    */
   long getUpdatedArticleCount() {
@@ -410,17 +859,8 @@ public class ReindexingTask extends StepTask {
   }
 
   /**
-   * Temporary
-   * 
-   * @param evt
-   */
-  protected void handleEvent(Schedule.EventType evt) {
-    callback.taskEvent(this, evt);
-  }
-
-  /**
    * Issues a warning for this re-indexing task.
-   * 
+   *
    * @param s
    *          A String with the warning message.
    */
@@ -440,7 +880,7 @@ public class ReindexingTask extends StepTask {
     @Override
     public void emitMetadata(ArticleFiles af, ArticleMetadata md) {
       final String DEBUG_HEADER = "emitMetadata(): ";
-      
+
       if (log.isDebug3()) {
         log.debug3(DEBUG_HEADER+"\n"+md.ppString(2));
       }
@@ -488,7 +928,7 @@ public class ReindexingTask extends StepTask {
 
     /**
      * Validate data against TDB information.
-     * 
+     *
      * @param mdinfo
      *          the ArticleMetadataInfo
      * @param au
@@ -651,312 +1091,8 @@ public class ReindexingTask extends StepTask {
   }
 
   /**
-   * The handler for reindexing lifecycle events.
-   */
-  private class ReindexingEventHandler implements TaskCallback {
-    private final Logger log = Logger.getLogger(ReindexingEventHandler.class);
-
-    /**
-     * Handles an event.
-     * 
-     * @param task
-     *          A SchedulableTask with the task that has changed state.
-     * @param type
-     *          A Schedule.EventType indicating the type of event.
-     */
-    @Override
-    public void taskEvent(SchedulableTask task, Schedule.EventType type) {
-      long threadCpuTime = 0;
-      long threadUserTime = 0;
-      long currentClockTime = TimeBase.nowMs();
-
-      if (tmxb.isCurrentThreadCpuTimeSupported()) {
-        threadCpuTime = tmxb.getCurrentThreadCpuTime();
-        threadUserTime = tmxb.getCurrentThreadUserTime();
-      }
-
-      // TODO: handle task Success vs. failure?
-      if (type == Schedule.EventType.START) {
-        // Handle the start event.
-        handleStartEvent(threadCpuTime, threadUserTime, currentClockTime);
-      } else if (type == Schedule.EventType.FINISH) {
-        // Handle the finish event.
-        handleFinishEvent(task, threadCpuTime, threadUserTime,
-                          currentClockTime);
-      } else {
-        log.error("Received unknown reindexing lifecycle event type '" + type
-            + "' for AU '" + auName + "' - Ignored.");
-      }
-    }
-
-    /**
-     * Handles a starting event.
-     * 
-     * @param threadCpuTime
-     *          A long with the thread CPU time.
-     * @param threadUserTime
-     *          A long with the thread user time.
-     * @param currentClockTime
-     *          A long with the current clock time.
-     */
-    private void handleStartEvent(long threadCpuTime, long threadUserTime,
-        long currentClockTime) {
-      final String DEBUG_HEADER = "handleStartEvent(): ";
-      log.info("Starting reindexing task for AU '" + auName + "': isNewAu = "
-	  + isNewAu + ", needFullReindex = " + needFullReindex + "...");
-
-      // Remember the times at startup.
-      startCpuTime = threadCpuTime;
-      startUserTime = threadUserTime;
-      startClockTime = currentClockTime;
-
-      MetadataTarget target = MetadataTarget.OpenURL();
-        
-      // Only allow incremental extraction if the AU is not new and not doing a
-      // full reindex.
-      if (!isNewAu && !needFullReindex) {
-	if (log.isDebug2())
-	  log.debug2(DEBUG_HEADER + "lastExtractTime = " + lastExtractTime);
-	// Indicate that only new metadata after the last extraction is to be
-	// included.
-	target.setIncludeFilesChangedAfter(lastExtractTime);
-      }
-
-      // The article iterator won't be null because only AUs with article
-      // iterators are queued for processing.
-      articleIterator = au.getArticleIterator(target);
-
-      if (log.isDebug3()) {
-        long articleIteratorInitTime = TimeBase.nowMs() - startClockTime;
-        log.debug3(DEBUG_HEADER + "Reindexing task for AU '" + auName
-            + "': has articles? " + articleIterator.hasNext()
-            + ", initializing iterator took " + articleIteratorInitTime + "ms");
-      }
-
-      try {
-        articleMetadataInfoBuffer =
-	  new ArticleMetadataBuffer(new File(PlatformUtil.getSystemTempDir()));
-        mdManager.notifyStartReindexingAu(au);
-      } catch (IOException ioe) {
-        log.error("Failed to set up pending AU '" + auName
-            + "' for re-indexing", ioe);
-        setFinished();
-        if (status == ReindexingStatus.Running) {
-          status = ReindexingStatus.Rescheduled;
-        }
-      }
-    }
-
-    /**
-     * Handles a finishing event.
-     * 
-     * @param task
-     *          A SchedulableTask with the task that has finished.
-     * @param threadCpuTime
-     *          A long with the thread CPU time.
-     * @param threadUserTime
-     *          A long with the thread user time.
-     * @param currentClockTime
-     *          A long with the current clock time.
-     */
-    private void handleFinishEvent(SchedulableTask task, long threadCpuTime,
-        long threadUserTime, long currentClockTime) {
-      final String DEBUG_HEADER = "handleFinishEvent(): ";
-      if (log.isDebug2())
-	log.debug2(DEBUG_HEADER + "AU '" + auName + "': status = " + status);
-
-      if (status == ReindexingStatus.Running) {
-        status = ReindexingStatus.Success;
-      }
-
-      Connection conn = null;
-      startUpdateClockTime = currentClockTime;
-
-      switch (status) {
-        case Success:
-
-          try {
-            long removedArticleCount = 0L;
-
-            // Get a connection to the database.
-            conn = dbManager.getConnection();
-            dbManager.lockMetadataWrite(conn);
-
-            if (log.isDebug3())
-              log.debug3(DEBUG_HEADER + "needFullReindex = " + needFullReindex);
-
-            // Check whether the reindexing task is not incremental.
-            if (needFullReindex) { 
-              // Yes: Remove the old Archival Unit metadata before adding the
-              // new metadata.
-              removedArticleCount =
-        	  mdManagerSql.removeAuMetadataItems(conn, auId);
-              log.info("Reindexing task for AU '" + auName + "' removed "
-        	  + removedArticleCount + " database items.");
-            }
-
-            Iterator<ArticleMetadataInfo> mditr =
-                articleMetadataInfoBuffer.iterator();
-
-            // Check whether the reindexing task is not incremental and no
-            // items were extracted.
-            if (needFullReindex && !mditr.hasNext()) { 
-              // Yes: Report the problem.
-              log.warning("Non-incremental reindexing task for AU '" + auName
-        	  + "' failed to extract any items.");
-            }
-
-            // Check whether there is any metadata to record.
-            if (mditr.hasNext()) {
-              // Yes: Write the AU metadata to the database.
-              new AuMetadataRecorder((ReindexingTask) task, mdManager, au)
-                  .recordMetadata(conn, mditr);
-              
-              pokeWDog();
-            } else {
-              // No: Record the extraction in the database.
-              new AuMetadataRecorder((ReindexingTask) task, mdManager, au)
-              .recordMetadataExtraction(conn);
-            }
-
-            // Remove the AU just re-indexed from the list of AUs pending to be
-            // re-indexed.
-            mdManagerSql.removeFromPendingAus(conn, auId);
-            mdManager.updatePendingAusCount(conn);
-
-            // Complete the database transaction and release the exclusivity lock
-            DbManager.commitOrRollback(conn, log);
-
-            // Update the successful re-indexing count.
-            mdManager.addToSuccessfulReindexingTasks(ReindexingTask.this);
-            
-            // Update the total article count.
-            mdManager.addToMetadataArticleCount(updatedArticleCount
-        	- removedArticleCount);
-
-            // Check whether the reindexing task is not incremental.
-            if (needFullReindex) { 
-              log.info("Reindexing task for AU '" + auName + "' added "
-        	  + updatedArticleCount + " database articles.");
-            } else {
-              log.info("Reindexing task for AU '" + auName + "' updated "
-        	  + updatedArticleCount + " database articles.");
-            }
-
-            break;
-          } catch (MetadataException me) {
-            e = me;
-            log.warning("Error updating metadata at FINISH for " + status
-                + " -- NOT rescheduling", e);
-            log.warning("ArticleMetadataInfo = " + me.getArticleMetadataInfo());
-            status = ReindexingStatus.Failed;
-          } catch (DbException dbe) {
-            e = dbe;
-            log.warning("Error updating metadata at FINISH for " + status
-                + " -- rescheduling", e);
-            status = ReindexingStatus.Rescheduled;
-          } catch (RuntimeException re) {
-            e = re;
-            log.warning("Error updating metadata at FINISH for " + status
-                + " -- NOT rescheduling", e);
-            status = ReindexingStatus.Failed;
-          } finally {
-            DbManager.safeRollbackAndClose(conn);
-          }
-
-          // Fall through if SQL exception occurred during update.
-        case Failed:
-        case Rescheduled:
-          // Reindexing not successful, so try again later if status indicates
-          // the operation should be rescheduled.
-          if (log.isDebug3()) log.debug3(DEBUG_HEADER
-              + "Reindexing task for AU '" + auName
-              + "' was unsuccessful: status = " + status);
-
-          mdManager.addToFailedReindexingTasks(ReindexingTask.this);
-
-          try {
-            // Get a connection to the database.
-            conn = dbManager.getConnection();
-
-            mdManagerSql.removeFromPendingAus(conn, au.getAuId());
-            mdManager.updatePendingAusCount(conn);
-
-            if (status == ReindexingStatus.Failed) {
-              if (log.isDebug3()) log.debug3(DEBUG_HEADER
-        	  + "Marking as failed the reindexing task for AU '" + auName
-        	  + "'");
-
-            // Add the failed AU to the pending list with the right priority to
-            // avoid processing it again before the underlying problem is fixed.
-              mdManagerSql.addFailedIndexingAuToPendingAus(conn, au.getAuId());
-            } else if (status == ReindexingStatus.Rescheduled) {
-              if (log.isDebug3()) log.debug3(DEBUG_HEADER
-        	  + "Rescheduling the reindexing task AU '" + auName + "'");
-
-              // Add the re-schedulable AU to the end of the pending list.
-              mdManager.addToPendingAusIfNotThere(conn,
-        	  Collections.singleton(au), needFullReindex);
-            }
-
-            // Complete the database transaction.
-            DbManager.commitOrRollback(conn, log);
-          } catch (DbException dbe) {
-            log.warning("Error updating pending queue at FINISH for AU '"
-        	+ auName + "', status = " + status, dbe);
-          } finally {
-            DbManager.safeRollbackAndClose(conn);
-          }
-      }
-
-      articleIterator = null;
-      endClockTime = TimeBase.nowMs();
-
-      if (tmxb.isCurrentThreadCpuTimeSupported()) {
-        endCpuTime = tmxb.getCurrentThreadCpuTime();
-        endUserTime = tmxb.getCurrentThreadUserTime();
-      }
-
-      // Display timings.
-      long elapsedCpuTime = threadCpuTime - startCpuTime;
-      long elapsedUserTime = threadUserTime - startUserTime;
-      long elapsedClockTime = currentClockTime - startClockTime;
-
-      log.info("Finished reindexing task for AU '" + auName + "': status = "
-	  + status + ", CPU time: " + elapsedCpuTime / 1.0e9 + " ("
-	  + endCpuTime / 1.0e9 + "), User time: " + elapsedUserTime / 1.0e9
-	  + " (" + endUserTime / 1.0e9 + "), Clock time: "
-	  + elapsedClockTime / 1.0e3 + " (" + endClockTime / 1.0e3 + ")");
-
-      // Release collected metadata info once finished.
-      articleMetadataInfoBuffer.close();
-      articleMetadataInfoBuffer = null;
-
-      synchronized (mdManager.activeReindexingTasks) {
-        mdManager.activeReindexingTasks.remove(au.getAuId());
-        mdManager.notifyFinishReindexingAu(au, status);
-
-        try {
-          // Get a connection to the database.
-          conn = dbManager.getConnection();
-
-          // Schedule another task if available.
-          mdManager.startReindexing(conn);
-
-          // Complete the database transaction.
-          DbManager.commitOrRollback(conn, log);
-        } catch (DbException dbe) {
-          log.error("Cannot restart indexing", dbe);
-        } finally {
-          DbManager.safeRollbackAndClose(conn);
-        }
-      }
-    }
-  }
-
-  /**
    * Sets the indication of whether the AU being indexed is new to the index.
-   * 
+   *
    * @param isNew
    *          A boolean with the indication of whether the AU being indexed is
    *          new to the index.
@@ -967,7 +1103,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Sets the full re-indexing state of this task.
-   * 
+   *
    * @param enable
    *          A boolean with the full re-indexing state of this task.
    */
@@ -977,7 +1113,7 @@ public class ReindexingTask extends StepTask {
 
   /**
    * Sets the last extraction time for the AU of this task.
-   * 
+   *
    * @param time
    *          A boolean with the full re-indexing state of this task.
    */

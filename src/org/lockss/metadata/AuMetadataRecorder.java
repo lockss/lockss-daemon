@@ -312,6 +312,12 @@ public class AuMetadataRecorder {
 
     // Loop through the metadata for each item.
     while (mditr.hasNext()) {
+      // Abort the write immediately if the task has been cancelled, so the
+      // caller rolls back instead of committing partial metadata.
+      if (task.isCancelled()) {
+        throw new ReindexingTask.CancelException();
+      }
+
       task.pokeWDog();
 
       // Get the next metadata item.
@@ -2733,6 +2739,11 @@ public class AuMetadataRecorder {
       throws DbException, MetadataException {
     final String DEBUG_HEADER = "recordMetadataExtraction(): ";
     if (log.isDebug2()) log.debug2(DEBUG_HEADER + "Invoked.");
+
+    // Abort before touching the database if the task has been cancelled.
+    if (task.isCancelled()) {
+      throw new ReindexingTask.CancelException();
+    }
 
     // Find the AU in the database.
     auSeq = mdManagerSql.findAuByAuId(conn, auId);
