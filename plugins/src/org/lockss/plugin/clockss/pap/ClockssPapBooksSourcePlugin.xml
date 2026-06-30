@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -61,6 +61,12 @@ POSSIBILITY OF SUCH DAMAGE.
   <entry>
     <string>au_start_url</string>
     <string>"%s%s/Books", base_url, directory</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%s%s/.+\.pdf$", base_url, directory</string>
+    </list>
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
