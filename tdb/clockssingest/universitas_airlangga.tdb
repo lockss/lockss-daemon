@@ -26,11 +26,11 @@
 
       au < frozen ; exists ; 2005 ; Dental Journal (Majalah Kedokteran Gigi) Volume 38 ; 38 ; 2005 ; >
       au < finished ; finished ; 2006 ; Dental Journal (Majalah Kedokteran Gigi) Volume 39 ; 39 ; 2006 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2007 ; Dental Journal (Majalah Kedokteran Gigi) Volume 40 ; 40 ; 2007 ; >
-      au < crawling ; exists ; 2008 ; Dental Journal (Majalah Kedokteran Gigi) Volume 41 ; 41 ; 2008 ; >
+      au < frozen ; exists ; 2007 ; Dental Journal (Majalah Kedokteran Gigi) Volume 40 ; 40 ; 2007 ; >
+      au < frozen ; exists ; 2008 ; Dental Journal (Majalah Kedokteran Gigi) Volume 41 ; 41 ; 2008 ; >
       au < frozen ; exists ; 2009 ; Dental Journal (Majalah Kedokteran Gigi) Volume 42 ; 42 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Dental Journal (Majalah Kedokteran Gigi) Volume 43 ; 43 ; 2010 ; >
-      au < crawling ; exists ; 2011 ; Dental Journal (Majalah Kedokteran Gigi) Volume 44 ; 44 ; 2011 ; >
+      au < frozen ; exists ; 2011 ; Dental Journal (Majalah Kedokteran Gigi) Volume 44 ; 44 ; 2011 ; >
       au < finished ; manifest ; 2012 ; Dental Journal (Majalah Kedokteran Gigi) Volume 45 ; 45 ; 2012 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2013 ; Dental Journal (Majalah Kedokteran Gigi) Volume 46 ; 46 ; 2013 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2014 ; Dental Journal (Majalah Kedokteran Gigi) Volume 47 ; 47 ; 2014 ; reingest4.clockss.org:8082 >
@@ -59,16 +59,16 @@
       param[journal_id] = YDK
 
       au < finished ; finished ; 1991 ; Yuridika Volume 6 ; 6 ; 1991 ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 1992 ; Yuridika Volume 7 ; 7 ; 1992 ; >
+      au < frozen ; exists ; 1992 ; Yuridika Volume 7 ; 7 ; 1992 ; >
       au < doesNotExist ; doesNotExist ; 1993 ; Yuridika Volume 8 ; 8 ; 1993 ; >
-      au < crawling ; exists ; 1994 ; Yuridika Volume 9 ; 9 ; 1994 ; >
+      au < frozen ; exists ; 1994 ; Yuridika Volume 9 ; 9 ; 1994 ; >
       au < doesNotExist ; doesNotExist ; 1995 ; Yuridika Volume 10 ; 10 ; 1995 ; >
       au < frozen ; exists ; 1996 ; Yuridika Volume 11 ; 11 ; 1996 ; >
       au < frozen ; exists ; 1997 ; Yuridika Volume 12 ; 12 ; 1997 ; >
       au < doesNotExist ; doesNotExist ; 1998 ; Yuridika Volume 13 ; 13 ; 1998 ; >
       au < frozen ; exists ; 1999 ; Yuridika Volume 14 ; 14 ; 1999 ; >
       au < finished ; finished ; 2000 ; Yuridika Volume 15 ; 15 ; 2000 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2001 ; Yuridika Volume 16 ; 16 ; 2001 ; >
+      au < frozen ; exists ; 2001 ; Yuridika Volume 16 ; 16 ; 2001 ; >
       au < doesNotExist ; doesNotExist ; 2002 ; Yuridika Volume 17 ; 17 ; 2002 ; >
       au < frozen ; exists ; 2003 ; Yuridika Volume 18 ; 18 ; 2003 ; >
       au < frozen ; exists ; 2004 ; Yuridika Volume 19 ; 19 ; 2004 ; >
@@ -133,7 +133,7 @@
 
       au < frozen ; exists ; 2007 ; Jurnal Ners Volume 2 ; 2 ; 2007 ; >
       au < finished ; finished ; 2008 ; Jurnal Ners Volume 3 ; 3 ; 2008 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2009 ; Jurnal Ners Volume 4 ; 4 ; 2009 ; >
+      au < frozen ; exists ; 2009 ; Jurnal Ners Volume 4 ; 4 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Jurnal Ners Volume 5 ; 5 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Jurnal Ners Volume 6 ; 6 ; 2011 ; >
       au < finished ; manifest ; 2012 ; Jurnal Ners Volume 7 ; 7 ; 2012 ; reingest5.clockss.org:8082 >
@@ -188,7 +188,7 @@
       param[journal_id] = IJTID
 
       au < finished ; frozen ; 2010 ; Indonesian Journal of Tropical and Infectious Disease Volume 1 ; 1 ; 2010 ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2011 ; Indonesian Journal of Tropical and Infectious Disease Volume 2 ; 2 ; 2011 ; >
+      au < frozen ; exists ; 2011 ; Indonesian Journal of Tropical and Infectious Disease Volume 2 ; 2 ; 2011 ; >
       au < finished ; manifest ; 2012 ; Indonesian Journal of Tropical and Infectious Disease Volume 3 ; 3 ; 2012 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2013 ; Indonesian Journal of Tropical and Infectious Disease Volume 4 ; 4 ; 2013 ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2014 ; Indonesian Journal of Tropical and Infectious Disease Volume 5 ; 5 ; 2014 ; reingest1.clockss.org:8082 >
@@ -471,7 +471,7 @@
       au < finished ; manifest ; 2022 ; Record and Library Journal Volume 8 ; 8 ; 2022 ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2023 ; Record and Library Journal Volume 9 ; 9 ; 2023 ; reingest3.clockss.org:8083 >
       au < deepCrawl ; exists ; 2024 ; Record and Library Journal Volume 10 ; 10 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; Record and Library Journal Volume 11 ; 11 ; 2025 ; >
+      au < frozen ; exists ; 2025 ; Record and Library Journal Volume 11 ; 11 ; 2025 ; >
       au < expected ; exists ; 2026 ; Record and Library Journal Volume 12 ; 12 ; 2026 ; >
 
   }
@@ -510,7 +510,7 @@
       param[journal_id] = JMTT
 
       au < finished ; finished ; 2008 ; Jurnal Manajemen Teori dan Terapan Volume 1 ; 1 ; 2008 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2009 ; Jurnal Manajemen Teori dan Terapan Volume 2 ; 2 ; 2009 ; >
+      au < frozen ; exists ; 2009 ; Jurnal Manajemen Teori dan Terapan Volume 2 ; 2 ; 2009 ; >
       au < frozen ; exists ; 2010 ; Jurnal Manajemen Teori dan Terapan Volume 3 ; 3 ; 2010 ; >
       au < frozen ; exists ; 2011 ; Jurnal Manajemen Teori dan Terapan Volume 4 ; 4 ; 2011 ; >
       au < finished ; frozen ; 2012 ; Jurnal Manajemen Teori dan Terapan Volume 5 ; 5 ; 2012 ; reingest5.clockss.org:8082 >
@@ -2309,7 +2309,7 @@
       au < doNotProcess ; doNotProcess ; 2021 ; Journal of Aquaculture Science Volume 6 ; 6 ; 2021 ; reingest4.clockss.org:8082 >
       au < doNotProcess ; doNotProcess ; 2022 ; Journal of Aquaculture Science Volume 7 ; 7 ; 2022 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; Journal of Aquaculture Science Volume 8 ; 8 ; 2023 ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2024 ; Journal of Aquaculture Science Volume 9 ; 9 ; 2024 ; >
+      au < frozen ; exists ; 2024 ; Journal of Aquaculture Science Volume 9 ; 9 ; 2024 ; >
       au < crawling ; exists ; 2025 ; Journal of Aquaculture Science Volume 10 ; 10 ; 2025 ; >
       au < manifest ; exists ; 2026 ; Journal of Aquaculture Science Volume 11 ; 11 ; 2026 ; >
 
@@ -2323,12 +2323,12 @@
 
       param[journal_id] = jju
 
-      au < crawling ; exists ; 2019 ; Japanology: The Journal of Japanese Studies Volume 8 (2019) ; 8 ; 2019 ; >
+      au < frozen ; exists ; 2019 ; Japanology: The Journal of Japanese Studies Volume 8 (2019) ; 8 ; 2019 ; >
       au < frozen ; exists ; 2020 ; Japanology: The Journal of Japanese Studies Volume 8 (2020) ; 8 ; 2020 ; >
-      au < crawling ; exists ; 2022 ; Japanology: The Journal of Japanese Studies Volume 9 ; 9 ; 2022 ; >
-      au < crawling ; exists ; 2023 ; Japanology: The Journal of Japanese Studies Volume 10 ; 10 ; 2023 ; >
-      au < crawling ; exists ; 2024 ; Japanology: The Journal of Japanese Studies Volume 11 ; 11 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; Japanology: The Journal of Japanese Studies Volume 12 ; 12 ; 2025 ; >
+      au < frozen ; exists ; 2022 ; Japanology: The Journal of Japanese Studies Volume 9 ; 9 ; 2022 ; >
+      au < frozen ; exists ; 2023 ; Japanology: The Journal of Japanese Studies Volume 10 ; 10 ; 2023 ; >
+      au < frozen ; exists ; 2024 ; Japanology: The Journal of Japanese Studies Volume 11 ; 11 ; 2024 ; >
+      au < frozen ; exists ; 2025 ; Japanology: The Journal of Japanese Studies Volume 12 ; 12 ; 2025 ; >
       au < expected ; exists ; 2026 ; Japanology: The Journal of Japanese Studies Volume 13 ; 13 ; 2026 ; >
 
   }
