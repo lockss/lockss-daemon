@@ -95,7 +95,7 @@ public class Ojs3HttpResponseHandler implements CacheResultHandler {
         //may eventually need to replace with RetryableNoFailException_2_10S(ex) 
       }
       else{
-        return new CacheException.RetrySameUrlException("Wrong length but pattern does not match Wasit Journal of Engineering Sciences pattern.");
+        return new CacheException.RetryableNetworkException_3_10S("Wrong length but pattern does not match Wasit Journal of Engineering Sciences pattern.");
       }
     }
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
