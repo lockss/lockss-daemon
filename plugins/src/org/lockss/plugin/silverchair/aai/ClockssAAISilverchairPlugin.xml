@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <string>deprecated</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -48,14 +48,14 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_parent_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>American Association of Immunologists Journal Plugin (CLOCKSS)</string>
+        <string>American Association of Immunologists Journal Plugin (Legacy, CLOCKSS)</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"American Association of Immunologists Journal Plugin (CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+        <string>"American Association of Immunologists Journal Plugin (Legacy, CLOCKSS), Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
 </map>

@@ -32,7 +32,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <map>
     <entry>
         <string>plugin_status</string>
-        <string>ready</string>
+        <string>deprecated</string>
     </entry>
     <entry>
         <string>plugin_identifier</string>
@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>5</string>
+        <string>6</string>
     </entry>
     <entry>
         <string>plugin_parent</string>
@@ -52,11 +52,11 @@ POSSIBILITY OF SUCH DAMAGE.
     </entry>
     <entry>
         <string>plugin_name</string>
-        <string>American Association of Immunologists Journal Plugin</string>
+        <string>American Association of Immunologists Journal Plugin (Legacy)</string>
     </entry>
     <entry>
         <string>au_name</string>
-        <string>"American Association of Immunologists Journal Plugin, Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
+        <string>"American Association of Immunologists Journal Plugin (Legacy), Base URL %s, Journal ID %s, Year %d, Volume %s", base_url, journal_id, year, volume_name</string>
     </entry>
     <!--https://journals.aai.org/jimmunol/issue/browse-by-year/2020-->
     <entry>
