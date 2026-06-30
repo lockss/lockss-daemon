@@ -162,8 +162,9 @@ echo "GLN. tdb files need first processing."
 grep -L -e ready -e released tdb/prod/*.tdb | xargs grep -l "manifest"
 echo "---------------------"
 echo "---------------------"
-echo "CLOCKSS. tdb files ready to retire?"
-grep -L -e exists -e crawling -e manifest -e testing -e expected -e ready tdb/clockssingest/*.tdb
+echo "CLOCKSS. tdb files ready to retire or need more content"
+#grep -L -e exists -e crawling -e manifest -e testing -e expected -e ready tdb/clockssingest/*.tdb
+grep -L -e "exists ; exists" -e "crawling ; exists" -e "manifest ; exists" -e "testing ; exists" -e "expected ; exists" -e "ready ; exists" tdb/clockssingest/*.tdb
 echo "---------------------"
 echo "---------------------"
 echo "CLOCKSS. tdb files need first processing."
