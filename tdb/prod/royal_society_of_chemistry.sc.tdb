@@ -7,8 +7,8 @@
   >
 
   param[base_url] = https://pubs.rsc.org/
-  #plugin = org.lockss.plugin.silverchair.emerald.EmeraldSilverchairPlugin
-  plugin = needs.plugin
+  plugin = org.lockss.plugin.silverchair.emerald.EmeraldSilverchairPlugin
+  #plugin = needs.plugin
   implicit < status ; year ; name ; param[volume_name] ; param[year] >
 
   {
