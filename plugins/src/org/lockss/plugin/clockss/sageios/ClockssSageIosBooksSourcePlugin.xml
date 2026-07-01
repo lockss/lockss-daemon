@@ -78,7 +78,7 @@ POSSIBILITY OF SUCH DAMAGE.
  <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>"^%s%s/.+\.pdf$", base_url, directory</string>
+      <string>"^%s%s/.+\.zip", base_url, directory</string>
     </list>
   </entry>
   <entry>
@@ -87,11 +87,11 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>  
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.sageios.SageIosZipXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory</string>
+    <string>org.lockss.plugin.clockss.sageios.SageIosZipXmlArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/xml_metadata_extractor_factory_map</string>

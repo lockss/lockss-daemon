@@ -68,9 +68,8 @@ public class SageIosXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
         @Override
         protected List<String> getFilenamesAssociatedWithRecord(SourceXmlSchemaHelper helper, CachedUrl cu,
             ArticleMetadata oneAM) {
-
-        String url_string = cu.getUrl();
-        List<String> returnList = new ArrayList<String>();
+            String url_string = cu.getUrl();
+            List<String> returnList = new ArrayList<String>();
             // filename is just the same a the XML filename but with .pdf 
             // instead of .xml
             String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
