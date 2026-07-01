@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -77,7 +77,7 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbQueryBuilder:0.3.2]";
+  public static final String VERSION = "[TdbQueryBuilder:0.3.3]";
   
   /**
    * <p>
@@ -326,20 +326,14 @@ public class TdbQueryBuilder extends TdbQueryParserBaseListener {
    * 
    * @since 1.67
    * @see Au#STATUS_CRAWLING
-   * @see Au#STATUS_TESTING
-   * @see Au#STATUS_NOT_READY
    * @see Au#STATUS_FROZEN
-   * @see Au#STATUS_DEEP_CRAWL
    * @see Au#STATUS_FINISHED
    * @see Au#STATUS_DOWN
    * @see Au#STATUS_SUPERSEDED
    */  
   public static final List<String> CLOCKSS_PRODUCTION_STATUSES =
       AppUtil.ul(Au.STATUS_CRAWLING,
-                 Au.STATUS_TESTING,
-                 Au.STATUS_NOT_READY,
                  Au.STATUS_FROZEN,
-                 Au.STATUS_DEEP_CRAWL,
                  Au.STATUS_FINISHED,
                  Au.STATUS_DOWN,
                  Au.STATUS_SUPERSEDED);

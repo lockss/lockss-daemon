@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -40,7 +40,6 @@ import java.util.function.Predicate;
 
 import org.apache.commons.cli.*;
 import org.lockss.tdb.AntlrUtil.SyntaxError;
-import org.lockss.tdb.StrictInputStreamReader.MalformedInputRangeException;
 
 public class TdbOut {
 
@@ -51,7 +50,7 @@ public class TdbOut {
    * 
    * @since 1.68
    */
-  public static final String VERSION = "[TdbOut:0.3.1]";
+  public static final String VERSION = "[TdbOut:0.3.2]";
   
   /**
    * <p>

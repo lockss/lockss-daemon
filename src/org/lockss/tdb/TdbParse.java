@@ -1,6 +1,6 @@
 /*
 
-Copyright (c) 2000-2024, Board of Trustees of Leland Stanford Jr. University
+Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -52,7 +52,7 @@ public class TdbParse {
    * 
    * @since 1.72
    */
-  public static final String VERSION = "[TdbParse:0.2.0]";
+  public static final String VERSION = "[TdbParse:0.2.1]";
 
   /**
    * @since 1.72
