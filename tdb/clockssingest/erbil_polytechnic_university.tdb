@@ -25,7 +25,7 @@
     param[journal_abbr] = home
 
     au < finished ; manifest ; 2017 ; Polytechnic Journal Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < crawling ; exists ; 2018 ; Polytechnic Journal Volume 8 ; 8 ; >
+    au < frozen ; exists ; 2018 ; Polytechnic Journal Volume 8 ; 8 ; >
     au < finished ; manifest ; 2019 ; Polytechnic Journal Volume 9 ; 9 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2020 ; Polytechnic Journal Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2021 ; Polytechnic Journal Volume 11 ; 11 ; reingest5.clockss.org:8082 >

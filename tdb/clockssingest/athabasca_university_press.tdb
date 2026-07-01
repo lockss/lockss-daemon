@@ -433,7 +433,7 @@
       param[journal_id] = trumpet
 
       au < doNotProcess ; doNotProcess ; 1983 ; The Trumpeter Volume 1 (1983) ; 1 ; 1983 ;  >
-      au < crawling ; exists ; 1984 ; The Trumpeter Volume 1 (1984) ; 1 ; 1984 ; >
+      au < frozen ; exists ; 1984 ; The Trumpeter Volume 1 (1984) ; 1 ; 1984 ; >
       au < frozen ; exists ; 1985 ; The Trumpeter Volume 2 ; 2 ; 1985 ; >
       au < frozen ; exists ; 1986 ; The Trumpeter Volume 3 ; 3 ; 1986 ; >
       au < frozen ; exists ; 1987 ; The Trumpeter Volume 4 ; 4 ; 1987 ; >
@@ -467,7 +467,7 @@
       au < frozen ; exists ; 2022 ; The Trumpeter Volume 38 ; 38 ; 2022 ; >
       au < finished ; manifest ; 2023 ; The Trumpeter Volume 39 ; 39 ; 2023 ; reingest2.clockss.org:8085 >
       au < deepCrawl ; exists ; 2024 ; The Trumpeter Volume 40 ; 40 ; 2024 ; >
-      au < crawling ; exists ; 2025 ; The Trumpeter Volume 41 ; 41 ; 2025 ; >
+      au < frozen ; exists ; 2025 ; The Trumpeter Volume 41 ; 41 ; 2025 ; >
       au < expected ; exists ; 2026 ; The Trumpeter Volume 42 ; 42 ; 2026 ; >
 
     }

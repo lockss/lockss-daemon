@@ -56,7 +56,7 @@
     au < finished ; manifest ; 1993 ; 1993 ; Annales de l'Institut Henri Poincaré C Volume 10 ; 10 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1994 ; 1994 ; Annales de l'Institut Henri Poincaré C Volume 11 ; 11 ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1995 ; 1995 ; Annales de l'Institut Henri Poincaré C Volume 12 ; 12 ; >
-    au < crawling ; exists ; 1996 ; 1996 ; Annales de l'Institut Henri Poincaré C Volume 13 ; 13 ; >
+    au < frozen ; exists ; 1996 ; 1996 ; Annales de l'Institut Henri Poincaré C Volume 13 ; 13 ; >
     au < finished ; manifest ; 1997 ; 1997 ; Annales de l'Institut Henri Poincaré C Volume 14 ; 14 ; reingest4.clockss.org:8082 >
     au < frozen ; exists ; 1998 ; 1998 ; Annales de l'Institut Henri Poincaré C Volume 15 ; 15 ; >
     au < finished ; manifest ; 1999 ; 1999 ; Annales de l'Institut Henri Poincaré C Volume 16 ; 16 ; reingest1.clockss.org:8082 >
@@ -281,30 +281,30 @@
     param[journal_id] = mag
     #2015 and before, there are no article pdfs. Only an issue pdf which does not constitute substance.
 
-    au < crawling ; exists ; 1991 ; 1991 ; European Mathematical Society Magazine Volume 1991 ; 1991 ; >
+    au < frozen ; exists ; 1991 ; 1991 ; European Mathematical Society Magazine Volume 1991 ; 1991 ; >
     au < frozen ; exists ; 1992 ; 1992 ; European Mathematical Society Magazine Volume 1992 ; 1992 ; >
     au < frozen ; exists ; 1993 ; 1993 ; European Mathematical Society Magazine Volume 1993 ; 1993 ; >
     au < notReady ; exists ; 1994 ; 1994 ; European Mathematical Society Magazine Volume 1994 ; 1994 ; >
-    au < crawling ; exists ; 1995 ; 1995 ; European Mathematical Society Magazine Volume 1995 ; 1995 ; >
+    au < frozen ; exists ; 1995 ; 1995 ; European Mathematical Society Magazine Volume 1995 ; 1995 ; >
     au < ready ; exists ; 1996 ; 1996 ; European Mathematical Society Magazine Volume 1996 ; 1996 ; >
     au < ready ; exists ; 1997 ; 1997 ; European Mathematical Society Magazine Volume 1997 ; 1997 ; >
     au < frozen ; exists ; 1998 ; 1998 ; European Mathematical Society Magazine Volume 1998 ; 1998 ; >
     au < notReady ; exists ; 1999 ; 1999 ; European Mathematical Society Magazine Volume 1999 ; 1999 ; >
     au < ready ; exists ; 2000 ; 2000 ; European Mathematical Society Magazine Volume 2000 ; 2000 ; >
-    au < crawling ; exists ; 2001 ; 2001 ; European Mathematical Society Magazine Volume 2001 ; 2001 ; >
+    au < frozen ; exists ; 2001 ; 2001 ; European Mathematical Society Magazine Volume 2001 ; 2001 ; >
     au < ready ; exists ; 2002 ; 2002 ; European Mathematical Society Magazine Volume 2002 ; 2002 ; >
-    au < crawling ; exists ; 2003 ; 2003 ; European Mathematical Society Magazine Volume 2003 ; 2003 ; >
+    au < frozen ; exists ; 2003 ; 2003 ; European Mathematical Society Magazine Volume 2003 ; 2003 ; >
     au < frozen ; exists ; 2004 ; 2004 ; European Mathematical Society Magazine Volume 2004 ; 2004 ; >
     au < notReady ; exists ; 2005 ; 2005 ; European Mathematical Society Magazine Volume 2005 ; 2005 ; >
-    au < crawling ; exists ; 2006 ; 2006 ; European Mathematical Society Magazine Volume 2006 ; 2006 ; >
-    au < crawling ; exists ; 2007 ; 2007 ; European Mathematical Society Magazine Volume 2007 ; 2007 ; >
-    au < crawling ; exists ; 2008 ; 2008 ; European Mathematical Society Magazine Volume 2008 ; 2008 ; >
+    au < frozen ; exists ; 2006 ; 2006 ; European Mathematical Society Magazine Volume 2006 ; 2006 ; >
+    au < frozen ; exists ; 2007 ; 2007 ; European Mathematical Society Magazine Volume 2007 ; 2007 ; >
+    au < frozen ; exists ; 2008 ; 2008 ; European Mathematical Society Magazine Volume 2008 ; 2008 ; >
     au < frozen ; exists ; 2009 ; 2009 ; European Mathematical Society Magazine Volume 2009 ; 2009 ; >
     au < notReady ; exists ; 2010 ; 2010 ; European Mathematical Society Magazine Volume 2010 ; 2010 ; >
     au < frozen ; exists ; 2011 ; 2011 ; European Mathematical Society Magazine Volume 2011 ; 2011 ; >
     au < ready ; exists ; 2012 ; 2012 ; European Mathematical Society Magazine Volume 2012 ; 2012 ; >
     au < notReady ; exists ; 2013 ; 2013 ; European Mathematical Society Magazine Volume 2013 ; 2013 ; >
-    au < crawling ; exists ; 2014 ; 2014 ; European Mathematical Society Magazine Volume 2014 ; 2014 ; >
+    au < frozen ; exists ; 2014 ; 2014 ; European Mathematical Society Magazine Volume 2014 ; 2014 ; >
     au < frozen ; exists ; 2015 ; 2015 ; European Mathematical Society Magazine Volume 2015 ; 2015 ; >
     au < finished ; manifest ; 2016 ; 2016 ; European Mathematical Society Magazine Volume 2016 ; 2016 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2017 ; 2017 ; European Mathematical Society Magazine Volume 2017 ; 2017 ; reingest1.clockss.org:8082 >
@@ -851,7 +851,7 @@
     au < finished ; manifest ; 1990 ; 1990 ; Revista Matemática Iberoamericana Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 1991 ; 1991 ; Revista Matemática Iberoamericana Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 1992 ; 1992 ; Revista Matemática Iberoamericana Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < crawling ; exists ; 1993 ; 1993 ; Revista Matemática Iberoamericana Volume 9 ; 9 ; >
+    au < frozen ; exists ; 1993 ; 1993 ; Revista Matemática Iberoamericana Volume 9 ; 9 ; >
     au < finished ; manifest ; 1994 ; 1994 ; Revista Matemática Iberoamericana Volume 10 ; 10 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 1995 ; 1995 ; Revista Matemática Iberoamericana Volume 11 ; 11 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 1996 ; 1996 ; Revista Matemática Iberoamericana Volume 12 ; 12 ; reingest5.clockss.org:8082 >

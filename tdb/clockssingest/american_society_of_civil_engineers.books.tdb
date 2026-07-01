@@ -529,14 +529,14 @@
     #au < manifest ; exists ; 2004 ; 9780784407264 ; 9780784471098 ; 9780784407264 ; Design of Marine Facilities for the Berthing, Mooring, and Repair of Vessels (9780784407264) ; > #duplicate
     au < manifest ; exists ; 2014 ;  ; 9780784477991 ; 9780784477991 ; LEAME Software and User's Manual (9780784477991) ; >
     au < ready ; exists ; 2025 ; 9780784416365 ; 9780784486245 ; 9780784486245 ; Design Snow Loads for Ground Mounted Solar Panels (9780784486245) ; >
-    au < crawling ; exists ; 2025 ; 9780784416297 ; 9780784485897 ; 9780784485897 ; Design of Blast-Resistant Buildings in Energy and Industrial Facilities (9780784485897) ; >
-    au < crawling ; exists ; 2025 ;  ; 9780784486276 ; 9780784486276 ; Low Impact Development Hydrologic Modeling (9780784486276) ; >
+    au < frozen ; exists ; 2025 ; 9780784416297 ; 9780784485897 ; 9780784485897 ; Design of Blast-Resistant Buildings in Energy and Industrial Facilities (9780784485897) ; >
+    au < frozen ; exists ; 2025 ;  ; 9780784486276 ; 9780784486276 ; Low Impact Development Hydrologic Modeling (9780784486276) ; >
     au < ready ; exists ; 2025 ;  ; 9780784486399 ; 9780784486399 ; Prestandard for Assessing the Embodied Carbon of Structural Systems for Buildings (9780784486399) ; >
-    au < crawling ; exists ; 2025 ;  ; 9780784485927 ; 9780784485927 ; SE 2050 Commitment Program (9780784485927) ; >
+    au < frozen ; exists ; 2025 ;  ; 9780784485927 ; 9780784485927 ; SE 2050 Commitment Program (9780784485927) ; >
     au < ready ; exists ; 2025 ; 9780784416334 ; 9780784486061 ; 9780784486061 ; Scouring at Bridge Piers Using Artificial Intelligence Models (9780784486061) ; >
     au < exists ; exists ; 2025 ; 9780784416341 ; 9780784486092 ; 9780784486092 ; Static Slope Stability in Practice (9780784486092) ; >
-    au < crawling ; exists ; 2025 ;  ; 9780784486337 ; 9780784486337 ; Structural Reliability Guidance in ASCE 7-22 (9780784486337) ; >
-    au < crawling ; exists ; 2025 ; 9780784416358 ; 9780784486160 ; 9780784486160 ; Waterfront Facilities Inspection and Assessment (9780784486160) ; >
+    au < frozen ; exists ; 2025 ;  ; 9780784486337 ; 9780784486337 ; Structural Reliability Guidance in ASCE 7-22 (9780784486337) ; >
+    au < frozen ; exists ; 2025 ; 9780784416358 ; 9780784486160 ; 9780784486160 ; Waterfront Facilities Inspection and Assessment (9780784486160) ; >
 
     # Not books
     au < exists ; exists ; 2015 ;  ; 9780784479001 ; 9780784479001 ; Publishing Proceedings with ASCE : A Guide for Editors and Conference Committees (9780784479001) ; >
@@ -606,10 +606,10 @@
     au < manifest ; exists ; 2008 ; 9780784409640 ; 9780784472217 ; 9780784409640 ; STANDARD ANSI/ASCE/T&DI 21.2-08 (9780784409640) ; >
     au < manifest ; exists ; 2008 ; 9780784409930 ; 9780784472484 ; 9780784409930 ; STANDARD ANSI/ASCE/EWRI 50-08(R2022), 51-08(R2022) (9780784409930) ; >
     au < manifest ; exists ; 2009 ; 9780784410196 ; 9780784472699 ; 9780784410196 ; STANDARD ASCE/EWRI 33-09 (9780784410196) ; >
-    au < crawling ; exists ; 2010 ; 9780784410561 ; 9780784473030 ; 9780784410561 ; STANDARD ASCE/SEI 52-10 (9780784410561) ; >
+    au < frozen ; exists ; 2010 ; 9780784410561 ; 9780784473030 ; 9780784410561 ; STANDARD ASCE/SEI 52-10 (9780784410561) ; >
     au < frozen ; exists ; 2010 ; 9780784410943 ; 9780784473344 ; 9780784410943 ; STANDARD ASCE/G-I 53-10 (9780784410943) ; >
     au < frozen ; exists ; 2010 ; 9780784410929 ; 9780784473320 ; 9780784410929 ; STANDARD ANSI/ASCE/EWRI 54-10(R2022) (9780784410929) ; >
-    au < crawling ; exists ; 2010 ; 9780784411254 ; 9780784473252 ; 9780784411254 ; STANDARD ASCE/T&DI 58-10 (9780784411254) ; >
+    au < frozen ; exists ; 2010 ; 9780784411254 ; 9780784473252 ; 9780784411254 ; STANDARD ASCE/T&DI 58-10 (9780784411254) ; >
     au < frozen ; exists ; 2010 ; 9780784410974 ; 9780784473245 ; 9780784410974 ; STANDARD ASCE/SEI 55-10 (9780784410974) ; >
     au < frozen ; exists ; 2010 ; 9780784411247 ; 9780784476802 ; 9780784411247 ; STANDARD ASCE/SEI 19-10 (9780784411247) ; >
     au < frozen ; exists ; 2011 ; 9780784411261 ; 9780784476697 ; 9780784411261 ; STANDARD ASCE/EWRI 56-10, 57-10 (9780784411261) ; >
@@ -638,8 +638,8 @@
     au < frozen ; exists ; 2017 ; 9780784414262 ; 9780784480205 ; 9780784414262 ; STANDARD ANSI/ASCE/EWRI 62-16, 63-16, 64-16 (9780784414262) ; >
     au < frozen ; exists ; 2017 ; 9780784413319 ; 9780784480199 ; 9780784413319 ; STANDARD ANSI/ASCE/EWRI 45-16, 46-16, 47-16 (9780784413319) ; >
     au < frozen ; exists ; 2017 ; 9780784414408 ; 9780784479766 ; 9780784414408 ; STANDARD ANSI/ASCE/EWRI 42-17 (9780784414408) ; >
-    au < crawling ; exists ; 2017 ; 9780784414347 ; 9780784480496 ; 9780784414347 ; STANDARD ANSI/ASCE/EWRI 65-17 (9780784414347) ; >
-    au < crawling ; exists ; 2017 ; 9780784414248 ; 9780784479964 ; 9780784414248 ; STANDARD ASCE/SEI 7-16 (9780784414248) ; >
+    au < frozen ; exists ; 2017 ; 9780784414347 ; 9780784480496 ; 9780784414347 ; STANDARD ANSI/ASCE/EWRI 65-17 (9780784414347) ; >
+    au < frozen ; exists ; 2017 ; 9780784414248 ; 9780784479964 ; 9780784414248 ; STANDARD ASCE/SEI 7-16 (9780784414248) ; >
     au < frozen ; exists ; 2017 ;  ; 9780784480748 ; 9780784480748 ; Zone Maps for STANDARD ASCE 7-16  (9780784480748) ; >
     au < frozen ; exists ; 2017 ; 9780784413074 ; 9780784480335 ; 9780784413074 ; STANDARD ASCE/CI 15-17 (9780784413074) ; >
     au < frozen ; exists ; 2017 ; 9780784413081 ; 9780784480373 ; 9780784413081 ; STANDARD ASCE/CI 27-17 (9780784413081) ; >
@@ -1560,11 +1560,11 @@
     au < frozen ; exists ; 2025 ;  ; 9780784486498 ; 9780784486498 ; Geo-Extreme 2025 (9780784486498) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486504 ; 9780784486504 ; Geo-Extreme 2025 (9780784486504) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486511 ; 9780784486511 ; Geo-Extreme 2025 (9780784486511) ; >
-    au < crawling ; exists ; 2025 ;  ; 9780784486528 ; 9780784486528 ; Geo-Extreme 2025 (9780784486528) ; >
+    au < frozen ; exists ; 2025 ;  ; 9780784486528 ; 9780784486528 ; Geo-Extreme 2025 (9780784486528) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486535 ; 9780784486535 ; Geo-Extreme 2025 (9780784486535) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784485880 ; 9780784485880 ; Geoenvironmental Engineering (9780784485880) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784485965 ; 9780784485965 ; Geotechnical Frontiers 2025 (9780784485965) ; >
-    au < crawling ; exists ; 2025 ;  ; 9780784485972 ; 9780784485972 ; Geotechnical Frontiers 2025 (9780784485972) ; >
+    au < frozen ; exists ; 2025 ;  ; 9780784485972 ; 9780784485972 ; Geotechnical Frontiers 2025 (9780784485972) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784485989 ; 9780784485989 ; Geotechnical Frontiers 2025 (9780784485989) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784485996 ; 9780784485996 ; Geotechnical Frontiers 2025 (9780784485996) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486009 ; 9780784486009 ; Geotechnical Frontiers 2025 (9780784486009) ; >
@@ -1577,9 +1577,9 @@
     au < frozen ; exists ; 2025 ;  ; 9780784486207 ; 9780784486207 ; International Conference on Transportation and Development 2025 (9780784486207) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486368 ; 9780784486368 ; Pipelines 2025 (9780784486368) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486375 ; 9780784486375 ; Pipelines 2025 (9780784486375) ; >
-    au < crawling ; exists ; 2025 ;  ; 9780784486382 ; 9780784486382 ; Pipelines 2025 (9780784486382) ; >
-    au < crawling ; exists ; 2025 ;  ; 9780784486146 ; 9780784486146 ; Ports 2025 (9780784486146) ; >
-    au < crawling ; exists ; 2025 ;  ; 9780784486153 ; 9780784486153 ; Ports 2025 (9780784486153) ; >
+    au < frozen ; exists ; 2025 ;  ; 9780784486382 ; 9780784486382 ; Pipelines 2025 (9780784486382) ; >
+    au < frozen ; exists ; 2025 ;  ; 9780784486146 ; 9780784486146 ; Ports 2025 (9780784486146) ; >
+    au < frozen ; exists ; 2025 ;  ; 9780784486153 ; 9780784486153 ; Ports 2025 (9780784486153) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486085 ; 9780784486085 ; Structures Congress 2025 (9780784486085) ; >
     au < frozen ; exists ; 2025 ;  ; 9780784486184 ; 9780784486184 ; World Environmental and Water Resources Congress 2025 (9780784486184) ; >
     au < manifest ; exists ; 2026 ;  ; 9780784486603 ; 9780784486603 ; ASCE Convention 2025 (9780784486603) ; >
