@@ -1374,12 +1374,12 @@
     param[journal_id] = library
     #move from OUP in 2026, Volume 27. Processed at OUP 2008-2024
 
-    au < ready ; exists ; 1999 ; The Library Volume s6-21 ; s6-21 ; >
+    au < crawling ; exists ; 1999 ; The Library Volume s6-21 ; s6-21 ; >
     au < frozen ; exists ; 2000 ; The Library Volume 1 ; 1 ; >
     au < frozen ; exists ; 2001 ; The Library Volume 2 ; 2 ; >
     au < frozen ; exists ; 2002 ; The Library Volume 3 ; 3 ; >
     au < crawling ; exists ; 2003 ; The Library Volume 4 ; 4 ; >
-    au < ready ; exists ; 2004 ; The Library Volume 5 ; 5 ; >
+    au < crawling ; exists ; 2004 ; The Library Volume 5 ; 5 ; >
     au < frozen ; exists ; 2005 ; The Library Volume 6 ; 6 ; >
     au < crawling ; exists ; 2006 ; The Library Volume 7 ; 7 ; >
     au < crawling ; exists ; 2007 ; The Library Volume 8 ; 8 ; >
@@ -2420,7 +2420,7 @@
     au < crawling ; exists ; 1971 ; Revista Iberoamericana Volume 37 ; 37 ; >
     au < frozen ; exists ; 1972 ; Revista Iberoamericana Volume 38 ; 38 ; >
     au < frozen ; exists ; 1973 ; Revista Iberoamericana Volume 39 ; 39 ; >
-    au < ready ; exists ; 1974 ; Revista Iberoamericana Volume 40 ; 40 ; >
+    au < crawling ; exists ; 1974 ; Revista Iberoamericana Volume 40 ; 40 ; >
     au < frozen ; exists ; 1975 ; Revista Iberoamericana Volume 41 ; 41 ; >
     au < frozen ; exists ; 1976 ; Revista Iberoamericana Volume 42 ; 42 ; >
     au < frozen ; exists ; 1977 ; Revista Iberoamericana Volume 43 ; 43 ; >

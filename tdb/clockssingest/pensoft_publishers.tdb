@@ -1928,7 +1928,7 @@
 
       param[au_oai_set] = anhmw
 
-      au < ready ; exists ; 2025 ; 2025 ; Annals of the Natural History Museum Vienna Volume 2025 ; 2025 ; https://anhmw.pensoft.net/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Annals of the Natural History Museum Vienna Volume 2025 ; 2025 ; https://anhmw.pensoft.net/ ; >
       au < manifest ; exists ; 2026 ; 2026 ; Annals of the Natural History Museum Vienna Volume 2026 ; 2026 ; https://anhmw.pensoft.net/ ; >
 
   }
@@ -1961,7 +1961,7 @@
       param[au_oai_set] = pdm
 
       au < manifest ; exists ; 2023 ; 2023 ; Problems of Dental Medicine Volume 2023 ; 2023 ; https://pdm.pensoft.net/ ; >
-      au < ready ; exists ; 2024 ; 2024 ; Problems of Dental Medicine Volume 2024 ; 2024 ; https://pdm.pensoft.net/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Problems of Dental Medicine Volume 2024 ; 2024 ; https://pdm.pensoft.net/ ; >
       au < frozen ; exists ; 2025 ; 2025 ; Problems of Dental Medicine Volume 2025 ; 2025 ; https://pdm.pensoft.net/ ; >
       au < manifest ; exists ; 2026 ; 2026 ; Problems of Dental Medicine Volume 2026 ; 2026 ; https://pdm.pensoft.net/ ; >
 
@@ -1978,8 +1978,8 @@
 
       param[au_oai_set] = rcpp
 
-      au < ready ; exists ; 2024 ; 2024 ; Review of Clinical Pharmacology and Pharmacokinetics - International Edition Volume 2024 ; 2024 ; https://rcpp-ie.com/ ; >
-      au < ready ; exists ; 2025 ; 2025 ; Review of Clinical Pharmacology and Pharmacokinetics - International Edition Volume 2025 ; 2025 ; https://rcpp-ie.com/ ; >
+      au < crawling ; exists ; 2024 ; 2024 ; Review of Clinical Pharmacology and Pharmacokinetics - International Edition Volume 2024 ; 2024 ; https://rcpp-ie.com/ ; >
+      au < crawling ; exists ; 2025 ; 2025 ; Review of Clinical Pharmacology and Pharmacokinetics - International Edition Volume 2025 ; 2025 ; https://rcpp-ie.com/ ; >
       au < manifest ; exists ; 2026 ; 2026 ; Review of Clinical Pharmacology and Pharmacokinetics - International Edition Volume 2026 ; 2026 ; https://rcpp-ie.com/ ; >
 
   }
@@ -2027,13 +2027,13 @@
 
       param[au_oai_set] = sjg
 
-      au < ready ; exists ; 2004 ; 2004 ; Swiss Journal of Geosciences Volume 2004 ; 2004 ; https://sjg.pensoft.net/ ; >
+      au < crawling ; exists ; 2004 ; 2004 ; Swiss Journal of Geosciences Volume 2004 ; 2004 ; https://sjg.pensoft.net/ ; >
       au < manifest ; exists ; 2005 ; 2005 ; Swiss Journal of Geosciences Volume 2005 ; 2005 ; https://sjg.pensoft.net/ ; >
       au < manifest ; exists ; 2006 ; 2006 ; Swiss Journal of Geosciences Volume 2006 ; 2006 ; https://sjg.pensoft.net/ ; >
-      au < ready ; exists ; 2007 ; 2007 ; Swiss Journal of Geosciences Volume 2007 ; 2007 ; https://sjg.pensoft.net/ ; >
+      au < crawling ; exists ; 2007 ; 2007 ; Swiss Journal of Geosciences Volume 2007 ; 2007 ; https://sjg.pensoft.net/ ; >
       au < manifest ; exists ; 2008 ; 2008 ; Swiss Journal of Geosciences Volume 2008 ; 2008 ; https://sjg.pensoft.net/ ; >
       au < frozen ; exists ; 2009 ; 2009 ; Swiss Journal of Geosciences Volume 2009 ; 2009 ; https://sjg.pensoft.net/ ; >
-      au < ready ; exists ; 2010 ; 2010 ; Swiss Journal of Geosciences Volume 2010 ; 2010 ; https://sjg.pensoft.net/ ; >
+      au < crawling ; exists ; 2010 ; 2010 ; Swiss Journal of Geosciences Volume 2010 ; 2010 ; https://sjg.pensoft.net/ ; >
       au < ready ; exists ; 2011 ; 2011 ; Swiss Journal of Geosciences Volume 2011 ; 2011 ; https://sjg.pensoft.net/ ; >
       au < manifest ; exists ; 2012 ; 2012 ; Swiss Journal of Geosciences Volume 2012 ; 2012 ; https://sjg.pensoft.net/ ; >
       au < frozen ; exists ; 2013 ; 2013 ; Swiss Journal of Geosciences Volume 2013 ; 2013 ; https://sjg.pensoft.net/ ; >
@@ -2045,8 +2045,8 @@
       au < manifest ; exists ; 2019 ; 2019 ; Swiss Journal of Geosciences Volume 2019 ; 2019 ; https://sjg.pensoft.net/ ; >
       au < frozen ; exists ; 2020 ; 2020 ; Swiss Journal of Geosciences Volume 2020 ; 2020 ; https://sjg.pensoft.net/ ; >
       au < manifest ; exists ; 2021 ; 2021 ; Swiss Journal of Geosciences Volume 2021 ; 2021 ; https://sjg.pensoft.net/ ; >
-      au < ready ; exists ; 2022 ; 2022 ; Swiss Journal of Geosciences Volume 2022 ; 2022 ; https://sjg.pensoft.net/ ; >
-      au < ready ; exists ; 2023 ; 2023 ; Swiss Journal of Geosciences Volume 2023 ; 2023 ; https://sjg.pensoft.net/ ; >
+      au < crawling ; exists ; 2022 ; 2022 ; Swiss Journal of Geosciences Volume 2022 ; 2022 ; https://sjg.pensoft.net/ ; >
+      au < crawling ; exists ; 2023 ; 2023 ; Swiss Journal of Geosciences Volume 2023 ; 2023 ; https://sjg.pensoft.net/ ; >
       au < frozen ; exists ; 2024 ; 2024 ; Swiss Journal of Geosciences Volume 2024 ; 2024 ; https://sjg.pensoft.net/ ; >
       au < manifest ; exists ; 2025 ; 2025 ; Swiss Journal of Geosciences Volume 2025 ; 2025 ; https://sjg.pensoft.net/ ; >
       au < manifest ; exists ; 2026 ; 2026 ; Swiss Journal of Geosciences Volume 2026 ; 2026 ; https://sjg.pensoft.net/ ; >

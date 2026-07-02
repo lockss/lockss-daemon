@@ -1124,7 +1124,7 @@
     au < finished ; manifest ; 2022 ; Regions & Cohesion Volume 12 ; 12 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2023 ; Regions & Cohesion Volume 13 ; 13 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Regions & Cohesion Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-    au < ready ; exists ; 2025 ; Regions & Cohesion Volume 15 ; 15 ; >
+    au < crawling ; exists ; 2025 ; Regions & Cohesion Volume 15 ; 15 ; >
     au < expected ; exists ; 2026 ; Regions & Cohesion Volume 16 ; 16 ; >
 
   }
