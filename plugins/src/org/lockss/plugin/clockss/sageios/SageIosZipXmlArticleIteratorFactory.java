@@ -32,17 +32,85 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.lockss.plugin.clockss.sageios;
 
-import org.lockss.plugin.clockss.SourceZipXmlArticleIteratorFactory;
+import java.util.Iterator;
+import java.util.regex.Pattern;
 
-public class SageIosZipXmlArticleIteratorFactory extends SourceZipXmlArticleIteratorFactory {
+import org.lockss.daemon.PluginException;
+import org.lockss.extractor.*;
+import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
-  // same general pattern as the parent, except we only get full text books 
-  protected static final String ALL_ZIP_XML_PATTERN_TEMPLATE =
-      "\"%s%s/.*\\.zip!/fulltext/.*\\.xml$\", base_url, directory";
+public class SageIosZipXmlArticleIteratorFactory implements ArticleIteratorFactory, ArticleMetadataExtractorFactory {
+        
+  protected static Logger log = Logger.getLogger(SageIosZipXmlArticleIteratorFactory.class);
+
+  //Most books have a fulltext metadata file. Unfortunately, there are a few that don't so instead, we'll pull the metadata
+  //from the front matter instead for these cases. 
+
+  protected static final String ALL_PATTERN_TEMPLATE = "\"%s%s/[^/]+\\.zip!/(fulltext|[A-Z0-9-]+fm(-i)?)/[^/]+\\.(xml|pdf)$\", base_url, directory";
+
+    protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN = 
+      Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
+          Pattern.CASE_INSENSITIVE);
+  protected static final Pattern NESTED_ARCHIVE_PATTERN = 
+      Pattern.compile(".*/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
+          Pattern.CASE_INSENSITIVE);
+      
+  public static final Pattern BOOK_METADATA_PATTERN = Pattern.compile("/fulltext/([^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern FRONTMATTER_METADATA_PATTERN = Pattern.compile("/([A-Z0-9-]+(?:-fm(?:-i)?)?)/\\1\\.xml$", Pattern.CASE_INSENSITIVE);
+  public static final Pattern PDF_PATTERN = Pattern.compile("/fulltext/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  public static final String BOOK_METADATA_REPLACEMENT = "/fulltext/$1.xml";
+  public static final String FRONTMATTER_METADATA_REPLACEMENT = "/$1/$1.xml";
+  public static final String PDF_REPLACEMENT = "/fulltext/$1.pdf";
 
   @Override
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+                                                      MetadataTarget target)
+      throws PluginException {
+    SubTreeArticleIteratorBuilder builder = new SubTreeArticleIteratorBuilder(au);
+    
+    builder.setSpec(builder.newSpec()
+                    .setTarget(target)
+                    .setPatternTemplate(getIncludePatternTemplate(), Pattern.CASE_INSENSITIVE)
+                    .setExcludeSubTreePattern(getExcludeSubTreePattern())
+                    .setVisitArchiveMembers(true)); 
+
+    builder.addAspect(PDF_PATTERN, 
+                      PDF_REPLACEMENT,
+                      ArticleFiles.ROLE_FULL_TEXT_PDF);
+
+    builder.addAspect(BOOK_METADATA_PATTERN,
+                      BOOK_METADATA_REPLACEMENT,
+                      "ROLE_BOOK_METADATA");
+                      //TODO: Create constant
+
+    builder.addAspect(FRONTMATTER_METADATA_PATTERN,
+                      FRONTMATTER_METADATA_REPLACEMENT,
+                      "ROLE_FRONTMATTER_METADATA");
+ 
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, "ROLE_BOOK_METDATA", "ROLE_FRONTMATTER_METADATA"); 
+  
+
+    return builder.getSubTreeArticleIterator();
+  }
+  
+  protected Pattern getExcludeSubTreePattern() {
+    return SUB_NESTED_ARCHIVE_PATTERN;
+  }
+
   protected String getIncludePatternTemplate() {
-    return ALL_ZIP_XML_PATTERN_TEMPLATE;
+    return ALL_PATTERN_TEMPLATE;
+  }
+
+  // iterator should descend in to archives (for tar/zip deliveries)
+  protected boolean getIsArchive() {
+    return true;
+  }
+
+  @Override
+  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
+      throws PluginException {
+    return new BaseArticleMetadataExtractor(ArticleFiles.ROLE_ARTICLE_METADATA);
   }
 
 }
