@@ -23,9 +23,9 @@
 
         param[base_url] = https://riseopenjournal.org/
 
-        au < manifest ; exists ; 2024 ; 2024 ; 1 ; Research in Special Education Volume 1 ; >
+        au < ready ; exists ; 2024 ; 2024 ; 1 ; Research in Special Education Volume 1 ; >
         au < frozen ; exists ; 2025 ; 2025 ; 2 ; Research in Special Education Volume 2 ; >
-        au < manifest ; exists ; 2026 ; 2026 ; 3 ; Research in Special Education Volume 3 ; >
+        au < ready ; exists ; 2026 ; 2026 ; 3 ; Research in Special Education Volume 3 ; >
 
     }
 
@@ -46,7 +46,7 @@
         au < doNotProcess ; doNotProcess ; 2023 ; 2023 ; 5 ; Journal of Modern Philosophy Volume 5 ; >
         au < deepCrawl ; exists ; 2024 ; 2024 ; 6 ; Journal of Modern Philosophy Volume 6 ; >
         au < deepCrawl ; exists ; 2025 ; 2025 ; 7 ; Journal of Modern Philosophy Volume 7 ; >
-        au < manifest ; exists ; 2026 ; 2026 ; 8 ; Journal of Modern Philosophy Volume 8 ; >
+        au < ready ; exists ; 2026 ; 2026 ; 8 ; Journal of Modern Philosophy Volume 8 ; >
 
     }
 
@@ -168,7 +168,7 @@
         au < finished ; manifest ; 2023 ; 2023 ; 6 ; International Journal of First Aid Education Volume 6 ; reingest2.clockss.org:8085 >
         au < deepCrawl ; exists ; 2024 ; 2024 ; 7 ; International Journal of First Aid Education Volume 7 ; >
         au < deepCrawl ; exists ; 2025 ; 2025 ; 8 ; International Journal of First Aid Education Volume 8 ; >
-        au < manifest ; exists ; 2026 ; 2026 ; 9 ; International Journal of First Aid Education Volume 9 ; >
+        au < ready ; exists ; 2026 ; 2026 ; 9 ; International Journal of First Aid Education Volume 9 ; >
 
   }
 
@@ -201,7 +201,7 @@
         au < finished ; manifest ; 2023 ; 2023 ; 23 ; Language Documentation and Description Volume 23 ; reingest5.clockss.org:8082 >
         au < deepCrawl ; exists ; 2024 ; 2024 ; 24 ; Language Documentation and Description Volume 24 ; >
         au < deepCrawl ; exists ; 2025 ; 2025 ; 25 ; Language Documentation and Description Volume 25 ; >
-        au < manifest ; exists ; 2026 ; 2026 ; 26 ; Language Documentation and Description Volume 26 ; >
+        au < ready ; exists ; 2026 ; 2026 ; 26 ; Language Documentation and Description Volume 26 ; >
     }
   }
 }

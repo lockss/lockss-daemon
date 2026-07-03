@@ -86,7 +86,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Annales de l'Institut Henri Poincaré C Volume 40 ; 40 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Annales de l'Institut Henri Poincaré C Volume 41 ; 41 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Annales de l'Institut Henri Poincaré C Volume 42 ; 42 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Annales de l'Institut Henri Poincaré C Volume 43 ; 43 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Annales de l'Institut Henri Poincaré C Volume 43 ; 43 ; >
 
   }
 
@@ -112,7 +112,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Annales de l'Institut Henri Poincaré D Volume 10 ; 10 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Annales de l'Institut Henri Poincaré D Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Annales de l'Institut Henri Poincaré D Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Annales de l'Institut Henri Poincaré D Volume 13 ; 13 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Annales de l'Institut Henri Poincaré D Volume 13 ; 13 ; >
 
   }
 
@@ -154,7 +154,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Commentarii Mathematici Helvetici Volume 98 ; 98 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Commentarii Mathematici Helvetici Volume 99 ; 99 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Commentarii Mathematici Helvetici Volume 100 ; 100 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Commentarii Mathematici Helvetici Volume 101 ; 101 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Commentarii Mathematici Helvetici Volume 101 ; 101 ; >
 
   }
 
@@ -198,7 +198,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Documenta Mathematica Volume 28 ; 28 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Documenta Mathematica Volume 29 ; 29 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Documenta Mathematica Volume 30 ; 30 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Documenta Mathematica Volume 31 ; 31 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Documenta Mathematica Volume 31 ; 31 ; >
 
   }
 
@@ -266,7 +266,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; EMS Surveys in Mathematical Sciences Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; EMS Surveys in Mathematical Sciences Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; EMS Surveys in Mathematical Sciences Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; EMS Surveys in Mathematical Sciences Volume 13 ; 13 ; >
+    au < ready ; exists ; 2026 ; 2026 ; EMS Surveys in Mathematical Sciences Volume 13 ; 13 ; >
 
   }
 
