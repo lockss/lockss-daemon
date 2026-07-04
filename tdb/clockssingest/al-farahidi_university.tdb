@@ -21,7 +21,7 @@
       param[journal_abbr] = journal
 
       au < deepCrawl ; exists ; 2025 ; Al-Farahidi Expert Systems Journal Volume 1 ; 1 ; >
-      au < manifest ; exists ; 2026 ; Al-Farahidi Expert Systems Journal Volume 2 ; 2 ; >
+      au < testing ; exists ; 2026 ; Al-Farahidi Expert Systems Journal Volume 2 ; 2 ; >
 
   }
 
