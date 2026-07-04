@@ -88,7 +88,7 @@
       au < doNotProcess ; 2023 ; Analytical Methods Volume 15 ; 15 ; 2023 >
       au < doNotProcess ; 2024 ; Analytical Methods Volume 16 ; 16 ; 2024 >
       au < doNotProcess ; 2025 ; Analytical Methods Volume 17 ; 17 ; 2025 >
-      au < expected ; 2026 ; Analytical Methods Volume 18 ; 18 ; 2026 >
+      au < manifest ; 2026 ; Analytical Methods Volume 18 ; 18 ; 2026 >
 
     }
   }
@@ -107,7 +107,7 @@
     {
       
       au < doesNotExist ; 1996 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 92 ; 92 ; 1996 >
-      au < exists ; 1997 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 93 ; 93 ; 1997 >
+      au < manifest ; 1997 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 93 ; 93 ; 1997 >
       au < exists ; 1998 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 94 ; 94 ; 1998 >
       au < exists ; 1999 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 95 ; 95 ; 1999 >
       au < doNotProcess ; 2000 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 96 ; 96 ; 2000 >
@@ -144,7 +144,7 @@
       au < exists ; 1996 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 [1996] ; 93 ; 1996 >
       au < exists ; 1997 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 93 [1997] ; 93 ; 1997 >
       au < exists ; 1998 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 94 ; 94 ; 1998 >
-      au < exists ; 1999 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 95 ; 95 ; 1999 >
+      au < manifest ; 1999 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 95 ; 95 ; 1999 >
       au < doNotProcess ; 2000 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 96 ; 96 ; 2000 >
       au < doNotProcess ; 2001 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 97 ; 97 ; 2001 >
       au < doNotProcess ; 2002 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 98 ; 98 ; 2002 >
