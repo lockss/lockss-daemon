@@ -1,0 +1,221 @@
+<!--
+
+    Copyright (c) 2000-2026, Board of Trustees of Leland Stanford Jr. University
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice,
+    this list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+    3. Neither the name of the copyright holder nor the names of its contributors
+    may be used to endorse or promote products derived from this software without
+    specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+    POSSIBILITY OF SUCH DAMAGE.
+-->
+<map>
+    <entry>
+        <string>plugin_status</string>
+        <string>development</string>
+    </entry>
+    <entry>
+        <string>plugin_identifier</string>
+        <string>org.lockss.plugin.smartjournal.univsal.ClockssSulaimaniDentalJournalsPlugin</string>
+    </entry>
+    <entry>
+        <string>plugin_name</string>
+        <string>Sulaimani Dental Journals Plugin (CLOCKSS)</string>
+    </entry>
+    <entry>
+        <string>plugin_version</string>
+        <string>1</string>
+    </entry>
+    <entry>
+        <string>plugin_config_props</string>
+        <list>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>base_url</key>
+                <displayName>Base URL</displayName>
+                <description>Base URL</description>
+                <type>3</type>
+                <size>40</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>year</key>
+                <displayName>Year</displayName>
+                <description>Four digit year (e.g., 2004)</description>
+                <type>4</type>
+                <size>4</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+            <org.lockss.daemon.ConfigParamDescr>
+                <key>volume</key>
+                <displayName>Volume</displayName>
+                <description>Volume</description>
+                <type>1</type>
+                <size>10</size>
+                <definitional>true</definitional>
+                <defaultOnly>false</defaultOnly>
+            </org.lockss.daemon.ConfigParamDescr>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_feature_version_map</string>
+        <map>
+            <entry>
+                <string>Poll</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Metadata</string>
+                <string>1</string>
+            </entry>
+            <entry>
+                <string>Substance</string>
+                <string>1</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_name</string>
+        <string>"Sulaimani Dental Journals Plugin (CLOCKSS), Base URL %s, Year %d, Volume %s", base_url, year, volume</string>
+    </entry>
+    <entry>
+        <string>au_start_url</string>
+        <string>"%slockss-generated/%s", base_url, volume</string>
+    </entry>
+    <entry>
+        <string>au_permission_url</string>
+        <string>"%sall-issues", base_url</string>
+    </entry>
+    <entry>
+        <string>au_substance_url_pattern</string>
+        <list>
+            <string>"^%sSmartJournal_Uploads/[^/]+/articles/[0-9]+/.*\.[Pp][Dd][Ff]$", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_crawlrules</string>
+        <list>
+            <!--All cloudflare, tracking, advertisement and other vendors are excluded-->
+            <string>2,"^https://static\.cloudflareinsights\.com/beacon\.min\.js/"</string>
+            <string>2,"^%scdn-cgi/", base_url</string>
+            <string>2,"^https://www\.google\.com/recaptcha/"</string>
+            <string>2,"^https://www\.googletagmanager\.com/"</string>
+            <string>2,"^https://smarthand\.co/"</string>
+            <!--Layout and icon CDN assets collected for replay fidelity-->
+            <string>1,"^https://cdn\.jsdelivr\.net/npm/bootstrap"</string>
+            <string>1,"^https://cdnjs\.cloudflare\.com/ajax/libs/font-awesome"</string>
+            <string>1,"^https://unpkg\.com/boxicons"</string>
+            <string>1,"^https?://((fonts|ajax)\.googleapis\.com)/"</string>
+            <!--Same-host static assets-->
+            <string>1,"^https?://%s/[^?]*\.(bmp|css|eot|gif|ico|jpe?g|js|png|svg|tif?f|ttc|ttf|woff.?|dfont|otf)(_v[0-9]+|\?v=[0-9.]+|\?[a-z0-9]+)?$", url_host(base_url)</string>
+            <!--Synthetic manifest page generated by CrawlSeed-->
+            <string>1,"^%slockss-generated/%s", base_url, volume</string>
+            <!--Issue pages — discovered from manifest, issue?id values scoped
+                to current volume by the CrawlSeed extraction logic-->
+            <string>1, "^%sall-issues", base_url</string>
+            <string>1,"^%sissue\?id=[0-9]+$", base_url</string>
+            <!--Article pages-->
+            <!-- NOTE: article ids are opaque integers with no algebraic
+                 relationship to volume. Overcrawl risk is mitigated by
+                 the CrawlSeed only seeding issue URLs belonging to the target
+                 volume, and by volume comparison in the metadata extractor. -->
+            <string>1,"^%sarticle\?id=[0-9]+$", base_url</string>
+            <string>1,"^%sarticle-citation\?id=[0-9]+&amp;format=ris$", base_url</string>
+            <string>1,"^%sSmartJournal_Uploads/", base_url</string>
+            <string>1,"^%s(assets|js|style)/.*", base_url</string>
+        </list>
+    </entry>
+    <entry>
+        <string>plugin_crawl_seed_factory</string>
+        <string>org.lockss.plugin.smartjournal.univsal.SulaimaniDentalJournalsCrawlSeedFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_crawl_filter_factory</string>
+        <string>org.lockss.plugin.smartjournal.univsal.SulaimaniDentalJournalsHtmlCrawlFilterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_filter_factory</string>
+        <string>org.lockss.plugin.smartjournal.univsal.SulaimaniDentalJournalsHtmlHashFilterFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_link_rewriter_factory</string>
+        <string>org.lockss.plugin.smartjournal.univsal.SulaimaniDentalJournalsHtmlLinkRewriterFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_iterator_factory</string>
+        <string>org.lockss.plugin.smartjournal.univsal.SulaimaniDentalJournalsArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>plugin_article_metadata_extractor_factory</string>
+        <string>org.lockss.plugin.smartjournal.univsal.SulaimaniDentalJournalsArticleIteratorFactory</string>
+    </entry>
+    <entry>
+        <string>text/html_metadata_extractor_factory_map</string>
+        <map>
+            <entry>
+                <string>*</string>
+                <string>org.lockss.plugin.smartjournal.univsal.SulaimaniDentalJournalsHtmlMetadataExtractorFactory</string>
+            </entry>
+        </map>
+    </entry>
+    <entry>
+        <string>au_repair_from_peer_if_missing_url_pattern</string>
+        <list>
+            <string>[.](css|js)(\?.+)?$</string>
+            <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$"</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_url_poll_result_weight</string>
+        <list>
+            <string>"[.](css|js)(\?.+)?$", 0</string>
+            <string>".+[.](bmp|css|eot|gif|ico|jpe?g|js|otf|png|svg|tif?f|ttf|woff.?)(\?.*)?$", 0</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_permitted_host_pattern</string>
+        <list>
+            <string>(fonts|ajax)\.googleapis\.com</string>
+            <string>cdn\.jsdelivr\.net</string>
+            <string>cdnjs\.cloudflare\.com</string>
+            <string>unpkg\.com</string>
+        </list>
+    </entry>
+    <entry>
+        <string>au_refetch_depth</string>
+        <int>2</int>
+    </entry>
+    <entry>
+        <string>plugin_fetch_rate_limiter_source</string>
+        <string>host:base_url</string>
+    </entry>
+    <entry>
+        <string>clockss_override</string>
+        <map>
+            <entry>
+                <string>au_def_pause_time</string>
+                <long>100</long>
+            </entry>
+        </map>
+    </entry>
+</map>
