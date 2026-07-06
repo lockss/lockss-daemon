@@ -240,7 +240,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Elemente der Mathematik Volume 78 ; 78 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Elemente der Mathematik Volume 79 ; 79 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Elemente der Mathematik Volume 80 ; 80 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Elemente der Mathematik Volume 81 ; 81 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Elemente der Mathematik Volume 81 ; 81 ; >
 
   }
 
@@ -286,13 +286,13 @@
     au < frozen ; exists ; 1993 ; 1993 ; European Mathematical Society Magazine Volume 1993 ; 1993 ; >
     au < notReady ; exists ; 1994 ; 1994 ; European Mathematical Society Magazine Volume 1994 ; 1994 ; >
     au < frozen ; exists ; 1995 ; 1995 ; European Mathematical Society Magazine Volume 1995 ; 1995 ; >
-    au < crawling ; exists ; 1996 ; 1996 ; European Mathematical Society Magazine Volume 1996 ; 1996 ; >
+    au < frozen ; exists ; 1996 ; 1996 ; European Mathematical Society Magazine Volume 1996 ; 1996 ; >
     au < ready ; exists ; 1997 ; 1997 ; European Mathematical Society Magazine Volume 1997 ; 1997 ; >
     au < frozen ; exists ; 1998 ; 1998 ; European Mathematical Society Magazine Volume 1998 ; 1998 ; >
     au < notReady ; exists ; 1999 ; 1999 ; European Mathematical Society Magazine Volume 1999 ; 1999 ; >
-    au < crawling ; exists ; 2000 ; 2000 ; European Mathematical Society Magazine Volume 2000 ; 2000 ; >
+    au < frozen ; exists ; 2000 ; 2000 ; European Mathematical Society Magazine Volume 2000 ; 2000 ; >
     au < frozen ; exists ; 2001 ; 2001 ; European Mathematical Society Magazine Volume 2001 ; 2001 ; >
-    au < crawling ; exists ; 2002 ; 2002 ; European Mathematical Society Magazine Volume 2002 ; 2002 ; >
+    au < frozen ; exists ; 2002 ; 2002 ; European Mathematical Society Magazine Volume 2002 ; 2002 ; >
     au < frozen ; exists ; 2003 ; 2003 ; European Mathematical Society Magazine Volume 2003 ; 2003 ; >
     au < frozen ; exists ; 2004 ; 2004 ; European Mathematical Society Magazine Volume 2004 ; 2004 ; >
     au < notReady ; exists ; 2005 ; 2005 ; European Mathematical Society Magazine Volume 2005 ; 2005 ; >
@@ -316,7 +316,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; European Mathematical Society Magazine Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; European Mathematical Society Magazine Volume 2024 ; 2024 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; European Mathematical Society Magazine Volume 2025 ; 2025 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; European Mathematical Society Magazine Volume 2026 ; 2026 ; >
+    au < ready ; exists ; 2026 ; 2026 ; European Mathematical Society Magazine Volume 2026 ; 2026 ; >
 
   }
 
@@ -349,7 +349,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Groups, Geometry, and Dynamics Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Groups, Geometry, and Dynamics Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Groups, Geometry, and Dynamics Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Groups, Geometry, and Dynamics Volume 20 ; 20 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Groups, Geometry, and Dynamics Volume 20 ; 20 ; >
 
   }
 
@@ -389,7 +389,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Interfaces and Free Boundaries Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Interfaces and Free Boundaries Volume 26 ; 26 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Interfaces and Free Boundaries Volume 27 ; 27 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Interfaces and Free Boundaries Volume 28 ; 28 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Interfaces and Free Boundaries Volume 28 ; 28 ; >
 
   }
 
@@ -412,7 +412,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Combinatorial Algebra Volume 7 ; 7 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Combinatorial Algebra Volume 8 ; 8 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Combinatorial Algebra Volume 9 ; 9 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Journal of Combinatorial Algebra Volume 10 ; 10 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Journal of Combinatorial Algebra Volume 10 ; 10 ; >
 
   }
 
@@ -438,7 +438,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Fractal Geometry Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Fractal Geometry Volume 11 ; 11 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Fractal Geometry Volume 12 ; 12 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Journal of Fractal Geometry Volume 13 ; 13 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Journal of Fractal Geometry Volume 13 ; 13 ; >
 
   }
 
@@ -473,7 +473,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Noncommutative Geometry Volume 17 ; 17 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Noncommutative Geometry Volume 18 ; 18 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Noncommutative Geometry Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Journal of Noncommutative Geometry Volume 20 ; 20 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Journal of Noncommutative Geometry Volume 20 ; 20 ; >
 
   }
 
@@ -502,7 +502,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Journal of Spectral Theory Volume 13 ; 13 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of Spectral Theory Volume 14 ; 14 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of Spectral Theory Volume 15 ; 15 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Journal of Spectral Theory Volume 16 ; 16 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Journal of Spectral Theory Volume 16 ; 16 ; >
 
   }
 
@@ -542,7 +542,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Journal of the European Mathematical Society Volume 2023 ; 2023 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Journal of the European Mathematical Society Volume 2024 ; 2024 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Journal of the European Mathematical Society Volume 2025 ; 2025 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Journal of the European Mathematical Society Volume 2026 ; 2026 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Journal of the European Mathematical Society Volume 2026 ; 2026 ; >
 
   }
 
@@ -572,7 +572,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; L'Enseignement Mathématique Volume 69 ; 69 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; L'Enseignement Mathématique Volume 70 ; 70 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; L'Enseignement Mathématique Volume 71 ; 71 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; L'Enseignement Mathématique Volume 72 ; 72 ; >
+    au < ready ; exists ; 2026 ; 2026 ; L'Enseignement Mathématique Volume 72 ; 72 ; >
 
   }
 
@@ -594,7 +594,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Mathematical Statistics and Learning Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; 2024 ; Mathematical Statistics and Learning Volume 7 ; 7 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Mathematical Statistics and Learning Volume 8 ; 8 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Mathematical Statistics and Learning Volume 9 ; 9 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Mathematical Statistics and Learning Volume 9 ; 9 ; >
 
   }
 
@@ -661,7 +661,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Portugaliae Mathematica Volume 80 ; 80 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Portugaliae Mathematica Volume 81 ; 81 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Portugaliae Mathematica Volume 82 ; 82 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Portugaliae Mathematica Volume 83 ; 83 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Portugaliae Mathematica Volume 83 ; 83 ; >
 
   }
 
@@ -735,7 +735,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Publications of the Research Institute for Mathematical Sciences Volume 59 ; 59 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Publications of the Research Institute for Mathematical Sciences Volume 60 ; 60 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Publications of the Research Institute for Mathematical Sciences Volume 61 ; 61 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Publications of the Research Institute for Mathematical Sciences Volume 62 ; 62 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Publications of the Research Institute for Mathematical Sciences Volume 62 ; 62 ; >
 
   }
 
@@ -765,7 +765,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Quantum Topology Volume 14 ; 14 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Quantum Topology Volume 15 ; 15 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Quantum Topology Volume 16 ; 16 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Quantum Topology Volume 17 ; 17 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Quantum Topology Volume 17 ; 17 ; >
 
   }
 
@@ -797,7 +797,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Rendiconti del Seminario Matematico della Università di Padova Volume 149-150 ; 149-150 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Rendiconti del Seminario Matematico della Università di Padova Volume 151-152 ; 151-152 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Rendiconti del Seminario Matematico della Università di Padova Volume 153-154 ; 153-154 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Rendiconti del Seminario Matematico della Università di Padova Volume 155-156 ; 155-156 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Rendiconti del Seminario Matematico della Università di Padova Volume 155-156 ; 155-156 ; >
 
   }
 
@@ -884,7 +884,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Revista Matemática Iberoamericana Volume 39 ; 39 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Revista Matemática Iberoamericana Volume 40 ; 40 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Revista Matemática Iberoamericana Volume 41 ; 41 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Revista Matemática Iberoamericana Volume 42 ; 42 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Revista Matemática Iberoamericana Volume 42 ; 42 ; >
 
   }
 
@@ -944,7 +944,7 @@
     au < finished ; manifest ; 2023 ; 2023 ; Zeitschrift für Analysis und ihre Anwendungen Volume 42 ; 42 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; 2024 ; Zeitschrift für Analysis und ihre Anwendungen Volume 43 ; 43 ; >
     au < deepCrawl ; exists ; 2025 ; 2025 ; Zeitschrift für Analysis und ihre Anwendungen Volume 44 ; 44 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Zeitschrift für Analysis und ihre Anwendungen Volume 45 ; 45 ; >
+    au < ready ; exists ; 2026 ; 2026 ; Zeitschrift für Analysis und ihre Anwendungen Volume 45 ; 45 ; >
 
   }
 

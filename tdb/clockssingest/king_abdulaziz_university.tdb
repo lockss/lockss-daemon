@@ -20,7 +20,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jcits
 
-      au < crawling ; exists ; 2025 ; Journal of King Abdulaziz University: Computing and Information Technology Sciences Volume 14 ; 14 ; >
+      au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Computing and Information Technology Sciences Volume 14 ; 14 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Computing and Information Technology Sciences Volume 15 ; 15 ; >
 
   }
@@ -35,7 +35,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jea
 
-      au < crawling ; exists ; 2025 ; Journal of King Abdulaziz University: Economics and Administration Volume 39 ; 39 ; >
+      au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Economics and Administration Volume 39 ; 39 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Economics and Administration Volume 40 ; 40 ; >
 
   }
@@ -50,7 +50,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jengs
 
-      au < crawling ; exists ; 2025 ; Journal of King Abdulaziz University: Engineering Sciences Volume 35 ; 35 ; >
+      au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Engineering Sciences Volume 35 ; 35 ; >
       au < testing ; exists ; 2026 ; Journal of King Abdulaziz University: Engineering Sciences Volume 36 ; 36 ; >
 
   }
@@ -65,7 +65,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jie
 
-      au < crawling ; exists ; 2022 ; Journal of King Abdulaziz University: Islamic Economics Volume 35 ; 35 ; >
+      au < frozen ; exists ; 2022 ; Journal of King Abdulaziz University: Islamic Economics Volume 35 ; 35 ; >
       au < frozen ; exists ; 2023 ; Journal of King Abdulaziz University: Islamic Economics Volume 36 ; 36 ; >
       au < frozen ; exists ; 2024 ; Journal of King Abdulaziz University: Islamic Economics Volume 37 ; 37 ; >
       au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Islamic Economics Volume 38 ; 38 ; >
@@ -98,7 +98,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmeds
 
-      au < crawling ; exists ; 2025 ; Journal of King Abdulaziz University: Medical Sciences Volume 32 ; 32 ; >
+      au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Medical Sciences Volume 32 ; 32 ; >
       au < expected ; exists ; 2026 ; Journal of King Abdulaziz University: Medical Sciences Volume 33 ; 33 ; >
 
   }
@@ -113,7 +113,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmealas
 
-      au < crawling ; exists ; 2025 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 34 ; 34 ; >
+      au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 34 ; 34 ; >
       au < testing ; exists ; 2026 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 35 ; 35 ; >
 
   }
@@ -128,7 +128,7 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jsci
 
-      au < crawling ; exists ; 2025 ; Journal of King Abdulaziz University: Science Volume 35 ; 35 ; >
+      au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Science Volume 35 ; 35 ; >
       au < testing ; exists ; 2026 ; Journal of King Abdulaziz University: Science Volume 36 ; 36 ; >
 
   }
@@ -143,8 +143,8 @@
       comment[publisher] = King Abdulaziz University
       param[journal_abbr] = jmrs
 
-      au < crawling ; exists ; 2024 ; The Journal of Medical Rehabilitation Science Volume 1 ; 1 ; >
-      au < crawling ; exists ; 2025 ; The Journal of Medical Rehabilitation Science Volume 2 ; 2 ; >
+      au < frozen ; exists ; 2024 ; The Journal of Medical Rehabilitation Science Volume 1 ; 1 ; >
+      au < frozen ; exists ; 2025 ; The Journal of Medical Rehabilitation Science Volume 2 ; 2 ; >
       au < testing ; exists ; 2026 ; The Journal of Medical Rehabilitation Science Volume 3 ; 3 ; >
 
   }

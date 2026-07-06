@@ -145,7 +145,7 @@
     au < finished ; manifest ; 2023 ; Bulletin of Contemporary Hispanic Studies Volume 5 ; 5 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Bulletin of Contemporary Hispanic Studies Volume 6 ; 6 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; Bulletin of Contemporary Hispanic Studies Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2026 ; Bulletin of Contemporary Hispanic Studies Volume 8 ; 8 ; >
+    au < ready ; exists ; 2026 ; Bulletin of Contemporary Hispanic Studies Volume 8 ; 8 ; >
 
   }
 
@@ -252,7 +252,7 @@
     au < finished ; manifest ; 2023 ; Bulletin of Hispanic Studies Volume 100 ; 100 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Bulletin of Hispanic Studies Volume 101 ; 101 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Bulletin of Hispanic Studies Volume 102 ; 102 ; >
-    au < manifest ; exists ; 2026 ; Bulletin of Hispanic Studies Volume 103 ; 103 ; >
+    au < ready ; exists ; 2026 ; Bulletin of Hispanic Studies Volume 103 ; 103 ; >
 
   }
 
@@ -473,7 +473,7 @@
    au < frozen ; exists ; 2023 ; Continuity and Change Volume 38 ; 38 ; >
    au < frozen ; exists ; 2024 ; Continuity and Change Volume 39 ; 39 ; >
    au < frozen ; exists ; 2025 ; Continuity and Change Volume 40 ; 40 ; >
-   au < expected ; exists ; 2026 ; Continuity and Change Volume 41 ; 41 ; >
+   au < manifest ; exists ; 2026 ; Continuity and Change Volume 41 ; 41 ; >
 
   }
 
@@ -494,7 +494,7 @@
     au < finished ; manifest ; 2023 ; Developing Academic Practice Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Developing Academic Practice Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Developing Academic Practice Volume 2025 ; 2025 ; >
-    au < manifest ; exists ; 2026 ; Developing Academic Practice Volume 2026 ; 2026 ; >
+    au < ready ; exists ; 2026 ; Developing Academic Practice Volume 2026 ; 2026 ; >
 
   }
 
@@ -600,7 +600,7 @@
     au < finished ; manifest ; 2023 ; Essays in Romanticism Volume 30 ; 30 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; Essays in Romanticism Volume 31 ; 31 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Essays in Romanticism Volume 32 ; 32 ; >
-    au < manifest ; exists ; 2026 ; Essays in Romanticism Volume 33 ; 33 ; >
+    au < ready ; exists ; 2026 ; Essays in Romanticism Volume 33 ; 33 ; >
 
   }
 
@@ -634,7 +634,7 @@
     au < finished ; manifest ; 2023 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 17 ; 17 ; >
-    au < manifest ; exists ; 2026 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 18 ; 18 ; >
+    au < ready ; exists ; 2026 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 18 ; 18 ; >
 
   }
 
@@ -677,7 +677,7 @@
     au < finished ; manifest ; 2023 ; Extrapolation Volume 64 ; 64 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Extrapolation Volume 65 ; 65 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Extrapolation Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2026 ; Extrapolation Volume 67 ; 67 ; >
+    au < ready ; exists ; 2026 ; Extrapolation Volume 67 ; 67 ; >
 
   }
 
@@ -708,7 +708,7 @@
     au < finished ; manifest ; 2023 ; Francosphères Volume 12 ; 12 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; Francosphères Volume 13 ; 13 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Francosphères Volume 14 ; 14 ; >
-    au < manifest ; exists ; 2026 ; Francosphères Volume 15 ; 15 ; >
+    au < ready ; exists ; 2026 ; Francosphères Volume 15 ; 15 ; >
 
   }
 
@@ -810,7 +810,7 @@
     au < finished ; manifest ; 2023 ; The Indexer: The International Journal of Indexing Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; The Indexer: The International Journal of Indexing Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2025 ; The Indexer: The International Journal of Indexing Volume 43 ; 43 ; >
-    au < manifest ; exists ; 2026 ; The Indexer: The International Journal of Indexing Volume 44 ; 44 ; >
+    au < ready ; exists ; 2026 ; The Indexer: The International Journal of Indexing Volume 44 ; 44 ; >
 
   }
   {
@@ -851,7 +851,7 @@
     au < finished ; manifest ; 2023 ; International Development Planning Review Volume 45 ; 45 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; International Development Planning Review Volume 46 ; 46 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; International Development Planning Review Volume 47 ; 47 ; >
-    au < manifest ; exists ; 2026 ; International Development Planning Review Volume 48 ; 48 ; >
+    au < ready ; exists ; 2026 ; International Development Planning Review Volume 48 ; 48 ; >
 
   }
 
@@ -872,7 +872,7 @@
     au < frozen ; exists ; 2023 ; International Journal of English for Academic Purposes: Research and Practice Volume 3 ; 3 ; >
     au < frozen ; exists ; 2024 ; International Journal of English for Academic Purposes: Research and Practice Volume 4 ; 4 ; >
     au < deepCrawl ; exists ; 2025 ; International Journal of English for Academic Purposes: Research and Practice Volume 5 ; 5 ; >
-    au < manifest ; exists ; 2026 ; International Journal of English for Academic Purposes: Research and Practice Volume 6 ; 6 ; >
+    au < ready ; exists ; 2026 ; International Journal of English for Academic Purposes: Research and Practice Volume 6 ; 6 ; >
   }
 
   {
@@ -946,11 +946,11 @@
 
     au < crawling ; exists ; 1949 ; Journal of Jewish Studies Volume 1 ; 1 ; >
     au < ready ; exists ; 1951 ; Journal of Jewish Studies Volume 2 ; 2 ; >
-    au < ready ; exists ; 1952 ; Journal of Jewish Studies Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1952 ; Journal of Jewish Studies Volume 3 ; 3 ; >
     au < ready ; exists ; 1953 ; Journal of Jewish Studies Volume 4 ; 4 ; >
     au < ready ; exists ; 1954 ; Journal of Jewish Studies Volume 5 ; 5 ; >
     au < crawling ; exists ; 1955 ; Journal of Jewish Studies Volume 6 ; 6 ; >
-    au < ready ; exists ; 1956 ; Journal of Jewish Studies Volume 7 ; 7 ; >
+    au < crawling ; exists ; 1956 ; Journal of Jewish Studies Volume 7 ; 7 ; >
     au < ready ; exists ; 1957 ; Journal of Jewish Studies Volume 8 ; 8 ; >
     au < ready ; exists ; 1958 ; Journal of Jewish Studies Volume 9 ; 9 ; >
     au < ready ; exists ; 1959 ; Journal of Jewish Studies Volume 10 ; 10 ; >
@@ -960,7 +960,7 @@
     au < crawling ; exists ; 1963 ; Journal of Jewish Studies Volume 14 ; 14 ; >
     au < crawling ; exists ; 1964 ; Journal of Jewish Studies Volume 15 ; 15 ; >
     au < crawling ; exists ; 1965 ; Journal of Jewish Studies Volume 16 ; 16 ; >
-    au < ready ; exists ; 1966 ; Journal of Jewish Studies Volume 17 ; 17 ; >
+    au < crawling ; exists ; 1966 ; Journal of Jewish Studies Volume 17 ; 17 ; >
     au < crawling ; exists ; 1967 ; Journal of Jewish Studies Volume 18 ; 18 ; >
     au < frozen ; exists ; 1968 ; Journal of Jewish Studies Volume 19 ; 19 ; >
     au < frozen ; exists ; 1969 ; Journal of Jewish Studies Volume 20 ; 20 ; >
@@ -1020,7 +1020,7 @@
     au < frozen ; exists ; 2023 ; Journal of Jewish Studies Volume 74 ; 74 ; > # 0 article, 0 metadata
     au < finished ; manifest ; 2024 ; Journal of Jewish Studies Volume 75 ; 75 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Journal of Jewish Studies Volume 76 ; 76 ; >
-    au < manifest ; exists ; 2026 ; Journal of Jewish Studies Volume 77 ; 77 ; >
+    au < ready ; exists ; 2026 ; Journal of Jewish Studies Volume 77 ; 77 ; >
 
   }
 
@@ -1056,7 +1056,7 @@
     au < finished ; manifest ; 2023 ; Journal of Literary & Cultural Disability Studies Volume 17 ; 17 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; Journal of Literary & Cultural Disability Studies Volume 18 ; 18 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Journal of Literary & Cultural Disability Studies Volume 19 ; 19 ; >
-    au < manifest ; exists ; 2026 ; Journal of Literary & Cultural Disability Studies Volume 20 ; 20 ; >
+    au < ready ; exists ; 2026 ; Journal of Literary & Cultural Disability Studies Volume 20 ; 20 ; >
 
   }
 
@@ -1099,7 +1099,7 @@
     au < finished ; manifest ; 2023 ; Journal of Romance Studies Volume 23 ; 23 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Journal of Romance Studies Volume 24 ; 24 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; Journal of Romance Studies Volume 25 ; 25 ; >
-    au < manifest ; exists ; 2026 ; Journal of Romance Studies Volume 26 ; 26 ; >
+    au < ready ; exists ; 2026 ; Journal of Romance Studies Volume 26 ; 26 ; >
 
   }
 
@@ -1119,7 +1119,7 @@
 
     au < ready ; exists ; 1967 ; Journal of Transport Economics and Policy Volume 1 ; 1 ; >
     au < ready ; exists ; 1968 ; Journal of Transport Economics and Policy Volume 2 ; 2 ; >
-    au < ready ; exists ; 1969 ; Journal of Transport Economics and Policy Volume 3 ; 3 ; >
+    au < crawling ; exists ; 1969 ; Journal of Transport Economics and Policy Volume 3 ; 3 ; >
     au < ready ; exists ; 1970 ; Journal of Transport Economics and Policy Volume 4 ; 4 ; >
     au < ready ; exists ; 1971 ; Journal of Transport Economics and Policy Volume 5 ; 5 ; >
     au < ready ; exists ; 1972 ; Journal of Transport Economics and Policy Volume 6 ; 6 ; >
@@ -1152,7 +1152,7 @@
     au < crawling ; exists ; 1999 ; Journal of Transport Economics and Policy Volume 33 ; 33 ; >
     au < ready ; exists ; 2000 ; Journal of Transport Economics and Policy Volume 34 ; 34 ; >
     au < ready ; exists ; 2001 ; Journal of Transport Economics and Policy Volume 35 ; 35 ; >
-    au < ready ; exists ; 2002 ; Journal of Transport Economics and Policy Volume 36 ; 36 ; >
+    au < crawling ; exists ; 2002 ; Journal of Transport Economics and Policy Volume 36 ; 36 ; >
     au < ready ; exists ; 2003 ; Journal of Transport Economics and Policy Volume 37 ; 37 ; >
     au < ready ; exists ; 2004 ; Journal of Transport Economics and Policy Volume 38 ; 38 ; >
     au < ready ; exists ; 2005 ; Journal of Transport Economics and Policy Volume 39 ; 39 ; >
@@ -1162,21 +1162,21 @@
     au < ready ; exists ; 2009 ; Journal of Transport Economics and Policy Volume 43 ; 43 ; >
     au < ready ; exists ; 2010 ; Journal of Transport Economics and Policy Volume 44 ; 44 ; >
     au < ready ; exists ; 2011 ; Journal of Transport Economics and Policy Volume 45 ; 45 ; >
-    au < ready ; exists ; 2012 ; Journal of Transport Economics and Policy Volume 46 ; 46 ; >
+    au < crawling ; exists ; 2012 ; Journal of Transport Economics and Policy Volume 46 ; 46 ; >
     au < crawling ; exists ; 2013 ; Journal of Transport Economics and Policy Volume 47 ; 47 ; >
     au < ready ; exists ; 2014 ; Journal of Transport Economics and Policy Volume 48 ; 48 ; >
     au < ready ; exists ; 2015 ; Journal of Transport Economics and Policy Volume 49 ; 49 ; >
     au < ready ; exists ; 2016 ; Journal of Transport Economics and Policy Volume 50 ; 50 ; >
     au < ready ; exists ; 2017 ; Journal of Transport Economics and Policy Volume 51 ; 51 ; >
     au < ready ; exists ; 2018 ; Journal of Transport Economics and Policy Volume 52 ; 52 ; >
-    au < ready ; exists ; 2019 ; Journal of Transport Economics and Policy Volume 53 ; 53 ; >
+    au < crawling ; exists ; 2019 ; Journal of Transport Economics and Policy Volume 53 ; 53 ; >
     au < ready ; exists ; 2020 ; Journal of Transport Economics and Policy Volume 54 ; 54 ; >
     au < ready ; exists ; 2021 ; Journal of Transport Economics and Policy Volume 55 ; 55 ; >
     au < ready ; exists ; 2022 ; Journal of Transport Economics and Policy Volume 56 ; 56 ; >
     au < ready ; exists ; 2023 ; Journal of Transport Economics and Policy Volume 57 ; 57 ; >
     au < ready ; exists ; 2024 ; Journal of Transport Economics and Policy Volume 58 ; 58 ; >
     au < crawling ; exists ; 2025 ; Journal of Transport Economics and Policy Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2026 ; Journal of Transport Economics and Policy Volume 60 ; 60 ; >
+    au < ready ; exists ; 2026 ; Journal of Transport Economics and Policy Volume 60 ; 60 ; >
 
   }
 
@@ -1315,7 +1315,7 @@
     au < finished ; manifest ; 2023 ; Labour History: A Journal of Labour and Social History Volume 123 ; 123 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Labour History: A Journal of Labour and Social History Volume 124 ; 124 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Labour History: A Journal of Labour and Social History Volume 125 ; 125 ; >
-    au < manifest ; exists ; 2026 ; Labour History: A Journal of Labour and Social History Volume 126 ; 126 ; >
+    au < ready ; exists ; 2026 ; Labour History: A Journal of Labour and Social History Volume 126 ; 126 ; >
 
   }
 
@@ -1358,7 +1358,7 @@
     au < finished ; manifest ; 2023 ; Labour History Review Volume 88 ; 88 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Labour History Review Volume 89 ; 89 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; Labour History Review Volume 90 ; 90 ; >
-    au < manifest ; exists ; 2026 ; Labour History Review Volume 91 ; 91 ; >
+    au < ready ; exists ; 2026 ; Labour History Review Volume 91 ; 91 ; >
 
   }
 
@@ -1401,7 +1401,7 @@
     au < doNotProcess ; exists ; 2023 ; The Library Volume 24 ; 24 ; >
     au < doNotProcess ; exists ; 2024 ; The Library Volume 25 ; 25 ; >
     au < frozen ; exists ; 2025 ; The Library Volume 26 ; 26 ; >
-    au < manifest ; exists ; 2026 ; The Library Volume 27 ; 27 ; >
+    au < ready ; exists ; 2026 ; The Library Volume 27 ; 27 ; >
 
   }
 
@@ -1588,7 +1588,7 @@
     au < finished ; manifest ; 2023 ; Modern Believing Volume 64 ; 64 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Modern Believing Volume 65 ; 65 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2025 ; Modern Believing Volume 66 ; 66 ; >
-    au < manifest ; exists ; 2026 ; Modern Believing Volume 67 ; 67 ; >
+    au < ready ; exists ; 2026 ; Modern Believing Volume 67 ; 67 ; >
 
   }
 
@@ -1674,7 +1674,7 @@
     au < finished ; manifest ; 2023 ; Music, Sound, and the Moving Image Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; Music, Sound, and the Moving Image Volume 18 ; 18 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Music, Sound, and the Moving Image Volume 19 ; 19 ; >
-    au < expected ; exists ; 2026 ; Music, Sound, and the Moving Image Volume 20 ; 20 ; >
+    au < manifest ; exists ; 2026 ; Music, Sound, and the Moving Image Volume 20 ; 20 ; >
 
   }
 
@@ -1864,7 +1864,7 @@
     au < finished ; manifest ; 2023 ; Romani Studies Volume 33 ; 33 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; Romani Studies Volume 34 ; 34 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; Romani Studies Volume 35 ; 35 ; >
-    au < manifest ; exists ; 2026 ; Romani Studies Volume 36 ; 36 ; >
+    au < ready ; exists ; 2026 ; Romani Studies Volume 36 ; 36 ; >
 
   }
 
@@ -1930,7 +1930,7 @@
     au < finished ; manifest ; 2023 ; Quebec Studies Volume 74 ; 74 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Quebec Studies Volume 75 ; 75 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Quebec Studies Volume 76 ; 76 ; >
-    au < manifest ; exists ; 2026 ; Quebec Studies Volume 77 ; 77 ; >
+    au < ready ; exists ; 2026 ; Quebec Studies Volume 77 ; 77 ; >
 
   }
 
@@ -1965,7 +1965,7 @@
     au < finished ; manifest ; 2023 ; Science Fiction Film and Television Volume 16 ; 16 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Science Fiction Film and Television Volume 17 ; 17 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; Science Fiction Film and Television Volume 18 ; 18 ; >
-    au < manifest ; exists ; 2026 ; Science Fiction Film and Television Volume 19 ; 19 ; >
+    au < ready ; exists ; 2026 ; Science Fiction Film and Television Volume 19 ; 19 ; >
 
   }
 
@@ -2006,7 +2006,7 @@
     au < finished ; manifest ; 2023 ; Sculpture Journal Volume 32 ; 32 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Sculpture Journal Volume 33 ; 33 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Sculpture Journal Volume 34 ; 34 ; >
-    au < manifest ; exists ; 2026 ; Sculpture Journal Volume 35 ; 35 ; >
+    au < ready ; exists ; 2026 ; Sculpture Journal Volume 35 ; 35 ; >
 
   }
 
@@ -2233,7 +2233,7 @@
     au < finished ; manifest ; 2023 ; Town Planning Review Volume 94 ; 94 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; Town Planning Review Volume 95 ; 95 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Town Planning Review Volume 96 ; 96 ; >
-    au < manifest ; exists ; 2026 ; Town Planning Review Volume 97 ; 97 ; >
+    au < ready ; exists ; 2026 ; Town Planning Review Volume 97 ; 97 ; >
 
 
   }
@@ -2310,7 +2310,7 @@
     au < finished ; manifest ; 2023 ; Journal of Romanian Studies Volume 5 ; 5 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; Journal of Romanian Studies Volume 6 ; 6 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2025 ; Journal of Romanian Studies Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2026 ; Journal of Romanian Studies Volume 8 ; 8 ; >
+    au < ready ; exists ; 2026 ; Journal of Romanian Studies Volume 8 ; 8 ; >
 
   }
   
@@ -2332,7 +2332,7 @@
     au < finished ; manifest ; 2023 ; T. S. Eliot Studies Annual Volume 5 ; 5 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; T. S. Eliot Studies Annual Volume 6 ; 6 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; T. S. Eliot Studies Annual Volume 7 ; 7 ; >
-    au < manifest ; exists ; 2026 ; T. S. Eliot Studies Annual Volume 8 ; 8 ; >
+    au < ready ; exists ; 2026 ; T. S. Eliot Studies Annual Volume 8 ; 8 ; >
 
   }
   
@@ -2381,28 +2381,28 @@
 
     param[journal_id] = revista
 
-    au < ready ; exists ; 1939 ; Revista Iberoamericana Volume 1 ; 1 ; >
-    au < ready ; exists ; 1940 ; Revista Iberoamericana Volume 2 ; 2 ; >
+    au < crawling ; exists ; 1939 ; Revista Iberoamericana Volume 1 ; 1 ; >
+    au < crawling ; exists ; 1940 ; Revista Iberoamericana Volume 2 ; 2 ; >
     au < ready ; exists ; 1941 ; Revista Iberoamericana Volume 3 ; 3 ; >
     au < ready ; exists ; 1941-1942 ; Revista Iberoamericana Volume 4 ; 4 ; >
     au < ready ; exists ; 1942 ; Revista Iberoamericana Volume 5 ; 5 ; >
-    au < ready ; exists ; 1943 ; Revista Iberoamericana Volume 6 ; 6 ; >
+    au < crawling ; exists ; 1943 ; Revista Iberoamericana Volume 6 ; 6 ; >
     au < ready ; exists ; 1943-1944 ; Revista Iberoamericana Volume 7 ; 7 ; >
     au < ready ; exists ; 1944 ; Revista Iberoamericana Volume 8 ; 8 ; >
-    au < ready ; exists ; 1945 ; Revista Iberoamericana Volume 9 ; 9 ; >
+    au < crawling ; exists ; 1945 ; Revista Iberoamericana Volume 9 ; 9 ; >
     au < ready ; exists ; 1945 ; Revista Iberoamericana Volume 10 ; 10 ; >
     au < ready ; exists ; 1946 ; Revista Iberoamericana Volume 11 ; 11 ; >
     au < ready ; exists ; 1947 ; Revista Iberoamericana Volume 12 ; 12 ; >
     au < ready ; exists ; 1948 ; Revista Iberoamericana Volume 13 ; 13 ; >
     au < ready ; exists ; 1948 ; Revista Iberoamericana Volume 14 ; 14 ; >
     au < ready ; exists ; 1949-1950 ; Revista Iberoamericana Volume 15 ; 15 ; >
-    au < ready ; exists ; 1951 ; Revista Iberoamericana Volume 16 ; 16 ; >
+    au < crawling ; exists ; 1951 ; Revista Iberoamericana Volume 16 ; 16 ; >
     au < crawling ; exists ; 1951-1952 ; Revista Iberoamericana Volume 17 ; 17 ; >
     au < crawling ; exists ; 1952-1953 ; Revista Iberoamericana Volume 18 ; 18 ; >
     au < ready ; exists ; 1953-1954 ; Revista Iberoamericana Volume 19 ; 19 ; >
-    au < ready ; exists ; 1955 ; Revista Iberoamericana Volume 20 ; 20 ; >
+    au < crawling ; exists ; 1955 ; Revista Iberoamericana Volume 20 ; 20 ; >
     au < ready ; exists ; 1956 ; Revista Iberoamericana Volume 21 ; 21 ; >
-    au < ready ; exists ; 1957 ; Revista Iberoamericana Volume 22 ; 22 ; >
+    au < crawling ; exists ; 1957 ; Revista Iberoamericana Volume 22 ; 22 ; >
     au < crawling ; exists ; 1958 ; Revista Iberoamericana Volume 23 ; 23 ; >
     au < ready ; exists ; 1959 ; Revista Iberoamericana Volume 24 ; 24 ; >
     au < crawling ; exists ; 1960 ; Revista Iberoamericana Volume 25 ; 25 ; >
@@ -2472,7 +2472,7 @@
     au < finished ; manifest ; 2023 ; Revista Iberoamericana Volume 89 ; 89 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Revista Iberoamericana Volume 90 ; 90 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Revista Iberoamericana Volume 91 ; 91 ; >
-    au < manifest ; exists ; 2026 ; Revista Iberoamericana Volume 92 ; 92 ; >
+    au < ready ; exists ; 2026 ; Revista Iberoamericana Volume 92 ; 92 ; >
 
   }
   
@@ -2488,17 +2488,17 @@
 
     au < ready ; exists ; 1914-1916 ; The Bodleian Library Record Volume I ; I ; >
     au < ready ; exists ; 1917-1919 ; The Bodleian Library Record Volume II ; II ; >
-    au < ready ; exists ; 1920-1922 ; The Bodleian Library Record Volume III ; III ; >
+    au < crawling ; exists ; 1920-1922 ; The Bodleian Library Record Volume III ; III ; >
     au < ready ; exists ; 1923-1925 ; The Bodleian Library Record Volume IV ; IV ; >
     au < ready ; exists ; 1926-1928 ; The Bodleian Library Record Volume V ; V ; >
     au < crawling ; exists ; 1929-1931 ; The Bodleian Library Record Volume VI ; VI ; >
-    au < ready ; exists ; 1932-1934 ; The Bodleian Library Record Volume VII ; VII ; >
+    au < crawling ; exists ; 1932-1934 ; The Bodleian Library Record Volume VII ; VII ; >
     au < ready ; exists ; 1935-1937 ; The Bodleian Library Record Volume VIII ; VIII ; >
     au < crawling ; exists ; 1938-1941 ; The Bodleian Library Record Volume 1 ; 1 ; >
     au < ready ; exists ; 1941-1949 ; The Bodleian Library Record Volume 2 ; 2 ; >
     au < ready ; exists ; 1950-1951 ; The Bodleian Library Record Volume 3 ; 3 ; >
     au < ready ; exists ; 1952-1953 ; The Bodleian Library Record Volume 4 ; 4 ; >
-    au < ready ; exists ; 1954-1956 ; The Bodleian Library Record Volume 5 ; 5 ; >
+    au < crawling ; exists ; 1954-1956 ; The Bodleian Library Record Volume 5 ; 5 ; >
     au < frozen ; exists ; 1957-1961 ; The Bodleian Library Record Volume 6 ; 6 ; >
     au < frozen ; exists ; 1962-1967 ; The Bodleian Library Record Volume 7 ; 7 ; >
     au < frozen ; exists ; 1967-1972 ; The Bodleian Library Record Volume 8 ; 8 ; >
@@ -2648,7 +2648,7 @@
     au < finished ; manifest ; 2023 ; French Studies Volume 77 ; 77 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; French Studies Volume 78 ; 78 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; French Studies Volume 79 ; 79 ; >
-    au < manifest ; exists ; 2026 ; French Studies Volume 80 ; 80 ; >
+    au < ready ; exists ; 2026 ; French Studies Volume 80 ; 80 ; >
 
   }
   
@@ -2707,7 +2707,7 @@
     au < finished ; manifest ; 2023 ; French Studies Bulletin Volume 44 ; 44 ; reingest5.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; French Studies Bulletin Volume 45 ; 45 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; French Studies Bulletin Volume 46 ; 46 ; >
-    au < manifest ; exists ; 2026 ; French Studies Bulletin Volume 47 ; 47 ; >
+    au < ready ; exists ; 2026 ; French Studies Bulletin Volume 47 ; 47 ; >
 
   }
   
@@ -2728,12 +2728,12 @@
     au < ready ; exists ; 1894-1897 ; The Huguenot Society Journal Volume 5 ; 5 ; >
     au < ready ; exists ; 1898-1901 ; The Huguenot Society Journal Volume 6 ; 6 ; >
     au < crawling ; exists ; 1902-1904 ; The Huguenot Society Journal Volume 7 ; 7 ; >
-    au < ready ; exists ; 1905-1908 ; The Huguenot Society Journal Volume 8 ; 8 ; >
+    au < crawling ; exists ; 1905-1908 ; The Huguenot Society Journal Volume 8 ; 8 ; >
     au < ready ; exists ; 1909-1911 ; The Huguenot Society Journal Volume 9 ; 9 ; >
     au < ready ; exists ; 1912-1914 ; The Huguenot Society Journal Volume 10 ; 10 ; >
     au < ready ; exists ; 1915-1917 ; The Huguenot Society Journal Volume 11 ; 11 ; >
     au < ready ; exists ; 1918-1923 ; The Huguenot Society Journal Volume 12 ; 12 ; >
-    au < ready ; exists ; 1924-1929 ; The Huguenot Society Journal Volume 13 ; 13 ; >
+    au < crawling ; exists ; 1924-1929 ; The Huguenot Society Journal Volume 13 ; 13 ; >
     au < ready ; exists ; 1930-1933 ; The Huguenot Society Journal Volume 14 ; 14 ; >
     au < ready ; exists ; 1934-1937 ; The Huguenot Society Journal Volume 15 ; 15 ; >
     au < ready ; exists ; 1938-1941 ; The Huguenot Society Journal Volume 16 ; 16 ; >
@@ -2810,7 +2810,7 @@
     au < finished ; manifest ; 2023 ; Polin: Studies in Polish Jewry Volume 35 ; 35 ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2024 ; Polin: Studies in Polish Jewry Volume 36 ; 36 ; reingest4.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Polin: Studies in Polish Jewry Volume 37 ; 37 ; >
-    au < manifest ; exists ; 2026 ; Polin: Studies in Polish Jewry Volume 38 ; 38 ; >
+    au < ready ; exists ; 2026 ; Polin: Studies in Polish Jewry Volume 38 ; 38 ; >
 
   }
   

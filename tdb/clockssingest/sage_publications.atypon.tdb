@@ -4384,7 +4384,7 @@
 
       au < crawling ; exists ; 2015 ; Applied In Vitro Toxicology Volume 1 ; 1 ; aiva ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2016 ; Applied In Vitro Toxicology Volume 2 ; 2 ; aiva ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2017 ; Applied In Vitro Toxicology Volume 3 ; 3 ; aiva ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2017 ; Applied In Vitro Toxicology Volume 3 ; 3 ; aiva ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2018 ; Applied In Vitro Toxicology Volume 4 ; 4 ; aiva ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Applied In Vitro Toxicology Volume 5 ; 5 ; aiva ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Applied In Vitro Toxicology Volume 6 ; 6 ; aiva ; https://journals.sagepub.com/ ; >
@@ -4463,7 +4463,7 @@
       au < manifest ; exists ; 1999 ; Applied Psychological Measurement Volume 23 ; 23 ; apma ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Applied Psychological Measurement Volume 24 ; 24 ; apma ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Applied Psychological Measurement Volume 25 ; 25 ; apma ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2002 ; Applied Psychological Measurement Volume 26 ; 26 ; apma ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2002 ; Applied Psychological Measurement Volume 26 ; 26 ; apma ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; Applied Psychological Measurement Volume 27 ; 27 ; apma ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Applied Psychological Measurement Volume 28 ; 28 ; apma ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; finished ; 2005 ; Applied Psychological Measurement Volume 29 ; 29 ; apma ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
@@ -4794,7 +4794,7 @@
     >
     #param[base_url] = http://ahh.sagepub.com/
 
-      au < ready ; exists ; 2002 ; Arts and Humanities in Higher Education Volume 1 ; 1 ; ahha ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2002 ; Arts and Humanities in Higher Education Volume 1 ; 1 ; ahha ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; Arts and Humanities in Higher Education Volume 2 ; 2 ; ahha ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Arts and Humanities in Higher Education Volume 3 ; 3 ; ahha ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; finished ; 2005 ; Arts and Humanities in Higher Education Volume 4 ; 4 ; ahha ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
@@ -5058,8 +5058,8 @@
     #move to ACCSCIENCE PUBLISHING PTE. LTD
 
       au < crawling ; exists ; 2004 ; Asian Journal of Water, Environment and Pollution Volume 1 ; 1 ; ajwa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2005 ; Asian Journal of Water, Environment and Pollution Volume 2 ; 2 ; ajwa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2006 ; Asian Journal of Water, Environment and Pollution Volume 3 ; 3 ; ajwa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2005 ; Asian Journal of Water, Environment and Pollution Volume 2 ; 2 ; ajwa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2006 ; Asian Journal of Water, Environment and Pollution Volume 3 ; 3 ; ajwa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2007 ; Asian Journal of Water, Environment and Pollution Volume 4 ; 4 ; ajwa ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2008 ; Asian Journal of Water, Environment and Pollution Volume 5 ; 5 ; ajwa ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2009 ; Asian Journal of Water, Environment and Pollution Volume 6 ; 6 ; ajwa ; https://journals.sagepub.com/ ; >
@@ -5131,7 +5131,7 @@
       au < manifest ; exists ; 1999 ; Asia Pacific Journal of Human Resources Volume 37 ; 37 ; apja ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Asia Pacific Journal of Human Resources Volume 38 ; 38 ; apja ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Asia Pacific Journal of Human Resources Volume 39 ; 39 ; apja ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2002 ; Asia Pacific Journal of Human Resources Volume 40 ; 40 ; apja ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2002 ; Asia Pacific Journal of Human Resources Volume 40 ; 40 ; apja ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; Asia Pacific Journal of Human Resources Volume 41 ; 41 ; apja ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Asia Pacific Journal of Human Resources Volume 42 ; 42 ; apja ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; frozen ; 2005 ; Asia Pacific Journal of Human Resources Volume 43 ; 43 ; apja ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
@@ -5166,7 +5166,7 @@
       au < manifest ; exists ; 1976 ; Asia Pacific Journal of Public Health Volume 11 ; 11 ; apha ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; Asia Pacific Journal of Public Health Volume 12 ; 12 ; apha ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Asia Pacific Journal of Public Health Volume 13 ; 13 ; apha ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2002 ; Asia Pacific Journal of Public Health Volume 14 ; 14 ; apha ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2002 ; Asia Pacific Journal of Public Health Volume 14 ; 14 ; apha ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; Asia Pacific Journal of Public Health Volume 15 ; 15 ; apha ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Asia Pacific Journal of Public Health Volume 16 ; 16 ; apha ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < finished ; finished ; 2005 ; Asia Pacific Journal of Public Health Volume 17 ; 17 ; apha ; https://journals.sagepub.com/ ; reingest2.clockss.org:8085 >
@@ -5244,7 +5244,7 @@
       au < crawling ; exists ; 2004 ; ASSAY and Drug Development Technologies Volume 2 ; 2 ; adda ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2005 ; ASSAY and Drug Development Technologies Volume 3 ; 3 ; adda ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2006 ; ASSAY and Drug Development Technologies Volume 4 ; 4 ; adda ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2007 ; ASSAY and Drug Development Technologies Volume 5 ; 5 ; adda ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2007 ; ASSAY and Drug Development Technologies Volume 5 ; 5 ; adda ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2008 ; ASSAY and Drug Development Technologies Volume 6 ; 6 ; adda ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2009 ; ASSAY and Drug Development Technologies Volume 7 ; 7 ; adda ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2010 ; ASSAY and Drug Development Technologies Volume 8 ; 8 ; adda ; https://journals.sagepub.com/ ; >
@@ -5252,10 +5252,10 @@
       au < ready ; exists ; 2012 ; ASSAY and Drug Development Technologies Volume 10 ; 10 ; adda ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2013 ; ASSAY and Drug Development Technologies Volume 11 ; 11 ; adda ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2014 ; ASSAY and Drug Development Technologies Volume 12 ; 12 ; adda ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2015 ; ASSAY and Drug Development Technologies Volume 13 ; 13 ; adda ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2016 ; ASSAY and Drug Development Technologies Volume 14 ; 14 ; adda ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2017 ; ASSAY and Drug Development Technologies Volume 15 ; 15 ; adda ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; ASSAY and Drug Development Technologies Volume 16 ; 16 ; adda ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2015 ; ASSAY and Drug Development Technologies Volume 13 ; 13 ; adda ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2016 ; ASSAY and Drug Development Technologies Volume 14 ; 14 ; adda ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2017 ; ASSAY and Drug Development Technologies Volume 15 ; 15 ; adda ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; ASSAY and Drug Development Technologies Volume 16 ; 16 ; adda ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; ASSAY and Drug Development Technologies Volume 17 ; 17 ; adda ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; ASSAY and Drug Development Technologies Volume 18 ; 18 ; adda ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; ASSAY and Drug Development Technologies Volume 19 ; 19 ; adda ; https://journals.sagepub.com/ ; >
@@ -24617,16 +24617,16 @@
       au < manifest ; exists ; 2004 ; International Journal of Applied Electromagnetics and Mechanics Volume 19 ; 19 ; aema ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2004 ; International Journal of Applied Electromagnetics and Mechanics Volume 20 ; 20 ; aema ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2005 ; International Journal of Applied Electromagnetics and Mechanics Volume 21 ; 21 ; aema ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2005 ; International Journal of Applied Electromagnetics and Mechanics Volume 22 ; 22 ; aema ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2005 ; International Journal of Applied Electromagnetics and Mechanics Volume 22 ; 22 ; aema ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2006 ; International Journal of Applied Electromagnetics and Mechanics Volume 23 ; 23 ; aema ; https://journals.sagepub.com/ ; >
       au < ready ; exists ; 2006 ; International Journal of Applied Electromagnetics and Mechanics Volume 24 ; 24 ; aema ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2007 ; International Journal of Applied Electromagnetics and Mechanics Volume 25 ; 25 ; aema ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2007 ; International Journal of Applied Electromagnetics and Mechanics Volume 26 ; 26 ; aema ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2008 ; International Journal of Applied Electromagnetics and Mechanics Volume 27 ; 27 ; aema ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2008 ; International Journal of Applied Electromagnetics and Mechanics Volume 28 ; 28 ; aema ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2009 ; International Journal of Applied Electromagnetics and Mechanics Volume 29 ; 29 ; aema ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Applied Electromagnetics and Mechanics Volume 29 ; 29 ; aema ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2009 ; International Journal of Applied Electromagnetics and Mechanics Volume 30 ; 30 ; aema ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2009 ; International Journal of Applied Electromagnetics and Mechanics Volume 31 ; 31 ; aema ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2009 ; International Journal of Applied Electromagnetics and Mechanics Volume 31 ; 31 ; aema ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2010 ; International Journal of Applied Electromagnetics and Mechanics Volume 32 ; 32 ; aema ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2010 ; International Journal of Applied Electromagnetics and Mechanics Volume 33 ; 33 ; aema ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2010 ; International Journal of Applied Electromagnetics and Mechanics Volume 34 ; 34 ; aema ; https://journals.sagepub.com/ ; >
@@ -44560,11 +44560,11 @@
     au < ready ; exists ; 2011 ; Medical Acupuncture Volume 23 ; 23 ; acua ; https://journals.sagepub.com/ ; >
     au < ready ; exists ; 2012 ; Medical Acupuncture Volume 24 ; 24 ; acua ; https://journals.sagepub.com/ ; >
     au < crawling ; exists ; 2013 ; Medical Acupuncture Volume 25 ; 25 ; acua ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2014 ; Medical Acupuncture Volume 26 ; 26 ; acua ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2014 ; Medical Acupuncture Volume 26 ; 26 ; acua ; https://journals.sagepub.com/ ; >
     au < ready ; exists ; 2015 ; Medical Acupuncture Volume 27 ; 27 ; acua ; https://journals.sagepub.com/ ; >
     au < ready ; exists ; 2016 ; Medical Acupuncture Volume 28 ; 28 ; acua ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2017 ; Medical Acupuncture Volume 29 ; 29 ; acua ; https://journals.sagepub.com/ ; >
-    au < ready ; exists ; 2018 ; Medical Acupuncture Volume 30 ; 30 ; acua ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2017 ; Medical Acupuncture Volume 29 ; 29 ; acua ; https://journals.sagepub.com/ ; >
+    au < crawling ; exists ; 2018 ; Medical Acupuncture Volume 30 ; 30 ; acua ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2019 ; Medical Acupuncture Volume 31 ; 31 ; acua ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2020 ; Medical Acupuncture Volume 32 ; 32 ; acua ; https://journals.sagepub.com/ ; >
     au < frozen ; exists ; 2021 ; Medical Acupuncture Volume 33 ; 33 ; acua ; https://journals.sagepub.com/ ; >
