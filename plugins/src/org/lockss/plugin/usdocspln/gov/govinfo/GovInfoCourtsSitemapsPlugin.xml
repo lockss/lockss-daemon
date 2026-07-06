@@ -48,7 +48,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>37</string>
+    <string>38</string>
   </entry>
   <entry>
     <string>plugin_feature_version_map</string>
@@ -138,9 +138,11 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"^%scontent/pkg/[^/]+\.zip$", base_url</string>
       <string>1,"^%scontent/pkg/%s-%s", base_url, collection_id, court_id</string>
       <string>1,"^%smetadata/pkg/%s-%s.*/mods\.xml$", base_url, collection_id, court_id</string>
+      <string>1,"^%smetadata/granule/.*/mods\.xml$", base_url</string>
       <string>2,"^%smetadata/pkg/%s-%s.*/premis\.xml$", base_url, collection_id, court_id</string>
       <!-- This is a legitimate URL... -->
       <string>1,"^%sapp/dynamic/stylesheets/bootstrap/bootstrap\.min\.css", base_url</string>
+      <string>1,"^%sapp/dynamic/stylesheets/fonts/glyphicons-halflings-regular\.(eot|woff2?|ttf|svg)(\?.*)?$", base_url</string>
       <!-- ...with incorrect relative URLs to ancillary files and error pages are served as 200 ad infinitum -->
       <string>2,"^%sapp/(details/lib/bootstrap|dynamic/stylesheets)/", base_url</string>
       <string>1,"^%sapp/details/%s-%s", base_url, collection_id, court_id</string>
