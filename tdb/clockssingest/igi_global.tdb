@@ -2995,7 +2995,7 @@
     au < deepCrawl ; exists ; 2022 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2023 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 15 ; 15 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
-    au < crawling ; exists ; 2025 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 2025 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 16 ; 16 ; https://www.igi-global.com/ ; >
     au < expected ; exists ; 2026 ; International Journal of Open Source Software and Processes (IJOSSP) Volume 17 ; 17 ; https://www.igi-global.com/ ; >
 
   }
@@ -4141,7 +4141,7 @@
     >
     param[journal_issn] = 1548-7717
 
-    au < crawling ; exists ; 1999 ; Journal of Cases on Information Technology (JCIT) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 1999 ; Journal of Cases on Information Technology (JCIT) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2000 ; Journal of Cases on Information Technology (JCIT) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Journal of Cases on Information Technology (JCIT) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
     au < finished ; manifest ; 2002 ; Journal of Cases on Information Technology (JCIT) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
@@ -4269,7 +4269,7 @@
     >
     param[journal_issn] = 1062-7375
 
-    au < crawling ; exists ; 1993 ; Journal of Global Information Management (JGIM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 1993 ; Journal of Global Information Management (JGIM) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 1994 ; Journal of Global Information Management (JGIM) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
     au < frozen ; exists ; 1995 ; Journal of Global Information Management (JGIM) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 1996 ; Journal of Global Information Management (JGIM) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
@@ -4350,10 +4350,10 @@
     au < finished ; manifest ; 1992 ; Journal of Organizational and End User Computing (JOEUC) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
     au < frozen ; exists ; 1993 ; Journal of Organizational and End User Computing (JOEUC) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 1994 ; Journal of Organizational and End User Computing (JOEUC) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 1995 ; Journal of Organizational and End User Computing (JOEUC) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 1995 ; Journal of Organizational and End User Computing (JOEUC) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 1996 ; Journal of Organizational and End User Computing (JOEUC) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 1997 ; Journal of Organizational and End User Computing (JOEUC) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
-    au < crawling ; exists ; 1998 ; Journal of Organizational and End User Computing (JOEUC) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+    au < frozen ; exists ; 1998 ; Journal of Organizational and End User Computing (JOEUC) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
     au < frozen ; exists ; 1999 ; Journal of Organizational and End User Computing (JOEUC) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
     au < finished ; manifest ; 2000 ; Journal of Organizational and End User Computing (JOEUC) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2001 ; Journal of Organizational and End User Computing (JOEUC) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
@@ -4399,14 +4399,14 @@
       au < finished ; manifest ; 2015 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2016 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2017 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
-      au < crawling ; exists ; 2018 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2018 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2019 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 6 ; 6 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2020 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2021 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 8 ; 8 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2022 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < frozen ; exists ; 2023 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2024 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 11 ; 11 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2025 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2025 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 12 ; 12 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2026 ; International Journal of Applied Management Sciences and Engineering (IJAMSE) Volume 13 ; 13 ; https://www.igi-global.com/ ; >
 
   }
@@ -4518,9 +4518,9 @@
       au < finished ; manifest ; 2020 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
       au < frozen ; exists ; 2021 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2022 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 7 ; 7 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
-      au < crawling ; exists ; 2023 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2023 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2024 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 9 ; 9 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2025 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2025 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Bias, Identity and Diversities in Education (IJBIDE) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
 
   }
@@ -4622,7 +4622,7 @@
       au < finished ; manifest ; 2020 ; International Journal of Business Strategy and Automation (IJBSA) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; International Journal of Business Strategy and Automation (IJBSA) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2022 ; International Journal of Business Strategy and Automation (IJBSA) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
-      au < crawling ; exists ; 2023 ; International Journal of Business Strategy and Automation (IJBSA) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2023 ; International Journal of Business Strategy and Automation (IJBSA) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
 
   }
 
@@ -4711,7 +4711,7 @@
 
       param[journal_issn] = 2577-4867
 
-      au < crawling ; exists ; 2019 ; International Journal of Cyber-Physical Systems (IJCPS) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2019 ; International Journal of Cyber-Physical Systems (IJCPS) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2020 ; International Journal of Cyber-Physical Systems (IJCPS) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2021 ; International Journal of Cyber-Physical Systems (IJCPS) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2022 ; International Journal of Cyber-Physical Systems (IJCPS) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
@@ -4837,7 +4837,7 @@
 
       au < frozen ; exists ; 2018 ; International Journal of Fog Computing (IJFC) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < ready ; exists ; 2019 ; International Journal of Fog Computing (IJFC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
-      au < crawling ; exists ; 2020 ; International Journal of Fog Computing (IJFC) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2020 ; International Journal of Fog Computing (IJFC) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2021 ; International Journal of Fog Computing (IJFC) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2022 ; International Journal of Fog Computing (IJFC) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2023 ; International Journal of Fog Computing (IJFC) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
@@ -4985,7 +4985,7 @@
       au < finished ; manifest ; 2014 ; International Journal of Public Administration in the Digital Age (IJPADA) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2015 ; International Journal of Public Administration in the Digital Age (IJPADA) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
       au < frozen ; exists ; 2016 ; International Journal of Public Administration in the Digital Age (IJPADA) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
-      au < crawling ; exists ; 2017 ; International Journal of Public Administration in the Digital Age (IJPADA) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2017 ; International Journal of Public Administration in the Digital Age (IJPADA) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2018 ; International Journal of Public Administration in the Digital Age (IJPADA) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
       au < frozen ; exists ; 2019 ; International Journal of Public Administration in the Digital Age (IJPADA) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2020 ; International Journal of Public Administration in the Digital Age (IJPADA) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
@@ -5107,7 +5107,7 @@
 
       param[journal_issn] = 2334-4598
 
-      au < crawling ; exists ; 2014 ; International Journal of Rough Sets and Data Analysis (IJRSDA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2014 ; International Journal of Rough Sets and Data Analysis (IJRSDA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2015 ; International Journal of Rough Sets and Data Analysis (IJRSDA) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2016 ; International Journal of Rough Sets and Data Analysis (IJRSDA) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2017 ; International Journal of Rough Sets and Data Analysis (IJRSDA) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
@@ -5129,8 +5129,8 @@
 
       au < finished ; manifest ; 2017 ; International Journal of Semiotics and Visual Rhetoric (IJSVR) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2018 ; International Journal of Semiotics and Visual Rhetoric (IJSVR) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
-      au < crawling ; exists ; 2019 ; International Journal of Semiotics and Visual Rhetoric (IJSVR) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
-      au < crawling ; exists ; 2020 ; International Journal of Semiotics and Visual Rhetoric (IJSVR) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2019 ; International Journal of Semiotics and Visual Rhetoric (IJSVR) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2020 ; International Journal of Semiotics and Visual Rhetoric (IJSVR) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2021 ; International Journal of Semiotics and Visual Rhetoric (IJSVR) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2023 ; International Journal of Semiotics and Visual Rhetoric (IJSVR) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
 
@@ -5149,7 +5149,7 @@
 
       au < frozen ; exists ; 2018 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2019 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 10 ; 10 ; https://www.igi-global.com/ ; >
-      au < crawling ; exists ; 2020 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2020 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 11 ; 11 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2021 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 12 ; 12 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2022 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 13 ; 13 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2024 ; International Journal of Smart Education and Urban Society (IJSEUS) Volume 14 ; 14 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
@@ -5166,7 +5166,7 @@
 
       param[journal_issn] = 2644-1845
 
-      au < crawling ; exists ; 2020 ; International Journal of Smart Sensor Technologies and Applications (IJSSTA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2020 ; International Journal of Smart Sensor Technologies and Applications (IJSSTA) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2023 ; International Journal of Smart Sensor Technologies and Applications (IJSSTA) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; International Journal of Smart Sensor Technologies and Applications (IJSSTA) Volume 3 ; 3 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
 
@@ -5280,7 +5280,7 @@
       au < finished ; manifest ; 2022 ; International Journal of Teacher Education and Professional Development (IJTEPD) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; International Journal of Teacher Education and Professional Development (IJTEPD) Volume 6 ; 6 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2024 ; International Journal of Teacher Education and Professional Development (IJTEPD) Volume 7 ; 7 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2025 ; International Journal of Teacher Education and Professional Development (IJTEPD) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2025 ; International Journal of Teacher Education and Professional Development (IJTEPD) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
       au < manifest ; exists ; 2026 ; International Journal of Teacher Education and Professional Development (IJTEPD) Volume 9 ; 9 ; https://www.igi-global.com/ ; >
 
   }
@@ -5339,7 +5339,7 @@
       au < finished ; manifest ; 2022 ; International Journal of Translation, Interpretation, and Applied Linguistics (IJTIAL) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; International Journal of Translation, Interpretation, and Applied Linguistics (IJTIAL) Volume 5 ; 5 ; https://www.igi-global.com/ ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2024 ; International Journal of Translation, Interpretation, and Applied Linguistics (IJTIAL) Volume 6 ; 6 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
-      au < crawling ; exists ; 2025 ; International Journal of Translation, Interpretation, and Applied Linguistics (IJTIAL) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2025 ; International Journal of Translation, Interpretation, and Applied Linguistics (IJTIAL) Volume 7 ; 7 ; https://www.igi-global.com/ ; >
       au < expected ; exists ; 2026 ; International Journal of Translation, Interpretation, and Applied Linguistics (IJTIAL) Volume 8 ; 8 ; https://www.igi-global.com/ ; >
 
   }
@@ -5354,7 +5354,7 @@
 
       param[journal_issn] = 2644-1659
 
-      au < crawling ; exists ; 2020 ; International Journal of Urban Planning and Smart Cities (IJUPSC) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2020 ; International Journal of Urban Planning and Smart Cities (IJUPSC) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2021 ; International Journal of Urban Planning and Smart Cities (IJUPSC) Volume 2 ; 2 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2022 ; International Journal of Urban Planning and Smart Cities (IJUPSC) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2023 ; International Journal of Urban Planning and Smart Cities (IJUPSC) Volume 4 ; 4 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
@@ -5394,7 +5394,7 @@
 
       au < finished ; manifest ; 2020 ; Journal of Business Ecosystems (JBE) Volume 1 ; 1 ; https://www.igi-global.com/ ; reingest2.clockss.org:8085 >
       au < finished ; manifest ; 2021 ; Journal of Business Ecosystems (JBE) Volume 2 ; 2 ; https://www.igi-global.com/ ; reingest3.clockss.org:8083 >
-      au < crawling ; exists ; 2022 ; Journal of Business Ecosystems (JBE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2022 ; Journal of Business Ecosystems (JBE) Volume 3 ; 3 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2023 ; Journal of Business Ecosystems (JBE) Volume 4 ; 4 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2024 ; Journal of Business Ecosystems (JBE) Volume 5 ; 5 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2025 ; Journal of Business Ecosystems (JBE) Volume 6 ; 6 ; https://www.igi-global.com/ ; >
@@ -5412,7 +5412,7 @@
 
       param[journal_issn] = 1533-9114
 
-      au < crawling ; exists ; 2021 ; Journal of Comparative Asian Development Volume 18 ; 18 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2021 ; Journal of Comparative Asian Development Volume 18 ; 18 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2022 ; Journal of Comparative Asian Development Volume 19 ; 19 ; https://www.igi-global.com/ ; >
       au < frozen ; exists ; 2024 ; Journal of Comparative Asian Development Volume 20 ; 20 ; https://www.igi-global.com/ ; >
       au < finished ; manifest ; 2025 ; Journal of Comparative Asian Development Volume 21 ; 21 ; https://www.igi-global.com/ ; reingest4.clockss.org:8082 >
@@ -5493,7 +5493,7 @@
       param[journal_issn] = 2691-9273
       #continued_by = 2771-1986
 
-      au < crawling ; exists ; 2021 ; International Journal of eSports Research (IJER) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
+      au < frozen ; exists ; 2021 ; International Journal of eSports Research (IJER) Volume 1 ; 1 ; https://www.igi-global.com/ ; >
 
   }
 
