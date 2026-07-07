@@ -677,6 +677,11 @@ public class ConfigManager implements LockssManager {
   private List<Pattern> expertConfigDenyPats;
   private boolean enableExpertConfig;
 
+  /** Set of migrated deleted AUs, to prevent re-adding them during
+   * migration */
+  private Set<String> migratedAuids =
+    Collections.synchronizedSet(new HashSet<>());
+
   public ConfigManager() {
     this(null, null);
   }
@@ -2331,6 +2336,7 @@ public class ConfigManager implements LockssManager {
 
         switch (action) {
           case "DELETE":
+            addMigratedAuid(auid);
             fileConfig.removeConfigTree(prefix);
             cnt++;
             break;
@@ -2358,6 +2364,22 @@ public class ConfigManager implements LockssManager {
     }
     log.info("Processed " + cnt + " AU config journal entries");
     return true;
+  }
+
+  public void addMigratedAuid(String auid) {
+    migratedAuids.add(auid);
+  }
+
+  public void removeMigratedAuid(String auid) {
+    migratedAuids.remove(auid);
+  }
+
+  public void resetMigratedAuids() {
+    migratedAuids.clear();
+  }
+
+  public boolean isMigratedAuid(String auid) {
+    return migratedAuids.contains(auid);
   }
 
   /** Write the named local cache config file into the previously determined

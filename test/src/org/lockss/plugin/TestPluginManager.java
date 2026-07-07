@@ -743,6 +743,7 @@ public class TestPluginManager extends LockssTestCase {
     assertTrue(mgr.isActiveAu(au));
     String auid = au.getAuId();
     String prefix = PluginManager.auConfigPrefix(auid);
+    assertFalse(mgr.isMigratedAuid(auid));
 
     mgr.deactivateAuForMigration(au);
 
@@ -755,6 +756,7 @@ public class TestPluginManager extends LockssTestCase {
         .getBoolean(PluginManager.AU_PARAM_DISABLED, true));
     assertTrue(new File(theDaemon.getConfigManager().getCacheConfigDir(),
         ConfigManager.CONFIG_FILE_AU_CONFIG_JOURNAL).exists());
+    assertFalse(mgr.isMigratedAuid(auid));
 
     assertTrue(mgr.processAuTxtJournal());
 
@@ -765,6 +767,7 @@ public class TestPluginManager extends LockssTestCase {
         config.get(prefix + "." + PluginManager.AU_PARAM_DISABLED));
     assertFalse(new File(theDaemon.getConfigManager().getCacheConfigDir(),
         ConfigManager.CONFIG_FILE_AU_CONFIG_JOURNAL).exists());
+    assertFalse(mgr.isMigratedAuid(auid));
   }
 
   public void testDeleteAuWithJournal() throws Exception {
@@ -782,6 +785,7 @@ public class TestPluginManager extends LockssTestCase {
     assertTrue(mgr.isActiveAu(au));
     String auid = au.getAuId();
     String prefix = PluginManager.auConfigPrefix(auid);
+    assertFalse(mgr.isMigratedAuid(auid));
 
     mgr.deleteAuForMigration(au);
 
@@ -790,12 +794,17 @@ public class TestPluginManager extends LockssTestCase {
     assertFalse(mgr.isInactiveAuId(auid));
     assertEquals("journal-delete",
         mgr.getStoredAuConfiguration(auid).get("a"));
+    assertTrue(mgr.isMigratedAuid(auid));
+
+    theDaemon.getConfigManager().resetMigratedAuids();
+    assertFalse(mgr.isMigratedAuid(auid));
 
     assertTrue(mgr.processAuTxtJournal());
 
     // Assert state post-processAuTextJournal()
     Configuration config = theDaemon.getConfigManager().readAuConfigFile();
     assertTrue(config.getConfigTree(prefix).isEmpty());
+    assertTrue(mgr.isMigratedAuid(auid));
   }
 
   // ensure getAllAus() returns AUs in title sorted order

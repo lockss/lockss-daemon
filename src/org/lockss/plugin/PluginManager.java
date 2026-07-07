@@ -1051,6 +1051,7 @@ public class PluginManager
     try {
       ArchivalUnit au = plugin.createAu(auConf);
       inactiveAuIds.remove(au.getAuId());
+      configMgr.removeMigratedAuid(au.getAuId());
       log.debug("Created AU " + au);
       try {
 	getDaemon().startOrReconfigureAuManagers(au, auConf);
@@ -1544,8 +1545,13 @@ public class PluginManager
       String auid = au.getAuId();
       stopAu(au, new AuEvent(AuEvent.Type.Delete, false).setMigration(true));
       inactiveAuIds.remove(auid);
+      configMgr.addMigratedAuid(auid);
       appendAuTxtJournal("DELETE", auid);
     }
+  }
+
+  public boolean isMigratedAuid(String auid) {
+    return configMgr.isMigratedAuid(auid);
   }
 
   /**
