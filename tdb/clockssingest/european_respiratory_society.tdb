@@ -163,20 +163,20 @@
     }
     {
       param[journal_id] = erj
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1988 ; European Respiratory Journal Volume 1 ; 1 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1989 ; European Respiratory Journal Volume 2 ; 2 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1990 ; European Respiratory Journal Volume 3 ; 3 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1991 ; European Respiratory Journal Volume 4 ; 4 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1992 ; European Respiratory Journal Volume 5 ; 5 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1993 ; European Respiratory Journal Volume 6 ; 6 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1994 ; European Respiratory Journal Volume 7 ; 7 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1995 ; European Respiratory Journal Volume 8 ; 8 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1996 ; European Respiratory Journal Volume 9 ; 9 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1997 ; European Respiratory Journal Volume 10 ; 10 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1998 ; European Respiratory Journal Volume 11 ; 11 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1998 ; European Respiratory Journal Volume 12 ; 12 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1999 ; European Respiratory Journal Volume 13 ; 13 ; https://publications.ersnet.org/ ; >
-      au < ers.ClockssERSScolarisPlugin ; exists ; exists ; 1999 ; European Respiratory Journal Volume 14 ; 14 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1988 ; European Respiratory Journal Volume 1 ; 1 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1989 ; European Respiratory Journal Volume 2 ; 2 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1990 ; European Respiratory Journal Volume 3 ; 3 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1991 ; European Respiratory Journal Volume 4 ; 4 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1992 ; European Respiratory Journal Volume 5 ; 5 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1993 ; European Respiratory Journal Volume 6 ; 6 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1994 ; European Respiratory Journal Volume 7 ; 7 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1995 ; European Respiratory Journal Volume 8 ; 8 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1996 ; European Respiratory Journal Volume 9 ; 9 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1997 ; European Respiratory Journal Volume 10 ; 10 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1998 ; European Respiratory Journal Volume 11 ; 11 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1998 ; European Respiratory Journal Volume 12 ; 12 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1999 ; European Respiratory Journal Volume 13 ; 13 ; https://publications.ersnet.org/ ; >
+      au < ers.ClockssERSScolarisPlugin ; manifest ; exists ; 1999 ; European Respiratory Journal Volume 14 ; 14 ; https://publications.ersnet.org/ ; >
 
       au < ers.ClockssERSScolarisPlugin ; doNotProcess ; exists ; 2023 ; European Respiratory Journal Volume 61 ; 61 ; https://publications.ersnet.org/ ; >
       au < ers.ClockssERSScolarisPlugin ; doNotProcess ; exists ; 2023 ; European Respiratory Journal Volume 62 ; 62 ; https://publications.ersnet.org/ ; >
