@@ -211,8 +211,8 @@ public class MigrationManager extends BaseLockssDaemonManager
     Configuration mCfg = cfgMgr.newConfiguration();
     mCfg.put(MigrationManager.PARAM_IS_IN_MIGRATION_MODE,
              String.valueOf(inMigrationMode));
-    updateMigrationConfigFile(mCfg);
     this.isInMigrationMode = inMigrationMode;
+    updateMigrationConfigFile(mCfg);
   }
 
   public void setIsDbMoved(boolean isDbMoved) throws IOException {
@@ -362,8 +362,13 @@ public class MigrationManager extends BaseLockssDaemonManager
         aus.setMigrationState(MigrationState.NotStarted);
       }
     }
-    setIsDbMoved(false);
-    setInMigrationMode(false);
+    isInMigrationMode = false;
+    Configuration mCfg = cfgMgr.newConfiguration();
+    mCfg.put(MigrationManager.PARAM_IS_DB_MOVED, "false");
+    mCfg.put(MigrationManager.PARAM_IS_IN_MIGRATION_MODE, "false");
+    mCfg.put(DbManager.PARAM_WAIT_FOR_EXTERNAL_SETUP, "false");
+    mCfg.put(DbManager.PARAM_TARGET_DB_VERSION, "");
+    updateMigrationConfigFile(mCfg);
   }
 
   /**
