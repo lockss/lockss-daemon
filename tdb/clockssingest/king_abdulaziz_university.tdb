@@ -51,7 +51,7 @@
       param[journal_abbr] = jengs
 
       au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Engineering Sciences Volume 35 ; 35 ; >
-      au < testing ; exists ; 2026 ; Journal of King Abdulaziz University: Engineering Sciences Volume 36 ; 36 ; >
+      au < ready ; exists ; 2026 ; Journal of King Abdulaziz University: Engineering Sciences Volume 36 ; 36 ; >
 
   }
 
@@ -69,7 +69,7 @@
       au < frozen ; exists ; 2023 ; Journal of King Abdulaziz University: Islamic Economics Volume 36 ; 36 ; >
       au < frozen ; exists ; 2024 ; Journal of King Abdulaziz University: Islamic Economics Volume 37 ; 37 ; >
       au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Islamic Economics Volume 38 ; 38 ; >
-      au < testing ; exists ; 2026 ; Journal of King Abdulaziz University: Islamic Economics Volume 39 ; 39 ; >
+      au < ready ; exists ; 2026 ; Journal of King Abdulaziz University: Islamic Economics Volume 39 ; 39 ; >
 
   }
 
@@ -114,7 +114,7 @@
       param[journal_abbr] = jmealas
 
       au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 34 ; 34 ; >
-      au < testing ; exists ; 2026 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 35 ; 35 ; >
+      au < ready ; exists ; 2026 ; Journal of King Abdulaziz University: Meteorology, Environment and Arid Land Agriculture Volume 35 ; 35 ; >
 
   }
 
@@ -129,7 +129,7 @@
       param[journal_abbr] = jsci
 
       au < frozen ; exists ; 2025 ; Journal of King Abdulaziz University: Science Volume 35 ; 35 ; >
-      au < testing ; exists ; 2026 ; Journal of King Abdulaziz University: Science Volume 36 ; 36 ; >
+      au < ready ; exists ; 2026 ; Journal of King Abdulaziz University: Science Volume 36 ; 36 ; >
 
   }
 
@@ -145,7 +145,7 @@
 
       au < frozen ; exists ; 2024 ; The Journal of Medical Rehabilitation Science Volume 1 ; 1 ; >
       au < frozen ; exists ; 2025 ; The Journal of Medical Rehabilitation Science Volume 2 ; 2 ; >
-      au < testing ; exists ; 2026 ; The Journal of Medical Rehabilitation Science Volume 3 ; 3 ; >
+      au < ready ; exists ; 2026 ; The Journal of Medical Rehabilitation Science Volume 3 ; 3 ; >
 
   }
 

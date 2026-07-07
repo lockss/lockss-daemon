@@ -66,7 +66,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
   private static final String CIT_RIGHT_INLINE_CLASS = "csl-right-inline";
   // [cited 2022May18]
   public static final Pattern VANCOUVER_CIT_PATTERN =
-      Pattern.compile("\\[cited \\d\\d\\d\\d\\s?[a-z]+\\.?\\s?\\d\\d?\\s?]", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("\\[cited \\d\\d?\\d?\\d?\\s?.*\\.?\\s?\\d\\d?\\d?\\d?\\s?]", Pattern.CASE_INSENSITIVE);
   // [citado 21 de mayo de 2022]
   // [citado 17 de octubre de 2022]
   public static final Pattern ESPANOL_VANCOUVER_CIT_PATTERN =
@@ -79,10 +79,13 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
       Pattern.compile("\\(Accessed: \\d\\d?\\s?[a-z]+\\.?\\s?\\d\\d\\d\\d\\s?\\)", Pattern.CASE_INSENSITIVE);
   // Acesso em: 19 may. 2022.
   public static final Pattern ASSOCIACAO_BRAZILEIRA_DE_NORMAS_TECNICAS_PATTERN =
-      Pattern.compile("Acesso em: \\d\\d?\\s?[a-z]+\\.?\\s?\\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("Acesso em: \\d\\d?\\s?.*\\.?\\s?\\d\\d\\d\\d", Pattern.CASE_INSENSITIVE);
   // Accedido mayo 21, 2022.
   public static final Pattern ESPANOL_CIT_PATTERN =
       Pattern.compile("Accedido:? ([a-z]+\\s?\\d\\d?,\\s?\\d\\d\\d\\d\\.|\\d\\d?\\s?[a-z]+\\s?\\d\\d\\d\\d)", Pattern.CASE_INSENSITIVE);
+    // Truy cập Tháng Bảy 8, 2026.
+  public static final Pattern VIETNAMESE_CIT_PATTERN =
+      Pattern.compile("Truy cập:? (.*\\s?\\d\\d?,\\s?\\d\\d\\d\\d\\.|\\d\\d?\\s?.+\\s?\\d\\d\\d\\d)", Pattern.CASE_INSENSITIVE);
 
   private static final NodeFilter[] includeNodes = new NodeFilter[] {
     // some pages are full of scripts with no discernable content pre-browser building.
@@ -261,6 +264,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
     citPats.add(HARVARD_CIT_PATTERN);
     citPats.add(TURABIAN_CIT_PATTERN);
     citPats.add(ESPANOL_CIT_PATTERN);
+    citPats.add(VIETNAMESE_CIT_PATTERN);
     Matcher mat;
     for (Pattern citPat : citPats) {
       mat = citPat.matcher(allText);
