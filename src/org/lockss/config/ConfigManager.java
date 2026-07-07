@@ -1612,7 +1612,10 @@ public class ConfigManager implements LockssManager {
         // Promote V2 params so they take effect.  Promote V2 DB
         // datasource only if the DB has been migrated (isDbMoved).
         if (isDbMoved) {
+          log.debug("In migration mode, DB copied, promoting v2 params and datasource");
           config.removeConfigTree(DbManager.DATASOURCE_ROOT);
+        } else {
+          log.debug("In migration mode, DB not copied, promoting non-datasource v2 params");
         }
         for (Iterator iter = v2MigrationParams.keyIterator(); iter.hasNext();) {
           String key = (String)iter.next();
