@@ -86,6 +86,8 @@ public class SulaimaniDentalJournalsHtmlHashFilterFactory implements FilterFacto
 
                 // Share accordion — social share buttons with external service JS
                 HtmlNodeFilters.tagWithAttributeRegex("div", "id", "accordion-share"),
+
+                HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/cdn-cgi/l/email-protection"),
         };
 
         InputStream filteredStream = new HtmlFilterInputStream(in, encoding,
