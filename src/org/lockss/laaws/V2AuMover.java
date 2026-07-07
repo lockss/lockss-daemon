@@ -330,7 +330,7 @@ public class V2AuMover {
    * <i>any</i> content in V2 will be skipped.  <b>Setting this false
    * risks missing some files if migration is reatarted after being
    * interrupted
-   y*/
+   */
   public static final String PARAM_CHECK_MISSING_CONTENT =
     PREFIX + "check.missing.content";
   public static final boolean DEFAULT_CHECK_MISSING_CONTENT = true;
