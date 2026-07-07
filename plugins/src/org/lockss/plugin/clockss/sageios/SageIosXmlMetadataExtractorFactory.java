@@ -72,7 +72,17 @@ public class SageIosXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
             List<String> returnList = new ArrayList<String>();
             // filename is just the same a the XML filename but with .pdf 
             // instead of .xml
-            String pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+            String pdfName;
+            if(url_string.contains("-fm")){
+                String url_string2 = url_string.substring(0,url_string.lastIndexOf("/"));
+                String eisbn = oneAM.getRaw(helper.getFilenameXPathKey());
+                if(eisbn != null){
+                    eisbn = eisbn.replaceAll("-","");
+                } 
+                pdfName = url_string2.substring(0, url_string2.lastIndexOf("/")) + "/fulltext/" + eisbn + ".pdf";
+            }else{
+                pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
+            }
             log.debug3("pdfName is " + pdfName);
             returnList.add(pdfName);
             return returnList;        

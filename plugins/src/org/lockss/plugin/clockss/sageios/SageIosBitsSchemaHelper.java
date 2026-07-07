@@ -145,17 +145,17 @@ public class SageIosBitsSchemaHelper implements SourceXmlSchemaHelper{
     /*
      *  BITS specific XPATH key definitions that we care about
      */
-    private static String BITS_book = "/book";
-    private static String BITS_series_title = "/book/collection-meta/title-group/title";
-    private static String BITS_eissn = "/book/collection-meta/issn[@publication-format=\"electronic\"]";
-    private static String BITS_issn = "/book/collection-meta/issn[@publication-format=\"print\"]";
-    private static String BITS_eisbn = "/book/book-meta/isbn[@publication-format=\"electronic\"]";
-    private static String BITS_contrib = "/book/book-meta/contrib-group/contrib/name";
-    private static String BITS_doi = "/book/book-meta/book-id[@book-id-type=\"doi\"]";
-    private static String BITS_book_title =  "/book/book-meta/book-title-group/book-title";
-    private static String BITS_volume =  "/book/book-meta/book-volume-number";
-    private static String BITS_pub =  "/book/book-meta/publisher/publisher-name";
-    private static String BITS_pub_date =  "/book/book-meta/pub-date[@date-type=\"pub\"]";
+    public static String BITS_book = "(/book | /book-part-wrapper)";
+    private static String BITS_series_title = BITS_book + "/collection-meta/title-group/title";
+    private static String BITS_eissn = BITS_book + "/collection-meta/issn[@publication-format=\"electronic\"]";
+    private static String BITS_issn = BITS_book + "/collection-meta/issn[@publication-format=\"print\"]";
+    public static String BITS_eisbn = BITS_book + "/book-meta/isbn[@publication-format=\"electronic\"]";
+    private static String BITS_contrib = BITS_book + "/book-meta/contrib-group/contrib/name";
+    private static String BITS_doi = BITS_book + "/book-meta/book-id[@book-id-type=\"doi\"]";
+    private static String BITS_book_title = BITS_book + "/book-meta/book-title-group/book-title";
+    private static String BITS_volume = BITS_book + "/book-meta/book-volume-number";
+    private static String BITS_pub = BITS_book + "/book-meta/publisher/publisher-name";
+    private static String BITS_pub_date = BITS_book + "/book-meta/pub-date[@date-type=\"pub\"]";
 
     
     /*
@@ -231,6 +231,6 @@ public class SageIosBitsSchemaHelper implements SourceXmlSchemaHelper{
 
     @Override
     public String getFilenameXPathKey() {
-        return null;
+        return BITS_eisbn;
     }
 }

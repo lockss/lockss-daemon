@@ -47,9 +47,12 @@ public class SageIosZipXmlArticleIteratorFactory implements ArticleIteratorFacto
   //Most books have a fulltext metadata file. Unfortunately, there are a few that don't so instead, we'll pull the metadata
   //from the front matter instead for these cases. 
 
-  protected static final String ALL_PATTERN_TEMPLATE = "\"%s%s/[^/]+\\.zip!/(fulltext|[A-Z0-9-]+fm(-i)?)/[^/]+\\.(xml|pdf)$\", base_url, directory";
+  public static final String ROLE_BOOK_METADATA = "ROLE_BOOK_METADATA";
+  public static final String ROLE_FRONTMATTER_METADATA = "ROLE_FRONTMATTER_METADATA";
 
-    protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN = 
+  protected static final String ALL_PATTERN_TEMPLATE = "\"%s%s/[^/]+\\.zip!/(fulltext|[A-Z0-9-]+fm(-i)?)/[^/]+\\.xml$\", base_url, directory";
+
+  protected static final Pattern SUB_NESTED_ARCHIVE_PATTERN = 
       Pattern.compile(".*/[^/]+\\.zip!/.+\\.(zip|tar|gz|tgz|tar\\.gz)$", 
           Pattern.CASE_INSENSITIVE);
   protected static final Pattern NESTED_ARCHIVE_PATTERN = 
@@ -58,10 +61,8 @@ public class SageIosZipXmlArticleIteratorFactory implements ArticleIteratorFacto
       
   public static final Pattern BOOK_METADATA_PATTERN = Pattern.compile("/fulltext/([^/]+)\\.xml$", Pattern.CASE_INSENSITIVE);
   public static final Pattern FRONTMATTER_METADATA_PATTERN = Pattern.compile("/([A-Z0-9-]+(?:-fm(?:-i)?)?)/\\1\\.xml$", Pattern.CASE_INSENSITIVE);
-  public static final Pattern PDF_PATTERN = Pattern.compile("/fulltext/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
   public static final String BOOK_METADATA_REPLACEMENT = "/fulltext/$1.xml";
   public static final String FRONTMATTER_METADATA_REPLACEMENT = "/$1/$1.xml";
-  public static final String PDF_REPLACEMENT = "/fulltext/$1.pdf";
 
   @Override
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
@@ -75,20 +76,15 @@ public class SageIosZipXmlArticleIteratorFactory implements ArticleIteratorFacto
                     .setExcludeSubTreePattern(getExcludeSubTreePattern())
                     .setVisitArchiveMembers(true)); 
 
-    builder.addAspect(PDF_PATTERN, 
-                      PDF_REPLACEMENT,
-                      ArticleFiles.ROLE_FULL_TEXT_PDF);
-
     builder.addAspect(BOOK_METADATA_PATTERN,
                       BOOK_METADATA_REPLACEMENT,
-                      "ROLE_BOOK_METADATA");
-                      //TODO: Create constant
+                      ROLE_BOOK_METADATA);
 
     builder.addAspect(FRONTMATTER_METADATA_PATTERN,
                       FRONTMATTER_METADATA_REPLACEMENT,
-                      "ROLE_FRONTMATTER_METADATA");
+                      ROLE_FRONTMATTER_METADATA);
  
-    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, "ROLE_BOOK_METDATA", "ROLE_FRONTMATTER_METADATA"); 
+    builder.setRoleFromOtherRoles(ArticleFiles.ROLE_ARTICLE_METADATA, ROLE_BOOK_METADATA, ROLE_FRONTMATTER_METADATA); 
   
 
     return builder.getSubTreeArticleIterator();
