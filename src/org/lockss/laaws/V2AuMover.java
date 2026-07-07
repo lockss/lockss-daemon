@@ -346,6 +346,13 @@ public class V2AuMover {
    */
   public static final String PARAM_DETAILED_STATS = PREFIX + "detailedStats";
   public static final boolean DEFAULT_DETAILED_STATS = true;
+
+  /**
+   * Inject an arbitary delay between queueing AUs for migration
+   */
+  public static final String PARAM_INTER_AU_DELAY = PREFIX + "interAuDelay";
+  public static final long DEFAULT_INTER_AU_DELAY = 0;
+
   volatile long dbCopyTimeout;
   volatile long dbBytesCopied = 0;
   volatile long dbBytesTotal;
@@ -546,6 +553,7 @@ public class V2AuMover {
   private boolean isShowInstrumentation = DEFAULT_INSTRUMENTATION;
   private long diskSpaceFetchInterval = DEFAULT_DISK_SPACE_INTERVAL;
   private boolean excludeQueuedTasks = DEFAULT_EXCLUDE_QUEUED_TASKS;
+  private long interAuDelay = DEFAULT_INTER_AU_DELAY;
   private CompoundLinearSlope diskSpaceXferBytesCurve;
   private CompoundLinearSlope diskSpaceXferArtifactsCurve;
   private CompoundLinearSlope dbSizeCheckIntervalCurve;
@@ -785,6 +793,8 @@ public class V2AuMover {
         config.getBoolean(PARAM_EXCLUDE_QUEUED_TASKS,
                           DEFAULT_EXCLUDE_QUEUED_TASKS);
 
+      interAuDelay = config.getTimeInterval(PARAM_INTER_AU_DELAY,
+                                            DEFAULT_INTER_AU_DELAY);
     }
   }
 
@@ -1447,6 +1457,7 @@ public class V2AuMover {
    */
   protected void moveAu(ArchivalUnit au, BatchLockToken token) {
     log.debug2("Starting " + au.getName());
+    interAuDelay();
     AuStatus auStat = new AuStatus(this, au);
     auStat.setBatchToken(token);
     auStat.getCounters().setParent(totalCounters);
@@ -1514,6 +1525,17 @@ public class V2AuMover {
         setFailed(true);
       }
       break;
+    }
+  }
+
+  // Inject artificial delay for testing
+  void interAuDelay() {
+    if (interAuDelay > 0) {
+      log.debug("Pausing for " + StringUtil.timeIntervalToString(interAuDelay));
+      try { Thread.sleep(interAuDelay); }
+      catch (InterruptedException ie) {
+        Thread.currentThread().interrupt();
+      }
     }
   }
 
