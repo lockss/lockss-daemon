@@ -77,7 +77,7 @@
     param[journal_id] = erjor
     au < ers.ClockssERSScolarisPlugin ; frozen ; exists ; 2024 ; ERJ Open Research Volume 10 ; 10 ; https://publications.ersnet.org/ ; >
     au < ers.ClockssERSScolarisPlugin ; deepCrawl ; exists ; 2025 ; ERJ Open Research Volume 11 ; 11 ; https://publications.ersnet.org/ ; >
-    au < ers.ClockssERSScolarisPlugin ; ready ; exists ; 2026 ; ERJ Open Research Volume 12 ; 12 ; https://publications.ersnet.org/ ; >
+    au < ers.ClockssERSScolarisPlugin ; crawling ; exists ; 2026 ; ERJ Open Research Volume 12 ; 12 ; https://publications.ersnet.org/ ; >
     }
   }
 
