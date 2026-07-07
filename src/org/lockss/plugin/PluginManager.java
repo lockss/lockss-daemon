@@ -400,10 +400,20 @@ public class PluginManager
   }
 
   /* ------- LockssManager implementation ------------------ */
+
+  @Override
+  // Some tests rely on PluginManager accessing ConfigManager without
+  // having been started
+  public void initService(LockssDaemon daemon) {
+    super.initService(daemon);
+    configMgr = getDaemon().getConfigManager();
+  }
+
   /**
    * start the plugin manager.
    * @see org.lockss.app.LockssManager#startService()
    */
+  @Override
   public void startService() {
     super.startService();
     configMgr = getDaemon().getConfigManager();
