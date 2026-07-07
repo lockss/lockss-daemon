@@ -24,12 +24,12 @@
     param[base_url] = https://nesirdergisi.com/
     param[journal_id] = nesir
 
-    au < manifest ; exists ; 2021 ; 2021 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 53 ; 53 ; >
-    au < manifest ; exists ; 2022 ; 2022 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 54 ; 54 ; >
-    au < manifest ; exists ; 2023 ; 2023 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 55 ; 55 ; >
-    au < manifest ; exists ; 2024 ; 2024 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 58 ; 58 ; >
-    au < manifest ; exists ; 2025 ; 2025 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 59 ; 59 ; >
-    au < manifest ; exists ; 2026 ; 2026 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 60 ; 60 ; >
+    au < testing ; exists ; 2021 ; 2021 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 53 ; 53 ; >
+    au < testing ; exists ; 2022 ; 2022 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 54 ; 54 ; >
+    au < testing ; exists ; 2023 ; 2023 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 55 ; 55 ; >
+    au < testing ; exists ; 2024 ; 2024 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 58 ; 58 ; >
+    au < testing ; exists ; 2025 ; 2025 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 59 ; 59 ; >
+    au < testing ; exists ; 2026 ; 2026 ; Nesir: Edebiyat Araştırmaları Dergisi Volume 60 ; 60 ; >
 
   }
 }
