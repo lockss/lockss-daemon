@@ -66,7 +66,7 @@ public class Ojs3HtmlHashFilterFactory implements FilterFactory {
   private static final String CIT_RIGHT_INLINE_CLASS = "csl-right-inline";
   // [cited 2022May18]
   public static final Pattern VANCOUVER_CIT_PATTERN =
-      Pattern.compile("\\[cited \\d\\d\\d\\d\\s?[a-z]+\\.?\\s?\\d\\d?\\s?]", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("\\[cited \\d\\d\\d\\d\\s?.*\\.?\\s?\\d\\d?\\s?]", Pattern.CASE_INSENSITIVE);
   // [citado 21 de mayo de 2022]
   // [citado 17 de octubre de 2022]
   public static final Pattern ESPANOL_VANCOUVER_CIT_PATTERN =
