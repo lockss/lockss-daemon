@@ -30,7 +30,7 @@ POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-package org.lockss.plugin.smartjournal.univsul;
+package org.lockss.plugin.smartjournal.univsal;
 
 import java.io.IOException;
 import java.io.InputStream;
