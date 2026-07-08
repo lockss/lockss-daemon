@@ -46,7 +46,7 @@
       au < frozen ; exists ; 2023 ; Geological Society of America Bulletin Volume 1 ; 1 ; >
       au < deepCrawl ; exists ; 2024 ; Geological Society of America Bulletin Volume 2 ; 2 ; >
       au < deepCrawl ; exists ; 2025 ; Geological Society of America Bulletin Volume 3 ; 3 ; >
-      au < ready ; exists ; 2026 ; Geological Society of America Bulletin Volume 4 ; 4 ; >
+      au < crawling ; exists ; 2026 ; Geological Society of America Bulletin Volume 4 ; 4 ; >
   }
 
   {
@@ -786,11 +786,11 @@
     au < deepCrawl ; exists ; 2025 ; Geological Society of London Special Publications Volume 556 ; 556 ; >
     au < ready ; exists ; 2026 ; Geological Society of London Special Publications Volume 557 ; 557 ; >
     au < ready ; exists ; 2026 ; Geological Society of London Special Publications Volume 558 ; 558 ; >
-    au < ready ; exists ; 2026 ; Geological Society of London Special Publications Volume 559 ; 559 ; >
+    au < crawling ; exists ; 2026 ; Geological Society of London Special Publications Volume 559 ; 559 ; >
     au < ready ; exists ; 2026 ; Geological Society of London Special Publications Volume 560 ; 560 ; >
     au < ready ; exists ; 2026 ; Geological Society of London Special Publications Volume 561 ; 561 ; >
     au < ready ; exists ; 2026 ; Geological Society of London Special Publications Volume 562 ; 562 ; >
-    au < ready ; exists ; 2026 ; Geological Society of London Special Publications Volume 563 ; 563 ; >
+    au < crawling ; exists ; 2026 ; Geological Society of London Special Publications Volume 563 ; 563 ; >
 
   }
 
@@ -1438,7 +1438,7 @@
 
     param[journal_id] = geohorizons
 
-    au < ready ; exists ; 2026 ; GeoHorizons Volume 1 ; 1 ; >
+    au < crawling ; exists ; 2026 ; GeoHorizons Volume 1 ; 1 ; >
 
   }
 
