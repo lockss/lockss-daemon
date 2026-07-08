@@ -782,4 +782,18 @@
 
   }
 
+  {
+
+      title <
+        name = Quaker Studies ;
+        eissn = 2397-1770
+      >
+
+      comment[publisher] = Open Library of Humanities
+      param[base_url] = https://quakerstudies.openlibhums.org/
+
+      au < doNotProcess ; exists ; 2026 ; 31 ; Quaker Studies Volume 2026 ; 2026 ; >
+
+  }
+
 }
