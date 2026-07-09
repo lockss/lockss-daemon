@@ -43,7 +43,7 @@
     </entry>
     <entry>
         <string>plugin_version</string>
-        <string>4</string>
+        <string>5</string>
     </entry>
     <entry>
         <string>plugin_config_props</string>
@@ -143,6 +143,7 @@
             <string>1,"^%sarticle-citation\?id=[0-9]+&amp;format=ris$", base_url</string>
             <string>1,"^%sSmartJournal_Uploads/", base_url</string>
             <string>1,"^%s(assets|js|style)/.*", base_url</string>
+            <string>1,"^https://fonts\.gstatic\.com/s/.*\.(ttf|woff2?|otf|eot)$"</string>
         </list>
     </entry>
     <entry>
@@ -207,6 +208,7 @@
             <string>cdn\.jsdelivr\.net</string>
             <string>cdnjs\.cloudflare\.com</string>
             <string>unpkg\.com</string>
+            <string>fonts\.gstatic\.com/</string>
         </list>
     </entry>
     <entry>
