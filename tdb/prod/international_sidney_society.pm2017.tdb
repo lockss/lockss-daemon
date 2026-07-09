@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = International Sidney Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:581
+
+    {
+    title <
+      name = Sidney Journal ;
+      issn = 1480-0926 ;
+      eissn = 1480-0926
+
+    >
+
+      attr[journal_id] = 907
+
+      au < manifest ; 2026 ; Sidney Journal Volume 44 [2026] ; 20263 >
+
+    }
+
+}
+

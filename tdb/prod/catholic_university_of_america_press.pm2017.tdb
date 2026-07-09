@@ -48,6 +48,7 @@
         au < released ; 2003 ; Antiphon: A Journal for Liturgical Renewal Volume 8 [2003] ; 19370 >
         au < released ; 2024 ; Antiphon: A Journal for Liturgical Renewal Volume 28 [2024] ; 18966 >
         au < released ; 2025 ; Antiphon: A Journal for Liturgical Renewal Volume 29 [2025] ; 19831 >
+        au < manifest ; 2026 ; Antiphon: A Journal for Liturgical Renewal Volume 30 [2026] ; 20667 >
 
     }
 
@@ -120,6 +121,7 @@
       au < released ; 2023 ; Eolas: Journal of the American Society for Irish Medieval Studies Volume 15 [2023] ; 19898 >
       au < released ; 2024 ; Eolas: Journal of the American Society for Irish Medieval Studies Volume 16 [2024] ; 19899 >
       au < released ; 2025 ; Eolas: Journal of the American Society for Irish Medieval Studies Volume 17 [2025] ; 19841 >
+      au < manifest ; 2025 ; Eolas: Journal of the American Society for Irish Medieval Studies Volume 18 [2025] ; 19842 >
 
     }
 
@@ -137,6 +139,7 @@
       au < released ; 2021 ; International Journal of Evangelization and Catechetics Volume 2 [2021] ; 15836 >
       au < released ; 2022 ; International Journal of Evangelization and Catechetics Volume 3 [2022] ; 17780 >
       au < released ; 2023 ; International Journal of Evangelization and Catechetics Volume 4 [2023] ; 18203 >
+      au < manifest ; 2024 ; International Journal of Evangelization and Catechetics Volume 5 [2024] ; 20646 >
 
     }
 
@@ -153,6 +156,7 @@
       au < released ; 2023 ; International Journal of Sport and Religion Volume 1 [2023] ; 17738 >
       au < released ; 2024 ; International Journal of Sport and Religion Volume 2 [2024] ; 19073 >
       au < released ; 2025 ; International Journal of Sport and Religion Volume 3 [2025] ; 19965 >
+      au < manifest ; 2026 ; International Journal of Sport and Religion Volume 4 [2026] ; 20806 >
 
     }
 
@@ -234,6 +238,7 @@
         au < released ; 2023 ; The Catholic Biblical Quarterly Volume 85 [2023] ; 17640 >
         au < released ; 2024 ; The Catholic Biblical Quarterly Volume 86 [2024] ; 18788 >
         au < released ; 2025 ; The Catholic Biblical Quarterly Volume 87 [2025] ; 19575 >
+        au < manifest ; 2026 ; The Catholic Biblical Quarterly Volume 88 [2026] ; 20650 >
 
     }
 
@@ -279,6 +284,7 @@
         au < released ; 2023 ; The Catholic Historical Review Volume 109 [2023] ; 17756 >
         au < released ; 2024 ; The Catholic Historical Review Volume 110 [2024] ; 18886 >
         au < released ; 2025 ; The Catholic Historical Review Volume 111 [2025] ; 19665 >
+        au < manifest ; 2026 ; The Catholic Historical Review Volume 112 [2026] ; 20781 >
 
     }
 
@@ -366,6 +372,7 @@
         au < released ; 2024 ; Nova et vetera Volume 22 [2024] ; 18805 >
         au < released ; 2023 ; Nova et vetera Volume 21 [2023] ; 17832 >
         au < released ; 2025 ; Nova et vetera Volume 23 [2025] ; 19692 >
+        au < manifest ; 2026 ; Nova et vetera Volume 24 [2026] ; 20569 >
 
     }
 
@@ -553,6 +560,20 @@
         au < released ; 2024 ; U.S. Catholic Historian Volume 42 [2024] ; 18817 >
         au < released ; 2025 ; U.S. Catholic Historian Volume 43 [2025] ; 19549 >
         au < manifest ; 2026 ; U.S. Catholic Historian Volume 44 [2026] ; 20432 >
+
+    }
+
+    {
+    title <
+      name = The Journal of Natural Law ;
+      issn = 3070-815X ;
+      eissn = 3070-8168
+
+    >
+
+      attr[journal_id] = 894
+
+      au < manifest ; 2025 ; The Journal of Natural Law Volume 1 [2025] ; 19425 >
 
     }
 

@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Word on Fire Academic
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMuse2017Plugin
+  param[base_url] = https://muse.jhu.edu/
+  implicit < status ; year ; name ; param[resource_id] >
+  #publisher_id:586
+
+    {
+    title <
+      name = The New Ressourcement ;
+      issn = 2995-5939 ;
+      eissn = 2995-5947
+
+    >
+
+      attr[journal_id] = 909
+
+      au < manifest ; 2024 ; The New Ressourcement Volume 1 [2024] ; 20740 >
+      au < manifest ; 2025 ; The New Ressourcement Volume 2 [2025] ; 20746 >
+      au < manifest ; 2026 ; The New Ressourcement Volume 3 [2026] ; 20749 >
+
+    }
+
+}
+
