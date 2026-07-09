@@ -39,6 +39,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.clockss.SourceXmlMetadataExtractorFactory;
 import org.lockss.plugin.clockss.SourceXmlSchemaHelper;
@@ -70,15 +71,17 @@ public class SageIosXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
             ArticleMetadata oneAM) {
             String url_string = cu.getUrl();
             List<String> returnList = new ArrayList<String>();
-            // filename is just the same a the XML filename but with .pdf 
-            // instead of .xml
             String pdfName;
             if(url_string.contains("-fm")){
                 String url_string2 = url_string.substring(0,url_string.lastIndexOf("/"));
                 String eisbn = oneAM.getRaw(helper.getFilenameXPathKey());
                 if(eisbn != null){
                     eisbn = eisbn.replaceAll("-","");
-                } 
+                } else if (url_string2.contains("CCIA%202005")){ 
+                    eisbn = "9781586035600";
+                } else if (url_string2.contains("CCIA%202006")){
+                    eisbn = "9781586036638";
+                }
                 pdfName = url_string2.substring(0, url_string2.lastIndexOf("/")) + "/fulltext/" + eisbn + ".pdf";
             }else{
                 pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
@@ -86,6 +89,35 @@ public class SageIosXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
             log.debug3("pdfName is " + pdfName);
             returnList.add(pdfName);
             return returnList;        
+        }
+
+        @Override
+        protected boolean preEmitCheck(SourceXmlSchemaHelper schemaHelper,
+                                    CachedUrl cu, ArticleMetadata thisAM) {
+
+            String cuBase = FilenameUtils.getFullPath(cu.getUrl());
+
+            List<String> filesToCheck;
+
+            // If no files get returned in the list, nothing to check
+            if ((filesToCheck = getFilenamesAssociatedWithRecord(schemaHelper, cu,thisAM)) == null) {
+                return true;
+            }
+            ArchivalUnit B_au = cu.getArchivalUnit();
+            CachedUrl fileCu;
+            for (int i=0; i < filesToCheck.size(); i++){
+                fileCu = B_au.makeCachedUrl(filesToCheck.get(i));
+                if(fileCu != null && (fileCu.hasContent())) {
+                    // Set a cooked value for an access file. Otherwise it would get set to xml file.
+                    thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
+                    log.debug3("Check for existence of " + filesToCheck.get(i));
+                    return true;
+                } else {
+                    log.debug3("Check for failed existence of " + filesToCheck.get(i));
+                }
+            }
+            log.debug3("No file exists associated with this record");
+            return false; //No files found that match this record
         }
     }
 }
