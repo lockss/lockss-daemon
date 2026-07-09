@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>39</string>
+    <string>40</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -138,7 +138,7 @@ POSSIBILITY OF SUCH DAMAGE.
       <string>2,"^%scontent/pkg/[^/]+\.zip$", base_url</string>
       <string>1,"^%scontent/pkg/%s-%s", base_url, collection_id, court_id</string>
       <string>1,"^%smetadata/pkg/%s-%s.*/mods\.xml$", base_url, collection_id, court_id</string>
-      <string>1,"^%smetadata/granule/.*/mods\.xml$", base_url</string>
+      <string>1,"^%smetadata/granule/%s-%s.*/mods\.xml$", base_url, collection_id, court_id</string>
       <string>2,"^%smetadata/pkg/%s-%s.*/premis\.xml$", base_url, collection_id, court_id</string>
       <!-- This is a legitimate URL... -->
       <string>1,"^%sapp/dynamic/stylesheets/bootstrap/bootstrap\.min\.css", base_url</string>
