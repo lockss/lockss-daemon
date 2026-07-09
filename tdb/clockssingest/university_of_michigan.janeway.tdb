@@ -121,7 +121,7 @@
       #published 2019-present
       param[journal_id] = currents
 
-      au < doesNotExist ; doesNotExist ; 2019 ; 1 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2019 ; 2019 ; >
+      au < manifest ; exists ; 2019 ; 1 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2019 ; 2019 ; >
       au < finished ; manifest ; 2022 ; 2 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2022 ; 2022 ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2023 ; 3 ; Currents: Journal of Diversity Scholarship for Social Change Volume 2023 ; 2023 ; reingest1.clockss.org:8082 >
 
@@ -793,7 +793,7 @@
       au < doesNotExist ; doesNotExist ; 2022 ; 49 ; Journal of the Western Society for French History Volume 2022 ; 2022 ; >
       au < doesNotExist ; doesNotExist ; 2023 ; 50 ; Journal of the Western Society for French History Volume 2023 ; 2023 ; > #2023 content dated 2024
       au < finished ; manifest ; 2024 ; 51 ; Journal of the Western Society for French History Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
-      au < doesNotExist ; doesNotExist ; 2025 ; 52 ; Journal of the Western Society for French History Volume 2025 ; 2025 ; >
+      au < manifest ; exists ; 2025 ; 52 ; Journal of the Western Society for French History Volume 2025 ; 2025 ; >
       au < expected ; exists ; 2026 ; 53 ; Journal of the Western Society for French History Volume 2026 ; 2026 ; >
 
   }

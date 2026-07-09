@@ -690,7 +690,7 @@
       au < finished ; manifest ; 2019 ; Proceedings of the Florida State Horticultural Society Volume 132 ; 132 ; 2019 ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2020 ; Proceedings of the Florida State Horticultural Society Volume 133 ; 133 ; 2020 ; reingest1.clockss.org:8082 >
       au < finished ; manifest ; 2021 ; Proceedings of the Florida State Horticultural Society Volume 134 ; 134 ; 2021 ; reingest3.clockss.org:8083 >
-      au < doesNotExist ; doesNotExist ; 2022 ; Proceedings of the Florida State Horticultural Society Volume 135 ; 135 ; 2022 ; >
+      au < manifest ; exists ; 2022 ; Proceedings of the Florida State Horticultural Society Volume 135 ; 135 ; 2022 ; >
       au < finished ; manifest ; 2023 ; Proceedings of the Florida State Horticultural Society Volume 136 ; 136 ; 2023 ; reingest3.clockss.org:8083 >
 
   }
@@ -788,7 +788,7 @@
 
       au < frozen ; exists ; 1989 ; EDIS Volume 1989 ; 1989 ; 1989 ; >
       au < frozen ; exists ; 1990 ; EDIS Volume 1990 ; 1990 ; 1990 ; >
-      au < doesNotExist ; doesNotExist ; 1991 ; EDIS Volume 1991 ; 1991 ; 1991 ; >
+      au < manifest ; exists ; 1991 ; EDIS Volume 1991 ; 1991 ; 1991 ; >
       au < frozen ; exists ; 1992 ; EDIS Volume 1992 ; 1992 ; 1992 ; >
       au < crawling ; exists ; 1993 ; EDIS Volume 1993 ; 1993 ; 1993 ; >
       au < frozen ; exists ; 1994 ; EDIS Volume 1994 ; 1994 ; 1994 ; >
