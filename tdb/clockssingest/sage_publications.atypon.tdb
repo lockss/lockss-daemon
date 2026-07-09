@@ -4192,7 +4192,7 @@
       au < manifest ; exists ; 1999 ; The Antitrust Bulletin Volume 44 ; 44 ; abxa ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2000 ; The Antitrust Bulletin Volume 45 ; 45 ; abxa ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; The Antitrust Bulletin Volume 46 ; 46 ; abxa ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2002 ; The Antitrust Bulletin Volume 47 ; 47 ; abxa ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2002 ; The Antitrust Bulletin Volume 47 ; 47 ; abxa ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; The Antitrust Bulletin Volume 48 ; 48 ; abxa ; https://journals.sagepub.com/ ; reingest3.clockss.org:8083 >
       au < finished ; manifest ; 2004 ; The Antitrust Bulletin Volume 49 ; 49 ; abxa ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
       au < frozen ; exists ; 2005 ; The Antitrust Bulletin Volume 50 ; 50 ; abxa ; https://journals.sagepub.com/ ; >
@@ -4290,7 +4290,7 @@
       #journal_id = aom
 
       au < crawling ; exists ; 2004 ; Apollo Medicine Volume 1 ; 1 ; aoma ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2005 ; Apollo Medicine Volume 2 ; 2 ; aoma ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2005 ; Apollo Medicine Volume 2 ; 2 ; aoma ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2006 ; Apollo Medicine Volume 3 ; 3 ; aoma ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2007 ; Apollo Medicine Volume 4 ; 4 ; aoma ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2008 ; Apollo Medicine Volume 5 ; 5 ; aoma ; https://journals.sagepub.com/ ; >
@@ -4385,7 +4385,7 @@
       au < crawling ; exists ; 2015 ; Applied In Vitro Toxicology Volume 1 ; 1 ; aiva ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2016 ; Applied In Vitro Toxicology Volume 2 ; 2 ; aiva ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2017 ; Applied In Vitro Toxicology Volume 3 ; 3 ; aiva ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2018 ; Applied In Vitro Toxicology Volume 4 ; 4 ; aiva ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2018 ; Applied In Vitro Toxicology Volume 4 ; 4 ; aiva ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2019 ; Applied In Vitro Toxicology Volume 5 ; 5 ; aiva ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2020 ; Applied In Vitro Toxicology Volume 6 ; 6 ; aiva ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2021 ; Applied In Vitro Toxicology Volume 7 ; 7 ; aiva ; https://journals.sagepub.com/ ; >
@@ -28681,7 +28681,7 @@
       au < manifest ; exists ; 1999 ; Journal of Advertising Education Volume 3 ; 3 ; adva ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2000 ; Journal of Advertising Education Volume 4 ; 4 ; adva ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2001 ; Journal of Advertising Education Volume 5 ; 5 ; adva ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2002 ; Journal of Advertising Education Volume 6 ; 6 ; adva ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2002 ; Journal of Advertising Education Volume 6 ; 6 ; adva ; https://journals.sagepub.com/ ; >
       au < finished ; manifest ; 2003 ; Journal of Advertising Education Volume 7 ; 7 ; adva ; https://journals.sagepub.com/ ; reingest5.clockss.org:8082 >
       au < finished ; manifest ; 2004 ; Journal of Advertising Education Volume 8 ; 8 ; adva ; https://journals.sagepub.com/ ; reingest4.clockss.org:8082 >
       au < finished ; manifest ; 2005 ; Journal of Advertising Education Volume 9 ; 9 ; adva ; https://journals.sagepub.com/ ; reingest1.clockss.org:8082 >
@@ -28839,7 +28839,7 @@
       au < manifest ; exists ; 2010 ; Journal of Alzheimer's Disease Volume 19 ; 19 ; alza ; https://journals.sagepub.com/ ; >
       au < manifest ; exists ; 2010 ; Journal of Alzheimer's Disease Volume 20 ; 20 ; alza ; https://journals.sagepub.com/ ; >
       au < crawling ; exists ; 2010 ; Journal of Alzheimer's Disease Volume 21 ; 21 ; alza ; https://journals.sagepub.com/ ; >
-      au < ready ; exists ; 2010 ; Journal of Alzheimer's Disease Volume 22 ; 22 ; alza ; https://journals.sagepub.com/ ; >
+      au < crawling ; exists ; 2010 ; Journal of Alzheimer's Disease Volume 22 ; 22 ; alza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2011 ; Journal of Alzheimer's Disease Volume 23 ; 23 ; alza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2011 ; Journal of Alzheimer's Disease Volume 24 ; 24 ; alza ; https://journals.sagepub.com/ ; >
       au < frozen ; exists ; 2011 ; Journal of Alzheimer's Disease Volume 25 ; 25 ; alza ; https://journals.sagepub.com/ ; >
