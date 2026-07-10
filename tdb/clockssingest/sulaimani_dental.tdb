@@ -19,18 +19,18 @@
 
     param[base_url] = https://sdj.univsul.edu.iq/
 
-    au < testing ; exists ; 2014 ; 1 ; Sulaimani Dental Journal Volume 1 ; >
-    au < testing ; exists ; 2015 ; 2 ; Sulaimani Dental Journal Volume 2 ; >
-    au < testing ; exists ; 2016 ; 3 ; Sulaimani Dental Journal Volume 3 ; >
-    au < testing ; exists ; 2017 ; 4 ; Sulaimani Dental Journal Volume 4 ; >
-    au < testing ; exists ; 2018 ; 5 ; Sulaimani Dental Journal Volume 5 ; >
-    au < testing ; exists ; 2019 ; 6 ; Sulaimani Dental Journal Volume 6 ; >
-    au < testing ; exists ; 2020 ; 7 ; Sulaimani Dental Journal Volume 7 ; >
-    au < testing ; exists ; 2021 ; 8 ; Sulaimani Dental Journal Volume 8 ; >
-    au < testing ; exists ; 2022 ; 9 ; Sulaimani Dental Journal Volume 9 ; >
-    au < testing ; exists ; 2023 ; 10 ; Sulaimani Dental Journal Volume 10 ; >
-    au < testing ; exists ; 2024 ; 11 ; Sulaimani Dental Journal Volume 11 ; >
-    au < testing ; exists ; 2025 ; 12 ; Sulaimani Dental Journal Volume 12 ; >
-    au < testing ; exists ; 2026 ; 13 ; Sulaimani Dental Journal Volume 13 ; >
+    au < manifest ; exists ; 2014 ; 1 ; Sulaimani Dental Journal Volume 1 ; >
+    au < manifest ; exists ; 2015 ; 2 ; Sulaimani Dental Journal Volume 2 ; >
+    au < ready ; exists ; 2016 ; 3 ; Sulaimani Dental Journal Volume 3 ; >
+    au < ready ; exists ; 2017 ; 4 ; Sulaimani Dental Journal Volume 4 ; >
+    au < ready ; exists ; 2018 ; 5 ; Sulaimani Dental Journal Volume 5 ; >
+    au < manifest ; exists ; 2019 ; 6 ; Sulaimani Dental Journal Volume 6 ; >
+    au < ready ; exists ; 2020 ; 7 ; Sulaimani Dental Journal Volume 7 ; >
+    au < manifest ; exists ; 2021 ; 8 ; Sulaimani Dental Journal Volume 8 ; >
+    au < manifest ; exists ; 2022 ; 9 ; Sulaimani Dental Journal Volume 9 ; >
+    au < manifest ; exists ; 2023 ; 10 ; Sulaimani Dental Journal Volume 10 ; >
+    au < ready ; exists ; 2024 ; 11 ; Sulaimani Dental Journal Volume 11 ; >
+    au < manifest ; exists ; 2025 ; 12 ; Sulaimani Dental Journal Volume 12 ; >
+    au < manifest ; exists ; 2026 ; 13 ; Sulaimani Dental Journal Volume 13 ; >
   }
 }
