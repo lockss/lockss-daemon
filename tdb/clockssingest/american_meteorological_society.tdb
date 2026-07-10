@@ -305,7 +305,7 @@
     au < finished ; manifest ; 2023 ; Journal of Atmospheric and Oceanic Technology Volume 40 ; 40 ; reingest2.clockss.org:8085 >
     au < finished ; manifest ; 2024 ; Journal of Atmospheric and Oceanic Technology Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Journal of Atmospheric and Oceanic Technology Volume 42 ; 42 ; >
-    au < ready ; exists ; 2026 ; Journal of Atmospheric and Oceanic Technology Volume 43 ; 43 ; >
+    au < crawling ; exists ; 2026 ; Journal of Atmospheric and Oceanic Technology Volume 43 ; 43 ; >
 
   }
 
@@ -400,7 +400,7 @@
     au < finished ; manifest ; 2023 ; Journal of Hydrometeorology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Journal of Hydrometeorology Volume 25 ; 25 ; reingest3.clockss.org:8083 > #can't display image https://journals.ametsoc.org/view/journals/hydr/25/9/full-JHM-D-23-0219.1-f6.jpg
     au < deepCrawl ; exists ; 2025 ; Journal of Hydrometeorology Volume 26 ; 26 ; >
-    au < ready ; exists ; 2026 ; Journal of Hydrometeorology Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2026 ; Journal of Hydrometeorology Volume 27 ; 27 ; >
 
   }
 

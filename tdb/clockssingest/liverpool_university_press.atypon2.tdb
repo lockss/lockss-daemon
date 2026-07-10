@@ -494,7 +494,7 @@
     au < finished ; manifest ; 2023 ; Developing Academic Practice Volume 2023 ; 2023 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Developing Academic Practice Volume 2024 ; 2024 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Developing Academic Practice Volume 2025 ; 2025 ; >
-    au < ready ; exists ; 2026 ; Developing Academic Practice Volume 2026 ; 2026 ; >
+    au < crawling ; exists ; 2026 ; Developing Academic Practice Volume 2026 ; 2026 ; >
 
   }
 
@@ -634,7 +634,7 @@
     au < finished ; manifest ; 2023 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 15 ; 15 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 16 ; 16 ; reingest2.clockss.org:8085 >
     au < deepCrawl ; exists ; 2025 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 17 ; 17 ; >
-    au < ready ; exists ; 2026 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 18 ; 18 ; >
+    au < crawling ; exists ; 2026 ; European Journal of Language Policy / Revue européenne de politique linguistique Volume 18 ; 18 ; >
 
   }
 
@@ -677,7 +677,7 @@
     au < finished ; manifest ; 2023 ; Extrapolation Volume 64 ; 64 ; reingest4.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; Extrapolation Volume 65 ; 65 ; reingest5.clockss.org:8082 >
     au < deepCrawl ; exists ; 2025 ; Extrapolation Volume 66 ; 66 ; >
-    au < ready ; exists ; 2026 ; Extrapolation Volume 67 ; 67 ; >
+    au < crawling ; exists ; 2026 ; Extrapolation Volume 67 ; 67 ; >
 
   }
 
@@ -810,7 +810,7 @@
     au < finished ; manifest ; 2023 ; The Indexer: The International Journal of Indexing Volume 41 ; 41 ; reingest1.clockss.org:8082 >
     au < finished ; manifest ; 2024 ; The Indexer: The International Journal of Indexing Volume 42 ; 42 ; reingest3.clockss.org:8083 >
     au < deepCrawl ; exists ; 2025 ; The Indexer: The International Journal of Indexing Volume 43 ; 43 ; >
-    au < ready ; exists ; 2026 ; The Indexer: The International Journal of Indexing Volume 44 ; 44 ; >
+    au < crawling ; exists ; 2026 ; The Indexer: The International Journal of Indexing Volume 44 ; 44 ; >
 
   }
   {
@@ -1401,7 +1401,7 @@
     au < doNotProcess ; exists ; 2023 ; The Library Volume 24 ; 24 ; >
     au < doNotProcess ; exists ; 2024 ; The Library Volume 25 ; 25 ; >
     au < frozen ; exists ; 2025 ; The Library Volume 26 ; 26 ; >
-    au < ready ; exists ; 2026 ; The Library Volume 27 ; 27 ; >
+    au < crawling ; exists ; 2026 ; The Library Volume 27 ; 27 ; >
 
   }
 

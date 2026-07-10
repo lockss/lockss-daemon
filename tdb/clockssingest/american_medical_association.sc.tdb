@@ -37,7 +37,7 @@
     au < deepCrawl ; exists ; 2023 ; JAMA Cardiology Volume 8 ; 2023 ; https://jamanetwork.com/ ; >
     au < frozen ; exists ; 2024 ; JAMA Cardiology Volume 9 ; 2024 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2025 ; JAMA Cardiology Volume 10 ; 2025 ; https://jamanetwork.com/ ; >
-    au < ready ; exists ; 2026 ; JAMA Cardiology Volume 11 ; 2026 ; https://jamanetwork.com/ ; >
+    au < crawling ; exists ; 2026 ; JAMA Cardiology Volume 11 ; 2026 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -121,7 +121,7 @@
     au < deepCrawl ; exists ; 2023 ; JAMA Internal Medicine Volume 183 ; 2023 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2024 ; JAMA Internal Medicine Volume 184 ; 2024 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2025 ; JAMA Internal Medicine Volume 185 ; 2025 ; https://jamanetwork.com/ ; >
-    au < ready ; exists ; 2026 ; JAMA Internal Medicine Volume 186 ; 2026 ; https://jamanetwork.com/ ; >
+    au < crawling ; exists ; 2026 ; JAMA Internal Medicine Volume 186 ; 2026 ; https://jamanetwork.com/ ; >
 
   }
 
@@ -266,7 +266,7 @@
     au < frozen ; exists ; 2023 ; JAMA Ophthalmology Volume 141 ; 2023 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2024 ; JAMA Ophthalmology Volume 142 ; 2024 ; https://jamanetwork.com/ ; >
     au < deepCrawl ; exists ; 2025 ; JAMA Ophthalmology Volume 143 ; 2025 ; https://jamanetwork.com/ ; >
-    au < ready ; exists ; 2026 ; JAMA Ophthalmology Volume 144 ; 2026 ; https://jamanetwork.com/ ; >
+    au < crawling ; exists ; 2026 ; JAMA Ophthalmology Volume 144 ; 2026 ; https://jamanetwork.com/ ; >
 
   }
 

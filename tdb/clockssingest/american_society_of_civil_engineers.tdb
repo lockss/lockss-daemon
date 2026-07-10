@@ -51,7 +51,7 @@
     au < finished ; manifest ; 2023 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 9 ; 9 ; https://ascelibrary.org/ ; reingest1.clockss.org:8082 >
     au < deepCrawl ; exists ; 2024 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 10 ; 10 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2025 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 11 ; 11 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2026 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 12 ; 12 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2026 ; ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering Volume 12 ; 12 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -382,7 +382,7 @@
     au < deepCrawl ; exists ; 2023 ; Journal of Composites for Construction Volume 27 ; 27 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2024 ; Journal of Composites for Construction Volume 28 ; 28 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2025 ; Journal of Composites for Construction Volume 29 ; 29 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2026 ; Journal of Composites for Construction Volume 30 ; 30 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2026 ; Journal of Composites for Construction Volume 30 ; 30 ; https://ascelibrary.org/ ; >
 
   }
 
@@ -1816,7 +1816,7 @@
     au < deepCrawl ; exists ; 2023 ; Natural Hazards Review Volume 24 ; 24 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2024 ; Natural Hazards Review Volume 25 ; 25 ; https://ascelibrary.org/ ; >
     au < deepCrawl ; exists ; 2025 ; Natural Hazards Review Volume 26 ; 26 ; https://ascelibrary.org/ ; >
-    au < ready ; exists ; 2026 ; Natural Hazards Review Volume 27 ; 27 ; https://ascelibrary.org/ ; >
+    au < crawling ; exists ; 2026 ; Natural Hazards Review Volume 27 ; 27 ; https://ascelibrary.org/ ; >
 
   }
 
