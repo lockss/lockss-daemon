@@ -109,10 +109,13 @@ public class SageIosXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
                 log.debug3("Generated pdf url is " + fulltextPdf);
                 fileCu = B_au.makeCachedUrl(currentUrl);
                 if(fileCu != null && (fileCu.hasContent())) {
+                    //If fulltext xml exists, use that. 
                     if(fileCu.toString().contains("fulltext")){
                         thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
                         log.debug3("Check for existence of " + filesToCheck.get(i));
                         return true;
+                    //The following five articles don't have
+                    //fullltext metadata so we must use the frontmatter metadata. 
                     }else if(fileCu.toString().contains("FAIA131-fm-i")){
                         thisAM.put(MetadataField.FIELD_ACCESS_URL, B_au.makeCachedUrl(fulltextPdf).getUrl());
                         return true;
@@ -129,6 +132,7 @@ public class SageIosXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
                         thisAM.put(MetadataField.FIELD_ACCESS_URL, B_au.makeCachedUrl(fulltextPdf).getUrl());
                         return true;
                     }else{
+                    //Any other frontmatter metadata is superfluous, we don't want to emit extra metadata. 
                         log.debug3("DO NOT EMIT. This is extraneous frontmatter metadata.");
                         return false;
                     }
