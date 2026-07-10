@@ -72,20 +72,7 @@ public class SageIosXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
             String url_string = cu.getUrl();
             List<String> returnList = new ArrayList<String>();
             String pdfName;
-            if(url_string.contains("-fm")){
-                String url_string2 = url_string.substring(0,url_string.lastIndexOf("/"));
-                String eisbn = oneAM.getRaw(helper.getFilenameXPathKey());
-                if(eisbn != null){
-                    eisbn = eisbn.replaceAll("-","");
-                } else if (url_string2.contains("CCIA%202005")){ 
-                    eisbn = "9781586035600";
-                } else if (url_string2.contains("CCIA%202006")){
-                    eisbn = "9781586036638";
-                }
-                pdfName = url_string2.substring(0, url_string2.lastIndexOf("/")) + "/fulltext/" + eisbn + ".pdf";
-            }else{
-                pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
-            }
+            pdfName = url_string.substring(0,url_string.length() - 3) + "pdf";
             log.debug3("pdfName is " + pdfName);
             returnList.add(pdfName);
             return returnList;        
@@ -106,13 +93,47 @@ public class SageIosXmlMetadataExtractorFactory extends SourceXmlMetadataExtract
             ArchivalUnit B_au = cu.getArchivalUnit();
             CachedUrl fileCu;
             for (int i=0; i < filesToCheck.size(); i++){
-                fileCu = B_au.makeCachedUrl(filesToCheck.get(i));
+                //Find eisbn to use in generated pdf url, Unfortunately, a couple of the frontmatter metadata doesn't contain the eisbn, 
+                //so just hardcode them. 
+                String eisbn = thisAM.getRaw(schemaHelper.getFilenameXPathKey());
+                if(eisbn != null){
+                    eisbn = eisbn.replaceAll("-","");
+                }else if(filesToCheck.get(i).contains("FAIA131-fm-i")){
+                    eisbn = "9781586035600";
+                }else if(filesToCheck.get(i).contains("FAIA146-fm-i")){
+                    eisbn = "9781586036638";
+                }
+                String currentUrl = filesToCheck.get(i);
+                int indexOfSecondToLastSlash = currentUrl.substring(0, currentUrl.lastIndexOf("/")).lastIndexOf("/");
+                String fulltextPdf = currentUrl.substring(0,indexOfSecondToLastSlash)+"/fulltext/"+eisbn+".pdf";
+                log.debug3("Generated pdf url is " + fulltextPdf);
+                fileCu = B_au.makeCachedUrl(currentUrl);
                 if(fileCu != null && (fileCu.hasContent())) {
-                    // Set a cooked value for an access file. Otherwise it would get set to xml file.
-                    thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
-                    log.debug3("Check for existence of " + filesToCheck.get(i));
-                    return true;
-                } else {
+                    if(fileCu.toString().contains("fulltext")){
+                        thisAM.put(MetadataField.FIELD_ACCESS_URL, fileCu.getUrl());
+                        log.debug3("Check for existence of " + filesToCheck.get(i));
+                        return true;
+                    }else if(fileCu.toString().contains("FAIA131-fm-i")){
+                        thisAM.put(MetadataField.FIELD_ACCESS_URL, B_au.makeCachedUrl(fulltextPdf).getUrl());
+                        return true;
+                    }else if(fileCu.toString().contains("FAIA146-fm-i")){
+                        thisAM.put(MetadataField.FIELD_ACCESS_URL, B_au.makeCachedUrl(fulltextPdf).getUrl());
+                        return true;
+                    }else if(fileCu.toString().contains("NICSP40-fm-i")){
+                        thisAM.put(MetadataField.FIELD_ACCESS_URL, B_au.makeCachedUrl(fulltextPdf).getUrl());
+                        return true;
+                    }else if(fileCu.toString().contains("NICSP45-fm-i")){
+                        thisAM.put(MetadataField.FIELD_ACCESS_URL, B_au.makeCachedUrl(fulltextPdf).getUrl());
+                        return true;
+                    }else if(fileCu.toString().contains("DAI-349-DAI200003-fm")){
+                        thisAM.put(MetadataField.FIELD_ACCESS_URL, B_au.makeCachedUrl(fulltextPdf).getUrl());
+                        return true;
+                    }else{
+                        log.debug3("DO NOT EMIT. This is extraneous frontmatter metadata.");
+                        return false;
+                    }
+                }
+                else {
                     log.debug3("Check for failed existence of " + filesToCheck.get(i));
                 }
             }
